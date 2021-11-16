@@ -1,2 +1,2 @@
 # dataminer-docs
-Open source documentation of DataMiner
+Open-source documentation of DataMiner.
