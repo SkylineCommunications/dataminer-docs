@@ -10,18 +10,36 @@ on:
       - main
 
 jobs:
-  build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
-    runs-on: ubuntu-latest
-    name: Build and Deploy Job
+  build_job:
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
-      - name: Build Documentation
-        uses: nikeee/docfx-action@v1.0.0
+      - name: choco install docfx
+        run: |
+          choco install docfx -y
+        env:
+          CI: true
+      - name: build documentation
+        run: |
+          docfx build
+      - name: publish results
+        uses: actions/upload-artifact@v2
         with:
-          args: docfx.json
+          name: _site
+          path: _site/
+          
+  deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    needs: build_job
+    name: Build and Deploy Job
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: _site
+          path: _site 
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
