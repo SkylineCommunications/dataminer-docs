@@ -1,4 +1,4 @@
-# docs.skyline.be
+# docs.dataminer.services
 
 The home for Skyline documentation.
 
