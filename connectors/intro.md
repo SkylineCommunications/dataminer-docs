@@ -1,1 +1,1 @@
-# About DataMiner Connectors
+# About DataMiner connectors
