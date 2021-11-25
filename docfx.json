@@ -18,6 +18,11 @@
       }
     ],
     "dest": "_site",
+    "globalMetadata": {
+      "_appTitle": "DataMiner Docs",
+      "_enableSearch": true,
+      "_enableNewTab": true
+    },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
