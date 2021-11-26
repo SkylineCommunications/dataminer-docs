@@ -1,6 +1,6 @@
 - name: About DataMiner connectors
   href: intro.md
 - name: CISCO
-  href: CISCO/
+  href: CISCO/toc.yml
 - name: Microsoft
-  href: Microsoft/
+  href: Microsoft/toc.yml
