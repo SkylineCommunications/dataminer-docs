@@ -1,2 +1,6 @@
-- name: Connectors
+- name: About DataMiner connectors
   href: intro.md
+- name: CISCO
+  href: CISCO/
+- name: Microsoft
+  href: Microsoft/
