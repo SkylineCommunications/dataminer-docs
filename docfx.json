@@ -20,6 +20,7 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
+      "_appFooter": "© 2021 Skyline Communications. All rights reserved.",
       "_enableSearch": true,
       "_enableNewTab": true
     },
