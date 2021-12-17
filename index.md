@@ -1,6 +1,6 @@
 # docs.dataminer.services
 
-The home for Skyline documentation.
+The home for DataMiner documentation.
 
 ## Product directory
 
