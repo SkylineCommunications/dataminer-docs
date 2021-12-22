@@ -108,7 +108,7 @@ The polling IP of the Microsoft server must be defined when the element is creat
 
 1. To go to WMI Control Properties, go to **Start** > **Run** and enter *wmimgmt.msc*.
 2. Right-click **WMI Control (Local)** and select **Properties**.
-3. On the **Security** tab page, go to \\Root\CIMV2 and click the **Security** button.
+3. On the **Security** tab page, go to \\\\Root\CIMV2 and click the **Security** button.
 4. Add your local user to the list and give the user all rights.
 5. Apply all.
 
@@ -131,62 +131,34 @@ The polling IP of the Microsoft server must be defined when the element is creat
 
 ### <span class="ms-rteStyle-Accent1">Performance</span>
 
--   **Security**: Opens the **Security Settings** window, where
-    the **Domain name**, **User Name** and **Password** can be
-    configured. The status shows if the DMA is connected to the
-    server you want to monitor.
--   **Port monitoring:** Opens a window where port monitoring can be
-    enabled and configured. To enable port monitoring:
+- **Security**: Opens the **Security Settings** window, where the **Domain name**, **User Name** and **Password** can be configured. The status shows if the DMA is connected to the server you want to monitor.
+- **Port monitoring:** Opens a window where port monitoring can be enabled and configured. To enable port monitoring:
 
-1.  On the **Performance** page, click the **Port monitoring**...
-    button.
-2.  Define a **Polling Period.**
-3.  Use the **Add Port** box to add one or more ports that need to be
-    monitored in the **Port List**.
-4.  Enable polling by clicking the toggle button next to **Port
-    Monitoring Status**.
+    1. On the **Performance** page, click the **Port monitoring...** button.
+    2. Define a **Polling Period**.
+    3. Use the **Add Port** box to add one or more ports that need to be monitored in the **Port List**.
+    4. Enable polling by clicking the toggle button next to **Port Monitoring Status**.
 
--   **Ping monitoring:** Opens a window where ping monitoring can be
-    enabled and configured. To enable ping monitoring:
+- **Ping monitoring:** Opens a window where ping monitoring can be enabled and configured. To enable ping monitoring:
 
-1.  On the **Performance** page, click the **Ping monitoring**...
-    button.
-2.  Click the toggle button next to **Ping Query** to execute the ping.
-3.  Configure the **Ping Cycle**, i.e. the interval between each ping.
-    The default value is *60 s*. 
-4.  Configure the **Ping Timeout** and **Ping Number**. The default
-    values are *1500 ms* and *4* respectively.
+    1. On the **Performance** page, click the **Ping monitoring...** button.
+    2. Click the toggle button next to **Ping Query** to execute the ping.
+    3. Configure the **Ping Cycle**, i.e. the interval between each ping. The default value is *60 s*.
+    4. Configure the **Ping Timeout** and **Ping Number**. The default values are *1500 ms* and *4* respectively.
 
 ### <span class="ms-rteStyle-Accent1">Task Manager</span>
 
-To clear all processes that are no longer running from the table, click
-the button **Clear Task Manager** at the top of the page. You can also
-enable automatic removal of processes that are not running by setting
-the parameter **Auto Clear Task Manager** to **On**.
+To clear all processes that are no longer running from the table, click the button **Clear Task Manager** at the top of the page. You can also enable automatic removal of processes that are not running by setting the parameter **Auto Clear Task Manager** to **On**.
 
-To set the current values in the table as the normal reference for
-alarms, click the button **Normalize Alarms**. You can then view these
-references via the **Nominal** **Values** button at the bottom of the
-page.
+To set the current values in the table as the normal reference for alarms, click the button **Normalize Alarms**. You can then view these references via the **Nominal Values** button at the bottom of the page.
 
-It is also possible to add a filter to calculate the sum of the memory
-usage of all processes that match this filter. To do so:
+It is also possible to add a filter to calculate the sum of the memory usage of all processes that match this filter. To do so:
 
-1.  Click the button **Cumulated Memory** at the bottom of the page.
-2.  Enter a filter in the box **Add Filter Param**. An asterisk ("\*")
-    wildcard is supported in this filter. You can also
-    use an exclamation mark ("!") to return the opposite cumulated
-    memory of the filter parameter. (cf. examples below)
-3.  If necessary, add more filters or delete filters using the
-    **Delete** button next to the filtered parameter.
+1. Click the button **Cumulated Memory** at the bottom of the page.
+2. Enter a filter in the box **Add Filter Param**. An asterisk ("\*") wildcard is supported in this filter. You can also use an exclamation mark ("!") to return the opposite cumulated memory of the filter parameter. (cf. examples below)
+3. If necessary, add more filters or delete filters using the **Delete** button next to the filtered parameter.
 
-On the **Task Manager Measurement** page, you can disable processes to
-remove them from the **Task Manager** Table. The **Task Manager Default
-Measurement State** will enable/disable the measurement of new
-processes. The **Clear** button will remove all deleted processes from
-the **Task Manager Measurement Config** table. The **Refresh**
-button can be used to manually refresh the list of processes when Auto
-Refresh is disabled. 
+On the **Task Manager Measurement** page, you can disable processes to remove them from the **Task Manager** Table. The **Task Manager Default Measurement State** will enable/disable the measurement of new processes. The **Clear** button will remove all deleted processes from the **Task Manager Measurement Config** table. The **Refresh** button can be used to manually refresh the list of processes when Auto Refresh is disabled.
 
 ### <span class="ms-rteStyle-Accent1">Network Interface</span>
 
