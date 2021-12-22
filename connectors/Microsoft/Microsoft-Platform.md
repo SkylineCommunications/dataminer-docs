@@ -179,114 +179,60 @@ Another indication of when the disk is very busy is the “Latency” of the dis
 
 ### <span class="ms-rteStyle-Accent1">Event Viewer</span>
 
-This page displays information regarding selected or created events.
+This page displays information regarding selected or created events.
 
-When you enable the Event Viewer, you can monitor the events displayed
-in the Event Viewer table. If you want to add events, click the **Add
-event** page button. A subpage will open. If you click **Load**, all the
-event messages from a specific time interval will be retrieved and
-displayed on the page. You can then select the events you want to
-monitor by clicking the **Monitor Event** button. The time interval can
-be changed using the slider.
+When you enable the Event Viewer, you can monitor the events displayed in the Event Viewer table. If you want to add events, click the **Add event** page button. A subpage will open. If you click **Load**, all the event messages from a specific time interval will be retrieved and displayed on the page. You can then select the events you want to monitor by clicking the **Monitor Event** button. The time interval can be changed using the slider.
 
-To delete a monitored event, click the **Delete button** in the Event
-Viewer table.
+To delete a monitored event, click the **Delete button** in the Event Viewer table.
 
-The event details can be configured. For each type of event
-(information, warning or error), the severity of the created alarm can
-be selected from the drop-down list. For example: "Disk Crash" event
-with a **Severity Error Type** equal to *Critical*.
+The event details can be configured. For each type of event (information, warning or error), the severity of the created alarm can be selected from the drop-down list. For example: "Disk Crash" event with a **Severity Error Type** equal to *Critical*.
 
-When the configured **Alarm Type** equals ***Normal*** and an event
-occurs that matches one of the added filters in the **Event Viewer
-Messages** table, the new event will automatically trigger an alarm or
-an information event. **Alarm Type** ***Grouped*** will add the row to
-the **Grouped Event Alarms** with the most recent severity of the
-event. When the **Grouped Event Active Time** expires, the event is
-removed from the table. Grouped events will not create alarms
-automatically, but you can configure alarm monitoring on the **Grouped
-Event Type** column.
+When the configured **Alarm Type** equals ***Normal*** and an event occurs that matches one of the added filters in the **Event Viewer Messages** table, the new event will automatically trigger an alarm or an information event. **Alarm Type** ***Grouped*** will add the row to the **Grouped Event Alarms** with the most recent severity of the event. When the **Grouped Event Active Time** expires, the event is removed from the table. Grouped events will not create alarms
+automatically, but you can configure alarm monitoring on the **Grouped Event Type** column.
 
-From version 1.1.0.100 onwards, it is possible to get all events except
-those with a specific **Event ID**. In each row of the table, a toggle
-button **Exclude Event ID** has been added:
+From version 1.1.0.100 onwards, it is possible to get all events except those with a specific **Event ID**. In each row of the table, a toggle button **Exclude Event ID** has been added:
 
--   If it is set to the default setting ***Include***, you can insert a
-    **single event ID** or the value ***"****\*"*** to **get all event
-    IDs** for the relevant source/category (= **equal to all previous
-    versions**). 
--   If it is set to ***Exclude***, you can select a **single event ID**,
-    which will be omitted from the results. All other event IDs will be
-    selected.
+- If it is set to the default setting ***Include***, you can insert a **single event ID** or the value ***"****\*"*** to **get all event IDs** for the relevant source/category (= **equal to all previous versions**).
+- If it is set to ***Exclude***, you can select a **single event ID**, which will be omitted from the results. All other event IDs will be selected.
 
 ### <span class="ms-rteStyle-Accent1">Performance Monitor</span>
 
 This page monitors performance counters added by the user.
 
-On the **Config Performance Counters** page, you can search for
-performance counters and add them to the **Performance Monitor** table.
-To do so, first click **Refresh Categories** to create a drop-down
-list with the **Categories**. Select the category and then choose a
-**Counter**. If the counter has multiple instances, you can either
-select the **Instance** you want, or select *\<All Instances>.* Finally,
-click the **Add Counter** button to add the selected counter to the
+On the **Config Performance Counters** page, you can search for performance counters and add them to the **Performance Monitor** table. To do so, first click **Refresh Categories** to create a drop-down list with the **Categories**. Select the category and then choose a **Counter**. If the counter has multiple instances, you can either select the **Instance** you want, or select *\<All Instances\>*. Finally, click the **Add Counter** button to add the selected counter to the
 table.
 
-With the **Performance Monitor Sample Time**, you can configure the
-sample time for all created performance counters.
+With the **Performance Monitor Sample Time**, you can configure the sample time for all created performance counters.
 
 ### <span class="ms-rteStyle-Accent1">Dell</span>
 
-This page is intended for Dell hardware.
+This page is intended for Dell hardware.
 
-It monitors certain high-level parameters, such as the name, version,
-model and so on. It also includes several subpages with more information
-on specific subcategories. The **Temperature Probe Table** provides
-information about the temperature of the device. The **power supply**,
-**fans**, **CPU** and **memory** of the device are monitored in a
-similar way. The **Disk** page provides an overview of all of the disks
-included in the system.
+It monitors certain high-level parameters, such as the name, version, model and so on. It also includes several subpages with more information on specific subcategories. The **Temperature Probe Table** provides information about the temperature of the device. The **power supply**, **fans**, **CPU** and **memory** of the device are monitored in a similar way. The **Disk** page provides an overview of all of the disks included in the system.
 
-Note that in order for these parameters to be polled, you have to
-**enable polling on the Dell page**.
+Note that in order for these parameters to be polled, you have to **enable polling on the Dell page**.
 
 ### <span class="ms-rteStyle-Accent1">HP</span>
 
-This page is intended for HP hardware.
+This page is intended for HP hardware.
 
 It monitors the same set of parameters as the Dell page described above.
 
-Note that in order for these parameters to be polled, you have to
-**enable polling on the HP page**.
+Note that in order for these parameters to be polled, you have to **enable polling on the HP page**.
 
 ### <span class="ms-rteStyle-Accent1">Software Info</span>
 
-This page contains the **Software Info Table**, which displays a list of
-all installed programs.   
-<span style="text-decoration: underline;">**Note**</span>**: USERNAME
-and PASSWORD have to be set! (Under Performance \> Security
-Settings).**<span aria-hidden="true"></span>
+This page contains the **Software Info Table**, which displays a list of all installed programs.
 
-Above the table, it is possible to select the polling method.
-(Alternative methods were introduced after problems were
-encountered with the used WMI Query.)
+> [!NOTE]
+> USERNAME and PASSWORD have to be set! (Under Performance > Security Settings).
 
-<div>
+Above the table, it is possible to select the polling method. (Alternative methods were introduced after problems were encountered with the used WMI Query.)
 
--   *No Polling*: Nothing will be retrieved and the table will remain
-    empty.
--   *Win32_Product*: WMI Query used to retrieve a list of all installed
-    programs. We strongly advise **not to use this method**, as this can
-    perform a Windows Installer "reconfiguration" on every MSI package
-    as it is performing the query.
--   *Win32reg_AddRemoveProgram*: WMI Query used to retrieve a list of
-    all installed programs if Microsoft CSSM software is installed. This
-    is a better alternative to the Win32_Product method.
--   *Registry Keys*: **Recommended method.** This method will use WMI to
-    read the registry keys to display a list of all installed programs
-    in the system.
-
-</div>
+- *No Polling*: Nothing will be retrieved and the table will remain empty.
+- *Win32_Product*: WMI Query used to retrieve a list of all installed programs. We strongly advise **not to use this method**, as this can perform a Windows Installer "reconfiguration" on every MSI package as it is performing the query.
+- *Win32reg_AddRemoveProgram*: WMI Query used to retrieve a list of all installed programs if Microsoft CSSM software is installed. This is a better alternative to the Win32_Product method.
+- *Registry Keys*: **Recommended method.** This method will use WMI to read the registry keys to display a list of all installed programs in the system.
 
 ## Notes
 
@@ -294,30 +240,23 @@ encountered with the used WMI Query.)
 
 From Windows 2000 onwards, WMI is installed by default.
 
-Except in Windows Vista, WMI uses random ports.  
+Except in Windows Vista, WMI uses random ports.
+ 
 To configure a fixed port in Windows Vista:
 
-1.  In the command prompt window, type *winmgmt -standalonehost.*
-2.  Stop the WMI service by typing the command *net stop "Windows
-    Management Instrumentation"*.
-3.  Restart the WMI service in a new service host by typing *net start
-    "Windows Management Instrumentation"*.
-4.  Establish a new port number for the WMI service by typing *netsh
-    firewall add portopening port=24158 name=WMIFixedPort*.
+1. In the command prompt window, type *winmgmt -standalonehost.*
+2. Stop the WMI service by typing the command *net stop "Windows Management Instrumentation"*.
+3. Restart the WMI service in a new service host by typing *net start "Windows Management Instrumentation"*.
+4. Establish a new port number for the WMI service by typing *netsh firewall add portopening port=24158 name=WMIFixedPort*.
 
-If you want to have access to the WMI interface of a Windows XP
-computer, you can work with a local user (a group user, not an
-administrator) that has the necessary Windows security rights, so extra
-configuration is necessary on the client computers.
+If you want to have access to the WMI interface of a Windows XP computer, you can work with a local user (a group user, not an administrator) that has the necessary Windows security rights, so extra configuration is necessary on the client computers.
 
-As this is a Microsoft configuration, nothing has to be configured
-within DataMiner for this.
+As this is a Microsoft configuration, nothing has to be configured within DataMiner for this.
 
 ### <span class="ms-rteStyle-Accent1">Global configuration</span>
 
-1.  Create a user and add the user in the user group.
-2.  If the firewall is enabled, open a command prompt and execute
-    "*netsh firewall set service RemoteAdmin enable*".
+1. Create a user and add the user in the user group.
+2. If the firewall is enabled, open a command prompt and execute "*netsh firewall set service RemoteAdmin enable*".
 
 ### <span class="ms-rteStyle-Accent1">Troubleshooting</span>
 
