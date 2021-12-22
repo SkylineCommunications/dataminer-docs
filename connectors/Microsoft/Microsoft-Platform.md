@@ -306,87 +306,77 @@ A Microsoft element displays only some of the data. Data like Local Time, Total 
 
 **Solution:**
 
-Execute the following command prompt: `c:\\\>winmgmt.exe /resyncperf PID_OF_WINMGMT_AS_SERVICE`
+Execute the following command prompt: `c:\\>winmgmt.exe /resyncperf PID_OF_WINMGMT_AS_SERVICE`
 
 #### Problem
 
 Possible memory leak on remote machines that are running 2008/Vista: <http://support.microsoft.com/kb/970520/en-us>
 
-**Solution:
+**Solution:**
 
 When the remote server is running Vista, UAC must be disabled.
 
 **Re-registering the WMI components on the monitored server:**
 
--   The .DLL and .EXE files used by WMI are located in
-    %windir%\\system32\\wbem. You may need to re-register all the .DLL
-    and .EXE files in this directory.  
-    If you are running a 64-bit system you may also need to check for
-    .DLLs and .EXE files in %windir%\\sysWOW64\\wbem.
--   To re-register the WMI components, run the following commands with
-    the command prompt:  
-    *cd /d %windir%\\system32\\wbem*  
-    *for %i in (\*.dll) do RegSvr32 -s %i*  
-    *for %i in (\*.exe) do %i /RegServer*
+- The .DLL and .EXE files used by WMI are located in %windir%\\system32\\wbem. You may need to re-register all the .DLL and .EXE files in this directory.
+  
+  If you are running a 64-bit system you may also need to check for .DLLs and .EXE files in %windir%\\sysWOW64\\wbem.
 
-<span class="ms-rteThemeForeColor-2-0">**Problem:** </span>
+- To re-register the WMI components, run the following commands with the command prompt:
+ 
+  ```txt
+  cd /d %windir%\\system32\\wbem
+  for %i in (\*.dll) do RegSvr32 -s %i
+  for %i in (\*.exe) do %i /RegServer
+  ```
 
--   Task Manager data through WMI cannot be retrieved. This can be
-    related to missing "Process Performance Counters".   
-    Refer to this technet post for more info: [<span
-    style="text-decoration: underline;">http://blogs.technet.com/b/mscom/archive/2008/12/18/the-mystery-of-the-missing-process-performance-counter-in-perfmon.aspx</span>](http://blogs.technet.com/b/mscom/archive/2008/12/18/the-mystery-of-the-missing-process-performance-counter-in-perfmon.aspx)
+#### Problem
 
-> **Solution**:
->
-> -   Disable a specific flag on the Windows Register. Set the
->     "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\PerfProc\\Performance\\Disable
->     Performance Counters" to *0*.
+Task Manager data through WMI cannot be retrieved. This can be related to missing "Process Performance Counters".
 
-<span aria-hidden="true"></span>**Problem:** 
+Refer to this technet post for more info: <http://blogs.technet.com/b/mscom/archive/2008/12/18/the-mystery-of-the-missing-process-performance-counter-in-perfmon.aspx>
 
--   StreamViewer mentions the following: Query failed : Retrieving the
-    data failed.  (hr = 0x80041010) for numerous WQL SELECT queries.   
-    When wbemtest is used and these queries are performed or the classes
-    are listed, this results in similar errors mentioning "Invalid
-    class".
+**Solution**:
 
-> **Solution**:
->
-> -   Most likely some or all related Disable Performance Counters in
->     regedit for PerfDisk, PerfNet, PerfOS, PerfProc, Tcpip or
->     W3SVC are set to 1 (see Problem/Solution above for information on
->     regedit).
-> -   Set all these to 0 and after a couple of minutes the query errors
->     should disappear and the related data should get filled in.
+Disable a specific flag on the Windows Register. Set the "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\PerfProc\\Performance\\Disable Performance Counters" to *0*.
 
-**Problem:**
+#### Problem
 
--   The following error occurs: *Contacting server failed: Connection to
-    \[//tns1216.inet.telenet.be/root/cimv2\] failed. The RPC server is
-    unavailable. (hr = 0x800706BA).*
+StreamViewer mentions the following: `Query failed : Retrieving the data failed. (hr = 0x80041010) for numerous WQL SELECT queries.`
 
-> **Solution**:
->
-> -   Make sure tcp/135 and tcp/49000-65535 (WMI) are open.
-> -   Make sure the user is created on server and host.
+When wbemtest is used and these queries are performed or the classes are listed, this results in similar errors mentioning "Invalid class".
 
-**Problem: **
+**Solution**:
 
--   WMI is working and everything gets filled in, but Performance
-    Monitor does not work. Pressing Refresh Categories provides the
-    following error in element logging:  
-    <span
-    style="font-family: &quot;courier new&quot;; font-size: 10pt;">Exception
-    Perf Counters The network path was not found.</span>
+- Most likely some or all related Disable Performance Counters in regedit for PerfDisk, PerfNet, PerfOS, PerfProc, Tcpip or W3SVC are set to 1 (see Problem/Solution above for information on regedit).
+- Set all these to 0 and after a couple of minutes the query errors should disappear and the related data should get filled in.
 
-> **Solution:**
->
-> -   Check if the destination computer has the "Remote Registry"
->     service running. If not, start this service. (Note that you
->     may need to adjust the Startup Type from *Disabled* to
->     *Manual/automatic* first.)
+#### Problem
 
-### <span class="ms-rteStyle-Accent1">Information Resources</span>
+The following error occurs:
 
--   [How to Enable Remote WMI Access for a Domain User
-    Account](https://martellotech.com/blog/enable-remote-wmi-access-for-a-domain-user-account/)
+```txt
+Contacting server failed: Connection to \[//tns1216.inet.telenet.be/root/cimv2\] failed. The RPC server is unavailable. (hr = 0x800706BA).
+```
+
+**Solution**:
+
+- Make sure tcp/135 and tcp/49000-65535 (WMI) are open.
+- Make sure the user is created on server and host.
+
+#### Problem
+
+WMI is working and everything gets filled in, but Performance Monitor does not work. Pressing Refresh Categories provides the following error in element logging:
+
+```txt
+Exception Perf Counters The network path was not found.
+```
+
+**Solution:**
+
+Check if the destination computer has the "Remote Registry" service running. If not, start this service.
+(Note that you may need to adjust the Startup Type from *Disabled* to *Manual/automatic* first.)
+
+### Information Resources
+
+[How to Enable Remote WMI Access for a Domain User Account](https://martellotech.com/blog/enable-remote-wmi-access-for-a-domain-user-account/)
