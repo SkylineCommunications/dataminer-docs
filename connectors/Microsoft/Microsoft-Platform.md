@@ -281,49 +281,40 @@ The second procedure:
 -   Run “wmimgmt.msc” directly on server.  
     You will receive the following error: Microsoft Management Console “An attempt was made to reference a token that does not exist”.
 
-**Solution**: If indeed you receive the indicated error using one of the test procedures above, you can fix this issue via Service Control Manager, by running a command to allow a user to have access: `sc sdset SCMANAGER D:(A;;CCLCRPRC;;;AU)(A;;CCLCRPWPRC;;;SY)(A;;KA;;;BA)S:(AU;FA;KA;;;WD)(AU;OIIOFA;GA;;;WD)`
+**Solution**:
+
+If indeed you receive the indicated error using one of the test procedures above, you can fix this issue via Service Control Manager, by running a command to allow a user to have access:
+
+`sc sdset SCMANAGER D:(A;;CCLCRPRC;;;AU)(A;;CCLCRPWPRC;;;SY)(A;;KA;;;BA)S:(AU;FA;KA;;;WD)(AU;OIIOFA;GA;;;WD)`
 
 #### Problem
 
--   Access is denied, even when the user name and the password are
-    correct.
+Access is denied, even when the user name and the password are correct.
 
-> **Solution**:
->
-> -   Try to open Windows Explorer on that machine, using the login that
->     you want to use in the Microsoft element. If it is not possible to
->     connect to the server because you have to log on with the account
->     "guest", execute the following steps:
->
-> 1.  Go to **Control Panel** > **Administrative Tools** > **Local
->     Security Policy**.
-> 2.  Go to **Local Policies** > **Security Options**.
-> 3.  Double-click **Network access: Sharing and security model for
->     local accounts**.
-> 4.  Select **Classic- local users authenticate as themselves**.
+**Solution**:
 
-**Problem:**
+Try to open Windows Explorer on that machine, using the login that you want to use in the Microsoft element. If it is not possible to connect to the server because you have to log on with the account "guest", execute the following steps:
 
--   A Microsoft element displays only some of the data. Data like Local
-    Time, Total Physical Memory, etc. are filled in, while other data,
-    like Total Processor Load, Total Handles, etc. remain empty. In the
-    stream, you see that no answer is received on some queries.
+1. Go to **Control Panel** > **Administrative Tools** > **Local Security Policy**.
+2. Go to **Local Policies** > **Security Options**.
+3. Double-click **Network access: Sharing and security model for local accounts**.
+4. Select **Classic- local users authenticate as themselves**.
 
-> **Solution:**
->
-> -   Execute the following command prompt: *c:\\\>winmgmt.exe
->     /resyncperf PID_OF_WINMGMT_AS_SERVICE  *
+#### Problem
 
-**Problem:**
+A Microsoft element displays only some of the data. Data like Local Time, Total Physical Memory, etc. are filled in, while other data, like Total Processor Load, Total Handles, etc. remain empty. In the stream, you see that no answer is received on some queries.
 
--   Possible memory leak on remote machines that are running
-    2008/Vista:  
-    [<span
-    style="text-decoration: underline;">http://support.microsoft.com/kb/970520/en-us</span>](http://support.microsoft.com/kb/970520/en-us)
+**Solution:**
 
-> **Solution:**
->
-> -   When the remote server is running Vista, UAC must be disabled.
+Execute the following command prompt: `c:\\\>winmgmt.exe /resyncperf PID_OF_WINMGMT_AS_SERVICE`
+
+#### Problem
+
+Possible memory leak on remote machines that are running 2008/Vista: <http://support.microsoft.com/kb/970520/en-us>
+
+**Solution:
+
+When the remote server is running Vista, UAC must be disabled.
 
 **Re-registering the WMI components on the monitored server:**
 
