@@ -162,57 +162,20 @@ On the **Task Manager Measurement** page, you can disable processes to remove th
 
 ### <span class="ms-rteStyle-Accent1">Network Interface</span>
 
-This page displays a table with the different measured network adapters
-on the server. Note that the bandwidth of an adapter can be very high
-(*e.g. 10 GB/s*). Therefore, as the utilization gets calculated as the
-total speed divided by the bandwidth, the utilization value can be
-extremely low. It can even be rounded down to 0.00 % if *Total Speed \<
-0.005 \* Bandwidth*.
+This page displays a table with the different measured network adapters on the server. Note that the bandwidth of an adapter can be very high (*e.g. 10 GB/s*). Therefore, as the utilization gets calculated as the total speed divided by the bandwidth, the utilization value can be extremely low. It can even be rounded down to 0.00 % if *Total Speed < 0.005 \* Bandwidth*.
 
-For most interfaces, the **Mac Address** and **Status **are
-available. For a server of the type Microsoft Server 2000 or Microsoft
-2000 Professional, the **Mac Address** is not available.
+For most interfaces, the **Mac Address** and **Status** are available. For a server of the type Microsoft Server 2000 or Microsoft 2000 Professional, the **Mac Address** is not available.
 
-If you set the **Adapter Description **to the correct name (from
-Win32_PerfRawData_Tcpip_NetworkInterface), additional info will be
-retrieved. The driver intelligently tries to match the adapters to the
-correct default description on initializing, but in some cases, you will
-still need to set this description manually, using the drop-down box.
-Once this has been set manually, the driver will not overrule the
-setting with an automatic set. The options displayed in the drop-down
-box are the names of the network interfaces that were found in the WMI.
-You can also choose a custom name that is not from this list, but then
-no match will be found, no additional info will be shown and the
-description can be overruled by the driver. You can only assign a
-network interface to one network adapter. If you set a network adapter
-to a description that is already used by another adapter, the
-description of the other adapter will be set to an empty string.
+If you set the **Adapter Description** to the correct name (from Win32_PerfRawData_Tcpip_NetworkInterface), additional info will be retrieved. The driver intelligently tries to match the adapters to the correct default description on initializing, but in some cases, you will still need to set this description manually, using the drop-down box. Once this has been set manually, the driver will not overrule the setting with an automatic set. The options displayed in the drop-down box are the names of the network interfaces that were found in the WMI. You can also choose a custom name that is not from this list, but then no match will be found, no additional info will be shown and the description can be overruled by the driver. You can only assign a network interface to one network adapter. If you set a network adapter to a description that is already used by another adapter, the description of the other adapter will be set to an empty string.
 
-On the **Network Adapter Measurement** page, you can disable processes
-to remove them from the **Network Adapter** table. The **Network
-Adapter Default Measurement State** will enable/disable the measurement
-of new adapters. The **Clear** button removes all deleted processes from
-the **Network Adapter Measurement** and **Network Adapter** table. This
-is by default followed by a refresh. The **Refresh** button can be used
-to manually refresh the list of network adapters and the additional
-information. It is possible to entirely disable the polling of the
-network adapters with the toggle button **Poll Network Adapters**. Once
-an adapter is disconnected and not found by the driver in the WMI, its
-status will be set to *Disconnected*. You can choose to either
-autoclear such adapters with the button **Autoclear Disconnected
-Adapters** or to manually delete them with the drop-down box **Manually
-Clear Disconnected Adapters**. If no adapter has the status
+On the **Network Adapter Measurement** page, you can disable processes to remove them from the **Network Adapter** table. The **Network Adapter Default Measurement State** will enable/disable the measurement of new adapters. The **Clear** button removes all deleted processes from the **Network Adapter Measurement** and **Network Adapter** table. This is by default followed by a refresh. The **Refresh** button can be used to manually refresh the list of network adapters and the additional information. It is possible to entirely disable the polling of the network adapters with the toggle button **Poll Network Adapters**. Once an adapter is disconnected and not found by the driver in the WMI, its status will be set to *Disconnected*. You can choose to either autoclear such adapters with the button **Autoclear Disconnected Adapters** or to manually delete them with the drop-down box **Manually Clear Disconnected Adapters**. If no adapter has the status
 *Disconnected*, this drop-down box will be empty.
 
 ### <span class="ms-rteStyle-Accent1">Disk Info</span>
 
-The **Percent Disk Busy Time** can go above 100% (more info:
-<http://demandtech.pmhclients.com/index.php?pg=kb.page&id=47>,
-<http://support.microsoft.com/kb/310067>).
+The **Percent Disk Busy Time** can go above 100% (more info: <http://demandtech.pmhclients.com/index.php?pg=kb.page&id=47>, <http://support.microsoft.com/kb/310067>.
 
-Another indication of when the disk is very busy is the “Latency” of the
-disk, i.e. how long it takes before it can process something. On this
-page, this is indicated by the **Avg Disk sec/Transfer Rate**.
+Another indication of when the disk is very busy is the “Latency” of the disk, i.e. how long it takes before it can process something. On this page, this is indicated by the **Avg Disk sec/Transfer Rate**.
 
 ### <span class="ms-rteStyle-Accent1">Event Viewer</span>
 
