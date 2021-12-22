@@ -264,40 +264,26 @@ As this is a Microsoft configuration, nothing has to be configured within DataMi
 
 Remote WMI queries for non-admin users:
 
-Access is denied with error code 0x80070005 -> **Solution**: DCOM
-configuration (see installation and configuration).
+- Access is denied with error code 0x80070005 -> **Solution**: DCOM configuration (see installation and configuration).
+- Access is denied with error code 0x80041003 -> **Solution**: WMI configuration (see installation and configuration).
 
-Access is denied with error code 0x80041003 -> **Solution**: WMI
-configuration (see installation and configuration).
-
-To check whether access is denied, the following two procedures are
- possible:
+To check whether access is denied, the following two procedures are possible:
 
 The first procedure:
 
-1.  Click **Start** > **Run** and enter *wmimgmt.msc*.
-2.  Right-click **WMI Control (Local)** and select **Connect to
-    another computer**.
+1.  Click **Start** > **Run** and enter *wmimgmt.msc*.
+2.  Right-click **WMI Control (Local)** and select **Connect to another computer**.
 3.  Select **Actions** > **More Actions** > **Properties**.  
-    At this point, you will receive the following error: Failed to
-    connect to [\\\\%RemoteIP%](file:///) because "Win32 Access is
-    denied”.
+    At this point, you will receive the following error: Failed to connect to [\\\\%RemoteIP%](file:///) because "Win32 Access is denied”.
 
 The second procedure:
 
 -   Run “wmimgmt.msc” directly on server.  
-    You will receive the following error: Microsoft Management
-    Console “An attempt was made to reference a token that does not
-    exist”.
+    You will receive the following error: Microsoft Management Console “An attempt was made to reference a token that does not exist”.
 
-> **Solution**: If indeed you receive the indicated error using one of
-> the test procedures above, you can fix this issue via Service
-> Control Manager, by running a command to allow a user to have
-> access:  
-> *sc sdset SCMANAGER
-> D:(A;;CCLCRPRC;;;AU)(A;;CCLCRPWPRC;;;SY)(A;;KA;;;BA)S:(AU;FA;KA;;;WD)(AU;OIIOFA;GA;;;WD)*
+**Solution**: If indeed you receive the indicated error using one of the test procedures above, you can fix this issue via Service Control Manager, by running a command to allow a user to have access: `sc sdset SCMANAGER D:(A;;CCLCRPRC;;;AU)(A;;CCLCRPWPRC;;;SY)(A;;KA;;;BA)S:(AU;FA;KA;;;WD)(AU;OIIOFA;GA;;;WD)`
 
-**Problem:**
+#### Problem
 
 -   Access is denied, even when the user name and the password are
     correct.
