@@ -122,7 +122,6 @@ The polling IP of the Microsoft server must be defined when the element is creat
 6. Apply all.
 
 > [!NOTE]
-> Information the user should notice even if skimming
 > - After DCOM settings have been changed, the WMI services sometimes need to be restarted.
 > - This method works fine for a Windows XP system, but cannot be used on a Windows Server 2003 SP1.
 > - On a Win2K3, the local user must be added to the administrators group.
