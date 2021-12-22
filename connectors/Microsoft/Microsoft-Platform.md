@@ -5,16 +5,13 @@ title: Microsoft Platform
 
 # Microsoft Platform
 
-With the Microsoft Platform driver, it is possible to monitor a
-Microsoft server.
+With the Microsoft Platform driver, it is possible to monitor a Microsoft server.
 
 ## About
 
-The Microsoft Platform driver retrieves basic information from a
-Microsoft server. Extra information can be enabled or disabled, e.g.
-Task Manager, Service List, etc.  
-On the Task Manager page, a button allows you to normalize alarms in
-order to set the current values as normal.
+The Microsoft Platform driver retrieves basic information from a Microsoft server. Extra information can be enabled or disabled, e.g. Task Manager, Service List, etc.
+
+On the Task Manager page, a button allows you to normalize alarms in order to set the current values as normal.
 
 ### <span class="ms-rteStyle-Accent1">Ranges of the driver</span>
 
@@ -105,39 +102,31 @@ Version 1.1.3.5 merged with 1.1.0.106</td>
 
 ## Installation and configuration
 
-The polling IP of the Microsoft server must be defined when the element
-is created.
+The polling IP of the Microsoft server must be defined when the element is created.
 
 ### <span class="ms-rteStyle-Accent1">WMI configuration</span>
 
-1.  To go to WMI Control Properties, go to **Start **\> **Run **and
-    enter *wmimgmt.msc*.
-2.  Right-click **WMI Control (Local)** and select **Properties**.
-3.  On the **Security** tab page, go to \\\\Root\\CIMV2 and click the
-    **Security** button.
-4.  Add your local user to the list and give the user all rights.
-5.  Apply all.
+1. To go to WMI Control Properties, go to **Start** > **Run** and enter *wmimgmt.msc*.
+2. Right-click **WMI Control (Local)** and select **Properties**.
+3. On the **Security** tab page, go to \\Root\CIMV2 and click the **Security** button.
+4. Add your local user to the list and give the user all rights.
+5. Apply all.
 
 ### <span class="ms-rteStyle-Accent1">DCOM configuration</span>
 
-1.  Go to **Start** > **Run** and enter *dcomcnfg*.
-2.  Select **My Computer** and click the **Properties** button.
-3.  Go to the tab **COM Security**.
-4.  Under **Launch and Activation Permissions**, choose **Edit Limits**.
-5.  Add your local user and give the user the Local Launch, Remote
-    Launch and Remote Activation permissions.
-6.  Apply all.
+1. Go to **Start** > **Run** and enter *dcomcnfg*.
+2. Select **My Computer** and click the **Properties** button.
+3. Go to the tab **COM Security**.
+4. Under **Launch and Activation Permissions**, choose **Edit Limits**.
+5. Add your local user and give the user the Local Launch, Remote Launch and Remote Activation permissions.
+6. Apply all.
 
-**Note:**
-
--   After DCOM settings have been changed, the WMI services sometimes
-    need to be restarted.
--   This method works fine for a Windows XP system, but cannot be used
-    on a Windows Server 2003 SP1.   
--   On a Win2K3, the local user must be added to the administrators
-    group.
--   On a Win2K8, the local user must be added to the administrators
-    group, Distributed COM Users and Performance Monitor Users.
+> [!NOTE]
+> Information the user should notice even if skimming
+> - After DCOM settings have been changed, the WMI services sometimes need to be restarted.
+> - This method works fine for a Windows XP system, but cannot be used on a Windows Server 2003 SP1.
+> - On a Win2K3, the local user must be added to the administrators group.
+> - On a Win2K8, the local user must be added to the administrators group, Distributed COM Users and Performance Monitor Users.
 
 ## Usage
 
