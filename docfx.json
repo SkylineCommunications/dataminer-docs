@@ -5,6 +5,8 @@
         "files": [
           "connectors/**.md",
           "connectors/**/toc.yml",
+          "user-guide/**.md",
+          "user-guide/**/toc.yml",
           "toc.yml",
           "*.md"
         ]
@@ -20,7 +22,7 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
-      "_appFooter": "© Skyline Communications 2021",
+      "_appFooter": "© Skyline Communications 2022",
       "_enableSearch": true,
       "_enableNewTab": true
     },
