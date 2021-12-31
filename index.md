@@ -1,8 +1,8 @@
 # docs.dataminer.services
 
-The home for DataMiner documentation.
+The new home for DataMiner documentation, but currently still under construction...
 
 ## Product directory
 
-- [User Guide](user-guide/user-guide/Part1GettingStarted/Part1GettingStarted.md)
+- [User Guide](user-guide/Part1GettingStarted/Part1GettingStarted.md)
 - [Connectors](connectors/intro.md)
