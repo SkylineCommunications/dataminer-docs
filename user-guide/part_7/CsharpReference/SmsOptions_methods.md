@@ -1,0 +1,3 @@
+## SmsOptions methods
+
+None.

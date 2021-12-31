@@ -1,0 +1,3 @@
+## AutomationTimeUpDownOptions methods
+
+None

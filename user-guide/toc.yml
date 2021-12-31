@@ -1,0 +1,2602 @@
+- name: Getting started with DataMiner
+  href: Part1GettingStarted\Part1GettingStarted.md
+  items:
+    - name: Basic concepts
+      href: part_1\BasicConcepts\BasicConcepts.md
+    - name: DataMiner System layout
+      href: part_1\GeneralLayout\GeneralLayout.md
+    - name: Accessing DataMiner
+      href: part_1\DataminerApplications\DataminerApplications.md
+      items:
+        - name: Accessing DataMiner Cube
+          href: part_1\DataminerApplications\Accessing_DataMiner_Cube.md
+          items:
+            - name: Installing & configuring the DataMiner Cube software
+              href: part_1\DataminerApplications\Installing_configuring_the_DataMiner_Cube_software.md
+            - name: Opening DataMiner Cube
+              href: part_1\DataminerApplications\Opening_DataMiner_Cube.md
+            - name: Logging on to DataMiner Cube
+              href: part_1\DataminerApplications\Logging_on_to_DataMiner_Cube.md
+        - name: Accessing the Monitoring app
+          href: part_1\DataminerApplications\Accessing_the_Monitoring_app.md
+        - name: Accessing the legacy Monitoring & Control app
+          href: part_1\DataminerApplications\Accessing_the_legacy_Monitoring_Control_app.md
+        - name: Accessing DMS Alerter
+          href: part_1\DataminerApplications\Accessing_DMS_Alerter.md
+        - name: Accessing the DataMiner Taskbar Utility
+          href: part_1\DataminerApplications\Accessing_the_DataMiner_Taskbar_Utility.md
+    - name: The DataMiner user interface
+      href: part_1\GettingStarted\GettingStarted.md
+      items:
+        - name: The DataMiner Cube user interface
+          href: part_1\GettingStarted\The_DataMiner_Cube_user_interface.md
+          items:
+            - name: Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards
+              href: part_1\GettingStarted\Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards.md
+            - name: Main Cube UI components prior to DataMiner 10
+              href: part_1\GettingStarted\Main_Cube_UI_components_prior_to_DataMiner_10.md
+            - name: Working with cards in DataMiner Cube
+              href: part_1\GettingStarted\Working_with_cards_in_DataMiner_Cube.md
+            - name: Searching in DataMiner Cube
+              href: part_1\GettingStarted\Searching_in_DataMiner_Cube.md
+            - name: Using quick filters
+              href: part_1\GettingStarted\Using_quick_filters.md
+            - name: Using keyboard navigation
+              href: part_1\GettingStarted\Using_keyboard_navigation.md
+            - name: Working with workspaces
+              href: part_1\GettingStarted\Working_with_workspaces.md
+            - name: User settings
+              href: part_1\GettingStarted\User_settings.md
+            - name: Computer settings
+              href: part_1\GettingStarted\Computer_settings.md
+            - name: DataMiner Cube tips & tricks
+              href: part_1\GettingStarted\DataMiner_Cube_tips_tricks.md
+        - name: The Monitoring app user interface
+          href: part_1\GettingStarted\The_Monitoring_app_user_interface.md
+          items:
+            - name: Monitoring app header bar
+              href: part_1\GettingStarted\Monitoring_app_header_bar.md
+            - name: Monitoring app sidebar
+              href: part_1\GettingStarted\Monitoring_app_sidebar.md
+            - name: Monitoring app Alarm Console
+              href: part_1\GettingStarted\Monitoring_app_Alarm_Console.md
+            - name: Monitoring app card pane
+              href: part_1\GettingStarted\Monitoring_app_card_pane.md
+        - name: The legacy Monitoring & Control app user interface
+          href: part_1\GettingStarted\The_legacy_Monitoring_Control_app_user_interface.md
+- name: Basic DataMiner functionality
+  href: Part2BasicFunctionalities\Part2BasicFunctionalities.md
+  items:
+    - name: Alarms
+      href: part_2\alarms\alarms.md
+      items:
+        - name: About alarms
+          href: part_2\alarms\About_alarms.md
+          items:
+            - name: Alarm types
+              href: part_2\alarms\Alarm_types.md
+            - name: Alarm hysteresis
+              href: part_2\alarms\Alarm_hysteresis.md
+            - name: Alarm linking
+              href: part_2\alarms\Alarm_linking.md
+            - name: Alarm filters
+              href: part_2\alarms\Alarm_filters.md
+        - name: Working with alarms in DataMiner Cube
+          href: part_2\alarms\Working_with_alarms_in_DataMiner_Cube.md
+          items:
+            - name: Alarm cards
+              href: part_2\alarms\Alarm_cards.md
+            - name: Working with the Alarm Console
+              href: part_2\alarms\Working_with_the_Alarm_Console.md
+            - name: Changing ownership of alarms
+              href: part_2\alarms\Changing_ownership_of_alarms.md
+            - name: Masking and unmasking alarms
+              href: part_2\alarms\Masking_and_unmasking_alarms.md
+            - name: Adding comments to an alarm
+              href: part_2\alarms\Adding_comments_to_an_alarm.md
+            - name: Changing the read status of an alarm
+              href: part_2\alarms\Changing_the_read_status_of_an_alarm.md
+            - name: Changing custom alarm properties
+              href: part_2\alarms\Changing_custom_alarm_properties.md
+            - name: Clearing alarms
+              href: part_2\alarms\Clearing_alarms.md
+            - name: Advanced analytics features in the Alarm Console
+              href: part_2\alarms\Advanced_analytics_features_in_the_Alarm_Console.md
+        - name: Advanced alarm functionality
+          href: part_2\alarms\Advanced_alarm_functionality.md
+          items:
+            - name: Changing the default alarm colors
+              href: part_2\alarms\Changing_the_default_alarm_colors.md
+            - name: Enforcing motivation of alarm actions
+              href: part_2\alarms\Enforcing_motivation_of_alarm_actions.md
+            - name: Making alarms without owner blink
+              href: part_2\alarms\Making_alarms_without_owner_blink.md
+            - name: Displaying alarm statistics in the Surveyor
+              href: part_2\alarms\Displaying_alarm_statistics_in_the_Surveyor.md
+            - name: Adding a custom command to the Alarm Console shortcut menu
+              href: part_2\alarms\Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu.md
+            - name: Alarm storm protection
+              href: part_2\alarms\Alarm_storm_protection.md
+    - name: Elements
+      href: part_2\elements\elements.md
+      items:
+        - name: About elements
+          href: part_2\elements\About_elements.md
+          items:
+            - name: Element states
+              href: part_2\elements\Element_states.md
+            - name: Hidden elements
+              href: part_2\elements\Hidden_elements.md
+            - name: Virtual elements
+              href: part_2\elements\Virtual_elements.md
+            - name: Dynamic virtual elements
+              href: part_2\elements\Dynamic_virtual_elements.md
+            - name: Replicated elements
+              href: part_2\elements\Replicated_elements.md
+            - name: Simulated elements
+              href: part_2\elements\Simulated_elements.md
+            - name: Element properties
+              href: part_2\elements\Element_properties.md
+        - name: Working with elements in DataMiner
+          href: part_2\elements\Working_with_elements_in_DataMiner.md
+          items:
+            - name: Element cards
+              href: part_2\elements\Element_cards.md
+            - name: Adding and deleting elements
+              href: part_2\elements\Adding_and_deleting_elements.md
+            - name: Replicating elements
+              href: part_2\elements\Replicating_elements.md
+            - name: Updating elements
+              href: part_2\elements\Updating_elements.md
+            - name: Changing the state of an element
+              href: part_2\elements\Changing_the_state_of_an_element.md
+            - name: Masking or unmasking an element
+              href: part_2\elements\Masking_or_unmasking_an_element.md
+            - name: Locking and unlocking elements
+              href: part_2\elements\Locking_and_unlocking_elements.md
+            - name: Managing element properties
+              href: part_2\elements\Managing_element_properties.md
+            - name: Changing the polling speed of an element
+              href: part_2\elements\Changing_the_polling_speed_of_an_element.md
+            - name: Checking the connection state of an element
+              href: part_2\elements\Checking_the_connection_state_of_an_element.md
+            - name: Creating a simulated element
+              href: part_2\elements\Creating_a_simulated_element.md
+            - name: Importing and exporting elements
+              href: part_2\elements\Importing_and_exporting_elements.md
+        - name: Locating devices in your system to add to your DMS
+          href: part_2\elements\Locating_devices_in_your_system_to_add_to_your_DMS.md
+    - name: Parameters
+      href: part_2\parameters\parameters.md
+      items:
+        - name: Types of parameters
+          href: part_2\parameters\Types_of_parameters.md
+          items:
+            - name: Read parameters versus write parameters
+              href: part_2\parameters\Read_parameters_versus_write_parameters.md
+            - name: Discrete, analog and hybrid parameters
+              href: part_2\parameters\Discrete_analog_and_hybrid_parameters.md
+            - name: Monitored parameters versus non-monitored parameters
+              href: part_2\parameters\Monitored_parameters_versus_non-monitored_parameters.md
+            - name: Table parameters
+              href: part_2\parameters\Table_parameters.md
+            - name: Matrix parameters
+              href: part_2\parameters\Matrix_parameters.md
+            - name: General parameters
+              href: part_2\parameters\General_parameters.md
+        - name: Changing the way parameters are displayed
+          href: part_2\parameters\Changing_the_way_parameters_are_displayed.md
+          items:
+            - name: Changing the display settings for analog parameters
+              href: part_2\parameters\Changing_the_display_settings_for_analog_parameters.md
+            - name: Changing parameter names for a particular element
+              href: part_2\parameters\Changing_parameter_names_for_a_particular_element.md
+            - name: Changing the way table parameters are loaded
+              href: part_2\parameters\Changing_the_way_table_parameters_are_loaded.md
+        - name: Updating the value of a write parameter
+          href: part_2\parameters\Updating_the_value_of_a_write_parameter.md
+          items:
+            - name: Updating discrete parameters
+              href: part_2\parameters\Updating_discrete_parameters.md
+            - name: Updating analog parameters
+              href: part_2\parameters\Updating_analog_parameters.md
+            - name: Updating hybrid parameters
+              href: part_2\parameters\Updating_hybrid_parameters.md
+            - name: Updating dynamic table parameters
+              href: part_2\parameters\Updating_dynamic_table_parameters.md
+        - name: Configuring matrix parameters
+          href: part_2\parameters\Configuring_matrix_parameters.md
+        - name: Working with Lite parameters
+          href: part_2\parameters\Working_with_Lite_parameters.md
+          items:
+            - name: Changing the parameter layout in Lite mode
+              href: part_2\parameters\Changing_the_parameter_layout_in_Lite_mode.md
+            - name: Using the Lite mode shortcut menu
+              href: part_2\parameters\Using_the_Lite_mode_shortcut_menu.md
+        - name: Parameter dependencies
+          href: part_2\parameters\Parameter_dependencies.md
+    - name: Redundancy groups
+      href: part_2\RedundancyGroups\RedundancyGroups.md
+      items:
+        - name: About redundancy groups
+          href: part_2\RedundancyGroups\About_redundancy_groups.md
+        - name: Checking the current state of a redundancy group
+          href: part_2\RedundancyGroups\Checking_the_current_state_of_a_redundancy_group.md
+        - name: Creating a redundancy group
+          href: part_2\RedundancyGroups\Creating_a_redundancy_group.md
+        - name: Creating a redundancy group template
+          href: part_2\RedundancyGroups\Creating_a_redundancy_group_template.md
+        - name: Assigning elements to a redundancy group template
+          href: part_2\RedundancyGroups\Assigning_elements_to_a_redundancy_group_template.md
+        - name: Setting the priority of a primary or backup element
+          href: part_2\RedundancyGroups\Setting_the_priority_of_a_primary_or_backup_element.md
+        - name: Changing the redundancy mode
+          href: part_2\RedundancyGroups\Changing_the_redundancy_mode.md
+        - name: Manually switching between primary and backup elements
+          href: part_2\RedundancyGroups\Manually_switching_between_primary_and_backup_elements.md
+        - name: Setting a primary or backup element in maintenance
+          href: part_2\RedundancyGroups\Setting_a_primary_or_backup_element_in_maintenance.md
+    - name: Services and service templates
+      href: part_2\services\services.md
+      items:
+        - name: About services
+          href: part_2\services\About_services.md
+        - name: Service cards
+          href: part_2\services\Service_cards.md
+          items:
+            - name: Service card header and footer
+              href: part_2\services\Service_card_header_and_footer.md
+            - name: Service card pages
+              href: part_2\services\Service_card_pages.md
+        - name: Adding a service
+          href: part_2\services\Adding_a_service.md
+          items:
+            - name: Conditionally including an element in a service
+              href: part_2\services\Conditionally_including_an_element_in_a_service.md
+        - name: Service properties
+          href: part_2\services\Service_properties.md
+        - name: Service templates
+          href: part_2\services\Service_templates.md
+          items:
+            - name: About service templates
+              href: part_2\services\About_service_templates.md
+            - name: Creating a service template
+              href: part_2\services\Creating_a_service_template.md
+            - name: Applying service templates
+              href: part_2\services\Applying_service_templates.md
+            - name: Managing service templates
+              href: part_2\services\Managing_service_templates.md
+    - name: Views
+      href: part_2\views\views.md
+      items:
+        - name: About views
+          href: part_2\views\About_views.md
+        - name: View cards
+          href: part_2\views\View_cards.md
+        - name: Managing views
+          href: part_2\views\Managing_views.md
+    - name: Visio drawings
+      href: part_2\visio\visio.md
+      items:
+        - name: Getting started
+          href: part_2\visio\Getting_started.md
+          items:
+            - name: Working with shape data in Microsoft Visio
+              href: part_2\visio\Working_with_shape_data_in_Microsoft_Visio.md
+            - name: Editing a visual overview in DataMiner Cube
+              href: part_2\visio\Editing_a_visual_overview_in_DataMiner_Cube.md
+            - name: Cleaning up unused Visio files
+              href: part_2\visio\Cleaning_up_unused_Visio_files.md
+            - name: DataMiner Visio templates
+              href: part_2\visio\DataMiner_Visio_templates.md
+            - name: Visual overview page priority
+              href: part_2\visio\Visual_overview_page_priority.md
+        - name: Linking shapes to DataMiner items
+          href: part_2\visio\Linking_shapes_to_DataMiner_items.md
+          items:
+            - name: Linking a shape to an element, a service or a redundancy group
+              href: part_2\visio\Linking_a_shape_to_an_element_a_service_or_a_redundancy_group.md
+            - name: Linking a shape to a view
+              href: part_2\visio\Linking_a_shape_to_a_view.md
+            - name: Linking a shape to an element parameter
+              href: part_2\visio\Linking_a_shape_to_an_element_parameter.md
+            - name: Linking a shape to an alarm
+              href: part_2\visio\Linking_a_shape_to_an_alarm.md
+            - name: Linking a shape to a history alarm
+              href: part_2\visio\Linking_a_shape_to_a_history_alarm.md
+            - name: Linking a shape to an alarm filter
+              href: part_2\visio\Linking_a_shape_to_an_alarm_filter.md
+            - name: Linking a shape to the alarm state of a Data Display page
+              href: part_2\visio\Linking_a_shape_to_the_alarm_state_of_a_Data_Display_page.md
+            - name: Linking a shape to a DLL file
+              href: part_2\visio\Linking_a_shape_to_a_DLL_file.md
+            - name: Linking a shape to a WFM component
+              href: part_2\visio\Linking_a_shape_to_a_WFM_component.md
+            - name: Linking a shape to a MULTIPLE SET command
+              href: part_2\visio\Linking_a_shape_to_a_MULTIPLE_SET_command.md
+            - name: Linking a shape to a program or a file
+              href: part_2\visio\Linking_a_shape_to_a_program_or_a_file.md
+            - name: Linking a shape to a SET command
+              href: part_2\visio\Linking_a_shape_to_a_SET_command.md
+            - name: Linking a shape to a video thumbnail
+              href: part_2\visio\Linking_a_shape_to_a_video_thumbnail.md
+            - name: Linking a shape to a webpage
+              href: part_2\visio\Linking_a_shape_to_a_webpage.md
+            - name: Linking a shape to an Automation script
+              href: part_2\visio\Linking_a_shape_to_an_Automation_script.md
+            - name: Linking a shape to a matrix parameter
+              href: part_2\visio\Linking_a_shape_to_a_matrix_parameter.md
+            - name: Linking a shape to a calculation involving multiple parameters
+              href: part_2\visio\Linking_a_shape_to_a_calculation_involving_multiple_parameters.md
+            - name: Linking a shape to a trend component
+              href: part_2\visio\Linking_a_shape_to_a_trend_component.md
+            - name: Linking a shape to an aggregation rule
+              href: part_2\visio\Linking_a_shape_to_an_aggregation_rule.md
+            - name: Linking a shape to an Asset Manager table
+              href: part_2\visio\Linking_a_shape_to_an_Asset_Manager_table.md
+            - name: Linking a shape to a dashboard component
+              href: part_2\visio\Linking_a_shape_to_a_dashboard_component.md
+            - name: Adding options to shapes linked to elements or services
+              href: part_2\visio\Adding_options_to_shapes_linked_to_elements_or_services.md
+        - name: Making shapes display information
+          href: part_2\visio\Making_shapes_display_information.md
+          items:
+            - name: Making a shape display the value of an element or service property
+              href: part_2\visio\Making_a_shape_display_the_value_of_an_element_or_service_property.md
+            - name: Making a shape take the latch color of the item it is linked to
+              href: part_2\visio\Making_a_shape_take_the_latch_color_of_the_item_it_is_linked_to.md
+            - name: Making a shape display information about the item it is linked to
+              href: part_2\visio\Making_a_shape_display_information_about_the_item_it_is_linked_to.md
+            - name: Making a shape display a custom drawing using Path markup
+              href: part_2\visio\Making_a_shape_display_a_custom_drawing_using_Path_markup.md
+            - name: Making a shape display a custom tooltip
+              href: part_2\visio\Making_a_shape_display_a_custom_tooltip.md
+            - name: Making a shape display an image
+              href: part_2\visio\Making_a_shape_display_an_image.md
+            - name: Making a shape display the number of highlighted shapes on a page
+              href: part_2\visio\Making_a_shape_display_the_number_of_highlighted_shapes_on_a_page.md
+        - name: Positioning shapes dynamically
+          href: part_2\visio\Positioning_shapes_dynamically.md
+          items:
+            - name: Calibrating the X and Y coordinates in a Visio drawing
+              href: part_2\visio\Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing.md
+            - name: Positioning shapes dynamically
+              href: part_2\visio\Positioning_shapes_dynamically1.md
+            - name: Positioning shapes in a grid layout
+              href: part_2\visio\Positioning_shapes_in_a_grid_layout.md
+            - name: Re-arranging dynamically positioned shapes
+              href: part_2\visio\Re-arranging_dynamically_positioned_shapes.md
+            - name: Docking a shape to one or more borders of a Visio drawing
+              href: part_2\visio\Docking_a_shape_to_one_or_more_borders_of_a_Visio_drawing.md
+            - name: Stretching a shape across an entire card
+              href: part_2\visio\Stretching_a_shape_across_an_entire_card.md
+            - name: Enabling dynamic zoom on dynamically positioned shapes
+              href: part_2\visio\Enabling_dynamic_zoom_on_dynamically_positioned_shapes.md
+            - name: Enabling grouping of dynamically positioned shapes
+              href: part_2\visio\Enabling_grouping_of_dynamically_positioned_shapes.md
+        - name: Generating shapes dynamically
+          href: part_2\visio\Generating_shapes_dynamically.md
+          items:
+            - name: Generating shapes based on table rows
+              href: part_2\visio\Generating_shapes_based_on_table_rows.md
+            - name: Generating shapes based on child items in a view or a service
+              href: part_2\visio\Generating_shapes_based_on_child_items_in_a_view_or_a_service.md
+            - name: Generating shapes that represent alarms
+              href: part_2\visio\Generating_shapes_that_represent_alarms.md
+            - name: Generating shapes for a predefined set of elements, services or views
+              href: part_2\visio\Generating_shapes_for_a_predefined_set_of_elements_services_or_views.md
+            - name: Generating shapes representing bookings
+              href: part_2\visio\Generating_shapes_representing_bookings.md
+        - name: Working with session variables
+          href: part_2\visio\Working_with_session_variables.md
+          items:
+            - name: Initializing a session variable
+              href: part_2\visio\Initializing_a_session_variable.md
+            - name: Ensuring that a session variable is saved
+              href: part_2\visio\Ensuring_that_a_session_variable_is_saved.md
+            - name: Turning a shape into a control to update a session variable
+              href: part_2\visio\Turning_a_shape_into_a_control_to_update_a_session_variable.md
+            - name: Adding options to a session variable control
+              href: part_2\visio\Adding_options_to_a_session_variable_control.md
+            - name: Making a shape display the current value of a variable
+              href: part_2\visio\Making_a_shape_display_the_current_value_of_a_variable.md
+            - name: Making a shape pass a value to a local session variable in a new card
+              href: part_2\visio\Making_a_shape_pass_a_value_to_a_local_session_variable_in_a_new_card.md
+            - name: Configuring a page to update parameters on session variable changes
+              href: part_2\visio\Configuring_a_page_to_update_parameters_on_session_variable_changes.md
+            - name: Configuring a page to update a session variable when another session variable changes
+              href: part_2\visio\Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes.md
+            - name: Making a shape set a file path to a session variable
+              href: part_2\visio\Making_a_shape_set_a_file_path_to_a_session_variable.md
+        - name: Turning shapes into controls
+          href: part_2\visio\Turning_shapes_into_controls.md
+          items:
+            - name: Turning a shape into a parameter control
+              href: part_2\visio\Turning_a_shape_into_a_parameter_control.md
+            - name: Adding options to a parameter control
+              href: part_2\visio\Adding_options_to_a_parameter_control.md
+            - name: Creating a parameter chart
+              href: part_2\visio\Creating_a_parameter_chart.md
+            - name: Turning a shape into a tab control that displays pages of a Visio file
+              href: part_2\visio\Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file.md
+            - name: Creating a button to navigate to a page of the current Visio drawing
+              href: part_2\visio\Creating_a_button_to_navigate_to_a_page_of_the_current_Visio_drawing.md
+            - name: Turning a shape into a redundancy group selection box
+              href: part_2\visio\Turning_a_shape_into_a_redundancy_group_selection_box.md
+            - name: Turning a shape into a button that opens a trend group
+              href: part_2\visio\Turning_a_shape_into_a_button_that_opens_a_trend_group.md
+            - name: Making a shape filter Alarm Console tabs when clicked
+              href: part_2\visio\Making_a_shape_filter_Alarm_Console_tabs_when_clicked.md
+            - name: Creating a range slider control
+              href: part_2\visio\Creating_a_range_slider_control.md
+            - name: Creating a rotating button control
+              href: part_2\visio\Creating_a_rotating_button_control.md
+            - name: Designing buttons with four different states
+              href: part_2\visio\Designing_buttons_with_four_different_states.md
+            - name: Creating a text block control
+              href: part_2\visio\Creating_a_text_block_control.md
+            - name: Embedding a router control component
+              href: part_2\visio\Embedding_a_router_control_component.md
+            - name: Embedding an alarm timeline component
+              href: part_2\visio\Embedding_an_alarm_timeline_component.md
+        - name: Implementing drag-and-drop functions
+          href: part_2\visio\Implementing_drag-and-drop_functions.md
+          items:
+            - name: Triggering an action when a shape is dragged onto another shape
+              href: part_2\visio\Triggering_an_action_when_a_shape_is_dragged_onto_another_shape.md
+            - name: Triggering an action when the mouse pointer hovers over a shape
+              href: part_2\visio\Triggering_an_action_when_the_mouse_pointer_hovers_over_a_shape.md
+        - name: Implementing DataMiner Connectivity Framework functions
+          href: part_2\visio\Implementing_DataMiner_Connectivity_Framework_functions.md
+          items:
+            - name: Automatically displaying external and internal connections
+              href: part_2\visio\Automatically_displaying_external_and_internal_connections.md
+            - name: Options for displaying DCF connections
+              href: part_2\visio\Options_for_displaying_DCF_connections.md
+            - name: Options for highlighting DCF connections
+              href: part_2\visio\Options_for_highlighting_DCF_connections.md
+            - name: Highlighting a connection chain based on a filter shape
+              href: part_2\visio\Highlighting_a_connection_chain_based_on_a_filter_shape.md
+            - name: Creating a selection box with all elements in a connectivity chain
+              href: part_2\visio\Creating_a_selection_box_with_all_elements_in_a_connectivity_chain.md
+            - name: Dynamically generating shapes for elements that are out of scope
+              href: part_2\visio\Dynamically_generating_shapes_for_elements_that_are_out_of_scope.md
+            - name: Dynamically generating shapes for elements connected to views out of scope
+              href: part_2\visio\Dynamically_generating_shapes_for_elements_connected_to_views_out_of_scope.md
+            - name: Applying conditional connection thickness
+              href: part_2\visio\Applying_conditional_connection_thickness.md
+            - name: Linking a shape to an element based on DCF connections
+              href: part_2\visio\Linking_a_shape_to_an_element_based_on_DCF_connections.md
+            - name: Generating the DCF signal path of a particular element and interface
+              href: part_2\visio\Generating_the_DCF_signal_path_of_a_particular_element_and_interface.md
+            - name: Generating the connectivity chain for an SRM service instance
+              href: part_2\visio\Generating_the_connectivity_chain_for_an_SRM_service_instance.md
+            - name: Filtering connections based on connection properties
+              href: part_2\visio\Filtering_connections_based_on_connection_properties.md
+        - name: Implementing EPM functions
+          href: part_2\visio\Implementing_EPM_functions.md
+          items:
+            - name: Linking a Visio page to an EPM chain
+              href: part_2\visio\Linking_a_Visio_page_to_an_EPM_chain.md
+            - name: Linking a Visio page to an EPM filter section field
+              href: part_2\visio\Linking_a_Visio_page_to_an_EPM_filter_section_field.md
+            - name: Preventing navigation to the EPM interface when a shape is clicked
+              href: part_2\visio\Preventing_navigation_to_the_EPM_interface_when_a_shape_is_clicked.md
+            - name: Turning a shape into a button that opens a KPI window
+              href: part_2\visio\Turning_a_shape_into_a_button_that_opens_a_KPI_window.md
+            - name: Specifying additional tables for the EPM Details pane
+              href: part_2\visio\Specifying_additional_tables_for_the_EPM_Details_pane.md
+            - name: Specifying an EPM parameter that can be used to filter
+              href: part_2\visio\Specifying_an_EPM_parameter_that_can_be_used_to_filter.md
+            - name: Restricting the use of line objects to specific connections
+              href: part_2\visio\Restricting_the_use_of_line_objects_to_specific_connections.md
+        - name: Implementing SRM features
+          href: part_2\visio\Implementing_SRM_features.md
+          items:
+            - name: Embedding a Resource Manager component
+              href: part_2\visio\Embedding_a_Resource_Manager_component.md
+            - name: Embedding a Service Manager component
+              href: part_2\visio\Embedding_a_Service_Manager_component.md
+            - name: Embedding a Profile Manager component
+              href: part_2\visio\Embedding_a_Profile_Manager_component.md
+            - name: Linking a shape to a booking
+              href: part_2\visio\Linking_a_shape_to_a_booking.md
+            - name: Linking a shape to a resource
+              href: part_2\visio\Linking_a_shape_to_a_resource.md
+        - name: Miscellaneous
+          href: part_2\visio\Miscellaneous.md
+          items:
+            - name: Grouping shapes
+              href: part_2\visio\Grouping_shapes.md
+            - name: Conditional shape highlighting
+              href: part_2\visio\Conditional_shape_highlighting.md
+            - name: Basic conditional shape manipulation actions
+              href: part_2\visio\Basic_conditional_shape_manipulation_actions.md
+            - name: Extended conditional shape manipulation actions
+              href: part_2\visio\Extended_conditional_shape_manipulation_actions.md
+            - name: Adding a SET command to a shape shortcut menu
+              href: part_2\visio\Adding_a_SET_command_to_a_shape_shortcut_menu.md
+            - name: Making a shape or page visible only for a particular access level
+              href: part_2\visio\Making_a_shape_or_page_visible_only_for_a_particular_access_level.md
+            - name: Disabling the default hyperlink behavior of a linked shape
+              href: part_2\visio\Disabling_the_default_hyperlink_behavior_of_a_linked_shape.md
+            - name: Showing or hiding a shape based on the existence of annotations
+              href: part_2\visio\Showing_or_hiding_a_shape_based_on_the_existence_of_annotations.md
+            - name: Specifying the background of Visual Overview pages
+              href: part_2\visio\Specifying_the_background_of_Visual_Overview_pages.md
+            - name: Marking a page of a Visio drawing as the default page
+              href: part_2\visio\Marking_a_page_of_a_Visio_drawing_as_the_default_page.md
+            - name: Making a shape display a particular page of the current Visio drawing
+              href: part_2\visio\Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing.md
+            - name: Conditionally showing or hiding a page of a Visio drawing
+              href: part_2\visio\Conditionally_showing_or_hiding_a_page_of_a_Visio_drawing.md
+            - name: Having multiple lines drawn between elements in case of element connectivity
+              href: part_2\visio\Having_multiple_lines_drawn_between_elements_in_case_of_element_connectivity.md
+            - name: Making shapes selectable
+              href: part_2\visio\Making_shapes_selectable.md
+            - name: Configuring a custom context menu
+              href: part_2\visio\Configuring_a_custom_context_menu.md
+            - name: Configuring the hover area of a shape
+              href: part_2\visio\Configuring_the_hover_area_of_a_shape.md
+            - name: Embedding a Spectrum Analysis component
+              href: part_2\visio\Embedding_a_Spectrum_Analysis_component.md
+            - name: Disabling the Loading message for a page or shape
+              href: part_2\visio\Disabling_the_Loading_message_for_a_page_or_shape.md
+            - name: Configuring a shape to display or set the Surveyor search text
+              href: part_2\visio\Configuring_a_shape_to_display_or_set_the_Surveyor_search_text.md
+            - name: Filtering the data of a cached table parameter
+              href: part_2\visio\Filtering_the_data_of_a_cached_table_parameter.md
+            - name: Making a shape launch the Device Discovery app
+              href: part_2\visio\Making_a_shape_launch_the_Device_Discovery_app.md
+            - name: Creating a list view
+              href: part_2\visio\Creating_a_list_view.md
+            - name: Ensuring that a card or page variable is saved
+              href: part_2\visio\Ensuring_that_a_card_or_page_variable_is_saved.md
+            - name: Setting the background color of a static shape
+              href: part_2\visio\Setting_the_background_color_of_a_static_shape.md
+        - name: Reference
+          href: part_2\visio\Reference.md
+          items:
+            - name: Overview of DataMiner shape data fields
+              href: part_2\visio\Overview_of_DataMiner_shape_data_fields.md
+            - name: Overview of page and shape options
+              href: part_2\visio\Overview_of_page_and_shape_options.md
+            - name: Placeholders for variables in shape data values
+              href: part_2\visio\Placeholders_for_variables_in_shape_data_values.md
+            - name: Dynamic table filter syntax
+              href: part_2\visio\Dynamic_table_filter_syntax.md
+    - name: Trending
+      href: part_2\trending\trending.md
+      items:
+        - name: Trending techniques
+          href: part_2\trending\Trending_techniques.md
+        - name: Displaying trend graphs
+          href: part_2\trending\Displaying_trend_graphs.md
+          items:
+            - name: Accessing trend information from a card
+              href: part_2\trending\Accessing_trend_information_from_a_card.md
+            - name: Displaying alarm template colors in trend graphs
+              href: part_2\trending\Displaying_alarm_template_colors_in_trend_graphs.md
+            - name: Accessing trend information from the Trending module
+              href: part_2\trending\Accessing_trend_information_from_the_Trending_module.md
+            - name: Working with trend predictions
+              href: part_2\trending\Working_with_trend_predictions.md
+            - name: Working with behavioral anomaly detection
+              href: part_2\trending\Working_with_behavioral_anomaly_detection.md
+            - name: Working with pattern matching
+              href: part_2\trending\Working_with_pattern_matching.md
+        - name: Manipulating trend graphs
+          href: part_2\trending\Manipulating_trend_graphs.md
+          items:
+            - name: Panning across a trend graph
+              href: part_2\trending\Panning_across_a_trend_graph.md
+            - name: Zooming in/out on a trend graph
+              href: part_2\trending\Zooming_in_out_on_a_trend_graph.md
+            - name: Using the right-click menu
+              href: part_2\trending\Using_the_right-click_menu.md
+        - name: Viewing trend information in a histogram
+          href: part_2\trending\Viewing_trend_information_in_a_histogram.md
+          items:
+            - name: Viewing trend information in a histogram by drilling down on a parameter
+              href: part_2\trending\Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter.md
+            - name: Viewing trend information in a histogram on a view card
+              href: part_2\trending\Viewing_trend_information_in_a_histogram_on_a_view_card.md
+        - name: Working with trend groups
+          href: part_2\trending\Working_with_trend_groups.md
+          items:
+            - name: Working with the trend groups pane
+              href: part_2\trending\Working_with_the_trend_groups_pane.md
+            - name: Working with the parameter pane
+              href: part_2\trending\Working_with_the_parameter_pane.md
+        - name: Setting the default sliding window size for real-time trending
+          href: part_2\trending\Setting_the_default_sliding_window_size_for_real-time_trending.md
+    - name: Protocols and Templates
+      href: part_2\protocols\protocols.md
+      items:
+        - name: Protocols
+          href: part_2\protocols\Protocols1.md
+          items:
+            - name: Adding a protocol or protocol version to your DataMiner System
+              href: part_2\protocols\Adding_a_protocol_or_protocol_version_to_your_DataMiner_System.md
+            - name: Deleting a protocol or protocol version from your DataMiner System
+              href: part_2\protocols\Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System.md
+            - name: Promoting a protocol version to production version
+              href: part_2\protocols\Promoting_a_protocol_version_to_production_version.md
+            - name: Managing Visio files linked to protocols
+              href: part_2\protocols\Managing_Visio_files_linked_to_protocols.md
+            - name: Viewing protocol help
+              href: part_2\protocols\Viewing_protocol_help.md
+            - name: Working with the elements tab
+              href: part_2\protocols\Working_with_the_elements_tab.md
+            - name: Advanced protocol functionality
+              href: part_2\protocols\Advanced_protocol_functionality.md
+        - name: Information templates
+          href: part_2\protocols\Information_templates.md
+          items:
+            - name: Creating an information template
+              href: part_2\protocols\Creating_an_information_template.md
+            - name: Uploading an information template file
+              href: part_2\protocols\Uploading_an_information_template_file.md
+            - name: Activating an information template
+              href: part_2\protocols\Activating_an_information_template.md
+            - name: Editing an information template
+              href: part_2\protocols\Editing_an_information_template.md
+            - name: Duplicating an information template
+              href: part_2\protocols\Duplicating_an_information_template.md
+            - name: Deleting an information template
+              href: part_2\protocols\Deleting_an_information_template.md
+            - name: Editing the information template for one parameter
+              href: part_2\protocols\Editing_the_information_template_for_one_parameter.md
+        - name: Alarm templates
+          href: part_2\protocols\Alarm_templates.md
+          items:
+            - name: About alarm templates
+              href: part_2\protocols\About_alarm_templates.md
+            - name: Managing alarm templates
+              href: part_2\protocols\Managing_alarm_templates.md
+            - name: Configuring alarm templates
+              href: part_2\protocols\Configuring_alarm_templates.md
+            - name: Changing the alarm range for one parameter
+              href: part_2\protocols\Changing_the_alarm_range_for_one_parameter.md
+            - name: Guidelines for assigning alarm severity levels
+              href: part_2\protocols\Guidelines_for_assigning_alarm_severity_levels.md
+            - name: Alarm template groups
+              href: part_2\protocols\Alarm_template_groups.md
+            - name: Exporting alarm template parameter data
+              href: part_2\protocols\Exporting_alarm_template_parameter_data.md
+        - name: Trend templates
+          href: part_2\protocols\Trend_templates.md
+          items:
+            - name: About trend templates
+              href: part_2\protocols\About_trend_templates.md
+            - name: Adding and deleting trend templates
+              href: part_2\protocols\Adding_and_deleting_trend_templates.md
+            - name: Configuring trend templates
+              href: part_2\protocols\Configuring_trend_templates.md
+            - name: Assigning trend templates
+              href: part_2\protocols\Assigning_trend_templates.md
+    - name: Documents
+      href: part_2\documents\documents.md
+      items:
+        - name: About the Documents module
+          href: part_2\documents\About_the_Documents_module.md
+        - name: Consulting documents, hyperlinks or email addresses
+          href: part_2\documents\Consulting_documents_hyperlinks_or_email_addresses.md
+        - name: Managing the document folders
+          href: part_2\documents\Managing_the_document_folders.md
+        - name: Adding documents, hyperlinks or email addresses
+          href: part_2\documents\Adding_documents_hyperlinks_or_email_addresses.md
+    - name: Chat collaboration
+      href: part_2\chat\chat.md
+      items:
+        - name: Chat collaboration from DataMiner 10.0.0/10.0.2 onwards
+          href: part_2\chat\Chat_collaboration_from_DataMiner_10_0_0_10_0_2_onwards.md
+        - name: Chat collaboration prior to DataMiner 10.0.0/10.0.2
+          href: part_2\chat\Chat_collaboration_prior_to_DataMiner_10_0_0_10_0_2.md
+- name: Advanced DataMiner functionality for administrators
+  href: Part3AdvancedFunctionalities\Part3AdvancedFunctionalities.md
+  items:
+    - name: DataMiner Agents
+      href: part_3\DataminerAgents\DataminerAgents.md
+      items:
+        - name: Installing a DataMiner Agent
+          href: part_3\DataminerAgents\Installing_a_DataMiner_Agent.md
+        - name: Configuring a DataMiner Agent
+          href: part_3\DataminerAgents\Configuring_a_DataMiner_Agent.md
+          items:
+            - name: General DMA configuration
+              href: part_3\DataminerAgents\General_DMA_configuration.md
+            - name: Configuration of DataMiner processes
+              href: part_3\DataminerAgents\Configuration_of_DataMiner_processes.md
+            - name: DMA configuration related to client applications
+              href: part_3\DataminerAgents\DMA_configuration_related_to_client_applications.md
+        - name: Backing up a DataMiner Agent
+          href: part_3\DataminerAgents\Backing_up_a_DataMiner_Agent.md
+          items:
+            - name: Backing up a DataMiner Agent using DataMiner Taskbar Utility
+              href: part_3\DataminerAgents\Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md
+            - name: Backing up a DataMiner Agent in DataMiner Cube
+              href: part_3\DataminerAgents\Backing_up_a_DataMiner_Agent_in_DataMiner_Cube.md
+        - name: Restoring a DataMiner Agent
+          href: part_3\DataminerAgents\Restoring_a_DataMiner_Agent.md
+          items:
+            - name: Preparing the destination server for a DMA restoration
+              href: part_3\DataminerAgents\Preparing_the_destination_server_for_a_DMA_restoration.md
+            - name: Restoring a DMA using the DataMiner Taskbar Utility
+              href: part_3\DataminerAgents\Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility.md
+            - name: Restoring the DMA configuration only
+              href: part_3\DataminerAgents\Restoring_the_DMA_configuration_only.md
+            - name: Restoring the database only
+              href: part_3\DataminerAgents\Restoring_the_database_only.md
+            - name: Starting a restored DataMiner Agent in a cluster
+              href: part_3\DataminerAgents\Starting_a_restored_DataMiner_Agent_in_a_cluster.md
+        - name: Upgrading a DataMiner Agent
+          href: part_3\DataminerAgents\Upgrading_a_DataMiner_Agent.md
+          items:
+            - name: Upgrading a DataMiner Agent in the Update Center
+              href: part_3\DataminerAgents\Upgrading_a_DataMiner_Agent_in_the_Update_Center.md
+            - name: Upgrading a DataMiner Agent using DataMiner Taskbar Utility
+              href: part_3\DataminerAgents\Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md
+            - name: Upgrading a DataMiner Agent in System Center
+              href: part_3\DataminerAgents\Upgrading_a_DataMiner_Agent_in_System_Center.md
+            - name: Checking the upgrade history of a DataMiner Agent
+              href: part_3\DataminerAgents\Checking_the_upgrade_history_of_a_DataMiner_Agent.md
+            - name: Rolling back a DataMiner upgrade
+              href: part_3\DataminerAgents\Rolling_back_a_DataMiner_upgrade.md
+        - name: Uninstalling a DataMiner Agent
+          href: part_3\DataminerAgents\Uninstalling_a_DataMiner_Agent.md
+        - name: DataMiner packages
+          href: part_3\DataminerAgents\DataMiner_packages.md
+        - name: Exporting and importing packages on a DMA
+          href: part_3\DataminerAgents\Exporting_and_importing_packages_on_a_DMA.md
+          items:
+            - name: Exporting elements, services, etc. to a .dmimport file
+              href: part_3\DataminerAgents\Exporting_elements_services_etc_to_a_dmimport_file.md
+            - name: Importing elements, services, etc. from a .dmimport file
+              href: part_3\DataminerAgents\Importing_elements_services_etc_from_a_dmimport_file.md
+    - name: DataMiner Systems
+      href: part_3\DataminerSystems\DataminerSystems.md
+      items:
+        - name: About DataMiner Systems
+          href: part_3\DataminerSystems\About_DataMiner_Systems.md
+          items:
+            - name: Virtual device connections
+              href: part_3\DataminerSystems\Virtual_device_connections.md
+            - name: Gratuitous ARP messages
+              href: part_3\DataminerSystems\Gratuitous_ARP_messages.md
+            - name: Eventing or polling
+              href: part_3\DataminerSystems\Eventing_or_polling.md
+            - name: DataMiner processes
+              href: part_3\DataminerSystems\DataMiner_processes.md
+            - name: DataMiner interfaces
+              href: part_3\DataminerSystems\DataMiner_interfaces.md
+        - name: Viewing information on the DMAs in a DMS
+          href: part_3\DataminerSystems\Viewing_information_on_the_DMAs_in_a_DMS.md
+        - name: Setting up a new DataMiner System
+          href: part_3\DataminerSystems\Setting_up_a_new_DataMiner_System.md
+          items:
+            - name: Before you begin to set up a new DMS
+              href: part_3\DataminerSystems\Before_you_begin_to_set_up_a_new_DMS.md
+            - name: Setting up a new DMS in DataMiner Cube
+              href: part_3\DataminerSystems\Setting_up_a_new_DMS_in_DataMiner_Cube.md
+        - name: Adding a DataMiner Agent to a DataMiner System
+          href: part_3\DataminerSystems\Adding_a_DataMiner_Agent_to_a_DataMiner_System.md
+          items:
+            - name: Adding a regular DataMiner Agent
+              href: part_3\DataminerSystems\Adding_a_regular_DataMiner_Agent.md
+            - name: Adding a DataMiner Probe
+              href: part_3\DataminerSystems\Adding_a_DataMiner_Probe.md
+        - name: Removing a DataMiner Agent from a DataMiner System
+          href: part_3\DataminerSystems\Removing_a_DataMiner_Agent_from_a_DataMiner_System.md
+        - name: Starting or stopping DataMiner Agents in your DataMiner System
+          href: part_3\DataminerSystems\Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.md
+          items:
+            - name: Starting or stopping a DMA in DataMiner Cube
+              href: part_3\DataminerSystems\Starting_or_stopping_a_DMA_in_DataMiner_Cube.md
+            - name: Starting or stopping a DMA using DataMiner Taskbar Utility
+              href: part_3\DataminerSystems\Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility.md
+        - name: Migrating elements in a DataMiner System
+          href: part_3\DataminerSystems\Migrating_elements_in_a_DataMiner_System.md
+        - name: Sharing DataMiner data with third parties
+          href: part_3\DataminerSystems\Sharing_DataMiner_data_with_third_parties.md
+        - name: DMS maintenance tools
+          href: part_3\DataminerSystems\DMS_maintenance_tools.md
+          items:
+            - name: Cleaning up unused files on a DMA
+              href: part_3\DataminerSystems\Cleaning_up_unused_files_on_a_DMA.md
+            - name: Synchronizing data between DataMiner Agents
+              href: part_3\DataminerSystems\Synchronizing_data_between_DataMiner_Agents.md
+        - name: Running BPA tests
+          href: part_3\DataminerSystems\Running_BPA_tests.md
+    - name: Failover
+      href: part_3\failover\failover.md
+      items:
+        - name: About DMA Failover
+          href: part_3\failover\About_DMA_Failover.md
+        - name: Viewing Failover information
+          href: part_3\failover\Viewing_Failover_information.md
+          items:
+            - name: Viewing the Failover setup
+              href: part_3\failover\Viewing_the_Failover_setup.md
+            - name: Viewing the current Failover DMA status
+              href: part_3\failover\Viewing_the_current_Failover_DMA_status.md
+        - name: Configuring Failover
+          href: part_3\failover\Configuring_Failover.md
+          items:
+            - name: Preparing the two DataMiner Agents
+              href: part_3\failover\Preparing_the_two_DataMiner_Agents.md
+            - name: Failover configuration in Cube
+              href: part_3\failover\Failover_configuration_in_Cube.md
+            - name: Advanced Failover options
+              href: part_3\failover\Advanced_Failover_options.md
+        - name: Preferred configuration using virtual IP addresses (best practice)
+          href: part_3\failover\Preferred_configuration_using_virtual_IP_addresses__best_practice.md
+        - name: Linking an element to a fixed DMA - Force Agent
+          href: part_3\failover\Linking_an_element_to_a_fixed_DMA_Force_Agent.md
+        - name: Synchronizing the DMA databases
+          href: part_3\failover\Synchronizing_the_DMA_databases.md
+        - name: Ending a Failover configuration
+          href: part_3\failover\Ending_a_Failover_configuration.md
+        - name: Frequently asked questions about DMA Failover
+          href: part_3\failover\Frequently_asked_questions_about_DMA_Failover.md
+    - name: Databases
+      href: part_3\databases\databases.md
+      items:
+        - name: General database
+          href: part_3\databases\General_database.md
+          items:
+            - name: Configuring the database settings in Cube
+              href: part_3\databases\Configuring_the_database_settings_in_Cube.md
+            - name: Migrating the general database to Cassandra
+              href: part_3\databases\Migrating_the_general_database_to_Cassandra.md
+            - name: Moving the Cassandra database to a different disk drive
+              href: part_3\databases\Moving_the_Cassandra_database_to_a_different_disk_drive.md
+            - name: Upgrading the Cassandra database
+              href: part_3\databases\Upgrading_the_Cassandra_database.md
+            - name: Configuring a Cassandra database on a remote cluster
+              href: part_3\databases\Configuring_a_Cassandra_database_on_a_remote_cluster.md
+            - name: Migrating the general database to a DMS Cassandra cluster
+              href: part_3\databases\Migrating_the_general_database_to_a_DMS_Cassandra_cluster.md
+            - name: Configuring how long alarm history slider data are kept in Cassandra
+              href: part_3\databases\Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra.md
+            - name: Activating one file per table for an existing MySQL database
+              href: part_3\databases\Activating_one_file_per_table_for_an_existing_MySQL_database.md
+            - name: Deleting element data from a MySQL database
+              href: part_3\databases\Deleting_element_data_from_a_MySQL_database.md
+            - name: Moving MySQL data to another location
+              href: part_3\databases\Moving_MySQL_data_to_another_location.md
+            - name: Configuring a size limit for file offloads
+              href: part_3\databases\Configuring_a_size_limit_for_file_offloads.md
+        - name: Keeping a database table from being checked during an upgrade
+          href: part_3\databases\Keeping_a_database_table_from_being_checked_during_an_upgrade.md
+          items:
+            - name: Adding a SkipTableUpdate instruction to the db.xml file
+              href: part_3\databases\Adding_a_SkipTableUpdate_instruction_to_the_db_xml_file.md
+            - name: Adding a DataMiner Customized comment
+              href: part_3\databases\Adding_a_DataMiner_Customized_comment.md
+        - name: Offload database
+          href: part_3\databases\Offload_database.md
+          items:
+            - name: Setting up an offload database
+              href: part_3\databases\Setting_up_an_offload_database.md
+            - name: Structure of the offload database
+              href: part_3\databases\Structure_of_the_offload_database.md
+            - name: Configuring data offloads
+              href: part_3\databases\Configuring_data_offloads.md
+            - name: How DataMiner offloads data
+              href: part_3\databases\How_DataMiner_offloads_data.md
+        - name: Configuring an additional database
+          href: part_3\databases\Configuring_an_additional_database.md
+        - name: DataMiner Indexing Engine
+          href: part_3\databases\DataMiner_Indexing_Engine.md
+          items:
+            - name: Installing DataMiner Indexing Engine
+              href: part_3\databases\Installing_DataMiner_Indexing_Engine.md
+            - name: Configuring Indexing backups
+              href: part_3\databases\Configuring_Indexing_backups.md
+            - name: Configuring DataMiner Indexing
+              href: part_3\databases\Configuring_DataMiner_Indexing.md
+            - name: Configuring multiple Elasticsearch clusters
+              href: part_3\databases\Configuring_multiple_Elasticsearch_clusters.md
+        - name: Specifying TTL overrides
+          href: part_3\databases\Specifying_TTL_overrides.md
+        - name: Database queries
+          href: part_3\databases\Database_queries.md
+          items:
+            - name: Querying a database
+              href: part_3\databases\Querying_a_database.md
+            - name: Examples of database queries
+              href: part_3\databases\Examples_of_database_queries.md
+    - name: Security
+      href: part_3\security\security.md
+      items:
+        - name: About DMS Security
+          href: part_3\security\About_DMS_Security.md
+          items:
+            - name: User identification
+              href: part_3\security\User_identification.md
+            - name: User rights
+              href: part_3\security\User_rights.md
+            - name: User groups
+              href: part_3\security\User_groups.md
+            - name: Types of users
+              href: part_3\security\Types_of_users.md
+        - name: Managing users
+          href: part_3\security\Managing_users.md
+          items:
+            - name: Accessing security in System Center
+              href: part_3\security\Accessing_security_in_System_Center.md
+            - name: Opening a user card
+              href: part_3\security\Opening_a_user_card.md
+            - name: Adding a user
+              href: part_3\security\Adding_a_user.md
+            - name: Deleting a user
+              href: part_3\security\Deleting_a_user.md
+            - name: Viewing user information
+              href: part_3\security\Viewing_user_information.md
+            - name: Editing a user’s details
+              href: part_3\security\Editing_a_user’s_details.md
+            - name: Changing group membership of a user
+              href: part_3\security\Changing_group_membership_of_a_user.md
+            - name: Disconnecting a user in DataMiner Cube
+              href: part_3\security\Disconnecting_a_user_in_DataMiner_Cube.md
+        - name: Configuring user notifications
+          href: part_3\security\Configuring_user_notifications.md
+          items:
+            - name: Configuring notifications in System Center
+              href: part_3\security\Configuring_notifications_in_System_Center.md
+            - name: Configuring notifications directly from the Alarm Console or Surveyor
+              href: part_3\security\Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor.md
+            - name: Configuring alarm storm prevention for notifications
+              href: part_3\security\Configuring_alarm_storm_prevention_for_notifications.md
+        - name: Managing user groups
+          href: part_3\security\Managing_user_groups.md
+          items:
+            - name: Viewing information about user groups
+              href: part_3\security\Viewing_information_about_user_groups.md
+            - name: Adding a user group
+              href: part_3\security\Adding_a_user_group.md
+            - name: Configuring a user group
+              href: part_3\security\Configuring_a_user_group.md
+            - name: Deleting a user group
+              href: part_3\security\Deleting_a_user_group.md
+        - name: DataMiner user permissions
+          href: part_3\security\DataMiner_user_permissions.md
+        - name: Assigning user settings to a user group
+          href: part_3\security\Assigning_user_settings_to_a_user_group.md
+        - name: Configuring a set of user group settings
+          href: part_3\security\Configuring_a_set_of_user_group_settings.md
+          items:
+            - name: Managing predefined sets of credentials for SNMP authentication
+              href: part_3\security\Managing_predefined_sets_of_credentials_for_SNMP_authentication.md
+        - name: Frequently asked questions about user group settings
+          href: part_3\security\Frequently_asked_questions_about_user_group_settings.md
+        - name: Advanced security configuration
+          href: part_3\security\Advanced_security_configuration.md
+          items:
+            - name: Customizing the layout of notification messages
+              href: part_3\security\Customizing_the_layout_of_notification_messages.md
+            - name: Configuring LDAP settings
+              href: part_3\security\Configuring_LDAP_settings.md
+            - name: Configuring Atlassian Crowd settings
+              href: part_3\security\Configuring_Atlassian_Crowd_settings.md
+            - name: Configuring RADIUS settings
+              href: part_3\security\Configuring_RADIUS_settings.md
+            - name: Configuring external authentication via an identity provider using SAML
+              href: part_3\security\Configuring_external_authentication_via_an_identity_provider_using_SAML.md
+            - name: Setting up Azure Active Directory Domain Services
+              href: part_3\security\Setting_up_Azure_Active_Directory_Domain_Services.md
+            - name: Enabling TLS encryption
+              href: part_3\security\Enabling_TLS_encryption.md
+    - name: SNMP managers
+      href: part_3\SNMP\SNMP.md
+      items:
+        - name: About SNMP managers
+          href: part_3\SNMP\About_SNMP_managers.md
+          items:
+            - name: Terminology related to the SNMP protocol
+              href: part_3\SNMP\Terminology_related_to_the_SNMP_protocol.md
+            - name: Interaction between SNMP manager and SNMP agent
+              href: part_3\SNMP\Interaction_between_SNMP_manager_and_SNMP_agent.md
+        - name: Configuring SNMP managers
+          href: part_3\SNMP\Configuring_SNMP_managers.md
+          items:
+            - name: Configuring an SNMP manager in DataMiner Cube
+              href: part_3\SNMP\Configuring_an_SNMP_manager_in_DataMiner_Cube.md
+            - name: Enabling the virtual SNMP agent of an element
+              href: part_3\SNMP\Enabling_the_virtual_SNMP_agent_of_an_element.md
+            - name: Changing SNMP agent ports
+              href: part_3\SNMP\Changing_SNMP_agent_ports.md
+            - name: Configuring SNMP agent community strings
+              href: part_3\SNMP\Configuring_SNMP_agent_community_strings.md
+            - name: Disabling element SNMP agent functionality
+              href: part_3\SNMP\Disabling_element_SNMP_agent_functionality.md
+            - name: Enabling notifications in case SNMPv3 traps cannot be processed
+              href: part_3\SNMP\Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed.md
+            - name: Enabling DataMiner SNMP agent functionality
+              href: part_3\SNMP\Enabling_DataMiner_SNMP_agent_functionality.md
+            - name: Adjusting the SNMP inform message cache size
+              href: part_3\SNMP\Adjusting_the_SNMP_inform_message_cache_size.md
+        - name: Resending alarms to an SNMP manager
+          href: part_3\SNMP\Resending_alarms_to_an_SNMP_manager.md
+        - name: DataMiner SNMP notification definition
+          href: part_3\SNMP\DataMiner_SNMP_notification_definition.md
+          items:
+            - name: Default DataMiner notification
+              href: part_3\SNMP\Default_DataMiner_notification.md
+            - name: Custom DataMiner notification
+              href: part_3\SNMP\Custom_DataMiner_notification.md
+    - name: DataMiner Connectivity Framework
+      href: part_3\DCF\DCF.md
+      items:
+        - name: About the DataMiner Connectivity Framework
+          href: part_3\DCF\About_the_DataMiner_Connectivity_Framework.md
+        - name: Viewing element connections
+          href: part_3\DCF\Viewing_element_connections.md
+        - name: Configuring element connectivity in Cube
+          href: part_3\DCF\Configuring_element_connectivity_in_Cube.md
+          items:
+            - name: Editing element connections in the Properties window
+              href: part_3\DCF\Editing_element_connections_in_the_Properties_window.md
+            - name: Advanced Connectivity configuration
+              href: part_3\DCF\Advanced_Connectivity_configuration.md
+        - name: Defining connectivity chains in XML files
+          href: part_3\DCF\Defining_connectivity_chains_in_XML_files.md
+          items:
+            - name: General Connectivity.xml file
+              href: part_3\DCF\General_Connectivity_xml_file.md
+            - name: Connectivity.xml files representing chains
+              href: part_3\DCF\Connectivity_xml_files_representing_chains.md
+            - name: Automatically generating service RCA chains based on connectivity
+              href: part_3\DCF\Automatically_generating_service_RCA_chains_based_on_connectivity.md
+    - name: DataMiner Integration Studio
+      href: part_3\DIS\DIS.md
+      items:
+        - name: Concepts
+          href: part_3\DIS\Concepts.md
+          items:
+            - name: Overall concept of the DataMiner Integration Studio
+              href: part_3\DIS\Overall_concept_of_the_DataMiner_Integration_Studio.md
+            - name: Concept of debugging QActions and Automation scripts
+              href: part_3\DIS\Concept_of_debugging_QActions_and_Automation_scripts.md
+        - name: Installing and configuring the software
+          href: part_3\DIS\Installing_and_configuring_the_software.md
+          items:
+            - name: Prerequisites
+              href: part_3\DIS\Prerequisites.md
+            - name: Installing and configuring DataMiner Integration Studio
+              href: part_3\DIS\Installing_and_configuring_DataMiner_Integration_Studio.md
+            - name: Configuring Microsoft Visual Studio
+              href: part_3\DIS\Configuring_Microsoft_Visual_Studio.md
+        - name: DIS menu
+          href: part_3\DIS\DIS_menu.md
+        - name: XML editor
+          href: part_3\DIS\XML_editor.md
+        - name: Display editor
+          href: part_3\DIS\Display_editor.md
+        - name: Function editor
+          href: part_3\DIS\Function_editor.md
+        - name: Table editor
+          href: part_3\DIS\Table_editor.md
+        - name: Version editor
+          href: part_3\DIS\Version_editor.md
+        - name: C# editor
+          href: part_3\DIS\C_editor.md
+        - name: Debugging QActions and Automation scripts
+          href: part_3\DIS\Debugging_QActions_and_Automation_scripts.md
+          items:
+            - name: Preparing to debug on the local DataMiner Agent
+              href: part_3\DIS\Preparing_to_debug_on_the_local_DataMiner_Agent.md
+            - name: Preparing to debug on a remote DataMiner Agent
+              href: part_3\DIS\Preparing_to_debug_on_a_remote_DataMiner_Agent.md
+            - name: Debugging a QAction
+              href: part_3\DIS\Debugging_a_QAction.md
+            - name: Debugging an Automation script
+              href: part_3\DIS\Debugging_an_Automation_script.md
+        - name: Developing DataMiner protocols and Automation scripts as Visual Studio solutions
+          href: part_3\DIS\Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions.md
+          items:
+            - name: Developing DataMiner protocols as Visual Studio solutions
+              href: part_3\DIS\Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions.md
+            - name: Developing Automation scripts as Visual Studio solutions
+              href: part_3\DIS\Developing_Automation_scripts_as_Visual_Studio_solutions.md
+        - name: Troubleshooting
+          href: part_3\DIS\Troubleshooting.md
+          items:
+            - name: Repairing an incorrectly installed DIS package on Visual Studio 2010
+              href: part_3\DIS\Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010.md
+            - name: Could not find SLScripting process, is DataMiner running?
+              href: part_3\DIS\Could_not_find_SLScripting_process_is_DataMiner_running.md
+            - name: Clicking the Publish button causes an error
+              href: part_3\DIS\Clicking_the_Publish_button_causes_an_error.md
+        - name: DIS reference
+          href: part_3\DIS\DIS_reference.md
+          items:
+            - name: DIS settings
+              href: part_3\DIS\DIS_settings.md
+            - name: DIS keyboard shortcuts
+              href: part_3\DIS\DIS_keyboard_shortcuts.md
+            - name: Microsoft Visual Studio keyboard shortcuts
+              href: part_3\DIS\Microsoft_Visual_Studio_keyboard_shortcuts.md
+            - name: Class Library packages
+              href: part_3\DIS\Class_Library_packages.md
+    - name: TCP-IP sockets
+      href: part_3\TCPIPSockets\TCPIPSockets.md
+      items:
+        - name: About TCP-IP sockets
+          href: part_3\TCPIPSockets\About_TCP-IP_sockets.md
+        - name: Configuring the TCP-IP socket settings
+          href: part_3\TCPIPSockets\Configuring_the_TCP-IP_socket_settings.md
+          items:
+            - name: Configuring the necessary tags in DataMiner.xml
+              href: part_3\TCPIPSockets\Configuring_the_necessary_tags_in_DataMiner_xml.md
+            - name: Testing alarm forwarding
+              href: part_3\TCPIPSockets\Testing_alarm_forwarding.md
+        - name: TCP-IP socket message reference
+          href: part_3\TCPIPSockets\TCP-IP_socket_message_reference.md
+    - name: Serial gateways
+      href: part_3\SerialGateways\SerialGateways.md
+      items:
+        - name: About DMS Serial Gateways
+          href: part_3\SerialGateways\About_DMS_Serial_Gateways.md
+        - name: Features of a DMS Serial Gateway
+          href: part_3\SerialGateways\Features_of_a_DMS_Serial_Gateway.md
+        - name: Using a DMS Serial Gateway
+          href: part_3\SerialGateways\Using_a_DMS_Serial_Gateway.md
+- name: Advanced DataMiner modules
+  href: Part4AdvancedModules\Part4AdvancedModules.md
+  items:
+    - name: DMS Automation
+      href: part_4\automation\automation.md
+      items:
+        - name: Managing Automation scripts
+          href: part_4\automation\Managing_Automation_scripts.md
+        - name: Designing Automation scripts
+          href: part_4\automation\Designing_Automation_scripts.md
+          items:
+            - name: General script configuration
+              href: part_4\automation\General_script_configuration.md
+            - name: Script variables
+              href: part_4\automation\Script_variables.md
+            - name: Script actions
+              href: part_4\automation\Script_actions.md
+        - name: Automation script actions in DataMiner Cube
+          href: part_4\automation\Automation_script_actions_in_DataMiner_Cube.md
+          items:
+            - name: Assign dummy
+              href: part_4\automation\Assign_dummy.md
+            - name: Assign template
+              href: part_4\automation\Assign_template.md
+            - name: CSharp code
+              href: part_4\automation\CSharp_code.md
+            - name: Clear memory
+              href: part_4\automation\Clear_memory.md
+            - name: Comment
+              href: part_4\automation\Comment.md
+            - name: Email
+              href: part_4\automation\Email.md
+            - name: Exit
+              href: part_4\automation\Exit.md
+            - name: Find interactive client
+              href: part_4\automation\Find_interactive_client.md
+            - name: Get parameter or memory value
+              href: part_4\automation\Get_parameter_or_memory_value.md
+            - name: GoTo and Label
+              href: part_4\automation\GoTo_and_Label.md
+            - name: If condition
+              href: part_4\automation\If_condition.md
+            - name: Information
+              href: part_4\automation\Information.md
+            - name: Log
+              href: part_4\automation\Log.md
+            - name: Script
+              href: part_4\automation\Script.md
+            - name: Set parameter, memory position or variable
+              href: part_4\automation\Set_parameter_memory_position_or_variable.md
+            - name: Set element state
+              href: part_4\automation\Set_element_state.md
+            - name: Sleep
+              href: part_4\automation\Sleep.md
+            - name: SMS
+              href: part_4\automation\SMS.md
+            - name: Upload report to FTP
+              href: part_4\automation\Upload_report_to_FTP.md
+            - name: Upload report to shared folder
+              href: part_4\automation\Upload_report_to_shared_folder.md
+            - name: User interaction
+              href: part_4\automation\User_interaction.md
+        - name: Running Automation scripts
+          href: part_4\automation\Running_Automation_scripts.md
+          items:
+            - name: Manually executing a script
+              href: part_4\automation\Manually_executing_a_script.md
+            - name: Script execution options
+              href: part_4\automation\Script_execution_options.md
+        - name: Using CSharp code in Automation scripts
+          href: part_4\automation\Using_CSharp_code_in_Automation_scripts.md
+          items:
+            - name: Adding CSharp code to an Automation script
+              href: part_4\automation\Adding_CSharp_code_to_an_Automation_script.md
+            - name: Debugging CSharp scripts
+              href: part_4\automation\Debugging_CSharp_scripts.md
+            - name: Building interactive Automation scripts with CSharp
+              href: part_4\automation\Building_interactive_Automation_scripts_with_CSharp.md
+            - name: Compiling a CSharp code block as a library
+              href: part_4\automation\Compiling_a_CSharp_code_block_as_a_library.md
+        - name: Special parameters available in DMS Automation scripts
+          href: part_4\automation\Special_parameters_available_in_DMS_Automation_scripts.md
+        - name: Alarm level IDs for use in Automation scripts
+          href: part_4\automation\Alarm_level_IDs_for_use_in_Automation_scripts.md
+        - name: Automation scripts triggered from redundancy groups
+          href: part_4\automation\Automation_scripts_triggered_from_redundancy_groups.md
+        - name: Frequently asked questions about DMS Automation
+          href: part_4\automation\Frequently_asked_questions_about_DMS_Automation.md
+          items:
+            - name: How can I execute an Automation Script on an element in timeout?
+              href: part_4\automation\How_can_I_execute_an_Automation_Script_on_an_element_in_timeout.md
+            - name: How do I abort a running Automation script?
+              href: part_4\automation\How_do_I_abort_a_running_Automation_script.md
+            - name: How do I retrieve the current value of a script parameter?
+              href: part_4\automation\How_do_I_retrieve_the_current_value_of_a_script_parameter.md
+            - name: How do I connect to a CMDB from an Automation script?
+              href: part_4\automation\How_do_I_connect_to_a_CMDB_from_an_Automation_script.md
+            - name: How do I parse Correlation Alarm Info data?
+              href: part_4\automation\How_do_I_parse_Correlation_Alarm_Info_data.md
+            - name: How can I manage permanent memory files?
+              href: part_4\automation\How_can_I_manage_permanent_memory_files.md
+    - name: DMS Business Intelligence
+      href: part_4\sla\sla.md
+      items:
+        - name: Creating an SLA
+          href: part_4\sla\Creating_an_SLA.md
+          items:
+            - name: Creating a new SLA
+              href: part_4\sla\Creating_a_new_SLA.md
+            - name: Replicating an existing SLA
+              href: part_4\sla\Replicating_an_existing_SLA.md
+        - name: Configuring an SLA
+          href: part_4\sla\Configuring_an_SLA.md
+          items:
+            - name: Setting the SLA Window
+              href: part_4\sla\Setting_the_SLA_Window.md
+            - name: Setting the offline window for an SLA
+              href: part_4\sla\Setting_the_offline_window_for_an_SLA.md
+            - name: Configuring the alarm settings for an SLA
+              href: part_4\sla\Configuring_the_alarm_settings_for_an_SLA.md
+            - name: Turning SLA tracking on and off
+              href: part_4\sla\Turning_SLA_tracking_on_and_off.md
+            - name: Resetting the SLA counters
+              href: part_4\sla\Resetting_the_SLA_counters.md
+            - name: Setting the time to keep outages
+              href: part_4\sla\Setting_the_time_to_keep_outages.md
+            - name: Setting the SLA start and end time
+              href: part_4\sla\Setting_the_SLA_start_and_end_time.md
+            - name: Configuring SLA Compliance
+              href: part_4\sla\Configuring_SLA_Compliance.md
+            - name: Making an SLA generate tickets
+              href: part_4\sla\Making_an_SLA_generate_tickets.md
+            - name: Saving and loading an SLA configuration
+              href: part_4\sla\Saving_and_loading_an_SLA_configuration.md
+            - name: Changing an SLA into an enhanced service
+              href: part_4\sla\Changing_an_SLA_into_an_enhanced_service.md
+        - name: Viewing SLA information
+          href: part_4\sla\Viewing_SLA_information.md
+          items:
+            - name: Consulting general SLA information
+              href: part_4\sla\Consulting_general_SLA_information.md
+            - name: Checking SLA Key Performance Indicators
+              href: part_4\sla\Checking_SLA_Key_Performance_Indicators.md
+            - name: Checking the SLA compliance
+              href: part_4\sla\Checking_the_SLA_compliance.md
+            - name: Viewing a list of outages
+              href: part_4\sla\Viewing_a_list_of_outages.md
+            - name: Viewing a list of current active service alarms
+              href: part_4\sla\Viewing_a_list_of_current_active_service_alarms.md
+        - name: Making corrections to existing outages
+          href: part_4\sla\Making_corrections_to_existing_outages.md
+          items:
+            - name: Correcting an outage in the outage list
+              href: part_4\sla\Correcting_an_outage_in_the_outage_list.md
+            - name: Excluding alarms that affect the SLA
+              href: part_4\sla\Excluding_alarms_that_affect_the_SLA.md
+        - name: SLA reporting
+          href: part_4\sla\SLA_reporting.md
+    - name: DMS Correlation
+      href: part_4\correlation\correlation.md
+      items:
+        - name: About DMS Correlation
+          href: part_4\correlation\About_DMS_Correlation.md
+        - name: Managing Correlation rules
+          href: part_4\correlation\Managing_Correlation_rules.md
+          items:
+            - name: Collapsing and expanding folders
+              href: part_4\correlation\Collapsing_and_expanding_folders.md
+            - name: Adding a new folder
+              href: part_4\correlation\Adding_a_new_folder.md
+            - name: Moving rules or folders
+              href: part_4\correlation\Moving_rules_or_folders.md
+            - name: Deleting a rule or folder
+              href: part_4\correlation\Deleting_a_rule_or_folder.md
+            - name: Renaming a folder
+              href: part_4\correlation\Renaming_a_folder.md
+            - name: Adding a new Correlation rule
+              href: part_4\correlation\Adding_a_new_Correlation_rule.md
+            - name: Testing a Correlation rule
+              href: part_4\correlation\Testing_a_Correlation_rule.md
+        - name: General configuration of Correlation rules
+          href: part_4\correlation\General_configuration_of_Correlation_rules.md
+        - name: Filtering and grouping base alarms for Correlation rules
+          href: part_4\correlation\Filtering_and_grouping_base_alarms_for_Correlation_rules.md
+          items:
+            - name: Adding alarm filters to Correlation rules
+              href: part_4\correlation\Adding_alarm_filters_to_Correlation_rules.md
+            - name: Limiting the base alarms
+              href: part_4\correlation\Limiting_the_base_alarms.md
+            - name: Grouping alarms in Correlation rules
+              href: part_4\correlation\Grouping_alarms_in_Correlation_rules.md
+        - name: Adding rule conditions in Correlation rules
+          href: part_4\correlation\Adding_rule_conditions_in_Correlation_rules.md
+        - name: Adding rule actions in Correlation rules
+          href: part_4\correlation\Adding_rule_actions_in_Correlation_rules.md
+          items:
+            - name: Acknowledging a base alarm
+              href: part_4\correlation\Acknowledging_a_base_alarm.md
+            - name: Creating a ticket
+              href: part_4\correlation\Creating_a_ticket.md
+            - name: Escalating an event
+              href: part_4\correlation\Escalating_an_event.md
+            - name: Triggering a correlated alarm
+              href: part_4\correlation\Triggering_a_correlated_alarm.md
+            - name: Running an Automation script from a Correlation rule
+              href: part_4\correlation\Running_an_Automation_script_from_a_Correlation_rule.md
+            - name: Sending an email
+              href: part_4\correlation\Sending_an_email.md
+            - name: Sending a text message
+              href: part_4\correlation\Sending_a_text_message.md
+            - name: Triggering a parameter set
+              href: part_4\correlation\Triggering_a_parameter_set.md
+        - name: Correlation rule syntax
+          href: part_4\correlation\Correlation_rule_syntax.md
+          items:
+            - name: Condition format
+              href: part_4\correlation\Condition_format.md
+            - name: Script condition functions
+              href: part_4\correlation\Script_condition_functions.md
+            - name: Examples of script conditions
+              href: part_4\correlation\Examples_of_script_conditions.md
+        - name: Using Correlation analyzers
+          href: part_4\correlation\Using_Correlation_analyzers.md
+          items:
+            - name: Creating an analyzer
+              href: part_4\correlation\Creating_an_analyzer.md
+            - name: Configuring an analyzer
+              href: part_4\correlation\Configuring_an_analyzer.md
+            - name: Running an analyzer
+              href: part_4\correlation\Running_an_analyzer.md
+            - name: Managing analyzers
+              href: part_4\correlation\Managing_analyzers.md
+        - name: Working with the Connectivity Editor
+          href: part_4\correlation\Working_with_the_Connectivity_Editor.md
+          items:
+            - name: Creating a connectivity chain
+              href: part_4\correlation\Creating_a_connectivity_chain.md
+            - name: Creating an internal connectivity chain
+              href: part_4\correlation\Creating_an_internal_connectivity_chain.md
+            - name: Managing connectivity chains
+              href: part_4\correlation\Managing_connectivity_chains.md
+        - name: Working with aggregation rules
+          href: part_4\correlation\Working_with_aggregation_rules.md
+          items:
+            - name: About aggregation rules
+              href: part_4\correlation\About_aggregation_rules.md
+            - name: Viewing aggregation information
+              href: part_4\correlation\Viewing_aggregation_information.md
+            - name: Managing aggregation rules
+              href: part_4\correlation\Managing_aggregation_rules.md
+    - name: DMS Experience and Performance Management
+      href: part_4\EPM\EPM.md
+      items:
+        - name: About DMS Experience and Performance Management
+          href: part_4\EPM\About_DMS_Experience_and_Performance_Management.md
+        - name: Working with the Experience and Performance Management interface
+          href: part_4\EPM\Working_with_the_Experience_and_Performance_Management_interface.md
+          items:
+            - name: Accessing the Experience and Performance Management user interface
+              href: part_4\EPM\Accessing_the_Experience_and_Performance_Management_user_interface.md
+            - name: EPM user interface components
+              href: part_4\EPM\EPM_user_interface_components.md
+            - name: Using the EPM filter section
+              href: part_4\EPM\Using_the_EPM_filter_section.md
+            - name: Using the EPM overview section
+              href: part_4\EPM\Using_the_EPM_overview_section.md
+            - name: EPM alarm monitoring and trending
+              href: part_4\EPM\EPM_alarm_monitoring_and_trending.md
+            - name: Creating a link between DataMiner elements and the EPM element
+              href: part_4\EPM\Creating_a_link_between_DataMiner_elements_and_the_EPM_element.md
+        - name: Linking an EPM interface to a view
+          href: part_4\EPM\Linking_an_EPM_interface_to_a_view.md
+    - name: Dashboards app
+      href: part_4\newR_D\newR_D.md
+      items:
+        - name: Overview of the Dashboards app UI
+          href: part_4\newR_D\Overview_of_the_Dashboards_app_UI.md
+          items:
+            - name: Dashboards app UI from DataMiner 10.0.0/10.0.2 onwards
+              href: part_4\newR_D\Dashboards_app_UI_from_DataMiner_10_0_0_10_0_2_onwards.md
+            - name: Dashboards app UI prior to DataMiner 10.0.0/10.0.2
+              href: part_4\newR_D\Dashboards_app_UI_prior_to_DataMiner_10_0_0_10_0_2.md
+        - name: Managing dashboard folders
+          href: part_4\newR_D\Managing_dashboard_folders.md
+        - name: Creating and configuring dashboards
+          href: part_4\newR_D\Creating_and_configuring_dashboards.md
+          items:
+            - name: Creating a completely new dashboard
+              href: part_4\newR_D\Creating_a_completely_new_dashboard.md
+            - name: Creating a dashboard based on an example
+              href: part_4\newR_D\Creating_a_dashboard_based_on_an_example.md
+            - name: Duplicating a dashboard
+              href: part_4\newR_D\Duplicating_a_dashboard.md
+            - name: Deleting a dashboard
+              href: part_4\newR_D\Deleting_a_dashboard.md
+            - name: Sharing a dashboard using the Live Sharing Service
+              href: part_4\newR_D\Sharing_a_dashboard_using_the_Live_Sharing_Service.md
+            - name: Editing a dashboard
+              href: part_4\newR_D\Editing_a_dashboard.md
+            - name: Changing dashboard settings
+              href: part_4\newR_D\Changing_dashboard_settings.md
+            - name: Configuring the dashboard layout
+              href: part_4\newR_D\Configuring_the_dashboard_layout.md
+            - name: Configuring dashboard components
+              href: part_4\newR_D\Configuring_dashboard_components.md
+            - name: Embedding a dashboard component in a webpage or Visio drawing
+              href: part_4\newR_D\Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing.md
+        - name: Available visualizations
+          href: part_4\newR_D\Available_visualizations.md
+          items:
+            - name: General
+              href: part_4\newR_D\General.md
+            - name: States and values
+              href: part_4\newR_D\States_and_values.md
+            - name: Tables
+              href: part_4\newR_D\Tables.md
+            - name: Charts
+              href: part_4\newR_D\Charts.md
+            - name: Other
+              href: part_4\newR_D\Other.md
+            - name: Feeds
+              href: part_4\newR_D\Feeds.md
+        - name: Using dashboard feeds
+          href: part_4\newR_D\Using_dashboard_feeds.md
+          items:
+            - name: Configuring feed components
+              href: part_4\newR_D\Configuring_feed_components.md
+            - name: Specifying data input in a dashboard URL
+              href: part_4\newR_D\Specifying_data_input_in_a_dashboard_URL.md
+            - name: Configuring a dashboard to use a URL feed without a feed component
+              href: part_4\newR_D\Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component.md
+        - name: Generating a report based on a dashboard
+          href: part_4\newR_D\Generating_a_report_based_on_a_dashboard.md
+        - name: Customizing the Dashboards app
+          href: part_4\newR_D\Customizing_the_Dashboards_app.md
+        - name: Dashboard Gateway installation
+          href: part_4\newR_D\Dashboard_Gateway_installation.md
+    - name: DMS Dashboards
+      href: part_4\dashboards\dashboards.md
+      items:
+        - name: Accessing dashboards
+          href: part_4\dashboards\Accessing_dashboards.md
+          items:
+            - name: Logging on to the Dashboards App
+              href: part_4\dashboards\Logging_on_to_the_Dashboards_App.md
+            - name: Dashboard URL options
+              href: part_4\dashboards\Dashboard_URL_options.md
+        - name: Creating and configuring dashboards
+          href: part_4\dashboards\Creating_and_configuring_dashboards1.md
+          items:
+            - name: Creating a new dashboard
+              href: part_4\dashboards\Creating_a_new_dashboard.md
+            - name: Configuring dashboard components
+              href: part_4\dashboards\Configuring_dashboard_components1.md
+            - name: Adding an item to a dashboard from outside the Dashboards app
+              href: part_4\dashboards\Adding_an_item_to_a_dashboard_from_outside_the_Dashboards_app.md
+            - name: Dashboard components
+              href: part_4\dashboards\Dashboard_components.md
+            - name: Creating a dashboard with a dynamic list layout
+              href: part_4\dashboards\Creating_a_dashboard_with_a_dynamic_list_layout.md
+            - name: Creating a dashboard container
+              href: part_4\dashboards\Creating_a_dashboard_container.md
+        - name: Managing dashboards in the legacy app
+          href: part_4\dashboards\Managing_dashboards_in_the_legacy_app.md
+          items:
+            - name: Activating or deactivating a dashboard
+              href: part_4\dashboards\Activating_or_deactivating_a_dashboard.md
+            - name: Editing a dashboard
+              href: part_4\dashboards\Editing_a_dashboard1.md
+            - name: Duplicating a dashboard
+              href: part_4\dashboards\Duplicating_a_dashboard1.md
+            - name: Deleting a dashboard
+              href: part_4\dashboards\Deleting_a_dashboard1.md
+            - name: Organizing dashboards in folders
+              href: part_4\dashboards\Organizing_dashboards_in_folders.md
+        - name: Customizing the legacy Dashboards app
+          href: part_4\dashboards\Customizing_the_legacy_Dashboards_app.md
+        - name: Legacy Dashboard Gateway installation
+          href: part_4\dashboards\Legacy_Dashboard_Gateway_installation.md
+          items:
+            - name: Installing a DMS Dashboard Gateway
+              href: part_4\dashboards\Installing_a_DMS_Dashboard_Gateway.md
+            - name: Adding a Dashboards User to the DMS
+              href: part_4\dashboards\Adding_a_Dashboards_User_to_the_DMS.md
+            - name: Configuring dashboard access rights
+              href: part_4\dashboards\Configuring_dashboard_access_rights.md
+            - name: Dashboard Gateway troubleshooting
+              href: part_4\dashboards\Dashboard_Gateway_troubleshooting.md
+    - name: DMS Inventory & Asset Management
+      href: part_4\AssetManagement\AssetManagement.md
+      items:
+        - name: About DMS Inventory & Asset Management
+          href: part_4\AssetManagement\About_DMS_Inventory_Asset_Management.md
+        - name: Browsing the database with DMS Inventory and Asset Management
+          href: part_4\AssetManagement\Browsing_the_database_with_DMS_Inventory_and_Asset_Management.md
+        - name: Managing data in the database with DMS Inventory and Asset Management
+          href: part_4\AssetManagement\Managing_data_in_the_database_with_DMS_Inventory_and_Asset_Management.md
+          items:
+            - name: Adding a row to a table
+              href: part_4\AssetManagement\Adding_a_row_to_a_table.md
+            - name: Updating a table row
+              href: part_4\AssetManagement\Updating_a_table_row.md
+            - name: Deleting a row from a table
+              href: part_4\AssetManagement\Deleting_a_row_from_a_table.md
+            - name: Exporting a table to a CSV file
+              href: part_4\AssetManagement\Exporting_a_table_to_a_CSV_file.md
+            - name: Searching the database
+              href: part_4\AssetManagement\Searching_the_database.md
+            - name: Reloading the Asset Manager user interface
+              href: part_4\AssetManagement\Reloading_the_Asset_Manager_user_interface.md
+            - name: Starting a sync of the DataMiner database and the CMDB
+              href: part_4\AssetManagement\Starting_a_sync_of_the_DataMiner_database_and_the_CMDB.md
+        - name: Configuring DMS Inventory and Asset Management
+          href: part_4\AssetManagement\Configuring_DMS_Inventory_and_Asset_Management.md
+          items:
+            - name: Tags in the Asset Manager configuration file
+              href: part_4\AssetManagement\Tags_in_the_Asset_Manager_configuration_file.md
+            - name: Example of an Asset Manager configuration file
+              href: part_4\AssetManagement\Example_of_an_Asset_Manager_configuration_file.md
+            - name: Activating the Asset Management database in Cube
+              href: part_4\AssetManagement\Activating_the_Asset_Management_database_in_Cube.md
+        - name: Configuring data mediation settings in DMS Inventory and Asset Management
+          href: part_4\AssetManagement\Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management.md
+          items:
+            - name: Tags in the Asset Manager mediation configuration file
+              href: part_4\AssetManagement\Tags_in_the_Asset_Manager_mediation_configuration_file.md
+            - name: Example of an Asset Manager mediation configuration file
+              href: part_4\AssetManagement\Example_of_an_Asset_Manager_mediation_configuration_file.md
+        - name: Synchronizing a database with elements and views with the Surveyor
+          href: part_4\AssetManagement\Synchronizing_a_database_with_elements_and_views_with_the_Surveyor.md
+    - name: DMS Job Manager
+      href: part_4\jobs\jobs.md
+      items:
+        - name: About jobs
+          href: part_4\jobs\About_jobs.md
+        - name: Overview of the Job Manager app UI
+          href: part_4\jobs\Overview_of_the_Job_Manager_app_UI.md
+        - name: Configuring jobs in the Job Manager app
+          href: part_4\jobs\Configuring_jobs_in_the_Job_Manager_app.md
+          items:
+            - name: Configuring job domains
+              href: part_4\jobs\Configuring_job_domains.md
+            - name: Configuring job sections
+              href: part_4\jobs\Configuring_job_sections.md
+            - name: Configuring a job field
+              href: part_4\jobs\Configuring_a_job_field.md
+        - name: Working with the jobs timeline
+          href: part_4\jobs\Working_with_the_jobs_timeline.md
+        - name: Manually adding a job
+          href: part_4\jobs\Manually_adding_a_job.md
+        - name: Exporting a job to PDF
+          href: part_4\jobs\Exporting_a_job_to_PDF.md
+        - name: Manually removing a job
+          href: part_4\jobs\Manually_removing_a_job.md
+        - name: Working with job templates
+          href: part_4\jobs\Working_with_job_templates.md
+    - name: DMS Maps
+      href: part_4\maps\maps.md
+      items:
+        - name: About DMS Maps
+          href: part_4\maps\About_DMS_Maps.md
+        - name: Using DataMiner Maps
+          href: part_4\maps\Using_DataMiner_Maps.md
+          items:
+            - name: Displaying a DataMiner map in a web browser
+              href: part_4\maps\Displaying_a_DataMiner_map_in_a_web_browser.md
+            - name: Displaying a DataMiner Map in a DataMiner dashboard
+              href: part_4\maps\Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard.md
+            - name: Switching map configurations by means of JavaScript
+              href: part_4\maps\Switching_map_configurations_by_means_of_JavaScript.md
+        - name: Configuring the DataMiner Maps host servers
+          href: part_4\maps\Configuring_the_DataMiner_Maps_host_servers.md
+        - name: Configuring the DataMiner Maps
+          href: part_4\maps\Configuring_the_DataMiner_Maps.md
+          items:
+            - name: Top-level structure of a DataMiner Maps configuration file
+              href: part_4\maps\Top-level_structure_of_a_DataMiner_Maps_configuration_file.md
+            - name: Adding a filter box to a DataMiner Map
+              href: part_4\maps\Adding_a_filter_box_to_a_DataMiner_Map.md
+            - name: Adding a custom legend to a map
+              href: part_4\maps\Adding_a_custom_legend_to_a_map.md
+            - name: Grouping markers in one clustered marker
+              href: part_4\maps\Grouping_markers_in_one_clustered_marker.md
+            - name: Enabling spiderfied markers
+              href: part_4\maps\Enabling_spiderfied_markers.md
+            - name: Attributes of the Layer tag
+              href: part_4\maps\Attributes_of_the_Layer_tag.md
+            - name: Layer types
+              href: part_4\maps\Layer_types.md
+            - name: Layer groups
+              href: part_4\maps\Layer_groups.md
+        - name: Layer configuration tags
+          href: part_4\maps\Layer_configuration_tags.md
+          items:
+            - name: ParametersSourceInfo
+              href: part_4\maps\ParametersSourceInfo.md
+            - name: PropertiesSourceInfo
+              href: part_4\maps\PropertiesSourceInfo.md
+            - name: SqlSourceInfo
+              href: part_4\maps\SqlSourceInfo.md
+            - name: TableSourceInfo
+              href: part_4\maps\TableSourceInfo.md
+            - name: LineOptions
+              href: part_4\maps\LineOptions.md
+            - name: MarkerImages
+              href: part_4\maps\MarkerImages.md
+            - name: MarkerDetails
+              href: part_4\maps\MarkerDetails.md
+            - name: PopupSkeleton and PopupDetails
+              href: part_4\maps\PopupSkeleton_and_PopupDetails.md
+    - name: DMS Mobile Gateway
+      href: part_4\MobileGateway\MobileGateway.md
+      items:
+        - name: Configuring Mobile Gateway
+          href: part_4\MobileGateway\Configuring_Mobile_Gateway.md
+          items:
+            - name: Configuring a serial cell phone modem
+              href: part_4\MobileGateway\Configuring_a_serial_cell_phone_modem.md
+            - name: Configuring an IP-based cell phone modem
+              href: part_4\MobileGateway\Configuring_an_IP-based_cell_phone_modem.md
+            - name: Configuring Mobile Gateway to communicate with an SMSEagle device via HTTPS
+              href: part_4\MobileGateway\Configuring_Mobile_Gateway_to_communicate_with_an_SMSEagle_device_via_HTTPS.md
+            - name: Overview of the Mobile Gateway configuration settings
+              href: part_4\MobileGateway\Overview_of_the_Mobile_Gateway_configuration_settings.md
+            - name: Configuring Mobile Gateway in DataMiner Cube
+              href: part_4\MobileGateway\Configuring_Mobile_Gateway_in_DataMiner_Cube.md
+        - name: Working with Mobile Gateway in DataMiner Cube
+          href: part_4\MobileGateway\Working_with_Mobile_Gateway_in_DataMiner_Cube.md
+        - name: Using Mobile Gateway in a Failover setup
+          href: part_4\MobileGateway\Using_Mobile_Gateway_in_a_Failover_setup.md
+        - name: Roaming support
+          href: part_4\MobileGateway\Roaming_support.md
+        - name: Command reference
+          href: part_4\MobileGateway\Command_reference.md
+        - name: Encoding and decoding of character sets in text messages
+          href: part_4\MobileGateway\Encoding_and_decoding_of_character_sets_in_text_messages.md
+    - name: DMS Reporter
+      href: part_4\reporter\reporter.md
+      items:
+        - name: About DMS Reporter
+          href: part_4\reporter\About_DMS_Reporter.md
+        - name: Viewing the reports page on a card
+          href: part_4\reporter\Viewing_the_reports_page_on_a_card.md
+          items:
+            - name: Reports page overview
+              href: part_4\reporter\Reports_page_overview.md
+            - name: Exporting the report information
+              href: part_4\reporter\Exporting_the_report_information.md
+        - name: Viewing the built-in reports in the Reporter app
+          href: part_4\reporter\Viewing_the_built-in_reports_in_the_Reporter_app.md
+          items:
+            - name: System reports
+              href: part_4\reporter\System_reports.md
+            - name: Element reports
+              href: part_4\reporter\Element_reports.md
+            - name: Service reports
+              href: part_4\reporter\Service_reports.md
+            - name: Business reports
+              href: part_4\reporter\Business_reports.md
+            - name: Using the View filter for built-in reports
+              href: part_4\reporter\Using_the_View_filter_for_built-in_reports.md
+        - name: Creating report templates
+          href: part_4\reporter\Creating_report_templates.md
+          items:
+            - name: Accessing the report templates
+              href: part_4\reporter\Accessing_the_report_templates.md
+            - name: Adding a new report template
+              href: part_4\reporter\Adding_a_new_report_template.md
+        - name: Working with custom report templates in a third-party editor
+          href: part_4\reporter\Working_with_custom_report_templates_in_a_third-party_editor.md
+          items:
+            - name: Creating a custom report template in an ASP editor
+              href: part_4\reporter\Creating_a_custom_report_template_in_an_ASP_editor.md
+            - name: Including external files in a report template
+              href: part_4\reporter\Including_external_files_in_a_report_template.md
+            - name: Importing a custom report template made in a third-party editor
+              href: part_4\reporter\Importing_a_custom_report_template_made_in_a_third-party_editor.md
+        - name: Report template components
+          href: part_4\reporter\Report_template_components.md
+          items:
+            - name: Components for one single element or service
+              href: part_4\reporter\Components_for_one_single_element_or_service.md
+            - name: Components for multiple elements or services
+              href: part_4\reporter\Components_for_multiple_elements_or_services.md
+        - name: Generating a report with a custom report template
+          href: part_4\reporter\Generating_a_report_with_a_custom_report_template.md
+          items:
+            - name: Generating a report with the Reporter app
+              href: part_4\reporter\Generating_a_report_with_the_Reporter_app.md
+            - name: Generating reports with a report URL
+              href: part_4\reporter\Generating_reports_with_a_report_URL.md
+        - name: Sending reports by email
+          href: part_4\reporter\Sending_reports_by_email.md
+        - name: Reporter Admin tools
+          href: part_4\reporter\Reporter_Admin_tools.md
+        - name: Publishing Reporter components on your own website
+          href: part_4\reporter\Publishing_Reporter_components_on_your_own_website.md
+          items:
+            - name: Img tags referring to ASP pages
+              href: part_4\reporter\Img_tags_referring_to_ASP_pages.md
+            - name: Setting up authentication and creating the ASP pages
+              href: part_4\reporter\Setting_up_authentication_and_creating_the_ASP_pages.md
+            - name: Component overview
+              href: part_4\reporter\Component_overview.md
+            - name: Constants
+              href: part_4\reporter\Constants.md
+    - name: DMS Router Control
+      href: part_4\RouterControl\RouterControl.md
+      items:
+        - name: Working with the default Router Control configuration
+          href: part_4\RouterControl\Working_with_the_default_Router_Control_configuration.md
+          items:
+            - name: Selecting a matrix
+              href: part_4\RouterControl\Selecting_a_matrix.md
+            - name: Connecting an output to an input
+              href: part_4\RouterControl\Connecting_an_output_to_an_input.md
+            - name: Disconnecting an output from an input
+              href: part_4\RouterControl\Disconnecting_an_output_from_an_input.md
+            - name: Locking an output
+              href: part_4\RouterControl\Locking_an_output.md
+            - name: Unlocking an output
+              href: part_4\RouterControl\Unlocking_an_output.md
+        - name: Creating and customizing Router Control configurations
+          href: part_4\RouterControl\Creating_and_customizing_Router_Control_configurations.md
+          items:
+            - name: Router Control design mode
+              href: part_4\RouterControl\Router_Control_design_mode.md
+            - name: Managing the Router Control configurations
+              href: part_4\RouterControl\Managing_the_Router_Control_configurations.md
+            - name: Designing a matrix tab page in the Router Control module
+              href: part_4\RouterControl\Designing_a_matrix_tab_page_in_the_Router_Control_module.md
+            - name: Overview of user interface component properties
+              href: part_4\RouterControl\Overview_of_user_interface_component_properties.md
+            - name: Creating a dynamic tab page
+              href: part_4\RouterControl\Creating_a_dynamic_tab_page.md
+    - name: DMS Scheduler
+      href: part_4\scheduler\scheduler.md
+      items:
+        - name: About the Scheduler module
+          href: part_4\scheduler\About_the_Scheduler_module.md
+        - name: Manually adding a scheduled task
+          href: part_4\scheduler\Manually_adding_a_scheduled_task.md
+        - name: Scheduling an event based on a Scheduler template
+          href: part_4\scheduler\Scheduling_an_event_based_on_a_Scheduler_template.md
+        - name: Manually starting and stopping a scheduled event
+          href: part_4\scheduler\Manually_starting_and_stopping_a_scheduled_event.md
+        - name: Creating a Scheduler template
+          href: part_4\scheduler\Creating_a_Scheduler_template.md
+    - name: Service and Resource Management
+      href: part_4\SRM\SRM.md
+      items:
+        - name: Concepts
+          href: part_4\SRM\Concepts1.md
+        - name: Functions XML files
+          href: part_4\SRM\Functions_XML_files.md
+        - name: The Profiles module
+          href: part_4\SRM\The_Profiles_module.md
+          items:
+            - name: Configuring profile parameters
+              href: part_4\SRM\Configuring_profile_parameters.md
+            - name: Configuring profile definitions
+              href: part_4\SRM\Configuring_profile_definitions.md
+            - name: Configuring profile instances
+              href: part_4\SRM\Configuring_profile_instances.md
+        - name: The Resources module
+          href: part_4\SRM\The_Resources_module.md
+          items:
+            - name: Resources module UI overview
+              href: part_4\SRM\Resources_module_UI_overview.md
+            - name: Configuring pools of resources
+              href: part_4\SRM\Configuring_pools_of_resources.md
+        - name: The Bookings module
+          href: part_4\SRM\The_Bookings_module.md
+        - name: The Services module
+          href: part_4\SRM\The_Services_module.md
+        - name: SRM code snippets
+          href: part_4\SRM\SRM_code_snippets.md
+        - name: Advanced SRM settings
+          href: part_4\SRM\Advanced_SRM_settings.md
+        - name: SRM reporting
+          href: part_4\SRM\SRM_reporting.md
+          items:
+            - name: Bookings / Reservations tab
+              href: part_4\SRM\Bookings_Reservations_tab.md
+            - name: Bookings / Reservations component of custom templates
+              href: part_4\SRM\Bookings_Reservations_component_of_custom_templates.md
+    - name: DMS Spectrum Analysis
+      href: part_4\SpectrumAnalysis\SpectrumAnalysis.md
+      items:
+        - name: Installation and configuration of a spectrum analyzer
+          href: part_4\SpectrumAnalysis\Installation_and_configuration_of_a_spectrum_analyzer.md
+          items:
+            - name: Connecting spectrum analyzers to your DataMiner System
+              href: part_4\SpectrumAnalysis\Connecting_spectrum_analyzers_to_your_DataMiner_System.md
+            - name: Installing the Keysight/Agilent IO Libraries
+              href: part_4\SpectrumAnalysis\Installing_the_Keysight_Agilent_IO_Libraries.md
+            - name: Configuring the GPIB settings of a spectrum analyzer element
+              href: part_4\SpectrumAnalysis\Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element.md
+        - name: Working with spectrum analyzer elements
+          href: part_4\SpectrumAnalysis\Working_with_spectrum_analyzer_elements.md
+          items:
+            - name: Spectrum analyzer cards
+              href: part_4\SpectrumAnalysis\Spectrum_analyzer_cards.md
+            - name: Viewing spectrum analyzer traces
+              href: part_4\SpectrumAnalysis\Viewing_spectrum_analyzer_traces.md
+            - name: Changing the spectrum analyzer settings
+              href: part_4\SpectrumAnalysis\Changing_the_spectrum_analyzer_settings.md
+            - name: Configuring measurement points
+              href: part_4\SpectrumAnalysis\Configuring_measurement_points.md
+            - name: Working with markers
+              href: part_4\SpectrumAnalysis\Working_with_markers.md
+            - name: Working with reference lines
+              href: part_4\SpectrumAnalysis\Working_with_reference_lines.md
+            - name: Working with frequency masks
+              href: part_4\SpectrumAnalysis\Working_with_frequency_masks.md
+            - name: Using Spectrum Analysis presets
+              href: part_4\SpectrumAnalysis\Using_Spectrum_Analysis_presets.md
+            - name: Working with trace recordings
+              href: part_4\SpectrumAnalysis\Working_with_trace_recordings.md
+            - name: Configuring spectrum thresholds
+              href: part_4\SpectrumAnalysis\Configuring_spectrum_thresholds.md
+        - name: Spectrum analyzer scripts and monitors
+          href: part_4\SpectrumAnalysis\Spectrum_analyzer_scripts_and_monitors.md
+          items:
+            - name: Working with spectrum scripts
+              href: part_4\SpectrumAnalysis\Working_with_spectrum_scripts.md
+            - name: Working with spectrum monitors
+              href: part_4\SpectrumAnalysis\Working_with_spectrum_monitors.md
+            - name: Spectrum Analyzer script actions
+              href: part_4\SpectrumAnalysis\Spectrum_Analyzer_script_actions.md
+        - name: Advanced Spectrum Analysis functions
+          href: part_4\SpectrumAnalysis\Advanced_Spectrum_Analysis_functions.md
+          items:
+            - name: Specifying an amplitude correction
+              href: part_4\SpectrumAnalysis\Specifying_an_amplitude_correction.md
+            - name: Making a measurement point execute a script before taking a trace
+              href: part_4\SpectrumAnalysis\Making_a_measurement_point_execute_a_script_before_taking_a_trace.md
+            - name: Restricting the number of client sessions of a spectrum element
+              href: part_4\SpectrumAnalysis\Restricting_the_number_of_client_sessions_of_a_spectrum_element.md
+            - name: Automatic cleanup of alarm recordings folder
+              href: part_4\SpectrumAnalysis\Automatic_cleanup_of_alarm_recordings_folder.md
+            - name: Configuring a spectrum element to follow the device settings
+              href: part_4\SpectrumAnalysis\Configuring_a_spectrum_element_to_follow_the_device_settings.md
+            - name: Creating a simulated spectrum element
+              href: part_4\SpectrumAnalysis\Creating_a_simulated_spectrum_element.md
+    - name: DMS Ticketing
+      href: part_4\ticketing\ticketing.md
+      items:
+        - name: Accessing the Ticketing app
+          href: part_4\ticketing\Accessing_the_Ticketing_app.md
+        - name: Overview of the Ticketing app UI
+          href: part_4\ticketing\Overview_of_the_Ticketing_app_UI.md
+        - name: Viewing Ticketing information in Cube
+          href: part_4\ticketing\Viewing_Ticketing_information_in_Cube.md
+        - name: Creating a ticket
+          href: part_4\ticketing\Creating_a_ticket1.md
+        - name: Configuring domains
+          href: part_4\ticketing\Configuring_domains.md
+        - name: Displaying ticket statistics in the Surveyor
+          href: part_4\ticketing\Displaying_ticket_statistics_in_the_Surveyor.md
+        - name: Using the Ticketing Gateway API
+          href: part_4\ticketing\Using_the_Ticketing_Gateway_API.md
+          items:
+            - name: Setting up the TicketingGatewayHelper
+              href: part_4\ticketing\Setting_up_the_TicketingGatewayHelper.md
+            - name: Creating tickets with the Ticketing Gateway API
+              href: part_4\ticketing\Creating_tickets_with_the_Ticketing_Gateway_API.md
+            - name: Linking a ticket to a DataMiner item using the Ticketing Gateway API
+              href: part_4\ticketing\Linking_a_ticket_to_a_DataMiner_item_using_the_Ticketing_Gateway_API.md
+            - name: Retrieving tickets using the Ticketing Gateway API
+              href: part_4\ticketing\Retrieving_tickets_using_the_Ticketing_Gateway_API.md
+            - name: About DataMiner elements using the Ticketing Gateway API
+              href: part_4\ticketing\About_DataMiner_elements_using_the_Ticketing_Gateway_API.md
+            - name: Overview of the TicketingGatewayHelper class
+              href: part_4\ticketing\Overview_of_the_TicketingGatewayHelper_class.md
+- name: DataMiner Standard Apps
+  href: Part5StandardApps\Part5StandardApps.md
+  items:
+    - name: DataMiner IDP app
+      href: part_5\SolIDP\SolIDP.md
+      items:
+        - name: Installing DataMiner IDP
+          href: part_5\SolIDP\Installing_DataMiner_IDP.md
+        - name: Using DataMiner IDP
+          href: part_5\SolIDP\Using_DataMiner_IDP.md
+          items:
+            - name: DataMiner IDP components
+              href: part_5\SolIDP\DataMiner_IDP_components.md
+            - name: Overview of the IDP app UI
+              href: part_5\SolIDP\Overview_of_the_IDP_app_UI.md
+        - name: Advanced configuration for Administrators
+          href: part_5\SolIDP\Advanced_configuration_for_Administrators.md
+          items:
+            - name: CI Types
+              href: part_5\SolIDP\CI_Types.md
+            - name: Discovery
+              href: part_5\SolIDP\Discovery.md
+            - name: Provisioning
+              href: part_5\SolIDP\Provisioning.md
+            - name: Configuration
+              href: part_5\SolIDP\Configuration.md
+            - name: Facilities
+              href: part_5\SolIDP\Facilities.md
+            - name: Settings
+              href: part_5\SolIDP\Settings.md
+        - name: Reference
+          href: part_5\SolIDP\Reference1.md
+          items:
+            - name: Discovery profiles
+              href: part_5\SolIDP\Discovery_profiles.md
+            - name: CI Types
+              href: part_5\SolIDP\CI_Types1.md
+    - name: DataMiner PTP app
+      href: part_5\SolPTP\SolPTP.md
+      items:
+        - name: Installing the DataMiner PTP app
+          href: part_5\SolPTP\Installing_the_DataMiner_PTP_app.md
+        - name: Using the DataMiner PTP app
+          href: part_5\SolPTP\Using_the_DataMiner_PTP_app.md
+          items:
+            - name: Types of PTP devices
+              href: part_5\SolPTP\Types_of_PTP_devices.md
+            - name: Overview of the DataMiner PTP app UI
+              href: part_5\SolPTP\Overview_of_the_DataMiner_PTP_app_UI.md
+    - name: Booking Manager app
+      href: part_5\SolSRM\SolSRM.md
+      items:
+        - name: Quick Start Guide
+          href: part_5\SolSRM\Quick_Start_Guide.md
+          items:
+            - name: SRM Framework installation
+              href: part_5\SolSRM\SRM_Framework_installation.md
+            - name: SRM system setup
+              href: part_5\SolSRM\SRM_system_setup.md
+        - name: Using the Booking Manager app
+          href: part_5\SolSRM\Using_the_Booking_Manager_app.md
+          items:
+            - name: Booking Manager user interface
+              href: part_5\SolSRM\Booking_Manager_user_interface.md
+        - name: Interacting with the Booking Manager app using custom Automation scripts
+          href: part_5\SolSRM\Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts.md
+          items:
+            - name: Script types
+              href: part_5\SolSRM\Script_types.md
+            - name: Silent actions
+              href: part_5\SolSRM\Silent_actions.md
+            - name: Frequently asked questions related to bookings and scripting
+              href: part_5\SolSRM\Frequently_asked_questions_related_to_bookings_and_scripting.md
+        - name: Reference
+          href: part_5\SolSRM\Reference2.md
+          items:
+            - name: SRM properties for use with the Booking Manager app
+              href: part_5\SolSRM\Reference2.md
+- name: DataMiner Cloud Platform
+  href: Part51CloudPlatform\Part51CloudPlatform.md
+  items:
+    - name: About the DataMiner Cloud Platform
+      href: part_51\AboutCloudPlatform\AboutCloudPlatform.md
+      items:
+        - name: Logging on to the DataMiner Cloud Platform
+          href: part_51\AboutCloudPlatform\Logging_on_to_the_DataMiner_Cloud_Platform.md
+        - name: Connecting your DataMiner System to the cloud
+          href: part_51\AboutCloudPlatform\Connecting_your_DataMiner_System_to_the_cloud.md
+    - name: Project Collaboration
+      href: part_51\Collaboration\Collaboration.md
+      items:
+        - name: About the Project Collaboration module
+          href: part_51\Collaboration\About_the_Project_Collaboration_module.md
+        - name: Accessing the Project Collaboration module
+          href: part_51\Collaboration\Accessing_the_Project_Collaboration_module.md
+        - name: Overview of the user interface
+          href: part_51\Collaboration\Overview_of_the_user_interface.md
+        - name: My projects
+          href: part_51\Collaboration\My_projects.md
+          items:
+            - name: List of projects
+              href: part_51\Collaboration\List_of_projects.md
+            - name: List of tasks linked to a project
+              href: part_51\Collaboration\List_of_tasks_linked_to_a_project.md
+            - name: Board view
+              href: part_51\Collaboration\Board_view.md
+            - name: Report view
+              href: part_51\Collaboration\Report_view.md
+            - name: Creating a new task under the current project
+              href: part_51\Collaboration\Creating_a_new_task_under_the_current_project.md
+            - name: Consulting or editing a task
+              href: part_51\Collaboration\Consulting_or_editing_a_task.md
+        - name: My tasks
+          href: part_51\Collaboration\My_tasks.md
+        - name: Reference
+          href: part_51\Collaboration\Reference3.md
+          items:
+            - name: Project-related notifications
+              href: part_51\Collaboration\Project-related_notifications.md
+            - name: Statuses
+              href: part_51\Collaboration\Statuses.md
+    - name: DataMiner Catalog
+      href: part_51\Catalog\Catalog.md
+      items:
+        - name: About the Catalog module
+          href: part_51\Catalog\About_the_Catalog_module.md
+        - name: Accessing the Catalog module
+          href: part_51\Catalog\Accessing_the_Catalog_module.md
+        - name: Looking up a DataMiner connector
+          href: part_51\Catalog\Looking_up_a_DataMiner_connector.md
+    - name: DataMiner Sharing
+      href: part_51\Sharing\Sharing.md
+      items:
+        - name: About the Sharing module
+          href: part_51\Sharing\About_the_Sharing_module.md
+        - name: Accessing the Sharing module
+          href: part_51\Sharing\Accessing_the_Sharing_module.md
+    - name: DataMiner Community
+      href: part_51\Community\Community.md
+      items:
+        - name: About the Community module
+          href: part_51\Community\About_the_Community_module.md
+        - name: Accessing the Community module
+          href: part_51\Community\Accessing_the_Community_module.md
+        - name: Overview of the DataMiner Dojo website
+          href: part_51\Community\Overview_of_the_DataMiner_Dojo_website.md
+          items:
+            - name: Blog
+              href: part_51\Community\Blog.md
+            - name: Questions
+              href: part_51\Community\Questions.md
+            - name: Learning
+              href: part_51\Community\Learning.md
+            - name: Resources
+              href: part_51\Community\Resources.md
+            - name: Expert hubs
+              href: part_51\Community\Expert_hubs.md
+            - name: Discover
+              href: part_51\Community\Discover.md
+            - name: More
+              href: part_51\Community\More.md
+    - name: DataMiner Admin app
+      href: part_51\CloudAdminApp\CloudAdminApp.md
+      items:
+        - name: Accessing the Admin app
+          href: part_51\CloudAdminApp\Accessing_the_Admin_app.md
+        - name: Giving users access to cloud features
+          href: part_51\CloudAdminApp\Giving_users_access_to_cloud_features.md
+- name: DataMiner Professional Services
+  href: Part52ProfessionalServices\Part52ProfessionalServices.md
+  items:
+    - name: DataMiner Solution Deployment Methodology
+      href: part52\DeploymentMethodology\DeploymentMethodology.md
+      items:
+        - name: About Digital Transformation
+          href: part52\DeploymentMethodology\DeploymentMethodology.md
+        - name: Managing technology deployments
+          href: part52\DeploymentMethodology\Managing_technology_deployments.md
+          items:
+            - name: Methodology is key to success
+              href: part52\DeploymentMethodology\Managing_technology_deployments.md
+            - name: Methodology is not a choice
+              href: part52\DeploymentMethodology\Methodology_is_not_a_choice.md
+            - name: Methodology needs to be practiced
+              href: part52\DeploymentMethodology\Methodology_needs_to_be_practiced.md
+        - name: Deployment methodologies in summary
+          href: part52\DeploymentMethodology\Deployment_methodologies_in_summary.md
+        - name: Turnkey Methodology
+          href: part52\DeploymentMethodology\Turnkey_Methodology.md
+          items:
+            - name: Typical phases of a Turnkey Project deployment
+              href: part52\DeploymentMethodology\Typical_phases_of_a_Turnkey_Project_deployment.md
+            - name: Terms & Conditions for a Turnkey Project deployment
+              href: part52\DeploymentMethodology\Terms_Conditions_for_a_Turnkey_Project_deployment.md
+            - name: Change Request Procedure
+              href: part52\DeploymentMethodology\Change_Request_Procedure.md
+        - name: Agile Scope-Based Methodology
+          href: part52\DeploymentMethodology\Agile_Scope-Based_Methodology.md
+          items:
+            - name: Key Values & Principles
+              href: part52\DeploymentMethodology\Key_Values_Principles.md
+            - name: Formal roles for Agile Scope-Based deployment
+              href: part52\DeploymentMethodology\Formal_roles_for_Agile_Scope-Based_deployment.md
+            - name: Typical Phases for Agile Scope-Based projects
+              href: part52\DeploymentMethodology\Typical_Phases_for_Agile_Scope-Based_projects.md
+        - name: Agile Time & Materials Methodology
+          href: part52\DeploymentMethodology\Agile_Time_Materials_Methodology.md
+        - name: Some Use Cases & Practical Examples
+          href: part52\DeploymentMethodology\Some_Use_Cases_Practical_Examples.md
+- name: Troubleshooting
+  href: Part6Troubleshooting\Part6Troubleshooting.md
+  items:
+    - name: Frequently asked questions
+      href: part_6\faq\faq.md
+      items:
+        - name: General configuration
+          href: part_6\faq\General_configuration.md
+        - name: IDs of views, elements, services, redundancy groups and parameters
+          href: part_6\faq\IDs_of_views_elements_services_redundancy_groups_and_parameters.md
+        - name: Databases
+          href: part_6\faq\Databases1.md
+        - name: DataMiner client applications
+          href: part_6\faq\DataMiner_client_applications.md
+    - name: Error messages
+      href: part_6\ErrorMessages\ErrorMessages.md
+      items:
+        - name: An error occurred in the application you were using
+          href: part_6\ErrorMessages\An_error_occurred_in_the_application_you_were_using.md
+        - name: Could not load type Maps.DataMinerMap
+          href: part_6\ErrorMessages\Could_not_load_type_Maps_DataMinerMap.md
+        - name: Could not load Visio file
+          href: part_6\ErrorMessages\Could_not_load_Visio_file.md
+        - name: HTTP error 500
+          href: part_6\ErrorMessages\HTTP_error_500.md
+        - name: setsockopt failed for SO_KEEPALIVE
+          href: part_6\ErrorMessages\setsockopt_failed_for_SO_KEEPALIVE.md
+        - name: The terminal server has exceeded the maximum number of allowed connections
+          href: part_6\ErrorMessages\The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections.md
+        - name: Trust not granted
+          href: part_6\ErrorMessages\Trust_not_granted.md
+        - name: Unknown Error
+          href: part_6\ErrorMessages\Unknown_Error.md
+        - name: Retrieving the data failed as the request timed out
+          href: part_6\ErrorMessages\Retrieving_the_data_failed_as_the_request_timed_out.md
+    - name: Logging
+      href: part_6\logging\logging.md
+      items:
+        - name: Monitoring real-time communication between a DMA and an element
+          href: part_6\logging\Monitoring_real-time_communication_between_a_DMA_and_an_element.md
+          items:
+            - name: Connecting to an element using Stream Viewer
+              href: part_6\logging\Connecting_to_an_element_using_Stream_Viewer.md
+            - name: Connecting to an element using telnet
+              href: part_6\logging\Connecting_to_an_element_using_telnet.md
+            - name: Message syntax
+              href: part_6\logging\Message_syntax.md
+        - name: Consulting the DataMiner logs in DataMiner Cube
+          href: part_6\logging\Consulting_the_DataMiner_logs_in_DataMiner_Cube.md
+          items:
+            - name: Cube logging
+              href: part_6\logging\Cube_logging.md
+            - name: Communication logging
+              href: part_6\logging\Communication_logging.md
+            - name: DataMiner logging
+              href: part_6\logging\DataMiner_logging.md
+            - name: Elements logging
+              href: part_6\logging\Elements_logging.md
+            - name: Changing the maximum size of DataMiner log files
+              href: part_6\logging\Changing_the_maximum_size_of_DataMiner_log_files.md
+- name: Reference
+  href: Part7Reference\Part7Reference.md
+  items:
+    - name: Skyline DataMiner folder
+      href: part_7\SkylineDataminerFolder\SkylineDataminerFolder.md
+      items:
+        - name: Overview of the files found in the root folder
+          href: part_7\SkylineDataminerFolder\Overview_of_the_files_found_in_the_root_folder.md
+        - name: Overview of the different subfolders
+          href: part_7\SkylineDataminerFolder\Overview_of_the_different_subfolders.md
+        - name: More information on certain files and folders
+          href: part_7\SkylineDataminerFolder\More_information_on_certain_files_and_folders.md
+          items:
+            - name: Aggregation
+              href: part_7\SkylineDataminerFolder\Aggregation.md
+            - name: ClientSettings.json
+              href: part_7\SkylineDataminerFolder\ClientSettings_json.md
+            - name: ConnectionSettings.txt
+              href: part_7\SkylineDataminerFolder\ConnectionSettings_txt.md
+            - name: Database
+              href: part_7\SkylineDataminerFolder\Database.md
+            - name: DataMiner.xml
+              href: part_7\SkylineDataminerFolder\DataMiner_xml.md
+            - name: DB.xml
+              href: part_7\SkylineDataminerFolder\DB_xml.md
+            - name: DBMaintenance.xml and DBMaintenanceDMS.xml
+              href: part_7\SkylineDataminerFolder\DBMaintenance_xml_and_DBMaintenanceDMS_xml.md
+            - name: DMS.xml
+              href: part_7\SkylineDataminerFolder\DMS_xml.md
+            - name: Elements
+              href: part_7\SkylineDataminerFolder\Elements1.md
+            - name: EPMConfig.xml
+              href: part_7\SkylineDataminerFolder\EPMConfig_xml.md
+            - name: Hyperlinks.xml
+              href: part_7\SkylineDataminerFolder\Hyperlinks_xml.md
+            - name: Icons
+              href: part_7\SkylineDataminerFolder\Icons.md
+            - name: Information.xml
+              href: part_7\SkylineDataminerFolder\Information_xml.md
+            - name: LogSettings.xml
+              href: part_7\SkylineDataminerFolder\LogSettings_xml.md
+            - name: MaintenanceSettings.xml
+              href: part_7\SkylineDataminerFolder\MaintenanceSettings_xml.md
+            - name: Polling.xml
+              href: part_7\SkylineDataminerFolder\Polling_xml.md
+            - name: PortLog.txt
+              href: part_7\SkylineDataminerFolder\PortLog_txt.md
+            - name: PropertyConfiguration.xml
+              href: part_7\SkylineDataminerFolder\PropertyConfiguration_xml.md
+            - name: Recycle bin
+              href: part_7\SkylineDataminerFolder\Recycle_bin.md
+            - name: SLCloud.xml
+              href: part_7\SkylineDataminerFolder\SLCloud_xml.md
+            - name: SLNet.exe.config
+              href: part_7\SkylineDataminerFolder\SLNet_exe_config.md
+            - name: SNMP Managers.xml
+              href: part_7\SkylineDataminerFolder\SNMP_Managers_xml.md
+            - name: System Cache
+              href: part_7\SkylineDataminerFolder\System_Cache.md
+            - name: SyncRules.xml
+              href: part_7\SkylineDataminerFolder\SyncRules_xml.md
+            - name: SLAnalytics.config
+              href: part_7\SkylineDataminerFolder\SLAnalytics_config.md
+    - name: Tools
+      href: part_7\DataminerTools\DataminerTools.md
+      items:
+        - name: DMS Alerter
+          href: part_7\DataminerTools\DMS_Alerter.md
+          items:
+            - name: Working with the Alerter alarm list
+              href: part_7\DataminerTools\Working_with_the_Alerter_alarm_list.md
+            - name: Communicating with other DataMiner users via Alerter
+              href: part_7\DataminerTools\Communicating_with_other_DataMiner_users_via_Alerter.md
+            - name: Working with Alerter pop-up balloons
+              href: part_7\DataminerTools\Working_with_Alerter_pop-up_balloons.md
+            - name: Configuring DMS Alerter
+              href: part_7\DataminerTools\Configuring_DMS_Alerter.md
+        - name: DataMiner Taskbar Utility
+          href: part_7\DataminerTools\DataMiner_Taskbar_Utility.md
+          items:
+            - name: Taskbar Utility shortcut menu
+              href: part_7\DataminerTools\Taskbar_Utility_shortcut_menu.md
+            - name: Taskbar Utility command line options
+              href: part_7\DataminerTools\Taskbar_Utility_command_line_options.md
+        - name: SLNetClientTest tool
+          href: part_7\DataminerTools\SLNetClientTest_tool.md
+          items:
+            - name: Opening the SLNetClientTest tool
+              href: part_7\DataminerTools\Opening_the_SLNetClientTest_tool.md
+            - name: Connecting to a DMA with the SLNetClientTest tool
+              href: part_7\DataminerTools\Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md
+            - name: SLNetClientTest tool diagnostic procedures
+              href: part_7\DataminerTools\SLNetClientTest_tool_diagnostic_procedures.md
+            - name: SLNetClientTest tool advanced procedures
+              href: part_7\DataminerTools\SLNetClientTest_tool_advanced_procedures.md
+        - name: SLOffload tool
+          href: part_7\DataminerTools\SLOffload_tool.md
+    - name: Automation script CSharp code reference
+      href: part_7\CsharpReference\CsharpReference.md
+      items:
+        - name: AutomationConfigOptions class
+          href: part_7\CsharpReference\AutomationConfigOptions_class.md
+        - name: AutomationDateTimePickerOptions class
+          href: part_7\CsharpReference\AutomationDateTimePickerOptions_class.md
+          items:
+            - name: AutomationDateTimePickerOptions methods
+              href: part_7\CsharpReference\AutomationDateTimePickerOptions_methods.md
+            - name: AutomationDateTimePickerOptions properties
+              href: part_7\CsharpReference\AutomationDateTimePickerOptions_properties.md
+        - name: AutomationDateTimeUpDownOptions class
+          href: part_7\CsharpReference\AutomationDateTimeUpDownOptions_class.md
+          items:
+            - name: AutomationDateTimeUpDownOptions methods
+              href: part_7\CsharpReference\AutomationDateTimeUpDownOptions_methods.md
+            - name: AutomationDateTimeUpDownOptions properties
+              href: part_7\CsharpReference\AutomationDateTimeUpDownOptions_properties.md
+        - name: AutomationEntryPointAttribute class
+          href: part_7\CsharpReference\AutomationEntryPointAttribute_class.md
+          items:
+            - name: AutomationEntryPointAttribute constructor
+              href: part_7\CsharpReference\AutomationEntryPointAttribute_constructor.md
+            - name: AutomationEntryPointAttribute methods
+              href: part_7\CsharpReference\AutomationEntryPointAttribute_methods.md
+            - name: AutomationEntryPointAttribute properties
+              href: part_7\CsharpReference\AutomationEntryPointAttribute_properties.md
+            - name: Explicit interface implementations
+              href: part_7\CsharpReference\Explicit_interface_implementations.md
+        - name: AutomationEntryPointDelegates class
+          href: part_7\CsharpReference\AutomationEntryPointDelegates_class.md
+          items:
+            - name: AutomationEntryPointDelegates constructor
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_constructor.md
+            - name: AutomationEntryPointDelegates.AutomationEntryPointTest delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_AutomationEntryPointTest_delegate.md
+            - name: AutomationEntryPointDelegates.ConfigureApp Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_ConfigureApp_Delegate.md
+            - name: AutomationEntryPointDelegates.Default delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_Default_delegate.md
+            - name: AutomationEntryPointDelegates.InstallAppPackage Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_InstallAppPackage_Delegate.md
+            - name: AutomationEntryPointDelegates.OnDomInstanceCrud Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_OnDomInstanceCrud_Delegate.md
+            - name: AutomationEntryPointDelegates.OnSrmBookingsUpdatedByReference Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_OnSrmBookingsUpdatedByReference_Delegate.md
+            - name: AutomationEntryPointDelegates.OnSrmQuarantineTrigger Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_OnSrmQuarantineTrigger_Delegate.md
+            - name: AutomationEntryPointDelegates.OnSrmStartActionsFailure Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_OnSrmStartActionsFailure_Delegate.md
+            - name: AutomationEntryPointDelegates.OnTicketCrud Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_OnTicketCrud_Delegate.md
+            - name: AutomationEntryPointDelegates.SRMServiceInfoStateChanges Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_SRMServiceInfoStateChanges_Delegate.md
+            - name: AutomationEntryPointDelegates.UninstallApp Delegate
+              href: part_7\CsharpReference\AutomationEntryPointDelegates_UninstallApp_Delegate.md
+        - name: AutomationEntryPointType class
+          href: part_7\CsharpReference\AutomationEntryPointType_class.md
+          items:
+            - name: AutomationEntryPointType methods
+              href: part_7\CsharpReference\AutomationEntryPointType_methods.md
+            - name: AutomationEntryPointType properties
+              href: part_7\CsharpReference\AutomationEntryPointType_properties.md
+            - name: AutomationEntryPointType operators
+              href: part_7\CsharpReference\AutomationEntryPointType_operators.md
+        - name: AutomationEntryPointType.Types enumeration
+          href: part_7\CsharpReference\AutomationEntryPointType_Types_enumeration.md
+        - name: AutomationScriptAttachOptions enumeration
+          href: part_7\CsharpReference\AutomationScriptAttachOptions_enumeration.md
+        - name: AutomationTimePickerOptions class
+          href: part_7\CsharpReference\AutomationTimePickerOptions_class.md
+          items:
+            - name: AutomationTimePickerOptions methods
+              href: part_7\CsharpReference\AutomationTimePickerOptions_methods.md
+            - name: AutomationTimePickerOptions properties
+              href: part_7\CsharpReference\AutomationTimePickerOptions_properties.md
+        - name: AutomationTimeUpDownOptions class
+          href: part_7\CsharpReference\AutomationTimeUpDownOptions_class.md
+          items:
+            - name: AutomationTimeUpDownOptions methods
+              href: part_7\CsharpReference\AutomationTimeUpDownOptions_methods.md
+            - name: AutomationTimeUpDownOptions properties
+              href: part_7\CsharpReference\AutomationTimeUpDownOptions_properties.md
+        - name: Element class
+          href: part_7\CsharpReference\Element_class.md
+          items:
+            - name: Element methods
+              href: part_7\CsharpReference\Element_methods.md
+            - name: Element properties
+              href: part_7\CsharpReference\Element_properties1.md
+        - name: ElementFilter class
+          href: part_7\CsharpReference\ElementFilter_class.md
+          items:
+            - name: ElementFilter constructor
+              href: part_7\CsharpReference\ElementFilter_constructor.md
+            - name: ElementFilter methods
+              href: part_7\CsharpReference\ElementFilter_methods.md
+            - name: ElementFilter properties
+              href: part_7\CsharpReference\ElementFilter_properties.md
+        - name: EmailOptions class
+          href: part_7\CsharpReference\EmailOptions_class.md
+          items:
+            - name: EmailOptions constructors
+              href: part_7\CsharpReference\EmailOptions_constructors.md
+            - name: EmailOptions methods
+              href: part_7\CsharpReference\EmailOptions_methods.md
+            - name: EmailOptions properties
+              href: part_7\CsharpReference\EmailOptions_properties.md
+        - name: Engine class
+          href: part_7\CsharpReference\Engine_class.md
+          items:
+            - name: Engine constructor
+              href: part_7\CsharpReference\Engine_constructor.md
+            - name: Engine methods
+              href: part_7\CsharpReference\Engine_methods.md
+            - name: Engine properties
+              href: part_7\CsharpReference\Engine_properties.md
+        - name: IActionableElement
+          href: part_7\CsharpReference\IActionableElement.md
+        - name: IEngine interface
+          href: part_7\CsharpReference\IEngine_interface.md
+        - name: InteractiveUserDetachedException class
+          href: part_7\CsharpReference\InteractiveUserDetachedException_class.md
+          items:
+            - name: InteractiveUserDetachedException constructor
+              href: part_7\CsharpReference\InteractiveUserDetachedException_constructor.md
+            - name: InteractiveUserDetachedException methods
+              href: part_7\CsharpReference\InteractiveUserDetachedException_methods.md
+            - name: InteractiveUserDetachedException properties
+              href: part_7\CsharpReference\InteractiveUserDetachedException_properties.md
+        - name: Interface class
+          href: part_7\CsharpReference\Interface_class.md
+          items:
+            - name: Interface methods
+              href: part_7\CsharpReference\Interface_methods.md
+            - name: Interface properties
+              href: part_7\CsharpReference\Interface_properties.md
+        - name: LogType enumeration
+          href: part_7\CsharpReference\LogType_enumeration.md
+        - name: MailReportOptions class
+          href: part_7\CsharpReference\MailReportOptions_class.md
+          items:
+            - name: MailReportOptions methods
+              href: part_7\CsharpReference\MailReportOptions_methods.md
+            - name: MailReportOptions properties
+              href: part_7\CsharpReference\MailReportOptions_properties.md
+        - name: MailReportParameter class
+          href: part_7\CsharpReference\MailReportParameter_class.md
+          items:
+            - name: MailReportParameter constructors
+              href: part_7\CsharpReference\MailReportParameter_constructors.md
+            - name: MailReportParameter methods
+              href: part_7\CsharpReference\MailReportParameter_methods.md
+            - name: MailReportParameter properties
+              href: part_7\CsharpReference\MailReportParameter_properties.md
+        - name: MailReportParameterFlags enumeration
+          href: part_7\CsharpReference\MailReportParameterFlags_enumeration.md
+        - name: NotificationOptions class
+          href: part_7\CsharpReference\NotificationOptions_class.md
+          items:
+            - name: NotificationOptions constructor
+              href: part_7\CsharpReference\NotificationOptions_constructor.md
+        - name: PagerOptions class
+          href: part_7\CsharpReference\PagerOptions_class.md
+          items:
+            - name: PagerOptions constructor
+              href: part_7\CsharpReference\PagerOptions_constructor.md
+            - name: PagerOptions methods
+              href: part_7\CsharpReference\PagerOptions_methods.md
+            - name: PagerOptions properties
+              href: part_7\CsharpReference\PagerOptions_properties.md
+        - name: RedundancyGroup class
+          href: part_7\CsharpReference\RedundancyGroup_class.md
+          items:
+            - name: RedundancyGroup methods
+              href: part_7\CsharpReference\RedundancyGroup_methods.md
+            - name: RedundancyGroup properties
+              href: part_7\CsharpReference\RedundancyGroup_properties.md
+        - name: RedundancyGroupFilter class
+          href: part_7\CsharpReference\RedundancyGroupFilter_class.md
+          items:
+            - name: RedundancyGroupFilter constructor
+              href: part_7\CsharpReference\RedundancyGroupFilter_constructor.md
+            - name: RedundancyGroupFilter methods
+              href: part_7\CsharpReference\RedundancyGroupFilter_methods.md
+            - name: RedundancyGroupFilter properties
+              href: part_7\CsharpReference\RedundancyGroupFilter_properties.md
+        - name: ScriptAbortException class
+          href: part_7\CsharpReference\ScriptAbortException_class.md
+          items:
+            - name: ScriptAbortException constructor
+              href: part_7\CsharpReference\ScriptAbortException_constructor.md
+            - name: ScriptAbortException methods
+              href: part_7\CsharpReference\ScriptAbortException_methods.md
+            - name: ScriptAbortException properties
+              href: part_7\CsharpReference\ScriptAbortException_properties.md
+        - name: ScriptDummy class
+          href: part_7\CsharpReference\ScriptDummy_class.md
+          items:
+            - name: ScriptDummy methods
+              href: part_7\CsharpReference\ScriptDummy_methods.md
+            - name: ScriptDummy properties
+              href: part_7\CsharpReference\ScriptDummy_properties.md
+        - name: ScriptMemory class
+          href: part_7\CsharpReference\ScriptMemory_class.md
+          items:
+            - name: ScriptMemory constructor
+              href: part_7\CsharpReference\ScriptMemory_constructor.md
+            - name: ScriptMemory methods
+              href: part_7\CsharpReference\ScriptMemory_methods.md
+            - name: ScriptMemory properties
+              href: part_7\CsharpReference\ScriptMemory_properties.md
+        - name: ScriptParam class
+          href: part_7\CsharpReference\ScriptParam_class.md
+          items:
+            - name: ScriptParam constructor
+              href: part_7\CsharpReference\ScriptParam_constructor.md
+            - name: ScriptParam methods
+              href: part_7\CsharpReference\ScriptParam_methods.md
+            - name: ScriptParam properties
+              href: part_7\CsharpReference\ScriptParam_properties.md
+        - name: Service class
+          href: part_7\CsharpReference\Service_class.md
+          items:
+            - name: Service methods
+              href: part_7\CsharpReference\Service_methods.md
+            - name: Service properties
+              href: part_7\CsharpReference\Service_properties1.md
+        - name: ServiceFilter class
+          href: part_7\CsharpReference\ServiceFilter_class.md
+          items:
+            - name: ServiceFilter constructor
+              href: part_7\CsharpReference\ServiceFilter_constructor.md
+            - name: ServiceFilter methods
+              href: part_7\CsharpReference\ServiceFilter_methods.md
+            - name: ServiceFilter properties
+              href: part_7\CsharpReference\ServiceFilter_properties.md
+        - name: SmsOptions class
+          href: part_7\CsharpReference\SmsOptions_class.md
+          items:
+            - name: SmsOptions constructor
+              href: part_7\CsharpReference\SmsOptions_constructor.md
+            - name: SmsOptions methods
+              href: part_7\CsharpReference\SmsOptions_methods.md
+            - name: SmsOptions properties
+              href: part_7\CsharpReference\SmsOptions_properties.md
+        - name: SpectrumPreset class
+          href: part_7\CsharpReference\SpectrumPreset_class.md
+          items:
+            - name: SpectrumPreset constructor
+              href: part_7\CsharpReference\SpectrumPreset_constructor.md
+            - name: SpectrumPreset methods
+              href: part_7\CsharpReference\SpectrumPreset_methods.md
+            - name: SpectrumPreset properties
+              href: part_7\CsharpReference\SpectrumPreset_properties.md
+        - name: SubScriptOptions class
+          href: part_7\CsharpReference\SubScriptOptions_class.md
+          items:
+            - name: SubscriptOptions constructor
+              href: part_7\CsharpReference\SubscriptOptions_constructor.md
+            - name: SubscriptOptions methods
+              href: part_7\CsharpReference\SubscriptOptions_methods.md
+            - name: SubscriptOptions properties
+              href: part_7\CsharpReference\SubscriptOptions_properties.md
+        - name: UIBlockDefinition class
+          href: part_7\CsharpReference\UIBlockDefinition_class.md
+          items:
+            - name: UIBlockDefinition constructor
+              href: part_7\CsharpReference\UIBlockDefinition_constructor.md
+            - name: UIBlockDefinition methods
+              href: part_7\CsharpReference\UIBlockDefinition_methods.md
+            - name: UIBlockDefinition properties
+              href: part_7\CsharpReference\UIBlockDefinition_properties.md
+        - name: UIBlockType enumeration
+          href: part_7\CsharpReference\UIBlockType_enumeration.md
+        - name: UIBuilder class
+          href: part_7\CsharpReference\UIBuilder_class.md
+          items:
+            - name: UIBuilder example
+              href: part_7\CsharpReference\UIBuilder_example.md
+            - name: UIBuilder constructor
+              href: part_7\CsharpReference\UIBuilder_constructor.md
+            - name: UIBuilder methods
+              href: part_7\CsharpReference\UIBuilder_methods.md
+            - name: UIBuilder properties
+              href: part_7\CsharpReference\UIBuilder_properties.md
+        - name: UIResults class
+          href: part_7\CsharpReference\UIResults_class.md
+          items:
+            - name: UIResults constructor
+              href: part_7\CsharpReference\UIResults_constructor.md
+            - name: UIResults methods
+              href: part_7\CsharpReference\UIResults_methods.md
+            - name: UIResults properties
+              href: part_7\CsharpReference\UIResults_properties.md
+    - name: Naming of elements, services, views, etc.
+      href: part_7\NamingConventions\NamingConventions.md
+      items:
+        - name: Forbidden characters
+          href: part_7\NamingConventions\Forbidden_characters.md
+        - name: Examples of element names
+          href: part_7\NamingConventions\Examples_of_element_names.md
+    - name: Obtaining a DataMiner license
+      href: part_7\DataminerLicenses\DataminerLicenses.md
+      items:
+        - name: License for DMA to be installed by Skyline
+          href: part_7\DataminerLicenses\License_for_DMA_to_be_installed_by_Skyline.md
+        - name: Full license for DMA to be installed by user
+          href: part_7\DataminerLicenses\Full_license_for_DMA_to_be_installed_by_user.md
+        - name: Online demo license for DMA to be installed by user
+          href: part_7\DataminerLicenses\Online_demo_license_for_DMA_to_be_installed_by_user.md
+        - name: Offline demo license for DMA to be installed by user
+          href: part_7\DataminerLicenses\Offline_demo_license_for_DMA_to_be_installed_by_user.md
+    - name: Glossary
+      href: part_7\glossary\glossary.md

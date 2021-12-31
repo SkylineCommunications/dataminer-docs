@@ -1,0 +1,17 @@
+## Repairing an incorrectly installed DIS package on Visual Studio 2010
+
+If you inadvertently installed a recent DIS package on top of Visual Studio 2010, then do the following to repair the installation:
+
+1. Uninstall DIS:
+
+    1. In Visual Studio, go to *Tools \> Extensions and Updates.*
+
+    2. In the list of extensions, click *DataMiner Integration Studio*, click *Uninstall*, and confirm your decision.
+
+    3. Restart Visual Studio.
+
+2. Download the compatible installation package from the following location, and install DIS again:
+
+    <https://community.dataminer.services/dataminer-integration-studio-other-downloads/> 
+
+3. In the Visual Studio menu, go to *DIS \> Settings... \> Updates*, clear the *Check for plugin updates* option, and click *OK*.

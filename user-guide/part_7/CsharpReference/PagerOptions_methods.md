@@ -1,0 +1,3 @@
+## PagerOptions methods
+
+None

@@ -1,0 +1,3 @@
+## SpectrumPreset properties
+
+None

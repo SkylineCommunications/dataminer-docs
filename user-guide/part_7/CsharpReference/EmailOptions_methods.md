@@ -1,0 +1,3 @@
+## EmailOptions methods
+
+None

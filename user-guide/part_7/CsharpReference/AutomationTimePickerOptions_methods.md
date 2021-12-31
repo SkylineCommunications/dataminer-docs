@@ -1,0 +1,3 @@
+## AutomationTimePickerOptions methods
+
+None

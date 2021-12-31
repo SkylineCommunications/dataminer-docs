@@ -1,0 +1,26 @@
+## Creating a new dashboard
+
+To create a new dashboard in the *Dashboards* app:
+
+1. Click the *New Dashboard* button. A new dashboard will be added to the list.
+
+2. Next to *Title*, fill in a title for the dashboard.
+
+3. The following configuration options are also available:
+
+    - Click the *...* button next to *Theme* to change the theme for the dashboard. This theme can be overruled by a personal theme.
+
+    - Next to *Description*, you can add a description with additional information about the dashboard.
+
+    - You can select a folder for the dashboard in the drop-down list on the right. To create a new folder, select *\<Create New>*.
+
+    - Click the *...* button next to *Layout* to change the layout of the dashboard. Dashboard components can be displayed in one to five columns, as an embedded component, in a raster, or in a dynamic list. For more information on the dynamic list layout, see [Creating a dashboard with a dynamic list layout](Creating_a_dashboard_with_a_dynamic_list_layout.md).
+
+        > [!NOTE]
+        > Be careful when changing the layout of an existing dashboard. Components could be deleted as a result of your changes.
+
+4. At this point, there are two possibilities to save the dashboard:
+
+    - If you want to configure the components of the dashboard later, click *Save Configuration*. To edit the dashboard later, click the pencil icon in the dashboard list.
+
+    - If you want to configure the dashboard immediately, click *Save & Start Configuring Components*. See [Configuring dashboard components](Configuring_dashboard_components1.md#configuring-dashboard-components).

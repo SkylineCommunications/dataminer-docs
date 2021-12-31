@@ -1,0 +1,5 @@
+# About the Catalog module
+
+As part of the DataMiner Cloud Platform (DCP), the Catalog module currently allows Skyline customers and DataMiner Strategic Partners to browse the list of available DataMiner connectors.
+
+In the future, this list will be expanded to also include Automation scripts, dashboards, visual overviews (i.e. ready-made Microsoft Visio files), etc., which you will be able to automatically deploy on your cloud-connected DataMiner System.

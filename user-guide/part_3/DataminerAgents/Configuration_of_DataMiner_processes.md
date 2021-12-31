@@ -1,0 +1,680 @@
+## Configuration of DataMiner processes
+
+This section consists of the following topics:
+
+- [Setting the number of simultaneously running SLPort processes](#setting-the-number-of-simultaneously-running-slport-processes)
+
+- [Setting the number of simultaneously running SLProtocol processes](#setting-the-number-of-simultaneously-running-slprotocol-processes)
+
+- [Having separate SLScripting processes created for every protocol being used](#having-separate-slscripting-processes-created-for-every-protocol-being-used)
+
+- [Having separate SLScripting processes created for each SLProtocol process](#having-separate-slscripting-processes-created-for-each-slprotocol-process)
+
+- [SLWatchdog](#slwatchdog)
+
+- [Configuring SLNet settings in MaintenanceSettings.xml](#configuring-slnet-settings-in-maintenancesettingsxml)
+
+- [Configuring DMA communication settings in SLNet.exe.config](#configuring-dma-communication-settings-in-slnetexeconfig)
+
+### Setting the number of simultaneously running SLPort processes
+
+The number of simultaneously running SLPort processes can be set in the *\<ProcessOptions>* tag of the *DataMiner.xml* file.
+
+The default number is set to 5.
+
+To set a different number:
+
+1. Stop the DataMiner software.
+
+2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+3. Specify a different number for the *portProcesses* attribute of the *ProcessOptions* tag.
+
+    Example:
+
+    ```xml
+    <DataMiner>                         
+      <ProcessOptions portProcesses="2" />
+    </DataMiner>                        
+    ```
+
+4. Save the file and restart DataMiner.
+
+> [!NOTE]
+> When elements are spread over the different SLPort processes, the same IP and port are always hosted within the same process. In the log file 'SLPortSplit.txt' you can see which IPs and ports are hosted in the same process.
+
+### Setting the number of simultaneously running SLProtocol processes
+
+In the file *DataMiner.xml*, you can set the number of simultaneously running SLProtocol processes.
+
+#### ProcessOptions
+
+The number of simultaneously running SLProtocol processes can be set in the *\<ProcessOptions>* tag of the *DataMiner.xml* file.
+
+By default, the number of simultaneously running processes is set to 5.
+
+To set a different number:
+
+1. Stop the DataMiner software.
+
+2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+3. Specify a different number for the *protocolProcesses* attribute of the *ProcessOptions* tag.
+
+    Example:
+
+    ```xml
+    <DataMiner>                             
+      <ProcessOptions protocolProcesses="4" />
+    </DataMiner>                            
+    ```
+
+4. Save the file and restart DataMiner.
+
+#### Separate SLProtocol process for every protocol being used
+
+For testing purposes, you can order a DataMiner Agent to spread its elements across different SLProtocol processes based on the protocol they are using.
+
+If you do so, DataMiner will start up a separate SLProtocol process for every protocol that is used. That way, each SLProtocol process will only contain elements sharing the same protocol. This will make it much easier to pinpoint any protocol-related issues that might arise.
+
+> [!WARNING]
+> Never use this option in a production environment without having consulted Skyline Tech Support.
+
+To have separate SLProtocol processes created for every protocol being used, do the following.
+
+1. Stop the DataMiner software.
+
+2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+3. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to “protocol”.
+
+    ```xml
+    <DataMiner>                                    
+      <ProcessOptions protocolProcesses="protocol" />
+    </DataMiner>                                   
+    ```
+
+4. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+5. Restart the DataMiner software.
+
+### Having separate SLScripting processes created for every protocol being used
+
+If you suspect that a particular protocol is causing a problem in the SLScripting process, then you can have separate SLScripting processes created for every protocol being used. This will then allow you to pinpoint the protocol that is causing the problem.
+
+To have separate SLScripting processes created for every protocol being used, do the following.
+
+1. Stop the DataMiner software.
+
+2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+3. In the *\<ProcessOptions>* tag, set both the *protocolProcesses* attribute and the *scriptingProcesses* attribute to “protocol”.
+
+    ```xml
+    <DataMiner>                                                                  
+      <ProcessOptions protocolProcesses="protocol" scriptingProcesses="protocol" />
+    </DataMiner>                                                                 
+    ```
+
+4. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+5. Restart the DataMiner software.
+
+> [!WARNING]
+> Never use this option in a production environment without having consulted Skyline Tech Support.
+
+### Having separate SLScripting processes created for each SLProtocol process
+
+In a system where the load for one particular protocol has to be spread over several processes, because otherwise too much memory would be needed for one process, it can be useful to have a dedicated SLScripting process created for each SLProtocol process:
+
+1. Stop the DataMiner software.
+
+2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+3. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to a fixed number and the *scriptingProcesses* attribute to “protocol”.
+
+    ```xml
+    <DataMiner>                                                            
+      <ProcessOptions protocolProcesses="18" scriptingProcesses="protocol" />
+    </DataMiner>                                                           
+    ```
+
+    The number you specified determines the number of SLProtocol processes. Elements using the same SLProtocol process will also use the same SLScripting process.
+
+4. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+5. Restart the DataMiner software.
+
+> [!WARNING]
+> Never use this option in a production environment without having consulted Skyline Tech Support.
+
+### Having replicated elements handled by one SLProtocol process
+
+In order to reduce the number of connections in case of element replication, in the *DataMiner.xml* file, you can specify that all replicated elements from the same remote DataMiner Agent have to be handled by the same SLProtocol process.
+
+To do so:
+
+1. Stop the DataMiner software.
+
+2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+3. Set the *protocolProcesses* attribute of the *\<ProcessOptions>* tag to “replicationIP”:
+
+```xml
+<DataMiner>                                        
+  ...                                                 
+  <ProcessOptions protocolProcesses="replicationIP"/>
+  ...                                                 
+</DataMiner>                                       
+```
+
+### Running SLScripting as a service
+
+By default, the SLScripting process runs as a server. However, in some cases, it needs to run as a service. It is possible to configure this in the file *DataMiner.xml*:
+
+#### To register SLScripting as a service
+
+1. Stop the DataMiner software.
+
+2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+3. Make sure *DataMiner.xml* contains a *\<ProcessOptions>* tag and that it contains the *scriptingProcesses="\[Service\]"* attribute:
+
+    ```xml
+    <ProcessOptions ... scriptingProcesses="[Service]" .../>
+    ```
+
+4. Open a command window as Administrator, and do the following:
+
+    1. Go to *C:\\Skyline DataMiner\\Files*.
+
+    2. Execute the following command: *SLScripting.exe /service*
+
+5. Start the DataMiner software.
+
+#### To register SLScripting as a server
+
+1. Stop the DataMiner software.
+
+2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+3. If *DataMiner.xml* contains a *\<ProcessOptions>* tag with a *scriptingProcesses=”\[Service\]”* attribute, remove that attribute:
+
+    ```xml
+    <ProcessOptions ... scriptingProcesses="[Service]" .../>                 
+    ```
+
+4. Open a command window as Administrator, and do the following:
+
+    1. Go to *C:\\Skyline DataMiner\\Files*.
+
+    2. Execute the following command: *SLScripting.exe /regserver*
+
+5. Start the DataMiner software.
+
+### SLWatchdog
+
+On a DataMiner Agent, the SLWatchdog process continuously monitors all other DataMiner processes. When it detects some kind of problem with one of those processes, it takes action.
+
+#### When will SLWatchdog take action?
+
+In Windows Task Manager, the DataMiner processes all have names starting with “SL”. SLWatchdog will take action in the following cases:
+
+- when a DataMiner process has disappeared from the list of running processes, or
+
+- when an anomaly has been detected in a DataMiner process.
+
+##### When a DataMiner process has disappeared
+
+In this case, SLWatchdog will do the following:
+
+1. Send an email message stating the name of the DataMiner process toward all recipients specified in the SLWatchdog configuration settings. By default, this message will include a dump file containing copies of all DataMiner log files found on the DataMiner Agent the moment the problem was detected.
+
+2. Restart the process (in case the process that disappeared was SLScripting), or restart the DataMiner Agent as a whole (in case the process that disappeared was not SLScripting, but one of the other processes, which in many cases have a number of dependencies).
+
+3. Create two information messages:
+
+    - one at the moment the DataMiner Agent is stopped, and
+
+    - one at the moment the DataMiner Agent is restarted.
+
+    Both messages will be displayed in the DataMiner Alarm Console.
+
+##### When an anomaly has been detected in a DataMiner process
+
+In this case, SLWatchdog will do the following:
+
+1. Send an email message stating the name of the DataMiner process toward all recipients specified in the SLWatchdog configuration settings. By default, this message will include a dump file containing copies of all DataMiner log files found on the DataMiner Agent the moment the problem was detected.
+
+2. Create an alarm with severity “Error”, which will be displayed in the DataMiner Alarm Console. This alarm will contain detailed information about the anomaly.
+
+3. Optionally restart the DataMiner Agent. By default, this will not be done.
+
+#### Configuring the SLWatchdog process
+
+In the file *MaintenanceSettings.xml*, you can specify a number of SLWatchdog settings.
+
+1. Open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+
+2. In the *Watchdog* tag, modify the SLWatchdog settings (see below).
+
+3. Save *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+
+4. Stop the DataMiner Agent.
+
+5. Manually stop the SLWatchdog service.
+
+6. Restart the DataMiner Agent.
+
+> [!TIP]
+> See also:
+> [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+
+#### Example of an SLWatchdog tag in MaintenanceSettings.xml
+
+```xml
+<MaintenanceSettings>             
+  ...                                
+  <WatchDog>                        
+    <TimeoutTime>5</TimeoutTime>     
+    <Errors>2</Errors>               
+    <Actions>Alarm</Actions>         
+    <EMail active="true">             
+      <Destination></Destination>      
+      <CCDestination></CCDestination>  
+      <BCCDestination></BCCDestination>
+    </EMail>                          
+    <ProcessMonitor maxinHour="3"     
+        maxProcess="2"                     
+        maxTimeout="2"                     
+        maxAttachmentSize="5"              
+        passwordOnAttachment="true" />     
+  </WatchDog>                       
+  ...                                
+</MaintenanceSettings>            
+```
+
+#### Overview of the different SLWatchdog settings
+
+The following table contains all information about the different SLWatchdog settings you can configure in the *Watchdog* tag of *MaintenanceSettings.xml*.
+
+| Tag                  | Attribute            | Description                                                                                                                                                                                    |
+|----------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TimeoutTime          |                      | The interval (in minutes) between two consecutive process thread checks.<br> Default value: 5                                                                                                  |
+| Errors               |                      | The number of process thread checks that are allowed to return an error before SLWatchdog will consider the situation to be an anomaly.<br> Default value: 2                                   |
+| Actions              |                      | List of actions (separated by semicolons) to be performed upon detection of an anomaly.<br> Possible values are “Alarm” and “Restart”. Default value: “Alarm”                                  |
+| Email                | active               | If true, SLWatchdog will send email messages upon detection of an anomaly.<br> Default value: true                                                                                             |
+| Email.Destination    |                      | The “To” recipients, separated by semicolons.<br> Default value: [dataminer.minidump@skyline.be](mailto:dataminer.minidump%40skyline.be)                     |
+| Email.CCDestination  |                      | The “CC” recipients, separated by semicolons. By default, this tag is empty.                                                                                                                   |
+| Email.BCCDestination |                      | The “BCC” recipients, separated by semicolons. By default, this tag is empty.                                                                                                                  |
+| ProcessMonitor       | maxInHour            | SLWatchdog will perform the specified actions if the situation does not occur more than X times in one hour.<br> Default value: 3                                                              |
+| ProcessMonitor       | maxProcess           | SLWatchdog will perform the specified actions if a maximum of X processes have disappeared within the time span defined in *maxTimeout*.<br> Default value: 2       |
+| ProcessMonitor       | maxTimeout           | SLWatchdog will perform the specified actions if more processes than defined in *maxProcess* have disappeared within a time span of X minutes.<br> Default value: 2 |
+| ProcessMonitor       | maxAttachmentSize    | The maximum size (in MByte) of the dump file that will be attached to the email messages. If exceeded, a so-called mini dump file will be attached.<br> Default value: 5                       |
+| ProcessMonitor       | passwordOnAttachment | If true, users will have to enter the password “Skyline” in order to access the dump files attached to the email messages.<br> Default value: false                                            |
+
+### Configuring SLNet settings in MaintenanceSettings.xml
+
+In *C:\\Skyline DataMiner\\MaintenanceSettings.xml*, you can configure a number of SLNet settings:
+
+- [Limiting the number of connection attempts](#limiting-the-number-of-connection-attempts)
+
+- [Enabling encrypted connections](#enabling-encrypted-connections)
+
+- [Configuring the number of messages to be returned (polling/eventing)](#configuring-the-number-of-messages-to-be-returned-pollingeventing)
+
+- [Configuring the polling request timeout](#configuring-the-polling-request-timeout)
+
+- [Configuring indexing options for the server-side search of DataMiner Cube](#configuring-indexing-options-for-the-server-side-search-of-dataminer-cube)
+
+- [Making DataMiner Cube ignore view updates](#making-dataminer-cube-ignore-view-updates)
+
+- [Specifying DCF settings](#specifying-dcf-settings)
+
+- [Activating the NonElementProtocol option system-wide](#activating-the-nonelementprotocol-option-system-wide)
+
+- [Generating information events when a connection fails to authenticate](#generating-information-events-when-a-connection-fails-to-authenticate)
+
+- [Configuring a cluster transition state timeout](#configuring-a-cluster-transition-state-timeout)
+
+- [Fine-tuning NATS settings](#fine-tuning-nats-settings)
+
+- [Fine-tuning message throttling](#fine-tuning-message-throttling)
+
+> [!TIP]
+> See also:
+> [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+
+> [!NOTE]
+> Before you configure any of these settings, you will need to stop DataMiner. After you have saved your changes, restart DataMiner again.
+
+#### Limiting the number of connection attempts
+
+Using the following tags, you can limit the number of connection attempts per client computer that a DataMiner Agent will allow.
+
+- MaxConnectionAttemptsCheckEnabled (default: true)
+
+- MaxConnectionAttempts (default: 40)
+
+- MaxConnectionAttemptsTime (default: 2 minutes)
+
+> [!NOTE]
+> These settings do not apply to replication connections.
+
+Example:
+
+```xml
+<SLNet>                                                                     
+  <MaxConnectionAttemptsCheckEnabled>true</MaxConnectionAttemptsCheckEnabled>
+  <MaxConnectionAttempts>40</MaxConnectionAttempts>                          
+  <MaxConnectionAttemptsTime>2</MaxConnectionAttemptsTime>                   
+</SLNet>                                                                    
+```
+
+If you specify the above-mentioned connection attempt settings, a DataMiner Agent will disregard all subsequent attempts and return the following error message when it receives more than 40 connection attempts within 2 minutes:
+
+```txt
+Too many connection attempts from client XXXXX.
+```
+
+#### Enabling encrypted connections
+
+If you set the *RequireEncryptedConnections* tag to TRUE, then all incoming connections have to use encryption.
+
+When a legacy DMA tries to connect to a DMA that requires encrypted connections, the following message will be returned:
+
+```txt
+Client software does not support encrypted connections.
+```
+
+Example:
+
+```xml
+<SLNet>                                                         
+  <RequireEncryptedConnections>TRUE</RequireEncryptedConnections>
+</SLNet>                                                        
+```
+
+Default from DataMiner 10.1.7 onwards: TRUE
+
+Default prior to DataMiner 10.0.13: FALSE
+
+#### Configuring the number of messages to be returned (polling/eventing)
+
+Using the following tags, you can specify the number of messages to be returned in case of polling or eventing.
+
+Polling requests are usually sent less often than eventing callbacks. Normally, callbacks are sent every 100 ms, while polling requests are sent every second (depending on the configuration).
+
+| Setting                      | Description                                                                                  |
+|------------------------------|----------------------------------------------------------------------------------------------|
+| MaxMessagesPerPollingRequest | The maximum number of events to be returned after a polling request.<br> Default: 500 events |
+| MaxMessagesPerCallback       | The maximum number of events to be sent via an eventing callback.<br> Default: 500 events    |
+
+Example:
+
+```xml
+<SLNet>                                                           
+  <MaxMessagesPerPollingRequest>2000</MaxMessagesPerPollingRequest>
+  <MaxMessagesPerCallback>500</MaxMessagesPerCallback>             
+</SLNet>                                                          
+```
+
+> [!NOTE]
+> -  When a single polling response is not able to empty the stack of queued messages on the server, the next polling request will be scheduled after 100ms (fixed value).
+> -  Unzipping/unpacking polling response data on the client can be done while another polling request is already in progress.
+
+#### Configuring the polling request timeout
+
+In the *\<DefaultPollingRequestTimeout>* tag, you can set the polling request timeout (in seconds).
+
+This setting will apply to all new inter-DMA connections set up from that DMA.
+
+Default value: 60 seconds
+
+> [!TIP]
+> See also:
+> [Configuring the polling request timeout](General_DMA_configuration.md#configuring-the-polling-request-timeout)
+
+#### Configuring indexing options for the server-side search of DataMiner Cube
+
+In the *\<SearchOptions>* tag, you can configure the indexing options for the server-side search of DataMiner Cube.
+
+Example:
+
+```xml
+<SLNet>                                          
+  <SearchOptions>trendedParamsOnly</SearchOptions>
+</SLNet>                                         
+```
+
+> [!TIP]
+> See also:
+> [Setting the indexing options for the server-side search](General_DMA_configuration.md#setting-the-indexing-options-for-the-server-side-search)
+
+#### Making DataMiner Cube ignore view updates
+
+If you set the *\<ClientSkipViewUpdates>* tag to TRUE, DataMiner Cube clients will no longer handle any view changes.
+
+The first time a view change has been ignored, a *Reconnect* button will appear at the top of the Surveyor. Click this button to reconnect and manually reload any view changes.
+
+Example:
+
+```xml
+<SLNet>                                             
+  <ClientSkipViewUpdates>TRUE</ClientSkipViewUpdates>
+</SLNet>                                            
+```
+
+Default: FALSE
+
+> [!NOTE]
+> This setting can also be configured with the SLNetClientTest tool. However, note that this is an advanced administration tool that should be used with extreme care. See [Making DataMiner Cube ignore view updates](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#making-dataminer-cube-ignore-view-updates).
+
+#### Specifying DCF settings
+
+Within the *\<SLNet>* tag, several settings for the DCF engine can be configured.
+
+##### ConnectivityEngineInterval
+
+Use this setting to specify (in milliseconds) how frequently the DCF engine has to check for changes in connectivity chains. By default, the interval is set to 1000 milliseconds.
+
+Example:
+
+```xml
+<MaintenanceSettings>                                         
+  <SLNet>                                                       
+    <ConnectivityEngineInterval>5000</ConnectivityEngineInterval>
+    ...                                                            
+  </SLNet>                                                      
+  ...                                                            
+</MaintenanceSettings>                                        
+```
+
+##### ConnectivityLogVerbose
+
+Set this setting to “true” to add extra information in the logs with regard to connectivity chain resolution.
+
+Example:
+
+```xml
+<MaintenanceSettings>                                 
+  <SLNet>                                               
+    <ConnectivityLogVerbose>true</ConnectivityLogVerbose>
+    ...                                                    
+  </SLNet>                                              
+  ...                                                    
+</MaintenanceSettings>                                
+```
+
+##### ConnectivityMaxConnections
+
+Use this setting to specify the maximum number of connections that is allowed in Connectivity event and response messages. By default, the maximum number of connections is set to 500.
+
+Example:
+
+```xml
+<MaintenanceSettings>                                        
+  <SLNet>                                                      
+    <ConnectivityMaxConnections>700</ConnectivityMaxConnections>
+    ...                                                           
+  </SLNet>                                                     
+  ...                                                           
+</MaintenanceSettings>                                       
+```
+
+#### Activating the NonElementProtocol option system-wide
+
+In a Visual Overview, a “NonElementProtocol” option can be specified in case it contains shapes linked to a large number of elements, but no element-specific formatting is needed from files like *description.xml*, *informations.xml*, or *port.xml. *This can enhance the overall performance of the Visual Overview.
+
+It is also possible to apply this option system-wide, instead of limiting it to one Visual Overview shape or page.
+
+To do so, add a *\<NonElementProtocol>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to “true”.
+
+Example:
+
+```xml
+<MaintenanceSettings>                         
+  ...                                            
+  <SLNet>                                       
+    ...                                            
+    <NonElementProtocol>true</NonElementProtocol>
+    ...                                            
+  </SLNet>                                      
+  ...                                            
+</MaintenanceSettings>                        
+```
+
+> [!TIP]
+> See also:
+> [NonElementProtocol](../../part_2/visio/Overview_of_page_and_shape_options.md)
+
+#### Generating information events when a connection fails to authenticate
+
+From DataMiner 9.0.0 CU9 onwards, an option can be configured to have an information event generated whenever a connection fails to be authenticated.
+
+To enable this option, add an *\<EnableFailedAuthenticationInfoEvents>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to “true”. From DataMiner 10.1.8/10.2.0 onwards, this option is set to “true” by default.
+
+Example:
+
+```xml
+<MaintenanceSettings>                                                             
+  ...                                                                                
+  <SLNet>                                                                           
+    <EnableFailedAuthenticationInfoEvents>true</EnableFailedAuthenticationInfoEvents>
+    ...h                                                                               
+  </SLNet>                                                                          
+  ...                                                                                
+</MaintenanceSettings>                                                            
+```
+
+#### Configuring a cluster transition state timeout
+
+From DataMiner 10.0.3 onwards, in the *\<ClusterTransitionStateTimeout>* tag, you can specify a cluster transition state timeout (in seconds).
+
+DataMiner Agents leaving the DataMiner System (i.e. cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
+
+Example:
+
+```xml
+<MaintenanceSettings>                                            
+  ...                                                               
+  <SLNet>                                                          
+    <ClusterTransitionStateTimeout>5</ClusterTransitionStateTimeout>
+    ...                                                               
+  </SLNet>                                                         
+  ...                                                               
+</MaintenanceSettings>                                           
+```
+
+#### Fine-tuning NATS settings
+
+From DataMiner 10.1.0/10.1.1 onwards, DataMiner processes use the NATS open-source messaging system to communicate with each other. Some settings for NATS can be fine-tuned in *MaintenanceSettings.xml*, using the following tags:
+
+- *NATSDisasterCheck*: Set this to true or false in order to respectively activate or deactivate automatic detection and triggering of NATS cluster self healing (default: false).
+
+- *NATSResetWindow*: Specify a value in seconds to set a window during which only one NATS reset can occur. This prevents situations where NATS disaster recovery is triggered too often. The minimum value is 60. If a lower value is specified, 60 will be used instead.
+
+- *NATSLogFileCleanupMs*: Supported from DataMiner 10.1.0 \[CU9\]/10.1.8 onwards. Determines the time (in milliseconds) between NATS log file cleanup attempts. This timing will only be applied after the next cleanup attempt after the configuration change. For example, if the next cleanup attempt is in 15 minutes and you change this value, the next cleanup will still be in 15 minutes, but all subsequent cleanups will happen after 1-minute intervals. The default value of this setting is 900000 (15 minutes).
+
+- *NATSLogFileAmountToKeep*: Supported from DataMiner 10.1.0 \[CU9\]/10.1.8 onwards. The number of log files to keep (default =10). This value only applies to the log files that do not have the .log extension.
+
+Example:
+
+```xml
+<MaintenanceSettings>                                 
+  ...                                                    
+  <SLNet>                                               
+    ...                                                    
+    <NATSDisasterCheck>true</NATSDisasterCheck>          
+    <NATSResetWindow>90</NATSResetWindow>                
+    <NATSLogFileCleanupMs>60000</NATSLogFileCleanupMs>   
+    <NATSLogFileAmountToKeep>20</NATSLogFileAmountToKeep>
+    ...                                                    
+  </SLNet>                                              
+  ...                                                    
+</MaintenanceSettings>                                
+```
+
+> [!NOTE]
+> From DataMiner 10.1.0/10.1.3 onwards, you can instead configure this using the SLNetClientTest tool. See [Fine-tuning NATS settings](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#fine-tuning-nats-settings).
+
+> [!TIP]
+> See also:
+> [Increasing the timeout for the NATS connection](../../part_7/SkylineDataminerFolder/SLCloud_xml.md#increasing-the-timeout-for-the-nats-connection)
+
+#### Fine-tuning message throttling
+
+From DataMiner 10.2.0/10.1.2 onwards, message throttling is enabled on connections from web applications (e.g. Monitoring app, Dashboards app, Web APIs, etc.) to SLNet. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
+
+From DataMiner 10.1.3 onwards, the following settings can be fine-tuned for this in *MaintenanceSettings.xml:*
+
+- *MessageThrottlingThreshold*: Time interval in ms. The default and minimum value is 250. If two updates for the same parameter are received within this interval, message throttling is activated. The first of the parameter updates is sent immediately, but messages for the same parameter that come after this are throttled until no more parameter updates have been received for this same time interval. Once the throttling has stopped, the last update is also sent after at most this time interval.
+
+- *MessageThrottlingPeriodicUpdate*: Time interval in ms. The default value is 1000, and the value must always be at least twice the *MessageThrottlingThreshold* value. If there is a steady flow of updates for the same parameter, and message throttling is activated, a periodic update is sent after this interval.
+
+Example:
+
+```xml
+<MaintenanceSettings>                                                   
+  ...                                                                      
+  <SLNet>                                                                 
+    ...                                                                      
+    <MessageThrottlingThreshold>250</MessageThrottlingThreshold>           
+    <MessageThrottlingPeriodicUpdate>1000</MessageThrottlingPeriodicUpdate>
+    ...                                                                      
+  </SLNet>                                                                
+  ...                                                                      
+</MaintenanceSettings>                                                  
+```
+
+### Configuring DMA communication settings in SLNet.exe.config
+
+On a DMA, you have to specify the ports to be used for both .NET Remoting and XML Web Services.
+
+1. On the DataMiner Agent on which you want to configure the communication settings, go to the *C:\\Skyline DataMiner\\Files* directory.
+
+2. In a text editor (e.g. Microsoft Notepad), open *SLNet.exe.config*.
+
+3. Optionally, and prior to DataMiner 10.0.11 only, in the *appSettings* section, go to the *TcpWebServicePort* key, and set its “value” attribute to the port number to be used for XML Web Services. By default, this will be port 9004:
+
+    ```xml
+    <add key="TcpWebServicePort" value="9004" />
+    ```
+
+    > [!NOTE]
+    > The default port 9004 for XML Web Services is deprecated from DataMiner 9.6 onwards. Using Web Services for DMA communication is no longer supported from DataMiner 10.0.11 onwards.
+
+4. In the Channels section, go to the channel tag named SLNetRemoting, and set its “port” attribute to the port number to be used for .NET Remoting. By default, this will be port 8004:
+
+    ```xml
+    <channel                   
+      ref="http"                  
+      name="SLNetRemoting"        
+      port="8004"                 
+      timeout="300000"            
+      clientConnectionLimit="200">
+    ```
+
+5. Save and close the file.
+
+6. Restart DataMiner.

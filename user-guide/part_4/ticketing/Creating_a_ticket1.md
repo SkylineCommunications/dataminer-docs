@@ -1,0 +1,20 @@
+# Creating a ticket
+
+You can create a ticket both from within the Ticketing app and from the Surveyor or Alarm Console.
+
+- Within the Ticketing app: click the *New* button in the header bar.
+
+- From the Surveyor or Alarm Console: Right-click the item for which a ticket should be created and select *Ticket* > *New ticket*.
+
+    > [!NOTE]
+    > You can create tickets for elements, services, views, and alarms.
+
+In either case, a *Create new ticket *form will be created, where you should do the following:
+
+1. Check if the correct domain is displayed in the domain selector at top. If it is not, click the domain selector and select the correct domain.
+
+2. Fill in the necessary fields (determined by the domain) and click *Save*.
+
+> [!NOTE]
+> Creating new tickets is only possible if at least one domain has been configured in the Ticketing app. Otherwise the *New ticket* option will be disabled.
+>
