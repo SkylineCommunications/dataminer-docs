@@ -21,7 +21,7 @@ In DataMiner Cube, you can upload either *Protocol.xml* files or entire protoco
 
 #### Uploading a Protocol.xml file
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols* or *Versions*, right-click a random protocol or protocol version and select *Upload*.
 
@@ -100,7 +100,7 @@ There are different types of updates. The type of update is indicated next to ea
 
 ### Adding a protocol or protocol version with DataMiner Taskbar Utility
 
-Using DataMiner Taskbar Utility, you cannot upload *Protocol.xml* files, only protocol packages (extension* .dmprotocol*).
+Using DataMiner Taskbar Utility, you cannot upload *Protocol.xml* files, only protocol packages (extension *.dmprotocol*).
 
 1. In the system tray of the DataMiner Agent, right-click the DataMiner Taskbar Utility icon and select *Backup/Restore \> Upload dmprotocol*.
 

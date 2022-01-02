@@ -46,4 +46,7 @@ In some cases, it is possible to use placeholders in the filter condition:
 
 > [!TIP]
 > See also:
-> [\[ServiceFilterName\]](Placeholders_for_variables_in_shape_data_values.md#servicefiltername)<br> [\[ServiceFilter\]](Placeholders_for_variables_in_shape_data_values.md#servicefilter)<br> [\[ServiceFilterIdx\]](Placeholders_for_variables_in_shape_data_values.md#servicefilteridx)
+> -  [\[ServiceFilterName\]](Placeholders_for_variables_in_shape_data_values.md#servicefiltername)
+> -  [\[ServiceFilter\]](Placeholders_for_variables_in_shape_data_values.md#servicefilter)
+> -  [\[ServiceFilterIdx\]](Placeholders_for_variables_in_shape_data_values.md#servicefilteridx)
+>

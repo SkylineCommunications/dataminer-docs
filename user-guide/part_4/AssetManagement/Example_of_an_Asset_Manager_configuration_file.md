@@ -27,7 +27,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   </Security>                                                                                       
   <Tables>                                                                                          
     <Table name="table1" displayName="Table 1" displayColumn="column1        (column2:column3)" />
-    <Table name="person" displayName="person details" displayColumn="Name" \>                         
+    <Table name="person" displayName="person details" displayColumn="Name" >                         
       <ColumnRelations>                                                                                 
         <ColumnRelation sourceColumn="addressID" onDelete="PromptLinkedRemoval" />                        
         <ColumnRelation sourceColumn="employeeID" onDelete="DenyLinkedRemoval" />                         
@@ -35,7 +35,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     </Table>                                                                                          
     <Table name="filtered_table" displayName="Filtered Table" displayColumn="Name">                   
       <Filter>                                                                                          
-        <![CDATA[column1 = value1 OR column1 <= value2]]\>                                           
+        <![CDATA[column1 = value1 OR column1 <= value2]]>                                           
       </Filter>                                                                                         
     </Table>                                                                                          
     <Table name="ordered_table" displayName="Ordered Table" displayColumn="Name">                     

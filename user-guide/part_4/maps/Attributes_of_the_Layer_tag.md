@@ -53,7 +53,7 @@ Available from DataMiner 9.6.0 onwards. With this attribute, you can control whe
 Example:
 
 ```xml
-<Layer name="myLayer" autoFit="false" visible="true" toggleGroup="myGroup" allowToggle="true"        sourceType="relations" limitToBouncds="false" refresh="3600000" linked="true"\>
+<Layer name="myLayer" autoFit="false" visible="true" toggleGroup="myGroup" allowToggle="true"        sourceType="relations" limitToBouncds="false" refresh="3600000" linked="true">
 ```
 
 ### maxZoom
@@ -84,7 +84,7 @@ Available from DataMiner 9.5.5 onwards. When this attribute is set to “true”
 Example:
 
 ```xml
-<Layer sourceType="table" refresh="5000" name="Countries" visible="true" allowToggle="true"       autoFit="false" limitToBounds="false" notifications="true"\>
+<Layer sourceType="table" refresh="5000" name="Countries" visible="true" allowToggle="true"       autoFit="false" limitToBounds="false" notifications="true">
 ```
 
 > [!NOTE]

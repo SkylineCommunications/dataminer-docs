@@ -53,7 +53,7 @@ To set a different Visio file as the active file for a particular service or vie
 
 In the Protocols & Templates module, you can upload a custom-made Visio file to assign it to a protocol.
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select the protocol to which you want to assign a Visio file under *Protocols*.
 
@@ -73,7 +73,7 @@ In the Protocols & Templates module, you can upload a custom-made Visio file to 
 
 If you no longer want a custom Visio file to be linked to a protocol, you can sever the link between the protocol and the Visio file.
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols*, right-click the protocol and select *Remove Visio file*.
 

@@ -4,7 +4,7 @@ For every protocol in your DataMiner System, you can create custom information t
 
 To create an information template:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Information Templates*, right-click the default information template and select *New*.
 

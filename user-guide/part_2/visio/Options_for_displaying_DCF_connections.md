@@ -85,7 +85,7 @@ To have a connection property displayed on top of every connection that contains
 
     | Shape data field | Value                                                                                                                                                             |
     |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Options            | ConnectionProperty:*PropertyName\|*Protocol=*ProtocolName*:*Version* |
+    | Options            | ConnectionProperty:*PropertyName*\|Protocol=*ProtocolName*:*Version* |
 
     > [!NOTE]
     > If you use this option, property shapes will only be placed on interfaces of which the protocol of the parent element matches the protocol you specified in the shape data field.
@@ -209,7 +209,7 @@ From DataMiner 9.5.9 onwards, it is possible to link connection properties of in
 
 If you do so, internal connections will push their connection properties to the directly linked external connections along the path. The properties will not be passed from an input to an external connection. If multiple connection properties share a name, they will be separated by commas in the connection overview.
 
-To implement this feature, add *LinkConnectionProperty=**X**;**Y* to the **Options** shape data item of the connection shape, where X and Y are the names of the properties you want to link. Multiple properties can be separated by semicolons.
+To implement this feature, add *LinkConnectionProperty=X;Y* to the **Options** shape data item of the connection shape, where X and Y are the names of the properties you want to link. Multiple properties can be separated by semicolons.
 
 | Shape data field | Value                      |
 |------------------|----------------------------|

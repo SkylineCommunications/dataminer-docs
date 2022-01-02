@@ -4,7 +4,7 @@ The *Documents* module allows you to integrate documents in DataMiner. This way
 
 There are two ways to access documents in DataMiner:
 
-- Go directly to the module itself, by going to *Apps* >* Documents*.
+- Go directly to the module itself, by going to *Apps* > *Documents*.
 
 - Go to the *Documents* page of an element or service card.
 

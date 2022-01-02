@@ -68,7 +68,7 @@ Once you have compiled a C# code block as a library, you can then import that li
     ```xml
     <Script>                                                                                                      
       <Exe id="1" type="csharp">                                                                                    
-        <Value><![CDATA[[Project:GMN_CreateBooking_1]]]\></Value>                                             
+        <Value><![CDATA[[Project:GMN_CreateBooking_1]]]></Value>                                             
         <Param type="scriptRef">GMN Custom Exception Library:SrmCustomExceptions</Param>
         <Message></Message>                                                                                          
       </Exe>                                                                                                        

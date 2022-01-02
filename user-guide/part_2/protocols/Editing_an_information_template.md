@@ -6,7 +6,7 @@ You can either edit the complete information template in the Protocols & Templat
 
 To make changes to the complete information template:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols*, select the protocol.
 

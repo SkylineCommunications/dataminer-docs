@@ -154,21 +154,9 @@ By default, each column of a dynamic table that has monitoring enabled will be r
 
 4. Enter the values you want for the different alarm severities, as for a regular parameter.
 
-<table class="table23" data-border-spacing="0" dir="ltr" data-border-collapse="collapse">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd odd tr394">
-<td class="td24">NOTE:</td>
-<td class="td21">-  If an alarm template contains multiple duplicate instances of the same table column parameter, all those instances are displayed as soon as one of them is marked as being monitored, even if *Only monitored parameters* is selected in the top-right corner of the card.
-> -  If you want to configure a table to have all rows monitored, except certain specific rows, add an entry with a filter for those rows above the entry for the entire table, and make sure the entry with the filter is not selected. For example:
-><div data-align="left"> ![](../../images/MonitorTableRow.png)
-</div>  </td>
-</tr>
-</tbody>
-</table>
+    > [!NOTE]
+    > -  If an alarm template contains multiple duplicate instances of the same table column parameter, all those instances are displayed as soon as one of them is marked as being monitored, even if *Only monitored parameters* is selected in the top-right corner of the card.
+    > -  If you want to configure a table to have all rows monitored, except certain specific rows, add an entry with a filter for those rows above the entry for the entire table, and make sure the entry with the filter is not selected. For example:<br>![](../../images/MonitorTableRow.png)
 
 ### Configuring alarm hysteresis in an alarm template
 
@@ -228,11 +216,7 @@ Both for “absolute” and “relative” alarm thresholds, the “normal” va
 
     - **To detect a continuous degradation**. This type of baseline is used in order to detect a deviation from a typically stable signal or fixed value. The median value of the average trend points during the selected trend window is calculated and kept for 24 hours. Every 15 minutes, DataMiner will check whether enough time has elapsed that the baseline value can be calculated again.
 
-        Example of continuous degradation of a signal:
-
-![](../../images/SmartBaselinesContinuous.png)
-
- 
+        Example of continuous degradation of a signal:<br>![](../../images/SmartBaselinesContinuous.png)
 
     - **To detect a deviation in the expected daily pattern**. This type of baseline is used to detect a deviation from a signal that follows a day/night pattern. In this case, the day/night pattern is checked by calculating the median value per 15 minutes of the trend window. The baselines are calculated every 24 hours at midnight for every 15-minute timeslot of the next day (e.g. 10:00, 10:15, 10:30, …).
 

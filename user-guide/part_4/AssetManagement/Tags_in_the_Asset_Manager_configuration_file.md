@@ -144,7 +144,7 @@ To give a table a custom icon in the tree view, inside the *\<Table>* tag, add 
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">           
         <Rectangle Width="13" Height="12" Fill="Red" />                  
         </Viewbox>                                                       
-      ]]\>                                                            
+      ]]>                                                            
       </Icon>                                                          
     </Table>                                                         
     ```

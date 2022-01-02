@@ -348,7 +348,7 @@ To force a DataMiner Agent not to use virtual IP addresses, do the following.
 Example:
 
 ```xml
-<DataMiner disableElementIP="true" \>...</DataMiner>
+<DataMiner disableElementIP="true" >...</DataMiner>
 ```
 
 ### Setting the indexing options for the server-side search

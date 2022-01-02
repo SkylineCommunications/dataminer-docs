@@ -46,7 +46,7 @@ For larger changes, however, it is advisable to use a dedicated code editor.
 
 To make changes to a *Protocol.xml* file within Cube:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Versions*, right-click the protocol version you want to edit and select *Open*.
 

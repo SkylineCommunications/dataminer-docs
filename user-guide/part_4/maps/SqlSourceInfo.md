@@ -61,7 +61,7 @@ The SELECT statement that will retrieve the necessary data.
     idmaptest as PrimaryKey, marker as Marker
   from                                     
     maptest                                  
-  ]]\></Sql>                            
+  ]]></Sql>                            
   <Target/>                               
   </SqlSourceInfo>                        
   ...                                      
@@ -104,8 +104,8 @@ In the example below, the datepicker option has been specified. Notice that the 
     GPSCustom2 as AlarmLevel, GPSName as Title,                                                                                                              
     GPSCustom1 as Customer, AutoInc as PrimaryKey,                                                                                                           
     TimeStamp as TimeStamp FROM elementdata_389_4000                                                                                                         
-    WHERE TimeStamp \>= [datefrom] AND TimeStamp <= [dateto];                                                                                           
-    ]]\></Sql>                                                                                                                                            
+    WHERE TimeStamp >= [datefrom] AND TimeStamp <= [dateto];                                                                                           
+    ]]></Sql>                                                                                                                                            
   </SqlSourceInfo>                                                                                                                                        
 </Layer>                                                                                                                                                
 ```

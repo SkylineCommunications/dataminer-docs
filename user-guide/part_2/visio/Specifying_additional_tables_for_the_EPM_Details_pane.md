@@ -4,7 +4,7 @@ Using a shape data field of type **SelectionDetails**, you can specify additiona
 
 ### Configuring the shape data field
 
-Add a shape data field of type **SelectionDetails **to the shape, and set its value to:
+Add a shape data field of type **SelectionDetails** to the shape, and set its value to:
 
 ```txt
 |ExtraTableID1|ExtraTableID2|...

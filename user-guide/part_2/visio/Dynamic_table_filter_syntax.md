@@ -1,6 +1,6 @@
 ## Dynamic table filter syntax
 
-For the **SubscriptionFilter**,** ParameterSubscriptionFilter** and **TableRowFilter** components, it is possible to configure a dynamic table filter. This filter can consist of the following components, separated by semicolons.
+For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFilter** components, it is possible to configure a dynamic table filter. This filter can consist of the following components, separated by semicolons.
 
 - **VALUE=**
 
@@ -38,7 +38,7 @@ For the **SubscriptionFilter**,** ParameterSubscriptionFilter** and **TableRowF
     value=1005 == xyz      
     value=PK == xyz        
     value=1006 == ??snmp* 
-    value=1007 \> 100      
+    value=1007 > 100      
     value=114 in_range 5/10
     value=PK == abc        
     value=DK == def        
@@ -47,34 +47,34 @@ For the **SubscriptionFilter**,** ParameterSubscriptionFilter** and **TableRowF
     > [!NOTE]
     > The correct use of spaces in the filters is very important. If you leave out the spaces around the operator, the filter will not work.
 
-- FK=
+- **FK**=
 
     This filter is similar in structure to the VALUE= filter, and is used to resolve foreign key relations to other tables or recursively. Only the == operator is allowed.     For example, to only include rows that have a relation path to the row in table 2000 with primary key “xyz”, specify *fk=2000 == xyz*. You can also specify a column parameter ID from the target table instead.
 
-- PK=
+- **PK**=
 
     Primary key filter, for example *pk=xyz*.
 
-- DK=
+- **DK**=
 
     Display key filter, to be used for tables that have a display color or for which advanced naming is active. For example, *dk=xyz*.
 
-- CHAIN=
+- **CHAIN**=
 
     This filter can be used to pass along a custom table relation chain (affects fk filters). Normally, the rows are implicitly joined together and resolved for tables based on the chains defined in the protocol.
 
-- PAGE=
+- **PAGE**=
 
     This filter should be followed by an integer, and determines which page is retrieved (with 1 being the first page).
 
-- SORT=
+- **SORT**=
 
     This filter determines how to sort the filter results. It should be followed by one or more parameter IDs, separated by pipe characters (“\|”). The default order is ascending, but DESC can be added in the filter to apply descending sort order instead. For example, *SORT=12502\|DESC*.     From DataMiner 10.0.0/10.0.2 onwards, you can also specify *SORT=NONE*, to avoid any kind of sorting of the results, which may improve performance.
 
     > [!NOTE]
     > Sorting direct view tables that combine data from different elements is only possible from DataMiner 9.6.11 onwards. However, note that it is not possible to sort by a column that is not part of the result set.
 
-- RESOLVE=
+- **RESOLVE**=
 
     The resolve filter will substitute values of foreign key columns with the display key of the linked table.     This filter should be followed by a comma-separated string containing the parameter IDs to resolve. If all parameter IDs should be resolved, “*all*” can be specified instead.     For example, if *resolve=1005,2000* is specified, the value in column 1005 (which should be a primary key of table 2000), will be replaced by the display key of that row in table 2000.
 
@@ -97,7 +97,7 @@ For the **SubscriptionFilter**,** ParameterSubscriptionFilter** and **TableRowF
     | recursive=upNoLocal                                 |                                                                                                                                                                          |
     | recursive=downNoLocal                               |                                                                                                                                                                          |
 
-- TREND=
+- **TREND**=
 
     This filter is used to filter results based on whether items are trended. It should be followed by one or more parameter IDs combined with the type of trending. Each parameter ID and trend type should be separated by a comma, and the different parameter IDs should be separated by pipe ("\|") characters.     Examples:
 
@@ -107,7 +107,7 @@ For the **SubscriptionFilter**,** ParameterSubscriptionFilter** and **TableRowF
     trend=avg,1005|rt,1005
     ```
 
-- ALARM=
+- **ALARM**=
 
     This filter should be followed by a comma-separated string of parameter IDs. Only rows for which the specified columns are in alarm state will be retrieved.     Example:
 
@@ -115,7 +115,7 @@ For the **SubscriptionFilter**,** ParameterSubscriptionFilter** and **TableRowF
     alarm=1005,1006,1022
     ```
 
-- COLUMNS=
+- **COLUMNS**=
 
     This filter is used to filter on particular columns and should be followed by a comma-separated string of parameter IDs. The PK column is always included.     Example:
 
@@ -136,12 +136,12 @@ For the **SubscriptionFilter**,** ParameterSubscriptionFilter** and **TableRowF
     > -  A foreign key relation path must exist between the table being queried and the linked data table.
     > -  The result set will not be updated when the data in the external table changes.
 
-- FULLFILTER=
+- **FULLFILTER**=
 
     This is an expanded form of the VALUE= filter, which can contain brackets and logical operators.     The following operators can be used: ==, !=, \>=, \<=, \<, \>, IS, ===, IN_RANGE, OUT_RANGE, AND, OR.     For example:
 
     ```txt
-    fullFilter=((PK \>= 5) AND ((101 IN_RANGE 0/10) OR (102 == 50))) OR (103 IS true)
+    fullFilter=((PK >= 5) AND ((101 IN_RANGE 0/10) OR (102 == 50))) OR (103 IS true)
     ```
 
     > [!NOTE]
@@ -156,17 +156,17 @@ For the **SubscriptionFilter**,** ParameterSubscriptionFilter** and **TableRowF
     Available from DataMiner 10.0.3 onwards. This filter uses the same syntax as the fullfilter component, but is applied to all keys found through recursive links when requesting a table with the recursive option.     For example:
 
     ```txt
-    recursivefullfilter=(1002 \> 0)
+    recursivefullfilter=(1002 > 0)
     ```
 
     > [!NOTE]
     > This filter component can also be used in table filters specified in a DataMiner Maps configuration file. See [Configuring the DataMiner Maps](../../part_4/maps/Configuring_the_DataMiner_Maps.md).
 
-- NODIRECTVIEW=
+- **NODIRECTVIEW**=
 
     This filter should be followed by true or false, and determines whether the direct view option is applied on the filter result. For more information on this option, refer to the protocol development documentation.
 
-- FORCEFULLTABLE=
+- **FORCEFULLTABLE**=
 
     This filter can be used on partial tables to force the filter to go through all the pages rather than just the first. The filter should be followed by true or false.
 

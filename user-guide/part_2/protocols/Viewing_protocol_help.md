@@ -12,7 +12,7 @@ There are several ways to access protocol help:
 
 - From the Protocols & Templates module:
 
-    1. Go to *Apps* >* Protocols & Templates*.
+    1. Go to *Apps* > *Protocols & Templates*.
 
     2. Right-click the protocol in question in the *Protocols* list.
 

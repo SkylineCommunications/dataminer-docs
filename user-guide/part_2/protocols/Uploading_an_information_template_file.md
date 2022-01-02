@@ -7,7 +7,7 @@ Instead of creating custom information templates in Cube, you can also create th
     > [!NOTE]
     > Once the template has been uploaded, its name automatically changes to *information.xml*.
 
-2. Go to *Apps* >* Protocols & Templates*.
+2. Go to *Apps* > *Protocols & Templates*.
 
 3. Under *Information Templates*, right-click a random information template and select *Upload*.
 

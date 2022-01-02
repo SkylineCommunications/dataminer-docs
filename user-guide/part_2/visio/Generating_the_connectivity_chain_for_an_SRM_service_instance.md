@@ -29,11 +29,11 @@ To have a service instance chain drawn automatically, define the following shape
 
     - Child shapes representing the element interfaces. So that it can be automatically determined which interfaces should be assigned to which element shape, we suggest to set the **Interface** shape data for these shapes to one of the following values:
 
- *\[Auto\]\|Input *
+        - *\[Auto\]\|Input*
 
- *\[Auto\]\|InputOutput *
+        - *\[Auto\]\|InputOutput*
 
- *\[Auto\]\|Output *
+        - *\[Auto\]\|Output*
 
     - Optional additional child shapes in the placeholder shape, for example to display the element name of the shape. For the latter, a child shape should be added with shape data **Element** set to "\*" and shape data **Info** set to "Name". See [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
 

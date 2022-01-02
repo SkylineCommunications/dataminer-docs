@@ -4,7 +4,7 @@ If you have linked a shape to a view, an element or a service, that shape can be
 
 ### Configuring the shape data field
 
-Add a shape data field of type **Annotations **to the shape, and set its value to “*\|SHOW*” or “*\|HIDE*”.
+Add a shape data field of type **Annotations** to the shape, and set its value to “*\|SHOW*” or “*\|HIDE*”.
 
 ### Examples
 

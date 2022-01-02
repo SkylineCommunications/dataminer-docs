@@ -13,4 +13,4 @@ Example:
 | ClientFilter | \<A>-A\|Parameter:202\|=2 |
 
 > [!NOTE]
-> The subscription filter used for the *\[Param:\]* placeholder needs to match the subscription filter in the *ClientSettings.json *configuration minus any “columns=” options.
+> The subscription filter used for the *\[Param:\]* placeholder needs to match the subscription filter in the *ClientSettings.json* configuration minus any “columns=” options.

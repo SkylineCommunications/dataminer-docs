@@ -160,7 +160,7 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
     <li>[dmaid]</li>                                                                                                                                          
     <li>[customparametervalue]</li>                                                                                                                           
     </ul>                                                                                                                                                        
-    ]]\>                                                                                                                                                        
+    ]]>                                                                                                                                                        
   </PopupSkeleton>                                                                                                                                             
   <PopupDetails>                                                                                                                                               
     <Detail name="customparametervalue" type="parameter" pid="102" />                                                                                            
@@ -197,7 +197,7 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
       <p>username: [username]</p>                                                                                                                 
       <p>latitude: [latitude]</p>                                                                                                                 
       <p>longitude: [longitude]</p>                                                                                                               
-    ]]\>                                                                                                                                          
+    ]]>                                                                                                                                          
   </PopupSkeleton>                                                                                                                               
   <PopupDetails>                                                                                                                                 
     <Detail name="username" type="parameter_elementalias" alias="locationelement" pid="2002" />                                                    

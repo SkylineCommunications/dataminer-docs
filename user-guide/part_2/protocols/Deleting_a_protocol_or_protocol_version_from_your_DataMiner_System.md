@@ -7,7 +7,7 @@ If you are absolutely sure that a protocol or a protocol version is no longer us
 
 To do so:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols* or *Versions*, right-click the protocol or protocol version you want to delete and select *Delete*.
 

@@ -2,7 +2,7 @@
 
 Instead of creating a custom information template from scratch, you can also duplicate an existing one and edit it afterwards.
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols*, select the protocol.
 

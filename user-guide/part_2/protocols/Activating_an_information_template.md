@@ -2,7 +2,7 @@
 
 If you want a custom information template to override a protocol’s default information template, you have to activate it, i.e. make it the active information template for that protocol.
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols*, click the protocol for which you want to activate another information template.
 

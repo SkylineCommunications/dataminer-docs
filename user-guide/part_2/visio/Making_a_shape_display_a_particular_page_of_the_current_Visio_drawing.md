@@ -17,7 +17,7 @@ That page can be displayed:
 
 ### Basic shape data field configuration
 
-Add a shape data field of type **VdxPage **to the shape, and set its value to the name of the page, optionally followed by “*\|Popup*”, “*\|Window*” or “*\|Tooltip*”:
+Add a shape data field of type **VdxPage** to the shape, and set its value to the name of the page, optionally followed by “*\|Popup*”, “*\|Window*” or “*\|Tooltip*”:
 
 ```txt
 PageName|Option
@@ -93,7 +93,7 @@ If you added a “*\|Popup*” or a “*\|Window*” option to have the Visio pa
 
 To do so:
 
-- Add a shape data field of type **LinkOptions **to the shape, and set its value to:
+- Add a shape data field of type **LinkOptions** to the shape, and set its value to:
 
     ```txt
     Width=999|Height=999
@@ -103,7 +103,7 @@ To do so:
 
 #### Configuring a custom shortcut menu
 
-By default, when you right-click a Visio drawing displayed in a shape, the shortcut menu of the Visio drawing containing that shape will appear. If you want the Visio drawing inside the shape to have its own shortcut menu, add a shape data field of type **Options **to the shape displaying the Visio drawing, and set its value to *InlineVisioContextMenuVisible*.
+By default, when you right-click a Visio drawing displayed in a shape, the shortcut menu of the Visio drawing containing that shape will appear. If you want the Visio drawing inside the shape to have its own shortcut menu, add a shape data field of type **Options** to the shape displaying the Visio drawing, and set its value to *InlineVisioContextMenuVisible*.
 
 | Shape data field | Value                         |
 |------------------|-------------------------------|

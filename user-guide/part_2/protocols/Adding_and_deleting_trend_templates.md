@@ -12,7 +12,7 @@ In this section:
 
 To create a new trend template:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select a protocol in the first column and a protocol version in the second column.
 
@@ -20,8 +20,6 @@ To create a new trend template:
 
     > [!NOTE]
     > To create a new trend template that is very similar to one that already exists, it can be handy to duplicate the existing template instead of creating a blank new template. To do so, instead of selecting *New*, select the template that is similar, and then select *Duplicate* in the right-click menu.
-
- 
 
 4. In the *New trend template* dialog box:
 
@@ -44,7 +42,7 @@ To create a new trend template:
 
 To upload a trend template for a particular protocol version:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select the protocol in the first column and the protocol version in the second column.
 
@@ -59,7 +57,7 @@ To upload a trend template for a particular protocol version:
 
 To delete an existing trend template for a particular protocol version:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select the protocol in the first column and the protocol version in the second column.
 

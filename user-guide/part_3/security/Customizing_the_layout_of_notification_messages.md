@@ -94,7 +94,7 @@ The following example shows a *NotifyTemplates.xml* file in which two templates
         -RootKey: [rootkey]                                                          
         More Info: http://[dmaip]/SystemDisplay.htm[if:element] and                
         http://[dmaip]/ElementDisplay.htm?id=[dmaid]/[elementid][endif]        
-      ]]\>                                                                         
+      ]]>                                                                         
     </Content>                                                                    
   </Template>                                                                   
   <Template name="html-notifications" options="">                               
@@ -141,7 +141,7 @@ The following example shows a *NotifyTemplates.xml* file in which two templates
       ElementDisplay</a>                                                            
       [endif]                                                                      
       </p>                                                                          
-      ]]\>                                                                         
+      ]]>                                                                         
     </Content>                                                                    
   </Template>                                                                   
 </NotifyTemplates>                                                            

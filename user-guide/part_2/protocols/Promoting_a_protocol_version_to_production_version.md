@@ -14,7 +14,7 @@ When you add a new version of a particular protocol to your DataMiner System, it
 
 To promote a protocol version to the production version:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols*, select the protocol.
 

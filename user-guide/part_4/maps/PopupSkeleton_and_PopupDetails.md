@@ -183,7 +183,7 @@ An example where placeholders are replaced by cell values from the currently sel
   <![CDATA[                                                   
     <p>Latitude: [latitude]</p>                                
     <p>Longitude: [longitude]</p>                              
-  ]]\>                                                         
+  ]]>                                                         
 </PopupSkeleton>                                              
 <PopupDetails>                                                
   <Detail name="latitude" type="parameter_samerow" pid="114" /> 
@@ -200,7 +200,7 @@ An example where placeholders are replaced by property values retrieved from the
   <![CDATA[                                                     
     <p>Latitude: [latitude]</p>                                  
     <p>Longitude: [longitude]</p>                                
-  ]]\>                                                           
+  ]]>                                                           
 </PopupSkeleton>                                                
 <PopupDetails>                                                  
   <Detail name="latitude" type="property" property="Latitude" />  
@@ -216,7 +216,7 @@ An example where placeholders are replaced by parameter values retrieved from th
 <PopupSkeleton>                                                  
   <![CDATA[                                                      
     <p>[customparametervalue]</p>                                 
-  ]]\>                                                            
+  ]]>                                                            
 </PopupSkeleton>                                                 
 <PopupDetails>                                                   
   <Detail name="customparametervalue" type="parameter" pid="102" />
@@ -232,7 +232,7 @@ An example where placeholders are replaced with parameter values from an element
   <![CDATA[                                                                            
     <p>Latitude: [Latitude]</p>                                                         
     <p>Longitude: [Longitude]</p>                                                       
-  ]]\>                                                                                  
+  ]]>                                                                                  
 </PopupSkeleton>                                                                       
 <PopupDetails>                                                                         
   <Detail name="Latitude" type="parameter_elementalias" alias="tab" pid ="503" idx="1" />
@@ -248,7 +248,7 @@ An example of a marker balloon containing a map layer:
 <PopupSkeleton>                                  
   <![CDATA[                                      
     <a href="#" class="showlayer">MySpecialLayer</a>
-  ]]\>                                            
+  ]]>                                            
 </PopupSkeleton>                                 
 ```
 
@@ -280,7 +280,7 @@ The “column” attributes of the *\<Detail>* tags have to contain name of colu
            b.TimeStamp AS Timestamp,                                                                                                                               
            b.GPSCustom2 As AlarmLevel                                                                                                                              
       FROM....;                                                                                                                                                
-    ]]\></Sql>                                                                                                                                            
+    ]]></Sql>                                                                                                                                            
   </SqlSourceInfo>                                                                                                                                        
   <PopupSkeleton>                                                                                                                                         
     <![CDATA[                                                                                                                                             
@@ -307,7 +307,7 @@ The “column” attributes of the *\<Detail>* tags have to contain name of colu
         </tr>                                                                                                                                                   
       </table>                                                                                                                                                
     </div>                                                                                                                                                  
-    ]]\>                                                                                                                                                   
+    ]]>                                                                                                                                                   
   </PopupSkeleton>                                                                                                                                        
   <PopupDetails>                                                                                                                                          
     <Detail name="Title" type="sql_samerow" column="Title" />                                                                                               
@@ -382,7 +382,7 @@ An example of a marker balloon with three tabs:
       <div id="tabs-2">Contents of tab 2.</div>                         
       <div id="tabs-3">Contents of tab 3.</div>                         
     </div>                                                             
-   ]]\>                                                             
+   ]]>                                                             
 </PopupSkeleton>                                                   
 ```
 
@@ -424,7 +424,7 @@ In the following example, the contents of columns 7002, 7005 and 7006 from table
         7000                                                        
       </div>                                                     
     </div>                                                     
-  ]]\>                                                      
+  ]]>                                                      
 </PopupSkeleton>                                           
 ```
 
@@ -468,7 +468,7 @@ Example:
     <p><a href="javascript:window.external.NavigateCPEChain(57, 7, 'topology2', 0,'');">Topology2 on other element</a></p>                                      
     <p><a href="javascript:window.external.OpenCPEKPIPopup([pid],'[primarykey]');">Open KPIs</a></p>                                                        
     <p><a href="javascript:window.external.OpenCPELinksPopup([pid],'[primarykey]', 'Customers');">Open Customers</a></p>                                    
-  ]]\>                                                                                                                                                          
+  ]]>                                                                                                                                                          
 </PopupSkeleton>                                                                                                                                               
 ```
 

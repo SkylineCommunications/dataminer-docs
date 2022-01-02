@@ -20,7 +20,7 @@ In the *CustomIcons.xml* file, each *\<Icon>* tag can either contain XAML code
 <Icons>                                                
   <Icon key="aUniqueKey" ref="icon1.png" theme="light" />
   <Icon key="anotherUniqueKey" theme="dark">             
-    <![CDATA[myXamlCode]]\>                            
+    <![CDATA[myXamlCode]]>                            
   </Icon>                                                
 </Icons>                                               
 ```

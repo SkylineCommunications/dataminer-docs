@@ -645,7 +645,7 @@ For this purpose, the following basic syntax is used:
         [reservation:[this service],Property=Class]
         ```
 
-    - The arguments necessary to be able to retrieve the property, specified using the following syntax: \<ArgumentName>*=**\<ArgumentValue>*. For example, *NodeID=15*.
+    - The arguments necessary to be able to retrieve the property, specified using the following syntax: *\<ArgumentName>=\<ArgumentValue>*. For example, *NodeID=15*.
 
         Depending on the specified property, these arguments may not be needed.
 
@@ -660,7 +660,7 @@ For this purpose, the following basic syntax is used:
 - From DataMiner 10.0.6 onwards, this placeholder can also be used to retrieve the ID of a booking, using the following syntax:
 
     ```txt
-    [reservation:<bookingID or service name or service ID or placeholder referring to a service\>,ID]
+    [reservation:<bookingID or service name or service ID or placeholder referring to a service>,ID]
     ```
 
     For example:
@@ -672,7 +672,7 @@ For this purpose, the following basic syntax is used:
 - From DataMiner 10.0.10 onwards, this placeholder can also be used to retrieve the status of a booking (e.g. “Ended”, “Pending”, “Ongoing”, etc.), using similar syntax:
 
     ```txt
-    [reservation:<bookingID or service name or service ID or placeholder referring to a service\>,Status]
+    [reservation:<bookingID or service name or service ID or placeholder referring to a service>,Status]
     ```
 
     For example:

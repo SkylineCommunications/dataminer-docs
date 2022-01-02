@@ -25,7 +25,7 @@ Example:
     <![CDATA[                                                                                                                                                  
       <p>cpu [cpu]</p>                                                                                                                                          
       <p>latitude [latitude]</p>                                                                                                                                
-    ]]\>                                                                                                                                                        
+    ]]>                                                                                                                                                        
   </PopupSkeleton>                                                                                                                                             
   <PopupDetails>                                                                                                                                               
     <Detail name="cpu" type="parameter_elementalias" alias="computer" pid="350" />                                                                               

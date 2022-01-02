@@ -7,7 +7,7 @@ When you set up the general MySQL database of a new DMA, you have to activate th
 2. Open a command prompt window, and enter the following commands:
 
     ```txt
-    CD C:\Program Files\Mysql\MySQL Server 5.1\bin Mysqldump –u root sldmadb \> c:\temp\sldmadb.sql
+    CD C:\Program Files\Mysql\MySQL Server 5.1\bin Mysqldump –u root sldmadb > c:\temp\sldmadb.sql
     ```
 
 3. Open MySQL Administrator, and do the following:

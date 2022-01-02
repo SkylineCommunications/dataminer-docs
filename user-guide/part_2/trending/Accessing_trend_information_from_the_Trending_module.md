@@ -4,7 +4,7 @@ In the Trending module, you can not only view trending information for individua
 
 To access trend information from the *Trending* module:
 
-1. In DataMiner Cube, go to *Apps* >* Trending*.
+1. In DataMiner Cube, go to *Apps* > *Trending*.
 
 2. In the parameter pane at the bottom of the card, click *Add parameter*.
 

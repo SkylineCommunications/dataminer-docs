@@ -67,7 +67,7 @@ To do so, add shape data fields of type **Interface** to the subshapes and set t
 
 If a page contains multiple instances of the same element, you can assign group names to the shapes so that internal connections are automatically drawn between parent shapes that share the same group name.
 
-To do so, define different interface subshapes on the different parent shapes, to each of which the shape data field **Option** with value “*InternalConnectionGroup=**Groupname*” has been added.
+To do so, define different interface subshapes on the different parent shapes, to each of which the shape data field **Option** with value *“InternalConnectionGroup=Groupname”* has been added.
 
 > [!NOTE]
 > -  Interfaces will be resolved in the following order: Interface ID \> Interface name (optionally containing wildcards) \> “\[Auto\]\|ActivePath” \> “\[Auto\]\|Connector” \> “\[Auto\]\|Input” \> “\[Auto\]\|Output” \> “\[Auto\]\|InputOutput” \> “\[Auto\]”.

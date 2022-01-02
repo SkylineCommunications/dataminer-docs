@@ -10,4 +10,4 @@ When, for example, a shape data field of type **VdxPage** is set to “\[auto\]
 
 ### Configuring the shape data field
 
-Add a shape data field of type **InlineVdx **to the page, and set its value to TRUE.
+Add a shape data field of type **InlineVdx** to the page, and set its value to TRUE.

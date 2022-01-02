@@ -35,7 +35,7 @@ To create a list view, add a shape on the Visio page with the following shape da
 
 ### Component options
 
-The following options can be specified in the *ComponentOptions *shape data field:
+The following options can be specified in the *ComponentOptions* shape data field:
 
 | Component option                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -68,7 +68,7 @@ ReservationInstance.Status[Int32] == 3
 ```
 
 ```txt
-ReservationInstance.End[DateTime] \>01/22/2019 11:17:32
+ReservationInstance.End[DateTime] >01/22/2019 11:17:32
 ```
 
 ```txt
@@ -97,7 +97,7 @@ If you set the *Source* shape data field to “Elements” or “Services”, t
     View=MyView
     ```
 
-    An alternative syntax, *ViewName=**\<name>*, can be used from DataMiner 10.0.5 onwards. From this version onwards, you can also use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID ,and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
+    An alternative syntax, *ViewName=\<name>*, can be used from DataMiner 10.0.5 onwards. From this version onwards, you can also use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID ,and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
 
 - From DataMiner 9.6.8 onwards, session variables can be used in the filter. For example:
 

@@ -9,10 +9,10 @@ A script condition in a Correlation rule should use the following format:
 Examples:
 
 ```txt
-count(*) \> 5                           
+count(*) > 5                           
 field(pid)==123                          
 field(value) == "Connected"              
-parameter(7,56,110,"SLDataMiner") \> 55.2
+parameter(7,56,110,"SLDataMiner") > 55.2
 round(avg(field(value)),3) == "12.555"   
 field(value) == "Status: \"OK\""       
 ```

@@ -23,7 +23,7 @@ To implement ticket synchronization:
             syncMsg.ElementID = new   Skyline.DataMiner.Net.ElementID(protocol.DataMinerID,   protocol.ElementID);
             //The timestamp of the last polling cycle to the external   ticketing system.                             
             syncMsg.TimeStamp = DateTime.UtcNow;                                                                          
-            syncMsg.ManagerObjects = new List<Tuple<DateTime, Ticket>\>();                                              
+            syncMsg.ManagerObjects = new List<Tuple<DateTime, Ticket>>();                                              
                                                                                                                           
             foreach(var row in rows) {                                                                             
                 object[] cells = row as object[];                                                                         

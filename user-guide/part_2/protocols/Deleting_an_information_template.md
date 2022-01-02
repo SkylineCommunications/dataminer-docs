@@ -2,7 +2,7 @@
 
 If you are absolutely sure that an information template is no longer being used in your DataMiner System, you can choose to delete it.
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols*, select the protocol.
 

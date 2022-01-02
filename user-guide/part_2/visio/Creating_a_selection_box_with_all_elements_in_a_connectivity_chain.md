@@ -2,7 +2,7 @@
 
 When connectivity has been defined in a drawing, you can turn a shape into a selection box containing all elements in the connectivity chain.
 
-Create a shape, add a shape data field of type **Connection **to it, and set its value to “*ConnectionElements*”. You can then also specify a number of options.
+Create a shape, add a shape data field of type **Connection** to it, and set its value to “*ConnectionElements*”. You can then also specify a number of options.
 
 - On the **Connection** shape itself, you can specify the following options, separated by pipe characters:
 

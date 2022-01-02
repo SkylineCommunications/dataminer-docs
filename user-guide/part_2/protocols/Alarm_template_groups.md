@@ -43,7 +43,7 @@ In an alarm template, every parameter can have one of three monitoring states:
 
 To create a new alarm template group:
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select a protocol in the first column and a protocol version in the second column.
 
@@ -79,7 +79,7 @@ To create a new alarm template group:
 
     4. Click *OK*.
 
-6. In the template group editor, click *Add Alarm Template *and select a template in the drop-down list. Repeat until all the necessary alarm templates are included in the group.
+6. In the template group editor, click *Add Alarm Template* and select a template in the drop-down list. Repeat until all the necessary alarm templates are included in the group.
 
     > [!NOTE]
     > Under the list with the added alarm templates, the consolidated alarm template is shown. You can use this as a reference to see the combined effect of the different alarm templates in the group.
