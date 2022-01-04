@@ -2,7 +2,7 @@
 
 Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
-1. Go to *Apps* >* System Center.*
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Agents* page.
 

@@ -14,7 +14,7 @@ From DataMiner 9.0 onwards, it is possible to add items to a dashboard directly 
 
     - The context menu of a table on a Data Display page of a card.
 
-2. Select whether to add the item to a* New dashboard* or an *Existing dashboard*.
+2. Select whether to add the item to a *New dashboard* or an *Existing dashboard*.
 
     If you select *Existing dashboard*, a short list of dashboards will be displayed. Select *Show all* if the dashboard you need is not yet included in the list.
 

@@ -4,7 +4,7 @@ To configure a general or “local” database:
 
 1. In Cube, go to *Apps* > *System Center.*
 
-2. In the *System Center* module, select the* Database* tab.
+2. In the *System Center* module, select the *Database* tab.
 
 3. In the column on the left, select the Agent of which you want to configure the general database.
 

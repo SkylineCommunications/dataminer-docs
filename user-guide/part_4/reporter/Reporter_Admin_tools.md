@@ -2,7 +2,7 @@
 
 The Reporter app has a tools page containing options and information that can be useful to troubleshoot DMS Reporter.
 
-You can access this page at* http(s)://\[DmaIp\]/Reports/Tools.asp*.
+You can access this page at *http(s)://\[DmaIp\]/Reports/Tools.asp*.
 
 The page consists of the following sections:
 

@@ -2,7 +2,7 @@
 
 If you want an EPM interface to be displayed when you select a view in the Surveyor, add the following properties to the view in question:
 
-- **DDAElement: **The element ID of the EPM element.
+- **DDAElement:** The element ID of the EPM element.
 
     Syntax:
 

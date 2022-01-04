@@ -2,7 +2,7 @@
 
 From DataMiner 10.2.0/10.1.7 onwards, it is possible to override the names of EPM topology cells, chains and search chains specified in a protocol with aliases specified in a separate file.
 
-For this purpose, in the folder *C:\\Skyline DataMiner*, create an *EPMConfig.xml* file that contains a *\<Topologies>* and/or *\<Chains> *configuration identical to the one in the protocol, and specify the necessary aliases in override attributes.
+For this purpose, in the folder *C:\\Skyline DataMiner*, create an *EPMConfig.xml* file that contains a *\<Topologies>* and/or *\<Chains>* configuration identical to the one in the protocol, and specify the necessary aliases in override attributes.
 
 For example:
 

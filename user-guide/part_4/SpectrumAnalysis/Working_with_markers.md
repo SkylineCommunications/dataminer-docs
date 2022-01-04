@@ -38,7 +38,7 @@ The following sections provide more information on working with markers in Cube:
 
     - **Lock to peak**: Locks the marker to a peak of the trace.
 
-    - **Lock to trace: **Locks the marker to the trace.
+    - **Lock to trace**: Locks the marker to the trace.
 
     > [!NOTE]
     > You can also quickly change an existing marker into a reference marker or noise marker by right-clicking the marker and selecting *Reference marker* or *Noise marker* respectively.

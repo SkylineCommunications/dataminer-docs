@@ -26,7 +26,7 @@ A virtual element can also have new parameters, which often contain the result o
 
 To configure virtual elements in Cube, the *Element Connections* module can be used:
 
-1. In DataMiner Cube, go to *Apps *\>* Element Connections*.
+1. In DataMiner Cube, go to *Apps \> Element Connections*.
 
     The module consists of two tabs:
 

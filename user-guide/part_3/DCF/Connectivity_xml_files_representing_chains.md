@@ -347,12 +347,12 @@ Inside a *\<Condition>* tag, you can add the following tags:
 
         - SWITCHING (integer value 5)
 
-    - If *\<Field> *contains any other value, *\<Value>* can contain any character string, with or without the wildcard characters \* and/or ?
+    - If *\<Field>* contains any other value, *\<Value>* can contain any character string, with or without the wildcard characters \* and/or ?
 
     Alternatively, from DataMiner 9.5.2 onwards, you can specify multiple references (e.g. \[REFERENCE:0\]/REFERENCE:1\]), which will then be replaced by items specified in the referenceValue attribute of the *\<Map>* tag.
 
     > [!NOTE]
-    > Wildcards in the *Condition.Value* tag will only be applied if the *Condition.Compare* tag is set to *equal to masked *or* not equal to masked*. 
+    > Wildcards in the *Condition.Value* tag will only be applied if the *Condition.Compare* tag is set to *equal to masked* or *not equal to masked*. 
 
 - **\<Compare>**
 
@@ -452,7 +452,7 @@ For example:
 
 #### referenceValue
 
-If, in *referenceValue**,* you specify e.g. “*SVCNAME:///*”, this will be replaced at runtime by the name of the current service. If you want to refer to e.g. one particular service instead, you can specify “*SVCNAME:dmaId/serviceId//*”.
+If, in *referenceValue*, you specify e.g. “*SVCNAME:///*”, this will be replaced at runtime by the name of the current service. If you want to refer to e.g. one particular service instead, you can specify “*SVCNAME:dmaId/serviceId//*”.
 
 See the following table to find out which items can be entered after each placeholder (separated by forward slashes).
 

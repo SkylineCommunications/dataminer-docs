@@ -4,7 +4,7 @@ It is possible either to turn SLA tracking of completely, or to disable outages,
 
 To activate or deactivate tracking of the SLA completely:
 
-- On the *SLA Configuration* page of the SLA element, in the *Extra settings* section, click the *Admin State *toggle button.
+- On the *SLA Configuration* page of the SLA element, in the *Extra settings* section, click the *Admin State* toggle button.
 
 To disable outages for the SLA:
 

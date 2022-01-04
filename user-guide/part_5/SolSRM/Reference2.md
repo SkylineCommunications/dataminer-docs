@@ -68,7 +68,7 @@ The overview also indicates the type of value that is expected for each property
 
 This property can be used to assign a “pool” resource to the node of a service definition. This way, when a booking is created, only the configured pool resources will be available. When the booking starts or another relevant event occurs, the pool resource can be exchanged for a regular resource.
 
-To configure this, set the value of the property to *PoolResource*. In addition, make sure the *Pool Resource* option is enabled in the Booking Manager (on the *Config* > *Wizard* tab), and the pool resources are configured with the capability *Resource Type *and value *PoolResource*.
+To configure this, set the value of the property to *PoolResource*. In addition, make sure the *Pool Resource* option is enabled in the Booking Manager (on the *Config* > *Wizard* tab), and the pool resources are configured with the capability *Resource Type* and value *PoolResource*.
 
 Other supported values for this property are:
 

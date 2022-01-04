@@ -26,7 +26,7 @@ To install and set up DataMiner IDP:
 
 7. In DataMiner Cube, go to *Apps* > *Automation*.
 
-8. Select the script *IDP_SetupWizard *and click *Execute*.
+8. Select the script *IDP_SetupWizard* and click *Execute*.
 
 9. On the first page, click the button *Execute Now*.
 
@@ -66,5 +66,5 @@ To install and set up DataMiner IDP:
 18. When the configuration of the IDP module has finished, which may take some time, click *Finish*, and on the next page, click *Close*.
 
 > [!NOTE]
-> To upgrade IDP if the app is already installed, follow the same procedure as detailed above. However, instead running the *IDP_SetupWizard *script from the Automation app, you can do so by going to *Admin* > *Settings* in the IDP app and clicking the button next to *Setup Wizard*.
+> To upgrade IDP if the app is already installed, follow the same procedure as detailed above. However, instead running the *IDP_SetupWizard* script from the Automation app, you can do so by going to *Admin* > *Settings* in the IDP app and clicking the button next to *Setup Wizard*.
 >

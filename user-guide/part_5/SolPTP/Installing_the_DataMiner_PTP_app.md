@@ -20,7 +20,7 @@ To install and set up the DataMiner PTP app:
 
 6. In DataMiner Cube, go to *Apps* > *Automation*.
 
-7. Select the script *PTP_SetupWizard *and click *Execute*.
+7. Select the script *PTP_SetupWizard* and click *Execute*.
 
 8. On the first page, click the button *Execute Now*.
 

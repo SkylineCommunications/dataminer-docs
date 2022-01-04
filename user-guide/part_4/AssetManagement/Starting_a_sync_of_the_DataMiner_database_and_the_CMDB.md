@@ -1,6 +1,6 @@
 ## Starting a sync of the DataMiner database and the CMDB
 
-In the *Asset Manager *module, if you want to start an ad hoc synchronization of the DataMiner database and the CMDB, click the *Sync Now* button.
+In the *Asset Manager* module, if you want to start an ad hoc synchronization of the DataMiner database and the CMDB, click the *Sync Now* button.
 
 Alternatively, to do a one-way synchronization, you can click:
 

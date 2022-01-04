@@ -16,7 +16,7 @@ These settings determine the interval to back up the current prediction model in
 > [!NOTE]
 > The *TimeOfBackup* and *BackupInterval* settings are no longer taken into account from DataMiner 9.5.5 onwards. From this version of DataMiner onwards, prediction models are no longer backed up, but instead retrieved from a cache and re-computed in case they are not available in the cache.
 
-Both the *TimeOfBackup* and *BackupInterval *setting can contain a value indicating a number of seconds:
+Both the *TimeOfBackup* and *BackupInterval* setting can contain a value indicating a number of seconds:
 
 - If both *TimeOfBackup* (X) and *BackupInterval* (Y) contain a positive number of seconds, the first backup will be taken at X seconds after midnight, and the following backups will be taken every Y seconds.
 

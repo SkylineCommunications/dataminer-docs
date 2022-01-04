@@ -51,7 +51,7 @@ To apply a data feed or change the data feed of a component:
     - For some components, you can add the complete set of a certain type of items. In that case, the data feed icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
 
         > [!NOTE]
-        > If you add the entire *Bookings* data set to a *Drop-down*,* List* or *Tree* feed, you will also need to link this to a *Time range* feed. 
+        > If you add the entire *Bookings* data set to a *Drop-down*, *List* or *Tree* feed, you will also need to link this to a *Time range* feed. 
 
     - A data feed can also be provided by a feed component. When such a component has been added to the dashboard, the *Feeds* section is added to the available data in the *Data* pane. You can then drag an entry from this section to a component in order to link the component to the feed component.
 

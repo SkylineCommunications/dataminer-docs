@@ -1,6 +1,6 @@
 ## Configuring an SNMP manager in DataMiner Cube
 
-1. In DataMiner Cube, go to *Apps* > *System Center *\> *SNMP Forwarding*.
+1. In DataMiner Cube, go to *Apps* > *System Center* \> *SNMP Forwarding*.
 
 2. To configure a new SNMP manager, at the bottom of the page, click the *New* button.
 

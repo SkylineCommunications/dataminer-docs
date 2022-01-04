@@ -153,7 +153,7 @@ For example, with the configuration below, if the A condition cannot be evaluate
 When conditional shape manipulation actions are defined on connection property shapes, there are additional possibilities for the “What” field of the condition.
 
 > [!NOTE]
-> Connection property shapes are shapes that have an **Options** shape data field with the value *ConnectionProperty:*PropertyName. See [Displaying connection properties](Options_for_displaying_DCF_connections.md#displaying-connection-properties).
+> Connection property shapes are shapes that have an **Options** shape data field with the value *ConnectionProperty:PropertyName*. See [Displaying connection properties](Options_for_displaying_DCF_connections.md#displaying-connection-properties).
 
 The following conditions can be defined:
 

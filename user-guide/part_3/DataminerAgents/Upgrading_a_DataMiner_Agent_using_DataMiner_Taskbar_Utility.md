@@ -55,8 +55,6 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the newest version:
     | BackupFirst               | Select this option if you want to upgrade the offline Agent, switch over and upgrade the online Agent.                     |
     | BackupFirstWithSwitchback | Select this option if you want to upgrade the offline Agent, switch over, upgrade the online Agent, and switch back again. |
 
- 
-
     > [!NOTE]
     > To specify the default failover policy, in DataMiner Cube, go to *System Center* > *System Settings* > *upgrade* > *Failover options.*
 

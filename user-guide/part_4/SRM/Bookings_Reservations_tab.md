@@ -2,7 +2,7 @@
 
 To view a default report of bookings within the system:
 
-1. On the home page of the Reporter app, under *System*, click *Bookings *or (prior to DataMiner 9.6.7) *Reservations*.
+1. On the home page of the Reporter app, under *System*, click *Bookings* or (prior to DataMiner 9.6.7) *Reservations*.
 
     Alternatively, to open this report page directly outside of DataMiner Cube, browse to the following URL: *http://*\<DMA name>*/Reports/SRM.asp*.
 
@@ -15,7 +15,7 @@ To view a default report of bookings within the system:
 
 3. In the *Name filter* box, optionally enter a booking name to filter by.
 
-4.  Click *Show bookings *or (prior to DataMiner 9.6.7) *Show Reservations*.
+4.  Click *Show bookings* or (prior to DataMiner 9.6.7) *Show Reservations*.
 
     A list of all bookings within the specified time span will be displayed. For each booking, the list shows the GUID, the name, the start time and the end time.
 

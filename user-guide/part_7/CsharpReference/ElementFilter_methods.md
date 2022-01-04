@@ -59,11 +59,11 @@ var filter = ElementFilter.ByProtocol("Microsoft Platform", "1.0.0.1");
 
 Retrieves a new *ElementFilter* object that, depending on the parameters specified, has
 
-- *ViewID *set to the specified view ID,
+- *ViewID* set to the specified view ID,
 
 - *View* set to the specified view name,
 
-- *ViewID*,* ProtocolName* and *ProtocolVersion* set to the specified view ID, protocol name and protocol version, or
+- *ViewID*, *ProtocolName* and *ProtocolVersion* set to the specified view ID, protocol name and protocol version, or
 
 - *View*, *ProtocolName* and *ProtocolVersion* set to the specified view name, protocol name and protocol version.
 

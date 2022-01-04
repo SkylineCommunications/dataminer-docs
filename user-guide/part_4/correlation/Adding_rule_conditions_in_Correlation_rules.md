@@ -29,12 +29,12 @@ In the *Rule condition* section of the details pane, specify one or more condit
 
 8. To determine the trigger mechanism, select one of the following options:
 
-    - **Immediate evaluation: **If you select this option, the rule action(s) will be executed as soon as there is a match with the rule conditions.
+    - **Immediate evaluation:** If you select this option, the rule action(s) will be executed as soon as there is a match with the rule conditions.
 
         > [!NOTE]
         > You should also use this option if you want to use a sliding window as described in step 9.
 
-    - **Persistent event: act only when the condition remains fulfilled for ... **: If you select this option and specify a time span, the rule action(s) will be executed when there is a match with the rule conditions that lasts for the duration of the specified time span.
+    - **Persistent event: act only when the condition remains fulfilled for ...** : If you select this option and specify a time span, the rule action(s) will be executed when there is a match with the rule conditions that lasts for the duration of the specified time span.
 
     - **Collect events for ... after first event, then evaluate conditions and execute actions**: If you select this option, specify a time span. As soon as an alarm matches the alarm filter(s), the correlation rule will start collecting all alarm events matching the same alarm filter(s). After the specified time span, the rule conditions will be checked for the collected alarm events. If there is a match, the action(s) will be executed.
 

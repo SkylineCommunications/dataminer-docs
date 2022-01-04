@@ -47,13 +47,13 @@ After you have connected to a DMA with the SLNetClientTest tool, do the followin
 
 - In the *Info* menu, select *A -M* > *Licenses*.
 
-    In the *Properties* tab of the main window, a new message will appear. You can double-click the message to read the details in a separate window, or select the message and read the details in the *Text *pane on the right.
+    In the *Properties* tab of the main window, a new message will appear. You can double-click the message to read the details in a separate window, or select the message and read the details in the *Text* pane on the right.
 
 To get an overview of the number of elements monitored with license counters, do the following
 
 - In the *Info* menu, select *A -M* > *ActivatedLicenseCounters*.
 
-    In the *Properties* tab of the main window, a new message will appear. You can double-click the message to read the details in a separate window, or select the message and read the details in the *Text *pane on the right.
+    In the *Properties* tab of the main window, a new message will appear. You can double-click the message to read the details in a separate window, or select the message and read the details in the *Text* pane on the right.
 
     > [!NOTE]
     > To know the total number allowed by the license, in the list of applications a DMA is licensed for, look for keys with a number at the end, e.g. ELEMENTS500, SPECTRUMELEMENTS10, PROTOCOLMICROSOFTPLATFORM:5. The number indicates the total allowed license counters.
@@ -64,7 +64,7 @@ The SlNetClientTest tool allows the user to check which Sync rules are in effect
 
 1. In the *Diagnostics* menu, select *DMS* > *Config*.
 
-2. Select the new message that appears in the *Properties* tab of the main window, and read the details in the *Text *pane on the right. The Sync rules are listed at the bottom of the pane.
+2. Select the new message that appears in the *Properties* tab of the main window, and read the details in the *Text* pane on the right. The Sync rules are listed at the bottom of the pane.
 
     > [!NOTE]
     > -  This info also lists the detected versions per DMA in the cluster. If version info for local IP addresses or Sync IP addresses is known, which is mainly for Failover Agents, there is also a section “Extra known versions.”
@@ -117,9 +117,9 @@ To drop one specific replication buffer:
 
 1. Go to the *Build Message* tab of the main window.
 
-2. In the *Message Type *drop-down list, select *DiagnoseMessage*.
+2. In the *Message Type* drop-down list, select *DiagnoseMessage*.
 
-3. In the* ExtraInfo* field, specify "drop:\[bufferkey\]", where \[bufferkey\] is the key of the replication buffer you want to drop. Replication buffer keys are listed in the replication buffer stats (e.g. "hostname/ipaddress/dmaid/eid")
+3. In the *ExtraInfo* field, specify "drop:\[bufferkey\]", where \[bufferkey\] is the key of the replication buffer you want to drop. Replication buffer keys are listed in the replication buffer stats (e.g. "hostname/ipaddress/dmaid/eid")
 
 4. In the *Type* field at the bottom, select *ReplicationBufferStats*.
 
@@ -160,7 +160,7 @@ To activate verbose Correlation logging:
 
 1. In the *Advanced* menu, select *Options* > *SLNet options.*
 
-2. In the list at the top of the *SLNet Options *window, select *CorrelationLogVerbose*.
+2. In the list at the top of the *SLNet Options* window, select *CorrelationLogVerbose*.
 
     A list of the Agents in the cluster will be displayed, indicating for each of them whether verbose Correlation is activated.
 
@@ -181,7 +181,7 @@ To activate follow mode:
 
     - *Events* and *Requests/Responses* are selected by default, to track events that are sent to a client and requests and responses respectively.
 
-    - Select* Include Polling* to track all polling.
+    - Select *Include Polling* to track all polling.
 
     - Select *Wire* to track events after they have been pushed over an eventing callback or returned in a polling response. This can be useful to verify that events have been pushed onto the wire in diagnostic scenarios.
 
@@ -270,7 +270,7 @@ To retrieve DCF debug information:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-2. In the *Message Type *drop-down list, select one of the following messages, depending on which information you want to retrieve:
+2. In the *Message Type* drop-down list, select one of the following messages, depending on which information you want to retrieve:
 
     - *GetAlarmConnectivityMessage*
 
@@ -286,7 +286,7 @@ To retrieve DCF debug information:
 
 4. Click *Send Message*.
 
-    In the *Properties* tab of the main window, a new message will appear with the debug information. Select the message to view the details in the *Text *pane on the right.
+    In the *Properties* tab of the main window, a new message will appear with the debug information. Select the message to view the details in the *Text* pane on the right.
 
 ### Checking a hyperlink filter
 
@@ -352,6 +352,6 @@ To do so:
 
 From DataMiner 10.2.0/10.1.7 onwards, you can retrieve information on how many GQI (i.e. generic queries interface, the interface used for queries in the Dashboards app) sessions are currently open.
 
-To view this information, go to *Advanced* > *GQI* >* Sessions*. This will open a window with the session ID, creation time and last update time of each of the current sessions.
+To view this information, go to *Advanced* > *GQI* > *Sessions*. This will open a window with the session ID, creation time and last update time of each of the current sessions.
 
 You can refresh the displayed information with the *Refresh* button at the top of the window.

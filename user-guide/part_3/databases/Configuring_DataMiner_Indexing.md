@@ -4,7 +4,7 @@ To configure the DataMiner Indexing settings, go to *System Center* > *Search &
 
 The following options are available:
 
-- *Enable indexing on alarms: *Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available.
+- *Enable indexing on alarms:* Enables indexing of alarms. If this option is not enabled, the enhanced search options in the Alarm Console are not available.
 
 - *Migrate booking data to Indexing Engine*: Starts a wizard that allows you to migrate booking data from the Cassandra database to the Indexing database. Only displayed in case booking data have not been migrated yet.
 

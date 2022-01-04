@@ -90,4 +90,4 @@ To manage the available recordings:
 
     - If you want to make a shared recording private or vice versa, click the *Rename* button, change the selection of the checkbox *Share recording with other users*, and click *OK*.
 
-4. When ready, click the *Close *button.
+4. When ready, click the *Close* button.

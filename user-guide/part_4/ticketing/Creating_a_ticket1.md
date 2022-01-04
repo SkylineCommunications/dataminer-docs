@@ -9,7 +9,7 @@ You can create a ticket both from within the Ticketing app and from the Surveyor
     > [!NOTE]
     > You can create tickets for elements, services, views, and alarms.
 
-In either case, a *Create new ticket *form will be created, where you should do the following:
+In either case, a *Create new ticket* form will be created, where you should do the following:
 
 1. Check if the correct domain is displayed in the domain selector at top. If it is not, click the domain selector and select the correct domain.
 

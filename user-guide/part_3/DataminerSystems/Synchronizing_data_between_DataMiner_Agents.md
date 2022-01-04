@@ -12,11 +12,11 @@ To make a DMA synchronize its changes with other Agents in the cluster, you can 
 
 1. In Cube, go to *Apps* > *System Center.*
 
-2. In the *System Center* module, select the* Tools* page.
+2. In the *System Center* module, select the *Tools* page.
 
 3. In the second column, select *Synchronization*.
 
-4. In the drop-down list next to *Type*, make sure *This **DataMiner Agent* is selected.
+4. In the drop-down list next to *Type*, make sure *This DataMiner Agent* is selected.
 
 5. Click the *Sync now* button at the bottom of the card.
 
@@ -31,7 +31,7 @@ To synchronize all Agents in the cluster, you can manually execute the complete 
 
 1. In Cube, go to *Apps* > *System Center.*
 
-2. In the *System Center* module, select the* Tools* page.
+2. In the *System Center* module, select the *Tools* page.
 
 3. In the second column, select *Synchronization*.
 
@@ -47,7 +47,7 @@ When a file has been changed on a particular DMA, you can force the synchronizat
 
 1. In Cube, go to *Apps* > *System Center.*
 
-2. In the *System Center* module, select the* Tools* page.
+2. In the *System Center* module, select the *Tools* page.
 
 3. In the second column, select *Synchronization*.
 
@@ -65,7 +65,7 @@ To synchronize all Visio templates used in the cluster, you can execute a file s
 
 1. In Cube, go to *Apps* > *System Center.*
 
-2. In the *System Center* module, select the* Tools* page.
+2. In the *System Center* module, select the *Tools* page.
 
 3. In the second column, select *Synchronization*.
 

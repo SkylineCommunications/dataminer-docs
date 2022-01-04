@@ -1,6 +1,6 @@
 ## Deleting a row from a table
 
-In the *Asset Manager *module, there are several ways to delete a row from a table:
+In the *Asset Manager* module, there are several ways to delete a row from a table:
 
 - From the table in the *Normal View*:
 

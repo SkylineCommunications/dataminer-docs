@@ -1,6 +1,6 @@
 ## Adding a row to a table
 
-In the *Asset Manager *module:
+In the *Asset Manager* module:
 
 1. In the *Normal view* tab on the left, select the table.
 

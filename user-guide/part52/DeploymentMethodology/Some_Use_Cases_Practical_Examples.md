@@ -32,7 +32,7 @@ As the Agile T&M engagement is essentially based on a time expenditure basis, th
 
 - The assigned decision maker decides on what exactly the available engineering resources should work and for how long (presumably weighing effort against business value).
 
-**ACTIVITY: Creating a new driver for a new device. **
+**ACTIVITY: Creating a new driver for a new device.**
 
 TURNKEY PROJECT
 

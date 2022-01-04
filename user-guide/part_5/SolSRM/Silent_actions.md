@@ -22,9 +22,8 @@ To configure custom Automation scripts so that they can manipulate SRM objects s
 
 You can find this using the SLNetClientTest tool.
 
-|          |                                                                                                                                                      |
-|----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warning: | Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System. |
+> [!WARNING]
+> Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 To do so:
 
@@ -307,7 +306,7 @@ public class Script
 
 Applying service state transitions (Start, Stop, Pause, Standby, etc.) or forcing the same service state can be done by executing the *SRM_BookingAction* script with following input arguments:
 
-- Booking Manager Element Info : *{"Action":2,"Element":"\<booking_manager_elementname>",<br>"Reason":null,"ServiceId":null,"TableIndex":"\<reservation_guid>"} *
+- Booking Manager Element Info : *{"Action":2,"Element":"\<booking_manager_elementname>",<br>"Reason":null,"ServiceId":null,"TableIndex":"\<reservation_guid>"}*
 
 - Action: *{"Events":\["EXTERNAL"\],"ServiceStates":\["\<target service state>"\]}*
 

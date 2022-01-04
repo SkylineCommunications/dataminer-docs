@@ -16,4 +16,4 @@ For more information on how to upload or email reports in DataMiner Cube, see:
 
 - [Manually adding a scheduled task](../scheduler/Manually_adding_a_scheduled_task.md), for the Scheduler module.
 
-- [Designing Automation scripts](../automation/Designing_Automation_scripts.md)*, *[Email](../automation/Email.md), [Upload report to FTP](../automation/Upload_report_to_FTP.md), and [Upload report to shared folder](../automation/Upload_report_to_shared_folder.md) for the Automation module.
+- [Designing Automation scripts](../automation/Designing_Automation_scripts.md), [Email](../automation/Email.md), [Upload report to FTP](../automation/Upload_report_to_FTP.md), and [Upload report to shared folder](../automation/Upload_report_to_shared_folder.md) for the Automation module.

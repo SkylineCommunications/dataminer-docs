@@ -154,7 +154,7 @@ The discovery configuration window of the CI Type Management wizard allows you t
 
 - **Current Discovery Identifiers**: This section displays the currently configured identifiers. If an identifier and discovery profile match the specified value according to the selected match operator, the CI Type will be used for a device. To edit the current identifiers, you can select a different operator in the *Match* box and/or specify a different value.
 
-- **Conditions**: If only one identifier is configured, the* Conditions* box should simply contain “1”. If there are more identifiers, there must be a number for each of them, and they must be combined with logical operators (*not*, *and*, or *or*). For example: “1 and 2”.
+- **Conditions**: If only one identifier is configured, the *Conditions* box should simply contain “1”. If there are more identifiers, there must be a number for each of them, and they must be combined with logical operators (*not*, *and*, or *or*). For example: “1 and 2”.
 
 - **Add New Discovery Identifiers**: To add a new discovery identifier, first select the type, then click the triangle button to expand the configuration section for the identifier. Alternatively, you can immediately click the triangle button to see all possible types. Click “+” next to the type you want to add. Then select a *Match* operator and specify the value that should be used to detect if the CI Type should be used.
 

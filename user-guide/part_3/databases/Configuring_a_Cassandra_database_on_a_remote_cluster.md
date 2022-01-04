@@ -65,7 +65,7 @@ To link a DMA to a remote server with a Cassandra database:
 
     6. Once Cassandra has been installed on all servers, verify the status of the cluster with Nodetool:
 
-        - In a command window, execute* nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*).
+        - In a command window, execute *nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*).
 
     > [!TIP]
     > See also:
@@ -151,18 +151,18 @@ To configure a Failover setup with remote Cassandra databases:
 
 3. Configure the *cassandra.yaml* file for the main DMA as follows:
 
-        ```txt
-        listen_address: [IP of the main DMA]                
-        seeds: [IP of the main DMA],[IP of the backup DMA]
-        rpc_address: 0.0.0.0                                                                   
-        broadcast_rpc_address: [IP of the main DMA]         
-        ```
+    ```txt
+    listen_address: [IP of the main DMA]                
+    seeds: [IP of the main DMA],[IP of the backup DMA]
+    rpc_address: 0.0.0.0                                                                   
+    broadcast_rpc_address: [IP of the main DMA]         
+    ```
 
 4. Configure the *cassandra.yaml* file for the backup DMA as follows:
 
-        ```txt
-        listen_address: [IP of the backup DMA]              
-        seeds: [IP of the main DMA],[IP of the backup DMA]
-        rpc_address: 0.0.0.0                                                                   
-        broadcast_rpc_address: [IP of the backup DMA]       
-        ```
+    ```txt
+    listen_address: [IP of the backup DMA]              
+    seeds: [IP of the main DMA],[IP of the backup DMA]
+    rpc_address: 0.0.0.0                                                                   
+    broadcast_rpc_address: [IP of the backup DMA]       
+    ```

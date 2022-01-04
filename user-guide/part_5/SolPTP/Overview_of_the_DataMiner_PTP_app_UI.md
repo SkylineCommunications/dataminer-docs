@@ -125,7 +125,7 @@ This parameter can have the following values:
 
 - **32** (0x20): Accurate to within 25 ns.
 
-- **33 **(0x21): Accurate to within 100 ns.
+- **33** (0x21): Accurate to within 100 ns.
 
 - **34** (0x22): Accurate to within 250 ns.
 
@@ -137,7 +137,7 @@ This parameter can have the following values:
 
 - **38** (0x26): Accurate to within 25 µs.
 
-- **39 **(0x27): Accurate to within 100 µs.
+- **39** (0x27): Accurate to within 100 µs.
 
 - **40** (0x28): Accurate within 250 µs.
 

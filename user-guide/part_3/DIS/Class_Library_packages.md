@@ -51,21 +51,16 @@ A Class Library package is basically a zip file containing
 
 Example:
 
-§01Package.zip
-
-§02Manifest.xml
-
-§02Class1.cs
-
-§02Directory1
-
-§03Class2.cs
-
-§03Class3.cs
-
-§02Directory2
-
-§03…
+```txt
+Package.zip 
+    Manifest.xml
+    Class1.cs   
+    Directory1  
+        Class2.cs   
+        Class3.cs   
+    Directory2  
+        …           
+```
 
 ### Manifest.xml file
 

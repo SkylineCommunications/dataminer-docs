@@ -27,7 +27,7 @@ To configure the component:
 
 2. Optionally, customize the following component options:
 
-    - To customize the polling interval for this component, expand the *Settings *\> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
+    - To customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
     - If the component shows a parameter with a unit, but you do not want the unit to be displayed, in the *Settings* tab, clear the *Show units* option (available from DataMiner 10.1.9/10.2.0 onwards).
 
@@ -48,7 +48,7 @@ To configure the component:
         > [!NOTE]
         > These options are only available for parameters, and only prior to DataMiner 10.0.10. In later DataMiner versions, these are replaced by the *Layout flow* option.
 
-    - In the *Style *section, the following options are available:
+    - In the *Style* section, the following options are available:
 
         From DataMiner 10.0.9 onwards, if the component uses a parameter feed, or from DataMiner 10.0.10 onwards regardless of the type of feed:
 
@@ -102,7 +102,7 @@ To configure the component:
 
 2. Optionally, customize the following component options:
 
-    - To customize the polling interval for this component, expand the *Settings *\> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
+    - To customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
     - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all of the above together.
 
@@ -137,7 +137,7 @@ To configure the component:
 
 2. Optionally, customize the following component options:
 
-    - To customize the polling interval for this component, expand the *Settings *\> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
+    - To customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
     - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all of the above together.
 
@@ -160,7 +160,7 @@ To configure the component:
         > [!NOTE]
         > Prior to DataMiner 10.0.10, the component does not support feeds with multiple elements, services, views or redundancy groups. From that DataMiner version onwards, these are supported, but they have a fixed scroll configuration that cannot be adjusted in the *Layout* tab.
 
-    - In the *Style *section, the following options are available:
+    - In the *Style* section, the following options are available:
 
         - *Align font sizes*: Only available if *Design* is set to *Auto Size*. This option causes the font size to be aligned with the font size of other components using this option. If the option is not selected, the text is simply displayed as large as possible within the component.
 
@@ -178,7 +178,7 @@ To configure the component:
 
         - *Gauge/Vertical alignment*: Only available up to DataMiner 10.1.5. Determines whether the gauge should be aligned at the top or the center of the component.
 
-        - Alignment: Available from DataMiner 10.2.0/10.1.6 onwards. Only displayed if *Design* is set to *Small *or *Large*. Allows you to align the contents of the components to the left, in the center or to the right.
+        - Alignment: Available from DataMiner 10.2.0/10.1.6 onwards. Only displayed if *Design* is set to *Small* or *Large*. Allows you to align the contents of the components to the left, in the center or to the right.
 
 ### Ring
 
@@ -195,7 +195,7 @@ To configure the component:
 
 2. Optionally, customize the following component options:
 
-    - To customize the polling interval for this component, expand the *Settings *\> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
+    - To customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
     - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all of the above together.
 
@@ -218,7 +218,7 @@ To configure the component:
         > [!NOTE]
         > Prior to DataMiner 10.0.10, the component does not support feeds with multiple elements, services, views or redundancy groups. From that DataMiner version onwards, these are supported, but they have a fixed scroll configuration that cannot be adjusted in the *Layout* tab.
 
-    - The *Style *section, the following options are available:
+    - The *Style* section, the following options are available:
 
         - *Align font sizes*: Only available if *Design* is set to *Auto Size*. This option causes the font size to be aligned with the font size of other components using this option. If the option is not selected, the text is simply displayed as large as possible within the component.
 
@@ -234,7 +234,7 @@ To configure the component:
 
         - *Design*: Available from DataMiner 10.2.0/10.1.6 onwards. Determines how the text in the component is displayed. The options *Small* and *Large* show the text in a small and large font size, respectively. If you select *Auto size*, the font size will automatically be adjusted to fit in the available space.
 
-        - Alignment: Available from DataMiner 10.2.0/10.1.6 onwards. Only displayed if *Design* is set to *Small *or *Large*. Allows you to align the contents of the components to the left, in the center or to the right.
+        - Alignment: Available from DataMiner 10.2.0/10.1.6 onwards. Only displayed if *Design* is set to *Small* or *Large*. Allows you to align the contents of the components to the left, in the center or to the right.
 
 ### State timeline
 

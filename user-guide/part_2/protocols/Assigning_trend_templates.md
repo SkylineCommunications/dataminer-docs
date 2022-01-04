@@ -13,7 +13,7 @@ In the Surveyor:
 4. Click *Apply*.
 
 > [!NOTE]
-> From DataMiner 9.0.5 onwards, to quickly access the Protocols & Templates module from the Surveyor, right-click an element or enhanced service, and select *Protocols & Templates. *This opens a submenu where you can open the current template, assign a different template or view all available templates.
+> From DataMiner 9.0.5 onwards, to quickly access the Protocols & Templates module from the Surveyor, right-click an element or enhanced service, and select *Protocols & Templates*. This opens a submenu where you can open the current template, assign a different template or view all available templates.
 
 In the Protocols & Templates module:
 

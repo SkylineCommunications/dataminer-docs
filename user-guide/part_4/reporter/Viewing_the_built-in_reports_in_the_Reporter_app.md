@@ -26,5 +26,5 @@ In the navigation menu on the left, you can see an overview of the available rep
 > [!NOTE]
 > -  The *Reports* section below the built-in reports contains custom report templates, and allows the creation of report templates. See [Creating report templates](Creating_report_templates.md).
 > -  If you do not have the necessary rights to view certain elements or services, you will not be able to view information on these elements or services in reports.
-> -  From DataMiner 9.0.0 onwards, the Reporter user interface functions as a single-page application. This means that when you work with the *http(s)://\[MyDataMiner\]/reports *page, you can bookmark the URL of a particular report, or copy the URL in order to make a direct link to the report, for example in Visual Overview.
+> -  From DataMiner 9.0.0 onwards, the Reporter user interface functions as a single-page application. This means that when you work with the *http(s)://\[MyDataMiner\]/reports* page, you can bookmark the URL of a particular report, or copy the URL in order to make a direct link to the report, for example in Visual Overview.
 >

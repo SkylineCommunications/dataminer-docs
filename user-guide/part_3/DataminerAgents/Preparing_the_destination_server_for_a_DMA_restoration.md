@@ -70,7 +70,7 @@ To prepare the destination server, there are several possibilities:
 
             - *C:\\MySQL\\Data\\SLDMADB*, or
 
-- *C:\\Program Files\\MySQL\\MySQL Server 5.0\\data\\SLDMADB*
+            - *C:\\Program Files\\MySQL\\MySQL Server 5.0\\data\\SLDMADB*
 
         Alternatively, for a DMA using a Cassandra database:
 
@@ -98,7 +98,7 @@ To prepare the destination server, there are several possibilities:
         <Views xmlns="http://www.skyline.be/config/views"/>
         ```
 
-10.Start DataMiner. During startup, the necessary database tables will be created.
+    10. Start DataMiner. During startup, the necessary database tables will be created.
 
 > [!NOTE]
 > -  The destination DataMiner Agent must run exactly the same DataMiner software version as the original server. If it does not, perform either a software upgrade or a software downgrade to make sure the version is the same.

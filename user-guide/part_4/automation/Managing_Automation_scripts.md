@@ -104,7 +104,7 @@ You can change the name of a folder in the following ways:
 
 - To download a script as an XML file, right-click the script and select *Export*.
 
-    Alternatively, you can also select the folder or script, click the More... button at the bottom of the pane, and select the *Import *or *Export* option there.
+    Alternatively, you can also select the folder or script, click the More... button at the bottom of the pane, and select the *Import* or *Export* option there.
 
 > [!NOTE]
 > To import Automation scripts, you need the user permission *Automation: Add*. To export Automation scripts, you need the user permission *Automation: Edit*. See [DataMiner user permissions](../../part_3/security/DataMiner_user_permissions.md).

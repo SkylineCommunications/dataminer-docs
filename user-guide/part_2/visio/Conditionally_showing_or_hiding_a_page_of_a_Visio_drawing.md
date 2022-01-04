@@ -13,7 +13,7 @@ If a page is hidden, it will not be displayed in the tree view of a card navigat
 
 ### Depending on the current value of a parameter or a property
 
-Add a shape data field of type **Options **to the page, and set its value to:
+Add a shape data field of type **Options** to the page, and set its value to:
 
 ```txt
 Visible=[ParameterOrProperty];Condition;Condition;...
@@ -62,7 +62,7 @@ By specifying that certain pages should be hidden in DataMiner Cube, System Disp
 
 - ...
 
-Add a shape data field of type **Options **to the page, and set its value to:
+Add a shape data field of type **Options** to the page, and set its value to:
 
 ```txt
 Hidden=SD|Cube|Mobile

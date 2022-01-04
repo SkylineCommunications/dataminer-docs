@@ -14,6 +14,6 @@ To remove a DataMiner Agent from a DataMiner System:
 
 6. In the *Manage* section, select the DMA in the list.
 
-7. In the pane on the right, click *Delete cluster* (prior to DataMiner 10.0.13) or Leave cluster (from DataMiner 10.0.13 onwards).
+7. In the pane on the right, click *Delete cluster* (prior to DataMiner 10.0.13) or *Leave cluster* (from DataMiner 10.0.13 onwards).
 
 8. Restart the DMA you have removed.

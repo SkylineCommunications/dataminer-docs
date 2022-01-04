@@ -29,9 +29,8 @@ This issue is automatically resolved in DataMiner version 9.0.0 CU9. However, if
 
     The next time you (re)start Cassandra, this option will be taken into account, so that commit log errors will no longer cause Cassandra startup to fail.
 
-|          |                                                                                                                                                                             |
-|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Warning: | Be very careful when making changes in the registry. If you make any mistakes, this can cause serious issues. As such, we highly recommend to upgrade to 9.0.0 CU9 instead. |
+> [!WARNING]
+> Be very careful when making changes in the registry. If you make any mistakes, this can cause serious issues. As such, we highly recommend to upgrade to 9.0.0 CU9 instead.
 
 ### What happens if an offload database...
 

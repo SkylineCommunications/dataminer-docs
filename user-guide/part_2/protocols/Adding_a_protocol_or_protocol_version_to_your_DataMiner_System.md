@@ -31,7 +31,7 @@ In DataMiner Cube, you can upload either *Protocol.xml* files or entire protoco
 
 #### Uploading a protocol package
 
-1. Go to *Apps* >* Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. In the lower right corner of the card, click *Upload*.
 

@@ -29,15 +29,15 @@ To configure the component:
 
     - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
-    - *General *\> *Source*: Determines whether elements or services are displayed.
+    - *General* \> *Source*: Determines whether elements or services are displayed.
 
-    - *General *\> *Type*: Determines whether the bar chart is based on the number of alarm events or on the duration of alarm states.
+    - *General* \> *Type*: Determines whether the bar chart is based on the number of alarm events or on the duration of alarm states.
 
-    - *General *\> *Select*: Determines whether the top items (i.e. the items that had the most alarms or were in an alarm state for the longest time) or the bottom items (i.e. the items that had the least alarms or were in an alarm state for the shortest time) are displayed.
+    - *General* \> *Select*: Determines whether the top items (i.e. the items that had the most alarms or were in an alarm state for the longest time) or the bottom items (i.e. the items that had the least alarms or were in an alarm state for the shortest time) are displayed.
 
-    - *General *\> *Limit*: Determines how many elements or services are included in the chart.
+    - *General* \> *Limit*: Determines how many elements or services are included in the chart.
 
-    - *General *\> *Time span*: Determines the time range for which the information is retrieved.
+    - *General* \> *Time span*: Determines the time range for which the information is retrieved.
 
     From DataMiner 10.0.13 onwards, if query data input is used, the following settings are available instead:
 
@@ -49,7 +49,7 @@ To configure the component:
 
     - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
 
-    - *Advanced *\> *Include severities*: Allows you to exclude certain severity levels by clearing the checkboxes for those levels.
+    - *Advanced* \> *Include severities*: Allows you to exclude certain severity levels by clearing the checkboxes for those levels.
 
     - *Chart* > *Reverse data*: By default, the graph displays the number of alarm events or the alarm duration per element. This option allows you to instead display the number of alarm events or the alarm duration per alarm state.
 
@@ -79,7 +79,7 @@ To configure the component:
 
     - *Advanced \> Chart orientation*: Available from DataMiner 10.0.13 onwards. Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
 
-    - *Advanced *\> *Stack bars:* Available from DataMiner 10.1.0/10.1.2 onwards. Stacks the bars on top of each other instead of showing them side by side. This can be especially useful when combined with the *Relative per category* layout.
+    - *Advanced* \> *Stack bars:* Available from DataMiner 10.1.0/10.1.2 onwards. Stacks the bars on top of each other instead of showing them side by side. This can be especially useful when combined with the *Relative per category* layout.
 
     - *Legend \> Show Legend*: Available from DataMiner 10.0.13 onwards. Determines whether the legend is displayed.
 

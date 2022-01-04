@@ -107,7 +107,7 @@
             > [!NOTE]
             > The procedure to include a group conditionally is the same as that to include an element conditionally. See [Conditionally including an element in a service](Conditionally_including_an_element_in_a_service.md).
 
-        5. In the *ADVANCED *section, set a maximum severity for the items included in the group if they have the status “included” or “not used”.
+        5. In the *ADVANCED* section, set a maximum severity for the items included in the group if they have the status “included” or “not used”.
 
             > [!NOTE]
             > -  Maximum severity settings on item level override those on group level.

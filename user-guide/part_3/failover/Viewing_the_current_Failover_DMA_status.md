@@ -1,6 +1,6 @@
 ## Viewing the current Failover DMA status
 
-In the *Failover** Config* window, the current status of the two DMAs is displayed by means of LEDs, which are refreshed once a minute.
+In the *Failover Config* window, the current status of the two DMAs is displayed by means of LEDs, which are refreshed once a minute.
 
 These LEDs can have one of the following three colors:
 

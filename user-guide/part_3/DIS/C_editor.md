@@ -39,7 +39,7 @@ When you use this menu option while working with a protocol solution or an Autom
 
 #### Repeating selected text
 
-The right-click menu option *Repeat Selected Text *allows you to select a particular piece of text and have it copied a number of times. Moreover, by inserting variables and formulas in the text to be copied, you can have parts of the text change automatically from copy to copy.
+The right-click menu option *Repeat Selected Text* allows you to select a particular piece of text and have it copied a number of times. Moreover, by inserting variables and formulas in the text to be copied, you can have parts of the text change automatically from copy to copy.
 
 1. Select the text that has to be repeated, right-click, and select *Repeat Selected Text.*
 
@@ -79,7 +79,7 @@ To insert a snippet while working in the C# editor:
 
 1. Press CTRL+K, followed by CTRL+X.
 
-2. Open the *DIS *folder, and select a snippet.
+2. Open the *DIS* folder, and select a snippet.
 
 #### #If DEBUG
 

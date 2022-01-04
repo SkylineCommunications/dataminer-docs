@@ -464,11 +464,11 @@ Component-specific options:
 
 - *Show parameter IDX part*: For table parameters, enable this option to show the parameter index.
 
-- *Show parameter table name part: *Enable this option to display the table name part of a column parameter name.
+- *Show parameter table name part*: Enable this option to display the table name part of a column parameter name.
 
 - *Display parameter value*: Enable this option to display the current parameter value on the component.
 
-- *Display table quick filter: *Select this option to have a filter box shown above a table parameter.
+- *Display table quick filter*: Select this option to have a filter box shown above a table parameter.
 
 - *Slider style*: In the drop-down list, choose a style for the slider, depending on whether you need to optimize performance or not.
 

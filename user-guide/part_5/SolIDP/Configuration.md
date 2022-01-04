@@ -17,6 +17,6 @@ The *Configuration* subtab of the *Admin* tab consists of the following pages:
     > -  If purging happens based on the total number of backups or the number of backups per element, only full configuration backups are taken into account. However, if it happens based on disk usage, the size of all files (including the extra files used for change detection) is taken into account. 
     > -  Alarm monitoring and trending can be enabled for the KPIs.
 
-- **Backup**: Lists the supported file extensions for visualizations. By default, the XML and TXT extensions are listed. If a file has an extension that is not listed here, the *Show content* action on the* Configuration* > *Backups* tab and the *Compare* action on the *Configuration* > *Compare* tab will result in an error.
+- **Backup**: Lists the supported file extensions for visualizations. By default, the XML and TXT extensions are listed. If a file has an extension that is not listed here, the *Show content* action on the *Configuration* > *Backups* tab and the *Compare* action on the *Configuration* > *Compare* tab will result in an error.
 
     Below this is a table that allows you to enable or disable backups for specific configuration backup types. When you start a configuration backup, only the enabled types will be available. If all types are disabled, a notification will be displayed instead.

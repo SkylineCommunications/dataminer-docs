@@ -35,7 +35,7 @@ The list can be customized as follows:
 
     - Select *Change column name* and specify a new column name.
 
-    - Select *Manage column configuration* (from DataMiner 10.0.4 onwards) or *Add/Remove column *\> *More* (up to DataMiner 10.0.3) to open a window where you can do the following:
+    - Select *Manage column configuration* (from DataMiner 10.0.4 onwards) or *Add/Remove column* \> *More* (up to DataMiner 10.0.3) to open a window where you can do the following:
 
         - Show or hide a column by selecting or clearing its checkbox, or by selecting it and clicking *Show* or *Hide*.
 
@@ -49,7 +49,7 @@ The list can be customized as follows:
 
         - From DataMiner 10.0.0/10.0.2 onwards, for columns based on custom properties, you can instead select a different type (e.g. *Custom icon*, *Color*) in the *Column type* drop-down lists. For the default columns, the column type cannot be changed.
 
-        - In the *Filter by type* section, indicate which type of columns you want to choose from: *Bookings *(or* Reservations* in earlier DataMiner versions) or *Properties*.
+        - In the *Filter by type* section, indicate which type of columns you want to choose from: *Bookings* (or *Reservations* in earlier DataMiner versions) or *Properties*.
 
 2. Right-click in the list header (or click the list’s hamburger menu) and select *Save current column configuration*.
 

@@ -137,9 +137,7 @@ When working in the XML editor or the C# editor, you can do one of the following
 
 - Click the following button, which is situated in the top-left corner of the DIS Tree window:
 
-![](../../images/SyncArrow_16x.jpg)
-
- 
+    ![](../../images/SyncArrow_16x.jpg)
 
 See also: [DIS keyboard shortcuts](DIS_keyboard_shortcuts.md)
 
@@ -441,11 +439,11 @@ At the top of the *Compare* tab, you can find two buttons:
 
 ### Tool Windows \> DIS Grid View
 
-If you click *Tool Windows \> DIS Grid View*, the *DIS Grid *window will appear.
+If you click *Tool Windows \> DIS Grid View*, the *DIS Grid* window will appear.
 
 This tool window allows you to manage and configure all parameters in the protocol using a spreadsheet-like view.
 
-By default, the *DIS Grid *window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
+By default, the *DIS Grid* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
 #### Filtering the parameter list
 
@@ -511,7 +509,7 @@ When you right-click a row, a shortcut menu appears.
 
 ### Tool Windows \> DIS Validator
 
-If you click *Tool Windows \> DIS Validator*, the *DIS Validator *window will appear.
+If you click *Tool Windows \> DIS Validator*, the *DIS Validator* window will appear.
 
 This window lists the results of the latest protocol validation in a tree structure, grouped by severity and category.
 

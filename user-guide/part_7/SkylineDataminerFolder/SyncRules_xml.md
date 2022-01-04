@@ -15,7 +15,7 @@ When there is a version difference between DMAs for which synchronization is not
 > [!NOTE]
 > -  Security changes (e.g. added users and groups, password changes, etc.) are also ignored as long as the version difference exists.
 > -  It is possible to check which Sync rules are in use on a DMA by means of the SLClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Verifying Sync rules](../DataminerTools/SLNetClientTest_tool_diagnostic_procedures.md#verifying-sync-rules).
-> -  Changes to the *SyncRules.xml *file only take effect after a DataMiner restart.
+> -  Changes to the *SyncRules.xml* file only take effect after a DataMiner restart.
 
 ##### Example of a SyncRules.xml file:
 

@@ -152,7 +152,7 @@ To abort an Automation script while it is running:
 
     The *Maintain Automation* window will open.
 
-2. Go to the* Running Scripts* tab.
+2. Go to the *Running Scripts* tab.
 
 3. In the list of scripts, right-click the entry corresponding to the script you want to abort, and click *Abort Now*.
 
@@ -160,7 +160,7 @@ To abort an Automation script while it is running:
 
 With the SLNetClientTest tool, you can check if the *Views.xml* contains references to elements, services or redundancy groups that no longer exist, and if so, remove them. To do so:
 
-1. In the* Advanced* menu, go to *Clear From* > *Views.xml.*
+1. In the *Advanced* menu, go to *Clear From* > *Views.xml.*
 
 2. In the *Clear From Views.xml* window, go to the *Clear by Removed Element* tab, and click *Find Removed Elements*.
 
@@ -174,11 +174,11 @@ In case there are suspected synchronization issues within a DataMiner System, th
 
 To do so:
 
-1. In the* Advanced* menu, go to *Clear From* > *Views.xml.*
+1. In the *Advanced* menu, go to *Clear From* > *Views.xml.*
 
 2. In the *Clear From Views.xml* window, go to the *Compare Agents* tab.
 
-3. Next to *Agent A *and *Agent B*, select the two Agents.
+3. Next to *Agent A* and *Agent B*, select the two Agents.
 
 4. Click *Compare.*
 
@@ -217,7 +217,7 @@ The default maximum upload size of upgrade packages depends on the DataMiner ver
 
 However, it is also possible to increase the maximum upload size via the SLNetClientTest tool:
 
-1. In the* Advanced* menu, go to *Options* > *SLNet Options.*
+1. In the *Advanced* menu, go to *Options* > *SLNet Options.*
 
 2. In the drop-down list next to *Option values for*, select *MaxUploadSize*.
 
@@ -239,7 +239,7 @@ In order to ensure that the subscription for a particular element stays open:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-2. In the *Message Type *drop-down list, select *BaseSubscriptionMessage*.
+2. In the *Message Type* drop-down list, select *BaseSubscriptionMessage*.
 
 3. Select the *BaseSubscriptions* row and click the ... button on the right in order to open the *BaseSubscription Collection Editor*.
 
@@ -302,7 +302,7 @@ With the SLNetClientTest tool, you can modify this engine ID:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-2. In the *Message Type *drop-down list, select *SNMPManagersConfigurationRequestMessage*.
+2. In the *Message Type* drop-down list, select *SNMPManagersConfigurationRequestMessage*.
 
 3. Click the field next to the *Agents* argument and then click the *...* button to open the *ObjectEditorForm* window.
 
@@ -480,7 +480,7 @@ To create such an enhanced view:
 
 1. Go to the *Build Message* tab of the main window.
 
-2. In the *Message Type *drop-down list, select *EnhanceViewWithElementRequestMessage*.
+2. In the *Message Type* drop-down list, select *EnhanceViewWithElementRequestMessage*.
 
 3. Specify the ID of the view you want to enhance and the ID of the element you want to use for this.
 
@@ -495,7 +495,7 @@ From DataMiner 10.0.9 onwards, it is possible to generate SMIv2 MIB files for SN
 
 To generate such a MIB file:
 
-1. Go to *Advanced* > *Tests* >* Generate MIB for SNMP Manager*.
+1. Go to *Advanced* > *Tests* > *Generate MIB for SNMP Manager*.
 
 2. In the pop-up window, select an SNMP manager and click *Generate*.
 
@@ -509,7 +509,7 @@ When a call is performed via the CPECollectorHelper API, a timeout is calculated
 
 From DataMiner 10.0.9 onwards, you can fine-tune how the timeout is calculated using the SLNetClientTest tool:
 
-1. Go to *Advanced* > *Options* >* SLNet Options*.
+1. Go to *Advanced* > *Options* > *SLNet Options*.
 
 2. Depending on what you want to configure, select one of the following options in the drop-down box at the top of the window:
 
@@ -531,7 +531,7 @@ From DataMiner 10.0.11 onwards, you can customize how many records can be contai
 
 To change this setting:
 
-1. Go to *Advanced* > *Options* >* SLNet Options*.
+1. Go to *Advanced* > *Options* > *SLNet Options*.
 
 2. Select *protocolCacheMru* in the drop-down box at the top of the pop-up window.
 
@@ -590,7 +590,7 @@ From DataMiner 10.1.0/10.1.1 onwards, DataMiner processes use the NATS open-sour
 
 To do so:
 
-1. Go to *Advanced* > *Options* >* SLNet Options*.
+1. Go to *Advanced* > *Options* > *SLNet Options*.
 
 2. Depending on what you want to check or configure, select one of the following options in the drop-down box at the top of the window:
 
@@ -610,7 +610,7 @@ When the SLNetCom notification thread reaches a certain threshold, DataMiner ass
 
 If necessary, you can change the duration of this grace period using the SLNetClientTest tool.
 
-1. Go to *Advanced* > *Options* >* SLNet Options*.
+1. Go to *Advanced* > *Options* > *SLNet Options*.
 
 2. In the drop-down box, select *SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin*.
 

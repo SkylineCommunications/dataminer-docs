@@ -72,7 +72,7 @@ The \[Timer base\] parameter can be set to a value ranging from 0.01 to 10.00.
 
 4. In the list on the right, select all elements for which you want the \[Timer base\] parameter to be changed.
 
-5. Click the *SET *button.
+5. Click the *SET* button.
 
 > [!NOTE]
 > This is only possible with elements that use the same protocol and protocol version.

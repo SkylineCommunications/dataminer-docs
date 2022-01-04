@@ -6,13 +6,13 @@ To do so:
 
 1. On the online DMA, open DataMiner Cube.
 
-2. Go to *Apps* > *System Center* >* Agents.*
+2. Go to *Apps* > *System Center* > *Agents.*
 
-3. On the* Manage* tab, make sure the online DMA is selected in the list of DataMiner Agents.
+3. On the *Manage* tab, make sure the online DMA is selected in the list of DataMiner Agents.
 
 4. Click the *Failover* button in the lower right corner.
 
-5. In the* Failover* window, depending on your DataMiner version, select *No Failover*, or clear the selection from the *Failover* checkbox.
+5. In the *Failover* window, depending on your DataMiner version, select *No Failover*, or clear the selection from the *Failover* checkbox.
 
     A dialog box will then appear where you can choose whether the Failover setup should be deleted or disabled.
 

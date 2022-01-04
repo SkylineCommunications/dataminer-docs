@@ -2,7 +2,7 @@
 
 To resend a number of history alarms to a particular SNMP manager:
 
-1. In DataMiner Cube, go to *Apps* > *System Center *\> *SNMP Forwarding*.
+1. In DataMiner Cube, go to *Apps* > *System Center* \> *SNMP Forwarding*.
 
 2. Right-click an SNMP manager in the list, and click *Resend.*
 

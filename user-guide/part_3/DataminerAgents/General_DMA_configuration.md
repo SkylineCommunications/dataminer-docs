@@ -59,7 +59,7 @@ By default, a DataMiner Agent always takes the name of its host server. However,
 
 To set a custom DMA name in Cube:
 
-1. Go to *Apps* >* System Center.*
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Agents* page.
 
@@ -108,15 +108,15 @@ In your DataMiner System, you can store general information about your company: 
 
 - Report headers will include name, address and logo.
 
-|            |                                                                                 |
-|------------|---------------------------------------------------------------------------------|
-| See also:" | [Creating report templates](../../part_4/reporter/Creating_report_templates.md) |
+    > [!TIP]
+    > See also:
+    > [Creating report templates](../../part_4/reporter/Creating_report_templates.md)
 
 You can also specify up to three DataMiner users who can be contacted in case of problems. Often, these will be DataMiner Administrators.
 
 To specify these data in DataMiner Cube:
 
-1. Go to *Apps* >* System Center.*
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Agents* page.
 
@@ -234,7 +234,7 @@ In order to send out email notifications or email reports, a DataMiner Agent has
 
 To specify the default “From” address to be used in outgoing email messages, do the following:
 
-1. Go to *Apps* >* System Center.*
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, go to *Agents* > *system*.
 
@@ -586,15 +586,14 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
     1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](../../part_7/DataminerTools/Opening_the_SLNetClientTest_tool.md).
 
-|          |                                                                                                                                           |
-|----------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Warning: | Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System. |
+        > [!WARNING]
+        > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
     2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](../../part_7/DataminerTools/Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md).
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-    4. In the *Message Type *drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
     5. Close the SLNetClientTest tool.
 
@@ -648,15 +647,14 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
     1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](../../part_7/DataminerTools/Opening_the_SLNetClientTest_tool.md).
 
-|          |                                                                                                                                           |
-|----------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Warning: | Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System. |
+        > [!WARNING]
+        > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
     2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](../../part_7/DataminerTools/Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md).
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-    4. In the *Message Type *drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
     5. Close the SLNetClientTest tool.
 
@@ -682,13 +680,11 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 6. Restart the Cassandra service.
 
-7. In a command window, execute* nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*), in order to check the status of the cluster. this should result in a list with your new IP, your old IP and all other Cassandra nodes on the server. For example:
+7. In a command window, execute *nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*), in order to check the status of the cluster. this should result in a list with your new IP, your old IP and all other Cassandra nodes on the server. For example:
 
-![](../../images/nodetoolstatus.png)
+    ![](../../images/nodetoolstatus.png)
 
- 
-
-8. In the same command window, execute *nodetool removenode **\[host ID of the old IP\]*, e.g. *nodetool removenode 35506039-0f03-4a1e-8642-94484d440116*.
+8. In the same command window, execute *nodetool removenode \[host ID of the old IP\]*, e.g. *nodetool removenode 35506039-0f03-4a1e-8642-94484d440116*.
 
 9. Locate the *cassandra.yaml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the seeds list in these files with the new IP address.
 
@@ -719,15 +715,14 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
     1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](../../part_7/DataminerTools/Opening_the_SLNetClientTest_tool.md).
 
-|          |                                                                                                                                           |
-|----------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Warning: | Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System. |
+        > [!WARNING]
+        > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
     2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](../../part_7/DataminerTools/Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md).
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-    4. In the *Message Type *drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
     5. Close the SLNetClientTest tool.
 
@@ -801,7 +796,7 @@ When adding a DataMiner configuration to a DMA, you can select
 4. Click *Create* to install the package you selected.
 
 > [!NOTE]
-> -  For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages *folder of a particular configuration. In that case, copy them to this folder from the folder *C:\\Skyline DataMiner Configs\\Skyline DataMiner\\Webpages*.
+> -  For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages* folder of a particular configuration. In that case, copy them to this folder from the folder *C:\\Skyline DataMiner Configs\\Skyline DataMiner\\Webpages*.
 > -  After you have created a new configuration, it is possible that the DMA has problems restarting, so a manual restart is advisable.
 
 #### Switching to another DataMiner configuration

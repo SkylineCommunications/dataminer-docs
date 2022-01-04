@@ -37,13 +37,13 @@ From DataMiner 9.0.0 onwards, DataMiner supports both the SICL API and the VISA 
 
 ##### Using version 17.1.20011 of the IO libraries:
 
-- During element creation, set the *Device address* to the appropriate VISA or SICL address, which can be found by running *Keysight Connection Expert *and checking the *Instruments* list.
+- During element creation, set the *Device address* to the appropriate VISA or SICL address, which can be found by running *Keysight Connection Expert* and checking the *Instruments* list.
 
     > [!TIP]
     > See also:
     > [Installing the IO Libraries](Installing_the_Keysight_Agilent_IO_Libraries.md#installing-the-io-libraries)
 
-- Set the *I/O API* field, select *SICL *or* VISA*, as appropriate.
+- Set the *I/O API* field, select *SICL* or *VISA*, as appropriate.
 
 #### Using legacy DataMiner versions
 

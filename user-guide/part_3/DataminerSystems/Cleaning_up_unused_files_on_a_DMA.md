@@ -10,7 +10,7 @@ To do so:
 
 1. In Cube, go to *Apps* > *System Center.*
 
-2. In the *System Center* module, select the* Tools* page.
+2. In the *System Center* module, select the *Tools* page.
 
 3. In the second column, select *Clean up unused*.
 

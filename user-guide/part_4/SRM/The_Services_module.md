@@ -41,7 +41,7 @@ The *services* tab (prior to DataMiner 10.0.8) or *overview* tab (from DataMin
 
     - Select *Change column name* and specify a new column name.
 
-    - Select *Manage column configuration* (from DataMiner 10.0.4 onwards) or *Add/Remove column *\> *More* (up to DataMiner 10.0.3) to open a window where you can do the following:
+    - Select *Manage column configuration* (from DataMiner 10.0.4 onwards) or *Add/Remove column* \> *More* (up to DataMiner 10.0.3) to open a window where you can do the following:
 
         - Show or hide a column by selecting or clearing its checkbox, or by selecting it and clicking *Show* or *Hide*.
 

@@ -13,9 +13,9 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
 3. On the primary DMA, open DataMiner Cube.
 
-4. Go to *Apps* > *System Center* >* Agents.*
+4. Go to *Apps* > *System Center* > *Agents.*
 
-5. On the* Manage* tab, select the primary DMA in the list of DataMiner Agents.
+5. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
 
 6. Click the *Failover* button in the lower right corner.
 
@@ -53,9 +53,9 @@ To enable Failover using DataMiner version **10.1.7 or lower**:
 
 2. On the primary DMA, open DataMiner Cube.
 
-3. Go to *Apps* > *System Center* >* Agents.*
+3. Go to *Apps* > *System Center* > *Agents.*
 
-4. On the* Manage* tab, select the primary DMA in the list of DataMiner Agents.
+4. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
 
 5. Click the *Failover* button in the lower right corner.
 

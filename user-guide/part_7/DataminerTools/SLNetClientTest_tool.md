@@ -2,9 +2,8 @@
 
 The DataMiner SLNetClientTest program is an advanced system administration tool. It has a multitude of functionalities, some of which are not within the scope of this guide.
 
-|          |                                                                                                                                           |
-|----------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| Warning: | Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System. |
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 More information on this tool is detailed in the following sections:
 

@@ -12,6 +12,6 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
 
     - To connect via Web Services, select *Web Services* instead of the default *Remoting*.
 
-    - To specify a different port for the connection, select *Disable Auto-Discover* and* Specify Port*, and enter the port.
+    - To specify a different port for the connection, select *Disable Auto-Discover* and *Specify Port*, and enter the port.
 
     - To disable any client-side caching, select *Disable Client Cache*.

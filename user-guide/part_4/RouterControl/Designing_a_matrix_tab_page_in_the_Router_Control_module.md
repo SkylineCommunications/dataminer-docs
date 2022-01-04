@@ -30,7 +30,7 @@ This section consists of the following topics:
 
 3. In the *Add matrix* dialog box, specify the matrix parameter you want to add to the configuration:
 
-    1. In the *Name *box, enter the name of the matrix.
+    1. In the *Name* box, enter the name of the matrix.
 
     2. Next to *Select matrix*, select the matrix parameter.
 
@@ -41,7 +41,7 @@ This section consists of the following topics:
     4. Optionally, to hide the matrix in the live overview, clear the selection from *Visible*.
 
         > [!NOTE]
-        > This option can be useful to temporarily hide a new layout you are working on, or to hide a matrix tab instead of deleting it. You can always change the setting afterwards by right-clicking the tab header and selecting *Edit*. This will open the *Edit matrix *dialog box, with the same options as the *Add matrix *dialog box.
+        > This option can be useful to temporarily hide a new layout you are working on, or to hide a matrix tab instead of deleting it. You can always change the setting afterwards by right-clicking the tab header and selecting *Edit*. This will open the *Edit matrix* dialog box, with the same options as the *Add matrix* dialog box.
 
     5. Optionally, clear the selection from *Use output-first workflow.* When you do so, selecting an output will leave the current input selection intact. By default, the option is selected, so that selecting an output will replace the current input selection with the input that is connected to that output.
 
@@ -49,7 +49,7 @@ This section consists of the following topics:
 
     7. Optionally, select *Confirm crosspoints sets*, to enable confirmation messages when a crosspoint is set (available from DataMiner 9.5.13 onwards).
 
-    8. Optionally, select *Direct take mode *(available from DataMiner 10.1.11/10.2.0 onwards). If this option is select, users will not need to click the *Connect* button to create or delete a crosspoint between an input and an output. When an input and an output are selected, these will automatically be connected or disconnected.
+    8. Optionally, select *Direct take mode* (available from DataMiner 10.1.11/10.2.0 onwards). If this option is select, users will not need to click the *Connect* button to create or delete a crosspoint between an input and an output. When an input and an output are selected, these will automatically be connected or disconnected.
 
         > [!NOTE]
         > When you use direct take mode in combination with the “Use output-first workflow” option, selecting an output will not cause crosspoints to be created or deleted, and input selections will only be cleared when you select another output.

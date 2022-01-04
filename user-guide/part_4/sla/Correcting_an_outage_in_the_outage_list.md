@@ -4,7 +4,7 @@ To make a correction on the impact of an existing outage, do the following:
 
 1. Go to the *Outage list* page of the SLA element.
 
-2. In the *Correction *column of the list of outages, click the pencil icon for the outage you wish to correct.
+2. In the *Correction* column of the list of outages, click the pencil icon for the outage you wish to correct.
 
 3. Enter your correction:
 
@@ -15,4 +15,4 @@ To make a correction on the impact of an existing outage, do the following:
     > [!NOTE]
     > Depending on how much space is available on the screen, you may need to click the *...* button next to the green check mark icon before the *All* checkbox is displayed.
 
-4. In the *Motivation *column, click the pencil icon and enter a motivation for the correction.
+4. In the *Motivation* column, click the pencil icon and enter a motivation for the correction.

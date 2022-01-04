@@ -26,7 +26,7 @@ The module consist of a pane on the left, listing resource pools, and a pane on 
     - Prior to DataMiner 10.1.5: An expandable *Properties* panel at the bottom of the pane allows you to view more details on a selected resource. Resources can be added, edited and deleted with three buttons in the lower right corner. An additional button next to these allows you to add a virtual function as a resource.
 
     > [!NOTE]
-    > When you try to delete a resource that is in use or is about to be in use, a warning message will be displayed. However, keep in mind that only bookings that are displayed according to the latest zoom level in the *timeline* or* occupancy* tab are taken into account for this.
+    > When you try to delete a resource that is in use or is about to be in use, a warning message will be displayed. However, keep in mind that only bookings that are displayed according to the latest zoom level in the *timeline* or *occupancy* tab are taken into account for this.
 
 - In the *Properties* tab, properties and resource property definitions can be defined for a selected pool.
 

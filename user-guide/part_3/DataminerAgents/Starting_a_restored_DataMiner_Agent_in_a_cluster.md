@@ -16,7 +16,7 @@ If you have restored a DMA in a cluster without using the Taskbar Utility, or if
 
 ### Adding the DMA to the DMS
 
-1. In DataMiner Cube, go to *Apps* >* System Center.*
+1. In DataMiner Cube, go to *Apps* > *System Center*.
 
 2. In System Center, select the *Agents* tab.
 

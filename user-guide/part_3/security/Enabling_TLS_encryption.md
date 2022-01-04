@@ -12,7 +12,7 @@ To enable TLS encryption, do the following on every DMA in the DMS that is to co
 
 4. Go to the *Build Message* tab of the main window of the tool.
 
-5. In the *Message Type *drop-down list, select *ConfigureTLSMessage*.
+5. In the *Message Type* drop-down list, select *ConfigureTLSMessage*.
 
 6. Configure the following fields of the message:
 

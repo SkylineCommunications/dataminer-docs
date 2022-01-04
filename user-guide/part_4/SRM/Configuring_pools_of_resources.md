@@ -81,7 +81,7 @@ To add a resource to a pool using DataMiner 10.2.0/10.1.5 or higher:
 
     - *Function*: Links the resource to an existing virtual function. The drop-down list allows you to select virtual functions based on *functions.xml* files or virtual functions with a generated protocol.
 
-    - *Element *or *Link element*: Links the resource to an existing DataMiner element. If a link to an element has been configured already, you can clear the link by selecting *\<None>*.
+    - *Element* or *Link element*: Links the resource to an existing DataMiner element. If a link to an element has been configured already, you can clear the link by selecting *\<None>*.
 
     - *Instance*: If a virtual function is selected in the *Function* field, here you can select one of the available entrypoint table instances. For example, if the linked element is a provisioning element, the instance can indicate which of its provisioned elements the resource should be linked to. In case the selected virtual function does not define an entrypoint table, the drop-down box will only show the option \<none>.
 

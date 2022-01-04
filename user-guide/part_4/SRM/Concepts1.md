@@ -22,11 +22,11 @@ The following concepts are of importance for the Service & Resource Management (
 
 - **Service booking instance** or **service reservation instance**: A service booking instance is a booking instance that will create a matching DataMiner service while it is active. In most cases, the service booking instance will use function resources and it is possible to automatically set it up with DCF connections.
 
-- **Booking definition **or **reservation definition**: The “pattern creator” for all booking instances that are grouped in a recurring pattern. The booking definition is linked to the created instances and will automatically create a subset of the full recurring pattern in order to match incoming requests, scheduling and planning. It also takes care of the creation of a new booking instance for one time slot in a recurring pattern and of the creation of booking instances with override data, keeping track of the generated booking instances.
+- **Booking definition** or **reservation definition**: The “pattern creator” for all booking instances that are grouped in a recurring pattern. The booking definition is linked to the created instances and will automatically create a subset of the full recurring pattern in order to match incoming requests, scheduling and planning. It also takes care of the creation of a new booking instance for one time slot in a recurring pattern and of the creation of booking instances with override data, keeping track of the generated booking instances.
 
     Like booking instances, booking definitions can also have sub-bookings, which take the form of other booking definitions. Like for booking instances, the timing of sub-bookings is determined relative to that of the parent booking definition.
 
-- **Service booking definition **or **service reservation definition**: A booking definition that can create service booking instances.
+- **Service booking definition** or **service reservation definition**: A booking definition that can create service booking instances.
 
 - **Booking event** or **reservation event**: An action that can happen while a booking instance is active. This is usually an Automation script that has to be executed at a specific time.
 

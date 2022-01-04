@@ -37,7 +37,7 @@ It is possible to configure the *Dashboards* app to show a custom provider logo.
 
 2. In the same folder, open the file *web.config*.
 
-3. In the *web.config *file, in the tag configuration.dataminer.clusters.add, add the attributes *providedByUrl* and *providedByImage* as follows:
+3. In the *web.config* file, in the tag configuration.dataminer.clusters.add, add the attributes *providedByUrl* and *providedByImage* as follows:
 
     ```xml
     <add id="local" connectionString="..." user="..." password="..." description="..."     providedByUrl="http://provider/" providedByImage="image.jpg"/>

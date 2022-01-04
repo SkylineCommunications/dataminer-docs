@@ -70,21 +70,21 @@ Before the migration to Cassandra can begin, the migration wizard first checks i
 
         - Up to DataMiner 9.0.2 (including all 9.0.0 main release versions):
 
-        ```xml
-        <Compliancies>                                 
-          <Compliancy key="CassandraReady" value="true"/>
-        </Compliancies>                                
-        ```
+            ```xml
+            <Compliancies>                                 
+              <Compliancy key="CassandraReady" value="true"/>
+            </Compliancies>                                
+            ```
 
         - From DataMiner 9.0.3 onwards:
 
-        ```xml
-        <Compliancies>                                           
-          <CassandraReady>true</CassandraReady>                   
-          <CassandraRequired>true</CassandraRequired>             
-          <MinimumRequiredVersion>8.5.8.5</MinimumRequiredVersion>
-        </Compliancies>                                          
-        ```
+            ```xml
+            <Compliancies>                                           
+              <CassandraReady>true</CassandraReady>                   
+              <CassandraRequired>true</CassandraRequired>             
+              <MinimumRequiredVersion>8.5.8.5</MinimumRequiredVersion>
+            </Compliancies>                                          
+            ```
 
         > [!NOTE]
         > -  The version number specified in the \<*MinimumRequiredVersion>* tag must have the following syntax:
@@ -113,7 +113,7 @@ Before the migration to Cassandra can begin, the migration wizard first checks i
         > -  If you choose not to migrate average or real-time trending, both the legacy database and the Cassandra database may be active after the migration, which can cause CPU, RAM and disk usage to increase. 
         > -  If the migration of real-time trending is estimated to take little time, it is advisable to select this option. However, if the migration of real-time trending takes 24 hours or more, selecting the option makes little sense. 
 
-    - *Migrate options*: By default, the existing data in the legacy database is not deleted, but with *Remove migrated data from \[legacy database\], *you can select to remove it once the migration is done.
+    - *Migrate options*: By default, the existing data in the legacy database is not deleted, but with *Remove migrated data from \[legacy database\]*, you can select to remove it once the migration is done.
 
         > [!NOTE]
         > -  If after the upgrade you choose to downgrade to a version of DataMiner prior to 9.0, DataMiner will switch back to the legacy database, but it will not be able to convert data from the Cassandra database back to the legacy database.

@@ -19,7 +19,7 @@ To configure a cell phone modem that is physically connected to one of your Data
 
 6. After you have saved the *Config.xml* file, restart the DataMiner Agent.
 
-7. In DataMiner Cube, go to *Apps* >* System Center.*
+7. In DataMiner Cube, go to *Apps* > *System Center.*
 
 8. Select the *Mobile Gateway* tab and configure the necessary settings. For more information, see [Configuring Mobile Gateway in DataMiner Cube](Configuring_Mobile_Gateway_in_DataMiner_Cube.md).
 

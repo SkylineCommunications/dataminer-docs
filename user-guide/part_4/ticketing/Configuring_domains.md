@@ -38,11 +38,11 @@ On the configuration page of the Ticketing app, click the pencil icon next to th
 
 ### Configuring the fields in a domain
 
-Each domain contains one or more fields. These are displayed on the *Create new ticket *form, and in the overview on the main page of the Ticketing app. On the configuration page of the Ticketing app, there are several ways you can configure the fields:
+Each domain contains one or more fields. These are displayed on the *Create new ticket* form, and in the overview on the main page of the Ticketing app. On the configuration page of the Ticketing app, there are several ways you can configure the fields:
 
 - To change the order of the fields, click the up and down arrow buttons next to the fields of the relevant domain.
 
-    This will determine both the order of the columns in the Ticketing overview, and the order of the fields presented in the *Create new ticket *form.
+    This will determine both the order of the columns in the Ticketing overview, and the order of the fields presented in the *Create new ticket* form.
 
 - To add a field, click the *Add field* button next to the name of the domain, and then enter the name of the field and select the type of field.
 

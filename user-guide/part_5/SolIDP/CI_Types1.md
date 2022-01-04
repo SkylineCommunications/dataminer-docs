@@ -451,7 +451,7 @@ For each connection, this section also has to contain one of the following array
 
         - **authNoPriv**: The SNMP requests are authenticated with an MD5 or SHA hash authentication of the password. The fields *Username*, *AuthPassword* and *AuthType* are mandatory.
 
-        - **authPriv**: The SNMP requests are authenticated and encrypted using the specified authentication and encryption algorithm, respectively. The fields *Username*, *AuthPassword*, *AuthType, EncryptionAlgorithm *and* PrivPassword* are mandatory.
+        - **authPriv**: The SNMP requests are authenticated and encrypted using the specified authentication and encryption algorithm, respectively. The fields *Username*, *AuthPassword*, *AuthType, EncryptionAlgorithm* and *PrivPassword* are mandatory.
 
         - **noAuthNoPriv**: SNMP requests are authorized based on a simple string match with the username. The field *Username* is mandatory.
 

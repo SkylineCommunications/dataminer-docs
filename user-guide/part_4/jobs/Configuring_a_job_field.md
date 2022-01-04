@@ -43,7 +43,7 @@ For each field, the following configuration is possible.
 
 - **Show in list view**: Clear this option if this field should not be displayed in the list view of the app. This option is not available for fields of type *Static text*.
 
-- **Read only**: If you select this option, users will not be able to modify the field. Changes to the field will only be possible via scripts. This option is not available for fields of type *Static text* and *Auto increment*. Prior to DataMiner 10.2.1/10.3.0 it is also not available for the *Name*, *Start Time* and* End Time* field of the default section.
+- **Read only**: If you select this option, users will not be able to modify the field. Changes to the field will only be possible via scripts. This option is not available for fields of type *Static text* and *Auto increment*. Prior to DataMiner 10.2.1/10.3.0 it is also not available for the *Name*, *Start Time* and *End Time* field of the default section.
 
 - **Allow filtering on this field**: Only displayed for fields of type *Dropdown* prior to DataMiner 10.2.0/10.1.5. From DataMiner 10.2.0/10.1.5 onwards, this option is also available for fields of type *Text*, *Email* and *URL*. Determines whether users will be able to filter on the value selected for the field.
 

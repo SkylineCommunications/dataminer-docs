@@ -27,7 +27,7 @@ Inside the *\<ParametersSourceInfo>* tag, you can place the following tags.
 
 The parameter IDs containing the latitude and longitude values.
 
-- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudePID>* and* \<LongitudePID>* tags. In that case, the *\<LatitudePID2>* and *\<LongitudePID2>* tags will not be used and can therefore be omitted.
+- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudePID>* and *\<LongitudePID>* tags. In that case, the *\<LatitudePID2>* and *\<LongitudePID2>* tags will not be used and can therefore be omitted.
 
 - If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudePID>* and *\<LongitudePID>* tags, and another pair in the *\<LatitudePID2>* and *\<LongitudePID2>* tags.
 

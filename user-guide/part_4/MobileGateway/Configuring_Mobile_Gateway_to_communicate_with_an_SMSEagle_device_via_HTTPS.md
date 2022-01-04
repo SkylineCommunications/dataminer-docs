@@ -46,7 +46,7 @@ If \<*RequireValidSsl>* is set to *false*, no further configuration is required
 
     6. In the Microsoft Management Console, press CTRL+M.
 
-    7. In the *Add or Remove Snap-ins *window, select “Certificate” from the *Available snap-ins* list, and click *Add*.
+    7. In the *Add or Remove Snap-ins* window, select “Certificate” from the *Available snap-ins* list, and click *Add*.
 
     8. Select the following options:
 
@@ -54,7 +54,7 @@ If \<*RequireValidSsl>* is set to *false*, no further configuration is required
 
 - *Local Computer*
 
-    9. Click *OK* to close the *Add or Remove Snap-ins *window.
+    9. Click *OK* to close the *Add or Remove Snap-ins* window.
 
     10..Under the *Console Root*, go to *Certificates (Local Computer) \> Trusted Root Certification Authorities \> Certificates*.
 

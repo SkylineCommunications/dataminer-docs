@@ -81,7 +81,7 @@ Please note the following regarding the customization of trap reception ports:
 
 - If you upgrade a DMA to DataMiner 9.0.3, by default the line “*\<SNMPv3 trapPort="362"/>*” will be inserted into the *DataMiner.xml* file of the DMA. However, in case there is a custom port configuration, e.g. “*\<SNMPv3 trapPort="10162"/>*”, this is not changed during an upgrade.
 
-- From DataMiner 9.5.0 onwards, you can improve the trap processing capacity for SNMPv1 and v2 by configuring a custom port for SNMPv3 trap reception, e.g. 362. In that case, SNMPv1 and SNMPv2 trap reception are handled by WinSNMP. For this, the above-mentioned line *\<SNMPv3 trapPort="362"/> *must be specified in *DataMiner.xml*.
+- From DataMiner 9.5.0 onwards, you can improve the trap processing capacity for SNMPv1 and v2 by configuring a custom port for SNMPv3 trap reception, e.g. 362. In that case, SNMPv1 and SNMPv2 trap reception are handled by WinSNMP. For this, the above-mentioned line *\<SNMPv3 trapPort="362"/>* must be specified in *DataMiner.xml*.
 
 > [!TIP]
 > See also:

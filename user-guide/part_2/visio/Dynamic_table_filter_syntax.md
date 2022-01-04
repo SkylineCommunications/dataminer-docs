@@ -84,7 +84,7 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowF
 
 - **RECURSIVE**
 
-    While dynamic table queries on tables follow recursive links by default, they do not do so automatically when the filtered table directly has a foreign key to itself and it is not being filtered on columns from other linked tables. From DataMiner 9.5.3 onwards, you can use the “recursive” option to force recursion in this scenario. For example: * value=201 == XXXXX;recursive*.
+    While dynamic table queries on tables follow recursive links by default, they do not do so automatically when the filtered table directly has a foreign key to itself and it is not being filtered on columns from other linked tables. From DataMiner 9.5.3 onwards, you can use the “recursive” option to force recursion in this scenario. For example: *value=201 == XXXXX;recursive*.
     When combined with NONRECURSIVE in the same query, NONRECURSIVE takes precedence.     From DataMiner 9.6.5 onwards, different recursion modes can be specified, as detailed in the table below. In case no recursion mode is specified, *recursive=downNoLocal* is applied.
 
     | Recursion mode                                    | Description                                                                                                                                                              |

@@ -8,7 +8,7 @@ In this file, you can specify a DataMiner Maps configuration per (virtual) host.
 
 ### ServerConfig.xml syntax
 
-*ServerConfig.xml *consists of a \<MapsServerConfig> tag with a* *\<VirtualHosts> subtag, which in turn contains one or more \<VirtualHost> subtags. These are configured as follows.
+*ServerConfig.xml* consists of a \<MapsServerConfig> tag with a* *\<VirtualHosts> subtag, which in turn contains one or more \<VirtualHost> subtags. These are configured as follows.
 
 #### Attributes of the VirtualHost tag
 
@@ -92,7 +92,7 @@ From DataMiner 10.0.8 onwards, Open Street Maps can be configured to be availabl
 
     This should return a row with the container information.
 
-5. Start the container with the command *docker start **\<container name>*.
+5. Start the container with the command *docker start \<container name>*.
 
 6. Download the satellite tiles from the page <https://openmaptiles.com/downloads/dataset/satellite-lowres/#0.23/0/-26>) and save them in the mapped */data* folder.
 

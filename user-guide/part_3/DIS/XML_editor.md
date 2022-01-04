@@ -265,7 +265,7 @@ If you want to automatically generate parameters of type “write” for a numbe
 
 #### Repeating selected text
 
-The right-click menu option *Repeat Selected Text *allows you to select a particular piece of text and have it copied a number of times. Moreover, by inserting variables and formulas in the text to be copied, you can have parts of the text change automatically from copy to copy.
+The right-click menu option *Repeat Selected Text* allows you to select a particular piece of text and have it copied a number of times. Moreover, by inserting variables and formulas in the text to be copied, you can have parts of the text change automatically from copy to copy.
 
 1. Select the text that has to be repeated, right-click, and select *Repeat Selected Text.*
 
@@ -365,7 +365,7 @@ If the root tag of the protocol XML file or the Automation script XML file you a
 
 All syntax errors in the XML file you are editing can be found in the *DIS Validator* tool window.
 
-If the *DIS Validator *tool window is not displayed, choose *Tool Windows \> DIS Validator* from the DIS menu.
+If the *DIS Validator* tool window is not displayed, choose *Tool Windows \> DIS Validator* from the DIS menu.
 
 #### Inserting snippets
 

@@ -22,7 +22,7 @@ In this section:
 
 4. Enter a name for the new custom property.
 
-5. If alarms should be updated when the value of this property changes, make sure *Update alarms on value changed *is selected; otherwise make sure this checkbox is cleared.
+5. If alarms should be updated when the value of this property changes, make sure *Update alarms on value changed* is selected; otherwise make sure this checkbox is cleared.
 
 6. Specify a property format.
 

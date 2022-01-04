@@ -4,7 +4,7 @@ In DataMiner Cube, it is possible to migrate elements from one DMA to another wi
 
 To do so:
 
-1. In Cube, go to *Apps* >* System Center \> Agents*.
+1. In Cube, go to *Apps* > *System Center \> Agents*.
 
 2. Go to the *Status* tab.
 

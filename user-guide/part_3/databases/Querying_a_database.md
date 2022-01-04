@@ -2,7 +2,7 @@
 
 To query a database, do the following:
 
-1. Go to *System Center \>* *Tools *\> *query executer*.
+1. Go to *System Center \>* *Tools* \> *query executer*.
 
 2. In the *Execute query on* box, select the database you want to query.
 

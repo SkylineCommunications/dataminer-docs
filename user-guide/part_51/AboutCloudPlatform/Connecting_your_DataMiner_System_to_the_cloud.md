@@ -44,7 +44,7 @@ To connect your DMS to the cloud:
 
     From DataMiner 10.1.4 onwards:
 
-    - *System configuration* > *Tools* > *Admin tools *(no longer required from DataMiner 10.1.9 onwards)
+    - *System configuration* > *Tools* > *Admin tools* (no longer required from DataMiner 10.1.9 onwards)
 
     - *System configuration* > *Cloud gateway* > *Connect to DCP*
 

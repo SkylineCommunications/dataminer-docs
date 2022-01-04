@@ -181,7 +181,7 @@ In the table listing the buttons, add the buttons that you want to display and s
 
 - *Possible Operations*: Allows you to specify the possible operations that can be executed with the button. For example:
 
-    - For a simple button:* click* 
+    - For a simple button: *click* 
 
     - For a rotate button: largedecrease;smalldecrease;smallincrease;largeincrease 
 
@@ -347,15 +347,15 @@ To configure this component:
 
 3. Optionally, in the *Component* > *Layout* tab, configure the following options:
 
-    - *Page Layout *\> *Layout*: Determines whether the different items are displayed next to each other or below each other. However, note that when the dashboard is used on a small screen, they will always be displayed below each other.
+    - *Page Layout* \> *Layout*: Determines whether the different items are displayed next to each other or below each other. However, note that when the dashboard is used on a small screen, they will always be displayed below each other.
 
-    - *Page Layout *\> *Maximum rows per page*: Determines how many items can at most be displayed below each other on a single page.
+    - *Page Layout* \> *Maximum rows per page*: Determines how many items can at most be displayed below each other on a single page.
 
-    - *Page Layout *\> *Maximum columns per page*: Determines how many items can at most be displayed next to each other on a single page.
+    - *Page Layout* \> *Maximum columns per page*: Determines how many items can at most be displayed next to each other on a single page.
 
-    - *Group Layout *\> *Number of components*: Determines how many child components can be displayed within the group
+    - *Group Layout* \> *Number of components*: Determines how many child components can be displayed within the group
 
-    - *Group Layout *\> *Layout*: Determines the size and position of the different child components within the group.
+    - *Group Layout* \> *Layout*: Determines the size and position of the different child components within the group.
 
     - *Expand legend initially*: Available from DataMiner 10.0.0/10.0.2 onwards. Select this option to immediately show the group legend in the component. Otherwise, the legend section is initially collapsed and you can display it using the arrow icon in the top-right corner of the component.
 
@@ -397,7 +397,7 @@ This component displays a block of static text.
 
 To configure this component:
 
-- In the *Settings* tab, add the text in the *Text *box.
+- In the *Settings* tab, add the text in the *Text* box.
 
 In the *Component \> Layout* tab, the following options can be configured:
 

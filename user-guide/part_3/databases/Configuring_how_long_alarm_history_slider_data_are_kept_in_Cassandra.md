@@ -58,7 +58,7 @@ To customize this setting:
 
 2. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
 
-3. In the *HistorySlider.TimeToKeep *tag, specify a number of seconds between 0 and 2,147,483,647:
+3. In the *HistorySlider.TimeToKeep* tag, specify a number of seconds between 0 and 2,147,483,647:
 
     - If you specify 0, no history slider data will be saved.
 

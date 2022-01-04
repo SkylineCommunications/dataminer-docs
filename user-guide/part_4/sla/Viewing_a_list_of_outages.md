@@ -8,7 +8,7 @@ One or more alarms that potentially affect the SLA at a particular time are grou
 
 - **Outage impact**: The impact of the outage, taking in account the violation filters and offline window configuration.
 
-- **Begin Timestamp **and** End Timestamp**: Show when the outage occurred.
+- **Begin Timestamp** and **End Timestamp**: Show when the outage occurred.
 
 - **Outage**: Shows the duration of the outage.
 
@@ -16,7 +16,7 @@ One or more alarms that potentially affect the SLA at a particular time are grou
 
 - **Violation**: Shows the duration of the violation, taking into account the SLA settings (e.g. violation filter settings).
 
-- **Correction **and** Motivation**: Show a possible correction on the outage, and its motivation.
+- **Correction** and **Motivation**: Show a possible correction on the outage, and its motivation.
 
     > [!NOTE]
     > -  For more information on how to make corrections on outages, see [Making corrections to existing outages](Making_corrections_to_existing_outages.md).

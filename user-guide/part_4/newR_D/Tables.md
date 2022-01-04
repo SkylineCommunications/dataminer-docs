@@ -23,7 +23,7 @@ To configure the component:
 
 1. In the *Settings* tab, configure which type of alarms should be displayed and how:
 
-    - To customize the polling interval for this component, expand the *Settings *\> *Websocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
+    - To customize the polling interval for this component, expand the *Settings* \> *Websocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
     - In the *Show* box, select whether active alarms, masked alarms, history alarms, alarms in a sliding window or information events should be displayed in the list.
 
@@ -38,9 +38,9 @@ To configure the component:
 
     - Below *Columns*, you can select one or more columns in order to have only those columns displayed in the alarm list. For each column, arrow buttons will be displayed that allow you to customize the column order.
 
-    - In the *Group* *by *box, you can select the column by which the alarms or information events should be grouped.
+    - In the *Group by* box, you can select the column by which the alarms or information events should be grouped.
 
-    - Under *Match parameter index data filter when*, you can fine-tune how a parameter index data filter will be applied. With the default *Equals* setting, the index will need to match the filter exactly. Select *Contains *if the index should instead only contain the filter. <br>This only applies to index data filters added from the data pane, not to filters configured in the *Settings* tab.
+    - Under *Match parameter index data filter when*, you can fine-tune how a parameter index data filter will be applied. With the default *Equals* setting, the index will need to match the filter exactly. Select *Contains* if the index should instead only contain the filter. <br>This only applies to index data filters added from the data pane, not to filters configured in the *Settings* tab.
 
 2. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 

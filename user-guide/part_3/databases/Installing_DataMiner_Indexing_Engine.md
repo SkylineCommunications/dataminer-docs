@@ -2,7 +2,7 @@
 
 To install DataMiner Indexing Engine:
 
-1. In DataMiner Cube, go to *System Center \> Search & Indexing *and click *Install Indexing Engine*.
+1. In DataMiner Cube, go to *System Center \> Search & Indexing* and click *Install Indexing Engine*.
 
     > [!NOTE]
     > -  If Cassandra is not installed on all DMAs in the system, the Indexing installation button will not be available.

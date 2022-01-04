@@ -6,7 +6,7 @@ To **add** a job domain:
 
 1. Click the user icon in the top-right corner and select *Configuration*.
 
-2. Click* + New* in the header bar.
+2. Click *+ New* in the header bar.
 
 3. Specify the name of the new domain.
 

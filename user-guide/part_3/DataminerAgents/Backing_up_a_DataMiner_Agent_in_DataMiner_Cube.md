@@ -6,7 +6,7 @@ In the *System Center* module, you can configure automatic backups that will ru
 
 The following steps can be taken to configure the backups for a DMA:
 
-1. Go to *Apps* >* System Center.*
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Backup* tab.
 
@@ -20,7 +20,7 @@ The following steps can be taken to configure the backups for a DMA:
 
 4. In the *General* tab, under *Policy*, enter the number of backups that should be kept.
 
-5. In case the system uses an indexing (i.e. Elastic) database, in the *Indexing Engine Location* section of the *General *tab, the backup path can be modified if necessary.
+5. In case the system uses an indexing (i.e. Elastic) database, in the *Indexing Engine Location* section of the *General* tab, the backup path can be modified if necessary.
 
     > [!NOTE]
     > For more information on DataMiner Indexing backups, see [Configuring Indexing backups](../databases/Configuring_Indexing_backups.md).
@@ -54,7 +54,7 @@ The following steps can be taken to configure the backups for a DMA:
 
 To take an immediate backup of a DMA:
 
-1. Go to *Apps* >* System Center.*
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Backup* tab.
 

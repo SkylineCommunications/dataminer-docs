@@ -33,7 +33,7 @@ The speed at which a trace is acquired depends on:
 > [!NOTE]
 > It is possible to hide the current trace, and instead show for instance the minimum or maximum hold, or the average trace. See [Displaying the minimum and maximum hold of the trace](#displaying-the-minimum-and-maximum-hold-of-the-trace) and [Displaying the average trace](#displaying-the-average-trace).
 >
-> You can choose these options in the *trace *tab of the ribbon, or you can right-click the trace in the info pane, and select what is to be displayed.
+> You can choose these options in the *trace* tab of the ribbon, or you can right-click the trace in the info pane, and select what is to be displayed.
 
 ### Copying spectrum information from the real-time display
 
@@ -117,7 +117,7 @@ It is possible to display the minimum and/or maximum hold of the trace you are c
 
     - To modify the number of traces used for the maximum calculation, next to *# traces maximum*, select a different value in the drop-down list.
 
-3. To display the minimum or maximum hold in a different color, in the *Colors *section, select a different color in the drop-down lists in question.
+3. To display the minimum or maximum hold in a different color, in the *Colors* section, select a different color in the drop-down lists in question.
 
 > [!NOTE]
 > When you are viewing multiple measurement points at the same time, these options are not available.
@@ -132,7 +132,7 @@ It is possible to display the average trace, next to or instead of the actual re
 
 2. In the section *Average hold*, select *Show average*.
 
-    If you want, you can then hide the actual real-time trace by clearing the selection from *Show current* in the *Current *section.
+    If you want, you can then hide the actual real-time trace by clearing the selection from *Show current* in the *Current* section.
 
 ##### To customize the average trace:
 
@@ -140,7 +140,7 @@ It is possible to display the average trace, next to or instead of the actual re
 
     By default, the number is set to *inf*, which means there is no limit to the number of traces taken into account.
 
-- To change the color of the average trace, in the *Colors *section, select a different color in the *Average hold* drop-down list.
+- To change the color of the average trace, in the *Colors* section, select a different color in the *Average hold* drop-down list.
 
 ##### To reset the average calculation:
 
