@@ -13,4 +13,7 @@
 5. Click *OK*.
 
 > [!NOTE]
-> The following characters are not allowed in the name of a dashboard or dashboard folder: * / \\ : ; \* ? \< \> \| °*<br> If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
+> The following characters are not allowed in the name of a dashboard or dashboard folder: / \\ : ; \* ? \< \> \| °
+>
+> If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
+>

@@ -57,9 +57,7 @@ Once you have compiled a C# code block as a library, you can then import that li
 
     1. Right-click the references of the solution and select *Add Reference*.
 
-![](../../images/AutomationAddReference.png)
-
- 
+    ![](../../images/AutomationAddReference.png)
 
     2. Select the library script under *Projects* and click *OK*.
 

@@ -26,9 +26,9 @@ The main page of the app consists of a header bar, a navigation pane, and a deta
 
     - Either right-click in the pane or click the ![](../../images/more_dashboards.png) button to open a menu with the following options:
 
-- *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](Deleting_a_dashboard.md).
+        - *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](Deleting_a_dashboard.md).
 
-- *Duplicate/Copy*: Only available if a dashboard or folder is selected. See [Duplicating a dashboard](Duplicating_a_dashboard.md)
+        - *Duplicate/Copy*: Only available if a dashboard or folder is selected. See [Duplicating a dashboard](Duplicating_a_dashboard.md)
 
         - *Rename*: Only available if a dashboard or a folder is selected.
 
@@ -38,7 +38,7 @@ The main page of the app consists of a header bar, a navigation pane, and a deta
 
         - *New dashboard*: Adds a new dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a completely new dashboard](Creating_a_completely_new_dashboard.md).
 
-- *New folder*: Adds a new folder in the selected folder, or in the root folder if no folder is selected.
+        - *New folder*: Adds a new folder in the selected folder, or in the root folder if no folder is selected.
 
 - The large details pane on the right shows detailed information on any folder or dashboard selected in the navigation pane.
 

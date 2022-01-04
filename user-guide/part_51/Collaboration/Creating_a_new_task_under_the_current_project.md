@@ -100,7 +100,7 @@ To create a new task under the current project, do the following:
 
 19. Click the “+” icon to upload any files you want to attach to the task (documents, images, etc.).
 
-20.If you want to add a comment to the task, click inside the *Write a comment* box, and enter your comment.
+20. If you want to add a comment to the task, click inside the *Write a comment* box, and enter your comment.
 
     > [!NOTE]
     > It is recommended to provide as much relevant information as possible each time you create or edit a task.

@@ -1,6 +1,6 @@
 ## Configuring Mobile Gateway in DataMiner Cube
 
-1. In DataMiner Cube, go to *Apps* >* System Center \> Mobile Gateway*.
+1. In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.
 
 2. At the top of the screen, next to *Cellphone location*, click *\<Click to select>*, select the DataMiner Agent containing the *C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml* file in which you have configured all necessary device settings, and click *Apply*.
 

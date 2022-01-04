@@ -254,7 +254,7 @@ A locked element will automatically be unlocked
 
 Used to enforce a backup package mechanism on machines running an operating system prior than Windows Server 2008 (no longer supported).
 
-#### ****DeltCache
+#### DeltCache
 
 Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the *C:\\Skyline DataMiner\\System Cache\\DELT\\* folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
 

@@ -42,7 +42,7 @@ This file contains default connection settings to be used by DataMiner client ap
 
     - 0 (no polling)
 
-- **serverport=   **
+- **serverport=**
 
     Server port onto which the client has to connect.     Possible values:
 

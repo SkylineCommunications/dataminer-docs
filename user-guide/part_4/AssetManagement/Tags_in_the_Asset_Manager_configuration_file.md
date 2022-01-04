@@ -55,7 +55,16 @@ In this mandatory tag, you can configure how the different tables will be displa
 
 > [!NOTE]
 > If you do not want to change the appearance of any tables, you should leave this tag empty. For example:
-> §00\<AssetManagerConfig><br> §01...<br> §01\<Tables /><br> §01...<br> §00\<AssetManagerConfig>
+>
+> *\<AssetManagerConfig>*
+>
+> *...*
+>
+> *\<Tables />*
+>
+> *...*
+>
+> *\<AssetManagerConfig>*
 
 #### Tables
 

@@ -32,7 +32,7 @@ If \<*RequireValidSsl>* is set to *false*, no further configuration is required
 
 1. Make sure the DataMiner Agent trusts the default server certificate of the SMSEagle device:
 
-    1. In your internet browser, go to *https://**\<IP address of the SMSEagle device>*.
+    1. In your internet browser, go to *https://\<IP address of the SMSEagle device>*.
 
         If an error message appears, telling you that the site is not secure, ignore it.
 
@@ -50,17 +50,17 @@ If \<*RequireValidSsl>* is set to *false*, no further configuration is required
 
     8. Select the following options:
 
-- *Computer Account*
+        - *Computer Account*
 
-- *Local Computer*
+        - *Local Computer*
 
     9. Click *OK* to close the *Add or Remove Snap-ins* window.
 
-    10..Under the *Console Root*, go to *Certificates (Local Computer) \> Trusted Root Certification Authorities \> Certificates*.
+    10. Under the *Console Root*, go to *Certificates (Local Computer) \> Trusted Root Certification Authorities \> Certificates*.
 
-    11..Right-click the *Certificates* folder, and select *All tasks \> Import.*
+    11. Right-click the *Certificates* folder, and select *All tasks \> Import.*
 
-    12..Select the file where you saved the certificate details. This will load the certificate into the certificate store.
+    12. Select the file where you saved the certificate details. This will load the certificate into the certificate store.
 
 2. Update the Windows hosts file:
 

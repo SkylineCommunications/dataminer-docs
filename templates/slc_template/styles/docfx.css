@@ -1,7 +1,7 @@
 /* Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the MIT License. See License.txt in the project root for license information. */
 html,
 body {
-  font-family: 'Segoe UI', Tahoma, Helvetica, sans-serif;
+  font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
   height: 100%;
 }
 button,
@@ -454,7 +454,7 @@ article section {
 
 .sidetoc {
   position: fixed;
-  width: 260px; /* aangepast width: 260px; */
+  width: 360px; /* aangepast width: 260px; */
   top: 150px;
   bottom: 0;
   overflow-x: hidden;
@@ -507,9 +507,11 @@ body .toc{
 }
 .toc .nav > li > a {
   color: #666666;
-  margin-left: 5px;
+  margin-left: 16px;
   display: block;
-  padding: 0;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  /* padding: 0; */
 }
 .toc .nav > li > a:hover,
 .toc .nav > li > a:focus {
@@ -518,7 +520,8 @@ body .toc{
   text-decoration: inherit;
 }
 .toc .nav > li.active > a {
-  color: #337ab7;
+  color: #171717;
+  font-weight: 600;
 }
 .toc .nav > li.active > a:hover,
 .toc .nav > li.active > a:focus {
@@ -551,15 +554,15 @@ body .toc{
 }
 
 .toc ul{
-  font-size: 12px;
-  margin: 0 0 0 3px;
+  font-size: 14px;
+  margin: 0 0 0 15px;
 }
 
 .toc .level1 > li {
-  font-weight: bold;
+  font-weight: normal;
   margin-top: 10px;
   position: relative;
-  font-size: 16px;
+  font-size: 14px;
 }
 .toc .level2 {
   font-weight: normal;
@@ -573,7 +576,7 @@ body .toc{
 .sidefilter {
   position: fixed;
   top: 90px;
-  width: 260px;
+  width: 360px;
   background-color: #ffffff; /* kleur aangepast van #f1f1f1 naar #ffffff */
   padding: 15px;
   border-left: 1px solid #e7e7e7;
@@ -622,7 +625,7 @@ body .toc{
 }
 
 .article.grid-right {
-  margin-left: 280px;
+  margin-left: 380px;
 }
 
 .inheritance hr {

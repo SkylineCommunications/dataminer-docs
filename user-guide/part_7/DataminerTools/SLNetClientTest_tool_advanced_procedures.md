@@ -318,9 +318,9 @@ With the SLNetClientTest tool, you can modify this engine ID:
 
         - *IPv4*: IPv4 address, e.g. "10.11.12.13".
 
-        - *IPv6*: IPv6 address,* *e.g. "fd7a:e0de:acc2::".
+        - *IPv6*: IPv6 address, e.g. "fd7a:e0de:acc2::".
 
-        - *MAC*:* *MAC address, e.g. "1234567890ABCDEF".
+        - *MAC*: MAC address, e.g. "1234567890ABCDEF".
 
         - *Text*: regular text, e.g. "MyID".
 
@@ -521,9 +521,8 @@ From DataMiner 10.0.9 onwards, you can fine-tune how the timeout is calculated u
 
 4. Specify the new value and click *OK*.
 
-|          |                                                                                                                                                                                                                                                                                                                     |
-|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Caution: | Be careful when changing these values, as an incorrect configuration can lead to problems with EPM. If the EPMAsyncTimeout is too low, it can occur that not all data is displayed in the EPM elements, but it if it is too high, the system may become unresponsive. The inverse is the case for the EPMBulkCount. |
+> [!CAUTION]
+> Be careful when changing these values, as an incorrect configuration can lead to problems with EPM. If the EPMAsyncTimeout is too low, it can occur that not all data is displayed in the EPM elements, but it if it is too high, the system may become unresponsive. The inverse is the case for the EPMBulkCount.
 
 ### Changing the number of records in the protocol cache
 

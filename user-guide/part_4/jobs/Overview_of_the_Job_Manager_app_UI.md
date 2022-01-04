@@ -27,9 +27,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
 - The filter panel on the left side of the app can be collapsed and expanded. This panel can be used to filter the overview panel on the right. The layout of this panel is different depending on the DataMiner version.
 
-**From DataMiner 10.2.0/10.1.5 onwards:**
-
-    First select the type of time filter in the box at the top:
+    **From DataMiner 10.2.0/10.1.5 onwards:<br>**     First select the type of time filter in the box at the top:
 
     - *Occur* means that the filter time should be within the job lifespan
 
@@ -37,11 +35,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
     - *End* means that the filter time should contain the end time of the job.
 
-    When you have selected this, you can then select a time filter. To do so, select one of the default filters in the *During* drop-down box, or select *Custom* and specify a custom start and end time for the filter.     If drop-down fields have been configured to allow filtering on these fields, the different drop-down options will be displayed in the *Field filters* section below this, allowing you to quickly filter on particular options by selecting them there. If you have selected multiple options for one field, you can clear the selection for all options at the same time by clicking the “x” next to the field name. To clear the selection for all options of all fields, click the “x” icon next to *Field filters*.
-
-**In earlier DataMiner versions:**
-
-    At the top of the panel, a time filter can be specified. To do so, select one of the default filters in the time filter drop-down box, or select *Custom* and specify a custom start and end time for the filter.     If drop-down fields have been configured to allow filtering on these fields, the different drop-down options will be displayed in the *Field filters* section below this, allowing you to quickly filter on particular options by selecting them there. If you have selected multiple options for one field, you can clear the selection for all options at the same time by clicking the “x” next to the field name. To clear the selection for all options of all fields, click the “x” icon next to *Field filters*.
+    When you have selected this, you can then select a time filter. To do so, select one of the default filters in the *During* drop-down box, or select *Custom* and specify a custom start and end time for the filter.<br>     If drop-down fields have been configured to allow filtering on these fields, the different drop-down options will be displayed in the *Field filters* section below this, allowing you to quickly filter on particular options by selecting them there. If you have selected multiple options for one field, you can clear the selection for all options at the same time by clicking the “x” next to the field name. To clear the selection for all options of all fields, click the “x” icon next to *Field filters*.<br><br>     **In earlier DataMiner versions:<br>**     At the top of the panel, a time filter can be specified. To do so, select one of the default filters in the time filter drop-down box, or select *Custom* and specify a custom start and end time for the filter.<br>     If drop-down fields have been configured to allow filtering on these fields, the different drop-down options will be displayed in the *Field filters* section below this, allowing you to quickly filter on particular options by selecting them there. If you have selected multiple options for one field, you can clear the selection for all options at the same time by clicking the “x” next to the field name. To clear the selection for all options of all fields, click the “x” icon next to *Field filters*.
 
 - The overview panel on the right side of the app has a gray header containing several buttons:
 

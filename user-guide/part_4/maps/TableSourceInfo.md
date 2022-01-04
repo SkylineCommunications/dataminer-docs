@@ -37,9 +37,9 @@ In this mandatory tag, specify the ID of the dynamic table.
 
 The parameter IDs of the table columns containing the latitude and longitude values.
 
-- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudeColumnPID>* and*\<LongitudeColumnPID>* tags. In that case, the *\<LatitudeColumnPID2>* and *\<LongitudeColumnPID2>* tags will not be used and can therefore be omitted.
+- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudeColumnPID>* and *\<LongitudeColumnPID>* tags. In that case, the *\<LatitudeColumnPID2>* and *\<LongitudeColumnPID2>* tags will not be used and can therefore be omitted.
 
-- If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudeColumnPID>* and*\<LongitudeColumnPID>* tags, and another pair in the *\<LatitudeColumnPID2>* and *\<LongitudeColumnPID2>* tags.
+- If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudeColumnPID>* and *\<LongitudeColumnPID>* tags, and another pair in the *\<LatitudeColumnPID2>* and *\<LongitudeColumnPID2>* tags.
 
 #### TitleColumnPID
 

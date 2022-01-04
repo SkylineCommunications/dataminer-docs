@@ -44,7 +44,7 @@ From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 
 
 2. Depending on the operating system, do the following:
 
-    - Windows 2008 Server (64 bit):
+    - **Windows 2008 Server (64 bit)**:
 
         1. Right-click *iolibs_m\_01_01_04.exe* and select *Properties*.
 

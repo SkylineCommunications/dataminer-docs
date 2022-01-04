@@ -141,8 +141,8 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 
     > [!NOTE]
     > -  If this approach is used, the provided content in the Namespace references field will be disregarded. Instead, provide the using statements in the C# block itself.
-    > -  Up to DataMiner 9.5.4, using a C# block in an Automation script containing a Script class within a namespace is not supported. From DataMiner 9.5.5 onwards, if a C# block contains a class called Script within a namespace, that class will be used to launch the script.
-    > §21namespace MyNamespace<br> §21{<br> §22public class Script<br> §22{<br> §23public void Run(Engine engine)<br> §23{<br> §24// ...<br> §23}<br> §22}<br> §21}<br> -  From DataMiner 9.5.12 onwards, custom entry points are possible. see [Custom entry points](#custom-entry-points).
+    > -  Up to DataMiner 9.5.4, using a C# block in an Automation script containing a Script class within a namespace is not supported. From DataMiner 9.5.5 onwards, if a C# block contains a class called Script within a namespace, that class will be used to launch the script.<br>
+    >     namespace MyNamespace<br>     {<br>      public class Script<br>      {<br>      public void Run(Engine engine)<br>      {<br>      // ...<br>      }<br>      }<br>     }<br> -  From DataMiner 9.5.12 onwards, custom entry points are possible. see [Custom entry points](#custom-entry-points).
 
 ### Preprocessor directives
 

@@ -1057,9 +1057,8 @@ Available from DataMiner 10.1.10/10.2.0 onwards. Gets or sets a value indicating
 bool WantsOnFocusLost
 ```
 
-|       |                                                                                                                                                                             |
-|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| NOte: | Applicable only in case *Type* is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox or Time. |
+> [!NOTE]
+> Applicable only in case *Type* is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox or Time.
 
 #### Width
 

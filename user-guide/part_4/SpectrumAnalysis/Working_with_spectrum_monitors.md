@@ -47,7 +47,7 @@ The following actions are possible to manage the spectrum monitors:
 
 To access spectrum monitors in System Center:
 
-- In DataMiner Cube, go to *Apps* >* System Center \> Tools \> configure spectrum monitors*.
+- In DataMiner Cube, go to *Apps* > *System Center \> Tools \> configure spectrum monitors*.
 
     The monitor configuration section is very similar to the *Edit monitor* window described above, with the following differences:
 

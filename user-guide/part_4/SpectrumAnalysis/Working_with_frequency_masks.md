@@ -5,7 +5,7 @@
 
 As a visual aid for carrier alignment, it is possible to use frequency masks. However, at this point, this functionality is only available in the legacy Element Display client application.
 
-To access a spectrum element in Element Display, go to *http://**\[MyDMA\]**/DataDisplay.htm?id=**\[ElementID\]*, where MyDMA is the hostname or IP of your DMA and ElementID is the element ID of the spectrum element, in the format DMA ID/element ID.
+To access a spectrum element in Element Display, go to *http://**\[MyDMA\]**/DataDisplay.htm?id=\[ElementID\]*, where MyDMA is the hostname or IP of your DMA and ElementID is the element ID of the spectrum element, in the format DMA ID/element ID.
 
 > [!TIP]
 > See also:

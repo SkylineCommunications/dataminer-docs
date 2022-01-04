@@ -8,7 +8,7 @@ In this file, you can specify a DataMiner Maps configuration per (virtual) host.
 
 ### ServerConfig.xml syntax
 
-*ServerConfig.xml* consists of a \<MapsServerConfig> tag with a* *\<VirtualHosts> subtag, which in turn contains one or more \<VirtualHost> subtags. These are configured as follows.
+*ServerConfig.xml* consists of a *\<MapsServerConfig>* tag with a *\<VirtualHosts>* subtag, which in turn contains one or more \<VirtualHost> subtags. These are configured as follows.
 
 #### Attributes of the VirtualHost tag
 

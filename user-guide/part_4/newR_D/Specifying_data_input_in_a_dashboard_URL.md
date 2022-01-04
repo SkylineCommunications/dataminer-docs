@@ -4,11 +4,11 @@ If a dashboard has been configured with one or more feed components, it is possi
 
 Within the dashboard URL, the following objects can be specified:
 
-- Elements* *(using the argument *elements*): By specifying the DMA ID and element ID.
+- Elements (using the argument *elements*): By specifying the DMA ID and element ID.
 
-- Services* *(using the argument *services*): By specifying the DMA ID and service ID.
+- Services (using the argument *services*): By specifying the DMA ID and service ID.
 
-- Redundancy groups* *(using the argument *redundancy groups*): By specifying the DMA ID and redundancy group ID.
+- Redundancy groups (using the argument *redundancy groups*): By specifying the DMA ID and redundancy group ID.
 
 - Parameters (using the argument *parameters*):
 

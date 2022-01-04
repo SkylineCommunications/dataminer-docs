@@ -20,12 +20,9 @@ When you open up the Catalog module, a search box is displayed.
 
     - Current version
 
-|      |                                                                                                                                      |
-|------|--------------------------------------------------------------------------------------------------------------------------------------|
-| TIP: | To see the entire version history of the connector, click *Version history* above the version number. |
+        > [!NOTE]
+        > To see the entire version history of the connector, click *Version history* above the version number.
 
     - Detailed information on how to use this connector
 
     - ...
-
- 

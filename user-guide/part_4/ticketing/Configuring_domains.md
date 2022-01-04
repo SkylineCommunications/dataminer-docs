@@ -61,7 +61,7 @@ This opens a window where you can specify the name of the ticket field, the fiel
 
 > [!NOTE]
 > -  It is not possible to change the *Type* for a *State* field.
-> -  The name of a ticket field may not start with an underscore ("\_") or contain any of the following characters, as these are not supported in the Elasticsearch database: * .#\*,"'* 
+> -  The name of a ticket field may not start with an underscore ("\_") or contain any of the following characters, as these are not supported in the Elasticsearch database: .#\*,"'
 
 The following configuration options are available, depending on the selected field type:
 

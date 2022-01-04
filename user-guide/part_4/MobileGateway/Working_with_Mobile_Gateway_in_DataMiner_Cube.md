@@ -2,7 +2,7 @@
 
 To open the Mobile Gateway app:
 
-- In DataMiner Cube, go to *Apps* >* System Center \> Mobile Gateway*.
+- In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.
 
 To check the current status of the cell phone modem:
 

@@ -331,33 +331,33 @@ That other element can be selected in two ways:
 
 ##### Specifying the other element in the URL of the map
 
-    Pass the other element in a URL variable:
+Pass the other element in a URL variable:
 
-    ```txt
-    http://localhost/maps/map.aspx?config=MyTest&dpopupdata=MyOtherElement
-    ```
+```txt
+http://localhost/maps/map.aspx?config=MyTest&dpopupdata=MyOtherElement
+```
 
-    Refer to that variable in the configuration file:
+Refer to that variable in the configuration file:
 
-    ```xml
-    <PopupDetails>                                                                         
-      <Detail name="longitude" type="property" property="longitude" elementVar="popupdata" />
-    </PopupDetails>                                                                        
-    ```
+```xml
+<PopupDetails>                                                                         
+  <Detail name="longitude" type="property" property="longitude" elementVar="popupdata" />
+</PopupDetails>                                                                        
+```
 
-    > [!NOTE]
-    > The URL variable has to contain either the element name or the element ID (i.e. DmaID/ElementID).
+> [!NOTE]
+> The URL variable has to contain either the element name or the element ID (i.e. DmaID/ElementID).
 
 ##### Putting the data element in the same view as the marker element
 
-    Create a view that contains two elements: the marker element (i.e. the element containing the marker coordinates) and the data element (i.e. the element that contains the data to be shown in the pop-up balloon). Use *\<Detail>* tags of type “parameter_sameviewelement” or “property_sameviewelement” to fetch data from the data element:
+Create a view that contains two elements: the marker element (i.e. the element containing the marker coordinates) and the data element (i.e. the element that contains the data to be shown in the pop-up balloon). Use *\<Detail>* tags of type “parameter_sameviewelement” or “property_sameviewelement” to fetch data from the data element:
 
-    ```xml
-    <PopupDetails>                                                                
-      <Detail name="longitude" type="parameter_sameviewelement" pid="350" />        
-      <Detail name="latitude" type="property_sameviewelement" property="latitude" />
-    </PopupDetails>                                                               
-    ```
+```xml
+<PopupDetails>                                                                
+  <Detail name="longitude" type="parameter_sameviewelement" pid="350" />        
+  <Detail name="latitude" type="property_sameviewelement" property="latitude" />
+</PopupDetails>                                                               
+```
 
 #### Adding tab pages to a marker balloon
 

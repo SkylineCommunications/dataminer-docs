@@ -13,7 +13,9 @@ You can take the following actions to manage the dashboards folder structure:
     > [!NOTE]
     > The following characters are not allowed in a dashboard folder name:
     >
-    > * / \\ : ; \* ? \< \> \| °*<br> If you do specify a backslash (“\\”) in the folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
+    >  / \\ : ; \* ? \< \> \| °
+    >
+    > If you do specify a backslash (“\\”) in the folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
 
 - Deleting a folder:
 

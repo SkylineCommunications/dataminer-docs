@@ -36,8 +36,7 @@
 
 - [Troubleshooting](../Part6Troubleshooting/Part6Troubleshooting.md#troubleshooting)
 
-|                                                                                                                                                                                      |     |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|
-| For video demonstrations by subject-matter experts, practical use cases, and much more, go to: <br><https://community.dataminer.services/videos/>. |     |
+> [!NOTE]
+> For video demonstrations by subject-matter experts, practical use cases, and much more, go to: <br><https://community.dataminer.services/videos/>.
 
  
