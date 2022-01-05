@@ -3,6 +3,9 @@ html,
 body {
   font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 }
 button,
 a {
@@ -127,6 +130,7 @@ svg:hover path {
 }
 .table {
   margin-bottom: 10px;
+  font-size: 14px;
 }
 table p {
   margin-bottom: 0;
@@ -146,9 +150,9 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 18px;
+  font-weight: 600;
 }
 h4,
 .h4,
@@ -156,8 +160,9 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 .navbar {
   margin-bottom: 0;
@@ -218,14 +223,14 @@ header .navbar {
 }
 
 article h1, article h2, article h3, article h4{
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
-article h4{
+/* article h4{
   border: 0;
   font-weight: bold;
   margin-top: 2em;
-}
+} */
 
 article span.small.pull-right{
   margin-top: 20px;
@@ -920,6 +925,7 @@ pre > code .line-highlight {
 .alert h5 {
     text-transform: capitalize;
     font-weight: 600;
+	font-size: 16px;
     margin-top: 0;
 }
 

@@ -17,7 +17,7 @@ audio:not([controls]){display:none;height:0}
 a{background-color:transparent}
 a:active,a:hover{outline:0}
 abbr[title]{border-bottom:none;-webkit-text-decoration:underline dotted;-moz-text-decoration:underline dotted;text-decoration:underline dotted}
-b,optgroup,strong{font-weight:700}
+b,optgroup,strong{font-weight:600}
 dfn{font-style:italic}
 h1{margin:.67em 0}
 mark{background:#ff0;color:#000}
@@ -342,13 +342,13 @@ hr{margin-top:20px;margin-bottom:20px;border-top:1px solid #eee}
 .h1 .small,.h1 small,.h2 .small,.h2 small,.h3 .small,.h3 small,h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small{font-size:65%}
 .h4,.h5,.h6,h4,h5,h6{margin-top:10px;margin-bottom:10px}
 .h4 .small,.h4 small,.h5 .small,.h5 small,.h6 .small,.h6 small,h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small{font-size:75%}
-.h1,h1{font-size:36px}
-.h2,h2{font-size:30px}
-.h3,h3{font-size:24px}
-.h4,h4{font-size:18px}
-.h5,h5{font-size:16px}
-.h6,h6{font-size:14px}
-p{margin:0 0 10px}
+.h1,h1{font-size:40px}
+.h2,h2{font-size:34px}
+.h3,h3{font-size:28px}
+.h4,h4{font-size:24px}
+.h5,h5{font-size:20px}
+.h6,h6{font-size:18px}
+p{margin:0 0 16px}
 .lead{margin-bottom:20px;font-size:16px;font-weight:300;line-height:1.4}
 dt,kbd kbd,label{font-weight:700}
 address,blockquote .small,blockquote footer,blockquote small,dd,dt,pre{line-height:1.42857143}
@@ -655,9 +655,9 @@ caption{padding-top:8px;padding-bottom:8px;color:#777}
 .table>tbody+tbody{border-top:2px solid #ddd}
 .table .table{background-color:#fff}
 .table-condensed>tbody>tr>td,.table-condensed>tbody>tr>th,.table-condensed>tfoot>tr>td,.table-condensed>tfoot>tr>th,.table-condensed>thead>tr>td,.table-condensed>thead>tr>th{padding:5px}
-.table-bordered,.table-bordered>tbody>tr>td,.table-bordered>tbody>tr>th,.table-bordered>tfoot>tr>td,.table-bordered>tfoot>tr>th,.table-bordered>thead>tr>td,.table-bordered>thead>tr>th{border:1px solid #ddd}
+.table-bordered,.table-bordered>tbody>tr>td,.table-bordered>tbody>tr>th,.table-bordered>tfoot>tr>td,.table-bordered>tfoot>tr>th,.table-bordered>thead>tr>td,.table-bordered>thead>tr>th{border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6}
 .table-bordered>thead>tr>td,.table-bordered>thead>tr>th{border-bottom-width:2px}
-.table-striped>tbody>tr:nth-of-type(odd){background-color:#f9f9f9}
+.table-striped>tbody>tr:nth-of-type(odd){background-color:#ffffff}
 .table-hover>tbody>tr:hover,.table>tbody>tr.active>td,.table>tbody>tr.active>th,.table>tbody>tr>td.active,.table>tbody>tr>th.active,.table>tfoot>tr.active>td,.table>tfoot>tr.active>th,.table>tfoot>tr>td.active,.table>tfoot>tr>th.active,.table>thead>tr.active>td,.table>thead>tr.active>th,.table>thead>tr>td.active,.table>thead>tr>th.active{background-color:#f5f5f5}
 .table-hover>tbody>tr.active:hover>td,.table-hover>tbody>tr.active:hover>th,.table-hover>tbody>tr:hover>.active,.table-hover>tbody>tr>td.active:hover,.table-hover>tbody>tr>th.active:hover{background-color:#e8e8e8}
 .table>tbody>tr.success>td,.table>tbody>tr.success>th,.table>tbody>tr>td.success,.table>tbody>tr>th.success,.table>tfoot>tr.success>td,.table>tfoot>tr.success>th,.table>tfoot>tr>td.success,.table>tfoot>tr>th.success,.table>thead>tr.success>td,.table>thead>tr.success>th,.table>thead>tr>td.success,.table>thead>tr>th.success{background-color:#dff0d8}
@@ -1124,7 +1124,7 @@ a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointe
 .nav-pills>li>a>.badge{margin-left:3px}
 .jumbotron{padding-top:30px;padding-bottom:30px;margin-bottom:30px;background-color:#eee}
 .jumbotron p{margin-bottom:15px;font-size:21px;font-weight:200}
-.alert,.thumbnail{margin-bottom:20px}
+.alert,.thumbnail{margin-bottom:20px;margin-top:5px}
 .alert .alert-link,.close{font-weight:700}
 .jumbotron>hr{border-top-color:#d5d5d5}
 .container .jumbotron,.container-fluid .jumbotron{padding-right:15px;padding-left:15px;border-radius:6px}
@@ -1137,7 +1137,7 @@ a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointe
 .thumbnail a>img,.thumbnail>img{margin-right:auto;margin-left:auto}
 a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#337ab7}
 .thumbnail .caption{padding:9px;color:#333}
-.alert{padding:15px;border:1px solid transparent;border-radius:4px}
+.alert{padding:16px;border:1px solid transparent;border-radius:4px}
 .alert h4{margin-top:0;color:inherit}
 .alert>p,.alert>ul{margin-bottom:0}
 .alert>p+p{margin-top:5px}
