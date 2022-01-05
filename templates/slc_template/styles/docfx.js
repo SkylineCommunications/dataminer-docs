@@ -431,7 +431,8 @@ $(function () {
       $('#toc a.active').parents('li').each(function (i, e) {
         top += $(e).position().top;
       })
-      $('.sidetoc').scrollTop(top - 50);
+      //$('.sidetoc').scrollTop(top - 50);
+      $('.sidetoc').scrollTop(top - $(window).height() + 300);
 
       if ($('footer').is(':visible')) {
         $('.sidetoc').addClass('shiftup');
