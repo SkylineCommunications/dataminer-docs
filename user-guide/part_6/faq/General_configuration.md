@@ -18,7 +18,7 @@ This section contains the following topics:
 
 ### Which limitations should I keep in mind for the specifications of a DMA?
 
-You can find these on the [DataMiner Metrics](https://community.dataminer.services/dataminer-metrics/) ​page on DataMiner Dojo.
+You can find these on the *[DataMiner Metrics](https://community.dataminer.services/dataminer-metrics/)* ​page on DataMiner Dojo.
 
 ### When must a DataMiner Agent be restarted?
 
@@ -51,7 +51,7 @@ However, if this is not possible, you can set up a time synchronization mechanis
 
 More information about SNTP can be found in RFC 4330:
 
-- [Simple Network Time Protocol (SNTP) Version 4 for IPv4, IPv6 and OSI](http://www.ietf.org/rfc/rfc4330.txt) 
+- *[Simple Network Time Protocol (SNTP) Version 4 for IPv4, IPv6 and OSI](http://www.ietf.org/rfc/rfc4330.txt)* 
 
 #### Time server
 

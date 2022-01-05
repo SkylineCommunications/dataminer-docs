@@ -8,7 +8,7 @@
 
     3. In the *Manage* tab, select the DataMiner Agent to which you are connected (it is marked by an icon with a small “1”).
 
-    4. In the pane on the right, next to *Cluster*, enter the name of the DMS, and then click *Add Cluster* (prior to DataMiner 10.0.13) or *Join cluster* (from DataMiner 10.0.13 onwards).
+    4. In the pane on the right, next to *Cluster*, enter the name of the DMS, and then click *Add Cluster** (prior to DataMiner 10.0.13) or **Join cluster** (from DataMiner 10.0.13 onwards)*.
 
 2. For each DMA you want to add to the DMS, do the following:
 
@@ -18,7 +18,7 @@
 
     3. In the *Manage* tab, select the DataMiner Agent to which you are connected (it is marked by an icon with a small “1”).
 
-    4. In the pane on the right, next to *Cluster*, enter the same DMS name as you specified for the master DMA, and then click *Add Cluster* (prior to DataMiner 10.0.13) or *Join cluster* (from DataMiner 10.0.13 onwards).
+    4. In the pane on the right, next to *Cluster*, enter the same DMS name as you specified for the master DMA, and then click *Add Cluster** (prior to DataMiner 10.0.13) or **Join cluster** (from DataMiner 10.0.13 onwards)*.
 
     5. Open DataMiner Cube on the primary DMA, and navigate to the *Agents* > *Manage* tab as before.
 

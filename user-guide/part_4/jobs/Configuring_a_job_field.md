@@ -10,7 +10,7 @@ For each field, the following configuration is possible.
 
     - *Datetime*: Select this type to create a box in which the user will need to specify a date and time.
 
-    - *Double*: Select this type to create a box in which the user will need to specify a double. (For more information on this data type, see <https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/index>).
+    - *Double*: Select this type to create a box in which the user will need to specify a double. (For more information on this data type, see *<https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/index>*).
 
     - *Dropdown*: When you select this type, you will need to specify the different values the user will be able to select in the drop-down list.
 
@@ -18,7 +18,7 @@ For each field, the following configuration is possible.
 
     - *Check box*: Select this type to create a checkbox.
 
-    - *Integer*: Select this type to create a box in which the user will need to specify a integer. (For more information on this data type, see <https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/index>).
+    - *Integer*: Select this type to create a box in which the user will need to specify a integer. (For more information on this data type, see *<https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/index>*).
 
     - *Auto increment*: Select this type to create an automatic counter. If a user specifies -1 in this field, DataMiner will automatically look up the next available number and use this, so that with every new job this number increases. If the user specifies a different number in this field, that number will be used instead. When you select this type, you can optionally specify a prefix and/or a suffix that will be added to the number.
 

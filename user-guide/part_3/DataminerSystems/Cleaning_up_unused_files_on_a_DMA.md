@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-cleaning-up-unused-items/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-cleaning-up-unused-items/>* 
 
 In System Center, you can clean up unused protocols, unused alarm filters and unused Visio files.
 

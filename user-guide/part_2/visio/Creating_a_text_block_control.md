@@ -27,5 +27,5 @@ In addition, from DataMiner 9.5.1 onwards, you can also specify the behavior of 
     - *Disabled*: The scrollbar is never displayed and scrolling is not possible.
 
     > [!NOTE]
-    > For more detailed information on these values, see <https://msdn.microsoft.com/en-us/library/system.windows.controls.scrollbarvisibility(v=vs.110).aspx> 
+    > For more detailed information on these values, see *<https://msdn.microsoft.com/en-us/library/system.windows.controls.scrollbarvisibility(v=vs.110).aspx>* 
     >

@@ -12,7 +12,7 @@ data;Stroke;Fill;StrokeThickness;Tooltip;YAxisUp;bottomLeftX;bottomLeftY;topRigh
 
 See below for more information on the different components of the Path string.
 
-- **data**: The Path markup that defines the drawing. For more information on Path markup, see <http://msdn.microsoft.com/en-us/library/ms752293(v=vs.110).aspx>.
+- **data**: The Path markup that defines the drawing. For more information on Path markup, see *<http://msdn.microsoft.com/en-us/library/ms752293(v=vs.110).aspx>*.
 
 - **Stroke**: The line color (name of color or "#aarrggbb").
 

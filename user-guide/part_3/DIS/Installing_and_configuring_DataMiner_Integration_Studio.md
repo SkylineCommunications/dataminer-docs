@@ -8,8 +8,8 @@ To install DataMiner Integration Studio, you have to install the *DataMinerInteg
 
     | Visual Studio version          | Download location                                                                                                      |
     |----------------------------------|------------------------------------------------------------------------------------------------------------------------|
-    | Visual Studio 2015 or higher     | <https://community.dataminer.services/exphub-dis/>                                   |
-    | Visual Studio 2010, 2012 or 2013 | <https://community.dataminer.services/dataminer-integration-studio-other-downloads/> |
+    | Visual Studio 2015 or higher     | *<https://community.dataminer.services/exphub-dis/>*                                   |
+    | Visual Studio 2010, 2012 or 2013 | *<https://community.dataminer.services/dataminer-integration-studio-other-downloads/>* |
 
 2. Double-click *DataMinerIntegrationStudio.vsix*.
 
@@ -29,7 +29,7 @@ To install DataMiner Integration Studio, you have to install the *DataMinerInteg
     This copy of DataMiner Integration Studio is not licensed. Please contact dataminer.licensing@skyline.be
     ```
 
-9. Send an email to dataminer.licensing@skyline.be to request a software license.
+9. Send an email to *dataminer.licensing@skyline.be* to request a software license.
 
 10. When you receive a reply from Skyline saying that your license has been activated, restart Microsoft Visual Studio.
 

@@ -29,7 +29,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/>* 
 
 ### Manipulating the Alarm Console
 
@@ -54,7 +54,7 @@ This section consists of the following topics:
 
     > [!TIP]
     > See also:
-    > <https://community.dataminer.services/video/alarm-console-creating-a-workspace-with-a-filtered-alarm-tab-page/> 
+    > *<https://community.dataminer.services/video/alarm-console-creating-a-workspace-with-a-filtered-alarm-tab-page/>* 
 
 ### Changing the layout of the Alarm Console
 
@@ -160,7 +160,7 @@ The list of alarms in an Alarm Console tab can be manipulated in several ways.
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/> 
+> *<https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/>* 
 
 ##### Sorting and grouping columns
 
@@ -235,7 +235,7 @@ It is possible to create a different default layout for the Alarm Console, which
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-configuring-the-alarm-console-at-group-level/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-configuring-the-alarm-console-at-group-level/>* 
 
 To do so:
 
@@ -344,7 +344,7 @@ In the Alarm Console, you can display a timeline at the bottom of the *Active al
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-alarm-history/> 
+> *<https://community.dataminer.services/video/alarm-console-alarm-history/>* 
 
 #### Active alarms tab timeline
 
@@ -448,8 +448,8 @@ In the Alarm Console, you can add extra tab pages where you can specify a custom
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/alarm-console-advanced-filtering/> 
-> -  <https://community.dataminer.services/video/alarm-console-alarm-history/> 
+> -  *<https://community.dataminer.services/video/alarm-console-advanced-filtering/>* 
+> -  *<https://community.dataminer.services/video/alarm-console-alarm-history/>* 
 
 To do so:
 
@@ -588,7 +588,7 @@ Instead of manually applying a filter in a tab, you can also drag an item from t
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-alarm-history/> 
+> *<https://community.dataminer.services/video/alarm-console-alarm-history/>* 
 
 To do so:
 
@@ -638,9 +638,9 @@ You can use any regular expression.
 
 For more information on how to construct regular expressions, here are a few interesting links:
 
-- [Regular Expression Language - Quick Reference](http://msdn.microsoft.com/en-us/library/az24scfc.aspx) 
+- *[Regular Expression Language - Quick Reference](http://msdn.microsoft.com/en-us/library/az24scfc.aspx)* 
 
-- [RegExLib.com Regular Expression Cheat Sheet](http://regexlib.com/CheatSheet.aspx) 
+- *[RegExLib.com Regular Expression Cheat Sheet](http://regexlib.com/CheatSheet.aspx)* 
 
 > [!NOTE]
 > -  DataMiner always wraps a regular expression in ^( and )$. This means that the expression must match the entire string.
@@ -841,7 +841,7 @@ For more information on changing the column layout, see [Changing the column lay
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/> 
+> *<https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/>* 
 
 | Column name                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -960,7 +960,7 @@ The following settings are available:
 
     > [!TIP]
     > See also:
-    > <https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/> 
+    > *<https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/>* 
 
 - **Refresh rate**: Select to specify how frequently the selected tab will be refreshed. This rate will be applied from the moment this setting is set.
 
@@ -968,7 +968,7 @@ The following settings are available:
 
     > [!TIP]
     > See also:
-    > <https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/> 
+    > *<https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/>* 
 
 - **Merge alarm trees**: This setting is only available if *History tracking* is enabled and *Automatically remove cleared alarms* and *Freeze* are disabled in the alarm tab (from DataMiner 9.6.13 onwards). When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g. in a sliding window tab. If you activate the option, you can also select an additional option to only merge alarm trees in case the time between the alarm trees is less than a particular time span (between 1 second and 1 day).
 

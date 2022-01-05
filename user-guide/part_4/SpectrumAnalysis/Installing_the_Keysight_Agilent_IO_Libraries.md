@@ -17,7 +17,7 @@ From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 
 > -  In the file properties of *Setup.exe*, indicate that you want the file to run in *Windows XP compatibility mode*.
 > -  Run *Setup.exe*. This should remove the existing IO libraries, IVI shared components, and VISA shared components. Go to *Programs and features* if you want to check whether all those items were removed.
 
-- You can download the most recent version of the IO libraries from the following website:<br><http://www.keysight.com/main/software.jspx?ckey=2175637&lc=dut&cc=BE&nid=-33330.977662&id=2175637&pageMode=PV>
+- You can download the most recent version of the IO libraries from the following website:<br>*<http://www.keysight.com/main/software.jspx?ckey=2175637&lc=dut&cc=BE&nid=-33330.977662&id=2175637&pageMode=PV>*
 
 - After installing the IO libraries, run *Keysight Connection Expert*, either from the right-click menu of the IO libraries taskbar icon or from the Windows start menu.
 
@@ -40,7 +40,7 @@ From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 
 1. On the DataMiner Agent, go to the *C:\\Skyline DataMiner\\Tools* directory.
 
     > [!NOTE]
-    > If, in this directory, you cannot find a file named *iolibs_m\_01_01_04.exe*, please contact [Skyline TechSupport](mailto:techsupport%40skyline.be).
+    > If, in this directory, you cannot find a file named *iolibs_m\_01_01_04.exe*, please contact *[Skyline TechSupport](mailto:techsupport%40skyline.be)*.
 
 2. Depending on the operating system, do the following:
 

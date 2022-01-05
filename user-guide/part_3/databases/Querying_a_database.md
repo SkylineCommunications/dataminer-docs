@@ -17,4 +17,4 @@ To query a database, do the following:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/cassandra-querying-a-cassandra-database/> 
+> *<https://community.dataminer.services/video/cassandra-querying-a-cassandra-database/>* 

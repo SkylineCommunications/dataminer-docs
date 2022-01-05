@@ -40,4 +40,4 @@ To resolve the problem, do the following:
 
 2. If, after having changed the application pool settings, you still get the same error when connecting to DataMiner Dashboards, then (and ONLY then!) install the following Microsoft hotfix:
 
-    - [A hotfix rollup is available for IIS 7.0 to support the .NET Framework 4.0 (958854)](http://support.microsoft.com/kb/958854) 
+    - *[A hotfix rollup is available for IIS 7.0 to support the .NET Framework 4.0 (958854)](http://support.microsoft.com/kb/958854)* 

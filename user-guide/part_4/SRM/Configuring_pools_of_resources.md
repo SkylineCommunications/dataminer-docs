@@ -89,7 +89,7 @@ To add a resource to a pool using DataMiner 10.2.0/10.1.5 or higher:
         > When a resource linked to a virtual function is saved, a corresponding (virtual) element is created, and its name and ID will be displayed.
 
         > [!WARNING]
-        > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+        > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see *[Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
 
 4. In the *properties* subtab, configure any properties if necessary. With the buttons in the lower right corner, you can add, edit and delete resource properties.
 

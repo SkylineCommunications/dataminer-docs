@@ -41,7 +41,7 @@ In DataMiner Cube, you can upload either *Protocol.xml* files or entire protoco
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-protocol-update-center/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-protocol-update-center/>* 
 
 With the Update Center, you can check if protocol updates are available and, if so, install these.
 

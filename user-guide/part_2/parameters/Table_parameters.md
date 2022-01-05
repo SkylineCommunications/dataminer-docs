@@ -42,4 +42,4 @@ Every column in a dynamic table is a parameter in itself. Cells in a column can 
 
 #### Direct view tables
 
-A direct view table is a special kind of table that is used to aggregate data from different source elements. More information about direct view tables is available in the [DataMiner Development Library](https://help.dataminer.services/development/).
+A direct view table is a special kind of table that is used to aggregate data from different source elements. More information about direct view tables is available in the *[DataMiner Development Library](https://help.dataminer.services/development/)*.

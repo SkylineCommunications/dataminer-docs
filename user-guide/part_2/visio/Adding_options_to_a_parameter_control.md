@@ -303,7 +303,7 @@ MultipleValueSep=;
 ```
 
 > [!NOTE]
-> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
+> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the *[DataMiner Development Library](https://help.dataminer.services/development/)*.
 
 #### Oscilloscope
 
@@ -318,7 +318,7 @@ If the parameter control is based on a table parameter, from DataMiner version 1
 In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, you can use this option on the table parameter control to make sure that only a single row can be selected.
 
 > [!NOTE]
-> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
+> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the *[DataMiner Development Library](https://help.dataminer.services/development/)*.
 
 #### Table
 
@@ -355,7 +355,7 @@ Example:
 In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, you can use this option on the table parameter control to make sure the linked session variables are monitored, and the selected row is updated.
 
 > [!NOTE]
-> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
+> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the *[DataMiner Development Library](https://help.dataminer.services/development/)*.
 
 #### ValueFont
 

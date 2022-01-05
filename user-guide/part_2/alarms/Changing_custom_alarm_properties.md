@@ -10,7 +10,7 @@ In this section:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-adding-extra-properties-on-alarms/> 
+> *<https://community.dataminer.services/video/alarm-console-adding-extra-properties-on-alarms/>* 
 
 ### Adding a custom alarm property
 

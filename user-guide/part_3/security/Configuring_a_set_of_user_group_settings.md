@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/dataminer-cube-creating-group-settings/> 
+> *<https://community.dataminer.services/video/dataminer-cube-creating-group-settings/>* 
 
 If a set of user settings has been assigned to a user group, you can open that set and specify a default value for every setting in it.
 

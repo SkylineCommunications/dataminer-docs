@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/visio-adding-a-background/> 
+> *<https://community.dataminer.services/video/visio-adding-a-background/>* 
 
 ### Specifying background pages in Visio
 

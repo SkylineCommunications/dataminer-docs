@@ -41,7 +41,7 @@ Once this has been configured, if a user tries to log in to the DMA using extern
 
 > [!TIP]
 > See also:
-> [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library
+> *[Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/)* in the Dojo video library
 
 ### Creating a DataMiner metadata file
 

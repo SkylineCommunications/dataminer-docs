@@ -19,7 +19,7 @@ These two alarm storm protection types can be combined.
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-alarm-storm-prevention/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-alarm-storm-prevention/>* 
 
 ### Configuring alarm storm protection
 

@@ -117,7 +117,7 @@ https://[DMA]/dataminercube
 > -  In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
 > -  If DataMiner Cube has been set as the default client, it is not necessary to add <br>“*/dataminercube*” in the URL.
 > -  DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.
-> -  It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>. 
+> -  It is good practice to encode URLs according to the W3C guidelines. For more information, see *<http://www.w3schools.com/tags/ref_urlencode.asp>*. 
 
 > [!CAUTION]
 > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
@@ -287,7 +287,7 @@ Example:
 > -  When multiple filters are specified, only the lowest filter in the selected chain will be used. However, if no chain is specified, all filters are used to find the correct chain.
 > -  If only one row matches the filter, an object will be loaded.
 > -  If the filter value is a key prefix, add an asterisk (“\*”) to the filter value.
-> -  URLs containing filters must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp). 
+> -  URLs containing filters must be encoded according to the W3C guidelines. For more information, see [*http://www.w3schools.com/tags/ref_urlencode.asp*](http://www.w3schools.com/tags/ref_urlencode.asp). 
 
 > [!TIP]
 > See also:

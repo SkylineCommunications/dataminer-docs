@@ -16,7 +16,7 @@ By default, alarms are cleared automatically. However, if you set the AutoClear 
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-working-with-clearable-alarms/> 
+> *<https://community.dataminer.services/video/alarm-console-working-with-clearable-alarms/>* 
 
 ### Automatic versus manual alarm clearing
 

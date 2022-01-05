@@ -23,7 +23,7 @@ The file *SNMP Managers.xml* is used for the configuration of remote SNMP Manage
     | codepage="65001"          | Equals unicode=”true”  |
     | codepage="0"              | Equals unicode=”false” |
 
-    For a list of all possible code pages, see <https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756(v=vs.85).aspx>.
+    For a list of all possible code pages, see *<https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756(v=vs.85).aspx>*.
 
 > [!NOTE]
 > To implement any manual changes to *SNMP Managers.xml*, first stop the DMA and then restart it after your changes have been saved.

@@ -186,7 +186,7 @@ If you want a layer of sourceType “overlay” to display a KML image, do the f
 > [!NOTE]
 > -  Do not store private KML files in the folder “C:\\Skyline DataMiner\\Webpages”. Files in that folder will be publicly accessible.
 > -  If you use a private KML file, only users who have logged on to DataMiner Maps will be able to request a download link. The download links can be used only once and expire after 5 minutes
-> -  For more information on the KML file format, see [http://code.google.com/apis/kml/documentation/mapsSupport.html](http://code.google.com/apis/kml/documentation/mapsSupport.md).
+> -  For more information on the KML file format, see *[http://code.google.com/apis/kml/documentation/mapsSupport.html](http://code.google.com/apis/kml/documentation/mapsSupport.md)*.
 > -  KML layers are always used as the bottom layers of the map, while other layers are drawn from top to bottom as defined in the configuration.
 
 #### Overlays of type “geojson”

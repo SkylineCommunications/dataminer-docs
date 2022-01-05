@@ -14,7 +14,7 @@ In this section:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/surveyor-displaying-alarm-statistics/> 
+> *<https://community.dataminer.services/video/surveyor-displaying-alarm-statistics/>* 
 
 #### Configuration in MaintenanceSettings.xml
 

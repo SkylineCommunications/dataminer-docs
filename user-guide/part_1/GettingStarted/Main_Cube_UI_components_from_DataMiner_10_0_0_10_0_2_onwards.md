@@ -100,7 +100,7 @@ From DataMiner 10.0.0/10.0.2 onwards, on the left-hand side of the Cube UI, a si
 
 - *Workspaces*: Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](Working_with_workspaces.md).
 
-- *Community*: This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features.
+- *Community*: This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the *[DataMiner Dojo user community](https://community.dataminer.services/)*, including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features.
 
 From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sidebar using the “...” or “+” button. This button opens a menu where you can select the buttons you want to pin.
 

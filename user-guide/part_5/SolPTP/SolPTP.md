@@ -15,4 +15,4 @@ This section contains the following information on the DataMiner PTP app:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/dataminer-ptp-app/> 
+> *<https://community.dataminer.services/video/dataminer-ptp-app/>* 

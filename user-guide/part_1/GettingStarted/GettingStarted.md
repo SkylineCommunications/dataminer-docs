@@ -10,4 +10,4 @@ This section details the basic functionality of the main DataMiner client applic
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/dataminer-cube-getting-started-with-dataminer-cube/> 
+> *<https://community.dataminer.services/video/dataminer-cube-getting-started-with-dataminer-cube/>* 

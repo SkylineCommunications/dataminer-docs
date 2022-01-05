@@ -213,7 +213,7 @@ To allow users to specify what is displayed on the Y-axis, use the session varia
     ```
 
     > [!NOTE]
-    > You can use the “Minify/Compact” function at https://jsonformatter.org/ to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
+    > You can use the “Minify/Compact” function at *https://jsonformatter.org/* to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
 
 ### Making shapes display information about objects selected on the timeline
 
@@ -277,7 +277,7 @@ Example of a JSON string with three custom actions:
 ```
 
 > [!NOTE]
-> You can use the “Minify/Compact” function at https://jsonformatter.org/ to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
+> You can use the “Minify/Compact” function at *https://jsonformatter.org/* to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
 
 ### Configuring command controls for a Resource Manager component
 
@@ -367,7 +367,7 @@ The value of these properties can be defined as follows:
 
     - Case-insensitive.
 
-    - List of supported color names: <https://msdn.microsoft.com/en-us/library/system.windows.media.colors.aspx>
+    - List of supported color names: *<https://msdn.microsoft.com/en-us/library/system.windows.media.colors.aspx>*
 
     - Example: *Green* 
 

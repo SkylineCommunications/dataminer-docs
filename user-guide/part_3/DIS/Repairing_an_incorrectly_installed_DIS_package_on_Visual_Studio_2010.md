@@ -12,6 +12,6 @@ If you inadvertently installed a recent DIS package on top of Visual Studio 2010
 
 2. Download the compatible installation package from the following location, and install DIS again:
 
-    <https://community.dataminer.services/dataminer-integration-studio-other-downloads/> 
+    *<https://community.dataminer.services/dataminer-integration-studio-other-downloads/>* 
 
 3. In the Visual Studio menu, go to *DIS \> Settings... \> Updates*, clear the *Check for plugin updates* option, and click *OK*.

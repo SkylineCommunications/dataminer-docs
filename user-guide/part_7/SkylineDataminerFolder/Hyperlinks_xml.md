@@ -6,7 +6,7 @@ DataMiner administrators will often create custom commands that open a web page,
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/> 
+> -  *<https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/>* 
 > -  [Adding a custom command to the Alarm Console shortcut menu](../../part_2/alarms/Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu.md) 
 
 In this section:
@@ -398,9 +398,9 @@ For example:
 
 For more information on the supported formatting, refer to the following articles:
 
-- <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings> 
+- *<https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>* 
 
-- <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings> 
+- *<https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>* 
 
 > [!NOTE]
 > In addition to the illegal characters described in the mentioned articles, the “\]” and “\[“ characters are also illegal in these keywords.

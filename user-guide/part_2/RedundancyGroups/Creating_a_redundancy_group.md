@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-redundancy-groups/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-redundancy-groups/>* 
 
 To create a redundancy group:
 

@@ -21,4 +21,4 @@ The following procedures are described in this section:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/backup-restoring-and-migrating-a-dataminer-agent/> 
+> *<https://community.dataminer.services/video/backup-restoring-and-migrating-a-dataminer-agent/>* 

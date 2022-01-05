@@ -3,7 +3,7 @@
 On a DMA using a MySQL general database, the current values of all element parameters marked “to be saved” in the element are saved in a local MySQL database table called “elementdata\_\[DMAID\]”. If, for some reason, you want all or some of those parameter values to be cleared, refer to the instructions below.
 
 > [!NOTE]
-> For more information on the save attribute of the Protocol.Params.Param tag, refer to the [DataMiner Development Library](https://help.dataminer.services/development/).
+> For more information on the save attribute of the Protocol.Params.Param tag, refer to the *[DataMiner Development Library](https://help.dataminer.services/development/)*.
 
 > [!WARNING]
 > Only people with the appropriate skills should be allowed to manipulate database contents directly. Incorrect changes made to the database can damage your entire DataMiner System.

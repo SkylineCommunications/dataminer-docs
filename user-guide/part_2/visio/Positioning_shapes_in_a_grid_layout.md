@@ -8,7 +8,7 @@ In a Visio drawing, you can position shapes in a grid layout. This allows you to
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/dataminer-inspire-advanced-visual-overview-features/> 
+> *<https://community.dataminer.services/video/dataminer-inspire-advanced-visual-overview-features/>* 
 
 ### Configuring the shape data fields
 

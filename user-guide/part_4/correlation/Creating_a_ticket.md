@@ -2,12 +2,12 @@
 
 This action is only available if:
 
-- The soft-launch option *CorrelationTicketAction* is enabled. See <https://community.dataminer.services/documentation/soft-launch-options/>.
+- The soft-launch option *CorrelationTicketAction* is enabled. See *<https://community.dataminer.services/documentation/soft-launch-options/>*.
 
 - The DMA has a Ticketing license and uses a Cassandra database.
 
 > [!WARNING]
-> This feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> This feature is currently still in preview. For more information, see *[Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
 
 Use this action to create a ticket linked to the correlated alarm.
 

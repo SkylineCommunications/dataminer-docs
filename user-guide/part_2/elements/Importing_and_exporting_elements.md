@@ -13,7 +13,7 @@ In this section:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/>* 
 
 1. Either open the card of the view where you want to import the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
 

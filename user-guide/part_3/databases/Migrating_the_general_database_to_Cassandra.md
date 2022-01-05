@@ -10,7 +10,7 @@ Before you can migrate to Cassandra, DataMiner has to check if your system is re
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/cassandra-migrating-to-cassandra/> 
+> *<https://community.dataminer.services/video/cassandra-migrating-to-cassandra/>* 
 
 #### Prerequisites
 
@@ -97,7 +97,7 @@ Before the migration to Cassandra can begin, the migration wizard first checks i
     > [!NOTE]
     > -  The check looks for any SQL query expressions that might cause the script to be invalid. However, it could be that such expressions in a script are used to query a different database, in which case the script is compatible even though the wizard cannot see this. In that case, add the following comment line in the first block of C# code of the script to indicate that it is compliant: <br> *//\[CassandraReady=true\]* 
     > -  When Automation scripts are checked for compliance and incompatibilities are found, the line numbers where these occur are stored in the file ScriptCache.txt, in the folder *C:\\Skyline DataMiner\\System Cache*. For each script, the file lists the name followed by "true" or "false" depending on whether the script is compatible. If the script is incompatible, this is then followed by the number of the invalid script action (with the first action being 0) and the line number of the invalid line. If there are several incompatible lines, the line numbers are separated by semicolons.
-    > -  If a script is tagged as \[CassandraReady=false\], it is considered incompatible, but not checked further. As such, no information about such a script is included in ScriptCache.txt.
+    > -  If a script is tagged as *\[CassandraReady=false\]*, it is considered incompatible, but not checked further. As such, no information about such a script is included in ScriptCache.txt.
 
 5. Under *DataMiner Agent System Requirements*, check whether your system has adequate resources available for the migration. If not, you may need to upgrade your system before the migration is possible. There are also several options available. You may need to click the *More options* button in the lower right corner to see some of these options.
 
@@ -148,7 +148,7 @@ After you have followed the procedure above and system requirements are met, you
 
     > [!NOTE]
     > -  The file name of the download is expected to be in the format *cassandra-binaries-\*.dmupgrade*.
-    > -  The Cassandra binaries package is also available on Dojo at <https://community.dataminer.services/download/cassandra-installer/>.
+    > -  The Cassandra binaries package is also available on Dojo at *<https://community.dataminer.services/download/cassandra-installer/>*.
 
 4. If you selected not to start the migration automatically, at this point you will need to start the migration manually. Otherwise it will start as soon as the package has been downloaded.
 

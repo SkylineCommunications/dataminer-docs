@@ -27,7 +27,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     > [!TIP]
     > See also:
-    > <https://community.dataminer.services/documentation/sllogcollector-tool/>
+    > *<https://community.dataminer.services/documentation/sllogcollector-tool/>*
 
 - **Upgrade**
 

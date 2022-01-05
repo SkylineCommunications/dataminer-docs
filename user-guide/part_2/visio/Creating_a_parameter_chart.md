@@ -42,7 +42,7 @@ To configure the shapes:
     If you specify multiple parameter IDs, separate them by means of pipe characters (“\|”).
 
     > [!NOTE]
-    > -  In the value of the shape data field, you can use placeholders to refer to e.g. session variables. For example: 219:341:114:\[Var:MyVariable\]\|219:341:114:\[Var:MyOtherVariable\].
+    > -  In the value of the shape data field, you can use placeholders to refer to e.g. session variables. For example: *219:341:114:\[Var:MyVariable\]\|219:341:114:\[Var:MyOtherVariable\]*.
     > -  From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
     > -  From DataMiner 9.6.8 onwards, this syntax allows the use of element names, \[this element\] placeholders and keys containing forward slashes (e.g. dmaID/elementID).
 
@@ -199,7 +199,7 @@ Below, you can find the options that can be specified in the **ParametersOptions
     ```
 
     > [!NOTE]
-    > [For more information on the possible color names, refer to the following website:](https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx) https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx. 
+    > [For more information on the possible color names, refer to the following website:](https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx) *https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx*. 
 
 - **Title:**
 

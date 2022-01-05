@@ -10,7 +10,7 @@ The DataMiner Cloud Platform is also accessible to guests, i.e. people who are n
 
 ### Logging on
 
-When you access <https://dataminer.services>, you will have the following options to authenticate yourself with your corporate email address:
+When you access *<https://dataminer.services>*, you will have the following options to authenticate yourself with your corporate email address:
 
 - If your corporate email address is linked to a Microsoft (personal or work), Google, Amazon or LinkedIn account, you can authenticate yourself via one of those identity providers. This option is to be preferred, as it will allow you to use an existing account rather than a new, dedicated one.
 

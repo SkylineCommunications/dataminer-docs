@@ -13,7 +13,7 @@ In this section:
 > [!TIP]
 > See also:
 > -  [Using the Alarm Console quick filter box](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-alarm-console-quick-filter-box) 
-> -  <https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/> 
+> -  *<https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/>* 
 
 ### Tips on the use of quick filters
 

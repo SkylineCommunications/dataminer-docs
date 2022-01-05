@@ -35,6 +35,6 @@ To do so:
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/ruis-rapid-recap-delt/> 
-> -  <https://community.dataminer.services/video/agents-migrating-elements-from-one-dma-to-another/> 
+> -  *<https://community.dataminer.services/video/ruis-rapid-recap-delt/>* 
+> -  *<https://community.dataminer.services/video/agents-migrating-elements-from-one-dma-to-another/>* 
 >

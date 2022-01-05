@@ -231,7 +231,7 @@ Restrictions:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/>* 
 
 #### Sample snippets in shortcut menu
 

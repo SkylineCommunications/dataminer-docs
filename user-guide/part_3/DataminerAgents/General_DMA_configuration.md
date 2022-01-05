@@ -224,7 +224,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/agents-configuring-an-email-server/> 
+> *<https://community.dataminer.services/video/agents-configuring-an-email-server/>* 
 
 #### Prerequisite
 
@@ -421,7 +421,7 @@ In this section:
 
 #### Setting up redirection of all HTTP traffic to HTTPS
 
-1. Install URL Rewrite 2.0 from the website <http://www.iis.net/downloads/microsoft/url-rewrite>.
+1. Install URL Rewrite 2.0 from the website *<http://www.iis.net/downloads/microsoft/url-rewrite>*.
 
     > [!NOTE]
     > This step is no longer required from DataMiner 10.0.0/10.0.2 onwards, as this module is automatically included in DataMiner upgrades from this version onwards.

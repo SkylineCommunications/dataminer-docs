@@ -1,7 +1,7 @@
 ## Sharing a dashboard using the Live Sharing Service
 
 > [!NOTE]
-> -  Prior to DataMiner 10.1.12, this feature is only available in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
+> -  Prior to DataMiner 10.1.12, this feature is only available in *[soft launch](https://community.dataminer.services/documentation/soft-launch-options/)*.
 > -  This feature is only available if the DMA is connected to the cloud. See [Connecting your DataMiner System to the cloud](../../part_51/AboutCloudPlatform/Connecting_your_DataMiner_System_to_the_cloud.md).
 
 1. In the list of dashboards on the left, select the dashboard you want to share.

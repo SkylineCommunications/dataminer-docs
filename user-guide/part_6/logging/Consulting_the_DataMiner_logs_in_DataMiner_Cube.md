@@ -20,4 +20,4 @@ The page consists of four tabs:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-logging/> 
+> *<https://community.dataminer.services/video/ruis-rapid-recap-logging/>* 

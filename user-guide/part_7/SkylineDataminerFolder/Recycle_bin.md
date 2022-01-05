@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/backup-using-the-recycle-bin-of-dataminer/> 
+> *<https://community.dataminer.services/video/backup-using-the-recycle-bin-of-dataminer/>* 
 
 The *Recycle Bin* folder contains a number of zip files, one for each configuration change that has been implemented in the system.
 

@@ -33,11 +33,11 @@ In some shape data fields, especially fields that display the current value of a
 
 - **LineColor;condition,color**
 
-    The line color of the shape (or the connection) will be set to the specified color if the condition is TRUE.     Colors can be specified either as predefined names (see link below) or as hexadecimal RGB values ("#rgb", "#rrggbb", "#aarrggbb").     <https://msdn.microsoft.com/en-us/windows/aa358802(v=vs.71)>
+    The line color of the shape (or the connection) will be set to the specified color if the condition is TRUE.     Colors can be specified either as predefined names (see link below) or as hexadecimal RGB values ("#rgb", "#rrggbb", "#aarrggbb").     *<https://msdn.microsoft.com/en-us/windows/aa358802(v=vs.71)>*
 
 - **FillColor;condition,color**
 
-    The fill color of the shape will be set to the specified color if the condition is TRUE.     Colors can be specified either as predefined names (see link below) or as hexadecimal RGB values ("#rgb", "#rrggbb", "#aarrggbb").     <https://msdn.microsoft.com/en-us/windows/aa358802(v=vs.71)>
+    The fill color of the shape will be set to the specified color if the condition is TRUE.     Colors can be specified either as predefined names (see link below) or as hexadecimal RGB values ("#rgb", "#rrggbb", "#aarrggbb").     *<https://msdn.microsoft.com/en-us/windows/aa358802(v=vs.71)>*
 
 > [!NOTE]
 > It is not possible to use wildcards in the condition, but you can use regular expressions.

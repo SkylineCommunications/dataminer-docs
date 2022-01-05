@@ -1,6 +1,6 @@
 # Overview of the Dashboards app UI
 
-You can access the new Dashboards app via the link https://\[MyDataMiner\]/dashboard or http://\[MyDataMiner\]/dashboard, depending on your setup.
+You can access the new Dashboards app via the link *https://\[MyDataMiner\]/dashboard* or *http://\[MyDataMiner\]/dashboard*, depending on your setup.
 
 > [!NOTE]
 > We recommend to use Google Chrome to access the Dashboards app. Microsoft Edge, Mozilla Firefox and Safari are also supported.

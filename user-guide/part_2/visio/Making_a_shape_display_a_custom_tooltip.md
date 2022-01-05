@@ -4,7 +4,7 @@ Using a shape data field of type **Info**, you can add custom tooltips to shapes
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/visio-adding-a-tooltip-on-a-view-object/> 
+> *<https://community.dataminer.services/video/visio-adding-a-tooltip-on-a-view-object/>* 
 
 ### Configuring the shape data field
 

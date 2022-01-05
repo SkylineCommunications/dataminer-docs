@@ -84,7 +84,7 @@ The pane consists of a tree view with several fixed nodes:
 - **DASHBOARDS**: Displays the legacy *Dashboards* app.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See *[soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
 
 - **NOTES**: Allows users to add short notes to DataMiner items:
 
@@ -97,7 +97,7 @@ The pane consists of a tree view with several fixed nodes:
 - **ANNOTATIONS**: Displays more extensive comments on DataMiner items. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+    > From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See *[soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
 
 Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* on view cards.
 
