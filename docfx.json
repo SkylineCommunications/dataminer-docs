@@ -33,7 +33,7 @@
       "default",
       "templates/slc_template"
     ],
-    "postProcessors": [],
+    "postProcessors": [ "ExtractSearchIndex" ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
