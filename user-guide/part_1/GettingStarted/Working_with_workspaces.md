@@ -42,6 +42,6 @@ The following actions are possible in the *Workspaces* pane:
 
 > [!TIP]
 > See also:
-> -  *<https://community.dataminer.services/video/ruis-rapid-recap-workspaces/>* 
-> -  *<https://community.dataminer.services/video/dataminer-cube-workspaces-in-dataminer-cube/>* 
+> -  <https://community.dataminer.services/video/ruis-rapid-recap-workspaces/> 
+> -  <https://community.dataminer.services/video/dataminer-cube-workspaces-in-dataminer-cube/> 
 >

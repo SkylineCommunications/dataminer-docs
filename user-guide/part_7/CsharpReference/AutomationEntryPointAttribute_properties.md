@@ -10,4 +10,4 @@ AutomationEntryPointType Type
 
 #### TypeId
 
-When implemented in a derived class, gets a unique identifier for this attribute. (Inherited from *Attribute*. See *<http://msdn2.microsoft.com/en-us/library/e8kc3626>*.)
+When implemented in a derived class, gets a unique identifier for this attribute. (Inherited from *Attribute*. See <http://msdn2.microsoft.com/en-us/library/e8kc3626>.)

@@ -145,7 +145,7 @@ To do so:
 
     > [!TIP]
     > See also:
-    > *[https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequest­element.useunsafeheaderparsing.aspx](https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequestelement.useunsafeheaderparsing.aspx)* 
+    > [https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequest­element.useunsafeheaderparsing.aspx](https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequestelement.useunsafeheaderparsing.aspx) 
 
 ### Configuring a thumbnail for HTTP Live Streaming
 
@@ -158,7 +158,7 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 ```
 
 > [!NOTE]
-> -  For more information on HLS, see *<https://github.com/video-dev/hls.js/>* 
-> -  All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see *<https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>*.
+> -  For more information on HLS, see <https://github.com/video-dev/hls.js/> 
+> -  All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>.
 > -  If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.
 >

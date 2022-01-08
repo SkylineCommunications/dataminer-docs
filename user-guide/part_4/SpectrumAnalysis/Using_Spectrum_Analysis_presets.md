@@ -16,7 +16,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/>* 
+> <https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/> 
 
 ### About presets
 

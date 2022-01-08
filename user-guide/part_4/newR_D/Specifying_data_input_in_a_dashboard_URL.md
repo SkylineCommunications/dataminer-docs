@@ -51,11 +51,11 @@ Within one object, use a slash (“/”) as the separator between its components
 
 For example:
 
-- *http://myDma/Dashboard/#/myDashboard?elements=1/1%1D1/2&views=1&parameters=<br>1/1/1%1D1/1/2/myIndex* 
+- http://myDma/Dashboard/#/myDashboard?elements=1/1%1D1/2&views=1&parameters=<br>1/1/1%1D1/1/2/myIndex 
 
     This URL opens a dashboard in which the elements 1/1 and 1/2, view 1 and parameters 1/1/1 and 1/1/2/myIndex are selected by default.
 
-- *http://myDma/Dashboard/#/myDashboard?time%20spans=1549753200000/1549835265007* 
+- http://myDma/Dashboard/#/myDashboard?time%20spans=1549753200000/1549835265007 
 
     This URL opens a dashboard with a time range filter from 1549753200000 to 1549835265007.
 

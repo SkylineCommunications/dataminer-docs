@@ -13,7 +13,7 @@ This category contains the following visualizations:
 ### Alarm table
 
 > [!WARNING]
-> This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see *[Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
+> This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 This component is available in soft launch from DataMiner 9.6.8 onwards, if the soft-launch option *ReportsAndDashboardsAlarmList* is enabled. From DataMiner 10.2.0/10.1.5 onwards, it is available without the soft-launch option.
 

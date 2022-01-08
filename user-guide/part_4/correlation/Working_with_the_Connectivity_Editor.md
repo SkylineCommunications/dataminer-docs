@@ -23,5 +23,5 @@ In this section:
 > [!TIP]
 > See also:
 > -  [Using the RCA slider](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-rca-slider) 
-> -  *<https://community.dataminer.services/video/ruis-rapid-recap-rca/>* 
+> -  <https://community.dataminer.services/video/ruis-rapid-recap-rca/> 
 >

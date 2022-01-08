@@ -12,4 +12,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/ruis-rapid-recap-documents/>* 
+> <https://community.dataminer.services/video/ruis-rapid-recap-documents/> 

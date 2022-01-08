@@ -66,4 +66,4 @@ Remarks on the DataMiner Indexing Engine installation
     request.RemoteOptions = RemoteOptions.Remote(new string[] { "10.11.51.58" , "10.11.52.58" , "10.11.53.58" });
     ```
 
-- When you install the Indexing database, TLS is not enabled by default. For information on how to enable this, go to *[Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/)* on Dojo.
+- When you install the Indexing database, TLS is not enabled by default. For information on how to enable this, go to [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/) on Dojo.

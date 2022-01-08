@@ -7,7 +7,7 @@ For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in 
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/ruis-rapid-recap-general-parameters/>* 
+> <https://community.dataminer.services/video/ruis-rapid-recap-general-parameters/> 
 
 #### \[Lock status\]
 

@@ -44,4 +44,4 @@ DataMiner Maps has a number of interesting features:
 
     If you notice the yellow Pegman icon, this means that Google Street View is enabled in your DataMiner Map.     For more information on how to use Street View, see:
 
-    - *[http://maps.google.com/help/maps/streetview/learn/using-street-view.html](http://maps.google.com/help/maps/streetview/learn/using-street-view.md)*
+    - [http://maps.google.com/help/maps/streetview/learn/using-street-view.html](http://maps.google.com/help/maps/streetview/learn/using-street-view.md)

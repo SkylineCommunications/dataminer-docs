@@ -17,7 +17,7 @@ To link a DMA to a remote server with a Cassandra database:
 
 1. Install Cassandra on the remote server.
 
-    1. Download the package containing the Cassandra binaries from *[DataMiner Dojo](https://community.dataminer.services/downloads/)*, and extract it on the first server where Cassandra will be installed.
+    1. Download the package containing the Cassandra binaries from [DataMiner Dojo](https://community.dataminer.services/downloads/), and extract it on the first server where Cassandra will be installed.
 
     2. Locate the file *cassandra.yaml*. By default, it is located in the folder *C:\\Program Files\\Cassandra\\conf*.
 
@@ -40,7 +40,7 @@ To link a DMA to a remote server with a Cassandra database:
 
 2. Install any additional Cassandra nodes if necessary:
 
-    1. Download the package containing the Cassandra binaries from *[DataMiner Dojo](https://community.dataminer.services/downloads/)*, and extract it on the first server where Cassandra will be installed.
+    1. Download the package containing the Cassandra binaries from [DataMiner Dojo](https://community.dataminer.services/downloads/), and extract it on the first server where Cassandra will be installed.
 
     2. Open the file *cassandra.yaml* in a text editor and replace the following IP addresses:
 
@@ -69,7 +69,7 @@ To link a DMA to a remote server with a Cassandra database:
 
     > [!TIP]
     > See also:
-    > *<http://docs.datastax.com/en/cassandra/3.0/cassandra/operations/opsAddNodeToCluster.html?hl=add%2Cnode>*
+    > <http://docs.datastax.com/en/cassandra/3.0/cassandra/operations/opsAddNodeToCluster.html?hl=add%2Cnode>
 
 3. On the first Cassandra server, change the default credentials:
 
@@ -112,7 +112,7 @@ To link a DMA to a remote server with a Cassandra database:
     3. In the \<Database> tag, add the *consistencyLevel=”x”* attribute, and set it to the consistency level you want, e.g. *two*.
 
         > [!NOTE]
-        > -  The following possible consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOn. For more information, see *[https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.md)*.
+        > -  The following possible consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOn. For more information, see [https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.md).
         > -  The *consistencyLevel* attribute should only be changed in case the Cassandra cluster feature is used or a remote Cassandra server is used. If the standard configuration of one Cassandra cluster per DMA is used, changing this attribute can cause the DMA to fail to start up.
 
     4. Optionally, to adjust the timeout time to read from the database, adjust the value (in milliseconds) in the readTimeOut tag. By default, this is set to five minutes. For example:

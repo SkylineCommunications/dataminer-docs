@@ -27,7 +27,7 @@ To access the properties of an element:
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/dataminer-cube-adding-properties-to-elements-views-and-services/>* 
+> <https://community.dataminer.services/video/dataminer-cube-adding-properties-to-elements-views-and-services/> 
 
 To add a custom property to a DataMiner item, which can be an element, but also a service, a view, or an alarm:
 

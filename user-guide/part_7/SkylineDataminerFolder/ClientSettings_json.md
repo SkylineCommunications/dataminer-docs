@@ -257,7 +257,7 @@ From DataMiner 9.6.11 onwards, the time displayed in the DataMiner web apps (e.g
     This last line will paste the required string to the clipboard.
 
     > [!NOTE]
-    > For more information on the *TimeZoneInfo.ToSerializedString* method, see *<https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.toserializedstring>*.
+    > For more information on the *TimeZoneInfo.ToSerializedString* method, see <https://docs.microsoft.com/en-us/dotnet/api/system.timezoneinfo.toserializedstring>.
 
 3. Save and close the file.
 

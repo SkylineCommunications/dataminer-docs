@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/>* 
+> <https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/> 
 
 1. Right-click in the Surveyor and select *New \> Service* to add a new service.
 

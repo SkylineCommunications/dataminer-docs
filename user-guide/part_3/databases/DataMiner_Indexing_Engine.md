@@ -17,8 +17,8 @@ The following topics provide more information on the DataMiner Indexing Engine:
 
 
 > [!NOTE]
-> For information on the system requirements for DataMiner Indexing, refer to *[DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/)*.
+> For information on the system requirements for DataMiner Indexing, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
 
 > [!TIP]
 > See also:
-> *[Elasticsearch setup](https://community.dataminer.services/elasticsearch-setup/)* on Dojo
+> [Elasticsearch setup](https://community.dataminer.services/elasticsearch-setup/) on Dojo

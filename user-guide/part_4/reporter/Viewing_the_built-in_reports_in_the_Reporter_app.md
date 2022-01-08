@@ -4,7 +4,7 @@ To view the built-in reports in the Reporter app:
 
 - In DataMiner Cube, go to *Apps* > *Reports & Dashboards*, or
 
-- Go directly to the link *https://\[MyDataMiner\]/reports* or *http://\[MyDataMiner\]/reports*, depending on your setup, or
+- Go directly to the link https://\[MyDataMiner\]/reports or http://\[MyDataMiner\]/reports, depending on your setup, or
 
 - To go directly to a particular type of built-in report, use that report’s URL as indicated below. Note that depending on your setup, you may need to use https instead of http in the indicated URLs.
 

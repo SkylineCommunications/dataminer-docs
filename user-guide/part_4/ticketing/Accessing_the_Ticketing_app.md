@@ -4,7 +4,7 @@ To access the Ticketing app:
 
 - In DataMiner Cube, go to *Apps* > *Ticketing*, or
 
-- Go directly to the link *https://\[MyDataMiner\]/Ticketing* or *http://\[MyDataMiner\]/Ticketing*, depending on your setup.
+- Go directly to the link https://\[MyDataMiner\]/Ticketing or http://\[MyDataMiner\]/Ticketing, depending on your setup.
 
 > [!NOTE]
 > -  The standalone Ticketing app can be accessed using Google Chrome, Microsoft Edge, Mozilla Firefox or Safari.

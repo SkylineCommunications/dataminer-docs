@@ -285,7 +285,7 @@ In the System Center module, the user permissions have been divided into three m
 | View Notes      | Permission to view DataMiner Notes.       |
 
 > [!NOTE]
-> From DataMiner 10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See *[soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
+> From DataMiner 10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 #### Visual Overview
 
@@ -394,7 +394,7 @@ In the System Center module, the user permissions have been divided into three m
 | Generate protocol | Permission to generate a protocol for a virtual function. Available from DataMiner 10.20./10.1.7 onwards. |
 
 > [!NOTE]
-> -  At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see *[Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
+> -  At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 > -  When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
 > -  The Functions module requires DataMiner Indexing Engine.
 

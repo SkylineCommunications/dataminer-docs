@@ -8,7 +8,7 @@
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/>* 
+> <https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/> 
 
 If the DataMiner Agent uses a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future.
 

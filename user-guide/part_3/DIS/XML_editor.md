@@ -135,7 +135,7 @@ If DataMiner Integration Studio is set to check for updates, an *Update* button
 If you click the *Update* button, the *Update* dialog box will ask whether you want to update DataMiner Integration Studio. To update, click *Update now*.
 
 > [!NOTE]
-> You can also download the latest version of the *DataMinerIntegrationStudio.vsix* file from *[DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/)*, and then update DataMiner Integration Studio by simply double-clicking the *DataMinerIntegrationStudio.vsix* file.
+> You can also download the latest version of the *DataMinerIntegrationStudio.vsix* file from [DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/), and then update DataMiner Integration Studio by simply double-clicking the *DataMinerIntegrationStudio.vsix* file.
 
 > [!TIP]
 > See also:

@@ -389,7 +389,7 @@ If you enable this feature, DataMiner will check all parameter updates that are 
 Default timeout: 30000 milliseconds
 
 > [!NOTE]
-> In a DataMiner protocol, you can also specify update verification settings on parameter level. See the Protocol.Params.Param tag in the Protocol Development Guide. See *<https://help.dataminer.services/development/>*.
+> In a DataMiner protocol, you can also specify update verification settings on parameter level. See the Protocol.Params.Param tag in the Protocol Development Guide. See <https://help.dataminer.services/development/>.
 
 #### RecycleBinSize
 

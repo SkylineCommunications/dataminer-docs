@@ -6,7 +6,7 @@ In case of a license (full or demo) for a DataMiner Agent that will be installed
 
     > [!TIP]
     > See also:
-    > *[DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/)*
+    > [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/)
 
 2. Provide Skyline with:
 

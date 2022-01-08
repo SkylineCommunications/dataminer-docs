@@ -60,7 +60,7 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
 
         5. Connect to the virtual machine with the Administrator account of the machine.
 
-    - If you are not using an Azure machine: If you want to add a non-Azure VM or computer to the domain, you need to create a VPN gateway that the VM or computer can then use to connect to the virtual network. For more information, see *[Connect an on-premises network to a Microsoft Azure virtual network](https://docs.microsoft.com/en-us/microsoft-365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network?view=o365-worldwide)* (external link).
+    - If you are not using an Azure machine: If you want to add a non-Azure VM or computer to the domain, you need to create a VPN gateway that the VM or computer can then use to connect to the virtual network. For more information, see [Connect an on-premises network to a Microsoft Azure virtual network](https://docs.microsoft.com/en-us/microsoft-365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network?view=o365-worldwide) (external link).
 
 3. Regardless of whether you use an Azure VM, make the server join the domain as follows:
 

@@ -254,7 +254,7 @@ Below you can find an alphabetical overview of settings that can be specified in
 
         For more information on these traffic types, see:
 
-        - *https://msdn.microsoft.com/en-us/library/windows/desktop/aa374102(v=vs.85).aspx* 
+        - https://msdn.microsoft.com/en-us/library/windows/desktop/aa374102(v=vs.85).aspx 
 
     - By specifying a custom DSCP marker (on systems running Windows 7 or a later version) referred to by a decimal value.
 
@@ -270,12 +270,12 @@ Below you can find an alphabetical overview of settings that can be specified in
 
         For more information, see:
 
-        - *https://en.wikipedia.org/wiki/Differentiated_services#Class_Selector* 
+        - https://en.wikipedia.org/wiki/Differentiated_services#Class_Selector 
 
-        - *https://tools.ietf.org/html/rfc2474* 
+        - https://tools.ietf.org/html/rfc2474 
 
         > [!NOTE]
-        > -  This QoS DiffServ packet marking feature makes use of the Windows qWave library, which is loaded dynamically. For more information, see: *https://technet.microsoft.com/en-us/library/hh831592(v=ws.11).aspx* 
+        > -  This QoS DiffServ packet marking feature makes use of the Windows qWave library, which is loaded dynamically. For more information, see: https://technet.microsoft.com/en-us/library/hh831592(v=ws.11).aspx 
         > -  The current implementation is limited to non-adaptive flows and protocols that make use of base sockets. Web-socket traffic and smart-serial traffic is not supported.
 
 - **DataMiner.SMTP**

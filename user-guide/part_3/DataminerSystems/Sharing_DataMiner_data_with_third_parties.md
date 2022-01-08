@@ -77,7 +77,7 @@ In addition, several other DataMiner applications feature data sharing possibili
 > [!TIP]
 > See also:
 > -  [DataMiner interfaces](DataMiner_interfaces.md)
-> -  *<https://help.dataminer.services/WebServices/>* 
+> -  <https://help.dataminer.services/WebServices/> 
 
 #### DataMiner Replication
 

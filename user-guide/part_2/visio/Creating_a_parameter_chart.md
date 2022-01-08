@@ -199,7 +199,7 @@ Below, you can find the options that can be specified in the **ParametersOptions
     ```
 
     > [!NOTE]
-    > [For more information on the possible color names, refer to the following website:](https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx) *https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx*. 
+    > [For more information on the possible color names, refer to the following website:](https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx) https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx. 
 
 - **Title:**
 

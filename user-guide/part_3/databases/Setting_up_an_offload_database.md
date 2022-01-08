@@ -155,7 +155,7 @@ The final step is the configuration of the DMS.
 
 2. For DMAs using a DataMiner version prior to 9.0.0, if the offload database is an Oracle database, install the Oracle Data Access Component (ODAC). The Oracle Client must be at least version 12.
 
-    Download: *[http://www.oracle.com/tecbhnetwork/topics/dotnet/utilsoft-086879.html](http://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.md)*
+    Download: [http://www.oracle.com/tecbhnetwork/topics/dotnet/utilsoft-086879.html](http://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.md)
 
     > [!NOTE]
     > From DataMiner 9.0.0 onwards, the SLDatabase process uses the managed Oracle Database accessor to connect to an Oracle database, so that additional tools like Oracle Client are no longer needed.

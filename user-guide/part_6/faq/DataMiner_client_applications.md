@@ -22,7 +22,7 @@ In case of problems, Skyline Technical Support may ask you to provide version in
 
 3. At the bottom of the dialog box, click *Copy Versions Information*.
 
-4. Paste the text in a new email message, and send the information to *[techsupport@skyline.be](mailto:techsupport%40skyline.be)*.
+4. Paste the text in a new email message, and send the information to [techsupport@skyline.be](mailto:techsupport%40skyline.be).
 
 #### Sending debug information to Technical Support
 
@@ -35,7 +35,7 @@ In case of problems, Skyline Technical Support may ask you to provide version in
     > [!NOTE]
     > You may get a warning, saying that an application (DataMiner Cube) is trying to send an email message from your computer.
 
-3. Send the information to *[techsupport@skyline.be](mailto:techsupport%40skyline.be)*.
+3. Send the information to [techsupport@skyline.be](mailto:techsupport%40skyline.be).
 
 ### How do I reinstall DataMiner Cube?
 

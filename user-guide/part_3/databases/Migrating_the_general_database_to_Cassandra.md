@@ -10,7 +10,7 @@ Before you can migrate to Cassandra, DataMiner has to check if your system is re
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/cassandra-migrating-to-cassandra/>* 
+> <https://community.dataminer.services/video/cassandra-migrating-to-cassandra/> 
 
 #### Prerequisites
 
@@ -148,7 +148,7 @@ After you have followed the procedure above and system requirements are met, you
 
     > [!NOTE]
     > -  The file name of the download is expected to be in the format *cassandra-binaries-\*.dmupgrade*.
-    > -  The Cassandra binaries package is also available on Dojo at *<https://community.dataminer.services/download/cassandra-installer/>*.
+    > -  The Cassandra binaries package is also available on Dojo at <https://community.dataminer.services/download/cassandra-installer/>.
 
 4. If you selected not to start the migration automatically, at this point you will need to start the migration manually. Otherwise it will start as soon as the package has been downloaded.
 

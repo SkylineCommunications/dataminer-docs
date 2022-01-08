@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/visio-customizing-mouseover-effects-on-a-view-object/>* 
+> <https://community.dataminer.services/video/visio-customizing-mouseover-effects-on-a-view-object/> 
 
 In Visio, you can design buttons with four different states:
 

@@ -31,7 +31,7 @@ In the *Component* > *Layout* tab, only the default options are available for 
 ### Button
 
 > [!WARNING]
-> This feature is currently still in preview. For more information, see *[Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
+> This feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 This component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
 
@@ -85,7 +85,7 @@ To configure the component:
 ### Button panel
 
 > [!WARNING]
-> This feature is currently still in preview. For more information, see *[Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/)*.
+> This feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 This component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButtonPanel* is enabled.
 

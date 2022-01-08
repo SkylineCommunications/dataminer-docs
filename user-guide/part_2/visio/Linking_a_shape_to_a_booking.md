@@ -25,8 +25,8 @@ The following placeholders can be used in the text displayed on the *Reservation
 
 > [!NOTE]
 > -  For more information on possible date and time formats, refer to:
->     - *<https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>* 
->     - *<https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>* 
+>     - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings> 
+>     - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings> 
 > -  From DataMiner 9.6.6 onwards, additional features are supported:
 >     - If a parent shape has *Reservation* shape data and a child shape has fields linked to the same booking (e.g. *Info* shape data, shape text placeholders), the child shape will also become a reservation shape linked to the same booking.
 >     - The shape text can now contain placeholders referring to custom booking properties, in the format \[*PropertyName*\], e.g. *\[Class\]*.

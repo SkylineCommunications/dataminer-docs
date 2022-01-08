@@ -240,7 +240,7 @@ In this section:
         > Proceed with extreme caution when changing these settings. They can have a large impact on the communications between the DMA and the element and could, in the worst case, cause communication interruptions or failure.
 
         > [!NOTE]
-        > Which ping command is used by DataMiner depends on the protocol configuration. For more information, refer to the information on ping groups in the *[DataMiner Development Library](https://help.dataminer.services/development/)*.
+        > Which ping command is used by DataMiner depends on the protocol configuration. For more information, refer to the information on ping groups in the [DataMiner Development Library](https://help.dataminer.services/development/).
 
     - **Enable SNMP agent**: Select this checkbox and specify the virtual IP address and subnet mask in order to be able to send SNMP Get and Set commands to the virtual IP address of the element.
 

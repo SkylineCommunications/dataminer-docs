@@ -2,13 +2,14 @@
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/agents-configuring-dma-failover/>* 
+> <https://community.dataminer.services/video/agents-configuring-dma-failover/> 
 
 To enable Failover using DataMiner version **10.1.8 or higher**:
 
 1. Make sure both DMAs are prepared and you have the necessary prerequisites. See [Preparing the two DataMiner Agents](Preparing_the_two_DataMiner_Agents.md).
 
-2. If you intend to configure Failover with a **shared hostname** instead of virtual IP addresses, make sure the IIS extension “Application Request Routing” is installed on both DMAs. See *<https://www.iis.net/downloads/microsoft/application-request-routing>*.
+2. If you intend to configure Failover with a **shared hostname** instead of virtual IP addresses, make sure the IIS extension “Application Request Routing” is installed on both DMAs. See
+<https://www.iis.net/downloads/microsoft/application-request-routing>.
 
 3. On the primary DMA, open DataMiner Cube.
 

@@ -17,7 +17,7 @@ Please take the following information into account:
     - To clean up the snapshots, you can run the following command in a command prompt window: *nodetool clearsnapshot*. This will mark all snapshots as ready for deletion; however, they will only be removed when the Cassandra service is restarted.
 
     > [!NOTE]
-    > To take a backup of the Cassandra database only, from DataMiner 10.2.0/10.1.8 onwards, you can use the *[Standalone Cassandra Backup Tool](https://community.dataminer.services/documentation/standalone-cassandra-backup-tool/)*.
+    > To take a backup of the Cassandra database only, from DataMiner 10.2.0/10.1.8 onwards, you can use the [Standalone Cassandra Backup Tool](https://community.dataminer.services/documentation/standalone-cassandra-backup-tool/).
 
 - For systems using **DataMiner Indexing**:
 
@@ -28,4 +28,4 @@ Please take the following information into account:
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/backup-configuring-backups/>* 
+> <https://community.dataminer.services/video/backup-configuring-backups/> 

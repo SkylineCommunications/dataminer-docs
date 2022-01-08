@@ -36,13 +36,13 @@ From DataMiner 9.5.8 onwards, it can have the following additional subtags:
 - **key**: Premium Google Maps JavaScript API key.
 
     > [!NOTE]
-    > For development and testing purposes, you can open a map without a key, using a URL like *http:// localhost/* or *http://servername/*. However, note that in that case you will only have access to limited functionality of the map.
+    > For development and testing purposes, you can open a map without a key, using a URL like http:// localhost/ or http://servername/. However, note that in that case you will only have access to limited functionality of the map.
 
 - **client**: If you have a “Google Maps APIs Premium Plan” license, you can specify your client ID in this attribute instead of specifying an API key.
 
 - **channel**: Business customers can optionally specify a channel for Channel Reports. To track usage across different applications using the same client ID, you may provide an optional channel parameter. By specifying different channel values for different aspects of your application, you can determine how your application is used.
 
-- For more info about Google Maps licensing, see: <br>*[http://www.google.com/enterprise/mapsearth/products/mapsapi.html](http://www.google.com/enterprise/mapsearth/products/mapsapi.md)*
+- For more info about Google Maps licensing, see: <br>[http://www.google.com/enterprise/mapsearth/products/mapsapi.html](http://www.google.com/enterprise/mapsearth/products/mapsapi.md)
 
 #### Configuration of the TilesServer tag
 
@@ -62,7 +62,7 @@ The *TilesServer* tag contains a *BaseLayers* tag which in turn contains a *Ba
 
 From DataMiner 10.0.8 onwards, Open Street Maps can be configured to be available offline. For this purpose, the *TilesServer* tag must be correctly configured in ServerConfig.xml, as detailed in [ServerConfig.xml syntax](#serverconfigxml-syntax). In addition, the offline server must be installed and configured. To do so:
 
-1. Download Docker according to the instructions on the following page: *<https://docs.docker.com/get-docker/>*.
+1. Download Docker according to the instructions on the following page: <https://docs.docker.com/get-docker/>.
 
 2. Run the installation package, making sure to select *Linux containers* when appropriate.
 
@@ -82,7 +82,7 @@ From DataMiner 10.0.8 onwards, Open Street Maps can be configured to be availabl
 
     - Map port 80 of the server inside the container to the port *\<host port>* of your machine.
 
-    In the *\<mbtiles folder>*, you can add the map tile files that you can download for specific regions of the world from the following page: *<https://openmaptiles.com/downloads/planet/>*.
+    In the *\<mbtiles folder>*, you can add the map tile files that you can download for specific regions of the world from the following page: <https://openmaptiles.com/downloads/planet/>.
 
 4. To check if the creation of the container succeeded, run the following command:
 
@@ -94,7 +94,7 @@ From DataMiner 10.0.8 onwards, Open Street Maps can be configured to be availabl
 
 5. Start the container with the command *docker start \<container name>*.
 
-6. Download the satellite tiles from the page *<https://openmaptiles.com/downloads/dataset/satellite-lowres/#0.23/0/-26>*) and save them in the mapped */data* folder.
+6. Download the satellite tiles from the page <https://openmaptiles.com/downloads/dataset/satellite-lowres/#0.23/0/-26>) and save them in the mapped */data* folder.
 
 7. Go to *http://localhost:**\<host port>**/* and follow the instructions:
 

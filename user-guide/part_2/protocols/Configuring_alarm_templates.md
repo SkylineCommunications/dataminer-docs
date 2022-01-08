@@ -175,7 +175,7 @@ Two types of hysteresis are available, Clear hysteresis and Alarm hysteresis, re
 > [!TIP]
 > See also:
 > -  [Alarm hysteresis](../alarms/Alarm_hysteresis.md)
-> -  *<https://community.dataminer.services/video/alarm-templates-hysteresis/>* 
+> -  <https://community.dataminer.services/video/alarm-templates-hysteresis/> 
 
  
 
@@ -243,7 +243,7 @@ Both for “absolute” and “relative” alarm thresholds, the “normal” va
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/ruis-rapid-recap-smart-baseline/>* 
+> <https://community.dataminer.services/video/ruis-rapid-recap-smart-baseline/> 
 
 ### Configuring an alarm template to generate information messages
 
@@ -307,7 +307,7 @@ When you click in the selection box in the *Condition* column, the following act
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/alarm-templates-conditional-monitoring/>* 
+> <https://community.dataminer.services/video/alarm-templates-conditional-monitoring/> 
 
 ### Configuring anomaly detection alarms for specific parameters
 

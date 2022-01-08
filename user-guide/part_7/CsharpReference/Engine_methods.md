@@ -211,7 +211,8 @@ Performs application-defined tasks associated with freeing, releasing, or resett
 void Dispose()
 ```
 
-Implements: *IDisposable.Dispose*() (see *<https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose?redirectedfrom=MSDN&view=netframework-4.7.2#System_IDisposable_Dispose>*)
+Implements: *IDisposable.Dispose*() (see
+<https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose?redirectedfrom=MSDN&view=netframework-4.7.2#System_IDisposable_Dispose>)
 
 #### Dispose (Boolean)
 

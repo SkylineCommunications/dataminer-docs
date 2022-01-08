@@ -68,4 +68,4 @@ Optionally, your DataMiner System can be configured to connect to third-party ap
 
 On top of all available private and public interfaces, highly specialized, custom interfaces can be developed to allow your DataMiner System to integrate seamlessly into your existing infrastructure.
 
-For more information, contact *[Skyline Sales](mailto:sales%40skyline.be)*.
+For more information, contact [Skyline Sales](mailto:sales%40skyline.be).

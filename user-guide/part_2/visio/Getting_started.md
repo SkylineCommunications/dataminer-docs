@@ -14,4 +14,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> *<https://community.dataminer.services/video/visio-creating-compelling-visio-files/>* 
+> <https://community.dataminer.services/video/visio-creating-compelling-visio-files/> 
