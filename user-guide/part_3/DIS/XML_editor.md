@@ -62,7 +62,7 @@ If you want to compare two protocols, do the following:
 
         > [!NOTE]
         > -  If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
-        > -  For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to https://api.skyline.be/\*
+        > -  For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to https://api.skyline.be/*
 
     3. Click *OK*.
 

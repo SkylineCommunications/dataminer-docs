@@ -4,9 +4,9 @@
 
 DataMiner Integration Studio has to be able to connect to addresses in the following ranges:
 
-- https://login.microsoftonline.com/\*
+- https://login.microsoftonline.com/*
 
-- https://aadcdn.msftauth.net/\*
+- https://aadcdn.msftauth.net/*
 
 - https://\*.dataminer.services/\*
 

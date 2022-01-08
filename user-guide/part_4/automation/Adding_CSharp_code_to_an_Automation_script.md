@@ -103,7 +103,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 
     In the example above, DataMiner will create a class Script with a static method Run, where the provided content in the C# code field will form the body of this Run method:
 
-    ```txt
+    ```cs
     using System;                                                          
     using System.IO;                                                       
     using Skyline.DataMiner.Automation;                                    

@@ -72,7 +72,7 @@ In addition to the discovery actions, the discovery profile also needs to contai
 
     The example below illustrates a discovery profile with SNMPv2 discovery actions.
 
-    ```txt
+    ```json
     {                                         
        "Actions": [{                         
              "Method": "GetRequest",          
