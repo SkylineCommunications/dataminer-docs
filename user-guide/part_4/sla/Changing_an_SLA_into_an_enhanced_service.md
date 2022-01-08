@@ -3,7 +3,8 @@
 It is possible to make a modification to the SLA protocol, in order to make the SLA only calculate alarm weights and add alarms to the Active Service Alarms table, but not generate outages. In essence, this reduces the SLA to a kind of enhanced service.
 
 > [!WARNING]
-> \-  This configuration option has a serious impact on the functionality of the SLA, and should therefore be applied with extreme care.<br> -  **Do not enable or disable this option during runtime.**
+> - This configuration option has a serious impact on the functionality of the SLA, and should therefore be applied with extreme care.
+> -  **Do not enable or disable this option during runtime.**
 
 ### Configuring the option
 
