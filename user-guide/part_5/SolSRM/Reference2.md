@@ -93,7 +93,7 @@ Either just use the script name as the property value, or specify the script in 
 
 **Example value**:
 
-```txt
+```json
 {"ScriptName":"SRM_ProfileLoadScript_Transport"}
 ```
 
@@ -123,7 +123,7 @@ Set the value to a JSON code block as illustrated below. In this code, the order
 
 **Example value**:
 
-```txt
+```json
 [                                                                                 
    { "BlockInfo": "FixedString", "Order":3},                                       
    { "BlockInfo": "Name: [BOOKINGNAME]", "Order": 1},                            
@@ -189,7 +189,7 @@ The JSON value of this property should contain the following fields:
 
 **Example value**:
 
-```txt
+```json
 {                                                                  
     "CandidateResources":null,                                         
     "Concurrency":310,                                                 
@@ -221,7 +221,7 @@ The value of this property should be configured in JSON format. It can contain s
 
 **Example value**:
 
-```txt
+```json
 {"Script":"Script:TESTEDA123||myarg=abcde-[RESERVATIONID]"}
 ```
 
@@ -239,7 +239,7 @@ As the value of this property, in JSON, specify the script that implements the t
 
 **Example values**:
 
-```txt
+```json
 {                                     
     "Script":"SRM_ApplyDataTransferRules",
     "Triggers":[{                        
@@ -254,7 +254,7 @@ As the value of this property, in JSON, specify the script that implements the t
 
 The property value above will cause the script "SRM_ApplyDataTransferRules" to be triggered every time the parameter "RF Modulation" on the node with label "Demodulating" changes.
 
-```txt
+```json
 {                                     
     "Script":"SRM_ApplyDataTransferRules",
     "Triggers":[{                        
@@ -267,7 +267,7 @@ The property value above will cause the script "SRM_ApplyDataTransferRules" to b
 
 The property value above will cause the script "SRM_ApplyDataTransferRules" to be triggered whenever the resource on the node with label "Demodulating" changes.
 
-```txt
+```json
 {                                           
   "Script": "SRM_DataTransferRulesTemplate",
      "Triggers": [                         
@@ -300,7 +300,7 @@ As the value of this property, in JSON, specify the name and version of the prot
 
 **Example value**:
 
-```txt
+```json
 {"ProtocolName" : "MyProtocol", "ProtocolVersion": "1.0.0.1"}
 ```
 
@@ -438,7 +438,7 @@ Specify the conditions in JSON format as illustrated below. Only "AND" combinati
 
 **Example value**:
 
-```txt
+```json
 {                                            
    "Condition":"<A>",                       
    "Value":[{                               
@@ -516,7 +516,7 @@ If the property is defined both on instance and on definition level, the instanc
 
 **Example value**:
 
-```txt
+```json
 {"Script":"SRM_ServiceProfileDataTransferExample"}
 ```
 

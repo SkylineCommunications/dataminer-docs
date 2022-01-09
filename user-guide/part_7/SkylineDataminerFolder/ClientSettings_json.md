@@ -38,7 +38,7 @@ To do so:
 
     By default, this value is set to 50. We recommend a minimum value of 20 and a maximum value of 250.
 
-    ```txt
+    ```json
     {                                                                                               
       "Name": "Cube common serverside settings",                                                    
       "Version": 1,                                                                                 
@@ -84,7 +84,7 @@ This can be done using the settings *commonServer.ui.Subscribe_To_All_Properties
 
 2. Set the setting *commonServer.ui.Subscribe_To_All_Properties* to *false*:
 
-    ```txt
+    ```json
     {                                                     
         "Name": "commonServer.ui.Subscribe_To_All_Properties",
         "Value": “False”,                                     
@@ -98,7 +98,7 @@ This can be done using the settings *commonServer.ui.Subscribe_To_All_Properties
 
     For example, to only subscribe to two properties called Property1 and Property2, specify the following configuration:
 
-    ```txt
+    ```json
     {                                        
         "Name": "commonServer.ui.Property_Cache",
         "Value": [                              
@@ -122,7 +122,7 @@ If a table parameter with a large number of rows is cached, DataMiner Cube will 
 
 For example, to have two table parameters cached, specify the following configuration.
 
-```txt
+```json
 {                                                             
     "Name": "commonServer.ui.Parameter_Cache",                    
     "Value": [                                                   
@@ -154,7 +154,7 @@ From DataMiner 9.6.11 onwards, it is also possible to cache table parameters tha
 
 The following example illustrates how to configure the caching of an input table and an output table:
 
-```txt
+```json
 {                                                                                                       
     "Name": "commonServer.ui.Parameter_Cache",                                                              
     "Value": [                                                                                             
@@ -162,13 +162,13 @@ The following example illustrates how to configure the caching of an input table
             "DataMinerID": 1,                                                                                       
             "ElementID": 2,                                                                                         
             "ParameterID": 1000,                                                                                    
-            "SubscriptionFilter": "value=1002 in_range 0/100;                      COLUMNS=1001,1002,1003,1004;"
+            "SubscriptionFilter": "value=1002 in_range 0/100; COLUMNS=1001,1002,1003,1004;"
         },                                                                                                      
         {                                                                                                       
             "DataMinerID": 1,                                                                                       
             "ElementID": 5,                                                                                         
             "ParameterID": 2000,                                                                                    
-            "SubscriptionFilter": "value=PK in_range 1/60;                      value=PK in_range 70/100;"      
+            "SubscriptionFilter": "value=PK in_range 1/60; value=PK in_range 70/100;"      
         }                                                                                                       
     ],                                                                                                     
     "VersionNumber": 0,                                                                                     
@@ -190,7 +190,7 @@ To do so:
 
 2. Set the value of the setting *Surveyor.CPE.LaunchCPECardOnSelect* to true.
 
-    ```txt
+    ```json
     {                                              
        "Name":"Surveyor.CPE.LaunchCPECardOnSelect",
        "Value": true,                              
@@ -212,7 +212,7 @@ From DataMiner 9.6.9 onwards, an advanced editing add-in is available in Visio i
 
 2. Set the setting *commonServer.ui.EnableVisioExtension* to *true* to enable the add-in or to *false* to disable it:
 
-    ```txt
+    ```json
     {                                              
         "Name": "commonServer.ui.EnableVisioExtension",
         "Value": “False”,                              
@@ -236,19 +236,19 @@ From DataMiner 9.6.11 onwards, the time displayed in the DataMiner web apps (e.g
 
     For example:
 
-    ```txt
-    {                                                                                                                                                                                                                                                                              
-        "Name": "commonServer.ui.DefaultTimeZone",                                                                                                                                                                                                                                     
+    ```json
+    {
+        "Name": "commonServer.ui.DefaultTimeZone",
         "Value": "Pacific Standard Time;-480;(UTC-08:00) Pacific Time (US & Canada);Pacific Standard Time;Pacific Daylight Time;[01:01:0001;12:31:2006;60;[0;02:00:00;4;1;0;];[0;02:00:00;10;5;0;];][01:01:2007;12:31:9999;60;[0;02:00:00;3;2;0;];[0;02:00:00;11;1;0;];];",
-        "VersionNumber": 0,                                                                                                                                                                                                                                                            
-        "Mode": 0,                                                                                                                                                                                                                                                                     
-        "InVisible": false                                                                                                                                                                                                                                                             
-    }                                                                                                                                                                                                                                                                              
+        "VersionNumber": 0,
+        "Mode": 0,
+        "InVisible": false
+    }
     ```
 
     To retrieve this time zone value, you can run the following commands in a PowerShell prompt on the server:
 
-    ```txt
+    ```powershell
     > $timezones = [System.TimeZoneInfo]::GetSystemTimeZones()                                                          
     > $timezone = $timezones | Where-Object {$PSItem.StandardName -eq [System.TimeZone]::CurrentTimeZone.StandardName }
     > Set-Clipboard -Value $timezone.ToSerializedString()                                                                 
@@ -275,21 +275,21 @@ From DataMiner 9.6.13 onwards, the Cube logging can display logs of type "Freeze
 
 Example:
 
-```txt
-    {                                                          
-      "Name": "commonServer.client.ui.logging.FreezeLogTime",  
-      "Value": 10,                                             
-      "VersionNumber": 0,                                      
-      "Mode": 0,                                               
-      "InVisible": false                                       
-    },                                                         
-    {                                                          
+```json
+    {
+      "Name": "commonServer.client.ui.logging.FreezeLogTime",
+      "Value": 10,
+      "VersionNumber": 0,
+      "Mode": 0,
+      "InVisible": false
+    },
+    {
       "Name": "commonServer.client.ui.logging.FreezePopupTime",
-      "Value": 30,                                             
-      "VersionNumber": 0,                                      
-      "Mode": 0,                                               
-      "InVisible": false                                       
-    },                                                         
+      "Value": 30,
+      "VersionNumber": 0,
+      "Mode": 0,
+      "InVisible": false
+    },
 ```
 
 ### Making Cube unload data pages when you navigate away
@@ -302,7 +302,7 @@ To enable this setting:
 
 2. Set the setting *commonServer.ui.datadisplay.PageUnloadOnNavigatingAway* to *true*.
 
-    ```txt
+    ```json
     {                                                                   
        "Name": "commonServer.ui.datadisplay.PageUnloadOnNavigatingAway",
        "Value": true,                                                   
@@ -324,7 +324,7 @@ To do so:
 
 2. Set the setting commonServer.card.DisplayForwardButton to *true*.
 
-    ```txt
+    ```json
     {                                                   
        "Name": "commonServer.card.DisplayForwardButton",
        "Value": true,                                   

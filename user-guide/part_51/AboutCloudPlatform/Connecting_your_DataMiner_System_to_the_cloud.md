@@ -14,9 +14,9 @@ To connect your DMS to the cloud:
 
     - Each DMA that will be connected to the cloud can reach the following endpoints:
 
-- *https://\*.dataminer.services/*
+        - *https://\*.dataminer.services/*
 
-- *wss://tunnel.dataminer.services/*
+        - *wss://tunnel.dataminer.services/*
 
 2. Download the appropriate DataMiner Cloud Pack installer from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
 
@@ -26,7 +26,7 @@ To connect your DMS to the cloud:
 
     2. Add the following content to the file, replacing \[your domain\] by your actual domain name, e.g. *my.domain.be*.
 
-        ```txt
+        ```json
         {                                                                                                 
            "GeneralCloudGatewayOptions": {                                                                
                 "DataMinerWebApiHttpUrl": "https://[your domain]/",    

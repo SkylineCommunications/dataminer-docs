@@ -135,7 +135,7 @@ In addition to the discovery actions, the discovery profile also needs to contai
 
 - For **SNMPv3**, more extensive credentials are needed, as illustrated below:
 
-    ```txt
+    ```json
     {                                                  
        "Actions": [{                                  
              "Method": "GetRequest",                   
@@ -229,7 +229,7 @@ HTTP discovery actions have the following fields:
 
 The example below illustrates a discovery profile with one HTTP discovery action.
 
-```txt
+```json
 {                                        
    "Actions": [{                        
          "Method": "GET",                
@@ -269,7 +269,7 @@ Serial discovery actions have the following fields:
 
 The example below illustrates a discovery profile with one serial discovery action.
 
-```txt
+```json
 {                                                                         
    "Actions": [                                                          
    {                                                                      
@@ -306,7 +306,7 @@ Credentials can be specified by adding username and password under *GenericSetti
 
 For example:
 
-```txt
+```json
 {                                                       
      "Actions": [                                      
            {                                            
@@ -372,7 +372,7 @@ Credentials can be specified by adding username and password under *GenericSetti
 
 For example:
 
-```txt
+```json
 {                                                 
    "Actions": [                                  
       {                                           

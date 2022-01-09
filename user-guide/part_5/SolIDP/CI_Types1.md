@@ -22,7 +22,7 @@ In addition, the CI Type can also contain the following fields:
 
 The example below illustrates a CI Type with SNMPv2 discovery actions.
 
-```txt
+```json
 {                                                                                                                                     
    "Conditions": [{                                                                                                                  
          "ActionName": "sysObjectID",                                                                                                 
@@ -223,7 +223,7 @@ The *Configurations* item contains an array of parameter sets. The following fie
 
 The example below configures *Administrator* as a username in PID 300, configures the password in PID 311 and clicks a *Login* button by setting value 1 to PID 321.
 
-```txt
+```json
 "Configurations": [          
 {                             
       "Order": 1,             
@@ -354,7 +354,7 @@ For each connection, this section also has to contain one of the following array
 
     - The last connection is a serial connection over UDP/IP.
 
-    ```txt
+    ```json
     "Ports": [{                             
           "DMAElementSnmpPortInfo": [{      
                 "DeviceAddress": "",         
@@ -467,7 +467,7 @@ For each connection, this section also has to contain one of the following array
 
     Example:
 
-    ```txt
+    ```json
     "Ports": [{                                 
           "DMAElementSnmpPortInfo": [],        
           "DMAElementSnmpV3PortInfo": [{        
@@ -509,7 +509,7 @@ For each connection, this section also has to contain one of the following array
 
     Example:
 
-    ```txt
+    ```json
     "Ports": [{                             
           "DMAElementSnmpPortInfo": [],    
           "DMAElementSnmpV3PortInfo": [],  
@@ -552,7 +552,7 @@ The *slowpoll* field contains the following fields:
 
 The example below will activate slow poll mode after 5 timeouts, with an ping internal of 30 seconds:
 
-```txt
+```json
 "SlowPoll": [              
    {                        
       "Base": "Number",     
@@ -568,7 +568,7 @@ This section allows you to configure the element properties. The properties item
 
 The example below specifies values for the element properties *Source* and *Platform*.
 
-```txt
+```json
 "Properties " : [                   
       {                              
       "Name" : "Source",             
