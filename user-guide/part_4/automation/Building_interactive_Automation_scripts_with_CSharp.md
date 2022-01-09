@@ -20,7 +20,7 @@ Notice that the programmer defined a number of columns and rows. This forms a gr
 
 Also notice that a height and a width have been defined for every dialog box item, and that the row heights and column widths have been set to “a” (i.e. automatic) instead of to a specific number of pixels. That way, the rows and columns will automatically be resized according to the size of the dialog box items.
 
-```txt
+```cs
 // Create the dialog box                                    
 UIBuilder uib = new UIBuilder();                            
                                                             
@@ -57,7 +57,7 @@ engine.ShowUI(uib);
 
 The following code displays a simple dialog box that shows a checkbox list. When you select one of the options in the list and you click *Next*, another dialog box will appear, showing the text of the option you selected.
 
-```txt
+```cs
 // ------------------------ SCREEN 1 -----------------------------  
                                                                     
 UIResults uir = null;                                               

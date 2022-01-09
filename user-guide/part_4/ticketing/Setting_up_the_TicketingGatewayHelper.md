@@ -4,7 +4,7 @@ The TicketingGatewayHelper class allows you to communicate with the Ticketing Ga
 
 The following example shows how to set up the TicketingGatewayHelper.
 
-```txt
+```cs
 class Script                                                                                                                          
 {                                                                                                                                     
     TicketingGatewayHelper Helper;                                                                                                        

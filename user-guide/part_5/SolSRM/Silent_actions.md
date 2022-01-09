@@ -61,7 +61,7 @@ To do so:
 
 The example below shows how a booking can be created without user interaction by means of an Automation script.
 
-```txt
+```cs
 using System;                                                                                                    
 using System.Collections.Generic;                                                                                
 using System.Linq;                                                                                               
@@ -165,7 +165,7 @@ The example below shows how resource, profile and parameter values can be assign
 > [!NOTE]
 > In case the booking is already running, you must force the service state to transition again so that LSO and Profile Load scripts will be executed to apply new settings or to configure the new resource.
 
-```txt
+```cs
 using System;                                                                                                                   
 using Skyline.DataMiner.Library.Solutions.SRM;                                                                                  
 using Skyline.DataMiner.Library.Solutions.SRM.Model.AssignProfilesAndResources;                                                 
@@ -234,7 +234,7 @@ public class Script
 
 The example below shows how properties can be added to an existing booking without user interaction by means of an Automation script.
 
-```txt
+```cs
 using System;                                                                                     
 using System.Collections.Generic;                                                                 
 using Skyline.DataMiner.Automation;                                                               
@@ -263,7 +263,7 @@ The example below shows how booking life cycle transitions (Finish, On-Hold, Con
 > [!NOTE]
 > Using the *TryChangeStateToConfirmed* call as illustrated below will also trigger any Created Booking custom script.
 
-```txt
+```cs
 using System;                                                                                     
 using Skyline.DataMiner.Library.Solutions.SRM;                                                    
 using Skyline.DataMiner.Automation;                                                               
@@ -307,7 +307,7 @@ The example below shows how the timing of a booking can be changed without user 
 > [!NOTE]
 > The timing of events that have already been executed cannot be changed.
 
-```txt
+```cs
 using System;                                                                                     
 using Skyline.DataMiner.Library.Solutions.SRM;                                                    
 using Skyline.DataMiner.Library.Solutions.SRM.Model.ReservationAction;                            

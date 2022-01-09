@@ -2,7 +2,7 @@
 
 The following sample code shows how you can parse the information in a *\<Correlation Alarm Info>* string:
 
-```txt
+```cs
 ScriptParam paramCorrelationAlarmInfo = engine.GetScriptParam(65006);           
 string alarmInfo = paramCorrelationAlarmInfo.Value;                             
 string[] parts = alarmInfo.Split('|');                                       

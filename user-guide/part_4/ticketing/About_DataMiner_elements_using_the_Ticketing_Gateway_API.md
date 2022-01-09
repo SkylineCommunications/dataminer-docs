@@ -12,7 +12,7 @@ To implement ticket synchronization:
 
     Example of a synchronization routine:
 
-    ```txt
+    ```cs
     public class QAction                                                                                          
     {                                                                                                             
         public static void Run(SLProtocol protocol)                                                                   

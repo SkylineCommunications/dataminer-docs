@@ -60,7 +60,7 @@ To connect your DMS to the cloud:
 
     > [!TIP]
     > See also:
-    > [User rights](../../part_3/security/User_rights.md) 
+    > [User rights](../../part_3/security/User_rights.md)
 
 5. On the System Center \> *Cloud* page, click the *Connect* button. A pop-up browser window will open.
 
@@ -78,9 +78,7 @@ To connect your DMS to the cloud:
 
 7. Select the checkbox to agree to the terms of service and click *Connect*.
 
-8. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Registered*. This can take up to half a minute.
+8. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Registered*. This can take up to half a minute.
 
 > [!NOTE]
-> Make sure that all users that should be able to share data with the cloud have the necessary user permissions, as mentioned under* *[System configuration \> Cloud sharing/gateway](../../part_3/security/DataMiner_user_permissions.md#system-configuration--cloud-sharinggateway)*.*
-
- 
+> Make sure that all users that should be able to share data with the cloud have the necessary user permissions, as mentioned under [System configuration \> Cloud sharing/gateway](../../part_3/security/DataMiner_user_permissions.md#system-configuration--cloud-sharinggateway).

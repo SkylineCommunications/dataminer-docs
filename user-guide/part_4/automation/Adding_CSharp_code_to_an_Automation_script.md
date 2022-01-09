@@ -80,7 +80,7 @@ By default, C# code used in an Automation script throws an exception when it enc
 
 Example:
 
-```txt
+```cs
 engine.SetFlag(RunTimeFlags.AllowUndef);
 ```
 
@@ -97,7 +97,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 
     Example:
 
-    ```txt
+    ```cs
     engine.GenerateInformation("Hello");
     ```
 
@@ -128,7 +128,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 
     Example:
 
-    ```txt
+    ```cs
     using Skyline.DataMiner.Automation; 
     public class Script                 
     {                                   
@@ -168,7 +168,7 @@ From DataMiner 10.1.0 CU3/10.1.6 onwards, DataMiner compiles C# blocks of Automa
 
     In C# blocks, all code related to alarm squashing (i.e. the combination of consecutive alarm events without a severity change into a single consolidated event) should be enclosed as follows, to allow protocols that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing:
 
-    ```txt
+    ```cs
     #if ALARM_SQUASHING                                                 
        // Code specific for alarm squashing (DataMiner 10.1.0 and later)
     #else                                                               
@@ -184,7 +184,7 @@ Inside a code block, you can change the timeout delay for that particular code b
 
 Example:
 
-```txt
+```cs
 engine.Timeout = TimeSpan.FromMinutes(30);
 ```
 
@@ -194,7 +194,7 @@ Up to DataMiner 9.5.12, an Automation script can only have one fixed entry point
 
 To define a custom entry point, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular Automation script entry point, specify *AutomationEntryPointType.Types.Default*:
 
-```txt
+```cs
 [AutomationEntryPoint(AutomationEntryPointType.Types.Default)]
 public void Default(IEngine engine)                             
 {                                                               
@@ -204,13 +204,13 @@ public void Default(IEngine engine)
 
 The method must match the following delegate type:
 
-```txt
+```cs
 public delegate void Default(IEngine engine);
 ```
 
 For testing purposes, you can use the *AutomationEntryPointTest* type:
 
-```txt
+```cs
 [AutomationEntryPoint(AutomationEntryPointType.Types.AutomationEntryPointTest)]                                            
 public void AutomationEntryPointTest(Engine engine, string testMessage, List<int> testIntList)                              
 {                                                                                                                            
@@ -220,7 +220,7 @@ public void AutomationEntryPointTest(Engine engine, string testMessage, List<int
 
 Methods annotated with the test type attribute must match the following delegate type:
 
-```txt
+```cs
 public delegate void AutomationEntryPointTest(IEngine engine, string testMessage, List<int> testIntList);
 ```
 

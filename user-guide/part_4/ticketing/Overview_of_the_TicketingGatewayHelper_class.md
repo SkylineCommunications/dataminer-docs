@@ -14,7 +14,7 @@ Below, you can find an overview of all methods, properties and events of the *Ti
 
 Synchronizes the ticketing protocol with DataMiner.
 
-```txt
+```cs
 IEnumerable<TicketingGatewayEventMessage> DriverSync(ElementID ElementID, DateTime TimeStamp, params Tuple<DateTime, Ticket>[] ChangedTickets)
 ```
 
@@ -34,7 +34,7 @@ Returns:
 
 Retrieves the masked resolvers corresponding to one or more filters.
 
-```txt
+```cs
 IEnumerable<TicketFieldResolver> GetMaskedTicketFieldResolvers(params TicketFieldResolver[] filters);
 ```
 
@@ -50,7 +50,7 @@ Example:
 
 - If the following is specified within a script, any resolvers that are masked will be retrieved and an information event will be generated with information about them:
 
-    ```txt
+    ```cs
     private void ShowMaskedResolvers(Engine engine)                                                                                                                                                                       
     {                                                                                                                                                                                                                     
         var maskedTicketFieldResolvers = helper.GetMaskedTicketFieldResolvers();                                                                                                                                              
@@ -65,7 +65,7 @@ Example:
 
 Retrieves the non-masked ticket field resolvers corresponding to one or more filters.
 
-```txt
+```cs
 IEnumerable<TicketFieldResolver> GetTicketFieldResolvers(params TicketFieldResolver[] filters)
 ```
 
@@ -81,7 +81,7 @@ Returns:
 
 Retrieves the history for one or more tickets.
 
-```txt
+```cs
 IEnumerable<TicketHistory> GetTicketHistory(params TicketID[] ticketIDs)
 ```
 
@@ -97,7 +97,7 @@ Returns:
 
 Retrieves the tickets matching the given filter and links.
 
-```txt
+```cs
 IEnumerable<Ticket> GetTickets(IEnumerable<TicketLink> links = null, FilterElement<Ticket> filter = null, bool CacheOnly = false)
 ```
 
@@ -120,7 +120,7 @@ Returns:
 
 Use this method to retrieve tickets in a paged fashion. This method requests a new page.
 
-```txt
+```cs
 IEnumerable<Ticket> NewPagingRequest(int pagesize, out long pagingCookie, out int totalTickets, int pageNumber = 0, IEnumerable<TicketLink> links = null, FilterElement<Ticket> filter = null, bool CacheOnly = false)
 ```
 
@@ -154,7 +154,7 @@ Returns:
 
 Request the next page of a previously requested set of pages (retrieved via NewPagingRequest).
 
-```txt
+```cs
 IEnumerable<Ticket> NextPagingRequest(long pagingCookie)
 ```
 
@@ -170,7 +170,7 @@ Returns
 
 Removes one or more ticket field resolvers.
 
-```txt
+```cs
 bool RemoveTicketFieldResolvers(out string error, params TicketFieldResolver[] resolvers)
 ```
 
@@ -188,7 +188,7 @@ Returns
 
 Removes one or more tickets.
 
-```txt
+```cs
 bool RemoveTickets(out string error, params Ticket[] tickets)
 ```
 
@@ -206,7 +206,7 @@ Returns
 
 Adds or edits a ticket.
 
-```txt
+```cs
 bool SetTicket(out string error, ref Ticket ticket)
 ```
 
@@ -226,7 +226,7 @@ Example: see[Creating tickets with the Ticketing Gateway API](Creating_tickets_w
 
 Adds or edits a ticket field resolver.
 
-```txt
+```cs
 bool SetTicketFieldResolver(out string error, ref TicketFieldResolver resolver)
 ```
 
@@ -238,7 +238,7 @@ Parameters:
 
 Returns
 
-- *True* when adding/editing the ticket field resolver was successful, otherwise *False*.
+- *True* when adding/editing the ticket field resolver was successful, otherwise *False*.
 
 Example: see[Creating tickets with the Ticketing Gateway API](Creating_tickets_with_the_Ticketing_Gateway_API.md).
 
@@ -246,7 +246,7 @@ Example: see[Creating tickets with the Ticketing Gateway API](Creating_tickets_w
 
 Adds or edits multiple ticket field resolvers
 
-```txt
+```cs
 bool SetTicketFieldResolvers(out string error, ref TicketFieldResolver[] resolvers)
 ```
 
@@ -264,7 +264,7 @@ Returns
 
 Adds or edits multiple tickets.
 
-```txt
+```cs
 bool SetTickets(out string error, ref Ticket[] tickets)
 ```
 
@@ -276,7 +276,7 @@ Parameters:
 
 Returns:
 
-- *True* when adding/editing the tickets was successful, otherwise *False*.
+- *True* when adding/editing the tickets was successful, otherwise *False*.
 
 ### Properties
 
@@ -284,7 +284,7 @@ Returns:
 
 Checks with the server whether a valid Ticketing license is present.
 
-```txt
+```cs
 bool IsLicensed
 ```
 
@@ -294,8 +294,8 @@ bool IsLicensed
 
 Event that is called when the Helper wants to send a message to the server and expects a response.
 
-```txt
+```cs
 event EventHandler<IManagerRequestResponseEventArgs> RequestResponseEvent
 ```
 
- 
+

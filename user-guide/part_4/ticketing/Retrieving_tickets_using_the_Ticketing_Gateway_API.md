@@ -13,7 +13,7 @@ Tickets can be retrieved in a number of ways. See the following examples.
 
 - Retrieving tickets by ticket field
 
-    ```txt
+    ```cs
     public Ticket RetrieveTicketByField()                                                                                                        
     {                                                                                                                                            
         var outputTickets = Helper.GetTickets(filter:   ReflectiveExposer.DictField<Ticket, object>("CustomTicketFields","User").Equal("Jane"));
@@ -24,7 +24,7 @@ Tickets can be retrieved in a number of ways. See the following examples.
 
 - Retrieving tickets by state
 
-    ```txt
+    ```cs
     public Ticket RetrieveTicketByState()                                                                                                                                                                          
     {                                                                                                                                                                                                              
         var outputTickets = Helper.GetTickets(filter:   ReflectiveExposer.DictField<Ticket, object>("CustomTicketFields","State").Equal(0));                                                                      
@@ -37,7 +37,7 @@ Tickets can be retrieved in a number of ways. See the following examples.
 
 - Retrieving tickets by link
 
-    ```txt
+    ```cs
     public Ticket RetrieveTicketByLink() {                                                                                        
         var outputTickets = Helper.GetTickets(new TicketLink[]   { TicketLink.Create(new Skyline.DataMiner.Net.ElementID(123, 456)) });
         if (outputTickets.Count() != 1)  return null;                                                                                    
@@ -47,7 +47,7 @@ Tickets can be retrieved in a number of ways. See the following examples.
 
 - Retrieving tickets by ticket field resolver
 
-    ```txt
+    ```cs
     public Ticket[] RetrieveTicketByResolverID(TicketFieldResolver resolver) {                  
         var outputTickets = Helper.GetTickets(filter:   TicketingExposers.ResolverID.Equal(resolver.ID));
         return outputTickets.ToArray();                                                                      
@@ -56,7 +56,7 @@ Tickets can be retrieved in a number of ways. See the following examples.
 
 - Retrieving tickets page by page
 
-    ```txt
+    ```cs
     private static long PagingCookie = -1;                                                                                                                
     private static int PageSize = 2;                                                                                                                      
     private static int totalTickets = 10;                                                                                                                 

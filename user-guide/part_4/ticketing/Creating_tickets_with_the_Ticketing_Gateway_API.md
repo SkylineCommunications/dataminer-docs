@@ -7,7 +7,7 @@ Before tickets can be created, there has to be at least one ticket field resolve
 
 Example of how to create a default ticket field resolver:
 
-```txt
+```cs
 private TicketFieldResolver CreateDefaultResolver()                                       
 {                                                                                         
     //Create a default resolver from the factory.                                             
@@ -25,7 +25,7 @@ private TicketFieldResolver CreateDefaultResolver()
 
 Example of how to create a custom ticket field resolver:
 
-```txt
+```cs
 private TicketFieldResolver CreateCustomResolver()                                                             
 {                                                                                                              
     TicketFieldResolver resolver = TicketFieldResolver.Factory.CreateEmptyResolver("CustomResolver");              
@@ -120,7 +120,7 @@ private TicketFieldResolver CreateCustomResolver()
 
 Example of how to create a ticket:
 
-```txt
+```cs
 private Ticket CreateTicket(TicketFieldResolver resolver)                                        
 {                                                                                                
     Ticket ticket = new Ticket();                                                                    

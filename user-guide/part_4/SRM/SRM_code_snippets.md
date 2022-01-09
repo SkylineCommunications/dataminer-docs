@@ -24,7 +24,7 @@ This section contains a number of code snippets illustrating how such scripts ca
 
 #### Creating, retrieving, updating and deleting a resource
 
-```txt
+```cs
 using Skyline.DataMiner.Automation;                                                                                          
 using Skyline.DataMiner.Net.Messages;                                                                                        
 using Skyline.DataMiner.Net.Messages.SLDataGateway;                                                                          
@@ -92,7 +92,7 @@ namespace SRM.SRM_Resource_CRUD
 
 #### Creating, retrieving, updating and deleting a resource pool
 
-```txt
+```cs
 using Skyline.DataMiner.Automation;                                                                                          
 using Skyline.DataMiner.Net.Messages;                                                                                        
 using System;                                                                                                                
@@ -172,7 +172,7 @@ namespace SRM.SRM_ResourcePool_CRUD
 
 #### Creating, retrieving, updating and deleting a booking instance
 
-```txt
+```cs
 using Skyline.DataMiner.Automation;                                                                                          
 using Skyline.DataMiner.Net.Messages;                                                                                        
 using Skyline.DataMiner.Net.Messages.SLDataGateway;                                                                          
@@ -259,19 +259,19 @@ namespace SRM.SRM_BookingInstance_CRUD
 
 #### Creating, retrieving, updating and deleting a booking definition
 
-```txt
-using Skyline.DataMiner.Net.Messages;                                                                                                          
-using System;                                                                                                                                  
-using System.Linq;                                                                                                                             
-using Skyline.DataMiner.Automation;                                                                                                            
-using Skyline.DataMiner.Net.ResourceManager.Objects;                                                                                           
-using Skyline.DataMiner.Net;                                                                                                                   
-using Skyline.DataMiner.Net.Time;                                                                                                              
-using Skyline.DataMiner.Net.Messages.SLDataGateway;                                                                                            
-                                                                                                                                               
-namespace SRM.SRM_BookingDefinition_CRUD                                                                                                       
-{                                                                                                                                              
-    public class Script                                                                                                                        
+```cs
+using Skyline.DataMiner.Net.Messages;
+using System;
+using System.Linq;
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net.ResourceManager.Objects;
+using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Time;
+using Skyline.DataMiner.Net.Messages.SLDataGateway;
+
+namespace SRM.SRM_BookingDefinition_CRUD
+{ 
+    public class Script
     {                                                                                                                                          
         // The ResourceManagerHelper object we will be using to communicate with the ResourceManager Module. This is our API.                  
         private ResourceManagerHelper _helper;                                                                                                
@@ -352,7 +352,7 @@ namespace SRM.SRM_BookingDefinition_CRUD
 
 #### Creating a service booking definition with children
 
-```txt
+```cs
 using Skyline.DataMiner.Automation;                                                                                          
 using Skyline.DataMiner.Net;                                                                                                 
 using Skyline.DataMiner.Net.Messages;                                                                                        
@@ -467,7 +467,7 @@ namespace SRM.SRM_BookingDefinitionWithChildren_Create
 
 #### Creating, retrieving, updating and deleting a profile parameter
 
-```txt
+```cs
 using System;                                                                                                        
 using Skyline.DataMiner.Automation;                                                                                  
 using Skyline.DataMiner.Net.Profiles;                                                                                
@@ -565,7 +565,7 @@ namespace SRM.SRM_ProfileParameter_CRUD
 
 #### Creating, retrieving, updating and deleting a profile definition
 
-```txt
+```cs
 using Skyline.DataMiner.Automation;                                                                                    
 using Skyline.DataMiner.Net.Messages.SLDataGateway;                                                                    
 using Skyline.DataMiner.Net.Profiles;                                                                                  
@@ -642,7 +642,7 @@ namespace SRM.SRM_ProfileDefinition_CRUD
 
 #### Creating, retrieving, updating and deleting a profile instance
 
-```txt
+```cs
 using Skyline.DataMiner.Automation;                                                                                                
 using Skyline.DataMiner.Net.Messages.SLDataGateway;                                                                                
 using Skyline.DataMiner.Net.Profiles;                                                                                              
@@ -725,7 +725,7 @@ From DataMiner 9.5.13 onwards, a ProtocolFunctionHelper class has been added to 
 
 The example below illustrates the use of the various methods in this class.
 
-```txt
+```cs
 using System;                                                                                            
 using System.Collections.Generic;                                                                        
 using Skyline.DataMiner.Automation;                                                                      
