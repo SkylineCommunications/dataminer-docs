@@ -14,8 +14,8 @@ The following overview clearly shows how the DataMiner Agent software is a colle
 
 > [!TIP]
 > See also:
-> -  [Main DMA software components](#main-dma-software-components)
-> -  [Auxiliary DMA software components](#auxiliary-dma-software-components)
+> - [Main DMA software components](#main-dma-software-components)
+> - [Auxiliary DMA software components](#auxiliary-dma-software-components)
 
 ### Main DMA software components
 
@@ -59,8 +59,8 @@ Keeps track of parameter values that have to be shown to the user and creates al
 On compatible systems, SLElement is run as a 64-bit process. However, it can still be run as a 32-bit process if it is registered as such with a batch file from the Tools directory.
 
 > [!NOTE]
-> -  This process is only aware of parameters that are being monitored and parameters that have to be displayed on the user interface.
-> -  In DataMiner versions prior to 9.0, this process also calculates parameter trending values. From DataMiner version 9.0 onwards, this function is taken over by the SLDataGateway process.
+> - This process is only aware of parameters that are being monitored and parameters that have to be displayed on the user interface.
+> - In DataMiner versions prior to 9.0, this process also calculates parameter trending values. From DataMiner version 9.0 onwards, this function is taken over by the SLDataGateway process.
 
 #### SLLog
 
@@ -113,8 +113,8 @@ It also keeps track of a number of key performance indicators.
 
 > [!TIP]
 > See also:
-> -  [SLWatchdog](../DataminerAgents/Configuration_of_DataMiner_processes.md#slwatchdog)
-> -  [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> - [SLWatchdog](../DataminerAgents/Configuration_of_DataMiner_processes.md#slwatchdog)
+> - [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
 
 ### Auxiliary DMA software components
 
@@ -140,8 +140,8 @@ The DMS Reporter process.
 > [DMS Reporter](../../part_4/reporter/reporter.md#dms-reporter)
 
 > [!NOTE]
-> -  Timeline data that are received from SLDataGateway or directly from a MySQL database are cached in the SLASPConnection process. Some caching options can be configured in *MaintenanceSettings.xml*. See [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
-> -  You can also find more information and settings for timeline caching at <br>*http(s)://\[DmaIp\]/Reports/Tools.asp*:
+> - Timeline data that are received from SLDataGateway or directly from a MySQL database are cached in the SLASPConnection process. Some caching options can be configured in *MaintenanceSettings.xml*. See [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
+> - You can also find more information and settings for timeline caching at <br>*http(s)://\[DmaIp\]/Reports/Tools.asp*:
 >     - The page displays timeline cache statistics and list contents.
 >     - The expiration time, grace time and maximum number of records can be set here, but only for the current session. These settings can be permanently changed in *MaintenanceSettings.xml*.
 >     - Timeline caching and timeline cache verbose logging can be enabled and disabled on this page, or directly in *MaintenanceSettings.xml*.

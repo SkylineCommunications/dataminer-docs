@@ -88,8 +88,8 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
     - SERVICE STATISTICS:...
 
     > [!NOTE]
-    > -  **ELEMENT NAME vs. FORCE ELEMENT NAME:**<br>In Visio drawings linked to a service, shapes that display the name of a service element (using a shape data field **Info** set to “ELEMENT NAME”) display the element alias if one exists. If you want to override this default behavior and force a shape to display the actual name of a service element, use a shape data field **Info** set to “FORCE ELEMENT NAME”.
-    > -  **DESCRIPTION vs. SERVICE DESCRIPTION:**<br>When a shape is linked to an enhanced service, and you set the Info field to “DESCRIPTION”, the shape will contain the description of the service element. To make it display the description of the service instead, set the Info field to “SERVICE DESCRIPTION”.
+    > - **ELEMENT NAME vs. FORCE ELEMENT NAME:**<br>In Visio drawings linked to a service, shapes that display the name of a service element (using a shape data field **Info** set to “ELEMENT NAME”) display the element alias if one exists. If you want to override this default behavior and force a shape to display the actual name of a service element, use a shape data field **Info** set to “FORCE ELEMENT NAME”.
+    > - **DESCRIPTION vs. SERVICE DESCRIPTION:**<br>When a shape is linked to an enhanced service, and you set the Info field to “DESCRIPTION”, the shape will contain the description of the service element. To make it display the description of the service instead, set the Info field to “SERVICE DESCRIPTION”.
 
 - **Redundancy groups**:
 

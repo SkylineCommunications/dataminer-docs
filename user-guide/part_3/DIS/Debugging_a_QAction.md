@@ -29,6 +29,6 @@ When you have finished configuring all necessary settings, you can start debuggi
 10. In the *DIS Inject* window, click the yellow lightning bolt to manually trigger the QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).
 
     > [!NOTE]
-    > -  Instead of clicking the yellow lightning bolt, you can also open DataMiner Cube, connect to the DataMiner Agent to which DIS is connected, and perform an action in the user interface that triggers the QAction you are debugging.
-    > -  When a QAction refers to another QAction in a DllImport attribute, then that referenced QAction will now also automatically be injected when you debug a protocol in DIS.
+    > - Instead of clicking the yellow lightning bolt, you can also open DataMiner Cube, connect to the DataMiner Agent to which DIS is connected, and perform an action in the user interface that triggers the QAction you are debugging.
+    > - When a QAction refers to another QAction in a DllImport attribute, then that referenced QAction will now also automatically be injected when you debug a protocol in DIS.
     >

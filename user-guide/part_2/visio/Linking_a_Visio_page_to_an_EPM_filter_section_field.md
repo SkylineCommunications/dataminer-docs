@@ -22,6 +22,6 @@ For example, if the following shape data is specified, the page will be visible 
 | Field            | OLT\|CMC                           |
 
 > [!NOTE]
-> -  If you do not specify a shape data field of type **Field** or if you leave its value blank, then the page will appear when nothing is selected in the *Filter* section. In case multiple field values are specified, but these are followed by a pipe character, the page will also be displayed when nothing is selected.
-> -  The behavior of these shape data fields changes in DataMiner 10.0.12. Prior to this DataMiner version, visual pages are displayed if there is a matching Field property, regardless of the Chain property. From DataMiner 10.0.12 onwards, the pages are only displayed if the Chain property is set to a valid chain or to the wildcard "\*".
+> - If you do not specify a shape data field of type **Field** or if you leave its value blank, then the page will appear when nothing is selected in the *Filter* section. In case multiple field values are specified, but these are followed by a pipe character, the page will also be displayed when nothing is selected.
+> - The behavior of these shape data fields changes in DataMiner 10.0.12. Prior to this DataMiner version, visual pages are displayed if there is a matching Field property, regardless of the Chain property. From DataMiner 10.0.12 onwards, the pages are only displayed if the Chain property is set to a valid chain or to the wildcard "\*".
 >

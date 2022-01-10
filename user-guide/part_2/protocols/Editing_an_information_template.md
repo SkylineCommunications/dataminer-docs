@@ -17,8 +17,8 @@ To make changes to the complete information template:
     For more information, refer to step 4 of [Creating an information template](Creating_an_information_template.md).
 
 > [!NOTE]
-> -  A protocol’s default information template, which is defined in the *Protocol.xml* file, cannot be edited as described above. The only way to modify it is by making changes to the protocol itself.
-> -  If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
+> - A protocol’s default information template, which is defined in the *Protocol.xml* file, cannot be edited as described above. The only way to modify it is by making changes to the protocol itself.
+> - If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
 
 ### Editing the information template for one parameter
 
@@ -41,6 +41,6 @@ To make changes to the information template for one particular parameter:
 3. Click *Update Information Template* to save your changes.
 
     > [!NOTE]
-    > -  The template will be updated for all elements that use it. These are listed for reference at the bottom of the *Information* window.
-    > -  If you use this procedure for an element that was using the default information template, a new template will be created with the changes you entered for this parameter.
+    > - The template will be updated for all elements that use it. These are listed for reference at the bottom of the *Information* window.
+    > - If you use this procedure for an element that was using the default information template, a new template will be created with the changes you entered for this parameter.
     >

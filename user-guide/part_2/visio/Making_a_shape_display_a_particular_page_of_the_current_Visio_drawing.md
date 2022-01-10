@@ -13,7 +13,7 @@ That page can be displayed:
 - in a tooltip.
 
 > [!NOTE]
-> -  You can only make a shape display pages other than the page actually containing the shape. This restriction is necessary to avoid loops of inline pages.
+> - You can only make a shape display pages other than the page actually containing the shape. This restriction is necessary to avoid loops of inline pages.
 
 ### Basic shape data field configuration
 
@@ -79,9 +79,9 @@ The session variable named *ClosingWindow_Result* can be set to “Continue”, 
 In the example above, it is set to “Continue”. If *ClosingWindow_Result* is set to “Stop”, a message box of type “Yes/No” will appear. If the user then clicks “Yes”, the window will be closed. Note that in the session variable named *ClosingWindow_Message*, you can specify a custom message to be displayed. If you specify such a message, then it will be shown in a message box of type “OK”, regardless of the value of the *ClosingWindow_Result* variable. However, if *ClosingWindow_Result* is set to “Stop”, this custom message will be displayed in the message box of type “Yes/No” mentioned above.
 
 > [!NOTE]
-> -  The *OnClosing* shape data field only works for windows. It does not work for message boxes or tooltips.
-> -  The *OnClosing* and *OnClose* shape data fields do not influence each other. Both function independently from each other.
-> -  If you want to combine *OnClosing* and *OnClose*, you can pass a session variable to the *OnClosing* script and make it return another session variable. That variable can then be passed to the *OnClose* script, which can optionally be made to return another session variable.
+> - The *OnClosing* shape data field only works for windows. It does not work for message boxes or tooltips.
+> - The *OnClosing* and *OnClose* shape data fields do not influence each other. Both function independently from each other.
+> - If you want to combine *OnClosing* and *OnClose*, you can pass a session variable to the *OnClosing* script and make it return another session variable. That variable can then be passed to the *OnClose* script, which can optionally be made to return another session variable.
 
 > [!TIP]
 > See also:

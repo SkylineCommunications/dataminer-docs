@@ -18,5 +18,5 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> -  [Creating a list of profile instances](../../part_2/visio/Adding_options_to_a_session_variable_control.md#creating-a-list-of-profile-instances)
+> - [Creating a list of profile instances](../../part_2/visio/Adding_options_to_a_session_variable_control.md#creating-a-list-of-profile-instances)
 >

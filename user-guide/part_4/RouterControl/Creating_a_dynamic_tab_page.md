@@ -9,5 +9,3 @@ To do so:
 2. Next to *Page*, specify the name of the tab you are linking to.
 
 3. Select whether you are linking to *Input pages* or *Output pages*.
-
-

@@ -39,6 +39,6 @@ The module consist of a pane on the left, listing resource pools, and a pane on 
 Booking resources can be done via Automation scripts. By means of an embedded Resource Manager component in Visio, you can create an overview of the bookings. See [Embedding a Resource Manager component](../../part_2/visio/Embedding_a_Resource_Manager_component.md).
 
 > [!NOTE]
-> -  A special ResourceManager API allows integration of the *Resources* module in third-party applications.
-> -  The *Resources* module has a dedicated log file, which contains among others information regarding the creation, the modification and the deletion of bookings. You can find this log file in System Center, under *Logging* > *dataminer* > *Resource Manager.*
+> - A special ResourceManager API allows integration of the *Resources* module in third-party applications.
+> - The *Resources* module has a dedicated log file, which contains among others information regarding the creation, the modification and the deletion of bookings. You can find this log file in System Center, under *Logging* > *dataminer* > *Resource Manager.*
 >

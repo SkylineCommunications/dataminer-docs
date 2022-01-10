@@ -103,8 +103,8 @@ To have a connection property displayed on top of every connection that contains
     | Options            | ConnectionProperty:Speed;Avg |
 
 > [!NOTE]
-> -  On connection property shapes, conditional shape manipulation actions can be defined that check conditions such as the value of the property, whether a connection is highlighted, and whether the mouse pointer is on a connection.<br>See [Conditional manipulation of connection shapes](Extended_conditional_shape_manipulation_actions.md#conditional-manipulation-of-connection-shapes).
-> -  Displaying connection properties between dynamically generated shapes is only supported from DataMiner 9.0.5 CU1 onwards.
+> - On connection property shapes, conditional shape manipulation actions can be defined that check conditions such as the value of the property, whether a connection is highlighted, and whether the mouse pointer is on a connection.<br>See [Conditional manipulation of connection shapes](Extended_conditional_shape_manipulation_actions.md#conditional-manipulation-of-connection-shapes).
+> - Displaying connection properties between dynamically generated shapes is only supported from DataMiner 9.0.5 CU1 onwards.
 
 ### Displaying DCF connection property information
 
@@ -127,10 +127,10 @@ To have a pop-up box displayed with connection property information:
 
 > [!NOTE]
 > If a user clicks a line that represents multiple connections, the connection properties window will list all connections represented by that line, along with the following information for each connection:
-> -  The alarm colors of both connected interfaces.
-> -  The names of both connected interfaces, each followed by the element name.
-> -  An arrow that indicates the direction of the connection.
-> -  All connection and interface properties of the connection.
+> - The alarm colors of both connected interfaces.
+> - The names of both connected interfaces, each followed by the element name.
+> - An arrow that indicates the direction of the connection.
+> - All connection and interface properties of the connection.
 
 ### Making connections inherit alarm colors
 

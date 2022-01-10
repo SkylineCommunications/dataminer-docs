@@ -5,7 +5,7 @@ Using a shape data field of type **Execute**, you can link a shape to a SET comm
 When you link a shape to a SET command, that command will be executed each time a user clicks that shape.
 
 > [!NOTE]
-> -  A shape linked to a SET command will not be displayed if the element to which it is linked cannot be found.
+> - A shape linked to a SET command will not be displayed if the element to which it is linked cannot be found.
 
 ### Configuring the shape data field
 
@@ -16,8 +16,8 @@ Set|DmaID/ElementID|ID of write parameter:TableRowKey|NewValue|Options
 ```
 
 > [!NOTE]
-> -  In the syntax above, “*:TableRowKey*” is optional.
-> -  Table rows can be referenced either by primary key or by display key.
+> - In the syntax above, “*:TableRowKey*” is optional.
+> - Table rows can be referenced either by primary key or by display key.
 
 ### Example
 
@@ -52,8 +52,8 @@ In the above-mentioned command, you can use the following options.
     | Execute            | Set\|1/1\|350\|\[Event:IOClicked,Label\]\|SetTrigger=Event |
 
     > [!NOTE]
-    > -  If "SetTrigger=ValueChanged" is used instead of "SetTrigger=Event" in the example above, clicking the same input or output multiple times causes the set command to be executed only once.
-    > -  All set commands with a "SetTrigger=Event" option will be triggered when an event occurs, even those that do not contain an \[Event:\] placeholder.
+    > - If "SetTrigger=ValueChanged" is used instead of "SetTrigger=Event" in the example above, clicking the same input or output multiple times causes the set command to be executed only once.
+    > - All set commands with a "SetTrigger=Event" option will be triggered when an event occurs, even those that do not contain an \[Event:\] placeholder.
 
 ### About using separator characters
 

@@ -531,5 +531,3 @@ If the property is defined both on instance and on definition level, the instanc
 This property should be set to the name of the virtual platform. This is used to filter the list of candidate service definitions and candidate resources in the Booking Wizard.
 
 **Example value**: SDMN
-
-

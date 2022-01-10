@@ -9,7 +9,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of general syste
 - Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
 > [!NOTE]
-> -  Up to DataMiner 9.5.4, if this file is missing, DataMiner will not be able to connect with the database. From DataMiner 9.5.5 onwards, if the file is missing, a database connection will be made with the default values.
+> - Up to DataMiner 9.5.4, if this file is missing, DataMiner will not be able to connect with the database. From DataMiner 9.5.5 onwards, if the file is missing, a database connection will be made with the default values.
 
 ### Example
 
@@ -174,8 +174,8 @@ It has three required attributes:
 | blankInterval | The number of milliseconds the item (icon, card header, alarm in Alarm Console, etc.) is hidden.<br> Default: 200 |
 
 > [!NOTE]
-> -  For optimal effect, the blankInterval should be less than the blinkInterval.
-> -  There are also several optional filter attributes to enable blinking of alarms based on certain conditions. For more information, see [Making alarms without owner blink](../../part_2/alarms/Making_alarms_without_owner_blink.md).
+> - For optimal effect, the blankInterval should be less than the blinkInterval.
+> - There are also several optional filter attributes to enable blinking of alarms based on certain conditions. For more information, see [Making alarms without owner blink](../../part_2/alarms/Making_alarms_without_owner_blink.md).
 
 #### AlarmSettings.MaxFreezeAlarms & AlarmSettings.MaxFreezeTime
 
@@ -259,8 +259,8 @@ Used to enforce a backup package mechanism on machines running an operating syst
 Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the *C:\\Skyline DataMiner\\System Cache\\DELT\\* folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
 
 > [!NOTE]
-> -  DELT stands for *DataMiner Element Location Transparency*. It is the feature that allows the exporting and importing of packages as well as migration of elements across DMAs in a cluster.
-> -  If no cleanup instructions are configured in *MaintenanceSettings.xml*, by default only the 20 most recent packages will be kept.
+> - DELT stands for *DataMiner Element Location Transparency*. It is the feature that allows the exporting and importing of packages as well as migration of elements across DMAs in a cluster.
+> - If no cleanup instructions are configured in *MaintenanceSettings.xml*, by default only the 20 most recent packages will be kept.
 
 ##### Syntax
 
@@ -396,9 +396,9 @@ Default timeout: 30000 milliseconds
 In this tag, you can specify the maximum size (in MB) of the DataMiner recycle bin.
 
 > [!NOTE]
-> -  Whatever the maximum size specified in this tag, the maximum number of files in the recycle bin is limited to 5000.
-> -  The default recycle bin size is 100 MB.
-> -  From DataMiner 9.0.5 onwards, the recycle bin is cleaned to the maximum size and number of files every hour. In previous versions, this was done at DMA startup and when a recycle action took place.
+> - Whatever the maximum size specified in this tag, the maximum number of files in the recycle bin is limited to 5000.
+> - The default recycle bin size is 100 MB.
+> - From DataMiner 9.0.5 onwards, the recycle bin is cleaned to the maximum size and number of files every hour. In previous versions, this was done at DMA startup and when a recycle action took place.
 
 #### Replication.ConnectionMinDelayBeforeRetry
 
@@ -419,8 +419,8 @@ Example:
 ```
 
 > [!NOTE]
-> -  If you change this setting, it will only be applied after a DMA restart.
-> -  This setting is not synchronized among DataMiner Agents in a DMS.
+> - If you change this setting, it will only be applied after a DMA restart.
+> - This setting is not synchronized among DataMiner Agents in a DMS.
 
 #### SLASPConnection.ReportResponseTimeout
 
@@ -513,8 +513,8 @@ In this tag, you can specify the period during which the “real-time trending�
 Default value: 24 - Default unit: hours
 
 > [!NOTE]
-> -  From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
-> -  This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan setting on element level.
+> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan setting on element level.
 
 #### Trending.TimeSpan1DayRecords
 
@@ -529,9 +529,9 @@ In this tag, you can specify the period during which the daily “average trendi
 Not active by default.
 
 > [!NOTE]
-> -  From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
-> -  This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1DayRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> -  If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
+> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1DayRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
+> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
 
 #### Trending.TimeSpan1HourRecords
 
@@ -546,9 +546,9 @@ In this tag, you can specify the period during which the 1-hour “average trend
 By default, 1-hour average trend records are stored for one year.
 
 > [!NOTE]
-> -  From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
-> -  This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1HourRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> -  If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
+> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1HourRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
+> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
 
 #### Trending.TimeSpan5MinRecords
 
@@ -563,9 +563,9 @@ In this tag, you can specify the period during which the 5-minute “average tre
 By default, 5-minute average trend records are stored for one month.
 
 > [!NOTE]
-> -  From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
-> -  This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan5MinRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> -  If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
+> - From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan5MinRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
+> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
 
 #### Trending.TimeSpanSpectrumRecords
 
@@ -578,8 +578,8 @@ In this tag, you can specify the period during which spectrum trend data has to 
 By default, spectrum trend data will be kept for one year.
 
 > [!NOTE]
-> -  From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
-> -  The same setting can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpanSpectrumRecords setting on element level.
+> - From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+> - The same setting can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpanSpectrumRecords setting on element level.
 
 #### Trending.WarningLevel
 
@@ -603,14 +603,14 @@ From DataMiner 9.0.1 onwards, it is possible to configure Watchdog to:
 - Initiate a Failover switch in case of a runtime error, by specifying the value “*switch*” in the tag. Optionally, to exclude certain threads from initiating a Failover switch, add the *\<FailoverOnRTE>* subtag and specify the threads in *\<SkipRTE>* subtags.
 
     > [!NOTE]
-    > -  If a Failover switched is launched, the DMA is then also restarted in order to ensure that it frees the virtual IP address. Before the restart is initiated, the DMA is marked as “offline”.
-    > -  If DataMiner Watchdog is set to initiate a Failover switch in case of a runtime error, it will even do so if the Failover type is set to “Manual” in the Failover settings.
+    > - If a Failover switched is launched, the DMA is then also restarted in order to ensure that it frees the virtual IP address. Before the restart is initiated, the DMA is marked as “offline”.
+    > - If DataMiner Watchdog is set to initiate a Failover switch in case of a runtime error, it will even do so if the Failover type is set to “Manual” in the Failover settings.
 
 - Initiate an element restart in case of a runtime error on an element-related SLProtocol thread, by adding the attribute *restartElementOnProtocolRTE*, and setting it to “*true*”.
 
 > [!NOTE]
-> -  To make these changes to *MaintenanceSettings.xml* take effect, after you have saved the file, stop the DMA, manually stop the SLWatchdog service, and then restart the DMA.
-> -  If DataMiner Watchdog is set to initiate both a Failover switch and an element restart, then the latter takes precedence. No Failover switch will be initiated when the element restart succeeds.
+> - To make these changes to *MaintenanceSettings.xml* take effect, after you have saved the file, stop the DMA, manually stop the SLWatchdog service, and then restart the DMA.
+> - If DataMiner Watchdog is set to initiate both a Failover switch and an element restart, then the latter takes precedence. No Failover switch will be initiated when the element restart succeeds.
 
 In the *ProcessMonitor.Crashdumps* subtag, you can customize how long crashdump packages created by the Watchdog process are kept. This can for instance be useful to prevent situations where the crashdump packages take up too much disk space. The following subtags can be configured:
 
@@ -631,10 +631,10 @@ In the *ProcessMonitor.Crashdumps* subtag, you can customize how long crashdump 
 | MaxTotalCrashDump­FolderSizeGb | N/A           | Maximum size of the Logging/CrashDump folder.                             | 5       |
 
 > [!NOTE]
-> -  If these tags are not specified, the default values will be used.
-> -  Customizing how long crashdump packages are kept does not require a DataMiner restart. However, these settings will only be applied once a crashdump package is created.
+> - If these tags are not specified, the default values will be used.
+> - Customizing how long crashdump packages are kept does not require a DataMiner restart. However, these settings will only be applied once a crashdump package is created.
 
 > [!TIP]
 > See also:
-> -  [SLWatchdog](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#slwatchdog)
+> - [SLWatchdog](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#slwatchdog)
 >

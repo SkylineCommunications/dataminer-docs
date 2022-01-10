@@ -13,8 +13,8 @@ In a Class Library package, you can add extension methods, vendor-specific code 
     - add references in the EXE blocks using that Class Library code to the newly added EXE block containing the Class Library code.
 
 > [!NOTE]
-> -  Interfaces, base classes and their implementations will all be copied together into the generated QAction or Automation script.<br>If the generator detects that an interface is being used while the class that implements it is not, then the latter will be copied along into the generated code. Also, if a class is being used while the interface is not, then both will be copied into the generated code.
-> -  The generated code will contain all fields and properties of classes, unless they are private, even when those fields and properties are not being used.
+> - Interfaces, base classes and their implementations will all be copied together into the generated QAction or Automation script.<br>If the generator detects that an interface is being used while the class that implements it is not, then the latter will be copied along into the generated code. Also, if a class is being used while the interface is not, then both will be copied into the generated code.
+> - The generated code will contain all fields and properties of classes, unless they are private, even when those fields and properties are not being used.
 
 For more detailed information on Class Library packages, see the following sections:
 
@@ -400,5 +400,3 @@ No changes to the Class Library base packages
 - 1.2.0.8
 
     - RN 30232: Extended authentication algorithm support
-
-

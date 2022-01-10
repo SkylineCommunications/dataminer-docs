@@ -17,8 +17,8 @@ On the timeline, the events are represented as rectangles, with the left and rig
 3. To fine-tune the timing, drag the edges of the rectangle to a different point on the timeline. While you are dragging, the exact time will be displayed below.
 
     > [!NOTE]
-    > -  The starting time of any new event must lie at least one minute in the future.
-    > -  It is only possible to change the timing for events that have not yet been completed. If an event has already started, you will only be able to edit the end time.
+    > - The starting time of any new event must lie at least one minute in the future.
+    > - It is only possible to change the timing for events that have not yet been completed. If an event has already started, you will only be able to edit the end time.
 
 When an event has not yet started, you can right-click the event’s rectangle on the timeline, and:
 
@@ -43,7 +43,7 @@ To do so:
     3. Click *OK*
 
     > [!NOTE]
-    > -  Make sure both tasks recur at the same interval, e.g. both daily or both weekly, but not one daily and the other weekly.
-    > -  Make sure their recurrence does not make the tasks overlap.
-    > -  Once an event has been made recurrent, it will no longer be possible to edit the event directly in the timeline. Further editing will only be possible in the *list* tab.
+    > - Make sure both tasks recur at the same interval, e.g. both daily or both weekly, but not one daily and the other weekly.
+    > - Make sure their recurrence does not make the tasks overlap.
+    > - Once an event has been made recurrent, it will no longer be possible to edit the event directly in the timeline. Further editing will only be possible in the *list* tab.
     >

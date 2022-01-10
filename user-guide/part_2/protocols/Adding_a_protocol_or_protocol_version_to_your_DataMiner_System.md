@@ -70,9 +70,9 @@ To do so:
 4. In the list of available protocols, select the protocols you want to install or update, and click *Install*.
 
     > [!NOTE]
-    > -  By default, only the most recent new versions of protocols in your DMS will be shown. However, if you want to see all available versions, click the *Show all available updates* button at the bottom of the list of available protocols.
-    > -  To check for the latest version of a protocol, DataMiner will only look for versions in the same branch as you currently have installed. This means that the first number of the protocol version number needs to match. For example, if you have version 1.1.4.8 installed, only updates for range 1.x.x.x will be considered. This is because this first number indicates different implementations of the protocol, so that a higher number does not necessarily mean an improved version.
-    > -  You can see more information on each update by selecting the protocol version and then clicking *Version history* in the pane on the right. For protocols that are already installed on your DMS, only information on newer versions is shown. Otherwise, information on all versions is displayed.
+    > - By default, only the most recent new versions of protocols in your DMS will be shown. However, if you want to see all available versions, click the *Show all available updates* button at the bottom of the list of available protocols.
+    > - To check for the latest version of a protocol, DataMiner will only look for versions in the same branch as you currently have installed. This means that the first number of the protocol version number needs to match. For example, if you have version 1.1.4.8 installed, only updates for range 1.x.x.x will be considered. This is because this first number indicates different implementations of the protocol, so that a higher number does not necessarily mean an improved version.
+    > - You can see more information on each update by selecting the protocol version and then clicking *Version history* in the pane on the right. For protocols that are already installed on your DMS, only information on newer versions is shown. Otherwise, information on all versions is displayed.
 
 5. When the installation is done, a window will appear where you can choose to set the new protocol versions as the production version:
 
@@ -93,10 +93,10 @@ There are different types of updates. The type of update is indicated next to ea
 
 > [!NOTE]
 > To access the Update Center, you need to have the following user permissions:
-> -  DCP: Download protocols
-> -  DCP: Download software
-> -  SD Administration: Protocols
-> -  Protocol: Adding
+> - DCP: Download protocols
+> - DCP: Download software
+> - SD Administration: Protocols
+> - Protocol: Adding
 
 ### Adding a protocol or protocol version with DataMiner Taskbar Utility
 

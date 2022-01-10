@@ -19,8 +19,8 @@ On this page, you can find:
 - A link to the landing page for the DataMiner web apps on the right-hand side.
 
 > [!NOTE]
-> -  Depending on your user permissions, some of these items may not be displayed.
-> -  From DataMiner 9.6.1 onwards, the Cube user settings allow you to customize which information is shown on this page. See [Cube settings](User_settings.md#cube-settings).
+> - Depending on your user permissions, some of these items may not be displayed.
+> - From DataMiner 9.6.1 onwards, the Cube user settings allow you to customize which information is shown on this page. See [Cube settings](User_settings.md#cube-settings).
 
 ### Card types
 
@@ -61,18 +61,18 @@ The pane consists of a tree view with several fixed nodes:
 - **VISUAL**: Contains all available Visual Overview pages.
 
     > [!NOTE]
-    > -  A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
-    > -  As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](User_settings.md#visual-overview-settings).
-    > -  If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
-    > -  Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md) and [DisableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md).
+    > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
+    > - As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](User_settings.md#visual-overview-settings).
+    > - If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
+    > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md) and [DisableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md).
 
 - **DATA**: Contains all available Data Display pages.
 
     > [!NOTE]
-    > -  Optionally, a Data Display page selector can be displayed on an element card, in addition to or instead of the tree view in the navigation pane. See [Card settings](User_settings.md#card-settings).
-    > -  If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button “Up to \[parent page name\]” is displayed, which allows you to quickly go to the parent page.
-    > -  Element protocols can be configured to hide one or more Data Display pages depending on a parameter value.
-    > -  Prior to DataMiner 9.6.7, a view has a DATA node with pages listing the items within the view. From DataMiner 9.6.7 onwards, this node is called “BELOW THIS VIEW” instead.
+    > - Optionally, a Data Display page selector can be displayed on an element card, in addition to or instead of the tree view in the navigation pane. See [Card settings](User_settings.md#card-settings).
+    > - If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button “Up to \[parent page name\]” is displayed, which allows you to quickly go to the parent page.
+    > - Element protocols can be configured to hide one or more Data Display pages depending on a parameter value.
+    > - Prior to DataMiner 9.6.7, a view has a DATA node with pages listing the items within the view. From DataMiner 9.6.7 onwards, this node is called “BELOW THIS VIEW” instead.
 
 - **ALARMS**: Displays an overview of all alarms on the selected item.
 
@@ -102,10 +102,10 @@ The pane consists of a tree view with several fixed nodes:
 Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* on view cards.
 
 > [!NOTE]
-> -  When you select a page in the card navigation pane while holding down the SHIFT key, that page will be selected in every open card.
-> -  While the navigation pane is collapsed, if you click the VISUAL or the DATA node, the last open Visual Overview or Data Display page will be displayed. To expand the navigation pane and select a different page, simply click the node again.
-> -  For custom element applications, by default no card navigation pane is displayed. However, it is possible to open this pane by selecting the option *Show card side panel* in the card header menu.
-> -  The card navigation pane is only available from DataMiner version 9.0 onwards. In earlier versions of DataMiner, there is instead a rotate button that allows the user to change between a “Visual Overview” side of the card and a “Data Display” side.
+> - When you select a page in the card navigation pane while holding down the SHIFT key, that page will be selected in every open card.
+> - While the navigation pane is collapsed, if you click the VISUAL or the DATA node, the last open Visual Overview or Data Display page will be displayed. To expand the navigation pane and select a different page, simply click the node again.
+> - For custom element applications, by default no card navigation pane is displayed. However, it is possible to open this pane by selecting the option *Show card side panel* in the card header menu.
+> - The card navigation pane is only available from DataMiner version 9.0 onwards. In earlier versions of DataMiner, there is instead a rotate button that allows the user to change between a “Visual Overview” side of the card and a “Data Display” side.
 
 ### Card header bar menu
 
@@ -136,8 +136,8 @@ When you click the hamburger button in the top-left corner of a card, a shortcut
 - **Close all cards**: Closes all cards.
 
 > [!NOTE]
-> -  Depending on the type of card, more options can be available. These are discussed in detail in the sections of the help related to the item in question.
-> -  If some of these options are not available for you, it is possible that you do not have the necessary permissions to use them.
+> - Depending on the type of card, more options can be available. These are discussed in detail in the sections of the help related to the item in question.
+> - If some of these options are not available for you, it is possible that you do not have the necessary permissions to use them.
 
 ### Opening cards
 
@@ -215,6 +215,6 @@ To do so, right-click the card header bar and select *Pin this card*.
 To unpin the card again, right-click the card header bar and clear the selection from *Pin this card*.
 
 > [!NOTE]
-> -  On a pinned card, no close button is available, so that you cannot close the card by accident. However, you can still close the card by selecting *Close card* in the header bar context menu.
-> -  If you use the tab layout, an additional option is available in the header bar context menu: *Use small pinned tabs*. If you select this option, pinned cards will have smaller tabs that only display the item’s icon.
+> - On a pinned card, no close button is available, so that you cannot close the card by accident. However, you can still close the card by selecting *Close card* in the header bar context menu.
+> - If you use the tab layout, an additional option is available in the header bar context menu: *Use small pinned tabs*. If you select this option, pinned cards will have smaller tabs that only display the item’s icon.
 >

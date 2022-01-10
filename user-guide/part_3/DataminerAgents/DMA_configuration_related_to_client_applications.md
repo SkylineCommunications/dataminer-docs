@@ -25,9 +25,9 @@ In this section:
 - [Example of a config.manual.asp file](#example-of-a-configmanualasp-file)
 
 > [!NOTE]
-> -  If the *Config.manual.asp* file does not exist on a DMA, it is automatically created during DataMiner startup.
-> -  Some of the settings in the *Config.manual.asp* file are only available from DataMiner 9.0 onwards. If you upgrade to 9.0 from an older version of DataMiner, the file will not be updated automatically, so some settings may need to be added manually.
-> -  The file is NOT automatically synchronized on other DMAs in the DMS.
+> - If the *Config.manual.asp* file does not exist on a DMA, it is automatically created during DataMiner startup.
+> - Some of the settings in the *Config.manual.asp* file are only available from DataMiner 9.0 onwards. If you upgrade to 9.0 from an older version of DataMiner, the file will not be updated automatically, so some settings may need to be added manually.
+> - The file is NOT automatically synchronized on other DMAs in the DMS.
 
 #### Setting the default client application
 
@@ -165,8 +165,8 @@ If it is set to automatically detect the connection settings, Cube will connect 
 
 > [!TIP]
 > See also:
-> -  [Configuring the IP network ports](General_DMA_configuration.md#configuring-the-ip-network-ports)
-> -  [Configuring SLNet settings in MaintenanceSettings.xml](Configuration_of_DataMiner_processes.md#configuring-slnet-settings-in-maintenancesettingsxml)
+> - [Configuring the IP network ports](General_DMA_configuration.md#configuring-the-ip-network-ports)
+> - [Configuring SLNet settings in MaintenanceSettings.xml](Configuration_of_DataMiner_processes.md#configuring-slnet-settings-in-maintenancesettingsxml)
 
 #### .NET Remoting with or without eventing
 
@@ -194,8 +194,8 @@ To customize how Cube connects to a DMA for a specific computer:
 3. On the *Connection* page, in the drop-down list next to *Connection type*, and select one of the following options: *Auto* (default), *Remoting* or *Web services.*
 
     > [!NOTE]
-    > -  Connecting via web services is not possible if WSE is not installed on the DMA.
-    > -  As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
+    > - Connecting via web services is not possible if WSE is not installed on the DMA.
+    > - As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
 
 4. Modify the different settings for the selected connection type as necessary:
 

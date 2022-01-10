@@ -35,8 +35,8 @@ To do so:
     > If the DMA is part of a DMS, the setting will be applied across the DMS during the midnight synchronization. Alternatively, you can also force an immediate synchronization. See [Synchronizing data between DataMiner Agents](../../part_3/DataminerSystems/Synchronizing_data_between_DataMiner_Agents.md).
 
 > [!NOTE]
-> -  It is possible to combine ticket statistics with alarm statistics in the Surveyor. For more information, see [Displaying alarm statistics in the Surveyor](../../part_2/alarms/Displaying_alarm_statistics_in_the_Surveyor.md).
-> -  Using the same placeholder as mentioned above, ticket statistics can also be displayed in Visio drawings. See [Making a shape display information about the item it is linked to](../../part_2/visio/Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
+> - It is possible to combine ticket statistics with alarm statistics in the Surveyor. For more information, see [Displaying alarm statistics in the Surveyor](../../part_2/alarms/Displaying_alarm_statistics_in_the_Surveyor.md).
+> - Using the same placeholder as mentioned above, ticket statistics can also be displayed in Visio drawings. See [Making a shape display information about the item it is linked to](../../part_2/visio/Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
 
 > [!TIP]
 > See also:

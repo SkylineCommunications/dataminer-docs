@@ -11,5 +11,3 @@ In the template builder, the *Bookings* or (prior to DataMiner 9.6.8) *Reservati
 - **Resources**: Affected resources
 
 - **Timeline**: timeline of alarms on the booking service during the booking time span
-
-

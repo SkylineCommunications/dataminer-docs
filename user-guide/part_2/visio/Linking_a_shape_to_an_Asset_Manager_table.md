@@ -19,6 +19,6 @@ From DataMiner 9.0.4 onwards, the following additional configuration options are
 | Options          | *WhereCombination=AND*, or *WhereCombination=OR*<br> The operator that will be used to combine the filter items in the shape data field of type *Filter*.<br> Default: AND |
 
 > [!NOTE]
-> -  Dynamic placeholders can be used in each of these shape data fields.
-> -  To specify a column name, ideally, you should use the database column name. However, it is also possible to use the display column name.
+> - Dynamic placeholders can be used in each of these shape data fields.
+> - To specify a column name, ideally, you should use the database column name. However, it is also possible to use the display column name.
 >

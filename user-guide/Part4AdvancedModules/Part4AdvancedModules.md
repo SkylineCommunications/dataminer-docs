@@ -31,5 +31,3 @@
 - [DMS Spectrum Analysis](../part_4/SpectrumAnalysis/SpectrumAnalysis.md#dms-spectrum-analysis)
 
 - [DMS Ticketing](../part_4/ticketing/ticketing.md#dms-ticketing)
-
-

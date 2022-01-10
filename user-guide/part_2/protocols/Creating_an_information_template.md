@@ -71,11 +71,11 @@ To create an information template:
 
         > [!TIP]
         > See also:
-        > -  [Configuring the offload rate](../../part_3/databases/Configuring_data_offloads.md#configuring-the-offload-rate)
+        > - [Configuring the offload rate](../../part_3/databases/Configuring_data_offloads.md#configuring-the-offload-rate)
 
     > [!NOTE]
-    > -  To quickly find a parameter in the parameter list, use the filter box in the top right corner. You can also filter the displayed parameters with the button at the top of the parameter list, in order to view *Only edited parameters*, *Only protocol parameters* or *All parameters (protocol + general)*.
-    > -  In the top-right corner of the parameter details pane, click *Clear* to clear all data in the details pane on the right for the currently selected parameter.
-    > -  For table parameters, a field is available in the pane on the left that allows you to specify a filter, so that the information template configuration is only applied on a filtered selection of available rows of the dynamic table. As a result, alarm description, alarm category and corrective action can differ based on the display key of a table. You can also duplicate table parameters in the list in order to apply different filters at the same time.
+    > - To quickly find a parameter in the parameter list, use the filter box in the top right corner. You can also filter the displayed parameters with the button at the top of the parameter list, in order to view *Only edited parameters*, *Only protocol parameters* or *All parameters (protocol + general)*.
+    > - In the top-right corner of the parameter details pane, click *Clear* to clear all data in the details pane on the right for the currently selected parameter.
+    > - For table parameters, a field is available in the pane on the left that allows you to specify a filter, so that the information template configuration is only applied on a filtered selection of available rows of the dynamic table. As a result, alarm description, alarm category and corrective action can differ based on the display key of a table. You can also duplicate table parameters in the list in order to apply different filters at the same time.
 
 5. Click *OK*.

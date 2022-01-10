@@ -19,5 +19,3 @@
 - [TCP-IP sockets](../part_3/TCPIPSockets/TCPIPSockets.md#tcp-ip-sockets)
 
 - [Serial gateways](../part_3/SerialGateways/SerialGateways.md#serial-gateways)
-
-

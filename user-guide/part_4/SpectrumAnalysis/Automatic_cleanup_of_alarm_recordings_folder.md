@@ -33,8 +33,8 @@ Each time a new alarm recording has been stored in the above-mentioned folder, D
 11. Remove all alarm recordings, unless they are less than 1 day old.
 
 > [!NOTE]
-> -  Unless they are deleted in step 1, alarm recordings that are less than 1 day old are never removed. This means that, in some cases, the total size of the folder’s contents can temporarily exceed the configured maximum size.
-> -  Names of alarm recordings include the alarm severity. Example: 0006221671.t=critical.dat
+> - Unless they are deleted in step 1, alarm recordings that are less than 1 day old are never removed. This means that, in some cases, the total size of the folder’s contents can temporarily exceed the configured maximum size.
+> - Names of alarm recordings include the alarm severity. Example: 0006221671.t=critical.dat
 
 > [!TIP]
 > See also:

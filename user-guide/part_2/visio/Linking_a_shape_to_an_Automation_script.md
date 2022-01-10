@@ -3,7 +3,7 @@
 When a shape is linked to an Automation script, by default this script will be executed each time a user clicks that shape.
 
 > [!NOTE]
-> -  Aside from the default **Execute** shape data, you can also use **OnClose** shape data to link to a script. See [Specifying a script to be executed when the page is closed](#specifying-a-script-to-be-executed-when-the-page-is-closed).
+> - Aside from the default **Execute** shape data, you can also use **OnClose** shape data to link to a script. See [Specifying a script to be executed when the page is closed](#specifying-a-script-to-be-executed-when-the-page-is-closed).
 
 To link a shape to an Automation script:
 
@@ -34,8 +34,8 @@ To link a shape to an Automation script:
             | Execute            | Script:MyScript |
 
             > [!NOTE]
-            > -  If a script uses a parameter that has a memory file assigned to it, users can right-click the shape and select a value from the memory file. This way, the parameter can be set immediately, without confirmation.
-            > -  Up to DataMiner 9.0.4, it is not possible to execute an Automation script from Visual Overview if some values for the parameters still have to be entered by the operator.
+            > - If a script uses a parameter that has a memory file assigned to it, users can right-click the shape and select a value from the memory file. This way, the parameter can be set immediately, without confirmation.
+            > - Up to DataMiner 9.0.4, it is not possible to execute an Automation script from Visual Overview if some values for the parameters still have to be entered by the operator.
 
 - From DataMiner 10.2.0/10.1.1 onwards, an alternative syntax can be used where each component is marked by a prefix. The advantage of this alternative syntax is that you do not have to define empty components in case there are no dummies, no memory files, etc.
 

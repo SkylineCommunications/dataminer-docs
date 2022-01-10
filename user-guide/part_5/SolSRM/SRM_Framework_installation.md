@@ -28,8 +28,8 @@ To install the SRM Framework:
 
     > [!TIP]
     > See also:
-    > -  [Creating a view](../../part_2/views/Managing_views.md#creating-a-view)
-    > -  [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc)
+    > - [Creating a view](../../part_2/views/Managing_views.md#creating-a-view)
+    > - [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc)
 
 4. Create an element with the name *SRM Log Manager*, using the protocol *Generic Bookings Log*.
 

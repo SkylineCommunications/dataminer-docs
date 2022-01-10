@@ -29,10 +29,10 @@ http://URL||Tooltip
 Default tooltip: *Link to 'http://URL'*
 
 > [!NOTE]
-> -  Both HTTP and HTTPS are supported.
-> -  If you put a “#” sign in front of the URL, the webpage will be displayed inside the shape.
-> -  Links starting with *mailto:* are not supported in the DataMiner web apps prior to DataMiner 10.2.0/10.1.8.
-> -  If a page needs to be opened in Internet Explorer by default, add *iexplore*\| before the URL and place the URL in double quotation marks, e.g. <br>*iexplore\|"https://dcpdma.skyline.be/"*
+> - Both HTTP and HTTPS are supported.
+> - If you put a “#” sign in front of the URL, the webpage will be displayed inside the shape.
+> - Links starting with *mailto:* are not supported in the DataMiner web apps prior to DataMiner 10.2.0/10.1.8.
+> - If a page needs to be opened in Internet Explorer by default, add *iexplore*\| before the URL and place the URL in double quotation marks, e.g. <br>*iexplore\|"https://dcpdma.skyline.be/"*
 
 ### Options for shapes linked to a webpage
 
@@ -78,8 +78,8 @@ The following options can be configured for shapes linked to a webpage:
     From DataMiner 10.1.11/10.2.0 onwards, you can use Microsoft Edge (WebView2) to display an embedded webpage in DataMiner Cube. To do so, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseEdge*”.
 
     > [!NOTE]
-    > -  The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
-    > -  This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
+    > - The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
+    > - This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
 
 - **UseLoginCredentials**:
 
@@ -116,8 +116,8 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 | \<PageFilter>  | Value of the drop-down filter box in the top-right corner of the Visio drawing.<br> See [Specifying an EPM parameter that can be used to filter](Specifying_an_EPM_parameter_that_can_be_used_to_filter.md). |
 
 > [!NOTE]
-> -  \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
-> -  From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. *#http://www.skyline.be?MyParam=\[param:\<elementname>,1\]*
+> - \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
+> - From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. *#http://www.skyline.be?MyParam=\[param:\<elementname>,1\]*
 
 ### Configuring a link to a DataMiner element or view within a webpage embedded in Visual Overview
 

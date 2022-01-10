@@ -14,9 +14,9 @@ This page consists of three sections:
 - A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
 
 > [!NOTE]
-> -  It is possible to retrieve a previous version of a log file by right-clicking an element in the list and selecting *Open previous*. If there is no previous log file, this option is not available.
-> -  To quickly go to the logging for a particular element from the Surveyor, right-click the element in the Surveyor and select *View \> Log*.
-> -  If an element is renamed, the log file for that element will also be renamed.
+> - It is possible to retrieve a previous version of a log file by right-clicking an element in the list and selecting *Open previous*. If there is no previous log file, this option is not available.
+> - To quickly go to the logging for a particular element from the Surveyor, right-click the element in the Surveyor and select *View \> Log*.
+> - If an element is renamed, the log file for that element will also be renamed.
 
 ### Changing log levels
 

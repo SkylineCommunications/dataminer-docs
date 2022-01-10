@@ -49,8 +49,8 @@ To install and set up DataMiner IDP:
     2. Specify the password for the user account in both the *Password* and *Confirm Password* boxes, and click *Confirm*.
 
     > [!NOTE]
-    > -  Do not specify a user account of which the password is subject to an expiration policy. We recommend to create a dedicated IDP account if no such account exists yet.
-    > -  If you run the setup wizard again after the initial setup, you can choose to specify different user credentials. However, by default the same user credentials will continue to be used, so you do not have to specify anything.
+    > - Do not specify a user account of which the password is subject to an expiration policy. We recommend to create a dedicated IDP account if no such account exists yet.
+    > - If you run the setup wizard again after the initial setup, you can choose to specify different user credentials. However, by default the same user credentials will continue to be used, so you do not have to specify anything.
 
 14. On the *IDP Extra Configurations* page, optionally customize the HTTP binding address, with the corresponding HTTP mode and port.
 

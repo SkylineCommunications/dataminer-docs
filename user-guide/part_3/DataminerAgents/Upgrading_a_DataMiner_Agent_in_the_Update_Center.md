@@ -12,19 +12,19 @@ To do so:
 
     > [!NOTE]
     > You will only have access to this tab if you have the following user permissions:
-    > -  *General* > *Software* *updates* > *Download software updates from DCP*
-    > -  *Modules* > *System* *configuration* > *Agents* > *Install App packages*
-    > -  *Modules* > *System* *configuration* > *Agents* > *Upgrade / restore*
-    > -  *Modules* > *System* *configuration* > *Agents* > *Stop*
+    > - *General* > *Software* *updates* > *Download software updates from DCP*
+    > - *Modules* > *System* *configuration* > *Agents* > *Install App packages*
+    > - *Modules* > *System* *configuration* > *Agents* > *Upgrade / restore*
+    > - *Modules* > *System* *configuration* > *Agents* > *Stop*
 
 3. Enter your DCP credentials when you are prompted to do so.
 
     At this point, the window will display whether your system is up to date, and if it is not, it will show which update or upgrade is available (depending on whether you follow the Main Release track or the Feature Release track, respectively).
 
     > [!NOTE]
-    > -  For every update or upgrade package listed, you can click *Release notes* to open the release notes document on DCP.
-    > -  If your system is not using a default DataMiner release, for example because a hotfix is installed, no updates will be available.
-    > -  Whether you follow the Main Release track or the Feature Release track is determined in the advanced options of the Update Center.
+    > - For every update or upgrade package listed, you can click *Release notes* to open the release notes document on DCP.
+    > - If your system is not using a default DataMiner release, for example because a hotfix is installed, no updates will be available.
+    > - Whether you follow the Main Release track or the Feature Release track is determined in the advanced options of the Update Center.
     >     - To switch tracks, click *Advanced Options* and select the release track you wish to follow. As soon as an upgrade or update is available for this track, you will then be able to install it as usual.
     >     - Switching tracks will never cause a downgrade, e.g. if you are using DataMiner 9.5.4 and switch to the Main Release track, an update to a 9.5.0 version will never be proposed.
     >     - The release path selection is saved as one setting across all users.

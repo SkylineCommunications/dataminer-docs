@@ -28,8 +28,8 @@ It is possible to mask an element, so that any alarms on that element will not s
     - If you want the element to remain masked until all alarms on the element have been cleared, select *Mask element until cleared*.
 
     > [!NOTE]
-    > -  Regardless of the option you have chosen, it is always possible to manually unmask the element.
-    > -  Elements that have been stopped cannot be masked.
+    > - Regardless of the option you have chosen, it is always possible to manually unmask the element.
+    > - Elements that have been stopped cannot be masked.
 
 3. Optionally, fill in a comment.
 

@@ -9,10 +9,10 @@ These settings can be configured directly in DataMiner Cube from DataMiner 9.6.3
 - *DBMaintenance.xml* is deprecated from DataMiner 9.6.6 onwards. Before this, it is used for Agent-specific TTL overrides, and it is only synchronized in a Failover system.
 
 > [!NOTE]
-> -  Element-specific TTL settings for trending purposes will always override TTL settings specified in *DBMaintenance.xml* or *DBMaintenanceDMS.xml*.
-> -  If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in these files. The changes are only applied for new records.
-> -  Up to DataMiner 9.5.8, *DBMaintenance.xml* and *DBMaintenanceDMS.xml* are located directly in the Skyline DataMiner folder, instead of in the Database subfolder.
-> -  Before you make changes to these files, always stop DataMiner. Restart DataMiner when your changes have been saved.
+> - Element-specific TTL settings for trending purposes will always override TTL settings specified in *DBMaintenance.xml* or *DBMaintenanceDMS.xml*.
+> - If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in these files. The changes are only applied for new records.
+> - Up to DataMiner 9.5.8, *DBMaintenance.xml* and *DBMaintenanceDMS.xml* are located directly in the Skyline DataMiner folder, instead of in the Database subfolder.
+> - Before you make changes to these files, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
 In this section:
 
@@ -26,8 +26,8 @@ In this section:
 
 > [!TIP]
 > See also:
-> -  [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md)
-> -  [Setting the TTL for database records](../DataminerTools/SLNetClientTest_tool_advanced_procedures.md#setting-the-ttl-for-database-records)
+> - [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md)
+> - [Setting the TTL for database records](../DataminerTools/SLNetClientTest_tool_advanced_procedures.md#setting-the-ttl-for-database-records)
 
 ### Basic syntax of the TTL settings
 
@@ -92,10 +92,10 @@ Examples:
 - To specify a period of 1 hour, you can use “1h”, “3600s” or “3600”.
 
 > [!NOTE]
-> -  Strings without unit will be interpreted as a number of seconds.<br>For example, “3600” will be interpreted as 3600 seconds.
-> -  For a logger table, the TTL value can be set to “-1” to indicate that the TTL value is specified in the protocol.
-> -  From DataMiner 9.5.13 onwards, if the TTL value is set to “0” for a particular type of data, no data of that type will be stored in the database.
-> -  For an indexing database, it is possible to specify “infinite”, in which case the data will be kept indefinitely.
+> - Strings without unit will be interpreted as a number of seconds.<br>For example, “3600” will be interpreted as 3600 seconds.
+> - For a logger table, the TTL value can be set to “-1” to indicate that the TTL value is specified in the protocol.
+> - From DataMiner 9.5.13 onwards, if the TTL value is set to “0” for a particular type of data, no data of that type will be stored in the database.
+> - For an indexing database, it is possible to specify “infinite”, in which case the data will be kept indefinitely.
 
 > [!NOTE]
 > From DataMiner 9.6.3 onwards, TTL overrides for trend and alarm records should be configured directly in DataMiner Cube. See [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md).

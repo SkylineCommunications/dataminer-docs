@@ -26,6 +26,6 @@ In System Center, go to *System settings* > *Credentials library*. You can then:
 When you have applied changes to a set of credentials, do not forget to click the *Apply* button in the lower right corner to save the changes.
 
 > [!NOTE]
-> -  Credentials are synchronized throughout the DMS.
-> -  If a set of credentials is deleted or edited while it is in use by an active element, that element will be restarted automatically.
+> - Credentials are synchronized throughout the DMS.
+> - If a set of credentials is deleted or edited while it is in use by an active element, that element will be restarted automatically.
 >

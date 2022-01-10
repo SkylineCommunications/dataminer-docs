@@ -10,9 +10,9 @@ If you turned a shape into a control that allows users to update a session varia
 
 > [!TIP]
 > See also:
-> -  [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
-> -  [Initializing a session variable](Initializing_a_session_variable.md)
-> -  [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md)
+> - [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
+> - [Initializing a session variable](Initializing_a_session_variable.md)
+> - [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md)
 
 ### Configuring the shape data field
 

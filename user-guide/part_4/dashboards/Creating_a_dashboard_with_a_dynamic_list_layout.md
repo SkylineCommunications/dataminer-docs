@@ -38,8 +38,8 @@ When you choose this list type, each row in the dynamic list will represent a ro
 A dynamic list feed must be configured with “Parameter” as fixed selection, with a dynamic table parameter selected. The display key has to be empty. Components added to the “Dynamic List” layout of the dashboard will only be able to link to a column parameter of the selected dynamic table.
 
 > [!NOTE]
-> -  You can use the *Mask* option on the *Settings* page to limit the included parameters to part of a table.
-> -  Unless the list is paginated, new rows will automatically appear in the dashboard when new rows are added to the table.
+> - You can use the *Mask* option on the *Settings* page to limit the included parameters to part of a table.
+> - Unless the list is paginated, new rows will automatically appear in the dashboard when new rows are added to the table.
 
 #### Elements
 

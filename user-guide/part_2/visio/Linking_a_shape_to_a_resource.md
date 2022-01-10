@@ -11,7 +11,7 @@ From DataMiner 10.2.0/10.1.10 onwards, it is possible to link an **Element** sha
     | Options            | UseResource=True |
 
 > [!NOTE]
-> -  Within a service instance connectivity chain, the elements will automatically be linked to the resource.
-> -  Children of an element shape that has the *UseResource* option specified will automatically inherit this setting unless it is overridden.
-> -  You can use any of the placeholders listed for virtual function resources under [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md). However, note that *\[Element Name\]* will only refer to the name of the resource’s virtual function element if this element can be found. Otherwise it will refer to the name of the element that the shape is linked to. *\[Name\]* will always refer to the name of the element that the shape is linked to.
+> - Within a service instance connectivity chain, the elements will automatically be linked to the resource.
+> - Children of an element shape that has the *UseResource* option specified will automatically inherit this setting unless it is overridden.
+> - You can use any of the placeholders listed for virtual function resources under [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md). However, note that *\[Element Name\]* will only refer to the name of the resource’s virtual function element if this element can be found. Otherwise it will refer to the name of the element that the shape is linked to. *\[Name\]* will always refer to the name of the element that the shape is linked to.
 >

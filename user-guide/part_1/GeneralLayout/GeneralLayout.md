@@ -69,9 +69,7 @@ Frequently used peripherals include:
 
 > [!NOTE]
 > When interfacing with IO gateways through DataMiner Protocols, the following guidelines should be taken into account.
-> -  All analog and digital IOs must be listed in a normalized way so that they reflect the actual voltage/status.
-> -  Create a virtual protocol that contains the parameters to be included in the virtual element.
-> -  Specify the necessary multiplication and offset factors in order to deal with parameter units (e.g. 0.1 V/oC)
-> -  Virtual protocol design is independent of the IO Gateway being used.
-
-
+> - All analog and digital IOs must be listed in a normalized way so that they reflect the actual voltage/status.
+> - Create a virtual protocol that contains the parameters to be included in the virtual element.
+> - Specify the necessary multiplication and offset factors in order to deal with parameter units (e.g. 0.1 V/oC)
+> - Virtual protocol design is independent of the IO Gateway being used.

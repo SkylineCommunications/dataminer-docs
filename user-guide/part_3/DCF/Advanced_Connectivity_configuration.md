@@ -21,8 +21,8 @@ In this table, you can give an interface a custom name by entering a custom valu
 The connections table allows you to view and configure the connections between interfaces.
 
 > [!NOTE]
-> -  When an element is restarted, connections and properties that cannot be linked to an existing interface will automatically be deleted.
-> -  Resolving multiple external connections on the same interface is only supported from DataMiner 9.5.5 onwards.
+> - When an element is restarted, connections and properties that cannot be linked to an existing interface will automatically be deleted.
+> - Resolving multiple external connections on the same interface is only supported from DataMiner 9.5.5 onwards.
 
 #### Adding a connection
 
@@ -44,11 +44,11 @@ The connections table allows you to view and configure the connections between i
 > If you want to set up a connection between two elements, make sure to add a connection to the connections table of both elements.
 >
 > Say you want to connect interface 1 of element A to interface 2 of element B:
-> -  In the connections table of element A, add the following connection:
+> - In the connections table of element A, add the following connection:
 >     - Source interface: 1
 >     - Destination element: B
 >     - Destination interface: 2
-> -  In the connections table of element B, add the following connection:
+> - In the connections table of element B, add the following connection:
 >     - Source interface: 2
 >     - Destination element: A
 >     - Destination interface: 1

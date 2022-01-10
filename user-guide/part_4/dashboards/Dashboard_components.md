@@ -1024,8 +1024,8 @@ Displays a website in an inline frame.
 Optionally, a feed can be used with this component. This can for instance be of use to dynamically include the value of a parameter in the URL. To do so, select a parameter feed, and include *%parametervalue%* in the URL. This will then be replaced with the value of that parameter.
 
 > [!NOTE]
-> -  If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Inline frame* component with that component. In that case, when a user clicks a row of that table, the *Inline frame* component will update the URL with the parameter value of the clicked row. For more information, see [Generic real-time parameter](#generic-real-time-parameter).
-> -  From DataMiner 9.5.5 onwards, webpages displayed in an *Inline frame* component automatically have an authentication ticket attached as a URL parameter, so that it is not necessary to log in again on web apps that run on the same DMA as the Dashboards app, including the DataMiner Monitoring & Control app, DataMiner Ticketing and DataMiner Maps.
+> - If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Inline frame* component with that component. In that case, when a user clicks a row of that table, the *Inline frame* component will update the URL with the parameter value of the clicked row. For more information, see [Generic real-time parameter](#generic-real-time-parameter).
+> - From DataMiner 9.5.5 onwards, webpages displayed in an *Inline frame* component automatically have an authentication ticket attached as a URL parameter, so that it is not necessary to log in again on web apps that run on the same DMA as the Dashboards app, including the DataMiner Monitoring & Control app, DataMiner Ticketing and DataMiner Maps.
 
 Component-specific options:
 

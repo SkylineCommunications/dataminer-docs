@@ -44,8 +44,8 @@
 
     > [!NOTE]
     > The following combinations of authentication and encryption algorithm are not supported:
-    > -  MD5/SHA128 and AES192
-    > -  MD5/SHA128/SHA224 and AES256
+    > - MD5/SHA128 and AES192
+    > - MD5/SHA128/SHA224 and AES256
     >
     > We recommend to use SHA-512 and AES-256, since this is the most secure combination.
 
@@ -72,9 +72,9 @@
         | Custom bindings                   | To configure custom bindings, use the *Add*, *Delete*, *Up* and *Down* buttons in this section. |
 
     > [!NOTE]
-    > -  Custom bindings cannot be used if you use the default OID.
-    > -  For more information on custom bindings, see [Custom DataMiner notification](Custom_DataMiner_notification.md).
-    > -  If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#generating-smiv2-mib-files)).
+    > - Custom bindings cannot be used if you use the default OID.
+    > - For more information on custom bindings, see [Custom DataMiner notification](Custom_DataMiner_notification.md).
+    > - If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#generating-smiv2-mib-files)).
 
 8. In the *resend* tab, specify the following options:
 

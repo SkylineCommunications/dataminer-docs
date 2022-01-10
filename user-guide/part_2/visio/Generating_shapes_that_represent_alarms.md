@@ -9,8 +9,8 @@ To implement this feature, do the following:
 2. Put the shape into a group, and add the necessary group-level shape data fields to the group. See [Group-level shape data](#group-level-shape-data).
 
 > [!NOTE]
-> -  The shape created in step 1 can itself be a group that contains a number of subshapes, each with their own **Alarm** and **Info** data fields. That way, you can e.g. visualize different details of one particular alarm.
-> -  From DataMiner 9.5.3 onwards, by default the shapes representing the alarms are ordered according to the time of the alarms.
+> - The shape created in step 1 can itself be a group that contains a number of subshapes, each with their own **Alarm** and **Info** data fields. That way, you can e.g. visualize different details of one particular alarm.
+> - From DataMiner 9.5.3 onwards, by default the shapes representing the alarms are ordered according to the time of the alarms.
 
 ### Child-level shape data
 

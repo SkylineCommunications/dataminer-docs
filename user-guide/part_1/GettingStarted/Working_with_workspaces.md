@@ -9,9 +9,9 @@ To manage workspaces:
 - Prior to DataMiner 10.0.0/10.0.2: Click the workspace icon ![](../../images/IconWorkspaces00024.png) in the Cube navigation pane.
 
 > [!NOTE]
-> -  The saved layout can include apps, like for instance Automation, and undocked alarm tabs, but not the position of the complete Alarm Console.
-> -  For each card, the page selected on the card, the position of the navigation pane, and the size of the card are also stored.
-> -  The icon indicating the workspace in the list shows the number of cards and their layout.
+> - The saved layout can include apps, like for instance Automation, and undocked alarm tabs, but not the position of the complete Alarm Console.
+> - For each card, the page selected on the card, the position of the navigation pane, and the size of the card are also stored.
+> - The icon indicating the workspace in the list shows the number of cards and their layout.
 
 The following actions are possible in the *Workspaces* pane:
 
@@ -42,6 +42,6 @@ The following actions are possible in the *Workspaces* pane:
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/ruis-rapid-recap-workspaces/>
-> -  <https://community.dataminer.services/video/dataminer-cube-workspaces-in-dataminer-cube/>
+> - <https://community.dataminer.services/video/ruis-rapid-recap-workspaces/>
+> - <https://community.dataminer.services/video/dataminer-cube-workspaces-in-dataminer-cube/>
 >

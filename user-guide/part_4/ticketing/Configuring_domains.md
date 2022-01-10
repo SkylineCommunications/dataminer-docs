@@ -60,8 +60,8 @@ To access the detailed configuration of a Ticketing field, on the configuration 
 This opens a window where you can specify the name of the ticket field, the field type, and a number of other configuration options.
 
 > [!NOTE]
-> -  It is not possible to change the *Type* for a *State* field.
-> -  The name of a ticket field may not start with an underscore ("\_") or contain any of the following characters, as these are not supported in the Elasticsearch database: .#\*,"'
+> - It is not possible to change the *Type* for a *State* field.
+> - The name of a ticket field may not start with an underscore ("\_") or contain any of the following characters, as these are not supported in the Elasticsearch database: .#\*,"'
 
 The following configuration options are available, depending on the selected field type:
 
@@ -77,6 +77,6 @@ The following configuration options are available, depending on the selected fie
 | Linking alarm                                    | All field types.                                                                                                                                               | Available from DataMiner 9.6.6 onwards. Allows you to link the field to a DataMiner alarm field. This way, when a user right-clicks an alarm in the Alarm Console and selects to create a new ticket, the ticket field linked to the alarm field will inherit the alarm field content.<br> From DataMiner 9.6.13 onwards, you can combine multiple alarm fields and static text in a ticket field by clicking *Add concatenation* after you have added an alarm field, and then adding additional alarm fields and/or static text.                                                                                                                                                                                                                                                   |
 
 > [!NOTE]
-> -  A *State* field requires at least one open state and one closed state. A *Drop-down list* field requires at least one possible value.
-> -  The *Required* and *Select default value* options are only available from DataMiner 9.0.5 onwards. Tickets fields that were created in earlier versions of DataMiner will not be required and will not have a default value.
+> - A *State* field requires at least one open state and one closed state. A *Drop-down list* field requires at least one possible value.
+> - The *Required* and *Select default value* options are only available from DataMiner 9.0.5 onwards. Tickets fields that were created in earlier versions of DataMiner will not be required and will not have a default value.
 >

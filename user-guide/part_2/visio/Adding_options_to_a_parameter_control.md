@@ -127,8 +127,8 @@ ColumnWidths:100,50,100,a
 ```
 
 > [!NOTE]
-> -  The width of an “autosize” column will not be recalculated when cell content changes, nor when the user scrolls the list (in order to avoid flickering). However, it will be recalculated when rows are added or removed.
-> -  The autosize behavior of a column will be disabled if that column is resized manually. To re-enable the autosize behavior, the user has to double-click the column resize icon.
+> - The width of an “autosize” column will not be recalculated when cell content changes, nor when the user scrolls the list (in order to avoid flickering). However, it will be recalculated when rows are added or removed.
+> - The autosize behavior of a column will be disabled if that column is resized manually. To re-enable the autosize behavior, the user has to double-click the column resize icon.
 
 #### CustomColors
 
@@ -149,8 +149,8 @@ IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuff
 | bg.hovereditor   | The color of the background when hovering the mouse cursor over the editor part of the control. |
 
 > [!NOTE]
-> -  If no custom color is defined, the control will take the default color depending on the current Cube theme (white/black).
-> -  Colors can be specified in one of the following hexadecimal formats: #RRGGBB, #AARRGGBB, RRGGBB, AARRGGBB. Values can be separated with a comma or a semicolon.
+> - If no custom color is defined, the control will take the default color depending on the current Cube theme (white/black).
+> - Colors can be specified in one of the following hexadecimal formats: #RRGGBB, #AARRGGBB, RRGGBB, AARRGGBB. Values can be separated with a comma or a semicolon.
 
 #### CustomTextBoxInfo:\[Text\]
 
@@ -268,11 +268,11 @@ TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1)
 - Fullfilter syntax (supported from DataMiner 10.1.3 onwards): Display rows for which the primary key is 0 or the display key is 1.
 
 > [!NOTE]
-> -  As *TableRowFilter* is a server-side filter, for discrete parameters you should use the raw values instead of the display values in the filter.
-> -  In the TableRowFilter and IncludedPIDs options, you can use placeholders like “\[Param:...\]”, “\[Var:...\]”, etc. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
-> -  To specify a client-side filter for a table parameter, use the *ClientSideRowFilter* option instead: [ClientSideRowFilter](#clientsiderowfilter).
-> -  From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
-> -  Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters)). E.g. *\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)*
+> - As *TableRowFilter* is a server-side filter, for discrete parameters you should use the raw values instead of the display values in the filter.
+> - In the TableRowFilter and IncludedPIDs options, you can use placeholders like “\[Param:...\]”, “\[Var:...\]”, etc. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+> - To specify a client-side filter for a table parameter, use the *ClientSideRowFilter* option instead: [ClientSideRowFilter](#clientsiderowfilter).
+> - From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
+> - Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters)). E.g. *\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)*
 
 #### LedBar
 

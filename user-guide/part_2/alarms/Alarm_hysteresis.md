@@ -4,8 +4,8 @@ Thanks to alarm threshold hysteresis, you can fine-tune the sensitivity of your 
 
 > [!TIP]
 > See also:
-> -  [Configuring alarm hysteresis in an alarm template](../protocols/Configuring_alarm_templates.md#configuring-alarm-hysteresis-in-an-alarm-template)
-> -  [Polling.xml](../../part_7/SkylineDataminerFolder/Polling_xml.md#pollingxml)
+> - [Configuring alarm hysteresis in an alarm template](../protocols/Configuring_alarm_templates.md#configuring-alarm-hysteresis-in-an-alarm-template)
+> - [Polling.xml](../../part_7/SkylineDataminerFolder/Polling_xml.md#pollingxml)
 
 #### Graphical representation
 

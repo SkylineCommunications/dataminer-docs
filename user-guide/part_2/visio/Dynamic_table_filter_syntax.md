@@ -29,8 +29,8 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFi
     - A value enclosed within single quotation marks (')
 
         > [!NOTE]
-        > -  If this value contains semicolons, these will be interpreted as separators in Visual Overview. To avoid having a semicolon interpreted as a separator, specify a different separator using the \[sep:XY\] option. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
-        > -  If a view table has a column with view options configured in the format view=:x:y:z or view=a:b:c:z, the VALUE= filter is supported from DataMiner 10.1.9/10.2.0 onwards. However, only filters of type VALUE=5 == abc are supported, and no AND/OR combinations are supported. From DataMiner 10.1.11/10.2.0 onwards, this support is further extended to also include filters on view table columns that refer to other view table columns.
+        > - If this value contains semicolons, these will be interpreted as separators in Visual Overview. To avoid having a semicolon interpreted as a separator, specify a different separator using the \[sep:XY\] option. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
+        > - If a view table has a column with view options configured in the format view=:x:y:z or view=a:b:c:z, the VALUE= filter is supported from DataMiner 10.1.9/10.2.0 onwards. However, only filters of type VALUE=5 == abc are supported, and no AND/OR combinations are supported. From DataMiner 10.1.11/10.2.0 onwards, this support is further extended to also include filters on view table columns that refer to other view table columns.
 
     Examples:
 
@@ -133,8 +133,8 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFi
     ```
 
     > [!NOTE]
-    > -  A foreign key relation path must exist between the table being queried and the linked data table.
-    > -  The result set will not be updated when the data in the external table changes.
+    > - A foreign key relation path must exist between the table being queried and the linked data table.
+    > - The result set will not be updated when the data in the external table changes.
 
 - **FULLFILTER**=
 
@@ -145,11 +145,11 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFi
     ```
 
     > [!NOTE]
-    > -  String values should be enclosed in single quotation marks (').
-    > -  Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
-    > -  If you encounter issues with this type of filter after an upgrade to 9.0.1 because of the changed behavior, you can revert to the old behavior by specifying *\<SLElement fallback="true" />* in *MaintenanceSettings.xml*. See [Filtering.SlElement](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#filteringslelement).
-    > -  From DataMiner 9.6.6 onwards, several of these filters can be combined and it is also possible to combine a FULLFILTER= type filter with a VALUE= type filter. The resulting query will be an AND combination of the filters.
-    > -  This type of filter is not supported to filter the list of elements from which a direct view retrieves data.
+    > - String values should be enclosed in single quotation marks (').
+    > - Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
+    > - If you encounter issues with this type of filter after an upgrade to 9.0.1 because of the changed behavior, you can revert to the old behavior by specifying *\<SLElement fallback="true" />* in *MaintenanceSettings.xml*. See [Filtering.SlElement](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#filteringslelement).
+    > - From DataMiner 9.6.6 onwards, several of these filters can be combined and it is also possible to combine a FULLFILTER= type filter with a VALUE= type filter. The resulting query will be an AND combination of the filters.
+    > - This type of filter is not supported to filter the list of elements from which a direct view retrieves data.
 
 - **RECURSIVEFULLFILTER**
 
@@ -169,5 +169,3 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFi
 - **FORCEFULLTABLE**=
 
     This filter can be used on partial tables to force the filter to go through all the pages rather than just the first. The filter should be followed by true or false.
-
-

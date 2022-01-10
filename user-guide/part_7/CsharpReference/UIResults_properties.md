@@ -1,5 +1,3 @@
 ## UIResults properties
 
 None
-
-

@@ -19,6 +19,6 @@ You can configure this size limit as follows:
 3. Restart DataMiner.
 
 > [!NOTE]
-> -  If no limit is set in DBConfiguration.xml or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
-> -  When the specified limit has been reached, the following alarm will be generated: “Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped.”
+> - If no limit is set in DBConfiguration.xml or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
+> - When the specified limit has been reached, the following alarm will be generated: “Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped.”
 >

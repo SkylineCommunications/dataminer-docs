@@ -15,8 +15,8 @@ The main page of the Ticketing app consists of a header bar, a side panel, and a
     - The name of the current user: Click the user name and select *Log out* to log out of the app.
 
     > [!NOTE]
-    > -  Depending on your user permissions, not all buttons may be available.
-    > -  If you scroll down in the app, the header may be hidden from view in order to optimize the amount of information shown. As soon as you scroll upwards, the header will be displayed again.
+    > - Depending on your user permissions, not all buttons may be available.
+    > - If you scroll down in the app, the header may be hidden from view in order to optimize the amount of information shown. As soon as you scroll upwards, the header will be displayed again.
 
 - The side panel on the left side of the app can be collapsed like any card side panel in Cube. This panel can be used to filter the overview panel on the right.
 
@@ -24,10 +24,10 @@ The main page of the Ticketing app consists of a header bar, a side panel, and a
 
         > [!NOTE]
         > Certain wildcards and special characters can be used in the filter:
-        > -  An asterisk (\*) can be used as a placeholder for one or several subsequent characters.
-        > -  A question mark (?) can be used as a placeholder for a single character.
-        > -  When an exclamation point (!) or dash (-) is placed in front of a search term, records containing the term will be excluded.
-        > -  To search for an exact phrase, surround it by double quotes (").
+        > - An asterisk (\*) can be used as a placeholder for one or several subsequent characters.
+        > - A question mark (?) can be used as a placeholder for a single character.
+        > - When an exclamation point (!) or dash (-) is placed in front of a search term, records containing the term will be excluded.
+        > - To search for an exact phrase, surround it by double quotes (").
 
     - By default, a time filter is available below this, allowing you to display only active tickets, or tickets created in a particular time span.
 

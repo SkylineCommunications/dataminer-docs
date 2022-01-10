@@ -22,9 +22,7 @@ To do so:
     As soon as the spectrum analyzer card is opened, the simulation will begin, with the recording playing in a continuous loop.
 
 > [!NOTE]
-> -  Only one simulation can be configured. This simulation will be used for all simulated spectrum elements using the same protocol.
-> -  Since this is a simulation, modifying parameters such as the start or stop frequency will have no effect.
-> -  The simulated traces are also available for spectrum monitors.
-> -  If no simulation recording file is found, the element will display a random triangle trace.
-
-
+> - Only one simulation can be configured. This simulation will be used for all simulated spectrum elements using the same protocol.
+> - Since this is a simulation, modifying parameters such as the start or stop frequency will have no effect.
+> - The simulated traces are also available for spectrum monitors.
+> - If no simulation recording file is found, the element will display a random triangle trace.

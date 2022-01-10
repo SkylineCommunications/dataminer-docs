@@ -3,9 +3,9 @@
 In the System Center module, the user permissions have been divided into three main groups: *General*, *Modules*, and *Other*. Below is an overview of the different permissions.
 
 > [!NOTE]
-> -  To quickly find a particular user permission in System Center, use the filter box in the top-right corner of the list of permissions.
-> -  Some of the listed user permissions are only available if the DMA has the correct licenses and configuration, so that the user permissions are relevant.
-> -  For many permissions, it makes no sense to grant them unless you grant the corresponding *UI Available* permission as well.
+> - To quickly find a particular user permission in System Center, use the filter box in the top-right corner of the list of permissions.
+> - Some of the listed user permissions are only available if the DMA has the correct licenses and configuration, so that the user permissions are relevant.
+> - For many permissions, it makes no sense to grant them unless you grant the corresponding *UI Available* permission as well.
 
 - [General](#general)
 
@@ -146,8 +146,8 @@ In the System Center module, the user permissions have been divided into three m
 | Data overview available | Prior to DataMiner 9.6.6: Permission to access data pages of view cards.<br> From DataMiner 9.6.6 onwards: Permission to access data pages of cards. |
 
 > [!NOTE]
-> -  Up to DataMiner 9.5.3, the *Data overview available* permission is called *Element list available (SD Element Overview)* instead.
-> -  As soon as this permission or the *View data overview available* permission is granted, the user will have access to data pages of view cards. To hide access to data pages of view cards, neither of these permissions should be granted.
+> - Up to DataMiner 9.5.3, the *Data overview available* permission is called *Element list available (SD Element Overview)* instead.
+> - As soon as this permission or the *View data overview available* permission is granted, the user will have access to data pages of view cards. To hide access to data pages of view cards, neither of these permissions should be granted.
 
 #### Data overview view available
 
@@ -394,9 +394,9 @@ In the System Center module, the user permissions have been divided into three m
 | Generate protocol | Permission to generate a protocol for a virtual function. Available from DataMiner 10.20./10.1.7 onwards. |
 
 > [!NOTE]
-> -  At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
-> -  When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
-> -  The Functions module requires DataMiner Indexing Engine.
+> - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> - When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
+> - The Functions module requires DataMiner Indexing Engine.
 
 #### Jobs
 
@@ -536,8 +536,8 @@ In the System Center module, the user permissions have been divided into three m
 | Reservations \> Execute                      | Permission to execute reservations. Deprecated from DataMiner 9.6.7 onwards.                                                                                                                                                     |
 
 > [!NOTE]
-> -  In order to access the *Resource Manager* or *Reservations* module, you also need to have the Resource Manager license. For more information on acquiring a Resource Manager license, contact the Skyline Sales department.
-> -  In DataMiner 9.6.4, the Resource Manager permissions are available under *Modules* > *Service & Resource Management* > *Resources* and *Reservations*. In later versions, the user permissions within this block are available under *Modules* > *Resources and Modules* > *Reservations/Bookings*.
+> - In order to access the *Resource Manager* or *Reservations* module, you also need to have the Resource Manager license. For more information on acquiring a Resource Manager license, contact the Skyline Sales department.
+> - In DataMiner 9.6.4, the Resource Manager permissions are available under *Modules* > *Service & Resource Management* > *Resources* and *Reservations*. In later versions, the user permissions within this block are available under *Modules* > *Resources and Modules* > *Reservations/Bookings*.
 
 #### Router Control
 
@@ -725,8 +725,8 @@ In the System Center module, the user permissions have been divided into three m
 | Group Settings \> Edit all groups | Permission to configure groups even if you are not a member of them.                                                                                                                                                                                                                                                |
 
 > [!NOTE]
-> -  The permission *Edit other users* can only be granted to users who have also been granted the *Administrator* permission or *Limited administrator*.
-> -  The permission *View users from other groups* also determines whether you have access to public and protected alarm filters made by users from other groups.
+> - The permission *Edit other users* can only be granted to users who have also been granted the *Administrator* permission or *Limited administrator*.
+> - The permission *View users from other groups* also determines whether you have access to public and protected alarm filters made by users from other groups.
 
 #### System configuration \> Security \> Notifications / alerts
 
@@ -870,8 +870,8 @@ In the System Center module, the user permissions have been divided into three m
 ### Legacy
 
 > [!NOTE]
-> -  This category contains all user permissions that are only relevant for the legacy System Display application. To view these user permissions, right-click the list of user permissions and select *Show legacy rights*.
-> -  From DataMiner 9.6.0 onwards, this category is no longer available, as the System Display application is no longer available from that DataMiner version onwards.
+> - This category contains all user permissions that are only relevant for the legacy System Display application. To view these user permissions, right-click the list of user permissions and select *Show legacy rights*.
+> - From DataMiner 9.6.0 onwards, this category is no longer available, as the System Display application is no longer available from that DataMiner version onwards.
 
 | Cube permission       | Description                                                                                      |
 |-----------------------|--------------------------------------------------------------------------------------------------|

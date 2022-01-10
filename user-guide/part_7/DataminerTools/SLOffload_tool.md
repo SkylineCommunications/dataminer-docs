@@ -17,5 +17,3 @@ To trigger a database offload:
     > If there is a configuration issue, the information in the pane on the right in the main window of the SLOffload tool can be used to determine what the problem is. The pane displays a log that details any issues that the application encounters, e.g. failed authentication.
 
 3. If the configuration is correct, click *Start Offload* to start the database offload.
-
-

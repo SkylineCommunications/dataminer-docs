@@ -184,10 +184,10 @@ If you want a layer of sourceType “overlay” to display a KML image, do the f
         ```
 
 > [!NOTE]
-> -  Do not store private KML files in the folder “C:\\Skyline DataMiner\\Webpages”. Files in that folder will be publicly accessible.
-> -  If you use a private KML file, only users who have logged on to DataMiner Maps will be able to request a download link. The download links can be used only once and expire after 5 minutes
-> -  For more information on the KML file format, see [http://code.google.com/apis/kml/documentation/mapsSupport.html](http://code.google.com/apis/kml/documentation/mapsSupport.md).
-> -  KML layers are always used as the bottom layers of the map, while other layers are drawn from top to bottom as defined in the configuration.
+> - Do not store private KML files in the folder “C:\\Skyline DataMiner\\Webpages”. Files in that folder will be publicly accessible.
+> - If you use a private KML file, only users who have logged on to DataMiner Maps will be able to request a download link. The download links can be used only once and expire after 5 minutes
+> - For more information on the KML file format, see [http://code.google.com/apis/kml/documentation/mapsSupport.html](http://code.google.com/apis/kml/documentation/mapsSupport.md).
+> - KML layers are always used as the bottom layers of the map, while other layers are drawn from top to bottom as defined in the configuration.
 
 #### Overlays of type “geojson”
 
@@ -275,9 +275,9 @@ From DataMiner 9.6.0 CU3/9.6.9 onwards, the following additional filters can be 
 ```
 
 > [!NOTE]
-> -  To make sure correct results are returned, *\<SourceTableID>* and *\<DestinationTableID>* have to be in the correct order.
-> -  Optionally, the *\<LineOptions>* tag can be used in this tag. See [LineOptions](LineOptions.md).
-> -  From DataMiner 10.0.3 onwards, the recursivefullfilter option is supported for table filters. See [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
+> - To make sure correct results are returned, *\<SourceTableID>* and *\<DestinationTableID>* have to be in the correct order.
+> - Optionally, the *\<LineOptions>* tag can be used in this tag. See [LineOptions](LineOptions.md).
+> - From DataMiner 10.0.3 onwards, the recursivefullfilter option is supported for table filters. See [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
 
 ### Layers of sourceType “separator”
 

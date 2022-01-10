@@ -39,8 +39,8 @@ Do the following if you want DMS Alerter to connect to another DataMiner System.
 6. In the *Options* dialog box, click *OK*.
 
 > [!NOTE]
-> -  In the DMS Connections tab, the option *Show message when SLAlerter loses connection* determines whether users will be notified when the connection to the DMS is lost. By default, this option is enabled.
-> -  If the connection to the DMS is lost, this is logged in the Event Viewer with an "SLAlerter lost connection" message. In the Alerter application itself, the user will be redirected to the login screen, in the same manner as when the connection is lost in DataMiner Cube.
+> - In the DMS Connections tab, the option *Show message when SLAlerter loses connection* determines whether users will be notified when the connection to the DMS is lost. By default, this option is enabled.
+> - If the connection to the DMS is lost, this is logged in the Event Viewer with an "SLAlerter lost connection" message. In the Alerter application itself, the user will be redirected to the login screen, in the same manner as when the connection is lost in DataMiner Cube.
 
 ### Setting your startup preferences for DMS Alerter
 
@@ -160,8 +160,8 @@ To do so:
 4. To change the order in which the additional properties will appear in the balloon, use the *Up* and *Down* buttons to move a selected property accordingly.
 
 > [!NOTE]
-> -  You can add as many alarm properties to the pop-up balloons as you like. If too many properties are added to show them at once in the balloon, it will be possible to scroll through them with a scrollbar.
-> -  An element name, service name or view name will be underlined to indicate that you can click these to respectively open the element, service or view information in your default client application.
+> - You can add as many alarm properties to the pop-up balloons as you like. If too many properties are added to show them at once in the balloon, it will be possible to scroll through them with a scrollbar.
+> - An element name, service name or view name will be underlined to indicate that you can click these to respectively open the element, service or view information in your default client application.
 
 ### Configuring options related to acknowledging alarms
 

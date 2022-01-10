@@ -115,9 +115,9 @@ To turn separate shapes into navigation controls, use the session variable *Navi
 | SetVar           | Navigate:yyyy-mm-dd hh:mm:ss         | Zoom in on a period of 24 hours, centered on the specified time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 > [!NOTE]
-> -  After a particular action has been performed, the session variable *Navigate* will be cleared. That way, it can be set again to perform another action. You can, for example, keep clicking a “pan+day” button to slide to the right.
-> -  The last of the above-mentioned *Navigate* options will often be used together with a shape data field of type *SetVarOptions* set to “Control=DateTime”, which will turn the shape into a date picker. See [Creating a DateTime control](Adding_options_to_a_session_variable_control.md#creating-a-datetime-control).
-> -  From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, it is possible to load a specific time slot immediately when a user navigates to the page. To do so, use the **InitVar** shape data on page level instead of the SetVar shape data mentioned above.
+> - After a particular action has been performed, the session variable *Navigate* will be cleared. That way, it can be set again to perform another action. You can, for example, keep clicking a “pan+day” button to slide to the right.
+> - The last of the above-mentioned *Navigate* options will often be used together with a shape data field of type *SetVarOptions* set to “Control=DateTime”, which will turn the shape into a date picker. See [Creating a DateTime control](Adding_options_to_a_session_variable_control.md#creating-a-datetime-control).
+> - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, it is possible to load a specific time slot immediately when a user navigates to the page. To do so, use the **InitVar** shape data on page level instead of the SetVar shape data mentioned above.
 
 #### ResourcesInSelectedReservation
 
@@ -142,8 +142,8 @@ The value can be set in serialized form (e.g. “5248098399646517511;52483923539
 Available from DataMiner 9.6.3 onwards.
 
 > [!NOTE]
-> -  Prior to DataMiner 9.6.11, the scope of this session variable is always global. From DataMiner 9.6.11 onwards, the card, page and workspace scope are also supported.
-> -  If both *Viewport* and *Navigate* are used, the *Navigate* variable will be processed after the *Viewport* variable.
+> - Prior to DataMiner 9.6.11, the scope of this session variable is always global. From DataMiner 9.6.11 onwards, the card, page and workspace scope are also supported.
+> - If both *Viewport* and *Navigate* are used, the *Navigate* variable will be processed after the *Viewport* variable.
 
 #### YAxisResources
 

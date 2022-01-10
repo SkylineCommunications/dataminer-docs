@@ -17,8 +17,8 @@ In this section:
 - [Examples](#examples)
 
 > [!NOTE]
-> -  These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
-> -  For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md).
+> - These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
+> - For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md).
 
 ### Configuring the shape data fields
 
@@ -130,8 +130,8 @@ From DataMiner 9.0.2 onwards, you can use alarm statistics in the “What” par
 | #TotalAlarms          | X    | X       | X       |
 
 > [!NOTE]
-> -  #NormalAlarms can only be used if, in the file *MaintenanceSettings.xml*, the *\<AutoClear>* tag is set to "false".
-> -  On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example *#Tickets:Internal*.
+> - #NormalAlarms can only be used if, in the file *MaintenanceSettings.xml*, the *\<AutoClear>* tag is set to "false".
+> - On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example *#Tickets:Internal*.
 
 ### Specifying a default return value
 

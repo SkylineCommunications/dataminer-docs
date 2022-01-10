@@ -69,8 +69,8 @@ In the *DMA* submenu, you can find the following commands:
     See [DMA](DIS_settings.md#dma)
 
     > [!NOTE]
-    > -  When DIS connects to a DataMiner Agent, it always uses polling.
-    > -  If this *Import Protocol* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
+    > - When DIS connects to a DataMiner Agent, it always uses polling.
+    > - If this *Import Protocol* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
 
 - Import Automation script
 
@@ -78,8 +78,8 @@ In the *DMA* submenu, you can find the following commands:
     You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.     See [DMA](DIS_settings.md#dma)
 
     > [!NOTE]
-    > -  When DIS connects to a DataMiner Agent, it always uses polling.
-    > -  If this *Import Automation script..* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
+    > - When DIS connects to a DataMiner Agent, it always uses polling.
+    > - If this *Import Automation script..* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
 
 ### Protocol \> Generate QAction helper code
 
@@ -241,8 +241,8 @@ At the top of the tool window, you find two buttons: *Run* and *Open*.
 - Click *Open* to edit the selected macro.
 
 > [!NOTE]
-> -  When you run a macro, it will always affect the last XML or C# document that was active.
-> -  When you try to open a DIS macro while working inside a protocol or Automation script solution, a message will appear, asking whether you want to open the DIS macro in a new Visual Studio instance.
+> - When you run a macro, it will always affect the last XML or C# document that was active.
+> - When you try to open a DIS macro while working inside a protocol or Automation script solution, a message will appear, asking whether you want to open the DIS macro in a new Visual Studio instance.
 
 #### Structure of a macro file
 
@@ -323,8 +323,8 @@ Below the element selection box you can find the element manipulation tool bar. 
 - Open the element’s log file.
 
     > [!NOTE]
-    > -  If DIS is connected to a remote DataMiner Agent, then make sure the *C:\\Skyline DataMiner\\logging* folder on that DataMiner Agent is shared and accessible.
-    > -  Element Display is no longer available from DataMiner 9.6.0 onwards.
+    > - If DIS is connected to a remote DataMiner Agent, then make sure the *C:\\Skyline DataMiner\\logging* folder on that DataMiner Agent is shared and accessible.
+    > - Element Display is no longer available from DataMiner 9.6.0 onwards.
 
 ##### Linking temporary QAction projects to QActions in the protocol of the selected element
 
@@ -394,8 +394,8 @@ The *MIB Tree* tab shows a graphical representation of all loaded MIB files.
 To automatically create a *\<Param>* tag based on a particular OID in the MIB tree, drag the OID onto an open protocol XML file and, if necessary, modify the imported data (which will be highlighted).
 
 > [!NOTE]
-> -  When you drag a table parameter from the *DIS MIB Browser* tool window onto a protocol.xml file, the table name will only be added in front of the name of the column parameter when it is not already included in the latter. Also, when the SNMP name of a table contains “Table”, this string will be excluded from column parameters names and descriptions. This will prevent table names from being included twice in column parameter names.
-> -  In the MIB tree, obsolete, deprecated and duplicate MIB nodes are indicated by a special icon.
+> - When you drag a table parameter from the *DIS MIB Browser* tool window onto a protocol.xml file, the table name will only be added in front of the name of the column parameter when it is not already included in the latter. Also, when the SNMP name of a table contains “Table”, this string will be excluded from column parameters names and descriptions. This will prevent table names from being included twice in column parameter names.
+> - In the MIB tree, obsolete, deprecated and duplicate MIB nodes are indicated by a special icon.
 
 #### Files
 
@@ -420,8 +420,8 @@ The bottom half of the *Files* tab contains three sections:
 | *Missing Modules* | All MIB modules that cannot be found.                                                                                                                                 |
 
 > [!NOTE]
-> -  The location of the MIB store and other MIB browser settings can be specified in the *MIB* tab of the *DIS Settings* window. See: [MIB](DIS_settings.md#mib)
-> -  The MIB browser allows you to import files with the following extensions: <br>*mib*, *smi*, and *txt*.
+> - The location of the MIB store and other MIB browser settings can be specified in the *MIB* tab of the *DIS Settings* window. See: [MIB](DIS_settings.md#mib)
+> - The MIB browser allows you to import files with the following extensions: <br>*mib*, *smi*, and *txt*.
 
 #### Compare
 

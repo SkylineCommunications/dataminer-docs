@@ -94,6 +94,6 @@ To create a new alarm template group:
 9. Click *OK*.
 
 > [!NOTE]
-> -  Any alarm templates that are only used in an alarm template group will have the notice *Used in group* next to the template name in the Protocols & Templates module. If a user tries to delete such an alarm template, he will receive a warning that indicates in which group or groups the template is used.
-> -  If scheduled alarm templates are used in an alarm template group, they will not be in use in the group at the moment when they are scheduled to be inactive.
+> - Any alarm templates that are only used in an alarm template group will have the notice *Used in group* next to the template name in the Protocols & Templates module. If a user tries to delete such an alarm template, he will receive a warning that indicates in which group or groups the template is used.
+> - If scheduled alarm templates are used in an alarm template group, they will not be in use in the group at the moment when they are scheduled to be inactive.
 >

@@ -3,8 +3,8 @@
 It is possible to save the configuration of an SLA element in DataMiner Cube. This can be done from any of the following pages: the *SLA Configuration* page, the *Compliance Configuration* page, and the *Violation Configuration* page.
 
 > [!NOTE]
-> -  The saved configuration includes all parameters on the “Configuration” pages, except the manual reset. Other pages, e.g. *Offline Window*, are not included.
-> -  The parameter *Maximum Single Violations Percentage* is only included from versions 2.0.0.26 and 3.0.0.1 of the *Skyline SLA Definition Basic* protocol onwards.
+> - The saved configuration includes all parameters on the “Configuration” pages, except the manual reset. Other pages, e.g. *Offline Window*, are not included.
+> - The parameter *Maximum Single Violations Percentage* is only included from versions 2.0.0.26 and 3.0.0.1 of the *Skyline SLA Definition Basic* protocol onwards.
 
 ##### Saving the SLA configuration
 

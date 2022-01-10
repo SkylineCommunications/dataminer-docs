@@ -46,8 +46,8 @@ In the Surveyor, the following actions are possible:
 3. Click *Exit editing* to exit the drag-and-drop editing mode.
 
 > [!NOTE]
-> -  You can also move an item to a different view by editing the item itself and selecting a different view in the editor.
-> -  To just rename a view, you can right-click it in the Surveyor and select *Rename*.
+> - You can also move an item to a different view by editing the item itself and selecting a different view in the editor.
+> - To just rename a view, you can right-click it in the Surveyor and select *Rename*.
 
 ### Removing an item from a view
 

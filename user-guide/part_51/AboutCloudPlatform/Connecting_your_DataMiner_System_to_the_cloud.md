@@ -1,8 +1,8 @@
 # Connecting your DataMiner System to the cloud
 
 > [!NOTE]
-> -  This feature is in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/) up to DataMiner 10.1.8. From DataMiner 10.1.9 onwards, it is fully available and no longer subject to change without notice. However, note that the Live Sharing feature remains in soft launch up to DataMiner 10.1.11.
-> -  If you are using a DataMiner version between DataMiner 10.1.1 and DataMiner 10.1.9, and your system is **already connected** to the cloud, we recommend to **install the DataMiner Cloud Pack** (see step 2 below) on at least one DMA that was already hosting the cloud gateway. After you have done so, clear the selection of the checkboxes in System Center as detailed in the note under step 4 below.
+> - This feature is in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/) up to DataMiner 10.1.8. From DataMiner 10.1.9 onwards, it is fully available and no longer subject to change without notice. However, note that the Live Sharing feature remains in soft launch up to DataMiner 10.1.11.
+> - If you are using a DataMiner version between DataMiner 10.1.1 and DataMiner 10.1.9, and your system is **already connected** to the cloud, we recommend to **install the DataMiner Cloud Pack** (see step 2 below) on at least one DMA that was already hosting the cloud gateway. After you have done so, clear the selection of the checkboxes in System Center as detailed in the note under step 4 below.
 
 To connect your DMS to the cloud:
 
@@ -65,8 +65,8 @@ To connect your DMS to the cloud:
 5. On the System Center \> *Cloud* page, click the *Connect* button. A pop-up browser window will open.
 
     > [!NOTE]
-    > -  In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to the cloud. However, these will no longer be used, and they are no longer available from DataMiner 10.1.9 onwards. If you are using an **older DataMiner version**, make sure **none of these checkboxes are selected**.
-    > -  Internet Explorer is not supported for this. If your default browser is Internet Explorer, you may need to change this temporarily in order to continue with this procedure.
+    > - In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to the cloud. However, these will no longer be used, and they are no longer available from DataMiner 10.1.9 onwards. If you are using an **older DataMiner version**, make sure **none of these checkboxes are selected**.
+    > - Internet Explorer is not supported for this. If your default browser is Internet Explorer, you may need to change this temporarily in order to continue with this procedure.
 
 6. Specify the following information in the pop-up window:
 

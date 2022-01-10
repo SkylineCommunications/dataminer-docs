@@ -19,6 +19,6 @@ Examples:
 - A view named “Modulators” could, for example, contain all modulator elements.
 
 > [!NOTE]
-> -  The same element or service can be placed in different views. A modulator element at Location 1, for example, can be placed in both the “Location1” view and the “Modulators” view.
-> -  Before you start to create views, make sure your views structure has been well thought through. It will have a large impact on the way you run your DMS, as it will influence security, navigation, filtering, and more.
+> - The same element or service can be placed in different views. A modulator element at Location 1, for example, can be placed in both the “Location1” view and the “Modulators” view.
+> - Before you start to create views, make sure your views structure has been well thought through. It will have a large impact on the way you run your DMS, as it will influence security, navigation, filtering, and more.
 >

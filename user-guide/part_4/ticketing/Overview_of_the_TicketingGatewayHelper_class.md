@@ -297,5 +297,3 @@ Event that is called when the Helper wants to send a message to the server and e
 ```cs
 event EventHandler<IManagerRequestResponseEventArgs> RequestResponseEvent
 ```
-
-

@@ -66,8 +66,8 @@ To configure an aggregation rule, select it in the tree view on the left. In the
     3. In the third line, specify if a condition has to apply, and if so, specify the condition. For some aggregation types, a condition is always required.
 
         > [!NOTE]
-        > -  If the source you pick for the condition is a column parameter, an extra option will appear in the condition line that allows you to filter on an instance of that column.
-        > -  From DataMiner 10.1.10/10.2.0 onwards, the condition can include a regular expression. When you select *Matches regular expression*, you can select to match by value or by reference. If you select *by reference*, you will need to select the parameter containing the regular expression.
+        > - If the source you pick for the condition is a column parameter, an extra option will appear in the condition line that allows you to filter on an instance of that column.
+        > - From DataMiner 10.1.10/10.2.0 onwards, the condition can include a regular expression. When you select *Matches regular expression*, you can select to match by value or by reference. If you select *by reference*, you will need to select the parameter containing the regular expression.
 
     4. Next to *Apply on view*, indicate the view that the rule should be applied on.
 
@@ -91,5 +91,3 @@ To configure an aggregation rule, select it in the tree view on the left. In the
     - To enable trending, select *Average* and/or *Real-time*. For more information, see [About trend templates](../../part_2/protocols/About_trend_templates.md).
 
 5. At the top of the pane, select or clear the box next to *Enable this rule* to enable or disable the rule.
-
-

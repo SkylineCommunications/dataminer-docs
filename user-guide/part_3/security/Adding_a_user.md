@@ -13,9 +13,9 @@ There are two ways to add a new user to a DataMiner System, depending on whether
     - You must fill in at least the fields *Name*, *Password* and *Confirm password* in order to be able to continue.
 
         > [!NOTE]
-        > -  User names cannot start or end with a backslash “\\” character. They may also not contain more than one percentage “%” character.
-        > -  The maximum length of a user name is 20 characters.
-        > -  User name validation is not case sensitive. This means that if, for instance, a user named “John” has already been added, it will not be possible to add another user named “john” or “JOHN”.
+        > - User names cannot start or end with a backslash “\\” character. They may also not contain more than one percentage “%” character.
+        > - The maximum length of a user name is 20 characters.
+        > - User name validation is not case sensitive. This means that if, for instance, a user named “John” has already been added, it will not be possible to add another user named “john” or “JOHN”.
 
     - The *Telephone* field must be filled in for the user to be able to receive text messages.
 

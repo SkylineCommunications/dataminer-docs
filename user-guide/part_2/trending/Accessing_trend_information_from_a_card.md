@@ -12,10 +12,10 @@ On a DMA using a Cassandra database, these trending icons can be displayed diffe
 | ![](../../images/trend_icon_unknown.png)  | The trend behavior cannot be predicted, either because there is insufficient data, or because there is too much uncertainty in the direction of the trend during the past hour.<br> On a DMA that does not use a Cassandra database, only this icon is displayed. |
 
 > [!NOTE]
-> -  Behavior is calculated for single-value parameters and table parameters. In case of partial tables, behavior is only calculated for the rows of the first page.
-> -  In the first hour after starting the SLAnalytics process, DataMiner has insufficient data to determine parameter behavior. This means that behavior arrows will only appear at least an hour after the SLAnalytics process was started.
-> -  The behavior of the arrows can be configured in the file *SLAnalytics.config*. See [SLAnalytics.config](../../part_7/SkylineDataminerFolder/SLAnalytics_config.md#slanalyticsconfig).
-> -  You can enable or disable trend prediction icons via *System Center* > *System settings* > *analytics config*. That page also allows you to configure the minimum window duration these icons are based on and the update interval for the icons.
+> - Behavior is calculated for single-value parameters and table parameters. In case of partial tables, behavior is only calculated for the rows of the first page.
+> - In the first hour after starting the SLAnalytics process, DataMiner has insufficient data to determine parameter behavior. This means that behavior arrows will only appear at least an hour after the SLAnalytics process was started.
+> - The behavior of the arrows can be configured in the file *SLAnalytics.config*. See [SLAnalytics.config](../../part_7/SkylineDataminerFolder/SLAnalytics_config.md#slanalyticsconfig).
+> - You can enable or disable trend prediction icons via *System Center* > *System settings* > *analytics config*. That page also allows you to configure the minimum window duration these icons are based on and the update interval for the icons.
 
 To access more detailed trend information for a parameter:
 

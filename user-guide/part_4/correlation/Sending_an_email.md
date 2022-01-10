@@ -12,12 +12,12 @@ In the *Actions* section of the details pane:
 
     > [!NOTE]
     > You can also specify the destination addresses in the following formats:
-    > -  user:domainname\\username
-    > -  group:domainname\\groupname
+    > - user:domainname\\username
+    > - group:domainname\\groupname
     >
     > For email reports only, the following formats are also possible:
-    > -  ftp:hostname:/path/on/server/remotefilename:username:password
-    > -  copy:remotefilename:\\\\ipaddress\\path\\to
+    > - ftp:hostname:/path/on/server/remotefilename:username:password
+    > - copy:remotefilename:\\\\ipaddress\\path\\to
 
 3. Enter the message *Subject*.
 
@@ -33,9 +33,9 @@ In the *Actions* section of the details pane:
 6. To include a report or dashboard in the email, select *Include report or dashboard*, select an existing report template or dashboard, and add any required elements, parameters, etc.
 
     > [!NOTE]
-    > -  In the *Elements and services in view selection* section, you can select the “Dynamic” option to indicate that the elements that triggered the Correlation rule have to be included.
-    > -  If you want to specify multiple indices for one table parameter, use a semicolon “;” as separator.
-    > -  From DataMiner 9.6.13 onwards, you can select to include a dashboard from the new Dashboards app. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a report based on a dashboard](../newR_D/Generating_a_report_based_on_a_dashboard.md).
+    > - In the *Elements and services in view selection* section, you can select the “Dynamic” option to indicate that the elements that triggered the Correlation rule have to be included.
+    > - If you want to specify multiple indices for one table parameter, use a semicolon “;” as separator.
+    > - From DataMiner 9.6.13 onwards, you can select to include a dashboard from the new Dashboards app. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a report based on a dashboard](../newR_D/Generating_a_report_based_on_a_dashboard.md).
 
 7. Optionally, to also send the message when the conditions are no longer fulfilled, select *Execute on clear*.
 

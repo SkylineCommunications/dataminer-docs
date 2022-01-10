@@ -76,5 +76,3 @@ By default, when you receive a chat message from another user, your user name wi
 
 > [!NOTE]
 > By default, you can only end a chat session if you started it yourself. However, if you have been granted the user permission *Collaboration* > *Disconnect other users*, you can end every single chat session, no matter who started it.
-
-

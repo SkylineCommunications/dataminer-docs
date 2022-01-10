@@ -59,8 +59,8 @@ This tab consists of the following subtabs:
         - *Identify All Matching CI Types*: Enable this option if you want the discovery process to try to match all possible CI Types configured in the scan range. Otherwise, the process will stop trying to match a device with other CI Types once a CI Type has been identified for it.
 
         > [!NOTE]
-        > -  It is only possible to complete a discovery action for a specific CI Type if the *Discovery* automation setting is enabled on the tab *Processes* > *Automation*.
-        > -  When a discovery has been initiated, the *Provisioning Status* column in the table will display the status *Provisioning Started*. As long as this status is displayed, you will not be able to start another provisioning activity for the same device.
+        > - It is only possible to complete a discovery action for a specific CI Type if the *Discovery* automation setting is enabled on the tab *Processes* > *Automation*.
+        > - When a discovery has been initiated, the *Provisioning Status* column in the table will display the status *Provisioning Started*. As long as this status is displayed, you will not be able to start another provisioning activity for the same device.
 
     - **Most recent discoveries**: Displays information on the 6 most recent discovery operations.
 
@@ -157,8 +157,8 @@ This tab displays an overview of the levels in the infrastructure, with KPIs and
 
 > [!NOTE]
 > The *Expected* and *Actual Energy Consumption* KPIs are aggregated on all the different levels of the facilities. On this overview tab, the total values are displayed.
-> -  The *Expected Energy Consumption* is based on the element property *Energy Expected Consumption*. This property can be supplied in the CI Type definition or via the update properties script.
-> -  To calculate the *Actual Energy Consumption* KPI, an aggregation rule named *Energy Consumption* is needed on the Facilities view. This aggregation rule should be in the folder *RLM*, and it should use the aggregation type *calculate the sum* of the relevant parameter values, and have *Include subview (recursion)* selected. As the expected consumption is measured in kWh, we recommend to also measure the actual consumption in kWh.
+> - The *Expected Energy Consumption* is based on the element property *Energy Expected Consumption*. This property can be supplied in the CI Type definition or via the update properties script.
+> - To calculate the *Actual Energy Consumption* KPI, an aggregation rule named *Energy Consumption* is needed on the Facilities view. This aggregation rule should be in the folder *RLM*, and it should use the aggregation type *calculate the sum* of the relevant parameter values, and have *Include subview (recursion)* selected. As the expected consumption is measured in kWh, we recommend to also measure the actual consumption in kWh.
 
 ### Processes
 
@@ -211,8 +211,8 @@ This tab consists of the following subtabs:
 - **Activities**: Allows you to enable or disable discovery, provisioning, connectivity discovery, taking configuration backups, *configuration updates*, software updates, software compliancy and/or automatic rack assignment.
 
 > [!NOTE]
-> -  Activity settings **can be disabled by default**, depending on the configuration on the *Admin* > *CI Types* > *Activity Management* page. To perform any of these actions for a specific CI Type, make sure the relevant setting on this tab is enabled.
-> -  Prior to IDP 1.1.11, this tab was called *Workflows*. The *Activities* subtab was called *Automation* prior to IDP 1.1.16.
+> - Activity settings **can be disabled by default**, depending on the configuration on the *Admin* > *CI Types* > *Activity Management* page. To perform any of these actions for a specific CI Type, make sure the relevant setting on this tab is enabled.
+> - Prior to IDP 1.1.11, this tab was called *Workflows*. The *Activities* subtab was called *Automation* prior to IDP 1.1.16.
 
 ### Admin
 

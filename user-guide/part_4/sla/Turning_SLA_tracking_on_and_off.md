@@ -11,6 +11,6 @@ To disable outages for the SLA:
 - Go to the *Advanced Configuration* page and set *Outages* to *Disabled*.
 
     > [!NOTE]
-    > -  You need at least security level 3 in order to change any of the settings on the *Advanced Configuration* page.
-    > -  If you disable outages, the SLA will no longer register any outages and most SLA functionality can no longer be used. However, any outages that occurred until outages were disabled are not removed, and the outage impact is still calculated for current active service alarms.
+    > - You need at least security level 3 in order to change any of the settings on the *Advanced Configuration* page.
+    > - If you disable outages, the SLA will no longer register any outages and most SLA functionality can no longer be used. However, any outages that occurred until outages were disabled are not removed, and the outage impact is still calculated for current active service alarms.
     >

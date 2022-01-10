@@ -28,6 +28,6 @@ When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is availabl
 - When the report is fully configured, click *Save & close*.
 
 > [!NOTE]
-> -  By design, the following components are not included in reports: button panel (soft launch), map and web components.
-> -  If access to a dashboard is limited to some users only, this dashboard will not be available to generate reports from DataMiner Cube.
+> - By design, the following components are not included in reports: button panel (soft launch), map and web components.
+> - If access to a dashboard is limited to some users only, this dashboard will not be available to generate reports from DataMiner Cube.
 >

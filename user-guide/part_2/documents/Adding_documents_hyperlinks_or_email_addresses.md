@@ -25,5 +25,3 @@ To add a document, link or email address:
 
 > [!CAUTION]
 > If documents are larger than a particular maximum size, they are not synchronized in a DataMiner System. For such documents we advise to use a UNC path to a network share.<br> By default, the maximum size is set to 20 MB, but this can be customized. See [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
-
-

@@ -86,8 +86,8 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
     8. Follow the wizard, and in the *Features* step, select all tools under *Remote Server Administration Tools* > *Role Administration Tools* > *AD DS and AD LDS Tools*, and click *Install*.
 
 > [!NOTE]
-> -  To manage the domain users on the Windows server, make sure you are logged in with an administrator of the domain (Azure AD), click *Start* and open *Active Directory Users and Computers*.
-> -  In case logging in to the Windows server using RDP with the credentials of an Azure AD account fails, this can have the following reasons:
+> - To manage the domain users on the Windows server, make sure you are logged in with an administrator of the domain (Azure AD), click *Start* and open *Active Directory Users and Computers*.
+> - In case logging in to the Windows server using RDP with the credentials of an Azure AD account fails, this can have the following reasons:
 >     - The user does not have permission to access the server remotely. To fix this, in the control panel, go to Remote settings, click *Select Users*, and add the user to the list of users who are allowed to access the server remotely.
 >     - The Azure AD user does not have an email address. To fix this, on the Azure portal, go to *Users*, and make sure all users have an email address under *Contact Info*. Users also need an email address to be able to log on to DataMiner.
 >     - The user’s password has not been reset yet. On the Azure portal, go to the user account in question and reset its password.

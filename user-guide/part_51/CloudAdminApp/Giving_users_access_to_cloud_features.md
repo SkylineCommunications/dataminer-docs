@@ -28,5 +28,3 @@ To do so:
 9. At the top of the window, click *Add user*.
 
 10. Specify the email address that is used for the user on the DataMiner Cloud Platform, and click *Add*.
-
-

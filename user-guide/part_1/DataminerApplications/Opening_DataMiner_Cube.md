@@ -13,8 +13,8 @@ Click a tile to connect to the corresponding DMS. In case the DMS you want to co
 For more information on how to manage the start window of the Cube desktop app, see [Managing the start window of the DataMiner Cube desktop app](#managing-the-start-window-of-the-dataminer-cube-desktop-app).
 
 > [!NOTE]
-> -  If you want to open DataMiner Cube for multiple DataMiner Systems without closing the start window, keep the Ctrl key pressed while you click the tiles.
-> -  If you have multiple monitors and want DataMiner Cube to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
+> - If you want to open DataMiner Cube for multiple DataMiner Systems without closing the start window, keep the Ctrl key pressed while you click the tiles.
+> - If you have multiple monitors and want DataMiner Cube to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
 
 ##### Prior to DataMiner 10.0.9:
 
@@ -114,10 +114,10 @@ https://[DMA]/dataminercube
 ```
 
 > [!NOTE]
-> -  In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
-> -  If DataMiner Cube has been set as the default client, it is not necessary to add <br>“*/dataminercube*” in the URL.
-> -  DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.
-> -  It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
+> - In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
+> - If DataMiner Cube has been set as the default client, it is not necessary to add <br>“*/dataminercube*” in the URL.
+> - DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.
+> - It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
 
 > [!CAUTION]
 > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
@@ -159,8 +159,8 @@ You can pass a number of options when starting DataMiner Cube:
 - [workspace=](#workspace)
 
 > [!NOTE]
-> -  For the desktop application, prior to DataMiner 10.0.9, these options can only be passed along if you installed the application using an .msi file. From DataMiner 10.0.9 onwards, you can pass these options in the Cube start window by clicking ... in the top-right corner of the button representing the DMS you want to connect to, and specifying the URL arguments in the *Advanced* section.
-> -  From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can use the cube:// protocol to connect to a specific host. For example:
+> - For the desktop application, prior to DataMiner 10.0.9, these options can only be passed along if you installed the application using an .msi file. From DataMiner 10.0.9 onwards, you can pass these options in the Cube start window by clicking ... in the top-right corner of the button representing the DMS you want to connect to, and specifying the URL arguments in the *Advanced* section.
+> - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can use the cube:// protocol to connect to a specific host. For example:
 >     - cube://mydma?element=MyElement
 >     - cube://10.11.12.13?view=12
 
@@ -251,8 +251,8 @@ Example:
     ```
 
 > [!NOTE]
-> -  It is advisable to also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
-> -  The chain name is not case sensitive.
+> - It is advisable to also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
+> - The chain name is not case sensitive.
 
 #### debug=true
 
@@ -283,11 +283,11 @@ Example:
     ```
 
 > [!NOTE]
-> -  It is advisable to also pass the element ID and chain. If no element ID is specified, the first element of type “element manager” will be used. If no chain is specified, the first chain containing the specified filter will be used.
-> -  When multiple filters are specified, only the lowest filter in the selected chain will be used. However, if no chain is specified, all filters are used to find the correct chain.
-> -  If only one row matches the filter, an object will be loaded.
-> -  If the filter value is a key prefix, add an asterisk (“\*”) to the filter value.
-> -  URLs containing filters must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
+> - It is advisable to also pass the element ID and chain. If no element ID is specified, the first element of type “element manager” will be used. If no chain is specified, the first chain containing the specified filter will be used.
+> - When multiple filters are specified, only the lowest filter in the selected chain will be used. However, if no chain is specified, all filters are used to find the correct chain.
+> - If only one row matches the filter, an object will be loaded.
+> - If the filter value is a key prefix, add an asterisk (“\*”) to the filter value.
+> - URLs containing filters must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
 
 > [!TIP]
 > See also:
@@ -412,8 +412,8 @@ http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105|34/106|34/107&pres
 ```
 
 > [!NOTE]
-> -  Take care when specifying more than one element in the URL. If you used a URL like the one in the second example above, all three elements would be opened in their own card, but as only the first one is a Spectrum Analyzer element, only that element would load the specified preset.
-> -  Only public presets can be used, and their *(public)* suffix must be included in the URL.
+> - Take care when specifying more than one element in the URL. If you used a URL like the one in the second example above, all three elements would be opened in their own card, but as only the first one is a Spectrum Analyzer element, only that element would load the specified preset.
+> - Only public presets can be used, and their *(public)* suffix must be included in the URL.
 
 #### preset=inline
 
@@ -465,8 +465,8 @@ Property names:
 
 > [!NOTE]
 > When you specify an inline preset definition, you have to define at least the following properties:
-> -  freqStart and freqStop, or
-> -  freqCenter and freqSpan.
+> - freqStart and freqStop, or
+> - freqCenter and freqSpan.
 
 #### service=
 

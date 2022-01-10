@@ -14,9 +14,9 @@ To enable grouping of dynamically positioned shapes, add a shape with shape data
 The size and geometry of the group shapes will be the same as that of the shape to which the *ShapeGrouping* shape data was added. The context menu of the grouping shape will contain all options of the underlying shapes.
 
 > [!NOTE]
-> -  To display the number of shapes that are grouped into a single group shape, add an asterisk (“\*”) in the *ShapeGrouping* shape.
-> -  From DataMiner 9.5.2 onwards, clicking the grouped shape will open a details pane with more information on the different shapes it combines.
-> -  Displaying DCF connections between grouped shapes is possible from DataMiner 9.5.3 onwards. In that case, when an element is represented by a group shape, all connections to that element will be drawn to the group shape.
+> - To display the number of shapes that are grouped into a single group shape, add an asterisk (“\*”) in the *ShapeGrouping* shape.
+> - From DataMiner 9.5.2 onwards, clicking the grouped shape will open a details pane with more information on the different shapes it combines.
+> - Displaying DCF connections between grouped shapes is possible from DataMiner 9.5.3 onwards. In that case, when an element is represented by a group shape, all connections to that element will be drawn to the group shape.
 
 ### Optional grouping configuration
 

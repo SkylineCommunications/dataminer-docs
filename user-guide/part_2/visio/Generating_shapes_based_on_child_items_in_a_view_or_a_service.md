@@ -115,9 +115,9 @@ The following shape data fields can be added to the group containing the shapes 
     Generate a shape for every element in the view or service to which the drawing is linked.
 
     > [!NOTE]
-    > -  By default, a **Children** shape always shows the child items of the view or service to which the Visio drawing is linked. If you want a **Children** shape to show the child items of a specific view or service, then add a shape data field of type **View** or **Element** to that same shape. In that field, you can then explicitly specify the view or the service of which the shape has to show all child items.
-    > -  A **Children** shape can contain another **Children** shape. That way, you can dynamically generate e.g. shapes that represent all subviews in a view, as well as shapes that represent all items in those subviews.
-    > -  With the DataMiner Cube user setting *Maximum number of child shapes in a 'Children' container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
+    > - By default, a **Children** shape always shows the child items of the view or service to which the Visio drawing is linked. If you want a **Children** shape to show the child items of a specific view or service, then add a shape data field of type **View** or **Element** to that same shape. In that field, you can then explicitly specify the view or the service of which the shape has to show all child items.
+    > - A **Children** shape can contain another **Children** shape. That way, you can dynamically generate e.g. shapes that represent all subviews in a view, as well as shapes that represent all items in those subviews.
+    > - With the DataMiner Cube user setting *Maximum number of child shapes in a 'Children' container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
 
 - **ChildrenOptions**: In this optional shape data field, you can specify the following options:
 

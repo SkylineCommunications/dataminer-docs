@@ -3,8 +3,8 @@
 This file contains default connection settings to be used by DataMiner client applications when connecting from specific IP addresses.
 
 > [!NOTE]
-> -  An update of this file does not require a restart of the DataMiner software.
-> -  This file is not synchronized throughout the DataMiner System.
+> - An update of this file does not require a restart of the DataMiner software.
+> - This file is not synchronized throughout the DataMiner System.
 
 - This file is located in the following folder:
 
@@ -80,9 +80,9 @@ This file contains default connection settings to be used by DataMiner client ap
     - false
 
 > [!NOTE]
-> -  If a client connects to a DataMiner Agent via a load balancing URL (i.e. a hostname redirecting to different IP addresses when resolved), by default the hostname will be explicitly resolved before the connection is set up. If, for some IP addresses, you want to prevent this from happening, in ConnectionSettings.txt specify “resolve=false” next to those IP addresses.
-> -  Lines starting with a “#” character are considered to be comments and are ignored.
-> -  The file list the most specific ranges first. When looking up the settings for an IP address, the first matching IP range defines the settings.
+> - If a client connects to a DataMiner Agent via a load balancing URL (i.e. a hostname redirecting to different IP addresses when resolved), by default the hostname will be explicitly resolved before the connection is set up. If, for some IP addresses, you want to prevent this from happening, in ConnectionSettings.txt specify “resolve=false” next to those IP addresses.
+> - Lines starting with a “#” character are considered to be comments and are ignored.
+> - The file list the most specific ranges first. When looking up the settings for an IP address, the first matching IP range defines the settings.
 
 ### Example
 

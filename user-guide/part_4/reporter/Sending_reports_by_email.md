@@ -9,8 +9,8 @@ The report content will normally be placed inside the message body. However, you
 Reports can also be copied or uploaded as PDF or MHT files to a shared network folder or an FTP server. Separate options are available for this in the user interface of the Scheduler and Automation apps.
 
 > [!NOTE]
-> -  MHT files contain MHTML code and can be opened by a variety of applications, including MS Internet Explorer, MS Word and MS Excel.
-> -  Though user permissions may limit the possibilities to view information on certain elements or services in online reports, there are no such restrictions for email reports.
+> - MHT files contain MHTML code and can be opened by a variety of applications, including MS Internet Explorer, MS Word and MS Excel.
+> - Though user permissions may limit the possibilities to view information on certain elements or services in online reports, there are no such restrictions for email reports.
 
 For more information on how to upload or email reports in DataMiner Cube, see:
 

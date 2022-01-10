@@ -108,5 +108,3 @@ The element property called “Redundancy Type” will be assigned the following
 ```txt
 1.3.6.1.4.1.8813.1.1.2.4.4.1.82.101.100.117.110.100.97.110.99.121.32.84.121.112.101
 ```
-
-

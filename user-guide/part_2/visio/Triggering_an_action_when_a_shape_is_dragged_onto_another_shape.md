@@ -5,7 +5,7 @@ A shape can be set to perform a particular action when another shape is dropped 
 This “drop” behavior will often be implemented to visualize element properties or to pass parameters like element or service names to Automation scripts.
 
 > [!NOTE]
-> -  This feature can only be used with shapes linked to elements, redundancy groups, services and views.
+> - This feature can only be used with shapes linked to elements, redundancy groups, services and views.
 
 > [!TIP]
 > See also:
@@ -140,7 +140,7 @@ Result:
 - When you drop shape1 or shape2 onto shape4, Shape4 will take the table filter and the element.
 
 > [!NOTE]
-> -  From DataMiner 9.0 onwards, \[TableIndexFilter\] placeholders can be combined with dynamic placeholders like \[Param:...\], \[Var:...\], etc. in shape data that support this (Parameter, ParameterControl, ParameterControlOptions and Execute). However, note that they cannot be used recursively.
+> - From DataMiner 9.0 onwards, \[TableIndexFilter\] placeholders can be combined with dynamic placeholders like \[Param:...\], \[Var:...\], etc. in shape data that support this (Parameter, ParameterControl, ParameterControlOptions and Execute). However, note that they cannot be used recursively.
 
 ### Configuring drag-and-drop behavior for child shapes
 
@@ -152,9 +152,9 @@ To do so:
 
     > [!TIP]
     > See also:
-    > -  [Linking a shape to an Automation script](Linking_a_shape_to_an_Automation_script.md)
-    > -  [Linking a shape to an element parameter](Linking_a_shape_to_an_element_parameter.md)
-    > -  [Turning a shape into a parameter control](Turning_a_shape_into_a_parameter_control.md)
+    > - [Linking a shape to an Automation script](Linking_a_shape_to_an_Automation_script.md)
+    > - [Linking a shape to an element parameter](Linking_a_shape_to_an_element_parameter.md)
+    > - [Turning a shape into a parameter control](Turning_a_shape_into_a_parameter_control.md)
 
 2. Add a shape data field of type **DropTarget**, and set its value to TRUE.
 

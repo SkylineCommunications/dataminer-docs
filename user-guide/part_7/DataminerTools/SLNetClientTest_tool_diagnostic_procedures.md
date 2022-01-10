@@ -67,8 +67,8 @@ The SlNetClientTest tool allows the user to check which Sync rules are in effect
 2. Select the new message that appears in the *Properties* tab of the main window, and read the details in the *Text* pane on the right. The Sync rules are listed at the bottom of the pane.
 
     > [!NOTE]
-    > -  This info also lists the detected versions per DMA in the cluster. If version info for local IP addresses or Sync IP addresses is known, which is mainly for Failover Agents, there is also a section “Extra known versions.”
-    > -  Any DMAs running DataMiner versions prior to 8.5.5 will be considered to be running 8.0.0, as the version cannot be detected in that case.
+    > - This info also lists the detected versions per DMA in the cluster. If version info for local IP addresses or Sync IP addresses is known, which is mainly for Failover Agents, there is also a section “Extra known versions.”
+    > - Any DMAs running DataMiner versions prior to 8.5.5 will be considered to be running 8.0.0, as the version cannot be detected in that case.
 
 > [!TIP]
 > See also:
@@ -188,8 +188,8 @@ To activate follow mode:
 2. Optionally, if you want a transcript to be saved at the moment when follow mode is deactivated, select *Store Transcript*.
 
     > [!NOTE]
-    > -  To open a transcript later, go to *File* > *Dump* > *Open*.
-    > -  This option is no longer available from DataMiner 9.5.8 onwards. However, you can instead save a transcript via *File* > *Dump* > *Save*.
+    > - To open a transcript later, go to *File* > *Dump* > *Open*.
+    > - This option is no longer available from DataMiner 9.5.8 onwards. However, you can instead save a transcript via *File* > *Dump* > *Save*.
 
 3. Select what should be followed. The following options are available:
 

@@ -32,6 +32,4 @@ To configure the default size:
     4. In the lower right corner, click *Apply size*.
 
     > [!NOTE]
-    > -  In some older DataMiner versions, this setting may not be available in Cube. In that case, this can be configured in the file *DBMaintenanceDMS.xml*. For more information, see [DBMaintenance.xml and DBMaintenanceDMS.xml](../../part_7/SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
-
-
+    > - In some older DataMiner versions, this setting may not be available in Cube. In that case, this can be configured in the file *DBMaintenanceDMS.xml*. For more information, see [DBMaintenance.xml and DBMaintenanceDMS.xml](../../part_7/SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).

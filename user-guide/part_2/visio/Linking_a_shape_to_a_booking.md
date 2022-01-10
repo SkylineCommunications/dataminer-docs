@@ -24,10 +24,10 @@ The following placeholders can be used in the text displayed on the *Reservation
 | \[Time since end:format=\<format>,<br>default=\<defaultValue>\]   | Will be replaced by the amount of time that has passed since the end of the booking. This placeholder supports the same options as the *\[Elapsed Time\]* placeholder. <br> The placeholder is replaced by the default value if the current time is earlier than the booking end time. If no default value is specified in that case, nothing is displayed.                                                                                                                                                                                                             |
 
 > [!NOTE]
-> -  For more information on possible date and time formats, refer to:
+> - For more information on possible date and time formats, refer to:
 >     - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
 >     - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
-> -  From DataMiner 9.6.6 onwards, additional features are supported:
+> - From DataMiner 9.6.6 onwards, additional features are supported:
 >     - If a parent shape has *Reservation* shape data and a child shape has fields linked to the same booking (e.g. *Info* shape data, shape text placeholders), the child shape will also become a reservation shape linked to the same booking.
 >     - The shape text can now contain placeholders referring to custom booking properties, in the format \[*PropertyName*\], e.g. *\[Class\]*.
 >

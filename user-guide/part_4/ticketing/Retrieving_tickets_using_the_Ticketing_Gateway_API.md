@@ -4,12 +4,12 @@ Tickets can be retrieved in a number of ways. See the following examples.
 
 > [!NOTE]
 > To filter tickets, you can pass a list of TicketLinks and a ticket filter.
-> -  If you pass a list of TicketLinks, you will receive all Tickets that have at least one matching TicketLink.
-> -  Ticket filters are FilterElements of type Ticket. They can be built using ANDFilterElement\<Ticket> or ORFilterElement\<Ticket>.
+> - If you pass a list of TicketLinks, you will receive all Tickets that have at least one matching TicketLink.
+> - Ticket filters are FilterElements of type Ticket. They can be built using ANDFilterElement\<Ticket> or ORFilterElement\<Ticket>.
 >
 > To filter tickets quickly, do the following:
-> -  use one of the default TicketingExposers (DataminerID, TicketID, or ResolverID), or
-> -  use ReflectiveExposer to create a custom filter.
+> - use one of the default TicketingExposers (DataminerID, TicketID, or ResolverID), or
+> - use ReflectiveExposer to create a custom filter.
 
 - Retrieving tickets by ticket field
 

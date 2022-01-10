@@ -272,6 +272,6 @@ To configure this component:
 3. Optionally, fine-tune the component layout. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
 
 > [!NOTE]
-> -  Spectrum components are currently not yet supported in visual overviews within dashboards.
-> -  Quick filters are supported for table parameters in visual overview components from DataMiner 10.0.12 onwards. See [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md).
+> - Spectrum components are currently not yet supported in visual overviews within dashboards.
+> - Quick filters are supported for table parameters in visual overview components from DataMiner 10.0.12 onwards. See [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md).
 >

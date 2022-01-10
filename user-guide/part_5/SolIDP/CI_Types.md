@@ -15,8 +15,8 @@ The *CI Types* subtab of the *Admin* tab consists of several pages with overview
 - **Generate**: Only available on the *Overview* page. Starts a wizard that allows you to generate CI Types for the production protocols in the system. You can select to generate CI Types for all protocols, for all protocols that do not have a CI Type yet, or for a custom selection of protocols.
 
     > [!NOTE]
-    > -  The wizard also allows you to select “None”, so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
-    > -  By default, CI Types generated based on a protocol with an SNMPv3 connection have SNMPv2 port settings configured on that connection, as there is no way to automatically find out the security levels, algorithms and passwords.
+    > - The wizard also allows you to select “None”, so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
+    > - By default, CI Types generated based on a protocol with an SNMPv3 connection have SNMPv2 port settings configured on that connection, as there is no way to automatically find out the security levels, algorithms and passwords.
 
 On each of the pages, different settings are available:
 

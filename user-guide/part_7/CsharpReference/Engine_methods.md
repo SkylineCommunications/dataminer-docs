@@ -912,9 +912,9 @@ double myValue = engine.LoadDoubleValue("MyVariable");
 
 > [!TIP]
 > See also:
-> -  [SaveValue](#savevalue)
-> -  [LoadValue](#loadvalue)
-> -  [LoadStringValue](#loadstringvalue)
+> - [SaveValue](#savevalue)
+> - [LoadValue](#loadvalue)
+> - [LoadStringValue](#loadstringvalue)
 
 #### LoadStringValue
 
@@ -932,9 +932,9 @@ string myValue = engine.LoadStringValue("MyVariable");
 
 > [!TIP]
 > See also:
-> -  [SaveValue](#savevalue)
-> -  [LoadValue](#loadvalue)
-> -  [LoadDoubleValue](#loaddoublevalue)
+> - [SaveValue](#savevalue)
+> - [LoadValue](#loadvalue)
+> - [LoadDoubleValue](#loaddoublevalue)
 
 #### LoadValue
 
@@ -952,9 +952,9 @@ object myValue = engine.LoadValue("MyVariable");
 
 > [!TIP]
 > See also:
-> -  [SaveValue](#savevalue)
-> -  [LoadStringValue](#loadstringvalue)
-> -  [LoadDoubleValue](#loaddoublevalue)
+> - [SaveValue](#savevalue)
+> - [LoadStringValue](#loadstringvalue)
+> - [LoadDoubleValue](#loaddoublevalue)
 
 #### Log
 
@@ -1192,8 +1192,8 @@ engine.SetAlarmProperties(200, 400, 521655, new string[]{"Property A", "Property
 ```
 
 > [!NOTE]
-> -  In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.
-> -  When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.
+> - In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.
+> - When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.
 
 #### SetAlarmProperty
 
@@ -1215,8 +1215,8 @@ engine.SetAlarmProperty(200, 400, 521655, "Property A", "Value A");
 ```
 
 > [!NOTE]
-> -  In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.
-> -  When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.
+> - In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.
+> - When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.
 
 #### SetFlag
 

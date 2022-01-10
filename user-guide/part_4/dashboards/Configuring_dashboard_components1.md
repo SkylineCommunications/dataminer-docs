@@ -35,10 +35,10 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 
 > [!NOTE]
 > You can also click the downward arrow to the right of a component header to access the following options:
-> -  Delete: removes the component from the dashboard.
-> -  Duplicate: duplicates the component on the dashboard.
-> -  Edit: allows you to configure the component.
-> -  View Info: opens a pop-up window with some more details about the component.
+> - Delete: removes the component from the dashboard.
+> - Duplicate: duplicates the component on the dashboard.
+> - Edit: allows you to configure the component.
+> - View Info: opens a pop-up window with some more details about the component.
 
 ### Configure Components
 
@@ -96,8 +96,8 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
     - When you choose a fixed selection, different drop-down lists will appear underneath depending on your choice.
 
     > [!NOTE]
-    > -  A user selection determines the type of input a user has to provide. If you for instance choose “Element” for the user selection, the user will have to specify an element. A fixed selection acts as a selection filter. If you for instance specify a particular protocol for the fixed selection, the user will only be able to specify items that use this protocol.
-    > -  For a trend parameter component, if you configure a feed with a table parameter, there are two possibilities regarding the table index. You can either select a unique name in the drop-down list, or select *Other value* in the list, and then enter a value. If you enter a value, you can use an asterisk (“\*”) as a wildcard.
+    > - A user selection determines the type of input a user has to provide. If you for instance choose “Element” for the user selection, the user will have to specify an element. A fixed selection acts as a selection filter. If you for instance specify a particular protocol for the fixed selection, the user will only be able to specify items that use this protocol.
+    > - For a trend parameter component, if you configure a feed with a table parameter, there are two possibilities regarding the table index. You can either select a unique name in the drop-down list, or select *Other value* in the list, and then enter a value. If you enter a value, you can use an asterisk (“\*”) as a wildcard.
 
 5. If necessary, in order to further limit the feed selection, you can enter a mask for the element name. To do so, click *Advanced* and enter a mask next to *Element mask*. In this mask you can use placeholders like *\[this service\]* and *\[param:dmaid/eid:pid:dispidx\]*.
 
@@ -107,8 +107,8 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 6. Click *Save Settings* to save the feed.
 
 > [!NOTE]
-> -  In the Feeds editor, you can delete feeds that are not in use by clicking the red x next to the feed.
-> -  In a dashboard where a user must select a feed, in the feed selection panel, it is possible to save a particular feed as default.
+> - In the Feeds editor, you can delete feeds that are not in use by clicking the red x next to the feed.
+> - In a dashboard where a user must select a feed, in the feed selection panel, it is possible to save a particular feed as default.
 
 ### Settings
 

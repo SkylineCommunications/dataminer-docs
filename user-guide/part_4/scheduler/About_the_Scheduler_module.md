@@ -21,9 +21,9 @@ The Scheduler module consists of different tabs that each provide a different pe
 - In the *list* tab, all scheduled tasks are shown in a list. Next to each task, the different columns show when the task is scheduled and at what interval, the next and last time the task was run, and the result of the last time it was run.
 
     > [!NOTE]
-    > -  In the *Last runtime result* column, the color of the entry reflects the result: red indicates that the task failed, green indicates success, and gray corresponds to a currently running task.
-    > -  To quickly find a particular scheduled task, you can use the quick filter box in the top-right corner. It can be used to filter on the task name or on the content of any of the other columns.
-    > -  It is possible to execute a scheduled task immediately, regardless of when it is scheduled, by selecting the task and then clicking the *Execute* button at the bottom of the card. If you do so, the task will be executed again at the time when it was originally scheduled. However, note that in DataMiner versions prior to 9.0.0 CU9, the manual execution of a non-recurring task instead replaces the scheduled execution.
+    > - In the *Last runtime result* column, the color of the entry reflects the result: red indicates that the task failed, green indicates success, and gray corresponds to a currently running task.
+    > - To quickly find a particular scheduled task, you can use the quick filter box in the top-right corner. It can be used to filter on the task name or on the content of any of the other columns.
+    > - It is possible to execute a scheduled task immediately, regardless of when it is scheduled, by selecting the task and then clicking the *Execute* button at the bottom of the card. If you do so, the task will be executed again at the time when it was originally scheduled. However, note that in DataMiner versions prior to 9.0.0 CU9, the manual execution of a non-recurring task instead replaces the scheduled execution.
 
 - In the *timeline* tab, two different subtabs provide a different view on the scheduled tasks:
 

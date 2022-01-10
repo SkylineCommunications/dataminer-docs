@@ -34,8 +34,8 @@ To make a recording:
 5. Click *OK*.
 
 > [!NOTE]
-> -  From DataMiner 10.2.0/10.1.7 onwards, if you close a recording without saving it, it will automatically be saved as a private recording.
-> -  If a user makes a trace recording, information events will be generated detailing when the recording was started and stopped, and who made the recording.
+> - From DataMiner 10.2.0/10.1.7 onwards, if you close a recording without saving it, it will automatically be saved as a private recording.
+> - If a user makes a trace recording, information events will be generated detailing when the recording was started and stopped, and who made the recording.
 
 ### Playing a recording
 
@@ -71,8 +71,8 @@ To play back a recording:
     - When the controls are not being used, they fade away to show as much of the recording as possible. Hover the mouse pointer near the controls to display them again.
 
 > [!NOTE]
-> -  The traces shown during a recording have an associated date/timestamp, displayed in the bottom-right corner.
-> -  Spectrum recordings can also be created automatically by a spectrum monitor when an alarm occurs (see [Configuring spectrum monitors](Working_with_spectrum_monitors.md#configuring-spectrum-monitors)). You can view such a recording by right-clicking the alarm in the Alarm Console and selecting *Show alarm trace recording*.
+> - The traces shown during a recording have an associated date/timestamp, displayed in the bottom-right corner.
+> - Spectrum recordings can also be created automatically by a spectrum monitor when an alarm occurs (see [Configuring spectrum monitors](Working_with_spectrum_monitors.md#configuring-spectrum-monitors)). You can view such a recording by right-clicking the alarm in the Alarm Console and selecting *Show alarm trace recording*.
 
 ### Managing recordings
 

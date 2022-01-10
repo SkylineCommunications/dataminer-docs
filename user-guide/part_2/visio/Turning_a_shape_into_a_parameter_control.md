@@ -7,8 +7,8 @@ Using a shape data field of type **ParameterControl**, you can turn a shape into
 > [Adding options to a parameter control](Adding_options_to_a_parameter_control.md)
 
 > [!NOTE]
-> -  This feature only works in DataMiner Cube.
-> -  Parameter controls are updated in real time.
+> - This feature only works in DataMiner Cube.
+> - Parameter controls are updated in real time.
 
 ### Configuring the shape data field
 

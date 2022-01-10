@@ -4,9 +4,9 @@ Using a shape data field of type **Variable**, you can make a shape display the 
 
 > [!TIP]
 > See also:
-> -  [Initializing a session variable](Initializing_a_session_variable.md)
-> -  [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
-> -  [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md)
+> - [Initializing a session variable](Initializing_a_session_variable.md)
+> - [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
+> - [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md)
 
 ### Configuring the shape data field
 

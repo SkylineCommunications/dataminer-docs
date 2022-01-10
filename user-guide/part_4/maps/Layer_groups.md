@@ -31,8 +31,8 @@ On the map, the above-mentioned code will be rendered in the following way. Noti
 
 
 > [!NOTE]
-> -  All layers of which the *\<Layer>* tag does not contain a toggleGroup attribute will be put into a default layer group called “Layers”.
-> -  If you put multiple layers with the same name into the same layer group, then those layers will be merged and represented by one single layer in that layer group. This means that when you activate that single layer, all layers that were merged into it will become visible.
+> - All layers of which the *\<Layer>* tag does not contain a toggleGroup attribute will be put into a default layer group called “Layers”.
+> - If you put multiple layers with the same name into the same layer group, then those layers will be merged and represented by one single layer in that layer group. This means that when you activate that single layer, all layers that were merged into it will become visible.
 
 ### Separators in layer groups
 
@@ -78,5 +78,3 @@ The following code sample shows how both the text color and the background color
 On the map, the above-mentioned code will be rendered in the following way.
 
 ![](../../images/layergroups3.png)
-
-

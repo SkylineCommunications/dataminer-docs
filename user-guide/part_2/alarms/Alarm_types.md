@@ -24,8 +24,8 @@ For the different alarm levels, it is also possible to assign high and low level
 
 > [!TIP]
 > See also:
-> -  [Changing the default alarm colors](Changing_the_default_alarm_colors.md)
-> -  [Guidelines for assigning alarm severity levels](../protocols/Guidelines_for_assigning_alarm_severity_levels.md)
+> - [Changing the default alarm colors](Changing_the_default_alarm_colors.md)
+> - [Guidelines for assigning alarm severity levels](../protocols/Guidelines_for_assigning_alarm_severity_levels.md)
 
 ### Special alarm types
 
@@ -69,8 +69,8 @@ Default alarm color: Orange
 If an element is in timeout, its parameters will be disabled, as no changes can be implemented until communication with the device has been re-established.
 
 > [!NOTE]
-> -  From DataMiner 9.5.4 onwards, timeout alarms have a comment containing the IP address(es) of the connection(s) that caused the timeout.
-> -  From DataMiner 9.6.4 onwards, if a timeout occurs while there was already an alarm on an element, there will be a small red x icon next to the bar indicating the severity of that alarm, to make it clear that the status of the alarm is uncertain because of the timeout.
+> - From DataMiner 9.5.4 onwards, timeout alarms have a comment containing the IP address(es) of the connection(s) that caused the timeout.
+> - From DataMiner 9.6.4 onwards, if a timeout occurs while there was already an alarm on an element, there will be a small red x icon next to the bar indicating the severity of that alarm, to make it clear that the status of the alarm is uncertain because of the timeout.
 
 ##### Timeout alarms on replicated elements or services
 

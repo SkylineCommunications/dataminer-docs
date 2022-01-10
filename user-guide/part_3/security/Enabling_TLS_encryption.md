@@ -26,14 +26,12 @@ To enable TLS encryption, do the following on every DMA in the DMS that is to co
 7. Click *Send message*.
 
 > [!NOTE]
-> -  DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
-> -  PFX files are not synchronized among the DMAs in a cluster.
-> -  If you replace a PKCS12 file on a DataMiner Agent, all elements using the TCP/IP port in question must be stopped and restarted for the changes to take effect.
-> -  TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
+> - DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
+> - PFX files are not synchronized among the DMAs in a cluster.
+> - If you replace a PKCS12 file on a DataMiner Agent, all elements using the TCP/IP port in question must be stopped and restarted for the changes to take effect.
+> - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
 
 > [!TIP]
 > See also:
-> -  [Enabling TLS on the Cassandra database connection](../../part_7/SkylineDataminerFolder/DB_xml.md#enabling-tls-on-the-cassandra-database-connection)
-> -  [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/) on Dojo
-
-
+> - [Enabling TLS on the Cassandra database connection](../../part_7/SkylineDataminerFolder/DB_xml.md#enabling-tls-on-the-cassandra-database-connection)
+> - [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/) on Dojo

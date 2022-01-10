@@ -45,5 +45,3 @@ Available from DataMiner 9.0.5 onwards. These settings control the behavior of t
   <updateArrowTime>300</updateArrowTime>
 </configuration>
 ```
-
-

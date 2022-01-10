@@ -168,8 +168,8 @@ You can create a query as follows:
 
 
         > [!NOTE]
-        > -  Index feeds are only supported from DataMiner 10.2.0/10.1.5 onwards.
-        > -  If the *regex* or *not regex* filter method is used and *Use feed* is selected, from DataMiner 10.1.2/10.1.5 onwards, if the feed contains multiple values, these are combined with an "or" operator.
+        > - Index feeds are only supported from DataMiner 10.2.0/10.1.5 onwards.
+        > - If the *regex* or *not regex* filter method is used and *Use feed* is selected, from DataMiner 10.1.2/10.1.5 onwards, if the feed contains multiple values, these are combined with an "or" operator.
 
 
 

@@ -4,8 +4,8 @@ The SLSNMPManager and SLSNMPAgent processes allow a DataMiner Agent to exchange 
 
 > [!TIP]
 > See also:
-> -  [Changing SNMP agent ports](Changing_SNMP_agent_ports.md)
-> -  [Configuring SNMP agent community strings](Configuring_SNMP_agent_community_strings.md)
+> - [Changing SNMP agent ports](Changing_SNMP_agent_ports.md)
+> - [Configuring SNMP agent community strings](Configuring_SNMP_agent_community_strings.md)
 
 ### Graphical representation
 
@@ -80,6 +80,6 @@ The UDP ports to be used are set as follows:
     ```
 
 > [!NOTE]
-> -  From DataMiner 9.6.11 onwards, the DataMiner SNMP agent function is disabled by default. It can be enabled in the file *DataMiner.xml* (see [Enabling DataMiner SNMP agent functionality](Enabling_DataMiner_SNMP_agent_functionality.md)). Note that this only affects DataMiner itself, not the virtual SNMP agents that can be enabled for elements, so that only active alarms and general DataMiner information cannot by polled by default.
-> -  By default, the SLSNMPAgent process listens for Get and Set messages using the same port as the Windows SNMP service. As such, if the latter has to run alongside SLSNMPAgent, either change the port used by the Windows SNMP service or change the port used by SLSNMPAgent. For more information, see [Changing SNMP agent ports](Changing_SNMP_agent_ports.md).
+> - From DataMiner 9.6.11 onwards, the DataMiner SNMP agent function is disabled by default. It can be enabled in the file *DataMiner.xml* (see [Enabling DataMiner SNMP agent functionality](Enabling_DataMiner_SNMP_agent_functionality.md)). Note that this only affects DataMiner itself, not the virtual SNMP agents that can be enabled for elements, so that only active alarms and general DataMiner information cannot by polled by default.
+> - By default, the SLSNMPAgent process listens for Get and Set messages using the same port as the Windows SNMP service. As such, if the latter has to run alongside SLSNMPAgent, either change the port used by the Windows SNMP service or change the port used by SLSNMPAgent. For more information, see [Changing SNMP agent ports](Changing_SNMP_agent_ports.md).
 >

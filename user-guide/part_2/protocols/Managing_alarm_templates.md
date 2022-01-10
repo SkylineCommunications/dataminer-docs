@@ -85,9 +85,9 @@ In the Protocols & Templates module:
     All items in the column on the right have been assigned this alarm template.
 
 > [!NOTE]
-> -  To quickly access the Protocols & Templates module from the Surveyor, right-click an element or enhanced service, and select *Protocols & Templates.* This opens a submenu where you can open the current template, assign a different template or view all available templates.
-> -  Right-click an item in the Protocols & Templates module and select *Remove* to quickly remove an alarm template from an item.
-> -  Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](Working_with_the_elements_tab.md).
+> - To quickly access the Protocols & Templates module from the Surveyor, right-click an element or enhanced service, and select *Protocols & Templates.* This opens a submenu where you can open the current template, assign a different template or view all available templates.
+> - Right-click an item in the Protocols & Templates module and select *Remove* to quickly remove an alarm template from an item.
+> - Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](Working_with_the_elements_tab.md).
 
 ### Deleting an alarm template
 

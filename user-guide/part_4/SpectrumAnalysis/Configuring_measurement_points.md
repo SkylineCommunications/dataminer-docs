@@ -37,8 +37,8 @@ The measurement point configuration window consists of:
         Any measurement points with ID -1 in the import file will be added as new measurement points. The imported measurement points will be shown in the list pane with the label *\[modified\]* or *\[new\]*, and the changes will need to be applied before they are saved.
 
 > [!NOTE]
-> -  If the current trace is hidden, this will be reflected in the measurement point. See [Spectrum trace acquisition](Viewing_spectrum_analyzer_traces.md#spectrum-trace-acquisition).
-> -  If no measurement points have been configured yet, the *Edit measurement point* option will not be available.
+> - If the current trace is hidden, this will be reflected in the measurement point. See [Spectrum trace acquisition](Viewing_spectrum_analyzer_traces.md#spectrum-trace-acquisition).
+> - If no measurement points have been configured yet, the *Edit measurement point* option will not be available.
 
 ### Configuring a measurement point
 
@@ -51,8 +51,8 @@ To configure a new or existing measurement point:
 3. In the *Setup* section, select either to set up the measurement point via a parameter set, or via an Automation script, and then select the parameter set or the script in question.
 
     > [!NOTE]
-    > -  To configure a parameter set of a matrix parameter, when you have selected the parameter, click the value field. A pop-up box will then appear in which you can select the input and output and indicate whether these should be connected.
-    > -  For more information on configuring a measurement point to execute an Automation script, see [Making a measurement point execute a script before taking a trace](Making_a_measurement_point_execute_a_script_before_taking_a_trace.md).
+    > - To configure a parameter set of a matrix parameter, when you have selected the parameter, click the value field. A pop-up box will then appear in which you can select the input and output and indicate whether these should be connected.
+    > - For more information on configuring a measurement point to execute an Automation script, see [Making a measurement point execute a script before taking a trace](Making_a_measurement_point_execute_a_script_before_taking_a_trace.md).
 
 4. Optionally, in the *Advanced* section:
 
@@ -78,9 +78,9 @@ Two additional display options are available in the *Measurement points* tab:
     Adds the measurement points as services in the same view as the spectrum analyzer element. These services contain the monitored alarm parameters for the measurement point.
 
     > [!NOTE]
-    > -  Measurement points have their own specific icon in the Surveyor: ![](../../images/measurement_point_icon.png)
-    > -  A service representing a measurement point will only include the spectrum element if there is at least one monitor with at least one parameter that uses this measurement point.
-    > -  The default opening behavior of measurement point cards can be configured in the user settings. The cards can either open as a service or as a spectrum analyzer card. The alternative opening behavior can be accessed via the measurement point’s context menu. See [Card settings](../../part_1/GettingStarted/User_settings.md#card-settings).
+    > - Measurement points have their own specific icon in the Surveyor: ![](../../images/measurement_point_icon.png)
+    > - A service representing a measurement point will only include the spectrum element if there is at least one monitor with at least one parameter that uses this measurement point.
+    > - The default opening behavior of measurement point cards can be configured in the user settings. The cards can either open as a service or as a spectrum analyzer card. The alternative opening behavior can be accessed via the measurement point’s context menu. See [Card settings](../../part_1/GettingStarted/User_settings.md#card-settings).
 
 - **![](../../images/combined_measpt_16.png) Combined measurement point view**:
 

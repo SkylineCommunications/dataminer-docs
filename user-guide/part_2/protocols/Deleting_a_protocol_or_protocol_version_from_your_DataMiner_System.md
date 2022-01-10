@@ -21,6 +21,6 @@ To do so:
 3. In the confirmation box, click *Yes* to proceed or click *No* to cancel.
 
 > [!NOTE]
-> -  A production version of a protocol cannot be deleted. If you want to delete a protocol version that is marked “Production”, first promote another version of that same protocol to production version and then try again.
-> -  When you delete a DVE main protocol, all the DVE child protocols are deleted as well. It is not possible to delete a DVE child protocol on its own.
+> - A production version of a protocol cannot be deleted. If you want to delete a protocol version that is marked “Production”, first promote another version of that same protocol to production version and then try again.
+> - When you delete a DVE main protocol, all the DVE child protocols are deleted as well. It is not possible to delete a DVE child protocol on its own.
 >

@@ -115,8 +115,8 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> -  [Viewing Failover information](Viewing_Failover_information.md)
-> -  [Heartbeats](Advanced_Failover_options.md#heartbeats)
+> - [Viewing Failover information](Viewing_Failover_information.md)
+> - [Heartbeats](Advanced_Failover_options.md#heartbeats)
 
 #### If the network cable used for synchronization is pulled out of the online DMA
 
@@ -164,8 +164,8 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> -  [Viewing Failover information](Viewing_Failover_information.md)
-> -  [Heartbeats](Advanced_Failover_options.md#heartbeats)
+> - [Viewing Failover information](Viewing_Failover_information.md)
+> - [Heartbeats](Advanced_Failover_options.md#heartbeats)
 
 #### If the network cable connecting to the switch or router is pulled out of the offline DMA
 
@@ -179,8 +179,8 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> -  [Viewing Failover information](Viewing_Failover_information.md)
-> -  [Heartbeats](Advanced_Failover_options.md#heartbeats)
+> - [Viewing Failover information](Viewing_Failover_information.md)
+> - [Heartbeats](Advanced_Failover_options.md#heartbeats)
 
 #### If the network cable used for synchronization is pulled out of the offline DMA
 
@@ -228,8 +228,8 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> -  [Viewing Failover information](Viewing_Failover_information.md)
-> -  [Heartbeats](Advanced_Failover_options.md#heartbeats)
+> - [Viewing Failover information](Viewing_Failover_information.md)
+> - [Heartbeats](Advanced_Failover_options.md#heartbeats)
 
 ### How do I upgrade a pair of DMAs in a Failover setup?
 
@@ -357,5 +357,3 @@ Once the routes have been recreated with an interface number assigned, they will
 When a Failover configuration is set up, one of the Cassandra instances is automatically designated as the master seed node. When the master seed node is not available, it is not possible to restart or start the database of the other DMA.
 
 Therefore, if starting or restarting one of the Agents in a Failover pair fails, first make sure the other Agent is online and available.
-
-

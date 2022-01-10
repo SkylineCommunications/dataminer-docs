@@ -8,7 +8,5 @@
     You will now see all data that others have shared with you.
 
 > [!NOTE]
-> -  When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a DataMiner Cloud Platform account.
-> -  For more information on how to share dashboards, see [Sharing a dashboard using the Live Sharing Service](../../part_4/newR_D/Sharing_a_dashboard_using_the_Live_Sharing_Service.md).
-
-
+> - When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a DataMiner Cloud Platform account.
+> - For more information on how to share dashboards, see [Sharing a dashboard using the Live Sharing Service](../../part_4/newR_D/Sharing_a_dashboard_using_the_Live_Sharing_Service.md).

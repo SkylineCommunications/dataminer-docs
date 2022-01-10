@@ -10,8 +10,8 @@ The following sections provide more information on the C# Editor:
 
 > [!NOTE]
 > DIS defines a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g. SonarLint or StyleCop to analyze the code.
-> -  When, in Visual Studio, your solution is in release mode, analysis is disabled for performance reasons.
-> -  Analysis is always disabled for the QAction_Helper and QAction_ClassLibrary projects.
+> - When, in Visual Studio, your solution is in release mode, analysis is disabled for performance reasons.
+> - Analysis is always disabled for the QAction_Helper and QAction_ClassLibrary projects.
 
 ### File tab header
 

@@ -23,9 +23,9 @@ To do so:
 When you take ownership of an alarm event, a new alarm record is added to the life cycle of that alarm event, where the *Alarm Type* property has been set to “Acknowledged”. The *Owner* property of the new alarm records that are added to the life cycle of that alarm will contain your user name.
 
 > [!NOTE]
-> -  If you want to query the historical database for all alarm events of which users took ownership, select all alarm events where the *Alarm Type* property is “Acknowledged”.
-> -  You cannot take ownership of alarm events that are owned by someone else. In that case, ownership will first need to be released.
-> -  It is only possible to take ownership of clearable alarms from DataMiner version 8.5.6 onwards.
+> - If you want to query the historical database for all alarm events of which users took ownership, select all alarm events where the *Alarm Type* property is “Acknowledged”.
+> - You cannot take ownership of alarm events that are owned by someone else. In that case, ownership will first need to be released.
+> - It is only possible to take ownership of clearable alarms from DataMiner version 8.5.6 onwards.
 
 ### Releasing ownership of an alarm
 

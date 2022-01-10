@@ -66,20 +66,20 @@ This parameter can be used to adjust the polling speed of the element.
 Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a monitored parameter, the value of the alarm property “System Type” will be set to the value of this general parameter.
 
 > [!NOTE]
-> -  If no alarm property named "System Type" exists within the DataMiner System, it will not be created. Only creating an element with a topology cell definition will cause this alarm property to be created.
-> -  Updating this general parameter will not cause the values defined by a topology cell definition to be overwritten.
-> -  Updating this general parameter will trigger a "Property Changed" update on the active alarms of the element, even on alarms relying on the topology cell definition in the protocol rather than this general parameter.
-> -  Exported DVE elements will not inherit the value of this parameter from the main element. However, virtual functions (used in the SRM Solution) do inherit this parameter from the main element.
+> - If no alarm property named "System Type" exists within the DataMiner System, it will not be created. Only creating an element with a topology cell definition will cause this alarm property to be created.
+> - Updating this general parameter will not cause the values defined by a topology cell definition to be overwritten.
+> - Updating this general parameter will trigger a "Property Changed" update on the active alarms of the element, even on alarms relying on the topology cell definition in the protocol rather than this general parameter.
+> - Exported DVE elements will not inherit the value of this parameter from the main element. However, virtual functions (used in the SRM Solution) do inherit this parameter from the main element.
 
 #### \[Alarm System Name\]
 
 Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a monitored parameter, the value of the alarm property “System Name” will be set to the value of this general parameter.
 
 > [!NOTE]
-> -  If no alarm property named "System Name" exists within the DataMiner System, it will not be created. Only creating an element with a topology cell definition will cause this alarm property to be created.
-> -  Updating this general parameter will not cause the values defined by a topology cell definition to be overwritten.
-> -  Updating this general parameter will trigger a "Property Changed" update on the active alarms of the element, even on alarms relying on the topology cell definition in the protocol rather than this general parameter.
-> -  Exported DVE elements will not inherit the value of this parameter from the main element. However, virtual functions (used in the SRM Solution) do inherit this parameter from the main element.
+> - If no alarm property named "System Name" exists within the DataMiner System, it will not be created. Only creating an element with a topology cell definition will cause this alarm property to be created.
+> - Updating this general parameter will not cause the values defined by a topology cell definition to be overwritten.
+> - Updating this general parameter will trigger a "Property Changed" update on the active alarms of the element, even on alarms relying on the topology cell definition in the protocol rather than this general parameter.
+> - Exported DVE elements will not inherit the value of this parameter from the main element. However, virtual functions (used in the SRM Solution) do inherit this parameter from the main element.
 
 #### \[Properties\]
 

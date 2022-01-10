@@ -17,5 +17,3 @@ Note that the active as well as the passive team member are connected to both th
 From DataMiner 10.2.0/10.1.8 onwards, the layout of this window is different, as this DataMiner version introduces the possibility to use a shared hostname instead of two virtual IP addresses to represent the Failover pair. However, the active and passive DMA are still indicated in the same manner.
 
 ![](../../images/FailoverConfig1018.png)
-
-

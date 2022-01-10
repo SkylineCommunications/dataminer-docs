@@ -206,8 +206,8 @@ The following logical operands can be used in the *ConditionsOptions*.
 | \|\|    |                       |
 
 > [!NOTE]
-> -  The precedence of the logical operators is as follows: the priority of *Not* is the highest, followed by *And*, followed by *Or*.
-> -  Parentheses are not supported in the *ConditionsOptions*.
+> - The precedence of the logical operators is as follows: the priority of *Not* is the highest, followed by *And*, followed by *Or*.
+> - Parentheses are not supported in the *ConditionsOptions*.
 
 ### Configurations
 
@@ -729,5 +729,3 @@ This field indicates whether a software upgrade is available for the elements. T
 ### SoftwareVersionPID
 
 This fields indicates the parameter ID of the selected protocol where it is possible to see information about the software version the element is running. This is a numeric field.
-
-

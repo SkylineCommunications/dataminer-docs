@@ -12,8 +12,8 @@ To configure connectivity chains:
     In a mapping, you can compare internal connectivity connections with either a static or a dynamic value, and add conditions. In case of a match, the internal connection is considered part of the connectivity path.
 
     > [!NOTE]
-    > -  External connections (i.e. connections between elements, services or redundancy groups) are automatically part of the path if the two internal connections (inside an element, a service or a redundancy group) at either end of those external connections are part of the path.
-    > -  The chained connections do not necessarily have to follow one another (e.g. Interface 1 -> Interface 2 -> interface 3). It is also possible to have connections on the same destination or source, for instance to create a star topology. For example, a chain may look like this:
+    > - External connections (i.e. connections between elements, services or redundancy groups) are automatically part of the path if the two internal connections (inside an element, a service or a redundancy group) at either end of those external connections are part of the path.
+    > - The chained connections do not necessarily have to follow one another (e.g. Interface 1 -> Interface 2 -> interface 3). It is also possible to have connections on the same destination or source, for instance to create a star topology. For example, a chain may look like this:
     >     - Interface 1 -> Interface 2
     >     - Interface 3 -> Interface 2
 
@@ -154,8 +154,8 @@ A *\<Map>* tag can have the following attributes:
     If you want to compare the values of two properties, then *propertyA* and *propertyB* must contain the names of the two properties of which the values will be compared.     If you want to compare the value of a property to a given value, then either *propertyA* or *propertyB* must contain the name of the property.
 
     > [!NOTE]
-    > -  From DataMiner 9.0.0 CU3 onwards, the *propertyB* attribute is no longer mandatory.
-    > -  While resolving multiple external connections on the same interface is supported from DataMiner 9.5.5 onwards, matching property connections on external connections is currently not yet supported.
+    > - From DataMiner 9.0.0 CU3 onwards, the *propertyB* attribute is no longer mandatory.
+    > - While resolving multiple external connections on the same interface is supported from DataMiner 9.5.5 onwards, matching property connections on external connections is currently not yet supported.
 
 - **match**
 

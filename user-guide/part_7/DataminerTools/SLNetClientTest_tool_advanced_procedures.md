@@ -263,8 +263,8 @@ In order to ensure that the subscription for a particular element stays open:
 7. After you have received a positive response, in the *Build Message* tab, select “Subscribe” as the *Type*, and click *Send Message*.
 
 > [!NOTE]
-> -  To remove the subscription, in the *Build Message* tab, select “Remove” as the *Type*, and click *Send Message*.
-> -  After you have set the subscription, you can test the functionality by going to *Diagnostics* > *Connection Details* > *BaseSubscriptionManager*. In the subscription set, you will then be able to see all the elements you are subscribed to.
+> - To remove the subscription, in the *Build Message* tab, select “Remove” as the *Type*, and click *Send Message*.
+> - After you have set the subscription, you can test the functionality by going to *Diagnostics* > *Connection Details* > *BaseSubscriptionManager*. In the subscription set, you will then be able to see all the elements you are subscribed to.
 
 ### Configuring trend caching
 
@@ -422,7 +422,7 @@ From DataMiner 9.5.6 onwards, it is possible to update the “time to live” or
 
 > [!TIP]
 > See also:
-> -  [DBMaintenance.xml and DBMaintenanceDMS.xml](../SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml)
+> - [DBMaintenance.xml and DBMaintenanceDMS.xml](../SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml)
 
 ### Enabling or disabling protocol buffer serialization
 

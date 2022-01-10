@@ -37,8 +37,8 @@ To configure virtual elements in Cube, the *Element Connections* module can be u
 2. In the list of elements in the *configure* tab, expand the element for which you want to configure the element connections.
 
     > [!NOTE]
-    > -  Only elements of which the protocol has at least one virtual parameter are displayed in the module.
-    > -  Elements that have been migrated from one DMA to another can only be used for element connections from DataMiner version 9.5.1 onwards.
+    > - Only elements of which the protocol has at least one virtual parameter are displayed in the module.
+    > - Elements that have been migrated from one DMA to another can only be used for element connections from DataMiner version 9.5.1 onwards.
 
 3. For each parameter of the virtual element that you want to connect to a parameter from another element:
 
@@ -58,6 +58,6 @@ To configure virtual elements in Cube, the *Element Connections* module can be u
 4. Click the *Save* button at the bottom of the card.
 
 > [!NOTE]
-> -  You can export an overview of the element connections to a CSV file using the *Export* button in the lower right corner of the module.
-> -  If there is incorrect or corrupt data in the element connections configuration, the *Element Connections* module is only available for users with full root view access.
+> - You can export an overview of the element connections to a CSV file using the *Export* button in the lower right corner of the module.
+> - If there is incorrect or corrupt data in the element connections configuration, the *Element Connections* module is only available for users with full root view access.
 >

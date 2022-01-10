@@ -29,8 +29,8 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the newest version:
 3. To the right of the *Agents to upgrade* box, click *Change* and select the DataMiner Agents that have to be upgraded.
 
     > [!NOTE]
-    > -  To upgrade an entire cluster, click *Select all* in the *select Agents to upgrade* window.
-    > -  To upgrade both Agents in a Failover setup, it suffices to select the entry that represents the setup.
+    > - To upgrade an entire cluster, click *Select all* in the *select Agents to upgrade* window.
+    > - To upgrade both Agents in a Failover setup, it suffices to select the entry that represents the setup.
 
     > [!WARNING]
     > To make sure the system functions correctly, all DMAs in a cluster must run the same DataMiner version.

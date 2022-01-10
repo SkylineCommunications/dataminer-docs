@@ -11,6 +11,6 @@ To open a document or a hyperlink, or to send an email to an email address store
     Alternatively, in the *Documents* module, you can also select one or more items, right-click them and select *Open*.
 
 > [!NOTE]
-> -  To download a document to your local computer, right-click it in the *Documents* module and select *Save*.
-> -  To quickly find a specific document, you can use the filter box in the top-right corner (available from DataMiner 10.2.0/10.1.5 onwards).
+> - To download a document to your local computer, right-click it in the *Documents* module and select *Save*.
+> - To quickly find a specific document, you can use the filter box in the top-right corner (available from DataMiner 10.2.0/10.1.5 onwards).
 >

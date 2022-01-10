@@ -7,8 +7,8 @@ To add a new report template in the Reporter app:
 2. Enter the template name and the template description.
 
     > [!NOTE]
-    > -  The template name should never contain two percentage (“%”) signs.
-    > -  The description you enter here will appear on the actual report.
+    > - The template name should never contain two percentage (“%”) signs.
+    > - The description you enter here will appear on the actual report.
 
 3. Select the template type:
 

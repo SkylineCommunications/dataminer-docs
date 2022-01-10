@@ -84,6 +84,6 @@ The timeline area of the *Bookings* module can be used as follows:
         - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
 
 > [!NOTE]
-> -  If you zoom to a particular time period on the timeline, the bookings list will also be updated to display only the bookings in that time period.
-> -  Prior to DataMiner 10.1.0 \[CU6\]/10.1.9, When you zoom in or out while the current time is within the zoom range, follow mode will automatically be enabled.
+> - If you zoom to a particular time period on the timeline, the bookings list will also be updated to display only the bookings in that time period.
+> - Prior to DataMiner 10.1.0 \[CU6\]/10.1.9, When you zoom in or out while the current time is within the zoom range, follow mode will automatically be enabled.
 >

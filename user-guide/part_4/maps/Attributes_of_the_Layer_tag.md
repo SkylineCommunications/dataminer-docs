@@ -97,8 +97,8 @@ The interval (in milliseconds) at which the data in the layer needs to be refres
 If you set this attribute to 0 or if you leave it out, the layer will not be refreshed.
 
 > [!NOTE]
-> -  Augmenting the refresh rate will have a negative impact on the overall performance of DMAs as well as DMA clients.
-> -  This attribute does not work for layers of sourceType “traffic”. Traffic information is only retrieved once, and not refreshed afterwards. See [Layers of sourceType “traffic”](Layer_types.md#layers-of-sourcetype-traffic).
+> - Augmenting the refresh rate will have a negative impact on the overall performance of DMAs as well as DMA clients.
+> - This attribute does not work for layers of sourceType “traffic”. Traffic information is only retrieved once, and not refreshed afterwards. See [Layers of sourceType “traffic”](Layer_types.md#layers-of-sourcetype-traffic).
 
 ### sourceType
 
@@ -120,8 +120,8 @@ The type of layer.
 | weatherf     | A layer that displays weather information with temperatures in degrees Fahrenheit.<br> See [Layers of sourceType “weatherf”](Layer_types.md#layers-of-sourcetype-weatherf).                                                                                                                                                                                     |
 
 > [!NOTE]
-> -  The sourceType attribute of a *\<Layer>* tag dictates which subtags are allowed. A *\<TableSourceInfo>* tag, for example, is only allowed inside a *\<Layer>* tag if sourceType is “table”. For more information, see [Layer types](Layer_types.md).
-> -  The Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
+> - The sourceType attribute of a *\<Layer>* tag dictates which subtags are allowed. A *\<TableSourceInfo>* tag, for example, is only allowed inside a *\<Layer>* tag if sourceType is “table”. For more information, see [Layer types](Layer_types.md).
+> - The Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
 
 ### visible
 

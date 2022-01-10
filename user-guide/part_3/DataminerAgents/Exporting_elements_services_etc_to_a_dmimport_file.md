@@ -5,9 +5,9 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 1. In the Surveyor right-click menu, select *Actions \> Export*.
 
     > [!NOTE]
-    > -  This option is also available from a card’s header menu.
-    > -  If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
-    > -  If you export from a list of items on a view card, only the item you right-clicked will be included in the export to a .dmimport file.
+    > - This option is also available from a card’s header menu.
+    > - If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
+    > - If you export from a list of items on a view card, only the item you right-clicked will be included in the export to a .dmimport file.
 
 2. From DataMiner 9.6.3 onwards, in the *Export* window, select *Export to DataMiner package*.
 
@@ -25,8 +25,8 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
     - Information events (from DataMiner 9.5.0 onwards)
 
         > [!NOTE]
-        > -  Including information events is only possible if alarm data are also exported.
-        > -  Including information events can make the export take significantly longer.
+        > - Including information events is only possible if alarm data are also exported.
+        > - Including information events can make the export take significantly longer.
 
 5. Click *Export*.
 

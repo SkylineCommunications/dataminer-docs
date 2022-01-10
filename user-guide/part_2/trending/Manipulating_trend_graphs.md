@@ -10,7 +10,7 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 
     > [!TIP]
     > See also:
-    > -  [Working with trend groups](Working_with_trend_groups.md).
+    > - [Working with trend groups](Working_with_trend_groups.md).
 
 You can change the way data are represented in the main graph area by directly manipulating the trend graph, or via the right-click menu:
 
@@ -21,7 +21,7 @@ You can change the way data are represented in the main graph area by directly m
 - [Using the right-click menu](Using_the_right-click_menu.md#using-the-right-click-menu)
 
 > [!NOTE]
-> -  If exceptions occur, these are displayed below the trend graph, while in the graph itself gaps will be displayed.
-> -  Gaps are also displayed for zero values or negative values in trend graphs using a logarithmic scale.
-> -  Some display settings for trend graphs can be changed in the Cube user settings. See [User settings](../../part_1/GettingStarted/User_settings.md).
+> - If exceptions occur, these are displayed below the trend graph, while in the graph itself gaps will be displayed.
+> - Gaps are also displayed for zero values or negative values in trend graphs using a logarithmic scale.
+> - Some display settings for trend graphs can be changed in the Cube user settings. See [User settings](../../part_1/GettingStarted/User_settings.md).
 >

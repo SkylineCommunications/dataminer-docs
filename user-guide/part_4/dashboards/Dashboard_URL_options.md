@@ -101,8 +101,8 @@ selection1!selection2!selection3
 When you specify only one selection without feed ID, the default feed is chosen by looking at all the feeds and selecting the first one for which client selection is required.
 
 > [!NOTE]
-> -  For more examples, open a dashboard and click *Feeds* > *Permanent link*.
-> -  Feed IDs are GUIDs. To find a list of all feed IDs used in a particular dashboard, open the *dashboard.config* file of that dashboard, and look for IDs like the following: “\<feed id=”93098909-cda2-4f50-b936-f6ef7c0dcb97” ...>”.
+> - For more examples, open a dashboard and click *Feeds* > *Permanent link*.
+> - Feed IDs are GUIDs. To find a list of all feed IDs used in a particular dashboard, open the *dashboard.config* file of that dashboard, and look for IDs like the following: “\<feed id=”93098909-cda2-4f50-b936-f6ef7c0dcb97” ...>”.
 
 List of selection types (each with their own syntax):
 
@@ -125,9 +125,9 @@ viewname|name
 ```
 
 > [!NOTE]
-> -  In case of *elementname\|name*, the element name can contain wildcards, e.g. "elementname\|\*-MODEM\*". When an additional *?service* parameter is specified in the URL, the element will be searched for within the specified service using the name mask.
-> -  *idx\|idx* refers to a row index of a dynamic table.
-> -  If you specify strings containing ”!” or “\|” characters, you can encode them as ”!!” and “\|\|”.
+> - In case of *elementname\|name*, the element name can contain wildcards, e.g. "elementname\|\*-MODEM\*". When an additional *?service* parameter is specified in the URL, the element will be searched for within the specified service using the name mask.
+> - *idx\|idx* refers to a row index of a dynamic table.
+> - If you specify strings containing ”!” or “\|” characters, you can encode them as ”!!” and “\|\|”.
 
 #### ?service=...
 

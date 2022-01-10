@@ -247,5 +247,3 @@ This tab consists of three different sections:
 ### The Help tab
 
 This tab contains links to this section of the DataMiner Help and to a page with more information about PTP in general. It also displays version information for the PTP app.
-
-

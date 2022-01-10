@@ -11,5 +11,3 @@
 - [DataMiner Community](../part_51/Community/Community.md#dataminer-community)
 
 - [DataMiner Admin app](../part_51/CloudAdminApp/CloudAdminApp.md#dataminer-admin-app)
-
-

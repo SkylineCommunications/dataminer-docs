@@ -4,7 +4,7 @@ It is possible to make a modification to the SLA protocol, in order to make the 
 
 > [!WARNING]
 > - This configuration option has a serious impact on the functionality of the SLA, and should therefore be applied with extreme care.
-> -  **Do not enable or disable this option during runtime.**
+> - **Do not enable or disable this option during runtime.**
 
 ### Configuring the option
 

@@ -25,11 +25,11 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
     A telnet session with the Serial Gateway will be established.
 
     > [!NOTE]
-    > -  Only one user at a time can access the Serial Gateway telnet interface.
-    > -  A telnet session left open on a Serial Gateway will automatically be terminated after a certain time.
-    > -  Alternatively, on recent versions, you can open a web browser to the IP address of the Serial Gateway instead.
-    > -  With recent versions, the front panel of the device also has a navigation menu that is very similar to the telnet interface, where you can configure the same settings.
-    > -  From DataMiner 9.6.5 onwards, the Telnet interface is deactivated by default. It can be activated using the *Telnet* tag within the file DataMiner.xml. For more information, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml).
+    > - Only one user at a time can access the Serial Gateway telnet interface.
+    > - A telnet session left open on a Serial Gateway will automatically be terminated after a certain time.
+    > - Alternatively, on recent versions, you can open a web browser to the IP address of the Serial Gateway instead.
+    > - With recent versions, the front panel of the device also has a navigation menu that is very similar to the telnet interface, where you can configure the same settings.
+    > - From DataMiner 9.6.5 onwards, the Telnet interface is deactivated by default. It can be activated using the *Telnet* tag within the file DataMiner.xml. For more information, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml).
 
 2. Press *Enter* to confirm the console terminal type as “ansi/vt100”.
 
@@ -43,8 +43,8 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
 4. Make sure the mode of the ports to which you connect the elements is set to *RAW (TCP Server)* or *TCP Server Mode*.
 
     > [!NOTE]
-    > -  If this setting is not properly configured, the stream of the associated element will throw a “socket error 10061”. This means that the Serial Gateway actively refused the connection.
-    > -  If at this point a warning appears that you must restart the Serial Gateway, do not do so yet.
+    > - If this setting is not properly configured, the stream of the associated element will throw a “socket error 10061”. This means that the Serial Gateway actively refused the connection.
+    > - If at this point a warning appears that you must restart the Serial Gateway, do not do so yet.
 
 5. Press *Esc* to leave the operating settings.
 
@@ -115,5 +115,3 @@ After you have added all elements, to make sure that they have been correctly se
 3. If necessary, check communication between the element and the DMA. See [Monitoring real-time communication between a DMA and an element](../../part_6/logging/Monitoring_real-time_communication_between_a_DMA_and_an_element.md#monitoring-real-time-communication-between-a-dma-and-an-element).
 
 4. Once communication between the DMA and the element is up and running, click the element in the Surveyor to open the element card.
-
-

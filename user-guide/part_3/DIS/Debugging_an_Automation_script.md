@@ -31,6 +31,6 @@ When you have finished configuring all necessary settings, you can start debuggi
 12. In the *DIS Inject* window, click Execute to manually trigger the Automation script.
 
 > [!NOTE]
-> -  Automation script debugging only works in conjunction with DataMiner Agents running at least DataMiner Main Release Version 10.1.0 or Feature Release Version 10.0.6.
-> -  Automation script debugging currently does not support memory files yet.
+> - Automation script debugging only works in conjunction with DataMiner Agents running at least DataMiner Main Release Version 10.1.0 or Feature Release Version 10.0.6.
+> - Automation script debugging currently does not support memory files yet.
 >

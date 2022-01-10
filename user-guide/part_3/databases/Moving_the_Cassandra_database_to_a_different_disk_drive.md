@@ -8,8 +8,8 @@ To do so:
 
     > [!NOTE]
     > To reduce the size of the data that will need to be copied, at this point, it can be useful to first do a cleanup of the snapshots that are used in Cassandra, by means of the Cassandra nodetool, which is provided by Cassandra in the folder *C:\\Program Files\\Cassandra\\bin\\*.
-    > -  To check the size of the snapshots, run the following command in a command prompt window: *nodetool listsnapshots*.
-    > -  To clean up the snapshots, run the following command in a command prompt window: *nodetool clearsnapshot*. This will mark all snapshots as ready for deletion. Then restart the Cassandra service in order to remove the snapshots.
+    > - To check the size of the snapshots, run the following command in a command prompt window: *nodetool listsnapshots*.
+    > - To clean up the snapshots, run the following command in a command prompt window: *nodetool clearsnapshot*. This will mark all snapshots as ready for deletion. Then restart the Cassandra service in order to remove the snapshots.
 
 2. Stop the Cassandra service
 
@@ -24,8 +24,8 @@ To do so:
 7. Copy the data from this directory to the new data directory you wish to use.
 
     > [!NOTE]
-    > -  Depending on the size of the database, copying the existing database may take a while.
-    > -  Do not place the Cassandra database on a network attached storage (NAS) device or in a shared network file system (NFS). Such a setup is not supported by Cassandra.
+    > - Depending on the size of the database, copying the existing database may take a while.
+    > - Do not place the Cassandra database on a network attached storage (NAS) device or in a shared network file system (NFS). Such a setup is not supported by Cassandra.
 
 8. When the copy is complete, start the Cassandra service.
 

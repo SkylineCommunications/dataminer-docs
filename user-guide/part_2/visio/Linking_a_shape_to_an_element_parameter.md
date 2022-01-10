@@ -3,9 +3,9 @@
 When you have linked a shape to an element using a shape data field of type **Element**, you can use an additional shape data field of type **Parameter** to link that shape to a particular parameter of that element.
 
 > [!NOTE]
-> -  When you have linked a shape to an enhanced service using a shape data field of type **Element**, you can use an additional shape data field of type **Parameter** to link that shape to a particular parameter of the service.
-> -  If you link a shape to a spectrum analyzer parameter, by default, the shape will be turned into a spectrum analyzer thumbnail.
-> -  In a Visio file linked to a protocol, a shape linked to a parameter will always be shown, even if that parameter has no value. A shape linked to a parameter will only be hidden if a show/hide condition dictates that it should be hidden.
+> - When you have linked a shape to an enhanced service using a shape data field of type **Element**, you can use an additional shape data field of type **Parameter** to link that shape to a particular parameter of the service.
+> - If you link a shape to a spectrum analyzer parameter, by default, the shape will be turned into a spectrum analyzer thumbnail.
+> - In a Visio file linked to a protocol, a shape linked to a parameter will always be shown, even if that parameter has no value. A shape linked to a parameter will only be hidden if a show/hide condition dictates that it should be hidden.
 
 In this section:
 

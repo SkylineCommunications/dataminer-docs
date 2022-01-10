@@ -38,9 +38,9 @@ To edit a QAction, you have two options:
 - Open Visual Studio’s Solution Explorer window, go to the QAction\_\<id> project and open the QAction\_\<id>.cs file.
 
 > [!NOTE]
-> -  A QAction project can contain several \*.cs files. These files will then be combined when the protocol is compiled.
-> -  It is recommended to place all “using” directives inside the namespace instead of at the top of the file.
-> -  DLL imports now need to be configured by adding references on the C# project itself. Those references can either refer to external DLL files (in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or to other QActions in the solution. The latter will be translated at compilation to “\[ProtocolName\].\[ProtocolVersion\].QAction.\<id>.dll” imports in the protocol.
+> - A QAction project can contain several \*.cs files. These files will then be combined when the protocol is compiled.
+> - It is recommended to place all “using” directives inside the namespace instead of at the top of the file.
+> - DLL imports now need to be configured by adding references on the C# project itself. Those references can either refer to external DLL files (in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or to other QActions in the solution. The latter will be translated at compilation to “\[ProtocolName\].\[ProtocolVersion\].QAction.\<id>.dll” imports in the protocol.
 
 #### Removing a QAction
 

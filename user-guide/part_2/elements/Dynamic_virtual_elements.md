@@ -18,9 +18,9 @@ In the parent DVE, all child DVEs are indicated as rows in a table. If a row is 
 
 > [!NOTE]
 > Both parent and child DVEs must respect the DataMiner element naming conventions:
-> -  If a DVE name contains forbidden characters or leading or trailing dots or spaces, the name will be automatically adapted and an entry indicating this will be added in the Element log.
-> -  If a DVE name is empty or not unique in the DMS, the element will not be created or renamed, and a notice will be generated mentioning the primary key of the DVE table row that contains the invalid element name. Additional information will also be logged in the SLErrors.txt file, under “Validate DVE Name”.
-> -  Renaming a parent DVE will trigger a rename of all child elements of which the name starts with that of the parent element.
+> - If a DVE name contains forbidden characters or leading or trailing dots or spaces, the name will be automatically adapted and an entry indicating this will be added in the Element log.
+> - If a DVE name is empty or not unique in the DMS, the element will not be created or renamed, and a notice will be generated mentioning the primary key of the DVE table row that contains the invalid element name. Additional information will also be logged in the SLErrors.txt file, under “Validate DVE Name”.
+> - Renaming a parent DVE will trigger a rename of all child elements of which the name starts with that of the parent element.
 
 > [!TIP]
 > See also:
@@ -85,6 +85,6 @@ Alternatively, this can be done manually in the *Element.xml* file. To do so:
 When you disable the setting for a particular parent element, all its existing child elements will disappear from the system and their element IDs will be cleared. When you enable the setting afterwards for that same parent element, the child elements will be recreated with new element IDs.
 
 > [!NOTE]
-> -  Only DVE main elements that have element creation disabled can be added to a redundancy group.
-> -  Prior to DataMiner 10.0.8, if DVE child creation is disabled, virtual functions (used in DataMiner SRM) can also not be generated. From DataMiner 10.0.8 onwards, this setting no longer affects virtual functions.
+> - Only DVE main elements that have element creation disabled can be added to a redundancy group.
+> - Prior to DataMiner 10.0.8, if DVE child creation is disabled, virtual functions (used in DataMiner SRM) can also not be generated. From DataMiner 10.0.8 onwards, this setting no longer affects virtual functions.
 >

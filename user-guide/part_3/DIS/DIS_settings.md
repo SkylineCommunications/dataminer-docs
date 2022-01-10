@@ -63,8 +63,8 @@ To update a DMA in the list:
 2. In the *Edit DMA Connection* window, make the necessary changes, and click *OK*.
 
     > [!NOTE]
-    > -  When you change the hostname, the user name and/or the password, the current connection will be closed.
-    > -  After having changed the hostname, the user name and/or the password, we recommend you click the *Test connection* button to check whether DIS is able to connect to the DMA.
+    > - When you change the hostname, the user name and/or the password, the current connection will be closed.
+    > - After having changed the hostname, the user name and/or the password, we recommend you click the *Test connection* button to check whether DIS is able to connect to the DMA.
 
 To delete a DMA from the list:
 
@@ -281,9 +281,9 @@ If you select the *Hide warnings about UTF-8 encoding* option, no UTF-8 encoding
 Click *Fix default XML encoding* if you want DataMiner Integration Studio to change the encoding of Visual Studio’s “New XML file” template, which, by default, contains the UTF-8 signature header.
 
 > [!NOTE]
-> -  DIS automatically saves XML files using the following encoding:
+> - DIS automatically saves XML files using the following encoding:
 >     - Unicode (UTF-8 with signature) - Codepage 65001
-> -  XML files with an UTF-8 signature header can only be uploaded to DataMiner using DataMiner Cube.
+> - XML files with an UTF-8 signature header can only be uploaded to DataMiner using DataMiner Cube.
 
 ### Info
 

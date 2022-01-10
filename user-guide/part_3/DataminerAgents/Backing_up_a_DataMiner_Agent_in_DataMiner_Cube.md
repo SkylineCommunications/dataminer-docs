@@ -42,8 +42,8 @@ The following steps can be taken to configure the backups for a DMA:
     - If you select *Use custom backup*, in the table below, select what is to be included in the backup.
 
         > [!NOTE]
-        > -  In case a local Microsoft SQL Server database is used, in the *Options* section, an extra option is available that allows you to back up the transaction log as well. This option can be of use in order to allow Microsoft SQL Server to shrink the log file.
-        > -  While changes are being made to a backup configuration, no backup can be taken.
+        > - In case a local Microsoft SQL Server database is used, in the *Options* section, an extra option is available that allows you to back up the transaction log as well. This option can be of use in order to allow Microsoft SQL Server to shrink the log file.
+        > - While changes are being made to a backup configuration, no backup can be taken.
 
 8. Click the *Save* button to save the settings.
 

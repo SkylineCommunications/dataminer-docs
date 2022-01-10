@@ -5,9 +5,9 @@ Using a shape data field of type **ParametersSummary**, you can link a shape to 
 Possible actions include: displaying the minimum, maximum, sum or average of a series of parameter values, coloring a shape with the minimum or maximum alarm severity, coloring a shape with the latched minimum or maximum alarm severity, and flipping, hiding, showing or rotating a shape based on the result of a min, max, sum or avg calculation.
 
 > [!NOTE]
-> -  This feature only works in DataMiner Cube.
-> -  All parameter values used in a **ParametersSummary** field must be of type “double”.
-> -  By default, the summary value is calculated when all parameter values are available. However, if you add a shape data field of type **Options** and set its value to “*IgnoreUnsetValues*”, the summary value will appear as soon as one of the values is available.
+> - This feature only works in DataMiner Cube.
+> - All parameter values used in a **ParametersSummary** field must be of type “double”.
+> - By default, the summary value is calculated when all parameter values are available. However, if you add a shape data field of type **Options** and set its value to “*IgnoreUnsetValues*”, the summary value will appear as soon as one of the values is available.
 
 ### Configuring the shape data field
 
@@ -106,10 +106,10 @@ Action:Action:Action:...
 - NONE: No action will be performed.
 
 > [!NOTE]
-> -  If the shape text contains a “\*” character, it will be replaced by the Min, Max, Avg or Sum value.
-> -  In all sections of the ParametersSummary value, you can use \[Property:...\] placeholders.
-> -  The conditions you specify in case of FLIPX, FLIPY, HIDE, SHOW or ROTATE will be evaluated against the result of the operation on the specified parameters (Min, Max, Avg or Sum).
-> -  In conditions, both single equal signs (“=”) and double equal signs (“==”) are supported.
+> - If the shape text contains a “\*” character, it will be replaced by the Min, Max, Avg or Sum value.
+> - In all sections of the ParametersSummary value, you can use \[Property:...\] placeholders.
+> - The conditions you specify in case of FLIPX, FLIPY, HIDE, SHOW or ROTATE will be evaluated against the result of the operation on the specified parameters (Min, Max, Avg or Sum).
+> - In conditions, both single equal signs (“=”) and double equal signs (“==”) are supported.
 
 ### Examples of ParametersSummary values
 

@@ -169,10 +169,10 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 |                    | By default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml). |                                                                                                                                               |
 
 > [!NOTE]
-> -  When viewing Stream via DataMiner Cube or System Display clients, access to port 23/tcp is not required. Access is only required when using a telnet client.
-> -  Prior to DataMiner 10.0.8, ports 7001, 7199, 9142 and 9160 are also opened during Cassandra installation. However, from DataMiner 10.0.8 onwards, only the essential ports 7000 and 9042 are opened.
-> -  Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. However, this port is no longer used from those versions onwards and is no longer opened during new installations.
-> -  The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
+> - When viewing Stream via DataMiner Cube or System Display clients, access to port 23/tcp is not required. Access is only required when using a telnet client.
+> - Prior to DataMiner 10.0.8, ports 7001, 7199, 9142 and 9160 are also opened during Cassandra installation. However, from DataMiner 10.0.8 onwards, only the essential ports 7000 and 9042 are opened.
+> - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. However, this port is no longer used from those versions onwards and is no longer opened during new installations.
+> - The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
 
 #### Graphical representation of IP communication within a DMS
 
@@ -187,8 +187,8 @@ The diagram below shows how communication within a DMS could be set up.
 
 > [!TIP]
 > See also:
-> -  [Configuring DMA communication settings in SLNet.exe.config](Configuration_of_DataMiner_processes.md#configuring-dma-communication-settings-in-slnetexeconfig)
-> -  [Configuring client communication settings](DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings)
+> - [Configuring DMA communication settings in SLNet.exe.config](Configuration_of_DataMiner_processes.md#configuring-dma-communication-settings-in-slnetexeconfig)
+> - [Configuring client communication settings](DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings)
 
 ### Configuring the polling request timeout
 
@@ -216,11 +216,11 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 > [!NOTE]
 > For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/).
-> -  From DataMiner 8.5.5 up to DataMiner 9.5.12, OpenSSL library version v1.0.2a is used.
-> -  From DataMiner 9.5.13 onwards, OpenSSL library version v1.0.2m is used.
-> -  From DataMiner 9.6.1 onwards, OpenSSL library version v1.1.0h is used.
-> -  From DataMiner 9.6.8 onwards, OpenSSL library version v1.1.0j is used.
-> -  From DataMiner 9.6.11 onwards, OpenSSL library version v1.1.1c is used.
+> - From DataMiner 8.5.5 up to DataMiner 9.5.12, OpenSSL library version v1.0.2a is used.
+> - From DataMiner 9.5.13 onwards, OpenSSL library version v1.0.2m is used.
+> - From DataMiner 9.6.1 onwards, OpenSSL library version v1.1.0h is used.
+> - From DataMiner 9.6.8 onwards, OpenSSL library version v1.1.0j is used.
+> - From DataMiner 9.6.11 onwards, OpenSSL library version v1.1.1c is used.
 
 > [!TIP]
 > See also:
@@ -388,8 +388,8 @@ To do so:
 4. Save the file and restart DataMiner.
 
 > [!NOTE]
-> -  If the *\<SearchOptions>* tag is empty, then there will be no indexing restrictions. In other words, all items will be indexed.
-> -  If no *\<SearchOptions>* tag can be found in *MaintenanceSettings.xml*, indexing will be restricted to “trendedParamsOnly” by default.
+> - If the *\<SearchOptions>* tag is empty, then there will be no indexing restrictions. In other words, all items will be indexed.
+> - If no *\<SearchOptions>* tag can be found in *MaintenanceSettings.xml*, indexing will be restricted to “trendedParamsOnly” by default.
 
 ### Setting up HTTPS on a DMA
 
@@ -457,8 +457,8 @@ In this section:
     7. Under *Redirect URL*, fill in the full HTTPS URL for your web server.
 
         > [!NOTE]
-        > -  The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. https://www.myhost.com/{R:1}.
-        > -  The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
+        > - The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. https://www.myhost.com/{R:1}.
+        > - The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
 
     8. Set *Redirect type* to *Found (302)*.
 
@@ -796,8 +796,8 @@ When adding a DataMiner configuration to a DMA, you can select
 4. Click *Create* to install the package you selected.
 
 > [!NOTE]
-> -  For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages* folder of a particular configuration. In that case, copy them to this folder from the folder *C:\\Skyline DataMiner Configs\\Skyline DataMiner\\Webpages*.
-> -  After you have created a new configuration, it is possible that the DMA has problems restarting, so a manual restart is advisable.
+> - For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages* folder of a particular configuration. In that case, copy them to this folder from the folder *C:\\Skyline DataMiner Configs\\Skyline DataMiner\\Webpages*.
+> - After you have created a new configuration, it is possible that the DMA has problems restarting, so a manual restart is advisable.
 
 #### Switching to another DataMiner configuration
 

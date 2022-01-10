@@ -21,8 +21,8 @@ The user settings can be accessed in different ways:
 The settings window consists of two tabs. The tab with the user settings is opened by default. It consists of different pages that you can navigate between using the table of contents on the left.
 
 > [!NOTE]
-> -  For more information on the computer settings, see [Computer settings](Computer_settings.md).
-> -  Depending on the configuration of your user account, it is possible that some settings are not shown.
+> - For more information on the computer settings, see [Computer settings](Computer_settings.md).
+> - Depending on the configuration of your user account, it is possible that some settings are not shown.
 
 ### Overview of the user settings
 
@@ -109,10 +109,10 @@ On the *Alarm Console* page, several settings are available:
 - **Filter the alarms before they enter Cube**: Select this setting and then select one of the existing alarm filters in the drop-down list in order to apply it as a server-side alarm filter. When you do so, the *Active alarms* tab of the Alarm Console will only list alarms that match this filter.
 
     > [!NOTE]
-    > -  When you have modified this setting, you will need to reconnect your DataMiner Cube session in order to apply the change.
-    > -  Applying this setting can lead to inconsistencies between the Alarm Console and element alarm states. In other words, alarms could be present in the DMS that cannot be seen in the Alarm Console, because the server side filter overrides any other filter you set in the Alarm Console.
-    > -  If this setting is applied, the message *Limited Alarm Access* is shown at the top of the screen. If you hover the mouse pointer over this text, a list of possible inconsistencies will be shown.
-    > -  For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
+    > - When you have modified this setting, you will need to reconnect your DataMiner Cube session in order to apply the change.
+    > - Applying this setting can lead to inconsistencies between the Alarm Console and element alarm states. In other words, alarms could be present in the DMS that cannot be seen in the Alarm Console, because the server side filter overrides any other filter you set in the Alarm Console.
+    > - If this setting is applied, the message *Limited Alarm Access* is shown at the top of the screen. If you hover the mouse pointer over this text, a list of possible inconsistencies will be shown.
+    > - For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
 
 - **Condition to set an alarm unread**: Available from DataMiner 9.5.11 onwards. This setting determines when a read alarm should become unread again. The following options are available:
 
@@ -337,8 +337,8 @@ On the *Regional* page, the following settings are available:
 - **CSV separator**: Select which separator should be used in CSV exports from Cube. This setting replaces the legacy *Table export column separator* setting. Available from DataMiner 10.0.0/10.0.2 onwards.
 
     > [!NOTE]
-    > -  When you copy data to the Windows clipboard, that data will always be delimited by TAB characters, regardless of this setting.
-    > -  This setting only determines the separator used for CSV exports via Cube. Exports that are done via the server, such as service template exports, use the settings of the server.
+    > - When you copy data to the Windows clipboard, that data will always be delimited by TAB characters, regardless of this setting.
+    > - This setting only determines the separator used for CSV exports via Cube. Exports that are done via the server, such as service template exports, use the settings of the server.
 
 #### Surveyor/Sidebar settings
 
@@ -361,8 +361,8 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 - **Trend Y-axis mode**: Select *Auto* to automatically optimize the vertical range of a trend graph during pan and zoom operations. Select *Range* to fix the vertical range to the minimum and maximum defined in the protocol.
 
     > [!NOTE]
-    > -  If a trend display is already open when you change this setting, you must reload the trend display for the setting to take effect.
-    > -  When the *Range* setting is selected, the range of the y-axis is determined by the first parameter loaded in the trend graph. After the initial range is determined, it will not be adjusted until all parameters are cleared.
+    > - If a trend display is already open when you change this setting, you must reload the trend display for the setting to take effect.
+    > - When the *Range* setting is selected, the range of the y-axis is determined by the first parameter loaded in the trend graph. After the initial range is determined, it will not be adjusted until all parameters are cleared.
 
 - **Trend Y-axis includes exceptions**: Select this setting to allow the vertical range of the Y-axis to extend with exception values.
 
@@ -427,7 +427,7 @@ On the *Advanced* page, the following settings are available:
 - **DataMiner Cube User \[username\] reset**: Click the button *Factory defaults* to reset all settings back to default.
 
 > [!NOTE]
-> -  If a setting other than the default has been applied, it will be displayed in bold. You can quickly reset to the default setting by clicking the *Reset to \[setting\]* field underneath the setting.
-> -  If a setting requires that you enter a value in a box, and the value you entered is incorrect, the edge of the box will be displayed in red and the change to the setting will not be applied.
-> -  It is possible to limit the changes a user can apply to the settings. For more information, see [Configuring a set of user group settings](../../part_3/security/Configuring_a_set_of_user_group_settings.md).
+> - If a setting other than the default has been applied, it will be displayed in bold. You can quickly reset to the default setting by clicking the *Reset to \[setting\]* field underneath the setting.
+> - If a setting requires that you enter a value in a box, and the value you entered is incorrect, the edge of the box will be displayed in red and the change to the setting will not be applied.
+> - It is possible to limit the changes a user can apply to the settings. For more information, see [Configuring a set of user group settings](../../part_3/security/Configuring_a_set_of_user_group_settings.md).
 >

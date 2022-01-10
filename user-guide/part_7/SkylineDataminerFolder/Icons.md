@@ -9,8 +9,8 @@ The icons and the icon rules are specified in the following XML files:
 - *C:\\Skyline DataMiner\\Icons\\IconSelectionRules.xml*
 
 > [!NOTE]
-> -  Using custom icons is possible from DataMiner 9.0.5 onwards.
-> -  If you have made any changes to these files, restart DataMiner to implement your changes.
+> - Using custom icons is possible from DataMiner 9.0.5 onwards.
+> - If you have made any changes to these files, restart DataMiner to implement your changes.
 
 ### CustomIcons.xml
 

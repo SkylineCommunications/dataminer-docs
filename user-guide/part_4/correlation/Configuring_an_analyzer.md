@@ -7,8 +7,8 @@ To configure a Correlation analyzer:
 2. Enter a name for the analyzer in the *Name* field.
 
     > [!NOTE]
-    > -  A new analyzer will by default be simply called “Analyzer”
-    > -  It is not possible to add two analyzers with the same name in the same folder. Across folders, however, this is no problem.
+    > - A new analyzer will by default be simply called “Analyzer”
+    > - It is not possible to add two analyzers with the same name in the same folder. Across folders, however, this is no problem.
 
 3. Optionally, expand *Show details* and add a description in the *Description* field.
 
@@ -29,8 +29,8 @@ To configure a Correlation analyzer:
         3. Specify whether the parameter should or should not match a regular expression or wildcard expression, and specify the expression in question.
 
             > [!NOTE]
-            > -  For more information on wildcards, see [Searching with wildcard characters](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters).
-            > -  For more information on using regular expressions in filters, see [Alarm filters using regular expressions](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-filters-using-regular-expressions).
+            > - For more information on wildcards, see [Searching with wildcard characters](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters).
+            > - For more information on using regular expressions in filters, see [Alarm filters using regular expressions](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-filters-using-regular-expressions).
 
         4. If you want to add another condition to the filter, click *Add a Filter* and go back to step 4b.
 

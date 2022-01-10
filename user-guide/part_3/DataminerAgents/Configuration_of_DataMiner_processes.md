@@ -420,8 +420,8 @@ Example:
 ```
 
 > [!NOTE]
-> -  When a single polling response is not able to empty the stack of queued messages on the server, the next polling request will be scheduled after 100ms (fixed value).
-> -  Unzipping/unpacking polling response data on the client can be done while another polling request is already in progress.
+> - When a single polling response is not able to empty the stack of queued messages on the server, the next polling request will be scheduled after 100ms (fixed value).
+> - Unzipping/unpacking polling response data on the client can be done while another polling request is already in progress.
 
 #### Configuring the polling request timeout
 

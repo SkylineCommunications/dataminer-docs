@@ -3,8 +3,8 @@
 When adding or updating a spectrum analyzer element, at some point during element creation, you can specify the settings of the GPIB/LAN gateway through which DataMiner will communicate with the spectrum analyzer.
 
 > [!NOTE]
-> -  On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Agilent IO Libraries. See [Installing the Keysight/Agilent IO Libraries](Installing_the_Keysight_Agilent_IO_Libraries.md#installing-the-keysightagilent-io-libraries).
-> -  From DataMiner 9.0.0 onwards, these settings are configured in a different way than in legacy versions of DataMiner.
+> - On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Agilent IO Libraries. See [Installing the Keysight/Agilent IO Libraries](Installing_the_Keysight_Agilent_IO_Libraries.md#installing-the-keysightagilent-io-libraries).
+> - From DataMiner 9.0.0 onwards, these settings are configured in a different way than in legacy versions of DataMiner.
 
 > [!TIP]
 > See also:

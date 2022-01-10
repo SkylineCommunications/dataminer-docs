@@ -97,6 +97,6 @@ To do so:
     - Click *Close* to close the window.
 
     > [!NOTE]
-    > -  When you manually run a spectrum script, a message in the middle of the real-time display will indicate that “view script mode” is activated, and mention when the selected trace has a result.
-    > -  While you are manually executing a script or viewing the script results, you will not be able to use certain functionalities for real-time trace viewing, such as trace recording and measurement point selection.
+    > - When you manually run a spectrum script, a message in the middle of the real-time display will indicate that “view script mode” is activated, and mention when the selected trace has a result.
+    > - While you are manually executing a script or viewing the script results, you will not be able to use certain functionalities for real-time trace viewing, such as trace recording and measurement point selection.
     >

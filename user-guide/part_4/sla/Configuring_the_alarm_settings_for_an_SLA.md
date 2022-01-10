@@ -35,8 +35,8 @@ Not all alarms in a service are equally important. Set a violation filter to giv
 
 > [!NOTE]
 > From version 2.0.0.25 of the *Skyline SLA Definition Basic* protocol onwards, it is possible to hide alarms that have 0% impact because of violation filters. To do so:
-> -  Using version 2.0.0.25, on the *SLA Configuration* page, set *Hide Filtered Alarms* to *Hide*.
-> -  Using version 3.0.0 or higher, on the *Advanced Configuration* page, set *Violation Filtered Alarms* to *Hide*. Note that you need at least security level 3 in order to change any of the settings on the *Advanced Configuration* page.
+> - Using version 2.0.0.25, on the *SLA Configuration* page, set *Hide Filtered Alarms* to *Hide*.
+> - Using version 3.0.0 or higher, on the *Advanced Configuration* page, set *Violation Filtered Alarms* to *Hide*. Note that you need at least security level 3 in order to change any of the settings on the *Advanced Configuration* page.
 >
 > If the filtered alarms are set to be shown again later, the alarms that were hidden while this setting was set to *Hide* will not be displayed again.
 
@@ -62,8 +62,8 @@ To add a violation filter, follow the procedure below:
 7. In the column *Violation Filter Exclusive*, toggle whether the filter should be exclusive or not.
 
     > [!NOTE]
-    > -  If set to *Filter*, an alarm that does not match the filter will not be evaluated further, and the weight specified in the last matching rule is taken. If it did not match a previous rule, then the weight for that alarm is set to 0%.
-    > -  If set to *Continue*, the following filters are also processed, and if in the end none of the filters matched, the weight for that alarm is set to 100%. If several alarms match several of the violation filters set to Continue, the weightings will be added together. If one alarm matches several of the violation filters, the last matching filter is applied.
+    > - If set to *Filter*, an alarm that does not match the filter will not be evaluated further, and the weight specified in the last matching rule is taken. If it did not match a previous rule, then the weight for that alarm is set to 0%.
+    > - If set to *Continue*, the following filters are also processed, and if in the end none of the filters matched, the weight for that alarm is set to 100%. If several alarms match several of the violation filters set to Continue, the weightings will be added together. If one alarm matches several of the violation filters, the last matching filter is applied.
 
 8. Enter a value under *Violation Filter Sequence* to indicate the sequence in which you wish different filters to be used. The lowest number will be sequenced first.
 

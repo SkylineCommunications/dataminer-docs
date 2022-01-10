@@ -23,7 +23,7 @@ To create such a button, do the following:
 3. Stack those four shapes on top of each other, and group them.
 
 > [!NOTE]
-> -  For the disabled state to work, the linked shape must have the shape data **Options** with value *AllowControlDisable*. See [Dynamically disabling a parameter control](Turning_a_shape_into_a_parameter_control.md#dynamically-disabling-a-parameter-control).
+> - For the disabled state to work, the linked shape must have the shape data **Options** with value *AllowControlDisable*. See [Dynamically disabling a parameter control](Turning_a_shape_into_a_parameter_control.md#dynamically-disabling-a-parameter-control).
 
 ### Creating a toggle button
 
@@ -41,8 +41,8 @@ If the button is clicked, this will trigger the SHOW/HIDE action once. The condi
 | Parameter        | 1\|SHOW;=2;=1 |
 
 > [!NOTE]
-> -  This kind of toggle button can only be used to set a parameter, not to e.g. execute an Automation script. In other words, always add a shape data field of type **Execute** on group level of which you set the value to “*Set\|…*”
-> -  If you click *Cancel* in the confirmation box, the “Pressed” state is reset.
+> - This kind of toggle button can only be used to set a parameter, not to e.g. execute an Automation script. In other words, always add a shape data field of type **Execute** on group level of which you set the value to “*Set\|…*”
+> - If you click *Cancel* in the confirmation box, the “Pressed” state is reset.
 
 > [!TIP]
 > See also:

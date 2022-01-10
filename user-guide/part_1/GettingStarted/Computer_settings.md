@@ -52,8 +52,8 @@ On this page, you can select settings related to the connection of your computer
 - **Connection type**: Select a connection type in the drop-down list. By default this is set to *Auto*. When you select other connection types, *Remoting* or *Web services*, more settings will appear that need to be specified (destination port, polling interval, etc.).
 
     > [!NOTE]
-    > -  Connecting via web services is not possible if WSE is not installed on the DMA.
-    > -  As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
+    > - Connecting via web services is not possible if WSE is not installed on the DMA.
+    > - As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
 
     > [!TIP]
     > See also:

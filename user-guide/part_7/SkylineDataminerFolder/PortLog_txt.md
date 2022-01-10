@@ -33,6 +33,6 @@ Example:
 ```
 
 > [!NOTE]
-> -  Although the local DataMiner port is optional, each line must contain three colons (”:”).
-> -  Logging is started when the port in question is initialized, i.e. when the element is restarted or when the IP address or the IP port of the element is changed.
+> - Although the local DataMiner port is optional, each line must contain three colons (”:”).
+> - Logging is started when the port in question is initialized, i.e. when the element is restarted or when the IP address or the IP port of the element is changed.
 >

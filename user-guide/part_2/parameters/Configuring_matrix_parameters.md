@@ -31,8 +31,8 @@ This section consists of the following topics:
 2. Click *Yes* in the confirmation box.
 
 > [!NOTE]
-> -  When the mouse pointer passes over an input, a tooltip will appear indicating what output the input is connected to. The same also goes for outputs.
-> -  If more than the maximum number of inputs/outputs is connected to an output/input, an error message appears.
+> - When the mouse pointer passes over an input, a tooltip will appear indicating what output the input is connected to. The same also goes for outputs.
+> - If more than the maximum number of inputs/outputs is connected to an output/input, an error message appears.
 
 ### Locking or unlocking a matrix input or output
 

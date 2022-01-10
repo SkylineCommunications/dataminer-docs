@@ -11,6 +11,6 @@
     | Manual switching    | Manual switchover and manual switchback       |
 
 > [!NOTE]
-> -  You can only change the redundancy mode of a redundancy group if software redundancy has been configured for that group.
-> -  If no switchback actions have been defined for a software redundancy group, it is not possible to select *Automatic switching*.
+> - You can only change the redundancy mode of a redundancy group if software redundancy has been configured for that group.
+> - If no switchback actions have been defined for a software redundancy group, it is not possible to select *Automatic switching*.
 >

@@ -26,8 +26,8 @@ On the *Discovery* subtab of the *Admin* tab, you can verify and configure the d
     - If IDP is used with Process Automation, every hour the scan ranges are automatically synchronized with the profile instances used by Process Automation. If you want to trigger this synchronization immediately, use the *Sync* button on this page.
 
     > [!NOTE]
-    > -  Both IPv4 and IPV6 ranges are supported. Both types of ranges can be combined in the same request.
-    > -  If a discovery is done based on the *Ping* discovery profile, devices can be discovered based on ping discovery only. The *Ping First* option will not be available in this case. As the CI Type for devices discovered using a ping discovery is unknown, these will only be displayed in the IDP app if the setting *Identify Unknown Devices* is enabled.
+    > - Both IPv4 and IPV6 ranges are supported. Both types of ranges can be combined in the same request.
+    > - If a discovery is done based on the *Ping* discovery profile, devices can be discovered based on ping discovery only. The *Ping First* option will not be available in this case. As the CI Type for devices discovered using a ping discovery is unknown, these will only be displayed in the IDP app if the setting *Identify Unknown Devices* is enabled.
 
 - **Settings**: Contains the following settings:
 

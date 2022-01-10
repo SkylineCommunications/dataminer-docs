@@ -28,6 +28,6 @@ DataMiner distinguishes the following types of users:
     > [DataMiner Sharing](../../part_51/Sharing/Sharing.md#dataminer-sharing)
 
 > [!NOTE]
-> -  When a domain group is added to DataMiner, the email address, the mobile number and the pager number of existing, manually added domain users will be overruled by their counterparts on domain level.
-> -  When a domain group is deleted from DataMiner, all users within that domain group will be deleted from DataMiner as well, even if they are a member of one or more proprietary DataMiner groups. If, however, they are a member of one or more other domain groups, they will not be deleted.
+> - When a domain group is added to DataMiner, the email address, the mobile number and the pager number of existing, manually added domain users will be overruled by their counterparts on domain level.
+> - When a domain group is deleted from DataMiner, all users within that domain group will be deleted from DataMiner as well, even if they are a member of one or more proprietary DataMiner groups. If, however, they are a member of one or more other domain groups, they will not be deleted.
 >

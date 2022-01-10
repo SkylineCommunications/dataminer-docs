@@ -60,8 +60,8 @@ If, for any reason, you want to reinstall Cube, you need to clean the XBAP cache
     ```
 
 > [!NOTE]
-> -  In the above-mentioned addresses, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
-> -  This procedure does not apply if DataMiner Cube was installed via an MSI file.
+> - In the above-mentioned addresses, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
+> - This procedure does not apply if DataMiner Cube was installed via an MSI file.
 
 ### What should I do if I cannot connect to a DMA using Cube?
 
@@ -96,8 +96,8 @@ http://[Element]/ElementDisplay.htm
 ```
 
 > [!NOTE]
-> -  In the above-mentioned address, replace “\[DMA\]” or by the IP address or the hostname of the DataMiner Agent you want to connect to. Replace “\[Element\]” by the virtual IP address or the DataMiner Element you want to connect to.
-> -  System Display and Element Display will automatically disconnect when the DMA to which you are connected goes offline.
+> - In the above-mentioned address, replace “\[DMA\]” or by the IP address or the hostname of the DataMiner Agent you want to connect to. Replace “\[Element\]” by the virtual IP address or the DataMiner Element you want to connect to.
+> - System Display and Element Display will automatically disconnect when the DMA to which you are connected goes offline.
 
 > [!CAUTION]
 > We strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information - including logon credentials - is sent as plain, unencrypted text over the internet.<br> See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
@@ -204,9 +204,9 @@ You can either uninstall them in the Internet Explorer *Manage Add-ons* window, 
 
 > [!NOTE]
 > If you fail to remove an ActiveX control, do the following:
-> -  Close all Microsoft Internet Explorer windows. Also check Task Manager to make sure all Microsoft Internet Explorer processes have been stopped.
-> -  Open a new Microsoft Internet Explorer window, but do not open System Display or Element Display.
-> -  Try again to remove the ActiveX control.
+> - Close all Microsoft Internet Explorer windows. Also check Task Manager to make sure all Microsoft Internet Explorer processes have been stopped.
+> - Open a new Microsoft Internet Explorer window, but do not open System Display or Element Display.
+> - Try again to remove the ActiveX control.
 
 ##### Uninstalling System Display and Element Display using a dedicated Skyline tool
 

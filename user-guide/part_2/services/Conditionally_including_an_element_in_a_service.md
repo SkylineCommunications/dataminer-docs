@@ -32,7 +32,7 @@ During service creation or while editing a service, it is possible to include an
         > [Defining connectivity chains in XML files](../../part_3/DCF/Defining_connectivity_chains_in_XML_files.md)
 
     > [!NOTE]
-    > -  If you use the option *Element is in the active connectivity chain*, but do not select *Specify config*, then the element will always be excluded when *Include (In Use when condition match)* is selected, or always included when *Exclude (Excluded when condition match)* is selected.
+    > - If you use the option *Element is in the active connectivity chain*, but do not select *Specify config*, then the element will always be excluded when *Include (In Use when condition match)* is selected, or always included when *Exclude (Excluded when condition match)* is selected.
 
 5. Click the first *\<Click to select>* field, and select the name of the element on which the condition should occur.
 
@@ -59,6 +59,6 @@ During service creation or while editing a service, it is possible to include an
 3. Continue in the same manner as in step 4 of the procedure above.
 
 > [!NOTE]
-> -  If an element is included conditionally, or influences the alarm severity conditionally, it is also possible to set a delay for the trigger. To do so, select the *Delay for this trigger* checkbox, and specify a number of seconds. However, note that this delay is not possible if the condition depends on whether the element is part of a connectivity chain.
-> -  For more information on the possible status of child items based on these conditions, see [DATA](Service_card_pages.md#data).
+> - If an element is included conditionally, or influences the alarm severity conditionally, it is also possible to set a delay for the trigger. To do so, select the *Delay for this trigger* checkbox, and specify a number of seconds. However, note that this delay is not possible if the condition depends on whether the element is part of a connectivity chain.
+> - For more information on the possible status of child items based on these conditions, see [DATA](Service_card_pages.md#data).
 >

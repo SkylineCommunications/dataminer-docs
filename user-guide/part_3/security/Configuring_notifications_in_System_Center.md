@@ -17,8 +17,8 @@ To configure notifications in System Center:
     - To add a new alarm filter, in the right-click menu, select *Create new filter*. Then add a name, type, and description for the filter, configure the filter, and click *OK*.
 
         > [!NOTE]
-        > -  In the *Details* column of the Alerts tab, the description of a selected alarm filter is displayed.
-        > -  For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
+        > - In the *Details* column of the Alerts tab, the description of a selected alarm filter is displayed.
+        > - For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
 
 5. To combine several filters, repeat step 4 until all the necessary filters have been added.
 

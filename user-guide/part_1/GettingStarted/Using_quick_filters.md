@@ -12,8 +12,8 @@ In this section:
 
 > [!TIP]
 > See also:
-> -  [Using the Alarm Console quick filter box](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-alarm-console-quick-filter-box)
-> -  <https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/>
+> - [Using the Alarm Console quick filter box](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-alarm-console-quick-filter-box)
+> - <https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/>
 
 ### Tips on the use of quick filters
 
@@ -26,8 +26,8 @@ In this section:
 
     > [!TIP]
     > See also:
-    > -  [Searching with wildcard characters](Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters)
-    > -  [Using regular expressions in quick filters](#using-regular-expressions-in-quick-filters)
+    > - [Searching with wildcard characters](Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters)
+    > - [Using regular expressions in quick filters](#using-regular-expressions-in-quick-filters)
 
 - The following comparison operators can be used in quick filters: = or ==, *!=*, *\>*, *\>=*, *\<* and *\<=*. To use these operators, first mention the column name (between double quotation marks in case it contains a space), then the operator, and then the value, which can be a number, a string or an alarm severity.
 
@@ -42,8 +42,8 @@ In this section:
     ```
 
     > [!NOTE]
-    > -  Alarm severities are ordered as follows: Undefined, initial, Information, Notice, Normal, Masked, Warning, Minor, Major, Critical, Timeout, Error
-    > -  Strings use the .Net string order of the current culture.
+    > - Alarm severities are ordered as follows: Undefined, initial, Information, Notice, Normal, Masked, Warning, Minor, Major, Critical, Timeout, Error
+    > - Strings use the .Net string order of the current culture.
 
 - To filter on an exact combination of characters, put the characters between double quotation marks.
 
@@ -63,8 +63,8 @@ In this section:
     - Using negative filters with “!” is supported for page tables from DataMiner 9.5.4 onwards.
 
 > [!NOTE]
-> -  When you use the Alarm Console quick filter to filter the alarms shown in an alarm tab, the total number of alarms will still be displayed in the alarm bar, with the filtered number of alarms added in parentheses.
-> -  In the Alarm Console quick filter, to search for exact matches in alarm properties, square brackets can be used. For example, if there are two alarms, one with property "bbc1", the other with property "bbc", using the search term "bbc" will return both alarms. However, using the search term "\[bbc\]" will only return the latter.
+> - When you use the Alarm Console quick filter to filter the alarms shown in an alarm tab, the total number of alarms will still be displayed in the alarm bar, with the filtered number of alarms added in parentheses.
+> - In the Alarm Console quick filter, to search for exact matches in alarm properties, square brackets can be used. For example, if there are two alarms, one with property "bbc1", the other with property "bbc", using the search term "bbc" will return both alarms. However, using the search term "\[bbc\]" will only return the latter.
 
 ### Using filters in drop-down lists
 

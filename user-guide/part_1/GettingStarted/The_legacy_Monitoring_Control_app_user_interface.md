@@ -22,8 +22,8 @@ The DataMiner Monitoring & Control app features a user interface similar to that
 
 > [!TIP]
 > See also:
-> -  [Accessing the legacy Monitoring & Control app](../DataminerApplications/Accessing_the_legacy_Monitoring_Control_app.md#accessing-the-legacy-monitoring--control-app)
-> -  [DMS Mobile Gateway](../../part_4/MobileGateway/MobileGateway.md#dms-mobile-gateway)
+> - [Accessing the legacy Monitoring & Control app](../DataminerApplications/Accessing_the_legacy_Monitoring_Control_app.md#accessing-the-legacy-monitoring--control-app)
+> - [DMS Mobile Gateway](../../part_4/MobileGateway/MobileGateway.md#dms-mobile-gateway)
 
 ### Monitoring & Control app header bar
 
@@ -99,8 +99,8 @@ For spectrum analyzer cards (available from DataMiner 9.5.5 onwards):
 - These cards can display a spectrum trace in SVG format if WebSockets have been enabled (via the user icon \> *Settings*).
 
     > [!NOTE]
-    > -  WebSockets also need to be enabled on the server and client machine for this to work. In addition, the server requires at least Microsoft .NET Framework 4.5.
-    > -  WebSockets are automatically enabled from DataMiner 9.6.5 onwards.
+    > - WebSockets also need to be enabled on the server and client machine for this to work. In addition, the server requires at least Microsoft .NET Framework 4.5.
+    > - WebSockets are automatically enabled from DataMiner 9.6.5 onwards.
 
 - The *Info* panel displays spectrum parameters and measurement points.
 
@@ -154,5 +154,3 @@ In the Monitoring & Control app, the *Trending* module can be accessed from the 
 
 > [!NOTE]
 > You can also access histograms directly from a view card or from a CPE card.
-
-

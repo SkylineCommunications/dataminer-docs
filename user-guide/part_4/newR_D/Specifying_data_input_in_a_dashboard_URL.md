@@ -44,8 +44,8 @@ Within the dashboard URL, the following objects can be specified:
 - An EPM filter (using the argument *cpes*): By specifying the DMA ID, the element ID, the field PID, the table PID and the value. From DataMiner 10.0.5 onwards, you should instead specify the DMA ID, the element ID, the field PID, the field value, the table index PID and the index value.
 
     > [!NOTE]
-    > -  If, in the time spans argument, you specify “/1531814522191” (i.e. leaving out the first time stamp), this will be interpreted as “from midnight to X”.
-    > -  If, in the time spans argument, you specify “1531810522191” (i.e. leaving out the second time stamp), this will be interpreted as “from X to now”.
+    > - If, in the time spans argument, you specify “/1531814522191” (i.e. leaving out the first time stamp), this will be interpreted as “from midnight to X”.
+    > - If, in the time spans argument, you specify “1531810522191” (i.e. leaving out the second time stamp), this will be interpreted as “from X to now”.
 
 Within one object, use a slash (“/”) as the separator between its components. If different objects of the same type are specified, use “%1D” as the separator between the objects.
 
@@ -60,6 +60,6 @@ For example:
     This URL opens a dashboard with a time range filter from 1549753200000 to 1549835265007.
 
 > [!NOTE]
-> -  Additional URL options are possible from DataMiner 10.0.2 onwards. To only display a dashboard, without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well.<br>For example: *http://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
-> -  The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
+> - Additional URL options are possible from DataMiner 10.0.2 onwards. To only display a dashboard, without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well.<br>For example: *http://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
+> - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 >

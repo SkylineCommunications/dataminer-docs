@@ -121,5 +121,3 @@ In this tab, you can see a list of the 10 parameters that had the most alarm eve
 In this tab, you can generate a graph that shows the evolution of a chosen parameter over a particular time period.
 
 Choose the parameter and time period with the drop-down lists at the top of the screen.
-
-

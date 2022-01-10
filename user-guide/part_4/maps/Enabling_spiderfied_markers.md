@@ -16,8 +16,8 @@ To enable the spiderfier, in the *\<MapConfig>* tag of the map configuration fil
 
 
 > [!NOTE]
-> -  If an attribute is not specified, the default value will be applied.
-> -  For clustered markers, the *SpiderfyOnClick* attribute can be used. See [Attributes of the \<ClusteredMarkers> tag](Grouping_markers_in_one_clustered_marker.md#attributes-of-the-clusteredmarkers-tag).
+> - If an attribute is not specified, the default value will be applied.
+> - For clustered markers, the *SpiderfyOnClick* attribute can be used. See [Attributes of the \<ClusteredMarkers> tag](Grouping_markers_in_one_clustered_marker.md#attributes-of-the-clusteredmarkers-tag).
 
 Example:
 

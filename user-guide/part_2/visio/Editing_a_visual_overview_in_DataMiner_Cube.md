@@ -100,9 +100,9 @@ On the visual overview of a **service or view**, the context menu can contain th
 
 > [!TIP]
 > See also:
-> -  [DataMiner Visio templates](DataMiner_Visio_templates.md)
-> -  [Managing Visio files linked to protocols](../protocols/Managing_Visio_files_linked_to_protocols.md)
-> -  [Switching between different Visio files](../protocols/Managing_Visio_files_linked_to_protocols.md#switching-between-different-visio-files)
+> - [DataMiner Visio templates](DataMiner_Visio_templates.md)
+> - [Managing Visio files linked to protocols](../protocols/Managing_Visio_files_linked_to_protocols.md)
+> - [Switching between different Visio files](../protocols/Managing_Visio_files_linked_to_protocols.md#switching-between-different-visio-files)
 
 ### Download Visio file
 

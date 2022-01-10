@@ -3,8 +3,8 @@
 In a Visio drawing, you can position shapes in a grid layout. This allows you to create shapes that automatically adapt to the available screen real estate.
 
 > [!NOTE]
-> -  When this feature is used, the Visio drawing will be displayed at 100% zoom level.
-> -  From DataMiner 9.5.11 onwards, placeholders for variables can be used in Layout shape data, so that the positioning of shapes in a grid can be controlled dynamically (e.g. by using a session variable).
+> - When this feature is used, the Visio drawing will be displayed at 100% zoom level.
+> - From DataMiner 9.5.11 onwards, placeholders for variables can be used in Layout shape data, so that the positioning of shapes in a grid can be controlled dynamically (e.g. by using a session variable).
 
 > [!TIP]
 > See also:

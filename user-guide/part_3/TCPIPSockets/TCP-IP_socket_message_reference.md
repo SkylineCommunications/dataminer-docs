@@ -617,5 +617,3 @@ Each command or response must have a fixed header character and a fixed trailer 
 | Timeout     | 7       |
 | Initial     | 8       |
 | Masked      | 9       |
-
-

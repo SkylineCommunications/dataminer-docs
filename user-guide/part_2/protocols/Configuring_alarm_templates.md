@@ -84,7 +84,7 @@ You can then specify the alarm thresholds:
     - Click the threshold field and then click the + icon to the right of it. Then specify the value in the box below the field. Repeat for each value you want to add.
 
     > [!NOTE]
-    > -  When incorrect or illogical data is entered for the analog values, a red warning message will appear in the header, and you will need to correct your alarm limits.
+    > - When incorrect or illogical data is entered for the analog values, a red warning message will appear in the header, and you will need to correct your alarm limits.
 
 - For a **discrete** parameter, enter the values by clicking the threshold fields and then selecting the values in the list below.
 
@@ -101,8 +101,8 @@ You can then specify the alarm thresholds:
 When multiple values are specified for one alarm severity, the existing alarm will be updated with a new value each time it crosses a new threshold.
 
 > [!NOTE]
-> -  It is not necessary to enter a value for each severity level. See [Guidelines for assigning alarm severity levels](Guidelines_for_assigning_alarm_severity_levels.md).
-> -  It is also possible to enable or disable parameters through the template editor right-click menu.
+> - It is not necessary to enter a value for each severity level. See [Guidelines for assigning alarm severity levels](Guidelines_for_assigning_alarm_severity_levels.md).
+> - It is also possible to enable or disable parameters through the template editor right-click menu.
 
 > [!TIP]
 > See also:
@@ -155,8 +155,8 @@ By default, each column of a dynamic table that has monitoring enabled will be r
 4. Enter the values you want for the different alarm severities, as for a regular parameter.
 
     > [!NOTE]
-    > -  If an alarm template contains multiple duplicate instances of the same table column parameter, all those instances are displayed as soon as one of them is marked as being monitored, even if *Only monitored parameters* is selected in the top-right corner of the card.
-    > -  If you want to configure a table to have all rows monitored, except certain specific rows, add an entry with a filter for those rows above the entry for the entire table, and make sure the entry with the filter is not selected. For example:<br>![](../../images/MonitorTableRow.png)
+    > - If an alarm template contains multiple duplicate instances of the same table column parameter, all those instances are displayed as soon as one of them is marked as being monitored, even if *Only monitored parameters* is selected in the top-right corner of the card.
+    > - If you want to configure a table to have all rows monitored, except certain specific rows, add an entry with a filter for those rows above the entry for the entire table, and make sure the entry with the filter is not selected. For example:<br>![](../../images/MonitorTableRow.png)
 
 ### Configuring alarm hysteresis in an alarm template
 
@@ -169,13 +169,13 @@ Two types of hysteresis are available, Clear hysteresis and Alarm hysteresis, re
 - From DataMiner 9.5.7 onwards, it is possible to apply hysteresis to specific severity levels only. To do so, when you enter a value in the *Hyst off* or *Hyst on* box, select the severity levels in the drop-down list below the box.
 
 > [!NOTE]
-> -  For most parameters, the hysteresis interval has to be higher than the polling interval. For example, if a parameter is only polled every 10 seconds, you should not configure a hysteresis interval of 5 seconds. However, an exception to this are parameters updated via traps or via a smart-serial connection.
-> -  For parameters of type string, hysteresis should only be applied to "high" severity levels (e.g. Warning High, Major High), not to "low" severity levels. From DataMiner 10.1.9/10.2.0 onwards, applying hysteresis to "low" severity levels is no longer possible for string parameters.
+> - For most parameters, the hysteresis interval has to be higher than the polling interval. For example, if a parameter is only polled every 10 seconds, you should not configure a hysteresis interval of 5 seconds. However, an exception to this are parameters updated via traps or via a smart-serial connection.
+> - For parameters of type string, hysteresis should only be applied to "high" severity levels (e.g. Warning High, Major High), not to "low" severity levels. From DataMiner 10.1.9/10.2.0 onwards, applying hysteresis to "low" severity levels is no longer possible for string parameters.
 
 > [!TIP]
 > See also:
-> -  [Alarm hysteresis](../alarms/Alarm_hysteresis.md)
-> -  <https://community.dataminer.services/video/alarm-templates-hysteresis/>
+> - [Alarm hysteresis](../alarms/Alarm_hysteresis.md)
+> - <https://community.dataminer.services/video/alarm-templates-hysteresis/>
 
 
 
@@ -204,8 +204,8 @@ Both for “absolute” and “relative” alarm thresholds, the “normal” va
     - Set a fixed baseline value by entering this value in the table at the top of the editor. For discrete parameters, you will be able to select the value in a drop-down list.
 
         > [!NOTE]
-        > -  With the right-click menu in the baseline editor you can copy or export lines from the table. You can also select one or more lines and then select the options *Use current value as baseline value*, *Set baseline value to current value if the baseline value is not defined* or *Set baseline value to current value if the baseline value is defined*.
-        > -  From DataMiner 10.1.9/10.1.0 \[CU8\] onwards, if a baseline value has been defined in a protocol, it can be edited in the baseline editor.
+        > - With the right-click menu in the baseline editor you can copy or export lines from the table. You can also select one or more lines and then select the options *Use current value as baseline value*, *Set baseline value to current value if the baseline value is not defined* or *Set baseline value to current value if the baseline value is defined*.
+        > - From DataMiner 10.1.9/10.1.0 \[CU8\] onwards, if a baseline value has been defined in a protocol, it can be edited in the baseline editor.
 
     - Set a smart baseline by selecting *Automatically update the baseline values*.
 
@@ -238,8 +238,8 @@ Both for “absolute” and “relative” alarm thresholds, the “normal” va
     - If the smart baseline is set to detect a deviation in the expected daily pattern, select *Handle weekend days separately* if you want average values for weekdays not to be taken into account for weekend days and vice versa.
 
 > [!NOTE]
-> -  If you want to overrule the dynamic behavior for a certain limit and specify a fixed value instead, in the template editor, select the *Fixed* option for that limit.
-> -  If normalization is triggered from the protocol, rather than from the template, up to DataMiner 9.5.1, the baseline editor is disabled. From DataMiner 9.5.1 onwards, baseline values are available as a read-only list.
+> - If you want to overrule the dynamic behavior for a certain limit and specify a fixed value instead, in the template editor, select the *Fixed* option for that limit.
+> - If normalization is triggered from the protocol, rather than from the template, up to DataMiner 9.5.1, the baseline editor is disabled. From DataMiner 9.5.1 onwards, baseline values are available as a read-only list.
 
 > [!TIP]
 > See also:
@@ -261,8 +261,8 @@ In the *Info* column, select the checkbox and enter a value to define when you w
 In the *Condition* column, you can add conditions for the alarm triggering of selected parameters. By specifying such a condition, you can ensure that a parameter is not monitored when another parameter of the same element has a specific value or alarm state. From DataMiner 10.2.0/10.1.11 onwards, it is also possible to let the monitoring of a parameter depend on whether the parameter (or another parameter of the same element) affects a service.
 
 > [!NOTE]
-> -  When you specify a condition for a parameter in an alarm template, that parameter will only be monitored when the condition is false.
-> -  Some protocols specify default conditions, which are automatically filled in. However, it is possible to override these.
+> - When you specify a condition for a parameter in an alarm template, that parameter will only be monitored when the condition is false.
+> - Some protocols specify default conditions, which are automatically filled in. However, it is possible to override these.
 
 When you click in the selection box in the *Condition* column, the following actions are possible:
 
@@ -291,10 +291,10 @@ When you click in the selection box in the *Condition* column, the following act
     7. When the filters have been defined, click *OK*.
 
     > [!NOTE]
-    > -  Prior to DataMiner 10.0.5, filters can only refer to columns from a different table, if these are linked to the first table via foreign key. <br>For example, in case of two tables Table A and Table B, where the foreign key of Table B is the primary key of Table A, in the alarm template for Table B, you can specify conditional alarm filters using columns from Table A. <br>From DataMiner 10.0.5 onwards, filters can also refer to columns from another table if the tables are not linked.
-    > -  From DataMiner 10.0.5 onwards, you can configure a condition on a column parameter based on the value of a cell in the same table or a different table. However, note that this is not supported for view table columns. Note also that if the monitored table and the table used in the condition are the same or are not related, the condition will be applied to all cells in the monitored column, but only when the cell specified in the condition changes. If the two tables are related, the condition will apply to all cells in the monitored column that are linked to the row containing the cell specified in the condition.
-    > -  From DataMiner 9.5.13 onwards, if you configure a condition based on the value of a string parameter, it is possible to use the wildcards "\*" and "?".
-    > -  From DataMiner 10.0.7 onwards, conditions are supported that check whether a parameter value is equal or not equal to “Not Initialized”, i.e. the value of a parameter that has not yet been set. To configure such a condition, click the *Value* field in the second part of the condition and select *Not initialized*.
+    > - Prior to DataMiner 10.0.5, filters can only refer to columns from a different table, if these are linked to the first table via foreign key. <br>For example, in case of two tables Table A and Table B, where the foreign key of Table B is the primary key of Table A, in the alarm template for Table B, you can specify conditional alarm filters using columns from Table A. <br>From DataMiner 10.0.5 onwards, filters can also refer to columns from another table if the tables are not linked.
+    > - From DataMiner 10.0.5 onwards, you can configure a condition on a column parameter based on the value of a cell in the same table or a different table. However, note that this is not supported for view table columns. Note also that if the monitored table and the table used in the condition are the same or are not related, the condition will be applied to all cells in the monitored column, but only when the cell specified in the condition changes. If the two tables are related, the condition will apply to all cells in the monitored column that are linked to the row containing the cell specified in the condition.
+    > - From DataMiner 9.5.13 onwards, if you configure a condition based on the value of a string parameter, it is possible to use the wildcards "\*" and "?".
+    > - From DataMiner 10.0.7 onwards, conditions are supported that check whether a parameter value is equal or not equal to “Not Initialized”, i.e. the value of a parameter that has not yet been set. To configure such a condition, click the *Value* field in the second part of the condition and select *Not initialized*.
 
 - Select an existing condition, if any are available. If necessary, click the pencil icon next to the selected condition to modify it.
 
@@ -366,6 +366,6 @@ To schedule an alarm template:
     2. Select a day of the week and enter a time in the format HH:mm in the *begin* and *end* fields.
 
 > [!NOTE]
-> -  When scheduling an alarm template, you cannot create overlapping time spans. If, for example, you were to set a time span on Friday from 08:00 to 12:00 and another on Friday from 11:00 to 15:00, a warning message would appear and you would not be able to save the template. In case of this example, one time span should be created instead on Friday from 08:00 to 15:00.
-> -  If you select *Template is only active on* without specifying when it should be active, the template will always be disabled.
+> - When scheduling an alarm template, you cannot create overlapping time spans. If, for example, you were to set a time span on Friday from 08:00 to 12:00 and another on Friday from 11:00 to 15:00, a warning message would appear and you would not be able to save the template. In case of this example, one time span should be created instead on Friday from 08:00 to 15:00.
+> - If you select *Template is only active on* without specifying when it should be active, the template will always be disabled.
 >

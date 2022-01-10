@@ -19,6 +19,6 @@ To do so:
     ```
 
     > [!NOTE]
-    > -  “SERIALIZED-COMPONENT” is a serialized representation of the component in JSON format.
-    > -  If the component contains data, that data will automatically be included into the URL. See [Configuring a dashboard to use a URL feed without a feed component](Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component.md).
+    > - “SERIALIZED-COMPONENT” is a serialized representation of the component in JSON format.
+    > - If the component contains data, that data will automatically be included into the URL. See [Configuring a dashboard to use a URL feed without a feed component](Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component.md).
     >

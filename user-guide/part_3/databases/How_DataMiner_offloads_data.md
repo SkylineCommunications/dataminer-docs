@@ -70,5 +70,5 @@
 
 
 > [!NOTE]
-> -  On the Oracle database server, a shared folder has to be created, the DataMiner Agents have to be granted access to that shared folder, and a *RemoteFileShare* tag has to be configured in the *DB.xml* file of the DataMiner server. See [Configuring data offloads to an Oracle database](../../part_7/SkylineDataminerFolder/DB_xml.md#configuring-data-offloads-to-an-oracle-database).
+> - On the Oracle database server, a shared folder has to be created, the DataMiner Agents have to be granted access to that shared folder, and a *RemoteFileShare* tag has to be configured in the *DB.xml* file of the DataMiner server. See [Configuring data offloads to an Oracle database](../../part_7/SkylineDataminerFolder/DB_xml.md#configuring-data-offloads-to-an-oracle-database).
 >

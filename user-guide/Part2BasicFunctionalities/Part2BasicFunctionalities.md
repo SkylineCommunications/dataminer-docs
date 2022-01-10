@@ -21,5 +21,3 @@
 - [Documents](../part_2/documents/documents.md)
 
 - [Chat collaboration](../part_2/chat/chat.md#chat-collaboration)
-
-

@@ -93,8 +93,8 @@ By default, the Alarm Console contains the following tabs:
 In the Alarm Console, you can add and remove tabs as you see fit. However, this custom layout is only saved across sessions for tabs displaying active alarms or alarms in a sliding window, not for alarm history tabs.
 
 > [!NOTE]
-> -  If the Alarm Console contains more tabs than can be displayed on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, click this icon, and select the tab from the drop-down list.
-> -  For embedded Alarm Consoles displayed on the ALARMS page of cards, custom tabs are only saved if you select to *Apply filters*, and then select the *Show this tabpage* checkbox before clicking *Show alarms*.
+> - If the Alarm Console contains more tabs than can be displayed on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, click this icon, and select the tab from the drop-down list.
+> - For embedded Alarm Consoles displayed on the ALARMS page of cards, custom tabs are only saved if you select to *Apply filters*, and then select the *Show this tabpage* checkbox before clicking *Show alarms*.
 
 **To change the name of a tab:**
 
@@ -131,9 +131,9 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
     - **Show alarms in a sliding window**: Displays the alarms that have occurred in a certain time frame that moves along with the present time. You can set the size of the sliding window to a minimum of one minute and a maximum of 1440 minutes.
 
         > [!NOTE]
-        > -  In tabs set to a sliding window, only alarms raised within this window are shown. As a consequence, if you turn off history tracking or correlation tracking, history alarms and correlation source alarms will only be shown if they were raised within the sliding window.
-        > -  Refresh rate and delay cannot be set in sliding window alarm tabs.
-        > -  From DataMiner 9.6.11 onwards, you can select the option *Keep active alarms* along with the option to show alarms in a sliding window. When you do so, active alarms will remain displayed in the tab even if they no longer fall in the sliding window.
+        > - In tabs set to a sliding window, only alarms raised within this window are shown. As a consequence, if you turn off history tracking or correlation tracking, history alarms and correlation source alarms will only be shown if they were raised within the sliding window.
+        > - Refresh rate and delay cannot be set in sliding window alarm tabs.
+        > - From DataMiner 9.6.11 onwards, you can select the option *Keep active alarms* along with the option to show alarms in a sliding window. When you do so, active alarms will remain displayed in the tab even if they no longer fall in the sliding window.
 
     - **Include alarms / Include masked alarms / Include information events / Include suggestion events**: Select or clear these checkboxes to determine the type of alarms that will be displayed in the new tab. This allows you to for example display a tab with information events only.
 
@@ -169,8 +169,8 @@ To sort the alarms by a particular field:
 - Click a column header. Click it again to reverse the sort order.
 
     > [!NOTE]
-    > -  By default, alarms are sorted by timestamp (with the most recent alarm on top).
-    > -  If you are using the keyboard to navigate the Cube interface, to sort by a particular field, press Enter when the keyboard focus is on the header of that column. See [Using keyboard navigation](../../part_1/GettingStarted/Using_keyboard_navigation.md).
+    > - By default, alarms are sorted by timestamp (with the most recent alarm on top).
+    > - If you are using the keyboard to navigate the Cube interface, to sort by a particular field, press Enter when the keyboard focus is on the header of that column. See [Using keyboard navigation](../../part_1/GettingStarted/Using_keyboard_navigation.md).
 
 By default, the Alarm Console is set to group alarms automatically according to whatever column is selected. However, it is also possible to group by a particular field, and then do further changes to the sort order or further grouping on other fields. To do so:
 
@@ -264,8 +264,8 @@ To do so:
     5. In the fourth column, for each column selected in the third column, change the column alignment and width if necessary.
 
 > [!NOTE]
-> -  Settings that are enforced at group level cannot be changed at user level.
-> -  If you create new settings for a group, these will not by default contain the tabs *Active Alarms*, *Information Events* and *Masked alarms*.
+> - Settings that are enforced at group level cannot be changed at user level.
+> - If you create new settings for a group, these will not by default contain the tabs *Active Alarms*, *Information Events* and *Masked alarms*.
 
 #### Using the statistical view
 
@@ -448,8 +448,8 @@ In the Alarm Console, you can add extra tab pages where you can specify a custom
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/alarm-console-advanced-filtering/>
-> -  <https://community.dataminer.services/video/alarm-console-alarm-history/>
+> - <https://community.dataminer.services/video/alarm-console-advanced-filtering/>
+> - <https://community.dataminer.services/video/alarm-console-alarm-history/>
 
 To do so:
 
@@ -473,10 +473,10 @@ To do so:
 5. If you create a new filter, you will then need to specify it further, possibly using a wildcard expression or regular expressions.
 
     > [!NOTE]
-    > -  For more information on wildcards, see [Searching with wildcard characters](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters).
-    > -  For more information on using regular expressions in filters, see [Alarm filters using regular expressions](#alarm-filters-using-regular-expressions).
-    > -  From DataMiner 9.0.5 onwards, it is possible to filter the Alarm Console based on a Visual Overview session variable. To do so, create a new filtered tab displaying current alarms, and create a filter using *Matches wildcard expression*, *Does not match wildcard expression*, *Matches regular expression*, or *Does not match regular expression*. In the second part of the filter, specify the variable, in the same way as in Visio, e.g. *\[var:LoadTime\]*. For more information, see [\[var:VariableName\]](../visio/Placeholders_for_variables_in_shape_data_values.md#varvariablename).
-    > -  If you create a *Services* filter in a history tab, and you want to include services that have been deleted, at the bottom of the box where you can select services to filter on, select the *Load deleted services* checkbox (available from DataMiner 10.2.0/10.1.4 onwards).
+    > - For more information on wildcards, see [Searching with wildcard characters](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters).
+    > - For more information on using regular expressions in filters, see [Alarm filters using regular expressions](#alarm-filters-using-regular-expressions).
+    > - From DataMiner 9.0.5 onwards, it is possible to filter the Alarm Console based on a Visual Overview session variable. To do so, create a new filtered tab displaying current alarms, and create a filter using *Matches wildcard expression*, *Does not match wildcard expression*, *Matches regular expression*, or *Does not match regular expression*. In the second part of the filter, specify the variable, in the same way as in Visio, e.g. *\[var:LoadTime\]*. For more information, see [\[var:VariableName\]](../visio/Placeholders_for_variables_in_shape_data_values.md#varvariablename).
+    > - If you create a *Services* filter in a history tab, and you want to include services that have been deleted, at the bottom of the box where you can select services to filter on, select the *Load deleted services* checkbox (available from DataMiner 10.2.0/10.1.4 onwards).
 
 6. If you want, you can also combine several filters, using logical operators (AND, OR).
 
@@ -485,8 +485,8 @@ To do so:
 8. Optionally, click *Count alarms* to check how many alarms will be shown when the tab configuration is applied.
 
     > [!NOTE]
-    > -  If you chose to display history alarms, the *Count alarms* option will only work with certain filter combinations. If you configure a filter combination for which the option is not available, a notification message will appear.
-    > -  From DataMiner 9.6.0 \[CU25\], 10.0.0 \[CU19\], 10.1.0 \[CU8\] and 10.1.11 onwards, when you create a tab to display history alarms or alarms in a sliding window, for filters on element type, interface impact, parameter description, protocol, service impact, view ID/impact/name, or virtual function ID/impact/name, the *Count alarms* option is no longer available.
+    > - If you chose to display history alarms, the *Count alarms* option will only work with certain filter combinations. If you configure a filter combination for which the option is not available, a notification message will appear.
+    > - From DataMiner 9.6.0 \[CU25\], 10.0.0 \[CU19\], 10.1.0 \[CU8\] and 10.1.11 onwards, when you create a tab to display history alarms or alarms in a sliding window, for filters on element type, interface impact, parameter description, protocol, service impact, view ID/impact/name, or virtual function ID/impact/name, the *Count alarms* option is no longer available.
 
 9. To see the filtered alarms in the Alarm Console tab, click *Show alarms*.
 
@@ -595,8 +595,8 @@ To do so:
 1. Drag an element, protocol, parameter, etc. onto the Alarm Console. A new tab will automatically be created.
 
     > [!NOTE]
-    > -  With a redundancy group, this way of creating a filtered tab is not possible.
-    > -  To open a filtered tab for an element, service or view, you can also right-click the item in the Surveyor or on a card and select *Actions* > *Add tab to global Alarm Console*.
+    > - With a redundancy group, this way of creating a filtered tab is not possible.
+    > - To open a filtered tab for an element, service or view, you can also right-click the item in the Surveyor or on a card and select *Actions* > *Add tab to global Alarm Console*.
 
 2. In the new tab, indicate the time frame for the alarms you want to display: active alarms, or a past time range.
 
@@ -609,8 +609,8 @@ To do so:
 5. Click *Show alarms*.
 
 > [!NOTE]
-> -  Alarm filters based on views also include alarm events based on aggregation rules.
-> -  If you want to open a filtered tab containing only alarms related to a particular DMA, this is possible from the *System Center* module. Go to the *Agents* page of System Center and select the DMA in question in the *manage* tab. Then click the *Show agent alarms* link at the top of the pane on the right. The filtered tab will then be opened in the Alarm Console.
+> - Alarm filters based on views also include alarm events based on aggregation rules.
+> - If you want to open a filtered tab containing only alarms related to a particular DMA, this is possible from the *System Center* module. Go to the *Agents* page of System Center and select the DMA in question in the *manage* tab. Then click the *Show agent alarms* link at the top of the pane on the right. The filtered tab will then be opened in the Alarm Console.
 
 #### Alarm filters using wildcard expressions
 
@@ -643,8 +643,8 @@ For more information on how to construct regular expressions, here are a few int
 - [RegExLib.com Regular Expression Cheat Sheet](http://regexlib.com/CheatSheet.aspx)
 
 > [!NOTE]
-> -  DataMiner always wraps a regular expression in ^( and )$. This means that the expression must match the entire string.
-> -  The checks are executed using the invariant culture and ignoring case.
+> - DataMiner always wraps a regular expression in ^( and )$. This means that the expression must match the entire string.
+> - The checks are executed using the invariant culture and ignoring case.
 
 ##### Examples
 
@@ -730,7 +730,7 @@ When you create a filter in the Alarm Console, you can save it in order to use i
 3. To the right of *Saved filters*, click *\<Click to select>* and select the filter you want.
 
     > [!NOTE]
-    > -  If you have selected a saved filter, but you do not have the user permission *Edit / delete protected filters*, an eye icon will be displayed next to the filter. Click this icon to view the contents of the filter.
+    > - If you have selected a saved filter, but you do not have the user permission *Edit / delete protected filters*, an eye icon will be displayed next to the filter. Click this icon to view the contents of the filter.
 
 4. Proceed as in [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
@@ -778,9 +778,9 @@ To filter alarms based on their RCA level:
     To indicate that the RCA filter is applied, the alarm tab will be displayed with a blue background. The total number of alarms will still be indicated in the alarm bar, with the number of displayed filtered alarms in parentheses.
 
 > [!NOTE]
-> -  Alarms without an RCA level will always be shown, regardless of the level of the RCA slider.
-> -  The setting of the RCA slider is a user setting per alarm tab that is remembered across sessions.
-> -  To have a look at the connectivity chain for a particular alarm, right-click the alarm and select *View connectivity*.
+> - Alarms without an RCA level will always be shown, regardless of the level of the RCA slider.
+> - The setting of the RCA slider is a user setting per alarm tab that is remembered across sessions.
+> - To have a look at the connectivity chain for a particular alarm, right-click the alarm and select *View connectivity*.
 
 > [!TIP]
 > See also:
@@ -802,10 +802,10 @@ To do so:
 3. Next to *Audio file*, select the audio file that should be used. If the file is not yet available, select *\<Add audio file>* and browse to the desired file.
 
     > [!NOTE]
-    > -  When you add a sound file, it is placed in the folder *C:\\Skyline DataMiner\\Sounds*.
-    > -  The following file extensions are supported: ".asf", ".wmv", ".wm", ".asx", ".wax", ".wvx", ".wmx", ".wpl", ".wmd", ".mpg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mid", ".midi", ".rmi", ".aif", ".aifc", ".aiff", ".au", ".snd", ".wav", ".cda", ".ivf", ".wmz", ".wms".
-    > -  You can also delete an audio file in the drop-down list, by hovering the mouse pointer over the file and then clicking the *X*.
-    > -  If you add, update or delete a sound file, an information event is generated. If a sound is updated or deleted, a recycle bin entry is generated.
+    > - When you add a sound file, it is placed in the folder *C:\\Skyline DataMiner\\Sounds*.
+    > - The following file extensions are supported: ".asf", ".wmv", ".wm", ".asx", ".wax", ".wvx", ".wmx", ".wpl", ".wmd", ".mpg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mid", ".midi", ".rmi", ".aif", ".aifc", ".aiff", ".au", ".snd", ".wav", ".cda", ".ivf", ".wmz", ".wms".
+    > - You can also delete an audio file in the drop-down list, by hovering the mouse pointer over the file and then clicking the *X*.
+    > - If you add, update or delete a sound file, an information event is generated. If a sound is updated or deleted, a recycle bin entry is generated.
 
 4. When you have selected a sound file, optionally check what it sounds like by clicking the button to the right of the *Audio file* drop-down list. The same button can then be used to stop the sound again.
 
@@ -825,11 +825,11 @@ To do so:
     An icon in the header of the alarm tab will now indicate that audible alerts have been configured for this tab.
 
 > [!NOTE]
-> -  The following permissions are required to configure custom alert sounds:
+> - The following permissions are required to configure custom alert sounds:
 >     - *General* > *Alarms* > *Audible Alert* > *Add audio files*.
 >     - *General* > *Alarms* > *Audible Alert* > *Edit audio files*.
 >     - *General* > *Alarms* > *Audible Alert* > *Delete audio files*.
-> -  If you do not have the right to add audio files, you will not be able to select the *Audible alert* option as long as no audio files have been added yet. Cube checks for the availability of these files when you connect, so if another user adds a file, the *Audible alert* option becomes available after a reconnect.
+> - If you do not have the right to add audio files, you will not be able to select the *Audible alert* option as long as no audio files have been added yet. Cube checks for the availability of these files when you connect, so if another user adds a file, the *Audible alert* option becomes available after a reconnect.
 
 ### Alarm Console columns
 
@@ -914,8 +914,8 @@ The following settings are available:
 
     > [!NOTE]
     > When you create a filtered history tab, in a fixed or sliding window, history tracking is off by default. However, if you explicitly enable history tracking in a history tab, a dialog box appears asking if you want to load the full history:
-    > -  Click *All* to include all alarms in the specified time range in the alarm trees, regardless of the filter.
-    > -  Click *Filtered* to only include alarms matching the current filter settings.
+    > - Click *All* to include all alarms in the specified time range in the alarm trees, regardless of the filter.
+    > - Click *Filtered* to only include alarms matching the current filter settings.
     >
     > For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
@@ -923,12 +923,12 @@ The following settings are available:
 
     > [!NOTE]
     > In case a filter is applied in the alarm tab, the behavior of this feature is different depending on the type of filter:
-    > -  If a filtered alarm tab is created (e.g. by dragging an item onto the Alarm Console or by selecting *Apply filter* in a new tab):
+    > - If a filtered alarm tab is created (e.g. by dragging an item onto the Alarm Console or by selecting *Apply filter* in a new tab):
     >     - If only the base alarm matches the filter, only that alarm is displayed.
     >     - If only the correlated alarm matches the filter, only that alarm is displayed.
     >     - If both base and correlated alarm match the filter, only the correlated alarm is displayed.
     >     - If neither base nor correlated alarm match the filter, neither are displayed.
-    > -  If a quick filter is applied with the filter box in the lower right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
+    > - If a quick filter is applied with the filter box in the lower right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
 
 - **Text to speech**: Select to enable Text to speech, so that new alarm events are read out loud.
 

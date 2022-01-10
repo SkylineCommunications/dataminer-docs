@@ -5,11 +5,11 @@ From DataMiner 10.0.7 onwards, on systems using a Cassandra database and DataMin
 If you are viewing a trend graph for a single parameter and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. Matches found for the same element/parameter as the one for which a tag was defined will be shown in bright orange, while matches associated with tags created for another element/parameter will be shown in lighter orange.
 
 > [!NOTE]
-> -  If a protocol is deleted, all patterns defined for parameters of that protocol will also be deleted the first time the SLAnalytics service restarts.
-> -  Patterns must have a size between 8 and 50,000 data points and should not have more than 5 percent missing values.
-> -  Pattern matching can only be performed on trended parameters containing numeric values.
-> -  If pattern matching is performed on a trend graph showing more than 100,000 data points, an aggregated level of detail will be used to improve performance at the cost of accuracy. If, at the most aggregated level, the number of data points exceeds 100,000 data points, no pattern matching will be performed.
-> -  You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
+> - If a protocol is deleted, all patterns defined for parameters of that protocol will also be deleted the first time the SLAnalytics service restarts.
+> - Patterns must have a size between 8 and 50,000 data points and should not have more than 5 percent missing values.
+> - Pattern matching can only be performed on trended parameters containing numeric values.
+> - If pattern matching is performed on a trend graph showing more than 100,000 data points, an aggregated level of detail will be used to improve performance at the cost of accuracy. If, at the most aggregated level, the number of data points exceeds 100,000 data points, no pattern matching will be performed.
+> - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
 
 #### Defining a tag
 

@@ -26,8 +26,8 @@ In this section:
     - **Name**: The name of the element.
 
         > [!NOTE]
-        > -  The name of the element can be changed at any time. The element is uniquely identified by its ID, which is a combination of the DMA ID of the DMA where the element is originally created and the ID of the element itself.
-        > -  If you change the element name, make sure the new name provides clear information to the DMS operators. See [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc).
+        > - The name of the element can be changed at any time. The element is uniquely identified by its ID, which is a combination of the DMA ID of the DMA where the element is originally created and the ID of the element itself.
+        > - If you change the element name, make sure the new name provides clear information to the DMS operators. See [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc).
 
     - **Description**: A brief description of the element.
 
@@ -121,8 +121,8 @@ In this section:
 
         > [!NOTE]
         > The following combinations of authentication and encryption algorithm are not supported:
-        > -  MD5/SHA-1 and AES192
-        > -  MD5/SHA-1/SHA-224 and AES256
+        > - MD5/SHA-1 and AES192
+        > - MD5/SHA-1/SHA-224 and AES256
         >
         > We recommend to use SHA-512 and AES-256, since this is the most secure combination. As such, this is the combination that is selected by default.
 
@@ -184,9 +184,9 @@ In this section:
         - **SSL/TLS**: Select this checkbox to enable SSL/TLS encryption (for TCP/IP connections only).
 
             > [!NOTE]
-            > -  TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
-            > -  This feature is supported from DataMiner 10.0.2 onwards for smart-serial elements acting as server. However, note that the system must be configured to support this encryption. See [Enabling TLS encryption](../../part_3/security/Enabling_TLS_encryption.md).
-            > -  From DataMiner 10.0.3 onwards, this feature is also supported in case DataMiner acts as the serial client. No further configuration is required in this case.
+            > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
+            > - This feature is supported from DataMiner 10.0.2 onwards for smart-serial elements acting as server. However, note that the system must be configured to support this encryption. See [Enabling TLS encryption](../../part_3/security/Enabling_TLS_encryption.md).
+            > - From DataMiner 10.0.3 onwards, this feature is also supported in case DataMiner acts as the serial client. No further configuration is required in this case.
 
     - For a **GPIB** connection, see [Configuring the GPIB settings of a spectrum analyzer element](../../part_4/SpectrumAnalysis/Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element.md).
 
@@ -246,8 +246,8 @@ In this section:
 
         > [!TIP]
         > See also:
-        > -  [Enabling the virtual SNMP agent of an element](../../part_3/SNMP/Enabling_the_virtual_SNMP_agent_of_an_element.md)
-        > -  [Forcing a DataMiner Agent to work without virtual IP addresses](../../part_3/DataminerAgents/General_DMA_configuration.md#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses)
+        > - [Enabling the virtual SNMP agent of an element](../../part_3/SNMP/Enabling_the_virtual_SNMP_agent_of_an_element.md)
+        > - [Forcing a DataMiner Agent to work without virtual IP addresses](../../part_3/DataminerAgents/General_DMA_configuration.md#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses)
 
     - **Hidden**: Select this checkbox if you want the element to be hidden.
 

@@ -7,9 +7,9 @@ In the *\<PopupSkeleton>* and *\<PopupDetails>* tags, you can specify the conten
 In the *\<PopupSkeleton>* tag, specify all fixed content, including the necessary placeholders for variable data. Use HTML syntax inside a CDATA tag and put the placeholders between square brackets.
 
 > [!NOTE]
-> -  Marker balloons can contain tab controls. These tab controls, which are based on a CSS class called “tabs”, have to be designed as shown in [Showing values returned by an SQL query](#showing-values-returned-by-an-sql-query): an enumeration of the tab titles, followed by the contents of each tab.
-> -  From DataMiner 9.5.2 onwards, the placeholders \[latitude\], \[longitude\] and \[alarmstate\] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
-> -  From DataMiner 9.5.4 onwards, you can specify a list of EPM tables in the PopupSkeleton tag, which will be displayed in a marker pop-up balloon. For an example, see [Displaying EPM tables in a marker pop-up balloon](#displaying-epm-tables-in-a-marker-pop-up-balloon).
+> - Marker balloons can contain tab controls. These tab controls, which are based on a CSS class called “tabs”, have to be designed as shown in [Showing values returned by an SQL query](#showing-values-returned-by-an-sql-query): an enumeration of the tab titles, followed by the contents of each tab.
+> - From DataMiner 9.5.2 onwards, the placeholders \[latitude\], \[longitude\] and \[alarmstate\] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
+> - From DataMiner 9.5.4 onwards, you can specify a list of EPM tables in the PopupSkeleton tag, which will be displayed in a marker pop-up balloon. For an example, see [Displaying EPM tables in a marker pop-up balloon](#displaying-epm-tables-in-a-marker-pop-up-balloon).
 
 > [!TIP]
 > See also:
@@ -473,7 +473,3 @@ Example:
 ```
 
 ![](../../images/maps_popupskeleton_CPElinks.png)
-
-
-
-

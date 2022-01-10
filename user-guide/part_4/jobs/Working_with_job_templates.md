@@ -52,5 +52,3 @@ From DataMiner 9.6.6 onwards, it is possible to save a particular job configurat
 5. Click *Cancel* to close the dialog box.
 
     Alternatively, you can also delete job templates while applying a different job template. In that case, select that template and click *Apply*.
-
-

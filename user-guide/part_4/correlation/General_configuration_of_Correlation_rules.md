@@ -3,8 +3,8 @@
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to configure it in the details pane on the right.
 
 > [!NOTE]
-> -  For more information on how to add a Correlation rule, see [Adding a new Correlation rule](Adding_a_new_Correlation_rule.md).
-> -  As soon as there are unsaved changes in a rule, “*\[modified\]*” is added to the rule name in the tree view pane, as a reminder in case you navigate to a different rule. However, note that if you close the *Correlation* module, such changes will not be saved. To make sure changes to a rule are saved, click the *Apply* button.
+> - For more information on how to add a Correlation rule, see [Adding a new Correlation rule](Adding_a_new_Correlation_rule.md).
+> - As soon as there are unsaved changes in a rule, “*\[modified\]*” is added to the rule name in the tree view pane, as a reminder in case you navigate to a different rule. However, note that if you close the *Correlation* module, such changes will not be saved. To make sure changes to a rule are saved, click the *Apply* button.
 
 - In the top-left corner of the pane, select *Enable this rule* to enable a Correlation rule. By default, new rules are disabled.
 
@@ -40,8 +40,8 @@ In the *Correlation* module in Cube, select a rule in the tree view pane on the 
         By default, this option is not selected, and every DMA in the DataMiner System checks the enabled Correlation rule against the alarms associated with its locally managed elements. This means that the rule is applied separately on each DMA in a cluster, using only the alarms of the local DMA.
 
         > [!NOTE]
-        > -  If you want the rule to be able to combine base alarm events from multiple Agents in a DMS, you must enable this option.
-        > -  If this option is enabled, the rule will only work if the selected DMA is running.
+        > - If you want the rule to be able to combine base alarm events from multiple Agents in a DMS, you must enable this option.
+        > - If this option is enabled, the rule will only work if the selected DMA is running.
 
         > [!TIP]
         > See also:

@@ -17,6 +17,6 @@ Use this action to upload a report to an FTP server:
 7. Click the field next to *Report* and select a report template or dashboard, then specify any elements or other required input.
 
     > [!NOTE]
-    > -  If you want to specify multiple indices for one table parameter, use a semicolon “;” as separator.
-    > -  From DataMiner 9.6.13 onwards, you can select to include a dashboard from the new Dashboards app. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a report based on a dashboard](../newR_D/Generating_a_report_based_on_a_dashboard.md).
+    > - If you want to specify multiple indices for one table parameter, use a semicolon “;” as separator.
+    > - From DataMiner 9.6.13 onwards, you can select to include a dashboard from the new Dashboards app. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a report based on a dashboard](../newR_D/Generating_a_report_based_on_a_dashboard.md).
     >

@@ -13,9 +13,9 @@ From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 
 
 > [!NOTE]
 > Although you can continue to use the IO Libraries version M.01.01.04, upgrading to version 17.1.20011 or higher is recommended. However, if you still have the M.01.01.04 version of the IO libraries installed, this will first need to be removed before you can install version 17.1.20011 or higher:
-> -  Go to *C:\\Program Files (x86)\\InstallShield Installation Information\\{04107B50-CCF1-11D3-931C-00108301D203}\\* <br>(which is typically a hidden folder).
-> -  In the file properties of *Setup.exe*, indicate that you want the file to run in *Windows XP compatibility mode*.
-> -  Run *Setup.exe*. This should remove the existing IO libraries, IVI shared components, and VISA shared components. Go to *Programs and features* if you want to check whether all those items were removed.
+> - Go to *C:\\Program Files (x86)\\InstallShield Installation Information\\{04107B50-CCF1-11D3-931C-00108301D203}\\* <br>(which is typically a hidden folder).
+> - In the file properties of *Setup.exe*, indicate that you want the file to run in *Windows XP compatibility mode*.
+> - Run *Setup.exe*. This should remove the existing IO libraries, IVI shared components, and VISA shared components. Go to *Programs and features* if you want to check whether all those items were removed.
 
 - You can download the most recent version of the IO libraries from the following website:<br><http://www.keysight.com/main/software.jspx?ckey=2175637&lc=dut&cc=BE&nid=-33330.977662&id=2175637&pageMode=PV>
 

@@ -48,8 +48,8 @@ Example:
 ```
 
 > [!NOTE]
-> -  In Google Maps, it is very easy to get the coordinates of a particular location. Just right-click the location on the map and choose *What’s here*? The latitude and longitude of that location will appear in the search box above the map.
-> -  If you set the attribute autoFit to true in the *\<Layer>* tag, this overrides the *\<Center>* tag. See [autoFit](Attributes_of_the_Layer_tag.md#autofit).
+> - In Google Maps, it is very easy to get the coordinates of a particular location. Just right-click the location on the map and choose *What’s here*? The latitude and longitude of that location will appear in the search box above the map.
+> - If you set the attribute autoFit to true in the *\<Layer>* tag, this overrides the *\<Center>* tag. See [autoFit](Attributes_of_the_Layer_tag.md#autofit).
 
 From DataMiner 9.5.1 onwards, the following attributes are available to further refine the map centering configuration:
 
@@ -62,10 +62,10 @@ From DataMiner 9.5.1 onwards, the following attributes are available to further 
 
 > [!NOTE]
 > When multiple centering options are specified, the centering priority from high to low is:
-> -  Centering on a single marker.
-> -  Centering on an entire layer.
-> -  Centering on "lat" and "long" coordinates passed via URL parameters. (See [lat=](../../part_1/DataminerApplications/Opening_DataMiner_Cube.md#lat) and [long=](../../part_1/DataminerApplications/Opening_DataMiner_Cube.md#long))
-> -  Centering on static coordinates defined in the \<Center> tag of the map configuration.
+> - Centering on a single marker.
+> - Centering on an entire layer.
+> - Centering on "lat" and "long" coordinates passed via URL parameters. (See [lat=](../../part_1/DataminerApplications/Opening_DataMiner_Cube.md#lat) and [long=](../../part_1/DataminerApplications/Opening_DataMiner_Cube.md#long))
+> - Centering on static coordinates defined in the \<Center> tag of the map configuration.
 
 ### FilterBox
 

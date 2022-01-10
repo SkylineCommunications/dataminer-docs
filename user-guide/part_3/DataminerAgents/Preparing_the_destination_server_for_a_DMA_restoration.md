@@ -101,9 +101,9 @@ To prepare the destination server, there are several possibilities:
     10. Start DataMiner. During startup, the necessary database tables will be created.
 
 > [!NOTE]
-> -  The destination DataMiner Agent must run exactly the same DataMiner software version as the original server. If it does not, perform either a software upgrade or a software downgrade to make sure the version is the same.
-> -  The destination server must have enough resources (CPU, memory, hard disk performance, etc.) to be able to handle the DataMiner configuration that you intend to restore on that server.
-> -  If you intend to migrate to another server while the original DMA stays online, take care to avoid an IP conflict:
+> - The destination DataMiner Agent must run exactly the same DataMiner software version as the original server. If it does not, perform either a software upgrade or a software downgrade to make sure the version is the same.
+> - The destination server must have enough resources (CPU, memory, hard disk performance, etc.) to be able to handle the DataMiner configuration that you intend to restore on that server.
+> - If you intend to migrate to another server while the original DMA stays online, take care to avoid an IP conflict:
 >     - Either keep the destination server offline as long as the original DMA is online, or
 >     - Make sure that the destination server has a different IP address and computer name.
 >

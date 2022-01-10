@@ -43,11 +43,11 @@ This tag is optional. However, keep in mind that if it is left empty or if it is
 For an example, refer to the *\<Security>* section in the example (see [Example of an Asset Manager configuration file](Example_of_an_Asset_Manager_configuration_file.md)). In this example, Administrators have Read access to all tables (*\<Read base="allowAll">*) except TableX (*\<Deny>TableX\</Deny>*) and Write access to TableY (*\<Write base="denyAll">\<Allow>TableY\</Allow>\</Write>*). Operators have Read access to all tables (*\<Read base="allowAll" />*) and Write access to none of the tables (*\<Write base="denyAll" />*).
 
 > [!NOTE]
-> -  It is also possible to configure security for the columns in each table with a \<Security> tag within the \<Table> tag.
-> -  Security is configured per group, not per user.
-> -  If you grant Write access to a specific table, then users will be able to add and delete rows in that table (using dedicated buttons) and edit data in existing rows (by clicking inside cells).
-> -  If you specify multiple table names within an Allow or a Deny tag, separate them by commas.
-> -  Multiple Allow tags or multiple Deny tags are not allowed within the same Read or Write tag.
+> - It is also possible to configure security for the columns in each table with a \<Security> tag within the \<Table> tag.
+> - Security is configured per group, not per user.
+> - If you grant Write access to a specific table, then users will be able to add and delete rows in that table (using dedicated buttons) and edit data in existing rows (by clicking inside cells).
+> - If you specify multiple table names within an Allow or a Deny tag, separate them by commas.
+> - Multiple Allow tags or multiple Deny tags are not allowed within the same Read or Write tag.
 
 ### AssetManagerConfig.Tables
 
@@ -91,9 +91,9 @@ If you want to change something to the appearance of a specific table column, th
 | RegExValidator | No         | A regular expression. It will not be possible to specify values in the column that do not match this regular expression.<br> This attribute can be used from DataMiner 9.0.3 onwards. |
 
 > [!NOTE]
-> -  To hide a column, you can set the width to 0. The columns will then not be shown when you edit or add a row, except if they contain a primary key or a foreign key or if they cannot be left empty.
-> -  If the order of the columns is not fixed by means of the “orderWeight” attribute, then the order of the *\<Columns>* tags will define the order in which columns are displayed.
-> -  If the columns have a fixed order, this order will also be applied when you fix or edit a row, except that the columns will be divided into “Required fields” and “Optional fields”.
+> - To hide a column, you can set the width to 0. The columns will then not be shown when you edit or add a row, except if they contain a primary key or a foreign key or if they cannot be left empty.
+> - If the order of the columns is not fixed by means of the “orderWeight” attribute, then the order of the *\<Columns>* tags will define the order in which columns are displayed.
+> - If the columns have a fixed order, this order will also be applied when you fix or edit a row, except that the columns will be divided into “Required fields” and “Optional fields”.
 
 Example:
 

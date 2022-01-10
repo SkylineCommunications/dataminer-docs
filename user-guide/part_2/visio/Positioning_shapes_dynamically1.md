@@ -94,8 +94,8 @@ Result: For every element underneath the view, the drawing will contain a shape 
     - the shape of which SubscriptionFilter contains “*value=120 == 2*” will be used to indicate a city of which the column with parameter ID 120 contains “2”.
 
     > [!NOTE]
-    > -  The circles indicating the location of the cities will bear the current alarm color of the corresponding table row.
-    > -  In order to avoid parsing problems due to “;” separators in table row filters, it is advised to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
+    > - The circles indicating the location of the cities will bear the current alarm color of the corresponding table row.
+    > - In order to avoid parsing problems due to “;” separators in table row filters, it is advised to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
 
     > [!TIP]
     > See also:
@@ -322,8 +322,8 @@ When using dynamic shape positioning based on coordinates stored in tables, the 
 For this feature to work, the shape positioning data (i.e. the data describing where to draw which shape) and the connection data (i.e. the data describing the connections to be drawn between shapes) have to be located in separate tables of the same element.
 
 > [!NOTE]
-> -  Using different tables for the positioning data is supported, but the keys from the different tables that are used to create the connections must be unique over all the tables. The shapes are linked via the primary keys of the positioning data tables, not via a foreign key relation. Each connection line makes a connection between the two primary keys of the dynamically positioned shapes.
-> -  Normally, the shape data fields described below will only be used in EPM environments.
+> - Using different tables for the positioning data is supported, but the keys from the different tables that are used to create the connections must be unique over all the tables. The shapes are linked via the primary keys of the positioning data tables, not via a foreign key relation. Each connection line makes a connection between the two primary keys of the dynamically positioned shapes.
+> - Normally, the shape data fields described below will only be used in EPM environments.
 
 #### Dynamic lines
 
@@ -359,8 +359,8 @@ Line objects that have to be used to automatically connect shapes should be assi
         | Connectivity\|CenterModeY | Connection between the physical center of shapes in the Y direction |
 
         > [!NOTE]
-        > -  The CenterMode and EdgeMode options can be combined. However, it is not possible to use both *EdgemodeX* and *CenterModeX* or both *EdgeModeY* and *CenterModeY* at the same time.
-        > -  These options can also be used on *Element* shapes that are positioned manually in Visio.
+        > - The CenterMode and EdgeMode options can be combined. However, it is not possible to use both *EdgemodeX* and *CenterModeX* or both *EdgeModeY* and *CenterModeY* at the same time.
+        > - These options can also be used on *Element* shapes that are positioned manually in Visio.
 
 - **SelectionDetails**: In this shape data field, you can specify the IDs of any additional tables that you want to see listed in the Details pane of the EPM interface when someone selects the connection:
 
@@ -442,6 +442,6 @@ MyVariable:[ConnectionLineDisplayIdx] ([ConnectionLineIdx]) (from '[ConnectionLi
 ```
 
 > [!NOTE]
-> -  If a connection has no clear direction (i.e. when both interfaces are set to “inout”), it is impossible to know which interface will be the source and which will be the destination.
-> -  If a line represents multiple connections (i.e. when the *MultipleLinesMode* and *MultipleCurvedLinesMode* options are not used), and a **SetVar** command has been configured on one of those connections, clicking the line will cause the placeholders to be replaced by the corresponding values from each connection, separated by a pipe character (“\|”). A different separator character can also be defined with a **SetVarOptions** shape data field that is set to the *MultipleValueSep=* option.
+> - If a connection has no clear direction (i.e. when both interfaces are set to “inout”), it is impossible to know which interface will be the source and which will be the destination.
+> - If a line represents multiple connections (i.e. when the *MultipleLinesMode* and *MultipleCurvedLinesMode* options are not used), and a **SetVar** command has been configured on one of those connections, clicking the line will cause the placeholders to be replaced by the corresponding values from each connection, separated by a pipe character (“\|”). A different separator character can also be defined with a **SetVarOptions** shape data field that is set to the *MultipleValueSep=* option.
 >

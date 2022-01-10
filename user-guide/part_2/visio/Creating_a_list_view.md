@@ -3,8 +3,8 @@
 To create a dynamic, filterable list view containing elements, services or bookings, from DataMiner 9.6.4 onwards, it is possible to configure a *ListView* component.
 
 > [!NOTE]
-> -  In DataMiner 9.6.4, this component can only be used in the visual overview of view cards. From DataMiner 9.6.5 onwards, element cards are also supported.
-> -  This component functiosns in a similar way as the bookings list in the Bookings module and the services list in the Services module. For more information on how to use this component in DataMiner Cube, see [Bookings list](../../part_4/SRM/The_Bookings_module.md#bookings-list).
+> - In DataMiner 9.6.4, this component can only be used in the visual overview of view cards. From DataMiner 9.6.5 onwards, element cards are also supported.
+> - This component functiosns in a similar way as the bookings list in the Bookings module and the services list in the Services module. For more information on how to use this component in DataMiner Cube, see [Bookings list](../../part_4/SRM/The_Bookings_module.md#bookings-list).
 
 - [Configuring the shape data field](#configuring-the-shape-data-field)
 
@@ -29,9 +29,9 @@ To create a list view, add a shape on the Visio page with the following shape da
 | EndTime=         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 > [!NOTE]
-> -  If you use *StartTime* and *EndTime* shape data for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
-> -  If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. <br>See [Embedding a Resource Manager component](Embedding_a_Resource_Manager_component.md).
-> -  If colors are defined using the *Visual.Background* property of bookings, from DataMiner 9.6.13 onwards, these are displayed in the *Color* column of a *ListView* component showing bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](Embedding_a_Resource_Manager_component.md#customizing-the-color-of-booking-blocks).
+> - If you use *StartTime* and *EndTime* shape data for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
+> - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. <br>See [Embedding a Resource Manager component](Embedding_a_Resource_Manager_component.md).
+> - If colors are defined using the *Visual.Background* property of bookings, from DataMiner 9.6.13 onwards, these are displayed in the *Color* column of a *ListView* component showing bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](Embedding_a_Resource_Manager_component.md#customizing-the-color-of-booking-blocks).
 
 ### Component options
 

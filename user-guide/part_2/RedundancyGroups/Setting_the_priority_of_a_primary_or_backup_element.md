@@ -13,8 +13,8 @@
     4. Click *Set*.
 
 > [!NOTE]
-> -  Element priority ranges from 1 (highest priority) to 1000 (lowest priority). If priority is set to 0, this means that no priority has been set yet.
-> -  Alternatively, the element priority can also be set on the *General parameters* page of each element.
+> - Element priority ranges from 1 (highest priority) to 1000 (lowest priority). If priority is set to 0, this means that no priority has been set yet.
+> - Alternatively, the element priority can also be set on the *General parameters* page of each element.
 
 > [!TIP]
 > See also:

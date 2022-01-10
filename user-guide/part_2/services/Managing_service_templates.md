@@ -84,5 +84,3 @@ In the generated services tab, you can:
 - Use the buttons at the bottom to open, view, re-apply or detach a generated service.
 
 - Use the right-click menu of a generated service to apply the same options as with the buttons.
-
-

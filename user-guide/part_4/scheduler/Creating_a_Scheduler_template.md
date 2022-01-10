@@ -45,7 +45,3 @@ To create scheduler templates, which will show up in the EVENT list in Scheduler
 
         > [!NOTE]
         > If no custom tooltip is defined, the default tooltip will be displayed, which shows the value of every parameter and dummy.
-
-
-
-

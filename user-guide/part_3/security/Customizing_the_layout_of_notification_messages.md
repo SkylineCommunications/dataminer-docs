@@ -13,9 +13,9 @@ If you want to customize the layout of all or some of the notification messages 
 3. Save the file and restart the DataMiner Agent.
 
 > [!NOTE]
-> -  If you define any templates in this file, you must use the mandatory template names listed in [Template names](#template-names).
-> -  If you want to use special characters in this file, see [Using special characters in NotifyTemplates.xml](#using-special-characters-in-notifytemplatesxml).
-> -  The *NotifyTemplates.xml* file is not synchronized across the DMS. In other words, every DMA can have its own *NotifyTemplates.xml* file.
+> - If you define any templates in this file, you must use the mandatory template names listed in [Template names](#template-names).
+> - If you want to use special characters in this file, see [Using special characters in NotifyTemplates.xml](#using-special-characters-in-notifytemplatesxml).
+> - The *NotifyTemplates.xml* file is not synchronized across the DMS. In other words, every DMA can have its own *NotifyTemplates.xml* file.
 
 ### Template names
 

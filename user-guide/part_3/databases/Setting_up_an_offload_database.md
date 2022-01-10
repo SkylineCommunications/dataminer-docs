@@ -21,14 +21,14 @@ Depending on the type of database, the procedure is slightly different.
     - MySQL Server
 
         > [!NOTE]
-        > -  For DataMiner versions up to DataMiner 9.6.5, MySQL versions 4.1.1 to 5.7 are supported (using connector version 5.2.7). From DataMiner 9.6.5 onwards, versions up to 8.0 (8.0 not included) are supported (using connector version 6.9.12).
-        > -  For MySQL, do not activate strict mode (STRICT_TRANS_TABLES) during installation. If you do so, the database offloads will fail.
+        > - For DataMiner versions up to DataMiner 9.6.5, MySQL versions 4.1.1 to 5.7 are supported (using connector version 5.2.7). From DataMiner 9.6.5 onwards, versions up to 8.0 (8.0 not included) are supported (using connector version 6.9.12).
+        > - For MySQL, do not activate strict mode (STRICT_TRANS_TABLES) during installation. If you do so, the database offloads will fail.
 
     - MSSQL Server
 
         > [!NOTE]
-        > -  While setting up the installation of MSSQL Server, choose the authentication mode *Mixed Mode*.
-        > -  To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
+        > - While setting up the installation of MSSQL Server, choose the authentication mode *Mixed Mode*.
+        > - To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
 
     - Oracle Database.
 
@@ -53,10 +53,10 @@ Depending on the type of database, the procedure is slightly different.
     - Oracle: use the Oracle Apex web interface to create a user and set up a workspace.
 
     > [!NOTE]
-    > -  The user accounts should at least be granted the following rights:
+    > - The user accounts should at least be granted the following rights:
     >     - SELECT
     >     - INSERT
-    > -  Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
+    > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
 
 3. Create a database (e.g. named “sldmsdb”) and tables:
 
@@ -71,8 +71,8 @@ Depending on the type of database, the procedure is slightly different.
         4. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTabledef.txt*.
 
     > [!NOTE]
-    > -  Note that the script in *CentralTabledef.txt* will drop any tables in the selected database (causing these to be permanently deleted) and recreate the schema, so it must be used with caution.
-    > -  Alternatively, you can also use the program SLOffload.exe from the *C:\\Skyline DataMiner\\Tools* directory to do an offload to your new database. However, note that running this program involves a restart of the DMA.
+    > - Note that the script in *CentralTabledef.txt* will drop any tables in the selected database (causing these to be permanently deleted) and recreate the schema, so it must be used with caution.
+    > - Alternatively, you can also use the program SLOffload.exe from the *C:\\Skyline DataMiner\\Tools* directory to do an offload to your new database. However, note that running this program involves a restart of the DMA.
 
     - In MSSQL:
 
@@ -201,9 +201,9 @@ The final step is the configuration of the DMS.
     7. Optionally, if you have selected *Trend data*, specify further details for the offload. For more information, see [Configuring data offloads](Configuring_data_offloads.md).
 
 > [!NOTE]
-> -  If an offload to the offload database fails, an alarm will be generated in DataMiner. As soon as offloading works again, the alarm is cleared.
-> -  If the offload fails for a specific offload file, this file is moved to a failure folder and an error is logged.
-> -  The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](../../part_7/SkylineDataminerFolder/DB_xml.md#dbxml).
+> - If an offload to the offload database fails, an alarm will be generated in DataMiner. As soon as offloading works again, the alarm is cleared.
+> - If the offload fails for a specific offload file, this file is moved to a failure folder and an error is logged.
+> - The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](../../part_7/SkylineDataminerFolder/DB_xml.md#dbxml).
 
 ### Automatic creation and verification of the offload database
 

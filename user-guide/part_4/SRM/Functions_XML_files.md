@@ -21,9 +21,9 @@ Based on these functions XML files, “virtual function” elements can be creat
 In the Protocols & Templates module, virtual function definitions are indicated in the same way as DVE child protocols, except with a different icon. This can be a default icon or a custom icon defined in the functions XML file. The same icon will also be used to display the virtual function elements in the Surveyor.
 
 > [!NOTE]
-> -  Several functions XML files can be uploaded for one protocol, but in that case each of the files must have a unique file name.
-> -  When a functions XML file is uploaded to a protocol, the system will check the validity of the XML file structure. An information event will indicate whether the upload succeeded or failed, or if there is a duplicate file name.
-> -  In addition to functions XML files, the system can also contain virtual function protocols that are automatically generated based on virtual function definitions. These are listed in the *Virtual functions* section at the bottom of the first column of the Protocols & Templates module.
+> - Several functions XML files can be uploaded for one protocol, but in that case each of the files must have a unique file name.
+> - When a functions XML file is uploaded to a protocol, the system will check the validity of the XML file structure. An information event will indicate whether the upload succeeded or failed, or if there is a duplicate file name.
+> - In addition to functions XML files, the system can also contain virtual function protocols that are automatically generated based on virtual function definitions. These are listed in the *Virtual functions* section at the bottom of the first column of the Protocols & Templates module.
 
 ### Functions XML structure
 
@@ -141,13 +141,13 @@ If there are several functions XML files for one protocol, you can select to set
 
 > [!NOTE]
 > It may not be possible to set a different functions file active if the current active file is in use in a service definition, booking definition or planned booking instance and the change of file entails one or more of the following modifications:
-> -  removing a virtual function definition
-> -  lowering the maximum number of instances of a virtual function definition
-> -  changing the name of a virtual function definition to a name that is not unique within the protocol function version
-> -  changing the profile of a virtual function definition
-> -  changing the parent of a virtual function definition
-> -  changing entry points of a virtual function definition
-> -  removing an interface of a virtual function definition
+> - removing a virtual function definition
+> - lowering the maximum number of instances of a virtual function definition
+> - changing the name of a virtual function definition to a name that is not unique within the protocol function version
+> - changing the profile of a virtual function definition
+> - changing the parent of a virtual function definition
+> - changing entry points of a virtual function definition
+> - removing an interface of a virtual function definition
 
 ### Deleting a functions file
 

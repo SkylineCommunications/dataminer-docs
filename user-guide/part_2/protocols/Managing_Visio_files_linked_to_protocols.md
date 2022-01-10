@@ -62,8 +62,8 @@ In the Protocols & Templates module, you can upload a custom-made Visio file to 
 4. In the *Open* dialog box, select the Microsoft Visio file (extension: .vdx or .vsdx), and click *Open*.
 
 > [!NOTE]
-> -  It is not possible to upload Visio files of which the file name contains more than one “%” sign.
-> -  Under *Protocols*, protocols to which a Visio file has been assigned are marked by a small Visio icon.
+> - It is not possible to upload Visio files of which the file name contains more than one “%” sign.
+> - Under *Protocols*, protocols to which a Visio file has been assigned are marked by a small Visio icon.
 
 > [!TIP]
 > See also:

@@ -6,8 +6,8 @@ DataMiner administrators will often create custom commands that open a web page,
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/>
-> -  [Adding a custom command to the Alarm Console shortcut menu](../../part_2/alarms/Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu.md)
+> - <https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/>
+> - [Adding a custom command to the Alarm Console shortcut menu](../../part_2/alarms/Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu.md)
 
 In this section:
 
@@ -59,7 +59,7 @@ See the following example:
 ```
 
 > [!NOTE]
-> -  When you specify an Automation script in a hyperlink, you only need to use the “Script:” prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the *type* attribute clearly specifies that it concerns a reference to an Automation script.
+> - When you specify an Automation script in a hyperlink, you only need to use the “Script:” prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the *type* attribute clearly specifies that it concerns a reference to an Automation script.
 
 ### Syntax of second-generation hyperlinks
 
@@ -114,8 +114,8 @@ Inside the *\<HyperLink>* tag, enter the following content, depending on the typ
 
 > [!NOTE]
 > The string you specify can contain:
-> -  Keywords, which allow you to insert real-time data in the command name that is displayed. See [Keywords](#keywords).
-> -  Placeholders, which allow you to insert parts of the value of the alarm or information event in the command that is displayed. See [Placeholders](#placeholders).
+> - Keywords, which allow you to insert real-time data in the command name that is displayed. See [Keywords](#keywords).
+> - Placeholders, which allow you to insert parts of the value of the alarm or information event in the command that is displayed. See [Placeholders](#placeholders).
 
 > [!TIP]
 > See also:

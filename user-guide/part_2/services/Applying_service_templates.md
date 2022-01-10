@@ -19,8 +19,8 @@ This section consists of the following topics:
     - If you wish to import a CSV file to generate the services, click *Import configuration from CSV*. Then browse to the CSV file in question.
 
         > [!NOTE]
-        > -  If you are trying to update an existing service by means of an import, you must add a “serviceName” column with the name of the service in the CSV file. Note that this column name is case-sensitive.
-        > -  If the template contains an optional child element, specify "N/A" in the "element:x" column to skip that element even if a candidate element is available.
+        > - If you are trying to update an existing service by means of an import, you must add a “serviceName” column with the name of the service in the CSV file. Note that this column name is case-sensitive.
+        > - If the template contains an optional child element, specify "N/A" in the "element:x" column to skip that element even if a candidate element is available.
 
     - If you wish to create services based on elements in your DMS, click *Load*, and select the elements and/or processes for which services should be generated. In this case, the data you can enter will depend on how the service template was configured.
 

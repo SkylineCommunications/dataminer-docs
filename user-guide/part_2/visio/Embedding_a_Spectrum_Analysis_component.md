@@ -28,8 +28,8 @@ Configure the following shape data fields on the shape that is to contain the Sp
     | ViewOptions= | Should be configured in the same way as the *options=* URL parameter. See [options=](../../part_1/DataminerApplications/Opening_DataMiner_Cube.md#options).                                                                                                                                                |
 
 > [!NOTE]
-> -  These options all support dynamic placeholders. Dynamic changes to the preset or measurement points will be applied immediately. Dynamic changes to view options will only be applied when a preset is loaded.
-> -  Only public presets can be used in a Visual Overview, not private presets. In addition, up to DataMiner 9.6.1, the preset must have either the “(public)” suffix or “GLOBAL:” prefix.
+> - These options all support dynamic placeholders. Dynamic changes to the preset or measurement points will be applied immediately. Dynamic changes to view options will only be applied when a preset is loaded.
+> - Only public presets can be used in a Visual Overview, not private presets. In addition, up to DataMiner 9.6.1, the preset must have either the “(public)” suffix or “GLOBAL:” prefix.
 
 For example:
 

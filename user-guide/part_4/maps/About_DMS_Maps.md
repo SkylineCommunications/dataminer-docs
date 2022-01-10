@@ -3,9 +3,9 @@
 DataMiner Maps is a DataMiner add-on module that allows you to visualize real-time data from the DataMiner System on top of geographical maps provided by online map services. Up to DataMiner 9.5.7, the module allows integration with Google Maps only. From DataMiner 9.5.8 onwards, it is also possible to use MapQuest and OpenStreetMap.
 
 > [!NOTE]
-> -  The DataMiner Maps module requires a special license.
-> -  DataMiner clients cannot visualize maps without internet access.
-> -  To use Google Maps, the Google Maps Platform license must be obtained. See also [Configuring the DataMiner Maps host servers](Configuring_the_DataMiner_Maps_host_servers.md).
+> - The DataMiner Maps module requires a special license.
+> - DataMiner clients cannot visualize maps without internet access.
+> - To use Google Maps, the Google Maps Platform license must be obtained. See also [Configuring the DataMiner Maps host servers](Configuring_the_DataMiner_Maps_host_servers.md).
 
 > [!CAUTION]
 > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
@@ -37,8 +37,8 @@ DataMiner Maps has a number of interesting features:
 
     > [!TIP]
     > See also:
-    > -  [Switching map configurations by means of JavaScript](Switching_map_configurations_by_means_of_JavaScript.md)
-    > -  [Navigating to EPM information from a map using JavaScript](PopupSkeleton_and_PopupDetails.md#navigating-to-epm-information-from-a-map-using-javascript)
+    > - [Switching map configurations by means of JavaScript](Switching_map_configurations_by_means_of_JavaScript.md)
+    > - [Navigating to EPM information from a map using JavaScript](PopupSkeleton_and_PopupDetails.md#navigating-to-epm-information-from-a-map-using-javascript)
 
 - **Google Street View**
 

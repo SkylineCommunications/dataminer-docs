@@ -123,6 +123,6 @@ In the ribbon of a spectrum analyzer card, the *markers* tab provides several ad
     Sets the reference level to the amplitude of the marker.
 
 > [!NOTE]
-> -  Several of these options are also available through the marker right-click menu.
-> -  If one or more markers have been locked to the trace, and you close and then re-open the spectrum card, it will again be possible to move the markers freely.
+> - Several of these options are also available through the marker right-click menu.
+> - If one or more markers have been locked to the trace, and you close and then re-open the spectrum card, it will again be possible to move the markers freely.
 >

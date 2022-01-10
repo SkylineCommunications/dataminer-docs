@@ -25,6 +25,6 @@ In case DataMiner Cube was open while you edited the settings, the changes will 
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/>
-> -  [Linking a shape to an Automation script](../visio/Linking_a_shape_to_an_Automation_script.md)
+> - <https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/>
+> - [Linking a shape to an Automation script](../visio/Linking_a_shape_to_an_Automation_script.md)
 >

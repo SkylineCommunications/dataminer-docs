@@ -1,9 +1,9 @@
 ## Working with behavioral anomaly detection
 
 > [!NOTE]
-> -  This feature requires a general database of type "Cassandra".
-> -  Anomaly detection is only available for numeric parameters that are not part of partial tables. It is also limited to at most 100,000 parameters per DMA.
-> -  You can enable or disable this feature via *System Center* > *System settings* > *analytics config*.
+> - This feature requires a general database of type "Cassandra".
+> - Anomaly detection is only available for numeric parameters that are not part of partial tables. It is also limited to at most 100,000 parameters per DMA.
+> - You can enable or disable this feature via *System Center* > *System settings* > *analytics config*.
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the following kinds of changes in the behavior of a trend, also known as "change points":
 
@@ -20,8 +20,8 @@ From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detec
 If a trend change, variance change or level shift is unexpected, it will be considered anomalous. Level shifts that have a different direction than previous recent jumps or that jump to a previously unseen level will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction were detected during the last weeks.
 
 > [!NOTE]
-> -  Whenever an anomalous level shift, trend change or variance change is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](../alarms/Working_with_the_Alarm_Console.md#adding-and-removing-alarm-tabs-in-the-alarm-console).
-> -  You can configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly See [Configuring anomaly detection alarms for specific parameters](../protocols/Configuring_alarm_templates.md#configuring-anomaly-detection-alarms-for-specific-parameters).
+> - Whenever an anomalous level shift, trend change or variance change is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](../alarms/Working_with_the_Alarm_Console.md#adding-and-removing-alarm-tabs-in-the-alarm-console).
+> - You can configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly See [Configuring anomaly detection alarms for specific parameters](../protocols/Configuring_alarm_templates.md#configuring-anomaly-detection-alarms-for-specific-parameters).
 
 #### Trend icons on data pages
 

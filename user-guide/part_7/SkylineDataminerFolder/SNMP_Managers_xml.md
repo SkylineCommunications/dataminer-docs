@@ -13,8 +13,8 @@ The file *SNMP Managers.xml* is used for the configuration of remote SNMP Manage
     - *\<EngineBoots>*: The number of engine restarts of the DMA.
 
 > [!NOTE]
-> -  The *\<Configuration>* section of this file is not synced in the cluster. Each DMA only reads the entry in this section that matches its DataMiner ID.
-> -  It is possible to change the engine ID using the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Modifying the engine ID of a DMA](../DataminerTools/SLNetClientTest_tool_advanced_procedures.md#modifying-the-engine-id-of-a-dma).
+> - The *\<Configuration>* section of this file is not synced in the cluster. Each DMA only reads the entry in this section that matches its DataMiner ID.
+> - It is possible to change the engine ID using the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Modifying the engine ID of a DMA](../DataminerTools/SLNetClientTest_tool_advanced_procedures.md#modifying-the-engine-id-of-a-dma).
 
 - From DataMiner 9.5.9 onwards, each *\<SnmpManager>* tag can have a codepage attribute, which makes it possible to select a code page. Its value is an integer. For example:
 

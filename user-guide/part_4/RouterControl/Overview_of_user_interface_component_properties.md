@@ -60,8 +60,8 @@ Consists of TabPage components. These have one customizable property, the tab pa
 
 > [!TIP]
 > See also:
-> -  [Extra grid properties](#extra-grid-properties)
-> -  [Creating a dynamic tab page](Creating_a_dynamic_tab_page.md)
+> - [Extra grid properties](#extra-grid-properties)
+> - [Creating a dynamic tab page](Creating_a_dynamic_tab_page.md)
 
 #### TogglePanel
 
@@ -110,9 +110,9 @@ Consists of TabPage components. These have one customizable property, the tab pa
 | Options  | For Custom type actions, add one action per line in this box, using the same syntax as when using an *Execute* shape data field in Visio. See [Overview of DataMiner shape data fields](../../part_2/visio/Overview_of_DataMiner_shape_data_fields.md). |
 
 > [!NOTE]
-> -  In DataMiner versions prior to 8.5.4, if no options are defined for a custom action, it is necessary to add an ending pipe character (“\|”). In later versions, this is no longer required.
-> -  In DataMiner versions prior to 9.0.5, the action configured in the *Options* box must always be preceded by “execute=”. E.g. *execute=Script:TestScript*.
-> -  The Undo action, which is available from DataMiner 9.5.3 onwards, allows the user to undo the latest connect or disconnect action. As the option can only be applied to undo one action, after *Undo* is clicked, the button is disabled until another action has been done. Optionally, you can select the *Display confirmation* option for the Undo action type, so a confirmation window is displayed whenever the button is used.
+> - In DataMiner versions prior to 8.5.4, if no options are defined for a custom action, it is necessary to add an ending pipe character (“\|”). In later versions, this is no longer required.
+> - In DataMiner versions prior to 9.0.5, the action configured in the *Options* box must always be preceded by “execute=”. E.g. *execute=Script:TestScript*.
+> - The Undo action, which is available from DataMiner 9.5.3 onwards, allows the user to undo the latest connect or disconnect action. As the option can only be applied to undo one action, after *Undo* is clicked, the button is disabled until another action has been done. Optionally, you can select the *Display confirmation* option for the Undo action type, so a confirmation window is displayed whenever the button is used.
 
 > [!TIP]
 > See also:

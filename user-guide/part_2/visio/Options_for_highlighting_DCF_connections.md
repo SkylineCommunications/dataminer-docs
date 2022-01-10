@@ -16,10 +16,10 @@ In addition to the options determining how connections are displayed, there are 
 | SelectionHighlighting                                                  | Available from DataMiner 10.0.3 onwards.<br>[Disabling path highlighting when a connection line is clicked](#disabling-path-highlighting-when-a-connection-line-is-clicked) |
 
 > [!NOTE]
-> -  When connectivity has been defined in a drawing, you can highlight the connectivity chain using a shortcut menu command. Right-click a shape, and select *Display connectivity*.
-> -  As of DataMiner version 8.5.4, when a shape or connection is highlighted, only the connections before and after the shape will be highlighted, instead of the entire connected framework.
-> -  If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted.
-> -  If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the *HighlightTarget* shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape is highlighted as soon as one of the highlight conditions is true.
+> - When connectivity has been defined in a drawing, you can highlight the connectivity chain using a shortcut menu command. Right-click a shape, and select *Display connectivity*.
+> - As of DataMiner version 8.5.4, when a shape or connection is highlighted, only the connections before and after the shape will be highlighted, instead of the entire connected framework.
+> - If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted.
+> - If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the *HighlightTarget* shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape is highlighted as soon as one of the highlight conditions is true.
 
 > [!TIP]
 > See also:
@@ -51,8 +51,8 @@ For example:
 | Options          | HighlightAnimation\|LineAnimationSpeed=100\|LineAnimationInterval=500 |
 
 > [!NOTE]
-> -  The shape will follow the path of the line, even when *MultipleCurvedLinesMode* is used.
-> -  Configuring an offset is possible by positioning the rotation point of the animated shape.
+> - The shape will follow the path of the line, even when *MultipleCurvedLinesMode* is used.
+> - Configuring an offset is possible by positioning the rotation point of the animated shape.
 
 ### Ignoring internal connections
 
@@ -140,8 +140,8 @@ Example:
 | Options          | HighlightStyle\|HighlightTarget=Select,Filter |
 
 > [!NOTE]
-> -  By creating different HighlightStyle shapes with different conditions applied, you can combine several highlight styles within the same Visual Overview.
-> -  The HighlightTarget option can be combined with the LineProperty option. For example: *HighlightStyle\|HighlightTarget=ConnectionProperty,Select\|LineProperty=Color*. <br>See [Applying only certain highlight style properties](#applying-only-certain-highlight-style-properties).
+> - By creating different HighlightStyle shapes with different conditions applied, you can combine several highlight styles within the same Visual Overview.
+> - The HighlightTarget option can be combined with the LineProperty option. For example: *HighlightStyle\|HighlightTarget=ConnectionProperty,Select\|LineProperty=Color*. <br>See [Applying only certain highlight style properties](#applying-only-certain-highlight-style-properties).
 
 #### Highlighting connections based on the table column value of connected shapes
 
@@ -199,8 +199,8 @@ To do so:
     | ActivePathHighlighting=*\[GUID\]*        | The specified GUID must be the GUID of a *Connectivity.xml* file. You can find the GUID for such a file by checking in the file.<br> The connections configured in the connectivity chain in this *Connectivity.xml* file will be highlighted. |
 
 > [!NOTE]
-> -  Only connection properties that determine the connectivity path will be displayed. All other connection properties will be hidden.
-> -  When you use path highlighting in conjunction with connection property highlighting, connection property highlighting is reinstated when you click the background of the Visio drawing.
+> - Only connection properties that determine the connectivity path will be displayed. All other connection properties will be hidden.
+> - When you use path highlighting in conjunction with connection property highlighting, connection property highlighting is reinstated when you click the background of the Visio drawing.
 
 > [!TIP]
 > See also:

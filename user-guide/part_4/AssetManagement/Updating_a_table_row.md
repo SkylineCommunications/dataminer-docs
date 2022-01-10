@@ -31,8 +31,8 @@ In the *Asset Manager* module, there are several ways to update a table row:
         To update a cell, click inside it and change the value as required.
 
 > [!NOTE]
-> -  When you select a table in the tree structure on the left, you can update data directly in the table grid on the right. Just click inside a cell and change its value.
-> -  If a field in a row has a link to a foreign table, the possible values are shown in a combo box. You can also add a new row to the foreign table by selecting *Add new row* in the combo box.
-> -  It is not possible to edit fields containing a primary key. Editing of foreign keys is only possible via the *Edit row* button.
-> -  From DataMiner 9.0.3 onwards, columns of type “Bool” and of type “Enum” are supported. Values in these columns are displayed as a checkbox and as a selection box, respectively.
+> - When you select a table in the tree structure on the left, you can update data directly in the table grid on the right. Just click inside a cell and change its value.
+> - If a field in a row has a link to a foreign table, the possible values are shown in a combo box. You can also add a new row to the foreign table by selecting *Add new row* in the combo box.
+> - It is not possible to edit fields containing a primary key. Editing of foreign keys is only possible via the *Edit row* button.
+> - From DataMiner 9.0.3 onwards, columns of type “Bool” and of type “Enum” are supported. Values in these columns are displayed as a checkbox and as a selection box, respectively.
 >

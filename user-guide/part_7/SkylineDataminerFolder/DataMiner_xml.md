@@ -275,8 +275,8 @@ Below you can find an alphabetical overview of settings that can be specified in
         - https://tools.ietf.org/html/rfc2474
 
         > [!NOTE]
-        > -  This QoS DiffServ packet marking feature makes use of the Windows qWave library, which is loaded dynamically. For more information, see: https://technet.microsoft.com/en-us/library/hh831592(v=ws.11).aspx
-        > -  The current implementation is limited to non-adaptive flows and protocols that make use of base sockets. Web-socket traffic and smart-serial traffic is not supported.
+        > - This QoS DiffServ packet marking feature makes use of the Windows qWave library, which is loaded dynamically. For more information, see: https://technet.microsoft.com/en-us/library/hh831592(v=ws.11).aspx
+        > - The current implementation is limited to non-adaptive flows and protocols that make use of base sockets. Web-socket traffic and smart-serial traffic is not supported.
 
 - **DataMiner.SMTP**
 

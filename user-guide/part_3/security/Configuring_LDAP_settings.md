@@ -194,8 +194,8 @@ localDMS.Notify(92 /*DMS_REFRESH_LDAP*/, 0, "", "", localReturn);
 ```
 
 > [!NOTE]
-> -  The frequency with which the scheduled task should be executed depends on the number of users and groups in your domain. You could e.g. set the task to be executed once a day.
-> -  From DataMiner 7.5 onwards, an automatic hourly refresh has been implemented, so it is no longer necessary to create this scheduled task.
-> -  From DataMiner 9.5.0/9.0.3 onwards, when Active Directory is used, by default DataMiner automatically receives updates whenever changes occur in the domain. You can disable this by setting the *notifications* attribute of the LDAP tag to false (*\<LDAP notifications="false" />*) in the *DataMiner.xml* file.
-> -  From DataMiner 10.1.9/10.2.0 onwards, LDAP notification behavior is disabled by default, and instead the LDAP system is polled on an hourly basis. Set the *notifications* attribute of the LDAP tag to true to enable this behavior again.
+> - The frequency with which the scheduled task should be executed depends on the number of users and groups in your domain. You could e.g. set the task to be executed once a day.
+> - From DataMiner 7.5 onwards, an automatic hourly refresh has been implemented, so it is no longer necessary to create this scheduled task.
+> - From DataMiner 9.5.0/9.0.3 onwards, when Active Directory is used, by default DataMiner automatically receives updates whenever changes occur in the domain. You can disable this by setting the *notifications* attribute of the LDAP tag to false (*\<LDAP notifications="false" />*) in the *DataMiner.xml* file.
+> - From DataMiner 10.1.9/10.2.0 onwards, LDAP notification behavior is disabled by default, and instead the LDAP system is polled on an hourly basis. Set the *notifications* attribute of the LDAP tag to true to enable this behavior again.
 >

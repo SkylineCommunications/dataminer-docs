@@ -318,8 +318,8 @@ string Extra
 ```
 
 > [!NOTE]
-> -  For a dialog box item of type *Numeric*, this property allows to have a checkbox with multiple discrete values. In case multiple discrete values are defined, separate these with a semicolon (';'). If you do not want any checkbox, but only the numeric box, then leave this property empty.
-> -  For a dialog box item of type *Parameter*, the ID syntax is as follows:<br>DmaID/ElementID:ParamID\[:index\]
+> - For a dialog box item of type *Numeric*, this property allows to have a checkbox with multiple discrete values. In case multiple discrete values are defined, separate these with a semicolon (';'). If you do not want any checkbox, but only the numeric box, then leave this property empty.
+> - For a dialog box item of type *Parameter*, the ID syntax is as follows:<br>DmaID/ElementID:ParamID\[:index\]
 
 Example:
 
@@ -403,8 +403,8 @@ string InitialValue
 ```
 
 > [!NOTE]
-> -  For a dialog box item of type *CheckBoxList*, you can specify several values separated by semicolons.
-> -  For a dialog box item of type Numeric, the initial value has to be of format "*DoubleValue;Boolean;SelectedDiscreetString*". The DoubleValue contains the value of the numeric box. The Boolean ("true" or "false") determines whether the discreet checkbox is checked (true) or unchecked (false). The SelectedDiscreetString selects the discreet with that exact name in case multiple discrete values are defined. If case you only want to visualize the numeric box, it is sufficient to only specify the DoubleValue.
+> - For a dialog box item of type *CheckBoxList*, you can specify several values separated by semicolons.
+> - For a dialog box item of type Numeric, the initial value has to be of format "*DoubleValue;Boolean;SelectedDiscreetString*". The DoubleValue contains the value of the numeric box. The Boolean ("true" or "false") determines whether the discreet checkbox is checked (true) or unchecked (false). The SelectedDiscreetString selects the discreet with that exact name in case multiple discrete values are defined. If case you only want to visualize the numeric box, it is sufficient to only specify the DoubleValue.
 
 Example:
 

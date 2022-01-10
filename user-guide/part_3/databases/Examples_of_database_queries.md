@@ -34,5 +34,3 @@ INSERT INTO table (SELECT * FROM load);
     // Copy data from the data file to the database
 DROP load;
 ```
-
-

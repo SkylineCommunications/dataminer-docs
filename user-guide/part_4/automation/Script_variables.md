@@ -11,8 +11,8 @@ For most script actions, variables are required. There are three kinds of variab
 When you add a script action that contains a variable, a line will automatically be added in the section in question. However, depending on the script, it can be more convenient to make the variables first, and then create the script actions.
 
 > [!NOTE]
-> -  Prior to running a script, operators will first have to link the dummies and parameters to actual elements and values in the DMS. Therefore, it is best to give the variables a meaningful name the operators will be able to work with.
-> -  To remove a variable, click the x to the right of it.
+> - Prior to running a script, operators will first have to link the dummies and parameters to actual elements and values in the DMS. Therefore, it is best to give the variables a meaningful name the operators will be able to work with.
+> - To remove a variable, click the x to the right of it.
 
 ### Creating a dummy
 

@@ -16,9 +16,9 @@ To edit the connections for an element that has in/out interfaces defined in its
     To create an external connection, select an element in the *external element* column, and then click in the *interface* column and select the interface to connect to.
 
     > [!NOTE]
-    > -  From DataMiner 9.0 onwards, it is possible to create an external connection to the same source element. However, it is not possible to make a connection to the same interface.
-    > -  From DataMiner 9.5.1 onwards, whenever manual changes are done to an external connection, an information event will be generated in the Alarm Console.
-    > -  Resolving multiple external connections on the same interface is only supported from DataMiner 9.5.5 onwards.
+    > - From DataMiner 9.0 onwards, it is possible to create an external connection to the same source element. However, it is not possible to make a connection to the same interface.
+    > - From DataMiner 9.5.1 onwards, whenever manual changes are done to an external connection, an information event will be generated in the Alarm Console.
+    > - Resolving multiple external connections on the same interface is only supported from DataMiner 9.5.5 onwards.
 
 5. To create an additional connection from the same input/output, click the *+* icon to the right of the connection to duplicate the line, and proceed according to the previous step.
 

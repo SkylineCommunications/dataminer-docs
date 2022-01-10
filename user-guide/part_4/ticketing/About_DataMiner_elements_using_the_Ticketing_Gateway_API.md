@@ -57,6 +57,6 @@ When an element requests a ticket synchronization, it is possible that some tick
 
 > [!NOTE]
 > Tickets are not synchronized among the DataMiner Agents in a DataMiner System.
-> -  If a ticket is created using a ticket field resolver that is linked to an element, then that ticket is saved on the DataMiner Agent that hosts the element.
-> -  If a ticket is created using a ticket field resolver that is not linked to an element, then that ticket is saved on the DataMiner Agent on which it was created.
+> - If a ticket is created using a ticket field resolver that is linked to an element, then that ticket is saved on the DataMiner Agent that hosts the element.
+> - If a ticket is created using a ticket field resolver that is not linked to an element, then that ticket is saved on the DataMiner Agent on which it was created.
 >

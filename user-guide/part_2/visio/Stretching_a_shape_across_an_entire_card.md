@@ -3,7 +3,7 @@
 A shape can be stretched across the entire card surface.
 
 > [!NOTE]
-> -  When a shape is stretched across the entire card, then the card header, the card navigation pane and the card footer will slowly fade away. Moving the mouse pointer around on the card will make them reappear.
+> - When a shape is stretched across the entire card, then the card header, the card navigation pane and the card footer will slowly fade away. Moving the mouse pointer around on the card will make them reappear.
 
 > [!TIP]
 > See also:

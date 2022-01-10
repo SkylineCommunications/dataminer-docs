@@ -68,8 +68,8 @@ To add input data:
 If you added any input data that you want to delete later, you can delete them with the X in the *Delete* column.
 
 > [!NOTE]
-> -  You can choose both monitored and unmonitored parameters as input data for the service. The latter can be used to include information that is important for the user, even though it does not necessarily have an impact on the service state.
-> -  By default, the services created by a service template will be added on the DMA hosting the majority of the child elements. In case there are no child elements, the services are added on the DMA where the service template is executed. However, you can force the selection of a specific DMA by adding an input data field with the name *:forceDMA* and the type *Fixed Value*, and specifying the DMA ID in the *Details* column.
+> - You can choose both monitored and unmonitored parameters as input data for the service. The latter can be used to include information that is important for the user, even though it does not necessarily have an impact on the service state.
+> - By default, the services created by a service template will be added on the DMA hosting the majority of the child elements. In case there are no child elements, the services are added on the DMA where the service template is executed. However, you can force the selection of a specific DMA by adding an input data field with the name *:forceDMA* and the type *Fixed Value*, and specifying the DMA ID in the *Details* column.
 
 ### Using groups of service template child elements
 
@@ -141,9 +141,9 @@ To add a child element:
 
             > [!NOTE]
             > For templated elements and services, you can also select several options at the top of the *Templated element* or *Templated service* section:
-            > -  Whether the element or service can be reused.
-            > -  Whether the element or service is optional. In that case, the service will still be created even if there is no match, but the element or service will not be included.
-            > -  Whether all elements or services matching the protocol name and/or element name mask should be included in the generated service.
+            > - Whether the element or service can be reused.
+            > - Whether the element or service is optional. In that case, the service will still be created even if there is no match, but the element or service will not be included.
+            > - Whether all elements or services matching the protocol name and/or element name mask should be included in the generated service.
 
     3. If you chose a fixed element or templated element, in the *Included Parameters* section, indicate what parameters should be included:
 
@@ -171,8 +171,8 @@ To add a child element:
         - To limit the influence of the child element on the service alarm severity, select *While included, influence overall service alarm severity when*, and add a trigger with the *Add trigger* button.
 
         > [!NOTE]
-        > -  Like in a service, inclusion and exclusion can be triggered based on a parameter state, alarm state or element state, or on whether the element is part of the active connectivity chain. However, for the latter, connectivity must be configured on the DMA. See [Conditionally including an element in a service](Conditionally_including_an_element_in_a_service.md).
-        > -  For a matrix parameter, to create a condition where a matrix crosspoint is connected or disconnected, create a trigger on parameter value for the matrix parameter, in the trigger condition use *==* or *\<\>* respectively, and specify the input/output names in the text value, separated by a comma (e.g. “input A, output B”).
+        > - Like in a service, inclusion and exclusion can be triggered based on a parameter state, alarm state or element state, or on whether the element is part of the active connectivity chain. However, for the latter, connectivity must be configured on the DMA. See [Conditionally including an element in a service](Conditionally_including_an_element_in_a_service.md).
+        > - For a matrix parameter, to create a condition where a matrix crosspoint is connected or disconnected, create a trigger on parameter value for the matrix parameter, in the trigger condition use *==* or *\<\>* respectively, and specify the input/output names in the text value, separated by a comma (e.g. “input A, output B”).
 
     5. In the *Advanced* section, optionally set a maximum severity for elements that are included or not used.
 

@@ -21,5 +21,3 @@ When receiving a text message, Mobile Gateway uses the following decodings:
 - GSM 03.38 8-bit data decoding using the default alphabet
 
 - UCS-2 16-bit decoding
-
-

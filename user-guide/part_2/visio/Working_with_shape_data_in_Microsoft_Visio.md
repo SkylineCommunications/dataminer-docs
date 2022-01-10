@@ -109,6 +109,6 @@ The panel can be used as follows:
 - To change the value of an existing data item, simply specify the new value in the value box.
 
     > [!NOTE]
-    > -  To add a placeholder (i.e. a dynamic part) in a value, add a square bracket (“\[“), select the placeholder from the list, and press TAB.
+    > - To add a placeholder (i.e. a dynamic part) in a value, add a square bracket (“\[“), select the placeholder from the list, and press TAB.
 
 - To change one of the data items to a different data item, in the data box, specify a different item. If you specify a data item that is unknown to DataMiner or that is already in the list, it will be highlighted.

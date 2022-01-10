@@ -100,9 +100,9 @@ When you click an item in the tree, it opens in a card:
 - If you click the item with the middle mouse button, a new card is opened next to any cards that are already open.
 
 > [!NOTE]
-> -  It is also possible to search in the navigation pane. For more information, see [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md).
-> -  For the right-click menu options in the Surveyor, see [Surveyor right-click menu](#surveyor-right-click-menu).
-> -  You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
+> - It is also possible to search in the navigation pane. For more information, see [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md).
+> - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](#surveyor-right-click-menu).
+> - You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
 ##### Icons
 
@@ -137,8 +137,8 @@ The icons that precede an item name in the tree show what kind of item it is and
 
     > [!TIP]
     > See also:
-    > -  [Alarm severity levels](../../part_2/alarms/Alarm_types.md#alarm-severity-levels)
-    > -  [Changing the default alarm colors](../../part_2/alarms/Changing_the_default_alarm_colors.md)
+    > - [Alarm severity levels](../../part_2/alarms/Alarm_types.md#alarm-severity-levels)
+    > - [Changing the default alarm colors](../../part_2/alarms/Changing_the_default_alarm_colors.md)
 
 - There may be additional symbols on an icon to indicate a particular state:
 
@@ -169,8 +169,8 @@ The following options are available:
 
 > [!TIP]
 > See also:
-> -  [Icons settings](User_settings.md#icons-settings)
-> -  <https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/>
+> - [Icons settings](User_settings.md#icons-settings)
+> - <https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/>
 
 > [!NOTE]
 > From DataMiner 10.0.0/10.0.2 onwards, these icon settings can only be used if the *Use modern icons* setting is not enabled.
@@ -204,9 +204,9 @@ In the Surveyor right-click menu, the following options are available, depending
 | Drag and drop editing     | Any                                              | Enables drag-and-drop view editing mode. See [Editing a view](../../part_2/views/Managing_views.md#editing-a-view).                                                                                                                                                                                                                                                                                                                                         |
 
 > [!NOTE]
-> -  For some special items, such as redundancy group templates or service templates, additional options are available.
-> -  The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
-> -  When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
+> - For some special items, such as redundancy group templates or service templates, additional options are available.
+> - The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
+> - When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
 
 #### Recent items
 
@@ -221,9 +221,9 @@ The following actions are possible with this list:
 - Pin an item so that it is placed in the *Pinned* section at the top of the list: hover over the item with the mouse pointer until a pin icon appears to the right of it, then click the pin icon.
 
 > [!NOTE]
-> -  Regardless of how frequently you view them, pinned items remain in the top section of the list until you click the pin icon again to remove them.
-> -  The list of recent and pinned items is kept synchronized between the DataMiner Cube app and the Monitoring web app.
-> -  Recent items can be views, elements, services, redundancy groups, service templates and DataMiner modules.
+> - Regardless of how frequently you view them, pinned items remain in the top section of the list until you click the pin icon again to remove them.
+> - The list of recent and pinned items is kept synchronized between the DataMiner Cube app and the Monitoring web app.
+> - Recent items can be views, elements, services, redundancy groups, service templates and DataMiner modules.
 
 > [!TIP]
 > See also:

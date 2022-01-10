@@ -17,5 +17,3 @@ In case of a time-restricted demo license for a DataMiner Agent that will not ha
 6. Copy the file *response.lic* to the folder *C:\\Skyline DataMiner\\*.
 
 7. Start the DataMiner Agent.
-
-

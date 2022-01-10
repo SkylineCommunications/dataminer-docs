@@ -23,8 +23,8 @@ It is also possible to specify alarm filters, so that blinking is only enabled b
 
 > [!TIP]
 > See also:
-> -  [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
-> -  [Basic conditional shape manipulation actions](../visio/Basic_conditional_shape_manipulation_actions.md)
+> - [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> - [Basic conditional shape manipulation actions](../visio/Basic_conditional_shape_manipulation_actions.md)
 
 #### Activating alarm blinking on a DMA
 

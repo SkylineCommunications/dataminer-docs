@@ -34,13 +34,13 @@ The following concepts are of importance for the Service & Resource Management (
 
     > [!TIP]
     > See also:
-    > -  [Configuring profile definitions](Configuring_profile_definitions.md)
+    > - [Configuring profile definitions](Configuring_profile_definitions.md)
 
 - **Profile instance**: An instance of a profile, with particular values assigned to each of the parameters in the profile definition.
 
     > [!TIP]
     > See also:
-    > -  [Configuring profile instances](Configuring_profile_instances.md)
+    > - [Configuring profile instances](Configuring_profile_instances.md)
 
 - **Virtual function definition**: The definition of the parameters, interfaces, etc. of a virtual function resource, which is contained in a functions XML file, and linked to a particular protocol.
 

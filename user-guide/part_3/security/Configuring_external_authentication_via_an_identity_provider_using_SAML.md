@@ -34,10 +34,10 @@ To configure this, follow the steps below:
 Once this has been configured, if a user tries to log in to the DMA using external authentication via SAML, they will be redirected to a login page of the identity provider. That page will authenticate the user and return a SAML response, which DataMiner can use to either grant or deny the user access.
 
 > [!NOTE]
-> -  From DataMiner 10.2.0/10.1.4 onwards, Cube uses the Chromium web browser engine to handle SAML external authentication, which supports a wider range of identity providers than the Internet Explorer engine that was used previously.
-> -  When external authentication is enabled, it is no longer possible to log in with local accounts, except the local Administrator account.
-> -  DataMiner will expect one of the claims provided by the identity provider to be the “name” claim: “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name”. This field must contain either the user name of the email address.
-> -  Prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
+> - From DataMiner 10.2.0/10.1.4 onwards, Cube uses the Chromium web browser engine to handle SAML external authentication, which supports a wider range of identity providers than the Internet Explorer engine that was used previously.
+> - When external authentication is enabled, it is no longer possible to log in with local accounts, except the local Administrator account.
+> - DataMiner will expect one of the claims provided by the identity provider to be the “name” claim: “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name”. This field must contain either the user name of the email address.
+> - Prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
 
 > [!TIP]
 > See also:
@@ -283,8 +283,8 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
     ```
 
     > [!NOTE]
-    > -  In Azure AD, the ipMetadata URL can be found under *Single sign-on \> SAML Signing Certificate – App Federation Metadata*.
-    > -  If you set the *claims* attribute of the *Groups* element to “false”, no claims will be used to add users to groups. In this case:
+    > - In Azure AD, the ipMetadata URL can be found under *Single sign-on \> SAML Signing Certificate – App Federation Metadata*.
+    > - If you set the *claims* attribute of the *Groups* element to “false”, no claims will be used to add users to groups. In this case:
     >     - The name of the group as specified in Cube will be used instead.
     >     - A user can only be added to a single group.
     >     - The user information that is created will not be updated.

@@ -29,11 +29,11 @@ In this section:
 4. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
 
 > [!NOTE]
-> -  If DataMiner detects invalid data when elements are imported, a notice will be generated. This can for instance be the case when you import a new element and data is missing, or when something is wrong with the formatting.
-> -  Only import CSV files that have been created by DataMiner during a previous export. See [Exporting elements to a CSV file](#exporting-elements-to-a-csv-file).
-> -  For more information on how you can modify an exported CSV file for later import, see [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
-> -  For more information on how DataMiner checks for duplicate names, see [Duplicate name check](#duplicate-name-check).
-> -  As CSV separator settings may have changed in DataMiner 10.0.0/10.0.2, before you import a CSV file that was exported using a version of Cube prior to 10.0.0/10.0.2, make sure to check the separator used in that file.
+> - If DataMiner detects invalid data when elements are imported, a notice will be generated. This can for instance be the case when you import a new element and data is missing, or when something is wrong with the formatting.
+> - Only import CSV files that have been created by DataMiner during a previous export. See [Exporting elements to a CSV file](#exporting-elements-to-a-csv-file).
+> - For more information on how you can modify an exported CSV file for later import, see [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
+> - For more information on how DataMiner checks for duplicate names, see [Duplicate name check](#duplicate-name-check).
+> - As CSV separator settings may have changed in DataMiner 10.0.0/10.0.2, before you import a CSV file that was exported using a version of Cube prior to 10.0.0/10.0.2, make sure to check the separator used in that file.
 
 #### Duplicate name check
 
@@ -61,9 +61,9 @@ Name checks are case-insensitive. This means that for instance “element1” is
 1. Either open the card of the view from which you want to export the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
 
     > [!NOTE]
-    > -  To export all elements in a DMS, use the root view.
-    > -  If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
-    > -  From DataMiner 10.0.9 onwards, you can select multiple elements in the list on a view card (using Shift or Ctrl) and right-click them to export those elements only.
+    > - To export all elements in a DMS, use the root view.
+    > - If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
+    > - From DataMiner 10.0.9 onwards, you can select multiple elements in the list on a view card (using Shift or Ctrl) and right-click them to export those elements only.
 
 2. In the menu, select *Actions \> Export*.
 

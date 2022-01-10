@@ -3,8 +3,8 @@
 DataMiner Cube provides a wizard that can be used to automatically detect devices in your infrastructure: the Device Discovery wizard. With the wizard, you can discover devices within a certain IP range, and then immediately create the corresponding elements in your DMS.
 
 > [!NOTE]
-> -  The Device Discovery wizard requires a network discovery element using the Production version of the protocol *Skyline IP Network Discovery*.
-> -  Alternatively, advanced element discovery and provisioning is possible with the IDP Solution. See [DataMiner IDP app](../../part_5/SolIDP/SolIDP.md#dataminer-idp-app).
+> - The Device Discovery wizard requires a network discovery element using the Production version of the protocol *Skyline IP Network Discovery*.
+> - Alternatively, advanced element discovery and provisioning is possible with the IDP Solution. See [DataMiner IDP app](../../part_5/SolIDP/SolIDP.md#dataminer-idp-app).
 
 To find devices and create elements with the Device Discovery wizard:
 
@@ -40,5 +40,3 @@ To find devices and create elements with the Device Discovery wizard:
     > It is possible to enter the name, description, protocol or protocol version for several elements at once: select multiple elements in the list and click one of the mentioned information fields to open a *multiple edit* box, where you can enter or select the information for all selected elements.
 
 9. Click *Create* to create the elements. The wizard will show a summary of the elements that were created.
-
-

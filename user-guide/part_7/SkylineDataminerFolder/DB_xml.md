@@ -25,9 +25,9 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 The configuration data for the general or “local” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “true”.
 
 > [!NOTE]
-> -  The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
-> -  If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
-> -  If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
+> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
+> - If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
+> - If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
 
 The following configuration is possible for the general database:
 
@@ -60,9 +60,9 @@ In the *Maintenance* tag, several attributes are available with which you can de
 The limiting options can be set to “true” or “false”. If both options are set to “true”, the records will be deleted from the table either after a certain amount of time, or as soon as the table contains a specific number of records, whichever comes first.
 
 > [!NOTE]
-> -  It is advisable to configure these settings through the Cube client interface, rather than directly in the .xml file. See [Configuring the database settings in Cube](../../part_3/databases/Configuring_the_database_settings_in_Cube.md).
-> -  For a Cassandra (cluster) database, it is only possible to configure the limitByMonths attribute, not the limitByNumber attribute. Note also that this attribute works in a different way for Cassandra, compared to MySQL or MSSQL: if a record has been stored with a particular limitByMonths and MonthsToKeep setting, this setting permanently applies to that record in Cassandra.
-> -  From DataMiner 9.5.5 onwards (or 9.5.6 for an SQL database), the settings determining how long records are kept in the database are determined in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+> - It is advisable to configure these settings through the Cube client interface, rather than directly in the .xml file. See [Configuring the database settings in Cube](../../part_3/databases/Configuring_the_database_settings_in_Cube.md).
+> - For a Cassandra (cluster) database, it is only possible to configure the limitByMonths attribute, not the limitByNumber attribute. Note also that this attribute works in a different way for Cassandra, compared to MySQL or MSSQL: if a record has been stored with a particular limitByMonths and MonthsToKeep setting, this setting permanently applies to that record in Cassandra.
+> - From DataMiner 9.5.5 onwards (or 9.5.6 for an SQL database), the settings determining how long records are kept in the database are determined in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 #### Configuring how long parameter data are kept in the database for DMS Reporter
 
@@ -110,8 +110,8 @@ In a Cassandra general database, the timetrace table among others contains “sn
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 
     > [!NOTE]
-    > -  In some cases, e.g. when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
-    > -  This can only be configured for a regular Cassandra database, not for a Cassandra cluster used by the entire DMS (type=CassandraCluster).
+    > - In some cases, e.g. when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
+    > - This can only be configured for a regular Cassandra database, not for a Cassandra cluster used by the entire DMS (type=CassandraCluster).
 
 #### Skipping commit log writing of a Cassandra database
 
@@ -173,8 +173,8 @@ To do so
     ```
 
 > [!NOTE]
-> -  IF TLS is enabled, port 7001 must be opened in the firewall. See [Overview of IP ports used in a DMS](../../part_3/DataminerAgents/General_DMA_configuration.md#overview-of-ip-ports-used-in-a-dms).
-> -  This procedure only enables TLS on the database connection. It does not enable client authentication.
+> - IF TLS is enabled, port 7001 must be opened in the firewall. See [Overview of IP ports used in a DMS](../../part_3/DataminerAgents/General_DMA_configuration.md#overview-of-ip-ports-used-in-a-dms).
+> - This procedure only enables TLS on the database connection. It does not enable client authentication.
 
 #### Example of a general database configuration
 
@@ -259,7 +259,7 @@ The following example illustrates the configuration of a general database of typ
 The configuration data for the offload or “central” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “false”.
 
 > [!NOTE]
-> -  The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
+> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
 
 The following configuration is possible for the offload database:
 
@@ -344,8 +344,8 @@ In the following example, “1;TRUE” means that the real-time trend data recor
 ```
 
 > [!NOTE]
-> -  If you specify an offload rate, then the real-time trend data records with a negative iStatus value other than -9, -10, -15 and -16 will not be offloaded. Also, since the periodic offloads are not triggered by a user, the *chOwner* field of the offloaded records will be empty.
-> -  If you specify an offload interval larger than 24 hours, DataMiner will set the offload interval to the maximum value, i.e. 24 hours.
+> - If you specify an offload rate, then the real-time trend data records with a negative iStatus value other than -9, -10, -15 and -16 will not be offloaded. Also, since the periodic offloads are not triggered by a user, the *chOwner* field of the offloaded records will be empty.
+> - If you specify an offload interval larger than 24 hours, DataMiner will set the offload interval to the maximum value, i.e. 24 hours.
 
 #### Configuring the collation for an MSSQL database
 
@@ -513,9 +513,9 @@ The *\<Database>* tag for an indexing database has the following attributes:
 | type      | Currently only “Elasticsearch” is supported.                         |
 
 > [!NOTE]
-> -  There can only be one active indexing database on a DMA.
-> -  From DataMiner 10.2.0/10.1.1 onwards, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
-> -  From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](../../part_3/databases/Configuring_multiple_Elasticsearch_clusters.md).
+> - There can only be one active indexing database on a DMA.
+> - From DataMiner 10.2.0/10.1.1 onwards, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
+> - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](../../part_3/databases/Configuring_multiple_Elasticsearch_clusters.md).
 
 #### Defining a custom port for an Elasticsearch indexing database
 

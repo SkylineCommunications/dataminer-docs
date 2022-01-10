@@ -34,6 +34,6 @@ For example:
 ```
 
 > [!NOTE]
-> -  This file is not synchronized automatically. It is also only read at DataMiner startup.
-> -  When you update the *EPMConfig.xml* file on a particular DMA, delete the \*.txf files on that DMA and restart DataMiner.
+> - This file is not synchronized automatically. It is also only read at DataMiner startup.
+> - When you update the *EPMConfig.xml* file on a particular DMA, delete the \*.txf files on that DMA and restart DataMiner.
 >

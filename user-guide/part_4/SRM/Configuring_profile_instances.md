@@ -17,8 +17,8 @@ In the configuration pane, you can configure a selected profile instance as foll
     2. In the drop-down list, select the relevant instance, and then click *Add*.
 
     > [!NOTE]
-    > -  With this option, you can for example override one or more values from a base instance.
-    > -  An instance always has to be linked to the same definition as the instance it is based on. Therefore, if you have already selected a definition, the “Based on” list will be filtered to only show instances with that definition. If you have not yet selected a definition, it will automatically be filled in once you select a “Based on” instance.
+    > - With this option, you can for example override one or more values from a base instance.
+    > - An instance always has to be linked to the same definition as the instance it is based on. Therefore, if you have already selected a definition, the “Based on” list will be filtered to only show instances with that definition. If you have not yet selected a definition, it will automatically be filled in once you select a “Based on” instance.
 
 - To link the instance to a definition:
 

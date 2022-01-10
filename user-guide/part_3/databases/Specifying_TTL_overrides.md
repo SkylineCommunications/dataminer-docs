@@ -3,8 +3,8 @@
 From DataMiner 9.6.3 onwards, you can configure a custom "time to live" (TTL) for data in the database. From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, the user interface for this configuration has been redesigned.
 
 > [!NOTE]
-> -  The TTL settings are stored in the file *DBMaintenanceDMS.xml*. Prior to DataMiner 9.6.0 \[CU1\]/9.6.6, settings for one DMA only can also be saved in *DBMaintenance.xml*. For more information, see [DBMaintenance.xml and DBMaintenanceDMS.xml](../../part_7/SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
-> -  If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in Cube. The changes are only applied for new records. For example, if a record is saved with TTL set to 150 days, it will be only be removed after 150 days, even if the TTL configuration in Cube is later changed to 100 days.
+> - The TTL settings are stored in the file *DBMaintenanceDMS.xml*. Prior to DataMiner 9.6.0 \[CU1\]/9.6.6, settings for one DMA only can also be saved in *DBMaintenance.xml*. For more information, see [DBMaintenance.xml and DBMaintenanceDMS.xml](../../part_7/SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+> - If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in Cube. The changes are only applied for new records. For example, if a record is saved with TTL set to 150 days, it will be only be removed after 150 days, even if the TTL configuration in Cube is later changed to 100 days.
 
 #### TTL configuration from DataMiner 9.6.0 \[CU1\]/9.6.6 onwards
 

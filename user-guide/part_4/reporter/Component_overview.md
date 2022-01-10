@@ -297,8 +297,8 @@ Property names
 
 > [!NOTE]
 > When you specify an inline preset definition, you have to define at least the following properties:
-> -  freqStart and freqStop, or
-> -  freqCenter and freqSpan.
+> - freqStart and freqStop, or
+> - freqCenter and freqSpan.
 
 ### Trend graph
 

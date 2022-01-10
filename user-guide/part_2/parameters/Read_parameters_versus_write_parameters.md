@@ -11,8 +11,8 @@ The way this value is displayed depends on whether it is a discrete or an analog
 - Analog values can be displayed as text, LED bars, oscilloscopes or colored tubes.
 
 > [!NOTE]
-> -  Sometimes parameter values are only retrieved when a particular button is clicked (e.g. Refresh, Load, etc.). This is common practice for less important parameters.
-> -  Unavailable read parameters are always shown in gray.
+> - Sometimes parameter values are only retrieved when a particular button is clicked (e.g. Refresh, Load, etc.). This is common practice for less important parameters.
+> - Unavailable read parameters are always shown in gray.
 
 > [!TIP]
 > See also:

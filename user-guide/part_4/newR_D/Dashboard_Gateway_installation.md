@@ -52,11 +52,9 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 > [!NOTE]
 > Keep the following limitations in mind:
-> -  The URL folder structure of the web applications should remain the same as on a DataMiner Agent. The applications have to be accessed using URLs similar to the following examples:
+> - The URL folder structure of the web applications should remain the same as on a DataMiner Agent. The applications have to be accessed using URLs similar to the following examples:
 >     - https://gateway.mycompany.com/dashboard
 >     - https://gateway.mycompany.com/monitoring
 >     - https://gateway.mycompany.com/ticketing
 >     - https://gateway.mycompany.com/jobs
-> -  The DataMiner user account used by the Dashboard Gateway web server should not have multi-factor authentication enabled.
-
-
+> - The DataMiner user account used by the Dashboard Gateway web server should not have multi-factor authentication enabled.

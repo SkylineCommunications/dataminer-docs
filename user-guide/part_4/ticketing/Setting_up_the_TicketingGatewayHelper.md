@@ -48,6 +48,6 @@ class Script
 ```
 
 > [!NOTE]
-> -  Although a Ticketing Gateway caches all the open tickets, the TicketingGatewayHelper does not keep a cache of tickets or resolvers. If client-side caching is required, it must be implemented by the client.
-> -  Currently, tickets cannot be synchronized via the TicketingGatewayHelper.
+> - Although a Ticketing Gateway caches all the open tickets, the TicketingGatewayHelper does not keep a cache of tickets or resolvers. If client-side caching is required, it must be implemented by the client.
+> - Currently, tickets cannot be synchronized via the TicketingGatewayHelper.
 >

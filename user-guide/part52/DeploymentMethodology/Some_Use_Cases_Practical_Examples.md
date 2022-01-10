@@ -157,7 +157,3 @@ As the Agile T&M engagement is essentially based on a time expenditure basis, th
 - The assigned decision maker decides together with the Project Squad on the best way to approach this (e.g. either focusing on designing an exact specification and then executing this, or creating a first version and starting to iterate on that with close involvement of the stakeholders).
 
 - The assigned decision maker decides on what exactly the available engineering resources should work and for how long (presumably weighing effort versus business value).
-
-
-
-

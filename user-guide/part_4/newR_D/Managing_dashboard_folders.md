@@ -26,8 +26,8 @@ You can take the following actions to manage the dashboards folder structure:
     3. Click OK to confirm the deletion.
 
     > [!NOTE]
-    > -  When you delete a folder, any dashboards or folders within that folder will also be deleted.
-    > -  If a folder contains a dashboard you are not allowed to modify, you will not be able to delete that folder.
+    > - When you delete a folder, any dashboards or folders within that folder will also be deleted.
+    > - If a folder contains a dashboard you are not allowed to modify, you will not be able to delete that folder.
 
 - Renaming a folder:
 
@@ -38,8 +38,8 @@ You can take the following actions to manage the dashboards folder structure:
     3. Enter a new folder name, and click OK.
 
     > [!NOTE]
-    > -  When you rename a folder, the location and URL of all dashboards in that folder and any of its subfolders will automatically be adapted.
-    > -  If a folder contains a dashboard you are not allowed to modify, you will not be able to rename that folder.
+    > - When you rename a folder, the location and URL of all dashboards in that folder and any of its subfolders will automatically be adapted.
+    > - If a folder contains a dashboard you are not allowed to modify, you will not be able to rename that folder.
 
 - Moving a dashboard to a different folder (possible from DataMiner 10.0.0/10.0.2 onwards):
 

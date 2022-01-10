@@ -49,8 +49,8 @@ To add a custom property to a DataMiner item, which can be an element, but also 
     - **Display this property in the Surveyor**: Select this checkbox if you want the property to be visible next to the DataMiner item in the Surveyor.
 
         > [!NOTE]
-        > -  By default, the property will be displayed next to the item in the Surveyor in the format *\[Property name\]*: *\[Property value\]*. However, it is possible to configure the DMA to display only the property value. See [Customizing how properties are displayed in the Surveyor](../../part_7/SkylineDataminerFolder/PropertyConfiguration_xml.md#customizing-how-properties-are-displayed-in-the-surveyor).
-        > -  From DataMiner 10.0.12 onwards, properties can also be displayed for views in the Surveyor of the Monitoring app.
+        > - By default, the property will be displayed next to the item in the Surveyor in the format *\[Property name\]*: *\[Property value\]*. However, it is possible to configure the DMA to display only the property value. See [Customizing how properties are displayed in the Surveyor](../../part_7/SkylineDataminerFolder/PropertyConfiguration_xml.md#customizing-how-properties-are-displayed-in-the-surveyor).
+        > - From DataMiner 10.0.12 onwards, properties can also be displayed for views in the Surveyor of the Monitoring app.
 
     - **Update alarms on value changed**: If you want alarms to be updated when the value of the property changes, make sure this option is selected; otherwise make sure this checkbox is cleared.
 
@@ -88,8 +88,8 @@ To add a custom property to a DataMiner item, which can be an element, but also 
     The same options will be available as when adding a new property.
 
     > [!NOTE]
-    > -  If you change the property name, the value of that property will be lost.
-    > -  From DataMiner 9.5.0 CU8/9.5.12 onwards, changing the property name via the *Edit* option is no longer possible. Instead, you will need to delete the property with the old name and create a property with the new name.
+    > - If you change the property name, the value of that property will be lost.
+    > - From DataMiner 9.5.0 CU8/9.5.12 onwards, changing the property name via the *Edit* option is no longer possible. Instead, you will need to delete the property with the old name and create a property with the new name.
 
 ### Deleting a custom property
 

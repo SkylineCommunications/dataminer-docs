@@ -79,8 +79,8 @@ This component displays a status report for a number of parameters of the elemen
 From DataMiner 9.6.13 onwards, it is possible to export this status report to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
 
 > [!NOTE]
-> -  EPM data and discrete values are only supported in this component from DataMiner 9.6.13 onwards. Mediation protocols are only supported from DataMiner 10.0.6 onwards.
-> -  The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
+> - EPM data and discrete values are only supported in this component from DataMiner 9.6.13 onwards. Mediation protocols are only supported from DataMiner 10.0.6 onwards.
+> - The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
 
 To configure the component, from DataMiner 9.6.12 onwards:
 

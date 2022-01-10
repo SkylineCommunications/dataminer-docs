@@ -27,6 +27,6 @@ To add a condition:
 7. Optionally, select the option *Wait for positive result for at most* and enter a time span, in order to make the script wait during the specified period before evaluating the If condition.
 
 > [!NOTE]
-> -  The *Then* and *Else* sections can in turn also contain If conditions.
-> -  Add a Sleep action in the *Then* and *Else* sections to specify a period of time during which the Automation script has to pause in order to check if the condition is true or false.
+> - The *Then* and *Else* sections can in turn also contain If conditions.
+> - Add a Sleep action in the *Then* and *Else* sections to specify a period of time during which the Automation script has to pause in order to check if the condition is true or false.
 >

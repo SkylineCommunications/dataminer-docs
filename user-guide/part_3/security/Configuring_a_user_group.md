@@ -42,8 +42,8 @@ To configure a user group:
 
     > [!TIP]
     > See also:
-    > -  [DataMiner user permissions](DataMiner_user_permissions.md)
-    > -  [Which user permissions are included in which security preset?](Frequently_asked_questions_about_user_group_settings.md#which-user-permissions-are-included-in-which-security-preset)
+    > - [DataMiner user permissions](DataMiner_user_permissions.md)
+    > - [Which user permissions are included in which security preset?](Frequently_asked_questions_about_user_group_settings.md#which-user-permissions-are-included-in-which-security-preset)
 
 8. To configure notifications for the group, go to the *Alerts* tab and follow the same procedure as for alerts for a single user. See [Configuring user notifications](Configuring_user_notifications.md).
 

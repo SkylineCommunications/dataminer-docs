@@ -31,7 +31,7 @@ From DataMiner 9.0 onwards, it is possible to add items to a dashboard directly 
     - **All LEDs**: Adds a *Parameter State LED* component for every parameter in the selected service or element. See [Parameter state LED](Dashboard_components.md#parameter-state-led).
 
     > [!NOTE]
-    > -  If you are adding a parameter, a table cell or a table row, the added component will always be a generic real-time parameter component.
-    > -  If you are adding a trend graph, the added component will always be a trend parameter component.
+    > - If you are adding a parameter, a table cell or a table row, the added component will always be a generic real-time parameter component.
+    > - If you are adding a trend graph, the added component will always be a trend parameter component.
 
 4. Either click *Add* to simply add the item to the dashboard, or click *Add and show* to also immediately open the dashboard in a different tab of your browser.

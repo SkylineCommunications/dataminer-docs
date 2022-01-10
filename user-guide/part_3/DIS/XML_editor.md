@@ -3,9 +3,9 @@
 If you open a protocol XML file or an Automation script XML file in Microsoft Visual Studio, or if you create a new file from scratch, that file will appear in a customized file tab.
 
 > [!NOTE]
-> -  To create a new protocol XML file, go to File \> New \> File \> General \> DataMiner, select DataMiner Protocol Template, and click Open.
-> -  To create a new Automation script XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Automation Script Template, and click Open.
-> -  To create a new function XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Function Template, click Open, specify the function file version, select the associated protocol XML file, and click OK.
+> - To create a new protocol XML file, go to File \> New \> File \> General \> DataMiner, select DataMiner Protocol Template, and click Open.
+> - To create a new Automation script XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Automation Script Template, and click Open.
+> - To create a new function XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Function Template, click Open, specify the function file version, select the associated protocol XML file, and click OK.
 
 The following sections contain more information on this file tab:
 
@@ -61,8 +61,8 @@ If you want to compare two protocols, do the following:
         - Select *Previous release*, and select one of the previous versions of a protocol currently opened in the XML editor.
 
         > [!NOTE]
-        > -  If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
-        > -  For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to https://api.skyline.be/*
+        > - If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
+        > - For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to https://api.skyline.be/*
 
     3. Click *OK*.
 
@@ -122,8 +122,8 @@ To publish a protocol or an Automation script to another, non-default DMA, click
 > [DMA](DIS_settings.md#dma)
 
 > [!NOTE]
-> -  You cannot click the *Publish* button when Visual Studio is running in debug mode.
-> -  DIS will refuse to publish a protocol
+> - You cannot click the *Publish* button when Visual Studio is running in debug mode.
+> - DIS will refuse to publish a protocol
 >     - when the *Protocol.Type* tag contain an incorrect value,
 >     - when the *Protocol.Version* tag is empty, or
 >     - when the *Protocol.Name* tag is empty.
@@ -234,8 +234,8 @@ If you want to automatically generate *\<Param>* tags (as well as all the necess
 9. Define the parameter polling, and click *Finish*.
 
 > [!NOTE]
-> -  When an XML/JSON node does not contain a value, a parameter of type “string” will be created, and a warning icon will appear next to the node in the XML/JSON source file.
-> -  Obsolete or deprecated MIB nodes will not be imported when you generate parameters based on MIB data.
+> - When an XML/JSON node does not contain a value, a parameter of type “string” will be created, and a warning icon will appear next to the node in the XML/JSON source file.
+> - Obsolete or deprecated MIB nodes will not be imported when you generate parameters based on MIB data.
 
 #### Generating Write parameters for Read parameters
 
@@ -260,8 +260,8 @@ If you want to automatically generate parameters of type “write” for a numbe
         If you want to enable this attribute for all SNMP parameters in the list, select the “select all” checkbox in the column header. <br>Note that when the protocol does not contain any SNMP parameters, this “select all” checkbox will be disabled, as will all “SNMP Set and Get” checkboxes for the non-SNMP parameters in the list.
 
 > [!NOTE]
-> -  As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
-> -  Only rows of which the checkbox is selected are taken into account when performing the above-mentioned validation.
+> - As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
+> - Only rows of which the checkbox is selected are taken into account when performing the above-mentioned validation.
 
 #### Repeating selected text
 
@@ -350,8 +350,8 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 |          | Copy Script to Clipboard              | Copy the entire contents of the “Exe” C# code block (i.e. the Automation script) to the Windows Clipboard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 > [!NOTE]
-> -  If, in an “Include in ...” list or an “Add Existing ...” list, you select an item that is already included, then that item will be removed.
-> -  “Include in ...” and “Add Existing ...” lists do not close when you have selected an item. They will stay open to allow you to select multiple items.
+> - If, in an “Include in ...” list or an “Add Existing ...” list, you select an item that is already included, then that item will be removed.
+> - “Include in ...” and “Add Existing ...” lists do not close when you have selected an item. They will stay open to allow you to select multiple items.
 
 #### Intellisense and instant XML validation
 
@@ -379,7 +379,7 @@ To insert a snippet while working in the XML editor:
 
 > [!NOTE]
 > If you want to insert a particular snippet without having to go through the above-mentioned snippet folder and all its subfolders, use the following shortcut:
-> -  At the location where you want to insert the snippet, enter “\<“, type the name of the XML tag (or select it from the Intellisense list), and press TAB.
+> - At the location where you want to insert the snippet, enter “\<“, type the name of the XML tag (or select it from the Intellisense list), and press TAB.
 
 #### Context-sensitive help in tooltips
 

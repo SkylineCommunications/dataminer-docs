@@ -44,8 +44,8 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 ```
 
 > [!NOTE]
-> -  Adding "#" in front of the URL ensures that the video is displayed in an embedded browser. If you do not add this, the shape is rendered as it is drawn in Visio and clicking it opens your default browser and navigates to the link.
-> -  If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding “*toolbar=false*” or “*showtoolbar=false*” to the value of the **Link** shape data. For example: *#http://\<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC<br>&source=http://\<DMAIP>/myvideo.mpeg&showtoolbar=false*
+> - Adding "#" in front of the URL ensures that the video is displayed in an embedded browser. If you do not add this, the shape is rendered as it is drawn in Visio and clicking it opens your default browser and navigates to the link.
+> - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding “*toolbar=false*” or “*showtoolbar=false*” to the value of the **Link** shape data. For example: *#http://\<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC<br>&source=http://\<DMAIP>/myvideo.mpeg&showtoolbar=false*
 
 ### Video server parameters
 
@@ -78,10 +78,10 @@ Depending on the DataMiner version, additional configuration is possible in the 
     ```
 
     > [!NOTE]
-    > -  Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
-    > -  Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](Placeholders_for_variables_in_shape_data_values.md#escapedatastringx)). For example: *https://\<DMAIP>/VideoThumbnails/Video.htm?type=<br>Generic%20VLC&source=\[EscapeDataString:\[param:\*,10014\]\]*
-    > -  When the authentication token expires, the URL has to be updated with the new token.
-    > -  URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
+    > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
+    > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](Placeholders_for_variables_in_shape_data_values.md#escapedatastringx)). For example: *https://\<DMAIP>/VideoThumbnails/Video.htm?type=<br>Generic%20VLC&source=\[EscapeDataString:\[param:\*,10014\]\]*
+    > - When the authentication token expires, the URL has to be updated with the new token.
+    > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 
 ### Allowed paths in case of connection via DataMiner proxy
 
@@ -136,10 +136,10 @@ To do so:
 
     > [!NOTE]
     > When this property is set to false (the default setting), the following validation is performed during HTTP parsing:
-    > -  In end-of-line code, only CRLF is allowed, not CR or LF alone.
-    > -  Headers names may not have spaces in them.
-    > -  If multiple status lines exist, all additional status lines are treated as malformed header name/value pairs.
-    > -  The status line must have a status description, in addition to a status code.
+    > - In end-of-line code, only CRLF is allowed, not CR or LF alone.
+    > - Headers names may not have spaces in them.
+    > - If multiple status lines exist, all additional status lines are treated as malformed header name/value pairs.
+    > - The status line must have a status description, in addition to a status code.
     >
     > Regardless of whether the property is set to true or false, header names may not contain non-ASCII characters.
 
@@ -158,7 +158,7 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 ```
 
 > [!NOTE]
-> -  For more information on HLS, see <https://github.com/video-dev/hls.js/>
-> -  All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>.
-> -  If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.
+> - For more information on HLS, see <https://github.com/video-dev/hls.js/>
+> - All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>.
+> - If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.
 >

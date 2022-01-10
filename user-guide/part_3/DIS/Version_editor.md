@@ -68,8 +68,8 @@ To remove a reference
 
 > [!NOTE]
 > In the *Interface* tab of the *DIS Settings* window, you can define the URL format of the two types of references in the following fields:
-> -  Task URL String Format
-> -  Reference URL String Format
+> - Task URL String Format
+> - Reference URL String Format
 >
 > In both values, you can use the “{ref}” placeholder. When, in the version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the Reference column.
 >
@@ -98,7 +98,7 @@ In this tab, you can find an overview of all versions of the current protocol.
     - To a minor version, you can add a list of features, changes and fixes, and a list of references. See also [Current version](#current-version).
 
 > [!NOTE]
-> -  All four parts of a version number (branch, system, major and minor) are editable. When you change one of those four numbers of a particular version, its entire version tree will be adapted.
-> -  When you select a version that is not the current version, you can click the *Set this version as current button* to make that version the current version. Also, in the version tree on the left, you can right-click a version and select *Set as current version*. The current version and all its parent versions will be marked in bold.
-> -  When you add a minor version, this new version will automatically inherit all data from the current version and become itself the new current version.
+> - All four parts of a version number (branch, system, major and minor) are editable. When you change one of those four numbers of a particular version, its entire version tree will be adapted.
+> - When you select a version that is not the current version, you can click the *Set this version as current button* to make that version the current version. Also, in the version tree on the left, you can right-click a version and select *Set as current version*. The current version and all its parent versions will be marked in bold.
+> - When you add a minor version, this new version will automatically inherit all data from the current version and become itself the new current version.
 >

@@ -3,9 +3,9 @@
 If you link a shape to an alarm filter, it can be used to show statistical information about the alarms that match the filter.
 
 > [!NOTE]
-> -  Depending on their security level, different users may see different statistics.
-> -  Because Visio files need to be able to display information for all users, only shared filters can be used.
-> -  Cleared alarms are automatically removed from alarm filters in Visio. For information or suggestion events, this means that only open events are included, e.g. when a backup is currently ongoing.
+> - Depending on their security level, different users may see different statistics.
+> - Because Visio files need to be able to display information for all users, only shared filters can be used.
+> - Cleared alarms are automatically removed from alarm filters in Visio. For information or suggestion events, this means that only open events are included, e.g. when a backup is currently ongoing.
 
 Configure the shape data fields as follows:
 

@@ -28,6 +28,6 @@ To automatically generate tickets, this parameter must be used in conjunction wi
 
 > [!TIP]
 > See also:
-> -  [DMS Automation](../automation/automation.md#dms-automation)
-> -  [DMS Correlation](../correlation/correlation.md#dms-correlation)
+> - [DMS Automation](../automation/automation.md#dms-automation)
+> - [DMS Correlation](../correlation/correlation.md#dms-correlation)
 >

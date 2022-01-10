@@ -13,5 +13,3 @@ This is an abstract class, containing the other Automation options classes:
 The structure of these classes is as follows, with the subclasses inheriting all properties of the classes above them:
 
 ![](../../images/AutomationUIConfigOptions_diagram.jpg)
-
-

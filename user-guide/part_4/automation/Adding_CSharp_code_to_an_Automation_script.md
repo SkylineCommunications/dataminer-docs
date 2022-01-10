@@ -35,8 +35,8 @@ To add C# code to a script:
 
 
         > [!NOTE]
-        > -  This is only applicable in case the script block only contains the lines of code to execute (i.e. it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
-        > -  The following using statements are added by default:
+        > - This is only applicable in case the script block only contains the lines of code to execute (i.e. it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
+        > - The following using statements are added by default:
         >     - using System
         >     - using System.IO
         >     - using Skyline.DataMiner.Automation
@@ -44,7 +44,7 @@ To add C# code to a script:
         >     - using Skyline.DataMiner.Net.Exceptions
         >     - using Skyline.DataMiner.Net.Messages
         >     - using Skyline.DataMiner.Net.AutomationUI
-        > -  To reference additional DLLs, e.g. a custom DLL placed in the *C:\\Skyline DataMiner\\ProtocolScripts* folder, you need to specify an absolute path.
+        > - To reference additional DLLs, e.g. a custom DLL placed in the *C:\\Skyline DataMiner\\ProtocolScripts* folder, you need to specify an absolute path.
 
 
 
@@ -54,14 +54,14 @@ To add C# code to a script:
 
         > [!NOTE]
         > The following DLLs are referenced by default:
-        > -  System.dll
-        > -  System.Core.dll (from DataMiner 9.5.13 onwards)
-        > -  System.Xml.dll (from DataMiner 9.5.13 onwards)
-        > -  SLManagedAutomation.dll
-        > -  SLNetTypes.dll
-        > -  Skyline.DataMiner.Storage.Types.dll
-        > -  SLLoggerUtil.dll
-        > -  SLAnalyticsTypes.dll (from DataMiner 10.1.11 onwards
+        > - System.dll
+        > - System.Core.dll (from DataMiner 9.5.13 onwards)
+        > - System.Xml.dll (from DataMiner 9.5.13 onwards)
+        > - SLManagedAutomation.dll
+        > - SLNetTypes.dll
+        > - Skyline.DataMiner.Storage.Types.dll
+        > - SLLoggerUtil.dll
+        > - SLAnalyticsTypes.dll (from DataMiner 10.1.11 onwards
 
 
 
@@ -225,9 +225,9 @@ public delegate void AutomationEntryPointTest(IEngine engine, string testMessage
 ```
 
 > [!NOTE]
-> -  The entry points must be public, and may be static or non-static.
-> -  The method names and parameter names can be chosen at will.
-> -  Cube does not support custom entry points. As such, to execute an Automation script from Cube, you need a Script class with a Run method. Custom entry points can be used when executing an Automation script using the *ExecuteScriptMessage* class.
+> - The entry points must be public, and may be static or non-static.
+> - The method names and parameter names can be chosen at will.
+> - Cube does not support custom entry points. As such, to execute an Automation script from Cube, you need a Script class with a Run method. Custom entry points can be used when executing an Automation script using the *ExecuteScriptMessage* class.
 
 Restrictions:
 

@@ -60,8 +60,8 @@ value=[ParameterID][Operator][Value]
 ```
 
 > [!NOTE]
-> -  There must be a space before and after the operator. Possible operators: == (equal to) and != (not equal to)
-> -  In a parameter filter, you can use placeholders referring to variables declared in the *\<ParametersSourceInfo>* tag. The \[DMA_USERNAME\] placeholder, however, is a general placeholder that does not need to be declared. At runtime, it will be replaced by the name of the current user.
+> - There must be a space before and after the operator. Possible operators: == (equal to) and != (not equal to)
+> - In a parameter filter, you can use placeholders referring to variables declared in the *\<ParametersSourceInfo>* tag. The \[DMA_USERNAME\] placeholder, however, is a general placeholder that does not need to be declared. At runtime, it will be replaced by the name of the current user.
 
 ### Passing ParametersSourceInfo data along in the map’s URL
 

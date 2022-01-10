@@ -13,8 +13,8 @@ When generating child shapes based on table rows, the service context is taken i
 When, inside a Microsoft Visio drawing, you specify placeholders like \[Param: ...\] and \[Property: ...\] in child shape data items of type “Row”, you can use \[tableindex\] and \[displaytableindex\] inside those placeholders. These will then dynamically be replaced by either the row table index or the row display index.
 
 > [!NOTE]
-> -  It is also possible to make the shapes use a different index than that of the original row. See [Making a shape use a different index than that of the original row](#making-a-shape-use-a-different-index-than-that-of-the-original-row).
-> -  Just like for shape positioning based on dynamic tables, you can also use the *LinkElement* and *DynamicData* ColumnOptions in the protocol when generating shapes based on table rows. If the *LinkElement* option is used, the newly created shapes can be linked to a specified element. With the *DynamicData* option, they can have their interface placeholders resolved by dynamic data. For more information, see [Shape positioning based on coordinates stored in dynamic tables](Positioning_shapes_dynamically1.md#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
+> - It is also possible to make the shapes use a different index than that of the original row. See [Making a shape use a different index than that of the original row](#making-a-shape-use-a-different-index-than-that-of-the-original-row).
+> - Just like for shape positioning based on dynamic tables, you can also use the *LinkElement* and *DynamicData* ColumnOptions in the protocol when generating shapes based on table rows. If the *LinkElement* option is used, the newly created shapes can be linked to a specified element. With the *DynamicData* option, they can have their interface placeholders resolved by dynamic data. For more information, see [Shape positioning based on coordinates stored in dynamic tables](Positioning_shapes_dynamically1.md#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
 
 ### Child-level shape data
 
@@ -73,8 +73,8 @@ The following shape data fields can be added to the group containing the table r
     | TableColumn\|\<ParamID> | Sort based on the values in a specific column of the table for which shapes are generated. <br> From DataMiner 9.5.2 onwards, multiple table columns can be specified, separated by pipe characters. Optionally, you can also add the sorting direction for each table column, separated from the table column by a comma. If no sorting direction is specified, by default, the shapes will be sorted in ascending order. E.g. *TableColumn\|101\|102,desc\|103* |
 
     > [!NOTE]
-    > -  If you apply sorting by table column, the shapes will automatically be sorted again every time a value changes in the specified column.
-    > -  From DataMiner 10.2.0/10.1.1 onwards, placeholders such as \[var:VariableName\] can be used in ChildrenSort shape data. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+    > - If you apply sorting by table column, the shapes will automatically be sorted again every time a value changes in the specified column.
+    > - From DataMiner 10.2.0/10.1.1 onwards, placeholders such as \[var:VariableName\] can be used in ChildrenSort shape data. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
 
     To specify a sort order, add one of the following suffixes:
 
@@ -147,8 +147,8 @@ The following shape data fields can be added to the group containing the table r
     ```
 
     > [!NOTE]
-    > -  In this shape data field, you can use placeholders like e.g. \[this service\].
-    > -  From DataMiner 9.5.5/9.5.0 CU2 onwards, it is possible to specify an element alias from a particular service instead of the actual element name.
+    > - In this shape data field, you can use placeholders like e.g. \[this service\].
+    > - From DataMiner 9.5.5/9.5.0 CU2 onwards, it is possible to specify an element alias from a particular service instead of the actual element name.
 
 - **SubscriptionFilter**: A shape data item of type **SubscriptionFilter** can be added to make child shapes appear only if a specific table column contains a certain value.
 
@@ -196,7 +196,7 @@ The following shape data fields can be added to the group containing the table r
             | ChildrenFilter     | TimeWindow:TimeColumn=5,StartWindow=-3600,EndWindow=3600,UpdateTime=5 |
 
             > [!NOTE]
-            > -  As the time window filter is configured on the *Children* shape itself, and not on the child templates, only one filter can be specified for all child shapes.
+            > - As the time window filter is configured on the *Children* shape itself, and not on the child templates, only one filter can be specified for all child shapes.
 
     - Using placeholders such as *\[var:\]* and *\[param:\]* within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards. This can for instance be used to filter the child shapes using a session variable in the filter value.
 
@@ -225,10 +225,10 @@ Example: If you specify the following shape data in the main shape and the subsh
 | Subshape   | Parameter        | 118,\[displayTableIndex\] |
 
 > [!NOTE]
-> -  You can also use the double asterisk inside a \[Param:...\] placeholder. Example: Parameter=65022,\[Param:\*\*,118,\[displaytableindex\]\]
-> -  You can use the \[displaytableIndex\] and \[tableIndex\] placeholders to link to the original row key (see the example above).
-> -  The parameter and table index can either be separated by a comma, as illustrated above, or by a colon. The first separator that is found will be used to separate the parameter from the index, and any other separators will be considered part of the index.
-> -  With older versions of DataMiner, if the value of the cell you link to is empty, the display key will be shown instead. From DataMiner 9.0.0 CU15/DataMiner 9.5.3 onwards, in that case no value will be shown. However, to have the display key shown instead, you can specify the keyword *\[DisplayTableIndexValue\]* in the **Parameter** shape data field.
+> - You can also use the double asterisk inside a \[Param:...\] placeholder. Example: Parameter=65022,\[Param:\*\*,118,\[displaytableindex\]\]
+> - You can use the \[displaytableIndex\] and \[tableIndex\] placeholders to link to the original row key (see the example above).
+> - The parameter and table index can either be separated by a comma, as illustrated above, or by a colon. The first separator that is found will be used to separate the parameter from the index, and any other separators will be considered part of the index.
+> - With older versions of DataMiner, if the value of the cell you link to is empty, the display key will be shown instead. From DataMiner 9.0.0 CU15/DataMiner 9.5.3 onwards, in that case no value will be shown. However, to have the display key shown instead, you can specify the keyword *\[DisplayTableIndexValue\]* in the **Parameter** shape data field.
 
 ### Making a shape use a different index than that of the original row
 
@@ -245,5 +245,3 @@ Normally, when shapes are created dynamically based on rows in a table, the inde
 
 > [!NOTE]
 > If the “AllowCustomIndex” option is used, you can use the placeholders \[ParentTableIndex\] and \[ParentDisplayTableIndex\] to refer to the index and display index of the table row associated with the immediate parent shape.
-
-

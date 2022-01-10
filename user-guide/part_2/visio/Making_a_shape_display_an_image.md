@@ -25,8 +25,8 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
     3. In *Image Source*, enter the URL of the image (e.g. “http://IpAddress/Folder/Picture.png”).
 
         > [!NOTE]
-        > -  Both HTTP and HTTPS are supported.
-        > -  If you want the shape to display an image on a DataMiner Agent, see [Displaying images located on a DataMiner Agent](#displaying-images-located-on-a-dataminer-agent).
+        > - Both HTTP and HTTPS are supported.
+        > - If you want the shape to display an image on a DataMiner Agent, see [Displaying images located on a DataMiner Agent](#displaying-images-located-on-a-dataminer-agent).
 
     4. In *Refresh rate*, specify how frequently you want the image to be refreshed (in milliseconds).
 
@@ -43,8 +43,8 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
     ```
 
     > [!NOTE]
-    > -  Both HTTP and HTTPS are supported.
-    > -  If you want the shape to display an image on a DataMiner Agent, see [Displaying images located on a DataMiner Agent](#displaying-images-located-on-a-dataminer-agent).
+    > - Both HTTP and HTTPS are supported.
+    > - If you want the shape to display an image on a DataMiner Agent, see [Displaying images located on a DataMiner Agent](#displaying-images-located-on-a-dataminer-agent).
 
 3. Save the Visio file.
 

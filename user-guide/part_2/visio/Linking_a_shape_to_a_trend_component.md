@@ -3,9 +3,9 @@
 Using a shape data field of type **Component**, you can configure a Visio shape to display a trend component.
 
 > [!NOTE]
-> -  It is also possible to turn a shape into a parameter chart instead of linking it to a trend component. See [Creating a parameter chart](Creating_a_parameter_chart.md).
-> -  In a Visio trend component, the alarm timeline along the X-axis is only displayed if the graph initially shows only one parameter, and only as long as that parameter is displayed.
-> -  In the Monitoring and Dashboards apps, trend components in a visual overview are only supported from DataMiner 10.0.12 onwards.
+> - It is also possible to turn a shape into a parameter chart instead of linking it to a trend component. See [Creating a parameter chart](Creating_a_parameter_chart.md).
+> - In a Visio trend component, the alarm timeline along the X-axis is only displayed if the graph initially shows only one parameter, and only as long as that parameter is displayed.
+> - In the Monitoring and Dashboards apps, trend components in a visual overview are only supported from DataMiner 10.0.12 onwards.
 
 In this section:
 
@@ -42,11 +42,11 @@ Add the following shape data fields to the shape:
         ```
 
         > [!NOTE]
-        > -  Instead of specifying the DMA ID/Element ID in the **Parameters** shape data field, you can also specify an **Element** shape data field and set it to the element name, and then only list the parameters in the **Parameters** shape data field, separated by pipe characters.
-        > -  You can use element wildcards, e.g. “*\*:1010:0*” for index 0 on parameter 1010 of a table.
-        > -  By default no more than 10 results can be displayed if a wildcard is used. If more results are available than this default limit, a notification will be displayed.
-        > -  From DataMiner 9.5.1 onwards, you can also use a wildcard for the parameter index.
-        > -  From DataMiner 9.6.8 onwards, this syntax allows the use of element names, \[this element\] placeholders and keys containing forward slashes (e.g. dmaID/elementID).
+        > - Instead of specifying the DMA ID/Element ID in the **Parameters** shape data field, you can also specify an **Element** shape data field and set it to the element name, and then only list the parameters in the **Parameters** shape data field, separated by pipe characters.
+        > - You can use element wildcards, e.g. “*\*:1010:0*” for index 0 on parameter 1010 of a table.
+        > - By default no more than 10 results can be displayed if a wildcard is used. If more results are available than this default limit, a notification will be displayed.
+        > - From DataMiner 9.5.1 onwards, you can also use a wildcard for the parameter index.
+        > - From DataMiner 9.6.8 onwards, this syntax allows the use of element names, \[this element\] placeholders and keys containing forward slashes (e.g. dmaID/elementID).
 
     - For trend groups, either set the field to “*TrendGroup=username:groupname*” for a private trend group, where username is the name of the user that created the group, or to “*TrendGroup=sharedusersettings:groupname*” for a shared trend group or a read-only group. Set the field to “*\|*” to display an empty trend component.
 

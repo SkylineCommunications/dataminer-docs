@@ -19,8 +19,8 @@ To create a simulated element:
 6. Right-click the element, and select *Actions \> Enable simulation*. The element will then restart and begin using the simulation file for its responses.
 
     > [!NOTE]
-    > -  Make sure you only do this with elements for which there is a simulation file in the folder *C:\\Skyline DataMiner\\simulations\\*. Otherwise, the element will become unresponsive.
-    > -  Simulations of elements with HTTP protocols are currently not yet supported.
+    > - Make sure you only do this with elements for which there is a simulation file in the folder *C:\\Skyline DataMiner\\simulations\\*. Otherwise, the element will become unresponsive.
+    > - Simulations of elements with HTTP protocols are currently not yet supported.
 
 > [!TIP]
 > See also:

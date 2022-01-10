@@ -4,8 +4,8 @@ If, especially in EPM environments, you use different types of lines for differe
 
 > [!TIP]
 > See also:
-> -  [Specifying an EPM parameter that can be used to filter](Specifying_an_EPM_parameter_that_can_be_used_to_filter.md)
-> -  [Dynamic table filter syntax](Dynamic_table_filter_syntax.md)
+> - [Specifying an EPM parameter that can be used to filter](Specifying_an_EPM_parameter_that_can_be_used_to_filter.md)
+> - [Dynamic table filter syntax](Dynamic_table_filter_syntax.md)
 
 ### Configuring the shape data field
 

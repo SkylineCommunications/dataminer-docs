@@ -17,5 +17,3 @@ A modulator, normally used for transmission of channel X at location Y could be 
 ```txt
 LocationY ChannelX Mod
 ```
-
-

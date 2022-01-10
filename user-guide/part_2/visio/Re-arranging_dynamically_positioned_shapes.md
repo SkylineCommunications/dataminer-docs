@@ -9,7 +9,7 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 3. When you have finished re-arranging the shapes, click *Apply*.
 
 > [!NOTE]
-> -  In DataMiner versions prior to 9.0.0, users need to have the permission “Edit Visio drawings” to use this functionality. From version 9.0.0 onwards, this is no longer required.
+> - In DataMiner versions prior to 9.0.0, users need to have the permission “Edit Visio drawings” to use this functionality. From version 9.0.0 onwards, this is no longer required.
 
 > [!TIP]
 > See also:

@@ -19,8 +19,8 @@ The following options are available:
     - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 
 > [!NOTE]
-> -  The Indexing Engine configuration is saved in the file *Indexing.xml* in the folder *C:\\Skyline DataMiner*.
-> -  To include booking data from the Indexing database in a custom backup, select *Include SRM in backup* in the content tab of the *Backup* page. See [Configuring the DataMiner backups](../DataminerAgents/Backing_up_a_DataMiner_Agent_in_DataMiner_Cube.md#configuring-the-dataminer-backups).
+> - The Indexing Engine configuration is saved in the file *Indexing.xml* in the folder *C:\\Skyline DataMiner*.
+> - To include booking data from the Indexing database in a custom backup, select *Include SRM in backup* in the content tab of the *Backup* page. See [Configuring the DataMiner backups](../DataminerAgents/Backing_up_a_DataMiner_Agent_in_DataMiner_Cube.md#configuring-the-dataminer-backups).
 
 > [!TIP]
 > See also:

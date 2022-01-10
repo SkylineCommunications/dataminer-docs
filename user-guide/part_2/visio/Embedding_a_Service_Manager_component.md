@@ -41,8 +41,8 @@ Configure the following shape data fields on the shape that is to contain the Se
     | ShowNodeIDs=                                             | When set to *true*, displays the node IDs of the service definition.<br> Available from DataMiner 10.0.0/10.0.2 onwards.                                                                                                                                                                                                                                                                                                                                                               |
 
     > [!NOTE]
-    > -  Separate the various *ComponentOptions* with semicolons (“;”).
-    > -  If the AutoLoadExternalChanges and AutoIgnoreExternalChanges component options are both used, AutoLoadExternalChanges will take precedence. As long as there are no (unsaved) client-side changes, external changes will be loaded automatically. As soon as there are (unsaved) client-side changes, external changes will be discarded.
+    > - Separate the various *ComponentOptions* with semicolons (“;”).
+    > - If the AutoLoadExternalChanges and AutoIgnoreExternalChanges component options are both used, AutoLoadExternalChanges will take precedence. As long as there are no (unsaved) client-side changes, external changes will be loaded automatically. As soon as there are (unsaved) client-side changes, external changes will be discarded.
 
     > [!TIP]
     > See also:

@@ -13,8 +13,8 @@
 4. In the *Security* box, select whether other users should be able to view and edit the dashboard.
 
     > [!NOTE]
-    > -  Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](Changing_dashboard_settings.md).
-    > -  The built-in Administrator account always has full access to all dashboards.
+    > - Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](Changing_dashboard_settings.md).
+    > - The built-in Administrator account always has full access to all dashboards.
 
 5. Click *OK*.
 

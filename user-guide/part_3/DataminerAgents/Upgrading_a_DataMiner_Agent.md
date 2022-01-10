@@ -19,6 +19,6 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/>
-> -  <https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/>
+> - <https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/>
+> - <https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/>
 >

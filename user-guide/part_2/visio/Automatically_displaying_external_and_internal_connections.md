@@ -11,17 +11,17 @@ External and internal connections can be displayed automatically based on DataMi
 3. Draw shapes that represent the elements. In each of those shapes, draw subshapes that represent the element’s interfaces, and group those into one shape group.
 
     > [!NOTE]
-    > -  Microsoft Visio does not automatically add connection points to groups. These must be added manually.
-    > -  From DataMiner 9.0.0 onwards, virtual primary elements from a redundancy group can be used in a Visual Overview displaying DCF connections. The Visual Overview will then automatically update if the redundancy group switches to a different backup element.
-    > -  If you want to display external connections to elements that are not displayed in the Visio drawing, shapes representing those elements can be generated dynamically. See [Dynamically generating shapes for elements that are out of scope](Dynamically_generating_shapes_for_elements_that_are_out_of_scope.md).
+    > - Microsoft Visio does not automatically add connection points to groups. These must be added manually.
+    > - From DataMiner 9.0.0 onwards, virtual primary elements from a redundancy group can be used in a Visual Overview displaying DCF connections. The Visual Overview will then automatically update if the redundancy group switches to a different backup element.
+    > - If you want to display external connections to elements that are not displayed in the Visio drawing, shapes representing those elements can be generated dynamically. See [Dynamically generating shapes for elements that are out of scope](Dynamically_generating_shapes_for_elements_that_are_out_of_scope.md).
 
 4. To each of the subshapes, add a shape data field of type **Interface** and set its value to an interface ID, or to an interface name (optionally using wildcards).
 
     > [!NOTE]
-    > -  For more information on how to link shapes to interfaces that are generated dynamically, see [Linking shapes to dynamically created interfaces](#linking-shapes-to-dynamically-created-interfaces)
-    > -  You can also have interfaces assigned automatically instead of hard-coding them. See [Automatically linking interfaces to subshapes](#automatically-linking-interfaces-to-subshapes).
-    > -  If you want a subshape to display the name of the interface it represents, then enter “\*” in the shape text, add a shape data field of type **Info** to the subshape, and set its value to “*NAME*”.
-    > -  Changes to interfaces are automatically processed by DataMiner Cube and reflected in Visual Overview. If, for example, an element with a particular interface is stopped, the interface will no longer be shown in Visual Overview.
+    > - For more information on how to link shapes to interfaces that are generated dynamically, see [Linking shapes to dynamically created interfaces](#linking-shapes-to-dynamically-created-interfaces)
+    > - You can also have interfaces assigned automatically instead of hard-coding them. See [Automatically linking interfaces to subshapes](#automatically-linking-interfaces-to-subshapes).
+    > - If you want a subshape to display the name of the interface it represents, then enter “\*” in the shape text, add a shape data field of type **Info** to the subshape, and set its value to “*NAME*”.
+    > - Changes to interfaces are automatically processed by DataMiner Cube and reflected in Visual Overview. If, for example, an element with a particular interface is stopped, the interface will no longer be shown in Visual Overview.
 
 5. Optionally, specify the following additional options in the **Connection** shape data field:
 
@@ -33,8 +33,8 @@ External and internal connections can be displayed automatically based on DataMi
         | Connectivity\|MultipleCurvedLinesMode | Displays multiple connections as curved lines.   |
 
         > [!NOTE]
-        > -  Multiple connections are possible between different interfaces on external connections, and between any two interfaces on internal connections. However, multiple connections between the same interfaces on external connections are currently not supported. These are always displayed as a single line.
-        > -  From DataMiner 9.5.3 onwards, it is possible to group connection lines by table column. See [Grouping multiple connection lines by table column](#grouping-multiple-connection-lines-by-table-column).
+        > - Multiple connections are possible between different interfaces on external connections, and between any two interfaces on internal connections. However, multiple connections between the same interfaces on external connections are currently not supported. These are always displayed as a single line.
+        > - From DataMiner 9.5.3 onwards, it is possible to group connection lines by table column. See [Grouping multiple connection lines by table column](#grouping-multiple-connection-lines-by-table-column).
 
     - If “*MultipleLinesMode*” or “*MultipleCurvedLinesMode*” are used, add the option *LineDistance=\<*number*\>* to customize the distance between the lines. For example, to display multiple connections as straight lines with a distance of twice the line thickness, specify the following value for the **Connection** shape data field:
 
@@ -70,8 +70,8 @@ If a page contains multiple instances of the same element, you can assign group 
 To do so, define different interface subshapes on the different parent shapes, to each of which the shape data field **Option** with value *“InternalConnectionGroup=Groupname”* has been added.
 
 > [!NOTE]
-> -  Interfaces will be resolved in the following order: Interface ID \> Interface name (optionally containing wildcards) \> “\[Auto\]\|ActivePath” \> “\[Auto\]\|Connector” \> “\[Auto\]\|Input” \> “\[Auto\]\|Output” \> “\[Auto\]\|InputOutput” \> “\[Auto\]”.
-> -  From DataMiner version 8.5.4 onwards, connections to non-existing interfaces of a parent shape are not shown. The default behavior in older versions is for the connections to be redirected to the center of the parent shape. If you want the same behavior to occur from version 8.5.4 onwards, add a shape data field to the parent shape of type **Options**, and set its value to “*AllowCentralConnectivity*”.
+> - Interfaces will be resolved in the following order: Interface ID \> Interface name (optionally containing wildcards) \> “\[Auto\]\|ActivePath” \> “\[Auto\]\|Connector” \> “\[Auto\]\|Input” \> “\[Auto\]\|Output” \> “\[Auto\]\|InputOutput” \> “\[Auto\]”.
+> - From DataMiner version 8.5.4 onwards, connections to non-existing interfaces of a parent shape are not shown. The default behavior in older versions is for the connections to be redirected to the center of the parent shape. If you want the same behavior to occur from version 8.5.4 onwards, add a shape data field to the parent shape of type **Options**, and set its value to “*AllowCentralConnectivity*”.
 
 ### Linking shapes to dynamically created interfaces
 
@@ -105,6 +105,6 @@ For example:
 | GroupBy    | TableColumn=145                                    |
 
 > [!NOTE]
-> -  This can particularly be of use when displaying connections between dynamically positioned shapes that are grouped by table column. See [Enabling grouping of dynamically positioned shapes](Enabling_grouping_of_dynamically_positioned_shapes.md).
-> -  It is also possible to apply conditional highlighting on connections based on a table column value. See [Highlighting connections based on the table column value of connected shapes](Options_for_highlighting_DCF_connections.md#highlighting-connections-based-on-the-table-column-value-of-connected-shapes).
+> - This can particularly be of use when displaying connections between dynamically positioned shapes that are grouped by table column. See [Enabling grouping of dynamically positioned shapes](Enabling_grouping_of_dynamically_positioned_shapes.md).
+> - It is also possible to apply conditional highlighting on connections based on a table column value. See [Highlighting connections based on the table column value of connected shapes](Options_for_highlighting_DCF_connections.md#highlighting-connections-based-on-the-table-column-value-of-connected-shapes).
 >

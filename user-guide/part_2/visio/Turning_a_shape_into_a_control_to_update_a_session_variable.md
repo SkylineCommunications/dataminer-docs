@@ -4,10 +4,10 @@ Using a shape data field of type **SetVar**, you can turn a shape or a page into
 
 > [!TIP]
 > See also:
-> -  [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md)
-> -  [Initializing a session variable](Initializing_a_session_variable.md)
-> -  [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md)
-> -  [Embedding a router control component](Embedding_a_router_control_component.md)
+> - [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md)
+> - [Initializing a session variable](Initializing_a_session_variable.md)
+> - [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md)
+> - [Embedding a router control component](Embedding_a_router_control_component.md)
 
 ### Configuring the shape data field
 
@@ -29,7 +29,7 @@ Add a shape data field of type **SetVar** to the shape or the page, and set its 
     ```
 
     > [!NOTE]
-    > -  To initialize multiple values, separate the entries by pipe characters.
+    > - To initialize multiple values, separate the entries by pipe characters.
 
 - If you want the user to be able to select the new value from a drop-down list with fixed values:
 

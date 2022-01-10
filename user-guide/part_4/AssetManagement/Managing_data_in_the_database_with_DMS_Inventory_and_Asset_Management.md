@@ -19,6 +19,6 @@ The following topics provide more information on managing data with DMS IAM:
 - [Starting a sync of the DataMiner database and the CMDB](Starting_a_sync_of_the_DataMiner_database_and_the_CMDB.md)
 
 > [!NOTE]
-> -  In the configuration file, user groups can be granted or denied access to tables. For more information, see [Configuring DMS Inventory and Asset Management](Configuring_DMS_Inventory_and_Asset_Management.md).
-> -  When a user updates, adds or deletes a row in Asset Manager, an information event is generated in the Alarm Console.
+> - In the configuration file, user groups can be granted or denied access to tables. For more information, see [Configuring DMS Inventory and Asset Management](Configuring_DMS_Inventory_and_Asset_Management.md).
+> - When a user updates, adds or deletes a row in Asset Manager, an information event is generated in the Alarm Console.
 >

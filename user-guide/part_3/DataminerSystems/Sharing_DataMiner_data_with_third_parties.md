@@ -14,8 +14,8 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> -  [Configuring client communication settings](../DataminerAgents/DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings)
-> -  [Security](../security/security.md)
+> - [Configuring client communication settings](../DataminerAgents/DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings)
+> - [Security](../security/security.md)
 
 #### DataMiner Monitoring app
 
@@ -27,9 +27,9 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> -  [The Monitoring app user interface](../../part_1/GettingStarted/The_Monitoring_app_user_interface.md)
-> -  [The legacy Monitoring & Control app user interface](../../part_1/GettingStarted/The_legacy_Monitoring_Control_app_user_interface.md#the-legacy-monitoring--control-app-user-interface)
-> -  [Security](../security/security.md)
+> - [The Monitoring app user interface](../../part_1/GettingStarted/The_Monitoring_app_user_interface.md)
+> - [The legacy Monitoring & Control app user interface](../../part_1/GettingStarted/The_legacy_Monitoring_Control_app_user_interface.md#the-legacy-monitoring--control-app-user-interface)
+> - [Security](../security/security.md)
 
 #### DataMiner Reports
 
@@ -76,8 +76,8 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> -  [DataMiner interfaces](DataMiner_interfaces.md)
-> -  <https://help.dataminer.services/WebServices/>
+> - [DataMiner interfaces](DataMiner_interfaces.md)
+> - <https://help.dataminer.services/WebServices/>
 
 #### DataMiner Replication
 

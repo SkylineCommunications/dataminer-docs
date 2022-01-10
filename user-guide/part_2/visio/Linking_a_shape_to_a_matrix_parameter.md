@@ -17,7 +17,7 @@ Do the following to make a graphical representation of a matrix parameter.
 Connections between inputs and outputs will be drawn automatically.
 
 > [!NOTE]
-> -  When you right-click a shape linked to a matrix parameter, the shortcut menu will by default list all inputs defined in the protocol. However, it is possible that the number of inputs and outputs have been limited in the *port.xml* file.
+> - When you right-click a shape linked to a matrix parameter, the shortcut menu will by default list all inputs defined in the protocol. However, it is possible that the number of inputs and outputs have been limited in the *port.xml* file.
 
 ### Drawing the shapes representing the matrix inputs and outputs
 
@@ -32,8 +32,8 @@ Connections between inputs and outputs will be drawn automatically.
         - in the parameter alias file\* (i.e. the name that currently overrides the original name).
 
         > [!NOTE]
-        > -  By default, connections will start from the center of the shape.
-        > -  If you want an “input shape” to show the current Element state, add a shape data field to it of type **Parameter**, and set its value to “*\*\|Alarm*”.
+        > - By default, connections will start from the center of the shape.
+        > - If you want an “input shape” to show the current Element state, add a shape data field to it of type **Parameter**, and set its value to “*\*\|Alarm*”.
 
     - **Output**: Name of a matrix output, as specified
 
@@ -42,8 +42,8 @@ Connections between inputs and outputs will be drawn automatically.
         - in the parameter alias file (i.e. the name that currently overrides the original name). Such parameter alias files are often called *port.xml*, although a different name can be defined in the element protocol.
 
         > [!NOTE]
-        > -  By default, connections will end at the center of the shape.
-        > -  If you want an “output shape” to show the current Element state, add a shape data field to it of type **Parameter**, and set its value to “*\*\|Alarm*”.
+        > - By default, connections will end at the center of the shape.
+        > - If you want an “output shape” to show the current Element state, add a shape data field to it of type **Parameter**, and set its value to “*\*\|Alarm*”.
 
 ### Drawing the shapes displaying the input and output labels
 

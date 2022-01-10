@@ -50,6 +50,6 @@ When editing a task, you are only allowed to make a limited number of changes. S
 | Released in version | Cannot be changed.                                                                                                                                                                                                                                                                                  |
 
 > [!NOTE]
-> -  Only open tasks can be edited or deleted. Once a task has been closed, i.e. set to status “Closed” or “Closed - Rejected”, it can no longer be edited or deleted.
-> -  A task can only be deleted by the person who created it.
+> - Only open tasks can be edited or deleted. Once a task has been closed, i.e. set to status “Closed” or “Closed - Rejected”, it can no longer be edited or deleted.
+> - A task can only be deleted by the person who created it.
 >

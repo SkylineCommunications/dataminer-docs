@@ -15,8 +15,8 @@ The card pane of the Monitoring app is the large pane on the right side of the a
 - [Spectrum analyzer cards](#spectrum-analyzer-cards)
 
 > [!NOTE]
-> -  If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.
-> -  If the app is viewed in a browser that supports fullscreen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a fullscreen button is available:<br>![](../../images/CubeMaximize00028.png)
+> - If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.
+> - If the app is viewed in a browser that supports fullscreen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a fullscreen button is available:<br>![](../../images/CubeMaximize00028.png)
 >
 >    Click this button to view the item in fullscreen mode. To leave fullscreen mode using a keyboard, press Esc or F11, depending on the browser.
 

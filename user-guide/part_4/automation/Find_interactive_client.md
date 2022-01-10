@@ -15,7 +15,7 @@ To configure the action:
 - Next to *Timeout*, specify how long the script should wait for the user to react. When this timeout expires, the script will continue and the *FindInteractiveClient* method returns “False”.
 
 > [!NOTE]
-> -  If, as an interactive client, you manually execute a script from DataMiner Cube, you are automatically attached.
-> -  It is also possible to add this action within a C# block in a script. For more information, see [FindInteractiveClient](../../part_7/CsharpReference/Engine_methods.md#findinteractiveclient).
-> -  If an interactive script is launched, but it cannot be executed because an element or memory file is locked, a message will inform the user of which element or memory file is locked, and by whom.
+> - If, as an interactive client, you manually execute a script from DataMiner Cube, you are automatically attached.
+> - It is also possible to add this action within a C# block in a script. For more information, see [FindInteractiveClient](../../part_7/CsharpReference/Engine_methods.md#findinteractiveclient).
+> - If an interactive script is launched, but it cannot be executed because an element or memory file is locked, a message will inform the user of which element or memory file is locked, and by whom.
 >

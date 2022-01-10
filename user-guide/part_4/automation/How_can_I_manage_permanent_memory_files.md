@@ -28,5 +28,3 @@ To manage memory files containing an array of values:
         4. Repeat the previous step until all the necessary entries have been added.
 
         5. In the lower right corner, click *Save*.
-
-

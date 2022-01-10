@@ -61,9 +61,9 @@ The following keyboard shortcuts are available in Cube:
     |                                                                       | Enter            | Select the current option in the shortcut menu.                                              |
 
     > [!NOTE]
-    > -  If the focus is on the Surveyor list, it is possible to navigate through the list using the arrow keys, just like in any other tree view. To open a selected item in the Surveyor, press Enter.
-    > -  If an alarm is selected in the Alarm Console, press the Menu key to open the shortcut menu of the alarm. Alternatively, you can also press Shift + F10.
-    > -  To sort the alarm list in the Alarm Console, move the focus to the alarm list header using the Tab key if necessary, navigate to the column you want with the arrow keys, and press Enter to sort the list based on the selected column.
+    > - If the focus is on the Surveyor list, it is possible to navigate through the list using the arrow keys, just like in any other tree view. To open a selected item in the Surveyor, press Enter.
+    > - If an alarm is selected in the Alarm Console, press the Menu key to open the shortcut menu of the alarm. Alternatively, you can also press Shift + F10.
+    > - To sort the alarm list in the Alarm Console, move the focus to the alarm list header using the Tab key if necessary, navigate to the column you want with the arrow keys, and press Enter to sort the list based on the selected column.
 
 - Keyboard shortcuts in an embedded Chrome browser (supported from DataMiner 10.0.0 CU20, 10.1.0 CU9 and 10.1.12 onwards)
 

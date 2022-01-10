@@ -19,5 +19,5 @@ To link a shape to an element based on DCF connection information:
     | ResolveWithDCF     | *True\|ServiceFilter=ServiceIdOrServiceName*<br> Specifying a service ID or service name is optional, and requires the *ServiceFilter=* keyword. If you specify a service ID or a service name, only connections to elements in the specified service will be taken into account. |
 
 > [!NOTE]
-> -  Currently, this feature can only be used to resolve one dynamic element between two fixed elements. If you were to draw multiple *ResolveWithDCF* shapes between the two fixed shapes, these would all be assigned the first element found.
+> - Currently, this feature can only be used to resolve one dynamic element between two fixed elements. If you were to draw multiple *ResolveWithDCF* shapes between the two fixed shapes, these would all be assigned the first element found.
 >

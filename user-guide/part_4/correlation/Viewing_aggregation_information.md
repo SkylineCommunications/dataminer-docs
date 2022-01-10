@@ -45,6 +45,6 @@ To view aggregation data:
 
 > [!NOTE]
 > Aggregation information can also be viewed in the Reports & Dashboards module:
-> -  For more information on reports, see [DMS Reporter](../reporter/reporter.md#dms-reporter).
-> -  For more information on dashboards, see [DMS Dashboards](../dashboards/dashboards.md#dms-dashboards).
+> - For more information on reports, see [DMS Reporter](../reporter/reporter.md#dms-reporter).
+> - For more information on dashboards, see [DMS Dashboards](../dashboards/dashboards.md#dms-dashboards).
 >

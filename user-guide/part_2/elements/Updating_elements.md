@@ -17,10 +17,10 @@ If you want to update one element:
 2. Make the necessary changes, and click *Apply*.
 
 > [!NOTE]
-> -  If you just want to rename an element, you can also right-click the element in the Surveyor, and immediately select *Rename*.
-> -  For a dynamic virtual element, to enable or disable child element creation, click *Advanced element settings* and select or clear *Enable DVE child creation*. See [Dynamic virtual elements](Dynamic_virtual_elements.md).
-> -  When you edit a replicated element, if you want to change the remote element, you will need to enter the user credentials for the remote DMA again. See [Replicating elements](Replicating_elements.md).
-> -  Some elements may be created by a different parent element. In that case, editing these elements may not be possible, except by an Administrator, or via the parent element.
+> - If you just want to rename an element, you can also right-click the element in the Surveyor, and immediately select *Rename*.
+> - For a dynamic virtual element, to enable or disable child element creation, click *Advanced element settings* and select or clear *Enable DVE child creation*. See [Dynamic virtual elements](Dynamic_virtual_elements.md).
+> - When you edit a replicated element, if you want to change the remote element, you will need to enter the user credentials for the remote DMA again. See [Replicating elements](Replicating_elements.md).
+> - Some elements may be created by a different parent element. In that case, editing these elements may not be possible, except by an Administrator, or via the parent element.
 
 ### Setting a parameter value in multiple elements
 

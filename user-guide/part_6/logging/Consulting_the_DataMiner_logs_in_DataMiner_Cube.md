@@ -15,8 +15,8 @@ The page consists of four tabs:
 - *Elements*: see [Elements logging](Elements_logging.md)
 
 > [!NOTE]
-> -  You can adjust the maximum total size of the log files on a DMA. See [Changing the maximum size of DataMiner log files](Changing_the_maximum_size_of_DataMiner_log_files.md).
-> -  The number of log entries that are kept and the general log level are determined in the Cube computer settings. For more information, see [Computer settings](../../part_1/GettingStarted/Computer_settings.md).
+> - You can adjust the maximum total size of the log files on a DMA. See [Changing the maximum size of DataMiner log files](Changing_the_maximum_size_of_DataMiner_log_files.md).
+> - The number of log entries that are kept and the general log level are determined in the Cube computer settings. For more information, see [Computer settings](../../part_1/GettingStarted/Computer_settings.md).
 
 > [!TIP]
 > See also:

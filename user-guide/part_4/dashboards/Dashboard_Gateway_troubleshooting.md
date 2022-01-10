@@ -113,5 +113,3 @@ The following issues may occur when you try to access the Dashboard Gateway:
     4. Paste the files and folders in the *Dashboards* folder on the Gateway server.
 
     5. Restart IIS.
-
-

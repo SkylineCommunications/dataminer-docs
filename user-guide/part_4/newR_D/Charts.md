@@ -110,8 +110,8 @@ This component can be used to display a trend graph.
 From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
 
 > [!NOTE]
-> -  The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
-> -  From DataMiner 10.0.11 onwards, if a line chart component is added to a dashboard, the time span displayed by the component is available as feed in the data pane, so that this can be applied to other components.
+> - The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
+> - From DataMiner 10.0.11 onwards, if a line chart component is added to a dashboard, the time span displayed by the component is available as feed in the data pane, so that this can be applied to other components.
 
 To configure the component:
 

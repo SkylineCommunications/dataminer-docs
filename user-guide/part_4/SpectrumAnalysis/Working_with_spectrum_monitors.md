@@ -67,9 +67,9 @@ When you create a spectrum monitor, you can configure custom parameters that can
 It is possible to generate trend information for these parameters, and to have them trigger alarms.
 
 > [!NOTE]
-> -  Trace trending is only available when the DMA’s general database is a MySQL database of version 5.0.3 or higher. MSSQL is also supported.
-> -  Trending data for Spectrum Analysis traces is stored in the spectrum_trace table of a DMA’s general database. The data is kept for 12 months (by default) and cleaned up just like average trending data.
-> -  Settings regarding storage and cleaning of trending data can be configured in the *Trending.TimeSpanSpectrumRecords* tag of the *MaintenanceSettings.xml* file. It is also possible to override the setting per element using an *\<Element>\<Trending>\<TimeSpanSpectrumRecords>* tag in the file *Element.xml*.
+> - Trace trending is only available when the DMA’s general database is a MySQL database of version 5.0.3 or higher. MSSQL is also supported.
+> - Trending data for Spectrum Analysis traces is stored in the spectrum_trace table of a DMA’s general database. The data is kept for 12 months (by default) and cleaned up just like average trending data.
+> - Settings regarding storage and cleaning of trending data can be configured in the *Trending.TimeSpanSpectrumRecords* tag of the *MaintenanceSettings.xml* file. It is also possible to override the setting per element using an *\<Element>\<Trending>\<TimeSpanSpectrumRecords>* tag in the file *Element.xml*.
 
 Below are the basic steps you can follow to configure a spectrum monitor. Depending on the purpose of the monitor you are creating, not all steps may be required, and you may not necessarily need to do the steps in the proposed order. However, these steps are meant to give you an indication of how spectrum monitors are made.
 
@@ -92,8 +92,8 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 5. Also in the details section, to create a service matching the monitor, select *Create service*. The generated service will have the same name as the monitor, and will contain all the monitored parameters.
 
     > [!NOTE]
-    > -  To remove a service created by a spectrum monitor, you must either disable the *Create Service* option or remove the monitor itself. Unlike a normal service, it cannot be deleted in the Surveyor.
-    > -  Spectrum monitors for which a service has been created are indicated with a special icon in the Surveyor, instead of the regular service icon: ![](../../images/spectrum_monitor.png)
+    > - To remove a service created by a spectrum monitor, you must either disable the *Create Service* option or remove the monitor itself. Unlike a normal service, it cannot be deleted in the Surveyor.
+    > - Spectrum monitors for which a service has been created are indicated with a special icon in the Surveyor, instead of the regular service icon: ![](../../images/spectrum_monitor.png)
 
 6. In the *script* section, select the script that is to be executed by the monitor.
 
@@ -115,8 +115,8 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
     4. To enable alarm monitoring, in the *Template editing* section, select *Monitored*, select the *Type* of alarm template, and enter the necessary alarm thresholds.
 
         > [!NOTE]
-        > -  For more information on the types of alarm templates, see [Configuring an alarm template with dynamic alarm thresholds](../../part_2/protocols/Configuring_alarm_templates.md#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
-        > -  Unlike normal parameters, parameters created by a spectrum monitor can only have alarm monitoring configured in the monitor editor. It is not possible to define alarm templates for them in the Protocols & Templates module.
+        > - For more information on the types of alarm templates, see [Configuring an alarm template with dynamic alarm thresholds](../../part_2/protocols/Configuring_alarm_templates.md#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+        > - Unlike normal parameters, parameters created by a spectrum monitor can only have alarm monitoring configured in the monitor editor. It is not possible to define alarm templates for them in the Protocols & Templates module.
 
     5. To enable trending for the parameter, select *Trended*.
 
@@ -128,9 +128,9 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 
     > [!NOTE]
     > From DataMiner 9.5.12 onwards, it is possible to import and export parameters using the buttons at the top of this section:
-    > -  Import/export files should be comma-separated CSV or TXT files.
-    > -  To add new parameters with an import, use the parameter ID “-1”.
-    > -  After an import, the imported parameters will be displayed in this section. You will then still need to click *Apply* to confirm the import.
+    > - Import/export files should be comma-separated CSV or TXT files.
+    > - To add new parameters with an import, use the parameter ID “-1”.
+    > - After an import, the imported parameters will be displayed in this section. You will then still need to click *Apply* to confirm the import.
 
 10. In the *Alarm Recordings* section, customize the number of *Earlier traces* and *Future traces* to be stored when an alarm recording is created. When an alarm occurs, these may help operators to analyze the nature of the problem.
 
@@ -163,8 +163,8 @@ To view all buffers:
 2. To stop watching the buffer, in the *monitors* tab, clear the selection from *View all buffer*s.
 
 > [!NOTE]
-> -  Spectrum buffers measured during monitor execution are also available in DMS Reporter, and in Visual Overview. See [Element reports](../reporter/Element_reports.md) and [Spectrum Buffers](../reporter/Components_for_one_single_element_or_service.md#spectrum-buffers) for information on DMS Reporter and [Linking a shape to an element parameter](../../part_2/visio/Linking_a_shape_to_an_element_parameter.md) for information on spectrum thumbnails in Visio.
-> -  While you are watching a spectrum buffer, any options that are only applicable for real-time trace viewing, such as taking trace recordings, are disabled.
+> - Spectrum buffers measured during monitor execution are also available in DMS Reporter, and in Visual Overview. See [Element reports](../reporter/Element_reports.md) and [Spectrum Buffers](../reporter/Components_for_one_single_element_or_service.md#spectrum-buffers) for information on DMS Reporter and [Linking a shape to an element parameter](../../part_2/visio/Linking_a_shape_to_an_element_parameter.md) for information on spectrum thumbnails in Visio.
+> - While you are watching a spectrum buffer, any options that are only applicable for real-time trace viewing, such as taking trace recordings, are disabled.
 
 > [!TIP]
 > See also:

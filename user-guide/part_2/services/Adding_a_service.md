@@ -7,14 +7,14 @@
 1. Right-click in the Surveyor and select *New \> Service* to add a new service.
 
     > [!NOTE]
-    > -  A service that uses a service protocol can also be created via the Protocols & Templates module. To do so, in the Protocols & Templates module, select the service protocol, the version, the alarm template and the trend template, right-click in the *Elements* column and select *New service*.
-    > -  From DataMiner 9.0.1 onwards, you can instead transform an existing view into a service, if that view has no child views. The child elements in the view will become child elements of the new service. To transform a view into a service, right-click the view and select *Actions* > *Upgrade to service*. If necessary, you can then still edit the new service in order to fine-tune it according to the procedure below.
+    > - A service that uses a service protocol can also be created via the Protocols & Templates module. To do so, in the Protocols & Templates module, select the service protocol, the version, the alarm template and the trend template, right-click in the *Elements* column and select *New service*.
+    > - From DataMiner 9.0.1 onwards, you can instead transform an existing view into a service, if that view has no child views. The child elements in the view will become child elements of the new service. To transform a view into a service, right-click the view and select *Actions* > *Upgrade to service*. If necessary, you can then still edit the new service in order to fine-tune it according to the procedure below.
 
 2. Enter a name for the service.
 
     > [!NOTE]
-    > -  This name has to be unique. In a DMS, you cannot have two services with the same name.
-    > -  The name of the service can be changed at any time after the service is created. The service is uniquely identified by its ID, which is a combination of the DMA ID of the DMA where the service is originally created and the ID of the service itself.
+    > - This name has to be unique. In a DMS, you cannot have two services with the same name.
+    > - The name of the service can be changed at any time after the service is created. The service is uniquely identified by its ID, which is a combination of the DMA ID of the DMA where the service is originally created and the ID of the service itself.
 
     > [!TIP]
     > See also:
@@ -40,9 +40,9 @@
     4. Select the service you wish to replicate from the list.
 
     > [!NOTE]
-    > -  The source and replication DMA must use the same DataMiner version.
-    > -  External authentication credentials cannot be used when replicating services. This is for instance the case when users are authenticated against an Atlassian Crowd server.
-    > -  Unlike element replication (where the replicated element shows all data from the original element), service replication only replicates the summary severity of the original service and does not provide access to any of the service data. This also applies for enhanced services.
+    > - The source and replication DMA must use the same DataMiner version.
+    > - External authentication credentials cannot be used when replicating services. This is for instance the case when users are authenticated against an Atlassian Crowd server.
+    > - Unlike element replication (where the replicated element shows all data from the original element), service replication only replicates the summary severity of the original service and does not provide access to any of the service data. This also applies for enhanced services.
 
 6. Optionally, configure more advanced options:
 
@@ -57,8 +57,8 @@
         3. Choose an alarm or trend template, if available.
 
             > [!NOTE]
-            > -  You can also quickly change the selected template by clicking the following button to the right of the field: ![](../../images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](../protocols/Configuring_alarm_templates.md) and [Configuring trend templates](../protocols/Configuring_trend_templates.md).
-            > • A service that has been created using a service protocol is called an “enhanced service”.
+            > - You can also quickly change the selected template by clicking the following button to the right of the field: ![](../../images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](../protocols/Configuring_alarm_templates.md) and [Configuring trend templates](../protocols/Configuring_trend_templates.md).
+            > - A service that has been created using a service protocol is called an “enhanced service”.
 
 7. Click the *Next* button in the lower right corner to go to the *parameters* page.
 
@@ -77,8 +77,8 @@
         5. If an element or enhanced service is selected, to include only some parameters, clear the checkbox *All parameters for this element*, and select the parameters in question.
 
             > [!NOTE]
-            > -  For a matrix element, you can select specific inputs or outputs to be included from the list of parameters.
-            > -  If you select a table parameter to include, a filter allows you to select the rows to be included in the service. You can select a row in the drop-down list, or specify a filter yourself. If you specify the filter, you can also select rows by primary key. For example, enter the filter \*24\* to include all rows of which the display key contains “24”, or enter ^pk^\*24\* to include all rows of which the primary key contains “24”.
+            > - For a matrix element, you can select specific inputs or outputs to be included from the list of parameters.
+            > - If you select a table parameter to include, a filter allows you to select the rows to be included in the service. You can select a row in the drop-down list, or specify a filter yourself. If you specify the filter, you can also select rows by primary key. For example, enter the filter \*24\* to include all rows of which the display key contains “24”, or enter ^pk^\*24\* to include all rows of which the primary key contains “24”.
 
         6. Indicate if the selected item should always be included, or if it should be excluded depending on one or more conditions.
 
@@ -110,8 +110,8 @@
         5. In the *ADVANCED* section, set a maximum severity for the items included in the group if they have the status “included” or “not used”.
 
             > [!NOTE]
-            > -  Maximum severity settings on item level override those on group level.
-            > -  For more information on the possible statuses, see [DATA](Service_card_pages.md#data).
+            > - Maximum severity settings on item level override those on group level.
+            > - For more information on the possible statuses, see [DATA](Service_card_pages.md#data).
 
         6. Click *Create*.
 
@@ -131,6 +131,6 @@
 12. Click the *Create* button in the lower right corner to finish creating the service.
 
 > [!NOTE]
-> -  If you want to edit the settings of a service after creation, right-click the service in the Surveyor, and choose *Edit*. You will then have the same options as during the creation of the service.
-> -  A service can also be created by a parent element. In that case, it is possible that it is not or only partly editable, except by an Administrator or via the parent element.
+> - If you want to edit the settings of a service after creation, right-click the service in the Surveyor, and choose *Edit*. You will then have the same options as during the creation of the service.
+> - A service can also be created by a parent element. In that case, it is possible that it is not or only partly editable, except by an Administrator or via the parent element.
 >

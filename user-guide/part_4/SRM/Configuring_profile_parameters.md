@@ -76,8 +76,8 @@ To configure a converter for a profile parameter:
 4. In the code section below this, modify the example C# code to the converter you want.
 
     > [!NOTE]
-    > -  The converter code must contain one class that implements the *IMediator* interface and it must be able to handle concurrent *ConvertDeviceToProfile* and *ConvertProfileToDevice* calls. In the code, you can only reference *SLMediationSnippets.dll*, which contains the *IMediator* interface, *SLUnitConverter.dll*, and system DLLs such as *System.dll* and *System.Core.dll.*
-    > -  Exceptions and logging for converters can be found in the log file *SLMediationSnippetInfo.txt*.
+    > - The converter code must contain one class that implements the *IMediator* interface and it must be able to handle concurrent *ConvertDeviceToProfile* and *ConvertProfileToDevice* calls. In the code, you can only reference *SLMediationSnippets.dll*, which contains the *IMediator* interface, *SLUnitConverter.dll*, and system DLLs such as *System.dll* and *System.Core.dll.*
+    > - Exceptions and logging for converters can be found in the log file *SLMediationSnippetInfo.txt*.
 
 5. When the converter has been configured, click *OK*.
 

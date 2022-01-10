@@ -19,8 +19,8 @@ The two files must have an identical SynchronizeData.Sync.DMA tag.
 Alternatively, a single file can be used instead. See [Legacy configuration using a single file](#legacy-configuration-using-a-single-file).
 
 > [!NOTE]
-> -  This configuration has become obsolete from DataMiner version 9.0.4 onwards. We advise to replace it with the new configuration in systems using DataMiner 9.0.4 and higher. See [Configuration from DataMiner 9.0.4 onwards](#configuration-from-dataminer-904-onwards). The legacy configuration type will remain supported for existing configurations.
-> -  When this configuration is used, multiple database tables are needed for each level of views and each level of elements, which limits the depth of the number of subviews you can create. To not have this limitation, use the configuration introduced in DataMiner 9.0.4 instead. Also, only the configuration introduced in DataMiner 9.0.4 allows the synchronization of elements to multiple views.
+> - This configuration has become obsolete from DataMiner version 9.0.4 onwards. We advise to replace it with the new configuration in systems using DataMiner 9.0.4 and higher. See [Configuration from DataMiner 9.0.4 onwards](#configuration-from-dataminer-904-onwards). The legacy configuration type will remain supported for existing configurations.
+> - When this configuration is used, multiple database tables are needed for each level of views and each level of elements, which limits the depth of the number of subviews you can create. To not have this limitation, use the configuration introduced in DataMiner 9.0.4 instead. Also, only the configuration introduced in DataMiner 9.0.4 allows the synchronization of elements to multiple views.
 
 #### View synchronization file
 
@@ -208,11 +208,11 @@ Optional element fields:
 - PortSlowPollBase
 
 > [!NOTE]
-> -  Elements covering DVE child elements will not be synchronized from database to DMA. They will be synchronized from DMA to database, however.
-> -  If you set the sync direction to “dual” in the view configuration, then applying a “Sync Now” in DataMiner will perform a sync from DMA to database, followed by a sync from database to DMA. Be aware that changes to the database might be overwritten.
-> -  It is possible to sync DataMiner views from multiple database tables. However, in that case, when synchronizing a new DataMiner view from DataMiner to database, the view will be added to all specified tables.
-> -  When views are synchronized from database to DMA, access rights to views will also apply to the Inventory & Asset Management view tree. A user with limited access to views will only be able to see a limited number of Inventory & Asset Management records.
-> -  For elements with multiple ports, properties that apply to different ports are synchronized with a pipe character (“\|”) as separator. If the properties contain pipe characters (“\|”) or ampersands (“&”), these are escaped as “&separator;” and “&amp;” respectively.
+> - Elements covering DVE child elements will not be synchronized from database to DMA. They will be synchronized from DMA to database, however.
+> - If you set the sync direction to “dual” in the view configuration, then applying a “Sync Now” in DataMiner will perform a sync from DMA to database, followed by a sync from database to DMA. Be aware that changes to the database might be overwritten.
+> - It is possible to sync DataMiner views from multiple database tables. However, in that case, when synchronizing a new DataMiner view from DataMiner to database, the view will be added to all specified tables.
+> - When views are synchronized from database to DMA, access rights to views will also apply to the Inventory & Asset Management view tree. A user with limited access to views will only be able to see a limited number of Inventory & Asset Management records.
+> - For elements with multiple ports, properties that apply to different ports are synchronized with a pipe character (“\|”) as separator. If the properties contain pipe characters (“\|”) or ampersands (“&”), these are escaped as “&separator;” and “&amp;” respectively.
 
 #### Legacy configuration using a single file
 
@@ -311,8 +311,8 @@ For example:
 From DataMiner 9.0.4 onwards, a single configuration file is placed in the directory *C:\\Skyline DataMiner\\AssetManager\\MediationConfigs*, using a different configuration than for previous versions of DataMiner.
 
 > [!NOTE]
-> -  As the configuration used in earlier DataMiner versions has become obsolete, we advise to replace it with this new configuration if possible. However, the old configuration remains supported for existing configurations.
-> -  Only this new configuration allows the synchronization of elements to multiple views.
+> - As the configuration used in earlier DataMiner versions has become obsolete, we advise to replace it with this new configuration if possible. However, the old configuration remains supported for existing configurations.
+> - Only this new configuration allows the synchronization of elements to multiple views.
 
 This new synchronization method needs the following four tables:
 
@@ -377,7 +377,5 @@ Example of a mediation configuration file:
 ```
 
 > [!NOTE]
-> -  The names of the element fields are the same as in the configuration in use up to DataMiner 9.0.3. See [Element synchronization file](#element-synchronization-file).
-> -  For more information about configuration settings, see [Configuring data mediation settings in DMS Inventory and Asset Management](Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management.md). However, note that the *AssetMediationConfig.SynchronizeData.Sync.DMA* and *AssetMediationConfig.SynchronizeData.Sync.DB* tags described in that section are replaced by the *AssetMediationConfig.SynchronizeData.Sync.ElementView* tag in this configuration.
-
-
+> - The names of the element fields are the same as in the configuration in use up to DataMiner 9.0.3. See [Element synchronization file](#element-synchronization-file).
+> - For more information about configuration settings, see [Configuring data mediation settings in DMS Inventory and Asset Management](Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management.md). However, note that the *AssetMediationConfig.SynchronizeData.Sync.DMA* and *AssetMediationConfig.SynchronizeData.Sync.DB* tags described in that section are replaced by the *AssetMediationConfig.SynchronizeData.Sync.ElementView* tag in this configuration.

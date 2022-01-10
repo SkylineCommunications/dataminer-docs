@@ -23,12 +23,12 @@ To upgrade the Cassandra database:
 
     > [!TIP]
     > See also:
-    > -  [Upgrading a DataMiner Agent in the Update Center](../DataminerAgents/Upgrading_a_DataMiner_Agent_in_the_Update_Center.md)
-    > -  [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](../DataminerAgents/Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md)
+    > - [Upgrading a DataMiner Agent in the Update Center](../DataminerAgents/Upgrading_a_DataMiner_Agent_in_the_Update_Center.md)
+    > - [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](../DataminerAgents/Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md)
 
     When you start the upgrade, DataMiner will be shut down, Cassandra will be upgraded, and then DataMiner will be started again.
 
 > [!NOTE]
-> -  Log information for the upgrade can be found in the file *C:\\Skyline DataMiner\\logging\\SLUpgradeDatabaseSoftware.txt*.
-> -  If the upgrade fails, make sure no backups, devcenter processes, or command processes using nodetool are running, and that there is no directory “*C:\\Program Files\\Cassandra_Previous_Version*”.
+> - Log information for the upgrade can be found in the file *C:\\Skyline DataMiner\\logging\\SLUpgradeDatabaseSoftware.txt*.
+> - If the upgrade fails, make sure no backups, devcenter processes, or command processes using nodetool are running, and that there is no directory “*C:\\Program Files\\Cassandra_Previous_Version*”.
 >

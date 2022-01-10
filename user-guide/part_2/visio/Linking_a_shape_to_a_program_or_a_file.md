@@ -5,9 +5,9 @@ Using a shape data field of type **Link** you can link a shape to a program or a
 When you link a shape to a program or a file, the program will be started or the file will be opened when a user clicks the shape.
 
 > [!NOTE]
-> -  This is a client-side function. The program or file must reside on the user’s client machine.
-> -  If you specify a file to be opened, but not the program in which it has to be opened (see the PDF example below), make sure the file type is associated with the correct program. Otherwise, DataMiner will not know which program to use.
-> -  You can also use Windows environment variables in the shape data field, for instance to link to virtual paths. However, for custom variables that have only just been created, a reboot will be required before they can be used.
+> - This is a client-side function. The program or file must reside on the user’s client machine.
+> - If you specify a file to be opened, but not the program in which it has to be opened (see the PDF example below), make sure the file type is associated with the correct program. Otherwise, DataMiner will not know which program to use.
+> - You can also use Windows environment variables in the shape data field, for instance to link to virtual paths. However, for custom variables that have only just been created, a reboot will be required before they can be used.
 
 ### Configuring the shape data field
 

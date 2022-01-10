@@ -30,8 +30,8 @@ To configure a trend template:
     - For each parameter, select the checkbox for real-time or for average trending to activate trending for this parameter.
 
         > [!NOTE]
-        > -  Enabling or disabling average or real-time trending for a parameter is also possible via the trend template context menu.
-        > -  From DataMiner 9.0.0 CU11 onwards, the context menu of the column header of the list of parameters allows you to enable or disable average and/or real-time trending for all parameters at once.
+        > - Enabling or disabling average or real-time trending for a parameter is also possible via the trend template context menu.
+        > - From DataMiner 9.0.0 CU11 onwards, the context menu of the column header of the list of parameters allows you to enable or disable average and/or real-time trending for all parameters at once.
 
     - Use the filter box in the top-right corner to quickly find a parameter.
 
@@ -46,8 +46,8 @@ To configure a trend template:
         - Use the up and down buttons to change the order of the filters. This may be important as trending is applied top to bottom.
 
         > [!NOTE]
-        > -  For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
-        > -  Trending of column parameters of type string is only supported from DataMiner 10.0.9 onwards.
+        > - For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
+        > - Trending of column parameters of type string is only supported from DataMiner 10.0.9 onwards.
 
 3. When ready, click *Apply* to apply the trend template, or *OK* to apply the trend template and exit the editor.
 
