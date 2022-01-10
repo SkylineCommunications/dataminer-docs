@@ -6,12 +6,12 @@ These settings can be configured directly in DataMiner Cube from DataMiner 9.6.3
 
 - *DBMaintenanceDMS.xml* contains TTL information for the entire DMS, and is synchronized within the DMS.
 
-- *DBMaintenance.xml* is deprecated from DataMiner 9.6.6 onwards. Before this, it is used for Agent-specific TTL overrides, and it is only synchronized in a Failover system.
+- *DBMaintenance.xml* is deprecated from DataMiner 9.6.6 onwards. Before this, it is used for Agent-specific TTL overrides, and it is only synchronized in a Failover system.
 
 > [!NOTE]
-> -  Element-specific TTL settings for trending purposes will always override TTL settings specified in *DBMaintenance.xml* or *DBMaintenanceDMS.xml*.
+> -  Element-specific TTL settings for trending purposes will always override TTL settings specified in *DBMaintenance.xml* or *DBMaintenanceDMS.xml*.
 > -  If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in these files. The changes are only applied for new records.
-> -  Up to DataMiner 9.5.8, *DBMaintenance.xml* and *DBMaintenanceDMS.xml* are located directly in the Skyline DataMiner folder, instead of in the Database subfolder.
+> -  Up to DataMiner 9.5.8, *DBMaintenance.xml* and *DBMaintenanceDMS.xml* are located directly in the Skyline DataMiner folder, instead of in the Database subfolder.
 > -  Before you make changes to these files, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
 In this section:
@@ -26,29 +26,29 @@ In this section:
 
 > [!TIP]
 > See also:
-> -  [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md) 
-> -  [Setting the TTL for database records](../DataminerTools/SLNetClientTest_tool_advanced_procedures.md#setting-the-ttl-for-database-records) 
+> -  [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md)
+> -  [Setting the TTL for database records](../DataminerTools/SLNetClientTest_tool_advanced_procedures.md#setting-the-ttl-for-database-records)
 
 ### Basic syntax of the TTL settings
 
 Example of TTL settings in *DBMaintenanceDMS.xml*:
 
 ```xml
-<MaintenanceConfigs>                                                             
+<MaintenanceConfigs>
   <MaintenanceConfig type="DMS" xmlns="http://www.skyline.be/config/dbmaintenance">
-    <TimeToLive>                                                                     
-      <TTL type="Alarm" default="1Y">                                                  
-        <Local>1Y</Local>                                                               
-        <Indexing>6M</Indexing>                                                         
-      </TTL>                                                                           
-      <TTL type="TimeTrace" default="1Y"/>                                             
-      <TTL type="RealTimeTrending" default="1D"/>                                      
-      <TTL type="FiveMinTrending" default="1M"/>                                       
-      <TTL type="OneHourTrending" default="1Y"/>                                       
-      <TTL type="OneDayTrending" default="1Y"/>                                        
-    </TimeToLive>                                                                    
-  </MaintenanceConfig>                                                             
-</MaintenanceConfigs>                                                            
+    <TimeToLive>
+      <TTL type="Alarm" default="1Y">
+        <Local>1Y</Local>
+        <Indexing>6M</Indexing>
+      </TTL>
+      <TTL type="TimeTrace" default="1Y"/>
+      <TTL type="RealTimeTrending" default="1D"/>
+      <TTL type="FiveMinTrending" default="1M"/>
+      <TTL type="OneHourTrending" default="1Y"/>
+      <TTL type="OneDayTrending" default="1Y"/>
+    </TimeToLive>
+  </MaintenanceConfig>
+</MaintenanceConfigs>
 ```
 
 Each TTL tag has the following attributes:
@@ -71,7 +71,7 @@ In addition, it can have the following subtags:
     ```xml
     <TTL type="cjobsection">
       <Indexing>6M</Indexing>
-    </TTL>                  
+    </TTL>
     ```
 
 When specifying TTL periods, use the following units:
@@ -106,9 +106,9 @@ From DataMiner 9.5.6 onwards, you can specify a TTL override for the trending of
 
 To do so:
 
-1. Add an additional *\<TimeToLive>* tag in *DBMaintenance.xml* and/or *DBMaintenanceDMS.xml*.
+1. Add an additional *\<TimeToLive>* tag in *DBMaintenance.xml* and/or *DBMaintenanceDMS.xml*.
 
-2. Within the *\<TimeToLive>* tag, set the *protocol* attribute to the name of the protocol.
+2. Within the *\<TimeToLive>* tag, set the *protocol* attribute to the name of the protocol.
 
     To only specify the override for a particular version of the protocol, add the protocol version after the protocol name, separated from the name by a slash, e.g. protocol="Microsoft Platform/2.1.0.66".
 
@@ -117,34 +117,34 @@ To do so:
 Example of a *DBMaintenanceDMS.xml* file with protocol override:
 
 ```xml
-<MaintenanceConfigs>                                                             
+<MaintenanceConfigs>
   <MaintenanceConfig type="DMS" xmlns="http://www.skyline.be/config/dbmaintenance">
-    <TimeToLive>                                                                     
-      <TTL type="Alarm" default="1Y">                                                  
-        <Local>2Y</Local>                                                               
-      </TTL>                                                                           
-      <TTL type="TimeTrace" default="1Y"/>                                             
-      <TTL type="RealTimeTrending" default="1D"/>                                      
-      <TTL type="FiveMinTrending" default="1M"/>                                       
-      <TTL type="OneHourTrending" default="1Y"/>                                       
-      <TTL type="OneDayTrending" default="1Y"/>                                        
-    </TimeToLive>                                                                    
-    <TimeToLive protocol="MyProtocol">                                               
-      <TTL type="RealTimeTrending" default="1D">                                       
-        <Local>2D</Local>                                                               
-      </TTL>                                                                           
-      <TTL type="FiveMinTrending" default="2M"/>                                       
-      <TTL type="OneHourTrending" default="1Y">                                        
-        <Local>2Y</Local>                                                               
-      </TTL>                                                                           
-      <TTL type="OneDayTrending" default="2Y"/>                                        
-    </TimeToLive>                                                                    
-  </MaintenanceConfig>                                                             
-</MaintenanceConfigs>                                                            
+    <TimeToLive>
+      <TTL type="Alarm" default="1Y">
+        <Local>2Y</Local>
+      </TTL>
+      <TTL type="TimeTrace" default="1Y"/>
+      <TTL type="RealTimeTrending" default="1D"/>
+      <TTL type="FiveMinTrending" default="1M"/>
+      <TTL type="OneHourTrending" default="1Y"/>
+      <TTL type="OneDayTrending" default="1Y"/>
+    </TimeToLive>
+    <TimeToLive protocol="MyProtocol">
+      <TTL type="RealTimeTrending" default="1D">
+        <Local>2D</Local>
+      </TTL>
+      <TTL type="FiveMinTrending" default="2M"/>
+      <TTL type="OneHourTrending" default="1Y">
+        <Local>2Y</Local>
+      </TTL>
+      <TTL type="OneDayTrending" default="2Y"/>
+    </TimeToLive>
+  </MaintenanceConfig>
+</MaintenanceConfigs>
 ```
 
 > [!NOTE]
-> Though the protocol TTL overrides the general TTL settings for the system, it is in turn overridden by any TTL settings that have been specified in the *Element.xml* for specific elements.
+> Though the protocol TTL overrides the general TTL settings for the system, it is in turn overridden by any TTL settings that have been specified in the *Element.xml* for specific elements.
 
 > [!NOTE]
 > From DataMiner 9.6.3 onwards, TTL overrides for trend and alarm records should be configured directly in DataMiner Cube. See [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md).
@@ -153,24 +153,24 @@ Example of a *DBMaintenanceDMS.xml* file with protocol override:
 
 From DataMiner 9.5.14 onwards, timetrace data for a service in the Cassandra database by default only contains the service properties that match with the service key. In earlier versions of DataMiner, the rows contained the service properties of all affected services.
 
-It is possible to revert to the earlier behavior by adding the following tag in the *\<MaintenanceConfig>* tag of the *DBMaintenance.xml* or *DBMaintenanceDMS.xml* file: <br>*\<TimeTrace duplicateAllServiceProperties="True" />*.
+It is possible to revert to the earlier behavior by adding the following tag in the *\<MaintenanceConfig>* tag of the *DBMaintenance.xml* or *DBMaintenanceDMS.xml* file: <br>*\<TimeTrace duplicateAllServiceProperties="True" />*.
 
 However, note that this can cause a significant increase in disk space usage, especially in systems with many services and service properties.
 
 > [!NOTE]
-> Activating this option does not rewrite historic data. New rows will again contain the properties, but old rows will not be updated. 
+> Activating this option does not rewrite historic data. New rows will again contain the properties, but old rows will not be updated.
 
 ### Upgrading to a DataMiner version with DBMaintenance.xml and DBMaintenanceDMS.xml files
 
-When you upgrade a DataMiner Agent without the two new configuration files to a version with these files, *DBMaintenance.exe* will copy a number of settings from the *DB.xml* and *MaintenanceSettings.xml* files to the new configuration files. See the following table:
+When you upgrade a DataMiner Agent without the two new configuration files to a version with these files, *DBMaintenance.exe* will copy a number of settings from the *DB.xml* and *MaintenanceSettings.xml* files to the new configuration files. See the following table:
 
 | Existing setting                                                | New setting          |
 |-----------------------------------------------------------------|----------------------|
-| DB.xml<br> \> Maintenance \> MonthsToKeep                       | Alarm TTL            |
-| DB.xml<br> \> Historyslider \> TimeToKeep                       | TimeTrace TTL        |
-| MaintenanceSettings.xml<br> \> Trending \> TimeSpan             | RealTimeTrending TTL |
-| MaintenanceSettings.xml<br> \> Trending \> TimeSpan5MinRecords  | FiveMinTrending TTL  |
-| MaintenanceSettings.xml<br> \> Trending \> TimeSpan1HourRecords | OneHourTrending TTL  |
-| MaintenanceSettings.xml<br> \> Trending \> TimeSpan1DayRecords  | OneDayTrending TTL   |
+| DB.xml<br> \> Maintenance \> MonthsToKeep                       | Alarm TTL            |
+| DB.xml<br> \> Historyslider \> TimeToKeep                       | TimeTrace TTL        |
+| MaintenanceSettings.xml<br> \> Trending \> TimeSpan             | RealTimeTrending TTL |
+| MaintenanceSettings.xml<br> \> Trending \> TimeSpan5MinRecords  | FiveMinTrending TTL  |
+| MaintenanceSettings.xml<br> \> Trending \> TimeSpan1HourRecords | OneHourTrending TTL  |
+| MaintenanceSettings.xml<br> \> Trending \> TimeSpan1DayRecords  | OneDayTrending TTL   |
 
-When you downgrade to a DataMiner Agent without the two new configuration files, *DBMaintenance.exe* will revert the above-mentioned copy actions and update the settings in question in both the *DB.xml* and *MaintenanceSettings.xml* files.
+When you downgrade to a DataMiner Agent without the two new configuration files, *DBMaintenance.exe* will revert the above-mentioned copy actions and update the settings in question in both the *DB.xml* and *MaintenanceSettings.xml* files.

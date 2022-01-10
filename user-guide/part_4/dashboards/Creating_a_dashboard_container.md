@@ -10,7 +10,7 @@ To create a new dashboard container in the *Dashboards* app:
 
 3. The following configuration options are also available:
 
-    - Click the *...* button next to *Theme* to change the theme for the dashboard container. This theme can be overruled by a personal theme.
+    - Click the *...* button next to *Theme* to change the theme for the dashboard container. This theme can be overruled by a personal theme.
 
     - Next to *Description*, you can add a description with additional information about the dashboard container.
 
@@ -21,5 +21,5 @@ To create a new dashboard container in the *Dashboards* app:
 5. Click *Save Configuration* to save the dashboard container.
 
 > [!NOTE]
-> If you want to edit the dashboard container later, this is only possible in the list of dashboards, by clicking the pencil icon next to the dashboard container. If you click directly on the dashboard container in the overview on the left side of the *Dashboards* app, you will be able to edit the different dashboards in the dashboard container, but not the dashboard container itself.
+> If you want to edit the dashboard container later, this is only possible in the list of dashboards, by clicking the pencil icon next to the dashboard container. If you click directly on the dashboard container in the overview on the left side of the *Dashboards* app, you will be able to edit the different dashboards in the dashboard container, but not the dashboard container itself.
 >

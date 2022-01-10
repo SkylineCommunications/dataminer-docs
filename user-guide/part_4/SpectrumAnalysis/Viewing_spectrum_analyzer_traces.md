@@ -31,7 +31,7 @@ The speed at which a trace is acquired depends on:
 - The current workload of the spectrum analyzer you are using (because of other real-time users and script executions).
 
 > [!NOTE]
-> It is possible to hide the current trace, and instead show for instance the minimum or maximum hold, or the average trace. See [Displaying the minimum and maximum hold of the trace](#displaying-the-minimum-and-maximum-hold-of-the-trace) and [Displaying the average trace](#displaying-the-average-trace).
+> It is possible to hide the current trace, and instead show for instance the minimum or maximum hold, or the average trace. See [Displaying the minimum and maximum hold of the trace](#displaying-the-minimum-and-maximum-hold-of-the-trace) and [Displaying the average trace](#displaying-the-average-trace).
 >
 > You can choose these options in the *trace* tab of the ribbon, or you can right-click the trace in the info pane, and select what is to be displayed.
 
@@ -58,7 +58,7 @@ To save the real-time display as a .jpg file instead:
 
 1. Go to the *main* tab of the ribbon.
 
-2. Click *Save* *to file*, and select:
+2. Click *Save* *to file*, and select:
 
     - *Trace image*, to save only the displayed trace.
 
@@ -71,7 +71,7 @@ To save the real-time display as a .jpg file instead:
 
 If DataMiner Cube detects no activity from the user for some time, the display is set to standby. As soon as you move the mouse pointer over the display, the real-time display of the trace is resumed. You can switch this automatic standby mode on and off, and change the interval after which the display is set to standby.
 
-To do so, on the spectrum analyzer card in DataMiner Cube, go to the *trace* tab. The following options are available in the *Standby* section:
+To do so, on the spectrum analyzer card in DataMiner Cube, go to the *trace* tab. The following options are available in the *Standby* section:
 
 - To switch standby mode on, select *Automatic standby mode*.
 
@@ -87,9 +87,9 @@ It is possible to manually freeze and unfreeze the trace. To do so:
 
 2. Use one of the following options:
 
-    - To freeze or unfreeze the trace, or to step to the next trace, in the *Show controls* section, select *Freeze/step controls* and use the buttons at the bottom of the real-time display.
+    - To freeze or unfreeze the trace, or to step to the next trace, in the *Show controls* section, select *Freeze/step controls* and use the buttons at the bottom of the real-time display.
 
-    - To *Freeze display*, *Unfreeze display* or *Freeze on next trace*, use the corresponding freeze / step options in the *Freeze / step* section.
+    - To *Freeze display*, *Unfreeze display* or *Freeze on next trace*, use the corresponding freeze / step options in the *Freeze / step* section.
 
 > [!NOTE]
 > When the display is in frozen mode, *Frozen* is displayed in the middle of the graph area.
@@ -100,7 +100,7 @@ It is possible to display the minimum and/or maximum hold of the trace you are c
 
 1. On the spectrum analyzer card, go to the *trace* tab.
 
-2. In the *Minimum hold* or *maximum hold* section:
+2. In the *Minimum hold* or *maximum hold* section:
 
     - To show the minimum hold of the trace, click *Show minimum*.
 
@@ -132,7 +132,7 @@ It is possible to display the average trace, next to or instead of the actual re
 
 2. In the section *Average hold*, select *Show average*.
 
-    If you want, you can then hide the actual real-time trace by clearing the selection from *Show current* in the *Current* section.
+    If you want, you can then hide the actual real-time trace by clearing the selection from *Show current* in the *Current* section.
 
 ##### To customize the average trace:
 
@@ -140,11 +140,11 @@ It is possible to display the average trace, next to or instead of the actual re
 
     By default, the number is set to *inf*, which means there is no limit to the number of traces taken into account.
 
-- To change the color of the average trace, in the *Colors* section, select a different color in the *Average hold* drop-down list.
+- To change the color of the average trace, in the *Colors* section, select a different color in the *Average hold* drop-down list.
 
 ##### To reset the average calculation:
 
-- In the *trace* tab, select *Reset average*.
+- In the *trace* tab, select *Reset average*.
 
 ### Customizing the real-time display
 
@@ -162,15 +162,15 @@ In the *view* tab of the ribbon, you can do the following:
 
 - To change the size of the settings pane, drag the edge of the pane. Click the blue bar to the right of the pane to collapse or expand it entirely.
 
-- To change the units used in the real-time display, next to *Amplitude units* or *frequency units*, select a different unit in the drop-down list. From DataMiner 9.5.4 onwards, *Sweeptime units* can also be customized.
+- To change the units used in the real-time display, next to *Amplitude units* or *frequency units*, select a different unit in the drop-down list. From DataMiner 9.5.4 onwards, *Sweeptime units* can also be customized.
 
     The change of units will be applied everywhere on the spectrum analyzer card, including on the real-time display.
 
-- To change the number of decimals displayed for the frequency throughout the spectrum card, select the number of decimals in the *Frequency decimals* drop-down list. If you select *Auto*, the number of decimals for a particular parameter will depend on the value of the parameter.
+- To change the number of decimals displayed for the frequency throughout the spectrum card, select the number of decimals in the *Frequency decimals* drop-down list. If you select *Auto*, the number of decimals for a particular parameter will depend on the value of the parameter.
 
-- To change the background color of the grid, in the *Colors* section, click *Grid background* and select a different color.
+- To change the background color of the grid, in the *Colors* section, click *Grid background* and select a different color.
 
-- To change the color of the lines in the grid, in the *Colors* section, click *Grid lines* and select a different color.
+- To change the color of the lines in the grid, in the *Colors* section, click *Grid lines* and select a different color.
 
 - To change the color of the text in the grid, e.g. the amplitude and frequency indicated along the axes, select *Grid text* and select a different color.
 
@@ -178,7 +178,7 @@ In the *view* tab of the ribbon, you can do the following:
 
 In addition, in the *trace* tab, you can do the following:
 
-- To change the color of the trace, in the *Colors* section, click *Current trace* and select a different color.
+- To change the color of the trace, in the *Colors* section, click *Current trace* and select a different color.
 
     The color of the trace will also be indicated in a legend at the top of the info pane.
 
@@ -188,7 +188,7 @@ When you work in real-time interactive mode, this requires part of the limited m
 
 To do so:
 
-1. Go to the *monitors* tab of the ribbon and select *View along*.
+1. Go to the *monitors* tab of the ribbon and select *View along*.
 
 2. Select the client you want to view along with and click *OK*.
 
@@ -210,8 +210,8 @@ When session sharing is enabled, all cards showing the same spectrum session wil
 
 To enable sharing of spectrum sessions for a spectrum element:
 
-- Either create the new spectrum element or edit the existing spectrum element. (See [Adding an element](../../part_2/elements/Adding_and_deleting_elements.md#adding-an-element) or [Updating elements](../../part_2/elements/Updating_elements.md), respectively.)
+- Either create the new spectrum element or edit the existing spectrum element. (See [Adding an element](../../part_2/elements/Adding_and_deleting_elements.md#adding-an-element) or [Updating elements](../../part_2/elements/Updating_elements.md), respectively.)
 
-- In the *Advanced element settings* section, select *Shared session mode*.
+- In the *Advanced element settings* section, select *Shared session mode*.
 
 - Click *Apply*.

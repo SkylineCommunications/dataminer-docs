@@ -15,6 +15,6 @@ Any extra base alarms that are added while the rule is active will also be escal
 
 To configure this, in the *Actions* section of the details pane:
 
-1. Click *Add Action* and select *Escalate event*.
+1. Click *Add Action* and select *Escalate event*.
 
 2. Optionally, to also clear the escalated correlated alarm when the conditions are no longer fulfilled, select *Auto clear*.

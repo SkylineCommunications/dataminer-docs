@@ -13,7 +13,7 @@ A shape can be set to perform a particular action when a mouse pointer is hovere
 
 Add two shape data fields to the shape:
 
-- one of type **Element** or **View**, of which you leave the value empty, and
+- one of type **Element** or **View**, of which you leave the value empty, and
 
 - one of type **HoverTarget**, of which you set the value to *TRUE*.
 

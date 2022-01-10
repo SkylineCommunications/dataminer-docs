@@ -9,7 +9,7 @@ If you link a shape to an alarm filter, it can be used to show statistical infor
 
 Configure the shape data fields as follows:
 
-1. Add a shape data field of type **AlarmSummary** to the shape, and set its value as follows:
+1. Add a shape data field of type **AlarmSummary** to the shape, and set its value as follows:
 
     ```txt
     type|sharedfiltername|ApplyLinkedViewServiceOrElementFilter|Alarm|FilterContext=X
@@ -31,7 +31,7 @@ Configure the shape data fields as follows:
     |--------------------|------------------------------------------------------------|
     | AlarmSummary       | all\|MySharedFilter\|false\|Alarm\|FilterContext=MyService |
 
-2. Optionally, from DataMiner 9.5.8/9.5.0 \[CU4\] onwards, to customize the default alarm level of the shape when the filter yields no results, add a shape data field of type **Options** and set its value to *DefaultAlarmLevel=*AlarmLevel. For example:
+2. Optionally, from DataMiner 9.5.8/9.5.0 \[CU4\] onwards, to customize the default alarm level of the shape when the filter yields no results, add a shape data field of type **Options** and set its value to *DefaultAlarmLevel=*AlarmLevel. For example:
 
     | Shape data field | Value                    |
     |--------------------|--------------------------|
@@ -47,7 +47,7 @@ Configure the shape data fields as follows:
 
 ### Placeholders
 
-The value of an **AlarmSummary** shape data field can contain dynamic placeholders like \[param:...\], etc. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+The value of an **AlarmSummary** shape data field can contain dynamic placeholders like \[param:...\], etc. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
 
 In addition, you can also use the following placeholders in the shape text itself, so that they are replaced by statistical information in Visual Overview.
 

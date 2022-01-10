@@ -34,7 +34,7 @@ The following pages are available:
 
 - *Reports*: Displays the DataMiner reports related to the view.
 
-- *Histogram*: Available from DataMiner 10.0.3 onwards. Allows you to display a histogram of a protocol parameter for all elements of this protocol in the view. The parameter can be selected in the sidebar on the right. Once a valid parameter has been selected, you can click *Show histogram* to show or refresh the histogram. The side panel also has a settings tab where you can apply the following options:
+- *Histogram*: Available from DataMiner 10.0.3 onwards. Allows you to display a histogram of a protocol parameter for all elements of this protocol in the view. The parameter can be selected in the sidebar on the right. Once a valid parameter has been selected, you can click *Show histogram* to show or refresh the histogram. The side panel also has a settings tab where you can apply the following options:
 
     - *Include subviews*: Only displayed in case the view contains other views. Determines whether those subviews should also be taken into account.
 
@@ -56,7 +56,7 @@ The following pages are available:
 
 - *Visual*: One or more pages with a Visio-based visual overview of the service.
 
-- *Children*: Contains the data pages of the elements contained within the service. If the service contains a child service, this is also listed under *Children* in the navigation pane, but clicking or tapping the child service will open the card of this child service.
+- *Children*: Contains the data pages of the elements contained within the service. If the service contains a child service, this is also listed under *Children* in the navigation pane, but clicking or tapping the child service will open the card of this child service.
 
 - *Alarms*: Displays the active alarms for the service.
 
@@ -64,14 +64,14 @@ The following pages are available:
 
 - *Notes*: Allows you to add and view notes for the service.
 
-Service cards can be opened from the navigation or recent items pane, or from the search. In addition, you can also navigate directly to a service using the following URL: <br>*http(s)://*\<DMA IP>*/monitoring/service/*\<DMA ID>*/*\<service ID>*/*\<service page> 
+Service cards can be opened from the navigation or recent items pane, or from the search. In addition, you can also navigate directly to a service using the following URL: <br>*http(s)://*\<DMA IP>*/monitoring/service/*\<DMA ID>*/*\<service ID>*/*\<service page>
 
 The service page in this URL is optional; if it is not specified, the default page is displayed.
 
 - To go to a visual page, specify *visual/*\<service page>.
-<br>For example: *http://*\<DMA IP>*/monitoring/service/67/511/visual/0* 
+<br>For example: *http://*\<DMA IP>*/monitoring/service/67/511/visual/0*
 
-- To go to the page of one of the service children, specify *child/*\<page name>. The page name consists of the DMA ID, the element ID and the page name, separated by %2F.<br>For example: *http://*\<DMA IP>*/monitoring/service/67/511/child/67%2F509%2FPerformance* 
+- To go to the page of one of the service children, specify *child/*\<page name>. The page name consists of the DMA ID, the element ID and the page name, separated by %2F.<br>For example: *http://*\<DMA IP>*/monitoring/service/67/511/child/67%2F509%2FPerformance*
 
 ### Element cards
 
@@ -85,7 +85,7 @@ The following pages are available:
 
     - ![](../../images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter.
 
-    - ![](../../images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the trending page, where you can view a trend graph or histogram for the parameter. On the left, the time span for the trend graph can be configured.
+    - ![](../../images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the trending page, where you can view a trend graph or histogram for the parameter. On the left, the time span for the trend graph can be configured.
 
     - ![](../../images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
 
@@ -96,7 +96,7 @@ The following pages are available:
 - *Dashboards*: Displays the legacy dashboards app.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 - *Notes*: Allows you to add and view notes related to the element.
 
@@ -141,7 +141,7 @@ The following pages are available:
 
 - *Topology*: One or more pages with the different chains in the topology. When you open such a page, filter boxes on the right side of the card can be used to drill down to specific items.
 
-CPE cards can be opened from the navigation or recent items pane, or from the search. In addition, you can also navigate directly to a CPE element using the following URL: <br>*http(s)://*\<DMA IP>*/monitoring/element/*\<DMA ID>*/*\<element ID>*/chain/*\<chain name> 
+CPE cards can be opened from the navigation or recent items pane, or from the search. In addition, you can also navigate directly to a CPE element using the following URL: <br>*http(s)://*\<DMA IP>*/monitoring/element/*\<DMA ID>*/*\<element ID>*/chain/*\<chain name>
 
 > [!TIP]
 > See also:
@@ -155,6 +155,6 @@ From DataMiner 10.0.5 onwards, the Spectrum Analyzer page contains buttons to th
 
 | Button                                                                                                         | Tab description                                                                                                                                                                                                                                                                        |
 |----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../../images/MonitoringX_spectruminfo.png)        | Information tab. Contains basic information about the current measurement points, markers, thresholds and parameters. If no markers or thresholds are available for the current preset, these sections are not displayed in the tab.                                                   |
-| ![](../../images/MonitoringX_spectrumtraces.png)    | Traces tab. Allows you to select whether the current, minimum, maximum and/or average trace should be displayed. However, if a measurement point is selected, only the current trace can be shown.                                                                                     |
-| ![](../../images/MonitoringX_spectrumpresets.png)  | Presets tab. This tab shows a list of all available presets. By default, only private presets are shown, i.e. presets that are only available to the current user. To view all presets, select Show shared presets. Select a preset and click Load to display it on the spectrum page. |
+| ![](../../images/MonitoringX_spectruminfo.png)       | Information tab. Contains basic information about the current measurement points, markers, thresholds and parameters. If no markers or thresholds are available for the current preset, these sections are not displayed in the tab.                                                   |
+| ![](../../images/MonitoringX_spectrumtraces.png)   | Traces tab. Allows you to select whether the current, minimum, maximum and/or average trace should be displayed. However, if a measurement point is selected, only the current trace can be shown.                                                                                     |
+| ![](../../images/MonitoringX_spectrumpresets.png) | Presets tab. This tab shows a list of all available presets. By default, only private presets are shown, i.e. presets that are only available to the current user. To view all presets, select Show shared presets. Select a preset and click Load to display it on the spectrum page. |

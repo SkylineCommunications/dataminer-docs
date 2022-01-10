@@ -1,6 +1,6 @@
 ## PortLog.txt
 
-In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements for which log information has to be added to the *SLPort.txt* log file.
+In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements for which log information has to be added to the *SLPort.txt* log file.
 
 - These files are located in the following folders:
 
@@ -10,7 +10,7 @@ In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements f
     | SLPort.txt  | C:\\Skyline DataMiner\\Logging\\ |
 
 > [!NOTE]
-> This is only applicable for (smart) serial connections. 
+> This is only applicable for (smart) serial connections.
 >
 > To have additional logging for HTTP connections, you can enable WinHTTP logging (see <https://docs.microsoft.com/en-us/windows/win32/wsdapi/capturing-winhttp-logs>). However, this requires a restart to enable or disable the logging.
 

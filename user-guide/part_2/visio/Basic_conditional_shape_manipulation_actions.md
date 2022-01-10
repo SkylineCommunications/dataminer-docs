@@ -74,7 +74,7 @@ Within one type of action, multiple conditions can be separated by semicolons (â
 - Examples
 
     ```txt
-    34|Rotate;Auto,180;Int,90;Auxif,270                                 
+    34|Rotate;Auto,180;Int,90;Auxif,270
     176|LineColor;=9,Pink;=15,AliceBlue|FillColor;=9,AliceBlue;=15,Pink
     ```
 

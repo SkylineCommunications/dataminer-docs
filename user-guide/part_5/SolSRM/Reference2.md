@@ -68,7 +68,7 @@ The overview also indicates the type of value that is expected for each property
 
 This property can be used to assign a “pool” resource to the node of a service definition. This way, when a booking is created, only the configured pool resources will be available. When the booking starts or another relevant event occurs, the pool resource can be exchanged for a regular resource.
 
-To configure this, set the value of the property to *PoolResource*. In addition, make sure the *Pool Resource* option is enabled in the Booking Manager (on the *Config* > *Wizard* tab), and the pool resources are configured with the capability *Resource Type* and value *PoolResource*.
+To configure this, set the value of the property to *PoolResource*. In addition, make sure the *Pool Resource* option is enabled in the Booking Manager (on the *Config* > *Wizard* tab), and the pool resources are configured with the capability *Resource Type* and value *PoolResource*.
 
 Other supported values for this property are:
 
@@ -107,7 +107,7 @@ Either just use the script name as the property value, or specify the script in 
 
 This property allows you to indicate whether a resource should be assigned to a node automatically or not.
 
-Set this property to *TRUE* or *FALSE*.
+Set this property to *TRUE* or *FALSE*.
 
 ### BlockInfo
 
@@ -117,18 +117,18 @@ Set this property to *TRUE* or *FALSE*.
 
 **Mandatory**: No
 
-This property allows you to override the custom booking block information (configured on the *Config* > *Timeline* tab of the Booking Manager) for a specific service definition.
+This property allows you to override the custom booking block information (configured on the *Config* > *Timeline* tab of the Booking Manager) for a specific service definition.
 
 Set the value to a JSON code block as illustrated below. In this code, the order of each item must always be specified, as this will determine the order in which the items are displayed (1 = the highest).
 
 **Example value**:
 
 ```json
-[                                                                                 
-   { "BlockInfo": "FixedString", "Order":3},                                       
-   { "BlockInfo": "Name: [BOOKINGNAME]", "Order": 1},                            
-   { "BlockInfo": "Friendly Reference: [PROPERTY:FriendlyReference]", "Order": 2}
-]                                                                                 
+[
+ { "BlockInfo": "FixedString", "Order":3},
+ { "BlockInfo": "Name: [BOOKINGNAME]", "Order": 1},
+ { "BlockInfo": "Friendly Reference: [PROPERTY:FriendlyReference]", "Order": 2}
+]
 ```
 
 ### ConfigurationOrder
@@ -159,11 +159,11 @@ The JSON value of this property should contain the following fields:
 
 - *Concurrency*: Integer defining the maximum concurrency for the contributing resource.
 
-- *ConvertToContributing*: Determines whether the *Convert to Contributing* checkbox is selected by default (true) or not (false).
+- *ConvertToContributing*: Determines whether the *Convert to Contributing* checkbox is selected by default (true) or not (false).
 
-- *LifeCycle*: The type of lock life cycle, which can be *Locked* or *Unlocked*. *Locked* means the timing of the contributing booking is tied to that of the main booking; *Unlocked* means it is independent from the main booking.
+- *LifeCycle*: The type of lock life cycle, which can be *Locked* or *Unlocked*. *Locked* means the timing of the contributing booking is tied to that of the main booking; *Unlocked* means it is independent from the main booking.
 
-- *OrchestrationTrigger*: *Local* or *Main*. If set to *Main*, the service state will not be updated and LSO will not be triggered.
+- *OrchestrationTrigger*: *Local* or *Main*. If set to *Main*, the service state will not be updated and LSO will not be triggered.
 
 - *ParentSystemFunction*: GUID of the parent system function.
 
@@ -183,28 +183,28 @@ The JSON value of this property should contain the following fields:
 
 - *ResourcePool*: The name of the resource pool in which the contributing resource should be included.
 
-- *Script*: Custom script that can be triggered after creating the contributing booking. It is typically used to assign capabilities/capacities to the associated contributing resource. Configured in the format "*Script:Script Name\|\|Parameter Name 1=Parameter 1;Parameter Name 2=Parameter 2;...*". The *\[RESERVATIONID\]* and *\[RESOURCEID\]* placeholders can be used, representing the resulting contributing booking ID and resource ID, respectively.
+- *Script*: Custom script that can be triggered after creating the contributing booking. It is typically used to assign capabilities/capacities to the associated contributing resource. Configured in the format "*Script:Script Name\|\|Parameter Name 1=Parameter 1;Parameter Name 2=Parameter 2;...*". The *\[RESERVATIONID\]* and *\[RESOURCEID\]* placeholders can be used, representing the resulting contributing booking ID and resource ID, respectively.
 
 - *VisioFileName*: The Visio drawing that should be used for the contributing booking. While in other cases the Visio file configured in the service definition is used when a contributing booking is generated, when it is generated based on a *Path* parameter, the Visio file must be explicitly mentioned with this option.
 
 **Example value**:
 
 ```json
-{                                                                  
-    "CandidateResources":null,                                         
-    "Concurrency":310,                                                 
-    "ConvertToContributing":true,                                      
-    "LifeCycle":"Locked",                                              
-    "OrchestrationTrigger":"Local",                                    
-    "ParentSystemFunction":"b91f59c8-58f2-4422-9a28-f0a6bf815ab0",     
-    "PostRoll":0,                                                      
-    "PreRoll":0,                                                       
-    "ReservationAppendixName":"V46GQJ",                                
-    "ReservationType":"Standalone",                                    
-    "ResourcePool":"SDMN.SAT.Resource Pool",                           
+{
+    "CandidateResources":null,
+    "Concurrency":310,
+    "ConvertToContributing":true,
+    "LifeCycle":"Locked",
+    "OrchestrationTrigger":"Local",
+    "ParentSystemFunction":"b91f59c8-58f2-4422-9a28-f0a6bf815ab0",
+    "PostRoll":0,
+    "PreRoll":0,
+    "ReservationAppendixName":"V46GQJ",
+    "ReservationType":"Standalone",
+    "ResourcePool":"SDMN.SAT.Resource Pool",
     "Script":"Script:SRM_DummyScript||DummyParameterName=DummyValue",
-    "VisioFileName":null                                               
-}                                                                  
+    "VisioFileName":null
+}
 ```
 
 ### Created Booking Action
@@ -217,7 +217,7 @@ The JSON value of this property should contain the following fields:
 
 This property defines the Automation script that should be executed when a booking is confirmed.
 
-The value of this property should be configured in JSON format. It can contain script parameters, but script dummies are not supported. You can also use the *\[RESERVATIONID\]* placeholder to represent the GUID of the booking.
+The value of this property should be configured in JSON format. It can contain script parameters, but script dummies are not supported. You can also use the *\[RESERVATIONID\]* placeholder to represent the GUID of the booking.
 
 **Example value**:
 
@@ -240,48 +240,48 @@ As the value of this property, in JSON, specify the script that implements the t
 **Example values**:
 
 ```json
-{                                     
+{
     "Script":"SRM_ApplyDataTransferRules",
-    "Triggers":[{                        
-            "InterfaceId":null,                   
-            "NodeLabel":"Demodulating",           
-            "ParameterName":"RF Modulation",      
-            "TriggerType":"Parameter"             
-        }                                     
-    ]                                    
-}                                     
+    "Triggers":[{
+            "InterfaceId":null,
+            "NodeLabel":"Demodulating",
+            "ParameterName":"RF Modulation",
+            "TriggerType":"Parameter"
+        }
+    ]
+}
 ```
 
 The property value above will cause the script "SRM_ApplyDataTransferRules" to be triggered every time the parameter "RF Modulation" on the node with label "Demodulating" changes.
 
 ```json
-{                                     
+{
     "Script":"SRM_ApplyDataTransferRules",
-    "Triggers":[{                        
-            "NodeLabel":"Demodulating",           
-            "TriggerType":"Resource"              
-        }                                     
-    ]                                    
-}                                     
+    "Triggers":[{
+            "NodeLabel":"Demodulating",
+            "TriggerType":"Resource"
+        }
+    ]
+}
 ```
 
 The property value above will cause the script "SRM_ApplyDataTransferRules" to be triggered whenever the resource on the node with label "Demodulating" changes.
 
 ```json
-{                                           
-  "Script": "SRM_DataTransferRulesTemplate",
-     "Triggers": [                         
-    {                                       
-         "NodeLabel": "Demodulator 1",      
-         "TriggerType": "ProfileInstance"   
-    },                                      
-    {                                       
-         "InterfaceId": 11,                 
-         "NodeLabel": "Demodulator 1",      
-         "TriggerType": "ProfileInstance"   
-    }                                       
-  ]                                        
-}                                           
+{
+ "Script": "SRM_DataTransferRulesTemplate",
+ "Triggers": [
+ {
+ "NodeLabel": "Demodulator 1",
+ "TriggerType": "ProfileInstance"
+ },
+ {
+ "InterfaceId": 11,
+ "NodeLabel": "Demodulator 1",
+ "TriggerType": "ProfileInstance"
+ }
+ ]
+}
 ```
 
 The property value above will cause the script “SRM_DataTransferRulesTemplate” to be triggered whenever the profile instance on the node with label “Demodulator 1” changes.
@@ -326,7 +326,7 @@ Set this property to an integer value corresponding with the parent system funct
 
 **Mandatory**: No
 
-Set this property to *Yes* to filter the available profile instances for a node in the Booking Wizard based on the capabilities of the selected resource.
+Set this property to *Yes* to filter the available profile instances for a node in the Booking Wizard based on the capabilities of the selected resource.
 
 ### HideFromWizard
 
@@ -439,26 +439,26 @@ Specify the conditions in JSON format as illustrated below. Only "AND" combinati
 **Example value**:
 
 ```json
-{                                            
-   "Condition":"<A>",                       
-   "Value":[{                               
-      "Label":"A",                           
-      "Type":"Operation",                    
-      "Value":{                              
-          "FirstOperand":                    
-              {                              
-                  "Link":"[var:ENC-Vendor]"
-              },                             
-          "Operator":"=",                    
-          "SecondOperand":                   
-              {                              
-                  "Link":"RESOURCE",         
-                  "Capability":"ENC-Vendor"  
-              }                              
-          }                                  
-      }                                      
-   ]                                        
-}                                            
+{
+ "Condition":"<A>",
+ "Value":[{
+ "Label":"A",
+ "Type":"Operation",
+ "Value":{
+ "FirstOperand":
+ {
+ "Link":"[var:ENC-Vendor]"
+ },
+ "Operator":"=",
+ "SecondOperand":
+ {
+ "Link":"RESOURCE",
+ "Capability":"ENC-Vendor"
+ }
+ }
+ }
+ ]
+}
 ```
 
 ### Resource Pool
@@ -483,10 +483,10 @@ For example, if you set this property to *Satellites*, and the virtual platform 
 
 This property is used to sort resources for a specific node in the Booking Wizard based on available capacity.
 
-To configure this, on the *General* data page of the Booking Manager, set the *Resources Order Rule* parameter to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
+To configure this, on the *General* data page of the Booking Manager, set the *Resources Order Rule* parameter to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
 
 > [!NOTE]
-> If *Resources Order Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
+> If *Resources Order Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
 
 ### Reuse Contributing Resource
 
@@ -532,4 +532,4 @@ This property should be set to the name of the virtual platform. This is used to
 
 **Example value**: SDMN
 
- 
+

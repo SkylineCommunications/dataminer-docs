@@ -2,7 +2,7 @@
 
 To search the entire database for a particular word:
 
-- Enter a search term in the *Search* box, which is located in the top-left corner of the *Asset Manager* user interface.
+- Enter a search term in the *Search* box, which is located in the top-left corner of the *Asset Manager* user interface.
 
     The search results will appear in the tree structure on the left.
 

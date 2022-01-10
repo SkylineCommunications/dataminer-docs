@@ -6,20 +6,20 @@ To create a redundancy group template:
 
 2. On the first tab page, enter a name. Optionally, you can also add a description, and select the DMA that has to host the redundancy group template.
 
-3. On the *Configuration* tab page, in the *Protocol* section, select the protocol and a protocol version for the elements that will be added to the redundancy group template.
+3. On the *Configuration* tab page, in the *Protocol* section, select the protocol and a protocol version for the elements that will be added to the redundancy group template.
 
 4. If you wish to use software redundancy:
 
-    1. In the *Redundancy mode* section, click the underlined section and select *intervene in the switching (software redundancy)*.
+    1. In the *Redundancy mode* section, click the underlined section and select *intervene in the switching (software redundancy)*.
 
-    2. On the same line, click the underlined section to the right of *redundancy mode* and specify the redundancy mode.
+    2. On the same line, click the underlined section to the right of *redundancy mode* and specify the redundancy mode.
 
         > [!NOTE]
         > For more information on the different redundancy modes and on how to switch between redundancy modes after the redundancy group has been created, see [Changing the redundancy mode](Changing_the_redundancy_mode.md).
 
-    3. If you want the conditions of the switching logic to also be checked when a user does a manual switch, in the *Redundancy mode* section, select *On manual switchover to a backup, also check the conditions from the switching logic*.
+    3. If you want the conditions of the switching logic to also be checked when a user does a manual switch, in the *Redundancy mode* section, select *On manual switchover to a backup, also check the conditions from the switching logic*.
 
-    4. In the *Switching logic* section, click add and select *Add switching logic*. A first empty switching condition will then be displayed.
+    4. In the *Switching logic* section, click add and select *Add switching logic*. A first empty switching condition will then be displayed.
 
     5. Configure the switching condition by clicking the underlined fields and selecting the appropriate values, and add more conditions with the *Add* field below the condition if necessary:
 
@@ -36,13 +36,13 @@ To create a redundancy group template:
 
         - Next to *by executing*, you can configure what should happen during a switch: a parameter set or an Automation script execution.
 
-5. In the *Switching Detection* section, specify when a switchover or switchback operation will be considered finished:
+5. In the *Switching Detection* section, specify when a switchover or switchback operation will be considered finished:
 
-    1. Click *Add* and select *Add switching detection* to create a pair of conditions for switchover and switchback.
+    1. Click *Add* and select *Add switching detection* to create a pair of conditions for switchover and switchback.
 
     2. Configure the conditions by clicking the underlined fields and selecting the appropriate values. The conditions can check whether an alarm exists, whether an element is in a particular state or whether a parameter has a particular value.
 
-    3. If more conditions are necessary, click *Add* and configure the new conditions as described above.
+    3. If more conditions are necessary, click *Add* and configure the new conditions as described above.
 
 6. On the *Views* tab page, specify the view(s) where the redundancy group template should be created.
 

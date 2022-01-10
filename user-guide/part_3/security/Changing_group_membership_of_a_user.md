@@ -1,6 +1,6 @@
 ## Changing group membership of a user
 
-1. In the *Users / Groups* section of the System Center module, go to the *users* tab and select the user in question.
+1. In the *Users / Groups* section of the System Center module, go to the *users* tab and select the user in question.
 
     Alternatively, you can also open the user card for the user in question. See [Opening a user card](Opening_a_user_card.md).
 
@@ -8,7 +8,7 @@
 
 3. If you are using a version of DataMiner prior to 9.5.4, click the *Edit* button in the lower right corner.
 
-4. User the *ADD \>\>* and *\<\< REMOVE* buttons to move different groups to or from the *Available groups* and *Included in groups* columns.
+4. User the *ADD \>\>* and *\<\< REMOVE* buttons to move different groups to or from the *Available groups* and *Included in groups* columns.
 
 5. Click the *Apply* button.
 

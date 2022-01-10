@@ -34,4 +34,4 @@ DMS Alerter will connect to the DataMiner Agent you specified. Two tabs will app
 
 - Collaboration
 
-The *Alarms* tab will automatically be selected and the current alarms will be loaded. If there are new alarms, pop-up balloons will appear at the bottom of your screen.
+The *Alarms* tab will automatically be selected and the current alarms will be loaded. If there are new alarms, pop-up balloons will appear at the bottom of your screen.

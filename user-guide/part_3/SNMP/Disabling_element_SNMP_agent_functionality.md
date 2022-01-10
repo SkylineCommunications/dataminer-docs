@@ -8,14 +8,14 @@ To do so:
 
 2. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
 
-3. Set the *disableAgent* attribute of the *\<SNMP>* tag to “true”.
+3. Set the *disableAgent* attribute of the *\<SNMP>* tag to “true”.
 
     ```xml
-    <DataMiner>                 
-      ...                          
+    <DataMiner>
+      ...
       <SNMP disableAgent="true" />
-      ...                          
-    </DataMiner>                
+      ...
+    </DataMiner>
     ```
 
 4. Save the file.

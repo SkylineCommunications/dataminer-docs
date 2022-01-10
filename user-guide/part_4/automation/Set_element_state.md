@@ -2,7 +2,7 @@
 
 Use this action to set the state of a dummy in an Automation script:
 
-1. Click *Restart* to select the element state: *Start*, *Stop*, *Restart*, *Pause*, *Mask*, or *Unmask*.
+1. Click *Restart* to select the element state: *Start*, *Stop*, *Restart*, *Pause*, *Mask*, or *Unmask*.
 
     > [!NOTE]
     > Up to DataMiner version 9.0, when you mask an element, you must also enter a comment. From version 9.0 onwards, it is possible to leave the comment empty.

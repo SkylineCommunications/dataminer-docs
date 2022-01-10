@@ -21,7 +21,7 @@ Three types of alarm filters are available:
 - **Protected**: A protected filter is available to other users, but only the user who created the filter can change it.
 
 > [!NOTE]
-> -  If you have not been granted the user permission *Security* > *View users from other groups*, you will not have access to public and protected alarm filters from other groups.
+> -  If you have not been granted the user permission *Security* > *View users from other groups*, you will not have access to public and protected alarm filters from other groups.
 > -  If you have been granted the user permission *Edit/delete protected filters*, you will be able to make changes to protected filters even if you were not the one who created them.
 
 > [!TIP]

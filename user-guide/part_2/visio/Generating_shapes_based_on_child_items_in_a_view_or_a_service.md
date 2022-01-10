@@ -43,11 +43,11 @@ The following shape data fields can be added to a shape that has to represent a 
     | View            | The shape will be used to represent a view.             |
     | RedundancyGroup | The shape will be used to represent a redundancy group. |
 
-    Example: All child items of type “Element” will be represented by the shape of which **ChildType** is set to “*Element*”.
+    Example: All child items of type “Element” will be represented by the shape of which **ChildType** is set to “*Element*”.
 
 - **ChildrenFilter**:
 
-    - If you have set the shape data field of type **ChildType** to “*Element*”, “*Service*” or “*View*”, you can add an additional shape data field of type **ChildrenFilter** to indicate that you want that shape only to be used to represent elements, services or views that match a specific filter:
+    - If you have set the shape data field of type **ChildType** to “*Element*”, “*Service*” or “*View*”, you can add an additional shape data field of type **ChildrenFilter** to indicate that you want that shape only to be used to represent elements, services or views that match a specific filter:
 
         - Elements using a particular protocol or protocol version.
 
@@ -83,12 +83,12 @@ The following shape data fields can be added to a shape that has to represent a 
         > [!NOTE]
         > The *Timeout* alarm severity is currently not supported in the ChildrenFilter field.
 
-    - Using placeholders such as *\[var:\]* and *\[param:\]* within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards. This can for instance be used to filter the child shapes using a session variable in the filter value.
+    - Using placeholders such as *\[var:\]* and *\[param:\]* within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards. This can for instance be used to filter the child shapes using a session variable in the filter value.
 
     - From DataMiner 10.2.0/10.1.2 onwards, you can filter service, view and element children by name, by specifying a regular expression in the following format in the shape data: *Name=**Regex*.
 <br>For example, *Name=\[var:userSpecifiedName\]*. Only objects of which the name matches the regular expression will be shown.
 
-    - From DataMiner 10.2.0/10.1.10 onwards, you can filter service children based on whether they are mapped resources, unmapped resources, or resources inherited from a resource pool. To do so, add a data field of type **ChildrenFilter** and set its value to *ResourceMapping=*, followed by one or more roles (separated by commas): *mapped*, *unmapped* or *inheritance*. If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown. For example:
+    - From DataMiner 10.2.0/10.1.10 onwards, you can filter service children based on whether they are mapped resources, unmapped resources, or resources inherited from a resource pool. To do so, add a data field of type **ChildrenFilter** and set its value to *ResourceMapping=*, followed by one or more roles (separated by commas): *mapped*, *unmapped* or *inheritance*. If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown. For example:
 
         | Shape data field | Value                                       |
         |--------------------|---------------------------------------------|
@@ -98,7 +98,7 @@ The following shape data fields can be added to a shape that has to represent a 
 
 The following shape data fields can be added to the group containing the shapes that have to represent the different child items.
 
-- **Children**: In this mandatory shape data field, specify the type of child items that have to be generated: *View*, *Element*, *Service* and/or *RedundancyGroup*. In case of multiple types, separate them by pipes.
+- **Children**: In this mandatory shape data field, specify the type of child items that have to be generated: *View*, *Element*, *Service* and/or *RedundancyGroup*. In case of multiple types, separate them by pipes.
 
     Examples:
 
@@ -115,9 +115,9 @@ The following shape data fields can be added to the group containing the shapes 
     Generate a shape for every element in the view or service to which the drawing is linked.
 
     > [!NOTE]
-    > -  By default, a **Children** shape always shows the child items of the view or service to which the Visio drawing is linked. If you want a **Children** shape to show the child items of a specific view or service, then add a shape data field of type **View** or **Element** to that same shape. In that field, you can then explicitly specify the view or the service of which the shape has to show all child items.
-    > -  A **Children** shape can contain another **Children** shape. That way, you can dynamically generate e.g. shapes that represent all subviews in a view, as well as shapes that represent all items in those subviews.
-    > -  With the DataMiner Cube user setting *Maximum number of child shapes in a 'Children' container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
+    > -  By default, a **Children** shape always shows the child items of the view or service to which the Visio drawing is linked. If you want a **Children** shape to show the child items of a specific view or service, then add a shape data field of type **View** or **Element** to that same shape. In that field, you can then explicitly specify the view or the service of which the shape has to show all child items.
+    > -  A **Children** shape can contain another **Children** shape. That way, you can dynamically generate e.g. shapes that represent all subviews in a view, as well as shapes that represent all items in those subviews.
+    > -  With the DataMiner Cube user setting *Maximum number of child shapes in a 'Children' container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
 
 - **ChildrenOptions**: In this optional shape data field, you can specify the following options:
 

@@ -39,7 +39,7 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
 
 5. Run Visual Studio as an Administrator.
 
-6. Make sure that, in the *DMA* tab of the *DIS Settings* window, you have added the DataMiner Agent with the correct user account and that, in its *Debugging* tab, you have selected the *Enable remote debugging* option and configured the following settings:
+6. Make sure that, in the *DMA* tab of the *DIS Settings* window, you have added the DataMiner Agent with the correct user account and that, in its *Debugging* tab, you have selected the *Enable remote debugging* option and configured the following settings:
 
     | Setting          | Description                                                                                                                                                                                                                                                                                                                                                                |
     |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -49,6 +49,6 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
 
     See [DMA](DIS_settings.md#dma)
 
-7. Go to *Tools \> Options \> Debugging \> Symbols*, and add the above-mentioned “publish path”<br>(e.g. *\\\\remote-dma\\dis*) to the list of symbol file locations.
+7. Go to *Tools \> Options \> Debugging \> Symbols*, and add the above-mentioned “publish path”<br>(e.g. *\\\\remote-dma\\dis*) to the list of symbol file locations.
 
-You are now ready to start debugging. See [Debugging a QAction](Debugging_a_QAction.md) or [Debugging an Automation script](Debugging_an_Automation_script.md).
+You are now ready to start debugging. See [Debugging a QAction](Debugging_a_QAction.md) or [Debugging an Automation script](Debugging_an_Automation_script.md).

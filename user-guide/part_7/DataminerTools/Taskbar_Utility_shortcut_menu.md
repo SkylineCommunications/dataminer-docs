@@ -6,7 +6,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     Starts DataMiner Cube.
 
-- **Launch \> Tools \> Client Test**
+- **Launch \> Tools \> Client Test**
 
     Starts the SLNetClientTest program.
 
@@ -17,11 +17,11 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
     > See also:
     > [SLNetClientTest tool](SLNetClientTest_tool.md)
 
-- **Launch \> Tools \> Clean Client Files**
+- **Launch \> Tools \> Clean Client Files**
 
     Starts SLCleanCabFiles.exe, which is located in C:\\Skyline DataMiner\\Tools\\.
 
-- **Launch \> Tools \> SLLogCollector**
+- **Launch \> Tools \> SLLogCollector**
 
     Starts the SLLogCollector tool. (Available in the shortcut menu from DataMiner 9.6.0 CU23/10.0.0 CU13/10.1.0 CU2/10.1.5 onwards.)
 
@@ -104,7 +104,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
     In the *About* tab, the options window also displays the version number of the Taskbar Utility application.
 
     > [!NOTE]
-    > To avoid issues in a DMS that is configured to only use HTTPS/SSL communication, go to *Options* > *slnet* and select the checkbox *HTTPS Support*. (Available from DataMiner 9.5.0 CU12/9.6.3 onwards.)
+    > To avoid issues in a DMS that is configured to only use HTTPS/SSL communication, go to *Options* > *slnet* and select the checkbox *HTTPS Support*. (Available from DataMiner 9.5.0 CU12/9.6.3 onwards.)
 
 - **Exit**
 

@@ -16,7 +16,7 @@ To add parameters with the parameter pane:
 
 The following functionalities may also be useful:
 
-- By default, when you add a new parameter, the parameter at the bottom of the list will be duplicated. However, to add a parameter similar to a different parameter in the list, you can duplicate it with the *+* icon to the right of the parameter.
+- By default, when you add a new parameter, the parameter at the bottom of the list will be duplicated. However, to add a parameter similar to a different parameter in the list, you can duplicate it with the *+* icon to the right of the parameter.
 
 - To remove one of the parameters in the pane, click the *x* icon to the right of the parameter.
 

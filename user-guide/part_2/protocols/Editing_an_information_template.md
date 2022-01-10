@@ -6,18 +6,18 @@ You can either edit the complete information template in the Protocols & Templat
 
 To make changes to the complete information template:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols*, select the protocol.
 
-3. Under *Information Templates*, right-click the information template you want to edit and select *Open*. Alternatively, you can also open the information template in a new card with the context menu options *Open in new card* or *Open in new undocked card*.
+3. Under *Information Templates*, right-click the information template you want to edit and select *Open*. Alternatively, you can also open the information template in a new card with the context menu options *Open in new card* or *Open in new undocked card*.
 
 4. Make the necessary changes and click *OK*.
 
     For more information, refer to step 4 of [Creating an information template](Creating_an_information_template.md).
 
 > [!NOTE]
-> -  A protocol’s default information template, which is defined in the *Protocol.xml* file, cannot be edited as described above. The only way to modify it is by making changes to the protocol itself.
+> -  A protocol’s default information template, which is defined in the *Protocol.xml* file, cannot be edited as described above. The only way to modify it is by making changes to the protocol itself.
 > -  If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
 
 ### Editing the information template for one parameter

@@ -12,8 +12,8 @@ In this section:
 
 > [!TIP]
 > See also:
-> -  [Using the Alarm Console quick filter box](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-alarm-console-quick-filter-box) 
-> -  <https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/> 
+> -  [Using the Alarm Console quick filter box](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-alarm-console-quick-filter-box)
+> -  <https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/>
 
 ### Tips on the use of quick filters
 
@@ -29,16 +29,16 @@ In this section:
     > -  [Searching with wildcard characters](Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters)
     > -  [Using regular expressions in quick filters](#using-regular-expressions-in-quick-filters)
 
-- The following comparison operators can be used in quick filters: = or ==, *!=*, *\>*, *\>=*, *\<* and *\<=*. To use these operators, first mention the column name (between double quotation marks in case it contains a space), then the operator, and then the value, which can be a number, a string or an alarm severity.
+- The following comparison operators can be used in quick filters: = or ==, *!=*, *\>*, *\>=*, *\<* and *\<=*. To use these operators, first mention the column name (between double quotation marks in case it contains a space), then the operator, and then the value, which can be a number, a string or an alarm severity.
 
     For example:
 
     ```txt
-    "process id">1000 
+    "process id">1000
     "process id"!=1001
-    severity>major    
+    severity>major
     "service impact">5
-    cpu>2             
+    cpu>2
     ```
 
     > [!NOTE]
@@ -58,7 +58,7 @@ In this section:
 
     - As in this case filtering is applied server-side instead of client-side, prefixes like “regex:”, “trending”, or “severity:” cannot be used. In addition, to launch a search, you have to explicitly press the Enter key or click an arrow button.
 
-    - In this case, it is not possible to filter on column parameters of type *discreet*, *button* or *togglebutton*.
+    - In this case, it is not possible to filter on column parameters of type *discreet*, *button* or *togglebutton*.
 
     - Using negative filters with “!” is supported for page tables from DataMiner 9.5.4 onwards.
 

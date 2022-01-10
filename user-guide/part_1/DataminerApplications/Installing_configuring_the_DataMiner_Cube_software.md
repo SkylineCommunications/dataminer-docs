@@ -35,27 +35,27 @@ There are several ways to install the DataMiner Cube desktop application, depend
 
 3. Install DataMiner Cube in one of the following ways:
 
-    - Prior to DataMiner 10.0.9: To install DataMiner Cube using the ClickOnce web installer, on the landing page, click the button *Install DataMiner Cube* and select *Click-once installation*.
+    - Prior to DataMiner 10.0.9: To install DataMiner Cube using the ClickOnce web installer, on the landing page, click the button *Install DataMiner Cube* and select *Click-once installation*.
 
     - From DataMiner 10.0.9 onwards:
 
         1. Select *Desktop installation* and run the downloaded file.
 
-        2. In the installation window, open the *Options* section and adjust the options depending on whether you want a shortcut to be added to the desktop and/or start menu and on whether you want DataMiner Cube to start with Windows.
+        2. In the installation window, open the *Options* section and adjust the options depending on whether you want a shortcut to be added to the desktop and/or start menu and on whether you want DataMiner Cube to start with Windows.
 
         3. Click *Install*.
 
         > [!NOTE]
         > -  Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
-        > -  To install the app, you need Modify access to the folders *%AppData%\\Skyline* and *%LocalAppData%\\Skyline*, as well as write access to the key *HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\<br>Uninstall*. To be able to run the app, you need Execute access for the files *%LocalAppData%\\Skyline\\DataMiner\\DataMinerCube\\DataMinerCube.exe* and *%LocalAppData%\\Skyline\\DataMiner\\DataMinerCube\\CefSharp\\version\\<br>architecture\\CefSharp.BrowserSubprocess.exe*. To create a desktop shortcut, you need Modify access to the folder *%UserProfile%\\Desktop*. To create a start menu shortcut, you need Modify access to the folder *%AppData%\\Microsoft\\Windows\\Start Menu\\Programs*.
-        > -  The *Start with Windows* feature requires write access to the key *HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run*.
+        > -  To install the app, you need Modify access to the folders *%AppData%\\Skyline* and *%LocalAppData%\\Skyline*, as well as write access to the key *HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\<br>Uninstall*. To be able to run the app, you need Execute access for the files *%LocalAppData%\\Skyline\\DataMiner\\DataMinerCube\\DataMinerCube.exe* and *%LocalAppData%\\Skyline\\DataMiner\\DataMinerCube\\CefSharp\\version\\<br>architecture\\CefSharp.BrowserSubprocess.exe*. To create a desktop shortcut, you need Modify access to the folder *%UserProfile%\\Desktop*. To create a start menu shortcut, you need Modify access to the folder *%AppData%\\Microsoft\\Windows\\Start Menu\\Programs*.
+        > -  The *Start with Windows* feature requires write access to the key *HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run*.
         > -  The eventing communication mode will only be available if the firewall allows the application *%LocalAppData%\\Skyline\\DataMiner\\DataMinerCube\\<br>DataMinerCube.exe* to accept incoming connections.
 
     - It is also possible to install DataMiner Cube using an MSI installer, but this is not recommended as this requires manual updating when a new version is available:
 
-        1. On the landing page, click the button *Install DataMiner Cube* and select *Other install options*.
+        1. On the landing page, click the button *Install DataMiner Cube* and select *Other install options*.
 
-        2. In the *Standalone applications* section, click the *MSI installer* option for DataMiner Cube.
+        2. In the *Standalone applications* section, click the *MSI installer* option for DataMiner Cube.
 
 ##### From DataMiner 10.0.2 onwards:
 
@@ -67,7 +67,7 @@ On the landing page, click the user icon in the top-right corner and select the 
 
 On the landing page, click *Install DataMiner Cube*.
 
-Alternatively, go to *http://\[DMA name\]/DataminerCubeStandalone/publish.htm* and click *Install*.
+Alternatively, go to *http://\[DMA name\]/DataminerCubeStandalone/publish.htm* and click *Install*.
 
 > [!TIP]
 > See also:
@@ -112,20 +112,20 @@ From DataMiner 9.6.3 onwards, you can change the default browser engine used in 
 
 To do so:
 
-1. In the *System Center* module, go to *System settings* > *plugins*.
+1. In the *System Center* module, go to *System settings* > *plugins*.
 
 2. Select a specific default engine, or select the option to let Cube determine the default engine.
 
     - Prior to DataMiner 10.0.10, the default browser engine is Internet Explorer. From DataMiner 10.0.10 onwards, if Chromium is installed, the default browser engine changes to Chromium. In addition, DataMiner apps displayed within an embedded web browser in DataMiner Cube (e.g. Ticketing, Dashboards, etc.) will always use the Chromium browser engine, regardless of which default browser engine is configured.
 
-    - From DataMiner 10.1.11/10.2.0 onwards, you can select to use *Edge* (WebView2). This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
+    - From DataMiner 10.1.11/10.2.0 onwards, you can select to use *Edge* (WebView2). This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
 
         > [!NOTE]
         > The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
 
 3. Optionally, if you want a different browser to be used for a specific protocol or (prior to DataMiner 10.0.10) app:
 
-    1. Below *Exclusions*, click *Add exclusion* and select either *Protocol* or the name of the app.
+    1. Below *Exclusions*, click *Add exclusion* and select either *Protocol* or the name of the app.
 
     2. For a protocol, click *\<protocol>* and select the name of the protocol.
 
@@ -144,11 +144,11 @@ Before you can run the DataMiner Cube browser application in Microsoft Internet 
 
 1. In Microsoft Internet Explorer, select *Tools \> Internet Options*.
 
-2. In the *Security* tab, select the *Local intranet* zone and click *Sites*.
+2. In the *Security* tab, select the *Local intranet* zone and click *Sites*.
 
-3. In the *Local intranet* dialog box, click *Advanced*.
+3. In the *Local intranet* dialog box, click *Advanced*.
 
-4. Enter the URL in the *Add this website to the zone* box, click *Add* and then click *Close*.
+4. Enter the URL in the *Add this website to the zone* box, click *Add* and then click *Close*.
 
 #### Configuring the XBAP settings in Microsoft Internet Explorer
 
@@ -156,9 +156,9 @@ If you want to run the DataMiner Cube client application in Microsoft Internet E
 
 1. In Microsoft Internet Explorer, select *Tools \> Internet Options*.
 
-2. In the *Security* tab, select the appropriate zone and click *Custom level...*
+2. In the *Security* tab, select the appropriate zone and click *Custom level...*
 
-3. In the *Security Settings* dialog box, go to *.NET Framework*.
+3. In the *Security Settings* dialog box, go to *.NET Framework*.
 
 4. Set *XAML browser applications* to “Enable”.
 
@@ -168,7 +168,7 @@ If you intend to run DataMiner Cube in the 64-bit version of Microsoft Internet 
 
 1. Open the 64-bit version of Microsoft Internet Explorer.
 
-2. Go to the following address: *http://\[DMA\]/DataminerCubeStandAlone/Publish.htm,* replacing “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
+2. Go to the following address: *http://\[DMA\]/DataminerCubeStandAlone/Publish.htm,* replacing “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
 
 ### Installing the Skyline certificates
 
@@ -178,7 +178,7 @@ Installing the Skyline certificates is only required if you intend to run DataMi
 
 2. Click *Register Skyline Certificates*.
 
-3. In the *File Download* dialog box, click *Run*.
+3. In the *File Download* dialog box, click *Run*.
 
 > [!NOTE]
 > -  In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.

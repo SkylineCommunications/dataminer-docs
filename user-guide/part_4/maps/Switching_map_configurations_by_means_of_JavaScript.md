@@ -15,28 +15,28 @@ To select a map configuration, use the selectConfig(name, vars) method:
 | name      | The name of the configuration.                                                                                                     |
 | vars      | An array of {Name: XXX, Value: YYY} pairs to be used for input in case the configuration has dynamic elements (i.e. placeholders). |
 
-If the parent page contains the following script ...
+If the parent page contains the following script ...
 
 ```xml
-<script type="text/javascript">            
-  function doOpenConfig(name, vars)           
-  {                                           
+<script type="text/javascript">
+  function doOpenConfig(name, vars)
+  {
     var e = document.getElementById('mapFrame');
-    if (!e || !e.contentWindow)               
-    return false; // frame contents not found   
-    if (!e.contentWindow.selectConfig)          
-    return false; // frame is not a maps app    
-    try                                         
-    {                                           
-    e.contentWindow.selectConfig(name, vars);   
-    }                                           
-    catch (e)                                   
-    {                                           
-    alert('Error switching map: ' + e.message); 
-    }                                           
-    return false;                               
-  }                                           
-</script>                                  
+    if (!e || !e.contentWindow)
+    return false; // frame contents not found
+    if (!e.contentWindow.selectConfig)
+    return false; // frame is not a maps app
+    try
+    {
+    e.contentWindow.selectConfig(name, vars);
+    }
+    catch (e)
+    {
+    alert('Error switching map: ' + e.message);
+    }
+    return false;
+  }
+</script>
 ```
 
 ... and the iframe has id “mapFrame” ...
@@ -48,9 +48,9 @@ If the parent page contains the following script ...
 ... then a configuration could be opened as follows:
 
 ```xml
-<a href=""                                                       
-  onclick="return doOpenConfig('mechelen.dynamic',                  
-      [{ Name: 'numValue', Value: '200'},                              
+<a href=""
+  onclick="return doOpenConfig('mechelen.dynamic',
+      [{ Name: 'numValue', Value: '200'},
       { Name: 'manager', Value: '7/46840' }]);">Config (dynamic 2)</a>
 ```
 

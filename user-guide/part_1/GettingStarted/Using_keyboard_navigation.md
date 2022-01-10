@@ -26,7 +26,7 @@ The following keyboard shortcuts are available in Cube:
     | Ctrl + "-"                 | When in a Visio drawing, zoom out.                                                                            |
 
     > [!NOTE]
-    > When you use Ctrl + Tab to go to the next main UI component, the focus will move from top to bottom and from left to right. 
+    > When you use Ctrl + Tab to go to the next main UI component, the focus will move from top to bottom and from left to right.
 
 - QuickMenu shortcuts
 
@@ -70,9 +70,9 @@ The following keyboard shortcuts are available in Cube:
     | Shortcut                                  | Action                      |
     |---------------------------------------------|-----------------------------|
     | Ctrl + F                                    | Find                        |
-    | Ctrl + G<br> Ctrl +F3                       | Find next<br>               |
+    | Ctrl + G<br> Ctrl +F3                       | Find next<br>              |
     | Shift + Ctrl + G<br> Shift + Ctrl + F3      | Find previous               |
     | Escape                                      | Cancel search action        |
-    | Ctrl + +<br> Ctrl + mouse scroll wheel up   | Zoom in<br>                 |
+    | Ctrl + +<br> Ctrl + mouse scroll wheel up   | Zoom in<br>                |
     | Ctrl + -<br> Ctrl + mouse scroll wheel down | Zoom out                    |
     | Ctrl + 0                                    | Reset zoom level to default |

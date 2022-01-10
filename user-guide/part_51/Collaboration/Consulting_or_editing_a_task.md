@@ -24,11 +24,11 @@ In the top-right corner, you can find two buttons:
 
 - Clicking the second button will open a menu that contains a number of commands:
 
-    - Click *Full screen* to expand the task pane (List view only). In full-screen mode, you can then click *Split view* to exit the full-screen mode.
+    - Click *Full screen* to expand the task pane (List view only). In full-screen mode, you can then click *Split view* to exit the full-screen mode.
 
-    - Click *Show/Hide planning fields* to have the task pane also show planning fields (e.g. *Start date*).
+    - Click *Show/Hide planning fields* to have the task pane also show planning fields (e.g. *Start date*).
 
-    - Click *Show/Hide customer response fields* to have the task pane also show the SLA metrics used to calculate the SLA timings (if the task is subject to an SLA):
+    - Click *Show/Hide customer response fields* to have the task pane also show the SLA metrics used to calculate the SLA timings (if the task is subject to an SLA):
 
         | Field             | Description                                         |
         |---------------------|-----------------------------------------------------|

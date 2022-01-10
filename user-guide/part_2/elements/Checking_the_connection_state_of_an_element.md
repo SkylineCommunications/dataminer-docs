@@ -19,5 +19,5 @@ To check the connection state of an element:
     | Disconnected       | For a smart-serial connection. Connection has been lost.                                 |
 
     > [!NOTE]
-    > For serial ports, the connection state is usually either Responding or Not Responding, depending on whether the socket was open or closed. However, if the option *closeConnectionOnResponse* is used in the protocol, a connection will be opened and then immediately closed as soon as a message has been sent and the response has been received. In that case the connection state will show "Undefined" all the time.
+    > For serial ports, the connection state is usually either Responding or Not Responding, depending on whether the socket was open or closed. However, if the option *closeConnectionOnResponse* is used in the protocol, a connection will be opened and then immediately closed as soon as a message has been sent and the response has been received. In that case the connection state will show "Undefined" all the time.
     >

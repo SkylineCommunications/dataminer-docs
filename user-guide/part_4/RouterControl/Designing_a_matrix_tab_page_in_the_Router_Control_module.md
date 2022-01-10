@@ -34,7 +34,7 @@ This section consists of the following topics:
 
     2. Next to *Select matrix*, select the matrix parameter.
 
-        Alternatively, you can enter a custom matrix in the *Custom matrix* box. This is a matrix represented by 2 table parameters, instead of a matrix type parameter. See [Adding a matrix represented by two table parameters](#adding-a-matrix-represented-by-two-table-parameters).
+        Alternatively, you can enter a custom matrix in the *Custom matrix* box. This is a matrix represented by 2 table parameters, instead of a matrix type parameter. See [Adding a matrix represented by two table parameters](#adding-a-matrix-represented-by-two-table-parameters).
 
     3. Next to *Layout*, specify whether you want to start with a pre-built default configuration (*General Default*) or an empty canvas (*Empty*).
 
@@ -43,13 +43,13 @@ This section consists of the following topics:
         > [!NOTE]
         > This option can be useful to temporarily hide a new layout you are working on, or to hide a matrix tab instead of deleting it. You can always change the setting afterwards by right-clicking the tab header and selecting *Edit*. This will open the *Edit matrix* dialog box, with the same options as the *Add matrix* dialog box.
 
-    5. Optionally, clear the selection from *Use output-first workflow.* When you do so, selecting an output will leave the current input selection intact. By default, the option is selected, so that selecting an output will replace the current input selection with the input that is connected to that output.
+    5. Optionally, clear the selection from *Use output-first workflow.* When you do so, selecting an output will leave the current input selection intact. By default, the option is selected, so that selecting an output will replace the current input selection with the input that is connected to that output.
 
     6. Optionally, select *Override matrix labels with custom descriptions on I/O buttons*. If you do so, any custom descriptions that have been put on I/O buttons will be shown instead of the labels of the matrix inputs/outputs
 
     7. Optionally, select *Confirm crosspoints sets*, to enable confirmation messages when a crosspoint is set (available from DataMiner 9.5.13 onwards).
 
-    8. Optionally, select *Direct take mode* (available from DataMiner 10.1.11/10.2.0 onwards). If this option is select, users will not need to click the *Connect* button to create or delete a crosspoint between an input and an output. When an input and an output are selected, these will automatically be connected or disconnected.
+    8. Optionally, select *Direct take mode* (available from DataMiner 10.1.11/10.2.0 onwards). If this option is select, users will not need to click the *Connect* button to create or delete a crosspoint between an input and an output. When an input and an output are selected, these will automatically be connected or disconnected.
 
         > [!NOTE]
         > When you use direct take mode in combination with the “Use output-first workflow” option, selecting an output will not cause crosspoints to be created or deleted, and input selections will only be cleared when you select another output.
@@ -68,7 +68,7 @@ In order to add such a matrix, do the following:
 
 1. Add a matrix like in the procedure above, until you get to the *Add Matrix* dialog box.
 
-2. In the *Add Matrix* dialog box, enter the following syntax in the *Custom matrix* box:
+2. In the *Add Matrix* dialog box, enter the following syntax in the *Custom matrix* box:
 
     ```txt
     dmaid/elementid;inputs=tablepid,indexpid,labelpid,enabledpid,lockedpid,notespid;outputs=tablepid,indexpid,labelpid,enabledpid,lockedpid,notespid,connectedinputpid
@@ -80,7 +80,7 @@ In order to add such a matrix, do the following:
     34/505527;inputs=1000,1001,1002,1003,1004,1005;outputs=2000,2001,2002, 2003,2004,2005,2006
     ```
 
-3. Optionally (from DataMiner 9.6.4 onwards), in the *Input filter* and *Output filter* boxes, specify a subscription filter as follows:
+3. Optionally (from DataMiner 9.6.4 onwards), in the *Input filter* and *Output filter* boxes, specify a subscription filter as follows:
 
     - All column parameters except the table index column must be part of the relevant subscription filter. Column parameters from the input table must be part of the input filter, column parameters from the output table must be part of the output filter.
 
@@ -111,7 +111,7 @@ To do so:
 
     Make sure you have selected the complete tab control, and not one of the tab pages (if any). the easiest way to do this is by selecting the appropriate *TabControl* in the tree view on the right.     Below the tree view panel, the option *Link to pages* will be displayed.
 
-2. Select *Link to pages*, and select whether the tab control should link to *Input pages* or *Output pages*.
+2. Select *Link to pages*, and select whether the tab control should link to *Input pages* or *Output pages*.
 
 > [!NOTE]
 > Once the matrix configuration has been loaded, no tab pages will be changed when pages are added to or removed from the linked matrix.
@@ -160,7 +160,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 1. Right-click the tab, and click *Edit...*
 
-2. In the *Edit Matrix* dialog box, open the *Link With Matrix* selection box, and select the matrix element that you want to attach to the matrix tab page.
+2. In the *Edit Matrix* dialog box, open the *Link With Matrix* selection box, and select the matrix element that you want to attach to the matrix tab page.
 
     > [!NOTE]
     > If you select a matrix that is smaller that the one that was attached, a warning message will appear.
@@ -173,7 +173,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 1. Right-click the tab, and click *Edit custom theme...*
 
-2. In the *Edit custom theme* dialog box, enter the theme’s XML code (Router Control themes are XAML resource dictionaries), and click *OK*.
+2. In the *Edit custom theme* dialog box, enter the theme’s XML code (Router Control themes are XAML resource dictionaries), and click *OK*.
 
     If syntax errors are detected, a message will appear at the bottom of the dialog box. Click the message to see more information on those errors.
 

@@ -2,7 +2,7 @@
 
 There are two ways to open the SLNetClientTest tool:
 
-- From the DataMiner Taskbar Utility, by selecting *Launch* > *Tools* > *Client Test*.
+- From the DataMiner Taskbar Utility, by selecting *Launch* > *Tools* > *Client Test*.
 
     > [!TIP]
     > See also:

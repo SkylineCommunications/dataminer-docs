@@ -30,4 +30,4 @@ The following high-level phases are typically part of the Turnkey methodology:
 
 - **System Acceptance & Handover**: At the end of implementation, there is a formal handover, for which the agreed Test & Acceptance Plan is used as a sole reference. All tests must be executed as planned, and the outcome of the tests must be solely referenced against the documented expected outcome.
 
-![](../../images/inset_0.jpg) 
+![](../../images/inset_0.jpg)

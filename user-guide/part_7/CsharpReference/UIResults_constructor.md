@@ -6,12 +6,12 @@ UIResults()
 
 Initializes a new instance of the UIResults class.
 
-To use this class, first declare a *UIResults* object and then make sure the dialog box passes all captured information to that object.
+To use this class, first declare a *UIResults* object and then make sure the dialog box passes all captured information to that object.
 
 See the following example:
 
 ```txt
-UIResults uir = null;              
+UIResults uir = null;
 uir = engine.ShowUI(uibDialogBox1);
 ```
 

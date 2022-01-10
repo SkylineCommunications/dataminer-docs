@@ -1,6 +1,6 @@
 ## Methodology needs to be practiced
 
-A clear understanding and execution of these methodologies by all involved parties and individuals is also essential to a successful deployment of the envisioned solution. In other words, once the most suitable methodology has been identified, it must be applied religiously for it to be effective.  
+A clear understanding and execution of these methodologies by all involved parties and individuals is also essential to a successful deployment of the envisioned solution. In other words, once the most suitable methodology has been identified, it must be applied religiously for it to be effective.
 
 You cannot choose a methodology and in practice have individuals or specific parts of the project execution deviate from it, whatever the reason for this may be, be it convenience, lack of ownership, or trying to avoid inconvenient but inevitable facts. Everybody agrees to play soccer or to play baseball, but you cannot accept to play soccer and then apply the rules for baseball whenever this may seem more convenient.
 

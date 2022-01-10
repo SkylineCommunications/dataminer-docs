@@ -4,7 +4,7 @@ Use this action to make a Correlation rule send a text message to one or more re
 
 In the *Actions* section of the details pane:
 
-1. Click *Add Action* and select *Send text message*.
+1. Click *Add Action* and select *Send text message*.
 
 2. Next to *To*, enter the recipients’ telephone numbers. Use semicolons to separate multiple numbers.
 

@@ -24,7 +24,7 @@ Do the following if you want DMS Alerter to connect to another DataMiner System.
 
 1. Go to *Settings \> DMS Connections*.
 
-2. In the *Account* section, click *Edit Account*.
+2. In the *Account* section, click *Edit Account*.
 
 3. In the *Add Connection* dialog box, make the necessary changes to the following settings.
 
@@ -34,12 +34,12 @@ Do the following if you want DMS Alerter to connect to another DataMiner System.
 
 4. If you want to change the default connection settings, click *Advanced*, make the necessary changes to the settings, and click *OK*.
 
-5. In the *Add Connection* dialog box, click *OK*.
+5. In the *Add Connection* dialog box, click *OK*.
 
-6. In the *Options* dialog box, click *OK*.
+6. In the *Options* dialog box, click *OK*.
 
 > [!NOTE]
-> -  In the DMS Connections tab, the option *Show message when SLAlerter loses connection* determines whether users will be notified when the connection to the DMS is lost. By default, this option is enabled.
+> -  In the DMS Connections tab, the option *Show message when SLAlerter loses connection* determines whether users will be notified when the connection to the DMS is lost. By default, this option is enabled.
 > -  If the connection to the DMS is lost, this is logged in the Event Viewer with an "SLAlerter lost connection" message. In the Alerter application itself, the user will be redirected to the login screen, in the same manner as when the connection is lost in DataMiner Cube.
 
 ### Setting your startup preferences for DMS Alerter
@@ -73,15 +73,15 @@ To configure Alerter filters:
 
     | Filter option          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                              |
     |--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Client-side filter       | In this section, you can configure a client-side severity filter. Select the severities for which an alert should be displayed. <br> Though this will not stop alarms from entering the Alerter *Alarms* list, only the alarms with the selected severities will generate alerts.                                                                                                                                         |
+    | Client-side filter       | In this section, you can configure a client-side severity filter. Select the severities for which an alert should be displayed. <br> Though this will not stop alarms from entering the Alerter *Alarms* list, only the alarms with the selected severities will generate alerts.                                                                                                                                         |
     | Use server-side filter   | If you select this option, click the ellipsis button on the right, and select one or more of the available alarm filters. Only alarms matching the alarm filters will be sent to Alerter.                                                                                                                                                                                                                                                                |
-    | Use client-side filter   | If you select this option, click the ellipsis button on the right, and select one or more of the available alarm filters. Though all alarms will be sent to Alerter, only alarms matching the alarm filters will generate an alert.<br> If you combine this option with the first *Client-side filter* option, alerts will only be generated for alarms that match the selected filters and have the selected severities. |
+    | Use client-side filter   | If you select this option, click the ellipsis button on the right, and select one or more of the available alarm filters. Though all alarms will be sent to Alerter, only alarms matching the alarm filters will generate an alert.<br> If you combine this option with the first *Client-side filter* option, alerts will only be generated for alarms that match the selected filters and have the selected severities. |
     | Only retrieve new alarms | If you select this option, Alerter will not receive any alarms that already exist at the moment when you connect to the DMS. Only alarms that are generated from that moment onwards are sent to Alerter and can potentially generate alerts, depending on the client-side filter configuration.                                                                                                                                                         |
-    | Hide acknowledged alarms | If you select this option, when Alerter receives an alarm that is acknowledged, that alarm will still be added to the *Alarms* list, but no alert will be generated, even if the alarm matches the client-side filters.                                                                                                                                                                                                   |
-    | Hide cleared alarms      | If you select this option, when Alerter receives an alarm that is cleared, that alarm will still be added to the *Alarms* list, but no alert will be generated, even if the alarm matches the client-side filters.                                                                                                                                                                                                        |
+    | Hide acknowledged alarms | If you select this option, when Alerter receives an alarm that is acknowledged, that alarm will still be added to the *Alarms* list, but no alert will be generated, even if the alarm matches the client-side filters.                                                                                                                                                                                                   |
+    | Hide cleared alarms      | If you select this option, when Alerter receives an alarm that is cleared, that alarm will still be added to the *Alarms* list, but no alert will be generated, even if the alarm matches the client-side filters.                                                                                                                                                                                                        |
 
     > [!NOTE]
-    > The alarm filters that you can select with the *Use server-side filter* and *Use client-side filter* options can be configured in DataMiner Cube. See [Working with saved alarm filters](../../part_2/alarms/Working_with_the_Alarm_Console.md#working-with-saved-alarm-filters).
+    > The alarm filters that you can select with the *Use server-side filter* and *Use client-side filter* options can be configured in DataMiner Cube. See [Working with saved alarm filters](../../part_2/alarms/Working_with_the_Alarm_Console.md#working-with-saved-alarm-filters).
 
 3. Click *OK*.
 
@@ -98,9 +98,9 @@ To configure alarm storm prevention:
 
 2. Click the button *Alarm storm prevention*.
 
-3. In the *Alarm storm prevention* window, select *Override default alarm storm prevention*
+3. In the *Alarm storm prevention* window, select *Override default alarm storm prevention*
 
-4. Enter the *Minimum number of alarms* that triggers an alarm storm, and specify whether this number should be counted *Per filter* or *For all filters*.
+4. Enter the *Minimum number of alarms* that triggers an alarm storm, and specify whether this number should be counted *Per filter* or *For all filters*.
 
 5. Below this, enter the time span in which these alarms need to occur.
 
@@ -121,7 +121,7 @@ Do the following if you want to change settings with regard to alarm sounds and 
 
     1. Select the *Enable sound* option
 
-    2. Right-click underneath *Filter* and select *Add*.
+    2. Right-click underneath *Filter* and select *Add*.
 
     3. In the *Filter and sound selection* window, do the following:
 
@@ -131,7 +131,7 @@ Do the following if you want to change settings with regard to alarm sounds and 
 
         - select the *Repeat* option if you want the file to be played over and over again.
 
-        - select the *Stop playing after* option and enter a number of seconds if you want the file to be played for an exact number of seconds.
+        - select the *Stop playing after* option and enter a number of seconds if you want the file to be played for an exact number of seconds.
 
     4. Click *OK*.
 
@@ -150,14 +150,14 @@ To do so:
 
 1. Go to *Settings \> Balloon*.
 
-2. For every property you wish to add, click the *Add property* button, and select the property. E.g. *Service impact*, *Services*, etc.
+2. For every property you wish to add, click the *Add property* button, and select the property. E.g. *Service impact*, *Services*, etc.
 
 3. To remove a property, select it in the list of additional properties, and click *Remove property*.
 
     > [!NOTE]
     > The default properties cannot be removed.
 
-4. To change the order in which the additional properties will appear in the balloon, use the *Up* and *Down* buttons to move a selected property accordingly.
+4. To change the order in which the additional properties will appear in the balloon, use the *Up* and *Down* buttons to move a selected property accordingly.
 
 > [!NOTE]
 > -  You can add as many alarm properties to the pop-up balloons as you like. If too many properties are added to show them at once in the balloon, it will be possible to scroll through them with a scrollbar.
@@ -169,7 +169,7 @@ From DataMiner 10.0.10 onwards, it is possible to fine-tune what happens when an
 
 To do so:
 
-1. Go to *Settings* > *Acknowledge*.
+1. Go to *Settings* > *Acknowledge*.
 
 2. Select the checkboxes for the following options according to your preference:
 

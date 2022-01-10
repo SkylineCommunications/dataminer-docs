@@ -10,7 +10,7 @@ If a device is shut down for maintenance purposes, or if its settings are intent
 
 > [!TIP]
 > See also:
-> [Masking or unmasking an element](../elements/Masking_or_unmasking_an_element.md) 
+> [Masking or unmasking an element](../elements/Masking_or_unmasking_an_element.md)
 
 ### Masking an alarm
 
@@ -36,12 +36,12 @@ To manually mask an alarm:
 
 4. Enter a comment, which will be stored in the *Comment* field of the new alarm record.
 
-A new alarm record will be added to the life cycle of the alarm, with *Status* and *Alarm Type* set to “Mask”. The masked alarm will disappear from the *Active alarms* tab, and is added to the *Masked alarms* tab instead
+A new alarm record will be added to the life cycle of the alarm, with *Status* and *Alarm Type* set to “Mask”. The masked alarm will disappear from the *Active alarms* tab, and is added to the *Masked alarms* tab instead
 
 > [!NOTE]
 > -  When an alarm is masked, the masked alarm no longer influences the overall alarm status of the element.
 > -  When an alarm is masked, any items linked to parameters that are consequentially masked, such as Visio items, LED bars, oscilloscopes, tables etc., will be displayed in purple.
-> -  When a row in a monitored table is deleted and then re-added, it can occur that a masked state applied on a cell in that row is lost, even if it was not configured to be masked until cleared. To prevent this, set the *AutoClear* option to false for the alarm in question. See [Setting the autoclear options for alarms in an alarm template](../protocols/Configuring_alarm_templates.md#setting-the-autoclear-options-for-alarms-in-an-alarm-template).
+> -  When a row in a monitored table is deleted and then re-added, it can occur that a masked state applied on a cell in that row is lost, even if it was not configured to be masked until cleared. To prevent this, set the *AutoClear* option to false for the alarm in question. See [Setting the autoclear options for alarms in an alarm template](../protocols/Configuring_alarm_templates.md#setting-the-autoclear-options-for-alarms-in-an-alarm-template).
 
 ### Unmasking an alarm
 
@@ -60,4 +60,4 @@ To manually unmask an alarm:
     > [!NOTE]
     > When, in case of timed masking, an alarm is automatically unmasked by the system, the system will automatically add a comment to indicate that it unmasked the alarm because the masking time has elapsed.
 
-When you unmask an alarm, a new alarm record is added to its alarm life cycle, with *Status* set to “Open” and *Alarm Type* set to “Unmask”. The alarm will disappear from the *Masked alarms* tab, and return to the *Active alarms* tab instead.
+When you unmask an alarm, a new alarm record is added to its alarm life cycle, with *Status* set to “Open” and *Alarm Type* set to “Unmask”. The alarm will disappear from the *Masked alarms* tab, and return to the *Active alarms* tab instead.

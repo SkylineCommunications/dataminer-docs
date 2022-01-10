@@ -37,7 +37,7 @@ In the Surveyor, the following actions are possible:
     - To move multiple items from one view to another at the same time, select the items on the “below this view” page of the source view using Shift or Ctrl and drag them all to the target view in the Surveyor at the same time.
 
         > [!NOTE]
-        > If the source view is not yet open while you are in *Drag and drop editing* mode, use the Surveyor right-click menu to open it.
+        > If the source view is not yet open while you are in *Drag and drop editing* mode, use the Surveyor right-click menu to open it.
 
     - Press Ctrl while dragging to copy an item into the view. This will create a copy, not a duplicate item.
 

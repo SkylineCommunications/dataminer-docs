@@ -15,13 +15,13 @@ To view a default report of bookings within the system:
 
 3. In the *Name filter* box, optionally enter a booking name to filter by.
 
-4.  Click *Show bookings* or (prior to DataMiner 9.6.7) *Show Reservations*.
+4. Click *Show bookings* or (prior to DataMiner 9.6.7) *Show Reservations*.
 
     A list of all bookings within the specified time span will be displayed. For each booking, the list shows the GUID, the name, the start time and the end time.
 
 5. To open a page with details for a particular booking, click the GUID for this booking.
 
-    If you know the GUID for a particular booking, you can also open the detailed information page for this booking directly outside DataMiner Cube by browsing to the following URL: *http://\<DMA name>/Reports/SRM-Reservation.asp?reservation=\<Reservation GUID>*      This page contains the following components:
+    If you know the GUID for a particular booking, you can also open the detailed information page for this booking directly outside DataMiner Cube by browsing to the following URL: *http://\<DMA name>/Reports/SRM-Reservation.asp?reservation=\<Reservation GUID>*     This page contains the following components:
 
     - A component to dynamically add more booking info from a booking manager element (e.g. “Booking Manager”). (Up to DataMiner 9.5.5 only)
 

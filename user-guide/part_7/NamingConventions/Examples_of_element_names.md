@@ -18,4 +18,4 @@ A modulator, normally used for transmission of channel X at location Y could be 
 LocationY ChannelX Mod
 ```
 
- 
+

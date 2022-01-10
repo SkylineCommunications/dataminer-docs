@@ -63,7 +63,7 @@ To find this ID in DataMiner Cube:
     The IDs of all items in the view can be found in the *ID* column.
 
 > [!NOTE]
-> Alternatively, for an element or service, you can also right-click the item in the Surveyor and select *Properties*. The ID is displayed in the *general* tab, to the right of the name of the view.
+> Alternatively, for an element or service, you can also right-click the item in the Surveyor and select *Properties*. The ID is displayed in the *general* tab, to the right of the name of the view.
 
 #### Exporting a list of all IDs
 

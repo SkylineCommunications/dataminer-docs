@@ -1,6 +1,6 @@
 ## Advanced Failover options
 
-When you click *Advanced* in the *Failover* dialog box, you can specify a number of advanced options in four separate tabs.
+When you click *Advanced* in the *Failover* dialog box, you can specify a number of advanced options in four separate tabs.
 
 > [!NOTE]
 > Some Failover options can also be configured directly in *MaintenanceSettings.xml*. For more information, refer to the Watchdog settings in [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
@@ -11,7 +11,7 @@ Go to this tab to specify whether Failover should occur manually or automaticall
 
 - If you choose *Automatic*, you must then go to the *Heartbeats* tab to specify all necessary settings.
 
-- If you choose *Manual*, switching can be done with the *Switch* button at the bottom of the *Failover* dialog box.
+- If you choose *Manual*, switching can be done with the *Switch* button at the bottom of the *Failover* dialog box.
 
     > [!NOTE]
     > Manual switching is not possible when the backup DMA is not running. In that case the *Switch* button will be unavailable.

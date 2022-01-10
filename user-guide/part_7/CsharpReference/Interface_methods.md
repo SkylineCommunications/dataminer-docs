@@ -42,7 +42,7 @@ You can filter by connection name in order to limit the number of connections th
 Interface[] GetNexts(string connectionNameFilter);
 ```
 
-Like for the *GetNext* method, you can use the following overload to pass along the previous interface. This can be useful in case of star topology setups where all interfaces are connected to one interface defined from source to destination, or vice versa.
+Like for the *GetNext* method, you can use the following overload to pass along the previous interface. This can be useful in case of star topology setups where all interfaces are connected to one interface defined from source to destination, or vice versa.
 
 ```txt
 Interface[] GetNexts(string connectionNameFilter, Interface previousInterface);
@@ -67,21 +67,21 @@ virtual String GetPropertyValue(String propertyName);
 Example:
 
 ```txt
-Element element = engine.FindElement("MyElement");                               
-                                                                                 
-if(element != null)                                                              
-{                                                                                
-       Interface myInterface = element.GetInterface("MyInterface");              
-                                                                                 
-       if(myInterface != null)                                                   
-       {                                                                         
-           if(myInterface.HasProperty("MyProperty"))                             
-           {                                                                     
-               string propertyValue = myInterface.GetPropertyValue("MyProperty");
-               ...                                                               
-           }                                                                     
-       }                                                                         
-}                                                                                
+Element element = engine.FindElement("MyElement");
+
+if(element != null)
+{
+ Interface myInterface = element.GetInterface("MyInterface");
+
+ if(myInterface != null)
+ {
+ if(myInterface.HasProperty("MyProperty"))
+ {
+ string propertyValue = myInterface.GetPropertyValue("MyProperty");
+ ...
+ }
+ }
+}
 ```
 
 #### HasProperty
@@ -95,21 +95,21 @@ virtual bool HasProperty(String propertyName);
 Example:
 
 ```txt
-Element element = engine.FindElement("MyElement");                               
-                                                                                 
-if(element != null)                                                              
-{                                                                                
-       Interface myInterface = element.GetInterface("MyInterface");              
-                                                                                 
-       if(myInterface != null)                                                   
-       {                                                                         
-           if(myInterface.HasProperty("MyProperty"))                             
-           {                                                                     
-               string propertyValue = myInterface.GetPropertyValue("MyProperty");
-               ...                                                               
-           }                                                                     
-       }                                                                         
-}                                                                                
+Element element = engine.FindElement("MyElement");
+
+if(element != null)
+{
+ Interface myInterface = element.GetInterface("MyInterface");
+
+ if(myInterface != null)
+ {
+ if(myInterface.HasProperty("MyProperty"))
+ {
+ string propertyValue = myInterface.GetPropertyValue("MyProperty");
+ ...
+ }
+ }
+}
 ```
 
 #### SetPropertyValue
@@ -123,18 +123,18 @@ virtual void SetPropertyValue(string propertyName, string propertyValue);
 Example:
 
 ```txt
-Element element = engine.FindElement("MyElement");                                   
-                                                                                     
-if(element != null)                                                                  
-{                                                                                    
-       Interface myInterface = element.GetInterface("MyInterface");                  
-                                                                                     
-       if(myInterface != null)                                                       
-       {                                                                             
-           if(myInterface.HasProperty("MyProperty"))                                 
-           {                                                                         
-               myInterface.SetPropertyValue("MyProperty", "MyPropertyValue");        
-           }                                                                         
-       }                                                                             
-}                                                                                    
+Element element = engine.FindElement("MyElement");
+
+if(element != null)
+{
+ Interface myInterface = element.GetInterface("MyInterface");
+
+ if(myInterface != null)
+ {
+ if(myInterface.HasProperty("MyProperty"))
+ {
+ myInterface.SetPropertyValue("MyProperty", "MyPropertyValue");
+ }
+ }
+}
 ```

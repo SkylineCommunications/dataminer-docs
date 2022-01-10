@@ -4,13 +4,13 @@ Using a shape data field of type **ElementOptions**, you can specify options to 
 
 ### Configuring the shape data field
 
-Add a shape data field of type **ElementOptions** to the shape, and set its value to one of the options listed below.
+Add a shape data field of type **ElementOptions** to the shape, and set its value to one of the options listed below.
 
 ### Options
 
 The following options can be configured for shapes linked to elements or services:
 
-- **IgnoreDynamicInclude**: If the Visio file is linked to a service and the shape is linked to an element by means of an element reference containing a wildcard, then adding a shape data field of type **ElementOptions** containing the value “*IgnoreDynamicInclude*” will make sure the shape representing the element is always displayed, even at times when that element is dynamically being excluded from the service.
+- **IgnoreDynamicInclude**: If the Visio file is linked to a service and the shape is linked to an element by means of an element reference containing a wildcard, then adding a shape data field of type **ElementOptions** containing the value “*IgnoreDynamicInclude*” will make sure the shape representing the element is always displayed, even at times when that element is dynamically being excluded from the service.
 
 - **ServiceIncludeState=inuse,notinuse,excluded**: If the Visio file is linked to a service and the shape is linked to an element by means of an element reference containing a wildcard, then adding a shape data field of type **ElementOptions** containing the value “*ServiceIncludeState*” will make sure the shape representing the element either appears or disappears depending on the current service include state of the service item to which it is linked.
 

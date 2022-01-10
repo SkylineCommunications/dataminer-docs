@@ -6,7 +6,7 @@ Based on the rules set by the user, DMS Correlation can create correlated alarms
 
 ![](../../images/correlation_engine_conceptv2.jpg)
 
- 
+
 
 ### Correlation rules: basic concept
 
@@ -32,7 +32,7 @@ The event is a combination of:
 
 ![](../../images/Correlation_rulev2.jpg)
 
- 
+
 
 ### Correlation in DataMiner Cube vs. System Display
 
@@ -50,7 +50,7 @@ Up to DataMiner version 8.5.5, DMS Correlation only supported generating correla
 
 #### Which DMA handles which rule?
 
-In the DMS, each rule is either handled by one specific DMA, or handled by all DMAs separately, depending on whether the option *Correlate across DMAs* is selected. (See [General configuration of Correlation rules](General_configuration_of_Correlation_rules.md).)
+In the DMS, each rule is either handled by one specific DMA, or handled by all DMAs separately, depending on whether the option *Correlate across DMAs* is selected. (See [General configuration of Correlation rules](General_configuration_of_Correlation_rules.md).)
 
 - If this option is selected, the rule will accept all alarm events from the entire DMS that match the configured alarm filter. One single rule can combine base alarm events from multiple Agents.
 

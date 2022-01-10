@@ -34,12 +34,12 @@ To view aggregation data:
 
 - At the top of the pane on the right:
 
-    - Click *TREE* to see a table with a tree view showing the subviews for each view and their corresponding aggregation rules.
+    - Click *TREE* to see a table with a tree view showing the subviews for each view and their corresponding aggregation rules.
 
-    - Click *TABLE* to see the aggregation rules for the view in a table with functions such as: a quick filter, sorting by column header, and a right-click menu to copy or export the table or parts of the table.
+    - Click *TABLE* to see the aggregation rules for the view in a table with functions such as: a quick filter, sorting by column header, and a right-click menu to copy or export the table or parts of the table.
 
     > [!NOTE]
-    > Whether you select *TREE* or *TABLE*, the aggregation rules will be shown in a table where each row represents a view, and each column contains the data for one particular rule.
+    > Whether you select *TREE* or *TABLE*, the aggregation rules will be shown in a table where each row represents a view, and each column contains the data for one particular rule.
 
 - For any rules that have trending enabled, a trending icon is shown in the table with aggregation rule details. If you have the necessary permission to access trending, you can click the icon to open a window with detailed trending information, similar to the information shown when you drill down on a regular parameter. For more information, see [Accessing trend information from a card](../../part_2/trending/Accessing_trend_information_from_a_card.md).
 

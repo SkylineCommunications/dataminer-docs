@@ -7,7 +7,7 @@ Users have to identify themselves by means of
 - a password.
 
     > [!NOTE]
-    > To avoid login problems, the password policy for all servers within a DataMiner System must be the same. 
+    > To avoid login problems, the password policy for all servers within a DataMiner System must be the same.
 
 DataMiner supports two methods for user identification:
 

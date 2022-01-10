@@ -1,8 +1,8 @@
 # Consulting the DataMiner logs in DataMiner Cube
 
-In the System Center module, the *Logging* page provides access to the various log files available in the DMS. On this page, you can consult log files in order to check the system health and troubleshoot any problems.
+In the System Center module, the *Logging* page provides access to the various log files available in the DMS. On this page, you can consult log files in order to check the system health and troubleshoot any problems.
 
-To access the *Logging* page, in DataMiner Cube, go to *Apps* > *System Center \> Logging*.
+To access the *Logging* page, in DataMiner Cube, go to *Apps* > *System Center \> Logging*.
 
 The page consists of four tabs:
 
@@ -20,4 +20,4 @@ The page consists of four tabs:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-logging/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-logging/>

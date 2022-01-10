@@ -12,13 +12,13 @@ To configure a trend template:
 
 1. Open the template editor. This can be done in two ways:
 
-    - Go to the Protocols & Templates module, right-click the template and select *Open*, *Open in new card* or *Open in new undocked card*.
+    - Go to the Protocols & Templates module, right-click the template and select *Open*, *Open in new card* or *Open in new undocked card*.
 
     - Right-click an item in the Surveyor and select *View \> Trend template*.
 
 2. In the template editor, you can do the following:
 
-    - In the *General* section, click *Show details* and enter a description in the description field.
+    - In the *General* section, click *Show details* and enter a description in the description field.
 
         > [!NOTE]
         > From DataMiner 9.0.5 onwards, templates can be quickly assigned via the Surveyor right-click menu. The description you enter here is shown as a tooltip in that menu, and may help users to select the correct template.
@@ -30,7 +30,7 @@ To configure a trend template:
     - For each parameter, select the checkbox for real-time or for average trending to activate trending for this parameter.
 
         > [!NOTE]
-        > -  Enabling or disabling average or real-time trending for a parameter is also possible via the trend template context menu. 
+        > -  Enabling or disabling average or real-time trending for a parameter is also possible via the trend template context menu.
         > -  From DataMiner 9.0.0 CU11 onwards, the context menu of the column header of the list of parameters allows you to enable or disable average and/or real-time trending for all parameters at once.
 
     - Use the filter box in the top-right corner to quickly find a parameter.
@@ -39,7 +39,7 @@ To configure a trend template:
 
         - Specify a mask in the filter column to apply the trend configuration only to a filtered selection of available rows of the dynamic table.
 
-        - Duplicate column parameters using the *+* button to define different trending with different filters.
+        - Duplicate column parameters using the *+* button to define different trending with different filters.
 
         - Remove a duplicated column parameter using the *x* button.
 
@@ -49,7 +49,7 @@ To configure a trend template:
         > -  For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
         > -  Trending of column parameters of type string is only supported from DataMiner 10.0.9 onwards.
 
-3. When ready, click *Apply* to apply the trend template, or *OK* to apply the trend template and exit the editor.
+3. When ready, click *Apply* to apply the trend template, or *OK* to apply the trend template and exit the editor.
 
     From DataMiner 9.0.5 onwards, a dialog box will then appear that allows you to immediately link the template to one or more elements.
 

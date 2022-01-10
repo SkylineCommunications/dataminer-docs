@@ -31,7 +31,7 @@ PageName|Option
 | PageName\|Tooltip | The page is displayed in a tooltip.                                           | MySpecialPage\|Tooltip |
 
 > [!NOTE]
-> If, in the value of the **VdxPage** shape data field, you replace the page name by “*\[auto\]*”, the window will contain the page of which the **InlineVdx** shape data field has been set to *TRUE*. See [Marking a page of a Visio drawing as the default page](Marking_a_page_of_a_Visio_drawing_as_the_default_page.md).
+> If, in the value of the **VdxPage** shape data field, you replace the page name by “*\[auto\]*”, the window will contain the page of which the **InlineVdx** shape data field has been set to *TRUE*. See [Marking a page of a Visio drawing as the default page](Marking_a_page_of_a_Visio_drawing_as_the_default_page.md).
 
 ### Optional configuration
 
@@ -51,14 +51,14 @@ To fine-tune the way the page is displayed, a number of additional options are a
 
 #### Making the window close automatically
 
-If **VdxPage** is set to “*PageName\|Popup*”, you can make the pop-up window close automatically when a shape is clicked inside the window. To do so, add a shape data field **Options** and set it to *AutoClosePopup*:
+If **VdxPage** is set to “*PageName\|Popup*”, you can make the pop-up window close automatically when a shape is clicked inside the window. To do so, add a shape data field **Options** and set it to *AutoClosePopup*:
 
 | Shape data field | Value          |
 |------------------|----------------|
 | VdxPage          | MyPage\|Popup  |
 | Options          | AutoClosePopup |
 
-Alternatively, from DataMiner 9.6.1 onwards, you can configure a specific shape within the pop-up window to close the window after the shape’s main action is executed. To do so, add the *ClosePage* option to the shape data of the shape:
+Alternatively, from DataMiner 9.6.1 onwards, you can configure a specific shape within the pop-up window to close the window after the shape’s main action is executed. To do so, add the *ClosePage* option to the shape data of the shape:
 
 | Shape data field | Value     |
 |------------------|-----------|
@@ -66,7 +66,7 @@ Alternatively, from DataMiner 9.6.1 onwards, you can configure a specific shape 
 
 #### Configuring what should happen when a window is closed
 
-From DataMiner 10.0.13 onwards, the **OnClosing** page-level shape data field allows you to configure what should happen when a Visual Overview window is closed. Depending on how this shape data is configured, a message box will be displayed asking for confirmation, possibly with a custom message.
+From DataMiner 10.0.13 onwards, the **OnClosing** page-level shape data field allows you to configure what should happen when a Visual Overview window is closed. Depending on how this shape data is configured, a message box will be displayed asking for confirmation, possibly with a custom message.
 
 In this shape data field, specify a script (example: Script:MyScript), and make sure the script contains an instruction like the following one:
 
@@ -76,12 +76,12 @@ engine.AddScriptOutput(UIVariables.VisualOverview.ClosingWindow_Result,ClosingMo
 
 The session variable named *ClosingWindow_Result* can be set to “Continue”, “Stop” or “Abort”.
 
-In the example above, it is set to “Continue”. If *ClosingWindow_Result* is set to “Stop”, a message box of type “Yes/No” will appear. If the user then clicks “Yes”, the window will be closed. Note that in the session variable named *ClosingWindow_Message*, you can specify a custom message to be displayed. If you specify such a message, then it will be shown in a message box of type “OK”, regardless of the value of the *ClosingWindow_Result* variable. However, if *ClosingWindow_Result* is set to “Stop”, this custom message will be displayed in the message box of type “Yes/No” mentioned above.
+In the example above, it is set to “Continue”. If *ClosingWindow_Result* is set to “Stop”, a message box of type “Yes/No” will appear. If the user then clicks “Yes”, the window will be closed. Note that in the session variable named *ClosingWindow_Message*, you can specify a custom message to be displayed. If you specify such a message, then it will be shown in a message box of type “OK”, regardless of the value of the *ClosingWindow_Result* variable. However, if *ClosingWindow_Result* is set to “Stop”, this custom message will be displayed in the message box of type “Yes/No” mentioned above.
 
 > [!NOTE]
-> -  The *OnClosing* shape data field only works for windows. It does not work for message boxes or tooltips.
-> -  The *OnClosing* and *OnClose* shape data fields do not influence each other. Both function independently from each other.
-> -  If you want to combine *OnClosing* and *OnClose*, you can pass a session variable to the *OnClosing* script and make it return another session variable. That variable can then be passed to the *OnClose* script, which can optionally be made to return another session variable.
+> -  The *OnClosing* shape data field only works for windows. It does not work for message boxes or tooltips.
+> -  The *OnClosing* and *OnClose* shape data fields do not influence each other. Both function independently from each other.
+> -  If you want to combine *OnClosing* and *OnClose*, you can pass a session variable to the *OnClosing* script and make it return another session variable. That variable can then be passed to the *OnClose* script, which can optionally be made to return another session variable.
 
 > [!TIP]
 > See also:
@@ -89,7 +89,7 @@ In the example above, it is set to “Continue”. If *ClosingWindow_Result* is
 
 #### Configuring the size of the window
 
-If you added a “*\|Popup*” or a “*\|Window*” option to have the Visio page appear in a separate window, you can use a shape data field of type **LinkOptions** to set the size of that window.
+If you added a “*\|Popup*” or a “*\|Window*” option to have the Visio page appear in a separate window, you can use a shape data field of type **LinkOptions** to set the size of that window.
 
 To do so:
 
@@ -111,7 +111,7 @@ By default, when you right-click a Visio drawing displayed in a shape, the short
 
 #### Setting the border style of the window
 
-From DataMiner 9.6.13 onwards, if you added a “*\|Window*” option to have the Visio page appear in a separate window, to set the border style of the window, you can use a shape data field of type **LinkOptions** and set it to one of the following values:
+From DataMiner 9.6.13 onwards, if you added a “*\|Window*” option to have the Visio page appear in a separate window, to set the border style of the window, you can use a shape data field of type **LinkOptions** and set it to one of the following values:
 
 | Value                          | Description                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
@@ -121,7 +121,7 @@ From DataMiner 9.6.13 onwards, if you added a “*\|Window*” option to have th
 
 #### Setting the pop-up window to be displayed in front of other windows
 
-From DataMiner 9.6.13 onwards, if you added a “*\|Popup*” or a “*\|Window*” option to have the Visio page appear in a separate window, to make sure the window is always displayed in front of the window it was launched from, you can use a shape data field of type **LinkOptions** and set it to *KeepOnTop=true*.
+From DataMiner 9.6.13 onwards, if you added a “*\|Popup*” or a “*\|Window*” option to have the Visio page appear in a separate window, to make sure the window is always displayed in front of the window it was launched from, you can use a shape data field of type **LinkOptions** and set it to *KeepOnTop=true*.
 
 | Shape data field | Value          |
 |------------------|----------------|

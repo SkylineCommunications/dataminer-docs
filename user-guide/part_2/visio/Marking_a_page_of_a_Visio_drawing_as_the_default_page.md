@@ -2,7 +2,7 @@
 
 Using a shape data field of type **InlineVdx**, you can mark a page of a Visio drawing as the default page to be displayed.
 
-When, for example, a shape data field of type **VdxPage** is set to “\[auto\]”, DataMiner will visualize the page of which the **InlineVdx** field is set to *TRUE*.
+When, for example, a shape data field of type **VdxPage** is set to “\[auto\]”, DataMiner will visualize the page of which the **InlineVdx** field is set to *TRUE*.
 
 > [!TIP]
 > See also:

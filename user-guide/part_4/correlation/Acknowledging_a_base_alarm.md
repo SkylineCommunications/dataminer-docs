@@ -4,6 +4,6 @@ Use this action to have a base alarm acknowledged by a Correlation rule. This me
 
 In the *Actions* section of the details pane:
 
-1. Click *Add Action* and select *Acknowledge base alarm*.
+1. Click *Add Action* and select *Acknowledge base alarm*.
 
 2. Optionally, click the underlined field on the second line to specify a comment.

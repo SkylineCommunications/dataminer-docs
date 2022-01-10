@@ -9,12 +9,12 @@ A script condition in a Correlation rule should use the following format:
 Examples:
 
 ```txt
-count(*) > 5                           
-field(pid)==123                          
-field(value) == "Connected"              
+count(*) > 5
+field(pid)==123
+field(value) == "Connected"
 parameter(7,56,110,"SLDataMiner") > 55.2
-round(avg(field(value)),3) == "12.555"   
-field(value) == "Status: \"OK\""       
+round(avg(field(value)),3) == "12.555"
+field(value) == "Status: \"OK\""
 ```
 
 > [!NOTE]
@@ -74,4 +74,4 @@ field(value) == "Status: \"OK\""
 
 - When script conditions use functions, fields or properties outside of the min/max/avg aggregated functions context, values will be retrieved from one of the alarms in the bucket only. This will typically be the triggering alarm or the most recent one in the rule bucket.
 
-- Within a single script condition, it is not possible to combine multiple conditions using *and* or *or*.
+- Within a single script condition, it is not possible to combine multiple conditions using *and* or *or*.

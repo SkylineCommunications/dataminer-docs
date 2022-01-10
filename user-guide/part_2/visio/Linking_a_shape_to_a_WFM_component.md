@@ -1,6 +1,6 @@
 ## Linking a shape to a WFM component
 
-Using shape data fields of type **WfmDll** and **WfmControl**, you can embed a WFM component in a shape.
+Using shape data fields of type **WfmDll** and **WfmControl**, you can embed a WFM component in a shape.
 
 ### Configuring the shape data fields
 

@@ -2,11 +2,11 @@
 
 To configure notifications in System Center:
 
-1. In DataMiner Cube, go to *Apps* > *System Center \>* *Users / Groups.*
+1. In DataMiner Cube, go to *Apps* > *System Center \>* *Users / Groups.*
 
-2. In the *users* tab, select a user and go to the *Alerts* subtab.
+2. In the *users* tab, select a user and go to the *Alerts* subtab.
 
-    Alternatively, if you want to configure notifications for an entire group, in the *groups* tab, select a group and go to the *Alerts* subtab.
+    Alternatively, if you want to configure notifications for an entire group, in the *groups* tab, select a group and go to the *Alerts* subtab.
 
 3. If you are using a version of DataMiner prior to 9.5.4, click the *Edit* button in the lower right corner.
 
@@ -17,11 +17,11 @@ To configure notifications in System Center:
     - To add a new alarm filter, in the right-click menu, select *Create new filter*. Then add a name, type, and description for the filter, configure the filter, and click *OK*.
 
         > [!NOTE]
-        > -  In the *Details* column of the Alerts tab, the description of a selected alarm filter is displayed.
+        > -  In the *Details* column of the Alerts tab, the description of a selected alarm filter is displayed.
         > -  For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
 
 5. To combine several filters, repeat step 4 until all the necessary filters have been added.
 
-6. In the *Delivery types* column, select one or more notification types: *Alerter*, *Email* or *SMS* (i.e. text message).
+6. In the *Delivery types* column, select one or more notification types: *Alerter*, *Email* or *SMS* (i.e. text message).
 
 7. Click the *Apply* button in the lower right corner.

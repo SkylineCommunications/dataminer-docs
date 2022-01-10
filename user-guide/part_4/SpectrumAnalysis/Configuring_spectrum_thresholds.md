@@ -15,13 +15,13 @@ To create or edit thresholds, you must first activate the Threshold edit mode:
 
     The threshold editing options are now available, and in the information pane, the thresholds section is expanded.
 
-To leave the mode, in the *thresholds* tab, click *Threshold edit mode* again.
+To leave the mode, in the *thresholds* tab, click *Threshold edit mode* again.
 
 ### Creating spectrum thresholds
 
 To create a threshold, while in Threshold edit mode:
 
-1. Either in the *threshold* tab of the ribbon, or in the *threshold* section of the details pane, click *Add threshold*.
+1. Either in the *threshold* tab of the ribbon, or in the *threshold* section of the details pane, click *Add threshold*.
 
 2. Click and drag in the display area to create a first section of the threshold, consisting of a starting and an ending point.
 
@@ -43,14 +43,14 @@ To create a threshold, while in Threshold edit mode:
 
     - To delete a section, right-click it and select *Delete Section*.
 
-    - To delete a section adjacent to a point, you can also right-click the point and select *Delete left segment* or *Delete right segment*.
+    - To delete a section adjacent to a point, you can also right-click the point and select *Delete left segment* or *Delete right segment*.
 
     - To remove all sections of the selected threshold, right-click anywhere on the threshold and select *Delete all*.
 
-        Alternatively, you can also click *Remove threshold* in the *threshold* tab of the ribbon in order to remove a threshold completely.
+        Alternatively, you can also click *Remove threshold* in the *threshold* tab of the ribbon in order to remove a threshold completely.
 
 4. To add an additional threshold, click *Add threshold* again, and repeat the procedure above.
 
 > [!NOTE]
-> To change the color of the thresholds on the display, in the *threshold* tab of the ribbon, click *Threshold color* and select the new color.
+> To change the color of the thresholds on the display, in the *threshold* tab of the ribbon, click *Threshold color* and select the new color.
 >

@@ -3,7 +3,7 @@
 Initializes a new instance of the *AutomationEntryPointAttribute* class.
 
 ```txt
-public AutomationEntryPointAttribute( 
-   AutomationEntryPointType.Types type
-)                                     
+public AutomationEntryPointAttribute(
+ AutomationEntryPointType.Types type
+)
 ```

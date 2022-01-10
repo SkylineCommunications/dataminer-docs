@@ -14,7 +14,7 @@ In this section:
 
 To create a new alarm template:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select a protocol in the first column and a protocol version in the second column.
 
@@ -42,11 +42,11 @@ To create a new alarm template:
 
 To upload an existing alarm template for a particular protocol version:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select the protocol in the first column and the protocol version in the second column.
 
-3. Right-click an alarm template under *Alarm* in the third column, and select *Upload*.
+3. Right-click an alarm template under *Alarm* in the third column, and select *Upload*.
 
 4. Browse to the alarm template in question and click *Open*.
 
@@ -64,7 +64,7 @@ In the Surveyor:
 
 1. Right-click the item to which you want to assign an alarm template and click *Edit*.
 
-2. In the *Edit* tab, go to *Device Details*.
+2. In the *Edit* tab, go to *Device Details*.
 
 3. Select the alarm template in the *Alarm Template* selection box.
 
@@ -78,26 +78,26 @@ In the Protocols & Templates module:
 
 3. In the *Alarm* section, select the alarm template.
 
-4. Right-click in the *Elements* section, and select *Assign template*. Alternatively, from DataMiner 9.0.5 onwards, you can also click the *Assign elements* button at the top of this section.
+4. Right-click in the *Elements* section, and select *Assign template*. Alternatively, from DataMiner 9.0.5 onwards, you can also click the *Assign elements* button at the top of this section.
 
-5. In the *Assign template* window, use the *Add \>\>* and *\<\< Remove* buttons to assign the template to particular items.
+5. In the *Assign template* window, use the *Add \>\>* and *\<\< Remove* buttons to assign the template to particular items.
 
     All items in the column on the right have been assigned this alarm template.
 
 > [!NOTE]
 > -  To quickly access the Protocols & Templates module from the Surveyor, right-click an element or enhanced service, and select *Protocols & Templates.* This opens a submenu where you can open the current template, assign a different template or view all available templates.
-> -  Right-click an item in the Protocols & Templates module and select *Remove* to quickly remove an alarm template from an item.
-> -  Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](Working_with_the_elements_tab.md).
+> -  Right-click an item in the Protocols & Templates module and select *Remove* to quickly remove an alarm template from an item.
+> -  Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](Working_with_the_elements_tab.md).
 
 ### Deleting an alarm template
 
 To delete an existing alarm template for a particular protocol version:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select the protocol in the first column and the protocol version in the second column.
 
-3. Right-click the alarm template under *Alarm* in the third column, and select *Delete*.
+3. Right-click the alarm template under *Alarm* in the third column, and select *Delete*.
 
 > [!NOTE]
 > If any elements are using the template when you delete it, these will have the template \<No Monitoring> assigned to them instead.

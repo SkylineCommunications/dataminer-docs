@@ -25,5 +25,5 @@ If a DataMiner element is locked, only the user who locked the element is able t
 - Right-click the notice at the bottom of the card and select *Unlock element*.
 
 > [!NOTE]
-> You can only use the *Unlock element* option if you were the user who locked the element. If a different user locked the element, and you have the appropriate permissions to do so, right-click the notice and select *Force unlock element* instead.
+> You can only use the *Unlock element* option if you were the user who locked the element. If a different user locked the element, and you have the appropriate permissions to do so, right-click the notice and select *Force unlock element* instead.
 >

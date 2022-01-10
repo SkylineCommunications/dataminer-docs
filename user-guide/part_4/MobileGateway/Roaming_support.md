@@ -18,8 +18,8 @@ The name of the network on which the modem is registered is being logged. Newer 
 Examples:
 
 ```txt
-2013/07/30 16:09:25.941|Mobile Gateway|13156|7212|Info|   
+2013/07/30 16:09:25.941|Mobile Gateway|13156|7212|Info|
 INF|-1|Registered on network: "NetworkOperatorName" (Roaming)
-2013/07/30 16:20:58.038|Mobile Gateway|13304|10672|Info|  
-INF|-1|Registered on network: "MVNOName" (Roaming)           
+2013/07/30 16:20:58.038|Mobile Gateway|13304|10672|Info|
+INF|-1|Registered on network: "MVNOName" (Roaming)
 ```

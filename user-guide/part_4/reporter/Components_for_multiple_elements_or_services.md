@@ -26,7 +26,7 @@ For multiple elements or services, the following building blocks are available i
 
 A graph visualizing the data of one or more aggregation rules. The following options are available:
 
-- You can choose between the following types of graph: a *Trend Graph*, *Bar Graph* or *Pie Graph*.
+- You can choose between the following types of graph: a *Trend Graph*, *Bar Graph* or *Pie Graph*.
 
 - For a trend graph, you can choose between different time spans: *Last Hour*, *Last 24 Hours*, *Yesterday*, *Week to Date*, *Month to Date*, *Previous Month*, or *Year to Date*.
 
@@ -38,7 +38,7 @@ A graph visualizing the data of one or more aggregation rules. The following opt
 
 Graph showing the distribution of alarms over a selected time span, with several options:
 
-- You can choose to show data from the *Last 24 Hours*, *Yesterday*, a *Week to Date* or a *Month to Date*.
+- You can choose to show data from the *Last 24 Hours*, *Yesterday*, a *Week to Date* or a *Month to Date*.
 
 - Depending on the selected time range, you can select different possibilities for the average range that will be shown as a reference in the graph.
 

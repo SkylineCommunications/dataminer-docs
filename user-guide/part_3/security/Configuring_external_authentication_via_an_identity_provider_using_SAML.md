@@ -6,20 +6,20 @@ For this to be possible, a trust relationship must be established between the se
 
 To configure this, follow the steps below:
 
-1. In the folder *C:\\Skyline DataMiner,* open the file *DataMiner.xml*.
+1. In the folder *C:\\Skyline DataMiner,* open the file *DataMiner.xml*.
 
 2. In *DataMiner.xml*, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
 
     ```xml
-    <DataMiner ...>                                                  
-      ...                                                               
-      <ExternalAuthentication                                          
-        type="SAML"                                                       
+    <DataMiner ...>
+      ...
+      <ExternalAuthentication
+        type="SAML"
         ipMetadata="[Path/URL of the identity provider’s metadata file]"
-        spMetadata="[Path/URL of the service provider’s metadata file]" 
-        timeout="300" />                                                  
-      ...                                                               
-    </DataMiner>                                                     
+        spMetadata="[Path/URL of the service provider’s metadata file]"
+        timeout="300" />
+      ...
+    </DataMiner>
     ```
 
     | Attribute | Description                                                                                                                                                                                                                                                                                                                                 |
@@ -50,19 +50,19 @@ To create a DataMiner metadata file, proceed as follows:
 1. Copy the following template into a new XML file named e.g. spMetadata.xml:
 
     ```xml
-    <?xml version="1.0" encoding="UTF-8"?>                                                                                                                                                                                                                                                                        
-    <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">                                                                                                
-      <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">                                                                                                                                                                
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com" index="0" isDefault="true"/>                                                                                                                      
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login" index="1" isDefault="false"/>                                                                                                               
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root" index="2" isDefault="false"/>                                                                                                                
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard" index="3" isDefault="false"/>                                                                                                           
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring" index="4" isDefault="false"/>                                                                                                          
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs" index="5" isDefault="false"/>                                                                                                                
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing" index="6" isDefault="false"/>                                                                                                           
+    <?xml version="1.0" encoding="UTF-8"?>
+    <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+      <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com" index="0" isDefault="true"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login" index="1" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root" index="2" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard" index="3" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring" index="4" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs" index="5" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing" index="6" isDefault="false"/>
         <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[FOR EVERY CUSTOM APP URL, ADD AN ASSERTION LIKE THE ONES ABOVE WITH AN INCREMENTED INDEX. IF YOU DO NOT HAVE CUSTOM APPS, REMOVE THIS EXAMPLE.]" index="7" isDefault="false"/>
-      </md:SPSSODescriptor>                                                                                                                                                                                                                                                                                         
-    </md:EntityDescriptor>                                                                                                                                                                                                                                                                                        
+      </md:SPSSODescriptor>
+    </md:EntityDescriptor>
     ```
 
 2. Replace \[ENTITYID\] with the unique service provider ID that is assigned to DataMiner when you register it with the identity provider.
@@ -81,9 +81,9 @@ DataMiner supports Azure AD as identity provider as from version 10.1.5. Azure A
 
 You will need to register DataMiner as an application in Azure and generate a client secret. To do so:
 
-1. Navigate to *portal.azure.com* and log in.
+1. Navigate to *portal.azure.com* and log in.
 
-2. Select the *Azure Active Directory* service.
+2. Select the *Azure Active Directory* service.
 
 3. In the pane on the left, click *App registrations*.
 
@@ -91,9 +91,9 @@ You will need to register DataMiner as an application in Azure and generate a cl
 
     1. In the top menu bar, click *New Registration*.
 
-    2. In the *Register an application* form, fill in “DataMiner” (or some other preferred name) as the name of the application.
+    2. In the *Register an application* form, fill in “DataMiner” (or some other preferred name) as the name of the application.
 
-    3. Under *Supported account types*, select *Accounts in this organizational directory only.* 
+    3. Under *Supported account types*, select *Accounts in this organizational directory only.*
 
     4. Under *Redirect URI*, fill in the following DataMiner application endpoints:
 
@@ -117,7 +117,7 @@ You will need to register DataMiner as an application in Azure and generate a cl
 
         - Assign the Application ID URI. This is the unique identifier of your App (SP) represented as an URI, e.g. *https://dataminer.example.com*.
 
-        - In the pane on the left, click *API Permissions* and make sure the following permission is enabled:
+        - In the pane on the left, click *API Permissions* and make sure the following permission is enabled:
 
             - Microsoft Graph \> User.Read – Delegated – sign in and read user profile
 
@@ -140,27 +140,27 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
 1. Gather the following information:
 
-    - **Client ID** and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory* > *App registrations* > *DataMiner*.
+    - **Client ID** and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory* > *App registrations* > *DataMiner*.
 
     - **Client Secret**: A shared secret in string form. You can find this information under Certificates & secrets, as mentioned under [Registering DataMiner as an application in Azure AD](#registering-dataminer-as-an-application-in-azure-ad).
 
-    - **Username** and **Password**: The Azure AD user account and corresponding password that DataMiner will use to request data from Azure AD. Technically this can be any account, but we recommend that you create an account specifically for this purpose. Note that depending on the method of querying, these can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
+    - **Username** and **Password**: The Azure AD user account and corresponding password that DataMiner will use to request data from Azure AD. Technically this can be any account, but we recommend that you create an account specifically for this purpose. Note that depending on the method of querying, these can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
 
 2. Configure DataMiner with this information:
 
     1. Stop the DMA for which you want to configure this.
 
-    2. In the folder *C:\\Skyline DataMiner* of the DMA, open the file *DataMiner.xml*.
+    2. In the folder *C:\\Skyline DataMiner* of the DMA, open the file *DataMiner.xml*.
 
     3. Specify the information you previously gathered using the same syntax as in the following example:
 
         ```xml
-        <AzureAD                                             
-           tenantId="[GUID]"                                
-           clientId="[GUID]"                                
-           clientSecret="[the DataMiner application secret]"
-           username="[username]"                            
-           password="[password]" />                         
+        <AzureAD
+         tenantId="[GUID]"
+         clientId="[GUID]"
+         clientSecret="[the DataMiner application secret]"
+         username="[username]"
+         password="[password]" />
         ```
 
         > [!NOTE]
@@ -190,7 +190,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
     2. Click *Certificates & secrets* in the pane on the left.
 
-        - In the *Client secrets* section, click *+ New client secret*.
+        - In the *Client secrets* section, click *+ New client secret*.
 
         - Fill in a description and an expiration date for the application secret.
 
@@ -200,7 +200,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
     1. Log on to DataMiner Cube with an existing Administrator account.
 
-    2. Add the users/groups as described in [Adding a user](Adding_a_user.md) and [Adding a user group](Adding_a_user_group.md). If you opt to add an existing user or group, you will have a list of all users and groups available on Azure AD.
+    2. Add the users/groups as described in [Adding a user](Adding_a_user.md) and [Adding a user group](Adding_a_user_group.md). If you opt to add an existing user or group, you will have a list of all users and groups available on Azure AD.
 
     3. When you have added the users, configure their permissions. See [Configuring a user group](Configuring_a_user_group.md).
 
@@ -217,9 +217,9 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
 
 1. In the Azure Portal, make sure DataMiner is registered as an Enterprise Application in Azure AD:
 
-    1. Navigate to *portal.azure.com* and log in.
+    1. Navigate to *portal.azure.com* and log in.
 
-    2. Select the *Azure Active Directory* service.
+    2. Select the *Azure Active Directory* service.
 
     3. In the pane on the left, click *Enterprise applications*.
 
@@ -227,9 +227,9 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
 
     5. Click *Create your own application*.
 
-    6. Select *Integrate an other application you don’t find in the gallery* and click *Create*.
+    6. Select *Integrate an other application you don’t find in the gallery* and click *Create*.
 
-2. In the pane on the left, go to *Users and groups.* 
+2. In the pane on the left, go to *Users and groups.*
 
 3. Add the necessary users and groups and edit them to assign a role.
 
@@ -242,14 +242,14 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
     - Under *Reply URL*, specify the following URLs:
 
         ```txt
-        https://[your application name]/root/     
-        https://[your application name]/ticketing 
-        https://[your application name]/jobs      
+        https://[your application name]/root/
+        https://[your application name]/ticketing
+        https://[your application name]/jobs
         https://[your application name]/monitoring
-        https://[your application name]/dashboard 
-        https://[your application name]/root      
-        https://[your application name]/login     
-        https://[your application name]           
+        https://[your application name]/dashboard
+        https://[your application name]/root
+        https://[your application name]/login
+        https://[your application name]
         ```
 
     - Set *Sign on URL* to “https://\[your application name\]”.
@@ -263,29 +263,29 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
 
 7. Stop DataMiner.
 
-8. In the folder *C:\\Skyline DataMiner,* open the file *DataMiner.xml*.
+8. In the folder *C:\\Skyline DataMiner,* open the file *DataMiner.xml*.
 
 9. In *DataMiner.xml*, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
 
     ```xml
-    <DataMiner ...>                                                                                                                                                                                                            
-      ...                                                                                                                                                                                                                         
-      <ExternalAuthentication      type="SAML"      ipMetadata="[Path/URL of the identity provider’s metadata file]"      spMetadata="[Path/URL of the service provider’s metadata file]"      timeout="300">
-        <AutomaticUserCreation enabled="true">                                                                                                                                                                                     
-          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>                                                                                                                               
-          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>                                                                                                                                    
-          <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>                                                                                                                                          
-          <Groups claims="true">[group claim name]</Groups>                                                                                                                                                                       
-        </AutomaticUserCreation>                                                                                                                                                                                                   
-      </ExternalAuthentication>                                                                                                                                                                                                  
-      ...                                                                                                                                                                                                                         
-    </DataMiner>                                                                                                                                                                                                               
+    <DataMiner ...>
+      ...
+      <ExternalAuthentication type="SAML" ipMetadata="[Path/URL of the identity provider’s metadata file]" spMetadata="[Path/URL of the service provider’s metadata file]" timeout="300">
+        <AutomaticUserCreation enabled="true">
+          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
+          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
+          <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
+          <Groups claims="true">[group claim name]</Groups>
+        </AutomaticUserCreation>
+      </ExternalAuthentication>
+      ...
+    </DataMiner>
     ```
 
     > [!NOTE]
     > -  In Azure AD, the ipMetadata URL can be found under *Single sign-on \> SAML Signing Certificate – App Federation Metadata*.
-    > -  If you set the *claims* attribute of the *Groups* element to “false”, no claims will be used to add users to groups. In this case:
-    >     - The name of the group as specified in Cube will be used instead. 
+    > -  If you set the *claims* attribute of the *Groups* element to “false”, no claims will be used to add users to groups. In this case:
+    >     - The name of the group as specified in Cube will be used instead.
     >     - A user can only be added to a single group.
     >     - The user information that is created will not be updated.
 
@@ -343,5 +343,5 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta�
 | AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.                                                                                                                                                                                                                                                                                                                                                                                                                                             | Cube        | The URL marked as default URL is either missing or spelled differently in the app registration form.       |
 | AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.                                                                                                                                                                                                                                                                                                                                                                                                                                             | Web apps    | The reply URL of a specific web app is either missing or spelled differently in the app registration form. |
 | AADSTS500113: No reply address is registered for the application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Web apps    | No reply URL is specified in the app registration form.                                                    |
-| AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: \<ID>. |             | The required API permissions are missing in the app registration form.                                     |
-| AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.                                                                                                                                                                                                                                                                   |             | Entity ID incorrect or not found.                                                                          |
+| AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: \<ID>. |            | The required API permissions are missing in the app registration form.                                     |
+| AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.                                                                                                                                                                                                                                                                   |            | Entity ID incorrect or not found.                                                                          |

@@ -8,7 +8,7 @@ As shown in the following illustration, there are four main categories of DataMi
 
 ![](../../images/3rd_party_System_Interfacing_REV003.jpg)
 
- 
+
 
 ### Private interfaces
 

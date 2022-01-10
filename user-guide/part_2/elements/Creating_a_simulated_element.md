@@ -37,7 +37,7 @@ To do so:
 
 1. Right-click the element for which you want to create a simulation file.
 
-2. In the context menu, select *Actions* > *Create simulation*.
+2. In the context menu, select *Actions* > *Create simulation*.
 
     A message box will appear to indicate that the simulation file has been created.
 
@@ -61,7 +61,7 @@ To do so:
 
     This will open the element in Element Display.
 
-3. Right-click anywhere on the Element Display page, and select *Scripts \> Create Simulation* from the shortcut menu.
+3. Right-click anywhere on the Element Display page, and select *Scripts \> Create Simulation* from the shortcut menu.
 
     A message box will appear to indicate that the simulation file has been created.
 

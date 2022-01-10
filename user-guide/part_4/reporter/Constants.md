@@ -62,4 +62,4 @@ For the list of alternative bit flags, see the following table. These bit flags 
 | STATE_FLAG_TIMEOUT  | 0x20000    | Include timeout alarms/state                        |
 | STATE_FLAG_ALL      | 0x2f000    | Include all alarm states (combination of all flags) |
 
- 
+

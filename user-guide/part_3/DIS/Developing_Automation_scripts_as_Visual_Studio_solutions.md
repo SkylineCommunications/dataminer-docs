@@ -15,7 +15,7 @@ As from DISv2.31, similar to DataMiner protocols, it is also possible to develop
 
 To create a new Automation script solution containing one dummy Automation script, do the following:
 
-1. Select *File \> New \> DataMiner Automation Script Solution...*
+1. Select *File \> New \> DataMiner Automation Script Solution...*
 
 2. Enter the name of the solution.
 
@@ -37,7 +37,7 @@ To create a new script in an Automation script solution, do the following:
 
 1. Open the Automation script solution.
 
-2. Select *File \> New \> New DataMiner Automation Script...* or right-click a solution folder in the Solution Explorer and select *Add \> New DataMiner Automation Script...*
+2. Select *File \> New \> New DataMiner Automation Script...* or right-click a solution folder in the Solution Explorer and select *Add \> New DataMiner Automation Script...*
 
 3. Enter the name of the new script.
 
@@ -76,8 +76,8 @@ To upload an Automation script to a DataMiner Agent, do the following:
 
 1. Open the XML file containing the Automation script.
 
-2. Click *Publish* to compile the script and publish it to the DataMiner Agent that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
+2. Click *Publish* to compile the script and publish it to the DataMiner Agent that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
 > [!NOTE]
-> If you want to publish the script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+> If you want to publish the script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 >

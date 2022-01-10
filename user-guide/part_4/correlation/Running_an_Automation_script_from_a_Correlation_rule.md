@@ -2,7 +2,7 @@
 
 To run an Automation script from a Correlation rule:
 
-1. In the *Actions* section of the details pane, click *Add Action* and select *Run Automation script*.
+1. In the *Actions* section of the details pane, click *Add Action* and select *Run Automation script*.
 
 2. Click the first underlined field and select the script.
 

@@ -1,8 +1,8 @@
 ## Configuring Mobile Gateway in DataMiner Cube
 
-1. In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.
+1. In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.
 
-2. At the top of the screen, next to *Cellphone location*, click *\<Click to select>*, select the DataMiner Agent containing the *C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml* file in which you have configured all necessary device settings, and click *Apply*.
+2. At the top of the screen, next to *Cellphone location*, click *\<Click to select>*, select the DataMiner Agent containing the *C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml* file in which you have configured all necessary device settings, and click *Apply*.
 
     > [!NOTE]
     > When you click *Apply*, the cell phone modem will be initialized. Note that, in some cases, this can take up to two minutes.
@@ -17,7 +17,7 @@
 
     4. Click *Apply*.
 
-4. Click the *commands* tab, and configure all the commands you want Mobile Gateway users to be able to enter. See [Commands](#commands)
+4. Click the *commands* tab, and configure all the commands you want Mobile Gateway users to be able to enter. See [Commands](#commands)
 
 ### Cellphone settings
 
@@ -37,11 +37,11 @@ In the *destination* section, specify which users are allowed to be called by Mo
 
 - Select *Allow all* if you allow Mobile Gateway to call any number.
 
-- Select *Allow all users/groups* if you only allow Mobile Gateway to call users known to the DataMiner System.
+- Select *Allow all users/groups* if you only allow Mobile Gateway to call users known to the DataMiner System.
 
 To add a custom destination:
 
-1. In the *Custom destinations* section, click *Add*.
+1. In the *Custom destinations* section, click *Add*.
 
 2. Select *Tel nr.*, *User*, or *Group*.
 
@@ -57,7 +57,7 @@ In the *remote users* section, specify which users are allowed to call Mobile Ga
 
 - Select *Allow all* if you allow anyone to call Mobile Gateway.
 
-- Select *Allow all users/groups* if you only allow users known to the DataMiner System to call Mobile Gateway.
+- Select *Allow all users/groups* if you only allow users known to the DataMiner System to call Mobile Gateway.
 
 To add a custom user or user group:
 
@@ -100,7 +100,7 @@ To add a command:
 
 7. If, in step 4, you selected *Set*, then enter the new parameter value, and click the green *OK* button.
 
-    - If you select the *Default* checkbox, the parameter value you specified in the command will be considered the default value. In other words, when someone sends the Set command without specifying a value, then the parameter will be set to the value you specified in the command.
+    - If you select the *Default* checkbox, the parameter value you specified in the command will be considered the default value. In other words, when someone sends the Set command without specifying a value, then the parameter will be set to the value you specified in the command.
 
 8. If you want to add another action, repeat from step 3, if not, click *Save*.
 
@@ -116,19 +116,19 @@ To export commands to a CSV file:
 
 1. In the list of commands on the left, right-click underneath the last command, and select *Export*.
 
-2. In the *Save* window, select a folder, enter the name of the CSV file, and click *Save*.
+2. In the *Save* window, select a folder, enter the name of the CSV file, and click *Save*.
 
 To import commands from a CSV file:
 
 1. In the list of commands on the left, right-click underneath the last command, and select *Import*.
 
-2. In the *Open* window, select the CSV file containing the commands, and click *Open*.
+2. In the *Open* window, select the CSV file containing the commands, and click *Open*.
 
 To move a command action up or down in the list of actions to be executed:
 
 1. In the list of commands on the left, select the command.
 
-2. On the right, hover over the action, and click the small *Up* or *Down* arrow.
+2. On the right, hover over the action, and click the small *Up* or *Down* arrow.
 
 To delete a command action from the list of actions to be executed:
 

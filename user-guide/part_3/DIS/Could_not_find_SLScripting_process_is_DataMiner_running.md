@@ -2,7 +2,7 @@
 
 ### Problem
 
-After clicking *Attach* in the *DIS Inject* window, you get the following error:
+After clicking *Attach* in the *DIS Inject* window, you get the following error:
 
 ```txt
 Visual Studio needs to run as administrator to perform this action.
@@ -22,11 +22,11 @@ Run Microsoft Visual Studio as an administrator.
 
 2. In Windows Explorer, go to *C:\\Program Files\\Common Files\\microsoft shared\\MSEnv*
 
-3. Right-click *VSLauncher.exe* and select *Properties*.
+3. Right-click *VSLauncher.exe* and select *Properties*.
 
-4. In the *Properties* dialog box of *VSLauncher.exe*, go to the *Compatibility* tab.
+4. In the *Properties* dialog box of *VSLauncher.exe*, go to the *Compatibility* tab.
 
-5. In the *Privilege Level* section, select the *Run this program as an administrator* checkbox.
+5. In the *Privilege Level* section, select the *Run this program as an administrator* checkbox.
 
 6. Click *OK*.
 
@@ -34,8 +34,8 @@ Run Microsoft Visual Studio as an administrator.
 
 1. Right-click an XML file and select *Open With \> Choose Default Program.*
 
-2. In the *Open With* dialog box, click *Browse.*
+2. In the *Open With* dialog box, click *Browse.*
 
-3. Go to *C:\\Program Files\\Common Files\\microsoft shared\\MSEnv*, select *VSLauncher.exe* and click *Open*.
+3. Go to *C:\\Program Files\\Common Files\\microsoft shared\\MSEnv*, select *VSLauncher.exe* and click *Open*.
 
-4. Select the *Always use the selected program to open this kind of file* checkbox and click *OK*.
+4. Select the *Always use the selected program to open this kind of file* checkbox and click *OK*.

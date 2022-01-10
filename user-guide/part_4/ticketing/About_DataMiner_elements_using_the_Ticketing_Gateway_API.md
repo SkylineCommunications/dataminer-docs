@@ -13,38 +13,38 @@ To implement ticket synchronization:
     Example of a synchronization routine:
 
     ```cs
-    public class QAction                                                                                          
-    {                                                                                                             
-        public static void Run(SLProtocol protocol)                                                                   
-        {                                                                                                             
-            //Assuming the tickets are saved in a table with paramid 1000                                                 
-            var rows = protocol.GetKeys(1000).Select(oneKey =>   protocol.GetRow(1000, oneKey));                      
-            TicketingDriverSyncMessage syncMsg = new   TicketingDriverSyncMessage();                                  
-            syncMsg.ElementID = new   Skyline.DataMiner.Net.ElementID(protocol.DataMinerID,   protocol.ElementID);
-            //The timestamp of the last polling cycle to the external   ticketing system.                             
-            syncMsg.TimeStamp = DateTime.UtcNow;                                                                          
-            syncMsg.ManagerObjects = new List<Tuple<DateTime, Ticket>>();                                              
-                                                                                                                          
-            foreach(var row in rows) {                                                                             
-                object[] cells = row as object[];                                                                         
-                string jsonTicket = cells[1] as string;   //The ticket saved as a json string (see: Ticket.ToJson())    
-                string timestamp = cells[0] as string;   //The timestamp of when this ticket was added/changed          
-                DateTime TimeStamp = DateTime.Parse(timestamp);                                                               
-                Ticket t = Ticket.FromJson(jsonTicket);                                                                       
-                syncMsg.ManagerObjects.Add(Tuple.Create(TimeStamp, t));                                                       
-            }                                                                                                             
-                                                                                                                          
-            //Send the sync request                                                                                       
-            var responses = protocol.SLNet.SendMessage(syncMsg);                                                          
-            foreach(var response in responses)                                                                            
-            {                                                                                                             
-                var evt = response as TicketingGatewayEventMessage;                                                           
-                if (evt == null)   continue;                                                                              
-                                                                                                                          
-                //Handle the eventmessage                                                                                     
-            }                                                                                                             
-        }                                                                                                             
-    }                                                                                                             
+    public class QAction
+    {
+        public static void Run(SLProtocol protocol)
+        {
+            //Assuming the tickets are saved in a table with paramid 1000
+            var rows = protocol.GetKeys(1000).Select(oneKey => protocol.GetRow(1000, oneKey));
+            TicketingDriverSyncMessage syncMsg = new TicketingDriverSyncMessage();
+            syncMsg.ElementID = new Skyline.DataMiner.Net.ElementID(protocol.DataMinerID, protocol.ElementID);
+            //The timestamp of the last polling cycle to the external ticketing system.
+            syncMsg.TimeStamp = DateTime.UtcNow;
+            syncMsg.ManagerObjects = new List<Tuple<DateTime, Ticket>>();
+
+            foreach(var row in rows) {
+                object[] cells = row as object[];
+                string jsonTicket = cells[1] as string; //The ticket saved as a json string (see: Ticket.ToJson())
+                string timestamp = cells[0] as string; //The timestamp of when this ticket was added/changed
+                DateTime TimeStamp = DateTime.Parse(timestamp);
+                Ticket t = Ticket.FromJson(jsonTicket);
+                syncMsg.ManagerObjects.Add(Tuple.Create(TimeStamp, t));
+            }
+
+            //Send the sync request
+            var responses = protocol.SLNet.SendMessage(syncMsg);
+            foreach(var response in responses)
+            {
+                var evt = response as TicketingGatewayEventMessage;
+                if (evt == null) continue;
+
+                //Handle the eventmessage
+            }
+        }
+    }
     ```
 
 When an element requests a ticket synchronization, it is possible that some tickets polled by that element have been changed by both the third-party ticketing system and a DataMiner user. In that case, the SLNet process will try to establish which updates take precedence.
@@ -57,6 +57,6 @@ When an element requests a ticket synchronization, it is possible that some tick
 
 > [!NOTE]
 > Tickets are not synchronized among the DataMiner Agents in a DataMiner System.
-> -  If a ticket is created using a ticket field resolver that is linked to an element, then that ticket is saved on the DataMiner Agent that hosts the element. 
+> -  If a ticket is created using a ticket field resolver that is linked to an element, then that ticket is saved on the DataMiner Agent that hosts the element.
 > -  If a ticket is created using a ticket field resolver that is not linked to an element, then that ticket is saved on the DataMiner Agent on which it was created.
 >

@@ -2,7 +2,7 @@
 
 The Alarm Ownership feature allows unambiguous assignment of responsibility for individual alarm events, as well as tracking of those responsibilities.
 
-When the DataMiner System generates a new alarm event, the *Alarm Type* property is set to “New Alarm”, the *Owner* property is set to “System”, and the *User Status* property is set to “Not Assigned”.
+When the DataMiner System generates a new alarm event, the *Alarm Type* property is set to “New Alarm”, the *Owner* property is set to “System”, and the *User Status* property is set to “Not Assigned”.
 
 - [Taking ownership of an alarm](#taking-ownership-of-an-alarm)
 
@@ -16,11 +16,11 @@ To indicate to other users that you are aware of an issue and working on a resol
 
 To do so:
 
-1. Right-click the alarm event in the *Active Alarms* tab of the Alarm Console, and select *Take Ownership*.
+1. Right-click the alarm event in the *Active Alarms* tab of the Alarm Console, and select *Take Ownership*.
 
-2. In the *Take Ownership* window, enter a comment explaining why you are taking ownership of the alarm event.
+2. In the *Take Ownership* window, enter a comment explaining why you are taking ownership of the alarm event.
 
-When you take ownership of an alarm event, a new alarm record is added to the life cycle of that alarm event, where the *Alarm Type* property has been set to “Acknowledged”. The *Owner* property of the new alarm records that are added to the life cycle of that alarm will contain your user name.
+When you take ownership of an alarm event, a new alarm record is added to the life cycle of that alarm event, where the *Alarm Type* property has been set to “Acknowledged”. The *Owner* property of the new alarm records that are added to the life cycle of that alarm will contain your user name.
 
 > [!NOTE]
 > -  If you want to query the historical database for all alarm events of which users took ownership, select all alarm events where the *Alarm Type* property is “Acknowledged”.
@@ -42,7 +42,7 @@ When you release ownership of an alarm event, an alarm record will be added to t
 
 ### Example of ownership transitions
 
-The following example illustrates how the *Alarm Type*, *Owner* and *User Status* properties of alarm records reflect ownership transitions.
+The following example illustrates how the *Alarm Type*, *Owner* and *User Status* properties of alarm records reflect ownership transitions.
 
 | Event                                                                                          | Alarm type   | Owner         | User Status  |
 |------------------------------------------------------------------------------------------------|--------------|---------------|--------------|

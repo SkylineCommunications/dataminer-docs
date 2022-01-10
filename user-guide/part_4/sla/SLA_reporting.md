@@ -1,6 +1,6 @@
 # SLA reporting
 
-To access reporting information on an SLA, go to the *Reports & Dashboards* module, then choose *Business* in the left column. For more information on how to access the module, see [Viewing the built-in reports in the Reporter app](../reporter/Viewing_the_built-in_reports_in_the_Reporter_app.md#viewing-the-built-in-reports-in-the-reporter-app).
+To access reporting information on an SLA, go to the *Reports & Dashboards* module, then choose *Business* in the left column. For more information on how to access the module, see [Viewing the built-in reports in the Reporter app](../reporter/Viewing_the_built-in_reports_in_the_Reporter_app.md#viewing-the-built-in-reports-in-the-reporter-app).
 
 If there is more than one SLA available, you will then have to choose the SLA you wish to view. You can still select a different SLA afterwards by clicking *CHANGE* in the header to the right of the SLA name.
 
@@ -122,4 +122,4 @@ In this tab, you can generate a graph that shows the evolution of a chosen param
 
 Choose the parameter and time period with the drop-down lists at the top of the screen.
 
- 
+

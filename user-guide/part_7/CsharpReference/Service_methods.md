@@ -13,11 +13,11 @@ string GetPropertyValue(string propertyName)
 Example:
 
 ```txt
-var myService = engine.FindService(179, 15629);                       
-if(myService.HasProperty("myProperty"))                               
-{                                                                     
-    string myPropertyValue = myService.GetPropertyValue("myProperty");
-}                                                                     
+var myService = engine.FindService(179, 15629);
+if(myService.HasProperty("myProperty"))
+{
+ string myPropertyValue = myService.GetPropertyValue("myProperty");
+}
 ```
 
 #### HasProperty
@@ -33,11 +33,11 @@ bool HasProperty(string propertyName)
 Example:
 
 ```txt
-var myService = engine.FindService(179, 15629);                       
-if(myService.HasProperty("myProperty"))                               
-{                                                                     
-    string myPropertyValue = myService.GetPropertyValue("myProperty");
-}                                                                     
+var myService = engine.FindService(179, 15629);
+if(myService.HasProperty("myProperty"))
+{
+ string myPropertyValue = myService.GetPropertyValue("myProperty");
+}
 ```
 
 #### SetPropertyValue
@@ -51,9 +51,9 @@ void SetPropertyValue(string propertyName, string propertyValue)
 Example:
 
 ```txt
-var myService = engine.FindService(179, 15629);                 
-if(myService.HasProperty("myProperty"))                         
-{                                                               
-    myService.SetPropertyValue("myProperty", "myPropertyValue");
-}                                                               
+var myService = engine.FindService(179, 15629);
+if(myService.HasProperty("myProperty"))
+{
+ myService.SetPropertyValue("myProperty", "myPropertyValue");
+}
 ```

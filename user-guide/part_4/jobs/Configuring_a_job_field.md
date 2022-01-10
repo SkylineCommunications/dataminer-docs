@@ -23,8 +23,8 @@ For each field, the following configuration is possible.
     - *Auto increment*: Select this type to create an automatic counter. If a user specifies -1 in this field, DataMiner will automatically look up the next available number and use this, so that with every new job this number increases. If the user specifies a different number in this field, that number will be used instead. When you select this type, you can optionally specify a prefix and/or a suffix that will be added to the number.
 
         > [!NOTE]
-        > -  From DataMiner 9.6.11 onwards, you can no longer edit the value of the auto increment field. The field will only be displayed after a job has been created and the value of the field is filled in by the system. This field can also no longer be optional from this version onwards, so the *Required* checkbox is not available in the configuration of this field.
-        > -  This field is only available for filtering from DataMiner 10.0.4 onwards. 
+        > -  From DataMiner 9.6.11 onwards, you can no longer edit the value of the auto increment field. The field will only be displayed after a job has been created and the value of the field is filled in by the system. This field can also no longer be optional from this version onwards, so the *Required* checkbox is not available in the configuration of this field.
+        > -  This field is only available for filtering from DataMiner 10.0.4 onwards.
         > -  Changing the format of auto-increment fields when these are used in existing jobs is possible from DataMiner 10.0.4 onwards. However, the existing jobs will keep using the old format.
 
     - *User*: Select this type to create a drop-down list in which one of the users available in the DataMiner System will need to be selected.
@@ -39,13 +39,13 @@ For each field, the following configuration is possible.
 
 - **Tooltip**: The text specified in this box will be displayed when the user hovers the mouse pointer over the field.
 
-- **Required**: Select this option if the field must always be filled in when a job is created. This option is not available for fields of type *Static text* and *Auto increment*.
+- **Required**: Select this option if the field must always be filled in when a job is created. This option is not available for fields of type *Static text* and *Auto increment*.
 
 - **Show in list view**: Clear this option if this field should not be displayed in the list view of the app. This option is not available for fields of type *Static text*.
 
-- **Read only**: If you select this option, users will not be able to modify the field. Changes to the field will only be possible via scripts. This option is not available for fields of type *Static text* and *Auto increment*. Prior to DataMiner 10.2.1/10.3.0 it is also not available for the *Name*, *Start Time* and *End Time* field of the default section.
+- **Read only**: If you select this option, users will not be able to modify the field. Changes to the field will only be possible via scripts. This option is not available for fields of type *Static text* and *Auto increment*. Prior to DataMiner 10.2.1/10.3.0 it is also not available for the *Name*, *Start Time* and *End Time* field of the default section.
 
-- **Allow filtering on this field**: Only displayed for fields of type *Dropdown* prior to DataMiner 10.2.0/10.1.5. From DataMiner 10.2.0/10.1.5 onwards, this option is also available for fields of type *Text*, *Email* and *URL*. Determines whether users will be able to filter on the value selected for the field.
+- **Allow filtering on this field**: Only displayed for fields of type *Dropdown* prior to DataMiner 10.2.0/10.1.5. From DataMiner 10.2.0/10.1.5 onwards, this option is also available for fields of type *Text*, *Email* and *URL*. Determines whether users will be able to filter on the value selected for the field.
 
 When the configuration is ready, click *Save*.
 

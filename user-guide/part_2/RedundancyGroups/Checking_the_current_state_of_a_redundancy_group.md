@@ -15,7 +15,7 @@ The *State and mode* section of a redundancy group card shows its current state:
 
 ### Checking the current state of a virtual primary element
 
-In the *Operational elements* section of a redundancy group card, you can see the virtual primary elements in the redundancy group and their current state.
+In the *Operational elements* section of a redundancy group card, you can see the virtual primary elements in the redundancy group and their current state.
 
 | State                  | Description                                                                                                                                         |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,7 +26,7 @@ In the *Operational elements* section of a redundancy group card, you can see t
 
 ### Checking the current state of a primary or backup element
 
-To check the current state of primary or backup elements of a redundancy group, expand the *Advanced* section on the redundancy group card.
+To check the current state of primary or backup elements of a redundancy group, expand the *Advanced* section on the redundancy group card.
 
 | State                                   | Description                                                                                                                                         |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|

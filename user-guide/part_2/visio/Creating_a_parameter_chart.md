@@ -1,8 +1,8 @@
 ## Creating a parameter chart
 
-Using **Parameters** and **ParametersOptions** shape data fields, you can make a shape or a group of shapes visualize one or more parameters in a chart.
+Using **Parameters** and **ParametersOptions** shape data fields, you can make a shape or a group of shapes visualize one or more parameters in a chart.
 
-With the **Parameters** shape data field, you specify which parameters should be included, and with the **ParametersOptions** shape data field, you determine how the information for these parameters is displayed.
+With the **Parameters** shape data field, you specify which parameters should be included, and with the **ParametersOptions** shape data field, you determine how the information for these parameters is displayed.
 
 > [!NOTE]
 > -  This feature only works in DataMiner Cube.
@@ -19,9 +19,9 @@ The chart can consist of one single shape or of several shapes that are grouped 
 
 To configure the shapes:
 
-1. If there is only one shape, add a shape data field of type **Parameters** to it. <br>If there are several shapes that are grouped, add a shape data field of type **Parameters** to the group.
+1. If there is only one shape, add a shape data field of type **Parameters** to it. <br>If there are several shapes that are grouped, add a shape data field of type **Parameters** to the group.
 
-2. Set the value of the **Parameters** shape data field to the parameters you wish to display, using the following syntax:
+2. Set the value of the **Parameters** shape data field to the parameters you wish to display, using the following syntax:
 
     ```txt
     DmaID:ElementID:ParameterID|...|...
@@ -46,9 +46,9 @@ To configure the shapes:
     > -  From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
     > -  From DataMiner 9.6.8 onwards, this syntax allows the use of element names, \[this element\] placeholders and keys containing forward slashes (e.g. dmaID/elementID).
 
-3. If there is only one shape, add a shape data field of type **ParametersOptions** to it. <br>If there are several shapes that are grouped, add a shape data field of type **ParametersOptions** to the group.
+3. If there is only one shape, add a shape data field of type **ParametersOptions** to it. <br>If there are several shapes that are grouped, add a shape data field of type **ParametersOptions** to the group.
 
-4. Set the value of this **ParametersOptions** shape data field to the chart type, and add any applicable options, separated from the chart type and from each other by pipe characters.
+4. Set the value of this **ParametersOptions** shape data field to the chart type, and add any applicable options, separated from the chart type and from each other by pipe characters.
 
     ```txt
     ChartType|Option|...
@@ -56,7 +56,7 @@ To configure the shapes:
 
     For an overview of the different chart types you can specify, refer to [Chart types](#chart-types).     For an overview of the different options you can specify, refer to [ChartType options](#charttype-options).
 
-5. If the chart consists of a group of shapes, add a shape data field of type **ParametersOptions** to each of the individual shapes, and set its value to the appropriate chart component each time:
+5. If the chart consists of a group of shapes, add a shape data field of type **ParametersOptions** to each of the individual shapes, and set its value to the appropriate chart component each time:
 
     | Value | Description               |
     |---------|---------------------------|
@@ -65,7 +65,7 @@ To configure the shapes:
     | LEGEND  | The legend of the chart.  |
 
     > [!NOTE]
-    > -  The title in the title component will only be automatically displayed if the option *Title:\<your title>* is specified in the **ParametersOptions** shape data field of the group, and an asterisk has been added in the title shape. Alternatively, you can also manually specify the title within the title shape.
+    > -  The title in the title component will only be automatically displayed if the option *Title:\<your title>* is specified in the **ParametersOptions** shape data field of the group, and an asterisk has been added in the title shape. Alternatively, you can also manually specify the title within the title shape.
     > -  If the parameter description is the same for all displayed parameters in the chart, the legend will not mention the duplicate parameter descriptions.
     > -  From DataMiner 9.5.13 onwards, this shape data field supports dynamic placeholders like \[Param:...\], \[Var:...\].
 
@@ -86,7 +86,7 @@ To configure the shapes:
 | STACKEDCOLUMNCHART    | A chart displaying real-time values as columns stacked on top of each other. |
 | STACKEDCOLUMNCHARTAVG | A chart displaying average values as columns stacked on top of each other.   |
 
-Make sure that all parameters you specify in the **Parameters** shape data field have the kind of trending data that is required for the specified chart type. In particular, for any of the “stacked” chart types without the “AVG” suffix, real-time trending data must be available, and for the “stacked” chart types with the “AVG” suffix, average trending data must be available.
+Make sure that all parameters you specify in the **Parameters** shape data field have the kind of trending data that is required for the specified chart type. In particular, for any of the “stacked” chart types without the “AVG” suffix, real-time trending data must be available, and for the “stacked” chart types with the “AVG” suffix, average trending data must be available.
 
 Visio charts of type “area” are updated automatically at regular intervals.
 
@@ -98,7 +98,7 @@ Visio charts of type “area” are updated automatically at regular intervals.
 
 ### ChartType options
 
-Below, you can find the options that can be specified in the **ParametersOptions** shape data field for a parameter chart (after the chart type).
+Below, you can find the options that can be specified in the **ParametersOptions** shape data field for a parameter chart (after the chart type).
 
 - **CUSTOMONLY**:
 
@@ -137,9 +137,9 @@ Below, you can find the options that can be specified in the **ParametersOptions
     Examples:
 
     ```txt
-    MAX:100 
+    MAX:100
     Max:89.5
-    max=75  
+    max=75
     ```
 
 - **MIN:value**:
@@ -148,9 +148,9 @@ Below, you can find the options that can be specified in the **ParametersOptions
     Examples:
 
     ```txt
-    MIN:0   
+    MIN:0
     Min:10.5
-    min=25  
+    min=25
     ```
 
 - **NoAxisLabels**:
@@ -186,7 +186,7 @@ Below, you can find the options that can be specified in the **ParametersOptions
     ```
 
     > [!CAUTION]
-    > Be careful when you use the “*Month*” option! We advise that you<br> -  set the TimeSpan1DayRecords interval in *MaintenanceSettings.xml* (which is not set by default). If this interval is not set, then the system will fall back to the TimeSpan1HourRecords interval. See [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).<br> -  do not include multiple parameters of which the TimeSpan1DayRecords interval has not been set.
+    > Be careful when you use the “*Month*” option! We advise that you<br> -  set the TimeSpan1DayRecords interval in *MaintenanceSettings.xml* (which is not set by default). If this interval is not set, then the system will fall back to the TimeSpan1HourRecords interval. See [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).<br> -  do not include multiple parameters of which the TimeSpan1DayRecords interval has not been set.
 
 - **ThemeForeground**:
 
@@ -194,12 +194,12 @@ Below, you can find the options that can be specified in the **ParametersOptions
     Examples:
 
     ```txt
-    ThemeForeground:White    
+    ThemeForeground:White
     ThemeForeground:#FFFFFFFF
     ```
 
     > [!NOTE]
-    > [For more information on the possible color names, refer to the following website:](https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx) https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx. 
+    > [For more information on the possible color names, refer to the following website:](https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx) https://msdn.microsoft.com/en-us/library/system.windows.media.brushes_properties(v=vs.110).aspx.
 
 - **Title:**
 
@@ -207,7 +207,7 @@ Below, you can find the options that can be specified in the **ParametersOptions
 
 - **VisualizeExceptions**
 
-    With this option, you can determine whether the display value of exception values in real-time charts is shown in a label. Can be set to *VisualizeExceptions=true* (default behavior) or *VisualizeExceptions=false*. Available from DataMiner 10.2.0/10.1.6 onwards;
+    With this option, you can determine whether the display value of exception values in real-time charts is shown in a label. Can be set to *VisualizeExceptions=true* (default behavior) or *VisualizeExceptions=false*. Available from DataMiner 10.2.0/10.1.6 onwards;
 
 ### Determining the font used in the chart
 

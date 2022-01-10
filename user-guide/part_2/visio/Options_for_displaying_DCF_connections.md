@@ -21,14 +21,14 @@ A number of different options are available for connections displayed in Visual 
 
 By default, straight lines will be drawn automatically to visualize connectivity. However, it is also possible to manually draw fixed lines and have those used instead.
 
-If you want to use existing lines to visualize connectivity, then add a shape data field of type **Options** to the page and set its value to “*ConnectivityLines\|Highlightpath*”.
+If you want to use existing lines to visualize connectivity, then add a shape data field of type **Options** to the page and set its value to “*ConnectivityLines\|Highlightpath*”.
 
 > [!NOTE]
 > Make sure the manually drawn lines are connected to the correct interfaces. If a line is connected to the parent shape of an interface instead of the interface itself, the path will not be used.
 
 ### Enabling view connections
 
-In order to make it possible to connect views with DCF connections, add a shape data field of type **Options** to the connectivity shape and set its value to “*EnableViewConnectivity*”.
+In order to make it possible to connect views with DCF connections, add a shape data field of type **Options** to the connectivity shape and set its value to “*EnableViewConnectivity*”.
 
 A view is considered to be connected to another view if the elements in those views are connected. This means that the element connectivity is aggregated in the view connectivity, allowing element connectivity to be grouped by view.
 
@@ -42,7 +42,7 @@ By default, external and internal connections are drawn like this:
 | External connections (with at least one subshape representing an interface) | Foreground               |
 | Internal connections                                                        | Foreground               |
 
-If you want to override this default behavior, add a shape data field of type **Options** to the page and set one of the following values:
+If you want to override this default behavior, add a shape data field of type **Options** to the page and set one of the following values:
 
 | Value                                | Description                                                                                                                                                                                                                                          |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -67,7 +67,7 @@ To do so, add a shape data field of type **Option** to the shape and set its val
 | Options          | InternalInterfaceHopping |
 
 > [!NOTE]
-> Prior to DataMiner 9.6.11, this option is not compatible with the *FollowPathColor* option. See [Making connections inherit alarm colors](#making-connections-inherit-alarm-colors).
+> Prior to DataMiner 9.6.11, this option is not compatible with the *FollowPathColor* option. See [Making connections inherit alarm colors](#making-connections-inherit-alarm-colors).
 
 ### Displaying connection properties
 
@@ -90,7 +90,7 @@ To have a connection property displayed on top of every connection that contains
     > [!NOTE]
     > If you use this option, property shapes will only be placed on interfaces of which the protocol of the parent element matches the protocol you specified in the shape data field.
 
-4. If you want a calculated value to be displayed instead of the property itself, add a semicolon followed by the calculation that has to be made. This can be *Sum*, *Min*, *Max*, *Concat* or *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>).
+4. If you want a calculated value to be displayed instead of the property itself, add a semicolon followed by the calculation that has to be made. This can be *Sum*, *Min*, *Max*, *Concat* or *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>).
 
     | Shape data field | Value                                             |
     |--------------------|---------------------------------------------------|
@@ -118,7 +118,7 @@ If the highlighting option “ActivePathHighlighting” is not used, this pop-up
 
 To have a pop-up box displayed with connection property information:
 
-- In a hidden connectivity shape (i.e. the shape in which you have added a shape data field of type *Connection* set to “Connectivity”), add a shape data field of type **Options** set to “*EnableConnectionOverview*”.
+- In a hidden connectivity shape (i.e. the shape in which you have added a shape data field of type *Connection* set to “Connectivity”), add a shape data field of type **Options** set to “*EnableConnectionOverview*”.
 
 | Shape data field | Value                    |
 |------------------|--------------------------|
@@ -126,7 +126,7 @@ To have a pop-up box displayed with connection property information:
 | Options          | EnableConnectionOverview |
 
 > [!NOTE]
-> If a user clicks a line that represents multiple connections, the connection properties window will list all connections represented by that line, along with the following information for each connection: 
+> If a user clicks a line that represents multiple connections, the connection properties window will list all connections represented by that line, along with the following information for each connection:
 > -  The alarm colors of both connected interfaces.
 > -  The names of both connected interfaces, each followed by the element name.
 > -  An arrow that indicates the direction of the connection.
@@ -143,7 +143,7 @@ It is possible to activate “follow mode”, so that connection lines will auto
     >
     > Connections linking an input shape and an output shape of the same element (i.e. internal connections) will adopt the alarm color of the input shape, except when the element has a higher alarm state. In that case, they will adopt the alarm color of the element.
 
-- To make connections inherit the alarm color of the interfaces, add a shape data field of type **Options** to the page and set its value to “*FollowInterfacePathColor*”.
+- To make connections inherit the alarm color of the interfaces, add a shape data field of type **Options** to the page and set its value to “*FollowInterfacePathColor*”.
 
     > [!NOTE]
     > A connection leaving an interface will inherit the alarm color of that interface if the alarm severity is higher than the alarm severity of the preceding connection.
@@ -158,13 +158,13 @@ The following additional options are also available:
 
 From DataMiner 9.5.1 onwards, it is possible to use a pathing algorithm to automatically draw connection lines as clearly visible as possible, using a combination of horizontal and vertical lines.
 
-To enable this algorithm, in the **Options** shape data field of the **Connection** shape in Visio, add the *StraightLines* option.
+To enable this algorithm, in the **Options** shape data field of the **Connection** shape in Visio, add the *StraightLines* option.
 
 The algorithm will attempt to do the following things, in order of priority:
 
 - Only draw a combination of vertical and horizontal lines, with the exception of the line from outside the shape to the center of the shape, which can still be diagonal.
 
-    As such, for an optimal result, we advise you to use the Visio page option **InterfaceConnectionLinesOnBackground** as well. See [Placing connection lines in the background or in the foreground](#placing-connection-lines-in-the-background-or-in-the-foreground).
+    As such, for an optimal result, we advise you to use the Visio page option **InterfaceConnectionLinesOnBackground** as well. See [Placing connection lines in the background or in the foreground](#placing-connection-lines-in-the-background-or-in-the-foreground).
 
 - Make sure lines do not go through other connectivity shapes.
 
@@ -177,13 +177,13 @@ The algorithm will attempt to do the following things, in order of priority:
 - Take the shortest path.
 
 > [!NOTE]
-> The *StraightLines* option does not work in conjunction with the *MultipleLinesMode* or *MultipleCurvedLinesMode* options.
+> The *StraightLines* option does not work in conjunction with the *MultipleLinesMode* or *MultipleCurvedLinesMode* options.
 
 ### Making connections take the alarm color of connected interfaces
 
 From DataMiner 9.5.2 onwards, you can make connection lines take the alarm color of the interfaces they are connected to.
 
-To do so, add a shape data field of type **Options** to the **Connection** shape, and set it to one of the following values:
+To do so, add a shape data field of type **Options** to the **Connection** shape, and set it to one of the following values:
 
 | Value                             | Description                                                                                                 |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------|
@@ -193,7 +193,7 @@ To do so, add a shape data field of type **Options** to the **Connection** sha
 | ShowInterfaceAlarmColor:backwards | Connection lines show the alarm color of the upcoming interface, depending on the direction of the signal.  |
 
 > [!NOTE]
-> Using this option together with the option *EnableViewConnectivity* is only supported from DataMiner 9.5.3 onwards.
+> Using this option together with the option *EnableViewConnectivity* is only supported from DataMiner 9.5.3 onwards.
 
 ### Subscribing to internal connections when using dynamic positioning
 
@@ -209,12 +209,12 @@ From DataMiner 9.5.9 onwards, it is possible to link connection properties of in
 
 If you do so, internal connections will push their connection properties to the directly linked external connections along the path. The properties will not be passed from an input to an external connection. If multiple connection properties share a name, they will be separated by commas in the connection overview.
 
-To implement this feature, add *LinkConnectionProperty=X;Y* to the **Options** shape data item of the connection shape, where X and Y are the names of the properties you want to link. Multiple properties can be separated by semicolons.
+To implement this feature, add *LinkConnectionProperty=X;Y* to the **Options** shape data item of the connection shape, where X and Y are the names of the properties you want to link. Multiple properties can be separated by semicolons.
 
 | Shape data field | Value                      |
 |------------------|----------------------------|
 | Options          | LinkConnectionProperty=X;Y |
 
 > [!NOTE]
-> When using dynamic positioning in combination with this feature, set the *RetrieveInternalConnectivity* option on the connection shape to make sure the internal connection properties are retrieved. See [Subscribing to internal connections when using dynamic positioning](#subscribing-to-internal-connections-when-using-dynamic-positioning).
+> When using dynamic positioning in combination with this feature, set the *RetrieveInternalConnectivity* option on the connection shape to make sure the internal connection properties are retrieved. See [Subscribing to internal connections when using dynamic positioning](#subscribing-to-internal-connections-when-using-dynamic-positioning).
 >

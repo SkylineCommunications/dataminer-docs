@@ -6,7 +6,7 @@ This page consists of three sections:
 
 - A log file list on the left side.
 
-- An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
+- An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
 
     > [!NOTE]
     > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.0.0.0", and debug logging is used for more detailed information.
@@ -22,7 +22,7 @@ This page consists of three sections:
 
 From DataMiner 10.0.4 onwards, the log levels for each module are indicated to the right of the module name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc. At the top of the list, the default settings are displayed.
 
-In the *Log settings* section, you can change the log levels for a specific module or change the default log levels of the DMA.
+In the *Log settings* section, you can change the log levels for a specific module or change the default log levels of the DMA.
 
 To change the default log levels:
 
@@ -47,7 +47,7 @@ To change the log levels for a specific module:
 5. Click *Apply levels* to apply your changes.
 
 > [!NOTE]
-> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
+> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
 
 #### Prior to DataMiner 10.0.4
 
@@ -57,17 +57,17 @@ In the *Log settings* section, you can change the log levels for all modules of 
 
 1. Select one of the modules of the DMA in the log file list.
 
-- An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
+- An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
 
     > [!NOTE]
-    > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.0.0.0", and debug logging is used for more detailed information. 
+    > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.0.0.0", and debug logging is used for more detailed information.
 
 2. Change the log levels for info, debug and error logging as required.
 
 3. Click *Apply levels* to apply your changes.
 
 > [!NOTE]
-> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
+> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
 
 ### Sorting the log file list
 
@@ -104,7 +104,7 @@ Some items in the list are of particular note:
 | Mobile Gateway      | Log file of the Mobile Gateway of the DMA.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Notifications       | Log file of the Notifications engine of the DMA. Mentions among others any emails and SMS messages that have been sent.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Reports             | Log file of the Reporter engine of the DMA.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Resource Manager    | Log file of the *Resources* module, mentioning among others the creation, modification and deletion of bookings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Resource Manager    | Log file of the *Resources* module, mentioning among others the creation, modification and deletion of bookings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Scheduler           | Log file of the Scheduler module.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | SNMP Agents         | Log file of the DMA’s SNMP agent software.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | SNMP Managers       | Log file of the DMA’s SNMP manager software. Mentions among others the SNMP notifications the DMA has been receiving.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |

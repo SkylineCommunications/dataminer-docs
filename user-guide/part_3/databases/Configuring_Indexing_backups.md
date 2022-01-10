@@ -13,7 +13,7 @@ Keep the following restrictions in mind for the backup path:
     1. Open a command window and execute the following command (replacing \[NameOfTask\] with the name of the Windows scheduled task that will be run to provide access to the backup location (e.g. *MountElasticBackupPath*), \[UNC Path\] with the specified path, and \[User\] and \[Password\] with the necessary credentials):
 
         ```txt
-        schtasks /create /tn "[NameOfTask]" /tr "net use [UNC Path] /user:[User]  [Password] /persistent:yes" /sc onstart /RU SYSTEM
+        schtasks /create /tn "[NameOfTask]" /tr "net use [UNC Path] /user:[User] [Password] /persistent:yes" /sc onstart /RU SYSTEM
         ```
 
     2. Open the Windows task scheduler and execute the task. The SYSTEM user will now have access to the UNC path.
@@ -37,7 +37,7 @@ To do so:
 
 4. Restart the service *elasticsearch-service-x64.exe*.
 
-From DataMiner 9.6.11 onwards, you can modify the Indexing backup path in System Center, on the *Backup* page, in the section *Indexing Engine location*.
+From DataMiner 9.6.11 onwards, you can modify the Indexing backup path in System Center, on the *Backup* page, in the section *Indexing Engine location*.
 
 > [!NOTE]
 > -  After you change the path in System Center, it is possible that the UI is temporarily disabled while the Indexing nodes are restarted to implement the change. As such, we recommend to only change the backup path if this is absolutely necessary.

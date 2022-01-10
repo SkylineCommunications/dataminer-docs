@@ -4,7 +4,7 @@ There are two ways to add a new user group to a DMS, depending on whether it is 
 
 To add a **local group**:
 
-1. In the *Users / Groups* section of the System Center module, go to the *groups* tab.
+1. In the *Users / Groups* section of the System Center module, go to the *groups* tab.
 
 2. Click *Add new group*.
 
@@ -15,11 +15,11 @@ To add a **local group**:
 
 To add an existing **domain group**:
 
-1. In the *Users / Groups* section of the System Center module, go to the *groups* tab.
+1. In the *Users / Groups* section of the System Center module, go to the *groups* tab.
 
 2. Click *Add existing group*.
 
-3. In the *Add existing group* window, select the group(s) you want to add and click *OK*.
+3. In the *Add existing group* window, select the group(s) you want to add and click *OK*.
 
     The new groups will be added to the list of *Domain* groups.
 

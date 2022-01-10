@@ -9,5 +9,5 @@ To do so, add a shape data field of type **BackgroundColor**, and set the value 
 | BackgroundColor  | A color, which can be configured in one of the following ways:<br> -  An HTML color code (e.g. #FF102030)<br> -  An RGB color code (e.g. 40,50,60)<br> -  A standard color name (e.g. magenta)<br> -  A color placeholder referring to one of the configured DataMiner alarm colors (e.g. \[color:severity=minor\])<br> -  A placeholder referring to a variable containing a color value (e.g. \[PageVar:MyColorSessionVar\]) |
 
 > [!NOTE]
-> If a valid color is specified or retrieved via a placeholder, this background color is enforced on the shape. If blinking was enabled, it will be disabled because of this. 
+> If a valid color is specified or retrieved via a placeholder, this background color is enforced on the shape. If blinking was enabled, it will be disabled because of this.
 >

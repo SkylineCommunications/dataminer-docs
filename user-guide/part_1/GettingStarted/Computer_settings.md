@@ -1,6 +1,6 @@
 ## Computer settings
 
-Any user preferences in DataMiner Cube pertaining to the user’s computer are grouped in the *computer* tab of the *Settings* window.
+Any user preferences in DataMiner Cube pertaining to the user’s computer are grouped in the *computer* tab of the *Settings* window.
 
 Like the user settings, the DataMiner Cube computer settings are divided in several different sections:
 
@@ -49,11 +49,11 @@ On this page, you can select settings related to the connection of your computer
 
 - **Automatic log-on with saved user name and password**: Select this setting to have DataMiner Cube remember your user name and password, so that you do not have to enter these except after an explicit logout.
 
-- **Connection type**: Select a connection type in the drop-down list. By default this is set to *Auto*. When you select other connection types, *Remoting* or *Web services*, more settings will appear that need to be specified (destination port, polling interval, etc.).
+- **Connection type**: Select a connection type in the drop-down list. By default this is set to *Auto*. When you select other connection types, *Remoting* or *Web services*, more settings will appear that need to be specified (destination port, polling interval, etc.).
 
     > [!NOTE]
-    > -  Connecting via web services is not possible if WSE is not installed on the DMA. 
-    > -  As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
+    > -  Connecting via web services is not possible if WSE is not installed on the DMA.
+    > -  As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
 
     > [!TIP]
     > See also:
@@ -69,7 +69,7 @@ This page is available from DataMiner 10.0.12 onwards. It contains the following
 
 This page contains the following debug settings:
 
-- **Debug settings visible**: Select this setting along with the user setting *Show General Parameters debug page* to show an additional Data Display page called *General parameters DEBUG*. This page contains general parameters that are only used for debug purposes and that are not usually displayed.
+- **Debug settings visible**: Select this setting along with the user setting *Show General Parameters debug page* to show an additional Data Display page called *General parameters DEBUG*. This page contains general parameters that are only used for debug purposes and that are not usually displayed.
 
     > [!TIP]
     > See also:
@@ -114,7 +114,7 @@ On the main *Advanced* page, two settings are available:
 
 - **DataMiner Cube computer \[computername\] reset**: Click the button next to this setting to reset all computer settings back to default. In normal circumstances, this option should never have to be used.
 
-There are also two subpages: *Logging* and *Communication*.
+There are also two subpages: *Logging* and *Communication*.
 
 ##### Logging
 
@@ -127,7 +127,7 @@ This page allows you to determine the number of log entries kept in the DataMine
 - **Level of logging**: The level of detail of the log entries. The higher the value, the more detailed the logging.
 
 > [!NOTE]
-> Be careful about applying the higher levels like *Log_Everything* or *Development_Logging*, as these require a lot of resources.
+> Be careful about applying the higher levels like *Log_Everything* or *Development_Logging*, as these require a lot of resources.
 
 ##### Communication
 
@@ -141,4 +141,4 @@ This page contains a number of settings regarding communication between the comp
 
 - **Fallback received messages**: In the box to the right of this setting, enter the minimum number of received messages that will be kept when older messages are deleted.
 
-- **Store full messages**: As soon as you apply this setting, details will be stored for each message. These can be viewed in a separate *Details* pane when you click the message in the communication logging. See [Consulting the DataMiner logs in DataMiner Cube](../../part_6/logging/Consulting_the_DataMiner_logs_in_DataMiner_Cube.md).
+- **Store full messages**: As soon as you apply this setting, details will be stored for each message. These can be viewed in a separate *Details* pane when you click the message in the communication logging. See [Consulting the DataMiner logs in DataMiner Cube](../../part_6/logging/Consulting_the_DataMiner_logs_in_DataMiner_Cube.md).

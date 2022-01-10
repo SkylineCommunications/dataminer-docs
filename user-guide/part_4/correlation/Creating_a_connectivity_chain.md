@@ -2,7 +2,7 @@
 
 To create a connectivity chain:
 
-1. In the *Correlation* module, go to the *connectivity editor* tab, and click *Launch connectivity editor*.
+1. In the *Correlation* module, go to the *connectivity editor* tab, and click *Launch connectivity editor*.
 
     The connectivity editor will be opened in a separate window.
 
@@ -18,7 +18,7 @@ To create a connectivity chain:
 
 4. Make a topology connection between elements or services:
 
-    - Right-click an element or service and select *Link* or *Unlink*, or
+    - Right-click an element or service and select *Link* or *Unlink*, or
 
     - Drag and drop while pressing the *Ctrl* key.
 
@@ -31,17 +31,17 @@ To create a connectivity chain:
 
     2. Select the option *Include a SELECTION of parameters*.
 
-    3. Select the parameters in the *Available* list, and move them to the *Included* list with the *\<* button.
+    3. Select the parameters in the *Available* list, and move them to the *Included* list with the *\<* button.
 
         > [!NOTE]
         > Only monitored parameters are available in this window.
 
     4. Click *OK*. The included parameters are now indicated on the item in the chain.
 
-6. If necessary, click the *Options* button in the lower right corner to configure the following options for the chain:
+6. If necessary, click the *Options* button in the lower right corner to configure the following options for the chain:
 
-    - **Require alarms to occur on consecutive elements** **in the chain** ... : If this option is selected, the RCA level is reset if the parent element is not in alarm, even if other elements are in alarm higher up in the chain.
+    - **Require alarms to occur on consecutive elements** **in the chain** ... : If this option is selected, the RCA level is reset if the parent element is not in alarm, even if other elements are in alarm higher up in the chain.
 
-    - **Use unique RCA levels when multiple parameters are combined** ... : If this option is selected, and a block contains multiple parameters, a different RCA level is applied for parameters in that same block. The first parameter that triggers an alarm can for example get RCA level 0, the next one level 1, etc.
+    - **Use unique RCA levels when multiple parameters are combined** ... : If this option is selected, and a block contains multiple parameters, a different RCA level is applied for parameters in that same block. The first parameter that triggers an alarm can for example get RCA level 0, the next one level 1, etc.
 
 7. When all necessary items have been added and linked, click the *Save* button.

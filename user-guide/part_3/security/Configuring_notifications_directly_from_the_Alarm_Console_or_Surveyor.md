@@ -8,7 +8,7 @@ To configure an alarm filter for personal notifications directly from the Alarm 
 
 2. Modify the suggested filter if necessary, and click *OK*.
 
-3. In the *Delivery types* column, select one or more notification types: *Alerter*, *Email* or *SMS* (i.e. text message).
+3. In the *Delivery types* column, select one or more notification types: *Alerter*, *Email* or *SMS* (i.e. text message).
 
 4. Click the *Apply* button in the lower right corner.
 

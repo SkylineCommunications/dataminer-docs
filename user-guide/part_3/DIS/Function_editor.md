@@ -1,9 +1,9 @@
 # Function editor
 
-If you click *Function Editor* in the file tab header when editing a function XML file, the XML editor you are working in will be turned into a graphical function interface editor. This editor allows you to manage the functions defined in a function XML file and design function pages using simple drag-and-drop operations.
+If you click *Function Editor* in the file tab header when editing a function XML file, the XML editor you are working in will be turned into a graphical function interface editor. This editor allows you to manage the functions defined in a function XML file and design function pages using simple drag-and-drop operations.
 
 > [!NOTE]
-> If you open a function XML file and click *Function Editor* in the file tab header, DIS will ask you to open the associated protocol XML file as well if you have not yet done so already.
+> If you open a function XML file and click *Function Editor* in the file tab header, DIS will ask you to open the associated protocol XML file as well if you have not yet done so already.
 
 The following sections provide more information on the Function Editor:
 
@@ -19,7 +19,7 @@ The following sections provide more information on the Function Editor:
 
 ### Function
 
-This selection box contains all functions defined in the function XML file you are editing. If you select a function from the list, the *Pages* section will show a list of all pages defined for that specific function, and the *Layout* section will display the page that was set as default.
+This selection box contains all functions defined in the function XML file you are editing. If you select a function from the list, the *Pages* section will show a list of all pages defined for that specific function, and the *Layout* section will display the page that was set as default.
 
 To add a new function to the function XML file:
 
@@ -41,16 +41,16 @@ To delete a function from the function XML file:
 
 1. In the *Function* selection box, select the function you want to delete, and click the red X.
 
-2. In the *Delete function* box, click *Yes* to confirm the deletion.
+2. In the *Delete function* box, click *Yes* to confirm the deletion.
 
 ### Pages
 
-In the *Pages* list on the left, you can find the list of pages defined in the function selected in the *Function* section above.
+In the *Pages* list on the left, you can find the list of pages defined in the function selected in the *Function* section above.
 
 > [!NOTE]
 > Warning icons will appear next to pages that are empty.
 
-To add a new page to the list, click *New page*. In the *Add New Page* dialog box, you can then specify the name and the type of the page.
+To add a new page to the list, click *New page*. In the *Add New Page* dialog box, you can then specify the name and the type of the page.
 
 When you right-click a page, a shortcut menu will appear, containing the following commands:
 
@@ -64,17 +64,17 @@ When you right-click a page, a shortcut menu will appear, containing the followi
 
 ### Layout / Parameters
 
-You can drag parameters from the *Parameters* list on the right, which contains all parameters defined in the protocol XML file linked to the function XML file you are editing, onto a column in the *Layout* section, which represents the layout of the selected page. An extra column is suggested the moment you drag a parameter onto the *Layout* section. If you drop the parameter onto that extra column, a new column will be added to the page.
+You can drag parameters from the *Parameters* list on the right, which contains all parameters defined in the protocol XML file linked to the function XML file you are editing, onto a column in the *Layout* section, which represents the layout of the selected page. An extra column is suggested the moment you drag a parameter onto the *Layout* section. If you drop the parameter onto that extra column, a new column will be added to the page.
 
-If you want a page to have only one column spanning across the entire width, then, in the *Options* section below, select *Wide column*. Note that this only works if no parameters have been added except in the left-most column.
+If you want a page to have only one column spanning across the entire width, then, in the *Options* section below, select *Wide column*. Note that this only works if no parameters have been added except in the left-most column.
 
 #### Layout
 
 Every parameter you drag onto a page is represented by a building block that, by default, shows the ID and the name of the parameter.
 
-In case of a Read/Write parameter, use the *Read* and *Write* checkboxes to indicate whether you want the page to contain the Read parameter, the Write parameter, or both.
+In case of a Read/Write parameter, use the *Read* and *Write* checkboxes to indicate whether you want the page to contain the Read parameter, the Write parameter, or both.
 
-In case of a table parameter, you can click the *Edit Parameter* button in the top-right corner of the building block and select the columns you want to include.
+In case of a table parameter, you can click the *Edit Parameter* button in the top-right corner of the building block and select the columns you want to include.
 
 When you right-click after selecting a parameter (or multiple parameters), a shortcut menu appears.
 
@@ -88,9 +88,9 @@ When you right-click after selecting a parameter (or multiple parameters), a sho
 
 #### Parameters
 
-By default, the *Parameters* list shows the ID and the name of every parameter defined in the protocol XML file linked to the function XML file you are editing.
+By default, the *Parameters* list shows the ID and the name of every parameter defined in the protocol XML file linked to the function XML file you are editing.
 
-At the bottom of the *Parameters* list, you can select *Group by page* to have the parameters in the list grouped by protocol page, and you can open a filter section that will allow you to filter the list.
+At the bottom of the *Parameters* list, you can select *Group by page* to have the parameters in the list grouped by protocol page, and you can open a filter section that will allow you to filter the list.
 
 ### Apply changes / Cancel
 

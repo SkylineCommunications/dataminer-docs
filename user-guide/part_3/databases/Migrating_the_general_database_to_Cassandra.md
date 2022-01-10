@@ -10,7 +10,7 @@ Before you can migrate to Cassandra, DataMiner has to check if your system is re
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/cassandra-migrating-to-cassandra/> 
+> <https://community.dataminer.services/video/cassandra-migrating-to-cassandra/>
 
 #### Prerequisites
 
@@ -28,11 +28,11 @@ The migration procedure has the following prerequisites:
 
 Before you start the Cassandra migration wizard, it is advisable to check the following things:
 
-- Make sure that the following Trending tags in the file *MaintenanceSettings.xml* are all set to a large interval (e.g. 10 years). If the following tags are set to small intervals or if they are set to 0, you risk losing trend data during the migration: *TimeSpan1DayRecords*, *TimeSpan1HourRecords*, *TimeSpan5MinRecords*. See also: [Alphabetical overview of settings](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#alphabetical-overview-of-settings).
+- Make sure that the following Trending tags in the file *MaintenanceSettings.xml* are all set to a large interval (e.g. 10 years). If the following tags are set to small intervals or if they are set to 0, you risk losing trend data during the migration: *TimeSpan1DayRecords*, *TimeSpan1HourRecords*, *TimeSpan5MinRecords*. See also: [Alphabetical overview of settings](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#alphabetical-overview-of-settings).
 
-- If you are using DataMiner version 9.6.0/9.6.3 or older: Because the *Months to keep* database setting works differently with Cassandra, if you do not want certain records to remain in the database permanently, it is important that you make sure *Limit alarms by months to keep* is selected before you migrate to Cassandra.
+- If you are using DataMiner version 9.6.0/9.6.3 or older: Because the *Months to keep* database setting works differently with Cassandra, if you do not want certain records to remain in the database permanently, it is important that you make sure *Limit alarms by months to keep* is selected before you migrate to Cassandra.
 
-- Make sure you have the DataMiner permissions *System configuration* > *Database* > *Configure local DB* or *Configure general DB* (depending on your DataMiner version), and *System configuration* > *Agents* > *Upgrade / restore*, as otherwise you will not be able to run the wizard.
+- Make sure you have the DataMiner permissions *System configuration* > *Database* > *Configure local DB* or *Configure general DB* (depending on your DataMiner version), and *System configuration* > *Agents* > *Upgrade / restore*, as otherwise you will not be able to run the wizard.
 
 - Do not specify the loopback IP address (127.0.0.1) as the first IP address for an Agent that is to use Cassandra.
 
@@ -40,7 +40,7 @@ Before you start the Cassandra migration wizard, it is advisable to check the fo
 
 Before the migration to Cassandra can begin, the migration wizard first checks if your system is ready:
 
-1. In System Center, go to the *Database* tab and click the button *Cassandra preparation/migration*.
+1. In System Center, go to the *Database* tab and click the button *Cassandra preparation/migration*.
 
     > [!NOTE]
     > This button is only available if there is still a general database left in the DMS that has not yet been migrated.
@@ -56,8 +56,8 @@ Before the migration to Cassandra can begin, the migration wizard first checks i
 
     > [!NOTE]
     > -  The detection follows very strict rules, so it is possible that some of the indicated protocols may be compatible after all.
-    >     - The detection should ignore WMI queries, but in some cases these may cause a protocol to be interpreted as incompatible, even though it is in fact compatible. 
-    >     - SQL queries on other databases outside of DataMiner may also cause a protocol to be interpreted as incompatible. 
+    >     - The detection should ignore WMI queries, but in some cases these may cause a protocol to be interpreted as incompatible, even though it is in fact compatible.
+    >     - SQL queries on other databases outside of DataMiner may also cause a protocol to be interpreted as incompatible.
     > -  If any incompatibilities are found during the check, detailed info can be found in the file ProtocolCache.txt, in the folder *C:\\Skyline DataMiner\\System Cache*. For each protocol, this file lists the protocol name followed by "true" or "false" depending on whether the protocol is compatible. If it is incompatible, this is then followed by the QAction ID and line number. If there are several incompatible lines, the line numbers are separated by semicolons.
 
     To deal with protocols that are indicated as incompatible, you can do the following:
@@ -71,23 +71,23 @@ Before the migration to Cassandra can begin, the migration wizard first checks i
         - Up to DataMiner 9.0.2 (including all 9.0.0 main release versions):
 
             ```xml
-            <Compliancies>                                 
+            <Compliancies>
               <Compliancy key="CassandraReady" value="true"/>
-            </Compliancies>                                
+            </Compliancies>
             ```
 
         - From DataMiner 9.0.3 onwards:
 
             ```xml
-            <Compliancies>                                           
-              <CassandraReady>true</CassandraReady>                   
-              <CassandraRequired>true</CassandraRequired>             
+            <Compliancies>
+              <CassandraReady>true</CassandraReady>
+              <CassandraRequired>true</CassandraRequired>
               <MinimumRequiredVersion>8.5.8.5</MinimumRequiredVersion>
-            </Compliancies>                                          
+            </Compliancies>
             ```
 
         > [!NOTE]
-        > -  The version number specified in the \<*MinimumRequiredVersion>* tag must have the following syntax:
+        > -  The version number specified in the \<*MinimumRequiredVersion>* tag must have the following syntax:
         >     - major.minor.month.week, e.g. *9.0.3.7*, or
         >     - major.minor.month.week-xxxx (in which xxxx is the four-digit build number), e.g. *9.0.3.7-5687*.
         > -  To have incompatible protocols that are managed by Skyline upgraded for use with Cassandra, contact your Technical Account Manager.
@@ -95,23 +95,23 @@ Before the migration to Cassandra can begin, the migration wizard first checks i
 4. Under *Automation Script System Requirements*, check if any Automation scripts are indicated. If there are, the scripts may need to be updated to be compatible with Cassandra.
 
     > [!NOTE]
-    > -  The check looks for any SQL query expressions that might cause the script to be invalid. However, it could be that such expressions in a script are used to query a different database, in which case the script is compatible even though the wizard cannot see this. In that case, add the following comment line in the first block of C# code of the script to indicate that it is compliant: <br> *//\[CassandraReady=true\]* 
+    > -  The check looks for any SQL query expressions that might cause the script to be invalid. However, it could be that such expressions in a script are used to query a different database, in which case the script is compatible even though the wizard cannot see this. In that case, add the following comment line in the first block of C# code of the script to indicate that it is compliant: <br> *//\[CassandraReady=true\]*
     > -  When Automation scripts are checked for compliance and incompatibilities are found, the line numbers where these occur are stored in the file ScriptCache.txt, in the folder *C:\\Skyline DataMiner\\System Cache*. For each script, the file lists the name followed by "true" or "false" depending on whether the script is compatible. If the script is incompatible, this is then followed by the number of the invalid script action (with the first action being 0) and the line number of the invalid line. If there are several incompatible lines, the line numbers are separated by semicolons.
     > -  If a script is tagged as *\[CassandraReady=false\]*, it is considered incompatible, but not checked further. As such, no information about such a script is included in ScriptCache.txt.
 
-5. Under *DataMiner Agent System Requirements*, check whether your system has adequate resources available for the migration. If not, you may need to upgrade your system before the migration is possible. There are also several options available. You may need to click the *More options* button in the lower right corner to see some of these options.
+5. Under *DataMiner Agent System Requirements*, check whether your system has adequate resources available for the migration. If not, you may need to upgrade your system before the migration is possible. There are also several options available. You may need to click the *More options* button in the lower right corner to see some of these options.
 
     - *Migrate average trending*/*Migrate real-time trending*: By default, only average trending information for a period of one year up till now is migrated. However, you can select not to migrate any trending, or to also migrate real-time trending (which is by default for the last 24 hours).
 
         > [!NOTE]
         > -  The following system requirements apply for the migration to Cassandra:
-        >     - Your server needs a 64-bit version of Windows 2008 or higher. 
-        >     - One fourth of the installed RAM must be available, with 1 GB of additional free RAM. 
+        >     - Your server needs a 64-bit version of Windows 2008 or higher.
+        >     - One fourth of the installed RAM must be available, with 1 GB of additional free RAM.
         >     - The CPU load and disk busy time must be less than 80% during the last hour.
         >     - On the disk where the Cassandra data will be located, there should be enough free space for twice the size of the legacy database, plus an additional 20 GB of free space.
         >     - On the C drive, where the Cassandra software itself will be installed, there should be at least 10 GB of free space.
-        > -  If you choose not to migrate average or real-time trending, both the legacy database and the Cassandra database may be active after the migration, which can cause CPU, RAM and disk usage to increase. 
-        > -  If the migration of real-time trending is estimated to take little time, it is advisable to select this option. However, if the migration of real-time trending takes 24 hours or more, selecting the option makes little sense. 
+        > -  If you choose not to migrate average or real-time trending, both the legacy database and the Cassandra database may be active after the migration, which can cause CPU, RAM and disk usage to increase.
+        > -  If the migration of real-time trending is estimated to take little time, it is advisable to select this option. However, if the migration of real-time trending takes 24 hours or more, selecting the option makes little sense.
 
     - *Migrate options*: By default, the existing data in the legacy database is not deleted, but with *Remove migrated data from \[legacy database\]*, you can select to remove it once the migration is done.
 
@@ -171,11 +171,11 @@ After you have followed the procedure above and system requirements are met, you
         - \[DMA name\]: Displays the progress for the DMA in question.
 
         > [!NOTE]
-        > -  In order to monitor the migration progress of a DMA that is migrating while offline, browse to the DMA's IP and click the *Monitor* button. It is not possible to monitor the progress directly from another online DMA in the DMS.
-        > -  If something goes wrong during the migration for a particular DMA, a link to additional log information will be displayed in the details tab for that DMA. This additional information is recorded in the file *FailedTablesMigration.txt* in the folder *C:\\Skyline Dataminer\\Logging\\*.
+        > -  In order to monitor the migration progress of a DMA that is migrating while offline, browse to the DMA's IP and click the *Monitor* button. It is not possible to monitor the progress directly from another online DMA in the DMS.
+        > -  If something goes wrong during the migration for a particular DMA, a link to additional log information will be displayed in the details tab for that DMA. This additional information is recorded in the file *FailedTablesMigration.txt* in the folder *C:\\Skyline Dataminer\\Logging\\*.
         > -  If you close the migration window, you can still check the status of the migration in the log file *C:\\Skyline DataMiner\\Upgrades\\Packages\\cassandra-progress.dmupgrade-\*\\progress.log*.
 
-    - To view logging information related to the Cassandra migration, including the settings used for the migration, go to *Apps* > *System Center* > *Logging* > *DataMiner*, and select the *Cassandra Migration* log file. Additional useful logging can be found in the *Database Connection* log file.
+    - To view logging information related to the Cassandra migration, including the settings used for the migration, go to *Apps* > *System Center* > *Logging* > *DataMiner*, and select the *Cassandra Migration* log file. Additional useful logging can be found in the *Database Connection* log file.
 
 After the migration is finished, the DataMiner features that depend on the use of Cassandra will start working. It is not necessary to restart the DMA.
 
@@ -190,11 +190,11 @@ After the migration is finished, the DataMiner features that depend on the use o
 
     1. Run *services.msc*.
 
-    2. In the *Services* window, right-click the service *MySQL* or *SQL Server (MSSQLServer)*, depending on which kind of database you were using, and select *Properties*.
+    2. In the *Services* window, right-click the service *MySQL* or *SQL Server (MSSQLServer)*, depending on which kind of database you were using, and select *Properties*.
 
     3. If the service is currently running, click the *Stop* button.
 
-    4. In the *Startup type* box, select *Disabled*.
+    4. In the *Startup type* box, select *Disabled*.
 
     5. Click *OK*.
 
@@ -222,13 +222,13 @@ In a Failover DMS using Cassandra, the Cassandra instances on the two DMAs are c
 
 ![](../../images/Failover_sync_legacy.jpg)
 
- 
 
- 
+
+
 
 ![](../../images/Failover_sync_cass.jpg)
 
- 
+
 
 #### Cassandra database security
 
@@ -253,7 +253,7 @@ However, we recommend to make all DMAs use a third, dedicated "dataminer" superu
         create user dataminer with password 'dataminer' superuser;
         ```
 
-2. On every DMA, go to *System Center* > *Database* > *Local*, set *User* to “dataminer” and *Password* to the associated password, and click *Save*.
+2. On every DMA, go to *System Center* > *Database* > *Local*, set *User* to “dataminer” and *Password* to the associated password, and click *Save*.
 
 In addition, we also recommend to change the passwords of the default “cassandra” and “root” superusers in Cassandra.
 

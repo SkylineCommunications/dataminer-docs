@@ -18,8 +18,8 @@ In addition to the options determining how connections are displayed, there are 
 > [!NOTE]
 > -  When connectivity has been defined in a drawing, you can highlight the connectivity chain using a shortcut menu command. Right-click a shape, and select *Display connectivity*.
 > -  As of DataMiner version 8.5.4, when a shape or connection is highlighted, only the connections before and after the shape will be highlighted, instead of the entire connected framework.
-> -  If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted. 
-> -  If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the *HighlightTarget* shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape is highlighted as soon as one of the highlight conditions is true.
+> -  If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted.
+> -  If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the *HighlightTarget* shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape is highlighted as soon as one of the highlight conditions is true.
 
 > [!TIP]
 > See also:
@@ -40,9 +40,9 @@ If you want to customize the highlight style, create a shape or a connection, ap
 
 ### Displaying an animated shape on highlighted connections
 
-From DataMiner 9.5.12 onwards, it is possible to display an animated shape on a highlighted DCF connection line. This is done using the *HighlightAnimation* option.
+From DataMiner 9.5.12 onwards, it is possible to display an animated shape on a highlighted DCF connection line. This is done using the *HighlightAnimation* option.
 
-When you do so, you can also configure the animation speed and interval with the *LineAnimationSpeed* and *LineAnimationInterval* options, respectively. The animation speed is measured in pixels/second and the interval is measured in milliseconds.
+When you do so, you can also configure the animation speed and interval with the *LineAnimationSpeed* and *LineAnimationInterval* options, respectively. The animation speed is measured in pixels/second and the interval is measured in milliseconds.
 
 For example:
 
@@ -51,7 +51,7 @@ For example:
 | Options          | HighlightAnimation\|LineAnimationSpeed=100\|LineAnimationInterval=500 |
 
 > [!NOTE]
-> -  The shape will follow the path of the line, even when *MultipleCurvedLinesMode* is used.
+> -  The shape will follow the path of the line, even when *MultipleCurvedLinesMode* is used.
 > -  Configuring an offset is possible by positioning the rotation point of the animated shape.
 
 ### Ignoring internal connections
@@ -79,7 +79,7 @@ NoHighlightLineStyle|NoHighlightFillStyle|NoHighlightTextStyle
 
 ### Applying only certain highlight style properties
 
-If you want to apply only certain line properties of a HighlightStyle shape to the shapes and connections, add the “*LineProperty=*” option to the shape’s **Options** shape data field, followed by one or more of the following properties. If you specify multiple properties, separate them by commas.
+If you want to apply only certain line properties of a HighlightStyle shape to the shapes and connections, add the “*LineProperty=*” option to the shape’s **Options** shape data field, followed by one or more of the following properties. If you specify multiple properties, separate them by commas.
 
 - Thickness
 
@@ -109,7 +109,7 @@ If you only want the shapes to be highlighted and not the connections between th
 
 #### Applying a highlight style depending on a connection property
 
-To have the highlight style applied conditionally depending on whether a specific connection property condition is fulfilled, add an additional shape data field **Highlight** to the shape determining the highlight style, and specify the following value:
+To have the highlight style applied conditionally depending on whether a specific connection property condition is fulfilled, add an additional shape data field **Highlight** to the shape determining the highlight style, and specify the following value:
 
 ```txt
 property:[PropertyName]=[Regular expression matching the property value]
@@ -118,11 +118,11 @@ property:[PropertyName]=[Regular expression matching the property value]
 The style of this shape will then be applied to all connections of which the value of the specified property matches the specified regular expression.
 
 > [!NOTE]
-> The condition in the shape data field of type **Highlight** can contain placeholders referring to session variables (e.g. *\[var:mySessionVariable\]*).
+> The condition in the shape data field of type **Highlight** can contain placeholders referring to session variables (e.g. *\[var:mySessionVariable\]*).
 
 #### Applying highlight styles depending on various conditions
 
-To make a highlighting style conditional, in the **Options** shape data field of the shape that defines the highlight style, add the option “*HighlightTarget=*” followed by one or more of the methods listed below. If you specify multiple methods, separate them by commas.
+To make a highlighting style conditional, in the **Options** shape data field of the shape that defines the highlight style, add the option “*HighlightTarget=*” followed by one or more of the methods listed below. If you specify multiple methods, separate them by commas.
 
 | Method             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -158,7 +158,7 @@ To enable highlighting based on table column value, add a highlight shape to the
 
 From DataMiner 9.6.1 onwards, it is possible to configure a highlight style that is only applied if the path comes from a certain source and (optionally) goes to a certain destination.
 
-To do so, add the following fields in the **Options** shape data field next to the *HighlightStyle* option, using a pipe character ("\|") as a separator:
+To do so, add the following fields in the **Options** shape data field next to the *HighlightStyle* option, using a pipe character ("\|") as a separator:
 
 | Option                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -166,7 +166,7 @@ To do so, add the following fields in the **Options** shape data field next to 
 | Source:\<x>                           | This option must be added to indicate where the highlighted path should start. \<x> can take the following values:<br> -  *Element=*\[Element name or DMA ID/Element ID of the source element\]<br> -  *Protocol=*\[Protocol name of the source element (not including the version)\]<br> -  *Tag=*\[tag name\]<br> To use the "Tag" option, a shape elsewhere in the drawing will need to be configured with the shape data **Tag**, of which the value is set to the tag name. |
 | Destination:\<y>                      | This is an optional field that can be added to indicate where the highlighted path should end. The highlighted path will then only include shapes and lines that run towards this destination.<br> \<y> is configured in the same manner as \<x>, allowing the same three kinds of values.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Priority:\<z>                         | This optional field allows you to give a highlight style priority over another style. \<z> is a number indicating the priority of the style. This way, multiple of these source-to-destination highlight styles can be defined with different priorities. If this field is not defined, the style will get the lowest priority.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Direction=Forwards/<br>Backwards/Both | This optional field (available from DataMiner 9.6.6 onwards) allows you to specify the direction in which DataMiner should crawl through the DCF network.<br> -  Using *Direction=Backwards* together with *Source:Tag=MySource* will highlight all paths that lead to the *MySource* shape.<br> -  Using *Direction=Forwards* will highlight all paths starting from the source shape.<br> Default direction: Forwards                                                                                                       |
+| Direction=Forwards/<br>Backwards/Both | This optional field (available from DataMiner 9.6.6 onwards) allows you to specify the direction in which DataMiner should crawl through the DCF network.<br> -  Using *Direction=Backwards* together with *Source:Tag=MySource* will highlight all paths that lead to the *MySource* shape.<br> -  Using *Direction=Forwards* will highlight all paths starting from the source shape.<br> Default direction: Forwards                                                                                                       |
 
 Examples:
 
@@ -184,7 +184,7 @@ HighlightStyle|HighlightTarget=SourceDestination|Source:Tag=MySource|Direction=B
 
 ### Highlighting connections from a Connectivity.xml chain
 
-In a Visio drawing that contains connected elements, it is possible to highlight DCF connectivity chains configured in *Connectivity.xml* files located in *C:\\Skyline DataMiner\\Connectivity\\* and its subfolders.
+In a Visio drawing that contains connected elements, it is possible to highlight DCF connectivity chains configured in *Connectivity.xml* files located in *C:\\Skyline DataMiner\\Connectivity\\* and its subfolders.
 
 To do so:
 
@@ -196,7 +196,7 @@ To do so:
     |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | ActivePathHighlighting=Service                                          | Any active path that has an entry point on this service will be highlighted. If several paths are available, you can choose which one to highlight.                                                                                                                                                          |
     | ActivePathHighlighting=*\[folder name\]* | The specified folder name must refer to a folder containing a *Connectivity.xml* file.<br> The connections configured in the connectivity chain in this *Connectivity.xml* file will be highlighted.                                           |
-    | ActivePathHighlighting=*\[GUID\]*        | The specified GUID must be the GUID of a *Connectivity.xml* file. You can find the GUID for such a file by checking in the file.<br> The connections configured in the connectivity chain in this *Connectivity.xml* file will be highlighted. |
+    | ActivePathHighlighting=*\[GUID\]*        | The specified GUID must be the GUID of a *Connectivity.xml* file. You can find the GUID for such a file by checking in the file.<br> The connections configured in the connectivity chain in this *Connectivity.xml* file will be highlighted. |
 
 > [!NOTE]
 > -  Only connection properties that determine the connectivity path will be displayed. All other connection properties will be hidden.
@@ -208,7 +208,7 @@ To do so:
 
 ### Disabling path highlighting when a connection line is clicked
 
-By default, when you click a connection line between shapes, the path connected to that line is highlighted. From DataMiner 10.0.3 onwards, you can change this default behavior by adding a *SelectionHighlighting* option to the shape that represents the connection and setting it to “False”.
+By default, when you click a connection line between shapes, the path connected to that line is highlighted. From DataMiner 10.0.3 onwards, you can change this default behavior by adding a *SelectionHighlighting* option to the shape that represents the connection and setting it to “False”.
 
 For example:
 

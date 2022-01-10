@@ -1,6 +1,6 @@
 ## List of tasks linked to a project
 
-When you click a project in the *My projects* tab, you will see the list of tasks linked to that particular project, grouped per task status. Each group can be collapsed or expanded at will.
+When you click a project in the *My projects* tab, you will see the list of tasks linked to that particular project, grouped per task status. Each group can be collapsed or expanded at will.
 
 - To filter down the list of tasks to find those that contain a particular piece of text, enter that text in the *Search* box at the top of the list.
 
@@ -11,7 +11,7 @@ When you click a project in the *My projects* tab, you will see the list of tas
     - To filter the list, select a status, a type, a label, an assignee and/or a project. If you only want to see the tasks that are flagged as a project risk, then select “Yes” under Project risk.
 
         > [!NOTE]
-        > By default, tasks with the status “Closed” are not listed. If you want the list to show tasks that have been closed, open the status selection box and click the *Looking for closed tasks?* option at the bottom of the list. When you then click *Proceed* to load all closed tasks of the current project, a warning will appear.
+        > By default, tasks with the status “Closed” are not listed. If you want the list to show tasks that have been closed, open the status selection box and click the *Looking for closed tasks?* option at the bottom of the list. When you then click *Proceed* to load all closed tasks of the current project, a warning will appear.
 
 - To create a new task under the current project, click *New task*. For more information on how to create a task, see [Creating a new task under the current project](Creating_a_new_task_under_the_current_project.md).
 

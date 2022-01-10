@@ -14,9 +14,9 @@ To configure these job sections:
 
     From DataMiner 10.0.9 onwards:
 
-    - To create a new job section, click the node where you want to add the job section. Specify the necessary information in the *New* tab of the pop-up window and then click *Save* to add the section.
+    - To create a new job section, click the node where you want to add the job section. Specify the necessary information in the *New* tab of the pop-up window and then click *Save* to add the section.
 
-        Alternatively, instead of creating a new section from scratch, you can re-use a job section that is used in a different domain, by going to the *Existing* tab, selecting the section in the drop-down box and clicking *Save*.
+        Alternatively, instead of creating a new section from scratch, you can re-use a job section that is used in a different domain, by going to the *Existing* tab, selecting the section in the drop-down box and clicking *Save*.
         The following information can be specified if you create a completely new section:
 
         - *Name*: The title of the job section.
@@ -25,7 +25,7 @@ To configure these job sections:
 
         - *Icon*: An optional icon for the section.
 
-        - *Type*: Determines the type of section, i.e. *Fields* or *Booking*. Further configuration will depend on the selected type.
+        - *Type*: Determines the type of section, i.e. *Fields* or *Booking*. Further configuration will depend on the selected type.
 
         - *Booking manager*: Available for a booking section. Determines which Booking Manager element is used. Once jobs have been created with the selected booking manager element, you will no longer be able to modify this selection.
 
@@ -34,7 +34,7 @@ To configure these job sections:
         - *Allow multiple instances*: Available for a fields section. If this option is selected, and a new job is created, it will then be possible to specify additional instances in tabs. In the list view, the different instances will be separated by a pipe character.
 
         > [!NOTE]
-        > The *Color*, *Icon* and *Allow multiple instances* settings are bound to a specific domain. If the section definition is re-used in other domains, changing these settings in one domain will not affect their configuration in the other domains.
+        > The *Color*, *Icon* and *Allow multiple instances* settings are bound to a specific domain. If the section definition is re-used in other domains, changing these settings in one domain will not affect their configuration in the other domains.
 
     - To modify a job section, click the pencil icon in the header of the job section. A pop-up window will be displayed where you can modify the fields mentioned above.
 
@@ -50,13 +50,13 @@ To configure these job sections:
 
         - Change the title of this section in the *Section Name* box.
 
-        - Specify a custom color for the job section box in the *Color* box, either by specifying the color in RGB format, or by clicking the box on the right and selecting one of the available colors. From DataMiner 9.6.11 onwards, selecting a color is optional.
+        - Specify a custom color for the job section box in the *Color* box, either by specifying the color in RGB format, or by clicking the box on the right and selecting one of the available colors. From DataMiner 9.6.11 onwards, selecting a color is optional.
 
-        - Select a custom icon for the job section in the *Icon* drop-down box. From DataMiner 9.6.11 onwards, this icon is optional.
+        - Select a custom icon for the job section in the *Icon* drop-down box. From DataMiner 9.6.11 onwards, this icon is optional.
 
-        - Select the type of section: *Fields* or *Booking* (available from DataMiner 9.6.8 onwards). Further configuration options will depend on the selected type:
+        - Select the type of section: *Fields* or *Booking* (available from DataMiner 9.6.8 onwards). Further configuration options will depend on the selected type:
 
-            - For a booking section, you will need to select the *Booking manager* element to be used. Once jobs have been created with the selected booking manager element, you will no longer be able to modify this selection.
+            - For a booking section, you will need to select the *Booking manager* element to be used. Once jobs have been created with the selected booking manager element, you will no longer be able to modify this selection.
 
             - For a booking section, you will also need to select the *Booking script*, which is the script that should be executed when you click an action in the job section. This can for example be a script to create a new booking.
 

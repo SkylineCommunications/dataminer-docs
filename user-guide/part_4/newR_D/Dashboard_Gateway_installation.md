@@ -38,11 +38,11 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 3. Configure URL Rewrite to forward all HTTP traffic to HTTPS
 
-4. From a DataMiner Agent, copy the folder *C:\\Skyline DataMiner\\Webpages\\API* to the web root folder of the Dashboard Gateway web server (default: *C:\\inetpub\\wwwroot*) and, in IIS Manager, convert the API into an application.
+4. From a DataMiner Agent, copy the folder *C:\\Skyline DataMiner\\Webpages\\API* to the web root folder of the Dashboard Gateway web server (default: *C:\\inetpub\\wwwroot*) and, in IIS Manager, convert the API into an application.
 
 5. From a DataMiner Agent, copy the web application(s) (e.g. *C:\\Skyline DataMiner\\Webpages\\Dashboard*, *C:\\Skyline DataMiner\\Webpages\\Monitoring*, *C:\\Skyline DataMiner\\Webpages\\Jobs*, *C:\\Skyline DataMiner\\Webpages\\SharedComponents*, *C:\\Skyline DataMiner\\Webpages\\Ticketing*, etc.) to the web root folder of the Dashboard Gateway web server.
 
-6. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
+6. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
 
     | Setting          | Description                                                                                                                  |
     |--------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
     | connectionPassword |                                                                                                                              |
 
 > [!NOTE]
-> Keep the following limitations in mind: 
+> Keep the following limitations in mind:
 > -  The URL folder structure of the web applications should remain the same as on a DataMiner Agent. The applications have to be accessed using URLs similar to the following examples:
 >     - https://gateway.mycompany.com/dashboard
 >     - https://gateway.mycompany.com/monitoring
@@ -59,4 +59,4 @@ There are two main reasons to consider a Dashboard Gateway setup:
 >     - https://gateway.mycompany.com/jobs
 > -  The DataMiner user account used by the Dashboard Gateway web server should not have multi-factor authentication enabled.
 
- 
+

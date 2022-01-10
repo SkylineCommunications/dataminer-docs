@@ -34,8 +34,8 @@ Typically, every DataMiner Agent is equipped with a dual Ethernet interface card
 |             |                                                                                    |
 |-------------|------------------------------------------------------------------------------------|
 | Connection: | Connected to the corporate IP network                                              |
-| Purpose:    | Communicating with clients (web browsers, SNMP Managers, telnet applications, ...) |
-| Data:       | Processed data (e.g. alarms, real-time data, reports, ...)                         |
+| Purpose:    | Communicating with clients (web browsers, SNMP Managers, telnet applications, ...) |
+| Data:       | Processed data (e.g. alarms, real-time data, reports, ...)                         |
 
 #### Secondary port
 
@@ -74,4 +74,4 @@ Frequently used peripherals include:
 > -  Specify the necessary multiplication and offset factors in order to deal with parameter units (e.g. 0.1 V/oC)
 > -  Virtual protocol design is independent of the IO Gateway being used.
 
- 
+

@@ -1,6 +1,6 @@
 ## Creating a dashboard with a dynamic list layout
 
-If you configure a dashboard to have a dynamic list layout, the components added to the *List Item Template* zone will be repeated.
+If you configure a dashboard to have a dynamic list layout, the components added to the *List Item Template* zone will be repeated.
 
 To create a dashboard with dynamic list layout:
 
@@ -14,18 +14,18 @@ To create a dashboard with dynamic list layout:
 
     - Specify a *Minimal Alarm Level* to include only items that have at least the specified alarm state.
 
-    - Use the *Mask* field to specify a mask to filter the displayed items. E.g. only elements that start with *MAIN\_\**
+    - Use the *Mask* field to specify a mask to filter the displayed items. E.g. only elements that start with *MAIN\_\**
 
         > [!NOTE]
         > You can also use regular expressions in the mask field, if the mask starts with #.
 
-    - In the *Appearance* drop-down list, you can select different options to display grid lines or an alternating background color.
+    - In the *Appearance* drop-down list, you can select different options to display grid lines or an alternating background color.
 
-    - Enter a value under *Rows Per Page* to limit the maximum number of rows displayed on one page to that value.
+    - Enter a value under *Rows Per Page* to limit the maximum number of rows displayed on one page to that value.
 
-    - Enter a value under *Row Grouping* to group multiple rows into one single row. This can be of use when rows are relatively small.
+    - Enter a value under *Row Grouping* to group multiple rows into one single row. This can be of use when rows are relatively small.
 
-4. Go to *Actions \> Configure Components* to add components. All components added to the *List Item Template* zone are immediately configured to use the Dynamic List Feed you configured earlier. For more information about adding components, see [Configure Components](Configuring_dashboard_components1.md#configure-components).
+4. Go to *Actions \> Configure Components* to add components. All components added to the *List Item Template* zone are immediately configured to use the Dynamic List Feed you configured earlier. For more information about adding components, see [Configure Components](Configuring_dashboard_components1.md#configure-components).
 
 ### List type options
 
@@ -38,7 +38,7 @@ When you choose this list type, each row in the dynamic list will represent a ro
 A dynamic list feed must be configured with “Parameter” as fixed selection, with a dynamic table parameter selected. The display key has to be empty. Components added to the “Dynamic List” layout of the dashboard will only be able to link to a column parameter of the selected dynamic table.
 
 > [!NOTE]
-> -  You can use the *Mask* option on the *Settings* page to limit the included parameters to part of a table. 
+> -  You can use the *Mask* option on the *Settings* page to limit the included parameters to part of a table.
 > -  Unless the list is paginated, new rows will automatically appear in the dashboard when new rows are added to the table.
 
 #### Elements

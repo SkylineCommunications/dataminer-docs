@@ -14,7 +14,7 @@ By default, this will cause the Visio drawing linked to that view to be opened e
 
 ### Configuring the shape data field
 
-To link to a view, add a shape data field of type **View** to the shape, and set its value to:
+To link to a view, add a shape data field of type **View** to the shape, and set its value to:
 
 ```txt
 View ID
@@ -44,7 +44,7 @@ To do so, add a shape data field of type **AlarmLevel**, and set it to one of th
 
 | Shape data field | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AlarmLevel       | One of the following values should be specified:<br> -  **Instance**: Displays the alarm level of the monitored aggregation rules on the view.<br> -  **BubbleUp**: Displays the highest alarm level of any child object.<br> -  **Summary**: Displays the highest of the *Instance* and *BubbleUp* alarm levels. |
+| AlarmLevel       | One of the following values should be specified:<br> -  **Instance**: Displays the alarm level of the monitored aggregation rules on the view.<br> -  **BubbleUp**: Displays the highest alarm level of any child object.<br> -  **Summary**: Displays the highest of the *Instance* and *BubbleUp* alarm levels. |
 
 ### Examples
 

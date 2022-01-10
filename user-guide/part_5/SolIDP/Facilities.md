@@ -1,6 +1,6 @@
 ## Facilities
 
-The *Facilities* subtab of the *Admin* tab consists of the following pages:
+The *Facilities* subtab of the *Admin* tab consists of the following pages:
 
 - **Rack Assignment**: Displays an overview of the devices managed by the Rack Layout Manager. A toggle button at the top allows you switch between showing only assigned devices or showing only devices that have not yet been assigned to a rack. If one or more devices in the overview table are selected, additional options become available at the top:
 
@@ -37,7 +37,7 @@ The *Facilities* subtab of the *Admin* tab consists of the following pages:
 
         - Select a different plan or picture image for a location, building, room or floor. The image has a size limit of 2 MB and must have the extension .jpg, .jpeg or .png. Uploaded images are added to the Documents folder of the DMA and synchronized with other DMAs in the cluster.
 
-        - Change the parent structure of any item below the highest level. To do so, click the *Edit* button in the editor to enter edit mode, and then specify the location, building, etc. where the item belongs. After you have clicked the *Edit* button, you can also click the *View* button to switch back to the previous mode and only modify the details related to the item.
+        - Change the parent structure of any item below the highest level. To do so, click the *Edit* button in the editor to enter edit mode, and then specify the location, building, etc. where the item belongs. After you have clicked the *Edit* button, you can also click the *View* button to switch back to the previous mode and only modify the details related to the item.
 
             > [!NOTE]
             > If you select a different parent level for an item, the wizard will check if that level already contains an item with the same name as the current item. If this is the case, an error message will be displayed, as there cannot be two items with the same name under the same parent item.

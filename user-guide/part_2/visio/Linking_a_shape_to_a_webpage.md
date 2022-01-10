@@ -26,12 +26,12 @@ Add a shape data field of type **Link** to the shape, and set its value to:
 http://URL||Tooltip
 ```
 
-Default tooltip: *Link to 'http://URL'* 
+Default tooltip: *Link to 'http://URL'*
 
 > [!NOTE]
 > -  Both HTTP and HTTPS are supported.
 > -  If you put a “#” sign in front of the URL, the webpage will be displayed inside the shape.
-> -  Links starting with *mailto:* are not supported in the DataMiner web apps prior to DataMiner 10.2.0/10.1.8.
+> -  Links starting with *mailto:* are not supported in the DataMiner web apps prior to DataMiner 10.2.0/10.1.8.
 > -  If a page needs to be opened in Internet Explorer by default, add *iexplore*\| before the URL and place the URL in double quotation marks, e.g. <br>*iexplore\|"https://dcpdma.skyline.be/"*
 
 ### Options for shapes linked to a webpage
@@ -40,42 +40,42 @@ The following options can be configured for shapes linked to a webpage:
 
 - **BorderVisibility**:
 
-    By default, webpages displayed inside a shape do not have a border. If you want embedded webpages to have a border, then add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*BorderVisibility=true*”.
+    By default, webpages displayed inside a shape do not have a border. If you want embedded webpages to have a border, then add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*BorderVisibility=true*”.
 
 - **DisposeWebBrowserWhenNotSelectedPage**:
 
-    By default, DataMiner Cube disposes of embedded web browser controls when you change pages in a Visio drawing.     To override this default behavior, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*DisposeWebBrowserWhenNotSelectedPage=false*”. As a result, the web browser control will only be disposed of when you close the card.
+    By default, DataMiner Cube disposes of embedded web browser controls when you change pages in a Visio drawing.     To override this default behavior, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*DisposeWebBrowserWhenNotSelectedPage=false*”. As a result, the web browser control will only be disposed of when you close the card.
 
 - **EnableZoom**:
 
-    From DataMiner version 9.0 onwards, by default, if a Visual Overview page contains an embedded webpage, zooming in and out on the page is not possible.     To override this default behavior, add a shape data field of type **Options** to the page and set its value to “*EnableZoom*”.
+    From DataMiner version 9.0 onwards, by default, if a Visual Overview page contains an embedded webpage, zooming in and out on the page is not possible.     To override this default behavior, add a shape data field of type **Options** to the page and set its value to “*EnableZoom*”.
 
 - **NavigationUIVisibility**:
 
-    By default, webpages displayed inside a shape do not have a Back and Forward button. If you want embedded webpages to have a Back and Forward button, then add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*NavigationUIVisibility=true*”.
+    By default, webpages displayed inside a shape do not have a Back and Forward button. If you want embedded webpages to have a Back and Forward button, then add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*NavigationUIVisibility=true*”.
 
 - **RefreshButtonVisibility**:
 
-    By default, webpages displayed inside a shape do not display a refresh button. If you want to add a refresh button to an embedded browser, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "*RefreshButtonVisibility=true*".
+    By default, webpages displayed inside a shape do not display a refresh button. If you want to add a refresh button to an embedded browser, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "*RefreshButtonVisibility=true*".
 
     > [!NOTE]
     > To force refresh the page (i.e. clear the cache), click the refresh button while pressing Ctrl.
 
 - **SingleSignOn**
 
-    To always pass an authentication ticket to the embedded webpage, regardless of the content of the URL, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "*SingleSignOn*". (Available from DataMiner 9.5.6 onwards.)     Even if this option is not specified, by default an authentication ticket is passed to embedded applications of type .xbap, embedded DataMiner Maps, the embedded Ticketing app, embedded dashboards (created in the new Dashboards app), and the embedded DataMiner Comparison tool.
+    To always pass an authentication ticket to the embedded webpage, regardless of the content of the URL, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "*SingleSignOn*". (Available from DataMiner 9.5.6 onwards.)     Even if this option is not specified, by default an authentication ticket is passed to embedded applications of type .xbap, embedded DataMiner Maps, the embedded Ticketing app, embedded dashboards (created in the new Dashboards app), and the embedded DataMiner Comparison tool.
 
 - **UseChrome**
 
-    From DataMiner 9.6.3 onwards, if you want to make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseChrome*”.
+    From DataMiner 9.6.3 onwards, if you want to make sure the webpage is displayed using the Chromium web browser regardless of the default browser settings in Cube, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseChrome*”.
 
 - UseIE
 
-    From DataMiner 10.0.10 onwards, by default Chromium is used to display webpages embedded in DataMiner Cube. To use Internet Explorer instead, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseIE*”.
+    From DataMiner 10.0.10 onwards, by default Chromium is used to display webpages embedded in DataMiner Cube. To use Internet Explorer instead, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseIE*”.
 
 - UseEdge
 
-    From DataMiner 10.1.11/10.2.0 onwards, you can use Microsoft Edge (WebView2) to display an embedded webpage in DataMiner Cube. To do so, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseEdge*”.
+    From DataMiner 10.1.11/10.2.0 onwards, you can use Microsoft Edge (WebView2) to display an embedded webpage in DataMiner Cube. To do so, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseEdge*”.
 
     > [!NOTE]
     > -  The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
@@ -83,7 +83,7 @@ The following options can be configured for shapes linked to a webpage:
 
 - **UseLoginCredentials**:
 
-    If you want to pass on the user credentials of the current user to a webpage displayed inside a shape, then add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseLoginCredentials*”.
+    If you want to pass on the user credentials of the current user to a webpage displayed inside a shape, then add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*UseLoginCredentials*”.
 
     > [!NOTE]
     > This feature only works when you have logged on to DataMiner Cube explicitly using Basic Authentication (i.e. with a user name and a password). It will not work when you have logged on with your Windows user credentials.
@@ -99,8 +99,8 @@ In DataMiner Cube, embedded browser windows suppress pop-ups by default. If, for
 Examples:
 
 ```txt
-http://localhost/foo/#SL_ALLOW_POPUPS#                           
-http://localhost/foo/index.html#SL_ALLOW_POPUPS#                 
+http://localhost/foo/#SL_ALLOW_POPUPS#
+http://localhost/foo/index.html#SL_ALLOW_POPUPS#
 http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 ```
 
@@ -117,7 +117,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 
 > [!NOTE]
 > -  \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
-> -  From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. *#http://www.skyline.be?MyParam=\[param:\<elementname>,1\]* 
+> -  From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. *#http://www.skyline.be?MyParam=\[param:\<elementname>,1\]*
 
 ### Configuring a link to a DataMiner element or view within a webpage embedded in Visual Overview
 
@@ -129,16 +129,16 @@ To do so, use the following configuration in the webpage:
 
     ```xml
     <a href='javascript:window.external.NavigateViewByName("My View Name");'>
-      My link description                                                       
-    </a>                                                                                                      
+      My link description
+    </a>
     ```
 
 - For a link to an element:
 
     ```xml
     <a href='javascript:window.external.NavigateElementByName("My Element Name");'>
-      My link description                                                             
-    </a>                                                                                                            
+      My link description
+    </a>
     ```
 
 ### Examples

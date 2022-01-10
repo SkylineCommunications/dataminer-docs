@@ -12,11 +12,11 @@ The following sections provide more information on how to configure measurement 
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/> 
+> <https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/>
 
 ### The measurement point configuration window
 
-On a spectrum analyzer card, go to the *Measurement points* tab in the overhead ribbon, and click *New measurement point* or *Edit measurement point* to open the measurement point configuration window.
+On a spectrum analyzer card, go to the *Measurement points* tab in the overhead ribbon, and click *New measurement point* or *Edit measurement point* to open the measurement point configuration window.
 
 The measurement point configuration window consists of:
 
@@ -26,19 +26,19 @@ The measurement point configuration window consists of:
 
 - A number of buttons at the bottom of the list pane:
 
-    - The *Add measurement point* button, which can be used to add a new, unconfigured measurement point to the list.
+    - The *Add measurement point* button, which can be used to add a new, unconfigured measurement point to the list.
 
     - The *Delete* button, which can be used to delete a selected measurement point.
 
-    - The *Export* button, which can be used to export the measurement points to a CSV or TXT file (comma-separated format).
+    - The *Export* button, which can be used to export the measurement points to a CSV or TXT file (comma-separated format).
 
     - The *Import* button, which can be used to import measurement points from a CSV or TXT file.
 
-        Any measurement points with ID -1 in the import file will be added as new measurement points. The imported measurement points will be shown in the list pane with the label *\[modified\]* or *\[new\]*, and the changes will need to be applied before they are saved.
+        Any measurement points with ID -1 in the import file will be added as new measurement points. The imported measurement points will be shown in the list pane with the label *\[modified\]* or *\[new\]*, and the changes will need to be applied before they are saved.
 
 > [!NOTE]
 > -  If the current trace is hidden, this will be reflected in the measurement point. See [Spectrum trace acquisition](Viewing_spectrum_analyzer_traces.md#spectrum-trace-acquisition).
-> -  If no measurement points have been configured yet, the *Edit measurement point* option will not be available.
+> -  If no measurement points have been configured yet, the *Edit measurement point* option will not be available.
 
 ### Configuring a measurement point
 
@@ -48,7 +48,7 @@ To configure a new or existing measurement point:
 
 2. At the top of the details pane, next to *Name*, specify a name for the measurement point.
 
-3. In the *Setup* section, select either to set up the measurement point via a parameter set, or via an Automation script, and then select the parameter set or the script in question.
+3. In the *Setup* section, select either to set up the measurement point via a parameter set, or via an Automation script, and then select the parameter set or the script in question.
 
     > [!NOTE]
     > -  To configure a parameter set of a matrix parameter, when you have selected the parameter, click the value field. A pop-up box will then appear in which you can select the input and output and indicate whether these should be connected.
@@ -60,16 +60,16 @@ To configure a new or existing measurement point:
 
     - Specify a *Frequency offset*, i.e. shift the trace in frequency.
 
-    - Select the checkbox next to *Invert spectrum* in order to flip the trace around the center frequency.
+    - Select the checkbox next to *Invert spectrum* in order to flip the trace around the center frequency.
 
         > [!NOTE]
-        > The *Frequency offset* and *Invert spectrum* options can be of use when the spectrum analyzer is operating behind frequency downconverters, which apply an offset to the spectrum and sometimes also invert it.
+        > The *Frequency offset* and *Invert spectrum* options can be of use when the spectrum analyzer is operating behind frequency downconverters, which apply an offset to the spectrum and sometimes also invert it.
 
     - Add an amplitude correction. See [Specifying an amplitude correction](Specifying_an_amplitude_correction.md).
 
 ### Displaying measurement points
 
-To display a measurement point, in the settings pane, go to *Manual* > *Measurement points*, and select the measurement point you want to display. To quickly find a particular measurement point, use the quick filter in the top right corner.
+To display a measurement point, in the settings pane, go to *Manual* > *Measurement points*, and select the measurement point you want to display. To quickly find a particular measurement point, use the quick filter in the top right corner.
 
 Two additional display options are available in the *Measurement points* tab:
 

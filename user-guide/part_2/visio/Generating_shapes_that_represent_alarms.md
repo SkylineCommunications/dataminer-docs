@@ -9,7 +9,7 @@ To implement this feature, do the following:
 2. Put the shape into a group, and add the necessary group-level shape data fields to the group. See [Group-level shape data](#group-level-shape-data).
 
 > [!NOTE]
-> -  The shape created in step 1 can itself be a group that contains a number of subshapes, each with their own **Alarm** and **Info** data fields. That way, you can e.g. visualize different details of one particular alarm.
+> -  The shape created in step 1 can itself be a group that contains a number of subshapes, each with their own **Alarm** and **Info** data fields. That way, you can e.g. visualize different details of one particular alarm.
 > -  From DataMiner 9.5.3 onwards, by default the shapes representing the alarms are ordered according to the time of the alarms.
 
 ### Child-level shape data
@@ -29,7 +29,7 @@ The following shape data fields can be added to a single shape representing an a
 - **Info**: In this mandatory shape data field, specify the name of the Alarm Console column of which you want the contents to be shown in the shape.
 
     > [!NOTE]
-    > To refer to property columns, use the format *ALARMPROPERTY:**PropertyName* or *ELEMENTPROPERTY:**PropertyName*, depending on the type of property.
+    > To refer to property columns, use the format *ALARMPROPERTY:**PropertyName* or *ELEMENTPROPERTY:**PropertyName*, depending on the type of property.
 
 - **Link**: In this optional shape data field, you can specify where a dynamically generated shape will link to.
 
@@ -66,7 +66,7 @@ The following shape data fields can be added to the group containing the alarm s
     - Alarm
 
     > [!NOTE]
-    > With the DataMiner Cube user setting “Maximum number of child shapes in a Children container shape”, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
+    > With the DataMiner Cube user setting “Maximum number of child shapes in a Children container shape”, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
 
 - **ChildrenOptions**: In this optional shape data field, you can specify the following options:
 
@@ -119,9 +119,9 @@ The following shape data fields can be added to the group containing the alarm s
 - **ChildrenFilter**: In this optional shape data field, you can specify the name of a shared alarm filter. If you do so, a shape will be generated for every alarm matching that particular shared alarm filter.
 
     > [!NOTE]
-    > Using placeholders such as *\[var:\]* and *\[param:\]* within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards.
+    > Using placeholders such as *\[var:\]* and *\[param:\]* within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards.
 
-- **Options**: In this optional shape data field, you can specify the option *HideAlarmsThatAreCurrentlyCorrelated* if you do not want shapes to be generated for correlated alarms.
+- **Options**: In this optional shape data field, you can specify the option *HideAlarmsThatAreCurrentlyCorrelated* if you do not want shapes to be generated for correlated alarms.
 
     If you specify this option, correlated alarms will disappear from the list and will reappear the moment the correlation alarm is cleared.
 

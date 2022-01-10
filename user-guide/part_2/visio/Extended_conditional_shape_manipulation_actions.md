@@ -17,7 +17,7 @@ In this section:
 - [Examples](#examples)
 
 > [!NOTE]
-> -  These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
+> -  These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
 > -  For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md).
 
 ### Configuring the shape data fields
@@ -27,7 +27,7 @@ Depending on the action or actions you want to apply, create the following shape
 | Shape data field | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Blink            | Makes a shape blink when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Collapse         | Hides a shape when the condition is true, without actually removing the shape. <br> This can be convenient as an alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them, allowing better performance but leading to more memory usage. It can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using *Hide* shape data.<br> Available from DataMiner 10.1.8/10.2.0 onwards. |
+| Collapse         | Hides a shape when the condition is true, without actually removing the shape. <br> This can be convenient as an alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them, allowing better performance but leading to more memory usage. It can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using *Hide* shape data.<br> Available from DataMiner 10.1.8/10.2.0 onwards. |
 | Enabled          | Enables user interaction when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | FlipX            | Makes a shape flip horizontally when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | FlipY            | Makes a shape flip vertically when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -47,9 +47,9 @@ Alias-”Alias”|”Target”|”What”|”Condition”
 
 ```txt
 “Logical expression”-”Alias1”|”Target”|”What”|”Condition”
-                            -”Alias2”|”Target”|”What”|”Condition”                    
-                            -”Alias3”|”Target”|”What”|”Condition”                    
-                            -...                                                        
+                            -”Alias2”|”Target”|”What”|”Condition”
+                            -”Alias3”|”Target”|”What”|”Condition”
+                            -...
 ```
 
 ##### Condition components:
@@ -57,9 +57,9 @@ Alias-”Alias”|”Target”|”What”|”Condition”
 | Condition component | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Logical expression  | The expression that combines the defined aliases using “and”, “or”, “(“, “)” or “not”. Example: \<A>or\<B>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Alias               | \<A>, \<B>, \<C>, ...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Alias               | \<A>, \<B>, \<C>, ...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Target              | The DataMiner object to which the action should be applied. This can be an element, service, view or connection. Use the following syntax (optionally using wildcards or placeholders):<br> -  *Element:Element name or ID*<br> -  *Service:Service name or ID*<br> -  *View:View name or ID*<br> -  *Connection*<br> -  *Value*<br> The default target is *Element*, so if only a name or ID is specified, without a preceding keyword, this will be considered an element name or ID.<br> If the target is set to *Value*, the “What” has to contain the value to be evaluated. The latter can also be a placeholder referring to a session variable.                                                                                                                    |
-| What                | Can be configured as follows:<br> - *ALARMLEVEL*<br> -  *NAME:* *\[Name of the element, view or service specified in the Target\]*<br> -  *PARAMETER:* \[Parameter ID\]<br>Alternatively, you can simply specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.<br> -  *PROPERTY:* *\[Property name\]*<br> -  *Protocol* (from DataMiner 9.6.4 onwards)<br> -  From DataMiner 9.0.2 onwards, it is also possible to use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition). |
+| What                | Can be configured as follows:<br> - *ALARMLEVEL*<br> -  *NAME:* *\[Name of the element, view or service specified in the Target\]*<br> -  *PARAMETER:* \[Parameter ID\]<br>Alternatively, you can simply specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.<br> -  *PROPERTY:* *\[Property name\]*<br> -  *Protocol* (from DataMiner 9.6.4 onwards)<br> -  From DataMiner 9.0.2 onwards, it is also possible to use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition). |
 | Condition           | The condition that determines whether the shape manipulation is applied. If you want to check if the specified “What” matches with a regular expression, start the condition with “*Regex=*”, followed by the regular expression.<br> Multiple conditions can be combined within this part of the condition, using a semicolon. In that case, each condition should include an operator and a value. The complete condition component will only function correctly if all conditions within it are correctly configured.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ##### Using an asterisk in a condition:
@@ -68,7 +68,7 @@ Up to DataMiner 9.5.4, when an asterisk ("\*") is used in shape data to refer to
 
 From DataMiner 9.5.4 onwards, however, the current shape is checked as well. This for example allows you to use asterisk characters in a “Show” condition specified in a top-level shape.
 
-For backwards compatibility, if you want asterisk characters to be resolved from the parent shape, you can add the *StartResolvingFromParent* option. See [StartResolvingFromParent](Overview_of_page_and_shape_options.md).
+For backwards compatibility, if you want asterisk characters to be resolved from the parent shape, you can add the *StartResolvingFromParent* option. See [StartResolvingFromParent](Overview_of_page_and_shape_options.md).
 
 ### Changing the separator character in the condition
 
@@ -78,7 +78,7 @@ To change the separator character in part of the condition, you must add the \[s
 <A>or<B>or<C>-[Sep:|^]A^Highlight Element 00^Property:ServiceType^Regex=.*[Var:CheckBoxes].*-[Sep:|^]B^Highlight Element 00^Name^Regex=.*[Var:SearchQuery].*-[Sep:|^]C^Highlight Element 00^Property:Color^[Var:ColorVar]
 ```
 
-However, in order to replace the  –  separators, the separator replacement option must be placed in the first position of the shape data value. For example:
+However, in order to replace the – separators, the separator replacement option must be placed in the first position of the shape data value. For example:
 
 ```txt
 [sep:-^]<A>^A|Element:myElement|Name|Regex=.*[var:myVar].*
@@ -100,24 +100,24 @@ From DataMiner 9.0.2 onwards, you can use alarm statistics in the “What” par
 
 | Statistical data      | View | Service | Element |
 |-----------------------|------|---------|---------|
-| #CriticalElements     | X    | X       |         |
-| #MajorElements        | X    | X       |         |
-| #MinorElements        | X    | X       |         |
-| #WarningElements      | X    | X       |         |
-| #NormalElements       | X    | X       |         |
-| #TimeoutElements      | X    | X       |         |
-| #NoticeElements       | X    | X       |         |
-| #ErrorElements        | X    | X       |         |
-| #MaskedElements       | X    | X       |         |
-| #TotalElements        | X    | X       |         |
-| #TotalElementsInAlarm | X    | X       |         |
-| #CriticalServices     | X    |         |         |
-| #MajorServices        | X    |         |         |
-| #MinorServices        | X    |         |         |
-| #WarningServices      | X    |         |         |
-| #NormalServices       | X    |         |         |
-| #TotalServices        | X    |         |         |
-| #TotalServicesInAlarm | X    |         |         |
+| #CriticalElements     | X    | X       |        |
+| #MajorElements        | X    | X       |        |
+| #MinorElements        | X    | X       |        |
+| #WarningElements      | X    | X       |        |
+| #NormalElements       | X    | X       |        |
+| #TimeoutElements      | X    | X       |        |
+| #NoticeElements       | X    | X       |        |
+| #ErrorElements        | X    | X       |        |
+| #MaskedElements       | X    | X       |        |
+| #TotalElements        | X    | X       |        |
+| #TotalElementsInAlarm | X    | X       |        |
+| #CriticalServices     | X    |        |        |
+| #MajorServices        | X    |        |        |
+| #MinorServices        | X    |        |        |
+| #WarningServices      | X    |        |        |
+| #NormalServices       | X    |        |        |
+| #TotalServices        | X    |        |        |
+| #TotalServicesInAlarm | X    |        |        |
 | #CriticalAlarms       | X    | X       | X       |
 | #MajorAlarms          | X    | X       | X       |
 | #MinorAlarms          | X    | X       | X       |
@@ -131,7 +131,7 @@ From DataMiner 9.0.2 onwards, you can use alarm statistics in the “What” par
 
 > [!NOTE]
 > -  #NormalAlarms can only be used if, in the file *MaintenanceSettings.xml*, the *\<AutoClear>* tag is set to "false".
-> -  On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example *#Tickets:Internal*.
+> -  On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example *#Tickets:Internal*.
 
 ### Specifying a default return value
 
@@ -146,14 +146,14 @@ For example, with the configuration below, if the A condition cannot be evaluate
 | Show             | \<A>-A\|Element:NonExistingElement\|Parameter:1\|\>0\|DefaultReturnValue=True |
 
 > [!NOTE]
-> The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g. *Min*, *Max*, *Concat* or *Avg*. To combine these options, use a semicolon (“;”). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
+> The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g. *Min*, *Max*, *Concat* or *Avg*. To combine these options, use a semicolon (“;”). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
 
 ### Conditional manipulation of connection shapes
 
 When conditional shape manipulation actions are defined on connection property shapes, there are additional possibilities for the “What” field of the condition.
 
 > [!NOTE]
-> Connection property shapes are shapes that have an **Options** shape data field with the value *ConnectionProperty:PropertyName*. See [Displaying connection properties](Options_for_displaying_DCF_connections.md#displaying-connection-properties).
+> Connection property shapes are shapes that have an **Options** shape data field with the value *ConnectionProperty:PropertyName*. See [Displaying connection properties](Options_for_displaying_DCF_connections.md#displaying-connection-properties).
 
 The following conditions can be defined:
 
@@ -187,7 +187,7 @@ The following conditions can be defined:
 
 - *Does a connection property have a specific numeric value?*
 
-    This condition will be true if a connection property is greater or smaller than a specific value.     For lines that represent multiple connections, you can specify the calculation that has to be made with the different values of that same property. The default calculation is *Sum*, but you can also specify *Min*, *Max*, *Concat* and *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>).     Example:
+    This condition will be true if a connection property is greater or smaller than a specific value.     For lines that represent multiple connections, you can specify the calculation that has to be made with the different values of that same property. The default calculation is *Sum*, but you can also specify *Min*, *Max*, *Concat* and *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>).     Example:
 
     | Shape data field | Value                                    |
     |--------------------|------------------------------------------|
@@ -199,14 +199,14 @@ The following conditions can be defined:
 Single conditions:
 
 ```txt
-<A>-A|57/2|1|<0                                
-<B>-B|57/3|510,1|<0                            
-<C>-C|number|PROPERTY:Class|=A                  
-<D>-D|VIEW:2|PROPERTY:Class|=A                  
-<E>-E|Service:serv|PROPERTY:Class|=A            
-<F>-F|Element:number|ALARMLEVEL|>=MINOR        
-<G>-G|VIEW:2|ALARMLEVEL|>=MINOR                
-<H>-H|Service:serv|ALARMLEVEL|>=MINOR          
+<A>-A|57/2|1|<0
+<B>-B|57/3|510,1|<0
+<C>-C|number|PROPERTY:Class|=A
+<D>-D|VIEW:2|PROPERTY:Class|=A
+<E>-E|Service:serv|PROPERTY:Class|=A
+<F>-F|Element:number|ALARMLEVEL|>=MINOR
+<G>-G|VIEW:2|ALARMLEVEL|>=MINOR
+<H>-H|Service:serv|ALARMLEVEL|>=MINOR
 <A>-A|Element:MyElement|Protocol|=MyProtocolName
 ```
 
@@ -214,16 +214,16 @@ Multiple conditions combined:
 
 ```txt
 <A>or<B>or<C>or<D>or<E>or<F>or<G>or<H>-A|57/2|1|<0-B|57/3|510,1|<0
--C|number|PROPERTY:Class|=A-D|VIEW:2|PROPERTY:Class|=A                      
--E|Service:serv|PROPERTY:Class|=A-F|Element:number|ALARMLEVEL|>=MINORG|   
-VIEW:2|ALARMLEVEL|>=MINOR-H|Service:serv|ALARMLEVEL|>=MINOR                
+-C|number|PROPERTY:Class|=A-D|VIEW:2|PROPERTY:Class|=A
+-E|Service:serv|PROPERTY:Class|=A-F|Element:number|ALARMLEVEL|>=MINORG|
+VIEW:2|ALARMLEVEL|>=MINOR-H|Service:serv|ALARMLEVEL|>=MINOR
 ```
 
 ```txt
-<A>and<B>and<C>and<D>and<E>and<F>and<G>and<H>-A|57/2|1|<0-            
+<A>and<B>and<C>and<D>and<E>and<F>and<G>and<H>-A|57/2|1|<0-
 B|57/3|510,1|<0-C|number|PROPERTY:Class|=A-D|VIEW:2|PROPERTY:Class|=AE|
-Service:serv|PROPERTY:Class|=A-F|Element:number|ALARMLEVEL|>=MINORG|       
-VIEW:2|ALARMLEVEL|>=MINOR-H|Service:serv|ALARMLEVEL|>=MINOR                
+Service:serv|PROPERTY:Class|=A-F|Element:number|ALARMLEVEL|>=MINORG|
+VIEW:2|ALARMLEVEL|>=MINOR-H|Service:serv|ALARMLEVEL|>=MINOR
 ```
 
 Multiple conditions combined with the “condition” part of the shape data:
@@ -235,16 +235,16 @@ Multiple conditions combined with the “condition” part of the shape data:
 Conditions using alarm statistics:
 
 ```txt
-<A>-A|Element:myElement|#CriticalAlarms|>=10                                           
-<A>-A|View:myView|#CriticalElements|>0                                                 
-<A>and<B>-A|Service:myService|#TotalAlarms|=0-B|Element:myElement|#TimeoutAlarms|=0 
+<A>-A|Element:myElement|#CriticalAlarms|>=10
+<A>-A|View:myView|#CriticalElements|>0
+<A>and<B>-A|Service:myService|#TotalAlarms|=0-B|Element:myElement|#TimeoutAlarms|=0
 <A>or<B>-A|View:myView|#MinorServices|>0-B|Element:myElement|Property:Enabled|=true
 ```
 
 Conditions using the target “Value” (available from DataMiner 9.5.4 onwards):
 
 ```txt
-<A>-A|Value|10|<=20                          
-<A>-A|Value|5|>2                             
+<A>-A|Value|10|<=20
+<A>-A|Value|5|>2
 <A>-A|Value|[var:MyVar01]|>=[var:MyVar02]
 ```

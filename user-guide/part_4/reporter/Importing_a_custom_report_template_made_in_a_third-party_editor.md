@@ -12,7 +12,7 @@ If you have created a report template using your favorite ASP editor, you have t
 
 4. In the *Description* box, enter a template description. This description will appear on the actual report.
 
-5. In the *Elements needed*, *Parameters needed* and *Aggregation rules needed* boxes, specify how many of each are needed as input.
+5. In the *Elements needed*, *Parameters needed* and *Aggregation rules needed* boxes, specify how many of each are needed as input.
 
 6. In the *Navigation Menu* box, select one of the following options:
 

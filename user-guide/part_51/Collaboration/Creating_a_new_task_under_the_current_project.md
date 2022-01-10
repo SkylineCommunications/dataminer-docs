@@ -4,7 +4,7 @@ As a customer or a DataMiner Strategic Partner, you will always create tasks und
 
 To create a new task under the current project, do the following:
 
-1. In either the *List* tab or the *Board* tab, click *New task*, and select the type of task from the list.
+1. In either the *List* tab or the *Board* tab, click *New task*, and select the type of task from the list.
 
     Customers and DataMiner Strategic Partners can create the following types of tasks:
 
@@ -23,9 +23,9 @@ To create a new task under the current project, do the following:
 
     > [!NOTE]
     > -  Above the title you have just entered, you will notice the current status of the task you are creating, i.e. “Not started”. Hover over the small question mark to see an overview of all possible task statuses depicted in a typical task life cycle. For more information on the different task statuses, see [Task statuses](Statuses.md#task-statuses).
-    > -  In the top-right corner, you can click an ellipsis button to open a menu that contains the following commands: 
-    >     - Click *Full screen* to expand the task pane. In full-screen mode, you can then click *Split view* to exit the full-screen mode.
-    >     - Click *Show planning fields* to have the task pane also show planning fields (e.g. *Start date*).
+    > -  In the top-right corner, you can click an ellipsis button to open a menu that contains the following commands:
+    >     - Click *Full screen* to expand the task pane. In full-screen mode, you can then click *Split view* to exit the full-screen mode.
+    >     - Click *Show planning fields* to have the task pane also show planning fields (e.g. *Start date*).
 
 3. If necessary, change the task type.
 
@@ -34,13 +34,13 @@ To create a new task under the current project, do the following:
 
 4. If necessary, flag the task as a project risk.
 
-    If you consider the task to be critical to the success of the entire project (critical path), select the *Flag as project risk* option. Note that when you filter tasks in the *List* view or the *Board* view, you can indicate that you only want to see the tasks that are flagged as a project risk.
+    If you consider the task to be critical to the success of the entire project (critical path), select the *Flag as project risk* option. Note that when you filter tasks in the *List* view or the *Board* view, you can indicate that you only want to see the tasks that are flagged as a project risk.
 
 5. Enter a detailed description.
 
     Depending on the type of task, the description box can contain a template that will help you add all relevant information that is typically expected for the type of task you are creating.
 
-6. In the *Percent complete* box, enter a percentage (0 to 100) to indicate how much of the task has already been done. As soon as the task is set to “In progress”, this field should be updated continuously as work progresses.
+6. In the *Percent complete* box, enter a percentage (0 to 100) to indicate how much of the task has already been done. As soon as the task is set to “In progress”, this field should be updated continuously as work progresses.
 
     *This field is available if the task type is set to DIS issue, Driver issue, New DIS feature, New driver feature, New software feature or Software issue.*
 
@@ -58,43 +58,43 @@ To create a new task under the current project, do the following:
 
     *This field is available if the task type is set to DIS issue, Driver issue, Software issue or Support.*
 
-9. In the *Issue type* box, indicate whether the reported issue applies to either a new feature or an existing feature by selecting “n/a” (i.e. “not applicable”), “New feature” or “Existing feature (regression)”.
+9. In the *Issue type* box, indicate whether the reported issue applies to either a new feature or an existing feature by selecting “n/a” (i.e. “not applicable”), “New feature” or “Existing feature (regression)”.
 
     *This field is available if the task type is set to Driver issue or Software issue.*
 
-10. In the *Driver* box, select the DataMiner driver for which you want to report an issue or request a new feature.
+10. In the *Driver* box, select the DataMiner driver for which you want to report an issue or request a new feature.
 
     *This field is available if the task type is set to Driver issue or New driver feature.*
 
-11. The *Developer* box cannot be edited when you create a new task. This box will contain the name of the developer as soon as one has been assigned to the task.
+11. The *Developer* box cannot be edited when you create a new task. This box will contain the name of the developer as soon as one has been assigned to the task.
 
     *This field is available if the task type is set to DIS issue, Driver issue, New DIS feature, New driver feature, New software feature or Software issue.*
 
-12. The *Target release* box is reserved for the developers involved in the task. In this box, they will select the software version in which the new feature will probably be made available or in which the issue will probably be fixed.
+12. The *Target release* box is reserved for the developers involved in the task. In this box, they will select the software version in which the new feature will probably be made available or in which the issue will probably be fixed.
 
     *This field is available if the task type is set to New software feature or Software issue.*
 
-13. In the *Found in version* box, it is highly recommended to specify the software or driver version in which the issue was first encountered as this will facilitate the resolution of the issue. If the task type is set to “Software issue”, specifying this version is mandatory.
+13. In the *Found in version* box, it is highly recommended to specify the software or driver version in which the issue was first encountered as this will facilitate the resolution of the issue. If the task type is set to “Software issue”, specifying this version is mandatory.
 
     *This field is available if the task type is set to DIS issue, Driver issue, New DIS feature, Software issue or Support.*
 
-14. The *Released in version* box is reserved for the developers involved in the task. In this box, they will enter the software or driver version in which the new feature will be available or in which the issue will be fixed.
+14. The *Released in version* box is reserved for the developers involved in the task. In this box, they will enter the software or driver version in which the new feature will be available or in which the issue will be fixed.
 
     *This field is available if the task type is set to DIS issue, Driver issue, New DIS feature, New driver feature, New software feature or Software issue.*
 
-15. The *Release note* box is reserved for the developers involved in the task. In this box, they will enter the release note(s) associated with the task.
+15. The *Release note* box is reserved for the developers involved in the task. In this box, they will enter the release note(s) associated with the task.
 
     *This field is available if the task type is set to DIS issue, New DIS feature, New software feature or Software issue.*
 
-16. The *Main release version* box is reserved for the developers involved in the task. In this box, they will enter the main release DataMiner version in which the new feature will be available or in which the issue will be fixed.
+16. The *Main release version* box is reserved for the developers involved in the task. In this box, they will enter the main release DataMiner version in which the new feature will be available or in which the issue will be fixed.
 
     *This field is available if the task type is set to New software feature or Software issue.*
 
-17. The *Feature release version* box is reserved for the developers involved in the task. In this box, they will enter the feature release DataMiner version in which the new feature will be available or in which the issue will be fixed.
+17. The *Feature release version* box is reserved for the developers involved in the task. In this box, they will enter the feature release DataMiner version in which the new feature will be available or in which the issue will be fixed.
 
     *This field is available if the task type is set to New software feature or Software issue.*
 
-18. The *Start date* box cannot be edited when you create a new task. In this box, the developer will enter the date when they started with the task at hand.
+18. The *Start date* box cannot be edited when you create a new task. In this box, the developer will enter the date when they started with the task at hand.
 
     *This field is available if the task type is set to Driver issue or New driver feature.*
 

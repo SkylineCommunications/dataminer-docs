@@ -4,7 +4,7 @@ From DataMiner 9.0.5 onwards, it is possible to upgrade or update a DMA via the 
 
 To do so:
 
-1. From DataMiner 10.0.0/10.0.2 onwards: Click the user icon in the Cube header bar and select *Check for updates*.<br>Prior to DataMiner 10.0.0/10.0.2: Click the updates icon ![](../../images/updates_icon00065.png) in the Cube header bar, or click the question mark icon in the header bar and select *Check for Updates*.
+1. From DataMiner 10.0.0/10.0.2 onwards: Click the user icon in the Cube header bar and select *Check for updates*.<br>Prior to DataMiner 10.0.0/10.0.2: Click the updates icon ![](../../images/updates_icon00065.png) in the Cube header bar, or click the question mark icon in the header bar and select *Check for Updates*.
 
     This will open the Update Center window.
 
@@ -12,22 +12,22 @@ To do so:
 
     > [!NOTE]
     > You will only have access to this tab if you have the following user permissions:
-    > -  *General* > *Software* *updates* > *Download software updates from DCP* 
-    > -  *Modules* > *System* *configuration* > *Agents* > *Install App packages* 
-    > -  *Modules* > *System* *configuration* > *Agents* > *Upgrade / restore* 
-    > -  *Modules* > *System* *configuration* > *Agents* > *Stop* 
+    > -  *General* > *Software* *updates* > *Download software updates from DCP*
+    > -  *Modules* > *System* *configuration* > *Agents* > *Install App packages*
+    > -  *Modules* > *System* *configuration* > *Agents* > *Upgrade / restore*
+    > -  *Modules* > *System* *configuration* > *Agents* > *Stop*
 
 3. Enter your DCP credentials when you are prompted to do so.
 
     At this point, the window will display whether your system is up to date, and if it is not, it will show which update or upgrade is available (depending on whether you follow the Main Release track or the Feature Release track, respectively).
 
     > [!NOTE]
-    > -  For every update or upgrade package listed, you can click *Release notes* to open the release notes document on DCP.
+    > -  For every update or upgrade package listed, you can click *Release notes* to open the release notes document on DCP.
     > -  If your system is not using a default DataMiner release, for example because a hotfix is installed, no updates will be available.
-    > -  Whether you follow the Main Release track or the Feature Release track is determined in the advanced options of the Update Center. 
-    >     - To switch tracks, click *Advanced Options* and select the release track you wish to follow. As soon as an upgrade or update is available for this track, you will then be able to install it as usual. 
+    > -  Whether you follow the Main Release track or the Feature Release track is determined in the advanced options of the Update Center.
+    >     - To switch tracks, click *Advanced Options* and select the release track you wish to follow. As soon as an upgrade or update is available for this track, you will then be able to install it as usual.
     >     - Switching tracks will never cause a downgrade, e.g. if you are using DataMiner 9.5.4 and switch to the Main Release track, an update to a 9.5.0 version will never be proposed.
-    >     - The release path selection is saved as one setting across all users. 
+    >     - The release path selection is saved as one setting across all users.
 
 4. Start downloading the upgrade or update:
 
@@ -35,13 +35,13 @@ To do so:
 
     - If you follow the feature release path, and an upgrade package is available, click *Upgrade to X.X.X.X-XXXX* to install that package.
 
-    The *Upgrade* window will be displayed, which shows the progress of the download, and allows you to select a number of options:
+    The *Upgrade* window will be displayed, which shows the progress of the download, and allows you to select a number of options:
 
     - Under *Upgrade DataMiner Agents*, you can select which Agents to upgrade:
 
         - By default, *All Agents in cluster* is selected.
 
-        - To upgrade one or more individual Agents, select *Individual Agents* and expand the *DataMiner Agents* section to select the Agents or add them by entering an external IP. However, note that we strongly advise to use the same version of DataMiner on all Agents in a DMS.
+        - To upgrade one or more individual Agents, select *Individual Agents* and expand the *DataMiner Agents* section to select the Agents or add them by entering an external IP. However, note that we strongly advise to use the same version of DataMiner on all Agents in a DMS.
 
     - In the *Advanced upgrade options* section, you can select the following upgrade options:
 

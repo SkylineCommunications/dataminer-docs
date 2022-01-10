@@ -1,6 +1,6 @@
 ## General Connectivity.xml file
 
-The main *Connectivity.xml* file is located in the *C:\\Skyline DataMiner\\Connectivity\\* folder. It can contain two settings:
+The main *Connectivity.xml* file is located in the *C:\\Skyline DataMiner\\Connectivity\\* folder. It can contain two settings:
 
 | Tag                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -13,8 +13,8 @@ The main *Connectivity.xml* file is located in the *C:\\Skyline DataMiner\\Conn
 Example of the main *Connectivity.xml* file:
 
 ```xml
-<DCF>                                                           
-  <ServiceConnectivity>true</ServiceConnectivity>                
+<DCF>
+  <ServiceConnectivity>true</ServiceConnectivity>
   <RedundancyGroupConnectivity>true</RedundancyGroupConnectivity>
-</DCF>                                                          
+</DCF>
 ```

@@ -6,7 +6,7 @@ However, in case a Spectrum Analyzer is equipped with a TCP/IP interface, it can
 
 ![](../../images/Spectrum_architecture.jpg)
 
- 
+
 
 If a GPIB gateway is used, the Agilent I/O libraries need to be installed. See [Installing the Keysight/Agilent IO Libraries](Installing_the_Keysight_Agilent_IO_Libraries.md#installing-the-keysightagilent-io-libraries).
 

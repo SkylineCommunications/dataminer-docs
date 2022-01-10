@@ -4,7 +4,7 @@ Aside from the general and offload database, you can also specify the settings f
 
 To do so:
 
-1. In Cube, go to *System Center \>* *Database* > *Other*.
+1. In Cube, go to *System Center \>* *Database* > *Other*.
 
 2. Click *Add*, enter the name of the database, and click *Add*.
 

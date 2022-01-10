@@ -1,10 +1,10 @@
 ## Script actions
 
-A script consists of a series of script actions (i.e. lines). These are represented in the *Script* section of the right pane. You can add or modify script actions at any time during script configuration.
+A script consists of a series of script actions (i.e. lines). These are represented in the *Script* section of the right pane. You can add or modify script actions at any time during script configuration.
 
 To create a script action:
 
-- In the *Actions* section, click *Add* and select the action. This will add the script action below any actions that have already been added.
+- In the *Actions* section, click *Add* and select the action. This will add the script action below any actions that have already been added.
 
 - Alternatively, to insert the new script action between existing actions, right-click the location where you want to add it, click *Insert*, and select the action.
 

@@ -11,7 +11,7 @@ Thanks to alarm threshold hysteresis, you can fine-tune the sensitivity of your 
 
 ![](../../images/hysteresis.jpg)
 
- 
+
 
 #### Methods
 

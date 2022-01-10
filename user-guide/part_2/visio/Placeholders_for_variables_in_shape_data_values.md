@@ -2,14 +2,14 @@
 
 #### Info keywords
 
-A number of keywords can be used in **Info** shape data fields to display information about a shape. These keywords, wrapped in square brackets, can also be used as placeholders in the value of shape data fields. For example:
+A number of keywords can be used in **Info** shape data fields to display information about a shape. These keywords, wrapped in square brackets, can also be used as placeholders in the value of shape data fields. For example:
 
 | Shape data field | Value                        |
 |------------------|------------------------------|
 | Alarm            | 10/20/500                    |
 | SetVar           | MyVariable:\[root alarm id\] |
 
-From DataMiner 10.0.13 onwards, **Info** keywords (wrapped in square brackets) can also be used as placeholders within other placeholders. For example: *\[var:\[NAME\]\]*
+From DataMiner 10.0.13 onwards, **Info** keywords (wrapped in square brackets) can also be used as placeholders within other placeholders. For example: *\[var:\[NAME\]\]*
 
 For an overview of the different keywords, see [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
 
@@ -242,7 +242,7 @@ If ServiceA has the following two properties:
 
 - latitude: 1/2:1\|1/3:1
 
-... and if in the Visio drawing you set the **XPos** and **YPos** shape data fields to the following values:
+... and if in the Visio drawing you set the **XPos** and **YPos** shape data fields to the following values:
 
 - XPos: \[attachedproperty:longitude\]
 
@@ -400,7 +400,7 @@ This placeholder can be used to refer to the name or the ID of an element.
 
 - *\<input>* should be either an element name or an element ID (in the format DMA ID/element ID).
 
-- *\<output>* can be either *Name* or *ID*.
+- *\<output>* can be either *Name* or *ID*.
 
 For example: *\[Element:231/15,Name\]*
 
@@ -420,7 +420,7 @@ During the event, the \[Event:...\] placeholder will be replaced by the value of
 
 - Prior to DataMiner 10.2.0/10.1.1, only one Router Control event is supported:
 
-    - EventName: *IOClicked* 
+    - EventName: *IOClicked*
 
     - Possible arguments:
 
@@ -435,7 +435,7 @@ During the event, the \[Event:...\] placeholder will be replaced by the value of
 
     - Example: *\[Event:IOClicked,Label\]*
 
-- From DataMiner 10.2.0/10.1.1 onwards, this placeholder can also be used with the **NodeDoubleClicked** tag. In this case, the event will be triggered when a node is double-clicked in an embedded service definition (see [Embedding a Service Manager component](Embedding_a_Service_Manager_component.md)). The event placeholder will then be replaced with the value of its argument.
+- From DataMiner 10.2.0/10.1.1 onwards, this placeholder can also be used with the **NodeDoubleClicked** tag. In this case, the event will be triggered when a node is double-clicked in an embedded service definition (see [Embedding a Service Manager component](Embedding_a_Service_Manager_component.md)). The event placeholder will then be replaced with the value of its argument.
 
     - Possible arguments:
 
@@ -444,7 +444,7 @@ During the event, the \[Event:...\] placeholder will be replaced by the value of
         | ID         | The ID of the service definition node.    |
         | Label      | The label of the service definition node. |
 
-    - Example: *\[event:NodeDoubleClicked,ID\]* 
+    - Example: *\[event:NodeDoubleClicked,ID\]*
 
 > [!NOTE]
 > -  If you specify multiple \[Event:...\] placeholders in a shape data field, only one action will be triggered when that event occurs.
@@ -544,7 +544,7 @@ TableRow - which can refer to either the primary key or the display key - can be
 > [!NOTE]
 > -  As parameters of which the value is an empty string are considered initialized, you can use a \[param:...\] placeholders to refer to a parameter containing an empty string.
 > -  Inside a \[param:...\] placeholder, you can use \[var:...\] placeholders to refer to a session variables. Example: \[param:\[var:Element\],101,5\]
-> -  If you use this placeholder in the **Parameter** shape data field when linking a shape to a parameter, and the cell the placeholder refers to contains a parameter ID, instead of the cell value, the value of the parameter corresponding to that ID is displayed.
+> -  If you use this placeholder in the **Parameter** shape data field when linking a shape to a parameter, and the cell the placeholder refers to contains a parameter ID, instead of the cell value, the value of the parameter corresponding to that ID is displayed.
 
 ### \[ParentTableIndex\]
 
@@ -553,7 +553,7 @@ This placeholder can be used when hierarchical shapes are created dynamically ba
 > [!NOTE]
 > When you use this placeholder, you should always specify the “AllowCustomIndex” option. Otherwise, Visual Overview will replace the index of the shape with the index of the table row associated with the immediate parent shape. See [Making a shape use a different index than that of the original row](Generating_shapes_based_on_table_rows.md#making-a-shape-use-a-different-index-than-that-of-the-original-row).
 >
-> \[ParentTableIndex\] should only be used when the index has to be retrieved from a nested row-based child shape. 
+> \[ParentTableIndex\] should only be used when the index has to be retrieved from a nested row-based child shape.
 
 ### \[ParentDisplayTableIndex\]
 
@@ -562,7 +562,7 @@ This placeholder can be used when hierarchical shapes are created dynamically ba
 > [!NOTE]
 > When you use this placeholder, you should always specify the “AllowCustomIndex” option. Otherwise, Visual Overview will replace the display index of the shape with the display index of the table row associated with the immediate parent shape. See [Making a shape use a different index than that of the original row](Generating_shapes_based_on_table_rows.md#making-a-shape-use-a-different-index-than-that-of-the-original-row).
 >
-> \[ParentDisplayTableIndex\] should only be used when the index has to be retrieved from a nested row-based child shape. 
+> \[ParentDisplayTableIndex\] should only be used when the index has to be retrieved from a nested row-based child shape.
 
 ### \[Profile:...\]
 
@@ -572,7 +572,7 @@ Reference to specific profile instances. See [Creating a list of profile instanc
 
 Reference to a custom DataMiner property.
 
-- \[property:...\] placeholders in shape data fields of type **Xpos**, **YPos**, **VdxPage** and **Link** refer to properties of the object to which the shape is linked.
+- \[property:...\] placeholders in shape data fields of type **Xpos**, **YPos**, **VdxPage** and **Link** refer to properties of the object to which the shape is linked.
 
 - \[property:...\] placeholders in other shape data fields refer to properties of the object to which the Visio file is linked.
 
@@ -583,7 +583,7 @@ If you want to override the above-mentioned general rule, you can add to the sha
 > [Adding options to shapes linked to elements or services](Adding_options_to_shapes_linked_to_elements_or_services.md)
 
 > [!NOTE]
-> If the specified property refers to a non-existing element, service or redundancy group, then the shape will not be displayed. 
+> If the specified property refers to a non-existing element, service or redundancy group, then the shape will not be displayed.
 
 ### \[RegexReplace:x,y,z\]
 
@@ -660,7 +660,7 @@ For this purpose, the following basic syntax is used:
 - From DataMiner 10.0.6 onwards, this placeholder can also be used to retrieve the ID of a booking, using the following syntax:
 
     ```txt
-    [reservation:<bookingID or service name or service ID or placeholder referring to a service>,ID]
+    [reservation:<bookingID or service name or service ID or placeholder referring to a service>,ID]
     ```
 
     For example:
@@ -672,7 +672,7 @@ For this purpose, the following basic syntax is used:
 - From DataMiner 10.0.10 onwards, this placeholder can also be used to retrieve the status of a booking (e.g. “Ended”, “Pending”, “Ongoing”, etc.), using similar syntax:
 
     ```txt
-    [reservation:<bookingID or service name or service ID or placeholder referring to a service>,Status]
+    [reservation:<bookingID or service name or service ID or placeholder referring to a service>,Status]
     ```
 
     For example:
@@ -777,7 +777,7 @@ Used when embedding an alarm timeline component, in order to select a single par
 
 Available from DataMiner 9.5.3 onwards.
 
-Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display service definition properties, separated by line breaks. Each property will be displayed as “\<Property name>: \<Property value>”.
+Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display service definition properties, separated by line breaks. Each property will be displayed as “\<Property name>: \<Property value>”.
 
 - For a top-level element shape (i.e. not an interface shape), all properties of the node specified in the service definition will be shown.
 
@@ -793,7 +793,7 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text.
 
 Available from DataMiner 9.5.3 onwards.
 
-Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display one particular service definition property, in the format “\<Property name>: \<Property value>”.
+Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display one particular service definition property, in the format “\<Property name>: \<Property value>”.
 
 - For a top-level element shape (i.e. not an interface shape), the property has to be one of the properties of the node specified in the service definition.
 
@@ -1038,11 +1038,11 @@ As parameters of which the value is an empty string are considered initialized, 
 
 ### \[xpos\]
 
-In child shapes of a shape that is dynamically linked to an element (i.e. shape data field of type **Element** set to \*), you can use \[xpos\] and \[ypos\] placeholders.
+In child shapes of a shape that is dynamically linked to an element (i.e. shape data field of type **Element** set to \*), you can use \[xpos\] and \[ypos\] placeholders.
 
 In references to table parameters, for example, you can specify the tableIndex using \[xpos\] and \[ypos\] placeholders.
 
-Example: The parameter reference *13206:\[xpos\]\_0\|Alarm* will become *13206:5_0\|Alarm* if the shape is displayed in horizontal position 5.
+Example: The parameter reference *13206:\[xpos\]\_0\|Alarm* will become *13206:5_0\|Alarm* if the shape is displayed in horizontal position 5.
 
 ### \[ypos\]
 

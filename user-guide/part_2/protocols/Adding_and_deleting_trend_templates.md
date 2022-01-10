@@ -12,7 +12,7 @@ In this section:
 
 To create a new trend template:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select a protocol in the first column and a protocol version in the second column.
 
@@ -42,11 +42,11 @@ To create a new trend template:
 
 To upload a trend template for a particular protocol version:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select the protocol in the first column and the protocol version in the second column.
 
-3. Right-click under *Trend* in the third column, and select *Upload*.
+3. Right-click under *Trend* in the third column, and select *Upload*.
 
 4. Browse to the trend template in question and click *Open*.
 
@@ -57,8 +57,8 @@ To upload a trend template for a particular protocol version:
 
 To delete an existing trend template for a particular protocol version:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select the protocol in the first column and the protocol version in the second column.
 
-3. Right-click the trend template under *Trend* in the third column, and select *Delete*.
+3. Right-click the trend template under *Trend* in the third column, and select *Delete*.

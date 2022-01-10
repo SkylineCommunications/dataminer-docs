@@ -14,7 +14,7 @@ In the alarm range editor, you can do the following:
 
 - Clear the *Monitored* checkbox to stop monitoring the parameter.
 
-- Change the type of alarm monitoring: *Normal*, *Relative*, *Absolute* or *Rate*.
+- Change the type of alarm monitoring: *Normal*, *Relative*, *Absolute* or *Rate*.
 
     > [!TIP]
     > See also:
@@ -22,7 +22,7 @@ In the alarm range editor, you can do the following:
 
 - Enter different values for the alarm thresholds.
 
-- Select *Info* and enter a parameter value. Whenever the parameter gets this value, an information event will be generated.
+- Select *Info* and enter a parameter value. Whenever the parameter gets this value, an information event will be generated.
 
 At the bottom of the window, an information message will show you what other elements use the same alarm range.
 

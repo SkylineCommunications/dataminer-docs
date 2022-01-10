@@ -14,24 +14,24 @@ This is an example of a *DataMiner.xml* file:
 
 ```xml
 <DataMiner id="7" disableElementIP="false">
-  <AlarmSocket port=”5024”/>                 
-  <PollSocket port=”5025”/>                  
-  <SMTP>...</SMTP>                          
-  <Colors>...</Colors>                      
-  <LDAP nonDomainLDAP="true"                 
-      host="dc.gtc.be" port="389"                 
-      username="" password=""                     
-      auth=""                                     
-      namingContext="DC=gtc,DC=local">            
-    ...                                         
-  </LDAP>                                    
-  <ProcessOptions protocolProcesses="5"/>    
-  <Logging>                                  
-    <Debug>0</Debug>                          
-    <Error>0</Error>                          
-    <Info>1</Info>                            
-  </Logging>                                 
-</DataMiner>                               
+  <AlarmSocket port=”5024”/>
+  <PollSocket port=”5025”/>
+  <SMTP>...</SMTP>
+  <Colors>...</Colors>
+  <LDAP nonDomainLDAP="true"
+      host="dc.gtc.be" port="389"
+      username="" password=""
+      auth=""
+      namingContext="DC=gtc,DC=local">
+    ...
+  </LDAP>
+  <ProcessOptions protocolProcesses="5"/>
+  <Logging>
+    <Debug>0</Debug>
+    <Error>0</Error>
+    <Info>1</Info>
+  </Logging>
+</DataMiner>
 ```
 
 ### Alphabetical overview of settings
@@ -50,7 +50,7 @@ Below you can find an alphabetical overview of settings that can be specified in
     | licenseNotice=    | Automatically generated attribute. Contains information about which license notices have been generated for this agent.                                                                                             |
     | protocolVisioLnk= | When set to “1”, this tag indicates that DataMiner has attempted to create all the Visio.lnk files which indicate the current Visio file for a protocol. This is used for troubleshooting purposes.                 |
     | readProperties=   | Automatically generated attribute, indicating that existing properties that were previously saved in the info database table are now saved in *Element.xml*.                         |
-    | readElementData=  | Automatically generated attribute, indicating that previously configured element data that was saved in *DataMiner.xml* has been moved to the element data database tables.          |
+    | readElementData=  | Automatically generated attribute, indicating that previously configured element data that was saved in *DataMiner.xml* has been moved to the element data database tables.          |
     | safeMode=         | Optional attribute. If set to “true”, elements will not be started using multiple threads.                                                                                                                          |
 
 - **DataMiner.AlarmSocket**:
@@ -93,12 +93,12 @@ Below you can find an alphabetical overview of settings that can be specified in
     Information about the ID ranges to be used for e.g. view creation. This information allows multiple DataMiner agents to create views at the same time, without creating conflicts.     Example:
 
     ```xml
-    <DataMiner>                                  
-    ...                                           
-      <ID>                                         
+    <DataMiner>
+    ...
+      <ID>
         <Views current="20004" currentOwn="2320001"/>
-      </ID>                                        
-    </DataMiner>                                 
+      </ID>
+    </DataMiner>
     ```
 
 - **DataMiner.IP**:
@@ -106,11 +106,11 @@ Below you can find an alphabetical overview of settings that can be specified in
     This tag can have one optional attribute, *skipMAC*, which tells DataMiner to ignore certain network adapters, so that these will not be considered as a local network interface. Multiple addresses can be specified by using a ”;” separator.     This can be necessary in case special VPN connections end up in front of the normal adapters in the order of the network adapters, and changing the order of the adapters does not work. In this case, DataMiner could see the primary IP address as 127.0.0.1, and the secondary IP address would then have the value from the actual first NIC.     Example:
 
     ```xml
-    <DataMiner>                                       
+    <DataMiner>
       <IP skipMAC="12-34-56-78-90-AB;F1-F2-F3-F4-F5-F6">
-      ...                                                
-      </IP>                                             
-    </DataMiner>                                      
+      ...
+      </IP>
+    </DataMiner>
     ```
 
     In addition, the tag has three subtags: *VirtualIPFrom*, *VirtualIPTo*, and *VirtualIPMask*. These indicate the IP address range for virtual IP addresses that may be assigned to elements.
@@ -122,7 +122,7 @@ Below you can find an alphabetical overview of settings that can be specified in
     | Attribute        | Description                                                                                                                                                                                                                                                                                                                             |
     |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | nonDomainLDAP      | Should be set to “true” to make sure that DMAs that are not connected to a domain can use Active Directory or open LDAP. If this is specified on a DMA that is in a domain, this attribute is not used.                                                                                                                                 |
-    | host               | The name or IP of the LDAP server. Alternatively, the hostname can be specified in the *namingContext* attribute, in which case it should precede the actual naming context data and be separated from it by a forward slash.                                                                            |
+    | host               | The name or IP of the LDAP server. Alternatively, the hostname can be specified in the *namingContext* attribute, in which case it should precede the actual naming context data and be separated from it by a forward slash.                                                                            |
     | port               | The port to connect to the LDAP server.                                                                                                                                                                                                                                                                                                 |
     | username           | The user name to connect to the LDAP server, in case it requires authentication.                                                                                                                                                                                                                                                        |
     | password           | The password to connect to the LDAP server, in case it requires authentication.                                                                                                                                                                                                                                                         |
@@ -171,17 +171,17 @@ Below you can find an alphabetical overview of settings that can be specified in
 - **DataMiner.Logging**
 
     This tag has three subtags indicating the logging level for Info logging, Debug logging and Error logging. See [Consulting the DataMiner logs in DataMiner Cube](../../part_6/logging/Consulting_the_DataMiner_logs_in_DataMiner_Cube.md).
-    From DataMiner 9.6.5 onwards, an additional *\<DaysToKeep>* subtag can be specified, which determines for how many days log files are kept in the folder *C:\\Skyline DataMiner\\Logging*. If this tag is not specified or if its value is 0, log files will be kept for 100 days.     Example:
+    From DataMiner 9.6.5 onwards, an additional *\<DaysToKeep>* subtag can be specified, which determines for how many days log files are kept in the folder *C:\\Skyline DataMiner\\Logging*. If this tag is not specified or if its value is 0, log files will be kept for 100 days.     Example:
 
     ```xml
-    <DataMiner>                 
-      ...                          
-      <Logging>                   
-      ...                          
+    <DataMiner>
+      ...
+      <Logging>
+      ...
       <DaysToKeep>30</DaysToKeep>
-      </Logging>                  
-      ...                          
-    </DataMiner>                
+      </Logging>
+      ...
+    </DataMiner>
     ```
 
 - **DataMiner.MobileGateway**
@@ -196,14 +196,14 @@ Below you can find an alphabetical overview of settings that can be specified in
 - **DataMiner.NetworkAdapters**
 
     From DataMiner 9.0.0 CU20/9.5.0 CU3/9.5.7 onwards, you can use this tag to override the order of the network adapters on a DataMiner Agent. This can be useful to prevent issues in case the order in Windows changes for some reason (e.g. because there is a new network adapter).
-    To do so, specify a number of *\<MAC>* subtags, each containing a MAC address.
+    To do so, specify a number of *\<MAC>* subtags, each containing a MAC address.
     To determine its primary IP address, the DataMiner Agent will place the adapters with matching MAC addresses first in its list. In other words, the primary IP address of the DataMiner Agent will be the one for which the first valid MAC address is found in this tag.     For example:
 
     ```xml
-    <NetworkAdapters>            
+    <NetworkAdapters>
       <MAC>B0-83-FE-B3-F8-0B</MAC>
       <MAC>E8-EE-7A-CA-97-B0</MAC>
-    </NetworkAdapters>           
+    </NetworkAdapters>
     ```
 
 - **DataMiner.PollSocket**
@@ -214,15 +214,15 @@ Below you can find an alphabetical overview of settings that can be specified in
 
     See:
 
-    - [Setting the number of simultaneously running SLPort processes](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#setting-the-number-of-simultaneously-running-slport-processes) 
+    - [Setting the number of simultaneously running SLPort processes](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#setting-the-number-of-simultaneously-running-slport-processes)
 
-    - [Setting the number of simultaneously running SLProtocol processes](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#setting-the-number-of-simultaneously-running-slprotocol-processes) 
+    - [Setting the number of simultaneously running SLProtocol processes](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#setting-the-number-of-simultaneously-running-slprotocol-processes)
 
-    - [Having separate SLScripting processes created for every protocol being used](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#having-separate-slscripting-processes-created-for-every-protocol-being-used) 
+    - [Having separate SLScripting processes created for every protocol being used](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#having-separate-slscripting-processes-created-for-every-protocol-being-used)
 
-    - [Having replicated elements handled by one SLProtocol process](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#having-replicated-elements-handled-by-one-slprotocol-process) 
+    - [Having replicated elements handled by one SLProtocol process](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#having-replicated-elements-handled-by-one-slprotocol-process)
 
-    - [Running SLScripting as a service](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#running-slscripting-as-a-service) 
+    - [Running SLScripting as a service](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#running-slscripting-as-a-service)
 
 - **DataMiner.QOS**
 
@@ -245,37 +245,37 @@ Below you can find an alphabetical overview of settings that can be specified in
         Example:
 
         ```xml
-        <DataMiner>                       
-          ...                                
+        <DataMiner>
+          ...
           <QOS diffServ="ExcellentEffort" />
-          ...                                
-        </DataMiner>                      
+          ...
+        </DataMiner>
         ```
 
         For more information on these traffic types, see:
 
-        - https://msdn.microsoft.com/en-us/library/windows/desktop/aa374102(v=vs.85).aspx 
+        - https://msdn.microsoft.com/en-us/library/windows/desktop/aa374102(v=vs.85).aspx
 
     - By specifying a custom DSCP marker (on systems running Windows 7 or a later version) referred to by a decimal value.
 
         Example:
 
         ```xml
-        <DataMiner>          
-          ...                   
+        <DataMiner>
+          ...
           <QOS diffServ="16" />
-          ...                   
-        </DataMiner>         
+          ...
+        </DataMiner>
         ```
 
         For more information, see:
 
-        - https://en.wikipedia.org/wiki/Differentiated_services#Class_Selector 
+        - https://en.wikipedia.org/wiki/Differentiated_services#Class_Selector
 
-        - https://tools.ietf.org/html/rfc2474 
+        - https://tools.ietf.org/html/rfc2474
 
         > [!NOTE]
-        > -  This QoS DiffServ packet marking feature makes use of the Windows qWave library, which is loaded dynamically. For more information, see: https://technet.microsoft.com/en-us/library/hh831592(v=ws.11).aspx 
+        > -  This QoS DiffServ packet marking feature makes use of the Windows qWave library, which is loaded dynamically. For more information, see: https://technet.microsoft.com/en-us/library/hh831592(v=ws.11).aspx
         > -  The current implementation is limited to non-adaptive flows and protocols that make use of base sockets. Web-socket traffic and smart-serial traffic is not supported.
 
 - **DataMiner.SMTP**
@@ -286,13 +286,13 @@ Below you can find an alphabetical overview of settings that can be specified in
 
     See:
 
-    -  [Changing SNMP agent ports](../../part_3/SNMP/Changing_SNMP_agent_ports.md) 
+    - [Changing SNMP agent ports](../../part_3/SNMP/Changing_SNMP_agent_ports.md)
 
-    - [Configuring SNMP agent community strings](../../part_3/SNMP/Configuring_SNMP_agent_community_strings.md) 
+    - [Configuring SNMP agent community strings](../../part_3/SNMP/Configuring_SNMP_agent_community_strings.md)
 
-    - [Disabling element SNMP agent functionality](../../part_3/SNMP/Disabling_element_SNMP_agent_functionality.md) 
+    - [Disabling element SNMP agent functionality](../../part_3/SNMP/Disabling_element_SNMP_agent_functionality.md)
 
-    - [Enabling DataMiner SNMP agent functionality](../../part_3/SNMP/Enabling_DataMiner_SNMP_agent_functionality.md) 
+    - [Enabling DataMiner SNMP agent functionality](../../part_3/SNMP/Enabling_DataMiner_SNMP_agent_functionality.md)
 
     - [Adjusting the SNMP inform message cache size](../../part_3/SNMP/Adjusting_the_SNMP_inform_message_cache_size.md)
 
@@ -300,20 +300,20 @@ Below you can find an alphabetical overview of settings that can be specified in
 
     See:
 
-    - [Customizing the trap reception ports of a DMA](../../part_3/SNMP/Changing_SNMP_agent_ports.md#customizing-the-trap-reception-ports-of-a-dma) 
+    - [Customizing the trap reception ports of a DMA](../../part_3/SNMP/Changing_SNMP_agent_ports.md#customizing-the-trap-reception-ports-of-a-dma)
 
-    - [Enabling notifications in case SNMPv3 traps cannot be processed](../../part_3/SNMP/Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed.md) 
+    - [Enabling notifications in case SNMPv3 traps cannot be processed](../../part_3/SNMP/Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed.md)
 
 - **DataMiner.SnmpTrapDistribution**
 
     Available from DataMiner 9.6.5 onwards. If set to false, SNMP trap distribution will be disabled within the DMS.     Example:
 
     ```xml
-    <DataMiner>                                        
-      ...                                                 
+    <DataMiner>
+      ...
       <SnmpTrapDistribution>false</SnmpTrapDistribution>
-      ...                                                 
-    </DataMiner>                                       
+      ...
+    </DataMiner>
     ```
 
 - **DataMiner.Telnet**
@@ -321,10 +321,10 @@ Below you can find an alphabetical overview of settings that can be specified in
     Available from DataMiner 9.5.6 onwards. Can be used to activate or deactivate the Telnet interface for a DMA using the attribute active=”true” or active=”false”, respectively.     Up to DataMiner 9.6.4, by default, this tag is not present and the Telnet interface is activated. From DataMiner 9.6.5 onwards, for security reasons, the Telnet interface is deactivated by default.     Example:
 
     ```xml
-    <DataMiner>            
+    <DataMiner>
       <Telnet active="true"/>
-      ...                     
-    </DataMiner>           
+      ...
+    </DataMiner>
     ```
 
 - **DataMiner.WarningThreshold**

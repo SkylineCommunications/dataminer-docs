@@ -4,7 +4,7 @@ You can create a ticket both from within the Ticketing app and from the Surveyor
 
 - Within the Ticketing app: click the *New* button in the header bar.
 
-- From the Surveyor or Alarm Console: Right-click the item for which a ticket should be created and select *Ticket* > *New ticket*.
+- From the Surveyor or Alarm Console: Right-click the item for which a ticket should be created and select *Ticket* > *New ticket*.
 
     > [!NOTE]
     > You can create tickets for elements, services, views, and alarms.

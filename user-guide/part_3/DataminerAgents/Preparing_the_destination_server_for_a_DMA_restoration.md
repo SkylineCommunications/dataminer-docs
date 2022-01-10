@@ -6,19 +6,19 @@ To prepare the destination server, there are several possibilities:
 
 - Install a blank, fully functional DataMiner Agent, as described in the DataMiner Installation Guide.
 
-- Clear the configuration of an existing DMA using the [factory reset tool.](https://community.dataminer.services/documentation/factory-reset-tool/) This is only possible if that DMA is using DataMiner 10.0.12 or higher.
+- Clear the configuration of an existing DMA using the [factory reset tool.](https://community.dataminer.services/documentation/factory-reset-tool/) This is only possible if that DMA is using DataMiner 10.0.12 or higher.
 
 - Manually clear the configuration of an existing DMA:
 
     1. If necessary, take a backup of the existing configuration.
 
-    2. Go to the folder *C:\\Skyline DataMiner\\Tools* and run the *DataMiner Stop DataMiner And SLNet.bat* file. This will stop the DataMiner software.
+    2. Go to the folder *C:\\Skyline DataMiner\\Tools* and run the *DataMiner Stop DataMiner And SLNet.bat* file. This will stop the DataMiner software.
 
-    3. From the *C:\\Skyline DataMiner\\Backup* directory, delete all content EXCEPT *TakeBackup.exe*, *BackupSettings.xml* and all *.dll* files. If necessary, copy existing backups to another location before deleting them.
+    3. From the *C:\\Skyline DataMiner\\Backup* directory, delete all content EXCEPT *TakeBackup.exe*, *BackupSettings.xml* and all *.dll* files. If necessary, copy existing backups to another location before deleting them.
 
-    4. From the *C:\\Skyline DataMiner\\Webpages\\Pictures* directory, delete all content EXCEPT the four files of which the name starts with *DMSPicViewer*.
+    4. From the *C:\\Skyline DataMiner\\Webpages\\Pictures* directory, delete all content EXCEPT the four files of which the name starts with *DMSPicViewer*.
 
-    5. From the *C:\\Skyline DataMiner\\Webpages\\Reports\\templates* directory, delete all report templates. In other words, delete all content EXCEPT the *Template.inc.asp* file and the *styles* subdirectory.
+    5. From the *C:\\Skyline DataMiner\\Webpages\\Reports\\templates* directory, delete all report templates. In other words, delete all content EXCEPT the *Template.inc.asp* file and the *styles* subdirectory.
 
     6. Delete all content from the following directories:
 
@@ -78,13 +78,13 @@ To prepare the destination server, there are several possibilities:
 
         2. In the *Connections* pane, click the icon to create a new connection.
 
-        3. In the *New Connection* window, insert the Agent IP in the *Contact hosts* box and click *Add*.
+        3. In the *New Connection* window, insert the Agent IP in the *Contact hosts* box and click *Add*.
 
         4. Click *Next* to go to the next step of the wizard.
 
-        5. In both the *Login* and the *Password* box, insert *root*, and then click *Finish*.
+        5. In both the *Login* and the *Password* box, insert *root*, and then click *Finish*.
 
-        6. In the *Schema* pane of DevCenter, right-click *SLDMADB* and select *Drop Keyspace*.
+        6. In the *Schema* pane of DevCenter, right-click *SLDMADB* and select *Drop Keyspace*.
 
         7. Open Windows Task Manager and stop the Cassandra service.
 
@@ -92,7 +92,7 @@ To prepare the destination server, there are several possibilities:
 
     8. Delete the Windows user accounts on the server that have a corresponding DataMiner account.
 
-    9. In the *C:\\Skyline DataMiner* folder, replace the content of the file *Views.xml* with the following content:
+    9. In the *C:\\Skyline DataMiner* folder, replace the content of the file *Views.xml* with the following content:
 
         ```xml
         <Views xmlns="http://www.skyline.be/config/views"/>

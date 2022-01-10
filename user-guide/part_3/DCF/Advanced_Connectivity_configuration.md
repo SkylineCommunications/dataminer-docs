@@ -6,7 +6,7 @@ To do so:
 
 1. Go to the element’s *General parameters* page.
 
-2. Scroll down to the bottom of the page and click the *Configure* button next to *DataMiner Connectivity Framework*.
+2. Scroll down to the bottom of the page and click the *Configure* button next to *DataMiner Connectivity Framework*.
 
     A window with the four tables will then be displayed, each with an expandable details pane on the right side.
 

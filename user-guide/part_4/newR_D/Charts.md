@@ -45,23 +45,23 @@ To configure the component:
 
     - *Segment size*: Allows you to select which data should determine the size of segments in the chart.
 
-4. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
+4. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
 
     - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
 
     - *Advanced* \> *Include severities*: Allows you to exclude certain severity levels by clearing the checkboxes for those levels.
 
-    - *Chart* > *Reverse data*: By default, the graph displays the number of alarm events or the alarm duration per element. This option allows you to instead display the number of alarm events or the alarm duration per alarm state.
+    - *Chart* > *Reverse data*: By default, the graph displays the number of alarm events or the alarm duration per element. This option allows you to instead display the number of alarm events or the alarm duration per alarm state.
 
-    - *Chart* > *Stack bars*: Determines whether the bars for one particular element or service are stacked in the chart.
+    - *Chart* > *Stack bars*: Determines whether the bars for one particular element or service are stacked in the chart.
 
-    - *Chart* > *Legend*: Determines whether a legend can be displayed. If this option is selected, an arrow icon is displayed in the top right corner of the chart. Clicking this icon will display the legend.
+    - *Chart* > *Legend*: Determines whether a legend can be displayed. If this option is selected, an arrow icon is displayed in the top right corner of the chart. Clicking this icon will display the legend.
 
-    - *Table* > *Show*: Determines whether a table with detailed information is displayed below the chart.
+    - *Table* > *Show*: Determines whether a table with detailed information is displayed below the chart.
 
-    - *Table* > *Add totals*: Determines whether a column is displayed within the table with the total number of alarm events or the total alarm duration for each element or service. This option is only available if the *Table* > *Show* option is selected.
+    - *Table* > *Add totals*: Determines whether a column is displayed within the table with the total number of alarm events or the total alarm duration for each element or service. This option is only available if the *Table* > *Show* option is selected.
 
-    - *Table* > *Add total info*: Determines whether the *Total* column includes the information “alarm events” or “% of time in alarm state”. This option is only available if the *Table* > *Add totals* option is selected.
+    - *Table* > *Add total info*: Determines whether the *Total* column includes the information “alarm events” or “% of time in alarm state”. This option is only available if the *Table* > *Add totals* option is selected.
 
     The following options are available if the chart is used with queries data input:
 
@@ -73,25 +73,25 @@ To configure the component:
 
         - *Relative per category*: The dimension of each bar is shown as a relative percentage compared to other bars representing the different variables for each separate category. (Available from DataMiner 10.1.0/10.1.2 onwards.)
 
-        - *Relative per variable:* The dimension of each bar is shown as a relative percentage compared to other bars representing this variable.
+        - *Relative per variable:* The dimension of each bar is shown as a relative percentage compared to other bars representing this variable.
 
         - *Relative total*: The dimension of each bar is shown as a percentage of the sum of all values. (Available from DataMiner 10.1.0/10.1.2 onwards.)
 
     - *Advanced \> Chart orientation*: Available from DataMiner 10.0.13 onwards. Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
 
-    - *Advanced* \> *Stack bars:* Available from DataMiner 10.1.0/10.1.2 onwards. Stacks the bars on top of each other instead of showing them side by side. This can be especially useful when combined with the *Relative per category* layout.
+    - *Advanced* \> *Stack bars:* Available from DataMiner 10.1.0/10.1.2 onwards. Stacks the bars on top of each other instead of showing them side by side. This can be especially useful when combined with the *Relative per category* layout.
 
     - *Legend \> Show Legend*: Available from DataMiner 10.0.13 onwards. Determines whether the legend is displayed.
 
     - *Legend \> Position*: Available from DataMiner 10.0.13 onwards. If the legend is set to be displayed, this option determines whether it is displayed on the left, on the right, at the top or at the bottom of the visualization.
 
-    - *Tooltips* > *Show Tooltips*: Available from DataMiner 10.0.13 onwards. Determines whether tooltips are displayed.
+    - *Tooltips* > *Show Tooltips*: Available from DataMiner 10.0.13 onwards. Determines whether tooltips are displayed.
 
-    - *Tooltips* > *Include label*: Available from DataMiner 10.0.13 onwards. Determines whether the label is included in tooltips.
+    - *Tooltips* > *Include label*: Available from DataMiner 10.0.13 onwards. Determines whether the label is included in tooltips.
 
-    - *Tooltips* > *Include dimension*: Available from DataMiner 10.0.13 onwards. Determines whether the dimensions are indicated in tooltips.
+    - *Tooltips* > *Include dimension*: Available from DataMiner 10.0.13 onwards. Determines whether the dimensions are indicated in tooltips.
 
-    - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
+    - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
 
 ### Bar chart (horizontal)
 
@@ -110,7 +110,7 @@ This component can be used to display a trend graph.
 From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
 
 > [!NOTE]
-> -  The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
+> -  The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
 > -  From DataMiner 10.0.11 onwards, if a line chart component is added to a dashboard, the time span displayed by the component is available as feed in the data pane, so that this can be applied to other components.
 
 To configure the component:
@@ -125,24 +125,24 @@ To configure the component:
 
     - From DataMiner 10.0.2 onwards, in a system using Service & Resource Management, you can add resources as a feed to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](../SRM/SRM.md#service-and-resource-management).
 
-    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter feed is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
+    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter feed is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
 
         > [!NOTE]
         > When you update a filter that is already used in the component, re-add the filter in order to update it in the component.
 
-3. Optionally, customize the following component options in the *Component* > *Settings* tab:
+3. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
     - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
     - *Trend span*: Allows you to customize the time span for which trending is displayed. You can either select a predefined time span or select *Custom* and specify a start and end time.
 
-    - *Value range* > *Fixed minimum*/*Fixed Maximum*: Available from DataMiner 10.0.13 onwards. These settings allow you to configure a minimum and/or maximum range for the chart, so that no values outside this range are displayed. The configured range will apply to all lines in the chart, regardless of any particular axis or displayed parameter. By default, no limits are applied.
+    - *Value range* > *Fixed minimum*/*Fixed Maximum*: Available from DataMiner 10.0.13 onwards. These settings allow you to configure a minimum and/or maximum range for the chart, so that no values outside this range are displayed. The configured range will apply to all lines in the chart, regardless of any particular axis or displayed parameter. By default, no limits are applied.
 
     - *Minimum visible gap size*: Allows you to specify the minimum duration a gap must have before it is displayed in the graph. By default, this is set to 0.
 
     - *Show real-time trend data*: If real-time trending is available, this box allows you to set the chart to display real-time trending instead of average trending.
 
-    - *Show average*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data* is not selected. Displays the average trend data. By default, this is enabled.
+    - *Show average*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data* is not selected. Displays the average trend data. By default, this is enabled.
 
     - *Show minimum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the minimum trend data. By default, this is disabled.
 
@@ -152,7 +152,7 @@ To configure the component:
 
     - *Use percentage based values*: This option is only displayed if the component displays resource capacity information. If you select this option, the chart will display percentage values instead of absolute values.
 
-4. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+4. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
     - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
 
@@ -172,11 +172,11 @@ To configure the component:
 
             - *Create additional charts*: Additional charts are displayed that include the parameters that exceed the limit. If necessary, multiple additional charts will be displayed, each respecting the configured limit.
 
-    - *Styling and Information* > *Show range selector*: Determines whether a preview graph is displayed below the main graph, allowing you to easily select a different range.
+    - *Styling and Information* > *Show range selector*: Determines whether a preview graph is displayed below the main graph, allowing you to easily select a different range.
 
-    - *Styling and Information* > *Line thickness*: Allows you to specify the thickness of the data line in the chart (in pixels).
+    - *Styling and Information* > *Line thickness*: Allows you to specify the thickness of the data line in the chart (in pixels).
 
-    - *Styling and Information* > *Highlight lines on hover*: Available from DataMiner 10.2.0/10.1.1 onwards. Determines whether a trend line is highlighted when you hover over the line in the graph or over the corresponding parameter in the trend legend. When a line is highlighted, it gets the thickness determined by the *Highlight line thickness* setting, which becomes available when this option is selected.
+    - *Styling and Information* > *Highlight lines on hover*: Available from DataMiner 10.2.0/10.1.1 onwards. Determines whether a trend line is highlighted when you hover over the line in the graph or over the corresponding parameter in the trend legend. When a line is highlighted, it gets the thickness determined by the *Highlight line thickness* setting, which becomes available when this option is selected.
 
 
 
@@ -185,21 +185,21 @@ To configure the component:
 
 
 
-    - *Styling and Information* > *Enable legend*: Allows you to disable the legend for the line chart. This is especially used for line charts within Group components, in order to avoid duplicate legends.
+    - *Styling and Information* > *Enable legend*: Allows you to disable the legend for the line chart. This is especially used for line charts within Group components, in order to avoid duplicate legends.
 
-    - *Styling and Information* > *Expand legend initially*: Select this option to immediately show the trend legend in the component. Otherwise, the legend section is initially collapsed and you can display it using the arrow icon next to the graph.
+    - *Styling and Information* > *Expand legend initially*: Select this option to immediately show the trend legend in the component. Otherwise, the legend section is initially collapsed and you can display it using the arrow icon next to the graph.
 
-    - *Styling and Information* > *Hide parameters without trend data in the legend*: Available from DataMiner 10.0.9 onwards. Determines whether parameters are shown in the legend of the graph if they have no trend data available. By default, this option is selected, so that these parameters are hidden.
+    - *Styling and Information* > *Hide parameters without trend data in the legend*: Available from DataMiner 10.0.9 onwards. Determines whether parameters are shown in the legend of the graph if they have no trend data available. By default, this option is selected, so that these parameters are hidden.
 
     - *Fill graph*: Available from DataMiner 10.2.0/10.1.6 onwards. Select this option to have the space underneath the line filled with the line color.
 
-    - *Stack trend lines*: Available from DataMiner 10.2.0/10.1.6 onwards. Select this option to stack the lines in the graph on top of each other. This option is not compatible with the *Show min/max shading*, *Show minimum* and *Show maximum* options. When you select the *Stack trend lines* option, those options will therefore be disabled and hidden.
+    - *Stack trend lines*: Available from DataMiner 10.2.0/10.1.6 onwards. Select this option to stack the lines in the graph on top of each other. This option is not compatible with the *Show min/max shading*, *Show minimum* and *Show maximum* options. When you select the *Stack trend lines* option, those options will therefore be disabled and hidden.
 
-    - *Styling and Information* > *Show min/max shading*: Select this option to display a semi-transparent shade above and below the trend line, showing the minimum and maximum trend values. This option can only be used for parameters with average trending and only in case the Y-axis has no discrete values.
+    - *Styling and Information* > *Show min/max shading*: Select this option to display a semi-transparent shade above and below the trend line, showing the minimum and maximum trend values. This option can only be used for parameters with average trending and only in case the Y-axis has no discrete values.
 
-    - *Additional lines* > *Line thickness*: If you select to show any additional lines with the options below, this option becomes available, allowing you to customize the thickness of these lines (in pixels).
+    - *Additional lines* > *Line thickness*: If you select to show any additional lines with the options below, this option becomes available, allowing you to customize the thickness of these lines (in pixels).
 
-    - *Additional lines* > *Show percentile*: Displays a percentile line on the graph. When you select this option, two additional options become available that allow you to configure this percentile line: *Percentile*, which allows you to indicate which percentile should be displayed, and *Percentile line color*.
+    - *Additional lines* > *Show percentile*: Displays a percentile line on the graph. When you select this option, two additional options become available that allow you to configure this percentile line: *Percentile*, which allows you to indicate which percentile should be displayed, and *Percentile line color*.
 
 
 
@@ -208,7 +208,7 @@ To configure the component:
 
 
 
-    - *Additional lines* > *Show boundary lines*: Allows you to display one or more boundary lines. You can configure where a line should be displayed by adding a Y-axis value in the *Boundary value* box. The color of a boundary line can be customized in the *Boundary line color* box. The *Add boundary line* option below this allows you to add additional boundary lines. To remove a boundary line, click the x to the right of the line name.
+    - *Additional lines* > *Show boundary lines*: Allows you to display one or more boundary lines. You can configure where a line should be displayed by adding a Y-axis value in the *Boundary value* box. The color of a boundary line can be customized in the *Boundary line color* box. The *Add boundary line* option below this allows you to add additional boundary lines. To remove a boundary line, click the x to the right of the line name.
 
 ### Pie & donut chart
 
@@ -218,26 +218,26 @@ To configure the component:
 
 1. Apply a query data feed. See [Using Queries data input](Configuring_dashboard_components.md#using-queries-data-input).
 
-2. Optionally, customize the following component options in the *Component* > *Settings* tab:
+2. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
     - *Label*: Allows you to select which data should be used as a label.
 
     - *Segment size*: Allows you to select which data should determine the size of segments in the chart.
 
-3. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+3. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-    - *Chart shape*: Can be set to *Pie* or *Donut*.
+    - *Chart shape*: Can be set to *Pie* or *Donut*.
 
     - *Legend \> Show Legend*: Available from DataMiner 10.0.13 onwards. Determines whether the legend is displayed.
 
     - *Legend \> Show Legend*: Available from DataMiner 10.0.13 onwards. If the legend is set to be displayed, this option determines whether it is displayed on the left, on the right, at the top or at the bottom of the visualization.
 
-    - *Tooltips* > *Show Tooltips*: Available from DataMiner 10.0.13 onwards. Determines whether tooltips are displayed.
+    - *Tooltips* > *Show Tooltips*: Available from DataMiner 10.0.13 onwards. Determines whether tooltips are displayed.
 
-    - *Tooltips* > *Include label*: Available from DataMiner 10.0.13 onwards. Determines whether the label is included in tooltips.
+    - *Tooltips* > *Include label*: Available from DataMiner 10.0.13 onwards. Determines whether the label is included in tooltips.
 
-    - *Tooltips* > *Include dimension*: Available from DataMiner 10.0.13 onwards. Determines whether the dimensions are indicated in tooltips.
+    - *Tooltips* > *Include dimension*: Available from DataMiner 10.0.13 onwards. Determines whether the dimensions are indicated in tooltips.
 
-    - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
+    - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
 
-    - *Tooltips* > *Include percentages*: Available from DataMiner 10.0.13 onwards. Determines whether percentages are indicated in tooltips.
+    - *Tooltips* > *Include percentages*: Available from DataMiner 10.0.13 onwards. Determines whether percentages are indicated in tooltips.

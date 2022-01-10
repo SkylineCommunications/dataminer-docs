@@ -4,7 +4,7 @@ Users get access to the DataMiner System according to the rights that have been 
 
 Rights can be granted according to three concepts:
 
-- **Permissions**: Users can be granted or denied permission to execute specific actions in the DMS (e.g. add elements, edit alarm templates, etc.), based on the configuration of the user group they are part of.
+- **Permissions**: Users can be granted or denied permission to execute specific actions in the DMS (e.g. add elements, edit alarm templates, etc.), based on the configuration of the user group they are part of.
 
 - **Views**: Users can be granted or denied access to specific items in DataMiner, based on the user group they are part of.
 
@@ -17,4 +17,4 @@ Rights can be granted according to three concepts:
 
 > [!TIP]
 > See also:
-> [DataMiner user permissions](DataMiner_user_permissions.md)  
+> [DataMiner user permissions](DataMiner_user_permissions.md)

@@ -2,7 +2,7 @@
 
 ### Installing the DataMinerIntegrationStudio.vsix extension
 
-To install DataMiner Integration Studio, you have to install the *DataMinerIntegrationStudio.vsix* extension file on top of Microsoft Visual Studio.
+To install DataMiner Integration Studio, you have to install the *DataMinerIntegrationStudio.vsix* extension file on top of Microsoft Visual Studio.
 
 1. Check which version of Visual Studio you are using, download the correct *DataMinerIntegrationStudio.vsix* extension file, and place it in a temporary folder on your computer:
 

@@ -4,7 +4,7 @@ If you have linked a shape to an element, that shape can be set to indicate the 
 
 ### Configuring the shape data field
 
-Add a shape data field of type **DataDisplayPage** to the shape, and set its value to the name of a Data Display page.
+Add a shape data field of type **DataDisplayPage** to the shape, and set its value to the name of a Data Display page.
 
 For example, if you specify the following shape data, the shape will have the color of the current alarm state of the “Audio” page of the element named “IRD 01”.
 

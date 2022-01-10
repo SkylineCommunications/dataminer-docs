@@ -13,8 +13,8 @@ From DataMiner 9.5.7 onwards, advanced SRM settings can be configured in the fil
 For example:
 
 ```xml
-<ProtocolFunctionManagerConfigInfo>                                      
+<ProtocolFunctionManagerConfigInfo>
   <ActiveFunctionResourcesThreshold>100</ActiveFunctionResourcesThreshold>
-  <FunctionHysteresis>PT0S</FunctionHysteresis>                           
-</ProtocolFunctionManagerConfigInfo>                                     
+  <FunctionHysteresis>PT0S</FunctionHysteresis>
+</ProtocolFunctionManagerConfigInfo>
 ```

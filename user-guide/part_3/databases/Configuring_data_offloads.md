@@ -12,24 +12,24 @@ In this section:
 
 The offload rate for trend data and alarm data can be configured in System Center.
 
-1. In DataMiner Cube, go to *System Center \>* *Database \> Central* (prior to DataMiner 10.0.13) or *System Center \>* *Database \> Offload* (from DataMiner 10.0.13 onwards).
+1. In DataMiner Cube, go to *System Center \>* *Database \> Central* (prior to DataMiner 10.0.13) or *System Center \>* *Database \> Offload* (from DataMiner 10.0.13 onwards).
 
-2. To set a custom offload interval, at the top of the *Offloads* section, specify a different interval between 1 and 1440 minutes (i.e. 1 day).
+2. To set a custom offload interval, at the top of the *Offloads* section, specify a different interval between 1 and 1440 minutes (i.e. 1 day).
 
     This is the offload rate at which the data will actually be sent to the offload database. The default interval is 5 minutes.
 
-3. To configure alarm data offloads, in the *Offloads* section, select *Alarm data*. You can then fine-tune this configuration as follows:
+3. To configure alarm data offloads, in the *Offloads* section, select *Alarm data*. You can then fine-tune this configuration as follows:
 
     - If a particular table should not be included in the offloads, clear the selection from this table.
 
     - To customize the name of the table containing particular data in the offload database, specify a custom name next to *Remote table name*.
 
-4. To configure real-time trend data offloads, in the *Offloads* section, select *Trend data* > *Enable data offload*. You can then specify the following options:
+4. To configure real-time trend data offloads, in the *Offloads* section, select *Trend data* > *Enable data offload*. You can then specify the following options:
 
-    - The offload type: *All parameter values* or *All changed parameter values.*
+    - The offload type: *All parameter values* or *All changed parameter values.*
 
         > [!NOTE]
-        > When *All parameter values* is selected, data will still be offloaded even when the parameter value has not changed. However, real-time data is written to the database with the timestamp of the last change, so that there can be multiple consecutive entries with exactly the same timestamp in that case.
+        > When *All parameter values* is selected, data will still be offloaded even when the parameter value has not changed. However, real-time data is written to the database with the timestamp of the last change, so that there can be multiple consecutive entries with exactly the same timestamp in that case.
 
     - The interval at which these offloads are generated: A number of minutes between 1 and 1440 (i.e. 1 day), or instantly.
 
@@ -45,20 +45,20 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
     - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *Data*.
 
-5. To configure average trend data offloads, select *Trend data* > *Enable dataavg offload.* You can then fine-tune this configuration as follows:
+5. To configure average trend data offloads, select *Trend data* > *Enable dataavg offload.* You can then fine-tune this configuration as follows:
 
     - Next to *Offload*, specify which average trended record should be offloaded.
 
-        The available time frame records depend on the trend window configuration. For a default configuration, the following options are available: *All time frame records* (default setting), *Only short time frame records (5 min)* and *Only long time frame records (60 min)*.
+        The available time frame records depend on the trend window configuration. For a default configuration, the following options are available: *All time frame records* (default setting), *Only short time frame records (5 min)* and *Only long time frame records (60 min)*.
 
         > [!NOTE]
         > For more information on the trend window configuration, see [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
 
     - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *DataAvg*.
 
-6. From DataMiner 9.5.4 onwards, to offload snapshots (i.e. parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
+6. From DataMiner 9.5.4 onwards, to offload snapshots (i.e. parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
 
-    - Select to offload *All parameter values* or only *All changed parameter values*.
+    - Select to offload *All parameter values* or only *All changed parameter values*.
 
     - Specify the offload rate (by default once every five minutes).
 
@@ -66,34 +66,34 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
     - To customize the name of the table containing the snapshot data in the offload database, specify a custom name next to *Remote table name*.
 
-    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the final option *Only keep the latest parameter value in the database* is not selected. If all values should be kept, make sure the option is selected.
+    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the final option *Only keep the latest parameter value in the database* is not selected. If all values should be kept, make sure the option is selected.
 
 ### Disabling data offloads to the offload database on element level
 
-By default, data offloads are enabled for every element. In every *Element.xml* file, you should find the following setting:
+By default, data offloads are enabled for every element. In every *Element.xml* file, you should find the following setting:
 
 ```xml
-<Element>                             
-  ...                                    
+<Element>
+  ...
     <CentralOffload>true</CentralOffload>
-  ...                                    
-</Element>                            
+  ...
+</Element>
 ```
 
 If, for a particular element, you want to disable data offloads to the offload database, you can modify this setting as follows:
 
 1. Stop DataMiner.
 
-2. In *C:\\Skyline DataMiner\\Elements\\,* go to the subfolder of the element and open *Element.xml*.
+2. In *C:\\Skyline DataMiner\\Elements\\,* go to the subfolder of the element and open *Element.xml*.
 
-3. Set the *\<CentralOffload>* tag to *false*.
+3. Set the *\<CentralOffload>* tag to *false*.
 
     ```xml
-    <Element>                              
-      ...                                     
+    <Element>
+      ...
         <CentralOffload>false</CentralOffload>
-      ...                                     
-    </Element>                             
+      ...
+    </Element>
     ```
 
 4. Save the file and restart DataMiner.
@@ -106,8 +106,8 @@ From DataMiner 9.5.4 onwards, it is possible to configure whether real-time and/
 
 1. Open the appropriate trend template in the Protocols & Templates module in Cube.
 
-2. Click the options button in the top right corner and select *Allow central database offload configuration* (prior to DataMiner 10.1.0/10.1.1) or *Allow offload database configuration* (from DataMiner 10.1.0/10.1.1 onwards).
+2. Click the options button in the top right corner and select *Allow central database offload configuration* (prior to DataMiner 10.1.0/10.1.1) or *Allow offload database configuration* (from DataMiner 10.1.0/10.1.1 onwards).
 
-3. For each parameter, in the *Offload real-time* and *Offload average* columns, click the buttons until the correct configuration is displayed.
+3. For each parameter, in the *Offload real-time* and *Offload average* columns, click the buttons until the correct configuration is displayed.
 
 4. Click *OK* to save your changes.

@@ -2,15 +2,15 @@
 
 When you have finished configuring all necessary settings, you can start debugging.
 
-1. In the *DIS* menu, go to *DMA \> Connect*, and select the DataMiner Agent to which you want DIS to connect.
+1. In the *DIS* menu, go to *DMA \> Connect*, and select the DataMiner Agent to which you want DIS to connect.
 
-2. Import the Automation script. In the *DIS* menu, select *DMA \> Import Automation script*, select an Automation script, and click *Import*.
+2. Import the Automation script. In the *DIS* menu, select *DMA \> Import Automation script*, select an Automation script, and click *Import*.
 
-3. In the XML editor, go to the Exe block that you want to debug, and click the *Edit C#* button in front of it to open the Exe block in a C# editor.
+3. In the XML editor, go to the Exe block that you want to debug, and click the *Edit C#* button in front of it to open the Exe block in a C# editor.
 
 4. In the C# editor, set the necessary breakpoints.
 
-5. In the *DIS* menu, select *Tool Windows \> DIS Inject* to open the *DIS Inject* window.
+5. In the *DIS* menu, select *Tool Windows \> DIS Inject* to open the *DIS Inject* window.
 
 6. Select the *Automation script* tab.
 
@@ -26,7 +26,7 @@ When you have finished configuring all necessary settings, you can start debuggi
 
 10. In the script dummies list, link a DataMiner element to each of the script dummies in the list.
 
-11. Click the *Attach* button to build all temporary Exe block projects and attach the Microsoft Visual Studio Debugger to the DataMiner SLAutomation process.
+11. Click the *Attach* button to build all temporary Exe block projects and attach the Microsoft Visual Studio Debugger to the DataMiner SLAutomation process.
 
 12. In the *DIS Inject* window, click Execute to manually trigger the Automation script.
 

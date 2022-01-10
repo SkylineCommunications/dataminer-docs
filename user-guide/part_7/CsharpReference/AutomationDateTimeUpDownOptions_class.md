@@ -11,15 +11,15 @@ This C# class allows you to create an up-down control to select a date and time 
 For example:
 
 ```txt
-UIBlockDefinition blockDateTimeUpDownDefault = new UIBlockDefinition();                                                                                   
-blockDateTimeUpDownDefault.Type = UIBlockType.Time;                                                                                                       
-AutomationDateTimeUpDownOptions configOptionsDateTimeUpDownDefault = new                                            AutomationDateTimeUpDownOptions();
-blockDateTimeUpDownDefault.ConfigOptions = configOptionsDateTimeUpDownDefault;                                                                            
+UIBlockDefinition blockDateTimeUpDownDefault = new UIBlockDefinition();
+blockDateTimeUpDownDefault.Type = UIBlockType.Time;
+AutomationDateTimeUpDownOptions configOptionsDateTimeUpDownDefault = new AutomationDateTimeUpDownOptions();
+blockDateTimeUpDownDefault.ConfigOptions = configOptionsDateTimeUpDownDefault;
 ```
 
 ![](../../images/datetimeupdown_example.png)
 
- 
+
 
 > [!NOTE]
 > If the name of a variable starts with the following prefix, IntelliSense will list the object properties: *dateTimeUpDownConfig\**

@@ -11,15 +11,15 @@ This C# class allows you to create an up-down control to select a time in an int
 For example:
 
 ```txt
-UIBlockDefinition blockTimeUpDownDefault = new UIBlockDefinition();                            
-blockTimeUpDownDefault.Type = UIBlockType.Time;                                                
+UIBlockDefinition blockTimeUpDownDefault = new UIBlockDefinition();
+blockTimeUpDownDefault.Type = UIBlockType.Time;
 AutomationTimeUpDownOptions configOptionsTimeUpDownDefault = new AutomationTimeUpDownOptions();
-blockTimeUpDownDefault.ConfigOptions = configOptionsTimeUpDownDefault;                         
+blockTimeUpDownDefault.ConfigOptions = configOptionsTimeUpDownDefault;
 ```
 
 ![](../../images/timeupdown_example.png)
 
- 
+
 
 > [!NOTE]
 > If the name of a variable starts with the following prefix, IntelliSense will list the object properties: *timeUpDownConfig\**

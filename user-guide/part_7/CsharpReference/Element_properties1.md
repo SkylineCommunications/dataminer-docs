@@ -32,7 +32,7 @@ Example:
 
 ```txt
 Element element = engine.FindElement(400, 2000);
-int agentId = element.DmaId;                    
+int agentId = element.DmaId;
 ```
 
 #### Dummy
@@ -55,7 +55,7 @@ Example:
 
 ```txt
 Element element = engine.FindElement(400, 2000);
-int elementId = element.ElementId;              
+int elementId = element.ElementId;
 ```
 
 #### ElementName
@@ -70,7 +70,7 @@ Example:
 
 ```txt
 Element element = engine.FindElement(400, 2000);
-string elementName = element.ElementName;       
+string elementName = element.ElementName;
 ```
 
 #### Id
@@ -85,7 +85,7 @@ Example:
 
 ```txt
 Element element = engine.FindElement(400, 2000);
-int id = element.Id;                            
+int id = element.Id;
 ```
 
 #### IsActive
@@ -100,7 +100,7 @@ Example:
 
 ```txt
 Element element = engine.FindElement(400, 2000);
-bool isActive = element.IsActive;               
+bool isActive = element.IsActive;
 ```
 
 #### Name
@@ -115,7 +115,7 @@ Example:
 
 ```txt
 Element element = engine.FindElement(400, 2000);
-string elementName = element.Name;              
+string elementName = element.Name;
 ```
 
 > [!NOTE]
@@ -133,7 +133,7 @@ Example:
 
 ```txt
 Element element = engine.FindElement(400, 2000);
-string pollingIP = element.PollingIP;           
+string pollingIP = element.PollingIP;
 ```
 
 #### ProtocolName
@@ -148,7 +148,7 @@ Example:
 
 ```txt
 Element element = engine.FindElement(400, 2000);
-string protocolName = element.ProtocolName;     
+string protocolName = element.ProtocolName;
 ```
 
 #### ProtocolVersion
@@ -162,6 +162,6 @@ string ProtocolVersion
 Example:
 
 ```txt
-Element element = engine.FindElement(400, 2000); 
+Element element = engine.FindElement(400, 2000);
 string protocolVersion = element.ProtocolVersion;
 ```

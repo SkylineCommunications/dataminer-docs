@@ -11,15 +11,15 @@ This C# class allows you to create a time picker control in an interactive Autom
 For example:
 
 ```txt
-UIBlockDefinition blockTimePickerDefault = new UIBlockDefinition();                            
-blockTimePickerDefault.Type = UIBlockType.Time;                                                
+UIBlockDefinition blockTimePickerDefault = new UIBlockDefinition();
+blockTimePickerDefault.Type = UIBlockType.Time;
 AutomationTimePickerOptions configOptionsTimePickerDefault = new AutomationTimePickerOptions();
-blockTimePickerDefault.ConfigOptions = configOptionsTimePickerDefault;                         
+blockTimePickerDefault.ConfigOptions = configOptionsTimePickerDefault;
 ```
 
 ![](../../images/timepicker_example.png)
 
- 
+
 
 > [!NOTE]
 > If the name of a variable starts with the following prefix, IntelliSense will list the object properties: *timePickerConfig\**

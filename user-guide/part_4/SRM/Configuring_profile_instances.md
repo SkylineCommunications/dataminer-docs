@@ -4,15 +4,15 @@ In a profile instance, you can assign specific values to each of the parameters 
 
 To configure a profile instance, first select it in the *Instances* tab of the list pane.
 
-To create a new profile instance, click the *Add instance* button at the bottom of this pane. The new profile instance will automatically be selected. Alternatively, a new profile instance can also be created from the *Instances* section of the configuration pane for a profile definition.
+To create a new profile instance, click the *Add instance* button at the bottom of this pane. The new profile instance will automatically be selected. Alternatively, a new profile instance can also be created from the *Instances* section of the configuration pane for a profile definition.
 
 In the configuration pane, you can configure a selected profile instance as follows:
 
-- In the *General* section, the name of the instance can be changed, and a description can optionally be added.
+- In the *General* section, the name of the instance can be changed, and a description can optionally be added.
 
 - To base an instance on one or more existing instances:
 
-    1. In the *General* section, next to *Based on*, click *Add*.
+    1. In the *General* section, next to *Based on*, click *Add*.
 
     2. In the drop-down list, select the relevant instance, and then click *Add*.
 
@@ -29,7 +29,7 @@ In the configuration pane, you can configure a selected profile instance as foll
     > [!NOTE]
     > An instance must always be linked to a definition. It will not be possible to save the instance unless a definition has been selected.
 
-- Once a definition has been linked with the instance, the parameters of the definition are displayed in the *Parameter values* section. You can then configure the parameter values that correspond with this instance in the *Value* column of this section, and optionally add remarks in the *Value remarks* column. From DataMiner 10.2.0/10.1.6 onwards, you can also select whether the parameter should be shown or hidden in scripts with the *Hide from scripts* checkbox.
+- Once a definition has been linked with the instance, the parameters of the definition are displayed in the *Parameter values* section. You can then configure the parameter values that correspond with this instance in the *Value* column of this section, and optionally add remarks in the *Value remarks* column. From DataMiner 10.2.0/10.1.6 onwards, you can also select whether the parameter should be shown or hidden in scripts with the *Hide from scripts* checkbox.
 
 > [!NOTE]
 > As long as a profile instance contains unsaved changes, this is indicated in blue in the list of instances on the left. Make sure you save the changes before you leave the module, as otherwise these changes will be lost.

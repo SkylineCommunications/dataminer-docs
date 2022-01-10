@@ -8,7 +8,7 @@ Each row in the exported CSV file will contain a parameter ID, a parameter name 
 
 Only the parameters visible in the parameter list will be exported, for example:
 
-- If *Only monitored parameters* was selected in the top right corner, only the monitored parameters will be exported.
+- If *Only monitored parameters* was selected in the top right corner, only the monitored parameters will be exported.
 
 - If you entered a search string in the filter box, only the parameters matching the search string will be exported.
 

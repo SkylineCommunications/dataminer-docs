@@ -29,7 +29,7 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
     > -  A telnet session left open on a Serial Gateway will automatically be terminated after a certain time.
     > -  Alternatively, on recent versions, you can open a web browser to the IP address of the Serial Gateway instead.
     > -  With recent versions, the front panel of the device also has a navigation menu that is very similar to the telnet interface, where you can configure the same settings.
-    > -  From DataMiner 9.6.5 onwards, the Telnet interface is deactivated by default. It can be activated using the *Telnet* tag within the file DataMiner.xml. For more information, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml).
+    > -  From DataMiner 9.6.5 onwards, the Telnet interface is deactivated by default. It can be activated using the *Telnet* tag within the file DataMiner.xml. For more information, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml).
 
 2. Press *Enter* to confirm the console terminal type as “ansi/vt100”.
 
@@ -40,7 +40,7 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
 
 3. Select the operating settings from the main menu and press *Enter*.
 
-4. Make sure the mode of the ports to which you connect the elements is set to *RAW (TCP Server)* or *TCP Server Mode*.
+4. Make sure the mode of the ports to which you connect the elements is set to *RAW (TCP Server)* or *TCP Server Mode*.
 
     > [!NOTE]
     > -  If this setting is not properly configured, the stream of the associated element will throw a “socket error 10061”. This means that the Serial Gateway actively refused the connection.
@@ -48,11 +48,11 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
 
 5. Press *Esc* to leave the operating settings.
 
-6. Select *Line* from the main menu or *Serial Settings* and the port number, and configure every individual port according to the settings prescribed for the attached device.
+6. Select *Line* from the main menu or *Serial Settings* and the port number, and configure every individual port according to the settings prescribed for the attached device.
 
 7. Press *Esc* to leave the Line menu.
 
-8. Select *Save* and press *Enter*.
+8. Select *Save* and press *Enter*.
 
     To confirm, press *Enter* again. To cancel, press any other key.
 
@@ -75,7 +75,7 @@ For every element connected via the Serial Gateway, do the following.
 
 4. If necessary, choose an alarm and trend template for the element.
 
-5. Set the *Type of port* to *TCP/IP*.
+5. Set the *Type of port* to *TCP/IP*.
 
 6. Next to *IP address/host*, fill in the IP address of the Serial Gateway.
 
@@ -102,13 +102,13 @@ After you have added all elements, to make sure that they have been correctly se
 
     - If the icon does not show an alarm severity color and contains either a “Stopped” symbol (black square) or a “Paused” symbol (two vertical bars):
 
-        The element is currently either stopped or paused. The DMA is not communicating with the device, nor is it trying to. 
+        The element is currently either stopped or paused. The DMA is not communicating with the device, nor is it trying to.
 
         Right-click the element in the Surveyor, and choose *Set State \> Active*.
 
     - If the icon does not show an alarm severity color and contains a “Not Responding” symbol (red x):
 
-        The DMA is trying to communicate with the element, but the element is not responding. 
+        The DMA is trying to communicate with the element, but the element is not responding.
 
         Among the possible causes for this issue are incorrect elements settings (port, baud rate, bus address, protocol, etc.) or wrong cabling (wiring, wrong port, etc.).
 
@@ -116,4 +116,4 @@ After you have added all elements, to make sure that they have been correctly se
 
 4. Once communication between the DMA and the element is up and running, click the element in the Surveyor to open the element card.
 
- 
+

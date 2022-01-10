@@ -4,13 +4,13 @@ In normal circumstances, the information on all DMAs in a cluster is synchronize
 
 > [!NOTE]
 > -  In case of conflicting changes during a synchronization, the most recent change gets precedence.
-> -  For more information on which files and folders are synchronized during this process, refer to [Overview of the files found in the root folder](../../part_7/SkylineDataminerFolder/Overview_of_the_files_found_in_the_root_folder.md) and [Overview of the different subfolders](../../part_7/SkylineDataminerFolder/Overview_of_the_different_subfolders.md), respectively.
+> -  For more information on which files and folders are synchronized during this process, refer to [Overview of the files found in the root folder](../../part_7/SkylineDataminerFolder/Overview_of_the_files_found_in_the_root_folder.md) and [Overview of the different subfolders](../../part_7/SkylineDataminerFolder/Overview_of_the_different_subfolders.md), respectively.
 
 ### Synchronizing your DMA with the DMS
 
 To make a DMA synchronize its changes with other Agents in the cluster, you can manually execute the midnight synchronization code on this one DMA.
 
-1. In Cube, go to *Apps* > *System Center.*
+1. In Cube, go to *Apps* > *System Center.*
 
 2. In the *System Center* module, select the *Tools* page.
 
@@ -29,7 +29,7 @@ To make a DMA synchronize its changes with other Agents in the cluster, you can 
 
 To synchronize all Agents in the cluster, you can manually execute the complete midnight synchronization at any time.
 
-1. In Cube, go to *Apps* > *System Center.*
+1. In Cube, go to *Apps* > *System Center.*
 
 2. In the *System Center* module, select the *Tools* page.
 
@@ -45,7 +45,7 @@ To synchronize all Agents in the cluster, you can manually execute the complete 
 
 When a file has been changed on a particular DMA, you can force the synchronization of this file across the cluster.
 
-1. In Cube, go to *Apps* > *System Center.*
+1. In Cube, go to *Apps* > *System Center.*
 
 2. In the *System Center* module, select the *Tools* page.
 
@@ -53,7 +53,7 @@ When a file has been changed on a particular DMA, you can force the synchronizat
 
 4. In the drop-down list next to *Type*, select *File*.
 
-5. In the *File* box enter the path of the file in question, e.g. *C:\\Skyline DataMiner\\Views.xml*.
+5. In the *File* box enter the path of the file in question, e.g. *C:\\Skyline DataMiner\\Views.xml*.
 
 6. Click the *Sync now* button at the bottom of the card.
 
@@ -63,7 +63,7 @@ When a file has been changed on a particular DMA, you can force the synchronizat
 
 To synchronize all Visio templates used in the cluster, you can execute a file synchronization for Visio files only.
 
-1. In Cube, go to *Apps* > *System Center.*
+1. In Cube, go to *Apps* > *System Center.*
 
 2. In the *System Center* module, select the *Tools* page.
 

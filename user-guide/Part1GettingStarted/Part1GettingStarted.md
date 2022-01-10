@@ -2,7 +2,7 @@
 
 ![](../images/GraphSVG.jpg)
 
- 
+
 
 ##### Get to know the basics
 
@@ -39,4 +39,4 @@
 > [!NOTE]
 > For video demonstrations by subject-matter experts, practical use cases, and much more, go to: <br><https://community.dataminer.services/videos/>.
 
- 
+

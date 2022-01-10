@@ -42,7 +42,7 @@ If a router control component is embedded in Visio, you can use the following se
 | SelectedDCFOutputName | The interface name of the selected output. (Available from DataMiner 9.5.1 onwards.)                                                                                                                                                                                                                                                                                                                                                                            |
 
 > [!NOTE]
-> The *SelectedMatrix* and *SelectedMatrixElement* variables are used for the same purpose, i.e. to refer to the corresponding matrix. If both variables are used at the same time, the system will first check the *SelectedMatrix* variable, and if no result is found, the *SelectedMatrixElement* variable will then be checked.
+> The *SelectedMatrix* and *SelectedMatrixElement* variables are used for the same purpose, i.e. to refer to the corresponding matrix. If both variables are used at the same time, the system will first check the *SelectedMatrix* variable, and if no result is found, the *SelectedMatrixElement* variable will then be checked.
 
 ### Example
 

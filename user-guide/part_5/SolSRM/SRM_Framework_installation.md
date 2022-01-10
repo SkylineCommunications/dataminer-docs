@@ -19,11 +19,11 @@ To install the SRM Framework:
 
     ```txt
     1 – Resources
-    2 – Elements 
-    3 – Services 
-        Gold         
-        Silver       
-        Bronze       
+    2 – Elements
+    3 – Services
+        Gold
+        Silver
+        Bronze
     ```
 
     > [!TIP]
@@ -37,17 +37,17 @@ To install the SRM Framework:
     > See also:
     > [Adding and deleting elements](../../part_2/elements/Adding_and_deleting_elements.md)
 
-5. On the *Configuration* page of the *SRM Log Manager* element, set the *Path* parameter to a shared folder accessible from both the client machine and the DataMiner servers.
+5. On the *Configuration* page of the *SRM Log Manager* element, set the *Path* parameter to a shared folder accessible from both the client machine and the DataMiner servers.
 
-6. Create an element with the name *SRM Booking Manager*, using the protocol *Skyline Booking Manager* (Production version).
+6. Create an element with the name *SRM Booking Manager*, using the protocol *Skyline Booking Manager* (Production version).
 
-7. In the visual overview of the *Skyline Booking Manager* element, go to *Admin* > *Config* > *Application Setup* and configure the following settings:
+7. In the visual overview of the *Skyline Booking Manager* element, go to *Admin* > *Config* > *Application Setup* and configure the following settings:
 
-    - Set *Default Virtual Platform* to the correct Virtual Platform identifier, e.g. *SRM*, *Default*, *Satellite Downlink*, etc.
+    - Set *Default Virtual Platform* to the correct Virtual Platform identifier, e.g. *SRM*, *Default*, *Satellite Downlink*, etc.
 
         > [!NOTE]
-        > A Virtual Platform is used to group all SRM components (resources, bookings, etc.) belonging to the same domain. 
+        > A Virtual Platform is used to group all SRM components (resources, bookings, etc.) belonging to the same domain.
 
-    - Set *Services* > *App. Services View* to the name of the view you created to contain services.
+    - Set *Services* > *App. Services View* to the name of the view you created to contain services.
 
-    - Set *History and Logs* > *Booking Logger Element* to *SRM Log Manager*.
+    - Set *History and Logs* > *Booking Logger Element* to *SRM Log Manager*.

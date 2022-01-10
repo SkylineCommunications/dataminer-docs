@@ -9,7 +9,7 @@ For instance, if the following shape data are configured for a shape containing 
 | Variable   | SurveyorSearchText |
 | Options    | WorkspaceVariable  |
 
-Alternatively, you can set the *SurveyorSearchText* variable to a particular text in order to trigger a search. For example, if you configure the shape data as specified below, a shape can be used to set the search text to “Visio” and trigger a search for this word in the Surveyor:
+Alternatively, you can set the *SurveyorSearchText* variable to a particular text in order to trigger a search. For example, if you configure the shape data as specified below, a shape can be used to set the search text to “Visio” and trigger a search for this word in the Surveyor:
 
 | Shape data | Value                    |
 |------------|--------------------------|

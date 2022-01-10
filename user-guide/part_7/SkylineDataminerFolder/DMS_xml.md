@@ -11,13 +11,13 @@ This file contains a list of all DMAs in the DMS cluster.
 ##### Example:
 
 ```xml
-<DMS errorTime="30000">                     
+<DMS errorTime="30000">
   <DMA ip="10.12.11.1" id="111" timestamp=""/>
-</DMS>                                      
+</DMS>
 ```
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.6 onwards, the use of hostnames instead of IP addresses is supported in DMS.xml. 
+> From DataMiner 10.2.0/10.1.6 onwards, the use of hostnames instead of IP addresses is supported in DMS.xml.
 
 ### Attributes of the DMS tag
 
@@ -32,6 +32,6 @@ This file contains a list of all DMAs in the DMS cluster.
 
 ### Failover subtag
 
-If a Failover setup has been implemented in the DMS, a *Failover* subtag in the *DMS.xml* file contains the Failover configuration. To modify this configuration, go to the System Center in DataMiner Cube. See [Failover configuration in Cube](../../part_3/failover/Failover_configuration_in_Cube.md).
+If a Failover setup has been implemented in the DMS, a *Failover* subtag in the *DMS.xml* file contains the Failover configuration. To modify this configuration, go to the System Center in DataMiner Cube. See [Failover configuration in Cube](../../part_3/failover/Failover_configuration_in_Cube.md).
 
-However, from DataMiner 9.6.1 onwards, an option is available that can only be configured directly in *DMS.xml*. This option makes the Agent that was previously online but now needs to go offline restart as quickly as possible, instead of waiting until all elements have been unloaded. To activate it, in the *\<Failover>* tag of the *DMS.xml* file, add the *bruteForceToOffline="true"* attribute, and then restart the DMA.
+However, from DataMiner 9.6.1 onwards, an option is available that can only be configured directly in *DMS.xml*. This option makes the Agent that was previously online but now needs to go offline restart as quickly as possible, instead of waiting until all elements have been unloaded. To activate it, in the *\<Failover>* tag of the *DMS.xml* file, add the *bruteForceToOffline="true"* attribute, and then restart the DMA.

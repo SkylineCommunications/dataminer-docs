@@ -8,7 +8,7 @@ From DataMiner 9.5.2 onwards, it is possible to have an open Visual Overview pag
 
 ### Configuring the shape data field
 
-Add a shape data field of type **Execute** on page level. Set the shape data field to the following value:
+Add a shape data field of type **Execute** on page level. Set the shape data field to the following value:
 
 ```txt
 SET|X|Y|Z|SetTrigger=ValueChanged
@@ -55,6 +55,6 @@ ExecuteSetsOnInit
 ### Example
 
 ```txt
-Set|Variable|DestVar1|[var:V1]|SetTrigger=ValueChanged                                
+Set|Variable|DestVar1|[var:V1]|SetTrigger=ValueChanged
 Set|Variable|DestVar2|Values: [var:V3], [var:V4], [var:V5]|SetTrigger=ValueChanged
 ```

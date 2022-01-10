@@ -18,7 +18,7 @@ The following sections provide more information on working with markers in Cube:
 
 ### Adding a marker
 
-1. In the info pane, to the left of the real-time display on the spectrum analyzer card, click the *Add marker* button.
+1. In the info pane, to the left of the real-time display on the spectrum analyzer card, click the *Add marker* button.
 
     The marker is automatically added at the center frequency, and takes the color of the trace. If you move the marker to a different trace, the color will be adapted accordingly.
 
@@ -41,7 +41,7 @@ The following sections provide more information on working with markers in Cube:
     - **Lock to trace**: Locks the marker to the trace.
 
     > [!NOTE]
-    > You can also quickly change an existing marker into a reference marker or noise marker by right-clicking the marker and selecting *Reference marker* or *Noise marker* respectively.
+    > You can also quickly change an existing marker into a reference marker or noise marker by right-clicking the marker and selecting *Reference marker* or *Noise marker* respectively.
 
 6. Click *OK* to save your changes and close the pop-up window.
 

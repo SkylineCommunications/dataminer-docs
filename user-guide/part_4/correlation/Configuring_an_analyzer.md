@@ -2,7 +2,7 @@
 
 To configure a Correlation analyzer:
 
-1. In the *Analyzers* tab of the *Correlation* module, make sure the analyzer is selected in the tree view.
+1. In the *Analyzers* tab of the *Correlation* module, make sure the analyzer is selected in the tree view.
 
 2. Enter a name for the analyzer in the *Name* field.
 
@@ -10,7 +10,7 @@ To configure a Correlation analyzer:
     > -  A new analyzer will by default be simply called “Analyzer”
     > -  It is not possible to add two analyzers with the same name in the same folder. Across folders, however, this is no problem.
 
-3. Optionally, expand *Show details* and add a description in the *Description* field.
+3. Optionally, expand *Show details* and add a description in the *Description* field.
 
 4. If the analyzer should always be managed by one DMA, expand *Show details*, select *This rule will be managed by one single DataMiner Agent*, and select the DMA in the drop-down list.
 
@@ -18,13 +18,13 @@ To configure a Correlation analyzer:
 
     - To analyze a view, select *Analyze the alarms from view* and select the view in the drop-down list.
 
-    - To analyze an element, select *Analyze the alarms from element* and select the element in the drop-down list.
+    - To analyze an element, select *Analyze the alarms from element* and select the element in the drop-down list.
 
-    - To analyze based on an alarm filter, select *Analyze the alarms matching the filter* and create a filter:
+    - To analyze based on an alarm filter, select *Analyze the alarms matching the filter* and create a filter:
 
         1. Click *Select a filter* and select a parameter to filter on.
 
-        2. If this is the first (or only) filter condition, select *Is* or *Is Not* to indicate whether the condition has to be true or false. Otherwise, select the operator linking it to the previous filter condition (and, and not, or, or not).
+        2. If this is the first (or only) filter condition, select *Is* or *Is Not* to indicate whether the condition has to be true or false. Otherwise, select the operator linking it to the previous filter condition (and, and not, or, or not).
 
         3. Specify whether the parameter should or should not match a regular expression or wildcard expression, and specify the expression in question.
 
@@ -36,7 +36,7 @@ To configure a Correlation analyzer:
 
         5. If you want to delete one of the filter conditions, click the *X* to the right of the filter.
 
-6. If you want to use the analyzer to analyze real-time alarms, select *Enable real-time analyzing* at the top of the details pane.
+6. If you want to use the analyzer to analyze real-time alarms, select *Enable real-time analyzing* at the top of the details pane.
 
     If this option is not selected, a time range for history alarms will need to be specified when the analyzer is used.
 

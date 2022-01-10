@@ -27,14 +27,14 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 ##### Using DataMiner 10.0.2 or higher:
 
-1. Click the user icon in the top-right corner of the Dashboards app and select the *Configuration* or *Settings* option.
+1. Click the user icon in the top-right corner of the Dashboards app and select the *Configuration* or *Settings* option.
 
-2. In the *Dashboards settings* window, click the *New theme* button.
+2. In the *Dashboards settings* window, click the *New theme* button.
 
     > [!NOTE]
-    > From DataMiner 10.0.12 onwards you can also create a new theme directly from the Layout pane of a dashboard, using the *New theme* button there. The available options will be the same as described below.
+    > From DataMiner 10.0.12 onwards you can also create a new theme directly from the Layout pane of a dashboard, using the *New theme* button there. The available options will be the same as described below.
 
-3. In the *Theme* name box, specify a unique name for the new theme.
+3. In the *Theme* name box, specify a unique name for the new theme.
 
 4. Configure the theme:
 
@@ -46,7 +46,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
         From DataMiner 10.0.8 onwards, you can configure several component themes in the *Component themes* section:
 
-        - To add a component theme, click *Add component theme* or click the duplicate icon on the right side of an existing theme.
+        - To add a component theme, click *Add component theme* or click the duplicate icon on the right side of an existing theme.
 
         - To remove a component theme, click the red delete icon to the right side of the theme. This is not possible for the default theme.
 
@@ -56,15 +56,15 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
         - Under *Component theme name*, you can specify a custom name for the theme. This is not possible for the default theme.
 
-        - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
+        - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
 
-        - In the *Colors* section, you can set the default background color and font color for the components. Under *Color palette*, you can configure additional columns, e.g. for the lines in a line chart component.
+        - In the *Colors* section, you can set the default background color and font color for the components. Under *Color palette*, you can configure additional columns, e.g. for the lines in a line chart component.
 
-        - In the *Spacing* section (formerly called the *Containers* section), you can configure the margins, i.e. the amount of space (in pixels) around the components, as well as the padding, i.e. the amount of space (in pixels) that should be left free within the components.
+        - In the *Spacing* section (formerly called the *Containers* section), you can configure the margins, i.e. the amount of space (in pixels) around the components, as well as the padding, i.e. the amount of space (in pixels) that should be left free within the components.
 
-        - In the *Borders* section, you can select the type of border that should be displayed around the components. From DataMiner 10.0.9 onwards, you can also select for which sides of a component a border should be displayed, e.g. at the top and bottom only.
+        - In the *Borders* section, you can select the type of border that should be displayed around the components. From DataMiner 10.0.9 onwards, you can also select for which sides of a component a border should be displayed, e.g. at the top and bottom only.
 
-        - In the *Shadow* section, you can select the size of the shadow displayed behind the components.
+        - In the *Shadow* section, you can select the size of the shadow displayed behind the components.
 
 5. If you want the new dashboard theme to be the new default theme, click the *Set as default* toggle button.
 
@@ -76,7 +76,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 2. In the panel on the right, select the *Layout* tab.
 
-3. In the *Custom* section of the panel, specify the following custom colors according to your preference, either by specifying an RGB value or by using the color picker boxes on the right:
+3. In the *Custom* section of the panel, specify the following custom colors according to your preference, either by specifying an RGB value or by using the color picker boxes on the right:
 
     - *Background*: The background color of the dashboard itself.
 
@@ -88,7 +88,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
         At the top of the *Custom* section, the selected theme colors are displayed for your reference.
 
-4. If you wish to use this same dashboard theme in other dashboards, specify a name in the *Theme name* box and click *Save theme*.
+4. If you wish to use this same dashboard theme in other dashboards, specify a name in the *Theme name* box and click *Save theme*.
 
 #### Overriding a dashboard theme
 
@@ -139,7 +139,7 @@ To configure the default layout for each of the components in a dashboard:
 
 3. Configure the following options in the expandable sections according to your preference:
 
-    - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
+    - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
 
     - In the *Container* section, specify the following:
 
@@ -153,7 +153,7 @@ To configure the default layout for each of the components in a dashboard:
 
         - *Horizontal padding*: The amount of space (in pixels) that should be left free on the left and right side of the components.
 
-    - In the *Borders* section, select the type of border that should be displayed around the components.
+    - In the *Borders* section, select the type of border that should be displayed around the components.
 
     - In the *Shadow* section, select the size of the shadow displayed behind the components.
 

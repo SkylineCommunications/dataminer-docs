@@ -8,7 +8,7 @@ Before you activate the Asset Management database in DataMiner Cube:
 
 Then do the following to activate the database:
 
-1. In DataMiner Cube, go to *Apps* > *System Center \>* *Database* > *Other*.
+1. In DataMiner Cube, go to *Apps* > *System Center \>* *Database* > *Other*.
 
 2. Click *Add*, enter the name of the database, and click *Add*.
 
@@ -30,6 +30,6 @@ Then do the following to activate the database:
 
 5. Click the *Save* button.
 
-6. In DataMiner Cube, go to *Apps* > *Asset Manager*.
+6. In DataMiner Cube, go to *Apps* > *Asset Manager*.
 
 7. In Asset Manager, click *Load database configuration*.

@@ -13,20 +13,20 @@ In this section:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/>
 
 1. Either open the card of the view where you want to import the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
 
 2. In the menu, select *Actions \> Import*.
 
     > [!NOTE]
-    > If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
+    > If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
 
-3. In the lower left corner of the *Import* window, click *Import elements from CSV* (up to DataMiner 9.6.3).
+3. In the lower left corner of the *Import* window, click *Import elements from CSV* (up to DataMiner 9.6.3).
 
     From DataMiner 9.6.3 onwards, select the option *Import comma-separated file*.
 
-4. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
+4. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
 
 > [!NOTE]
 > -  If DataMiner detects invalid data when elements are imported, a notice will be generated. This can for instance be the case when you import a new element and data is missing, or when something is wrong with the formatting.
@@ -62,16 +62,16 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
     > [!NOTE]
     > -  To export all elements in a DMS, use the root view.
-    > -  If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
+    > -  If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
     > -  From DataMiner 10.0.9 onwards, you can select multiple elements in the list on a view card (using Shift or Ctrl) and right-click them to export those elements only.
 
 2. In the menu, select *Actions \> Export*.
 
-3. In the lower left corner of the *Export* window, click *Export all elements to CSV* (up to DataMiner 9.6.3).
+3. In the lower left corner of the *Export* window, click *Export all elements to CSV* (up to DataMiner 9.6.3).
 
     From DataMiner 9.6.3 onwards, select the option *Export to comma-separated file (\*.csv), clipboard or print*.
 
-4. In the *WHAT* section of the *Export* window, select what is to be included in the export:
+4. In the *WHAT* section of the *Export* window, select what is to be included in the export:
 
     - All data,
 
@@ -81,7 +81,7 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
     - *Only IP addresses with hostnames*, with or without DMA IP addresses and polling IP addresses/Serial Gateways.
 
-5. In the *HOW* section of the *Export* window, select what kind of export you want to make:
+5. In the *HOW* section of the *Export* window, select what kind of export you want to make:
 
     - *export to CSV:* exports the element information to a CSV file, which can be used for an import in DataMiner.
 

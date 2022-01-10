@@ -46,9 +46,9 @@ Depending on the type of database, the procedure is slightly different.
 
         1. Open the Microsoft SQL Server Management Studio and connect to the server.
 
-        2. In the *Object Explorer*, right-click the *Login* folder and select *New Login*.
+        2. In the *Object Explorer*, right-click the *Login* folder and select *New Login*.
 
-        3. Configure the user in the *Login - New* window and click *OK*.
+        3. Configure the user in the *Login - New* window and click *OK*.
 
     - Oracle: use the Oracle Apex web interface to create a user and set up a workspace.
 
@@ -66,25 +66,25 @@ Depending on the type of database, the procedure is slightly different.
 
         2. In the right-click menu, select *Make new \> Database*.
 
-        3. Fill in “sldmsdb” as the database name, make sure *Collation* is set to *utf8 - default collation* and click *OK*.
+        3. Fill in “sldmsdb” as the database name, make sure *Collation* is set to *utf8 - default collation* and click *OK*.
 
-        4. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTabledef.txt*.
+        4. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTabledef.txt*.
 
     > [!NOTE]
-    > -  Note that the script in *CentralTabledef.txt* will drop any tables in the selected database (causing these to be permanently deleted) and recreate the schema, so it must be used with caution.
-    > -  Alternatively, you can also use the program SLOffload.exe from the *C:\\Skyline DataMiner\\Tools* directory to do an offload to your new database. However, note that running this program involves a restart of the DMA.
+    > -  Note that the script in *CentralTabledef.txt* will drop any tables in the selected database (causing these to be permanently deleted) and recreate the schema, so it must be used with caution.
+    > -  Alternatively, you can also use the program SLOffload.exe from the *C:\\Skyline DataMiner\\Tools* directory to do an offload to your new database. However, note that running this program involves a restart of the DMA.
 
     - In MSSQL:
 
         1. Open Microsoft SQL Server Management Studio, and connect to the SQL server with the user account you created earlier.
 
-        2. Right-click *Databases* and select *New Database*.
+        2. Right-click *Databases* and select *New Database*.
 
         3. Fill in “SLDMSDB” as *Database name*, and click *OK*.
 
-        4. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTableDefSQLServer.sql*.
+        4. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTableDefSQLServer.sql*.
 
-    - For an Oracle database, run the following table creation script found in the *C:\\Skyline DataMiner\\Tools* directory: *CentralTabledefOracle.sql*.
+    - For an Oracle database, run the following table creation script found in the *C:\\Skyline DataMiner\\Tools* directory: *CentralTabledefOracle.sql*.
 
     > [!TIP]
     > See also:
@@ -106,9 +106,9 @@ Once the server has been configured, the next step in setting up the offload dat
 
     1. In the Windows Firewall, open the advanced security settings.
 
-    2. In the *Inbound rules* section, click *New rule*.
+    2. In the *Inbound rules* section, click *New rule*.
 
-    3. Select the rule type *Port* and click *Next*.
+    3. Select the rule type *Port* and click *Next*.
 
     4. Select *TCP*.
 
@@ -120,7 +120,7 @@ Once the server has been configured, the next step in setting up the offload dat
 
         - For Oracle: 1521
 
-    6. Select *Allow the connection* and click *Next*.
+    6. Select *Allow the connection* and click *Next*.
 
     7. In response to *When does this rule apply*, select all the options and click *Next*.
 
@@ -130,7 +130,7 @@ Once the server has been configured, the next step in setting up the offload dat
 
     1. In the advanced security settings, open the Windows Firewall.
 
-    2. In the *Outbound rules* section, click *New rule*.
+    2. In the *Outbound rules* section, click *New rule*.
 
     3. Proceed in the same way as to create an inbound rule (see above).
 
@@ -140,9 +140,9 @@ The final step is the configuration of the DMS.
 
 1. For a MSSQL database only, on every DMA in the DMS, share the *C:\\Skyline DataMiner\\System Cache\\Offload* folder:
 
-    1. Go the folder *C:\\Skyline DataMiner\\System Cache* *folder* and open the properties of the *Offload* folder.
+    1. Go the folder *C:\\Skyline DataMiner\\System Cache* *folder* and open the properties of the *Offload* folder.
 
-    2. In the *Sharing* tab, click *Share*.
+    2. In the *Sharing* tab, click *Share*.
 
     3. In the drop-down list, select *Everyone*. If this option is not listed, click *Find people* to add it.
 
@@ -166,7 +166,7 @@ The final step is the configuration of the DMS.
 
     2. Click *Protocols for MSSQLSERVER*.
 
-    3. In the panel on the right, right-click *TCP/IP* and select *Enable*.
+    3. In the panel on the right, right-click *TCP/IP* and select *Enable*.
 
     4. In the panel on the left, go to the SQL Server Services, right-click SQL Server (MSSQLSERVER) and select *Restart*.
 
@@ -174,7 +174,7 @@ The final step is the configuration of the DMS.
 
 4. In Cube, configure the offload or “central” database settings for each DMA in the DMS.
 
-    1. Go to *System Center \>* *Database \> Central* (prior to DataMiner 10.0.13) or *System Center \>* *Database \> Offload* (from DataMiner 10.0.13 onwards).
+    1. Go to *System Center \>* *Database \> Central* (prior to DataMiner 10.0.13) or *System Center \>* *Database \> Offload* (from DataMiner 10.0.13 onwards).
 
     2. Prior to DataMiner 10.0.13 only: In the column on the left, select any of the Agents in the DMS. The offload database will always be synced with the entire DMS, so it is irrelevant which Agent is selected.
 
@@ -187,14 +187,14 @@ The final step is the configuration of the DMS.
         | Field           | Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
         |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
         | DB                | The name of the database you created, i.e. SLDMSDB                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-        | DB server         | The network location of the offload database. <br> -  For an MS SQL database, this can be an IP address and a port, separated by a comma, e.g. “10.10.18.1,1433”.<br> -  For a MySQL database, only fill in the IP address. If a port needs to be specified, do so in the *Connection string* field (e.g. *PORT=3306*). |
+        | DB server         | The network location of the offload database. <br> -  For an MS SQL database, this can be an IP address and a port, separated by a comma, e.g. “10.10.18.1,1433”.<br> -  For a MySQL database, only fill in the IP address. If a port needs to be specified, do so in the *Connection string* field (e.g. *PORT=3306*). |
         | DSN               | “SkySQL”                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
         | Connection string | Depending on the type of database, you can fill in this field to connect through a connection string instead. If this field is filled in, it will always take precedence over all other fields.                                                                                                                                                                                                                                                                                                                 |
         | User              | The user account you created to connect to the database.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
         | Password          | The password corresponding with the user account.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
         > [!NOTE]
-        > For Oracle, check the file *tnsnames.ora* to see the configuration of XE. If the file has an XE description, in the *DB Server* field, fill in *XE*, otherwise fill in the information from the ora file, e.g. *(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XX.XX.XX.X)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)))*. Aside from that, you only need to fill in the *User* and *Password* fields with the Oracle database username and password. Alternatively, you can also use a connection string, e.g. *Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hostaddress)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=XE)));User Id=user;Password= password*.
+        > For Oracle, check the file *tnsnames.ora* to see the configuration of XE. If the file has an XE description, in the *DB Server* field, fill in *XE*, otherwise fill in the information from the ora file, e.g. *(DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = XX.XX.XX.X)(PORT = 1521))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = XE)))*. Aside from that, you only need to fill in the *User* and *Password* fields with the Oracle database username and password. Alternatively, you can also use a connection string, e.g. *Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=hostaddress)(PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=XE)));User Id=user;Password= password*.
 
     6. In the *Offloads* section, select the tables you want to offload, and specify the remote table name.
 

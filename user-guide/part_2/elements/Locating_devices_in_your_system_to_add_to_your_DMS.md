@@ -15,7 +15,7 @@ To find devices and create elements with the Device Discovery wizard:
 3. Under *IP range*, enter the IP address range(s) to include or exclude.
 
     > [!NOTE]
-    > If you enter an invalid IP address, the *Discover* button at the bottom will be unavailable.
+    > If you enter an invalid IP address, the *Discover* button at the bottom will be unavailable.
 
 4. Under *Devices*, indicate the way the wizard should look for devices by selecting one of the following options in the drop-down list and then specifying it further:
 
@@ -27,18 +27,18 @@ To find devices and create elements with the Device Discovery wizard:
 
     The wizard will search for devices within the IP range, which may take a while. If there are no devices within the specified range, a message will appear that no devices were found. Otherwise, a list of discovered devices will be displayed. If any devices have an IP address that matches one of your existing elements, these are displayed in gray.
 
-6. In the list of discovered devices, select the devices for which you want to create an element. If necessary, you can use the *Select all* and *Unselect all* buttons at the bottom.
+6. In the list of discovered devices, select the devices for which you want to create an element. If necessary, you can use the *Select all* and *Unselect all* buttons at the bottom.
 
     > [!NOTE]
     > If many devices are found, it can be useful to sort them by clicking on a column header.
 
 7. Click *Prepare for element creation*.
 
-8. In the *element creation* window, enter the basic information required to create the element: name, description, protocol, protocol version and get and set community string.
+8. In the *element creation* window, enter the basic information required to create the element: name, description, protocol, protocol version and get and set community string.
 
     > [!NOTE]
-    > It is possible to enter the name, description, protocol or protocol version for several elements at once: select multiple elements in the list and click one of the mentioned information fields to open a *multiple edit* box, where you can enter or select the information for all selected elements.
+    > It is possible to enter the name, description, protocol or protocol version for several elements at once: select multiple elements in the list and click one of the mentioned information fields to open a *multiple edit* box, where you can enter or select the information for all selected elements.
 
 9. Click *Create* to create the elements. The wizard will show a summary of the elements that were created.
 
- 
+

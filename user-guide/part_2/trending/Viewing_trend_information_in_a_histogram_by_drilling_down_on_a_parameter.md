@@ -6,14 +6,14 @@
 
 3. To specify further options, below the histogram, click *Advanced*:
 
-    - Next to *Start time* and *End time*, specify a custom time interval to represent in the histogram.
+    - Next to *Start time* and *End time*, specify a custom time interval to represent in the histogram.
 
     - Next to *Interval width*, specify a custom interval width.
 
-    - Next to *Minimum value* and *Maximum value*, specify a different range for the histogram.
+    - Next to *Minimum value* and *Maximum value*, specify a different range for the histogram.
 
     > [!NOTE]
-    > From DataMiner 9.5.2/DataMiner 9.0.0 CU15 onwards, an additional option *Automatic intervals* is available. When this option is selected, DataMiner automatically determines the intervals. Specifying a custom interval width and minimum and maximum value is only possible when this option is not selected.
+    > From DataMiner 9.5.2/DataMiner 9.0.0 CU15 onwards, an additional option *Automatic intervals* is available. When this option is selected, DataMiner automatically determines the intervals. Specifying a custom interval width and minimum and maximum value is only possible when this option is not selected.
 
 4. To change the displayed range of data, you can also:
 

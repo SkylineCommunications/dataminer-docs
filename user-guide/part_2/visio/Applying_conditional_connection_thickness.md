@@ -2,7 +2,7 @@
 
 It is possible to have the thickness of the connection lines change depending on the current value of a parameter, property or session variable.
 
-To enable this, add a **Thickness** shape data field to the Connectivity shape, and configure its value as illustrated below. The thickness of the line will be multiplied by the amount specified in the value.
+To enable this, add a **Thickness** shape data field to the Connectivity shape, and configure its value as illustrated below. The thickness of the line will be multiplied by the amount specified in the value.
 
 | Shape data field | Value                                                                                                                    |
 |------------------|--------------------------------------------------------------------------------------------------------------------------|

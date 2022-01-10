@@ -15,10 +15,10 @@ This section consists of the following topics:
 > [!NOTE]
 > From DataMiner 9.6.0 \[CU24\]/10.0.0 \[CU16\]/10.1.0 \[CU5\]/10.1.8 onwards, if a BPA test is available to check if the system meets the requirements to upgrade to the target version, this test will run before the upgrade is started. If the test fails, the upgrade will be canceled. For more information about BPA tests, see [Running BPA tests](../DataminerSystems/Running_BPA_tests.md).
 >
-> Though this is not recommended, it is possible to bypass this check by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package.
+> Though this is not recommended, it is possible to bypass this check by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package.
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/> 
-> -  <https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/> 
+> -  <https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/>
+> -  <https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/>
 >

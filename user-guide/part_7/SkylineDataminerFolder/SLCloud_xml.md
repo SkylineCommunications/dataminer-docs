@@ -10,14 +10,14 @@ From DataMiner 10.2.0/10.1.5 onwards, you can configure the timeout of the conne
 
 2. In the folder *C:\\Skyline DataMiner*, open the file *SLCloud.xml*.
 
-3. Add and/or configure the *ConnectTimeout* element with a value in milliseconds. Minimum value: 1000. Lower values or non-numeric values will be ignored.
+3. Add and/or configure the *ConnectTimeout* element with a value in milliseconds. Minimum value: 1000. Lower values or non-numeric values will be ignored.
 
     ```xml
-    <SLCLoud>                                
-       <...>                                 
-      <ConnectTimeout>3000</ConnectTimeout>.
-       <...>                                 
-    </SLCloud>                               
+    <SLCLoud>
+     <...>
+     <ConnectTimeout>3000</ConnectTimeout>.
+     <...>
+    </SLCloud>
     ```
 
 4. Save your changes and restart DataMiner.

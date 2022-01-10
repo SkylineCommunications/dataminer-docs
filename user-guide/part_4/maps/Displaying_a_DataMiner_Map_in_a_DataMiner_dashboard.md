@@ -8,13 +8,13 @@ Using the new *Dashboards* app (from DataMiner 9.6.11 onwards):
     > See also:
     > [Dashboards app](../newR_D/newR_D.md#dashboards-app)
 
-2. Drag the *Generic Map* component onto the dashboard from the panel with available components on the left.
+2. Drag the *Generic Map* component onto the dashboard from the panel with available components on the left.
 
 3. In the *Settings* tab, select a map configuration file.
 
     > [!NOTE]
     > -  For more information on the configuration files, see [Configuring the DataMiner Maps](Configuring_the_DataMiner_Maps.md).
-    > -  If no map configuration files are found, make sure the *ServerConfig.xml* file is configured correctly. See [Configuring the DataMiner Maps host servers](Configuring_the_DataMiner_Maps_host_servers.md).
+    > -  If no map configuration files are found, make sure the *ServerConfig.xml* file is configured correctly. See [Configuring the DataMiner Maps host servers](Configuring_the_DataMiner_Maps_host_servers.md).
 
 4. Configure any additional parameters that have become available. These parameters and the way they need to be configured depend on the map configuration file.
 
@@ -28,7 +28,7 @@ Using the legacy Reports & Dashboards module (prior to DataMiner 9.6.11):
     > See also:
     > [DMS Dashboards](../dashboards/dashboards.md#dms-dashboards)
 
-2. In the *Add/Remove Components* pane, click *Other*.
+2. In the *Add/Remove Components* pane, click *Other*.
 
 3. In the *Other* pane, do the following:
 
@@ -40,7 +40,7 @@ Using the legacy Reports & Dashboards module (prior to DataMiner 9.6.11):
 
 4. On the newly added DataMiner Map component, click *Configure*.
 
-5. In the *Configure Components* pane, enter the name of the configuration file (without the ”.xml” extension) in the *Configuration box*.
+5. In the *Configure Components* pane, enter the name of the configuration file (without the ”.xml” extension) in the *Configuration box*.
 
     > [!NOTE]
     > For more information on the configuration files, see [Configuring the DataMiner Maps](Configuring_the_DataMiner_Maps.md).
@@ -64,9 +64,9 @@ Using the legacy Reports & Dashboards module (prior to DataMiner 9.6.11):
 
         > [!NOTE]
         > For more info on how to add variables in the map configuration, see:
-        > -  [Passing ParametersSourceInfo data along in the map’s URL](ParametersSourceInfo.md#passing-parameterssourceinfo-data-along-in-the-maps-url) 
-        > -  [Passing PropertiesSourceInfo data along in the map’s URL](PropertiesSourceInfo.md#passing-propertiessourceinfo-data-along-in-the-maps-url) 
-        > -  [Passing TableSourceInfo data along in the map’s URL](TableSourceInfo.md#passing-tablesourceinfo-data-along-in-the-maps-url) 
+        > -  [Passing ParametersSourceInfo data along in the map’s URL](ParametersSourceInfo.md#passing-parameterssourceinfo-data-along-in-the-maps-url)
+        > -  [Passing PropertiesSourceInfo data along in the map’s URL](PropertiesSourceInfo.md#passing-propertiessourceinfo-data-along-in-the-maps-url)
+        > -  [Passing TableSourceInfo data along in the map’s URL](TableSourceInfo.md#passing-tablesourceinfo-data-along-in-the-maps-url)
 
     - In the *Fixed Width* box, enter a fixed width for the map.
 

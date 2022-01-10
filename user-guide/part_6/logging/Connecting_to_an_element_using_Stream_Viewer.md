@@ -4,7 +4,7 @@ To open Stream Viewer for a particular element:
 
 1. Right-click the element in the Surveyor, or open the element card’s hamburger menu.
 
-2. In the context menu or header menu, select *View* > *Stream Viewer*.
+2. In the context menu or header menu, select *View* > *Stream Viewer*.
 
 The Stream Viewer window consists of two panes:
 
@@ -22,4 +22,4 @@ At the bottom of the Stream Viewer window, there are five buttons:
 | Clear     | Clears the buffer for the item currently selected in the tree view pane.                |
 | Clear All | Clears the buffer for all items and resets Stream Viewer.                               |
 
-To search for a particular item in the communication stream, use the *Find* box in the top-right corner of the window. Navigate between search results using the arrow buttons next to the *Find* box.
+To search for a particular item in the communication stream, use the *Find* box in the top-right corner of the window. Navigate between search results using the arrow buttons next to the *Find* box.

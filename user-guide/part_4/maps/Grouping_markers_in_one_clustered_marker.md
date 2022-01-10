@@ -17,13 +17,13 @@ In this section:
 The following is the minimal configuration required to use clustered markers:
 
 ```xml
-<MapConfig>                         
-   <ClusteredMarkers enable="true"/>
-   ...                               
-   <Layers>                         
-      ...                            
-   </Layers>                        
-</MapConfig>                        
+<MapConfig>
+ <ClusteredMarkers enable="true"/>
+ ...
+ <Layers>
+ ...
+ </Layers>
+</MapConfig>
 ```
 
 ### Default configuration
@@ -31,15 +31,15 @@ The following is the minimal configuration required to use clustered markers:
 Clustered markers can be configured using a number of settings. If you do not specify any of those settings, DataMiner will use the following default configuration:
 
 ```xml
-<ClusteredMarkers enable="false" maxzoom="-1" gridsize="60" zoomonclick="true">                                       
-  <MarkerImages>                                                                                                        
-    <MarkerImage id="default" url="images/icons/cluster-52px.png"             width="52" height="52" anchor="26,52"/> 
-    <MarkerImage id="default" url="images/icons/cluster-55px.png"              width="55" height="55" anchor="27,55"/>
-    <MarkerImage id="default" url="images/icons/cluster-65px.png"              width="65" height="65" anchor="32,65"/>
-    <MarkerImage id="default" url="images/icons/cluster-77px.png"              width="77" height="77" anchor="38,77"/>
-    <MarkerImage id="default" url="images/icons/cluster-89px.png"              width="89" height="89" anchor="45,89"/>
-  </MarkerImages>                                                                                                       
-</ClusteredMarkers>                                                                                                   
+<ClusteredMarkers enable="false" maxzoom="-1" gridsize="60" zoomonclick="true">
+  <MarkerImages>
+    <MarkerImage id="default" url="images/icons/cluster-52px.png" width="52" height="52" anchor="26,52"/>
+    <MarkerImage id="default" url="images/icons/cluster-55px.png"  width="55" height="55" anchor="27,55"/>
+    <MarkerImage id="default" url="images/icons/cluster-65px.png"  width="65" height="65" anchor="32,65"/>
+    <MarkerImage id="default" url="images/icons/cluster-77px.png"  width="77" height="77" anchor="38,77"/>
+    <MarkerImage id="default" url="images/icons/cluster-89px.png"  width="89" height="89" anchor="45,89"/>
+  </MarkerImages>
+</ClusteredMarkers>
 ```
 
 ### Attributes of the \<ClusteredMarkers> tag
@@ -56,7 +56,7 @@ The following attributes can be used in the *\<ClusteredMarkers>* tag:
 
 ### \<MarkerImages> tag
 
-In the *\<MarkerImages>* tag, you can define the set of marker images that can be used by the cluster. The configuration settings are identical to those used in the Layers.MarkerImages tag. See [MarkerImages](MarkerImages.md).
+In the *\<MarkerImages>* tag, you can define the set of marker images that can be used by the cluster. The configuration settings are identical to those used in the Layers.MarkerImages tag. See [MarkerImages](MarkerImages.md).
 
 The first MarkerImage will be used for clusters containing a small number of markers, while the last MarkerImage will be used for clusters with a very large number of markers. These images can be small, large, transparent, semi-transparent, etc.
 

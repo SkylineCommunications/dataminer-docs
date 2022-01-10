@@ -2,7 +2,7 @@
 
 In the Surveyor, ticket statistics can be displayed next to elements, services and views.
 
-The settings that control the data being displayed have to be configured in *MaintenanceSettings.xml* and are synchronized across all DMAs in the DMS.
+The settings that control the data being displayed have to be configured in *MaintenanceSettings.xml* and are synchronized across all DMAs in the DMS.
 
 To do so:
 
@@ -10,24 +10,24 @@ To do so:
 
 2. Open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml.*
 
-3. In the *\<Surveyor>* tag, add the *\[#Tickets\]* placeholder to the *\<ViewStatistics>*, *\<ServiceStatistics>* and/or *\<ElementStatistics>* tag.
+3. In the *\<Surveyor>* tag, add the *\[#Tickets\]* placeholder to the *\<ViewStatistics>*, *\<ServiceStatistics>* and/or *\<ElementStatistics>* tag.
 
     For example:
 
     ```xml
-    <MaintenanceSettings>                                       
-      ...                                                          
-      <Surveyor>                                                  
-        <ViewStatistics>[#Tickets] tickets</ViewStatistics>      
+    <MaintenanceSettings>
+      ...
+      <Surveyor>
+        <ViewStatistics>[#Tickets] tickets</ViewStatistics>
         <ServiceStatistics>[#Tickets] tickets</ServiceStatistics>
         <ElementStatistics>[#Tickets] tickets</ElementStatistics>
-      </Surveyor>                                                 
-      ...                                                          
-    </MaintenanceSettings>                                      
+      </Surveyor>
+      ...
+    </MaintenanceSettings>
     ```
 
     > [!NOTE]
-    > From DataMiner 9.5.3 onwards, you can also add the domain name in the *\[#Tickets\]* placeholder, in order to only show statistics for a particular domain. For example: *\[#Tickets:Internal\]*
+    > From DataMiner 9.5.3 onwards, you can also add the domain name in the *\[#Tickets\]* placeholder, in order to only show statistics for a particular domain. For example: *\[#Tickets:Internal\]*
 
 4. Save and close the file, and restart the DMA.
 

@@ -1,6 +1,6 @@
 # Version editor
 
-If you click *Version Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a dedicated protocol version editor. This editor will allow you to manage the information in the Protocol.Version and Protocol.VersionHistory elements in a more user-friendly way.
+If you click *Version Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a dedicated protocol version editor. This editor will allow you to manage the information in the Protocol.Version and Protocol.VersionHistory elements in a more user-friendly way.
 
 The editor contains the following main tabs:
 
@@ -16,7 +16,7 @@ If you want to save the changes you made and return to the XML editor, click *Ap
 
 In this tab, you can specify the general properties of the current (minor) version (version number, author, date, etc.), a list of all features, changes and fixes in this version, and a list of references.
 
-If you click *Go to this version in All Versions tree*, the *All Versions* tab will open and the current version will be selected in the version tree.
+If you click *Go to this version in All Versions tree*, the *All Versions* tab will open and the current version will be selected in the version tree.
 
 #### Features, changes and fixes
 
@@ -56,7 +56,7 @@ To add a generic reference, do the following:
 
 3. In the *Reference* column, add the ID, address, etc. of the information to which you want to refer.
 
-4. In the *Reference type* column, add the type of information to which you referred in the *Reference* column. For example, if *Reference* contains an ID of a Jira ticket, you could set *Reference type* to “Jira”.
+4. In the *Reference type* column, add the type of information to which you referred in the *Reference* column. For example, if *Reference* contains an ID of a Jira ticket, you could set *Reference type* to “Jira”.
 
 To go to the information referred to by a reference
 
@@ -67,7 +67,7 @@ To remove a reference
 - Click the *Remove* button.
 
 > [!NOTE]
-> In the *Interface* tab of the *DIS Settings* window, you can define the URL format of the two types of references in the following fields:
+> In the *Interface* tab of the *DIS Settings* window, you can define the URL format of the two types of references in the following fields:
 > -  Task URL String Format
 > -  Reference URL String Format
 >
@@ -79,7 +79,7 @@ To remove a reference
 
 In this tab, you can find an overview of all versions in the current range.
 
-Clicking a version number will open the *All Versions* tab to allow you to edit the information stored for that particular version.
+Clicking a version number will open the *All Versions* tab to allow you to edit the information stored for that particular version.
 
 ### All versions
 
@@ -99,6 +99,6 @@ In this tab, you can find an overview of all versions of the current protocol.
 
 > [!NOTE]
 > -  All four parts of a version number (branch, system, major and minor) are editable. When you change one of those four numbers of a particular version, its entire version tree will be adapted.
-> -  When you select a version that is not the current version, you can click the *Set this version as current button* to make that version the current version. Also, in the version tree on the left, you can right-click a version and select *Set as current version*. The current version and all its parent versions will be marked in bold.
+> -  When you select a version that is not the current version, you can click the *Set this version as current button* to make that version the current version. Also, in the version tree on the left, you can right-click a version and select *Set as current version*. The current version and all its parent versions will be marked in bold.
 > -  When you add a minor version, this new version will automatically inherit all data from the current version and become itself the new current version.
 >

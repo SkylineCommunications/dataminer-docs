@@ -2,7 +2,7 @@
 
 To create scheduler templates, which will show up in the EVENT list in Scheduler, use the Automation module:
 
-1. In DataMiner Cube, go to *Apps* > *Automation*.
+1. In DataMiner Cube, go to *Apps* > *Automation*.
 
 2. In the folder pane on the left, create a script folder called “Scheduler Templates” if no such folder exists yet. For more information, see [Adding a new Automation script folder](../automation/Managing_Automation_scripts.md#adding-a-new-automation-script-folder).
 
@@ -46,6 +46,6 @@ To create scheduler templates, which will show up in the EVENT list in Scheduler
         > [!NOTE]
         > If no custom tooltip is defined, the default tooltip will be displayed, which shows the value of every parameter and dummy.
 
- 
 
- 
+
+

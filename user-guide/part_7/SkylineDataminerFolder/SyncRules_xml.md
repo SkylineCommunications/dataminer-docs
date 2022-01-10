@@ -1,6 +1,6 @@
 ## SyncRules.xml
 
-From DataMiner version 8.5.5 onwards, the *SyncRules.xml* file is used to prevent file synchronization between DataMiner Agents running different versions of the DataMiner software.
+From DataMiner version 8.5.5 onwards, the *SyncRules.xml* file is used to prevent file synchronization between DataMiner Agents running different versions of the DataMiner software.
 
 These rules can for instance help prevent issues that might occur when not all DMAs in a DMS have been updated yet, or when you first upgrade the backup of a Failover pair and then upgrade the main agent after switching.
 
@@ -21,10 +21,10 @@ When there is a version difference between DMAs for which synchronization is not
 
 ```xml
 <SyncRules xmlns="http://www.skyline.be/config/syncrules">
-  <VersionRestrictions allowMajorVersions="false">          
-    <Rule allow="false" old="8.5.6" new="8.5.7" />            
-  </VersionRestrictions>                                    
-</SyncRules>                                              
+  <VersionRestrictions allowMajorVersions="false">
+    <Rule allow="false" old="8.5.6" new="8.5.7" />
+  </VersionRestrictions>
+</SyncRules>
 ```
 
 ##### Syntax:

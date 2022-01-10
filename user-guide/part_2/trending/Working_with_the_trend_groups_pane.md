@@ -23,7 +23,7 @@ To add a trend group
     This description will be shown under the name of the group in the trend group pane.
 
 > [!NOTE]
-> Alternatively, you can also add parameters in the parameter pane and click the *Save as* button to save these as a trend group.
+> Alternatively, you can also add parameters in the parameter pane and click the *Save as* button to save these as a trend group.
 
 ### Deleting a trend group
 

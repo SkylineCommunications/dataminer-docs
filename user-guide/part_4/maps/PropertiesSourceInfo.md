@@ -1,6 +1,6 @@
 ## PropertiesSourceInfo
 
-In the *\<PropertiesSourceInfo>* tag, specify the DataMiner properties from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
+In the *\<PropertiesSourceInfo>* tag, specify the DataMiner properties from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
 
 - In the type attribute, specify the type of DataMiner items from which to retrieve the parameter values: views, elements or services.
 
@@ -16,9 +16,9 @@ Inside the *\<PropertiesSourceInfo>* tag, you can place the following tags.
 
 The names of the properties containing the latitude and longitude values.
 
-- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudePropertyName>* and*\<LongitudePropertyName>* tags. In that case, the *\<LatitudePropertyName2>* and *\<LongitudePropertyName2>* tags will not be used and can therefore be omitted.
+- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudePropertyName>* and*\<LongitudePropertyName>* tags. In that case, the *\<LatitudePropertyName2>* and *\<LongitudePropertyName2>* tags will not be used and can therefore be omitted.
 
-- If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudePropertyName>* and*\<LongitudePropertyName>* tags, and another pair in the *\<LatitudePropertyName2>* and *\<LongitudePropertyName2>* tags.
+- If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudePropertyName>* and*\<LongitudePropertyName>* tags, and another pair in the *\<LatitudePropertyName2>* and *\<LongitudePropertyName2>* tags.
 
 #### ViewFilter
 
@@ -29,7 +29,7 @@ In this tag, specify a view ID if you want to narrow down the number of views fr
 - In the *includeSubViews* attribute, specify whether or not to include the underlying subviews. Default: false
 
 > [!NOTE]
-> Specifying a *\<ViewFilter>* tag only works if the type attribute of the *\<PropertiesSourceInfo>* tag is set to “views”.
+> Specifying a *\<ViewFilter>* tag only works if the type attribute of the *\<PropertiesSourceInfo>* tag is set to “views”.
 
 #### ProtocolFilter
 
@@ -47,7 +47,7 @@ value=[PropertyName][Operator][Value]
 
 > [!NOTE]
 > -  There must be a space before and after the operator. Possible operators: == (equal to) and != (not equal to)
-> -  In a property filter, you can use placeholders referring to variables declared in the *\<PropertiesSourceInfo>* tag. The \[DMA_USERNAME\] placeholder, however, is a general placeholder that does not need to be declared. At runtime, it will be replaced by the name of the current user.
+> -  In a property filter, you can use placeholders referring to variables declared in the *\<PropertiesSourceInfo>* tag. The \[DMA_USERNAME\] placeholder, however, is a general placeholder that does not need to be declared. At runtime, it will be replaced by the name of the current user.
 
 ### Passing PropertiesSourceInfo data along in the map’s URL
 
@@ -85,14 +85,14 @@ Result:
 - The properties filter will be applied on the “data element”.
 
 > [!NOTE]
-> It is possible to specify this attribute in the *\<ParametersSourceInfo>* tag instead. See [Passing ParametersSourceInfo data along in the map’s URL](ParametersSourceInfo.md#passing-parameterssourceinfo-data-along-in-the-maps-url).
+> It is possible to specify this attribute in the *\<ParametersSourceInfo>* tag instead. See [Passing ParametersSourceInfo data along in the map’s URL](ParametersSourceInfo.md#passing-parameterssourceinfo-data-along-in-the-maps-url).
 
 #### elementVar
 
-If, in the *\<PropertiesSourceInfo>* tag, you add an elementVar attribute with value “myElement” (referring to an element using the syntax “DMAID/ElementID” or “NameOfElement”), then you can use a map URL like one of the following instead (notice the “d” in front of the parameter name!):
+If, in the *\<PropertiesSourceInfo>* tag, you add an elementVar attribute with value “myElement” (referring to an element using the syntax “DMAID/ElementID” or “NameOfElement”), then you can use a map URL like one of the following instead (notice the “d” in front of the parameter name!):
 
 ```txt
-maps.aspx?config=MyConfigFile&dmyElement=7/46840   
+maps.aspx?config=MyConfigFile&dmyElement=7/46840
 maps.aspx?config=MyConfigFile&dmyElement=VesselData
 ```
 
@@ -104,8 +104,8 @@ Similar to the elementVar attribute, you can also use the serviceVar attribute t
 
 ```xml
 <PropertiesSourceInfo type="services" serviceVar="MyService"
-...                                                          
-</PropertiesSourceInfo>                                     
+...
+</PropertiesSourceInfo>
 ```
 
 You can then use a map URL like the following:
@@ -116,7 +116,7 @@ http://localhost/maps/map.aspx?config=managedservices&dMyService=ship
 
 #### idVar
 
-If, in the *\<PropertiesSourceInfo>* tag, you add a *\<ViewFilter>* tag with an idVar attribute set to “myView” (referring to a view either by ID or by name), then you can pass the view as a parameter in the map’s URL like this (notice the “d” in front of the parameter name!):
+If, in the *\<PropertiesSourceInfo>* tag, you add a *\<ViewFilter>* tag with an idVar attribute set to “myView” (referring to a view either by ID or by name), then you can pass the view as a parameter in the map’s URL like this (notice the “d” in front of the parameter name!):
 
 ```txt
 maps.aspx?config=MyConfigFile&dmyView=specialview
@@ -130,51 +130,51 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 #### Example of a layer retrieving its data from element properties
 
 ```xml
-<Layer sourceType="properties" refresh="20000">                                                                                                                                                                                                                                                           
-  <PropertiesSourceInfo type="elements">                                                                                                                                                                                                                                                                    
-    <LatitudePropertyName>Latitude</LatitudePropertyName>                                                                                                                                                                                                                                                    
-    <LongitudePropertyName>Longitude</LongitudePropertyName>                                                                                                                                                                                                                                                 
-    <ViewFilter id="123" idVar="paramView" includeSubViews="true" />                                                                                                                                                                                                                                          
-    <ProtocolFilter>MyProtocol</ProtocolFilter>                                                                                                                                                                                                                                                              
-  </PropertiesSourceInfo>                                                                                                                                                                                                                                                                                   
-  <MarkerImages>                                                                                                                                                                                                                                                                                            
-    <MarkerImage id="flags" url="images/icons/flag.png" width="20" height="32" anchor="0,32"              single="false" shadowUrl="images/icons/flag_shadow.png" shadowWidth="37"              shadowHeight="32" shadowAnchor="0,32" shapeType="poly"              shape="1,1,1,20,18,20,18,1" />
-  </MarkerImages>                                                                                                                                                                                                                                                                                           
-  <PopupSkeleton>                                                                                                                                                                                                                                                                                           
-    <![CDATA[                                                                                                                                                                                                                                                                                               
-      <p>Latitude: [latitude]</p>                                                                                                                                                                                                                                                                            
-      <p>Longitude: [longitude]</p>                                                                                                                                                                                                                                                                          
-    ]]>                                                                                                                                                                                                                                                                                                     
-  </PopupSkeleton>                                                                                                                                                                                                                                                                                          
-  <PopupDetails>                                                                                                                                                                                                                                                                                            
-    <Detail name="latitude" type="property" property="Latitude" />                                                                                                                                                                                                                                            
-    <Detail name="longitude" type="property" property="Longitude" />                                                                                                                                                                                                                                          
-  </PopupDetails>                                                                                                                                                                                                                                                                                           
-</Layer>                                                                                                                                                                                                                                                                                                  
+<Layer sourceType="properties" refresh="20000">
+  <PropertiesSourceInfo type="elements">
+    <LatitudePropertyName>Latitude</LatitudePropertyName>
+    <LongitudePropertyName>Longitude</LongitudePropertyName>
+    <ViewFilter id="123" idVar="paramView" includeSubViews="true" />
+    <ProtocolFilter>MyProtocol</ProtocolFilter>
+  </PropertiesSourceInfo>
+  <MarkerImages>
+    <MarkerImage id="flags" url="images/icons/flag.png" width="20" height="32" anchor="0,32" single="false" shadowUrl="images/icons/flag_shadow.png" shadowWidth="37" shadowHeight="32" shadowAnchor="0,32" shapeType="poly"  shape="1,1,1,20,18,20,18,1" />
+  </MarkerImages>
+  <PopupSkeleton>
+    <![CDATA[
+      <p>Latitude: [latitude]</p>
+      <p>Longitude: [longitude]</p>
+    ]]>
+  </PopupSkeleton>
+  <PopupDetails>
+    <Detail name="latitude" type="property" property="Latitude" />
+    <Detail name="longitude" type="property" property="Longitude" />
+  </PopupDetails>
+</Layer>
 ```
 
 #### Example of a PropertiesSourceInfo tag containing property filters
 
 ```xml
-<PropertiesSourceInfo type="elements" filterVars="customer">    
-  <LatitudePropertyName>Latitude</LatitudePropertyName>          
-  <LongitudePropertyName>Longitude</LongitudePropertyName>       
-  <ProtocolFilter>Demo</ProtocolFilter>                          
-  <PropertyFilters>                                               
+<PropertiesSourceInfo type="elements" filterVars="customer">
+  <LatitudePropertyName>Latitude</LatitudePropertyName>
+  <LongitudePropertyName>Longitude</LongitudePropertyName>
+  <ProtocolFilter>Demo</ProtocolFilter>
+  <PropertyFilters>
     <PropertyFilter>Created by == [DMA_USERNAME]</PropertyFilter>
-    <PropertyFilter>Customer == [customer]</PropertyFilter>      
-    <PropertyFilter>Latitude != n/a</PropertyFilter>               
-  </PropertyFilters>                                              
-</PropertiesSourceInfo>                                         
+    <PropertyFilter>Customer == [customer]</PropertyFilter>
+    <PropertyFilter>Latitude != n/a</PropertyFilter>
+  </PropertyFilters>
+</PropertiesSourceInfo>
 ```
 
 #### Example of a PropertiesSourceInfo tag containing an elementDataVar attribute
 
 ```xml
-<Layer sourceType="properties" refresh="20000" autoFit="false" visible="false" allowToggle="true"        name="Properties">
-  <PropertiesSourceInfo type="elements" elementVar="element" elementDataVar="elementdata">                                       
-    <LatitudePropertyName>Latitude</LatitudePropertyName>                                                                         
-    <LongitudePropertyName>Longitude</LongitudePropertyName>                                                                      
-  </PropertiesSourceInfo>                                                                                                        
-</Layer>                                                                                                                       
+<Layer sourceType="properties" refresh="20000" autoFit="false" visible="false" allowToggle="true"  name="Properties">
+  <PropertiesSourceInfo type="elements" elementVar="element" elementDataVar="elementdata">
+    <LatitudePropertyName>Latitude</LatitudePropertyName>
+    <LongitudePropertyName>Longitude</LongitudePropertyName>
+  </PropertiesSourceInfo>
+</Layer>
 ```

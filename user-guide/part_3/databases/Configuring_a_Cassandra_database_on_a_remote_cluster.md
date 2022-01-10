@@ -4,7 +4,7 @@ Different setups are possible where the Cassandra general database runs entirely
 
 ![](../../images/Cassandra_cluster100231.jpg)
 
- 
+
 
 > [!NOTE]
 > -  This procedure requires that the DMA is already using Cassandra. However, it is not limited to newly installed DMAs.
@@ -21,11 +21,11 @@ To link a DMA to a remote server with a Cassandra database:
 
     2. Locate the file *cassandra.yaml*. By default, it is located in the folder *C:\\Program Files\\Cassandra\\conf*.
 
-    3. Open *cassandra.yaml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
+    3. Open *cassandra.yaml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
 
         ```txt
-        listen_address: 127.0.0.1       
-        - seeds: "127.0.0.1"            
+        listen_address: 127.0.0.1
+        - seeds: "127.0.0.1"
         broadcast_rpc_address: 127.0.0.1
         ```
 
@@ -49,8 +49,8 @@ To link a DMA to a remote server with a Cassandra database:
         - Replace the IP address in the seeds line with that of the first Cassandra node that was installed.
 
         ```txt
-        listen_address: 127.0.0.1       
-        - seeds: "127.0.0.1"            
+        listen_address: 127.0.0.1
+        - seeds: "127.0.0.1"
         broadcast_rpc_address: 127.0.0.1
         ```
 
@@ -65,7 +65,7 @@ To link a DMA to a remote server with a Cassandra database:
 
     6. Once Cassandra has been installed on all servers, verify the status of the cluster with Nodetool:
 
-        - In a command window, execute *nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*).
+        - In a command window, execute *nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*).
 
     > [!TIP]
     > See also:
@@ -80,13 +80,13 @@ To link a DMA to a remote server with a Cassandra database:
     3. Execute the following command:
 
         ```txt
-        CREATE ROLE root WITH SUPERUSER  = true AND PASSWORD = 'root' AND LOGIN = true;
+        CREATE ROLE root WITH SUPERUSER = true AND PASSWORD = 'root' AND LOGIN = true;
         ```
 
     4. If necessary, to replicate these credentials to other nodes in the cluster, execute the following command, using a replication factor corresponding to the number of nodes in your cluster:
 
         ```txt
-        ALTER KEYSPACE "system_auth" WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };
+        ALTER KEYSPACE "system_auth" WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };
         ```
 
         > [!NOTE]
@@ -95,11 +95,11 @@ To link a DMA to a remote server with a Cassandra database:
 
 4. In DataMiner Cube, change the IP of the Cassandra node.
 
-    1. Go to *System Center* > *Database*.
+    1. Go to *System Center* > *Database*.
 
     2. Make sure the right DMA is selected in the column on the left.
 
-    3. In the *Server* box, specify the IP address or addresses of the remote servers, using a comma as a separator. E.g. *10.11.1.12,10.11.2.1*.
+    3. In the *Server* box, specify the IP address or addresses of the remote servers, using a comma as a separator. E.g. *10.11.1.12,10.11.2.1*.
 
     4. Click the *Save* button in the lower right corner.
 
@@ -107,22 +107,22 @@ To link a DMA to a remote server with a Cassandra database:
 
     1. Shut down the DMA.
 
-    2. Open the file *DB.xml* from the directory *C:\\Skyline DataMiner* in a text editor.
+    2. Open the file *DB.xml* from the directory *C:\\Skyline DataMiner* in a text editor.
 
-    3. In the \<Database> tag, add the *consistencyLevel=”x”* attribute, and set it to the consistency level you want, e.g. *two*.
+    3. In the \<Database> tag, add the *consistencyLevel=”x”* attribute, and set it to the consistency level you want, e.g. *two*.
 
         > [!NOTE]
         > -  The following possible consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOn. For more information, see [https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.md).
-        > -  The *consistencyLevel* attribute should only be changed in case the Cassandra cluster feature is used or a remote Cassandra server is used. If the standard configuration of one Cassandra cluster per DMA is used, changing this attribute can cause the DMA to fail to start up.
+        > -  The *consistencyLevel* attribute should only be changed in case the Cassandra cluster feature is used or a remote Cassandra server is used. If the standard configuration of one Cassandra cluster per DMA is used, changing this attribute can cause the DMA to fail to start up.
 
     4. Optionally, to adjust the timeout time to read from the database, adjust the value (in milliseconds) in the readTimeOut tag. By default, this is set to five minutes. For example:
 
         ```xml
-        <DataBase type ="Cassandra">      
-          ...                                
+        <DataBase type ="Cassandra">
+          ...
           <readTimeOut>300000</readTimeOut>
-          ...                                
-        </DataBase>                       
+          ...
+        </DataBase>
         ```
 
     5. Restart DataMiner.
@@ -131,15 +131,15 @@ To link a DMA to a remote server with a Cassandra database:
 
     1. Run *services.msc*.
 
-    2. In the *Services* window, right-click the *cassandra* service and select *Properties*.
+    2. In the *Services* window, right-click the *cassandra* service and select *Properties*.
 
     3. If the service is currently running, click the *Stop* button.
 
-    4. In the *Startup type* box, select *Disabled*.
+    4. In the *Startup type* box, select *Disabled*.
 
     5. Click *OK*.
 
-7. Once you are sure you no longer need the old database data as a backup (e.g. a few months after the migration), remove the old database data folders (by default *C:\\ProgramData\\Cassandra\\SLDMADB* and *C:\\ProgramData\\Cassandra\\sldmadb_ticketing*).
+7. Once you are sure you no longer need the old database data as a backup (e.g. a few months after the migration), remove the old database data folders (by default *C:\\ProgramData\\Cassandra\\SLDMADB* and *C:\\ProgramData\\Cassandra\\sldmadb_ticketing*).
 
 ### Configuring a Failover setup with remote Cassandra databases
 
@@ -152,17 +152,17 @@ To configure a Failover setup with remote Cassandra databases:
 3. Configure the *cassandra.yaml* file for the main DMA as follows:
 
     ```txt
-    listen_address: [IP of the main DMA]                
+    listen_address: [IP of the main DMA]
     seeds: [IP of the main DMA],[IP of the backup DMA]
-    rpc_address: 0.0.0.0                                                                   
-    broadcast_rpc_address: [IP of the main DMA]         
+    rpc_address: 0.0.0.0
+    broadcast_rpc_address: [IP of the main DMA]
     ```
 
 4. Configure the *cassandra.yaml* file for the backup DMA as follows:
 
     ```txt
-    listen_address: [IP of the backup DMA]              
+    listen_address: [IP of the backup DMA]
     seeds: [IP of the main DMA],[IP of the backup DMA]
-    rpc_address: 0.0.0.0                                                                   
-    broadcast_rpc_address: [IP of the backup DMA]       
+    rpc_address: 0.0.0.0
+    broadcast_rpc_address: [IP of the backup DMA]
     ```

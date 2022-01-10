@@ -12,14 +12,14 @@ The polling speed of an element is determined by the timers specified in the ele
 
 ### Required protocol settings to allow timer base changes
 
-The \[Timer base\] parameter will only affect so-called relative timers. As such, it can only be used in conjunction with element protocols where the *relativeTimers* attribute of the *Protocol.Type* tag has been set to “*true*” or “*true with reset*”.
+The \[Timer base\] parameter will only affect so-called relative timers. As such, it can only be used in conjunction with element protocols where the *relativeTimers* attribute of the *Protocol.Type* tag has been set to “*true*” or “*true with reset*”.
 
 - If *Protocol.Type* is set to “*true*”, the timers will not immediately be reset when the \[Timer base\] parameter is changed. Running timers will continue and will be reset at the next iteration.
 
 - If *Protocol.Type* is set to “*true with reset*”, all timers will immediately be reset when the \[Timer base\] parameter is changed.
 
 > [!NOTE]
-> If you set the *relativeTimers* attribute of the *Protocol.Type* tag to “*true*” or “*true with reset*”, all timers specified in that protocol will be relative timers. If, however, you want one or more specific timers to be fixed timers (i.e. timers with a fixed frequency, whatever the value of the \[Timer Base\] Parameter), you can set the *fixedTimer* attribute of their *Protocol.Timers.Timer* tag to “*true*”.
+> If you set the *relativeTimers* attribute of the *Protocol.Type* tag to “*true*” or “*true with reset*”, all timers specified in that protocol will be relative timers. If, however, you want one or more specific timers to be fixed timers (i.e. timers with a fixed frequency, whatever the value of the \[Timer Base\] Parameter), you can set the *fixedTimer* attribute of their *Protocol.Timers.Timer* tag to “*true*”.
 
 ### \[Timer Base\] parameter functionality
 
@@ -66,7 +66,7 @@ The \[Timer base\] parameter can be set to a value ranging from 0.01 to 10.00.
 
 1. In the Surveyor, right-click one of the elements in question and select *Multiple Set*.
 
-2. In the *Multiple Set* dialog box, set the *Parameter* selection box to *\[Timer base\]*.
+2. In the *Multiple Set* dialog box, set the *Parameter* selection box to *\[Timer base\]*.
 
 3. Below this, in the box next to *Value*, enter the new \[Timer base\] value or use the slider to select the value.
 

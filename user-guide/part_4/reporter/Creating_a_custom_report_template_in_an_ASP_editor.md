@@ -5,11 +5,11 @@ To create a custom report template from scratch, do the following:
 1. In your ASP editor, enter the following base structure:
 
     ```xml
-    <%@ Language="JScript" %>                 
+    <%@ Language="JScript" %>
     <!-- #include file="Templates.inc.asp" -->
-    <%                                        
-    // generate web page here                  
-    %>                                         
+    <%
+    // generate web page here
+    %>
     ```
 
 2. Under the *// generate webpage here* line, start writing your ASP code.
@@ -41,14 +41,14 @@ template.doSomething("some string", 123)
 Name/value pairs have to be passed as objects of type “AssocArray”:
 
 ```txt
-template.doSomething(                       
-    new AssocArray(                             
-        'start', 0,                                 
-        'element', 'ALL_ELEMENTS',                  
-        'state', stateType,                         
+template.doSomething(
+    new AssocArray(
+        'start', 0,
+        'element', 'ALL_ELEMENTS',
+        'state', stateType,
         'includedElementTypes', includedElementTypes
-    )                                           
-);                                          
+    )
+);
 ```
 
 #### Passing parameters using associative arrays
@@ -56,51 +56,51 @@ template.doSomething(
 A clean way of passing parameters is by using JavaScript associative arrays:
 
 ```txt
-template.doSomething(                     
-    {                                         
-        start: 0,                                 
-        element: 'ALL_ELEMENTS',                  
-        state: stateType,                         
+template.doSomething(
+    {
+        start: 0,
+        element: 'ALL_ELEMENTS',
+        state: stateType,
         includedElementTypes: includedElementTypes
-    }                                         
-);                                        
+    }
+);
 ```
 
 ### Example of a custom report template
 
 ```xml
-<%@ Language="JScript" %>                                                        
-<!-- #include file="Templates.inc.asp" -->                                       
-<%                                                                               
-  Response.Write('<table>');                                                       
-  Response.Write('<tr>' +                                                          
-  '<th>Element Name</th>' +                                                       
-  '<th>Description</th>' +                                                        
-  '<th>ID</th>' +                                                                 
-  '<th>Type</th>' +                                                               
-  '<th>Protocol</th>' +                                                           
-  '<th>Alarm Template</th>' +                                                     
-  '<th>Amount of open alarms</th>' +                                              
-  '<th>Polling Type</th>' +                                                       
-  '<th>Polling IP Address</th>' +                                                 
-  '<th>Polling IP Port</th>' +                                                    
-  '</tr>');                                                                        
-  for (var iElement = 0; iElement < template.getAmountOfElements(); iElement++)    
-  {                                                                                 
-    oElement = template.getElementInfo(iElement);                                     
-    Response.Write('<tr>');                                                          
-    Response.Write('<td>' + oElement.getFullName() + '</td>');                      
-    Response.Write('<td>' + oElement.getDescription() + '</td>');                   
-    Response.Write('<td>' + oElement.getDMAID() + '/' + oElement.getID() + '</td>');
-    Response.Write('<td>' + oElement.getType() + '</td>');                          
-    Response.Write('<td>' + oElement.getProtocolId() + '</td>');                    
-    Response.Write('<td>' + oElement.getAlarmTemplate() + '</td>');                 
-    Response.Write('<td>' + oElement.getAmountOpenAlarms() + '</td>');              
-    Response.Write('<td>' + oElement.getPollingType() + '</td>');                   
-    Response.Write('<td>' + oElement.getPollingIP() + '</td>');                     
-    Response.Write('<td>' + oElement.getPollingPort() + '</td>');                   
-    Response.Write('</tr>');                                                         
-  }                                                                                 
-  Response.Write('</table>');                                                      
-%>                                                                                
+<%@ Language="JScript" %>
+<!-- #include file="Templates.inc.asp" -->
+<%
+  Response.Write('<table>');
+  Response.Write('<tr>' +
+  '<th>Element Name</th>' +
+  '<th>Description</th>' +
+  '<th>ID</th>' +
+  '<th>Type</th>' +
+  '<th>Protocol</th>' +
+  '<th>Alarm Template</th>' +
+  '<th>Amount of open alarms</th>' +
+  '<th>Polling Type</th>' +
+  '<th>Polling IP Address</th>' +
+  '<th>Polling IP Port</th>' +
+  '</tr>');
+  for (var iElement = 0; iElement < template.getAmountOfElements(); iElement++)
+  {
+    oElement = template.getElementInfo(iElement);
+    Response.Write('<tr>');
+    Response.Write('<td>' + oElement.getFullName() + '</td>');
+    Response.Write('<td>' + oElement.getDescription() + '</td>');
+    Response.Write('<td>' + oElement.getDMAID() + '/' + oElement.getID() + '</td>');
+    Response.Write('<td>' + oElement.getType() + '</td>');
+    Response.Write('<td>' + oElement.getProtocolId() + '</td>');
+    Response.Write('<td>' + oElement.getAlarmTemplate() + '</td>');
+    Response.Write('<td>' + oElement.getAmountOpenAlarms() + '</td>');
+    Response.Write('<td>' + oElement.getPollingType() + '</td>');
+    Response.Write('<td>' + oElement.getPollingIP() + '</td>');
+    Response.Write('<td>' + oElement.getPollingPort() + '</td>');
+    Response.Write('</tr>');
+  }
+  Response.Write('</table>');
+%>
 ```

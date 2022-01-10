@@ -7,7 +7,7 @@ Possible actions include: displaying the minimum, maximum, sum or average of a s
 > [!NOTE]
 > -  This feature only works in DataMiner Cube.
 > -  All parameter values used in a **ParametersSummary** field must be of type “double”.
-> -  By default, the summary value is calculated when all parameter values are available. However, if you add a shape data field of type **Options** and set its value to “*IgnoreUnsetValues*”, the summary value will appear as soon as one of the values is available.
+> -  By default, the summary value is calculated when all parameter values are available. However, if you add a shape data field of type **Options** and set its value to “*IgnoreUnsetValues*”, the summary value will appear as soon as one of the values is available.
 
 ### Configuring the shape data field
 
@@ -18,7 +18,7 @@ Add a shape data field of type **ParametersSummary** to the shape, and set its v
 ```
 
 > [!NOTE]
-> Do not combine this shape data field with an **Element** shape data field on the same shape, as the defined actions may not work correctly in that case.
+> Do not combine this shape data field with an **Element** shape data field on the same shape, as the defined actions may not work correctly in that case.
 
 ### Syntax of the ParametersSummary value
 
@@ -68,7 +68,7 @@ Element:Parameter:Index
 
     - Parameter ID
 
-    - Parameter name (can also be the parameter alias specified in *informations.xml* or *description.xml*)
+    - Parameter name (can also be the parameter alias specified in *informations.xml* or *description.xml*)
 
     - Parameter name filter (containing “?” and/or “\*” wildcards)
 
@@ -91,17 +91,17 @@ In the Actions section, you can specify the actions to be performed. If you spec
 Action:Action:Action:...
 ```
 
-- **ALARM**: The shape will be filled with the maximum (default) or minimum alarm severity color. If you want to display the latch color, add a **Latch** shape data field next to the **ParametersSummary** field and set it to “TRUE”.
+- **ALARM**: The shape will be filled with the maximum (default) or minimum alarm severity color. If you want to display the latch color, add a **Latch** shape data field next to the **ParametersSummary** field and set it to “TRUE”.
 
 - **FLIPX;condition1;condition2;...** : The shape will be flipped on its X-axis if one of the conditions is true.
 
-- **FLIPY;condition1;condition2;...** : The shape will be flipped on its Y-axis if one of the conditions is true.
+- **FLIPY;condition1;condition2;...** : The shape will be flipped on its Y-axis if one of the conditions is true.
 
-- **HIDE;condition1;condition2;...** : The shape will be hidden if one of the conditions is true.
+- **HIDE;condition1;condition2;...** : The shape will be hidden if one of the conditions is true.
 
-- **SHOW;condition1;condition2;...** : The shape will be shown if one of the conditions is true.
+- **SHOW;condition1;condition2;...** : The shape will be shown if one of the conditions is true.
 
-- **ROTATE;condition1,angle;condition2,angle;...** : The shape will be rotated by the specified angle if one of the conditions is true.
+- **ROTATE;condition1,angle;condition2,angle;...** : The shape will be rotated by the specified angle if one of the conditions is true.
 
 - NONE: No action will be performed.
 
@@ -116,9 +116,9 @@ Action:Action:Action:...
 Here are a few examples of **ParametersSummary** values:
 
 ```txt
-Min|6/97148:176|6/97149:176|6/97150:176|                                     
-Max|6/97148:176|6/97149:176|6/97150:176|ALARM                                
-Sum|6/97148:176|6/97149:176|6/97150:176|ROTATE;>10,25                        
-Sum|6/97160:114:row1|6/97160:114:row2|FLIPX;>10                               
+Min|6/97148:176|6/97149:176|6/97150:176|
+Max|6/97148:176|6/97149:176|6/97150:176|ALARM
+Sum|6/97148:176|6/97149:176|6/97150:176|ROTATE;>10,25
+Sum|6/97160:114:row1|6/97160:114:row2|FLIPX;>10
 Min|6/97148:*custom description|[property:Element in vdx]:176|6/97150:176|
 ```

@@ -20,11 +20,11 @@ In this section:
 
 To add C# code to a script:
 
-1. In DataMiner Cube, go to *Apps* > *Automation*.
+1. In DataMiner Cube, go to *Apps* > *Automation*.
 
 2. In the *Automation* module, select the script to which you want to add C# code.
 
-3. In the *Add Action* selection box, select *C# Code*.
+3. In the *Add Action* selection box, select *C# Code*.
 
 4. In the field mentioning *Enter code here*, enter the C# code.
 
@@ -104,21 +104,21 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
     In the example above, DataMiner will create a class Script with a static method Run, where the provided content in the C# code field will form the body of this Run method:
 
     ```cs
-    using System;                                                          
-    using System.IO;                                                       
-    using Skyline.DataMiner.Automation;                                    
-    using Skyline.DataMiner.Net;                                           
-    using Skyline.DataMiner.Net.Exceptions;                                
-    using Skyline.DataMiner.Net.Messages;                                  
-    using Skyline.DataMiner.Net.AutomationUI;                              
+    using System;
+    using System.IO;
+    using Skyline.DataMiner.Automation;
+    using Skyline.DataMiner.Net;
+    using Skyline.DataMiner.Net.Exceptions;
+    using Skyline.DataMiner.Net.Messages;
+    using Skyline.DataMiner.Net.AutomationUI;
     // Other using statements as defined in the Namespace references field.
-                                                                           
-    public class Script                                                    
-    {                                                                      
-       public static void Run(Engine engine) {                             
-       engine.GenerateInformation("Hello");                                
-    }                                                                      
-    }                                                                      
+
+    public class Script
+    {
+     public static void Run(Engine engine) {
+     engine.GenerateInformation("Hello");
+    }
+    }
     ```
 
     > [!NOTE]
@@ -129,14 +129,14 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
     Example:
 
     ```cs
-    using Skyline.DataMiner.Automation; 
-    public class Script                 
-    {                                   
-        public void Run(Engine engine)      
-        {                                   
+    using Skyline.DataMiner.Automation;
+    public class Script
+    {
+        public void Run(Engine engine)
+        {
             engine.GenerateInformation("Hello");
-        }                                   
-    }                                   
+        }
+    }
     ```
 
     > [!NOTE]
@@ -169,16 +169,16 @@ From DataMiner 10.1.0 CU3/10.1.6 onwards, DataMiner compiles C# blocks of Automa
     In C# blocks, all code related to alarm squashing (i.e. the combination of consecutive alarm events without a severity change into a single consolidated event) should be enclosed as follows, to allow protocols that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing:
 
     ```cs
-    #if ALARM_SQUASHING                                                 
-       // Code specific for alarm squashing (DataMiner 10.1.0 and later)
-    #else                                                               
-       // Code for DataMiner 10.0.0 and earlier                         
-    #endif                                                              
+    #if ALARM_SQUASHING
+     // Code specific for alarm squashing (DataMiner 10.1.0 and later)
+    #else
+     // Code for DataMiner 10.0.0 and earlier
+    #endif
     ```
 
 ### Script timeout
 
-To prevent problems caused by faulty script statements, every C# code block has a default timeout delay of 10 minutes. If the execution of a C# code block takes longer than 10 minutes, it is aborted.
+To prevent problems caused by faulty script statements, every C# code block has a default timeout delay of 10 minutes. If the execution of a C# code block takes longer than 10 minutes, it is aborted.
 
 Inside a code block, you can change the timeout delay for that particular code block by setting the Timeout property of the engine object.
 
@@ -192,14 +192,14 @@ engine.Timeout = TimeSpan.FromMinutes(30);
 
 Up to DataMiner 9.5.12, an Automation script can only have one fixed entry point, i.e. the "Run" method in the "Script" class. However, from DataMiner 9.5.12 onwards, you can define custom entry points:
 
-To define a custom entry point, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular Automation script entry point, specify *AutomationEntryPointType.Types.Default*:
+To define a custom entry point, provide the method you want to use as entry point with the attribute *AutomationEntryPointAttribute* and specify the type of the entry point. For a regular Automation script entry point, specify *AutomationEntryPointType.Types.Default*:
 
 ```cs
 [AutomationEntryPoint(AutomationEntryPointType.Types.Default)]
-public void Default(IEngine engine)                             
-{                                                               
-   engine.GenerateInformation("Default");                       
-}                                                               
+public void Default(IEngine engine)
+{
+ engine.GenerateInformation("Default");
+}
 ```
 
 The method must match the following delegate type:
@@ -211,11 +211,11 @@ public delegate void Default(IEngine engine);
 For testing purposes, you can use the *AutomationEntryPointTest* type:
 
 ```cs
-[AutomationEntryPoint(AutomationEntryPointType.Types.AutomationEntryPointTest)]                                            
-public void AutomationEntryPointTest(Engine engine, string testMessage, List<int> testIntList)                              
-{                                                                                                                            
-   engine.GenerateInformation("AutomationEntryPointTest: " + testMessage + " " + string.Join("", "", testIntList.ToArray()));
-}                                                                                                                            
+[AutomationEntryPoint(AutomationEntryPointType.Types.AutomationEntryPointTest)]
+public void AutomationEntryPointTest(Engine engine, string testMessage, List<int> testIntList)
+{
+ engine.GenerateInformation("AutomationEntryPointTest: " + testMessage + " " + string.Join("", "", testIntList.ToArray()));
+}
 ```
 
 Methods annotated with the test type attribute must match the following delegate type:
@@ -243,11 +243,11 @@ Restrictions:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/>
 
 #### Sample snippets in shortcut menu
 
-When you right-click in the code editor, a shortcut menu will appear. From the *Sample Snippets* submenu, you can select a number of C# sample snippets.
+When you right-click in the code editor, a shortcut menu will appear. From the *Sample Snippets* submenu, you can select a number of C# sample snippets.
 
 These snippets will prove helpful when learning how to use C# code in DMS Automation scripts, and will also provide a way to quickly add frequently used code.
 
@@ -257,7 +257,7 @@ To verify the syntax of the C# code you entered in the code editor:
 
 - Below the editor field, click *Validate*.
 
-    If errors are found, these are enumerated in a field next to the *Validate* field. Click this field to quickly navigate to the errors in the code block.
+    If errors are found, these are enumerated in a field next to the *Validate* field. Click this field to quickly navigate to the errors in the code block.
 
 #### IntelliSense
 

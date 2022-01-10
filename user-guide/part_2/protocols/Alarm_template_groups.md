@@ -37,13 +37,13 @@ In an alarm template, every parameter can have one of three monitoring states:
 | Excluded                     | No                             | No        |
 
 > [!NOTE]
-> When you edit an alarm template, do not forget to check the *Allow include/exclude parameters* option in the *Details* section.
+> When you edit an alarm template, do not forget to check the *Allow include/exclude parameters* option in the *Details* section.
 
 ### Creating an alarm template group
 
 To create a new alarm template group:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select a protocol in the first column and a protocol version in the second column.
 
@@ -53,11 +53,11 @@ To create a new alarm template group:
 
     2. Click the cogwheel button at the top of the alarm template editor and make sure the option *Allow include/exclude parameters* is selected.
 
-    3. In the *Included* column, check if the correct parameters are included or excluded for alarm template grouping:
+    3. In the *Included* column, check if the correct parameters are included or excluded for alarm template grouping:
 
-        - If the *Included* column is not displayed, click the settings button and select *Allow include/exclude parameters (used for alarm template grouping).*
+        - If the *Included* column is not displayed, click the settings button and select *Allow include/exclude parameters (used for alarm template grouping).*
 
-        - For each parameter, a button is displayed that shows *Included* or *Excluded*. Click this button to change a parameter from included to excluded or vice versa.
+        - For each parameter, a button is displayed that shows *Included* or *Excluded*. Click this button to change a parameter from included to excluded or vice versa.
 
         > [!NOTE]
         > It is also possible to include or exclude parameters through the template editor right-click menu.
@@ -94,6 +94,6 @@ To create a new alarm template group:
 9. Click *OK*.
 
 > [!NOTE]
-> -  Any alarm templates that are only used in an alarm template group will have the notice *Used in group* next to the template name in the Protocols & Templates module. If a user tries to delete such an alarm template, he will receive a warning that indicates in which group or groups the template is used.
+> -  Any alarm templates that are only used in an alarm template group will have the notice *Used in group* next to the template name in the Protocols & Templates module. If a user tries to delete such an alarm template, he will receive a warning that indicates in which group or groups the template is used.
 > -  If scheduled alarm templates are used in an alarm template group, they will not be in use in the group at the moment when they are scheduled to be inactive.
 >

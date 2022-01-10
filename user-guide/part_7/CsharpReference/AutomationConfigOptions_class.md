@@ -14,4 +14,4 @@ The structure of these classes is as follows, with the subclasses inheriting all
 
 ![](../../images/AutomationUIConfigOptions_diagram.jpg)
 
- 
+

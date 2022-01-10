@@ -1,13 +1,13 @@
 ## General parameters
 
-For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in Cube. This page contains parameters that apply to the DataMiner element itself, rather than the device the element represents. Depending on the type of element, some general parameters may or may not be available. An overview of these parameters can be found below.
+For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in Cube. This page contains parameters that apply to the DataMiner element itself, rather than the device the element represents. Depending on the type of element, some general parameters may or may not be available. An overview of these parameters can be found below.
 
 > [!NOTE]
 > Replicated elements only replicate the \[Lock status\], \[Lock owner\] and \[Timer base\] general parameters.
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-general-parameters/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-general-parameters/>
 
 #### \[Lock status\]
 
@@ -79,7 +79,7 @@ Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a mo
 > -  If no alarm property named "System Name" exists within the DataMiner System, it will not be created. Only creating an element with a topology cell definition will cause this alarm property to be created.
 > -  Updating this general parameter will not cause the values defined by a topology cell definition to be overwritten.
 > -  Updating this general parameter will trigger a "Property Changed" update on the active alarms of the element, even on alarms relying on the topology cell definition in the protocol rather than this general parameter.
-> -  Exported DVE elements will not inherit the value of this parameter from the main element. However, virtual functions (used in the SRM Solution) do inherit this parameter from the main element. 
+> -  Exported DVE elements will not inherit the value of this parameter from the main element. However, virtual functions (used in the SRM Solution) do inherit this parameter from the main element.
 
 #### \[Properties\]
 
@@ -91,7 +91,7 @@ This table contains an overview of the element properties.
 
 #### \[Communication info state\]
 
-This general parameter can be used to determine whether the *\[Communication Info\]* table is updated.
+This general parameter can be used to determine whether the *\[Communication Info\]* table is updated.
 
 #### \[Communication Info\]
 
@@ -103,7 +103,7 @@ This table contains an overview of the different connections. For each connectio
 
 #### DataMiner Connectivity Framework
 
-The DataMiner Connectivity Framework subpage, which can be accessed via the *Configure* page button on the *General Parameters* page, contains information regarding element connectivity.
+The DataMiner Connectivity Framework subpage, which can be accessed via the *Configure* page button on the *General Parameters* page, contains information regarding element connectivity.
 
 > [!TIP]
 > See also:
@@ -111,7 +111,7 @@ The DataMiner Connectivity Framework subpage, which can be accessed via the *Con
 
 #### Replication Info
 
-The Replication Info subpage, which can be accessed via the *View* page button on the *General Parameters* page, contains information about replicated elements. This subpage contains the following general parameters:
+The Replication Info subpage, which can be accessed via the *View* page button on the *General Parameters* page, contains information about replicated elements. This subpage contains the following general parameters:
 
 - **\[Replicated element\]**: Indicates whether the current element is a replicated element.
 

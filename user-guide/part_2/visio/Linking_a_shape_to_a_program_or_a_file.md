@@ -14,7 +14,7 @@ When you link a shape to a program or a file, the program will be started or the
 Add a shape data field of type **Link** to the shape, and set its value to:
 
 ```txt
-FileName|Parameters|Tooltip   
+FileName|Parameters|Tooltip
 ProgramName|Parameters|Tooltip
 ```
 

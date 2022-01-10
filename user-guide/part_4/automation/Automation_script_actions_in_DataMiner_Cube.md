@@ -1,6 +1,6 @@
 # Automation script actions in DataMiner Cube
 
-With the *Add action* drop-down list, you can choose different actions to add to a script. You can then further configure these actions by clicking the underlined sections.
+With the *Add action* drop-down list, you can choose different actions to add to a script. You can then further configure these actions by clicking the underlined sections.
 
 The following actions are available in Cube:
 

@@ -14,10 +14,10 @@ Instead of creating a dashboard from scratch, you can instead first import an ex
 
     If you right-clicked a particular folder at the start of this procedure, this folder will automatically be selected.
 
-5. In the *Security* box, select whether other users should be able to view and edit the dashboard.
+5. In the *Security* box, select whether other users should be able to view and edit the dashboard.
 
     > [!NOTE]
-    > -  Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](Changing_dashboard_settings.md). 
+    > -  Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](Changing_dashboard_settings.md).
     > -  The built-in Administrator account always has full access to all dashboards.
 
 6. Click *OK*.
@@ -34,5 +34,5 @@ Instead of creating a dashboard from scratch, you can instead first import an ex
 
 > [!NOTE]
 > -  The following characters are not allowed in the name of a dashboard or dashboard folder: / \\ : ; \* ? \< \> \| °<br>If you do specify a backslash (“\\”) in a folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
-> -  The example dashboards can be found in the folder *C:\\Skyline DataMiner\\ImportDashboards* on the server. Any dashboard that is placed in this folder will become available for import.
+> -  The example dashboards can be found in the folder *C:\\Skyline DataMiner\\ImportDashboards* on the server. Any dashboard that is placed in this folder will become available for import.
 >

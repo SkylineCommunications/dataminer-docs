@@ -1,6 +1,6 @@
 # Configuring the TCP-IP socket settings
 
-If you want a DataMiner Agent to forward information to third-party applications via TCP/IP sockets, you have to configure the socket settings in the *DataMiner.xml* file, which is located in the DMA’s *C:\\Skyline DataMiner\\* directory.
+If you want a DataMiner Agent to forward information to third-party applications via TCP/IP sockets, you have to configure the socket settings in the *DataMiner.xml* file, which is located in the DMA’s *C:\\Skyline DataMiner\\* directory.
 
 The following sections contain more information on this configuration:
 

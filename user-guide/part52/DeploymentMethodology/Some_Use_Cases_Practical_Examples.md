@@ -8,7 +8,7 @@ TURNKEY PROJECT
 
 - As Visual Overview has a great many features and capabilities, resulting in endless possibilities, and the required results also depend on the preferences of the user (personal preferences and opinions, influence of past habits and ways of working, etc.), the process of specifying the design specification must be a collaborative and iterative effort between Skyline and the user.
 
-- Once the design specification is signed off, the overall efforts will be estimated and quoted.  Upon receipt of a purchase order, the graphics will be implemented in line with those agreed design specifications. This will be done at the time planned, and on the condition that all other prerequisites are in place (e.g. data sources are integrated, tested, validated and present).  
+- Once the design specification is signed off, the overall efforts will be estimated and quoted. Upon receipt of a purchase order, the graphics will be implemented in line with those agreed design specifications. This will be done at the time planned, and on the condition that all other prerequisites are in place (e.g. data sources are integrated, tested, validated and present).
 
 - If after the sign-off of the design specification any changes are required, then this will be governed by a formal Change Request, which will also specify the impact on time and cost. The same applies if the planned activity cannot take place as planned because of external dependencies that are not in place. Only after a formal sign-off on the Change Request, can the changes be executed.
 
@@ -44,7 +44,7 @@ TURNKEY PROJECT
 
     - The firmware or API specification changed in comparison to what was planned. In this case, a Change Request must specify the impact on the overall project timeline and cost.
 
-- If all prerequisites are in place, the development activity is executed as planned.  
+- If all prerequisites are in place, the development activity is executed as planned.
 
 - If during the scheduled development specific issues or concerns arise based on variables that cannot be controlled by Skyline, this will be governed by a Change Request, with an assessment of impact on cost and timing. This could for example be because:
 
@@ -74,7 +74,7 @@ AGILE SCOPE-BASED PROJECT
 
         - If, for example, there are performance issues with the third-party product, the development activity can be paused to prevent any further waste of time, and discussions can start with the technology vendor to see if the issue can be resolved.
 
-        - The time lost, which is typically limited if the issue is detected at an early stage and can be mitigated, is then compensated in the Solution Backlog in line with the guidelines provided for this, to ensure that the overall project cost and timing are kept steady.  
+        - The time lost, which is typically limited if the issue is detected at an early stage and can be mitigated, is then compensated in the Solution Backlog in line with the guidelines provided for this, to ensure that the overall project cost and timing are kept steady.
 
             Note that while the Project Squad has all the means to respond with as much agility as possible to such situations, there are also limitations as to how much unexpected time expenditure it can absorb. Not all activities can be continuously delayed with an expectation to tackle all of them at once at the end of the project. The continuous time balancing of the Solution Backlog ensures that the Project Squad has good visibility on when the anticipated final delivery date becomes at risk, and they can effectively mitigate this risk.
 
@@ -125,8 +125,8 @@ AGILE SCOPE-BASED PROJECT
 
 - The Project Squad Solution Owner works with the user in a timely fashion to ensure that everything related to this activity is as well defined and prepared as it can be. This includes determining what the expectations of the user are for this integration, what the real value is and what the objectives are, what the prerequisites are for this integration, what kind of information is already available and what is missing, where this integration fits into the overall objectives of the project, etc.
 
-    This is done in a pragmatic way, i.e. all certitudes and possible already-known details are properly documented and prepared as much as possible, so that the Project Squad can develop the required automation logic as efficiently as reasonably possible.       However, at the same time the involved staff will not venture into the unknown and speculate about matters that cannot be firmly concluded upon, as this could potentially result in a lot of wasted time and valuable resources. The development of the service provisioning automation will be done in a succession of iterations, with room to review the work, and to fine-tune details based on the circumstances and details that reveal itself.
-    In that sense, from a practical point of view it is of no use to fully review, scrutinize and test all the APIs of the involved third-party products. A high-level functional review of the key products will suffice, and these will be assumed to comply with the industry-standard best practices to support the envisioned workflows. Should any issues or constraints arise during the development, the Project Squad will deal with this in a pragmatic manner in close collaboration with the stakeholders.  
+    This is done in a pragmatic way, i.e. all certitudes and possible already-known details are properly documented and prepared as much as possible, so that the Project Squad can develop the required automation logic as efficiently as reasonably possible.      However, at the same time the involved staff will not venture into the unknown and speculate about matters that cannot be firmly concluded upon, as this could potentially result in a lot of wasted time and valuable resources. The development of the service provisioning automation will be done in a succession of iterations, with room to review the work, and to fine-tune details based on the circumstances and details that reveal itself.
+    In that sense, from a practical point of view it is of no use to fully review, scrutinize and test all the APIs of the involved third-party products. A high-level functional review of the key products will suffice, and these will be assumed to comply with the industry-standard best practices to support the envisioned workflows. Should any issues or constraints arise during the development, the Project Squad will deal with this in a pragmatic manner in close collaboration with the stakeholders.
 
 - The Project Squad Product Owner ensures that everybody is fully aware of when this activity must be completed at the latest, i.e. when it could be blocking for other activities and when it becomes critical towards the final overall delivery of the project.
 
@@ -136,17 +136,17 @@ AGILE SCOPE-BASED PROJECT
 
     - If the issue has not yet significantly affected the time expenditure, the activity can be paused, and the issue can be handed over to the Project Squad Solution Owner and/or the Project Squad Product Owner to resolve, so that the activity can be resumed later.
 
-        For example, all development has progressed according to plan, but no configuration setting from DataMiner towards an involved third-party product can be implemented and tested, because the test environment is not fully available for this type of testing. The activity can be paused, and the necessary preparations can be made to ensure that proper testing can be executed on the involved third-party product in a timely fashion. 
+        For example, all development has progressed according to plan, but no configuration setting from DataMiner towards an involved third-party product can be implemented and tested, because the test environment is not fully available for this type of testing. The activity can be paused, and the necessary preparations can be made to ensure that proper testing can be executed on the involved third-party product in a timely fashion.
 
         Or as an alternative example, all development has progressed nicely as planned, but the user expectations around the further details of the use case at hand are not entirely clear. The activity can be paused, and the Solution Owner and/or the Project Squad Product Owner will work with the Stakeholders and users to resolve this, so that the activity can progress again at a later stage.
 
-    - If the issue resulted in excess time expenditure as compared to what was initially envisioned, then this needs to be resolved by the Project Squad Product Owner.  Because for an Agile Scope-Based project all parties agreed that the effort and execution timeline need to be maintained at all times, this is an explicit priority for the project at hand.
+    - If the issue resulted in excess time expenditure as compared to what was initially envisioned, then this needs to be resolved by the Project Squad Product Owner. Because for an Agile Scope-Based project all parties agreed that the effort and execution timeline need to be maintained at all times, this is an explicit priority for the project at hand.
 
         - If, for example, there are performance issues with the third-party product, the development activity can be paused to prevent any further waste of time, and discussions can start with the technology vendor to see if the issue can be resolved.
 
-        - The time lost, which is typically limited if the issue is detected at an early stage and can be mitigated, is then compensated in the Solution Backlog in line with the guidelines provided for this, to ensure that the overall project effort and timing are kept in balance.  
+        - The time lost, which is typically limited if the issue is detected at an early stage and can be mitigated, is then compensated in the Solution Backlog in line with the guidelines provided for this, to ensure that the overall project effort and timing are kept in balance.
 
-            Note that while the Project Squad has all the means to respond with as much agility as possible to such situations, there are also limitations as to how much unexpected time expenditure it can absorb. Not all activities can be continuously delayed with an expectation to tackle all of them at once at the end of the project.               The continuous time balancing of the Solution Backlog ensures that the Project Squad has good visibility on when the anticipated final delivery date becomes at risk, and they can effectively mitigate this risk.
+            Note that while the Project Squad has all the means to respond with as much agility as possible to such situations, there are also limitations as to how much unexpected time expenditure it can absorb. Not all activities can be continuously delayed with an expectation to tackle all of them at once at the end of the project.              The continuous time balancing of the Solution Backlog ensures that the Project Squad has good visibility on when the anticipated final delivery date becomes at risk, and they can effectively mitigate this risk.
 
 AGILE T&M PROJECT
 
@@ -158,6 +158,6 @@ As the Agile T&M engagement is essentially based on a time expenditure basis, th
 
 - The assigned decision maker decides on what exactly the available engineering resources should work and for how long (presumably weighing effort versus business value).
 
- 
 
- 
+
+

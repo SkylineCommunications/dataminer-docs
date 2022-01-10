@@ -2,7 +2,7 @@
 
 Spectrum analyzer cards are a special type of element cards in DataMiner Cube. They usually have 2 pages, though depending on the protocol additional pages are possible:
 
-- *General* page: contains general information about the analyzer and some additional functions, e.g. serial number, firmware version, switch screen on/off, run calibration, etc.
+- *General* page: contains general information about the analyzer and some additional functions, e.g. serial number, firmware version, switch screen on/off, run calibration, etc.
 
 - *Spectrum Analyzer* page: contains the Spectrum Analysis user interface.
 
@@ -19,10 +19,10 @@ The Spectrum Analysis user interface consists of the following components:
 
 - An info pane to the right of the display section, which displays detailed information about the trace, and allows settings for markers and reference lines.
 
-    See [Working with markers](Working_with_markers.md) and [Working with reference lines](Working_with_reference_lines.md).
+    See [Working with markers](Working_with_markers.md) and [Working with reference lines](Working_with_reference_lines.md).
 
     > [!NOTE]
-    > This pane can be hidden. This is done with the *Info pane* option in the View tab of the ribbon.
+    > This pane can be hidden. This is done with the *Info pane* option in the View tab of the ribbon.
 
 - A collapsible settings pane on the right side of the card, with different tabs:
 

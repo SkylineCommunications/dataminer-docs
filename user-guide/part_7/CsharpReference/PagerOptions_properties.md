@@ -12,7 +12,7 @@ Example:
 
 ```txt
 PagerOptions options = new PagerOptions("message", "recipient");
-string message = options.Message;                               
+string message = options.Message;
 ```
 
 #### TO

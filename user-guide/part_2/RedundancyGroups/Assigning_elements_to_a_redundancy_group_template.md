@@ -16,25 +16,25 @@ To do so:
 
     1. Click the *Manage primary* button in the lower left corner.
 
-    2. In the *Manage primary elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with primary elements in the redundancy group.
+    2. In the *Manage primary elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with primary elements in the redundancy group.
 
     3. Click *OK*. The primary elements you have added will be displayed in the list on the left of the card.
 
 4. Select each primary element in turn to configure it using the options on the right side of the card:
 
-    - Select *Custom templates after switching* and select the alarm and trend templates, if you want custom templates to be applied.
+    - Select *Custom templates after switching* and select the alarm and trend templates, if you want custom templates to be applied.
 
     - Under *Advanced element settings*, enter a derived name for the element.
 
     - Under *Advanced element settings*, select *Derived IP* and enter a derived IP.
 
-    - If *Configure masking for each element individually* is selected, clear *Mask this element if it is not operational* if you do not want the element to be masked.
+    - If *Configure masking for each element individually* is selected, clear *Mask this element if it is not operational* if you do not want the element to be masked.
 
 5. Add the backup elements:
 
     1. Click the *Manage backup* button in the lower left corner.
 
-    2. In the *Manage backup elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with backup elements in the redundancy group.
+    2. In the *Manage backup elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with backup elements in the redundancy group.
 
     3. Click *OK*. The backup elements you have added will be displayed in the list on the left of the card.
 

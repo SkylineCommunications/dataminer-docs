@@ -57,21 +57,21 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
         > See also:
         > [Logging](../../part_6/logging/logging.md)
 
-    - *Agents*: Opens the *Agents* page in System Center, where you can view information on the DMS and configure the DMS, if you have the necessary permissions to do so.
+    - *Agents*: Opens the *Agents* page in System Center, where you can view information on the DMS and configure the DMS, if you have the necessary permissions to do so.
 
     - *Help*: Opens the DataMiner online help.
 
     - *About*: Opens the *About* box. This box consists of several tabs, and three buttons:
 
-        - The *general* tab mentions the upgrade version of your DMA. It also contains contact information and a link to the Skyline license terms and to third-party notices.
+        - The *general* tab mentions the upgrade version of your DMA. It also contains contact information and a link to the Skyline license terms and to third-party notices.
 
         - The *assemblies* tab mentions the assemblies used by your DMA.
 
         - The *connection* tab contains information about the connection of client to server.
 
-        - The *versions* tab shows the server and client version, as well as the version of the various DataMiner files and the DMA upgrade history.
+        - The *versions* tab shows the server and client version, as well as the version of the various DataMiner files and the DMA upgrade history.
 
-        - The *license* tab contains license information as well as activated license counter information. For demo licenses, the expiration date is shown at the top.
+        - The *license* tab contains license information as well as activated license counter information. For demo licenses, the expiration date is shown at the top.
 
             > [!NOTE]
             > To view license information regarding third-party software, go to *http(s)://**\[DMA name or IP\]**/Licenses*.
@@ -106,7 +106,7 @@ From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sid
 
 - *Overview*: Displays the root view page listing all items below the root view.
 
-- *Search*: If an advanced search is done from the Cube header bar, an additional *Search* button is displayed, which displays the pane with the advanced search results. If this button is not pinned to the sidebar, it will no longer be displayed as soon as you click a different button. See [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md).
+- *Search*: If an advanced search is done from the Cube header bar, an additional *Search* button is displayed, which displays the pane with the advanced search results. If this button is not pinned to the sidebar, it will no longer be displayed as soon as you click a different button. See [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md).
 
 - A button representing any of the available modules, the “About” information, the Help, or the settings.
 
@@ -128,7 +128,7 @@ When you click an item in the tree, it opens in a card:
 
 > [!NOTE]
 > -  For the right-click menu options in the Surveyor, see [Surveyor right-click menu](Main_Cube_UI_components_prior_to_DataMiner_10.md#surveyor-right-click-menu).
-> -  You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question. 
+> -  You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
 ##### Icons
 
@@ -141,17 +141,17 @@ The icons that precede an item name in the tree show what kind of item it is and
 
     | Icon                                                                               | Item description                                                                                               |
     |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-    | ![](../../images/CubeXView.png)             | View                                                                                                           |
-    | ![](../../images/CubeXElement.png)                | Element or default function DVE (prior to DataMiner 10.0.5 - requires DataMiner Service & Resource Management) |
-    | ![](../../images/CubeXService.png)                | Service                                                                                                        |
-    | ![](../../images/CubeXServiceTemplate.png)        | Service template                                                                                               |
-    | ![](../../images/CubeXRedunGroup.png)    | Redundancy group                                                                                               |
-    | ![](../../images/CubeXSLA.png)               | SLA                                                                                                            |
-    | ![](../../images/CubeXProtocol.png)              | Protocol                                                                                                       |
-    | ![](../../images/CubeXParameter.png)  | Parameter                                                                                                      |
-    | ![](../../images/CubeXScript.png)                 | Script                                                                                                         |
-    | ![](../../images/CubeXSetting.png)      | Setting                                                                                                        |
-    | ![](../../images/CubeXFunction.png)              | Default function DVE (from DataMiner 10.0.5 onwards – requires DataMiner Service & Resource Management)        |
+    | ![](../../images/CubeXView.png)            | View                                                                                                           |
+    | ![](../../images/CubeXElement.png)               | Element or default function DVE (prior to DataMiner 10.0.5 - requires DataMiner Service & Resource Management) |
+    | ![](../../images/CubeXService.png)               | Service                                                                                                        |
+    | ![](../../images/CubeXServiceTemplate.png)       | Service template                                                                                               |
+    | ![](../../images/CubeXRedunGroup.png)   | Redundancy group                                                                                               |
+    | ![](../../images/CubeXSLA.png)              | SLA                                                                                                            |
+    | ![](../../images/CubeXProtocol.png)             | Protocol                                                                                                       |
+    | ![](../../images/CubeXParameter.png) | Parameter                                                                                                      |
+    | ![](../../images/CubeXScript.png)                | Script                                                                                                         |
+    | ![](../../images/CubeXSetting.png)     | Setting                                                                                                        |
+    | ![](../../images/CubeXFunction.png)             | Default function DVE (from DataMiner 10.0.5 onwards – requires DataMiner Service & Resource Management)        |
 
 - View icons are filled with a different color, depending on their alarm state. On other icons, a colored circle is displayed when they are in a particular alarm state. In addition to the default colors indicating the alarm severity, the circle can also be displayed in purple to indicate that an item is masked.
 
@@ -172,7 +172,7 @@ The icons that precede an item name in the tree show what kind of item it is and
     | Orange X                                                                                                                                             | Indicates that an element in a view or service is in timeout state.                                                                                                                                                                                                                                                                                                                                                                                                          |
     | White X on red background                                                                                                                            | Indicates that an element is in error state.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
     | Upwards arrow                                                                                                                                        | Displayed next to a service child in case the capped severity of the service child is lower than the actual severity. The icon has the color of the severity that will bubble up to the parent service.                                                                                                                                                                                                                                                                      |
-    | Circle containing a horizontal line, for example:<br> ![](../../images/element_unavailable.png)  | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. <br> This icon is used from DataMiner 10.0.12 onwards. In this DataMiner version, it is only used for elements, and other items are not displayed when the DMA hosting them is unavailable. From DataMiner 10.0.13 onwards, it is also used for services and redundancy groups. |
+    | Circle containing a horizontal line, for example:<br> ![](../../images/element_unavailable.png) | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. <br> This icon is used from DataMiner 10.0.12 onwards. In this DataMiner version, it is only used for elements, and other items are not displayed when the DMA hosting them is unavailable. From DataMiner 10.0.13 onwards, it is also used for services and redundancy groups. |
 
 ##### Surveyor right-click menu
 
@@ -189,7 +189,7 @@ In the Surveyor right-click menu, the following options are available, depending
 | State                     | Element only                                     | Opens a shortcut that allows you to change the element state. See [Changing the state of an element](../../part_2/elements/Changing_the_state_of_an_element.md).                                                                                                                                                                                                                                                                                            |
 | Mask                      | Element only                                     | Masks the element. See [Masking or unmasking an element](../../part_2/elements/Masking_or_unmasking_an_element.md)                                                                                                                                                                                                                                                      |
 | Unmask                    | Element only                                     | Unmasks the element. This option is only available for masked elements.                                                                                                                                                                                                                                                                                                                                                                                     |
-| Multiple set              | Element only                                     | Opens the *Multiple set* dialog box. See [Setting a parameter value in multiple elements](../../part_2/elements/Updating_elements.md#setting-a-parameter-value-in-multiple-elements).                                                                                                                                                                                                                                        |
+| Multiple set              | Element only                                     | Opens the *Multiple set* dialog box. See [Setting a parameter value in multiple elements](../../part_2/elements/Updating_elements.md#setting-a-parameter-value-in-multiple-elements).                                                                                                                                                                                                                                        |
 | Protocols & Templates     | Element, enhanced service                        | Opens a submenu where you can:<br> -  View the used protocol or service protocol, alarm template, and trend template.<br> -  Assign alternative templates.<br> -  View all available templates.                                                                |
 | View                      | Element, service generated by a service template | For an element, a shortcut menu opens that allows quick access to DataMiner logging or Stream Viewer. <br> For a service generated by a service template, this option opens a card with service creation data and an overview of the service’s child elements.<br> Note that from DataMiner 9.5.1 onwards, all options related to generated services, including this one, have been moved to the *Service template* submenu. |
 | Edit                      | Element, service                                 | Opens a card where you can change the settings of the element or service.                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -204,8 +204,8 @@ In the Surveyor right-click menu, the following options are available, depending
 
 > [!NOTE]
 > -  For some special items, such as redundancy group templates or service templates, additional options are available.
-> -  The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
-> -  When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
+> -  The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
+> -  When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
 
 #### Activity pane
 
@@ -215,7 +215,7 @@ The following actions are possible with this list:
 
 - Click an item in the list to open it in a card. If you wish to open the item in a new card, use the middle mouse button.
 
-- Pin an item so that it is placed in the *Pinned* section at the top of the list: hover over the item with the mouse pointer until a pin icon appears to the right of it, then click the pin icon.
+- Pin an item so that it is placed in the *Pinned* section at the top of the list: hover over the item with the mouse pointer until a pin icon appears to the right of it, then click the pin icon.
 
 > [!NOTE]
 > -  Regardless of how frequently you view them, pinned items remain in the top section of the list until you click the pin icon again to remove them.
@@ -250,12 +250,12 @@ At the top of each card, there can be several buttons:
 
 | Button                                                                                   | Description                                                                                                                                                                                                                                                                                    |
 |------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../../images/CubeXCardBurger.png)    | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](Working_with_cards_in_DataMiner_Cube.md#card-header-bar-menu). |
-| ![](../../images/CubeXCardBack.png)        | Back button. When you have gone from one card to another, this button becomes available, allowing you to go back to a previous card. From DataMiner 10.0.10 onwards, this button goes to the previous open page, which can be on the same card.                                                |
-| ![](../../images/CubeXCardMax.png)          | Maximize button. Click this button to expand a card to its maximal size.<br>Only displayed if more than one card is opened in a layout other than the tab layout.                                                                                                                              |
-| ![](../../images/CubeXCardRestore.png)  | Restore button. If a card has been maximized, use this button to restore it to its previous size.<br>Only displayed if more than one card is opened in a layout other than the tab layout.                                                                                                     |
-| ![](../../images/CubeXCardClose.png)      | Close button. Shift-click the button to close all open cards.                                                                                                                                                                                                                                  |
-| ![](../../images/CubeMaximize.png)          | Fullscreen button. Displayed in the top-right corner of a data page, a visual page, or a trending page. Expands the page over the entire Cube UI. To exit this fullscreen mode, click the button again.                                                                                        |
+| ![](../../images/CubeXCardBurger.png)   | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](Working_with_cards_in_DataMiner_Cube.md#card-header-bar-menu). |
+| ![](../../images/CubeXCardBack.png)       | Back button. When you have gone from one card to another, this button becomes available, allowing you to go back to a previous card. From DataMiner 10.0.10 onwards, this button goes to the previous open page, which can be on the same card.                                                |
+| ![](../../images/CubeXCardMax.png)         | Maximize button. Click this button to expand a card to its maximal size.<br>Only displayed if more than one card is opened in a layout other than the tab layout.                                                                                                                              |
+| ![](../../images/CubeXCardRestore.png) | Restore button. If a card has been maximized, use this button to restore it to its previous size.<br>Only displayed if more than one card is opened in a layout other than the tab layout.                                                                                                     |
+| ![](../../images/CubeXCardClose.png)     | Close button. Shift-click the button to close all open cards.                                                                                                                                                                                                                                  |
+| ![](../../images/CubeMaximize.png)         | Fullscreen button. Displayed in the top-right corner of a data page, a visual page, or a trending page. Expands the page over the entire Cube UI. To exit this fullscreen mode, click the button again.                                                                                        |
 
 > [!NOTE]
 > To move back and forward between the Visual Overview pages of different cards, use the *Back* and *Forward* options in the right-click menu.

@@ -4,7 +4,7 @@
 
 2. In the Windows taskbar, right-click the DataMiner Taskbar Utility icon and click *Maintenance \> Restore*.
 
-3. In the *restore* window, click the *...* button to select a backup package.
+3. In the *restore* window, click the *...* button to select a backup package.
 
     A description of the contents of the package will appear under *Description*.
 

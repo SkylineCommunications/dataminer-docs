@@ -12,8 +12,8 @@ Example:
 
 To the main shape, add the following shape data fields:
 
-- a shape data field of type **Element** set to *219/1*
+- a shape data field of type **Element** set to *219/1*
 
-- a shape data field of type **Enabled** set to *false*
+- a shape data field of type **Enabled** set to *false*
 
-To the subshape, add a shape data field of type **Parameter** set to *1\|TranslateY;RANGE*
+To the subshape, add a shape data field of type **Parameter** set to *1\|TranslateY;RANGE*

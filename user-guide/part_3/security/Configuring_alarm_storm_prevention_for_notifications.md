@@ -4,9 +4,9 @@ Alarm storm prevention for notifications can be configured on three levels: on s
 
 ### Configuring alarm storm settings on system level
 
-1. In DataMiner Cube, go to *Apps* > *System Center \> System Settings \> notifications alarm storm prevention*.
+1. In DataMiner Cube, go to *Apps* > *System Center \> System Settings \> notifications alarm storm prevention*.
 
-2. For each type of notification you wish to configure, *Alerter*, *Email* or *SMS*, do the following:
+2. For each type of notification you wish to configure, *Alerter*, *Email* or *SMS*, do the following:
 
     1. Select the checkbox for the notification type in question to enable alarm storm prevention for this notification type.
 
@@ -20,7 +20,7 @@ Alarm storm prevention for notifications can be configured on three levels: on s
 
 ### Configuring alarm storm settings on user/group level
 
-1. In DataMiner Cube, go to *Apps* > *System Center \> Users / Groups.*
+1. In DataMiner Cube, go to *Apps* > *System Center \> Users / Groups.*
 
 2. Select the user or group for which you want to configure the settings, and go to the *Alerts* tab.
 

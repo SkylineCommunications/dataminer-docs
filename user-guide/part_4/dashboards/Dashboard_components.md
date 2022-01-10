@@ -31,7 +31,7 @@ This group consists of the following components:
 - [Aggregation graph filters](#aggregation-graph-filters)
 
 > [!NOTE]
-> The Aggregation components can only be used when the DMA is licensed for Correlation. 
+> The Aggregation components can only be used when the DMA is licensed for Correlation.
 
 > [!TIP]
 > See also:
@@ -53,7 +53,7 @@ Bar graph representing the aggregated values for one or more aggregation rules i
 
 Component-specific options:
 
-- *Group by*: Select one of the different available grouping options: by *View*, *Protocol*, *Property* or *Table Column*.
+- *Group by*: Select one of the different available grouping options: by *View*, *Protocol*, *Property* or *Table Column*.
 
 - *Views*: Select one or more views to apply a view filter to the bar graph.
 
@@ -116,7 +116,7 @@ Component-specific options for each added aggregation rule:
 - *Graph fill*: Select this option to fill the area underneath the graph.
 
     > [!NOTE]
-    > The *Graph fill* option cannot be used together with the *Error bars* option.
+    > The *Graph fill* option cannot be used together with the *Error bars* option.
 
 - *Initially visible*: Clear this option in order to not show the graph immediately. Instead a legend will be shown where the graph can be enabled.
 
@@ -130,11 +130,11 @@ Other component-specific options:
 
 - *Type of trend data*: Select either average or real-time trending.
 
-- *Show range selection*: To allow the user to set the range of the graph, select either *Show Range* or *Show Custom Date Picker*. The former will display drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
+- *Show range selection*: To allow the user to set the range of the graph, select either *Show Range* or *Show Custom Date Picker*. The former will display drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
 - *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
 
-- *Show parameter checkboxes*: Select this option to display a *Parameters* button above the graph that allows the user to select what aggregation rules are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
+- *Show parameter checkboxes*: Select this option to display a *Parameters* button above the graph that allows the user to select what aggregation rules are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
 
 - *Show legend*: Select this option to display a legend explaining what color matches what view.
 
@@ -188,7 +188,7 @@ These filters can be specified in two ways:
 
     - *4002* = rule ID
 
-    - *4001* = PK (= ruleID.viewID\[.protocol\]\[.property\].remote pk - with \[\] being optional depending on the rule configuration.)
+    - *4001* = PK (= ruleID.viewID\[.protocol\]\[.property\].remote pk - with \[\] being optional depending on the rule configuration.)
 
 ### Alarms
 
@@ -274,11 +274,11 @@ Component-specific options:
 
 #### Alarm state element
 
-Pie chart displaying the percentage of time an element has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
+Pie chart displaying the percentage of time an element has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
 #### Alarm state service
 
-Pie chart displaying the percentage of time a service has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
+Pie chart displaying the percentage of time a service has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
 ### DataMiner Agent
 
@@ -345,11 +345,11 @@ Component-specific options:
 
 #### Alarm state element
 
-Pie chart displaying the percentage of time an element has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
+Pie chart displaying the percentage of time an element has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
 #### Alarm state service
 
-Pie chart displaying the percentage of time a service has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
+Pie chart displaying the percentage of time a service has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
 #### All monitored parameters
 
@@ -377,7 +377,7 @@ Component-specific options:
 
 - *Display element name*: Select this option to display the element name in the component.
 
-- *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
+- *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
 
 - *Limit to parent service*: If the dashboard is service-specific, select this option to limit the displayed element state to the part of the element integrated in the service, instead of showing the overall element state.
 
@@ -456,7 +456,7 @@ Component-specific options:
 
 Displays a parameter, optionally with the parameter name, the parameter value, or the parameter set control.
 
-For a table parameter, you can select one or more columns in order to show only these, and apply a row filter if necessary, e.g. *SL\**. In the dashboard, it will then be possible to sort the columns by clicking the column header. You can also link the Parameter index to another, existing *Generic real-time parameter* component in the dashboard, by selecting *\<Link to \[name other component\]\>* in the *IDX* drop-down list.
+For a table parameter, you can select one or more columns in order to show only these, and apply a row filter if necessary, e.g. *SL\**. In the dashboard, it will then be possible to sort the columns by clicking the column header. You can also link the Parameter index to another, existing *Generic real-time parameter* component in the dashboard, by selecting *\<Link to \[name other component\]\>* in the *IDX* drop-down list.
 
 Component-specific options:
 
@@ -557,7 +557,7 @@ Component-specific options for each added table column parameter:
 - *Sort*: Sorts the graph by this table column parameter. This option can also be applied on a hidden table column parameter.
 
     > [!NOTE]
-    > The *Sort* option should only be selected for one column parameter, as otherwise it wil not work.
+    > The *Sort* option should only be selected for one column parameter, as otherwise it wil not work.
 
 Component-specific options:
 
@@ -565,7 +565,7 @@ Component-specific options:
 
 - *Limit amount of values*: Allows you to limit the number of rows that are taken into account for the graph. This can for instance be used in combination with sorting in order to only show the “top x” or “bottom x” of a particular table column. (Available from DataMiner 9.5.13 onwards.)
 
-- *Range*: If you do not want the range to be automatically selected, select *Manual* in the drop-down list, and then enter the minimum and maximum of the bar graph range.
+- *Range*: If you do not want the range to be automatically selected, select *Manual* in the drop-down list, and then enter the minimum and maximum of the bar graph range.
 
 - *Stacked bars*: Select this option to allow the bars to stack on top of each other.
 
@@ -598,7 +598,7 @@ Component-specific options for each added parameter:
 - *Graph fill*: Select this option to fill the area underneath the graph.
 
     > [!NOTE]
-    > The *Graph fill* option cannot be used together with the *Error bars* option.
+    > The *Graph fill* option cannot be used together with the *Error bars* option.
 
 - *Initially visible*: Clear this option in order to not show the graph immediately. Instead a legend will be shown where the graph can be enabled.
 
@@ -608,7 +608,7 @@ Other component-specific options:
 
 - *Type of trend data*: Select either average or real-time trending.
 
-- *Show range selection*: To allow the user to set the range of the histogram, select either *Show range* or *Show custom date picker*. The former will display a drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
+- *Show range selection*: To allow the user to set the range of the histogram, select either *Show range* or *Show custom date picker*. The former will display a drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
 - *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
 
@@ -618,7 +618,7 @@ Other component-specific options:
 
 - *Show percentages*: Select this option to show values as percentages instead of absolute values.
 
-- *Show parameter checkboxes*: Select this option to display a *Parameters* button above the histogram that allows the user to select which parameters are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
+- *Show parameter checkboxes*: Select this option to display a *Parameters* button above the histogram that allows the user to select which parameters are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
 
 - *Show legend*: Select this option to display a legend next to the histogram.
 
@@ -659,7 +659,7 @@ Component-specific options for each added parameter:
 - *Graph fill*: Select this option to fill the area underneath the graph.
 
     > [!NOTE]
-    > The *Graph fill* option cannot be used together with the *Error bars* option.
+    > The *Graph fill* option cannot be used together with the *Error bars* option.
 
 - *Initially visible*: Clear this option in order to not show the graph immediately. Instead a legend will be shown where the graph can be enabled.
 
@@ -669,11 +669,11 @@ Other component-specific options:
 
 - *Type of trend data*: Select either average or real-time trending.
 
-- *Show range selection*: To allow the user to set the range of the trend graph, select either *Show range* or *Show custom date picker*. The former will display a drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
+- *Show range selection*: To allow the user to set the range of the trend graph, select either *Show range* or *Show custom date picker*. The former will display a drop-down list where the user can select different time ranges, the latter will allow the user to enter a custom range.
 
 - *Plotter*: Select how the graph should be plotted in the drop-down list. You can choose a regular graph, or a stacked graph, multi-column bars or stacked bars.
 
-- *Show parameter checkboxes*: Select this option to display a *Parameters* button above the graph that allows the user to select which parameters are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
+- *Show parameter checkboxes*: Select this option to display a *Parameters* button above the graph that allows the user to select which parameters are displayed. The checkboxes also allow the user to display the average and apply linear regression to the graph.
 
 - *Show legend*: Select this option to display a legend below the trend graph.
 
@@ -712,15 +712,15 @@ Other component-specific options:
 
 A custom trend graph for one parameter, with additional history information.
 
-This component has the same options as the *Trend parameter* component above, with a few additional options as to the colors used in the graph. Different line colors are available, as well as fill colors when the value is higher or lower than the reference and fill colors for exceptions.
+This component has the same options as the *Trend parameter* component above, with a few additional options as to the colors used in the graph. Different line colors are available, as well as fill colors when the value is higher or lower than the reference and fill colors for exceptions.
 
 #### Trend parameter with reference value
 
 A custom trend graph for two parameters, where one of the two is used as a reference.
 
-This component has the same options as the *Trend parameter with history* component above, with the following additional options:
+This component has the same options as the *Trend parameter with history* component above, with the following additional options:
 
-- *Reference value source*: In the drop-down list, select whether another parameter should be used as reference, or a fixed value. If you choose the latter, enter the fixed value in the *Fixed reference value* box below.
+- *Reference value source*: In the drop-down list, select whether another parameter should be used as reference, or a fixed value. If you choose the latter, enter the fixed value in the *Fixed reference value* box below.
 
 - *Step plot*: Select this option to display a step graph.
 
@@ -824,7 +824,7 @@ Displays a LED with the color of the alarm severity of a service parameter.
 
 Component-specific options:
 
-- *Linked dashboard*: Specify a dashboard in the *Feed* box to create a link to this dashboard. Placeholders like \[this service\] and \[param:dmaid/eid:pid:dispidx\] are allowed in the configuration.
+- *Linked dashboard*: Specify a dashboard in the *Feed* box to create a link to this dashboard. Placeholders like \[this service\] and \[param:dmaid/eid:pid:dispidx\] are allowed in the configuration.
 
 - *Parameter name*: In this box, enter a wildcard through which the service parameter can be found.
 
@@ -836,7 +836,7 @@ Component-specific options:
 
 - *Show parameter IDX part*: For table parameters, enable this option to show the parameter index.
 
-- *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
+- *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
 
 #### Service parameter trend sparkline
 
@@ -872,11 +872,11 @@ Displays a LED with the color of the service’s alarm severity.
 
 Component-specific options:
 
-- *Linked dashboard*: Specify a dashboard in the *Feed* box to create a link to this dashboard. Placeholders like \[this service\] and \[param:dmaid/eid:pid:dispidx\] are allowed in the configuration.
+- *Linked dashboard*: Specify a dashboard in the *Feed* box to create a link to this dashboard. Placeholders like \[this service\] and \[param:dmaid/eid:pid:dispidx\] are allowed in the configuration.
 
 - *Display element name*: Select this option to display the service name in the component.
 
-- *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
+- *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
 
 #### Service trend parameter
 
@@ -959,7 +959,7 @@ Displays information about the dashboard feed.
 
 Component-specific options:
 
-- *Type*: In the drop-down list, select the type of information to be displayed (e.g. Current selection, Element name, Protocol name, ...)
+- *Type*: In the drop-down list, select the type of information to be displayed (e.g. Current selection, Element name, Protocol name, ...)
 
 - *Style*: In the drop-down list, select whether to display the feed info as normal text or as a title.
 
@@ -1021,11 +1021,11 @@ Component-specific options:
 
 Displays a website in an inline frame.
 
-Optionally, a feed can be used with this component. This can for instance be of use to dynamically include the value of a parameter in the URL. To do so, select a parameter feed, and include *%parametervalue%* in the URL. This will then be replaced with the value of that parameter.
+Optionally, a feed can be used with this component. This can for instance be of use to dynamically include the value of a parameter in the URL. To do so, select a parameter feed, and include *%parametervalue%* in the URL. This will then be replaced with the value of that parameter.
 
 > [!NOTE]
-> -  If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Inline frame* component with that component. In that case, when a user clicks a row of that table, the *Inline frame* component will update the URL with the parameter value of the clicked row. For more information, see [Generic real-time parameter](#generic-real-time-parameter).
-> -  From DataMiner 9.5.5 onwards, webpages displayed in an *Inline frame* component automatically have an authentication ticket attached as a URL parameter, so that it is not necessary to log in again on web apps that run on the same DMA as the Dashboards app, including the DataMiner Monitoring & Control app, DataMiner Ticketing and DataMiner Maps. 
+> -  If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Inline frame* component with that component. In that case, when a user clicks a row of that table, the *Inline frame* component will update the URL with the parameter value of the clicked row. For more information, see [Generic real-time parameter](#generic-real-time-parameter).
+> -  From DataMiner 9.5.5 onwards, webpages displayed in an *Inline frame* component automatically have an authentication ticket attached as a URL parameter, so that it is not necessary to log in again on web apps that run on the same DMA as the Dashboards app, including the DataMiner Monitoring & Control app, DataMiner Ticketing and DataMiner Maps.
 
 Component-specific options:
 
@@ -1042,10 +1042,10 @@ Component-specific options:
 
 Displays a video stream, based on an image URL. The configuration of the thumbnail is similar to the configuration of video thumbnails in Visual Overview. For more information on supported formats, see [Linking a shape to a video thumbnail](../../part_2/visio/Linking_a_shape_to_a_video_thumbnail.md).
 
-Optionally, a feed can be used with this component. This can for instance be of use to dynamically include the value of a parameter in the image URL. To do so, select a parameter feed, and include *%parametervalue%* in the URL. This will then be replaced with the value of that parameter.
+Optionally, a feed can be used with this component. This can for instance be of use to dynamically include the value of a parameter in the image URL. To do so, select a parameter feed, and include *%parametervalue%* in the URL. This will then be replaced with the value of that parameter.
 
 > [!NOTE]
-> If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Video* component with that component. In that case, when a user clicks a row of that table, the video component will update the URL with the parameter value of the clicked row, which makes it possible to show thumbnails of another video source. For more information, see [Generic real-time parameter](#generic-real-time-parameter).
+> If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Video* component with that component. In that case, when a user clicks a row of that table, the video component will update the URL with the parameter value of the clicked row, which makes it possible to show thumbnails of another video source. For more information, see [Generic real-time parameter](#generic-real-time-parameter).
 
 Component-specific options:
 

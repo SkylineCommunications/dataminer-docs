@@ -46,7 +46,7 @@ For one single element or service, the following building blocks are available i
 
 Graph showing the distribution of alarms over a selected time span, with several options:
 
-- You can choose to show data from the *Last 24 Hours*, *Yesterday*, a *Week to Date* or a *Month to Date*.
+- You can choose to show data from the *Last 24 Hours*, *Yesterday*, a *Week to Date* or a *Month to Date*.
 
 - Depending on the selected time range, you can select different possibilities for the average range that will be shown as a reference in the graph.
 
@@ -210,9 +210,9 @@ Overview of the status of each parameter. Parameters that are in an alarm state 
 
 The following options are available for this component:
 
-- Select *Limit to selected parameters* to allow the user to select which parameters to include when configuring a mail report. Only these parameters will then be displayed. For table parameters, only those columns and rows will be included that match the selected parameters.
+- Select *Limit to selected parameters* to allow the user to select which parameters to include when configuring a mail report. Only these parameters will then be displayed. For table parameters, only those columns and rows will be included that match the selected parameters.
 
-- When the *Limit to selected parameters* option is enabled, an additional option becomes available: *Allow trending avg/min/max to be included*. Select this option and specify a time span. When configuring the report, the user will then be able to select which trending columns should be displayed: “Avg”, “Min” and “Max”, “Realtime” (= current value), or any combination of these.
+- When the *Limit to selected parameters* option is enabled, an additional option becomes available: *Allow trending avg/min/max to be included*. Select this option and specify a time span. When configuring the report, the user will then be able to select which trending columns should be displayed: “Avg”, “Min” and “Max”, “Realtime” (= current value), or any combination of these.
 
 - To make sure that parameters that are not initialized are not displayed in the report, select *Hide “Not Initialized” Parameters*.
 

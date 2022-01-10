@@ -9,7 +9,7 @@ In DataMiner, each protocol has one or more Visio files linked to it. It is poss
 
 #### Switching between Visio files for elements
 
-In the Protocols & Templates module, for each protocol, any Visio files linked to it are displayed under *Visio files* in the second column. There can be several different Visio files listed in this section:
+In the Protocols & Templates module, for each protocol, any Visio files linked to it are displayed under *Visio files* in the second column. There can be several different Visio files listed in this section:
 
 - Default Visio files shipped with the DataMiner software, called *General default*.
 
@@ -23,7 +23,7 @@ To set a different Visio file as the active file for a particular protocol:
 
 1. Right-click the Visual Overview.
 
-2. In the context menu, select *Set as active \[protocol name\] protocol Visio file* and then select *Custom*, *Protocol Default* or *General Default*, depending on which of the configured Visio files you wish to use.
+2. In the context menu, select *Set as active \[protocol name\] protocol Visio file* and then select *Custom*, *Protocol Default* or *General Default*, depending on which of the configured Visio files you wish to use.
 
 > [!NOTE]
 > From DataMiner 10.0.11 onwards, it is also possible to assign a Visio file to one element only, without affecting the Visio files available for the protocol. For more information, see [Set as active Visio file](../visio/Editing_a_visual_overview_in_DataMiner_Cube.md#set-as-active-visio-file).
@@ -32,7 +32,7 @@ To set a different Visio file as the active file for a particular protocol:
 
 To set a different Visio file as the active file for a particular service or view:
 
-1. Right-click the Visual Overview and select *Set as active Visio file* > *Existing*.
+1. Right-click the Visual Overview and select *Set as active Visio file* > *Existing*.
 
 2. Select the Visio file that should be used as the active file. If the file is not displayed in the dialog box, click *Other file* to browse to its location.
 
@@ -53,13 +53,13 @@ To set a different Visio file as the active file for a particular service or vie
 
 In the Protocols & Templates module, you can upload a custom-made Visio file to assign it to a protocol.
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Select the protocol to which you want to assign a Visio file under *Protocols*.
 
-3. Under *Visio Files*, right-click *General default* and select *Upload custom Visio file*.
+3. Under *Visio Files*, right-click *General default* and select *Upload custom Visio file*.
 
-4. In the *Open* dialog box, select the Microsoft Visio file (extension: .vdx or .vsdx), and click *Open*.
+4. In the *Open* dialog box, select the Microsoft Visio file (extension: .vdx or .vsdx), and click *Open*.
 
 > [!NOTE]
 > -  It is not possible to upload Visio files of which the file name contains more than one “%” sign.
@@ -73,7 +73,7 @@ In the Protocols & Templates module, you can upload a custom-made Visio file to 
 
 If you no longer want a custom Visio file to be linked to a protocol, you can sever the link between the protocol and the Visio file.
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Protocols*, right-click the protocol and select *Remove Visio file*.
 

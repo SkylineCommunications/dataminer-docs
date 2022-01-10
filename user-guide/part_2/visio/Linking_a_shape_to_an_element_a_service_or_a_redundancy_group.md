@@ -6,9 +6,9 @@ When a user clicks such a shape, by default, the Visio drawing linked to the ele
 
 > [!TIP]
 > See also:
-> -  [Disabling the default hyperlink behavior of a linked shape](Disabling_the_default_hyperlink_behavior_of_a_linked_shape.md) 
+> -  [Disabling the default hyperlink behavior of a linked shape](Disabling_the_default_hyperlink_behavior_of_a_linked_shape.md)
 > -  [Adding options to shapes linked to elements or services](Adding_options_to_shapes_linked_to_elements_or_services.md)
-> -  [Linking a shape to an element based on DCF connections](Linking_a_shape_to_an_element_based_on_DCF_connections.md) 
+> -  [Linking a shape to an element based on DCF connections](Linking_a_shape_to_an_element_based_on_DCF_connections.md)
 
 > [!NOTE]
 > -  Visio shapes linked to elements, services or redundancy groups will not be displayed if, for any reason, those links cannot be resolved. Link problems can occur because of insufficient user rights, missing DataMiner items, invalid parameter values, etc.
@@ -30,7 +30,7 @@ In this section:
 
 ### Basic shape data field configuration
 
-Add a shape data field of type **Element** to the shape. Set its value to the item reference, optionally followed by a pipe character (“\|”) and the Visio page number (starting from 1) of the page that should be displayed.
+Add a shape data field of type **Element** to the shape. Set its value to the item reference, optionally followed by a pipe character (“\|”) and the Visio page number (starting from 1) of the page that should be displayed.
 
 ```txt
 ItemReference|VisioPage
@@ -49,7 +49,7 @@ You can refer to an element, service or redundancy group in the following ways:
 
 - Element name, service name, or service alias.
 
-- Element name mask, service name mask, or service alias mask containing wildcard characters (”?” and/or “\*”).
+- Element name mask, service name mask, or service alias mask containing wildcard characters (”?” and/or “\*”).
 
     If wildcard characters are used, the shape dynamically refers to the first element in the view to which the Visio file is linked. If no element matches the name mask in that view, then the elements in the services and subservices in that view (and, if necessary, all subviews) are also checked.
 

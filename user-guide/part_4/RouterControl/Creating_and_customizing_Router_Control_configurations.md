@@ -1,6 +1,6 @@
 # Creating and customizing Router Control configurations
 
-The *Router Control* module can be fully customized. After switching to design mode, you can change the existing configurations (i.e. user interfaces) or create new ones from scratch.
+The *Router Control* module can be fully customized. After switching to design mode, you can change the existing configurations (i.e. user interfaces) or create new ones from scratch.
 
 The following topics provide more info on customizing configurations:
 

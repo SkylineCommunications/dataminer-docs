@@ -4,17 +4,17 @@ Using a shape data field of type **SetVar**, you can turn a shape or a page into
 
 > [!TIP]
 > See also:
-> -  [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md) 
-> -  [Initializing a session variable](Initializing_a_session_variable.md) 
-> -  [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md) 
-> -  [Embedding a router control component](Embedding_a_router_control_component.md) 
+> -  [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md)
+> -  [Initializing a session variable](Initializing_a_session_variable.md)
+> -  [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md)
+> -  [Embedding a router control component](Embedding_a_router_control_component.md)
 
 ### Configuring the shape data field
 
-Add a shape data field of type **SetVar** to the shape or the page, and set its value as described below.
+Add a shape data field of type **SetVar** to the shape or the page, and set its value as described below.
 
 > [!NOTE]
-> If the **SetVar** shape data field is applied on page level, the variable(s) you specified will be set whenever a user clicks the background of the page.
+> If the **SetVar** shape data field is applied on page level, the variable(s) you specified will be set whenever a user clicks the background of the page.
 
 - If you want the user to be able to enter the new value in a text box:
 
@@ -29,7 +29,7 @@ Add a shape data field of type **SetVar** to the shape or the page, and set its
     ```
 
     > [!NOTE]
-    > -  To initialize multiple values, separate the entries by pipe characters. 
+    > -  To initialize multiple values, separate the entries by pipe characters.
 
 - If you want the user to be able to select the new value from a drop-down list with fixed values:
 
@@ -43,7 +43,7 @@ Add a shape data field of type **SetVar** to the shape or the page, and set its
     [Sep::X]VariableNameX[Param:dmaid/eid,pid]
     ```
 
-    *\[Sep::X\]* allows you to specify the separator that is used in the parameter assignment to separate the variable name from its new value(s), and to separate the values found in the parameter you refer to:
+    *\[Sep::X\]* allows you to specify the separator that is used in the parameter assignment to separate the variable name from its new value(s), and to separate the values found in the parameter you refer to:
 
     - The default separator is mentioned first: colon ”:”.
 
@@ -57,14 +57,14 @@ Add a shape data field of type **SetVar** to the shape or the page, and set its
 - If you want the user to be able to select the new value from a right-click menu:
 
     ```txt
-    Variable 1:A:Set 'Variable 1' to 'A'|Variable 2:B:Set 'Variable 2' to 'B'
+    Variable 1:A:Set 'Variable 1' to 'A'|Variable 2:B:Set 'Variable 2' to 'B'
     ```
 
     If you specify the value mentioned below, the shortcut menu will have the following two options:
 
-    - Set 'Variable 1' to 'A', and
+    - Set 'Variable 1' to 'A', and
 
-    - Set 'Variable 2' to 'B'
+    - Set 'Variable 2' to 'B'
 
 - If you want a session variable to be populated with a trace value when the user hovers the mouse over the graph in a trend component, set the value to "*ValueTrace:*", "*MinTrace:*", "*MaxTrace:*", or "*TimeTrace:*", followed by the name of the session variable
 
@@ -82,7 +82,7 @@ Session variables can have one of following scopes:
 
 - Current workspace (from DataMiner 9.5.9 onwards)
 
-To a scope other than the default scope, add an additional shape data field of type **Options** to the shape, and specify the following value:
+To a scope other than the default scope, add an additional shape data field of type **Options** to the shape, and specify the following value:
 
 | Scope              | Value              |
 |--------------------|--------------------|
@@ -93,9 +93,9 @@ To a scope other than the default scope, add an additional shape data field of t
 ### Examples
 
 ```txt
-MyVar                               
-MyVar:25                            
-MyVar:[Param:7/124,54]            
-[Sep::;]MyVar;[Param:7/124,54]  
+MyVar
+MyVar:25
+MyVar:[Param:7/124,54]
+[Sep::;]MyVar;[Param:7/124,54]
 MyFirstVar:0\|MySecondVar:5\|...
 ```

@@ -16,9 +16,9 @@ In case of problems, Skyline Technical Support may ask you to provide version in
 
 #### Sending version information to Technical Support
 
-1. In DataMiner Cube, go to *Apps* > *About*.
+1. In DataMiner Cube, go to *Apps* > *About*.
 
-2. In the *About* box, click the *Versions* tab.
+2. In the *About* box, click the *Versions* tab.
 
 3. At the bottom of the dialog box, click *Copy Versions Information*.
 
@@ -26,9 +26,9 @@ In case of problems, Skyline Technical Support may ask you to provide version in
 
 #### Sending debug information to Technical Support
 
-1. In DataMiner Cube, go to *Apps* > *About*.
+1. In DataMiner Cube, go to *Apps* > *About*.
 
-2. At the bottom of the *About* box, click *Email Debug Information*.
+2. At the bottom of the *About* box, click *Email Debug Information*.
 
     A new email message containing the debug information will open.
 
@@ -47,16 +47,16 @@ If, for any reason, you want to reinstall Cube, you need to clean the XBAP cache
 
     ```txt
     https://[DMA]/Tools
-    http://[DMA]/Tools 
+    http://[DMA]/Tools
     ```
 
-2. Click *Clean DataMiner Cube XBAP Cache* and then click *Run*.
+2. Click *Clean DataMiner Cube XBAP Cache* and then click *Run*.
 
 3. Open Microsoft Internet Explorer and, depending on your setup, go to one of the following addresses:
 
     ```txt
     https://[DMA]/dataminercube
-    http://[DMA]/dataminercube 
+    http://[DMA]/dataminercube
     ```
 
 > [!NOTE]
@@ -84,15 +84,15 @@ If, for any reason, you want to reinstall Cube, you need to clean the XBAP cache
 > [!NOTE]
 > The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
 
-Both *System Display* and *Element Display* are ActiveX controls. They are automatically downloaded and installed onto your computer the first time you try to open their user interface in a Microsoft Internet Explorer session.
+Both *System Display* and *Element Display* are ActiveX controls. They are automatically downloaded and installed onto your computer the first time you try to open their user interface in a Microsoft Internet Explorer session.
 
 To open their interface go to one of the following addresses:
 
 ```txt
-https://[DMA]/SystemDisplay.htm     
-http://[DMA]/SystemDisplay.htm      
+https://[DMA]/SystemDisplay.htm
+http://[DMA]/SystemDisplay.htm
 https://[Element]/ElementDisplay.htm
-http://[Element]/ElementDisplay.htm 
+http://[Element]/ElementDisplay.htm
 ```
 
 > [!NOTE]
@@ -139,11 +139,11 @@ Before you can run the System Display and Element Display client applications in
 
 1. In Microsoft Internet Explorer, choose *Tools \> Internet Options*.
 
-2. In the *Security* tab, select the *Local intranet* zone and click *Sites*.
+2. In the *Security* tab, select the *Local intranet* zone and click *Sites*.
 
-3. In the *Local intranet* dialog box, click *Advanced*.
+3. In the *Local intranet* dialog box, click *Advanced*.
 
-4. Enter the URL in the *Add this website to the zone* box, click *Add* and then click *Close*.
+4. Enter the URL in the *Add this website to the zone* box, click *Add* and then click *Close*.
 
 ##### Configuring the ActiveX settings in Microsoft Internet Explorer
 
@@ -151,11 +151,11 @@ If you want to run the System Display and Element Display client applications in
 
 1. In Microsoft Internet Explorer, choose *Tools \> Internet Options*.
 
-2. In the *Security* tab, select the appropriate zone and click *Custom level...*
+2. In the *Security* tab, select the appropriate zone and click *Custom level...*
 
-3. In the *Security Settings* dialog box, go to *ActiveX controls and plug-ins*.
+3. In the *Security Settings* dialog box, go to *ActiveX controls and plug-ins*.
 
-4. Set *Download unsigned ActiveX controls* to “Prompt” and *Run ActiveX controls* to “Enable”.
+4. Set *Download unsigned ActiveX controls* to “Prompt” and *Run ActiveX controls* to “Enable”.
 
 > [!NOTE]
 > You can also choose to install the Skyline certificates from http://\[DMA\]/tools and use the *Download signed ActiveX controls* setting instead.
@@ -166,9 +166,9 @@ In order to use spectrum elements in Element Display, you need to make sure acti
 
 1. In Microsoft Internet Explorer, choose *Tools \> Internet Options*.
 
-2. In the *Security* tab, select the appropriate zone and click *Custom level...*
+2. In the *Security* tab, select the appropriate zone and click *Custom level...*
 
-3. In the *Security Settings* dialog box, go to *Scripting*.
+3. In the *Security Settings* dialog box, go to *Scripting*.
 
 4. Set *Active scripting* to “Enable”.
 
@@ -178,29 +178,29 @@ If, by default, your Microsoft Internet Explorer uses a proxy server, you might 
 
 1. In Microsoft Internet Explorer, choose *Tools \> Internet Options*.
 
-2. In the *Connections* tab, click *LAN settings*.
+2. In the *Connections* tab, click *LAN settings*.
 
-3. In the *Local Area Network (LAN) Settings* dialog box, go to the *Proxy server* section and click *Advanced*.
+3. In the *Local Area Network (LAN) Settings* dialog box, go to the *Proxy server* section and click *Advanced*.
 
-4. In the *Proxy Settings* dialog box, go to the *Exceptions* section and add the IP addresses of your DataMiner Agents to the list. Separate the addresses by means of semicolons (”;”).
+4. In the *Proxy Settings* dialog box, go to the *Exceptions* section and add the IP addresses of your DataMiner Agents to the list. Separate the addresses by means of semicolons (”;”).
 
 #### Uninstalling the ActiveX controls
 
 Both System Display and Element Display are ActiveX controls, so they are installed as Microsoft Internet Explorer add-ons.
 
-You can either uninstall them in the Internet Explorer *Manage Add-ons* window, or with a dedicated Skyline tool.
+You can either uninstall them in the Internet Explorer *Manage Add-ons* window, or with a dedicated Skyline tool.
 
 ##### Uninstalling an ActiveX control
 
 1. In Microsoft Internet Explorer, choose *Tools \> Manage add-ons*.
 
-2. In the left-hand pane of the *Manage Add-ons* window, set the *Show* selection box to “All add-ons”.
+2. In the left-hand pane of the *Manage Add-ons* window, set the *Show* selection box to “All add-ons”.
 
-3. In the list of add-ons, go to the *Skyline Communications* section and select either “SLSystemDisplay Control” or “SLElementDisplay Control”.
+3. In the list of add-ons, go to the *Skyline Communications* section and select either “SLSystemDisplay Control” or “SLElementDisplay Control”.
 
 4. In the bottom pane, click *More information*.
 
-5. In the *More information* dialog box, click *Remove*.
+5. In the *More information* dialog box, click *Remove*.
 
 > [!NOTE]
 > If you fail to remove an ActiveX control, do the following:
@@ -212,9 +212,9 @@ You can either uninstall them in the Internet Explorer *Manage Add-ons* window,
 
 1. Open Microsoft Internet Explorer and go to the following address: *http://\[DMA\]/Tools*
 
-2. In the *DataMiner Tools* section, click *Clean CAB Files* and then click *Run*.
+2. In the *DataMiner Tools* section, click *Clean CAB Files* and then click *Run*.
 
-3. In the *Clean CAB Files* window, click *Go*.
+3. In the *Clean CAB Files* window, click *Go*.
 
 > [!NOTE]
 > In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.

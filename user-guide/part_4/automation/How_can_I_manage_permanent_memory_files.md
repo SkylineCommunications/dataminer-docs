@@ -2,7 +2,7 @@
 
 To manage memory files containing an array of values:
 
-1. In DataMiner Cube, go to *Apps* > *Automation*.
+1. In DataMiner Cube, go to *Apps* > *Automation*.
 
 2. Up to DataMiner 9.5.10: In the lower left corner of the Automation card, click the *Memory files* button.
 
@@ -23,10 +23,10 @@ To manage memory files containing an array of values:
             > [!NOTE]
             > The name of the memory file must be unique.
 
-        3. Under *Entries*, click *Add* to add a new entry, then specify its *Position*, *Value*, and *Description*.
+        3. Under *Entries*, click *Add* to add a new entry, then specify its *Position*, *Value*, and *Description*.
 
         4. Repeat the previous step until all the necessary entries have been added.
 
         5. In the lower right corner, click *Save*.
 
- 
+

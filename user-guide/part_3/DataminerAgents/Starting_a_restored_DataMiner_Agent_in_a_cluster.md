@@ -10,13 +10,13 @@ If you have restored a DMA in a cluster without using the Taskbar Utility, or if
 
 3. Connect the new server to the network.
 
-4. Make sure that *DMS.xml* has been deleted from the directory *C:\\Skyline DataMiner\\*.
+4. Make sure that *DMS.xml* has been deleted from the directory *C:\\Skyline DataMiner\\*.
 
 5. Start the DataMiner software.
 
 ### Adding the DMA to the DMS
 
-1. In DataMiner Cube, go to *Apps* > *System Center*.
+1. In DataMiner Cube, go to *Apps* > *System Center*.
 
 2. In System Center, select the *Agents* tab.
 

@@ -8,13 +8,13 @@ To upgrade the Cassandra database:
 
     - All devcenter processes on the DMA(s) are closed.
 
-    - The following directory does **not** exist: *C:\\Program Files\\Cassandra_Previous_Version*.
+    - The following directory does **not** exist: *C:\\Program Files\\Cassandra_Previous_Version*.
 
     - All command windows that use nodetool are closed.
 
     - If you intend to upgrade using the DataMiner Taskbar Utility, you are running the utility as Administrator.
 
-2. On DCP, download the latest Cassandra upgrade package from the folder *Software Downloads* > *Cassandra*.
+2. On DCP, download the latest Cassandra upgrade package from the folder *Software Downloads* > *Cassandra*.
 
 3. While Cassandra is running, run the downloaded package in the same way as a regular upgrade package.
 

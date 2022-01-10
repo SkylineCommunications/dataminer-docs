@@ -8,7 +8,7 @@ The DataMiner Taskbar Utility is installed automatically on a DataMiner Agent se
 
 If the application is not running:
 
-- Go to *C:\\Skyline DataMiner\\tools* and double-click *SLTaskbarUtility.exe* to start the application.
+- Go to *C:\\Skyline DataMiner\\tools* and double-click *SLTaskbarUtility.exe* to start the application.
 
 > [!NOTE]
 > The application can be set to run automatically at startup.
@@ -24,4 +24,4 @@ If the application is running:
 > See also:
 > [DataMiner Taskbar Utility](../../part_7/DataminerTools/DataMiner_Taskbar_Utility.md)
 
- 
+

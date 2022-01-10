@@ -12,6 +12,6 @@ To manually add a job in the Job Manager app:
 
     - **Stop Time**: Allows you to specify the stop time for the job manually, using the spin buttons or using the calendar control.
 
-    In case a section allows multiple instances, you can add an instance by clicking the “+” icon at the top of the section. You can also duplicate an instance with the ![](../../images/JobsX_duplicate.png) icon. Each instance is represented by a tab in the section. If not all tabs can be displayed, click the downward arrow on the right to select the tab you want to see.
+    In case a section allows multiple instances, you can add an instance by clicking the “+” icon at the top of the section. You can also duplicate an instance with the ![](../../images/JobsX_duplicate.png) icon. Each instance is represented by a tab in the section. If not all tabs can be displayed, click the downward arrow on the right to select the tab you want to see.
 
 3. When all the necessary fields have been filled in, click *Save* in the header bar.

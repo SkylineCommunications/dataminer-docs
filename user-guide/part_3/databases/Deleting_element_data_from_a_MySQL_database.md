@@ -31,11 +31,11 @@ DELETE FROM elementdata_[DMAID] WHERE iEID = [Element ID, NOT preceded by the DM
 
     1. Go to SQL Editor.
 
-    2. In Object Browser, go to *sldmadb \> Tables \> elementdata*
+    2. In Object Browser, go to *sldmadb \> Tables \> elementdata*
 
     3. Right-click elementdata, and choose *Alter Table*.
 
-    4. In the elementdata dialog box, enter another table name (e.g. elementdata_old) in the *Name* box and click *Apply*.
+    4. In the elementdata dialog box, enter another table name (e.g. elementdata_old) in the *Name* box and click *Apply*.
 
 2. Restart the DataMiner Agent.
 

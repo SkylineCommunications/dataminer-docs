@@ -1,6 +1,6 @@
 # Browsing the database with DMS Inventory and Asset Management
 
-On the left-hand side of the *Asset Manager* user interface, there is an overview pane with two tabs: *Normal view* and *Logical view*. Depending on what you select in the overview pane, additional views will become available in the data pane on the right-hand side.
+On the left-hand side of the *Asset Manager* user interface, there is an overview pane with two tabs: *Normal view* and *Logical view*. Depending on what you select in the overview pane, additional views will become available in the data pane on the right-hand side.
 
 The following sections provide information on each of the Asset Manager views:
 
@@ -30,20 +30,20 @@ If you click an item in the tree structure, detailed data appear in the data pan
 
 - When you select a table record, the data pane will display the data in that record.
 
-    In this case, the data pane will display three tabs: *Row view*, *All linked items* and *Logical view*.
+    In this case, the data pane will display three tabs: *Row view*, *All linked items* and *Logical view*.
 
 > [!NOTE]
 > To refresh the data in the data pane, click the *Refresh* button.
 
 ### Logical view
 
-The *Logical view* in the overview pane shows the key fields of each record with all linked tables in the form of a tree structure.
+The *Logical view* in the overview pane shows the key fields of each record with all linked tables in the form of a tree structure.
 
-The *Logical view* in the data pane shows the key field of a selected record with all its linked tables in the form of a tree structure.
+The *Logical view* in the data pane shows the key field of a selected record with all its linked tables in the form of a tree structure.
 
 IDs are automatically replaced by the values to which they refer.
 
-If you select an item in the logical view in the overview pane, the data pane on the right will display two tabs: *Row view* and *All linked items*.
+If you select an item in the logical view in the overview pane, the data pane on the right will display two tabs: *Row view* and *All linked items*.
 
 ### Row view
 
@@ -59,7 +59,7 @@ If you have Write access to the table that contains the selected record, you can
 
 ### All linked items view
 
-In the *All linked items* view, the selected record and all records linked to it are displayed one below the other in separate sections, each representing a database table.
+In the *All linked items* view, the selected record and all records linked to it are displayed one below the other in separate sections, each representing a database table.
 
 > [!NOTE]
 > The order of the tables can be specified in the configuration file. For more information, see [Configuring DMS Inventory and Asset Management](Configuring_DMS_Inventory_and_Asset_Management.md).

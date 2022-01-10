@@ -13,7 +13,7 @@ To do so, in DataMiner Cube:
 
 2. Right-click the protocol version for which you want to generate the MIB, and select *Get MIB file*.
 
-3. In the *Save As* dialog box, select a name and a location for the MIB that is about to be generated, and click *Save*.
+3. In the *Save As* dialog box, select a name and a location for the MIB that is about to be generated, and click *Save*.
 
 ### Generating a list of all parameters in a protocol version
 
@@ -25,7 +25,7 @@ To export the parameters of a protocol version or an element using the protocol:
 
 2. In the context menu, select *Export parameters*.
 
-3. In the *Save As* dialog box, select a folder, specify a file name, and click *Save*.
+3. In the *Save As* dialog box, select a folder, specify a file name, and click *Save*.
 
     The exported CSV file will contain write and read parameters combined in a single row, with the following column order:
 
@@ -36,7 +36,7 @@ To export the parameters of a protocol version or an element using the protocol:
     > [!NOTE]
     > The discrete values are displayed as "ActualValue:StringValue" and are separated by pipe characters ("\|").
     >
-    > For example: *0:Disconnected\|1:Connecting\|2:Connected\|3:Disconnecting\|4:Hardware Not Present\|5:Hardware Disabled\|6:Hardware Malfunction\|7:Media Disconnected\|8:Authenticating\|9:Authentication Succeeded\|10:Authentication Failed*
+    > For example: *0:Disconnected\|1:Connecting\|2:Connected\|3:Disconnecting\|4:Hardware Not Present\|5:Hardware Disabled\|6:Hardware Malfunction\|7:Media Disconnected\|8:Authenticating\|9:Authentication Succeeded\|10:Authentication Failed*
 
 ### Making changes to a protocol.xml file
 
@@ -46,7 +46,7 @@ For larger changes, however, it is advisable to use a dedicated code editor.
 
 To make changes to a *Protocol.xml* file within Cube:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
 2. Under *Versions*, right-click the protocol version you want to edit and select *Open*.
 

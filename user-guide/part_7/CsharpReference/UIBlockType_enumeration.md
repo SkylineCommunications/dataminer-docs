@@ -33,9 +33,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Button;                  
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.Button;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 #### Calendar
@@ -46,9 +46,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Calendar;                
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.Calendar;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 #### CheckBox
@@ -59,9 +59,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.CheckBox;                
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.CheckBox;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 #### CheckBoxList
@@ -72,9 +72,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.CheckBoxList;            
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.CheckBoxList;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 #### DropDown
@@ -85,9 +85,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.DropDown;                
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.DropDown;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 #### FileSelector
@@ -98,20 +98,20 @@ Example:
 
 ```txt
 UIBlockDefinition uiBlock = new UIBlockDefinition();
-uiBlock.Type = UIBlockType.FileSelector;            
-uiBlock.DestVar = "varUserUploadedFile";            
+uiBlock.Type = UIBlockType.FileSelector;
+uiBlock.DestVar = "varUserUploadedFile";
 ```
 
 When the UI is then shown using *Engine#ShowUI(...)*, *UIResults* will contain the path to the file:
 
 ```txt
-UIResults results = engine.ShowUI(uiBuilder);                                
+UIResults results = engine.ShowUI(uiBuilder);
 string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 ```
 
 When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g. *Close*, *Next*, etc.). Once the upload has started, a *Cancel* option will be available.
 
-All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
+All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
 
 > [!TIP]
 > See also:
@@ -139,31 +139,31 @@ Example:
 string sel_numericValue = "23.567891;true;Discreet 2";
 ```
 
-If you want a checkbox with one or more discrete values, then use the *Extra* property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no checkbox, then leave the *Extra* property empty. In that case, just set the initial value to the DoubleValue.
+If you want a checkbox with one or more discrete values, then use the *Extra* property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no checkbox, then leave the *Extra* property empty. In that case, just set the initial value to the DoubleValue.
 
-If you set the *WantsOnChange* property to “true”, then both the checkbox and the discrete combo box will trigger a change.
+If you set the *WantsOnChange* property to “true”, then both the checkbox and the discrete combo box will trigger a change.
 
 Optionally you can provide a RangeHigh (maximum value), a RangeLow (minimum value), a RangeStep (increment or decrement steps) and the number of decimals.
 
 Full example:
 
 ```txt
-string sel_numericValue = "23.567891;true;Discreet 2";   
+string sel_numericValue = "23.567891;true;Discreet 2";
 UIBlockDefinition numericBlock = new UIBlockDefinition();
-numericBlock.Type = UIBlockType.Numeric;                 
-numericBlock.InitialValue = sel_numericValue;            
-numericBlock.DestVar = "num";                            
-numericBlock.WantsOnChange = true;                       
-numericBlock.Row = 0;                                    
-numericBlock.Column = 1;                                 
-numericBlock.HorizontalAlignment = "Center";             
-numericBlock.VerticalAlignment = "Top";                  
-numericBlock.RangeHigh = 300;                            
-numericBlock.RangeLow = 5;                               
-numericBlock.RangeStep = 5;                              
-numericBlock.Decimals = 6;                               
-numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3"; 
-uib.AppendBlock(numericBlock);                           
+numericBlock.Type = UIBlockType.Numeric;
+numericBlock.InitialValue = sel_numericValue;
+numericBlock.DestVar = "num";
+numericBlock.WantsOnChange = true;
+numericBlock.Row = 0;
+numericBlock.Column = 1;
+numericBlock.HorizontalAlignment = "Center";
+numericBlock.VerticalAlignment = "Top";
+numericBlock.RangeHigh = 300;
+numericBlock.RangeLow = 5;
+numericBlock.RangeStep = 5;
+numericBlock.Decimals = 6;
+numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
+uib.AppendBlock(numericBlock);
 ```
 
 > [!NOTE]
@@ -177,9 +177,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Parameter;               
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.Parameter;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 #### PasswordBox
@@ -190,10 +190,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockPasswordBox = new UIBlockDefinition();
-blockPasswordBox.Type = UIBlockType.PasswordBox;             
+blockPasswordBox.Type = UIBlockType.PasswordBox;
 ```
 
-Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](UIBlockDefinition_properties.md#haspeekicon).
+Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](UIBlockDefinition_properties.md#haspeekicon).
 
 #### RadioButtonList
 
@@ -203,14 +203,14 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.RadioButtonList;         
-...                                                   
-foreach (string item in radioButtonListItems)         
-{                                                     
-   blockItem.AddRadioButtonListOption(item);          
-}                                                     
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.RadioButtonList;
+...
+foreach (string item in radioButtonListItems)
+{
+ blockItem.AddRadioButtonListOption(item);
+}
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
@@ -224,9 +224,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.StaticText;              
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.StaticText;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 #### TextBox
@@ -237,9 +237,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.TextBox;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
@@ -253,9 +253,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Time;                    
-...                                                   
-MyDialogBox.AppendBlock(blockItem);                   
+blockItem.Type = UIBlockType.Time;
+...
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
@@ -265,17 +265,17 @@ MyDialogBox.AppendBlock(blockItem);
 
 Allows you to define a newly created dialog box item as a tree view. Available from DataMiner 10.0.10 onwards.
 
-To define a tree view control, create a *UIBlockDefinition* of type *TreeView* and add each item of the tree view as a *TreeViewItem* to the *TreeViewItems* property. It is not required to fill in the *InitialValue* or *Value* of the *UIBlockDefinition*, as that value is determined based on the *TreeViewItem* collection.
+To define a tree view control, create a *UIBlockDefinition* of type *TreeView* and add each item of the tree view as a *TreeViewItem* to the *TreeViewItems* property. It is not required to fill in the *InitialValue* or *Value* of the *UIBlockDefinition*, as that value is determined based on the *TreeViewItem* collection.
 
-Optionally, you can enable the *WantsOnChange* option for the tree view control, in which case it will send an update each time the selected state of a *TreeViewItem* changes. See [WantsOnChange](UIBlockDefinition_properties.md#wantsonchange).
+Optionally, you can enable the *WantsOnChange* option for the tree view control, in which case it will send an update each time the selected state of a *TreeViewItem* changes. See [WantsOnChange](UIBlockDefinition_properties.md#wantsonchange).
 
 To retrieve the results:
 
 - The *UIResult*, which can be returned using *engine.ShowUI()*, contains the *KeyValue* of the selected items.
 
-- The *GetString(UIBlockDefinition destvar)* method to retrieve a semicolon-separated string of the *KeyValues*.
+- The *GetString(UIBlockDefinition destvar)* method to retrieve a semicolon-separated string of the *KeyValues*.
 
-- The *GetChecked(UIBlockDefinition destvar, KeyValue value)* method can be used to check if a specific *KeyValue* was selected.
+- The *GetChecked(UIBlockDefinition destvar, KeyValue value)* method can be used to check if a specific *KeyValue* was selected.
 
 > [!NOTE]
 > Automation scripts with tree view controls are currently only supported in the DataMiner web apps. These are not yet supported in DataMiner Cube.
@@ -283,55 +283,55 @@ To retrieve the results:
 Example:
 
 ```txt
-do                                                                                                         
-{                                                                                                          
-   UIBuilder uib = new UIBuilder();                                                                        
-   uib.Title = "Treeview - default";                                                                       
-   uib.RequireResponse = true;                                                                             
-   uib.RowDefs = "*,*";                                                                                  
-   uib.ColumnDefs = "*";                                                                                  
-                                                                                                           
-   UIBlockDefinition tree = new UIBlockDefinition();                                                       
-   tree.Type = UIBlockType.TreeView;                                                                       
-   tree.Row = 0;                                                                                           
-   tree.Column = 0;                                                                                        
-   tree.DestVar = "treevar";                                                                               
-   tree.TreeViewItems = new List<TreeViewItem>                                                            
-   {                                                                                                       
-      new TreeViewItem("Core Teams", "1", new List<TreeViewItem>                                          
-      {                                                                                                    
-         new TreeViewItem("Team A", "1/1", new List<TreeViewItem>                                         
-         {                                                                                                 
-            new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("John", "1/1/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },        
-            new TreeViewItem("Kevin", "1/1/3", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }, 
-            new TreeViewItem("David", "1/1/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },       
-            new TreeViewItem("Joe", "1/1/5", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }    
-         }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },                                          
-         new TreeViewItem("Team B", "1/2", new List<TreeViewItem>                                         
-         {                                                                                                 
-            new TreeViewItem("Jane", "1/2/1"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },        
-            new TreeViewItem("Sarah", "1/2/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },       
-            new TreeViewItem("Emely", "1/2/3"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },       
-            new TreeViewItem("Anne", "1/2/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },        
-            new TreeViewItem("Florence", "1/2/5"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }     
-         }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }                                          
-      }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },                                             
-      new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }                
-   };                                                                                                      
-                                                                                                           
-   uib.AppendBlock(tree);                                                                                  
-                                                                                                           
-   UIBlockDefinition next = new UIBlockDefinition();                                                       
-   next.Type = UIBlockType.Button;                                                                         
-   next.Row = 1;                                                                                           
-   next.Column = 0;                                                                                        
-   next.Text = "Next";                                                                                     
-   next.DestVar = "Next";                                                                                  
-   uib.AppendBlock(next);                                                                                  
-                                                                                                           
-   _treeResults = _engine.ShowUI(uib);                                                                   
-} while (!_treeResults.WasButtonPressed("Next"));                                                         
-                                                                                                           
-ShowResult();                                                                                              
+do
+{
+ UIBuilder uib = new UIBuilder();
+ uib.Title = "Treeview - default";
+ uib.RequireResponse = true;
+ uib.RowDefs = "*,*";
+ uib.ColumnDefs = "*";
+
+ UIBlockDefinition tree = new UIBlockDefinition();
+ tree.Type = UIBlockType.TreeView;
+ tree.Row = 0;
+ tree.Column = 0;
+ tree.DestVar = "treevar";
+ tree.TreeViewItems = new List<TreeViewItem>
+ {
+ new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
+ {
+ new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
+ {
+ new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("John", "1/1/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("Kevin", "1/1/3", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("David", "1/1/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("Joe", "1/1/5", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+ }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
+ {
+ new TreeViewItem("Jane", "1/2/1"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("Sarah", "1/2/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("Emely", "1/2/3"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("Anne", "1/2/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("Florence", "1/2/5"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+ }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+ }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+ new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+ };
+
+ uib.AppendBlock(tree);
+
+ UIBlockDefinition next = new UIBlockDefinition();
+ next.Type = UIBlockType.Button;
+ next.Row = 1;
+ next.Column = 0;
+ next.Text = "Next";
+ next.DestVar = "Next";
+ uib.AppendBlock(next);
+
+ _treeResults = _engine.ShowUI(uib);
+} while (!_treeResults.WasButtonPressed("Next"));
+
+ShowResult();
 ```

@@ -33,7 +33,7 @@ To enable TLS encryption, do the following on every DMA in the DMS that is to co
 
 > [!TIP]
 > See also:
-> -  [Enabling TLS on the Cassandra database connection](../../part_7/SkylineDataminerFolder/DB_xml.md#enabling-tls-on-the-cassandra-database-connection) 
+> -  [Enabling TLS on the Cassandra database connection](../../part_7/SkylineDataminerFolder/DB_xml.md#enabling-tls-on-the-cassandra-database-connection)
 > -  [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/) on Dojo
 
- 
+

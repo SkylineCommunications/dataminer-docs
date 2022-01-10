@@ -9,7 +9,7 @@ A collapsible Alarm Console pane at the bottom of the Monitoring app UI provides
     > [!NOTE]
     > Only 1000 information events can be displayed in the app. If 1000 information events are displayed and another event enters the system, the oldest 100 events will no longer be displayed.
 
-- Clicking or tapping the alarm counter for a particular severity in the alarm bar filters the *Active alarms* tab to only show alarms with that severity.
+- Clicking or tapping the alarm counter for a particular severity in the alarm bar filters the *Active alarms* tab to only show alarms with that severity.
 
 - Clicking or tapping an alarm opens an alarm card with detailed information.
 

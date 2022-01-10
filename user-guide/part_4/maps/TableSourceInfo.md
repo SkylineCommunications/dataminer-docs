@@ -1,12 +1,12 @@
 ## TableSourceInfo
 
-In the *\<TableSourceInfo>* tag, you have to specify the dynamic table from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
+In the *\<TableSourceInfo>* tag, you have to specify the dynamic table from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
 
-- If the *style* attribute is set to *“markers”* (i.e. the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values retrieved from the dynamic table.
+- If the *style* attribute is set to *“markers”* (i.e. the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values retrieved from the dynamic table.
 
-- If the *style* attribute is set to *“lines”*, the layer will display lines, each connecting two pairs of latitude/longitude values retrieved from the dynamic table. Each line will be displayed as a geodesic, a segment of a “great circle” representing the shortest distance between two points on the surface of the Earth.
+- If the *style* attribute is set to *“lines”*, the layer will display lines, each connecting two pairs of latitude/longitude values retrieved from the dynamic table. Each line will be displayed as a geodesic, a segment of a “great circle” representing the shortest distance between two points on the surface of the Earth.
 
-- From DataMiner 9.6.4 onwards, it is possible to add an *alarmLevelType* attribute to determine how alarms are displayed for map items on this layer. This attribute can be set to the following values:
+- From DataMiner 9.6.4 onwards, it is possible to add an *alarmLevelType* attribute to determine how alarms are displayed for map items on this layer. This attribute can be set to the following values:
 
     | Value  | Description                                                                                                                        |
     |----------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -37,9 +37,9 @@ In this mandatory tag, specify the ID of the dynamic table.
 
 The parameter IDs of the table columns containing the latitude and longitude values.
 
-- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudeColumnPID>* and *\<LongitudeColumnPID>* tags. In that case, the *\<LatitudeColumnPID2>* and *\<LongitudeColumnPID2>* tags will not be used and can therefore be omitted.
+- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudeColumnPID>* and *\<LongitudeColumnPID>* tags. In that case, the *\<LatitudeColumnPID2>* and *\<LongitudeColumnPID2>* tags will not be used and can therefore be omitted.
 
-- If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudeColumnPID>* and *\<LongitudeColumnPID>* tags, and another pair in the *\<LatitudeColumnPID2>* and *\<LongitudeColumnPID2>* tags.
+- If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudeColumnPID>* and *\<LongitudeColumnPID>* tags, and another pair in the *\<LatitudeColumnPID2>* and *\<LongitudeColumnPID2>* tags.
 
 #### TitleColumnPID
 
@@ -89,16 +89,16 @@ The DataMiner ID, the element ID and the table filter values can be passed along
 
 #### elementVar
 
-If, in the *\<TableSourceInfo>* tag, you add an elementVar attribute with value “myElement” that refers to an Element using the syntax “DMAID/ElementID” or “NameOfElement”, then you can omit both the *\<DataMinerID>* tag and the *\<ElementID>* tag and use a map URL like one of the following instead (notice the “d” in front of the parameter name!):
+If, in the *\<TableSourceInfo>* tag, you add an elementVar attribute with value “myElement” that refers to an Element using the syntax “DMAID/ElementID” or “NameOfElement”, then you can omit both the *\<DataMinerID>* tag and the *\<ElementID>* tag and use a map URL like one of the following instead (notice the “d” in front of the parameter name!):
 
 ```txt
-maps.aspx?config=MyConfigFile&dmyElement=7/46840   
+maps.aspx?config=MyConfigFile&dmyElement=7/46840
 maps.aspx?config=MyConfigFile&dmyElement=VesselData
 ```
 
 #### filterVars
 
-If, in the *\<TableSourceInfo>* tag, you add a filterVars attribute with value “myFilter”, in a particular *\<TableFilter>* tag, you can replace the fixed value by “\[myFilter\]” and pass the filter value as a parameter in the map’s URL like this (notice the “d” in front of the parameter name!):
+If, in the *\<TableSourceInfo>* tag, you add a filterVars attribute with value “myFilter”, in a particular *\<TableFilter>* tag, you can replace the fixed value by “\[myFilter\]” and pass the filter value as a parameter in the map’s URL like this (notice the “d” in front of the parameter name!):
 
 ```txt
 maps.aspx?config=MyConfigFile&dmyFilter=box*

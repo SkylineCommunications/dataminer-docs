@@ -7,11 +7,11 @@ If a RADIUS server has been configured, the DataMiner Agent acts as a RADIUS cli
 In the file *DataMiner.xml*, a RADIUS server can be configured in the following way.
 
 ```xml
-<DataMiner>                                                      
-  <ExternalAuthentication type="RADIUS"                            
+<DataMiner>
+  <ExternalAuthentication type="RADIUS"
     host="IP address of RADIUS server" port="IP port of RADIUS server"
-    sharedSecret="RADIUS server shared secret" />                     
-</DataMiner>                                                     
+    sharedSecret="RADIUS server shared secret" />
+</DataMiner>
 ```
 
 When you have configured a RADIUS server:

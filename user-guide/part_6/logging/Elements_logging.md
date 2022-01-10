@@ -6,7 +6,7 @@ This page consists of three sections:
 
 - A log file list on the left side.
 
-- An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
+- An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
 
     > [!NOTE]
     > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.0.0.0", and debug logging is used for more detailed information. Which level is used depends on the configuration specified in the element protocol.
@@ -20,7 +20,7 @@ This page consists of three sections:
 
 ### Changing log levels
 
-The log levels of each element are indicated to the right of the element name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc.
+The log levels of each element are indicated to the right of the element name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc.
 
 In the *Log settings* section, you can change the log levels for each element. To do so:
 
@@ -33,11 +33,11 @@ In the *Log settings* section, you can change the log levels for each element. T
 4. Click *Apply levels* to apply your changes.
 
 > [!NOTE]
-> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
+> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
 
 ### Sorting the log file list
 
-Sorting the log file list in the *Elements* page is done in the same way as for the *DataMiner* page. See [Sorting the log file list](DataMiner_logging.md#sorting-the-log-file-list).
+Sorting the log file list in the *Elements* page is done in the same way as for the *DataMiner* page. See [Sorting the log file list](DataMiner_logging.md#sorting-the-log-file-list).
 
 ### Clearing log files
 

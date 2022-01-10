@@ -16,7 +16,7 @@ In this tag, specify a *\<Sync>* tag for every synchronization operation.
 
 ### AssetMediationConfig.SynchronizeData.Sync
 
-A *\<Sync>* tag contains all information necessary to be able to synchronize the contents of a single column or cell.
+A *\<Sync>* tag contains all information necessary to be able to synchronize the contents of a single column or cell.
 
 #### direction
 
@@ -32,13 +32,13 @@ In this attribute, specify the direction of the data synchronization.
 
 In this attribute, specify how frequently you want the column or cell to be automatically synchronized. Apart from a number of seconds, you can also specify “onChange” or “manual”.
 
-If you do not specify an interval attribute, the data will not be synchronized automatically. The data will only be synchronized when a user clicks the *Sync Now* button in the user interface of the Inventory & Asset Management module.
+If you do not specify an interval attribute, the data will not be synchronized automatically. The data will only be synchronized when a user clicks the *Sync Now* button in the user interface of the Inventory & Asset Management module.
 
 | Value    | Description                                                                                                                                                                                                                                                                                                                                                  |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | integer  | The data will be synchronized every X seconds.                                                                                                                                                                                                                                                                                                               |
 | onChange | The data will be synchronized whenever something changes to a DataMiner parameter (normal parameter, table parameter, property or table column).<br> If you set the interval to “onChange”, the entire table columns will be compared. This means that, if the data changes frequently, extra load can be put on both the database and the DataMiner server. |
-| manual   | The data will be synchronized when a user clicks the *Sync Now* button in the user interface of the Inventory & Asset Management module.                                                                                                                                                                                      |
+| manual   | The data will be synchronized when a user clicks the *Sync Now* button in the user interface of the Inventory & Asset Management module.                                                                                                                                                                                      |
 
 > [!NOTE]
 > onChange only works when synchronizing from a DataMiner database toward a CMDB.
@@ -59,7 +59,7 @@ In this attribute, indicate whether the operation will synchronize an entire col
 
 In this tag, specify the data in the DataMiner database that has to be synchronized.
 
-Depending on the type of *\<Sync>* tag and the type of DataMiner data to be synchronized, other attributes have to be specified. See the following table.
+Depending on the type of *\<Sync>* tag and the type of DataMiner data to be synchronized, other attributes have to be specified. See the following table.
 
 | Sync type | DataMiner data     | DMA tag attribute | Description                                                           |
 |-----------|--------------------|-------------------|-----------------------------------------------------------------------|

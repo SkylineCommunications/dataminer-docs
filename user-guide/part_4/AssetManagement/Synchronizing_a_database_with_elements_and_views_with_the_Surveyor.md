@@ -29,23 +29,23 @@ In this file, you can specify the table(s) from which to fetch the necessary dat
 Configuration file syntax:
 
 ```xml
-<AssetMediationConfig forConfig="configuration_name">                                                  
-  <SynchronizeData>                                                                                      
-    <Sync interval="manual | #seconds" type="view" direction="dbToDma|dmaToDb|dual">                    
-      <DB>                                                                                                   
-        <Tables>                                                                                               
-          <Table name="table_name" column="column_name" filter="optional filter">                                
-            <Properties>                                                                                           
-              <Property name="property_name" linkedTable="optional linked table"          column="column_name" />
-              ...                                                                                                     
-            </Properties>                                                                                          
-          </Table>                                                                                               
-        </Tables>                                                                                              
-      </DB>                                                                                                  
-      <DMA view="root_view_id" />                                                                            
-    </Sync>                                                                                                
-  <SynchronizeData>                                                                                      
-</AssetMediationConfig>                                                                                
+<AssetMediationConfig forConfig="configuration_name">
+  <SynchronizeData>
+    <Sync interval="manual | #seconds" type="view" direction="dbToDma|dmaToDb|dual">
+      <DB>
+        <Tables>
+          <Table name="table_name" column="column_name" filter="optional filter">
+            <Properties>
+              <Property name="property_name" linkedTable="optional linked table" column="column_name" />
+              ...
+            </Properties>
+          </Table>
+        </Tables>
+      </DB>
+      <DMA view="root_view_id" />
+    </Sync>
+  <SynchronizeData>
+</AssetMediationConfig>
 ```
 
 #### Overview of a number of typical view synchronization settings
@@ -76,45 +76,45 @@ In this file, your can specify the table from which to fetch the necessary data 
 Configuration file syntax:
 
 ```xml
-<AssetMediationConfig forConfig="configuration_name">                                                   
-  <SynchronizeData>                                                                                       
-    <Sync interval="manual | #seconds" type="element" direction="dbToDma|dmaToDb|dual">                  
-      <DB>                                                                                                    
-        <Tables>                                                                                                
-          <Table name="table_name" filter="optional filter">                                                      
-            <Properties>                                                                                            
-              <Property name="property_name" linkedTable="optional linked table"           column="column_name" />
-              ...                                                                                                      
-            <Properties>                                                                                            
-            <ElementFields>                                                                                         
-              <Field name="field_name" linkedTable="optional linked table"       column="column_name" />          
-              ...                                                                                                      
-            <ElementFields>                                                                                         
-            <Tables>                                                                                                
-              <Table name="">                                                                                         
-                <Properties />                                                                                          
-                <ElementFields />                                                                                       
-                <Tables>                                                                                                
-                  <Table name="devices" filter="" linkedTable="racks"       linkedColumn="Rack_ID">                   
-                    <Properties>                                                                                            
-                      <Property name="Model" column="Model" />                                                                
-                      ...                                                                                                      
-                    </Properties>                                                                                           
-                    <ElementFields>                                                                                         
-                      <Field name="ElementName" column="DeviceName"       linkedTable="" />                               
-                      ...                                                                                                      
-                    </ElementFields>                                                                                        
-                  </Table>                                                                                                
-                </Tables>                                                                                               
-              </Table>                                                                                                
-            </Tables>                                                                                               
-          </Table>                                                                                                
-        </Tables>                                                                                               
-      </DB>                                                                                                   
-      <DMA view="root_view_id" table="view_table_name" column="view_table_pk_column"/>                        
-    </Sync>                                                                                                 
-  <SynchronizeData>                                                                                       
-</AssetMediationConfig>                                                                                 
+<AssetMediationConfig forConfig="configuration_name">
+  <SynchronizeData>
+    <Sync interval="manual | #seconds" type="element" direction="dbToDma|dmaToDb|dual">
+      <DB>
+        <Tables>
+          <Table name="table_name" filter="optional filter">
+            <Properties>
+              <Property name="property_name" linkedTable="optional linked table"  column="column_name" />
+              ...
+            <Properties>
+            <ElementFields>
+              <Field name="field_name" linkedTable="optional linked table" column="column_name" />
+              ...
+            <ElementFields>
+            <Tables>
+              <Table name="">
+                <Properties />
+                <ElementFields />
+                <Tables>
+                  <Table name="devices" filter="" linkedTable="racks" linkedColumn="Rack_ID">
+                    <Properties>
+                      <Property name="Model" column="Model" />
+                      ...
+                    </Properties>
+                    <ElementFields>
+                      <Field name="ElementName" column="DeviceName" linkedTable="" />
+                      ...
+                    </ElementFields>
+                  </Table>
+                </Tables>
+              </Table>
+            </Tables>
+          </Table>
+        </Tables>
+      </DB>
+      <DMA view="root_view_id" table="view_table_name" column="view_table_pk_column"/>
+    </Sync>
+  <SynchronizeData>
+</AssetMediationConfig>
 ```
 
 Mandatory element fields:
@@ -216,94 +216,94 @@ Optional element fields:
 
 #### Legacy configuration using a single file
 
-Alternatively, up to DataMiner 9.0.3, a single file can be used instead, containing two *\<Sync>* tags. One of the *\<Sync>* tags must be of type “view”, the other of type “element”.
+Alternatively, up to DataMiner 9.0.3, a single file can be used instead, containing two *\<Sync>* tags. One of the *\<Sync>* tags must be of type “view”, the other of type “element”.
 
 For example:
 
 ```xml
-<AssetMediationConfig forConfig="AssetManagerSingleFileExample">                                    
-  <SynchronizeData>                                                                                   
-    <Sync interval="3600" type="view" direction="dual">                                                 
-      <DB>                                                                                                
-        <Tables>                                                                                            
-          <Table name="locations" column="LocationID" displayColumn="LocationName">                           
-            <Properties>                                                                                        
-              <Property name="Location Name" column="LocationName"/>                                              
-              <Property name="Location Abbreviation" column="Abbreviation"/>                                      
-            </Properties>                                                                                       
-            <Tables>                                                                                            
-              <Table name="rooms" column="RoomID" displayColumn="RoomName">                                       
-                <Properties>                                                                                        
-                  <Property name="Room Name" column="RoomName"/>                                                      
-                  <Property name="Room Abbreviation" column="RoomAbb"/>                                               
-                </Properties>                                                                                       
-            </Tables>                                                                                           
-          </Table>                                                                                            
-        </Tables>                                                                                           
-      </DB>                                                                                               
-      <DMA view="5231"/>                                                                                  
-    </Sync>                                                                                             
-    <Sync interval="3600" type="element" direction="dual">                                              
-      <DB>                                                                                                
-        <Tables>                                                                                            
-          <Table name="devices" filter="">                                                                    
-            <Properties>                                                                                        
-              <Property name="Model" column="Model" />                                                            
-              <Property name="Version" linkedTable="" column="Version" />                                         
-              <Property name="Rack Slot" linkedTable="" column="RackSlot" />                                      
-              <Property name="Firmware Version" linkedTable=""          column="FirmWareVersion" />           
-              <Property name="Manufacturer" linkedTable="device models"          column="Manufacturer"/>      
-            </Properties>                                                                                       
-            <ElementFields>                                                                                     
-              <Field name="ElementName" column="DeviceName" linkedTable="" />                                     
-              <Field name="ProtocolName" column="protocol" linkedTable="" />                                      
-              <Field name="ProtocolVersion" column="protocolversion" linkedTable="" />                            
-              <Field name="TrendTemplate" column="TrendTemplate" linkedTable="" />                                
-              <Field name="AlarmTemplate" column="AlarmTemplate" linkedTable="" />                                
-              <Field name="IPAddress" column="IPAddress" linkedTable="" />                                        
-              <Field name="SubNetMask" column="SubNetMask" linkedTable="" />                                      
-              <Field name="Description" column="Description" linkedTable="" />                                    
-              <Field name="ElementTimeOut" column="ElementTimeOut" linkedTable="" />                              
-              <Field name="State" column="State" linkedTable="" />                                                
-              <Field name="ReplicationDomain" column="ReplicationDomain"       linkedTable="" />              
-              <Field name="ReplicationHost" column="ReplicationHost" linkedTable="" />                            
-              <Field name="ReplicationOptions" column="ReplicationOptions"       linkedTable="" />            
-              <Field name="ReplicationPassword" column="ReplicationPassword"       linkedTable="" />          
-              <Field name="ReplicationRemoteElement" column="ReplicationRemoteElement"       linkedTable="" />
-              <Field name="ReplicationUser" column="ReplicationUser" linkedTable="" />                            
-              <Field name="IsReplicationActive" column="IsReplicationActive"       linkedTable="" />          
-              <Field name="PingInterval" column="PingInterval" linkedTable="" />                                  
-              <Field name="SlowPollBase" column="SlowPollBase" linkedTable="" />                                  
-              <Field name="SlowPollValue" column="SlowPollValue" linkedTable="" />                                
-              <Field name="Type" column="Type" linkedTable="" />                                                  
-              <Field name="CreateDVE" column="CreateDVE" linkedTable="" />                                        
-              <Field name="EnableSnmpAgent" column="EnableSnmpAgent" linkedTable="" />                            
-              <Field name="EnableTelnet" column="EnableTelnet" linkedTable="" />                                  
-              <Field name="ForceAgent" column="ForceAgent" linkedTable="" />                                      
-              <Field name="IsReadOnly" column="IsReadOnly" linkedTable="" />                                      
-              <Field name="PortPollingIPAddress" column="PortPollingIPAddress"       linkedTable="" />        
-              <Field name="PortPollingIPPort" column="PortPollingIPPort"       linkedTable="" />              
-              <Field name="PortBusAddress" column="PortBusAddress" linkedTable="" />                              
-              <Field name="PortRetries" column="PortRetries" linkedTable="" />                                    
-              <Field name="PortGetCommunity" column="PortGetCommunity"       linkedTable="" />                
-              <Field name="PortSetCommunity" column="PortSetCommunity"       linkedTable="" />                
-              <Field name="PortType" column="PortType" linkedTable="" />                                          
-              <Field name="PortBaudRate" column="PortBaudRate" linkedTable="" />                                  
-              <Field name="PortDataBits" column="PortDataBits" linkedTable="" />                                  
-              <Field name="PortFlowControl" column="PortFlowControl" linkedTable="" />                            
-              <Field name="PortLocalIPPort" column="PortLocalIPPort" linkedTable="" />                            
-              <Field name="PortPingInterval" column="PortPingInterval"       linkedTable="" />                
-              <Field name="PortStopBits" column="PortStopBits" linkedTable="" />                                  
-              <Field name="PortSlowPoll" column="PortSlowPoll" linkedTable="" />                                  
-              <Field name="PortSlowPollBase" column="PortSlowPollBase"        linkedTable="" />               
-            </ElementFields>                                                                                    
-          </Table>                                                                                            
-        </Tables>                                                                                           
-      </DB>                                                                                               
-      <DMA view="5231" table="racks" column="Rack_ID"/>                                                   
-    </Sync>                                                                                             
-  </SynchronizeData>                                                                                  
-</AssetMediationConfig>                                                                             
+<AssetMediationConfig forConfig="AssetManagerSingleFileExample">
+  <SynchronizeData>
+    <Sync interval="3600" type="view" direction="dual">
+      <DB>
+        <Tables>
+          <Table name="locations" column="LocationID" displayColumn="LocationName">
+            <Properties>
+              <Property name="Location Name" column="LocationName"/>
+              <Property name="Location Abbreviation" column="Abbreviation"/>
+            </Properties>
+            <Tables>
+              <Table name="rooms" column="RoomID" displayColumn="RoomName">
+                <Properties>
+                  <Property name="Room Name" column="RoomName"/>
+                  <Property name="Room Abbreviation" column="RoomAbb"/>
+                </Properties>
+            </Tables>
+          </Table>
+        </Tables>
+      </DB>
+      <DMA view="5231"/>
+    </Sync>
+    <Sync interval="3600" type="element" direction="dual">
+      <DB>
+        <Tables>
+          <Table name="devices" filter="">
+            <Properties>
+              <Property name="Model" column="Model" />
+              <Property name="Version" linkedTable="" column="Version" />
+              <Property name="Rack Slot" linkedTable="" column="RackSlot" />
+              <Property name="Firmware Version" linkedTable="" column="FirmWareVersion" />
+              <Property name="Manufacturer" linkedTable="device models" column="Manufacturer"/>
+            </Properties>
+            <ElementFields>
+              <Field name="ElementName" column="DeviceName" linkedTable="" />
+              <Field name="ProtocolName" column="protocol" linkedTable="" />
+              <Field name="ProtocolVersion" column="protocolversion" linkedTable="" />
+              <Field name="TrendTemplate" column="TrendTemplate" linkedTable="" />
+              <Field name="AlarmTemplate" column="AlarmTemplate" linkedTable="" />
+              <Field name="IPAddress" column="IPAddress" linkedTable="" />
+              <Field name="SubNetMask" column="SubNetMask" linkedTable="" />
+              <Field name="Description" column="Description" linkedTable="" />
+              <Field name="ElementTimeOut" column="ElementTimeOut" linkedTable="" />
+              <Field name="State" column="State" linkedTable="" />
+              <Field name="ReplicationDomain" column="ReplicationDomain" linkedTable="" />
+              <Field name="ReplicationHost" column="ReplicationHost" linkedTable="" />
+              <Field name="ReplicationOptions" column="ReplicationOptions" linkedTable="" />
+              <Field name="ReplicationPassword" column="ReplicationPassword" linkedTable="" />
+              <Field name="ReplicationRemoteElement" column="ReplicationRemoteElement" linkedTable="" />
+              <Field name="ReplicationUser" column="ReplicationUser" linkedTable="" />
+              <Field name="IsReplicationActive" column="IsReplicationActive" linkedTable="" />
+              <Field name="PingInterval" column="PingInterval" linkedTable="" />
+              <Field name="SlowPollBase" column="SlowPollBase" linkedTable="" />
+              <Field name="SlowPollValue" column="SlowPollValue" linkedTable="" />
+              <Field name="Type" column="Type" linkedTable="" />
+              <Field name="CreateDVE" column="CreateDVE" linkedTable="" />
+              <Field name="EnableSnmpAgent" column="EnableSnmpAgent" linkedTable="" />
+              <Field name="EnableTelnet" column="EnableTelnet" linkedTable="" />
+              <Field name="ForceAgent" column="ForceAgent" linkedTable="" />
+              <Field name="IsReadOnly" column="IsReadOnly" linkedTable="" />
+              <Field name="PortPollingIPAddress" column="PortPollingIPAddress" linkedTable="" />
+              <Field name="PortPollingIPPort" column="PortPollingIPPort" linkedTable="" />
+              <Field name="PortBusAddress" column="PortBusAddress" linkedTable="" />
+              <Field name="PortRetries" column="PortRetries" linkedTable="" />
+              <Field name="PortGetCommunity" column="PortGetCommunity" linkedTable="" />
+              <Field name="PortSetCommunity" column="PortSetCommunity" linkedTable="" />
+              <Field name="PortType" column="PortType" linkedTable="" />
+              <Field name="PortBaudRate" column="PortBaudRate" linkedTable="" />
+              <Field name="PortDataBits" column="PortDataBits" linkedTable="" />
+              <Field name="PortFlowControl" column="PortFlowControl" linkedTable="" />
+              <Field name="PortLocalIPPort" column="PortLocalIPPort" linkedTable="" />
+              <Field name="PortPingInterval" column="PortPingInterval" linkedTable="" />
+              <Field name="PortStopBits" column="PortStopBits" linkedTable="" />
+              <Field name="PortSlowPoll" column="PortSlowPoll" linkedTable="" />
+              <Field name="PortSlowPollBase" column="PortSlowPollBase"  linkedTable="" />
+            </ElementFields>
+          </Table>
+        </Tables>
+      </DB>
+      <DMA view="5231" table="racks" column="Rack_ID"/>
+    </Sync>
+  </SynchronizeData>
+</AssetMediationConfig>
 ```
 
 ### Configuration from DataMiner 9.0.4 onwards
@@ -329,55 +329,55 @@ This new synchronization method needs the following four tables:
 Example of a mediation configuration file:
 
 ```xml
-<AssetMediationConfig forConfig="AssetManagerConfig">    
-  <SynchronizeData>                                        
-    <Sync direction="dual" type="ElementView" interval="60"> 
-      <ElementView>                                            
-        <ViewID>27</ViewID>                                     
-        <ElementTable>                                           
-          <TableName>elements</TableName>                         
-          <ElementNameColumn>name</ElementNameColumn>             
-          <Properties>                                             
-            <Property name="PropIAM" column="ElementProperty" />     
-            <!-- Additional Properties -->                           
-          </Properties>                                            
-          <Fields>                                                 
-            <Field column="Protocol" name="ProtocolName" />          
+<AssetMediationConfig forConfig="AssetManagerConfig">
+  <SynchronizeData>
+    <Sync direction="dual" type="ElementView" interval="60">
+      <ElementView>
+        <ViewID>27</ViewID>
+        <ElementTable>
+          <TableName>elements</TableName>
+          <ElementNameColumn>name</ElementNameColumn>
+          <Properties>
+            <Property name="PropIAM" column="ElementProperty" />
+            <!-- Additional Properties -->
+          </Properties>
+          <Fields>
+            <Field column="Protocol" name="ProtocolName" />
             <Field column="ProtocolVersion" name="ProtocolVersion" />
-            <!-- Additional Fields -->                               
-          </Fields>                                                
-          <Ports>                                                  
-            <TableName>Ports</TableName>                            
-            <ElementKeyColumn>Element</ElementKeyColumn>            
-            <PortNumberColumn>Number</PortNumberColumn>             
-            <Fields>                                                 
-              <Field name="PortPollingIPAddress" column="IPAddress" /> 
-              <!-- Additional Fields -->                               
-            </Fields>                                                
-          </Ports>                                                 
-        </ElementTable>                                          
-        <ViewTable>                                              
-          <TableName>views</TableName>                            
-          <ViewNameColumn>name</ViewNameColumn>                   
-          <ParentColumn>ParentID</ParentColumn>                   
-          <Properties>                                             
-            <Property name="PropViewIAM" column="ViewProperty" />    
-            <!-- Additional Properties -->                           
-          </Properties>                                            
-        </ViewTable>                                             
-        <ElementInViewTableName>                                 
-          <TableName>elementview</TableName>                      
-          <ViewKey>ViewId</ViewKey>                               
-          <ElementKey>ElementID</ElementKey>                      
-        </ElementInViewTableName>                                
-      </ElementView>                                           
-    </Sync>                                                  
-  </SynchronizeData>                                       
-</AssetMediationConfig>                                  
+            <!-- Additional Fields -->
+          </Fields>
+          <Ports>
+            <TableName>Ports</TableName>
+            <ElementKeyColumn>Element</ElementKeyColumn>
+            <PortNumberColumn>Number</PortNumberColumn>
+            <Fields>
+              <Field name="PortPollingIPAddress" column="IPAddress" />
+              <!-- Additional Fields -->
+            </Fields>
+          </Ports>
+        </ElementTable>
+        <ViewTable>
+          <TableName>views</TableName>
+          <ViewNameColumn>name</ViewNameColumn>
+          <ParentColumn>ParentID</ParentColumn>
+          <Properties>
+            <Property name="PropViewIAM" column="ViewProperty" />
+            <!-- Additional Properties -->
+          </Properties>
+        </ViewTable>
+        <ElementInViewTableName>
+          <TableName>elementview</TableName>
+          <ViewKey>ViewId</ViewKey>
+          <ElementKey>ElementID</ElementKey>
+        </ElementInViewTableName>
+      </ElementView>
+    </Sync>
+  </SynchronizeData>
+</AssetMediationConfig>
 ```
 
 > [!NOTE]
 > -  The names of the element fields are the same as in the configuration in use up to DataMiner 9.0.3. See [Element synchronization file](#element-synchronization-file).
-> -  For more information about configuration settings, see [Configuring data mediation settings in DMS Inventory and Asset Management](Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management.md). However, note that the *AssetMediationConfig.SynchronizeData.Sync.DMA* and *AssetMediationConfig.SynchronizeData.Sync.DB* tags described in that section are replaced by the *AssetMediationConfig.SynchronizeData.Sync.ElementView* tag in this configuration.
+> -  For more information about configuration settings, see [Configuring data mediation settings in DMS Inventory and Asset Management](Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management.md). However, note that the *AssetMediationConfig.SynchronizeData.Sync.DMA* and *AssetMediationConfig.SynchronizeData.Sync.DB* tags described in that section are replaced by the *AssetMediationConfig.SynchronizeData.Sync.ElementView* tag in this configuration.
 
- 
+

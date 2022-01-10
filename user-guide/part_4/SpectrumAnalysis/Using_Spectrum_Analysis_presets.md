@@ -16,7 +16,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/> 
+> <https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/>
 
 ### About presets
 
@@ -52,7 +52,7 @@ In order to save a configuration, a preset must already exist that you can save 
 
 To save a preset in DataMiner Cube:
 
-1. Go to the *SAVE* section of the *Presets* tab in the settings pane.
+1. Go to the *SAVE* section of the *Presets* tab in the settings pane.
 
 2. In the drop-down list, select the preset you want to save the configuration into.
 
@@ -62,7 +62,7 @@ To save a preset in DataMiner Cube:
 
 To load a preset in DataMiner Cube:
 
-1. Go to the *LOAD* section of the *Presets* tab in the settings pane.
+1. Go to the *LOAD* section of the *Presets* tab in the settings pane.
 
 2. To show public presets as well as private presets, select *Show shared presets*.
 
@@ -78,15 +78,15 @@ To load a preset in DataMiner Cube:
 5. Click the *Load* button.
 
 > [!NOTE]
-> When a reference trace has been loaded from a preset, it will be added in the list of traces in the info pane, with the corresponding trace color. 
-> -  You can change the reference trace color in the *trace* tab of the ribbon, by clicking *Color* > *Reference trace*, and selecting the new color.
-> -  To hide the reference trace, in the *trace* tab of the ribbon, clear the selection from *Show reference*.
+> When a reference trace has been loaded from a preset, it will be added in the list of traces in the info pane, with the corresponding trace color.
+> -  You can change the reference trace color in the *trace* tab of the ribbon, by clicking *Color* > *Reference trace*, and selecting the new color.
+> -  To hide the reference trace, in the *trace* tab of the ribbon, clear the selection from *Show reference*.
 
 ### Creating new presets
 
 To create a new preset in DataMiner Cube:
 
-1. In the settings pane, at the bottom of the *Presets* tab, click the *Manage* button.
+1. In the settings pane, at the bottom of the *Presets* tab, click the *Manage* button.
 
 2. Click the *New* button.
 
@@ -106,7 +106,7 @@ For more information on how to save different information in a preset, see [Savi
 
 To edit the settings, name or description for a preset:
 
-1. In the settings pane, at the bottom of the *Presets* tab, click the *Manage* button.
+1. In the settings pane, at the bottom of the *Presets* tab, click the *Manage* button.
 
 2. Click the *Edit* button.
 
@@ -121,7 +121,7 @@ To edit the settings, name or description for a preset:
 
 To delete a preset in DataMiner Cube:
 
-1. In the settings pane, at the bottom of the *Presets* tab, click the *Manage* button.
+1. In the settings pane, at the bottom of the *Presets* tab, click the *Manage* button.
 
 2. Click the preset you want to delete in order to select it.
 

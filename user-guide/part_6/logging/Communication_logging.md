@@ -25,4 +25,4 @@ To make it easier to process the information in the log, you can do the followin
 
 - Use the filter box in the top-right corner to filter the displayed information. See [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md).
 
-- If the computer setting *Store full messages* has been applied, you can click a message to view message details in a separate pane. See [Computer settings](../../part_1/GettingStarted/Computer_settings.md).
+- If the computer setting *Store full messages* has been applied, you can click a message to view message details in a separate pane. See [Computer settings](../../part_1/GettingStarted/Computer_settings.md).

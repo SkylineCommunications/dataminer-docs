@@ -20,6 +20,6 @@ Do the following:
 
 2. Click *Clean DataMiner Cube XBAP Cache*.
 
-3. In the *File Download* dialog box, click *Run*.
+3. In the *File Download* dialog box, click *Run*.
 
 If you restart DataMiner Cube after performing the above-mentioned procedure, a fresh copy of the DataMiner Cube application will be downloaded.

@@ -2,7 +2,7 @@
 
 To resend a number of history alarms to a particular SNMP manager:
 
-1. In DataMiner Cube, go to *Apps* > *System Center* \> *SNMP Forwarding*.
+1. In DataMiner Cube, go to *Apps* > *System Center* \> *SNMP Forwarding*.
 
 2. Right-click an SNMP manager in the list, and click *Resend.*
 
@@ -21,7 +21,7 @@ To resend a number of history alarms to a particular SNMP manager:
         > [!NOTE]
         > In the above, X is the DataMiner ID of the DMA from which the notifications are sent.
 
-    If SNMP trap rerouting is enabled for the SNMP manager in question, you will not be able to select the DMA that has to send the alarms. In that case, all SNMP notifications will be sent from the DMA of which the DMA ID is specified in the *sourceDMA* attribute of the SNMPManagers.SNMPManager tag of the *SNMP Managers.xml* file.
+    If SNMP trap rerouting is enabled for the SNMP manager in question, you will not be able to select the DMA that has to send the alarms. In that case, all SNMP notifications will be sent from the DMA of which the DMA ID is specified in the *sourceDMA* attribute of the SNMPManagers.SNMPManager tag of the *SNMP Managers.xml* file.
 
 > [!NOTE]
 > -  Information events are created to help you track resend operations.

@@ -41,7 +41,7 @@ Package containing minor updates for an existing release. Update packages contai
 
 Package containing all files necessary to restore a particular DataMiner Agent installation.
 
-- This type of file is created each time you select the *Maintenance \> Backup* menu command in the SLTaskBarUtility program.
+- This type of file is created each time you select the *Maintenance \> Backup* menu command in the SLTaskBarUtility program.
 
 - File extension: *.dmbackup*
 

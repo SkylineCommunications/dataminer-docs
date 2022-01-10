@@ -1,6 +1,6 @@
 ## Overview of the DataMiner PTP app UI
 
-In DataMiner Cube’s navigation pane, the DataMiner PTP app is available in the *Applications* section of the *Apps* tab.
+In DataMiner Cube’s navigation pane, the DataMiner PTP app is available in the *Applications* section of the *Apps* tab.
 
 From PTP version 1.1.0 onwards, the app consists of the following tabs:
 
@@ -22,7 +22,7 @@ The information in this tab is displayed in several separate blocks.
 
 - The **PTP system summary** block in the top-left corner shows:
 
-    - At the top, the number of PTP nodes that are reporting the current active grandmaster. Clicking the table icon next to this counter opens a window listing all nodes. The *Status* column in this overview, which allows alarm monitoring, provides more information about node synchronization status. This column can have the following values:
+    - At the top, the number of PTP nodes that are reporting the current active grandmaster. Clicking the table icon next to this counter opens a window listing all nodes. The *Status* column in this overview, which allows alarm monitoring, provides more information about node synchronization status. This column can have the following values:
 
         - *Synced With Active Preferred Grandmaster*: The node is synchronized with the active grandmaster.
 
@@ -38,7 +38,7 @@ The information in this tab is displayed in several separate blocks.
 
     - On the right, the currently active probe. This is the probe in charge of identifying the current active grandmaster clock in the PTP topology. A cogwheel icon next to the probe allows you to select a different probe.
 
-- The **alarms** block in the top-right corner shows a summary of the PTP-related alarms (total, critical, major, minor and warning). If no domain is specified for the app, all alarms in the system are taken into account. Otherwise, only the alarms for the specified domain are taken into account. (See [The Admin tab](#the-admin-tab).)
+- The **alarms** block in the top-right corner shows a summary of the PTP-related alarms (total, critical, major, minor and warning). If no domain is specified for the app, all alarms in the system are taken into account. Otherwise, only the alarms for the specified domain are taken into account. (See [The Admin tab](#the-admin-tab).)
 
     Clicking the list icon next to the total alarm count will open an alarm tab listing all these alarms. Clicking one of the four other alarm counters will open an alarm tab with these alarms filtered on the alarm severity in question.
 
@@ -50,26 +50,26 @@ The information in this tab is displayed in several separate blocks.
 
         - The ID of the current grandmaster clock.
 
-        - The role of the current grandmaster clock. This can be either *Potential* or *Preferred*. If it is *Preferred*, this means that this grandmaster should always be used to synchronize if possible.
+        - The role of the current grandmaster clock. This can be either *Potential* or *Preferred*. If it is *Preferred*, this means that this grandmaster should always be used to synchronize if possible.
 
         - The time of the DMA or the grandmaster clock. A toggle button allows you to switch between these. The DMA time is the local time of the DataMiner Agent, which is not equal to the PTP time, unless the DataMiner Agent is synchronized with the PTP domain.
 
     - Next to this, two tabs are available:
 
-        - In the *Settings GM* tab, the *Settings*, *BMCA* (Best Master Clock Algorithm) and *Message Rates* columns show the information related to the grandmaster.
+        - In the *Settings GM* tab, the *Settings*, *BMCA* (Best Master Clock Algorithm) and *Message Rates* columns show the information related to the grandmaster.
 
-        - In the *Nodes Summary* tab, these same columns show the aggregated alarm information for all nodes in the configured PTP domain, or in the entire system if no domain is configured. Next to each parameter, a list icon is available that opens a filtered alarm tab when clicked.
+        - In the *Nodes Summary* tab, these same columns show the aggregated alarm information for all nodes in the configured PTP domain, or in the entire system if no domain is configured. Next to each parameter, a list icon is available that opens a filtered alarm tab when clicked.
 
         - A number of parameters in these tabs are of specific note. For more information on these parameters, see [Special PTP parameters in the Summary tab](#special-ptp-parameters-in-the-summary-tab)
 
         - Next to the tab names, an icon is available that can be clicked to switch between “play” and “stop” mode. In “play” mode, the app will automatically switch between the two tabs at regular intervals. In “stop” mode, only the last selected tab remains displayed.
 
         > [!NOTE]
-        > The *Delay Response* parameter is retrieved from the PTP probe instead of the grandmaster. Clicking the probe icon will open a tool tip with this information.
+        > The *Delay Response* parameter is retrieved from the PTP probe instead of the grandmaster. Clicking the probe icon will open a tool tip with this information.
 
     - In the top-right corner, the name of the current grandmaster interface is displayed. Click the cogwheel button next to this name to select a different interface.
 
-- The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g. *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
+- The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g. *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
 
 #### Special PTP parameters in the Summary tab
 
@@ -79,21 +79,21 @@ Below you can find more information on certain parameters in the *Summary* tab.
 
 This parameter can have the following values:
 
-- **Atomic Clock** (0x10): Any device that is based on atomic resonance for frequency and that has been calibrated against international standards for frequency and, if the PTP timescale is used, time, or a device directly connected to such a device.
+- **Atomic Clock** (0x10): Any device that is based on atomic resonance for frequency and that has been calibrated against international standards for frequency and, if the PTP timescale is used, time, or a device directly connected to such a device.
 
-- **GPS** (0x20): Any device synchronized with a satellite system that distributes time and frequency tied to international standards.
+- **GPS** (0x20): Any device synchronized with a satellite system that distributes time and frequency tied to international standards.
 
-- **Terrestrial Radio** (0x30): Any device synchronized via any of the radio distribution systems that distribute time and frequency tied to international standards.
+- **Terrestrial Radio** (0x30): Any device synchronized via any of the radio distribution systems that distribute time and frequency tied to international standards.
 
 - **PTP** (0x40): Any device synchronized to a PTP-based source of time external to the domain.
 
-- **NTP** (0x50): Any device synchronized via NTP or Simple Network Time Protocol (SNTP) to servers that distribute time and frequency tied to international standards.
+- **NTP** (0x50): Any device synchronized via NTP or Simple Network Time Protocol (SNTP) to servers that distribute time and frequency tied to international standards.
 
-- **Hand Set** (0x60): Any device of which the time has been set to a value within the claimed clock accuracy by means of a human interface based on observation of a source of time tied to international standards.
+- **Hand Set** (0x60): Any device of which the time has been set to a value within the claimed clock accuracy by means of a human interface based on observation of a source of time tied to international standards.
 
 - **Other** (0x90): Any other source of time and/or frequency not covered by other values.
 
-- **Internal Oscillator** (0xA0): Any device of which the frequency is not based on atomic resonance or calibrated against international standards for frequency, but instead based on a free-running oscillator with epoch determined in an arbitrary or unknown manner.
+- **Internal Oscillator** (0xA0): Any device of which the frequency is not based on atomic resonance or calibrated against international standards for frequency, but instead based on a free-running oscillator with epoch determined in an arbitrary or unknown manner.
 
 ##### Clock Class
 
@@ -157,7 +157,7 @@ This parameter can have the following values:
 
 - **48** (0x30): Accurate to within 10 s.
 
-- **49** (0x31): Accurate to \>10 s.
+- **49** (0x31): Accurate to \>10 s.
 
 - **254** (0xFE): Unknown.
 
@@ -213,7 +213,7 @@ This tab shows a graphical overview of how the different PTP nodes are connected
 
 Clicking the name of a PTP node opens the element card of the node. Clicking the icon marking the type of node opens the PTP alarm tab, showing the list of active PTP alarms associated with the node. Clicking a connection line will open a pop-up window, showing more information about the connection.
 
-To change the position of the nodes, right-click anywhere on the topology overview, click *Arrange*, and drag and drop the nodes to the position where you want them. To exit arrange mode, click *Apply* in the top-right corner.
+To change the position of the nodes, right-click anywhere on the topology overview, click *Arrange*, and drag and drop the nodes to the position where you want them. To exit arrange mode, click *Apply* in the top-right corner.
 
 Alarm states are indicated as follows:
 
@@ -230,9 +230,9 @@ Alarm states are indicated as follows:
 
 This tab consists of three different sections:
 
-- In the **Domain** section, you can click the *Set* button to specify a different PTP domain for this PTP app instance. There can be different instances of the app, each monitoring a different domain. When a PTP domain has been specified for an instance of the app, the corresponding element will be renamed to *DataMiner PTP - {domain name}*.
+- In the **Domain** section, you can click the *Set* button to specify a different PTP domain for this PTP app instance. There can be different instances of the app, each monitoring a different domain. When a PTP domain has been specified for an instance of the app, the corresponding element will be renamed to *DataMiner PTP - {domain name}*.
 
-- In the **All Domains** section, all the configured PTP domains are listed. You can add more domains using the *Add* button.
+- In the **All Domains** section, all the configured PTP domains are listed. You can add more domains using the *Add* button.
 
 - In the **Configuration** section, two buttons are available:
 
@@ -248,4 +248,4 @@ This tab consists of three different sections:
 
 This tab contains links to this section of the DataMiner Help and to a page with more information about PTP in general. It also displays version information for the PTP app.
 
- 
+

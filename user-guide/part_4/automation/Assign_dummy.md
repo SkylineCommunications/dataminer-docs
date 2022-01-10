@@ -9,7 +9,7 @@ Use this action to assign an Automation script’s dummy to a specific element b
 
 2. Select how the new element will be determined:
 
-    - For a pre-determined element, select *Value* to select a specific element, and enter the element name or ID.
+    - For a pre-determined element, select *Value* to select a specific element, and enter the element name or ID.
 
     - For an element determined by a script variable, select *Variable* and select the variable.
 

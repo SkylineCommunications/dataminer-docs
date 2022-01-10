@@ -2,7 +2,7 @@
 
 In DataMiner, you can set up redundant device architectures by simply combining primary and backup elements into so-called redundancy groups.
 
-In DataMiner Cube, redundancy groups are listed in the Surveyor with a specific icon: ![](../../images/IconRG00054.PNG) 
+In DataMiner Cube, redundancy groups are listed in the Surveyor with a specific icon: ![](../../images/IconRG00054.PNG)
 
 Redundancy groups have specific context menu options in the Surveyor. They also have corresponding redundancy group cards, which contain both status information and configuration options.
 

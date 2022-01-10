@@ -13,7 +13,7 @@ To configure a custom legend, add a *\<CustomLegendBox>* tag, and configure it a
     | visible     | Determines whether the legend is displayed on the map.                                                                                                                                                                                 |
     | width       | The width of the legend box in pixels.                                                                                                                                                                                                 |
     | height      | The height of the legend box in pixels.                                                                                                                                                                                                |
-    | filterVars  | Optional. Can be used to link a table filter to a URL variable.<br> This attribute functions in the same way as when used in the *\<TableSourceInfo>* tag. See [filterVars](TableSourceInfo.md#filtervars). |
+    | filterVars  | Optional. Can be used to link a table filter to a URL variable.<br> This attribute functions in the same way as when used in the *\<TableSourceInfo>* tag. See [filterVars](TableSourceInfo.md#filtervars). |
 
 - Subtags of the *\<CustomLegendBox>* tag:
 
@@ -24,51 +24,51 @@ To configure a custom legend, add a *\<CustomLegendBox>* tag, and configure it a
     | ElementID       |                                                                                                                                                                                             |
     | TableID         |                                                                                                                                                                                             |
     | TableColumnPIDs | The IDs of the table column parameters that have to be displayed in the legend. If none are specified, all columns will be displayed.                                                       |
-    | TableFilters    | The table row filters. This subtag functions in the same way as when used  in the *\<TableSourceInfo>* tag. See [TableFilters](TableSourceInfo.md#tablefilters). |
+    | TableFilters    | The table row filters. This subtag functions in the same way as when used in the *\<TableSourceInfo>* tag. See [TableFilters](TableSourceInfo.md#tablefilters). |
     | FilterColumnPID | The ID of the table column parameter that contains the value to be used to filter the layers.                                                                                               |
 
 Example:
 
 ```xml
 <CustomLegendBox visible="true" width="500" height="200" filterVars="satellite">
-  <Name>Custom Legend</Name>                                                     
-  <DataMinerID>157</DataMinerID>                                                 
-  <ElementID>50823</ElementID>                                                   
-  <TableID>2000</TableID>                                                        
-  <TableColumnPIDs>                                                               
-    <TableColumnPID>2001</TableColumnPID>                                          
-    <TableColumnPID>2002</TableColumnPID>                                          
-    <TableColumnPID>2003</TableColumnPID>                                          
-    <TableColumnPID>2004</TableColumnPID>                                          
-    <TableColumnPID>2005</TableColumnPID>                                          
-  </TableColumnPIDs>                                                              
-  <TableFilters>                                                                  
-    <TableFilter>VALUE=2020 == [satellite]</TableFilter>                         
-  </TableFilters>                                                                 
-  <FilterColumnPID>2001</FilterColumnPID>                                        
-</CustomLegendBox>                                                              
+  <Name>Custom Legend</Name>
+  <DataMinerID>157</DataMinerID>
+  <ElementID>50823</ElementID>
+  <TableID>2000</TableID>
+  <TableColumnPIDs>
+    <TableColumnPID>2001</TableColumnPID>
+    <TableColumnPID>2002</TableColumnPID>
+    <TableColumnPID>2003</TableColumnPID>
+    <TableColumnPID>2004</TableColumnPID>
+    <TableColumnPID>2005</TableColumnPID>
+  </TableColumnPIDs>
+  <TableFilters>
+    <TableFilter>VALUE=2020 == [satellite]</TableFilter>
+  </TableFilters>
+  <FilterColumnPID>2001</FilterColumnPID>
+</CustomLegendBox>
 ```
 
 ### \[CustomLegendBoxFilterValue\] placeholder
 
-In order to link a custom legend to a layer, use the *\[CustomLegendBoxFilterValue\]* placeholder. This placeholder will be replaced by the *FilterColumnPID* value of the row selected in the legend.
+In order to link a custom legend to a layer, use the *\[CustomLegendBoxFilterValue\]* placeholder. This placeholder will be replaced by the *FilterColumnPID* value of the row selected in the legend.
 
 Example:
 
 ```xml
-<Layer sourceType="table" refresh="60000">                              
-  <TableSourceInfo filterVars="vessel">                                   
-    <DataMinerID>157</DataMinerID>                                         
-    <ElementID>50823</ElementID>                                           
-    <TableID>2000</TableID>                                                
-    <TableFilters>                                                          
+<Layer sourceType="table" refresh="60000">
+  <TableSourceInfo filterVars="vessel">
+    <DataMinerID>157</DataMinerID>
+    <ElementID>50823</ElementID>
+    <TableID>2000</TableID>
+    <TableFilters>
       <TableFilter>VALUE=2001 == [CustomLegendBoxFilterValue]</TableFilter>
-    </TableFilters>                                                         
-    <LatitudeColumnPID>2007</LatitudeColumnPID>                            
-    <LongitudeColumnPID>2008</LongitudeColumnPID>                          
-    <TitleColumnPID>2002</TitleColumnPID>                                  
-    <AlarmLevelColumnPID>2004</AlarmLevelColumnPID>                        
-    <MarkerSelectionPID>2101</MarkerSelectionPID>                          
-  </TableSourceInfo>                                                      
-</Layer>                                                                
+    </TableFilters>
+    <LatitudeColumnPID>2007</LatitudeColumnPID>
+    <LongitudeColumnPID>2008</LongitudeColumnPID>
+    <TitleColumnPID>2002</TitleColumnPID>
+    <AlarmLevelColumnPID>2004</AlarmLevelColumnPID>
+    <MarkerSelectionPID>2101</MarkerSelectionPID>
+  </TableSourceInfo>
+</Layer>
 ```

@@ -12,10 +12,10 @@ Example:
 
 ```txt
 ScriptMemory memory = engine.GetMemory("memory");
-if(memory != null)                               
-{                                                
-    memory.Clear();                              
-}                                                
+if(memory != null)
+{
+ memory.Clear();
+}
 ```
 
 #### Get
@@ -23,7 +23,7 @@ if(memory != null)
 Gets one of the values from the memory file. The memory position can be specified by name or by ID.
 
 ```txt
-object Get(int position)       
+object Get(int position)
 object Get(string positionDesc)
 ```
 
@@ -31,12 +31,12 @@ Examples:
 
 ```txt
 ScriptMemory memory = engine.GetMemory("myMemory");
-object myValue = memory.Get(1);                    
+object myValue = memory.Get(1);
 ```
 
 ```txt
 ScriptMemory memory = engine.GetMemory("myMemory");
-object myValue = memory.Get("myEntryDescription"); 
+object myValue = memory.Get("myEntryDescription");
 ```
 
 #### Set
@@ -44,7 +44,7 @@ object myValue = memory.Get("myEntryDescription");
 Sets the given value in the memory file. The memory position can be specified by name or by ID.
 
 ```txt
-void Set(int position, object val)       
+void Set(int position, object val)
 void Set(string positionDesc, object val)
 ```
 
@@ -52,10 +52,10 @@ Examples:
 
 ```txt
 ScriptMemory memory = engine.GetMemory("myMemory");
-object myValue = memory.Set(10, "myValue");        
+object myValue = memory.Set(10, "myValue");
 ```
 
 ```txt
-ScriptMemory memory = engine.GetMemory("myMemory");          
+ScriptMemory memory = engine.GetMemory("myMemory");
 object myValue = memory.Set("myEntryDescription", "myValue");
 ```

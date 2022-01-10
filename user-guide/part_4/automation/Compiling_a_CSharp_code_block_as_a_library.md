@@ -22,9 +22,9 @@ From DataMiner 9.6.13 onwards, it is possible to have a C# code block in an Auto
 
 Once you have compiled a C# code block as a library, you can then import that library into other Automation scripts. To do so:
 
-1. In the Automation module, open the *Advanced* section below the C# code block in the script you want to import the library into.
+1. In the Automation module, open the *Advanced* section below the C# code block in the script you want to import the library into.
 
-2. In the *Script references* box, enter a reference to the library you want to import, by referring to the relevant script name and library name in the following format: *ScriptName:LibraryName*. For example: *Custom Exception Library:SrmCustomExceptions*
+2. In the *Script references* box, enter a reference to the library you want to import, by referring to the relevant script name and library name in the following format: *ScriptName:LibraryName*. For example: *Custom Exception Library:SrmCustomExceptions*
 
     > [!NOTE]
     > In the reference, ScriptName can be replaced by the placeholder *\[AutomationScriptName\]*, which will be resolved to the name of the script in which you are currently adding a reference.
@@ -39,18 +39,18 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 1. In Visual Studio, create a solution with the library script, and add all other Automation scripts in which you want to use the library to this solution.
 
-2. In the XML of the library script, make sure the *preCompile* and *libraryName* parameters are filled in. For example:
+2. In the XML of the library script, make sure the *preCompile* and *libraryName* parameters are filled in. For example:
 
     ```xml
-    <Script>                                                          
-      <Exe id="1" type="csharp">                                        
+    <Script>
+      <Exe id="1" type="csharp">
         <Value><!CDATA[[Project:Custom Exception Library_1]]</Value>
-        <Param type="debug">true</Param>                                 
-        <Param type="preCompile">true</Param>                            
-        <Param type="libraryName">SrmCustomExceptions</Param>            
-        <Message></Message>                                              
-      </Exe>                                                            
-    </Script>                                                         
+        <Param type="debug">true</Param>
+        <Param type="preCompile">true</Param>
+        <Param type="libraryName">SrmCustomExceptions</Param>
+        <Message></Message>
+      </Exe>
+    </Script>
     ```
 
 3. Import the library into the other scripts to prevent compilation errors:
@@ -59,18 +59,18 @@ Once you have compiled a C# code block as a library, you can then import that li
 
     ![](../../images/AutomationAddReference.png)
 
-    2. Select the library script under *Projects* and click *OK*.
+    2. Select the library script under *Projects* and click *OK*.
 
 4. Make sure that the scripts where you imported the library contain the correct script reference. This ensures that the reference will work correctly when the script is published in DataMiner. For example:
 
     ```xml
-    <Script>                                                                                                      
-      <Exe id="1" type="csharp">                                                                                    
-        <Value><![CDATA[[Project:GMN_CreateBooking_1]]]></Value>                                             
+    <Script>
+      <Exe id="1" type="csharp">
+        <Value><![CDATA[[Project:GMN_CreateBooking_1]]]></Value>
         <Param type="scriptRef">GMN Custom Exception Library:SrmCustomExceptions</Param>
-        <Message></Message>                                                                                          
-      </Exe>                                                                                                        
-    </Script>                                                                                                     
+        <Message></Message>
+      </Exe>
+    </Script>
     ```
 
 #### Remarks regarding compiling C# blocks as libraries

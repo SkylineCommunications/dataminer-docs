@@ -8,16 +8,16 @@ There are several ways to access protocol help:
 
     - Click the hamburger button in the top-left corner of the card and select *Help*, or
 
-    - Go to the *Help* page in the card navigation pane (available from DataMiner 9.5.0 CU3/9.5.7 onwards).
+    - Go to the *Help* page in the card navigation pane (available from DataMiner 9.5.0 CU3/9.5.7 onwards).
 
 - From the Protocols & Templates module:
 
-    1. Go to *Apps* > *Protocols & Templates*.
+    1. Go to *Apps* > *Protocols & Templates*.
 
     2. Right-click the protocol in question in the *Protocols* list.
 
     3. In the right-click menu, select *Help*.
 
 > [!NOTE]
-> If the *Help* option or page is unavailable, there is no help topic yet for the protocol in question.
+> If the *Help* option or page is unavailable, there is no help topic yet for the protocol in question.
 >

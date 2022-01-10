@@ -15,15 +15,15 @@ External and internal connections can be displayed automatically based on DataMi
     > -  From DataMiner 9.0.0 onwards, virtual primary elements from a redundancy group can be used in a Visual Overview displaying DCF connections. The Visual Overview will then automatically update if the redundancy group switches to a different backup element.
     > -  If you want to display external connections to elements that are not displayed in the Visio drawing, shapes representing those elements can be generated dynamically. See [Dynamically generating shapes for elements that are out of scope](Dynamically_generating_shapes_for_elements_that_are_out_of_scope.md).
 
-4. To each of the subshapes, add a shape data field of type **Interface** and set its value to an interface ID, or to an interface name (optionally using wildcards).
+4. To each of the subshapes, add a shape data field of type **Interface** and set its value to an interface ID, or to an interface name (optionally using wildcards).
 
     > [!NOTE]
     > -  For more information on how to link shapes to interfaces that are generated dynamically, see [Linking shapes to dynamically created interfaces](#linking-shapes-to-dynamically-created-interfaces)
     > -  You can also have interfaces assigned automatically instead of hard-coding them. See [Automatically linking interfaces to subshapes](#automatically-linking-interfaces-to-subshapes).
-    > -  If you want a subshape to display the name of the interface it represents, then enter “\*” in the shape text, add a shape data field of type **Info** to the subshape, and set its value to “*NAME*”.
+    > -  If you want a subshape to display the name of the interface it represents, then enter “\*” in the shape text, add a shape data field of type **Info** to the subshape, and set its value to “*NAME*”.
     > -  Changes to interfaces are automatically processed by DataMiner Cube and reflected in Visual Overview. If, for example, an element with a particular interface is stopped, the interface will no longer be shown in Visual Overview.
 
-5. Optionally, specify the following additional options in the **Connection** shape data field:
+5. Optionally, specify the following additional options in the **Connection** shape data field:
 
     - To have multiple connections between two elements displayed as multiple lines instead of a single line, specify the additional option “*MultipleLinesMode*” or “*MultipleCurvedLinesMode*” in the **Connection** shape data field.
 
@@ -36,7 +36,7 @@ External and internal connections can be displayed automatically based on DataMi
         > -  Multiple connections are possible between different interfaces on external connections, and between any two interfaces on internal connections. However, multiple connections between the same interfaces on external connections are currently not supported. These are always displayed as a single line.
         > -  From DataMiner 9.5.3 onwards, it is possible to group connection lines by table column. See [Grouping multiple connection lines by table column](#grouping-multiple-connection-lines-by-table-column).
 
-    - If “*MultipleLinesMode*” or “*MultipleCurvedLinesMode*” are used, add the option *LineDistance=\<*number*\>* to customize the distance between the lines. For example, to display multiple connections as straight lines with a distance of twice the line thickness, specify the following value for the **Connection** shape data field:
+    - If “*MultipleLinesMode*” or “*MultipleCurvedLinesMode*” are used, add the option *LineDistance=\<*number*\>* to customize the distance between the lines. For example, to display multiple connections as straight lines with a distance of twice the line thickness, specify the following value for the **Connection** shape data field:
 
         ```txt
         Connectivity|MultipleLinesMode|LineDistance=2
@@ -59,7 +59,7 @@ To do so, add shape data fields of type **Interface** to the subshapes and set t
 | Value                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | \[Auto\]               | Link the shape to any interface.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| \[Auto\]\|ActivePath:x | Link the shape to an interface based on the active path. x represents the x-th interface found in the active path. <br> The elements do not need to be directly connected. If, for example, element01 is connected to element02, and element02 is connected to element03, then a connection can be drawn from element01 to element03.<br> Note, however, that if you use drawn connections with the *ConnectivityLines* option, up to DataMiner version 9.0.2, indirect connections are not displayed. |
+| \[Auto\]\|ActivePath:x | Link the shape to an interface based on the active path. x represents the x-th interface found in the active path. <br> The elements do not need to be directly connected. If, for example, element01 is connected to element02, and element02 is connected to element03, then a connection can be drawn from element01 to element03.<br> Note, however, that if you use drawn connections with the *ConnectivityLines* option, up to DataMiner version 9.0.2, indirect connections are not displayed. |
 | \[Auto\]\|Input        | Link the shape to an Input interface.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | \[Auto\]\|Output       | Link the shape to an Output interface.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | \[Auto\]\|InputOutput  | Link the shape to an InputOutput interface.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -70,7 +70,7 @@ If a page contains multiple instances of the same element, you can assign group 
 To do so, define different interface subshapes on the different parent shapes, to each of which the shape data field **Option** with value *“InternalConnectionGroup=Groupname”* has been added.
 
 > [!NOTE]
-> -  Interfaces will be resolved in the following order: Interface ID \> Interface name (optionally containing wildcards) \> “\[Auto\]\|ActivePath” \> “\[Auto\]\|Connector” \> “\[Auto\]\|Input” \> “\[Auto\]\|Output” \> “\[Auto\]\|InputOutput” \> “\[Auto\]”.
+> -  Interfaces will be resolved in the following order: Interface ID \> Interface name (optionally containing wildcards) \> “\[Auto\]\|ActivePath” \> “\[Auto\]\|Connector” \> “\[Auto\]\|Input” \> “\[Auto\]\|Output” \> “\[Auto\]\|InputOutput” \> “\[Auto\]”.
 > -  From DataMiner version 8.5.4 onwards, connections to non-existing interfaces of a parent shape are not shown. The default behavior in older versions is for the connections to be redirected to the center of the parent shape. If you want the same behavior to occur from version 8.5.4 onwards, add a shape data field to the parent shape of type **Options**, and set its value to “*AllowCentralConnectivity*”.
 
 ### Linking shapes to dynamically created interfaces
@@ -93,9 +93,9 @@ In addition, you can specify the following conditions (or a combination of them,
 
 ### Grouping multiple connection lines by table column
 
-From DataMiner 9.5.3 onwards, if multiple connections are displayed between elements with the *MultipleCurvedLinesMode* or *MultipleLinesMode* option, it is possible to these have connection lines grouped by table column.
+From DataMiner 9.5.3 onwards, if multiple connections are displayed between elements with the *MultipleCurvedLinesMode* or *MultipleLinesMode* option, it is possible to these have connection lines grouped by table column.
 
-To configure connection line grouping, add a shape data field of type **GroupBy** to the connection shape, and set its value to *TableColumn=*, followed by the ID of the column parameter that you wish to group by.
+To configure connection line grouping, add a shape data field of type **GroupBy** to the connection shape, and set its value to *TableColumn=*, followed by the ID of the column parameter that you wish to group by.
 
 For example:
 

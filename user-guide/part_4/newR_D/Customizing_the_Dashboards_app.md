@@ -13,12 +13,12 @@ From DataMiner 10.0.0/10.0.1 onwards, it is possible to configure the maxJSONLen
 
 To customize this setting:
 
-1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
+1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
 
-2. Make sure that the *configuration.appSettings* section contains an element similar to the following example:
+2. Make sure that the *configuration.appSettings* section contains an element similar to the following example:
 
     ```xml
     <add key="maxJsonLength" value="?10485760?" />
     ```
 
-    Note that the value should be specified in bytes. In the example above, maxJSONLength was set to 10 MiB.
+    Note that the value should be specified in bytes. In the example above, maxJSONLength was set to 10 MiB.

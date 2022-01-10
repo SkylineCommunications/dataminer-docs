@@ -50,9 +50,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double centerFrequency = preset.GetCenterFrequency();               
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double centerFrequency = preset.GetCenterFrequency();
 ```
 
 #### GetFrequencySpan
@@ -67,9 +67,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double frequencySpan = preset.GetFrequencySpan();                   
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double frequencySpan = preset.GetFrequencySpan();
 ```
 
 #### GetRBW
@@ -84,9 +84,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double rbw = preset.GetRBW();                                       
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double rbw = preset.GetRBW();
 ```
 
 #### GetReferenceLevel
@@ -101,9 +101,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double referenceLevel = preset.GetReferenceLevel();                 
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double referenceLevel = preset.GetReferenceLevel();
 ```
 
 #### GetReferenceScale
@@ -118,9 +118,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double referenceScale = preset.GetReferenceScale();                 
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double referenceScale = preset.GetReferenceScale();
 ```
 
 #### GetStartFrequency
@@ -135,9 +135,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double startFrequency = preset.GetStartFrequency();                 
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double startFrequency = preset.GetStartFrequency();
 ```
 
 #### GetStopFrequency
@@ -152,9 +152,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double stopFrequency = preset.GetStopFrequency();                   
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double stopFrequency = preset.GetStopFrequency();
 ```
 
 #### GetSweepTime
@@ -169,9 +169,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double sweepTime = preset.GetSweepTime();                           
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double sweepTime = preset.GetSweepTime();
 ```
 
 #### GetVBW
@@ -186,9 +186,9 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-double vbw = preset.GetVBW();                                       
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+double vbw = preset.GetVBW();
 ```
 
 #### Save
@@ -203,10 +203,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetCenterFrequency(100000000);                               
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetCenterFrequency(100000000);
+preset.Save();
 ```
 
 #### SetCenterFrequency
@@ -221,10 +221,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetCenterFrequency(100000000);                               
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetCenterFrequency(100000000);
+preset.Save();
 ```
 
 #### SetFrequencySpan
@@ -239,10 +239,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetFrequencySpan(10000000);                                  
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetFrequencySpan(10000000);
+preset.Save();
 ```
 
 #### SetRBW
@@ -257,10 +257,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetRBW(1000000);                                             
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetRBW(1000000);
+preset.Save();
 ```
 
 #### SetReferenceLevel
@@ -275,10 +275,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetReferenceLevel(100);                                      
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetReferenceLevel(100);
+preset.Save();
 ```
 
 #### SetReferenceScale
@@ -293,10 +293,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetReferenceScale(100);                                      
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetReferenceScale(100);
+preset.Save();
 ```
 
 #### SetStartFrequency
@@ -311,10 +311,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetStartFrequency(100000000);                                
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetStartFrequency(100000000);
+preset.Save();
 ```
 
 #### SetStopFrequency
@@ -329,10 +329,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetStopFrequency(10000000000);                               
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetStopFrequency(10000000000);
+preset.Save();
 ```
 
 #### SetSweepTime
@@ -347,10 +347,10 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetSweepTime(10);                                            
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetSweepTime(10);
+preset.Save();
 ```
 
 #### SetVBW
@@ -365,8 +365,8 @@ Example:
 
 ```txt
 Element mySpectrumAnalyzerElement = engine.FindElement("MyElement");
-SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");    
-                                                                    
-preset.SetVBW(1000000);                                             
-preset.Save();                                                      
+SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
+
+preset.SetVBW(1000000);
+preset.Save();
 ```

@@ -2,7 +2,7 @@
 
 From DataMiner 9.5.5 onwards, sets of predefined credentials can be added and managed within DataMiner Cube. These credentials can then be selected when SNMP elements are created or edited, so that credentials do not need to be specified manually.
 
-In System Center, go to *System settings* > *Credentials library*. You can then:
+In System Center, go to *System settings* > *Credentials library*. You can then:
 
 - Add credentials with the *Add credentials* button.
 
@@ -19,11 +19,11 @@ In System Center, go to *System settings* > *Credentials library*. You can then
         - SNMPv3 credentials
 
         > [!NOTE]
-        > Prior to DataMiner 9.5.13, you can also select the *Password* or *Username and password* type of credentials. However, these are not used in Cube.
+        > Prior to DataMiner 9.5.13, you can also select the *Password* or *Username and password* type of credentials. However, these are not used in Cube.
 
-    - For each set of credentials, the user groups that can use them must be specified. To do so, add or remove the relevant groups in the *Included in groups* box using the *ADD \>\>* and *\<\< REMOVE* buttons.
+    - For each set of credentials, the user groups that can use them must be specified. To do so, add or remove the relevant groups in the *Included in groups* box using the *ADD \>\>* and *\<\< REMOVE* buttons.
 
-When you have applied changes to a set of credentials, do not forget to click the *Apply* button in the lower right corner to save the changes.
+When you have applied changes to a set of credentials, do not forget to click the *Apply* button in the lower right corner to save the changes.
 
 > [!NOTE]
 > -  Credentials are synchronized throughout the DMS.

@@ -1,8 +1,8 @@
 # Generating a report based on a dashboard
 
-In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard from the new Dashboards app. See [Sending an email](../correlation/Sending_an_email.md) (Correlation), [Email](../automation/Email.md), [Upload report to FTP](../automation/Upload_report_to_FTP.md) and [Upload report to shared folder](../automation/Upload_report_to_shared_folder.md) (Automation), and [Manually adding a scheduled task](../scheduler/Manually_adding_a_scheduled_task.md).
+In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard from the new Dashboards app. See [Sending an email](../correlation/Sending_an_email.md) (Correlation), [Email](../automation/Email.md), [Upload report to FTP](../automation/Upload_report_to_FTP.md) and [Upload report to shared folder](../automation/Upload_report_to_shared_folder.md) (Automation), and [Manually adding a scheduled task](../scheduler/Manually_adding_a_scheduled_task.md).
 
-When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is available. Clicking this button opens a pop-up window where you can configure the report.
+When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is available. Clicking this button opens a pop-up window where you can configure the report.
 
 - At the top of the window, the link to the dashboard is displayed. Two icons next to this link allow you to copy it or browse to it, respectively.
 
@@ -13,7 +13,7 @@ When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is availab
     - *Add DMS logo*: Select this option to display the company logo in the report.
 
         > [!NOTE]
-        > To check your company details and logo in DataMiner Cube, go to System Center \> *Agents* > *System*.
+        > To check your company details and logo in DataMiner Cube, go to System Center \> *Agents* > *System*.
 
     - *Include CSV*: Includes a CSV file for each component of the dashboard. Only supported for specific components, such as the line graph, pivot table, and table component. Available from DataMiner 10.2.0/10.1.7 onwards.
 
@@ -28,6 +28,6 @@ When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is availab
 - When the report is fully configured, click *Save & close*.
 
 > [!NOTE]
-> -  By design, the following components are not included in reports: button panel (soft launch), map and web components. 
+> -  By design, the following components are not included in reports: button panel (soft launch), map and web components.
 > -  If access to a dashboard is limited to some users only, this dashboard will not be available to generate reports from DataMiner Cube.
 >

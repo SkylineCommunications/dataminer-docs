@@ -10,13 +10,13 @@ It is possible to display a block of text in Visual Overview like a regular Cube
 
 In addition, from DataMiner 9.5.1 onwards, you can also specify the behavior of the text block scrollbars.
 
-- To do so, add the *HorizontalScrollbarVisibility=* and *VerticalScrollbarVisibility=* options to the **Options** shape data field:
+- To do so, add the *HorizontalScrollbarVisibility=* and *VerticalScrollbarVisibility=* options to the **Options** shape data field:
 
     | Shape data field | Value                                                                                                                                                                 |
     |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Options            | Control=Textblock\|<br> HorizontalScrollbarVisibility=*Value*\|<br> VerticalScrollbarVisibility=*Value* |
 
-- *HorizontalScrollbarVisibility* and *VerticalScrollbarVisibility* can be set to the following values:
+- *HorizontalScrollbarVisibility* and *VerticalScrollbarVisibility* can be set to the following values:
 
     - *Auto*: A scrollbar is displayed when the text block cannot display all the content.
 
@@ -27,5 +27,5 @@ In addition, from DataMiner 9.5.1 onwards, you can also specify the behavior of 
     - *Disabled*: The scrollbar is never displayed and scrolling is not possible.
 
     > [!NOTE]
-    > For more detailed information on these values, see <https://msdn.microsoft.com/en-us/library/system.windows.controls.scrollbarvisibility(v=vs.110).aspx> 
+    > For more detailed information on these values, see <https://msdn.microsoft.com/en-us/library/system.windows.controls.scrollbarvisibility(v=vs.110).aspx>
     >

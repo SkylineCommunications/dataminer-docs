@@ -1,31 +1,31 @@
 ## Backing up a DataMiner Agent in DataMiner Cube
 
-In the *System Center* module, you can configure automatic backups that will run at regular intervals, and execute an immediate backup when necessary.
+In the *System Center* module, you can configure automatic backups that will run at regular intervals, and execute an immediate backup when necessary.
 
 ### Configuring the DataMiner backups
 
 The following steps can be taken to configure the backups for a DMA:
 
-1. Go to *Apps* > *System Center*.
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Backup* tab.
 
-3. In the *General* tab, under *Location*, optionally configure local or network path(s) where the backups should also be stored.
+3. In the *General* tab, under *Location*, optionally configure local or network path(s) where the backups should also be stored.
 
-    - If you select the *Local paths* option, all Agents in the *Local paths* list will automatically be selected, but you can clear the selection for some Agents if necessary. For the selected Agents, the backup package will be placed both in the default local folder *C:\\Skyline DataMiner\\Backup* and in the folder specified in the *Local path* box (on the same Agent).
+    - If you select the *Local paths* option, all Agents in the *Local paths* list will automatically be selected, but you can clear the selection for some Agents if necessary. For the selected Agents, the backup package will be placed both in the default local folder *C:\\Skyline DataMiner\\Backup* and in the folder specified in the *Local path* box (on the same Agent).
 
-    - If you select the *Store the backups on a network path* option, you can either use one network path for all DMAs, or a different network path for each DMA.
+    - If you select the *Store the backups on a network path* option, you can either use one network path for all DMAs, or a different network path for each DMA.
 
-        If *Use a different network path for each Agent* is selected, you can select for which Agents this applies. For the selected Agents, the backup package will be placed both in the default local folder *C:\\Skyline DataMiner\\Backup* and in the folder specified in the *Network path* box.
+        If *Use a different network path for each Agent* is selected, you can select for which Agents this applies. For the selected Agents, the backup package will be placed both in the default local folder *C:\\Skyline DataMiner\\Backup* and in the folder specified in the *Network path* box.
 
-4. In the *General* tab, under *Policy*, enter the number of backups that should be kept.
+4. In the *General* tab, under *Policy*, enter the number of backups that should be kept.
 
-5. In case the system uses an indexing (i.e. Elastic) database, in the *Indexing Engine Location* section of the *General* tab, the backup path can be modified if necessary.
+5. In case the system uses an indexing (i.e. Elastic) database, in the *Indexing Engine Location* section of the *General* tab, the backup path can be modified if necessary.
 
     > [!NOTE]
     > For more information on DataMiner Indexing backups, see [Configuring Indexing backups](../databases/Configuring_Indexing_backups.md).
 
-6. In the *Schedule* tab, select when the backup should be executed: monthly, weekly, daily, or only when it is manually initiated.
+6. In the *Schedule* tab, select when the backup should be executed: monthly, weekly, daily, or only when it is manually initiated.
 
 7. In the *Content* tab, determine the backup type:
 
@@ -42,7 +42,7 @@ The following steps can be taken to configure the backups for a DMA:
     - If you select *Use custom backup*, in the table below, select what is to be included in the backup.
 
         > [!NOTE]
-        > -  In case a local Microsoft SQL Server database is used, in the *Options* section, an extra option is available that allows you to back up the transaction log as well. This option can be of use in order to allow Microsoft SQL Server to shrink the log file.
+        > -  In case a local Microsoft SQL Server database is used, in the *Options* section, an extra option is available that allows you to back up the transaction log as well. This option can be of use in order to allow Microsoft SQL Server to shrink the log file.
         > -  While changes are being made to a backup configuration, no backup can be taken.
 
 8. Click the *Save* button to save the settings.
@@ -54,7 +54,7 @@ The following steps can be taken to configure the backups for a DMA:
 
 To take an immediate backup of a DMA:
 
-1. Go to *Apps* > *System Center*.
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Backup* tab.
 

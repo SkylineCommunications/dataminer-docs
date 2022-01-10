@@ -6,13 +6,13 @@ To do so:
 
 1. On an element card, double-click a parameter to go to the parameter card.
 
-2. Select the *templates* tab, and go to the *INFORMATION* section.
+2. Select the *templates* tab, and go to the *INFORMATION* section.
 
     Alternatively, you can also click the hamburger button in the top-left corner of the card and select *Change information*.
 
     > [!NOTE]
-    > If a parameter is in alarm, you can also access this option by right-clicking the alarm and selecting *Change* > *Information*.
+    > If a parameter is in alarm, you can also access this option by right-clicking the alarm and selecting *Change* > *Information*.
 
-3. Change the *Category*, *Alarm Description* or *Corrective actions* as required.
+3. Change the *Category*, *Alarm Description* or *Corrective actions* as required.
 
 4. Click the *Update information template* button in the lower right corner.

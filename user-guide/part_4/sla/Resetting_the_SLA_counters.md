@@ -4,7 +4,7 @@ To reset the SLA counters, do the following:
 
 1. In DataMiner Cube, go to the *SLA Configuration* page of the SLA element.
 
-2. Under *Extra settings*, click the *Reset* button underneath *Last Manual Reset*.
+2. Under *Extra settings*, click the *Reset* button underneath *Last Manual Reset*.
 
     The date and time next to *Last Manual Reset* will now be updated, and all SLA counters are reset.
 

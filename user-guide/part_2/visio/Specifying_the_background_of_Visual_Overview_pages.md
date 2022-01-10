@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/visio-adding-a-background/> 
+> <https://community.dataminer.services/video/visio-adding-a-background/>
 
 ### Specifying background pages in Visio
 
@@ -12,29 +12,29 @@ To set a page as a background page in Visio:
 
 1. Right-click the page tab of the background page at the bottom of the window, and select *Page setup*.
 
-2. In the *Page Properties* tab, next to *Type*, select *Background*.
+2. In the *Page Properties* tab, next to *Type*, select *Background*.
 
-3. Click *OK* to close the *Page Properties* window.
+3. Click *OK* to close the *Page Properties* window.
 
 To configure a page to use a particular background page as its background:
 
 1. Right-click the page tab of the page, and select *Page setup*.
 
-2. In the *Page Properties* tab, next to *Background*, select the background page you wish to use.
+2. In the *Page Properties* tab, next to *Background*, select the background page you wish to use.
 
-3. Click *OK* to close the *Page Properties* window.
+3. Click *OK* to close the *Page Properties* window.
 
 ### Specifying the background color of Visual Overview pages
 
 In Visio drawings, two page-level shape data fields can be used to specify the background color of the Visual Overview pages in DataMiner.
 
-- Use a shape data field of type **InnerBackground** to set the background color of a particular page of a Visio drawing.
+- Use a shape data field of type **InnerBackground** to set the background color of a particular page of a Visio drawing.
 
 - Use a shape data field of type **OuterBackground** to set the background color of the entire card.
 
 #### Configuring the shape data fields
 
-Add a shape data field of type **InnerBackground** or **OuterBackground** to the page, and set its value to a valid ARGB value.
+Add a shape data field of type **InnerBackground** or **OuterBackground** to the page, and set its value to a valid ARGB value.
 
 The alpha value, which indicates the opacity (i.e. level of transparency) of the color, is optional.
 
@@ -42,7 +42,7 @@ The alpha value, which indicates the opacity (i.e. level of transparency) of the
 
 ```txt
 #FFFF00 (without alpha value)
-#FF99CCFF (with alpha value) 
+#FF99CCFF (with alpha value)
 ```
 
 ### Priority of background pages vs. background colors

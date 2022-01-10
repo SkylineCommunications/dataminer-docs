@@ -15,9 +15,9 @@ In this section:
     A card will open.
 
     > [!NOTE]
-    > Alternatively, you can also create an element via the Protocols & Templates module, immediately assigning the appropriate protocol and templates. To do so, in the Protocols & Templates module, select a particular protocol, protocol version, alarm template and trend template, right-click in the *Elements* column and select *New element*.
+    > Alternatively, you can also create an element via the Protocols & Templates module, immediately assigning the appropriate protocol and templates. To do so, in the Protocols & Templates module, select a particular protocol, protocol version, alarm template and trend template, right-click in the *Elements* column and select *New element*.
 
-2. In the *Edit* tab of the card, if you want the element to be a replica of an element on another DataMiner System, select the *Replicate* checkbox. To create a regular element, leave the box clear.
+2. In the *Edit* tab of the card, if you want the element to be a replica of an element on another DataMiner System, select the *Replicate* checkbox. To create a regular element, leave the box clear.
 
     See [Replicating elements](Replicating_elements.md) for more information.
 
@@ -115,9 +115,9 @@ In this section:
 
         - **Encryption password**: Only required if *authPriv* is selected.
 
-        - **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. Up to DataMiner 9.6.11, either *HMAC-SHA* or *HMAC-MD5*. From DataMiner 9.6.12 onwards, you can choose between *MD5*, *SHA-1*, *SHA-224*, *SHA-256*, *SHA-384* and *SHA-512*.
+        - **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. Up to DataMiner 9.6.11, either *HMAC-SHA* or *HMAC-MD5*. From DataMiner 9.6.12 onwards, you can choose between *MD5*, *SHA-1*, *SHA-224*, *SHA-256*, *SHA-384* and *SHA-512*.
 
-        - **Encryption algorithm**: Only available if *Auth_Priv* is selected. Up to DataMiner 9.6.11, either *DES* or *AES128*. From DataMiner 9.6.12 onwards, you can choose between *AES-128*, *AES-192*, *AES-256* and *DES*.
+        - **Encryption algorithm**: Only available if *Auth_Priv* is selected. Up to DataMiner 9.6.11, either *DES* or *AES128*. From DataMiner 9.6.12 onwards, you can choose between *AES-128*, *AES-192*, *AES-256* and *DES*.
 
         > [!NOTE]
         > The following combinations of authentication and encryption algorithm are not supported:
@@ -165,13 +165,13 @@ In this section:
             To add an additional accepted IP address, below the box, click *Add*.
 
             > [!NOTE]
-            > This functionality is only available if *AllowedIPAddresses.Disabled* is set to “false” in the user settings of the smart-serial connection in the protocol.
+            > This functionality is only available if *AllowedIPAddresses.Disabled* is set to “false” in the user settings of the smart-serial connection in the protocol.
 
         - **Bus address**: The bus address of the device. This is not always required.
 
         - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 
-    - For a **TCP/IP** or **UDP/IP** connection:
+    - For a **TCP/IP** or **UDP/IP** connection:
 
         - **IP address/host**: The polling IP or URL of the destination.
 
@@ -188,7 +188,7 @@ In this section:
             > -  This feature is supported from DataMiner 10.0.2 onwards for smart-serial elements acting as server. However, note that the system must be configured to support this encryption. See [Enabling TLS encryption](../../part_3/security/Enabling_TLS_encryption.md).
             > -  From DataMiner 10.0.3 onwards, this feature is also supported in case DataMiner acts as the serial client. No further configuration is required in this case.
 
-    - For a **GPIB** connection, see [Configuring the GPIB settings of a spectrum analyzer element](../../part_4/SpectrumAnalysis/Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element.md).
+    - For a **GPIB** connection, see [Configuring the GPIB settings of a spectrum analyzer element](../../part_4/SpectrumAnalysis/Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element.md).
 
     - For a **WebSocket** connection (available from DataMiner 9.5.3 onwards):
 
@@ -200,7 +200,7 @@ In this section:
 
         - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 
-5. If the protocol is configured to allow you to test the connections, optionally click the button *Test connection* below any connections you want to test.
+5. If the protocol is configured to allow you to test the connections, optionally click the button *Test connection* below any connections you want to test.
 
     After you click the button, a message will display the results of the test.
 
@@ -227,9 +227,9 @@ In this section:
 
     - **Slow poll settings**: When an element is in a timeout state, the DMA can force it to go into so-called slow poll mode. While the element is in that special poll mode, the DMA will not send any commands to the element. Instead, it will just send a protocol-dependent ping command at regular intervals. As soon as the element responds to that ping command, the DMA will start polling the element the normal way again.
 
-        Slow poll mode prevents daisy-chained elements from locking up as it keeps DMAs from continuously polling elements that are powered down, broken or disconnected. 
+        Slow poll mode prevents daisy-chained elements from locking up as it keeps DMAs from continuously polling elements that are powered down, broken or disconnected.
 
-        To enable slow polling in case of a timeout, select the *Slow poll settings* checkbox and specify the following two settings.
+        To enable slow polling in case of a timeout, select the *Slow poll settings* checkbox and specify the following two settings.
 
         | Setting             | Description                                                                                                                                                                                                                                                                                                                                                            |
         |-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -247,7 +247,7 @@ In this section:
         > [!TIP]
         > See also:
         > -  [Enabling the virtual SNMP agent of an element](../../part_3/SNMP/Enabling_the_virtual_SNMP_agent_of_an_element.md)
-        > -  [Forcing a DataMiner Agent to work without virtual IP addresses](../../part_3/DataminerAgents/General_DMA_configuration.md#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses) 
+        > -  [Forcing a DataMiner Agent to work without virtual IP addresses](../../part_3/DataminerAgents/General_DMA_configuration.md#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses)
 
     - **Hidden**: Select this checkbox if you want the element to be hidden.
 
@@ -264,7 +264,7 @@ In this section:
 10. Click *Create* to add the element.
 
     > [!NOTE]
-    > If any required information is missing or incorrect, the *Create* button will be disabled, and the label of the field where information is missing or incorrect will be displayed in red.
+    > If any required information is missing or incorrect, the *Create* button will be disabled, and the label of the field where information is missing or incorrect will be displayed in red.
 
 > [!TIP]
 > See also:

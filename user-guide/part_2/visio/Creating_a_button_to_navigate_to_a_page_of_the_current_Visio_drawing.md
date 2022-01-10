@@ -4,4 +4,4 @@ If a Visio drawing contains multiple pages, you can configure a shape that, when
 
 ### Configuring the shape data field
 
-Add a shape data field of type **NavigatePage** to the shape, and set its value to the name of the page to be displayed.
+Add a shape data field of type **NavigatePage** to the shape, and set its value to the name of the page to be displayed.

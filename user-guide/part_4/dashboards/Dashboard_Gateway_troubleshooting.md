@@ -32,13 +32,13 @@ The following issues may occur when you try to access the Dashboard Gateway:
 
     ```xml
     <!-- allow anonymous access to MapsGetSecureFile (required by Google Maps) -->
-    <location path="p/API">                                                       
-      <system.web>                                                                  
-        <authorization>                                                               
-          <allow users="?" />                                                           
-        </authorization>                                                              
-      </system.web>                                                                 
-    </location>                                                                   
+    <location path="p/API">
+      <system.web>
+        <authorization>
+          <allow users="?" />
+        </authorization>
+      </system.web>
+    </location>
     ```
 
     > [!NOTE]
@@ -108,10 +108,10 @@ The following issues may occur when you try to access the Dashboard Gateway:
 
         - ViewFolder.aspx
 
-    3. Go to the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards* of the DataMiner Agent, and copy the same files and folders as you have just deleted on the Gateway server.
+    3. Go to the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards* of the DataMiner Agent, and copy the same files and folders as you have just deleted on the Gateway server.
 
     4. Paste the files and folders in the *Dashboards* folder on the Gateway server.
 
     5. Restart IIS.
 
- 
+

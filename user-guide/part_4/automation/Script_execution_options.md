@@ -12,4 +12,4 @@ The following script execution options are available:
 | Mark dummy elements 'In Use' ...                | Off     | For Automation scripts used in Scheduler, select this option to mark the dummy elements as 'In Use' for active scheduled tasks. Based on this property, the elements can then be hidden or shown in Visual Overview. For more information on how to use this option in Visual Overview, see [Overview of page and shape options](../../part_2/visio/Overview_of_page_and_shape_options.md). |
 
 > [!NOTE]
-> If *Force lock elements* is selected for an Automation script, each instance of the script will have its own lock. This means that, if an element is locked by a script and that same script is executed again at the same time, the second instance of the script will wait until the first instance has released the element lock.
+> If *Force lock elements* is selected for an Automation script, each instance of the script will have its own lock. This means that, if an element is locked by a script and that same script is executed again at the same time, the second instance of the script will wait until the first instance has released the element lock.

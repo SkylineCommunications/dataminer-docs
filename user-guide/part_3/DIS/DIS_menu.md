@@ -1,6 +1,6 @@
 # DIS menu
 
-After you have installed the *DataMinerIntegrationStudio.vsix* extension, the Microsoft Visual Studio menu bar will have a DIS menu.
+After you have installed the *DataMinerIntegrationStudio.vsix* extension, the Microsoft Visual Studio menu bar will have a DIS menu.
 
 The following sections provide more information on the DIS menu:
 
@@ -42,7 +42,7 @@ In the *DMA* submenu, you can find the following commands:
 
 - Connect
 
-    The *Connect* submenu lists all the DMAs configured in the *DMA* tab of the *DIS Settings* window. In the list, click the DMA to which you want DataMiner Integration Studio to connect.
+    The *Connect* submenu lists all the DMAs configured in the *DMA* tab of the *DIS Settings* window. In the list, click the DMA to which you want DataMiner Integration Studio to connect.
     See [DMA](DIS_settings.md#dma)
 
 - Disconnect
@@ -51,7 +51,7 @@ In the *DMA* submenu, you can find the following commands:
 
 - Import Protocol
 
-    If you click *Import Protocol*, the *Import Protocol* dialog box will allow you to import a copy of an existing protocol XML file found on the DMA to which DIS is connected.     In order to make a clear distinction between main protocols and DVE protocols, the *Import Protocol* dialog box lists all available protocols in a three-level tree structure:
+    If you click *Import Protocol*, the *Import Protocol* dialog box will allow you to import a copy of an existing protocol XML file found on the DMA to which DIS is connected.     In order to make a clear distinction between main protocols and DVE protocols, the *Import Protocol* dialog box lists all available protocols in a three-level tree structure:
 
     - Level 1: Main protocols
 
@@ -64,22 +64,22 @@ In the *DMA* submenu, you can find the following commands:
     > [!NOTE]
     > In order to prevent users from accidentally publishing a DVE protocol, it is not possible to publish a DVE protocol from inside DIS.
     >
-    > When DIS detects that the *Protocol/Name* tag contains a *parentProtocol* attribute and that it is not empty, publishing will fail and a warning message will appear.
+    > When DIS detects that the *Protocol/Name* tag contains a *parentProtocol* attribute and that it is not empty, publishing will fail and a warning message will appear.
 
     See [DMA](DIS_settings.md#dma)
 
     > [!NOTE]
     > -  When DIS connects to a DataMiner Agent, it always uses polling.
-    > -  If this *Import Protocol* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
+    > -  If this *Import Protocol* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
 
 - Import Automation script
 
-    If you click *Import Automation script*, the *Import Automation Script* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA to which DIS is connected.
+    If you click *Import Automation script*, the *Import Automation Script* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA to which DIS is connected.
     You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.     See [DMA](DIS_settings.md#dma)
 
     > [!NOTE]
     > -  When DIS connects to a DataMiner Agent, it always uses polling.
-    > -  If this *Import Automation script..* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
+    > -  If this *Import Automation script..* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
 
 ### Protocol \> Generate QAction helper code
 
@@ -93,7 +93,7 @@ DIS contains a class library with reusable C# code, such as classes and methods 
 
 The advantage of this approach is that no additional DLL files need to be copied to the DataMiner installation folder when a protocol or script is put into use. All necessary code is included in the protocol or script itself. By including all code in the protocol or the script, we also prevent future code library updates from rendering a protocol or script inoperable.
 
-If, in the Class Library tab of the DIS Settings window, you selected the *Automatically generate Class Library code* option, DIS will automatically detect whether you are using any code from the Class Library in a QAction or Automation script, and copy all used classes, methods, etc. (along with all dependencies) from the class library to a generic QAction (with ID 63000) or Automation script EXE block. If you want to force an ad-hoc regeneration of the Class Library QAction 63000 or Class Library EXE blocks, you can select *Protocol \> Generate Class Library Code* in the main DIS menu.
+If, in the Class Library tab of the DIS Settings window, you selected the *Automatically generate Class Library code* option, DIS will automatically detect whether you are using any code from the Class Library in a QAction or Automation script, and copy all used classes, methods, etc. (along with all dependencies) from the class library to a generic QAction (with ID 63000) or Automation script EXE block. If you want to force an ad-hoc regeneration of the Class Library QAction 63000 or Class Library EXE blocks, you can select *Protocol \> Generate Class Library Code* in the main DIS menu.
 
 See also: [Class Library](DIS_settings.md#class-library)
 
@@ -101,7 +101,7 @@ See also: [Class Library](DIS_settings.md#class-library)
 
 If you want to convert the standalone protocol XML file you opened in the XML editor to a protocol solution, select *Protocol \> Convert to Solution...*
 
-As from v2.26, DIS offers two distinct ways of developing a DataMiner protocol. For more information see [Two ways of developing DataMiner protocols and Automation scripts](Overall_concept_of_the_DataMiner_Integration_Studio.md#two-ways-of-developing-dataminer-protocols-and-automation-scripts) and [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions.md).
+As from v2.26, DIS offers two distinct ways of developing a DataMiner protocol. For more information see [Two ways of developing DataMiner protocols and Automation scripts](Overall_concept_of_the_DataMiner_Integration_Studio.md#two-ways-of-developing-dataminer-protocols-and-automation-scripts) and [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions.md).
 
 ### Automation script \> Generate Class Library code
 
@@ -113,7 +113,7 @@ If you click *Tool Windows \> DIS Tree View*, the *DIS Tree* window will appear.
 
 This tool window acts as a protocol table of contents, allowing you to easily navigate to a particular location in the protocol you are working on.
 
-By default, the *DIS Tree* window will open undocked. You can dock it like any other tool window in Microsoft Visual Studio.
+By default, the *DIS Tree* window will open undocked. You can dock it like any other tool window in Microsoft Visual Studio.
 
 If you click an item in the DIS tree, two things will happen:
 
@@ -151,7 +151,7 @@ See also: [DIS keyboard shortcuts](DIS_keyboard_shortcuts.md)
 
 #### Working with the breadcrumb control
 
-At the top of the *DIS Tree* tool window, there is a breadcrumb control that allows you to quickly navigate to a particular location inside a protocol.xml file. This control always shows the path towards the node that is currently selected in the tree view (i.e. “Protocol \> Params \> Param”).
+At the top of the *DIS Tree* tool window, there is a breadcrumb control that allows you to quickly navigate to a particular location inside a protocol.xml file. This control always shows the path towards the node that is currently selected in the tree view (i.e. “Protocol \> Params \> Param”).
 
 - If you click a breadcrumb (e.g. “Params”), the corresponding (parent) node will be selected in the tree view (e.g. “Params”).
 
@@ -159,7 +159,7 @@ At the top of the *DIS Tree* tool window, there is a breadcrumb control that al
 
 #### Expanding, collapsing or pinning DIS tree nodes
 
-When you right-click a tree node in the *DIS Tree* tool window, a shortcut menu appears containing the following commands.
+When you right-click a tree node in the *DIS Tree* tool window, a shortcut menu appears containing the following commands.
 
 | Select …           | in order to …                                                                                                                                                                                                                              |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -167,7 +167,7 @@ When you right-click a tree node in the *DIS Tree* tool window, a shortcut menu
 | Collapse recursive | Collapse the selected tree node.                                                                                                                                                                                                           |
 | Collapse parent    | Collapse the node that contains the selected tree node.                                                                                                                                                                                    |
 | Pin                | Pin an XML node to the special pin section at the top of the *DIS Tree* tool window.                                                                                                                        |
-| Unpin              | Unpin a pinned node from the special pin section at the top of the *DIS Tree* tool window.                                                                                                                  |
+| Unpin              | Unpin a pinned node from the special pin section at the top of the *DIS Tree* tool window.                                                                                                                  |
 
 #### Pinning XML nodes
 
@@ -175,15 +175,15 @@ It is possible to pin XML nodes to a special pin section at the top of the *DIS 
 
 - To pin a node, right-click the node in the *DIS Tree*, and select *Pin* from the shortcut menu.
 
-- To unpin a pinned node, right-click the node either in the *DIS Tree* or the pin section, and select *Unpin* from the shortcut menu.
+- To unpin a pinned node, right-click the node either in the *DIS Tree* or the pin section, and select *Unpin* from the shortcut menu.
 
-- To unpin all pinned nodes, right-click a random node in the pin section, and select *Unpin All* from the shortcut menu.
+- To unpin all pinned nodes, right-click a random node in the pin section, and select *Unpin All* from the shortcut menu.
 
 When you hover over a pinned node in the pin section, a tooltip will appear, showing you more information about the node in question.
 
 #### Types of parameters that have a special indication in the Params node
 
-When you open the *Params* node, certain types of parameters have a special indication. See the following table.
+When you open the *Params* node, certain types of parameters have a special indication. See the following table.
 
 | Type of parameter        | Indication in DIS tree |
 |--------------------------|------------------------|
@@ -199,7 +199,7 @@ If you click *Tool Windows \> DIS Mappings*, the *DIS Mapping* window will appea
 
 This tool window allows you to visualize relationships between items in the protocol you are working on.
 
-By default, the *DIS Mapping* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
+By default, the *DIS Mapping* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
 - In the topmost selection box, select the type of items of which you want to see a list. Next to each type, you will see the number of items of that type in the current protocol.
 
@@ -221,20 +221,20 @@ If, for example, you select an Action, then
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | you click anywhere on a line in the topmost list box, except on the name of the item,                 | the lowest list box will list all items that are in some way linked to the item you selected in the topmost list box.                                                                                                           |
 | you click the name of an item in the topmost list box (notice that the name turns into a hyperlink!), | the cursor in the file tab containing the protocol code will jump to the tag that defines the item you selected in the topmost list box.                                                                                        |
-| you double-click an item in the lowest list box,                                                      | the item you double-clicked will be selected in the topmost list box.<br> Note: The selection box at the top of the *DIS Mapping* window will be set to the type of the item you double-clicked. |
+| you double-click an item in the lowest list box,                                                      | the item you double-clicked will be selected in the topmost list box.<br> Note: The selection box at the top of the *DIS Mapping* window will be set to the type of the item you double-clicked. |
 | you click the type of an item in the lowest list box (notice that the type turns into a hyperlink!),  | the cursor in the file tab containing the protocol code will jump to the tag that defines the item you selected in the lowest list box.                                                                                         |
 
 ### Tool Windows \> DIS Macros
 
 If you click *Tool Windows \> DIS Macros*, the *DIS Macros* window will appear.
 
-By default, the *DIS Macros* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
+By default, the *DIS Macros* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
 This tool window allows you to create C# scripts that can be used to make changes to a protocol file (e.g. update OIDs based on conditions, update table definitions, increment/decrement parameters, etc.).
 
 In the tool window, you can set up a folder structure into which you can then store the macros you create. It is also possible to export a macro folder to a zip file and to import a zip file containing macros as a child folder of an existing folder.
 
-At the top of the tool window, you find two buttons: *Run* and *Open*.
+At the top of the tool window, you find two buttons: *Run* and *Open*.
 
 - Click *Run* to run the selected macro.
 
@@ -281,7 +281,7 @@ The following methods are available in the “engine” object:
 
 If you click *Tool Windows \> DIS Inject*, the *DIS Inject* window will appear.
 
-By default, the *DIS Inject* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
+By default, the *DIS Inject* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
 This tool window allows you to make the necessary preparations before debugging the QAction(s) or Automation script(s) you are editing.
 
@@ -289,12 +289,12 @@ For step-by-step instructions on how to debug QActions and Automation scripts, s
 
 #### Connecting to one of the DMAs specified in the DIS settings
 
-When you open the *DIS Inject* window, and you have not yet set up a connection to one of the DMAs specified in the *DMA* tab of the *DIS Settings* window, then a large *Connect* button will appear in the middle of the window. Click that button to connect DataMiner Integration Studio to the default DMA. If you want to connect to another, non-default DMA, click the drop-down button at the right of the *Connect* button, and click the DMA to which you want to connect.
+When you open the *DIS Inject* window, and you have not yet set up a connection to one of the DMAs specified in the *DMA* tab of the *DIS Settings* window, then a large *Connect* button will appear in the middle of the window. Click that button to connect DataMiner Integration Studio to the default DMA. If you want to connect to another, non-default DMA, click the drop-down button at the right of the *Connect* button, and click the DMA to which you want to connect.
 
-See [Connect](DIS_menu.md) and [DMA](DIS_settings.md#dma)
+See [Connect](DIS_menu.md) and [DMA](DIS_settings.md#dma)
 
 > [!NOTE]
-> The title of the *DIS Inject* window includes the name of the DMA to which DIS is connected (between brackets). When DIS is not connected to any DMA, the window title will include “(not connected)”.
+> The title of the *DIS Inject* window includes the name of the DMA to which DIS is connected (between brackets). When DIS is not connected to any DMA, the window title will include “(not connected)”.
 
 #### Debugging a QAction
 
@@ -328,15 +328,15 @@ Below the element selection box you can find the element manipulation tool bar. 
 
 ##### Linking temporary QAction projects to QActions in the protocol of the selected element
 
-When you have selected an element in the element selection box, the *DIS Inject* window will list all QActions found in the protocol of the selected element, and will automatically link the temporary projects of the QActions that are being edited to the QActions in the list based on protocol name and QAction ID.
+When you have selected an element in the element selection box, the *DIS Inject* window will list all QActions found in the protocol of the selected element, and will automatically link the temporary projects of the QActions that are being edited to the QActions in the list based on protocol name and QAction ID.
 
-When, for example, you open a QAction with ID 12, then the temporary project will be named “QAction_12”. By default, when you open the *DIS Inject* window while editing QAction 12, then the *Project* selection box in row 12 will be set to “QAction_12”. If you want to override this default linking mechanism, and you want to link a different temporary project to a particular QAction, open the *Project* selection box, and select another project.
+When, for example, you open a QAction with ID 12, then the temporary project will be named “QAction_12”. By default, when you open the *DIS Inject* window while editing QAction 12, then the *Project* selection box in row 12 will be set to “QAction_12”. If you want to override this default linking mechanism, and you want to link a different temporary project to a particular QAction, open the *Project* selection box, and select another project.
 
 | If you click...            | then...                                                                                                                                                                                                                                                                                                                                                    |
 |----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| the green plus,            | you will replace (i.e. inject) the element's *QAction.dll* file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode).                                                                                                                                                |
-| the red X,                 | you will sever the temporary link between the element and the *QAction.dll* compiled in Debug mode.<br> This will restore the link between the element and its original *QAction.dll* (compiled in Release mode).                                                                                    |
-| the yellow lightning bolt, | you will manually trigger the QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).<br> Only do this after you have attached the SLScripting process to the Debugger. |
+| the green plus,            | you will replace (i.e. inject) the element's *QAction.dll* file (compiled in Release mode) with its counterpart found in the temporary QAction project (compiled in Debug mode).                                                                                                                                                |
+| the red X,                 | you will sever the temporary link between the element and the *QAction.dll* compiled in Debug mode.<br> This will restore the link between the element and its original *QAction.dll* (compiled in Release mode).                                                                                    |
+| the yellow lightning bolt, | you will manually trigger the QAction by simulating a change of the parameter selected in the *Trigger ID* box (in case of a dynamic table parameter, use the *Trigger Key* box to specify the table row).<br> Only do this after you have attached the SLScripting process to the Debugger. |
 
 ##### Attaching the Microsoft Visual Studio Debugger to the DataMiner SLScripting process
 
@@ -382,7 +382,7 @@ If you click *Tool Windows \> DIS MIB Browser*, the *DIS MIB Browser* window wil
 
 This tool window allows you to build \<*Param>* tags based on OID data in MIB files.
 
-By default, the *DIS MIB Browser* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
+By default, the *DIS MIB Browser* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
 > [!NOTE]
 > The MIB Browser currently supports adding parameters of type Gauge32, Integer, Integer32, TimeTicks and Unsigned32.
@@ -391,10 +391,10 @@ By default, the *DIS MIB Browser* window will open undocked. Dock it just as yo
 
 The *MIB Tree* tab shows a graphical representation of all loaded MIB files.
 
-To automatically create a *\<Param>* tag based on a particular OID in the MIB tree, drag the OID onto an open protocol XML file and, if necessary, modify the imported data (which will be highlighted).
+To automatically create a *\<Param>* tag based on a particular OID in the MIB tree, drag the OID onto an open protocol XML file and, if necessary, modify the imported data (which will be highlighted).
 
 > [!NOTE]
-> -  When you drag a table parameter from the *DIS MIB Browser* tool window onto a protocol.xml file, the table name will only be added in front of the name of the column parameter when it is not already included in the latter. Also, when the SNMP name of a table contains “Table”, this string will be excluded from column parameters names and descriptions. This will prevent table names from being included twice in column parameter names.
+> -  When you drag a table parameter from the *DIS MIB Browser* tool window onto a protocol.xml file, the table name will only be added in front of the name of the column parameter when it is not already included in the latter. Also, when the SNMP name of a table contains “Table”, this string will be excluded from column parameters names and descriptions. This will prevent table names from being included twice in column parameter names.
 > -  In the MIB tree, obsolete, deprecated and duplicate MIB nodes are indicated by a special icon.
 
 #### Files
@@ -420,16 +420,16 @@ The bottom half of the *Files* tab contains three sections:
 | *Missing Modules* | All MIB modules that cannot be found.                                                                                                                                 |
 
 > [!NOTE]
-> -  The location of the MIB store and other MIB browser settings can be specified in the *MIB* tab of the *DIS Settings* window. See: [MIB](DIS_settings.md#mib)
+> -  The location of the MIB store and other MIB browser settings can be specified in the *MIB* tab of the *DIS Settings* window. See: [MIB](DIS_settings.md#mib)
 > -  The MIB browser allows you to import files with the following extensions: <br>*mib*, *smi*, and *txt*.
 
 #### Compare
 
-The *Compare* tab shows the differences between the OID data in the MIB tree and the parameter data in the protocol XML file.
+The *Compare* tab shows the differences between the OID data in the MIB tree and the parameter data in the protocol XML file.
 
 - The top pane lists the OIDs that do not have a corresponding *\<Param>* tag in the protocol XML file.
 
-- The bottom pane lists the *\<Param>* tags in the protocol XML file that do not have a corresponding OID in the MIB tree.
+- The bottom pane lists the *\<Param>* tags in the protocol XML file that do not have a corresponding OID in the MIB tree.
 
 At the top of the *Compare* tab, you can find two buttons:
 
@@ -474,7 +474,7 @@ When you right-click a row in the parameter list, a shortcut menu appears.
 
 #### Managing parameter positions
 
-When you have selected a parameter in the list, the *Positions* list at the bottom of the window lists all places where that parameter appears on the element card.
+When you have selected a parameter in the list, the *Positions* list at the bottom of the window lists all places where that parameter appears on the element card.
 
 To edit existing data, just click inside a cell, and change its contents.
 
@@ -493,7 +493,7 @@ When you right-click a row, a shortcut menu appears.
 
 #### Managing discreet values
 
-When, in the list, you have selected a parameter of type “discreet”, the *Discreets* list at the bottom of the window lists all discreet values that are defined for that parameter.
+When, in the list, you have selected a parameter of type “discreet”, the *Discreets* list at the bottom of the window lists all discreet values that are defined for that parameter.
 
 To edit existing data, just click inside a cell, and change its contents.
 
@@ -525,13 +525,13 @@ If you click *Tool Windows \> DIS Comparer*, the *DIS Comparer* window will appe
 
 This tool window allows you to compare two protocol.xml files.
 
-By default, the *DIS Comparer* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
+By default, the *DIS Comparer* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
 For more information on how to work with this tool window, see [Compare](XML_editor.md#compare).
 
 ### Settings
 
-If you click *Settings*, the *DIS Settings* dialog box will appear. In this dialog box, you can configure the DIS settings.
+If you click *Settings*, the *DIS Settings* dialog box will appear. In this dialog box, you can configure the DIS settings.
 
 > [!TIP]
 > See also:
@@ -539,7 +539,7 @@ If you click *Settings*, the *DIS Settings* dialog box will appear. In this dia
 
 ### Check for updates...
 
-If you click *Check for updates…*, the *DIS Update* dialog box will appear. This dialog box will indicate whether or not a new DIS version is available.
+If you click *Check for updates…*, the *DIS Update* dialog box will appear. This dialog box will indicate whether or not a new DIS version is available.
 
 ### Help
 

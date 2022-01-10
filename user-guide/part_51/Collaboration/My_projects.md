@@ -1,6 +1,6 @@
 # My projects
 
-When you log on to the Project Collaboration website, the *My projects* tab will automatically open and list all your projects, each with its current status, name and due date.
+When you log on to the Project Collaboration website, the *My projects* tab will automatically open and list all your projects, each with its current status, name and due date.
 
 If you are a DataMiner Strategic Partner with an active partner agreement, this tab will not only list your own projects, but also the projects of all customers to whom you have provided DataMiner Solutions.
 

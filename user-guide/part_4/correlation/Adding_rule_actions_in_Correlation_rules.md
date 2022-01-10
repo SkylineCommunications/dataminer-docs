@@ -1,8 +1,8 @@
 # Adding rule actions in Correlation rules
 
-In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule actions to it in the details pane on the right.
+In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule actions to it in the details pane on the right.
 
-In the *Actions* section of the details pane, specify the actions that will be executed when the Correlation rule is triggered.
+In the *Actions* section of the details pane, specify the actions that will be executed when the Correlation rule is triggered.
 
 There are several possible types of actions:
 

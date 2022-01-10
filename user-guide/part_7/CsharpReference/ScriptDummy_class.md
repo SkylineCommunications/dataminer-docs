@@ -1,6 +1,6 @@
 # ScriptDummy class
 
-The *ScriptDummy* class exposes the same members as the *Element* class.
+The *ScriptDummy* class exposes the same members as the *Element* class.
 
 - [ScriptDummy methods](ScriptDummy_methods.md)
 

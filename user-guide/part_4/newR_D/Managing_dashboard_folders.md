@@ -13,7 +13,7 @@ You can take the following actions to manage the dashboards folder structure:
     > [!NOTE]
     > The following characters are not allowed in a dashboard folder name:
     >
-    >  / \\ : ; \* ? \< \> \| °
+    > / \\ : ; \* ? \< \> \| °
     >
     > If you do specify a backslash (“\\”) in the folder name, this will not become part of the folder name. Instead a subfolder will be created, with the characters after the backslash as its name.
 
@@ -47,7 +47,7 @@ You can take the following actions to manage the dashboards folder structure:
 
         The *Move dashboard* pop-up window will be displayed.
 
-    2. Click the *Location* box and either manually specify the new location for the dashboard, or select it in the tree view below.
+    2. Click the *Location* box and either manually specify the new location for the dashboard, or select it in the tree view below.
 
         You can also create folders at this point, by hovering the mouse pointer over the folder in the tree view where you want to create a folder and clicking the + icon. Then specify the folder name and click the check mark icon.
 

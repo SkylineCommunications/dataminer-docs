@@ -3,9 +3,9 @@
 If you open a protocol XML file or an Automation script XML file in Microsoft Visual Studio, or if you create a new file from scratch, that file will appear in a customized file tab.
 
 > [!NOTE]
-> -  To create a new protocol XML file, go to File \> New \> File \> General \> DataMiner, select DataMiner Protocol Template, and click Open.
-> -  To create a new Automation script XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Automation Script Template, and click Open.
-> -  To create a new function XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Function Template, click Open, specify the function file version, select the associated protocol XML file, and click OK.
+> -  To create a new protocol XML file, go to File \> New \> File \> General \> DataMiner, select DataMiner Protocol Template, and click Open.
+> -  To create a new Automation script XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Automation Script Template, and click Open.
+> -  To create a new function XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Function Template, click Open, specify the function file version, select the associated protocol XML file, and click OK.
 
 The following sections contain more information on this file tab:
 
@@ -15,15 +15,15 @@ The following sections contain more information on this file tab:
 
 ### File tab header
 
-After you install the *DataMinerIntegrationStudio.vsix* extension, a file tab containing a protocol XML file or an Automation script XML file will have a custom header containing a number of buttons as well as a search box.
+After you install the *DataMinerIntegrationStudio.vsix* extension, a file tab containing a protocol XML file or an Automation script XML file will have a custom header containing a number of buttons as well as a search box.
 
 #### Validate
 
-If you opened a protocol XML file, click *Validate* to check for errors that cannot be detected by the XML schema.
+If you opened a protocol XML file, click *Validate* to check for errors that cannot be detected by the XML schema.
 
 Since DIS v.2.13, a next-generation Validator runs side by side with the legacy Validator, which will be retired at a later stage. The next-generation Validator is extremely modular in design and allows for easy creation of a wide range of code checks and unit tests.
 
-After having validated a protocol, you can ask DIS to automatically fix a number of common errors: replace all invalid characters in a parameter name with an underscore, trimming tag contents, etc. In the *DIS Validator* pane, all errors that can be fixed automatically will be marked by a “wrench and screwdriver” icon.
+After having validated a protocol, you can ask DIS to automatically fix a number of common errors: replace all invalid characters in a parameter name with an underscore, trimming tag contents, etc. In the *DIS Validator* pane, all errors that can be fixed automatically will be marked by a “wrench and screwdriver” icon.
 
 - To fix an error marked by a “wrench and screwdriver” icon, right-click the error, and select *Fix \> This error*. If the error has successfully been fixed, it will be removed from the *DIS Validator* pane.
 
@@ -33,7 +33,7 @@ To fix all errors of one particular type or severity at the same time, do the fo
 
 - To fix all errors of a particular severity, right-click that severity, and select *Fix \> All errors in this category*.
 
-When, for an error listed in the *DIS Validator* pane, there is more information available than what is being displayed, an information icon will appear next to the description. If you click such an information icon, the additional information will be displayed in a pop-up window.
+When, for an error listed in the *DIS Validator* pane, there is more information available than what is being displayed, an information icon will appear next to the description. If you click such an information icon, the additional information will be displayed in a pop-up window.
 
 > [!NOTE]
 > In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key.
@@ -61,8 +61,8 @@ If you want to compare two protocols, do the following:
         - Select *Previous release*, and select one of the previous versions of a protocol currently opened in the XML editor.
 
         > [!NOTE]
-        > -  If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
-        > -  For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to https://api.skyline.be/*
+        > -  If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
+        > -  For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to https://api.skyline.be/*
 
     3. Click *OK*.
 
@@ -77,11 +77,11 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 | Navigate        | Go to the line in the protocol that triggered the error.                                                                                                                |
 | Copy            | Copy the error to the Windows Clipboard.                                                                                                                                |
 | Show Details... | Show all details of the error in a separate window.                                                                                                                     |
-| Suppress...     | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
+| Suppress...     | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
 
 #### Refactor
 
-If you opened a protocol XML file that has not yet been edited in DataMiner Integration Studio, click *Refactor* right after opening the file. That way, the file will be made “DIS compliant”.
+If you opened a protocol XML file that has not yet been edited in DataMiner Integration Studio, click *Refactor* right after opening the file. That way, the file will be made “DIS compliant”.
 
 Changes made to the protocol XML file include:
 
@@ -113,7 +113,7 @@ This editor allows you to design the parameter tables of a protocol using simple
 
 #### Publish
 
-If you click *Publish*, the protocol XML file or the Automation script XML file you are currently editing will be published to the DMA that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
+If you click *Publish*, the protocol XML file or the Automation script XML file you are currently editing will be published to the DMA that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
 To publish a protocol or an Automation script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
@@ -130,12 +130,12 @@ To publish a protocol or an Automation script to another, non-default DMA, click
 
 #### Update
 
-If DataMiner Integration Studio is set to check for updates, an *Update* button will appear if a newer version of the *DataMinerIntegrationStudio.vsix* file is available.
+If DataMiner Integration Studio is set to check for updates, an *Update* button will appear if a newer version of the *DataMinerIntegrationStudio.vsix* file is available.
 
-If you click the *Update* button, the *Update* dialog box will ask whether you want to update DataMiner Integration Studio. To update, click *Update now*.
+If you click the *Update* button, the *Update* dialog box will ask whether you want to update DataMiner Integration Studio. To update, click *Update now*.
 
 > [!NOTE]
-> You can also download the latest version of the *DataMinerIntegrationStudio.vsix* file from [DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/), and then update DataMiner Integration Studio by simply double-clicking the *DataMinerIntegrationStudio.vsix* file.
+> You can also download the latest version of the *DataMinerIntegrationStudio.vsix* file from [DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/), and then update DataMiner Integration Studio by simply double-clicking the *DataMinerIntegrationStudio.vsix* file.
 
 > [!TIP]
 > See also:
@@ -157,12 +157,12 @@ Note that highlighting can also be very useful to pinpoint instances of specific
 
 ##### Find next, Find all
 
-When you enter words in the search box, those words will immediately be highlighted in the XML file. You do not need to press *ENTER*. If you do press *ENTER* or *CTRL+ENTER*, you will notice the following behavior.
+When you enter words in the search box, those words will immediately be highlighted in the XML file. You do not need to press *ENTER*. If you do press *ENTER* or *CTRL+ENTER*, you will notice the following behavior.
 
 | If you press...                              | then...                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *ENTER*,      | The cursor will jump to the first instance of the word in the search box.<br> Pressing *ENTER* again will make the cursor jump to the next instance of the word.<br> Note: If the search box contains a series of words separated by spaces, only the first word will be taken into account.                                                                                                             |
-| *CTRL+ENTER*, | A *Find Results* pane will appear at the bottom of the screen, listing all instances of the word in the search box.<br> Double-clicking a line in the *Find Results* pane will make the cursor jump to the instance referred to by that line.<br> Note: If the search box contains a series of words separated by spaces, only the first word will be taken into account. |
+| *CTRL+ENTER*, | A *Find Results* pane will appear at the bottom of the screen, listing all instances of the word in the search box.<br> Double-clicking a line in the *Find Results* pane will make the cursor jump to the instance referred to by that line.<br> Note: If the search box contains a series of words separated by spaces, only the first word will be taken into account. |
 
 ##### Case sensitivity
 
@@ -174,7 +174,7 @@ If you want to override the default case sensitivity setting in a particular fil
 
 ##### Wildcard interpretation
 
-If you want to override the default wildcard interpretation setting in a particular file tab, you can switch between “Treat as literal string” and “Interpret as wildcards” by clicking the *\*?* button to the right of the search box.
+If you want to override the default wildcard interpretation setting in a particular file tab, you can switch between “Treat as literal string” and “Interpret as wildcards” by clicking the *\*?* button to the right of the search box.
 
 > [!TIP]
 > See also:
@@ -194,15 +194,15 @@ When you right-click inside the file tab, a shortcut menu appears. Apart from th
 | Generate Write Parameters                    | Create a Write parameter for a selected Read parameter.<br> See [Generating Write parameters for Read parameters](#generating-write-parameters-for-read-parameters)                                                                                                                                                                                                                                                                                                                                                            |
 | Repeat Selected Text                         | Copy the text you selected a number of times.<br> See [Repeating selected text](#repeating-selected-text)                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Outlining \> Toggle Outlining at Level \[X\] | Collapse all protocol tags at a certain level of depth.<br> Examples:<br> -  If you click *Toggle Outlining at Level 1*, all level-1 tags (e.g. the \<Protocol> tag) will be collapsed.<br> -  If you click *Toggle Outlining at Level 2*, all level-2 tags (e.g. the \<Params> tag, the \<Commands> tag, etc.) will be collapsed. |
-| Snippet \> Insert Snippet \> DIS             | Insert a protocol or Automation script snippet.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Snippet \> Insert Snippet \> DIS             | Insert a protocol or Automation script snippet.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 #### Generating parameters from data stored in external files
 
-If you want to automatically generate *\<Param>* tags (as well as all the necessary *\<Timer>*, *\<Group>*, *\<Trigger>* and *\<Action>* tags) based on parameter data in a MIB file, an XML file, a JSON file, a WSL file or an Ember+ file, then do the following:
+If you want to automatically generate *\<Param>* tags (as well as all the necessary *\<Timer>*, *\<Group>*, *\<Trigger>* and *\<Action>* tags) based on parameter data in a MIB file, an XML file, a JSON file, a WSL file or an Ember+ file, then do the following:
 
 1. Position the mouse cursor anywhere in the XML editor, right-click, and select *Generate Parameters*.
 
-2. In the *Generate Parameters Wizard* window, set *Input type* to “MIB”, “XML”, “JSON”, “WSDL” or “EmberPlus”.
+2. In the *Generate Parameters Wizard* window, set *Input type* to “MIB”, “XML”, “JSON”, “WSDL” or “EmberPlus”.
 
 3. Depending on the choice you made in step 2, do the following:
 
@@ -241,26 +241,26 @@ If you want to automatically generate *\<Param>* tags (as well as all the neces
 
 If you want to automatically generate parameters of type “write” for a number of existing parameters of type “read”, do the following:
 
-1. In the protocol XML file, select the \<Param> tags of the parameters of type “read” for which you want to generate a parameter of type “write”, right-click, and select *Generate Write Parameters.*
+1. In the protocol XML file, select the \<Param> tags of the parameters of type “read” for which you want to generate a parameter of type “write”, right-click, and select *Generate Write Parameters.*
 
-    In the *Generate Write Parameters* window, each read parameter in the list has a checkbox in front of it. This checkbox will by default be selected, meaning that a write parameter will be created when you click *OK*. However, if a read parameter already has an associated write parameter, then its checkbox will by default not be selected. This will prevent you from creating duplicate write parameters.
+    In the *Generate Write Parameters* window, each read parameter in the list has a checkbox in front of it. This checkbox will by default be selected, meaning that a write parameter will be created when you click *OK*. However, if a read parameter already has an associated write parameter, then its checkbox will by default not be selected. This will prevent you from creating duplicate write parameters.
 
-2. If, in the *Generate Write Parameters For Read Parameters* window, the list shows any ID or name conflicts between existing parameters and parameters that are about to be created, then change the conflicting, new parameter IDs and/or names (which are marked in red), and click *OK*.
+2. If, in the *Generate Write Parameters For Read Parameters* window, the list shows any ID or name conflicts between existing parameters and parameters that are about to be created, then change the conflicting, new parameter IDs and/or names (which are marked in red), and click *OK*.
 
     - Above the list, you can change the default ID offset (default offset: 1). This way, you can change the IDs of all listed parameters of type “write” in one go.
 
-    - When in the *Write ID* column a suggested parameter ID is not available, you can click a “search for next available Write ID” button in the form of an arrow to replace the non-available ID by an available one.
+    - When in the *Write ID* column a suggested parameter ID is not available, you can click a “search for next available Write ID” button in the form of an arrow to replace the non-available ID by an available one.
 
     - The *Setter* column allows you to enable the “setter” attribute for a particular write parameter.
 
         If you want to enable this attribute for all non-SNMP parameters in the list, then you can select the “select all” checkbox in the column header. Note that, when the protocol does not contain any non-SNMP parameters, this “select all” checkbox will be disabled. As will all “setter” checkboxes for the SNMP parameters in the list.
 
-    - The *SNMP Set and Get* column allows you to enable the “snmpSetAndGet” attribute for a particular write parameter.
+    - The *SNMP Set and Get* column allows you to enable the “snmpSetAndGet” attribute for a particular write parameter.
 
         If you want to enable this attribute for all SNMP parameters in the list, select the “select all” checkbox in the column header. <br>Note that when the protocol does not contain any SNMP parameters, this “select all” checkbox will be disabled, as will all “SNMP Set and Get” checkboxes for the non-SNMP parameters in the list.
 
 > [!NOTE]
-> -  As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
+> -  As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
 > -  Only rows of which the checkbox is selected are taken into account when performing the above-mentioned validation.
 
 #### Repeating selected text
@@ -269,7 +269,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 
 1. Select the text that has to be repeated, right-click, and select *Repeat Selected Text.*
 
-2. In the *DIS Repeater* window, if necessary, go to the *Template* box, and edit the text you want to have repeated.
+2. In the *DIS Repeater* window, if necessary, go to the *Template* box, and edit the text you want to have repeated.
 
 3. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
 
@@ -279,7 +279,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 
 4. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 
-5. Click *OK* to have the text in the *Preview* box pasted in the editor.
+5. Click *OK* to have the text in the *Preview* box pasted in the editor.
 
 ##### Using “$” characters inside a formula
 
@@ -291,15 +291,15 @@ The range of value “x” can be defined using the range definition boxes at th
 
 There are two ways to define the range:
 
-- Specify a starting “x” value in *Start* and a number of iterations in *Count*.
+- Specify a starting “x” value in *Start* and a number of iterations in *Count*.
 
-- Specify a starting “x” value in *Start* and an ending “x” value in *End*.
+- Specify a starting “x” value in *Start* and an ending “x” value in *End*.
 
 In both cases, you can also specify a step size in *Step*.
 
 #### Tag shortcut menus
 
-In the XML editor, you can click a small *Down* arrow in front of certain XML tags to open a shortcut menu. See the table below for an overview of all available commands per XML tag.
+In the XML editor, you can click a small *Down* arrow in front of certain XML tags to open a shortcut menu. See the table below for an overview of all available commands per XML tag.
 
 | XML tag  | Command                               | Function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |----------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -427,15 +427,15 @@ When working in the XML editor, you will notice so-called “virtual comments”
 
 In the following screenshot, there are three “virtual comments” next to the three parameter tags. They contain the names found in the *\<Description>* tags of those parameters.
 
-Next to *\<Param>30\</Param>*, for example, you can see *\<!-- System OR Table -->* because, in the parameter definition, the *\<Description>* tag contains “System OR Table”.
+Next to *\<Param>30\</Param>*, for example, you can see *\<!-- System OR Table -->* because, in the parameter definition, the *\<Description>* tag contains “System OR Table”.
 
 ![](../../images/dis_protocol_editor_comments_group.png)
 
- 
+
 
 ![](../../images/dis_protocol_editor_comments_param.png)
 
- 
+
 
 > [!NOTE]
 > If you do not want virtual comments to appear, you can turn them off.

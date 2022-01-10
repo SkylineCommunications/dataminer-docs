@@ -27,13 +27,13 @@ To access the properties of an element:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/dataminer-cube-adding-properties-to-elements-views-and-services/> 
+> <https://community.dataminer.services/video/dataminer-cube-adding-properties-to-elements-views-and-services/>
 
 To add a custom property to a DataMiner item, which can be an element, but also a service, a view, or an alarm:
 
 1. Right-click the item and select *Properties*.
 
-2. In the *Properties* dialog box, go to the *Custom* tab.
+2. In the *Properties* dialog box, go to the *Custom* tab.
 
 3. Click the cogwheel button in the lower left corner, and select *Add*.
 
@@ -55,7 +55,7 @@ To add a custom property to a DataMiner item, which can be an element, but also 
     - **Update alarms on value changed**: If you want alarms to be updated when the value of the property changes, make sure this option is selected; otherwise make sure this checkbox is cleared.
 
         > [!NOTE]
-        > This option is available from DataMiner 9.5.12 onwards, if *Make this property available for alarm filtering* is selected. However, note that in some cases a protocol may contain read-only properties. Disabling this option for such properties is only possible from DataMiner 9.5.14 onwards.
+        > This option is available from DataMiner 9.5.12 onwards, if *Make this property available for alarm filtering* is selected. However, note that in some cases a protocol may contain read-only properties. Disabling this option for such properties is only possible from DataMiner 9.5.14 onwards.
 
     - **No format specified**: If you do not want to restrict the allowed values, select this option.
 
@@ -63,9 +63,9 @@ To add a custom property to a DataMiner item, which can be an element, but also 
 
     - **Possible values**: If you want to specify a list of allowed values, select this checkbox and add all allowed values to the list.
 
-6. In the *Edit* dialog box, click *OK*.
+6. In the *Edit* dialog box, click *OK*.
 
-7. In the *Properties* dialog box, click *OK*.
+7. In the *Properties* dialog box, click *OK*.
 
 ### Editing custom properties
 
@@ -74,9 +74,9 @@ To add a custom property to a DataMiner item, which can be an element, but also 
 
 1. Right-click the item in the Surveyor and select *Properties*.
 
-    Alternatively, to view properties for several elements at a time, on the *Elements* page of a view card, select several elements by holding the *Ctrl* key while you click them, then right-click one of the elements and select *Properties*.
+    Alternatively, to view properties for several elements at a time, on the *Elements* page of a view card, select several elements by holding the *Ctrl* key while you click them, then right-click one of the elements and select *Properties*.
 
-2. In the *Properties* dialog box, go to the *Custom* tab.
+2. In the *Properties* dialog box, go to the *Custom* tab.
 
 3. To change a property value, enter the property value you want and click *OK*.
 
@@ -88,14 +88,14 @@ To add a custom property to a DataMiner item, which can be an element, but also 
     The same options will be available as when adding a new property.
 
     > [!NOTE]
-    > -  If you change the property name, the value of that property will be lost. 
-    > -  From DataMiner 9.5.0 CU8/9.5.12 onwards, changing the property name via the *Edit* option is no longer possible. Instead, you will need to delete the property with the old name and create a property with the new name.
+    > -  If you change the property name, the value of that property will be lost.
+    > -  From DataMiner 9.5.0 CU8/9.5.12 onwards, changing the property name via the *Edit* option is no longer possible. Instead, you will need to delete the property with the old name and create a property with the new name.
 
 ### Deleting a custom property
 
 1. Right-click the item and select *Properties*.
 
-2. In the *Properties* dialog box, go to the *Custom* tab.
+2. In the *Properties* dialog box, go to the *Custom* tab.
 
 3. Select the property you want to edit.
 

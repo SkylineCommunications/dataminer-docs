@@ -2,7 +2,7 @@
 
 From DataMiner 10.0.9 onwards, different job domains can be configured, each with its own job section configuration.
 
-To **add** a job domain:
+To **add** a job domain:
 
 1. Click the user icon in the top-right corner and select *Configuration*.
 
@@ -10,7 +10,7 @@ To **add** a job domain:
 
 3. Specify the name of the new domain.
 
-4. Optionally, to hide the domain, select the *Hide* checkbox.
+4. Optionally, to hide the domain, select the *Hide* checkbox.
 
     This can be especially useful to keep a domain hidden while it is still being configured. Once the configuration is ready, you can then edit the domain to clear the *Hide* option.
 
@@ -42,7 +42,7 @@ To **duplicate** a domain:
 
 4. Specify the name of the new domain.
 
-5. Optionally, to hide the new domain, select the *Hide* checkbox.
+5. Optionally, to hide the new domain, select the *Hide* checkbox.
 
 6. Click *Duplicate*.
 
@@ -52,7 +52,7 @@ To **delete** a job domain:
 
 2. In the drop-down box at the top, make sure the right job domain is selected.
 
-3. Click *Delete* in the header bar and click *Yes* in the pop-up window to confirm the deletion.
+3. Click *Delete* in the header bar and click *Yes* in the pop-up window to confirm the deletion.
 
 > [!NOTE]
 > If a DataMiner System using an earlier software version is upgraded to DataMiner 10.0.9 or higher, its existing job section definitions will be placed in a job domain named "DefaultJobDomain". The name of this domain can be adjusted if necessary.

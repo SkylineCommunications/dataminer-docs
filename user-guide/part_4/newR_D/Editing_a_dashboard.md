@@ -20,7 +20,7 @@ To edit an existing dashboard:
 
     - To resize a component, move the mouse pointer to the edge of the component and drag it until the component has the desired size.
 
-    - To view or hide the grid lines of the dashboard while in edit mode, click the *Show grid* or *Hide grid* button in the dashboard header bar. These grid lines show the columns and rows that the components are arranged on.
+    - To view or hide the grid lines of the dashboard while in edit mode, click the *Show grid* or *Hide grid* button in the dashboard header bar. These grid lines show the columns and rows that the components are arranged on.
 
     - To add a new component, see [Configuring dashboard components](Configuring_dashboard_components.md).
 

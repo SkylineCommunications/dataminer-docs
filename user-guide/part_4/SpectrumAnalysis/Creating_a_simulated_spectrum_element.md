@@ -12,7 +12,7 @@ To do so:
 
 3. Stop the DMA. See [Starting or stopping DataMiner Agents in your DataMiner System](../../part_3/DataminerSystems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.md).
 
-4. In the *Element.xml* file for the element you have just created, change the element ID so that it is in the range 50000-50100. This will mark the spectrum element as being in simulated mode.
+4. In the *Element.xml* file for the element you have just created, change the element ID so that it is in the range 50000-50100. This will mark the spectrum element as being in simulated mode.
 
     > [!NOTE]
     > For this to work, the DMA ID must be less than 500.
@@ -27,4 +27,4 @@ To do so:
 > -  The simulated traces are also available for spectrum monitors.
 > -  If no simulation recording file is found, the element will display a random triangle trace.
 
- 
+

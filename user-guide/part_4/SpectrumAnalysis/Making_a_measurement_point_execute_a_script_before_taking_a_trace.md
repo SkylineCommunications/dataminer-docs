@@ -5,11 +5,11 @@ Spectrum measurement points are often configured to set one or more parameters b
 > [!WARNING]
 > Measurement points that execute Automation scripts should only be used in spectrum monitors. It is not recommended to request traces from such measurement points in a real-time spectrum display as this could cause performance issues.
 
-1. On a spectrum analyzer card, go to the *Measurement points* menu and select *Edit measurement point*.
+1. On a spectrum analyzer card, go to the *Measurement points* menu and select *Edit measurement point*.
 
 2. In the left pane of the *Edit measurement point* window, select the measurement point.
 
-3. In the *Setup* section, select *Set up your measurement point via an Automation script*.
+3. In the *Setup* section, select *Set up your measurement point via an Automation script*.
 
 4. Click *\<empty>*, and select an Automation script in the drop-down list.
 

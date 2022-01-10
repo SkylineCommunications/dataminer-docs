@@ -10,15 +10,15 @@ From DataMiner 9.6.3 onwards, you can configure a custom "time to live" (TTL) fo
 
 From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, you can configure the TTL as follows:
 
-1. Go to System Center \> *System settings* > *time to live*.
+1. Go to System Center \> *System settings* > *time to live*.
 
 2. To configure general TTL overrides:
 
     1. Specify the necessary override values in the *DMS defaults* section.
 
-        - If your system has an Indexing database, the *Local* column contains TTL settings for the Cassandra general database, and the *Indexing* column contains TTL settings for the Indexing database.
+        - If your system has an Indexing database, the *Local* column contains TTL settings for the Cassandra general database, and the *Indexing* column contains TTL settings for the Indexing database.
 
-        - At present, trending information is not saved in the indexing database. As such, if your DMS uses an indexing database, only the settings in the *Local* column of the *time to live* page will be taken into account for trending.
+        - At present, trending information is not saved in the indexing database. As such, if your DMS uses an indexing database, only the settings in the *Local* column of the *time to live* page will be taken into account for trending.
 
         - The *Alarm events* setting applies both for alarms and information events.
 
@@ -26,11 +26,11 @@ From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, you can configure the TTL as follows
 
 3. To configure TTL overrides for the trend data of a specific protocol or protocol version:
 
-    1. In the *Overrides* section, click *Add*.
+    1. In the *Overrides* section, click *Add*.
 
     2. In the pop-up window, select a protocol and, if necessary, a protocol version, and click *Add*.
 
-    3. In the *Trending* section on the right, specify the necessary override values in the boxes for the various records.
+    3. In the *Trending* section on the right, specify the necessary override values in the boxes for the various records.
 
     4. Click *Apply*.
 
@@ -50,7 +50,7 @@ The following default values and limitations apply:
 
 Prior to DataMiner 9.6.0 \[CU1\]/9.6.6, the TTL is configured as follows:
 
-1. Go to System Center \> *System settings* > *time to live*.
+1. Go to System Center \> *System settings* > *time to live*.
 
 2. To configure an alarm TTL override:
 
@@ -76,7 +76,7 @@ Prior to DataMiner 9.6.0 \[CU1\]/9.6.6, the TTL is configured as follows:
 
     2. By default, a new override is set for the entire DMS. To specify an override for one DMA only, next to *Override on*, select *DataMiner Agents* and then select the DMA.
 
-    3. For a *Protocol* or *Protocol version* override, select the protocol or the protocol and protocol version(s), respectively.
+    3. For a *Protocol* or *Protocol version* override, select the protocol or the protocol and protocol version(s), respectively.
 
     4. By default, a new override is set for all databases. To specify an override for a specific database only, select the database in the *Database* drop-down list.
 

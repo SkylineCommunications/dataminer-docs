@@ -14,7 +14,7 @@ When, inside a Microsoft Visio drawing, you specify placeholders like \[Param: .
 
 > [!NOTE]
 > -  It is also possible to make the shapes use a different index than that of the original row. See [Making a shape use a different index than that of the original row](#making-a-shape-use-a-different-index-than-that-of-the-original-row).
-> -  Just like for shape positioning based on dynamic tables, you can also use the *LinkElement* and *DynamicData* ColumnOptions in the protocol when generating shapes based on table rows. If the *LinkElement* option is used, the newly created shapes can be linked to a specified element. With the *DynamicData* option, they can have their interface placeholders resolved by dynamic data. For more information, see [Shape positioning based on coordinates stored in dynamic tables](Positioning_shapes_dynamically1.md#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
+> -  Just like for shape positioning based on dynamic tables, you can also use the *LinkElement* and *DynamicData* ColumnOptions in the protocol when generating shapes based on table rows. If the *LinkElement* option is used, the newly created shapes can be linked to a specified element. With the *DynamicData* option, they can have their interface placeholders resolved by dynamic data. For more information, see [Shape positioning based on coordinates stored in dynamic tables](Positioning_shapes_dynamically1.md#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
 
 ### Child-level shape data
 
@@ -57,9 +57,9 @@ The following shape data fields can be added to the group containing the table r
 
 - **ChildrenOptions**: In this optional shape data field, you can specify a number of options.
 
-    - **Center**: If you want the generated shapes to be centered, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to “*Center*”.
+    - **Center**: If you want the generated shapes to be centered, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to “*Center*”.
 
-    - **“Subscribe=true”**: If there is a service context, by default only the columns included in the service are taken into account when calculating the summary color (*\*\|ALARM*) of a row. However, if you want all columns to be taken into account, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to “*Subscribe=true*”.
+    - **“Subscribe=true”**: If there is a service context, by default only the columns included in the service are taken into account when calculating the summary color (*\*\|ALARM*) of a row. However, if you want all columns to be taken into account, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to “*Subscribe=true*”.
 
     - **LazyLoading**: If the child shapes will be generated in a scrollable container shape (stack panel, wrap panel, etc.), use this option to configure lazy loading. Though the child shapes will then be generated immediately, they will only be initialized the moment they come into view.
 
@@ -130,7 +130,7 @@ The following shape data fields can be added to the group containing the table r
     - WrapHorizontal
 
     > [!NOTE]
-    > When alarm shapes are dynamically generated, all *ChildrenPanel* options except *StackHorizontal*, *VirtualizingStackHorizontal* and *WrapHorizontal* will result in a virtualizing stack panel with vertical orientation.
+    > When alarm shapes are dynamically generated, all *ChildrenPanel* options except *StackHorizontal*, *VirtualizingStackHorizontal* and *WrapHorizontal* will result in a virtualizing stack panel with vertical orientation.
 
 - **ChildrenSource**: In this mandatory shape data field, specify the ID of the source table, i.e. the table of which the rows have to be turned into shapes.
 
@@ -150,7 +150,7 @@ The following shape data fields can be added to the group containing the table r
     > -  In this shape data field, you can use placeholders like e.g. \[this service\].
     > -  From DataMiner 9.5.5/9.5.0 CU2 onwards, it is possible to specify an element alias from a particular service instead of the actual element name.
 
-- **SubscriptionFilter**: A shape data item of type **SubscriptionFilter** can be added to make child shapes appear only if a specific table column contains a certain value.
+- **SubscriptionFilter**: A shape data item of type **SubscriptionFilter** can be added to make child shapes appear only if a specific table column contains a certain value.
 
     Configure the value of the shape data as follows, with “Pid” being the parameter ID of the table column, and “X” being the filter that the value in the table column has to match:
 
@@ -175,11 +175,11 @@ The following shape data fields can be added to the group containing the table r
 
     - When child shapes are generated based on table rows, the service context is taken into account. In other words, if there is a service context, then shapes will only be created for rows that are included in the service.
 
-        If you want to ignore the default service filter and have shapes generated for all rows in the table, add a shape data field of type **ChildrenFilter** to the container shape, and set its value to “*NoServiceTableFilter*”.
+        If you want to ignore the default service filter and have shapes generated for all rows in the table, add a shape data field of type **ChildrenFilter** to the container shape, and set its value to “*NoServiceTableFilter*”.
 
     - From DataMiner 9.5.1 onwards, it is possible to add a filter so that shapes will only be generated for rows that have a datetime within a particular time window.
 
-        To configure this time window filter, add a shape data field of type *ChildrenFilter* to the *Children* shape, and configure it as follows: *TimeWindow:TimeColumn=XX,StartWindow=-XX,EndWindow=XX,UpdateTime=X*.
+        To configure this time window filter, add a shape data field of type *ChildrenFilter* to the *Children* shape, and configure it as follows: *TimeWindow:TimeColumn=XX,StartWindow=-XX,EndWindow=XX,UpdateTime=X*.
 
         - **TimeColumn**: The parameter ID of the column containing the datetime of the row.
 
@@ -196,13 +196,13 @@ The following shape data fields can be added to the group containing the table r
             | ChildrenFilter     | TimeWindow:TimeColumn=5,StartWindow=-3600,EndWindow=3600,UpdateTime=5 |
 
             > [!NOTE]
-            > -  As the time window filter is configured on the *Children* shape itself, and not on the child templates, only one filter can be specified for all child shapes.
+            > -  As the time window filter is configured on the *Children* shape itself, and not on the child templates, only one filter can be specified for all child shapes.
 
-    - Using placeholders such as *\[var:\]* and *\[param:\]* within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards. This can for instance be used to filter the child shapes using a session variable in the filter value.
+    - Using placeholders such as *\[var:\]* and *\[param:\]* within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards. This can for instance be used to filter the child shapes using a session variable in the filter value.
 
 - **Options**:
 
-    When shapes are dynamically generated in an EPM environment, a subscription filter is automatically added to the table, which depends on the current selection of the EPM environment. From DataMiner 9.5.1 onwards, it is possible to disable this automatic filter, so that not only the shapes matching the current selection are generated.     To disable the automatic filter, in the **Options** shape data field, specify *NoSelectionFilters*.     For example:
+    When shapes are dynamically generated in an EPM environment, a subscription filter is automatically added to the table, which depends on the current selection of the EPM environment. From DataMiner 9.5.1 onwards, it is possible to disable this automatic filter, so that not only the shapes matching the current selection are generated.     To disable the automatic filter, in the **Options** shape data field, specify *NoSelectionFilters*.     For example:
 
     | Shape data field | Value              |
     |--------------------|--------------------|
@@ -228,7 +228,7 @@ Example: If you specify the following shape data in the main shape and the subsh
 > -  You can also use the double asterisk inside a \[Param:...\] placeholder. Example: Parameter=65022,\[Param:\*\*,118,\[displaytableindex\]\]
 > -  You can use the \[displaytableIndex\] and \[tableIndex\] placeholders to link to the original row key (see the example above).
 > -  The parameter and table index can either be separated by a comma, as illustrated above, or by a colon. The first separator that is found will be used to separate the parameter from the index, and any other separators will be considered part of the index.
-> -  With older versions of DataMiner, if the value of the cell you link to is empty, the display key will be shown instead. From DataMiner 9.0.0 CU15/DataMiner 9.5.3 onwards, in that case no value will be shown. However, to have the display key shown instead, you can specify the keyword *\[DisplayTableIndexValue\]* in the **Parameter** shape data field.
+> -  With older versions of DataMiner, if the value of the cell you link to is empty, the display key will be shown instead. From DataMiner 9.0.0 CU15/DataMiner 9.5.3 onwards, in that case no value will be shown. However, to have the display key shown instead, you can specify the keyword *\[DisplayTableIndexValue\]* in the **Parameter** shape data field.
 
 ### Making a shape use a different index than that of the original row
 
@@ -246,4 +246,4 @@ Normally, when shapes are created dynamically based on rows in a table, the inde
 > [!NOTE]
 > If the “AllowCustomIndex” option is used, you can use the placeholders \[ParentTableIndex\] and \[ParentDisplayTableIndex\] to refer to the index and display index of the table row associated with the immediate parent shape.
 
- 
+

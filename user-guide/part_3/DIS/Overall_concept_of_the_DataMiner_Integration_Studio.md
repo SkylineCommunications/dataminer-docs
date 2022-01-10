@@ -17,8 +17,8 @@ After installation of the DataMiner Integration Studio extension, Microsoft Visu
 - A table editor, which allows you to design parameter tables using simple drag-and-drop operations.
 
 > [!NOTE]
-> DIS will set the language version of the C# projects of 4.0, 6.0 or 7.3 depending on the DMA version specified in the *Protocol.Compliancies.MinimumRequired* tag of the protocol XML file:
-> -  If the DMA version is lower than “9.6.11” (or if no *Protocol.Compliancies.MinimumRequired* tag could be found), the language version of the C# projects will be set to 4.0.
+> DIS will set the language version of the C# projects of 4.0, 6.0 or 7.3 depending on the DMA version specified in the *Protocol.Compliancies.MinimumRequired* tag of the protocol XML file:
+> -  If the DMA version is lower than “9.6.11” (or if no *Protocol.Compliancies.MinimumRequired* tag could be found), the language version of the C# projects will be set to 4.0.
 > -  If the DMA version is equal to or higher than “9.6.11”, the language version of the C# projects will be set to one of the following versions:
 >     - C# 6.0 (when using Visual Studio 2015)
 >     - C# 7.3 (when using Visual Studio 2017 or above)
@@ -37,4 +37,4 @@ For more information on how to develop DataMiner protocols as Visual Studio solu
 
 ![](../../images/dis_concept_general.jpg)
 
- 
+

@@ -34,4 +34,4 @@ To add text to a shape, just double-click the shape, and enter the text.
 
 ### Using the current value of a session variable in an expression
 
-If you want to use the current value of a session variable in an expression (e.g. the value of some shape data field), use a *\[var:...\]*, *\[WorkspaceVar:...\]*, *\[cardvar:...\]* or *\[pagevar:...\]* placeholder (depending on the scope). This way you can e.g. link a shape to an element or view using a session variable.
+If you want to use the current value of a session variable in an expression (e.g. the value of some shape data field), use a *\[var:...\]*, *\[WorkspaceVar:...\]*, *\[cardvar:...\]* or *\[pagevar:...\]* placeholder (depending on the scope). This way you can e.g. link a shape to an element or view using a session variable.

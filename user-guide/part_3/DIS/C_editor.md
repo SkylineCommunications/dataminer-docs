@@ -1,6 +1,6 @@
 # C# editor
 
-If, in a file tab containing a protocol XML file or an Automation script XML file, you click an *Edit C#* button in front of a QAction or an Exe code block, a temporary C# project will be created, containing the code of that QAction or Exe code block. Also, the code of the QAction or Exe code block will appear in a new, customized file tab.
+If, in a file tab containing a protocol XML file or an Automation script XML file, you click an *Edit C#* button in front of a QAction or an Exe code block, a temporary C# project will be created, containing the code of that QAction or Exe code block. Also, the code of the QAction or Exe code block will appear in a new, customized file tab.
 
 The following sections provide more information on the C# Editor:
 
@@ -29,11 +29,11 @@ When you edit the C# code of a QAction or Exe code block, all regular C# editing
 
 #### Copying the entire protocol to the Windows Clipboard
 
-If you right-click anywhere in the editor and select the *Copy Protocol to Clipboard* command, the entire content of the protocol XML file will be copied to the Windows Clipboard.
+If you right-click anywhere in the editor and select the *Copy Protocol to Clipboard* command, the entire content of the protocol XML file will be copied to the Windows Clipboard.
 
 #### Copying the entire content of the file to the Windows Clipboard
 
-If you right-click anywhere in the editor and select the *Copy Code to Clipboard* command, the entire content of the file will be copied to the Windows Clipboard.
+If you right-click anywhere in the editor and select the *Copy Code to Clipboard* command, the entire content of the file will be copied to the Windows Clipboard.
 
 When you use this menu option while working with a protocol solution or an Automation script solution, you will not only copy the current file to the Windows clipboard, but all files of the entire project combined in a way that is similar to the way in which they are combined when the solution is compiled.
 
@@ -43,7 +43,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 
 1. Select the text that has to be repeated, right-click, and select *Repeat Selected Text.*
 
-2. In the *DIS Repeater* window, if necessary, go to the *Template* box, and edit the text you want to have repeated.
+2. In the *DIS Repeater* window, if necessary, go to the *Template* box, and edit the text you want to have repeated.
 
 3. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
 
@@ -53,7 +53,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 
 4. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 
-5. Click *OK* to have the text in the *Preview* box pasted in the editor.
+5. Click *OK* to have the text in the *Preview* box pasted in the editor.
 
 ##### Using “$” characters inside a formula
 
@@ -65,9 +65,9 @@ The range of value “x” can be defined using the range definition boxes at th
 
 There are two ways to define the range:
 
-- Specify a starting “x” value in *Start* and a number of iterations in *Count*.
+- Specify a starting “x” value in *Start* and a number of iterations in *Count*.
 
-- Specify a starting “x” value in *Start* and an ending “x” value in *End*.
+- Specify a starting “x” value in *Start* and an ending “x” value in *End*.
 
 In both cases, you can also specify a step size in *Step*.
 
@@ -83,12 +83,12 @@ To insert a snippet while working in the C# editor:
 
 #### #If DEBUG
 
-In a QAction, you can insert special code blocks that will only be taken into account when the *QAction.dll* has been compiled in Debug mode.
+In a QAction, you can insert special code blocks that will only be taken into account when the *QAction.dll* has been compiled in Debug mode.
 
 The following code block will be disregarded in *QAction.dll* files compiled in Release mode.
 
 ```txt
 #if DEBUG
-    ...      
-#endif   
+    ...
+#endif
 ```

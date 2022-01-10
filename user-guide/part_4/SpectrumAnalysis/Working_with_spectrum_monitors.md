@@ -17,7 +17,7 @@ The following topics provide more information on working with spectrum monitor:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/spectrum-analyzer-setting-up-continuous-background-rf-measurements/> 
+> <https://community.dataminer.services/video/spectrum-analyzer-setting-up-continuous-background-rf-measurements/>
 
 ### Managing spectrum monitors
 
@@ -27,7 +27,7 @@ On a spectrum analyzer card, you can manage the spectrum monitors for one partic
 
 To access spectrum monitors from a spectrum analyzer card:
 
-- In the *monitors* tab, click either ![](../../images/monitoradd_32.png) *New monitor* or ![](../../images/monitoredit_32.png) *Edit monitor*.
+- In the *monitors* tab, click either ![](../../images/monitoradd_32.png) *New monitor* or ![](../../images/monitoredit_32.png) *Edit monitor*.
 
     This will open the *Edit monitor* window, which has two panes:
 
@@ -37,7 +37,7 @@ To access spectrum monitors from a spectrum analyzer card:
 
 The following actions are possible to manage the spectrum monitors:
 
-- To add a new spectrum monitor, click the *Add monitor* button. The monitor will be added with the default name *Monitor*, which can be edited later.
+- To add a new spectrum monitor, click the *Add monitor* button. The monitor will be added with the default name *Monitor*, which can be edited later.
 
 - To remove a spectrum monitor, select the monitor in the tree view and click the *Delete* button.
 
@@ -47,9 +47,9 @@ The following actions are possible to manage the spectrum monitors:
 
 To access spectrum monitors in System Center:
 
-- In DataMiner Cube, go to *Apps* > *System Center \> Tools \> configure spectrum monitors*.
+- In DataMiner Cube, go to *Apps* > *System Center \> Tools \> configure spectrum monitors*.
 
-    The monitor configuration section is very similar to the *Edit monitor* window described above, with the following differences:
+    The monitor configuration section is very similar to the *Edit monitor* window described above, with the following differences:
 
     - In the tree view on the left, the monitors are contained in a separate folder for each spectrum element protocol in the DMS.
 
@@ -58,7 +58,7 @@ To access spectrum monitors in System Center:
     - Monitors cannot be directly edited in the pane on the left. Instead, to edit a monitor, click the *Edit monitor* button at the bottom.
 
 > [!NOTE]
-> You can only access spectrum monitors in System Center if you have the user permission *Spectrum* > *Configure scripts & monitors* and there is at least one spectrum protocol with more than one spectrum element available.
+> You can only access spectrum monitors in System Center if you have the user permission *Spectrum* > *Configure scripts & monitors* and there is at least one spectrum protocol with more than one spectrum element available.
 
 ### Configuring spectrum monitors
 
@@ -69,13 +69,13 @@ It is possible to generate trend information for these parameters, and to have t
 > [!NOTE]
 > -  Trace trending is only available when the DMA’s general database is a MySQL database of version 5.0.3 or higher. MSSQL is also supported.
 > -  Trending data for Spectrum Analysis traces is stored in the spectrum_trace table of a DMA’s general database. The data is kept for 12 months (by default) and cleaned up just like average trending data.
-> -  Settings regarding storage and cleaning of trending data can be configured in the *Trending.TimeSpanSpectrumRecords* tag of the *MaintenanceSettings.xml* file. It is also possible to override the setting per element using an *\<Element>\<Trending>\<TimeSpanSpectrumRecords>* tag in the file *Element.xml*.
+> -  Settings regarding storage and cleaning of trending data can be configured in the *Trending.TimeSpanSpectrumRecords* tag of the *MaintenanceSettings.xml* file. It is also possible to override the setting per element using an *\<Element>\<Trending>\<TimeSpanSpectrumRecords>* tag in the file *Element.xml*.
 
 Below are the basic steps you can follow to configure a spectrum monitor. Depending on the purpose of the monitor you are creating, not all steps may be required, and you may not necessarily need to do the steps in the proposed order. However, these steps are meant to give you an indication of how spectrum monitors are made.
 
 1. On a spectrum analyzer card, select the spectrum monitor in the tree view on the left. In the pane on the right, the configuration options for the monitor are then displayed.
 
-    Alternatively, in the System Center *configure spectrum monitors* section, you can select the monitor and click *Edit monitor*.
+    Alternatively, in the System Center *configure spectrum monitors* section, you can select the monitor and click *Edit monitor*.
 
     > [!NOTE]
     > In System Center, if a protocol does not have at least one active element, it will not be possible to add, edit or delete a monitor for this protocol.
@@ -84,7 +84,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 
 3. Click *Show details*, and fill in a description for the monitor in the *Description* box.
 
-4. Also in the details section, enter the interval at which the script should be executed. You can do so either by entering the interval directly into the *Interval* box, or by selecting the interval with the slider control next to the box.
+4. Also in the details section, enter the interval at which the script should be executed. You can do so either by entering the interval directly into the *Interval* box, or by selecting the interval with the slider control next to the box.
 
     > [!NOTE]
     > If you set the script interval to less than 30 minutes, you may receive a warning when you click *Save*. When trended traces are run very frequently, huge amounts of trend data get stored in the database, which could eventually cause database problems.
@@ -92,12 +92,12 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 5. Also in the details section, to create a service matching the monitor, select *Create service*. The generated service will have the same name as the monitor, and will contain all the monitored parameters.
 
     > [!NOTE]
-    > -  To remove a service created by a spectrum monitor, you must either disable the *Create Service* option or remove the monitor itself. Unlike a normal service, it cannot be deleted in the Surveyor.
+    > -  To remove a service created by a spectrum monitor, you must either disable the *Create Service* option or remove the monitor itself. Unlike a normal service, it cannot be deleted in the Surveyor.
     > -  Spectrum monitors for which a service has been created are indicated with a special icon in the Surveyor, instead of the regular service icon: ![](../../images/spectrum_monitor.png)
 
 6. In the *script* section, select the script that is to be executed by the monitor.
 
-7. In the *Measurement Points* section, select the measurement points on which the monitor has to execute the script. It is possible to select several measurement points, so that the monitor is run for a series of switch states.
+7. In the *Measurement Points* section, select the measurement points on which the monitor has to execute the script. It is possible to select several measurement points, so that the monitor is run for a series of switch states.
 
     > [!NOTE]
     > Changing the values of the parameters that are used for a measurement point while the spectrum script is running could lead to unexpected behavior. After it has initially started, the script does not check for changes to the values of these parameters.
@@ -106,13 +106,13 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 
 9. In the *Monitoring and trending* section, add parameters:
 
-    1. If you want the parameter configuration to be applied for all measurement points at once, make sure the option *Group parameters* is selected. If you wish to configure parameters separately for each measurement point, e.g. to configure different alarm thresholds, clear the selection box next to this option.
+    1. If you want the parameter configuration to be applied for all measurement points at once, make sure the option *Group parameters* is selected. If you wish to configure parameters separately for each measurement point, e.g. to configure different alarm thresholds, clear the selection box next to this option.
 
     2. Click *Add* and select a script variable to add as a parameter.
 
     3. Enter a user-friendly name for the parameter next to *Parameter description*.
 
-    4. To enable alarm monitoring, in the *Template editing* section, select *Monitored*, select the *Type* of alarm template, and enter the necessary alarm thresholds.
+    4. To enable alarm monitoring, in the *Template editing* section, select *Monitored*, select the *Type* of alarm template, and enter the necessary alarm thresholds.
 
         > [!NOTE]
         > -  For more information on the types of alarm templates, see [Configuring an alarm template with dynamic alarm thresholds](../../part_2/protocols/Configuring_alarm_templates.md#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
@@ -122,7 +122,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 
     6. To be able to view the parameter in real time, select *Displayed on element card*. When this option is selected, the parameters will be added on the card at runtime, and updated after every script execution. All parameters calculated by a single monitor will be grouped together on a single data page with the same name as the monitor. In case the monitor is executed on several measurement points, the name of the measurement point will be added to the parameter name in brackets.
 
-    7. To define the range, units and decimals for the real-time display of the parameter, select *Using Custom Range* and enter the values in question. If these are not defined, no units will be used and other settings will be automatically defined by DataMiner.
+    7. To define the range, units and decimals for the real-time display of the parameter, select *Using Custom Range* and enter the values in question. If these are not defined, no units will be used and other settings will be automatically defined by DataMiner.
 
     8. Repeat from b. for each parameter you want to add.
 
@@ -132,7 +132,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
     > -  To add new parameters with an import, use the parameter ID “-1”.
     > -  After an import, the imported parameters will be displayed in this section. You will then still need to click *Apply* to confirm the import.
 
-10. In the *Alarm Recordings* section, customize the number of *Earlier traces* and *Future traces* to be stored when an alarm recording is created. When an alarm occurs, these may help operators to analyze the nature of the problem.
+10. In the *Alarm Recordings* section, customize the number of *Earlier traces* and *Future traces* to be stored when an alarm recording is created. When an alarm occurs, these may help operators to analyze the nature of the problem.
 
     > [!NOTE]
     > To view an alarm recording for a spectrum monitor alarm, right-click the alarm in the Alarm Console and select *Show alarm trace recording*. However, note that trace recordings are not available for cleared alarms.
@@ -146,24 +146,24 @@ When you work in real-time interactive mode, this requires part of the limited m
 
 To watch a single buffer:
 
-1. In the *monitors* tab of the ribbon, select *View buffer*.
+1. In the *monitors* tab of the ribbon, select *View buffer*.
 
 2. Select the monitor, input preset, measurement point and trace, and click *Load*.
 
     The buffer will be displayed, with a message in the middle of the display area specifying what buffer is being displayed.
 
-3. To stop watching the buffer, in the *monitors* tab, clear the selection from *View buffer*.
+3. To stop watching the buffer, in the *monitors* tab, clear the selection from *View buffer*.
 
 To view all buffers:
 
-1. In the *monitors* tab, select *View All Buffers*.
+1. In the *monitors* tab, select *View All Buffers*.
 
     In this mode, any trace measured by the spectrum analyzer will be displayed on screen, so the display will show one buffer after another. Result traces of manual script execution and traces retrieved for the interactive sessions of other clients are also displayed. In the middle of the spectrum display, a description is provided of what is being displayed.
 
-2. To stop watching the buffer, in the *monitors* tab, clear the selection from *View all buffer*s.
+2. To stop watching the buffer, in the *monitors* tab, clear the selection from *View all buffer*s.
 
 > [!NOTE]
-> -  Spectrum buffers measured during monitor execution are also available in DMS Reporter, and in Visual Overview. See [Element reports](../reporter/Element_reports.md) and [Spectrum Buffers](../reporter/Components_for_one_single_element_or_service.md#spectrum-buffers) for information on DMS Reporter and [Linking a shape to an element parameter](../../part_2/visio/Linking_a_shape_to_an_element_parameter.md) for information on spectrum thumbnails in Visio.
+> -  Spectrum buffers measured during monitor execution are also available in DMS Reporter, and in Visual Overview. See [Element reports](../reporter/Element_reports.md) and [Spectrum Buffers](../reporter/Components_for_one_single_element_or_service.md#spectrum-buffers) for information on DMS Reporter and [Linking a shape to an element parameter](../../part_2/visio/Linking_a_shape_to_an_element_parameter.md) for information on spectrum thumbnails in Visio.
 > -  While you are watching a spectrum buffer, any options that are only applicable for real-time trace viewing, such as taking trace recordings, are disabled.
 
 > [!TIP]
@@ -178,11 +178,11 @@ To do so:
 
 1. In the ribbon of the spectrum analyzer card, go to the *monitors* tab.
 
-2. Click ![](../../images/prio_over_monitors_32.png) *Take Priority Over Monitors*.
+2. Click ![](../../images/prio_over_monitors_32.png) *Take Priority Over Monitors*.
 
 3. In the message box, click *OK*.
 
     The active monitor execution will then stop as soon as possible, i.e. after the script run on the current measurement point is completed.
     In the top-right corner of the spectrum graph, a notice will indicate that you are in prioritized mode.
 
-To go back to normal mode, in the *monitors* tab, click *Take Priority Over Monitors* again. The prioritized mode also ends automatically as soon as you enter standby mode.
+To go back to normal mode, in the *monitors* tab, click *Take Priority Over Monitors* again. The prioritized mode also ends automatically as soon as you enter standby mode.

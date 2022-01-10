@@ -40,7 +40,7 @@ In this tag, you can specify Read and Write permissions on user group level for 
 
 This tag is optional. However, keep in mind that if it is left empty or if it is not used, then all users will have full access to the database!
 
-For an example, refer to the *\<Security>* section in the example (see [Example of an Asset Manager configuration file](Example_of_an_Asset_Manager_configuration_file.md)). In this example, Administrators have Read access to all tables (*\<Read base="allowAll">*) except TableX (*\<Deny>TableX\</Deny>*) and Write access to TableY (*\<Write base="denyAll">\<Allow>TableY\</Allow>\</Write>*). Operators have Read access to all tables (*\<Read base="allowAll" />*) and Write access to none of the tables (*\<Write base="denyAll" />*).
+For an example, refer to the *\<Security>* section in the example (see [Example of an Asset Manager configuration file](Example_of_an_Asset_Manager_configuration_file.md)). In this example, Administrators have Read access to all tables (*\<Read base="allowAll">*) except TableX (*\<Deny>TableX\</Deny>*) and Write access to TableY (*\<Write base="denyAll">\<Allow>TableY\</Allow>\</Write>*). Operators have Read access to all tables (*\<Read base="allowAll" />*) and Write access to none of the tables (*\<Write base="denyAll" />*).
 
 > [!NOTE]
 > -  It is also possible to configure security for the columns in each table with a \<Security> tag within the \<Table> tag.
@@ -51,7 +51,7 @@ For an example, refer to the *\<Security>* section in the example (see [Example
 
 ### AssetManagerConfig.Tables
 
-In this mandatory tag, you can configure how the different tables will be displayed in the *Asset Manager* user interface.
+In this mandatory tag, you can configure how the different tables will be displayed in the *Asset Manager* user interface.
 
 > [!NOTE]
 > If you do not want to change the appearance of any tables, you should leave this tag empty. For example:
@@ -68,7 +68,7 @@ In this mandatory tag, you can configure how the different tables will be displa
 
 #### Tables
 
-If you want to change something to the appearance of a table, then add a *\<Table>* tag, and specify the following attributes:
+If you want to change something to the appearance of a table, then add a *\<Table>* tag, and specify the following attributes:
 
 | Attribute     | Mandatory? | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -79,7 +79,7 @@ If you want to change something to the appearance of a table, then add a *\<Tabl
 
 #### Columns
 
-If you want to change something to the appearance of a specific table column, then, inside a *\<Table>* tag, add a *\<Columns>* tag containing a *\<Column>* tag for every column of which you want to change the appearance. For each column, you can specify the following attributes:
+If you want to change something to the appearance of a specific table column, then, inside a *\<Table>* tag, add a *\<Columns>* tag containing a *\<Column>* tag for every column of which you want to change the appearance. For each column, you can specify the following attributes:
 
 | Attribute      | Mandatory? | Description                                                                                                                                                                           |
 |----------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -98,22 +98,22 @@ If you want to change something to the appearance of a specific table column, th
 Example:
 
 ```xml
-<AssetManagerConfig>                                                                               
-  <Tables>                                                                                           
-    <Table name="table1">                                                                              
-      <Columns>                                                                                          
+<AssetManagerConfig>
+  <Tables>
+    <Table name="table1">
+      <Columns>
         <Column name="col1" displayName="Column name 1" orderWeight="2" dmSelect="Microsoft Platform"/>
-        <Column name="col2" displayName="Column name 2" RegExValidator="..."/>                             
-        <Column name="col3" displayName="Column name 3" orderWeight="1" />                                 
-      </Columns>                                                                                         
-    </Table>                                                                                           
-  </Tables>                                                                                          
-</AssetManagerConfig>                                                                              
+        <Column name="col2" displayName="Column name 2" RegExValidator="..."/>
+        <Column name="col3" displayName="Column name 3" orderWeight="1" />
+      </Columns>
+    </Table>
+  </Tables>
+</AssetManagerConfig>
 ```
 
 #### Columnrelations
 
-To configure advanced deletion behavior of database records, inside a *\<Table>* tag, add a *\<ColumnRelations>* tag, with the following two attributes:
+To configure advanced deletion behavior of database records, inside a *\<Table>* tag, add a *\<ColumnRelations>* tag, with the following two attributes:
 
 - sourceColumn: the name of the column
 
@@ -127,50 +127,50 @@ To configure advanced deletion behavior of database records, inside a *\<Table>*
 
 #### Filter
 
-If you want to filter the records displayed in a table, then, inside a *\<Table>* tag, add a *\<Filter>* tag and specify the WHERE clause in a CDATA tag.
+If you want to filter the records displayed in a table, then, inside a *\<Table>* tag, add a *\<Filter>* tag and specify the WHERE clause in a CDATA tag.
 
 > [!NOTE]
 > The value of a definition attribute has to be an ANSI-compliant WHERE clause. Do not use double quotes.
 
 #### Order
 
-If you want to define a record sorting order for a table, inside a *\<Table>* tag, add an *\<Order>* tag, and specify what to order by with a definition attribute.
+If you want to define a record sorting order for a table, inside a *\<Table>* tag, add an *\<Order>* tag, and specify what to order by with a definition attribute.
 
-E.g. for ascending order: *definition="columnName ASC"* or for descending order: *definition="columnName DESC"*.
+E.g. for ascending order: *definition="columnName ASC"* or for descending order: *definition="columnName DESC"*.
 
 #### Icon
 
-To give a table a custom icon in the tree view, inside the *\<Table>* tag, add an *\<Icon>* tag. The icon can either be defined by means of XAML code in a CDATA tag, or by using a “key” attribute that refers to an icon defined in the *Icons.xml* file.
+To give a table a custom icon in the tree view, inside the *\<Table>* tag, add an *\<Icon>* tag. The icon can either be defined by means of XAML code in a CDATA tag, or by using a “key” attribute that refers to an icon defined in the *Icons.xml* file.
 
 - Example of icon using XAML code:
 
     ```xml
     <Table name="channel" displayName="Channel" displayColumn="Name">
-      <Icon>                                                           
-      <![CDATA[                                                      
-        <Viewbox Width="13.000" Height="12.000"                          
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">           
-        <Rectangle Width="13" Height="12" Fill="Red" />                  
-        </Viewbox>                                                       
-      ]]>                                                            
-      </Icon>                                                          
-    </Table>                                                         
+      <Icon>
+      <![CDATA[
+        <Viewbox Width="13.000" Height="12.000"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <Rectangle Width="13" Height="12" Fill="Red" />
+        </Viewbox>
+      ]]>
+      </Icon>
+    </Table>
     ```
 
 - Example of icon in the *Icons.xml* file:
 
     ```xml
     <Table name="channel" displayName="Channel" displayColumn="Name">
-      <Icon key="MYTABLEICON" />                                       
-    </Table>                                                         
+      <Icon key="MYTABLEICON" />
+    </Table>
     ```
 
 #### PathsToFollow
 
 For every table, you can specify which table links you want to visualize in the table hierarchy. In some cases, you will have to restrict table linking to prevent possible endless loops.
 
-Inside a *\<Table>* tag, add a *\<PathsToFollow>* tag containing a *\<Path>* tag for every “path” you allow.
+Inside a *\<Table>* tag, add a *\<PathsToFollow>* tag containing a *\<Path>* tag for every “path” you allow.
 
 A *\<Path>* tag can contain the following:
 
@@ -185,26 +185,26 @@ By default, all possible table links will be visualized in the table hierarchy.
 
 #### Security
 
-To configure the access rights of groups to the columns of a particular table, inside the *\<Table>* tag, add a *\<Security>* tag. This tag works in the same way as the global security tag. See [AssetManagerConfig.Security](#assetmanagerconfigsecurity) for more information.
+To configure the access rights of groups to the columns of a particular table, inside the *\<Table>* tag, add a *\<Security>* tag. This tag works in the same way as the global security tag. See [AssetManagerConfig.Security](#assetmanagerconfigsecurity) for more information.
 
 Example:
 
 ```xml
 <Table name="view" displayName="View">
-  ...                                    
-  <Security>                            
-    <Group name="Group1">                 
-      <Read base="allowAll">                
-        <Deny>aSpecialColumn</Deny>          
-      </Read>                               
-    </Group>                              
-    <Group name="Group2">                 
-      <Read base="allowAll">                
-      </Read>                               
-    </Group>                              
-  </Security>                           
-  ...                                    
-</Table>                              
+  ...
+  <Security>
+    <Group name="Group1">
+      <Read base="allowAll">
+        <Deny>aSpecialColumn</Deny>
+      </Read>
+    </Group>
+    <Group name="Group2">
+      <Read base="allowAll">
+      </Read>
+    </Group>
+  </Security>
+  ...
+</Table>
 ```
 
 ### AssetManagerConfig.Views
@@ -222,9 +222,9 @@ This tag can have the following attributes:
 Example:
 
 ```xml
-<Views>                                           
+<Views>
   <View name="name_of_the_view" displayName="View"/>
-</Views>                                          
+</Views>
 ```
 
 > [!NOTE]

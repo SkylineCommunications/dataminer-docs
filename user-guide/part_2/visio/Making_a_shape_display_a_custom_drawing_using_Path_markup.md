@@ -61,13 +61,13 @@ In the table you can define a pathFormat for the row in the column options of th
 Example:
 
 ```xml
-<ColumnOption idx="0" pid="111" type="custom" value=""     
-  options="[Sep:;|]PathFormat=M [Param:114],             
+<ColumnOption idx="0" pid="111" type="custom" value=""
+  options="[Sep:;|]PathFormat=M [Param:114],
     [Param:122] L [Param:116],[Param:124] L [Param:118],
-    [Param:126] L [Param:120],[Param:128];DarkGray;       
-    #99000000;1;[Param:130]&#xA;                              
-    Start Frequency: [Param:114]&#xA;&#xA;(Click to open);    
-    true;0;0;500;150;[Param:132]" />                          
+    [Param:126] L [Param:120],[Param:128];DarkGray;
+    #99000000;1;[Param:130]&#xA;
+    Start Frequency: [Param:114]&#xA;&#xA;(Click to open);
+    true;0;0;500;150;[Param:132]" />
 ```
 
 ### Making subshapes display labels

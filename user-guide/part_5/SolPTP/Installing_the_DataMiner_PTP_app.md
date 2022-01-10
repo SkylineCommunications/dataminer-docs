@@ -4,12 +4,12 @@ To install and set up the DataMiner PTP app:
 
 1. Double-click the *DataMiner PTP* package.
 
-2. In the upgrade window, click the *Upgrade* button. The installation will begin, and the installation progress will be displayed.
+2. In the upgrade window, click the *Upgrade* button. The installation will begin, and the installation progress will be displayed.
 
     > [!NOTE]
     > DataMiner PTP should be installed on all DataMiner Agents in the DataMiner System.
 
-3. When the installation process has finished, the *Upgrade Summary* window will display information on any issues that have occurred. Click *Close* to go back to the main upgrade window.
+3. When the installation process has finished, the *Upgrade Summary* window will display information on any issues that have occurred. Click *Close* to go back to the main upgrade window.
 
 4. Click the *Finished* button to close the upgrade window.
 
@@ -18,7 +18,7 @@ To install and set up the DataMiner PTP app:
     > [!NOTE]
     > You may need to add this address to the trusted locations in the Internet Explorer settings in order to gain access. See [Configuring Internet Explorer to run DataMiner Cube](../../part_1/DataminerApplications/Installing_configuring_the_DataMiner_Cube_software.md#configuring-internet-explorer-to-run-dataminer-cube).
 
-6. In DataMiner Cube, go to *Apps* > *Automation*.
+6. In DataMiner Cube, go to *Apps* > *Automation*.
 
 7. Select the script *PTP_SetupWizard* and click *Execute*.
 
@@ -30,7 +30,7 @@ To install and set up the DataMiner PTP app:
 
 11. On the view selection page, specify the view that should be used by the DataMiner PTP app.
 
-    Either select *Create a new view* or select *Use existing view* and select the view in the drop-down list, and click *Confirm*.
+    Either select *Create a new view* or select *Use existing view* and select the view in the drop-down list, and click *Confirm*.
 
 12. On the following page, which informs you that the wizard will now create the DataMiner PTP app, click *Confirm*. If necessary, you can also abort the wizard by clicking *Abort* in the bottom-right corner.
 
@@ -50,7 +50,7 @@ To install and set up the DataMiner PTP app:
 
 16. On the following page, assign a role to each of the PTP elements you selected in the previous step, and click *Next*.
 
-    By default, all elements are assigned the “slave” role. Go through the entire list of elements using the *Next* and *Prev* buttons and, if necessary, change their role by selecting another checkbox.
+    By default, all elements are assigned the “slave” role. Go through the entire list of elements using the *Next* and *Prev* buttons and, if necessary, change their role by selecting another checkbox.
 
 17. On the following page, select at least one preferred grandmaster clock, and click *Next*.
 

@@ -93,13 +93,13 @@ List<string> AllowedFileNameExtensions
 Example:
 
 ```txt
-UIBlockDefinition uibDef = new UIBlockDefinition();                       
-uibDef.Type = UIBlockType.FileSelector;                                   
+UIBlockDefinition uibDef = new UIBlockDefinition();
+uibDef.Type = UIBlockType.FileSelector;
 uibDef.AllowedFileNameExtensions = new List<string>() { ".txt", ".csv" };
 ```
 
 > [!NOTE]
-> In Automation scripts launched from web apps, the *MaxFileSizeInBytes* and *AllowedFileNameExtensions* properties of *UIBlockDefinitions* of type *FileSelector* are taken into account from DataMiner 10.1.12 onwards.
+> In Automation scripts launched from web apps, the *MaxFileSizeInBytes* and *AllowedFileNameExtensions* properties of *UIBlockDefinitions* of type *FileSelector* are taken into account from DataMiner 10.1.12 onwards.
 >
 > An error will be thrown when you try to add a file that is larger than the allowed file size or that does not have an allowed file name extension. Also, the "Choose file" pop-up window will only list files with an allowed extension and dragging an item other than a file or a folder onto the script's drop zone will no longer be possible.
 
@@ -120,17 +120,17 @@ bool AllowMultipleFiles
 Example:
 
 ```txt
-UIBlockDefinition uibDef = new UIBlockDefinition();                      
-uibDef.Type = UIBlockType.FileSelector;                                  
-uibDef.DestVar = destvar;                                                
-uibDef.InitialValue = initialValue;                                      
-uibDef.Row = (int)row;                                                   
-uibDef.RowSpan = (int)rowSpan;                                           
-uibDef.Column = (int)column;                                             
-uibDef.ColumnSpan = (int)columnSpan;                                     
+UIBlockDefinition uibDef = new UIBlockDefinition();
+uibDef.Type = UIBlockType.FileSelector;
+uibDef.DestVar = destvar;
+uibDef.InitialValue = initialValue;
+uibDef.Row = (int)row;
+uibDef.RowSpan = (int)rowSpan;
+uibDef.Column = (int)column;
+uibDef.ColumnSpan = (int)columnSpan;
 uibDef.HorizontalAlignment = GetHorizontalAlignment(horizontalAlignment);
-uibDef.VerticalAlignment = GetVerticalAlignment(verticalAlignment);      
-uibDef.AllowMultipleFiles = true;                                        
+uibDef.VerticalAlignment = GetVerticalAlignment(verticalAlignment);
+uibDef.AllowMultipleFiles = true;
 ```
 
 #### Column
@@ -146,11 +146,11 @@ int Column
 Example:
 
 ```txt
-UIBlockDefinition blockItem = new UIBlockDefinition();                  
-blockItem.Type = UIBlockType.TextBox;                                   
+UIBlockDefinition blockItem = new UIBlockDefinition();
+blockItem.Type = UIBlockType.TextBox;
 blockItem.Column = 1; //Text box situated in second column from the left
-                                                                        
-uibDialogBox1.AppendBlock(blockItem);                                   
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### ColumnSpan
@@ -167,11 +167,11 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.Column = 1;                                 
-blockItem.ColumnSpan = 2;                             
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.Column = 1;
+blockItem.ColumnSpan = 2;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### ConfigOptions
@@ -192,13 +192,13 @@ Example:
 
 ```txt
 UIBlockDefinition uibDef = new UIBlockDefinition();
-uibDef.Type = UIBlockType.Time;                    
-uibDef.InitialValue = DateTime.Now.ToString("G");  
-                                                   
+uibDef.Type = UIBlockType.Time;
+uibDef.InitialValue = DateTime.Now.ToString("G");
+
 var config = new AutomationDateTimePickerOptions();
-config.Format = DateTimeFormat.ShortDate;          
-                                                   
-uibDef.ConfigOptions = config;                     
+config.Format = DateTimeFormat.ShortDate;
+
+uibDef.ConfigOptions = config;
 ```
 
 #### Decimals
@@ -215,27 +215,27 @@ Example:
 
 ```txt
 UIBlockDefinition numericBlock = new UIBlockDefinition();
-                                                         
-numericBlock.Type = UIBlockType.Numeric;                 
-numericBlock.InitialValue = "10;true;Discreet 2";        
-numericBlock.DestVar = "num";                            
-numericBlock.WantsOnChange = true;                       
-numericBlock.Row = 0;                                    
-numericBlock.Column = 1;                                 
-numericBlock.HorizontalAlignment = "Center";             
-numericBlock.VerticalAlignment = "Top";                  
-numericBlock.RangeHigh = 300;                            
-numericBlock.RangeLow = 5;                               
-numericBlock.RangeStep = 5;                              
-numericBlock.Decimals = 6;                               
-numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3"; 
-                                                         
-uib.AppendBlock(numericBlock);                           
+
+numericBlock.Type = UIBlockType.Numeric;
+numericBlock.InitialValue = "10;true;Discreet 2";
+numericBlock.DestVar = "num";
+numericBlock.WantsOnChange = true;
+numericBlock.Row = 0;
+numericBlock.Column = 1;
+numericBlock.HorizontalAlignment = "Center";
+numericBlock.VerticalAlignment = "Top";
+numericBlock.RangeHigh = 300;
+numericBlock.RangeLow = 5;
+numericBlock.RangeStep = 5;
+numericBlock.Decimals = 6;
+numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
+
+uib.AppendBlock(numericBlock);
 ```
 
 #### DestVar
 
-Gets or sets the alias that will be used to retrieve the value entered or selected by the user from the *UIResults* object.
+Gets or sets the alias that will be used to retrieve the value entered or selected by the user from the *UIResults* object.
 
 > [!NOTE]
 > Unlike a variable, a *DestVar* alias does not have to be declared.
@@ -265,18 +265,18 @@ string DestVar
 Example:
 
 ```txt
-UIResults uir = null;                                 
-string enteredText = "";                              
-                                                      
+UIResults uir = null;
+string enteredText = "";
+
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-                                                      
-blockItem.DestVar = "myText";                         
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
-                                                      
-uir = engine.ShowUI(uibDialogBox1);                   
-enteredText = uir.GetString("myText");                
+blockItem.Type = UIBlockType.TextBox;
+
+blockItem.DestVar = "myText";
+
+uibDialogBox1.AppendBlock(blockItem);
+
+uir = engine.ShowUI(uibDialogBox1);
+enteredText = uir.GetString("myText");
 ```
 
 #### DisplayFilter
@@ -297,10 +297,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.DropDown;                
-blockItem.DisplayFilter = true;                       
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.DropDown;
+blockItem.DisplayFilter = true;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### Extra
@@ -325,17 +325,17 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Parameter;               
-blockItem.Extra = "7/253:83";                         
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.Parameter;
+blockItem.Extra = "7/253:83";
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### HasPeekIcon
 
 Gets or sets a value indicating whether the password box shows an icon that, when clicked, will allow you to display the value inside the password box. Available from DataMiner 9.6.6 onwards.
 
-*true* if the peek icon is displayed, otherwise *false*.
+*true* if the peek icon is displayed, otherwise *false*.
 
 UIBlockType: [PasswordBox](UIBlockType_enumeration.md#passwordbox)
 
@@ -354,7 +354,7 @@ blockPasswordBox.HasPeekIcon = allowPeek;
 Gets or sets the fixed height (in pixels) of the dialog box item.
 
 > [!NOTE]
-> To make sure the dialog box can be displayed optimally, we advise to use a minimum and maximum height instead of a fixed height (see [MaxHeight](#maxheight) and [MinHeight](#minheight)).
+> To make sure the dialog box can be displayed optimally, we advise to use a minimum and maximum height instead of a fixed height (see [MaxHeight](#maxheight) and [MinHeight](#minheight)).
 
 UIBlockType: *All*
 
@@ -366,10 +366,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.Height = 100;                               
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.Height = 100;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### HorizontalAlignment
@@ -386,10 +386,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.HorizontalAlignment = "Left";               
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.HorizontalAlignment = "Left";
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### InitialValue
@@ -409,12 +409,12 @@ string InitialValue
 Example:
 
 ```txt
-UIBlockDefinition blockCalendar = new UIBlockDefinition();           
-blockCalendar.Type = UIBlockType.Calendar;                           
-DateTime saveNow = DateTime.Now;                                     
+UIBlockDefinition blockCalendar = new UIBlockDefinition();
+blockCalendar.Type = UIBlockType.Calendar;
+DateTime saveNow = DateTime.Now;
 blockCalendar.InitialValue = saveNow.ToString("dd/MM/yyyy HH:mm:ss");
-                                                                     
-uib.AppendBlock(blockCalendar);                                      
+
+uib.AppendBlock(blockCalendar);
 ```
 
 #### IsEnabled
@@ -443,10 +443,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.IsMultiline = true;                         
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.IsMultiline = true;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### IsRequired
@@ -493,10 +493,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.DropDown;                
-blockItem.IsSorted = true;                            
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.DropDown;
+blockItem.IsSorted = true;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### Margin
@@ -521,10 +521,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.Margin = "5;5;5;5";                         
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.Margin = "5;5;5;5";
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### MaxFileSizeInBytes
@@ -539,12 +539,12 @@ Example:
 
 ```txt
 UIBlockDefinition uibDef = new UIBlockDefinition();
-uibDef.Type = UIBlockType.FileSelector;            
-uibDef.MaxFileSizeInBytes = 100000;                
+uibDef.Type = UIBlockType.FileSelector;
+uibDef.MaxFileSizeInBytes = 100000;
 ```
 
 > [!NOTE]
-> In Automation scripts launched from web apps, the *MaxFileSizeInBytes* and *AllowedFileNameExtensions* properties of *UIBlockDefinitions* of type *FileSelector* are taken into account from DataMiner 10.1.12 onwards.
+> In Automation scripts launched from web apps, the *MaxFileSizeInBytes* and *AllowedFileNameExtensions* properties of *UIBlockDefinitions* of type *FileSelector* are taken into account from DataMiner 10.1.12 onwards.
 >
 > An error will be thrown when you try to add a file that is larger than the allowed file size or that does not have an allowed file name extension. Also, the "Choose file" pop-up window will only list files with an allowed extension and dragging an item other than a file or a folder onto the script's drop zone will no longer be possible.
 
@@ -562,10 +562,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.MaxHeight = 100;                            
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.MaxHeight = 100;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### MaxWidth
@@ -582,10 +582,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.MaxWidth = 100;                             
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.MaxWidth = 100;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### MinHeight
@@ -602,10 +602,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.MinHeight = 100;                            
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.MinHeight = 100;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### MinWidth
@@ -622,10 +622,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.MinWidth = 100;                             
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.MinWidth = 100;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### PlaceholderText
@@ -660,22 +660,22 @@ Example:
 
 ```txt
 UIBlockDefinition numericBlock = new UIBlockDefinition();
-                                                         
-numericBlock.Type = UIBlockType.Numeric;                 
-numericBlock.InitialValue = "10;true;Discreet 2";        
-numericBlock.DestVar = "num";                            
-numericBlock.WantsOnChange = true;                       
-numericBlock.Row = 0;                                    
-numericBlock.Column = 1;                                 
-numericBlock.HorizontalAlignment = "Center";             
-numericBlock.VerticalAlignment = "Top";                  
-numericBlock.RangeHigh = 300;                            
-numericBlock.RangeLow = 5;                               
-numericBlock.RangeStep = 5;                              
-numericBlock.Decimals = 6;                               
-numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3"; 
-                                                         
-uib.AppendBlock(numericBlock);                           
+
+numericBlock.Type = UIBlockType.Numeric;
+numericBlock.InitialValue = "10;true;Discreet 2";
+numericBlock.DestVar = "num";
+numericBlock.WantsOnChange = true;
+numericBlock.Row = 0;
+numericBlock.Column = 1;
+numericBlock.HorizontalAlignment = "Center";
+numericBlock.VerticalAlignment = "Top";
+numericBlock.RangeHigh = 300;
+numericBlock.RangeLow = 5;
+numericBlock.RangeStep = 5;
+numericBlock.Decimals = 6;
+numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
+
+uib.AppendBlock(numericBlock);
 ```
 
 #### RangeLow
@@ -692,22 +692,22 @@ Example:
 
 ```txt
 UIBlockDefinition numericBlock = new UIBlockDefinition();
-                                                         
-numericBlock.Type = UIBlockType.Numeric;                 
-numericBlock.InitialValue = "10;true;Discreet 2";        
-numericBlock.DestVar = "num";                            
-numericBlock.WantsOnChange = true;                       
-numericBlock.Row = 0;                                    
-numericBlock.Column = 1;                                 
-numericBlock.HorizontalAlignment = "Center";             
-numericBlock.VerticalAlignment = "Top";                  
-numericBlock.RangeHigh = 300;                            
-numericBlock.RangeLow = 5;                               
-numericBlock.RangeStep = 5;                              
-numericBlock.Decimals = 6;                               
-numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3"; 
-                                                         
-uib.AppendBlock(numericBlock);                           
+
+numericBlock.Type = UIBlockType.Numeric;
+numericBlock.InitialValue = "10;true;Discreet 2";
+numericBlock.DestVar = "num";
+numericBlock.WantsOnChange = true;
+numericBlock.Row = 0;
+numericBlock.Column = 1;
+numericBlock.HorizontalAlignment = "Center";
+numericBlock.VerticalAlignment = "Top";
+numericBlock.RangeHigh = 300;
+numericBlock.RangeLow = 5;
+numericBlock.RangeStep = 5;
+numericBlock.Decimals = 6;
+numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
+
+uib.AppendBlock(numericBlock);
 ```
 
 #### RangeStep
@@ -724,22 +724,22 @@ Example:
 
 ```txt
 UIBlockDefinition numericBlock = new UIBlockDefinition();
-                                                         
-numericBlock.Type = UIBlockType.Numeric;                 
-numericBlock.InitialValue = "10;true;Discreet 2";        
-numericBlock.DestVar = "num";                            
-numericBlock.WantsOnChange = true;                       
-numericBlock.Row = 0;                                    
-numericBlock.Column = 1;                                 
-numericBlock.HorizontalAlignment = "Center";             
-numericBlock.VerticalAlignment = "Top";                  
-numericBlock.RangeHigh = 300;                            
-numericBlock.RangeLow = 5;                               
-numericBlock.RangeStep = 5;                              
-numericBlock.Decimals = 6;                               
-numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3"; 
-                                                         
-uib.AppendBlock(numericBlock);                           
+
+numericBlock.Type = UIBlockType.Numeric;
+numericBlock.InitialValue = "10;true;Discreet 2";
+numericBlock.DestVar = "num";
+numericBlock.WantsOnChange = true;
+numericBlock.Row = 0;
+numericBlock.Column = 1;
+numericBlock.HorizontalAlignment = "Center";
+numericBlock.VerticalAlignment = "Top";
+numericBlock.RangeHigh = 300;
+numericBlock.RangeLow = 5;
+numericBlock.RangeStep = 5;
+numericBlock.Decimals = 6;
+numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
+
+uib.AppendBlock(numericBlock);
 ```
 
 #### Row
@@ -755,11 +755,11 @@ int Row
 Example:
 
 ```txt
-UIBlockDefinition blockItem = new UIBlockDefinition();          
-blockItem.Type = UIBlockType.TextBox;                           
+UIBlockDefinition blockItem = new UIBlockDefinition();
+blockItem.Type = UIBlockType.TextBox;
 blockItem.Row = 2; //Text box situated in third row from the top
-                                                                
-uibDialogBox1.AppendBlock(blockItem);                           
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### RowSpan
@@ -776,10 +776,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.Row = 2; blockItem.RowSpan = 2;             
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.Row = 2; blockItem.RowSpan = 2;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### Style
@@ -800,8 +800,8 @@ UIBlockType: *All*
 
 ```txt
 UIBlockDefinition PropertiesTitle = new UIBlockDefinition();
-PropertiesTitle.Type = UIBlockType.StaticText;              
-PropertiesTitle.Style = "Title2";                           
+PropertiesTitle.Type = UIBlockType.StaticText;
+PropertiesTitle.Style = "Title2";
 ```
 
 #### Text
@@ -822,10 +822,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Button;                  
-blockItem.Row = 2; blockItem.Text = "OK";             
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.Button;
+blockItem.Row = 2; blockItem.Text = "OK";
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### Title
@@ -849,32 +849,32 @@ string TooltipText
 Example:
 
 ```txt
-UIBlockDefinition label3 = new UIBlockDefinition();       
-label3.Type = UIBlockType.StaticText;                     
-label3.Text = "Drop-down no filter";                      
-label3.Row = 2;                                           
-label3.Column = 0;                                        
-uib.AppendBlock(label3);                                  
-UIBlockDefinition input3 = new UIBlockDefinition();       
-input3.Type = UIBlockType.DropDown;                       
-input3.AddDropDownOption("1|Option 1");                  
-input3.AddDropDownOption("2|Option 2");                  
-input3.AddDropDownOption("3|Option 3");                  
-input3.ValidationState = UIValidationState.Invalid;       
-input3.ValidationText = "Validation message...";          
-input3.IsRequired = true;                                 
-input3.Height = 400;                                      
-input3.PlaceholderText = "Placeholder message...";        
-input3.InitialValue = "2";                                
-input3.Row = 2;                                           
-input3.Column = 1;                                        
+UIBlockDefinition label3 = new UIBlockDefinition();
+label3.Type = UIBlockType.StaticText;
+label3.Text = "Drop-down no filter";
+label3.Row = 2;
+label3.Column = 0;
+uib.AppendBlock(label3);
+UIBlockDefinition input3 = new UIBlockDefinition();
+input3.Type = UIBlockType.DropDown;
+input3.AddDropDownOption("1|Option 1");
+input3.AddDropDownOption("2|Option 2");
+input3.AddDropDownOption("3|Option 3");
+input3.ValidationState = UIValidationState.Invalid;
+input3.ValidationText = "Validation message...";
+input3.IsRequired = true;
+input3.Height = 400;
+input3.PlaceholderText = "Placeholder message...";
+input3.InitialValue = "2";
+input3.Row = 2;
+input3.Column = 1;
 input3.TooltipText = "drop-down no filter - tooltip text";
-uib.AppendBlock(input3);                                  
+uib.AppendBlock(input3);
 ```
 
 #### Type
 
-Gets or sets the *UIBlockType* of the dialog box item. See [UIBlockType enumeration](UIBlockType_enumeration.md).
+Gets or sets the *UIBlockType* of the dialog box item. See [UIBlockType enumeration](UIBlockType_enumeration.md).
 
 UIBlockType: *All*
 
@@ -886,9 +886,9 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### TreeViewItems
@@ -901,23 +901,23 @@ UIBlockType: [TreeView](UIBlockType_enumeration.md#treeview).
 TreeViewItem TreeViewItems
 ```
 
-Note that a *TreeViewItem* is an object in the *Skyline.DataMiner.Net.AutomationUI.Objects* namespace, with the following properties:
+Note that a *TreeViewItem* is an object in the *Skyline.DataMiner.Net.AutomationUI.Objects* namespace, with the following properties:
 
 - *ChildItems* (List\<TreeViewITem>): The child items of the tree view item, if any.
 
 - *DisplayValue* (string): The display value of the tree view item.
 
-- *IsChecked* (bool): Indicates whether the tree view item is selected.
+- *IsChecked* (bool): Indicates whether the tree view item is selected.
 
-- *IsCollapsed* (bool): Indicates whether the tree view item is collapsed. Supported from DataMiner 10.0.13 onwards.
+- *IsCollapsed* (bool): Indicates whether the tree view item is collapsed. Supported from DataMiner 10.0.13 onwards.
 
 - *ItemType* (TreeViewItemType): The type of tree view item.
 
 - *KeyValue* (string): The key value of the tree view item.
 
-- *SupportsLazyLoading* (bool): Indicates whether the tree view item will only be loaded when a user expands the item by clicking the arrow in front of it. Supported from DataMiner 10.1.2 onwards.
+- *SupportsLazyLoading* (bool): Indicates whether the tree view item will only be loaded when a user expands the item by clicking the arrow in front of it. Supported from DataMiner 10.1.2 onwards.
 
-- *CheckingBehavior* (TreeViewItem.TreeViewItemCheckingBehavior): Available from DataMiner 10.1.10/10.2.0 onwards. Configures what happens when you select a tree view item in an interactive Automation script. This property can have one of the following values:
+- *CheckingBehavior* (TreeViewItem.TreeViewItemCheckingBehavior): Available from DataMiner 10.1.10/10.2.0 onwards. Configures what happens when you select a tree view item in an interactive Automation script. This property can have one of the following values:
 
     - *FullRecursion*: All child items will automatically be selected when this item is selected, and vice versa.
 
@@ -954,7 +954,7 @@ string ValidationState
 ```
 
 > [!NOTE]
-> This property should be used in combination with the *WantsOnChange* property (see [WantsOnChange](#wantsonchange)). If *WantsOnChange* is true, the interactive Automation script will have its ShowUI(String) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults. This functionality will allow you to offer clear feedback on user input.
+> This property should be used in combination with the *WantsOnChange* property (see [WantsOnChange](#wantsonchange)). If *WantsOnChange* is true, the interactive Automation script will have its ShowUI(String) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults. This functionality will allow you to offer clear feedback on user input.
 
 #### ValidationText
 
@@ -979,7 +979,7 @@ string ValidationText
 ```
 
 > [!NOTE]
-> This property should be used in combination with the *WantsOnChange* property (see [WantsOnChange](#wantsonchange)). If *WantsOnChange* is true, the interactive Automation script will have its ShowUI(String) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults. This functionality will allow you to offer clear feedback on user input.
+> This property should be used in combination with the *WantsOnChange* property (see [WantsOnChange](#wantsonchange)). If *WantsOnChange* is true, the interactive Automation script will have its ShowUI(String) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults. This functionality will allow you to offer clear feedback on user input.
 
 #### VerticalAlignment
 
@@ -995,10 +995,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.VerticalAlignment = "Top";                  
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox;
+blockItem.VerticalAlignment = "Top";
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
@@ -1043,10 +1043,10 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.CheckBox;                
-blockItem.WantsOnChange = true;                       
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.CheckBox;
+blockItem.WantsOnChange = true;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```
 
 #### WantsOnFocusLost
@@ -1058,14 +1058,14 @@ bool WantsOnFocusLost
 ```
 
 > [!NOTE]
-> Applicable only in case *Type* is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox or Time.
+> Applicable only in case *Type* is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox or Time.
 
 #### Width
 
 Gets or sets the fixed width (in pixels) of the dialog box item.
 
 > [!NOTE]
-> To make sure the dialog box can be displayed optimally, we advise to use a minimum and maximum width instead of a fixed width (see [MaxWidth](#maxwidth) and [MinWidth](#minwidth)).
+> To make sure the dialog box can be displayed optimally, we advise to use a minimum and maximum width instead of a fixed width (see [MaxWidth](#maxwidth) and [MinWidth](#minwidth)).
 
 UIBlockType: *All*
 
@@ -1077,8 +1077,8 @@ Example:
 
 ```txt
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox; b               
-lockItem.Width = 100;                                 
-                                                      
-uibDialogBox1.AppendBlock(blockItem);                 
+blockItem.Type = UIBlockType.TextBox; b
+lockItem.Width = 100;
+
+uibDialogBox1.AppendBlock(blockItem);
 ```

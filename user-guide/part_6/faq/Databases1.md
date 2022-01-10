@@ -7,7 +7,7 @@ If a DataMiner version prior to 9.0.0 CU9 is used, and Cassandra no longer start
 In that case, you will find an error in the Cassandra log files like the following:
 
 ```txt
-ERROR [main] 2016-04-25 08:25:51,422 JVMStabilityInspector.java:81 - Exiting due to error while processing commit log during initialization.                                                     
+ERROR [main] 2016-04-25 08:25:51,422 JVMStabilityInspector.java:81 - Exiting due to error while processing commit log during initialization.
 org.apache.cassandra.db.commitlog.CommitLogReplayer$CommitLogReplayException: Could not read commit log descriptor in file C:\PROGRA\~1\CASSAN\~1\data\commitlog\CommitLog-6-1459504472381.log
 ```
 
@@ -17,7 +17,7 @@ This issue is automatically resolved in DataMiner version 9.0.0 CU9. However, if
 
 2. Go to *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0\\cassandra\\Parameters\\Java*.
 
-3. Right-click the *Options* value and select *Modify*.
+3. Right-click the *Options* value and select *Modify*.
 
 4. In the Editor, scroll down, and add one additional line with the following Cassandra option:
 

@@ -2,13 +2,13 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/>
 
 1. Right-click in the Surveyor and select *New \> Service* to add a new service.
 
     > [!NOTE]
-    > -  A service that uses a service protocol can also be created via the Protocols & Templates module. To do so, in the Protocols & Templates module, select the service protocol, the version, the alarm template and the trend template, right-click in the *Elements* column and select *New service*.
-    > -  From DataMiner 9.0.1 onwards, you can instead transform an existing view into a service, if that view has no child views. The child elements in the view will become child elements of the new service. To transform a view into a service, right-click the view and select *Actions* > *Upgrade to service*. If necessary, you can then still edit the new service in order to fine-tune it according to the procedure below.
+    > -  A service that uses a service protocol can also be created via the Protocols & Templates module. To do so, in the Protocols & Templates module, select the service protocol, the version, the alarm template and the trend template, right-click in the *Elements* column and select *New service*.
+    > -  From DataMiner 9.0.1 onwards, you can instead transform an existing view into a service, if that view has no child views. The child elements in the view will become child elements of the new service. To transform a view into a service, right-click the view and select *Actions* > *Upgrade to service*. If necessary, you can then still edit the new service in order to fine-tune it according to the procedure below.
 
 2. Enter a name for the service.
 
@@ -57,10 +57,10 @@
         3. Choose an alarm or trend template, if available.
 
             > [!NOTE]
-            > -  You can also quickly change the selected template by clicking the following button to the right of the field: ![](../../images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](../protocols/Configuring_alarm_templates.md) and [Configuring trend templates](../protocols/Configuring_trend_templates.md).
+            > -  You can also quickly change the selected template by clicking the following button to the right of the field: ![](../../images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](../protocols/Configuring_alarm_templates.md) and [Configuring trend templates](../protocols/Configuring_trend_templates.md).
             > • A service that has been created using a service protocol is called an “enhanced service”.
 
-7. Click the *Next* button in the lower right corner to go to the *parameters* page.
+7. Click the *Next* button in the lower right corner to go to the *parameters* page.
 
 8. Click the buttons in the lower left corner to add elements, services, or a group of elements and/or services.
 
@@ -68,7 +68,7 @@
 
         1. Click *Add element*.
 
-        2. Select the elements or services you want to add in the column on the left, and use the *Add* button to move them to the column with included elements on the right. To remove elements or services again, select them in the column on the right and click the *Remove* button. Click *Close* when ready.
+        2. Select the elements or services you want to add in the column on the left, and use the *Add* button to move them to the column with included elements on the right. To remove elements or services again, select them in the column on the right and click the *Remove* button. Click *Close* when ready.
 
         3. Select a service child item to configure it further.
 
@@ -87,12 +87,12 @@
             > [!NOTE]
             > For more information on how to include elements conditionally, see [Conditionally including an element in a service](Conditionally_including_an_element_in_a_service.md).
 
-        8. In the *ADVANCED* section, set a maximum severity for the service item if it has the status “included” or “not used”. For more information on the possible statuses, see [DATA](Service_card_pages.md#data).
+        8. In the *ADVANCED* section, set a maximum severity for the service item if it has the status “included” or “not used”. For more information on the possible statuses, see [DATA](Service_card_pages.md#data).
 
         9. Repeat from step c for each additional item that needs to be configured.
 
         > [!NOTE]
-        > It is possible to add multiple instances of the same element in a service. Specifying an alias is mandatory for all duplicate instances, and it is the alias of the service elements that will be displayed in the Surveyor. 
+        > It is possible to add multiple instances of the same element in a service. Specifying an alias is mandatory for all duplicate instances, and it is the alias of the service elements that will be displayed in the Surveyor.
 
     - To add a group:
 
@@ -115,15 +115,15 @@
 
         6. Click *Create*.
 
-        7. Select the group in the list on the left, and click *Add element* to add elements or services to the group.
+        7. Select the group in the list on the left, and click *Add element* to add elements or services to the group.
 
     - To remove any items you have added, click the *x* to the right of the item.
 
-9. Click the *Next* button in the lower right corner to go to the *Views* page.
+9. Click the *Next* button in the lower right corner to go to the *Views* page.
 
 10. Indicate the view where you want to add the service.
 
-11. Optionally, click the *Next* button in the lower right corner to go to the *Properties* page, and enter any custom properties.
+11. Optionally, click the *Next* button in the lower right corner to go to the *Properties* page, and enter any custom properties.
 
     > [!NOTE]
     > You can also add, edit or delete custom properties later, by right-clicking the service in the Surveyor and selecting *Properties*. For more information, see [Managing element properties](../elements/Managing_element_properties.md).

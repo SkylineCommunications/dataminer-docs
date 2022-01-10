@@ -1,6 +1,6 @@
 ## Grouping shapes
 
-If, in a Visio drawing, you have to link more than one shape to the same element, view or service, then first group those shapes, and then specify shape data of type **Element**, **View** or **Service** on group level. This will considerably enhance performance.
+If, in a Visio drawing, you have to link more than one shape to the same element, view or service, then first group those shapes, and then specify shape data of type **Element**, **View** or **Service** on group level. This will considerably enhance performance.
 
 ### Example of grouping shapes
 
@@ -16,7 +16,7 @@ Suppose that you want to draw a square that has to display the alarm color of th
 
 3. Group the square and the text box.
 
-4. Add a shape data field of type **Element** to the group, and set its value to the ID (or the name) of the element.
+4. Add a shape data field of type **Element** to the group, and set its value to the ID (or the name) of the element.
 
 Result: When the Visio drawing is displayed, the square will show the alarm color of the associated element, and the name of that element will be displayed in the text box on the right.
 
@@ -26,7 +26,7 @@ Within a group, you can configure a subshape to execute a script or parameter se
 
 To do so, in the subshape in question, replace the element reference in the Execute command by an asterisk (“\*”).
 
-In addition, to execute a script, add the **Enabled** shape data field to both the group shape and the subshape, setting it to “false” for the group shape, and to “true” for the subshape. Also add the **Options** shape data field to the subshape, and set it to “NoCopyElementProperty”.
+In addition, to execute a script, add the **Enabled** shape data field to both the group shape and the subshape, setting it to “false” for the group shape, and to “true” for the subshape. Also add the **Options** shape data field to the subshape, and set it to “NoCopyElementProperty”.
 
 For example:
 

@@ -17,11 +17,11 @@ In this section:
 If you want the map to contain a filter box that allows users to filter map items based on their name, then add a simple *\<FilterBox>* tag as shown in the following example:
 
 ```xml
-<MapConfig ...>             
-  ...                          
+<MapConfig ...>
+  ...
   <FilterBox visible="true" />
-  ...                          
-</MapConfig>                
+  ...
+</MapConfig>
 ```
 
 ### Filtering on alarm severity
@@ -29,17 +29,17 @@ If you want the map to contain a filter box that allows users to filter map item
 If you want the map to contain a filter box that allows users to filter map items based on their alarm severity level, then add a *\<FilterBox>* tag that contains a checkbox for every alarm severity level:
 
 ```xml
-<MapConfig ...>                                        
-  ...                                                     
-  <FilterBox visible="true">                             
-    <CheckBoxes>                                           
-      <CheckBox alarmLevel="Normal" name="connected" />      
+<MapConfig ...>
+  ...
+  <FilterBox visible="true">
+    <CheckBoxes>
+      <CheckBox alarmLevel="Normal" name="connected" />
       <CheckBox alarmLevel="Critical" name="not connected" />
-      <CheckBox alarmLevel="Undefined" name="unknown" />     
-    </CheckBoxes>                                          
-  </FilterBox>                                           
-  ...                                                     
-</MapConfig>                                           
+      <CheckBox alarmLevel="Undefined" name="unknown" />
+    </CheckBoxes>
+  </FilterBox>
+  ...
+</MapConfig>
 ```
 
 Every *\<CheckBox>* tag has to have the following attributes:
@@ -57,25 +57,25 @@ To make a map automatically zoom to its maximum level (keeping all markers visib
 For example:
 
 ```xml
-<FilterBox visible="true" autoFit="true">              
-  <CheckBoxes>                                           
-    <CheckBox alarmLevel="Normal" name="connected" />      
+<FilterBox visible="true" autoFit="true">
+  <CheckBoxes>
+    <CheckBox alarmLevel="Normal" name="connected" />
     <CheckBox alarmLevel="Critical" name="not connected" />
-    <CheckBox alarmLevel="Undefined" name="undefined" />   
-  </CheckBoxes>                                          
-</FilterBox>                                           
+    <CheckBox alarmLevel="Undefined" name="undefined" />
+  </CheckBoxes>
+</FilterBox>
 ```
 
 ### Specifying the location of a filter box
 
-From DataMiner 9.0.5 onwards, it is possible to specify the exact location of a filter box on a map. To do so, you must specify the *closeable* attribute in the FilterBox tag, and specify a *Location* subtag.
+From DataMiner 9.0.5 onwards, it is possible to specify the exact location of a filter box on a map. To do so, you must specify the *closeable* attribute in the FilterBox tag, and specify a *Location* subtag.
 
 For example:
 
 ```xml
 <FilterBox visible="true" autoFit="true" closeable="false">
-  <Location bottom="50px" left="10px" />                     
-</FilterBox>                                               
+  <Location bottom="50px" left="10px" />
+</FilterBox>
 ```
 
 #### closeable attribute

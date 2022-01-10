@@ -22,4 +22,4 @@ When receiving a text message, Mobile Gateway uses the following decodings:
 
 - UCS-2 16-bit decoding
 
- 
+

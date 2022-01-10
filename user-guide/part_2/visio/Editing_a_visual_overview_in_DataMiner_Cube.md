@@ -15,17 +15,17 @@ To modify shapes in edit mode:
 1. Select a linked object.
 
     > [!NOTE]
-    > If you select the *Make all shapes selectable* option in the *edit shape* pane, you will be able to select all shapes in the Visio drawing from a selection box, even those that do not have any DataMiner shape data.
+    > If you select the *Make all shapes selectable* option in the *edit shape* pane, you will be able to select all shapes in the Visio drawing from a selection box, even those that do not have any DataMiner shape data.
 
-2. In the *Edit Shape* pane on the right, link the shape to a view, element, service, redundancy group, Automation script, web page, video source, etc.
+2. In the *Edit Shape* pane on the right, link the shape to a view, element, service, redundancy group, Automation script, web page, video source, etc.
 
-3. Depending on the choice you made in the previous step, specify the necessary options in either the *Basic* tab or the *Advanced* tab.
+3. Depending on the choice you made in the previous step, specify the necessary options in either the *Basic* tab or the *Advanced* tab.
 
 4. When you have made all necessary modifications, click *Save*. To exit the edit mode, click *Close edit mode*.
 
 ### Edit in Visio
 
-The *Edit in Visio* option downloads the Visio drawing that is currently assigned to the selected view, service or element, and opens it in Microsoft Visio. This allows you to edit the drawing online.
+The *Edit in Visio* option downloads the Visio drawing that is currently assigned to the selected view, service or element, and opens it in Microsoft Visio. This allows you to edit the drawing online.
 
 When you have made all necessary modifications, save the drawing. The new version will be uploaded back to the DMS, and the visual side of the card will be refreshed.
 
@@ -58,9 +58,9 @@ On the visual overview of an **element**, two options are available (from DataMi
         > [!NOTE]
         > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](DataMiner_Visio_templates.md#overview-of-the-default-visio-templates-supplied-by-skyline).
 
-    - **New upload**: Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element.
+    - **New upload**: Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element.
 
-    - **Existing**: Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:
+    - **Existing**: Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:
 
         - Click a drawing in the list, set the default page, and click *OK*.
 
@@ -68,16 +68,16 @@ On the visual overview of an **element**, two options are available (from DataMi
 
 On the visual overview of a **service or view**, the context menu can contain the following further options:
 
-- **Custom** / **General default**: Only displayed in case a custom Visio file is available already. Allows you to switch between this custom file or the general default file for services or views.
+- **Custom** / **General default**: Only displayed in case a custom Visio file is available already. Allows you to switch between this custom file or the general default file for services or views.
 
 - **New blank**: Opens a new, blank drawing in Microsoft Visio, which will automatically be assigned to the selected service or view.
 
     > [!NOTE]
     > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](DataMiner_Visio_templates.md#overview-of-the-default-visio-templates-supplied-by-skyline).
 
-- **New upload**: Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the selected service or view.
+- **New upload**: Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the selected service or view.
 
-- **Existing**: Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the selected service or view:
+- **Existing**: Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the selected service or view:
 
     - Click a drawing in the list, set the default page, and click *OK*.
 
@@ -96,14 +96,14 @@ On the visual overview of a **service or view**, the context menu can contain th
     > [!NOTE]
     > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](DataMiner_Visio_templates.md#overview-of-the-default-visio-templates-supplied-by-skyline).
 
-- **New upload**: Opens the *Open* dialog box, where you can upload a new drawing that will be used as the custom drawing for the protocol and assigned to all elements using the protocol.
+- **New upload**: Opens the *Open* dialog box, where you can upload a new drawing that will be used as the custom drawing for the protocol and assigned to all elements using the protocol.
 
 > [!TIP]
 > See also:
-> -  [DataMiner Visio templates](DataMiner_Visio_templates.md) 
-> -  [Managing Visio files linked to protocols](../protocols/Managing_Visio_files_linked_to_protocols.md) 
-> -  [Switching between different Visio files](../protocols/Managing_Visio_files_linked_to_protocols.md#switching-between-different-visio-files) 
+> -  [DataMiner Visio templates](DataMiner_Visio_templates.md)
+> -  [Managing Visio files linked to protocols](../protocols/Managing_Visio_files_linked_to_protocols.md)
+> -  [Switching between different Visio files](../protocols/Managing_Visio_files_linked_to_protocols.md#switching-between-different-visio-files)
 
 ### Download Visio file
 
-The *Download Visio file* option opens the *Save As* dialog box, which allows you to save a copy of the Visio drawing on your local computer.
+The *Download Visio file* option opens the *Save As* dialog box, which allows you to save a copy of the Visio drawing on your local computer.

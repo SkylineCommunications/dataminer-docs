@@ -3,7 +3,7 @@
 When you have linked a shape to an element using a shape data field of type **Element**, you can use an additional shape data field of type **Parameter** to link that shape to a particular parameter of that element.
 
 > [!NOTE]
-> -  When you have linked a shape to an enhanced service using a shape data field of type **Element**, you can use an additional shape data field of type **Parameter** to link that shape to a particular parameter of the service.
+> -  When you have linked a shape to an enhanced service using a shape data field of type **Element**, you can use an additional shape data field of type **Parameter** to link that shape to a particular parameter of the service.
 > -  If you link a shape to a spectrum analyzer parameter, by default, the shape will be turned into a spectrum analyzer thumbnail.
 > -  In a Visio file linked to a protocol, a shape linked to a parameter will always be shown, even if that parameter has no value. A shape linked to a parameter will only be hidden if a show/hide condition dictates that it should be hidden.
 
@@ -27,7 +27,7 @@ In this section:
 
 Add a shape data field of type **Parameter** to the shape.
 
-- For a **simple parameter** or **matrix parameter**, set the value of the shape data field to:
+- For a **simple parameter** or **matrix parameter**, set the value of the shape data field to:
 
     ```txt
     ParameterID|Options
@@ -51,14 +51,14 @@ Add a shape data field of type **Parameter** to the shape.
 
     - When using a variable table row, replace the colon by a comma.
 
-        When specifying a fixed table row, you have to separate the parameter ID and the table row by means of a colon (”:”). However, when specifying a table row containing a wildcard or when specifying a table row by means of a \[param\] or \[property\] placeholder, use a comma (”,”) as separator instead. 
+        When specifying a fixed table row, you have to separate the parameter ID and the table row by means of a colon (”:”). However, when specifying a table row containing a wildcard or when specifying a table row by means of a \[param\] or \[property\] placeholder, use a comma (”,”) as separator instead.
 
         Examples:
 
         ```txt
-        302:5                             
-        302,sl*                          
-        302,[param:456]                 
+        302:5
+        302,sl*
+        302,[param:456]
         302,[property:MySpecialProperty]
         ```
 
@@ -72,9 +72,9 @@ Add a shape data field of type **Parameter** to the shape.
 
     - A shape linked to a spectrum analyzer parameter will by default be turned into a spectrum analyzer thumbnail. However, it is possible to configure an option to prevent this, so that the shape only serves as a link to the spectrum analyzer. See [Keeping a shape from turning into a spectrum thumbnail](#keeping-a-shape-from-turning-into-a-spectrum-thumbnail).
 
-    - *MonitorRef* can be either the monitor name or the monitor ID. The monitor name can contain \* and ? wildcards. In that case, the first matching monitor for the element will be used.
+    - *MonitorRef* can be either the monitor name or the monitor ID. The monitor name can contain \* and ? wildcards. In that case, the first matching monitor for the element will be used.
 
-    - *ScriptVariable* refers to a variable of type trace that is used in the script of the specified monitor.
+    - *ScriptVariable* refers to a variable of type trace that is used in the script of the specified monitor.
 
     - If the monitor specifies only a single measurement point, the measurement point ID can be set to -1. The required measurement point will then be selected automatically.
 
@@ -87,11 +87,11 @@ Add a shape data field of type **Parameter** to the shape.
     - When referring to a spectrum analyzer parameter, you can use variable placeholders. For example:
 
         ```txt
-        64001|[property:MONITOR_ID]|trace_[property:CIRCUIT_ID]|-1||DisplayTime                             
+        64001|[property:MONITOR_ID]|trace_[property:CIRCUIT_ID]|-1||DisplayTime
         64001|[Var:monitor]|[Var:buffer]|-1|Carrier CSG_200_000000001037 - NIT_06_R L Rx (public)|DisplayTime
         ```
 
-    - From DataMiner 10.2.0/10.1.8 onwards, you can have the spectrum thumbnail show the trace from a specific moment in the past, based on the recorded trending for a parameter in a spectrum monitor. To do so, as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder *C:\\Skyline DataMiner*. Then configure the **HistoryMode** shape data in the same manner as to display the history alarm state of a parameter. See [Linking a shape to a history alarm](Linking_a_shape_to_a_history_alarm.md).
+    - From DataMiner 10.2.0/10.1.8 onwards, you can have the spectrum thumbnail show the trace from a specific moment in the past, based on the recorded trending for a parameter in a spectrum monitor. To do so, as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder *C:\\Skyline DataMiner*. Then configure the **HistoryMode** shape data in the same manner as to display the history alarm state of a parameter. See [Linking a shape to a history alarm](Linking_a_shape_to_a_history_alarm.md).
 
         > [!NOTE]
         > The trended trace record from right before the specified time will be displayed. For this purpose, the trended traces are queried with the following steps until a trace record is found or the maximum search extent has been reached: 1 hour – 3 hours – 12 hours – 24 hours – 48 hours (maximum).
@@ -136,7 +136,7 @@ This can be done in two ways, depending on the version of DataMiner you are usin
 
 - From DataMiner 9.5.1 onwards:
 
-    In addition to specifying the **Element** and **Parameter** shape data fields to link the shape to the first table parameter, also specify a **Subscriptionfilter** shape data field, with the value “*value=*\[PID\]*==*\[filter value\]”.     For example, in the configuration below, the column parameters 1005 and 2002 are located in two related tables. The dynamic placeholder in the data field of type *Parameter* will be replaced by the value in column 1005 on the row of which the value in the linked row in column 2002 matches the condition specified in the subscription filter. This value will then be displayed on the shape.
+    In addition to specifying the **Element** and **Parameter** shape data fields to link the shape to the first table parameter, also specify a **Subscriptionfilter** shape data field, with the value “*value=*\[PID\]*==*\[filter value\]”.     For example, in the configuration below, the column parameters 1005 and 2002 are located in two related tables. The dynamic placeholder in the data field of type *Parameter* will be replaced by the value in column 1005 on the row of which the value in the linked row in column 2002 matches the condition specified in the subscription filter. This value will then be displayed on the shape.
 
     | Shape data field | Value               |
     |--------------------|---------------------|
@@ -146,7 +146,7 @@ This can be done in two ways, depending on the version of DataMiner you are usin
 
 - From DataMiner 9.5.2 onwards:
 
-    When you use the configuration with the *\[param:\]* placeholder illustrated above, it can occur that the placeholder is resolved to an integer that equals the ID of a parameter, so that a subscription is made on that parameter, which can lead to a different parameter value being shown. As such, as an alternative, you can use a similar configuration that does not use this placeholder, and makes use of a **ParameterSubscriptionFilter** shape data field instead of a **SubscriptionFilter** shape data field. For example:
+    When you use the configuration with the *\[param:\]* placeholder illustrated above, it can occur that the placeholder is resolved to an integer that equals the ID of a parameter, so that a subscription is made on that parameter, which can lead to a different parameter value being shown. As such, as an alternative, you can use a similar configuration that does not use this placeholder, and makes use of a **ParameterSubscriptionFilter** shape data field instead of a **SubscriptionFilter** shape data field. For example:
 
     | Shape data field          | Value          |
     |-----------------------------|----------------|
@@ -155,7 +155,7 @@ This can be done in two ways, depending on the version of DataMiner you are usin
     | ParameterSubscriptionFilter | value=202 == 1 |
 
     > [!NOTE]
-    > As an alternative way to keep a shape from incorrectly subscribing to a parameter if the first of these configurations is used, you can also add an Options shape data field and set it to *DisableParameterSubscription*.
+    > As an alternative way to keep a shape from incorrectly subscribing to a parameter if the first of these configurations is used, you can also add an Options shape data field and set it to *DisableParameterSubscription*.
 
 > [!TIP]
 > See also:
@@ -169,7 +169,7 @@ To retrieve the value, DataMiner will use the trend record stored for the select
 
 Configure the shape data as follows:
 
-1. Add a shape data field of type **HistoryMode** to the element shape or page, depending on whether you want to show only this shape in history mode, or all element shapes on the page.
+1. Add a shape data field of type **HistoryMode** to the element shape or page, depending on whether you want to show only this shape in history mode, or all element shapes on the page.
 
 2. Set the value of the shape data field as follows:
 
@@ -184,7 +184,7 @@ Configure the shape data as follows:
     | State                       | Can be "On" or "Off". On means history mode is active, Off means the current parameter values are shown instead. You can use a placeholder to change this value dynamically.                                                                     |
     | TimeStamp                   | The date and time for which the parameter value should be displayed. You can use a placeholder to change this value dynamically.                                                                                                                 |
     | NoDataValue=                | This option allows you to specify the text that should be displayed in case no trending is available. If this option is not specified, the default value “N/A” is displayed.                                                                     |
-    | TrendDataType               | This option allows you to determine which kind of trend data should be used, if available: *Realtime* (default), *Average* or *RealtimeAndAverage*. |
+    | TrendDataType               | This option allows you to determine which kind of trend data should be used, if available: *Realtime* (default), *Average* or *RealtimeAndAverage*. |
     | AverageTrendData­Indication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown.                                                                                                        |
 
     For example:
@@ -193,7 +193,7 @@ Configure the shape data as follows:
     |--------------------|-------------------------------------------------------------------------------------------------------------------|
     | HistoryMode        | State=On\|TimeStamp=\[var:myTime\]\|NoDataValue=\<No data available>\|Average\|AverageTrendDataIndication=\[AVG\] |
 
-3. If you want to use a **SetVar** shape to set the history mode date and time, use the *SetVarOptions* shape data on that shape, and set the value to *Control= DateTime*. Optionally, you can also add *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value.
+3. If you want to use a **SetVar** shape to set the history mode date and time, use the *SetVarOptions* shape data on that shape, and set the value to *Control= DateTime*. Optionally, you can also add *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value.
 
     For example:
 
@@ -241,11 +241,11 @@ If, in a shape linked to an element, you want to have a subshape that has the cu
 
 #### Conditional shape manipulation actions
 
-Conditional shape manipulation actions can be specified within the value of the **Parameter** shape data field. See [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md).
+Conditional shape manipulation actions can be specified within the value of the **Parameter** shape data field. See [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md).
 
 #### SpectrumOptions
 
-If the value refers to a spectrum analyzer parameter, you can use the following spectrum options in the **Parameter** shape data field (referred to as “SpectrumOptions” in [Basic shape data field configuration](#basic-shape-data-field-configuration)), separated by semicolons (“;”).
+If the value refers to a spectrum analyzer parameter, you can use the following spectrum options in the **Parameter** shape data field (referred to as “SpectrumOptions” in [Basic shape data field configuration](#basic-shape-data-field-configuration)), separated by semicolons (“;”).
 
 | Option            | Description                                         |
 |-------------------|-----------------------------------------------------|
@@ -255,7 +255,7 @@ If the value refers to a spectrum analyzer parameter, you can use the following 
 | DisplayTime       | Displays the time of the spectrum trace.            |
 
 > [!NOTE]
-> If the Visio file is displayed using the Monitoring & Control app, the *DisplayMarkers* and *DisplayThresholds* options are only available from DataMiner 9.6.1 onwards.
+> If the Visio file is displayed using the Monitoring & Control app, the *DisplayMarkers* and *DisplayThresholds* options are only available from DataMiner 9.6.1 onwards.
 
 #### Keeping a shape from turning into a spectrum thumbnail
 
@@ -272,7 +272,7 @@ To do so, add a shape data field of type **Options** to the shape, and set its v
 
 In shapes that display a parameter value, you can have empty, non-initialized parameter values replaced by custom text.
 
-To do so, add a shape data field of type **Options** to the shape displaying a parameter value, and set its value to “*EmptyValue=*”, followed by the text to be displayed.
+To do so, add a shape data field of type **Options** to the shape displaying a parameter value, and set its value to “*EmptyValue=*”, followed by the text to be displayed.
 
 ```txt
 EmptyValue=Value to be displayed
@@ -297,7 +297,7 @@ For example:
 
 #### Ensuring the shape text value is not cleared upon a subscription change
 
-From DataMiner 10.1.0 \[CU1\]/10.1.4 onwards, when a dynamic part of a **Parameter** shape data field changes, the value from the previous parameter subscription is cleared from the shape text. A new value will only be filled in if the ID of the parameter is valid and a new subscription is made. As such, if the ID of the parameter shape data is not a valid number, the value will remain cleared.
+From DataMiner 10.1.0 \[CU1\]/10.1.4 onwards, when a dynamic part of a **Parameter** shape data field changes, the value from the previous parameter subscription is cleared from the shape text. A new value will only be filled in if the ID of the parameter is valid and a new subscription is made. As such, if the ID of the parameter shape data is not a valid number, the value will remain cleared.
 
 However, it is possible to revert to legacy behavior, where the old value continues to be displayed. To do so, add the following option:
 

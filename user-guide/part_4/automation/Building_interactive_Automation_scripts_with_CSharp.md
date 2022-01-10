@@ -21,36 +21,36 @@ Notice that the programmer defined a number of columns and rows. This forms a gr
 Also notice that a height and a width have been defined for every dialog box item, and that the row heights and column widths have been set to “a” (i.e. automatic) instead of to a specific number of pixels. That way, the rows and columns will automatically be resized according to the size of the dialog box items.
 
 ```cs
-// Create the dialog box                                    
-UIBuilder uib = new UIBuilder();                            
-                                                            
-// Configure the dialog box                                 
-uib.RequireResponse = true;                                 
-uib.RowDefs = "a;a;a";                                      
-uib.ColumnDefs="a;a;a";                                     
-                                                            
-// Add a 'StaticText' item to the dialog box                
+// Create the dialog box
+UIBuilder uib = new UIBuilder();
+
+// Configure the dialog box
+uib.RequireResponse = true;
+uib.RowDefs = "a;a;a";
+uib.ColumnDefs="a;a;a";
+
+// Add a 'StaticText' item to the dialog box
 UIBlockDefinition blockStaticText = new UIBlockDefinition();
-blockStaticText.Type = UIBlockType.StaticText;              
-blockStaticText.Text = "Hello World!";                      
-blockStaticText.Height = 50;                                
-blockStaticText.Width = 200;                                
-blockStaticText.Row = 0;                                    
-blockStaticText.Column = 0;                                 
-uib.AppendBlock(blockStaticText);                           
-                                                            
-// Add a button to the dialog box                           
-UIBlockDefinition blockButton = new UIBlockDefinition();    
-blockButton.Type = UIBlockType.Button;                      
-blockButton.Text = "Close";                                 
-blockButton.Height = 20;                                    
-blockButton.Width = 75;                                     
-blockButton.Row = 2;                                        
-blockButton.Column = 0;                                     
-uib.AppendBlock(blockButton);                               
-                                                            
-// Display the dialog box                                   
-engine.ShowUI(uib);                                         
+blockStaticText.Type = UIBlockType.StaticText;
+blockStaticText.Text = "Hello World!";
+blockStaticText.Height = 50;
+blockStaticText.Width = 200;
+blockStaticText.Row = 0;
+blockStaticText.Column = 0;
+uib.AppendBlock(blockStaticText);
+
+// Add a button to the dialog box
+UIBlockDefinition blockButton = new UIBlockDefinition();
+blockButton.Type = UIBlockType.Button;
+blockButton.Text = "Close";
+blockButton.Height = 20;
+blockButton.Width = 75;
+blockButton.Row = 2;
+blockButton.Column = 0;
+uib.AppendBlock(blockButton);
+
+// Display the dialog box
+engine.ShowUI(uib);
 ```
 
 ### Example of a dialog box asking to enter information
@@ -58,69 +58,69 @@ engine.ShowUI(uib);
 The following code displays a simple dialog box that shows a checkbox list. When you select one of the options in the list and you click *Next*, another dialog box will appear, showing the text of the option you selected.
 
 ```cs
-// ------------------------ SCREEN 1 -----------------------------  
-                                                                    
-UIResults uir = null;                                               
-string selection = "";                                              
-                                                                    
-UIBuilder uib = new UIBuilder();                                    
-uib.RequireResponse = true;                                         
-uib.RowDefs = "50;*;*";                                           
-uib.ColumnDefs="50;*;*";                                          
-                                                                    
-UIBlockDefinition blockCheckBoxList = new UIBlockDefinition();      
-blockCheckBoxList.Type = UIBlockType.CheckBoxList;                  
-blockCheckBoxList.AddCheckBoxListOption("Option 1");                
-blockCheckBoxList.AddCheckBoxListOption("Option 2");                
-blockCheckBoxList.DestVar = "selectionDest";                        
-blockCheckBoxList.WantsOnChange = false;                            
-blockCheckBoxList.Height = 100;                                     
-blockCheckBoxList.Width = 100;                                      
-blockCheckBoxList.Row = 1;                                          
-blockCheckBoxList.Column = 1;                                       
-uib.AppendBlock(blockCheckBoxList);                                 
-                                                                    
-// Add a button to the dialog box                                   
-UIBlockDefinition blockButtonNext = new UIBlockDefinition();        
-blockButtonNext.Type = UIBlockType.Button;                          
-blockButtonNext.Text = "Next";                                      
-blockButtonNext.Height = 50;                                        
-blockButtonNext.Width = 100;                                        
-blockButtonNext.Row = 2;                                            
-blockButtonNext.Column = 1;                                         
-uib.AppendBlock(blockButtonNext);                                   
-                                                                    
-uir = engine.ShowUI(uib);                                           
-selection = uir.GetString("selectionDest");                         
+// ------------------------ SCREEN 1 -----------------------------
+
+UIResults uir = null;
+string selection = "";
+
+UIBuilder uib = new UIBuilder();
+uib.RequireResponse = true;
+uib.RowDefs = "50;*;*";
+uib.ColumnDefs="50;*;*";
+
+UIBlockDefinition blockCheckBoxList = new UIBlockDefinition();
+blockCheckBoxList.Type = UIBlockType.CheckBoxList;
+blockCheckBoxList.AddCheckBoxListOption("Option 1");
+blockCheckBoxList.AddCheckBoxListOption("Option 2");
+blockCheckBoxList.DestVar = "selectionDest";
+blockCheckBoxList.WantsOnChange = false;
+blockCheckBoxList.Height = 100;
+blockCheckBoxList.Width = 100;
+blockCheckBoxList.Row = 1;
+blockCheckBoxList.Column = 1;
+uib.AppendBlock(blockCheckBoxList);
+
+// Add a button to the dialog box
+UIBlockDefinition blockButtonNext = new UIBlockDefinition();
+blockButtonNext.Type = UIBlockType.Button;
+blockButtonNext.Text = "Next";
+blockButtonNext.Height = 50;
+blockButtonNext.Width = 100;
+blockButtonNext.Row = 2;
+blockButtonNext.Column = 1;
+uib.AppendBlock(blockButtonNext);
+
+uir = engine.ShowUI(uib);
+selection = uir.GetString("selectionDest");
 // ------------------------ SCREEN 2 -------------------------------
-// Create the dialog box                                            
-UIBuilder uib2 = new UIBuilder();                                   
-                                                                    
-// Configure the dialog box                                         
-uib2.RequireResponse = true;                                        
-uib2.RowDefs = "50;*;*";                                          
-uib2.ColumnDefs="50;*;*";                                         
-                                                                    
-// Add a 'StaticText' item to the dialog box                        
-UIBlockDefinition blockStaticText = new UIBlockDefinition();        
-blockStaticText.Type = UIBlockType.StaticText;                      
-blockStaticText.Text = "You chose " + selection;                    
-blockStaticText.Row = 1;                                            
-blockStaticText.Column = 1;                                         
-blockStaticText.Height = 50;                                        
-blockStaticText.Width = 200;                                        
-uib2.AppendBlock(blockStaticText);                                  
-                                                                    
-// Add a button to the dialog box                                   
-UIBlockDefinition blockButtonClose = new UIBlockDefinition();       
-blockButtonClose.Type = UIBlockType.Button;                         
-blockButtonClose.Text = "Close";                                    
-blockButtonClose.Row = 2;                                           
-blockButtonClose.Column = 1;                                        
-blockButtonClose.Height = 50;                                       
-blockButtonClose.Width = 200;                                       
-uib2.AppendBlock(blockButtonClose);                                 
-                                                                    
-// Display the dialog box                                           
-engine.ShowUI(uib2);                                                
+// Create the dialog box
+UIBuilder uib2 = new UIBuilder();
+
+// Configure the dialog box
+uib2.RequireResponse = true;
+uib2.RowDefs = "50;*;*";
+uib2.ColumnDefs="50;*;*";
+
+// Add a 'StaticText' item to the dialog box
+UIBlockDefinition blockStaticText = new UIBlockDefinition();
+blockStaticText.Type = UIBlockType.StaticText;
+blockStaticText.Text = "You chose " + selection;
+blockStaticText.Row = 1;
+blockStaticText.Column = 1;
+blockStaticText.Height = 50;
+blockStaticText.Width = 200;
+uib2.AppendBlock(blockStaticText);
+
+// Add a button to the dialog box
+UIBlockDefinition blockButtonClose = new UIBlockDefinition();
+blockButtonClose.Type = UIBlockType.Button;
+blockButtonClose.Text = "Close";
+blockButtonClose.Row = 2;
+blockButtonClose.Column = 1;
+blockButtonClose.Height = 50;
+blockButtonClose.Width = 200;
+uib2.AppendBlock(blockButtonClose);
+
+// Display the dialog box
+engine.ShowUI(uib2);
 ```

@@ -15,30 +15,30 @@ DataMiner can import users and groups from an Atlassian Crowd server.
 In the file *DataMiner.xml*, enter a *\<Crowd>* tag like the one in the example below.
 
 ```xml
-<DataMiner>                                               
+<DataMiner>
   <Crowd host="myDma" application="dataminer" password="…"/>
-</DataMiner>                                              
+</DataMiner>
 ```
 
-In the Atlassian Crowd server, make sure there is an application named “dataminer” (as specified in the *DataMiner.xml* file), that it can be accessed using the password specified in the *DataMiner.xml* file, and that it contains the necessary users and user groups. Also make sure to add the IP address of the DataMiner Agent to the list of remote addresses.
+In the Atlassian Crowd server, make sure there is an application named “dataminer” (as specified in the *DataMiner.xml* file), that it can be accessed using the password specified in the *DataMiner.xml* file, and that it contains the necessary users and user groups. Also make sure to add the IP address of the DataMiner Agent to the list of remote addresses.
 
 ### Authenticating DataMiner users against an Atlassian Crowd server
 
 From DataMiner 8.5.1 onwards, DataMiner users can be authenticated against an Atlassian Crowd server.
 
-To configure this, open the *DataMiner.xml* file, add an *\<ExternalAuthentication>* tag as shown in the example below, and restart the DataMiner Agent. Users added to the Crowd server and imported into DataMiner should then be able to log on.
+To configure this, open the *DataMiner.xml* file, add an *\<ExternalAuthentication>* tag as shown in the example below, and restart the DataMiner Agent. Users added to the Crowd server and imported into DataMiner should then be able to log on.
 
 ```xml
-<DataMiner>                                                
-  <ExternalAuthentication type="CROWD"                       
-    host="hostname" port="port"                                 
+<DataMiner>
+  <ExternalAuthentication type="CROWD"
+    host="hostname" port="port"
     username="application_name" password="application_password">
-  </ExternalAuthentication>                                  
-</DataMiner>                                               
+  </ExternalAuthentication>
+</DataMiner>
 ```
 
 > [!NOTE]
-> From DataMiner 9.0.0 onwards, DataMiner Cube also supports domain-specific single sign-on (SSO) when using third-party authentication via an Atlassian Crowd server. 
+> From DataMiner 9.0.0 onwards, DataMiner Cube also supports domain-specific single sign-on (SSO) when using third-party authentication via an Atlassian Crowd server.
 >
 > In case Crowd single sign-on is used, as soon as the DataMiner Agent receives the SSO configuration from the Crowd server it authenticates against, it will pass this configuration on to the DataMiner Cube client in the form of a cookie.
 
@@ -51,11 +51,11 @@ By default, the SLDataMiner process will attempt to automatically detect the pro
 Example:
 
 ```xml
-<DataMiner>                                               
-  <ExternalAuthentication type="CROWD"                      
-    host="hostname" port="port"                                
+<DataMiner>
+  <ExternalAuthentication type="CROWD"
+    host="hostname" port="port"
     username="application_name" password="application_password"
-    autoproxy="false">                                         
-  </ExternalAuthentication>                                 
-</DataMiner>                                              
+    autoproxy="false">
+  </ExternalAuthentication>
+</DataMiner>
 ```

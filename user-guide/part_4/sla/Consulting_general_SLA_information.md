@@ -1,6 +1,6 @@
 ## Consulting general SLA information
 
-To view more information on the SLA in general, check the section *General Info* on the *Main View* page of the SLA element. There you will find the following information.
+To view more information on the SLA in general, check the section *General Info* on the *Main View* page of the SLA element. There you will find the following information.
 
 - **Service Name**: The name of the service the SLA applies to.
 

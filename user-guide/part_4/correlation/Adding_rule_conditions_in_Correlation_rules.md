@@ -1,10 +1,10 @@
 # Adding rule conditions in Correlation rules
 
-In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule conditions to it in the details pane on the right.
+In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule conditions to it in the details pane on the right.
 
-In the *Rule condition* section of the details pane, specify one or more conditions that, when met, will trigger the Correlation rule. You can select and combine Script conditions and Filter conditions, and specify one of different trigger mechanisms. In the *Sliding window* section, an additional trigger mechanism can be selected.
+In the *Rule condition* section of the details pane, specify one or more conditions that, when met, will trigger the Correlation rule. You can select and combine Script conditions and Filter conditions, and specify one of different trigger mechanisms. In the *Sliding window* section, an additional trigger mechanism can be selected.
 
-1. Click *Select a Condition* and select either *Script condition* or *Filter condition*.
+1. Click *Select a Condition* and select either *Script condition* or *Filter condition*.
 
 2. If you have selected *Script condition*, enter the script in the large text box.
 
@@ -17,7 +17,7 @@ In the *Rule condition* section of the details pane, specify one or more condit
 
     1. Click *Select a filter*.
 
-    2. Select one of the listed properties and create a filter condition, or select *Saved filters* and select an existing alarm filter.
+    2. Select one of the listed properties and create a filter condition, or select *Saved filters* and select an existing alarm filter.
 
 4. If this is the first (or only) rule condition, select “Is” or “Is Not” to indicate whether the condition has to be true or false.
 
@@ -40,12 +40,12 @@ In the *Rule condition* section of the details pane, specify one or more condit
 
         This option can for example be used to only trigger the rule action(s) if the average value of the alarms matching the filter during the time span is higher than a value defined in the rule.
 
-9. In the *Sliding window* section, you can also determine an additional trigger mechanism in a sliding window.
+9. In the *Sliding window* section, you can also determine an additional trigger mechanism in a sliding window.
 
     1. To trigger the Correlation rule if a situation occurs a particular number of times in a given time span, select *Require situation to occur ... times in ... before acting*, and specify the number of times and the time span. When you select this option, and there is match with the rule conditions, the occurrence will be registered. As soon as there are enough occurrences in the interval, the rule is triggered.
 
         > [!NOTE]
-        > If, for instance, you want to create a rule that is triggered if a certain number of alarms occur within a sliding window, you must also select the option *Trigger on single events. Don’t maintain active tree status* in the *Alarm filter* section. Only the base alarms will be counted, so if you do not select this option, and there are changes in an alarm tree, these will not be counted as separate events.
+        > If, for instance, you want to create a rule that is triggered if a certain number of alarms occur within a sliding window, you must also select the option *Trigger on single events. Don’t maintain active tree status* in the *Alarm filter* section. Only the base alarms will be counted, so if you do not select this option, and there are changes in an alarm tree, these will not be counted as separate events.
 
     2. To trigger the Correlation rule only if this situation persists during a given time span, also select the option *Require sliding window violation to persist for ... before acting*, and specify the time span.
 

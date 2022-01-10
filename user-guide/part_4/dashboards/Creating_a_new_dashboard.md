@@ -8,13 +8,13 @@ To create a new dashboard in the *Dashboards* app:
 
 3. The following configuration options are also available:
 
-    - Click the *...* button next to *Theme* to change the theme for the dashboard. This theme can be overruled by a personal theme.
+    - Click the *...* button next to *Theme* to change the theme for the dashboard. This theme can be overruled by a personal theme.
 
     - Next to *Description*, you can add a description with additional information about the dashboard.
 
     - You can select a folder for the dashboard in the drop-down list on the right. To create a new folder, select *\<Create New>*.
 
-    - Click the *...* button next to *Layout* to change the layout of the dashboard. Dashboard components can be displayed in one to five columns, as an embedded component, in a raster, or in a dynamic list. For more information on the dynamic list layout, see [Creating a dashboard with a dynamic list layout](Creating_a_dashboard_with_a_dynamic_list_layout.md).
+    - Click the *...* button next to *Layout* to change the layout of the dashboard. Dashboard components can be displayed in one to five columns, as an embedded component, in a raster, or in a dynamic list. For more information on the dynamic list layout, see [Creating a dashboard with a dynamic list layout](Creating_a_dashboard_with_a_dynamic_list_layout.md).
 
         > [!NOTE]
         > Be careful when changing the layout of an existing dashboard. Components could be deleted as a result of your changes.

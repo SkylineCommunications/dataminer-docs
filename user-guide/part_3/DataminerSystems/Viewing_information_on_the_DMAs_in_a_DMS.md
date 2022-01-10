@@ -1,12 +1,12 @@
 # Viewing information on the DMAs in a DMS
 
-To get information on the individual DMAs in a DMS, in DataMiner Cube, go to *Apps* > *System Center* > *Agents*.
+To get information on the individual DMAs in a DMS, in DataMiner Cube, go to *Apps* > *System Center* > *Agents*.
 
 This page contains 3 tabs with information and settings:
 
-- To see the total number of DMAs in the system, check the top of the *Agents* column in the *manage* tab.
+- To see the total number of DMAs in the system, check the top of the *Agents* column in the *manage* tab.
 
-- To see the state of a specific DMA in the system, look for the DMA in the *Agents* column in the *manage* tab. The state of the DMA is displayed in parentheses next to the DMA name. Select a DMA to view detailed information on Agent alarms in the pane on the right.
+- To see the state of a specific DMA in the system, look for the DMA in the *Agents* column in the *manage* tab. The state of the DMA is displayed in parentheses next to the DMA name. Select a DMA to view detailed information on Agent alarms in the pane on the right.
 
     A DMA can have the following states:
 
@@ -39,5 +39,5 @@ This page contains 3 tabs with information and settings:
 - To view contacts responsible for the system, for instance in case you encounter an issue and want to contact an administrator, go to the *system* tab.
 
 > [!NOTE]
-> To view this page, you need the permission *Modules* > *System configuration* > *Agents* > *UI available*.
+> To view this page, you need the permission *Modules* > *System configuration* > *Agents* > *UI available*.
 >

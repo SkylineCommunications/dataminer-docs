@@ -2,7 +2,7 @@
 
 To configure how many violations are allowed in an SLA or what duration these may have, it is necessary to configure SLA Compliance.
 
-To configure SLA compliance, go to the *Compliance Configuration* page of the SLA element in DataMiner Cube. There, you can configure the following settings:
+To configure SLA compliance, go to the *Compliance Configuration* page of the SLA element in DataMiner Cube. There, you can configure the following settings:
 
 - [Setting the total violation limit](#setting-the-total-violation-limit)
 
@@ -32,7 +32,7 @@ To set an absolute limit:
 
 1. Set *Maximum Total Violations Type* to Absolute, using the drop-down list.
 
-2. Enter a unit and value under *Maximum Total Violations Unit* and *Maximum Total Violations Value* respectively.
+2. Enter a unit and value under *Maximum Total Violations Unit* and *Maximum Total Violations Value* respectively.
 
 3. Confirm your settings.
 
@@ -40,7 +40,7 @@ To set an absolute limit:
 
 ### Setting the violation count limit
 
-Under *Violation count*, you can specify how many violations may occur before the SLA will be considered breached. For example, if *Violation count* is set to 2, the SLA will only be considered breached when 3 violations have occurred.
+Under *Violation count*, you can specify how many violations may occur before the SLA will be considered breached. For example, if *Violation count* is set to 2, the SLA will only be considered breached when 3 violations have occurred.
 
 To set a maximum number of violations, enter the desired number in the box under *Total Violations Before Breach*.
 
@@ -53,7 +53,7 @@ Under *Single violation*, you can specify how long one single violation may last
 
 To set a relative limit:
 
-1. Set *Maximum Single Violation Type* to *Relative*, using the drop-down list.
+1. Set *Maximum Single Violation Type* to *Relative*, using the drop-down list.
 
 2. Enter the desired percentage under *Maximum Single Violation Percentage*.
 
@@ -63,9 +63,9 @@ To set a relative limit:
 
 To set an absolute limit:
 
-1. Set *Maximum Single Violation Type* to *Absolute*, using the drop-down list.
+1. Set *Maximum Single Violation Type* to *Absolute*, using the drop-down list.
 
-2. Enter a unit and value under *Maximum Single Violation Unit* and *Maximum Single Violation Value* respectively.
+2. Enter a unit and value under *Maximum Single Violation Unit* and *Maximum Single Violation Value* respectively.
 
 3. Confirm your settings.
 

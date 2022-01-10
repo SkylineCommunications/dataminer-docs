@@ -10,7 +10,7 @@
 
 #### ByID
 
-Retrieves a new *ElementFilter* object that has *DataMinerID* and *ElementID* set to the specified DataMiner Agent ID and element ID, respectively.
+Retrieves a new *ElementFilter* object that has *DataMinerID* and *ElementID* set to the specified DataMiner Agent ID and element ID, respectively.
 
 ```txt
 ElementFilter ByID(int dataMinerID, int elementID)
@@ -24,7 +24,7 @@ var filter = ElementFilter.ByID(200, 4000);
 
 #### ByName
 
-Retrieves a new *ElementFilter* object that has *NameFilter* set to the specified element name filter.
+Retrieves a new *ElementFilter* object that has *NameFilter* set to the specified element name filter.
 
 ```txt
 ElementFilter ByName(string name)
@@ -38,10 +38,10 @@ var filter = ElementFilter.ByName("Test*");
 
 #### ByProtocol
 
-Retrieves a new *ElementFilter* object that has *ProtocolName* set to the specified protocol name filter, or *ProtocolName* and *ProtocolVersion* set to the specified protocol name and version filter.
+Retrieves a new *ElementFilter* object that has *ProtocolName* set to the specified protocol name filter, or *ProtocolName* and *ProtocolVersion* set to the specified protocol name and version filter.
 
 ```txt
-ElementFilter ByProtocol(string name)                                                 
+ElementFilter ByProtocol(string name)
 ElementFilter ByProtocol(string name, string version)
 ```
 
@@ -63,14 +63,14 @@ Retrieves a new *ElementFilter* object that, depending on the parameters specifi
 
 - *View* set to the specified view name,
 
-- *ViewID*, *ProtocolName* and *ProtocolVersion* set to the specified view ID, protocol name and protocol version, or
+- *ViewID*, *ProtocolName* and *ProtocolVersion* set to the specified view ID, protocol name and protocol version, or
 
-- *View*, *ProtocolName* and *ProtocolVersion* set to the specified view name, protocol name and protocol version.
+- *View*, *ProtocolName* and *ProtocolVersion* set to the specified view name, protocol name and protocol version.
 
 ```txt
-ElementFilter ByView(int id)                                                                                                                    
-ElementFilter ByView(string name)                                                                                                               
-ElementFilter ByView(int id, string protocolName, string protocolVersion)     
+ElementFilter ByView(int id)
+ElementFilter ByView(string name)
+ElementFilter ByView(int id, string protocolName, string protocolVersion)
 ElementFilter ByView(string name, string protocolName, string protocolVersion)
 ```
 

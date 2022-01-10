@@ -2,11 +2,11 @@
 
 To view detailed information on a user:
 
-1. In the *Users / Groups* section of the System Center module, go to the *users* tab, and select the user whose information you want to view.
+1. In the *Users / Groups* section of the System Center module, go to the *users* tab, and select the user whose information you want to view.
 
 2. In the details pane on the right:
 
-    - Check the *Details* tab to view the user’s contact details, security level, DCP username and last login.
+    - Check the *Details* tab to view the user’s contact details, security level, DCP username and last login.
 
     - Check the *Group membership* tab to view what group(s) the user is a member of.
 
@@ -19,7 +19,7 @@ To view detailed information on a user:
 
     - Check the *Activity* tab to view a log of the user’s recent activity. This tab consists of two pages:
 
-        - The *Recent sessions* page shows when the user has recently logged on, and what client application was used.
+        - The *Recent sessions* page shows when the user has recently logged on, and what client application was used.
 
         - The *Actions* page shows a detailed overview of all recent activity of the user on the DMA.
 

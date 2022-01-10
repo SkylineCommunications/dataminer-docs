@@ -6,10 +6,10 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
     > [!NOTE]
     > -  This option is also available from a card’s header menu.
-    > -  If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
+    > -  If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
     > -  If you export from a list of items on a view card, only the item you right-clicked will be included in the export to a .dmimport file.
 
-2. From DataMiner 9.6.3 onwards, in the *Export* window, select *Export to DataMiner package*.
+2. From DataMiner 9.6.3 onwards, in the *Export* window, select *Export to DataMiner package*.
 
 3. In the *Export* window, clear the selection from any items you do not want to include in the export.
 
@@ -30,9 +30,9 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
 5. Click *Export*.
 
-6. In the *Save As* window, browse to the location where you want to save the export and click *Save*.
+6. In the *Save As* window, browse to the location where you want to save the export and click *Save*.
 
-7. In the *Export* window, check the progress messages until the export is ready, and click *Finish*.
+7. In the *Export* window, check the progress messages until the export is ready, and click *Finish*.
 
 > [!NOTE]
 > If any invalid items are encountered during the export, these will be skipped and a log entry will be created in the SLNet log file.

@@ -2,7 +2,7 @@
 
 If you want to manually execute an Automation script, do the following:
 
-1. In DataMiner Cube, go to *Apps* > *Automation.*
+1. In DataMiner Cube, go to *Apps* > *Automation.*
 
 2. In the list on the left side of the *Automation* card, select the script to be executed.
 

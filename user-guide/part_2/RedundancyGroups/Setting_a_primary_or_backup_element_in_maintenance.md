@@ -4,7 +4,7 @@ If you want to prevent an element from being switched automatically, you can set
 
 - Go to the *Advanced* section of a redundancy group card.
 
-- Click a *Switch to maintenance mode* button underneath a primary or backup element to switch that element to maintenance mode.
+- Click a *Switch to maintenance mode* button underneath a primary or backup element to switch that element to maintenance mode.
 
 > [!NOTE]
 > You can only perform the above-mentioned action if software redundancy has been configured for the redundancy group in question.

@@ -4,7 +4,7 @@ A shape can be set to take the latch color of the view, element, service, redund
 
 ### Configuring the shape data field
 
-Add a shape data field of type **Latch** to the shape, and set its value to “*TRUE*”.
+Add a shape data field of type **Latch** to the shape, and set its value to “*TRUE*”.
 
 ### Resetting a latch on a Visio page
 

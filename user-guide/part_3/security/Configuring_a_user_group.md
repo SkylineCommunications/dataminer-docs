@@ -2,20 +2,20 @@
 
 To configure a user group:
 
-1. In the *Users / Groups* section in System Center, go to the *Groups* tab and select the group in question.
+1. In the *Users / Groups* section in System Center, go to the *Groups* tab and select the group in question.
 
 2. If you are using a version of DataMiner prior to 9.5.4, click the *Edit* button in the lower right corner.
 
-3. To change the group name, fill in the new name in the *Name* field of the *Details* tab.
+3. To change the group name, fill in the new name in the *Name* field of the *Details* tab.
 
-4. To change the group’s security level, enter a new level in the *Group level* field on the *Details* tab. Access levels range from 1 (highest level) to 100 (lowest level).
+4. To change the group’s security level, enter a new level in the *Group level* field on the *Details* tab. Access levels range from 1 (highest level) to 100 (lowest level).
 
-5. To change what users are a member of the group, go to the *Users* tab and move users to and from the *Available users* and *Included users* columns using the *ADD \>\>* and *\<\< REMOVE* buttons.
+5. To change what users are a member of the group, go to the *Users* tab and move users to and from the *Available users* and *Included users* columns using the *ADD \>\>* and *\<\< REMOVE* buttons.
 
     > [!NOTE]
     > Changes of group membership are also possible on user level. See [Changing group membership of a user](Changing_group_membership_of_a_user.md).
 
-6. To determine the views, elements and services a user has access to, go to the *Permissions* tab, select the *Views* subtab and select the appropriate checkboxes:
+6. To determine the views, elements and services a user has access to, go to the *Permissions* tab, select the *Views* subtab and select the appropriate checkboxes:
 
     - To grant the group members access to a view, element or service, select the checkbox to the left of the relevant item.
 
@@ -26,7 +26,7 @@ To configure a user group:
     > [!NOTE]
     > For EPM elements, it is also possible to configure access for objects on the lower topology levels.
 
-7. To change the user permissions for a group, go to the *Permissions* tab, select the *Rights* subtab and select the appropriate checkboxes.
+7. To change the user permissions for a group, go to the *Permissions* tab, select the *Rights* subtab and select the appropriate checkboxes.
 
     Alternatively, instead of selecting the different separate permissions, you can select a preset in the drop-down list at the top of the card. The following presets are available:
 
@@ -45,7 +45,7 @@ To configure a user group:
     > -  [DataMiner user permissions](DataMiner_user_permissions.md)
     > -  [Which user permissions are included in which security preset?](Frequently_asked_questions_about_user_group_settings.md#which-user-permissions-are-included-in-which-security-preset)
 
-8. To configure notifications for the group, go to the *Alerts* tab and follow the same procedure as for alerts for a single user. See [Configuring user notifications](Configuring_user_notifications.md).
+8. To configure notifications for the group, go to the *Alerts* tab and follow the same procedure as for alerts for a single user. See [Configuring user notifications](Configuring_user_notifications.md).
 
     > [!NOTE]
     > In contrast to alerts for a single user, alerts for a group cannot be sent with Alerter.

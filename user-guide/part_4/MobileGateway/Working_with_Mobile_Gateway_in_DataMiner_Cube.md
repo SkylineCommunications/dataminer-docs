@@ -2,7 +2,7 @@
 
 To open the Mobile Gateway app:
 
-- In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.
+- In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.
 
 To check the current status of the cell phone modem:
 
@@ -31,14 +31,14 @@ To send an ad-hoc text message:
 
 To execute an ad-hoc command (e.g. for test purposes):
 
-- In the *commands* tab, select a command in the list on the left, and click *Execute*.
+- In the *commands* tab, select a command in the list on the left, and click *Execute*.
 
     > [!NOTE]
     > This option is only available if you are logged in with a user profile that has a phone number configured.
 
 To check the status of all DataMiner Agents that can use Mobile Gateway:
 
-- In the *status* tab, check the *DataMiner Agents* table:
+- In the *status* tab, check the *DataMiner Agents* table:
 
     | Column   | Description                                                          |
     |------------|----------------------------------------------------------------------|
@@ -49,7 +49,7 @@ To check the status of all DataMiner Agents that can use Mobile Gateway:
 
 To check the list of text messages waiting to be sent:
 
-- In the *status* tab, check the *SMS stack* table:
+- In the *status* tab, check the *SMS stack* table:
 
     | Column   | Description                  |
     |------------|------------------------------|
@@ -59,4 +59,4 @@ To check the list of text messages waiting to be sent:
 
 To remove a text message that has not yet been sent:
 
-- In the *status* tab, select the message in the *SMS stack* table and click the *Remove SMS* button in the lower right corner.
+- In the *status* tab, select the message in the *SMS stack* table and click the *Remove SMS* button in the lower right corner.

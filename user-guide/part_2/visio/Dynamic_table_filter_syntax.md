@@ -1,6 +1,6 @@
 ## Dynamic table filter syntax
 
-For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFilter** components, it is possible to configure a dynamic table filter. This filter can consist of the following components, separated by semicolons.
+For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFilter** components, it is possible to configure a dynamic table filter. This filter can consist of the following components, separated by semicolons.
 
 - **VALUE=**
 
@@ -16,15 +16,15 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowF
 
     A filtering string can contain multiple value filters. By default, multiple value filters on the same column will be combined as OR, whereas multiple value filters on different columns will be combined as AND. You can also the following operators:
 
-    - For all parameter types: *==* and *!=*
+    - For all parameter types: *==* and *!=*
 
-    - For numeric and string values: *\>*, *\>=*, *\<*, *\<=,* *in_range*, *out_range* 
+    - For numeric and string values: *\>*, *\>=*, *\<*, *\<=,* *in_range*, *out_range*
 
-    In addition, string values can use the wildcards *\** and *?* if the *==* or *!=* operator is used.     The value can be:
+    In addition, string values can use the wildcards *\** and *?* if the *==* or *!=* operator is used.     The value can be:
 
     - A single value
 
-    - In case the *in_range* or *out_range* operator is used, two values separated by a forward slash (/)
+    - In case the *in_range* or *out_range* operator is used, two values separated by a forward slash (/)
 
     - A value enclosed within single quotation marks (')
 
@@ -35,13 +35,13 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowF
     Examples:
 
     ```txt
-    value=1005 == xyz      
-    value=PK == xyz        
-    value=1006 == ??snmp* 
-    value=1007 > 100      
+    value=1005 == xyz
+    value=PK == xyz
+    value=1006 == ??snmp*
+    value=1007 > 100
     value=114 in_range 5/10
-    value=PK == abc        
-    value=DK == def        
+    value=PK == abc
+    value=DK == def
     ```
 
     > [!NOTE]
@@ -76,7 +76,7 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowF
 
 - **RESOLVE**=
 
-    The resolve filter will substitute values of foreign key columns with the display key of the linked table.     This filter should be followed by a comma-separated string containing the parameter IDs to resolve. If all parameter IDs should be resolved, “*all*” can be specified instead.     For example, if *resolve=1005,2000* is specified, the value in column 1005 (which should be a primary key of table 2000), will be replaced by the display key of that row in table 2000.
+    The resolve filter will substitute values of foreign key columns with the display key of the linked table.     This filter should be followed by a comma-separated string containing the parameter IDs to resolve. If all parameter IDs should be resolved, “*all*” can be specified instead.     For example, if *resolve=1005,2000* is specified, the value in column 1005 (which should be a primary key of table 2000), will be replaced by the display key of that row in table 2000.
 
 - **NONRECURSIVE**
 
@@ -102,8 +102,8 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowF
     This filter is used to filter results based on whether items are trended. It should be followed by one or more parameter IDs combined with the type of trending. Each parameter ID and trend type should be separated by a comma, and the different parameter IDs should be separated by pipe ("\|") characters.     Examples:
 
     ```txt
-    trend=avg,1005         
-    trend=rt,1005          
+    trend=avg,1005
+    trend=rt,1005
     trend=avg,1005|rt,1005
     ```
 
@@ -146,8 +146,8 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowF
 
     > [!NOTE]
     > -  String values should be enclosed in single quotation marks (').
-    > -  Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
-    > -  If you encounter issues with this type of filter after an upgrade to 9.0.1 because of the changed behavior, you can revert to the old behavior by specifying *\<SLElement fallback="true" />* in *MaintenanceSettings.xml*. See [Filtering.SlElement](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#filteringslelement).
+    > -  Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
+    > -  If you encounter issues with this type of filter after an upgrade to 9.0.1 because of the changed behavior, you can revert to the old behavior by specifying *\<SLElement fallback="true" />* in *MaintenanceSettings.xml*. See [Filtering.SlElement](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#filteringslelement).
     > -  From DataMiner 9.6.6 onwards, several of these filters can be combined and it is also possible to combine a FULLFILTER= type filter with a VALUE= type filter. The resulting query will be an AND combination of the filters.
     > -  This type of filter is not supported to filter the list of elements from which a direct view retrieves data.
 
@@ -170,4 +170,4 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowF
 
     This filter can be used on partial tables to force the filter to go through all the pages rather than just the first. The filter should be followed by true or false.
 
- 
+

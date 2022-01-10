@@ -1,8 +1,8 @@
 ## Starting or stopping a DMA in DataMiner Cube
 
-1. Go to *Apps* > *System Center* > *Agents.*
+1. Go to *Apps* > *System Center* > *Agents.*
 
-2. In the *Manage* tab, select the DataMiner Agent you want to (re)start or stop, and click one of the following buttons in the pane on the right:
+2. In the *Manage* tab, select the DataMiner Agent you want to (re)start or stop, and click one of the following buttons in the pane on the right:
 
     | Button  | Description                                                                       |
     |-----------|-----------------------------------------------------------------------------------|

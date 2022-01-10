@@ -14,5 +14,5 @@ To test a Correlation rule in DataMiner Cube:
     The results, i.e. the correlated alarms and the corresponding base alarms, will be displayed in the *test results* window.
 
 > [!NOTE]
-> The *Test rule* button is not available for rules created with the deprecated System Display Correlation engine.
+> The *Test rule* button is not available for rules created with the deprecated System Display Correlation engine.
 >

@@ -2,7 +2,7 @@
 
 To make a Correlation rule trigger a parameter set:
 
-1. In the *Actions* section of the details pane, click *Add Action* and select *Set parameter*.
+1. In the *Actions* section of the details pane, click *Add Action* and select *Set parameter*.
 
 2. Click the first underlined field and select an element from the list.
 

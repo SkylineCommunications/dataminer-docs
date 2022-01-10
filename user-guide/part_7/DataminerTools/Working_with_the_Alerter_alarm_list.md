@@ -2,7 +2,7 @@
 
 The *Alarms* tab lists the last 100 alarms DMS Alerter has received.
 
-For every alarm in the list, the *Status* column shows you whether or not the alarm has already been processed and whether or not a pop-up balloon has already been shown.
+For every alarm in the list, the *Status* column shows you whether or not the alarm has already been processed and whether or not a pop-up balloon has already been shown.
 
 On this tab, you also find the following button:
 

@@ -5,13 +5,13 @@ To get a cleaner look for Visual Overviews containing many dynamically positione
 > [!NOTE]
 > For dynamically positioned shapes based on tables, grouping is possible from DataMiner 9.5.1 onwards. For dynamically positioned shapes based on properties, grouping is possible from DataMiner 9.5.3 onwards.
 
-To enable grouping of dynamically positioned shapes, add a shape with shape data *ShapeGrouping* to the Visual Overview and set its value to “All”.
+To enable grouping of dynamically positioned shapes, add a shape with shape data *ShapeGrouping* to the Visual Overview and set its value to “All”.
 
 | Shape data field | Value |
 |------------------|-------|
 | ShapeGrouping    | All   |
 
-The size and geometry of the group shapes will be the same as that of the shape to which the *ShapeGrouping* shape data was added. The context menu of the grouping shape will contain all options of the underlying shapes.
+The size and geometry of the group shapes will be the same as that of the shape to which the *ShapeGrouping* shape data was added. The context menu of the grouping shape will contain all options of the underlying shapes.
 
 > [!NOTE]
 > -  To display the number of shapes that are grouped into a single group shape, add an asterisk (“\*”) in the *ShapeGrouping* shape.
@@ -28,7 +28,7 @@ The following optional shape data can be added to the *ShapeGrouping* shape to f
 
     - To group overlapping shapes if they represent values identical to those of one or more particular table parameters, add this shape data and specify one or more column IDs in the value: *Column=*\[columnID\]*,*\[columnID\]*,*...
 
-        The specified column IDs represent the table parameters that must have identical values for the shapes to be grouped. 
+        The specified column IDs represent the table parameters that must have identical values for the shapes to be grouped.
 
         For example, if you specify the following, shapes will only be grouped if the values in the columns with PID 101, 102 and 103 are the same:
 
@@ -56,13 +56,13 @@ The following optional shape data can be added to the *ShapeGrouping* shape to f
     |--------------------|------------|
     | OrderBy            | Column=103 |
 
-    If this shape data is not specified, the primary key column determines the order of the grouping. If two of the values of an *Orderby* column are the same, shapes corresponding to these values can be grouped in either order.
+    If this shape data is not specified, the primary key column determines the order of the grouping. If two of the values of an *Orderby* column are the same, shapes corresponding to these values can be grouped in either order.
 
 ### Configuration of the connection drop-down menu
 
 When table connections are used, multiple table connections for shapes that are grouped together will also be grouped together into a single connection. Clicking on a grouped connection will open the details pane of that connection. This details pane will display a drop-down menu where you can select the connection for which details need to be displayed.
 
-You can customize the format of the items in the drop-down menu by adding an *Options* shape data field to the connection shape and specifying the value "*ConnectionSelectionFormat=\[Custom text containing a row value\]*".
+You can customize the format of the items in the drop-down menu by adding an *Options* shape data field to the connection shape and specifying the value "*ConnectionSelectionFormat=\[Custom text containing a row value\]*".
 
 For example:
 

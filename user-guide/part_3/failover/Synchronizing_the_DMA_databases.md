@@ -1,13 +1,13 @@
 # Synchronizing the DMA databases
 
-In the *Failover* dialog box, you can access synchronization information about the two DMAs, and manually synchronize the databases.
+In the *Failover* dialog box, you can access synchronization information about the two DMAs, and manually synchronize the databases.
 
 > [!NOTE]
 > In a system with Cassandra databases, the synchronization is handled by Cassandra instead of by DataMiner. As such, synchronization information and manual synchronization are not available in DataMiner for such a system.
 
 ### Viewing DMA synchronization information
 
-In the *Failover* dialog box, click the *Sync* button to open the *DataMiner Sync Status* window.
+In the *Failover* dialog box, click the *Sync* button to open the *DataMiner Sync Status* window.
 
 In the *Database* tab, the synchronization info is displayed in four columns:
 
@@ -18,7 +18,7 @@ In the *Database* tab, the synchronization info is displayed in four columns:
 - The third and fourth column indicate the number of rows per table for each of the DMAs. Below the columns, the date and time when the DMA information was last refreshed are indicated.
 
 > [!NOTE]
-> To refresh the data in this window, click the *Refresh* button. While the information is refreshing, the text *Refreshing* will be displayed both on the button itself and in the second column next to any table for which the refresh is not yet finished.
+> To refresh the data in this window, click the *Refresh* button. While the information is refreshing, the text *Refreshing* will be displayed both on the button itself and in the second column next to any table for which the refresh is not yet finished.
 
 ### Synchronizing the DMA databases
 
@@ -26,15 +26,15 @@ To synchronize the online and the offline agent:
 
 1. In the *DataMiner Sync Status* window, select the tables you want to synchronize.
 
-2. Click the *Sync* button in the lower left corner. The *Sync Options* window will open.
+2. Click the *Sync* button in the lower left corner. The *Sync Options* window will open.
 
 3. In the *Sync Options* window, the following options are possible:
 
     - Select *Sync from* and enter a date to limit the date range for the synchronization.
 
-    - Select *SQL Limit* and enter a number to limit the amount of database rows that can be synchronized.
+    - Select *SQL Limit* and enter a number to limit the amount of database rows that can be synchronized.
 
-4. Click the *Sync* button at the bottom of the *Sync Options* window to start the synchronization.
+4. Click the *Sync* button at the bottom of the *Sync Options* window to start the synchronization.
 
     This will automatically open the *Sync* tab where you can follow the progress of the synchronization.
 

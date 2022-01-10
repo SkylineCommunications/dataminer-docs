@@ -1,6 +1,6 @@
 ## Viewing the current Failover DMA status
 
-In the *Failover Config* window, the current status of the two DMAs is displayed by means of LEDs, which are refreshed once a minute.
+In the *Failover Config* window, the current status of the two DMAs is displayed by means of LEDs, which are refreshed once a minute.
 
 These LEDs can have one of the following three colors:
 
@@ -16,7 +16,7 @@ This will open the *Status* dialog box, which displays a number of status parame
 
 > [!NOTE]
 > -  For some of these parameters, extra information can be displayed. E.g. for heartbeats or DB sync, you will also see the “last success” time and, in case of failure, the reason for that failure.
-> -  If no status information can be retrieved from a DMA, you will notice an *Agent Status* item with the value “Unreachable”.
+> -  If no status information can be retrieved from a DMA, you will notice an *Agent Status* item with the value “Unreachable”.
 > -  If a Cassandra database is used, and both database nodes are down, the system will fall back to file offloading. See also: [Switching to Cassandra in a Failover setup](../databases/Migrating_the_general_database_to_Cassandra.md#switching-to-cassandra-in-a-failover-setup).
 
 - **Failover Status**: “Online”, “Offline”, “Going Online”, etc.
@@ -41,7 +41,7 @@ This will open the *Status* dialog box, which displays a number of status parame
     | Setting | Description                                                                                                                                                                                                                                                                                                       |
     |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Active    | There has been at least one successful forward operation.                                                                                                                                                                                                                                                         |
-    | Failing   | There is a problem with the forwarding of alarm events to the backup DMA. More information will be displayed in the *Failure Reason* column. The time of the last successful DB Sync check is also listed.<br> This status is only available for the DMA that is currently online. |
+    | Failing   | There is a problem with the forwarding of alarm events to the backup DMA. More information will be displayed in the *Failure Reason* column. The time of the last successful DB Sync check is also listed.<br> This status is only available for the DMA that is currently online. |
 
 - **DB Sync Stack**: “OK” or “Too Large”
 

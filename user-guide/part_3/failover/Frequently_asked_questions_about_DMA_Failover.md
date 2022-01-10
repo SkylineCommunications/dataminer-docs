@@ -26,7 +26,7 @@ This section consists of the following topics:
 
 - In the Alarm Console of the other DMA a notice will appear, indicating that heartbeat paths and sync connection are failing.
 
-- In the *Status* dialog box, you will see that the DMA is *Unreachable*, and that Heartbeat and DB Sync are *Failing*.
+- In the *Status* dialog box, you will see that the DMA is *Unreachable*, and that Heartbeat and DB Sync are *Failing*.
 
 #### If the offline DMA is stopped
 
@@ -34,7 +34,7 @@ This section consists of the following topics:
 
 - In the Alarm Console of the online DMA a notice will appear, indicating that heartbeat paths and sync connection are failing.
 
-- In the *Status* dialog box, you will see that the offline DMA is *Unreachable*, and that Heartbeat and DB Sync are *Failing*.
+- In the *Status* dialog box, you will see that the offline DMA is *Unreachable*, and that Heartbeat and DB Sync are *Failing*.
 
 > [!NOTE]
 > This is also what happens when a DMA shuts down unexpectedly, for instance because of a power failure.
@@ -65,7 +65,7 @@ This section consists of the following topics:
 
 - Runtime errors or notices might show up on the online DMA, indicating a database problem.
 
-- In the *Status* dialog box, the database will get the status *Failing*.
+- In the *Status* dialog box, the database will get the status *Failing*.
 
 - Database data will still be gathered, and will be inserted into the database once it becomes available again.
 
@@ -75,7 +75,7 @@ This section consists of the following topics:
 
 - The *Failover* dialog box will indicate that the offline DMA is in an error state (red LED).
 
-- In the *Status* dialog box, the database of the offline DMA will get the status *Failing*.
+- In the *Status* dialog box, the database of the offline DMA will get the status *Failing*.
 
 - Database data will still be forwarded, but the data will only be inserted into the database of the offline DMA when that database is accessible again.
 
@@ -105,7 +105,7 @@ Different scenarios are possible:
 
 - In the Alarm Console, a notice will appear indicating a failing heartbeat path.
 
-- The *Status* dialog box will indicate that the DMA is unreachable, and that the heartbeat to the DMA is failing.
+- The *Status* dialog box will indicate that the DMA is unreachable, and that the heartbeat to the DMA is failing.
 
 - The DMA will go offline because of the failing heartbeat, and because the other DMA, which has now taken over, will have sent a notification over the sync connection.
 
@@ -116,7 +116,7 @@ Different scenarios are possible:
 > [!TIP]
 > See also:
 > -  [Viewing Failover information](Viewing_Failover_information.md)
-> -  [Heartbeats](Advanced_Failover_options.md#heartbeats) 
+> -  [Heartbeats](Advanced_Failover_options.md#heartbeats)
 
 #### If the network cable used for synchronization is pulled out of the online DMA
 
@@ -130,9 +130,9 @@ Different scenarios are possible:
 
 - In the *Status* dialog box, you will see the same errors:
 
-    - *Sync Connection* will get the status *Not Available.*
+    - *Sync Connection* will get the status *Not Available.*
 
-    - *DB Sync* will get the status *Failing*.
+    - *DB Sync* will get the status *Failing*.
 
     - The NIC in question will get the status *Unavailable*.
 
@@ -156,16 +156,16 @@ Different scenarios are possible:
 
     - The Heartbeat will get the status *Failing*.
 
-    - *Sync Connection* will get the status *Not Available*.
+    - *Sync Connection* will get the status *Not Available*.
 
-    - *DB Sync* will get the status *Failing*.
+    - *DB Sync* will get the status *Failing*.
 
 - Once the cables are reconnected, synchronization will again be OK, and the other DMA will stay online.
 
 > [!TIP]
 > See also:
 > -  [Viewing Failover information](Viewing_Failover_information.md)
-> -  [Heartbeats](Advanced_Failover_options.md#heartbeats) 
+> -  [Heartbeats](Advanced_Failover_options.md#heartbeats)
 
 #### If the network cable connecting to the switch or router is pulled out of the offline DMA
 
@@ -173,14 +173,14 @@ Different scenarios are possible:
 
 - In the Alarm Console, a notice will appear, indicating that the heartbeat path is failing.
 
-- In the *Status* dialog box, the status of the Heartbeat will be *Failing*, and the Agent status for the offline Agent will be *Unreachable*.
+- In the *Status* dialog box, the status of the Heartbeat will be *Failing*, and the Agent status for the offline Agent will be *Unreachable*.
 
 - Both DataMiner sync and database sync will go on as the sync connection is still available.
 
 > [!TIP]
 > See also:
 > -  [Viewing Failover information](Viewing_Failover_information.md)
-> -  [Heartbeats](Advanced_Failover_options.md#heartbeats) 
+> -  [Heartbeats](Advanced_Failover_options.md#heartbeats)
 
 #### If the network cable used for synchronization is pulled out of the offline DMA
 
@@ -196,9 +196,9 @@ Different scenarios are possible:
 
 - In the *Status* dialog box, you will see the same errors:
 
-    - *Sync Connection* will get the status *Not Available*.
+    - *Sync Connection* will get the status *Not Available*.
 
-    - *DB Sync* will get the status *Failing*.
+    - *DB Sync* will get the status *Failing*.
 
     - The NIC in question will get the status *Unavailable*.
 
@@ -220,16 +220,16 @@ Different scenarios are possible:
 
     - The Heartbeat will get the status *Failing*.
 
-    - *Sync Connection* will get the status *Not Available*.
+    - *Sync Connection* will get the status *Not Available*.
 
-    - *DB Sync* will get the status *Failing*.
+    - *DB Sync* will get the status *Failing*.
 
 - Once the cables are reconnected, synchronization will again be OK.
 
 > [!TIP]
 > See also:
 > -  [Viewing Failover information](Viewing_Failover_information.md)
-> -  [Heartbeats](Advanced_Failover_options.md#heartbeats) 
+> -  [Heartbeats](Advanced_Failover_options.md#heartbeats)
 
 ### How do I upgrade a pair of DMAs in a Failover setup?
 
@@ -241,7 +241,7 @@ To upgrade a pair of DataMiner Agents in a Failover setup, you can use the DataM
 
 ### How do I prevent DMAs in a Failover setup from registering the same virtual IP address?
 
-It is standard behavior for a DMA to register its IP addresses on the DNS/Domain. However, in a Failover setup using virtual IP addresses, this standard behavior can cause problems.
+It is standard behavior for a DMA to register its IP addresses on the DNS/Domain. However, in a Failover setup using virtual IP addresses, this standard behavior can cause problems.
 
 After a Failover switch, the virtual IP address, which was initially assigned to and registered by the primary DMA, will now be assigned to the backup DMA. The latter will then also register that same address. As a result, the DNS table will end up having duplicate entries.
 
@@ -291,7 +291,7 @@ From DataMiner 10.2.0/10.1.8 onwards, configure the Failover pair to use a share
 
 In older DataMiner Systems, one way of preventing both Agents from registering the virtual IP address, is the following:
 
-1. In the *Advanced TCP/IP Settings* of the network interfaces that will use virtual IP addresses, go to the *DNS* tab and clear the option *Register this connection’s addresses in DNS*.
+1. In the *Advanced TCP/IP Settings* of the network interfaces that will use virtual IP addresses, go to the *DNS* tab and clear the option *Register this connection’s addresses in DNS*.
 
     ![](../../images/advanced_tcpip_settings.png)
 
@@ -323,20 +323,20 @@ To fix the problem, you need to recreate the routes and explicitly specify an in
     This will produce a list like the following one:
 
     ```txt
-    Interface List                                              
-    23...b8 ac 6f 15 15 1a ......BASP Virtual Adapter #4        
-    20...b8 ac 6f 15 15 1a ......BASP Virtual Adapter #2        
-    21...b8 ac 6f 15 15 1a ......BASP Virtual Adapter #3        
-    24...b8 ac 6f 15 15 1e ......BASP Virtual Adapter #6        
-     1...........................Software Loopback Interface 1  
-    22...00 00 00 00 00 00 00 e0 Microsoft ISATAP Adapter #2    
-    17...00 00 00 00 00 00 00 e0 Microsoft ISATAP Adapter #4    
+    Interface List
+    23...b8 ac 6f 15 15 1a ......BASP Virtual Adapter #4
+    20...b8 ac 6f 15 15 1a ......BASP Virtual Adapter #2
+    21...b8 ac 6f 15 15 1a ......BASP Virtual Adapter #3
+    24...b8 ac 6f 15 15 1e ......BASP Virtual Adapter #6
+    1...........................Software Loopback Interface 1
+    22...00 00 00 00 00 00 00 e0 Microsoft ISATAP Adapter #2
+    17...00 00 00 00 00 00 00 e0 Microsoft ISATAP Adapter #4
     ```
 
     Also, there will be a list of persistent routes for IPv4:
 
     ```txt
-    Persistent routes:  Network Address         Netmask   Gateway Address   Metric          1.2.3.4   255.255.255.0           5.6.7.8        1
+    Persistent routes:  Network Address Netmask Gateway Address Metric   1.2.3.4 255.255.255.0 5.6.7.8 1
     ```
 
 2. In another command prompt window, execute the following commands for each of the listed persistent routes.
@@ -358,4 +358,4 @@ When a Failover configuration is set up, one of the Cassandra instances is autom
 
 Therefore, if starting or restarting one of the Agents in a Failover pair fails, first make sure the other Agent is online and available.
 
- 
+

@@ -15,19 +15,19 @@ To access a spectrum element in Element Display, go to *http://**\[MyDMA\]**/Dat
 
 To show frequency masks in Element Display:
 
-- Go to the *Tools* menu, and select *Frequency Mask \> View Frequency Mask*.
+- Go to the *Tools* menu, and select *Frequency Mask \> View Frequency Mask*.
 
 To hide frequency masks in Element Display:
 
-- Go to *Tools \> Frequency Mask* and clear the selection from *View Frequency Mask*.
+- Go to *Tools \> Frequency Mask* and clear the selection from *View Frequency Mask*.
 
 ### Defining frequency masks
 
 To define a frequency mask in Element Display:
 
-1. Go to *Tools \> Frequency Mask \> Create/Edit*.
+1. Go to *Tools \> Frequency Mask \> Create/Edit*.
 
-    The *Settings* window will open on the tab *Freq Mask*.
+    The *Settings* window will open on the tab *Freq Mask*.
 
 2. Next to *Ref. Amplitude*, enter a reference amplitude for the mask.
 
@@ -35,7 +35,7 @@ To define a frequency mask in Element Display:
 
 4. Next to *Ref. Freq. Center*, enter the reference center frequency.
 
-    Alternatively, you can also select *Use current* to apply the same center frequency as in the current spectrum display.
+    Alternatively, you can also select *Use current* to apply the same center frequency as in the current spectrum display.
 
 5. Double-click the fields in the upper bound and lower bound area to add new points of the frequency mask.
 
@@ -48,22 +48,22 @@ To define a frequency mask in Element Display:
 6. Click *Exit* when ready.
 
 > [!NOTE]
-> When the trace breaches the upper or lower bound, FAIL will be displayed instead of PASS, and the shading of the associated area will be color-coded. To customize the colors in question, go to *Options \> Preferences* and select different colors for *Failed Freq Mask Shading*, *Freq Mask Upper Bound* and/or *Freq Mask Lower Bound*.
+> When the trace breaches the upper or lower bound, FAIL will be displayed instead of PASS, and the shading of the associated area will be color-coded. To customize the colors in question, go to *Options \> Preferences* and select different colors for *Failed Freq Mask Shading*, *Freq Mask Upper Bound* and/or *Freq Mask Lower Bound*.
 
 ### Importing and exporting frequency masks
 
 To import a frequency mask in Element Display:
 
-1. Go to *Tools \> Frequency Mask \> Create/Edit*.
+1. Go to *Tools \> Frequency Mask \> Create/Edit*.
 
-2. Click the *Import* button at the bottom of the *Settings* window.
+2. Click the *Import* button at the bottom of the *Settings* window.
 
 3. Browse to the .csv file you wish to import, and click *Open*.
 
 To export a frequency mask in Element Display:
 
-1. Go to *Tools \> Frequency Mask \> Create/Edit*.
+1. Go to *Tools \> Frequency Mask \> Create/Edit*.
 
-2. Click the *Export* button at the bottom of the *Settings* window.
+2. Click the *Export* button at the bottom of the *Settings* window.
 
 3. Browse to the location where you wish to save the .csv file, and click *Save*.

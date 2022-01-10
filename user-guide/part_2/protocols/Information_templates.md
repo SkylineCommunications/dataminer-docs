@@ -25,4 +25,4 @@ The following sections provide more information on working with information temp
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-information-templates/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-information-templates/>

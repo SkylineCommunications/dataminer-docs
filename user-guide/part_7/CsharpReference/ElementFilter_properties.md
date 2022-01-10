@@ -78,7 +78,7 @@ bool ExcludeSubViews
 ```
 
 > [!NOTE]
-> If you specify *ExcludeSubViews*, also specify *View* or *ViewId*.
+> If you specify *ExcludeSubViews*, also specify *View* or *ViewId*.
 
 #### IncludeHidden
 

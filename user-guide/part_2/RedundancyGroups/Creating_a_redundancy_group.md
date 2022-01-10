@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-redundancy-groups/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-redundancy-groups/>
 
 To create a redundancy group:
 
@@ -13,7 +13,7 @@ To create a redundancy group:
     > [!NOTE]
     > After the redundancy group has been created, you can quickly change its name by right-clicking it in the Surveyor and selecting *Rename*.
 
-3. On the *Configuration* tab page, in the *Advanced* options at the top of the card, optionally change the masking options:
+3. On the *Configuration* tab page, in the *Advanced* options at the top of the card, optionally change the masking options:
 
     - Select *Configure masking for all elements at once*, and indicate if elements that are not operational should be masked, or
 
@@ -23,10 +23,10 @@ To create a redundancy group:
 
     1. Click the *Manage primary* button.
 
-    2. In the *Manage primary elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with primary elements in the redundancy group.
+    2. In the *Manage primary elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with primary elements in the redundancy group.
 
         > [!NOTE]
-        > -  The elements in the redundancy group must use the same protocol and protocol version, and must be hosted by the same DataMiner Agent. 
+        > -  The elements in the redundancy group must use the same protocol and protocol version, and must be hosted by the same DataMiner Agent.
         > -  Prior to DataMiner 9.6.0/9.5.10, elements that were imported using DELT are not supported in redundancy groups.
 
     3. Click *OK*. The primary elements you have added will be displayed in the *Primary elements* list.
@@ -35,17 +35,17 @@ To create a redundancy group:
 
     - If you want the element to use different alarm or trend templates after switching, select *Custom templates after switching*, and indicate which templates should be used when the element is and is not operational.
 
-    - To give a custom name to the virtual primary element corresponding to the primary element, in the *Advanced element settings* section, enter a different name next to *Derived name*. By default, the same name as for the primary element is used, but enclosed in curly brackets.
+    - To give a custom name to the virtual primary element corresponding to the primary element, in the *Advanced element settings* section, enter a different name next to *Derived name*. By default, the same name as for the primary element is used, but enclosed in curly brackets.
 
-    - To assign a virtual IP address to the virtual primary element, in the *Advanced element settings* section, select *Derived IP* and enter the IP address.
+    - To assign a virtual IP address to the virtual primary element, in the *Advanced element settings* section, select *Derived IP* and enter the IP address.
 
-    - If *Configure masking for each element individually* is selected, in the *Advanced element settings* section, select *Mask this element if it is not operational* if you want the element to be masked when it is not operational.
+    - If *Configure masking for each element individually* is selected, in the *Advanced element settings* section, select *Mask this element if it is not operational* if you want the element to be masked when it is not operational.
 
 6. Add the backup elements:
 
     1. Click the *Manage backup* button.
 
-    2. In the *Manage backup elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with backup elements in the redundancy group.
+    2. In the *Manage backup elements* window, use the *Add \>\>* and *\<\< Remove* buttons to move elements from the column with existing elements in the DMA to the column with backup elements in the redundancy group.
 
     3. Click *OK*. The backup elements you have added will be displayed in the *Backup elements* list.
 
@@ -60,16 +60,16 @@ To create a redundancy group:
 
 8. If you wish to use software redundancy:
 
-    1. In the *Redundancy mode* section, click the underlined section and select *intervene in the switching (software redundancy)*.
+    1. In the *Redundancy mode* section, click the underlined section and select *intervene in the switching (software redundancy)*.
 
-    2. On the same line, click the underlined section to the right of *redundancy mode* and specify the redundancy mode.
+    2. On the same line, click the underlined section to the right of *redundancy mode* and specify the redundancy mode.
 
         > [!NOTE]
         > For more information on the different redundancy modes and on how to switch between redundancy modes after the redundancy group has been created, see [Changing the redundancy mode](Changing_the_redundancy_mode.md).
 
-    3. If you want the conditions of the switching logic to also be checked when a user does a manual switch, in the *Redundancy mode* section, select *On manual switchover to a backup, also check the conditions from the switching logic*.
+    3. If you want the conditions of the switching logic to also be checked when a user does a manual switch, in the *Redundancy mode* section, select *On manual switchover to a backup, also check the conditions from the switching logic*.
 
-    4. In the *Switching logic* section, click add and select *Add switching logic*. A first empty switching condition will be displayed.
+    4. In the *Switching logic* section, click add and select *Add switching logic*. A first empty switching condition will be displayed.
 
     5. Configure the switching condition by clicking the underlined fields and selecting the appropriate values, and add more conditions with the *Add* field below the condition if necessary:
 
@@ -85,17 +85,17 @@ To create a redundancy group:
 
         - Next to *by executing*, you can configure what should happen during a switch: a parameter set or an Automation script execution.
 
-9. In the *Switching Detection* section, specify when a switchover or switchback operation will be considered finished:
+9. In the *Switching Detection* section, specify when a switchover or switchback operation will be considered finished:
 
-    1. Click *Add* and select *Add switching detection* to create a pair of conditions for switchover and switchback.
+    1. Click *Add* and select *Add switching detection* to create a pair of conditions for switchover and switchback.
 
     2. Configure the conditions by clicking the underlined fields and selecting the appropriate values. The conditions are configured in a similar way as the switching conditions. They can be triggered based on whether an alarm exists, whether an element is in a particular alarm state, and whether a parameter has a particular value.
 
-    3. If more conditions are necessary, click *Add* and configure the new conditions as described above.
+    3. If more conditions are necessary, click *Add* and configure the new conditions as described above.
 
-    4. If the redundancy group state should be set to *Undefined* in case switching detection cannot be resolved, select the checkbox at the top of the *Switching Detection* section (available from DataMiner 9.6.11 onwards).
+    4. If the redundancy group state should be set to *Undefined* in case switching detection cannot be resolved, select the checkbox at the top of the *Switching Detection* section (available from DataMiner 9.6.11 onwards).
 
-10. On the *Views* tab page, specify the view(s) where the redundancy group and its virtual primary element(s) will be placed:
+10. On the *Views* tab page, specify the view(s) where the redundancy group and its virtual primary element(s) will be placed:
 
     - By default, simplified view configuration is used. There you can select in what view the redundancy group should be created, and select either to add the virtual primary elements in the same view as the original element, or to add them in the same view as the redundancy group.
 
@@ -114,26 +114,26 @@ To create a redundancy group:
 
 ### Configuring redundancy switching based on connectivity
 
-To switch a redundancy group based on connectivity, when configuring the trigger, select to switch based on whether an element is in the active connectivity chain, and then select the *Connectivity.xml* file that should be used.
+To switch a redundancy group based on connectivity, when configuring the trigger, select to switch based on whether an element is in the active connectivity chain, and then select the *Connectivity.xml* file that should be used.
 
-In the *\<Link>* tag of that *Connectivity.xml* file, the *itemB* attribute refers to the protocol with the initial logic DCF will use to find the connections. In the corresponding element using the protocol specified in this attribute, you must set the correct connection properties to trigger redundancy switching based on connectivity:
+In the *\<Link>* tag of that *Connectivity.xml* file, the *itemB* attribute refers to the protocol with the initial logic DCF will use to find the connections. In the corresponding element using the protocol specified in this attribute, you must set the correct connection properties to trigger redundancy switching based on connectivity:
 
 1. Open the element card of this element, and go to the *General Parameters* page.
 
 2. Next to *DataMiner Connectivity Framework*, click the *Configure* button.
 
-3. In the *Connection Properties* table, each entry refers to a connection with an element. To switch the redundancy group:
+3. In the *Connection Properties* table, each entry refers to a connection with an element. To switch the redundancy group:
 
-    - Set the *Connection Property value* for the element to which you want to switch to a value corresponding to what is configured in the *value* attribute of the *\<Map>* tag in the *Connectivity.xml* file.
+    - Set the *Connection Property value* for the element to which you want to switch to a value corresponding to what is configured in the *value* attribute of the *\<Map>* tag in the *Connectivity.xml* file.
 
         > [!NOTE]
-        > In the *\<Map>* tag of the *Connectivity.xml* file, the *propertyB* attribute refers to the Connection Property name.
+        > In the *\<Map>* tag of the *Connectivity.xml* file, the *propertyB* attribute refers to the Connection Property name.
 
     - If you are switching from primary to backup, make sure that the new value you specify for the backup is the same as the value that was previously specified for the primary.
 
 > [!NOTE]
 > -  Prior to DataMiner 9.5.5, the connectivity path is only calculated starting from an internal connection, so that a connectivity chain path with only external connections cannot cause a redundancy group to switch. From DataMiner 9.5.5 onwards, this restriction no longer applies.
-> -  If a *Connectivity.xml* file with the *includeValueInContext* option is used, up to DataMiner 9.5.6, multiple matching values are not supported. From DataMiner 9.5.7 onwards, multiple paths to the shared destination interface are allowed in the connections matching the switching criteria.
+> -  If a *Connectivity.xml* file with the *includeValueInContext* option is used, up to DataMiner 9.5.6, multiple matching values are not supported. From DataMiner 9.5.7 onwards, multiple paths to the shared destination interface are allowed in the connections matching the switching criteria.
 
 > [!TIP]
 > See also:

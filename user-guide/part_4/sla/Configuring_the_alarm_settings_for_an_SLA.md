@@ -1,6 +1,6 @@
 ## Configuring the alarm settings for an SLA
 
-In DataMiner Cube, you can configure the following settings on the *SLA Configuration* page of the SLA element:
+In DataMiner Cube, you can configure the following settings on the *SLA Configuration* page of the SLA element:
 
 - [Setting the violation level](#setting-the-violation-level)
 
@@ -10,7 +10,7 @@ In DataMiner Cube, you can configure the following settings on the *SLA Configur
 
 - [Setting a violation filter](#setting-a-violation-filter)
 
-In addition, more recent versions of the *Skyline SLA Definition Basic* protocol also allow certain advanced settings on the *Advanced Configuration* page. See [Advanced SLA alarm configuration](#advanced-sla-alarm-configuration).
+In addition, more recent versions of the *Skyline SLA Definition Basic* protocol also allow certain advanced settings on the *Advanced Configuration* page. See [Advanced SLA alarm configuration](#advanced-sla-alarm-configuration).
 
 ### Setting the violation level
 
@@ -34,9 +34,9 @@ To set an initial time span during which an alarm is not taken into account, ent
 Not all alarms in a service are equally important. Set a violation filter to give a weight to a certain alarm or to filter out alarms.
 
 > [!NOTE]
-> From version 2.0.0.25 of the *Skyline SLA Definition Basic* protocol onwards, it is possible to hide alarms that have 0% impact because of violation filters. To do so:
-> -  Using version 2.0.0.25, on the *SLA Configuration* page, set *Hide Filtered Alarms* to *Hide*.
-> -  Using version 3.0.0 or higher, on the *Advanced Configuration* page, set *Violation Filtered Alarms* to *Hide*. Note that you need at least security level 3 in order to change any of the settings on the *Advanced Configuration* page.
+> From version 2.0.0.25 of the *Skyline SLA Definition Basic* protocol onwards, it is possible to hide alarms that have 0% impact because of violation filters. To do so:
+> -  Using version 2.0.0.25, on the *SLA Configuration* page, set *Hide Filtered Alarms* to *Hide*.
+> -  Using version 3.0.0 or higher, on the *Advanced Configuration* page, set *Violation Filtered Alarms* to *Hide*. Note that you need at least security level 3 in order to change any of the settings on the *Advanced Configuration* page.
 >
 > If the filtered alarms are set to be shown again later, the alarms that were hidden while this setting was set to *Hide* will not be displayed again.
 
@@ -46,16 +46,16 @@ To add a violation filter, follow the procedure below:
 
 1. Go to the *Violation Configuration* page of the SLA element.
 
-2. Click *Add Entry* at the bottom of the *Violation Settings* table.
+2. Click *Add Entry* at the bottom of the *Violation Settings* table.
 
-3. In the first column, choose the *Violation Filter Type* in the drop-down list and confirm. This is the alarm field on which you wish to filter, e.g. Severity.
+3. In the first column, choose the *Violation Filter Type* in the drop-down list and confirm. This is the alarm field on which you wish to filter, e.g. Severity.
 
     > [!NOTE]
-    > The violation filter types *Key point*, and *Component info* refer to parameter data that can be set in the protocol information template. For more information, see [Creating an information template](../../part_2/protocols/Creating_an_information_template.md).
+    > The violation filter types *Key point*, and *Component info* refer to parameter data that can be set in the protocol information template. For more information, see [Creating an information template](../../part_2/protocols/Creating_an_information_template.md).
 
 4. Enter a *Violation Filter Property Name* in the next column, if the filter type is a custom property.
 
-5. Enter the *Violation Filter Value* in the next column, e.g. if the violation filter type is “Severity”, this could be “Minor”. It is possible to use an asterisk or question mark as wildcards here.
+5. Enter the *Violation Filter Value* in the next column, e.g. if the violation filter type is “Severity”, this could be “Minor”. It is possible to use an asterisk or question mark as wildcards here.
 
 6. Enter the impact you want the violation to have as a percentage under *Violation Filter Impact*.
 
@@ -65,12 +65,12 @@ To add a violation filter, follow the procedure below:
     > -  If set to *Filter*, an alarm that does not match the filter will not be evaluated further, and the weight specified in the last matching rule is taken. If it did not match a previous rule, then the weight for that alarm is set to 0%.
     > -  If set to *Continue*, the following filters are also processed, and if in the end none of the filters matched, the weight for that alarm is set to 100%. If several alarms match several of the violation filters set to Continue, the weightings will be added together. If one alarm matches several of the violation filters, the last matching filter is applied.
 
-8. Enter a value under *Violation Filter Sequence* to indicate the sequence in which you wish different filters to be used. The lowest number will be sequenced first.
+8. Enter a value under *Violation Filter Sequence* to indicate the sequence in which you wish different filters to be used. The lowest number will be sequenced first.
 
 9. Enable or Disable the filter in the column *Violation Filter State*.
 
     > [!NOTE]
-    > The table is interpreted by DataMiner from top to bottom. It is sorted first on *Violation filter state* and then on ascending *Violation filter sequence*.
+    > The table is interpreted by DataMiner from top to bottom. It is sorted first on *Violation filter state* and then on ascending *Violation filter sequence*.
 
 #### Violation filter example
 
@@ -88,11 +88,11 @@ To get this result, set the following filters:
 
 ### Advanced SLA alarm configuration
 
-The *Advanced Configuration* page allows you to configure a number of additional settings related to the alarms processed by the SLA. However, you need at least security level 3 in order to change any of the settings on this page. These are also only available in recent versions of the *Skyline SLA Definition Basic* protocol (at least 3.0.0.0).
+The *Advanced Configuration* page allows you to configure a number of additional settings related to the alarms processed by the SLA. However, you need at least security level 3 in order to change any of the settings on this page. These are also only available in recent versions of the *Skyline SLA Definition Basic* protocol (at least 3.0.0.0).
 
 The following settings are available on the *Advanced Configuration* page:
 
-- **Active Alarms**: To keep active alarms from being displayed on the *Active Service Alarms* page, set this setting to *Hide*. See [Viewing a list of current active service alarms](Viewing_a_list_of_current_active_service_alarms.md).
+- **Active Alarms**: To keep active alarms from being displayed on the *Active Service Alarms* page, set this setting to *Hide*. See [Viewing a list of current active service alarms](Viewing_a_list_of_current_active_service_alarms.md).
 
 - **Outages**: See [Turning SLA tracking on and off](Turning_SLA_tracking_on_and_off.md).
 
@@ -100,10 +100,10 @@ The following settings are available on the *Advanced Configuration* page:
 
 - **Offline Window Outage**: To hide outages that occur in the offline window, set this setting to *Hide*. See [Setting the offline window for an SLA](Setting_the_offline_window_for_an_SLA.md).
 
-- **Predictions**: Enable this setting to enable predicted availability and compliance calculation. See [Checking SLA Key Performance Indicators](Checking_SLA_Key_Performance_Indicators.md) and [Checking the SLA compliance](Checking_the_SLA_compliance.md).
+- **Predictions**: Enable this setting to enable predicted availability and compliance calculation. See [Checking SLA Key Performance Indicators](Checking_SLA_Key_Performance_Indicators.md) and [Checking the SLA compliance](Checking_the_SLA_compliance.md).
 
-- **Show Excluded Service Element Alarms**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. If this setting is set to *Hide*, all references to excluded or 'Not used' elements will be removed from the SLA, and alarms on such elements will no longer affect the SLA.
+- **Show Excluded Service Element Alarms**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. If this setting is set to *Hide*, all references to excluded or 'Not used' elements will be removed from the SLA, and alarms on such elements will no longer affect the SLA.
 
-- **Use Service Capping**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. When you activate this setting, if a maximum severity is configured for alarms affecting the service, this "capping" will be applied to the SLA as well.
+- **Use Service Capping**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. When you activate this setting, if a maximum severity is configured for alarms affecting the service, this "capping" will be applied to the SLA as well.
 
-- **Affecting Alarms Level**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. Set this parameter to a particular percentage to configure which impact alarms must have before they are considered to affect the SLA. On the *Main View* page, the *Number of Affecting Alarms* parameter will then indicate the number of alarms currently affecting the SLA according to this setting.
+- **Affecting Alarms Level**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. Set this parameter to a particular percentage to configure which impact alarms must have before they are considered to affect the SLA. On the *Main View* page, the *Number of Affecting Alarms* parameter will then indicate the number of alarms currently affecting the SLA according to this setting.

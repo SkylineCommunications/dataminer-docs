@@ -1,6 +1,6 @@
 ## Working with spectrum scripts
 
-To access spectrum scripts, in the *monitors* tab of a spectrum analyzer element, click either ![](../../images/script_new_32.png) *New script* or ![](../../images/script_edit_32.png) *Edit script*.
+To access spectrum scripts, in the *monitors* tab of a spectrum analyzer element, click either ![](../../images/script_new_32.png) *New script* or ![](../../images/script_edit_32.png) *Edit script*.
 
 This will open the *Edit script* window, which has two panes:
 
@@ -22,7 +22,7 @@ The following topics provide more information on spectrum scripts:
 
 In the left pane of the *Edit script* window, the following actions are possible:
 
-- To add a new spectrum script, click the *Add script* button. The script will be added with the default name *Script*, which can be edited later.
+- To add a new spectrum script, click the *Add script* button. The script will be added with the default name *Script*, which can be edited later.
 
 - To remove a spectrum script, select the script in the tree view and click the *Delete* button.
 
@@ -30,7 +30,7 @@ In the left pane of the *Edit script* window, the following actions are possible
 
 ### Editing scripts
 
-To edit a script, in the *Edit script* window, select the script in the pane on the left. In the pane on the right, you can then do the following:
+To edit a script, in the *Edit script* window, select the script in the pane on the left. In the pane on the right, you can then do the following:
 
 - Enter a different name for the script in the *Name* box.
 
@@ -38,7 +38,7 @@ To edit a script, in the *Edit script* window, select the script in the pane on
 
 - Specify a first line for the script. This is usually a script action of the type *Get preset*, which loads one of the public presets to define which settings you want to measure a trace with.
 
-- Click *Add* to specify further script actions. A wide range of possibilities is available. However, note that some actions will only become available if other actions have been entered in the script first.
+- Click *Add* to specify further script actions. A wide range of possibilities is available. However, note that some actions will only become available if other actions have been entered in the script first.
 
     Usually, the following actions are used early in the script:
 
@@ -53,7 +53,7 @@ To edit a script, in the *Edit script* window, select the script in the pane on
 
 - Change the position of a script action, by moving the mouse pointer over the action in question, and clicking the up/down arrows that appear to the right of it.
 
-- Delete a script action, by moving the mouse pointer over the action in question, and clicking the *x* that appears to the right of it.
+- Delete a script action, by moving the mouse pointer over the action in question, and clicking the *x* that appears to the right of it.
 
     > [!NOTE]
     > When the measurements in a script are executed, this results in new parameters. For instance, a new parameter C/N can be created by executing a script that measures a trace, takes the difference between the noise level and the carrier level and assigns that value to C/N. The new parameters can then be used for trending and alarming. for more information, see [Working with spectrum monitors](Working_with_spectrum_monitors.md).
@@ -62,13 +62,13 @@ To edit a script, in the *Edit script* window, select the script in the pane on
 
 Within a script, it is possible that you often use fixed variables to perform a calculation (e.g. a correction factor). Though you can enter this value directly in the script, it is also possible to create a global variable that refers to that global value in the script. This option makes it easier to maintain your scripts.
 
-To access the global constants, in the *Edit script* window, click the *Globals* button.
+To access the global constants, in the *Edit script* window, click the *Globals* button.
 
 This opens the *Edit global constants* window, where the following actions are possible:
 
 - To add a new global constant, click the *Add global constant* button.
 
-- To edit an existing global constant, select it in the tree view on the left, and edit the *Name*, *Value* or *Description* fields as required. Click *Apply* to apply your changes.
+- To edit an existing global constant, select it in the tree view on the left, and edit the *Name*, *Value* or *Description* fields as required. Click *Apply* to apply your changes.
 
 - To remove a global constant, select it in the tree view pane, and then click the *Delete* button.
 
@@ -78,7 +78,7 @@ Though usually scripts are executed by a monitor, it is also possible for users 
 
 To do so:
 
-1. In the *monitors* tab of the ribbon, select *Execute Script*.
+1. In the *monitors* tab of the ribbon, select *Execute Script*.
 
 2. In the *Execute Script* window, select a script and measurement point, and if necessary also a preset.
 
@@ -88,7 +88,7 @@ To do so:
 
     The window then shows the *script results*, with the values of the variables.     You can then:
 
-    - Click *Copy to Clipboard* to copy the results to the clipboard in order to paste them into, for instance, a report or an email.
+    - Click *Copy to Clipboard* to copy the results to the clipboard in order to paste them into, for instance, a report or an email.
 
     - Click *Export to CSV* to export the results to a CSV file.
 
@@ -97,6 +97,6 @@ To do so:
     - Click *Close* to close the window.
 
     > [!NOTE]
-    > -  When you manually run a spectrum script, a message in the middle of the real-time display will indicate that “view script mode” is activated, and mention when the selected trace has a result. 
+    > -  When you manually run a spectrum script, a message in the middle of the real-time display will indicate that “view script mode” is activated, and mention when the selected trace has a result.
     > -  While you are manually executing a script or viewing the script results, you will not be able to use certain functionalities for real-time trace viewing, such as trace recording and measurement point selection.
     >

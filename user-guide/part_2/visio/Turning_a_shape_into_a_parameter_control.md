@@ -39,7 +39,7 @@ Add a shape data field of type **ParameterControl** to the shape.
 
 ### Adding a filter box to a table control
 
-When using a shape of type **ParameterControls** to visualize a table in a Visio drawing, you can add a table filter to that shape.
+When using a shape of type **ParameterControls** to visualize a table in a Visio drawing, you can add a table filter to that shape.
 
 1. Create two shapes and group them. One shape will contain the table and the other shape will contain the filter box.
 
@@ -85,9 +85,9 @@ However, to fully disable a control, so that it cannot set session variables, na
 
 ### Allowing dynamic shape behavior
 
-Up to DataMiner 9.0.0 CU5, **ParameterControl** shapes with dynamic value placeholders only turn into a parameter control when all placeholders can be resolved. Otherwise an element shape is displayed.
+Up to DataMiner 9.0.0 CU5, **ParameterControl** shapes with dynamic value placeholders only turn into a parameter control when all placeholders can be resolved. Otherwise an element shape is displayed.
 
-From DataMiner 9.0.0 CU5 onwards, **ParameterControl** shapes are by default always displayed as a parameter control. However, it is still possible to activate the legacy behavior, by adding the following option to the shape:
+From DataMiner 9.0.0 CU5 onwards, **ParameterControl** shapes are by default always displayed as a parameter control. However, it is still possible to activate the legacy behavior, by adding the following option to the shape:
 
 | Shape data field | Value                                  |
 |------------------|----------------------------------------|

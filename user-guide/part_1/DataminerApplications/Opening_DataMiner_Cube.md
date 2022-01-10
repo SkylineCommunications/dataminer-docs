@@ -14,7 +14,7 @@ For more information on how to manage the start window of the Cube desktop app, 
 
 > [!NOTE]
 > -  If you want to open DataMiner Cube for multiple DataMiner Systems without closing the start window, keep the Ctrl key pressed while you click the tiles.
-> -  If you have multiple monitors and want DataMiner Cube to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2* 
+> -  If you have multiple monitors and want DataMiner Cube to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
 
 ##### Prior to DataMiner 10.0.9:
 
@@ -37,7 +37,7 @@ To set a DMS as the default DMS to connect to:
 
 1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
 
-2. Select *Set as default* in the pop-up window and click *Save*.
+2. Select *Set as default* in the pop-up window and click *Save*.
 
 #### Changing which DMA in a DMS you connect to
 
@@ -45,7 +45,7 @@ To specify a different DMA in a DMS to connect to:
 
 1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
 
-- Expand the *Agent* section, select the DMA and click *Save*.
+- Expand the *Agent* section, select the DMA and click *Save*.
 
 #### Connecting to a DMS using URL arguments
 
@@ -53,7 +53,7 @@ To connect to a DMS using specific URL arguments:
 
 1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
 
-2. Expand the *Advanced* section, specify the URL arguments and click *Save*.
+2. Expand the *Advanced* section, specify the URL arguments and click *Save*.
 
 For more information on the possible URL arguments, see [Options for opening DataMiner Cube](#options-for-opening-dataminer-cube).
 
@@ -109,7 +109,7 @@ To view logging for the DataMiner Cube start window:
 Open Internet Explorer and, depending on your setup, go to one of the following addresses:
 
 ```txt
-http://[DMA]/dataminercube 
+http://[DMA]/dataminercube
 https://[DMA]/dataminercube
 ```
 
@@ -117,7 +117,7 @@ https://[DMA]/dataminercube
 > -  In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
 > -  If DataMiner Cube has been set as the default client, it is not necessary to add <br>“*/dataminercube*” in the URL.
 > -  DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.
-> -  It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>. 
+> -  It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
 
 > [!CAUTION]
 > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
@@ -188,11 +188,11 @@ If you want to open several apps, separate them by means of pipe characters.
 Examples:
 
 ```txt
-http://MyDMA1/Dataminercube/dataminercube.xbap?app=about                                       
+http://MyDMA1/Dataminercube/dataminercube.xbap?app=about
 http://MyDMA1/Dataminercube/dataminercube.xbap?app=Protocols%20%26%20Templates|Asset%20Manager
-DataminerCube.exe app=about                                                                    
-DataminerCube.exe app="Reports & Dashboards"                                                   
-DataminerCube.exe app=settings"|"logging                                                      
+DataminerCube.exe app=about
+DataminerCube.exe app="Reports & Dashboards"
+DataminerCube.exe app=settings"|"logging
 ```
 
 #### autoslide=
@@ -203,7 +203,7 @@ Examples:
 
 ```txt
 http://MyDMA1/DataminerCube/dataminercube.xbap?autoslide=30
-DataminerCube.exe autoslide=15                             
+DataminerCube.exe autoslide=15
 ```
 
 To disable the autoslide mode, reconnect without the autoslide option.
@@ -287,7 +287,7 @@ Example:
 > -  When multiple filters are specified, only the lowest filter in the selected chain will be used. However, if no chain is specified, all filters are used to find the correct chain.
 > -  If only one row matches the filter, an object will be loaded.
 > -  If the filter value is a key prefix, add an asterisk (“\*”) to the filter value.
-> -  URLs containing filters must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp). 
+> -  URLs containing filters must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
 
 > [!TIP]
 > See also:
@@ -308,11 +308,11 @@ If you want to open several elements, separate them by means of pipe characters.
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2&element=MyElement    
+http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2&element=MyElement
 http://MyDMA1/DataminerCube/dataminercube.xbap?element=MyElement|MyOtherElement
-DataminerCube.exe host=MyDMA2 element=154                                       
-DataminerCube.exe host=MyDMA2 element=MyElement"|"MyOtherElement               
-DataminerCube.exe host=MyDMA2 element="My element|My other element"            
+DataminerCube.exe host=MyDMA2 element=154
+DataminerCube.exe host=MyDMA2 element=MyElement"|"MyOtherElement
+DataminerCube.exe host=MyDMA2 element="My element|My other element"
 ```
 
 #### host=
@@ -323,7 +323,7 @@ Examples:
 
 ```txt
 http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2
-DataminerCube.exe host=MyDMA2                             
+DataminerCube.exe host=MyDMA2
 ```
 
 #### lat=
@@ -402,12 +402,12 @@ http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&preset=abc&options
 
 Name of the spectrum preset to be loaded in the Spectrum Analyzer element(s) opened right after startup.
 
-Unlike the inline preset option (see below), the regular preset option must always be combined with both *element=* and *options=*.
+Unlike the inline preset option (see below), the regular preset option must always be combined with both *element=* and *options=*.
 
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&preset=mypreset (public)&options=0x208               
+http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&preset=mypreset (public)&options=0x208
 http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105|34/106|34/107&preset=mypreset (public)&options=0x00
 ```
 
@@ -417,7 +417,7 @@ http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105|34/106|34/107&pres
 
 #### preset=inline
 
-The *preset=* option can also be used for inline presets, in which case it works differently from the regular *preset=* option, though it should also always be combined with *element=*.
+The *preset=* option can also be used for inline presets, in which case it works differently from the regular *preset=* option, though it should also always be combined with *element=*.
 
 Example:
 
@@ -483,11 +483,11 @@ If you want to open several services, separate them by means of pipe characters.
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?service=541                                  
+http://MyDMA1/DataminerCube/dataminercube.xbap?service=541
 http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2&service=MyService|MyOtherService
-DataminerCube.exe host=MyDMA2 service=MyService-                                            
-DataminerCube.exe host=MyDMA2 service="My service"                                          
-DataminerCube.exe host=MyDMA2 service=MyService"|"MyOtherService                           
+DataminerCube.exe host=MyDMA2 service=MyService-
+DataminerCube.exe host=MyDMA2 service="My service"
+DataminerCube.exe host=MyDMA2 service=MyService"|"MyOtherService
 ```
 
 > [!NOTE]
@@ -506,11 +506,11 @@ If you want to open several views, separate them by means of pipe characters.
 Examples:
 
 ```txt
-http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2&view=MyView 
+http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2&view=MyView
 http://MyDMA1/DataminerCube/dataminercube.xbap?view=MyView|MyOtherView
-DataminerCube.exe host=MyDMA2 view=MyView                              
-DataminerCube.exe host=MyDMA2 view="My view"                           
-DataminerCube.exe host=MyDMA2 view=MyView"|"MyOtherView               
+DataminerCube.exe host=MyDMA2 view=MyView
+DataminerCube.exe host=MyDMA2 view="My view"
+DataminerCube.exe host=MyDMA2 view=MyView"|"MyOtherView
 ```
 
 #### workspace=
@@ -521,15 +521,15 @@ Examples:
 
 ```txt
 http://MyDMA1/DataminerCube/dataminercube.xbap?workspace=Classic
-DataminerCube.exe workspace=Classic                             
+DataminerCube.exe workspace=Classic
 ```
 
 > [!NOTE]
-> If you want an empty workspace to be opened, use the argument *workspace=Clean*. 
+> If you want an empty workspace to be opened, use the argument *workspace=Clean*.
 
 ### Opening a card on a particular page
 
-From DataMiner 9.6.3 onwards, if you use the *=element*, *=service* or *=view* option to open an element, service or view card at startup, you can have this card opened on a particular page.
+From DataMiner 9.6.3 onwards, if you use the *=element*, *=service* or *=view* option to open an element, service or view card at startup, you can have this card opened on a particular page.
 
 To do so, add the following:
 
@@ -580,19 +580,19 @@ Examples for the browser application:
 
 ```txt
 DataMinerCube.exe host=MyDMA view="My special view" element=MyElement
-DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help    
+DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
 ```
 
 Examples for the desktop application (to be specified via the “...” button in the Cube start window, in the *Arguments* box):
 
 ```txt
 view="My special view" element=MyElement
-view=View2 element=365 app=help         
+view=View2 element=365 app=help
 ```
 
 Examples for the desktop application (prior to DataMiner 10.0.9, using a command line):
 
 ```txt
 DataMinerCube.exe host=MyDMA view="My special view" element=MyElement
-DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help    
+DataMinerCube.exe host=MyOtherDMA view=View2 element=365 app=help
 ```

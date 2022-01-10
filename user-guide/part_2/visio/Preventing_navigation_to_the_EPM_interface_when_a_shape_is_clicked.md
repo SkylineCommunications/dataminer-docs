@@ -1,6 +1,6 @@
 ## Preventing navigation to the EPM interface when a shape is clicked
 
-When you have set the shape data field **ChildType** to “*FixedRow*”, you can set the shape data field **Navigate** to “*None*”. In EPM environments, this will prevent navigation to the EPM interface when a shape is clicked.
+When you have set the shape data field **ChildType** to “*FixedRow*”, you can set the shape data field **Navigate** to “*None*”. In EPM environments, this will prevent navigation to the EPM interface when a shape is clicked.
 
 Note, however, that users can still navigate to the EPM interface after right-clicking a shape.
 

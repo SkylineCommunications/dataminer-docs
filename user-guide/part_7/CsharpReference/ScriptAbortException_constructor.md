@@ -4,4 +4,4 @@
 ScriptAbortException(string message)
 ```
 
-Initializes a new instance of the *ScriptAbortException* class. The message explains the reason for the exception.
+Initializes a new instance of the *ScriptAbortException* class. The message explains the reason for the exception.

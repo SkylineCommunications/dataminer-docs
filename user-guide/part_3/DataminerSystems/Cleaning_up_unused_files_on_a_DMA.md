@@ -2,13 +2,13 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-cleaning-up-unused-items/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-cleaning-up-unused-items/>
 
 In System Center, you can clean up unused protocols, unused alarm filters and unused Visio files.
 
 To do so:
 
-1. In Cube, go to *Apps* > *System Center.*
+1. In Cube, go to *Apps* > *System Center.*
 
 2. In the *System Center* module, select the *Tools* page.
 
@@ -18,7 +18,7 @@ To do so:
 
     - To clean up unused protocols:
 
-        1. At the bottom of the *Protocols* tab, click the *Load* button.
+        1. At the bottom of the *Protocols* tab, click the *Load* button.
 
             A list with the unused protocols in the DMS will be loaded.
 
@@ -26,7 +26,7 @@ To do so:
 
     - To clean up unused alarm filters:
 
-        1. At the bottom of the *Alarm filters* tab, click the *Load* button.
+        1. At the bottom of the *Alarm filters* tab, click the *Load* button.
 
             A list with the unused alarm filters in the DMS will be loaded.
 
@@ -37,7 +37,7 @@ To do so:
 
     - To clean up unused Visio files:
 
-        1. At the bottom of the *Visio files* tab, click the *Load* button.
+        1. At the bottom of the *Visio files* tab, click the *Load* button.
 
             A list with the unused Visio files in the DMS will be loaded.
 

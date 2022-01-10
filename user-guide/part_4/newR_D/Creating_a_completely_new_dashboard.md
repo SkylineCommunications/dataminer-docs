@@ -6,14 +6,14 @@
 
 2. Enter the name of the dashboard.
 
-3. To specify the folder that should contain the dashboard, specify the folder name in the *Location* box, or select the folder in the tree view below this box.
+3. To specify the folder that should contain the dashboard, specify the folder name in the *Location* box, or select the folder in the tree view below this box.
 
     If you created a dashboard by first selecting a folder in the list, this folder will automatically be selected.     You can also create folders at this point in the dashboard creation, by hovering the mouse pointer over the folder in the tree view where you want to create a folder and clicking the + icon. Then specify the folder name and click the check mark icon.
 
-4. In the *Security* box, select whether other users should be able to view and edit the dashboard.
+4. In the *Security* box, select whether other users should be able to view and edit the dashboard.
 
     > [!NOTE]
-    > -  Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](Changing_dashboard_settings.md). 
+    > -  Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](Changing_dashboard_settings.md).
     > -  The built-in Administrator account always has full access to all dashboards.
 
 5. Click *OK*.

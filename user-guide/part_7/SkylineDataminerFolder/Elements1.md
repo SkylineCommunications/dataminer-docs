@@ -13,9 +13,9 @@ Each element subdirectory contains the following files:
 - Description.xml
 
 > [!NOTE]
-> The folder of matrix elements can also contain a file with matrix label aliases, usually called *Port.xml* or *Ports.xml*. The name of this file depends on the element protocol.
+> The folder of matrix elements can also contain a file with matrix label aliases, usually called *Port.xml* or *Ports.xml*. The name of this file depends on the element protocol.
 
- 
+
 
 ### Element.xml
 
@@ -33,39 +33,39 @@ Every element on a DMA has its own *Element.xml* file. It contains the complete 
 
 Several things can be configured in this file:
 
-- To enable or disable the creation of DVE child elements, a *dvecreate* attribute can be added. For more information, see [Enabling or disabling the creation of DVE child elements](../../part_2/elements/Dynamic_virtual_elements.md#enabling-or-disabling-the-creation-of-dve-child-elements).
+- To enable or disable the creation of DVE child elements, a *dvecreate* attribute can be added. For more information, see [Enabling or disabling the creation of DVE child elements](../../part_2/elements/Dynamic_virtual_elements.md#enabling-or-disabling-the-creation-of-dve-child-elements).
 
-- To enable an element simulation, a *simulation* attribute can be added. For more information, see [What happens when you enable simulation?](../../part_2/elements/Simulated_elements.md#what-happens-when-you-enable-simulation).
+- To enable an element simulation, a *simulation* attribute can be added. For more information, see [What happens when you enable simulation?](../../part_2/elements/Simulated_elements.md#what-happens-when-you-enable-simulation).
 
-- To enable data offloads to the offload database on element level, a *\<CentralOffload>* tag can be added. See [Disabling data offloads to the offload database on element level](../../part_3/databases/Configuring_data_offloads.md#disabling-data-offloads-to-the-offload-database-on-element-level).
+- To enable data offloads to the offload database on element level, a *\<CentralOffload>* tag can be added. See [Disabling data offloads to the offload database on element level](../../part_3/databases/Configuring_data_offloads.md#disabling-data-offloads-to-the-offload-database-on-element-level).
 
-- SNMP agent community strings are specified on element level with the *\<SNMPAgent>* tag. See [Configuring SNMP agent community strings](../../part_3/SNMP/Configuring_SNMP_agent_community_strings.md).
+- SNMP agent community strings are specified on element level with the *\<SNMPAgent>* tag. See [Configuring SNMP agent community strings](../../part_3/SNMP/Configuring_SNMP_agent_community_strings.md).
 
-- To customize how long average or real-time trending records have to be kept in the database for a particular element, you can add a *\<Trending>* tag, in the same way as in the file *MaintenanceSettings.xml*. Before you can make this change, you will need to stop DataMiner. After you have saved the changed file, restart DataMiner to implement the changes. For more information on this tag and its subtags, refer to [MaintenanceSettings.xml](MaintenanceSettings_xml.md#maintenancesettingsxml).
+- To customize how long average or real-time trending records have to be kept in the database for a particular element, you can add a *\<Trending>* tag, in the same way as in the file *MaintenanceSettings.xml*. Before you can make this change, you will need to stop DataMiner. After you have saved the changed file, restart DataMiner to implement the changes. For more information on this tag and its subtags, refer to [MaintenanceSettings.xml](MaintenanceSettings_xml.md#maintenancesettingsxml).
 
     > [!NOTE]
     > From DataMiner 9.6.0 \[CU1\]/9.6.3 onwards, this can be customized in DataMiner Cube instead. See [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md).
 
 ### Description.xml
 
-Every element on a DMA has its own *Description.xml* file. In that file, you can specify aliases for each of the parameters of that element.
+Every element on a DMA has its own *Description.xml* file. In that file, you can specify aliases for each of the parameters of that element.
 
-When you change something to a *Description.xml* file of an element, the changes will only take effect after a restart of the element.
+When you change something to a *Description.xml* file of an element, the changes will only take effect after a restart of the element.
 
 Here is an example of a *Description.xml* file containing aliases for two parameters:
 
 ```xml
-<Params nextSpectrumId="...">                   
-  <Param id="100">                                
+<Params nextSpectrumId="...">
+  <Param id="100">
     <Description>OtherNameForParam100</Description>
-  </Param>                                        
-  <Param id="101">                                
+  </Param>
+  <Param id="101">
     <Description>OtherNameForParam101</Description>
-  </Param>                                        
-  ...                                              
-</Params>                                       
+  </Param>
+  ...
+</Params>
 ```
 
 > [!NOTE]
-> The *nextSpectrumId* attribute of the *\<Params>* tag holds the Parameter ID to be used when the next Monitor parameter has to be created. This ID will be a number in the 50000-59999 range.
+> The *nextSpectrumId* attribute of the *\<Params>* tag holds the Parameter ID to be used when the next Monitor parameter has to be created. This ID will be a number in the 50000-59999 range.
 >

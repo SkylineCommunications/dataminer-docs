@@ -4,11 +4,11 @@
 > -  This feature requires a general database of type “Cassandra”.
 > -  Predictions are not available for discrete and string parameters.
 > -  From DataMiner 9.5.13 onwards, trend predictions can be disabled in the user settings. See [Trending settings](../../part_1/GettingStarted/User_settings.md#trending-settings).
-> -  You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
+> -  You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/> 
+> <https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/>
 
 If the DataMiner Agent uses a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future.
 
@@ -16,11 +16,11 @@ The current point in time is displayed with a vertical dashed line marked as “
 
 The predicted trend is displayed as a line surrounded by three shaded areas:
 
-- the largest shaded area shows how the parameter will evolve with 95 % probability
+- the largest shaded area shows how the parameter will evolve with 95 % probability
 
-- the middle area shows the evolution with 90 % probability, and
+- the middle area shows the evolution with 90 % probability, and
 
-- the smallest area shows the evolution with 80 % probability.
+- the smallest area shows the evolution with 80 % probability.
 
 > [!NOTE]
 > -  The probability percentages are based on the assumptions made at the moment the graph is generated. If the behavior of the data changes afterwards, the probability may need to be adjusted.
@@ -56,6 +56,6 @@ With the drop-down list in the top-right corner, you can select one of the avail
 > -  If the displayed area of the graph only contains past trend information, the selector with the trend prediction mode will no longer be displayed.
 > -  The first time the prediction exceeds a particular alarm threshold, this is indicated with a triangle-shaped marker. If multiple trends are displayed, you can hover over the alarm marker to see a tooltip indicating which trend will trigger the alarm.
 > -  Parameter changes will change the underlying models for the prediction in real time, and predictions may change when the trend graph is shown at a later moment in time. If because of the parameter changes the underlying model is considered not to be stable enough, the prediction for a certain level may be removed.
-> -  When you change the prediction type to *Auto*, or change it from *Auto* to one of the other options, any other open trend charts will also be updated to that setting.
+> -  When you change the prediction type to *Auto*, or change it from *Auto* to one of the other options, any other open trend charts will also be updated to that setting.
 > -  The DataMiner process responsible for trend predictions is SLAnalytics. For more information, see [SLAnalytics](../../part_3/DataminerSystems/DataMiner_processes.md#slanalytics).
 >

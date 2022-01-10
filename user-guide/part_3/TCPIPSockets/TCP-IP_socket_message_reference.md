@@ -225,11 +225,11 @@ Each command or response must have a fixed header character and a fixed trailer 
 
     \[3\]
 
-    - *x:\[X-axis value of the crosspoint\]* (Use *x:-1* to retrieve an entire row)
+    - *x:\[X-axis value of the crosspoint\]* (Use *x:-1* to retrieve an entire row)
 
     \[4\]
 
-    - *y:\[Y-axis value of the crosspoint\]* (Use *y:-1* to retrieve an entire column)
+    - *y:\[Y-axis value of the crosspoint\]* (Use *y:-1* to retrieve an entire column)
 
 - **Response**
 
@@ -289,10 +289,10 @@ Each command or response must have a fixed header character and a fixed trailer 
 
     ```txt
     \t10047│5│WMI Timeout group│
-    10046│5│primary│10048:       
-    10039│5│primary│10049:       
-    9585│5│backup│:              
-    9633│5│state│\r             
+    10046│5│primary│10048:
+    10039│5│primary│10049:
+    9585│5│backup│:
+    9633│5│state│\r
     ```
 
 #### Get_Redundancy_List (DMA)
@@ -618,4 +618,4 @@ Each command or response must have a fixed header character and a fixed trailer 
 | Initial     | 8       |
 | Masked      | 9       |
 
- 
+

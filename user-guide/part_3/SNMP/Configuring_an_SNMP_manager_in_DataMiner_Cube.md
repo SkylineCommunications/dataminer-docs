@@ -1,20 +1,20 @@
 ## Configuring an SNMP manager in DataMiner Cube
 
-1. In DataMiner Cube, go to *Apps* > *System Center* \> *SNMP Forwarding*.
+1. In DataMiner Cube, go to *Apps* > *System Center* \> *SNMP Forwarding*.
 
 2. To configure a new SNMP manager, at the bottom of the page, click the *New* button.
 
-    A new SNMP manager is added to the *SNMP managers* list, and in the pane on the right, five tabs with configuration options become available.     If the SNMP manager you want to configure already exists, simply select it in the *SNMP managers* list.
+    A new SNMP manager is added to the *SNMP managers* list, and in the pane on the right, five tabs with configuration options become available.     If the SNMP manager you want to configure already exists, simply select it in the *SNMP managers* list.
 
-3. In the *general* tab, specify the following properties, and click *Next*.
+3. In the *general* tab, specify the following properties, and click *Next*.
 
     | Property                         | Description                                                                                                                                                                                                                                                                       |
     |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Name                               | The name of the SNMP manager (e.g. “HP OpenView”, “IBM Tivoli Netcool”, ...).                                                                                                                                                                                                     |
+    | Name                               | The name of the SNMP manager (e.g. “HP OpenView”, “IBM Tivoli Netcool”, ...).                                                                                                                                                                                                     |
     | IP address                         | The IP address of the SNMP manager, i.e. the address to which the SNMP notifications will be sent.                                                                                                                                                                                |
     | Get community string               | The community string to be used in all SNMP notifications toward the SNMP manager you are configuring.                                                                                                                                                                            |
     | Custom notification description    | The notification description that will appear in the default “trap description” binding.                                                                                                                                                                                          |
-    | SNMP version                       | The SNMP version: *SNMPv1*, *SNMPv2* (default), or *SNMPv3*.                                                                                                                         |
+    | SNMP version                       | The SNMP version: *SNMPv1*, *SNMPv2* (default), or *SNMPv3*.                                                                                                                         |
     | Notification type                  | By default, this is set to *Trap*. If you want the receiver of the notifications to acknowledge every SNMP packet sent by DataMiner, select *Inform messages*. However, note that this is not supported for SNMPv1. |
     | Send all notifications via one DMA | If you want all SNMP notifications toward the SNMP manager to be channeled through one particular DataMiner Agent, select this option, and select a DataMiner Agent from the list.                                                                                                |
     | Port number                        | The destination port of the SNMP manager. By default, this is set to 162.                                                                                                                                                                                                         |
@@ -22,7 +22,7 @@
     > [!NOTE]
     > SNMP traps can only be sent to IPv6 destinations from DataMiner 9.0 onwards.
 
-4. For *SNMPv3* only, an extra section will become available at the bottom of the *general* tab. In this section, specify the user name, and the authentication and encryption password if necessary. In the expandable *Advanced* section, specify the following further options:
+4. For *SNMPv3* only, an extra section will become available at the bottom of the *general* tab. In this section, specify the user name, and the authentication and encryption password if necessary. In the expandable *Advanced* section, specify the following further options:
 
     - **Security level and protocol**: Select one of the following three levels in the drop-down list:
 
@@ -38,9 +38,9 @@
 
     - **Authoritative engine ID**: A hexadecimal string of maximum 64 characters. If left empty, DataMiner will automatically generate an ID.
 
-    - **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. Up to DataMiner 9.6.11, either *HMAC-SHA* or *HMAC-MD5*. From DataMiner 9.6.12 onwards, you can choose between *MD5*, *SHA-1*28, *SHA-224*, *SHA-256*, *SHA-384* and *SHA-512*.
+    - **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. Up to DataMiner 9.6.11, either *HMAC-SHA* or *HMAC-MD5*. From DataMiner 9.6.12 onwards, you can choose between *MD5*, *SHA-1*28, *SHA-224*, *SHA-256*, *SHA-384* and *SHA-512*.
 
-    - **Encryption algorithm**: Only available if *Auth_Priv* is selected. Up to DataMiner 9.6.11, either *DES* or *AES128*. From DataMiner 9.6.12 onwards, you can choose between *AES-128*, *AES-192*, *AES-256* and *DES*.
+    - **Encryption algorithm**: Only available if *Auth_Priv* is selected. Up to DataMiner 9.6.11, either *DES* or *AES128*. From DataMiner 9.6.12 onwards, you can choose between *AES-128*, *AES-192*, *AES-256* and *DES*.
 
     > [!NOTE]
     > The following combinations of authentication and encryption algorithm are not supported:
@@ -49,11 +49,11 @@
     >
     > We recommend to use SHA-512 and AES-256, since this is the most secure combination.
 
-5. Prior to DataMiner 10.0.0 CU11/10.1.3 only: In the *General* section of the *notification* tab, make sure *Support international characters (Unicode)* is selected if the notifications will contain international characters.
+5. Prior to DataMiner 10.0.0 CU11/10.1.3 only: In the *General* section of the *notification* tab, make sure *Support international characters (Unicode)* is selected if the notifications will contain international characters.
 
-6. From DataMiner 10.0.0 CU11/10.1.3 onwards: At the top of the *notification* tab, select a different encoding type if necessary.
+6. From DataMiner 10.0.0 CU11/10.1.3 onwards: At the top of the *notification* tab, select a different encoding type if necessary.
 
-7. In the *OID* section of the *notification* tab, specify the following options, depending on the SNMP version selected in the *general* tab:
+7. In the *OID* section of the *notification* tab, specify the following options, depending on the SNMP version selected in the *general* tab:
 
     - For SNMPv1:
 
@@ -69,12 +69,12 @@
         | Default (1.3.6.1.4.1.8813.0.3)    | Select this option to use the default OID.                                                                                                                                                                                  |
         | Use device-specific OID           | If you select this option, the enterprise OID of the notification will be different for every type of element (depending on the protocol).                                                                                  |
         | Use custom bindings with OID: ... | Select this option to use custom bindings.                                                                                                                                                                                  |
-        | Custom bindings                   | To configure custom bindings, use the *Add*, *Delete*, *Up* and *Down* buttons in this section. |
+        | Custom bindings                   | To configure custom bindings, use the *Add*, *Delete*, *Up* and *Down* buttons in this section. |
 
     > [!NOTE]
     > -  Custom bindings cannot be used if you use the default OID.
     > -  For more information on custom bindings, see [Custom DataMiner notification](Custom_DataMiner_notification.md).
-    > -  If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#generating-smiv2-mib-files)).
+    > -  If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#generating-smiv2-mib-files)).
 
 8. In the *resend* tab, specify the following options:
 
@@ -99,15 +99,15 @@
     | Max retries                 | The maximum number of times DataMiner will send the same inform if it does not receive an acknowledgment.<br> After a DMA has tried to send an inform message for the specified maximum number of times, a timeout will occur. This will force the DMA to switch to ping mode. As soon as the DMA receives its first acknowledgment from the SNMP manager, it will stop sending ping messages and send an inform message for every active alarm in the DMS. Once that is done, it will resume its normal mode. |
     | Send in chronological order | Select this option to have inform messages sent in chronological order. In that case, each time an inform message is sent to a particular SNMP manager, the latter will have to reply with ACK before the next inform message is sent.                                                                                                                                                                                                                                                                         |
 
-9. Click *Next* to go the *filter* tab, and specify any alarm filters if necessary. These alarm filters will limit the alarms for which SNMP notifications will be forwarded to the SNMP manager you are configuring.
+9. Click *Next* to go the *filter* tab, and specify any alarm filters if necessary. These alarm filters will limit the alarms for which SNMP notifications will be forwarded to the SNMP manager you are configuring.
 
     - To add one or more existing filters from the DMS:
 
-        1. Click *Add filter* and select *Saved filters*.
+        1. Click *Add filter* and select *Saved filters*.
 
         2. Click *\<Click to select>* to select an existing filter.
 
-        3. If necessary, click *Is* and select one of the other options in order to determine how the filter should be applied.
+        3. If necessary, click *Is* and select one of the other options in order to determine how the filter should be applied.
 
         4. If necessary, click *Add filter* again to add more filters, combined with logical operators.
 
@@ -117,28 +117,28 @@
 
         2. In the *Name* box, enter a name for the alarm filter.
 
-        3. In the *Type* drop-down list, select whether the alarm filter should be *Public*, so any users are able to update it, or *Protected*.
+        3. In the *Type* drop-down list, select whether the alarm filter should be *Public*, so any users are able to update it, or *Protected*.
 
         4. Optionally, add a description for the filter in the *Description* box.
 
         5. Click *Select a filter*, and select what you want to filter on, e.g. Alarm type, Service impact, etc.
 
-        6. Select a logical operator, and then click *\<Click to select>* to select one or more values to combine it with.
+        6. Select a logical operator, and then click *\<Click to select>* to select one or more values to combine it with.
 
-        7. If necessary, click *Is* and select one of the other options in order to determine how the filter should be applied.
+        7. If necessary, click *Is* and select one of the other options in order to determine how the filter should be applied.
 
         8. If necessary, click *Add filter* again to add more filters, combined with logical operators.
 
         9. When the filter is fully configured, click *OK*.
 
     > [!NOTE]
-    > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](../../part_2/alarms/Working_with_the_Alarm_Console.md#manually-applying-an-alarm-filter-in-an-alarm-console-tab). 
+    > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](../../part_2/alarms/Working_with_the_Alarm_Console.md#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
     > [!TIP]
     > See also:
     > [Alarm filters](../../part_2/alarms/Alarm_filters.md)
 
-10. Click *Next* to go the *alarm storm* tab, and specify the necessary options for alarm storm prevention:
+10. Click *Next* to go the *alarm storm* tab, and specify the necessary options for alarm storm prevention:
 
     | Property                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                     |
     |--------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -148,6 +148,6 @@
     | Maximum time range in which these alarms must be generated                     | The time range in which the minimum number of alarms must occur on the parameter. The time range must be between 1 second and 1 hour.                                                                                                                                                                                                                                                           |
     | Minimum time range with no alarms to indicate that the alarm storm has stopped | The time range without alarms after which the alarm storm stops. The time range must be between 1 second and 1 hour.                                                                                                                                                                                                                                                                            |
 
-11. If you want to enable the SNMP manager, go back to the *general* tab and select *Enable the forwarding of SNMP notifications.*
+11. If you want to enable the SNMP manager, go back to the *general* tab and select *Enable the forwarding of SNMP notifications.*
 
 12. Click the *Save* button in the lower right corner.

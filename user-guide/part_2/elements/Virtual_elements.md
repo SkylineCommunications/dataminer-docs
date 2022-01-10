@@ -34,7 +34,7 @@ To configure virtual elements in Cube, the *Element Connections* module can be u
 
     - The *overview* tab on the right provides an overview of the existing element connections.
 
-2. In the list of elements in the *configure* tab, expand the element for which you want to configure the element connections.
+2. In the list of elements in the *configure* tab, expand the element for which you want to configure the element connections.
 
     > [!NOTE]
     > -  Only elements of which the protocol has at least one virtual parameter are displayed in the module.
@@ -50,14 +50,14 @@ To configure virtual elements in Cube, the *Element Connections* module can be u
 
     4. In the *Linked instance* column, select the table index if necessary.
 
-    5. In the *Include element* column, clear the checkbox if you do not want the state of the connected element to influence the state of the virtual element. Otherwise, keep the checkbox selected.
+    5. In the *Include element* column, clear the checkbox if you do not want the state of the connected element to influence the state of the virtual element. Otherwise, keep the checkbox selected.
 
     > [!NOTE]
-    > To duplicate a row, for example because different rows in the same table need to be linked to a different element, right-click the row and select *Duplicate*. 
+    > To duplicate a row, for example because different rows in the same table need to be linked to a different element, right-click the row and select *Duplicate*.
 
 4. Click the *Save* button at the bottom of the card.
 
 > [!NOTE]
-> -  You can export an overview of the element connections to a CSV file using the *Export* button in the lower right corner of the module.
+> -  You can export an overview of the element connections to a CSV file using the *Export* button in the lower right corner of the module.
 > -  If there is incorrect or corrupt data in the element connections configuration, the *Element Connections* module is only available for users with full root view access.
 >

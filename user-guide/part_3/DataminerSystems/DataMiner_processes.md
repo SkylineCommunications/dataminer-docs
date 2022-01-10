@@ -10,7 +10,7 @@ The following overview clearly shows how the DataMiner Agent software is a colle
 
 ![](../../images/slprocess_overview.jpg)
 
- 
+
 
 > [!TIP]
 > See also:
@@ -114,7 +114,7 @@ It also keeps track of a number of key performance indicators.
 > [!TIP]
 > See also:
 > -  [SLWatchdog](../DataminerAgents/Configuration_of_DataMiner_processes.md#slwatchdog)
-> -  [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml) 
+> -  [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
 
 ### Auxiliary DMA software components
 

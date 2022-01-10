@@ -12,7 +12,7 @@ Service templates allow you to create entire series of almost identical services
 
 In a service template, you have to specify
 
-- The input data, i.e. all data that has to be supplied to the template (user input, element parameters, element properties, etc.)
+- The input data, i.e. all data that has to be supplied to the template (user input, element parameters, element properties, etc.)
 
 - The child elements of the services to be created
 
@@ -28,12 +28,12 @@ The moment you apply a service template, it will collect all data that has been 
 
 ![](../../images/ServiceTemplateConcept.jpg)
 
- 
+
 
 #### Examples
 
 Below you will find examples of how to define a service template that will automatically create a service for every row in a dynamic table parameter of a certain type of element. The examples start from the following premise: for each of your “Microsoft Platform” elements, you want to create a service for every process of which the name starts with “SL”. Each of those services, named *\[computer model\]\_\[process\]*, has to include the CPU and the memory usage of the process in question.
 
-- [Example of creating a service template](Creating_a_service_template.md#example-of-creating-a-service-template) 
+- [Example of creating a service template](Creating_a_service_template.md#example-of-creating-a-service-template)
 
-- [Example of applying a service template](Applying_service_templates.md#example-of-applying-a-service-template) 
+- [Example of applying a service template](Applying_service_templates.md#example-of-applying-a-service-template)

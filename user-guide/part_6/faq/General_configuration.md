@@ -51,7 +51,7 @@ However, if this is not possible, you can set up a time synchronization mechanis
 
 More information about SNTP can be found in RFC 4330:
 
-- [Simple Network Time Protocol (SNTP) Version 4 for IPv4, IPv6 and OSI](http://www.ietf.org/rfc/rfc4330.txt) 
+- [Simple Network Time Protocol (SNTP) Version 4 for IPv4, IPv6 and OSI](http://www.ietf.org/rfc/rfc4330.txt)
 
 #### Time server
 
@@ -61,7 +61,7 @@ To turn any computer into a time server, whether it serves as a DMA or not, do t
 
 1. Log on locally to the machine that will act as time server, or establish a remote desktop session with it.
 
-2. Open Registry Editor (*Start \> Run... \> regedit*).
+2. Open Registry Editor (*Start \> Run... \> regedit*).
 
 3. Go to the following key:
 
@@ -79,19 +79,19 @@ To turn a DMA into a time client, do the following.
 
 1. Log on locally to the DMA, or establish a remote desktop session with it.
 
-2. Open the *Services* dialog box (*Start \> Settings \> Control Panel \> Administrative Tools \> Services*), and select the *Windows Time* service.
+2. Open the *Services* dialog box (*Start \> Settings \> Control Panel \> Administrative Tools \> Services*), and select the *Windows Time* service.
 
 3. Right-click the service, and select *Properties*.
 
-4. Change *Startup type* to *Automatic*, and click OK.
+4. Change *Startup type* to *Automatic*, and click OK.
 
     This will make Windows Time service start automatically when the DMA is started.
 
-5. Right-click the *Windows Time* service, and select *Start*.
+5. Right-click the *Windows Time* service, and select *Start*.
 
 6. Check whether the service is actually running, and then close the *Properties* dialog box.
 
-7. Open a command prompt window (*Start \> Run... \> cmd*).
+7. Open a command prompt window (*Start \> Run... \> cmd*).
 
 8. Enter *net time /set*, followed by the IP address of the time server, and press *Enter*.
 
@@ -142,7 +142,7 @@ All historic alarms will be deleted indiscriminately, and the Alarm Console, Rep
 
 2. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](../../part_3/DataminerSystems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.md).
 
-3. Open MySQL Query Browser. On the logon window, click *OK* to connect to the database using the default settings.
+3. Open MySQL Query Browser. On the logon window, click *OK* to connect to the database using the default settings.
 
 4. Open the SLDMADB tree.
 

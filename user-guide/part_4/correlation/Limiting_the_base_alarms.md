@@ -1,12 +1,12 @@
 ## Limiting the base alarms
 
-In the Correlation module, the *Actions* section of the details pane allows you to limit the base alarms for a Correlation rule, as an alternative to or in addition to adding alarm filters.
+In the Correlation module, the *Actions* section of the details pane allows you to limit the base alarms for a Correlation rule, as an alternative to or in addition to adding alarm filters.
 
-1. In the *Actions* section, click *Add Option* and select *Limit the base alarms*.
+1. In the *Actions* section, click *Add Option* and select *Limit the base alarms*.
 
 2. Click *Select a filter*.
 
-3. Select one of the listed properties and create a filter condition, or select *Saved filters* and select an existing alarm filter.
+3. Select one of the listed properties and create a filter condition, or select *Saved filters* and select an existing alarm filter.
 
     > [!NOTE]
     > Private alarm filters are not available for use in Correlation rules.

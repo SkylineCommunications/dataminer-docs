@@ -4,7 +4,7 @@ If, in a Visio drawing, you want to position shapes using X and Y coordinates, y
 
 ### Calibrating the X- and Y-axis
 
-Create two dummy shapes, and add two shape data fields to each of them: one of type **XPos** and one of type **YPos**.
+Create two dummy shapes, and add two shape data fields to each of them: one of type **XPos** and one of type **YPos**.
 
 1. Create a dummy shape in the top-left corner with the following shape data fields:
 

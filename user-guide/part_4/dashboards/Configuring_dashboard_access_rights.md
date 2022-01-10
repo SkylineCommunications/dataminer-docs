@@ -9,15 +9,15 @@ To configure access to dashboards:
 
 2. Click the downward triangle next to *Home*, and select *Configure Security*.
 
-3. Either select a folder under *Folder security* or select a dashboard under *Dashboard security*.
+3. Either select a folder under *Folder security* or select a dashboard under *Dashboard security*.
 
     When you use *Folder security*, all the dashboards in that folder have the same security rules. With *Dashboard security*, the rules are configured for one dashboard at a time.
 
 4. Click the *Edit Security* button next to the selected folder or dashboard.
 
-5. Add the users who are allowed to use a particular dashboard or folder to the *Allow* column with the *\<* button. Remove users who are not allowed access by means of the *\>* button.
+5. Add the users who are allowed to use a particular dashboard or folder to the *Allow* column with the *\<* button. Remove users who are not allowed access by means of the *\>* button.
 
-6. If necessary, add users who are denied access to the *Denied* column with the *\<* button. Remove users who are not denied access by means of the *\>* button.
+6. If necessary, add users who are denied access to the *Denied* column with the *\<* button. Remove users who are not denied access by means of the *\>* button.
 
     > [!NOTE]
     > “Deny” rules always take precedence over “Allow” rules. Therefore, if a user is allowed access to a folder, but denied access to a specific dashboard, this dashboard will not be available in their list.

@@ -2,7 +2,7 @@
 
 In DataMiner Cube, you can configure, create or delete aggregation rules, or create or delete folders for the rules:
 
-- On the Aggregation page of a view card, click the *Edit mode* button. This switches the mode from View mode to Edit mode.
+- On the Aggregation page of a view card, click the *Edit mode* button. This switches the mode from View mode to Edit mode.
 
     In Edit mode, more buttons are available, and the detailed properties for any selected rule are displayed in the pane on the right instead of the aggregation data.
 
@@ -10,7 +10,7 @@ In DataMiner Cube, you can configure, create or delete aggregation rules, or cre
 
 Using the folders in the tree view, you can sort aggregation rules logically, so that users will get useful information combined when they click a folder in View mode.
 
-- To create a new folder, select a folder and click the *New folder* button at the bottom of the left pane. A new subfolder will be created in the selected folder.
+- To create a new folder, select a folder and click the *New folder* button at the bottom of the left pane. A new subfolder will be created in the selected folder.
 
 - To delete a folder, select the folder and click the *Delete* button at the bottom of the left pane.
 
@@ -19,9 +19,9 @@ Using the folders in the tree view, you can sort aggregation rules logically, so
     > [!NOTE]
     > It is not possible to have two folders or two rules with the same name within the same folder.
 
-- To expand all folders, or to collapse all folders, right-click a folder in the list and select *Expand all* or *Collapse all* respectively.
+- To expand all folders, or to collapse all folders, right-click a folder in the list and select *Expand all* or *Collapse all* respectively.
 
-- To rename a folder, select the folder in the list, enter a new name in the *Name* box on the right, and click the *Rename* button.
+- To rename a folder, select the folder in the list, enter a new name in the *Name* box on the right, and click the *Rename* button.
 
 ### Creating and configuring an aggregation rule
 
@@ -42,9 +42,9 @@ To configure an aggregation rule, select it in the tree view on the left. In the
 
 3. In the *Source* section of the pane, determine what the aggregation rule should calculate and how:
 
-    1. In the first line under *What should be calculated*, indicate whether the calculation should happen *Manually* or *Automatically*.
+    1. In the first line under *What should be calculated*, indicate whether the calculation should happen *Manually* or *Automatically*.
 
-        - If *Manually*: to calculate the aggregated data, the user will need to click the *Refresh* button in View mode.
+        - If *Manually*: to calculate the aggregated data, the user will need to click the *Refresh* button in View mode.
 
         - If *Automatically*: indicate the time span when the data need to be calculated. This can be any time span less than a day, e.g. “30 seconds”, “15 minutes”, “2 hours”. Optionally, use the slider to increase or decrease the time span.
 
@@ -78,18 +78,18 @@ To configure an aggregation rule, select it in the tree view on the left. In the
 
     6. Optionally, depending on the source you specified, further grouping options may be available:
 
-        - Select *For each view, group on property* and choose a property to group the data on a specified element property or view property.
+        - Select *For each view, group on property* and choose a property to group the data on a specified element property or view property.
 
-        - If the source of the rule is based on a base protocol, select *For each view, group on protocol* to group data by protocol.
+        - If the source of the rule is based on a base protocol, select *For each view, group on protocol* to group data by protocol.
 
-        - If the source of the rule is a table parameter, select *For each table, group on column* and choose a column, to group data by a column in the source table parameter.
+        - If the source of the rule is a table parameter, select *For each table, group on column* and choose a column, to group data by a column in the source table parameter.
 
 4. In the Monitoring & Trending section, indicate whether the rule should be monitored and/or trended.
 
     - To enable monitoring, select *Monitored*, and enter the values for the alarm thresholds. This is done the same way as for a regular alarm template, including the possibility to use a smart baseline. For more information, see [Configuring alarm templates](../../part_2/protocols/Configuring_alarm_templates.md).
 
-    - To enable trending, select *Average* and/or *Real-time*. For more information, see [About trend templates](../../part_2/protocols/About_trend_templates.md).
+    - To enable trending, select *Average* and/or *Real-time*. For more information, see [About trend templates](../../part_2/protocols/About_trend_templates.md).
 
 5. At the top of the pane, select or clear the box next to *Enable this rule* to enable or disable the rule.
 
- 
+

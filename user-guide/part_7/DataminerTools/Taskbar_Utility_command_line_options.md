@@ -20,7 +20,7 @@ To do so:
     start /wait SLTaskbarUtility.exe [command] [arguments]
     ```
 
-    “start /wait” is used to await the return code of the command, which can be checked using the *%errorlevel%* environment variable.
+    “start /wait” is used to await the return code of the command, which can be checked using the *%errorlevel%* environment variable.
 
     > [!NOTE]
     > It is still possible to open the SLTaskbarUtility user interface by either double-clicking a file with a DataMiner extension (e.g. dmupgrade, dmbackup, etc.) or entering the path to such a file in a *Command Prompt* window.
@@ -36,12 +36,12 @@ To do so:
 | -stop           | Stop the local DataMiner Agent.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | -start          | Start the local DataMiner Agent.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | -restart        | Restart the local DataMiner Agent.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| -upgrade        | Upgrade the DataMiner Agent(s).<br> Arguments:<br> -  File path to an *dmupgrade* file (mandatory)<br> -  File path to an *UpgradeInfo.xml* file (optional).<br> If you do not specify an *UpgradeInfo.xml* file, only the local DataMiner Agent will be upgraded, with the default upgrade options.<br> For more information about *UpgradeInfo.xml* files, see [UpgradeInfo.xml](#upgradeinfoxml). |
-| -help           | List information about the above-mentioned commands.<br> -  If you want information about all commands, pass the *-help* command without any argument.<br> -  If you want information about one specific command, pass the *-help* command followed by that specific command (e.g. *-help -help*).                                                                                                                                  |
+| -upgrade        | Upgrade the DataMiner Agent(s).<br> Arguments:<br> -  File path to an *dmupgrade* file (mandatory)<br> -  File path to an *UpgradeInfo.xml* file (optional).<br> If you do not specify an *UpgradeInfo.xml* file, only the local DataMiner Agent will be upgraded, with the default upgrade options.<br> For more information about *UpgradeInfo.xml* files, see [UpgradeInfo.xml](#upgradeinfoxml). |
+| -help           | List information about the above-mentioned commands.<br> -  If you want information about all commands, pass the *-help* command without any argument.<br> -  If you want information about one specific command, pass the *-help* command followed by that specific command (e.g. *-help -help*).                                                                                                                                  |
 
 ### UpgradeInfo.xml
 
-When using the *-upgrade* command, you can specify that the upgrade options have to be taken from an *UpgradeInfo.xml* file.
+When using the *-upgrade* command, you can specify that the upgrade options have to be taken from an *UpgradeInfo.xml* file.
 
 The options in this file reflect the options available in the Taskbar Utility’s upgrade window. For a Failover setup, the same options can be specified in the *\<FailoverPolicy>* tag as in the Taskbar Utility UI:
 
@@ -60,17 +60,17 @@ The options in this file reflect the options available in the Taskbar Utility’
 ##### Example:
 
 ```xml
-<UpgradeInfo>                                         
-  <Agents>                                              
-    <IP>localhost</IP>                                   
-    <IP>999.999.99.99</IP>                               
-  </Agents>                                             
-  <IsCluster>true</IsCluster>                          
-  <ExtractAllFiles>true</ExtractAllFiles>              
-  <DelayedStart>true</DelayedStart>                    
+<UpgradeInfo>
+  <Agents>
+    <IP>localhost</IP>
+    <IP>999.999.99.99</IP>
+  </Agents>
+  <IsCluster>true</IsCluster>
+  <ExtractAllFiles>true</ExtractAllFiles>
+  <DelayedStart>true</DelayedStart>
   <AutomaticStartServices>true</AutomaticStartServices>
-  <StopSNMP>false</StopSNMP>                           
-  <RebootAfterUpgrade>false</RebootAfterUpgrade>       
-  <FailoverPolicy>UseDefault</FailoverPolicy>          
-</UpgradeInfo>                                        
+  <StopSNMP>false</StopSNMP>
+  <RebootAfterUpgrade>false</RebootAfterUpgrade>
+  <FailoverPolicy>UseDefault</FailoverPolicy>
+</UpgradeInfo>
 ```

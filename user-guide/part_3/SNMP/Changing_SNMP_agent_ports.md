@@ -25,9 +25,9 @@ If you want DataMiner to use another port when acting as an SNMP agent, open the
 In the following example, DataMiner uses port 461:
 
 ```xml
-<DataMiner>       
+<DataMiner>
   <SNMP port="461"/>
-</DataMiner>      
+</DataMiner>
 ```
 
 #### Checking which port DataMiner is using
@@ -47,7 +47,7 @@ If a non-default port is used, you will find a line like the following one:
 ```
 
 > [!NOTE]
-> This information is only included if the log file if the log level is set to 1 or higher. 
+> This information is only included if the log file if the log level is set to 1 or higher.
 
 ### Customizing the trap reception ports of a DMA
 
@@ -57,16 +57,16 @@ To specify a custom SNMPv3 trap reception port:
 
 1. Open *C:\\Skyline DataMiner\\DataMiner.xml*.
 
-2. Add an *\<SNMPv3>* tag in the DataMiner tag, and specify the trap reception port in the *trapPort* attribute.
+2. Add an *\<SNMPv3>* tag in the DataMiner tag, and specify the trap reception port in the *trapPort* attribute.
 
     For example:
 
     ```xml
-    <DataMiner>               
-      ...                        
+    <DataMiner>
+      ...
       <SNMPv3 trapPort=”10162”/>
-      ...                        
-    </DataMiner>              
+      ...
+    </DataMiner>
     ```
 
 Please note the following regarding the customization of trap reception ports:

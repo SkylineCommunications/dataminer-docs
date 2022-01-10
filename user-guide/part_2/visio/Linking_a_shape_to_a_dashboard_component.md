@@ -10,7 +10,7 @@ To do so:
 
 3. Right-click the component and select *Copy embed URL*.
 
-4. In Visio, add a shape data field of type **Link** to the shape you want to link the dashboard component to and set its value to the URL you just copied.
+4. In Visio, add a shape data field of type **Link** to the shape you want to link the dashboard component to and set its value to the URL you just copied.
 
 > [!NOTE]
 > This is similar to linking a shape to a webpage. See [Linking a shape to a webpage](Linking_a_shape_to_a_webpage.md).

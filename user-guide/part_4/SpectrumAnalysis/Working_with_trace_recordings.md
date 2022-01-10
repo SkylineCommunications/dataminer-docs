@@ -16,7 +16,7 @@ The following sections provide more information on working with trace recordings
 
 To make a recording:
 
-1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click *Start Recording*.
+1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click *Start Recording*.
 
     A red dot in the bottom-right corner of the display indicates that a recording is in progress, and an extra menu item, *Stop Recording*, appears in the header bar.
 
@@ -41,7 +41,7 @@ To make a recording:
 
 To play back a recording:
 
-1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click the ![](../../images/spectrum_play.png) icon.
+1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click the ![](../../images/spectrum_play.png) icon.
 
 2. If you want to select a shared recording, in the pop-up window, select *Show shared recordings*.
 
@@ -57,11 +57,11 @@ To play back a recording:
 
     - *Manual*: Obsolete from DataMiner 10.2.0/10.1.7 onwards. Select this option to walk through the recording trace by trace using the step controls at the bottom of the real-time display, instead of viewing the trace at the rate of the recording.
 
-    From DataMiner 10.1.9/10.2.0 onwards, select *Keep repeating the recording* if you want to play the recording in a continuous loop. If you only want to play the recording once, leave this checkbox cleared.
+    From DataMiner 10.1.9/10.2.0 onwards, select *Keep repeating the recording* if you want to play the recording in a continuous loop. If you only want to play the recording once, leave this checkbox cleared.
 
 5. Click *OK*.
 
-    While the recording is playing, you can stop it at any time by clicking the ![](../../images/spectrum_stop.png) icon in the *Record* section of the ribbon.
+    While the recording is playing, you can stop it at any time by clicking the ![](../../images/spectrum_stop.png) icon in the *Record* section of the ribbon.
     From DataMiner 10.2.0/10.1.7 onwards, below the recording, controls are displayed that allow you to skip forward or backward, pause and play again, and fast forward.
 
     - Drag the thumb of the slider control to go to any specific point in the recording.
@@ -78,7 +78,7 @@ To play back a recording:
 
 To manage the available recordings:
 
-1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click the ![](../../images/spectrum_recordings.png) icon.
+1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click the ![](../../images/spectrum_recordings.png) icon.
 
 2. If you also want to manage shared recordings, in the Manage recordings window, select *Show shared recordings*.
 
@@ -86,8 +86,8 @@ To manage the available recordings:
 
     - If you want to remove it, click the *Delete* button.
 
-    - If you want to change its name or description, click the *Rename* button. Then enter the new name and/or description in the pop-up window and click *OK*.
+    - If you want to change its name or description, click the *Rename* button. Then enter the new name and/or description in the pop-up window and click *OK*.
 
-    - If you want to make a shared recording private or vice versa, click the *Rename* button, change the selection of the checkbox *Share recording with other users*, and click *OK*.
+    - If you want to make a shared recording private or vice versa, click the *Rename* button, change the selection of the checkbox *Share recording with other users*, and click *OK*.
 
 4. When ready, click the *Close* button.

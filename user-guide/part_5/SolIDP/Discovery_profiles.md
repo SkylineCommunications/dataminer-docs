@@ -14,7 +14,7 @@ The following mechanisms are supported for discovery:
 
 Discovery profiles are defined in JSON format and define which information should be retrieved from the device. A discovery profile does not define how to identify a CI Type. This is defined in the conditions of a CI Type.
 
-To make sure discovery profiles can be loaded into DataMiner IDP, they must be stored in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*. See [Discovery](Discovery.md).
+To make sure discovery profiles can be loaded into DataMiner IDP, they must be stored in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*. See [Discovery](Discovery.md).
 
 In general, every profile contains a list of discovery actions. Such an action consists of the following components:
 
@@ -47,7 +47,7 @@ In general, every profile contains a list of discovery actions. Such an action c
 - **Options**: This is an optional attribute. Its meaning depends on the value of the *ProtocolType*.
 
 > [!NOTE]
-> In a given discovery profile, the *ProtocolType* in the actions has to be the same. In other words, the actions need to use the same discovery mechanism. 
+> In a given discovery profile, the *ProtocolType* in the actions has to be the same. In other words, the actions need to use the same discovery mechanism.
 
 ### SNMP discovery
 
@@ -55,7 +55,7 @@ SNMP discovery actions have the following fields:
 
 - **Name**: The name of the action in this discovery profile. The name has to be unique in the profile and can be referenced by the CI Types.
 
-- **ProtocolType**: This defines the discovery mechanism and is set to *SNMP*, *SNMPv2* or *SNMPv3*.
+- **ProtocolType**: This defines the discovery mechanism and is set to *SNMP*, *SNMPv2* or *SNMPv3*.
 
 - **Method**: The method to be used. The supported value for SNMP is *GetRequest*.
 
@@ -68,94 +68,94 @@ SNMP discovery actions have the following fields:
 
 In addition to the discovery actions, the discovery profile also needs to contain credentials:
 
-- For **SNMP** or **SNMPv2**, only a get community string has to be configured in the field *getCommunity*.
+- For **SNMP** or **SNMPv2**, only a get community string has to be configured in the field *getCommunity*.
 
     The example below illustrates a discovery profile with SNMPv2 discovery actions.
 
     ```json
-    {                                         
-       "Actions": [{                         
-             "Method": "GetRequest",          
-             "Name": "sysDescr",              
-             "Parameter": "1.3.6.1.2.1.1.1.0",
-             "Port": 161,                     
-             "ProtocolType": "SNMPv2"         
-          },                                  
-          {                                   
-             "Method": "GetRequest",          
-             "Name": "sysObjectID",           
-             "Parameter": "1.3.6.1.2.1.1.2.0",
-             "Port": 161,                     
-             "ProtocolType": "SNMPv2"         
-          },                                  
-          {                                   
-             "Method": "GetRequest",          
-             "Name": "sysUpTime",             
-             "Parameter": "1.3.6.1.2.1.1.3.0",
-             "Port": 161,                     
-             "ProtocolType": "SNMPv2"         
-          },                                  
-          {                                   
-             "Method": "GetRequest",          
-             "Name": "sysContact",            
-             "Parameter": "1.3.6.1.2.1.1.4.0",
-             "Port": 161,                     
-             "ProtocolType": "SNMPv2"         
-          },                                  
-          {                                   
-             "Method": "GetRequest",          
-             "Name": "sysName",               
-             "Parameter": "1.3.6.1.2.1.1.5.0",
-             "Port": 161,                     
-             "ProtocolType": "SNMPv2"         
-          },                                  
-          {                                   
-             "Method": "GetRequest",          
-             "Name": "sysLocation",           
-             "Parameter": "1.3.6.1.2.1.1.6.0",
-             "Port": 161,                     
-             "ProtocolType": "SNMPv2"         
-          },                                  
-          {                                   
-             "Method": "GetRequest",          
-             "Name": "sysServices",           
-             "Parameter": "1.3.6.1.2.1.1.7.0",
-             "Port": 161,                     
-             "ProtocolType": "SNMPv2"         
-          }                                   
-       ],                                    
-       "Credentials": {                       
-          "CommunitySettings": {              
-             "GetCommunity": "public"         
-                                              
-          }                                   
-       }                                      
-    }                                         
+    {
+     "Actions": [{
+     "Method": "GetRequest",
+     "Name": "sysDescr",
+     "Parameter": "1.3.6.1.2.1.1.1.0",
+     "Port": 161,
+     "ProtocolType": "SNMPv2"
+     },
+     {
+     "Method": "GetRequest",
+     "Name": "sysObjectID",
+     "Parameter": "1.3.6.1.2.1.1.2.0",
+     "Port": 161,
+     "ProtocolType": "SNMPv2"
+     },
+     {
+     "Method": "GetRequest",
+     "Name": "sysUpTime",
+     "Parameter": "1.3.6.1.2.1.1.3.0",
+     "Port": 161,
+     "ProtocolType": "SNMPv2"
+     },
+     {
+     "Method": "GetRequest",
+     "Name": "sysContact",
+     "Parameter": "1.3.6.1.2.1.1.4.0",
+     "Port": 161,
+     "ProtocolType": "SNMPv2"
+     },
+     {
+     "Method": "GetRequest",
+     "Name": "sysName",
+     "Parameter": "1.3.6.1.2.1.1.5.0",
+     "Port": 161,
+     "ProtocolType": "SNMPv2"
+     },
+     {
+     "Method": "GetRequest",
+     "Name": "sysLocation",
+     "Parameter": "1.3.6.1.2.1.1.6.0",
+     "Port": 161,
+     "ProtocolType": "SNMPv2"
+     },
+     {
+     "Method": "GetRequest",
+     "Name": "sysServices",
+     "Parameter": "1.3.6.1.2.1.1.7.0",
+     "Port": 161,
+     "ProtocolType": "SNMPv2"
+     }
+     ],
+     "Credentials": {
+     "CommunitySettings": {
+     "GetCommunity": "public"
+
+     }
+     }
+    }
     ```
 
 - For **SNMPv3**, more extensive credentials are needed, as illustrated below:
 
     ```json
-    {                                                  
-       "Actions": [{                                  
-             "Method": "GetRequest",                   
-             "Name": "sysDescr",                       
-             "Parameter": "1.3.6.1.2.1.1.1.0",         
-             "Port": 16102,                            
-             "ProtocolType": "SNMPv3"                  
-             }                                         
-       ],                                             
-       "Credentials": {                                
-             "SnmpV3Settings": {                       
-                "Username": "user",                    
-                "SecurityLevel":"AuthPriv",            
-                "AuthenticationPassword": "public",    
-                "EncryptionPassword" : "private",      
-                "AuthenticationAlgorithm" : "HMAC_MD5",
-                "EncryptionAlgorithm" : "AES128"       
-                }                                      
-             }                                         
-    }                                                  
+    {
+     "Actions": [{
+     "Method": "GetRequest",
+     "Name": "sysDescr",
+     "Parameter": "1.3.6.1.2.1.1.1.0",
+     "Port": 16102,
+     "ProtocolType": "SNMPv3"
+     }
+     ],
+     "Credentials": {
+     "SnmpV3Settings": {
+     "Username": "user",
+    "SecurityLevel":"AuthPriv",
+     "AuthenticationPassword": "public",
+     "EncryptionPassword" : "private",
+     "AuthenticationAlgorithm" : "HMAC_MD5",
+     "EncryptionAlgorithm" : "AES128"
+     }
+     }
+    }
     ```
 
     The following values are supported for “SecurityLevel”:
@@ -217,7 +217,7 @@ HTTP discovery actions have the following fields:
 - **ProtocolType**: This defines the discovery mechanism and is set to *HTTP*.
 
     > [!NOTE]
-    > To use HTTPS, set *ProtocolType* to *HTTPS* instead. However, in that case the DMA hosting the DataMiner IDP Discovery element must to trust the certificate issued by the device in order to successfully process the response of the device over HTTPS.
+    > To use HTTPS, set *ProtocolType* to *HTTPS* instead. However, in that case the DMA hosting the DataMiner IDP Discovery element must to trust the certificate issued by the device in order to successfully process the response of the device over HTTPS.
 
 - **Method**: The method to be used. The supported value for HTTP is *GET*.
 
@@ -230,22 +230,22 @@ HTTP discovery actions have the following fields:
 The example below illustrates a discovery profile with one HTTP discovery action.
 
 ```json
-{                                        
-   "Actions": [{                        
-         "Method": "GET",                
-         "Name": "GET_80",               
-         "Parameter": "about/index.html",
-         "Port": 80,                     
-         "ProtocolType": "HTTP",         
-         "Options": [{                  
-                    "q=version",         
-                    "src=client"         
-                }                        
-            ]                           
-                                         
-      }                                  
-   ]                                    
-}                                        
+{
+ "Actions": [{
+ "Method": "GET",
+ "Name": "GET_80",
+ "Parameter": "about/index.html",
+ "Port": 80,
+ "ProtocolType": "HTTP",
+ "Options": [{
+ "q=version",
+ "src=client"
+ }
+ ]
+
+ }
+ ]
+}
 ```
 
 In the example above, the discovery action will perform an HTTP GET towards the device on port 80 using the path and query component */about/index.html?q=version&src=client*.
@@ -270,21 +270,21 @@ Serial discovery actions have the following fields:
 The example below illustrates a discovery profile with one serial discovery action.
 
 ```json
-{                                                                         
-   "Actions": [                                                          
-   {                                                                      
-      "Method": "GET",                                                    
-      "Name": "GetModel",                                                 
-      "Parameter": "030B534F4E59000100B000000D53544154676574204D4F44454C",
-      "Port": 53484,                                                      
-      "ProtocolType": "Serial"                                            
-   }                                                                      
-   ]                                                                     
-}                                                                         
+{
+ "Actions": [
+ {
+ "Method": "GET",
+ "Name": "GetModel",
+ "Parameter": "030B534F4E59000100B000000D53544154676574204D4F44454C",
+ "Port": 53484,
+ "ProtocolType": "Serial"
+ }
+ ]
+}
 ```
 
 > [!NOTE]
-> During serial discovery, the command will first be sent via UDP. If the device does not respond in 5 seconds, the command will be sent via TCP. 
+> During serial discovery, the command will first be sent via UDP. If the device does not respond in 5 seconds, the command will be sent via TCP.
 
 ### Telnet discovery
 
@@ -307,46 +307,46 @@ Credentials can be specified by adding username and password under *GenericSetti
 For example:
 
 ```json
-{                                                       
-     "Actions": [                                      
-           {                                            
-                "Name": "CheckPrompt",                  
-                "Method": "welcome",                    
-                "Parameter": "",                        
-                "Port": 23,                             
-                "ProtocolType": "Telnet"                
-           },                                           
-           {                                            
-                "Name": "Command",                      
-                "Method": "command",                    
-                "Parameter": "cat /etc/os-release",     
-                "Port": 23,                             
-                "ProtocolType": "Telnet"                
-                                                        
-           },                                           
-          {                                             
-                "Name": "Commands",                     
-                "Method": "command",                    
-                "Parameter": "show version",            
-                "Port": 23,                             
-                "ProtocolType": "Telnet",               
-                "Options": [                           
-                     {                                  
-                           "Option": "enable"           
-                     },                                 
-                     {                                  
-                           "Option": "terminal length 0"
-                     }                                  
-                ]                                      
-           }                                            
-     ],                                                
-     "Credentials": {                                   
-           "GenericSettings": {                         
-                "Username": "test",                     
-                "Password": "test123"                   
-           }                                            
-     }                                                  
-}                                                       
+{
+ "Actions": [
+ {
+ "Name": "CheckPrompt",
+ "Method": "welcome",
+ "Parameter": "",
+ "Port": 23,
+ "ProtocolType": "Telnet"
+ },
+ {
+ "Name": "Command",
+ "Method": "command",
+ "Parameter": "cat /etc/os-release",
+ "Port": 23,
+ "ProtocolType": "Telnet"
+
+ },
+ {
+ "Name": "Commands",
+ "Method": "command",
+ "Parameter": "show version",
+ "Port": 23,
+ "ProtocolType": "Telnet",
+ "Options": [
+ {
+ "Option": "enable"
+ },
+ {
+ "Option": "terminal length 0"
+ }
+ ]
+ }
+ ],
+ "Credentials": {
+ "GenericSettings": {
+ "Username": "test",
+ "Password": "test123"
+ }
+ }
+}
 ```
 
 ### WMI discovery
@@ -373,39 +373,39 @@ Credentials can be specified by adding username and password under *GenericSetti
 For example:
 
 ```json
-{                                                 
-   "Actions": [                                  
-      {                                           
-         "Name": "System Name",                   
- "Method": "root\\cimv2",                       
- "Parameter": "Win32_OperatingSystem\\Name",    
-         "Port": 135,                             
-         "ProtocolType": "WMI"                    
-                                                  
-      },                                          
-      {                                           
-         "Name": "SLDataMiner Active",            
- "Method": "root\\cimv2",                       
- "Parameter": "Win32_Service\\Name",            
-         "Port": 135,                             
-         "ProtocolType": "WMI",                   
-         "Options": [                            
-               {                                  
-                   "Option": "Name like 'SLDataM%"
-               },                                 
-               {                                  
-                  "Option": "Status='OK'"         
-               }                                  
-            ]                                    
-         }                                        
-   ],                                            
-   "Credentials": {                               
-      "GenericSettings": {                        
-         "Username": "JohnD",                     
-         "Password": "ThisIsMyPa$$w0rd"           
-      }                                           
-   }                                              
-}                                                 
+{
+ "Actions": [
+ {
+ "Name": "System Name",
+ "Method": "root\\cimv2",
+ "Parameter": "Win32_OperatingSystem\\Name",
+ "Port": 135,
+ "ProtocolType": "WMI"
+
+ },
+ {
+ "Name": "SLDataMiner Active",
+ "Method": "root\\cimv2",
+ "Parameter": "Win32_Service\\Name",
+ "Port": 135,
+ "ProtocolType": "WMI",
+ "Options": [
+ {
+ "Option": "Name like 'SLDataM%"
+ },
+ {
+ "Option": "Status='OK'"
+ }
+ ]
+ }
+ ],
+ "Credentials": {
+ "GenericSettings": {
+ "Username": "JohnD",
+ "Password": "ThisIsMyPa$$w0rd"
+ }
+ }
+}
 ```
 
-In the example above, the first action corresponds to WMI query "SELECT Name from Win32_OperatingSystem". The second action is a query with instance filtering and translates into "SELECT Name FROM Win32_Service WHERE Name like 'SLDataM%' and Status = 'OK'".
+In the example above, the first action corresponds to WMI query "SELECT Name from Win32_OperatingSystem". The second action is a query with instance filtering and translates into "SELECT Name FROM Win32_Service WHERE Name like 'SLDataM%' and Status = 'OK'".

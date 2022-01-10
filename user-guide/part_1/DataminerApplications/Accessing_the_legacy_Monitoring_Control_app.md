@@ -5,7 +5,7 @@ The legacy HTML5 Monitoring & Control app is available in older DataMiner versio
 To access the app, open a browser and, depending on your setup, go to one of the following addresses:
 
 ```txt
-http://[DMA]/m 
+http://[DMA]/m
 https://[DMA]/m
 ```
 
@@ -16,7 +16,7 @@ Alternatively, you can browse directly to the IP of the DMA in a browser that do
 
 The first time you start the app, you will be asked to enter your account details.
 
-If, in the future, you want to log on automatically, select *remember me* to have your account details saved locally on your device.
+If, in the future, you want to log on automatically, select *remember me* to have your account details saved locally on your device.
 
 > [!NOTE]
 > -  When a user for whom two-step authentication is enabled logs on to DataMiner using the app, a challenge will be shown to which the user has to respond. If that response is correct, then access will be granted. If not, access will be denied and the user will be redirected to the logon screen.

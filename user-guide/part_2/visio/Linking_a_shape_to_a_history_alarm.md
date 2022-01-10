@@ -4,7 +4,7 @@ From DataMiner 10.2.0/10.1.8 onwards, when a shape is linked to an element, para
 
 Configure the shape data field as follows:
 
-1. Add a shape data field of type **HistoryMode** to the shape or page, depending on whether you want to show only this shape in history mode, or all shapes on the page.
+1. Add a shape data field of type **HistoryMode** to the shape or page, depending on whether you want to show only this shape in history mode, or all shapes on the page.
 
 2. Set the value of the shape data field as follows:
 

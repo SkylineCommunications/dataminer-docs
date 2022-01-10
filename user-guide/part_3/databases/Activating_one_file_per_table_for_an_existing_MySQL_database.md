@@ -14,7 +14,7 @@ When you set up the general MySQL database of a new DMA, you have to activate th
 
     1. Go to *Startup Variables*.
 
-    2. In the *InnoDB Parameters* tab, go to the *Datafiles* section.
+    2. In the *InnoDB Parameters* tab, go to the *Datafiles* section.
 
     3. Select the option *One File per Table*.
 

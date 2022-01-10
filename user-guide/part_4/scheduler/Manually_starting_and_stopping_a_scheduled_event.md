@@ -4,7 +4,7 @@ Even if an event has been scheduled to be executed at a different time, whether 
 
 To do so:
 
-1. In the *Scheduler* module, go to the *timeline \> EVENTS* tab.
+1. In the *Scheduler* module, go to the *timeline \> EVENTS* tab.
 
 2. Right-click the colored rectangle indicating the task on the timeline. In the right-click menu:
 

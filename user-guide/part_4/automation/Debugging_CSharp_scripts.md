@@ -2,7 +2,7 @@
 
 To execute scripts in debug mode:
 
-- Expand the *Advanced* section below the C# code block, and select the option *Compile in DEBUG mode*.
+- Expand the *Advanced* section below the C# code block, and select the option *Compile in DEBUG mode*.
 
 When you do so, the following things will happen when a script is executed:
 

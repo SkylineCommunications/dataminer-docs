@@ -2,10 +2,10 @@
 
 #### Equals(Object)
 
-Determines whether the specified object is equal to the current object. Returns *true* if the specified object is equal to the current object.
+Determines whether the specified object is equal to the current object. Returns *true* if the specified object is equal to the current object.
 
 ```txt
-bool Equals(Object obj)                    
+bool Equals(Object obj)
 bool Equals(AutomationEntryPointType other)
 ```
 

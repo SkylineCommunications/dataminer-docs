@@ -1,6 +1,6 @@
 ## Advanced analytics features in the Alarm Console
 
-A number of features in the Alarm Console make use of the artificial intelligence capabilities provided by DataMiner Analytics. These features are only available on systems with a Cassandra database. They can each be activated or deactivated in System Center, via *System Center \> System settings* > *analytics config*.
+A number of features in the Alarm Console make use of the artificial intelligence capabilities provided by DataMiner Analytics. These features are only available on systems with a Cassandra database. They can each be activated or deactivated in System Center, via *System Center \> System settings* > *analytics config*.
 
 These features are:
 
@@ -48,7 +48,7 @@ However, note that in case there is both a data range in the protocol and an ala
 
 #### Configuration in System Center
 
-In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *proactive cap detection*. The following settings are available there:
+In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *proactive cap detection*. The following settings are available there:
 
 - *Enabled*: Allows you to activate or deactivate this feature.
 
@@ -106,7 +106,7 @@ In the Alarm Console, alarm groups are displayed as a special kind of alarm entr
 
 - The root time of the group is the time when the most recent alarm in the group occurred, at the moment when the group was created.
 
-- If alarms are added to a group or removed from a group, the alarm type will be updated from *New alarm* to *Base alarms changed*.
+- If alarms are added to a group or removed from a group, the alarm type will be updated from *New alarm* to *Base alarms changed*.
 
 - You can expand the group to view all alarms within it.
 
@@ -118,7 +118,7 @@ In the Alarm Console, alarm groups are displayed as a special kind of alarm entr
 
 #### Configuration in System Center
 
-In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *automatic incident tracking*. The following settings are available there:
+In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *automatic incident tracking*. The following settings are available there:
 
 - *Enabled*: Allows you to activate or deactivate this feature. Note that when you upgrade to DataMiner 10.0.11, the feature is automatically disabled, unless it has previously been activated as a soft-launch feature.
 
@@ -136,9 +136,9 @@ From DataMiner 10.2.0/10.1.4 onwards, automatic incident tracking can also take 
 
 The following basic configuration is needed in Cube:
 
-- For the alarm properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom alarm property](Changing_custom_alarm_properties.md#adding-a-custom-alarm-property).
+- For the alarm properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom alarm property](Changing_custom_alarm_properties.md#adding-a-custom-alarm-property).
 
-- For the element, service and view properties that should be taken into account, the option *Make this property available for alarm filtering* must be selected. See [Adding a custom property to an item](../elements/Managing_element_properties.md#adding-a-custom-property-to-an-item).
+- For the element, service and view properties that should be taken into account, the option *Make this property available for alarm filtering* must be selected. See [Adding a custom property to an item](../elements/Managing_element_properties.md#adding-a-custom-property-to-an-item).
 
 In addition, the following configuration is needed in the file *C:\\Skyline DataMiner\\analytics\\configuration.xml*:
 
@@ -146,60 +146,60 @@ In addition, the following configuration is needed in the file *C:\\Skyline Data
 
     ```xml
     <item type="skyline::dataminer::analytics::workers::configuration::XMLConfigurationProperty&lt;class std::vector&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration:: IGenericPropertyVisitorConfiguration&gt;,class std::allocator&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration:: IGenericPropertyVisitorConfiguration&gt; &gt; &gt; &gt;">
-      <Value>                                                                                                                                                                                                                                                                                                                                                                                                                             
-        [One <item> tag per property that has to be taken into account. See below.]                                                                                                                                                                                                                                                                                                                                                       
-      </Value>                                                                                                                                                                                                                                                                                                                                                                                                                            
-      <Accessibility>2</Accessibility>                                                                                                                                                                                                                                                                                                                                                                                                   
-      <Name>GenericProperties</Name>                                                                                                                                                                                                                                                                                                                                                                                                     
-    </item>                                                                                                                                                                                                                                                                                                                                                                                                                             
+      <Value>
+        [One <item> tag per property that has to be taken into account. See below.]
+      </Value>
+      <Accessibility>2</Accessibility>
+      <Name>GenericProperties</Name>
+    </item>
     ```
 
 - For an **element property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the element property and \[THRESHOLD\] with the desired threshold. Alarms for elements with the same property value will only be grouped if the proportion of elements in alarm among all elements with that property value is greater than this threshold.
 
     ```xml
     <item type="skyline::dataminer::analytics::workers::configuration::GenericElementPropertyVisitorConfiguration">
-      <enable>true</enable>                                                                                             
-      <threshold>[THRESHOLD]</threshold>                                                                              
-      <name>[PROPERTY_NAME]</name>                                                                                    
-    </item>                                                                                                            
+      <enable>true</enable>
+      <threshold>[THRESHOLD]</threshold>
+      <name>[PROPERTY_NAME]</name>
+    </item>
     ```
 
- 
+
 
 - For an **alarm property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the alarm property.
 
     ```xml
     <item type="skyline::dataminer::analytics::workers::configuration::GenericAlarmPropertyVisitorConfiguration">
-      <enable>true</enable>                                                                                           
-      <name>[PROPERTY_NAME]</name>                                                                                  
-    </item>                                                                                                          
+      <enable>true</enable>
+      <name>[PROPERTY_NAME]</name>
+    </item>
     ```
 
 - For a **view property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the view property.
 
     ```xml
     <item type="skyline::dataminer::analytics::workers::configuration::GenericViewPropertyVisitorConfiguration">
-      <enable>true</enable>                                                                                          
-      <name>[PROPERTY_NAME]</name>                                                                                 
-    </item>                                                                                                         
+      <enable>true</enable>
+      <name>[PROPERTY_NAME]</name>
+    </item>
     ```
 
 - For a **service property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the service property.
 
     ```xml
     <item type="skyline::dataminer::analytics::workers::configuration::GenericServicePropertyVisitorConfiguration">
-      <enable>true</enable>                                                                                             
-      <name>[PROPERTY_NAME]</name>                                                                                    
-    </item>                                                                                                            
+      <enable>true</enable>
+      <name>[PROPERTY_NAME]</name>
+    </item>
     ```
 
-- After you have edited the configuration file, **restart the SLAnalytics process** to make sure your changes take effect.
+- After you have edited the configuration file, **restart the SLAnalytics process** to make sure your changes take effect.
 
 ### Monitoring of trend patterns
 
 From DataMiner 10.0.7 onwards, DataMiner can recognize patterns in trend graphs. From DataMiner 10.0.13 onwards, you can also activate alarm monitoring of trend patterns, so that a "suggestion event" type alarm is triggered whenever a specific pattern is detected (see [Suggestion events](#suggestion-events) ).
 
-You can activate this type of monitoring by selecting a pattern in a trend graph, creating a tag for it, and activating the option *Generate an alarm when detected.* For more detailed information on how to do this, see [Working with pattern matching](../trending/Working_with_pattern_matching.md).
+You can activate this type of monitoring by selecting a pattern in a trend graph, creating a tag for it, and activating the option *Generate an alarm when detected.* For more detailed information on how to do this, see [Working with pattern matching](../trending/Working_with_pattern_matching.md).
 
 The following limitations apply:
 
@@ -209,14 +209,14 @@ The following limitations apply:
 
     - As soon as DataMiner uses more than 1.5 GB of internal memory for this feature, the following notice will be displayed in the Alarm Console:
 
-        *Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.* 
+        *Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.*
 
         This notice will appear at most every 2 weeks or after a DataMiner restart.
         In order to reduce memory usage, you can either remove patterns for which monitoring has been activated or restrict the number of parameters for which it has been activated (e.g. by specifying a display key in case of table parameters).
 
     - As soon as DataMiner uses more than 2 GB of internal memory for this feature, the following notice will be displayed in the Alarm Console:
 
-        *Pattern matching memory critical, patterns with suggestion events enabled may not match properly.* 
+        *Pattern matching memory critical, patterns with suggestion events enabled may not match properly.*
 
         This notice will appear at most every 2 weeks or after a DataMiner restart.
         Also, when you create a pattern in this case, DataMiner will not activate monitoring, even if you selected the *Generate an alarm when detected* option.

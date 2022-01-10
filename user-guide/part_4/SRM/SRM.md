@@ -26,8 +26,8 @@ The following topics provide more information on this module:
 
 > [!NOTE]
 > -  DataMiner SRM requires a general database of type Cassandra as well as the following licenses:
->     - ResourceManager: Grants access to the *Resources* or *Resource Manager* module.
->     - ServiceManager: Grants access to the *Services* or *Service Manager* module.
+>     - ResourceManager: Grants access to the *Resources* or *Resource Manager* module.
+>     - ServiceManager: Grants access to the *Services* or *Service Manager* module.
 >     - SRM Concurrency: Determines the maximum number of concurrent bookings. If no SRM Concurrency license is present, there is no limit to the possible number of concurrent bookings.
 > -  From DataMiner 10.0.0/10.0.2 onwards, DataMiner SRM also requires DataMiner Indexing. See [DataMiner Indexing Engine](../../part_3/databases/DataMiner_Indexing_Engine.md).
 > -  DataMiner SRM log information can be found in the *SLResourceManager*, *SLServiceManager* and (from DataMiner 9.5.7 onwards) *SLFunctionManager* log file.

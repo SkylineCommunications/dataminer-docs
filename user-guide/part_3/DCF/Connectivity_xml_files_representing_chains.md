@@ -7,7 +7,7 @@ To configure connectivity chains:
     > [!NOTE]
     > The name of the subfolder will be the name of the connectivity chain configuration.
 
-2. Create a *Connectivity.xml* file in each subfolder. In these files, you can define a connectivity path by specifying a number of so-called mappings for every connection in that path.
+2. Create a *Connectivity.xml* file in each subfolder. In these files, you can define a connectivity path by specifying a number of so-called mappings for every connection in that path.
 
     In a mapping, you can compare internal connectivity connections with either a static or a dynamic value, and add conditions. In case of a match, the internal connection is considered part of the connectivity path.
 
@@ -22,46 +22,46 @@ To configure connectivity chains:
 The following example illustrates the basic syntax of a *Connectivity.xml* file.
 
 ```xml
-<DCF>                                                                                                                                                                                 
-  <Links>                                                                                                                                                                               
-    <Link id="edf13cc4-e740-4bfc-82e1-459893c0489e"      itemA="DCF Stream Output" itemB="QA_Basic_Element_RF" type="Service">                                                        
-      <Map propertyA="" propertyB="SVC Name" match="WildCard" type="Optional"     value="*[PROPERTYB]*" direction="Undefined" invert="false"     referenceValue="SVCNAME:///" />
-      <Map propertyA="" propertyB="SVC Name" match="WildCard" type="Optional"     value="*[PROPERTYB]*" direction="Undefined" invert="false"     referenceValue="RDGNAME:///" />
-    </Link>                                                                                                                                                                               
-    <Link id="4a24258d-2833-497b-a376-2c6103fd2637"       itemA="QA_Basic_Element_ENC" itemB="QA_Basic_Element_DCM" type="Protocol">                                                  
-      <Map propertyA="Primary" propertyB="" match="Exact" type="Optional"      value="TRUE" direction="Undefined" invert="false" referenceValue="" />                                   
-      <Map propertyA="Port" propertyB="VLAN" match="Exact" type="Optional"      value="" direction="Undefined" invert="false" referenceValue="" />                                      
-    </Link>                                                                                                                                                                               
-    <Link id="d1415b3f-0203-425c-b056-cafe52cdf8cc"      itemA="QA_Basic_Element_ENC" itemB="QA_Basic_Element_RF" type="Protocol">                                                    
-      <Map propertyA="Primary" propertyB="" match="Exact" type="Optional"      value="TRUE" direction="Undefined" invert="false" referenceValue="" />                                   
-    </Link>                                                                                                                                                                               
-    <Link id="4eb68cee-2423-486d-8ffe-ed97c23edaf6"      itemA="QA_Basic_Element_DCM" itemB="QA_Basic_Element_Dish" type="Protocol">                                                  
-      <Map propertyA="VLAN" propertyB="streams" match="list" type="Optional"      value="" direction="Undefined" invert="false" referenceValue="" />                                    
-    </Link>                                                                                                                                                                               
-  </Links>                                                                                                                                                                              
-</DCF>                                                                                                                                                                                
+<DCF>
+  <Links>
+    <Link id="edf13cc4-e740-4bfc-82e1-459893c0489e" itemA="DCF Stream Output" itemB="QA_Basic_Element_RF" type="Service">
+      <Map propertyA="" propertyB="SVC Name" match="WildCard" type="Optional" value="*[PROPERTYB]*" direction="Undefined" invert="false" referenceValue="SVCNAME:///" />
+      <Map propertyA="" propertyB="SVC Name" match="WildCard" type="Optional" value="*[PROPERTYB]*" direction="Undefined" invert="false" referenceValue="RDGNAME:///" />
+    </Link>
+    <Link id="4a24258d-2833-497b-a376-2c6103fd2637"  itemA="QA_Basic_Element_ENC" itemB="QA_Basic_Element_DCM" type="Protocol">
+      <Map propertyA="Primary" propertyB="" match="Exact" type="Optional"  value="TRUE" direction="Undefined" invert="false" referenceValue="" />
+      <Map propertyA="Port" propertyB="VLAN" match="Exact" type="Optional"  value="" direction="Undefined" invert="false" referenceValue="" />
+    </Link>
+    <Link id="d1415b3f-0203-425c-b056-cafe52cdf8cc" itemA="QA_Basic_Element_ENC" itemB="QA_Basic_Element_RF" type="Protocol">
+      <Map propertyA="Primary" propertyB="" match="Exact" type="Optional"  value="TRUE" direction="Undefined" invert="false" referenceValue="" />
+    </Link>
+    <Link id="4eb68cee-2423-486d-8ffe-ed97c23edaf6" itemA="QA_Basic_Element_DCM" itemB="QA_Basic_Element_Dish" type="Protocol">
+      <Map propertyA="VLAN" propertyB="streams" match="list" type="Optional"  value="" direction="Undefined" invert="false" referenceValue="" />
+    </Link>
+  </Links>
+</DCF>
 ```
 
-The following example illustrates a *Connectivity.xml* file where hops are configured to indicate the position of elements in the chain:
+The following example illustrates a *Connectivity.xml* file where hops are configured to indicate the position of elements in the chain:
 
 ```xml
-<DCF>                                                                                                                                                                                         
-  <!-- element chains: entry point (hop:1) -> switch (hop:2) -> basic (hop:3) -> switch (hop:4) !-->                                                                                            
-  <Links>                                                                                                                                                                                       
-    <Link id="D21FE771-6F6A-4221-8E78-8F10E466E1E1" itemA="Hop Count"      itemB="QA_Basic_Element_DCF" type="Service" hop="1">                                                               
-      <Map propertyA="" propertyB="SVC Name" match="WildCard" type="Mandatory"     value="*[REFERENCE:0]*" direction="InputToOutput" invert="false"     referenceValue="SVCNAME:///" /> 
-    </Link>                                                                                                                                                                                       
-    <Link id="AFFB575B-68E3-474A-88F4-7AC82E9724A3"  itemA="QA_backupSwitch_DCF"      itemB="QA_backupSwitch_DCF" type="Protocol" hop="2">                                                    
-      <Map propertyA="IP" propertyB="" match="Exact" type="Mandatory"     value="[REFERENCE:0]" direction="Undefined" invert="false"     referenceValue="SVCPROPERTY:///Service IP" />    
-    </Link>                                                                                                                                                                                       
-    <Link id="0BC52454-B86C-43A2-AB27-6850FADD79F5" itemA="QA_Basic_Element_DCF"      itemB="QA_Basic_Element_DCF" type="Protocol" hop="3">                                                   
-      <Map propertyA="Port" propertyB="" match="Exact" type="Mandatory"     value="[REFERENCE:0]" direction="Undefined" invert="false"     referenceValue="SVCPROPERTY:///Service Port" />
-    </Link>                                                                                                                                                                                       
-    <Link id="800B165F-C73D-4AC7-A0A7-BD6EB3787AF5" itemA="QA_backupSwitch_DCF"      itemB="QA_backupSwitch_DCF" type="Protocol" hop="4">                                                     
-      <Map propertyA="Port" propertyB="" match="Exact" type="Mandatory"     value="[REFERENCE:0]" direction="Undefined" invert="false"     referenceValue="SVCPROPERTY:///Service Port" />
-    </Link>                                                                                                                                                                                       
-  </Links>                                                                                                                                                                                      
-</DCF>                                                                                                                                                                                        
+<DCF>
+  <!-- element chains: entry point (hop:1) -> switch (hop:2) -> basic (hop:3) -> switch (hop:4) !-->
+  <Links>
+    <Link id="D21FE771-6F6A-4221-8E78-8F10E466E1E1" itemA="Hop Count" itemB="QA_Basic_Element_DCF" type="Service" hop="1">
+      <Map propertyA="" propertyB="SVC Name" match="WildCard" type="Mandatory" value="*[REFERENCE:0]*" direction="InputToOutput" invert="false" referenceValue="SVCNAME:///" />
+    </Link>
+    <Link id="AFFB575B-68E3-474A-88F4-7AC82E9724A3" itemA="QA_backupSwitch_DCF" itemB="QA_backupSwitch_DCF" type="Protocol" hop="2">
+      <Map propertyA="IP" propertyB="" match="Exact" type="Mandatory" value="[REFERENCE:0]" direction="Undefined" invert="false" referenceValue="SVCPROPERTY:///Service IP" />
+    </Link>
+    <Link id="0BC52454-B86C-43A2-AB27-6850FADD79F5" itemA="QA_Basic_Element_DCF" itemB="QA_Basic_Element_DCF" type="Protocol" hop="3">
+      <Map propertyA="Port" propertyB="" match="Exact" type="Mandatory" value="[REFERENCE:0]" direction="Undefined" invert="false" referenceValue="SVCPROPERTY:///Service Port" />
+    </Link>
+    <Link id="800B165F-C73D-4AC7-A0A7-BD6EB3787AF5" itemA="QA_backupSwitch_DCF" itemB="QA_backupSwitch_DCF" type="Protocol" hop="4">
+      <Map propertyA="Port" propertyB="" match="Exact" type="Mandatory" value="[REFERENCE:0]" direction="Undefined" invert="false" referenceValue="SVCPROPERTY:///Service Port" />
+    </Link>
+  </Links>
+</DCF>
 ```
 
 ### Overview of tags and attributes of Connectivity.xml files representing chains
@@ -80,7 +80,7 @@ The section below lists the tags and attributes that can be used within a *Conne
 
 #### \<Link> tag
 
-Inside the *\<Links>* tag, add a *\<Link>* tag for every connection in the connectivity path.
+Inside the *\<Links>* tag, add a *\<Link>* tag for every connection in the connectivity path.
 
 A *\<Link>* tag can have the following attributes:
 
@@ -134,27 +134,27 @@ A *\<Link>* tag can have the following attributes:
     If you want the value for the service entry point to be saved, set this attribute to “true”.
 
     > [!NOTE]
-    > When the *RedundancyGroupConnectivity* tag is set to “true”, always set the *includeValueInContext* attribute to “true”.
+    > When the *RedundancyGroupConnectivity* tag is set to “true”, always set the *includeValueInContext* attribute to “true”.
 
 - **hop**
 
-    Available from DataMiner 9.5.2 onwards.     This attribute should be set to a number, to indicate the position of this particular connection in the connectivity path. For example, in case of a chain like ElementA \> ElementB \> ElementC \> ElementD, in the corresponding *\<Link>* tags, the hops are configured as 1 > 2 > 3 > 4.     For an example, refer to [Example of Connectivity.xml files representing a chain](#example-of-connectivityxml-files-representing-a-chain).
+    Available from DataMiner 9.5.2 onwards.     This attribute should be set to a number, to indicate the position of this particular connection in the connectivity path. For example, in case of a chain like ElementA \> ElementB \> ElementC \> ElementD, in the corresponding *\<Link>* tags, the hops are configured as 1 > 2 > 3 > 4.     For an example, refer to [Example of Connectivity.xml files representing a chain](#example-of-connectivityxml-files-representing-a-chain).
 
 #### \<Map> tag
 
-Inside a *\<Link>* tag, you can add a number of *\<Map>* tags, in which you can look up and compare properties of internal connections. If all *\<Map>* tag comparisons inside a *\<Link>* are “true”, then the internal connections in question will be linked.
+Inside a *\<Link>* tag, you can add a number of *\<Map>* tags, in which you can look up and compare properties of internal connections. If all *\<Map>* tag comparisons inside a *\<Link>* are “true”, then the internal connections in question will be linked.
 
 > [!NOTE]
 > Up to DataMiner version 9.0.1, only one map is checked for a link of type “Service”.
 
 A *\<Map>* tag can have the following attributes:
 
-- **propertyA** / **propertyB**
+- **propertyA** / **propertyB**
 
-    If you want to compare the values of two properties, then *propertyA* and *propertyB* must contain the names of the two properties of which the values will be compared.     If you want to compare the value of a property to a given value, then either *propertyA* or *propertyB* must contain the name of the property.
+    If you want to compare the values of two properties, then *propertyA* and *propertyB* must contain the names of the two properties of which the values will be compared.     If you want to compare the value of a property to a given value, then either *propertyA* or *propertyB* must contain the name of the property.
 
     > [!NOTE]
-    > -  From DataMiner 9.0.0 CU3 onwards, the *propertyB* attribute is no longer mandatory.
+    > -  From DataMiner 9.0.0 CU3 onwards, the *propertyB* attribute is no longer mandatory.
     > -  While resolving multiple external connections on the same interface is supported from DataMiner 9.5.5 onwards, matching property connections on external connections is currently not yet supported.
 
 - **match**
@@ -187,7 +187,7 @@ A *\<Map>* tag can have the following attributes:
 
 - **value**
 
-    If you want to compare the value of a property (of which the name is specified in *propertyA* or *propertyB*) to a given value, then *value* must contain that value. It can be a fixed value (e.g. “10”, “true”, etc.) or a dynamic value (e.g. “\*\[PROPERTYB\]\*”).     In case of a dynamic value, the following placeholders can be used:
+    If you want to compare the value of a property (of which the name is specified in *propertyA* or *propertyB*) to a given value, then *value* must contain that value. It can be a fixed value (e.g. “10”, “true”, etc.) or a dynamic value (e.g. “\*\[PROPERTYB\]\*”).     In case of a dynamic value, the following placeholders can be used:
 
     - \[PROPERTYA\]
 
@@ -195,7 +195,7 @@ A *\<Map>* tag can have the following attributes:
 
     - \[REFERENCE:*arrayIndex*\]
 
-    The \[REFERENCE:*arrayIndex*\] placeholder will be replaced at runtime by the one of the values from the array stored in the *referenceValue* attribute.     Example: “\[REFERENCE:0\]” will be replaced by the first value from the array stored in the *referenceValue* attribute.
+    The \[REFERENCE:*arrayIndex*\] placeholder will be replaced at runtime by the one of the values from the array stored in the *referenceValue* attribute.     Example: “\[REFERENCE:0\]” will be replaced by the first value from the array stored in the *referenceValue* attribute.
 
 - **direction**
 
@@ -255,7 +255,7 @@ A *\<Map>* tag can have the following attributes:
 
 - **conditions**
 
-    This attribute contains one or more IDs of conditions configured in the *\<Conditions>* tag, combined into a single expression using the logical operators *and*, *not* and *or*.     Example: “*1 and not (2 or 3)*”
+    This attribute contains one or more IDs of conditions configured in the *\<Conditions>* tag, combined into a single expression using the logical operators *and*, *not* and *or*.     Example: “*1 and not (2 or 3)*”
 
 - **operator**
 
@@ -265,35 +265,35 @@ A *\<Map>* tag can have the following attributes:
 
 This tag can be used from DataMiner 9.6.4 onwards, in order to configure an external DCF chain of protocols. Specifying such a chain can improve the stability of the generated DCF chain.
 
-The *Chains* tag is used in conjunction with the *Protocols* tag. In each of that tag’s *Protocol* subtags, a "*chainId*" attribute can be defined. The *Chain* tags within *DCF.Chains* will each contain several *Id* subtags that refer to these chain IDs.
+The *Chains* tag is used in conjunction with the *Protocols* tag. In each of that tag’s *Protocol* subtags, a "*chainId*" attribute can be defined. The *Chain* tags within *DCF.Chains* will each contain several *Id* subtags that refer to these chain IDs.
 
 For example:
 
 ```xml
-<DCF>                                                                                                                                            
-   <Protocols>                                                                                                                                   
-      <Protocol chainId="1">My_Element_DCF_ENTRY_POINT</Protocol>                                                                               
-      <Protocol chainId="2">My_Element_DCF</Protocol>                                                                                           
-      <Protocol chainId="3">My_Element_DCF_END_POINT</Protocol>                                                                                 
-   </Protocols>                                                                                                                                  
-   <Chains>                                                                                                                                      
-      <Chain>                                                                                                                                    
-         <Id>1</Id>                                                                                                                             
-         <Id>2</Id>                                                                                                                             
-         <Id>3</Id>                                                                                                                             
-      </Chain>                                                                                                                                   
-   </Chains>                                                                                                                                     
-   <Links>                                                                                                                                       
-      <Link type="Service" itemB="My_Element_DCF_ENTRY_POINT" itemA="RT_DCF_CHAIN_DEFINITION" id="95F39DDC-1123-40D1-8209-3B4F5C1BA85C">         
-         <Map type="Mandatory" referenceValue="" invert="false" direction="Undefined" value="X" match="exact" propertyB="property" propertyA=""/>
-      </Link>                                                                                                                                    
-   </Links>                                                                                                                                      
-</DCF>                                                                                                                                           
+<DCF>
+ <Protocols>
+ <Protocol chainId="1">My_Element_DCF_ENTRY_POINT</Protocol>
+ <Protocol chainId="2">My_Element_DCF</Protocol>
+ <Protocol chainId="3">My_Element_DCF_END_POINT</Protocol>
+ </Protocols>
+ <Chains>
+ <Chain>
+ <Id>1</Id>
+ <Id>2</Id>
+ <Id>3</Id>
+ </Chain>
+ </Chains>
+ <Links>
+ <Link type="Service" itemB="My_Element_DCF_ENTRY_POINT" itemA="RT_DCF_CHAIN_DEFINITION" id="95F39DDC-1123-40D1-8209-3B4F5C1BA85C">
+ <Map type="Mandatory" referenceValue="" invert="false" direction="Undefined" value="X" match="exact" propertyB="property" propertyA=""/>
+ </Link>
+ </Links>
+</DCF>
 ```
 
-When chains are defined using the *Chains* tag, and an external connection is found that is not expected at that point in the chain, this external connection will be ignored.
+When chains are defined using the *Chains* tag, and an external connection is found that is not expected at that point in the chain, this external connection will be ignored.
 
-A new read-only service property, *Connectivity Status*, will be added as soon as a *Connectivity.xml* file is found that has a valid *Chain* configuration. This property will have the value "Resolved" when the found path contains at least one of the defined *Chain* configurations. It will have the value "Unresolved" if either an exception occurred (e.g. because too many connections were found) or none of the defined chains were found.
+A new read-only service property, *Connectivity Status*, will be added as soon as a *Connectivity.xml* file is found that has a valid *Chain* configuration. This property will have the value "Resolved" when the found path contains at least one of the defined *Chain* configurations. It will have the value "Unresolved" if either an exception occurred (e.g. because too many connections were found) or none of the defined chains were found.
 
 > [!TIP]
 > See also:
@@ -301,7 +301,7 @@ A new read-only service property, *Connectivity Status*, will be added as soon a
 
 #### \<Conditions> tag
 
-Inside the *\<Conditions>* tag, you can add a number of *\<Condition>* tags, which each have their own unique ID, indicated in the “*id*” attribute.
+Inside the *\<Conditions>* tag, you can add a number of *\<Condition>* tags, which each have their own unique ID, indicated in the “*id*” attribute.
 
 Inside a *\<Condition>* tag, you can add the following tags:
 
@@ -327,7 +327,7 @@ Inside a *\<Condition>* tag, you can add the following tags:
 
     Possible values:
 
-    - If *\<Field>* contains “ConnectionType”, *\<Value>* has to contain one of the following values:
+    - If *\<Field>* contains “ConnectionType”, *\<Value>* has to contain one of the following values:
 
         - internal
 
@@ -335,7 +335,7 @@ Inside a *\<Condition>* tag, you can add the following tags:
 
         - physical
 
-    - If *\<Field>* contains “RedundancyElementState”, *\<Value>* has to contain one of the following values:
+    - If *\<Field>* contains “RedundancyElementState”, *\<Value>* has to contain one of the following values:
 
         - AVAILABLE (integer value 1)
 
@@ -347,12 +347,12 @@ Inside a *\<Condition>* tag, you can add the following tags:
 
         - SWITCHING (integer value 5)
 
-    - If *\<Field>* contains any other value, *\<Value>* can contain any character string, with or without the wildcard characters \* and/or ?
+    - If *\<Field>* contains any other value, *\<Value>* can contain any character string, with or without the wildcard characters \* and/or ?
 
-    Alternatively, from DataMiner 9.5.2 onwards, you can specify multiple references (e.g. \[REFERENCE:0\]/REFERENCE:1\]), which will then be replaced by items specified in the referenceValue attribute of the *\<Map>* tag.
+    Alternatively, from DataMiner 9.5.2 onwards, you can specify multiple references (e.g. \[REFERENCE:0\]/REFERENCE:1\]), which will then be replaced by items specified in the referenceValue attribute of the *\<Map>* tag.
 
     > [!NOTE]
-    > Wildcards in the *Condition.Value* tag will only be applied if the *Condition.Compare* tag is set to *equal to masked* or *not equal to masked*. 
+    > Wildcards in the *Condition.Value* tag will only be applied if the *Condition.Compare* tag is set to *equal to masked* or *not equal to masked*.
 
 - **\<Compare>**
 
@@ -379,76 +379,76 @@ Inside a *\<Condition>* tag, you can add the following tags:
     - fails regex
 
     > [!NOTE]
-    > If no wildcards are used in the *Condition.Value* tag, do not use the types *equal to masked* or *not equal to masked*. 
+    > If no wildcards are used in the *Condition.Value* tag, do not use the types *equal to masked* or *not equal to masked*.
 
 Examples:
 
 ```xml
-<Conditions>                                      
-  <Condition id="1">                                
+<Conditions>
+  <Condition id="1">
     <Field>SharedInterfaceProperty:IsEmptySHG</Field>
-    <Value>FALSE</Value>                             
-    <Compare>equal to</Compare>                      
-  </Condition>                                      
-  <Condition id="2">                                
-    <Field>RedundancyElementState</Field>            
-    <Value>Operational</Value>                       
-    <Compare>equal to</Compare>                      
-  </Condition>                                      
-  <Condition id="3">                                
-    <Field>DestinationInterfaceName</Field>          
-    <Value>Output Primary</Value>                    
-    <Compare>equal to</Compare>                      
-  </Condition>                                      
-</Conditions>                                     
+    <Value>FALSE</Value>
+    <Compare>equal to</Compare>
+  </Condition>
+  <Condition id="2">
+    <Field>RedundancyElementState</Field>
+    <Value>Operational</Value>
+    <Compare>equal to</Compare>
+  </Condition>
+  <Condition id="3">
+    <Field>DestinationInterfaceName</Field>
+    <Value>Output Primary</Value>
+    <Compare>equal to</Compare>
+  </Condition>
+</Conditions>
 ```
 
 ```xml
-<Conditions>                                      
-  <Condition id="1">                                
-    <Field>DestinationInterfaceName</Field>          
-    <Value>streamOutband*</Value>                   
-    <Compare>equal to masked</Compare>               
-  </Condition>                                      
-  <Condition id="2">                                
+<Conditions>
+  <Condition id="1">
+    <Field>DestinationInterfaceName</Field>
+    <Value>streamOutband*</Value>
+    <Compare>equal to masked</Compare>
+  </Condition>
+  <Condition id="2">
     <Field>SharedInterfaceProperty:IsEmptySHG</Field>
-    <Value>FALSE</Value>                             
-    <Compare>equal to</Compare>                      
-  </Condition>                                      
-  <Condition id="3">                                
-    <Field>DestinationInterfaceName</Field>          
-    <Value>Output Primary</Value>                    
-    <Compare>equal to</Compare>                      
-  </Condition>                                      
-  <Condition id="4">                                
-    <Field>SourceInterfaceName</Field>               
-    <Value>IO Port*</Value>                         
-    <Compare>equal to masked</Compare>               
-  </Condition>                                      
-</Conditions>                                     
+    <Value>FALSE</Value>
+    <Compare>equal to</Compare>
+  </Condition>
+  <Condition id="3">
+    <Field>DestinationInterfaceName</Field>
+    <Value>Output Primary</Value>
+    <Compare>equal to</Compare>
+  </Condition>
+  <Condition id="4">
+    <Field>SourceInterfaceName</Field>
+    <Value>IO Port*</Value>
+    <Compare>equal to masked</Compare>
+  </Condition>
+</Conditions>
 ```
 
 #### \<Protocols> tag
 
-This tag can be used from DataMiner 9.5.5 onwards, to avoid chain resolving issues when a new external connection is added between elements that were already part of an operational connectivity chain and another element based on a protocol that was not yet described in the *Connectivity.xml* file.
+This tag can be used from DataMiner 9.5.5 onwards, to avoid chain resolving issues when a new external connection is added between elements that were already part of an operational connectivity chain and another element based on a protocol that was not yet described in the *Connectivity.xml* file.
 
-This tag contains a number of *\<Protocol>* subtags that provide a list of allowed protocols. During the chain resolution process, the system will only take elements based on the listed protocols into account.
+This tag contains a number of *\<Protocol>* subtags that provide a list of allowed protocols. During the chain resolution process, the system will only take elements based on the listed protocols into account.
 
 For example:
 
 ```xml
-<DCF>                                 
-  <Protocols>                           
-    <Protocol>MyFirstProtocol</Protocol> 
+<DCF>
+  <Protocols>
+    <Protocol>MyFirstProtocol</Protocol>
     <Protocol>MySecondProtocol</Protocol>
-    <Protocol>MyThirdProtocol</Protocol> 
-  </Protocols>                          
-  ...                                    
-</DCF>                                
+    <Protocol>MyThirdProtocol</Protocol>
+  </Protocols>
+  ...
+</DCF>
 ```
 
 > [!NOTE]
-> From DataMiner 9.6.4 onwards, a *chainId* attribute can be defined in a *Protocol* tag. For more information, see [\<Chains> tag](#chains-tag).
+> From DataMiner 9.6.4 onwards, a *chainId* attribute can be defined in a *Protocol* tag. For more information, see [\<Chains> tag](#chains-tag).
 
 #### referenceValue
 
@@ -459,12 +459,12 @@ See the following table to find out which items can be entered after each placeh
 | Placeholder     | dmaId  | elementId           | parameterId       | name                                    |
 |-----------------|--------|---------------------|-------------------|-----------------------------------------|
 | DCFCONNPROPERTY | DMA ID | Element ID          | DCF connection ID | Name of DCF connection property         |
-| ELNAME          | DMA ID | Element ID          |                   |                                         |
-| ELPROPERTY      | DMA ID | Element ID          |                   | Name of element property                |
+| ELNAME          | DMA ID | Element ID          |                  |                                        |
+| ELPROPERTY      | DMA ID | Element ID          |                  | Name of element property                |
 | PARAMETER       | DMA ID | Element ID          | Parameter ID      | Display key (in case of a table column) |
-| RDGNAME         | DMA ID | Redundancy group ID |                   |                                         |
-| SVCID           | DMA ID | Service ID          |                   |                                         |
-| SVCNAME         | DMA ID | Service ID          |                   |                                         |
-| SVCPROPERTY     | DMA ID | Service ID          |                   | Name of service property                |
-| VIEWNAME        |        | View ID             |                   |                                         |
-| VIEWPROPERTY    |        | View ID             |                   | Name of view property                   |
+| RDGNAME         | DMA ID | Redundancy group ID |                  |                                        |
+| SVCID           | DMA ID | Service ID          |                  |                                        |
+| SVCNAME         | DMA ID | Service ID          |                  |                                        |
+| SVCPROPERTY     | DMA ID | Service ID          |                  | Name of service property                |
+| VIEWNAME        |       | View ID             |                  |                                        |
+| VIEWPROPERTY    |       | View ID             |                  | Name of view property                   |

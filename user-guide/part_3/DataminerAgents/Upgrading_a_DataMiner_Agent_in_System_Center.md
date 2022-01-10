@@ -2,7 +2,7 @@
 
 Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
-1. Go to *Apps* > *System Center*.
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Agents* page.
 
@@ -13,11 +13,11 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
 4. In the panel on the right, click the *Upgrade* button.
 
-5. In the *Schedule* tab of the *Upgrade* window, under *Upgrade package*, select an upgrade package in one of the following two ways:
+5. In the *Schedule* tab of the *Upgrade* window, under *Upgrade package*, select an upgrade package in one of the following two ways:
 
     - Select *Available packages* and then select one of the available packages in the list.
 
-    - Select *New package* and click the ellipsis button (”...”) to select the DataMiner upgrade package (extension *.dmupgrade*).
+    - Select *New package* and click the ellipsis button (”...”) to select the DataMiner upgrade package (extension *.dmupgrade*).
 
     > [!NOTE]
     > -  It is also possible to only upload a new package to the DMA, without installing it yet. To do so, when you have selected the package, click the *Upload only* button.
@@ -27,7 +27,7 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
     - To upgrade the entire cluster, select *All Agents in cluster*.
 
-    - To upgrade one or more individual Agents, select *Individual Agents* and expand the *DataMiner Agents* section to select the Agents or add them by entering an external IP.
+    - To upgrade one or more individual Agents, select *Individual Agents* and expand the *DataMiner Agents* section to select the Agents or add them by entering an external IP.
 
 7. Expand the *Advanced upgrade options* section and select the necessary upgrade options.
 
@@ -40,9 +40,9 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
     | Reboot After Upgrade                  | Select this option if you want the DataMiner Agent(s) to be automatically rebooted at the end of the upgrade procedure.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
     > [!NOTE]
-    > Upgrade options are saved globally. They are saved in *MaintenanceSettings.xml* and synchronized throughout the DMS.
+    > Upgrade options are saved globally. They are saved in *MaintenanceSettings.xml* and synchronized throughout the DMS.
 
-8. For Agents in a Failover setup, open the section *Advanced Failover options* and select the Failover policy, which determines in what order the DMAs are upgraded. The following options are available:
+8. For Agents in a Failover setup, open the section *Advanced Failover options* and select the Failover policy, which determines in what order the DMAs are upgraded. The following options are available:
 
     - Default policy (selected by default)
 
@@ -54,9 +54,9 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
 9. Click *Upgrade* to start the upgrade procedure.
 
-The upgrade process can take several minutes, depending on the network properties, the type of upgrade, and the size and complexity of your DataMiner System. You can follow the progress of the update in the *Progress* tab.
+The upgrade process can take several minutes, depending on the network properties, the type of upgrade, and the size and complexity of your DataMiner System. You can follow the progress of the update in the *Progress* tab.
 
 > [!NOTE]
-> -  To set default options for upgrades, including the default Failover policy, in System Center, select *System Settings \> Upgrade*. 
+> -  To set default options for upgrades, including the default Failover policy, in System Center, select *System Settings \> Upgrade*.
 > -  Each upgrade creates a folder under *C:\\Skyline DataMiner\\Upgrades\\Packages*, which contains the upgrade package that has been used, together with a log file (progress.log) and (prior to DataMiner 10.0.0/10.0.3) the rollback package. From DataMiner 10.0.3 onwards, a rollback package is no longer included, as it is better to downgrade by using the full installation package of the version you want to go back to instead.
 > - DMPs can be upgraded like regular DMAs, though additional options will be available in the upgrade window. If the DMP is not ready for an upgrade, or no connection can be established, by default after 10 seconds a warning will appear.

@@ -19,5 +19,5 @@ In case of a demo license for a DataMiner Agent that will have a permanent conne
 > -  <https://activation.skyline.be/licensing/trial.asp>
 >
 > When you access this URL using a web browser, you will see a blank page. To see a page with content, enter the following URL in the address bar of the web browser:
-> -  <https://activation.skyline.be/licensing/trial2.asp> 
+> -  <https://activation.skyline.be/licensing/trial2.asp>
 >

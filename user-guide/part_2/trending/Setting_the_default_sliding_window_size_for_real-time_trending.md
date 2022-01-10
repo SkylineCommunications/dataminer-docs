@@ -9,12 +9,12 @@ To configure the default size:
 
 - From DataMiner 9.6.6 onwards:
 
-    1. Go to System Center \> *System settings* > *time to live*
+    1. Go to System Center \> *System settings* > *time to live*
 
     2. Under *Trending*, in the *Real-time* box, specify the new window size.
 
         > [!NOTE]
-        > At present, trending information is not saved in the indexing database. As such, if your DMS uses an indexing database, only the settings in the *Local* column of the *time to live* page will be taken into account for trending.
+        > At present, trending information is not saved in the indexing database. As such, if your DMS uses an indexing database, only the settings in the *Local* column of the *time to live* page will be taken into account for trending.
 
     3. Click the *Apply* button.
 
@@ -25,7 +25,7 @@ To configure the default size:
 
     1. In the Cube navigation pane, click the apps button and select *System Center*.
 
-    2.  In System Center, select *System settings* > *trending*.
+    2. In System Center, select *System settings* > *trending*.
 
     3. Under *Trend time span*, use the up and down buttons to enter a different number of hours.
 
@@ -34,4 +34,4 @@ To configure the default size:
     > [!NOTE]
     > -  In some older DataMiner versions, this setting may not be available in Cube. In that case, this can be configured in the file *DBMaintenanceDMS.xml*. For more information, see [DBMaintenance.xml and DBMaintenanceDMS.xml](../../part_7/SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
 
- 
+

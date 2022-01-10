@@ -28,4 +28,4 @@ Please take the following information into account:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/backup-configuring-backups/> 
+> <https://community.dataminer.services/video/backup-configuring-backups/>

@@ -4,7 +4,7 @@ This action allows the configuration of a dialog box asking for a user response.
 
 This dialog box is a pop-up window consisting of different parts, with a default margin of 5 pixels.
 
-To configure the dialog box, select parts in the *Add part* box on the right, and view the result in the preview on the left:
+To configure the dialog box, select parts in the *Add part* box on the right, and view the result in the preview on the left:
 
 - To enter a fixed piece of text:
 

@@ -1,6 +1,6 @@
 # Changing the redundancy mode
 
-1. In the *State and mode* section of a redundancy group card, click the downward arrow next to *Mode*.
+1. In the *State and mode* section of a redundancy group card, click the downward arrow next to *Mode*.
 
 2. Select one of the listed mode options.
 

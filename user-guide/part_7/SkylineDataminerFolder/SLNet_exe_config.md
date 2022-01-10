@@ -8,24 +8,24 @@ It contains among others the following settings:
 
 - DMA communication settings. See [Configuring DMA communication settings in SLNet.exe.config](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#configuring-dma-communication-settings-in-slnetexeconfig).
 
-- The number of log files generated for the SLNet process, determined by the value for the *LogFileRotateAmount* key in the *appSettings* section. For example:
+- The number of log files generated for the SLNet process, determined by the value for the *LogFileRotateAmount* key in the *appSettings* section. For example:
 
     ```xml
-    <appSettings>                                 
-       ...                                         
-       <add key="LogFileRotateAmount" value="3" />
-       ...                                         
-    </appSettings>                                
+    <appSettings>
+     ...
+     <add key="LogFileRotateAmount" value="3" />
+     ...
+    </appSettings>
     ```
 
-- The file size (in MB) of the log files generated for the SLNet process, determined by the value for the *LogFileSize* key in the *appSettings* section. For example:
+- The file size (in MB) of the log files generated for the SLNet process, determined by the value for the *LogFileSize* key in the *appSettings* section. For example:
 
     ```xml
-    <appSettings>                         
-       ...                                 
-       <add key="LogFileSize" value="3" />
-       ...                                 
-    </appSettings>                        
+    <appSettings>
+     ...
+     <add key="LogFileSize" value="3" />
+     ...
+    </appSettings>
     ```
 
 > [!NOTE]

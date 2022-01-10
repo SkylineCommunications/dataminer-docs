@@ -69,4 +69,4 @@ The package contains all the necessary components and default configurations, in
 > See also:
 > [DataMiner Standard Apps](../../Part5StandardApps/Part5StandardApps.md#dataminer-standard-apps)
 
- 
+

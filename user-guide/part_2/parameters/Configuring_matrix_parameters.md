@@ -51,7 +51,7 @@ You can also lock or unlock several inputs or outputs at once:
 
 1. Select several inputs or outputs by pressing Ctrl or Shift while you click.
 
-2. Right-click one of the inputs or outputs and select *Lock all* or *Unlock all*
+2. Right-click one of the inputs or outputs and select *Lock all* or *Unlock all*
 
 ### Configuring the follow mode for a matrix output
 
@@ -69,7 +69,7 @@ You can also enable or disable follow mode for several outputs at once:
 
 1. Select several outputs by pressing Ctrl or Shift while you click.
 
-2. Right-click one of the outputs and select *Enable follow mode (all)* or *Disable follow mode (all)*.
+2. Right-click one of the outputs and select *Enable follow mode (all)* or *Disable follow mode (all)*.
 
 ### Disabling or enabling certain matrix inputs or outputs
 
@@ -97,12 +97,12 @@ You can also enable or disable follow mode for several outputs at once:
 
 2. For outputs, go to the *outputs* tab.
 
-3. Select the output or input for which you wish to configure the allowed inputs or outputs, and click the ... button in the *Allowed* column.
+3. Select the output or input for which you wish to configure the allowed inputs or outputs, and click the ... button in the *Allowed* column.
 
 4. In the pop-up window, select the allowed inputs or outputs.
 
     > [!NOTE]
-    > At the bottom of the window, you can also click *select all* to select all inputs or outputs, or click *none* to clear the current selection.
+    > At the bottom of the window, you can also click *select all* to select all inputs or outputs, or click *none* to clear the current selection.
 
 ### Exporting and importing a matrix configuration
 

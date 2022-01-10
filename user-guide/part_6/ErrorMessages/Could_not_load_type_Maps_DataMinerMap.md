@@ -16,8 +16,8 @@ In IIS Manager, convert the Maps folder of the DMA’s default website to an app
 
 1. Start IIS Manager.
 
-2. In the tree on the left, go to *Sites \> Default Web Site \> Maps*.
+2. In the tree on the left, go to *Sites \> Default Web Site \> Maps*.
 
-3. Right-click the *Maps* node and select *Convert to Application*.
+3. Right-click the *Maps* node and select *Convert to Application*.
 
-4. In the *Add Application* dialog box, click *OK*.
+4. In the *Add Application* dialog box, click *OK*.

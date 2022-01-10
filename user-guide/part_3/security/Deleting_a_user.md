@@ -2,9 +2,9 @@
 
 To delete a user from the DMS:
 
-1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
+1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
 
-2. Right-click the user in the *Local* or *Domain* list and select *Delete*.
+2. Right-click the user in the *Local* or *Domain* list and select *Delete*.
 
 3. In the confirmation window, click *OK*.
 

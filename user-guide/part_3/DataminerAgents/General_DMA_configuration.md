@@ -31,7 +31,7 @@ This section consists of the following topics:
 In the *DataMiner.xml* file of a DMA, you can change its DataMiner ID.
 
 > [!WARNING]
-> Changing the DataMiner ID in *DataMiner.xml* is only allowed on new DMAs that have not yet been put into use.
+> Changing the DataMiner ID in *DataMiner.xml* is only allowed on new DMAs that have not yet been put into use.
 
 To do so:
 
@@ -39,7 +39,7 @@ To do so:
 
 2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml*.
 
-3. In the *id* attribute of the *\<DataMiner>* tag, specify the new DataMiner ID of the DMA.
+3. In the *id* attribute of the *\<DataMiner>* tag, specify the new DataMiner ID of the DMA.
 
 4. Save the file.
 
@@ -59,13 +59,13 @@ By default, a DataMiner Agent always takes the name of its host server. However,
 
 To set a custom DMA name in Cube:
 
-1. Go to *Apps* > *System Center*.
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Agents* page.
 
 3. In the *Manage* tab, select the DMA of which you wish to set the name.
 
-4. Fill in the new name in the *Name* field and click *Apply*.
+4. Fill in the new name in the *Name* field and click *Apply*.
 
 5. In case you also want to change the hostname of the server, in the confirmation box, select the checkbox next to the name, and then click *Apply*. Keep in mind that if you do so, a server reboot will be required.
 
@@ -81,17 +81,17 @@ To do so:
 
 2. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
 
-3. In the *\<DMAName>* start tag, add a *mode* attribute, and set its value to “manual”.
+3. In the *\<DMAName>* start tag, add a *mode* attribute, and set its value to “manual”.
 
-4. Between the *\<DMAName>* start tag and the *\</DMAName>* end tag, specify the name of the DataMiner Agent. For example:
+4. Between the *\<DMAName>* start tag and the *\</DMAName>* end tag, specify the name of the DataMiner Agent. For example:
 
     ```xml
-    <DataMiner ...>                               
-      <DMA>                                         
+    <DataMiner ...>
+      <DMA>
         <DMAName mode="manual">MyCustomName</DMAName>
-        ...                                            
-      </DMA>                                        
-    </DataMiner>                                  
+        ...
+      </DMA>
+    </DataMiner>
     ```
 
 5. Save the file.
@@ -116,7 +116,7 @@ You can also specify up to three DataMiner users who can be contacted in case of
 
 To specify these data in DataMiner Cube:
 
-1. Go to *Apps* > *System Center*.
+1. Go to *Apps* > *System Center*.
 
 2. In System Center, select the *Agents* page.
 
@@ -135,7 +135,7 @@ To specify these data in DataMiner Cube:
 
         1. Click *Change Logo*.
 
-        2. In the *Choose new logo* dialog box, select the logo image (in *.png*, *.jpg*, *.jpeg* or *.gif* format), and click *Open*.
+        2. In the *Choose new logo* dialog box, select the logo image (in *.png*, *.jpg*, *.jpeg* or *.gif* format), and click *Open*.
 
         > [!NOTE]
         > To remove the company logo, right-click the image in Cube and select *Delete*.
@@ -180,15 +180,15 @@ The diagram below shows how communication within a DMS could be set up.
 
 ![](../../images/dms_ip_communication101.jpg)
 
- 
+
 
 > [!NOTE]
 > It is not recommended to let a DMA connect to another DMA via Web Services. From DataMiner 10.0.11, connecting via Web Services is no longer supported.
 
 > [!TIP]
 > See also:
-> -  [Configuring DMA communication settings in SLNet.exe.config](Configuration_of_DataMiner_processes.md#configuring-dma-communication-settings-in-slnetexeconfig) 
-> -  [Configuring client communication settings](DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings) 
+> -  [Configuring DMA communication settings in SLNet.exe.config](Configuration_of_DataMiner_processes.md#configuring-dma-communication-settings-in-slnetexeconfig)
+> -  [Configuring client communication settings](DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings)
 
 ### Configuring the polling request timeout
 
@@ -198,7 +198,7 @@ DMA polling should not be confused with device polling. It enables DMAs to send 
 
 #### Server-side
 
-In the *MaintenanceSettings.xml* file of a DMA, you can add a *\<DefaultPollingRequestTimeout>* tag in the *\<SLNet>* section.
+In the *MaintenanceSettings.xml* file of a DMA, you can add a *\<DefaultPollingRequestTimeout>* tag in the *\<SLNet>* section.
 
 This setting will apply to all new inter-DMA connections set up from that DMA.
 
@@ -215,7 +215,7 @@ On a DataMiner client machine, you can set the client’s polling request timeou
 A DMS can be configured to send out email notifications and reports via an SMTP server.
 
 > [!NOTE]
-> For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/). 
+> For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/).
 > -  From DataMiner 8.5.5 up to DataMiner 9.5.12, OpenSSL library version v1.0.2a is used.
 > -  From DataMiner 9.5.13 onwards, OpenSSL library version v1.0.2m is used.
 > -  From DataMiner 9.6.1 onwards, OpenSSL library version v1.1.0h is used.
@@ -224,7 +224,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/agents-configuring-an-email-server/> 
+> <https://community.dataminer.services/video/agents-configuring-an-email-server/>
 
 #### Prerequisite
 
@@ -234,9 +234,9 @@ In order to send out email notifications or email reports, a DataMiner Agent has
 
 To specify the default “From” address to be used in outgoing email messages, do the following:
 
-1. Go to *Apps* > *System Center*.
+1. Go to *Apps* > *System Center*.
 
-2. In System Center, go to *Agents* > *system*.
+2. In System Center, go to *Agents* > *system*.
 
 3. In the *Email* box, specify the default “From” address.
 
@@ -246,7 +246,7 @@ To specify the default “From” address to be used in outgoing email messages,
 
 #### DataMiner.xml configuration
 
-If a DataMiner Agent has to be able to send out email messages, then the *DataMiner.xml* file located in the *C:\\Skyline DataMiner* directory of that DataMiner Agent has to have an *\<SMTP>* section containing the necessary email settings.
+If a DataMiner Agent has to be able to send out email messages, then the *DataMiner.xml* file located in the *C:\\Skyline DataMiner* directory of that DataMiner Agent has to have an *\<SMTP>* section containing the necessary email settings.
 
 1. Log on to the DataMiner Agent, either locally or through a remote desktop session.
 
@@ -315,13 +315,13 @@ You can specify the following advanced settings. However, these are not mandator
 ##### Example of how to use GMail as SMTP server
 
 ```xml
-<SMTP>                                     
-  <Host>smtp.gmail.com</Host>               
-  <HostPort>587-starttls</HostPort>         
+<SMTP>
+  <Host>smtp.gmail.com</Host>
+  <HostPort>587-starttls</HostPort>
   <LoginMethod>AuthLoginMethod</LoginMethod>
-  <User>MyGmailName@gmail.com</User>        
-  <Password>MyGmailPassword</Password>      
-</SMTP>                                    
+  <User>MyGmailName@gmail.com</User>
+  <Password>MyGmailPassword</Password>
+</SMTP>
 ```
 
 ### Forcing a DataMiner Agent to work without virtual IP addresses
@@ -336,14 +336,14 @@ To force a DataMiner Agent not to use virtual IP addresses, do the following.
 
 2. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
 
-3. Add a *disableElementIP* attribute to the *\<DataMiner>* tag, and set it to “true”.
+3. Add a *disableElementIP* attribute to the *\<DataMiner>* tag, and set it to “true”.
 
     By default, the *disableElementIP* attribute is set to “false”.
 
 4. Save the file and restart DataMiner.
 
 > [!NOTE]
-> If the *disableElementIP* attribute is set to “true”, after a restart of the DataMiner Agent, it will no longer be possible to assign a virtual IP address to an element. Moreover, the virtual IP addresses of all existing elements will be disabled.
+> If the *disableElementIP* attribute is set to “true”, after a restart of the DataMiner Agent, it will no longer be possible to assign a virtual IP address to an element. Moreover, the virtual IP addresses of all existing elements will be disabled.
 
 Example:
 
@@ -380,16 +380,16 @@ To do so:
     For example, in the following excerpt from *MaintenanceSettings.xml*, indexing has been set to “trendedParamsOnly”:
 
     ```xml
-    <SLNet>                                          
+    <SLNet>
       <SearchOptions>trendedParamsOnly</SearchOptions>
-    </SLNet>                                         
+    </SLNet>
     ```
 
 4. Save the file and restart DataMiner.
 
 > [!NOTE]
-> -  If the *\<SearchOptions>* tag is empty, then there will be no indexing restrictions. In other words, all items will be indexed.
-> -  If no *\<SearchOptions>* tag can be found in *MaintenanceSettings.xml*, indexing will be restricted to “trendedParamsOnly” by default.
+> -  If the *\<SearchOptions>* tag is empty, then there will be no indexing restrictions. In other words, all items will be indexed.
+> -  If no *\<SearchOptions>* tag can be found in *MaintenanceSettings.xml*, indexing will be restricted to “trendedParamsOnly” by default.
 
 ### Setting up HTTPS on a DMA
 
@@ -409,13 +409,13 @@ In this section:
 
 1. Open IIS manager. It can be found under the Administrative Tools in the Control Panel of your computer.
 
-2. Select the Computer name in the *Connections* pane on the left, and double-click *Server Certificates* in the pane on the right.
+2. Select the Computer name in the *Connections* pane on the left, and double-click *Server Certificates* in the pane on the right.
 
-3. Right-click in the *Server Certificates* list and select *Import*.
+3. Right-click in the *Server Certificates* list and select *Import*.
 
 4. Browse to your certificate, and click *OK*.
 
-5. In the *Connections* pane on the left, right-click the website and select *Edit Bindings*.
+5. In the *Connections* pane on the left, right-click the website and select *Edit Bindings*.
 
 6. In the *Add Site Binding* window, add an HTTPS binding with the selected certificate.
 
@@ -428,15 +428,15 @@ In this section:
 
 2. Update the default website bindings in IIS to have both HTTP and HTTPS bindings:
 
-    1. In IIS manager, click *Sites* in the *Connections* pane on the left.
+    1. In IIS manager, click *Sites* in the *Connections* pane on the left.
 
-    2. Right-click *Default Web Site* and select *Bindings*.
+    2. Right-click *Default Web Site* and select *Bindings*.
 
     3. Click *Add* to add the HTTPS binding.
 
 3. Configure URL rewriting rules at global level:
 
-    1. In IIS manager, select the *Default Web Site* in the *Connections* pane on the left, and double-click *URL Rewrite* in the pane on the right.
+    1. In IIS manager, select the *Default Web Site* in the *Connections* pane on the left, and double-click *URL Rewrite* in the pane on the right.
 
     2. Right-click in the list of rules on the right and select *Add Rule(s)*.
 
@@ -452,7 +452,7 @@ In this section:
 
         - **Pattern**: off
 
-    6. Under *Action*, set the *Action type* to *Redirect*.
+    6. Under *Action*, set the *Action type* to *Redirect*.
 
     7. Under *Redirect URL*, fill in the full HTTPS URL for your web server.
 
@@ -460,7 +460,7 @@ In this section:
         > -  The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. https://www.myhost.com/{R:1}.
         > -  The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
 
-    8. Set *Redirect type* to *Found (302)*.
+    8. Set *Redirect type* to *Found (302)*.
 
 > [!NOTE]
 > Instead of redirecting HTTP traffic to HTTPS, it is also possible to close down HTTP completely by removing the HTTP binding, so that only HTTPS traffic is accepted.
@@ -469,7 +469,7 @@ In this section:
 
 If the default web server on the server has been modified to only allow HTTPS traffic, there could be problems with the auto-detection of connection settings.
 
-To avoid this, it is possible to specify alternative auto-detection information via the *Edit Connection Uris* functionality in the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Editing the connection string between two DataMiner Agents](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#editing-the-connection-string-between-two-dataminer-agents).
+To avoid this, it is possible to specify alternative auto-detection information via the *Edit Connection Uris* functionality in the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Editing the connection string between two DataMiner Agents](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#editing-the-connection-string-between-two-dataminer-agents).
 
 The following auto-detect methods can be specified:
 
@@ -496,11 +496,11 @@ To configure a server to use HTTPS, a line needs to be added to the file *Mainte
 3. Add an HTTPS tag with the necessary attributes. For example:
 
     ```xml
-    <MaintenanceSettings>                           
-      ...                                              
+    <MaintenanceSettings>
+      ...
       <HTTPS enabled="true" name="foo.skyline.local"/>
-      ...                                              
-    </MaintenanceSettings>                          
+      ...
+    </MaintenanceSettings>
     ```
 
     The HTTPS tag has to contain the following attributes:
@@ -524,7 +524,7 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 2. Change the IP address of the DMA server in Windows.
 
-3. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+3. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
 
 4. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
@@ -554,11 +554,11 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
 2. Change the IP address of the DMA server in Windows.
 
-3. Go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
+3. Go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
 
 4. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-5. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+5. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
 
 6. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
@@ -593,7 +593,7 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
     5. Close the SLNetClientTest tool.
 
@@ -605,15 +605,15 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
 2. Change the IP address of the DMA server in Windows.
 
-3. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+3. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
 
 4. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-5. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
+5. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
 
 6. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-7. On the other DMA of the Failover pair, go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
+7. On the other DMA of the Failover pair, go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
 
 8. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
@@ -639,7 +639,7 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
 13. On the online DMA, go to System Center \> Agents, and remove the old IP address from the list of DMAs in the cluster.
 
-14. Still on the Agents page in System Center, make sure the online Failover DMA is selected in the list on the left, and click the *Failover* button in the lower right corner to check the Failover status. For more information, see [Viewing the current Failover DMA status](../failover/Viewing_the_current_Failover_DMA_status.md).
+14. Still on the Agents page in System Center, make sure the online Failover DMA is selected in the list on the left, and click the *Failover* button in the lower right corner to check the Failover status. For more information, see [Viewing the current Failover DMA status](../failover/Viewing_the_current_Failover_DMA_status.md).
 
 15. In case the Failover status is not green and there are heartbeat errors, stop DataMiner, and double-check the DMS.xml files of both DMAs to make sure all references to the old IP address have been correctly replaced.
 
@@ -654,7 +654,7 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
     5. Close the SLNetClientTest tool.
 
@@ -668,40 +668,40 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 3. Change the IP address of the DMA server in Windows.
 
-4. Locate the file *cassandra.yaml* on the DMA. By default, it is located in the folder *C:\\Program Files\\Cassandra\\conf*.
+4. Locate the file *cassandra.yaml* on the DMA. By default, it is located in the folder *C:\\Program Files\\Cassandra\\conf*.
 
-5. Open *cassandra.yaml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
+5. Open *cassandra.yaml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
 
     ```txt
-    listen_address: new IP                                                                              
-    - seeds: "new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"
-    broadcast_rpc_address: new IP                                                                       
+    listen_address: new IP
+    - seeds: "new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"
+    broadcast_rpc_address: new IP
     ```
 
 6. Restart the Cassandra service.
 
-7. In a command window, execute *nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*), in order to check the status of the cluster. this should result in a list with your new IP, your old IP and all other Cassandra nodes on the server. For example:
+7. In a command window, execute *nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*), in order to check the status of the cluster. this should result in a list with your new IP, your old IP and all other Cassandra nodes on the server. For example:
 
     ![](../../images/nodetoolstatus.png)
 
 8. In the same command window, execute *nodetool removenode \[host ID of the old IP\]*, e.g. *nodetool removenode 35506039-0f03-4a1e-8642-94484d440116*.
 
-9. Locate the *cassandra.yaml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the seeds list in these files with the new IP address.
+9. Locate the *cassandra.yaml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the seeds list in these files with the new IP address.
 
-10. Locate the file *Elasticsearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\\Program Files\\Elasticsearch\\conf*.
+10. Locate the file *Elasticsearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\\Program Files\\Elasticsearch\\conf*.
 
-11. Open *Elasticsearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
+11. Open *Elasticsearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
 
     ```txt
-    discovery.zen.ping.unicast.hosts: ["new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"]
-    network.publish_host: new IP                                                                                                     
+    discovery.zen.ping.unicast.hosts: ["new IP (, IP Cassandra node 2, IP Cassandra node 3, ...)"]
+    network.publish_host: new IP
     ```
 
 12. Restart the Elasticsearch service.
 
-13. Locate the *Elasticsearch.yml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the *discovery.zen.ping.unicast.hosts* field of these files with the new IP address.
+13. Locate the *Elasticsearch.yml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the *discovery.zen.ping.unicast.hosts* field of these files with the new IP address.
 
-14. Open the file *DB.xml* from the Skyline DataMiner folder of the DMA with the new IP, and replace the old IP in the DB tags for the Cassandra and Elasticsearch databases with the new IP address.
+14. Open the file *DB.xml* from the Skyline DataMiner folder of the DMA with the new IP, and replace the old IP in the DB tags for the Cassandra and Elasticsearch databases with the new IP address.
 
     > [!TIP]
     > See also:
@@ -722,7 +722,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
-    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
+    4. In the *Message Type* drop-down list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
     5. Close the SLNetClientTest tool.
 
@@ -766,9 +766,9 @@ When adding a DataMiner configuration to a DMA, you can select
     <AdvancedOptions>true</AdvancedOptions>
     ```
 
-5. Locate the *\<ConfigFolderPath>* tag, and set it to the folder that should contain the DataMiner configurations for the DMA. This can for instance be a folder on the D drive. By default, it is set to *C:\\Skyline DataMiner Configs\\*.
+5. Locate the *\<ConfigFolderPath>* tag, and set it to the folder that should contain the DataMiner configurations for the DMA. This can for instance be a folder on the D drive. By default, it is set to *C:\\Skyline DataMiner Configs\\*.
 
-    The folder *C:\\Skyline DataMiner* will be linked to the configuration that is currently running, but will not actually contain any data. All configurations will be stored at the configured path.
+    The folder *C:\\Skyline DataMiner* will be linked to the configuration that is currently running, but will not actually contain any data. All configurations will be stored at the configured path.
 
 6. Save the *ApplicationSettings.xml* file.
 
@@ -776,18 +776,18 @@ When adding a DataMiner configuration to a DMA, you can select
 
 8. Right-click DataMiner Taskbar Utility in the notification area, select *Start Using Configs*, and confirm.
 
-    The current contents of the *C:\\Skyline DataMiner* folder and all its subfolders will now be copied to the specified configurations folder.
+    The current contents of the *C:\\Skyline DataMiner* folder and all its subfolders will now be copied to the specified configurations folder.
 
     > [!NOTE]
-    > DataMiner Taskbar Utility will stop the running DataMiner software to make sure that none of the files in *C:\\Skyline DataMiner* are locked. In certain rare cases, however, files can be locked by third-party processes. If this is the case, then you will have to kill those processes manually and retry step 7.
+    > DataMiner Taskbar Utility will stop the running DataMiner software to make sure that none of the files in *C:\\Skyline DataMiner* are locked. In certain rare cases, however, files can be locked by third-party processes. If this is the case, then you will have to kill those processes manually and retry step 7.
 
 #### Adding DataMiner configurations to a DMA
 
 1. Right-click DataMiner Taskbar Utility in the notification area, select *Use Config \> Manage Configs ...*
 
-2. In the *Manage Configs* dialog box, click *Add*.
+2. In the *Manage Configs* dialog box, click *Add*.
 
-3. In the *Add Config* dialog box, enter the name of the configuration and click either *Blank config* or *Existing config*.
+3. In the *Add Config* dialog box, enter the name of the configuration and click either *Blank config* or *Existing config*.
 
     - If you clicked *Blank config*, then select an upgrade package, and click *Open*.
 

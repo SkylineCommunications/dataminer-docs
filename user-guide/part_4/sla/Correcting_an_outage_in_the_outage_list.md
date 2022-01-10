@@ -13,6 +13,6 @@ To make a correction on the impact of an existing outage, do the following:
     - If you wish to correct the outage for the complete time span, select the checkbox *All* and confirm.
 
     > [!NOTE]
-    > Depending on how much space is available on the screen, you may need to click the *...* button next to the green check mark icon before the *All* checkbox is displayed.
+    > Depending on how much space is available on the screen, you may need to click the *...* button next to the green check mark icon before the *All* checkbox is displayed.
 
 4. In the *Motivation* column, click the pencil icon and enter a motivation for the correction.

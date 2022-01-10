@@ -52,14 +52,14 @@ A Class Library package is basically a zip file containing
 Example:
 
 ```txt
-Package.zip 
+Package.zip
     Manifest.xml
-    Class1.cs   
-    Directory1  
-        Class2.cs   
-        Class3.cs   
-    Directory2  
-        …           
+    Class1.cs
+    Directory1
+        Class2.cs
+        Class3.cs
+    Directory2
+        …
 ```
 
 ### Manifest.xml file
@@ -71,16 +71,16 @@ When DIS generates a Class Library QAction (with ID 63000) or a Class Library EX
 A Manifest.xml file could, for example, contain the following information:
 
 ```xml
-<CodePackage xmlns="http://www.skyline.be/ClassLibrary">           
-  <Identity>                                                         
-    <Name>Custom Library</Name>                                       
-    <Version>1.0.2.4</Version>                                        
-  </Identity>                                                        
-  <MinimumRequiredVersion>9.6.0.0 - 8235</MinimumRequiredVersion>   
-  <Dependencies>                                                     
+<CodePackage xmlns="http://www.skyline.be/ClassLibrary">
+  <Identity>
+    <Name>Custom Library</Name>
+    <Version>1.0.2.4</Version>
+  </Identity>
+  <MinimumRequiredVersion>9.6.0.0 - 8235</MinimumRequiredVersion>
+  <Dependencies>
     <Dependency min="1.0.0.1" max="1.0.0.2">Class Library</Dependency>
-  </Dependencies>                                                    
-</CodePackage>                                                     
+  </Dependencies>
+</CodePackage>
 ```
 
 For more information about the tags used in a Manifest.xml file, see below:
@@ -123,7 +123,7 @@ In the following example, a “DllImport” line was added above a piece of code
 
 ```txt
 [Skyline.DataMiner.Library.Common.Attributes.DllImport("Newtonsoft.Json.dll")]
-Void Method1(){…}                                                               
+Void Method1(){…}
 ```
 
 ### Restrictions
@@ -135,11 +135,11 @@ The following C#/.NET features are currently not supported:
 - With regard to LINQ queries, “query syntax” is not supported. Only “method syntax” is supported.
 
     > [!NOTE]
-    > For more information about the difference between these two types of syntax, see<br>https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq 
+    > For more information about the difference between these two types of syntax, see<br>https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq
 
 - #region tags are only allowed within members of a class (properties, methods, etc.).
 
-- DllImport tags need to be fully qualified. Use e.g. *\[Skyline.DataMiner.Library.Common.Attributes.DllImport("Newtonsoft.Json.dll")\]* instead of *\[DllImport("Newtonsoft.Json.dll")\]*. If a DllImport tag is not fully qualified, DIS will not be able to detect the DLL file before compiling the code.
+- DllImport tags need to be fully qualified. Use e.g. *\[Skyline.DataMiner.Library.Common.Attributes.DllImport("Newtonsoft.Json.dll")\]* instead of *\[DllImport("Newtonsoft.Json.dll")\]*. If a DllImport tag is not fully qualified, DIS will not be able to detect the DLL file before compiling the code.
 
 ### Class Library versions
 
@@ -153,7 +153,7 @@ The following C#/.NET features are currently not supported:
 
 #### Released versions
 
-[DIS 2.18](https://community.dataminer.services/documentation/dis-v2-18-release-notes/) 
+[DIS 2.18](https://community.dataminer.services/documentation/dis-v2-18-release-notes/)
 
 - 1.0.0.1
 
@@ -167,15 +167,15 @@ The following C#/.NET features are currently not supported:
 
     - RN 22302: New classes to easily parse trap information
 
-[DIS 2.19](https://community.dataminer.services/documentation/dis-v2-19-release-notes/) 
+[DIS 2.19](https://community.dataminer.services/documentation/dis-v2-19-release-notes/)
 
 - No changes to the Class Library base packages
 
-[DIS 2.20](https://community.dataminer.services/documentation/dis-v2-20-release-notes/) 
+[DIS 2.20](https://community.dataminer.services/documentation/dis-v2-20-release-notes/)
 
 - No changes to the Class Library base packages
 
-[DIS 2.21](https://community.dataminer.services/documentation/dis-v2-21-release-notes/) 
+[DIS 2.21](https://community.dataminer.services/documentation/dis-v2-21-release-notes/)
 
 - 1.0.0.2
 
@@ -187,11 +187,11 @@ The following C#/.NET features are currently not supported:
 
     - RN 23298: New InterApp classes now provide a C# message/response architecture
 
-[DIS 2.22](https://community.dataminer.services/documentation/dis-v2-22-release-notes/) 
+[DIS 2.22](https://community.dataminer.services/documentation/dis-v2-22-release-notes/)
 
 - No changes to the Class Library base packages
 
-[DIS 2.23](https://community.dataminer.services/documentation/dis-v2-23-release-notes/) 
+[DIS 2.23](https://community.dataminer.services/documentation/dis-v2-23-release-notes/)
 
 - 1.0.0.3
 
@@ -209,7 +209,7 @@ The following C#/.NET features are currently not supported:
 
     - RN 23515: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element
 
-[DIS 2.24](https://community.dataminer.services/documentation/dis-v2-24-release-notes/) 
+[DIS 2.24](https://community.dataminer.services/documentation/dis-v2-24-release-notes/)
 
 - 1.0.1.1
 
@@ -239,7 +239,7 @@ The following C#/.NET features are currently not supported:
 
     - RN 24456: Table cell subscriptions will now be established using the primary key
 
-[DIS 2.25](https://community.dataminer.services/documentation/dis-v2-25-release-notes/) 
+[DIS 2.25](https://community.dataminer.services/documentation/dis-v2-25-release-notes/)
 
 - 1.0.1.2
 
@@ -253,7 +253,7 @@ The following C#/.NET features are currently not supported:
 
     - RN 24934: Enhanced handling of errors occurring while parsing element information returned by a GetElements method
 
-[DIS 2.26](https://community.dataminer.services/documentation/dis-v2-26-release-notes/) 
+[DIS 2.26](https://community.dataminer.services/documentation/dis-v2-26-release-notes/)
 
 - 1.0.1.3
 
@@ -281,7 +281,7 @@ The following C#/.NET features are currently not supported:
 
     - RN 25632: IEngine interface now supports the extension of the GetDms method
 
-[DIS 2.27](https://community.dataminer.services/documentation/dis-v2-27-release-notes/) 
+[DIS 2.27](https://community.dataminer.services/documentation/dis-v2-27-release-notes/)
 
 - 1.1.2.4
 
@@ -291,7 +291,7 @@ The following C#/.NET features are currently not supported:
 
     - RN 25933: Deserialization now supports classes located in both System.Core.dll and System.dll.
 
-[DIS 2.28](https://community.dataminer.services/documentation/dis-v2-28-release-notes/) 
+[DIS 2.28](https://community.dataminer.services/documentation/dis-v2-28-release-notes/)
 
 - 1.1.2.5
 
@@ -305,11 +305,11 @@ The following C#/.NET features are currently not supported:
 
     - RN 26423: Incorrectly formatted input string would cause the GetElement method to throw an exception
 
-[DIS 2.29](https://community.dataminer.services/documentation/dis-v2-29-release-notes/) 
+[DIS 2.29](https://community.dataminer.services/documentation/dis-v2-29-release-notes/)
 
 - No changes to the Class Library base packages
 
-[DIS 2.30](https://community.dataminer.services/documentation/dis-v2-30-release-notes/) 
+[DIS 2.30](https://community.dataminer.services/documentation/dis-v2-30-release-notes/)
 
 - 1.1.2.7
 
@@ -323,11 +323,11 @@ The following C#/.NET features are currently not supported:
 
     - RN 27784: A matrix output could not be disconnected when it was connected to the first input
 
-[DIS 2.31](https://community.dataminer.services/documentation/dis-v2-31-release-notes/) 
+[DIS 2.31](https://community.dataminer.services/documentation/dis-v2-31-release-notes/)
 
 No changes to the Class Library base packages
 
-[DIS 2.32](https://community.dataminer.services/documentation/dis-v2-32-release-notes/) 
+[DIS 2.32](https://community.dataminer.services/documentation/dis-v2-32-release-notes/)
 
 - 1.1.2.8
 
@@ -349,7 +349,7 @@ No changes to the Class Library base packages
 
     - RN 29074: SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules
 
-[DIS 2.33](https://community.dataminer.services/documentation/dis-v2-33-release-notes/) 
+[DIS 2.33](https://community.dataminer.services/documentation/dis-v2-33-release-notes/)
 
 - 1.1.2.9
 
@@ -391,7 +391,7 @@ No changes to the Class Library base packages
 
     - RN 30056: SLSpectrum wrappers were missing a GetMonitor call with the correct return format
 
-[DIS 2.34](https://community.dataminer.services/documentation/dis-v2-34-release-notes/) 
+[DIS 2.34](https://community.dataminer.services/documentation/dis-v2-34-release-notes/)
 
 - 1.1.2.12
 
@@ -401,4 +401,4 @@ No changes to the Class Library base packages
 
     - RN 30232: Extended authentication algorithm support
 
- 
+

@@ -1,10 +1,10 @@
 ## Making a shape filter Alarm Console tabs when clicked
 
-If you add a shape data field of type **AlarmFilter** to a shape, clicking the shape will cause Alarm Console tabs of type “Active alarms linked to cards” only to show alarms that match the alarm filter specified in the field value.
+If you add a shape data field of type **AlarmFilter** to a shape, clicking the shape will cause Alarm Console tabs of type “Active alarms linked to cards” only to show alarms that match the alarm filter specified in the field value.
 
 ### Configuring the shape data field
 
-Add a shape data field of type AlarmFilter to the shape, and enter an alarm filter as the value, using the same syntax as in the Alarm Console quick filter.
+Add a shape data field of type AlarmFilter to the shape, and enter an alarm filter as the value, using the same syntax as in the Alarm Console quick filter.
 
 ##### Examples of alarm filters:
 
@@ -40,7 +40,7 @@ Add a shape data field of type AlarmFilter to the shape, and enter an alarm fil
 
 In some cases, it is possible to use placeholders in the filter condition:
 
-- In EPM environments, the filter condition can contain the *\[servicefilter\]* and *\[servicefiltername\]* placeholder.
+- In EPM environments, the filter condition can contain the *\[servicefilter\]* and *\[servicefiltername\]* placeholder.
 
 - If a Service Overview Manager element is used, the filter condition can contain the placeholder *\[ServiceFilterIdx\]*.
 

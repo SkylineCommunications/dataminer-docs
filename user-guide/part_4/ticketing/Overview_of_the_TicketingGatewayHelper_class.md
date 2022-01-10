@@ -24,7 +24,7 @@ Parameters:
 
 - **TimeStamp**: The timestamp of the last polling cycle to the external ticketing system.
 
-- **ChangedTickets**: The tickets that have changed since the last time this method was used, with *DateTime* being the timestamp of the last change to the ticket and *Ticket* being the changed ticket.
+- **ChangedTickets**: The tickets that have changed since the last time this method was used, with *DateTime* being the timestamp of the last change to the ticket and *Ticket* being the changed ticket.
 
 Returns:
 
@@ -51,14 +51,14 @@ Example:
 - If the following is specified within a script, any resolvers that are masked will be retrieved and an information event will be generated with information about them:
 
     ```cs
-    private void ShowMaskedResolvers(Engine engine)                                                                                                                                                                       
-    {                                                                                                                                                                                                                     
-        var maskedTicketFieldResolvers = helper.GetMaskedTicketFieldResolvers();                                                                                                                                              
-        foreach (TicketFieldResolver maskedTicketFieldResolver in maskedTicketFieldResolvers)                                                                                                                                 
-        {                                                                                                                                                                                                                     
+    private void ShowMaskedResolvers(Engine engine)
+    {
+        var maskedTicketFieldResolvers = helper.GetMaskedTicketFieldResolvers();
+        foreach (TicketFieldResolver maskedTicketFieldResolver in maskedTicketFieldResolvers)
+        {
             engine.GenerateInformation(string.Format("Resolver \"{0}\", which is configured to be linked to \"{1}\", is masked.", maskedTicketFieldResolver.Name, maskedTicketFieldResolver.ElementUsingResolver.ToString()));
-        }                                                                                                                                                                                                                     
-    }                                                                                                                                                                                                                     
+        }
+    }
     ```
 
 #### GetTicketFieldResolvers
@@ -98,7 +98,7 @@ Returns:
 Retrieves the tickets matching the given filter and links.
 
 ```cs
-IEnumerable<Ticket> GetTickets(IEnumerable<TicketLink> links = null, FilterElement<Ticket> filter = null, bool CacheOnly = false)
+IEnumerable<Ticket> GetTickets(IEnumerable<TicketLink> links = null, FilterElement<Ticket> filter = null, bool CacheOnly = false)
 ```
 
 Parameters:
@@ -121,7 +121,7 @@ Returns:
 Use this method to retrieve tickets in a paged fashion. This method requests a new page.
 
 ```cs
-IEnumerable<Ticket> NewPagingRequest(int pagesize, out long pagingCookie, out int totalTickets, int pageNumber = 0, IEnumerable<TicketLink> links = null, FilterElement<Ticket> filter = null, bool CacheOnly = false)
+IEnumerable<Ticket> NewPagingRequest(int pagesize, out long pagingCookie, out int totalTickets, int pageNumber = 0, IEnumerable<TicketLink> links = null, FilterElement<Ticket> filter = null, bool CacheOnly = false)
 ```
 
 Parameters:
@@ -182,7 +182,7 @@ Parameters:
 
 Returns
 
-- *True* when removing the ticket field resolver(s) was successful, otherwise *False*.
+- *True* when removing the ticket field resolver(s) was successful, otherwise *False*.
 
 #### RemoveTickets
 
@@ -200,7 +200,7 @@ Parameters:
 
 Returns
 
-- *True* when removing the ticket(s), otherwise *False*.
+- *True* when removing the ticket(s), otherwise *False*.
 
 #### SetTicket
 
@@ -218,7 +218,7 @@ Parameters:
 
 Returns:
 
-- *True* when adding/editing the ticket was successful, otherwise *False*.
+- *True* when adding/editing the ticket was successful, otherwise *False*.
 
 Example: see[Creating tickets with the Ticketing Gateway API](Creating_tickets_with_the_Ticketing_Gateway_API.md).
 
@@ -258,7 +258,7 @@ Parameters:
 
 Returns
 
-- *True* when adding/editing the ticket field resolvers was successful, otherwise *False*.
+- *True* when adding/editing the ticket field resolvers was successful, otherwise *False*.
 
 #### SetTickets
 

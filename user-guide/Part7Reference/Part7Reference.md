@@ -15,4 +15,4 @@
 > [!NOTE]
 > For more information on Visio shape data fields, options, placeholders, and dynamic table filter syntax, see [Reference](../part_2/visio/Reference.md).
 
- 
+

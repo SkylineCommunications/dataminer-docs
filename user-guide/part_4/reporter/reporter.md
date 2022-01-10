@@ -23,5 +23,5 @@ In DataMiner Cube, built-in reports are available on several types of cards, as 
 - [Publishing Reporter components on your own website](Publishing_Reporter_components_on_your_own_website.md)
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, the legacy Reporter module is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> From DataMiner 10.2.0/10.1.12 onwards, the legacy Reporter module is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 >

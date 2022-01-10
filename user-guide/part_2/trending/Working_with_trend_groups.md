@@ -2,7 +2,7 @@
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-trend-groups/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-trend-groups/>
 
 Trend information associated with groups of parameters can be displayed in so-called trend groups.
 

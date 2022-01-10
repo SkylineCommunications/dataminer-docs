@@ -1,6 +1,6 @@
 # NotificationOptions class
 
-This class serves as a base class for *EmailOptions*, *PagerOptions* and *SmsOptions*.
+This class serves as a base class for *EmailOptions*, *PagerOptions* and *SmsOptions*.
 
 > [!TIP]
 > See also:

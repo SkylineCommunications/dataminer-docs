@@ -11,7 +11,7 @@ Interface[] GetExternalInterfaces()
 Example:
 
 ```txt
-var dummy = engine.GetDummy(1);                        
+var dummy = engine.GetDummy(1);
 var externalInterfaces = dummy.GetExternalInterfaces();
 ```
 
@@ -26,6 +26,6 @@ Interface[] GetInternalInterfaces()
 Example:
 
 ```txt
-var dummy = engine.GetDummy(1);                        
+var dummy = engine.GetDummy(1);
 var internalInterfaces = dummy.GetInternalInterfaces();
 ```

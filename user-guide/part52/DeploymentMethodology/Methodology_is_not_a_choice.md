@@ -1,6 +1,6 @@
 ## Methodology is not a choice
 
-This document describes in detail the different deployment methodologies that Skyline has developed over time, and the types of projects they are tailored towards. The latter is very important, as the effectiveness of a methodology depends largely on whether the proper methodology was chosen for the actual project at hand.   
+This document describes in detail the different deployment methodologies that Skyline has developed over time, and the types of projects they are tailored towards. The latter is very important, as the effectiveness of a methodology depends largely on whether the proper methodology was chosen for the actual project at hand.
 
 In other words, the specifics of the project at hand dictate the methodology that must be applied to be successful. Or to put it differently, the circumstances dictate the strategy. Therefore, a methodology cannot be chosen freely, and applying an inappropriate methodology for a given project can in fact even be detrimental towards a successful outcome of that project.
 

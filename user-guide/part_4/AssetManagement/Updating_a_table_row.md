@@ -14,7 +14,7 @@ In the *Asset Manager* module, there are several ways to update a table row:
 
     1. In the overview pane on the left, select the table row.
 
-    2. If not in *All linked items* view, click *All linked items* at the top of the data pane.
+    2. If not in *All linked items* view, click *All linked items* at the top of the data pane.
 
     3. Select the row again in the pane on the right, and click the *Edit row* button.
 

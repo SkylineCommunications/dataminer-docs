@@ -14,7 +14,7 @@ On this page, you can find:
 
 - A list of recent videos released on DataMiner TV.
 
-- Weather information. Only available up to DataMiner 9.6.0/9.6.4. Up to DataMiner 9.5.11, this is only displayed if a location can be established (e.g. via the *Location* service in Windows 10). From DataMiner 9.5.12 onwards, you can select a location yourself via the location icon next to the *Weather* title.
+- Weather information. Only available up to DataMiner 9.6.0/9.6.4. Up to DataMiner 9.5.11, this is only displayed if a location can be established (e.g. via the *Location* service in Windows 10). From DataMiner 9.5.12 onwards, you can select a location yourself via the location icon next to the *Weather* title.
 
 - A link to the landing page for the DataMiner web apps on the right-hand side.
 
@@ -62,9 +62,9 @@ The pane consists of a tree view with several fixed nodes:
 
     > [!NOTE]
     > -  A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
-    > -  As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](User_settings.md#visual-overview-settings).
+    > -  As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](User_settings.md#visual-overview-settings).
     > -  If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
-    > -  Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md) and [DisableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md).
+    > -  Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md) and [DisableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md).
 
 - **DATA**: Contains all available Data Display pages.
 
@@ -84,7 +84,7 @@ The pane consists of a tree view with several fixed nodes:
 - **DASHBOARDS**: Displays the legacy *Dashboards* app.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 - **NOTES**: Allows users to add short notes to DataMiner items:
 
@@ -92,19 +92,19 @@ The pane consists of a tree view with several fixed nodes:
 
     - Each note can be removed with the x in its top-right corner.
 
-    - Expired notes are only displayed if you select *Show expired notes* in the top-right corner of the card. They are then displayed in a different color, so you can clearly see the difference with the notes that are not expired.
+    - Expired notes are only displayed if you select *Show expired notes* in the top-right corner of the card. They are then displayed in a different color, so you can clearly see the difference with the notes that are not expired.
 
 - **ANNOTATIONS**: Displays more extensive comments on DataMiner items. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+    > From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* on view cards.
 
 > [!NOTE]
-> -  When you select a page in the card navigation pane while holding down the SHIFT key, that page will be selected in every open card. 
+> -  When you select a page in the card navigation pane while holding down the SHIFT key, that page will be selected in every open card.
 > -  While the navigation pane is collapsed, if you click the VISUAL or the DATA node, the last open Visual Overview or Data Display page will be displayed. To expand the navigation pane and select a different page, simply click the node again.
-> -  For custom element applications, by default no card navigation pane is displayed. However, it is possible to open this pane by selecting the option *Show card side panel* in the card header menu.
+> -  For custom element applications, by default no card navigation pane is displayed. However, it is possible to open this pane by selecting the option *Show card side panel* in the card header menu.
 > -  The card navigation pane is only available from DataMiner version 9.0 onwards. In earlier versions of DataMiner, there is instead a rotate button that allows the user to change between a “Visual Overview” side of the card and a “Data Display” side.
 
 ### Card header bar menu
@@ -215,6 +215,6 @@ To do so, right-click the card header bar and select *Pin this card*.
 To unpin the card again, right-click the card header bar and clear the selection from *Pin this card*.
 
 > [!NOTE]
-> -  On a pinned card, no close button is available, so that you cannot close the card by accident. However, you can still close the card by selecting *Close card* in the header bar context menu.
+> -  On a pinned card, no close button is available, so that you cannot close the card by accident. However, you can still close the card by selecting *Close card* in the header bar context menu.
 > -  If you use the tab layout, an additional option is available in the header bar context menu: *Use small pinned tabs*. If you select this option, pinned cards will have smaller tabs that only display the item’s icon.
 >

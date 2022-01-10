@@ -1,6 +1,6 @@
 # Correlation rule syntax
 
-When specifying a condition in the DataMiner Cube *Correlation* module, you can use a special syntax to construct a so-called script condition:
+When specifying a condition in the DataMiner Cube *Correlation* module, you can use a special syntax to construct a so-called script condition:
 
 - [Condition format](Condition_format.md)
 

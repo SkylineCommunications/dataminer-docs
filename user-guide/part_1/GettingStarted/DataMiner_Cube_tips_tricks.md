@@ -19,13 +19,13 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Want to see which alarms were active in your system at a certain point in time? Use the history slider in the Alarm Console. See [Active alarms tab timeline](../../part_2/alarms/Working_with_the_Alarm_Console.md#active-alarms-tab-timeline).
 
-- Want to know which elements, parameters or severities appear most frequently in your active or history alarms? Click the *Statistical view* icon in the alarm bar. See [Using the statistical view](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-statistical-view).
+- Want to know which elements, parameters or severities appear most frequently in your active or history alarms? Click the *Statistical view* icon in the alarm bar. See [Using the statistical view](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-statistical-view).
 
 - Did you know the alarms right-click menu can be extended with additional items, such as hyperlinks, or options to start a program or script? See [Adding a custom command to the Alarm Console shortcut menu](../../part_2/alarms/Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu.md).
 
-- Would you like to group alarms in the Alarm Console differently? Disable *Automatically group according to arrangement* to customize grouping, even combining multiple fields. See [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings).
+- Would you like to group alarms in the Alarm Console differently? Disable *Automatically group according to arrangement* to customize grouping, even combining multiple fields. See [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings).
 
-- Want to make sure an alarm only shows in the Alarm Console if it has been active for a while, instead of just for a couple of seconds? Use the *Delay* option. See [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings).
+- Want to make sure an alarm only shows in the Alarm Console if it has been active for a while, instead of just for a couple of seconds? Use the *Delay* option. See [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings).
 
 #### About shortcuts
 
@@ -55,7 +55,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Did you know that you can drag views, elements, services and SLAs directly from DataMiner Cube onto emails or open documents? You can do this from the Surveyor, but also from a view card data page or from a Visual Overview. See [Surveyor](Main_Cube_UI_components_prior_to_DataMiner_10.md#surveyor).
 
-- Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](Main_Cube_UI_components_prior_to_DataMiner_10.md#special-icon-settings).
+- Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](Main_Cube_UI_components_prior_to_DataMiner_10.md#special-icon-settings).
 
 - The Surveyor can be enriched with statistics, such as the number of alarms in a view. See [Displaying alarm statistics in the Surveyor](../../part_2/alarms/Displaying_alarm_statistics_in_the_Surveyor.md).
 
@@ -75,12 +75,12 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - If you specify startup options in the DataMiner Cube URL, you can make Cube display a particular view or app on startup – and you can do even much more than that! See [Options for opening DataMiner Cube](../DataminerApplications/Opening_DataMiner_Cube.md#options-for-opening-dataminer-cube).
 
-- Want to get alerts for a particular element, service or view? Right-click it in the Surveyor and select *Actions* > *Alert me*. See [Configuring notifications directly from the Alarm Console or Surveyor](../../part_3/security/Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor.md).
+- Want to get alerts for a particular element, service or view? Right-click it in the Surveyor and select *Actions* > *Alert me*. See [Configuring notifications directly from the Alarm Console or Surveyor](../../part_3/security/Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor.md).
 
-- Want to have a user manual at hand when you work with a particular device? Add it in the *Documents* section of the element card. You can also add hyperlinks and email addresses. See [About the Documents module](../../part_2/documents/About_the_Documents_module.md).
+- Want to have a user manual at hand when you work with a particular device? Add it in the *Documents* section of the element card. You can also add hyperlinks and email addresses. See [About the Documents module](../../part_2/documents/About_the_Documents_module.md).
 
 - Use properties to add information to a view, element or service, such as a class defining a gold, silver or bronze service. These properties can also be displayed in the Surveyor. See [Adding a custom property to an item](../../part_2/elements/Managing_element_properties.md#adding-a-custom-property-to-an-item).
 
-- Want to add a quick note to an element? Go to the *Notes* page in the card navigation pane. You can also do this for services and views. See [Card navigation pane](Working_with_cards_in_DataMiner_Cube.md#card-navigation-pane).
+- Want to add a quick note to an element? Go to the *Notes* page in the card navigation pane. You can also do this for services and views. See [Card navigation pane](Working_with_cards_in_DataMiner_Cube.md#card-navigation-pane).
 
 - Want to quickly copy a table to an email or spreadsheet? Right-click the table in Data Display and select *Copy table*. See [Table parameters](../../part_2/parameters/Table_parameters.md).

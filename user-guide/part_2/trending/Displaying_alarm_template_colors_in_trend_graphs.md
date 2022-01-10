@@ -14,7 +14,7 @@ To switch between these settings:
 
 1. Go to *Settings \> Trending*.
 
-2. In the drop-down list next to *Display the alarm template in the trend graph*, select either *Line* or *Band*.
+2. In the drop-down list next to *Display the alarm template in the trend graph*, select either *Line* or *Band*.
 
 > [!NOTE]
 > -  The alarm template cannot be displayed in a trend graph if it uses a variable baseline.

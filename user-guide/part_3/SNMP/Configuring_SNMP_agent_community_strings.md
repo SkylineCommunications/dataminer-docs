@@ -22,12 +22,12 @@ To override this on element level:
 
 1. Right-click the element in the Surveyor and click *Edit*.
 
-2. In the *Advanced element settings* section, select *Enable SNMP agent*.
+2. In the *Advanced element settings* section, select *Enable SNMP agent*.
 
 3. Specify the virtual IP address and subnet mask for the SNMP agent.
 
 4. Select *Override defaults* and specify the custom get and set community string.
 
     > [!NOTE]
-    > In the *Element.xml* file corresponding to the element, the community strings can be found in the *SNMPAgent* tag. For example: \<SNMPAgent readCommunity="get" writeCommunity="set">1\</SNMPAgent>. See [Element.xml](../../part_7/SkylineDataminerFolder/Elements1.md#elementxml).
+    > In the *Element.xml* file corresponding to the element, the community strings can be found in the *SNMPAgent* tag. For example: \<SNMPAgent readCommunity="get" writeCommunity="set">1\</SNMPAgent>. See [Element.xml](../../part_7/SkylineDataminerFolder/Elements1.md#elementxml).
     >

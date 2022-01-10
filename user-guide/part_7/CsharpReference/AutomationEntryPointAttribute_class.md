@@ -30,18 +30,18 @@ Examples:
 
     ```txt
     [AutomationEntryPoint(AutomationEntryPointType.Types.Default)]
-    public void Default(Engine engine)                              
-    {                                                               
-     engine.GenerateInformation(""Default"");                       
-    }                                                               
+    public void Default(Engine engine)
+    {
+     engine.GenerateInformation(""Default"");
+    }
     ```
 
 - For testing purposes, you can use AutomationEntryPointTest:
 
     ```txt
-    [AutomationEntryPoint(AutomationEntryPointType.Types.AutomationEntryPointTest)]                                                 
-    public void AutomationEntryPointTest(Engine engine, string testMessage, List<int> testIntList)                                   
-    {                                                                                                                                 
-        engine.GenerateInformation(""AutomationEntryPointTest: "" + testMessage + "" "" + string.Join("", "", testIntList.ToArray()));
-    }                                                                                                                                 
+    [AutomationEntryPoint(AutomationEntryPointType.Types.AutomationEntryPointTest)]
+    public void AutomationEntryPointTest(Engine engine, string testMessage, List<int> testIntList)
+    {
+     engine.GenerateInformation(""AutomationEntryPointTest: "" + testMessage + "" "" + string.Join("", "", testIntList.ToArray()));
+    }
     ```

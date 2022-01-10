@@ -15,7 +15,7 @@
 3. Click *Create*.
 
 > [!NOTE]
-> By default, backup files are placed in *C:\\Skyline DataMiner Backups\\*. If you want to specify another backup folder, right-click the DataMiner Taskbar Utility icon, click *Options* and specify a different folder in the *General* tab.
+> By default, backup files are placed in *C:\\Skyline DataMiner Backups\\*. If you want to specify another backup folder, right-click the DataMiner Taskbar Utility icon, click *Options* and specify a different folder in the *General* tab.
 
 > [!TIP]
 > See also:

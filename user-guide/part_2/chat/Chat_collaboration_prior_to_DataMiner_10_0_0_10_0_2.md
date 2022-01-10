@@ -47,7 +47,7 @@ To start a chat session with another user:
     A tab representing the chat session is added to the *Contacts* window.
 
 > [!NOTE]
-> You can also right-click the name of the user and click *Start chat session* in the shortcut menu.
+> You can also right-click the name of the user and click *Start chat session* in the shortcut menu.
 
 #### Sending a message
 
@@ -75,6 +75,6 @@ By default, when you receive a chat message from another user, your user name wi
 2. To the right of the tab label, click X.
 
 > [!NOTE]
-> By default, you can only end a chat session if you started it yourself. However, if you have been granted the user permission *Collaboration* > *Disconnect other users*, you can end every single chat session, no matter who started it.
+> By default, you can only end a chat session if you started it yourself. However, if you have been granted the user permission *Collaboration* > *Disconnect other users*, you can end every single chat session, no matter who started it.
 
- 
+

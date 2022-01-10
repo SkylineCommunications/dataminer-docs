@@ -29,7 +29,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/>
 
 ### Manipulating the Alarm Console
 
@@ -54,7 +54,7 @@ This section consists of the following topics:
 
     > [!TIP]
     > See also:
-    > <https://community.dataminer.services/video/alarm-console-creating-a-workspace-with-a-filtered-alarm-tab-page/> 
+    > <https://community.dataminer.services/video/alarm-console-creating-a-workspace-with-a-filtered-alarm-tab-page/>
 
 ### Changing the layout of the Alarm Console
 
@@ -79,7 +79,7 @@ By default, the Alarm Console contains the following tabs:
 - **Active alarms**: All active alarm records, except information messages and masked alarms.
 
     > [!NOTE]
-    > If the *Active alarms* tab is selected, a history slider button is available in the alarm bar that can be used to show alarms active at a certain time in the past. See [Working with the Alarm Console history slider](#working-with-the-alarm-console-history-slider).
+    > If the *Active alarms* tab is selected, a history slider button is available in the alarm bar that can be used to show alarms active at a certain time in the past. See [Working with the Alarm Console history slider](#working-with-the-alarm-console-history-slider).
 
 - **Information events**: All information messages, such as a user logging in, changing an alarm template or deleting an element, a script being executed, etc.
 
@@ -112,19 +112,19 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
 
     - **Reopen closed alarm lists**: Lists any alarm tabs you have recently closed. Note that it is possible to pin items in this list using the pin icons, so that these are then always displayed at the top of the list.
 
-    - **Show current** >**Active alarms**: Displays the default *Active alarms* tab.
+    - **Show current** >**Active alarms**: Displays the default *Active alarms* tab.
 
-    - **Show current** > **Active alarms linked to cards**: With this option, if you select an item in the Surveyor or on a card, the tab will automatically switch to the alarms for this item.
+    - **Show current** > **Active alarms linked to cards**: With this option, if you select an item in the Surveyor or on a card, the tab will automatically switch to the alarms for this item.
 
-    - **Show current** > **My active alarms**: Shows active alarms of which you are the owner.
+    - **Show current** > **My active alarms**: Shows active alarms of which you are the owner.
 
-    - **Show current** > **Unassigned active alarms**: Show active alarms that do not have an owner yet.
+    - **Show current** > **Unassigned active alarms**: Show active alarms that do not have an owner yet.
 
-    - **Show current** > **Information events**: Displays the *Information events* tab.
+    - **Show current** > **Information events**: Displays the *Information events* tab.
 
-    - **Show current** > **Suggestion events**: Displays the *Suggestion events* tab. Only available from DataMiner 10.0.0/10.0.2 onwards, on DMAs using a Cassandra database. See [Working with behavioral anomaly detection](../trending/Working_with_behavioral_anomaly_detection.md).
+    - **Show current** > **Suggestion events**: Displays the *Suggestion events* tab. Only available from DataMiner 10.0.0/10.0.2 onwards, on DMAs using a Cassandra database. See [Working with behavioral anomaly detection](../trending/Working_with_behavioral_anomaly_detection.md).
 
-    - **Show current** > **Masked alarms**: Displays the *Masked alarms* tab.
+    - **Show current** > **Masked alarms**: Displays the *Masked alarms* tab.
 
     - **Show history**: Lists history tabs for the past hour, day, week or month.
 
@@ -133,14 +133,14 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
         > [!NOTE]
         > -  In tabs set to a sliding window, only alarms raised within this window are shown. As a consequence, if you turn off history tracking or correlation tracking, history alarms and correlation source alarms will only be shown if they were raised within the sliding window.
         > -  Refresh rate and delay cannot be set in sliding window alarm tabs.
-        > -  From DataMiner 9.6.11 onwards, you can select the option *Keep active alarms* along with the option to show alarms in a sliding window. When you do so, active alarms will remain displayed in the tab even if they no longer fall in the sliding window.
+        > -  From DataMiner 9.6.11 onwards, you can select the option *Keep active alarms* along with the option to show alarms in a sliding window. When you do so, active alarms will remain displayed in the tab even if they no longer fall in the sliding window.
 
     - **Include alarms / Include masked alarms / Include information events / Include suggestion events**: Select or clear these checkboxes to determine the type of alarms that will be displayed in the new tab. This allows you to for example display a tab with information events only.
 
         > [!NOTE]
         > The *Include suggestion events* checkbox is only available from DataMiner 10.0.0/10.0.2 onwards, on DMAs using a Cassandra database. See [Working with behavioral anomaly detection](../trending/Working_with_behavioral_anomaly_detection.md).
 
-    - **Apply filters** or **Apply filter and window size**: Shows alarms filtered by a custom filter.
+    - **Apply filters** or **Apply filter and window size**: Shows alarms filtered by a custom filter.
 
         > [!NOTE]
         > For more information on filtering alarms, see [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
@@ -160,7 +160,7 @@ The list of alarms in an Alarm Console tab can be manipulated in several ways.
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/> 
+> <https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/>
 
 ##### Sorting and grouping columns
 
@@ -224,7 +224,7 @@ To change the alignment of a column:
 
 To return the columns to the default layout:
 
-- Right-click in the table header, choose *Add/Remove column*, and select the option *Set default columns* (at the bottom of the list of columns in the context menu).
+- Right-click in the table header, choose *Add/Remove column*, and select the option *Set default columns* (at the bottom of the list of columns in the context menu).
 
 > [!NOTE]
 > User preferences such as column order and grouping are automatically saved in the DMS. So no matter where you log on to the DMS, your personal preferences will always be applied.
@@ -235,17 +235,17 @@ It is possible to create a different default layout for the Alarm Console, which
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-configuring-the-alarm-console-at-group-level/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-configuring-the-alarm-console-at-group-level/>
 
 To do so:
 
 1. Go to the user settings or group settings.
 
-    For more information on how to access these settings, see [User settings](../../part_1/GettingStarted/User_settings.md) or [Configuring a set of user group settings](../../part_3/security/Configuring_a_set_of_user_group_settings.md).
+    For more information on how to access these settings, see [User settings](../../part_1/GettingStarted/User_settings.md) or [Configuring a set of user group settings](../../part_3/security/Configuring_a_set_of_user_group_settings.md).
 
 2. Go to the *Alarm Console* page.
 
-3. At the bottom of the page, in the *Configure Alarm Console* section, adapt the settings according to preference:
+3. At the bottom of the page, in the *Configure Alarm Console* section, adapt the settings according to preference:
 
     1. In the first column, select the Cube side for which you wish to configure the settings.
 
@@ -255,7 +255,7 @@ To do so:
 
     4. At the bottom of the third column, set the default Alarm Console settings for the selected tab.
 
-        The same options are available as under the Alarm Console settings button, with the exception of the *Freeze*, *Show in banner* and *Statistical view* options. You can also set the RCA filter for the tab.
+        The same options are available as under the Alarm Console settings button, with the exception of the *Freeze*, *Show in banner* and *Statistical view* options. You can also set the RCA filter for the tab.
 
         > [!TIP]
         > See also:
@@ -265,7 +265,7 @@ To do so:
 
 > [!NOTE]
 > -  Settings that are enforced at group level cannot be changed at user level.
-> -  If you create new settings for a group, these will not by default contain the tabs *Active Alarms*, *Information Events* and *Masked alarms*.
+> -  If you create new settings for a group, these will not by default contain the tabs *Active Alarms*, *Information Events* and *Masked alarms*.
 
 #### Using the statistical view
 
@@ -277,9 +277,9 @@ The statistical view has three tab pages, each offering a different drill-down a
 
 | Tab page   | Drill-down sequence                  |
 |------------|--------------------------------------|
-| Severities | Severities \> Elements \> Parameters |
-| Elements   | Elements \> Parameters \> Severities |
-| Parameters | Parameters \> Elements \> Severities |
+| Severities | Severities \> Elements \> Parameters |
+| Elements   | Elements \> Parameters \> Severities |
+| Parameters | Parameters \> Elements \> Severities |
 
 Each list item is shown as a horizontal bar. The length of the bar indicates how many alarms the item represents.
 
@@ -294,7 +294,7 @@ To view severity timelines per element or per parameter:
 
 1. Click the reports view button in the alarm bar: ![](../../images/Reports_view_button.png)
 
-2. Depending on whether you wish to see these so-called “heat maps” for elements or for parameters, either stay in the *elements* tab, or go to the *parameters* tab.
+2. Depending on whether you wish to see these so-called “heat maps” for elements or for parameters, either stay in the *elements* tab, or go to the *parameters* tab.
 
     The tabs respectively list all elements and all parameters in the DMS for which an alarm has occurred, and for each item in the list, a timeline is displayed that shows the evolution of the alarm severity over time.     Double-clicking a heat map will open a card with more information:
 
@@ -315,9 +315,9 @@ You can open the side panel of an alarm tab in three ways:
 
 - Right-click an alarm, and select *Show side panel*.
 
-- Select *Show side panel* in the Alarm Console settings menu. See [Alarm Console settings](#alarm-console-settings).
+- Select *Show side panel* in the Alarm Console settings menu. See [Alarm Console settings](#alarm-console-settings).
 
-- Double-click an alarm in an alarm tab, if the *Alarm double-click action* user setting is set to *Open side panel*. See [Alarm Console settings](../../part_1/GettingStarted/User_settings.md#alarm-console-settings).
+- Double-click an alarm in an alarm tab, if the *Alarm double-click action* user setting is set to *Open side panel*. See [Alarm Console settings](../../part_1/GettingStarted/User_settings.md#alarm-console-settings).
 
 In the side panel:
 
@@ -331,20 +331,20 @@ You can hide the side panel in three ways:
 
 - Right-click an alarm, and select *Hide side panel*.
 
-- Clear the selection from *Show side panel* in the Alarm Console settings menu. See [Alarm Console settings](#alarm-console-settings).
+- Clear the selection from *Show side panel* in the Alarm Console settings menu. See [Alarm Console settings](#alarm-console-settings).
 
-- Double-click an alarm in the alarm tab, if the *Alarm double-click action* user setting is set to *Open side panel*. See [Alarm Console settings](../../part_1/GettingStarted/User_settings.md#alarm-console-settings).
+- Double-click an alarm in the alarm tab, if the *Alarm double-click action* user setting is set to *Open side panel*. See [Alarm Console settings](../../part_1/GettingStarted/User_settings.md#alarm-console-settings).
 
 > [!NOTE]
 > The setting that controls whether the side panel is shown or hidden is a tab setting. This means that you can show the side panel in one tab and hide it in another. It is also a user setting that is remembered across sessions.
 
 ### Working with the Alarm Console history slider
 
-In the Alarm Console, you can display a timeline at the bottom of the *Active alarms* tab. To do so, click the *History slider* button in the alarm bar: ![](../../images/History_Slider_button.png)
+In the Alarm Console, you can display a timeline at the bottom of the *Active alarms* tab. To do so, click the *History slider* button in the alarm bar: ![](../../images/History_Slider_button.png)
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-alarm-history/> 
+> <https://community.dataminer.services/video/alarm-console-alarm-history/>
 
 #### Active alarms tab timeline
 
@@ -410,12 +410,12 @@ This filter box can be used in different ways:
 
     - *Exclude \[highlighted text\] in filter*: This option can only be used on an item that is not yet in the filter, and adds a negative filter for this item. This is the equivalent to adding an exclamation mark in front of an item when you type text in the filter.
 
-    - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available on a DMA using at least DataMiner 10.0.0/10.0.2 with DataMiner Indexing.
+    - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available on a DMA using at least DataMiner 10.0.0/10.0.2 with DataMiner Indexing.
 
 
 
         > [!NOTE]
-        > Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
+        > Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
 
 
 
@@ -448,20 +448,20 @@ In the Alarm Console, you can add extra tab pages where you can specify a custom
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/alarm-console-advanced-filtering/> 
-> -  <https://community.dataminer.services/video/alarm-console-alarm-history/> 
+> -  <https://community.dataminer.services/video/alarm-console-advanced-filtering/>
+> -  <https://community.dataminer.services/video/alarm-console-alarm-history/>
 
 To do so:
 
 1. Click the *+* symbol in the header of the Alarm Console.
 
-2. Choose *Apply filters* or *Apply filter and window size*, depending on whether you want to see current alarms or history alarms, or alarms in a sliding window.
+2. Choose *Apply filters* or *Apply filter and window size*, depending on whether you want to see current alarms or history alarms, or alarms in a sliding window.
 
 3. Specify the time for which alarms need to be retrieved:
 
     - For active alarms, skip this step.
 
-    - For a history alarms, in the *From* and *To* boxes, specify the range for which alarms need to be displayed.
+    - For a history alarms, in the *From* and *To* boxes, specify the range for which alarms need to be displayed.
 
     - For alarms in a sliding window, specify the window size (between 1 minute and 1 day). The default window size is 60 minutes.
 
@@ -476,17 +476,17 @@ To do so:
     > -  For more information on wildcards, see [Searching with wildcard characters](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters).
     > -  For more information on using regular expressions in filters, see [Alarm filters using regular expressions](#alarm-filters-using-regular-expressions).
     > -  From DataMiner 9.0.5 onwards, it is possible to filter the Alarm Console based on a Visual Overview session variable. To do so, create a new filtered tab displaying current alarms, and create a filter using *Matches wildcard expression*, *Does not match wildcard expression*, *Matches regular expression*, or *Does not match regular expression*. In the second part of the filter, specify the variable, in the same way as in Visio, e.g. *\[var:LoadTime\]*. For more information, see [\[var:VariableName\]](../visio/Placeholders_for_variables_in_shape_data_values.md#varvariablename).
-    > -  If you create a *Services* filter in a history tab, and you want to include services that have been deleted, at the bottom of the box where you can select services to filter on, select the *Load deleted services* checkbox (available from DataMiner 10.2.0/10.1.4 onwards).
+    > -  If you create a *Services* filter in a history tab, and you want to include services that have been deleted, at the bottom of the box where you can select services to filter on, select the *Load deleted services* checkbox (available from DataMiner 10.2.0/10.1.4 onwards).
 
 6. If you want, you can also combine several filters, using logical operators (AND, OR).
 
-7. Optionally, limit the types of alarms displayed in the new tab by selecting or clearing the *Alarms*, *Masked alarms* and/or *Information events* checkboxes. These allow you to for example only display information events in the new tab.
+7. Optionally, limit the types of alarms displayed in the new tab by selecting or clearing the *Alarms*, *Masked alarms* and/or *Information events* checkboxes. These allow you to for example only display information events in the new tab.
 
-8. Optionally, click *Count alarms* to check how many alarms will be shown when the tab configuration is applied.
+8. Optionally, click *Count alarms* to check how many alarms will be shown when the tab configuration is applied.
 
     > [!NOTE]
-    > -  If you chose to display history alarms, the *Count alarms* option will only work with certain filter combinations. If you configure a filter combination for which the option is not available, a notification message will appear.
-    > -  From DataMiner 9.6.0 \[CU25\], 10.0.0 \[CU19\], 10.1.0 \[CU8\] and 10.1.11 onwards, when you create a tab to display history alarms or alarms in a sliding window, for filters on element type, interface impact, parameter description, protocol, service impact, view ID/impact/name, or virtual function ID/impact/name, the *Count alarms* option is no longer available.
+    > -  If you chose to display history alarms, the *Count alarms* option will only work with certain filter combinations. If you configure a filter combination for which the option is not available, a notification message will appear.
+    > -  From DataMiner 9.6.0 \[CU25\], 10.0.0 \[CU19\], 10.1.0 \[CU8\] and 10.1.11 onwards, when you create a tab to display history alarms or alarms in a sliding window, for filters on element type, interface impact, parameter description, protocol, service impact, view ID/impact/name, or virtual function ID/impact/name, the *Count alarms* option is no longer available.
 
 9. To see the filtered alarms in the Alarm Console tab, click *Show alarms*.
 
@@ -499,7 +499,7 @@ When you are connected to a DMA using at least DataMiner version 10.0.0/10.0.2 w
 
 
 > [!NOTE]
-> Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
+> Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
 
 
 
@@ -507,15 +507,15 @@ To create such a tab:
 
 1. Click the *+* symbol in the header of the Alarm Console to open a new tab.
 
-2. At the top of the tab, next to *Search* *for alarms*, do the following:
+2. At the top of the tab, next to *Search* *for alarms*, do the following:
 
     - Add one or more search terms in the search box. As soon as you start typing, suggestions will be displayed below the box.
 
     - Next to the search box, indicate the time span in which the alarms should occur. By default, this is set to *Last 24 hours*.
 
-    - By default, different instances of the same alarm will be combined in a single alarm tree in the results. If you want them to be displayed separately instead, disable the *History tracking* checkbox.
+    - By default, different instances of the same alarm will be combined in a single alarm tree in the results. If you want them to be displayed separately instead, disable the *History tracking* checkbox.
 
-    Press Enter or select a suggestion to begin the search. The alarms matching your search phrase will then be retrieved in batches of 50. If there are more than 50 alarms matching the search phrase, a *More results* button will be displayed at the bottom of the list.
+    Press Enter or select a suggestion to begin the search. The alarms matching your search phrase will then be retrieved in batches of 50. If there are more than 50 alarms matching the search phrase, a *More results* button will be displayed at the bottom of the list.
 
 Once the first 50 alarms have been retrieved, a graphical representation of the alarm distribution will be displayed at the bottom of the tab.
 
@@ -561,7 +561,7 @@ From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns a
 
 - Frequency scores are used to detect parameters that frequently go into and out of alarm, or alarms that persist over a long time.
 
-Depending on the focus score, an alarm can be considered unexpected. In that case, this is indicated with the following icon in the *Focus* column: ![](../../images/AlarmFocus.png)
+Depending on the focus score, an alarm can be considered unexpected. In that case, this is indicated with the following icon in the *Focus* column: ![](../../images/AlarmFocus.png)
 
 To filter the alarm list to only show such unexpected alarms, click the following button in the alarm bar: ![](../../images/AlarmFocusFilter.png)
 
@@ -580,7 +580,7 @@ Please note the following regarding the alarm focus feature:
 - In case of an alarm storm, the update of focus scores of persistent alarms is postponed until after the alarm storm ends.
 
 > [!NOTE]
-> You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config.*
+> You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config.*
 
 #### Applying an alarm filter by dragging an item onto the Alarm Console
 
@@ -588,7 +588,7 @@ Instead of manually applying a filter in a tab, you can also drag an item from t
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-alarm-history/> 
+> <https://community.dataminer.services/video/alarm-console-alarm-history/>
 
 To do so:
 
@@ -596,11 +596,11 @@ To do so:
 
     > [!NOTE]
     > -  With a redundancy group, this way of creating a filtered tab is not possible.
-    > -  To open a filtered tab for an element, service or view, you can also right-click the item in the Surveyor or on a card and select *Actions* > *Add tab to global Alarm Console*.
+    > -  To open a filtered tab for an element, service or view, you can also right-click the item in the Surveyor or on a card and select *Actions* > *Add tab to global Alarm Console*.
 
 2. In the new tab, indicate the time frame for the alarms you want to display: active alarms, or a past time range.
 
-3. In the *What* column, select whether to show non-masked alarms, information events and/or masked alarms.
+3. In the *What* column, select whether to show non-masked alarms, information events and/or masked alarms.
 
 4. In the next column, select the items to filter on.
 
@@ -610,7 +610,7 @@ To do so:
 
 > [!NOTE]
 > -  Alarm filters based on views also include alarm events based on aggregation rules.
-> -  If you want to open a filtered tab containing only alarms related to a particular DMA, this is possible from the *System Center* module. Go to the *Agents* page of System Center and select the DMA in question in the *manage* tab. Then click the *Show agent alarms* link at the top of the pane on the right. The filtered tab will then be opened in the Alarm Console.
+> -  If you want to open a filtered tab containing only alarms related to a particular DMA, this is possible from the *System Center* module. Go to the *Agents* page of System Center and select the DMA in question in the *manage* tab. Then click the *Show agent alarms* link at the top of the pane on the right. The filtered tab will then be opened in the Alarm Console.
 
 #### Alarm filters using wildcard expressions
 
@@ -618,7 +618,7 @@ The example below shows a filter for elements matching a particular wildcard exp
 
 ![](../../images/alarm_filter_wildcard_DM9.png)
 
- 
+
 
 #### Alarm filters using regular expressions
 
@@ -630,7 +630,7 @@ If you want to filter alarms using a regular expression:
 
 ![](../../images/alarm_filter_regex_DM9.png)
 
- 
+
 
 ##### Syntax
 
@@ -638,9 +638,9 @@ You can use any regular expression.
 
 For more information on how to construct regular expressions, here are a few interesting links:
 
-- [Regular Expression Language - Quick Reference](http://msdn.microsoft.com/en-us/library/az24scfc.aspx) 
+- [Regular Expression Language - Quick Reference](http://msdn.microsoft.com/en-us/library/az24scfc.aspx)
 
-- [RegExLib.com Regular Expression Cheat Sheet](http://regexlib.com/CheatSheet.aspx) 
+- [RegExLib.com Regular Expression Cheat Sheet](http://regexlib.com/CheatSheet.aspx)
 
 > [!NOTE]
 > -  DataMiner always wraps a regular expression in ^( and )$. This means that the expression must match the entire string.
@@ -652,13 +652,13 @@ For more information on how to construct regular expressions, here are a few int
 London.*
 ```
 
-- Matches ...
+- Matches ...
 
     - London-Amplifier-1
 
     - London-Amplifier-2
 
-- Does not match ...
+- Does not match ...
 
     - NewYork-Amplifier-1
 
@@ -670,13 +670,13 @@ London.*
 (London|NewYork)-Amplifier-[0-9]+
 ```
 
-- Matches ...
+- Matches ...
 
     - London-Amplifier-1
 
     - NewYork-Amplifier-5
 
-- Does not match ...
+- Does not match ...
 
     - Paris-Amplifier-7
 
@@ -686,11 +686,11 @@ London.*
 MAC-^([0-9A-F]{2}[-]){5}([0-9A-F]{2})
 ```
 
-- Matches ...
+- Matches ...
 
     - MAC-A0-12-EF-DE-A1-C3
 
-- Does not match ...
+- Does not match ...
 
     - MAC-99-99-99-99-99
 
@@ -705,10 +705,10 @@ When you create a filter in the Alarm Console, you can save it in order to use i
 
 1. Create a filter as described in [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
-2. Before clicking *Show alarms* to apply the filter in the tab, click *Save the current filter combination*.
+2. Before clicking *Show alarms* to apply the filter in the tab, click *Save the current filter combination*.
 
     > [!NOTE]
-    > If the current filter combination contains a private alarm filter, it will not be possible to save the filter combination as a public or protected filter. 
+    > If the current filter combination contains a private alarm filter, it will not be possible to save the filter combination as a public or protected filter.
 
 3. Enter a name for the alarm filter.
 
@@ -730,7 +730,7 @@ When you create a filter in the Alarm Console, you can save it in order to use i
 3. To the right of *Saved filters*, click *\<Click to select>* and select the filter you want.
 
     > [!NOTE]
-    > -  If you have selected a saved filter, but you do not have the user permission *Edit / delete protected filters*, an eye icon will be displayed next to the filter. Click this icon to view the contents of the filter.
+    > -  If you have selected a saved filter, but you do not have the user permission *Edit / delete protected filters*, an eye icon will be displayed next to the filter. Click this icon to view the contents of the filter.
 
 4. Proceed as in [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
@@ -742,7 +742,7 @@ When you create a filter in the Alarm Console, you can save it in order to use i
 
 3. In the edit window, the following actions are possible:
 
-    - Click the *Delete* button to delete the alarm filter. You will receive a warning message mentioning where the filter may be used.
+    - Click the *Delete* button to delete the alarm filter. You will receive a warning message mentioning where the filter may be used.
 
         > [!NOTE]
         > It is not possible to delete an alarm filter that is currently in use.
@@ -797,12 +797,12 @@ To do so:
 
 1. While the alarm tab is selected, click the hamburger button in the top-left corner of the Alarm Console and select the option *Audible alert*.
 
-2. In the *Audible alert* window, select the checkbox *Enable audible alert.*
+2. In the *Audible alert* window, select the checkbox *Enable audible alert.*
 
 3. Next to *Audio file*, select the audio file that should be used. If the file is not yet available, select *\<Add audio file>* and browse to the desired file.
 
     > [!NOTE]
-    > -  When you add a sound file, it is placed in the folder *C:\\Skyline DataMiner\\Sounds*. 
+    > -  When you add a sound file, it is placed in the folder *C:\\Skyline DataMiner\\Sounds*.
     > -  The following file extensions are supported: ".asf", ".wmv", ".wm", ".asx", ".wax", ".wvx", ".wmx", ".wpl", ".wmd", ".mpg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mid", ".midi", ".rmi", ".aif", ".aifc", ".aiff", ".au", ".snd", ".wav", ".cda", ".ivf", ".wmz", ".wms".
     > -  You can also delete an audio file in the drop-down list, by hovering the mouse pointer over the file and then clicking the *X*.
     > -  If you add, update or delete a sound file, an information event is generated. If a sound is updated or deleted, a recycle bin entry is generated.
@@ -815,21 +815,21 @@ To do so:
 
     - *Stop playing after ... seconds*: If you select this option, the audio file will stop playing after the specified number of seconds.
 
-6. At the bottom of the window, select whether the sound should stop playing when *all alarms are acknowledged* or *when all alarms are read*.
+6. At the bottom of the window, select whether the sound should stop playing when *all alarms are acknowledged* or *when all alarms are read*.
 
     > [!NOTE]
-    > The user setting *Condition to set an alarm unread* determines whether alarms are set to unread again after any update or only after an increase in severity. To further fine-tune audible alerts, it can be useful to adjust this setting. See [Alarm Console settings](../../part_1/GettingStarted/User_settings.md#alarm-console-settings).
+    > The user setting *Condition to set an alarm unread* determines whether alarms are set to unread again after any update or only after an increase in severity. To further fine-tune audible alerts, it can be useful to adjust this setting. See [Alarm Console settings](../../part_1/GettingStarted/User_settings.md#alarm-console-settings).
 
 7. Click *OK*.
 
     An icon in the header of the alarm tab will now indicate that audible alerts have been configured for this tab.
 
 > [!NOTE]
-> -  The following permissions are required to configure custom alert sounds: 
->     - *General* > *Alarms* > *Audible Alert* > *Add audio files*.
->     - *General* > *Alarms* > *Audible Alert* > *Edit audio files*.
->     - *General* > *Alarms* > *Audible Alert* > *Delete audio files*.
-> -  If you do not have the right to add audio files, you will not be able to select the *Audible alert* option as long as no audio files have been added yet. Cube checks for the availability of these files when you connect, so if another user adds a file, the *Audible alert* option becomes available after a reconnect.
+> -  The following permissions are required to configure custom alert sounds:
+>     - *General* > *Alarms* > *Audible Alert* > *Add audio files*.
+>     - *General* > *Alarms* > *Audible Alert* > *Edit audio files*.
+>     - *General* > *Alarms* > *Audible Alert* > *Delete audio files*.
+> -  If you do not have the right to add audio files, you will not be able to select the *Audible alert* option as long as no audio files have been added yet. Cube checks for the availability of these files when you connect, so if another user adds a file, the *Audible alert* option becomes available after a reconnect.
 
 ### Alarm Console columns
 
@@ -841,7 +841,7 @@ For more information on changing the column layout, see [Changing the column lay
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/> 
+> <https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/>
 
 | Column name                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -862,7 +862,7 @@ For more information on changing the column layout, see [Changing the column lay
 | Service impact                  | The number of services the alarm has an impact on.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Services                        | The services the alarm has an impact on.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | RCA level                       | Three values representing the distance to the most probable cause of the alarm for services, elements, and parameters respectively.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Alarm type                      | One of the following alarm types:<br> -  **New alarm**: A new alarm event. This means that before this alarm event, the parameter was in normal state.<br> -  **Dropped from** ... : An alarm of which the severity level has dropped from a higher level.<br> -  **Escalated from** ... : An alarm of which the severity level has increase from a lower level.<br> -  **Flipped**: An alarm of which the severity level has gone from “low” (e.g. “critical low”) to “high” (e.g. “critical high”) or vice versa.<br> -  **Acknowledged**: An alarm of which a DataMiner user has taken ownership.<br> -  **Unresolved**: An alarm of which a DataMiner user has released ownership.<br> -  **Mask**: An alarm that has been masked by a DataMiner user.<br> -  **Unmask**: An alarm that has been unmasked by a DataMiner user.<br> -  **Comment** added: An alarm to which a comment has been added.<br> -  **Name** changed: An alarm caused by a parameter of which the name has been changed.<br> -  **Service** impact changed: An alarm for which the number of affected services has changed.<br> -  **View impact changed**: An alarm for which the affected views have changed. |
+| Alarm type                      | One of the following alarm types:<br> -  **New alarm**: A new alarm event. This means that before this alarm event, the parameter was in normal state.<br> -  **Dropped from** ... : An alarm of which the severity level has dropped from a higher level.<br> -  **Escalated from** ... : An alarm of which the severity level has increase from a lower level.<br> -  **Flipped**: An alarm of which the severity level has gone from “low” (e.g. “critical low”) to “high” (e.g. “critical high”) or vice versa.<br> -  **Acknowledged**: An alarm of which a DataMiner user has taken ownership.<br> -  **Unresolved**: An alarm of which a DataMiner user has released ownership.<br> -  **Mask**: An alarm that has been masked by a DataMiner user.<br> -  **Unmask**: An alarm that has been unmasked by a DataMiner user.<br> -  **Comment** added: An alarm to which a comment has been added.<br> -  **Name** changed: An alarm caused by a parameter of which the name has been changed.<br> -  **Service** impact changed: An alarm for which the number of affected services has changed.<br> -  **View impact changed**: An alarm for which the affected views have changed. |
 | Severity duration               | The length of time that the alarm has had its current severity.<br> Note that if history tracking is disabled, prior to DataMiner 10.0.5, no severity duration is displayed.<br> This column is only available in history tabs from DataMiner 10.0.5 onwards, and only in case no filter is applied or the filter is related to the element ID, DMA ID, element type, parameter ID, protocol ID or source ID. If the duration cannot be calculated, for example because the next alarm is not within the time span of the history tab, "N/A" will be displayed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Owner                           | The name of the DataMiner user who has taken ownership of the alarm. If no one has taken ownership of the alarm yet, the field remains empty.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Status                          | The current status of the alarm:<br> -  **Open**: The alarm is active, and the parameter that caused the alarm is currently in an alarm state.<br> -  **Cleared**: The alarm is no longer active; the parameter that caused the alarm has returned to a normal state.<br> -  **Masked**: The alarm is active, but is currently masked; the parameter that caused the alarm is currently in an alarm state.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -888,8 +888,8 @@ For more information on changing the column layout, see [Changing the column lay
 | Trend                           | If average trending is activated on the parameter in alarm, this column displays the trend graph for the last 24 hours.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Function impact                 | The number of functions the alarm has an impact on. <br> This functionality is part of the Service & Resource Management module. See [Service and Resource Management](../../part_4/SRM/SRM.md#service-and-resource-management).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Functions                       | The functions the alarm has an impact on. <br> This functionality is part of the Service & Resource Management module. See [Service and Resource Management](../../part_4/SRM/SRM.md#service-and-resource-management).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Heatlines \> Element heatline   | This column displays a heatline depicting the element alarm state over the last 24 hours. <br> Only displayed on systems using a Cassandra database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Heatlines \> Parameter heatline | This column displays a heatline depicting the parameter alarm state over the last 24 hours.<br> Only displayed on systems using a Cassandra database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Heatlines \> Element heatline   | This column displays a heatline depicting the element alarm state over the last 24 hours. <br> Only displayed on systems using a Cassandra database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Heatlines \> Parameter heatline | This column displays a heatline depicting the parameter alarm state over the last 24 hours.<br> Only displayed on systems using a Cassandra database.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Actions \> Ownership            | Action button that allows the user to take or release ownership of an alarm.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | Actions \> Masking              | Action button that allows the user to mask or unmask an alarm.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Actions \> Clear alarm          | Action button that allows the user to clear clearable alarms.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -914,7 +914,7 @@ The following settings are available:
 
     > [!NOTE]
     > When you create a filtered history tab, in a fixed or sliding window, history tracking is off by default. However, if you explicitly enable history tracking in a history tab, a dialog box appears asking if you want to load the full history:
-    > -  Click *All* to include all alarms in the specified time range in the alarm trees, regardless of the filter.
+    > -  Click *All* to include all alarms in the specified time range in the alarm trees, regardless of the filter.
     > -  Click *Filtered* to only include alarms matching the current filter settings.
     >
     > For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
@@ -924,7 +924,7 @@ The following settings are available:
     > [!NOTE]
     > In case a filter is applied in the alarm tab, the behavior of this feature is different depending on the type of filter:
     > -  If a filtered alarm tab is created (e.g. by dragging an item onto the Alarm Console or by selecting *Apply filter* in a new tab):
-    >     - If only the base alarm matches the filter, only that alarm is displayed. 
+    >     - If only the base alarm matches the filter, only that alarm is displayed.
     >     - If only the correlated alarm matches the filter, only that alarm is displayed.
     >     - If both base and correlated alarm match the filter, only the correlated alarm is displayed.
     >     - If neither base nor correlated alarm match the filter, neither are displayed.
@@ -960,7 +960,7 @@ The following settings are available:
 
     > [!TIP]
     > See also:
-    > <https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/> 
+    > <https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/>
 
 - **Refresh rate**: Select to specify how frequently the selected tab will be refreshed. This rate will be applied from the moment this setting is set.
 
@@ -968,9 +968,9 @@ The following settings are available:
 
     > [!TIP]
     > See also:
-    > <https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/> 
+    > <https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/>
 
-- **Merge alarm trees**: This setting is only available if *History tracking* is enabled and *Automatically remove cleared alarms* and *Freeze* are disabled in the alarm tab (from DataMiner 9.6.13 onwards). When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g. in a sliding window tab. If you activate the option, you can also select an additional option to only merge alarm trees in case the time between the alarm trees is less than a particular time span (between 1 second and 1 day).
+- **Merge alarm trees**: This setting is only available if *History tracking* is enabled and *Automatically remove cleared alarms* and *Freeze* are disabled in the alarm tab (from DataMiner 9.6.13 onwards). When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g. in a sliding window tab. If you activate the option, you can also select an additional option to only merge alarm trees in case the time between the alarm trees is less than a particular time span (between 1 second and 1 day).
 
 - **Default alarm list**: Select to make the currently selected tab the default tab, i.e. the tab that will be shown when you open DataMiner Cube. If the selected tab is already the default tab, this option will be unavailable.
 
@@ -984,7 +984,7 @@ When you right-click an alarm in the Alarm Console, depending on the configurati
 | Option                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Open                          | Displays a shortcut menu that allows you to open the alarm card or to open the view, element or service cards of the views, elements or services affected by the alarm.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Set element state             | Allows you to set the element state to *Activate*, *Pause*, *Stop* or *Restart*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Set element state             | Allows you to set the element state to *Activate*, *Pause*, *Stop* or *Restart*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Ticket                        | Allows you to create a new ticket linked to the alarm you right-clicked. From DataMiner 9.5.7 onwards, you can also view existing tickets related to the alarm via this submenu. (Requires DMS Ticketing.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | Change                        | Allows you to quickly modify the alarm template, trend template or information template for the parameter on which the alarm occurs.<br> See also:<br> -  [Editing the information template for one parameter](../protocols/Editing_the_information_template_for_one_parameter.md)<br> -  [Changing the alarm range for one parameter](../protocols/Changing_the_alarm_range_for_one_parameter.md)<br> -  [Changing the trend template for one parameter](../protocols/Configuring_trend_templates.md#changing-the-trend-template-for-one-parameter) |
 | Mask alarm                    | Allows you to mask the alarm or the element on which it occurred. See [Masking and unmasking alarms](Masking_and_unmasking_alarms.md).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -1012,5 +1012,5 @@ When you right-click an alarm in the Alarm Console, depending on the configurati
 | Properties                    | Opens the alarm properties window. See [Changing custom alarm properties](Changing_custom_alarm_properties.md).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 > [!NOTE]
-> The columns *Trend*, *Element heatline* and *Parameter heatline* cannot be copied. If you select to copy visible columns or all columns, these columns will never be included.
+> The columns *Trend*, *Element heatline* and *Parameter heatline* cannot be copied. If you select to copy visible columns or all columns, these columns will never be included.
 >

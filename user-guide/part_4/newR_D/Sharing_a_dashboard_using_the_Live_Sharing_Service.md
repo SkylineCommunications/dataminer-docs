@@ -6,23 +6,23 @@
 
 1. In the list of dashboards on the left, select the dashboard you want to share.
 
-2. Click the  ... button in the top-right corner of the dashboard, and select *Start sharing*.
+2. Click the ... button in the top-right corner of the dashboard, and select *Start sharing*.
 
     > [!NOTE]
     > -  Make sure you have the necessary user permissions for this:
-    >     - To edit the dashboard, you need the user permission *Modules* > *Reports & Dashboards* > *Dashboards* > *Edit*.
-    >     - In DataMiner 10.1.2, you need the user permission *Other* > *CCALinkAccount*.
-    >     - In DataMiner 10.1.3, you need the user permission *System configuration* > *Cloud sharing* > *Account linking*.
+    >     - To edit the dashboard, you need the user permission *Modules* > *Reports & Dashboards* > *Dashboards* > *Edit*.
+    >     - In DataMiner 10.1.2, you need the user permission *Other* > *CCALinkAccount*.
+    >     - In DataMiner 10.1.3, you need the user permission *System configuration* > *Cloud sharing* > *Account linking*.
     >     - From DataMiner 10.1.4 onwards, you need the appropriate *Live sharing* user permissions. See [Live sharing](../../part_3/security/DataMiner_user_permissions.md#live-sharing).
     > -  If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
 
-3. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
+3. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
 
 4. In the pop-up window, fill in the email address of the person you want to share the dashboard with.
 
-5. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
+5. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
 
-6. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
+6. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
 
 7. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
 

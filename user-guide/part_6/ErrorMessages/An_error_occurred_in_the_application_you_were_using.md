@@ -16,7 +16,7 @@ This application type has been disabled.
 
 #### Cause
 
-In the security settings of MS Internet Explorer, XAML browser applications (“XBAPs”) have been disabled for the security zone in which you are currently working (“Internet”, “Local intranet”, “Trusted sites”, ...).
+In the security settings of MS Internet Explorer, XAML browser applications (“XBAPs”) have been disabled for the security zone in which you are currently working (“Internet”, “Local intranet”, “Trusted sites”, ...).
 
 #### Resolution
 

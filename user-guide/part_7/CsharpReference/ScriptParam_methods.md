@@ -12,5 +12,5 @@ Example:
 
 ```txt
 ScriptParam myScriptParam = engine.GetScriptParam("param1");
-myScriptParam.SetParamValue("myValue");                     
+myScriptParam.SetParamValue("myValue");
 ```

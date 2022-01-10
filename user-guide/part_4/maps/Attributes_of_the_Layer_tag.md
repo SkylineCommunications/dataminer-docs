@@ -53,7 +53,7 @@ Available from DataMiner 9.6.0 onwards. With this attribute, you can control whe
 Example:
 
 ```xml
-<Layer name="myLayer" autoFit="false" visible="true" toggleGroup="myGroup" allowToggle="true"        sourceType="relations" limitToBouncds="false" refresh="3600000" linked="true">
+<Layer name="myLayer" autoFit="false" visible="true" toggleGroup="myGroup" allowToggle="true" sourceType="relations" limitToBouncds="false" refresh="3600000" linked="true">
 ```
 
 ### maxZoom
@@ -84,7 +84,7 @@ Available from DataMiner 9.5.5 onwards. When this attribute is set to “true”
 Example:
 
 ```xml
-<Layer sourceType="table" refresh="5000" name="Countries" visible="true" allowToggle="true"       autoFit="false" limitToBounds="false" notifications="true">
+<Layer sourceType="table" refresh="5000" name="Countries" visible="true" allowToggle="true" autoFit="false" limitToBounds="false" notifications="true">
 ```
 
 > [!NOTE]
@@ -112,7 +112,7 @@ The type of layer.
 | parameters   | A layer that displays objects positioned according to latitude and longitude values stored in element or service parameters.<br> See [Layers of sourceType “parameters”](Layer_types.md#layers-of-sourcetype-parameters).                                                                                                                                       |
 | properties   | A layer that displays objects positioned according to latitude and longitude values retrieved from DataMiner Properties.<br> See [Layers of sourceType “properties”](Layer_types.md#layers-of-sourcetype-properties).                                                                                                                                           |
 | relations    | A layer that allows you to display lines between objects that are related via foreign key relationships in a DataMiner element. <br> See [Layers of SourceType “relations”](Layer_types.md#layers-of-sourcetype-relations).                                                                                                                                     |
-| separator    | A dummy layer that only serves to display a “section title” in a layer group.<br> For more information, see [Separators in layer groups](Layer_groups.md#separators-in-layer-groups) and [Layers of sourceType “separator”](Layer_types.md#layers-of-sourcetype-separator). |
+| separator    | A dummy layer that only serves to display a “section title” in a layer group.<br> For more information, see [Separators in layer groups](Layer_groups.md#separators-in-layer-groups) and [Layers of sourceType “separator”](Layer_types.md#layers-of-sourcetype-separator). |
 | sql          | A layer that displays objects positioned according to latitude and longitude values retrieved from a database table.<br> See [Layers of sourceType “sql”](Layer_types.md#layers-of-sourcetype-sql).                                                                                                                                                             |
 | table        | A layer that displays objects based on data retrieved from dynamic table rows.<br> See [Layers of sourceType “table”](Layer_types.md#layers-of-sourcetype-table).                                                                                                                                                                                               |
 | traffic      | A layer that displays traffic information.<br> See [Layers of sourceType “traffic”](Layer_types.md#layers-of-sourcetype-traffic).                                                                                                                                                                                                                               |
@@ -120,7 +120,7 @@ The type of layer.
 | weatherf     | A layer that displays weather information with temperatures in degrees Fahrenheit.<br> See [Layers of sourceType “weatherf”](Layer_types.md#layers-of-sourcetype-weatherf).                                                                                                                                                                                     |
 
 > [!NOTE]
-> -  The sourceType attribute of a *\<Layer>* tag dictates which subtags are allowed. A *\<TableSourceInfo>* tag, for example, is only allowed inside a *\<Layer>* tag if sourceType is “table”. For more information, see [Layer types](Layer_types.md).
+> -  The sourceType attribute of a *\<Layer>* tag dictates which subtags are allowed. A *\<TableSourceInfo>* tag, for example, is only allowed inside a *\<Layer>* tag if sourceType is “table”. For more information, see [Layer types](Layer_types.md).
 > -  The Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
 
 ### visible

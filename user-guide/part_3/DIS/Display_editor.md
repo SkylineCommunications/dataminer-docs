@@ -1,6 +1,6 @@
 # Display editor
 
-If you click *Display Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a graphical interface editor. This editor allows you to design the Data Display pages of the protocol using simple drag-and-drop operations.
+If you click *Display Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a graphical interface editor. This editor allows you to design the Data Display pages of the protocol using simple drag-and-drop operations.
 
 The following sections provide more information on the Display Editor:
 
@@ -21,7 +21,7 @@ This section visualizes data pages and pop-up windows in a tree view, similar to
 > [!NOTE]
 > Warning icons will appear next to pages that are empty and pop-up windows in which other pop-up windows are defined.
 
-To add a new page to the list, click *New page.* In the *Add New Page* dialog box, you can then specify the name and the type of the page.
+To add a new page to the list, click *New page.* In the *Add New Page* dialog box, you can then specify the name and the type of the page.
 
 When you right-click a page, a shortcut menu will appear, containing the following commands:
 
@@ -29,15 +29,15 @@ When you right-click a page, a shortcut menu will appear, containing the followi
 |----------------|-------------------|----------------------------------------------------------------------------------------------------------|
 | Set as default | \-                | Turns the page into the default page.                                                                    |
 | Rename         | F2                | Allows you to rename the page.                                                                           |
-| Move Up        | CTRL+UP           | Moves a page in the *Manual Order* section one position up in the list.   |
-| Move Down      | CTRL+DOWN         | Moves a page in the *Manual Order* section one position down in the list. |
+| Move Up        | CTRL+UP           | Moves a page in the *Manual Order* section one position up in the list.   |
+| Move Down      | CTRL+DOWN         | Moves a page in the *Manual Order* section one position down in the list. |
 | Remove         | DELETE            | Removes the entire page.                                                                                 |
 
 ### Layout / Parameters
 
-You can drag parameters from the *Parameters* list on the right onto a column in the *Layout* section, which represents the layout of the selected page. An extra column is suggested the moment you drag a parameter onto the *Layout* section. If you drop the parameter onto that extra column, a new column will be added to the page.
+You can drag parameters from the *Parameters* list on the right onto a column in the *Layout* section, which represents the layout of the selected page. An extra column is suggested the moment you drag a parameter onto the *Layout* section. If you drop the parameter onto that extra column, a new column will be added to the page.
 
-If you want a page to have only one column spanning across the entire width, then, in the *Options* section below, select *Wide column*. Note that this only works if no parameters have been added except in the left-most column.
+If you want a page to have only one column spanning across the entire width, then, in the *Options* section below, select *Wide column*. Note that this only works if no parameters have been added except in the left-most column.
 
 #### Layout
 
@@ -45,11 +45,11 @@ Every parameter you drag onto a page is represented by a building block similar 
 
 ![](../../images/dis_display_editor_param.png)
 
- 
+
 
 By default, a parameter building block shows the ID, the name and the type of the parameter. When you hover with the mouse over it, a tooltip will appear, showing the contents of the parameter’s *\<Information>\<Subtext>* tag.
 
-In case of a Read/Write parameter, use the *Read* and *Write* checkboxes to indicate whether you want the page to contain the Read parameter, the Write parameter, or both.
+In case of a Read/Write parameter, use the *Read* and *Write* checkboxes to indicate whether you want the page to contain the Read parameter, the Write parameter, or both.
 
 On the right, you will notice the following buttons (depending on the type of parameter):
 
@@ -78,9 +78,9 @@ When you right-click after selecting a parameter (or multiple parameters), a sho
 
 By default, the *Parameters* list shows the ID and the name of every parameter defined in the protocol.
 
-If, however, you click the magnifying glass icon at the top of the *Parameters* list, the list will show the ID, the name, the description, the type and the RTDisplay value of every parameter defined in the protocol.
+If, however, you click the magnifying glass icon at the top of the *Parameters* list, the list will show the ID, the name, the description, the type and the RTDisplay value of every parameter defined in the protocol.
 
-Notice that, in the default *Parameters* list, the font color indicates whether a parameter has already been placed on one of the pages:
+Notice that, in the default *Parameters* list, the font color indicates whether a parameter has already been placed on one of the pages:
 
 - Parameters in gray typeface have already been placed on one of the pages.
 

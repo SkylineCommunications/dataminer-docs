@@ -24,11 +24,11 @@ In the *DIS Settings* dialog box, you can find all program settings of the DataM
 
 ### DMA
 
-In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to import or publish protocols or Automation scripts, or debug QActions.
+In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to import or publish protocols or Automation scripts, or debug QActions.
 
 To add a DMA to the list:
 
-1. Click *Add* in the upper right-hand corner of the *DIS Settings* window.
+1. Click *Add* in the upper right-hand corner of the *DIS Settings* window.
 
 2. In the *General* tab, specify the following information:
 
@@ -42,7 +42,7 @@ To add a DMA to the list:
 
 3. Click *Test connection* to check whether DIS is able to connect to the DMA you configured.
 
-4. If the DMA you are configuring is not your local DMA, then, in the *Debugging* tab, select the *Enable remote debugging* checkbox and specify the following settings if you want to be able to debug QActions while connected to this remote DMA.
+4. If the DMA you are configuring is not your local DMA, then, in the *Debugging* tab, select the *Enable remote debugging* checkbox and specify the following settings if you want to be able to debug QActions while connected to this remote DMA.
 
     | Setting          | Description                                                                                                                                                                                                                                                                                                                                                 |
     |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,17 +54,17 @@ To add a DMA to the list:
     > See also:
     > [Debugging QActions and Automation scripts](Debugging_QActions_and_Automation_scripts.md)
 
-5. Click *OK* to close the *Edit DMA Connection* window.
+5. Click *OK* to close the *Edit DMA Connection* window.
 
 To update a DMA in the list:
 
 1. Right-click the DMA, and select *Edit*.
 
-2. In the *Edit DMA Connection* window, make the necessary changes, and click *OK*.
+2. In the *Edit DMA Connection* window, make the necessary changes, and click *OK*.
 
     > [!NOTE]
     > -  When you change the hostname, the user name and/or the password, the current connection will be closed.
-    > -  After having changed the hostname, the user name and/or the password, we recommend you click the *Test connection* button to check whether DIS is able to connect to the DMA.
+    > -  After having changed the hostname, the user name and/or the password, we recommend you click the *Test connection* button to check whether DIS is able to connect to the DMA.
 
 To delete a DMA from the list:
 
@@ -86,7 +86,7 @@ If you add a DMA on which DataMiner configuration switching is enabled, you may 
     07-14 08:42:04.374|4|EndPointsManager.InternalEnableRemoting|port 8004 is available!
     ```
 
-3. Replace the port number in the *Host* box with the port number you found in SLNet.txt.
+3. Replace the port number in the *Host* box with the port number you found in SLNet.txt.
 
 > [!NOTE]
 > For more information on switching between DataMiner configurations, refer to the DataMiner Help.
@@ -97,9 +97,9 @@ In the *DLLs* tab, you can specify the DLL import locations.
 
 #### DLL Import locations
 
-These are the folders that should contain files like *Interop.SLDms.dll*, *SLDatabase.dll*, *SLProtocolTools.dll* or *SLNetTypes.dll*.
+These are the folders that should contain files like *Interop.SLDms.dll*, *SLDatabase.dll*, *SLProtocolTools.dll* or *SLNetTypes.dll*.
 
-- To add a folder, click *Add* and specify the folder in the newly added text box. Enter it manually or click the ellipsis (“…”) button to the right of the text box and browse to the right folder.
+- To add a folder, click *Add* and specify the folder in the newly added text box. Enter it manually or click the ellipsis (“…”) button to the right of the text box and browse to the right folder.
 
 - To delete a folder, click the red X to the right of the folder.
 
@@ -119,7 +119,7 @@ In the *Solutions* tab, you can specify the following default solution folders:
 
 ### Class Library
 
-In the *Class Library* tab, you can select a base package (shipped with DIS) and specify the location of one or more custom/community packages, which will typically contain code written specifically for a particular vendor or project and maintained by a dedicated team of developers.
+In the *Class Library* tab, you can select a base package (shipped with DIS) and specify the location of one or more custom/community packages, which will typically contain code written specifically for a particular vendor or project and maintained by a dedicated team of developers.
 
 Apart from a number of C# files, class library packages include a manifest.xml file that contains the name and the version of the package as well as any dependencies to other packages. When a Class Library QAction 63000 or a Class Library EXE block is generated, all information about the packages that were used to build the class library packages used by that QAction or EXE block will be added to it. This will allow DIS to check the included packages each time it generates the QAction or EXE block, alert the user whenever it notices package inconsistencies (different base package, updated community packages, etc.), and offer the user the opportunity to either allow or block the QAction or EXE block update.
 
@@ -133,7 +133,7 @@ Clear the *Enable Class Library feature* option if you want to disable the Class
 
 #### Automatically generate Class Library code
 
-If you select the *Automatically generate Class Library code* option, DIS will automatically regenerate the Class Library QAction 63000 and the Class Library EXE blocks whenever references to class library items have been added, changed or removed.
+If you select the *Automatically generate Class Library code* option, DIS will automatically regenerate the Class Library QAction 63000 and the Class Library EXE blocks whenever references to class library items have been added, changed or removed.
 
 If you want to force an ad-hoc regeneration of the Code Library QAction 63000 and the Code Library EXE blocks, you can click the *Protocol \> Generate Class Library Code* command in the DIS menu.
 
@@ -141,11 +141,11 @@ See also: [Protocol \> Generate Class Library code](DIS_menu.md#protocol--genera
 
 ### Interface
 
-In the *Interface* tab, you can change a number of settings pertaining to mouse behavior, highlighting and the file tab search box.
+In the *Interface* tab, you can change a number of settings pertaining to mouse behavior, highlighting and the file tab search box.
 
 #### Scroll at mouse cursor
 
-If you select the *Scroll at mouse cursor* option, hovering with your mouse over a user interface section of DataMiner Integration Studio will suffice to be able to scroll in that section using the mouse wheel.
+If you select the *Scroll at mouse cursor* option, hovering with your mouse over a user interface section of DataMiner Integration Studio will suffice to be able to scroll in that section using the mouse wheel.
 
 This means that you will be able to scroll in one section while keeping the keyboard focus on another section.
 
@@ -166,9 +166,9 @@ This setting controls whether or not the full-text search feature in the file ta
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Case sensitive     | the full-text search feature will be case sensitive.                                                                                                                                                                                                                                                                                                 |
 | Ignore case        | the full-text search feature will not be case sensitive.                                                                                                                                                                                                                                                                                             |
-| Remember last used | The full-text search feature will inherit the current case sensitivity setting.<br> Example: If, just before opening a new file tab, you chose *Ignore case* in an open file tab, then the full-text search feature of the newly opened file tab will be set to *Ignore case* as well. |
+| Remember last used | The full-text search feature will inherit the current case sensitivity setting.<br> Example: If, just before opening a new file tab, you chose *Ignore case* in an open file tab, then the full-text search feature of the newly opened file tab will be set to *Ignore case* as well. |
 
-The value you specify in this system setting is the default setting. If you want to override this default setting in a particular file tab, you can switch between *Case sensitive* and *Ignore case* by clicking the *aA* button to the right of the search box.
+The value you specify in this system setting is the default setting. If you want to override this default setting in a particular file tab, you can switch between *Case sensitive* and *Ignore case* by clicking the *aA* button to the right of the search box.
 
 #### Highlighting filter box - Wildcard characters (\* and ?)
 
@@ -178,26 +178,26 @@ This setting controls whether or not the full-text search feature will interpret
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Treat as literal string | the full-text search feature will interpret \* and ? characters in the search box as characters instead of wildcards.<br> Tip: Use this option if you want to search for strings like “\*\*\*”.                                                                                                                                                                                    |
 | Interpret as wildcards  | the full-text search feature will interpret \* and ? characters in the search box as wildcards instead of characters.                                                                                                                                                                                                                                                              |
-| Remember last used      | The full-text search feature will inherit the current wildcard interpretation setting.<br> Example: If, just before opening a new file tab, you chose *Interpret as wild-cards* in an open file tab, then the full-text search feature of the newly opened file tab will be set to *Interpret as wildcards* as well. |
+| Remember last used      | The full-text search feature will inherit the current wildcard interpretation setting.<br> Example: If, just before opening a new file tab, you chose *Interpret as wild-cards* in an open file tab, then the full-text search feature of the newly opened file tab will be set to *Interpret as wildcards* as well. |
 
-The value you specify in this system setting is the default setting. If you want to override this default setting in a particular file tab, you can switch between *Treat as literal string* and *Interpret as wildcards* by clicking the *\*?* button to the right of the search box.
+The value you specify in this system setting is the default setting. If you want to override this default setting in a particular file tab, you can switch between *Treat as literal string* and *Interpret as wildcards* by clicking the *\*?* button to the right of the search box.
 
 #### Disable C# syntax highlighting in XML documents
 
-If you select the *Disable C# syntax highlighting in XML documents* option, the C# code inside *\<QAction>* and *\<Exe>* tags will be displayed without syntax highlighting.
+If you select the *Disable C# syntax highlighting in XML documents* option, the C# code inside *\<QAction>* and *\<Exe>* tags will be displayed without syntax highlighting.
 
 #### DIS tree view: Show description instead of name
 
-Select this option if you want the *DIS Tree* window to display parameter descriptions instead of parameter names.
+Select this option if you want the *DIS Tree* window to display parameter descriptions instead of parameter names.
 
-See the following example. If you select the *DIS tree view: Show description instead of name* option, the *DIS Tree* window will display the parameter in question as “System Name” instead of “sysName”.
+See the following example. If you select the *DIS tree view: Show description instead of name* option, the *DIS Tree* window will display the parameter in question as “System Name” instead of “sysName”.
 
 ```xml
-<Param>                                
-  <Name>sysName</Name>                  
+<Param>
+  <Name>sysName</Name>
   <Description>System Name</Description>
-  ...                                     
-</Param>                               
+  ...
+</Param>
 ```
 
 #### Disable highlighting of selected text in XML documents
@@ -206,7 +206,7 @@ By default, if you select a text string in an XML file, all identical text strin
 
 #### Hide virtual comments in protocol
 
-Select the *Hide virtual comments in protocol* option if you do not want virtual comments to be shown in the XML editor.
+Select the *Hide virtual comments in protocol* option if you do not want virtual comments to be shown in the XML editor.
 
 > [!TIP]
 > See also:
@@ -214,7 +214,7 @@ Select the *Hide virtual comments in protocol* option if you do not want virtua
 
 #### Only show unresolved links
 
-Select the *Only show unresolved links* option if you only want to see the virtual comments that cannot be resolved.
+Select the *Only show unresolved links* option if you only want to see the virtual comments that cannot be resolved.
 
 > [!TIP]
 > See also:
@@ -264,21 +264,21 @@ Also, a button allows you to sign out (and sign in again).
 
 ### Updates
 
-In the *Updates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for updates.
+In the *Updates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for updates.
 
-- If you select the *Check for plug-in updates* option, DataMiner Integration Studio will check once every hour whether a more recent version of the *DataMinerIntegrationStudio.vsix* extension file is available. If so, an update banner will appear at the top of the editor window.
+- If you select the *Check for plug-in updates* option, DataMiner Integration Studio will check once every hour whether a more recent version of the *DataMinerIntegrationStudio.vsix* extension file is available. If so, an update banner will appear at the top of the editor window.
 
-- If you select the *Get insider builds* option, DataMiner Integration Studio will not only check for main updates, but also for “insider” updates, i.e. pre-release versions for testing purposes.
+- If you select the *Get insider builds* option, DataMiner Integration Studio will not only check for main updates, but also for “insider” updates, i.e. pre-release versions for testing purposes.
 
 ### Other
 
 #### Hide warnings about UTF-8 encoding
 
-If you select the *Hide warnings about UTF-8 encoding* option, no UTF-8 encoding errors will be displayed in the error list.
+If you select the *Hide warnings about UTF-8 encoding* option, no UTF-8 encoding errors will be displayed in the error list.
 
 #### Fix default XML encoding
 
-Click *Fix default XML encoding* if you want DataMiner Integration Studio to change the encoding of Visual Studio’s “New XML file” template, which, by default, contains the UTF-8 signature header.
+Click *Fix default XML encoding* if you want DataMiner Integration Studio to change the encoding of Visual Studio’s “New XML file” template, which, by default, contains the UTF-8 signature header.
 
 > [!NOTE]
 > -  DIS automatically saves XML files using the following encoding:

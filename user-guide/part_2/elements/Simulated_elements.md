@@ -19,7 +19,7 @@ A simulated DataMiner element communicates with a simulation file, which is a fi
 
 ![](../../images/SimulatedElements.jpg)
 
- 
+
 
 #### Limitations
 
@@ -39,7 +39,7 @@ For information on how to create a simulated element, see [Creating a simulated 
     <Element ... simulation="true">
     ```
 
-2. The element will start using the simulation file (located in the folder *C:\\Skyline DataMiner\\simulations\\*) of which the *protocol* and *version* attributes match the protocol and protocol version of the element. If no such file can be found, then the one of which only the *protocol* attribute matches the protocol of the element will be used:
+2. The element will start using the simulation file (located in the folder *C:\\Skyline DataMiner\\simulations\\*) of which the *protocol* and *version* attributes match the protocol and protocol version of the element. If no such file can be found, then the one of which only the *protocol* attribute matches the protocol of the element will be used:
 
     ```xml
     <Simulation name="..." protocol="..." version="...">
@@ -47,7 +47,7 @@ For information on how to create a simulated element, see [Creating a simulated 
 
 #### Using a specific simulation file
 
-If you want the element to use a specific simulation file, specify the name of that file (without “Simulation\_” prefix and without ”.xml” extension) in the *simulation* attribute of that element’s *Element.xml* file.
+If you want the element to use a specific simulation file, specify the name of that file (without “Simulation\_” prefix and without ”.xml” extension) in the *simulation* attribute of that element’s *Element.xml* file.
 
 If, for example, you want to use the file named “Simulation_MyDevice.xml”, specify the following:
 

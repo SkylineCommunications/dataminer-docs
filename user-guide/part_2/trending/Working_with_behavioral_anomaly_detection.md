@@ -3,7 +3,7 @@
 > [!NOTE]
 > -  This feature requires a general database of type "Cassandra".
 > -  Anomaly detection is only available for numeric parameters that are not part of partial tables. It is also limited to at most 100,000 parameters per DMA.
-> -  You can enable or disable this feature via *System Center* > *System settings* > *analytics config*. 
+> -  You can enable or disable this feature via *System Center* > *System settings* > *analytics config*.
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the following kinds of changes in the behavior of a trend, also known as "change points":
 
@@ -29,18 +29,18 @@ Based on the behavioral anomaly detection, the following icons can be displayed 
 
 | Icon                                                                                                                                                                                                                | Description               |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| ![](../../images/StandardTrendGraphIcon.png)                                                                                                                 | Standard trend graph icon |
-| ![](../../images/ArrowRight60.png)                                                                                                                                     | Upward arrow              |
-| ![](../../images/ArrowRight120.png)                                                                                                                                   | Downward arrow            |
-| ![](../../images/ArrowRight.png)                                                                                                                                         | Flat arrow                |
-| ![](../../images/LevelShiftIncrease.png) ![](../../images/LevelShiftIncreaseRed.png)                       | Upward level shift        |
-| ![](../../images/LevelShiftDecrease.png) ![](../../images/LevelShiftDecreaseRed.png)                      | Downward level shift      |
-| ![](../../images/ArrowTrendChangeUp.png) ![](../../images/ArrowTrendChangeUpRed.png)                     | Upward trend change       |
-| ![](../../images/ArrowTrendChangeDown.png) ![](../../images/ArrowTrendChangeDownRed.png)             | Downward trend change     |
-| ![](../../images/ArrowVarianceChangeUp.png) ![](../../images/ArrowVarianceChangeUpRed.png)         | Variance increase         |
-| ![](../../images/ArrowVarianceChangeDown.png) ![](../../images/ArrowVarianceChangeDownRed.png) | Variance decrease         |
-| ![](../../images/ArrowOutlierUp.png) ![](../../images/ArrowOutlierUpRed.png)                                     | Upward outlier            |
-| ![](../../images/ArrowOutlierDown.png) ![](../../images/ArrowOutlierDownRed.png)                             | Downward outlier          |
+| ![](../../images/StandardTrendGraphIcon.png)                                                                                                                | Standard trend graph icon |
+| ![](../../images/ArrowRight60.png)                                                                                                                                    | Upward arrow              |
+| ![](../../images/ArrowRight120.png)                                                                                                                                  | Downward arrow            |
+| ![](../../images/ArrowRight.png)                                                                                                                                        | Flat arrow                |
+| ![](../../images/LevelShiftIncrease.png) ![](../../images/LevelShiftIncreaseRed.png)                       | Upward level shift        |
+| ![](../../images/LevelShiftDecrease.png) ![](../../images/LevelShiftDecreaseRed.png)                      | Downward level shift      |
+| ![](../../images/ArrowTrendChangeUp.png) ![](../../images/ArrowTrendChangeUpRed.png)                     | Upward trend change       |
+| ![](../../images/ArrowTrendChangeDown.png) ![](../../images/ArrowTrendChangeDownRed.png)             | Downward trend change     |
+| ![](../../images/ArrowVarianceChangeUp.png) ![](../../images/ArrowVarianceChangeUpRed.png)         | Variance increase         |
+| ![](../../images/ArrowVarianceChangeDown.png) ![](../../images/ArrowVarianceChangeDownRed.png) | Variance decrease         |
+| ![](../../images/ArrowOutlierUp.png) ![](../../images/ArrowOutlierUpRed.png)                                     | Upward outlier            |
+| ![](../../images/ArrowOutlierDown.png) ![](../../images/ArrowOutlierDownRed.png)                             | Downward outlier          |
 
 Please note the following regarding these icons:
 
@@ -48,7 +48,7 @@ Please note the following regarding these icons:
 
 - If a change point is considered anomalous, the icon is displayed in red.
 
-- The selection of a particular icon is based on the change points that have occurred within a time interval specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. By default, this is set to 3600 seconds.
+- The selection of a particular icon is based on the change points that have occurred within a time interval specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. By default, this is set to 3600 seconds.
 
 #### Change points in trend graphs
 

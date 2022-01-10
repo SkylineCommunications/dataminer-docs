@@ -8,6 +8,6 @@ The tree view on the left side of the app contains some root folders that cannot
 
     More protocol folders can be added by right-clicking in the blank area underneath the folders and selecting *Add protocol folder*
 
-- On the *Documents* page of an element, there is also an *Elements* folder containing the documents that are associated with that particular element only. (Available from DataMiner 9.6.8 onwards.)
+- On the *Documents* page of an element, there is also an *Elements* folder containing the documents that are associated with that particular element only. (Available from DataMiner 9.6.8 onwards.)
 
 Within these root folders, custom folders can be added, renamed or deleted through the right-click menu.

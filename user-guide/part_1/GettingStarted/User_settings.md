@@ -58,7 +58,7 @@ The DataMiner Cube user settings are divided in several different sections:
 
 On the *General* page, the following settings are available:
 
-- **Background theme**: In the drop-down box, you can select the background theme for DataMiner Cube. From DataMiner 9.0 onwards, two themes are available: *Skyline Mixed* and *Skyline Black*.
+- **Background theme**: In the drop-down box, you can select the background theme for DataMiner Cube. From DataMiner 9.0 onwards, two themes are available: *Skyline Mixed* and *Skyline Black*.
 
     > [!NOTE]
     > When you have modified this setting, reconnect your DataMiner Cube session to make sure the change is applied throughout the UI.
@@ -73,14 +73,14 @@ On the *Alarm Console* page, several settings are available:
 
 - **Display horizontal scrollbar in the alarm list**: Select this setting to display a horizontal scrollbar in the Alarm Console. This can be very handy when many columns have been added in the list in the Alarm Console.
 
-- **Alarm Console time format**: Select *Today/Yesterday* to use the numeric date format only for dates earlier than “Yesterday”, or select *Full date* to always display the complete date in numeric format.
+- **Alarm Console time format**: Select *Today/Yesterday* to use the numeric date format only for dates earlier than “Yesterday”, or select *Full date* to always display the complete date in numeric format.
 
     The setting will be applied on the time columns and group headers in the Alarm Console, the side panel of the Alarm Console, alarm cards and alarm lists in Visio.
 
     > [!NOTE]
     > The current default setting is “Today/Yesterday”, so only timestamps older than 2 days will show the full date.
 
-- **Alarm double-click action**: From DataMiner 9.0.5 onwards, this setting determines what happens when you double-click an alarm in the Alarm Console. If *Open alarm card* is selected, the alarm card will be opened. If *Open side panel* is selected, the alarm side panel is opened, or closed in case it was already open. If the default option *Open element card* is selected:
+- **Alarm double-click action**: From DataMiner 9.0.5 onwards, this setting determines what happens when you double-click an alarm in the Alarm Console. If *Open alarm card* is selected, the alarm card will be opened. If *Open side panel* is selected, the alarm side panel is opened, or closed in case it was already open. If the default option *Open element card* is selected:
 
     - For an alarm on an element, the element card is opened.
 
@@ -101,17 +101,17 @@ On the *Alarm Console* page, several settings are available:
 
 - **Enable alarm storm protection by applying a delay on the alarms**: Available from DataMiner 9.5.2/9.5.0 CU4 onwards. When you select this setting, as soon as the specified number of alarms occur within the specified time range, these alarms will be delayed until the specified period of time has passed. The alarm storm protection is applied as long as there are more alarms than the number specified next to *Stop delaying below*. As long as the alarms are delayed, they will not be displayed in Cube. If an alarm is cleared before the delay time has passed, it will not be displayed at all.
 
-    While Cube is in alarm storm mode, a red *Alarm storm mode* label is displayed at the top of the window. If you click this label, a card is opened listing all alarms that are currently delayed, in the same layout as in the Alarm Console. This list is not automatically updated, but can be refreshed using a refresh button on the right-hand side.
+    While Cube is in alarm storm mode, a red *Alarm storm mode* label is displayed at the top of the window. If you click this label, a card is opened listing all alarms that are currently delayed, in the same layout as in the Alarm Console. This list is not automatically updated, but can be refreshed using a refresh button on the right-hand side.
 
     > [!NOTE]
     > This alarm storm protection is triggered by the total number of alarm updates, information events included.
 
-- **Filter the alarms before they enter Cube**: Select this setting and then select one of the existing alarm filters in the drop-down list in order to apply it as a server-side alarm filter. When you do so, the *Active alarms* tab of the Alarm Console will only list alarms that match this filter.
+- **Filter the alarms before they enter Cube**: Select this setting and then select one of the existing alarm filters in the drop-down list in order to apply it as a server-side alarm filter. When you do so, the *Active alarms* tab of the Alarm Console will only list alarms that match this filter.
 
     > [!NOTE]
     > -  When you have modified this setting, you will need to reconnect your DataMiner Cube session in order to apply the change.
     > -  Applying this setting can lead to inconsistencies between the Alarm Console and element alarm states. In other words, alarms could be present in the DMS that cannot be seen in the Alarm Console, because the server side filter overrides any other filter you set in the Alarm Console.
-    > -  If this setting is applied, the message *Limited Alarm Access* is shown at the top of the screen. If you hover the mouse pointer over this text, a list of possible inconsistencies will be shown.
+    > -  If this setting is applied, the message *Limited Alarm Access* is shown at the top of the screen. If you hover the mouse pointer over this text, a list of possible inconsistencies will be shown.
     > -  For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
 
 - **Condition to set an alarm unread**: Available from DataMiner 9.5.11 onwards. This setting determines when a read alarm should become unread again. The following options are available:
@@ -130,7 +130,7 @@ On the *Alarm Console* page, several settings are available:
 
 ##### Alarm Console \> Card-specific
 
-From DataMiner 9.5.6 onwards, the Alarm Console page also has a *Card-specific* subpage, where you can configure custom active alarms tabs for the ALARMS pages of element, service or view cards. For element cards, you can also configure custom alarm tabs for cards of specific element protocols.
+From DataMiner 9.5.6 onwards, the Alarm Console page also has a *Card-specific* subpage, where you can configure custom active alarms tabs for the ALARMS pages of element, service or view cards. For element cards, you can also configure custom alarm tabs for cards of specific element protocols.
 
 To configure a custom tab page:
 
@@ -141,11 +141,11 @@ To configure a custom tab page:
 3. In the remaining columns, specify any options that should apply to the custom tab page, similar to the regular Alarm Console configuration setting mentioned above.
 
 > [!NOTE]
-> It is not possible to remove the three default tab pages (*Active alarms*, *Masked alarms* and *Information events*).
+> It is not possible to remove the three default tab pages (*Active alarms*, *Masked alarms* and *Information events*).
 
 #### Card settings
 
-On the *Card* page, the settings are divided into four sections, i.e. a section for view cards, element cards, service cards, and all cards. Some settings return in several sections, so that they can be applied separately for different types of card.
+On the *Card* page, the settings are divided into four sections, i.e. a section for view cards, element cards, service cards, and all cards. Some settings return in several sections, so that they can be applied separately for different types of card.
 
 - **How to show view/element/EPM/service card Visual pages**: This setting can be configured separately for view cards, element cards, EPM cards and service cards. It provides three options for navigation between Visual Overview pages:
 
@@ -234,7 +234,7 @@ On the *Cube* page, the following settings are available:
     > See also:
     > [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings)
 
-- **Welcome page** > **Show the ... section**: Available from DataMiner 9.5.14 onwards. These settings determine whether the different optional sections are displayed on the DataMiner Pulse welcome page in Cube.
+- **Welcome page** > **Show the ... section**: Available from DataMiner 9.5.14 onwards. These settings determine whether the different optional sections are displayed on the DataMiner Pulse welcome page in Cube.
 
 - **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four blue squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
@@ -252,7 +252,7 @@ On the *Cube sides* page, you can change the following settings for each side of
 
 On the *Data Display* page, several settings are available, some of which are only applicable for Lite mode.
 
-- **Parameter display mode**: With this option, you can choose whether to visualize parameter controls in *Normal* mode or *Lite* mode. When you select Lite mode, parameters will be shown in a more compact way. Several options to customize the way parameters are represented are also available for Lite mode.
+- **Parameter display mode**: With this option, you can choose whether to visualize parameter controls in *Normal* mode or *Lite* mode. When you select Lite mode, parameters will be shown in a more compact way. Several options to customize the way parameters are represented are also available for Lite mode.
 
     > [!TIP]
     > See also:
@@ -281,10 +281,10 @@ On the *Data Display* page, several settings are available, some of which are on
 
 - **Inner margin**: Only available in Lite mode. Enter 1, 2 or 4 values, separated by commas, to determine the inner margin between parameters.
 
-- **Show General Parameters debug page**: Select this setting along with the computer setting *Debug settings visible* to show an additional Data Display page called *General parameters DEBUG*. This page contains general parameters that are only used for debug purposes and that are not usually displayed.
+- **Show General Parameters debug page**: Select this setting along with the computer setting *Debug settings visible* to show an additional Data Display page called *General parameters DEBUG*. This page contains general parameters that are only used for debug purposes and that are not usually displayed.
 
     > [!NOTE]
-    > This setting is only displayed if the computer setting *Debug settings visible* is selected. See [Debug settings](Computer_settings.md#debug-settings).
+    > This setting is only displayed if the computer setting *Debug settings visible* is selected. See [Debug settings](Computer_settings.md#debug-settings).
 
 - **Enable heat map on table parameters**: Enable this setting to give table cells with numeric parameters a background color intensity that matches their value.
 
@@ -296,7 +296,7 @@ On the *Data Display* page, several settings are available, some of which are on
 
 - **Table export column separator**: Determines which separator is used between table columns when tables are exported. You can choose between a comma, a semicolon, a tab, or the list separator defined in the culture of the client machine. This setting is available from DataMiner 9.5.3 onwards.
 
-    From DataMiner 10.0.0/10.0.2 onwards, this setting is no longer available. The regional setting *CSV separator* should be used instead. See [Regional settings](#regional-settings).
+    From DataMiner 10.0.0/10.0.2 onwards, this setting is no longer available. The regional setting *CSV separator* should be used instead. See [Regional settings](#regional-settings).
 
 > [!NOTE]
 > Up to DataMiner 9.0.0, this section also includes the trending settings. In later versions, these settings have been moved to a separate section. See [Trending settings](#trending-settings).
@@ -307,17 +307,17 @@ These settings allow you to specify which alarm levels and icons are shown next 
 
 - **Use modern icons**: Available from DataMiner 10.0.0/10.0.2 onwards. When this option is selected, the redesigned DataMiner 10 icons are used instead of the legacy icons. However, in this case icons cannot display latch levels, aggregation levels, or split view alarm levels.
 
-- **View alarm level**: In the drop-down list next to this setting, choose either *Consolidated* to show the alarm level of all child items, or *Split* to show the alarm level of the first-level child items on the left and the alarm level of the child items on the deeper levels on the right. Not supported if *Use modern icons* is selected.
+- **View alarm level**: In the drop-down list next to this setting, choose either *Consolidated* to show the alarm level of all child items, or *Split* to show the alarm level of the first-level child items on the left and the alarm level of the child items on the deeper levels on the right. Not supported if *Use modern icons* is selected.
 
-- **View latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for views, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
+- **View latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for views, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
-- **View aggregation level**: With this option, aggregated alarms on views are indicated with a triangle next to the colored bar indicating the view alarm level. In the drop-down list next to this setting, choose either *Show* to show this triangle, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
+- **View aggregation level**: With this option, aggregated alarms on views are indicated with a triangle next to the colored bar indicating the view alarm level. In the drop-down list next to this setting, choose either *Show* to show this triangle, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
-- **Element alarm level**: In the drop-down list next to this setting, choose either *Separate from timeout* to show a timeout icon and the last-known alarm level, or *Timeout overrules* to show a timeout icon and the timeout color.
+- **Element alarm level**: In the drop-down list next to this setting, choose either *Separate from timeout* to show a timeout icon and the last-known alarm level, or *Timeout overrules* to show a timeout icon and the timeout color.
 
-- **Element latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for elements, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
+- **Element latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for elements, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
-- **Service latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for services, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
+- **Service latch level**: In the drop-down list next to this setting, choose either *Show* to show the latch level for services, or *Hide* to hide it. Not supported if *Use modern icons* is selected.
 
 > [!TIP]
 > See also:
@@ -330,7 +330,7 @@ On the *Regional* page, the following settings are available:
 - **Language of the user interface**: Choose the language for the user interface. You must restart DataMiner Cube for this setting to take effect. Currently, the officially supported languages are Dutch, French, German, Portuguese (Portugal), Russian and Spanish. Other languages are available for demo purposes only.
 
     > [!NOTE]
-    > From DataMiner 9.5.2 onwards, by default, only the officially supported languages can be selected in the user settings. 
+    > From DataMiner 9.5.2 onwards, by default, only the officially supported languages can be selected in the user settings.
 
 - **Regional date and time format**: Select a culture in the drop-down list to customize the format of dates and times in DataMiner Cube to that culture.
 
@@ -342,11 +342,11 @@ On the *Regional* page, the following settings are available:
 
 #### Surveyor/Sidebar settings
 
-On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page, the following settings are available:
+On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page, the following settings are available:
 
-- **Sidebar docking position**: Available from DataMiner 10.0.0/10.0.2 onwards. Select *Right* or *Left* to determine at which side of the screen the Cube sidebar will be displayed. By default, it is displayed on the left.
+- **Sidebar docking position**: Available from DataMiner 10.0.0/10.0.2 onwards. Select *Right* or *Left* to determine at which side of the screen the Cube sidebar will be displayed. By default, it is displayed on the left.
 
-- **Surveyor docking position** (obsolete): Select *Right* or *Left* to determine at which side of the screen the Surveyor will be displayed. This setting is no longer available from DataMiner 10.0.0/10.0.2 onwards.
+- **Surveyor docking position** (obsolete): Select *Right* or *Left* to determine at which side of the screen the Surveyor will be displayed. This setting is no longer available from DataMiner 10.0.0/10.0.2 onwards.
 
 - **Allow to expand/collapse service nodes**: Select this setting to enable users to expand services in the Surveyor to see the child items of the services.
 
@@ -358,41 +358,41 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* pag
 
 #### Trending settings
 
-- **Trend Y-axis mode**: Select *Auto* to automatically optimize the vertical range of a trend graph during pan and zoom operations. Select *Range* to fix the vertical range to the minimum and maximum defined in the protocol.
+- **Trend Y-axis mode**: Select *Auto* to automatically optimize the vertical range of a trend graph during pan and zoom operations. Select *Range* to fix the vertical range to the minimum and maximum defined in the protocol.
 
     > [!NOTE]
-    > -  If a trend display is already open when you change this setting, you must reload the trend display for the setting to take effect. 
-    > -  When the *Range* setting is selected, the range of the y-axis is determined by the first parameter loaded in the trend graph. After the initial range is determined, it will not be adjusted until all parameters are cleared.
+    > -  If a trend display is already open when you change this setting, you must reload the trend display for the setting to take effect.
+    > -  When the *Range* setting is selected, the range of the y-axis is determined by the first parameter loaded in the trend graph. After the initial range is determined, it will not be adjusted until all parameters are cleared.
 
 - **Trend Y-axis includes exceptions**: Select this setting to allow the vertical range of the Y-axis to extend with exception values.
 
-- **Show alarm template colors on vertical axis**: Enable this setting to show the alarm colors next to the vertical axis of trend graphs. The setting *Display the alarm template in the trend graph* allows you to further specify how the alarm colors are displayed.
+- **Show alarm template colors on vertical axis**: Enable this setting to show the alarm colors next to the vertical axis of trend graphs. The setting *Display the alarm template in the trend graph* allows you to further specify how the alarm colors are displayed.
 
-- **Display the alarm template in the trend graph**: In the drop-down list next to this setting, choose *Line* to show alarm template colors as a small line next to the Y-axis, or *Band* to show them as semi-transparent horizontal bands across the trend graph.
+- **Display the alarm template in the trend graph**: In the drop-down list next to this setting, choose *Line* to show alarm template colors as a small line next to the Y-axis, or *Band* to show them as semi-transparent horizontal bands across the trend graph.
 
 - **Show most detailed data**: If you select this option, the most detailed data available will be shown, rather than average data. In order to ensure optimal performance in case a large amount of trend data must be displayed, this option is by default not selected.
 
 - **Show percentile**: Available from DataMiner 10.0.12 onwards. Select this option to show a percentile line on trend graphs by default.
 
-- **Percentile to calculate**: Available from DataMiner 10.0.12 onwards, if *Show percentile* is selected. Allows you to configure which percentile is displayed. By default, this is set to *95*.
+- **Percentile to calculate**: Available from DataMiner 10.0.12 onwards, if *Show percentile* is selected. Allows you to configure which percentile is displayed. By default, this is set to *95*.
 
 - **Trend prediction range**: Select either *Manual*, if you want to manually change the trend prediction range, or *Auto*, if you want DataMiner to select the range depending on the zoom level.
 
 - **Left mouse button action on graph**: Select the action executed by dragging the left mouse button on a trend graph.
 
-    - Up to DataMiner 10.0.6, the default action is *Select*, which means that the left mouse button can be used to select a section of the graph to zoom in on. Other options are *Pan* or *None*.
+    - Up to DataMiner 10.0.6, the default action is *Select*, which means that the left mouse button can be used to select a section of the graph to zoom in on. Other options are *Pan* or *None*.
 
-    - From DataMiner 10.0.7 onwards, the default action is *Pan*. Other options are *Select*, *Zoom* or *None*. The *Zoom* option does the same as the *Select* option from earlier DataMiner versions. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
+    - From DataMiner 10.0.7 onwards, the default action is *Pan*. Other options are *Select*, *Zoom* or *None*. The *Zoom* option does the same as the *Select* option from earlier DataMiner versions. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
 
 - **Right mouse button action on graph**: Select the action executed by dragging the right mouse button on a trend graph.
 
-    - Up to DataMiner 10.0.6, the default action is *Pan*. Other options are *None* or *Select*, which allows you to use the left mouse button to select a section of the graph to zoom in on.
+    - Up to DataMiner 10.0.6, the default action is *Pan*. Other options are *None* or *Select*, which allows you to use the left mouse button to select a section of the graph to zoom in on.
 
-    - From DataMiner 10.0.7 onwards, the default action is *Zoom*, which does the same as the *Select* option from earlier DataMiner versions. Other options are *Pan*, *Select* or *None*. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
+    - From DataMiner 10.0.7 onwards, the default action is *Zoom*, which does the same as the *Select* option from earlier DataMiner versions. Other options are *Pan*, *Select* or *None*. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
 
-- **Hotkey for mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Allows you to specify which key can be used in order to apply an action on a trend graph by pressing this key and dragging with the left mouse button at the same time. The default hotkey is *Ctrl*. Other options are *Alt* and *Shift*.
+- **Hotkey for mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Allows you to specify which key can be used in order to apply an action on a trend graph by pressing this key and dragging with the left mouse button at the same time. The default hotkey is *Ctrl*. Other options are *Alt* and *Shift*.
 
-- **Hotkey + left mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Select the action executed by pressing the hotkey configured in the setting above and dragging the left mouse button on a trend graph. The default option is Select, which allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing. Other options are *Zoom*, *Pan* or *None*.
+- **Hotkey + left mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Select the action executed by pressing the hotkey configured in the setting above and dragging the left mouse button on a trend graph. The default option is Select, which allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing. Other options are *Zoom*, *Pan* or *None*.
 
 - **Extend trend data from the database with real-time parameter changes**: Available from DataMiner 9.5.7 onwards. From that version of DataMiner onwards, by default, trend graphs are redrawn after each parameter change. When this setting is enabled, parameter changes will be displayed using a lighter color in order to clearly show the difference between this parameter data and “confirmed” trend data from the database. The moment a trend data update is received, the confirmed trend data will be drawn using the standard trend data color.
 
@@ -416,7 +416,7 @@ On the *Visual Overview* page, the following settings are available:
 
 - **Enable page loading message**: Select this option to have a “Loading” message displayed as long as not all components in a Visual Overview have been loaded.
 
-- **Maximum number of child shapes in a ‘Children’ container shape**: Enter a value in the box to determine the maximum number of dynamically generated Visio shapes in a “Children” container shape. For more information, see [Generating shapes based on table rows](../../part_2/visio/Generating_shapes_based_on_table_rows.md) and [Generating shapes based on child items in a view or a service](../../part_2/visio/Generating_shapes_based_on_child_items_in_a_view_or_a_service.md).
+- **Maximum number of child shapes in a ‘Children’ container shape**: Enter a value in the box to determine the maximum number of dynamically generated Visio shapes in a “Children” container shape. For more information, see [Generating shapes based on table rows](../../part_2/visio/Generating_shapes_based_on_table_rows.md) and [Generating shapes based on child items in a view or a service](../../part_2/visio/Generating_shapes_based_on_child_items_in_a_view_or_a_service.md).
 
 #### Advanced settings
 
@@ -424,10 +424,10 @@ On the *Advanced* page, the following settings are available:
 
 - **Group profile**: Select a group in the drop-down list to override all user settings with the settings of this group. This setting is no longer available from DataMiner 9.0.0 CU8 onwards.
 
-- **DataMiner Cube User \[username\] reset**: Click the button *Factory defaults* to reset all settings back to default.
+- **DataMiner Cube User \[username\] reset**: Click the button *Factory defaults* to reset all settings back to default.
 
 > [!NOTE]
-> -  If a setting other than the default has been applied, it will be displayed in bold. You can quickly reset to the default setting by clicking the *Reset to \[setting\]* field underneath the setting.
+> -  If a setting other than the default has been applied, it will be displayed in bold. You can quickly reset to the default setting by clicking the *Reset to \[setting\]* field underneath the setting.
 > -  If a setting requires that you enter a value in a box, and the value you entered is incorrect, the edge of the box will be displayed in red and the change to the setting will not be applied.
 > -  It is possible to limit the changes a user can apply to the settings. For more information, see [Configuring a set of user group settings](../../part_3/security/Configuring_a_set_of_user_group_settings.md).
 >

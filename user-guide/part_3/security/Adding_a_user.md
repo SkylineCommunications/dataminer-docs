@@ -4,13 +4,13 @@ There are two ways to add a new user to a DataMiner System, depending on whether
 
 ##### To add a local user:
 
-1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
+1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
 
 2. At the bottom of the list of users, click *Add new user*.
 
 3. In the *Add new user* window, add the user’s information:
 
-    - You must fill in at least the fields *Name*, *Password* and *Confirm password* in order to be able to continue.
+    - You must fill in at least the fields *Name*, *Password* and *Confirm password* in order to be able to continue.
 
         > [!NOTE]
         > -  User names cannot start or end with a backslash “\\” character. They may also not contain more than one percentage “%” character.
@@ -22,9 +22,9 @@ There are two ways to add a new user to a DataMiner System, depending on whether
         > [!NOTE]
         > It is advisable to always add telephone numbers in international format (starting with a “+” sign).
 
-    - The *Email* must be filled in for the user to be able to receive email notifications or automated email messages.
+    - The *Email* must be filled in for the user to be able to receive email notifications or automated email messages.
 
-    - The *Level* field determines the user’s security level, in case this is different from the user’s group security level. Access levels range from 1 (highest level) to 100 (lowest level).
+    - The *Level* field determines the user’s security level, in case this is different from the user’s group security level. Access levels range from 1 (highest level) to 100 (lowest level).
 
     - To force the user to change the password the next time they log on to the DMS, select *User must change password at next login*.
 
@@ -38,11 +38,11 @@ There are two ways to add a new user to a DataMiner System, depending on whether
 
 ##### To add an existing domain user:
 
-1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
+1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
 
 2. At the bottom of the list of users, click *Add existing user*.
 
-3. In the *Add existing user* window, select the user(s) you want to add and click *OK*.
+3. In the *Add existing user* window, select the user(s) you want to add and click *OK*.
 
     The new users will be added to the list of *Domain* users.
 

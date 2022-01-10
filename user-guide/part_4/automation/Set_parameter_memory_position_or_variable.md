@@ -17,7 +17,7 @@ For this script action, you must first indicate what is to be set: parameter, me
 
     - keep *Value* selected, and specify the value, or
 
-    - click the *Value* field to select *Variable* instead, and select the variable.
+    - click the *Value* field to select *Variable* instead, and select the variable.
 
 5. Optionally, if the parameter is a number, click the field next to *offset* and specify an offset value.
 
@@ -26,7 +26,7 @@ For this script action, you must first indicate what is to be set: parameter, me
 
 #### For a memory position set
 
-1. Click the default *Parameter* field to select *Memory position* instead.
+1. Click the default *Parameter* field to select *Memory position* instead.
 
 2. Click the next field and either add an existing memory file or create a new memory file.
 
@@ -39,13 +39,13 @@ For this script action, you must first indicate what is to be set: parameter, me
 
     - keep *Value* selected, and specify the value, or
 
-    - click the *Value* field to select *Variable* instead, and select the variable.
+    - click the *Value* field to select *Variable* instead, and select the variable.
 
 5. Optionally, click the field next to *offset* and specify an offset value.
 
 #### For a variable set
 
-1. Click the default *Parameter* field to select *Variable* instead.
+1. Click the default *Parameter* field to select *Variable* instead.
 
 2. In the next field, either specify an existing script parameter, or create a new one.
 
@@ -56,6 +56,6 @@ For this script action, you must first indicate what is to be set: parameter, me
 
     - keep *Value* selected, and specify the value, or
 
-    - click the *Value* field to select *Variable* instead, and select the variable.
+    - click the *Value* field to select *Variable* instead, and select the variable.
 
 4. Optionally, click the field next to *offset* and specify an offset value.

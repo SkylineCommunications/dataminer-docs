@@ -2,9 +2,9 @@
 
 Scheduled events are a combination of a START and STOP task, based on a special type of Automation script called a “Scheduler template”.
 
-In order to be able to schedule events in the *timeline \> EVENTS* tab, a Scheduler template must first be created in DMS Automation. See [Creating a Scheduler template](Creating_a_Scheduler_template.md).
+In order to be able to schedule events in the *timeline \> EVENTS* tab, a Scheduler template must first be created in DMS Automation. See [Creating a Scheduler template](Creating_a_Scheduler_template.md).
 
-Each of the events in the *EVENT* column represents an action or a sequence of actions determined in the Scheduler template script. The profiles in the *PROFILE* column, in turn, are collections of preset dummies and/or parameter values for specific events.
+Each of the events in the *EVENT* column represents an action or a sequence of actions determined in the Scheduler template script. The profiles in the *PROFILE* column, in turn, are collections of preset dummies and/or parameter values for specific events.
 
 On the timeline, the events are represented as rectangles, with the left and right edges of the rectangle representing the START and STOP task.
 
@@ -12,7 +12,7 @@ On the timeline, the events are represented as rectangles, with the left and rig
 
 1. Drag an event or profile onto the timeline.
 
-2. In the *Task* window, specify any dummies or parameters if necessary, and click *OK*.
+2. In the *Task* window, specify any dummies or parameters if necessary, and click *OK*.
 
 3. To fine-tune the timing, drag the edges of the rectangle to a different point on the timeline. While you are dragging, the exact time will be displayed below.
 
@@ -38,7 +38,7 @@ To do so:
 
     1. Select the task and click the *Edit* button.
 
-    2. In the *schedule* tab of the *Edit* window, select the interval at which the tasks should recur.
+    2. In the *schedule* tab of the *Edit* window, select the interval at which the tasks should recur.
 
     3. Click *OK*
 

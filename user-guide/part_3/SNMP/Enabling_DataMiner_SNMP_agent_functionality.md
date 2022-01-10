@@ -8,14 +8,14 @@ To enable this functionality:
 
 2. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
 
-3. Set the *enableDataMinerAgentPolling* attribute of the *\<SNMP>* tag to “true”.
+3. Set the *enableDataMinerAgentPolling* attribute of the *\<SNMP>* tag to “true”.
 
     ```xml
-    <DataMiner>                                
-      ...                                         
+    <DataMiner>
+      ...
       <SNMP enableDataMinerAgentPolling="true" />
-      ...                                         
-    </DataMiner>                               
+      ...
+    </DataMiner>
     ```
 
 4. Save the file.

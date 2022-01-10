@@ -6,11 +6,11 @@ By default, a DataMiner protocol developed using DIS is a ready-to-use XML file 
 
 ### Creating a new protocol solution
 
-To create a new protocol solution containing a basic protocol with one precompiled, basic QAction, select *File \> New \> DataMiner Protocol Solution…*
+To create a new protocol solution containing a basic protocol with one precompiled, basic QAction, select *File \> New \> DataMiner Protocol Solution…*
 
 ### Converting an existing protocol XML file to a protocol solution
 
-To convert an existing protocol XML file to a protocol solution, select *DIS \> Protocol \> Convert to Solution...*
+To convert an existing protocol XML file to a protocol solution, select *DIS \> Protocol \> Convert to Solution...*
 
 A new protocol solution will be created, and the existing protocol XML file will be added. However, the \<QAction> tags will not contain any C# code. For each of the QActions in the original protocol XML file, a new C# project will be created, and any DLL imports specified in the original QActions will be converted to references on the C# projects (pointing either to other C# projects or to DLL files).
 
@@ -50,7 +50,7 @@ To remove a QAction, remove the \<QAction> tag in the protocol XML file as well 
 
 Because, in a protocol solution, the QActions in the protocol XML file do not contain any C# code, the protocol first needs to be compiled before it can be uploaded to a DataMiner Agent. Only at compilation will the code in all QAction projects and files found in the solution be copied to the correct \<QAction> tags in the protocol XML file.
 
-A protocol will automatically be compiled when you click the *Publish* button at the top of the file tab, or when you right-click and select *Copy Protocol to Clipboard*.
+A protocol will automatically be compiled when you click the *Publish* button at the top of the file tab, or when you right-click and select *Copy Protocol to Clipboard*.
 
 ### Saving a compiled protocol to a file
 

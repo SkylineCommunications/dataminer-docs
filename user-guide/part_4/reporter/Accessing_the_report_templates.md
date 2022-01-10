@@ -4,16 +4,16 @@ To go to the report templates page:
 
 1. Open the Reporter app:
 
-    - In DataMiner Cube, go to *Apps* > *Reports & Dashboards*, or
+    - In DataMiner Cube, go to *Apps* > *Reports & Dashboards*, or
 
-    - Go directly to the link https://\[MyDataMiner\]/reports or http://\[MyDataMiner\]/reports, depending on your setup.
+    - Go directly to the link https://\[MyDataMiner\]/reports or http://\[MyDataMiner\]/reports, depending on your setup.
 
         > [!CAUTION]
         > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
 
 2. In the navigation menu on the left, click *Reports*.
 
-    Alternatively, you can also click the *Templates* tab on the *System* page.
+    Alternatively, you can also click the *Templates* tab on the *System* page.
 
 On the report templates page, you can:
 

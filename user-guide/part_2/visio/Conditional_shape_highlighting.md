@@ -5,14 +5,14 @@ Visio shapes linked to elements, services, redundancy groups or views can be hig
 > [!NOTE]
 > -  For more information on how to make a shape display the number of highlighted shapes, see [Making a shape display the number of highlighted shapes on a page](Making_a_shape_display_the_number_of_highlighted_shapes_on_a_page.md).
 > -  In order to trigger conditional highlighting based on parameters, alarms or properties that are not present on the element represented by the current shape, extended conditional shape manipulation can be used. See [Extended conditional shape manipulation actions](Extended_conditional_shape_manipulation_actions.md).
-> -  If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted. 
-> -  If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the *HighlightTarget* shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape will be highlighted as soon as one of the highlight conditions is true. See [Applying highlight styles depending on various conditions](Options_for_highlighting_DCF_connections.md#applying-highlight-styles-depending-on-various-conditions).
+> -  If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted.
+> -  If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the *HighlightTarget* shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape will be highlighted as soon as one of the highlight conditions is true. See [Applying highlight styles depending on various conditions](Options_for_highlighting_DCF_connections.md#applying-highlight-styles-depending-on-various-conditions).
 
 ### Configuration
 
 1. Define a highlight style: create a shape, apply a custom style to it, add a shape data field to it of type **Options** and set its value to “*HighlightStyle*”.
 
-2. To each shape, add a shape data field of type **Highlight** in which you specify when that shape has to adopt the highlight style defined in step 1:
+2. To each shape, add a shape data field of type **Highlight** in which you specify when that shape has to adopt the highlight style defined in step 1:
 
     ```txt
     Condition1|Condition2|...|ConditionX

@@ -2,17 +2,17 @@
 
 Different types of table parameters exist in DataMiner Cube, detailed in the sections below. Regardless of the type of table parameter, the following applies:
 
-- In most tables, the leftmost column will show a **key icon** in the header. This indicates that this column contains the display key for each row, a unique identifier for the row. The display key is the human readable counterpart of the row’s primary key.
+- In most tables, the leftmost column will show a **key icon** in the header. This indicates that this column contains the display key for each row, a unique identifier for the row. The display key is the human readable counterpart of the row’s primary key.
 
-- To the right of a table parameter, a bar with a \< icon is displayed. Click this bar to view a pane with details of the row selected in the table.
+- To the right of a table parameter, a bar with a \< icon is displayed. Click this bar to view a pane with details of the row selected in the table.
 
-- To quickly **copy a table parameter** to a different application, e.g. Microsoft Outlook or Excel, right-click the table and select *Copy table*. If the table contains any hidden columns, a dialog box will appear where you can select whether these should be included as well.
+- To quickly **copy a table parameter** to a different application, e.g. Microsoft Outlook or Excel, right-click the table and select *Copy table*. If the table contains any hidden columns, a dialog box will appear where you can select whether these should be included as well.
 
-- Columns with a **width of 0 are not displayed** by default. To display such a column, right-click the table header, and select the column in the context menu. This context menu also allows you to hide columns in the same manner.
+- Columns with a **width of 0 are not displayed** by default. To display such a column, right-click the table header, and select the column in the context menu. This context menu also allows you to hide columns in the same manner.
 
 - From DataMiner 10.0.6 onwards, the right-click menu of a table header allows you to **save a custom column layout**, which includes the width, position and visibility of the columns. The layout will be saved in your personal settings and applied to all elements using this same protocol. The right-click menu also allows you to reset the current column layout to the default layout.
 
-- You can **export a table** by selecting the *Export table* option in the right-click menu. From DataMiner 10.1.5/10.2.0 onwards, a dialog box is then displayed that can have the following options, depending on the table configuration:
+- You can **export a table** by selecting the *Export table* option in the right-click menu. From DataMiner 10.1.5/10.2.0 onwards, a dialog box is then displayed that can have the following options, depending on the table configuration:
 
     - *Export location*: The file path where the export should be placed.
 

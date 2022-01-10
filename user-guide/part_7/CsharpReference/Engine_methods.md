@@ -121,7 +121,7 @@ Acknowledges the specified alarm tree using the provided comment message.
 If a user launches the script manually or attaches to it interactively, that user will become the owner of the alarm. If the script runs in the background, the alarm owner will become “Administrator”.
 
 ```txt
-void AcknowledgeAlarm(int dmaId, int alarmId, string comment)                                                
+void AcknowledgeAlarm(int dmaId, int alarmId, string comment)
 void AcknowledgeAlarm(int dmaId, int elementID, int alarmId, string comment)
 ```
 
@@ -174,7 +174,7 @@ Exceptions:
 
 #### ClearScriptOutput
 
-Removes the entry with the specified key from the script output.  Available from DataMiner 10.0.2 onwards.
+Removes the entry with the specified key from the script output. Available from DataMiner 10.0.2 onwards.
 
 ```txt
 void ClearScriptOutput(string key)
@@ -182,7 +182,7 @@ void ClearScriptOutput(string key)
 
 #### ClearScriptResult
 
-Clears the script output.  Available from DataMiner 10.0.2 onwards.
+Clears the script output. Available from DataMiner 10.0.2 onwards.
 
 ```txt
 void ClearScriptResult()
@@ -193,7 +193,7 @@ void ClearScriptResult()
 Adds an additional dummy to the Automation script.
 
 ```txt
-ScriptDummy CreateExtraDummy(int dataMinerID, int elementID)                                             
+ScriptDummy CreateExtraDummy(int dataMinerID, int elementID)
 ScriptDummy CreateExtraDummy(int dataMinerID, int elementID, string key)
 ```
 
@@ -233,7 +233,7 @@ void ExitFail(string reason)
 ```
 
 > [!NOTE]
-> This method throws a *ScriptAbortException*. Make sure you take this into account, so that the script does not keep running endlessly and does not swallow *ScriptAbortException* when calling ExitFail(String).
+> This method throws a *ScriptAbortException*. Make sure you take this into account, so that the script does not keep running endlessly and does not swallow *ScriptAbortException* when calling ExitFail(String).
 
 Example:
 
@@ -250,7 +250,7 @@ void ExitSuccess(string reason)
 ```
 
 > [!NOTE]
-> This method throws a *ScriptAbortException*. Make sure you take this into account, so that the script does not keep running endlessly and does not swallow *ScriptAbortException* when calling ExitSuccess(String).
+> This method throws a *ScriptAbortException*. Make sure you take this into account, so that the script does not keep running endlessly and does not swallow *ScriptAbortException* when calling ExitSuccess(String).
 
 Example:
 
@@ -269,7 +269,7 @@ Retrieves an element
 If no element with the specified name or ID is found, a null reference is returned.
 
 ```txt
-Element FindElement(string name)                                              
+Element FindElement(string name)
 Element FindElement(int dmaId, int elementId)
 ```
 
@@ -358,21 +358,21 @@ Examples:
 
 ```txt
 ElementFilter myElementFilter = new ElementFilter { MajorOnly=true };
-Element[] elements = engine.FindElements(myElementFilter);         
+Element[] elements = engine.FindElements(myElementFilter);
 ```
 
 ```txt
-ElementFilter filter = new ElementFilter()                                       
-{                                                                                
+ElementFilter filter = new ElementFilter()
+{
     DataMinerID = serviceReservationInstanceOne.EnhancedServiceElementID.DataMinerID,
-    ElementID = serviceReservationInstanceOne.EnhancedServiceElementID.EID,          
-    IncludeServiceElements = true                                                    
-};                                                                               
-                                                                                 
-var enhancedServiceElement = engine.FindElements(filter).FirstOrDefault();       
+    ElementID = serviceReservationInstanceOne.EnhancedServiceElementID.EID,
+    IncludeServiceElements = true
+};
+
+var enhancedServiceElement = engine.FindElements(filter).FirstOrDefault();
 ```
 
- 
+
 
 #### FindElementsByName
 
@@ -401,7 +401,7 @@ Retrieves all elements using the specified protocol version.
 If you do not specify a version, all elements using any version of the protocol will be retrieved.
 
 ```txt
-Element[] FindElementsByProtocol(string name)                                                 
+Element[] FindElementsByProtocol(string name)
 Element[] FindElementsByProtocol(string name, string version)
 ```
 
@@ -420,9 +420,9 @@ Elements[] elements = engine.FindElementsByProtocol("Microsoft Platform","1.1.0.
 Retrieves either all elements in the specified view. or all elements using a specific protocol version in the specified view.
 
 ```txt
-Element[] FindElementsInView(int id)                                                                                                                    
-Element[] FindElementsInView(string name)                                                                                                               
-Element[] FindElementsInView(int id, string protocolName, string protocolVersion)     
+Element[] FindElementsInView(int id)
+Element[] FindElementsInView(string name)
+Element[] FindElementsInView(int id, string protocolName, string protocolVersion)
 Element[] FindElementsInView(string name, string protocolName, string protocolVersion)
 ```
 
@@ -448,7 +448,7 @@ Elements[] elements = engine.FindElementsInView("MySpecialElements","Microsoft P
 
 In an Automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the *FindInteractiveClient* method to ask for input from a user.
 
-In a message box, the user will be asked to click either *Attach* or *Ignore*.
+In a message box, the user will be asked to click either *Attach* or *Ignore*.
 
 - If the user clicks *Attach*, the script will start in a pop-up window.
 
@@ -460,7 +460,7 @@ The method can take the following arguments:
 
 - A timeout delay (in seconds)
 
-    When this timeout expires, the script will continue and the *FindInteractiveClient* method will return “False”. The script can then decide how to deal with this result: issue a new request, fail, or execute automatic actions.
+    When this timeout expires, the script will continue and the *FindInteractiveClient* method will return “False”. The script can then decide how to deal with this result: issue a new request, fail, or execute automatic actions.
 
 - A string indicating which users will receive the request, i.e. a list of DataMiner security group names, separated by semicolons.
 
@@ -468,30 +468,30 @@ The method can take the following arguments:
 
 - Options in the form of a set of binary flags. See [AutomationScriptAttachOptions enumeration](AutomationScriptAttachOptions_enumeration.md).
 
-The method returns *true* if attaching to the interactive client succeeded; otherwise it returns *false*.
+The method returns *true* if attaching to the interactive client succeeded; otherwise it returns *false*.
 
 ```txt
-bool FindInteractiveClient(string message, int timeoutTime)                                                                                                                               
-bool FindInteractiveClient(string message, int timeoutTime, string allowedGroups)                                                                        
+bool FindInteractiveClient(string message, int timeoutTime)
+bool FindInteractiveClient(string message, int timeoutTime, string allowedGroups)
 bool FindInteractiveClient(string message, int timeoutTime, string allowedGroups, AutomationScriptAttachOptions options)
 ```
 
 Example:
 
 ```txt
-string allowedGroups = "grpA;grpB";                                  
-bool ok = engine.FindInteractiveClient("Hello world",                
-            100 , allowedGroups, AutomationScriptAttachOptions.None);            
-if (!ok)                                                             
-{                                                                    
-    engine.GenerateInformation("Could not attach");                      
-}                                                                    
-else                                                                 
-{                                                                    
+string allowedGroups = "grpA;grpB";
+bool ok = engine.FindInteractiveClient("Hello world",
+            100 , allowedGroups, AutomationScriptAttachOptions.None);
+if (!ok)
+{
+    engine.GenerateInformation("Could not attach");
+}
+else
+{
     engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
-    engine.ShowProgress("A message");                                    
-    engine.ShowUI("Another message", true);                              
-}                                                                    
+    engine.ShowProgress("A message");
+    engine.ShowUI("Another message", true);
+}
 ```
 
 From DataMiner 9.6.9 onwards, it is also possible to find an interactive client by user cookie instead of by user name.
@@ -520,7 +520,7 @@ Name masks can contain the following wildcards:
 If no redundancy group with the specified name or ID is found, a null reference is returned.
 
 ```txt
-RedundancyGroup FindRedundancyGroup(string name)                                            
+RedundancyGroup FindRedundancyGroup(string name)
 RedundancyGroup FindRedundancyGroup(int dmaId, int groupId)
 ```
 
@@ -576,7 +576,7 @@ Example:
 
 ```txt
 RedundancyGroupFilter myGroupFilter = RedundancyGroupFilter.ByView("MyView");
-RedundancyGroup[] groups = engine.FindRedundancyGroups(myGroupFilter);     
+RedundancyGroup[] groups = engine.FindRedundancyGroups(myGroupFilter);
 ```
 
 #### FindRedundancyGroupsByName
@@ -604,7 +604,7 @@ RedundancyGroup[] groups = engine.FindRedundancyGroupsByName("Test*");
 Retrieves all redundancy groups in the specified view.
 
 ```txt
-RedundancyGroup[] FindRedundancyGroupsInView(int id)     
+RedundancyGroup[] FindRedundancyGroupsInView(int id)
 RedundancyGroup[] FindRedundancyGroupsInView(string name)
 ```
 
@@ -629,7 +629,7 @@ Retrieves a service
 If the service with the specified name or ID could not be found, a null reference is returned.
 
 ```txt
-Service FindService(string name)                                              
+Service FindService(string name)
 Service FindService(int dmaId, int serviceId)
 ```
 
@@ -701,7 +701,7 @@ Example:
 
 ```txt
 ServiceFilter myServiceFilter = ServiceFilter.ByView("MyView");
-Service[] services = engine.FindServices(myServiceFilter);   
+Service[] services = engine.FindServices(myServiceFilter);
 ```
 
 #### FindServicesByName
@@ -729,7 +729,7 @@ Service[] services = engine.FindServicesByName("Test*");
 Retrieves all services in the specified view.
 
 ```txt
-Service[] FindServicesInView(int id)     
+Service[] FindServicesInView(int id)
 Service[] FindServicesInView(string name)
 ```
 
@@ -773,7 +773,7 @@ Example:
 
 ```txt
 ServiceFilter filter = new ServiceFilter{ CriticalOnly = true};
-Service[] services = engine.FindServiceTemplates(filter);    
+Service[] services = engine.FindServiceTemplates(filter);
 ```
 
 #### GenerateInformation
@@ -795,7 +795,7 @@ engine.GenerateInformation("Hello World!");
 Retrieves the value of the specified custom alarm property.
 
 ```txt
-string GetAlarmProperty(int dataMinerID, int alarmID, string propertyName)                                                                                                                                                   
+string GetAlarmProperty(int dataMinerID, int alarmID, string propertyName)
 string GetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName)
 ```
 
@@ -816,7 +816,7 @@ Retrieves an object representing one of the script dummies. Through this object,
 If the specified dummy could not be found, a null reference is returned.
 
 ```txt
-ScriptDummy GetDummy(int id)     
+ScriptDummy GetDummy(int id)
 ScriptDummy GetDummy(string name)
 ```
 
@@ -837,7 +837,7 @@ Retrieves an object representing one of the script’s memory files. Through thi
 If the specified memory file could not be found, a null reference is returned.
 
 ```txt
-ScriptMemory GetMemory(int id)     
+ScriptMemory GetMemory(int id)
 ScriptMemory GetMemory(string name)
 ```
 
@@ -853,7 +853,7 @@ ScriptMemory memoryData = engine.GetMemory("name");
 
 #### GetScriptOutput
 
-Returns the script output of the specified key. If a subscript fails or throws an exception, its script output will still be filled in.  Available from DataMiner 10.0.2 onwards.
+Returns the script output of the specified key. If a subscript fails or throws an exception, its script output will still be filled in. Available from DataMiner 10.0.2 onwards.
 
 ```txt
 string GetScriptOutput(string key)
@@ -866,7 +866,7 @@ Retrieves an object representing a script parameter. Through this object, its va
 If the specified script parameter could not be found, a null reference is returned.
 
 ```txt
-ScriptParam GetScriptParam(int id)     
+ScriptParam GetScriptParam(int id)
 ScriptParam GetScriptParam(string name)
 ```
 
@@ -882,7 +882,7 @@ ScriptParam param = engine.GetScriptParam("input");
 
 #### GetScriptResult
 
-Returns a copy of the script output of the current script and, if the *InheritScriptOutput* option is set to "true", the child scripts. If a subscript fails or throws an exception, its script output will still be filled in.<br>Available from DataMiner 10.0.2 onwards.
+Returns a copy of the script output of the current script and, if the *InheritScriptOutput* option is set to "true", the child scripts. If a subscript fails or throws an exception, its script output will still be filled in.<br>Available from DataMiner 10.0.2 onwards.
 
 ```txt
 Dictionary<string, string> GetScriptResult()
@@ -961,8 +961,8 @@ object myValue = engine.LoadValue("MyVariable");
 Adds an entry in the SLAutomation.txt log file.
 
 ```txt
-void Log(string message)                                                                                                                                              
-void Log(string message, LogType type, int logLevel)                                                
+void Log(string message)
+void Log(string message, LogType type, int logLevel)
 void Log(string message, LogType type, int logLevel, string method)
 ```
 
@@ -1007,11 +1007,11 @@ MailReportOptions PrepareMailReport(string template)
 Example:
 
 ```txt
-MailReportOptions reportOptions;                             
+MailReportOptions reportOptions;
 reportOptions = engine.PrepareMailReport("myReportTemplate");
-reportOptions.EmailOptions.SendAsPlainText = true;           
-...                                                          
-engine.SendReport(reportOptions);                            
+reportOptions.EmailOptions.SendAsPlainText = true;
+...
+engine.SendReport(reportOptions);
 ```
 
 #### PrepareSubScript
@@ -1025,11 +1025,11 @@ SubScriptOptions PrepareSubScript(string name)
 Example:
 
 ```txt
-SubScriptOptions subscriptInfo;                          
+SubScriptOptions subscriptInfo;
 subscriptInfo = engine.PrepareSubScript("myOtherScript");
-subscriptInfo.Synchronous = true;                        
-...                                                      
-subscriptInfo.StartScript();                             
+subscriptInfo.Synchronous = true;
+...
+subscriptInfo.StartScript();
 ```
 
 #### RunClientProgram
@@ -1037,13 +1037,13 @@ subscriptInfo.StartScript();
 Launches an application on the client in an interactive script.
 
 ```txt
-void RunClientProgram(String applicationPath)                                                                                                            
-void RunClientProgram(String applicationPath, bool waitForCompletion)                                                   
-void RunClientProgram(String applicationPath, String arguments)                                                         
+void RunClientProgram(String applicationPath)
+void RunClientProgram(String applicationPath, bool waitForCompletion)
+void RunClientProgram(String applicationPath, String arguments)
 void RunClientProgram(String applicationPath, String arguments, bool waitForCompletion)
 ```
 
-If *waitForCompletion* is set to *true*, the script will halt until the client application has completed or has been closed. In the interactive window, users will see the message “Wait for client program to finish”.
+If *waitForCompletion* is set to *true*, the script will halt until the client application has completed or has been closed. In the interactive window, users will see the message “Wait for client program to finish”.
 
 Examples:
 
@@ -1079,7 +1079,7 @@ engine.SaveValue("MyVariable", "MyValue");
 Sends an email message.
 
 ```txt
-void SendEmail(EmailOptions options)                                                                                     
+void SendEmail(EmailOptions options)
 void SendEmail(string message, string title, string to)
 ```
 
@@ -1094,9 +1094,9 @@ To specify the recipient, use
 Example:
 
 ```txt
-EmailOptions myEmailOptions;                                                                
-...                                                                                         
-engine.SendEmail(myEmailOptions);                                                           
+EmailOptions myEmailOptions;
+...
+engine.SendEmail(myEmailOptions);
 engine.SendEmail("The message I want to send.","The title of my message","support@gtc.com");
 ```
 
@@ -1105,7 +1105,7 @@ engine.SendEmail("The message I want to send.","The title of my message","suppor
 Sends a pager message.
 
 ```txt
-void SendPager(PagerOptions options)                                      
+void SendPager(PagerOptions options)
 void SendPager(string message, string to)
 ```
 
@@ -1120,9 +1120,9 @@ To specify the recipient, use
 Example:
 
 ```txt
-PagerOptions myPagerOptions;                                 
-...                                                          
-engine.SendPager(myPagerOptions);                            
+PagerOptions myPagerOptions;
+...
+engine.SendPager(myPagerOptions);
 engine.SendPager("The message I want to send.","USER:ADMIN");
 ```
 
@@ -1130,7 +1130,7 @@ engine.SendPager("The message I want to send.","USER:ADMIN");
 
 Sends an email report.
 
-To create a *MailReportOptions* object, call the *PrepareMailReport* method (see [PrepareMailReport](#preparemailreport)).
+To create a *MailReportOptions* object, call the *PrepareMailReport* method (see [PrepareMailReport](#preparemailreport)).
 
 ```txt
 void SendReport(MailReportOptions options)
@@ -1139,11 +1139,11 @@ void SendReport(MailReportOptions options)
 Example:
 
 ```txt
-MailReportOptions reportOptions;                             
+MailReportOptions reportOptions;
 reportOptions = engine.PrepareMailReport("myReportTemplate");
-reportOptions.EmailOptions.SendAsPlainText = true;           
-...                                                          
-engine.SendReport(reportOptions);                            
+reportOptions.EmailOptions.SendAsPlainText = true;
+...
+engine.SendReport(reportOptions);
 ```
 
 #### SendSms
@@ -1151,7 +1151,7 @@ engine.SendReport(reportOptions);
 Sends a text message (SMS).
 
 ```txt
-void SendSms(SmsOptions options)                                        
+void SendSms(SmsOptions options)
 void SendSms(string message, string to)
 ```
 
@@ -1166,9 +1166,9 @@ To specify the recipient, use
 Example:
 
 ```txt
-SmsOptions mySmsOptions;                  
-...                                       
-engine.SendSms(mySmsOptions);             
+SmsOptions mySmsOptions;
+...
+engine.SendSms(mySmsOptions);
 engine.SendSms("My Message","USER:ADMIN");
 ```
 
@@ -1177,7 +1177,7 @@ engine.SendSms("My Message","USER:ADMIN");
 Sets the specified custom alarm properties to the specified values.
 
 ```txt
-void SetAlarmProperties(int dataMinerID, int alarmID, string[] propertyNames, string[] propertyValues)                                                
+void SetAlarmProperties(int dataMinerID, int alarmID, string[] propertyNames, string[] propertyValues)
 void SetAlarmProperties(int dataMinerID, int elementID, int alarmID, string[] propertyNames, string[] propertyValues)
 ```
 
@@ -1200,7 +1200,7 @@ engine.SetAlarmProperties(200, 400, 521655, new string[]{"Property A", "Property
 Updates a custom alarm property.
 
 ```txt
-void SetAlarmProperty(int dataMinerID, int alarmID, string propertyName, string propertyValue)                                                
+void SetAlarmProperty(int dataMinerID, int alarmID, string propertyName, string propertyValue)
 void SetAlarmProperty(int dataMinerID, int elementID, int alarmID, string propertyName, string propertyValue)
 ```
 
@@ -1215,7 +1215,7 @@ engine.SetAlarmProperty(200, 400, 521655, "Property A", "Value A");
 ```
 
 > [!NOTE]
-> -  In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol. 
+> -  In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.
 > -  When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.
 
 #### SetFlag
@@ -1267,7 +1267,7 @@ Example:
 
 ```txt
 string progress = "Session is successfully booked.";
-engine.ShowProgress(progress);                      
+engine.ShowProgress(progress);
 ```
 
 #### ShowUI
@@ -1275,24 +1275,24 @@ engine.ShowProgress(progress);
 Displays a custom-made dialog box of an interactive Automation script.
 
 ```txt
-UIResults ShowUI(UIBuilder data)                                                    
-UIResults ShowUI(string data)                                                       
+UIResults ShowUI(UIBuilder data)
+UIResults ShowUI(string data)
 UIResults ShowUI(string data, bool requireResponse)
 ```
 
 Example:
 
 ```txt
-// Create and configure the dialog box                  
-UIBuilder uib = new UIBuilder();                        
-...                                                     
-// Add dialog box items to the dialog box               
+// Create and configure the dialog box
+UIBuilder uib = new UIBuilder();
+...
+// Add dialog box items to the dialog box
 UIBlockDefinition blockButton = new UIBlockDefinition();
-blockButton.Type = UIBlockType.Button;                  
-...                                                     
-uib.AppendBlock(blockButton);                           
-// Display the dialog box                               
-engine.ShowUI(uib);                                     
+blockButton.Type = UIBlockType.Button;
+...
+uib.AppendBlock(blockButton);
+// Display the dialog box
+engine.ShowUI(uib);
 ```
 
 #### Sleep
@@ -1320,18 +1320,18 @@ void UnSetFlag (RunTimeFlags flag)
 This can for instance be used to perform silent parameter sets:
 
 ```txt
-public void SetParameterSilent(int pid, object value) {                     
-   // Set the NoInformationEvents flag to disable information events        
-   _engine.SetFlag(RunTimeFlags.NoInformationEvents);                      
-   // Perform a silent parameter set without triggering an information event
-   element.SetParameter(pid, value);                                        
-   // Re-enable information events by clearing the NoInformationEvents flag 
-   _engine.UnSetFlag(RunTimeFlags.NoInformationEvents);                    
-}                                                                           
+public void SetParameterSilent(int pid, object value) {
+ // Set the NoInformationEvents flag to disable information events
+ _engine.SetFlag(RunTimeFlags.NoInformationEvents);
+ // Perform a silent parameter set without triggering an information event
+ element.SetParameter(pid, value);
+ // Re-enable information events by clearing the NoInformationEvents flag
+ _engine.UnSetFlag(RunTimeFlags.NoInformationEvents);
+}
 ```
 
 > [!NOTE]
-> This method is available on the *IEngine* interface from DataMiner 10.0.0 CU1/10.0.5 onwards.
+> This method is available on the *IEngine* interface from DataMiner 10.0.0 CU1/10.0.5 onwards.
 
 > [!TIP]
 > See also:

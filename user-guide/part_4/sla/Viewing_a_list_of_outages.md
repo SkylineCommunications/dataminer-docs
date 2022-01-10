@@ -1,6 +1,6 @@
 ## Viewing a list of outages
 
-One or more alarms that potentially affect the SLA at a particular time are grouped in an outage. To view a list of outages, go to the *Outage list* page of the SLA element. The following information is indicated for each outage:
+One or more alarms that potentially affect the SLA at a particular time are grouped in an outage. To view a list of outages, go to the *Outage list* page of the SLA element. The following information is indicated for each outage:
 
 - **Adm. State**: Shows whether the SLA was tracking or not at the time when the outage occurred.
 

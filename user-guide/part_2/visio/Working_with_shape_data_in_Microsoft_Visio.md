@@ -10,10 +10,10 @@ The *Shape Data* pane lists all shape data linked to the item you selected.
 
 To open this pane:
 
-- On the *View* tab, in the *Show* group, click *Task Panes*, and then click *Shape Data*.
+- On the *View* tab, in the *Show* group, click *Task Panes*, and then click *Shape Data*.
 
 > [!NOTE]
-> The title of the *Shape Data* pane contains the name of the currently selected item. If you select a shape, the title will be e.g. “Shape Data - Sheet.27”. If you select a page (by clicking anywhere on that page), the title will be “Shape Data - ThePage”.
+> The title of the *Shape Data* pane contains the name of the currently selected item. If you select a shape, the title will be e.g. “Shape Data - Sheet.27”. If you select a page (by clicking anywhere on that page), the title will be “Shape Data - ThePage”.
 
 ### Adding a data field to a page, a shape or a group of shapes
 
@@ -21,20 +21,20 @@ To open this pane:
 
     For more information on how to group shapes, see [Grouping shapes](Grouping_shapes.md).
 
-2. Right-click in the *Shape Data* pane, and click *Define Shape Data*.
+2. Right-click in the *Shape Data* pane, and click *Define Shape Data*.
 
-3. In the *Define Shape Data* dialog box, click *New*, and then do the following:
+3. In the *Define Shape Data* dialog box, click *New*, and then do the following:
 
-    1. In the *Label* box, enter the name of the data field. Example: *Element*, *Execute*, *Link*, etc.
+    1. In the *Label* box, enter the name of the data field. Example: *Element*, *Execute*, *Link*, etc.
 
         For a complete overview of all DataMiner shape data fields, see [Overview of DataMiner shape data fields](Overview_of_DataMiner_shape_data_fields.md).
 
     2. In the *Type* list, select “String”.
 
-    3. In the *Value* box, enter the value. Example: *112/1457*, *MyElement*, *Script:MyScript*, *#http://www.skyline.be*, ...
+    3. In the *Value* box, enter the value. Example: *112/1457*, *MyElement*, *Script:MyScript*, *#http://www.skyline.be*, ...
 
     > [!NOTE]
-    > When you open the *Define Shape Data* dialog box, you might notice a data item named “Property1”. Instead of creating a new data item, you can also rename that “Property1” item that Visio has created for you.
+    > When you open the *Define Shape Data* dialog box, you might notice a data item named “Property1”. Instead of creating a new data item, you can also rename that “Property1” item that Visio has created for you.
 
 4. Click OK.
 
@@ -51,7 +51,7 @@ DataMiner stencils are preconfigured shapes or groups of shapes that match the D
 
 To use the DataMiner stencils in Visio:
 
-1. In the *Shapes* pane, go to *More Shapes* > *DataMiner*.
+1. In the *Shapes* pane, go to *More Shapes* > *DataMiner*.
 
 2. Select the group of stencils you want to use.
 
@@ -66,15 +66,15 @@ To use the DataMiner stencils in Visio:
 3. Drag the stencils you want to use from the *Shapes* pane to the drawing.
 
 > [!NOTE]
-> To use the stencils in Visio, Automation events need to be enabled in the Visio options (Under *Visio Options* > *Advanced* > *General*).
+> To use the stencils in Visio, Automation events need to be enabled in the Visio options (Under *Visio Options* > *Advanced* > *General*).
 
 #### Accessing the “Advanced editing” add-in
 
 1. Open a Visio drawing by right-clicking a Visio drawing in DataMiner Cube and selecting *Edit in Visio*.
 
-2. Go to the *Add-ins* menu in Visio and click *Advanced editing*.
+2. Go to the *Add-ins* menu in Visio and click *Advanced editing*.
 
-    The *Advanced editing* panel will be opened. This panel will remain available until you close the Visio application.
+    The *Advanced editing* panel will be opened. This panel will remain available until you close the Visio application.
 
 #### Using the “Advanced editing” panel
 
@@ -90,7 +90,7 @@ The panel can be used as follows:
 
     1. Click the page background, so that no shapes are selected.
 
-    2. In the *Advanced editing* panel, click *Add page data*.
+    2. In the *Advanced editing* panel, click *Add page data*.
 
     3. Select a data item in the drop-down list.
 
@@ -100,7 +100,7 @@ The panel can be used as follows:
 
     1. Select the shape.
 
-    2. In the *Advanced editing* panel, click *Add shape data*.
+    2. In the *Advanced editing* panel, click *Add shape data*.
 
     3. Select a data item in the drop-down list.
 

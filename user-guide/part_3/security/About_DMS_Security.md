@@ -14,4 +14,4 @@ The following topics provide more information on DMS Security:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/security-introduction-to-dataminer-security/> 
+> <https://community.dataminer.services/video/security-introduction-to-dataminer-security/>

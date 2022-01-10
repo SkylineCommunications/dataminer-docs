@@ -16,11 +16,11 @@ The following concepts are of importance for the Service & Resource Management (
     > See also:
     > [Adding a virtual function as a resource](Configuring_pools_of_resources.md#adding-a-virtual-function-as-a-resource)
 
-- **Booking instance** or **reservation** **instance**: A definition of which resources are used, how much of them is used, and when they are used. With booking instances, you can indicate which resources are in use at any point in time. Booking instances are indicated on the occupancy timeline in the *Resources* module.
+- **Booking instance** or **reservation** **instance**: A definition of which resources are used, how much of them is used, and when they are used. With booking instances, you can indicate which resources are in use at any point in time. Booking instances are indicated on the occupancy timeline in the *Resources* module.
 
     Booking instances can have “sub-bookings”, which in turn are also booking instances, making it possible to create more complex bookings. While the time slot for booking instances is defined in UTC format, the timing of sub-bookings is determined relative to that of the parent booking instance.
 
-- **Service booking instance** or **service reservation instance**: A service booking instance is a booking instance that will create a matching DataMiner service while it is active. In most cases, the service booking instance will use function resources and it is possible to automatically set it up with DCF connections.
+- **Service booking instance** or **service reservation instance**: A service booking instance is a booking instance that will create a matching DataMiner service while it is active. In most cases, the service booking instance will use function resources and it is possible to automatically set it up with DCF connections.
 
 - **Booking definition** or **reservation definition**: The “pattern creator” for all booking instances that are grouped in a recurring pattern. The booking definition is linked to the created instances and will automatically create a subset of the full recurring pattern in order to match incoming requests, scheduling and planning. It also takes care of the creation of a new booking instance for one time slot in a recurring pattern and of the creation of booking instances with override data, keeping track of the generated booking instances.
 
@@ -28,7 +28,7 @@ The following concepts are of importance for the Service & Resource Management (
 
 - **Service booking definition** or **service reservation definition**: A booking definition that can create service booking instances.
 
-- **Booking event** or **reservation event**: An action that can happen while a booking instance is active. This is usually an Automation script that has to be executed at a specific time.
+- **Booking event** or **reservation event**: An action that can happen while a booking instance is active. This is usually an Automation script that has to be executed at a specific time.
 
 - **Profile definition**: A definition of a profile, containing parameters and scripts.
 

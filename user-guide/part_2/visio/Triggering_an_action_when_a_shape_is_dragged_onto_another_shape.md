@@ -17,7 +17,7 @@ Add the following shape data fields to the shape:
 
 - Depending on the purpose of the target shape:
 
-    - A field of type **Element** or **View**, of which you leave the value empty.
+    - A field of type **Element** or **View**, of which you leave the value empty.
 
         See [Example of a “drop target” that visualizes the element name](#example-of-a-drop-target-that-visualizes-the-element-name).
 
@@ -129,7 +129,7 @@ Create the following four shapes:
 
     | Shape data field | Value                         |
     |--------------------|-------------------------------|
-    | Element            |                               |
+    | Element            |                              |
     | Parameter          | ColumnID:\[tableindexFilter\] |
     | DropTarget         | True                          |
 

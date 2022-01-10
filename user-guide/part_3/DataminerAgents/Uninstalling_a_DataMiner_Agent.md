@@ -6,23 +6,23 @@ You can uninstall the DataMiner Agent software as follows:
 
 2. Run the following scripts as Administrator:
 
-    - *Stop DataMiner.bat* 
+    - *Stop DataMiner.bat*
 
-    - *ConfigureIIS_Undo.bat* 
+    - *ConfigureIIS_Undo.bat*
 
-    - *ConfigureFirewall_Undo.bat* 
+    - *ConfigureFirewall_Undo.bat*
 
-    - In case the DataMiner Agent used a MySQL database: *RemoveDB.bat* 
+    - In case the DataMiner Agent used a MySQL database: *RemoveDB.bat*
 
-    - *UnRegister DataMiner.bat* 
+    - *UnRegister DataMiner.bat*
 
-    - *UnRegister DLLs of DataMiner.bat* 
+    - *UnRegister DLLs of DataMiner.bat*
 
-    - *RemoveEventLog.exe* 
+    - *RemoveEventLog.exe*
 
 3. From DataMiner 10.1.0/10.1.1 onwards, use SLEndpointTool_console to remove **NATS**:
 
-    1. Run *C:\\Skyline DataMiner\\Files\\SLEndpointTool_Console.exe* either directly or from *cmd.exe*.
+    1. Run *C:\\Skyline DataMiner\\Files\\SLEndpointTool_Console.exe* either directly or from *cmd.exe*.
 
     2. Select *Uninstall*.
 
@@ -45,9 +45,9 @@ You can uninstall the DataMiner Agent software as follows:
     4. Delete the folder C:\\ProgramData\\Cassandra.
 
         > [!NOTE]
-        > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.
+        > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.
 
-    5. Run *regedit* as Administrator and delete the registry key “cassandra” in *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0*.
+    5. Run *regedit* as Administrator and delete the registry key “cassandra” in *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0*.
 
 6. In case the DataMiner Agent used an **Elasticsearch** database:
 
@@ -59,12 +59,12 @@ You can uninstall the DataMiner Agent software as follows:
         sc delete elasticsearch-service-x64
         ```
 
-    3. Run *regedit* as Administrator and delete *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0\\elasticsearch-service-x64*.
+    3. Run *regedit* as Administrator and delete *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0\\elasticsearch-service-x64*.
 
     4. Delete the Elasticsearch data folder, e.g. *C:\\ProgramData\\Elasticsearch*. If you are unsure where to find the directory, look for path.data in the elasticsearch.yml file.
 
         > [!NOTE]
-        > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.
+        > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.
 
     5. Delete the folder *C:\\Program Files\\Elasticsearch*.
 

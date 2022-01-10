@@ -21,7 +21,7 @@ Set|Element|Parameter|Value|SetTrigger=ValueChanged
 - Value: the new value of the parameter (which must contain at least one reference to a session variable)
 
 > [!NOTE]
-> Up to DataMiner 9.5.0, placeholders can only be used in the section indicating the new value of the parameter. From DataMiner 9.5.1 onwards, they can be used anywhere in the shape data value. As a consequence, the new value will no longer be allowed to contain one or more dashes as those will be considered separators. However, if the use of a dash is required (e.g. when using a GUID), you can use a *\[sep:xy\]* prefix in the shape data to change the separator.
+> Up to DataMiner 9.5.0, placeholders can only be used in the section indicating the new value of the parameter. From DataMiner 9.5.1 onwards, they can be used anywhere in the shape data value. As a consequence, the new value will no longer be allowed to contain one or more dashes as those will be considered separators. However, if the use of a dash is required (e.g. when using a GUID), you can use a *\[sep:xy\]* prefix in the shape data to change the separator.
 
 ### Option
 
@@ -35,7 +35,7 @@ ExecuteSetsOnInit
 
 ```txt
 Set|218/652|1201|Session:[var:GuidVar]: ListSelection=[var:Chain],
-Data =[var:LoadTime]|SetTrigger=ValueChanged-                         
-Set|218/652|1203|[var:Chain]|SetTrigger=ValueChanged-              
-Set|218/652|1205|[var:LoadTime]|SetTrigger=ValueChanged            
+Data =[var:LoadTime]|SetTrigger=ValueChanged-
+Set|218/652|1203|[var:Chain]|SetTrigger=ValueChanged-
+Set|218/652|1205|[var:LoadTime]|SetTrigger=ValueChanged
 ```

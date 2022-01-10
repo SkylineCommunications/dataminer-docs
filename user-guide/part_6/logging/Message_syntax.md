@@ -3,7 +3,7 @@
 Every message in a communication stream is constructed according to the following syntax:
 
 ```txt
-[Direction] [PackageName]                        
+[Direction] [PackageName]
 [Package content - HEX] [Package content - ASCII]
 ```
 

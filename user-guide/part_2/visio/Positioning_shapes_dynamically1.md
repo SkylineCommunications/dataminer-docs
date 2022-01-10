@@ -25,7 +25,7 @@ Suppose you have a view that contains three elements, and you want the Visio dra
     | YPos               | \[property:AxisY\] |
 
     > [!NOTE]
-    > If you want to manually adjust the X and Y coordinates, you can also add shape data fields of type **XPosOffSet** and **YPosOffSet**.
+    > If you want to manually adjust the X and Y coordinates, you can also add shape data fields of type **XPosOffSet** and **YPosOffSet**.
 
 3. To each of the three elements, add the properties “*AxisX*” and “*AxisY*”, and assign a value to them.
 
@@ -73,7 +73,7 @@ Result: For every element underneath the view, the drawing will contain a shape 
 
 - **YPosOffSet**: Value to be added to the value found in **YPos**. Allows you to manually adjust the Y coordinate.
 
-- **SubscriptionFilter**: A shape data item of type **SubscriptionFilter** can be added to a shape to make it appear only if a specific table column contains a certain value.
+- **SubscriptionFilter**: A shape data item of type **SubscriptionFilter** can be added to a shape to make it appear only if a specific table column contains a certain value.
 
     Suppose you have a list of cities stored in a dynamic table and you want to indicate the location of each of those cities on a map using circles of different diameter based on the size of the city. You create two circular shapes (a small one and a large one) and add the following shape data items to them:
 
@@ -139,7 +139,7 @@ The element, service, or view to which a shape has to be linked can also be fetc
 
 Those dynamically created shapes can be configured as ordinary element, service, or view shapes. They can be configured to show real-time parameter values, element states, etc.
 
-- In the “dynamic shape” to which you have added a shape data field of type **XPos** containing a placeholder referring to a table parameter, also add a shape data field of type **Element** (in case of elements or services) or **View** (in case of views), and set its value to “\*”.
+- In the “dynamic shape” to which you have added a shape data field of type **XPos** containing a placeholder referring to a table parameter, also add a shape data field of type **Element** (in case of elements or services) or **View** (in case of views), and set its value to “\*”.
 
 - The table column from which the element has to be fetched (see below), has to contain element IDs (format: DmaID/ElementID), element names, service IDs (format: DmaID/ServiceID), service names, view IDs, or view names.
 
@@ -183,7 +183,7 @@ In the protocol, check the definition of the table parameter that will supply th
 
 From DataMiner 9.0.5 onwards, it is possible to apply a row filter when dynamically positioning shapes based on table data. Using this filter can considerably increase overall performance.
 
-To do so, add a shape data field of type **Filter** to the shape mentioned above, and enter a row filter, using the same syntax as for extended shape manipulation conditions.
+To do so, add a shape data field of type **Filter** to the shape mentioned above, and enter a row filter, using the same syntax as for extended shape manipulation conditions.
 
 For example:
 
@@ -246,7 +246,7 @@ If you use shape positioning based on coordinates stored in dynamic tables, you 
 
 To do so:
 
-1. In the protocol, go to the definition of the table that contains the positioning data, and add an extra column named e.g. “InterfaceData” next to the “xpos” and “ypos” columns. In the *ColumnOptions* tag of this additional column, add the option “DynamicData”.
+1. In the protocol, go to the definition of the table that contains the positioning data, and add an extra column named e.g. “InterfaceData” next to the “xpos” and “ypos” columns. In the *ColumnOptions* tag of this additional column, add the option “DynamicData”.
 
 2. To the subshapes that represent the interfaces, add a shape data field of type **Interface**, and set its value to *\[Dynamic:InterfaceName\]*.
 
@@ -285,7 +285,7 @@ A number of options are available in case you use dynamic positioning of shapes:
 
 When shapes are dynamically positioned in an EPM environment, a subscription filter is automatically added to the table, which depends on the current selection of the EPM environment. From DataMiner 9.5.1 onwards, it is possible to disable this automatic filter, so that dynamic positioning is applied to all shapes, and not just to those matching the selection filter.
 
-To do so, add an **Options** shape data field to the shape that has the **XPos** shape data field, and set it to *NoSelectionFilters*.
+To do so, add an **Options** shape data field to the shape that has the **XPos** shape data field, and set it to *NoSelectionFilters*.
 
 Example:
 
@@ -306,7 +306,7 @@ However, in some cases it can be useful to have the entire table retrieved, for 
 
 #### Positioning shapes based on their rotation point
 
-By default, the position of a dynamically positioned shape is determined based on the physical center of the shape. However, from DataMiner 9.5.12 onwards, it is possible to configure the Xpos shape so that the rotation point of the shape is used instead. To do so, add the **Options** shape data field and set it to *PositionOnCenterOfRotation*.
+By default, the position of a dynamically positioned shape is determined based on the physical center of the shape. However, from DataMiner 9.5.12 onwards, it is possible to configure the Xpos shape so that the rotation point of the shape is used instead. To do so, add the **Options** shape data field and set it to *PositionOnCenterOfRotation*.
 
 For example:
 
@@ -343,7 +343,7 @@ Line objects that have to be used to automatically connect shapes should be assi
 
     Within this shape data field, you can also configure the following options
 
-    - By default, lines that connect shapes always run from shape center to shape center. If you want these lines to run from shape edge to shape edge instead, you can use the *EdgeModeX* or *EdgeModeY* option.
+    - By default, lines that connect shapes always run from shape center to shape center. If you want these lines to run from shape edge to shape edge instead, you can use the *EdgeModeX* or *EdgeModeY* option.
 
         | Value                                        | Description                                |
         |------------------------------------------------|--------------------------------------------|
@@ -351,7 +351,7 @@ Line objects that have to be used to automatically connect shapes should be assi
         | DmaID/ElementID\|FromColID\|ToColID\|EdgeModeX | Connection between left/right shape sides  |
         | DmaID/ElementID\|FromColID\|ToColID\|EdgeModeY | Connection between top/bottom shape sides. |
 
-    - By default, the lines run between the rotation centers of the shapes. If the *CenterModeX* or *CenterModeY* options (available from DataMiner 9.5.12 onwards) are specified, the lines will instead be drawn to the physical center of shapes in the X or Y direction, respectively.
+    - By default, the lines run between the rotation centers of the shapes. If the *CenterModeX* or *CenterModeY* options (available from DataMiner 9.5.12 onwards) are specified, the lines will instead be drawn to the physical center of shapes in the X or Y direction, respectively.
 
         | Shape data field        | Description                                                         |
         |---------------------------|---------------------------------------------------------------------|
@@ -359,8 +359,8 @@ Line objects that have to be used to automatically connect shapes should be assi
         | Connectivity\|CenterModeY | Connection between the physical center of shapes in the Y direction |
 
         > [!NOTE]
-        > -  The CenterMode and EdgeMode options can be combined. However, it is not possible to use both *EdgemodeX* and *CenterModeX* or both *EdgeModeY* and *CenterModeY* at the same time.
-        > -  These options can also be used on *Element* shapes that are positioned manually in Visio.
+        > -  The CenterMode and EdgeMode options can be combined. However, it is not possible to use both *EdgemodeX* and *CenterModeX* or both *EdgeModeY* and *CenterModeY* at the same time.
+        > -  These options can also be used on *Element* shapes that are positioned manually in Visio.
 
 - **SelectionDetails**: In this shape data field, you can specify the IDs of any additional tables that you want to see listed in the Details pane of the EPM interface when someone selects the connection:
 
@@ -392,7 +392,7 @@ Line objects that have to be used to automatically connect shapes should be assi
 
 #### Dynamic shapes
 
-If you add a shape data field of type **SelectionDetails** to a shape other than a line, you can specify the IDs of any additional tables that you want to see listed in the *Details* pane of the EPM interface when someone selects that shape:
+If you add a shape data field of type **SelectionDetails** to a shape other than a line, you can specify the IDs of any additional tables that you want to see listed in the *Details* pane of the EPM interface when someone selects that shape:
 
 ```txt
 |ExtraTableID1|ExtraTableID2|...
@@ -443,5 +443,5 @@ MyVariable:[ConnectionLineDisplayIdx] ([ConnectionLineIdx]) (from '[ConnectionLi
 
 > [!NOTE]
 > -  If a connection has no clear direction (i.e. when both interfaces are set to “inout”), it is impossible to know which interface will be the source and which will be the destination.
-> -  If a line represents multiple connections (i.e. when the *MultipleLinesMode* and *MultipleCurvedLinesMode* options are not used), and a **SetVar** command has been configured on one of those connections, clicking the line will cause the placeholders to be replaced by the corresponding values from each connection, separated by a pipe character (“\|”). A different separator character can also be defined with a **SetVarOptions** shape data field that is set to the *MultipleValueSep=* option.
+> -  If a line represents multiple connections (i.e. when the *MultipleLinesMode* and *MultipleCurvedLinesMode* options are not used), and a **SetVar** command has been configured on one of those connections, clicking the line will cause the placeholders to be replaced by the corresponding values from each connection, separated by a pipe character (“\|”). A different separator character can also be defined with a **SetVarOptions** shape data field that is set to the *MultipleValueSep=* option.
 >

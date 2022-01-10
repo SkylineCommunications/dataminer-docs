@@ -11,12 +11,12 @@ By default, alarms are cleared automatically. However, if you set the AutoClear 
 - [Overriding the default AutoClear setting on parameter level](#overriding-the-default-autoclear-setting-on-parameter-level)
 
 > [!NOTE]
-> -  It is possible that because of database issues, duplicate alarms are created for column parameters. In that case, the oldest one will automatically be cleared, and the following comment will be added to the alarm:<br>*Detected duplicate alarm on column parameter. Clearing alarm for PID \[x\] with ROOTKey \[y\] found alarm with other ROOTKey \[z\]* 
+> -  It is possible that because of database issues, duplicate alarms are created for column parameters. In that case, the oldest one will automatically be cleared, and the following comment will be added to the alarm:<br>*Detected duplicate alarm on column parameter. Clearing alarm for PID \[x\] with ROOTKey \[y\] found alarm with other ROOTKey \[z\]*
 > -  In DataMiner 10.2.0/10.1.6, a protection mode has been added to avoid reduced performance of the system when an alarm storm happens that causes there to be a large number of clearable alarms at the same time. By default, when there are more than 1000 clearable alarm trees on a DMA, the newly generated clearable alarms will be closed instead of clearable. Once the number of clearable alarm trees has dropped to less than 100, this protection mode is lifted and newly generated alarms will be clearable again. Note that these default values can be customized in DataMiner.xml (see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml)).
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-working-with-clearable-alarms/> 
+> <https://community.dataminer.services/video/alarm-console-working-with-clearable-alarms/>
 
 ### Automatic versus manual alarm clearing
 
@@ -26,7 +26,7 @@ By default, a DataMiner alarm of which the severity returns to normal is automat
 
 ![](../../images/AlarmClearingAuto.jpg)
 
- 
+
 
 #### About manual alarm clearing
 
@@ -34,7 +34,7 @@ A DataMiner alarm of which the severity returns to normal can also be kept in a 
 
 ![](../../images/AlarmClearingManual.jpg)
 
- 
+
 
 > [!NOTE]
 > Alarms that reoccur before they have been cleared by a user will be linked to the original alarm. In other words, when the same alarm occurs several times in a short period of time, it will only have to be cleared once.
@@ -45,9 +45,9 @@ To manually clear an alarm:
 
 1. Right-click the alarm in the Alarm Console and select *Clear alarm*.
 
-2. In the *Clear alarm* window, add a comment if necessary, and click the *Clear alarm* button at the bottom.
+2. In the *Clear alarm* window, add a comment if necessary, and click the *Clear alarm* button at the bottom.
 
-Alternatively, if a column with action buttons to clear alarms has been added in the Alarm Console, you can also click the *X* in this column. For more information on how to add action buttons, see [Changing the column layout in an alarm tab](Working_with_the_Alarm_Console.md#changing-the-column-layout-in-an-alarm-tab).
+Alternatively, if a column with action buttons to clear alarms has been added in the Alarm Console, you can also click the *X* in this column. For more information on how to add action buttons, see [Changing the column layout in an alarm tab](Working_with_the_Alarm_Console.md#changing-the-column-layout-in-an-alarm-tab).
 
 > [!NOTE]
 > -  If the alarm is not yet in a clearable state, the *Clear alarm* option is not shown.

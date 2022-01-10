@@ -27,7 +27,7 @@ While creating a new element or editing an existing element:
 
 > [!TIP]
 > See also:
-> -  [Replicated elements](Replicated_elements.md) 
-> -  [Element properties](Element_properties.md) 
-> -  [Updating elements](Updating_elements.md) 
+> -  [Replicated elements](Replicated_elements.md)
+> -  [Element properties](Element_properties.md)
+> -  [Updating elements](Updating_elements.md)
 >

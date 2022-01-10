@@ -15,7 +15,7 @@ To do so:
 
     ![](../../images/CloudAdmin_Selector.png)
 
-4. In the sidebar on the left, navigate to *Organization* > *Users*.
+4. In the sidebar on the left, navigate to *Organization* > *Users*.
 
 5. At the top of the window, click *Add user*.
 
@@ -29,4 +29,4 @@ To do so:
 
 10. Specify the email address that is used for the user on the DataMiner Cloud Platform, and click *Add*.
 
- 
+

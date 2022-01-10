@@ -11,7 +11,7 @@ Retrieves one of the following fields from a base alarm.
 | Field         | Description                                                                                                                                      |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | rawvalue      | Raw alarm value                                                                                                                                  |
-| value         |                                                                                                                                                  |
+| value         |                                                                                                                                                 |
 | dmaid         | DataMiner ID                                                                                                                                     |
 | eid           | Element ID                                                                                                                                       |
 | pid           | Parameter ID                                                                                                                                     |
@@ -22,20 +22,20 @@ Retrieves one of the following fields from a base alarm.
 | status        | (as ID)                                                                                                                                          |
 | type          | (as ID)                                                                                                                                          |
 | source        | (as ID)                                                                                                                                          |
-| elementrca    |                                                                                                                                                  |
-| parameterrca  |                                                                                                                                                  |
-| servicerca    |                                                                                                                                                  |
+| elementrca    |                                                                                                                                                 |
+| parameterrca  |                                                                                                                                                 |
+| servicerca    |                                                                                                                                                 |
 | rootkey       | Root alarm ID                                                                                                                                    |
 | id            | Alarm ID                                                                                                                                         |
 | userstatus    | (as ID)                                                                                                                                          |
-| owner         |                                                                                                                                                  |
-| elementname   |                                                                                                                                                  |
-| parametername |                                                                                                                                                  |
+| owner         |                                                                                                                                                 |
+| elementname   |                                                                                                                                                 |
+| parametername |                                                                                                                                                 |
 | previous      | ID of previous alarm in tree                                                                                                                     |
-| category      |                                                                                                                                                  |
-| keypoint      |                                                                                                                                                  |
-| componentinfo |                                                                                                                                                  |
-| hostingdmaid  |                                                                                                                                                  |
+| category      |                                                                                                                                                 |
+| keypoint      |                                                                                                                                                 |
+| componentinfo |                                                                                                                                                 |
+| hostingdmaid  |                                                                                                                                                 |
 | viewname      | Name of the view containing the element that generated the alarm. If the element can be found in more than one view, then a random name is used. |
 | elementkey    | The DmaID/ElementID (can be used from DataMiner version 8.5.5 onwards)                                                                           |
 
@@ -74,11 +74,11 @@ Retrieves a parameter value.
 Examples:
 
 ```txt
-Parameter(DMAID, elementID, parameterID)          
-parameter(7,59,350)                               
-                                                  
+Parameter(DMAID, elementID, parameterID)
+parameter(7,59,350)
+
 Parameter(DMAID, elementID, parameterID, rowindex)
-parameter(7,56,110,SLDataMiner)                   
+parameter(7,56,110,SLDataMiner)
 ```
 
 #### count

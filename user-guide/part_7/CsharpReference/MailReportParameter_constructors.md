@@ -38,7 +38,7 @@ public MailReportParameter(int pid, string index)
 
 #### MailReportParameter Constructor (IActionableElement, String, String)
 
-Initializes a new instance of the *MailReportOptions* class using the specified dummy, parameter name and index.
+Initializes a new instance of the *MailReportOptions* class using the specified dummy, parameter name and index.
 
 ```txt
 public MailReportParameter(IActionableElement dummy, string name, string index)
@@ -46,7 +46,7 @@ public MailReportParameter(IActionableElement dummy, string name, string index)
 
 #### MailReportParameter Constructor (Int32, String, MailReportParameterFlags)
 
-Initializes a new instance of the *MailReportOptions* class using the specified parameter ID, index and mail report parameter options.
+Initializes a new instance of the *MailReportOptions* class using the specified parameter ID, index and mail report parameter options.
 
 ```txt
 public MailReportParameter(int pid, string index, MailReportParameterFlags options)
@@ -54,7 +54,7 @@ public MailReportParameter(int pid, string index, MailReportParameterFlags optio
 
 #### MailReportParameter Constructor (IActionableElement, String, String, MailReportParameterFlags)
 
-Initializes a new instance of the *MailReportOptions* class using the specified dummy, name and mail report parameter options.
+Initializes a new instance of the *MailReportOptions* class using the specified dummy, name and mail report parameter options.
 
 ```txt
 public MailReportParameter(IActionableElement dummy, string name, string index, MailReportParameterFlags options)

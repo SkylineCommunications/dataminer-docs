@@ -16,7 +16,7 @@ EmailOptions options = new EmailOptions();
 public EmailOptions(string message, string title, string to)
 ```
 
-Initializes a new instance of the *EmailOptions* class. A message, message title and destination address are specified.
+Initializes a new instance of the *EmailOptions* class. A message, message title and destination address are specified.
 
 Example:
 

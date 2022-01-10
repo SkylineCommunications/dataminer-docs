@@ -16,4 +16,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/visio-creating-children-shapes/> 
+> <https://community.dataminer.services/video/visio-creating-children-shapes/>

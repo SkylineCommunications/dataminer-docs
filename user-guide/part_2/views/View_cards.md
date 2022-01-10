@@ -52,7 +52,7 @@ The navigation pane on the left side of a view card contains a tree view with th
 
 #### VISUAL
 
-Under the *VISUAL* node, one or more pages are displayed that contain a graphic representation of the view. These can be completely customized in Visio.
+Under the *VISUAL* node, one or more pages are displayed that contain a graphic representation of the view. These can be completely customized in Visio.
 
 > [!NOTE]
 > For more information on how to change the Visio file linked to a particular view, see [Switching between different Visio files](../protocols/Managing_Visio_files_linked_to_protocols.md#switching-between-different-visio-files).
@@ -65,9 +65,9 @@ The data pages can be displayed in several ways. You can change the way they are
 
 | Button                                                                                         | Description                                                                                                                                                                                                                                                                                                                                                                                                      |
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../../images/View_Filter_button.png)    | Filters the view to show only certain items. If you click the button, a pane is displayed in which you can select which items should be displayed. <br> To show items from subviews as well, select the checkbox click *All devices (Include sub-views)*. Note that the number of items indicated next to the DATA pages can change depending on whether this filter is selected. |
-| ![](../../images/View_List_button.png)        | Displays the list view.                                                                                                                                                                                                                                                                                                                                                                                          |
-| ![](../../images/View_Summary_button.png)  | Displays the summary view.                                                                                                                                                                                                                                                                                                                                                                                       |
+| ![](../../images/View_Filter_button.png)   | Filters the view to show only certain items. If you click the button, a pane is displayed in which you can select which items should be displayed. <br> To show items from subviews as well, select the checkbox click *All devices (Include sub-views)*. Note that the number of items indicated next to the DATA pages can change depending on whether this filter is selected. |
+| ![](../../images/View_List_button.png)       | Displays the list view.                                                                                                                                                                                                                                                                                                                                                                                          |
+| ![](../../images/View_Summary_button.png) | Displays the summary view.                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ##### List view
 
@@ -111,7 +111,7 @@ The list consists of the following columns:
 
 - *# of retries*: Relevant for elements only. The total number of times DataMiner will send the same command again in case it does not receive a response. For multiple connections, the values are separated by commas.
 
-- *Protocol* and *Protocol version*: Relevant for elements and SLAs only. The name and version of the protocol used for communication between the DMA and the data source.
+- *Protocol* and *Protocol version*: Relevant for elements and SLAs only. The name and version of the protocol used for communication between the DMA and the data source.
 
 - *Alarm template*: Relevant for elements and SLAs only. The name of the alarm template used for alarm monitoring of the element or SLA.
 
@@ -129,7 +129,7 @@ The list consists of the following columns:
 
 - *Type*: Relevant for elements and SLAs only. Type of item as defined in the protocol, e.g. *Matrix*, *IRD*, *Service Level Agreement*, etc.
 
-- *Display type*: Relevant for elements only. The display type as defined in the protocol, i.e. *spectrum analyzer* for spectrum analyzer elements or *element manager* for EPM elements.
+- *Display type*: Relevant for elements only. The display type as defined in the protocol, i.e. *spectrum analyzer* for spectrum analyzer elements or *element manager* for EPM elements.
 
 - *IP*: The virtual IP of the element in DataMiner, if any.
 
@@ -200,7 +200,7 @@ A graphic representation of the alarm distribution, alarm events and alarm state
 This page links to the legacy DMS Dashboards app
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 #### AGGREGATION
 
@@ -258,5 +258,5 @@ On this page, you can add short notes to the view. For more information, see [Ca
 On this page, you can add, view and edit extensive annotations to the view. With the pencil icon on this page, you can open an HTML editor that allows you to add text, hyperlinks, pictures, etc. to the annotations. There is also an icon that can be used to print the annotations, and an icon to refresh the annotations page.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> From DataMiner 10.2.0/10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 >

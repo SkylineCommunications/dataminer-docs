@@ -1,6 +1,6 @@
 ## Icons
 
-The *C:\\Skyline DataMiner\\Icons\\* directory contains any custom icons that have been configured for elements, services, redundancy groups and views, as well as rules that dictate when they should be displayed.
+The *C:\\Skyline DataMiner\\Icons\\* directory contains any custom icons that have been configured for elements, services, redundancy groups and views, as well as rules that dictate when they should be displayed.
 
 The icons and the icon rules are specified in the following XML files:
 
@@ -14,15 +14,15 @@ The icons and the icon rules are specified in the following XML files:
 
 ### CustomIcons.xml
 
-In the *CustomIcons.xml* file, each *\<Icon>* tag can either contain XAML code or refer to an image file located in the folder *C:\\Skyline DataMiner\\Icons\\Refs\\*. See the following example.
+In the *CustomIcons.xml* file, each *\<Icon>* tag can either contain XAML code or refer to an image file located in the folder *C:\\Skyline DataMiner\\Icons\\Refs\\*. See the following example.
 
 ```xml
-<Icons>                                                
+<Icons>
   <Icon key="aUniqueKey" ref="icon1.png" theme="light" />
-  <Icon key="anotherUniqueKey" theme="dark">             
-    <![CDATA[myXamlCode]]>                            
-  </Icon>                                                
-</Icons>                                               
+  <Icon key="anotherUniqueKey" theme="dark">
+    <![CDATA[myXamlCode]]>
+  </Icon>
+</Icons>
 ```
 
 The icon tag can have the following attributes:
@@ -38,28 +38,28 @@ The icon tag can have the following attributes:
 
 ### IconSelectionRules.xml
 
-In the *IconSelectionRules.xml* file, you can specify when the icons defined in *CustomIcons.xml* have to be used. See the following example.
+In the *IconSelectionRules.xml* file, you can specify when the icons defined in *CustomIcons.xml* have to be used. See the following example.
 
 ```xml
-<Rules>                                                                 
-  <SelectIcon type="element" key="aUniqueKey">                            
-    <When>                                                                  
-      <Field type="property" name="status" value="^regex^^.*in use.*$" />   
-      <Field type="operator" operator="and" />                                
-      <Field type="protocol" value="Microsoft Platform" />                    
-    </When>                                                                 
-  </SelectIcon>                                                           
-  <SelectIcon type="element" key="anotherUniqueKey">                      
-    <When>                                                                  
-      <Field type="property" name="status" value="idle" />                    
-    </When>                                                                 
-  </SelectIcon>                                                           
-  <SelectIcon type="element" key="timeout" layer="overlay">               
-    <When>                                                                  
-      <Field type="property" name="connection status" value="not connected" />
-    </When>                                                                 
-  </SelectIcon>                                                           
-</Rules>                                                                
+<Rules>
+  <SelectIcon type="element" key="aUniqueKey">
+    <When>
+      <Field type="property" name="status" value="^regex^^.*in use.*$" />
+      <Field type="operator" operator="and" />
+      <Field type="protocol" value="Microsoft Platform" />
+    </When>
+  </SelectIcon>
+  <SelectIcon type="element" key="anotherUniqueKey">
+    <When>
+      <Field type="property" name="status" value="idle" />
+    </When>
+  </SelectIcon>
+  <SelectIcon type="element" key="timeout" layer="overlay">
+    <When>
+      <Field type="property" name="connection status" value="not connected" />
+    </When>
+  </SelectIcon>
+</Rules>
 ```
 
 The following tags and attributes are available:

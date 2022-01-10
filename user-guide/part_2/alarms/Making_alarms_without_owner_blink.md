@@ -10,7 +10,7 @@ There can for instance be:
 
 - Blinking shapes in Visual Overview, depending on the Visual Overview configuration.
 
-The settings that control this blinking behavior are configured in the *\<AlarmSettings>* section of the file *MaintenanceSettings.xml*.
+The settings that control this blinking behavior are configured in the *\<AlarmSettings>* section of the file *MaintenanceSettings.xml*.
 
 It is also possible to specify alarm filters, so that blinking is only enabled based on conditions specified in the filters. This is possible on four different levels: on view level, on service level, on element level and on alarm level. You can also specify an additional service severity filter for services that have a severity limit.
 
@@ -23,7 +23,7 @@ It is also possible to specify alarm filters, so that blinking is only enabled b
 
 > [!TIP]
 > See also:
-> -   [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> -  [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
 > -  [Basic conditional shape manipulation actions](../visio/Basic_conditional_shape_manipulation_actions.md)
 
 #### Activating alarm blinking on a DMA
@@ -32,19 +32,19 @@ It is also possible to specify alarm filters, so that blinking is only enabled b
 
 2. On a DataMiner Agent, open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
 
-3. Inside the *\<AlarmSettings>* tag, specify a *\<Blinking>* tag like the following one:
+3. Inside the *\<AlarmSettings>* tag, specify a *\<Blinking>* tag like the following one:
 
     ```xml
-    <AlarmSettings>                     
-      <Blinking enabled="true"            
-        alarmFilter="MyPublicAlarmFilter"    
+    <AlarmSettings>
+      <Blinking enabled="true"
+        alarmFilter="MyPublicAlarmFilter"
         elementFilter="MyPublicElementFilter"
         serviceFilter="MyPublicServiceFilter"
-        viewFilter="MyPublicViewFilter"      
+        viewFilter="MyPublicViewFilter"
         serviceSeveritiesFilter="minor,major"
-        blankInterval="200"                  
-      blinkInterval="1000" />              
-    </AlarmSettings>                    
+        blankInterval="200"
+      blinkInterval="1000" />
+    </AlarmSettings>
     ```
 
 4. Save the file and restart the DMA.
@@ -67,5 +67,5 @@ The following filter attributes can be used:
 | serviceSeveritiesFilter | Comma-separated list of alarm severities. If the overall alarm severity of a service matches one of the listed severities, it will blink.                                                                                                             |
 
 > [!NOTE]
-> If you only set the *serviceFilter* attribute and not the *serviceSeveritiesFilter*, you could see services blink that are not supposed to blink. This is because the alarm severity of a service can be limited to a certain level during service creation. However, if only a *serviceFilter* is set, then alarms that are not within the set limit could still make the service blink. By specifying a *serviceSeveritiesFilter*, you can correct this unwanted behavior, by adding the specific severities for which the service is allowed to blink.
+> If you only set the *serviceFilter* attribute and not the *serviceSeveritiesFilter*, you could see services blink that are not supposed to blink. This is because the alarm severity of a service can be limited to a certain level during service creation. However, if only a *serviceFilter* is set, then alarms that are not within the set limit could still make the service blink. By specifying a *serviceSeveritiesFilter*, you can correct this unwanted behavior, by adding the specific severities for which the service is allowed to blink.
 >

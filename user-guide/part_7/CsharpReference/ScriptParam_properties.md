@@ -27,7 +27,7 @@ string Value
 Example:
 
 ```txt
-// Retrieving the value by using the parameter ID.   
+// Retrieving the value by using the parameter ID.
 ScriptParam paramUser = engine.GetScriptParam(65000);
-string userDescription = paramUser.Value;            
+string userDescription = paramUser.Value;
 ```

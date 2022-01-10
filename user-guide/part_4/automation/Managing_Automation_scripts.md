@@ -7,7 +7,7 @@ To manage the Automation scripts in a DMS, you need to open the Automation modul
 - A pane with script details on the right, where scripts can be viewed and edited.
 
     > [!NOTE]
-    > The script details can also be viewed in a separate card. To do so, right-click the script and select *Open in new card* or *Open in new undocked card*.
+    > The script details can also be viewed in a separate card. To do so, right-click the script and select *Open in new card* or *Open in new undocked card*.
 
 Managing Automation scripts, e.g. adding and deleting scripts or organizing them in folders, is done in the pane on the left:
 
@@ -31,9 +31,9 @@ You can collapse or expand folders in the tree view:
 
 - By clicking the triangle in front of the folder.
 
-- By right-clicking the tree view and selecting *Collapse all* or *Expand all*.
+- By right-clicking the tree view and selecting *Collapse all* or *Expand all*.
 
-- By selecting the folder, clicking the More... button at the bottom of the pane, and selecting *Collapse all* or *Expand all*.
+- By selecting the folder, clicking the More... button at the bottom of the pane, and selecting *Collapse all* or *Expand all*.
 
     > [!NOTE]
     > If you select *Collapse all*, the root folder will not be collapsed.
@@ -42,7 +42,7 @@ You can collapse or expand folders in the tree view:
 
 To add a new script:
 
-- Select the folder where you want to add the script, and click the *Add script* button at the bottom of the pane, or
+- Select the folder where you want to add the script, and click the *Add script* button at the bottom of the pane, or
 
 - Right-click the folder where you want a new script and select *Add script*.
 

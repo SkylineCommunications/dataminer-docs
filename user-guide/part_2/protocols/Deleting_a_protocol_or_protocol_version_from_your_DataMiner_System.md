@@ -7,9 +7,9 @@ If you are absolutely sure that a protocol or a protocol version is no longer us
 
 To do so:
 
-1. Go to *Apps* > *Protocols & Templates*.
+1. Go to *Apps* > *Protocols & Templates*.
 
-2. Under *Protocols* or *Versions*, right-click the protocol or protocol version you want to delete and select *Delete*.
+2. Under *Protocols* or *Versions*, right-click the protocol or protocol version you want to delete and select *Delete*.
 
     - Select a protocol name if you want to delete all versions of that protocol.
 
@@ -18,7 +18,7 @@ To do so:
     > [!CAUTION]
     > Carefully read the contents of the confirmation box as it explains the overall system impact of the delete operation you are about to execute.
 
-3. In the confirmation box, click *Yes* to proceed or click *No* to cancel.
+3. In the confirmation box, click *Yes* to proceed or click *No* to cancel.
 
 > [!NOTE]
 > -  A production version of a protocol cannot be deleted. If you want to delete a protocol version that is marked “Production”, first promote another version of that same protocol to production version and then try again.

@@ -9,11 +9,11 @@ The maximum number of concurrent client sessions of a spectrum analyzer element 
 
 1. Right-click the spectrum element in the Surveyor and select *Properties*.
 
-2. In the *Custom* tab, click the settings button in the lower left corner and select *Add*.
+2. In the *Custom* tab, click the settings button in the lower left corner and select *Add*.
 
-3. In the *Edit* window, specify the name “Spectrum.MaxRealTimeClients”, and then click *OK*.
+3. In the *Edit* window, specify the name “Spectrum.MaxRealTimeClients”, and then click *OK*.
 
-4. In the *Custom* tab of the *Properties* window, set the value of the new property to the number of concurrent client sessions allowed for the spectrum element.
+4. In the *Custom* tab of the *Properties* window, set the value of the new property to the number of concurrent client sessions allowed for the spectrum element.
 
 5. Click *OK* to close the window.
 
@@ -26,7 +26,7 @@ The maximum number of concurrent client sessions of a spectrum analyzer element 
 
 If you try to access a Spectrum Analyzer element and the maximum number of concurrent client sessions has been reached, a warning message will appear that indicates that the maximum number of clients has been reached.
 
-However, in Element Display, users who have been granted the *Spectrum: Take Device From Other Client* permission can disregard that message and take over one of the current sessions.
+However, in Element Display, users who have been granted the *Spectrum: Take Device From Other Client* permission can disregard that message and take over one of the current sessions.
 
 To do so:
 
@@ -41,7 +41,7 @@ To do so:
 2. Click *Yes* to take over one of the current sessions.
 
 > [!NOTE]
-> To access a spectrum element in Element Display, go to *http://**\[MyDMA\]**/DataDisplay.htm?id=**\[ElementID\]*, where MyDMA is the hostname or IP of your DMA and ElementID is the element ID of the spectrum element, in the format DMA ID/element ID. 
+> To access a spectrum element in Element Display, go to *http://**\[MyDMA\]**/DataDisplay.htm?id=**\[ElementID\]*, where MyDMA is the hostname or IP of your DMA and ElementID is the element ID of the spectrum element, in the format DMA ID/element ID.
 
 > [!TIP]
 > See also:

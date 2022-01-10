@@ -1,6 +1,6 @@
 ## MarkerImages
 
-In the *\<MarkerImages>* tag, add a *\<MarkerImage>* tag for every marker image you intend to use in this layer.
+In the *\<MarkerImages>* tag, add a *\<MarkerImage>* tag for every marker image you intend to use in this layer.
 
 ### Attributes
 
@@ -10,7 +10,7 @@ Define each image by means of the following attributes.
 
 In this mandatory attribute, specify the unique ID of the image.
 
-In layers of sourceType “table”, this ID can be used in conjunction with the *\<MarkerSelectionPID>* tag to dynamically select a marker image based on the contents of a specific table cell.
+In layers of sourceType “table”, this ID can be used in conjunction with the *\<MarkerSelectionPID>* tag to dynamically select a marker image based on the contents of a specific table cell.
 
 #### url
 
@@ -19,7 +19,7 @@ In this mandatory attribute, specify the path to the marker image file.
 Enter either an absolute path (starting with *http://*) or a path relative to *C:\\Skyline DataMiner\\Webpages\\Maps\\*
 
 > [!NOTE]
-> To generate images dynamically, it is possible to use placeholders in the URL, which should then be specified in the *\<MarkerDetails>* tag. See [MarkerDetails](MarkerDetails.md).
+> To generate images dynamically, it is possible to use placeholders in the URL, which should then be specified in the *\<MarkerDetails>* tag. See [MarkerDetails](MarkerDetails.md).
 
 #### width
 
@@ -37,7 +37,7 @@ In this optional attribute, you can specify the point of the image that has to b
 
 Default anchor: Bottom middle of the marker image
 
-Example: If the marker image is 32 pixels wide and 32 pixels high, specifying “0,32” in the *anchor* attribute will cause the lower left corner of the image to be anchored to the map location.
+Example: If the marker image is 32 pixels wide and 32 pixels high, specifying “0,32” in the *anchor* attribute will cause the lower left corner of the image to be anchored to the map location.
 
 #### single
 
@@ -54,7 +54,7 @@ However, marker shadows are no longer supported since version 3.14 of the Google
 
 #### shapeType
 
-If, in the *shape* attribute below, you have defined a clickable area on top of the marker image, then, in this optional *shapeType* attribute, specify the geometric form of that clickable area:
+If, in the *shape* attribute below, you have defined a clickable area on top of the marker image, then, in this optional *shapeType* attribute, specify the geometric form of that clickable area:
 
 - circle,
 
@@ -81,19 +81,19 @@ This shape attribute has to contain an array of integers that specify the pixel 
 ### Example
 
 ```xml
-<MarkerImages>                         
-  <MarkerImage                           
-    id="flags"                              
-    url="images/icons/flag.png"             
-    width="20"                              
-    height="32"                             
-    anchor="0,32"                           
-    single="false"                          
+<MarkerImages>
+  <MarkerImage
+    id="flags"
+    url="images/icons/flag.png"
+    width="20"
+    height="32"
+    anchor="0,32"
+    single="false"
     shadowUrl="images/icons/flag_shadow.png"
-    shadowWidth="37"                        
-    shadowHeight="32"                       
-    shadowAnchor="0,32"                     
-    shapeType="poly"                        
-    shape="1,1,1,20,18,20,18,1" />          
-</MarkerImages>                        
+    shadowWidth="37"
+    shadowHeight="32"
+    shadowAnchor="0,32"
+    shapeType="poly"
+    shape="1,1,1,20,18,20,18,1" />
+</MarkerImages>
 ```

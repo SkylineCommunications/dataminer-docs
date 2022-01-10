@@ -11,4 +11,4 @@ You can change the maximum total size of the log files on a DMA in System Center
 > [!NOTE]
 > The total size of SLNet log files is not controlled by this setting. See [SLNet.exe.config](../../part_7/SkylineDataminerFolder/SLNet_exe_config.md#slnetexeconfig).
 
- 
+

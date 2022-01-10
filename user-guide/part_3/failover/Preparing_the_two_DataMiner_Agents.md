@@ -36,6 +36,6 @@ Alternatively, from DataMiner 10.2.0/10.1.8 onwards, a shared hostname can be us
 
 ```txt
 Name: ResetPlease.FailoverZone
-Addresses: 10.11.5.52         
-           10.11.4.52         
+Addresses: 10.11.5.52
+ 10.11.4.52
 ```

@@ -7,7 +7,7 @@ When you open the Correlation module in Cube (via apps \> *Correlation*), a card
 - A pane on the right, with details of the selected item in the tree view. If a folder is selected, the rules in the folder are shown, with rules that are not enabled indicated in gray. If a rule is selected, its details can be viewed and edited.
 
     > [!NOTE]
-    > The rule details can also be viewed in a separate card. To do so, right-click the rule and select *Open in new card* or *Open in new undocked card*.
+    > The rule details can also be viewed in a separate card. To do so, right-click the rule and select *Open in new card* or *Open in new undocked card*.
 
 Managing Correlation rules, e.g. adding and deleting rules or organizing them in folders, is done in the pane on the left:
 

@@ -15,5 +15,5 @@ Find out more in the following topics:
 - [Creating a Scheduler template](Creating_a_Scheduler_template.md)
 
 > [!NOTE]
-> In systems with an appropriate license, from DataMiner 8.5.8 to DataMiner 9.6.3, the Scheduler module contains an additional *resources* tab. This tab is part of the Service & Resource Management module. For more information, see [Service and Resource Management](../SRM/SRM.md#service-and-resource-management).
+> In systems with an appropriate license, from DataMiner 8.5.8 to DataMiner 9.6.3, the Scheduler module contains an additional *resources* tab. This tab is part of the Service & Resource Management module. For more information, see [Service and Resource Management](../SRM/SRM.md#service-and-resource-management).
 >

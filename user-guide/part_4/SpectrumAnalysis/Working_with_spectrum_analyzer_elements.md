@@ -24,6 +24,6 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> -  <https://community.dataminer.services/video/spectrum-analyzer-introduction-to-dataminer-spectrum-analysis/> 
-> -  <https://community.dataminer.services/video/spectrum-analyzer-real-time-spectrum-analysis-tools/> 
+> -  <https://community.dataminer.services/video/spectrum-analyzer-introduction-to-dataminer-spectrum-analysis/>
+> -  <https://community.dataminer.services/video/spectrum-analyzer-real-time-spectrum-analysis-tools/>
 >

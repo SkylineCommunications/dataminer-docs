@@ -2,20 +2,20 @@
 
 1. Open a telnet session.
 
-2. Connect to the TCP/IP socket that is specified in the *\<AlarmSocket>* tag of the *DataMiner.xml* file.
+2. Connect to the TCP/IP socket that is specified in the *\<AlarmSocket>* tag of the *DataMiner.xml* file.
 
 You should receive a message similar to the following one:
 
 ```txt
 ---id: 202871 previous: 202868 root: 202868---
-            -> Element (2) Philips IRD                    
-            -> Parameter (176): Audio Output Level        
-            -> Alarm Type : Dropped                       
-            -> Value: 12                                  
-            -> Severity: Minor High                       
-            -> Status: Open                               
-            -> Time: 2012/07/18 19:26:44                  
-            -> Userstatus: Not Assigned                   
+            -> Element (2) Philips IRD
+            -> Parameter (176): Audio Output Level
+            -> Alarm Type : Dropped
+            -> Value: 12
+            -> Severity: Minor High
+            -> Status: Open
+            -> Time: 2012/07/18 19:26:44
+            -> Userstatus: Not Assigned
 ```
 
 > [!NOTE]

@@ -20,7 +20,7 @@ From DataMiner 10.0.0/10.0.2 onwards, to search for an item in the DataMiner Sys
 
 As soon as you click the search box, a list of suggestions is shown below. Initially, this list shows recent items (with any pinned items at the top), but it is updated with search results as soon as you type anything in the box.
 
-Click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in a side panel. You can also right-click a suggestion in the list to open the same right-click menu as in the Surveyor (see [Surveyor right-click menu](Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards.md#surveyor-right-click-menu)).
+Click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in a side panel. You can also right-click a suggestion in the list to open the same right-click menu as in the Surveyor (see [Surveyor right-click menu](Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards.md#surveyor-right-click-menu)).
 
 From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards.md#sidebar)).
 
@@ -39,8 +39,8 @@ Please note the following
 
     > [!NOTE]
     > In the Cube system settings, it is possible to disable the client-side search. To do so:
-    > -  In a system with a MySQL database, go to *System Center* > *System Settings* > *Search*, clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button.
-    > -  In a system with a Cassandra database, go to *System Center* > *Search & Indexing*, clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button.
+    > -  In a system with a MySQL database, go to *System Center* > *System Settings* > *Search*, clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button.
+    > -  In a system with a Cassandra database, go to *System Center* > *Search & Indexing*, clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button.
     >
     > The setting will take effect as soon as you log off in Cube and then log on again.
     >
@@ -81,16 +81,16 @@ To search for an item in the DataMiner System using a DataMiner version prior to
 - First a client-side search will be done, then a server-side search. The results of the client-side search are displayed immediately. When more results return from the server, a button will be added in the top corner of the results pane, listing the number of results found. Click this button to view these additional results as well.
 
     > [!NOTE]
-    > In the Cube system settings, it is possible to disable the client-side search. To do so, in a system with a MySQL database, go to *System Center* > *System Settings* > *Search*. In a system with at least DataMiner 9.6.4 and a Cassandra database, go to *System Center* > *Search & Indexing*. Clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button. The setting will take effect as soon as you log off in Cube and then log on again.
+    > In the Cube system settings, it is possible to disable the client-side search. To do so, in a system with a MySQL database, go to *System Center* > *System Settings* > *Search*. In a system with at least DataMiner 9.6.4 and a Cassandra database, go to *System Center* > *Search & Indexing*. Clear the checkbox next to *Enable search indexing on the client* and click the *Apply* button. The setting will take effect as soon as you log off in Cube and then log on again.
     >
     > However, note the following:
     > -  This is a system-wide setting, so it will be applied for all users.
     > -  If this setting is disabled, up to DataMiner 9.5.0 CU7/9.5.10, no settings will be included in the search results.
 
-- Browse through the results either by scrolling, or using the *UP* and *DOWN* keys. When you select an item in the list, basic information about the item is displayed at the bottom of the navigation pane.
+- Browse through the results either by scrolling, or using the *UP* and *DOWN* keys. When you select an item in the list, basic information about the item is displayed at the bottom of the navigation pane.
 
     > [!NOTE]
-    > If you browse through the results using the *UP* and *DOWN* keys, the cursor stays in the Search box. This allows you to quickly refine or change the text to be searched without using your mouse.
+    > If you browse through the results using the *UP* and *DOWN* keys, the cursor stays in the Search box. This allows you to quickly refine or change the text to be searched without using your mouse.
 
 - Select an item and press *ENTER*, or click an item to open it in a card. Click with the middle mouse button to open the item in a new card, next to any existing cards.
 
@@ -98,7 +98,7 @@ To search for an item in the DataMiner System using a DataMiner version prior to
 
 ### Search type filter
 
-If an advanced search returns several kinds of items, it is possible to filter which categories are displayed. To do so, click the *All types* button in the top-left corner, and select the type you wish to display. For some of these types, an additional filter is displayed when you have selected the type filter.
+If an advanced search returns several kinds of items, it is possible to filter which categories are displayed. To do so, click the *All types* button in the top-left corner, and select the type you wish to display. For some of these types, an additional filter is displayed when you have selected the type filter.
 
 > [!NOTE]
 > When server-side results are loaded, the list will be updated when you select a search type from the search type selection box.

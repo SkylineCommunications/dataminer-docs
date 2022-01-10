@@ -19,13 +19,13 @@ These two alarm storm protection types can be combined.
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-alarm-storm-prevention/> 
+> <https://community.dataminer.services/video/ruis-rapid-recap-alarm-storm-prevention/>
 
 ### Configuring alarm storm protection
 
 To configure alarm storm protection:
 
-1. Go to *Settings \> \[User\] \> Alarm Console*.
+1. Go to *Settings \> \[User\] \> Alarm Console*.
 
 2. Two options are available:
 
@@ -94,4 +94,4 @@ When alarm storm mode is deactivated, the following happens:
 >     - For more information on alarm storm prevention for notifications, see [Configuring alarm storm prevention for notifications](../../part_3/security/Configuring_alarm_storm_prevention_for_notifications.md).
 >     - For more information on alarm storm prevention for SNMP forwarding, see [Configuring an SNMP manager in DataMiner Cube](../../part_3/SNMP/Configuring_an_SNMP_manager_in_DataMiner_Cube.md).
 
- 
+

@@ -18,4 +18,4 @@ If parameter X is set to “1”, then parameter Y can be set to “A” or “B
 
 If you try to perform an action that is not allowed (e.g. set parameter Y to “C”) based on the contents of another parameter (e.g. parameter X is set to “1”), a message box will appear, indicating that the other parameter has to be changed first.
 
- 
+

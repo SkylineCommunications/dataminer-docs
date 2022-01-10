@@ -1,6 +1,6 @@
 ## Reloading the Asset Manager user interface
 
-If you want to re-initialize the entire *Asset Manager* user interface, click the *Reload* button in the lower left corner.
+If you want to re-initialize the entire *Asset Manager* user interface, click the *Reload* button in the lower left corner.
 
 To only refresh the data in the data pane, click the *Refresh* button.
 

@@ -6,7 +6,7 @@ Each of the colored panes in this view represents a task status, and contains th
 
 The task status panes are organized left to right and show the logical evolution of a task throughout its life cycle from creation to closure.
 
-- To search for tasks that contain a particular piece of text, enter that text in the *Search* box at the top of the list.
+- To search for tasks that contain a particular piece of text, enter that text in the *Search* box at the top of the list.
 
 - To sort the list of tasks by a particular property, or filter it by status, type, label, assignee and/or task group, click the button to the right of the search box.
 
@@ -30,5 +30,5 @@ Below the board, a pane is available that consists of two tabs:
 You can change the size of this pane by dragging its upper border up or down, and collapse or expand it using the blue button on the right. Clicking a task in this pane will open the task in a pop-up window. See also [Consulting or editing a task](Consulting_or_editing_a_task.md).
 
 > [!NOTE]
-> In the task board, a task group is indicated with a small icon in the top-left corner. However, checking a task group and the tasks it contains is much easier in the *Buckets* and *Timeline* tabs below the board.
+> In the task board, a task group is indicated with a small icon in the top-left corner. However, checking a task group and the tasks it contains is much easier in the *Buckets* and *Timeline* tabs below the board.
 >

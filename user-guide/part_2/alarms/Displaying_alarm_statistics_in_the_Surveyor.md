@@ -2,7 +2,7 @@
 
 In the Surveyor, statistical alarm data can be displayed next to elements, services and views.
 
-The settings that control the data being displayed have to be configured in *MaintenanceSettings.xml* and are synchronized across all DMAs in the DMS.
+The settings that control the data being displayed have to be configured in *MaintenanceSettings.xml* and are synchronized across all DMAs in the DMS.
 
 In this section:
 
@@ -14,7 +14,7 @@ In this section:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/surveyor-displaying-alarm-statistics/> 
+> <https://community.dataminer.services/video/surveyor-displaying-alarm-statistics/>
 
 #### Configuration in MaintenanceSettings.xml
 
@@ -22,7 +22,7 @@ In this section:
 
 2. Open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml.*
 
-3. In the *Surveyor* tag, configure the *ViewStatistics*, *ServiceStatistics* and *ElementStatistics* subtags.
+3. In the *Surveyor* tag, configure the *ViewStatistics*, *ServiceStatistics* and *ElementStatistics* subtags.
 
     To do so, enter strings consisting of fixed text, placeholders and section separators. These strings will determine which information will be displayed and how it will be displayed.
 
@@ -36,21 +36,21 @@ In this section:
         | \[#WarningElements\]  | \[#WarningServices\]  | \[#WarningAlarms\]  |
         | \[#NormalElements\]   | \[#NormalServices\]   | \[#NormalAlarms\]   |
         | \[#TimeoutElements\]  | \[#TimeoutServices\]  | \[#TimeoutAlarms\]  |
-        | \[#NoticeElements\]   |                       | \[#NoticeAlarms\]   |
-        | \[#ErrorElements\]    |                       | \[#ErrorAlarms\]    |
-        | \[#MaskedElements\]   |                       | \[#MaskedAlarms\]   |
+        | \[#NoticeElements\]   |                      | \[#NoticeAlarms\]   |
+        | \[#ErrorElements\]    |                      | \[#ErrorAlarms\]    |
+        | \[#MaskedElements\]   |                      | \[#MaskedAlarms\]   |
         | \[#TotalElements\]    | \[#TotalServices\]    | \[#TotalAlarms\]    |
 
-    - Use three hash signs (“###”) to separate sections in the *ViewStatistics*, *ServiceStatistics* and *ElementStatistics* string.
+    - Use three hash signs (“###”) to separate sections in the *ViewStatistics*, *ServiceStatistics* and *ElementStatistics* string.
 
-        A section is only displayed if the current value of the placeholder it contains is different from 0. 
+        A section is only displayed if the current value of the placeholder it contains is different from 0.
 
         Examples:
 
         ```txt
-        ###[#TotalAlarms] Active alarms ###(Including [#CriticalAlarms] Critical)###                                                                               
+        ###[#TotalAlarms] Active alarms ###(Including [#CriticalAlarms] Critical)###
         ###[#TotalAlarms] Active Alarms: ###[#CriticalAlarms] Cr ###[#MajorAlarms] Ma ###[#MinorAlarms] Mi ###[#WarningAlarms] Wa ###[#NormalAlarms]
-        Clearable ###[#NoticeAlarms] Notice ###[#ErrorAlarms] Error ###[#MaskedAlarms] Masked ###[#TimeoutAlarms] Timeout ###                           
+        Clearable ###[#NoticeAlarms] Notice ###[#ErrorAlarms] Error ###[#MaskedAlarms] Masked ###[#TimeoutAlarms] Timeout ###
         ```
 
         > [!NOTE]
@@ -64,15 +64,15 @@ In this section:
 #### Example of a Surveyor configuration in MaintenanceSettings.xml
 
 ```xml
-<MaintenanceSettings>                                                 
-  ...                                                                    
-  <Surveyor>                                                            
-    <ViewStatistics>[#TotalAlarms] Active Alarms</ViewStatistics>      
+<MaintenanceSettings>
+  ...
+  <Surveyor>
+    <ViewStatistics>[#TotalAlarms] Active Alarms</ViewStatistics>
     <ServiceStatistics>[#TotalAlarms] Active Alarms</ServiceStatistics>
     <ElementStatistics>[#TotalAlarms] Active Alarms</ElementStatistics>
-  </Surveyor>                                                           
-  ...                                                                    
-</MaintenanceSettings>                                                
+  </Surveyor>
+  ...
+</MaintenanceSettings>
 ```
 
 > [!TIP]
@@ -85,4 +85,4 @@ Using the same syntax as in *MaintenanceSettings.xml*, view statistics can also 
 
 > [!TIP]
 > See also:
-> [Making a shape display information about the item it is linked to](../visio/Making_a_shape_display_information_about_the_item_it_is_linked_to.md) 
+> [Making a shape display information about the item it is linked to](../visio/Making_a_shape_display_information_about_the_item_it_is_linked_to.md)

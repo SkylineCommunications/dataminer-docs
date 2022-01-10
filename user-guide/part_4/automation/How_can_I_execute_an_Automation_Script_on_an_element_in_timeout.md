@@ -4,6 +4,6 @@ Normally, when you run an Automation script on an element in timeout, the script
 
 However, there are two different ways to ensure a script will run successfully regardless of the state of the elements.
 
-- In DataMiner Cube, in the *General* section of the Automation script card, select *Do not fail when elements are not active or in timeout*. See [General script configuration](General_script_configuration.md).
+- In DataMiner Cube, in the *General* section of the Automation script card, select *Do not fail when elements are not active or in timeout*. See [General script configuration](General_script_configuration.md).
 
-- Alternatively, add a comment action with value *skipElementChecks=true* as the first action in the script. This way, the script will be executed even if included elements are in a timeout state. See [Comment](Comment.md).
+- Alternatively, add a comment action with value *skipElementChecks=true* as the first action in the script. This way, the script will be executed even if included elements are in a timeout state. See [Comment](Comment.md).

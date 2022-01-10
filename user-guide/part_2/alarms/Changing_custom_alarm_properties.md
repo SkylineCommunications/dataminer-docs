@@ -10,7 +10,7 @@ In this section:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/alarm-console-adding-extra-properties-on-alarms/> 
+> <https://community.dataminer.services/video/alarm-console-adding-extra-properties-on-alarms/>
 
 ### Adding a custom alarm property
 
@@ -60,9 +60,9 @@ If no such columns are displayed, it is still possible to change any available c
 
 1. Right-click an alarm in the Alarm Console and select *Properties*.
 
-    Alternatively, to view properties for several alarms at a time, select several alarms by holding the *Ctrl* key while you click them, then right-click one of the alarms and select *Properties*.
+    Alternatively, to view properties for several alarms at a time, select several alarms by holding the *Ctrl* key while you click them, then right-click one of the alarms and select *Properties*.
 
-2. In the *Properties* dialog box, select the *Custom* tab.
+2. In the *Properties* dialog box, select the *Custom* tab.
 
 3. Enter the property value you want and click *OK*.
 

@@ -46,9 +46,9 @@ None
 | Property | Description                                                                                                                                                                                |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Rows     | The number of rows in the grid.                                                                                                                                                            |
-| Height   | The height of the row.<br> The number of *Height* properties is equal to the number of rows specified in the *Rows* property.        |
+| Height   | The height of the row.<br> The number of *Height* properties is equal to the number of rows specified in the *Rows* property.        |
 | Columns  | The number of columns in the grid.                                                                                                                                                         |
-| Width    | The width of the column.<br> The number of *Width* properties is equal to the number of columns specified in the *Columns* property. |
+| Width    | The width of the column.<br> The number of *Width* properties is equal to the number of columns specified in the *Columns* property. |
 
 > [!TIP]
 > See also:
@@ -60,7 +60,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 
 > [!TIP]
 > See also:
-> -  [Extra grid properties](#extra-grid-properties) 
+> -  [Extra grid properties](#extra-grid-properties)
 > -  [Creating a dynamic tab page](Creating_a_dynamic_tab_page.md)
 
 #### TogglePanel
@@ -95,7 +95,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 | Output                             | The matrix output linked with this box.                                                                                                                                                                     |
 
 > [!NOTE]
-> To display extra information on IO buttons, based on other columns in the IO tables, use a placeholder {p:pid} in the button description, where “pid” is the parameter ID. For example: “This is input {p:1001}”. 
+> To display extra information on IO buttons, based on other columns in the IO tables, use a placeholder {p:pid} in the button description, where “pid” is the parameter ID. For example: “This is input {p:1001}”.
 
 > [!TIP]
 > See also:
@@ -107,12 +107,12 @@ Consists of TabPage components. These have one customizable property, the tab pa
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Label    | The text displayed on the button.                                                                                                                                                                                                                                                      |
 | Type     | The action that will be executed when the button is clicked: Connect, Disconnect, Lock/Unlock or Undo. It is also possible to select a “Custom” type, for which the actions are specified in the *Options* box.                                         |
-| Options  | For Custom type actions, add one action per line in this box, using the same syntax as when using an *Execute* shape data field in Visio. See [Overview of DataMiner shape data fields](../../part_2/visio/Overview_of_DataMiner_shape_data_fields.md). |
+| Options  | For Custom type actions, add one action per line in this box, using the same syntax as when using an *Execute* shape data field in Visio. See [Overview of DataMiner shape data fields](../../part_2/visio/Overview_of_DataMiner_shape_data_fields.md). |
 
 > [!NOTE]
 > -  In DataMiner versions prior to 8.5.4, if no options are defined for a custom action, it is necessary to add an ending pipe character (“\|”). In later versions, this is no longer required.
-> -  In DataMiner versions prior to 9.0.5, the action configured in the *Options* box must always be preceded by “execute=”. E.g. *execute=Script:TestScript*.
-> -  The Undo action, which is available from DataMiner 9.5.3 onwards, allows the user to undo the latest connect or disconnect action. As the option can only be applied to undo one action, after *Undo* is clicked, the button is disabled until another action has been done. Optionally, you can select the *Display confirmation* option for the Undo action type, so a confirmation window is displayed whenever the button is used.
+> -  In DataMiner versions prior to 9.0.5, the action configured in the *Options* box must always be preceded by “execute=”. E.g. *execute=Script:TestScript*.
+> -  The Undo action, which is available from DataMiner 9.5.3 onwards, allows the user to undo the latest connect or disconnect action. As the option can only be applied to undo one action, after *Undo* is clicked, the button is disabled until another action has been done. Optionally, you can select the *Display confirmation* option for the Undo action type, so a confirmation window is displayed whenever the button is used.
 
 > [!TIP]
 > See also:
@@ -151,7 +151,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 
 ### Optional property groups
 
-To each of the components mentioned above, additional property groups can be added by means of the *Add* button in the lower left corner of the properties pane. These property groups can also be removed again, by clicking the *x* in the top-right corner of the optional block of properties.
+To each of the components mentioned above, additional property groups can be added by means of the *Add* button in the lower left corner of the properties pane. These property groups can also be removed again, by clicking the *x* in the top-right corner of the optional block of properties.
 
 The following optional property groups are available:
 
@@ -166,7 +166,7 @@ The following optional property groups are available:
     | Foreground | The text color.                            |
 
     > [!NOTE]
-    > The *Font* property group is by default available for the *Label* component.
+    > The *Font* property group is by default available for the *Label* component.
 
 - Layout options
 
@@ -179,7 +179,7 @@ The following optional property groups are available:
     | MinWidth            | The minimum width of the component.                                                                                                                                                                        |
     | MaxWidth            | The maximum width of the component.                                                                                                                                                                        |
     | Margin              | The four margins of the component, separated by commas, in the following order: left, top, right, bottom.                                                                                                  |
-    | HorizontalAlignment | The horizontal alignment, which can be *Left*, *Center*, *Right* or *Stretch*. |
-    | VerticalAlignment   | The vertical alignment, which can be *Left*, *Center*, *Right* or *Stretch*.   |
+    | HorizontalAlignment | The horizontal alignment, which can be *Left*, *Center*, *Right* or *Stretch*. |
+    | VerticalAlignment   | The vertical alignment, which can be *Left*, *Center*, *Right* or *Stretch*.   |
 
 - Custom options

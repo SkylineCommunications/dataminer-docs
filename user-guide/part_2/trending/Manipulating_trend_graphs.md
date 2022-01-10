@@ -1,6 +1,6 @@
 # Manipulating trend graphs
 
-Whether you access a trend graph from a card or do so from the *Trending* module, the user interface consists of:
+Whether you access a trend graph from a card or do so from the *Trending* module, the user interface consists of:
 
 - A main graph area with a preview graph underneath. This preview graph represents the entire trend period (week, month, etc.). The main graph is an enlargement of the white part of the preview graph.
 

@@ -29,38 +29,38 @@ This method can be used to check whether a *CheckBox* item has been selected.
 - For a checkbox within a checkbox list, specify the variable name and value.
 
 ```txt
-bool GetChecked(string varname)                                               
+bool GetChecked(string varname)
 bool GetChecked(string varname, string value)
 ```
 
 Examples:
 
 ```txt
-UIResults uir = null;                                     
-bool isChecked;                                           
+UIResults uir = null;
+bool isChecked;
 UIBlockDefinition blockCheckBox = new UIBlockDefinition();
-blockCheckBox.Type = UIBlockType.CheckBox;                
-blockCheckBox.DestVar = "checkbox";                       
-...                                                       
-uib.AppendBlock(blockCheckBox);                           
-...                                                       
-uir = engine.ShowUI(uib);                                 
-isChecked = uir.GetChecked("checkbox");                   
+blockCheckBox.Type = UIBlockType.CheckBox;
+blockCheckBox.DestVar = "checkbox";
+...
+uib.AppendBlock(blockCheckBox);
+...
+uir = engine.ShowUI(uib);
+isChecked = uir.GetChecked("checkbox");
 ```
 
 ```txt
-UIBuilder uiBuilder = new UIBuilder();                
-...                                                   
+UIBuilder uiBuilder = new UIBuilder();
+...
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.CheckBoxList;            
-blockItem.AddCheckBoxListOption("1","First option");  
-blockItem.AddCheckBoxListOption("2","Second option"); 
-blockItem.DestVar = "chekBoxList";                    
-uiBuilder.AppendBlock(blockItem);                     
-...                                                   
-var uir = engine.ShowUI(uiBuilder);                   
-                                                      
-bool selection = uir.GetChecked("chekBoxList", "2");  
+blockItem.Type = UIBlockType.CheckBoxList;
+blockItem.AddCheckBoxListOption("1","First option");
+blockItem.AddCheckBoxListOption("2","Second option");
+blockItem.DestVar = "chekBoxList";
+uiBuilder.AppendBlock(blockItem);
+...
+var uir = engine.ShowUI(uiBuilder);
+
+bool selection = uir.GetChecked("chekBoxList", "2");
 ```
 
 #### GetDateTime
@@ -79,19 +79,19 @@ DateTime GetDateTime(string varname)
 Example:
 
 ```txt
-UIResults uir = null;                                                  
-DateTime selection = DateTime.Now;                                     
-...                                                                    
-UIBlockDefinition blockCalendar = new UIBlockDefinition();             
-blockCalendar.Type = UIBlockType.Calendar;                             
+UIResults uir = null;
+DateTime selection = DateTime.Now;
+...
+UIBlockDefinition blockCalendar = new UIBlockDefinition();
+blockCalendar.Type = UIBlockType.Calendar;
 blockCalendar.InitialValue = selection.ToString("dd/MM/yyyy HH:mm:ss");
-blockCalendar.DestVar = "calendar";                                    
-blockCalendar.WantsOnChange = true;                                    
-...                                                                    
-uib.AppendBlock(blockCalendar);                                        
-...                                                                    
-uir = engine.ShowUI(uib);                                              
-selection = uir.GetDateTime("calendar");                               
+blockCalendar.DestVar = "calendar";
+blockCalendar.WantsOnChange = true;
+...
+uib.AppendBlock(blockCalendar);
+...
+uir = engine.ShowUI(uib);
+selection = uir.GetDateTime("calendar");
 ```
 
 #### GetExpanded
@@ -110,12 +110,12 @@ Example:
 
 ```txt
 if (_treeResults?.GetExpanded("treevar").Contains(treeViewItem.KeyValue) == true)
-{                                                                                 
-   treeViewItem.ChildItems = new List<TreeViewItem>                              
-   {                                                                              
-      // add child items                                                          
-   };                                                                             
-}                                                                                 
+{
+ treeViewItem.ChildItems = new List<TreeViewItem>
+ {
+ // add child items
+ };
+}
 ```
 
 #### GetString
@@ -131,23 +131,23 @@ string GetString(string varname)
 Example:
 
 ```txt
-UIResults uir = null;                                 
-...                                                   
+UIResults uir = null;
+...
 UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;                 
-blockItem.DestVar = "myText";                         
-...                                                   
-uibDialogBox1.AppendBlock(blockItem);                 
-...                                                   
-uir = engine.ShowUI(uibDialogBox1);                   
-enteredText = uir.GetString("myText");                
+blockItem.Type = UIBlockType.TextBox;
+blockItem.DestVar = "myText";
+...
+uibDialogBox1.AppendBlock(blockItem);
+...
+uir = engine.ShowUI(uibDialogBox1);
+enteredText = uir.GetString("myText");
 ```
 
 #### GetUploadedFilePath
 
 Retrieves the selected upload file path. Available from DataMiner 10.0.0/10.0.2 onwards.
 
-When a file has been selected, the actual upload will only start after a button is clicked to make the script continues (e.g. Close, Next, etc.). Once the upload has started, a *Cancel* option will appear, so the upload operation can be aborted.
+When a file has been selected, the actual upload will only start after a button is clicked to make the script continues (e.g. Close, Next, etc.). Once the upload has started, a *Cancel* option will appear, so the upload operation can be aborted.
 
 ```txt
 string GetUploadedFilePath(string key)
@@ -156,16 +156,16 @@ string GetUploadedFilePath(string key)
 Example:
 
 ```txt
-UIBlockDefinition uiBlock = new UIBlockDefinition();                         
-uiBlock.Type = UIBlockType.FileSelector;                                     
-uiBlock.DestVar = "varUserUploadedFile";                                     
-...                                                                          
-UIResults results = engine.ShowUI(uiBuilder);                                
+UIBlockDefinition uiBlock = new UIBlockDefinition();
+uiBlock.Type = UIBlockType.FileSelector;
+uiBlock.DestVar = "varUserUploadedFile";
+...
+UIResults results = engine.ShowUI(uiBuilder);
 string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 ```
 
 > [!NOTE]
-> All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
+> All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
 
 > [!TIP]
 > See also:
@@ -182,19 +182,19 @@ bool WasBack()
 ```
 
 > [!NOTE]
-> To enable the *Back* and *Forward* buttons, in the *General* section of the script in the Automation module, expand *Show Details* and select *Supports back/forward buttons in interactive mode*.
+> To enable the *Back* and *Forward* buttons, in the *General* section of the script in the Automation module, expand *Show Details* and select *Supports back/forward buttons in interactive mode*.
 
 Example:
 
 ```txt
-UIBuilder uib = new UIBuilder();   
-...                                
+UIBuilder uib = new UIBuilder();
+...
 UIResults uir = engine.ShowUI(uib);
-                                   
-if (uir.WasBack())                 
-{                                  
-    ...                            
-}                                  
+
+if (uir.WasBack())
+{
+ ...
+}
 ```
 
 #### WasButtonPressed
@@ -208,26 +208,26 @@ bool WasButtonPressed(string varname)
 Example:
 
 ```txt
-UIResults uir = null;                                   
-do                                                      
-{                                                       
-    UIBuilder uib = new UIBuilder();                        
-    uib.RequireResponse = true;                             
-    uib.Width = 800;                                        
-    uib.Height = 600;                                       
-    uib.RowDefs = "100;100;100";                            
-    uib.ColumnDefs="100;100;100";                           
-                                                            
+UIResults uir = null;
+do
+{
+    UIBuilder uib = new UIBuilder();
+    uib.RequireResponse = true;
+    uib.Width = 800;
+    uib.Height = 600;
+    uib.RowDefs = "100;100;100";
+    uib.ColumnDefs="100;100;100";
+
     UIBlockDefinition blockButton = new UIBlockDefinition();
-    blockButton.Type = UIBlockType.Button;                  
-    blockButton.Text = "Go";                                
-    blockButton.DestVar = "buttonGo";                       
-    blockButton.Row = 0;                                    
-    blockButton.Column = 0;                                 
-    uib.AppendBlock(blockButton);                           
-                                                            
-    uir = engine.ShowUI(uib);                               
-} while (!uir.WasButtonPressed("buttonGo"));            
+    blockButton.Type = UIBlockType.Button;
+    blockButton.Text = "Go";
+    blockButton.DestVar = "buttonGo";
+    blockButton.Row = 0;
+    blockButton.Column = 0;
+    uib.AppendBlock(blockButton);
+
+    uir = engine.ShowUI(uib);
+} while (!uir.WasButtonPressed("buttonGo"));
 ```
 
 #### WasForward
@@ -241,19 +241,19 @@ bool WasForward()
 ```
 
 > [!NOTE]
-> To enable the *Back* and *Forward* buttons, in the *General* section of the script in the Automation module, expand *Show Details* and select *Supports back/forward buttons in interactive mode*.
+> To enable the *Back* and *Forward* buttons, in the *General* section of the script in the Automation module, expand *Show Details* and select *Supports back/forward buttons in interactive mode*.
 
 Example:
 
 ```txt
-UIBuilder uib = new UIBuilder();   
-...                                
+UIBuilder uib = new UIBuilder();
+...
 UIResults uir = engine.ShowUI(uib);
-                                   
-if (uir.WasForward())              
-{                                  
-    ...                            
-}                                  
+
+if (uir.WasForward())
+{
+ ...
+}
 ```
 
 #### WasOnChange
@@ -280,32 +280,32 @@ bool WasOnChange(string varname)
 Example:
 
 ```txt
-UIResults uir = null;                                     
-do                                                        
-{                                                         
-    UIBuilder uib = new UIBuilder();                          
-    uib.RequireResponse = true;                               
-    uib.Width = 800;                                          
-    uib.Height = 600;                                         
-    uib.RowDefs = "100;100;100";                              
-    uib.ColumnDefs="100;100;100";                             
-                                                              
+UIResults uir = null;
+do
+{
+    UIBuilder uib = new UIBuilder();
+    uib.RequireResponse = true;
+    uib.Width = 800;
+    uib.Height = 600;
+    uib.RowDefs = "100;100;100";
+    uib.ColumnDefs="100;100;100";
+
     UIBlockDefinition blockCheckBox = new UIBlockDefinition();
-    blockCheckBox.Type = UIBlockType.CheckBox;                
-    blockCheckBox.WantsOnChange = true;                       
-    blockCheckBox.DestVar = "myCheckBox";                     
-    blockCheckBox.Row = 0;                                    
-    blockCheckBox.Column = 0;                                 
-    uib.AppendBlock(blockCheckBox);                           
-                                                              
-    UIBlockDefinition blockButton = new UIBlockDefinition();  
-    blockButton.Type = UIBlockType.Button;                    
-    blockButton.Text = "Next";                                
-    blockButton.DestVar = "buttonNext";                       
-    blockButton.Row = 1;                                      
-    blockButton.Column = 0;                                   
-    uib.AppendBlock(blockButton);                             
-                                                              
-    uir = engine.ShowUI(uib);                                 
-} while (!uir.WasOnChange("myCheckBox"));                 
+    blockCheckBox.Type = UIBlockType.CheckBox;
+    blockCheckBox.WantsOnChange = true;
+    blockCheckBox.DestVar = "myCheckBox";
+    blockCheckBox.Row = 0;
+    blockCheckBox.Column = 0;
+    uib.AppendBlock(blockCheckBox);
+
+    UIBlockDefinition blockButton = new UIBlockDefinition();
+    blockButton.Type = UIBlockType.Button;
+    blockButton.Text = "Next";
+    blockButton.DestVar = "buttonNext";
+    blockButton.Row = 1;
+    blockButton.Column = 0;
+    uib.AppendBlock(blockButton);
+
+    uir = engine.ShowUI(uib);
+} while (!uir.WasOnChange("myCheckBox"));
 ```

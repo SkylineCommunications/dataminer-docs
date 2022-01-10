@@ -31,7 +31,7 @@ Instead of a pixel value, you can also specify the following values:
 
 | Value                                                               | Description                                                                                         |
 |---------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| *auto* or *a* | The width of the column will be automatically adapted to the widest dialog box item in that column. |
+| *auto* or *a* | The width of the column will be automatically adapted to the widest dialog box item in that column. |
 | \*                                                                  | The column will have the largest possible width, depending on the width of the other columns.       |
 
 ```txt
@@ -39,16 +39,16 @@ string ColumnDefs
 ```
 
 > [!NOTE]
-> If automatic ColumnDefs are specified, e.g. "*a;a;a;a*", and you want to show a UIBlockDefinition with a columnspan, then the space for each column will be equal, so other blocks will also move. To avoid this, you can change the ColumnDefs to "*a;a;a;a;\**". The extra '\*' column will use all extra available space. Then change the columnspan so the block uses that new '\*' column. 
+> If automatic ColumnDefs are specified, e.g. "*a;a;a;a*", and you want to show a UIBlockDefinition with a columnspan, then the space for each column will be equal, so other blocks will also move. To avoid this, you can change the ColumnDefs to "*a;a;a;a;\**". The extra '\*' column will use all extra available space. Then change the columnspan so the block uses that new '\*' column.
 
 Example:
 
 ```txt
-UIBuilder uib = new UIBuilder();                              
+UIBuilder uib = new UIBuilder();
 uib.ColumnDefs = "a;a;a;a;*" //4 columns + extra space column
-UIBlockDefinition uibd = new UIBlockDefinition();             
-uibd.Column = 0; //on column pos 0 (0-based)                  
-uibd.ColumnSpan = 5 // if column pos=1, columnspan = 4        
+UIBlockDefinition uibd = new UIBlockDefinition();
+uibd.Column = 0; //on column pos 0 (0-based)
+uibd.ColumnSpan = 5 // if column pos=1, columnspan = 4
 ```
 
 #### Height
@@ -139,7 +139,7 @@ string Title
 Example:
 
 ```txt
-var uib = new UIBuilder()                  
+var uib = new UIBuilder()
 uib.Title = "Interactive Automation script"
 ```
 

@@ -1,6 +1,6 @@
 ## Disconnecting a user in DataMiner Cube
 
-In DataMiner Cube, users who have been granted the permission *Disconnect other users* can disconnect other users from a DataMiner Agent.
+In DataMiner Cube, users who have been granted the permission *Disconnect other users* can disconnect other users from a DataMiner Agent.
 
 To do so using a DataMiner version from DataMiner 10.0.0/10.0.2 onwards:
 
@@ -22,4 +22,4 @@ To do so using a DataMiner version prior to DataMiner 10.0.0:
 
 3. In the shortcut menu listing all current client sessions of the selected user, choose to disconnect either one specific session or all sessions of the user in question.
 
-4. In the *Motivation* box, enter the reason why you want to disconnect the selected user session(s), and click OK.
+4. In the *Motivation* box, enter the reason why you want to disconnect the selected user session(s), and click OK.

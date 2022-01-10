@@ -13,7 +13,7 @@ The log information is displayed in a list with the following columns:
 
 Below the list, a details pane shows detailed information on any selected log item.
 
-You can view additional information on the selected item by clicking the *Open* button in the details pane or by double-clicking the item in the list. This will open the detailed information in a pop-up window, which also contains a button that allows you to copy the information.
+You can view additional information on the selected item by clicking the *Open* button in the details pane or by double-clicking the item in the list. This will open the detailed information in a pop-up window, which also contains a button that allows you to copy the information.
 
 The following buttons at the bottom of this page allow further actions:
 
@@ -27,6 +27,6 @@ The following buttons at the bottom of this page allow further actions:
 > [!NOTE]
 > -  Use the filter box in the top-right corner to filter the displayed information. See [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md).
 > -  By default, debug logging is not displayed. To display these log items, select the option *Show debug logging* at the top of the tab.
-> -  From DataMiner 10.1.11/10.2.0 onwards, you can select the option *Show SPI logging* at the top of the tab to see information related to system performance indicators.
-> -  When an exception is recorded in the Cube logging, this is indicated by an icon in the Cube header. Clicking the icon will open this logging section. For warnings and errors, by default no icon is displayed in the header. However, you can have such icons displayed by adding the following argument to the Cube URL:<br>*?enablefeature=loggingnotifications* 
+> -  From DataMiner 10.1.11/10.2.0 onwards, you can select the option *Show SPI logging* at the top of the tab to see information related to system performance indicators.
+> -  When an exception is recorded in the Cube logging, this is indicated by an icon in the Cube header. Clicking the icon will open this logging section. For warnings and errors, by default no icon is displayed in the header. However, you can have such icons displayed by adding the following argument to the Cube URL:<br>*?enablefeature=loggingnotifications*
 >

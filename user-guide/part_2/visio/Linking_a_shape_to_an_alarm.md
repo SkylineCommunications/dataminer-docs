@@ -3,9 +3,9 @@
 Using a shape data field of type **Alarm**, you can link a shape to an active alarm.
 
 > [!NOTE]
-> -  Shape data fields of type **Alarm** are mostly used in combination with shape data fields of type **Info**. See [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
-> -  If you want to link to the alarm state of a parameter, use a shape data field of type **Parameter** instead of **Alarm**. See [Linking a shape to an element parameter](Linking_a_shape_to_an_element_parameter.md).
-> -  If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: “*The value of the alarm is **\[value\]**.*” See [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
+> -  Shape data fields of type **Alarm** are mostly used in combination with shape data fields of type **Info**. See [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
+> -  If you want to link to the alarm state of a parameter, use a shape data field of type **Parameter** instead of **Alarm**. See [Linking a shape to an element parameter](Linking_a_shape_to_an_element_parameter.md).
+> -  If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: “*The value of the alarm is **\[value\]**.*” See [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
 
 ### Configuring the shape data field
 
@@ -17,7 +17,7 @@ Add a shape data field of type **Alarm** to the shape.
     ElementReference/ParameterID|Options
     ```
 
-    See [ElementReference](#elementreference) and [Options](#options)
+    See [ElementReference](#elementreference) and [Options](#options)
 
 - To link the shape to an alarm on a table parameter, set the value of the shape data field to:
 
@@ -25,7 +25,7 @@ Add a shape data field of type **Alarm** to the shape.
     ElementReference/ParameterID:TableRowKey|Options
     ```
 
-    See [ElementReference](#elementreference) and [Options](#options)
+    See [ElementReference](#elementreference) and [Options](#options)
 
     > [!NOTE]
     > -  Table rows can be referenced either by primary key or by display key.
@@ -68,7 +68,7 @@ In the field value, you can use the following options.
 - **HIDE;condition**: The shape will be hidden if the condition is TRUE.
 
 > [!NOTE]
-> -  If you specify a SHOW or HIDE condition, the shape has to have a shape data field of type **Info** of which the value is set to the alarm property to be tested.<br>Example: If you specify “*SHOW;!=critical high*” in the **Alarm** field, then you have to specify “*SEVERITY*” in the **Info** field.
+> -  If you specify a SHOW or HIDE condition, the shape has to have a shape data field of type **Info** of which the value is set to the alarm property to be tested.<br>Example: If you specify “*SHOW;!=critical high*” in the **Alarm** field, then you have to specify “*SEVERITY*” in the **Info** field.
 > -  SHOW and HIDE conditions cannot be combined in one single **Alarm** field.
 > -  In conditions, both single equal signs (“=”) and double equal signs (“==”) are supported.
 
@@ -94,4 +94,4 @@ The shape will be linked to the alarm on parameter 350 of element 111/273, and i
 111/273/350|SHOW;=critical high
 ```
 
-The shape will be linked to the alarm on parameter 350 of element 111/273 (i.e. DMA ID 111, Element ID 273), and it will only be shown if the alarm property specified in a separate shape data field of type **Info** (in this example, this would be “SEVERITY”) has a value that is equal to “critical high”.
+The shape will be linked to the alarm on parameter 350 of element 111/273 (i.e. DMA ID 111, Element ID 273), and it will only be shown if the alarm property specified in a separate shape data field of type **Info** (in this example, this would be “SEVERITY”) has a value that is equal to “critical high”.

@@ -1,6 +1,6 @@
 ## Checking the SLA compliance
 
-To view more information on SLA compliance, check the section *Compliance Info* on the *Main View* page of the SLA element. There you will find the following information:
+To view more information on SLA compliance, check the section *Compliance Info* on the *Main View* page of the SLA element. There you will find the following information:
 
 - **Compliance**:
 
@@ -25,7 +25,7 @@ To view more information on SLA compliance, check the section *Compliance Info*�
     - *Jeopardy*: If the service keeps on failing at the current ratio, the SLA will be breached by the end of the window.
 
     > [!NOTE]
-    > From version 3.0.0 of the *Skyline SLA Definition Basic* protocol onwards, the *Predicted Compliance* has been moved to the *Predictions* page of the SLA. However, note that predictions will only work if, on the *Advanced Configuration* page of the SLA, *Outages* and *Predictions* have been set to *Enabled*. These settings can only be modified by users with at least security level 3.
+    > From version 3.0.0 of the *Skyline SLA Definition Basic* protocol onwards, the *Predicted Compliance* has been moved to the *Predictions* page of the SLA. However, note that predictions will only work if, on the *Advanced Configuration* page of the SLA, *Outages* and *Predictions* have been set to *Enabled*. These settings can only be modified by users with at least security level 3.
 
 - **Detailed violation information**:
 

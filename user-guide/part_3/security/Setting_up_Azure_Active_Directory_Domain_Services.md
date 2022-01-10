@@ -4,32 +4,32 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
 
 #### Deploying the Azure AD DS
 
-1. Navigate to *portal.azure.com* and log in.
+1. Navigate to *portal.azure.com* and log in.
 
 2. Create a virtual network:
 
     1. Click *Create a resource*.
 
-    2. Enter “VNet” into the search bar, and select *Virtual Network* from the search suggestions.
+    2. Enter “VNet” into the search bar, and select *Virtual Network* from the search suggestions.
 
-    3. Click *Create* and complete the wizard.
+    3. Click *Create* and complete the wizard.
 
 3. Create Azure AD domain services:
 
-    1. Click *Create a resource.* 
+    1. Click *Create a resource.*
 
-    2. Enter “Azure AD DS” into the search bar and select *Azure AD Domain Services* from the search suggestions.
+    2. Enter “Azure AD DS” into the search bar and select *Azure AD Domain Services* from the search suggestions.
 
-    3. Click *Create.* 
+    3. Click *Create.*
 
-    4. In the *Networking* step of wizard, add the virtual network you created earlier and create a subnet.
+    4. In the *Networking* step of wizard, add the virtual network you created earlier and create a subnet.
 
     5. Complete the wizard.
 
 4. Wait until the status of the Azure AD domain services is “Running”. This may take about an hour.
 
 > [!NOTE]
-> In a production environment, it is recommended to create the virtual network and the Azure AD domain services in different resource groups. 
+> In a production environment, it is recommended to create the virtual network and the Azure AD domain services in different resource groups.
 
 #### Configuring the DNS servers
 
@@ -37,7 +37,7 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
 
     1. Go to the Azure AD domain services.
 
-    2. On the *Overview* page, click *Configure* in the configure/update DNS card to automatically configure the DNS server.
+    2. On the *Overview* page, click *Configure* in the configure/update DNS card to automatically configure the DNS server.
 
     3. Go to the virtual network.
 
@@ -47,26 +47,26 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
 
     - If you are using an Azure VM:
 
-        1. Navigate to *portal.azure.com.* 
+        1. Navigate to *portal.azure.com.*
 
         2. Click *Create a Resource*, click *Compute*, and click *Create*.
 
-        3. In the *Networking* step of the wizard, deploy the Windows Server virtual machine you are creating in your virtual network.
+        3. In the *Networking* step of the wizard, deploy the Windows Server virtual machine you are creating in your virtual network.
 
             > [!NOTE]
-            > If you want to connect to this virtual machine via RDP, you need to create a rule that allows connecting to the port of the machine. To create such a rule, in the navigation pane, go to *Settings* > *Networking.* 
+            > If you want to connect to this virtual machine via RDP, you need to create a rule that allows connecting to the port of the machine. To create such a rule, in the navigation pane, go to *Settings* > *Networking.*
 
         4. Complete the wizard to create a Windows Server virtual machine.
 
         5. Connect to the virtual machine with the Administrator account of the machine.
 
-    - If you are not using an Azure machine: If you want to add a non-Azure VM or computer to the domain, you need to create a VPN gateway that the VM or computer can then use to connect to the virtual network. For more information, see [Connect an on-premises network to a Microsoft Azure virtual network](https://docs.microsoft.com/en-us/microsoft-365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network?view=o365-worldwide) (external link).
+    - If you are not using an Azure machine: If you want to add a non-Azure VM or computer to the domain, you need to create a VPN gateway that the VM or computer can then use to connect to the virtual network. For more information, see [Connect an on-premises network to a Microsoft Azure virtual network](https://docs.microsoft.com/en-us/microsoft-365/enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network?view=o365-worldwide) (external link).
 
 3. Regardless of whether you use an Azure VM, make the server join the domain as follows:
 
-    1. On the Windows server, open a command prompt, and enter *ipconfig /all* to check whether the IP addresses of the DNS servers are correct.
+    1. On the Windows server, open a command prompt, and enter *ipconfig /all* to check whether the IP addresses of the DNS servers are correct.
 
-    2. In the server manager, go to *Local Server* and click *Workgroup* to add the Windows server to the domain.
+    2. In the server manager, go to *Local Server* and click *Workgroup* to add the Windows server to the domain.
 
     3. Click *Change*.
 
@@ -75,20 +75,20 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
     5. Log in with a user account that has permission to add Windows servers to the domain (Azure AD).
 
         > [!NOTE]
-        > If the login fails, DO NOT try again. If you do, the server will be locked. Instead, on the Azure Portal, go to the user account in question, make sure the user has an email address under *Contact Info*, and reset the password of the user account. After resetting the password, go back to the Windows server and try to log in again. 
+        > If the login fails, DO NOT try again. If you do, the server will be locked. Instead, on the Azure Portal, go to the user account in question, make sure the user has an email address under *Contact Info*, and reset the password of the user account. After resetting the password, go back to the Windows server and try to log in again.
 
     6. When the Windows server has been added to the domain, restart the server.
 
 4. Install the Active Directory tools and features:
 
-    7. In the Windows server, in the navigation bar, open the *Manage* menu, and click *Add Roles and Features*.
+    7. In the Windows server, in the navigation bar, open the *Manage* menu, and click *Add Roles and Features*.
 
-    8. Follow the wizard, and in the *Features* step, select all tools under *Remote Server Administration Tools* > *Role Administration Tools* > *AD DS and AD LDS Tools*, and click *Install*.
+    8. Follow the wizard, and in the *Features* step, select all tools under *Remote Server Administration Tools* > *Role Administration Tools* > *AD DS and AD LDS Tools*, and click *Install*.
 
 > [!NOTE]
-> -  To manage the domain users on the Windows server, make sure you are logged in with an administrator of the domain (Azure AD), click *Start* and open *Active Directory Users and Computers*.
-> -  In case logging in to the Windows server using RDP with the credentials of an Azure AD account fails, this can have the following reasons: 
->     - The user does not have permission to access the server remotely. To fix this, in the control panel, go to Remote settings, click *Select Users*, and add the user to the list of users who are allowed to access the server remotely. 
->     - The Azure AD user does not have an email address. To fix this, on the Azure portal, go to *Users*, and make sure all users have an email address under *Contact Info*. Users also need an email address to be able to log on to DataMiner. 
+> -  To manage the domain users on the Windows server, make sure you are logged in with an administrator of the domain (Azure AD), click *Start* and open *Active Directory Users and Computers*.
+> -  In case logging in to the Windows server using RDP with the credentials of an Azure AD account fails, this can have the following reasons:
+>     - The user does not have permission to access the server remotely. To fix this, in the control panel, go to Remote settings, click *Select Users*, and add the user to the list of users who are allowed to access the server remotely.
+>     - The Azure AD user does not have an email address. To fix this, on the Azure portal, go to *Users*, and make sure all users have an email address under *Contact Info*. Users also need an email address to be able to log on to DataMiner.
 >     - The user’s password has not been reset yet. On the Azure portal, go to the user account in question and reset its password.
 >

@@ -8,7 +8,7 @@ A shape or a page can be set to be visible only to users with a particular secur
 
 ### Configuring the shape data field
 
-Add a shape data field of type **Level** to the shape or page, and set its value to the minimum access level the user should have to be able to see the shape or the page.
+Add a shape data field of type **Level** to the shape or page, and set its value to the minimum access level the user should have to be able to see the shape or the page.
 
 The shape or the page will only be visible if the access level specified in the shape data field is higher than or equal to the user’s level of access to the object (view, element, service or redundancy group) to which the shape, the page or the Visio drawing is linked.
 

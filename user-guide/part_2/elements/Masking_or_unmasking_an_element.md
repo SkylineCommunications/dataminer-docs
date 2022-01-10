@@ -8,7 +8,7 @@ It is possible to mask an element, so that any alarms on that element will not s
 
 > [!TIP]
 > See also:
-> [Masking and unmasking alarms](../alarms/Masking_and_unmasking_alarms.md) 
+> [Masking and unmasking alarms](../alarms/Masking_and_unmasking_alarms.md)
 
 ### Masking an element
 

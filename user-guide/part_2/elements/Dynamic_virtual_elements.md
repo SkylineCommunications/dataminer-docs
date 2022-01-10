@@ -54,7 +54,7 @@ As a consequence:
 However, it is possible to assign a separate trend template or alarm template to child DVEs, or to edit properties separately.
 
 > [!NOTE]
-> From DataMiner 9.5.6 onwards, limited editing possibilities are available for DVE child elements, allowing you to modify the description of the element, the alarm and trend template, the parent view(s) and the properties, and allowing you to set the DVE child element to *Hidden*. 
+> From DataMiner 9.5.6 onwards, limited editing possibilities are available for DVE child elements, allowing you to modify the description of the element, the alarm and trend template, the parent view(s) and the properties, and allowing you to set the DVE child element to *Hidden*.
 
 ### Enabling or disabling the creation of DVE child elements
 
@@ -62,22 +62,22 @@ By default, when a parent element is created, creation of child elements is enab
 
 In DataMiner Cube, this can be done when the DVE is created or edited:
 
-- In the *Advanced element settings,* select or clear *Enable DVE child creation*.
+- In the *Advanced element settings,* select or clear *Enable DVE child creation*.
 
-Alternatively, this can be done manually in the *Element.xml* file. To do so:
+Alternatively, this can be done manually in the *Element.xml* file. To do so:
 
 1. Stop DataMiner.
 
-2. In *C:\\Skyline DataMiner\\Elements\\,* go to the subfolder of the parent element and open *Element.xml*.
+2. In *C:\\Skyline DataMiner\\Elements\\,* go to the subfolder of the parent element and open *Element.xml*.
 
 3. Add the *dvecreate* attribute to the Name tag and set its value to FALSE.
 
     Example:
 
     ```xml
-    <Element>                                       
+    <Element>
       <Name dvecreate="FALSE">DVE Main Element</Name>
-    </Element>                                      
+    </Element>
     ```
 
 4. Save your changes and restart DataMiner.

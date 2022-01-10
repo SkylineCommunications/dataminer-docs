@@ -5,7 +5,7 @@ When you right-click anywhere in the trend graph window, a shortcut menu appears
 - **Last hour/Last 24 hours/Week to date/Month to date/Previous month/Year to date**: Allows you to zoom in on a particular time frame.
 
     > [!NOTE]
-    > The *Previous month* option zooms to the last completed month, while the *Month to date* options displays the last 30 days up to the current date.
+    > The *Previous month* option zooms to the last completed month, while the *Month to date* options displays the last 30 days up to the current date.
 
 - **Curves**: Allows you to remove a curve from a graph or to place a curve on an additional Y-axis (if units are identical).
 
@@ -13,7 +13,7 @@ When you right-click anywhere in the trend graph window, a shortcut menu appears
 
     When you enable this option, the minimum and maximum values will be indicated with a colored area behind the curve. By default, the option is not enabled for trend graphs with multiple parameters.
 
-- **Y-axis settings**: Use this command to customize the range of the Y-axis. In the *Y-axis settings* window, you can choose one of two options:
+- **Y-axis settings**: Use this command to customize the range of the Y-axis. In the *Y-axis settings* window, you can choose one of two options:
 
     - Auto, in which case the scale is automatically determined.
 
