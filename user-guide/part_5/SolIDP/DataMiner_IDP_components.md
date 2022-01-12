@@ -1,6 +1,6 @@
 ## DataMiner IDP components
 
-By default, DataMiner IDP consists of the following elements (from version 1.1.5 onwards):
+By default, DataMiner IDP consists of the following elements:
 
 | Element                           | Protocol                                                    | Description                                                                                                                           |
 |-----------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|

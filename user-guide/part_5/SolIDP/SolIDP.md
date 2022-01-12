@@ -12,9 +12,7 @@ DataMiner Infrastructure Discovery Provisioning (IDP) consists of several intera
 
 - The **Rack & Facility Manager** automatically creates the hierarchy of DataMiner rack views without any operator intervention. Using the element properties, the system understands how to represent an element in DataMiner Visual Overview, where to map the element in the DataMiner Surveyor hierarchy, and how to position it in the physical rack layouts in DataMiner.
 
-![](../../images/IDP_overview.jpg)
-
-
+![IDP component overview](../../images/IDP_overview.jpg)
 
 This section contains the following information on DataMiner IDP:
 

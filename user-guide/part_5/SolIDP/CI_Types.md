@@ -15,7 +15,7 @@ The *CI Types* subtab of the *Admin* tab consists of several pages with overview
 - **Generate**: Only available on the *Overview* page. Starts a wizard that allows you to generate CI Types for the production protocols in the system. You can select to generate CI Types for all protocols, for all protocols that do not have a CI Type yet, or for a custom selection of protocols.
 
     > [!NOTE]
-    > - The wizard also allows you to select “None”, so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
+    > - The wizard also allows you to select "None", so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
     > - By default, CI Types generated based on a protocol with an SNMPv3 connection have SNMPv2 port settings configured on that connection, as there is no way to automatically find out the security levels, algorithms and passwords.
 
 On each of the pages, different settings are available:
@@ -94,9 +94,11 @@ On each of the pages, different settings are available:
 
     - **Configuration Update**: Determines whether the Configuration Update activity is enabled or not.
 
-    - **Update script**: Allows you to select the script that will be used to do a configuration update for this CI Type. You can select any of the scripts from the folder configured with the *Default Script* *Folder* setting on the *Admin* > *Settings* page.
+    - **Update Script**: Allows you to select the script that will be used to do a configuration update for this CI Type. You can select any of the scripts from the folder configured with the *Configuration Management* > *Update Script Folder* setting on the *Admin* > *Settings* page.
 
-    - **Default Update File**: The configuration file that can be used by the update script. Depending on the script configuration, this field may not be required.
+    - **Default Script**: Available from IDP 1.1.18 onwards. Allows you to select the script that will be used to restore the default configuration for this CI Type. You can select any of the scripts from the folder configured with the *Configuration Management* > *Default Script Folder* setting on the *Admin* > *Settings* page.
+
+    - **Default Location**: (Called "Default Update File" prior to IDP 1.1.18.) The configuration file that can be used by the update script. Depending on the script configuration, this field may not be required.
 
     - **Advanced**: Contains a button that launches a wizard where you can specify all the Configuration Management settings for the CI Type. See [Configuration management configuration](#configuration-management-configuration).
 
@@ -154,9 +156,9 @@ The discovery configuration window of the CI Type Management wizard allows you t
 
 - **Current Discovery Identifiers**: This section displays the currently configured identifiers. If an identifier and discovery profile match the specified value according to the selected match operator, the CI Type will be used for a device. To edit the current identifiers, you can select a different operator in the *Match* box and/or specify a different value.
 
-- **Conditions**: If only one identifier is configured, the *Conditions* box should simply contain “1”. If there are more identifiers, there must be a number for each of them, and they must be combined with logical operators (*not*, *and*, or *or*). For example: “1 and 2”.
+- **Conditions**: If only one identifier is configured, the *Conditions* box should simply contain "1". If there are more identifiers, there must be a number for each of them, and they must be combined with logical operators (*not*, *and*, or *or*). For example: "1 and 2".
 
-- **Add New Discovery Identifiers**: To add a new discovery identifier, first select the type, then click the triangle button to expand the configuration section for the identifier. Alternatively, you can immediately click the triangle button to see all possible types. Click “+” next to the type you want to add. Then select a *Match* operator and specify the value that should be used to detect if the CI Type should be used.
+- **Add New Discovery Identifiers**: To add a new discovery identifier, first select the type, then click the triangle button to expand the configuration section for the identifier. Alternatively, you can immediately click the triangle button to see all possible types. Click "+" next to the type you want to add. Then select a *Match* operator and specify the value that should be used to detect if the CI Type should be used.
 
 #### Provisioning configuration
 
@@ -174,9 +176,9 @@ The provisioning configuration window of the CI Type Management wizard contains 
 
 - **Views**: Click the *Views* button to go to a window where you can configure the views the provisioned element should be added to.
 
-    - At the top of the window, you can add existing views. To do so, click the triangle button and then click “+” next to each view you want to add.
+    - At the top of the window, you can add existing views. To do so, click the triangle button and then click "+" next to each view you want to add.
 
-    - Below this, you can add new views. To do so, specify the view name and click the “+” button for each view you want to add.
+    - Below this, you can add new views. To do so, specify the view name and click the "+" button for each view you want to add.
 
     - The views to which the provisioned element will be added are listed under *Selected views*. Click the X next to a view to remove it from the list.
 

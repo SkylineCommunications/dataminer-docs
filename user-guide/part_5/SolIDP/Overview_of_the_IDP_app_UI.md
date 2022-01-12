@@ -93,7 +93,7 @@ This tab consists of the following subtabs:
 
     - *Discover*: Starts a connectivity discovery action for the selected element.
 
-    - *Provision all DCF*: Provisions all discovered connections in DCF.
+    - *Provision DCF*: (Called "Provision All DCF" prior to IDP 1.1.18.) Provisions the discovered connections for the selected element(s) in DCF.
 
 ### Configuration
 
