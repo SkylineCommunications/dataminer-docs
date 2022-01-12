@@ -2,7 +2,7 @@
 
 The *Configuration* subtab of the *Admin* tab consists of the following pages:
 
-- **Network Shares**: Allows you to modify the credentials and path for the configuration archive, the credentials for the working directories, and the working directories list. In the working directories list, you can specify a working directory on the network shares to transfer the configuration file to for each hosting DMA. Working directories temporarily contain configuration backups during a configuration update. A working directory must be available for each DMA in the DMS.
+- **Network Shares**: Allows you to modify the credentials and path for the configuration archive, the credentials for the working directories, and the working directories list. In the working directories list, you can specify a working directory on the network shares to transfer the configuration file to for each hosting DMA. Working directories temporarily hold files during a configuration update. A working directory must be available for each DMA in the DMS.
 
 - **Purge Settings**: Allows you to configure the automatic cleanup of the configuration archive and check the KPIs related to the automatic cleanup.
 
