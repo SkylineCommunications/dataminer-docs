@@ -1,8 +1,7 @@
 ## Upgrading a DataMiner Agent using DataMiner Taskbar Utility
 
 > [!TIP]
-> See also:
-> [DataMiner Taskbar Utility](../../part_7/DataminerTools/DataMiner_Taskbar_Utility.md)
+> See also: [DataMiner Taskbar Utility](../../part_7/DataminerTools/DataMiner_Taskbar_Utility.md)
 
 ### Before upgrading your DataMiner System
 
@@ -21,7 +20,7 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the newest version:
 
 1. In the Windows taskbar, right-click the DataMiner Taskbar Utility icon and click *Upgrade*.
 
-2. To the right of the *Package* box, click the ellipsis button (”...”) and select the DataMiner upgrade package (extension *.dmupgrade*).
+2. To the right of the *Package* box, click the ellipsis button ("...") and select the DataMiner upgrade package (extension *.dmupgrade*).
 
     > [!NOTE]
     > From DataMiner 10.0.0 CU20, 10.1.0 CU9, and 10.1.12 onwards, if your system does not meet the prerequisites for a specific upgrade version, the upgrade package will not be accepted as a valid package.
@@ -37,26 +36,30 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the newest version:
 
 4. Expand the *Upgrade options* section and select the necessary upgrade options.
 
-    | Option                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-    |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Automatic Start Services | Select this option if you want the DataMiner Agent software to start up automatically after the upgrade.<br> If you do not select this option, the DataMiner Agent software will have to be started manually.                                                                                                                                                                                                                                                                                                                                                   |
-    | Delayed Start            | Select this option if you want the Windows system services to be started before the DataMiner services.<br> (recommended on systems running a large number of services)                                                                                                                                                                                                                                                                                                                                                                                         |
-    | Stop Internet Explorer   | Select this option if you want all open Internet Explorer sessions to be closed during the upgrade process.<br> (highly recommended for DataMiner versions prior to 8.5.0)                                                                                                                                                                                                                                                                                                                                                                                      |
-    | Extract All Files        | This option is selected by default, and ensures that all DataMiner system files are replaced.<br> (recommended)                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-    | Stop SNMP                | Select this option if you want the Windows SNMP Service to be stopped before starting the upgrade procedure.<br> If you choose not to stop the Windows SNMP service, the latter is likely to interfere with the DataMiner SLSNMPAgent process. To prevent interference, you will have to change either the listening port of SLSNMPAgent or the listening port of the Windows SNMP service.<br> See also: [Changing SNMP agent ports](../SNMP/Changing_SNMP_agent_ports.md) |
-    | Reboot After Upgrade     | Select this option if you want the DataMiner Agent(s) to be automatically rebooted at the end of the upgrade procedure.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+   - *Automatic Start Services*: Select this option if you want the DataMiner Agent software to start up automatically after the upgrade. If you do not select this option, the DataMiner Agent software will have to be started manually.
+
+   - *Delayed Start*: Select this option if you want the Windows system services to be started before the DataMiner services. (Recommended on systems running a large number of services.)
+
+   - *Stop Internet Explorer*: Select this option if you want all open Internet Explorer sessions to be closed during the upgrade process. (Highly recommended for DataMiner versions prior to 8.5.0.)
+
+   - *Extract All Files*: This option is selected by default, and ensures that all DataMiner system files are replaced. (Recommended.)
+
+   - *Stop SNMP*: Select this option if you want the Windows SNMP Service to be stopped before starting the upgrade procedure. If you choose not to stop the Windows SNMP service, the latter is likely to interfere with the DataMiner SLSNMPAgent process. To prevent interference, you will have to change either the listening port of SLSNMPAgent or the listening port of the Windows SNMP service. See also: [Changing SNMP agent ports](../SNMP/Changing_SNMP_agent_ports.md).
+
+   - *Reboot After Upgrade*: Select this option if you want the DataMiner Agent(s) to be automatically rebooted at the end of the upgrade procedure.
 
 5. If you are upgrading Agents in a Failover setup, optionally expand the *Failover options* section and select the Failover policy, which determines in what order the DMAs are upgraded.
 
-    | Option                  | Description                                                                                                                |
-    |---------------------------|----------------------------------------------------------------------------------------------------------------------------|
-    | UseDefault                | Selected by default. If this option is used, the default failover policy will be applied.                                  |
-    | Simultaneously            | Select this option if you want to upgrade both Agents simultaneously.                                                      |
-    | BackupFirst               | Select this option if you want to upgrade the offline Agent, switch over and upgrade the online Agent.                     |
-    | BackupFirstWithSwitchback | Select this option if you want to upgrade the offline Agent, switch over, upgrade the online Agent, and switch back again. |
+    - *UseDefault*: Selected by default. If this option is used, the default failover policy will be applied.
+
+    - *Simultaneously*: Select this option if you want to upgrade both Agents simultaneously. This option is highly recommended; always use it in case of a major upgrade, unless it is already the default policy.
+
+    - *BackupFirst*: Select this option if you want to upgrade the offline Agent, switch over and upgrade the online Agent.
+
+    - *BackupFirstWithSwitchback*: Select this option if you want to upgrade the offline Agent, switch over, upgrade the online Agent, and switch back again.
 
     > [!NOTE]
-    > To specify the default failover policy, in DataMiner Cube, go to *System Center* > *System Settings* > *upgrade* > *Failover options.*
+    > To specify the default Failover policy, in DataMiner Cube, go to *System Center* > *System Settings* > *upgrade* > *Failover options.* We highly recommend that you set this to *Upgrade main and backup Agent simultaneously*.
 
 6. Click *Upgrade* to start the upgrade procedure.
 

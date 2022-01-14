@@ -3,3 +3,6 @@ CMDB
 subtab
 DMAs
 Compliancy
+SLSNMPAgent
+dmupgrade
+slnet

@@ -1,6 +1,8 @@
 ## Rolling back a DataMiner upgrade
 
-By default, prior to DataMiner 10.0.0/10.0.3, when you upgrade a DataMiner Agent, a rollback package is created. This package contains all files replaced during the upgrade. If, for any reason, the DataMiner Agent has to revert to some previous state, you can unpack a rollback package using the DataMiner Taskbar Utility or StandaloneUpgrade.exe. However, for recent DataMiner versions, we recommend to instead downgrade by using the full upgrade package of the version you want to go back to. As such, from DataMiner 10.0.0/10.0.3 onwards, rollback packages are no longer created.
+By default, prior to DataMiner 10.0.0/10.0.3, when you upgrade a DataMiner Agent, a rollback package is created. This package contains all files replaced during the upgrade. If, for any reason, the DataMiner Agent has to revert to some previous state, you can unpack a rollback package using the DataMiner Taskbar Utility or StandaloneUpgrade.exe. 
+
+However, rollback packages are no longer created in recent DataMiner versions. We recommend that you instead downgrade by using the full upgrade package of the version you want to go back to.
 
 > [!TIP]
 > See also:
