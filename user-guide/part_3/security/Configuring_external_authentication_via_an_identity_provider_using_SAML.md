@@ -251,37 +251,104 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
 2. Configure the general settings:
 
-    | Setting | Description |
-    | ------- | ------------|
-    | App name | The name of your application. Fill in “DataMiner” (or some other preferred name). |
-    | App logo | Optional logo to be linked to your application.<br>- Format: PNG, JPG or GIF<br>- Max. size: 1 MB<br>- Min. resolution: 420 x 120 pixels<br>Tip: It is recommended to use a PNG image with a transparent background and a landscape orientation. |
+   **App name**
+
+   The name of your application. Fill in “DataMiner” (or some other preferred name).
+
+   **App logo**
+
+   Optional logo to be linked to your application.
+
+   - Format: PNG, JPG or GIF
+   - Max. size: 1 MB
+   - Min. resolution: 420 x 120 pixels
+    
+   > [!TIP]
+   > It is recommended to use a PNG image with a transparent background and a landscape orientation.
 
 3. Configure the SAML settings:
 
-    | Setting | Description |
-    | ------- | ----------- |
-    | Single sign on URL | The location where the SAML assertion is sent with a POST operation.<br>- In this box, enter e.g. ``https://dataminer.example.com/root``<br>- Select the following checkboxes:<br>- *Use this for Recipient URL and Destination URL*<br>- *Allow this app to request other SSO URLs*<br>- Enter the following additional URLs:<br>- ``https://dataminer.example.com/login``<br>- ``https://dataminer.example.com/dashboard``<br>- ``https://dataminer.example.com/monitoring``<br>- ``https://dataminer.example.com/jobs``<br>- ``https://dataminer.example.com/ticketing`` |
-    | Audience URI | The intended audience of the SAML assertion.<br>In this box, enter ``https://dataminer.example.com/root`` |
-    | Name ID format | The username format you are sending in the SAML Response.<br>Select "EmailAddress" |
-    | Application username | The default value to use for the username with the application.<br>Select "Email" |
+    **Single sign on URL**
+
+    The location where the SAML assertion is sent with a POST operation.
+
+    - In this box, enter e.g. ``https://dataminer.example.com/root``.
+    - Select the following checkboxes:
+    
+        - *Use this for Recipient URL and Destination URL*
+        - *Allow this app to request other SSO URLs*
+        
+    - Enter the following additional URLs:
+    
+        - ``https://dataminer.example.com/login``
+        - ``https://dataminer.example.com/dashboard``
+        - ``https://dataminer.example.com/monitoring``
+        - ``https://dataminer.example.com/jobs``
+        - ``https://dataminer.example.com/ticketing``
+        
+    **Audience URI**
+
+    The intended audience of the SAML assertion.
+
+    In this box, enter ``https://dataminer.example.com/root``.
+
+    **Name ID format**
+
+    The username format you are sending in the SAML Response.
+
+    Select "EmailAddress".
+
+    **Application username**
+
+    The default value to use for the username with the application.
+
+    Select "Email".
 
 ## Error messages
 
 ### General errors
 
-| Error message | Application | Cause |
-| ------------- | ----------- | ----- |
-| Object reference not set to an instance of an object. | Cube | Incorrect or unexpected data in *spMetadata.xml*. |
-| Cannot connect to the DMA; exception trapped: Failed getting the user info (empty response). | Web apps | Incorrect or unexpected data in *spMetadata.xml*. |
-| Expected one and only one default assertion consumer service endpoint. | Cube<br> Web apps | In *spMetadata.xml*, none of the Assertion Consumer Service URLs are marked as the default URL. Typically, the /root URL is marked as the default URL. |
-| Assertion consumer service \<URL> was not found. | Web apps | The Assertion Consumer Service URL is spelled incorrectly or cannot be found in *spMetadata.xml*. |
+Object reference not set to an instance of an object.
+
+- Application: Cube
+- Cause: Incorrect or unexpected data in *spMetadata.xml*.
+
+Cannot connect to the DMA; exception trapped: Failed getting the user info (empty response).
+
+- Application: Web apps
+- Cause: Incorrect or unexpected data in *spMetadata.xml*.
+
+Expected one and only one default assertion consumer service endpoint.
+
+- Application: Web apps
+- Cause: In *spMetadata.xml*, none of the Assertion Consumer Service URLs are marked as the default URL. Typically, the /root URL is marked as the default URL.
+
+Assertion consumer service \<URL> was not found.
+
+- Application: Web apps
+- Cause: The Assertion Consumer Service URL is spelled incorrectly or cannot be found in *spMetadata.xml*.
 
 ### Azure AD errors
 
-| Error message | Application | Cause |
-| ------------- | ----------- | ----- |
-| AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'. | Cube | The URL marked as default URL is either missing or spelled differently in the app registration form. |
-| AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'. | Web apps | The reply URL of a specific web app is either missing or spelled differently in the app registration form. |
-| AADSTS500113: No reply address is registered for the application. | Web apps | No reply URL is specified in the app registration form. |
-| AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: \<ID>. |            | The required API permissions are missing in the app registration form. |
-| AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant. |            | Entity ID incorrect or not found. |
+AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
+
+- Application: Cube
+- Cause: The URL marked as default URL is either missing or spelled differently in the app registration form.
+
+AADSTS50011: The reply URL specified in the request does not match the reply URLs configured for the application: '\<ID>'.
+
+- Application: Web apps
+- Cause: The reply URL of a specific web app is either missing or spelled differently in the app registration form.
+
+AADSTS500113: No reply address is registered for the application.
+
+- Application: Web apps
+- Cause: No reply URL is specified in the app registration form.
+
+AADSTS650056: Misconfigured application. This could be due to one of the following: the client has not listed any permissions for 'AAD Graph' in the requested permissions in the client's application registration. Or, the admin has not consented in the tenant. Or, check the application identifier in the request to ensure it matches the configured client application identifier. Or, check the certificate in the request to ensure it's valid. Please contact your admin to fix the configuration or consent on behalf of the tenant. Client app ID: \<ID>.
+
+- Cause: The required API permissions are missing in the app registration form.
+
+AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
+
+- Cause: Entity ID incorrect or not found.

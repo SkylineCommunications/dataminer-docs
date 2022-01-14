@@ -348,7 +348,7 @@ hr{margin-top:20px;margin-bottom:20px;border-top:1px solid #eee}
 .h4,h4{font-size:24px}
 .h5,h5{font-size:20px}
 .h6,h6{font-size:18px}
-p{margin:0 0 16px}
+p{margin:0 5 5px}
 .lead{margin-bottom:20px;font-size:16px;font-weight:300;line-height:1.4}
 dt,kbd kbd,label{font-weight:700}
 address,blockquote .small,blockquote footer,blockquote small,dd,dt,pre{line-height:1.42857143}
