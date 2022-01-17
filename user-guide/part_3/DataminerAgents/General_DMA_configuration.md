@@ -1,31 +1,5 @@
 ## General DMA configuration
 
-This section consists of the following topics:
-
-- [Changing the DataMiner ID of a DMA](#changing-the-dataminer-id-of-a-dma)
-
-- [Changing the name of a DMA](#changing-the-name-of-a-dma)
-
-- [Specifying your company data](#specifying-your-company-data)
-
-- [Configuring the IP network ports](#configuring-the-ip-network-ports)
-
-- [Configuring the polling request timeout](#configuring-the-polling-request-timeout)
-
-- [Configuring outgoing email](#configuring-outgoing-email)
-
-- [Forcing a DataMiner Agent to work without virtual IP addresses](#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses)
-
-- [Setting the indexing options for the server-side search](#setting-the-indexing-options-for-the-server-side-search)
-
-- [Setting up HTTPS on a DMA](#setting-up-https-on-a-dma)
-
-- [Changing the IP of a DMA](#changing-the-ip-of-a-dma)
-
-- [Switching between DataMiner configurations on a DMA](#switching-between-dataminer-configurations-on-a-dma)
-
-- [DMA in a DMS using a Cassandra cluster](#dma-in-a-dms-using-a-cassandra-cluster)
-
 ### Changing the DataMiner ID of a DMA
 
 In the *DataMiner.xml* file of a DMA, you can change its DataMiner ID.
@@ -165,11 +139,11 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 |                    | 9300/tcp                                                                                                                                                                              | Elasticsearch (inter-node communication)                                                                                                      |
 | Multiple protocols | 4222/tcp<br> 6222/tcp                                                                                                                                                                 | NATS (required from DataMiner 10.1.1 onwards)                                                                                                 |
 | NAS                | 9090/tcp                                                                                                                                                                              | NATS Account Server (required from DataMiner 10.1.1 onwards)                                                                                  |
-| Telnet             | 23/tcp                                                                                                                                                                                | Stream                                                                                                                                        |
-|                    | By default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml). |                                                                                                                                               |
+| Telnet             | 23/tcp                                                                                                                                                                                | Stream |
+
 
 > [!NOTE]
-> - When viewing Stream via DataMiner Cube or System Display clients, access to port 23/tcp is not required. Access is only required when using a telnet client.
+> - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml)
 > - Prior to DataMiner 10.0.8, ports 7001, 7199, 9142 and 9160 are also opened during Cassandra installation. However, from DataMiner 10.0.8 onwards, only the essential ports 7000 and 9042 are opened.
 > - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. However, this port is no longer used from those versions onwards and is no longer opened during new installations.
 > - The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
@@ -178,7 +152,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 The diagram below shows how communication within a DMS could be set up.
 
-![](../../images/dms_ip_communication101.jpg)
+![DMS communication overview](../../images/dms_ip_communication_1021.jpg)
 
 
 
