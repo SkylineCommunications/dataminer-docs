@@ -59,7 +59,7 @@ This tab consists of the following subtabs:
         - *Identify All Matching CI Types*: Enable this option if you want the discovery process to try to match all possible CI Types configured in the scan range. Otherwise, the process will stop trying to match a device with other CI Types once a CI Type has been identified for it.
 
         > [!NOTE]
-        > - It is only possible to complete a discovery action for a specific CI Type if the *Discovery* automation setting is enabled on the tab *Processes* > *Automation*.
+        > - It is only possible to complete a discovery action for a specific CI Type if the *Discovery* activity setting is enabled on the tab *Processes* > *Activities*.
         > - When a discovery has been initiated, the *Provisioning Status* column in the table will display the status *Provisioning Started*. As long as this status is displayed, you will not be able to start another provisioning activity for the same device.
 
     - **Most recent discoveries**: Displays information on the 6 most recent discovery operations.
@@ -137,13 +137,13 @@ This tab consists of the following subtabs:
     - If you started a comparison from the *Summary* or *Backups* subtab, the file you selected there will automatically be selected as the left file in the comparison.
 
     > [!NOTE]
-    > Files can only be compared if they have an extension listed under *Admin* > *Configuration* > *Visualization*. See [Configuration](Configuration.md).
+    > Files can only be compared if they have an extension listed under *Admin* > *Configuration* > *Backup*. See [Configuration](Configuration.md).
 
 ### Software
 
 This tab allows you to manage software updates of managed elements. At the top of the tab, a graph displays a summary of the software status of all managed devices.
 
-The table below this lists the managed elements of which the CI Type has *Software Update* and/or *Software Compliancy* enabled (via *Processes* > *Automation*). Several buttons are available above the table:
+The table below this lists the managed elements of which the CI Type has *Software Update* and/or *Software Compliancy* enabled (via *Processes* > *Activities*). Several buttons are available above the table:
 
 - *Show Details*: Only available if a single element is selected. Displays the software details for the element, such as the expected software version, detected software version, software image location and deployed software version.
 
