@@ -6,3 +6,7 @@ Compliancy
 SLSNMPAgent
 dmupgrade
 slnet
+Nodetool
+nodetool
+DevCenter
+SLDMADB

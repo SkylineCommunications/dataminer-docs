@@ -1,0 +1,2 @@
+{"rule":"SETUP_VERB","sentence":"^\\QKeep in mind that the database will not be included in DataMiner backups, there will be no forced compaction, and in a Failover setup the forced repair will not be executed and it will not be possible to check the status.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QBy default, it is located in the folder C:\\\\Program Files\\\\Cassandra\\\\conf.\\E$"}
