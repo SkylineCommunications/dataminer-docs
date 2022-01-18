@@ -2,12 +2,6 @@
 
 To open a view card, click the view in the Surveyor.
 
-In this section:
-
-- [View card header and footer](#view-card-header-and-footer)
-
-- [View card pages](#view-card-pages)
-
 ### View card header and footer
 
 In the header of a view card, a breadcrumb trail is shown. In this header, you can:
