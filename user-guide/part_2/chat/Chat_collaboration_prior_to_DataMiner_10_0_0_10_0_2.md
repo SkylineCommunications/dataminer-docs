@@ -2,12 +2,6 @@
 
 In DataMiner versions prior to DataMiner 10.0.0/10.0.2, chat collaboration is done using the *Contacts* window.
 
-- [Opening the Contacts window](#opening-the-contacts-window)
-
-- [Starting a chat session with another DataMiner user](#starting-a-chat-session-with-another-dataminer-user)
-
-- [Ending a chat session](#ending-a-chat-session)
-
 ### Opening the Contacts window
 
 To open the *Contacts* window:
