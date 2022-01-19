@@ -19,7 +19,7 @@ jobs:
           submodules: true
       - name: choco install docfx
         run: |
-          choco install docfx -y
+          choco install docfx -y --version=2.58
         env:
           CI: true
       - name: build documentation
