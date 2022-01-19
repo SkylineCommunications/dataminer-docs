@@ -1,24 +1,6 @@
 ## Service card pages
 
-The navigation pane on the left side of a service card contains a tree view with the following items:
-
-- [VISUAL](#visual)
-
-- [DATA](#data)
-
-- [ALARMS](#alarms)
-
-- [SLA](#sla)
-
-- [REPORTS](#reports)
-
-- [DASHBOARDS](#dashboards)
-
-- [DOCUMENTS](#documents)
-
-- [NOTES](#notes)
-
-- [ANNOTATIONS](#annotations)
+The navigation pane on the left side of a service card contains a tree view with the items mentioned below.
 
 > [!NOTE]
 > For an enhanced service, depending on which service protocol is used, additional pages may be available.
