@@ -380,7 +380,7 @@ When, inside a Microsoft Visio drawing, you specify placeholders like \[param: .
 
 ### \<DMAIP>
 
-This placeholder can be only be used inside another placeholder, or in a URL for a shape data field of type **Link**. It is replaced with the first configured value from the following list that can be found for the DMA you are connecting to:
+This placeholder can only be used inside another placeholder, or in a URL for a shape data field of type **Link**. It is replaced with the first configured value from the following list that can be found for the DMA you are connecting to:
 
 - The certificate address
 
