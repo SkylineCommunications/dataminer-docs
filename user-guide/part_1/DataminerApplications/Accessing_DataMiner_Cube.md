@@ -1,3 +1,7 @@
+---
+uid: Accessing_DataMiner_Cube
+---
+
 # Accessing DataMiner Cube
 
 This section consists of the following topics:

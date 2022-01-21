@@ -1,3 +1,7 @@
+---
+uid: Making_a_shape_display_a_custom_drawing_using_Path_markup
+---
+
 ## Making a shape display a custom drawing using Path markup
 
 In Visio shapes, you can make custom drawings using WPF Path markup.

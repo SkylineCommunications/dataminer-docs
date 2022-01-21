@@ -1,3 +1,7 @@
+---
+uid: Advanced_configuration_for_Administrators
+---
+
 # Advanced configuration for Administrators
 
 On the *Admin* tab of the IDP app, various settings are available that can be used by Administrators to configure DataMiner IDP. This tab consists of different subtabs:

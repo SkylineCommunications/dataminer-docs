@@ -1,3 +1,7 @@
+---
+uid: Configuring_profile_instances
+---
+
 ## Configuring profile instances
 
 In a profile instance, you can assign specific values to each of the parameters in a linked profile definition. Those values can then be used to configure actual devices.

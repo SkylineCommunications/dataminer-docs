@@ -1,3 +1,7 @@
+---
+uid: Placeholders_for_variables_in_shape_data_values
+---
+
 ## Placeholders for variables in shape data values
 
 #### Info keywords

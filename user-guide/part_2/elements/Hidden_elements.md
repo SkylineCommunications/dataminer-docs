@@ -1,3 +1,7 @@
+---
+uid: Hidden_elements
+---
+
 ## Hidden elements
 
 Hidden elements are mostly created for internal purposes. They have no virtual IP address.

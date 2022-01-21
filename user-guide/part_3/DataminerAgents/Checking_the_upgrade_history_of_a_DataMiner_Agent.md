@@ -1,3 +1,7 @@
+---
+uid: Checking_the_upgrade_history_of_a_DataMiner_Agent
+---
+
 ## Checking the upgrade history of a DataMiner Agent
 
 You can easily check which upgrades have been performed on a particular DataMiner Agent.

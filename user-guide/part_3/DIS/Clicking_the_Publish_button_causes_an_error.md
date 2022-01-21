@@ -1,3 +1,7 @@
+---
+uid: Clicking_the_Publish_button_causes_an_error
+---
+
 ## Clicking the Publish button causes an error
 
 ### Problem

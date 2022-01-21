@@ -1,3 +1,7 @@
+---
+uid: Agile_Scope-Based_Methodology
+---
+
 # Agile Scope-Based Methodology
 
 The Agile Scope-Based project methodology is most suitable for projects with well-defined goals and objectives (i.e. high-level requirements) that at the same time also still have a lot of unknown factors, both from a user expectation and from a technical implementation perspective (e.g. ambiguous requirements, no well-defined exact user expectations, unknown technical dependencies, etc.). However, it also suits projects with the ambition to put the best possible DataMiner solution in place A) within a fixed time frame and a well-defined fixed budget, and B) which will effectively but also reasonably live up to the expectations defined in those goals and high-level requirements.

@@ -1,3 +1,7 @@
+---
+uid: Configuring_trend_templates
+---
+
 ## Configuring trend templates
 
 In this section:

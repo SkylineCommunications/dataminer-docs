@@ -1,3 +1,7 @@
+---
+uid: Developing_Automation_scripts_as_Visual_Studio_solutions
+---
+
 ## Developing Automation scripts as Visual Studio solutions
 
 As from DISv2.31, similar to DataMiner protocols, it is also possible to develop Automation scripts as Visual Studio solutions.

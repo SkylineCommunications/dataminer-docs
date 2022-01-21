@@ -1,3 +1,7 @@
+---
+uid: Part7Reference
+---
+
 # Reference
 
 - [Skyline DataMiner folder](../part_7/SkylineDataminerFolder/SkylineDataminerFolder.md#skyline-dataminer-folder)

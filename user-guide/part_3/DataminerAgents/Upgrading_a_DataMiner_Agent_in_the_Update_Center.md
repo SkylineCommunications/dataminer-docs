@@ -1,3 +1,7 @@
+---
+uid: Upgrading_a_DataMiner_Agent_in_the_Update_Center
+---
+
 ## Upgrading a DataMiner Agent in the Update Center
 
 From DataMiner 9.0.5 onwards, it is possible to upgrade or update a DMA via the Update Center.

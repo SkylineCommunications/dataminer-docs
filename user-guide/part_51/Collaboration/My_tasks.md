@@ -1,3 +1,7 @@
+---
+uid: My_tasks
+---
+
 # My tasks
 
 When you go to the *My tasks* tab by clicking the *My tasks* button in the side bar, it will list all tasks that are currently assigned to you, i.e. the user who is logged in.

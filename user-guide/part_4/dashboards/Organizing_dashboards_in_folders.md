@@ -1,3 +1,7 @@
+---
+uid: Organizing_dashboards_in_folders
+---
+
 ## Organizing dashboards in folders
 
 It is possible to organize dashboards and dashboard containers in folders. In this case, they will be displayed in the dashboard list in the format \[Folder name\]/\[Dashboard name or dashboard container name\].

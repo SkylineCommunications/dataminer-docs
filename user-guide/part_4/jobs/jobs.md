@@ -1,3 +1,7 @@
+---
+uid: jobs
+---
+
 # DMS Job Manager
 
 The DataMiner Jobs web app, also known as DMS Job Manager, can be used to create and manage jobs, which are then distributed to SRM applications, so that the necessary bookings can be generated.

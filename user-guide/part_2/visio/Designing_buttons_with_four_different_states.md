@@ -1,3 +1,7 @@
+---
+uid: Designing_buttons_with_four_different_states
+---
+
 ## Designing buttons with four different states
 
 > [!TIP]

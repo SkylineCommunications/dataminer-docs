@@ -1,3 +1,7 @@
+---
+uid: Trending_techniques
+---
+
 # Trending techniques
 
 There are two trending techniques.

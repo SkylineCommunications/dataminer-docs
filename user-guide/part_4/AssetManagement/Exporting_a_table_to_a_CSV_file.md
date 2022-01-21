@@ -1,3 +1,7 @@
+---
+uid: Exporting_a_table_to_a_CSV_file
+---
+
 ## Exporting a table to a CSV file
 
 In the *Asset Manager* module:

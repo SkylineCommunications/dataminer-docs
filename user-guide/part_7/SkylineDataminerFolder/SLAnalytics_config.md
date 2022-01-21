@@ -1,3 +1,7 @@
+---
+uid: SLAnalytics_config
+---
+
 ## SLAnalytics.config
 
 Prior to DataMiner 9.5.5, this file is used to configure settings for the SLAnalytics process. It is located in the folder *C:\\Skyline DataMiner\\Files*.

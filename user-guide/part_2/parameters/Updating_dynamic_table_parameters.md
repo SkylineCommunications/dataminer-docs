@@ -1,3 +1,7 @@
+---
+uid: Updating_dynamic_table_parameters
+---
+
 ## Updating dynamic table parameters
 
 If the content of a particular cell of a dynamic table parameter can be modified, update the value as follows:

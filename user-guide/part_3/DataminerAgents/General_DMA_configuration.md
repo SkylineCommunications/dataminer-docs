@@ -1,3 +1,7 @@
+---
+uid: General_DMA_configuration
+---
+
 ## General DMA configuration
 
 ### Changing the DataMiner ID of a DMA

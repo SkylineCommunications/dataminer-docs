@@ -1,3 +1,7 @@
+---
+uid: Embedding_a_Resource_Manager_component
+---
+
 ## Embedding a Resource Manager component
 
 For DMAs with a Resource Manager license, it is possible to embed a Resource Manager component in Visual Overview, which will allow users to get a timeline overview of which bookings have been made.

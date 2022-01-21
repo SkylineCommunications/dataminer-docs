@@ -1,3 +1,7 @@
+---
+uid: AutomationTimePickerOptions_properties
+---
+
 ## AutomationTimePickerOptions properties
 
 - [EndTime](#endtime)

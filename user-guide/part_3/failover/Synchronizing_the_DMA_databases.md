@@ -1,3 +1,7 @@
+---
+uid: Synchronizing_the_DMA_databases
+---
+
 # Synchronizing the DMA databases
 
 In the *Failover* dialog box, you can access synchronization information about the two DMAs, and manually synchronize the databases.

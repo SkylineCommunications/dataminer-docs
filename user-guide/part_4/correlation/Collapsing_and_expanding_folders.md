@@ -1,3 +1,7 @@
+---
+uid: Collapsing_and_expanding_folders
+---
+
 ## Collapsing and expanding folders
 
 You can collapse or expand folders in the tree view of the Correlation module:

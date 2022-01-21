@@ -1,3 +1,7 @@
+---
+uid: Resetting_the_SLA_counters
+---
+
 ## Resetting the SLA counters
 
 To reset the SLA counters, do the following:

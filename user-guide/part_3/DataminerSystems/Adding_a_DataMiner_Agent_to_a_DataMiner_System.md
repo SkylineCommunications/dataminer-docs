@@ -1,3 +1,7 @@
+---
+uid: Adding_a_DataMiner_Agent_to_a_DataMiner_System
+---
+
 # Adding a DataMiner Agent to a DataMiner System
 
 More information on adding DataMiner Agents is included in the following sections:

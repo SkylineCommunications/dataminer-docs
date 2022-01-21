@@ -1,3 +1,7 @@
+---
+uid: Filtering_connections_based_on_connection_properties
+---
+
 ## Filtering connections based on connection properties
 
 From DataMiner 9.5.4 onwards, it is possible to filter out DCF connections based on connection properties. Connections that are filtered out will not be used in any functionality in the Visual Overview.

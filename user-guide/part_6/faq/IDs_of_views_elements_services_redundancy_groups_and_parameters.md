@@ -1,3 +1,7 @@
+---
+uid: IDs_of_views_elements_services_redundancy_groups_and_parameters
+---
+
 # IDs of views, elements, services, redundancy groups and parameters
 
 This section contains the following topics:

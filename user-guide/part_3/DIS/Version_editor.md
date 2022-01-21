@@ -1,3 +1,7 @@
+---
+uid: Version_editor
+---
+
 # Version editor
 
 If you click *Version Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a dedicated protocol version editor. This editor will allow you to manage the information in the Protocol.Version and Protocol.VersionHistory elements in a more user-friendly way.

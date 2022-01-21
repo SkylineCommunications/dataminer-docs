@@ -1,3 +1,7 @@
+---
+uid: MailReportParameter_class
+---
+
 # MailReportParameter class
 
 This class represents a mail report parameter. Below, you can find an overview of all members of this class.

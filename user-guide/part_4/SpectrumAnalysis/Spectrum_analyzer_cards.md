@@ -1,3 +1,7 @@
+---
+uid: Spectrum_analyzer_cards
+---
+
 ## Spectrum analyzer cards
 
 Spectrum analyzer cards are a special type of element cards in DataMiner Cube. They usually have 2 pages, though depending on the protocol additional pages are possible:

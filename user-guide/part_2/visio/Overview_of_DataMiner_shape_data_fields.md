@@ -1,3 +1,7 @@
+---
+uid: Overview_of_DataMiner_shape_data_fields
+---
+
 ## Overview of DataMiner shape data fields
 
 Below, you find an alphabetical overview of all shape data fields that can be specified in Microsoft Visio drawings used in a DataMiner System.

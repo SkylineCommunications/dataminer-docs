@@ -1,3 +1,7 @@
+---
+uid: Applying_conditional_connection_thickness
+---
+
 ## Applying conditional connection thickness
 
 It is possible to have the thickness of the connection lines change depending on the current value of a parameter, property or session variable.

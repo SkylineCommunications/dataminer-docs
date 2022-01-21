@@ -1,3 +1,7 @@
+---
+uid: Working_with_behavioral_anomaly_detection
+---
+
 ## Working with behavioral anomaly detection
 
 > [!NOTE]

@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_Ticketing_app
+---
+
 # Accessing the Ticketing app
 
 To access the Ticketing app:

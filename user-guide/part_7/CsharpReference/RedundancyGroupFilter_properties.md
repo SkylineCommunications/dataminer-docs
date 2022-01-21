@@ -1,3 +1,7 @@
+---
+uid: RedundancyGroupFilter_properties
+---
+
 ## RedundancyGroupFilter properties
 
 - [DataMinerID](#dataminerid)

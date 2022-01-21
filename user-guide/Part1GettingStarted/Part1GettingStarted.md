@@ -1,3 +1,7 @@
+---
+uid: Part1GettingStarted
+---
+
 # Getting started with DataMiner
 
 ### Get to know the basics

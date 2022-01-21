@@ -1,3 +1,7 @@
+---
+uid: AboutCloudPlatform
+---
+
 # About the DataMiner Cloud Platform
 
 In this section:

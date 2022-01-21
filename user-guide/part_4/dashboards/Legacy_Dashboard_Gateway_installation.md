@@ -1,3 +1,7 @@
+---
+uid: Legacy_Dashboard_Gateway_installation
+---
+
 # Legacy Dashboard Gateway installation
 
 It is possible to give users access to the legacy DataMiner Dashboards even if they do not have access to DataMiner, by means of a DMS Dashboard Gateway.

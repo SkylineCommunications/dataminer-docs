@@ -1,3 +1,7 @@
+---
+uid: Configuring_an_IP-based_cell_phone_modem
+---
+
 ## Configuring an IP-based cell phone modem
 
 To configure an IP-based cell phone modem that is connected to your DataMiner System via the TCP/IP network:

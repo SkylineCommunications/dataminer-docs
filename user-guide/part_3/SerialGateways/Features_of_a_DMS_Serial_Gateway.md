@@ -1,3 +1,7 @@
+---
+uid: Features_of_a_DMS_Serial_Gateway
+---
+
 # Features of a DMS Serial Gateway
 
 Below is a quick overview of the most important features of the DMS Serial Gateway. For more detailed information, please refer to the DMS Serial Gateway user manual.

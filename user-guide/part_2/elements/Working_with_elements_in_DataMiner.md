@@ -1,3 +1,7 @@
+---
+uid: Working_with_elements_in_DataMiner
+---
+
 # Working with elements in DataMiner
 
 This section consists of the following topics:

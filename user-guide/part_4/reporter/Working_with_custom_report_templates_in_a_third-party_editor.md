@@ -1,3 +1,7 @@
+---
+uid: Working_with_custom_report_templates_in_a_third-party_editor
+---
+
 # Working with custom report templates in a third-party editor
 
 The report templates you create in the Reporter app using the built-in template editor (which is accessible via *Start \> Apps \> Reports & Dashboards* or via *http(s)://\[MyDataMiner\]/reports*) are Classic ASP pages that call JScript methods from the DMS Reporter Framework. On a DataMiner Agent, they are stored in the following folder: *C:\\Skyline DataMiner\\Webpages\\Reports\\templates*.

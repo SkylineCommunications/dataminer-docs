@@ -1,3 +1,7 @@
+---
+uid: Concepts1
+---
+
 # Concepts
 
 The following concepts are of importance for the Service & Resource Management (SRM) framework:

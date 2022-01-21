@@ -1,3 +1,7 @@
+---
+uid: Databases1
+---
+
 # Databases
 
 ### What do I do if Cassandra does not start up after a server restart?

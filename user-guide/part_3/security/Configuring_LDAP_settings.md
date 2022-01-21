@@ -1,3 +1,7 @@
+---
+uid: Configuring_LDAP_settings
+---
+
 ## Configuring LDAP settings
 
 DataMiner supports any LDAP compatible directory (e.g. OpenLDAP) as an alternative to Active Directory for importing users and groups into a DMA.

@@ -1,3 +1,7 @@
+---
+uid: UIBlockDefinition_class
+---
+
 # UIBlockDefinition class
 
 Below, you can find an overview of all members of the *UIBlockDefinition* class.

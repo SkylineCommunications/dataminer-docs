@@ -1,3 +1,7 @@
+---
+uid: Connecting_to_an_element_using_Stream_Viewer
+---
+
 ## Connecting to an element using Stream Viewer
 
 To open Stream Viewer for a particular element:

@@ -1,3 +1,7 @@
+---
+uid: Setting_up_a_new_DataMiner_System
+---
+
 # Setting up a new DataMiner System
 
 The following sections contain information on how to set up a DMS:

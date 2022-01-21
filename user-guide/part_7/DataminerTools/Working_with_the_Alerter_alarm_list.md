@@ -1,3 +1,7 @@
+---
+uid: Working_with_the_Alerter_alarm_list
+---
+
 ## Working with the Alerter alarm list
 
 The *Alarms* tab lists the last 100 alarms DMS Alerter has received.

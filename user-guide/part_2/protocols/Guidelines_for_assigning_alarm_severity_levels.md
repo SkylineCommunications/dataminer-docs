@@ -1,3 +1,7 @@
+---
+uid: Guidelines_for_assigning_alarm_severity_levels
+---
+
 ## Guidelines for assigning alarm severity levels
 
 When assigning alarm severity levels in an alarm template, you should keep these guidelines in mind.

@@ -1,3 +1,7 @@
+---
+uid: PagerOptions_properties
+---
+
 ## PagerOptions properties
 
 #### Message

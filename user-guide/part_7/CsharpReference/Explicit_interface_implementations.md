@@ -1,3 +1,7 @@
+---
+uid: Explicit_interface_implementations
+---
+
 ## Explicit interface implementations
 
 #### \_Attribute.GetIDsOfNames

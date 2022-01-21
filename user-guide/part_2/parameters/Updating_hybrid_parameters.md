@@ -1,3 +1,7 @@
+---
+uid: Updating_hybrid_parameters
+---
+
 ## Updating hybrid parameters
 
 A hybrid parameter has a control identical to that of an analog parameter, but with an additional checkbox.

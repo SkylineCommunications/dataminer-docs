@@ -1,3 +1,7 @@
+---
+uid: Giving_users_access_to_cloud_features
+---
+
 # Giving users access to cloud features
 
 Before users can have access to a DataMiner System via the various cloud features (e.g. remote access, Teams bot, etc.), you must add their DataMiner Cloud Platform account to your organization and to the DataMiner System.

@@ -1,3 +1,7 @@
+---
+uid: test
+---
+
 ### Begin
 
 | Icon                                                                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |

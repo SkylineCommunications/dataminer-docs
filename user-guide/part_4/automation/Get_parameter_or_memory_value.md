@@ -1,3 +1,7 @@
+---
+uid: Get_parameter_or_memory_value
+---
+
 ## Get parameter or memory value
 
 For this script action, you must first indicate what is to be retrieved: a parameter or a memory value. The further configuration options depend on this first choice.

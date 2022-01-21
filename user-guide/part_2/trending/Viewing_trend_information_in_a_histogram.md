@@ -1,3 +1,7 @@
+---
+uid: Viewing_trend_information_in_a_histogram
+---
+
 # Viewing trend information in a histogram
 
 Trend information can generally also be viewed in a histogram instead of in a trend graph. This is both possible when you access parameter trend information by drilling down on a parameter on a card, and on the *HISTOGRAM* page of a view card:

@@ -1,3 +1,7 @@
+---
+uid: General
+---
+
 ## General
 
 This category contains the following visualizations:

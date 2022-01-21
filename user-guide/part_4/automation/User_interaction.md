@@ -1,3 +1,7 @@
+---
+uid: User_interaction
+---
+
 ## User interaction
 
 This action allows the configuration of a dialog box asking for a user response.

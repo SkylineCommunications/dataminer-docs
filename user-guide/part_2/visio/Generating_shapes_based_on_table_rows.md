@@ -1,3 +1,7 @@
+---
+uid: Generating_shapes_based_on_table_rows
+---
+
 ## Generating shapes based on table rows
 
 In a Visio drawing, you can specify that a shape should be created automatically for every row in a table.

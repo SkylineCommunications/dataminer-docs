@@ -1,3 +1,7 @@
+---
+uid: Enabling_TLS_encryption
+---
+
 ## Enabling TLS encryption
 
 From DataMiner 10.0.2 onwards, it is possible to enable TLS encryption on a DMA. When this is done, SSL/TLS encryption can be enabled when a TCP/IP element is created or edited.

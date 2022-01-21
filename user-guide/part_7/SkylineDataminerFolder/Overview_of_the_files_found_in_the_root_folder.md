@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_files_found_in_the_root_folder
+---
+
 # Overview of the files found in the root folder
 
 | Name                      | Description                                                                                                                                                                                                                                        | Synchronized? |

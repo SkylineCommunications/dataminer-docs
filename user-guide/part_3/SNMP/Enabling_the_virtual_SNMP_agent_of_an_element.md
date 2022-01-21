@@ -1,3 +1,7 @@
+---
+uid: Enabling_the_virtual_SNMP_agent_of_an_element
+---
+
 ## Enabling the virtual SNMP agent of an element
 
 Every element in a DataMiner System incorporates a virtual SNMP agent. If you assign a virtual IP address to an element and you enable its virtual SNMP agent, whenever an alarm occurs on that element, it will forward an SNMP trap toward every activated SNMP manager defined in the DataMiner System.

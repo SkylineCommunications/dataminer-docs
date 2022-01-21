@@ -1,3 +1,7 @@
+---
+uid: Keeping_a_database_table_from_being_checked_during_an_upgrade
+---
+
 # Keeping a database table from being checked during an upgrade
 
 When you perform an upgrade of the DataMiner Agent software, by default, all database tables are automatically checked and, if necessary, optimized and/or repaired.

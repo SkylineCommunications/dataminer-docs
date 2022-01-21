@@ -1,3 +1,7 @@
+---
+uid: Using_the_right-click_menu
+---
+
 ## Using the right-click menu
 
 When you right-click anywhere in the trend graph window, a shortcut menu appears, containing the following commands:

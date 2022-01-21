@@ -1,3 +1,7 @@
+---
+uid: Displaying_alarm_template_colors_in_trend_graphs
+---
+
 ## Displaying alarm template colors in trend graphs
 
 In the user settings, you can configure the way alarm severity levels are shown in trend graphs.

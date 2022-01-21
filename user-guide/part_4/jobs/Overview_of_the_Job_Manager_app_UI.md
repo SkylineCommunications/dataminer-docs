@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_Job_Manager_app_UI
+---
+
 # Overview of the Job Manager app UI
 
 You can access the Jobs Manager app via the link https://\[MyDataMiner\]/Jobs or http://\[MyDataMiner\]/Jobs, depending on your setup. The app is also available via a link on the DataMiner landing page.

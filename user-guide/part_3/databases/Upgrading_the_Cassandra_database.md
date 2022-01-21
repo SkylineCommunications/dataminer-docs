@@ -1,3 +1,7 @@
+---
+uid: Upgrading_the_Cassandra_database
+---
+
 ## Upgrading the Cassandra database
 
 To upgrade the Cassandra database:

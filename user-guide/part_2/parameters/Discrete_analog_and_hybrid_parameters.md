@@ -1,3 +1,7 @@
+---
+uid: Discrete_analog_and_hybrid_parameters
+---
+
 ## Discrete, analog and hybrid parameters
 
 #### Discrete parameters

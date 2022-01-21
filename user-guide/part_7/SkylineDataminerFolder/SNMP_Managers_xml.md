@@ -1,3 +1,7 @@
+---
+uid: SNMP_Managers_xml
+---
+
 ## SNMP Managers.xml
 
 The file *SNMP Managers.xml* is used for the configuration of remote SNMP Managers.

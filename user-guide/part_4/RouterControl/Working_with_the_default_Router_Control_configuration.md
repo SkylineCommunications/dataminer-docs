@@ -1,3 +1,7 @@
+---
+uid: Working_with_the_default_Router_Control_configuration
+---
+
 # Working with the default Router Control configuration
 
 To open the *Router Control* module:

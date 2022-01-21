@@ -1,3 +1,7 @@
+---
+uid: Collaboration
+---
+
 # Project Collaboration
 
 In this section:

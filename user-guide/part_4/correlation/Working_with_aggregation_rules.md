@@ -1,3 +1,7 @@
+---
+uid: Working_with_aggregation_rules
+---
+
 # Working with aggregation rules
 
 This section consists of the following topics:

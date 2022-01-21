@@ -1,3 +1,7 @@
+---
+uid: Updating_the_value_of_a_write_parameter
+---
+
 # Updating the value of a write parameter
 
 The way you can change the value of a write parameter depends on the type of parameter:

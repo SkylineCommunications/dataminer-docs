@@ -1,3 +1,7 @@
+---
+uid: RedundancyGroupFilter_methods
+---
+
 ## RedundancyGroupFilter methods
 
 - [ByID](#byid)

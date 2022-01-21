@@ -1,3 +1,7 @@
+---
+uid: UIBuilder_methods
+---
+
 ## UIBuilder methods
 
 - [Append](#append)

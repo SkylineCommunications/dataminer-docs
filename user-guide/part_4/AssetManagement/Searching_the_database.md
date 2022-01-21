@@ -1,3 +1,7 @@
+---
+uid: Searching_the_database
+---
+
 ## Searching the database
 
 To search the entire database for a particular word:

@@ -1,3 +1,7 @@
+---
+uid: Setting_the_SLA_start_and_end_time
+---
+
 ## Setting the SLA start and end time
 
 To set the start and end time for the period during which the SLA is valid, do the following:

@@ -1,3 +1,7 @@
+---
+uid: General_database
+---
+
 # General database
 
 The general database, also known as “local database”, is the main database used by a DataMiner Agent to store its data.

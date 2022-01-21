@@ -1,3 +1,7 @@
+---
+uid: Alarm_types
+---
+
 ## Alarm types
 
 Several types of alarms exist in DataMiner. In addition to five alarm severity levels, there are also a number of special alarm types.

@@ -1,3 +1,7 @@
+---
+uid: Accessing_DMS_Alerter
+---
+
 # Accessing DMS Alerter
 
 #### Installing the software

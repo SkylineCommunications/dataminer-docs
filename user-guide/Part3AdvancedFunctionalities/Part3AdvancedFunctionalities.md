@@ -1,3 +1,7 @@
+---
+uid: Part3AdvancedFunctionalities
+---
+
 # Advanced DataMiner functionality for administrators
 
 - [DataMiner Agents](../part_3/DataminerAgents/DataminerAgents.md#dataminer-agents)

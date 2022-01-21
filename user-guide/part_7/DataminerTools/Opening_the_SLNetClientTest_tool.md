@@ -1,3 +1,7 @@
+---
+uid: Opening_the_SLNetClientTest_tool
+---
+
 ## Opening the SLNetClientTest tool
 
 There are two ways to open the SLNetClientTest tool:

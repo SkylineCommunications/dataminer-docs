@@ -1,3 +1,7 @@
+---
+uid: Connecting_spectrum_analyzers_to_your_DataMiner_System
+---
+
 ## Connecting spectrum analyzers to your DataMiner System
 
 Spectrum analyzers are usually connected to a DataMiner System via a GPIB gateway.

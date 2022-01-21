@@ -1,3 +1,7 @@
+---
+uid: Checking_the_current_state_of_a_redundancy_group
+---
+
 # Checking the current state of a redundancy group
 
 The *State and mode* section of a redundancy group card shows its current state:

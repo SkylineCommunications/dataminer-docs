@@ -1,3 +1,7 @@
+---
+uid: ConnectionSettings_txt
+---
+
 ## ConnectionSettings.txt
 
 This file contains default connection settings to be used by DataMiner client applications when connecting from specific IP addresses.

@@ -1,3 +1,7 @@
+---
+uid: General_script_configuration
+---
+
 ## General script configuration
 
 In the *General* section of the details pane, general information and options can be configured for a script. To view the options, click the downwards arrow next to *Show details*.

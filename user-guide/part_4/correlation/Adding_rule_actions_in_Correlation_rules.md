@@ -1,3 +1,7 @@
+---
+uid: Adding_rule_actions_in_Correlation_rules
+---
+
 # Adding rule actions in Correlation rules
 
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to add rule actions to it in the details pane on the right.

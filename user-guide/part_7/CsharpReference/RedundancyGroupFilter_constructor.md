@@ -1,3 +1,7 @@
+---
+uid: RedundancyGroupFilter_constructor
+---
+
 ## RedundancyGroupFilter constructor
 
 ```txt

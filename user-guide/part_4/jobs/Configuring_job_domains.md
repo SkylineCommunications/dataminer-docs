@@ -1,3 +1,7 @@
+---
+uid: Configuring_job_domains
+---
+
 ## Configuring job domains
 
 From DataMiner 10.0.9 onwards, different job domains can be configured, each with its own job section configuration.

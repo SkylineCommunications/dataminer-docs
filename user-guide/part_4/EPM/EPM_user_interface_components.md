@@ -1,3 +1,7 @@
+---
+uid: EPM_user_interface_components
+---
+
 ## EPM user interface components
 
 The interface usually consists of the following components:

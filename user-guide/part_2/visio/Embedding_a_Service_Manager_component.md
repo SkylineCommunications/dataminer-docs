@@ -1,3 +1,7 @@
+---
+uid: Embedding_a_Service_Manager_component
+---
+
 ## Embedding a Service Manager component
 
 From DataMiner 9.5.4 onwards, for systems with the appropriate licenses, it is possible to embed a Service Manager component in Visio. With this component, you can essentially embed the *Services* app in Visio.

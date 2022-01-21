@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_DataMiner_Agent
+---
+
 # Configuring a DataMiner Agent
 
 This section consists of the following topics:

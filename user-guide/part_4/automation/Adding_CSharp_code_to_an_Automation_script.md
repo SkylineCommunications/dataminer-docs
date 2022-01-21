@@ -1,3 +1,7 @@
+---
+uid: Adding_CSharp_code_to_an_Automation_script
+---
+
 ## Adding CSharp code to an Automation script
 
 In this section:

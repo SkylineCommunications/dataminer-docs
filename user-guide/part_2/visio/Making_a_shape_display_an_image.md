@@ -1,3 +1,7 @@
+---
+uid: Making_a_shape_display_an_image
+---
+
 ## Making a shape display an image
 
 Using a shape data field of type **Link**, you can make a shape display an image located on a web server or a DMA.

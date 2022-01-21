@@ -1,3 +1,7 @@
+---
+uid: Elements_logging
+---
+
 ## Elements logging
 
 The *Elements* page shows the log information for the various elements in the DMS.

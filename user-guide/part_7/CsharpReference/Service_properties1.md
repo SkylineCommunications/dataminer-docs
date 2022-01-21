@@ -1,3 +1,7 @@
+---
+uid: Service_properties1
+---
+
 ## Service properties
 
 #### DmaId

@@ -1,3 +1,7 @@
+---
+uid: Configuring_dashboard_access_rights
+---
+
 ## Configuring dashboard access rights
 
 To configure access to dashboards:

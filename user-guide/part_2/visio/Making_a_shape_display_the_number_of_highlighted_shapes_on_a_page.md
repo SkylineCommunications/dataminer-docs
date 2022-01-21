@@ -1,3 +1,7 @@
+---
+uid: Making_a_shape_display_the_number_of_highlighted_shapes_on_a_page
+---
+
 ## Making a shape display the number of highlighted shapes on a page
 
 In a Visio drawing, you can have a shape display the number of shapes on the page that are either highlighted or not.

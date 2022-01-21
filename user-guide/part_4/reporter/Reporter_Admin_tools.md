@@ -1,3 +1,7 @@
+---
+uid: Reporter_Admin_tools
+---
+
 # Reporter Admin tools
 
 The Reporter app has a tools page containing options and information that can be useful to troubleshoot DMS Reporter.

@@ -1,3 +1,7 @@
+---
+uid: Element_properties1
+---
+
 ## Element properties
 
 - [DmaId](#dmaid)

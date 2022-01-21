@@ -1,3 +1,7 @@
+---
+uid: Adding_a_service
+---
+
 # Adding a service
 
 > [!TIP]

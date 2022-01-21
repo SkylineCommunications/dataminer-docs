@@ -1,3 +1,7 @@
+---
+uid: Communication_logging
+---
+
 ## Communication logging
 
 The *Communication* page shows the log information regarding communication between client and server

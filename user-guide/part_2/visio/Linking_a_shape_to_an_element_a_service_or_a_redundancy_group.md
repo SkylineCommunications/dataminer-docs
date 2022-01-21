@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_an_element_a_service_or_a_redundancy_group
+---
+
 ## Linking a shape to an element, a service or a redundancy group
 
 Using a shape data field of type **Element**, you can link a shape to an element, a service or a redundancy group.

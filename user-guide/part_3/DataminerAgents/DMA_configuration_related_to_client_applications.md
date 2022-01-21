@@ -1,3 +1,7 @@
+---
+uid: DMA_configuration_related_to_client_applications
+---
+
 ## DMA configuration related to client applications
 
 This section consists of the following topics:

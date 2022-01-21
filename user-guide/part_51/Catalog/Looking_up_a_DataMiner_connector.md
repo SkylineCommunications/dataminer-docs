@@ -1,3 +1,7 @@
+---
+uid: Looking_up_a_DataMiner_connector
+---
+
 # Looking up a DataMiner connector
 
 When you open up the Catalog module, a search box is displayed.

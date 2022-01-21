@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_resource
+---
+
 ## Linking a shape to a resource
 
 From DataMiner 10.2.0/10.1.10 onwards, it is possible to link an **Element** shape to the last-known resource using that element.

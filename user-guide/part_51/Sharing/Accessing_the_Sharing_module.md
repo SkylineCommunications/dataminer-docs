@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_Sharing_module
+---
+
 # Accessing the Sharing module
 
 1. Open an internet browser (other than Microsoft Internet Explorer), go to

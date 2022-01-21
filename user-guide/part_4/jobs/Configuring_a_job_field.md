@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_job_field
+---
+
 ## Configuring a job field
 
 When you are configuring a job section, you can edit or create job fields. See [Configuring job sections](Configuring_job_sections.md).

@@ -1,3 +1,7 @@
+---
+uid: Moving_MySQL_data_to_another_location
+---
+
 ## Moving MySQL data to another location
 
 If you want to move the MySQL data directory to another location, you cannot just copy the data from one directory to another. You also have to change a number of settings in both the MySQL Administrator and the my.ini file.

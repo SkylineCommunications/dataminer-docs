@@ -1,3 +1,7 @@
+---
+uid: Grouping_shapes
+---
+
 ## Grouping shapes
 
 If, in a Visio drawing, you have to link more than one shape to the same element, view or service, then first group those shapes, and then specify shape data of type **Element**, **View** or **Service** on group level. This will considerably enhance performance.

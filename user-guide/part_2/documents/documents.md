@@ -1,3 +1,7 @@
+---
+uid: documents
+---
+
 # Documents
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: Provisioning
+---
+
 ## Provisioning
 
 On the *Provisioning* subtab of the *Admin* tab, you can verify and configure which DMAs can host devices in particular IP ranges. The provisioning API can then create new devices on specific DMAs based on their IP.

@@ -1,3 +1,7 @@
+---
+uid: ScriptParam_methods
+---
+
 ## ScriptParam methods
 
 #### SetParamValue

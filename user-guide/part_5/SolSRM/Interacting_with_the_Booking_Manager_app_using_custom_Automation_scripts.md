@@ -1,3 +1,7 @@
+---
+uid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
+---
+
 # Interacting with the Booking Manager app using custom Automation scripts
 
 Many functionalities of the Booking Manager app are also available via scripts. Custom Automation scripts can be used to perform actions such as defining bookings, finishing bookings, etc. without any user interaction.

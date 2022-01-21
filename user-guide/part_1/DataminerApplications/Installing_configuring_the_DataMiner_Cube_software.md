@@ -1,3 +1,7 @@
+---
+uid: Installing_configuring_the_DataMiner_Cube_software
+---
+
 ## Installing & configuring the DataMiner Cube software
 
 DataMiner Cube can either be used as a desktop application (recommended) or as a browser application in Internet Explorer or Edge. If you browse to the IP or name of your DMA using Google Chrome, Microsoft Edge (without IE compatibility mode), Mozilla Firefox or Safari, by default a landing page is displayed where you can download the desktop application. See [Installing the DataMiner Cube desktop application](#installing-the-dataminer-cube-desktop-application).

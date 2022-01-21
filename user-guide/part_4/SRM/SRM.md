@@ -1,3 +1,7 @@
+---
+uid: SRM
+---
+
 # Service and Resource Management
 
 DataMiner Service & Resource Management (SRM) is available from DataMiner 9.5.4 onwards.

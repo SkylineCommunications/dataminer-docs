@@ -1,3 +1,7 @@
+---
+uid: Editing_a_dashboard1
+---
+
 ## Editing a dashboard
 
 To edit a dashboard:

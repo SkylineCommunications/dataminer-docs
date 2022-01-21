@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_the_alarm_state_of_a_Data_Display_page
+---
+
 ## Linking a shape to the alarm state of a Data Display page
 
 If you have linked a shape to an element, that shape can be set to indicate the current alarm state of a particular Data Display page of that element.

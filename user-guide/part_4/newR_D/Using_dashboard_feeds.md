@@ -1,3 +1,7 @@
+---
+uid: Using_dashboard_feeds
+---
+
 # Using dashboard feeds
 
 Many dashboard components can be configured to be linked to a feed, so that their content can be dynamically adjusted by the users.

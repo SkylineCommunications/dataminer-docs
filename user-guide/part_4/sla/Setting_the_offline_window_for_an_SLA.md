@@ -1,3 +1,7 @@
+---
+uid: Setting_the_offline_window_for_an_SLA
+---
+
 ## Setting the offline window for an SLA
 
 It is possible to define a recurring window during which the service will be considered offline. Alarms raised during that window will not affect the SLA, except those associated with parameters that have explicitly been allowed to disregard the offline window settings.

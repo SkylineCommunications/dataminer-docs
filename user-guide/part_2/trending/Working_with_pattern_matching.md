@@ -1,3 +1,7 @@
+---
+uid: Working_with_pattern_matching
+---
+
 ## Working with pattern matching
 
 From DataMiner 10.0.7 onwards, on systems using a Cassandra database and DataMiner Indexing, DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, patterns need to be marked with so-called tags.

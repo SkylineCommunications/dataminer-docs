@@ -1,3 +1,7 @@
+---
+uid: EmailOptions_class
+---
+
 # EmailOptions class
 
 Below, you can find an overview of all members of the *EmailOptions* class.

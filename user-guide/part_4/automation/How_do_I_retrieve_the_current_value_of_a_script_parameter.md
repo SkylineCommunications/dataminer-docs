@@ -1,3 +1,7 @@
+---
+uid: How_do_I_retrieve_the_current_value_of_a_script_parameter
+---
+
 ## How do I retrieve the current value of a script parameter?
 
 You can retrieve the current value of a script parameter in C# by means of the *GetScriptParam* method of the engine object.

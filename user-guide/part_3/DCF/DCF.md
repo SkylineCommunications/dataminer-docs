@@ -1,3 +1,7 @@
+---
+uid: DCF
+---
+
 # DataMiner Connectivity Framework
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: Compiling_a_CSharp_code_block_as_a_library
+---
+
 ## Compiling a CSharp code block as a library
 
 From DataMiner 9.6.13 onwards, it is possible to have a C# code block in an Automation script in Cube compiled as a separate library.

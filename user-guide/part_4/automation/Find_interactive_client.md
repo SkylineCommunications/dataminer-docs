@@ -1,3 +1,7 @@
+---
+uid: Find_interactive_client
+---
+
 ## Find interactive client
 
 Use this action to ask an interactive user to attach to the script. In a message box, the user will be asked to choose between the following two options:

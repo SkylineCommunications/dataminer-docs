@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointType_methods
+---
+
 ## AutomationEntryPointType methods
 
 #### Equals(Object)

@@ -1,3 +1,7 @@
+---
+uid: Backing_up_a_DataMiner_Agent
+---
+
 # Backing up a DataMiner Agent
 
 This section consists of the following topics:

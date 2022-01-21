@@ -1,3 +1,7 @@
+---
+uid: ScriptDummy_class
+---
+
 # ScriptDummy class
 
 The *ScriptDummy* class exposes the same members as the *Element* class.

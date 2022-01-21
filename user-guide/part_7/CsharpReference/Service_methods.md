@@ -1,3 +1,7 @@
+---
+uid: Service_methods
+---
+
 ## Service methods
 
 #### GetPropertyValue

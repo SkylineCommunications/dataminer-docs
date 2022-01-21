@@ -1,3 +1,7 @@
+---
+uid: Configuring_SLA_Compliance
+---
+
 ## Configuring SLA Compliance
 
 To configure how many violations are allowed in an SLA or what duration these may have, it is necessary to configure SLA Compliance.

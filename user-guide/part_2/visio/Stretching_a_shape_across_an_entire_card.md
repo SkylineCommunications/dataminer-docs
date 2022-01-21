@@ -1,3 +1,7 @@
+---
+uid: Stretching_a_shape_across_an_entire_card
+---
+
 ## Stretching a shape across an entire card
 
 A shape can be stretched across the entire card surface.

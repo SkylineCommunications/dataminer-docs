@@ -1,3 +1,7 @@
+---
+uid: Creating_an_information_template
+---
+
 ## Creating an information template
 
 For every protocol in your DataMiner System, you can create custom information templates. When set as the active information template, a custom information template will override the default information template, which is defined in the *Protocol.xml* file itself.

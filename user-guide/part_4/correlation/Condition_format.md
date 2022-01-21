@@ -1,3 +1,7 @@
+---
+uid: Condition_format
+---
+
 ## Condition format
 
 A script condition in a Correlation rule should use the following format:

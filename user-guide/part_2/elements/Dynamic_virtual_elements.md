@@ -1,3 +1,7 @@
+---
+uid: Dynamic_virtual_elements
+---
+
 ## Dynamic virtual elements
 
 For cases where a large number of elements are combined, a dynamic virtual element (DVE) can be created. This can for instance be when numerous cards are contained in one chassis and every card should be a separate element.

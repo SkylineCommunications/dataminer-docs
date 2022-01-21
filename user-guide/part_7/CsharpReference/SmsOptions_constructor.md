@@ -1,3 +1,7 @@
+---
+uid: SmsOptions_constructor
+---
+
 ## SmsOptions constructor
 
 ```txt

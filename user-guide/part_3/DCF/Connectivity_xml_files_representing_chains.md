@@ -1,3 +1,7 @@
+---
+uid: Connectivity_xml_files_representing_chains
+---
+
 ## Connectivity.xml files representing chains
 
 To configure connectivity chains:

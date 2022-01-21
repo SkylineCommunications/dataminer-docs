@@ -1,3 +1,7 @@
+---
+uid: Managing_data_in_the_database_with_DMS_Inventory_and_Asset_Management
+---
+
 # Managing data in the database with DMS Inventory and Asset Management
 
 Users can add, change and delete rows in CMDB tables if they have write access to those tables.

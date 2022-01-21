@@ -1,3 +1,7 @@
+---
+uid: Making_a_shape_display_information_about_the_item_it_is_linked_to
+---
+
 ## Making a shape display information about the item it is linked to
 
 Using a shape data field of type **Info**, you can make shapes display information about the item to which they are linked:

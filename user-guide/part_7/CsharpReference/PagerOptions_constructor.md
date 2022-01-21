@@ -1,3 +1,7 @@
+---
+uid: PagerOptions_constructor
+---
+
 ## PagerOptions constructor
 
 ```txt

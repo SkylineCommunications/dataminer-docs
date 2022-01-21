@@ -1,3 +1,7 @@
+---
+uid: Viewing_the_reports_page_on_a_card
+---
+
 # Viewing the reports page on a card
 
 Many cards in DataMiner Cube have a *Reports* page. To go to this page:

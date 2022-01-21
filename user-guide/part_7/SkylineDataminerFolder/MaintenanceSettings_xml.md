@@ -1,3 +1,7 @@
+---
+uid: MaintenanceSettings_xml
+---
+
 ## MaintenanceSettings.xml
 
 In the file *MaintenanceSettings.xml*, you can specify a number of general system settings.

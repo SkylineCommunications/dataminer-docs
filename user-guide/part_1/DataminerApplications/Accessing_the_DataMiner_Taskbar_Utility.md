@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_DataMiner_Taskbar_Utility
+---
+
 # Accessing the DataMiner Taskbar Utility
 
 #### Installing the Taskbar Utility

@@ -1,3 +1,7 @@
+---
+uid: Configuring_external_authentication_via_an_identity_provider_using_SAML
+---
+
 # Configuring external authentication via an identity provider using SAML
 
 From DataMiner 9.6.11 onwards, it is possible to configure external authentication via an identity provider service using SAML (Security Assertion Markup Language).

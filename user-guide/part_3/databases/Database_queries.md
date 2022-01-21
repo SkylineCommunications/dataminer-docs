@@ -1,3 +1,7 @@
+---
+uid: Database_queries
+---
+
 # Database queries
 
 This section consists of the following topics:

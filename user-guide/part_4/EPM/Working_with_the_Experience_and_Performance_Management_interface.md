@@ -1,3 +1,7 @@
+---
+uid: Working_with_the_Experience_and_Performance_Management_interface
+---
+
 # Working with the Experience and Performance Management interface
 
 The user interface of an EPM element (formerly known as CPE Manager) can be very different depending on the protocol used. However, there are some aspects that return for all EPM elements. These are detailed in the following topics:

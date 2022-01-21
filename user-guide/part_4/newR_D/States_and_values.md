@@ -1,3 +1,7 @@
+---
+uid: States_and_values
+---
+
 ## States and values
 
 This category contains the following visualizations:

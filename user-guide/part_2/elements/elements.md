@@ -1,3 +1,7 @@
+---
+uid: elements
+---
+
 # Elements
 
 All basic devices in a DMS are called elements. There are different kinds of elements, which can be grouped in views or services. The following sections provide more information on DataMiner elements:

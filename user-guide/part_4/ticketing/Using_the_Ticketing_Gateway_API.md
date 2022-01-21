@@ -1,3 +1,7 @@
+---
+uid: Using_the_Ticketing_Gateway_API
+---
+
 # Using the Ticketing Gateway API
 
 The Ticketing Gateway API allows you to integrate any third-party ticketing system into DataMiner. Using the methods in this API, you can create and manage tickets of any type.

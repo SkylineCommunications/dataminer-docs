@@ -1,3 +1,7 @@
+---
+uid: Interaction_between_SNMP_manager_and_SNMP_agent
+---
+
 ## Interaction between SNMP manager and SNMP agent
 
 The SLSNMPManager and SLSNMPAgent processes allow a DataMiner Agent to exchange SNMP messages with devices and third-party SNMP managers.

@@ -1,3 +1,7 @@
+---
+uid: MailReportParameterFlags_enumeration
+---
+
 # MailReportParameterFlags enumeration
 
 Specifies the mail report parameter flags.

@@ -1,3 +1,7 @@
+---
+uid: ScriptMemory_constructor
+---
+
 ## ScriptMemory constructor
 
 ```txt

@@ -1,3 +1,7 @@
+---
+uid: Installing_a_DMS_Dashboard_Gateway
+---
+
 ## Installing a DMS Dashboard Gateway
 
 For a Dashboard Gateway to function correctly, an additional Windows component, Internet Information Services, must also be installed. On some Windows versions this is installed by default, but on others you will need to install it yourself.

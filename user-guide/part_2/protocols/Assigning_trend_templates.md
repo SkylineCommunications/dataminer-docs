@@ -1,3 +1,7 @@
+---
+uid: Assigning_trend_templates
+---
+
 ## Assigning trend templates
 
 You can either assign a trend template to an item with the Surveyor right-click menu, or in the Protocols & Templates module.

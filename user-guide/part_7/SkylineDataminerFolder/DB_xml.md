@@ -1,3 +1,7 @@
+---
+uid: DB_xml
+---
+
 ## DB.xml
 
 In the file *DB.xml*, you can specify the configuration data for several databases used by the DataMiner System:

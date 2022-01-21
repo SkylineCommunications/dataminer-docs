@@ -1,3 +1,7 @@
+---
+uid: Elements1
+---
+
 ## Elements
 
 The *C:\\Skyline DataMiner\\Elements\\* directory contains a subdirectory for every element on the DMA.

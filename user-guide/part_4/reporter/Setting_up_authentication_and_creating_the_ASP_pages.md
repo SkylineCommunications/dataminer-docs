@@ -1,3 +1,7 @@
+---
+uid: Setting_up_authentication_and_creating_the_ASP_pages
+---
+
 ## Setting up authentication and creating the ASP pages
 
 Do the following if you want to be able to show DataMiner report components on webpages by means of \<img> tags:

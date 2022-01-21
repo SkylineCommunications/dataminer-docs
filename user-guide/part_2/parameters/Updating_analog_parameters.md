@@ -1,3 +1,7 @@
+---
+uid: Updating_analog_parameters
+---
+
 ## Updating analog parameters
 
 For analog parameters, a box is displayed with a slider control. To update the parameter:

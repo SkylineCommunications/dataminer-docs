@@ -1,3 +1,7 @@
+---
+uid: SRM_reporting
+---
+
 # SRM reporting
 
 From DataMiner 9.5.4 onwards, an additional tab is available on the Reporter home page allowing you to view bookings. In addition, a dedicated component is available for custom reports.

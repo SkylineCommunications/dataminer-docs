@@ -1,3 +1,7 @@
+---
+uid: EmailOptions_constructors
+---
+
 ## EmailOptions constructors
 
 ```txt

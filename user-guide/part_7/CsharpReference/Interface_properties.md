@@ -1,3 +1,7 @@
+---
+uid: Interface_properties
+---
+
 ## Interface properties
 
 - [CustomName](#customname)

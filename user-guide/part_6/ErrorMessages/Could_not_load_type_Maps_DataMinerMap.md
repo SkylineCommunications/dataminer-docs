@@ -1,3 +1,7 @@
+---
+uid: Could_not_load_type_Maps_DataMinerMap
+---
+
 # Could not load type Maps.DataMinerMap
 
 If you receive a parser error message when trying to display a DataMiner Map, the problem is probably due to the Maps folder of the DMA’s default website not having been converted to an application yet.

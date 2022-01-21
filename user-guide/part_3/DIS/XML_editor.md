@@ -1,3 +1,7 @@
+---
+uid: XML_editor
+---
+
 # XML editor
 
 If you open a protocol XML file or an Automation script XML file in Microsoft Visual Studio, or if you create a new file from scratch, that file will appear in a customized file tab.

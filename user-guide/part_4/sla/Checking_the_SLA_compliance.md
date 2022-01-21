@@ -1,3 +1,7 @@
+---
+uid: Checking_the_SLA_compliance
+---
+
 ## Checking the SLA compliance
 
 To view more information on SLA compliance, check the section *Compliance Info* on the *Main View* page of the SLA element. There you will find the following information:

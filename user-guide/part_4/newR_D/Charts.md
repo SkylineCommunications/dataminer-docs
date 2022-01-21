@@ -1,3 +1,7 @@
+---
+uid: Charts
+---
+
 ## Charts
 
 This category contains the following visualizations:

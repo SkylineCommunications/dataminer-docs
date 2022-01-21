@@ -1,3 +1,7 @@
+---
+uid: Icons
+---
+
 ## Icons
 
 The *C:\\Skyline DataMiner\\Icons\\* directory contains any custom icons that have been configured for elements, services, redundancy groups and views, as well as rules that dictate when they should be displayed.

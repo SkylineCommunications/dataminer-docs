@@ -1,3 +1,7 @@
+---
+uid: Alarm_hysteresis
+---
+
 ## Alarm hysteresis
 
 Thanks to alarm threshold hysteresis, you can fine-tune the sensitivity of your alarm thresholds by defining how long a parameter has to be below or above a certain threshold before the DataMiner System is allowed to consider it as being below or above that threshold.

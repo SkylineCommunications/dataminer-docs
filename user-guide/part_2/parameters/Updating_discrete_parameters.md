@@ -1,3 +1,7 @@
+---
+uid: Updating_discrete_parameters
+---
+
 ## Updating discrete parameters
 
 In case the discrete parameter only has two possible values, it will have a toggle control:

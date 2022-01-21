@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_DataMiner_PTP_app_UI
+---
+
 ## Overview of the DataMiner PTP app UI
 
 In DataMiner Cube’s navigation pane, the DataMiner PTP app is available in the *Applications* section of the *Apps* tab.

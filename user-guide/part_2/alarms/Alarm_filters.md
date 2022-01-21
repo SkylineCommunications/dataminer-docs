@@ -1,3 +1,7 @@
+---
+uid: Alarm_filters
+---
+
 ## Alarm filters
 
 DataMiner uses the same standard filters throughout the system:

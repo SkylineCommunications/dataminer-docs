@@ -1,3 +1,7 @@
+---
+uid: Part6Troubleshooting
+---
+
 # Troubleshooting
 
 - [Frequently asked questions](../part_6/faq/faq.md#frequently-asked-questions)

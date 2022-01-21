@@ -1,3 +1,7 @@
+---
+uid: Trend_templates
+---
+
 # Trend templates
 
 This section consists of the following topics:

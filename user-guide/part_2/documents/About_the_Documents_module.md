@@ -1,3 +1,7 @@
+---
+uid: About_the_Documents_module
+---
+
 # About the Documents module
 
 The *Documents* module allows you to integrate documents in DataMiner. This way, you can access relevant information about the elements and services in your system at any time.

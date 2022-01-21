@@ -1,3 +1,7 @@
+---
+uid: Excluding_alarms_that_affect_the_SLA
+---
+
 ## Excluding alarms that affect the SLA
 
 It is also possible to keep a currently active alarm from being included in the SLA calculation. This can be done as follows:

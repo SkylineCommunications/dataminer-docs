@@ -1,3 +1,7 @@
+---
+uid: Enforcing_motivation_of_alarm_actions
+---
+
 ## Enforcing motivation of alarm actions
 
 For specific alarm actions (mask, unmask, clear, etc.), you can specify that users must motivate their intention to take that action before they are allowed to proceed. As those user motivations are stored in alarm properties, all settings with regard to alarm action motivation requests have to be configured in the *PropertyConfiguration.xml* file, located in the folder *C:\\Skyline DataMiner*.

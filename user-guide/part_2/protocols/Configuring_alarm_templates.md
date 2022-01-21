@@ -1,3 +1,7 @@
+---
+uid: Configuring_alarm_templates
+---
+
 ## Configuring alarm templates
 
 In this section:

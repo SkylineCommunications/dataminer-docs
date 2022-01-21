@@ -1,3 +1,7 @@
+---
+uid: SmsOptions_class
+---
+
 # SmsOptions class
 
 Below, you can find an overview of the members of the *SmsOptions* class.

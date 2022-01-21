@@ -1,3 +1,7 @@
+---
+uid: DIS
+---
+
 # DataMiner Integration Studio
 
 Version: 2.34

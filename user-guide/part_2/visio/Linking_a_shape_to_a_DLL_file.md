@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_DLL_file
+---
+
 ## Linking a shape to a DLL file
 
 Using a shape data field of type **Execute**, you can link a shape to one or more DLL files.

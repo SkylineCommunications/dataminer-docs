@@ -1,3 +1,7 @@
+---
+uid: Changing_the_default_alarm_colors
+---
+
 ## Changing the default alarm colors
 
 In the *DataMiner.xml* file, you can specify the colors you want to assign to each of the alarm states:

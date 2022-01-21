@@ -1,3 +1,7 @@
+---
+uid: Triggering_an_action_when_a_shape_is_dragged_onto_another_shape
+---
+
 ## Triggering an action when a shape is dragged onto another shape
 
 A shape can be set to perform a particular action when another shape is dropped onto it.

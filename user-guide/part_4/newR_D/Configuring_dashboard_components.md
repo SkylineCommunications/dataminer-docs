@@ -1,3 +1,7 @@
+---
+uid: Configuring_dashboard_components
+---
+
 ## Configuring dashboard components
 
 Each dashboard component consists of a visualization and a data feed.

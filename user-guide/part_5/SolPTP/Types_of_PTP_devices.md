@@ -1,3 +1,7 @@
+---
+uid: Types_of_PTP_devices
+---
+
 ## Types of PTP devices
 
 The DataMiner PTP app currently supports the following types of devices:

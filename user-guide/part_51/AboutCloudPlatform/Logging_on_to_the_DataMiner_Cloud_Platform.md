@@ -1,3 +1,7 @@
+---
+uid: Logging_on_to_the_DataMiner_Cloud_Platform
+---
+
 # Logging on to the DataMiner Cloud Platform
 
 ### Customers and DataMiner Strategic Partners

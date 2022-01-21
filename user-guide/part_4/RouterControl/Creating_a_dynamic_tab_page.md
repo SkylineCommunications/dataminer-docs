@@ -1,3 +1,7 @@
+---
+uid: Creating_a_dynamic_tab_page
+---
+
 ## Creating a dynamic tab page
 
 From DataMiner version 9.0.5 onwards, it is possible to link a tab page to a particular tab of a matrix, so that the contents of the linked matrix page will automatically appear on that tab page.

@@ -1,3 +1,7 @@
+---
+uid: TableSourceInfo
+---
+
 ## TableSourceInfo
 
 In the *\<TableSourceInfo>* tag, you have to specify the dynamic table from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.

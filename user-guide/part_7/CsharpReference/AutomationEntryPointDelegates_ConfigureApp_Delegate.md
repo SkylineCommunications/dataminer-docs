@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointDelegates_ConfigureApp_Delegate
+---
+
 ## AutomationEntryPointDelegates.ConfigureApp Delegate
 
 Delegate type for App package configuration.

@@ -1,3 +1,7 @@
+---
+uid: Changing_the_maximum_size_of_DataMiner_log_files
+---
+
 ## Changing the maximum size of DataMiner log files
 
 You can change the maximum total size of the log files on a DMA in System Center:

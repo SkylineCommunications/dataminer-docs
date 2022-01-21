@@ -1,3 +1,7 @@
+---
+uid: SpectrumPreset_methods
+---
+
 ## SpectrumPreset methods
 
 - [GetCenterFrequency](#getcenterfrequency)

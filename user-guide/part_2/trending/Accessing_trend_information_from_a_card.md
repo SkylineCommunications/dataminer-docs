@@ -1,3 +1,7 @@
+---
+uid: Accessing_trend_information_from_a_card
+---
+
 ## Accessing trend information from a card
 
 On the data side of element cards, service cards and (for aggregation) view cards, trended parameters are indicated with a trending icon.

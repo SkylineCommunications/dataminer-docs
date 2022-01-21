@@ -1,3 +1,7 @@
+---
+uid: DataMiner_Cube_tips_tricks
+---
+
 ## DataMiner Cube tips & tricks
 
 This section lists tips and tricks on how to use DataMiner Cube, including the tips displayed on the DataMiner Pulse homepage.

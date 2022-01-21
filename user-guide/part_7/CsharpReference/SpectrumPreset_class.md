@@ -1,3 +1,7 @@
+---
+uid: SpectrumPreset_class
+---
+
 # SpectrumPreset class
 
 Below, you can find an overview of all members of the *SpectrumPreset* class.

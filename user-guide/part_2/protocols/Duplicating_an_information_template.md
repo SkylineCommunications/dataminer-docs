@@ -1,3 +1,7 @@
+---
+uid: Duplicating_an_information_template
+---
+
 ## Duplicating an information template
 
 Instead of creating a custom information template from scratch, you can also duplicate an existing one and edit it afterwards.

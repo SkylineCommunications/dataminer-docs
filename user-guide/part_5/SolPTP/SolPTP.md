@@ -1,3 +1,7 @@
+---
+uid: SolPTP
+---
+
 # DataMiner PTP app
 
 The DataMiner PTP app allows you to monitor a PTP stack in real time. It provides an overview of all PTP nodes and their roles, constantly monitors important PTP metrics and statistics of grandmaster clocks, boundary clocks and PTP slave devices, and allows you to identify any change in the PTP environment.

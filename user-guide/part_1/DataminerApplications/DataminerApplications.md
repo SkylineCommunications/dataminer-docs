@@ -1,3 +1,7 @@
+---
+uid: DataminerApplications
+---
+
 # Accessing DataMiner
 
 Several applications are available to access DataMiner: in addition to the main client application, there are numerous other applications with more limited functionality.

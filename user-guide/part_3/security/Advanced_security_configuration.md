@@ -1,3 +1,7 @@
+---
+uid: Advanced_security_configuration
+---
+
 # Advanced security configuration
 
 In this section:

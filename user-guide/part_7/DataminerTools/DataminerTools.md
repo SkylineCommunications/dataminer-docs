@@ -1,3 +1,7 @@
+---
+uid: DataminerTools
+---
+
 # Tools
 
 This section provides information on the following tools:

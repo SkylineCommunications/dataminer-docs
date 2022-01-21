@@ -1,3 +1,7 @@
+---
+uid: Advanced_protocol_functionality
+---
+
 ## Advanced protocol functionality
 
 ### Generating a protocol-specific MIB

@@ -1,3 +1,7 @@
+---
+uid: Synchronizing_data_between_DataMiner_Agents
+---
+
 ## Synchronizing data between DataMiner Agents
 
 In normal circumstances, the information on all DMAs in a cluster is synchronized at midnight. However, it may be necessary to force a synchronization earlier, either partially or completely.

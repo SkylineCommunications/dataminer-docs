@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_different_subfolders
+---
+
 # Overview of the different subfolders
 
 | Subdirectory              | Contents                                                                                                                                                                               | Synchronized?                      |

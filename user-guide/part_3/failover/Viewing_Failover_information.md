@@ -1,3 +1,7 @@
+---
+uid: Viewing_Failover_information
+---
+
 # Viewing Failover information
 
 This section consists of the following topics:

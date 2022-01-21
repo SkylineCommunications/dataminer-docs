@@ -1,3 +1,7 @@
+---
+uid: SyncRules_xml
+---
+
 ## SyncRules.xml
 
 From DataMiner version 8.5.5 onwards, the *SyncRules.xml* file is used to prevent file synchronization between DataMiner Agents running different versions of the DataMiner software.

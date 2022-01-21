@@ -1,3 +1,7 @@
+---
+uid: Designing_a_matrix_tab_page_in_the_Router_Control_module
+---
+
 ## Designing a matrix tab page in the Router Control module
 
 This section consists of the following topics:

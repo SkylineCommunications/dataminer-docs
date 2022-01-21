@@ -1,3 +1,7 @@
+---
+uid: Configuring_profile_parameters
+---
+
 ## Configuring profile parameters
 
 The parameters in a profile definition are linked to one or more parameters of existing DataMiner protocols. This way, if different protocols have conceptually identical parameters (e.g. “bit rate”), these can be linked to one and the same parameter in the *Profiles* module.

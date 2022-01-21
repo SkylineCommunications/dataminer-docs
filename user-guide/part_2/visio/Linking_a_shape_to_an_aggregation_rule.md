@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_an_aggregation_rule
+---
+
 ## Linking a shape to an aggregation rule
 
 From DataMiner 9.0.2 onwards, it is possible to display aggregated parameter values in Visual Overview by linking shapes to aggregation rules.

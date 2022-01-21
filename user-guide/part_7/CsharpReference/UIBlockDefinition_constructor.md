@@ -1,3 +1,7 @@
+---
+uid: UIBlockDefinition_constructor
+---
+
 ## UIBlockDefinition constructor
 
 ```txt

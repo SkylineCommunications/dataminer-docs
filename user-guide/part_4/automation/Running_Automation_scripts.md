@@ -1,3 +1,7 @@
+---
+uid: Running_Automation_scripts
+---
+
 # Running Automation scripts
 
 Once a script has been designed, it can be executed in several ways:

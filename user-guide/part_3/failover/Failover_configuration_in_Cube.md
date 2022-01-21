@@ -1,3 +1,7 @@
+---
+uid: Failover_configuration_in_Cube
+---
+
 ## Failover configuration in Cube
 
 > [!TIP]

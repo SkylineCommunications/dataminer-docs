@@ -1,3 +1,7 @@
+---
+uid: Using_the_EPM_filter_section
+---
+
 ## Using the EPM filter section
 
 You can drill down to specific information by means of the filter section:

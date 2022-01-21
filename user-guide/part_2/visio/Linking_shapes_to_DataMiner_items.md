@@ -1,3 +1,7 @@
+---
+uid: Linking_shapes_to_DataMiner_items
+---
+
 # Linking shapes to DataMiner items
 
 Shapes in Visio can be linked to a multitude of DataMiner items, ranging from DataMiner elements or views to specific commands or files, webpages, scripts and more.

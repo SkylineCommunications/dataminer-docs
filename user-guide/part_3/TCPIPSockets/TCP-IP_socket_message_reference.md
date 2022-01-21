@@ -1,3 +1,7 @@
+---
+uid: TCP-IP_socket_message_reference
+---
+
 # TCP-IP socket message reference
 
 In this section:

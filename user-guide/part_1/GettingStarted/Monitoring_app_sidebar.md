@@ -1,3 +1,7 @@
+---
+uid: Monitoring_app_sidebar
+---
+
 ## Monitoring app sidebar
 
 > [!NOTE]

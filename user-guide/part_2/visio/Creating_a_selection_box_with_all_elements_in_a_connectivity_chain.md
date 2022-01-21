@@ -1,3 +1,7 @@
+---
+uid: Creating_a_selection_box_with_all_elements_in_a_connectivity_chain
+---
+
 ## Creating a selection box with all elements in a connectivity chain
 
 When connectivity has been defined in a drawing, you can turn a shape into a selection box containing all elements in the connectivity chain.

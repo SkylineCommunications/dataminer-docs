@@ -1,3 +1,7 @@
+---
+uid: trending
+---
+
 # Trending
 
 With DMS trend graphs, you can view and compare trend data logged by the DataMiner System.

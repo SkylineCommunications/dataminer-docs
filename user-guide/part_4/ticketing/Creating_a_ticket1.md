@@ -1,3 +1,7 @@
+---
+uid: Creating_a_ticket1
+---
+
 # Creating a ticket
 
 You can create a ticket both from within the Ticketing app and from the Surveyor or Alarm Console.

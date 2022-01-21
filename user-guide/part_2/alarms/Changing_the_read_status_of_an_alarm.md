@@ -1,3 +1,7 @@
+---
+uid: Changing_the_read_status_of_an_alarm
+---
+
 ## Changing the read status of an alarm
 
 A new, “unread” alarm record shows up in the Alarm Console in bold typeface. As soon as you select it for more than two seconds, it is considered “read” and subsequently loses its bold typeface.

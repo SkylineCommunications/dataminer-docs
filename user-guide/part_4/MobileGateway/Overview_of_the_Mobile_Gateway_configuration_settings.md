@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_Mobile_Gateway_configuration_settings
+---
+
 ## Overview of the Mobile Gateway configuration settings
 
 In the table below, you can find an alphabetical list of the possible settings in the file *C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml*.

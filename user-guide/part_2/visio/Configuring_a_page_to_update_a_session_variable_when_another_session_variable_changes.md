@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes
+---
+
 ## Configuring a page to update a session variable when another session variable changes
 
 From DataMiner 9.5.2 onwards, it is possible to have an open Visual Overview page update a session variable when another session variable changes.

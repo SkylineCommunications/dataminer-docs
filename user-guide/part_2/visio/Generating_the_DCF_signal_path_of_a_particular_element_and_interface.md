@@ -1,3 +1,7 @@
+---
+uid: Generating_the_DCF_signal_path_of_a_particular_element_and_interface
+---
+
 ## Generating the DCF signal path of a particular element and interface
 
 From DataMiner 9.5.1 onwards, it is possible to show the DCF signal path of a certain element and interface.

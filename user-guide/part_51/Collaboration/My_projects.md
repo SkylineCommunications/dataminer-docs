@@ -1,3 +1,7 @@
+---
+uid: My_projects
+---
+
 # My projects
 
 When you log on to the Project Collaboration website, the *My projects* tab will automatically open and list all your projects, each with its current status, name and due date.

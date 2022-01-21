@@ -1,3 +1,7 @@
+---
+uid: Installing_and_configuring_DataMiner_Integration_Studio
+---
+
 ## Installing and configuring DataMiner Integration Studio
 
 ### Installing the DataMinerIntegrationStudio.vsix extension

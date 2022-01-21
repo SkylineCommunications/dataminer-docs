@@ -1,3 +1,7 @@
+---
+uid: Working_with_the_parameter_pane
+---
+
 ## Working with the parameter pane
 
 In the parameter pane, you can add as many parameters as needed to create a particular trend group. Parameters can also be duplicated or deleted in the pane.

@@ -1,3 +1,7 @@
+---
+uid: Editing_an_information_template
+---
+
 ## Editing an information template
 
 You can either edit the complete information template in the Protocols & Templates module, or edit the template for a single parameter.

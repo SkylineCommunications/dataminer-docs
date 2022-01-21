@@ -1,3 +1,7 @@
+---
+uid: Generating_the_connectivity_chain_for_an_SRM_service_instance
+---
+
 ## Generating the connectivity chain for an SRM service instance
 
 From DataMiner 9.5.3 onwards, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview.

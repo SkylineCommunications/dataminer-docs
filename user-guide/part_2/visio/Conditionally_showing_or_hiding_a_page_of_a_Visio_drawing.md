@@ -1,3 +1,7 @@
+---
+uid: Conditionally_showing_or_hiding_a_page_of_a_Visio_drawing
+---
+
 ## Conditionally showing or hiding a page of a Visio drawing
 
 A page of a Visio drawing can be shown or hidden:

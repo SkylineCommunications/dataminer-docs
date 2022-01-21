@@ -1,3 +1,7 @@
+---
+uid: Dashboard_Gateway_installation
+---
+
 # Dashboard Gateway installation
 
 From DataMiner 10.1.0/10.0.12 onwards, a new Dashboard Gateway can be used to give users access both to the Dashboards app and to other DataMiner web applications (Monitoring, Ticketing, Jobs, etc.) even if those users do not have access to DataMiner.

@@ -1,3 +1,7 @@
+---
+uid: About_SNMP_managers
+---
+
 # About SNMP managers
 
 This section consists of the following topics:

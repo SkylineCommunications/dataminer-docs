@@ -1,3 +1,7 @@
+---
+uid: ScriptDummy_properties
+---
+
 ## ScriptDummy properties
 
 #### Name

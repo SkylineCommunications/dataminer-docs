@@ -1,3 +1,7 @@
+---
+uid: General_parameters
+---
+
 ## General parameters
 
 For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in Cube. This page contains parameters that apply to the DataMiner element itself, rather than the device the element represents. Depending on the type of element, some general parameters may or may not be available. An overview of these parameters can be found below.

@@ -1,3 +1,7 @@
+---
+uid: Specifying_TTL_overrides
+---
+
 # Specifying TTL overrides
 
 From DataMiner 9.6.3 onwards, you can configure a custom "time to live" (TTL) for data in the database. From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, the user interface for this configuration has been redesigned.

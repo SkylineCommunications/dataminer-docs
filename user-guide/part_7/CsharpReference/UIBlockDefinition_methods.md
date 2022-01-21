@@ -1,3 +1,7 @@
+---
+uid: UIBlockDefinition_methods
+---
+
 ## UIBlockDefinition methods
 
 - [AddCheckBoxListOption](#addcheckboxlistoption)

@@ -1,3 +1,7 @@
+---
+uid: Adding_options_to_a_session_variable_control
+---
+
 ## Adding options to a session variable control
 
 If you turned a shape into a control that allows users to update a session variable, you can add a shape data field of type **SetVarOptions** to that same shape to apply one or more of the following options:

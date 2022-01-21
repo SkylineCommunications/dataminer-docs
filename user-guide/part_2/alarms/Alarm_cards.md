@@ -1,3 +1,7 @@
+---
+uid: Alarm_cards
+---
+
 ## Alarm cards
 
 An alarm card shows detailed information about an alarm. To open an alarm card, right-click an alarm in the Alarm Console, and select *Open \> Alarm Card*.

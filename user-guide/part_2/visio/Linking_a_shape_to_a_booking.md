@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_booking
+---
+
 ## Linking a shape to a booking
 
 From DataMiner 9.6.4 onwards, it is possible to link a shape to a booking.

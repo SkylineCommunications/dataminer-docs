@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_Admin_app
+---
+
 # Accessing the Admin app
 
 1. Go to

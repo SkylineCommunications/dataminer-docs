@@ -1,3 +1,7 @@
+---
+uid: About_the_Catalog_module
+---
+
 # About the Catalog module
 
 As part of the DataMiner Cloud Platform (DCP), the Catalog module currently allows Skyline customers and DataMiner Strategic Partners to browse the list of available DataMiner connectors.

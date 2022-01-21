@@ -1,3 +1,7 @@
+---
+uid: Matrix_parameters
+---
+
 ## Matrix parameters
 
 Matrix parameters combine a series of inputs and outputs in a matrix. An input and an output can be connected to one another with the crosspoints in the matrix.

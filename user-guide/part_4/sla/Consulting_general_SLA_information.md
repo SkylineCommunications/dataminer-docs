@@ -1,3 +1,7 @@
+---
+uid: Consulting_general_SLA_information
+---
+
 ## Consulting general SLA information
 
 To view more information on the SLA in general, check the section *General Info* on the *Main View* page of the SLA element. There you will find the following information.

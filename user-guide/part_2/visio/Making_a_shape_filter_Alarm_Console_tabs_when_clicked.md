@@ -1,3 +1,7 @@
+---
+uid: Making_a_shape_filter_Alarm_Console_tabs_when_clicked
+---
+
 ## Making a shape filter Alarm Console tabs when clicked
 
 If you add a shape data field of type **AlarmFilter** to a shape, clicking the shape will cause Alarm Console tabs of type “Active alarms linked to cards” only to show alarms that match the alarm filter specified in the field value.

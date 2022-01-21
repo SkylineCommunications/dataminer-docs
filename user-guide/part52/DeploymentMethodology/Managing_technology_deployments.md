@@ -1,3 +1,7 @@
+---
+uid: Managing_technology_deployments
+---
+
 # Managing technology deployments
 
 ## Methodology is key to success

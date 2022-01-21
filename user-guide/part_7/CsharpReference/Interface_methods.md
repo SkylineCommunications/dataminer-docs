@@ -1,3 +1,7 @@
+---
+uid: Interface_methods
+---
+
 ## Interface methods
 
 - [GetNext](#getnext)

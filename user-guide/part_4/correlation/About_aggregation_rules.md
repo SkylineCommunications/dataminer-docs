@@ -1,3 +1,7 @@
+---
+uid: About_aggregation_rules
+---
+
 ## About aggregation rules
 
 With aggregation rules, you can calculate statistical information within your DataMiner System. This makes it easy to, for example, monitor large volumes of devices from a statistical perspective, or monitor evolutions in your operation.

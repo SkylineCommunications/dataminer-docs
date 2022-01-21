@@ -1,3 +1,7 @@
+---
+uid: The_Resources_module
+---
+
 # The Resources module
 
 From DataMiner 8.5.8 onwards, on a system with the proper licenses, the *Resources* module is available in DataMiner Cube.

@@ -1,3 +1,7 @@
+---
+uid: Creating_a_text_block_control
+---
+
 ## Creating a text block control
 
 It is possible to display a block of text in Visual Overview like a regular Cube text block control, with the default Cube font and font size.

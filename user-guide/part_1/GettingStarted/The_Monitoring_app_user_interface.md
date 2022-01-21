@@ -1,3 +1,7 @@
+---
+uid: The_Monitoring_app_user_interface
+---
+
 # The Monitoring app user interface
 
 The DataMiner 10 Monitoring app is a web application featuring a user interface similar to that of DataMiner Cube, with a header bar, a sidebar, an Alarm Console and a card area. The app allows you to monitor a DataMiner System from any modern browser. Depending on the size of the screen used to view the app, the app layout can be adjusted in order to allow optimal use of the available space.

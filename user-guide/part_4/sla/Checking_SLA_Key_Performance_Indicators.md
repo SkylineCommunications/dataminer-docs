@@ -1,3 +1,7 @@
+---
+uid: Checking_SLA_Key_Performance_Indicators
+---
+
 ## Checking SLA Key Performance Indicators
 
 To check the key performance indicators for the SLA, check the section *Performance Indicators* on the *Main View* page of the SLA element. There you will find the following information:

@@ -1,3 +1,7 @@
+---
+uid: Adding_a_SkipTableUpdate_instruction_to_the_db_xml_file
+---
+
 ## Adding a SkipTableUpdate instruction to the db.xml file
 
 From DataMiner version 8.0.0 onwards, a *\<SkipTableUpdate>* instruction can be added in the file *DB.xml* to keep a database table from being checked during a DataMiner software upgrade.

@@ -1,3 +1,7 @@
+---
+uid: Sharing
+---
+
 # DataMiner Sharing
 
 In this section:

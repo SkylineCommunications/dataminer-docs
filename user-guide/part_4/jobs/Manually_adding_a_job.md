@@ -1,3 +1,7 @@
+---
+uid: Manually_adding_a_job
+---
+
 # Manually adding a job
 
 To manually add a job in the Job Manager app:

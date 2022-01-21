@@ -1,3 +1,7 @@
+---
+uid: Accessing_trend_information_from_the_Trending_module
+---
+
 ## Accessing trend information from the Trending module
 
 In the Trending module, you can not only view trending information for individual parameters, but also for groups of parameters. For more information about these trend groups, see [Working with trend groups](Working_with_trend_groups.md).

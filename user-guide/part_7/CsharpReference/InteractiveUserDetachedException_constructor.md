@@ -1,3 +1,7 @@
+---
+uid: InteractiveUserDetachedException_constructor
+---
+
 ## InteractiveUserDetachedException constructor
 
 ```txt

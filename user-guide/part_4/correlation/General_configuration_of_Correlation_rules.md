@@ -1,3 +1,7 @@
+---
+uid: General_configuration_of_Correlation_rules
+---
+
 # General configuration of Correlation rules
 
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to configure it in the details pane on the right.

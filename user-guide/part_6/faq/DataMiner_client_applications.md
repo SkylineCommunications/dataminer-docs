@@ -1,3 +1,7 @@
+---
+uid: DataMiner_client_applications
+---
+
 # DataMiner client applications
 
 This section contains the following topics:

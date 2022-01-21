@@ -1,3 +1,7 @@
+---
+uid: Project-related_notifications
+---
+
 ## Project-related notifications
 
 By default, you will receive an email

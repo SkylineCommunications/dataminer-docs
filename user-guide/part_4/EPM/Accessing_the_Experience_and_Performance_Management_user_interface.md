@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_Experience_and_Performance_Management_user_interface
+---
+
 ## Accessing the Experience and Performance Management user interface
 
 To access the EPM user interface

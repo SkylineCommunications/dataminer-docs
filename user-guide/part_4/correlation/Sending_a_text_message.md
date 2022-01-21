@@ -1,3 +1,7 @@
+---
+uid: Sending_a_text_message
+---
+
 ## Sending a text message
 
 Use this action to make a Correlation rule send a text message to one or more recipients.

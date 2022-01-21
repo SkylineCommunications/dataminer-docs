@@ -1,3 +1,7 @@
+---
+uid: About_alarms
+---
+
 # About alarms
 
 This section consists of the following topics:

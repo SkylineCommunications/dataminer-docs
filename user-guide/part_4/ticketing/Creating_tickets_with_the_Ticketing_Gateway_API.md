@@ -1,3 +1,7 @@
+---
+uid: Creating_tickets_with_the_Ticketing_Gateway_API
+---
+
 ## Creating tickets with the Ticketing Gateway API
 
 Before tickets can be created, there has to be at least one ticket field resolver, which will translate the third-party ticket fields into DataMiner ticket fields. The first time the Ticket Gateway starts up, a default resolver is automatically created. This default resolver contains a number of predefined fields. You can, however, also create a custom resolver.

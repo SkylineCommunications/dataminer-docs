@@ -1,3 +1,7 @@
+---
+uid: Setting_the_default_sliding_window_size_for_real-time_trending
+---
+
 # Setting the default sliding window size for real-time trending
 
 It is possible to configure the default size of the sliding window for real-time trending for a particular DMA. All elements on that DMA will then inherit this default value, unless it is overridden on element level.

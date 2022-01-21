@@ -1,3 +1,7 @@
+---
+uid: Triggering_a_correlated_alarm
+---
+
 ## Triggering a correlated alarm
 
 To make a Correlation rule trigger a new, correlated alarm:

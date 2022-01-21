@@ -1,3 +1,7 @@
+---
+uid: Feeds
+---
+
 ## Feeds
 
 Feeds can be added to a dashboard to allow a user to select a DataMiner object for which information can be displayed in other components.

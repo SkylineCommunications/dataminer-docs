@@ -1,3 +1,7 @@
+---
+uid: Preparing_the_destination_server_for_a_DMA_restoration
+---
+
 ## Preparing the destination server for a DMA restoration
 
 Regardless of whether you are restoring the backup to the DMA it was taken from or to a different DMA, you must make sure that the server is clean and ready for the installation.

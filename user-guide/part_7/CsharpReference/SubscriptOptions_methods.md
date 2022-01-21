@@ -1,3 +1,7 @@
+---
+uid: SubscriptOptions_methods
+---
+
 ## SubscriptOptions methods
 
 - [GetScriptResult](#getscriptresult)

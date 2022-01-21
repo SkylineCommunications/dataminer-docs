@@ -1,3 +1,7 @@
+---
+uid: Frequently_asked_questions_about_user_group_settings
+---
+
 # Frequently asked questions about user group settings
 
 This section consists of the following topics:

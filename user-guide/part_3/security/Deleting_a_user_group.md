@@ -1,3 +1,7 @@
+---
+uid: Deleting_a_user_group
+---
+
 ## Deleting a user group
 
 To delete a user group from the DMS:

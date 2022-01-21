@@ -1,3 +1,7 @@
+---
+uid: Could_not_find_SLScripting_process_is_DataMiner_running
+---
+
 ## Could not find SLScripting process, is DataMiner running?
 
 ### Problem

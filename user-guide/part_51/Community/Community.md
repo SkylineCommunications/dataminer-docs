@@ -1,3 +1,7 @@
+---
+uid: Community
+---
+
 # DataMiner Community
 
 In this section:

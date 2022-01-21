@@ -1,3 +1,7 @@
+---
+uid: Layer_groups
+---
+
 ## Layer groups
 
 In the *\<ToggleGroups>* tag of a map configuration file, add a *\<Group>* tag for every layer group you want to define.

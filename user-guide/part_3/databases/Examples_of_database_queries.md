@@ -1,3 +1,7 @@
+---
+uid: Examples_of_database_queries
+---
+
 ## Examples of database queries
 
 ### Microsoft SQL Server queries

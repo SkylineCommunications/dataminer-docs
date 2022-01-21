@@ -1,3 +1,7 @@
+---
+uid: Configuring_element_connectivity_in_Cube
+---
+
 # Configuring element connectivity in Cube
 
 This section consists of the following topics:

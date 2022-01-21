@@ -1,3 +1,7 @@
+---
+uid: faq
+---
+
 # Frequently asked questions
 
 The frequently asked questions are divided over the following sections:

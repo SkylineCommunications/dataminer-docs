@@ -1,3 +1,7 @@
+---
+uid: Connecting_your_DataMiner_System_to_the_cloud
+---
+
 # Connecting your DataMiner System to the cloud
 
 > [!NOTE]

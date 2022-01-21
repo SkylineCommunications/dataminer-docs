@@ -1,3 +1,7 @@
+---
+uid: Marking_a_page_of_a_Visio_drawing_as_the_default_page
+---
+
 ## Marking a page of a Visio drawing as the default page
 
 Using a shape data field of type **InlineVdx**, you can mark a page of a Visio drawing as the default page to be displayed.

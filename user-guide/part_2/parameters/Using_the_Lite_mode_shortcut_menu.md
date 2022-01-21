@@ -1,3 +1,7 @@
+---
+uid: Using_the_Lite_mode_shortcut_menu
+---
+
 ## Using the Lite mode shortcut menu
 
 When you right-click parameters in Lite mode, a different shortcut menu appears than in normal mode.

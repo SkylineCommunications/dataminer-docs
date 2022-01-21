@@ -1,3 +1,7 @@
+---
+uid: About_the_Scheduler_module
+---
+
 # About the Scheduler module
 
 To access the Scheduler module:

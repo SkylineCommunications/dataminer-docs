@@ -1,3 +1,7 @@
+---
+uid: Moving_rules_or_folders
+---
+
 ## Moving rules or folders
 
 To move rules or folders in the Correlation tree view:

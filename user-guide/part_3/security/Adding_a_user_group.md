@@ -1,3 +1,7 @@
+---
+uid: Adding_a_user_group
+---
+
 ## Adding a user group
 
 There are two ways to add a new user group to a DMS, depending on whether it is a local group or a domain group.

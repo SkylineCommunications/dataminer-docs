@@ -1,3 +1,7 @@
+---
+uid: Specifying_an_EPM_parameter_that_can_be_used_to_filter
+---
+
 ## Specifying an EPM parameter that can be used to filter
 
 If you have linked a page of a Visio drawing to a chain (i.e. tab page) of an EPM element using a shape data field of type **Chain**, you can use a shape data field of type **SubscriptionFilter** to specify a parameter of the EPM element on which users are allowed to filter the data displayed on the page.

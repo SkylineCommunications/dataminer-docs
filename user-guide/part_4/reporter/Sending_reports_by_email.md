@@ -1,3 +1,7 @@
+---
+uid: Sending_reports_by_email
+---
+
 # Sending reports by email
 
 Using DMS Scheduler and DMS Automation, you can make DataMiner send email messages that include reports created with the Reporter app or with a third-party report editor.

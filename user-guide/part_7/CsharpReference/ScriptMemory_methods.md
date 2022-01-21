@@ -1,3 +1,7 @@
+---
+uid: ScriptMemory_methods
+---
+
 ## ScriptMemory methods
 
 #### Clear

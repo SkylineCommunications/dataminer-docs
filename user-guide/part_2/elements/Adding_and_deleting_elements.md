@@ -1,3 +1,7 @@
+---
+uid: Adding_and_deleting_elements
+---
+
 ## Adding and deleting elements
 
 In this section:

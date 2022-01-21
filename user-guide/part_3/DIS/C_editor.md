@@ -1,3 +1,7 @@
+---
+uid: C_editor
+---
+
 # C# editor
 
 If, in a file tab containing a protocol XML file or an Automation script XML file, you click an *Edit C#* button in front of a QAction or an Exe code block, a temporary C# project will be created, containing the code of that QAction or Exe code block. Also, the code of the QAction or Exe code block will appear in a new, customized file tab.

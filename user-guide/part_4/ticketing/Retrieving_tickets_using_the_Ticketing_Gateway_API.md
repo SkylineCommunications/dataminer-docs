@@ -1,3 +1,7 @@
+---
+uid: Retrieving_tickets_using_the_Ticketing_Gateway_API
+---
+
 ## Retrieving tickets using the Ticketing Gateway API
 
 Tickets can be retrieved in a number of ways. See the following examples.

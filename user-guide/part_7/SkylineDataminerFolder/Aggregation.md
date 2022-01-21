@@ -1,3 +1,7 @@
+---
+uid: Aggregation
+---
+
 ## Aggregation
 
 This folder contains all aggregation rules configured on the DMA. These can be contained in subfolders, corresponding to the aggregation folder configuration in Cube. The *Aggregation* folder is synced on all Agents in the DMS.

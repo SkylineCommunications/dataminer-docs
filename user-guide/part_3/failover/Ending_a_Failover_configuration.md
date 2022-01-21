@@ -1,3 +1,7 @@
+---
+uid: Ending_a_Failover_configuration
+---
+
 # Ending a Failover configuration
 
 When two DMAs are linked together in a Failover setup, it is possible to end the Failover configuration, and thereby separate the two DMAs again.

@@ -1,3 +1,7 @@
+---
+uid: Full_license_for_DMA_to_be_installed_by_user
+---
+
 # Full license for DMA to be installed by user
 
 In case of a full license for a DataMiner Agent that will be installed by the user, the following procedure applies:

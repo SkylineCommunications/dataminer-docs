@@ -1,3 +1,7 @@
+---
+uid: Changing_the_parameter_layout_in_Lite_mode
+---
+
 ## Changing the parameter layout in Lite mode
 
 To change the parameter layout in Lite mode:

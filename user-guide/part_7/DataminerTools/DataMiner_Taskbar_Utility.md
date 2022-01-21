@@ -1,3 +1,7 @@
+---
+uid: DataMiner_Taskbar_Utility
+---
+
 # DataMiner Taskbar Utility
 
 DataMiner Taskbar Utility is a small system tray application that you will find on every DataMiner Agent using DataMiner version 7.5.0 or higher.

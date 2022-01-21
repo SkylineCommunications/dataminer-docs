@@ -1,3 +1,7 @@
+---
+uid: SkylineDataminerFolder
+---
+
 # Skyline DataMiner folder
 
 All DataMiner system files can be found in the *C:\\Skyline DataMiner* folder of a DataMiner Agent.

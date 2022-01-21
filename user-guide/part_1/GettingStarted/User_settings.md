@@ -1,3 +1,7 @@
+---
+uid: User_settings
+---
+
 ## User settings
 
 Many settings in DataMiner can be adapted according to the preferences of the user. This can be done in the *Settings* window.

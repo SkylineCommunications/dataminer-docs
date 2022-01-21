@@ -1,3 +1,7 @@
+---
+uid: GettingStarted
+---
+
 # The DataMiner user interface
 
 This section details the basic functionality of the main DataMiner client applications:

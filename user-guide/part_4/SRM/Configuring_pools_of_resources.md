@@ -1,3 +1,7 @@
+---
+uid: Configuring_pools_of_resources
+---
+
 ## Configuring pools of resources
 
 This section contains the following topics:

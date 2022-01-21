@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_an_element_parameter
+---
+
 ## Linking a shape to an element parameter
 
 When you have linked a shape to an element using a shape data field of type **Element**, you can use an additional shape data field of type **Parameter** to link that shape to a particular parameter of that element.

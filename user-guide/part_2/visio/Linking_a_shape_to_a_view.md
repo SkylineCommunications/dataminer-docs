@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_view
+---
+
 ## Linking a shape to a view
 
 Using a shape data field of type **View**, you can link a shape to view.

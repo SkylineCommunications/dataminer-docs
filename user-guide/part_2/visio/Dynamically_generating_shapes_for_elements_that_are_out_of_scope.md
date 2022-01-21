@@ -1,3 +1,7 @@
+---
+uid: Dynamically_generating_shapes_for_elements_that_are_out_of_scope
+---
+
 ## Dynamically generating shapes for elements that are out of scope
 
 To make it possible to display external connections to elements that are not displayed in the Visio drawing, shapes representing those elements can be generated dynamically.

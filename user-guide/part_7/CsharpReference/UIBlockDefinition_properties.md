@@ -1,3 +1,7 @@
+---
+uid: UIBlockDefinition_properties
+---
+
 ## UIBlockDefinition properties
 
 - [AllowedFileNameExtensions](#allowedfilenameextensions)

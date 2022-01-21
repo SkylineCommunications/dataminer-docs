@@ -1,3 +1,7 @@
+---
+uid: Functions_XML_files
+---
+
 # Functions XML files
 
 In this section:

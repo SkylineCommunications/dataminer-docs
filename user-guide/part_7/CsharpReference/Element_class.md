@@ -1,3 +1,7 @@
+---
+uid: Element_class
+---
+
 # Element class
 
 Below, you can find an overview of all members of the *Element* class.

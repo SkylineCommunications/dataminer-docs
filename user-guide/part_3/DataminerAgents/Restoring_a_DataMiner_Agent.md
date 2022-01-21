@@ -1,3 +1,7 @@
+---
+uid: Restoring_a_DataMiner_Agent
+---
+
 # Restoring a DataMiner Agent
 
 Restoring a DataMiner Agent can be done with the Taskbar Utility, or manually, depending on the way the backup was taken. If the DMA is not restored using the Taskbar Utility, the database and configuration need to be restored separately.

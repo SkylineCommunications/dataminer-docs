@@ -1,3 +1,7 @@
+---
+uid: Part4AdvancedModules
+---
+
 # Advanced DataMiner modules
 
 - [DMS Automation](../part_4/automation/automation.md#dms-automation)

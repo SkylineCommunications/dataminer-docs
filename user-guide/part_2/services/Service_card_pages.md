@@ -1,3 +1,7 @@
+---
+uid: Service_card_pages
+---
+
 ## Service card pages
 
 The navigation pane on the left side of a service card contains a tree view with the items mentioned below.

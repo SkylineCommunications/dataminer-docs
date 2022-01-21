@@ -1,3 +1,7 @@
+---
+uid: Accessing_dashboards
+---
+
 # Accessing dashboards
 
 To access DataMiner dashboards:

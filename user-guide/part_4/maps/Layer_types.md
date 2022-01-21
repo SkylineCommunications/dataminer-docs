@@ -1,3 +1,7 @@
+---
+uid: Layer_types
+---
+
 ## Layer types
 
 The following types of layers can be used in a map configuration file:

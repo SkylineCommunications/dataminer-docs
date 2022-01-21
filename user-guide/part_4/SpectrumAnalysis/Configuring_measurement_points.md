@@ -1,3 +1,7 @@
+---
+uid: Configuring_measurement_points
+---
+
 ## Configuring measurement points
 
 A measurement point is a series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position. This way, multiple signals can be measured with one single spectrum analyzer.

@@ -1,3 +1,7 @@
+---
+uid: DMS_Alerter
+---
+
 # DMS Alerter
 
 DMS Alerter is a small system tray application. It will notify you by means of a pop-up balloon whenever an alarm occurs in the DataMiner System to which you are connected.

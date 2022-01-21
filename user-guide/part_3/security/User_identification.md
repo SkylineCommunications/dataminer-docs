@@ -1,3 +1,7 @@
+---
+uid: User_identification
+---
+
 ## User identification
 
 Users have to identify themselves by means of

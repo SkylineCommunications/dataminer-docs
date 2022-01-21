@@ -1,3 +1,7 @@
+---
+uid: Backing_up_a_DataMiner_Agent_in_DataMiner_Cube
+---
+
 ## Backing up a DataMiner Agent in DataMiner Cube
 
 In the *System Center* module, you can configure automatic backups that will run at regular intervals, and execute an immediate backup when necessary.

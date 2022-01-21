@@ -1,3 +1,7 @@
+---
+uid: Publishing_Reporter_components_on_your_own_website
+---
+
 # Publishing Reporter components on your own website
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: Creating_an_analyzer
+---
+
 ## Creating an analyzer
 
 There are two ways to create a Correlation analyzer:

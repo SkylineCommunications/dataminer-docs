@@ -1,3 +1,7 @@
+---
+uid: License_for_DMA_to_be_installed_by_Skyline
+---
+
 # License for DMA to be installed by Skyline
 
 In case of a license (full or demo) for a DataMiner Agent that will be installed by Skyline Communications, the following procedure applies:

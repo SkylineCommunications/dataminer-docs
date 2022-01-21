@@ -1,3 +1,7 @@
+---
+uid: Displaying_ticket_statistics_in_the_Surveyor
+---
+
 # Displaying ticket statistics in the Surveyor
 
 In the Surveyor, ticket statistics can be displayed next to elements, services and views.

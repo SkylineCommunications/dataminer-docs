@@ -1,3 +1,7 @@
+---
+uid: Deleting_a_dashboard
+---
+
 ## Deleting a dashboard
 
 1. In the list of dashboards on the left, select the dashboard you want to delete.

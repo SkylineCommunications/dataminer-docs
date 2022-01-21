@@ -1,3 +1,7 @@
+---
+uid: System_Cache
+---
+
 ## System Cache
 
 The *C:\\Skyline DataMiner\\System Cache\\* directory of a DMA contains synchronization information and cached data.

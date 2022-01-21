@@ -1,3 +1,7 @@
+---
+uid: Other
+---
+
 ## Other
 
 This category contains the following visualizations:

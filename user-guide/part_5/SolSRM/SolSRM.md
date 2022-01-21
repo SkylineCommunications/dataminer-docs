@@ -1,3 +1,7 @@
+---
+uid: SolSRM
+---
+
 # Booking Manager app
 
 The Booking Manager app is a standard application that allows you to create and manage bookings using DataMiner Service & Resource Management.

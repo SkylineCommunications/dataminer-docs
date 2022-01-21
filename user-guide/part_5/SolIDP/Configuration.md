@@ -1,3 +1,7 @@
+---
+uid: Configuration
+---
+
 ## Configuration
 
 The *Configuration* subtab of the *Admin* tab consists of the following pages:

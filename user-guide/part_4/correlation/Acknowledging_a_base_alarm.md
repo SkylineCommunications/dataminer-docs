@@ -1,3 +1,7 @@
+---
+uid: Acknowledging_a_base_alarm
+---
+
 ## Acknowledging a base alarm
 
 Use this action to have a base alarm acknowledged by a Correlation rule. This means that the alarm type will change to *Acknowledged* and the owner of the alarm will be the Correlation rule.

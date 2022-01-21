@@ -1,3 +1,7 @@
+---
+uid: Frequently_asked_questions_about_DMA_Failover
+---
+
 # Frequently asked questions about DMA Failover
 
 This section consists of the following topics:

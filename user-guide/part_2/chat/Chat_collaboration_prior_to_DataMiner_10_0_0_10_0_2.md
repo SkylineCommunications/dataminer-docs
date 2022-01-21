@@ -1,3 +1,7 @@
+---
+uid: Chat_collaboration_prior_to_DataMiner_10_0_0_10_0_2
+---
+
 # Chat collaboration prior to DataMiner 10.0.0/10.0.2
 
 In DataMiner versions prior to DataMiner 10.0.0/10.0.2, chat collaboration is done using the *Contacts* window.

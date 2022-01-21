@@ -1,3 +1,7 @@
+---
+uid: ClientSettings_json
+---
+
 ## ClientSettings.json
 
 Within the subfolder *C:\\Skyline DataMiner\\Users*, there is a file *ClientSettings.json*, which contains client settings that apply for all users. Some of these settings, e.g. *MaxNumberOfSimultaneousNewAlarmsBeforeDelayingSort*, can only be configured directly within this file:

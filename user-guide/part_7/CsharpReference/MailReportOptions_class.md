@@ -1,3 +1,7 @@
+---
+uid: MailReportOptions_class
+---
+
 # MailReportOptions class
 
 Below, you can find an overview of all members of the *MailReportOptions* class.

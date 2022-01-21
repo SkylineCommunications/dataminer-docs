@@ -1,3 +1,7 @@
+---
+uid: Configuring_the_necessary_tags_in_DataMiner_xml
+---
+
 ## Configuring the necessary tags in DataMiner.xml
 
 1. If you want the DMA to forward alarm events via a particular TCP/IP socket, then add an *\<AlarmSocket>* tag and specify the socket in the *port* attribute.

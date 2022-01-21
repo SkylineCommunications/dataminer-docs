@@ -1,3 +1,7 @@
+---
+uid: SLNetClientTest_tool_diagnostic_procedures
+---
+
 ## SLNetClientTest tool diagnostic procedures
 
 This section contains the following procedures:

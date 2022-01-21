@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointType_class
+---
+
 # AutomationEntryPointType class
 
 Below, you find an overview of all members of the *AutomationEntryPointType* class.

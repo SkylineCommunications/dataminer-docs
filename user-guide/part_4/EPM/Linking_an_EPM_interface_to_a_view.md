@@ -1,3 +1,7 @@
+---
+uid: Linking_an_EPM_interface_to_a_view
+---
+
 # Linking an EPM interface to a view
 
 If you want an EPM interface to be displayed when you select a view in the Surveyor, add the following properties to the view in question:

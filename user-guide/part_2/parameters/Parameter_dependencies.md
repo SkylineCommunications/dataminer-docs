@@ -1,3 +1,7 @@
+---
+uid: Parameter_dependencies
+---
+
 # Parameter dependencies
 
 Parameter dependencies express relationships between two or more parameters of an element. They are defined in the element protocol.

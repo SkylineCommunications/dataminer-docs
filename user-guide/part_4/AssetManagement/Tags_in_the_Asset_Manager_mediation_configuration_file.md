@@ -1,3 +1,7 @@
+---
+uid: Tags_in_the_Asset_Manager_mediation_configuration_file
+---
+
 ## Tags in the Asset Manager mediation configuration file
 
 ### AssetMediationConfig

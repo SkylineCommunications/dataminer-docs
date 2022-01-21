@@ -1,3 +1,7 @@
+---
+uid: Encoding_and_decoding_of_character_sets_in_text_messages
+---
+
 # Encoding and decoding of character sets in text messages
 
 ### Encoding

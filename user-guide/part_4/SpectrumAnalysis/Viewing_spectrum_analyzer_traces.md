@@ -1,3 +1,7 @@
+---
+uid: Viewing_spectrum_analyzer_traces
+---
+
 ## Viewing spectrum analyzer traces
 
 This section consists of the following topics:

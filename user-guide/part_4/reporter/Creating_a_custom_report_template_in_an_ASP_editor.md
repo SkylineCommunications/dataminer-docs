@@ -1,3 +1,7 @@
+---
+uid: Creating_a_custom_report_template_in_an_ASP_editor
+---
+
 ## Creating a custom report template in an ASP editor
 
 To create a custom report template from scratch, do the following:

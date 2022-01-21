@@ -1,3 +1,7 @@
+---
+uid: Duplicating_a_dashboard1
+---
+
 ## Duplicating a dashboard
 
 To duplicate a dashboard:

@@ -1,3 +1,7 @@
+---
+uid: Triggering_an_action_when_the_mouse_pointer_hovers_over_a_shape
+---
+
 ## Triggering an action when the mouse pointer hovers over a shape
 
 A shape can be set to perform a particular action when a mouse pointer is hovered over it.

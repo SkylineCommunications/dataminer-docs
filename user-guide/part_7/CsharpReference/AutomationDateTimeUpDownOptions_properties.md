@@ -1,3 +1,7 @@
+---
+uid: AutomationDateTimeUpDownOptions_properties
+---
+
 ## AutomationDateTimeUpDownOptions properties
 
 - [AllowSpin](#allowspin)

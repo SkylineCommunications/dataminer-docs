@@ -1,3 +1,7 @@
+---
+uid: Generating_shapes_that_represent_alarms
+---
+
 ## Generating shapes that represent alarms
 
 In a Visio drawing, you can specify that a shape should be created automatically for every alarm associated with the object to which the Visio drawing is linked (e.g. a view). Those automatically generated “alarm shapes” can be set to show the alarm severity color and the contents of one particular detail of the alarm in question (by specifying the name of the Alarm Console column displaying that field).

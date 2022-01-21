@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointAttribute_methods
+---
+
 ## AutomationEntryPointAttribute methods
 
 #### Equals

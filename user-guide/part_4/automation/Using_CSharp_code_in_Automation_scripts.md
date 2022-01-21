@@ -1,3 +1,7 @@
+---
+uid: Using_CSharp_code_in_Automation_scripts
+---
+
 # Using CSharp code in Automation scripts
 
 Using C# code in Automation scripts offers improved flexibility and extended possibilities for the DMS Automation Engine.

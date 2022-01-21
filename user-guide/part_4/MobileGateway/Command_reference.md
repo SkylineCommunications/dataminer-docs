@@ -1,3 +1,7 @@
+---
+uid: Command_reference
+---
+
 # Command reference
 
 Below, you can find a list of commands that can be used to interact with DataMiner elements (even Dynamic Virtual Elements) using text messages.

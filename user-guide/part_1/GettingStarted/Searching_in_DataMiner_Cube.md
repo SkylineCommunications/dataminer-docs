@@ -1,3 +1,7 @@
+---
+uid: Searching_in_DataMiner_Cube
+---
+
 ## Searching in DataMiner Cube
 
 This section contains the following topics:

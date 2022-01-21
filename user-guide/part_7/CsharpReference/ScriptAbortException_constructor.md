@@ -1,3 +1,7 @@
+---
+uid: ScriptAbortException_constructor
+---
+
 ## ScriptAbortException constructor
 
 ```txt

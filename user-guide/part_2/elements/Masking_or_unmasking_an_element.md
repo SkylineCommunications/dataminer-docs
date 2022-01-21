@@ -1,3 +1,7 @@
+---
+uid: Masking_or_unmasking_an_element
+---
+
 ## Masking or unmasking an element
 
 It is possible to mask an element, so that any alarms on that element will not show in the active alarms. This can for instance be done to avoid unnecessary follow-up when an element is being tested.

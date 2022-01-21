@@ -1,3 +1,7 @@
+---
+uid: Installing_DataMiner_Indexing_Engine
+---
+
 ## Installing DataMiner Indexing Engine
 
 To install DataMiner Indexing Engine:

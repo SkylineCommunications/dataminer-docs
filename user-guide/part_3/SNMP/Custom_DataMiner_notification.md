@@ -1,3 +1,7 @@
+---
+uid: Custom_DataMiner_notification
+---
+
 ## Custom DataMiner notification
 
 ### Custom notification OID

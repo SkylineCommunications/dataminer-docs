@@ -1,3 +1,7 @@
+---
+uid: Troubleshooting
+---
+
 # Troubleshooting
 
 This section consists of the following topics:

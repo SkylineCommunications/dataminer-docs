@@ -1,3 +1,7 @@
+---
+uid: Embedding_a_router_control_component
+---
+
 ## Embedding a router control component
 
 It is possible to embed a router control component in Visual Overview.

@@ -1,3 +1,7 @@
+---
+uid: AutomationScriptAttachOptions_enumeration
+---
+
 # AutomationScriptAttachOptions enumeration
 
 Below, you can find an overview of all members of the *AutomationScriptAttachOptions* enum.

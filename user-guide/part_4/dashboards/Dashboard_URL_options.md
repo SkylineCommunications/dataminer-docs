@@ -1,3 +1,7 @@
+---
+uid: Dashboard_URL_options
+---
+
 ## Dashboard URL options
 
 When you go directly to a dashboard in a browser using a dashboard URL, you can add options to the dashboard URL to change the way the dashboard is displayed or to determine the dashboard feed. These options are simply added after the URL, and some options can also be combined.

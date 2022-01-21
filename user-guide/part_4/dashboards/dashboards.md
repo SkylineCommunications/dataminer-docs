@@ -1,3 +1,7 @@
+---
+uid: dashboards
+---
+
 # DMS Dashboards
 
 DMS Dashboards is a legacy module that allows you to design and view customized dashboards. While a more user-friendly Dashboards app is available from DataMiner 9.6.9 onwards, this legacy module remains available both within DataMiner Cube and as a standalone app.

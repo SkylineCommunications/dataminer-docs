@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_Catalog_module
+---
+
 # Accessing the Catalog module
 
 1. Open an internet browser (other than Microsoft Internet Explorer), go to

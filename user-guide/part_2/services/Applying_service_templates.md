@@ -1,3 +1,7 @@
+---
+uid: Applying_service_templates
+---
+
 ## Applying service templates
 
 This section consists of the following topics:

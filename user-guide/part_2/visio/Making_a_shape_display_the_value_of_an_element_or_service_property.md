@@ -1,3 +1,7 @@
+---
+uid: Making_a_shape_display_the_value_of_an_element_or_service_property
+---
+
 ## Making a shape display the value of an element or service property
 
 Using a shape data field of type **Property**, a shape linked to an element or a service can be set to display the current value of a certain property of that element or service.

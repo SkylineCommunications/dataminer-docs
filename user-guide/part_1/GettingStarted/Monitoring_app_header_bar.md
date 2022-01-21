@@ -1,3 +1,7 @@
+---
+uid: Monitoring_app_header_bar
+---
+
 ## Monitoring app header bar
 
 > [!NOTE]

@@ -1,3 +1,7 @@
+---
+uid: Adding_a_user
+---
+
 ## Adding a user
 
 There are two ways to add a new user to a DataMiner System, depending on whether it is a local user or a domain user.

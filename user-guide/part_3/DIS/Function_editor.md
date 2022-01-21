@@ -1,3 +1,7 @@
+---
+uid: Function_editor
+---
+
 # Function editor
 
 If you click *Function Editor* in the file tab header when editing a function XML file, the XML editor you are working in will be turned into a graphical function interface editor. This editor allows you to manage the functions defined in a function XML file and design function pages using simple drag-and-drop operations.

@@ -1,3 +1,7 @@
+---
+uid: UIResults_constructor
+---
+
 ## UIResults constructor
 
 ```txt

@@ -1,3 +1,7 @@
+---
+uid: Components_for_one_single_element_or_service
+---
+
 ## Components for one single element or service
 
 For one single element or service, the following building blocks are available in report templates:

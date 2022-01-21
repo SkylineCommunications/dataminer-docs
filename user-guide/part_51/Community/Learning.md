@@ -1,3 +1,7 @@
+---
+uid: Learning
+---
+
 ## Learning
 
 On the Learning page, you can do the following:

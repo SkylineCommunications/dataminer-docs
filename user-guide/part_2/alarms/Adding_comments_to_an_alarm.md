@@ -1,3 +1,7 @@
+---
+uid: Adding_comments_to_an_alarm
+---
+
 ## Adding comments to an alarm
 
 At all times, you can add comments to alarm records to communicate useful information to other users.

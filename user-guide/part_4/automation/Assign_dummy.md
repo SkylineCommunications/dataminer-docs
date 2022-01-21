@@ -1,3 +1,7 @@
+---
+uid: Assign_dummy
+---
+
 ## Assign dummy
 
 Use this action to assign an Automation script’s dummy to a specific element by using a variable or a value. This can for example be used to allow a script to swap the originally assigned dummy with a different one in case a problem with the dummy is encountered.

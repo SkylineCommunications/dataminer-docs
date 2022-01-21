@@ -1,3 +1,7 @@
+---
+uid: Script
+---
+
 ## Script
 
 Use this action to run another Automation script from within the current script.

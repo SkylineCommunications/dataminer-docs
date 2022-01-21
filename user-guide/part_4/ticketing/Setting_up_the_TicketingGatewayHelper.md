@@ -1,3 +1,7 @@
+---
+uid: Setting_up_the_TicketingGatewayHelper
+---
+
 ## Setting up the TicketingGatewayHelper
 
 The TicketingGatewayHelper class allows you to communicate with the Ticketing Gateway running on a DataMiner Agent.

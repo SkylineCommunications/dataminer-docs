@@ -1,3 +1,7 @@
+---
+uid: Advanced_Connectivity_configuration
+---
+
 ## Advanced Connectivity configuration
 
 Element Connectivity information is stored in four tables in the element protocol. It is possible to view and edit these tables within the Cube interface.

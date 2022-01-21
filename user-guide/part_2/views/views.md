@@ -1,3 +1,7 @@
+---
+uid: views
+---
+
 # Views
 
 This section consists of the following topics:

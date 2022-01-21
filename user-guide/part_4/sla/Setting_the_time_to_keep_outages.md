@@ -1,3 +1,7 @@
+---
+uid: Setting_the_time_to_keep_outages
+---
+
 ## Setting the time to keep outages
 
 To set how long outages are kept in the SLA history, do the following:

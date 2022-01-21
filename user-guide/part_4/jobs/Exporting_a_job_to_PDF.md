@@ -1,3 +1,7 @@
+---
+uid: Exporting_a_job_to_PDF
+---
+
 # Exporting a job to PDF
 
 To create a PDF report of a job:

@@ -1,3 +1,7 @@
+---
+uid: SLNetClientTest_tool
+---
+
 # SLNetClientTest tool
 
 The DataMiner SLNetClientTest program is an advanced system administration tool. It has a multitude of functionalities, some of which are not within the scope of this guide.

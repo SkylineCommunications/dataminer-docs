@@ -1,3 +1,7 @@
+---
+uid: Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
+---
+
 ## Backing up a DataMiner Agent using DataMiner Taskbar Utility
 
 1. In the Windows taskbar, right-click the DataMiner Taskbar Utility icon and click *Maintenance \> Backup*.

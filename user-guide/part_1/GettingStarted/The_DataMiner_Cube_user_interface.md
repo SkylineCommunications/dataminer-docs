@@ -1,3 +1,7 @@
+---
+uid: The_DataMiner_Cube_user_interface
+---
+
 # The DataMiner Cube user interface
 
 This section consists of the following topics:

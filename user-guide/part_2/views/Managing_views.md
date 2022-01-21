@@ -1,3 +1,7 @@
+---
+uid: Managing_views
+---
+
 # Managing views
 
 Views are displayed in the Surveyor tree, along with the various devices in your DMS.

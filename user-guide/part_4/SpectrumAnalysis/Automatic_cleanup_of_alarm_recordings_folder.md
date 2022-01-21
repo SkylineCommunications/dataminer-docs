@@ -1,3 +1,7 @@
+---
+uid: Automatic_cleanup_of_alarm_recordings_folder
+---
+
 ## Automatic cleanup of alarm recordings folder
 
 When spectrum monitors generate an alarm, they create an alarm recording and store it in the folder *C:\\Skyline DataMiner\\Spectrum Alarm Recordings\\*.

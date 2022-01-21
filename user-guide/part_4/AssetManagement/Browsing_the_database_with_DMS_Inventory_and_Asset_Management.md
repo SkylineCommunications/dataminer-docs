@@ -1,3 +1,7 @@
+---
+uid: Browsing_the_database_with_DMS_Inventory_and_Asset_Management
+---
+
 # Browsing the database with DMS Inventory and Asset Management
 
 On the left-hand side of the *Asset Manager* user interface, there is an overview pane with two tabs: *Normal view* and *Logical view*. Depending on what you select in the overview pane, additional views will become available in the data pane on the right-hand side.

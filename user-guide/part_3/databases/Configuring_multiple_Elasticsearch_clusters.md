@@ -1,3 +1,7 @@
+---
+uid: Configuring_multiple_Elasticsearch_clusters
+---
+
 ## Configuring multiple Elasticsearch clusters
 
 From DataMiner 10.2.0/10.1.3 onwards, you can have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.

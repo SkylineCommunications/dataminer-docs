@@ -1,3 +1,7 @@
+---
+uid: Upgrading_a_DataMiner_Agent_in_System_Center
+---
+
 ## Upgrading a DataMiner Agent in System Center
 
 Proceed as follows to upgrade your DataMiner Agent(s) in System Center:

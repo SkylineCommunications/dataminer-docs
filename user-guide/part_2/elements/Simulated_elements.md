@@ -1,3 +1,7 @@
+---
+uid: Simulated_elements
+---
+
 ## Simulated elements
 
 On a DataMiner System, you can create simulated elements. These elements behave as if they are communicating with a physical device, but in fact they are merely displaying data from a simulation file.

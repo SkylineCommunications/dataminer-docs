@@ -1,3 +1,7 @@
+---
+uid: Generating_reports_with_a_report_URL
+---
+
 ## Generating reports with a report URL
 
 In a report URL, you can combine the following parameters to directly generate a report.

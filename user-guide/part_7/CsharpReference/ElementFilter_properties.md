@@ -1,3 +1,7 @@
+---
+uid: ElementFilter_properties
+---
+
 ## ElementFilter properties
 
 - [CriticalOnly](#criticalonly)

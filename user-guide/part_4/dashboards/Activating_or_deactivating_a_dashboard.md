@@ -1,3 +1,7 @@
+---
+uid: Activating_or_deactivating_a_dashboard
+---
+
 ## Activating or deactivating a dashboard
 
 To activate a dashboard:

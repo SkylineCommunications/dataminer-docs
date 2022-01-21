@@ -1,3 +1,7 @@
+---
+uid: Preparing_the_two_DataMiner_Agents
+---
+
 ## Preparing the two DataMiner Agents
 
 Before you start the actual configuration, make sure you have the following:

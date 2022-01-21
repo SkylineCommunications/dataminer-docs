@@ -1,3 +1,7 @@
+---
+uid: Disconnecting_an_output_from_an_input
+---
+
 ## Disconnecting an output from an input
 
 In the *Router Control* module:

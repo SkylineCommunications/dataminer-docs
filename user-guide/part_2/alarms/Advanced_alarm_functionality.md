@@ -1,3 +1,7 @@
+---
+uid: Advanced_alarm_functionality
+---
+
 # Advanced alarm functionality
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: Creating_a_parameter_chart
+---
+
 ## Creating a parameter chart
 
 Using **Parameters** and **ParametersOptions** shape data fields, you can make a shape or a group of shapes visualize one or more parameters in a chart.

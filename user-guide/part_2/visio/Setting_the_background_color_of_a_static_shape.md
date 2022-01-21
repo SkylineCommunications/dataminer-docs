@@ -1,3 +1,7 @@
+---
+uid: Setting_the_background_color_of_a_static_shape
+---
+
 ## Setting the background color of a static shape
 
 From DataMiner 10.1.11/10.2.0 onwards, you can set the background color of a static shape, i.e. a shape that is not linked to an element, a service or a view.

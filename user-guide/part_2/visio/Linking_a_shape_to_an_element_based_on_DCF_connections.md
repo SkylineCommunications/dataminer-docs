@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_an_element_based_on_DCF_connections
+---
+
 ## Linking a shape to an element based on DCF connections
 
 From DataMiner version 9.0.3 onwards, it is possible to dynamically link a Visio shape to an element based on DCF connection information. This feature can be used to resolve a dynamic element between two fixed elements.

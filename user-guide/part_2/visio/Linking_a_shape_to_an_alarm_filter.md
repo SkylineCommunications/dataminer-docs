@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_an_alarm_filter
+---
+
 ## Linking a shape to an alarm filter
 
 If you link a shape to an alarm filter, it can be used to show statistical information about the alarms that match the filter.

@@ -1,3 +1,7 @@
+---
+uid: Configuring_Microsoft_Visual_Studio
+---
+
 ## Configuring Microsoft Visual Studio
 
 ### Associating XML files with Microsoft Visual Studio

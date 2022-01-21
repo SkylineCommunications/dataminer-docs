@@ -1,3 +1,7 @@
+---
+uid: Components_for_multiple_elements_or_services
+---
+
 ## Components for multiple elements or services
 
 For multiple elements or services, the following building blocks are available in report templates:

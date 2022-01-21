@@ -1,3 +1,7 @@
+---
+uid: Grouping_markers_in_one_clustered_marker
+---
+
 ## Grouping markers in one clustered marker
 
 Especially for maps with a large number of markers, it can be useful to group multiple markers in one clustered marker. The clustered marker will show the number of markers in the group, and will take the alarm color of the highest alarm level of any of the markers.

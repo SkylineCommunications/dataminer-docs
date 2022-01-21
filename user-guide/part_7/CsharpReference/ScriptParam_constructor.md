@@ -1,3 +1,7 @@
+---
+uid: ScriptParam_constructor
+---
+
 ## ScriptParam constructor
 
 ```txt

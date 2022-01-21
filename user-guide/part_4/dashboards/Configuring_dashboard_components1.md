@@ -1,3 +1,7 @@
+---
+uid: Configuring_dashboard_components1
+---
+
 ## Configuring dashboard components
 
 To configure the components of a dashboard, you must first access the dashboard editor. This can be done in two ways:

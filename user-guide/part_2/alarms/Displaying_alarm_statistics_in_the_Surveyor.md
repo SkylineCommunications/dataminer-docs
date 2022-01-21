@@ -1,3 +1,7 @@
+---
+uid: Displaying_alarm_statistics_in_the_Surveyor
+---
+
 ## Displaying alarm statistics in the Surveyor
 
 In the Surveyor, statistical alarm data can be displayed next to elements, services and views.

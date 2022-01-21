@@ -1,3 +1,7 @@
+---
+uid: Types_of_parameters
+---
+
 # Types of parameters
 
 This section consists of the following topics:

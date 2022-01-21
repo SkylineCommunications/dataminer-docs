@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointAttribute_properties
+---
+
 ## AutomationEntryPointAttribute properties
 
 #### Type

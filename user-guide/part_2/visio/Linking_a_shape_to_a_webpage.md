@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_webpage
+---
+
 ## Linking a shape to a webpage
 
 Using a shape data field of type **Link**, you can link a shape to a webpage.

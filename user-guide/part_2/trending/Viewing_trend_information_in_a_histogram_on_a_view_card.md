@@ -1,3 +1,7 @@
+---
+uid: Viewing_trend_information_in_a_histogram_on_a_view_card
+---
+
 ## Viewing trend information in a histogram on a view card
 
 On the *HISTOGRAM* page of a view card, you can select a parameter to view its trend information in a histogram. It is also possible to save and load presets for a histogram

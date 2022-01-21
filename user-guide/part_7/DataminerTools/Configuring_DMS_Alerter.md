@@ -1,3 +1,7 @@
+---
+uid: Configuring_DMS_Alerter
+---
+
 ## Configuring DMS Alerter
 
 It is possible to configure DMS Alerter to your personal preferences. These user settings are stored on the server, so that you will always have your personal settings, no matter from which device you log on to Alerter.

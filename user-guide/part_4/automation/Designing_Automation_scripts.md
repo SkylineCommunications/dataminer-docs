@@ -1,3 +1,7 @@
+---
+uid: Designing_Automation_scripts
+---
+
 # Designing Automation scripts
 
 In the *Automation* module, select a script in the tree view pane on the left in order to configure it in the details pane on the right.

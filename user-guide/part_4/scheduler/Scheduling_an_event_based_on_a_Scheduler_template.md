@@ -1,3 +1,7 @@
+---
+uid: Scheduling_an_event_based_on_a_Scheduler_template
+---
+
 # Scheduling an event based on a Scheduler template
 
 Scheduled events are a combination of a START and STOP task, based on a special type of Automation script called a “Scheduler template”.

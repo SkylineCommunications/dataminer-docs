@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_user_group
+---
+
 ## Configuring a user group
 
 To configure a user group:

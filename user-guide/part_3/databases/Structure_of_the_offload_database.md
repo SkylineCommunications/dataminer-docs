@@ -1,3 +1,7 @@
+---
+uid: Structure_of_the_offload_database
+---
+
 ## Structure of the offload database
 
 In this section:

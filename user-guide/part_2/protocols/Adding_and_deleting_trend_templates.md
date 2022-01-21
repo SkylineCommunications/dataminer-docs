@@ -1,3 +1,7 @@
+---
+uid: Adding_and_deleting_trend_templates
+---
+
 ## Adding and deleting trend templates
 
 In this section:

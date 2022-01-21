@@ -1,3 +1,7 @@
+---
+uid: Polling_xml
+---
+
 ## Polling.xml
 
 When a protocol is added to a DMA, the timer information in that protocol is checked to find out the approximate polling intervals of the different parameters. If information about polling intervals is found, it is copied in a file named *Polling.xml*, which is then placed in the same folder as the protocol.

@@ -1,3 +1,7 @@
+---
+uid: Alarm_template_groups
+---
+
 ## Alarm template groups
 
 ### About alarm template groups

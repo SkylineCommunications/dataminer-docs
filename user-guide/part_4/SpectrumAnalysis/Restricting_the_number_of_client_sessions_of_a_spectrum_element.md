@@ -1,3 +1,7 @@
+---
+uid: Restricting_the_number_of_client_sessions_of_a_spectrum_element
+---
+
 ## Restricting the number of client sessions of a spectrum element
 
 The maximum number of concurrent client sessions of a spectrum analyzer element can be restricted by means of the *Spectrum.MaxRealTimeClients* element property.

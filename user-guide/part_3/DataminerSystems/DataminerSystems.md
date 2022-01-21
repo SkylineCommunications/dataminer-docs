@@ -1,3 +1,7 @@
+---
+uid: DataminerSystems
+---
+
 # DataMiner Systems
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: DataMiner_logging
+---
+
 ## DataMiner logging
 
 The *DataMiner* page shows the log information for the various DataMiner modules.

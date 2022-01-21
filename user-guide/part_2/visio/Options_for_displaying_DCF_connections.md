@@ -1,3 +1,7 @@
+---
+uid: Options_for_displaying_DCF_connections
+---
+
 ## Options for displaying DCF connections
 
 A number of different options are available for connections displayed in Visual Overview:

@@ -1,3 +1,7 @@
+---
+uid: Working_with_the_trend_groups_pane
+---
+
 ## Working with the trend groups pane
 
 In the trend group pane on the left-hand side, you can add or delete trend groups, or select trend groups to view and update them.

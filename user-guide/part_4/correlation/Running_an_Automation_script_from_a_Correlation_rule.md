@@ -1,3 +1,7 @@
+---
+uid: Running_an_Automation_script_from_a_Correlation_rule
+---
+
 ## Running an Automation script from a Correlation rule
 
 To run an Automation script from a Correlation rule:

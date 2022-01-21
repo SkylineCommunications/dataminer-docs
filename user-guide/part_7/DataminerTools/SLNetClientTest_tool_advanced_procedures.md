@@ -1,3 +1,7 @@
+---
+uid: SLNetClientTest_tool_advanced_procedures
+---
+
 ## SLNetClientTest tool advanced procedures
 
 The following procedures can be applied to troubleshoot errors. However, be very careful when you apply them as they can strongly influence the functionality of your DataMiner System.

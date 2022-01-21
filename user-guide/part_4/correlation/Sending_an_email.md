@@ -1,3 +1,7 @@
+---
+uid: Sending_an_email
+---
+
 ## Sending an email
 
 Use this action to make a Correlation rule send an email to one or more recipients, optionally with an email report attached.

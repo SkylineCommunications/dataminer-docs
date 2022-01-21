@@ -1,3 +1,7 @@
+---
+uid: ScriptParam_class
+---
+
 # ScriptParam class
 
 This class represents a script parameter.

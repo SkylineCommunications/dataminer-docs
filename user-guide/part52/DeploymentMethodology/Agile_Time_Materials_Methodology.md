@@ -1,3 +1,7 @@
+---
+uid: Agile_Time_Materials_Methodology
+---
+
 # Agile Time & Materials Methodology
 
 An Agile T&M methodology is offered and charged on a time consumption basis. There is therefore no need for a specific set of requirements or deliverables to agree on from a commercial point of view.

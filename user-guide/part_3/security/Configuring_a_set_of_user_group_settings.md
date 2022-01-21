@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_set_of_user_group_settings
+---
+
 # Configuring a set of user group settings
 
 > [!TIP]

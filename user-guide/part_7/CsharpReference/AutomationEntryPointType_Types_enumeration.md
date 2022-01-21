@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointType_Types_enumeration
+---
+
 # AutomationEntryPointType.Types enumeration
 
 This enumeration specifies the entry point method type.

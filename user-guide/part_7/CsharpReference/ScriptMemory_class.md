@@ -1,3 +1,7 @@
+---
+uid: ScriptMemory_class
+---
+
 # ScriptMemory class
 
 This class represents a script memory.

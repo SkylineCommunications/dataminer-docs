@@ -1,3 +1,7 @@
+---
+uid: About_DMA_Failover
+---
+
 # About DMA Failover
 
 When you team up a particular DataMiner Agent with a backup DMA, a virtual DMA team will be created. Two new IP addresses will be assigned to this virtual DMA team, which will be used as the virtual IP addresses of the online DMA in the Failover pair. Alternatively, from DataMiner 10.2.0/10.1.8 onwards, a hostname can be assigned to the virtual DMA team instead.

@@ -1,3 +1,7 @@
+---
+uid: How_DataMiner_offloads_data
+---
+
 ## How DataMiner offloads data
 
 ### Offload database of type MySQL

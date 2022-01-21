@@ -1,3 +1,7 @@
+---
+uid: Sleep
+---
+
 ## Sleep
 
 Use this action to pause an Automation script for a particular period of time before it is allowed to continue.

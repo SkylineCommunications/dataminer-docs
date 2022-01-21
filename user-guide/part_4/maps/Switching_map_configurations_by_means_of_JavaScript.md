@@ -1,3 +1,7 @@
+---
+uid: Switching_map_configurations_by_means_of_JavaScript
+---
+
 ## Switching map configurations by means of JavaScript
 
 You can switch from one DataMiner Maps configuration to another by means of JavaScript.

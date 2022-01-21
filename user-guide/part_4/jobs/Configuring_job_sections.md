@@ -1,3 +1,7 @@
+---
+uid: Configuring_job_sections
+---
+
 ## Configuring job sections
 
 While a user is creating a job, several different job sections can be displayed.

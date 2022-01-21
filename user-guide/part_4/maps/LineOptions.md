@@ -1,3 +1,7 @@
+---
+uid: LineOptions
+---
+
 ## LineOptions
 
 Layers of type "table" and of type "relations" can have a *\<LineOptions>* tag with the following (optional) attributes.

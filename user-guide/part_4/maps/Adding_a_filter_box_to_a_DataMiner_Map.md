@@ -1,3 +1,7 @@
+---
+uid: Adding_a_filter_box_to_a_DataMiner_Map
+---
+
 ## Adding a filter box to a DataMiner Map
 
 In a DataMiner Maps configuration file, you can specify that a filter box should be displayed on a DataMiner Map.

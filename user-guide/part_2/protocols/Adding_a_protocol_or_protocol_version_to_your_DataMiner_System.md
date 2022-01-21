@@ -1,3 +1,7 @@
+---
+uid: Adding_a_protocol_or_protocol_version_to_your_DataMiner_System
+---
+
 ## Adding a protocol or protocol version to your DataMiner System
 
 Before you can start adding elements that represent a particular device, you first have to upload the protocol for that device.

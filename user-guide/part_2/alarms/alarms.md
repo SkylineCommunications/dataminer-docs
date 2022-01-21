@@ -1,3 +1,7 @@
+---
+uid: alarms
+---
+
 # Alarms
 
 Your DataMiner System continuously retrieves a wide variety of parameter values from all elements. When a parameter is monitored, each time a value is retrieved from an element, that value is compared to a user-defined threshold. Each time that threshold is violated, the DataMiner System will generate an alarm.

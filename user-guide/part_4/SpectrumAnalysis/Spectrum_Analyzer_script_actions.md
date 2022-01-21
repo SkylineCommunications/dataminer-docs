@@ -1,3 +1,7 @@
+---
+uid: Spectrum_Analyzer_script_actions
+---
+
 ## Spectrum Analyzer script actions
 
 When you add action lines to a spectrum analyzer script, a vast array of actions is available. You can select this in the *Operation* drop-down list in the *Edit Monitor Script* pane. When you select an action, a brief description is shown below, and the input fields for the statement are adjusted to the selected action.

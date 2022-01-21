@@ -1,3 +1,7 @@
+---
+uid: The_Services_module
+---
+
 # The Services module
 
 From DataMiner 9.5.4 onwards, on a system with the proper licenses, the *Services* module is available in apps list in Cube. Prior to DataMiner 9.6.4, it is listed under the name *Service Manager*.

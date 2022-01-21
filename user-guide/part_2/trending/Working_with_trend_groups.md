@@ -1,3 +1,7 @@
+---
+uid: Working_with_trend_groups
+---
+
 # Working with trend groups
 
 > [!TIP]

@@ -1,3 +1,7 @@
+---
+uid: Locating_devices_in_your_system_to_add_to_your_DMS
+---
+
 # Locating devices in your system to add to your DMS
 
 DataMiner Cube provides a wizard that can be used to automatically detect devices in your infrastructure: the Device Discovery wizard. With the wizard, you can discover devices within a certain IP range, and then immediately create the corresponding elements in your DMS.

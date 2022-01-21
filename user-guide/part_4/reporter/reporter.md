@@ -1,3 +1,7 @@
+---
+uid: reporter
+---
+
 # DMS Reporter
 
 In DataMiner Cube, built-in reports are available on several types of cards, as well as in the Reporter app. In addition, you can create custom reports with the report template builder or in a third-party editor, and have these viewed online or sent by email.

@@ -1,3 +1,7 @@
+---
+uid: Computer_settings
+---
+
 ## Computer settings
 
 Any user preferences in DataMiner Cube pertaining to the user’s computer are grouped in the *computer* tab of the *Settings* window.

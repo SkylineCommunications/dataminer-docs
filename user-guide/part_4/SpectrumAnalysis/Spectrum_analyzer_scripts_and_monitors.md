@@ -1,3 +1,7 @@
+---
+uid: Spectrum_analyzer_scripts_and_monitors
+---
+
 # Spectrum analyzer scripts and monitors
 
 Apart from real-time remote interaction, DMS Spectrum Analysis also offers around-the-clock performance monitoring. Thanks to extensive, but highly intuitive scripting capabilities, administrators can automate just about every measurement that an operator would perform manually.

@@ -1,3 +1,7 @@
+---
+uid: Adding_a_DataMiner_Customized_comment
+---
+
 ## Adding a DataMiner Customized comment
 
 Instead of adding a *\<SkipTableUpdate>* instruction to the file *DB.xml*, you can also add a comment to a database table in order to keep that table from being checked during a DataMiner software upgrade.

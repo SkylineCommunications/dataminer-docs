@@ -1,3 +1,7 @@
+---
+uid: Service_class
+---
+
 # Service class
 
 Below, you can find an overview of all members of the *Service* class.

@@ -1,3 +1,7 @@
+---
+uid: DataMiner_user_permissions
+---
+
 # DataMiner user permissions
 
 In the System Center module, the user permissions have been divided into three main groups: *General*, *Modules*, and *Other*. Below is an overview of the different permissions.

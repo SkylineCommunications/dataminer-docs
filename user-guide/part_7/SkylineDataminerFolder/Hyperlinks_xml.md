@@ -1,3 +1,7 @@
+---
+uid: Hyperlinks_xml
+---
+
 ## Hyperlinks.xml
 
 In the file *Hyperlinks.xml*, you can define custom commands that have to appear in the shortcut menu of the Alarm Console.

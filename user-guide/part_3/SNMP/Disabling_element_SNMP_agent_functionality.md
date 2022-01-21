@@ -1,3 +1,7 @@
+---
+uid: Disabling_element_SNMP_agent_functionality
+---
+
 ## Disabling element SNMP agent functionality
 
 Up to DataMiner 9.5.14, it is possible to disable the SNMP agent function of all elements on a DMA on system level.

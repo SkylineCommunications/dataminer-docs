@@ -1,3 +1,7 @@
+---
+uid: Restoring_the_DMA_configuration_only
+---
+
 ## Restoring the DMA configuration only
 
 If you do not use the Taskbar Utility to restore the DMA, there are two ways to restore the DMA configuration:

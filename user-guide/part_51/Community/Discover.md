@@ -1,3 +1,7 @@
+---
+uid: Discover
+---
+
 ## Discover
 
 This section of the website provides you with in-depth knowledge about the DataMiner ecosystem.

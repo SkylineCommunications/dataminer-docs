@@ -1,3 +1,7 @@
+---
+uid: Managing_the_document_folders
+---
+
 # Managing the document folders
 
 The tree view on the left side of the app contains some root folders that cannot be edited:

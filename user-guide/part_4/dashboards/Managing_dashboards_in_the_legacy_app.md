@@ -1,3 +1,7 @@
+---
+uid: Managing_dashboards_in_the_legacy_app
+---
+
 # Managing dashboards in the legacy app
 
 To view the existing dashboards and dashboard containers in a DMS:

@@ -1,3 +1,7 @@
+---
+uid: Using_the_DataMiner_PTP_app
+---
+
 # Using the DataMiner PTP app
 
 This section details how to use the DataMiner PTP app.

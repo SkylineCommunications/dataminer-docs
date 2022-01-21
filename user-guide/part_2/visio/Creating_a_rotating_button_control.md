@@ -1,3 +1,7 @@
+---
+uid: Creating_a_rotating_button_control
+---
+
 ## Creating a rotating button control
 
 In a Visio file, you can draw a rotating button that visualizes and controls a certain parameter.

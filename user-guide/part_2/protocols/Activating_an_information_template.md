@@ -1,3 +1,7 @@
+---
+uid: Activating_an_information_template
+---
+
 ## Activating an information template
 
 If you want a custom information template to override a protocol’s default information template, you have to activate it, i.e. make it the active information template for that protocol.

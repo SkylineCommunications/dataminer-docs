@@ -1,3 +1,7 @@
+---
+uid: Tables
+---
+
 ## Tables
 
 This category contains the following visualizations:

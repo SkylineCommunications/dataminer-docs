@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_page_to_update_parameters_on_session_variable_changes
+---
+
 ## Configuring a page to update parameters on session variable changes
 
 It is possible to have parameters updated on an open Visual Overview page when a session variable changes.

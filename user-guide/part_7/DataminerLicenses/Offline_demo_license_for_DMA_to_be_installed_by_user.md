@@ -1,3 +1,7 @@
+---
+uid: Offline_demo_license_for_DMA_to_be_installed_by_user
+---
+
 # Offline demo license for DMA to be installed by user
 
 In case of a time-restricted demo license for a DataMiner Agent that will not have a permanent connection to the Skyline licensing server, the following procedure applies:

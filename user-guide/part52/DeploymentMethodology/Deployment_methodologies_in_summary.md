@@ -1,3 +1,7 @@
+---
+uid: Deployment_methodologies_in_summary
+---
+
 # Deployment methodologies in summary
 
 Skyline offers three distinct deployment models for its DataMiner technology, each with its own distinct set of terms and conditions, both commercially and from a practical or process point of view.

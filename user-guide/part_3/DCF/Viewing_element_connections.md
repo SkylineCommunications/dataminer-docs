@@ -1,3 +1,7 @@
+---
+uid: Viewing_element_connections
+---
+
 # Viewing element connections
 
 > [!NOTE]

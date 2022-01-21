@@ -1,3 +1,7 @@
+---
+uid: Creating_and_configuring_dashboards
+---
+
 # Creating and configuring dashboards
 
 In this section:

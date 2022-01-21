@@ -1,3 +1,7 @@
+---
+uid: Unknown_Error
+---
+
 # Unknown Error
 
 #### Symptom

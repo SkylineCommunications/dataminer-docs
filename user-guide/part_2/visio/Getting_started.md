@@ -1,3 +1,7 @@
+---
+uid: Getting_started
+---
+
 # Getting started
 
 This section consists of the following topics:

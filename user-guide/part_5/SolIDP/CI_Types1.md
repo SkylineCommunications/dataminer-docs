@@ -1,3 +1,7 @@
+---
+uid: CI_Types1
+---
+
 ## CI Types
 
 CI Types are defined in JSON format and consist of:

@@ -1,3 +1,7 @@
+---
+uid: Silent_actions
+---
+
 ## Silent actions
 
 Multiple "silent actions" are possible in scripts, allowing the scripts to interact with bookings without any user interaction. The section below lists the most common use cases. Adjusting bookings in ways that are not described below is not supported and could have a severe impact on the stability of SRM. However, if a specific feature you need is not described here, you can submit a feature request to Skyline to evaluate whether this could be added.

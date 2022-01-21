@@ -1,3 +1,7 @@
+---
+uid: Generating_a_report_with_the_Reporter_app
+---
+
 ## Generating a report with the Reporter app
 
 To generate a report using the Reporter app:

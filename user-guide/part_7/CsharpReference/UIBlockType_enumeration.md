@@ -1,3 +1,7 @@
+---
+uid: UIBlockType_enumeration
+---
+
 # UIBlockType enumeration
 
 Below, you can find an overview of the members of the *UIBlockType* enumeration.

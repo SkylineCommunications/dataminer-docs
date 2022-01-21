@@ -1,3 +1,7 @@
+---
+uid: System_reports
+---
+
 ## System reports
 
 The *System* page consists of several tabs:

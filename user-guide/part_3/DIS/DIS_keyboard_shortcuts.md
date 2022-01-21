@@ -1,3 +1,7 @@
+---
+uid: DIS_keyboard_shortcuts
+---
+
 ## DIS keyboard shortcuts
 
 The following table lists the default keyboard shortcuts that you can use while working with DataMiner Integration Studio.

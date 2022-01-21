@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_trend_component
+---
+
 ## Linking a shape to a trend component
 
 Using a shape data field of type **Component**, you can configure a Visio shape to display a trend component.

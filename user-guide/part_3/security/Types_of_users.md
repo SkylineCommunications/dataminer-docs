@@ -1,3 +1,7 @@
+---
+uid: Types_of_users
+---
+
 ## Types of users
 
 DataMiner distinguishes the following types of users:

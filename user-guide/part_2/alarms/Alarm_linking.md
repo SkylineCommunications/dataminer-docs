@@ -1,3 +1,7 @@
+---
+uid: Alarm_linking
+---
+
 ## Alarm linking
 
 When the DataMiner System detects that a parameter no longer has a value that is considered normal, it creates an alarm record with the following properties:

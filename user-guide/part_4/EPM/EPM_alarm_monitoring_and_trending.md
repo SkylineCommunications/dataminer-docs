@@ -1,3 +1,7 @@
+---
+uid: EPM_alarm_monitoring_and_trending
+---
+
 ## EPM alarm monitoring and trending
 
 Though in some aspects alarming and trending work in the same way as for regular elements, there are some differences for EPM elements:

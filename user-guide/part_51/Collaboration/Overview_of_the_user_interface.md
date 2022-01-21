@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_user_interface
+---
+
 # Overview of the user interface
 
 The user interface of the Project Collaboration module consists of the following tab pages:

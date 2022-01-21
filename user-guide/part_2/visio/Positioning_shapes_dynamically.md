@@ -1,3 +1,7 @@
+---
+uid: Positioning_shapes_dynamically
+---
+
 # Positioning shapes dynamically
 
 There are several ways to configure shapes in Visio so that they are positioned dynamically in Visual Overview.

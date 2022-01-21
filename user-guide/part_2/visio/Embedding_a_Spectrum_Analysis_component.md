@@ -1,3 +1,7 @@
+---
+uid: Embedding_a_Spectrum_Analysis_component
+---
+
 ## Embedding a Spectrum Analysis component
 
 From DataMiner 9.5.11 onwards, it is possible to embed a Spectrum Analysis component in Visio.

@@ -1,3 +1,7 @@
+---
+uid: Read_parameters_versus_write_parameters
+---
+
 ## Read parameters versus write parameters
 
 #### Read parameters

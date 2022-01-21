@@ -1,3 +1,7 @@
+---
+uid: Engine_properties
+---
+
 ## Engine properties
 
 - [IsInteractive](#isinteractive)

@@ -1,3 +1,7 @@
+---
+uid: Opening_DataMiner_Cube
+---
+
 ## Opening DataMiner Cube
 
 ### Opening the desktop application

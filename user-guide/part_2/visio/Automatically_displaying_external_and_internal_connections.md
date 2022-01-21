@@ -1,3 +1,7 @@
+---
+uid: Automatically_displaying_external_and_internal_connections
+---
+
 ## Automatically displaying external and internal connections
 
 External and internal connections can be displayed automatically based on DataMiner Connectivity Framework data that was either imported or detected.

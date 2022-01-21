@@ -1,3 +1,7 @@
+---
+uid: CloudAdminApp
+---
+
 # DataMiner Admin app
 
 In this section:

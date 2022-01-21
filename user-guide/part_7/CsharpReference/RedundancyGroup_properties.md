@@ -1,3 +1,7 @@
+---
+uid: RedundancyGroup_properties
+---
+
 ## RedundancyGroup properties
 
 #### DmaId

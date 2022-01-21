@@ -1,3 +1,7 @@
+---
+uid: Managing_element_properties
+---
+
 ## Managing element properties
 
 In this section:

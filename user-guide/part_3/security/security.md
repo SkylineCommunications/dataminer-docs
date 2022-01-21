@@ -1,3 +1,7 @@
+---
+uid: security
+---
+
 # Security
 
 This section consists of the following topics:

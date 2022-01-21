@@ -1,3 +1,7 @@
+---
+uid: Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions
+---
+
 # Developing DataMiner protocols and Automation scripts as Visual Studio solutions
 
 ## Developing DataMiner protocols as Visual Studio solutions

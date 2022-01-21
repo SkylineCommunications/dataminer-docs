@@ -1,3 +1,7 @@
+---
+uid: Customizing_the_layout_of_notification_messages
+---
+
 ## Customizing the layout of notification messages
 
 By default, all notification messages have a standard, hard-coded layout. However, if necessary, you can design custom notification message templates and store them in a file called *NotifyTemplates.xml*.

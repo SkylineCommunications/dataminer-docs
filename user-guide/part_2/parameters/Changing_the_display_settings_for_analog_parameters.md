@@ -1,3 +1,7 @@
+---
+uid: Changing_the_display_settings_for_analog_parameters
+---
+
 ## Changing the display settings for analog parameters
 
 You can specify whether analog parameters are displayed as a LED bar or as an oscilloscope:

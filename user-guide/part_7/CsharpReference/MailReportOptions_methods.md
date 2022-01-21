@@ -1,3 +1,7 @@
+---
+uid: MailReportOptions_methods
+---
+
 ## MailReportOptions methods
 
 - [IncludeElement](#includeelement)

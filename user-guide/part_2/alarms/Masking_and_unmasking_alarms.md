@@ -1,3 +1,7 @@
+---
+uid: Masking_and_unmasking_alarms
+---
+
 ## Masking and unmasking alarms
 
 Active alarms can be masked to prevent unnecessary follow-up.

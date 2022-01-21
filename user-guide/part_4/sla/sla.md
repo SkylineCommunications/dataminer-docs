@@ -1,3 +1,7 @@
+---
+uid: sla
+---
+
 # DMS Business Intelligence
 
 With DataMiner Business Intelligence, you can manage services from a value-added business perspective, tracking Service Level Agreement (SLA) compliance in real time. With SLA elements that correspond to particular services, you can view system events in their historical performance context, so that you can take the necessary measures with the business stakes in mind.

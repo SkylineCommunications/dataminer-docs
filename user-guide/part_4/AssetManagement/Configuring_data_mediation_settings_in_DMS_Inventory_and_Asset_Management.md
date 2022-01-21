@@ -1,3 +1,7 @@
+---
+uid: Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management
+---
+
 # Configuring data mediation settings in DMS Inventory and Asset Management
 
 The DMS Inventory & Asset Management module supports two-way data synchronization between a DataMiner database and a third-party CMDB.

@@ -1,3 +1,7 @@
+---
+uid: newR_D
+---
+
 # Dashboards app
 
 From DataMiner 9.6.9 onwards, a Dashboards web app is available. This app allows you to make, manage and view dashboards that can display a wealth of information about the monitored system.

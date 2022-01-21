@@ -1,3 +1,7 @@
+---
+uid: Creating_a_list_view
+---
+
 ## Creating a list view
 
 To create a dynamic, filterable list view containing elements, services or bookings, from DataMiner 9.6.4 onwards, it is possible to configure a *ListView* component.

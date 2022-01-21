@@ -1,3 +1,7 @@
+---
+uid: Making_a_shape_or_page_visible_only_for_a_particular_access_level
+---
+
 ## Making a shape or page visible only for a particular access level
 
 A shape or a page can be set to be visible only to users with a particular security access level.

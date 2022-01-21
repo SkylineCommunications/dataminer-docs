@@ -1,3 +1,7 @@
+---
+uid: AutomationDateTimeUpDownOptions_class
+---
+
 # AutomationDateTimeUpDownOptions class
 
 Below, you find an overview of all members of the *AutomationDateTimeUpDownOptions* class.

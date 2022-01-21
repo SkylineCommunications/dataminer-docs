@@ -1,3 +1,7 @@
+---
+uid: MobileGateway
+---
+
 # DMS Mobile Gateway
 
 DMS Mobile Gateway features support for two-way communication with mobile phones via SMS text messages. For quick interventions in case of emergencies, users can be alerted via text message and quickly adjust the value of any parameter on any device, depending on their user permissions.

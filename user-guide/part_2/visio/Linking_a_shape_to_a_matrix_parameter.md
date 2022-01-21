@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_matrix_parameter
+---
+
 ## Linking a shape to a matrix parameter
 
 Do the following to make a graphical representation of a matrix parameter.

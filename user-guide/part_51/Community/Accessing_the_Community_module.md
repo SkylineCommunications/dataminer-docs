@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_Community_module
+---
+
 # Accessing the Community module
 
 1. Open an internet browser (other than Microsoft Internet Explorer), go to

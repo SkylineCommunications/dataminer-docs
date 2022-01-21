@@ -1,3 +1,7 @@
+---
+uid: DataMiner_xml
+---
+
 ## DataMiner.xml
 
 In the file *DataMiner.xml*, you can specify a number of general system settings.

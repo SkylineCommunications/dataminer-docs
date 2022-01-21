@@ -1,3 +1,7 @@
+---
+uid: Making_a_shape_display_the_current_value_of_a_variable
+---
+
 ## Making a shape display the current value of a variable
 
 Using a shape data field of type **Variable**, you can make a shape display the current value of a variable.

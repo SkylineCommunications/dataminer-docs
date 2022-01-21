@@ -1,3 +1,7 @@
+---
+uid: Part2BasicFunctionalities
+---
+
 # Basic DataMiner functionality
 
 - [Alarms](../part_2/alarms/alarms.md)

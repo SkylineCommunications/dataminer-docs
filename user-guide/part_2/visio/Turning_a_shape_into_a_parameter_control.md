@@ -1,3 +1,7 @@
+---
+uid: Turning_a_shape_into_a_parameter_control
+---
+
 ## Turning a shape into a parameter control
 
 Using a shape data field of type **ParameterControl**, you can turn a shape into a parameter control.

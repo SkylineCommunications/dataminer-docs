@@ -1,3 +1,7 @@
+---
+uid: Preferred_configuration_using_virtual_IP_addresses__best_practice
+---
+
 # Preferred configuration using virtual IP addresses (best practice)
 
 When setting up a Failover pair of DMAs with virtual IP addresses, ideally you should:

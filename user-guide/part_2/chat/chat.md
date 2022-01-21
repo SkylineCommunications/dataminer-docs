@@ -1,3 +1,7 @@
+---
+uid: chat
+---
+
 # Chat collaboration
 
 In DataMiner Cube, it is possible to exchange chat messages with other users of your DataMiner System. The way this is done is slightly different from DataMiner 10.0.0/10.0.2 onwards compared to earlier DataMiner versions.

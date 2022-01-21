@@ -1,3 +1,7 @@
+---
+uid: Configuration_of_DataMiner_processes
+---
+
 ## Configuration of DataMiner processes
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: NotificationOptions_constructor
+---
+
 ## NotificationOptions constructor
 
 ```txt

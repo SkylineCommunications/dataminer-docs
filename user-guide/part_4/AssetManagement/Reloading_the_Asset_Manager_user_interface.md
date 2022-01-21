@@ -1,3 +1,7 @@
+---
+uid: Reloading_the_Asset_Manager_user_interface
+---
+
 ## Reloading the Asset Manager user interface
 
 If you want to re-initialize the entire *Asset Manager* user interface, click the *Reload* button in the lower left corner.

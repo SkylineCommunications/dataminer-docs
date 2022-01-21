@@ -1,3 +1,7 @@
+---
+uid: DataMiner_processes
+---
+
 ## DataMiner processes
 
 A DataMiner Agent hosts a number of separate but interacting processes.

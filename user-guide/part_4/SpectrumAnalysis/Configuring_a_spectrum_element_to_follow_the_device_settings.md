@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_spectrum_element_to_follow_the_device_settings
+---
+
 ## Configuring a spectrum element to follow the device settings
 
 From DataMiner 9.6.11 onwards, a spectrum element can be configured to initially load the settings from the device instead of from a cached preset stored per client. This makes it possible to fine-tune the device directly, so that any changes are reflected in the DataMiner element.

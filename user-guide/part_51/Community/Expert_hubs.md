@@ -1,3 +1,7 @@
+---
+uid: Expert_hubs
+---
+
 ## Expert hubs
 
 In this section of the website, a number of expert hubs offer you a single point of access to information on key technologies, products and solutions. They are all managed by subject matter experts.

@@ -1,3 +1,7 @@
+---
+uid: Exit
+---
+
 ## Exit
 
 Use this action to terminate an Automation script without delay:

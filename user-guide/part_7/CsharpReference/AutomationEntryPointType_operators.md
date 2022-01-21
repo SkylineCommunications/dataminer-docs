@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointType_operators
+---
+
 ## AutomationEntryPointType operators
 
 #### Equality

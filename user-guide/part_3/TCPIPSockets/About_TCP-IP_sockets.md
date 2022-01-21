@@ -1,3 +1,7 @@
+---
+uid: About_TCP-IP_sockets
+---
+
 # About TCP-IP sockets
 
 A DataMiner Agent can be configured to forward information to third-party applications via TCP/IP sockets.

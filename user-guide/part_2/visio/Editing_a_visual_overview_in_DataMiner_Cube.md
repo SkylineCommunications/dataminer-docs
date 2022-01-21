@@ -1,3 +1,7 @@
+---
+uid: Editing_a_visual_overview_in_DataMiner_Cube
+---
+
 ## Editing a visual overview in DataMiner Cube
 
 To edit a Visio drawing used within DataMiner Cube (i.e. a visual overview), you can use the right-click menu of the visual overview.

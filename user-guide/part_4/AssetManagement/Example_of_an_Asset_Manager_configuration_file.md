@@ -1,3 +1,7 @@
+---
+uid: Example_of_an_Asset_Manager_configuration_file
+---
+
 ## Example of an Asset Manager configuration file
 
 This is an example of an *Inventory and Asset Management* configuration file:

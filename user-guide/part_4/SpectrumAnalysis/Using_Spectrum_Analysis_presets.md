@@ -1,3 +1,7 @@
+---
+uid: Using_Spectrum_Analysis_presets
+---
+
 ## Using Spectrum Analysis presets
 
 This section consists of the following topics:

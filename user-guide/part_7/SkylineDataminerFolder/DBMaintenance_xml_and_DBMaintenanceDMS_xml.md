@@ -1,3 +1,7 @@
+---
+uid: DBMaintenance_xml_and_DBMaintenanceDMS_xml
+---
+
 ## DBMaintenance.xml and DBMaintenanceDMS.xml
 
 These files mainly contain the “time to live” (TTL) settings of the databases, which determine how long data are kept in the databases.

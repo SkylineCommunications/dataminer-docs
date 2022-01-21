@@ -1,3 +1,7 @@
+---
+uid: Component_overview
+---
+
 ## Component overview
 
 This section contains an overview of the Reporter components you can publish on a website:

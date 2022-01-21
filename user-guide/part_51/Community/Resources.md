@@ -1,3 +1,7 @@
+---
+uid: Resources
+---
+
 ## Resources
 
 In this section, you can find a wealth of resources:

@@ -1,3 +1,7 @@
+---
+uid: Configuring_DataMiner_Indexing
+---
+
 ## Configuring DataMiner Indexing
 
 To configure the DataMiner Indexing settings, go to *System Center* > *Search & Indexing*.

@@ -1,3 +1,7 @@
+---
+uid: SLNet_exe_config
+---
+
 ## SLNet.exe.config
 
 The file *SLNet.exe.config* is used for the configuration of settings related to the SLNet process.

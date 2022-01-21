@@ -1,3 +1,7 @@
+---
+uid: Examples_of_element_names
+---
+
 # Examples of element names
 
 A trunk amplifier, in the third position on the second trunk of node X04, and located in headend Y could be named:

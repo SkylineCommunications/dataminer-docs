@@ -1,3 +1,7 @@
+---
+uid: Enabling_grouping_of_dynamically_positioned_shapes
+---
+
 ## Enabling grouping of dynamically positioned shapes
 
 To get a cleaner look for Visual Overviews containing many dynamically positioned shapes that are very close together, you can enable shape grouping. This way, dynamically positioned shapes that overlap will be grouped.

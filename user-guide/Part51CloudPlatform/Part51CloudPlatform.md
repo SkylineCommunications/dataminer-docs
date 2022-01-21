@@ -1,3 +1,7 @@
+---
+uid: Part51CloudPlatform
+---
+
 # DataMiner Cloud Platform
 
 - [About the DataMiner Cloud Platform](../part_51/AboutCloudPlatform/AboutCloudPlatform.md#about-the-dataminer-cloud-platform)

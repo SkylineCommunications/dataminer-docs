@@ -1,3 +1,7 @@
+---
+uid: Blog
+---
+
 ## Blog
 
 On the blog page, you will find all latest news:

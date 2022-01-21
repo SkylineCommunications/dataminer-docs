@@ -1,3 +1,7 @@
+---
+uid: Communicating_with_other_DataMiner_users_via_Alerter
+---
+
 ## Communicating with other DataMiner users via Alerter
 
 The *Collaboration* tab allows you to exchange chat messages with other users of the DataMiner System to which you are connected.

@@ -1,3 +1,7 @@
+---
+uid: Service_templates
+---
+
 # Service templates
 
 This section consists of the following topics:

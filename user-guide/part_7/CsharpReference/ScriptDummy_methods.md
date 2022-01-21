@@ -1,3 +1,7 @@
+---
+uid: ScriptDummy_methods
+---
+
 ## ScriptDummy methods
 
 #### GetExternalInterfaces

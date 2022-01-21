@@ -1,3 +1,7 @@
+---
+uid: Positioning_shapes_dynamically1
+---
+
 ## Positioning shapes dynamically
 
 There are two ways to dynamically position shapes in Visio drawings.

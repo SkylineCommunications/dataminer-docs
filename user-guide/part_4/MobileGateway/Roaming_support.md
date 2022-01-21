@@ -1,3 +1,7 @@
+---
+uid: Roaming_support
+---
+
 # Roaming support
 
 Mobile Gateway supports roaming calls.

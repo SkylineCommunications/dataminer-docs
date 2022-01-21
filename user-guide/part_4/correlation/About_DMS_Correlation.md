@@ -1,3 +1,7 @@
+---
+uid: About_DMS_Correlation
+---
+
 # About DMS Correlation
 
 DMS Correlation automatically analyzes raw alarm information and real-time parameter values, and acts upon that information according to the rule sets you define in its knowledge base. It is not only capable of detecting single events, but also persistent and recurring events.

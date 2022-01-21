@@ -1,3 +1,7 @@
+---
+uid: Formal_roles_for_Agile_Scope-Based_deployment
+---
+
 ## Formal roles for Agile Scope-Based deployment
 
 The roles detailed below are instrumental for the efficient and correct execution of an Agile Scope-Based Project. At the start of the project, these therefore they need to be well defined and formally appointed to qualified individuals who fully understand their role and who are endorsed by everybody to fulfill it. All roles must be reviewed with everybody involved in the Agile Scope-Based Project, to ensure that everybody understands the relevance and purpose of each role. Only when all involved fully understand and grasp the mindset and principles of the methodology, and all involved effectively live this mindset every day within the context of their assigned role, can the merits of the approach come to fruition.

@@ -1,3 +1,7 @@
+---
+uid: GeneralLayout
+---
+
 # DataMiner System layout
 
 A DataMiner System (DMS) is a cluster of interconnected DataMiner Agents.

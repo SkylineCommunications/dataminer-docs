@@ -1,3 +1,7 @@
+---
+uid: Using_the_EPM_overview_section
+---
+
 ## Using the EPM overview section
 
 The overview section on the right-hand side shows more information on the selected object and chain. The displayed parameter data may come from polling or eventing, from aggregation or computation, or from the database. Aggregation allows data from the smallest devices in the chain to be aggregated in order to show information that is significant to the user, as determined by the protocol.

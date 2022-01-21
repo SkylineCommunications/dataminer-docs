@@ -1,3 +1,7 @@
+---
+uid: Script_condition_functions
+---
+
 ## Script condition functions
 
 Below, you find a list of functions you can use in a Correlation script condition.

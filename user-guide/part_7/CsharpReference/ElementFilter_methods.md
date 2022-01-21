@@ -1,3 +1,7 @@
+---
+uid: ElementFilter_methods
+---
+
 ## ElementFilter methods
 
 - [ByID](#byid)

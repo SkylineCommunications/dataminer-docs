@@ -1,3 +1,7 @@
+---
+uid: Automatically_generating_service_RCA_chains_based_on_connectivity
+---
+
 ## Automatically generating service RCA chains based on connectivity
 
 From DataMiner 9.5.2 onwards, it is possible to have RCA chains generated automatically for elements in a service, based on connectivity.

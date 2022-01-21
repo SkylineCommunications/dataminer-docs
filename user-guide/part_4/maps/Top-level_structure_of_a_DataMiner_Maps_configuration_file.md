@@ -1,3 +1,7 @@
+---
+uid: Top-level_structure_of_a_DataMiner_Maps_configuration_file
+---
+
 ## Top-level structure of a DataMiner Maps configuration file
 
 This is an example of a DataMiner Maps configuration file:

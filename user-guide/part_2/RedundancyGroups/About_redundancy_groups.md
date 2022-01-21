@@ -1,3 +1,7 @@
+---
+uid: About_redundancy_groups
+---
+
 # About redundancy groups
 
 In DataMiner, you can set up redundant device architectures by simply combining primary and backup elements into so-called redundancy groups.

@@ -1,3 +1,7 @@
+---
+uid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
+---
+
 ## Creating a link between DataMiner elements and the EPM element
 
 In DataMiner, two different kinds of links can exist between a regular DataMiner element and an EPM element:

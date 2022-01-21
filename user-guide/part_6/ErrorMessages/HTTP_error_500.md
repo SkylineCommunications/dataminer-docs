@@ -1,3 +1,7 @@
+---
+uid: HTTP_error_500
+---
+
 # HTTP error 500
 
 #### Symptom

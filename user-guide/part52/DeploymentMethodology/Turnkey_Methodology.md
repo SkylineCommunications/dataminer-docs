@@ -1,3 +1,7 @@
+---
+uid: Turnkey_Methodology
+---
+
 # Turnkey Methodology
 
 The Turnkey methodology is only applicable for projects with a very well-defined, exact scope, without ambiguity about the exact expectations of the users, and with very little risks for unexpected activities and changes. During the implementation of the project, no major changes or surprises are expected, neither from a user requirement perspective, nor from a technical implementation perspective. If exceptionally there are such changes after all, those are managed via a formal Change Request procedure to update both the initially envisioned implementation timeline and the cost of the Turnkey Project.

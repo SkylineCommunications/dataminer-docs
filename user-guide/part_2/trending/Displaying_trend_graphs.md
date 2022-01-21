@@ -1,3 +1,7 @@
+---
+uid: Displaying_trend_graphs
+---
+
 # Displaying trend graphs
 
 In DataMiner Cube, for any parameter that is being trended, you can display trend information in a trend graph. You can access the trend information from cards, or from the *Trending* module.

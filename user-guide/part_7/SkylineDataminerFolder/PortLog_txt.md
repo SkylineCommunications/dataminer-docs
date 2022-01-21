@@ -1,3 +1,7 @@
+---
+uid: PortLog_txt
+---
+
 ## PortLog.txt
 
 In the *PortLog.txt* file, you can specify IP addresses of DataMiner elements for which log information has to be added to the *SLPort.txt* log file.

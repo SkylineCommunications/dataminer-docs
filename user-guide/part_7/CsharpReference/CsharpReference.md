@@ -1,3 +1,7 @@
+---
+uid: CsharpReference
+---
+
 # Automation script CSharp code reference
 
 This section provides an overview of the objects and classes available in C# code blocks of Automation scripts.

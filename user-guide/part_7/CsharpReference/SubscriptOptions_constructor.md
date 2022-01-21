@@ -1,3 +1,7 @@
+---
+uid: SubscriptOptions_constructor
+---
+
 ## SubscriptOptions constructor
 
 ```txt

@@ -1,3 +1,7 @@
+---
+uid: Using_DataMiner_Maps
+---
+
 # Using DataMiner Maps
 
 DataMiner Maps can be displayed in a web browser, in an MS Visio file, and in a DataMiner dashboard (accessed either directly or through a Dashboard Gateway):

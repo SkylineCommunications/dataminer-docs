@@ -1,3 +1,7 @@
+---
+uid: Could_not_load_Visio_file
+---
+
 # Could not load Visio file
 
 #### Symptom

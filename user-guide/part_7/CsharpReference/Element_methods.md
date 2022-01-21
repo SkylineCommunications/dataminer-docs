@@ -1,3 +1,7 @@
+---
+uid: Element_methods
+---
+
 ## Element methods
 
 - [ConnectMatrixCrosspoint](#connectmatrixcrosspoint)

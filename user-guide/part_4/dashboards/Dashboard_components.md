@@ -1,3 +1,7 @@
+---
+uid: Dashboard_components
+---
+
 ## Dashboard components
 
 The available dashboard components are divided in seven groups, according to what they represent:

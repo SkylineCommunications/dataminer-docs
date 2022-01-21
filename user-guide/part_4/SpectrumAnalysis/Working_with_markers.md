@@ -1,3 +1,7 @@
+---
+uid: Working_with_markers
+---
+
 ## Working with markers
 
 Markers can be used to help you make measurements, by identifying points of traces. There is no limit to the number of markers you can place.

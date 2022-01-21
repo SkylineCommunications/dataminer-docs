@@ -1,3 +1,7 @@
+---
+uid: Manipulating_trend_graphs
+---
+
 # Manipulating trend graphs
 
 Whether you access a trend graph from a card or do so from the *Trending* module, the user interface consists of:

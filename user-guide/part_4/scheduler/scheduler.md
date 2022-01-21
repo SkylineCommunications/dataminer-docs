@@ -1,3 +1,7 @@
+---
+uid: scheduler
+---
+
 # DMS Scheduler
 
 DMS Scheduler allows you to manage a list of scheduled tasks that are to be executed by DataMiner.

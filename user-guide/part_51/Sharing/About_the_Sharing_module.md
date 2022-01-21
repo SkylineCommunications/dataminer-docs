@@ -1,3 +1,7 @@
+---
+uid: About_the_Sharing_module
+---
+
 # About the Sharing module
 
 As part of the DataMiner Cloud Platform (DCP), the Sharing module allows DataMiner users to share live data with anybody on the fly.

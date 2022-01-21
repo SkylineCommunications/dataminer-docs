@@ -1,3 +1,7 @@
+---
+uid: Installing_DataMiner_IDP
+---
+
 # Installing DataMiner IDP
 
 To install and set up DataMiner IDP:

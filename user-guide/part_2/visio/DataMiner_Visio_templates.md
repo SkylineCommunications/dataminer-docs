@@ -1,3 +1,7 @@
+---
+uid: DataMiner_Visio_templates
+---
+
 ## DataMiner Visio templates
 
 On a DataMiner Agent, you can find a number of default Visio drawings. If you want to create your own default drawings, you can either make copies of the drawings supplied by Skyline and adapt those copies, or create your own default drawings from scratch.

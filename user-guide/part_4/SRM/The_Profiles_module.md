@@ -1,3 +1,7 @@
+---
+uid: The_Profiles_module
+---
+
 # The Profiles module
 
 The *Profiles* module is available from DataMiner 9.0 onwards, and does not require a separate license. Prior to DataMiner 9.6.4, the module is named the *Profile Manager* module. The module is available in the apps list in Cube.

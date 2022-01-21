@@ -1,3 +1,7 @@
+---
+uid: Changing_the_state_of_an_element
+---
+
 ## Changing the state of an element
 
 To change the state of an element:

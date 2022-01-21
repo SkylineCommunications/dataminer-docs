@@ -1,3 +1,7 @@
+---
+uid: Consulting_documents_hyperlinks_or_email_addresses
+---
+
 # Consulting documents, hyperlinks or email addresses
 
 On the left side of the *Documents* module, a tree view shows a folder structure containing all available documents.

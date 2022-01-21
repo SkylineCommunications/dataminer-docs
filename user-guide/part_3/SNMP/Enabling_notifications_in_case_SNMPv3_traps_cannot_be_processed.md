@@ -1,3 +1,7 @@
+---
+uid: Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed
+---
+
 ## Enabling notifications in case SNMPv3 traps cannot be processed
 
 When an SNMPv3 trap or inform message is received that cannot be processed, for example because of authentication problems, from DataMiner 9.6.3 onwards, DataMiner can generate a notification. However, this feature first needs to be activated in the file *DataMiner.xml*.

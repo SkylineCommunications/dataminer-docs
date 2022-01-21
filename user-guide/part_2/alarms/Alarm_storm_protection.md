@@ -1,3 +1,7 @@
+---
+uid: Alarm_storm_protection
+---
+
 ## Alarm storm protection
 
 In order to avoid Cube getting flooded by a large number of alarms, it is possible to enable alarm storm protection.

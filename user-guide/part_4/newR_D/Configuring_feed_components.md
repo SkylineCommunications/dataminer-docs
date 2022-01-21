@@ -1,3 +1,7 @@
+---
+uid: Configuring_feed_components
+---
+
 ## Configuring feed components
 
 To have a component depend on feed selector components for its data input:

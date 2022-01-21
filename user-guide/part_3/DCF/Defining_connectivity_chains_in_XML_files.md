@@ -1,3 +1,7 @@
+---
+uid: Defining_connectivity_chains_in_XML_files
+---
+
 # Defining connectivity chains in XML files
 
 Connectivity chains can be configured in a number of *Connectivity.xml* files in the folder *C:\\Skyline DataMiner\\Connectivity*. These files help the DCF engine to determine whether a particular connection is part of the active path. A connection that would by default be considered part of the active path can be included or excluded based on the link and mapping information in the files.

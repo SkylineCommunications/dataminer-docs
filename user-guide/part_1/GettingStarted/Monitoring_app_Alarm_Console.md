@@ -1,3 +1,7 @@
+---
+uid: Monitoring_app_Alarm_Console
+---
+
 ## Monitoring app Alarm Console
 
 A collapsible Alarm Console pane at the bottom of the Monitoring app UI provides an overview of the alarms in the DMS, similar to the Alarm Console in Cube.

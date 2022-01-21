@@ -1,3 +1,7 @@
+---
+uid: Constants
+---
+
 ## Constants
 
 This section contains an overview of constants you can use when publishing Reporter components on a website.

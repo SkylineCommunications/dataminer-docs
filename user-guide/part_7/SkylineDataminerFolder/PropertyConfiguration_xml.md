@@ -1,3 +1,7 @@
+---
+uid: PropertyConfiguration_xml
+---
+
 ## PropertyConfiguration.xml
 
 In the *PropertyConfiguration.xml* file, you can define custom properties to be linked to elements, parameters and alarms.

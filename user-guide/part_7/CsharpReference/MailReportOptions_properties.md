@@ -1,3 +1,7 @@
+---
+uid: MailReportOptions_properties
+---
+
 ## MailReportOptions properties
 
 #### MailOptions

@@ -1,3 +1,7 @@
+---
+uid: EPM
+---
+
 # DMS Experience and Performance Management
 
 DataMiner Experience and Performance Management (EPM), prior to DataMiner 10.0.3 known as Customer Premises Equipment (CPE) Management, is a software platform specifically designed to manage very high volumes of devices in cable, telco, terrestrial and satellite environments.

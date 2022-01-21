@@ -1,3 +1,7 @@
+---
+uid: ServiceFilter_methods
+---
+
 ## ServiceFilter methods
 
 #### ByID

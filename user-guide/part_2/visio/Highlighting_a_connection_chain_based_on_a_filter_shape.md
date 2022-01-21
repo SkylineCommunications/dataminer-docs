@@ -1,3 +1,7 @@
+---
+uid: Highlighting_a_connection_chain_based_on_a_filter_shape
+---
+
 ## Highlighting a connection chain based on a filter shape
 
 A connectivity chain can be set to highlight based on a filter condition set by either clicking a button or selecting a value from a selection box.

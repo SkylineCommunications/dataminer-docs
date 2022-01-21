@@ -1,3 +1,7 @@
+---
+uid: Creating_a_redundancy_group
+---
+
 # Creating a redundancy group
 
 > [!TIP]

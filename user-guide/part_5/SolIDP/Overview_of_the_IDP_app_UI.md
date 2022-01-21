@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_IDP_app_UI
+---
+
 ## Overview of the IDP app UI
 
 The *DataMiner Infrastructure, Discovery and Provisioning* app (or IDP app) is available in the *Applications* section of the apps list in the Surveyor.

@@ -1,3 +1,7 @@
+---
+uid: Managing_service_templates
+---
+
 ## Managing service templates
 
 You can manage service templates through the options in the Surveyor right-click menu, or in the Service Templates module.

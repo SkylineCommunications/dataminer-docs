@@ -1,3 +1,7 @@
+---
+uid: UIBuilder_constructor
+---
+
 ## UIBuilder constructor
 
 ```txt

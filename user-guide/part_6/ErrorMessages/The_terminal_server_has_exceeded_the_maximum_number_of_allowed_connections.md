@@ -1,3 +1,7 @@
+---
+uid: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
+---
+
 # The terminal server has exceeded the maximum number of allowed connections
 
 The following error can often be encountered when remote desktop connections are set up:

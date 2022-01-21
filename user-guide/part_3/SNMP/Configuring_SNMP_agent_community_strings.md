@@ -1,3 +1,7 @@
+---
+uid: Configuring_SNMP_agent_community_strings
+---
+
 ## Configuring SNMP agent community strings
 
 By default, if no overrides are configured, the SNMP agent of a DMA will use “public” as the get community string and “private” as the set community string. You can override this on DMA level and on element level. Settings on element level override settings on DMA level.

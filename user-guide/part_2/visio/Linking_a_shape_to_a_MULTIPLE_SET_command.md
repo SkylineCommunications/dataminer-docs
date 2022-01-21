@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_MULTIPLE_SET_command
+---
+
 ## Linking a shape to a MULTIPLE SET command
 
 Using a shape data field of type **Execute**, you can link a shape to a MULTIPLE SET command.

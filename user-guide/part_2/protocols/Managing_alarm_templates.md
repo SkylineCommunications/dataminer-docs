@@ -1,3 +1,7 @@
+---
+uid: Managing_alarm_templates
+---
+
 ## Managing alarm templates
 
 In this section:

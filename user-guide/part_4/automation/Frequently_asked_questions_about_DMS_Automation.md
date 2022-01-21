@@ -1,3 +1,7 @@
+---
+uid: Frequently_asked_questions_about_DMS_Automation
+---
+
 # Frequently asked questions about DMS Automation
 
 This section consists of the following topics:

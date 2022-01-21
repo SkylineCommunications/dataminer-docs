@@ -1,3 +1,7 @@
+---
+uid: UIBuilder_example
+---
+
 ## UIBuilder example
 
 ```txt

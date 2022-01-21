@@ -1,3 +1,7 @@
+---
+uid: Preparing_to_debug_on_a_remote_DataMiner_Agent
+---
+
 ## Preparing to debug on a remote DataMiner Agent
 
 Proceed as follows if you want to debug a QAction or an Automation script located on the DataMiner Agent that is running on another machine.

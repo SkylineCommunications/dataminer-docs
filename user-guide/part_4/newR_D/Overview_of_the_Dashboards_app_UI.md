@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_Dashboards_app_UI
+---
+
 # Overview of the Dashboards app UI
 
 You can access the new Dashboards app via the link https://\[MyDataMiner\]/dashboard or http://\[MyDataMiner\]/dashboard, depending on your setup.

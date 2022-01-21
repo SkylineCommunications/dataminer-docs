@@ -1,3 +1,7 @@
+---
+uid: Configuring_an_SLA
+---
+
 # Configuring an SLA
 
 This section consists of the following topics:

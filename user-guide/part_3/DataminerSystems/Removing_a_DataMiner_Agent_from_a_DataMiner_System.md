@@ -1,3 +1,7 @@
+---
+uid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
+---
+
 # Removing a DataMiner Agent from a DataMiner System
 
 To remove a DataMiner Agent from a DataMiner System:

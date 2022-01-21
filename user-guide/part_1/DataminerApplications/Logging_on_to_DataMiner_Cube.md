@@ -1,3 +1,7 @@
+---
+uid: Logging_on_to_DataMiner_Cube
+---
+
 ## Logging on to DataMiner Cube
 
 When you open DataMiner Cube, in most cases you will be logged on automatically with your current Windows account. However, if, for example, you explicitly logged out of your previous DataMiner Cube session, or your system uses external authentication, the DataMiner Cube logon screen will be displayed.

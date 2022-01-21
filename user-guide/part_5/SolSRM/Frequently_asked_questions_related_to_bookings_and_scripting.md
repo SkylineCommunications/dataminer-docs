@@ -1,3 +1,7 @@
+---
+uid: Frequently_asked_questions_related_to_bookings_and_scripting
+---
+
 ## Frequently asked questions related to bookings and scripting
 
 #### Can I update the content of the DataMiner service generated for each booking?

@@ -1,3 +1,7 @@
+---
+uid: Running_BPA_tests
+---
+
 # Running BPA tests
 
 From DataMiner 9.6.0 \[CU23\]/10.0.0 \[CU11\]/10.2.0 onwards, it is possible to run BPA (i.e. Best Practices Analysis) tests from the *Agents* page in System Center. These tests can be used to verify that a specific part of a DataMiner setup conforms with Skyline recommendations, in order to guarantee an optimal DataMiner experience.

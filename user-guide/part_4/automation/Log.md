@@ -1,3 +1,7 @@
+---
+uid: Log
+---
+
 ## Log
 
 Use this action to have a script create a log message that will be saved in the SLAutomation.txt log file. It can either be a pre-determined message, or a message depending on a variable:

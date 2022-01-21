@@ -1,3 +1,7 @@
+---
+uid: Manually_starting_and_stopping_a_scheduled_event
+---
+
 # Manually starting and stopping a scheduled event
 
 Even if an event has been scheduled to be executed at a different time, whether this is in the past or in the future, it is possible to manually start and stop the event at any moment.

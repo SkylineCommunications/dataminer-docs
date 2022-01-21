@@ -1,3 +1,7 @@
+---
+uid: Re-arranging_dynamically_positioned_shapes
+---
+
 ## Re-arranging dynamically positioned shapes
 
 When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually.

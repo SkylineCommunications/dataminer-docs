@@ -1,3 +1,7 @@
+---
+uid: UIBuilder_properties
+---
+
 ## UIBuilder properties
 
 - [ColumnDefs](#columndefs)

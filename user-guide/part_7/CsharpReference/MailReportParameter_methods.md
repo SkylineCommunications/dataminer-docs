@@ -1,3 +1,7 @@
+---
+uid: MailReportParameter_methods
+---
+
 ## MailReportParameter methods
 
 - [ToIncludedParametersString(MailReportParameter\[\])](#toincludedparametersstringmailreportparameter)

@@ -1,3 +1,7 @@
+---
+uid: Uninstalling_a_DataMiner_Agent
+---
+
 # Uninstalling a DataMiner Agent
 
 You can uninstall the DataMiner Agent software as follows:

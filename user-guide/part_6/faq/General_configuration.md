@@ -1,3 +1,7 @@
+---
+uid: General_configuration
+---
+
 # General configuration
 
 This section contains the following topics:

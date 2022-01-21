@@ -1,3 +1,7 @@
+---
+uid: LogSettings_xml
+---
+
 ## LogSettings.xml
 
 From DataMiner 10.1.9/10.2.0 onwards, this file allows you to tweak SLLog stack cleaning behavior. The file also contains the log level configuration; however, this should be configured via the Cube UI instead of directly in the file.

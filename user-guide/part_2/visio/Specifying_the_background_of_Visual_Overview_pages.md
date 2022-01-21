@@ -1,3 +1,7 @@
+---
+uid: Specifying_the_background_of_Visual_Overview_pages
+---
+
 ## Specifying the background of Visual Overview pages
 
 > [!TIP]

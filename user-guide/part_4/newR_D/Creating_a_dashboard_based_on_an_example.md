@@ -1,3 +1,7 @@
+---
+uid: Creating_a_dashboard_based_on_an_example
+---
+
 ## Creating a dashboard based on an example
 
 Instead of creating a dashboard from scratch, you can instead first import an example dashboard and then edit this dashboard. To do so:

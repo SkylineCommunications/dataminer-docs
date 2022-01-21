@@ -1,3 +1,7 @@
+---
+uid: Restoring_the_database_only
+---
+
 ## Restoring the database only
 
 If you do not use the Taskbar Utility to restore a DMA, there are two ways you can restore the DMA database:

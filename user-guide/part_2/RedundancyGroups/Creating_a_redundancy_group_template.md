@@ -1,3 +1,7 @@
+---
+uid: Creating_a_redundancy_group_template
+---
+
 # Creating a redundancy group template
 
 To create a redundancy group template:

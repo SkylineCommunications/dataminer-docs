@@ -1,3 +1,7 @@
+---
+uid: Forbidden_characters
+---
+
 # Forbidden characters
 
 Certain characters may not be used in the names of DataMiner items. For the naming of views, different restrictions apply than for other DataMiner items.

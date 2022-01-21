@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointDelegates_class
+---
+
 # AutomationEntryPointDelegates class
 
 Below, you find an overview of all members of the *AutomationEntryPointDelegates* class.

@@ -1,3 +1,7 @@
+---
+uid: protocols
+---
+
 # Protocols and Templates
 
 This section provides information on the functionality of the Protocols & Templates module:

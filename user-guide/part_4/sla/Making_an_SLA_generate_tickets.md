@@ -1,3 +1,7 @@
+---
+uid: Making_an_SLA_generate_tickets
+---
+
 ## Making an SLA generate tickets
 
 On the *Ticket Creation* page of SLA elements, a parameter is provided that can be used to make DataMiner automatically generate tickets.

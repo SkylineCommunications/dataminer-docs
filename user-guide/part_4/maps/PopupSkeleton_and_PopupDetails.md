@@ -1,3 +1,7 @@
+---
+uid: PopupSkeleton_and_PopupDetails
+---
+
 ## PopupSkeleton and PopupDetails
 
 In the *\<PopupSkeleton>* and *\<PopupDetails>* tags, you can specify the contents of the balloon that will appear when you click a marker.

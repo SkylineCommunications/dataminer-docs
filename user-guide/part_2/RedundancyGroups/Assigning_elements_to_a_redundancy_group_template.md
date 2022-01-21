@@ -1,3 +1,7 @@
+---
+uid: Assigning_elements_to_a_redundancy_group_template
+---
+
 # Assigning elements to a redundancy group template
 
 If a redundancy group template has been created, it is possible to assign elements to it.

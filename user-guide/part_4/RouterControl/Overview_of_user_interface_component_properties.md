@@ -1,3 +1,7 @@
+---
+uid: Overview_of_user_interface_component_properties
+---
+
 ## Overview of user interface component properties
 
 Below, you can find the properties of each of the user interface components, as well as the additional optional property groups that can be added to components.

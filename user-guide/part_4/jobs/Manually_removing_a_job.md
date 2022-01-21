@@ -1,3 +1,7 @@
+---
+uid: Manually_removing_a_job
+---
+
 # Manually removing a job
 
 To delete a job manually:

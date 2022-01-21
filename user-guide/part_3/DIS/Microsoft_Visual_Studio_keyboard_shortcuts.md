@@ -1,3 +1,7 @@
+---
+uid: Microsoft_Visual_Studio_keyboard_shortcuts
+---
+
 ## Microsoft Visual Studio keyboard shortcuts
 
 The following table lists some useful keyboard shortcuts that you can use while working in Microsoft Visual Studio.

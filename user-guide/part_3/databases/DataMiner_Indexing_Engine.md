@@ -1,3 +1,7 @@
+---
+uid: DataMiner_Indexing_Engine
+---
+
 # DataMiner Indexing Engine
 
 From DataMiner 9.6.4 onwards, on DataMiner Agents with a Cassandra database, it is possible to install a dedicated Elasticsearch indexing database, which is used to store specific data that can for instance be used in the Jobs app and the new Dashboards app.

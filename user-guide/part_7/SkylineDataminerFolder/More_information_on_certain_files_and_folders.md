@@ -1,3 +1,7 @@
+---
+uid: More_information_on_certain_files_and_folders
+---
+
 # More information on certain files and folders
 
 This section provides further information on the following files and folders:

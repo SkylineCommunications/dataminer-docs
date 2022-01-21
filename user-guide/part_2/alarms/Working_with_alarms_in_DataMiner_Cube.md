@@ -1,3 +1,7 @@
+---
+uid: Working_with_alarms_in_DataMiner_Cube
+---
+
 # Working with alarms in DataMiner Cube
 
 In DataMiner Cube, most of the alarm functionality is available via the Alarm Console at the bottom of the Cube workspace. However, in addition to that, there are dedicated cards available for alarms, and alarm information can also be displayed on other cards.

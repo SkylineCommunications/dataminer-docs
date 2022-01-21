@@ -1,3 +1,7 @@
+---
+uid: MarkerImages
+---
+
 ## MarkerImages
 
 In the *\<MarkerImages>* tag, add a *\<MarkerImage>* tag for every marker image you intend to use in this layer.

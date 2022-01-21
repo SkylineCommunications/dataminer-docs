@@ -1,3 +1,7 @@
+---
+uid: Adding_a_new_report_template
+---
+
 ## Adding a new report template
 
 To add a new report template in the Reporter app:

@@ -1,3 +1,7 @@
+---
+uid: Customizing_the_Dashboards_app
+---
+
 # Customizing the Dashboards app
 
 The following advanced customization is possible for the redesigned Dashboards app:

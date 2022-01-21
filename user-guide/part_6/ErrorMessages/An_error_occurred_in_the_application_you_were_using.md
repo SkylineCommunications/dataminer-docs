@@ -1,3 +1,7 @@
+---
+uid: An_error_occurred_in_the_application_you_were_using
+---
+
 # An error occurred in the application you were using
 
 #### Symptom

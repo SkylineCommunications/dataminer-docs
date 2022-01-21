@@ -1,3 +1,7 @@
+---
+uid: Including_external_files_in_a_report_template
+---
+
 ## Including external files in a report template
 
 When using the DataMiner JScript methods to include graphs, you do not need to worry about how to get these graphs into an email message. The framework will do this for you. However, when you want to link style sheets or images of your own, you will need to take some extra actions.

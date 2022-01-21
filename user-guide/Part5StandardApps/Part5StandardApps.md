@@ -1,3 +1,7 @@
+---
+uid: Part5StandardApps
+---
+
 # DataMiner Standard Apps
 
 - [DataMiner IDP app](../part_5/SolIDP/SolIDP.md#dataminer-idp-app)

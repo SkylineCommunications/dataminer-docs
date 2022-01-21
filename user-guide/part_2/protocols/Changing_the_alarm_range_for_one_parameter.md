@@ -1,3 +1,7 @@
+---
+uid: Changing_the_alarm_range_for_one_parameter
+---
+
 ## Changing the alarm range for one parameter
 
 Both from the Alarm Console and from a parameter card, it is possible to quickly change the alarm range for one particular parameter. This can be particularly useful for users who do not have access to the Protocols & Templates module.

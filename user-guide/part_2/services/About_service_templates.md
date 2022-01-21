@@ -1,3 +1,7 @@
+---
+uid: About_service_templates
+---
+
 ## About service templates
 
 Service templates allow you to create entire series of almost identical services with just a few clicks. Creating a large number of very similar services can be a time-consuming and tedious job. However, by creating all services in one go with a service template, you can save a lot of time.

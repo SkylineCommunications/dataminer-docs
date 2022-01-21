@@ -1,3 +1,7 @@
+---
+uid: Assigning_user_settings_to_a_user_group
+---
+
 # Assigning user settings to a user group
 
 All users who have ever logged on to a DataMiner Agent using DataMiner Cube have their own personalized user settings on that DataMiner Agent.

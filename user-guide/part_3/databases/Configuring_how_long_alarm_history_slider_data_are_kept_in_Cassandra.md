@@ -1,3 +1,7 @@
+---
+uid: Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra
+---
+
 ## Configuring how long alarm history slider data are kept in Cassandra
 
 In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider. Depending on your DataMiner version, there is a different way to customize how long these history slider data are kept in this table.

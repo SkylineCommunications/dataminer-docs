@@ -1,3 +1,7 @@
+---
+uid: Advanced_Failover_options
+---
+
 ## Advanced Failover options
 
 When you click *Advanced* in the *Failover* dialog box, you can specify a number of advanced options in four separate tabs.

@@ -1,3 +1,7 @@
+---
+uid: Offload_database
+---
+
 # Offload database
 
 If you set up your own offload or “central” database in your DataMiner System, that database will contain an offline copy of all (or some of) the data in the general DMA databases.

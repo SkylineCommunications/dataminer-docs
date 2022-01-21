@@ -1,3 +1,7 @@
+---
+uid: Changing_group_membership_of_a_user
+---
+
 ## Changing group membership of a user
 
 1. In the *Users / Groups* section of the System Center module, go to the *users* tab and select the user in question.

@@ -1,3 +1,7 @@
+---
+uid: Setting_up_an_offload_database
+---
+
 ## Setting up an offload database
 
 In this section:

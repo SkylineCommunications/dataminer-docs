@@ -1,3 +1,7 @@
+---
+uid: Working_with_job_templates
+---
+
 # Working with job templates
 
 From DataMiner 9.6.6 onwards, it is possible to save a particular job configuration as a job template. This way you can later apply the template to immediately fill in the configured values.

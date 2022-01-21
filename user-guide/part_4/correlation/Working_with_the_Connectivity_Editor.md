@@ -1,3 +1,7 @@
+---
+uid: Working_with_the_Connectivity_Editor
+---
+
 # Working with the Connectivity Editor
 
 The connectivity editor allows you to create topology chains in order to efficiently locate the root cause of problems. This makes it possible to use DMS Root Cause Analysis (“RCA”): elements or parameters receive an RCA level to indicate the distance to the most probable root cause.

@@ -1,3 +1,7 @@
+---
+uid: Logging_on_to_the_Dashboards_App
+---
+
 ## Logging on to the Dashboards App
 
 In most cases, logging on to the *Dashboards* App is similar to logging on to DataMiner Cube. See [Logging on to DataMiner Cube](../../part_1/DataminerApplications/Logging_on_to_DataMiner_Cube.md).

@@ -1,3 +1,7 @@
+---
+uid: About_DMS_Inventory_Asset_Management
+---
+
 # About DMS Inventory & Asset Management
 
 DataMiner Inventory and Asset Management is a DataMiner add-on module that establishes a bidirectional link between your DataMiner System and your Configuration Management Database (CMDB).

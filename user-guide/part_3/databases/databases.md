@@ -1,3 +1,7 @@
+---
+uid: databases
+---
+
 # Databases
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: Consulting_the_DataMiner_logs_in_DataMiner_Cube
+---
+
 # Consulting the DataMiner logs in DataMiner Cube
 
 In the System Center module, the *Logging* page provides access to the various log files available in the DMS. On this page, you can consult log files in order to check the system health and troubleshoot any problems.

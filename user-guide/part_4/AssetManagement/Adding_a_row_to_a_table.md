@@ -1,3 +1,7 @@
+---
+uid: Adding_a_row_to_a_table
+---
+
 ## Adding a row to a table
 
 In the *Asset Manager* module:

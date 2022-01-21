@@ -1,3 +1,7 @@
+---
+uid: Advanced_SRM_settings
+---
+
 # Advanced SRM settings
 
 From DataMiner 9.5.7 onwards, advanced SRM settings can be configured in the file *Config.xml*, in the folder *C:\\Skyline DataMiner\\ProtocolFunctionManager*. This file contains the following tags:

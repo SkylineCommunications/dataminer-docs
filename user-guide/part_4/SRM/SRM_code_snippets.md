@@ -1,3 +1,7 @@
+---
+uid: SRM_code_snippets
+---
+
 # SRM code snippets
 
 Much of the functionality of the Service & Resource Management module makes use of Automation scripts.

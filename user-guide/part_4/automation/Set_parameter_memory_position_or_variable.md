@@ -1,3 +1,7 @@
+---
+uid: Set_parameter_memory_position_or_variable
+---
+
 ## Set parameter, memory position or variable
 
 For this script action, you must first indicate what is to be set: parameter, memory position or variable. The further configuration options depend on this first choice.

@@ -1,3 +1,7 @@
+---
+uid: Making_corrections_to_existing_outages
+---
+
 # Making corrections to existing outages
 
 It is possible that a particular outage or alarm should not or only partly be taken into account for an SLA. In that case, you can make corrections afterwards:

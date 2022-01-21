@@ -1,3 +1,7 @@
+---
+uid: Overall_concept_of_the_DataMiner_Integration_Studio
+---
+
 ## Overall concept of the DataMiner Integration Studio
 
 DataMiner Integration Studio has many interesting features that facilitate the development of DataMiner protocols.

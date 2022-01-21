@@ -1,3 +1,7 @@
+---
+uid: Table_editor
+---
+
 # Table editor
 
 If you click *Table Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a graphical table editor. This editor allows you to design the tables shown on the Data Display pages of the protocol using simple drag-and-drop operations.

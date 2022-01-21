@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_Monitoring_app
+---
+
 # Accessing the Monitoring app
 
 To access the Monitoring app, depending on your setup, go to one of the following addresses in a browser:

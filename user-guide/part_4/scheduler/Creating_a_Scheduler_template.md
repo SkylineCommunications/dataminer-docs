@@ -1,3 +1,7 @@
+---
+uid: Creating_a_Scheduler_template
+---
+
 # Creating a Scheduler template
 
 To create scheduler templates, which will show up in the EVENT list in Scheduler, use the Automation module:

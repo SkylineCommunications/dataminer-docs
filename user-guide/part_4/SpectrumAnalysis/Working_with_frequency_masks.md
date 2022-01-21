@@ -1,3 +1,7 @@
+---
+uid: Working_with_frequency_masks
+---
+
 ## Working with frequency masks
 
 > [!NOTE]

@@ -1,3 +1,7 @@
+---
+uid: Engine_methods
+---
+
 ## Engine methods
 
 - [AcknowledgeAlarm](#acknowledgealarm)

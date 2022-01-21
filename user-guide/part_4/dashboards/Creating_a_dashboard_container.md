@@ -1,3 +1,7 @@
+---
+uid: Creating_a_dashboard_container
+---
+
 ## Creating a dashboard container
 
 It is possible to combine several dashboards in one dashboard container. When you open the dashboard container, the different dashboards will be available as tab pages, so that you can easily navigate between them.

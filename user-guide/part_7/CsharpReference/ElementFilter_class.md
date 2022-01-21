@@ -1,3 +1,7 @@
+---
+uid: ElementFilter_class
+---
+
 # ElementFilter class
 
 Below, you can find an overview of all members of the *ElementFilter* class.

@@ -1,3 +1,7 @@
+---
+uid: Display_editor
+---
+
 # Display editor
 
 If you click *Display Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a graphical interface editor. This editor allows you to design the Data Display pages of the protocol using simple drag-and-drop operations.

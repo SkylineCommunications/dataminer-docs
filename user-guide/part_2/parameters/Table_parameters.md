@@ -1,3 +1,7 @@
+---
+uid: Table_parameters
+---
+
 ## Table parameters
 
 Different types of table parameters exist in DataMiner Cube, detailed in the sections below. Regardless of the type of table parameter, the following applies:

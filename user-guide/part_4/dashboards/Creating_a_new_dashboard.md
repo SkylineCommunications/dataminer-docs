@@ -1,3 +1,7 @@
+---
+uid: Creating_a_new_dashboard
+---
+
 ## Creating a new dashboard
 
 To create a new dashboard in the *Dashboards* app:

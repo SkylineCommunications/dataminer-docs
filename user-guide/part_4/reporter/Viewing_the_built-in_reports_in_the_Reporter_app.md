@@ -1,3 +1,7 @@
+---
+uid: Viewing_the_built-in_reports_in_the_Reporter_app
+---
+
 # Viewing the built-in reports in the Reporter app
 
 To view the built-in reports in the Reporter app:

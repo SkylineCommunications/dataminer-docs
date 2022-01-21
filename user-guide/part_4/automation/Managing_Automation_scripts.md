@@ -1,3 +1,7 @@
+---
+uid: Managing_Automation_scripts
+---
+
 # Managing Automation scripts
 
 To manage the Automation scripts in a DMS, you need to open the Automation module (via apps \> *Automation*). When you do so, a card is opened that consists of two panes:

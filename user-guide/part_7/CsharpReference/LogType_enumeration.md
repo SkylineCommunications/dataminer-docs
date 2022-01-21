@@ -1,3 +1,7 @@
+---
+uid: LogType_enumeration
+---
+
 # LogType enumeration
 
 Below, you can find an overview of the members of the *LogType* enumeration.

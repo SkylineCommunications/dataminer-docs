@@ -1,3 +1,7 @@
+---
+uid: setsockopt_failed_for_SO_KEEPALIVE
+---
+
 # setsockopt failed for SO_KEEPALIVE
 
 #### Symptom

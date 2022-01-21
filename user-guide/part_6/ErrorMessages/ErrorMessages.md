@@ -1,3 +1,7 @@
+---
+uid: ErrorMessages
+---
+
 # Error messages
 
 This section provides more information on the following error messages:

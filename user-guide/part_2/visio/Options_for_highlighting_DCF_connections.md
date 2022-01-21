@@ -1,3 +1,7 @@
+---
+uid: Options_for_highlighting_DCF_connections
+---
+
 ## Options for highlighting DCF connections
 
 In addition to the options determining how connections are displayed, there are also a number of options that determine how they can be highlighted:

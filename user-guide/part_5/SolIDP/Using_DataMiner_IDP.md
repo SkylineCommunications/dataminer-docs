@@ -1,3 +1,7 @@
+---
+uid: Using_DataMiner_IDP
+---
+
 # Using DataMiner IDP
 
 This section details how to use the DataMiner IDP.

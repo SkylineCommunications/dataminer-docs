@@ -1,3 +1,7 @@
+---
+uid: Report_view
+---
+
 ## Report view
 
 When you click the *Report* tab, you will see a summary of the current project:

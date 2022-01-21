@@ -1,3 +1,7 @@
+---
+uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
+---
+
 ## Configuring an SNMP manager in DataMiner Cube
 
 1. In DataMiner Cube, go to *Apps* > *System Center* \> *SNMP Forwarding*.

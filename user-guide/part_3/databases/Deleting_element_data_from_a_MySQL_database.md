@@ -1,3 +1,7 @@
+---
+uid: Deleting_element_data_from_a_MySQL_database
+---
+
 ## Deleting element data from a MySQL database
 
 On a DMA using a MySQL general database, the current values of all element parameters marked “to be saved” in the element are saved in a local MySQL database table called “elementdata\_\[DMAID\]”. If, for some reason, you want all or some of those parameter values to be cleared, refer to the instructions below.

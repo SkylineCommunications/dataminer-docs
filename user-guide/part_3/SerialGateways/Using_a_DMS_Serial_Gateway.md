@@ -1,3 +1,7 @@
+---
+uid: Using_a_DMS_Serial_Gateway
+---
+
 # Using a DMS Serial Gateway
 
 If you want to add elements to a DMA that are connected via a Serial Gateway, you first have to prepare the Serial Gateway, then add the elements to the DMS, and finally check the communication:

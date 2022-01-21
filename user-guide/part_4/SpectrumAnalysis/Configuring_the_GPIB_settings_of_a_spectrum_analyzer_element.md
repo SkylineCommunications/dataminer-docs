@@ -1,3 +1,7 @@
+---
+uid: Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element
+---
+
 ## Configuring the GPIB settings of a spectrum analyzer element
 
 When adding or updating a spectrum analyzer element, at some point during element creation, you can specify the settings of the GPIB/LAN gateway through which DataMiner will communicate with the spectrum analyzer.

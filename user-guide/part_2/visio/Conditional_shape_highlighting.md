@@ -1,3 +1,7 @@
+---
+uid: Conditional_shape_highlighting
+---
+
 ## Conditional shape highlighting
 
 Visio shapes linked to elements, services, redundancy groups or views can be highlighted based on whether or not a condition is true.

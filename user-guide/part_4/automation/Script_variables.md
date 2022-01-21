@@ -1,3 +1,7 @@
+---
+uid: Script_variables
+---
+
 ## Script variables
 
 For most script actions, variables are required. There are three kinds of variables:

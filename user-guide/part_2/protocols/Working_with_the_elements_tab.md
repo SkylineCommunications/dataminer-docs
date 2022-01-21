@@ -1,3 +1,7 @@
+---
+uid: Working_with_the_elements_tab
+---
+
 ## Working with the elements tab
 
 While usually protocols or protocol versions are managed in the main *protocols & templates* tab, for a better overview of which elements use which protocols and versions, you can instead use the *elements* tab of the app.

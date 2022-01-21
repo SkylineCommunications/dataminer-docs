@@ -1,3 +1,7 @@
+---
+uid: Managing_Visio_files_linked_to_protocols
+---
+
 ## Managing Visio files linked to protocols
 
 In DataMiner, each protocol has one or more Visio files linked to it. It is possible to change the Visio files linked to a protocol, so that each element based on that particular protocol displays the Visual Overview you have determined.

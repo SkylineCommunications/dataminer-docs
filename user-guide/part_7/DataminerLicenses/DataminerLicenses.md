@@ -1,3 +1,7 @@
+---
+uid: DataminerLicenses
+---
+
 # Obtaining a DataMiner license
 
 There are four procedures to obtain a DataMiner license:

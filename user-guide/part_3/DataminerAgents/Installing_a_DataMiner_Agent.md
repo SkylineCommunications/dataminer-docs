@@ -1,3 +1,7 @@
+---
+uid: Installing_a_DataMiner_Agent
+---
+
 # Installing a DataMiner Agent
 
 For detailed information on how to install a DataMiner Agent, see <https://community.dataminer.services/documentation/dataminer-installation-guide/>.

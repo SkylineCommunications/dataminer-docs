@@ -1,3 +1,7 @@
+---
+uid: Configuring_the_DataMiner_Maps
+---
+
 # Configuring the DataMiner Maps
 
 On a DataMiner Agent, the configuration files for the DataMiner Maps have to be placed in the *C:\\Skyline DataMiner\\Maps\\Configs* directory.

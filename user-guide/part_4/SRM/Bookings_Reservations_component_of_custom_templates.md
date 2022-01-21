@@ -1,3 +1,7 @@
+---
+uid: Bookings_Reservations_component_of_custom_templates
+---
+
 ## Bookings / Reservations component of custom templates
 
 In the template builder, the *Bookings* or (prior to DataMiner 9.6.8) *Reservations* building block allows you to select one of the following types of booking reports:

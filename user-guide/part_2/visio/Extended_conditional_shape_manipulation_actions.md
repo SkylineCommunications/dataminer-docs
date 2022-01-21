@@ -1,3 +1,7 @@
+---
+uid: Extended_conditional_shape_manipulation_actions
+---
+
 ## Extended conditional shape manipulation actions
 
 To apply conditional shape manipulation actions to any type of linked shape, or to combine multiple conditions, a different configuration is required than for the basic conditional shape manipulation actions.

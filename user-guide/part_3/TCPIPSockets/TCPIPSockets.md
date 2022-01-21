@@ -1,3 +1,7 @@
+---
+uid: TCPIPSockets
+---
+
 # TCP-IP sockets
 
 This section consists of the following topics:

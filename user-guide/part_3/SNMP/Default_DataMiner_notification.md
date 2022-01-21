@@ -1,3 +1,7 @@
+---
+uid: Default_DataMiner_notification
+---
+
 ## Default DataMiner notification
 
 ### SNMPv1 header data

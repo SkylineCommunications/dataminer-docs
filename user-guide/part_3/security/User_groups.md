@@ -1,3 +1,7 @@
+---
+uid: User_groups
+---
+
 ## User groups
 
 DataMiner users are part of one or more groups. Groups can be granted rights according to three concepts: permissions, views and access levels. Users in those groups simply inherit the rights granted to the groups of which they are a member. User settings can also be configured at group level.

@@ -1,3 +1,7 @@
+---
+uid: Generating_shapes_based_on_child_items_in_a_view_or_a_service
+---
+
 ## Generating shapes based on child items in a view or a service
 
 In a Visio drawing linked to a view or a service, you can specify that a shape should be created automatically for every child item of that view or service.

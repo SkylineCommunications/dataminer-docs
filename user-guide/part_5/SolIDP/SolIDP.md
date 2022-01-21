@@ -1,3 +1,7 @@
+---
+uid: SolIDP
+---
+
 # DataMiner IDP app
 
 DataMiner Infrastructure Discovery Provisioning (IDP) consists of several interacting components, each responsible for a specific task.

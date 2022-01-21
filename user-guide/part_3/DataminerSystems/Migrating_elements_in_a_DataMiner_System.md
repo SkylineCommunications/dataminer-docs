@@ -1,3 +1,7 @@
+---
+uid: Migrating_elements_in_a_DataMiner_System
+---
+
 # Migrating elements in a DataMiner System
 
 In DataMiner Cube, it is possible to migrate elements from one DMA to another within a DMS.

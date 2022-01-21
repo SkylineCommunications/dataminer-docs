@@ -1,3 +1,7 @@
+---
+uid: About_the_DataMiner_Connectivity_Framework
+---
+
 # About the DataMiner Connectivity Framework
 
 With the DataMiner Connectivity Framework, you can set up element connectivity. This means that you can configure and visualize signal paths throughout your infrastructure.

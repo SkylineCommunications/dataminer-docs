@@ -1,3 +1,7 @@
+---
+uid: UIResults_class
+---
+
 # UIResults class
 
 Below, you can find an overview of all members of the *UIResults* class.

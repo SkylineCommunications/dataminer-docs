@@ -1,3 +1,7 @@
+---
+uid: ScriptMemory_properties
+---
+
 ## ScriptMemory properties
 
 #### Id

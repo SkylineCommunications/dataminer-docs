@@ -1,3 +1,7 @@
+---
+uid: Typical_Phases_for_Agile_Scope-Based_projects
+---
+
 ## Typical Phases for Agile Scope-Based projects
 
 The Agile Scope-Based project has a flexible approach, and the Project Squad has maximum freedom to fine-tune the exact working methodology for the type of project at hand, and even depending on the exact activities throughout the execution of the project, on the condition that A) they ensure that it is clearly agreed with the entire Project Squad, and that it is practiced in full by everybody, and B) they comply with the key principles and mindset associated with the Agile Scope-Based project.

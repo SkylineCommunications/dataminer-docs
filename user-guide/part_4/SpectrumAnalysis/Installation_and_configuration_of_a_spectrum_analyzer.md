@@ -1,3 +1,7 @@
+---
+uid: Installation_and_configuration_of_a_spectrum_analyzer
+---
+
 # Installation and configuration of a spectrum analyzer
 
 This section consists of the following topics:

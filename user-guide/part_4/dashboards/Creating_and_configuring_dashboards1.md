@@ -1,3 +1,7 @@
+---
+uid: Creating_and_configuring_dashboards1
+---
+
 # Creating and configuring dashboards
 
 This section consists of the following topics:

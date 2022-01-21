@@ -1,3 +1,7 @@
+---
+uid: BasicConcepts
+---
+
 # Basic concepts
 
 This section introduces some concepts that you need to understand when you are new to DataMiner. These concepts will return throughout the DataMiner Help, so if you are not yet familiar with them, it is advisable to read through this section before you go on to the rest of the documentation.

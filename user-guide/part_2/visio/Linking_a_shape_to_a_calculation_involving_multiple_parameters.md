@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_calculation_involving_multiple_parameters
+---
+
 ## Linking a shape to a calculation involving multiple parameters
 
 Using a shape data field of type **ParametersSummary**, you can link a shape to a calculation involving multiple parameters, followed by one or more actions to be performed.

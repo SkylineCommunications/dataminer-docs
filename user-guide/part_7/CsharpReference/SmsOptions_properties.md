@@ -1,3 +1,7 @@
+---
+uid: SmsOptions_properties
+---
+
 ## SmsOptions properties
 
 #### Message

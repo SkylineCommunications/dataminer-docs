@@ -1,3 +1,7 @@
+---
+uid: Clearing_alarms
+---
+
 ## Clearing alarms
 
 By default, alarms are cleared automatically. However, if you set the AutoClear system setting to “false”, then all alarms will have to be cleared manually.

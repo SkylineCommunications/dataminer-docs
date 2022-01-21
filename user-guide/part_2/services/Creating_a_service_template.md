@@ -1,3 +1,7 @@
+---
+uid: Creating_a_service_template
+---
+
 ## Creating a service template
 
 To create a new service template, right-click a view in the Surveyor, and select *New \> Service template*.

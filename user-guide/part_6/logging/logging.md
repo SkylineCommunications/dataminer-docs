@@ -1,3 +1,7 @@
+---
+uid: logging
+---
+
 # Logging
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: DeploymentMethodology
+---
+
 # DataMiner Solution Deployment Methodology
 
 # About Digital Transformation

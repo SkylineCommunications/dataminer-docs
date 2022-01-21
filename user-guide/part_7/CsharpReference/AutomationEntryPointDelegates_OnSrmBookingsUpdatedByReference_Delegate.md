@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointDelegates_OnSrmBookingsUpdatedByReference_Delegate
+---
+
 ## AutomationEntryPointDelegates.OnSrmBookingsUpdatedByReference Delegate
 
 Delegate type for SRM bookings updated by reference.

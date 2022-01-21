@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_Cassandra_database_on_a_remote_cluster
+---
+
 ## Configuring a Cassandra database on a remote cluster
 
 Different setups are possible where the Cassandra general database runs entirely on one or more external nodes, as illustrated below. However, these require an advanced procedure with manual adjustments of the Cassandra settings.

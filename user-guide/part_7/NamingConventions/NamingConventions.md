@@ -1,3 +1,7 @@
+---
+uid: NamingConventions
+---
+
 # Naming of elements, services, views, etc.
 
 Names of elements, services, views, redundancy groups, templates and folders can contain any combination of characters. However, some characters may not be used for certain items.

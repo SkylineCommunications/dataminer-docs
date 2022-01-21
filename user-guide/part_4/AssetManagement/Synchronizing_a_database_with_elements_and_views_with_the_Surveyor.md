@@ -1,3 +1,7 @@
+---
+uid: Synchronizing_a_database_with_elements_and_views_with_the_Surveyor
+---
+
 # Synchronizing a database with elements and views with the Surveyor
 
 In the configuration file of the Inventory & Asset Management module, you can synchronize a database (MySQL and Microsoft SQL Server) containing elements and views with the Surveyor in DataMiner Cube.

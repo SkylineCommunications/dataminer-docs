@@ -1,3 +1,7 @@
+---
+uid: ServiceFilter_properties
+---
+
 ## ServiceFilter properties
 
 - [CriticalOnly](#criticalonly)

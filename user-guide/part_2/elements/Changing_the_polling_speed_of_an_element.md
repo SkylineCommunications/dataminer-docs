@@ -1,3 +1,7 @@
+---
+uid: Changing_the_polling_speed_of_an_element
+---
+
 ## Changing the polling speed of an element
 
 The polling speed of an element is determined by the timers specified in the element protocol. You can slow down or speed up these timers by changing the value of the element’s \[Timer base\] parameter.

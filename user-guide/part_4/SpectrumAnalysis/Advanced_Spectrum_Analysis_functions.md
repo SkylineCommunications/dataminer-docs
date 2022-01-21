@@ -1,3 +1,7 @@
+---
+uid: Advanced_Spectrum_Analysis_functions
+---
+
 # Advanced Spectrum Analysis functions
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: Adding_options_to_a_parameter_control
+---
+
 ## Adding options to a parameter control
 
 If you used a shape data field of type **ParameterControl** to turn a shape into a parameter control, then you can use an additional shape data field of type **ParameterControlOptions** to configure the control settings.

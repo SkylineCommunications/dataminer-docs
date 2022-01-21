@@ -1,3 +1,7 @@
+---
+uid: Managing_dashboard_folders
+---
+
 # Managing dashboard folders
 
 You can take the following actions to manage the dashboards folder structure:

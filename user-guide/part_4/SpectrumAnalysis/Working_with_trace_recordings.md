@@ -1,3 +1,7 @@
+---
+uid: Working_with_trace_recordings
+---
+
 ## Working with trace recordings
 
 In DataMiner Cube, you can make and play back recordings of a trace.

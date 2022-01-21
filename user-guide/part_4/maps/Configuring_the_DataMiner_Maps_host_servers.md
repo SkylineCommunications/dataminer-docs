@@ -1,3 +1,7 @@
+---
+uid: Configuring_the_DataMiner_Maps_host_servers
+---
+
 # Configuring the DataMiner Maps host servers
 
 On a DataMiner Agent, the host servers for DataMiner Maps have to be configured in the file *C:\\Skyline DataMiner\\Maps\\ServerConfig.xml* (which is synchronized throughout the DataMiner System).

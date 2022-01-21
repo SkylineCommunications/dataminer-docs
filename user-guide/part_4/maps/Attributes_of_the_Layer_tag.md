@@ -1,3 +1,7 @@
+---
+uid: Attributes_of_the_Layer_tag
+---
+
 ## Attributes of the Layer tag
 
 In a map configuration file, the *\<Layer>* tag can have the following attributes:

@@ -1,3 +1,7 @@
+---
+uid: AutomationConfigOptions_class
+---
+
 # AutomationConfigOptions class
 
 This is an abstract class, containing the other Automation options classes:

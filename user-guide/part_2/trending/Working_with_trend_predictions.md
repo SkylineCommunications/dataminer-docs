@@ -1,3 +1,7 @@
+---
+uid: Working_with_trend_predictions
+---
+
 ## Working with trend predictions
 
 > [!NOTE]

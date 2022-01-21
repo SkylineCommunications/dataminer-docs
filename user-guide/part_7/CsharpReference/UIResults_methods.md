@@ -1,3 +1,7 @@
+---
+uid: UIResults_methods
+---
+
 ## UIResults methods
 
 - [GetChecked](#getchecked)

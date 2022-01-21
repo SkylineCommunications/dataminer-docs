@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_DataMiner_Dojo_website
+---
+
 # Overview of the DataMiner Dojo website
 
 On the DataMiner Dojo website, you can find the following main sections:

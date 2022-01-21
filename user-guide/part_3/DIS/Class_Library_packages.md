@@ -1,3 +1,7 @@
+---
+uid: Class_Library_packages
+---
+
 ## Class Library packages
 
 A Class Library package (CLP) contains generic code that can be shared by multiple QActions and Automation scripts.

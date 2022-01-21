@@ -1,3 +1,7 @@
+---
+uid: Changing_SNMP_agent_ports
+---
+
 ## Changing SNMP agent ports
 
 By default, a DataMiner Agent acting as an SNMP agent uses UDP port 161. The same port is normally also used by the Windows SNMP service.

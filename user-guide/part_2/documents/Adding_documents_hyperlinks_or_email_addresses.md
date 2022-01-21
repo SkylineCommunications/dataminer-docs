@@ -1,3 +1,7 @@
+---
+uid: Adding_documents_hyperlinks_or_email_addresses
+---
+
 # Adding documents, hyperlinks or email addresses
 
 To add a document, link or email address:

@@ -1,3 +1,7 @@
+---
+uid: Setting_the_priority_of_a_primary_or_backup_element
+---
+
 # Setting the priority of a primary or backup element
 
 1. Right-click the element in the Surveyor and select *Multiple set.*

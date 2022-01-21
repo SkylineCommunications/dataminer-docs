@@ -1,3 +1,7 @@
+---
+uid: Chat_collaboration_from_DataMiner_10_0_0_10_0_2_onwards
+---
+
 # Chat collaboration from DataMiner 10.0.0/10.0.2 onwards
 
 ### Starting a chat session with a DataMiner user

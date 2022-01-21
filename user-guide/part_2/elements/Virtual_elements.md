@@ -1,3 +1,7 @@
+---
+uid: Virtual_elements
+---
+
 ## Virtual elements
 
 The term “virtual element” is used for two different kinds of elements:

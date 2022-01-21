@@ -1,3 +1,7 @@
+---
+uid: Script_types
+---
+
 ## Script types
 
 The following types of scripts are supported:

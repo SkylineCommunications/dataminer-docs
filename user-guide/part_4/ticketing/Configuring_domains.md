@@ -1,3 +1,7 @@
+---
+uid: Configuring_domains
+---
+
 # Configuring domains
 
 Click the cogwheel button in the header bar of the Ticketing app to access the configuration page.

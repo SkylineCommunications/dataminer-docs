@@ -1,3 +1,7 @@
+---
+uid: Debugging_QActions_and_Automation_scripts
+---
+
 # Debugging QActions and Automation scripts
 
 In most cases, you will be debugging QActions and Automation scripts while connected to your local DataMiner Agent. However, it is also possible to debug QActions and Automation scripts while connected to a remote DataMiner Agent.

@@ -1,3 +1,7 @@
+---
+uid: SpectrumPreset_constructor
+---
+
 ## SpectrumPreset constructor
 
 ```txt

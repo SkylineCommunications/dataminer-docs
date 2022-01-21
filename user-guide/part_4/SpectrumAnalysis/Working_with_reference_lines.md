@@ -1,3 +1,7 @@
+---
+uid: Working_with_reference_lines
+---
+
 ## Working with reference lines
 
 In the real-time interface, you can add reference lines in order to help you make measurements. These are listed separately in the info pane.

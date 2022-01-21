@@ -1,3 +1,7 @@
+---
+uid: Customizing_the_legacy_Dashboards_app
+---
+
 # Customizing the legacy Dashboards app
 
 The legacy *Dashboards* app can be customized in several ways:

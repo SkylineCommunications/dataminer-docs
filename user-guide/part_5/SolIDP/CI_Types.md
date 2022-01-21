@@ -1,3 +1,7 @@
+---
+uid: CI_Types
+---
+
 ## CI Types
 
 The *CI Types* subtab of the *Admin* tab consists of several pages with overview tables. At the top of the pages, buttons are available:

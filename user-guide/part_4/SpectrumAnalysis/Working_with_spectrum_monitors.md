@@ -1,3 +1,7 @@
+---
+uid: Working_with_spectrum_monitors
+---
+
 ## Working with spectrum monitors
 
 A spectrum monitor works as a schedule to run a spectrum script, optionally with any combination of measurement points and/or presets. It can be used to make the spectrum device sweep the input signal at regular intervals to measure particular variables.

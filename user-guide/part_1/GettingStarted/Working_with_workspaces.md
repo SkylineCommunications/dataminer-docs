@@ -1,3 +1,7 @@
+---
+uid: Working_with_workspaces
+---
+
 ## Working with workspaces
 
 A workspace is a Cube screen layout, which can be saved. Saving a workspace can be useful if you often use the same set of cards. If you open the workspace, you will immediately open those cards in the layout you saved.

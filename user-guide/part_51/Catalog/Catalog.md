@@ -1,3 +1,7 @@
+---
+uid: Catalog
+---
+
 # DataMiner Catalog
 
 In this section:

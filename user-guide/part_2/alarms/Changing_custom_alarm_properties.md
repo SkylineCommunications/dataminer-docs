@@ -1,3 +1,7 @@
+---
+uid: Changing_custom_alarm_properties
+---
+
 ## Changing custom alarm properties
 
 In this section:

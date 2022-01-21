@@ -1,3 +1,7 @@
+---
+uid: Alarm_templates
+---
+
 # Alarm templates
 
 This section consists of the following topics:

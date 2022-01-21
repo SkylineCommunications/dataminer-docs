@@ -1,3 +1,7 @@
+---
+uid: Creating_a_dashboard_with_a_dynamic_list_layout
+---
+
 ## Creating a dashboard with a dynamic list layout
 
 If you configure a dashboard to have a dynamic list layout, the components added to the *List Item Template* zone will be repeated.

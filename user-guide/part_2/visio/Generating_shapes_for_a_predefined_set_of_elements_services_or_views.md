@@ -1,3 +1,7 @@
+---
+uid: Generating_shapes_for_a_predefined_set_of_elements_services_or_views
+---
+
 ## Generating shapes for a predefined set of elements, services or views
 
 From DataMiner 9.5.11 onwards, you can specify that a shape should be created automatically for every item in a particular set of elements, services or views.

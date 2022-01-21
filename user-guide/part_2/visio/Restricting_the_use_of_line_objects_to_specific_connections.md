@@ -1,3 +1,7 @@
+---
+uid: Restricting_the_use_of_line_objects_to_specific_connections
+---
+
 ## Restricting the use of line objects to specific connections
 
 If, especially in EPM environments, you use different types of lines for different types of connections, then you can use a shape data field of type **SubscriptionFilter** to specify a filter that will make sure that the line object in question is only used for connections of which the specified column of the row describing the connection contains a particular value.

@@ -1,3 +1,7 @@
+---
+uid: Gratuitous_ARP_messages
+---
+
 ## Gratuitous ARP messages
 
 DataMiner broadcasts a gratuitous ARP message after adding virtual IP addresses (belonging to a redundant pair of DMAs or to elements). This way, remote clients will be able to update their ARP cache as soon as they receive that message.

@@ -1,3 +1,7 @@
+---
+uid: Configuring_the_dashboard_layout
+---
+
 ## Configuring the dashboard layout
 
 The layout of a dashboard can be configured on two levels:

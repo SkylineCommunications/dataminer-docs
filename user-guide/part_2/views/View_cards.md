@@ -1,3 +1,7 @@
+---
+uid: View_cards
+---
+
 # View cards
 
 To open a view card, click the view in the Surveyor.

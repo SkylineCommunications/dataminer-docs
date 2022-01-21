@@ -1,3 +1,7 @@
+---
+uid: Booking_Manager_user_interface
+---
+
 ## Booking Manager user interface
 
 The Booking Manager app is the main interface used to interact with the generic SRM Solution.

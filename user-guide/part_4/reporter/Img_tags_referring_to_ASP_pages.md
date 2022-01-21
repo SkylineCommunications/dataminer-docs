@@ -1,3 +1,7 @@
+---
+uid: Img_tags_referring_to_ASP_pages
+---
+
 ## Img tags referring to ASP pages
 
 On your website, you can show DataMiner report graphs by means of \<img> tags.

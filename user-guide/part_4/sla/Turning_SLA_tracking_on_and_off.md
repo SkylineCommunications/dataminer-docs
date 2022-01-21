@@ -1,3 +1,7 @@
+---
+uid: Turning_SLA_tracking_on_and_off
+---
+
 ## Turning SLA tracking on and off
 
 It is possible either to turn SLA tracking of completely, or to disable outages, so that outages are no longer registered but you can still see the current active service alarms.

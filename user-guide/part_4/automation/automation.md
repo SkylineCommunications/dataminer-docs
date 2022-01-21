@@ -1,3 +1,7 @@
+---
+uid: automation
+---
+
 # DMS Automation
 
 DMS Automation allows the user to create scripts that can automatically take care of backup routines, system configuration, channel selection, report generation, notifications via email or SMS, etc. Within the user interface, you can build intricate, nested scripts that can then be scheduled for one-off or repeated execution. They can also be linked to objects shown in Microsoft Visio drawings, so that operators can trigger them with a click of a button.

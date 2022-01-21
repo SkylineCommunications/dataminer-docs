@@ -1,3 +1,7 @@
+---
+uid: Resending_alarms_to_an_SNMP_manager
+---
+
 # Resending alarms to an SNMP manager
 
 To resend a number of history alarms to a particular SNMP manager:

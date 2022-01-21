@@ -1,3 +1,7 @@
+---
+uid: Replicated_elements
+---
+
 ## Replicated elements
 
 With element replication, elements managed by one DMS can be visualized in another DMS.

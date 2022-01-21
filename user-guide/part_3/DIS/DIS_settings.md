@@ -1,3 +1,7 @@
+---
+uid: DIS_settings
+---
+
 ## DIS settings
 
 In the *DIS Settings* dialog box, you can find all program settings of the DataMiner Integration Studio:

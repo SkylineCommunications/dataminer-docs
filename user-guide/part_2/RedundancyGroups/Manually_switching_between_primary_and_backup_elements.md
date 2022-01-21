@@ -1,3 +1,7 @@
+---
+uid: Manually_switching_between_primary_and_backup_elements
+---
+
 # Manually switching between primary and backup elements
 
 If the mode of the redundancy Group is set to “Manual switching”, buttons will be shown on the redundancy group card:

@@ -1,3 +1,7 @@
+---
+uid: Working_with_shape_data_in_Microsoft_Visio
+---
+
 ## Working with shape data in Microsoft Visio
 
 Microsoft Visio drawings can be enriched with DataMiner functionality using special shape data fields.

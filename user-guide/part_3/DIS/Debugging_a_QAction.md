@@ -1,3 +1,7 @@
+---
+uid: Debugging_a_QAction
+---
+
 ## Debugging a QAction
 
 When you have finished configuring all necessary settings, you can start debugging.

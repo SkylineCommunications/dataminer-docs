@@ -1,3 +1,7 @@
+---
+uid: AutomationEntryPointAttribute_class
+---
+
 # AutomationEntryPointAttribute class
 
 Below, you find an overview of all members of the *AutomationEntryPointAttribute* class.

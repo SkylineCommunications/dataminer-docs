@@ -1,3 +1,7 @@
+---
+uid: DMS_maintenance_tools
+---
+
 # DMS maintenance tools
 
 This section consists of the following topics:

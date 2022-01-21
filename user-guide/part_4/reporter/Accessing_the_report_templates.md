@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_report_templates
+---
+
 ## Accessing the report templates
 
 To go to the report templates page:

@@ -1,3 +1,7 @@
+---
+uid: Consulting_or_editing_a_task
+---
+
 ## Consulting or editing a task
 
 To consult or edit a task under the current project, do the following:

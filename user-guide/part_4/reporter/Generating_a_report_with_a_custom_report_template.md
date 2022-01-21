@@ -1,3 +1,7 @@
+---
+uid: Generating_a_report_with_a_custom_report_template
+---
+
 # Generating a report with a custom report template
 
 Custom report templates can be used to generate reports that are sent by email. However, you can also directly generate reports using the Reporter app, or generate reports based on a custom template by constructing a URL which users can then click.

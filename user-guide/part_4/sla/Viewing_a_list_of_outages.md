@@ -1,3 +1,7 @@
+---
+uid: Viewing_a_list_of_outages
+---
+
 ## Viewing a list of outages
 
 One or more alarms that potentially affect the SLA at a particular time are grouped in an outage. To view a list of outages, go to the *Outage list* page of the SLA element. The following information is indicated for each outage:

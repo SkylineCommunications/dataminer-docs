@@ -1,3 +1,7 @@
+---
+uid: Information_templates
+---
+
 # Information templates
 
 Information templates allow you to override certain parameter data (names, descriptions, etc.) defined in a protocol without making any change to the protocol itself.

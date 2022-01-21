@@ -1,3 +1,7 @@
+---
+uid: Board_view
+---
+
 ## Board view
 
 When you click the *Board* tab, you will see the list of tasks linked to the current project in a board view.

@@ -1,3 +1,7 @@
+---
+uid: Viewing_Ticketing_information_in_Cube
+---
+
 # Viewing Ticketing information in Cube
 
 On a DMA where the Ticketing module has been activated, additional ticketing information is available on cards and in the Alarm Console:

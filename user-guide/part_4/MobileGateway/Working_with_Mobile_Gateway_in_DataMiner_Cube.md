@@ -1,3 +1,7 @@
+---
+uid: Working_with_Mobile_Gateway_in_DataMiner_Cube
+---
+
 # Working with Mobile Gateway in DataMiner Cube
 
 To open the Mobile Gateway app:

@@ -1,3 +1,7 @@
+---
+uid: Settings
+---
+
 ## Settings
 
 The *Settings* subtab of the *Admin* tab contains a button that allows you to run the setup wizard again, as well as the following settings:

@@ -1,3 +1,7 @@
+---
+uid: Report_template_components
+---
+
 # Report template components
 
 This section is divided into two topics, listing the various report template components available in the Reporter app:

@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_a_program_or_a_file
+---
+
 ## Linking a shape to a program or a file
 
 Using a shape data field of type **Link** you can link a shape to a program or a file.

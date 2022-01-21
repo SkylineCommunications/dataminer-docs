@@ -1,3 +1,7 @@
+---
+uid: InteractiveUserDetachedException_methods
+---
+
 ## InteractiveUserDetachedException methods
 
 | Name          | Description                        |

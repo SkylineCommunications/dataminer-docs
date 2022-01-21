@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_an_Automation_script
+---
+
 ## Linking a shape to an Automation script
 
 When a shape is linked to an Automation script, by default this script will be executed each time a user clicks that shape.

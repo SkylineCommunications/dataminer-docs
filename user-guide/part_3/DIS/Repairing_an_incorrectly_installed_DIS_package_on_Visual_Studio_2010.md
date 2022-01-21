@@ -1,3 +1,7 @@
+---
+uid: Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010
+---
+
 ## Repairing an incorrectly installed DIS package on Visual Studio 2010
 
 If you inadvertently installed a recent DIS package on top of Visual Studio 2010, then do the following to repair the installation:

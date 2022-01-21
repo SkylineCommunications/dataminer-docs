@@ -1,3 +1,7 @@
+---
+uid: Viewing_information_on_the_DMAs_in_a_DMS
+---
+
 # Viewing information on the DMAs in a DMS
 
 To get information on the individual DMAs in a DMS, in DataMiner Cube, go to *Apps* > *System Center* > *Agents*.

@@ -1,3 +1,7 @@
+---
+uid: Installing_the_Keysight_Agilent_IO_Libraries
+---
+
 ## Installing the Keysight/Agilent IO Libraries
 
 On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Keysight IO Libraries (known as Agilent up till 2014).

@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_Ticketing_app_UI
+---
+
 # Overview of the Ticketing app UI
 
 The main page of the Ticketing app consists of a header bar, a side panel, and an overview panel.

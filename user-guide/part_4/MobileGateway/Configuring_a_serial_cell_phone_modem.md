@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_serial_cell_phone_modem
+---
+
 ## Configuring a serial cell phone modem
 
 To configure a cell phone modem that is physically connected to one of your DataMiner Agents via a serial connection:

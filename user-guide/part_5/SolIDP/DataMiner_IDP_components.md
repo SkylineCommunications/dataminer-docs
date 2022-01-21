@@ -1,3 +1,7 @@
+---
+uid: DataMiner_IDP_components
+---
+
 ## DataMiner IDP components
 
 By default, DataMiner IDP consists of the following elements:

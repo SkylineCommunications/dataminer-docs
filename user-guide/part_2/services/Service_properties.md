@@ -1,3 +1,7 @@
+---
+uid: Service_properties
+---
+
 # Service properties
 
 As with elements, view, and alarms, it is possible to add properties to services in order to link additional information to them.

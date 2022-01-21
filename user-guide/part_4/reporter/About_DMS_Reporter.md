@@ -1,3 +1,7 @@
+---
+uid: About_DMS_Reporter
+---
+
 # About DMS Reporter
 
 DMS Reporter is a powerful, web-based tool that allows you to generate graphical reports showing a multitude of statistical data and operational metrics.

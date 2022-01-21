@@ -1,3 +1,7 @@
+---
+uid: Managing_users
+---
+
 # Managing users
 
 In DataMiner Cube, users and user groups are managed in System Center. In addition, to configure settings for one single user, some functionality can be accessed from a user card instead.

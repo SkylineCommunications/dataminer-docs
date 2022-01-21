@@ -1,3 +1,7 @@
+---
+uid: Online_demo_license_for_DMA_to_be_installed_by_user
+---
+
 # Online demo license for DMA to be installed by user
 
 In case of a demo license for a DataMiner Agent that will have a permanent connection to the Skyline licensing server, the following procedure applies:

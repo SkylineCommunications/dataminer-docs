@@ -1,3 +1,7 @@
+---
+uid: Upgrading_a_DataMiner_Agent
+---
+
 # Upgrading a DataMiner Agent
 
 This section provides an overview of how you can upgrade a DataMiner Agent [in the Update Center](Upgrading_a_DataMiner_Agent_in_the_Update_Center.md), [with DataMiner Taskbar Utility](Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md) or [in System Center](Upgrading_a_DataMiner_Agent_in_System_Center.md), with additional information on how you can [check the upgrade history](Checking_the_upgrade_history_of_a_DataMiner_Agent.md) and how you can [roll back a DataMiner upgrade](Rolling_back_a_DataMiner_upgrade.md).

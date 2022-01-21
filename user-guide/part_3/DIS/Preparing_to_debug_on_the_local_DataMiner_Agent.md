@@ -1,3 +1,7 @@
+---
+uid: Preparing_to_debug_on_the_local_DataMiner_Agent
+---
+
 ## Preparing to debug on the local DataMiner Agent
 
 Proceed as follows if you want to debug a QAction or an Automation script located on the DataMiner Agent that is running on your local computer.

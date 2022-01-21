@@ -1,3 +1,7 @@
+---
+uid: Enabling_spiderfied_markers
+---
+
 ## Enabling spiderfied markers
 
 From DataMiner 9.5.1 onwards, to make sure you can still see each individual marker in case several markers are very close together on a map, markers can be “spiderfied” into a circle or spiral, depending on the number of markers.

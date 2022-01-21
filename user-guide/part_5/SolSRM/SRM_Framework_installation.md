@@ -1,3 +1,7 @@
+---
+uid: SRM_Framework_installation
+---
+
 ## SRM Framework installation
 
 To install the SRM Framework:

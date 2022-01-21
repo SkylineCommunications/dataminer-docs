@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_an_alarm
+---
+
 ## Linking a shape to an alarm
 
 Using a shape data field of type **Alarm**, you can link a shape to an active alarm.

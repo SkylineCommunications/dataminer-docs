@@ -1,3 +1,7 @@
+---
+uid: AssetManagement
+---
+
 # DMS Inventory & Asset Management
 
 This section consists of the following topics:

@@ -1,3 +1,7 @@
+---
+uid: Main_Cube_UI_components_prior_to_DataMiner_10
+---
+
 ## Main Cube UI components prior to DataMiner 10
 
 The DataMiner Cube UI consists of the following main components prior to DataMiner 10.0.0/10.0.2:

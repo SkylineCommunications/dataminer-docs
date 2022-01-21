@@ -1,3 +1,7 @@
+---
+uid: Configuring_Mobile_Gateway_in_DataMiner_Cube
+---
+
 ## Configuring Mobile Gateway in DataMiner Cube
 
 1. In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.

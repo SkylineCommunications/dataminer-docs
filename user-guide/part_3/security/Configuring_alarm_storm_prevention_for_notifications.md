@@ -1,3 +1,7 @@
+---
+uid: Configuring_alarm_storm_prevention_for_notifications
+---
+
 ## Configuring alarm storm prevention for notifications
 
 Alarm storm prevention for notifications can be configured on three levels: on system level, on user level, and on group level.

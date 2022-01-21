@@ -1,3 +1,7 @@
+---
+uid: Working_with_spectrum_analyzer_elements
+---
+
 # Working with spectrum analyzer elements
 
 This section consists of the following topics:

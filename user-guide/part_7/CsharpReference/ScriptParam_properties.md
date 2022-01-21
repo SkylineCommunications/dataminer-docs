@@ -1,3 +1,7 @@
+---
+uid: ScriptParam_properties
+---
+
 ## ScriptParam properties
 
 #### Id

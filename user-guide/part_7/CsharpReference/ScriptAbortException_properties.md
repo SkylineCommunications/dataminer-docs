@@ -1,3 +1,7 @@
+---
+uid: ScriptAbortException_properties
+---
+
 ## ScriptAbortException properties
 
 | Name                   | Description                                                         |

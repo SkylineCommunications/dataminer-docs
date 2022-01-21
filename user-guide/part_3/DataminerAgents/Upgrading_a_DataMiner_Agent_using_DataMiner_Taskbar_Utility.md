@@ -1,3 +1,7 @@
+---
+uid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
+---
+
 ## Upgrading a DataMiner Agent using DataMiner Taskbar Utility
 
 > [!TIP]

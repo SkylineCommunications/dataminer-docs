@@ -1,3 +1,7 @@
+---
+uid: Displaying_a_DataMiner_map_in_a_web_browser
+---
+
 ## Displaying a DataMiner map in a web browser
 
 1. Open a web browser.

@@ -1,3 +1,7 @@
+---
+uid: Managing_Correlation_rules
+---
+
 # Managing Correlation rules
 
 When you open the Correlation module in Cube (via apps \> *Correlation*), a card is opened that consists of two panes:

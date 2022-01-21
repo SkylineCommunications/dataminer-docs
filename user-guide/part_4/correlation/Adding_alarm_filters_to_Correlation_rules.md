@@ -1,3 +1,7 @@
+---
+uid: Adding_alarm_filters_to_Correlation_rules
+---
+
 ## Adding alarm filters to Correlation rules
 
 In the Correlation module, the *Alarm Filter* section of the details pane allows you to create a filter to limit the alarms that will be evaluated by the Correlation rule.

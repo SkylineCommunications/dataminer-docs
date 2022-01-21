@@ -1,3 +1,7 @@
+---
+uid: AutomationDateTimePickerOptions_properties
+---
+
 ## AutomationDateTimePickerOptions properties
 
 - [AutoCloseCalendar](#autoclosecalendar)

@@ -1,3 +1,7 @@
+---
+uid: Changing_ownership_of_alarms
+---
+
 ## Changing ownership of alarms
 
 The Alarm Ownership feature allows unambiguous assignment of responsibility for individual alarm events, as well as tracking of those responsibilities.

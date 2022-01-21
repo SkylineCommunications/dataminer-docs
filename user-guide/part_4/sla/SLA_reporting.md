@@ -1,3 +1,7 @@
+---
+uid: SLA_reporting
+---
+
 # SLA reporting
 
 To access reporting information on an SLA, go to the *Reports & Dashboards* module, then choose *Business* in the left column. For more information on how to access the module, see [Viewing the built-in reports in the Reporter app](../reporter/Viewing_the_built-in_reports_in_the_Reporter_app.md#viewing-the-built-in-reports-in-the-reporter-app).

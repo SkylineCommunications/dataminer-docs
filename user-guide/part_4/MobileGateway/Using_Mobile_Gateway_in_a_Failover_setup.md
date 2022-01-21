@@ -1,3 +1,7 @@
+---
+uid: Using_Mobile_Gateway_in_a_Failover_setup
+---
+
 # Using Mobile Gateway in a Failover setup
 
 To use Mobile Gateway in a Failover setup, we advise you to install your cell phone modem(s) in one of the following ways.

@@ -1,3 +1,7 @@
+---
+uid: Working_with_cards_in_DataMiner_Cube
+---
+
 ## Working with cards in DataMiner Cube
 
 ### DataMiner Pulse

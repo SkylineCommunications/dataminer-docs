@@ -1,3 +1,7 @@
+---
+uid: Configuring_spectrum_thresholds
+---
+
 ## Configuring spectrum thresholds
 
 In DataMiner Cube, you can define thresholds that can be used in scripts to detect spectrum threshold violations.

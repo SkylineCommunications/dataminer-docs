@@ -1,3 +1,7 @@
+---
+uid: Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing
+---
+
 ## Calibrating the X and Y coordinates in a Visio drawing
 
 If, in a Visio drawing, you want to position shapes using X and Y coordinates, you have to calibrate the X- and Y-axis.

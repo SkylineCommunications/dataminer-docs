@@ -1,3 +1,7 @@
+---
+uid: Recycle_bin
+---
+
 ## Recycle bin
 
 > [!TIP]

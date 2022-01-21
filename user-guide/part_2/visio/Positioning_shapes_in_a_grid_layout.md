@@ -1,3 +1,7 @@
+---
+uid: Positioning_shapes_in_a_grid_layout
+---
+
 ## Positioning shapes in a grid layout
 
 In a Visio drawing, you can position shapes in a grid layout. This allows you to create shapes that automatically adapt to the available screen real estate.

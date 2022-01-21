@@ -1,3 +1,7 @@
+---
+uid: Creating_report_templates
+---
+
 # Creating report templates
 
 It is possible to create new custom report templates in the Reporter app.

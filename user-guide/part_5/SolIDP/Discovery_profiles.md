@@ -1,3 +1,7 @@
+---
+uid: Discovery_profiles
+---
+
 ## Discovery profiles
 
 The following mechanisms are supported for discovery:

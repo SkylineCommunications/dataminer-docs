@@ -1,3 +1,7 @@
+---
+uid: Manually_adding_a_scheduled_task
+---
+
 # Manually adding a scheduled task
 
 To add a new scheduled task without a Scheduler template:

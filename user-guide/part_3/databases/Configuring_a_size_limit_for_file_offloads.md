@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_size_limit_for_file_offloads
+---
+
 ## Configuring a size limit for file offloads
 
 When the main database is offline, file offloads are used to store write/delete operations. From DataMiner 10.1.0 \[CU5\]/10.1.8 onwards, you can configure a limit for the file size of these offloads. When the limit is reached, new data will be dropped.

@@ -1,3 +1,7 @@
+---
+uid: Configuring_the_alarm_settings_for_an_SLA
+---
+
 ## Configuring the alarm settings for an SLA
 
 In DataMiner Cube, you can configure the following settings on the *SLA Configuration* page of the SLA element:

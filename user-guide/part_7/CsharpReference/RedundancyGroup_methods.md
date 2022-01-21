@@ -1,3 +1,7 @@
+---
+uid: RedundancyGroup_methods
+---
+
 ## RedundancyGroup methods
 
 #### IsInMaintenance

@@ -1,3 +1,7 @@
+---
+uid: Creating_a_simulated_element
+---
+
 ## Creating a simulated element
 
 To create a simulated element:

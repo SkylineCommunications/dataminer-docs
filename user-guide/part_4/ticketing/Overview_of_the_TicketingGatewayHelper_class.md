@@ -1,3 +1,7 @@
+---
+uid: Overview_of_the_TicketingGatewayHelper_class
+---
+
 ## Overview of the TicketingGatewayHelper class
 
 Below, you can find an overview of all methods, properties and events of the *TicketingGatewayHelper* class.

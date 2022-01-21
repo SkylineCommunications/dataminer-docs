@@ -1,3 +1,7 @@
+---
+uid: EmailOptions_properties
+---
+
 ## EmailOptions properties
 
 - [BCC](#bcc)

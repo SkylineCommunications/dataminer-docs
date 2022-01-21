@@ -1,3 +1,7 @@
+---
+uid: Configuring_SNMP_managers
+---
+
 # Configuring SNMP managers
 
 In this section:

@@ -1,3 +1,7 @@
+---
+uid: Reference2
+---
+
 # Reference
 
 ## SRM properties for use with the Booking Manager app

@@ -1,3 +1,7 @@
+---
+uid: Configuring_Mobile_Gateway
+---
+
 # Configuring Mobile Gateway
 
 This section consists of the following topics:

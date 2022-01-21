@@ -1,3 +1,7 @@
+---
+uid: DMS_xml
+---
+
 ## DMS.xml
 
 This file contains a list of all DMAs in the DMS cluster.

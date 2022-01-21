@@ -1,3 +1,7 @@
+---
+uid: Managing_aggregation_rules
+---
+
 ## Managing aggregation rules
 
 In DataMiner Cube, you can configure, create or delete aggregation rules, or create or delete folders for the rules:

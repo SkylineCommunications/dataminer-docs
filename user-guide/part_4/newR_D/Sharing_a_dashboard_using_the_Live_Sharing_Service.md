@@ -1,3 +1,7 @@
+---
+uid: Sharing_a_dashboard_using_the_Live_Sharing_Service
+---
+
 ## Sharing a dashboard using the Live Sharing Service
 
 > [!NOTE]

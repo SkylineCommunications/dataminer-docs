@@ -1,3 +1,7 @@
+---
+uid: DIS_menu
+---
+
 # DIS menu
 
 After you have installed the *DataMinerIntegrationStudio.vsix* extension, the Microsoft Visual Studio menu bar will have a DIS menu.

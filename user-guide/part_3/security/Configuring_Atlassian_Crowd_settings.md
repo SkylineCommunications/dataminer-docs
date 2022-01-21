@@ -1,3 +1,7 @@
+---
+uid: Configuring_Atlassian_Crowd_settings
+---
+
 ## Configuring Atlassian Crowd settings
 
 DataMiner can import users and groups from an Atlassian Crowd server and can also rely on this type of server for user authentication.

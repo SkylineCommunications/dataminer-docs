@@ -1,3 +1,7 @@
+---
+uid: Taskbar_Utility_command_line_options
+---
+
 ## Taskbar Utility command line options
 
 From DataMiner 9.0.1 onwards, it is possible to make the SLTaskbarUtility perform actions using the command prompt, without any further user interaction.

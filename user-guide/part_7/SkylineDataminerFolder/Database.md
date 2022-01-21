@@ -1,3 +1,7 @@
+---
+uid: Database
+---
+
 ## Database
 
 This subfolder is present from DataMiner 9.5.9 onwards. It contains a number of files related to the database:

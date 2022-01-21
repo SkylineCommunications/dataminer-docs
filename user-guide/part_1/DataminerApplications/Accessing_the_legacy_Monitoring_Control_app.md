@@ -1,3 +1,7 @@
+---
+uid: Accessing_the_legacy_Monitoring_Control_app
+---
+
 # Accessing the legacy Monitoring & Control app
 
 The legacy HTML5 Monitoring & Control app is available in older DataMiner versions, prior to DataMiner 10.0.0/10.0.2.

@@ -1,3 +1,7 @@
+---
+uid: Saving_and_loading_an_SLA_configuration
+---
+
 ## Saving and loading an SLA configuration
 
 It is possible to save the configuration of an SLA element in DataMiner Cube. This can be done from any of the following pages: the *SLA Configuration* page, the *Compliance Configuration* page, and the *Violation Configuration* page.

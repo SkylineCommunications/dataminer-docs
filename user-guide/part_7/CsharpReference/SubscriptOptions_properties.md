@@ -1,3 +1,7 @@
+---
+uid: SubscriptOptions_properties
+---
+
 ## SubscriptOptions properties
 
 - [ForceLockElements](#forcelockelements)

@@ -1,3 +1,7 @@
+---
+uid: DataMiner_packages
+---
+
 # DataMiner packages
 
 A DataMiner package is an archive file that contains all the files necessary to make a modification to a DataMiner System, for example to upgrade, downgrade or restore a DataMiner Agent, or to install a DataMiner app or DataMiner protocol.

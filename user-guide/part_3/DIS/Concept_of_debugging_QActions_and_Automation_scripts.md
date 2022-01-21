@@ -1,3 +1,7 @@
+---
+uid: Concept_of_debugging_QActions_and_Automation_scripts
+---
+
 ## Concept of debugging QActions and Automation scripts
 
 DataMiner Integration Studio allows you to debug QActions and Automation scripts using the Microsoft Visual Studio Debugger.

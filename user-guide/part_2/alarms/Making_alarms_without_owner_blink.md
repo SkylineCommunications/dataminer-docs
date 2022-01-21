@@ -1,3 +1,7 @@
+---
+uid: Making_alarms_without_owner_blink
+---
+
 ## Making alarms without owner blink
 
 In DataMiner Cube, parameters, elements, services, redundancy groups and views can be set to blink if they have an alarm of which nobody has taken ownership.

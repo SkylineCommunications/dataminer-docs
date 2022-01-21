@@ -1,3 +1,7 @@
+---
+uid: RouterControl
+---
+
 # DMS Router Control
 
 DMS Router Control is a DataMiner module that allows you to intuitively configure all matrices in your DataMiner System in a single, customizable user interface.

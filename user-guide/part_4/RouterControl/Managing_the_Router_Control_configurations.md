@@ -1,3 +1,7 @@
+---
+uid: Managing_the_Router_Control_configurations
+---
+
 ## Managing the Router Control configurations
 
 ### Creating a completely new Router Control configuration

@@ -1,3 +1,7 @@
+---
+uid: DataMiner_interfaces
+---
+
 ## DataMiner interfaces
 
 Your DataMiner System can interface with a multitude of client applications, ranging from the standard DataMiner web clients to third-party tools.

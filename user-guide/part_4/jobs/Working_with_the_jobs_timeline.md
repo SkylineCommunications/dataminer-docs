@@ -1,3 +1,7 @@
+---
+uid: Working_with_the_jobs_timeline
+---
+
 # Working with the jobs timeline
 
 To access the jobs timeline, on the main page of the app, click the timeline icon ![](../../images/JobsX_timeline00102.png) in the top-right corner.

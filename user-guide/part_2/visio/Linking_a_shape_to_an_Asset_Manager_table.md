@@ -1,3 +1,7 @@
+---
+uid: Linking_a_shape_to_an_Asset_Manager_table
+---
+
 ## Linking a shape to an Asset Manager table
 
 From DataMiner version 9.0.3 onwards, it is possible to link a shape to an Asset Manager table. To do so, create a shape, and add the following shape data fields to it:

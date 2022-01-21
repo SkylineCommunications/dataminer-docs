@@ -1,3 +1,7 @@
+---
+uid: Installing_the_DataMiner_PTP_app
+---
+
 # Installing the DataMiner PTP app
 
 To install and set up the DataMiner PTP app:

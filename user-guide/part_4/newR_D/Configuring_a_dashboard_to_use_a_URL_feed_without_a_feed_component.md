@@ -1,3 +1,7 @@
+---
+uid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+---
+
 ## Configuring a dashboard to use a URL feed without a feed component
 
 From DataMiner 10.0.7 onwards, you can link a component to data in the URL without using any feeds on the dashboard.

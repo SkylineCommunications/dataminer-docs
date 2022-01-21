@@ -1,3 +1,7 @@
+---
+uid: Generating_a_report_based_on_a_dashboard
+---
+
 # Generating a report based on a dashboard
 
 In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard from the new Dashboards app. See [Sending an email](../correlation/Sending_an_email.md) (Correlation), [Email](../automation/Email.md), [Upload report to FTP](../automation/Upload_report_to_FTP.md) and [Upload report to shared folder](../automation/Upload_report_to_shared_folder.md) (Automation), and [Manually adding a scheduled task](../scheduler/Manually_adding_a_scheduled_task.md).

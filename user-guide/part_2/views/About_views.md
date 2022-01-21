@@ -1,3 +1,7 @@
+---
+uid: About_views
+---
+
 # About views
 
 DataMiner views are hierarchically structured folders containing elements and services.

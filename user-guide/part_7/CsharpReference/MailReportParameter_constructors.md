@@ -1,3 +1,7 @@
+---
+uid: MailReportParameter_constructors
+---
+
 ## MailReportParameter constructors
 
 - [MailReportParameter Constructor (Int32)](#mailreportparameter-constructor-int32)

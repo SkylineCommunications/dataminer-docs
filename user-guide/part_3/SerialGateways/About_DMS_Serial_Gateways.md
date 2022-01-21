@@ -1,3 +1,7 @@
+---
+uid: About_DMS_Serial_Gateways
+---
+
 # About DMS Serial Gateways
 
 A DMS Serial Gateway offers many advantages. Cabling is much more structured, elements can easily be swapped between DMAs, but most importantly, overall system performance is greatly enhanced.

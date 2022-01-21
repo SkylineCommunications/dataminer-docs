@@ -1,3 +1,7 @@
+---
+uid: About_services
+---
+
 # About services
 
 In DataMiner, you can build a service layer on top of your devices. That way, operators can be offered a “service-centric” view of the network infrastructure.

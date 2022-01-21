@@ -1,3 +1,7 @@
+---
+uid: visio
+---
+
 # Visio drawings
 
 The Visual Overview functionality in DataMiner uses Microsoft Visio drawings, enriched with DataMiner functionality using special shape data fields, to provide highly customized graphical user interfaces.
