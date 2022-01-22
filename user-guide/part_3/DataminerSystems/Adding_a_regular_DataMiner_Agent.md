@@ -21,5 +21,5 @@ uid: Adding_a_regular_DataMiner_Agent
 6. Enter the IP of the DMA you want to add and click *Add*.
 
 > [!NOTE]
-> To add a Failover pair to a DataMiner System, first add the primary DMA as a regular DataMiner Agent, and then configure Failover. See [Preparing the two DataMiner Agents](../failover/Preparing_the_two_DataMiner_Agents.md).
+> To add a Failover pair to a DataMiner System, first add the primary DMA as a regular DataMiner Agent, and then configure Failover. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 >

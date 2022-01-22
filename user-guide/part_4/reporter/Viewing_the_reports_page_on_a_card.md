@@ -18,7 +18,7 @@ More information on the Reports page can be found in the following sections:
 
 > [!TIP]
 > See also:
-> - [Element cards](../../part_2/elements/Element_cards.md)
-> - [Service cards](../../part_2/services/Service_cards.md)
-> - [View cards](../../part_2/views/View_cards.md)
+> - [Element cards](xref:Element_cards)
+> - [Service cards](xref:Service_cards)
+> - [View cards](xref:View_cards)
 >

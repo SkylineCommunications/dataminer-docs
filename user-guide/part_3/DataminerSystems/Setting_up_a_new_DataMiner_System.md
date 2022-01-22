@@ -11,5 +11,5 @@ The following sections contain information on how to set up a DMS:
 - [Setting up a new DMS in DataMiner Cube](Setting_up_a_new_DMS_in_DataMiner_Cube.md)
 
 > [!NOTE]
-> For more information about the data that is synchronized among DMAs in a DMS, see [Skyline DataMiner folder](../../part_7/SkylineDataminerFolder/SkylineDataminerFolder.md#skyline-dataminer-folder).
+> For more information about the data that is synchronized among DMAs in a DMS, see [Skyline DataMiner folder](xref:SkylineDataminerFolder#skyline-dataminer-folder).
 >

@@ -19,7 +19,7 @@ This page contains 3 tabs with information and settings:
     | Not running     | The DMA is currently not running.                                                                                         |
     | Running         | The DMA is running.                                                                                                       |
     | Starting        | The DMA is starting up.                                                                                                   |
-    | Switching       | The DMA is part of a Failover pair and a Failover switch is currently happening. See [Failover](../failover/failover.md). |
+    | Switching       | The DMA is part of a Failover pair and a Failover switch is currently happening. See [Failover](xref:failover). |
     | Leaving Cluster | The DMA is currently leaving the DataMiner System.                                                                        |
     | Joining Cluster | The DMA is currently joining the DataMiner System.                                                                        |
     | Unknown         | The DMA state and connection state are currently not known.                                                               |
@@ -36,7 +36,7 @@ This page contains 3 tabs with information and settings:
     | Disconnected       | The DMA cannot be reached.                                                                                                                |
 
     > [!NOTE]
-    > For more information on how to check the exact cause for a refused connection, see [Checking or modifying the settings related to a Refused DMA state](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#checking-or-modifying-the-settings-related-to-a-refused-dma-state). However, note that this involves advanced settings that should only be modified by administrators, as changing these can have far-reaching consequences on the functionality of your DataMiner System.
+    > For more information on how to check the exact cause for a refused connection, see [Checking or modifying the settings related to a Refused DMA state](xref:SLNetClientTest_tool_advanced_procedures#checking-or-modifying-the-settings-related-to-a-refused-dma-state). However, note that this involves advanced settings that should only be modified by administrators, as changing these can have far-reaching consequences on the functionality of your DataMiner System.
 
 - To view key parameters of all the DMAs in the system, such as the processor load, the server uptime, and the total number of elements per DMA, go to the *status* tab.
 

@@ -13,7 +13,7 @@ To go to the report templates page:
     - Go directly to the link https://\[MyDataMiner\]/reports or http://\[MyDataMiner\]/reports, depending on your setup.
 
         > [!CAUTION]
-        > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
+        > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
 
 2. In the navigation menu on the left, click *Reports*.
 

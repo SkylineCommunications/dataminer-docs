@@ -37,18 +37,18 @@ Every element on a DMA has its own *Element.xml* file. It contains the complete 
 
 Several things can be configured in this file:
 
-- To enable or disable the creation of DVE child elements, a *dvecreate* attribute can be added. For more information, see [Enabling or disabling the creation of DVE child elements](../../part_2/elements/Dynamic_virtual_elements.md#enabling-or-disabling-the-creation-of-dve-child-elements).
+- To enable or disable the creation of DVE child elements, a *dvecreate* attribute can be added. For more information, see [Enabling or disabling the creation of DVE child elements](xref:Dynamic_virtual_elements#enabling-or-disabling-the-creation-of-dve-child-elements).
 
-- To enable an element simulation, a *simulation* attribute can be added. For more information, see [What happens when you enable simulation?](../../part_2/elements/Simulated_elements.md#what-happens-when-you-enable-simulation).
+- To enable an element simulation, a *simulation* attribute can be added. For more information, see [What happens when you enable simulation?](xref:Simulated_elements#what-happens-when-you-enable-simulation).
 
-- To enable data offloads to the offload database on element level, a *\<CentralOffload>* tag can be added. See [Disabling data offloads to the offload database on element level](../../part_3/databases/Configuring_data_offloads.md#disabling-data-offloads-to-the-offload-database-on-element-level).
+- To enable data offloads to the offload database on element level, a *\<CentralOffload>* tag can be added. See [Disabling data offloads to the offload database on element level](xref:Configuring_data_offloads#disabling-data-offloads-to-the-offload-database-on-element-level).
 
-- SNMP agent community strings are specified on element level with the *\<SNMPAgent>* tag. See [Configuring SNMP agent community strings](../../part_3/SNMP/Configuring_SNMP_agent_community_strings.md).
+- SNMP agent community strings are specified on element level with the *\<SNMPAgent>* tag. See [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings).
 
 - To customize how long average or real-time trending records have to be kept in the database for a particular element, you can add a *\<Trending>* tag, in the same way as in the file *MaintenanceSettings.xml*. Before you can make this change, you will need to stop DataMiner. After you have saved the changed file, restart DataMiner to implement the changes. For more information on this tag and its subtags, refer to [MaintenanceSettings.xml](MaintenanceSettings_xml.md#maintenancesettingsxml).
 
     > [!NOTE]
-    > From DataMiner 9.6.0 \[CU1\]/9.6.3 onwards, this can be customized in DataMiner Cube instead. See [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md).
+    > From DataMiner 9.6.0 \[CU1\]/9.6.3 onwards, this can be customized in DataMiner Cube instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 ### Description.xml
 

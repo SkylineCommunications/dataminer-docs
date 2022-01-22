@@ -18,4 +18,4 @@ The following sections provide more information on using C# code in DMS Automati
 
 > [!TIP]
 > See also:
-> [Automation script CSharp code reference](../../part_7/CsharpReference/CsharpReference.md#automation-script-csharp-code-reference)
+> [Automation script CSharp code reference](xref:CsharpReference#automation-script-csharp-code-reference)

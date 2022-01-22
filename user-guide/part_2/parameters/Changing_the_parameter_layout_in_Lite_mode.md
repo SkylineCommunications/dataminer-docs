@@ -6,7 +6,7 @@ uid: Changing_the_parameter_layout_in_Lite_mode
 
 To change the parameter layout in Lite mode:
 
-1. Go to the *Data Display* page of the user settings. See [User settings](../../part_1/GettingStarted/User_settings.md).
+1. Go to the *Data Display* page of the user settings. See [User settings](xref:User_settings).
 
 2. Change the following settings as required:
 

@@ -90,7 +90,7 @@ To do so, before you log on, do the following:
     3. Click *OK*.
 
 > [!NOTE]
-> - It is also possible to change the connection settings once you are logged on. To do so, go to *Settings \> computer \> Connection*. See [Manual configuration of client communication settings](../../part_3/DataminerAgents/DMA_configuration_related_to_client_applications.md#manual-configuration-of-client-communication-settings).
+> - It is also possible to change the connection settings once you are logged on. To do so, go to *Settings \> computer \> Connection*. See [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings).
 > - Connecting via web services is not possible if WSE is not installed on the DMA.
 
 ### Logging off from DataMiner Cube

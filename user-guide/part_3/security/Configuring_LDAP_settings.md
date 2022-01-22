@@ -78,7 +78,7 @@ To establish a link between a DMA and an LDAP other than Active Directory, open 
 
 > [!TIP]
 > See also:
-> [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml)
+> [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 
 #### OpenLDAP
 

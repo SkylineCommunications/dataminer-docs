@@ -111,7 +111,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Label    | The text displayed on the button.                                                                                                                                                                                                                                                      |
 | Type     | The action that will be executed when the button is clicked: Connect, Disconnect, Lock/Unlock or Undo. It is also possible to select a “Custom” type, for which the actions are specified in the *Options* box.                                         |
-| Options  | For Custom type actions, add one action per line in this box, using the same syntax as when using an *Execute* shape data field in Visio. See [Overview of DataMiner shape data fields](../../part_2/visio/Overview_of_DataMiner_shape_data_fields.md). |
+| Options  | For Custom type actions, add one action per line in this box, using the same syntax as when using an *Execute* shape data field in Visio. See [Overview of DataMiner shape data fields](xref:Overview_of_DataMiner_shape_data_fields). |
 
 > [!NOTE]
 > - In DataMiner versions prior to 8.5.4, if no options are defined for a custom action, it is necessary to add an ending pipe character (“\|”). In later versions, this is no longer required.

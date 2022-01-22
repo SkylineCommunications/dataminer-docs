@@ -23,7 +23,7 @@ To configure the default size:
     3. Click the *Apply* button.
 
     > [!NOTE]
-    > For more information on the TTL configuration, including how to specify an override for a specific protocol or protocol version, see [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md).
+    > For more information on the TTL configuration, including how to specify an override for a specific protocol or protocol version, see [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 - In DataMiner versions prior to DataMiner 9.6.6:
 
@@ -36,4 +36,4 @@ To configure the default size:
     4. In the lower right corner, click *Apply size*.
 
     > [!NOTE]
-    > - In some older DataMiner versions, this setting may not be available in Cube. In that case, this can be configured in the file *DBMaintenanceDMS.xml*. For more information, see [DBMaintenance.xml and DBMaintenanceDMS.xml](../../part_7/SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+    > - In some older DataMiner versions, this setting may not be available in Cube. In that case, this can be configured in the file *DBMaintenanceDMS.xml*. For more information, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).

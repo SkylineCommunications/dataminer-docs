@@ -17,7 +17,7 @@ When a pop-up balloon appears, it contains the following information about a par
 - Timestamp
 
 > [!NOTE]
-> - In case there are several alarms at the same time, the alarm with the highest priority is shown first. See [Alarm type priority](../../part_2/alarms/Alarm_types.md#alarm-type-priority).
+> - In case there are several alarms at the same time, the alarm with the highest priority is shown first. See [Alarm type priority](xref:Alarm_types#alarm-type-priority).
 > - It is possible to customize the content of Alerter pop-up balloons. See [Configuring Alerter pop-up balloons](Configuring_DMS_Alerter.md#configuring-alerter-pop-up-balloons).
 > - From DataMiner 9.5.12 onwards, you can customize the size of Alerter pop-up balloons by dragging the balloon edges. When you have resized a balloon, this custom size will be applied for all subsequent balloons.
 

@@ -10,9 +10,9 @@ To enable TLS encryption, do the following on every DMA in the DMS that is to co
 
 1. In the folder *C:\\Skyline DataMiner\\Certificates*, place a PKCS12 file with (default) name “server.pfx”, containing the certificates and the private key.
 
-2. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](../../part_7/DataminerTools/Opening_the_SLNetClientTest_tool.md).
+2. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
-3. Connect to the DMA. See [Connecting to a DMA with the SLNetClientTest tool](../../part_7/DataminerTools/Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md).
+3. Connect to the DMA. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
 4. Go to the *Build Message* tab of the main window of the tool.
 
@@ -37,5 +37,5 @@ To enable TLS encryption, do the following on every DMA in the DMS that is to co
 
 > [!TIP]
 > See also:
-> - [Enabling TLS on the Cassandra database connection](../../part_7/SkylineDataminerFolder/DB_xml.md#enabling-tls-on-the-cassandra-database-connection)
+> - [Enabling TLS on the Cassandra database connection](xref:DB_xml#enabling-tls-on-the-cassandra-database-connection)
 > - [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/) on Dojo

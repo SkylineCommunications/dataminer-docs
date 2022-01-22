@@ -30,7 +30,7 @@ To create a new trend template:
     1. Enter a template name.
 
         > [!NOTE]
-        > Some characters cannot be used in template names. For more information, see [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc).
+        > Some characters cannot be used in template names. For more information, see [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc).
 
     2. Check if the protocol and protocol version are correct and adapt if necessary.
 

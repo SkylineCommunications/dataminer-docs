@@ -124,7 +124,7 @@ https://[DMA]/dataminercube
 > - It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
 
 > [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
+> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
 
 ### Options for opening DataMiner Cube
 
@@ -295,7 +295,7 @@ Example:
 
 > [!TIP]
 > See also:
-> [DMS Experience and Performance Management](../../part_4/EPM/EPM.md#dms-experience-and-performance-management)
+> [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)
 
 #### element=
 

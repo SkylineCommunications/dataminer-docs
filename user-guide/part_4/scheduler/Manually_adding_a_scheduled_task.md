@@ -37,10 +37,10 @@ To add a new scheduled task without a Scheduler template:
     | Email                          | Compose an email message, optionally including a report or dashboard.                                                                                                                                       |
     | Upload report to FTP           | Specify an FTP server, and a report or dashboard to upload to it.                                                                                                                                           |
     | Upload report to shared folder | Specify a shared folder, and a report or dashboard to upload to it.                                                                                                                                         |
-    | Script                         | Select an existing Automation script to be executed at the scheduled time. For more information on the script execution options, see [Script execution options](../automation/Script_execution_options.md). |
+    | Script                         | Select an existing Automation script to be executed at the scheduled time. For more information on the script execution options, see [Script execution options](xref:Script_execution_options). |
 
     > [!NOTE]
-    > For the *Email* or *Upload report* actions, from DataMiner 9.6.13 onwards, you can select a dashboard from the Dashboards app instead of a legacy report. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a report based on a dashboard](../newR_D/Generating_a_report_based_on_a_dashboard.md).
+    > For the *Email* or *Upload report* actions, from DataMiner 9.6.13 onwards, you can select a dashboard from the Dashboards app instead of a legacy report. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard).
 
 10. To add more actions, repeat the previous step until all actions have been added.
 

@@ -10,4 +10,4 @@ The information in the *Polling.xml* file is made available to the DataMiner cli
 
 > [!TIP]
 > See also:
-> [Alarm hysteresis](../../part_2/alarms/Alarm_hysteresis.md)
+> [Alarm hysteresis](xref:Alarm_hysteresis)

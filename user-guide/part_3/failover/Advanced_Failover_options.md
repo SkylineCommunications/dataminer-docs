@@ -7,7 +7,7 @@ uid: Advanced_Failover_options
 When you click *Advanced* in the *Failover* dialog box, you can specify a number of advanced options in four separate tabs.
 
 > [!NOTE]
-> Some Failover options can also be configured directly in *MaintenanceSettings.xml*. For more information, refer to the Watchdog settings in [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
+> Some Failover options can also be configured directly in *MaintenanceSettings.xml*. For more information, refer to the Watchdog settings in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).
 
 ### Type
 

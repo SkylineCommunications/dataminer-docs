@@ -29,7 +29,7 @@ For the different alarm levels, it is also possible to assign high and low level
 > [!TIP]
 > See also:
 > - [Changing the default alarm colors](Changing_the_default_alarm_colors.md)
-> - [Guidelines for assigning alarm severity levels](../protocols/Guidelines_for_assigning_alarm_severity_levels.md)
+> - [Guidelines for assigning alarm severity levels](xref:Guidelines_for_assigning_alarm_severity_levels)
 
 ### Special alarm types
 
@@ -107,7 +107,7 @@ This priority is applied in many different DataMiner applications:
 - In the footer of a view card, the items in the view are shown in this order.
 
     > [!NOTE]
-    > Depending on your user settings, the footer may not be displayed. See [Card settings](../../part_1/GettingStarted/User_settings.md#card-settings).
+    > Depending on your user settings, the footer may not be displayed. See [Card settings](xref:User_settings#card-settings).
 
 - In Visual pages, this priority determines the displayed alarm color.
 

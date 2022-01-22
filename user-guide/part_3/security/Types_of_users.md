@@ -29,7 +29,7 @@ DataMiner distinguishes the following types of users:
 
     > [!TIP]
     > See also:
-    > [DataMiner Sharing](../../part_51/Sharing/Sharing.md#dataminer-sharing)
+    > [DataMiner Sharing](xref:Sharing#dataminer-sharing)
 
 > [!NOTE]
 > - When a domain group is added to DataMiner, the email address, the mobile number and the pager number of existing, manually added domain users will be overruled by their counterparts on domain level.

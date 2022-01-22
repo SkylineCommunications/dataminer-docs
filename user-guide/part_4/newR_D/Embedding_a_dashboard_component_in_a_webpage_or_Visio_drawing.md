@@ -14,7 +14,7 @@ To do so:
 
 3. Right-click the component and select *Copy embed URL*.
 
-4. Use the URL of the component in either a Visio page (see [Linking a shape to a dashboard component](../../part_2/visio/Linking_a_shape_to_a_dashboard_component.md)) or a web page (e.g. in an \<img> tag).
+4. Use the URL of the component in either a Visio page (see [Linking a shape to a dashboard component](xref:Linking_a_shape_to_a_dashboard_component)) or a web page (e.g. in an \<img> tag).
 
     A component URL has the following syntax:
 

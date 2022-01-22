@@ -25,7 +25,7 @@ Please take the following information into account:
 
 - For systems using **DataMiner Indexing**:
 
-    Taking a backup of a system using DataMiner Indexing is not possible if no Indexing backup path has been specified. See [Configuring Indexing backups](../databases/Configuring_Indexing_backups.md).     If the backup settings for DataMiner Indexing have been changed, all Indexing nodes need to be restarted, which may take some time. During this time, no backups can be taken.
+    Taking a backup of a system using DataMiner Indexing is not possible if no Indexing backup path has been specified. See [Configuring Indexing backups](xref:Configuring_Indexing_backups).     If the backup settings for DataMiner Indexing have been changed, all Indexing nodes need to be restarted, which may take some time. During this time, no backups can be taken.
 
 > [!NOTE]
 > The binaries and settings of NAS and NATS are not included in a DataMiner backup. On startup, DataMiner automatically detects whether the NATS folders exist and creates them if necessary. However, this means that if for some reason a problem occurs with your NATS setup, you cannot fix this by means of a backup and restore.

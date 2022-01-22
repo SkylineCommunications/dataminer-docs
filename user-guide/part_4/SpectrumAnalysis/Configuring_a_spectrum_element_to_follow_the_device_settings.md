@@ -8,7 +8,7 @@ From DataMiner 9.6.11 onwards, a spectrum element can be configured to initially
 
 To configure a spectrum element to follow the device settings:
 
-1. Either create a new spectrum element or edit an existing spectrum element. (See [Adding an element](../../part_2/elements/Adding_and_deleting_elements.md#adding-an-element) or [Updating elements](../../part_2/elements/Updating_elements.md), respectively.)
+1. Either create a new spectrum element or edit an existing spectrum element. (See [Adding an element](xref:Adding_and_deleting_elements#adding-an-element) or [Updating elements](xref:Updating_elements), respectively.)
 
 2. In the *Advanced element settings* section, select *Follow device settings*.
 

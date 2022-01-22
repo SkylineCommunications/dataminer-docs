@@ -7,7 +7,7 @@ uid: Working_with_trend_predictions
 > [!NOTE]
 > - This feature requires a general database of type “Cassandra”.
 > - Predictions are not available for discrete and string parameters.
-> - From DataMiner 9.5.13 onwards, trend predictions can be disabled in the user settings. See [Trending settings](../../part_1/GettingStarted/User_settings.md#trending-settings).
+> - From DataMiner 9.5.13 onwards, trend predictions can be disabled in the user settings. See [Trending settings](xref:User_settings#trending-settings).
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
 
 > [!TIP]
@@ -61,5 +61,5 @@ With the drop-down list in the top-right corner, you can select one of the avail
 > - The first time the prediction exceeds a particular alarm threshold, this is indicated with a triangle-shaped marker. If multiple trends are displayed, you can hover over the alarm marker to see a tooltip indicating which trend will trigger the alarm.
 > - Parameter changes will change the underlying models for the prediction in real time, and predictions may change when the trend graph is shown at a later moment in time. If because of the parameter changes the underlying model is considered not to be stable enough, the prediction for a certain level may be removed.
 > - When you change the prediction type to *Auto*, or change it from *Auto* to one of the other options, any other open trend charts will also be updated to that setting.
-> - The DataMiner process responsible for trend predictions is SLAnalytics. For more information, see [SLAnalytics](../../part_3/DataminerSystems/DataMiner_processes.md#slanalytics).
+> - The DataMiner process responsible for trend predictions is SLAnalytics. For more information, see [SLAnalytics](xref:DataMiner_processes#slanalytics).
 >

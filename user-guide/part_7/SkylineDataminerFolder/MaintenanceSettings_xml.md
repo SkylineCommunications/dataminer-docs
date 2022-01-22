@@ -179,7 +179,7 @@ It has three required attributes:
 
 > [!NOTE]
 > - For optimal effect, the blankInterval should be less than the blinkInterval.
-> - There are also several optional filter attributes to enable blinking of alarms based on certain conditions. For more information, see [Making alarms without owner blink](../../part_2/alarms/Making_alarms_without_owner_blink.md).
+> - There are also several optional filter attributes to enable blinking of alarms based on certain conditions. For more information, see [Making alarms without owner blink](xref:Making_alarms_without_owner_blink).
 
 #### AlarmSettings.MaxFreezeAlarms & AlarmSettings.MaxFreezeTime
 
@@ -223,7 +223,7 @@ The following types of alarm events will not be combined in a consolidated alarm
 
 > [!TIP]
 > See also:
-> [Alarm linking](../../part_2/alarms/Alarm_linking.md)
+> [Alarm linking](xref:Alarm_linking)
 
 #### AlarmSettings.UseCreationTimeAsMainTime
 
@@ -360,7 +360,7 @@ However, in case you encounter issues with such filters because of this new filt
 
 #### HTTPS
 
-See [Configuring HTTPS settings in MaintenanceSettings.xml](../../part_3/DataminerAgents/General_DMA_configuration.md#configuring-https-settings-in-maintenancesettingsxml).
+See [Configuring HTTPS settings in MaintenanceSettings.xml](xref:General_DMA_configuration#configuring-https-settings-in-maintenancesettingsxml).
 
 #### Logging.MaxSize
 
@@ -471,7 +471,7 @@ The following attributes can be configured:
 
 In this tag, you can specify a number of settings of the SLNet application.
 
-For more information, see [Configuring SLNet settings in MaintenanceSettings.xml](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#configuring-slnet-settings-in-maintenancesettingsxml)*.*
+For more information, see [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)*.*
 
 #### Spectrum.AlarmRecordings
 
@@ -486,7 +486,7 @@ Default: 250 MB
 
 In this tag, you can specify which statistical alarm data and/or ticket data you want to have displayed next to elements, services and views in the Surveyor.
 
-For more information, see [Displaying alarm statistics in the Surveyor](../../part_2/alarms/Displaying_alarm_statistics_in_the_Surveyor.md) and [Displaying ticket statistics in the Surveyor](../../part_4/ticketing/Displaying_ticket_statistics_in_the_Surveyor.md).
+For more information, see [Displaying alarm statistics in the Surveyor](xref:Displaying_alarm_statistics_in_the_Surveyor) and [Displaying ticket statistics in the Surveyor](xref:Displaying_ticket_statistics_in_the_Surveyor).
 
 #### Trending.EDCurves
 
@@ -640,5 +640,5 @@ In the *ProcessMonitor.Crashdumps* subtag, you can customize how long crashdump 
 
 > [!TIP]
 > See also:
-> - [SLWatchdog](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#slwatchdog)
+> - [SLWatchdog](xref:Configuration_of_DataMiner_processes#slwatchdog)
 >

@@ -12,4 +12,4 @@ By default, the collaboration balloon will show up in the lower right corner of 
 
 > [!TIP]
 > See also:
-> [Chat collaboration](../../part_2/chat/chat.md#chat-collaboration)
+> [Chat collaboration](xref:chat#chat-collaboration)

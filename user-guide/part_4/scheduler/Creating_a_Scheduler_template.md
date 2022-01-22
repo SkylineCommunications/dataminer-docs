@@ -8,13 +8,13 @@ To create scheduler templates, which will show up in the EVENT list in Scheduler
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 
-2. In the folder pane on the left, create a script folder called “Scheduler Templates” if no such folder exists yet. For more information, see [Adding a new Automation script folder](../automation/Managing_Automation_scripts.md#adding-a-new-automation-script-folder).
+2. In the folder pane on the left, create a script folder called “Scheduler Templates” if no such folder exists yet. For more information, see [Adding a new Automation script folder](xref:Managing_Automation_scripts#adding-a-new-automation-script-folder).
 
     Any scripts in this folder will be detected by DMS Scheduler as possible events.
 
 3. Select the “Scheduler Templates” folder, and click the *Add script* button to add a script.
 
-4. Configure the script as described in the section [Designing Automation scripts](../automation/Designing_Automation_scripts.md). However, in order for the script to be usable as a Scheduler template, add a parameter named “Action”.
+4. Configure the script as described in the section [Designing Automation scripts](xref:Designing_Automation_scripts). However, in order for the script to be usable as a Scheduler template, add a parameter named “Action”.
 
     > [!NOTE]
     > While the scheduled task runs, the value of the “Action” parameter will automatically be set to “START” or “STOP”, in accordance with the start and stop timestamps linked to the left and right border of the task rectangle in Scheduler.

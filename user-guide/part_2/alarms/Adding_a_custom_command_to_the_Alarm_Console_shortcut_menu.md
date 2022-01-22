@@ -8,7 +8,7 @@ uid: Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu
 
     If this file does not exist, create it.
 
-2. In the XML file, specify all custom commands. For more information, see [Hyperlinks.xml](../../part_7/SkylineDataminerFolder/Hyperlinks_xml.md#hyperlinksxml).
+2. In the XML file, specify all custom commands. For more information, see [Hyperlinks.xml](xref:Hyperlinks_xml#hyperlinksxml).
 
 3. Force a synchronization of the file *Hyperlinks.xml* throughout your DataMiner System:
 
@@ -30,5 +30,5 @@ In case DataMiner Cube was open while you edited the settings, the changes will 
 > [!TIP]
 > See also:
 > - <https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/>
-> - [Linking a shape to an Automation script](../visio/Linking_a_shape_to_an_Automation_script.md)
+> - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
 >

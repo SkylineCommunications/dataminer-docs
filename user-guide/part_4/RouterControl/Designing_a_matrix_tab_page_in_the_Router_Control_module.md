@@ -90,7 +90,7 @@ In order to add such a matrix, do the following:
 
     - It is also possible to filter on rows and add additional column parameters.
 
-    - The subscription filter syntax must be used as detailed in [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
+    - The subscription filter syntax must be used as detailed in [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 4. Continue in the same manner as when adding a regular matrix. See [Adding a matrix to a configuration tab page](#adding-a-matrix-to-a-configuration-tab-page).
 

@@ -204,4 +204,4 @@ To display element statistics, service statistics or view statistics, the same p
 
 For example, to display the number tickets for an element, you can set the value of the **Info** field to *ELEMENT STATISTICS:\[#Tickets\]*.
 
-For more information, see [Displaying alarm statistics in the Surveyor](../alarms/Displaying_alarm_statistics_in_the_Surveyor.md) or [Displaying ticket statistics in the Surveyor](../../part_4/ticketing/Displaying_ticket_statistics_in_the_Surveyor.md).
+For more information, see [Displaying alarm statistics in the Surveyor](xref:Displaying_alarm_statistics_in_the_Surveyor) or [Displaying ticket statistics in the Surveyor](xref:Displaying_ticket_statistics_in_the_Surveyor).

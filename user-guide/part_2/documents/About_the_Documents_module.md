@@ -12,7 +12,7 @@ There are two ways to access documents in DataMiner:
 
 - Go to the *Documents* page of an element or service card.
 
-In addition, you can also search for a particular document using the Cube search functionality. For more information, see [Searching in DataMiner Cube](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md).
+In addition, you can also search for a particular document using the Cube search functionality. For more information, see [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
 The following information can be stored with the app:
 

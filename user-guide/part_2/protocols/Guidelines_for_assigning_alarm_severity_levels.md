@@ -30,7 +30,7 @@ When assigning alarm severity levels in an alarm template, you should keep these
 
 > [!TIP]
 > See also:
-> [Alarm severity levels](../alarms/Alarm_types.md#alarm-severity-levels)
+> [Alarm severity levels](xref:Alarm_types#alarm-severity-levels)
 
 ### Assigning alarm severity levels to values of analog parameters
 

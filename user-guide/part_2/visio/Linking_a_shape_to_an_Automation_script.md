@@ -17,7 +17,7 @@ To link a shape to an Automation script:
     Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...|ParameterName1=SingleValue;ParameterName2=#ValueFile;...| MemoryName=MemoryFileName;...|Tooltip|Options
     ```
 
-    - In the example above, two parameters are included. The first parameter is assigned a single value, and the second parameter is assigned a so-called permanent memory file (i.e. an array of values). Notice that, in the latter case, a hash character (“#”) has to be placed in front of the name of the array.<br>See also: [Creating a memory file](../../part_4/automation/Script_variables.md#creating-a-memory-file)
+    - In the example above, two parameters are included. The first parameter is assigned a single value, and the second parameter is assigned a so-called permanent memory file (i.e. an array of values). Notice that, in the latter case, a hash character (“#”) has to be placed in front of the name of the array.<br>See also: [Creating a memory file](xref:Script_variables#creating-a-memory-file)
 
     - If you use the syntax above, make sure to always include 5 pipe characters ("\|"). If you do not need some parts of the syntax, e.g. because no memory files are used, just add nothing between those pipe characters.
 

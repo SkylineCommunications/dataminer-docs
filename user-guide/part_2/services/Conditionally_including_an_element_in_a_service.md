@@ -33,7 +33,7 @@ During service creation or while editing a service, it is possible to include an
 
         > [!TIP]
         > See also:
-        > [Defining connectivity chains in XML files](../../part_3/DCF/Defining_connectivity_chains_in_XML_files.md)
+        > [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files)
 
     > [!NOTE]
     > - If you use the option *Element is in the active connectivity chain*, but do not select *Specify config*, then the element will always be excluded when *Include (In Use when condition match)* is selected, or always included when *Exclude (Excluded when condition match)* is selected.

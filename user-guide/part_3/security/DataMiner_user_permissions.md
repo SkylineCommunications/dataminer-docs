@@ -329,7 +329,7 @@ In the System Center module, the user permissions have been divided into three m
 | Unshare         | Available from DataMiner 10.2.0/10.1.4 onwards. Permission to stop sharing items in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Unshare item* in earlier DataMiner versions.)                    |
 
 > [!NOTE]
-> These permissions require the cloud connected Agents feature, which is currently still in soft launch. See [Connecting your DataMiner System to the cloud](../../part_51/AboutCloudPlatform/Connecting_your_DataMiner_System_to_the_cloud.md).
+> These permissions require the cloud connected Agents feature, which is currently still in soft launch. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ### Modules
 
@@ -762,7 +762,7 @@ In the System Center module, the user permissions have been divided into three m
 | Account linking           | Only available in DataMiner 10.1.3. Permission to link a DataMiner account to a cloud account, which is necessary to be able to share items in the cloud or stop sharing items in the cloud.                                                                                                       |
 
 > [!NOTE]
-> These permissions support the cloud connected Agents feature, which is currently still in soft launch. See [Connecting your DataMiner System to the cloud](../../part_51/AboutCloudPlatform/Connecting_your_DataMiner_System_to_the_cloud.md).
+> These permissions support the cloud connected Agents feature, which is currently still in soft launch. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 #### System configuration \> Database
 

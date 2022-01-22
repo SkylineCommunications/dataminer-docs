@@ -41,7 +41,7 @@ A DataMiner Agent must be restarted in the following cases:
 
 > [!TIP]
 > See also:
-> [Starting or stopping DataMiner Agents in your DataMiner System](../../part_3/DataminerSystems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.md)
+> [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System)
 
 ### How do I synchronize time settings within a DMS?
 
@@ -127,7 +127,7 @@ By default, a DataMiner Cube session will disconnect after a certain period with
 
 However, under certain circumstances, it may be necessary to keep a session open for an indefinite period of time. To do so:
 
-1. Go to the DataMiner Cube user settings. See [User settings](../../part_1/GettingStarted/User_settings.md).
+1. Go to the DataMiner Cube user settings. See [User settings](xref:User_settings).
 
 2. Go to the *Connection* tab.
 
@@ -144,7 +144,7 @@ All historic alarms will be deleted indiscriminately, and the Alarm Console, Rep
 
 1. Connect to the DMA using Remote Desktop.
 
-2. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](../../part_3/DataminerSystems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.md).
+2. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
 
 3. Open MySQL Query Browser. On the logon window, click *OK* to connect to the database using the default settings.
 
@@ -174,7 +174,7 @@ All historic alarms will be deleted indiscriminately, and the Alarm Console, Rep
 
 6. Close MySQL Query Browser.
 
-7. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](../../part_3/DataminerSystems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.md).
+7. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
 
     On startup, DataMiner will recreate the tables you have dropped, and the new tables will all be empty.
 
@@ -186,11 +186,11 @@ To solve this problem, you can specify a custom user account for inter-DMA authe
 
 To configure a custom user account:
 
-1. Open the SLNetClient test tool. See [Opening the SLNetClientTest tool](../../part_7/DataminerTools/Opening_the_SLNetClientTest_tool.md).
+1. Open the SLNetClient test tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
-2. Connect to the DMA. See [Connecting to a DMA with the SLNetClientTest tool](../../part_7/DataminerTools/Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md).
+2. Connect to the DMA. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-3. Edit the connection strings between the DMAs. See [Editing the connection string between two DataMiner Agents](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#editing-the-connection-string-between-two-dataminer-agents).
+3. Edit the connection strings between the DMAs. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_tool_advanced_procedures#editing-the-connection-string-between-two-dataminer-agents).
 
 ### What do I do if there is an SLNet process disappearance?
 

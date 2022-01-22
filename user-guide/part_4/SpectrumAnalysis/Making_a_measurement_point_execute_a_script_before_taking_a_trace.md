@@ -19,6 +19,6 @@ Spectrum measurement points are often configured to set one or more parameters b
 
 5. In the boxes below the script name, fill in the necessary dummies and parameters for the script.
 
-6. If necessary, select additional options for the way the Automation script is run. For more information on these options, see [Script execution options](../automation/Script_execution_options.md).
+6. If necessary, select additional options for the way the Automation script is run. For more information on these options, see [Script execution options](xref:Script_execution_options).
 
 7. Click *Apply* to apply your changes.

@@ -10,7 +10,7 @@ However, rollback packages are no longer created in recent DataMiner versions. W
 
 > [!TIP]
 > See also:
-> [DataMiner Taskbar Utility](../../part_7/DataminerTools/DataMiner_Taskbar_Utility.md)
+> [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 
 ### Rolling back an upgrade using the DataMiner Taskbar Utility
 

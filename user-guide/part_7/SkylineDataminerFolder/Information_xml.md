@@ -12,4 +12,4 @@ For every protocol, there can be a number of “Information” files. These corr
 
 > [!TIP]
 > See also:
-> [Information templates](../../part_2/protocols/Information_templates.md)
+> [Information templates](xref:Information_templates)

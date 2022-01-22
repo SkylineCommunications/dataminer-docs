@@ -30,8 +30,8 @@ In this section:
 
 > [!TIP]
 > See also:
-> - [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md)
-> - [Setting the TTL for database records](../DataminerTools/SLNetClientTest_tool_advanced_procedures.md#setting-the-ttl-for-database-records)
+> - [Specifying TTL overrides](xref:Specifying_TTL_overrides)
+> - [Setting the TTL for database records](xref:SLNetClientTest_tool_advanced_procedures#setting-the-ttl-for-database-records)
 
 ### Basic syntax of the TTL settings
 
@@ -102,7 +102,7 @@ Examples:
 > - For an indexing database, it is possible to specify “infinite”, in which case the data will be kept indefinitely.
 
 > [!NOTE]
-> From DataMiner 9.6.3 onwards, TTL overrides for trend and alarm records should be configured directly in DataMiner Cube. See [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md).
+> From DataMiner 9.6.3 onwards, TTL overrides for trend and alarm records should be configured directly in DataMiner Cube. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 ### Specifying overrides for the trending TTL of protocols
 
@@ -151,7 +151,7 @@ Example of a *DBMaintenanceDMS.xml* file with protocol override:
 > Though the protocol TTL overrides the general TTL settings for the system, it is in turn overridden by any TTL settings that have been specified in the *Element.xml* for specific elements.
 
 > [!NOTE]
-> From DataMiner 9.6.3 onwards, TTL overrides for trend and alarm records should be configured directly in DataMiner Cube. See [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md).
+> From DataMiner 9.6.3 onwards, TTL overrides for trend and alarm records should be configured directly in DataMiner Cube. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 ### Overriding default storage behavior for service properties in Cassandra
 

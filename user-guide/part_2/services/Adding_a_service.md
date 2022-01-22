@@ -22,7 +22,7 @@ uid: Adding_a_service
 
     > [!TIP]
     > See also:
-    > [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc)
+    > [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 
 3. Optionally, add a description with more detailed information.
 
@@ -61,7 +61,7 @@ uid: Adding_a_service
         3. Choose an alarm or trend template, if available.
 
             > [!NOTE]
-            > - You can also quickly change the selected template by clicking the following button to the right of the field: ![](../../images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](../protocols/Configuring_alarm_templates.md) and [Configuring trend templates](../protocols/Configuring_trend_templates.md).
+            > - You can also quickly change the selected template by clicking the following button to the right of the field: ![](../../images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](xref:Configuring_alarm_templates) and [Configuring trend templates](xref:Configuring_trend_templates).
             > - A service that has been created using a service protocol is called an “enhanced service”.
 
 7. Click the *Next* button in the lower right corner to go to the *parameters* page.
@@ -130,7 +130,7 @@ uid: Adding_a_service
 11. Optionally, click the *Next* button in the lower right corner to go to the *Properties* page, and enter any custom properties.
 
     > [!NOTE]
-    > You can also add, edit or delete custom properties later, by right-clicking the service in the Surveyor and selecting *Properties*. For more information, see [Managing element properties](../elements/Managing_element_properties.md).
+    > You can also add, edit or delete custom properties later, by right-clicking the service in the Surveyor and selecting *Properties*. For more information, see [Managing element properties](xref:Managing_element_properties).
 
 12. Click the *Create* button in the lower right corner to finish creating the service.
 

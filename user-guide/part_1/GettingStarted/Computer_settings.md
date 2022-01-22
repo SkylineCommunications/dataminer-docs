@@ -49,7 +49,7 @@ To access the computer settings in DataMiner Cube:
 
 #### Connection settings
 
-On this page, you can select settings related to the connection of your computer to DataMiner Cube. These settings are also available in the Cube logon window. See [Logging on to DataMiner Cube](../DataminerApplications/Logging_on_to_DataMiner_Cube.md).
+On this page, you can select settings related to the connection of your computer to DataMiner Cube. These settings are also available in the Cube logon window. See [Logging on to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube).
 
 - **Automatic log-on with saved user name and password**: Select this setting to have DataMiner Cube remember your user name and password, so that you do not have to enter these except after an explicit logout.
 
@@ -61,7 +61,7 @@ On this page, you can select settings related to the connection of your computer
 
     > [!TIP]
     > See also:
-    > [Manual configuration of client communication settings](../../part_3/DataminerAgents/DMA_configuration_related_to_client_applications.md#manual-configuration-of-client-communication-settings)
+    > [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings)
 
 #### Cube settings
 
@@ -145,4 +145,4 @@ This page contains a number of settings regarding communication between the comp
 
 - **Fallback received messages**: In the box to the right of this setting, enter the minimum number of received messages that will be kept when older messages are deleted.
 
-- **Store full messages**: As soon as you apply this setting, details will be stored for each message. These can be viewed in a separate *Details* pane when you click the message in the communication logging. See [Consulting the DataMiner logs in DataMiner Cube](../../part_6/logging/Consulting_the_DataMiner_logs_in_DataMiner_Cube.md).
+- **Store full messages**: As soon as you apply this setting, details will be stored for each message. These can be viewed in a separate *Details* pane when you click the message in the communication logging. See [Consulting the DataMiner logs in DataMiner Cube](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube).

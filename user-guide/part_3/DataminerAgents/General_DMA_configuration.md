@@ -88,7 +88,7 @@ In your DataMiner System, you can store general information about your company: 
 
     > [!TIP]
     > See also:
-    > [Creating report templates](../../part_4/reporter/Creating_report_templates.md)
+    > [Creating report templates](xref:Creating_report_templates)
 
 You can also specify up to three DataMiner users who can be contacted in case of problems. Often, these will be DataMiner Administrators.
 
@@ -147,7 +147,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 
 > [!NOTE]
-> - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml)
+> - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 > - Prior to DataMiner 10.0.8, ports 7001, 7199, 9142 and 9160 are also opened during Cassandra installation. However, from DataMiner 10.0.8 onwards, only the essential ports 7000 and 9042 are opened.
 > - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. However, this port is no longer used from those versions onwards and is no longer opened during new installations.
 > - The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
@@ -447,7 +447,7 @@ In this section:
 
 If the default web server on the server has been modified to only allow HTTPS traffic, there could be problems with the auto-detection of connection settings.
 
-To avoid this, it is possible to specify alternative auto-detection information via the *Edit Connection Uris* functionality in the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Editing the connection string between two DataMiner Agents](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#editing-the-connection-string-between-two-dataminer-agents).
+To avoid this, it is possible to specify alternative auto-detection information via the *Edit Connection Uris* functionality in the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_tool_advanced_procedures#editing-the-connection-string-between-two-dataminer-agents).
 
 The following auto-detect methods can be specified:
 
@@ -562,12 +562,12 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
 11. From DataMiner 10.1.1 onwards, the following additional step is required in order to reset NATS:
 
-    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](../../part_7/DataminerTools/Opening_the_SLNetClientTest_tool.md).
+    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
         > [!WARNING]
         > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-    2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](../../part_7/DataminerTools/Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md).
+    2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
@@ -617,18 +617,18 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
 13. On the online DMA, go to System Center \> Agents, and remove the old IP address from the list of DMAs in the cluster.
 
-14. Still on the Agents page in System Center, make sure the online Failover DMA is selected in the list on the left, and click the *Failover* button in the lower right corner to check the Failover status. For more information, see [Viewing the current Failover DMA status](../failover/Viewing_the_current_Failover_DMA_status.md).
+14. Still on the Agents page in System Center, make sure the online Failover DMA is selected in the list on the left, and click the *Failover* button in the lower right corner to check the Failover status. For more information, see [Viewing the current Failover DMA status](xref:Viewing_the_current_Failover_DMA_status).
 
 15. In case the Failover status is not green and there are heartbeat errors, stop DataMiner, and double-check the DMS.xml files of both DMAs to make sure all references to the old IP address have been correctly replaced.
 
 16. From DataMiner 10.1.1 onwards, the following additional step is required in order to reset NATS:
 
-    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](../../part_7/DataminerTools/Opening_the_SLNetClientTest_tool.md).
+    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
         > [!WARNING]
         > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-    2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](../../part_7/DataminerTools/Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md).
+    2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
@@ -683,7 +683,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
     > [!TIP]
     > See also:
-    > [DB.xml](../../part_7/SkylineDataminerFolder/DB_xml.md#dbxml)
+    > [DB.xml](xref:DB_xml#dbxml)
 
 15. Open the file DB.xml for all other DMAs in the DMS, and replace the old IP address with the new IP address for both Cassandra and Elasticsearch.
 
@@ -691,12 +691,12 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 17. Reset NATS:
 
-    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](../../part_7/DataminerTools/Opening_the_SLNetClientTest_tool.md).
+    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
         > [!WARNING]
         > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-    2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](../../part_7/DataminerTools/Connecting_to_a_DMA_with_the_SLNetClientTest_tool.md).
+    2. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
     3. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
@@ -706,7 +706,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 > [!TIP]
 > See also:
-> [Migrating the general database to a DMS Cassandra cluster](../databases/Migrating_the_general_database_to_a_DMS_Cassandra_cluster.md)
+> [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
 
 ### Switching between DataMiner configurations on a DMA
 
@@ -723,7 +723,7 @@ When adding a DataMiner configuration to a DMA, you can select
 
 > [!TIP]
 > See also:
-> [DataMiner Taskbar Utility](../../part_7/DataminerTools/DataMiner_Taskbar_Utility.md)
+> [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 
 #### Enabling DataMiner configuration switching on a DMA
 

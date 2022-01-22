@@ -212,7 +212,7 @@ Please note the following regarding this component.
 
 - To add a spectrum buffer to a feed component, you can either add an individual spectrum buffer, or add the spectrum buffers group and then add a spectrum element filter.
 
-- If a spectrum analyzer component uses a spectrum buffer feed, it is possible to color the threshold lines from the preset based on the state of a spectrum monitor parameter. For this purpose, the spectrum monitor must use a script containing variables that refer to the threshold lines. Each threshold line has a threshold ID, which is an index ranging from 1 to the total number of thresholds in the preset. To refer to the first threshold, the script variable should be *$threshold1*, for the second threshold, it should be *$threshold2*, etc. This format is case-sensitive. When you configure the spectrum monitor parameters, you can then select these variables to create a parameter with alarm monitoring (see [Configuring spectrum monitors](../SpectrumAnalysis/Working_with_spectrum_monitors.md#configuring-spectrum-monitors)).
+- If a spectrum analyzer component uses a spectrum buffer feed, it is possible to color the threshold lines from the preset based on the state of a spectrum monitor parameter. For this purpose, the spectrum monitor must use a script containing variables that refer to the threshold lines. Each threshold line has a threshold ID, which is an index ranging from 1 to the total number of thresholds in the preset. To refer to the first threshold, the script variable should be *$threshold1*, for the second threshold, it should be *$threshold2*, etc. This format is case-sensitive. When you configure the spectrum monitor parameters, you can then select these variables to create a parameter with alarm monitoring (see [Configuring spectrum monitors](xref:Working_with_spectrum_monitors#configuring-spectrum-monitors)).
 
 - To allow users to visualize and switch between measurement points for a spectrum session (supported from DataMiner 10.0.11 onwards):
 
@@ -277,5 +277,5 @@ To configure this component:
 
 > [!NOTE]
 > - Spectrum components are currently not yet supported in visual overviews within dashboards.
-> - Quick filters are supported for table parameters in visual overview components from DataMiner 10.0.12 onwards. See [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md).
+> - Quick filters are supported for table parameters in visual overview components from DataMiner 10.0.12 onwards. See [Using quick filters](xref:Using_quick_filters).
 >

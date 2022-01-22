@@ -8,28 +8,28 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 #### About alarms
 
-- Too many alarms in your Alarm Console? Adding conditions in the alarm template can help you reduce unnecessary alarms. See [Using conditions in an alarm template](../../part_2/protocols/Configuring_alarm_templates.md#using-conditions-in-an-alarm-template).
+- Too many alarms in your Alarm Console? Adding conditions in the alarm template can help you reduce unnecessary alarms. See [Using conditions in an alarm template](xref:Configuring_alarm_templates#using-conditions-in-an-alarm-template).
 
-- You can drag and drop an element, service or view to the Alarm Console to instantly create an alarm tab linked to it. See [Applying an alarm filter by dragging an item onto the Alarm Console](../../part_2/alarms/Working_with_the_Alarm_Console.md#applying-an-alarm-filter-by-dragging-an-item-onto-the-alarm-console).
+- You can drag and drop an element, service or view to the Alarm Console to instantly create an alarm tab linked to it. See [Applying an alarm filter by dragging an item onto the Alarm Console](xref:Working_with_the_Alarm_Console#applying-an-alarm-filter-by-dragging-an-item-onto-the-alarm-console).
 
 - Would you like to get a list of alarms in Word or Excel? Just drag them from the Alarm Console and drop them onto your Word or Excel document.
 
     > [!NOTE]
     > If you drag a list of more than 100 items to an application like Word or Excel, only the first 100 items will be copied.
 
-- Do you want to see more information in your Alarm Console? Add extra columns. Those can even contain action buttons to quickly mask or acknowledge an alarm. [Changing the column layout in an alarm tab](../../part_2/alarms/Working_with_the_Alarm_Console.md#changing-the-column-layout-in-an-alarm-tab).
+- Do you want to see more information in your Alarm Console? Add extra columns. Those can even contain action buttons to quickly mask or acknowledge an alarm. [Changing the column layout in an alarm tab](xref:Working_with_the_Alarm_Console#changing-the-column-layout-in-an-alarm-tab).
 
-- Did you know DataMiner can make alarms blink as long as they are not acknowledged? [Making alarms without owner blink](../../part_2/alarms/Making_alarms_without_owner_blink.md).
+- Did you know DataMiner can make alarms blink as long as they are not acknowledged? [Making alarms without owner blink](xref:Making_alarms_without_owner_blink).
 
-- Want to see which alarms were active in your system at a certain point in time? Use the history slider in the Alarm Console. See [Active alarms tab timeline](../../part_2/alarms/Working_with_the_Alarm_Console.md#active-alarms-tab-timeline).
+- Want to see which alarms were active in your system at a certain point in time? Use the history slider in the Alarm Console. See [Active alarms tab timeline](xref:Working_with_the_Alarm_Console#active-alarms-tab-timeline).
 
-- Want to know which elements, parameters or severities appear most frequently in your active or history alarms? Click the *Statistical view* icon in the alarm bar. See [Using the statistical view](../../part_2/alarms/Working_with_the_Alarm_Console.md#using-the-statistical-view).
+- Want to know which elements, parameters or severities appear most frequently in your active or history alarms? Click the *Statistical view* icon in the alarm bar. See [Using the statistical view](xref:Working_with_the_Alarm_Console#using-the-statistical-view).
 
-- Did you know the alarms right-click menu can be extended with additional items, such as hyperlinks, or options to start a program or script? See [Adding a custom command to the Alarm Console shortcut menu](../../part_2/alarms/Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu.md).
+- Did you know the alarms right-click menu can be extended with additional items, such as hyperlinks, or options to start a program or script? See [Adding a custom command to the Alarm Console shortcut menu](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu).
 
-- Would you like to group alarms in the Alarm Console differently? Disable *Automatically group according to arrangement* to customize grouping, even combining multiple fields. See [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings).
+- Would you like to group alarms in the Alarm Console differently? Disable *Automatically group according to arrangement* to customize grouping, even combining multiple fields. See [Alarm Console settings](xref:Working_with_the_Alarm_Console#alarm-console-settings).
 
-- Want to make sure an alarm only shows in the Alarm Console if it has been active for a while, instead of just for a couple of seconds? Use the *Delay* option. See [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings).
+- Want to make sure an alarm only shows in the Alarm Console if it has been active for a while, instead of just for a couple of seconds? Use the *Delay* option. See [Alarm Console settings](xref:Working_with_the_Alarm_Console#alarm-console-settings).
 
 #### About shortcuts
 
@@ -61,7 +61,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](Main_Cube_UI_components_prior_to_DataMiner_10.md#special-icon-settings).
 
-- The Surveyor can be enriched with statistics, such as the number of alarms in a view. See [Displaying alarm statistics in the Surveyor](../../part_2/alarms/Displaying_alarm_statistics_in_the_Surveyor.md).
+- The Surveyor can be enriched with statistics, such as the number of alarms in a view. See [Displaying alarm statistics in the Surveyor](xref:Displaying_alarm_statistics_in_the_Surveyor).
 
 - Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). [Recent items](Main_Cube_UI_components_prior_to_DataMiner_10.md#recent-items).
 
@@ -69,22 +69,22 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 #### About trending
 
-- To quickly add more parameters to a trend graph, drag an element from the Surveyor and drop it onto the graph. Configure which parameters to add in the pane at the bottom. See [Accessing trend information from the Trending module](../../part_2/trending/Accessing_trend_information_from_the_Trending_module.md).
+- To quickly add more parameters to a trend graph, drag an element from the Surveyor and drop it onto the graph. Configure which parameters to add in the pane at the bottom. See [Accessing trend information from the Trending module](xref:Accessing_trend_information_from_the_Trending_module).
 
-- Want to display a custom Y-axis range in a trend graph, instead of the range automatically determined by Cube? Right-click the graph and select *Y-axis settings*. This can for instance be useful to get a different perspective on the graph. See [Using the right-click menu](../../part_2/trending/Using_the_right-click_menu.md#using-the-right-click-menu).
+- Want to display a custom Y-axis range in a trend graph, instead of the range automatically determined by Cube? Right-click the graph and select *Y-axis settings*. This can for instance be useful to get a different perspective on the graph. See [Using the right-click menu](xref:Using_the_right-click_menu#using-the-right-click-menu).
 
-- Have you made a complicated trend graph with multiple parameters, and would you like to easily retrieve it again later? Save it as a trend group. See [Working with trend groups](../../part_2/trending/Working_with_trend_groups.md).
+- Have you made a complicated trend graph with multiple parameters, and would you like to easily retrieve it again later? Save it as a trend group. See [Working with trend groups](xref:Working_with_trend_groups).
 
 #### Miscellaneous
 
-- If you specify startup options in the DataMiner Cube URL, you can make Cube display a particular view or app on startup – and you can do even much more than that! See [Options for opening DataMiner Cube](../DataminerApplications/Opening_DataMiner_Cube.md#options-for-opening-dataminer-cube).
+- If you specify startup options in the DataMiner Cube URL, you can make Cube display a particular view or app on startup – and you can do even much more than that! See [Options for opening DataMiner Cube](xref:Opening_DataMiner_Cube#options-for-opening-dataminer-cube).
 
-- Want to get alerts for a particular element, service or view? Right-click it in the Surveyor and select *Actions* > *Alert me*. See [Configuring notifications directly from the Alarm Console or Surveyor](../../part_3/security/Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor.md).
+- Want to get alerts for a particular element, service or view? Right-click it in the Surveyor and select *Actions* > *Alert me*. See [Configuring notifications directly from the Alarm Console or Surveyor](xref:Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor).
 
-- Want to have a user manual at hand when you work with a particular device? Add it in the *Documents* section of the element card. You can also add hyperlinks and email addresses. See [About the Documents module](../../part_2/documents/About_the_Documents_module.md).
+- Want to have a user manual at hand when you work with a particular device? Add it in the *Documents* section of the element card. You can also add hyperlinks and email addresses. See [About the Documents module](xref:About_the_Documents_module).
 
-- Use properties to add information to a view, element or service, such as a class defining a gold, silver or bronze service. These properties can also be displayed in the Surveyor. See [Adding a custom property to an item](../../part_2/elements/Managing_element_properties.md#adding-a-custom-property-to-an-item).
+- Use properties to add information to a view, element or service, such as a class defining a gold, silver or bronze service. These properties can also be displayed in the Surveyor. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 - Want to add a quick note to an element? Go to the *Notes* page in the card navigation pane. You can also do this for services and views. See [Card navigation pane](Working_with_cards_in_DataMiner_Cube.md#card-navigation-pane).
 
-- Want to quickly copy a table to an email or spreadsheet? Right-click the table in Data Display and select *Copy table*. See [Table parameters](../../part_2/parameters/Table_parameters.md).
+- Want to quickly copy a table to an email or spreadsheet? Right-click the table in Data Display and select *Copy table*. See [Table parameters](xref:Table_parameters).

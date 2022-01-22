@@ -97,5 +97,5 @@ On the element card containing the parameter, double-click the parameter, or rig
 The parameter ID is displayed to the right of the parameter.
 
 > [!NOTE]
-> For more information on how to generate a list of all parameters for a particular element, see [Generating a list of all parameters in a protocol version](../../part_2/protocols/Advanced_protocol_functionality.md#generating-a-list-of-all-parameters-in-a-protocol-version).
+> For more information on how to generate a list of all parameters for a particular element, see [Generating a list of all parameters in a protocol version](xref:Advanced_protocol_functionality#generating-a-list-of-all-parameters-in-a-protocol-version).
 >

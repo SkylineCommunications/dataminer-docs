@@ -6,9 +6,9 @@ uid: SRM_system_setup
 
 Once the SRM Framework has been installed, several actions are necessary to provision the system:
 
-1. Make sure the necessary elements are created representing the devices in the system. See [Adding and deleting elements](../../part_2/elements/Adding_and_deleting_elements.md).
+1. Make sure the necessary elements are created representing the devices in the system. See [Adding and deleting elements](xref:Adding_and_deleting_elements).
 
-2. Create profile definitions consisting of parameters linked to specific virtual functions, and profile instances that determine the values assigned to these parameters in particular configurations. Also make sure to define capacities and capabilities, as the profile instances will not only be used to configure a function but also to select a function (resource) matching the capacity and capability requirements. See [The Profiles module](../../part_4/SRM/The_Profiles_module.md).
+2. Create profile definitions consisting of parameters linked to specific virtual functions, and profile instances that determine the values assigned to these parameters in particular configurations. Also make sure to define capacities and capabilities, as the profile instances will not only be used to configure a function but also to select a function (resource) matching the capacity and capability requirements. See [The Profiles module](xref:The_Profiles_module).
 
     For example, for a Demodulator function, the profile definition could contain the following parameters:
 
@@ -20,11 +20,11 @@ Once the SRM Framework has been installed, several actions are necessary to prov
 
 3. For each profile definition, create the “Profile-Load” Automation script that should be used to configure the corresponding virtual function during various booking events. To do so, you can start from the *SRM_ProfileLoadScriptTemplate* script, which is included in the installation package. This script will use a profile instance as input argument and will configure a function based on the content of this instance.
 
-4. Add each “Profile-Load” script to the profile definition for the corresponding virtual function. See [Configuring profile definitions](../../part_4/SRM/Configuring_profile_definitions.md).
+4. Add each “Profile-Load” script to the profile definition for the corresponding virtual function. See [Configuring profile definitions](xref:Configuring_profile_definitions).
 
-5. Upload the necessary function.xml files in order to define specific virtual functions of devices. See [Functions XML files](../../part_4/SRM/Functions_XML_files.md).
+5. Upload the necessary function.xml files in order to define specific virtual functions of devices. See [Functions XML files](xref:Functions_XML_files).
 
-6. Provision the necessary resources, representing functions as resources that can be used in the system. This can be done manually (see [Configuring pools of resources](../../part_4/SRM/Configuring_pools_of_resources.md)) or using the script *SRM_DiscoverResources* (included in the SRM package).
+6. Provision the necessary resources, representing functions as resources that can be used in the system. This can be done manually (see [Configuring pools of resources](xref:Configuring_pools_of_resources)) or using the script *SRM_DiscoverResources* (included in the SRM package).
 
     During or after resources provisioning:
 
@@ -36,9 +36,9 @@ Once the SRM Framework has been installed, several actions are necessary to prov
 
     - Include resources in one or more pools. The name of each pool should start with the Virtual Platform identifier, followed by a period, e.g. *VPA.Decoder*.
 
-    For more information see [The Resources module](../../part_4/SRM/The_Resources_module.md) and [The Profiles module](../../part_4/SRM/The_Profiles_module.md).
+    For more information see [The Resources module](xref:The_Resources_module) and [The Profiles module](xref:The_Profiles_module).
 
-7. Combine the configured virtual functions in service definitions to describe the flow of the different functions in bookings. See [The Services module](../../part_4/SRM/The_Services_module.md).
+7. Combine the configured virtual functions in service definitions to describe the flow of the different functions in bookings. See [The Services module](xref:The_Services_module).
 
     This includes:
 

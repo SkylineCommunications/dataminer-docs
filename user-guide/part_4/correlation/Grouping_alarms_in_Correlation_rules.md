@@ -12,7 +12,7 @@ In the Correlation module, the *Alarm Grouping* section of the details pane allo
 
     - by alarm: Creates a correlated alarm per individual alarm update.
 
-    - by component info. See [Creating an information template](../../part_2/protocols/Creating_an_information_template.md).
+    - by component info. See [Creating an information template](xref:Creating_an_information_template).
 
     - by connectivity: Available from DataMiner 9.0.5 onwards. Groups alarms that are part of the same connectivity chain.
 
@@ -20,9 +20,9 @@ In the Correlation module, the *Alarm Grouping* section of the details pane allo
 
     - by element
 
-    - by function. Available from DataMiner 9.5.4 onwards. See [Service and Resource Management](../SRM/SRM.md#service-and-resource-management).
+    - by function. Available from DataMiner 9.5.4 onwards. See [Service and Resource Management](xref:SRM#service-and-resource-management).
 
-    - by key point. See [Creating an information template](../../part_2/protocols/Creating_an_information_template.md).
+    - by key point. See [Creating an information template](xref:Creating_an_information_template).
 
     - by parameter
 

@@ -16,9 +16,9 @@ Connections can be set in different ways:
 
 - In Cube, in the element’s *Properties* window or the DCF configuration window. See [Configuring element connectivity in Cube](Configuring_element_connectivity_in_Cube.md).
 
-- In the matrix interface of a matrix element. See [Configuring matrix parameters](../../part_2/parameters/Configuring_matrix_parameters.md).
+- In the matrix interface of a matrix element. See [Configuring matrix parameters](xref:Configuring_matrix_parameters).
 
-- In Visual Overview. See [Implementing DataMiner Connectivity Framework functions](../../part_2/visio/Implementing_DataMiner_Connectivity_Framework_functions.md).
+- In Visual Overview. See [Implementing DataMiner Connectivity Framework functions](xref:Implementing_DataMiner_Connectivity_Framework_functions).
 
 - In *Connectivity.xml* files in the folder *C:\\Skyline DataMiner\\Connectivity*. See [Defining connectivity chains in XML files](Defining_connectivity_chains_in_XML_files.md).
 

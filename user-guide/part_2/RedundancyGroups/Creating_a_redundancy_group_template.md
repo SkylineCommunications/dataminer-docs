@@ -31,7 +31,7 @@ To create a redundancy group template:
 
             > [!TIP]
             > See also:
-            > [Defining connectivity chains in XML files](../../part_3/DCF/Defining_connectivity_chains_in_XML_files.md)
+            > [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files)
 
             > [!NOTE]
             > Prior to DataMiner 9.5.5, the connectivity path is only calculated starting from an internal connection, so that a connectivity chain path with only external connections cannot cause a redundancy group to switch. From DataMiner 9.5.5 onwards, this restriction no longer applies.

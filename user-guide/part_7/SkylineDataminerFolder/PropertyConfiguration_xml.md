@@ -44,11 +44,11 @@ To do so:
 
 > [!TIP]
 > See also:
-> [Adding a custom property to an item](../../part_2/elements/Managing_element_properties.md#adding-a-custom-property-to-an-item)
+> [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item)
 
 ### Configuring alarm properties to motivate actions
 
-If you define an alarm property, you can specify that users have to motivate their intention to take a particular alarm action (mask, unmask, clear, etc.). For more information, see [Enforcing motivation of alarm actions](../../part_2/alarms/Enforcing_motivation_of_alarm_actions.md).
+If you define an alarm property, you can specify that users have to motivate their intention to take a particular alarm action (mask, unmask, clear, etc.). For more information, see [Enforcing motivation of alarm actions](xref:Enforcing_motivation_of_alarm_actions).
 
 ### Configuring properties for Alarm Console grouping
 

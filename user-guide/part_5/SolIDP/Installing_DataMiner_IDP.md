@@ -26,7 +26,7 @@ To install and set up DataMiner IDP:
 
     > [!TIP]
     > See also:
-    > [Opening DataMiner Cube](../../part_1/DataminerApplications/Opening_DataMiner_Cube.md)
+    > [Opening DataMiner Cube](xref:Opening_DataMiner_Cube)
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 

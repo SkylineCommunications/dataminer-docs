@@ -70,7 +70,7 @@ The following shape data fields can be added to the group containing the alarm s
     - Alarm
 
     > [!NOTE]
-    > With the DataMiner Cube user setting “Maximum number of child shapes in a Children container shape”, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
+    > With the DataMiner Cube user setting “Maximum number of child shapes in a Children container shape”, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
 - **ChildrenOptions**: In this optional shape data field, you can specify the following options:
 

@@ -13,7 +13,7 @@ The legacy *Dashboards* app can be customized in several ways:
 - [Customizing the memory cache size](#customizing-the-memory-cache-size)
 
 > [!NOTE]
-> These procedures do not influence the new Dashboards app, available from DataMiner 9.6.9 onwards. For information on advanced settings to customize the new app, see [Customizing the Dashboards app](../newR_D/Customizing_the_Dashboards_app.md).
+> These procedures do not influence the new Dashboards app, available from DataMiner 9.6.9 onwards. For information on advanced settings to customize the new app, see [Customizing the Dashboards app](xref:Customizing_the_Dashboards_app).
 
 ### Activating two-step authentication
 

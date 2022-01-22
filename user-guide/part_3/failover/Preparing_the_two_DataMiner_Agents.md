@@ -25,12 +25,12 @@ The backup DMA must be a newly installed DataMiner Agent.
 
 - The DataMiner ID of this DMA must be identical to the DataMiner ID of the primary DMA.
 
-    For more information on how to change the DataMiner ID, see [Changing the DataMiner ID of a DMA](../DataminerAgents/General_DMA_configuration.md#changing-the-dataminer-id-of-a-dma).
+    For more information on how to change the DataMiner ID, see [Changing the DataMiner ID of a DMA](xref:General_DMA_configuration#changing-the-dataminer-id-of-a-dma).
 
 - The backup DMA may not be a member of a DMS cluster.
 
 > [!NOTE]
-> When you set up a new pair of Failover DMAs, the entire general database of the main DMA will be copied to the backup DMA. However, if you are working with DataMiner Agents prior to version 7.5.0, you must make sure that the database on the backup DMA is an exact copy of the one on the primary DMA. For more information on restoring a DMA database, see [Restoring the database only](../DataminerAgents/Restoring_the_database_only.md).
+> When you set up a new pair of Failover DMAs, the entire general database of the main DMA will be copied to the backup DMA. However, if you are working with DataMiner Agents prior to version 7.5.0, you must make sure that the database on the backup DMA is an exact copy of the one on the primary DMA. For more information on restoring a DMA database, see [Restoring the database only](xref:Restoring_the_database_only).
 
 ### Additional IP addresses or hostname
 

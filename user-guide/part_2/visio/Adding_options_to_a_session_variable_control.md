@@ -276,7 +276,7 @@ To create such a control, configure the **SetVar** and SetVarOptions shape data 
 
 > [!TIP]
 > See also:
-> [The Profiles module](../../part_4/SRM/The_Profiles_module.md)
+> [The Profiles module](xref:The_Profiles_module)
 
 ### Creating a multiple checkbox control
 

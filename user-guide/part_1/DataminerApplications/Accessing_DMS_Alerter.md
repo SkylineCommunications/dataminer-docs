@@ -18,7 +18,7 @@ uid: Accessing_DMS_Alerter
 
 > [!TIP]
 > See also:
-> [Setting your startup preferences for DMS Alerter](../../part_7/DataminerTools/Configuring_DMS_Alerter.md#setting-your-startup-preferences-for-dms-alerter)
+> [Setting your startup preferences for DMS Alerter](xref:Configuring_DMS_Alerter#setting-your-startup-preferences-for-dms-alerter)
 
 1. Open the *Skyline Alerter* application.
 

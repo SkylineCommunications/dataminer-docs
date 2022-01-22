@@ -17,7 +17,7 @@ To be able to work with DataMiner, you must have at least one DataMiner Agent an
 
 > [!TIP]
 > See also:
-> [DataMiner System layout](../GeneralLayout/GeneralLayout.md#dataminer-system-layout)
+> [DataMiner System layout](xref:GeneralLayout#dataminer-system-layout)
 
 ### System components
 
@@ -32,7 +32,7 @@ On a DataMiner Agent you can find different kinds of “objects”, representing
 | A redundancy group | A group of devices that have been configured in such a way that if one or more of them fail, others can take over automatically.                                                                                                                          |
 
 > [!NOTE]
-> For more information about these components, refer to the relevant section in [Basic DataMiner functionality](../../Part2BasicFunctionalities/Part2BasicFunctionalities.md#basic-dataminer-functionality).
+> For more information about these components, refer to the relevant section in [Basic DataMiner functionality](xref:Part2BasicFunctionalities#basic-dataminer-functionality).
 
 ### DataMiner functionalities
 
@@ -40,8 +40,8 @@ The following concepts pertain to the way DataMiner gathers and visualizes infor
 
 | Concept           | Description                                                                                                                                                                                                                                                                                                                                                                                           |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| A protocol        | An XML file that allows the DMA to communicate with a data source in the system. Also known as “connector” or “driver”. See also: [Protocols and Templates](../../part_2/protocols/protocols.md#protocols-and-templates)                                                                                          |
-| A visual overview | A graphical representation of components and data in the system. The visual overviews in DataMiner are created in Microsoft Visio, and can represent information in many different ways. They can also be made interactive, so that the user can interact with the DataMiner system by clicking areas in the visual overview. See also: [Visio drawings](../../part_2/visio/visio.md#visio-drawings). |
+| A protocol        | An XML file that allows the DMA to communicate with a data source in the system. Also known as “connector” or “driver”. See also: [Protocols and Templates](xref:protocols#protocols-and-templates)                                                                                          |
+| A visual overview | A graphical representation of components and data in the system. The visual overviews in DataMiner are created in Microsoft Visio, and can represent information in many different ways. They can also be made interactive, so that the user can interact with the DataMiner system by clicking areas in the visual overview. See also: [Visio drawings](xref:visio#visio-drawings). |
 | An alarm          | A notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. With alarms, users are made aware of any abnormal situation in the system. Alarms can have different severity levels, and may be linked to other alarms.                                                                                                                    |
 | Trending          | DataMiner can store measurements of parameter values, taken over a period of time, so that these can be shown in graphs to visualize trends in the system.                                                                                                                                                                                                                                            |
 
@@ -61,7 +61,7 @@ A DataMiner System can have several additional modules or apps. Depending on the
 | DMS Apps                  | DataMiner can have countless custom-made apps, designed specifically for a particular vendor or technology. The possibilities for these apps are endless, so they are not all included in this documentation.                  |
 
 > [!NOTE]
-> For information on the other modules, refer to the module in question in the section [Advanced DataMiner modules](../../Part4AdvancedModules/Part4AdvancedModules.md#advanced-dataminer-modules).
+> For information on the other modules, refer to the module in question in the section [Advanced DataMiner modules](xref:Part4AdvancedModules#advanced-dataminer-modules).
 
 ### DataMiner Standard Apps
 
@@ -71,4 +71,4 @@ The package contains all the necessary components and default configurations, in
 
 > [!TIP]
 > See also:
-> [DataMiner Standard Apps](../../Part5StandardApps/Part5StandardApps.md#dataminer-standard-apps)
+> [DataMiner Standard Apps](xref:Part5StandardApps#dataminer-standard-apps)

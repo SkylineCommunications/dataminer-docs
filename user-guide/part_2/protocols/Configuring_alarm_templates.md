@@ -110,7 +110,7 @@ When multiple values are specified for one alarm severity, the existing alarm wi
 
 > [!TIP]
 > See also:
-> [Discrete, analog and hybrid parameters](../parameters/Discrete_analog_and_hybrid_parameters.md)
+> [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters)
 
 ### Configuring alarm thresholds for matrix parameters
 
@@ -146,7 +146,7 @@ By default, each column of a dynamic table that has monitoring enabled will be r
 2. Optionally, specify a mask in the *Filter* column to apply the alarm configuration only on a filtered selection of available rows of the dynamic table.
 
     > [!NOTE]
-    > You can use the wildcard characters \* and ? in this filter mask. For more information on wildcards, see [Searching with wildcard characters](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters).
+    > You can use the wildcard characters \* and ? in this filter mask. For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
 
 3. When you hover the mouse over a parameter, several buttons appear that allow additional options:
 
@@ -178,7 +178,7 @@ Two types of hysteresis are available, Clear hysteresis and Alarm hysteresis, re
 
 > [!TIP]
 > See also:
-> - [Alarm hysteresis](../alarms/Alarm_hysteresis.md)
+> - [Alarm hysteresis](xref:Alarm_hysteresis)
 > - <https://community.dataminer.services/video/alarm-templates-hysteresis/>
 
 
@@ -332,7 +332,7 @@ You can enable or disable this for different types of anomaly detection:
     - *Level shift*: Enables or disables alarms for level shift anomalies.
 
 > [!NOTE]
-> For more information on behavioral anomaly detection, see [Working with behavioral anomaly detection](../trending/Working_with_behavioral_anomaly_detection.md).
+> For more information on behavioral anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
 ### Setting the autoclear options for alarms in an alarm template
 
@@ -351,7 +351,7 @@ To do so:
 
 > [!TIP]
 > See also:
-> [Clearing alarms](../alarms/Clearing_alarms.md)
+> [Clearing alarms](xref:Clearing_alarms)
 
 ### Scheduling an alarm template
 

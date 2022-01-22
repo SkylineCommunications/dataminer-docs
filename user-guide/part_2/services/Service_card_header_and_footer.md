@@ -13,5 +13,5 @@ In the header of a service card, a breadcrumb trail is shown. In the header, you
 If card footers are enabled, the footer displays the service alarm state in the last 24 hours. Double-click the colored bar indicating the alarm state to view related reports.
 
 > [!NOTE]
-> Depending on your user settings, the breadcrumb trail and/or card footer may not be displayed. See [Card settings](../../part_1/GettingStarted/User_settings.md#card-settings).
+> Depending on your user settings, the breadcrumb trail and/or card footer may not be displayed. See [Card settings](xref:User_settings#card-settings).
 >

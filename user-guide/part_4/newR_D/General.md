@@ -76,7 +76,7 @@ To configure the component:
             >
             > In case several feeds are linked to the component, they are considered in the order they were added. For example, if 2 feeds are used and the feed that was first added is applicable, the second feed will be ignored.
 
-        - The standard options for script execution can be configured. See [Script execution options](../automation/Script_execution_options.md).
+        - The standard options for script execution can be configured. See [Script execution options](xref:Script_execution_options).
 
         - The following additional options are available:
 
@@ -331,7 +331,7 @@ In the *Component \> Layout* tab, the following options can be configured:
 To configure the component, in the *Settings* tab, specify a map configuration.
 
 > [!NOTE]
-> For more information, see [Displaying a DataMiner Map in a DataMiner dashboard](../maps/Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard.md).
+> For more information, see [Displaying a DataMiner Map in a DataMiner dashboard](xref:Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard).
 
 ### Group
 

@@ -23,11 +23,11 @@ Keep the following restrictions in mind for the backup path:
     2. Open the Windows task scheduler and execute the task. The SYSTEM user will now have access to the UNC path.
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.8 onwards, it is possible to instead configure specific credentials for the network location via SLNetClientTest tool. See [Specifying credentials for a shared backup path for Elasticsearch](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#specifying-credentials-for-a-shared-backup-path-for-elasticsearch).
+    > From DataMiner 10.2.0/10.1.8 onwards, it is possible to instead configure specific credentials for the network location via SLNetClientTest tool. See [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_tool_advanced_procedures#specifying-credentials-for-a-shared-backup-path-for-elasticsearch).
 
 - At most one backup per day can be taken.
 
-- DataMiner will try to remove old backups so that the only the number of backups are kept that is configured in the backup policy (see [Configuring the DataMiner backups](../DataminerAgents/Backing_up_a_DataMiner_Agent_in_DataMiner_Cube.md#configuring-the-dataminer-backups)). However, if the backups are stored on a network path, this may not be possible in case of insufficient permissions.
+- DataMiner will try to remove old backups so that the only the number of backups are kept that is configured in the backup policy (see [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups)). However, if the backups are stored on a network path, this may not be possible in case of insufficient permissions.
 
 In DataMiner 9.6.10, in case there is an Indexing server in the cluster that does not have a DataMiner Agent installed, or in case Indexing was installed on a DataMiner Agent prior to DataMiner 9.6.9, the backup path must be specified manually.
 

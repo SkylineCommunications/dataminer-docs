@@ -272,7 +272,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of SLWatchdog se
 
 > [!TIP]
 > See also:
-> [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 
 #### Example of an SLWatchdog tag in MaintenanceSettings.xml
 
@@ -347,7 +347,7 @@ In *C:\\Skyline DataMiner\\MaintenanceSettings.xml*, you can configure a number 
 
 > [!TIP]
 > See also:
-> [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 
 > [!NOTE]
 > Before you configure any of these settings, you will need to stop DataMiner. After you have saved your changes, restart DataMiner again.
@@ -472,7 +472,7 @@ Example:
 Default: FALSE
 
 > [!NOTE]
-> This setting can also be configured with the SLNetClientTest tool. However, note that this is an advanced administration tool that should be used with extreme care. See [Making DataMiner Cube ignore view updates](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#making-dataminer-cube-ignore-view-updates).
+> This setting can also be configured with the SLNetClientTest tool. However, note that this is an advanced administration tool that should be used with extreme care. See [Making DataMiner Cube ignore view updates](xref:SLNetClientTest_tool_advanced_procedures#making-dataminer-cube-ignore-view-updates).
 
 #### Specifying DCF settings
 
@@ -550,7 +550,7 @@ Example:
 
 > [!TIP]
 > See also:
-> [NonElementProtocol](../../part_2/visio/Overview_of_page_and_shape_options.md)
+> [NonElementProtocol](xref:Overview_of_page_and_shape_options)
 
 #### Generating information events when a connection fails to authenticate
 
@@ -620,11 +620,11 @@ Example:
 ```
 
 > [!NOTE]
-> From DataMiner 10.1.0/10.1.3 onwards, you can instead configure this using the SLNetClientTest tool. See [Fine-tuning NATS settings](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#fine-tuning-nats-settings).
+> From DataMiner 10.1.0/10.1.3 onwards, you can instead configure this using the SLNetClientTest tool. See [Fine-tuning NATS settings](xref:SLNetClientTest_tool_advanced_procedures#fine-tuning-nats-settings).
 
 > [!TIP]
 > See also:
-> [Increasing the timeout for the NATS connection](../../part_7/SkylineDataminerFolder/SLCloud_xml.md#increasing-the-timeout-for-the-nats-connection)
+> [Increasing the timeout for the NATS connection](xref:SLCloud_xml#increasing-the-timeout-for-the-nats-connection)
 
 #### Fine-tuning message throttling
 

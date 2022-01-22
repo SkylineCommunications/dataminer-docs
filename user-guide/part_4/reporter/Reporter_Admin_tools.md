@@ -32,4 +32,4 @@ The page consists of the following sections:
 
 - **Remove local IP**: Used to manually remove an IP address from the list of local IP addresses kept by the Reporter engine. Not needed in normal circumstances.
 
-- **Timeline cache**: See [SLASPConnection](../../part_3/DataminerSystems/DataMiner_processes.md#slaspconnection).
+- **Timeline cache**: See [SLASPConnection](xref:DataMiner_processes#slaspconnection).

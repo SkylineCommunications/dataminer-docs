@@ -114,7 +114,7 @@ To create a redundancy group:
 
 > [!TIP]
 > See also:
-> [Automation scripts triggered from redundancy groups](../../part_4/automation/Automation_scripts_triggered_from_redundancy_groups.md)
+> [Automation scripts triggered from redundancy groups](xref:Automation_scripts_triggered_from_redundancy_groups)
 
 ### Configuring redundancy switching based on connectivity
 
@@ -141,4 +141,4 @@ In the *\<Link>* tag of that *Connectivity.xml* file, the *itemB* attribute refe
 
 > [!TIP]
 > See also:
-> [Defining connectivity chains in XML files](../../part_3/DCF/Defining_connectivity_chains_in_XML_files.md)
+> [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files)

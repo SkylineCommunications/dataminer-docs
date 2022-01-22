@@ -10,7 +10,7 @@ Using the new *Dashboards* app (from DataMiner 9.6.11 onwards):
 
     > [!TIP]
     > See also:
-    > [Dashboards app](../newR_D/newR_D.md#dashboards-app)
+    > [Dashboards app](xref:newR_D#dashboards-app)
 
 2. Drag the *Generic Map* component onto the dashboard from the panel with available components on the left.
 
@@ -30,7 +30,7 @@ Using the legacy Reports & Dashboards module (prior to DataMiner 9.6.11):
 
     > [!TIP]
     > See also:
-    > [DMS Dashboards](../dashboards/dashboards.md#dms-dashboards)
+    > [DMS Dashboards](xref:dashboards#dms-dashboards)
 
 2. In the *Add/Remove Components* pane, click *Other*.
 

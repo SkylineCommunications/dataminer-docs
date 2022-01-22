@@ -59,7 +59,7 @@ Prior to DataMiner 10.0.6, simulation files can only be created using the System
 
 To do so:
 
-1. Open System Display. See [How can I open the legacy System Display and Element Display applications?](../../part_6/faq/DataMiner_client_applications.md#how-can-i-open-the-legacy-system-display-and-element-display-applications)
+1. Open System Display. See [How can I open the legacy System Display and Element Display applications?](xref:DataMiner_client_applications#how-can-i-open-the-legacy-system-display-and-element-display-applications)
 
 2. Go to *Admin \> Elements*, and double-click the element for which you want to create a simulation file.
 

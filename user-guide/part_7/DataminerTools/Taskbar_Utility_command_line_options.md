@@ -59,7 +59,7 @@ The options in this file reflect the options available in the Taskbar Utility’
 
 > [!TIP]
 > See also:
-> [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](../../part_3/DataminerAgents/Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md)
+> [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)
 
 ##### Example:
 

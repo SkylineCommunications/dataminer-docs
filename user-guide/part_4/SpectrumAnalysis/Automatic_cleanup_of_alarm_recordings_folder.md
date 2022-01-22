@@ -42,4 +42,4 @@ Each time a new alarm recording has been stored in the above-mentioned folder, D
 
 > [!TIP]
 > See also:
-> [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)

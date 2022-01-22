@@ -14,7 +14,7 @@ You can upload:
 
 > [!TIP]
 > See also:
-> [DataMiner packages](../../part_3/DataminerAgents/DataMiner_packages.md)
+> [DataMiner packages](xref:DataMiner_packages)
 
 > [!CAUTION]
 > When you replace a protocol version (i.e. when you add a protocol version that was already available on your DataMiner System), all elements using that protocol version will restart automatically.

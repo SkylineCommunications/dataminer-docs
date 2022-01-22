@@ -21,7 +21,7 @@ In this section:
 - [Working with pattern matching](Working_with_pattern_matching.md)
 
 > [!NOTE]
-> - For more information on how to make sure a parameter is being trended, see [Trend templates](../protocols/Trend_templates.md).
+> - For more information on how to make sure a parameter is being trended, see [Trend templates](xref:Trend_templates).
 > - Trend graphs are automatically updated with new trend data, so leaving a trend graph open for a longer time always shows the trending up to the current time.
 > - To ensure optimal performance, we advise you not to open more than 10 trend graphs simultaneously.
 >

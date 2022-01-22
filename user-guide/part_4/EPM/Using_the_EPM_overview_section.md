@@ -23,7 +23,7 @@ The way this information is represented depends on the protocol, and can be quit
 
 - Data may be shown in a Visual Overview based on a Visio file.
 
-    - This can be edited in Visio like a regular Visual Overview. See [Visio drawings](../../part_2/visio/visio.md#visio-drawings).
+    - This can be edited in Visio like a regular Visual Overview. See [Visio drawings](xref:visio#visio-drawings).
 
 - Data may be shown in a topology diagram, which is based on the protocol, not on a separate Visio file.
 

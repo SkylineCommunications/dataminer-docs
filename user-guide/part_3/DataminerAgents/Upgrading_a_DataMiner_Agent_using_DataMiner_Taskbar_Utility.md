@@ -5,7 +5,7 @@ uid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
 ## Upgrading a DataMiner Agent using DataMiner Taskbar Utility
 
 > [!TIP]
-> See also: [DataMiner Taskbar Utility](../../part_7/DataminerTools/DataMiner_Taskbar_Utility.md)
+> See also: [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 
 ### Before upgrading your DataMiner System
 
@@ -48,7 +48,7 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the newest version:
 
    - *Extract All Files*: This option is selected by default, and ensures that all DataMiner system files are replaced. (Recommended.)
 
-   - *Stop SNMP*: Select this option if you want the Windows SNMP Service to be stopped before starting the upgrade procedure. If you choose not to stop the Windows SNMP service, the latter is likely to interfere with the DataMiner SLSNMPAgent process. To prevent interference, you will have to change either the listening port of SLSNMPAgent or the listening port of the Windows SNMP service. See also: [Changing SNMP agent ports](../SNMP/Changing_SNMP_agent_ports.md).
+   - *Stop SNMP*: Select this option if you want the Windows SNMP Service to be stopped before starting the upgrade procedure. If you choose not to stop the Windows SNMP service, the latter is likely to interfere with the DataMiner SLSNMPAgent process. To prevent interference, you will have to change either the listening port of SLSNMPAgent or the listening port of the Windows SNMP service. See also: [Changing SNMP agent ports](xref:Changing_SNMP_agent_ports).
 
    - *Reboot After Upgrade*: Select this option if you want the DataMiner Agent(s) to be automatically rebooted at the end of the upgrade procedure.
 

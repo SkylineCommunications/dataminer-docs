@@ -51,7 +51,7 @@ On the visual overview of an **element**, two options are available (from DataMi
 
     > [!TIP]
     > See also:
-    > [Managing Visio files linked to protocols](../protocols/Managing_Visio_files_linked_to_protocols.md)
+    > [Managing Visio files linked to protocols](xref:Managing_Visio_files_linked_to_protocols)
 
 - **Set as active \[element name\] element Visio file**: Assigns a different Visio file to this specific element only.
 
@@ -91,7 +91,7 @@ On the visual overview of a **service or view**, the context menu can contain th
 
 - **Custom**: Assigns the available custom protocol drawing to all elements using this protocol.
 
-- **Protocol default**: Assigns the protocol default drawing to all element using this protocol. Protocol default drawings are Visio drawings that are included in certain protocol packages. For more information, see [Managing Visio files linked to protocols](../protocols/Managing_Visio_files_linked_to_protocols.md).
+- **Protocol default**: Assigns the protocol default drawing to all element using this protocol. Protocol default drawings are Visio drawings that are included in certain protocol packages. For more information, see [Managing Visio files linked to protocols](xref:Managing_Visio_files_linked_to_protocols).
 
 - **General default**: Assigns the general default drawing to all elements using this protocol. This is the drawing shipped with the DataMiner software.
 
@@ -105,8 +105,8 @@ On the visual overview of a **service or view**, the context menu can contain th
 > [!TIP]
 > See also:
 > - [DataMiner Visio templates](DataMiner_Visio_templates.md)
-> - [Managing Visio files linked to protocols](../protocols/Managing_Visio_files_linked_to_protocols.md)
-> - [Switching between different Visio files](../protocols/Managing_Visio_files_linked_to_protocols.md#switching-between-different-visio-files)
+> - [Managing Visio files linked to protocols](xref:Managing_Visio_files_linked_to_protocols)
+> - [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files)
 
 ### Download Visio file
 

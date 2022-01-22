@@ -23,7 +23,7 @@ When dealing with the SNMP protocol, you have to be familiar with the following 
 
         > [!TIP]
         > See also:
-        > [Generating a protocol-specific MIB](../../part_2/protocols/Advanced_protocol_functionality.md#generating-a-protocol-specific-mib)
+        > [Generating a protocol-specific MIB](xref:Advanced_protocol_functionality#generating-a-protocol-specific-mib)
 
 - **SNMP Get**: An SNMP message sent by an SNMP manager to an SNMP agent requesting the latter to return the current value of a particular element parameter.
 

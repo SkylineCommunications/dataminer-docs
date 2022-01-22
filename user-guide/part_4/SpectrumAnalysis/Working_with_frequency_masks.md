@@ -13,7 +13,7 @@ To access a spectrum element in Element Display, go to *http://**\[MyDMA\]**/Dat
 
 > [!TIP]
 > See also:
-> [How can I open the legacy System Display and Element Display applications?](../../part_6/faq/DataMiner_client_applications.md#how-can-i-open-the-legacy-system-display-and-element-display-applications)
+> [How can I open the legacy System Display and Element Display applications?](xref:DataMiner_client_applications#how-can-i-open-the-legacy-system-display-and-element-display-applications)
 
 ### Showing/hiding frequency masks
 

@@ -12,7 +12,7 @@ When adding or updating a spectrum analyzer element, at some point during elemen
 
 > [!TIP]
 > See also:
-> [Adding and deleting elements](../../part_2/elements/Adding_and_deleting_elements.md)
+> [Adding and deleting elements](xref:Adding_and_deleting_elements)
 
 #### Using DataMiner version 9.0.0 and higher
 

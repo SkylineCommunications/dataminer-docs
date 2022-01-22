@@ -190,7 +190,7 @@ Below, you can find the options that can be specified in the **ParametersOptions
     ```
 
     > [!CAUTION]
-    > Be careful when you use the “*Month*” option! We advise that you<br> -  set the TimeSpan1DayRecords interval in *MaintenanceSettings.xml* (which is not set by default). If this interval is not set, then the system will fall back to the TimeSpan1HourRecords interval. See [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).<br> -  do not include multiple parameters of which the TimeSpan1DayRecords interval has not been set.
+    > Be careful when you use the “*Month*” option! We advise that you<br> -  set the TimeSpan1DayRecords interval in *MaintenanceSettings.xml* (which is not set by default). If this interval is not set, then the system will fall back to the TimeSpan1HourRecords interval. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).<br> -  do not include multiple parameters of which the TimeSpan1DayRecords interval has not been set.
 
 - **ThemeForeground**:
 

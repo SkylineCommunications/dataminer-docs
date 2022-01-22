@@ -10,7 +10,7 @@ In a DMS, there is always at least one view: the master view or root view. The n
 
 > [!TIP]
 > See also:
-> [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc)
+> [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 
 #### Using views to reflect your infrastructure layout
 

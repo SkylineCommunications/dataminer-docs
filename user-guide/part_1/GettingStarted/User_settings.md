@@ -101,7 +101,7 @@ On the *Alarm Console* page, several settings are available:
 
     > [!TIP]
     > See also:
-    > [Alarm storm protection](../../part_2/alarms/Alarm_storm_protection.md)
+    > [Alarm storm protection](xref:Alarm_storm_protection)
 
 - **Enable alarm storm protection by applying a delay on the alarms**: Available from DataMiner 9.5.2/9.5.0 CU4 onwards. When you select this setting, as soon as the specified number of alarms occur within the specified time range, these alarms will be delayed until the specified period of time has passed. The alarm storm protection is applied as long as there are more alarms than the number specified next to *Stop delaying below*. As long as the alarms are delayed, they will not be displayed in Cube. If an alarm is cleared before the delay time has passed, it will not be displayed at all.
 
@@ -116,7 +116,7 @@ On the *Alarm Console* page, several settings are available:
     > - When you have modified this setting, you will need to reconnect your DataMiner Cube session in order to apply the change.
     > - Applying this setting can lead to inconsistencies between the Alarm Console and element alarm states. In other words, alarms could be present in the DMS that cannot be seen in the Alarm Console, because the server side filter overrides any other filter you set in the Alarm Console.
     > - If this setting is applied, the message *Limited Alarm Access* is shown at the top of the screen. If you hover the mouse pointer over this text, a list of possible inconsistencies will be shown.
-    > - For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
+    > - For more information on alarm filters, see [Alarm filters](xref:Alarm_filters).
 
 - **Condition to set an alarm unread**: Available from DataMiner 9.5.11 onwards. This setting determines when a read alarm should become unread again. The following options are available:
 
@@ -130,7 +130,7 @@ On the *Alarm Console* page, several settings are available:
 
     > [!TIP]
     > See also:
-    > [Setting the default alarm tabs and columns in the Cube settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#setting-the-default-alarm-tabs-and-columns-in-the-cube-settings)
+    > [Setting the default alarm tabs and columns in the Cube settings](xref:Working_with_the_Alarm_Console#setting-the-default-alarm-tabs-and-columns-in-the-cube-settings)
 
 ##### Alarm Console \> Card-specific
 
@@ -236,7 +236,7 @@ On the *Cube* page, the following settings are available:
 
     > [!TIP]
     > See also:
-    > [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings)
+    > [Alarm Console settings](xref:Working_with_the_Alarm_Console#alarm-console-settings)
 
 - **Welcome page** > **Show the ... section**: Available from DataMiner 9.5.14 onwards. These settings determine whether the different optional sections are displayed on the DataMiner Pulse welcome page in Cube.
 
@@ -260,7 +260,7 @@ On the *Data Display* page, several settings are available, some of which are on
 
     > [!TIP]
     > See also:
-    > [Working with Lite parameters](../../part_2/parameters/Working_with_Lite_parameters.md)
+    > [Working with Lite parameters](xref:Working_with_Lite_parameters)
 
 - **Analog display mode**: Only available in Normal mode. This setting allows you to choose whether analog parameters are displayed with a LED bar or an oscilloscope.
 
@@ -420,7 +420,7 @@ On the *Visual Overview* page, the following settings are available:
 
 - **Enable page loading message**: Select this option to have a “Loading” message displayed as long as not all components in a Visual Overview have been loaded.
 
-- **Maximum number of child shapes in a ‘Children’ container shape**: Enter a value in the box to determine the maximum number of dynamically generated Visio shapes in a “Children” container shape. For more information, see [Generating shapes based on table rows](../../part_2/visio/Generating_shapes_based_on_table_rows.md) and [Generating shapes based on child items in a view or a service](../../part_2/visio/Generating_shapes_based_on_child_items_in_a_view_or_a_service.md).
+- **Maximum number of child shapes in a ‘Children’ container shape**: Enter a value in the box to determine the maximum number of dynamically generated Visio shapes in a “Children” container shape. For more information, see [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows) and [Generating shapes based on child items in a view or a service](xref:Generating_shapes_based_on_child_items_in_a_view_or_a_service).
 
 #### Advanced settings
 
@@ -433,5 +433,5 @@ On the *Advanced* page, the following settings are available:
 > [!NOTE]
 > - If a setting other than the default has been applied, it will be displayed in bold. You can quickly reset to the default setting by clicking the *Reset to \[setting\]* field underneath the setting.
 > - If a setting requires that you enter a value in a box, and the value you entered is incorrect, the edge of the box will be displayed in red and the change to the setting will not be applied.
-> - It is possible to limit the changes a user can apply to the settings. For more information, see [Configuring a set of user group settings](../../part_3/security/Configuring_a_set_of_user_group_settings.md).
+> - It is possible to limit the changes a user can apply to the settings. For more information, see [Configuring a set of user group settings](xref:Configuring_a_set_of_user_group_settings).
 >

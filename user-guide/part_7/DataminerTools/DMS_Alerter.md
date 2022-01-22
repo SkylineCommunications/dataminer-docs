@@ -8,7 +8,7 @@ DMS Alerter is a small system tray application. It will notify you by means of a
 
 The following topics contain more information on DMS Alerter:
 
-- [Accessing DMS Alerter](../../part_1/DataminerApplications/Accessing_DMS_Alerter.md)
+- [Accessing DMS Alerter](xref:Accessing_DMS_Alerter)
 
 - [Working with the Alerter alarm list](Working_with_the_Alerter_alarm_list.md)
 

@@ -100,7 +100,7 @@ You can create a query as follows:
 
         > [!TIP]
         > See also:
-        > [DataMiner Connectivity Framework](../../part_3/DCF/DCF.md#dataminer-connectivity-framework)
+        > [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework)
 
     - *Get elements*: The elements in the DataMiner System.
 

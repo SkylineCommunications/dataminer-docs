@@ -26,5 +26,5 @@ uid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
     - Pan the graph along the X-axis, by dragging while keeping the right mouse button clicked.
 
     > [!NOTE]
-    > In the user settings, this default behavior can be modified, so that, for example, the left mouse button can be used to pan instead. See [Trending settings](../../part_1/GettingStarted/User_settings.md#trending-settings).
+    > In the user settings, this default behavior can be modified, so that, for example, the left mouse button can be used to pan instead. See [Trending settings](xref:User_settings#trending-settings).
     >

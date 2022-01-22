@@ -25,7 +25,7 @@ To make sure you can use this option, the *PropertyConfiguration.xml* file has t
 </Property>
 ```
 
-Once this has been configured, make sure you can see the column with this property in the Alarm Console. For more information, see [Changing the layout of the Alarm Console](../../part_2/alarms/Working_with_the_Alarm_Console.md#changing-the-layout-of-the-alarm-console).
+Once this has been configured, make sure you can see the column with this property in the Alarm Console. For more information, see [Changing the layout of the Alarm Console](xref:Working_with_the_Alarm_Console#changing-the-layout-of-the-alarm-console).
 
 Then do the following to exclude or include an alarm from the Alarm Console:
 

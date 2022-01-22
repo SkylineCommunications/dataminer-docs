@@ -48,9 +48,9 @@ Below you can find an alphabetical overview of settings that can be specified in
 
     | Attribute       | Description                                                                                                                                                                                                         |
     |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | disableElementIP= | Optional attribute. See [Forcing a DataMiner Agent to work without virtual IP addresses](../../part_3/DataminerAgents/General_DMA_configuration.md#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses). |
+    | disableElementIP= | Optional attribute. See [Forcing a DataMiner Agent to work without virtual IP addresses](xref:General_DMA_configuration#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses). |
     | elementid=        | The ID of the most recently added element.                                                                                                                                                                          |
-    | id=               | The DMA ID. See [Changing the DataMiner ID of a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#changing-the-dataminer-id-of-a-dma).                                                                 |
+    | id=               | The DMA ID. See [Changing the DataMiner ID of a DMA](xref:General_DMA_configuration#changing-the-dataminer-id-of-a-dma).                                                                 |
     | licenseNotice=    | Automatically generated attribute. Contains information about which license notices have been generated for this agent.                                                                                             |
     | protocolVisioLnk= | When set to “1”, this tag indicates that DataMiner has attempted to create all the Visio.lnk files which indicate the current Visio file for a protocol. This is used for troubleshooting purposes.                 |
     | readProperties=   | Automatically generated attribute, indicating that existing properties that were previously saved in the info database table are now saved in *Element.xml*.                         |
@@ -59,7 +59,7 @@ Below you can find an alphabetical overview of settings that can be specified in
 
 - **DataMiner.AlarmSocket**:
 
-    See [Configuring the TCP-IP socket settings](../../part_3/TCPIPSockets/Configuring_the_TCP-IP_socket_settings.md#configuring-the-tcp-ip-socket-settings).
+    See [Configuring the TCP-IP socket settings](xref:Configuring_the_TCP-IP_socket_settings#configuring-the-tcp-ip-socket-settings).
 
 - **DataMiner.ClearableAlarmStormProtection**
 
@@ -75,11 +75,11 @@ Below you can find an alphabetical overview of settings that can be specified in
 
     > [!TIP]
     > See also:
-    > [Clearing alarms](../../part_2/alarms/Clearing_alarms.md)
+    > [Clearing alarms](xref:Clearing_alarms)
 
 - **DataMiner.Colors**:
 
-    See [Changing the default alarm colors](../../part_2/alarms/Changing_the_default_alarm_colors.md).
+    See [Changing the default alarm colors](xref:Changing_the_default_alarm_colors).
 
 - **DataMiner.DMA**:
 
@@ -87,8 +87,8 @@ Below you can find an alphabetical overview of settings that can be specified in
 
     | Subtag                          | Description                                                                                                                                                                                                                                 |
     |-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | DMAName                           | See [Changing the name of a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#changing-the-name-of-a-dma).                                                                                                                     |
-    | Location1 / Location2 / Location3 | Location information of the DataMiner Agent. This information can also be found and modified in DataMiner Cube. See [Specifying your company data](../../part_3/DataminerAgents/General_DMA_configuration.md#specifying-your-company-data). |
+    | DMAName                           | See [Changing the name of a DMA](xref:General_DMA_configuration#changing-the-name-of-a-dma).                                                                                                                     |
+    | Location1 / Location2 / Location3 | Location information of the DataMiner Agent. This information can also be found and modified in DataMiner Cube. See [Specifying your company data](xref:General_DMA_configuration#specifying-your-company-data). |
 
     In addition, the tag can have one optional attribute, *publicDNS*. When a DNS name is specified for this attribute, it will be used instead of the DataMiner IP address for links to the DataMiner user interface in notification emails.
 
@@ -121,7 +121,7 @@ Below you can find an alphabetical overview of settings that can be specified in
 
 - **DataMiner.LDAP**
 
-    Contains the LDAP configuration, as explained in [Configuring LDAP settings](../../part_3/security/Configuring_LDAP_settings.md).     This tag can have the following attributes:
+    Contains the LDAP configuration, as explained in [Configuring LDAP settings](xref:Configuring_LDAP_settings).     This tag can have the following attributes:
 
     | Attribute        | Description                                                                                                                                                                                                                                                                                                                             |
     |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -133,7 +133,7 @@ Below you can find an alphabetical overview of settings that can be specified in
     | auth               | The authentication method to access the LDAP server. Possible methods: *ANONYMOUS*, *MAX*, *MEMBER_SYSTEM*, *PASSWORD*, *SASL*, and *SIMPLE*. |
     | namingContext      | A suffix that identifies the top entry of the LDAP hierarchy. If no naming context is specified when Active Directory is used, it will be auto-discovered. When OpenLDAP is used, a naming context must be specified.                                                                                                                   |
     | notifications      | When Active Directory is used, by default DataMiner also automatically receives updates whenever changes occur in the domain. Set this attribute to false to disable these automatic updates.                                                                                                                                           |
-    | referralConfigured | If referrals are not configured, this attribute should be set to false in order to make a connection with the other Domain Controller and query it directly.<br> See [Remarks regarding LDAP settings](../../part_3/security/Configuring_LDAP_settings.md#remarks-regarding-ldap-settings).                                             |
+    | referralConfigured | If referrals are not configured, this attribute should be set to false in order to make a connection with the other Domain Controller and query it directly.<br> See [Remarks regarding LDAP settings](xref:Configuring_LDAP_settings#remarks-regarding-ldap-settings).                                             |
     | useForFullName     | Determines whether the full user names will be retrieved by means of LDAP (“true”) or NetAPI (“false”).                                                                                                                                                                                                                                 |
     | useSSL             | To connect to the LDAP server with SSL, set this attribute to “true”. (Supported from DataMiner 9.5.6 onwards.)                                                                                                                                                                                                                         |
 
@@ -170,11 +170,11 @@ Below you can find an alphabetical overview of settings that can be specified in
         | MobileField      | The users mobile phone number                                                                           |
         | PagerField       | The user’s pager number.                                                                                |
 
-    For more information, refer to [Configuring LDAP settings](../../part_3/security/Configuring_LDAP_settings.md).
+    For more information, refer to [Configuring LDAP settings](xref:Configuring_LDAP_settings).
 
 - **DataMiner.Logging**
 
-    This tag has three subtags indicating the logging level for Info logging, Debug logging and Error logging. See [Consulting the DataMiner logs in DataMiner Cube](../../part_6/logging/Consulting_the_DataMiner_logs_in_DataMiner_Cube.md).
+    This tag has three subtags indicating the logging level for Info logging, Debug logging and Error logging. See [Consulting the DataMiner logs in DataMiner Cube](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube).
     From DataMiner 9.6.5 onwards, an additional *\<DaysToKeep>* subtag can be specified, which determines for how many days log files are kept in the folder *C:\\Skyline DataMiner\\Logging*. If this tag is not specified or if its value is 0, log files will be kept for 100 days.     Example:
 
     ```xml
@@ -212,21 +212,21 @@ Below you can find an alphabetical overview of settings that can be specified in
 
 - **DataMiner.PollSocket**
 
-    See [Configuring the TCP-IP socket settings](../../part_3/TCPIPSockets/Configuring_the_TCP-IP_socket_settings.md#configuring-the-tcp-ip-socket-settings).
+    See [Configuring the TCP-IP socket settings](xref:Configuring_the_TCP-IP_socket_settings#configuring-the-tcp-ip-socket-settings).
 
 - **DataMiner.ProcessOptions**
 
     See:
 
-    - [Setting the number of simultaneously running SLPort processes](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#setting-the-number-of-simultaneously-running-slport-processes)
+    - [Setting the number of simultaneously running SLPort processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slport-processes)
 
-    - [Setting the number of simultaneously running SLProtocol processes](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#setting-the-number-of-simultaneously-running-slprotocol-processes)
+    - [Setting the number of simultaneously running SLProtocol processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slprotocol-processes)
 
-    - [Having separate SLScripting processes created for every protocol being used](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#having-separate-slscripting-processes-created-for-every-protocol-being-used)
+    - [Having separate SLScripting processes created for every protocol being used](xref:Configuration_of_DataMiner_processes#having-separate-slscripting-processes-created-for-every-protocol-being-used)
 
-    - [Having replicated elements handled by one SLProtocol process](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#having-replicated-elements-handled-by-one-slprotocol-process)
+    - [Having replicated elements handled by one SLProtocol process](xref:Configuration_of_DataMiner_processes#having-replicated-elements-handled-by-one-slprotocol-process)
 
-    - [Running SLScripting as a service](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#running-slscripting-as-a-service)
+    - [Running SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service)
 
 - **DataMiner.QOS**
 
@@ -284,29 +284,29 @@ Below you can find an alphabetical overview of settings that can be specified in
 
 - **DataMiner.SMTP**
 
-    See [Configuring outgoing email](../../part_3/DataminerAgents/General_DMA_configuration.md#configuring-outgoing-email).
+    See [Configuring outgoing email](xref:General_DMA_configuration#configuring-outgoing-email).
 
 - **DataMiner.SNMP**
 
     See:
 
-    - [Changing SNMP agent ports](../../part_3/SNMP/Changing_SNMP_agent_ports.md)
+    - [Changing SNMP agent ports](xref:Changing_SNMP_agent_ports)
 
-    - [Configuring SNMP agent community strings](../../part_3/SNMP/Configuring_SNMP_agent_community_strings.md)
+    - [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings)
 
-    - [Disabling element SNMP agent functionality](../../part_3/SNMP/Disabling_element_SNMP_agent_functionality.md)
+    - [Disabling element SNMP agent functionality](xref:Disabling_element_SNMP_agent_functionality)
 
-    - [Enabling DataMiner SNMP agent functionality](../../part_3/SNMP/Enabling_DataMiner_SNMP_agent_functionality.md)
+    - [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality)
 
-    - [Adjusting the SNMP inform message cache size](../../part_3/SNMP/Adjusting_the_SNMP_inform_message_cache_size.md)
+    - [Adjusting the SNMP inform message cache size](xref:Adjusting_the_SNMP_inform_message_cache_size)
 
 - **DataMiner.SNMPv3**
 
     See:
 
-    - [Customizing the trap reception ports of a DMA](../../part_3/SNMP/Changing_SNMP_agent_ports.md#customizing-the-trap-reception-ports-of-a-dma)
+    - [Customizing the trap reception ports of a DMA](xref:Changing_SNMP_agent_ports#customizing-the-trap-reception-ports-of-a-dma)
 
-    - [Enabling notifications in case SNMPv3 traps cannot be processed](../../part_3/SNMP/Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed.md)
+    - [Enabling notifications in case SNMPv3 traps cannot be processed](xref:Enabling_notifications_in_case_SNMPv3_traps_cannot_be_processed)
 
 - **DataMiner.SnmpTrapDistribution**
 

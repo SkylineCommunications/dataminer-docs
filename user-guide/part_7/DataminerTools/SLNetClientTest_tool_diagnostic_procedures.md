@@ -76,7 +76,7 @@ The SlNetClientTest tool allows the user to check which Sync rules are in effect
 
 > [!TIP]
 > See also:
-> [SyncRules.xml](../SkylineDataminerFolder/SyncRules_xml.md#syncrulesxml)
+> [SyncRules.xml](xref:SyncRules_xml#syncrulesxml)
 
 ### Debugging callback timeout errors
 
@@ -306,7 +306,7 @@ From DataMiner 9.5.7 onwards, filters can be specified with a *filterElement* at
 
 > [!TIP]
 > See also:
-> [filterElement](../SkylineDataminerFolder/Hyperlinks_xml.md#filterelement)
+> [filterElement](xref:Hyperlinks_xml#filterelement)
 
 ### Requesting an estimate of the number of rows for a storage type in the database
 

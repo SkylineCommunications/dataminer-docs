@@ -18,7 +18,7 @@ On a DMA using a Cassandra database, these trending icons can be displayed diffe
 > [!NOTE]
 > - Behavior is calculated for single-value parameters and table parameters. In case of partial tables, behavior is only calculated for the rows of the first page.
 > - In the first hour after starting the SLAnalytics process, DataMiner has insufficient data to determine parameter behavior. This means that behavior arrows will only appear at least an hour after the SLAnalytics process was started.
-> - The behavior of the arrows can be configured in the file *SLAnalytics.config*. See [SLAnalytics.config](../../part_7/SkylineDataminerFolder/SLAnalytics_config.md#slanalyticsconfig).
+> - The behavior of the arrows can be configured in the file *SLAnalytics.config*. See [SLAnalytics.config](xref:SLAnalytics_config#slanalyticsconfig).
 > - You can enable or disable trend prediction icons via *System Center* > *System settings* > *analytics config*. That page also allows you to configure the minimum window duration these icons are based on and the update interval for the icons.
 
 To access more detailed trend information for a parameter:

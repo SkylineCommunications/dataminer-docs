@@ -69,4 +69,4 @@ Adding, editing or deleting custom properties for a view is done in a similar wa
 
 > [!TIP]
 > See also:
-> [Managing element properties](../elements/Managing_element_properties.md)
+> [Managing element properties](xref:Managing_element_properties)

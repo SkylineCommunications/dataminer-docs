@@ -68,7 +68,7 @@ From DataMiner 9.5.1 onwards, the following attributes are available to further 
 > When multiple centering options are specified, the centering priority from high to low is:
 > - Centering on a single marker.
 > - Centering on an entire layer.
-> - Centering on "lat" and "long" coordinates passed via URL parameters. (See [lat=](../../part_1/DataminerApplications/Opening_DataMiner_Cube.md#lat) and [long=](../../part_1/DataminerApplications/Opening_DataMiner_Cube.md#long))
+> - Centering on "lat" and "long" coordinates passed via URL parameters. (See [lat=](xref:Opening_DataMiner_Cube#lat) and [long=](xref:Opening_DataMiner_Cube#long))
 > - Centering on static coordinates defined in the \<Center> tag of the map configuration.
 
 ### FilterBox

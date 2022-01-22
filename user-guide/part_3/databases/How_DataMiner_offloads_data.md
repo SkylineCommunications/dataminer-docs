@@ -47,7 +47,7 @@ uid: How_DataMiner_offloads_data
 > [!NOTE]
 > The folder *C:\\Skyline DataMiner\\System Cache\\Offload* has to be shared as “\\\\\[server\]\\Offload” with anonymous access.
 >
-> See also: [Configuring data offloads to an SQL Server database in another domain](../../part_7/SkylineDataminerFolder/DB_xml.md#configuring-data-offloads-to-an-sql-server-database-in-another-domain)
+> See also: [Configuring data offloads to an SQL Server database in another domain](xref:DB_xml#configuring-data-offloads-to-an-sql-server-database-in-another-domain)
 
 ### Offload database of type Oracle
 
@@ -74,5 +74,5 @@ uid: How_DataMiner_offloads_data
 
 
 > [!NOTE]
-> - On the Oracle database server, a shared folder has to be created, the DataMiner Agents have to be granted access to that shared folder, and a *RemoteFileShare* tag has to be configured in the *DB.xml* file of the DataMiner server. See [Configuring data offloads to an Oracle database](../../part_7/SkylineDataminerFolder/DB_xml.md#configuring-data-offloads-to-an-oracle-database).
+> - On the Oracle database server, a shared folder has to be created, the DataMiner Agents have to be granted access to that shared folder, and a *RemoteFileShare* tag has to be configured in the *DB.xml* file of the DataMiner server. See [Configuring data offloads to an Oracle database](xref:DB_xml#configuring-data-offloads-to-an-oracle-database).
 >

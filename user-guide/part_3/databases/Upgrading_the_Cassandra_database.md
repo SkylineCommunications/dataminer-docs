@@ -27,8 +27,8 @@ To upgrade the Cassandra database:
 
     > [!TIP]
     > See also:
-    > - [Upgrading a DataMiner Agent in the Update Center](../DataminerAgents/Upgrading_a_DataMiner_Agent_in_the_Update_Center.md)
-    > - [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](../DataminerAgents/Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md)
+    > - [Upgrading a DataMiner Agent in the Update Center](xref:Upgrading_a_DataMiner_Agent_in_the_Update_Center)
+    > - [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)
 
     When you start the upgrade, DataMiner will be shut down, Cassandra will be upgraded, and then DataMiner will be started again.
 

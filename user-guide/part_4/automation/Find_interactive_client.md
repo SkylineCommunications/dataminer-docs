@@ -20,6 +20,6 @@ To configure the action:
 
 > [!NOTE]
 > - If, as an interactive client, you manually execute a script from DataMiner Cube, you are automatically attached.
-> - It is also possible to add this action within a C# block in a script. For more information, see [FindInteractiveClient](../../part_7/CsharpReference/Engine_methods.md#findinteractiveclient).
+> - It is also possible to add this action within a C# block in a script. For more information, see [FindInteractiveClient](xref:Engine_methods#findinteractiveclient).
 > - If an interactive script is launched, but it cannot be executed because an element or memory file is locked, a message will inform the user of which element or memory file is locked, and by whom.
 >

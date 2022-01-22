@@ -70,7 +70,7 @@ To install a Dashboard Gateway on Windows Server 2012, you must first install II
 
 #### Configuring the web.config file
 
-1. In DataMiner, create a new user profile with access to all elements in the DMS. The user also has to have the permission *Modules* > *System configuration* > *Tools* > *Admin tools*. See [Adding a user](../../part_3/security/Adding_a_user.md).
+1. In DataMiner, create a new user profile with access to all elements in the DMS. The user also has to have the permission *Modules* > *System configuration* > *Tools* > *Admin tools*. See [Adding a user](xref:Adding_a_user).
 
     > [!NOTE]
     > This user will be used by the Dashboard Gateway to access the DMA. The username and password of this user will be used in step 4 of this procedure.
@@ -229,7 +229,7 @@ To install a Dashboard Gateway on Windows Server 2003, you must first install II
 
 #### Configuring the web.config File
 
-1. In DataMiner, create a new user profile with access to all elements in the DMS. See [Adding a user](../../part_3/security/Adding_a_user.md).
+1. In DataMiner, create a new user profile with access to all elements in the DMS. See [Adding a user](xref:Adding_a_user).
 
     > [!NOTE]
     > This user will be used by the Dashboard Gateway to access the DMA. The username and password of this user will be used in step 4 of this procedure.

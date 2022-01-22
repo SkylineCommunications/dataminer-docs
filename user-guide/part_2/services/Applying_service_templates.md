@@ -44,7 +44,7 @@ This section consists of the following topics:
 
     In case you specify a wildcard in a view name, the service will be added to all matching views.
 
-- When over 50 services are about to be created, or generated services contain over 20 elements, a warning appears. You will need to click the *Continue* button before the task continues. If the warning is ignored for 5 minutes, the task will be aborted. These configuration settings can be changed via the SLNetClientTest tool. See [Changing the service template child element and child service limitations](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#changing-the-service-template-child-element-and-child-service-limitations).
+- When over 50 services are about to be created, or generated services contain over 20 elements, a warning appears. You will need to click the *Continue* button before the task continues. If the warning is ignored for 5 minutes, the task will be aborted. These configuration settings can be changed via the SLNetClientTest tool. See [Changing the service template child element and child service limitations](xref:SLNetClientTest_tool_advanced_procedures#changing-the-service-template-child-element-and-child-service-limitations).
 
     > [!WARNING]
     > Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

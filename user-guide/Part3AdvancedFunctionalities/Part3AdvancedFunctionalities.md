@@ -4,22 +4,22 @@ uid: Part3AdvancedFunctionalities
 
 # Advanced DataMiner functionality for administrators
 
-- [DataMiner Agents](../part_3/DataminerAgents/DataminerAgents.md#dataminer-agents)
+- [DataMiner Agents](xref:DataminerAgents#dataminer-agents)
 
-- [DataMiner Systems](../part_3/DataminerSystems/DataminerSystems.md#dataminer-systems)
+- [DataMiner Systems](xref:DataminerSystems#dataminer-systems)
 
-- [Failover](../part_3/failover/failover.md)
+- [Failover](xref:failover)
 
-- [Databases](../part_3/databases/databases.md)
+- [Databases](xref:databases)
 
-- [Security](../part_3/security/security.md)
+- [Security](xref:security)
 
-- [SNMP managers](../part_3/SNMP/SNMP.md#snmp-managers)
+- [SNMP managers](xref:SNMP#snmp-managers)
 
-- [DataMiner Connectivity Framework](../part_3/DCF/DCF.md#dataminer-connectivity-framework)
+- [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework)
 
-- [DataMiner Integration Studio](../part_3/DIS/DIS.md#dataminer-integration-studio)
+- [DataMiner Integration Studio](xref:DIS#dataminer-integration-studio)
 
-- [TCP-IP sockets](../part_3/TCPIPSockets/TCPIPSockets.md#tcp-ip-sockets)
+- [TCP-IP sockets](xref:TCPIPSockets#tcp-ip-sockets)
 
-- [Serial gateways](../part_3/SerialGateways/SerialGateways.md#serial-gateways)
+- [Serial gateways](xref:SerialGateways#serial-gateways)

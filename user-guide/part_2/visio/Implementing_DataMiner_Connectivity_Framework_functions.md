@@ -34,4 +34,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [DataMiner Connectivity Framework](../../part_3/DCF/DCF.md#dataminer-connectivity-framework)
+> [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework)

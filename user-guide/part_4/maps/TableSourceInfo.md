@@ -85,7 +85,7 @@ Examples:
 > [!NOTE]
 > - There must be a space before and after the operator.
 > - In a table filter, you can use the \[DMA_USERNAME\] placeholder. At runtime, it will be replaced by the name of the current user.
-> - From DataMiner 10.0.3 onwards, the recursivefullfilter option is supported for table filters. See [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
+> - From DataMiner 10.0.3 onwards, the recursivefullfilter option is supported for table filters. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 ### Passing TableSourceInfo data along in the map’s URL
 

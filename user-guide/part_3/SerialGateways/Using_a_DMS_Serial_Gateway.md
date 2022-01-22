@@ -33,7 +33,7 @@ If you want to add elements to a DMA that are connected via a Serial Gateway, yo
     > - A telnet session left open on a Serial Gateway will automatically be terminated after a certain time.
     > - Alternatively, on recent versions, you can open a web browser to the IP address of the Serial Gateway instead.
     > - With recent versions, the front panel of the device also has a navigation menu that is very similar to the telnet interface, where you can configure the same settings.
-    > - From DataMiner 9.6.5 onwards, the Telnet interface is deactivated by default. It can be activated using the *Telnet* tag within the file DataMiner.xml. For more information, see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml).
+    > - From DataMiner 9.6.5 onwards, the Telnet interface is deactivated by default. It can be activated using the *Telnet* tag within the file DataMiner.xml. For more information, see [DataMiner.xml](xref:DataMiner_xml#dataminerxml).
 
 2. Press *Enter* to confirm the console terminal type as “ansi/vt100”.
 
@@ -116,6 +116,6 @@ After you have added all elements, to make sure that they have been correctly se
 
         Among the possible causes for this issue are incorrect elements settings (port, baud rate, bus address, protocol, etc.) or wrong cabling (wiring, wrong port, etc.).
 
-3. If necessary, check communication between the element and the DMA. See [Monitoring real-time communication between a DMA and an element](../../part_6/logging/Monitoring_real-time_communication_between_a_DMA_and_an_element.md#monitoring-real-time-communication-between-a-dma-and-an-element).
+3. If necessary, check communication between the element and the DMA. See [Monitoring real-time communication between a DMA and an element](xref:Monitoring_real-time_communication_between_a_DMA_and_an_element#monitoring-real-time-communication-between-a-dma-and-an-element).
 
 4. Once communication between the DMA and the element is up and running, click the element in the Surveyor to open the element card.

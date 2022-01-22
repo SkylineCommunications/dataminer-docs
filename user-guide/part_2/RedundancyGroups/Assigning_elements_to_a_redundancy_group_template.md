@@ -51,5 +51,5 @@ To do so:
 7. Click *Apply* in the lower right corner to finish assigning elements to the template.
 
 > [!NOTE]
-> Adding a DVE main element as a primary or backup element in a redundancy group is only possible if the creation of DVE child elements is disabled for that element. See [Enabling or disabling the creation of DVE child elements](../elements/Dynamic_virtual_elements.md#enabling-or-disabling-the-creation-of-dve-child-elements).
+> Adding a DVE main element as a primary or backup element in a redundancy group is only possible if the creation of DVE child elements is disabled for that element. See [Enabling or disabling the creation of DVE child elements](xref:Dynamic_virtual_elements#enabling-or-disabling-the-creation-of-dve-child-elements).
 >

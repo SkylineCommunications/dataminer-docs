@@ -5,7 +5,7 @@ uid: Viewing_element_connections
 # Viewing element connections
 
 > [!NOTE]
-> In DataMiner Cube, there is also an *Element Connections* module, which is in fact not related to the DataMiner Connectivity Framework functionality. For more information on this module, refer to [Virtual elements used for element connections](../../part_2/elements/Virtual_elements.md#virtual-elements-used-for-element-connections).
+> In DataMiner Cube, there is also an *Element Connections* module, which is in fact not related to the DataMiner Connectivity Framework functionality. For more information on this module, refer to [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections).
 
 ### Viewing the element connections in the Properties window
 

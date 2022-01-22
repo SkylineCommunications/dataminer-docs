@@ -4,7 +4,7 @@ uid: Filtering_the_data_of_a_cached_table_parameter
 
 ## Filtering the data of a cached table parameter
 
-From DataMiner 9.5.10 onwards, it is possible to configure that certain table parameters have to be cached. Data from the cache can then be used by a *\[Param:\]* placeholder in Visual Overview. See [Configuring caching of specific table parameters](../../part_7/SkylineDataminerFolder/ClientSettings_json.md#configuring-caching-of-specific-table-parameters).
+From DataMiner 9.5.10 onwards, it is possible to configure that certain table parameters have to be cached. Data from the cache can then be used by a *\[Param:\]* placeholder in Visual Overview. See [Configuring caching of specific table parameters](xref:ClientSettings_json#configuring-caching-of-specific-table-parameters).
 
 If different subsets of the same table have to be shown in different places in the UI, this does not mean that the same table has to be cached several times. Instead, it is possible to obtain a table subset by filtering the cached table data on the client.
 

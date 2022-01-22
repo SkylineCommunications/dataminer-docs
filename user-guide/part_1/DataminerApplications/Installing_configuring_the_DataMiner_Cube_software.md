@@ -75,7 +75,7 @@ Alternatively, go to *http://\[DMA name\]/DataminerCubeStandalone/publish.htm* a
 
 > [!TIP]
 > See also:
-> [Configuring the default landing page](../../part_3/DataminerAgents/DMA_configuration_related_to_client_applications.md#configuring-the-default-landing-page)
+> [Configuring the default landing page](xref:DMA_configuration_related_to_client_applications#configuring-the-default-landing-page)
 
 > [!NOTE]
 > Once you have installed the application, it will automatically be updated whenever a new version is available.
@@ -186,5 +186,5 @@ Installing the Skyline certificates is only required if you intend to run DataMi
 
 > [!NOTE]
 > - In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
-> - If you do not install the Skyline certificates, you will get a “Trust not granted” error. See [Trust not granted](../../part_6/ErrorMessages/Trust_not_granted.md).
+> - If you do not install the Skyline certificates, you will get a “Trust not granted” error. See [Trust not granted](xref:Trust_not_granted).
 >

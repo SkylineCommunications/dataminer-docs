@@ -18,4 +18,4 @@ You can request these from within the Automation script using the *GetScriptPara
 
 > [!TIP]
 > See also:
-> [Redundancy groups](../../part_2/RedundancyGroups/RedundancyGroups.md#redundancy-groups)
+> [Redundancy groups](xref:RedundancyGroups#redundancy-groups)

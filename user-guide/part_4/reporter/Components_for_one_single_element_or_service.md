@@ -66,7 +66,7 @@ Overview of an element’s active alarms or historic alarms, with the following 
 
 - In order to only include certain parameters, you can apply a filter.
 
-    Up to DataMiner 9.5.0, you can enter a filter directly, in order to filter on parameter name. Use a semicolon to combine several parameters in the filter, e.g. “Audio Output Level;CPU:SLelement.0”. For more information, see [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md).     From DataMiner 9.5.1 onwards, you can select one of the alarm filters saved in the DMS. For more information on saved alarm filters, see [Working with saved alarm filters](../../part_2/alarms/Working_with_the_Alarm_Console.md#working-with-saved-alarm-filters).
+    Up to DataMiner 9.5.0, you can enter a filter directly, in order to filter on parameter name. Use a semicolon to combine several parameters in the filter, e.g. “Audio Output Level;CPU:SLelement.0”. For more information, see [Using quick filters](xref:Using_quick_filters).     From DataMiner 9.5.1 onwards, you can select one of the alarm filters saved in the DMS. For more information on saved alarm filters, see [Working with saved alarm filters](xref:Working_with_the_Alarm_Console#working-with-saved-alarm-filters).
 
 - You can choose to sort the list either by element name or by alarm time.
 
@@ -144,7 +144,7 @@ A parameter report with current reading and trending information for each parame
 
 ### Bookings / Reservations
 
-Available from DataMiner 9.5.4 onwards on systems with the appropriate Service & Resource Management licenses. See [Bookings / Reservations component of custom templates](../SRM/Bookings_Reservations_component_of_custom_templates.md#bookings--reservations-component-of-custom-templates).
+Available from DataMiner 9.5.4 onwards on systems with the appropriate Service & Resource Management licenses. See [Bookings / Reservations component of custom templates](xref:Bookings_Reservations_component_of_custom_templates#bookings--reservations-component-of-custom-templates).
 
 ### SLA Historic Service Alarm List
 
@@ -174,7 +174,7 @@ The following options are available:
 
 - In order to only include certain parameters, you can filter on parameter name.
 
-    Use a semicolon to combine several parameters in the filter. For more information on using filters, see [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md).
+    Use a semicolon to combine several parameters in the filter. For more information on using filters, see [Using quick filters](xref:Using_quick_filters).
 
 - In order to keep alarms from being displayed if they have been filtered out by violation filters, select *Hide violation filtered alarms*.
 
@@ -182,7 +182,7 @@ The following options are available:
 
     > [!TIP]
     > See also:
-    > [Setting the offline window for an SLA](../sla/Setting_the_offline_window_for_an_SLA.md)
+    > [Setting the offline window for an SLA](xref:Setting_the_offline_window_for_an_SLA)
 
 ### Spectrum Buffers
 

@@ -8,7 +8,7 @@ To create a dynamic, filterable list view containing elements, services or booki
 
 > [!NOTE]
 > - In DataMiner 9.6.4, this component can only be used in the visual overview of view cards. From DataMiner 9.6.5 onwards, element cards are also supported.
-> - This component functiosns in a similar way as the bookings list in the Bookings module and the services list in the Services module. For more information on how to use this component in DataMiner Cube, see [Bookings list](../../part_4/SRM/The_Bookings_module.md#bookings-list).
+> - This component functiosns in a similar way as the bookings list in the Bookings module and the services list in the Services module. For more information on how to use this component in DataMiner Cube, see [Bookings list](xref:The_Bookings_module#bookings-list).
 
 - [Configuring the shape data field](#configuring-the-shape-data-field)
 

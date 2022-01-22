@@ -42,7 +42,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     > [!TIP]
     > See also:
-    > [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](../../part_3/DataminerAgents/Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md)
+    > [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)
 
 - **Maintenance \> Backup**
 
@@ -50,7 +50,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     > [!TIP]
     > See also:
-    > [Backing up a DataMiner Agent using DataMiner Taskbar Utility](../../part_3/DataminerAgents/Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md)
+    > [Backing up a DataMiner Agent using DataMiner Taskbar Utility](xref:Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)
 
 - **Maintenance \> Restore**
 
@@ -58,18 +58,18 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     > [!TIP]
     > See also:
-    > [Restoring a DMA using the DataMiner Taskbar Utility](../../part_3/DataminerAgents/Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility.md)
+    > [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility)
 
 - **Maintenance \> Rollback**
 
     Allows you to roll back the software version of a DataMiner Agent to a previously installed version.
 
     > [!NOTE]
-    > This option is no longer available from DataMiner 10.0.0/10.0.3 onwards. To downgrade, install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](../../part_3/DataminerAgents/Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md).
+    > This option is no longer available from DataMiner 10.0.0/10.0.3 onwards. To downgrade, install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
 
     > [!TIP]
     > See also:
-    > [Rolling back an upgrade using the DataMiner Taskbar Utility](../../part_3/DataminerAgents/Rolling_back_a_DataMiner_upgrade.md#rolling-back-an-upgrade-using-the-dataminer-taskbar-utility)
+    > [Rolling back an upgrade using the DataMiner Taskbar Utility](xref:Rolling_back_a_DataMiner_upgrade#rolling-back-an-upgrade-using-the-dataminer-taskbar-utility)
 
 - **Maintenance \> Upload dmprotocol**
 
@@ -77,7 +77,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     > [!TIP]
     > See also:
-    > [Adding a protocol or protocol version to your DataMiner System](../../part_2/protocols/Adding_a_protocol_or_protocol_version_to_your_DataMiner_System.md)
+    > [Adding a protocol or protocol version to your DataMiner System](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System)
 
 - **Start DataMiner**
 

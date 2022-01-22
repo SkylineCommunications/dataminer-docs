@@ -4,4 +4,4 @@ uid: Part52ProfessionalServices
 
 # DataMiner Professional Services
 
-- [DataMiner Solution Deployment Methodology](../part52/DeploymentMethodology/DeploymentMethodology.md#dataminer-solution-deployment-methodology)
+- [DataMiner Solution Deployment Methodology](xref:DeploymentMethodology#dataminer-solution-deployment-methodology)

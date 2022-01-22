@@ -207,7 +207,7 @@ The final step is the configuration of the DMS.
 > [!NOTE]
 > - If an offload to the offload database fails, an alarm will be generated in DataMiner. As soon as offloading works again, the alarm is cleared.
 > - If the offload fails for a specific offload file, this file is moved to a failure folder and an error is logged.
-> - The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](../../part_7/SkylineDataminerFolder/DB_xml.md#dbxml).
+> - The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](xref:DB_xml#dbxml).
 
 ### Automatic creation and verification of the offload database
 

@@ -12,7 +12,7 @@ DataMiner Maps is a DataMiner add-on module that allows you to visualize real-ti
 > - To use Google Maps, the Google Maps Platform license must be obtained. See also [Configuring the DataMiner Maps host servers](Configuring_the_DataMiner_Maps_host_servers.md).
 
 > [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
+> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
 
 DataMiner Maps has a number of interesting features:
 

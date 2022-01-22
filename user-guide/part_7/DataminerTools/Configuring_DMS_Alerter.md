@@ -85,7 +85,7 @@ To configure Alerter filters:
     | Hide cleared alarms      | If you select this option, when Alerter receives an alarm that is cleared, that alarm will still be added to the *Alarms* list, but no alert will be generated, even if the alarm matches the client-side filters.                                                                                                                                                                                                        |
 
     > [!NOTE]
-    > The alarm filters that you can select with the *Use server-side filter* and *Use client-side filter* options can be configured in DataMiner Cube. See [Working with saved alarm filters](../../part_2/alarms/Working_with_the_Alarm_Console.md#working-with-saved-alarm-filters).
+    > The alarm filters that you can select with the *Use server-side filter* and *Use client-side filter* options can be configured in DataMiner Cube. See [Working with saved alarm filters](xref:Working_with_the_Alarm_Console#working-with-saved-alarm-filters).
 
 3. Click *OK*.
 
@@ -111,7 +111,7 @@ To configure alarm storm prevention:
 6. Click *OK*.
 
 > [!NOTE]
-> Alerter alarm storm prevention can also be configured on system level, rather than on user level only. For more information, see [Configuring alarm storm prevention for notifications](../../part_3/security/Configuring_alarm_storm_prevention_for_notifications.md).
+> Alerter alarm storm prevention can also be configured on system level, rather than on user level only. For more information, see [Configuring alarm storm prevention for notifications](xref:Configuring_alarm_storm_prevention_for_notifications).
 
 ### Setting the notification options in DMS Alerter
 

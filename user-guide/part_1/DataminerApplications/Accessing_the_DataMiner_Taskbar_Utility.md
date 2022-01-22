@@ -26,4 +26,4 @@ If the application is running:
 
 > [!TIP]
 > See also:
-> [DataMiner Taskbar Utility](../../part_7/DataminerTools/DataMiner_Taskbar_Utility.md)
+> [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)

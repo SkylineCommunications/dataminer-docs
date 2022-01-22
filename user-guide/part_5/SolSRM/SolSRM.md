@@ -8,7 +8,7 @@ The Booking Manager app is a standard application that allows you to create and 
 
 > [!TIP]
 > See also:
-> [Service and Resource Management](../../part_4/SRM/SRM.md#service-and-resource-management)
+> [Service and Resource Management](xref:SRM#service-and-resource-management)
 
 In this section:
 

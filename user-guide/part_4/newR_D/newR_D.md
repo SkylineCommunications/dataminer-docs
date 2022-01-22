@@ -25,5 +25,5 @@ In this section:
 - [Dashboard Gateway installation](Dashboard_Gateway_installation.md)
 
 > [!NOTE]
-> A legacy DMS Dashboards module also exists. For more information, see [DMS Dashboards](../dashboards/dashboards.md#dms-dashboards).
+> A legacy DMS Dashboards module also exists. For more information, see [DMS Dashboards](xref:dashboards#dms-dashboards).
 >

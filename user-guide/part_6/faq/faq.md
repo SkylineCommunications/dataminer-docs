@@ -16,7 +16,7 @@ The frequently asked questions are divided over the following sections:
 
 > [!TIP]
 > See also:
-> - [Frequently asked questions about DMA Failover](../../part_3/failover/Frequently_asked_questions_about_DMA_Failover.md)
-> - [Frequently asked questions about user group settings](../../part_3/security/Frequently_asked_questions_about_user_group_settings.md)
-> - [Frequently asked questions about DMS Automation](../../part_4/automation/Frequently_asked_questions_about_DMS_Automation.md)
+> - [Frequently asked questions about DMA Failover](xref:Frequently_asked_questions_about_DMA_Failover)
+> - [Frequently asked questions about user group settings](xref:Frequently_asked_questions_about_user_group_settings)
+> - [Frequently asked questions about DMS Automation](xref:Frequently_asked_questions_about_DMS_Automation)
 >

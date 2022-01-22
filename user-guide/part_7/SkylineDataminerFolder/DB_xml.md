@@ -16,7 +16,7 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 
 > [!TIP]
 > See also:
-> [DMS Inventory & Asset Management](../../part_4/AssetManagement/AssetManagement.md#dms-inventory--asset-management)
+> [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management)
 
 - This file is located in the following folder:
 
@@ -64,7 +64,7 @@ In the *Maintenance* tag, several attributes are available with which you can de
 The limiting options can be set to “true” or “false”. If both options are set to “true”, the records will be deleted from the table either after a certain amount of time, or as soon as the table contains a specific number of records, whichever comes first.
 
 > [!NOTE]
-> - It is advisable to configure these settings through the Cube client interface, rather than directly in the .xml file. See [Configuring the database settings in Cube](../../part_3/databases/Configuring_the_database_settings_in_Cube.md).
+> - It is advisable to configure these settings through the Cube client interface, rather than directly in the .xml file. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 > - For a Cassandra (cluster) database, it is only possible to configure the limitByMonths attribute, not the limitByNumber attribute. Note also that this attribute works in a different way for Cassandra, compared to MySQL or MSSQL: if a record has been stored with a particular limitByMonths and MonthsToKeep setting, this setting permanently applies to that record in Cassandra.
 > - From DataMiner 9.5.5 onwards (or 9.5.6 for an SQL database), the settings determining how long records are kept in the database are determined in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
 
@@ -109,7 +109,7 @@ In the above example, the slowquery attribute is set to “5”, so all database
 
 In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider.
 
-- For more information on how to limit the amount of history slider data kept in this table, see [Configuring how long alarm history slider data are kept in Cassandra](../../part_3/databases/Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra.md).
+- For more information on how to limit the amount of history slider data kept in this table, see [Configuring how long alarm history slider data are kept in Cassandra](xref:Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra).
 
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 
@@ -177,7 +177,7 @@ To do so
     ```
 
 > [!NOTE]
-> - IF TLS is enabled, port 7001 must be opened in the firewall. See [Overview of IP ports used in a DMS](../../part_3/DataminerAgents/General_DMA_configuration.md#overview-of-ip-ports-used-in-a-dms).
+> - IF TLS is enabled, port 7001 must be opened in the firewall. See [Overview of IP ports used in a DMS](xref:General_DMA_configuration#overview-of-ip-ports-used-in-a-dms).
 > - This procedure only enables TLS on the database connection. It does not enable client authentication.
 
 #### Example of a general database configuration
@@ -452,7 +452,7 @@ To configure this:
 5. Save and close *DB.xml*, and restart the DMA.
 
 > [!NOTE]
-> In DataMiner 10.0.11, this can only be configured in *DB.xml*. However, from DataMiner <br>10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offload database](../../part_3/databases/Offload_database.md).
+> In DataMiner 10.0.11, this can only be configured in *DB.xml*. However, from DataMiner <br>10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offload database](xref:Offload_database).
 
 #### Example of an offload database configuration
 
@@ -519,7 +519,7 @@ The *\<Database>* tag for an indexing database has the following attributes:
 > [!NOTE]
 > - There can only be one active indexing database on a DMA.
 > - From DataMiner 10.2.0/10.1.1 onwards, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
-> - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](../../part_3/databases/Configuring_multiple_Elasticsearch_clusters.md).
+> - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 #### Defining a custom port for an Elasticsearch indexing database
 
@@ -594,7 +594,7 @@ If you have a CMDB (Configuration Management Database) that you want to manage b
 
 > [!TIP]
 > See also:
-> [Configuring DMS Inventory and Asset Management](../../part_4/AssetManagement/Configuring_DMS_Inventory_and_Asset_Management.md)
+> [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
 
 Example 1:
 

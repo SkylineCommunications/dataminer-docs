@@ -38,7 +38,7 @@ Add a shape data field of type AlarmFilter to the shape, and enter an alarm filt
 
 > [!TIP]
 > See also:
-> [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md)
+> [Using quick filters](xref:Using_quick_filters)
 
 ### Placeholders
 

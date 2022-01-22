@@ -281,7 +281,7 @@ From DataMiner 9.6.0 CU3/9.6.9 onwards, the following additional filters can be 
 > [!NOTE]
 > - To make sure correct results are returned, *\<SourceTableID>* and *\<DestinationTableID>* have to be in the correct order.
 > - Optionally, the *\<LineOptions>* tag can be used in this tag. See [LineOptions](LineOptions.md).
-> - From DataMiner 10.0.3 onwards, the recursivefullfilter option is supported for table filters. See [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
+> - From DataMiner 10.0.3 onwards, the recursivefullfilter option is supported for table filters. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 ### Layers of sourceType “separator”
 

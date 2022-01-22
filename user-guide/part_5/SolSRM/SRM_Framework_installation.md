@@ -9,13 +9,13 @@ To install the SRM Framework:
 1. Ensure that a DataMiner version is installed that is compatible with the SRM Framework. Contact Skyline Communications to check if any additional components need to be installed in your system.
 
     > [!NOTE]
-    > The SRM Framework requires an Elasticsearch database (see [DataMiner Indexing Engine](../../part_3/databases/DataMiner_Indexing_Engine.md)).
+    > The SRM Framework requires an Elasticsearch database (see [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine)).
 
 2. Double-click the SRM package, and install the package in the same manner as a DataMiner upgrade.
 
     > [!TIP]
     > See also:
-    > [Upgrading a DataMiner Agent](../../part_3/DataminerAgents/Upgrading_a_DataMiner_Agent.md)
+    > [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
 3. Create a view structure in the Surveyor to organize your elements and services.
 
@@ -32,14 +32,14 @@ To install the SRM Framework:
 
     > [!TIP]
     > See also:
-    > - [Creating a view](../../part_2/views/Managing_views.md#creating-a-view)
-    > - [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc)
+    > - [Creating a view](xref:Managing_views#creating-a-view)
+    > - [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 
 4. Create an element with the name *SRM Log Manager*, using the protocol *Generic Bookings Log*.
 
     > [!TIP]
     > See also:
-    > [Adding and deleting elements](../../part_2/elements/Adding_and_deleting_elements.md)
+    > [Adding and deleting elements](xref:Adding_and_deleting_elements)
 
 5. On the *Configuration* page of the *SRM Log Manager* element, set the *Path* parameter to a shared folder accessible from both the client machine and the DataMiner servers.
 

@@ -32,7 +32,7 @@ The migration procedure has the following prerequisites:
 
 Before you start the Cassandra migration wizard, it is advisable to check the following things:
 
-- Make sure that the following Trending tags in the file *MaintenanceSettings.xml* are all set to a large interval (e.g. 10 years). If the following tags are set to small intervals or if they are set to 0, you risk losing trend data during the migration: *TimeSpan1DayRecords*, *TimeSpan1HourRecords*, *TimeSpan5MinRecords*. See also: [Alphabetical overview of settings](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#alphabetical-overview-of-settings).
+- Make sure that the following Trending tags in the file *MaintenanceSettings.xml* are all set to a large interval (e.g. 10 years). If the following tags are set to small intervals or if they are set to 0, you risk losing trend data during the migration: *TimeSpan1DayRecords*, *TimeSpan1HourRecords*, *TimeSpan5MinRecords*. See also: [Alphabetical overview of settings](xref:MaintenanceSettings_xml#alphabetical-overview-of-settings).
 
 - If you are using DataMiner version 9.6.0/9.6.3 or older: Because the *Months to keep* database setting works differently with Cassandra, if you do not want certain records to remain in the database permanently, it is important that you make sure *Limit alarms by months to keep* is selected before you migrate to Cassandra.
 

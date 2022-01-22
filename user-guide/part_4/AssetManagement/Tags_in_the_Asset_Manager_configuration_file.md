@@ -14,7 +14,7 @@ In this mandatory tag, specify the name of the database configuration (as specif
 
 > [!TIP]
 > See also:
-> [DB.xml](../../part_7/SkylineDataminerFolder/DB_xml.md#dbxml)
+> [DB.xml](xref:DB_xml#dbxml)
 
 ### AssetManagerConfig.Schema
 

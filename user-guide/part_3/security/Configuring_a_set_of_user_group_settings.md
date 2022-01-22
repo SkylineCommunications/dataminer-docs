@@ -32,6 +32,6 @@ If a set of user settings has been assigned to a user group, you can open that s
 
     > [!TIP]
     > See also:
-    > [User settings](../../part_1/GettingStarted/User_settings.md)
+    > [User settings](xref:User_settings)
 
 5. Click *OK* to close the *Settings* card.

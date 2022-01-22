@@ -8,7 +8,7 @@ From DataMiner 9.5.4 onwards, for systems with the appropriate licenses, it is p
 
 > [!TIP]
 > See also:
-> [Service and Resource Management](../../part_4/SRM/SRM.md#service-and-resource-management)
+> [Service and Resource Management](xref:SRM#service-and-resource-management)
 
 In this section:
 

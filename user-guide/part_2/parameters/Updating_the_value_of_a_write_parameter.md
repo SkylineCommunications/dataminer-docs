@@ -25,7 +25,7 @@ Regardless of the type of parameter, when you have changed the value of any writ
 > - In case of analog parameters, both the range and the step size will be validated.
 > - In case of string parameters, both the format (e.g. capitalization) and the length will be validated.
 
-By default, a confirmation box will appear when you update the value of a write parameter. In the user settings, you can specify whether you want this confirmation box to appear. See [User settings](../../part_1/GettingStarted/User_settings.md).
+By default, a confirmation box will appear when you update the value of a write parameter. In the user settings, you can specify whether you want this confirmation box to appear. See [User settings](xref:User_settings).
 
 Updates of some write parameters, however, always have to be confirmed:
 

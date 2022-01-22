@@ -16,4 +16,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [Trending](../trending/trending.md)
+> [Trending](xref:trending)

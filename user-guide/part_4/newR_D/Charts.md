@@ -127,9 +127,9 @@ To configure the component:
 
     - For a table parameter, an *indices* filter feed is supported.
 
-    - From DataMiner 10.0.2 onwards, in a system using Service & Resource Management, you can add resources as a feed to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](../SRM/SRM.md#service-and-resource-management).
+    - From DataMiner 10.0.2 onwards, in a system using Service & Resource Management, you can add resources as a feed to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
 
-    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter feed is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
+    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter feed is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
         > [!NOTE]
         > When you update a filter that is already used in the component, re-add the filter in order to update it in the component.

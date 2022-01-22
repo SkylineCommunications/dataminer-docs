@@ -22,7 +22,7 @@ To configure notifications in System Center:
 
         > [!NOTE]
         > - In the *Details* column of the Alerts tab, the description of a selected alarm filter is displayed.
-        > - For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
+        > - For more information on alarm filters, see [Alarm filters](xref:Alarm_filters).
 
 5. To combine several filters, repeat step 4 until all the necessary filters have been added.
 

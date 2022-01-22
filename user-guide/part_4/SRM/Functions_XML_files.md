@@ -134,7 +134,7 @@ The following example illustrates how a XAML or SVG icon can be configured:
 
 From DataMiner 9.5.4 onwards, it is possible to upload functions XML files in the Protocols & Templates module.
 
-To do so, follow the same procedure as for a *Protocol.xml* file. See [Uploading a Protocol.xml file](../../part_2/protocols/Adding_a_protocol_or_protocol_version_to_your_DataMiner_System.md#uploading-a-protocolxml-file).
+To do so, follow the same procedure as for a *Protocol.xml* file. See [Uploading a Protocol.xml file](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System#uploading-a-protocolxml-file).
 
 > [!NOTE]
 > Uploading a functions XML file is only possible if the server has the SRM license, the name of the file is unique, and the file has the Protocol tag configured (see [Functions XML structure](#functions-xml-structure)).

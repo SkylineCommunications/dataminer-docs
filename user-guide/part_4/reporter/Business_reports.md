@@ -6,4 +6,4 @@ uid: Business_reports
 
 The *Business* page shows a variety of reports for a particular SLA.
 
-For more information, see [SLA reporting](../sla/SLA_reporting.md).
+For more information, see [SLA reporting](xref:SLA_reporting).

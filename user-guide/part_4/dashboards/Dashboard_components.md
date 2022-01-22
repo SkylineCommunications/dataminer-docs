@@ -39,7 +39,7 @@ This group consists of the following components:
 
 > [!TIP]
 > See also:
-> [Working with aggregation rules](../correlation/Working_with_aggregation_rules.md)
+> [Working with aggregation rules](xref:Working_with_aggregation_rules)
 
 #### Aggregation
 
@@ -248,7 +248,7 @@ Component-specific options:
 
 - *Minimal alarm level*: In the drop-down list, select the minimum alarm level of alarms displayed in the list.
 
-- *Advanced filter*: In this box, you can enter an alarm filter to limit what alarms are shown in the list. For more information on alarm filters, see [Alarm filters](../../part_2/alarms/Alarm_filters.md).
+- *Advanced filter*: In this box, you can enter an alarm filter to limit what alarms are shown in the list. For more information on alarm filters, see [Alarm filters](xref:Alarm_filters).
 
     For example, for an alarm filter called “Major”, which is a shared filter, enter the following:
 
@@ -402,7 +402,7 @@ Component-specific options:
 - *Automatically refresh*: Enter the refresh rate for the Visual Overview in this box. By default this is set to 60 seconds. To disable the automatic refresh, set the rate to 0.
 
 > [!NOTE]
-> The Visual Overview settings of the Administrator account are applied. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
+> The Visual Overview settings of the Administrator account are applied. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
 ### DataMiner parameter
 
@@ -929,7 +929,7 @@ Component-specific options:
 - *Automatically refresh*: Enter the refresh rate for the Visual Overview in this box. By default this is set to 60 seconds. To disable the automatic refresh, set the rate to 0.
 
 > [!NOTE]
-> The Visual Overview settings of the Administrator account are applied. See [Visual Overview settings](../../part_1/GettingStarted/User_settings.md#visual-overview-settings).
+> The Visual Overview settings of the Administrator account are applied. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
 ### Other
 
@@ -955,7 +955,7 @@ This group consists of the following components:
 
 #### DataMiner map
 
-Displays a DataMiner map. See [Displaying a DataMiner Map in a DataMiner dashboard](../maps/Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard.md).
+Displays a DataMiner map. See [Displaying a DataMiner Map in a DataMiner dashboard](xref:Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard).
 
 #### Feed info
 
@@ -1044,7 +1044,7 @@ Component-specific options:
 
 #### Video
 
-Displays a video stream, based on an image URL. The configuration of the thumbnail is similar to the configuration of video thumbnails in Visual Overview. For more information on supported formats, see [Linking a shape to a video thumbnail](../../part_2/visio/Linking_a_shape_to_a_video_thumbnail.md).
+Displays a video stream, based on an image URL. The configuration of the thumbnail is similar to the configuration of video thumbnails in Visual Overview. For more information on supported formats, see [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail).
 
 Optionally, a feed can be used with this component. This can for instance be of use to dynamically include the value of a parameter in the image URL. To do so, select a parameter feed, and include *%parametervalue%* in the URL. This will then be replaced with the value of that parameter.
 
@@ -1061,4 +1061,4 @@ Component-specific options:
 
 > [!TIP]
 > See also:
-> [Linking a shape to a video thumbnail](../../part_2/visio/Linking_a_shape_to_a_video_thumbnail.md)
+> [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)

@@ -8,7 +8,7 @@ You can specify whether analog parameters are displayed as a LED bar or as an os
 
 - by right-clicking the parameter and selecting *LED bar* or *Oscilloscope*, or
 
-- by determining the preferred display mode in the user settings. See [Data Display settings](../../part_1/GettingStarted/User_settings.md#data-display-settings).
+- by determining the preferred display mode in the user settings. See [Data Display settings](xref:User_settings#data-display-settings).
 
 ### LED bar
 

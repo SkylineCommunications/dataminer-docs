@@ -208,7 +208,7 @@ To do so:
 
 > [!TIP]
 > See also:
-> [Connectivity.xml files representing chains](../../part_3/DCF/Connectivity_xml_files_representing_chains.md#connectivityxml-files-representing-chains)
+> [Connectivity.xml files representing chains](xref:Connectivity_xml_files_representing_chains#connectivityxml-files-representing-chains)
 
 ### Disabling path highlighting when a connection line is clicked
 

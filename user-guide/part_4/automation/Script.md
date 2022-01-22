@@ -17,5 +17,5 @@ Use this action to run another Automation script from within the current script.
 5. Specify further options for the way the subscript will be run. For more information on these options, see [Script execution options](Script_execution_options.md).
 
 > [!NOTE]
-> It is also possible to add this action within a C# block in a script. For more information, see [PrepareSubScript](../../part_7/CsharpReference/Engine_methods.md#preparesubscript).
+> It is also possible to add this action within a C# block in a script. For more information, see [PrepareSubScript](xref:Engine_methods#preparesubscript).
 >

@@ -21,7 +21,7 @@ To define a tag for pattern matching:
 
 1. In a trend graph showing trend information for one single parameter, select the section of the graph that you identify as a recurring pattern.
 
-    The way you can select a section of a graph depends on the configuration of the trending user settings. See [Trending settings](../../part_1/GettingStarted/User_settings.md#trending-settings).
+    The way you can select a section of a graph depends on the configuration of the trending user settings. See [Trending settings](xref:User_settings#trending-settings).
 
 2. Click the tag icon and enter a tag name.
 
@@ -30,7 +30,7 @@ To define a tag for pattern matching:
     > [!NOTE]
     > Prior to DataMiner 10.0.13, patterns can only be detected in the trending for a specific parameter ID, without taking any possible table index into account. Clearing the *\[Display key instance\] only* checkbox therefore results in the behavior of DataMiner versions prior to 10.0.13.
 
-4. From DataMiner 10.0.13 onwards, optionally select *Generate an alarm when detected* to have DataMiner generate a “suggestion event” type of alarm whenever the pattern is detected. For more information, see [Monitoring of trend patterns](../alarms/Advanced_analytics_features_in_the_Alarm_Console.md#monitoring-of-trend-patterns).
+4. From DataMiner 10.0.13 onwards, optionally select *Generate an alarm when detected* to have DataMiner generate a “suggestion event” type of alarm whenever the pattern is detected. For more information, see [Monitoring of trend patterns](xref:Advanced_analytics_features_in_the_Alarm_Console#monitoring-of-trend-patterns).
 
 5. Click the check mark to save the tag.
 
@@ -42,7 +42,7 @@ To edit an existing tag for pattern matching:
 
 2. To edit the tag name, click the pencil icon and change the name.
 
-3. To activate or deactivate alarm monitoring on the pattern, toggle the *Generate an alarm when detected* option. For more information, see [Monitoring of trend patterns](../alarms/Advanced_analytics_features_in_the_Alarm_Console.md#monitoring-of-trend-patterns).
+3. To activate or deactivate alarm monitoring on the pattern, toggle the *Generate an alarm when detected* option. For more information, see [Monitoring of trend patterns](xref:Advanced_analytics_features_in_the_Alarm_Console#monitoring-of-trend-patterns).
 
 4. To redefine the pattern, adjust its boundaries.
 

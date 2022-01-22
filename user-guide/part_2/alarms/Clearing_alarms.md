@@ -16,7 +16,7 @@ By default, alarms are cleared automatically. However, if you set the AutoClear 
 
 > [!NOTE]
 > - It is possible that because of database issues, duplicate alarms are created for column parameters. In that case, the oldest one will automatically be cleared, and the following comment will be added to the alarm:<br>*Detected duplicate alarm on column parameter. Clearing alarm for PID \[x\] with ROOTKey \[y\] found alarm with other ROOTKey \[z\]*
-> - In DataMiner 10.2.0/10.1.6, a protection mode has been added to avoid reduced performance of the system when an alarm storm happens that causes there to be a large number of clearable alarms at the same time. By default, when there are more than 1000 clearable alarm trees on a DMA, the newly generated clearable alarms will be closed instead of clearable. Once the number of clearable alarm trees has dropped to less than 100, this protection mode is lifted and newly generated alarms will be clearable again. Note that these default values can be customized in DataMiner.xml (see [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml)).
+> - In DataMiner 10.2.0/10.1.6, a protection mode has been added to avoid reduced performance of the system when an alarm storm happens that causes there to be a large number of clearable alarms at the same time. By default, when there are more than 1000 clearable alarm trees on a DMA, the newly generated clearable alarms will be closed instead of clearable. Once the number of clearable alarm trees has dropped to less than 100, this protection mode is lifted and newly generated alarms will be clearable again. Note that these default values can be customized in DataMiner.xml (see [DataMiner.xml](xref:DataMiner_xml#dataminerxml)).
 
 > [!TIP]
 > See also:
@@ -55,7 +55,7 @@ Alternatively, if a column with action buttons to clear alarms has been added in
 
 > [!NOTE]
 > - If the alarm is not yet in a clearable state, the *Clear alarm* option is not shown.
-> - Clearing a clearable correlated alarm also clears the clearable base alarms. For more information on Correlation, see [DMS Correlation](../../part_4/correlation/correlation.md#dms-correlation).
+> - Clearing a clearable correlated alarm also clears the clearable base alarms. For more information on Correlation, see [DMS Correlation](xref:correlation#dms-correlation).
 
 ### System-wide AutoClear setting
 
@@ -65,10 +65,10 @@ If you set the AutoClear setting to FALSE, alarms will not be cleared automatica
 
 > [!TIP]
 > See also:
-> [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 
 ### Overriding the default AutoClear setting on parameter level
 
 When editing an alarm template, you can override the AutoClear system settings for particular alarms.
 
-For more information on how to do this, see [Setting the autoclear options for alarms in an alarm template](../protocols/Configuring_alarm_templates.md#setting-the-autoclear-options-for-alarms-in-an-alarm-template).
+For more information on how to do this, see [Setting the autoclear options for alarms in an alarm template](xref:Configuring_alarm_templates#setting-the-autoclear-options-for-alarms-in-an-alarm-template).

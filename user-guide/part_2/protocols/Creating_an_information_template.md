@@ -15,7 +15,7 @@ To create an information template:
 3. In the *New Information Template* dialog box, enter the name of the template, select the protocol and click *OK*.
 
     > [!NOTE]
-    > Some characters cannot be used in template names. For more information, see [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc)
+    > Some characters cannot be used in template names. For more information, see [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 
 4. Go through the list of all parameters (inherited from the most recent version available of the protocol you selected previously) and make the necessary changes to the following parameter data:
 
@@ -44,7 +44,7 @@ To create an information template:
 
         > [!TIP]
         > See also:
-        > [Setting a violation filter](../../part_4/sla/Configuring_the_alarm_settings_for_an_SLA.md#setting-a-violation-filter)
+        > [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter)
 
     - **Hide parameter:** Allows you to hide this parameter in the Cube UI. Available from DataMiner 9.5.6/9.6.0 onwards.
 
@@ -65,7 +65,7 @@ To create an information template:
 
         > [!TIP]
         > See also:
-        > [Setting the offline window for an SLA](../../part_4/sla/Setting_the_offline_window_for_an_SLA.md)
+        > [Setting the offline window for an SLA](xref:Setting_the_offline_window_for_an_SLA)
 
     - **Alarm properties**: Can be used from DataMiner 9.5.3 onwards to override alarm properties for the parameter.
 
@@ -75,7 +75,7 @@ To create an information template:
 
         > [!TIP]
         > See also:
-        > - [Configuring the offload rate](../../part_3/databases/Configuring_data_offloads.md#configuring-the-offload-rate)
+        > - [Configuring the offload rate](xref:Configuring_data_offloads#configuring-the-offload-rate)
 
     > [!NOTE]
     > - To quickly find a parameter in the parameter list, use the filter box in the top right corner. You can also filter the displayed parameters with the button at the top of the parameter list, in order to view *Only edited parameters*, *Only protocol parameters* or *All parameters (protocol + general)*.

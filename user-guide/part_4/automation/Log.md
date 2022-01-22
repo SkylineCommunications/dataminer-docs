@@ -11,6 +11,6 @@ Use this action to have a script create a log message that will be saved in the 
 - To have a message logged based on a variable, keep *Variable* selected and then click the next field to select the variable.
 
 > [!NOTE]
-> - In Cube, any log information regarding Automation can be found under DataMiner logging. For more information, see [DataMiner logging](../../part_6/logging/DataMiner_logging.md).
-> - It is also possible to add this action within a C# block in a script. For more information, see [Log](../../part_7/CsharpReference/Engine_methods.md#log).
+> - In Cube, any log information regarding Automation can be found under DataMiner logging. For more information, see [DataMiner logging](xref:DataMiner_logging).
+> - It is also possible to add this action within a C# block in a script. For more information, see [Log](xref:Engine_methods#log).
 >

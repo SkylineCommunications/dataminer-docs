@@ -8,7 +8,7 @@ In normal circumstances, the information on all DMAs in a cluster is synchronize
 
 > [!NOTE]
 > - In case of conflicting changes during a synchronization, the most recent change gets precedence.
-> - For more information on which files and folders are synchronized during this process, refer to [Overview of the files found in the root folder](../../part_7/SkylineDataminerFolder/Overview_of_the_files_found_in_the_root_folder.md) and [Overview of the different subfolders](../../part_7/SkylineDataminerFolder/Overview_of_the_different_subfolders.md), respectively.
+> - For more information on which files and folders are synchronized during this process, refer to [Overview of the files found in the root folder](xref:Overview_of_the_files_found_in_the_root_folder) and [Overview of the different subfolders](xref:Overview_of_the_different_subfolders), respectively.
 
 ### Synchronizing your DMA with the DMS
 

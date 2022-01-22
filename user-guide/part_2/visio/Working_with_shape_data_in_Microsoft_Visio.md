@@ -47,7 +47,7 @@ To open this pane:
 From DataMiner 9.6.9 onwards, an add-in is available in Visio that allows you to manage DataMiner-related data more easily. In addition, you can also access DataMiner stencils, allowing you to speed up the design of visually appealing Visio drawings.
 
 > [!NOTE]
-> Depending on the configuration of the general user settings, this add-in may be unavailable. See [Enabling or disabling the advanced editing Visio add-in](../../part_7/SkylineDataminerFolder/ClientSettings_json.md#enabling-or-disabling-the-advanced-editing-visio-add-in).
+> Depending on the configuration of the general user settings, this add-in may be unavailable. See [Enabling or disabling the advanced editing Visio add-in](xref:ClientSettings_json#enabling-or-disabling-the-advanced-editing-visio-add-in).
 
 #### Accessing the DataMiner stencils
 

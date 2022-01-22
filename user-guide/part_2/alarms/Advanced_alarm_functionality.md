@@ -20,4 +20,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [Configuring properties for Alarm Console grouping](../../part_7/SkylineDataminerFolder/PropertyConfiguration_xml.md#configuring-properties-for-alarm-console-grouping)
+> [Configuring properties for Alarm Console grouping](xref:PropertyConfiguration_xml#configuring-properties-for-alarm-console-grouping)

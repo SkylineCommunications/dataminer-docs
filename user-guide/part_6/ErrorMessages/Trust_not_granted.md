@@ -16,4 +16,4 @@ The Skyline certificates have not been installed on your computer.
 
 Install the Skyline certificates.
 
-See [Installing the Skyline certificates](../../part_1/DataminerApplications/Installing_configuring_the_DataMiner_Cube_software.md#installing-the-skyline-certificates).
+See [Installing the Skyline certificates](xref:Installing_configuring_the_DataMiner_Cube_software#installing-the-skyline-certificates).

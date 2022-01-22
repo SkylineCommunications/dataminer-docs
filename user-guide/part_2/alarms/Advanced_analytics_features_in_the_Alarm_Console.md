@@ -20,9 +20,9 @@ These features are:
 
 ### Behavioral anomaly detection
 
-For more information on the functionality of this feature in general, see [Working with behavioral anomaly detection](../trending/Working_with_behavioral_anomaly_detection.md).
+For more information on the functionality of this feature in general, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
-Whenever behavioral anomaly detection finds an anomalous level shift, trend change or variance change for a parameter, a "suggestion event" is generated in the Alarm Console. These suggestion events can be viewed in a dedicated suggestion events tab, as alarms with severity "Information" and source "Suggestion Engine”. See [Adding and removing alarm tabs in the Alarm Console](Working_with_the_Alarm_Console.md#adding-and-removing-alarm-tabs-in-the-alarm-console). You can also configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly. See [Configuring anomaly detection alarms for specific parameters](../protocols/Configuring_alarm_templates.md#configuring-anomaly-detection-alarms-for-specific-parameters).
+Whenever behavioral anomaly detection finds an anomalous level shift, trend change or variance change for a parameter, a "suggestion event" is generated in the Alarm Console. These suggestion events can be viewed in a dedicated suggestion events tab, as alarms with severity "Information" and source "Suggestion Engine”. See [Adding and removing alarm tabs in the Alarm Console](Working_with_the_Alarm_Console.md#adding-and-removing-alarm-tabs-in-the-alarm-console). You can also configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly. See [Configuring anomaly detection alarms for specific parameters](xref:Configuring_alarm_templates#configuring-anomaly-detection-alarms-for-specific-parameters).
 
 Please note the following regarding suggestion events:
 
@@ -142,7 +142,7 @@ The following basic configuration is needed in Cube:
 
 - For the alarm properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom alarm property](Changing_custom_alarm_properties.md#adding-a-custom-alarm-property).
 
-- For the element, service and view properties that should be taken into account, the option *Make this property available for alarm filtering* must be selected. See [Adding a custom property to an item](../elements/Managing_element_properties.md#adding-a-custom-property-to-an-item).
+- For the element, service and view properties that should be taken into account, the option *Make this property available for alarm filtering* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 In addition, the following configuration is needed in the file *C:\\Skyline DataMiner\\analytics\\configuration.xml*:
 
@@ -203,7 +203,7 @@ In addition, the following configuration is needed in the file *C:\\Skyline Data
 
 From DataMiner 10.0.7 onwards, DataMiner can recognize patterns in trend graphs. From DataMiner 10.0.13 onwards, you can also activate alarm monitoring of trend patterns, so that a "suggestion event" type alarm is triggered whenever a specific pattern is detected (see [Suggestion events](#suggestion-events) ).
 
-You can activate this type of monitoring by selecting a pattern in a trend graph, creating a tag for it, and activating the option *Generate an alarm when detected.* For more detailed information on how to do this, see [Working with pattern matching](../trending/Working_with_pattern_matching.md).
+You can activate this type of monitoring by selecting a pattern in a trend graph, creating a tag for it, and activating the option *Generate an alarm when detected.* For more detailed information on how to do this, see [Working with pattern matching](xref:Working_with_pattern_matching).
 
 The following limitations apply:
 

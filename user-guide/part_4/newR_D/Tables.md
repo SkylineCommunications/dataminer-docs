@@ -33,7 +33,7 @@ To configure the component:
 
         In case you select history alarms, the start time and end time will also need to be specified. In case you select alarms in a sliding window, the sliding window size and refresh time will need to be configured.
 
-    - Optionally, specify a filter for the list with the *Filters* boxes. You can either configure a filter of your own, or select *Saved filter* to use an existing shared alarm filter from the DMS. If you select to use a *Parameter index* filter, you can use “?” and “\*” as wildcards (see [Searching with wildcard characters](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters)).
+    - Optionally, specify a filter for the list with the *Filters* boxes. You can either configure a filter of your own, or select *Saved filter* to use an existing shared alarm filter from the DMS. If you select to use a *Parameter index* filter, you can use “?” and “\*” as wildcards (see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters)).
 
     - Optionally, specify the *Default sorting column*, *Default sorting order* and *Initial number of alarms to load*.
 
@@ -68,7 +68,7 @@ To configure the component:
 
     - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
-    - *Filter*: To limit the displayed data, specify an advanced table filter in this box. For more information on the supported filter syntax, see [Dynamic table filter syntax](../../part_2/visio/Dynamic_table_filter_syntax.md).
+    - *Filter*: To limit the displayed data, specify an advanced table filter in this box. For more information on the supported filter syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 4. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 

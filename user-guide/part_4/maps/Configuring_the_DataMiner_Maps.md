@@ -9,7 +9,7 @@ On a DataMiner Agent, the configuration files for the DataMiner Maps have to be 
 > [!NOTE]
 > DataMiner Map configuration files are not automatically synchronized throughout a DataMiner System. Therefore, if you create or update a configuration file on a particular DMA, always perform a Force Synchronization of that configuration file.
 >
-> For more information, see [Forcing synchronization of a file with the DMS](../../part_3/DataminerSystems/Synchronizing_data_between_DataMiner_Agents.md#forcing-synchronization-of-a-file-with-the-dms).
+> For more information, see [Forcing synchronization of a file with the DMS](xref:Synchronizing_data_between_DataMiner_Agents#forcing-synchronization-of-a-file-with-the-dms).
 
 In this section:
 

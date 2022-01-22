@@ -93,7 +93,7 @@ When alarm storm mode is deactivated, the following happens:
 - All functionalities return to normal.
 
 > [!NOTE]
-> - Alternatively, these settings can also be configured on group level. See [Configuring a set of user group settings](../../part_3/security/Configuring_a_set_of_user_group_settings.md).
+> - Alternatively, these settings can also be configured on group level. See [Configuring a set of user group settings](xref:Configuring_a_set_of_user_group_settings).
 > - Alarm storm prevention can also be configured for certain specific DataMiner functionalities:
->     - For more information on alarm storm prevention for notifications, see [Configuring alarm storm prevention for notifications](../../part_3/security/Configuring_alarm_storm_prevention_for_notifications.md).
->     - For more information on alarm storm prevention for SNMP forwarding, see [Configuring an SNMP manager in DataMiner Cube](../../part_3/SNMP/Configuring_an_SNMP_manager_in_DataMiner_Cube.md).
+>     - For more information on alarm storm prevention for notifications, see [Configuring alarm storm prevention for notifications](xref:Configuring_alarm_storm_prevention_for_notifications).
+>     - For more information on alarm storm prevention for SNMP forwarding, see [Configuring an SNMP manager in DataMiner Cube](xref:Configuring_an_SNMP_manager_in_DataMiner_Cube).

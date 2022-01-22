@@ -21,4 +21,4 @@ To do so:
 
 > [!TIP]
 > See also:
-> [Embedding a dashboard component in a webpage or Visio drawing](../../part_4/newR_D/Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing.md)
+> [Embedding a dashboard component in a webpage or Visio drawing](xref:Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing)

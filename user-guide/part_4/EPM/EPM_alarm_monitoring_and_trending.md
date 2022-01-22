@@ -6,11 +6,11 @@ uid: EPM_alarm_monitoring_and_trending
 
 Though in some aspects alarming and trending work in the same way as for regular elements, there are some differences for EPM elements:
 
-- An alarm template can be applied to an EPM element just like for a regular DataMiner element. See [Managing alarm templates](../../part_2/protocols/Managing_alarm_templates.md).
+- An alarm template can be applied to an EPM element just like for a regular DataMiner element. See [Managing alarm templates](xref:Managing_alarm_templates).
 
 - Alarming can be applied on the different available parameters, both on directly retrieved data and on aggregated data.
 
-- Root causes for alarms can be visualized within the topology diagrams, but can also be determined by making an internal connectivity chain for the EPM element. See [Working with the Connectivity Editor](../correlation/Working_with_the_Connectivity_Editor.md).
+- Root causes for alarms can be visualized within the topology diagrams, but can also be determined by making an internal connectivity chain for the EPM element. See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor).
 
 - Depending on the protocol of the EPM element, topology diagrams can feature alarm bubble-up.
 

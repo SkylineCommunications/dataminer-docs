@@ -93,7 +93,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 
 > [!TIP]
 > See also:
-> [Engine class](../../part_7/CsharpReference/Engine_class.md)
+> [Engine class](xref:Engine_class)
 
 ### Script class
 

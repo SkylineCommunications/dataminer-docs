@@ -45,7 +45,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
     - *Snapshot mode*: When this mode is selected, only parameters for which the snapshot option has been set in the protocol are offloaded.
 
         > [!NOTE]
-        > From DataMiner 9.5.4 onwards, snapshot mode is activated with a separate option below. In addition, from this version onwards, information templates allow you to select whether parameters should be included in offload database snapshots. See [Creating an information template](../../part_2/protocols/Creating_an_information_template.md).
+        > From DataMiner 9.5.4 onwards, snapshot mode is activated with a separate option below. In addition, from this version onwards, information templates allow you to select whether parameters should be included in offload database snapshots. See [Creating an information template](xref:Creating_an_information_template).
 
     - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *Data*.
 
@@ -56,7 +56,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
         The available time frame records depend on the trend window configuration. For a default configuration, the following options are available: *All time frame records* (default setting), *Only short time frame records (5 min)* and *Only long time frame records (60 min)*.
 
         > [!NOTE]
-        > For more information on the trend window configuration, see [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
+        > For more information on the trend window configuration, see [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).
 
     - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *DataAvg*.
 

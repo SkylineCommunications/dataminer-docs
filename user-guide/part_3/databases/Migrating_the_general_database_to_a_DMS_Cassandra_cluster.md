@@ -12,8 +12,8 @@ From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as 
 
 > [!TIP]
 > See also:
-> - [DMA in a DMS using a Cassandra cluster](../DataminerAgents/General_DMA_configuration.md#dma-in-a-dms-using-a-cassandra-cluster)
-> - [General database settings](../../part_7/SkylineDataminerFolder/DB_xml.md#general-database-settings)
+> - [DMA in a DMS using a Cassandra cluster](xref:General_DMA_configuration#dma-in-a-dms-using-a-cassandra-cluster)
+> - [General database settings](xref:DB_xml#general-database-settings)
 
 ### Installation and configuration
 

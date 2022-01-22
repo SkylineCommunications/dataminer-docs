@@ -86,4 +86,4 @@ This section provides an overview of the objects and classes available in C# cod
 
 > [!TIP]
 > See also:
-> [Overview of the TicketingGatewayHelper class](../../part_4/ticketing/Overview_of_the_TicketingGatewayHelper_class.md)
+> [Overview of the TicketingGatewayHelper class](xref:Overview_of_the_TicketingGatewayHelper_class)

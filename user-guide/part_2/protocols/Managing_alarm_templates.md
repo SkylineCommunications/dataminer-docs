@@ -34,7 +34,7 @@ To create a new alarm template:
     2. Enter a template name.
 
         > [!NOTE]
-        > Some characters cannot be used in template names. For more information, see [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc).
+        > Some characters cannot be used in template names. For more information, see [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc).
 
     3. Check if the protocol and protocol version are correct and adapt if necessary.
 

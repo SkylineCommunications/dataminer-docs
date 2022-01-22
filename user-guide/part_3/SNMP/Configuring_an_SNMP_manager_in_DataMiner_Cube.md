@@ -78,7 +78,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
     > [!NOTE]
     > - Custom bindings cannot be used if you use the default OID.
     > - For more information on custom bindings, see [Custom DataMiner notification](Custom_DataMiner_notification.md).
-    > - If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#generating-smiv2-mib-files)).
+    > - If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](xref:SLNetClientTest_tool_advanced_procedures#generating-smiv2-mib-files)).
 
 8. In the *resend* tab, specify the following options:
 
@@ -136,11 +136,11 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
         9. When the filter is fully configured, click *OK*.
 
     > [!NOTE]
-    > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](../../part_2/alarms/Working_with_the_Alarm_Console.md#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
+    > To check whether a filter has been configured correctly, it can be useful to also create a new alarm tab in the Alarm Console using the same filter. This way you can check if it indeed filters out the correct alarms. See [Manually applying an alarm filter in an Alarm Console tab](xref:Working_with_the_Alarm_Console#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
     > [!TIP]
     > See also:
-    > [Alarm filters](../../part_2/alarms/Alarm_filters.md)
+    > [Alarm filters](xref:Alarm_filters)
 
 10. Click *Next* to go the *alarm storm* tab, and specify the necessary options for alarm storm prevention:
 

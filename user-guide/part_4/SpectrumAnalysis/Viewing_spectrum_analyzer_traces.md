@@ -214,7 +214,7 @@ When session sharing is enabled, all cards showing the same spectrum session wil
 
 To enable sharing of spectrum sessions for a spectrum element:
 
-- Either create the new spectrum element or edit the existing spectrum element. (See [Adding an element](../../part_2/elements/Adding_and_deleting_elements.md#adding-an-element) or [Updating elements](../../part_2/elements/Updating_elements.md), respectively.)
+- Either create the new spectrum element or edit the existing spectrum element. (See [Adding an element](xref:Adding_and_deleting_elements#adding-an-element) or [Updating elements](xref:Updating_elements), respectively.)
 
 - In the *Advanced element settings* section, select *Shared session mode*.
 

@@ -4,7 +4,7 @@ uid: SLA_reporting
 
 # SLA reporting
 
-To access reporting information on an SLA, go to the *Reports & Dashboards* module, then choose *Business* in the left column. For more information on how to access the module, see [Viewing the built-in reports in the Reporter app](../reporter/Viewing_the_built-in_reports_in_the_Reporter_app.md#viewing-the-built-in-reports-in-the-reporter-app).
+To access reporting information on an SLA, go to the *Reports & Dashboards* module, then choose *Business* in the left column. For more information on how to access the module, see [Viewing the built-in reports in the Reporter app](xref:Viewing_the_built-in_reports_in_the_Reporter_app#viewing-the-built-in-reports-in-the-reporter-app).
 
 If there is more than one SLA available, you will then have to choose the SLA you wish to view. You can still select a different SLA afterwards by clicking *CHANGE* in the header to the right of the SLA name.
 
@@ -46,7 +46,7 @@ Alternatively, you can also go directly to the URL for a particular type of repo
 | Trending        | http://\[MyDataMiner\]/Reports/SLA-Trend.asp?param=\[Parameter ID\]&element=\[SLA Element Name\]     |
 
 > [!NOTE]
-> The sections below discuss SLA reporting in built-in reports in Cube. However, it is also possible to make custom SLA reports. In particular, the “SLA Historic Service Alarm List” component is designed for such custom reports, though other components may also be used. See [SLA Historic Service Alarm List](../reporter/Components_for_one_single_element_or_service.md#sla-historic-service-alarm-list).
+> The sections below discuss SLA reporting in built-in reports in Cube. However, it is also possible to make custom SLA reports. In particular, the “SLA Historic Service Alarm List” component is designed for such custom reports, though other components may also be used. See [SLA Historic Service Alarm List](xref:Components_for_one_single_element_or_service#sla-historic-service-alarm-list).
 
 #### Summary
 

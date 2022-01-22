@@ -36,7 +36,7 @@ To link a DMA to a remote server with a Cassandra database:
     4. Open TCP port 9042 and 7000 in the firewall.
 
         > [!NOTE]
-        > From DataMiner 10.1.3 onwards, TLS can be enabled on the database connection. In that case port 7001 should be opened instead of 7000. See [Enabling TLS on the Cassandra database connection](../../part_7/SkylineDataminerFolder/DB_xml.md#enabling-tls-on-the-cassandra-database-connection)
+        > From DataMiner 10.1.3 onwards, TLS can be enabled on the database connection. In that case port 7001 should be opened instead of 7000. See [Enabling TLS on the Cassandra database connection](xref:DB_xml#enabling-tls-on-the-cassandra-database-connection)
 
     5. Open a Command Prompt window with administrator rights, and execute the file *Install.bat*.
 
@@ -61,7 +61,7 @@ To link a DMA to a remote server with a Cassandra database:
     3. Open TCP port 9042 and 7000 in the firewall.
 
         > [!NOTE]
-        > From DataMiner 10.1.3 onwards, TLS can be enabled on the database connection. In that case port 7001 should be opened instead of 7000. See [Enabling TLS on the Cassandra database connection](../../part_7/SkylineDataminerFolder/DB_xml.md#enabling-tls-on-the-cassandra-database-connection)
+        > From DataMiner 10.1.3 onwards, TLS can be enabled on the database connection. In that case port 7001 should be opened instead of 7000. See [Enabling TLS on the Cassandra database connection](xref:DB_xml#enabling-tls-on-the-cassandra-database-connection)
 
     4. Open a Command Prompt window with administrator rights, and execute the file *Install.bat*.
 
@@ -151,7 +151,7 @@ To configure a Failover setup with remote Cassandra databases:
 
 1. Set up both DMAs with a separate remote database, as mentioned above.
 
-2. Add the DMAs to a Failover setup. See [Failover configuration in Cube](../failover/Failover_configuration_in_Cube.md).
+2. Add the DMAs to a Failover setup. See [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
 
 3. Configure the *cassandra.yaml* file for the main DMA as follows:
 

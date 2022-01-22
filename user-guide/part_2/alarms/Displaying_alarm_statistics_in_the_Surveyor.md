@@ -58,12 +58,12 @@ In this section:
         ```
 
         > [!NOTE]
-        > On a DMA with a ticketing gateway, it is also possible to display ticket statistics, or to combine ticket statistics with alarm statistics in the Surveyor. For more information, see [Displaying ticket statistics in the Surveyor](../../part_4/ticketing/Displaying_ticket_statistics_in_the_Surveyor.md).
+        > On a DMA with a ticketing gateway, it is also possible to display ticket statistics, or to combine ticket statistics with alarm statistics in the Surveyor. For more information, see [Displaying ticket statistics in the Surveyor](xref:Displaying_ticket_statistics_in_the_Surveyor).
 
 4. Save your changes and restart DataMiner.
 
 > [!NOTE]
-> If the DMA is part of a DMS, the setting will be applied across the DMS during the midnight synchronization. Alternatively, you can also force an immediate synchronization. See [Synchronizing data between DataMiner Agents](../../part_3/DataminerSystems/Synchronizing_data_between_DataMiner_Agents.md).
+> If the DMA is part of a DMS, the setting will be applied across the DMS during the midnight synchronization. Alternatively, you can also force an immediate synchronization. See [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_between_DataMiner_Agents).
 
 #### Example of a Surveyor configuration in MaintenanceSettings.xml
 
@@ -81,7 +81,7 @@ In this section:
 
 > [!TIP]
 > See also:
-> [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 
 #### View statistics in Visio drawings
 
@@ -89,4 +89,4 @@ Using the same syntax as in *MaintenanceSettings.xml*, view statistics can also 
 
 > [!TIP]
 > See also:
-> [Making a shape display information about the item it is linked to](../visio/Making_a_shape_display_information_about_the_item_it_is_linked_to.md)
+> [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to)

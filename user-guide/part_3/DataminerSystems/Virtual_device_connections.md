@@ -12,4 +12,4 @@ Serial devices, for example, can be “IP enabled” and turned into virtual SNM
 
 > [!TIP]
 > See also:
-> [Enabling the virtual SNMP agent of an element](../SNMP/Enabling_the_virtual_SNMP_agent_of_an_element.md)
+> [Enabling the virtual SNMP agent of an element](xref:Enabling_the_virtual_SNMP_agent_of_an_element)

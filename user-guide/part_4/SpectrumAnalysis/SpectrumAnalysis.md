@@ -20,4 +20,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [Embedding a Spectrum Analysis component](../../part_2/visio/Embedding_a_Spectrum_Analysis_component.md)
+> [Embedding a Spectrum Analysis component](xref:Embedding_a_Spectrum_Analysis_component)

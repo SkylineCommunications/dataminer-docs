@@ -27,7 +27,7 @@ The following steps can be taken to configure the backups for a DMA:
 5. In case the system uses an indexing (i.e. Elastic) database, in the *Indexing Engine Location* section of the *General* tab, the backup path can be modified if necessary.
 
     > [!NOTE]
-    > For more information on DataMiner Indexing backups, see [Configuring Indexing backups](../databases/Configuring_Indexing_backups.md).
+    > For more information on DataMiner Indexing backups, see [Configuring Indexing backups](xref:Configuring_Indexing_backups).
 
 6. In the *Schedule* tab, select when the backup should be executed: monthly, weekly, daily, or only when it is manually initiated.
 

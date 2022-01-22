@@ -47,7 +47,7 @@ If the element is part of an RCA chain, this general parameter indicates its RCA
 
 > [!TIP]
 > See also:
-> [Working with the Connectivity Editor](../../part_4/correlation/Working_with_the_Connectivity_Editor.md)
+> [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor)
 
 #### \[Priority Level\]
 
@@ -55,7 +55,7 @@ This general parameter is used in order to indicate the priority level of variou
 
 > [!TIP]
 > See also:
-> [Priority in a redundancy group](../RedundancyGroups/About_redundancy_groups.md#priority-in-a-redundancy-group)
+> [Priority in a redundancy group](xref:About_redundancy_groups#priority-in-a-redundancy-group)
 
 #### \[Timer base\]
 
@@ -63,7 +63,7 @@ This parameter can be used to adjust the polling speed of the element.
 
 > [!TIP]
 > See also:
-> [Changing the polling speed of an element](../elements/Changing_the_polling_speed_of_an_element.md)
+> [Changing the polling speed of an element](xref:Changing_the_polling_speed_of_an_element)
 
 #### \[Alarm System Type\]
 
@@ -91,7 +91,7 @@ This table contains an overview of the element properties.
 
 > [!TIP]
 > See also:
-> [Element properties](../elements/Element_properties.md)
+> [Element properties](xref:Element_properties)
 
 #### \[Communication info state\]
 
@@ -103,7 +103,7 @@ This table contains an overview of the different connections. For each connectio
 
 > [!TIP]
 > See also:
-> [Checking the connection state of an element](../elements/Checking_the_connection_state_of_an_element.md)
+> [Checking the connection state of an element](xref:Checking_the_connection_state_of_an_element)
 
 #### DataMiner Connectivity Framework
 
@@ -111,7 +111,7 @@ The DataMiner Connectivity Framework subpage, which can be accessed via the *Con
 
 > [!TIP]
 > See also:
-> [Advanced Connectivity configuration](../../part_3/DCF/Advanced_Connectivity_configuration.md)
+> [Advanced Connectivity configuration](xref:Advanced_Connectivity_configuration)
 
 #### Replication Info
 

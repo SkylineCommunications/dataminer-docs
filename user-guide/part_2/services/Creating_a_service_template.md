@@ -260,7 +260,7 @@ To determine an RCA chain in a service template:
 
 > [!TIP]
 > See also:
-> [Working with the Connectivity Editor](../../part_4/correlation/Working_with_the_Connectivity_Editor.md)
+> [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor)
 
 ### Specifying an SLA in a service template
 
@@ -279,7 +279,7 @@ To do so:
 
 > [!TIP]
 > See also:
-> [DMS Business Intelligence](../../part_4/sla/sla.md#dms-business-intelligence)
+> [DMS Business Intelligence](xref:sla#dms-business-intelligence)
 
 ### Specifying the destination view of a service template
 

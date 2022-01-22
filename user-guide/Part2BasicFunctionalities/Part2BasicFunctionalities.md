@@ -4,24 +4,24 @@ uid: Part2BasicFunctionalities
 
 # Basic DataMiner functionality
 
-- [Alarms](../part_2/alarms/alarms.md)
+- [Alarms](xref:alarms)
 
-- [Elements](../part_2/elements/elements.md)
+- [Elements](xref:elements)
 
-- [Parameters](../part_2/parameters/parameters.md)
+- [Parameters](xref:parameters)
 
-- [Redundancy groups](../part_2/RedundancyGroups/RedundancyGroups.md#redundancy-groups)
+- [Redundancy groups](xref:RedundancyGroups#redundancy-groups)
 
-- [Services and service templates](../part_2/services/services.md#services-and-service-templates)
+- [Services and service templates](xref:services#services-and-service-templates)
 
-- [Views](../part_2/views/views.md)
+- [Views](xref:views)
 
-- [Visio drawings](../part_2/visio/visio.md#visio-drawings)
+- [Visio drawings](xref:visio#visio-drawings)
 
-- [Trending](../part_2/trending/trending.md)
+- [Trending](xref:trending)
 
-- [Protocols and Templates](../part_2/protocols/protocols.md#protocols-and-templates)
+- [Protocols and Templates](xref:protocols#protocols-and-templates)
 
-- [Documents](../part_2/documents/documents.md)
+- [Documents](xref:documents)
 
-- [Chat collaboration](../part_2/chat/chat.md#chat-collaboration)
+- [Chat collaboration](xref:chat#chat-collaboration)

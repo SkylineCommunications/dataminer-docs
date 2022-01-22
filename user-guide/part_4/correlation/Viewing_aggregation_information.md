@@ -8,7 +8,7 @@ To view aggregation rules for a particular view, open the view card in DataMiner
 
 > [!TIP]
 > See also:
-> [View cards](../../part_2/views/View_cards.md).
+> [View cards](xref:View_cards).
 
 The page consists of a header banner and two panes:
 
@@ -45,10 +45,10 @@ To view aggregation data:
     > [!NOTE]
     > Whether you select *TREE* or *TABLE*, the aggregation rules will be shown in a table where each row represents a view, and each column contains the data for one particular rule.
 
-- For any rules that have trending enabled, a trending icon is shown in the table with aggregation rule details. If you have the necessary permission to access trending, you can click the icon to open a window with detailed trending information, similar to the information shown when you drill down on a regular parameter. For more information, see [Accessing trend information from a card](../../part_2/trending/Accessing_trend_information_from_a_card.md).
+- For any rules that have trending enabled, a trending icon is shown in the table with aggregation rule details. If you have the necessary permission to access trending, you can click the icon to open a window with detailed trending information, similar to the information shown when you drill down on a regular parameter. For more information, see [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card).
 
 > [!NOTE]
 > Aggregation information can also be viewed in the Reports & Dashboards module:
-> - For more information on reports, see [DMS Reporter](../reporter/reporter.md#dms-reporter).
-> - For more information on dashboards, see [DMS Dashboards](../dashboards/dashboards.md#dms-dashboards).
+> - For more information on reports, see [DMS Reporter](xref:reporter#dms-reporter).
+> - For more information on dashboards, see [DMS Dashboards](xref:dashboards#dms-dashboards).
 >

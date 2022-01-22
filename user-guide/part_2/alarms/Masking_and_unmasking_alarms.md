@@ -14,7 +14,7 @@ If a device is shut down for maintenance purposes, or if its settings are intent
 
 > [!TIP]
 > See also:
-> [Masking or unmasking an element](../elements/Masking_or_unmasking_an_element.md)
+> [Masking or unmasking an element](xref:Masking_or_unmasking_an_element)
 
 ### Masking an alarm
 
@@ -45,7 +45,7 @@ A new alarm record will be added to the life cycle of the alarm, with *Status* a
 > [!NOTE]
 > - When an alarm is masked, the masked alarm no longer influences the overall alarm status of the element.
 > - When an alarm is masked, any items linked to parameters that are consequentially masked, such as Visio items, LED bars, oscilloscopes, tables etc., will be displayed in purple.
-> - When a row in a monitored table is deleted and then re-added, it can occur that a masked state applied on a cell in that row is lost, even if it was not configured to be masked until cleared. To prevent this, set the *AutoClear* option to false for the alarm in question. See [Setting the autoclear options for alarms in an alarm template](../protocols/Configuring_alarm_templates.md#setting-the-autoclear-options-for-alarms-in-an-alarm-template).
+> - When a row in a monitored table is deleted and then re-added, it can occur that a masked state applied on a cell in that row is lost, even if it was not configured to be masked until cleared. To prevent this, set the *AutoClear* option to false for the alarm in question. See [Setting the autoclear options for alarms in an alarm template](xref:Configuring_alarm_templates#setting-the-autoclear-options-for-alarms-in-an-alarm-template).
 
 ### Unmasking an alarm
 

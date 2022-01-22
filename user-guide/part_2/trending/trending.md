@@ -24,7 +24,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> - [Trending settings](../../part_1/GettingStarted/User_settings.md#trending-settings)
-> - [Linking a shape to a trend component](../visio/Linking_a_shape_to_a_trend_component.md)
-> - [Trend templates](../protocols/Trend_templates.md)
+> - [Trending settings](xref:User_settings#trending-settings)
+> - [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component)
+> - [Trend templates](xref:Trend_templates)
 >

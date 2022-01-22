@@ -28,7 +28,7 @@ The following issues may occur when you try to access the Dashboard Gateway:
 
 - **Login failed with the message: Failed to setup a connection with the DataMiner Agent. User \<Dashboard User Name> has no rights on the DataMiner System.**
 
-    The Dashboard Gateway uses a specific user to communicate with the DataMiner Agent. This user needs to have the necessary rights for all the elements used in the dashboards they need to access. To solve this issue, change the user’s rights so they have access to the elements. See [Configuring a user group](../../part_3/security/Configuring_a_user_group.md).
+    The Dashboard Gateway uses a specific user to communicate with the DataMiner Agent. This user needs to have the necessary rights for all the elements used in the dashboards they need to access. To solve this issue, change the user’s rights so they have access to the elements. See [Configuring a user group](xref:Configuring_a_user_group).
 
 - **DataMiner Maps cannot be accessed via the Dashboard Gateway.**
 

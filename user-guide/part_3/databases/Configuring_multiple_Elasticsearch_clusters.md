@@ -12,13 +12,13 @@ To configure this setup:
 
     - *priorityOrder* attribute: Indicates the priority of the different clusters. The lower the value, the greater the priority. The cluster with the lowest value is the main cluster, from which data will be read.
 
-    - *Hosts*: The hosts of the cluster, separated by commas. This is the equivalent the *DBServer* tag in *DB.xml* (see [Indexing database settings](../../part_7/SkylineDataminerFolder/DB_xml.md#indexing-database-settings))
+    - *Hosts*: The hosts of the cluster, separated by commas. This is the equivalent the *DBServer* tag in *DB.xml* (see [Indexing database settings](xref:DB_xml#indexing-database-settings))
 
-    - *Username*: The username to connect to Elasticsearch. This is the equivalent of the *UID* tag in *DB.xml* (see [Specifying custom credentials for Elasticsearch](../../part_7/SkylineDataminerFolder/DB_xml.md#specifying-custom-credentials-for-elasticsearch)).
+    - *Username*: The username to connect to Elasticsearch. This is the equivalent of the *UID* tag in *DB.xml* (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
 
-    - *Password*: The password to connect to Elasticsearch. This is the equivalent of the *PWD* tag in *DB.xml* (see [Specifying custom credentials for Elasticsearch](../../part_7/SkylineDataminerFolder/DB_xml.md#specifying-custom-credentials-for-elasticsearch)).
+    - *Password*: The password to connect to Elasticsearch. This is the equivalent of the *PWD* tag in *DB.xml* (see [Specifying custom credentials for Elasticsearch](xref:DB_xml#specifying-custom-credentials-for-elasticsearch)).
 
-    - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](../../part_7/SkylineDataminerFolder/DB_xml.md#specifying-a-custom-prefix-for-the-elasticsearch-indexes)).
+    - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-elasticsearch-indexes)).
 
     - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 

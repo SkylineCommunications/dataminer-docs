@@ -11,7 +11,7 @@ In a Cassandra general database, the timetrace table among others contains “sn
 
 > [!TIP]
 > See also:
-> [Configuring how alarm history slider data are kept in a Cassandra database](../../part_7/SkylineDataminerFolder/DB_xml.md#configuring-how-alarm-history-slider-data-are-kept-in-a-cassandra-database)
+> [Configuring how alarm history slider data are kept in a Cassandra database](xref:DB_xml#configuring-how-alarm-history-slider-data-are-kept-in-a-cassandra-database)
 
 #### From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards
 
@@ -31,7 +31,7 @@ To customize this setting:
 
     - A “type” attribute set to “TimeTrace”.
 
-    - A “default” attribute set to the period of time that the data should be kept. For more information on the time format to use, see [Basic syntax of the TTL settings](../../part_7/SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#basic-syntax-of-the-ttl-settings).
+    - A “default” attribute set to the period of time that the data should be kept. For more information on the time format to use, see [Basic syntax of the TTL settings](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#basic-syntax-of-the-ttl-settings).
 
     For example:
 
@@ -66,7 +66,7 @@ To customize this setting:
 
     - If you specify 0, no history slider data will be saved.
 
-    - If you specify -1, history slider data will be saved for the period specified in the monthsToKeep attribute of the Maintenance tag. See [Configuring the maintenance settings](../../part_7/SkylineDataminerFolder/DB_xml.md#configuring-the-maintenance-settings).
+    - If you specify -1, history slider data will be saved for the period specified in the monthsToKeep attribute of the Maintenance tag. See [Configuring the maintenance settings](xref:DB_xml#configuring-the-maintenance-settings).
 
     - If a period of longer than twenty years is specified, DataMiner will limit this to twenty years.
 

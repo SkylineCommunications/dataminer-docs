@@ -8,7 +8,7 @@ It is possible to embed a router control component in Visual Overview.
 
 > [!TIP]
 > See also:
-> [DMS Router Control](../../part_4/RouterControl/RouterControl.md#dms-router-control)
+> [DMS Router Control](xref:RouterControl#dms-router-control)
 
 ### Configuring the shape data fields
 

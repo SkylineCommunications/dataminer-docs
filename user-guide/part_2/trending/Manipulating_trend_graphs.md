@@ -27,5 +27,5 @@ You can change the way data are represented in the main graph area by directly m
 > [!NOTE]
 > - If exceptions occur, these are displayed below the trend graph, while in the graph itself gaps will be displayed.
 > - Gaps are also displayed for zero values or negative values in trend graphs using a logarithmic scale.
-> - Some display settings for trend graphs can be changed in the Cube user settings. See [User settings](../../part_1/GettingStarted/User_settings.md).
+> - Some display settings for trend graphs can be changed in the Cube user settings. See [User settings](xref:User_settings).
 >

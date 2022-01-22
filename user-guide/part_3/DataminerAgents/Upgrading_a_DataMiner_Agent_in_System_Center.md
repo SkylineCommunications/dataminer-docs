@@ -41,7 +41,7 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
    - *Automatically start DMA after startup*: This option is selected by default to ensure that the DataMiner Agent software is started up automatically after the upgrade. If you clear the selection, the DMA will need to be started manually. 
 
-   - *Stop SNMP*: This option is selected by default to ensure that the Windows SNMP Service is stopped before the upgrade procedure starts. If you choose not to stop the Windows SNMP service, it is likely to interfere with the DataMiner SLSNMPAgent process. To prevent interference, you will have to change either the listening port of SLSNMPAgent or the listening port of the Windows SNMP service. See also: [Changing SNMP agent ports](../SNMP/Changing_SNMP_agent_ports.md).
+   - *Stop SNMP*: This option is selected by default to ensure that the Windows SNMP Service is stopped before the upgrade procedure starts. If you choose not to stop the Windows SNMP service, it is likely to interfere with the DataMiner SLSNMPAgent process. To prevent interference, you will have to change either the listening port of SLSNMPAgent or the listening port of the Windows SNMP service. See also: [Changing SNMP agent ports](xref:Changing_SNMP_agent_ports).
 
    - *Reboot After Upgrade*: Select this option if you want the DataMiner Agent(s) to be automatically rebooted at the end of the upgrade procedure.
 

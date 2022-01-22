@@ -11,7 +11,7 @@ In this section:
 - [Exporting elements to a CSV file](#exporting-elements-to-a-csv-file)
 
 > [!NOTE]
-> For more information on importing and exporting elements, services, etc. using .dmimport packages, see [Exporting and importing packages on a DMA](../../part_3/DataminerAgents/Exporting_and_importing_packages_on_a_DMA.md).
+> For more information on importing and exporting elements, services, etc. using .dmimport packages, see [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA).
 
 ### Importing elements from a CSV file
 

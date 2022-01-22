@@ -72,4 +72,4 @@ To configure enforced motivation of alarm actions:
 
 > [!TIP]
 > See also:
-> [Configuring alarm properties to motivate actions](../../part_7/SkylineDataminerFolder/PropertyConfiguration_xml.md#configuring-alarm-properties-to-motivate-actions)
+> [Configuring alarm properties to motivate actions](xref:PropertyConfiguration_xml#configuring-alarm-properties-to-motivate-actions)

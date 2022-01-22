@@ -13,7 +13,7 @@ This section consists of the following topics:
 - [Managing aggregation rules](Managing_aggregation_rules.md)
 
 > [!NOTE]
-> For more information on the Aggregation folder on the server and on how to configure an aggregation rule to ignore exception values on the aggregated parameter, see [Aggregation](../../part_7/SkylineDataminerFolder/Aggregation.md).
+> For more information on the Aggregation folder on the server and on how to configure an aggregation rule to ignore exception values on the aggregated parameter, see [Aggregation](xref:Aggregation).
 
 > [!TIP]
 > See also:

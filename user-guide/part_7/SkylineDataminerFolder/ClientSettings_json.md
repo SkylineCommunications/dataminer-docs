@@ -149,12 +149,12 @@ For example, to have two table parameters cached, specify the following configur
 }
 ```
 
-Up to DataMiner 9.6.11, only the \[Param:\] placeholder in Visual Overview uses data from the cache. However, the subscription filter used for the placeholder needs to match the subscription filter in the configuration minus any “columns=” options. (See [Filtering the data of a cached table parameter](../../part_2/visio/Filtering_the_data_of_a_cached_table_parameter.md).)
+Up to DataMiner 9.6.11, only the \[Param:\] placeholder in Visual Overview uses data from the cache. However, the subscription filter used for the placeholder needs to match the subscription filter in the configuration minus any “columns=” options. (See [Filtering the data of a cached table parameter](xref:Filtering_the_data_of_a_cached_table_parameter).)
 
 > [!NOTE]
 > Make sure that all the required columns are being retrieved when you use the “columns=” option. If this does not match, the cache will not be used.
 
-From DataMiner 9.6.11 onwards, it is also possible to cache table parameters that are configured as matrix parameters in the Router Control module. In this case, the subscription filter you specify must exactly match the subscription filter on the table. (See [Adding a matrix represented by two table parameters](../../part_4/RouterControl/Designing_a_matrix_tab_page_in_the_Router_Control_module.md#adding-a-matrix-represented-by-two-table-parameters).)
+From DataMiner 9.6.11 onwards, it is also possible to cache table parameters that are configured as matrix parameters in the Router Control module. In this case, the subscription filter you specify must exactly match the subscription filter on the table. (See [Adding a matrix represented by two table parameters](xref:Designing_a_matrix_tab_page_in_the_Router_Control_module#adding-a-matrix-represented-by-two-table-parameters).)
 
 The following example illustrates how to configure the caching of an input table and an output table:
 
@@ -182,7 +182,7 @@ The following example illustrates how to configure the caching of an input table
 ```
 
 > [!NOTE]
-> After you update this setting, force a synchronization of the *ClientSettings.json* file in the DataMiner System. See [Forcing synchronization of a file with the DMS](../../part_3/DataminerSystems/Synchronizing_data_between_DataMiner_Agents.md#forcing-synchronization-of-a-file-with-the-dms).
+> After you update this setting, force a synchronization of the *ClientSettings.json* file in the DataMiner System. See [Forcing synchronization of a file with the DMS](xref:Synchronizing_data_between_DataMiner_Agents#forcing-synchronization-of-a-file-with-the-dms).
 
 ### Configuring EPM card behavior based on Surveyor selection
 
@@ -210,7 +210,7 @@ To do so:
 
 ### Enabling or disabling the advanced editing Visio add-in
 
-From DataMiner 9.6.9 onwards, an advanced editing add-in is available in Visio if a Visio file is opened from Visual Overview (see [Using DataMiner features in Visio](../../part_2/visio/Working_with_shape_data_in_Microsoft_Visio.md#using-dataminer-features-in-visio)). In the shared client settings file, it is possible to enable or disable this add-in. To do so:
+From DataMiner 9.6.9 onwards, an advanced editing add-in is available in Visio if a Visio file is opened from Visual Overview (see [Using DataMiner features in Visio](xref:Working_with_shape_data_in_Microsoft_Visio#using-dataminer-features-in-visio)). In the shared client settings file, it is possible to enable or disable this add-in. To do so:
 
 1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
 

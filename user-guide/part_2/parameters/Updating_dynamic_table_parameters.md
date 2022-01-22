@@ -15,4 +15,4 @@ Every dynamic table has its own filter box that allows you to quickly filter out
 
 > [!TIP]
 > See also:
-> [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md)
+> [Using quick filters](xref:Using_quick_filters)

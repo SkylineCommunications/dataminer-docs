@@ -19,15 +19,15 @@ The DataMiner Monitoring & Control app features a user interface similar to that
 - [Monitoring & Control app trending](#monitoring--control-app-trending)
 
 > [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
+> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
 
 > [!NOTE]
 > From DataMiner 9.0 onwards, the Monitoring & Control app is no longer compatible with Internet Explorer version 8 or lower.
 
 > [!TIP]
 > See also:
-> - [Accessing the legacy Monitoring & Control app](../DataminerApplications/Accessing_the_legacy_Monitoring_Control_app.md#accessing-the-legacy-monitoring--control-app)
-> - [DMS Mobile Gateway](../../part_4/MobileGateway/MobileGateway.md#dms-mobile-gateway)
+> - [Accessing the legacy Monitoring & Control app](xref:Accessing_the_legacy_Monitoring_Control_app#accessing-the-legacy-monitoring--control-app)
+> - [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
 
 ### Monitoring & Control app header bar
 
@@ -49,7 +49,7 @@ The collapsible navigation pane contains a search box, as well as the following 
 | ![](../../images/Icon_mobile_surveyor.png) | Use this icon to access the Surveyor pane. This pane contains a tree view similar to that in the DataMiner Cube Surveyor.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ![](../../images/Icon_mobile_recent.png)     | Use this icon to access a list of recently accessed elements, services or views. This list is stored server-side, and also contains any recent and pinned items from DataMiner Cube. <br> Use the pin icon to place items in the *Pinned* section at the top of the list, and the x icon to remove any pinned items from this section.                                                                                                                                                                                                         |
 | ![](../../images/Icon_mobile_nearby.png)     | Use this icon to access a list of nearby items.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ![](../../images/Icon_mobile_apps.png)         | Use this icon to access the legacy Reports & Dashboards module or the Trending module.<br> -  For more information on Reports & Dashboards, see [DMS Reporter](../../part_4/reporter/reporter.md#dms-reporter) and [DMS Dashboards](../../part_4/dashboards/dashboards.md#dms-dashboards).<br> -  For more information on trending in the Monitoring & Control app, see [Monitoring & Control app trending](#monitoring--control-app-trending). |
+| ![](../../images/Icon_mobile_apps.png)         | Use this icon to access the legacy Reports & Dashboards module or the Trending module.<br> -  For more information on Reports & Dashboards, see [DMS Reporter](xref:reporter#dms-reporter) and [DMS Dashboards](xref:dashboards#dms-dashboards).<br> -  For more information on trending in the Monitoring & Control app, see [Monitoring & Control app trending](#monitoring--control-app-trending). |
 
 ### Monitoring & Control app Alarm Console
 
@@ -94,7 +94,7 @@ For view cards:
 
 For CPE cards:
 
-- The layout of CPE cards is similar to the layout of such cards in DataMiner Cube. See [Working with the Experience and Performance Management interface](../../part_4/EPM/Working_with_the_Experience_and_Performance_Management_interface.md).
+- The layout of CPE cards is similar to the layout of such cards in DataMiner Cube. See [Working with the Experience and Performance Management interface](xref:Working_with_the_Experience_and_Performance_Management_interface).
 
 - The side panel contains filters that can be used to drill down to specific items.
 

@@ -6,31 +6,31 @@ uid: Part1GettingStarted
 
 ### Get to know the basics
 
-- [Basic concepts](../part_1/BasicConcepts/BasicConcepts.md#basic-concepts)
-- [DataMiner System layout](../part_1/GeneralLayout/GeneralLayout.md#dataminer-system-layout)
-- [Accessing DataMiner](../part_1/DataminerApplications/DataminerApplications.md#accessing-dataminer)
-- [The DataMiner user interface](../part_1/GettingStarted/GettingStarted.md#the-dataminer-user-interface)
+- [Basic concepts](xref:BasicConcepts#basic-concepts)
+- [DataMiner System layout](xref:GeneralLayout#dataminer-system-layout)
+- [Accessing DataMiner](xref:DataminerApplications#accessing-dataminer)
+- [The DataMiner user interface](xref:GettingStarted#the-dataminer-user-interface)
 
 ### Discover DataMiner in detail
 
-- [Basic DataMiner functionality](../Part2BasicFunctionalities/Part2BasicFunctionalities.md#basic-dataminer-functionality)
+- [Basic DataMiner functionality](xref:Part2BasicFunctionalities#basic-dataminer-functionality)
 
 ### More on specific DataMiner modules
 
-- [Advanced DataMiner modules](../Part4AdvancedModules/Part4AdvancedModules.md#advanced-dataminer-modules)
+- [Advanced DataMiner modules](xref:Part4AdvancedModules#advanced-dataminer-modules)
 
 ### Discover our DataMiner Standard Apps
 
-- [DataMiner Standard Apps](../Part5StandardApps/Part5StandardApps.md#dataminer-standard-apps)
+- [DataMiner Standard Apps](xref:Part5StandardApps#dataminer-standard-apps)
 
 ### Are you a DataMiner Administrator?
 
-- [Advanced DataMiner functionality for administrators](../Part3AdvancedFunctionalities/Part3AdvancedFunctionalities.md#advanced-dataminer-functionality-for-administrators)
-- [Reference](../Part7Reference/Part7Reference.md#reference)
+- [Advanced DataMiner functionality for administrators](xref:Part3AdvancedFunctionalities#advanced-dataminer-functionality-for-administrators)
+- [Reference](xref:Part7Reference#reference)
 
 ### Looking to solve a problem?
 
-- [Troubleshooting](../Part6Troubleshooting/Part6Troubleshooting.md#troubleshooting)
+- [Troubleshooting](xref:Part6Troubleshooting#troubleshooting)
 
 > [!NOTE]
 > For video demonstrations by subject-matter experts, practical use cases, and much more, go to:<br/><https://community.dataminer.services/videos/>.

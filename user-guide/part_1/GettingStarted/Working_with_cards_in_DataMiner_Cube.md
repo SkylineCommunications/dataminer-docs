@@ -32,27 +32,27 @@ There are many different types of cards, such as:
 
 - Element cards
 
-    For more information on element cards, see [Element cards](../../part_2/elements/Element_cards.md).
+    For more information on element cards, see [Element cards](xref:Element_cards).
 
 - Service cards
 
-    For more information on service cards, see [Service cards](../../part_2/services/Service_cards.md).
+    For more information on service cards, see [Service cards](xref:Service_cards).
 
 - View cards
 
-    For more information on view cards, see [View cards](../../part_2/views/View_cards.md).
+    For more information on view cards, see [View cards](xref:View_cards).
 
 - Alarm cards
 
-    For more information on alarm cards, see [Alarm cards](../../part_2/alarms/Alarm_cards.md).
+    For more information on alarm cards, see [Alarm cards](xref:Alarm_cards).
 
 - User cards
 
-    For more information on user cards, see [Managing users](../../part_3/security/Managing_users.md).
+    For more information on user cards, see [Managing users](xref:Managing_users).
 
 - Spectrum analyzer cards
 
-Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or CPE Manager cards (see [DMS Experience and Performance Management](../../part_4/EPM/EPM.md#dms-experience-and-performance-management)).
+Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or CPE Manager cards (see [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)).
 
 ### Card navigation pane
 
@@ -68,7 +68,7 @@ The pane consists of a tree view with several fixed nodes:
     > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
     > - As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](User_settings.md#visual-overview-settings).
     > - If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
-    > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md) and [DisableZoom](../../part_2/visio/Overview_of_page_and_shape_options.md).
+    > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](xref:Overview_of_page_and_shape_options) and [DisableZoom](xref:Overview_of_page_and_shape_options).
 
 - **DATA**: Contains all available Data Display pages.
 
@@ -81,7 +81,7 @@ The pane consists of a tree view with several fixed nodes:
 - **ALARMS**: Displays an overview of all alarms on the selected item.
 
     > [!NOTE]
-    > If this page is open, the card’s header bar menu contains an additional item, *Alarm Console*, with the same settings as in the Alarm Console menu. For more information, see [Alarm Console settings](../../part_2/alarms/Working_with_the_Alarm_Console.md#alarm-console-settings).
+    > If this page is open, the card’s header bar menu contains an additional item, *Alarm Console*, with the same settings as in the Alarm Console menu. For more information, see [Alarm Console settings](xref:Working_with_the_Alarm_Console#alarm-console-settings).
 
 - **REPORTS**: Displays graphical reports of the alarm distribution, alarm events, alarm states, and alarms on a timeline.
 
@@ -127,9 +127,9 @@ When you click the hamburger button in the top-left corner of a card, a shortcut
 
 - **Close card**: Closes the card in question.
 
-- **Device discovery**: Only available on view cards. See [Locating devices in your system to add to your DMS](../../part_2/elements/Locating_devices_in_your_system_to_add_to_your_DMS.md).
+- **Device discovery**: Only available on view cards. See [Locating devices in your system to add to your DMS](xref:Locating_devices_in_your_system_to_add_to_your_DMS).
 
-- **Visual overview**: Allows you to set different Visio files for the card’s Visual Overview pages. See [Switching between different Visio files](../../part_2/protocols/Managing_Visio_files_linked_to_protocols.md#switching-between-different-visio-files).
+- **Visual overview**: Allows you to set different Visio files for the card’s Visual Overview pages. See [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
 
 - **Close other cards**: Closes all cards except the one you have clicked.
 

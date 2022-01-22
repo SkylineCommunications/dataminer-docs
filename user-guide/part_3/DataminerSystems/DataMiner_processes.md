@@ -76,10 +76,10 @@ Controls all communication among DataMiner Agents, and between DataMiner Agents 
 
 > [!TIP]
 > See also:
-> [Configuring SLNet settings in MaintenanceSettings.xml](../DataminerAgents/Configuration_of_DataMiner_processes.md#configuring-slnet-settings-in-maintenancesettingsxml)
+> [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
 
 > [!NOTE]
-> Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway and before it is processed further. In the SLNetClientTest tool, several options are available related to the trend cache. However, note that this is an advanced system administration tool that should be used with extreme care. See [Configuring trend caching](../../part_7/DataminerTools/SLNetClientTest_tool_advanced_procedures.md#configuring-trend-caching).
+> Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway and before it is processed further. In the SLNetClientTest tool, several options are available related to the trend cache. However, note that this is an advanced system administration tool that should be used with extreme care. See [Configuring trend caching](xref:SLNetClientTest_tool_advanced_procedures#configuring-trend-caching).
 
 #### SLPort
 
@@ -88,14 +88,14 @@ Controls all communication from and to devices connected to either a serial port
 Types of communication controlled by this process include serial, smart-serial, GPIB and OPC.
 
 > [!NOTE]
-> Multiple SLPort processes can run simultaneously. See [Setting the number of simultaneously running SLPort processes](../DataminerAgents/Configuration_of_DataMiner_processes.md#setting-the-number-of-simultaneously-running-slport-processes).
+> Multiple SLPort processes can run simultaneously. See [Setting the number of simultaneously running SLPort processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slport-processes).
 
 #### SLProtocol
 
 Executes the instructions specified in DataMiner protocols.
 
 > [!NOTE]
-> Multiple SLProtocol processes can run simultaneously. See [Setting the number of simultaneously running SLProtocol processes](../DataminerAgents/Configuration_of_DataMiner_processes.md#setting-the-number-of-simultaneously-running-slprotocol-processes).
+> Multiple SLProtocol processes can run simultaneously. See [Setting the number of simultaneously running SLProtocol processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slprotocol-processes).
 
 #### SLSNMPManager
 
@@ -103,7 +103,7 @@ Controls all communication from and to SNMP devices acting as SNMP agents.
 
 > [!TIP]
 > See also:
-> [Interaction between SNMP manager and SNMP agent](../SNMP/Interaction_between_SNMP_manager_and_SNMP_agent.md)
+> [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)
 
 #### SLWatchdog
 
@@ -117,8 +117,8 @@ It also keeps track of a number of key performance indicators.
 
 > [!TIP]
 > See also:
-> - [SLWatchdog](../DataminerAgents/Configuration_of_DataMiner_processes.md#slwatchdog)
-> - [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml)
+> - [SLWatchdog](xref:Configuration_of_DataMiner_processes#slwatchdog)
+> - [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 
 ### Auxiliary DMA software components
 
@@ -133,7 +133,7 @@ This process is introduced in DataMiner 9.0, and only starts on a DMA that uses 
 The process supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection and alarm focus calculation.
 
 > [!NOTE]
-> Prior to DataMiner 9.5.5, it is possible to configure when prediction models are backed up, in the file *SLAnalytics.config*. However, from DataMiner 9.5.5 onwards, prediction models are no longer backed up, but instead retrieved from a cache and re-computed in case they are not available in the cache. For more information, see [SLAnalytics.config](../../part_7/SkylineDataminerFolder/SLAnalytics_config.md#slanalyticsconfig).
+> Prior to DataMiner 9.5.5, it is possible to configure when prediction models are backed up, in the file *SLAnalytics.config*. However, from DataMiner 9.5.5 onwards, prediction models are no longer backed up, but instead retrieved from a cache and re-computed in case they are not available in the cache. For more information, see [SLAnalytics.config](xref:SLAnalytics_config#slanalyticsconfig).
 
 #### SLASPConnection
 
@@ -141,10 +141,10 @@ The DMS Reporter process.
 
 > [!TIP]
 > See also:
-> [DMS Reporter](../../part_4/reporter/reporter.md#dms-reporter)
+> [DMS Reporter](xref:reporter#dms-reporter)
 
 > [!NOTE]
-> - Timeline data that are received from SLDataGateway or directly from a MySQL database are cached in the SLASPConnection process. Some caching options can be configured in *MaintenanceSettings.xml*. See [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
+> - Timeline data that are received from SLDataGateway or directly from a MySQL database are cached in the SLASPConnection process. Some caching options can be configured in *MaintenanceSettings.xml*. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).
 > - You can also find more information and settings for timeline caching at <br>*http(s)://\[DmaIp\]/Reports/Tools.asp*:
 >     - The page displays timeline cache statistics and list contents.
 >     - The expiration time, grace time and maximum number of records can be set here, but only for the current session. These settings can be permanently changed in *MaintenanceSettings.xml*.
@@ -159,7 +159,7 @@ The DMS Automation process.
 
 > [!TIP]
 > See also:
-> [DMS Automation](../../part_4/automation/automation.md#dms-automation)
+> [DMS Automation](xref:automation#dms-automation)
 
 #### SLBrain
 
@@ -167,7 +167,7 @@ The DMS Correlation process.
 
 > [!TIP]
 > See also:
-> [DMS Correlation](../../part_4/correlation/correlation.md#dms-correlation)
+> [DMS Correlation](xref:correlation#dms-correlation)
 
 #### SLGSMGateway
 
@@ -177,7 +177,7 @@ Sends and receives SMS messages (i.e. text messages).
 
 > [!TIP]
 > See also:
-> [DMS Mobile Gateway](../../part_4/MobileGateway/MobileGateway.md#dms-mobile-gateway)
+> [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
 
 #### SLHelper
 
@@ -212,7 +212,7 @@ Also sends all outgoing email notifications.
 
 > [!TIP]
 > See also:
-> [Interaction between SNMP manager and SNMP agent](../SNMP/Interaction_between_SNMP_manager_and_SNMP_agent.md)
+> [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)
 
 #### SLSpectrum
 
@@ -222,7 +222,7 @@ Also manages the time slots assigned to each of the clients that want to use a p
 
 > [!TIP]
 > See also:
-> [DMS Spectrum Analysis](../../part_4/SpectrumAnalysis/SpectrumAnalysis.md#dms-spectrum-analysis)
+> [DMS Spectrum Analysis](xref:SpectrumAnalysis#dms-spectrum-analysis)
 
 #### SLTaskBarUtility
 

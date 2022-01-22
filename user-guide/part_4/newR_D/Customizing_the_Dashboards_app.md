@@ -9,7 +9,7 @@ The following advanced customization is possible for the redesigned Dashboards a
 - [Configuring the maximum JSON length](#configuring-the-maximum-json-length)
 
 > [!NOTE]
-> This customization does not influence the legacy Dashboards app. For information on advanced settings to customize the legacy app, see [Customizing the legacy Dashboards app](../dashboards/Customizing_the_legacy_Dashboards_app.md).
+> This customization does not influence the legacy Dashboards app. For information on advanced settings to customize the legacy app, see [Customizing the legacy Dashboards app](xref:Customizing_the_legacy_Dashboards_app).
 
 ### Configuring the maximum JSON length
 

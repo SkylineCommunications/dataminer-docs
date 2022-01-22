@@ -23,5 +23,5 @@ Signal paths in which filtered internal connections are combined with unfiltered
 - External connections (without filter) are highlighted only if they are connected to an internal connection that matches the filter.
 
 > [!NOTE]
-> For more information on how to configure filters on a connectivity chain, see [Editing element connections in the Properties window](../../part_3/DCF/Editing_element_connections_in_the_Properties_window.md).
+> For more information on how to configure filters on a connectivity chain, see [Editing element connections in the Properties window](xref:Editing_element_connections_in_the_Properties_window).
 >

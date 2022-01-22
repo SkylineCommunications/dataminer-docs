@@ -14,7 +14,7 @@ The term “virtual element” is used for two different kinds of elements:
 
 When a redundancy group is created, for each of the primary elements a virtual element is created. The virtual element will either represent the corresponding primary element or its backup, depending on which is operational. Typically these elements will have names surrounded by curly brackets, e.g. {Virtual Element 1}.
 
-For more information, see [About redundancy groups](../RedundancyGroups/About_redundancy_groups.md).
+For more information, see [About redundancy groups](xref:About_redundancy_groups).
 
 ### Virtual elements used for element connections
 

@@ -28,7 +28,7 @@ In the parent DVE, all child DVEs are indicated as rows in a table. If a row is 
 
 > [!TIP]
 > See also:
-> [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc)
+> [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 
 New child DVEs will be added in the same view as the parent DVE, except if a view column has been specified in the DVE protocol. If there is a view column:
 

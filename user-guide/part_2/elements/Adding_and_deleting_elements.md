@@ -31,7 +31,7 @@ In this section:
 
         > [!NOTE]
         > - The name of the element can be changed at any time. The element is uniquely identified by its ID, which is a combination of the DMA ID of the DMA where the element is originally created and the ID of the element itself.
-        > - If you change the element name, make sure the new name provides clear information to the DMS operators. See [Naming of elements, services, views, etc.](../../part_7/NamingConventions/NamingConventions.md#naming-of-elements-services-views-etc).
+        > - If you change the element name, make sure the new name provides clear information to the DMS operators. See [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc).
 
     - **Description**: A brief description of the element.
 
@@ -39,7 +39,7 @@ In this section:
 
     - **Protocol**: The name of the protocol via which the DMA will be communicating with the element.
 
-        This selection box contains all DMS protocols available in the DMS. If you do not find the protocol you need, you will first have to add it. See [Protocols and Templates](../protocols/protocols.md#protocols-and-templates).
+        This selection box contains all DMS protocols available in the DMS. If you do not find the protocol you need, you will first have to add it. See [Protocols and Templates](xref:protocols#protocols-and-templates).
 
     - **Version**: The version of the protocol via which the DMA will be communicating with the element.
 
@@ -51,7 +51,7 @@ In this section:
 
         - The option to add a new alarm template with *\<Add alarm template>*.
 
-            If you select this option, you will be able to create an alarm template in the same way as in the Protocols & Templates module, but embedded within the element editor. For more information, see [Creating an alarm template](../protocols/Managing_alarm_templates.md#creating-an-alarm-template).
+            If you select this option, you will be able to create an alarm template in the same way as in the Protocols & Templates module, but embedded within the element editor. For more information, see [Creating an alarm template](xref:Managing_alarm_templates#creating-an-alarm-template).
 
         - The default alarm template called *\<No Monitoring>*.
 
@@ -63,7 +63,7 @@ In this section:
 
         - The option to add a new trend template with *\<Add trend template>*.
 
-            If you select this option, you will be able to create a trend template in the same way as in the Protocols & Templates module, but embedded within the element editor. For more information, see [Creating a trend template](../protocols/Adding_and_deleting_trend_templates.md#creating-a-trend-template).
+            If you select this option, you will be able to create a trend template in the same way as in the Protocols & Templates module, but embedded within the element editor. For more information, see [Creating a trend template](xref:Adding_and_deleting_trend_templates#creating-a-trend-template).
 
         - The default trend template called *\<No Trending>*.
 
@@ -87,7 +87,7 @@ In this section:
 
         - **Port number**: By default 161.
 
-        - **Use credentials**: From DataMiner 9.5.5 onwards, if predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](../../part_3/security/Managing_predefined_sets_of_credentials_for_SNMP_authentication.md).
+        - **Use credentials**: From DataMiner 9.5.5 onwards, if predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication).
 
         - **Get community string**: The community string used when reading values from the device. The default value, unless overridden in the protocol, is *public*.
 
@@ -103,7 +103,7 @@ In this section:
 
         - **Port number**: By default 161.
 
-        - **Use credentials**: From DataMiner 9.5.5 onwards, if predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](../../part_3/security/Managing_predefined_sets_of_credentials_for_SNMP_authentication.md).
+        - **Use credentials**: From DataMiner 9.5.5 onwards, if predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication).
 
         - **Security level and protocol**: Select one of the following three levels in the drop-down list:
 
@@ -189,10 +189,10 @@ In this section:
 
             > [!NOTE]
             > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
-            > - This feature is supported from DataMiner 10.0.2 onwards for smart-serial elements acting as server. However, note that the system must be configured to support this encryption. See [Enabling TLS encryption](../../part_3/security/Enabling_TLS_encryption.md).
+            > - This feature is supported from DataMiner 10.0.2 onwards for smart-serial elements acting as server. However, note that the system must be configured to support this encryption. See [Enabling TLS encryption](xref:Enabling_TLS_encryption).
             > - From DataMiner 10.0.3 onwards, this feature is also supported in case DataMiner acts as the serial client. No further configuration is required in this case.
 
-    - For a **GPIB** connection, see [Configuring the GPIB settings of a spectrum analyzer element](../../part_4/SpectrumAnalysis/Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element.md).
+    - For a **GPIB** connection, see [Configuring the GPIB settings of a spectrum analyzer element](xref:Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element).
 
     - For a **WebSocket** connection (available from DataMiner 9.5.3 onwards):
 
@@ -250,8 +250,8 @@ In this section:
 
         > [!TIP]
         > See also:
-        > - [Enabling the virtual SNMP agent of an element](../../part_3/SNMP/Enabling_the_virtual_SNMP_agent_of_an_element.md)
-        > - [Forcing a DataMiner Agent to work without virtual IP addresses](../../part_3/DataminerAgents/General_DMA_configuration.md#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses)
+        > - [Enabling the virtual SNMP agent of an element](xref:Enabling_the_virtual_SNMP_agent_of_an_element)
+        > - [Forcing a DataMiner Agent to work without virtual IP addresses](xref:General_DMA_configuration#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses)
 
     - **Hidden**: Select this checkbox if you want the element to be hidden.
 

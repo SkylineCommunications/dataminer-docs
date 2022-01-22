@@ -8,7 +8,7 @@ DataMiner Cube provides a wizard that can be used to automatically detect device
 
 > [!NOTE]
 > - The Device Discovery wizard requires a network discovery element using the Production version of the protocol *Skyline IP Network Discovery*.
-> - Alternatively, advanced element discovery and provisioning is possible with the IDP Solution. See [DataMiner IDP app](../../part_5/SolIDP/SolIDP.md#dataminer-idp-app).
+> - Alternatively, advanced element discovery and provisioning is possible with the IDP Solution. See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app).
 
 To find devices and create elements with the Device Discovery wizard:
 

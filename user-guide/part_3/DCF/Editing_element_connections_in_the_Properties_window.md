@@ -13,7 +13,7 @@ To edit the connections for an element that has in/out interfaces defined in its
 3. In the *State* column, select either *Not connected* to disconnect an input/output, or select *Connected to* to create a connection.
 
     > [!NOTE]
-    > To quickly find a particular input or output, use the quick filter in the top right corner. See [Using quick filters](../../part_1/GettingStarted/Using_quick_filters.md).
+    > To quickly find a particular input or output, use the quick filter in the top right corner. See [Using quick filters](xref:Using_quick_filters).
 
 4. To create an internal connection, click in the *interface* column and select the interface to connect to.
 
@@ -31,7 +31,7 @@ To edit the connections for an element that has in/out interfaces defined in its
 6. Optionally, add a filter in the *filter* column.
 
     > [!NOTE]
-    > This filter is a name that you can give to several connections that form a path. The filter can then be used to for instance highlight a path composed of connections with the same filter in a Visual Overview drawing. See also [Highlighting a connection chain based on a filter shape](../../part_2/visio/Highlighting_a_connection_chain_based_on_a_filter_shape.md).
+    > This filter is a name that you can give to several connections that form a path. The filter can then be used to for instance highlight a path composed of connections with the same filter in a Visual Overview drawing. See also [Highlighting a connection chain based on a filter shape](xref:Highlighting_a_connection_chain_based_on_a_filter_shape).
 
 7. When all the necessary connections have been configured, click the *Apply* button.
 

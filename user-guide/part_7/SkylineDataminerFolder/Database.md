@@ -16,7 +16,7 @@ This subfolder is present from DataMiner 9.5.9 onwards. It contains a number of 
 
 - DBConfiguration.xml (not added automatically)
 
-    See [Configuring multiple Elasticsearch clusters](../../part_3/databases/Configuring_multiple_Elasticsearch_clusters.md) and [Configuring a size limit for file offloads](../../part_3/databases/Configuring_a_size_limit_for_file_offloads.md)
+    See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) and [Configuring a size limit for file offloads](xref:Configuring_a_size_limit_for_file_offloads)
 
 - DBMaintenance.xml
 

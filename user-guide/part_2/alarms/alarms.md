@@ -18,4 +18,4 @@ Information on DataMiner alarm functionality is divided over the following secti
 
 > [!TIP]
 > See also:
-> [Alarm templates](../protocols/Alarm_templates.md)
+> [Alarm templates](xref:Alarm_templates)

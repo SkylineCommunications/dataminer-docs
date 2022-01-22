@@ -17,4 +17,4 @@ DMAs can send notifications toward client applications by means of two different
 
 > [!TIP]
 > See also:
-> [Configuring client communication settings](../DataminerAgents/DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings)
+> [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)

@@ -28,4 +28,4 @@ To add a document, link or email address:
 > To delete a document, hyperlink or email address, right-click the item in question and select *Delete*.
 
 > [!CAUTION]
-> If documents are larger than a particular maximum size, they are not synchronized in a DataMiner System. For such documents we advise to use a UNC path to a network share.<br> By default, the maximum size is set to 20 MB, but this can be customized. See [MaintenanceSettings.xml](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#maintenancesettingsxml).
+> If documents are larger than a particular maximum size, they are not synchronized in a DataMiner System. For such documents we advise to use a UNC path to a network share.<br> By default, the maximum size is set to 20 MB, but this can be customized. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).

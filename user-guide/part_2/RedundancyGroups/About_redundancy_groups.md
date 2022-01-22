@@ -11,7 +11,7 @@ In DataMiner Cube, redundancy groups are listed in the Surveyor with a specific 
 Redundancy groups have specific context menu options in the Surveyor. They also have corresponding redundancy group cards, which contain both status information and configuration options.
 
 > [!NOTE]
-> To quickly find a redundancy group in the Surveyor, search with the term “redundancy”, followed by a space and part of the redundancy group name. See [Searching in DataMiner Cube](../../part_1/GettingStarted/Searching_in_DataMiner_Cube.md).
+> To quickly find a redundancy group in the Surveyor, search with the term “redundancy”, followed by a space and part of the redundancy group name. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
 The following topics explain more about how redundancy groups work:
 

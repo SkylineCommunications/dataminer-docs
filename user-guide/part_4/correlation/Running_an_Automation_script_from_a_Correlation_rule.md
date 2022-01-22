@@ -15,7 +15,7 @@ To run an Automation script from a Correlation rule:
     > [!NOTE]
     > To dynamically pass the element that triggers the Correlation rule to the Automation script, in the drop-down list for the relevant dummy element, select *\<Dynamic>*.
 
-4. Optionally, specify the options for running the script. For more information, see [Running Automation scripts](../automation/Running_Automation_scripts.md).
+4. Optionally, specify the options for running the script. For more information, see [Running Automation scripts](xref:Running_Automation_scripts).
 
 5. Click the second underlined field and specify the DMA where the script should be run. If you do not specify a DMA, the DMA is automatically selected by the Correlation engine.
 
@@ -28,5 +28,5 @@ To run an Automation script from a Correlation rule:
     - **Evaluate script parameter values**: Select this option to allow placeholders in script parameter values. For more information, see [Correlation rule syntax](Correlation_rule_syntax.md).
 
 > [!NOTE]
-> To pass information about the alarm that triggered the Correlation rule to the script, you can use the special parameters with ID 65005 and 65006. For more detailed information, see [Special parameters available in DMS Automation scripts](../automation/Special_parameters_available_in_DMS_Automation_scripts.md).
+> To pass information about the alarm that triggered the Correlation rule to the script, you can use the special parameters with ID 65005 and 65006. For more detailed information, see [Special parameters available in DMS Automation scripts](xref:Special_parameters_available_in_DMS_Automation_scripts).
 >

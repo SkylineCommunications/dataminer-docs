@@ -6,7 +6,7 @@ uid: Alarm_cards
 
 An alarm card shows detailed information about an alarm. To open an alarm card, right-click an alarm in the Alarm Console, and select *Open \> Alarm Card*.
 
-If the user setting *Alarm double-click action* is set to *Open alarm card*, you can also simply double-click the alarm in the Alarm Console. See [Alarm Console settings](../../part_1/GettingStarted/User_settings.md#alarm-console-settings).
+If the user setting *Alarm double-click action* is set to *Open alarm card*, you can also simply double-click the alarm in the Alarm Console. See [Alarm Console settings](xref:User_settings#alarm-console-settings).
 
 Alarm cards consist of three panes:
 
@@ -41,7 +41,7 @@ At the bottom of the alarm card, there can be several buttons:
 | Forced release ownership | Forces the ownership of an alarm to be released, if a different user has previously claimed ownership. See [Changing ownership of alarms](Changing_ownership_of_alarms.md).                                                                     |
 | Add comment              | Allows you to add a comment, for instance to communicate important information to other users. See [Adding comments to an alarm](Adding_comments_to_an_alarm.md).                                                                               |
 | Send by SMS              | Forwards an alarm record by SMS.                                                                                                                                                                                                                |
-| View connectivity        | Displays the connectivity chains of which the element is a part (one tab per chain). For more information on connectivity chains, see [Working with the Connectivity Editor](../../part_4/correlation/Working_with_the_Connectivity_Editor.md). |
+| View connectivity        | Displays the connectivity chains of which the element is a part (one tab per chain). For more information on connectivity chains, see [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
 
 > [!NOTE]
 > If a particular functionality is not available for an alarm, the button in question will not be displayed.

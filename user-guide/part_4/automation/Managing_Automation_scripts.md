@@ -111,5 +111,5 @@ You can change the name of a folder in the following ways:
     Alternatively, you can also select the folder or script, click the More... button at the bottom of the pane, and select the *Import* or *Export* option there.
 
 > [!NOTE]
-> To import Automation scripts, you need the user permission *Automation: Add*. To export Automation scripts, you need the user permission *Automation: Edit*. See [DataMiner user permissions](../../part_3/security/DataMiner_user_permissions.md).
+> To import Automation scripts, you need the user permission *Automation: Add*. To export Automation scripts, you need the user permission *Automation: Edit*. See [DataMiner user permissions](xref:DataMiner_user_permissions).
 >

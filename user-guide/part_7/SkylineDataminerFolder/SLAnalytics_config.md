@@ -8,7 +8,7 @@ Prior to DataMiner 9.5.5, this file is used to configure settings for the SLAnal
 
 > [!TIP]
 > See also:
-> [SLAnalytics](../../part_3/DataminerSystems/DataMiner_processes.md#slanalytics)
+> [SLAnalytics](xref:DataMiner_processes#slanalytics)
 
 > [!NOTE]
 > Changes made to the *SLAnalytics.config* file only take effect after a DataMiner restart.

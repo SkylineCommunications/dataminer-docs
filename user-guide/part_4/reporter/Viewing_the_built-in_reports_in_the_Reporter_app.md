@@ -13,7 +13,7 @@ To view the built-in reports in the Reporter app:
 - To go directly to a particular type of built-in report, use that report’s URL as indicated below. Note that depending on your setup, you may need to use https instead of http in the indicated URLs.
 
     > [!CAUTION]
-    > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
+    > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
 
 In the navigation menu on the left, you can see an overview of the available reports and dashboards. The four pages at the top of the navigation menu contain the built-in reports: System, Element, Service and Business. With the view filter in the top-right corner, you can display information for certain views only.
 

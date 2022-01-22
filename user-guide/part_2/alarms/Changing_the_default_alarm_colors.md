@@ -34,7 +34,7 @@ In the *DataMiner.xml* file, you can specify the colors you want to assign to ea
 > [!TIP]
 > See also:
 > - [Alarm severity levels](Alarm_types.md#alarm-severity-levels)
-> - [DataMiner.xml](../../part_7/SkylineDataminerFolder/DataMiner_xml.md#dataminerxml)
+> - [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 
 #### Example
 

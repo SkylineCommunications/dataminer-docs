@@ -6,7 +6,7 @@ uid: Sharing_DataMiner_data_with_third_parties
 
 There are many ways in which you can make your DataMiner System share information (real-time device readings, fault data, performance data, etc.) with third parties.
 
-DataMiner Sharing allows you to share particular information via the DataMiner Cloud Platform. However, at present this feature is still in preview. See [DataMiner Sharing](../../part_51/Sharing/Sharing.md#dataminer-sharing).
+DataMiner Sharing allows you to share particular information via the DataMiner Cloud Platform. However, at present this feature is still in preview. See [DataMiner Sharing](xref:Sharing#dataminer-sharing).
 
 In addition, several other DataMiner applications feature data sharing possibilities. Depending on the exact requirements, consider the following architectures and capabilities:
 
@@ -18,8 +18,8 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> - [Configuring client communication settings](../DataminerAgents/DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings)
-> - [Security](../security/security.md)
+> - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
+> - [Security](xref:security)
 
 #### DataMiner Monitoring app
 
@@ -31,9 +31,9 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> - [The Monitoring app user interface](../../part_1/GettingStarted/The_Monitoring_app_user_interface.md)
-> - [The legacy Monitoring & Control app user interface](../../part_1/GettingStarted/The_legacy_Monitoring_Control_app_user_interface.md#the-legacy-monitoring--control-app-user-interface)
-> - [Security](../security/security.md)
+> - [The Monitoring app user interface](xref:The_Monitoring_app_user_interface)
+> - [The legacy Monitoring & Control app user interface](xref:The_legacy_Monitoring_Control_app_user_interface#the-legacy-monitoring--control-app-user-interface)
+> - [Security](xref:security)
 
 #### DataMiner Reports
 
@@ -43,7 +43,7 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> [DMS Reporter](../../part_4/reporter/reporter.md#dms-reporter)
+> [DMS Reporter](xref:reporter#dms-reporter)
 
 > [!NOTE]
 > DataMiner Reports & Dashboards requires an optional license.
@@ -56,7 +56,7 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> [Legacy Dashboard Gateway installation](../../part_4/dashboards/Legacy_Dashboard_Gateway_installation.md)
+> [Legacy Dashboard Gateway installation](xref:Legacy_Dashboard_Gateway_installation)
 
 > [!NOTE]
 > Both DataMiner Reports & Dashboards and DataMiner Dashboard Gateway require an optional license.
@@ -93,4 +93,4 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> [Replicated elements](../../part_2/elements/Replicated_elements.md)
+> [Replicated elements](xref:Replicated_elements)

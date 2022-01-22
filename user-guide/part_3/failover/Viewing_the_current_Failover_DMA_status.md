@@ -21,7 +21,7 @@ This will open the *Status* dialog box, which displays a number of status parame
 > [!NOTE]
 > - For some of these parameters, extra information can be displayed. E.g. for heartbeats or DB sync, you will also see the “last success” time and, in case of failure, the reason for that failure.
 > - If no status information can be retrieved from a DMA, you will notice an *Agent Status* item with the value “Unreachable”.
-> - If a Cassandra database is used, and both database nodes are down, the system will fall back to file offloading. See also: [Switching to Cassandra in a Failover setup](../databases/Migrating_the_general_database_to_Cassandra.md#switching-to-cassandra-in-a-failover-setup).
+> - If a Cassandra database is used, and both database nodes are down, the system will fall back to file offloading. See also: [Switching to Cassandra in a Failover setup](xref:Migrating_the_general_database_to_Cassandra#switching-to-cassandra-in-a-failover-setup).
 
 - **Failover Status**: “Online”, “Offline”, “Going Online”, etc.
 

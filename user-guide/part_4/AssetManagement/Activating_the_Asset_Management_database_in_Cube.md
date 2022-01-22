@@ -26,7 +26,7 @@ Then do the following to activate the database:
 
     - **DB server**: Name or IP address of the server that hosts the database.
 
-    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database. See [Configuring the database settings in Cube](../../part_3/databases/Configuring_the_database_settings_in_Cube.md).
+    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
     - **User**: The username that the DMA should use to log on to the database.
 

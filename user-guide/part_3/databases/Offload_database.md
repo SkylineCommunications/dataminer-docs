@@ -20,7 +20,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [What happens if an offload database ...](../../part_6/faq/Databases1.md#what-happens-if-an-offload-database)
+> [What happens if an offload database ...](xref:Databases1#what-happens-if-an-offload-database)
 
 > [!NOTE]
 > From DataMiner 10.2.0/10.1.1 onwards, it is possible to offload data to a file in the local system cache folder instead of to an offload database. You can do so by going to System Center > *Database* > *Offload* and selecting *File* in the drop-down box at the top. Below this, you can then configure the data offloads (see [Configuring data offloads](Configuring_data_offloads.md)) and set a maximum size for the combined offload files.

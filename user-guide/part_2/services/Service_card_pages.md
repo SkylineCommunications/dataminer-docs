@@ -14,7 +14,7 @@ The navigation pane on the left side of a service card contains a tree view with
 Under the *VISUAL* node, one or more pages are displayed that contain a graphic representation of the service. These can be completely customized in Visio.
 
 > [!NOTE]
-> For more information on how to change the Visio file linked to a particular service, see [Switching between different Visio files](../protocols/Managing_Visio_files_linked_to_protocols.md#switching-between-different-visio-files).
+> For more information on how to change the Visio file linked to a particular service, see [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
 
 #### DATA
 
@@ -42,7 +42,7 @@ A service child can have one of the following statuses:
 
 > [!NOTE]
 > - For services that were created with a service protocol, additional *Summary* pages are available, such as the *General parameters* page, which is similar to the General parameters page of an element.
-> - In the Cube user settings, you can select to show or hide excluded devices and/or the General parameters page. See [Card settings](../../part_1/GettingStarted/User_settings.md#card-settings).
+> - In the Cube user settings, you can select to show or hide excluded devices and/or the General parameters page. See [Card settings](xref:User_settings#card-settings).
 
 #### ALARMS
 
@@ -50,7 +50,7 @@ This page displays all alarms related to the service, in the default Alarm Conso
 
 > [!TIP]
 > See also:
-> [Working with the Alarm Console](../alarms/Working_with_the_Alarm_Console.md)
+> [Working with the Alarm Console](xref:Working_with_the_Alarm_Console)
 
 #### SLA
 
@@ -62,7 +62,7 @@ A graphic representation of the alarm distribution, alarm events, alarm states, 
 
 > [!TIP]
 > See also:
-> [Viewing the reports page on a card](../../part_4/reporter/Viewing_the_reports_page_on_a_card.md)
+> [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card)
 
 #### DASHBOARDS
 
@@ -77,7 +77,7 @@ On this page, you can find documents that have been made available either on the
 
 #### NOTES
 
-On this page, you can add short notes to the service. For more information, see [Card navigation pane](../../part_1/GettingStarted/Working_with_cards_in_DataMiner_Cube.md#card-navigation-pane).
+On this page, you can add short notes to the service. For more information, see [Card navigation pane](xref:Working_with_cards_in_DataMiner_Cube#card-navigation-pane).
 
 #### ANNOTATIONS
 

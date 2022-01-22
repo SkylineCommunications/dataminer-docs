@@ -151,7 +151,7 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFi
     > [!NOTE]
     > - String values should be enclosed in single quotation marks (').
     > - Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
-    > - If you encounter issues with this type of filter after an upgrade to 9.0.1 because of the changed behavior, you can revert to the old behavior by specifying *\<SLElement fallback="true" />* in *MaintenanceSettings.xml*. See [Filtering.SlElement](../../part_7/SkylineDataminerFolder/MaintenanceSettings_xml.md#filteringslelement).
+    > - If you encounter issues with this type of filter after an upgrade to 9.0.1 because of the changed behavior, you can revert to the old behavior by specifying *\<SLElement fallback="true" />* in *MaintenanceSettings.xml*. See [Filtering.SlElement](xref:MaintenanceSettings_xml#filteringslelement).
     > - From DataMiner 9.6.6 onwards, several of these filters can be combined and it is also possible to combine a FULLFILTER= type filter with a VALUE= type filter. The resulting query will be an AND combination of the filters.
     > - This type of filter is not supported to filter the list of elements from which a direct view retrieves data.
 
@@ -164,7 +164,7 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFi
     ```
 
     > [!NOTE]
-    > This filter component can also be used in table filters specified in a DataMiner Maps configuration file. See [Configuring the DataMiner Maps](../../part_4/maps/Configuring_the_DataMiner_Maps.md).
+    > This filter component can also be used in table filters specified in a DataMiner Maps configuration file. See [Configuring the DataMiner Maps](xref:Configuring_the_DataMiner_Maps).
 
 - **NODIRECTVIEW**=
 

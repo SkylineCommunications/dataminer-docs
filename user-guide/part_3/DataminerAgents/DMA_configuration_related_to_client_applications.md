@@ -212,7 +212,7 @@ To customize how Cube connects to a DMA for a specific computer:
     - **Custom binding IP address** (Remoting only): Only needed in case the server cannot automatically resolve the IP address that it needs to send callback events to the client, which can be the case when a VPN connection is used. The option only applies when eventing has been configured.
 
 > [!NOTE]
-> You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](../../part_1/DataminerApplications/Logging_on_to_DataMiner_Cube.md#overriding-the-default-connection-type).
+> You can also configure this in the DataMiner Cube logon screen, before you actually log on. See [Overriding the default connection type](xref:Logging_on_to_DataMiner_Cube#overriding-the-default-connection-type).
 
 The procedure above only applies to the one computer where it is done. If you want to change the default client communication settings for a DMA, you can do so in the file *ConnectionSettings.txt*.
 
@@ -228,4 +228,4 @@ To use polling (1000 ms) by default, change this as follows:
 * type=RemotingConnection;polling=1000;zip=true
 ```
 
-For more detailed information on where you can find this file and on the different settings it contains, see [ConnectionSettings.txt](../../part_7/SkylineDataminerFolder/ConnectionSettings_txt.md#connectionsettingstxt).
+For more detailed information on where you can find this file and on the different settings it contains, see [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt).

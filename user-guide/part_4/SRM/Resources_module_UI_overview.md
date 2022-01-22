@@ -40,7 +40,7 @@ The module consist of a pane on the left, listing resource pools, and a pane on 
 
 - From DataMiner 9.5.4 to DataMiner 9.6.3, an additional *occupancy* tab is available, which shows a timeline that illustrates when particular resources are reserved. Like in the main timeline tab of Scheduler, here too you can activate follow mode or zoom to a particular time span via the right-click menu.
 
-Booking resources can be done via Automation scripts. By means of an embedded Resource Manager component in Visio, you can create an overview of the bookings. See [Embedding a Resource Manager component](../../part_2/visio/Embedding_a_Resource_Manager_component.md).
+Booking resources can be done via Automation scripts. By means of an embedded Resource Manager component in Visio, you can create an overview of the bookings. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 
 > [!NOTE]
 > - A special ResourceManager API allows integration of the *Resources* module in third-party applications.

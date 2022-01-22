@@ -30,7 +30,7 @@ To set a different Visio file as the active file for a particular protocol:
 2. In the context menu, select *Set as active \[protocol name\] protocol Visio file* and then select *Custom*, *Protocol Default* or *General Default*, depending on which of the configured Visio files you wish to use.
 
 > [!NOTE]
-> From DataMiner 10.0.11 onwards, it is also possible to assign a Visio file to one element only, without affecting the Visio files available for the protocol. For more information, see [Set as active Visio file](../visio/Editing_a_visual_overview_in_DataMiner_Cube.md#set-as-active-visio-file).
+> From DataMiner 10.0.11 onwards, it is also possible to assign a Visio file to one element only, without affecting the Visio files available for the protocol. For more information, see [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
 
 #### Switching between Visio files for services or views
 
@@ -46,12 +46,12 @@ To set a different Visio file as the active file for a particular service or vie
 
     > [!TIP]
     > See also:
-    > [Visual overview page priority](../visio/Visual_overview_page_priority.md)
+    > [Visual overview page priority](xref:Visual_overview_page_priority)
 
 5. Click OK to close the dialog box.
 
 > [!NOTE]
-> The option to switch to a different Visio file is also available from an element, service or view card’s header bar menu. See [Card header bar menu](../../part_1/GettingStarted/Working_with_cards_in_DataMiner_Cube.md#card-header-bar-menu).
+> The option to switch to a different Visio file is also available from an element, service or view card’s header bar menu. See [Card header bar menu](xref:Working_with_cards_in_DataMiner_Cube#card-header-bar-menu).
 
 ### Assigning a custom Visio file to a protocol
 
@@ -71,7 +71,7 @@ In the Protocols & Templates module, you can upload a custom-made Visio file to 
 
 > [!TIP]
 > See also:
-> [Visio drawings](../visio/visio.md#visio-drawings)
+> [Visio drawings](xref:visio#visio-drawings)
 
 ### Removing a Microsoft Visio file assigned to a protocol
 

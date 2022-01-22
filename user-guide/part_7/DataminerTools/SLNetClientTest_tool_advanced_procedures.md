@@ -118,7 +118,7 @@ To do so:
 4. Enter “true” and click *OK*.
 
 > [!NOTE]
-> You can also configure this setting directly in the file *MaintenanceSettings.xml*. See [Making DataMiner Cube ignore view updates](../../part_3/DataminerAgents/Configuration_of_DataMiner_processes.md#making-dataminer-cube-ignore-view-updates).
+> You can also configure this setting directly in the file *MaintenanceSettings.xml*. See [Making DataMiner Cube ignore view updates](xref:Configuration_of_DataMiner_processes#making-dataminer-cube-ignore-view-updates).
 
 ### Configuring how long alarm statistics are kept in memory
 
@@ -207,7 +207,7 @@ You can make the DataMiner Connectivity Framework Engine update RCA chains autom
 
 > [!TIP]
 > See also:
-> [Defining connectivity chains in XML files](../../part_3/DCF/Defining_connectivity_chains_in_XML_files.md)
+> [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files)
 
 ### Increasing the maximum upload size for upgrade packages in a DMS
 
@@ -348,7 +348,7 @@ With the SLNetClientTest tool, you can modify this engine ID:
 
 > [!TIP]
 > See also:
-> [SNMP Managers.xml](../SkylineDataminerFolder/SNMP_Managers_xml.md#snmp-managersxml)
+> [SNMP Managers.xml](xref:SNMP_Managers_xml#snmp-managersxml)
 
 ### Changing the service template child element and child service limitations
 
@@ -393,7 +393,7 @@ Usually, when two files have the exact same timestamp, these are not synchronize
 From DataMiner 9.5.6 onwards, it is possible to update the “time to live” or TTL of database records via the SLNetClientTest tool.
 
 > [!NOTE]
-> From DataMiner 9.6.0/9.6.3 onwards, this can instead be done within the Cube UI. See [Specifying TTL overrides](../../part_3/databases/Specifying_TTL_overrides.md).
+> From DataMiner 9.6.0/9.6.3 onwards, this can instead be done within the Cube UI. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 1. In the *Advanced* menu, select *TTL*.
 
@@ -426,7 +426,7 @@ From DataMiner 9.5.6 onwards, it is possible to update the “time to live” or
 
 > [!TIP]
 > See also:
-> - [DBMaintenance.xml and DBMaintenanceDMS.xml](../SkylineDataminerFolder/DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml)
+> - [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml)
 
 ### Enabling or disabling protocol buffer serialization
 
@@ -546,7 +546,7 @@ To change this setting:
 
 ### Checking or modifying the settings related to a Refused DMA state
 
-When the state of a DMA is "Refused" on the *Agents* page in System Center (see [Viewing information on the DMAs in a DMS](../../part_3/DataminerSystems/Viewing_information_on_the_DMAs_in_a_DMS.md)), this means that the DMA is actively refusing incoming connections. This is a state that should automatically disappear after some time, if the conditions that caused the refusal are resolved.
+When the state of a DMA is "Refused" on the *Agents* page in System Center (see [Viewing information on the DMAs in a DMS](xref:Viewing_information_on_the_DMAs_in_a_DMS)), this means that the DMA is actively refusing incoming connections. This is a state that should automatically disappear after some time, if the conditions that caused the refusal are resolved.
 
 The exact cause of the refusal can be found in the SLNet logging. Overall, there can be two reasons:
 
@@ -585,7 +585,7 @@ To do so, go to *Advanced* > *Analytics* > *Pattern Matching*. This will open a 
 
 > [!TIP]
 > See also:
-> [Working with pattern matching](../../part_2/trending/Working_with_pattern_matching.md)
+> [Working with pattern matching](xref:Working_with_pattern_matching)
 
 ### Fine-tuning NATS settings
 

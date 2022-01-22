@@ -149,7 +149,7 @@ CPE cards can be opened from the navigation or recent items pane, or from the se
 
 > [!TIP]
 > See also:
-> [Working with the Experience and Performance Management interface](../../part_4/EPM/Working_with_the_Experience_and_Performance_Management_interface.md)
+> [Working with the Experience and Performance Management interface](xref:Working_with_the_Experience_and_Performance_Management_interface)
 
 ### Spectrum analyzer cards
 

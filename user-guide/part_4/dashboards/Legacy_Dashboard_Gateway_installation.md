@@ -17,5 +17,5 @@ This section consists of the following topics:
 - [Dashboard Gateway troubleshooting](Dashboard_Gateway_troubleshooting.md)
 
 > [!NOTE]
-> The legacy Dashboard Gateway only supports the legacy Dashboards app, not the new app available from DataMiner 9.6.9 onwards. For a Dashboard Gateway supporting the new app, see [Dashboard Gateway installation](../newR_D/Dashboard_Gateway_installation.md).
+> The legacy Dashboard Gateway only supports the legacy Dashboards app, not the new app available from DataMiner 9.6.9 onwards. For a Dashboard Gateway supporting the new app, see [Dashboard Gateway installation](xref:Dashboard_Gateway_installation).
 >

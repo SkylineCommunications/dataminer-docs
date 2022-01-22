@@ -58,7 +58,7 @@ To configure a trend template:
     From DataMiner 9.0.5 onwards, a dialog box will then appear that allows you to immediately link the template to one or more elements.
 
 > [!NOTE]
-> From DataMiner 9.5.4 onwards, the trend template options button also provides an option to configure which trend data is offloaded to the offload database. For more information, see [Configuring trend templates to exclude/include data in offloads](../../part_3/databases/Configuring_data_offloads.md#configuring-trend-templates-to-excludeinclude-data-in-offloads).
+> From DataMiner 9.5.4 onwards, the trend template options button also provides an option to configure which trend data is offloaded to the offload database. For more information, see [Configuring trend templates to exclude/include data in offloads](xref:Configuring_data_offloads#configuring-trend-templates-to-excludeinclude-data-in-offloads).
 
 ### Changing the trend template for one parameter
 

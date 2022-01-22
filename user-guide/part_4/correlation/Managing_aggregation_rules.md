@@ -90,8 +90,8 @@ To configure an aggregation rule, select it in the tree view on the left. In the
 
 4. In the Monitoring & Trending section, indicate whether the rule should be monitored and/or trended.
 
-    - To enable monitoring, select *Monitored*, and enter the values for the alarm thresholds. This is done the same way as for a regular alarm template, including the possibility to use a smart baseline. For more information, see [Configuring alarm templates](../../part_2/protocols/Configuring_alarm_templates.md).
+    - To enable monitoring, select *Monitored*, and enter the values for the alarm thresholds. This is done the same way as for a regular alarm template, including the possibility to use a smart baseline. For more information, see [Configuring alarm templates](xref:Configuring_alarm_templates).
 
-    - To enable trending, select *Average* and/or *Real-time*. For more information, see [About trend templates](../../part_2/protocols/About_trend_templates.md).
+    - To enable trending, select *Average* and/or *Real-time*. For more information, see [About trend templates](xref:About_trend_templates).
 
 5. At the top of the pane, select or clear the box next to *Enable this rule* to enable or disable the rule.

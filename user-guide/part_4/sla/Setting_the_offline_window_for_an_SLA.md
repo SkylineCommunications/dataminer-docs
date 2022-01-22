@@ -33,5 +33,5 @@ To configure an SLA offline window:
 > [!NOTE]
 > - Be careful when setting the offline window start and end times. If you set an end time that is invalid, because it occurs before the start time, the end time will be reset to the default time of 23:59. Likewise, if you set a start time that occurs after the end time, the start time will be reset to the default time of 00:00.
 > - From version 3.0.0 of the *Skyline SLA Definition Basic* protocol onwards, it is possible to hide outages that occur in the offline window. To do so, on the *Advanced Configuration* page, set *Offline Window Outages* to *Hide*. Note that you need at least security level 3 to change any of the settings on the *Advanced Configuration* page.
-> - For more information on how to set a particular parameter to have an impact during the offline window, see [Creating an information template](../../part_2/protocols/Creating_an_information_template.md).
+> - For more information on how to set a particular parameter to have an impact during the offline window, see [Creating an information template](xref:Creating_an_information_template).
 >

@@ -71,7 +71,7 @@ If, for any reason, you want to reinstall Cube, you need to clean the XBAP cache
 
 1. Check if Internet Explorer has been correctly configured to run Cube for this DMA.
 
-    See [Configuring Internet Explorer to run DataMiner Cube](../../part_1/DataminerApplications/Installing_configuring_the_DataMiner_Cube_software.md#configuring-internet-explorer-to-run-dataminer-cube).
+    See [Configuring Internet Explorer to run DataMiner Cube](xref:Installing_configuring_the_DataMiner_Cube_software#configuring-internet-explorer-to-run-dataminer-cube).
 
 2. If Internet Explorer has been configured correctly, clear the XBAP cache:
 
@@ -104,7 +104,7 @@ http://[Element]/ElementDisplay.htm
 > - System Display and Element Display will automatically disconnect when the DMA to which you are connected goes offline.
 
 > [!CAUTION]
-> We strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information - including logon credentials - is sent as plain, unencrypted text over the internet.<br> See also: [Setting up HTTPS on a DMA](../../part_3/DataminerAgents/General_DMA_configuration.md#setting-up-https-on-a-dma).
+> We strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information - including logon credentials - is sent as plain, unencrypted text over the internet.<br> See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
 
 > [!NOTE]
 > If required, the ActiveX controls can also be installed by means of an msi installation package.

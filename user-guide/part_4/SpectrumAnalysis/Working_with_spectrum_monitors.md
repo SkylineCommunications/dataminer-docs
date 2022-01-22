@@ -119,7 +119,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
     4. To enable alarm monitoring, in the *Template editing* section, select *Monitored*, select the *Type* of alarm template, and enter the necessary alarm thresholds.
 
         > [!NOTE]
-        > - For more information on the types of alarm templates, see [Configuring an alarm template with dynamic alarm thresholds](../../part_2/protocols/Configuring_alarm_templates.md#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+        > - For more information on the types of alarm templates, see [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
         > - Unlike normal parameters, parameters created by a spectrum monitor can only have alarm monitoring configured in the monitor editor. It is not possible to define alarm templates for them in the Protocols & Templates module.
 
     5. To enable trending for the parameter, select *Trended*.
@@ -167,7 +167,7 @@ To view all buffers:
 2. To stop watching the buffer, in the *monitors* tab, clear the selection from *View all buffer*s.
 
 > [!NOTE]
-> - Spectrum buffers measured during monitor execution are also available in DMS Reporter, and in Visual Overview. See [Element reports](../reporter/Element_reports.md) and [Spectrum Buffers](../reporter/Components_for_one_single_element_or_service.md#spectrum-buffers) for information on DMS Reporter and [Linking a shape to an element parameter](../../part_2/visio/Linking_a_shape_to_an_element_parameter.md) for information on spectrum thumbnails in Visio.
+> - Spectrum buffers measured during monitor execution are also available in DMS Reporter, and in Visual Overview. See [Element reports](xref:Element_reports) and [Spectrum Buffers](xref:Components_for_one_single_element_or_service#spectrum-buffers) for information on DMS Reporter and [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter) for information on spectrum thumbnails in Visio.
 > - While you are watching a spectrum buffer, any options that are only applicable for real-time trace viewing, such as taking trace recordings, are disabled.
 
 > [!TIP]
