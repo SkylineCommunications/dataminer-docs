@@ -118,7 +118,7 @@ If you set the *Source* shape data field to “Elements” or “Services”, th
     View=MyView
     ```
 
-    An alternative syntax, *ViewName=\<name>*, can be used from DataMiner 10.0.5 onwards. From this version onwards, you can also use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID, and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
+    An alternative syntax, *ViewName=\<name>*, can be used from DataMiner 10.0.5 onwards. From this version onwards, you can also use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
 
 - From DataMiner 9.6.8 onwards, session variables can be used in the filter. For example:
 
