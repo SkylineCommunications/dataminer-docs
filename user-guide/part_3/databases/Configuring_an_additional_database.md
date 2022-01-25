@@ -16,7 +16,7 @@ To do so:
 
 4. Enter the necessary information.
 
-    The fields that can be filled in are the same as for the general database. See [Configuring the database settings in Cube](Configuring_the_database_settings_in_Cube.md).
+    The fields that can be filled in are the same as for the general database. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
 5. Click *Save*
 

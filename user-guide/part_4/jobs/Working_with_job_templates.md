@@ -15,7 +15,7 @@ From DataMiner 9.6.6 onwards, it is possible to save a particular job configurat
 
     > [!TIP]
     > See also:
-    > [Manually adding a job](Manually_adding_a_job.md)
+    > [Manually adding a job](xref:Manually_adding_a_job)
 
 2. In the top-right corner of the *New job* pane, click the downward arrow and select *Save template*.
 
@@ -31,7 +31,7 @@ From DataMiner 9.6.6 onwards, it is possible to save a particular job configurat
 
     > [!TIP]
     > See also:
-    > [Manually adding a job](Manually_adding_a_job.md)
+    > [Manually adding a job](xref:Manually_adding_a_job)
 
 2. In the top-right corner of the *New job* pane, click the downward arrow and select *Apply template*.
 
@@ -45,7 +45,7 @@ From DataMiner 9.6.6 onwards, it is possible to save a particular job configurat
 
     > [!TIP]
     > See also:
-    > [Manually adding a job](Manually_adding_a_job.md)
+    > [Manually adding a job](xref:Manually_adding_a_job)
 
 2. In the top-right corner of the *New job* pane, click the downward arrow and select *Apply template*.
 

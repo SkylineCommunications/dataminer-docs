@@ -47,11 +47,11 @@ In the *DMA* submenu, you can find the following commands:
 - Connect
 
     The *Connect* submenu lists all the DMAs configured in the *DMA* tab of the *DIS Settings* window. In the list, click the DMA to which you want DataMiner Integration Studio to connect.
-    See [DMA](DIS_settings.md#dma)
+    See [DMA](xref:DIS_settings#dma)
 
 - Disconnect
 
-    If you click *Disconnect*, DataMiner Integration Studio will disconnect from the DMA to which it was connected.     See [DMA](DIS_settings.md#dma)
+    If you click *Disconnect*, DataMiner Integration Studio will disconnect from the DMA to which it was connected.     See [DMA](xref:DIS_settings#dma)
 
 - Import Protocol
 
@@ -70,7 +70,7 @@ In the *DMA* submenu, you can find the following commands:
     >
     > When DIS detects that the *Protocol/Name* tag contains a *parentProtocol* attribute and that it is not empty, publishing will fail and a warning message will appear.
 
-    See [DMA](DIS_settings.md#dma)
+    See [DMA](xref:DIS_settings#dma)
 
     > [!NOTE]
     > - When DIS connects to a DataMiner Agent, it always uses polling.
@@ -79,7 +79,7 @@ In the *DMA* submenu, you can find the following commands:
 - Import Automation script
 
     If you click *Import Automation script*, the *Import Automation Script* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA to which DIS is connected.
-    You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.     See [DMA](DIS_settings.md#dma)
+    You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.     See [DMA](xref:DIS_settings#dma)
 
     > [!NOTE]
     > - When DIS connects to a DataMiner Agent, it always uses polling.
@@ -99,13 +99,13 @@ The advantage of this approach is that no additional DLL files need to be copied
 
 If, in the Class Library tab of the DIS Settings window, you selected the *Automatically generate Class Library code* option, DIS will automatically detect whether you are using any code from the Class Library in a QAction or Automation script, and copy all used classes, methods, etc. (along with all dependencies) from the class library to a generic QAction (with ID 63000) or Automation script EXE block. If you want to force an ad-hoc regeneration of the Class Library QAction 63000 or Class Library EXE blocks, you can select *Protocol \> Generate Class Library Code* in the main DIS menu.
 
-See also: [Class Library](DIS_settings.md#class-library)
+See also: [Class Library](xref:DIS_settings#class-library)
 
 ### Protocol \> Convert to Solution...
 
 If you want to convert the standalone protocol XML file you opened in the XML editor to a protocol solution, select *Protocol \> Convert to Solution...*
 
-As from v2.26, DIS offers two distinct ways of developing a DataMiner protocol. For more information see [Two ways of developing DataMiner protocols and Automation scripts](Overall_concept_of_the_DataMiner_Integration_Studio.md#two-ways-of-developing-dataminer-protocols-and-automation-scripts) and [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions.md).
+As from v2.26, DIS offers two distinct ways of developing a DataMiner protocol. For more information see [Two ways of developing DataMiner protocols and Automation scripts](xref:Overall_concept_of_the_DataMiner_Integration_Studio#two-ways-of-developing-dataminer-protocols-and-automation-scripts) and [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](xref:Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions).
 
 ### Automation script \> Generate Class Library code
 
@@ -143,7 +143,7 @@ When working in the XML editor or the C# editor, you can do one of the following
 
     ![](../../images/SyncArrow_16x.jpg)
 
-See also: [DIS keyboard shortcuts](DIS_keyboard_shortcuts.md)
+See also: [DIS keyboard shortcuts](xref:DIS_keyboard_shortcuts)
 
 #### Clicking or double-clicking items in the DIS Tree window
 
@@ -289,13 +289,13 @@ By default, the *DIS Inject* window will open undocked. Dock it just as you woul
 
 This tool window allows you to make the necessary preparations before debugging the QAction(s) or Automation script(s) you are editing.
 
-For step-by-step instructions on how to debug QActions and Automation scripts, see [Debugging QActions and Automation scripts](Debugging_QActions_and_Automation_scripts.md).
+For step-by-step instructions on how to debug QActions and Automation scripts, see [Debugging QActions and Automation scripts](xref:Debugging_QActions_and_Automation_scripts).
 
 #### Connecting to one of the DMAs specified in the DIS settings
 
 When you open the *DIS Inject* window, and you have not yet set up a connection to one of the DMAs specified in the *DMA* tab of the *DIS Settings* window, then a large *Connect* button will appear in the middle of the window. Click that button to connect DataMiner Integration Studio to the default DMA. If you want to connect to another, non-default DMA, click the drop-down button at the right of the *Connect* button, and click the DMA to which you want to connect.
 
-See [Connect](DIS_menu.md) and [DMA](DIS_settings.md#dma)
+See [Connect](xref:DIS_menu) and [DMA](xref:DIS_settings#dma)
 
 > [!NOTE]
 > The title of the *DIS Inject* window includes the name of the DMA to which DIS is connected (between brackets). When DIS is not connected to any DMA, the window title will include “(not connected)”.
@@ -424,7 +424,7 @@ The bottom half of the *Files* tab contains three sections:
 | *Missing Modules* | All MIB modules that cannot be found.                                                                                                                                 |
 
 > [!NOTE]
-> - The location of the MIB store and other MIB browser settings can be specified in the *MIB* tab of the *DIS Settings* window. See: [MIB](DIS_settings.md#mib)
+> - The location of the MIB store and other MIB browser settings can be specified in the *MIB* tab of the *DIS Settings* window. See: [MIB](xref:DIS_settings#mib)
 > - The MIB browser allows you to import files with the following extensions: <br>*mib*, *smi*, and *txt*.
 
 #### Compare
@@ -493,7 +493,7 @@ When you right-click a row, a shortcut menu appears.
 | Navigate      | Make the cursor in the file tab containing the protocol code jump to the corresponding *\<Position>* tag.<br> Note: Instead of selecting *Navigate*, you can also press F12. |
 
 > [!NOTE]
-> If you prefer to position parameters using a graphical user interface, use the Display Editor. See [Display editor](Display_editor.md)
+> If you prefer to position parameters using a graphical user interface, use the Display Editor. See [Display editor](xref:Display_editor)
 
 #### Managing discreet values
 
@@ -531,7 +531,7 @@ This tool window allows you to compare two protocol.xml files.
 
 By default, the *DIS Comparer* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
-For more information on how to work with this tool window, see [Compare](XML_editor.md#compare).
+For more information on how to work with this tool window, see [Compare](xref:XML_editor#compare).
 
 ### Settings
 
@@ -539,7 +539,7 @@ If you click *Settings*, the *DIS Settings* dialog box will appear. In this dial
 
 > [!TIP]
 > See also:
-> [Changing the DataMiner Integration Studio settings](Installing_and_configuring_DataMiner_Integration_Studio.md#changing-the-dataminer-integration-studio-settings)
+> [Changing the DataMiner Integration Studio settings](xref:Installing_and_configuring_DataMiner_Integration_Studio#changing-the-dataminer-integration-studio-settings)
 
 ### Check for updates...
 

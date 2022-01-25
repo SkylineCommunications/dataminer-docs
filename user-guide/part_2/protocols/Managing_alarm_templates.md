@@ -40,7 +40,7 @@ To create a new alarm template:
 
     4. Click *OK*.
 
-    The template editor now opens, where you can further configure the alarm template. For more information, see [Configuring alarm templates](Configuring_alarm_templates.md).
+    The template editor now opens, where you can further configure the alarm template. For more information, see [Configuring alarm templates](xref:Configuring_alarm_templates).
 
 ### Uploading an alarm template
 
@@ -91,7 +91,7 @@ In the Protocols & Templates module:
 > [!NOTE]
 > - To quickly access the Protocols & Templates module from the Surveyor, right-click an element or enhanced service, and select *Protocols & Templates.* This opens a submenu where you can open the current template, assign a different template or view all available templates.
 > - Right-click an item in the Protocols & Templates module and select *Remove* to quickly remove an alarm template from an item.
-> - Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](Working_with_the_elements_tab.md).
+> - Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](xref:Working_with_the_elements_tab).
 
 ### Deleting an alarm template
 

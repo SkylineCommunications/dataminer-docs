@@ -22,4 +22,4 @@ uid: Setting_the_priority_of_a_primary_or_backup_element
 
 > [!TIP]
 > See also:
-> [Priority in a redundancy group](About_redundancy_groups.md#priority-in-a-redundancy-group)
+> [Priority in a redundancy group](xref:About_redundancy_groups#priority-in-a-redundancy-group)

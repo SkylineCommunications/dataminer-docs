@@ -21,18 +21,18 @@ Instead of creating a dashboard from scratch, you can instead first import an ex
 5. In the *Security* box, select whether other users should be able to view and edit the dashboard.
 
     > [!NOTE]
-    > - Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](Changing_dashboard_settings.md).
+    > - Once the dashboard has been created, you can further refine which users have which level of access in the dashboard options. See [Changing dashboard settings](xref:Changing_dashboard_settings).
     > - The built-in Administrator account always has full access to all dashboards.
 
 6. Click *OK*.
 
 7. Click the pencil icon in the top-right corner to start editing the example dashboard.
 
-8. Optionally, fine-tune the dashboard settings. See [Changing dashboard settings](Changing_dashboard_settings.md).
+8. Optionally, fine-tune the dashboard settings. See [Changing dashboard settings](xref:Changing_dashboard_settings).
 
-9. Optionally, fine-tune the dashboard layout. See [Configuring the dashboard layout](Configuring_the_dashboard_layout.md).
+9. Optionally, fine-tune the dashboard layout. See [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
 
-10. Configure the necessary components. See [Configuring dashboard components](Configuring_dashboard_components.md).
+10. Configure the necessary components. See [Configuring dashboard components](xref:Configuring_dashboard_components).
 
 11. When the dashboard is ready, in the top-right corner of the screen, click the “x” icon.
 

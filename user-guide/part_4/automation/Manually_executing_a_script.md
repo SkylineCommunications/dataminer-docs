@@ -12,7 +12,7 @@ If you want to manually execute an Automation script, do the following:
 
 3. Click the *Execute* button at the bottom of the pane on the right.
 
-4. Specify the required dummies, parameters and memory files, and select or deselect the available options if necessary. For an overview of the options, see [Script execution options](Script_execution_options.md).
+4. Specify the required dummies, parameters and memory files, and select or deselect the available options if necessary. For an overview of the options, see [Script execution options](xref:Script_execution_options).
 
 5. Click *Execute now* to start the script.
 

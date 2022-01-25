@@ -23,5 +23,5 @@ In the *Asset Manager* module, there are several ways to delete a row from a tab
 When you try to delete a row, depending on the configuration, a confirmation box may appear, mentioning the row you want to delete along with any rows linked to it. If you do not have permission to delete the row, a message box will appear to tell you that your request has been denied.
 
 > [!NOTE]
-> For more information on the configuration file, see [Configuring DMS Inventory and Asset Management](Configuring_DMS_Inventory_and_Asset_Management.md).
+> For more information on the configuration file, see [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management).
 >

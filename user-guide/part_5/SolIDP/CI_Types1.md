@@ -463,11 +463,11 @@ For each connection, this section also has to contain one of the following array
 
     - **AuthPassword**: The password required for authentication. A value has to be supplied when the *SecurityLevel* is *authNoPriv* or *authPriv*.
 
-    - **AuthType**: The authentication algorithm. A value has to be supplied when the *SecurityLevel* is *authNoPriv* or *authPriv*. All values supported for SNMPv3 discovery are also supported here. See [SNMP discovery](Discovery_profiles.md#snmp-discovery).
+    - **AuthType**: The authentication algorithm. A value has to be supplied when the *SecurityLevel* is *authNoPriv* or *authPriv*. All values supported for SNMPv3 discovery are also supported here. See [SNMP discovery](xref:Discovery_profiles#snmp-discovery).
 
     - **PrivPassword**: The password required for encryption. A value has to be supplied when the *SecurityLevel* is *authPriv*.
 
-    - **EncryptionAlgorithm**: The encryption algorithm. A value has to be supplied when the *SecurityLevel* is *authPriv*. All values supported for SNMPv3 discovery are also supported here. See [SNMP discovery](Discovery_profiles.md#snmp-discovery).
+    - **EncryptionAlgorithm**: The encryption algorithm. A value has to be supplied when the *SecurityLevel* is *authPriv*. All values supported for SNMPv3 discovery are also supported here. See [SNMP discovery](xref:Discovery_profiles#snmp-discovery).
 
     Example:
 
@@ -589,7 +589,7 @@ The example below specifies values for the element properties *Source* and *Plat
 In this field, specify the DataMiner ID of the DMA where the element must be created.
 
 > [!NOTE]
-> If you specify 0, the element will be created based on the configured IP ranges. If no IP ranges are specified, the fallback Agent will be used. See [Provisioning](Provisioning.md).
+> If you specify 0, the element will be created based on the configured IP ranges. If no IP ranges are specified, the fallback Agent will be used. See [Provisioning](xref:Provisioning).
 
 #### View
 

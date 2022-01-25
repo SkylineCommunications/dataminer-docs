@@ -8,18 +8,18 @@ In DataMiner Cube, users and user groups are managed in System Center. In additi
 
 This section consists of the following topics:
 
-- [Accessing security in System Center](Accessing_security_in_System_Center.md)
+- [Accessing security in System Center](xref:Accessing_security_in_System_Center)
 
-- [Opening a user card](Opening_a_user_card.md)
+- [Opening a user card](xref:Opening_a_user_card)
 
-- [Adding a user](Adding_a_user.md)
+- [Adding a user](xref:Adding_a_user)
 
-- [Deleting a user](Deleting_a_user.md)
+- [Deleting a user](xref:Deleting_a_user)
 
-- [Viewing user information](Viewing_user_information.md)
+- [Viewing user information](xref:Viewing_user_information)
 
-- [Editing a user’s details](Editing_a_user’s_details.md#editing-a-users-details)
+- [Editing a user’s details](xref:Editing_a_user’s_details#editing-a-users-details)
 
-- [Changing group membership of a user](Changing_group_membership_of_a_user.md)
+- [Changing group membership of a user](xref:Changing_group_membership_of_a_user)
 
-- [Disconnecting a user in DataMiner Cube](Disconnecting_a_user_in_DataMiner_Cube.md)
+- [Disconnecting a user in DataMiner Cube](xref:Disconnecting_a_user_in_DataMiner_Cube)

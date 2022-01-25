@@ -35,5 +35,5 @@ Now all DataMiner Agents that have been added to the DMS will start the initial 
 When the DMS has been synchronized, you will be able to consult information about each of the Agents in the *Status* tab of the *Agents* page in *System Center*.
 
 > [!NOTE]
-> It is also possible to migrate elements from one DMA to another within a DMS. For more information, see [Migrating elements in a DataMiner System](Migrating_elements_in_a_DataMiner_System.md).
+> It is also possible to migrate elements from one DMA to another within a DMS. For more information, see [Migrating elements in a DataMiner System](xref:Migrating_elements_in_a_DataMiner_System).
 >

@@ -6,9 +6,9 @@ uid: Exporting_and_importing_packages_on_a_DMA
 
 This section consists of the following topics:
 
-- [Exporting elements, services, etc. to a .dmimport file](Exporting_elements_services_etc_to_a_dmimport_file.md)
+- [Exporting elements, services, etc. to a .dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file)
 
-- [Importing elements, services, etc. from a .dmimport file](Importing_elements_services_etc_from_a_dmimport_file.md)
+- [Importing elements, services, etc. from a .dmimport file](xref:Importing_elements_services_etc_from_a_dmimport_file)
 
 > [!NOTE]
 > - For more information on how to migrate elements within one DataMiner System, see [Migrating elements in a DataMiner System](xref:Migrating_elements_in_a_DataMiner_System).

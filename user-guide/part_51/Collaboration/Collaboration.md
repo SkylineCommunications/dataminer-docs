@@ -6,14 +6,14 @@ uid: Collaboration
 
 In this section:
 
-- [About the Project Collaboration module](About_the_Project_Collaboration_module.md)
+- [About the Project Collaboration module](xref:About_the_Project_Collaboration_module)
 
-- [Accessing the Project Collaboration module](Accessing_the_Project_Collaboration_module.md)
+- [Accessing the Project Collaboration module](xref:Accessing_the_Project_Collaboration_module)
 
-- [Overview of the user interface](Overview_of_the_user_interface.md)
+- [Overview of the user interface](xref:Overview_of_the_user_interface)
 
-- [My projects](My_projects.md)
+- [My projects](xref:My_projects)
 
-- [My tasks](My_tasks.md)
+- [My tasks](xref:My_tasks)
 
-- [Reference](Reference3.md#reference)
+- [Reference](xref:Reference3#reference)

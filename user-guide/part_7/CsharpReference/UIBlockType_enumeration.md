@@ -119,7 +119,7 @@ All files uploaded by users will by default be placed in the *C:\\Skyline DataMi
 
 > [!TIP]
 > See also:
-> [GetUploadedFilePath](UIResults_methods.md#getuploadedfilepath)
+> [GetUploadedFilePath](xref:UIResults_methods#getuploadedfilepath)
 
 #### Numeric
 
@@ -171,7 +171,7 @@ uib.AppendBlock(numericBlock);
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See [WantsOnChange](UIBlockDefinition_properties.md#wantsonchange).
+> From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See [WantsOnChange](xref:UIBlockDefinition_properties#wantsonchange).
 
 #### Parameter
 
@@ -197,7 +197,7 @@ UIBlockDefinition blockPasswordBox = new UIBlockDefinition();
 blockPasswordBox.Type = UIBlockType.PasswordBox;
 ```
 
-Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](UIBlockDefinition_properties.md#haspeekicon).
+Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](xref:UIBlockDefinition_properties#haspeekicon).
 
 #### RadioButtonList
 
@@ -247,7 +247,7 @@ MyDialogBox.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.3 onwards, this control can be used with a “WantsOnChange” property, which prevents updates being sent after a single character is changed in a text box. See [WantsOnChange](UIBlockDefinition_properties.md#wantsonchange).
+> From DataMiner 9.5.3 onwards, this control can be used with a “WantsOnChange” property, which prevents updates being sent after a single character is changed in a text box. See [WantsOnChange](xref:UIBlockDefinition_properties#wantsonchange).
 
 #### Time
 
@@ -263,7 +263,7 @@ MyDialogBox.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.3 onwards, additional classes are available to define controls to select the date and/or time. See [AutomationConfigOptions class](AutomationConfigOptions_class.md).
+> From DataMiner 9.5.3 onwards, additional classes are available to define controls to select the date and/or time. See [AutomationConfigOptions class](xref:AutomationConfigOptions_class).
 
 #### TreeView
 
@@ -271,7 +271,7 @@ Allows you to define a newly created dialog box item as a tree view. Available f
 
 To define a tree view control, create a *UIBlockDefinition* of type *TreeView* and add each item of the tree view as a *TreeViewItem* to the *TreeViewItems* property. It is not required to fill in the *InitialValue* or *Value* of the *UIBlockDefinition*, as that value is determined based on the *TreeViewItem* collection.
 
-Optionally, you can enable the *WantsOnChange* option for the tree view control, in which case it will send an update each time the selected state of a *TreeViewItem* changes. See [WantsOnChange](UIBlockDefinition_properties.md#wantsonchange).
+Optionally, you can enable the *WantsOnChange* option for the tree view control, in which case it will send an update each time the selected state of a *TreeViewItem* changes. See [WantsOnChange](xref:UIBlockDefinition_properties#wantsonchange).
 
 To retrieve the results:
 

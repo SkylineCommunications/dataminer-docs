@@ -17,7 +17,7 @@ To configure a custom legend, add a *\<CustomLegendBox>* tag, and configure it a
     | visible     | Determines whether the legend is displayed on the map.                                                                                                                                                                                 |
     | width       | The width of the legend box in pixels.                                                                                                                                                                                                 |
     | height      | The height of the legend box in pixels.                                                                                                                                                                                                |
-    | filterVars  | Optional. Can be used to link a table filter to a URL variable.<br> This attribute functions in the same way as when used in the *\<TableSourceInfo>* tag. See [filterVars](TableSourceInfo.md#filtervars). |
+    | filterVars  | Optional. Can be used to link a table filter to a URL variable.<br> This attribute functions in the same way as when used in the *\<TableSourceInfo>* tag. See [filterVars](xref:TableSourceInfo#filtervars). |
 
 - Subtags of the *\<CustomLegendBox>* tag:
 
@@ -28,7 +28,7 @@ To configure a custom legend, add a *\<CustomLegendBox>* tag, and configure it a
     | ElementID       |                                                                                                                                                                                             |
     | TableID         |                                                                                                                                                                                             |
     | TableColumnPIDs | The IDs of the table column parameters that have to be displayed in the legend. If none are specified, all columns will be displayed.                                                       |
-    | TableFilters    | The table row filters. This subtag functions in the same way as when used in the *\<TableSourceInfo>* tag. See [TableFilters](TableSourceInfo.md#tablefilters). |
+    | TableFilters    | The table row filters. This subtag functions in the same way as when used in the *\<TableSourceInfo>* tag. See [TableFilters](xref:TableSourceInfo#tablefilters). |
     | FilterColumnPID | The ID of the table column parameter that contains the value to be used to filter the layers.                                                                                               |
 
 Example:

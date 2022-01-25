@@ -67,7 +67,7 @@ This section consists of the following topics:
 
 ### Example of applying a service template
 
-To apply the service template created in our earlier example (see [Example of creating a service template](Creating_a_service_template.md#example-of-creating-a-service-template)):
+To apply the service template created in our earlier example (see [Example of creating a service template](xref:Creating_a_service_template#example-of-creating-a-service-template)):
 
 1. Right-click the service template in the Surveyor, and click *Apply*.
 

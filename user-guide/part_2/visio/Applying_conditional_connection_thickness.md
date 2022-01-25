@@ -14,7 +14,7 @@ To enable this, add a **Thickness** shape data field to the Connectivity shape, 
 | Thickness        | \<thickness>:\<Conditions>-\<thickness>:\<Conditions>-...\<Condition <br>specifications>-\<Condition specifications>-... |
 
 > [!NOTE]
-> The way the conditions are defined is similar to the way this is done for conditional shape manipulation actions. See [Extended conditional shape manipulation actions](Extended_conditional_shape_manipulation_actions.md).
+> The way the conditions are defined is similar to the way this is done for conditional shape manipulation actions. See [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
 
 Example:
 

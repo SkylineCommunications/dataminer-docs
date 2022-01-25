@@ -108,7 +108,7 @@ To have a connection property displayed on top of every connection that contains
     | Options            | ConnectionProperty:Speed;Avg |
 
 > [!NOTE]
-> - On connection property shapes, conditional shape manipulation actions can be defined that check conditions such as the value of the property, whether a connection is highlighted, and whether the mouse pointer is on a connection.<br>See [Conditional manipulation of connection shapes](Extended_conditional_shape_manipulation_actions.md#conditional-manipulation-of-connection-shapes).
+> - On connection property shapes, conditional shape manipulation actions can be defined that check conditions such as the value of the property, whether a connection is highlighted, and whether the mouse pointer is on a connection.<br>See [Conditional manipulation of connection shapes](xref:Extended_conditional_shape_manipulation_actions#conditional-manipulation-of-connection-shapes).
 > - Displaying connection properties between dynamically generated shapes is only supported from DataMiner 9.0.5 CU1 onwards.
 
 ### Displaying DCF connection property information
@@ -119,7 +119,7 @@ If the highlighting option “ActivePathHighlighting” is not used, this pop-up
 
 > [!TIP]
 > See also:
-> [Highlighting connections from a Connectivity.xml chain](Options_for_highlighting_DCF_connections.md#highlighting-connections-from-a-connectivityxml-chain)
+> [Highlighting connections from a Connectivity.xml chain](xref:Options_for_highlighting_DCF_connections#highlighting-connections-from-a-connectivityxml-chain)
 
 To have a pop-up box displayed with connection property information:
 

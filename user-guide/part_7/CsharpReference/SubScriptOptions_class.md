@@ -6,8 +6,8 @@ uid: SubScriptOptions_class
 
 Below, you can find an overview of all members of the *SubscriptOptions* class.
 
-- [SubscriptOptions constructor](SubscriptOptions_constructor.md)
+- [SubscriptOptions constructor](xref:SubscriptOptions_constructor)
 
-- [SubscriptOptions methods](SubscriptOptions_methods.md)
+- [SubscriptOptions methods](xref:SubscriptOptions_methods)
 
-- [SubscriptOptions properties](SubscriptOptions_properties.md)
+- [SubscriptOptions properties](xref:SubscriptOptions_properties)

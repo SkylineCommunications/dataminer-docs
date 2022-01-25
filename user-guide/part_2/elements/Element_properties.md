@@ -16,4 +16,4 @@ There are two types of properties:
 
 > [!TIP]
 > See also:
-> [Managing element properties](Managing_element_properties.md)
+> [Managing element properties](xref:Managing_element_properties)

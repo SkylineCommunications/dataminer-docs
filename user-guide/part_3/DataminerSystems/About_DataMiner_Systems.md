@@ -6,12 +6,12 @@ uid: About_DataMiner_Systems
 
 This section consists of the following topics:
 
-- [Virtual device connections](Virtual_device_connections.md)
+- [Virtual device connections](xref:Virtual_device_connections)
 
-- [Gratuitous ARP messages](Gratuitous_ARP_messages.md)
+- [Gratuitous ARP messages](xref:Gratuitous_ARP_messages)
 
-- [Eventing or polling](Eventing_or_polling.md)
+- [Eventing or polling](xref:Eventing_or_polling)
 
-- [DataMiner processes](DataMiner_processes.md)
+- [DataMiner processes](xref:DataMiner_processes)
 
-- [DataMiner interfaces](DataMiner_interfaces.md)
+- [DataMiner interfaces](xref:DataMiner_interfaces)

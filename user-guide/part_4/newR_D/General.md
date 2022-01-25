@@ -30,7 +30,7 @@ This category contains the following visualizations:
 
 This component consists of an empty block, which can be used as a divider between other components.
 
-In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 ### Button
 
@@ -43,13 +43,13 @@ The component can be linked to one or more button parameters, so that users can 
 
 To configure the component:
 
-1. Apply a parameter data feed. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply a parameter data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
     You will only be able to select button parameters for the data feed. Several parameters can be added in the same component.
 
 2. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - In case the component displays more than one parameter, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 
@@ -302,7 +302,7 @@ In the *Settings* tab, the following settings can be configured for this compone
 
 In the *Component \> Layout* tab, the following options can be configured:
 
-- The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+- The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 - *Show seconds*: Select this option to include the second hand in the clock.
 
@@ -320,7 +320,7 @@ In the *Settings* tab, the following settings can be configured for this compone
 
 In the *Component \> Layout* tab, the following options can be configured:
 
-- The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+- The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 - *Show seconds*: Select this option to have the clock display the seconds.
 
@@ -341,7 +341,7 @@ As soon as more than one data item is displayed by the group component, the comp
 
 To configure this component:
 
-1. Add one or more data feeds. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Add one or more data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
     The component accepts elements, parameters, redundancy groups, services and views as data feeds.
 
@@ -381,7 +381,7 @@ To configure this component:
 
 In the *Component \> Layout* tab, the following options can be configured:
 
-- The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+- The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 - *Image size*: Available from DataMiner 10.0.11 onwards. Can be set to:
 
@@ -405,7 +405,7 @@ To configure this component:
 
 In the *Component \> Layout* tab, the following options can be configured:
 
-- The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+- The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 - *Font*: Allows you to select the font of the text.
 
@@ -431,7 +431,7 @@ This component displays a webpage or a block of static HTML.
 
     2. In the *HTML* box below this, add the HTML code.
 
-In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 > [!NOTE]
 > This component does not allow the use of scripts, buttons or other input controls.

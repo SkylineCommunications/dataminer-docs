@@ -53,7 +53,7 @@ Example:
 
 > [!NOTE]
 > - In Google Maps, it is very easy to get the coordinates of a particular location. Just right-click the location on the map and choose *What’s here*? The latitude and longitude of that location will appear in the search box above the map.
-> - If you set the attribute autoFit to true in the *\<Layer>* tag, this overrides the *\<Center>* tag. See [autoFit](Attributes_of_the_Layer_tag.md#autofit).
+> - If you set the attribute autoFit to true in the *\<Layer>* tag, this overrides the *\<Center>* tag. See [autoFit](xref:Attributes_of_the_Layer_tag#autofit).
 
 From DataMiner 9.5.1 onwards, the following attributes are available to further refine the map centering configuration:
 
@@ -75,7 +75,7 @@ From DataMiner 9.5.1 onwards, the following attributes are available to further 
 
 If you add a *\<FilterBox>* tag, the map will contain a filter box that allows users to filter map items based on their name or their alarm severity level.
 
-For more information, see [Adding a filter box to a DataMiner Map](Adding_a_filter_box_to_a_DataMiner_Map.md).
+For more information, see [Adding a filter box to a DataMiner Map](xref:Adding_a_filter_box_to_a_DataMiner_Map).
 
 ### InitialZoom
 
@@ -112,7 +112,7 @@ Example:
 </Layers>
 ```
 
-For more information, see [Attributes of the Layer tag](Attributes_of_the_Layer_tag.md).
+For more information, see [Attributes of the Layer tag](xref:Attributes_of_the_Layer_tag).
 
 ### LoadStrategy
 
@@ -176,4 +176,4 @@ In the src attribute of a *\<Script>* tag, specify the path to a JavaScript file
 
 In the *\<ToggleGroups>* tag, you can define layer groups.
 
-For more information, see [Layer groups](Layer_groups.md).
+For more information, see [Layer groups](xref:Layer_groups).

@@ -70,4 +70,4 @@ This will open the *Status* dialog box, which displays a number of status parame
 
 > [!TIP]
 > See also:
-> [Viewing DMA synchronization information](Synchronizing_the_DMA_databases.md#viewing-dma-synchronization-information)
+> [Viewing DMA synchronization information](xref:Synchronizing_the_DMA_databases#viewing-dma-synchronization-information)

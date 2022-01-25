@@ -35,7 +35,7 @@ PageName|Option
 | PageName\|Tooltip | The page is displayed in a tooltip.                                           | MySpecialPage\|Tooltip |
 
 > [!NOTE]
-> If, in the value of the **VdxPage** shape data field, you replace the page name by “*\[auto\]*”, the window will contain the page of which the **InlineVdx** shape data field has been set to *TRUE*. See [Marking a page of a Visio drawing as the default page](Marking_a_page_of_a_Visio_drawing_as_the_default_page.md).
+> If, in the value of the **VdxPage** shape data field, you replace the page name by “*\[auto\]*”, the window will contain the page of which the **InlineVdx** shape data field has been set to *TRUE*. See [Marking a page of a Visio drawing as the default page](xref:Marking_a_page_of_a_Visio_drawing_as_the_default_page).
 
 ### Optional configuration
 
@@ -89,7 +89,7 @@ In the example above, it is set to “Continue”. If *ClosingWindow_Result* is 
 
 > [!TIP]
 > See also:
-> [Specifying a script to be executed when the page is closed](Linking_a_shape_to_an_Automation_script.md#specifying-a-script-to-be-executed-when-the-page-is-closed)
+> [Specifying a script to be executed when the page is closed](xref:Linking_a_shape_to_an_Automation_script#specifying-a-script-to-be-executed-when-the-page-is-closed)
 
 #### Configuring the size of the window
 
@@ -103,7 +103,7 @@ To do so:
     Width=999|Height=999
     ```
 
-    For both the width and the height of the window, specify either a fixed number of pixels or a placeholder referring to a property, a parameter or a session variable containing a number of pixels. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+    For both the width and the height of the window, specify either a fixed number of pixels or a placeholder referring to a property, a parameter or a session variable containing a number of pixels. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
 #### Configuring a custom shortcut menu
 

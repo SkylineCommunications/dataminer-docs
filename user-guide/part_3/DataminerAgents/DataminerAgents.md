@@ -6,21 +6,21 @@ uid: DataminerAgents
 
 This section consists of the following topics:
 
-- [Installing a DataMiner Agent](Installing_a_DataMiner_Agent.md)
+- [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent)
 
-- [Configuring a DataMiner Agent](Configuring_a_DataMiner_Agent.md)
+- [Configuring a DataMiner Agent](xref:Configuring_a_DataMiner_Agent)
 
-- [Backing up a DataMiner Agent](Backing_up_a_DataMiner_Agent.md)
+- [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent)
 
-- [Restoring a DataMiner Agent](Restoring_a_DataMiner_Agent.md)
+- [Restoring a DataMiner Agent](xref:Restoring_a_DataMiner_Agent)
 
-- [Upgrading a DataMiner Agent](Upgrading_a_DataMiner_Agent.md)
+- [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
-- [Uninstalling a DataMiner Agent](Uninstalling_a_DataMiner_Agent.md)
+- [Uninstalling a DataMiner Agent](xref:Uninstalling_a_DataMiner_Agent)
 
-- [DataMiner packages](DataMiner_packages.md)
+- [DataMiner packages](xref:DataMiner_packages)
 
-- [Exporting and importing packages on a DMA](Exporting_and_importing_packages_on_a_DMA.md)
+- [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA)
 
 > [!TIP]
 > See also:

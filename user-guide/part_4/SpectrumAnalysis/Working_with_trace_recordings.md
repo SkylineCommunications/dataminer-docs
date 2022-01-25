@@ -25,7 +25,7 @@ To make a recording:
     A red dot in the bottom-right corner of the display indicates that a recording is in progress, and an extra menu item, *Stop Recording*, appears in the header bar.
 
     > [!NOTE]
-    > If you intend to make a long recording, make sure that the automatic stand-by option is disabled. Otherwise the screen could freeze after some time, which would consequently end the recording. For more information, see [Toggling the Automatic standby mode](Viewing_spectrum_analyzer_traces.md#toggling-the-automatic-standby-mode).
+    > If you intend to make a long recording, make sure that the automatic stand-by option is disabled. Otherwise the screen could freeze after some time, which would consequently end the recording. For more information, see [Toggling the Automatic standby mode](xref:Viewing_spectrum_analyzer_traces#toggling-the-automatic-standby-mode).
 
 2. Click *Stop recording* when ready.
 
@@ -76,7 +76,7 @@ To play back a recording:
 
 > [!NOTE]
 > - The traces shown during a recording have an associated date/timestamp, displayed in the bottom-right corner.
-> - Spectrum recordings can also be created automatically by a spectrum monitor when an alarm occurs (see [Configuring spectrum monitors](Working_with_spectrum_monitors.md#configuring-spectrum-monitors)). You can view such a recording by right-clicking the alarm in the Alarm Console and selecting *Show alarm trace recording*.
+> - Spectrum recordings can also be created automatically by a spectrum monitor when an alarm occurs (see [Configuring spectrum monitors](xref:Working_with_spectrum_monitors#configuring-spectrum-monitors)). You can view such a recording by right-clicking the alarm in the Alarm Console and selecting *Show alarm trace recording*.
 
 ### Managing recordings
 

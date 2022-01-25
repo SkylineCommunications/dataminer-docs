@@ -8,8 +8,8 @@ It is possible to make sure that when an alarm occurs matching a particular alar
 
 In this section:
 
-- [Configuring notifications in System Center](Configuring_notifications_in_System_Center.md)
+- [Configuring notifications in System Center](xref:Configuring_notifications_in_System_Center)
 
-- [Configuring notifications directly from the Alarm Console or Surveyor](Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor.md)
+- [Configuring notifications directly from the Alarm Console or Surveyor](xref:Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor)
 
-- [Configuring alarm storm prevention for notifications](Configuring_alarm_storm_prevention_for_notifications.md)
+- [Configuring alarm storm prevention for notifications](xref:Configuring_alarm_storm_prevention_for_notifications)

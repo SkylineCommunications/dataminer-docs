@@ -224,7 +224,7 @@ Returns:
 
 - *True* when adding/editing the ticket was successful, otherwise *False*.
 
-Example: see[Creating tickets with the Ticketing Gateway API](Creating_tickets_with_the_Ticketing_Gateway_API.md).
+Example: see[Creating tickets with the Ticketing Gateway API](xref:Creating_tickets_with_the_Ticketing_Gateway_API).
 
 #### SetTicketFieldResolver
 
@@ -244,7 +244,7 @@ Returns
 
 - *True* when adding/editing the ticket field resolver was successful, otherwise *False*.
 
-Example: see[Creating tickets with the Ticketing Gateway API](Creating_tickets_with_the_Ticketing_Gateway_API.md).
+Example: see[Creating tickets with the Ticketing Gateway API](xref:Creating_tickets_with_the_Ticketing_Gateway_API).
 
 #### SetTicketFieldResolvers
 

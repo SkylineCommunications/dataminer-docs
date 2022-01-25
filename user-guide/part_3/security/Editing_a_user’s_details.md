@@ -8,7 +8,7 @@ To edit a user’s details:
 
 1. In the *Users / Groups* section of the System Center module, go to the *users* tab and select the user whose information you want to edit.
 
-    Alternatively, you can also open the user card for the user in question. See [Opening a user card](Opening_a_user_card.md).
+    Alternatively, you can also open the user card for the user in question. See [Opening a user card](xref:Opening_a_user_card).
 
 2. If you are using a version of DataMiner prior to 9.5.4, in the lower right corner of the *details* tab, click the *Edit* button.
 

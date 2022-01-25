@@ -12,7 +12,7 @@ This “None” option is most useful when used in conjunction with shape data f
 
 > [!TIP]
 > See also:
-> [Making a shape filter Alarm Console tabs when clicked](Making_a_shape_filter_Alarm_Console_tabs_when_clicked.md)
+> [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)
 
 ### Configuring the shape data field
 

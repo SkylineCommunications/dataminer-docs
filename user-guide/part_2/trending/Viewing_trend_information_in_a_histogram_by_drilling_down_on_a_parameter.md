@@ -4,7 +4,7 @@ uid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
 
 ## Viewing trend information in a histogram by drilling down on a parameter
 
-1. Go to the trend information by drilling down on a parameter in a card. See [Accessing trend information from a card](Accessing_trend_information_from_a_card.md).
+1. Go to the trend information by drilling down on a parameter in a card. See [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card).
 
 2. Above the trend graph, click *Histogram*.
 

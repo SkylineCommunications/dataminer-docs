@@ -24,7 +24,7 @@ On this page, you can find:
 
 > [!NOTE]
 > - Depending on your user permissions, some of these items may not be displayed.
-> - From DataMiner 9.6.1 onwards, the Cube user settings allow you to customize which information is shown on this page. See [Cube settings](User_settings.md#cube-settings).
+> - From DataMiner 9.6.1 onwards, the Cube user settings allow you to customize which information is shown on this page. See [Cube settings](xref:User_settings#cube-settings).
 
 ### Card types
 
@@ -66,14 +66,14 @@ The pane consists of a tree view with several fixed nodes:
 
     > [!NOTE]
     > - A Visual Overview page can contain multiple tabs. If there are too many tabs to display them all on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, you can click this icon and select the tab from the drop-down list.
-    > - As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](User_settings.md#visual-overview-settings).
+    > - As you can also access these tabs from the card navigation pane, it is possible to hide them in Visual Overview by means of the *Show tab pages* user setting. For more information, see [Visual Overview settings](xref:User_settings#visual-overview-settings).
     > - If a Visual Overview page contains a background image, the header bar and navigation pane will be hidden after 3 seconds without mouse movement. Simply move the mouse again to make them reappear.
     > - Whether zooming in and out on a Visual Overview page is possible depends on the configuration of the page in Visio. See [EnableZoom](xref:Overview_of_page_and_shape_options) and [DisableZoom](xref:Overview_of_page_and_shape_options).
 
 - **DATA**: Contains all available Data Display pages.
 
     > [!NOTE]
-    > - Optionally, a Data Display page selector can be displayed on an element card, in addition to or instead of the tree view in the navigation pane. See [Card settings](User_settings.md#card-settings).
+    > - Optionally, a Data Display page selector can be displayed on an element card, in addition to or instead of the tree view in the navigation pane. See [Card settings](xref:User_settings#card-settings).
     > - If you open a subpage of a Data Display page by selecting it in the card navigation pane instead of by clicking a page button, the subpage is opened in the same card, and at the top, a button “Up to \[parent page name\]” is displayed, which allows you to quickly go to the parent page.
     > - Element protocols can be configured to hide one or more Data Display pages depending on a parameter value.
     > - Prior to DataMiner 9.6.7, a view has a DATA node with pages listing the items within the view. From DataMiner 9.6.7 onwards, this node is called “BELOW THIS VIEW” instead.

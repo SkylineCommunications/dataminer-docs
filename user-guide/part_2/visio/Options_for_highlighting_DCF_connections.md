@@ -27,7 +27,7 @@ In addition to the options determining how connections are displayed, there are 
 
 > [!TIP]
 > See also:
-> [Highlighting a connection chain based on a filter shape](Highlighting_a_connection_chain_based_on_a_filter_shape.md)
+> [Highlighting a connection chain based on a filter shape](xref:Highlighting_a_connection_chain_based_on_a_filter_shape)
 
 ### Controlling highlighting when using physical connectors
 

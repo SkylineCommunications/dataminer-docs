@@ -6,8 +6,8 @@ uid: ScriptAbortException_class
 
 Below, you can find an overview of all members of the *ScriptAbortException* class. This class represents the exception that is thrown when a script is aborted.
 
-- [ScriptAbortException constructor](ScriptAbortException_constructor.md)
+- [ScriptAbortException constructor](xref:ScriptAbortException_constructor)
 
-- [ScriptAbortException methods](ScriptAbortException_methods.md)
+- [ScriptAbortException methods](xref:ScriptAbortException_methods)
 
-- [ScriptAbortException properties](ScriptAbortException_properties.md)
+- [ScriptAbortException properties](xref:ScriptAbortException_properties)

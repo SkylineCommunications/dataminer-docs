@@ -8,21 +8,21 @@ From DataMiner 9.6.9 onwards, a Dashboards web app is available. This app allows
 
 In this section:
 
-- [Overview of the Dashboards app UI](Overview_of_the_Dashboards_app_UI.md)
+- [Overview of the Dashboards app UI](xref:Overview_of_the_Dashboards_app_UI)
 
-- [Managing dashboard folders](Managing_dashboard_folders.md)
+- [Managing dashboard folders](xref:Managing_dashboard_folders)
 
-- [Creating and configuring dashboards](Creating_and_configuring_dashboards.md)
+- [Creating and configuring dashboards](xref:Creating_and_configuring_dashboards)
 
-- [Available visualizations](Available_visualizations.md)
+- [Available visualizations](xref:Available_visualizations)
 
-- [Using dashboard feeds](Using_dashboard_feeds.md)
+- [Using dashboard feeds](xref:Using_dashboard_feeds)
 
-- [Generating a report based on a dashboard](Generating_a_report_based_on_a_dashboard.md)
+- [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard)
 
-- [Customizing the Dashboards app](Customizing_the_Dashboards_app.md)
+- [Customizing the Dashboards app](xref:Customizing_the_Dashboards_app)
 
-- [Dashboard Gateway installation](Dashboard_Gateway_installation.md)
+- [Dashboard Gateway installation](xref:Dashboard_Gateway_installation)
 
 > [!NOTE]
 > A legacy DMS Dashboards module also exists. For more information, see [DMS Dashboards](xref:dashboards#dms-dashboards).

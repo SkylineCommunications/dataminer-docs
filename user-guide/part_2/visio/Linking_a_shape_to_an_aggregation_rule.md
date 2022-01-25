@@ -23,5 +23,5 @@ To do so:
 > [!NOTE]
 > The above-mentioned *AggregationRule* placeholder can also be used in a trend component, a pie chart, a bar chart, a column chart, a stacked area chart and a parameter summary.
 >
-> For more information on the placeholder, see [\[AggregationRule: ...\]](Placeholders_for_variables_in_shape_data_values.md#aggregationrule).
+> For more information on the placeholder, see [\[AggregationRule: ...\]](xref:Placeholders_for_variables_in_shape_data_values#aggregationrule).
 >

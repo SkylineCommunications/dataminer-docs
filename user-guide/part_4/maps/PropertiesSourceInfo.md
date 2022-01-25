@@ -76,7 +76,7 @@ Result:
     - the pop-up details (by default)
 
         > [!NOTE]
-        > If you want to show data from another element in a pop-up balloon, refer to [Showing data of another element in a pop-up balloon](PopupSkeleton_and_PopupDetails.md#showing-data-of-another-element-in-a-pop-up-balloon).
+        > If you want to show data from another element in a pop-up balloon, refer to [Showing data of another element in a pop-up balloon](xref:PopupSkeleton_and_PopupDetails#showing-data-of-another-element-in-a-pop-up-balloon).
 
 - The “data element” specified in the *elementdata* variable will supply:
 
@@ -89,7 +89,7 @@ Result:
 - The properties filter will be applied on the “data element”.
 
 > [!NOTE]
-> It is possible to specify this attribute in the *\<ParametersSourceInfo>* tag instead. See [Passing ParametersSourceInfo data along in the map’s URL](ParametersSourceInfo.md#passing-parameterssourceinfo-data-along-in-the-maps-url).
+> It is possible to specify this attribute in the *\<ParametersSourceInfo>* tag instead. See [Passing ParametersSourceInfo data along in the map’s URL](xref:ParametersSourceInfo#passing-parameterssourceinfo-data-along-in-the-maps-url).
 
 #### elementVar
 

@@ -50,7 +50,7 @@ Operation|Param1|Param2|...|ParamZ|Actions
     See [Syntax of the Actions section](#syntax-of-the-actions-section).
 
 > [!NOTE]
-> By default, a pipe character (“\|”) is used as the separator between the sections. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
+> By default, a pipe character (“\|”) is used as the separator between the sections. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
 #### Syntax of a Parameter section
 
@@ -78,14 +78,14 @@ Element:Parameter:Index
 
 - **Index**: The table index (in case of a dynamic table parameter)
 
-    - From DataMiner 10.2.1/10.3.0 onwards, you can refer to the index using a subscription filter. This can be any filter that can be passed to a parameter change subscription (e.g. “VALUE=\<PID> == \<value>”, “fullFilter=(...)”, etc.). For more information, see [Dynamic table filter syntax](Dynamic_table_filter_syntax.md).
+    - From DataMiner 10.2.1/10.3.0 onwards, you can refer to the index using a subscription filter. This can be any filter that can be passed to a parameter change subscription (e.g. “VALUE=\<PID> == \<value>”, “fullFilter=(...)”, etc.). For more information, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
     - From DataMiner 9.6.7 onwards, it is possible to refer to several rows, a column, or a full table. For instance, to refer to all rows that start with “SL”, you can specify “*101/201:500:SL\*\|*”. To refer to a column, specify the column parameter, e.g. “*101/201:501*”. To refer to an entire table, specify the table parameter, e.g. “*101/201:500*”.
 
     - Up to DataMiner 9.6.0, if you specify a table parameter, only one row is allowed to match the filter.
 
 > [!NOTE]
-> By default, a colon (“:”) is used as the separator within a parameter section. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
+> By default, a colon (“:”) is used as the separator within a parameter section. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
 #### Syntax of the Actions section
 

@@ -41,7 +41,7 @@ If you want users to be able to assign and configure user group settings, you ha
 
 > [!TIP]
 > See also:
-> [DataMiner user permissions](DataMiner_user_permissions.md)
+> [DataMiner user permissions](xref:DataMiner_user_permissions)
 
 ### What if a user is a member of more than one group?
 

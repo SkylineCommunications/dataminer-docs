@@ -6,7 +6,7 @@ uid: Running_Automation_scripts
 
 Once a script has been designed, it can be executed in several ways:
 
-- Manually: a one-time execution from a Visual Overview or from the *Automation* module. See [Manually executing a script](Manually_executing_a_script.md) and [Script execution options](Script_execution_options.md).
+- Manually: a one-time execution from a Visual Overview or from the *Automation* module. See [Manually executing a script](xref:Manually_executing_a_script) and [Script execution options](xref:Script_execution_options).
 
 - With DMS Scheduler: scripts can be run automatically at certain predefined points in time. See [DMS Scheduler](xref:scheduler#dms-scheduler).
 

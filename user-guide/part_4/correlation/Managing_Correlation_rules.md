@@ -15,19 +15,19 @@ When you open the Correlation module in Cube (via apps \> *Correlation*), a card
 
 Managing Correlation rules, e.g. adding and deleting rules or organizing them in folders, is done in the pane on the left:
 
-- [Collapsing and expanding folders](Collapsing_and_expanding_folders.md)
+- [Collapsing and expanding folders](xref:Collapsing_and_expanding_folders)
 
-- [Adding a new folder](Adding_a_new_folder.md)
+- [Adding a new folder](xref:Adding_a_new_folder)
 
-- [Moving rules or folders](Moving_rules_or_folders.md)
+- [Moving rules or folders](xref:Moving_rules_or_folders)
 
-- [Deleting a rule or folder](Deleting_a_rule_or_folder.md)
+- [Deleting a rule or folder](xref:Deleting_a_rule_or_folder)
 
-- [Renaming a folder](Renaming_a_folder.md)
+- [Renaming a folder](xref:Renaming_a_folder)
 
-- [Adding a new Correlation rule](Adding_a_new_Correlation_rule.md)
+- [Adding a new Correlation rule](xref:Adding_a_new_Correlation_rule)
 
-- [Testing a Correlation rule](Testing_a_Correlation_rule.md)
+- [Testing a Correlation rule](xref:Testing_a_Correlation_rule)
 
 > [!NOTE]
 > To enable or disable a rule, select the rule in the tree view, and then either select or clear the checkbox next to *Enable this rule*, in the top-left corner of the pane on the right.

@@ -45,7 +45,7 @@ In the above-mentioned command, you can use the following options.
     Set|234/20|101|2|ConfirmationMessage=My custom message.
     ```
 
-- **SetTrigger=ValueChanged**: Use this option to update parameters or session variables when a specific value changes. See [Configuring a page to update parameters on session variable changes](Configuring_a_page_to_update_parameters_on_session_variable_changes.md) or [Configuring a page to update a session variable when another session variable changes](Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes.md).
+- **SetTrigger=ValueChanged**: Use this option to update parameters or session variables when a specific value changes. See [Configuring a page to update parameters on session variable changes](xref:Configuring_a_page_to_update_parameters_on_session_variable_changes) or [Configuring a page to update a session variable when another session variable changes](xref:Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes).
 
 - **SetTrigger=Event**: Available from DataMiner 10.0.3 onwards. Use this option to update parameters or session variables when an event occurs on the open Visual Overview page.
 

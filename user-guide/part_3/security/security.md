@@ -6,20 +6,20 @@ uid: security
 
 This section consists of the following topics:
 
-- [About DMS Security](About_DMS_Security.md)
+- [About DMS Security](xref:About_DMS_Security)
 
-- [Managing users](Managing_users.md)
+- [Managing users](xref:Managing_users)
 
-- [Configuring user notifications](Configuring_user_notifications.md)
+- [Configuring user notifications](xref:Configuring_user_notifications)
 
-- [Managing user groups](Managing_user_groups.md)
+- [Managing user groups](xref:Managing_user_groups)
 
-- [DataMiner user permissions](DataMiner_user_permissions.md)
+- [DataMiner user permissions](xref:DataMiner_user_permissions)
 
-- [Assigning user settings to a user group](Assigning_user_settings_to_a_user_group.md)
+- [Assigning user settings to a user group](xref:Assigning_user_settings_to_a_user_group)
 
-- [Configuring a set of user group settings](Configuring_a_set_of_user_group_settings.md)
+- [Configuring a set of user group settings](xref:Configuring_a_set_of_user_group_settings)
 
-- [Frequently asked questions about user group settings](Frequently_asked_questions_about_user_group_settings.md)
+- [Frequently asked questions about user group settings](xref:Frequently_asked_questions_about_user_group_settings)
 
-- [Advanced security configuration](Advanced_security_configuration.md)
+- [Advanced security configuration](xref:Advanced_security_configuration)

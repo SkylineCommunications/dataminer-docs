@@ -6,13 +6,13 @@ uid: faq
 
 The frequently asked questions are divided over the following sections:
 
-- [General configuration](General_configuration.md)
+- [General configuration](xref:General_configuration)
 
-- [IDs of views, elements, services, redundancy groups and parameters](IDs_of_views_elements_services_redundancy_groups_and_parameters.md)
+- [IDs of views, elements, services, redundancy groups and parameters](xref:IDs_of_views_elements_services_redundancy_groups_and_parameters)
 
-- [Databases](Databases1.md#databases)
+- [Databases](xref:Databases1#databases)
 
-- [DataMiner client applications](DataMiner_client_applications.md)
+- [DataMiner client applications](xref:DataMiner_client_applications)
 
 > [!TIP]
 > See also:

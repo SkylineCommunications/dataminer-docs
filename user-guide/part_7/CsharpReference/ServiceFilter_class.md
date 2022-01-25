@@ -6,8 +6,8 @@ uid: ServiceFilter_class
 
 Below, you can find an overview of the members of the *ServiceFilter* class. This class represents a filter that can be used when searching for services.
 
-- [ServiceFilter constructor](ServiceFilter_constructor.md)
+- [ServiceFilter constructor](xref:ServiceFilter_constructor)
 
-- [ServiceFilter methods](ServiceFilter_methods.md)
+- [ServiceFilter methods](xref:ServiceFilter_methods)
 
-- [ServiceFilter properties](ServiceFilter_properties.md)
+- [ServiceFilter properties](xref:ServiceFilter_properties)

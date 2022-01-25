@@ -10,4 +10,4 @@ There are two ways to create a Correlation analyzer:
 
 - In the Surveyor, right-click an element or view for which you wish to create an analyzer, and select *Actions \> Analyze*.
 
-You will then be able to further configure the analyzer. See [Configuring an analyzer](Configuring_an_analyzer.md).
+You will then be able to further configure the analyzer. See [Configuring an analyzer](xref:Configuring_an_analyzer).

@@ -10,7 +10,7 @@ uid: Failover_configuration_in_Cube
 
 To enable Failover using DataMiner version **10.1.8 or higher**:
 
-1. Make sure both DMAs are prepared and you have the necessary prerequisites. See [Preparing the two DataMiner Agents](Preparing_the_two_DataMiner_Agents.md).
+1. Make sure both DMAs are prepared and you have the necessary prerequisites. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
 2. If you intend to configure Failover with a **shared hostname** instead of virtual IP addresses, make sure the IIS extension “Application Request Routing” is installed on both DMAs. See
 <https://www.iis.net/downloads/microsoft/application-request-routing>.
@@ -33,7 +33,7 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
     3. In the box indicating the backup DMA, click the *x.x.x.x* placeholder, and specify the current IP addresses of the corporate and the acquisition network interfaces of the backup DMA.
 
-    4. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](Advanced_Failover_options.md).
+    4. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
     5. Click *OK* to save the configuration.
 
@@ -47,13 +47,13 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
     3. In the box indicating the backup DMA, specify the hostname of the backup DMA.
 
-    4. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](Advanced_Failover_options.md).
+    4. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
     5. Click *OK* to save the configuration.
 
 To enable Failover using DataMiner version **10.1.7 or lower**:
 
-1. Make sure both DMAs are prepared and you have a pair of IP addresses available that are not currently used. See [Preparing the two DataMiner Agents](Preparing_the_two_DataMiner_Agents.md).
+1. Make sure both DMAs are prepared and you have a pair of IP addresses available that are not currently used. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
 2. On the primary DMA, open DataMiner Cube.
 
@@ -71,7 +71,7 @@ To enable Failover using DataMiner version **10.1.7 or lower**:
 
 9. In the box indicating the backup DMA, click the *x.x.x.x* placeholder, and specify the current IP addresses of the corporate and the acquisition network interfaces of the backup DMA.
 
-10. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](Advanced_Failover_options.md).
+10. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
 11. Click *OK* to save the configuration.
 

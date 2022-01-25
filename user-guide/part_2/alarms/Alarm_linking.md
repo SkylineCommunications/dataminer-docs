@@ -24,4 +24,4 @@ Thanks to this method of alarm linking, (nearly) every alarm in the DataMiner Sy
 
 > [!TIP]
 > See also:
-> [Clearing alarms](Clearing_alarms.md)
+> [Clearing alarms](xref:Clearing_alarms)

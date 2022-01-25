@@ -6,83 +6,83 @@ uid: CsharpReference
 
 This section provides an overview of the objects and classes available in C# code blocks of Automation scripts.
 
-- [AutomationConfigOptions class](AutomationConfigOptions_class.md)
+- [AutomationConfigOptions class](xref:AutomationConfigOptions_class)
 
-- [AutomationDateTimePickerOptions class](AutomationDateTimePickerOptions_class.md)
+- [AutomationDateTimePickerOptions class](xref:AutomationDateTimePickerOptions_class)
 
-- [AutomationDateTimeUpDownOptions class](AutomationDateTimeUpDownOptions_class.md)
+- [AutomationDateTimeUpDownOptions class](xref:AutomationDateTimeUpDownOptions_class)
 
-- [AutomationEntryPointAttribute class](AutomationEntryPointAttribute_class.md)
+- [AutomationEntryPointAttribute class](xref:AutomationEntryPointAttribute_class)
 
-- [AutomationEntryPointDelegates class](AutomationEntryPointDelegates_class.md)
+- [AutomationEntryPointDelegates class](xref:AutomationEntryPointDelegates_class)
 
-- [AutomationEntryPointType class](AutomationEntryPointType_class.md)
+- [AutomationEntryPointType class](xref:AutomationEntryPointType_class)
 
-- [AutomationEntryPointType.Types enumeration](AutomationEntryPointType_Types_enumeration.md#automationentrypointtypetypes-enumeration)
+- [AutomationEntryPointType.Types enumeration](xref:AutomationEntryPointType_Types_enumeration#automationentrypointtypetypes-enumeration)
 
-- [AutomationScriptAttachOptions enumeration](AutomationScriptAttachOptions_enumeration.md)
+- [AutomationScriptAttachOptions enumeration](xref:AutomationScriptAttachOptions_enumeration)
 
-- [AutomationTimePickerOptions class](AutomationTimePickerOptions_class.md)
+- [AutomationTimePickerOptions class](xref:AutomationTimePickerOptions_class)
 
-- [AutomationTimeUpDownOptions class](AutomationTimeUpDownOptions_class.md)
+- [AutomationTimeUpDownOptions class](xref:AutomationTimeUpDownOptions_class)
 
-- [Element class](Element_class.md)
+- [Element class](xref:Element_class)
 
-- [ElementFilter class](ElementFilter_class.md)
+- [ElementFilter class](xref:ElementFilter_class)
 
-- [EmailOptions class](EmailOptions_class.md)
+- [EmailOptions class](xref:EmailOptions_class)
 
-- [Engine class](Engine_class.md)
+- [Engine class](xref:Engine_class)
 
-- [IActionableElement](IActionableElement.md)
+- [IActionableElement](xref:IActionableElement)
 
-- [IEngine interface](IEngine_interface.md)
+- [IEngine interface](xref:IEngine_interface)
 
-- [InteractiveUserDetachedException class](InteractiveUserDetachedException_class.md)
+- [InteractiveUserDetachedException class](xref:InteractiveUserDetachedException_class)
 
-- [Interface class](Interface_class.md)
+- [Interface class](xref:Interface_class)
 
-- [LogType enumeration](LogType_enumeration.md)
+- [LogType enumeration](xref:LogType_enumeration)
 
-- [MailReportOptions class](MailReportOptions_class.md)
+- [MailReportOptions class](xref:MailReportOptions_class)
 
-- [MailReportParameter class](MailReportParameter_class.md)
+- [MailReportParameter class](xref:MailReportParameter_class)
 
-- [MailReportParameterFlags enumeration](MailReportParameterFlags_enumeration.md)
+- [MailReportParameterFlags enumeration](xref:MailReportParameterFlags_enumeration)
 
-- [NotificationOptions class](NotificationOptions_class.md)
+- [NotificationOptions class](xref:NotificationOptions_class)
 
-- [PagerOptions class](PagerOptions_class.md)
+- [PagerOptions class](xref:PagerOptions_class)
 
-- [RedundancyGroup class](RedundancyGroup_class.md)
+- [RedundancyGroup class](xref:RedundancyGroup_class)
 
-- [RedundancyGroupFilter class](RedundancyGroupFilter_class.md)
+- [RedundancyGroupFilter class](xref:RedundancyGroupFilter_class)
 
-- [ScriptAbortException class](ScriptAbortException_class.md)
+- [ScriptAbortException class](xref:ScriptAbortException_class)
 
-- [ScriptDummy class](ScriptDummy_class.md)
+- [ScriptDummy class](xref:ScriptDummy_class)
 
-- [ScriptMemory class](ScriptMemory_class.md)
+- [ScriptMemory class](xref:ScriptMemory_class)
 
-- [ScriptParam class](ScriptParam_class.md)
+- [ScriptParam class](xref:ScriptParam_class)
 
-- [Service class](Service_class.md)
+- [Service class](xref:Service_class)
 
-- [ServiceFilter class](ServiceFilter_class.md)
+- [ServiceFilter class](xref:ServiceFilter_class)
 
-- [SmsOptions class](SmsOptions_class.md)
+- [SmsOptions class](xref:SmsOptions_class)
 
-- [SpectrumPreset class](SpectrumPreset_class.md)
+- [SpectrumPreset class](xref:SpectrumPreset_class)
 
-- [SubScriptOptions class](SubScriptOptions_class.md)
+- [SubScriptOptions class](xref:SubScriptOptions_class)
 
-- [UIBlockDefinition class](UIBlockDefinition_class.md)
+- [UIBlockDefinition class](xref:UIBlockDefinition_class)
 
-- [UIBlockType enumeration](UIBlockType_enumeration.md)
+- [UIBlockType enumeration](xref:UIBlockType_enumeration)
 
-- [UIBuilder class](UIBuilder_class.md)
+- [UIBuilder class](xref:UIBuilder_class)
 
-- [UIResults class](UIResults_class.md)
+- [UIResults class](xref:UIResults_class)
 
 > [!TIP]
 > See also:

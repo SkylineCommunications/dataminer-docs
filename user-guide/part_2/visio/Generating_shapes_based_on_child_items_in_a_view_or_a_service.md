@@ -174,7 +174,7 @@ The following shape data fields can be added to the group containing the shapes 
         ```
 
     > [!NOTE]
-    > From DataMiner 10.2.0/10.1.1 onwards, placeholders such as \[var:VariableName\] can be used in ChildrenSort shape data. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+    > From DataMiner 10.2.0/10.1.1 onwards, placeholders such as \[var:VariableName\] can be used in ChildrenSort shape data. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
 - **ChildrenPanel**: In this optional shape data field, you can specify how the child items have to be organized within the container shape.
 

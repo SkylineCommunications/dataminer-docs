@@ -16,7 +16,7 @@ To add parameters with the parameter pane:
 
 3. Repeat from step 1 until all necessary parameters have been added.
 
-4. To save the trend group, click *Save as*. For more information on adding a trend group, see [Adding a trend group](Working_with_the_trend_groups_pane.md#adding-a-trend-group).
+4. To save the trend group, click *Save as*. For more information on adding a trend group, see [Adding a trend group](xref:Working_with_the_trend_groups_pane#adding-a-trend-group).
 
 The following functionalities may also be useful:
 

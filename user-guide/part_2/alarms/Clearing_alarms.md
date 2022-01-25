@@ -51,7 +51,7 @@ To manually clear an alarm:
 
 2. In the *Clear alarm* window, add a comment if necessary, and click the *Clear alarm* button at the bottom.
 
-Alternatively, if a column with action buttons to clear alarms has been added in the Alarm Console, you can also click the *X* in this column. For more information on how to add action buttons, see [Changing the column layout in an alarm tab](Working_with_the_Alarm_Console.md#changing-the-column-layout-in-an-alarm-tab).
+Alternatively, if a column with action buttons to clear alarms has been added in the Alarm Console, you can also click the *X* in this column. For more information on how to add action buttons, see [Changing the column layout in an alarm tab](xref:Working_with_the_Alarm_Console#changing-the-column-layout-in-an-alarm-tab).
 
 > [!NOTE]
 > - If the alarm is not yet in a clearable state, the *Clear alarm* option is not shown.

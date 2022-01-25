@@ -38,7 +38,7 @@ A service child can have one of the following statuses:
 
 > [!TIP]
 > See also:
-> [Conditionally including an element in a service](Conditionally_including_an_element_in_a_service.md)
+> [Conditionally including an element in a service](xref:Conditionally_including_an_element_in_a_service)
 
 > [!NOTE]
 > - For services that were created with a service protocol, additional *Summary* pages are available, such as the *General parameters* page, which is similar to the General parameters page of an element.

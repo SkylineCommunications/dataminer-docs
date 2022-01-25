@@ -17,7 +17,7 @@ External and internal connections can be displayed automatically based on DataMi
     > [!NOTE]
     > - Microsoft Visio does not automatically add connection points to groups. These must be added manually.
     > - From DataMiner 9.0.0 onwards, virtual primary elements from a redundancy group can be used in a Visual Overview displaying DCF connections. The Visual Overview will then automatically update if the redundancy group switches to a different backup element.
-    > - If you want to display external connections to elements that are not displayed in the Visio drawing, shapes representing those elements can be generated dynamically. See [Dynamically generating shapes for elements that are out of scope](Dynamically_generating_shapes_for_elements_that_are_out_of_scope.md).
+    > - If you want to display external connections to elements that are not displayed in the Visio drawing, shapes representing those elements can be generated dynamically. See [Dynamically generating shapes for elements that are out of scope](xref:Dynamically_generating_shapes_for_elements_that_are_out_of_scope).
 
 4. To each of the subshapes, add a shape data field of type **Interface** and set its value to an interface ID, or to an interface name (optionally using wildcards).
 
@@ -50,9 +50,9 @@ External and internal connections can be displayed automatically based on DataMi
 
 6. To further refine how connections are displayed, you can specify the options detailed in the following sections:
 
-    - [Options for displaying DCF connections](Options_for_displaying_DCF_connections.md)
+    - [Options for displaying DCF connections](xref:Options_for_displaying_DCF_connections)
 
-    - [Options for highlighting DCF connections](Options_for_highlighting_DCF_connections.md)
+    - [Options for highlighting DCF connections](xref:Options_for_highlighting_DCF_connections)
 
 ### Automatically linking interfaces to subshapes
 
@@ -109,6 +109,6 @@ For example:
 | GroupBy    | TableColumn=145                                    |
 
 > [!NOTE]
-> - This can particularly be of use when displaying connections between dynamically positioned shapes that are grouped by table column. See [Enabling grouping of dynamically positioned shapes](Enabling_grouping_of_dynamically_positioned_shapes.md).
-> - It is also possible to apply conditional highlighting on connections based on a table column value. See [Highlighting connections based on the table column value of connected shapes](Options_for_highlighting_DCF_connections.md#highlighting-connections-based-on-the-table-column-value-of-connected-shapes).
+> - This can particularly be of use when displaying connections between dynamically positioned shapes that are grouped by table column. See [Enabling grouping of dynamically positioned shapes](xref:Enabling_grouping_of_dynamically_positioned_shapes).
+> - It is also possible to apply conditional highlighting on connections based on a table column value. See [Highlighting connections based on the table column value of connected shapes](xref:Options_for_highlighting_DCF_connections#highlighting-connections-based-on-the-table-column-value-of-connected-shapes).
 >

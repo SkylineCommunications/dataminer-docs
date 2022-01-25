@@ -7,9 +7,9 @@ uid: Linking_a_shape_to_an_alarm
 Using a shape data field of type **Alarm**, you can link a shape to an active alarm.
 
 > [!NOTE]
-> - Shape data fields of type **Alarm** are mostly used in combination with shape data fields of type **Info**. See [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
-> - If you want to link to the alarm state of a parameter, use a shape data field of type **Parameter** instead of **Alarm**. See [Linking a shape to an element parameter](Linking_a_shape_to_an_element_parameter.md).
-> - If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: “*The value of the alarm is **\[value\]**.*” See [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
+> - Shape data fields of type **Alarm** are mostly used in combination with shape data fields of type **Info**. See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
+> - If you want to link to the alarm state of a parameter, use a shape data field of type **Parameter** instead of **Alarm**. See [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter).
+> - If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: “*The value of the alarm is **\[value\]**.*” See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 ### Configuring the shape data field
 
@@ -78,7 +78,7 @@ In the field value, you can use the following options.
 
 > [!TIP]
 > See also:
-> [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md)
+> [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)
 
 ### Examples
 

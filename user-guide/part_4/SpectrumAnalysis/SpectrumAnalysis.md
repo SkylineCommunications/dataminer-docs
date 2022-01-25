@@ -10,13 +10,13 @@ In DataMiner, a real-time interface allows operators to perform RF measurements 
 
 This section consists of the following topics:
 
-- [Installation and configuration of a spectrum analyzer](Installation_and_configuration_of_a_spectrum_analyzer.md)
+- [Installation and configuration of a spectrum analyzer](xref:Installation_and_configuration_of_a_spectrum_analyzer)
 
-- [Working with spectrum analyzer elements](Working_with_spectrum_analyzer_elements.md)
+- [Working with spectrum analyzer elements](xref:Working_with_spectrum_analyzer_elements)
 
-- [Spectrum analyzer scripts and monitors](Spectrum_analyzer_scripts_and_monitors.md)
+- [Spectrum analyzer scripts and monitors](xref:Spectrum_analyzer_scripts_and_monitors)
 
-- [Advanced Spectrum Analysis functions](Advanced_Spectrum_Analysis_functions.md)
+- [Advanced Spectrum Analysis functions](xref:Advanced_Spectrum_Analysis_functions)
 
 > [!TIP]
 > See also:

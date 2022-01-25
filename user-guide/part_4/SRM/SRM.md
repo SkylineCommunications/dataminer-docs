@@ -10,23 +10,23 @@ This framework integrates the previously available Profiles and Resources module
 
 The following topics provide more information on this module:
 
-- [Concepts](Concepts1.md#concepts)
+- [Concepts](xref:Concepts1#concepts)
 
-- [Functions XML files](Functions_XML_files.md)
+- [Functions XML files](xref:Functions_XML_files)
 
-- [The Profiles module](The_Profiles_module.md)
+- [The Profiles module](xref:The_Profiles_module)
 
-- [The Resources module](The_Resources_module.md)
+- [The Resources module](xref:The_Resources_module)
 
-- [The Bookings module](The_Bookings_module.md)
+- [The Bookings module](xref:The_Bookings_module)
 
-- [The Services module](The_Services_module.md)
+- [The Services module](xref:The_Services_module)
 
-- [SRM code snippets](SRM_code_snippets.md)
+- [SRM code snippets](xref:SRM_code_snippets)
 
-- [Advanced SRM settings](Advanced_SRM_settings.md)
+- [Advanced SRM settings](xref:Advanced_SRM_settings)
 
-- [SRM reporting](SRM_reporting.md)
+- [SRM reporting](xref:SRM_reporting)
 
 > [!NOTE]
 > - DataMiner SRM requires a general database of type Cassandra as well as the following licenses:

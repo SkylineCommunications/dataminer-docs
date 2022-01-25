@@ -12,8 +12,8 @@ DataMiner’s automated performance monitoring is based on the one hand on scrip
 
 The following topics provide more information:
 
-- [Working with spectrum scripts](Working_with_spectrum_scripts.md)
+- [Working with spectrum scripts](xref:Working_with_spectrum_scripts)
 
-- [Working with spectrum monitors](Working_with_spectrum_monitors.md)
+- [Working with spectrum monitors](xref:Working_with_spectrum_monitors)
 
-- [Spectrum Analyzer script actions](Spectrum_Analyzer_script_actions.md)
+- [Spectrum Analyzer script actions](xref:Spectrum_Analyzer_script_actions)

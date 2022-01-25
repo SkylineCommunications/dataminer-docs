@@ -17,8 +17,8 @@ Rights can be granted according to three concepts:
     Users will only be able to set parameters of which the access level is equal or lower than the access level they have been granted. Example: A user with access level 3 can update parameters with access level 3, 4, 5, etc.     Access levels range from 1 (highest level) to 100 (lowest level).
 
 > [!NOTE]
-> The user permissions and view access of a user are always inherited from the group the user is a member of. Changing these is only possible by changing the group membership, or by editing the group. See [Managing user groups](Managing_user_groups.md).
+> The user permissions and view access of a user are always inherited from the group the user is a member of. Changing these is only possible by changing the group membership, or by editing the group. See [Managing user groups](xref:Managing_user_groups).
 
 > [!TIP]
 > See also:
-> [DataMiner user permissions](DataMiner_user_permissions.md)
+> [DataMiner user permissions](xref:DataMiner_user_permissions)

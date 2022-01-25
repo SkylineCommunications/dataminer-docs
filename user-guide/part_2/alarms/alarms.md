@@ -10,11 +10,11 @@ Most of the alarm functionality is available via the Alarm Console.
 
 Information on DataMiner alarm functionality is divided over the following sections:
 
-- [About alarms](About_alarms.md)
+- [About alarms](xref:About_alarms)
 
-- [Working with alarms in DataMiner Cube](Working_with_alarms_in_DataMiner_Cube.md)
+- [Working with alarms in DataMiner Cube](xref:Working_with_alarms_in_DataMiner_Cube)
 
-- [Advanced alarm functionality](Advanced_alarm_functionality.md)
+- [Advanced alarm functionality](xref:Advanced_alarm_functionality)
 
 > [!TIP]
 > See also:

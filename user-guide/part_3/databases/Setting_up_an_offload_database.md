@@ -159,7 +159,7 @@ The final step is the configuration of the DMS.
 
 2. For DMAs using a DataMiner version prior to 9.0.0, if the offload database is an Oracle database, install the Oracle Data Access Component (ODAC). The Oracle Client must be at least version 12.
 
-    Download: [http://www.oracle.com/tecbhnetwork/topics/dotnet/utilsoft-086879.html](http://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.md)
+    Download: [http://www.oracle.com/tecbhnetwork/topics/dotnet/utilsoft-086879.html](http://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.html)
 
     > [!NOTE]
     > From DataMiner 9.0.0 onwards, the SLDatabase process uses the managed Oracle Database accessor to connect to an Oracle database, so that additional tools like Oracle Client are no longer needed.
@@ -202,7 +202,7 @@ The final step is the configuration of the DMS.
 
     6. In the *Offloads* section, select the tables you want to offload, and specify the remote table name.
 
-    7. Optionally, if you have selected *Trend data*, specify further details for the offload. For more information, see [Configuring data offloads](Configuring_data_offloads.md).
+    7. Optionally, if you have selected *Trend data*, specify further details for the offload. For more information, see [Configuring data offloads](xref:Configuring_data_offloads).
 
 > [!NOTE]
 > - If an offload to the offload database fails, an alarm will be generated in DataMiner. As soon as offloading works again, the alarm is cleared.

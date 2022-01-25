@@ -74,7 +74,7 @@ To do so, after you specify the variable, also specify the information to be set
 | Options          | SelectionVar=*Var01*=*Keyword*,*Var02*=*Keyword*,*Var03*=*Keyword* |
 
 > [!NOTE]
-> For an overview of the keywords that can be used, see [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
+> For an overview of the keywords that can be used, see [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 For example:
 

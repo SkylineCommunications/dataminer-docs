@@ -58,7 +58,7 @@ Package containing all files necessary to install a particular DataMiner app on 
 - File extension: *.dmapp*
 
 > [!NOTE]
-> - These packages can be installed in the same way as a .dmupgrade package. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md)*.*
+> - These packages can be installed in the same way as a .dmupgrade package. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)*.*
 > - .dmapp packages can also contain report templates, dashboards and aggregation rules.
 
 ### Protocol package (.dmprotocol)
@@ -91,4 +91,4 @@ Depending on what was exported into the package, this package may contain elemen
 
 > [!TIP]
 > See also:
-> [Exporting and importing packages on a DMA](Exporting_and_importing_packages_on_a_DMA.md)
+> [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA)

@@ -8,12 +8,12 @@ DataMiner services allow you to view your system from a service perspective and 
 
 This section consists of the following topics:
 
-- [About services](About_services.md)
+- [About services](xref:About_services)
 
-- [Service cards](Service_cards.md)
+- [Service cards](xref:Service_cards)
 
-- [Adding a service](Adding_a_service.md)
+- [Adding a service](xref:Adding_a_service)
 
-- [Service properties](Service_properties.md)
+- [Service properties](xref:Service_properties)
 
-- [Service templates](Service_templates.md)
+- [Service templates](xref:Service_templates)

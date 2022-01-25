@@ -6,6 +6,6 @@ uid: Viewing_Failover_information
 
 This section consists of the following topics:
 
-- [Viewing the Failover setup](Viewing_the_Failover_setup.md)
+- [Viewing the Failover setup](xref:Viewing_the_Failover_setup)
 
-- [Viewing the current Failover DMA status](Viewing_the_current_Failover_DMA_status.md)
+- [Viewing the current Failover DMA status](xref:Viewing_the_current_Failover_DMA_status)

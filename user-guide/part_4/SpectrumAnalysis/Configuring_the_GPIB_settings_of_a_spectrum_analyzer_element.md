@@ -7,7 +7,7 @@ uid: Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element
 When adding or updating a spectrum analyzer element, at some point during element creation, you can specify the settings of the GPIB/LAN gateway through which DataMiner will communicate with the spectrum analyzer.
 
 > [!NOTE]
-> - On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Agilent IO Libraries. See [Installing the Keysight/Agilent IO Libraries](Installing_the_Keysight_Agilent_IO_Libraries.md#installing-the-keysightagilent-io-libraries).
+> - On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Agilent IO Libraries. See [Installing the Keysight/Agilent IO Libraries](xref:Installing_the_Keysight_Agilent_IO_Libraries#installing-the-keysightagilent-io-libraries).
 > - From DataMiner 9.0.0 onwards, these settings are configured in a different way than in legacy versions of DataMiner.
 
 > [!TIP]
@@ -45,7 +45,7 @@ From DataMiner 9.0.0 onwards, DataMiner supports both the SICL API and the VISA 
 
     > [!TIP]
     > See also:
-    > [Installing the IO Libraries](Installing_the_Keysight_Agilent_IO_Libraries.md#installing-the-io-libraries)
+    > [Installing the IO Libraries](xref:Installing_the_Keysight_Agilent_IO_Libraries#installing-the-io-libraries)
 
 - Set the *I/O API* field, select *SICL* or *VISA*, as appropriate.
 

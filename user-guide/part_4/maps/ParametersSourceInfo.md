@@ -13,7 +13,7 @@ In the *\<ParametersSourceInfo>* tag, specify the parameters from which to retri
     > [!NOTE]
     > Up to DataMiner version 9.0.3, DataMiner automatically displayed an unspecified element from the service on the map. From DataMiner 9.0.3 onwards, you must specify an element from the service in the configuration instead, and the location coordinates of that element are used to display the service on the map.
     >
-    > This means that for maps created prior to this version, which use *ParametersSourceInfo* with services, it may be necessary to make some changes to the configuration. Specifically, to make pop-up balloons display parameter values for elements in the service, instead of *\<Detail>* tags of type “parameter”, *\<Detail>* tags of type “parameter_elementalias” or “property_elementalias” must be used. See [PopupDetails](PopupSkeleton_and_PopupDetails.md#popupdetails) and [Example of a layer retrieving its data from service parameters and using pop-up balloons (DataMiner 9.0.3 onwards)](#example-of-a-layer-retrieving-its-data-from-service-parameters-and-using-pop-up-balloons-dataminer-903-onwards).
+    > This means that for maps created prior to this version, which use *ParametersSourceInfo* with services, it may be necessary to make some changes to the configuration. Specifically, to make pop-up balloons display parameter values for elements in the service, instead of *\<Detail>* tags of type “parameter”, *\<Detail>* tags of type “parameter_elementalias” or “property_elementalias” must be used. See [PopupDetails](xref:PopupSkeleton_and_PopupDetails#popupdetails) and [Example of a layer retrieving its data from service parameters and using pop-up balloons (DataMiner 9.0.3 onwards)](#example-of-a-layer-retrieving-its-data-from-service-parameters-and-using-pop-up-balloons-dataminer-903-onwards).
 
     > [!TIP]
     > See also:
@@ -90,7 +90,7 @@ Result:
     - the pop-up details (by default)
 
         > [!NOTE]
-        > If you want to show data from another element in a pop-up balloon, refer to [Showing data of another element in a pop-up balloon](PopupSkeleton_and_PopupDetails.md#showing-data-of-another-element-in-a-pop-up-balloon).
+        > If you want to show data from another element in a pop-up balloon, refer to [Showing data of another element in a pop-up balloon](xref:PopupSkeleton_and_PopupDetails#showing-data-of-another-element-in-a-pop-up-balloon).
 
 - The “data element” specified in the *elementdata* variable will supply:
 
@@ -103,7 +103,7 @@ Result:
 - The parameter filter will be applied on the “data element”.
 
 > [!NOTE]
-> It is possible to specify this attribute in the *\<PropertiesSourceInfo>* tag instead. See [Passing PropertiesSourceInfo data along in the map’s URL](PropertiesSourceInfo.md#passing-propertiessourceinfo-data-along-in-the-maps-url).
+> It is possible to specify this attribute in the *\<PropertiesSourceInfo>* tag instead. See [Passing PropertiesSourceInfo data along in the map’s URL](xref:PropertiesSourceInfo#passing-propertiessourceinfo-data-along-in-the-maps-url).
 
 #### elementVar
 

@@ -6,8 +6,8 @@ uid: RedundancyGroupFilter_class
 
 Below, you can find an overview of the members of the *RedundancyGroupFilter* class. This class represents a redundancy group filter.
 
-- [RedundancyGroupFilter constructor](RedundancyGroupFilter_constructor.md)
+- [RedundancyGroupFilter constructor](xref:RedundancyGroupFilter_constructor)
 
-- [RedundancyGroupFilter methods](RedundancyGroupFilter_methods.md)
+- [RedundancyGroupFilter methods](xref:RedundancyGroupFilter_methods)
 
-- [RedundancyGroupFilter properties](RedundancyGroupFilter_properties.md)
+- [RedundancyGroupFilter properties](xref:RedundancyGroupFilter_properties)

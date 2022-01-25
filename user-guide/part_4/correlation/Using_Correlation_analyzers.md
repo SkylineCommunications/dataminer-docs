@@ -8,10 +8,10 @@ It is possible for DataMiner to analyze the alarms occurring over a period of ti
 
 The so-called analyzers that are used for this purpose can be found in a second tab in the *Correlation* module in Cube, i.e. the *Analyzers* tab.
 
-- [Creating an analyzer](Creating_an_analyzer.md)
+- [Creating an analyzer](xref:Creating_an_analyzer)
 
-- [Configuring an analyzer](Configuring_an_analyzer.md)
+- [Configuring an analyzer](xref:Configuring_an_analyzer)
 
-- [Running an analyzer](Running_an_analyzer.md)
+- [Running an analyzer](xref:Running_an_analyzer)
 
-- [Managing analyzers](Managing_analyzers.md)
+- [Managing analyzers](xref:Managing_analyzers)

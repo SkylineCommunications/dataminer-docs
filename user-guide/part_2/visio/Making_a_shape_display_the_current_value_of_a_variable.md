@@ -8,9 +8,9 @@ Using a shape data field of type **Variable**, you can make a shape display the 
 
 > [!TIP]
 > See also:
-> - [Initializing a session variable](Initializing_a_session_variable.md)
-> - [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
-> - [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md)
+> - [Initializing a session variable](xref:Initializing_a_session_variable)
+> - [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
+> - [Adding options to a session variable control](xref:Adding_options_to_a_session_variable_control)
 
 ### Configuring the shape data field
 
@@ -20,7 +20,7 @@ Add a shape data field of type **Variable** to the shape, and set its value to:
 VariableName|Options
 ```
 
-Also, if the scope of the variable is not the default scope (i.e. the current DataMiner Cube session), then add an additional shape data field of type **Options**, and set its value to the correct scope. See [Indicating the scope of the variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md#indicating-the-scope-of-the-variable).
+Also, if the scope of the variable is not the default scope (i.e. the current DataMiner Cube session), then add an additional shape data field of type **Options**, and set its value to the correct scope. See [Indicating the scope of the variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable#indicating-the-scope-of-the-variable).
 
 ### Options
 
@@ -28,7 +28,7 @@ You can make a shape appear, disappear, flip or rotate based on the current valu
 
 > [!TIP]
 > See also:
-> [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md)
+> [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)
 
 ### Placeholder for variable value in shape text
 

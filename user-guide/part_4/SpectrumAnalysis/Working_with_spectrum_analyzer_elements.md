@@ -6,25 +6,25 @@ uid: Working_with_spectrum_analyzer_elements
 
 This section consists of the following topics:
 
-- [Spectrum analyzer cards](Spectrum_analyzer_cards.md)
+- [Spectrum analyzer cards](xref:Spectrum_analyzer_cards)
 
-- [Viewing spectrum analyzer traces](Viewing_spectrum_analyzer_traces.md)
+- [Viewing spectrum analyzer traces](xref:Viewing_spectrum_analyzer_traces)
 
-- [Changing the spectrum analyzer settings](Changing_the_spectrum_analyzer_settings.md)
+- [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings)
 
-- [Configuring measurement points](Configuring_measurement_points.md)
+- [Configuring measurement points](xref:Configuring_measurement_points)
 
-- [Working with markers](Working_with_markers.md)
+- [Working with markers](xref:Working_with_markers)
 
-- [Working with reference lines](Working_with_reference_lines.md)
+- [Working with reference lines](xref:Working_with_reference_lines)
 
-- [Working with frequency masks](Working_with_frequency_masks.md)
+- [Working with frequency masks](xref:Working_with_frequency_masks)
 
-- [Using Spectrum Analysis presets](Using_Spectrum_Analysis_presets.md)
+- [Using Spectrum Analysis presets](xref:Using_Spectrum_Analysis_presets)
 
-- [Working with trace recordings](Working_with_trace_recordings.md)
+- [Working with trace recordings](xref:Working_with_trace_recordings)
 
-- [Configuring spectrum thresholds](Configuring_spectrum_thresholds.md)
+- [Configuring spectrum thresholds](xref:Configuring_spectrum_thresholds)
 
 > [!TIP]
 > See also:

@@ -6,13 +6,13 @@ uid: AutomationConfigOptions_class
 
 This is an abstract class, containing the other Automation options classes:
 
-- [AutomationDateTimePickerOptions class](AutomationDateTimePickerOptions_class.md)
+- [AutomationDateTimePickerOptions class](xref:AutomationDateTimePickerOptions_class)
 
-- [AutomationDateTimeUpDownOptions class](AutomationDateTimeUpDownOptions_class.md)
+- [AutomationDateTimeUpDownOptions class](xref:AutomationDateTimeUpDownOptions_class)
 
-- [AutomationTimePickerOptions class](AutomationTimePickerOptions_class.md)
+- [AutomationTimePickerOptions class](xref:AutomationTimePickerOptions_class)
 
-- [AutomationTimeUpDownOptions class](AutomationTimeUpDownOptions_class.md)
+- [AutomationTimeUpDownOptions class](xref:AutomationTimeUpDownOptions_class)
 
 The structure of these classes is as follows, with the subclasses inheriting all properties of the classes above them:
 

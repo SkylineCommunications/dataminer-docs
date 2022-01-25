@@ -8,10 +8,10 @@ A shape can be set to perform a particular action when a mouse pointer is hovere
 
 > [!TIP]
 > See also:
-> [Triggering an action when a shape is dragged onto another shape](Triggering_an_action_when_a_shape_is_dragged_onto_another_shape.md)
+> [Triggering an action when a shape is dragged onto another shape](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape)
 
 > [!NOTE]
-> - From DataMiner 9.5.14 onwards, a different hover style can be configured for a shape. See [Configuring the hover area of a shape](Configuring_the_hover_area_of_a_shape.md).
+> - From DataMiner 9.5.14 onwards, a different hover style can be configured for a shape. See [Configuring the hover area of a shape](xref:Configuring_the_hover_area_of_a_shape).
 
 ### Configuring the shape data field
 

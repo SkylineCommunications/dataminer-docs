@@ -12,9 +12,9 @@ From DataMiner 9.6.4 onwards, the module is available as a separate *Resources* 
 
 The following topics contain more information on the *Resources* module:
 
-- [Resources module UI overview](Resources_module_UI_overview.md)
+- [Resources module UI overview](xref:Resources_module_UI_overview)
 
-- [Configuring pools of resources](Configuring_pools_of_resources.md)
+- [Configuring pools of resources](xref:Configuring_pools_of_resources)
 
 > [!NOTE]
 > From DataMiner 10.0.0 onwards, this module requires DataMiner Indexing.

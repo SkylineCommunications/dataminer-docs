@@ -77,7 +77,7 @@ To remove a reference
 >
 > In both values, you can use the “{ref}” placeholder. When, in the version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the Reference column.
 >
-> See also: [Interface](DIS_settings.md#interface)
+> See also: [Interface](xref:DIS_settings#interface)
 
 ### Current range
 

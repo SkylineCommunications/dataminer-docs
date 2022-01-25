@@ -35,4 +35,4 @@ To view more information on SLA compliance, check the section *Compliance Info* 
 
     Total and single violation time left, number of violations left.
 
-For more information on how to set these parameters, see [Configuring SLA Compliance](Configuring_SLA_Compliance.md).
+For more information on how to set these parameters, see [Configuring SLA Compliance](xref:Configuring_SLA_Compliance).

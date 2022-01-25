@@ -51,7 +51,7 @@ Configure the shape data fields as follows:
 
 ### Placeholders
 
-The value of an **AlarmSummary** shape data field can contain dynamic placeholders like \[param:...\], etc. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+The value of an **AlarmSummary** shape data field can contain dynamic placeholders like \[param:...\], etc. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
 In addition, you can also use the following placeholders in the shape text itself, so that they are replaced by statistical information in Visual Overview.
 

@@ -24,9 +24,9 @@ From DataMiner 10.0.0/10.0.2 onwards, to search for an item in the DataMiner Sys
 
 As soon as you click the search box, a list of suggestions is shown below. Initially, this list shows recent items (with any pinned items at the top), but it is updated with search results as soon as you type anything in the box.
 
-Click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in a side panel. You can also right-click a suggestion in the list to open the same right-click menu as in the Surveyor (see [Surveyor right-click menu](Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards.md#surveyor-right-click-menu)).
+Click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in a side panel. You can also right-click a suggestion in the list to open the same right-click menu as in the Surveyor (see [Surveyor right-click menu](xref:Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards#surveyor-right-click-menu)).
 
-From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards.md#sidebar)).
+From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](xref:Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards#sidebar)).
 
 Please note the following
 
@@ -119,12 +119,12 @@ If an advanced search returns several kinds of items, it is possible to filter w
 | Script           | Automation scripts. See [DMS Automation](xref:automation#dms-automation).                                                                                                    |
 | Service          | DataMiner Services and Spectrum Analysis measurement points. An additional filter allows you to limit the search to services that are monitored, in alarm, masked, or in a particular alarm state. |
 | Service template | DataMiner service templates. See [Service templates](xref:Service_templates).                                                                                                  |
-| Settings         | Cube settings. See [User settings](User_settings.md)                                                                                                                                               |
+| Settings         | Cube settings. See [User settings](xref:User_settings)                                                                                                                                               |
 | SLA              | SLA elements. See [DMS Business Intelligence](xref:sla#dms-business-intelligence).                                                                                                  |
 | User             | User accounts of the DMS. See [About DMS Security](xref:About_DMS_Security).                                                                                                   |
 | User group       | User groups configured in the DMS. See[User groups](xref:User_groups).                                                                                                         |
 | View             | DataMiner views.                                                                                                                                                                                   |
-| Workspaces       | DataMiner workspaces. See[Working with workspaces](Working_with_workspaces.md).                                                                                                                    |
+| Workspaces       | DataMiner workspaces. See[Working with workspaces](xref:Working_with_workspaces).                                                                                                                    |
 
 ### Searching for specific DataMiner items
 

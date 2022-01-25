@@ -22,7 +22,7 @@ In this section:
 
 > [!NOTE]
 > - These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
-> - For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md).
+> - For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions).
 
 ### Configuring the shape data fields
 
@@ -72,7 +72,7 @@ Up to DataMiner 9.5.4, when an asterisk ("\*") is used in shape data to refer to
 
 From DataMiner 9.5.4 onwards, however, the current shape is checked as well. This for example allows you to use asterisk characters in a “Show” condition specified in a top-level shape.
 
-For backwards compatibility, if you want asterisk characters to be resolved from the parent shape, you can add the *StartResolvingFromParent* option. See [StartResolvingFromParent](Overview_of_page_and_shape_options.md).
+For backwards compatibility, if you want asterisk characters to be resolved from the parent shape, you can add the *StartResolvingFromParent* option. See [StartResolvingFromParent](xref:Overview_of_page_and_shape_options).
 
 ### Changing the separator character in the condition
 
@@ -96,7 +96,7 @@ In addition, from DataMiner 9.5.13 onwards, it is possible to use the \[sep:XY\]
 
 > [!TIP]
 > See also:
-> [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters)
+> [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
 ### Using statistics in the condition
 
@@ -157,7 +157,7 @@ For example, with the configuration below, if the A condition cannot be evaluate
 When conditional shape manipulation actions are defined on connection property shapes, there are additional possibilities for the “What” field of the condition.
 
 > [!NOTE]
-> Connection property shapes are shapes that have an **Options** shape data field with the value *ConnectionProperty:PropertyName*. See [Displaying connection properties](Options_for_displaying_DCF_connections.md#displaying-connection-properties).
+> Connection property shapes are shapes that have an **Options** shape data field with the value *ConnectionProperty:PropertyName*. See [Displaying connection properties](xref:Options_for_displaying_DCF_connections#displaying-connection-properties).
 
 The following conditions can be defined:
 

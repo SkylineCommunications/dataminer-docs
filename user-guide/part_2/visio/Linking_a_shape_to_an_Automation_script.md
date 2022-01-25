@@ -97,7 +97,7 @@ For example, in the configuration below, the first-level separator “\|” is r
 
 > [!TIP]
 > See also:
-> [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters)
+> [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
 ### Passing Automation script output to session variables
 
@@ -152,7 +152,7 @@ In the **Execute** shape data value, you can use the following options (separate
 
 - **NoWait**: If an element used in the script is locked by another script being executed simultaneously, it will not wait until that element is unlocked. Instead, it will stop.
 
-- **SetTrigger=ValueChanged** or **Trigger=ValueChanged**: Available from DataMiner 10.2.0/10.1.1 onwards. Use this option to execute the script when a specific value changes. This is similar to the configuration to update parameters or session variables on session variable changes. See [Configuring a page to update parameters on session variable changes](Configuring_a_page_to_update_parameters_on_session_variable_changes.md) or [Configuring a page to update a session variable when another session variable changes](Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes.md).
+- **SetTrigger=ValueChanged** or **Trigger=ValueChanged**: Available from DataMiner 10.2.0/10.1.1 onwards. Use this option to execute the script when a specific value changes. This is similar to the configuration to update parameters or session variables on session variable changes. See [Configuring a page to update parameters on session variable changes](xref:Configuring_a_page_to_update_parameters_on_session_variable_changes) or [Configuring a page to update a session variable when another session variable changes](xref:Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes).
 
 - **SetTrigger=Event** or **Trigger=Event**: Available from DataMiner 10.2.0/10.1.1 onwards. Use this option to execute the script when an event occurs on the open Visual Overview page.
 
@@ -164,4 +164,4 @@ In the **Execute** shape data value, you can use the following options (separate
 
     > [!TIP]
     > See also:
-    > [\[Event:...\]](Placeholders_for_variables_in_shape_data_values.md#event)
+    > [\[Event:...\]](xref:Placeholders_for_variables_in_shape_data_values#event)

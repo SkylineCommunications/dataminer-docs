@@ -18,6 +18,6 @@ To configure an alarm filter for personal notifications directly from the Alarm 
 
 > [!NOTE]
 > - User notifications can also be configured on a user card.
-> - Notifications can also be configured on group level. See [Configuring a user group](Configuring_a_user_group.md).
+> - Notifications can also be configured on group level. See [Configuring a user group](xref:Configuring_a_user_group).
 > - Notification filters are server-side filters. As such, in Alerter, the notification filters will be added to the list of server-side filters.
 >

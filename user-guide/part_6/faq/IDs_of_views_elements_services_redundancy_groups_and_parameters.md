@@ -27,7 +27,7 @@ The view ID is displayed in the *general* tab, to the right of the name of the v
 
 Exporting a list of all IDs is only possible in System Display:
 
-1. Open the System Display client. See [How can I open the legacy System Display and Element Display applications?](DataMiner_client_applications.md#how-can-i-open-the-legacy-system-display-and-element-display-applications).
+1. Open the System Display client. See [How can I open the legacy System Display and Element Display applications?](xref:DataMiner_client_applications#how-can-i-open-the-legacy-system-display-and-element-display-applications).
 
 2. Click *Admin \> Elements*.
 
@@ -76,7 +76,7 @@ To find this ID in DataMiner Cube:
 
 Exporting a list of all IDs is only possible in System Display:
 
-1. Open the System Display client. See [How can I open the legacy System Display and Element Display applications?](DataMiner_client_applications.md#how-can-i-open-the-legacy-system-display-and-element-display-applications).
+1. Open the System Display client. See [How can I open the legacy System Display and Element Display applications?](xref:DataMiner_client_applications#how-can-i-open-the-legacy-system-display-and-element-display-applications).
 
 2. Click *Admin \> Elements*.
 

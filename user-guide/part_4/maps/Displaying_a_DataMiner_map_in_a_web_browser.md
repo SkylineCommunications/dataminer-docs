@@ -16,7 +16,7 @@ uid: Displaying_a_DataMiner_map_in_a_web_browser
 
 > [!TIP]
 > See also:
-> [Switching map configurations by means of JavaScript](Switching_map_configurations_by_means_of_JavaScript.md)
+> [Switching map configurations by means of JavaScript](xref:Switching_map_configurations_by_means_of_JavaScript)
 
 Example: If you want to display a DataMiner map using the settings specified in a configuration file named *mymap.xml*, enter the following address in the address bar of your web browser:
 

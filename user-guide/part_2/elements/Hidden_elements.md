@@ -19,7 +19,7 @@ To create a hidden element, follow the normal procedure for element creation, bu
 
 > [!TIP]
 > See also:
-> [Adding and deleting elements](Adding_and_deleting_elements.md)
+> [Adding and deleting elements](xref:Adding_and_deleting_elements)
 
 #### Viewing hidden elements
 

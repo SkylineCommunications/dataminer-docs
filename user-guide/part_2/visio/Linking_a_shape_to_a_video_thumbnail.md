@@ -36,7 +36,7 @@ Please note the following:
 
 > [!TIP]
 > See also:
-> [Making a shape display an image](Making_a_shape_display_an_image.md)
+> [Making a shape display an image](xref:Making_a_shape_display_an_image)
 
 ### Configuring the shape data field
 
@@ -83,7 +83,7 @@ Depending on the DataMiner version, additional configuration is possible in the 
 
     > [!NOTE]
     > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
-    > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](Placeholders_for_variables_in_shape_data_values.md#escapedatastringx)). For example: *https://\<DMAIP>/VideoThumbnails/Video.htm?type=<br>Generic%20VLC&source=\[EscapeDataString:\[param:\*,10014\]\]*
+    > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: *https://\<DMAIP>/VideoThumbnails/Video.htm?type=<br>Generic%20VLC&source=\[EscapeDataString:\[param:\*,10014\]\]*
     > - When the authentication token expires, the URL has to be updated with the new token.
     > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 

@@ -33,7 +33,7 @@ For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFi
     - A value enclosed within single quotation marks (')
 
         > [!NOTE]
-        > - If this value contains semicolons, these will be interpreted as separators in Visual Overview. To avoid having a semicolon interpreted as a separator, specify a different separator using the \[sep:XY\] option. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
+        > - If this value contains semicolons, these will be interpreted as separators in Visual Overview. To avoid having a semicolon interpreted as a separator, specify a different separator using the \[sep:XY\] option. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
         > - If a view table has a column with view options configured in the format view=:x:y:z or view=a:b:c:z, the VALUE= filter is supported from DataMiner 10.1.9/10.2.0 onwards. However, only filters of type VALUE=5 == abc are supported, and no AND/OR combinations are supported. From DataMiner 10.1.11/10.2.0 onwards, this support is further extended to also include filters on view table columns that refer to other view table columns.
 
     Examples:

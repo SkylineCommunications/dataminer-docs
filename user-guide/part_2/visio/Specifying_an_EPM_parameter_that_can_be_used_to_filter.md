@@ -10,7 +10,7 @@ If you add a shape data field of type **SubscriptionFilter** to a page of a Visi
 
 > [!TIP]
 > See also:
-> [Restricting the use of line objects to specific connections](Restricting_the_use_of_line_objects_to_specific_connections.md)
+> [Restricting the use of line objects to specific connections](xref:Restricting_the_use_of_line_objects_to_specific_connections)
 
 ### Configuring the shape data field
 

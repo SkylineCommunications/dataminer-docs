@@ -6,10 +6,10 @@ uid: Service_templates
 
 This section consists of the following topics:
 
-- [About service templates](About_service_templates.md)
+- [About service templates](xref:About_service_templates)
 
-- [Creating a service template](Creating_a_service_template.md)
+- [Creating a service template](xref:Creating_a_service_template)
 
-- [Applying service templates](Applying_service_templates.md)
+- [Applying service templates](xref:Applying_service_templates)
 
-- [Managing service templates](Managing_service_templates.md)
+- [Managing service templates](xref:Managing_service_templates)

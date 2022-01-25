@@ -10,18 +10,18 @@ This offline database will then allow you, for instance, to produce all kinds of
 
 This section consists of the following topics:
 
-- [Setting up an offload database](Setting_up_an_offload_database.md)
+- [Setting up an offload database](xref:Setting_up_an_offload_database)
 
-- [Structure of the offload database](Structure_of_the_offload_database.md)
+- [Structure of the offload database](xref:Structure_of_the_offload_database)
 
-- [Configuring data offloads](Configuring_data_offloads.md)
+- [Configuring data offloads](xref:Configuring_data_offloads)
 
-- [How DataMiner offloads data](How_DataMiner_offloads_data.md)
+- [How DataMiner offloads data](xref:How_DataMiner_offloads_data)
 
 > [!TIP]
 > See also:
 > [What happens if an offload database ...](xref:Databases1#what-happens-if-an-offload-database)
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.1 onwards, it is possible to offload data to a file in the local system cache folder instead of to an offload database. You can do so by going to System Center > *Database* > *Offload* and selecting *File* in the drop-down box at the top. Below this, you can then configure the data offloads (see [Configuring data offloads](Configuring_data_offloads.md)) and set a maximum size for the combined offload files.
+> From DataMiner 10.2.0/10.1.1 onwards, it is possible to offload data to a file in the local system cache folder instead of to an offload database. You can do so by going to System Center > *Database* > *Offload* and selecting *File* in the drop-down box at the top. Below this, you can then configure the data offloads (see [Configuring data offloads](xref:Configuring_data_offloads)) and set a maximum size for the combined offload files.
 >

@@ -28,5 +28,5 @@ To view detailed information on a user:
         - The *Actions* page shows a detailed overview of all recent activity of the user on the DMA.
 
 > [!NOTE]
-> You can view the same information on a user card. For more information on how to open a user card, see [Opening a user card](Opening_a_user_card.md).
+> You can view the same information on a user card. For more information on how to open a user card, see [Opening a user card](xref:Opening_a_user_card).
 >

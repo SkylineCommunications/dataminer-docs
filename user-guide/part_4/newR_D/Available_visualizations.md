@@ -6,14 +6,14 @@ uid: Available_visualizations
 
 Many different visualizations are available in the Dashboards app, in the categories listed below:
 
-- [General](General.md)
+- [General](xref:General)
 
-- [States and values](States_and_values.md)
+- [States and values](xref:States_and_values)
 
-- [Tables](Tables.md)
+- [Tables](xref:Tables)
 
-- [Charts](Charts.md)
+- [Charts](xref:Charts)
 
-- [Other](Other.md)
+- [Other](xref:Other)
 
-- [Feeds](Feeds.md)
+- [Feeds](xref:Feeds)

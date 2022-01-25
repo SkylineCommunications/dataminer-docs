@@ -6,12 +6,12 @@ uid: Generating_a_report_with_the_Reporter_app
 
 To generate a report using the Reporter app:
 
-1. Go to the report templates page. See [Accessing the report templates](Accessing_the_report_templates.md).
+1. Go to the report templates page. See [Accessing the report templates](xref:Accessing_the_report_templates).
 
 2. Click any of the available custom report templates.
 
     > [!NOTE]
-    > You can also directly click a report template name in the navigation menu; however, you will only be able to set the elements, parameters, etc. to be included in the report if the link in the navigation menu links to the template, rather than directly to the report. For more information, see [Adding a new report template](Adding_a_new_report_template.md).
+    > You can also directly click a report template name in the navigation menu; however, you will only be able to set the elements, parameters, etc. to be included in the report if the link in the navigation menu links to the template, rather than directly to the report. For more information, see [Adding a new report template](xref:Adding_a_new_report_template).
 
 3. If you want to apply default options that were previously saved for this report, click *Load default options*. If so, skip to step 8.
 

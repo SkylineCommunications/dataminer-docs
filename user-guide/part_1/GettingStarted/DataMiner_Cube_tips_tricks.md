@@ -35,35 +35,35 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Would you prefer to display the Cube sidebar on the right? Press Ctrl+Alt+Shift+Right arrow. Want to put it back on the left? Use the same key combination, but with the Left arrow key.
 
-- You can use shortcuts in Cube. Have you ever used Ctrl+Q to access the quick menu, or Ctrl+M to open a menu? See [Using keyboard navigation](Using_keyboard_navigation.md).
+- You can use shortcuts in Cube. Have you ever used Ctrl+Q to access the quick menu, or Ctrl+M to open a menu? See [Using keyboard navigation](xref:Using_keyboard_navigation).
 
-- Want to open an item in an undocked card without using a context menu? Hold the Shift key while you click or double-click to open the item. For more shortcuts, see [Undocking cards](Working_with_cards_in_DataMiner_Cube.md#undocking-cards).
+- Want to open an item in an undocked card without using a context menu? Hold the Shift key while you click or double-click to open the item. For more shortcuts, see [Undocking cards](xref:Working_with_cards_in_DataMiner_Cube#undocking-cards).
 
-- Want to open an item in a new card without using a context menu? Hold the Ctrl key while you click or double-click to open the item. See [Opening cards](Working_with_cards_in_DataMiner_Cube.md#opening-cards).
+- Want to open an item in a new card without using a context menu? Hold the Ctrl key while you click or double-click to open the item. See [Opening cards](xref:Working_with_cards_in_DataMiner_Cube#opening-cards).
 
-- Need help? Press F1. See [Using keyboard navigation](Using_keyboard_navigation.md).
+- Need help? Press F1. See [Using keyboard navigation](xref:Using_keyboard_navigation).
 
 #### About workspaces
 
-- Want to quickly open a new element in an existing card? Drag the element from the Surveyor onto the card header. See [Dragging cards](Working_with_cards_in_DataMiner_Cube.md#dragging-cards).
+- Want to quickly open a new element in an existing card? Drag the element from the Surveyor onto the card header. See [Dragging cards](xref:Working_with_cards_in_DataMiner_Cube#dragging-cards).
 
-- Cube workspaces support multiple screens. Take cards, drag them to your different screens and save your workspace. Then load the workspace and check out the result! See [Working with workspaces](Working_with_workspaces.md).
+- Cube workspaces support multiple screens. Take cards, drag them to your different screens and save your workspace. Then load the workspace and check out the result! See [Working with workspaces](xref:Working_with_workspaces).
 
-- Have you used Cube's tab layout yet? You can access the card layout options via a button in the Cube header. You can also pin a tab page to keep it open at all times. See [Changing the card layout](Working_with_cards_in_DataMiner_Cube.md#changing-the-card-layout).
+- Have you used Cube's tab layout yet? You can access the card layout options via a button in the Cube header. You can also pin a tab page to keep it open at all times. See [Changing the card layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout).
 
-- Here's a quick way to get a card into a separate window: just click the header and drag it out of Cube. Handy to show something on a second screen, for example. See [Dragging cards](Working_with_cards_in_DataMiner_Cube.md#dragging-cards).
+- Here's a quick way to get a card into a separate window: just click the header and drag it out of Cube. Handy to show something on a second screen, for example. See [Dragging cards](xref:Working_with_cards_in_DataMiner_Cube#dragging-cards).
 
 - Workspaces can also contain alarm tab pages. Just drag the tabs you want out of the Alarm Console, and click *Dock to workspace* in the top right corner.
 
 #### About the Surveyor
 
-- Did you know that you can drag views, elements, services and SLAs directly from DataMiner Cube onto emails or open documents? You can do this from the Surveyor, but also from a view card data page or from a Visual Overview. See [Surveyor](Main_Cube_UI_components_prior_to_DataMiner_10.md#surveyor).
+- Did you know that you can drag views, elements, services and SLAs directly from DataMiner Cube onto emails or open documents? You can do this from the Surveyor, but also from a view card data page or from a Visual Overview. See [Surveyor](xref:Main_Cube_UI_components_prior_to_DataMiner_10#surveyor).
 
-- Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](Main_Cube_UI_components_prior_to_DataMiner_10.md#special-icon-settings).
+- Would you like the Surveyor to display more information in the blink of an eye? Check out the Icons settings, by clicking the user button in the header and selecting *Settings* > *Icons*. See [Special icon settings](xref:Main_Cube_UI_components_prior_to_DataMiner_10#special-icon-settings).
 
 - The Surveyor can be enriched with statistics, such as the number of alarms in a view. See [Displaying alarm statistics in the Surveyor](xref:Displaying_alarm_statistics_in_the_Surveyor).
 
-- Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). [Recent items](Main_Cube_UI_components_prior_to_DataMiner_10.md#recent-items).
+- Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). [Recent items](xref:Main_Cube_UI_components_prior_to_DataMiner_10#recent-items).
 
 - Do you want to move several elements from one view to another? Select them on the source view card and drag them to the target view in the Surveyor in drag-and-drop editing mode.
 
@@ -85,6 +85,6 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Use properties to add information to a view, element or service, such as a class defining a gold, silver or bronze service. These properties can also be displayed in the Surveyor. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
-- Want to add a quick note to an element? Go to the *Notes* page in the card navigation pane. You can also do this for services and views. See [Card navigation pane](Working_with_cards_in_DataMiner_Cube.md#card-navigation-pane).
+- Want to add a quick note to an element? Go to the *Notes* page in the card navigation pane. You can also do this for services and views. See [Card navigation pane](xref:Working_with_cards_in_DataMiner_Cube#card-navigation-pane).
 
 - Want to quickly copy a table to an email or spreadsheet? Right-click the table in Data Display and select *Copy table*. See [Table parameters](xref:Table_parameters).

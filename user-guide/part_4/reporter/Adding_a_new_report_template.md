@@ -47,7 +47,7 @@ To add a new report template in the Reporter app:
 
 6. In the *Template Layout* section, add the necessary building blocks and configure their settings.
 
-    - To add a building block, select one from the list and click *Add Block*. For more information on the building blocks, see [Report template components](Report_template_components.md).
+    - To add a building block, select one from the list and click *Add Block*. For more information on the building blocks, see [Report template components](xref:Report_template_components).
 
     > [!NOTE]
     > Make sure you have chosen the correct template type before you start adding building blocks to the report (see step 3). If you change the template type afterwards, any building blocks you have added will be removed.

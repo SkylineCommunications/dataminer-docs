@@ -56,7 +56,7 @@ To add a DMA to the list:
 
     > [!TIP]
     > See also:
-    > [Debugging QActions and Automation scripts](Debugging_QActions_and_Automation_scripts.md)
+    > [Debugging QActions and Automation scripts](xref:Debugging_QActions_and_Automation_scripts)
 
 5. Click *OK* to close the *Edit DMA Connection* window.
 
@@ -129,7 +129,7 @@ Apart from a number of C# files, class library packages include a manifest.xml f
 
 DIS will automatically reload the class library packages when packages have been modified on disk or when any settings in this *Class Library* tab have been changed.
 
-For more information on Class Library packages, see [Class Library packages](Class_Library_packages.md)
+For more information on Class Library packages, see [Class Library packages](xref:Class_Library_packages)
 
 #### Enable Class Library feature
 
@@ -141,7 +141,7 @@ If you select the *Automatically generate Class Library code* option, DIS will a
 
 If you want to force an ad-hoc regeneration of the Code Library QAction 63000 and the Code Library EXE blocks, you can click the *Protocol \> Generate Class Library Code* command in the DIS menu.
 
-See also: [Protocol \> Generate Class Library code](DIS_menu.md#protocol--generate-class-library-code)
+See also: [Protocol \> Generate Class Library code](xref:DIS_menu#protocol--generate-class-library-code)
 
 ### Interface
 
@@ -214,7 +214,7 @@ Select the *Hide virtual comments in protocol* option if you do not want virtual
 
 > [!TIP]
 > See also:
-> [Virtual comments](XML_editor.md#virtual-comments)
+> [Virtual comments](xref:XML_editor#virtual-comments)
 
 #### Only show unresolved links
 
@@ -222,7 +222,7 @@ Select the *Only show unresolved links* option if you only want to see the virtu
 
 > [!TIP]
 > See also:
-> [Virtual comments](XML_editor.md#virtual-comments)
+> [Virtual comments](xref:XML_editor#virtual-comments)
 
 #### Task URL String Format
 
@@ -232,7 +232,7 @@ In the format string, you can use the “{ref}” placeholder. When, in the Vers
 
 > [!TIP]
 > See also:
-> [Version editor](Version_editor.md)
+> [Version editor](xref:Version_editor)
 
 #### Reference URL String Format
 
@@ -242,7 +242,7 @@ In the format string, you can use the “{ref}” placeholder. When, in the Vers
 
 > [!TIP]
 > See also:
-> [Version editor](Version_editor.md)
+> [Version editor](xref:Version_editor)
 
 ### MIB
 

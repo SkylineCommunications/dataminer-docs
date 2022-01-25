@@ -45,7 +45,7 @@ Several things can be configured in this file:
 
 - SNMP agent community strings are specified on element level with the *\<SNMPAgent>* tag. See [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings).
 
-- To customize how long average or real-time trending records have to be kept in the database for a particular element, you can add a *\<Trending>* tag, in the same way as in the file *MaintenanceSettings.xml*. Before you can make this change, you will need to stop DataMiner. After you have saved the changed file, restart DataMiner to implement the changes. For more information on this tag and its subtags, refer to [MaintenanceSettings.xml](MaintenanceSettings_xml.md#maintenancesettingsxml).
+- To customize how long average or real-time trending records have to be kept in the database for a particular element, you can add a *\<Trending>* tag, in the same way as in the file *MaintenanceSettings.xml*. Before you can make this change, you will need to stop DataMiner. After you have saved the changed file, restart DataMiner to implement the changes. For more information on this tag and its subtags, refer to [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).
 
     > [!NOTE]
     > From DataMiner 9.6.0 \[CU1\]/9.6.3 onwards, this can be customized in DataMiner Cube instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).

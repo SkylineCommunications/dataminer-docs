@@ -126,7 +126,7 @@ This tab consists of the following subtabs:
 - **Update**: Allows you to apply a configuration backup file to one or more elements. To do so, select the configuration backup file in the table on the left, and the elements in the table on the right (keep the Ctrl key pressed to select several elements at a time). Then click the *Update* button above the table.
 
     > [!NOTE]
-    > When a configuration backup is applied, the backup file is first copied from the DataMiner Configuration Archive to the working directory on the DMAs hosting the selected elements. This means that a working directory must be configured for each DMA in the DMS. You can do so via *Admin* > *Configuration* > *Network Shares*. See [Configuration](Configuration.md).
+    > When a configuration backup is applied, the backup file is first copied from the DataMiner Configuration Archive to the working directory on the DMAs hosting the selected elements. This means that a working directory must be configured for each DMA in the DMS. You can do so via *Admin* > *Configuration* > *Network Shares*. See [Configuration](xref:Configuration).
 
 - **Compare**: Allows you to compare two configuration files. To do so:
 
@@ -141,7 +141,7 @@ This tab consists of the following subtabs:
     - If you started a comparison from the *Summary* or *Backups* subtab, the file you selected there will automatically be selected as the left file in the comparison.
 
     > [!NOTE]
-    > Files can only be compared if they have an extension listed under *Admin* > *Configuration* > *Backup*. See [Configuration](Configuration.md).
+    > Files can only be compared if they have an extension listed under *Admin* > *Configuration* > *Backup*. See [Configuration](xref:Configuration).
 
 ### Software
 
@@ -220,7 +220,7 @@ This tab consists of the following subtabs:
 
 ### Admin
 
-This tab allows you to manage various settings. See [Advanced configuration for Administrators](Advanced_configuration_for_Administrators.md).
+This tab allows you to manage various settings. See [Advanced configuration for Administrators](xref:Advanced_configuration_for_Administrators).
 
 ### About
 

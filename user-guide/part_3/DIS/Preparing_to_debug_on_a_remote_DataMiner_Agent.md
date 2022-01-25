@@ -51,8 +51,8 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
     | Path on DataMiner  | The local path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br> Default: C:\\dis\\                                                                                                                                                                                                                                     |
     | Debugger qualifier | The qualifier supplied by Remote Debugging Monitor (msvsmon.exe) in a log entry at start-up.<br> Format:<br> -  username@dmaname (Visual Studio 2010)<br> -  dmaname:ipport (as from Visual Studio 2012)<br> Default: RemoteDebug@remote-dma |
 
-    See [DMA](DIS_settings.md#dma)
+    See [DMA](xref:DIS_settings#dma)
 
 7. Go to *Tools \> Options \> Debugging \> Symbols*, and add the above-mentioned “publish path”<br>(e.g. *\\\\remote-dma\\dis*) to the list of symbol file locations.
 
-You are now ready to start debugging. See [Debugging a QAction](Debugging_a_QAction.md) or [Debugging an Automation script](Debugging_an_Automation_script.md).
+You are now ready to start debugging. See [Debugging a QAction](xref:Debugging_a_QAction) or [Debugging an Automation script](xref:Debugging_an_Automation_script).

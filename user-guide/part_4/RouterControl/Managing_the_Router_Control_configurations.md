@@ -10,7 +10,7 @@ uid: Managing_the_Router_Control_configurations
 
 2. In the *Add Configuration* box, enter the name of the new Router Control configuration, and click *OK*.
 
-3. To the configuration, add the necessary matrix tab pages. See [Designing a matrix tab page in the Router Control module](Designing_a_matrix_tab_page_in_the_Router_Control_module.md).
+3. To the configuration, add the necessary matrix tab pages. See [Designing a matrix tab page in the Router Control module](xref:Designing_a_matrix_tab_page_in_the_Router_Control_module).
 
 4. Click *Backup* to save the configuration to a compressed XML file on the client machine, or click *Upload* to upload the current configuration to the DMS.
 
@@ -18,7 +18,7 @@ uid: Managing_the_Router_Control_configurations
 
 1. Go to the middle pane, and click a configuration tab (either “Default” or one of the custom configurations).
 
-2. Make the necessary modifications to the matrix tab pages of the selected configuration. See [Designing a matrix tab page in the Router Control module](Designing_a_matrix_tab_page_in_the_Router_Control_module.md).
+2. Make the necessary modifications to the matrix tab pages of the selected configuration. See [Designing a matrix tab page in the Router Control module](xref:Designing_a_matrix_tab_page_in_the_Router_Control_module).
 
 3. Click *Backup* to save the configuration to a compressed XML file on the client machine, or click *Upload* to upload the current configuration to the DMS.
 

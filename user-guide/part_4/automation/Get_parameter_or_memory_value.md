@@ -13,7 +13,7 @@ For this script action, you must first indicate what is to be retrieved: a param
 2. Click the next field to either add an existing dummy element or create a new dummy element.
 
     > [!NOTE]
-    > For more information on creating dummy elements, see [Creating a dummy](Script_variables.md#creating-a-dummy).
+    > For more information on creating dummy elements, see [Creating a dummy](xref:Script_variables#creating-a-dummy).
 
 3. Choose the parameter to be retrieved. For a dynamic table parameter, also specify the index.
 
@@ -29,12 +29,12 @@ For this script action, you must first indicate what is to be retrieved: a param
 2. Click the next field and either add an existing memory file or create a new memory file.
 
     > [!NOTE]
-    > For more information on creating memory files, see [Creating a memory file](Script_variables.md#creating-a-memory-file).
+    > For more information on creating memory files, see [Creating a memory file](xref:Script_variables#creating-a-memory-file).
 
 3. In the next underlined field, specify the number of the value that is to be retrieved.
 
 4. Click the final underlined field and either specify an existing script parameter, or create a new one.
 
     > [!NOTE]
-    > For more information on creating script parameters, see [Creating a parameter](Script_variables.md#creating-a-parameter).
+    > For more information on creating script parameters, see [Creating a parameter](xref:Script_variables#creating-a-parameter).
     >

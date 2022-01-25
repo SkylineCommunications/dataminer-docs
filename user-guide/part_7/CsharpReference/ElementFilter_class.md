@@ -6,8 +6,8 @@ uid: ElementFilter_class
 
 Below, you can find an overview of all members of the *ElementFilter* class.
 
-- [ElementFilter constructor](ElementFilter_constructor.md)
+- [ElementFilter constructor](xref:ElementFilter_constructor)
 
-- [ElementFilter methods](ElementFilter_methods.md)
+- [ElementFilter methods](xref:ElementFilter_methods)
 
-- [ElementFilter properties](ElementFilter_properties.md)
+- [ElementFilter properties](xref:ElementFilter_properties)

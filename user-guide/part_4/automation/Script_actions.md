@@ -12,7 +12,7 @@ To create a script action:
 
 - Alternatively, to insert the new script action between existing actions, right-click the location where you want to add it, click *Insert*, and select the action.
 
-Further configuration options depend on the type of script actions added. For more information on this, see [Automation script actions in DataMiner Cube](Automation_script_actions_in_DataMiner_Cube.md).
+Further configuration options depend on the type of script actions added. For more information on this, see [Automation script actions in DataMiner Cube](xref:Automation_script_actions_in_DataMiner_Cube).
 
 However, for all script action, the following options are available with the buttons to the right of the action:
 

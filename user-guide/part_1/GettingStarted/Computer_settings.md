@@ -43,7 +43,7 @@ To access the computer settings in DataMiner Cube:
     The tab consists of 5 pages that you can navigate between using the table of contents on the left.
 
 > [!NOTE]
-> For more information on the user settings tab, see [User settings](User_settings.md).
+> For more information on the user settings tab, see [User settings](xref:User_settings).
 
 ### Overview of the computer settings
 
@@ -77,7 +77,7 @@ This page contains the following debug settings:
 
     > [!TIP]
     > See also:
-    > [Data Display settings](User_settings.md#data-display-settings)
+    > [Data Display settings](xref:User_settings#data-display-settings)
 
 - **Trace mode**: When you enable this setting, Cube debug logging is saved in a file in the following folder: *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\Traces*. This mode is meant to solve issues, and will not be needed in normal circumstances.
 

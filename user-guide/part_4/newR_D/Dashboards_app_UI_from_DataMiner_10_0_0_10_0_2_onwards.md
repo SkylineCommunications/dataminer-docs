@@ -31,17 +31,17 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
     Right-click in either of the panes or click the ... button to open a menu with the following options:
 
-    - *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](Deleting_a_dashboard.md).
+    - *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](xref:Deleting_a_dashboard).
 
     - *Rename*: Only available if a dashboard or a folder is selected.
 
-    - *Copy*: Only available if a dashboard or folder is selected. See [Duplicating a dashboard](Duplicating_a_dashboard.md)
+    - *Copy*: Only available if a dashboard or folder is selected. See [Duplicating a dashboard](xref:Duplicating_a_dashboard)
 
-    - *Move*: Only available if a dashboard or folder is selected. See [Managing dashboard folders](Managing_dashboard_folders.md).
+    - *Move*: Only available if a dashboard or folder is selected. See [Managing dashboard folders](xref:Managing_dashboard_folders).
 
-    - *Import dashboard*: Allows you to import an example dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a dashboard based on an example](Creating_a_dashboard_based_on_an_example.md).
+    - *Import dashboard*: Allows you to import an example dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a dashboard based on an example](xref:Creating_a_dashboard_based_on_an_example).
 
-    - *New dashboard*: Adds a new dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a completely new dashboard](Creating_a_completely_new_dashboard.md).
+    - *New dashboard*: Adds a new dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a completely new dashboard](xref:Creating_a_completely_new_dashboard).
 
     - *New folder*: Adds a new folder in the selected folder.
 
@@ -56,7 +56,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
     | Start editing                                                                                   | Allows you to start editing the dashboard. In edit mode, the navigation pane on the left will be hidden.                                                                                                                                                                                                                                                                                                                                  |
     | Stop editing                                                                                    | Closes edit mode                                                                                                                                                                                                                                                                                                                                                                                                                          |
     | Clear all                                                                                       | Only displayed if the dashboard contains at least one feed. Clears the selection of all the feeds in the dashboard.                                                                                                                                                                                                                                                                                                                       |
-    | Start sharing                                                                                   | Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard using the Live Sharing Service](Sharing_a_dashboard_using_the_Live_Sharing_Service.md).<br> This is a soft-launch feature that is only available if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). |
+    | Start sharing                                                                                   | Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard using the Live Sharing Service](xref:Sharing_a_dashboard_using_the_Live_Sharing_Service).<br> This is a soft-launch feature that is only available if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). |
 
     In the settings of the dashboards app, you can configure whether the edit mode and clear feeds buttons are always displayed or “pinned” to the header bar, or instead accessible via an arrow button in the top-right corner of a dashboard.
 

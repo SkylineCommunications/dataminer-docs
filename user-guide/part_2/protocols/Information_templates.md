@@ -13,19 +13,19 @@ Each protocol has a default information template, which is defined in the protoc
 
 The following sections provide more information on working with information templates:
 
-- [Creating an information template](Creating_an_information_template.md)
+- [Creating an information template](xref:Creating_an_information_template)
 
-- [Uploading an information template file](Uploading_an_information_template_file.md)
+- [Uploading an information template file](xref:Uploading_an_information_template_file)
 
-- [Activating an information template](Activating_an_information_template.md)
+- [Activating an information template](xref:Activating_an_information_template)
 
-- [Editing an information template](Editing_an_information_template.md)
+- [Editing an information template](xref:Editing_an_information_template)
 
-- [Duplicating an information template](Duplicating_an_information_template.md)
+- [Duplicating an information template](xref:Duplicating_an_information_template)
 
-- [Deleting an information template](Deleting_an_information_template.md)
+- [Deleting an information template](xref:Deleting_an_information_template)
 
-- [Editing the information template for one parameter](Editing_the_information_template_for_one_parameter.md)
+- [Editing the information template for one parameter](xref:Editing_the_information_template_for_one_parameter)
 
 > [!TIP]
 > See also:

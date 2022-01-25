@@ -13,7 +13,7 @@ Logging of all values, in a sliding window of maximum 1000 hours.
 In most cases, real-time trending will be set to 24 or 48 hours.
 
 > [!NOTE]
-> It is possible to set a default sliding window size for real-time trending on a particular DMA. See [Setting the default sliding window size for real-time trending](Setting_the_default_sliding_window_size_for_real-time_trending.md#setting-the-default-sliding-window-size-for-real-time-trending).
+> It is possible to set a default sliding window size for real-time trending on a particular DMA. See [Setting the default sliding window size for real-time trending](xref:Setting_the_default_sliding_window_size_for_real-time_trending#setting-the-default-sliding-window-size-for-real-time-trending).
 
 ### Average trending
 

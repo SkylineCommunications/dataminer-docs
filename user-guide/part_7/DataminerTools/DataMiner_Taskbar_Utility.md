@@ -17,6 +17,6 @@ When the Utility is running, the DataMiner icon will be displayed in the system 
 
 The following sections provide more information on the DataMiner Taskbar Utility:
 
-- [Taskbar Utility shortcut menu](Taskbar_Utility_shortcut_menu.md)
+- [Taskbar Utility shortcut menu](xref:Taskbar_Utility_shortcut_menu)
 
-- [Taskbar Utility command line options](Taskbar_Utility_command_line_options.md)
+- [Taskbar Utility command line options](xref:Taskbar_Utility_command_line_options)

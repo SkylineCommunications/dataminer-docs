@@ -28,7 +28,7 @@ For the different alarm levels, it is also possible to assign high and low level
 
 > [!TIP]
 > See also:
-> - [Changing the default alarm colors](Changing_the_default_alarm_colors.md)
+> - [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
 > - [Guidelines for assigning alarm severity levels](xref:Guidelines_for_assigning_alarm_severity_levels)
 
 ### Special alarm types
@@ -41,7 +41,7 @@ Several special alarm types exist in DataMiner:
 
 - Timeout alarms indicate non-responding devices. See [Timeout](#timeout).
 
-- Masked alarms, indicated in purple, are “hidden” to prevent unnecessary follow-up. See [Masking and unmasking alarms](Masking_and_unmasking_alarms.md).
+- Masked alarms, indicated in purple, are “hidden” to prevent unnecessary follow-up. See [Masking and unmasking alarms](xref:Masking_and_unmasking_alarms).
 
 #### Information event
 

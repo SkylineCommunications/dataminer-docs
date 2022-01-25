@@ -40,7 +40,7 @@ In the header bar of DataMiner Cube, using a version prior to DataMiner 10.0.0/1
 
     > [!TIP]
     > See also:
-    > [Changing the card layout](Working_with_cards_in_DataMiner_Cube.md#changing-the-card-layout)
+    > [Changing the card layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout)
 
 - **Question mark**: An icon that allows you to quickly access the online help and the About box.
 
@@ -79,7 +79,7 @@ In the header bar of DataMiner Cube, using a version prior to DataMiner 10.0.0/1
 
 The Cube navigation pane, in DataMiner versions prior to DataMiner 10.0.0/10.0.2, consists of:
 
-- A search box at the top, with a button that opens the root view. See [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md).
+- A search box at the top, with a button that opens the root view. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
 - The Surveyor tab. See [Surveyor](#surveyor).
 
@@ -104,7 +104,7 @@ When you click an item in the tree, it opens in a card:
 - If you click the item with the middle mouse button, a new card is opened next to any cards that are already open.
 
 > [!NOTE]
-> - It is also possible to search in the navigation pane. For more information, see [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md).
+> - It is also possible to search in the navigation pane. For more information, see [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 > - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](#surveyor-right-click-menu).
 > - You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
@@ -173,7 +173,7 @@ The following options are available:
 
 > [!TIP]
 > See also:
-> - [Icons settings](User_settings.md#icons-settings)
+> - [Icons settings](xref:User_settings#icons-settings)
 > - <https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/>
 
 > [!NOTE]
@@ -257,7 +257,7 @@ A list of workspaces is available in the first tab from the right in the navigat
 
 This tab is indicated with the following icon: ![](../../images/IconWorkspaces.png)
 
-For more information on how to work with workspaces, see [Working with workspaces](Working_with_workspaces.md).
+For more information on how to work with workspaces, see [Working with workspaces](xref:Working_with_workspaces).
 
 #### Moving the navigation pane
 
@@ -291,7 +291,7 @@ You can change the size of the navigation pane in the following ways:
 
 When you click an item in the Surveyor or when you right-click an alarm in the Alarm Console and select *Open \> Alarm Card*, the details of that item or that alarm are displayed in a special window called a card.
 
-For more information, see [Working with cards in DataMiner Cube](Working_with_cards_in_DataMiner_Cube.md).
+For more information, see [Working with cards in DataMiner Cube](xref:Working_with_cards_in_DataMiner_Cube).
 
 #### Card header bar buttons
 
@@ -299,7 +299,7 @@ At the top of each card, there are a number of buttons:
 
 | Button                                                                                     | Description                                                                                                                                                                                                                                                                                    |
 |--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../../images/Hamburger_button.png)   | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](Working_with_cards_in_DataMiner_Cube.md#card-header-bar-menu). |
+| ![](../../images/Hamburger_button.png)   | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](xref:Working_with_cards_in_DataMiner_Cube#card-header-bar-menu). |
 | ![](../../images/Back_button.png)             | Back button. As soon as you have gone from one card to another, this button becomes available, allowing you to go back to a previous card.                                                                                                                                                     |
 | ![](../../images/Maximize_button.png)     | Maximize button. Click this button to expand a card to its maximal size.                                                                                                                                                                                                                       |
 | ![](../../images/Restore_button.png)       | Restore button. If a card has been maximized, use this button to restore it to its previous size.                                                                                                                                                                                              |

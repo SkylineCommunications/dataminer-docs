@@ -19,7 +19,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     > [!TIP]
     > See also:
-    > [SLNetClientTest tool](SLNetClientTest_tool.md)
+    > [SLNetClientTest tool](xref:SLNetClientTest_tool)
 
 - **Launch \> Tools \> Clean Client Files**
 

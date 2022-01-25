@@ -66,7 +66,7 @@ The limiting options can be set to “true” or “false”. If both options ar
 > [!NOTE]
 > - It is advisable to configure these settings through the Cube client interface, rather than directly in the .xml file. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 > - For a Cassandra (cluster) database, it is only possible to configure the limitByMonths attribute, not the limitByNumber attribute. Note also that this attribute works in a different way for Cassandra, compared to MySQL or MSSQL: if a record has been stored with a particular limitByMonths and MonthsToKeep setting, this setting permanently applies to that record in Cassandra.
-> - From DataMiner 9.5.5 onwards (or 9.5.6 for an SQL database), the settings determining how long records are kept in the database are determined in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml).
+> - From DataMiner 9.5.5 onwards (or 9.5.6 for an SQL database), the settings determining how long records are kept in the database are determined in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 #### Configuring how long parameter data are kept in the database for DMS Reporter
 

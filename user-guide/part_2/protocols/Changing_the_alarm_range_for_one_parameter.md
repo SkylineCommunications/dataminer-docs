@@ -22,7 +22,7 @@ In the alarm range editor, you can do the following:
 
     > [!TIP]
     > See also:
-    > [Configuring an alarm template with dynamic alarm thresholds](Configuring_alarm_templates.md#configuring-an-alarm-template-with-dynamic-alarm-thresholds)
+    > [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds)
 
 - Enter different values for the alarm thresholds.
 

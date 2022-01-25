@@ -20,14 +20,14 @@ Using a shape data field of type **Info**, you can make shapes display informati
 
     > [!TIP]
     > See also:
-    > [Generating the connectivity chain for an SRM service instance](Generating_the_connectivity_chain_for_an_SRM_service_instance.md)
+    > [Generating the connectivity chain for an SRM service instance](xref:Generating_the_connectivity_chain_for_an_SRM_service_instance)
 
 ### Configuring the shape data field
 
 Add a shape data field of type **Info** to the shape, and set its value to one of the keywords listed below.
 
 > [!NOTE]
-> From DataMiner 10.0.2 onwards, these keywords (wrapped in square brackets) can be used as placeholders in the value of other shape data fields. From DataMiner 10.0.13 onwards, these can also be used within other placeholders. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+> From DataMiner 10.0.2 onwards, these keywords (wrapped in square brackets) can be used as placeholders in the value of other shape data fields. From DataMiner 10.0.13 onwards, these can also be used within other placeholders. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
 - **Elements**:
 
@@ -187,7 +187,7 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
 
     - FUNCTION NAME
 
-- **Bookings**: See [Linking a shape to a booking](Linking_a_shape_to_a_booking.md).
+- **Bookings**: See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
 
 ### Placeholder for Info value in shape text
 

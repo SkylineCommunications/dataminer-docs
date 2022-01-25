@@ -27,7 +27,7 @@ To create such a button, do the following:
 3. Stack those four shapes on top of each other, and group them.
 
 > [!NOTE]
-> - For the disabled state to work, the linked shape must have the shape data **Options** with value *AllowControlDisable*. See [Dynamically disabling a parameter control](Turning_a_shape_into_a_parameter_control.md#dynamically-disabling-a-parameter-control).
+> - For the disabled state to work, the linked shape must have the shape data **Options** with value *AllowControlDisable*. See [Dynamically disabling a parameter control](xref:Turning_a_shape_into_a_parameter_control#dynamically-disabling-a-parameter-control).
 
 ### Creating a toggle button
 
@@ -50,4 +50,4 @@ If the button is clicked, this will trigger the SHOW/HIDE action once. The condi
 
 > [!TIP]
 > See also:
-> [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md)
+> [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)

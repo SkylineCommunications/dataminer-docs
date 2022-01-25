@@ -191,8 +191,8 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 5. Add the Azure AD users to DataMiner:
 
     1. Open DataMiner Cube and log in with an existing Administrator account.
-    2. Add the users/groups as described in [Adding a user](Adding_a_user.md) and [Adding a user group](Adding_a_user_group.md). If you choose to add an existing user or group, you will be presented a list of all users and groups available on Azure AD.
-    3. When you have added the necessary users, configure their permissions. See [Configuring a user group](Configuring_a_user_group.md).
+    2. Add the users/groups as described in [Adding a user](xref:Adding_a_user) and [Adding a user group](xref:Adding_a_user_group). If you choose to add an existing user or group, you will be presented a list of all users and groups available on Azure AD.
+    3. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
 
     It is now possible to log in to DataMiner with any of the Azure AD user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
 

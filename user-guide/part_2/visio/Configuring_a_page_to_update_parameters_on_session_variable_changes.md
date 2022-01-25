@@ -8,7 +8,7 @@ It is possible to have parameters updated on an open Visual Overview page when a
 
 > [!TIP]
 > See also:
-> [Linking a shape to a SET command](Linking_a_shape_to_a_SET_command.md)
+> [Linking a shape to a SET command](xref:Linking_a_shape_to_a_SET_command)
 
 ### Configuring the shape data field
 

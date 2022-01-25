@@ -6,8 +6,8 @@ uid: EmailOptions_class
 
 Below, you can find an overview of all members of the *EmailOptions* class.
 
-- [EmailOptions constructors](EmailOptions_constructors.md)
+- [EmailOptions constructors](xref:EmailOptions_constructors)
 
-- [EmailOptions methods](EmailOptions_methods.md)
+- [EmailOptions methods](xref:EmailOptions_methods)
 
-- [EmailOptions properties](EmailOptions_properties.md)
+- [EmailOptions properties](xref:EmailOptions_properties)

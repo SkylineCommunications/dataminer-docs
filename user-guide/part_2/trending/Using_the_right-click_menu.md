@@ -47,7 +47,7 @@ When you right-click anywhere in the trend graph window, a shortcut menu appears
 
 - **Show most detailed data**: If you select this option, the most detailed data available will be shown, rather than average data.
 
-- **Expand tags**: Available from DataMiner 10.0.7 onwards. Highlights all patterns matching the configured tags. See [Working with pattern matching](Working_with_pattern_matching.md).
+- **Expand tags**: Available from DataMiner 10.0.7 onwards. Highlights all patterns matching the configured tags. See [Working with pattern matching](xref:Working_with_pattern_matching).
 
 - **Show percentile**: Available from DataMiner 10.0.12 onwards. Displays a percentile line for the currently displayed data. The calculated percentile and its value will be displayed to the right of the line. Changing the displayed range does not update the percentile line, so that you can compare it with the data for a larger or smaller time frame. The percentile line will be displayed as a full line over the range for which it was originally displayed, and as a dashed line over the rest of the graph. Click the line to change the percentile or to refresh it to the currently displayed data.
 

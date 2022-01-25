@@ -13,7 +13,7 @@ On the *Discovery* subtab of the *Admin* tab, you can verify and configure the d
     - To load a discovery profile, click the *Import* button above the table listing the current discovery profiles. A section will then become available below the table where you can import a single discovery profile or all available discovery profiles. The profiles must be placed in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*.
 
         > [!NOTE]
-        > To be able to load a discovery profile, you must ensure that it uses the correct format. See [Discovery profiles](Discovery_profiles.md).
+        > To be able to load a discovery profile, you must ensure that it uses the correct format. See [Discovery profiles](xref:Discovery_profiles).
 
     - If a discovery profile is not referenced in any CI Type, it can be removed. To do so, select the discovery profile in the table and click the *Delete* button above the table.
 

@@ -19,4 +19,4 @@ The session variable is then saved in a separate .dat file located in the follow
 
 > [!TIP]
 > See also:
-> [Ensuring that a card or page variable is saved](Ensuring_that_a_card_or_page_variable_is_saved.md)
+> [Ensuring that a card or page variable is saved](xref:Ensuring_that_a_card_or_page_variable_is_saved)

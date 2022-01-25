@@ -20,10 +20,10 @@ DataMiner Infrastructure Discovery Provisioning (IDP) consists of several intera
 
 This section contains the following information on DataMiner IDP:
 
-- [Installing DataMiner IDP](Installing_DataMiner_IDP.md)
+- [Installing DataMiner IDP](xref:Installing_DataMiner_IDP)
 
-- [Using DataMiner IDP](Using_DataMiner_IDP.md)
+- [Using DataMiner IDP](xref:Using_DataMiner_IDP)
 
-- [Advanced configuration for Administrators](Advanced_configuration_for_Administrators.md)
+- [Advanced configuration for Administrators](xref:Advanced_configuration_for_Administrators)
 
-- [Reference](Reference1.md#reference)
+- [Reference](xref:Reference1#reference)

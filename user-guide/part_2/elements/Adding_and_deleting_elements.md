@@ -23,7 +23,7 @@ In this section:
 
 2. In the *Edit* tab of the card, if you want the element to be a replica of an element on another DataMiner System, select the *Replicate* checkbox. To create a regular element, leave the box clear.
 
-    See [Replicating elements](Replicating_elements.md) for more information.
+    See [Replicating elements](xref:Replicating_elements) for more information.
 
 3. Specify the following information:
 
@@ -272,7 +272,7 @@ In this section:
 
 > [!TIP]
 > See also:
-> [Locating devices in your system to add to your DMS](Locating_devices_in_your_system_to_add_to_your_DMS.md)
+> [Locating devices in your system to add to your DMS](xref:Locating_devices_in_your_system_to_add_to_your_DMS)
 
 ### Duplicating an element
 

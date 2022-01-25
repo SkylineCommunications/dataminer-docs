@@ -8,17 +8,17 @@ In DataMiner Cube, for any parameter that is being trended, you can display tren
 
 In this section:
 
-- [Accessing trend information from a card](Accessing_trend_information_from_a_card.md)
+- [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card)
 
-- [Displaying alarm template colors in trend graphs](Displaying_alarm_template_colors_in_trend_graphs.md)
+- [Displaying alarm template colors in trend graphs](xref:Displaying_alarm_template_colors_in_trend_graphs)
 
-- [Accessing trend information from the Trending module](Accessing_trend_information_from_the_Trending_module.md)
+- [Accessing trend information from the Trending module](xref:Accessing_trend_information_from_the_Trending_module)
 
-- [Working with trend predictions](Working_with_trend_predictions.md)
+- [Working with trend predictions](xref:Working_with_trend_predictions)
 
-- [Working with behavioral anomaly detection](Working_with_behavioral_anomaly_detection.md)
+- [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
 
-- [Working with pattern matching](Working_with_pattern_matching.md)
+- [Working with pattern matching](xref:Working_with_pattern_matching)
 
 > [!NOTE]
 > - For more information on how to make sure a parameter is being trended, see [Trend templates](xref:Trend_templates).

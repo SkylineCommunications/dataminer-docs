@@ -8,7 +8,7 @@ From DataMiner 9.5.2 onwards, it is possible to have an open Visual Overview pag
 
 > [!TIP]
 > See also:
-> [Linking a shape to a SET command](Linking_a_shape_to_a_SET_command.md)
+> [Linking a shape to a SET command](xref:Linking_a_shape_to_a_SET_command)
 
 ### Configuring the shape data field
 
@@ -46,7 +46,7 @@ If you wish to use a different separator than a dash, add the \[sep:XY\] option 
 
 > [!TIP]
 > See also:
-> [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters)
+> [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
 ### Option
 

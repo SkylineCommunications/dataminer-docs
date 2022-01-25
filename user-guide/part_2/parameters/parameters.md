@@ -6,14 +6,14 @@ uid: parameters
 
 This section consists of the following topics:
 
-- [Types of parameters](Types_of_parameters.md)
+- [Types of parameters](xref:Types_of_parameters)
 
-- [Changing the way parameters are displayed](Changing_the_way_parameters_are_displayed.md)
+- [Changing the way parameters are displayed](xref:Changing_the_way_parameters_are_displayed)
 
-- [Updating the value of a write parameter](Updating_the_value_of_a_write_parameter.md)
+- [Updating the value of a write parameter](xref:Updating_the_value_of_a_write_parameter)
 
-- [Configuring matrix parameters](Configuring_matrix_parameters.md)
+- [Configuring matrix parameters](xref:Configuring_matrix_parameters)
 
-- [Working with Lite parameters](Working_with_Lite_parameters.md)
+- [Working with Lite parameters](xref:Working_with_Lite_parameters)
 
-- [Parameter dependencies](Parameter_dependencies.md)
+- [Parameter dependencies](xref:Parameter_dependencies)

@@ -6,9 +6,9 @@ uid: AutomationDateTimePickerOptions_class
 
 Below, you find an overview of all members of the *AutomationDateTimeUpDownOptions* class.
 
-- [AutomationDateTimePickerOptions methods](AutomationDateTimePickerOptions_methods.md)
+- [AutomationDateTimePickerOptions methods](xref:AutomationDateTimePickerOptions_methods)
 
-- [AutomationDateTimePickerOptions properties](AutomationDateTimePickerOptions_properties.md)
+- [AutomationDateTimePickerOptions properties](xref:AutomationDateTimePickerOptions_properties)
 
 This C# class allows you to create a date and time picker control in an interactive Automation script.
 

@@ -49,7 +49,7 @@ reportOptions.IncludeElement(dummy1, new MailReportParameter(dummy1, "Bandwidth"
 ```
 
 > [!NOTE]
-> In the example above, the index argument has to contain the display key. If necessary, use the FindDisplayKey method on the element or the dummy to retrieve that key. See [FindDisplayKey](Element_methods.md#finddisplaykey).
+> In the example above, the index argument has to contain the display key. If necessary, use the FindDisplayKey method on the element or the dummy to retrieve that key. See [FindDisplayKey](xref:Element_methods#finddisplaykey).
 
 #### IncludeFilteredView
 

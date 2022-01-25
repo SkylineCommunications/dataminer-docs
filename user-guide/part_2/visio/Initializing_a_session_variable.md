@@ -8,9 +8,9 @@ By adding a shape data field of type **InitVar** to a page of a Visio drawing, y
 
 > [!TIP]
 > See also:
-> - [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md)
-> - [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
-> - [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md)
+> - [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable)
+> - [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
+> - [Adding options to a session variable control](xref:Adding_options_to_a_session_variable_control)
 
 ### Configuring the shape data field
 

@@ -7,7 +7,7 @@ uid: Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra
 In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider. Depending on your DataMiner version, there is a different way to customize how long these history slider data are kept in this table.
 
 > [!NOTE]
-> To manage how long other alarm data are kept, go to System Center \> *System settings* > *time to live*. For more information, see [Specifying TTL overrides](Specifying_TTL_overrides.md)
+> To manage how long other alarm data are kept, go to System Center \> *System settings* > *time to live*. For more information, see [Specifying TTL overrides](xref:Specifying_TTL_overrides)
 
 > [!TIP]
 > See also:
@@ -15,7 +15,7 @@ In a Cassandra general database, the timetrace table among others contains “sn
 
 #### From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards
 
-From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, you can manage these settings in DataMiner Cube, by setting the “time to live” for the history slider in System Center. for more information, see [Specifying TTL overrides](Specifying_TTL_overrides.md).
+From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, you can manage these settings in DataMiner Cube, by setting the “time to live” for the history slider in System Center. for more information, see [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 #### From DataMiner 9.5.5 onwards
 

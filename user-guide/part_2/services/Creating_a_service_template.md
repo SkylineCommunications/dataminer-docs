@@ -102,7 +102,7 @@ To add a group:
         - To indicate a parent group for the group, select it in the *Parent Group* drop-down list.
 
         > [!NOTE]
-        > For more information on service item statuses such as “included” and “not used”, see [DATA](Service_card_pages.md#data).
+        > For more information on service item statuses such as “included” and “not used”, see [DATA](xref:Service_card_pages#data).
 
 If you have added any groups that you would like to delete, use the X in the *Delete* column of these groups.
 
@@ -175,13 +175,13 @@ To add a child element:
         - To limit the influence of the child element on the service alarm severity, select *While included, influence overall service alarm severity when*, and add a trigger with the *Add trigger* button.
 
         > [!NOTE]
-        > - Like in a service, inclusion and exclusion can be triggered based on a parameter state, alarm state or element state, or on whether the element is part of the active connectivity chain. However, for the latter, connectivity must be configured on the DMA. See [Conditionally including an element in a service](Conditionally_including_an_element_in_a_service.md).
+        > - Like in a service, inclusion and exclusion can be triggered based on a parameter state, alarm state or element state, or on whether the element is part of the active connectivity chain. However, for the latter, connectivity must be configured on the DMA. See [Conditionally including an element in a service](xref:Conditionally_including_an_element_in_a_service).
         > - For a matrix parameter, to create a condition where a matrix crosspoint is connected or disconnected, create a trigger on parameter value for the matrix parameter, in the trigger condition use *==* or *\<\>* respectively, and specify the input/output names in the text value, separated by a comma (e.g. “input A, output B”).
 
     5. In the *Advanced* section, optionally set a maximum severity for elements that are included or not used.
 
         > [!NOTE]
-        > For more information on service item statuses such as “included” and “not used”, see [DATA](Service_card_pages.md#data).
+        > For more information on service item statuses such as “included” and “not used”, see [DATA](xref:Service_card_pages#data).
 
     > [!NOTE]
     > When specifying a templated element or service name mask, or a name mask for parameters, you can use a regular expression. To do so, select *Use regular expression* in the drop-down list on the right. Once you have done this, an extra item will appear in the drop-down list, *Regular Expression Options*, which allows you to indicate if casing can be ignored and if the regular expression is required to match the entire input.
@@ -394,5 +394,5 @@ To configure a custom order:
 9. Click *Save And Close*.
 
 > [!NOTE]
-> For an example of how to apply this service template, see [Example of applying a service template](Applying_service_templates.md#example-of-applying-a-service-template).
+> For an example of how to apply this service template, see [Example of applying a service template](xref:Applying_service_templates#example-of-applying-a-service-template).
 >

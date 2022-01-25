@@ -17,18 +17,18 @@ To view the built-in reports in the Reporter app:
 
 In the navigation menu on the left, you can see an overview of the available reports and dashboards. The four pages at the top of the navigation menu contain the built-in reports: System, Element, Service and Business. With the view filter in the top-right corner, you can display information for certain views only.
 
-- [System reports](System_reports.md)
+- [System reports](xref:System_reports)
 
-- [Element reports](Element_reports.md)
+- [Element reports](xref:Element_reports)
 
-- [Service reports](Service_reports.md)
+- [Service reports](xref:Service_reports)
 
-- [Business reports](Business_reports.md)
+- [Business reports](xref:Business_reports)
 
-- [Using the View filter for built-in reports](Using_the_View_filter_for_built-in_reports.md#using-the-view-filter-for-built-in-reports)
+- [Using the View filter for built-in reports](xref:Using_the_View_filter_for_built-in_reports#using-the-view-filter-for-built-in-reports)
 
 > [!NOTE]
-> - The *Reports* section below the built-in reports contains custom report templates, and allows the creation of report templates. See [Creating report templates](Creating_report_templates.md).
+> - The *Reports* section below the built-in reports contains custom report templates, and allows the creation of report templates. See [Creating report templates](xref:Creating_report_templates).
 > - If you do not have the necessary rights to view certain elements or services, you will not be able to view information on these elements or services in reports.
 > - From DataMiner 9.0.0 onwards, the Reporter user interface functions as a single-page application. This means that when you work with the *http(s)://\[MyDataMiner\]/reports* page, you can bookmark the URL of a particular report, or copy the URL in order to make a direct link to the report, for example in Visual Overview.
 >

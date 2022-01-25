@@ -48,11 +48,11 @@ To configure the component:
 
 2. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other dashboard components when you hover the mouse pointer over it in order to show as much data as possible.
 
-3. Optionally, apply a data filter. Element, parameter, index, service and view data can be used as a filter. Various feed components, such as a parameter feed and time range feed, can also be used as a filter. <br>See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+3. Optionally, apply a data filter. Element, parameter, index, service and view data can be used as a filter. Various feed components, such as a parameter feed and time range feed, can also be used as a filter. <br>See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
 ### Parameter table
 
@@ -60,7 +60,7 @@ Displays a data table of an element.
 
 To configure the component:
 
-1. Apply a table parameter data feed. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply a table parameter data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
 2. Optionally, hover the mouse over the component, click the filter icon, and then add a filter feed from the *indices* section of the data pane. You can repeat this several times in order to filter on several indices.
 
@@ -72,7 +72,7 @@ To configure the component:
 
 4. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other dashboard components when you hover the mouse pointer over it in order to show as much data as possible.
 
@@ -88,7 +88,7 @@ From DataMiner 9.6.13 onwards, it is possible to export this status report to CS
 
 To configure the component, from DataMiner 9.6.12 onwards:
 
-1. Apply a data feed. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
     This component requires a parameter feed based on *Protocol* or *Element*, or a group of parameters from a *Parameter* feed component.
 
@@ -124,11 +124,11 @@ To configure the component, from DataMiner 9.6.12 onwards:
         > [!NOTE]
         > Using the sort settings in conjunction with the *Limit* setting, you can create a top X or bottom X list.
 
-3. Optionally, fine-tune the component layout. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+3. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 To configure the component, up to DataMiner 9.6.11:
 
-1. Apply a data feed. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
     This component requires a parameter feed based on *Protocol* or *Element*.
 
@@ -159,11 +159,11 @@ To configure the component, up to DataMiner 9.6.11:
     > [!NOTE]
     > For each added parameter, a “real-time” indication is also added in the *Settings* pane. This is not a configurable option, but only an indication that the component displays real-time information.
 
-4. Optionally, fine-tune the component layout. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+4. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 ### Table
 
-This component is introduced in DataMiner 10.0.13 with the purpose of displaying the results of queries in table format. It should always be configured with *Queries* data input. See [Using Queries data input](Configuring_dashboard_components.md#using-queries-data-input).
+This component is introduced in DataMiner 10.0.13 with the purpose of displaying the results of queries in table format. It should always be configured with *Queries* data input. See [Using Queries data input](xref:Configuring_dashboard_components#using-queries-data-input).
 
 It displays the different possible data sources of queries as follows:
 

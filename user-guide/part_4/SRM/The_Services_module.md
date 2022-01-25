@@ -145,7 +145,7 @@ To do so:
     - To further refine parameters for a particular node, select the node, and, in the lower right corner, specify a parameter label and/or select one of the available profiles for the parameter. From DataMiner 10.0.9 onwards, a toggle button is also available next to the *Profile* box, which determines if the *By reference* option is selected by default during booking creation. If *By reference* is selected, users will not be able to adapt the value for the selected profile instance during booking creation.
 
         > [!NOTE]
-        > Parameter profiles are created in the *Profiles* module. See [Configuring profile parameters](Configuring_profile_parameters.md).
+        > Parameter profiles are created in the *Profiles* module. See [Configuring profile parameters](xref:Configuring_profile_parameters).
 
     - To add properties to a particular node, interface or connection, select the node, interface or connection in the diagram, and, in the *properties* tab in the lower right corner, click the *Add* button and specify the property.
 

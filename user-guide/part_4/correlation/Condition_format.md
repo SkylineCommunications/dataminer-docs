@@ -22,7 +22,7 @@ field(value) == "Status: \"OK\""
 ```
 
 > [!NOTE]
-> For more examples, refer to [Examples of script conditions](Examples_of_script_conditions.md).
+> For more examples, refer to [Examples of script conditions](xref:Examples_of_script_conditions).
 
 #### Available operators
 

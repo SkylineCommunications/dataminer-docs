@@ -173,7 +173,7 @@ string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 
 > [!TIP]
 > See also:
-> [FileSelector](UIBlockType_enumeration.md#fileselector)
+> [FileSelector](xref:UIBlockType_enumeration#fileselector)
 
 #### WasBack
 

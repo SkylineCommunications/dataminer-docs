@@ -6,6 +6,6 @@ uid: Element_class
 
 Below, you can find an overview of all members of the *Element* class.
 
-- [Element methods](Element_methods.md)
+- [Element methods](xref:Element_methods)
 
-- [Element properties](Element_properties1.md#element-properties)
+- [Element properties](xref:Element_properties1#element-properties)

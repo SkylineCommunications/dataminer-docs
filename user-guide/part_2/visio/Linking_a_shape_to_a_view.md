@@ -10,8 +10,8 @@ By default, this will cause the Visio drawing linked to that view to be opened e
 
 > [!TIP]
 > See also:
-> - [Disabling the default hyperlink behavior of a linked shape](Disabling_the_default_hyperlink_behavior_of_a_linked_shape.md)
-> - [Making a shape launch the Device Discovery app](Making_a_shape_launch_the_Device_Discovery_app.md)
+> - [Disabling the default hyperlink behavior of a linked shape](xref:Disabling_the_default_hyperlink_behavior_of_a_linked_shape)
+> - [Making a shape launch the Device Discovery app](xref:Making_a_shape_launch_the_Device_Discovery_app)
 
 > [!NOTE]
 > - Visio shapes linked to views will not be displayed if, for any reason, those links cannot be resolved. Link problems can occur due to insufficient user rights, missing DataMiner items, invalid parameter values, etc.

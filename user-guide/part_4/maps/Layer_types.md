@@ -52,9 +52,9 @@ Within this layer, add a *\<LayerSourceInfo>* tag in which you specify the name 
 
 The following additional configuration is possible:
 
-- You can configure the style of the connections in a *\<LineOptions>* tag. See [LineOptions](LineOptions.md).
+- You can configure the style of the connections in a *\<LineOptions>* tag. See [LineOptions](xref:LineOptions).
 
-- If you want to show a DCF connection property in the *\<PopupSkeleton>* template, add a *\<Detail>* tag inside the *\<PopupDetails>* tag, and set its *type* attribute to “property” and its *property* attribute to the connection property name. See [PopupSkeleton](PopupSkeleton_and_PopupDetails.md#popupskeleton).
+- If you want to show a DCF connection property in the *\<PopupSkeleton>* template, add a *\<Detail>* tag inside the *\<PopupDetails>* tag, and set its *type* attribute to “property” and its *property* attribute to the connection property name. See [PopupSkeleton](xref:PopupSkeleton_and_PopupDetails#popupskeleton).
 
 ### Layers of sourceType “objects”
 
@@ -190,7 +190,7 @@ If you want a layer of sourceType “overlay” to display a KML image, do the f
 > [!NOTE]
 > - Do not store private KML files in the folder “C:\\Skyline DataMiner\\Webpages”. Files in that folder will be publicly accessible.
 > - If you use a private KML file, only users who have logged on to DataMiner Maps will be able to request a download link. The download links can be used only once and expire after 5 minutes
-> - For more information on the KML file format, see [http://code.google.com/apis/kml/documentation/mapsSupport.html](http://code.google.com/apis/kml/documentation/mapsSupport.md).
+> - For more information on the KML file format, see [http://code.google.com/apis/kml/documentation/mapsSupport.html](http://code.google.com/apis/kml/documentation/mapsSupport.html).
 > - KML layers are always used as the bottom layers of the map, while other layers are drawn from top to bottom as defined in the configuration.
 
 #### Overlays of type “geojson”
@@ -224,7 +224,7 @@ Set the *sourceType* attribute of a layer to “parameters” if you want that l
 
 - PopupSkeleton and PopupDetails
 
-For more information on those tags, see [Layer configuration tags](Layer_configuration_tags.md).
+For more information on those tags, see [Layer configuration tags](xref:Layer_configuration_tags).
 
 > [!NOTE]
 > On layers of sourceType “parameters”, no markers will be shown unless an element variable is specified in the map URL and a match is found for this variable.
@@ -241,7 +241,7 @@ Set the *sourceType* attribute of a layer to “properties” if you want that l
 
 - PopupSkeleton and PopupDetails
 
-For more information on those tags, see [Layer configuration tags](Layer_configuration_tags.md).
+For more information on those tags, see [Layer configuration tags](xref:Layer_configuration_tags).
 
 ### Layers of SourceType “relations”
 
@@ -280,14 +280,14 @@ From DataMiner 9.6.0 CU3/9.6.9 onwards, the following additional filters can be 
 
 > [!NOTE]
 > - To make sure correct results are returned, *\<SourceTableID>* and *\<DestinationTableID>* have to be in the correct order.
-> - Optionally, the *\<LineOptions>* tag can be used in this tag. See [LineOptions](LineOptions.md).
+> - Optionally, the *\<LineOptions>* tag can be used in this tag. See [LineOptions](xref:LineOptions).
 > - From DataMiner 10.0.3 onwards, the recursivefullfilter option is supported for table filters. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 ### Layers of sourceType “separator”
 
 Set the *sourceType* attribute of a layer to “separator” if you want that layer to be a dummy layer of which the only function is to display a kind of “section title” in a layer group.
 
-For more information, see [Separators in layer groups](Layer_groups.md#separators-in-layer-groups).
+For more information, see [Separators in layer groups](xref:Layer_groups#separators-in-layer-groups).
 
 ### Layers of sourceType “sql”
 
@@ -295,7 +295,7 @@ Set the *sourceType* attribute of a layer to “sql” if you want that layer to
 
 - SqlSourceInfo
 
-For more information on that tag, see [SqlSourceInfo](SqlSourceInfo.md).
+For more information on that tag, see [SqlSourceInfo](xref:SqlSourceInfo).
 
 ### Layers of sourceType “table”
 
@@ -311,14 +311,14 @@ Set the *sourceType* attribute of a layer to “table” if you want that layer 
 
 - PopupSkeleton and PopupDetails
 
-For more information on those tags, see [Layer configuration tags](Layer_configuration_tags.md).
+For more information on those tags, see [Layer configuration tags](xref:Layer_configuration_tags).
 
 ### Layers of sourceType “traffic”
 
 Set the *sourceType* attribute of a layer to “traffic” if you want that layer to display traffic information.
 
 > [!NOTE]
-> Traffic information is only retrieved once, and not refreshed afterwards. This means that the “refresh” attribute does not work for layers of sourceType 'traffic'. See [refresh](Attributes_of_the_Layer_tag.md#refresh).
+> Traffic information is only retrieved once, and not refreshed afterwards. This means that the “refresh” attribute does not work for layers of sourceType 'traffic'. See [refresh](xref:Attributes_of_the_Layer_tag#refresh).
 
 ### Layers of sourceType “weather”
 

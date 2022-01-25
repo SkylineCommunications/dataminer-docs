@@ -42,7 +42,7 @@ The connections table allows you to view and configure the connections between i
 
 6. Optionally, enter a filter in the column *\[Connections Filter\]*.
 
-    This filter is the same as the filter you can add in the Connectivity tab of the element’s Properties window. See [Editing element connections in the Properties window](Editing_element_connections_in_the_Properties_window.md).
+    This filter is the same as the filter you can add in the Connectivity tab of the element’s Properties window. See [Editing element connections in the Properties window](xref:Editing_element_connections_in_the_Properties_window).
 
 > [!NOTE]
 > If you want to set up a connection between two elements, make sure to add a connection to the connections table of both elements.

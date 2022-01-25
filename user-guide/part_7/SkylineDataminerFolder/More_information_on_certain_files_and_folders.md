@@ -6,52 +6,52 @@ uid: More_information_on_certain_files_and_folders
 
 This section provides further information on the following files and folders:
 
-- [Aggregation](Aggregation.md)
+- [Aggregation](xref:Aggregation)
 
-- [ClientSettings.json](ClientSettings_json.md#clientsettingsjson)
+- [ClientSettings.json](xref:ClientSettings_json#clientsettingsjson)
 
-- [ConnectionSettings.txt](ConnectionSettings_txt.md#connectionsettingstxt)
+- [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt)
 
-- [Database](Database.md)
+- [Database](xref:Database)
 
-- [DataMiner.xml](DataMiner_xml.md#dataminerxml)
+- [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 
-- [DB.xml](DB_xml.md#dbxml)
+- [DB.xml](xref:DB_xml#dbxml)
 
-- [DBMaintenance.xml and DBMaintenanceDMS.xml](DBMaintenance_xml_and_DBMaintenanceDMS_xml.md#dbmaintenancexml-and-dbmaintenancedmsxml)
+- [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml)
 
-- [DMS.xml](DMS_xml.md#dmsxml)
+- [DMS.xml](xref:DMS_xml#dmsxml)
 
-- [Elements](Elements1.md#elements)
+- [Elements](xref:Elements1#elements)
 
-- [EPMConfig.xml](EPMConfig_xml.md#epmconfigxml)
+- [EPMConfig.xml](xref:EPMConfig_xml#epmconfigxml)
 
-- [Hyperlinks.xml](Hyperlinks_xml.md#hyperlinksxml)
+- [Hyperlinks.xml](xref:Hyperlinks_xml#hyperlinksxml)
 
-- [Icons](Icons.md)
+- [Icons](xref:Icons)
 
-- [Information.xml](Information_xml.md#informationxml)
+- [Information.xml](xref:Information_xml#informationxml)
 
-- [LogSettings.xml](LogSettings_xml.md#logsettingsxml)
+- [LogSettings.xml](xref:LogSettings_xml#logsettingsxml)
 
-- [MaintenanceSettings.xml](MaintenanceSettings_xml.md#maintenancesettingsxml)
+- [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 
-- [Polling.xml](Polling_xml.md#pollingxml)
+- [Polling.xml](xref:Polling_xml#pollingxml)
 
-- [PortLog.txt](PortLog_txt.md#portlogtxt)
+- [PortLog.txt](xref:PortLog_txt#portlogtxt)
 
-- [PropertyConfiguration.xml](PropertyConfiguration_xml.md#propertyconfigurationxml)
+- [PropertyConfiguration.xml](xref:PropertyConfiguration_xml#propertyconfigurationxml)
 
-- [Recycle bin](Recycle_bin.md)
+- [Recycle bin](xref:Recycle_bin)
 
-- [SLCloud.xml](SLCloud_xml.md#slcloudxml)
+- [SLCloud.xml](xref:SLCloud_xml#slcloudxml)
 
-- [SLNet.exe.config](SLNet_exe_config.md#slnetexeconfig)
+- [SLNet.exe.config](xref:SLNet_exe_config#slnetexeconfig)
 
-- [SNMP Managers.xml](SNMP_Managers_xml.md#snmp-managersxml)
+- [SNMP Managers.xml](xref:SNMP_Managers_xml#snmp-managersxml)
 
-- [System Cache](System_Cache.md)
+- [System Cache](xref:System_Cache)
 
-- [SyncRules.xml](SyncRules_xml.md#syncrulesxml)
+- [SyncRules.xml](xref:SyncRules_xml#syncrulesxml)
 
-- [SLAnalytics.config](SLAnalytics_config.md#slanalyticsconfig)
+- [SLAnalytics.config](xref:SLAnalytics_config#slanalyticsconfig)

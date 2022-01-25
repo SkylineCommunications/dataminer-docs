@@ -10,7 +10,7 @@ If, for example, you set **Field** to “*Headends*”, the page will appear whe
 
 > [!TIP]
 > See also:
-> [Linking a Visio page to an EPM chain](Linking_a_Visio_page_to_an_EPM_chain.md)
+> [Linking a Visio page to an EPM chain](xref:Linking_a_Visio_page_to_an_EPM_chain)
 
 ### Configuring the shape data field
 

@@ -72,7 +72,7 @@ Adds a button to the dialog box by providing two arguments:
 
 When the button is pressed, the variable is filled with its own name.
 
-This is a convenience method that will create a new instance of *UIBlockDefinition* of type *Button* and set *RequireResponse* to true. (See [RequireResponse](UIBuilder_properties.md#requireresponse).)
+This is a convenience method that will create a new instance of *UIBlockDefinition* of type *Button* and set *RequireResponse* to true. (See [RequireResponse](xref:UIBuilder_properties#requireresponse).)
 
 ```txt
 UIBuilder AppendButton(string varname, string text)
@@ -97,7 +97,7 @@ Adds a drop-down box to the dialog box by providing two arguments:
 
 - the list of available options, using the format *value\|displayvalue*
 
-This is a convenience method that will create a new instance of *UIBlockDefinition* of type *Dropdown* and set *RequireResponse* to true. (See [RequireResponse](UIBuilder_properties.md#requireresponse).)
+This is a convenience method that will create a new instance of *UIBlockDefinition* of type *Dropdown* and set *RequireResponse* to true. (See [RequireResponse](xref:UIBuilder_properties#requireresponse).)
 
 ```txt
 UIBuilder AppendDropDown(string varname, string[] options)

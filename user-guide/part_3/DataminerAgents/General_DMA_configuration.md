@@ -165,8 +165,8 @@ The diagram below shows how communication within a DMS could be set up.
 
 > [!TIP]
 > See also:
-> - [Configuring DMA communication settings in SLNet.exe.config](Configuration_of_DataMiner_processes.md#configuring-dma-communication-settings-in-slnetexeconfig)
-> - [Configuring client communication settings](DMA_configuration_related_to_client_applications.md#configuring-client-communication-settings)
+> - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-dma-communication-settings-in-slnetexeconfig)
+> - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
 
 ### Configuring the polling request timeout
 
@@ -182,7 +182,7 @@ This setting will apply to all new inter-DMA connections set up from that DMA.
 
 > [!TIP]
 > See also:
-> [Configuring SLNet settings in MaintenanceSettings.xml](Configuration_of_DataMiner_processes.md#configuring-slnet-settings-in-maintenancesettingsxml)
+> [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
 
 #### Client-side
 

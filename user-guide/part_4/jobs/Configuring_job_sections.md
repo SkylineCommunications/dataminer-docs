@@ -44,7 +44,7 @@ To configure these job sections:
 
     - If a job section of type “fields” has multiple fields, you can move the order in which they will appear with the up and down arrows next to the fields.
 
-    - For a job section of type “fields”, you can modify fields via the pencil icon to the right of each field or add more fields using the + icon. See [Configuring a job field](Configuring_a_job_field.md).
+    - For a job section of type “fields”, you can modify fields via the pencil icon to the right of each field or add more fields using the + icon. See [Configuring a job field](xref:Configuring_a_job_field).
 
     Prior to DataMiner 10.0.9:
 
@@ -66,7 +66,7 @@ To configure these job sections:
 
             - For a fields section, in case multiple instances of this section should be available, select *Allow multiple instances*. <br>When a new job is created, it will then be possible to specify additional instances in tabs. In the list view, the different instances will be separated by a pipe character.
 
-            - For a fields section, modify fields via the pencil icon to the right of each field or add more fields using the + icon. See [Configuring a job field](Configuring_a_job_field.md).
+            - For a fields section, modify fields via the pencil icon to the right of each field or add more fields using the + icon. See [Configuring a job field](xref:Configuring_a_job_field).
 
             - If a fields section has multiple fields, you can move the order in which they will appear with the up and down arrows next to the fields.
 

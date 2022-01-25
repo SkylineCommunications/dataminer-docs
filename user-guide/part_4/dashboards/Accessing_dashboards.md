@@ -15,9 +15,9 @@ To access DataMiner dashboards:
 
 More information on accessing the Dashboards app is included in the following topics:
 
-- [Logging on to the Dashboards App](Logging_on_to_the_Dashboards_App.md)
+- [Logging on to the Dashboards App](xref:Logging_on_to_the_Dashboards_App)
 
-- [Dashboard URL options](Dashboard_URL_options.md)
+- [Dashboard URL options](xref:Dashboard_URL_options)
 
 > [!NOTE]
 > - Some dashboard components, such as the *Trend parameter* component, can be used outside of the *Dashboards* app in custom portals. The code and web services for the components can be found on the DMA in the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards\\Parts*.

@@ -19,7 +19,7 @@ To create a redundancy group template:
     2. On the same line, click the underlined section to the right of *redundancy mode* and specify the redundancy mode.
 
         > [!NOTE]
-        > For more information on the different redundancy modes and on how to switch between redundancy modes after the redundancy group has been created, see [Changing the redundancy mode](Changing_the_redundancy_mode.md).
+        > For more information on the different redundancy modes and on how to switch between redundancy modes after the redundancy group has been created, see [Changing the redundancy mode](xref:Changing_the_redundancy_mode).
 
     3. If you want the conditions of the switching logic to also be checked when a user does a manual switch, in the *Redundancy mode* section, select *On manual switchover to a backup, also check the conditions from the switching logic*.
 

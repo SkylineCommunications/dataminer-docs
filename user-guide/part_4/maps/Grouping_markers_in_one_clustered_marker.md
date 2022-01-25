@@ -60,7 +60,7 @@ The following attributes can be used in the *\<ClusteredMarkers>* tag:
 
 ### \<MarkerImages> tag
 
-In the *\<MarkerImages>* tag, you can define the set of marker images that can be used by the cluster. The configuration settings are identical to those used in the Layers.MarkerImages tag. See [MarkerImages](MarkerImages.md).
+In the *\<MarkerImages>* tag, you can define the set of marker images that can be used by the cluster. The configuration settings are identical to those used in the Layers.MarkerImages tag. See [MarkerImages](xref:MarkerImages).
 
 The first MarkerImage will be used for clusters containing a small number of markers, while the last MarkerImage will be used for clusters with a very large number of markers. These images can be small, large, transparent, semi-transparent, etc.
 
@@ -71,5 +71,5 @@ From DataMiner 9.5.5 onwards, it is possible to define clustered markers at laye
 To do so, add a ClusteredMarkers tag at layer level. However, note that only the GridSize and MarkerImages can be defined at this level, overriding the grid size value and marker images defined in the ClusteredMarkers tag of the MapConfig.
 
 > [!NOTE]
-> For an example of this configuration, combined with the configuration of spiderfied markers at layer level, refer to [Defining spiderfied markers per layer](Enabling_spiderfied_markers.md#defining-spiderfied-markers-per-layer).
+> For an example of this configuration, combined with the configuration of spiderfied markers at layer level, refer to [Defining spiderfied markers per layer](xref:Enabling_spiderfied_markers#defining-spiderfied-markers-per-layer).
 >

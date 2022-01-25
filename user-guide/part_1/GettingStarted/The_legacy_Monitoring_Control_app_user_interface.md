@@ -4,7 +4,7 @@ uid: The_legacy_Monitoring_Control_app_user_interface
 
 # The legacy Monitoring & Control app user interface
 
-Prior to DataMiner 10.0.0/10.0.2, the primary web application to monitor a DMS is the Monitoring & Control app. From DataMiner 10.0.0/10.0.2 onwards, this app is deprecated and replaced by a new Monitoring app. See [The Monitoring app user interface](The_Monitoring_app_user_interface.md).
+Prior to DataMiner 10.0.0/10.0.2, the primary web application to monitor a DMS is the Monitoring & Control app. From DataMiner 10.0.0/10.0.2 onwards, this app is deprecated and replaced by a new Monitoring app. See [The Monitoring app user interface](xref:The_Monitoring_app_user_interface).
 
 The DataMiner Monitoring & Control app features a user interface similar to that of DataMiner Cube, with a header bar, a navigation pane, an Alarm Console and a card area.
 

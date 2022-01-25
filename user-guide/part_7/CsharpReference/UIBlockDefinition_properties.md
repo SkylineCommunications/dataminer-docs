@@ -190,7 +190,7 @@ AutomationConfigOptions ConfigOptions
 
 > [!TIP]
 > See also:
-> [AutomationConfigOptions class](AutomationConfigOptions_class.md)
+> [AutomationConfigOptions class](xref:AutomationConfigOptions_class)
 
 Example:
 
@@ -209,7 +209,7 @@ uibDef.ConfigOptions = config;
 
 Gets or sets the number of decimals to show.
 
-UIBlockType: [Numeric](UIBlockType_enumeration.md#numeric)
+UIBlockType: [Numeric](xref:UIBlockType_enumeration#numeric)
 
 ```txt
 int Decimals
@@ -246,21 +246,21 @@ Gets or sets the alias that will be used to retrieve the value entered or select
 
 UIBlockType:
 
-- [Button](UIBlockType_enumeration.md#button)
+- [Button](xref:UIBlockType_enumeration#button)
 
-- [Calendar](UIBlockType_enumeration.md#calendar)
+- [Calendar](xref:UIBlockType_enumeration#calendar)
 
-- [CheckBox](UIBlockType_enumeration.md#checkbox)
+- [CheckBox](xref:UIBlockType_enumeration#checkbox)
 
-- [CheckBoxList](UIBlockType_enumeration.md#checkboxlist)
+- [CheckBoxList](xref:UIBlockType_enumeration#checkboxlist)
 
-- [DropDown](UIBlockType_enumeration.md#dropdown)
+- [DropDown](xref:UIBlockType_enumeration#dropdown)
 
-- [TextBox](UIBlockType_enumeration.md#textbox)
+- [TextBox](xref:UIBlockType_enumeration#textbox)
 
-- [Time](UIBlockType_enumeration.md#time)
+- [Time](xref:UIBlockType_enumeration#time)
 
-- [TreeView](UIBlockType_enumeration.md#treeview)
+- [TreeView](xref:UIBlockType_enumeration#treeview)
 
 ```txt
 string DestVar
@@ -291,7 +291,7 @@ Available from DataMiner 9.5.6 onwards.
 
 Default: False.
 
-UIBlockType: [DropDown](UIBlockType_enumeration.md#dropdown)
+UIBlockType: [DropDown](xref:UIBlockType_enumeration#dropdown)
 
 ```txt
 bool DisplayFilter
@@ -313,9 +313,9 @@ Gets or sets the ID of the parameter that has to be displayed in the dialog box 
 
 UIBlockType:
 
-- [Numeric](UIBlockType_enumeration.md#numeric)
+- [Numeric](xref:UIBlockType_enumeration#numeric)
 
-- [Parameter](UIBlockType_enumeration.md#parameter)
+- [Parameter](xref:UIBlockType_enumeration#parameter)
 
 ```txt
 string Extra
@@ -341,7 +341,7 @@ Gets or sets a value indicating whether the password box shows an icon that, whe
 
 *true* if the peek icon is displayed, otherwise *false*.
 
-UIBlockType: [PasswordBox](UIBlockType_enumeration.md#passwordbox)
+UIBlockType: [PasswordBox](xref:UIBlockType_enumeration#passwordbox)
 
 ```txt
 bool HasPeekIcon
@@ -437,7 +437,7 @@ bool IsEnabled
 
 Gets or sets a value indicating whether users are able to enter multiple lines of text.
 
-UIBlockType: [TextBox](UIBlockType_enumeration.md#textbox)
+UIBlockType: [TextBox](xref:UIBlockType_enumeration#textbox)
 
 ```txt
 bool IsMultiline
@@ -461,15 +461,15 @@ If this is set to true, the control will be marked as invalid when it is empty.
 
 UIBlockType:
 
-- [Calendar](UIBlockType_enumeration.md#calendar)
+- [Calendar](xref:UIBlockType_enumeration#calendar)
 
-- [DropDown](UIBlockType_enumeration.md#dropdown)
+- [DropDown](xref:UIBlockType_enumeration#dropdown)
 
-- [Numeric](UIBlockType_enumeration.md#numeric)
+- [Numeric](xref:UIBlockType_enumeration#numeric)
 
-- [PasswordBox](UIBlockType_enumeration.md#passwordbox)
+- [PasswordBox](xref:UIBlockType_enumeration#passwordbox)
 
-- [TextBox](UIBlockType_enumeration.md#textbox)
+- [TextBox](xref:UIBlockType_enumeration#textbox)
 
 ```txt
 bool IsRequired
@@ -485,9 +485,9 @@ Default: False.
 
 UIBlockType:
 
-- [CheckBoxList](UIBlockType_enumeration.md#checkboxlist)
+- [CheckBoxList](xref:UIBlockType_enumeration#checkboxlist)
 
-- [DropDown](UIBlockType_enumeration.md#dropdown)
+- [DropDown](xref:UIBlockType_enumeration#dropdown)
 
 ```txt
 bool IsSorted
@@ -638,13 +638,13 @@ Gets or sets the placeholder text, i.e. the text that should be displayed as lon
 
 UIBlockType:
 
-- [DropDown](UIBlockType_enumeration.md#dropdown)
+- [DropDown](xref:UIBlockType_enumeration#dropdown)
 
-- [Numeric](UIBlockType_enumeration.md#numeric)
+- [Numeric](xref:UIBlockType_enumeration#numeric)
 
-- [PasswordBox](UIBlockType_enumeration.md#passwordbox)
+- [PasswordBox](xref:UIBlockType_enumeration#passwordbox)
 
-- [TextBox](UIBlockType_enumeration.md#textbox)
+- [TextBox](xref:UIBlockType_enumeration#textbox)
 
 ```txt
 string PlaceholderText
@@ -654,7 +654,7 @@ string PlaceholderText
 
 Gets or sets the maximum value of the range.
 
-UIBlockType: [Numeric](UIBlockType_enumeration.md#numeric)
+UIBlockType: [Numeric](xref:UIBlockType_enumeration#numeric)
 
 ```txt
 double RangeHigh
@@ -686,7 +686,7 @@ uib.AppendBlock(numericBlock);
 
 Gets or sets the minimum value of the range.
 
-UIBlockType: [Numeric](UIBlockType_enumeration.md#numeric)
+UIBlockType: [Numeric](xref:UIBlockType_enumeration#numeric)
 
 ```txt
 double RangeLow
@@ -718,7 +718,7 @@ uib.AppendBlock(numericBlock);
 
 Gets or sets the step size.
 
-UIBlockType: [Numeric](UIBlockType_enumeration.md#numeric)
+UIBlockType: [Numeric](xref:UIBlockType_enumeration#numeric)
 
 ```txt
 double RangeStep
@@ -814,9 +814,9 @@ Gets or sets the text that has to appear in the dialog box item.
 
 UIBlockType:
 
-- [Button](UIBlockType_enumeration.md#button)
+- [Button](xref:UIBlockType_enumeration#button)
 
-- [StaticText](UIBlockType_enumeration.md#statictext)
+- [StaticText](xref:UIBlockType_enumeration#statictext)
 
 ```txt
 string Text
@@ -878,7 +878,7 @@ uib.AppendBlock(input3);
 
 #### Type
 
-Gets or sets the *UIBlockType* of the dialog box item. See [UIBlockType enumeration](UIBlockType_enumeration.md).
+Gets or sets the *UIBlockType* of the dialog box item. See [UIBlockType enumeration](xref:UIBlockType_enumeration).
 
 UIBlockType: *All*
 
@@ -899,7 +899,7 @@ uibDialogBox1.AppendBlock(blockItem);
 
 Contains each item of the tree view as a TreeViewItem. Available from DataMiner 10.0.10 onwards.
 
-UIBlockType: [TreeView](UIBlockType_enumeration.md#treeview).
+UIBlockType: [TreeView](xref:UIBlockType_enumeration#treeview).
 
 ```txt
 TreeViewItem TreeViewItems
@@ -941,17 +941,17 @@ Returns true if the state is valid; otherwise returns false.
 
 UIBlockType:
 
-- [Calendar](UIBlockType_enumeration.md#calendar)
+- [Calendar](xref:UIBlockType_enumeration#calendar)
 
-- [DropDown](UIBlockType_enumeration.md#dropdown)
+- [DropDown](xref:UIBlockType_enumeration#dropdown)
 
-- [FileSelector](UIBlockType_enumeration.md#fileselector)
+- [FileSelector](xref:UIBlockType_enumeration#fileselector)
 
-- [Numeric](UIBlockType_enumeration.md#numeric)
+- [Numeric](xref:UIBlockType_enumeration#numeric)
 
-- [PasswordBox](UIBlockType_enumeration.md#passwordbox)
+- [PasswordBox](xref:UIBlockType_enumeration#passwordbox)
 
-- [TextBox](UIBlockType_enumeration.md#textbox)
+- [TextBox](xref:UIBlockType_enumeration#textbox)
 
 ```txt
 string ValidationState
@@ -966,17 +966,17 @@ Gets or sets the text that will be displayed if *ValidationState* is false. Avai
 
 UIBlockType:
 
-- [Calendar](UIBlockType_enumeration.md#calendar)
+- [Calendar](xref:UIBlockType_enumeration#calendar)
 
-- [DropDown](UIBlockType_enumeration.md#dropdown)
+- [DropDown](xref:UIBlockType_enumeration#dropdown)
 
-- [FileSelector](UIBlockType_enumeration.md#fileselector)
+- [FileSelector](xref:UIBlockType_enumeration#fileselector)
 
-- [Numeric](UIBlockType_enumeration.md#numeric)
+- [Numeric](xref:UIBlockType_enumeration#numeric)
 
-- [PasswordBox](UIBlockType_enumeration.md#passwordbox)
+- [PasswordBox](xref:UIBlockType_enumeration#passwordbox)
 
-- [TextBox](UIBlockType_enumeration.md#textbox)
+- [TextBox](xref:UIBlockType_enumeration#textbox)
 
 ```txt
 string ValidationText
@@ -1014,27 +1014,27 @@ Gets or sets a value indicating whether an update of the current value of the di
 
 UIBlockType:
 
-- [Button](UIBlockType_enumeration.md#button)
+- [Button](xref:UIBlockType_enumeration#button)
 
-- [Calendar](UIBlockType_enumeration.md#calendar)
+- [Calendar](xref:UIBlockType_enumeration#calendar)
 
-- [CheckBox](UIBlockType_enumeration.md#checkbox)
+- [CheckBox](xref:UIBlockType_enumeration#checkbox)
 
-- [CheckBoxList](UIBlockType_enumeration.md#checkboxlist)
+- [CheckBoxList](xref:UIBlockType_enumeration#checkboxlist)
 
-- [DropDown](UIBlockType_enumeration.md#dropdown)
+- [DropDown](xref:UIBlockType_enumeration#dropdown)
 
-- [Numeric](UIBlockType_enumeration.md#numeric) (from DataMiner 9.5.5 onwards)
+- [Numeric](xref:UIBlockType_enumeration#numeric) (from DataMiner 9.5.5 onwards)
 
-- [PasswordBox](UIBlockType_enumeration.md#passwordbox) (from DataMiner 9.6.6 onwards)
+- [PasswordBox](xref:UIBlockType_enumeration#passwordbox) (from DataMiner 9.6.6 onwards)
 
-- [RadioButtonList](UIBlockType_enumeration.md#radiobuttonlist) (from DataMiner 9.6.6 onwards)
+- [RadioButtonList](xref:UIBlockType_enumeration#radiobuttonlist) (from DataMiner 9.6.6 onwards)
 
-- [TextBox](UIBlockType_enumeration.md#textbox) (from DataMiner 9.5.3 onwards)
+- [TextBox](xref:UIBlockType_enumeration#textbox) (from DataMiner 9.5.3 onwards)
 
-- [Time](UIBlockType_enumeration.md#time)
+- [Time](xref:UIBlockType_enumeration#time)
 
-- [TreeView](UIBlockType_enumeration.md#treeview) (from DataMiner 10.0.10 onwards)
+- [TreeView](xref:UIBlockType_enumeration#treeview) (from DataMiner 10.0.10 onwards)
 
 > [!NOTE]
 > A button will always trigger an OnChange event, regardless of what you specify for the WantsOnChange attribute.

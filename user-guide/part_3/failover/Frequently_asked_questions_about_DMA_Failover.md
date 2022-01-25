@@ -45,7 +45,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [Viewing Failover information](Viewing_Failover_information.md)
+> [Viewing Failover information](xref:Viewing_Failover_information)
 
 ### What happens if one of the DMAs is restarted in a Failover setup?
 
@@ -57,7 +57,7 @@ This section consists of the following topics:
 
 - If the offline DMA detects several failing heartbeats because the restart takes a long time, an automatic switchover will occur.
 
-    This depends on the duration of the restart and on the heartbeat settings.     For more information on the heartbeat settings, see [Heartbeats](Advanced_Failover_options.md#heartbeats).
+    This depends on the duration of the restart and on the heartbeat settings.     For more information on the heartbeat settings, see [Heartbeats](xref:Advanced_Failover_options#heartbeats).
 
 - After the restart, if the online DMA cannot connect to the other DMA, it will go back online automatically.
 
@@ -85,7 +85,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [Viewing Failover information](Viewing_Failover_information.md)
+> [Viewing Failover information](xref:Viewing_Failover_information)
 
 ### What happens if a network cable is pulled out of one of the DMA network cards?
 
@@ -119,8 +119,8 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> - [Viewing Failover information](Viewing_Failover_information.md)
-> - [Heartbeats](Advanced_Failover_options.md#heartbeats)
+> - [Viewing Failover information](xref:Viewing_Failover_information)
+> - [Heartbeats](xref:Advanced_Failover_options#heartbeats)
 
 #### If the network cable used for synchronization is pulled out of the online DMA
 
@@ -144,7 +144,7 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> [Viewing Failover information](Viewing_Failover_information.md)
+> [Viewing Failover information](xref:Viewing_Failover_information)
 
 #### If both network cables are pulled out of the online DMA
 
@@ -168,8 +168,8 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> - [Viewing Failover information](Viewing_Failover_information.md)
-> - [Heartbeats](Advanced_Failover_options.md#heartbeats)
+> - [Viewing Failover information](xref:Viewing_Failover_information)
+> - [Heartbeats](xref:Advanced_Failover_options#heartbeats)
 
 #### If the network cable connecting to the switch or router is pulled out of the offline DMA
 
@@ -183,8 +183,8 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> - [Viewing Failover information](Viewing_Failover_information.md)
-> - [Heartbeats](Advanced_Failover_options.md#heartbeats)
+> - [Viewing Failover information](xref:Viewing_Failover_information)
+> - [Heartbeats](xref:Advanced_Failover_options#heartbeats)
 
 #### If the network cable used for synchronization is pulled out of the offline DMA
 
@@ -210,7 +210,7 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> [Viewing Failover information](Viewing_Failover_information.md)
+> [Viewing Failover information](xref:Viewing_Failover_information)
 
 #### If both network cables are pulled out of the offline DMA
 
@@ -232,8 +232,8 @@ Different scenarios are possible:
 
 > [!TIP]
 > See also:
-> - [Viewing Failover information](Viewing_Failover_information.md)
-> - [Heartbeats](Advanced_Failover_options.md#heartbeats)
+> - [Viewing Failover information](xref:Viewing_Failover_information)
+> - [Heartbeats](xref:Advanced_Failover_options#heartbeats)
 
 ### How do I upgrade a pair of DMAs in a Failover setup?
 

@@ -19,12 +19,12 @@ To check the key performance indicators for the SLA, check the section *Performa
 
 - **Number of Violations**: The total number of violations that occurred in this window.
 
-- **Number of Affecting Alarms**: Available when using at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. Indicates the number of alarms currently affecting the SLA, as determined by the *Affecting Alarms Level* setting on the *Advanced Configuration* page. See [Advanced SLA alarm configuration](Configuring_the_alarm_settings_for_an_SLA.md#advanced-sla-alarm-configuration).
+- **Number of Affecting Alarms**: Available when using at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. Indicates the number of alarms currently affecting the SLA, as determined by the *Affecting Alarms Level* setting on the *Advanced Configuration* page. See [Advanced SLA alarm configuration](xref:Configuring_the_alarm_settings_for_an_SLA#advanced-sla-alarm-configuration).
 
 - **Availability Without Correction**: The availability of the service in the current window, without taking in account any corrections that were made.
 
     > [!NOTE]
-    > For more information on how to make corrections on outages, see [Making corrections to existing outages](Making_corrections_to_existing_outages.md).
+    > For more information on how to make corrections on outages, see [Making corrections to existing outages](xref:Making_corrections_to_existing_outages).
 
 - **Total Outage Time**: The actual total duration of all alarms that occurred in this window, without corrections.
 

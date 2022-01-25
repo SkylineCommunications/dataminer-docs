@@ -20,7 +20,7 @@ If a set of user settings has been assigned to a user group, you can open that s
 3. In the *Group settings* dialog box, select the user group of which you want to configure the user settings, and click *Open*.
 
     > [!NOTE]
-    > If the *Open* button is unavailable, no user settings have been assigned to the group yet. You must assign the settings to the group first in order to configure them. See [Assigning user settings to a user group](Assigning_user_settings_to_a_user_group.md).
+    > If the *Open* button is unavailable, no user settings have been assigned to the group yet. You must assign the settings to the group first in order to configure them. See [Assigning user settings to a user group](xref:Assigning_user_settings_to_a_user_group).
 
 4. Using the table of contents on the left, go through all pages of the *Settings* card and check each user setting. The settings in this window are the same as in the regular user settings window. However, there are some additional features:
 

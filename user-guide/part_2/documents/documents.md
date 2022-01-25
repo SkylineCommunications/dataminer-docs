@@ -6,13 +6,13 @@ uid: documents
 
 This section consists of the following topics:
 
-- [About the Documents module](About_the_Documents_module.md)
+- [About the Documents module](xref:About_the_Documents_module)
 
-- [Consulting documents, hyperlinks or email addresses](Consulting_documents_hyperlinks_or_email_addresses.md)
+- [Consulting documents, hyperlinks or email addresses](xref:Consulting_documents_hyperlinks_or_email_addresses)
 
-- [Managing the document folders](Managing_the_document_folders.md)
+- [Managing the document folders](xref:Managing_the_document_folders)
 
-- [Adding documents, hyperlinks or email addresses](Adding_documents_hyperlinks_or_email_addresses.md)
+- [Adding documents, hyperlinks or email addresses](xref:Adding_documents_hyperlinks_or_email_addresses)
 
 > [!TIP]
 > See also:

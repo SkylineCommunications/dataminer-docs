@@ -65,7 +65,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > [!TIP]
 > See also:
 > - [Extra grid properties](#extra-grid-properties)
-> - [Creating a dynamic tab page](Creating_a_dynamic_tab_page.md)
+> - [Creating a dynamic tab page](xref:Creating_a_dynamic_tab_page)
 
 #### TogglePanel
 

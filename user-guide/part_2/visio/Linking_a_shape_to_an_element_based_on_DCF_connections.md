@@ -11,9 +11,9 @@ To link a shape to an element based on DCF connection information:
 1. Draw shapes representing the two fixed elements and the dynamic element, and draw connection lines between them.
 
     > [!NOTE]
-    > For information on how to link the fixed element shapes to the relevant elements, refer to [Linking a shape to an element, a service or a redundancy group](Linking_a_shape_to_an_element_a_service_or_a_redundancy_group.md).
+    > For information on how to link the fixed element shapes to the relevant elements, refer to [Linking a shape to an element, a service or a redundancy group](xref:Linking_a_shape_to_an_element_a_service_or_a_redundancy_group).
 
-2. Add the *HighlightPath* option on page level. See [Controlling highlighting when using physical connectors](Options_for_highlighting_DCF_connections.md#controlling-highlighting-when-using-physical-connectors).
+2. Add the *HighlightPath* option on page level. See [Controlling highlighting when using physical connectors](xref:Options_for_highlighting_DCF_connections#controlling-highlighting-when-using-physical-connectors).
 
 3. Add the following shape data fields to the dynamic shape:
 

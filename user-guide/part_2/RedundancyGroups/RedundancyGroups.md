@@ -8,20 +8,20 @@ DMS redundancy groups allow an intuitive representation of redundant device arch
 
 Information on DataMiner redundancy groups is divided over the following sections:
 
-- [About redundancy groups](About_redundancy_groups.md)
+- [About redundancy groups](xref:About_redundancy_groups)
 
-- [Checking the current state of a redundancy group](Checking_the_current_state_of_a_redundancy_group.md)
+- [Checking the current state of a redundancy group](xref:Checking_the_current_state_of_a_redundancy_group)
 
-- [Creating a redundancy group](Creating_a_redundancy_group.md)
+- [Creating a redundancy group](xref:Creating_a_redundancy_group)
 
-- [Creating a redundancy group template](Creating_a_redundancy_group_template.md)
+- [Creating a redundancy group template](xref:Creating_a_redundancy_group_template)
 
-- [Assigning elements to a redundancy group template](Assigning_elements_to_a_redundancy_group_template.md)
+- [Assigning elements to a redundancy group template](xref:Assigning_elements_to_a_redundancy_group_template)
 
-- [Setting the priority of a primary or backup element](Setting_the_priority_of_a_primary_or_backup_element.md)
+- [Setting the priority of a primary or backup element](xref:Setting_the_priority_of_a_primary_or_backup_element)
 
-- [Changing the redundancy mode](Changing_the_redundancy_mode.md)
+- [Changing the redundancy mode](xref:Changing_the_redundancy_mode)
 
-- [Manually switching between primary and backup elements](Manually_switching_between_primary_and_backup_elements.md)
+- [Manually switching between primary and backup elements](xref:Manually_switching_between_primary_and_backup_elements)
 
-- [Setting a primary or backup element in maintenance](Setting_a_primary_or_backup_element_in_maintenance.md)
+- [Setting a primary or backup element in maintenance](xref:Setting_a_primary_or_backup_element_in_maintenance)

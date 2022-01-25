@@ -38,6 +38,6 @@ The moment you apply a service template, it will collect all data that has been 
 
 Below you will find examples of how to define a service template that will automatically create a service for every row in a dynamic table parameter of a certain type of element. The examples start from the following premise: for each of your “Microsoft Platform” elements, you want to create a service for every process of which the name starts with “SL”. Each of those services, named *\[computer model\]\_\[process\]*, has to include the CPU and the memory usage of the process in question.
 
-- [Example of creating a service template](Creating_a_service_template.md#example-of-creating-a-service-template)
+- [Example of creating a service template](xref:Creating_a_service_template#example-of-creating-a-service-template)
 
-- [Example of applying a service template](Applying_service_templates.md#example-of-applying-a-service-template)
+- [Example of applying a service template](xref:Applying_service_templates#example-of-applying-a-service-template)

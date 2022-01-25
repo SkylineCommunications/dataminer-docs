@@ -17,4 +17,4 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 
 > [!TIP]
 > See also:
-> [ArrangeMode](Overview_of_page_and_shape_options.md)
+> [ArrangeMode](xref:Overview_of_page_and_shape_options)

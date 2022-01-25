@@ -13,16 +13,16 @@ The Ticketing app, also known as DMS Ticketing, is an application introduced in 
 
 In this section:
 
-- [Accessing the Ticketing app](Accessing_the_Ticketing_app.md)
+- [Accessing the Ticketing app](xref:Accessing_the_Ticketing_app)
 
-- [Overview of the Ticketing app UI](Overview_of_the_Ticketing_app_UI.md)
+- [Overview of the Ticketing app UI](xref:Overview_of_the_Ticketing_app_UI)
 
-- [Viewing Ticketing information in Cube](Viewing_Ticketing_information_in_Cube.md)
+- [Viewing Ticketing information in Cube](xref:Viewing_Ticketing_information_in_Cube)
 
-- [Creating a ticket](Creating_a_ticket1.md#creating-a-ticket)
+- [Creating a ticket](xref:Creating_a_ticket1#creating-a-ticket)
 
-- [Configuring domains](Configuring_domains.md)
+- [Configuring domains](xref:Configuring_domains)
 
-- [Displaying ticket statistics in the Surveyor](Displaying_ticket_statistics_in_the_Surveyor.md)
+- [Displaying ticket statistics in the Surveyor](xref:Displaying_ticket_statistics_in_the_Surveyor)
 
-- [Using the Ticketing Gateway API](Using_the_Ticketing_Gateway_API.md)
+- [Using the Ticketing Gateway API](xref:Using_the_Ticketing_Gateway_API)

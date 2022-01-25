@@ -37,7 +37,7 @@ In addition, you can specify options using various other shape data fields, such
 | ComponentOptions | AutoReEnableFollowModeTimeout=                                              | Sets the number of seconds after which the follow mode will be reactivated each time a user jumps to another time range.<br> This value has to be an integer greater than 0, e.g. *AutoReEnableFollowModeTimeout=5*                                                                                                                                                    |
 | ComponentOptions | UseCommandsForCustomActions                                                 | Available from DataMiner 9.5.6 onwards. Allows the timeline to be used in conjunction with command control shapes to select an action mode. See [Configuring command controls for a Resource Manager component](#configuring-command-controls-for-a-resource-manager-component).                                                                                                                  |
 | ComponentActions | \[{...json...}\]                                                            | Custom actions, specified with JSON objects. Available from DataMiner 9.5.4 onwards. For more information, see [Specifying custom actions in a Resource Manager component](#specifying-custom-actions-in-a-resource-manager-component).                                                                                                                                                           |
-| Options          | CardVariable                                                                | This option can be used to specify that the session variables mentioned in the other shape data fields are card variables, not page variables. It is also possible to configure a different session variable scope, as specified in [Indicating the scope of the variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md#indicating-the-scope-of-the-variable).                  |
+| Options          | CardVariable                                                                | This option can be used to specify that the session variables mentioned in the other shape data fields are card variables, not page variables. It is also possible to configure a different session variable scope, as specified in [Indicating the scope of the variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable#indicating-the-scope-of-the-variable).                  |
 
 Please note the following regarding this component:
 
@@ -49,7 +49,7 @@ Please note the following regarding this component:
 
 - The color of booking blocks can be customized using properties of the bookings. See [Customizing the color of booking blocks](#customizing-the-color-of-booking-blocks).
 
-- If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Creating a list view](Creating_a_list_view.md).
+- If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Creating a list view](xref:Creating_a_list_view).
 
 ### Adding session variable controls for a Resource Manager component
 
@@ -57,7 +57,7 @@ When you have linked a shape to a Resource Manager timeline, you can add shapes 
 
 > [!TIP]
 > See also:
-> [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
+> [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 
 The following session variables can be used specifically for a Resource Manager component:
 
@@ -120,7 +120,7 @@ To turn separate shapes into navigation controls, use the session variable *Navi
 
 > [!NOTE]
 > - After a particular action has been performed, the session variable *Navigate* will be cleared. That way, it can be set again to perform another action. You can, for example, keep clicking a “pan+day” button to slide to the right.
-> - The last of the above-mentioned *Navigate* options will often be used together with a shape data field of type *SetVarOptions* set to “Control=DateTime”, which will turn the shape into a date picker. See [Creating a DateTime control](Adding_options_to_a_session_variable_control.md#creating-a-datetime-control).
+> - The last of the above-mentioned *Navigate* options will often be used together with a shape data field of type *SetVarOptions* set to “Control=DateTime”, which will turn the shape into a date picker. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control).
 > - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, it is possible to load a specific time slot immediately when a user navigates to the page. To do so, use the **InitVar** shape data on page level instead of the SetVar shape data mentioned above.
 
 #### ResourcesInSelectedReservation
@@ -254,7 +254,7 @@ To have properties of Resource Manager objects stored in a variable:
     > [!NOTE]
     > To avoid issues with the configuration, it is best not to mix card variables and page variables in the variable controls, but to use either one or the other.
 
-- Configure a shape to display the variable. See [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md).
+- Configure a shape to display the variable. See [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable).
 
 ### Specifying custom actions in a Resource Manager component
 

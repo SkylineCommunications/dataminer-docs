@@ -8,19 +8,19 @@ Protocols allow a DataMiner Agent to communicate with any data source. Commonly 
 
 The following sections provide more information on working with DataMiner protocols:
 
-- [Adding a protocol or protocol version to your DataMiner System](Adding_a_protocol_or_protocol_version_to_your_DataMiner_System.md)
+- [Adding a protocol or protocol version to your DataMiner System](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System)
 
-- [Deleting a protocol or protocol version from your DataMiner System](Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System.md)
+- [Deleting a protocol or protocol version from your DataMiner System](xref:Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System)
 
-- [Promoting a protocol version to production version](Promoting_a_protocol_version_to_production_version.md)
+- [Promoting a protocol version to production version](xref:Promoting_a_protocol_version_to_production_version)
 
-- [Managing Visio files linked to protocols](Managing_Visio_files_linked_to_protocols.md)
+- [Managing Visio files linked to protocols](xref:Managing_Visio_files_linked_to_protocols)
 
-- [Viewing protocol help](Viewing_protocol_help.md)
+- [Viewing protocol help](xref:Viewing_protocol_help)
 
-- [Working with the elements tab](Working_with_the_elements_tab.md)
+- [Working with the elements tab](xref:Working_with_the_elements_tab)
 
-- [Advanced protocol functionality](Advanced_protocol_functionality.md)
+- [Advanced protocol functionality](xref:Advanced_protocol_functionality)
 
 > [!NOTE]
 > - Protocols and protocol versions that have been signed by Skyline are marked with the DataMiner icon in the Protocol & Templates app. Protocols and protocol versions signed by third parties are marked with a blue icon.

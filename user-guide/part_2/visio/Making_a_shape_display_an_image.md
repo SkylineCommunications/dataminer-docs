@@ -10,7 +10,7 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
 
 > [!TIP]
 > See also:
-> [Linking a shape to a video thumbnail](Linking_a_shape_to_a_video_thumbnail.md)
+> [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)
 
 ### In DataMiner Cube
 
@@ -64,5 +64,5 @@ If you want a shape to display an image located on a DMA, then do the following:
 2. In the shape, specify the URL of the image (e.g. “http://DmaIpAddress/MyImages/Picture.png”).
 
 > [!NOTE]
-> If you get an “Invalid path” error, open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config* (or *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config* in DataMiner versions prior to 9.0), and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key. See also [Allowed paths in case of connection via DataMiner proxy](Linking_a_shape_to_a_video_thumbnail.md#allowed-paths-in-case-of-connection-via-dataminer-proxy).
+> If you get an “Invalid path” error, open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config* (or *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config* in DataMiner versions prior to 9.0), and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key. See also [Allowed paths in case of connection via DataMiner proxy](xref:Linking_a_shape_to_a_video_thumbnail#allowed-paths-in-case-of-connection-via-dataminer-proxy).
 >

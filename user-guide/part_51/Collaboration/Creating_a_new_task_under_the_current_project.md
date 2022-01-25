@@ -26,7 +26,7 @@ To create a new task under the current project, do the following:
 2. Enter a title.
 
     > [!NOTE]
-    > - Above the title you have just entered, you will notice the current status of the task you are creating, i.e. “Not started”. Hover over the small question mark to see an overview of all possible task statuses depicted in a typical task life cycle. For more information on the different task statuses, see [Task statuses](Statuses.md#task-statuses).
+    > - Above the title you have just entered, you will notice the current status of the task you are creating, i.e. “Not started”. Hover over the small question mark to see an overview of all possible task statuses depicted in a typical task life cycle. For more information on the different task statuses, see [Task statuses](xref:Statuses#task-statuses).
     > - In the top-right corner, you can click an ellipsis button to open a menu that contains the following commands:
     >     - Click *Full screen* to expand the task pane. In full-screen mode, you can then click *Split view* to exit the full-screen mode.
     >     - Click *Show planning fields* to have the task pane also show planning fields (e.g. *Start date*).

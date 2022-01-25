@@ -116,8 +116,8 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 | \<ElementIP>   | Polling IP address of the element                                                                                                                                                                            |
 | \<ElementName> | Name of the element                                                                                                                                                                                          |
 | \<DataMinerID> | DataMiner ID                                                                                                                                                                                                 |
-| \<DMAIP>       | The certificate address, hostname or IP address of the DataMiner Agent to which the user is connected. See [\<DMAIP>](Placeholders_for_variables_in_shape_data_values.md#dmaip)                              |
-| \<PageFilter>  | Value of the drop-down filter box in the top-right corner of the Visio drawing.<br> See [Specifying an EPM parameter that can be used to filter](Specifying_an_EPM_parameter_that_can_be_used_to_filter.md). |
+| \<DMAIP>       | The certificate address, hostname or IP address of the DataMiner Agent to which the user is connected. See [\<DMAIP>](xref:Placeholders_for_variables_in_shape_data_values#dmaip)                              |
+| \<PageFilter>  | Value of the drop-down filter box in the top-right corner of the Visio drawing.<br> See [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter). |
 
 > [!NOTE]
 > - \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.

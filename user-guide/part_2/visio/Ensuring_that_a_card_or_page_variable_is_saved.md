@@ -16,4 +16,4 @@ The variable is then saved in a separate .dat file located in the following fold
 
 > [!TIP]
 > See also:
-> [Ensuring that a session variable is saved](Ensuring_that_a_session_variable_is_saved.md)
+> [Ensuring that a session variable is saved](xref:Ensuring_that_a_session_variable_is_saved)

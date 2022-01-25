@@ -12,7 +12,7 @@ To create a simulated element:
 
 2. In DataMiner Cube, right-click the view where you want to create the simulated element, and select *New \> Element*.
 
-3. Enter the element name and protocol, like during the creation of a normal element. See [Adding and deleting elements](Adding_and_deleting_elements.md).
+3. Enter the element name and protocol, like during the creation of a normal element. See [Adding and deleting elements](xref:Adding_and_deleting_elements).
 
 4. For the IP address and port, enter the localhost IP, *127.0.0.1*, and specify a port that is not used.
 
@@ -28,7 +28,7 @@ To create a simulated element:
 
 > [!TIP]
 > See also:
-> [Simulated elements](Simulated_elements.md)
+> [Simulated elements](xref:Simulated_elements)
 
 ### Creating a simulation file
 

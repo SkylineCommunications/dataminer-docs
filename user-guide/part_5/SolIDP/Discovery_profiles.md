@@ -18,7 +18,7 @@ The following mechanisms are supported for discovery:
 
 Discovery profiles are defined in JSON format and define which information should be retrieved from the device. A discovery profile does not define how to identify a CI Type. This is defined in the conditions of a CI Type.
 
-To make sure discovery profiles can be loaded into DataMiner IDP, they must be stored in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*. See [Discovery](Discovery.md).
+To make sure discovery profiles can be loaded into DataMiner IDP, they must be stored in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*. See [Discovery](xref:Discovery).
 
 In general, every profile contains a list of discovery actions. Such an action consists of the following components:
 

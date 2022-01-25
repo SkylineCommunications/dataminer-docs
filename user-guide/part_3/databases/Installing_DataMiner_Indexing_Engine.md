@@ -24,7 +24,7 @@ To install DataMiner Indexing Engine:
 4. At the bottom of the installation window, in the *Backup path* box, specify the network path where the backup of the Indexing database should be stored.
 
     > [!NOTE]
-    > Specific criteria apply for the backup path, as detailed in [Configuring Indexing backups](Configuring_Indexing_backups.md). Make sure the backup path meets these criteria, as an **incorrect backup configuration can cause the installation to fail**.
+    > Specific criteria apply for the backup path, as detailed in [Configuring Indexing backups](xref:Configuring_Indexing_backups). Make sure the backup path meets these criteria, as an **incorrect backup configuration can cause the installation to fail**.
 
 5. If your configuration meets the requirements, click *Next*.
 
@@ -49,7 +49,7 @@ To install DataMiner Indexing Engine:
 
     > [!NOTE]
     > - After the Indexing Engine is installed, it may take a while before the indexing of all history alarms is complete.
-    > - Service & Resource Management is not automatically migrated. For more information on how to trigger the migration, see [Configuring DataMiner Indexing](Configuring_DataMiner_Indexing.md).
+    > - Service & Resource Management is not automatically migrated. For more information on how to trigger the migration, see [Configuring DataMiner Indexing](xref:Configuring_DataMiner_Indexing).
 
 Remarks on the DataMiner Indexing Engine installation
 

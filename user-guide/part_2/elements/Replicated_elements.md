@@ -23,4 +23,4 @@ In order to optimize communication, only parameter changes are sent to the repli
 
 > [!TIP]
 > See also:
-> [Replicating elements](Replicating_elements.md)
+> [Replicating elements](xref:Replicating_elements)

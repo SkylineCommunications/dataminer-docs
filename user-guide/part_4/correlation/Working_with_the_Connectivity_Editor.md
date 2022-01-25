@@ -18,11 +18,11 @@ RCA is supported on:
 
 In this section:
 
-- [Creating a connectivity chain](Creating_a_connectivity_chain.md)
+- [Creating a connectivity chain](xref:Creating_a_connectivity_chain)
 
-- [Creating an internal connectivity chain](Creating_an_internal_connectivity_chain.md)
+- [Creating an internal connectivity chain](xref:Creating_an_internal_connectivity_chain)
 
-- [Managing connectivity chains](Managing_connectivity_chains.md)
+- [Managing connectivity chains](xref:Managing_connectivity_chains)
 
 > [!TIP]
 > See also:

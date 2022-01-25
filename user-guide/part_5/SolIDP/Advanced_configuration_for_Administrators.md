@@ -6,17 +6,17 @@ uid: Advanced_configuration_for_Administrators
 
 On the *Admin* tab of the IDP app, various settings are available that can be used by Administrators to configure DataMiner IDP. This tab consists of different subtabs:
 
-- [CI Types](CI_Types.md)
+- [CI Types](xref:CI_Types)
 
-- [Discovery](Discovery.md)
+- [Discovery](xref:Discovery)
 
-- [Provisioning](Provisioning.md)
+- [Provisioning](xref:Provisioning)
 
-- [Configuration](Configuration.md)
+- [Configuration](xref:Configuration)
 
-- [Facilities](Facilities.md)
+- [Facilities](xref:Facilities)
 
-- [Settings](Settings.md)
+- [Settings](xref:Settings)
 
 > [!NOTE]
 > To enable or disable the different operations of DataMiner IDP, such as discovery and provisioning, go to the *Processes* > *Activities* page of the IDP app.

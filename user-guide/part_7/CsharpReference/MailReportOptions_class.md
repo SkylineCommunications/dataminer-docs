@@ -6,6 +6,6 @@ uid: MailReportOptions_class
 
 Below, you can find an overview of all members of the *MailReportOptions* class.
 
-- [MailReportOptions methods](MailReportOptions_methods.md)
+- [MailReportOptions methods](xref:MailReportOptions_methods)
 
-- [MailReportOptions properties](MailReportOptions_properties.md)
+- [MailReportOptions properties](xref:MailReportOptions_properties)

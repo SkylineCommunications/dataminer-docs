@@ -63,7 +63,7 @@ Gets or sets the fixed height (in pixels) of the dialog box.
 int Height
 ```
 
-Example: See [UIBuilder example](UIBuilder_example.md).
+Example: See [UIBuilder example](xref:UIBuilder_example).
 
 #### MaxHeight
 
@@ -73,7 +73,7 @@ Gets or sets the maximum height (in pixels) of the dialog box.
 int MaxHeight
 ```
 
-Example: See [UIBuilder example](UIBuilder_example.md).
+Example: See [UIBuilder example](xref:UIBuilder_example).
 
 #### MaxWidth
 
@@ -83,7 +83,7 @@ Gets or sets the maximum width (in pixels) of the dialog box.
 int MaxWidth
 ```
 
-Example: See [UIBuilder example](UIBuilder_example.md).
+Example: See [UIBuilder example](xref:UIBuilder_example).
 
 #### MinHeight
 
@@ -93,7 +93,7 @@ Gets or sets the minimum height (in pixels) of the dialog box.
 int MinHeight
 ```
 
-Example: See [UIBuilder example](UIBuilder_example.md).
+Example: See [UIBuilder example](xref:UIBuilder_example).
 
 #### MinWidth
 
@@ -103,7 +103,7 @@ Gets or sets the minimum width (in pixels) of the dialog box.
 int MinWidth
 ```
 
-Example: See [UIBuilder example](UIBuilder_example.md).
+Example: See [UIBuilder example](xref:UIBuilder_example).
 
 #### RequireResponse
 
@@ -113,7 +113,7 @@ Gets or sets a value indicating whether the dialog box expects some action from 
 bool RequireResponse
 ```
 
-Example: See [UIBuilder example](UIBuilder_example.md).
+Example: See [UIBuilder example](xref:UIBuilder_example).
 
 #### RowDefs
 
@@ -130,7 +130,7 @@ Instead of a pixel value, you can also specify the following values:
 string RowDefs
 ```
 
-Example: See [UIBuilder example](UIBuilder_example.md).
+Example: See [UIBuilder example](xref:UIBuilder_example).
 
 #### Title
 
@@ -158,4 +158,4 @@ Gets or sets the fixed width (in pixels) of the dialog box.
 int Width
 ```
 
-Example: See [UIBuilder example](UIBuilder_example.md).
+Example: See [UIBuilder example](xref:UIBuilder_example).

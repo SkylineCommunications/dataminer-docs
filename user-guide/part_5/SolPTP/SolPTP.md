@@ -13,9 +13,9 @@ PTP (Precision Time Protocol) is the de facto protocol used by broadcasters, med
 
 This section contains the following information on the DataMiner PTP app:
 
-- [Installing the DataMiner PTP app](Installing_the_DataMiner_PTP_app.md)
+- [Installing the DataMiner PTP app](xref:Installing_the_DataMiner_PTP_app)
 
-- [Using the DataMiner PTP app](Using_the_DataMiner_PTP_app.md)
+- [Using the DataMiner PTP app](xref:Using_the_DataMiner_PTP_app)
 
 > [!TIP]
 > See also:

@@ -202,7 +202,7 @@ To do so:
 
 > [!TIP]
 > See also:
-> [Watching spectrum buffers](Working_with_spectrum_monitors.md#watching-spectrum-buffers)
+> [Watching spectrum buffers](xref:Working_with_spectrum_monitors#watching-spectrum-buffers)
 
 ### Sharing spectrum sessions
 

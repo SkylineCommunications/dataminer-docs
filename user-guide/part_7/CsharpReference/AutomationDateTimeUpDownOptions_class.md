@@ -6,9 +6,9 @@ uid: AutomationDateTimeUpDownOptions_class
 
 Below, you find an overview of all members of the *AutomationDateTimeUpDownOptions* class.
 
-- [AutomationDateTimeUpDownOptions methods](AutomationDateTimeUpDownOptions_methods.md)
+- [AutomationDateTimeUpDownOptions methods](xref:AutomationDateTimeUpDownOptions_methods)
 
-- [AutomationDateTimeUpDownOptions properties](AutomationDateTimeUpDownOptions_properties.md)
+- [AutomationDateTimeUpDownOptions properties](xref:AutomationDateTimeUpDownOptions_properties)
 
 This C# class allows you to create an up-down control to select a date and time in an interactive Automation script.
 

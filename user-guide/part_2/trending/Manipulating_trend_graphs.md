@@ -14,15 +14,15 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 
     > [!TIP]
     > See also:
-    > - [Working with trend groups](Working_with_trend_groups.md).
+    > - [Working with trend groups](xref:Working_with_trend_groups).
 
 You can change the way data are represented in the main graph area by directly manipulating the trend graph, or via the right-click menu:
 
-- [Panning across a trend graph](Panning_across_a_trend_graph.md)
+- [Panning across a trend graph](xref:Panning_across_a_trend_graph)
 
-- [Zooming in/out on a trend graph](Zooming_in_out_on_a_trend_graph.md#zooming-inout-on-a-trend-graph)
+- [Zooming in/out on a trend graph](xref:Zooming_in_out_on_a_trend_graph#zooming-inout-on-a-trend-graph)
 
-- [Using the right-click menu](Using_the_right-click_menu.md#using-the-right-click-menu)
+- [Using the right-click menu](xref:Using_the_right-click_menu#using-the-right-click-menu)
 
 > [!NOTE]
 > - If exceptions occur, these are displayed below the trend graph, while in the graph itself gaps will be displayed.

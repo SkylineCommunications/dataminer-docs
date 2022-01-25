@@ -12,7 +12,7 @@ Different setups are possible where the Cassandra general database runs entirely
 
 > [!NOTE]
 > - This procedure requires that the DMA is already using Cassandra. However, it is not limited to newly installed DMAs.
-> - It is not supported to have an external program do queries on the general database, regardless of the setup. Instead, the external program should retrieve the data from the offload database. See [Offload database](Offload_database.md).
+> - It is not supported to have an external program do queries on the general database, regardless of the setup. Instead, the external program should retrieve the data from the offload database. See [Offload database](xref:Offload_database).
 > - In this setup, the Cassandra databases are not managed by DataMiner, so it is important that you manage the database yourself (e.g. by running compaction). Keep in mind that the database will not be included in DataMiner backups and there will be no forced compaction. In a Failover setup, the forced repair will not be executed, and it will not be possible to check the status.
 
 To create a setup where the Cassandra database runs entirely on one or more remote servers, follow the procedure below.
@@ -116,7 +116,7 @@ To link a DMA to a remote server with a Cassandra database:
     3. In the \<Database> tag, add the *consistencyLevel="x"* attribute, and set it to the consistency level you want, e.g. *two*.
 
         > [!NOTE]
-        > - The following possible consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOn. For more information, see [https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.md).
+        > - The following possible consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOn. For more information, see [https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html).
         > - The *consistencyLevel* attribute should only be changed in case the Cassandra cluster feature is used or a remote Cassandra server is used. If the standard configuration of one Cassandra cluster per DMA is used, changing this attribute can cause the DMA to fail to start up.
 
     4. Optionally, to adjust the timeout time to read from the database, adjust the value (in milliseconds) in the readTimeOut tag. By default, this is set to five minutes. For example:

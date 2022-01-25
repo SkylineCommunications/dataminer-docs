@@ -10,9 +10,9 @@ When a user clicks such a shape, by default, the Visio drawing linked to the ele
 
 > [!TIP]
 > See also:
-> - [Disabling the default hyperlink behavior of a linked shape](Disabling_the_default_hyperlink_behavior_of_a_linked_shape.md)
-> - [Adding options to shapes linked to elements or services](Adding_options_to_shapes_linked_to_elements_or_services.md)
-> - [Linking a shape to an element based on DCF connections](Linking_a_shape_to_an_element_based_on_DCF_connections.md)
+> - [Disabling the default hyperlink behavior of a linked shape](xref:Disabling_the_default_hyperlink_behavior_of_a_linked_shape)
+> - [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services)
+> - [Linking a shape to an element based on DCF connections](xref:Linking_a_shape_to_an_element_based_on_DCF_connections)
 
 > [!NOTE]
 > - Visio shapes linked to elements, services or redundancy groups will not be displayed if, for any reason, those links cannot be resolved. Link problems can occur because of insufficient user rights, missing DataMiner items, invalid parameter values, etc.
@@ -110,7 +110,7 @@ This way, the subshape will show the worst alarm state of all parameters of the 
 
 > [!TIP]
 > See also:
-> [Linking a shape to an alarm](Linking_a_shape_to_an_alarm.md)
+> [Linking a shape to an alarm](xref:Linking_a_shape_to_an_alarm)
 
 ### Having the Visio drawing opened in a new card
 

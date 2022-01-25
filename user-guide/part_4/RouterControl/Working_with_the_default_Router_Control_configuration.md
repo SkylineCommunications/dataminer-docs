@@ -12,16 +12,16 @@ When the *Router Control* module opens, the default configuration (i.e. user int
 
 The following topics provide more info on using the default configuration:
 
-- [Selecting a matrix](Selecting_a_matrix.md)
+- [Selecting a matrix](xref:Selecting_a_matrix)
 
-- [Connecting an output to an input](Connecting_an_output_to_an_input.md)
+- [Connecting an output to an input](xref:Connecting_an_output_to_an_input)
 
-- [Disconnecting an output from an input](Disconnecting_an_output_from_an_input.md)
+- [Disconnecting an output from an input](xref:Disconnecting_an_output_from_an_input)
 
-- [Locking an output](Locking_an_output.md)
+- [Locking an output](xref:Locking_an_output)
 
-- [Unlocking an output](Unlocking_an_output.md)
+- [Unlocking an output](xref:Unlocking_an_output)
 
 > [!TIP]
 > See also:
-> [Creating and customizing Router Control configurations](Creating_and_customizing_Router_Control_configurations.md)
+> [Creating and customizing Router Control configurations](xref:Creating_and_customizing_Router_Control_configurations)

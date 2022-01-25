@@ -172,7 +172,7 @@ To view all buffers:
 
 > [!TIP]
 > See also:
-> [Viewing along with another client](Viewing_spectrum_analyzer_traces.md#viewing-along-with-another-client)
+> [Viewing along with another client](xref:Viewing_spectrum_analyzer_traces#viewing-along-with-another-client)
 
 ### Taking priority over a spectrum monitor
 

@@ -16,6 +16,6 @@ The name of each element, service, view and redundancy group should always be un
 
 For more information on naming, refer to the following topics:
 
-- [Forbidden characters](Forbidden_characters.md)
+- [Forbidden characters](xref:Forbidden_characters)
 
-- [Examples of element names](Examples_of_element_names.md)
+- [Examples of element names](xref:Examples_of_element_names)

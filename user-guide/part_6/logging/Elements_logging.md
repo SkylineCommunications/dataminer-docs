@@ -41,7 +41,7 @@ In the *Log settings* section, you can change the log levels for each element. T
 
 ### Sorting the log file list
 
-Sorting the log file list in the *Elements* page is done in the same way as for the *DataMiner* page. See [Sorting the log file list](DataMiner_logging.md#sorting-the-log-file-list).
+Sorting the log file list in the *Elements* page is done in the same way as for the *DataMiner* page. See [Sorting the log file list](xref:DataMiner_logging#sorting-the-log-file-list).
 
 ### Clearing log files
 

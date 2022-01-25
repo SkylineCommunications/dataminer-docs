@@ -11,7 +11,7 @@ With the **Parameters** shape data field, you specify which parameters should be
 > [!NOTE]
 > - This feature only works in DataMiner Cube.
 > - Up to DataMiner 8.5, the number of parameters that can be displayed in a Visio chart is limited to 10. From DataMiner 9.0.1/9.0.0 CU2 onwards, the maximum number of parameters has increased to 15.
-> - Alternatively, you can link a shape to a trend component instead. See [Linking a shape to a trend component](Linking_a_shape_to_a_trend_component.md).
+> - Alternatively, you can link a shape to a trend component instead. See [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component).
 
 ### Configuring the shape data fields
 
@@ -19,7 +19,7 @@ The chart can consist of one single shape or of several shapes that are grouped 
 
 > [!TIP]
 > See also:
-> [Grouping shapes](Grouping_shapes.md)
+> [Grouping shapes](xref:Grouping_shapes)
 
 To configure the shapes:
 
@@ -223,6 +223,6 @@ The following restrictions also apply:
 
 - The Monitoring app will use the font if it is installed on the server.
 
-- All basic font properties are taken from the shape, including the color. However, the option “*ThemeForeground*” overrides the text color. See [ThemeForeground:](Creating_a_parameter_chart.md).
+- All basic font properties are taken from the shape, including the color. However, the option “*ThemeForeground*” overrides the text color. See [ThemeForeground:](xref:Creating_a_parameter_chart).
 
 - A shape can only use one single font. If multiple fonts are applied to different pieces of text in a particular shape, then that shape will use the first font that was applied to it.

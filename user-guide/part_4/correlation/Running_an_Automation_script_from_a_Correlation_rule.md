@@ -25,7 +25,7 @@ To run an Automation script from a Correlation rule:
 
     - **Execute on base alarm updates**: Select this option to also run the script when the base alarms change.
 
-    - **Evaluate script parameter values**: Select this option to allow placeholders in script parameter values. For more information, see [Correlation rule syntax](Correlation_rule_syntax.md).
+    - **Evaluate script parameter values**: Select this option to allow placeholders in script parameter values. For more information, see [Correlation rule syntax](xref:Correlation_rule_syntax).
 
 > [!NOTE]
 > To pass information about the alarm that triggered the Correlation rule to the script, you can use the special parameters with ID 65005 and 65006. For more detailed information, see [Special parameters available in DMS Automation scripts](xref:Special_parameters_available_in_DMS_Automation_scripts).

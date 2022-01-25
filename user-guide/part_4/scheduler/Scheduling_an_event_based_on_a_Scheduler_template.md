@@ -6,7 +6,7 @@ uid: Scheduling_an_event_based_on_a_Scheduler_template
 
 Scheduled events are a combination of a START and STOP task, based on a special type of Automation script called a “Scheduler template”.
 
-In order to be able to schedule events in the *timeline \> EVENTS* tab, a Scheduler template must first be created in DMS Automation. See [Creating a Scheduler template](Creating_a_Scheduler_template.md).
+In order to be able to schedule events in the *timeline \> EVENTS* tab, a Scheduler template must first be created in DMS Automation. See [Creating a Scheduler template](xref:Creating_a_Scheduler_template).
 
 Each of the events in the *EVENT* column represents an action or a sequence of actions determined in the Scheduler template script. The profiles in the *PROFILE* column, in turn, are collections of preset dummies and/or parameter values for specific events.
 

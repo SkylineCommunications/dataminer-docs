@@ -6,13 +6,13 @@ uid: Trend_templates
 
 This section consists of the following topics:
 
-- [About trend templates](About_trend_templates.md)
+- [About trend templates](xref:About_trend_templates)
 
-- [Adding and deleting trend templates](Adding_and_deleting_trend_templates.md)
+- [Adding and deleting trend templates](xref:Adding_and_deleting_trend_templates)
 
-- [Configuring trend templates](Configuring_trend_templates.md)
+- [Configuring trend templates](xref:Configuring_trend_templates)
 
-- [Assigning trend templates](Assigning_trend_templates.md)
+- [Assigning trend templates](xref:Assigning_trend_templates)
 
 > [!TIP]
 > See also:

@@ -8,8 +8,8 @@ A DMS Serial Gateway is an industry-standard serial server, which allows you to 
 
 This section consists of the following topics:
 
-- [About DMS Serial Gateways](About_DMS_Serial_Gateways.md)
+- [About DMS Serial Gateways](xref:About_DMS_Serial_Gateways)
 
-- [Features of a DMS Serial Gateway](Features_of_a_DMS_Serial_Gateway.md)
+- [Features of a DMS Serial Gateway](xref:Features_of_a_DMS_Serial_Gateway)
 
-- [Using a DMS Serial Gateway](Using_a_DMS_Serial_Gateway.md)
+- [Using a DMS Serial Gateway](xref:Using_a_DMS_Serial_Gateway)

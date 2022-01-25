@@ -6,16 +6,16 @@ uid: Advanced_security_configuration
 
 In this section:
 
-- [Customizing the layout of notification messages](Customizing_the_layout_of_notification_messages.md)
+- [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
 
-- [Configuring LDAP settings](Configuring_LDAP_settings.md)
+- [Configuring LDAP settings](xref:Configuring_LDAP_settings)
 
-- [Configuring Atlassian Crowd settings](Configuring_Atlassian_Crowd_settings.md)
+- [Configuring Atlassian Crowd settings](xref:Configuring_Atlassian_Crowd_settings)
 
-- [Configuring RADIUS settings](Configuring_RADIUS_settings.md)
+- [Configuring RADIUS settings](xref:Configuring_RADIUS_settings)
 
-- [Configuring external authentication via an identity provider using SAML](Configuring_external_authentication_via_an_identity_provider_using_SAML.md)
+- [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML)
 
-- [Setting up Azure Active Directory Domain Services](Setting_up_Azure_Active_Directory_Domain_Services.md)
+- [Setting up Azure Active Directory Domain Services](xref:Setting_up_Azure_Active_Directory_Domain_Services)
 
-- [Enabling TLS encryption](Enabling_TLS_encryption.md)
+- [Enabling TLS encryption](xref:Enabling_TLS_encryption)

@@ -6,16 +6,16 @@ uid: Overview_of_the_DataMiner_Dojo_website
 
 On the DataMiner Dojo website, you can find the following main sections:
 
-- [Blog](Blog.md)
+- [Blog](xref:Blog)
 
-- [Questions](Questions.md)
+- [Questions](xref:Questions)
 
-- [Learning](Learning.md)
+- [Learning](xref:Learning)
 
-- [Resources](Resources.md)
+- [Resources](xref:Resources)
 
-- [Expert hubs](Expert_hubs.md)
+- [Expert hubs](xref:Expert_hubs)
 
-- [Discover](Discover.md)
+- [Discover](xref:Discover)
 
-- [More](More.md)
+- [More](xref:More)

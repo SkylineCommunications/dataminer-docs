@@ -89,9 +89,9 @@ uid: Adding_a_service
         7. Indicate if the selected item should influence the alarm severity of the service you are creating, or if this should depend on one or more conditions. When it does not influence the alarm severity, the element or service will be set to *Not Used*.
 
             > [!NOTE]
-            > For more information on how to include elements conditionally, see [Conditionally including an element in a service](Conditionally_including_an_element_in_a_service.md).
+            > For more information on how to include elements conditionally, see [Conditionally including an element in a service](xref:Conditionally_including_an_element_in_a_service).
 
-        8. In the *ADVANCED* section, set a maximum severity for the service item if it has the status “included” or “not used”. For more information on the possible statuses, see [DATA](Service_card_pages.md#data).
+        8. In the *ADVANCED* section, set a maximum severity for the service item if it has the status “included” or “not used”. For more information on the possible statuses, see [DATA](xref:Service_card_pages#data).
 
         9. Repeat from step c for each additional item that needs to be configured.
 
@@ -109,13 +109,13 @@ uid: Adding_a_service
         4. Indicate whether the group should influence the alarm severity of the service, or if this should depend on one or more conditions. When it does not influence the alarm severity, all elements or services in the group will be set to *Not Used*.
 
             > [!NOTE]
-            > The procedure to include a group conditionally is the same as that to include an element conditionally. See [Conditionally including an element in a service](Conditionally_including_an_element_in_a_service.md).
+            > The procedure to include a group conditionally is the same as that to include an element conditionally. See [Conditionally including an element in a service](xref:Conditionally_including_an_element_in_a_service).
 
         5. In the *ADVANCED* section, set a maximum severity for the items included in the group if they have the status “included” or “not used”.
 
             > [!NOTE]
             > - Maximum severity settings on item level override those on group level.
-            > - For more information on the possible statuses, see [DATA](Service_card_pages.md#data).
+            > - For more information on the possible statuses, see [DATA](xref:Service_card_pages#data).
 
         6. Click *Create*.
 

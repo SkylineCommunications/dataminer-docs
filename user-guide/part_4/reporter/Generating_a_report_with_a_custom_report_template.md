@@ -6,9 +6,9 @@ uid: Generating_a_report_with_a_custom_report_template
 
 Custom report templates can be used to generate reports that are sent by email. However, you can also directly generate reports using the Reporter app, or generate reports based on a custom template by constructing a URL which users can then click.
 
-- [Generating a report with the Reporter app](Generating_a_report_with_the_Reporter_app.md)
+- [Generating a report with the Reporter app](xref:Generating_a_report_with_the_Reporter_app)
 
-- [Generating reports with a report URL](Generating_reports_with_a_report_URL.md)
+- [Generating reports with a report URL](xref:Generating_reports_with_a_report_URL)
 
 > [!NOTE]
 > - By default, when the generation of a report is started, but there is not response within 60 minutes, the SLASPConnection ends the request and a timeout error is generated saying that the report could not be generated.<br>However, it is possible to customize this setting in *MaintenanceSettings.xml* in case reports need to be generated that need more than 60 minutes. See [SLASPConnection.ReportResponseTimeout](xref:MaintenanceSettings_xml#slaspconnectionreportresponsetimeout).

@@ -33,4 +33,4 @@ In the Protocols & Templates module:
 
 > [!NOTE]
 > - Right-click an item in the Protocols & Templates module and select *Remove* to quickly remove a trend template from an item.
-> - Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](Working_with_the_elements_tab.md).
+> - Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](xref:Working_with_the_elements_tab).

@@ -8,7 +8,7 @@ By default, DataMiner IDP consists of the following elements:
 
 | Element                           | Protocol                                                    | Description                                                                                                                           |
 |-----------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| DataMiner IDP                     | Skyline DataMiner Infrastructure Discovery and Provisioning | The IDP app itself. See [Overview of the IDP app UI](Overview_of_the_IDP_app_UI.md).                                                  |
+| DataMiner IDP                     | Skyline DataMiner Infrastructure Discovery and Provisioning | The IDP app itself. See [Overview of the IDP app UI](xref:Overview_of_the_IDP_app_UI).                                                  |
 | DataMiner IDP CI Types            | Skyline IDP CMDB                                            | This element manages all CI Types (also known as provisioning templates).                                                             |
 | DataMiner IDP Configuration       | Skyline Configuration Manager                               | This element makes it possible to store configuration files in a configuration archive in the network.                                |
 | DataMiner IDP Connectivity        | Skyline IDP Connectivity                                    | This element processes DCF information and creates DCF connections for CI Types that have connectivity discovery enabled.             |

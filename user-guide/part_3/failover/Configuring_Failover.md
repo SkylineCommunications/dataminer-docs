@@ -8,15 +8,15 @@ In a DataMiner System, a DMA can be linked to an identical backup DMA. That back
 
 The following sections contain more information on configuring Failover:
 
-- [Preparing the two DataMiner Agents](Preparing_the_two_DataMiner_Agents.md)
+- [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents)
 
-- [Failover configuration in Cube](Failover_configuration_in_Cube.md)
+- [Failover configuration in Cube](xref:Failover_configuration_in_Cube)
 
-- [Advanced Failover options](Advanced_Failover_options.md)
+- [Advanced Failover options](xref:Advanced_Failover_options)
 
 > [!NOTE]
 > Failover is always one-to-one. A backup DMA can only have one primary DMA.
 
 > [!TIP]
 > See also:
-> [Preferred configuration using virtual IP addresses (best practice)](Preferred_configuration_using_virtual_IP_addresses__best_practice.md)
+> [Preferred configuration using virtual IP addresses (best practice)](xref:Preferred_configuration_using_virtual_IP_addresses__best_practice)

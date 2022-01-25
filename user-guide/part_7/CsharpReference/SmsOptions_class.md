@@ -6,8 +6,8 @@ uid: SmsOptions_class
 
 Below, you can find an overview of the members of the *SmsOptions* class.
 
-- [SmsOptions constructor](SmsOptions_constructor.md)
+- [SmsOptions constructor](xref:SmsOptions_constructor)
 
-- [SmsOptions methods](SmsOptions_methods.md)
+- [SmsOptions methods](xref:SmsOptions_methods)
 
-- [SmsOptions properties](SmsOptions_properties.md)
+- [SmsOptions properties](xref:SmsOptions_properties)

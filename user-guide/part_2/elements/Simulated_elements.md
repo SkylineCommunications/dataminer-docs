@@ -33,7 +33,7 @@ Although simulated elements behave like regular DataMiner elements, there are li
 
 ### Creating a simulated element
 
-For information on how to create a simulated element, see [Creating a simulated element](Creating_a_simulated_element.md).
+For information on how to create a simulated element, see [Creating a simulated element](xref:Creating_a_simulated_element).
 
 ### What happens when you enable simulation?
 

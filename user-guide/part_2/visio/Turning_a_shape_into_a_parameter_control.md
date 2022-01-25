@@ -8,7 +8,7 @@ Using a shape data field of type **ParameterControl**, you can turn a shape into
 
 > [!TIP]
 > See also:
-> [Adding options to a parameter control](Adding_options_to_a_parameter_control.md)
+> [Adding options to a parameter control](xref:Adding_options_to_a_parameter_control)
 
 > [!NOTE]
 > - This feature only works in DataMiner Cube.
@@ -39,7 +39,7 @@ Add a shape data field of type **ParameterControl** to the shape.
     See below for more information on table row key syntax.
 
 > [!NOTE]
-> When specifying a value, you can use placeholders. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md)
+> When specifying a value, you can use placeholders. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values)
 
 ### Adding a filter box to a table control
 
@@ -80,7 +80,7 @@ You can refer to table cells in the following ways.
 
 ### Dynamically disabling a parameter control
 
-You can dynamically disable parameter controls by configuring a conditional shape manipulation action of the type “Enabled”. See [Extended conditional shape manipulation actions](Extended_conditional_shape_manipulation_actions.md).
+You can dynamically disable parameter controls by configuring a conditional shape manipulation action of the type “Enabled”. See [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
 
 However, to fully disable a control, so that it cannot set session variables, navigate to other pages, or allow path highlighting, you must also add a shape data field of type **Options**, and set the value to “*AllowControlDisable*”.
 

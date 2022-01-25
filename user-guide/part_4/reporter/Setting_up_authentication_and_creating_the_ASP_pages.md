@@ -44,7 +44,7 @@ Do the following if you want to be able to show DataMiner report components on w
     %>
     ```
 
-    For more information on the *create...Url* methods you can use in your ASP scripts, see [Component overview](Component_overview.md).
+    For more information on the *create...Url* methods you can use in your ASP scripts, see [Component overview](xref:Component_overview).
 
 5. Once your ASP pages have all been created, you can refer to them in any webpage using an \<img> tag similar to this one:
 

@@ -8,27 +8,27 @@ The general database, also known as “local database”, is the main database u
 
 The following topics provide more information related to this database:
 
-- [Configuring the database settings in Cube](Configuring_the_database_settings_in_Cube.md)
+- [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube)
 
-- [Migrating the general database to Cassandra](Migrating_the_general_database_to_Cassandra.md)
+- [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra)
 
-- [Moving the Cassandra database to a different disk drive](Moving_the_Cassandra_database_to_a_different_disk_drive.md)
+- [Moving the Cassandra database to a different disk drive](xref:Moving_the_Cassandra_database_to_a_different_disk_drive)
 
-- [Upgrading the Cassandra database](Upgrading_the_Cassandra_database.md)
+- [Upgrading the Cassandra database](xref:Upgrading_the_Cassandra_database)
 
-- [Configuring a Cassandra database on a remote cluster](Configuring_a_Cassandra_database_on_a_remote_cluster.md)
+- [Configuring a Cassandra database on a remote cluster](xref:Configuring_a_Cassandra_database_on_a_remote_cluster)
 
-- [Migrating the general database to a DMS Cassandra cluster](Migrating_the_general_database_to_a_DMS_Cassandra_cluster.md)
+- [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
 
-- [Configuring how long alarm history slider data are kept in Cassandra](Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra.md)
+- [Configuring how long alarm history slider data are kept in Cassandra](xref:Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra)
 
-- [Activating one file per table for an existing MySQL database](Activating_one_file_per_table_for_an_existing_MySQL_database.md)
+- [Activating one file per table for an existing MySQL database](xref:Activating_one_file_per_table_for_an_existing_MySQL_database)
 
-- [Deleting element data from a MySQL database](Deleting_element_data_from_a_MySQL_database.md)
+- [Deleting element data from a MySQL database](xref:Deleting_element_data_from_a_MySQL_database)
 
-- [Moving MySQL data to another location](Moving_MySQL_data_to_another_location.md)
+- [Moving MySQL data to another location](xref:Moving_MySQL_data_to_another_location)
 
-- [Configuring a size limit for file offloads](Configuring_a_size_limit_for_file_offloads.md)
+- [Configuring a size limit for file offloads](xref:Configuring_a_size_limit_for_file_offloads)
 
 > [!NOTE]
 > From DataMiner 9.0.5 onwards, the Disk Space Watcher functionality monitors the predicted available space on the C: drive. The *SLDBConnection.txt* log file mentions how much space is still available on the disk, and when the disk is expected to run out of space.

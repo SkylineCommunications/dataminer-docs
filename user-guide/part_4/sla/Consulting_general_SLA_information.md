@@ -13,7 +13,7 @@ To view more information on the SLA in general, check the section *General Info*
 - **Current Outage Impact**: Shows the impact of the current outage, in percent. This is influenced by several factors such as whether or not the service is currently in the offline window, or if violation filters have been applied to the SLA.
 
     > [!NOTE]
-    > For more information on how to apply violation filters to SLAs, see [Setting a violation filter](Configuring_the_alarm_settings_for_an_SLA.md#setting-a-violation-filter).
+    > For more information on how to apply violation filters to SLAs, see [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter).
 
 - **Admin State**: Indicates whether the SLA is currently activated or not.
 

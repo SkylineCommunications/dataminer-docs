@@ -26,7 +26,7 @@ The following actions are then possible to configure the component:
 
 - [Deleting a component](#deleting-a-component)
 
-In addition, depending on the visualization, additional configuration options may be available. For more information, refer to the relevant section in [Available visualizations](Available_visualizations.md).
+In addition, depending on the visualization, additional configuration options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
 
 ### Applying a visualization
 
@@ -272,7 +272,7 @@ Prior to DataMiner 10.0.8:
 
     - In the *Shadow* section, select the size of the shadow displayed behind the components.
 
-Depending on the visualization, additional layout options may be available. For more information, refer to the relevant section in [Available visualizations](Available_visualizations.md).
+Depending on the visualization, additional layout options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
 
 ### Deleting a component
 

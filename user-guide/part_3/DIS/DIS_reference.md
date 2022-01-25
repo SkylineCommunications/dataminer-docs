@@ -6,10 +6,10 @@ uid: DIS_reference
 
 This section consists of the following topics:
 
-- [DIS settings](DIS_settings.md)
+- [DIS settings](xref:DIS_settings)
 
-- [DIS keyboard shortcuts](DIS_keyboard_shortcuts.md)
+- [DIS keyboard shortcuts](xref:DIS_keyboard_shortcuts)
 
-- [Microsoft Visual Studio keyboard shortcuts](Microsoft_Visual_Studio_keyboard_shortcuts.md)
+- [Microsoft Visual Studio keyboard shortcuts](xref:Microsoft_Visual_Studio_keyboard_shortcuts)
 
-- [Class Library packages](Class_Library_packages.md)
+- [Class Library packages](xref:Class_Library_packages)

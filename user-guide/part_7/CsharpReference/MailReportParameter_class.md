@@ -6,8 +6,8 @@ uid: MailReportParameter_class
 
 This class represents a mail report parameter. Below, you can find an overview of all members of this class.
 
-- [MailReportParameter constructors](MailReportParameter_constructors.md)
+- [MailReportParameter constructors](xref:MailReportParameter_constructors)
 
-- [MailReportParameter methods](MailReportParameter_methods.md)
+- [MailReportParameter methods](xref:MailReportParameter_methods)
 
-- [MailReportParameter properties](MailReportParameter_properties.md)
+- [MailReportParameter properties](xref:MailReportParameter_properties)

@@ -16,4 +16,4 @@ However, there are some differences:
 
 - By default, the *Dashboards* app in DataMiner Cube makes use of Windows authentication. So, when you log on to DMS Dashboards with a Windows user account onto a server on which two-step authentication is enabled, no challenge will be presented since validation is done by Windows.
 
-    However, two-step authentication can be enabled by using a Dashboard Gateway, or by disabling Windows authentication in the web.config file. See [Activating two-step authentication](Customizing_the_legacy_Dashboards_app.md#activating-two-step-authentication).
+    However, two-step authentication can be enabled by using a Dashboard Gateway, or by disabling Windows authentication in the web.config file. See [Activating two-step authentication](xref:Customizing_the_legacy_Dashboards_app#activating-two-step-authentication).

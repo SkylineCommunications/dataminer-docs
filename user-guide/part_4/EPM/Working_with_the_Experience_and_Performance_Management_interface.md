@@ -6,14 +6,14 @@ uid: Working_with_the_Experience_and_Performance_Management_interface
 
 The user interface of an EPM element (formerly known as CPE Manager) can be very different depending on the protocol used. However, there are some aspects that return for all EPM elements. These are detailed in the following topics:
 
-- [Accessing the Experience and Performance Management user interface](Accessing_the_Experience_and_Performance_Management_user_interface.md)
+- [Accessing the Experience and Performance Management user interface](xref:Accessing_the_Experience_and_Performance_Management_user_interface)
 
-- [EPM user interface components](EPM_user_interface_components.md)
+- [EPM user interface components](xref:EPM_user_interface_components)
 
-- [Using the EPM filter section](Using_the_EPM_filter_section.md)
+- [Using the EPM filter section](xref:Using_the_EPM_filter_section)
 
-- [Using the EPM overview section](Using_the_EPM_overview_section.md)
+- [Using the EPM overview section](xref:Using_the_EPM_overview_section)
 
-- [EPM alarm monitoring and trending](EPM_alarm_monitoring_and_trending.md)
+- [EPM alarm monitoring and trending](xref:EPM_alarm_monitoring_and_trending)
 
-- [Creating a link between DataMiner elements and the EPM element](Creating_a_link_between_DataMiner_elements_and_the_EPM_element.md)
+- [Creating a link between DataMiner elements and the EPM element](xref:Creating_a_link_between_DataMiner_elements_and_the_EPM_element)

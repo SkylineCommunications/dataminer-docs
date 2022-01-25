@@ -96,15 +96,15 @@ The *Advanced Configuration* page allows you to configure a number of additional
 
 The following settings are available on the *Advanced Configuration* page:
 
-- **Active Alarms**: To keep active alarms from being displayed on the *Active Service Alarms* page, set this setting to *Hide*. See [Viewing a list of current active service alarms](Viewing_a_list_of_current_active_service_alarms.md).
+- **Active Alarms**: To keep active alarms from being displayed on the *Active Service Alarms* page, set this setting to *Hide*. See [Viewing a list of current active service alarms](xref:Viewing_a_list_of_current_active_service_alarms).
 
-- **Outages**: See [Turning SLA tracking on and off](Turning_SLA_tracking_on_and_off.md).
+- **Outages**: See [Turning SLA tracking on and off](xref:Turning_SLA_tracking_on_and_off).
 
 - **Violation Filtered Alarms**: To hide alarms that have 0% impact because of violation filters, set this setting to *Hide*.
 
-- **Offline Window Outage**: To hide outages that occur in the offline window, set this setting to *Hide*. See [Setting the offline window for an SLA](Setting_the_offline_window_for_an_SLA.md).
+- **Offline Window Outage**: To hide outages that occur in the offline window, set this setting to *Hide*. See [Setting the offline window for an SLA](xref:Setting_the_offline_window_for_an_SLA).
 
-- **Predictions**: Enable this setting to enable predicted availability and compliance calculation. See [Checking SLA Key Performance Indicators](Checking_SLA_Key_Performance_Indicators.md) and [Checking the SLA compliance](Checking_the_SLA_compliance.md).
+- **Predictions**: Enable this setting to enable predicted availability and compliance calculation. See [Checking SLA Key Performance Indicators](xref:Checking_SLA_Key_Performance_Indicators) and [Checking the SLA compliance](xref:Checking_the_SLA_compliance).
 
 - **Show Excluded Service Element Alarms**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. If this setting is set to *Hide*, all references to excluded or 'Not used' elements will be removed from the SLA, and alarms on such elements will no longer affect the SLA.
 

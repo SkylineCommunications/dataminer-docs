@@ -23,7 +23,7 @@ In this mandatory attribute, specify the path to the marker image file.
 Enter either an absolute path (starting with *http://*) or a path relative to *C:\\Skyline DataMiner\\Webpages\\Maps\\*
 
 > [!NOTE]
-> To generate images dynamically, it is possible to use placeholders in the URL, which should then be specified in the *\<MarkerDetails>* tag. See [MarkerDetails](MarkerDetails.md).
+> To generate images dynamically, it is possible to use placeholders in the URL, which should then be specified in the *\<MarkerDetails>* tag. See [MarkerDetails](xref:MarkerDetails).
 
 #### width
 
@@ -72,7 +72,7 @@ By default, no shape is defined.
 
 In this optional attribute, you can define a clickable area on top of the marker image using the W3C’s AREA coords specification.
 
-For more information, see [http://www.w3.org/TR/REC-html40/struct/objects.html#adef-coords](http://www.w3.org/TR/REC-md40/struct/objects.md#adef-coords)
+For more information, see [http://www.w3.org/TR/REC-html40/struct/objects.html#adef-coords](http://www.w3.org/TR/REC-md40/struct/objects.html#adef-coords)
 
 This shape attribute has to contain an array of integers that specify the pixel position of the clickable area relative to the top-left corner of the marker image. The coordinates to be specified depend on the kind of geometric form you specified in the *shapeType* attribute.
 

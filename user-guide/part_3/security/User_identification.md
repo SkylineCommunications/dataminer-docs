@@ -25,4 +25,4 @@ DataMiner supports two methods for user identification:
 
 > [!TIP]
 > See also:
-> [Adding a user](Adding_a_user.md)
+> [Adding a user](xref:Adding_a_user)

@@ -6,6 +6,6 @@ uid: RedundancyGroup_class
 
 Below, you can find an overview of all members of the *RedundancyGroup* class. This class represents a redundancy group.
 
-- [RedundancyGroup methods](RedundancyGroup_methods.md)
+- [RedundancyGroup methods](xref:RedundancyGroup_methods)
 
-- [RedundancyGroup properties](RedundancyGroup_properties.md)
+- [RedundancyGroup properties](xref:RedundancyGroup_properties)

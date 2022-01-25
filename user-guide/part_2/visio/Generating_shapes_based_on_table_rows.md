@@ -18,7 +18,7 @@ When, inside a Microsoft Visio drawing, you specify placeholders like \[Param: .
 
 > [!NOTE]
 > - It is also possible to make the shapes use a different index than that of the original row. See [Making a shape use a different index than that of the original row](#making-a-shape-use-a-different-index-than-that-of-the-original-row).
-> - Just like for shape positioning based on dynamic tables, you can also use the *LinkElement* and *DynamicData* ColumnOptions in the protocol when generating shapes based on table rows. If the *LinkElement* option is used, the newly created shapes can be linked to a specified element. With the *DynamicData* option, they can have their interface placeholders resolved by dynamic data. For more information, see [Shape positioning based on coordinates stored in dynamic tables](Positioning_shapes_dynamically1.md#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
+> - Just like for shape positioning based on dynamic tables, you can also use the *LinkElement* and *DynamicData* ColumnOptions in the protocol when generating shapes based on table rows. If the *LinkElement* option is used, the newly created shapes can be linked to a specified element. With the *DynamicData* option, they can have their interface placeholders resolved by dynamic data. For more information, see [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
 
 ### Child-level shape data
 
@@ -78,7 +78,7 @@ The following shape data fields can be added to the group containing the table r
 
     > [!NOTE]
     > - If you apply sorting by table column, the shapes will automatically be sorted again every time a value changes in the specified column.
-    > - From DataMiner 10.2.0/10.1.1 onwards, placeholders such as \[var:VariableName\] can be used in ChildrenSort shape data. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+    > - From DataMiner 10.2.0/10.1.1 onwards, placeholders such as \[var:VariableName\] can be used in ChildrenSort shape data. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
     To specify a sort order, add one of the following suffixes:
 
@@ -169,11 +169,11 @@ The following shape data fields can be added to the group containing the table r
     ```
 
     > [!NOTE]
-    > In order to avoid parsing problems due to “;” separators in table row filters, it is advised to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
+    > In order to avoid parsing problems due to “;” separators in table row filters, it is advised to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
     > [!TIP]
     > See also:
-    > [Dynamic table filter syntax](Dynamic_table_filter_syntax.md)
+    > [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)
 
 - **ChildrenFilter**:
 

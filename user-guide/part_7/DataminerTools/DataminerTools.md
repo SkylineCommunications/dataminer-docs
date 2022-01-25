@@ -6,13 +6,13 @@ uid: DataminerTools
 
 This section provides information on the following tools:
 
-- [DMS Alerter](DMS_Alerter.md)
+- [DMS Alerter](xref:DMS_Alerter)
 
-- [DataMiner Taskbar Utility](DataMiner_Taskbar_Utility.md)
+- [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 
-- [SLNetClientTest tool](SLNetClientTest_tool.md)
+- [SLNetClientTest tool](xref:SLNetClientTest_tool)
 
-- [SLOffload tool](SLOffload_tool.md)
+- [SLOffload tool](xref:SLOffload_tool)
 
 > [!NOTE]
 > For more information on other DataMiner tools or third-party tools, refer to <https://community.dataminer.services/documentation/category/resources/tools/>.

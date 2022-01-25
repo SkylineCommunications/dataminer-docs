@@ -8,7 +8,7 @@ For demo purposes, it can be useful to set up a simulated spectrum element. This
 
 To do so:
 
-1. Save a spectrum recording as a shared recording with the name “simulation”. See [Working with trace recordings](Working_with_trace_recordings.md).
+1. Save a spectrum recording as a shared recording with the name “simulation”. See [Working with trace recordings](xref:Working_with_trace_recordings).
 
     Alternatively, you can also manually copy a recording into the folder “*C:\\Skyline DataMiner\\Users\\SharedUserSettings\\Spectrum Recordings\\*” and rename it to “*ProtocolName*.simulation.dat”.
 

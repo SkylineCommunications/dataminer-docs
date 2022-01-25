@@ -6,6 +6,6 @@ uid: DataMiner_SNMP_notification_definition
 
 This section consists of the following topics:
 
-- [Default DataMiner notification](Default_DataMiner_notification.md)
+- [Default DataMiner notification](xref:Default_DataMiner_notification)
 
-- [Custom DataMiner notification](Custom_DataMiner_notification.md)
+- [Custom DataMiner notification](xref:Custom_DataMiner_notification)

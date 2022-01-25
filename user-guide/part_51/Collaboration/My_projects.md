@@ -8,12 +8,12 @@ When you log on to the Project Collaboration website, the *My projects* tab will
 
 If you are a DataMiner Strategic Partner with an active partner agreement, this tab will not only list your own projects, but also the projects of all customers to whom you have provided DataMiner Solutions.
 
-- [List of projects](List_of_projects.md)
+- [List of projects](xref:List_of_projects)
 
-- [List of tasks linked to a project](List_of_tasks_linked_to_a_project.md)
+- [List of tasks linked to a project](xref:List_of_tasks_linked_to_a_project)
 
-- [Board view](Board_view.md)
+- [Board view](xref:Board_view)
 
-- [Report view](Report_view.md)
+- [Report view](xref:Report_view)
 
-- [Creating a new task under the current project](Creating_a_new_task_under_the_current_project.md)
+- [Creating a new task under the current project](xref:Creating_a_new_task_under_the_current_project)

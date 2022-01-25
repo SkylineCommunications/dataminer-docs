@@ -8,6 +8,6 @@ To open a service card, click a service in the Surveyor. You can also open servi
 
 In this section:
 
-- [Service card header and footer](Service_card_header_and_footer.md)
+- [Service card header and footer](xref:Service_card_header_and_footer)
 
-- [Service card pages](Service_card_pages.md)
+- [Service card pages](xref:Service_card_pages)

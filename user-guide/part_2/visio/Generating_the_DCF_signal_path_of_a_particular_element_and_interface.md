@@ -8,7 +8,7 @@ From DataMiner 9.5.1 onwards, it is possible to show the DCF signal path of a ce
 
 To do so, define the following shapes in Visio:
 
-- A **Connection** shape, configured as described in [Automatically displaying external and internal connections](Automatically_displaying_external_and_internal_connections.md).
+- A **Connection** shape, configured as described in [Automatically displaying external and internal connections](xref:Automatically_displaying_external_and_internal_connections).
 
     From DataMiner 9.5.8 onwards, a **Filter** shape data field can be added to this shape, which is then taken into account for the creation of the signal path.     Example:
 

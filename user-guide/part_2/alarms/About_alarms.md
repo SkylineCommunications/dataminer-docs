@@ -6,10 +6,10 @@ uid: About_alarms
 
 This section consists of the following topics:
 
-- [Alarm types](Alarm_types.md)
+- [Alarm types](xref:Alarm_types)
 
-- [Alarm hysteresis](Alarm_hysteresis.md)
+- [Alarm hysteresis](xref:Alarm_hysteresis)
 
-- [Alarm linking](Alarm_linking.md)
+- [Alarm linking](xref:Alarm_linking)
 
-- [Alarm filters](Alarm_filters.md)
+- [Alarm filters](xref:Alarm_filters)

@@ -6,13 +6,13 @@ uid: AutomationEntryPointAttribute_class
 
 Below, you find an overview of all members of the *AutomationEntryPointAttribute* class.
 
-- [AutomationEntryPointAttribute constructor](AutomationEntryPointAttribute_constructor.md)
+- [AutomationEntryPointAttribute constructor](xref:AutomationEntryPointAttribute_constructor)
 
-- [AutomationEntryPointAttribute methods](AutomationEntryPointAttribute_methods.md)
+- [AutomationEntryPointAttribute methods](xref:AutomationEntryPointAttribute_methods)
 
-- [AutomationEntryPointAttribute properties](AutomationEntryPointAttribute_properties.md)
+- [AutomationEntryPointAttribute properties](xref:AutomationEntryPointAttribute_properties)
 
-- [Explicit interface implementations](Explicit_interface_implementations.md)
+- [Explicit interface implementations](xref:Explicit_interface_implementations)
 
 This C# class (available from DataMiner 9.5.12 onwards) indicates that a method can be used as an Automation script entry point.
 

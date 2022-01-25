@@ -8,8 +8,8 @@ This class represents a script parameter.
 
 Below, you can find an overview of all members of the *ScriptParam* class.
 
-- [ScriptParam constructor](ScriptParam_constructor.md)
+- [ScriptParam constructor](xref:ScriptParam_constructor)
 
-- [ScriptParam methods](ScriptParam_methods.md)
+- [ScriptParam methods](xref:ScriptParam_methods)
 
-- [ScriptParam properties](ScriptParam_properties.md)
+- [ScriptParam properties](xref:ScriptParam_properties)

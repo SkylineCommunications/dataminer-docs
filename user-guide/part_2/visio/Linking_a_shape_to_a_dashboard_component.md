@@ -17,7 +17,7 @@ To do so:
 4. In Visio, add a shape data field of type **Link** to the shape you want to link the dashboard component to and set its value to the URL you just copied.
 
 > [!NOTE]
-> This is similar to linking a shape to a webpage. See [Linking a shape to a webpage](Linking_a_shape_to_a_webpage.md).
+> This is similar to linking a shape to a webpage. See [Linking a shape to a webpage](xref:Linking_a_shape_to_a_webpage).
 
 > [!TIP]
 > See also:

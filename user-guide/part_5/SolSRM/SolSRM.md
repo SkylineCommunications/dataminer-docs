@@ -12,10 +12,10 @@ The Booking Manager app is a standard application that allows you to create and 
 
 In this section:
 
-- [Quick Start Guide](Quick_Start_Guide.md)
+- [Quick Start Guide](xref:Quick_Start_Guide)
 
-- [Using the Booking Manager app](Using_the_Booking_Manager_app.md)
+- [Using the Booking Manager app](xref:Using_the_Booking_Manager_app)
 
-- [Interacting with the Booking Manager app using custom Automation scripts](Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts.md)
+- [Interacting with the Booking Manager app using custom Automation scripts](xref:Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts)
 
-- [Reference](Reference2.md#reference)
+- [Reference](xref:Reference2#reference)

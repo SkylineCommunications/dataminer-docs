@@ -10,13 +10,13 @@ Certain features introduced from that version of DataMiner onwards, such as the 
 
 The following topics provide more information on the DataMiner Indexing Engine:
 
-- [Installing DataMiner Indexing Engine](Installing_DataMiner_Indexing_Engine.md)
+- [Installing DataMiner Indexing Engine](xref:Installing_DataMiner_Indexing_Engine)
 
-- [Configuring Indexing backups](Configuring_Indexing_backups.md)
+- [Configuring Indexing backups](xref:Configuring_Indexing_backups)
 
-- [Configuring DataMiner Indexing](Configuring_DataMiner_Indexing.md)
+- [Configuring DataMiner Indexing](xref:Configuring_DataMiner_Indexing)
 
-- [Configuring multiple Elasticsearch clusters](Configuring_multiple_Elasticsearch_clusters.md)
+- [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
 
 
 

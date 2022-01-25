@@ -77,7 +77,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
     > [!NOTE]
     > - Custom bindings cannot be used if you use the default OID.
-    > - For more information on custom bindings, see [Custom DataMiner notification](Custom_DataMiner_notification.md).
+    > - For more information on custom bindings, see [Custom DataMiner notification](xref:Custom_DataMiner_notification).
     > - If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](xref:SLNetClientTest_tool_advanced_procedures#generating-smiv2-mib-files)).
 
 8. In the *resend* tab, specify the following options:

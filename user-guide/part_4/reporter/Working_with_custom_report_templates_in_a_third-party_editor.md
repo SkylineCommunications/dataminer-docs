@@ -10,8 +10,8 @@ Alternatively, you can also create report templates using your favorite ASP edit
 
 The following sections provide more information on working with custom report templates in a third-party editor:
 
-- [Creating a custom report template in an ASP editor](Creating_a_custom_report_template_in_an_ASP_editor.md)
+- [Creating a custom report template in an ASP editor](xref:Creating_a_custom_report_template_in_an_ASP_editor)
 
-- [Including external files in a report template](Including_external_files_in_a_report_template.md)
+- [Including external files in a report template](xref:Including_external_files_in_a_report_template)
 
-- [Importing a custom report template made in a third-party editor](Importing_a_custom_report_template_made_in_a_third-party_editor.md#importing-a-custom-report-template-made-in-a-third-party-editor)
+- [Importing a custom report template made in a third-party editor](xref:Importing_a_custom_report_template_made_in_a_third-party_editor#importing-a-custom-report-template-made-in-a-third-party-editor)

@@ -8,8 +8,8 @@ On a DataMiner Agent, all configuration settings of the DataMiner Inventory and 
 
 More information is included in the following sections:
 
-- [Tags in the Asset Manager configuration file](Tags_in_the_Asset_Manager_configuration_file.md)
+- [Tags in the Asset Manager configuration file](xref:Tags_in_the_Asset_Manager_configuration_file)
 
-- [Example of an Asset Manager configuration file](Example_of_an_Asset_Manager_configuration_file.md)
+- [Example of an Asset Manager configuration file](xref:Example_of_an_Asset_Manager_configuration_file)
 
-- [Activating the Asset Management database in Cube](Activating_the_Asset_Management_database_in_Cube.md)
+- [Activating the Asset Management database in Cube](xref:Activating_the_Asset_Management_database_in_Cube)

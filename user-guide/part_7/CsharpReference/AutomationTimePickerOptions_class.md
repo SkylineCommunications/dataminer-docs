@@ -6,9 +6,9 @@ uid: AutomationTimePickerOptions_class
 
 Below, you find an overview of all members of the *AutomationDateTimeUpDownOptions* class.
 
-- [AutomationTimePickerOptions methods](AutomationTimePickerOptions_methods.md)
+- [AutomationTimePickerOptions methods](xref:AutomationTimePickerOptions_methods)
 
-- [AutomationTimePickerOptions properties](AutomationTimePickerOptions_properties.md)
+- [AutomationTimePickerOptions properties](xref:AutomationTimePickerOptions_properties)
 
 This C# class allows you to create a time picker control in an interactive Automation script.
 

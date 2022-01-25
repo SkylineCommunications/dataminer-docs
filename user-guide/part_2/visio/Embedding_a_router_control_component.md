@@ -58,4 +58,4 @@ SetVar:SelectedConfig:custom|SelectedMatrix:22x33|SelectedOutputIndex:1| Selecte
 
 > [!TIP]
 > See also:
-> [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
+> [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)

@@ -6,14 +6,14 @@ uid: Creating_and_configuring_dashboards1
 
 This section consists of the following topics:
 
-- [Creating a new dashboard](Creating_a_new_dashboard.md)
+- [Creating a new dashboard](xref:Creating_a_new_dashboard)
 
-- [Configuring dashboard components](Configuring_dashboard_components1.md#configuring-dashboard-components)
+- [Configuring dashboard components](xref:Configuring_dashboard_components1#configuring-dashboard-components)
 
-- [Adding an item to a dashboard from outside the Dashboards app](Adding_an_item_to_a_dashboard_from_outside_the_Dashboards_app.md)
+- [Adding an item to a dashboard from outside the Dashboards app](xref:Adding_an_item_to_a_dashboard_from_outside_the_Dashboards_app)
 
-- [Dashboard components](Dashboard_components.md)
+- [Dashboard components](xref:Dashboard_components)
 
-- [Creating a dashboard with a dynamic list layout](Creating_a_dashboard_with_a_dynamic_list_layout.md)
+- [Creating a dashboard with a dynamic list layout](xref:Creating_a_dashboard_with_a_dynamic_list_layout)
 
-- [Creating a dashboard container](Creating_a_dashboard_container.md)
+- [Creating a dashboard container](xref:Creating_a_dashboard_container)

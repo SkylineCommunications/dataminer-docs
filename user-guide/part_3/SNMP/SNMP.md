@@ -8,10 +8,10 @@ In your DataMiner System, you can define a list of SNMP managers, i.e. third-par
 
 The following sections provide more information on SNMP managers in DataMiner:
 
-- [About SNMP managers](About_SNMP_managers.md)
+- [About SNMP managers](xref:About_SNMP_managers)
 
-- [Configuring SNMP managers](Configuring_SNMP_managers.md)
+- [Configuring SNMP managers](xref:Configuring_SNMP_managers)
 
-- [Resending alarms to an SNMP manager](Resending_alarms_to_an_SNMP_manager.md)
+- [Resending alarms to an SNMP manager](xref:Resending_alarms_to_an_SNMP_manager)
 
-- [DataMiner SNMP notification definition](DataMiner_SNMP_notification_definition.md)
+- [DataMiner SNMP notification definition](xref:DataMiner_SNMP_notification_definition)

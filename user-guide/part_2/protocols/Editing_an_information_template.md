@@ -18,7 +18,7 @@ To make changes to the complete information template:
 
 4. Make the necessary changes and click *OK*.
 
-    For more information, refer to step 4 of [Creating an information template](Creating_an_information_template.md).
+    For more information, refer to step 4 of [Creating an information template](xref:Creating_an_information_template).
 
 > [!NOTE]
 > - A protocol’s default information template, which is defined in the *Protocol.xml* file, cannot be edited as described above. The only way to modify it is by making changes to the protocol itself.

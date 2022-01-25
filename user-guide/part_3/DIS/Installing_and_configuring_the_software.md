@@ -6,8 +6,8 @@ uid: Installing_and_configuring_the_software
 
 This section consists of the following topics:
 
-- [Prerequisites](Prerequisites.md)
+- [Prerequisites](xref:Prerequisites)
 
-- [Installing and configuring DataMiner Integration Studio](Installing_and_configuring_DataMiner_Integration_Studio.md)
+- [Installing and configuring DataMiner Integration Studio](xref:Installing_and_configuring_DataMiner_Integration_Studio)
 
-- [Configuring Microsoft Visual Studio](Configuring_Microsoft_Visual_Studio.md)
+- [Configuring Microsoft Visual Studio](xref:Configuring_Microsoft_Visual_Studio)

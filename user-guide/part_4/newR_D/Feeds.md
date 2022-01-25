@@ -23,11 +23,11 @@ The following types of feeds are available:
 - [Trigger](#trigger)
 
 > [!NOTE]
-> Feeds can be preconfigured in dashboard URLs. See [Specifying data input in a dashboard URL](Specifying_data_input_in_a_dashboard_URL.md).
+> Feeds can be preconfigured in dashboard URLs. See [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
 
 > [!TIP]
 > See also:
-> [Using dashboard feeds](Using_dashboard_feeds.md)
+> [Using dashboard feeds](xref:Using_dashboard_feeds)
 
 ### CPE feed
 
@@ -43,7 +43,7 @@ To configure the component:
 
     3. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-        - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+        - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
         - *Show label*: Determines whether the names of the chain filters are displayed next to the selection boxes in the component.
 
@@ -59,7 +59,7 @@ To configure the component:
 
     5. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-        - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+        - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
         - *Show label*: Determines whether the names of the chain filters are displayed next to the selection boxes in the component.
 
@@ -69,11 +69,11 @@ This feed allows the user to select an item in a drop-down list. The selectable 
 
 To configure the component:
 
-1. Apply the necessary data feeds. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply the necessary data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
 2. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - *Label*: Allows you to specify text that should be displayed next to the drop-down box.
 
@@ -89,9 +89,9 @@ This feed allows the user to select one or more items in a list. The selectable 
 
 To configure the component:
 
-1. Apply the necessary data feeds. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply the necessary data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
-2. Optionally, fine-tune the component layout. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+2. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 3. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
@@ -105,7 +105,7 @@ This feed allows the user to select multiple parameters from a predefined list. 
 
 To configure this component:
 
-1. Apply the necessary data feeds. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply the necessary data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
     The component supports element and parameter data feeds. In case a table parameter is added, an indices filter can be specified. In case all parameters or all elements are added, a protocol or view feed can be used as an additional filter.     From DataMiner 10.0.0/10.0.2 onwards, multiple view filters can be applied to a parameter feed. Parameters in those views will then be included as soon as they are included in one of the view filters.
 
@@ -135,7 +135,7 @@ To configure this component:
 
 3. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - *Column order*: Click the up or down arrow next to a column name to change the order in which the columns of the component are displayed. Available from DataMiner 9.6.13 onwards.
 
@@ -155,7 +155,7 @@ To configure the component:
 
 2. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - *Show refresh timer*: Determines whether an indication is displayed that the data will be refreshed.
 
@@ -169,9 +169,9 @@ This feed allows the user to select one or more items in a tree view. The select
 
 To configure the component:
 
-1. Apply the necessary data feeds. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply the necessary data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
-2. Optionally, fine-tune the component layout. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+2. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 3. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
@@ -195,7 +195,7 @@ To configure the trigger feed:
 
 2. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - *Label*: Allows you to specify text that should be displayed on the trigger button.
 

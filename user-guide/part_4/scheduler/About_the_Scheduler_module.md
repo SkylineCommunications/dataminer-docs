@@ -10,9 +10,9 @@ To access the Scheduler module:
 
 The Scheduler module allows you to schedule events in two ways:
 
-- By manually adding a task to the list of scheduled tasks, in the *list* tab. See [Manually adding a scheduled task](Manually_adding_a_scheduled_task.md)
+- By manually adding a task to the list of scheduled tasks, in the *list* tab. See [Manually adding a scheduled task](xref:Manually_adding_a_scheduled_task)
 
-- By dragging events, based on Scheduler templates, onto a timeline, in the *timeline \> EVENTS* tab. See [Scheduling an event based on a Scheduler template](Scheduling_an_event_based_on_a_Scheduler_template.md).
+- By dragging events, based on Scheduler templates, onto a timeline, in the *timeline \> EVENTS* tab. See [Scheduling an event based on a Scheduler template](xref:Scheduling_an_event_based_on_a_Scheduler_template).
 
 > [!TIP]
 > See also:

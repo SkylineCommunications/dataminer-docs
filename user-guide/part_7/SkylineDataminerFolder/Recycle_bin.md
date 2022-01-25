@@ -10,7 +10,7 @@ uid: Recycle_bin
 
 The *Recycle Bin* folder contains a number of zip files, one for each configuration change that has been implemented in the system.
 
-The total number of files is limited by the *RecycleBinSize* setting in *MaintenanceSettings.xml*. See [Alphabetical overview of settings](MaintenanceSettings_xml.md#alphabetical-overview-of-settings).
+The total number of files is limited by the *RecycleBinSize* setting in *MaintenanceSettings.xml*. See [Alphabetical overview of settings](xref:MaintenanceSettings_xml#alphabetical-overview-of-settings).
 
 If an incorrect configuration change is implemented in the system, in some cases, it is possible to use the recycle bin to restore the original configuration.
 

@@ -8,15 +8,15 @@ It is possible to create new custom report templates in the Reporter app.
 
 More information about this can be found in the following sections:
 
-- [Accessing the report templates](Accessing_the_report_templates.md)
+- [Accessing the report templates](xref:Accessing_the_report_templates)
 
-- [Adding a new report template](Adding_a_new_report_template.md)
+- [Adding a new report template](xref:Adding_a_new_report_template)
 
 These report templates can then be used to:
 
-- Generate reports with the Reporter app. See [Report template components](Report_template_components.md).
+- Generate reports with the Reporter app. See [Report template components](xref:Report_template_components).
 
-- Send email reports with other DataMiner apps. See [Sending reports by email](Sending_reports_by_email.md).
+- Send email reports with other DataMiner apps. See [Sending reports by email](xref:Sending_reports_by_email).
 
 > [!TIP]
 > See also:

@@ -23,7 +23,7 @@ To open this pane:
 
 1. Select the page, the shape or the group of shapes to which you want to add data.
 
-    For more information on how to group shapes, see [Grouping shapes](Grouping_shapes.md).
+    For more information on how to group shapes, see [Grouping shapes](xref:Grouping_shapes).
 
 2. Right-click in the *Shape Data* pane, and click *Define Shape Data*.
 
@@ -31,7 +31,7 @@ To open this pane:
 
     1. In the *Label* box, enter the name of the data field. Example: *Element*, *Execute*, *Link*, etc.
 
-        For a complete overview of all DataMiner shape data fields, see [Overview of DataMiner shape data fields](Overview_of_DataMiner_shape_data_fields.md).
+        For a complete overview of all DataMiner shape data fields, see [Overview of DataMiner shape data fields](xref:Overview_of_DataMiner_shape_data_fields).
 
     2. In the *Type* list, select “String”.
 

@@ -6,18 +6,18 @@ uid: Layer_configuration_tags
 
 In this section, you can find more information on the following layer configuration tags for DataMiner Maps:
 
-- [ParametersSourceInfo](ParametersSourceInfo.md)
+- [ParametersSourceInfo](xref:ParametersSourceInfo)
 
-- [PropertiesSourceInfo](PropertiesSourceInfo.md)
+- [PropertiesSourceInfo](xref:PropertiesSourceInfo)
 
-- [SqlSourceInfo](SqlSourceInfo.md)
+- [SqlSourceInfo](xref:SqlSourceInfo)
 
-- [TableSourceInfo](TableSourceInfo.md)
+- [TableSourceInfo](xref:TableSourceInfo)
 
-- [LineOptions](LineOptions.md)
+- [LineOptions](xref:LineOptions)
 
-- [MarkerImages](MarkerImages.md)
+- [MarkerImages](xref:MarkerImages)
 
-- [MarkerDetails](MarkerDetails.md)
+- [MarkerDetails](xref:MarkerDetails)
 
-- [PopupSkeleton and PopupDetails](PopupSkeleton_and_PopupDetails.md)
+- [PopupSkeleton and PopupDetails](xref:PopupSkeleton_and_PopupDetails)

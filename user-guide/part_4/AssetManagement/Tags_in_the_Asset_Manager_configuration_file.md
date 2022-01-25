@@ -44,7 +44,7 @@ In this tag, you can specify Read and Write permissions on user group level for 
 
 This tag is optional. However, keep in mind that if it is left empty or if it is not used, then all users will have full access to the database!
 
-For an example, refer to the *\<Security>* section in the example (see [Example of an Asset Manager configuration file](Example_of_an_Asset_Manager_configuration_file.md)). In this example, Administrators have Read access to all tables (*\<Read base="allowAll">*) except TableX (*\<Deny>TableX\</Deny>*) and Write access to TableY (*\<Write base="denyAll">\<Allow>TableY\</Allow>\</Write>*). Operators have Read access to all tables (*\<Read base="allowAll" />*) and Write access to none of the tables (*\<Write base="denyAll" />*).
+For an example, refer to the *\<Security>* section in the example (see [Example of an Asset Manager configuration file](xref:Example_of_an_Asset_Manager_configuration_file)). In this example, Administrators have Read access to all tables (*\<Read base="allowAll">*) except TableX (*\<Deny>TableX\</Deny>*) and Write access to TableY (*\<Write base="denyAll">\<Allow>TableY\</Allow>\</Write>*). Operators have Read access to all tables (*\<Read base="allowAll" />*) and Write access to none of the tables (*\<Write base="denyAll" />*).
 
 > [!NOTE]
 > - It is also possible to configure security for the columns in each table with a \<Security> tag within the \<Table> tag.

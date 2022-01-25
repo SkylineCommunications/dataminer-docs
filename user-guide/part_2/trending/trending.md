@@ -10,17 +10,17 @@ For performance reasons, trending is only activated for a limited number of para
 
 This section consists of the following topics:
 
-- [Trending techniques](Trending_techniques.md)
+- [Trending techniques](xref:Trending_techniques)
 
-- [Displaying trend graphs](Displaying_trend_graphs.md)
+- [Displaying trend graphs](xref:Displaying_trend_graphs)
 
-- [Manipulating trend graphs](Manipulating_trend_graphs.md)
+- [Manipulating trend graphs](xref:Manipulating_trend_graphs)
 
-- [Viewing trend information in a histogram](Viewing_trend_information_in_a_histogram.md)
+- [Viewing trend information in a histogram](xref:Viewing_trend_information_in_a_histogram)
 
-- [Working with trend groups](Working_with_trend_groups.md)
+- [Working with trend groups](xref:Working_with_trend_groups)
 
-- [Setting the default sliding window size for real-time trending](Setting_the_default_sliding_window_size_for_real-time_trending.md#setting-the-default-sliding-window-size-for-real-time-trending)
+- [Setting the default sliding window size for real-time trending](xref:Setting_the_default_sliding_window_size_for_real-time_trending#setting-the-default-sliding-window-size-for-real-time-trending)
 
 > [!TIP]
 > See also:

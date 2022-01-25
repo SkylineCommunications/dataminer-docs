@@ -17,18 +17,18 @@ This app is available from DataMiner 9.6.4 onwards.
 
 In this section:
 
-- [About jobs](About_jobs.md)
+- [About jobs](xref:About_jobs)
 
-- [Overview of the Job Manager app UI](Overview_of_the_Job_Manager_app_UI.md)
+- [Overview of the Job Manager app UI](xref:Overview_of_the_Job_Manager_app_UI)
 
-- [Configuring jobs in the Job Manager app](Configuring_jobs_in_the_Job_Manager_app.md)
+- [Configuring jobs in the Job Manager app](xref:Configuring_jobs_in_the_Job_Manager_app)
 
-- [Working with the jobs timeline](Working_with_the_jobs_timeline.md)
+- [Working with the jobs timeline](xref:Working_with_the_jobs_timeline)
 
-- [Manually adding a job](Manually_adding_a_job.md)
+- [Manually adding a job](xref:Manually_adding_a_job)
 
-- [Exporting a job to PDF](Exporting_a_job_to_PDF.md)
+- [Exporting a job to PDF](xref:Exporting_a_job_to_PDF)
 
-- [Manually removing a job](Manually_removing_a_job.md)
+- [Manually removing a job](xref:Manually_removing_a_job)
 
-- [Working with job templates](Working_with_job_templates.md)
+- [Working with job templates](xref:Working_with_job_templates)

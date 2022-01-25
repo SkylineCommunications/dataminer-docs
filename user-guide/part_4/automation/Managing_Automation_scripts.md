@@ -59,7 +59,7 @@ You can also add a new script by duplicating an existing script and then changin
 > [!NOTE]
 > You cannot create two Automation scripts with the same name.
 
-To create a functional new script, you will then need to configure it further. For more information, see [Designing Automation scripts](Designing_Automation_scripts.md).
+To create a functional new script, you will then need to configure it further. For more information, see [Designing Automation scripts](xref:Designing_Automation_scripts).
 
 ### Adding a new Automation script folder
 

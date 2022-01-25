@@ -149,4 +149,4 @@ To execute an ad-hoc command (e.g. for test purposes):
 
 > [!TIP]
 > See also:
-> [Command reference](Command_reference.md)
+> [Command reference](xref:Command_reference)

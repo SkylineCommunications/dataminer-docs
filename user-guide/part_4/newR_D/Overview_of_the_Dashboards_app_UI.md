@@ -14,6 +14,6 @@ You can access the new Dashboards app via the link https://\[MyDataMiner\]/dashb
 
 In DataMiner 10.0.0/10.0.2, the UI of the app has been redesigned. Below, you can find more information:
 
-- [Dashboards app UI from DataMiner 10.0.0/10.0.2 onwards](Dashboards_app_UI_from_DataMiner_10_0_0_10_0_2_onwards.md#dashboards-app-ui-from-dataminer-10001002-onwards)
+- [Dashboards app UI from DataMiner 10.0.0/10.0.2 onwards](xref:Dashboards_app_UI_from_DataMiner_10_0_0_10_0_2_onwards#dashboards-app-ui-from-dataminer-10001002-onwards)
 
-- [Dashboards app UI prior to DataMiner 10.0.0/10.0.2](Dashboards_app_UI_prior_to_DataMiner_10_0_0_10_0_2.md#dashboards-app-ui-prior-to-dataminer-10001002)
+- [Dashboards app UI prior to DataMiner 10.0.0/10.0.2](xref:Dashboards_app_UI_prior_to_DataMiner_10_0_0_10_0_2#dashboards-app-ui-prior-to-dataminer-10001002)

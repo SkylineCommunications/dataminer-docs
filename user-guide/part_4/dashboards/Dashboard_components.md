@@ -268,7 +268,7 @@ Component-specific options:
 
     > [!TIP]
     > See also:
-    > [Creating a dashboard with a dynamic list layout](Creating_a_dashboard_with_a_dynamic_list_layout.md)
+    > [Creating a dashboard with a dynamic list layout](xref:Creating_a_dashboard_with_a_dynamic_list_layout)
 
 - *Column Order*: Use the arrows next to each column to change the order in which the columns will appear. It is also possible to add additional columns, e.g. the *Active time*, which is the time since the alarm has been generated.
 

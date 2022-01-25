@@ -7,13 +7,13 @@ uid: General_configuration_of_Correlation_rules
 In the *Correlation* module in Cube, select a rule in the tree view pane on the left in order to configure it in the details pane on the right.
 
 > [!NOTE]
-> - For more information on how to add a Correlation rule, see [Adding a new Correlation rule](Adding_a_new_Correlation_rule.md).
+> - For more information on how to add a Correlation rule, see [Adding a new Correlation rule](xref:Adding_a_new_Correlation_rule).
 > - As soon as there are unsaved changes in a rule, “*\[modified\]*” is added to the rule name in the tree view pane, as a reminder in case you navigate to a different rule. However, note that if you close the *Correlation* module, such changes will not be saved. To make sure changes to a rule are saved, click the *Apply* button.
 
 - In the top-left corner of the pane, select *Enable this rule* to enable a Correlation rule. By default, new rules are disabled.
 
     > [!NOTE]
-    > Before you can enable a Correlation rule, certain minimum requirements must be met. For more information, see [Adding a new Correlation rule](Adding_a_new_Correlation_rule.md).
+    > Before you can enable a Correlation rule, certain minimum requirements must be met. For more information, see [Adding a new Correlation rule](xref:Adding_a_new_Correlation_rule).
 
 - In the *General* section, next to *Name*, enter a new name for the Correlation rule. By default, new rules are simply called “Correlation rule”.
 
@@ -49,7 +49,7 @@ In the *Correlation* module in Cube, select a rule in the tree view pane on the 
 
         > [!TIP]
         > See also:
-        > [Which DMA handles which rule?](About_DMS_Correlation.md#which-dma-handles-which-rule)
+        > [Which DMA handles which rule?](xref:About_DMS_Correlation#which-dma-handles-which-rule)
 
 - To have a new correlation alarm created for every change to an alarm, in the *Alarm filter* section, select *Trigger on single events. Don’t maintain active tree status*. If you do not select this option, the same Correlation alarm will be updated for every new status.
 

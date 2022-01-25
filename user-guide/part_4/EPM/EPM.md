@@ -12,8 +12,8 @@ DMS Experience and Performance Management can be deployed as a standalone platfo
 
 The following topics provide more information about Experience and Performance Management:
 
-- [About DMS Experience and Performance Management](About_DMS_Experience_and_Performance_Management.md)
+- [About DMS Experience and Performance Management](xref:About_DMS_Experience_and_Performance_Management)
 
-- [Working with the Experience and Performance Management interface](Working_with_the_Experience_and_Performance_Management_interface.md)
+- [Working with the Experience and Performance Management interface](xref:Working_with_the_Experience_and_Performance_Management_interface)
 
-- [Linking an EPM interface to a view](Linking_an_EPM_interface_to_a_view.md)
+- [Linking an EPM interface to a view](xref:Linking_an_EPM_interface_to_a_view)

@@ -6,15 +6,15 @@ uid: Getting_started
 
 This section consists of the following topics:
 
-- [Working with shape data in Microsoft Visio](Working_with_shape_data_in_Microsoft_Visio.md)
+- [Working with shape data in Microsoft Visio](xref:Working_with_shape_data_in_Microsoft_Visio)
 
-- [Editing a visual overview in DataMiner Cube](Editing_a_visual_overview_in_DataMiner_Cube.md)
+- [Editing a visual overview in DataMiner Cube](xref:Editing_a_visual_overview_in_DataMiner_Cube)
 
-- [Cleaning up unused Visio files](Cleaning_up_unused_Visio_files.md)
+- [Cleaning up unused Visio files](xref:Cleaning_up_unused_Visio_files)
 
-- [DataMiner Visio templates](DataMiner_Visio_templates.md)
+- [DataMiner Visio templates](xref:DataMiner_Visio_templates)
 
-- [Visual overview page priority](Visual_overview_page_priority.md)
+- [Visual overview page priority](xref:Visual_overview_page_priority)
 
 > [!TIP]
 > See also:

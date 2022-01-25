@@ -23,7 +23,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
     - User icon: Click this icon in the top-right corner to open a menu with the following options:
 
-        - *Configuration*: Select this option to access the configuration of the job fields. See [Configuring jobs in the Job Manager app](Configuring_jobs_in_the_Job_Manager_app.md).
+        - *Configuration*: Select this option to access the configuration of the job fields. See [Configuring jobs in the Job Manager app](xref:Configuring_jobs_in_the_Job_Manager_app).
 
         - *About*: Select this option to view version information on the app.
 
@@ -46,13 +46,13 @@ The main page of the app consists of a header bar, a side panel and an overview 
     | Button                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                        |
     |---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | \<domain name>                                                                        | The drop-down box on the left allows you to select a different job domain. Only the jobs belonging to the selected domain will be displayed.                                                                                                                                                                                                                                                       |
-    | New                                                                                   | Click this button to open a form to manually add a new job. See [Manually adding a job](Manually_adding_a_job.md).                                                                                                                                                                                                                                                                                 |
+    | New                                                                                   | Click this button to open a form to manually add a new job. See [Manually adding a job](xref:Manually_adding_a_job).                                                                                                                                                                                                                                                                                 |
     | View                                                                                  | Only displayed if a job is selected. Click this button to view the details of the job in a pop-up window. <br> From DataMiner 10.0.11 onwards, a bar is displayed on the right side of this pop-up window, which will show history information for the job when clicked.                                                                                                                           |
     | Edit                                                                                  | Only displayed if a job is selected. Opens a pop-up window where you can modify the job, in the same way as when you add a job.                                                                                                                                                                                                                                                                    |
     | Delete                                                                                | Only displayed if a job is selected. Removes the selected job.                                                                                                                                                                                                                                                                                                                                     |
     | Export / PDF                                                                          | Only displayed if a job is selected. Exports the selected job to PDF. From DataMiner 10.1.0 \[CU1\]/10.1.4 onwards, this will open a pop-up window where you can view a preview of the PDF and configure its settings. You can specify the PDF title and subject, select whether your company information, your company logo, and/or page numbers should be included, and customize the PDF width. |
     | ![](../../images/JobsX_list.png)         | Displays the list view, which displays the jobs that have been planned within the time span specified in the filter.<br>When a job is selected in the list, more buttons become available, allowing you to view, edit, export or delete the job.                                                                                                                                                   |
-    | ![](../../images/JobsX_timeline.png) | Displays a timeline that contains all jobs within the time specified in the filter panel on the left. See [Working with the jobs timeline](Working_with_the_jobs_timeline.md).                                                                                                                                                                                                                     |
+    | ![](../../images/JobsX_timeline.png) | Displays a timeline that contains all jobs within the time specified in the filter panel on the left. See [Working with the jobs timeline](xref:Working_with_the_jobs_timeline).                                                                                                                                                                                                                     |
 
     > [!NOTE]
     > The timeline view is not available on small screens.
@@ -63,11 +63,11 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
     - The *Job Manager* button: Click this button to return to the main page of the app.
 
-    - The *New* button: Click this button to open a form to manually add a new job. See [Manually adding a job](Manually_adding_a_job.md).
+    - The *New* button: Click this button to open a form to manually add a new job. See [Manually adding a job](xref:Manually_adding_a_job).
 
     - If a job is selected, a number of additional buttons are displayed next to the *New* button, allowing you to check out the details of the job, edit it, export it to PDF or delete it, respectively.
 
-    - A *Configuration* button: Click this button to access the configuration of the job fields. See [Configuring jobs in the Job Manager app](Configuring_jobs_in_the_Job_Manager_app.md).
+    - A *Configuration* button: Click this button to access the configuration of the job fields. See [Configuring jobs in the Job Manager app](xref:Configuring_jobs_in_the_Job_Manager_app).
 
     - The name of the current user: Click the user name and select *Log out* to log out of the app.
 
@@ -79,7 +79,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
     - The list view displays a table listing the jobs that have been planned within the time span specified in the filter.<br>When a job is selected in the list, more buttons become available in the header bar, allowing you to view, edit, export or delete the job.
 
-    - The timeline view displays all jobs within the time specified in the filter panel on the left. See [Working with the jobs timeline](Working_with_the_jobs_timeline.md).
+    - The timeline view displays all jobs within the time specified in the filter panel on the left. See [Working with the jobs timeline](xref:Working_with_the_jobs_timeline).
 
         > [!NOTE]
         > The timeline view is not available on small screens.

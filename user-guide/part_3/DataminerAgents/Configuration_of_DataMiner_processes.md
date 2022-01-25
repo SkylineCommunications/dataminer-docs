@@ -437,7 +437,7 @@ Default value: 60 seconds
 
 > [!TIP]
 > See also:
-> [Configuring the polling request timeout](General_DMA_configuration.md#configuring-the-polling-request-timeout)
+> [Configuring the polling request timeout](xref:General_DMA_configuration#configuring-the-polling-request-timeout)
 
 #### Configuring indexing options for the server-side search of DataMiner Cube
 
@@ -453,7 +453,7 @@ Example:
 
 > [!TIP]
 > See also:
-> [Setting the indexing options for the server-side search](General_DMA_configuration.md#setting-the-indexing-options-for-the-server-side-search)
+> [Setting the indexing options for the server-side search](xref:General_DMA_configuration#setting-the-indexing-options-for-the-server-side-search)
 
 #### Making DataMiner Cube ignore view updates
 

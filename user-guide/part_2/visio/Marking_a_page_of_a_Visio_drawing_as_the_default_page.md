@@ -10,7 +10,7 @@ When, for example, a shape data field of type **VdxPage** is set to â€œ\[auto\]â
 
 > [!TIP]
 > See also:
-> [Making a shape display a particular page of the current Visio drawing](Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing.md)
+> [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)
 
 ### Configuring the shape data field
 

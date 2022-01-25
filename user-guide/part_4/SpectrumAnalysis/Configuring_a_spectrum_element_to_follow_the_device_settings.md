@@ -12,6 +12,6 @@ To configure a spectrum element to follow the device settings:
 
 2. In the *Advanced element settings* section, select *Follow device settings*.
 
-3. To make sure that traces are also shared between clients, select *Shared session mode*. See [Enabling shared session mode](Viewing_spectrum_analyzer_traces.md#enabling-shared-session-mode). Though you do not have to select this option, it is highly recommended.
+3. To make sure that traces are also shared between clients, select *Shared session mode*. See [Enabling shared session mode](xref:Viewing_spectrum_analyzer_traces#enabling-shared-session-mode). Though you do not have to select this option, it is highly recommended.
 
 4. Click *Apply*.

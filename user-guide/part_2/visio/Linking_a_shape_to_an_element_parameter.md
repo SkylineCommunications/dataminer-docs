@@ -95,7 +95,7 @@ Add a shape data field of type **Parameter** to the shape.
         64001|[Var:monitor]|[Var:buffer]|-1|Carrier CSG_200_000000001037 - NIT_06_R L Rx (public)|DisplayTime
         ```
 
-    - From DataMiner 10.2.0/10.1.8 onwards, you can have the spectrum thumbnail show the trace from a specific moment in the past, based on the recorded trending for a parameter in a spectrum monitor. To do so, as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder *C:\\Skyline DataMiner*. Then configure the **HistoryMode** shape data in the same manner as to display the history alarm state of a parameter. See [Linking a shape to a history alarm](Linking_a_shape_to_a_history_alarm.md).
+    - From DataMiner 10.2.0/10.1.8 onwards, you can have the spectrum thumbnail show the trace from a specific moment in the past, based on the recorded trending for a parameter in a spectrum monitor. To do so, as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder *C:\\Skyline DataMiner*. Then configure the **HistoryMode** shape data in the same manner as to display the history alarm state of a parameter. See [Linking a shape to a history alarm](xref:Linking_a_shape_to_a_history_alarm).
 
         > [!NOTE]
         > The trended trace record from right before the specified time will be displayed. For this purpose, the trended traces are queried with the following steps until a trace record is found or the maximum search extent has been reached: 1 hour – 3 hours – 12 hours – 24 hours – 48 hours (maximum).
@@ -163,7 +163,7 @@ This can be done in two ways, depending on the version of DataMiner you are usin
 
 > [!TIP]
 > See also:
-> [Dynamic table filter syntax](Dynamic_table_filter_syntax.md)
+> [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)
 
 ### Displaying history values for parameters
 
@@ -208,7 +208,7 @@ Configure the shape data as follows:
 
     > [!TIP]
     > See also:
-    > [Turning a shape into a control to update a session variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md)
+    > [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 
 ### Options for shapes linked to parameters
 
@@ -245,7 +245,7 @@ If, in a shape linked to an element, you want to have a subshape that has the cu
 
 #### Conditional shape manipulation actions
 
-Conditional shape manipulation actions can be specified within the value of the **Parameter** shape data field. See [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md).
+Conditional shape manipulation actions can be specified within the value of the **Parameter** shape data field. See [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions).
 
 #### SpectrumOptions
 

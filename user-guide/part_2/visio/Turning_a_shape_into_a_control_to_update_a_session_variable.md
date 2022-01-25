@@ -8,10 +8,10 @@ Using a shape data field of type **SetVar**, you can turn a shape or a page into
 
 > [!TIP]
 > See also:
-> - [Adding options to a session variable control](Adding_options_to_a_session_variable_control.md)
-> - [Initializing a session variable](Initializing_a_session_variable.md)
-> - [Making a shape display the current value of a variable](Making_a_shape_display_the_current_value_of_a_variable.md)
-> - [Embedding a router control component](Embedding_a_router_control_component.md)
+> - [Adding options to a session variable control](xref:Adding_options_to_a_session_variable_control)
+> - [Initializing a session variable](xref:Initializing_a_session_variable)
+> - [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable)
+> - [Embedding a router control component](xref:Embedding_a_router_control_component)
 
 ### Configuring the shape data field
 
@@ -72,7 +72,7 @@ Add a shape data field of type **SetVar** to the shape or the page, and set its 
 
 - If you want a session variable to be populated with a trace value when the user hovers the mouse over the graph in a trend component, set the value to "*ValueTrace:*", "*MinTrace:*", "*MaxTrace:*", or "*TimeTrace:*", followed by the name of the session variable
 
-    See [Configuring session variables to be set from trace points](Linking_a_shape_to_a_trend_component.md#configuring-session-variables-to-be-set-from-trace-points).
+    See [Configuring session variables to be set from trace points](xref:Linking_a_shape_to_a_trend_component#configuring-session-variables-to-be-set-from-trace-points).
 
 ### Indicating the scope of the variable
 

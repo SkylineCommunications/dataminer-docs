@@ -6,13 +6,13 @@ uid: DataminerLicenses
 
 There are four procedures to obtain a DataMiner license:
 
-- [License for DMA to be installed by Skyline](License_for_DMA_to_be_installed_by_Skyline.md)
+- [License for DMA to be installed by Skyline](xref:License_for_DMA_to_be_installed_by_Skyline)
 
-- [Full license for DMA to be installed by user](Full_license_for_DMA_to_be_installed_by_user.md)
+- [Full license for DMA to be installed by user](xref:Full_license_for_DMA_to_be_installed_by_user)
 
-- [Online demo license for DMA to be installed by user](Online_demo_license_for_DMA_to_be_installed_by_user.md)
+- [Online demo license for DMA to be installed by user](xref:Online_demo_license_for_DMA_to_be_installed_by_user)
 
-- [Offline demo license for DMA to be installed by user](Offline_demo_license_for_DMA_to_be_installed_by_user.md)
+- [Offline demo license for DMA to be installed by user](xref:Offline_demo_license_for_DMA_to_be_installed_by_user)
 
 > [!NOTE]
 > - Only customers who have received a written agreement from the Skyline Sales Department can request a DataMiner license.

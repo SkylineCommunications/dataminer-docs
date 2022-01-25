@@ -8,5 +8,5 @@ The user interface of the Project Collaboration module consists of the following
 
 | Tab page    | For more information on this tab page, see .... |
 |-------------|-------------------------------------------------|
-| My projects | [My projects](My_projects.md)                   |
-| My tasks    | [My tasks](My_tasks.md)                         |
+| My projects | [My projects](xref:My_projects)                   |
+| My tasks    | [My tasks](xref:My_tasks)                         |

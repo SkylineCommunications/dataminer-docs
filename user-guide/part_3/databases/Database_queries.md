@@ -6,6 +6,6 @@ uid: Database_queries
 
 This section consists of the following topics:
 
-- [Querying a database](Querying_a_database.md)
+- [Querying a database](xref:Querying_a_database)
 
-- [Examples of database queries](Examples_of_database_queries.md)
+- [Examples of database queries](xref:Examples_of_database_queries)

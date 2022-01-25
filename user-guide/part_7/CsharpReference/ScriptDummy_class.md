@@ -6,10 +6,10 @@ uid: ScriptDummy_class
 
 The *ScriptDummy* class exposes the same members as the *Element* class.
 
-- [ScriptDummy methods](ScriptDummy_methods.md)
+- [ScriptDummy methods](xref:ScriptDummy_methods)
 
-- [ScriptDummy properties](ScriptDummy_properties.md)
+- [ScriptDummy properties](xref:ScriptDummy_properties)
 
 > [!TIP]
 > See also:
-> [Element class](Element_class.md)
+> [Element class](xref:Element_class)

@@ -93,7 +93,7 @@ A *\<Link>* tag can have the following attributes:
     To be left empty. DataMiner will automatically assign a unique GUID to every link the first time it reads the file.
 
     > [!NOTE]
-    > For connectivity files used to automatically generate RCA chains, in one case, the id must be filled in. See [Automatically generating service RCA chains based on connectivity](Automatically_generating_service_RCA_chains_based_on_connectivity.md).
+    > For connectivity files used to automatically generate RCA chains, in one case, the id must be filled in. See [Automatically generating service RCA chains based on connectivity](xref:Automatically_generating_service_RCA_chains_based_on_connectivity).
 
 - **itemA**
 

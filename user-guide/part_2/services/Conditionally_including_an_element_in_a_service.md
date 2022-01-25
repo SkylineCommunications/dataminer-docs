@@ -64,5 +64,5 @@ During service creation or while editing a service, it is possible to include an
 
 > [!NOTE]
 > - If an element is included conditionally, or influences the alarm severity conditionally, it is also possible to set a delay for the trigger. To do so, select the *Delay for this trigger* checkbox, and specify a number of seconds. However, note that this delay is not possible if the condition depends on whether the element is part of a connectivity chain.
-> - For more information on the possible status of child items based on these conditions, see [DATA](Service_card_pages.md#data).
+> - For more information on the possible status of child items based on these conditions, see [DATA](xref:Service_card_pages#data).
 >

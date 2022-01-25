@@ -8,8 +8,8 @@ Many dashboard components can be configured to be linked to a feed, so that thei
 
 To have dashboard components updated based on a feed, feed components need to be added in the dashboard. The data input can then either be selected by the user or specified in the dashboard URL.
 
-- [Configuring feed components](Configuring_feed_components.md)
+- [Configuring feed components](xref:Configuring_feed_components)
 
-- [Specifying data input in a dashboard URL](Specifying_data_input_in_a_dashboard_URL.md)
+- [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
 
-- [Configuring a dashboard to use a URL feed without a feed component](Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component.md)
+- [Configuring a dashboard to use a URL feed without a feed component](xref:Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component)

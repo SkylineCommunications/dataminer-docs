@@ -10,16 +10,16 @@ To access the *Logging* page, in DataMiner Cube, go to *Apps* > *System Center \
 
 The page consists of four tabs:
 
-- *Cube*: see [Cube logging](Cube_logging.md)
+- *Cube*: see [Cube logging](xref:Cube_logging)
 
-- *Communication*: see [Communication logging](Communication_logging.md)
+- *Communication*: see [Communication logging](xref:Communication_logging)
 
-- *DataMiner*: see [DataMiner logging](DataMiner_logging.md)
+- *DataMiner*: see [DataMiner logging](xref:DataMiner_logging)
 
-- *Elements*: see [Elements logging](Elements_logging.md)
+- *Elements*: see [Elements logging](xref:Elements_logging)
 
 > [!NOTE]
-> - You can adjust the maximum total size of the log files on a DMA. See [Changing the maximum size of DataMiner log files](Changing_the_maximum_size_of_DataMiner_log_files.md).
+> - You can adjust the maximum total size of the log files on a DMA. See [Changing the maximum size of DataMiner log files](xref:Changing_the_maximum_size_of_DataMiner_log_files).
 > - The number of log entries that are kept and the general log level are determined in the Cube computer settings. For more information, see [Computer settings](xref:Computer_settings).
 
 > [!TIP]

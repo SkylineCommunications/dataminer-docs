@@ -69,7 +69,7 @@ For more information on how to configure alarm thresholds, refer to the sections
 
 - From DataMiner 9.0.0 CU14 onwards, you can select or deselect all parameters at once, by right-clicking the column header of the list of parameters and selecting *Enable all parameters* or *Disable all parameters*, respectively.
 
-- For DVE elements, the parent element and child element alarm templates function as if they were part of an alarm template group, with the child element template getting the highest priority. This means that if a parameter is monitored in the parent element template, but not in the child element template, the parameter will not be monitored in the child element. See also [Alarm template groups](Alarm_template_groups.md).
+- For DVE elements, the parent element and child element alarm templates function as if they were part of an alarm template group, with the child element template getting the highest priority. This means that if a parameter is monitored in the parent element template, but not in the child element template, the parameter will not be monitored in the child element. See also [Alarm template groups](xref:Alarm_template_groups).
 
 - When you finish the configuration of an alarm template, from DataMiner 9.0.5 onwards, a dialog box will appear that allows you to immediately link that template to one or more elements.
 
@@ -105,7 +105,7 @@ You can then specify the alarm thresholds:
 When multiple values are specified for one alarm severity, the existing alarm will be updated with a new value each time it crosses a new threshold.
 
 > [!NOTE]
-> - It is not necessary to enter a value for each severity level. See [Guidelines for assigning alarm severity levels](Guidelines_for_assigning_alarm_severity_levels.md).
+> - It is not necessary to enter a value for each severity level. See [Guidelines for assigning alarm severity levels](xref:Guidelines_for_assigning_alarm_severity_levels).
 > - It is also possible to enable or disable parameters through the template editor right-click menu.
 
 > [!TIP]

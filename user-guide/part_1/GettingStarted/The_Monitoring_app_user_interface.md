@@ -14,10 +14,10 @@ The DataMiner 10 Monitoring app is a web application featuring a user interface 
 > - [Accessing the legacy Monitoring & Control app](xref:Accessing_the_legacy_Monitoring_Control_app#accessing-the-legacy-monitoring--control-app)
 > - [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
 
-- [Monitoring app header bar](Monitoring_app_header_bar.md)
+- [Monitoring app header bar](xref:Monitoring_app_header_bar)
 
-- [Monitoring app sidebar](Monitoring_app_sidebar.md)
+- [Monitoring app sidebar](xref:Monitoring_app_sidebar)
 
-- [Monitoring app Alarm Console](Monitoring_app_Alarm_Console.md)
+- [Monitoring app Alarm Console](xref:Monitoring_app_Alarm_Console)
 
-- [Monitoring app card pane](Monitoring_app_card_pane.md)
+- [Monitoring app card pane](xref:Monitoring_app_card_pane)

@@ -19,6 +19,6 @@ To view information about an existing user group:
     - Check the *Permissions* tab to see views the group has access to and the rights that have been configured for it.
 
         > [!NOTE]
-        > For more information on the user permissions in Cube, see [DataMiner user permissions](DataMiner_user_permissions.md).
+        > For more information on the user permissions in Cube, see [DataMiner user permissions](xref:DataMiner_user_permissions).
 
     - Check the *Alerts* tab to see what notifications have been configured for the group.

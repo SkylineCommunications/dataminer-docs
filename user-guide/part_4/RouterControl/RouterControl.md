@@ -10,6 +10,6 @@ When you open the module for the first time, you will find a default user interf
 
 Find out more in the following topics:
 
-- [Working with the default Router Control configuration](Working_with_the_default_Router_Control_configuration.md)
+- [Working with the default Router Control configuration](xref:Working_with_the_default_Router_Control_configuration)
 
-- [Creating and customizing Router Control configurations](Creating_and_customizing_Router_Control_configurations.md)
+- [Creating and customizing Router Control configurations](xref:Creating_and_customizing_Router_Control_configurations)

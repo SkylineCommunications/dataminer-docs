@@ -10,6 +10,6 @@ To activate or deactivate Lite mode, go to the *Data Display* page of the user s
 
 This section consists of the following topics:
 
-- [Changing the parameter layout in Lite mode](Changing_the_parameter_layout_in_Lite_mode.md)
+- [Changing the parameter layout in Lite mode](xref:Changing_the_parameter_layout_in_Lite_mode)
 
-- [Using the Lite mode shortcut menu](Using_the_Lite_mode_shortcut_menu.md)
+- [Using the Lite mode shortcut menu](xref:Using_the_Lite_mode_shortcut_menu)

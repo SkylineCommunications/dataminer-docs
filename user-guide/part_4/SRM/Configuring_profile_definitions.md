@@ -41,7 +41,7 @@ In the configuration pane, you can configure a selected profile definition as fo
 
 - To link a new profile instance with the definition, in the *Instances* section of the configuration pane, click *Add*. This will open the *Instances* tab, with a new instance selected in the list pane.
 
-    For more information on linking definitions to instances, see [Configuring profile instances](Configuring_profile_instances.md).
+    For more information on linking definitions to instances, see [Configuring profile instances](xref:Configuring_profile_instances).
 
 - To remove parameters, scripts or instances from a definition, select the parameter, script or instance in question, and click the *Remove* or *Delete* button in the relevant section of the configuration pane.
 

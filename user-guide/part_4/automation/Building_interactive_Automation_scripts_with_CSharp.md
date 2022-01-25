@@ -6,11 +6,11 @@ uid: Building_interactive_Automation_scripts_with_CSharp
 
 In an Automation script, you can define custom-made dialog boxes in C# code blocks. When the script is run, those dialog boxes can then either ask the user to provide input or display some status information or error message.
 
-In DataMiner Cube, it also possible to add these dialog boxes using the script action *User interaction*. For more information, see [User interaction](User_interaction.md).
+In DataMiner Cube, it also possible to add these dialog boxes using the script action *User interaction*. For more information, see [User interaction](xref:User_interaction).
 
 > [!NOTE]
 > - For detailed information on the classes, methods and properties that can be used in C# code blocks of Automation scripts, see [Automation script CSharp code reference](xref:CsharpReference#automation-script-csharp-code-reference).
-> - For more information on how to abort an interactive Automation script, see [How do I abort a running Automation script?](How_do_I_abort_a_running_Automation_script.md)
+> - For more information on how to abort an interactive Automation script, see [How do I abort a running Automation script?](xref:How_do_I_abort_a_running_Automation_script)
 
 ### Example of a dialog box displaying information
 

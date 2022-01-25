@@ -24,13 +24,13 @@ In this section:
 - The filter box is a combo box, which means you can type in it or click the magnifying glass icon on the right side of the box to choose from a list of suggestions. Depending on where you are using the filter box, it could be that you first have to type a few characters before suggestions appear.
 
     > [!NOTE]
-    > A filter box keeps a history of past searches, which is listed underneath the suggestions. By default, 10 items are kept in the history, but this number can be changed in the user settings. See also [Data Display settings](User_settings.md#data-display-settings).
+    > A filter box keeps a history of past searches, which is listed underneath the suggestions. By default, 10 items are kept in the history, but this number can be changed in the user settings. See also [Data Display settings](xref:User_settings#data-display-settings).
 
 - To filter more effectively, you can use wildcards or regular expressions in filters.
 
     > [!TIP]
     > See also:
-    > - [Searching with wildcard characters](Searching_in_DataMiner_Cube.md#searching-with-wildcard-characters)
+    > - [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters)
     > - [Using regular expressions in quick filters](#using-regular-expressions-in-quick-filters)
 
 - The following comparison operators can be used in quick filters: = or ==, *!=*, *\>*, *\>=*, *\<* and *\<=*. To use these operators, first mention the column name (between double quotation marks in case it contains a space), then the operator, and then the value, which can be a number, a string or an alarm severity.

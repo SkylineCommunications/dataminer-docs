@@ -6,6 +6,6 @@ uid: Reference3
 
 In this section:
 
-- [Project-related notifications](Project-related_notifications.md#project-related-notifications)
+- [Project-related notifications](xref:Project-related_notifications#project-related-notifications)
 
-- [Statuses](Statuses.md)
+- [Statuses](xref:Statuses)

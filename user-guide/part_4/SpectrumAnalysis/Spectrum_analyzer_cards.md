@@ -16,26 +16,26 @@ The Spectrum Analysis user interface consists of the following components:
 
     By default the ribbon is collapsed. Single-click it to quickly access a functionality; double-click the ribbon to expand it.
 
-- A real-time display section on the left side of the card, which shows the spectrum trace. See [Viewing spectrum analyzer traces](Viewing_spectrum_analyzer_traces.md).
+- A real-time display section on the left side of the card, which shows the spectrum trace. See [Viewing spectrum analyzer traces](xref:Viewing_spectrum_analyzer_traces).
 
     > [!NOTE]
     > As soon as more than one client is connected to the spectrum analyzer, the top-right corner of the display section shows the number of connected clients. Click this field to view detailed information such as the username, client station and connection time for each client.
 
 - An info pane to the right of the display section, which displays detailed information about the trace, and allows settings for markers and reference lines.
 
-    See [Working with markers](Working_with_markers.md) and [Working with reference lines](Working_with_reference_lines.md).
+    See [Working with markers](xref:Working_with_markers) and [Working with reference lines](xref:Working_with_reference_lines).
 
     > [!NOTE]
     > This pane can be hidden. This is done with the *Info pane* option in the View tab of the ribbon.
 
 - A collapsible settings pane on the right side of the card, with different tabs:
 
-    - *Manual \> Settings*: see [Changing the spectrum analyzer settings](Changing_the_spectrum_analyzer_settings.md).
+    - *Manual \> Settings*: see [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings).
 
         At the bottom of this tab, the *Copy* button allows you to copy the settings to the clipboard.
 
-    - *Manual \> Measurement points*: See [Configuring measurement points](Configuring_measurement_points.md).
+    - *Manual \> Measurement points*: See [Configuring measurement points](xref:Configuring_measurement_points).
 
-    - *Presets*: See [Using Spectrum Analysis presets](Using_Spectrum_Analysis_presets.md).
+    - *Presets*: See [Using Spectrum Analysis presets](xref:Using_Spectrum_Analysis_presets).
 
     - *History*: A list of past measurements that is updated each time a monitor has run. The list shows a preview of the trace, the monitor name, parameter name, time and measurement point. You can compare the past trace with the current trace by selecting *Show actual trace(s) as reference trace*.

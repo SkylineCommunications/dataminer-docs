@@ -15,7 +15,7 @@ A number of keywords can be used in **Info** shape data fields to display inform
 
 From DataMiner 10.0.13 onwards, **Info** keywords (wrapped in square brackets) can also be used as placeholders within other placeholders. For example: *\[var:\[NAME\]\]*
 
-For an overview of the different keywords, see [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
+For an overview of the different keywords, see [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 > [!NOTE]
 > - To prevent infinite loops, do not use alarm keywords in shape data items of type **Alarm**.
@@ -181,7 +181,7 @@ The following placeholders can be used in shape data values.
 
 ### \[AggregationRule:...\]
 
-The placeholder \[AggregationRule: *folder/rule, view ID, protocol, element property, view property, remote primary key*\] can be used to link a shape to an aggregation rule, in order to display aggregated parameter values. See [Linking a shape to an aggregation rule](Linking_a_shape_to_an_aggregation_rule.md).
+The placeholder \[AggregationRule: *folder/rule, view ID, protocol, element property, view property, remote primary key*\] can be used to link a shape to an aggregation rule, in order to display aggregated parameter values. See [Linking a shape to an aggregation rule](xref:Linking_a_shape_to_an_aggregation_rule).
 
 It can also be used with:
 
@@ -189,14 +189,14 @@ It can also be used with:
 
     > [!TIP]
     > See also:
-    > - [Linking a shape to a trend component](Linking_a_shape_to_a_trend_component.md)
-    > - [Creating a parameter chart](Creating_a_parameter_chart.md)
+    > - [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component)
+    > - [Creating a parameter chart](xref:Creating_a_parameter_chart)
 
 - Shapes linked to a parameter summary, where it can be entered instead of a parameter in the **ParametersSummary** shape data field.
 
     > [!TIP]
     > See also:
-    > [Linking a shape to a calculation involving multiple parameters](Linking_a_shape_to_a_calculation_involving_multiple_parameters.md).
+    > [Linking a shape to a calculation involving multiple parameters](xref:Linking_a_shape_to_a_calculation_involving_multiple_parameters).
 
 The placeholder takes the following arguments:
 
@@ -284,7 +284,7 @@ Display key of the connection that was clicked.
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[ConnectionLineIdx\]
 
@@ -292,7 +292,7 @@ Primary key of the connection that was clicked.
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[ConnectionlineFromKey\]
 
@@ -300,7 +300,7 @@ Starting point of the connection that was clicked.
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[ConnectionLineToKey\]
 
@@ -308,7 +308,7 @@ End point of the connection that was clicked.
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DataMinerTime\]
 
@@ -332,7 +332,7 @@ The DMA ID and element ID of the destination interface of the connection that wa
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DestinationInterfaceElementName\]
 
@@ -342,7 +342,7 @@ The element name of the destination interface of the connection that was clicked
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DestinationInterfaceIdx\]
 
@@ -352,7 +352,7 @@ The interface ID of the destination interface of the connection that was clicked
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DestinationInterfaceLinkedIdx\]
 
@@ -362,7 +362,7 @@ The primary key of the table row to which the destination interface of the conne
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[DestinationInterfaceName\]
 
@@ -372,7 +372,7 @@ The interface name of the destination interface of the connection that was click
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[displaytableindex\]
 
@@ -394,7 +394,7 @@ This placeholder can only be used inside another placeholder, or in a URL for a 
 
 > [!TIP]
 > See also:
-> [Special placeholders that can be used inside a URL](Linking_a_shape_to_a_webpage.md#special-placeholders-that-can-be-used-inside-a-url)
+> [Special placeholders that can be used inside a URL](xref:Linking_a_shape_to_a_webpage#special-placeholders-that-can-be-used-inside-a-url)
 
 ### \[Element:\<input>,\<output>\]
 
@@ -439,7 +439,7 @@ During the event, the \[Event:...\] placeholder will be replaced by the value of
 
     - Example: *\[Event:IOClicked,Label\]*
 
-- From DataMiner 10.2.0/10.1.1 onwards, this placeholder can also be used with the **NodeDoubleClicked** tag. In this case, the event will be triggered when a node is double-clicked in an embedded service definition (see [Embedding a Service Manager component](Embedding_a_Service_Manager_component.md)). The event placeholder will then be replaced with the value of its argument.
+- From DataMiner 10.2.0/10.1.1 onwards, this placeholder can also be used with the **NodeDoubleClicked** tag. In this case, the event will be triggered when a node is double-clicked in an embedded service definition (see [Embedding a Service Manager component](xref:Embedding_a_Service_Manager_component)). The event placeholder will then be replaced with the value of its argument.
 
     - Possible arguments:
 
@@ -474,7 +474,7 @@ The first MAC address in the list of active MAC addresses on the client machine.
 
 ### \[Guid\]
 
-The GUID. This can for example be used to initialize a session variable with a particular GUID. See [Initializing a session variable with a GUID](Initializing_a_session_variable.md#initializing-a-session-variable-with-a-guid).
+The GUID. This can for example be used to initialize a session variable with a particular GUID. See [Initializing a session variable with a GUID](xref:Initializing_a_session_variable#initializing-a-session-variable-with-a-guid).
 
 ### \[Interlace:\<array1>,\<array2>,\<oldSep>,\<newSep>\]
 
@@ -555,7 +555,7 @@ TableRow - which can refer to either the primary key or the display key - can be
 This placeholder can be used when hierarchical shapes are created dynamically based on rows in a table. The placeholder will be replaced by the index of the table row associated with the immediate parent shape.
 
 > [!NOTE]
-> When you use this placeholder, you should always specify the “AllowCustomIndex” option. Otherwise, Visual Overview will replace the index of the shape with the index of the table row associated with the immediate parent shape. See [Making a shape use a different index than that of the original row](Generating_shapes_based_on_table_rows.md#making-a-shape-use-a-different-index-than-that-of-the-original-row).
+> When you use this placeholder, you should always specify the “AllowCustomIndex” option. Otherwise, Visual Overview will replace the index of the shape with the index of the table row associated with the immediate parent shape. See [Making a shape use a different index than that of the original row](xref:Generating_shapes_based_on_table_rows#making-a-shape-use-a-different-index-than-that-of-the-original-row).
 >
 > \[ParentTableIndex\] should only be used when the index has to be retrieved from a nested row-based child shape.
 
@@ -564,13 +564,13 @@ This placeholder can be used when hierarchical shapes are created dynamically ba
 This placeholder can be used when hierarchical shapes are created dynamically based on rows in a table. The placeholder will be replaced by the display index of the table row associated with the immediate parent shape.
 
 > [!NOTE]
-> When you use this placeholder, you should always specify the “AllowCustomIndex” option. Otherwise, Visual Overview will replace the display index of the shape with the display index of the table row associated with the immediate parent shape. See [Making a shape use a different index than that of the original row](Generating_shapes_based_on_table_rows.md#making-a-shape-use-a-different-index-than-that-of-the-original-row).
+> When you use this placeholder, you should always specify the “AllowCustomIndex” option. Otherwise, Visual Overview will replace the display index of the shape with the display index of the table row associated with the immediate parent shape. See [Making a shape use a different index than that of the original row](xref:Generating_shapes_based_on_table_rows#making-a-shape-use-a-different-index-than-that-of-the-original-row).
 >
 > \[ParentDisplayTableIndex\] should only be used when the index has to be retrieved from a nested row-based child shape.
 
 ### \[Profile:...\]
 
-Reference to specific profile instances. See [Creating a list of profile instances](Adding_options_to_a_session_variable_control.md#creating-a-list-of-profile-instances).
+Reference to specific profile instances. See [Creating a list of profile instances](xref:Adding_options_to_a_session_variable_control#creating-a-list-of-profile-instances).
 
 ### \[property:PropertyName\]
 
@@ -584,7 +584,7 @@ If you want to override the above-mentioned general rule, you can add to the sha
 
 > [!TIP]
 > See also:
-> [Adding options to shapes linked to elements or services](Adding_options_to_shapes_linked_to_elements_or_services.md)
+> [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services)
 
 > [!NOTE]
 > If the specified property refers to a non-existing element, service or redundancy group, then the shape will not be displayed.
@@ -760,7 +760,7 @@ Reference to the primary key of the selected service in the Service Overview Man
 
 > [!TIP]
 > See also:
-> [Making a shape filter Alarm Console tabs when clicked](Making_a_shape_filter_Alarm_Console_tabs_when_clicked.md)
+> [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)
 
 ### \[ServiceFilterName\]
 
@@ -775,7 +775,7 @@ Used when embedding an alarm timeline component, in order to select a single par
 
 > [!TIP]
 > See also:
-> [Embedding an alarm timeline component](Embedding_an_alarm_timeline_component.md)
+> [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component)
 
 ### \[Service definition properties\]
 
@@ -791,7 +791,7 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 
 > [!TIP]
 > See also:
-> [Making a shape display a custom tooltip](Making_a_shape_display_a_custom_tooltip.md)
+> [Making a shape display a custom tooltip](xref:Making_a_shape_display_a_custom_tooltip)
 
 ### \[Service definition property:\<property name>\]
 
@@ -807,7 +807,7 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 
 > [!TIP]
 > See also:
-> [Making a shape display a custom tooltip](Making_a_shape_display_a_custom_tooltip.md)
+> [Making a shape display a custom tooltip](xref:Making_a_shape_display_a_custom_tooltip)
 
 ### \[SLAFromService:\<service(s)>\]
 
@@ -829,7 +829,7 @@ The DMA ID and element ID of the source interface of the connection that was cli
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[SourceInterfaceElementName\]
 
@@ -839,7 +839,7 @@ The element name of the source interface of the connection that was clicked.
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[SourceInterfaceIdx\]
 
@@ -849,7 +849,7 @@ The interface ID of the source interface of the connection that was clicked.
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[SourceInterfaceLinkedIdx\]
 
@@ -859,7 +859,7 @@ The primary key of the table row to which the source interface of the connection
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[SourceInterfaceName\]
 
@@ -869,7 +869,7 @@ The interface name of the source interface of the connection that was clicked.
 
 > [!TIP]
 > See also:
-> [Navigation options for automatically drawn connections](Positioning_shapes_dynamically1.md#navigation-options-for-automatically-drawn-connections)
+> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
 ### \[Subtract:...\]
 
@@ -915,7 +915,7 @@ Takes the table index of the item that is dropped onto or hovered over the item 
 
 > [!TIP]
 > See also:
-> [Example of a drag-and-drop action that passes on a table filter](Triggering_an_action_when_a_shape_is_dragged_onto_another_shape.md#example-of-a-drag-and-drop-action-that-passes-on-a-table-filter)
+> [Example of a drag-and-drop action that passes on a table filter](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#example-of-a-drag-and-drop-action-that-passes-on-a-table-filter)
 
 ### \[TableIndexFilterResolved\]
 
@@ -923,7 +923,7 @@ When drag-and-drop behavior has been configured for child shapes, this placehold
 
 > [!TIP]
 > See also:
-> [Configuring drag-and-drop behavior for child shapes](Triggering_an_action_when_a_shape_is_dragged_onto_another_shape.md#configuring-drag-and-drop-behavior-for-child-shapes)
+> [Configuring drag-and-drop behavior for child shapes](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#configuring-drag-and-drop-behavior-for-child-shapes)
 
 ### \[TableDisplayIndexResolved\]
 
@@ -931,7 +931,7 @@ When drag-and-drop behavior has been configured for child shapes, this placehold
 
 > [!TIP]
 > See also:
-> [Configuring drag-and-drop behavior for child shapes](Triggering_an_action_when_a_shape_is_dragged_onto_another_shape.md#configuring-drag-and-drop-behavior-for-child-shapes)
+> [Configuring drag-and-drop behavior for child shapes](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#configuring-drag-and-drop-behavior-for-child-shapes)
 
 ### \[ThisGroup\]
 
@@ -965,7 +965,7 @@ It is possible to override the default behavior of this placeholder for child sh
 
 > [!TIP]
 > See also:
-> [ForcePropertyFrom Parent](Overview_of_page_and_shape_options.md)
+> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
 ### \[this ElementID\]
 
@@ -975,7 +975,7 @@ It is possible to override the default behavior of this placeholder for child sh
 
 > [!TIP]
 > See also:
-> [ForcePropertyFrom Parent](Overview_of_page_and_shape_options.md)
+> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
 ### \[This EnhancedServiceID\]
 
@@ -989,7 +989,7 @@ It is possible to override the default behavior of this placeholder for child sh
 
 > [!TIP]
 > See also:
-> [ForcePropertyFrom Parent](Overview_of_page_and_shape_options.md)
+> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
 ### \[this ServiceID\]
 
@@ -999,7 +999,7 @@ It is possible to override the default behavior of this placeholder for child sh
 
 > [!TIP]
 > See also:
-> [ForcePropertyFrom Parent](Overview_of_page_and_shape_options.md)
+> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
 ### \[this view\]
 
@@ -1009,7 +1009,7 @@ It is possible to override the default behavior of this placeholder for child sh
 
 > [!TIP]
 > See also:
-> [ForcePropertyFrom Parent](Overview_of_page_and_shape_options.md)
+> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
 ### \[this ViewID\]
 
@@ -1019,7 +1019,7 @@ It is possible to override the default behavior of this placeholder for child sh
 
 > [!TIP]
 > See also:
-> [ForcePropertyFrom Parent](Overview_of_page_and_shape_options.md)
+> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
 ### \[UTCTime\]
 

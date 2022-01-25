@@ -65,7 +65,7 @@ uid: How_DataMiner_offloads_data
 
 3. Oracle.ManagedDataAccess.dll forwards the queries to the Oracle database via IP port 1521.
 
-    See also: [https://docs.oracle.com/cd/B19306_01/install.102/b15660/app_port.htm](https://docs.oracle.com/cd/B19306_01/install.102/b15660/app_port.md)
+    See also: [https://docs.oracle.com/cd/B19306_01/install.102/b15660/app_port.htm](https://docs.oracle.com/cd/B19306_01/install.102/b15660/app_port.htm)
 
 4. The Oracle database fetches the CSV file from its (local) shared, and inserts the contents of the file into the table in question.
 

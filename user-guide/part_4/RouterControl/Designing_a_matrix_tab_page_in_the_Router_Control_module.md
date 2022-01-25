@@ -62,7 +62,7 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [Creating a completely new Router Control configuration](Managing_the_Router_Control_configurations.md#creating-a-completely-new-router-control-configuration)
+> [Creating a completely new Router Control configuration](xref:Managing_the_Router_Control_configurations#creating-a-completely-new-router-control-configuration)
 
 ### Adding a matrix represented by two table parameters
 
@@ -146,7 +146,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 > [!TIP]
 > See also:
-> [Overview of user interface component properties](Overview_of_user_interface_component_properties.md)
+> [Overview of user interface component properties](xref:Overview_of_user_interface_component_properties)
 
 ### Deleting a component from a matrix tab page
 

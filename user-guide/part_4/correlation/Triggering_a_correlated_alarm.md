@@ -19,7 +19,7 @@ To make a Correlation rule trigger a new, correlated alarm:
 
 4. Click the underlined field to the right of “with alarm value”, and specify a parameter value.
 
-    Instead of a value, you can also enter a placeholder. For more information, see [Correlation rule syntax](Correlation_rule_syntax.md).
+    Instead of a value, you can also enter a placeholder. For more information, see [Correlation rule syntax](xref:Correlation_rule_syntax).
 
     > [!NOTE]
     > If you want a Correlation alarm on a table parameter to take the parameter index value of the original base alarm, use "\[original_idx\]" as the parameter index value.
@@ -34,7 +34,7 @@ To make a Correlation rule trigger a new, correlated alarm:
 
     - **Update base alarms**: Select this option to allow the list of base alarms to be updated after a correlated alarm has been generated.
 
-    - **Evaluate value**: Select this option if the alarm value field or parameter row index field of the alarm action contain placeholders. These placeholders consist of Correlation functions enclosed in square brackets. For example, the alarm value could be configured as “Avg value is \[AVG(FIELD(VALUE))\]”. For more information, see [Script condition functions](Script_condition_functions.md).
+    - **Evaluate value**: Select this option if the alarm value field or parameter row index field of the alarm action contain placeholders. These placeholders consist of Correlation functions enclosed in square brackets. For example, the alarm value could be configured as “Avg value is \[AVG(FIELD(VALUE))\]”. For more information, see [Script condition functions](xref:Script_condition_functions).
 
     - **Root time of base alarm**: Select this option if you want the root time of the Correlation alarm to be that of the base alarm that triggered its creation.
 

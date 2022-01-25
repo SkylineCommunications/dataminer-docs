@@ -20,13 +20,13 @@ To create a custom report template from scratch, do the following:
 
     > [!TIP]
     > See also:
-    > [Passing parameters](#passing-parameters)<br> [Including external files in a report template](Including_external_files_in_a_report_template.md)
+    > [Passing parameters](#passing-parameters)<br> [Including external files in a report template](xref:Including_external_files_in_a_report_template)
 
 3. Save the template.
 
 > [!TIP]
 > See also:
-> [Importing a custom report template made in a third-party editor](Importing_a_custom_report_template_made_in_a_third-party_editor.md#importing-a-custom-report-template-made-in-a-third-party-editor)
+> [Importing a custom report template made in a third-party editor](xref:Importing_a_custom_report_template_made_in_a_third-party_editor#importing-a-custom-report-template-made-in-a-third-party-editor)
 
 ### Passing parameters
 

@@ -7,7 +7,7 @@ uid: Linking_a_shape_to_a_trend_component
 Using a shape data field of type **Component**, you can configure a Visio shape to display a trend component.
 
 > [!NOTE]
-> - It is also possible to turn a shape into a parameter chart instead of linking it to a trend component. See [Creating a parameter chart](Creating_a_parameter_chart.md).
+> - It is also possible to turn a shape into a parameter chart instead of linking it to a trend component. See [Creating a parameter chart](xref:Creating_a_parameter_chart).
 > - In a Visio trend component, the alarm timeline along the X-axis is only displayed if the graph initially shows only one parameter, and only as long as that parameter is displayed.
 > - In the Monitoring and Dashboards apps, trend components in a visual overview are only supported from DataMiner 10.0.12 onwards.
 
@@ -83,9 +83,9 @@ To configure this, specify the following shape data:
 
 - Add a shape data item of type **SetVar** to the trend component, and set its value to "*ValueTrace:*", "*MinTrace:*", "*MaxTrace:*", or "*TimeTrace:*", followed by the name of the session variable.
 
-- Optionally, to limit the scope of the variable, add a shape data field of type **Options**, and set it to the appropriate scope. For more information, see [Indicating the scope of the variable](Turning_a_shape_into_a_control_to_update_a_session_variable.md#indicating-the-scope-of-the-variable).
+- Optionally, to limit the scope of the variable, add a shape data field of type **Options**, and set it to the appropriate scope. For more information, see [Indicating the scope of the variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable#indicating-the-scope-of-the-variable).
 
-- In case the trend component shows multiple parameters, add a shape data field of type **SetVarOptions** and set it to “*MultipleValueSep=*” followed by a separator of your choice. For more information, see [Creating a multiple checkbox control](Adding_options_to_a_session_variable_control.md#creating-a-multiple-checkbox-control).
+- In case the trend component shows multiple parameters, add a shape data field of type **SetVarOptions** and set it to “*MultipleValueSep=*” followed by a separator of your choice. For more information, see [Creating a multiple checkbox control](xref:Adding_options_to_a_session_variable_control#creating-a-multiple-checkbox-control).
 
     The session variable will contain a list of trace values, one for each parameter displayed in the trend component, separated by the separator you specified.     If you want to display one of those values in another location, you can refer to it using its 0-based index. For example, if you have the minimum trace values stored in the “MinimumValue” session variable, you can use "MinimumValue\[1\]" to refer to the minimum trace value of the second parameter in the trend component legend.
 

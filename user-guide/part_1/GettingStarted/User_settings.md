@@ -25,7 +25,7 @@ The user settings can be accessed in different ways:
 The settings window consists of two tabs. The tab with the user settings is opened by default. It consists of different pages that you can navigate between using the table of contents on the left.
 
 > [!NOTE]
-> - For more information on the computer settings, see [Computer settings](Computer_settings.md).
+> - For more information on the computer settings, see [Computer settings](xref:Computer_settings).
 > - Depending on the configuration of your user account, it is possible that some settings are not shown.
 
 ### Overview of the user settings
@@ -288,7 +288,7 @@ On the *Data Display* page, several settings are available, some of which are on
 - **Show General Parameters debug page**: Select this setting along with the computer setting *Debug settings visible* to show an additional Data Display page called *General parameters DEBUG*. This page contains general parameters that are only used for debug purposes and that are not usually displayed.
 
     > [!NOTE]
-    > This setting is only displayed if the computer setting *Debug settings visible* is selected. See [Debug settings](Computer_settings.md#debug-settings).
+    > This setting is only displayed if the computer setting *Debug settings visible* is selected. See [Debug settings](xref:Computer_settings#debug-settings).
 
 - **Enable heat map on table parameters**: Enable this setting to give table cells with numeric parameters a background color intensity that matches their value.
 
@@ -325,7 +325,7 @@ These settings allow you to specify which alarm levels and icons are shown next 
 
 > [!TIP]
 > See also:
-> [Special icon settings](Main_Cube_UI_components_prior_to_DataMiner_10.md#special-icon-settings)
+> [Special icon settings](xref:Main_Cube_UI_components_prior_to_DataMiner_10#special-icon-settings)
 
 #### Regional settings
 

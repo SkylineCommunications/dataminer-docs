@@ -13,12 +13,12 @@ SLA elements are created with SLA definitions in XML format. They can be trended
 
 The following topics provide more information on DMS Business Intelligence:
 
-- [Creating an SLA](Creating_an_SLA.md)
+- [Creating an SLA](xref:Creating_an_SLA)
 
-- [Configuring an SLA](Configuring_an_SLA.md)
+- [Configuring an SLA](xref:Configuring_an_SLA)
 
-- [Viewing SLA information](Viewing_SLA_information.md)
+- [Viewing SLA information](xref:Viewing_SLA_information)
 
-- [Making corrections to existing outages](Making_corrections_to_existing_outages.md)
+- [Making corrections to existing outages](xref:Making_corrections_to_existing_outages)
 
-- [SLA reporting](SLA_reporting.md)
+- [SLA reporting](xref:SLA_reporting)

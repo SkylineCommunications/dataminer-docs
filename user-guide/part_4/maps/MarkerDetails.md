@@ -6,7 +6,7 @@ uid: MarkerDetails
 
 In the *\<MarkerDetails>* tag, placeholders can be defined so that marker images can be generated dynamically.
 
-To do so, add a *\<Detail>* tag for every placeholder used in the *\<MarkerImages>* tag, and then configure the placeholder in the same way as for the *\<PopupDetails>* tag. See [PopupDetails](PopupSkeleton_and_PopupDetails.md#popupdetails).
+To do so, add a *\<Detail>* tag for every placeholder used in the *\<MarkerImages>* tag, and then configure the placeholder in the same way as for the *\<PopupDetails>* tag. See [PopupDetails](xref:PopupSkeleton_and_PopupDetails#popupdetails).
 
 Example:
 

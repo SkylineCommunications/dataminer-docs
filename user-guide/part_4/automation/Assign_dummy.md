@@ -9,7 +9,7 @@ Use this action to assign an Automation script’s dummy to a specific element b
 1. Click the left-most underlined field to select or create a dummy element.
 
     > [!NOTE]
-    > For more information on creating dummy elements, see [Creating a dummy](Script_variables.md#creating-a-dummy).
+    > For more information on creating dummy elements, see [Creating a dummy](xref:Script_variables#creating-a-dummy).
 
 2. Select how the new element will be determined:
 

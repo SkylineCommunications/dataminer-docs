@@ -213,7 +213,7 @@ This tab consists of the following subtabs:
 
 ### The Topology tab
 
-This tab shows a graphical overview of how the different PTP nodes are connected, using DataMiner DCF. For each node, an icon is displayed indicating the type of node. For more information on these icons, see [Types of PTP devices](Types_of_PTP_devices.md). Note that for the grandmaster clocks, the current active grandmaster (as detected by the PTP probe) is indicated by a small clock icon on the left.
+This tab shows a graphical overview of how the different PTP nodes are connected, using DataMiner DCF. For each node, an icon is displayed indicating the type of node. For more information on these icons, see [Types of PTP devices](xref:Types_of_PTP_devices). Note that for the grandmaster clocks, the current active grandmaster (as detected by the PTP probe) is indicated by a small clock icon on the left.
 
 Clicking the name of a PTP node opens the element card of the node. Clicking the icon marking the type of node opens the PTP alarm tab, showing the list of active PTP alarms associated with the node. Clicking a connection line will open a pop-up window, showing more information about the connection.
 
@@ -244,7 +244,7 @@ This tab consists of three different sections:
 
         > [!TIP]
         > See also:
-        > [Installing the DataMiner PTP app](Installing_the_DataMiner_PTP_app.md)
+        > [Installing the DataMiner PTP app](xref:Installing_the_DataMiner_PTP_app)
 
     - **Role assignment**: Launches the role assignment wizard, allowing you to change the roles that were assigned to the different PTP devices, or to assign roles to newly added devices.
 

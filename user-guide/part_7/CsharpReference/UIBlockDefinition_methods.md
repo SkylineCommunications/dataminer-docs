@@ -18,7 +18,7 @@ uid: UIBlockDefinition_methods
 
 Adds an entry to a checkbox list. Available from DataMiner 9.6.6 onwards.
 
-UIBlockType: [CheckBoxList](UIBlockType_enumeration.md#checkboxlist)
+UIBlockType: [CheckBoxList](xref:UIBlockType_enumeration#checkboxlist)
 
 ```txt
 void AddCheckBoxListOption(string def)
@@ -42,7 +42,7 @@ uibDialogBox1.AppendBlock(blockItem);
 
 Adds an entry to a drop-down list.
 
-UIBlockType: [DropDown](UIBlockType_enumeration.md#dropdown)
+UIBlockType: [DropDown](xref:UIBlockType_enumeration#dropdown)
 
 ```txt
 void AddDropDownOption(string def)
@@ -66,7 +66,7 @@ uibDialogBox1.AppendBlock(blockItem);
 
 Adds an entry to a radio button list. Available from DataMiner 9.6.6 onwards.
 
-UIBlockType: [RadioButtonList](UIBlockType_enumeration.md#radiobuttonlist)
+UIBlockType: [RadioButtonList](xref:UIBlockType_enumeration#radiobuttonlist)
 
 ```txt
 void AddRadioButtonListOption(string option)

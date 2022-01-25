@@ -41,7 +41,7 @@ The measurement point configuration window consists of:
         Any measurement points with ID -1 in the import file will be added as new measurement points. The imported measurement points will be shown in the list pane with the label *\[modified\]* or *\[new\]*, and the changes will need to be applied before they are saved.
 
 > [!NOTE]
-> - If the current trace is hidden, this will be reflected in the measurement point. See [Spectrum trace acquisition](Viewing_spectrum_analyzer_traces.md#spectrum-trace-acquisition).
+> - If the current trace is hidden, this will be reflected in the measurement point. See [Spectrum trace acquisition](xref:Viewing_spectrum_analyzer_traces#spectrum-trace-acquisition).
 > - If no measurement points have been configured yet, the *Edit measurement point* option will not be available.
 
 ### Configuring a measurement point
@@ -56,7 +56,7 @@ To configure a new or existing measurement point:
 
     > [!NOTE]
     > - To configure a parameter set of a matrix parameter, when you have selected the parameter, click the value field. A pop-up box will then appear in which you can select the input and output and indicate whether these should be connected.
-    > - For more information on configuring a measurement point to execute an Automation script, see [Making a measurement point execute a script before taking a trace](Making_a_measurement_point_execute_a_script_before_taking_a_trace.md).
+    > - For more information on configuring a measurement point to execute an Automation script, see [Making a measurement point execute a script before taking a trace](xref:Making_a_measurement_point_execute_a_script_before_taking_a_trace).
 
 4. Optionally, in the *Advanced* section:
 
@@ -69,7 +69,7 @@ To configure a new or existing measurement point:
         > [!NOTE]
         > The *Frequency offset* and *Invert spectrum* options can be of use when the spectrum analyzer is operating behind frequency downconverters, which apply an offset to the spectrum and sometimes also invert it.
 
-    - Add an amplitude correction. See [Specifying an amplitude correction](Specifying_an_amplitude_correction.md).
+    - Add an amplitude correction. See [Specifying an amplitude correction](xref:Specifying_an_amplitude_correction).
 
 ### Displaying measurement points
 

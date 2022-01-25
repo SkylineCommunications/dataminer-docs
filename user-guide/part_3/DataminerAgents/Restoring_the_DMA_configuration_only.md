@@ -24,7 +24,7 @@ You can manually restore a DMA configuration by copying the *C:\\Skyline DataMin
 
 On servers running Microsoft Windows Server 2008 or higher, backups are taken using *StandAloneUpgrade.exe*. You can restore such a backup as follows:
 
-1. Make sure the DMA is prepared for the restoration. See [Preparing the destination server for a DMA restoration](Preparing_the_destination_server_for_a_DMA_restoration.md).
+1. Make sure the DMA is prepared for the restoration. See [Preparing the destination server for a DMA restoration](xref:Preparing_the_destination_server_for_a_DMA_restoration).
 
 2. In the *C:\\Skyline DataMiner\\Tools\\* directory, double-click *StandAloneUpgrade.exe*.
 

@@ -470,7 +470,7 @@ The method can take the following arguments:
 
     In this list of groups, you can also specify individual users. To do so, specify “user:”, followed by the user name.
 
-- Options in the form of a set of binary flags. See [AutomationScriptAttachOptions enumeration](AutomationScriptAttachOptions_enumeration.md).
+- Options in the form of a set of binary flags. See [AutomationScriptAttachOptions enumeration](xref:AutomationScriptAttachOptions_enumeration).
 
 The method returns *true* if attaching to the interactive client succeeded; otherwise it returns *false*.
 
@@ -982,7 +982,7 @@ void Log(string message, LogType type, int logLevel, string method)
 
 > [!TIP]
 > See also:
-> [LogType enumeration](LogType_enumeration.md)
+> [LogType enumeration](xref:LogType_enumeration)
 
 *method* can be any text. Use it to add an extra comment to the log entry.
 

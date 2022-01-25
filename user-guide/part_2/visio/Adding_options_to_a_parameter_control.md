@@ -8,7 +8,7 @@ If you used a shape data field of type **ParameterControl** to turn a shape into
 
 > [!TIP]
 > See also:
-> [Turning a shape into a parameter control](Turning_a_shape_into_a_parameter_control.md)
+> [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control)
 
 ### Configuring the shape data field
 
@@ -158,7 +158,7 @@ IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuff
 
 #### CustomTextBoxInfo:\[Text\]
 
-See [Adding a filter box to a table control](Turning_a_shape_into_a_parameter_control.md#adding-a-filter-box-to-a-table-control).
+See [Adding a filter box to a table control](xref:Turning_a_shape_into_a_parameter_control#adding-a-filter-box-to-a-table-control).
 
 #### CustomTitle:\[Text\]
 
@@ -204,7 +204,7 @@ To do so, add the following shape data to the shape with the **ParameterControl*
 | Shape data field        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ParameterControlOptions | Set this field to *DoubleClickAction=OpenPage*.                                                                                                                                                                                                                                                                                                                                                                              |
-| LinkOptions             | The width and height of the undocked window that will be opened when the shape is double-clicked, in the format *Width=**x**\|Height=**x**.* <br> See [Configuring the size of the window](Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing.md#configuring-the-size-of-the-window). |
+| LinkOptions             | The width and height of the undocked window that will be opened when the shape is double-clicked, in the format *Width=**x**\|Height=**x**.* <br> See [Configuring the size of the window](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing#configuring-the-size-of-the-window). |
 | VdxPage                 | Set this field to MyPage*\|Window,* where MyPage is a page name of the visual overview of the element containing the table.                                                                                                                                                                                                                                |
 
 For example:
@@ -219,7 +219,7 @@ For example:
 
 #### Filter
 
-See [Adding a filter box to a table control](Turning_a_shape_into_a_parameter_control.md#adding-a-filter-box-to-a-table-control).
+See [Adding a filter box to a table control](xref:Turning_a_shape_into_a_parameter_control#adding-a-filter-box-to-a-table-control).
 
 #### HideSlider
 
@@ -241,7 +241,7 @@ Using the “IncludedPids” and “TableRowFilter” options in **ParameterCont
 
 - Use the “*IncludedPids*” option to specify the IDs of the columns to be displayed.
 
-- Use the “*TableRowFilter*” option to filter out specific rows. This is a server-side filter that accepts a semicolon-separated list of PID=value pairs. From DataMiner 10.2.0/10.1.3 onwards, fullfilter syntax is supported for this option (see [Dynamic table filter syntax](Dynamic_table_filter_syntax.md)).
+- Use the “*TableRowFilter*” option to filter out specific rows. This is a server-side filter that accepts a semicolon-separated list of PID=value pairs. From DataMiner 10.2.0/10.1.3 onwards, fullfilter syntax is supported for this option (see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)).
 
 Examples:
 
@@ -263,7 +263,7 @@ TableRowFilter:106=sl*
 TableRowFilter:42002 in_range 1/5
 ```
 
-- Row filter: Display only rows where parameter 42002 has a value between 1 and 5. <br>For this example, advanced dynamic table filter syntax is used. For more information, see [Dynamic table filter syntax](Dynamic_table_filter_syntax.md).
+- Row filter: Display only rows where parameter 42002 has a value between 1 and 5. <br>For this example, advanced dynamic table filter syntax is used. For more information, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 ```txt
 TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1)
@@ -273,10 +273,10 @@ TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1)
 
 > [!NOTE]
 > - As *TableRowFilter* is a server-side filter, for discrete parameters you should use the raw values instead of the display values in the filter.
-> - In the TableRowFilter and IncludedPIDs options, you can use placeholders like “\[Param:...\]”, “\[Var:...\]”, etc. See [Placeholders for variables in shape data values](Placeholders_for_variables_in_shape_data_values.md).
+> - In the TableRowFilter and IncludedPIDs options, you can use placeholders like “\[Param:...\]”, “\[Var:...\]”, etc. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 > - To specify a client-side filter for a table parameter, use the *ClientSideRowFilter* option instead: [ClientSideRowFilter](#clientsiderowfilter).
 > - From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
-> - Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters)). E.g. *\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)*
+> - Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)). E.g. *\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)*
 
 #### LedBar
 
@@ -326,7 +326,7 @@ In a DataMiner protocol, a column can be linked to a Visio session variable, so 
 
 #### Table
 
-See [Adding a filter box to a table control](Turning_a_shape_into_a_parameter_control.md#adding-a-filter-box-to-a-table-control).
+See [Adding a filter box to a table control](xref:Turning_a_shape_into_a_parameter_control#adding-a-filter-box-to-a-table-control).
 
 #### TitleFont
 

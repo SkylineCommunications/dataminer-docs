@@ -23,4 +23,4 @@ To make a Correlation rule trigger a parameter set:
 
     - **Execute on base alarm updates**: Select this option to also set the parameter when the base alarms change.
 
-    - **Evaluate value**: Select this option to allow placeholders in the parameter value. For more information, see [Correlation rule syntax](Correlation_rule_syntax.md).
+    - **Evaluate value**: Select this option to allow placeholders in the parameter value. For more information, see [Correlation rule syntax](xref:Correlation_rule_syntax).

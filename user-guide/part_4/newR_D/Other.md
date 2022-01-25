@@ -138,7 +138,7 @@ To configure the component:
 
 2. If you used an element data feed: Click the filter button in the quick menu below the component and add a data page filter feed from the *Parameters* category.
 
-    If you used a data page feed based on element, no additional filter is needed.     If you used a data page feed based on protocol, an additional element filter feed is needed. You can either directly add this feed from the *Elements* section in the data pane, or use a feed component. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+    If you used a data page feed based on element, no additional filter is needed.     If you used a data page feed based on protocol, an additional element filter feed is needed. You can either directly add this feed from the *Elements* section in the data pane, or use a feed component. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
 3. Optionally, to customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
@@ -220,7 +220,7 @@ Please note the following regarding this component.
 
     2. Optionally, add a spectrum preset filter.
 
-    3. Add a list feed to the dashboard (see [List](Feeds.md#list)) and add the spectrum session feed from your spectrum analyzer as its input.
+    3. Add a list feed to the dashboard (see [List](xref:Feeds#list)) and add the spectrum session feed from your spectrum analyzer as its input.
 
     The dashboard will then show a list of all the available measurement points, with a colored LED. This LED will be a filled circle for the active measurement point and an empty circle for other measurement points. If measurement points are selected in the list, this will update the spectrum session, so that the spectrum analyzer visualization shows those measurement points.
 
@@ -249,7 +249,7 @@ To configure the component:
 
 4. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - *Layout*: In case trend statistics are displayed for multiple parameters, this setting determines whether the blocks of statistics are displayed next to each other or below each other. However, note that when the dashboard is used on a small screen, they will always be displayed below each other.
 
@@ -273,7 +273,7 @@ To configure this component:
 
     - *Default page*: In case the Visio drawing consists of several pages, select the page that should be displayed by default in this drop-down list. Keep in mind that if *Page selection* is not selected, this is the only page the user of the dashboard will be able to see.
 
-3. Optionally, fine-tune the component layout. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+3. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 > [!NOTE]
 > - Spectrum components are currently not yet supported in visual overviews within dashboards.

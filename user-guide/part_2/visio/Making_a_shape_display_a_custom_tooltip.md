@@ -15,7 +15,7 @@ Using a shape data field of type **Info**, you can add custom tooltips to shapes
 Add a shape data field of type **Info** to the shape, and set its value to the text that has to appear in the tooltip when users hover over the shape.
 
 > [!NOTE]
-> Make sure the value you enter is not one of the reserved keywords listed in [Making a shape display information about the item it is linked to](Making_a_shape_display_information_about_the_item_it_is_linked_to.md).
+> Make sure the value you enter is not one of the reserved keywords listed in [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 Alternatively, or in addition to the **Info** shape data field, you can also add a shape data field of type **Tooltip** and set its value to the text that has to appear in the tooltip.
 

@@ -6,19 +6,19 @@ uid: Updating_the_value_of_a_write_parameter
 
 The way you can change the value of a write parameter depends on the type of parameter:
 
-- [Updating discrete parameters](Updating_discrete_parameters.md)
+- [Updating discrete parameters](xref:Updating_discrete_parameters)
 
-- [Updating analog parameters](Updating_analog_parameters.md)
+- [Updating analog parameters](xref:Updating_analog_parameters)
 
-- [Updating hybrid parameters](Updating_hybrid_parameters.md)
+- [Updating hybrid parameters](xref:Updating_hybrid_parameters)
 
-- [Updating dynamic table parameters](Updating_dynamic_table_parameters.md)
+- [Updating dynamic table parameters](xref:Updating_dynamic_table_parameters)
 
 Regardless of the type of parameter, when you have changed the value of any write parameter:
 
 - Click the green check mark to apply the change. If you make several parameter changes without clicking the check mark, a message will appear at the bottom of the card, asking you to confirm your changes.
 
-- If a parameter is dependent on another parameter, you may need to update the value of that other parameter as well. See [Parameter dependencies](Parameter_dependencies.md).
+- If a parameter is dependent on another parameter, you may need to update the value of that other parameter as well. See [Parameter dependencies](xref:Parameter_dependencies).
 
 > [!NOTE]
 > When you update the value of a write parameter, the DMS always checks the new value before sending it to the device. If validation fails, a message box will appear explaining why the new value is not valid.
@@ -35,4 +35,4 @@ Updates of some write parameters, however, always have to be confirmed:
 
 > [!TIP]
 > See also:
-> [Configuring matrix parameters](Configuring_matrix_parameters.md)
+> [Configuring matrix parameters](xref:Configuring_matrix_parameters)

@@ -18,7 +18,7 @@ In addition, certain options can be configured for dynamically positioned shapes
 
 Suppose you have a view that contains three elements, and you want the Visio drawing linked to that view to display automatically positioned shapes representing each of those three elements.
 
-1. In the drawing, create two calibration shapes. See [Calibrating the X and Y coordinates in a Visio drawing](Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing.md).
+1. In the drawing, create two calibration shapes. See [Calibrating the X and Y coordinates in a Visio drawing](xref:Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing).
 
 2. In the drawing, create one shape representing an element, and add the following shape data fields to it:
 
@@ -61,13 +61,13 @@ Result: For every element underneath the view, the drawing will contain a shape 
     [property:PropertyName]
     ```
 
-- **XPos**: Property of the specified element, service or view, which must contain a decimal number between the minimum and the maximum xpos specified in the two calibration shapes. See [Calibrating the X and Y coordinates in a Visio drawing](Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing.md).
+- **XPos**: Property of the specified element, service or view, which must contain a decimal number between the minimum and the maximum xpos specified in the two calibration shapes. See [Calibrating the X and Y coordinates in a Visio drawing](xref:Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing).
 
     ```txt
     [property:PropertyName]
     ```
 
-- **YPos**: Property of the specified element, service or view, which must contain a decimal number between the minimum and the maximum ypos specified in the two calibration shapes. See [Calibrating the X and Y coordinates in a Visio drawing](Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing.md).
+- **YPos**: Property of the specified element, service or view, which must contain a decimal number between the minimum and the maximum ypos specified in the two calibration shapes. See [Calibrating the X and Y coordinates in a Visio drawing](xref:Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing).
 
     ```txt
     [property:PropertyName]
@@ -99,11 +99,11 @@ Result: For every element underneath the view, the drawing will contain a shape 
 
     > [!NOTE]
     > - The circles indicating the location of the cities will bear the current alarm color of the corresponding table row.
-    > - In order to avoid parsing problems due to “;” separators in table row filters, it is advised to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](Linking_a_shape_to_a_SET_command.md#about-using-separator-characters).
+    > - In order to avoid parsing problems due to “;” separators in table row filters, it is advised to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
     > [!TIP]
     > See also:
-    > [Dynamic table filter syntax](Dynamic_table_filter_syntax.md)
+    > [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)
 
 - **SelectionDetails**: If you want the shape to act as a Details pane displaying the row data, then add a shape data item to it of type **SelectionDetails** and set its value to “1”.
 
@@ -115,7 +115,7 @@ Result: For every element underneath the view, the drawing will contain a shape 
 
 Suppose you want a Visio drawing to contain an automatically positioned shape for every row in a dynamic table of a particular element.
 
-1. In the drawing, create two calibration shapes. See [Calibrating the X and Y coordinates in a Visio drawing](Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing.md).
+1. In the drawing, create two calibration shapes. See [Calibrating the X and Y coordinates in a Visio drawing](xref:Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing).
 
 2. In the drawing, create one shape, and add the following shape data field to it:
 
@@ -201,7 +201,7 @@ For example:
 
 > [!TIP]
 > See also:
-> [Extended conditional shape manipulation actions](Extended_conditional_shape_manipulation_actions.md)
+> [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions)
 
 #### Dynamically selecting shape templates for dynamically positioned shapes
 
@@ -214,7 +214,7 @@ To do so, create template shapes as child shapes for the XPos shape. For each te
 
 > [!TIP]
 > See also:
-> [Extended conditional shape manipulation actions](Extended_conditional_shape_manipulation_actions.md)
+> [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions)
 
 When the condition for a particular template is true for a particular row of the table, the template will be applied for that row.
 
@@ -392,7 +392,7 @@ Line objects that have to be used to automatically connect shapes should be assi
 
     > [!TIP]
     > See also:
-    > [Dynamic table filter syntax](Dynamic_table_filter_syntax.md)
+    > [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)
 
 #### Dynamic shapes
 

@@ -20,7 +20,7 @@ The way this value is displayed depends on whether it is a discrete or an analog
 
 > [!TIP]
 > See also:
-> [Changing the way parameters are displayed](Changing_the_way_parameters_are_displayed.md)
+> [Changing the way parameters are displayed](xref:Changing_the_way_parameters_are_displayed)
 
 #### Write parameters
 
@@ -33,4 +33,4 @@ The way in which the DataMiner user interfaces allow users to change those value
 
 > [!TIP]
 > See also:
-> [Updating the value of a write parameter](Updating_the_value_of_a_write_parameter.md)
+> [Updating the value of a write parameter](xref:Updating_the_value_of_a_write_parameter)

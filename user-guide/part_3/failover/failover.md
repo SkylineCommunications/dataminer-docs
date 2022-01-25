@@ -8,18 +8,18 @@ Each DataMiner Agent in a DataMiner system can be teamed up with a dedicated bac
 
 This section consists of the following topics:
 
-- [About DMA Failover](About_DMA_Failover.md)
+- [About DMA Failover](xref:About_DMA_Failover)
 
-- [Viewing Failover information](Viewing_Failover_information.md)
+- [Viewing Failover information](xref:Viewing_Failover_information)
 
-- [Configuring Failover](Configuring_Failover.md)
+- [Configuring Failover](xref:Configuring_Failover)
 
-- [Preferred configuration using virtual IP addresses (best practice)](Preferred_configuration_using_virtual_IP_addresses__best_practice.md)
+- [Preferred configuration using virtual IP addresses (best practice)](xref:Preferred_configuration_using_virtual_IP_addresses__best_practice)
 
-- [Linking an element to a fixed DMA: Force Agent](Linking_an_element_to_a_fixed_DMA_Force_Agent.md)
+- [Linking an element to a fixed DMA: Force Agent](xref:Linking_an_element_to_a_fixed_DMA_Force_Agent)
 
-- [Synchronizing the DMA databases](Synchronizing_the_DMA_databases.md)
+- [Synchronizing the DMA databases](xref:Synchronizing_the_DMA_databases)
 
-- [Ending a Failover configuration](Ending_a_Failover_configuration.md)
+- [Ending a Failover configuration](xref:Ending_a_Failover_configuration)
 
-- [Frequently asked questions about DMA Failover](Frequently_asked_questions_about_DMA_Failover.md)
+- [Frequently asked questions about DMA Failover](xref:Frequently_asked_questions_about_DMA_Failover)

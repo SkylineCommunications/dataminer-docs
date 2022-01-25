@@ -53,14 +53,14 @@ To edit a script, in the *Edit script* window, select the script in the pane on 
 
     - **Get trace**: Performs a trace measurement with the presets defined earlier in the script.
 
-    - For more information on script actions, refer to [Spectrum Analyzer script actions](Spectrum_Analyzer_script_actions.md).
+    - For more information on script actions, refer to [Spectrum Analyzer script actions](xref:Spectrum_Analyzer_script_actions).
 
 - Change the position of a script action, by moving the mouse pointer over the action in question, and clicking the up/down arrows that appear to the right of it.
 
 - Delete a script action, by moving the mouse pointer over the action in question, and clicking the *x* that appears to the right of it.
 
     > [!NOTE]
-    > When the measurements in a script are executed, this results in new parameters. For instance, a new parameter C/N can be created by executing a script that measures a trace, takes the difference between the noise level and the carrier level and assigns that value to C/N. The new parameters can then be used for trending and alarming. for more information, see [Working with spectrum monitors](Working_with_spectrum_monitors.md).
+    > When the measurements in a script are executed, this results in new parameters. For instance, a new parameter C/N can be created by executing a script that measures a trace, takes the difference between the noise level and the carrier level and assigns that value to C/N. The new parameters can then be used for trending and alarming. for more information, see [Working with spectrum monitors](xref:Working_with_spectrum_monitors).
 
 ### Using global constants
 

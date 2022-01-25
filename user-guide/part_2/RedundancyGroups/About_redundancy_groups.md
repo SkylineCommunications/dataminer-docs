@@ -47,7 +47,7 @@ To do so, you have to use an optional extra layer of redundancy logic called “
 
 > [!TIP]
 > See also:
-> [Creating a redundancy group](Creating_a_redundancy_group.md)
+> [Creating a redundancy group](xref:Creating_a_redundancy_group)
 
 ### Priority in a redundancy group
 
@@ -57,4 +57,4 @@ To do so, you have to use an optional extra layer of redundancy logic called “
 
 > [!TIP]
 > See also:
-> [Setting the priority of a primary or backup element](Setting_the_priority_of_a_primary_or_backup_element.md)
+> [Setting the priority of a primary or backup element](xref:Setting_the_priority_of_a_primary_or_backup_element)

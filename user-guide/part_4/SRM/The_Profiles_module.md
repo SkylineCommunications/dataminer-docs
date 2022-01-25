@@ -14,11 +14,11 @@ To create useful instances, you first need to create profile parameters and defi
 
 This section consists of the following topics:
 
-- [Configuring profile parameters](Configuring_profile_parameters.md)
+- [Configuring profile parameters](xref:Configuring_profile_parameters)
 
-- [Configuring profile definitions](Configuring_profile_definitions.md)
+- [Configuring profile definitions](xref:Configuring_profile_definitions)
 
-- [Configuring profile instances](Configuring_profile_instances.md)
+- [Configuring profile instances](xref:Configuring_profile_instances)
 
 > [!TIP]
 > See also:

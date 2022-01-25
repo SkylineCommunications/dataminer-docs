@@ -100,4 +100,4 @@ C:COMMANDNAME:VALUE1:VALUE2:...
 
 > [!TIP]
 > See also:
-> [Commands](Configuring_Mobile_Gateway_in_DataMiner_Cube.md#commands)
+> [Commands](xref:Configuring_Mobile_Gateway_in_DataMiner_Cube#commands)

@@ -10,7 +10,7 @@ The following concepts are of importance for the Service & Resource Management (
 
     > [!TIP]
     > See also:
-    > [Configuring pools of resources](Configuring_pools_of_resources.md)
+    > [Configuring pools of resources](xref:Configuring_pools_of_resources)
 
 - **Virtual platform**: A logical collection of resource pools.
 
@@ -18,7 +18,7 @@ The following concepts are of importance for the Service & Resource Management (
 
     > [!TIP]
     > See also:
-    > [Adding a virtual function as a resource](Configuring_pools_of_resources.md#adding-a-virtual-function-as-a-resource)
+    > [Adding a virtual function as a resource](xref:Configuring_pools_of_resources#adding-a-virtual-function-as-a-resource)
 
 - **Booking instance** or **reservation** **instance**: A definition of which resources are used, how much of them is used, and when they are used. With booking instances, you can indicate which resources are in use at any point in time. Booking instances are indicated on the occupancy timeline in the *Resources* module.
 
@@ -38,19 +38,19 @@ The following concepts are of importance for the Service & Resource Management (
 
     > [!TIP]
     > See also:
-    > - [Configuring profile definitions](Configuring_profile_definitions.md)
+    > - [Configuring profile definitions](xref:Configuring_profile_definitions)
 
 - **Profile instance**: An instance of a profile, with particular values assigned to each of the parameters in the profile definition.
 
     > [!TIP]
     > See also:
-    > - [Configuring profile instances](Configuring_profile_instances.md)
+    > - [Configuring profile instances](xref:Configuring_profile_instances)
 
 - **Virtual function definition**: The definition of the parameters, interfaces, etc. of a virtual function resource, which is contained in a functions XML file, and linked to a particular protocol.
 
     > [!TIP]
     > See also:
-    > [Functions XML files](Functions_XML_files.md)
+    > [Functions XML files](xref:Functions_XML_files)
 
 - **Virtual function instance**: The instantiation of a virtual function definition. A protocol could for instance have several functions or several elements that conform to the same virtual function definition, in which case several corresponding virtual function instances can be generated.
 
@@ -58,4 +58,4 @@ The following concepts are of importance for the Service & Resource Management (
 
     > [!TIP]
     > See also:
-    > [The Services module](The_Services_module.md)
+    > [The Services module](xref:The_Services_module)

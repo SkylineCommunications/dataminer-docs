@@ -30,7 +30,7 @@ Syntax:
 
     > [!TIP]
     > See also:
-    > [Configuring an SNMP manager in DataMiner Cube](Configuring_an_SNMP_manager_in_DataMiner_Cube.md)
+    > [Configuring an SNMP manager in DataMiner Cube](xref:Configuring_an_SNMP_manager_in_DataMiner_Cube)
 
 ### Custom bindings
 

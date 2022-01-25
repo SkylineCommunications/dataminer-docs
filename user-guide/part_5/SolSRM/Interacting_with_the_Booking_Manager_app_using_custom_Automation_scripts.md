@@ -8,8 +8,8 @@ Many functionalities of the Booking Manager app are also available via scripts. 
 
 This section will provide information about the types of scripts that are supported, and about the possible actions that can be configured to be executed without any user interaction.
 
-- [Script types](Script_types.md)
+- [Script types](xref:Script_types)
 
-- [Silent actions](Silent_actions.md)
+- [Silent actions](xref:Silent_actions)
 
-- [Frequently asked questions related to bookings and scripting](Frequently_asked_questions_related_to_bookings_and_scripting.md)
+- [Frequently asked questions related to bookings and scripting](xref:Frequently_asked_questions_related_to_bookings_and_scripting)

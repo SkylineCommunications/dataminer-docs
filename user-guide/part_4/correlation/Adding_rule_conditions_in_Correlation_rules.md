@@ -12,7 +12,7 @@ In the *Rule condition* section of the details pane, specify one or more conditi
 
 2. If you have selected *Script condition*, enter the script in the large text box.
 
-    For more information on how to enter a script condition, see [Correlation rule syntax](Correlation_rule_syntax.md).
+    For more information on how to enter a script condition, see [Correlation rule syntax](xref:Correlation_rule_syntax).
 
     > [!NOTE]
     > When configuring script conditions, keep in mind that a correlation rule can only be triggered by alarm events.
@@ -55,5 +55,5 @@ In the *Rule condition* section of the details pane, specify one or more conditi
 
 > [!NOTE]
 > - In a cluster, a temporary disconnection between the Agent handling the rule and a remote Agent can cause an extra sliding window occurrence, as the base event is considered cleared when the Agent disconnects, and considered new when it reconnects.
-> - If a disconnection between the Agent handling the rule and a remote Agent occurs after actions have been executed for a persistent rule, and this causes the conditions to no longer be fulfilled, the persistent timer will start again as soon as connection between the Agents has been restored. See [Correlation in DataMiner clusters](About_DMS_Correlation.md#correlation-in-dataminer-clusters).
+> - If a disconnection between the Agent handling the rule and a remote Agent occurs after actions have been executed for a persistent rule, and this causes the conditions to no longer be fulfilled, the persistent timer will start again as soon as connection between the Agents has been restored. See [Correlation in DataMiner clusters](xref:About_DMS_Correlation#correlation-in-dataminer-clusters).
 >

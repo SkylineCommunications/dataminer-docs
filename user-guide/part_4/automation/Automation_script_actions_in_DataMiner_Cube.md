@@ -8,44 +8,44 @@ With the *Add action* drop-down list, you can choose different actions to add to
 
 The following actions are available in Cube:
 
-- [Assign dummy](Assign_dummy.md)
+- [Assign dummy](xref:Assign_dummy)
 
-- [Assign template](Assign_template.md)
+- [Assign template](xref:Assign_template)
 
-- [CSharp code](CSharp_code.md)
+- [CSharp code](xref:CSharp_code)
 
-- [Clear memory](Clear_memory.md)
+- [Clear memory](xref:Clear_memory)
 
-- [Comment](Comment.md)
+- [Comment](xref:Comment)
 
-- [Email](Email.md)
+- [Email](xref:Email)
 
-- [Exit](Exit.md)
+- [Exit](xref:Exit)
 
-- [Find interactive client](Find_interactive_client.md)
+- [Find interactive client](xref:Find_interactive_client)
 
-- [Get parameter or memory value](Get_parameter_or_memory_value.md)
+- [Get parameter or memory value](xref:Get_parameter_or_memory_value)
 
-- [GoTo and Label](GoTo_and_Label.md)
+- [GoTo and Label](xref:GoTo_and_Label)
 
-- [If condition](If_condition.md)
+- [If condition](xref:If_condition)
 
-- [Information](Information.md)
+- [Information](xref:Information)
 
-- [Log](Log.md)
+- [Log](xref:Log)
 
-- [Script](Script.md)
+- [Script](xref:Script)
 
-- [Set parameter, memory position or variable](Set_parameter_memory_position_or_variable.md)
+- [Set parameter, memory position or variable](xref:Set_parameter_memory_position_or_variable)
 
-- [Set element state](Set_element_state.md)
+- [Set element state](xref:Set_element_state)
 
-- [Sleep](Sleep.md)
+- [Sleep](xref:Sleep)
 
-- [SMS](SMS.md)
+- [SMS](xref:SMS)
 
-- [Upload report to FTP](Upload_report_to_FTP.md)
+- [Upload report to FTP](xref:Upload_report_to_FTP)
 
-- [Upload report to shared folder](Upload_report_to_shared_folder.md)
+- [Upload report to shared folder](xref:Upload_report_to_shared_folder)
 
-- [User interaction](User_interaction.md)
+- [User interaction](xref:User_interaction)

@@ -6,8 +6,8 @@ uid: views
 
 This section consists of the following topics:
 
-- [About views](About_views.md)
+- [About views](xref:About_views)
 
-- [View cards](View_cards.md)
+- [View cards](xref:View_cards)
 
-- [Managing views](Managing_views.md)
+- [Managing views](xref:Managing_views)

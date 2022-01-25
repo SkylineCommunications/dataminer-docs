@@ -17,4 +17,4 @@ An element can be in one of three states:
 
 > [!TIP]
 > See also:
-> [Changing the state of an element](Changing_the_state_of_an_element.md)
+> [Changing the state of an element](xref:Changing_the_state_of_an_element)

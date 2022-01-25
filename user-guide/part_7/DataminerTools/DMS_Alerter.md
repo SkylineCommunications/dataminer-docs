@@ -10,10 +10,10 @@ The following topics contain more information on DMS Alerter:
 
 - [Accessing DMS Alerter](xref:Accessing_DMS_Alerter)
 
-- [Working with the Alerter alarm list](Working_with_the_Alerter_alarm_list.md)
+- [Working with the Alerter alarm list](xref:Working_with_the_Alerter_alarm_list)
 
-- [Communicating with other DataMiner users via Alerter](Communicating_with_other_DataMiner_users_via_Alerter.md)
+- [Communicating with other DataMiner users via Alerter](xref:Communicating_with_other_DataMiner_users_via_Alerter)
 
-- [Working with Alerter pop-up balloons](Working_with_Alerter_pop-up_balloons.md#working-with-alerter-pop-up-balloons)
+- [Working with Alerter pop-up balloons](xref:Working_with_Alerter_pop-up_balloons#working-with-alerter-pop-up-balloons)
 
-- [Configuring DMS Alerter](Configuring_DMS_Alerter.md)
+- [Configuring DMS Alerter](xref:Configuring_DMS_Alerter)

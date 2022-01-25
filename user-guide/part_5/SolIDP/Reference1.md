@@ -6,6 +6,6 @@ uid: Reference1
 
 In this section:
 
-- [Discovery profiles](Discovery_profiles.md)
+- [Discovery profiles](xref:Discovery_profiles)
 
-- [CI Types](CI_Types1.md#ci-types)
+- [CI Types](xref:CI_Types1#ci-types)

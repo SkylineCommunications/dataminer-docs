@@ -8,7 +8,7 @@ By default, a DataMiner Agent acting as an SNMP agent uses UDP port 161. The sam
 
 To prevent any conflicts between DataMiner Agents and Windows SNMP services, you can either change the port used by DataMiner Agents or the port used by the Windows SNMP services.
 
-For more information about how DataMiner exchanges SNMP messages with devices and third-party SNMP managers, see [Interaction between SNMP manager and SNMP agent](Interaction_between_SNMP_manager_and_SNMP_agent.md).
+For more information about how DataMiner exchanges SNMP messages with devices and third-party SNMP managers, see [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent).
 
 ### Changing the SNMP port used by a Windows SNMP service
 
@@ -89,4 +89,4 @@ Please note the following regarding the customization of trap reception ports:
 
 > [!TIP]
 > See also:
-> [Interaction between SNMP manager and SNMP agent](Interaction_between_SNMP_manager_and_SNMP_agent.md)
+> [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)

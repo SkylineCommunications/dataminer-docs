@@ -8,7 +8,7 @@ A shape or a page can be set to be visible only to users with a particular secur
 
 > [!NOTE]
 > - If the security settings have been configured so as to deny a user access to particular views or elements, then shapes linking to these views or elements will automatically not be displayed in Visual Overview.
-> - For more information on how to make items in a table-based dynamically generated tree control visible based on security access level, see [Creating a tree control](Adding_options_to_a_session_variable_control.md#creating-a-tree-control).
+> - For more information on how to make items in a table-based dynamically generated tree control visible based on security access level, see [Creating a tree control](xref:Adding_options_to_a_session_variable_control#creating-a-tree-control).
 
 ### Configuring the shape data field
 

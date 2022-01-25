@@ -20,7 +20,7 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
 
 - **Cube side indicators**: Four blue squares, each representing one of the four Cube sides. The largest square marks the Cube side that is currently displayed. These indicators may be hidden, depending on the user settings. (See “Quick menu icon” below.)
 
-- **Cube search box**: See [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md).
+- **Cube search box**: See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
 - **DMS time**: Indicates the server time of the DMS, which may be useful in case the server is not in the same time zone as the client. This time indicator may be hidden, depending on the user settings. (See “Quick menu icon” below.)
 
@@ -46,14 +46,14 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
 
         > [!TIP]
         > See also:
-        > - [User settings](User_settings.md)
-        > - [Computer settings](Computer_settings.md)
+        > - [User settings](xref:User_settings)
+        > - [Computer settings](xref:Computer_settings)
 
     - *Change layout*: Allows you to select a different layout for the cards in the Cube workspace.
 
         > [!TIP]
         > See also:
-        > [Changing the card layout](Working_with_cards_in_DataMiner_Cube.md#changing-the-card-layout)
+        > [Changing the card layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout)
 
     - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database and DMS security, if you have the necessary permissions to do so. The System Center also provides access to all DataMiner log files.
 
@@ -102,7 +102,7 @@ From DataMiner 10.0.0/10.0.2 onwards, on the left-hand side of the Cube UI, a si
 
 - *Apps*: Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane).
 
-- *Workspaces*: Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](Working_with_workspaces.md).
+- *Workspaces*: Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces).
 
 - *Community*: This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features.
 
@@ -110,7 +110,7 @@ From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sid
 
 - *Overview*: Displays the root view page listing all items below the root view.
 
-- *Search*: If an advanced search is done from the Cube header bar, an additional *Search* button is displayed, which displays the pane with the advanced search results. If this button is not pinned to the sidebar, it will no longer be displayed as soon as you click a different button. See [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md).
+- *Search*: If an advanced search is done from the Cube header bar, an additional *Search* button is displayed, which displays the pane with the advanced search results. If this button is not pinned to the sidebar, it will no longer be displayed as soon as you click a different button. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
 - A button representing any of the available modules, the “About” information, the Help, or the settings.
 
@@ -118,7 +118,7 @@ To unpin a button again, right-click the button and select *Unpin*. This is not 
 
 > [!NOTE]
 > - At most 4 items can be pinned to the sidebar. If the maximum number of items has been added, the button to pin more items is no longer displayed, until an item is unpinned again.
-> - It is possible to move the position of the sidebar to the right-hand side. To do so, press *Ctrl+Alt+Shift+RightArrow*. To move the pane back to the left-hand side, press *Ctrl+Alt+Shift+LeftArrow*. The sidebar position can also be changed in the Cube settings. See [Cube settings](User_settings.md#cube-settings).
+> - It is possible to move the position of the sidebar to the right-hand side. To do so, press *Ctrl+Alt+Shift+RightArrow*. To move the pane back to the left-hand side, press *Ctrl+Alt+Shift+LeftArrow*. The sidebar position can also be changed in the Cube settings. See [Cube settings](xref:User_settings#cube-settings).
 
 #### Surveyor pane
 
@@ -131,7 +131,7 @@ When you click an item in the tree, it opens in a card:
 - If you click the item with the middle mouse button, the new card is opened next to any cards that are already open.
 
 > [!NOTE]
-> - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](Main_Cube_UI_components_prior_to_DataMiner_10.md#surveyor-right-click-menu).
+> - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](xref:Main_Cube_UI_components_prior_to_DataMiner_10#surveyor-right-click-menu).
 > - You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
 ##### Icons
@@ -139,7 +139,7 @@ When you click an item in the tree, it opens in a card:
 The icons that precede an item name in the tree show what kind of item it is and what state and alarm state it is in.
 
 > [!NOTE]
-> Depending on the user settings, the legacy icons may be displayed instead of the icons described below. For more information on the legacy icons, see [Icons](Main_Cube_UI_components_prior_to_DataMiner_10.md#icons).
+> Depending on the user settings, the legacy icons may be displayed instead of the icons described below. For more information on the legacy icons, see [Icons](xref:Main_Cube_UI_components_prior_to_DataMiner_10#icons).
 
 - There are specific icons for different types of items:
 
@@ -246,7 +246,7 @@ Click any app in the list to open it. If you wish to open the app in a new card,
 
 When you open an item in Cube, e.g. an element or an app, it is opened in a so-called card in the large, central pane of the Cube UI.
 
-For more information, see [Working with cards in DataMiner Cube](Working_with_cards_in_DataMiner_Cube.md).
+For more information, see [Working with cards in DataMiner Cube](xref:Working_with_cards_in_DataMiner_Cube).
 
 #### Card header bar buttons
 
@@ -254,7 +254,7 @@ At the top of each card, there can be several buttons:
 
 | Button                                                                                   | Description                                                                                                                                                                                                                                                                                    |
 |------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../../images/CubeXCardBurger.png)   | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](Working_with_cards_in_DataMiner_Cube.md#card-header-bar-menu). |
+| ![](../../images/CubeXCardBurger.png)   | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](xref:Working_with_cards_in_DataMiner_Cube#card-header-bar-menu). |
 | ![](../../images/CubeXCardBack.png)       | Back button. When you have gone from one card to another, this button becomes available, allowing you to go back to a previous card. From DataMiner 10.0.10 onwards, this button goes to the previous open page, which can be on the same card.                                                |
 | ![](../../images/CubeXCardMax.png)         | Maximize button. Click this button to expand a card to its maximal size.<br>Only displayed if more than one card is opened in a layout other than the tab layout.                                                                                                                              |
 | ![](../../images/CubeXCardRestore.png) | Restore button. If a card has been maximized, use this button to restore it to its previous size.<br>Only displayed if more than one card is opened in a layout other than the tab layout.                                                                                                     |

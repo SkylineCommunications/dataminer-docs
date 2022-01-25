@@ -26,7 +26,7 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 
 2. Select a category from the list underneath *Add/Remove Components* to choose components from.
 
-3. Select one of the available components for the selected category. For more information about the available components, see [Dashboard components](Dashboard_components.md).
+3. Select one of the available components for the selected category. For more information about the available components, see [Dashboard components](xref:Dashboard_components).
 
 4. Add the component to a zone of your dashboard, either with the *Add to* selection box and the *Add* button below the list, or by dragging the component to the zone.
 

@@ -12,6 +12,6 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
 
 3. Make sure that, in the *DMA* tab of the *DIS Settings* window, you have added your local DataMiner Agent with the correct user account and you have not selected its *Enable remote debugging* option.
 
-    See [DMA](DIS_settings.md#dma)
+    See [DMA](xref:DIS_settings#dma)
 
-You are now ready to start debugging. See [Debugging a QAction](Debugging_a_QAction.md) or [Debugging an Automation script](Debugging_an_Automation_script.md).
+You are now ready to start debugging. See [Debugging a QAction](xref:Debugging_a_QAction) or [Debugging an Automation script](xref:Debugging_an_Automation_script).

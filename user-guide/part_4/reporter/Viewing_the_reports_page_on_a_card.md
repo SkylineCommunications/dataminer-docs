@@ -12,9 +12,9 @@ Many cards in DataMiner Cube have a *Reports* page. To go to this page:
 
 More information on the Reports page can be found in the following sections:
 
-- [Reports page overview](Reports_page_overview.md)
+- [Reports page overview](xref:Reports_page_overview)
 
-- [Exporting the report information](Exporting_the_report_information.md)
+- [Exporting the report information](xref:Exporting_the_report_information)
 
 > [!TIP]
 > See also:

@@ -6,10 +6,10 @@ uid: AutomationEntryPointType_class
 
 Below, you find an overview of all members of the *AutomationEntryPointType* class.
 
-- [AutomationEntryPointType methods](AutomationEntryPointType_methods.md)
+- [AutomationEntryPointType methods](xref:AutomationEntryPointType_methods)
 
-- [AutomationEntryPointType properties](AutomationEntryPointType_properties.md)
+- [AutomationEntryPointType properties](xref:AutomationEntryPointType_properties)
 
-- [AutomationEntryPointType operators](AutomationEntryPointType_operators.md)
+- [AutomationEntryPointType operators](xref:AutomationEntryPointType_operators)
 
 This C# class (available from DataMiner 9.5.12 onwards) represents an Automation entry point type.

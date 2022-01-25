@@ -8,7 +8,7 @@ Using a shape data field of type **Chain**, you can link a page of a Visio drawi
 
 > [!TIP]
 > See also:
-> [Linking a Visio page to an EPM filter section field](Linking_a_Visio_page_to_an_EPM_filter_section_field.md)
+> [Linking a Visio page to an EPM filter section field](xref:Linking_a_Visio_page_to_an_EPM_filter_section_field)
 
 ### Configuring the shape data field
 

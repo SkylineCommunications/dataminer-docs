@@ -40,7 +40,7 @@ To create a new trend template:
 
 > [!TIP]
 > See also:
-> [Configuring trend templates](Configuring_trend_templates.md)
+> [Configuring trend templates](xref:Configuring_trend_templates)
 
 ### Uploading a trend template
 

@@ -13,7 +13,7 @@ This “drop” behavior will often be implemented to visualize element properti
 
 > [!TIP]
 > See also:
-> [Triggering an action when the mouse pointer hovers over a shape](Triggering_an_action_when_the_mouse_pointer_hovers_over_a_shape.md)
+> [Triggering an action when the mouse pointer hovers over a shape](xref:Triggering_an_action_when_the_mouse_pointer_hovers_over_a_shape)
 
 ### Configuring the shape data field of the target shape
 
@@ -35,7 +35,7 @@ Add the following shape data fields to the shape:
 
     - A field of type **ParameterControl**.
 
-        See [Turning a shape into a parameter control](Turning_a_shape_into_a_parameter_control.md).
+        See [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control).
 
 - A field of type **DropTarget**, with the value set to “*TRUE*”.
 
@@ -47,7 +47,7 @@ Add the following shape data fields to the shape:
     | DropOnly   | Ensures that the target shape is not clickable                  |
 
     > [!NOTE]
-    > The “DropOnly” option can be combined with the “Selectable” option. See [Making shapes selectable](Making_shapes_selectable.md).
+    > The “DropOnly” option can be combined with the “Selectable” option. See [Making shapes selectable](xref:Making_shapes_selectable).
 
 ### Example of a “drop target” that visualizes the element name
 
@@ -156,9 +156,9 @@ To do so:
 
     > [!TIP]
     > See also:
-    > - [Linking a shape to an Automation script](Linking_a_shape_to_an_Automation_script.md)
-    > - [Linking a shape to an element parameter](Linking_a_shape_to_an_element_parameter.md)
-    > - [Turning a shape into a parameter control](Turning_a_shape_into_a_parameter_control.md)
+    > - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+    > - [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter)
+    > - [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control)
 
 2. Add a shape data field of type **DropTarget**, and set its value to TRUE.
 

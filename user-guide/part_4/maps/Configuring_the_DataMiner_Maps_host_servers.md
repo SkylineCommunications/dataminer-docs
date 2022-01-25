@@ -46,7 +46,7 @@ From DataMiner 9.5.8 onwards, it can have the following additional subtags:
 
 - **channel**: Business customers can optionally specify a channel for Channel Reports. To track usage across different applications using the same client ID, you may provide an optional channel parameter. By specifying different channel values for different aspects of your application, you can determine how your application is used.
 
-- For more info about Google Maps licensing, see: <br>[http://www.google.com/enterprise/mapsearth/products/mapsapi.html](http://www.google.com/enterprise/mapsearth/products/mapsapi.md)
+- For more info about Google Maps licensing, see: <br>[http://www.google.com/enterprise/mapsearth/products/mapsapi.html](http://www.google.com/enterprise/mapsearth/products/mapsapi.html)
 
 #### Configuration of the TilesServer tag
 

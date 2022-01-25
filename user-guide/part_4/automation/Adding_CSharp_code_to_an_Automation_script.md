@@ -69,7 +69,7 @@ To add C# code to a script:
 
 
 
-    - *Script references*: Allows you to refer to other C# blocks. See [Compiling a CSharp code block as a library](Compiling_a_CSharp_code_block_as_a_library.md).
+    - *Script references*: Allows you to refer to other C# blocks. See [Compiling a CSharp code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library).
 
 > [!NOTE]
 > From DataMiner 9.6.4 onwards, DataMiner uses the .NET Compiler Platform SDK (version 2.9) to validate and compile C# scripts, allowing the use of C# syntax up to and including version 7.3.
@@ -89,7 +89,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 ```
 
 > [!NOTE]
-> You can also make sure no exception is thrown when an undefined or empty parameter is encountered in C# code by selecting the general option *C#: Return NULL instead of an exception upon a GetParameter of a non-initialized parameter*. See [General script configuration](General_script_configuration.md).
+> You can also make sure no exception is thrown when an undefined or empty parameter is encountered in C# code by selecting the general option *C#: Return NULL instead of an exception upon a GetParameter of a non-initialized parameter*. See [General script configuration](xref:General_script_configuration).
 
 > [!TIP]
 > See also:

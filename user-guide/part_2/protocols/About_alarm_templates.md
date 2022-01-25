@@ -12,10 +12,10 @@ Additionally, alarm templates can be combined in template groups, in order to bu
 
 For more information on:
 
-- Creating alarm templates, see [Creating an alarm template](Managing_alarm_templates.md#creating-an-alarm-template).
+- Creating alarm templates, see [Creating an alarm template](xref:Managing_alarm_templates#creating-an-alarm-template).
 
-- Configuring alarm templates, see [Configuring alarm templates](Configuring_alarm_templates.md).
+- Configuring alarm templates, see [Configuring alarm templates](xref:Configuring_alarm_templates).
 
-- Assigning an alarm template to an element, see [Assigning an alarm template](Managing_alarm_templates.md#assigning-an-alarm-template).
+- Assigning an alarm template to an element, see [Assigning an alarm template](xref:Managing_alarm_templates#assigning-an-alarm-template).
 
-- Alarm template groups, see [Alarm template groups](Alarm_template_groups.md).
+- Alarm template groups, see [Alarm template groups](xref:Alarm_template_groups).

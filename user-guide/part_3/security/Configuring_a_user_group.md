@@ -17,7 +17,7 @@ To configure a user group:
 5. To change what users are a member of the group, go to the *Users* tab and move users to and from the *Available users* and *Included users* columns using the *ADD \>\>* and *\<\< REMOVE* buttons.
 
     > [!NOTE]
-    > Changes of group membership are also possible on user level. See [Changing group membership of a user](Changing_group_membership_of_a_user.md).
+    > Changes of group membership are also possible on user level. See [Changing group membership of a user](xref:Changing_group_membership_of_a_user).
 
 6. To determine the views, elements and services a user has access to, go to the *Permissions* tab, select the *Views* subtab and select the appropriate checkboxes:
 
@@ -46,10 +46,10 @@ To configure a user group:
 
     > [!TIP]
     > See also:
-    > - [DataMiner user permissions](DataMiner_user_permissions.md)
-    > - [Which user permissions are included in which security preset?](Frequently_asked_questions_about_user_group_settings.md#which-user-permissions-are-included-in-which-security-preset)
+    > - [DataMiner user permissions](xref:DataMiner_user_permissions)
+    > - [Which user permissions are included in which security preset?](xref:Frequently_asked_questions_about_user_group_settings#which-user-permissions-are-included-in-which-security-preset)
 
-8. To configure notifications for the group, go to the *Alerts* tab and follow the same procedure as for alerts for a single user. See [Configuring user notifications](Configuring_user_notifications.md).
+8. To configure notifications for the group, go to the *Alerts* tab and follow the same procedure as for alerts for a single user. See [Configuring user notifications](xref:Configuring_user_notifications).
 
     > [!NOTE]
     > In contrast to alerts for a single user, alerts for a group cannot be sent with Alerter.

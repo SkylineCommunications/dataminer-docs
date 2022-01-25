@@ -8,10 +8,10 @@ Below, you can find an overview of all members of the *UIBuilder* class.
 
 This C# class allows you to define a dialog box of an interactive Automation script.
 
-- [UIBuilder example](UIBuilder_example.md)
+- [UIBuilder example](xref:UIBuilder_example)
 
-- [UIBuilder constructor](UIBuilder_constructor.md)
+- [UIBuilder constructor](xref:UIBuilder_constructor)
 
-- [UIBuilder methods](UIBuilder_methods.md)
+- [UIBuilder methods](xref:UIBuilder_methods)
 
-- [UIBuilder properties](UIBuilder_properties.md)
+- [UIBuilder properties](xref:UIBuilder_properties)

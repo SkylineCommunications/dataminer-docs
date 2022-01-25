@@ -60,7 +60,7 @@ On the visual overview of an **element**, two options are available (from DataMi
     - **New blank**: Opens a new, blank drawing in Microsoft Visio, which will automatically be assigned to the current element.
 
         > [!NOTE]
-        > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](DataMiner_Visio_templates.md#overview-of-the-default-visio-templates-supplied-by-skyline).
+        > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](xref:DataMiner_Visio_templates#overview-of-the-default-visio-templates-supplied-by-skyline).
 
     - **New upload**: Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element.
 
@@ -77,7 +77,7 @@ On the visual overview of a **service or view**, the context menu can contain th
 - **New blank**: Opens a new, blank drawing in Microsoft Visio, which will automatically be assigned to the selected service or view.
 
     > [!NOTE]
-    > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](DataMiner_Visio_templates.md#overview-of-the-default-visio-templates-supplied-by-skyline).
+    > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](xref:DataMiner_Visio_templates#overview-of-the-default-visio-templates-supplied-by-skyline).
 
 - **New upload**: Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the selected service or view.
 
@@ -98,13 +98,13 @@ On the visual overview of a **service or view**, the context menu can contain th
 - **New blank**: Opens a new, blank drawing in Microsoft Visio, which will be used as the new custom drawing for the protocol and assigned to all elements using the protocol.
 
     > [!NOTE]
-    > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](DataMiner_Visio_templates.md#overview-of-the-default-visio-templates-supplied-by-skyline).
+    > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](xref:DataMiner_Visio_templates#overview-of-the-default-visio-templates-supplied-by-skyline).
 
 - **New upload**: Opens the *Open* dialog box, where you can upload a new drawing that will be used as the custom drawing for the protocol and assigned to all elements using the protocol.
 
 > [!TIP]
 > See also:
-> - [DataMiner Visio templates](DataMiner_Visio_templates.md)
+> - [DataMiner Visio templates](xref:DataMiner_Visio_templates)
 > - [Managing Visio files linked to protocols](xref:Managing_Visio_files_linked_to_protocols)
 > - [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files)
 

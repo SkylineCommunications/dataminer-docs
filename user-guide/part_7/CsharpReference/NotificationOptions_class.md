@@ -8,7 +8,7 @@ This class serves as a base class for *EmailOptions*, *PagerOptions* and *SmsOpt
 
 > [!TIP]
 > See also:
-> - [EmailOptions class](EmailOptions_class.md)
-> - [PagerOptions class](PagerOptions_class.md)
-> - [SmsOptions class](SmsOptions_class.md)
+> - [EmailOptions class](xref:EmailOptions_class)
+> - [PagerOptions class](xref:PagerOptions_class)
+> - [SmsOptions class](xref:SmsOptions_class)
 >

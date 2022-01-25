@@ -12,4 +12,4 @@ To change the state of an element:
 
 > [!TIP]
 > See also:
-> [Element states](Element_states.md)
+> [Element states](xref:Element_states)

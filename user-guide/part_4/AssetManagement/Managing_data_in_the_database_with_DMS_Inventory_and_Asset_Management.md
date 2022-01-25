@@ -8,21 +8,21 @@ Users can add, change and delete rows in CMDB tables if they have write access t
 
 The following topics provide more information on managing data with DMS IAM:
 
-- [Adding a row to a table](Adding_a_row_to_a_table.md)
+- [Adding a row to a table](xref:Adding_a_row_to_a_table)
 
-- [Updating a table row](Updating_a_table_row.md)
+- [Updating a table row](xref:Updating_a_table_row)
 
-- [Deleting a row from a table](Deleting_a_row_from_a_table.md)
+- [Deleting a row from a table](xref:Deleting_a_row_from_a_table)
 
-- [Exporting a table to a CSV file](Exporting_a_table_to_a_CSV_file.md)
+- [Exporting a table to a CSV file](xref:Exporting_a_table_to_a_CSV_file)
 
-- [Searching the database](Searching_the_database.md)
+- [Searching the database](xref:Searching_the_database)
 
-- [Reloading the Asset Manager user interface](Reloading_the_Asset_Manager_user_interface.md)
+- [Reloading the Asset Manager user interface](xref:Reloading_the_Asset_Manager_user_interface)
 
-- [Starting a sync of the DataMiner database and the CMDB](Starting_a_sync_of_the_DataMiner_database_and_the_CMDB.md)
+- [Starting a sync of the DataMiner database and the CMDB](xref:Starting_a_sync_of_the_DataMiner_database_and_the_CMDB)
 
 > [!NOTE]
-> - In the configuration file, user groups can be granted or denied access to tables. For more information, see [Configuring DMS Inventory and Asset Management](Configuring_DMS_Inventory_and_Asset_Management.md).
+> - In the configuration file, user groups can be granted or denied access to tables. For more information, see [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management).
 > - When a user updates, adds or deletes a row in Asset Manager, an information event is generated in the Alarm Console.
 >

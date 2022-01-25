@@ -103,7 +103,7 @@ This editor allows you to design the Data Display pages of a protocol using simp
 
 > [!TIP]
 > See also:
-> [Display editor](Display_editor.md)
+> [Display editor](xref:Display_editor)
 
 #### Table editor
 
@@ -113,7 +113,7 @@ This editor allows you to design the parameter tables of a protocol using simple
 
 > [!TIP]
 > See also:
-> [Table editor](Table_editor.md)
+> [Table editor](xref:Table_editor)
 
 #### Publish
 
@@ -123,7 +123,7 @@ To publish a protocol or an Automation script to another, non-default DMA, click
 
 > [!TIP]
 > See also:
-> [DMA](DIS_settings.md#dma)
+> [DMA](xref:DIS_settings#dma)
 
 > [!NOTE]
 > - You cannot click the *Publish* button when Visual Studio is running in debug mode.
@@ -143,7 +143,7 @@ If you click the *Update* button, the *Update* dialog box will ask whether you w
 
 > [!TIP]
 > See also:
-> [Updates](DIS_settings.md#updates)
+> [Updates](xref:DIS_settings#updates)
 
 #### Search
 
@@ -174,7 +174,7 @@ If you want to override the default case sensitivity setting in a particular fil
 
 > [!TIP]
 > See also:
-> [Interface](DIS_settings.md#interface)
+> [Interface](xref:DIS_settings#interface)
 
 ##### Wildcard interpretation
 
@@ -182,7 +182,7 @@ If you want to override the default wildcard interpretation setting in a particu
 
 > [!TIP]
 > See also:
-> [Interface](DIS_settings.md#interface)
+> [Interface](xref:DIS_settings#interface)
 
 ### Inside the file tab
 
@@ -413,7 +413,7 @@ If you click such a button, the table parameter will be opened in the Table Edit
 
 > [!TIP]
 > See also:
-> [Table editor](Table_editor.md)
+> [Table editor](xref:Table_editor)
 
 #### Edit C# button
 
@@ -423,7 +423,7 @@ If you click such a button, a temporary C# project will be created, containing t
 
 > [!TIP]
 > See also:
-> [C editor](C_editor.md)
+> [C editor](xref:C_editor)
 
 #### Virtual comments
 
@@ -444,5 +444,5 @@ Next to *\<Param>30\</Param>*, for example, you can see *\<!-- System OR Table -
 > [!NOTE]
 > If you do not want virtual comments to appear, you can turn them off.
 >
-> See [Interface](DIS_settings.md#interface)
+> See [Interface](xref:DIS_settings#interface)
 >

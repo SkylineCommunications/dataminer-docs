@@ -10,7 +10,7 @@ To create a dashboard with dynamic list layout:
 
 1. Go to *Actions \> Feeds* to access the Feeds editor.
 
-2. Create or select a feed in the Dynamic List Feed field. For more information, see [Feeds](Configuring_dashboard_components1.md#feeds).
+2. Create or select a feed in the Dynamic List Feed field. For more information, see [Feeds](xref:Configuring_dashboard_components1#feeds).
 
 3. Go to *Actions \> Settings* to set the Dynamic List Options:
 
@@ -29,7 +29,7 @@ To create a dashboard with dynamic list layout:
 
     - Enter a value under *Row Grouping* to group multiple rows into one single row. This can be of use when rows are relatively small.
 
-4. Go to *Actions \> Configure Components* to add components. All components added to the *List Item Template* zone are immediately configured to use the Dynamic List Feed you configured earlier. For more information about adding components, see [Configure Components](Configuring_dashboard_components1.md#configure-components).
+4. Go to *Actions \> Configure Components* to add components. All components added to the *List Item Template* zone are immediately configured to use the Dynamic List Feed you configured earlier. For more information about adding components, see [Configure Components](xref:Configuring_dashboard_components1#configure-components).
 
 ### List type options
 

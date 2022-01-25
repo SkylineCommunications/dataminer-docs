@@ -6,16 +6,16 @@ uid: About_elements
 
 This section consists of the following topics:
 
-- [Element states](Element_states.md)
+- [Element states](xref:Element_states)
 
-- [Hidden elements](Hidden_elements.md)
+- [Hidden elements](xref:Hidden_elements)
 
-- [Virtual elements](Virtual_elements.md)
+- [Virtual elements](xref:Virtual_elements)
 
-- [Dynamic virtual elements](Dynamic_virtual_elements.md)
+- [Dynamic virtual elements](xref:Dynamic_virtual_elements)
 
-- [Replicated elements](Replicated_elements.md)
+- [Replicated elements](xref:Replicated_elements)
 
-- [Simulated elements](Simulated_elements.md)
+- [Simulated elements](xref:Simulated_elements)
 
-- [Element properties](Element_properties.md)
+- [Element properties](xref:Element_properties)

@@ -10,4 +10,4 @@ In this tab, you cannot create new tasks. You can only consult or edit the tasks
 
 > [!TIP]
 > See also:
-> [Consulting or editing a task](Consulting_or_editing_a_task.md)
+> [Consulting or editing a task](xref:Consulting_or_editing_a_task)

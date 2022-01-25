@@ -8,7 +8,7 @@ Using a shape data field of type **Property**, a shape linked to an element or a
 
 > [!TIP]
 > See also:
-> [Linking a shape to an element parameter](Linking_a_shape_to_an_element_parameter.md)
+> [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter)
 
 ### Configuring the shape data field
 
@@ -27,7 +27,7 @@ Optionally, you can make a shape appear, disappear, flip, or rotate based on the
 
 > [!TIP]
 > See also:
-> [Basic conditional shape manipulation actions](Basic_conditional_shape_manipulation_actions.md)
+> [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)
 
 ### Placeholder for property value in shape text
 

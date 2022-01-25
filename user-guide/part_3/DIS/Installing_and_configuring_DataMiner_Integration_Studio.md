@@ -48,6 +48,6 @@ After installing DataMiner Integration Studio, you can configure its settings fr
 
 2. Make the necessary changes to the different settings.
 
-    For an overview of all DIS settings, see [DIS settings](DIS_settings.md)
+    For an overview of all DIS settings, see [DIS settings](xref:DIS_settings)
 
 3. Click *OK*.

@@ -6,22 +6,22 @@ uid: The_DataMiner_Cube_user_interface
 
 This section consists of the following topics:
 
-- [Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards](Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards.md#main-cube-ui-components-from-dataminer-10001002-onwards)
+- [Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards](xref:Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards#main-cube-ui-components-from-dataminer-10001002-onwards)
 
-- [Main Cube UI components prior to DataMiner 10](Main_Cube_UI_components_prior_to_DataMiner_10.md)
+- [Main Cube UI components prior to DataMiner 10](xref:Main_Cube_UI_components_prior_to_DataMiner_10)
 
-- [Working with cards in DataMiner Cube](Working_with_cards_in_DataMiner_Cube.md)
+- [Working with cards in DataMiner Cube](xref:Working_with_cards_in_DataMiner_Cube)
 
-- [Searching in DataMiner Cube](Searching_in_DataMiner_Cube.md)
+- [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube)
 
-- [Using quick filters](Using_quick_filters.md)
+- [Using quick filters](xref:Using_quick_filters)
 
-- [Using keyboard navigation](Using_keyboard_navigation.md)
+- [Using keyboard navigation](xref:Using_keyboard_navigation)
 
-- [Working with workspaces](Working_with_workspaces.md)
+- [Working with workspaces](xref:Working_with_workspaces)
 
-- [User settings](User_settings.md)
+- [User settings](xref:User_settings)
 
-- [Computer settings](Computer_settings.md)
+- [Computer settings](xref:Computer_settings)
 
-- [DataMiner Cube tips & tricks](DataMiner_Cube_tips_tricks.md#dataminer-cube-tips--tricks)
+- [DataMiner Cube tips & tricks](xref:DataMiner_Cube_tips_tricks#dataminer-cube-tips--tricks)

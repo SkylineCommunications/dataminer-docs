@@ -10,15 +10,15 @@ You can restore a DMA either on the same hardware, or on new hardware.
 
 The following procedures are described in this section:
 
-- [Preparing the destination server for a DMA restoration](Preparing_the_destination_server_for_a_DMA_restoration.md)
+- [Preparing the destination server for a DMA restoration](xref:Preparing_the_destination_server_for_a_DMA_restoration)
 
-- [Restoring a DMA using the DataMiner Taskbar Utility](Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility.md)
+- [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility)
 
-- [Restoring the DMA configuration only](Restoring_the_DMA_configuration_only.md)
+- [Restoring the DMA configuration only](xref:Restoring_the_DMA_configuration_only)
 
-- [Restoring the database only](Restoring_the_database_only.md)
+- [Restoring the database only](xref:Restoring_the_database_only)
 
-- [Starting a restored DataMiner Agent in a cluster](Starting_a_restored_DataMiner_Agent_in_a_cluster.md)
+- [Starting a restored DataMiner Agent in a cluster](xref:Starting_a_restored_DataMiner_Agent_in_a_cluster)
 
 > [!WARNING]
 > Do not use DMAUpgrade (System Display) to restore backups.

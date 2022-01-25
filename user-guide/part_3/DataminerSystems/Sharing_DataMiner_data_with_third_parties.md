@@ -80,7 +80,7 @@ In addition, several other DataMiner applications feature data sharing possibili
 
 > [!TIP]
 > See also:
-> - [DataMiner interfaces](DataMiner_interfaces.md)
+> - [DataMiner interfaces](xref:DataMiner_interfaces)
 > - <https://help.dataminer.services/WebServices/>
 
 #### DataMiner Replication

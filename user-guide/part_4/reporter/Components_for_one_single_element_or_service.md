@@ -231,7 +231,7 @@ Overview of parameter states of all elements using the same protocol as the curr
 - To add a pie chart for the first parameter in the status query, select *Add pie chart for first parameter*.
 
 > [!NOTE]
-> - To view parameters of multiple elements or protocols, up to DataMiner 9.5.12, add this component in an “Elements/Services container” building block, in a template type for multiple elements/services. From DataMiner 9.5.13 onwards, this component is also available in templates for multiple elements/services. See [Status Query](Components_for_multiple_elements_or_services.md#status-query).
+> - To view parameters of multiple elements or protocols, up to DataMiner 9.5.12, add this component in an “Elements/Services container” building block, in a template type for multiple elements/services. From DataMiner 9.5.13 onwards, this component is also available in templates for multiple elements/services. See [Status Query](xref:Components_for_multiple_elements_or_services#status-query).
 > - From DataMiner 9.6.0 CU23/10.0.0 CU13/10.1.0 CU2/10.1.5 onwards, if a report containing a status query is exported to CSV/Excel, the status query result will be included as a separate CSV file or Excel table.
 
 ### Trend Graphs

@@ -6,7 +6,7 @@ uid: Checking_the_connection_state_of_an_element
 
 To check the connection state of an element:
 
-1. Open the element card. See [Element cards](Element_cards.md).
+1. Open the element card. See [Element cards](xref:Element_cards).
 
 2. Go to the page *General parameters*.
 

@@ -8,28 +8,28 @@ Version: 2.34
 
 This chapter consists of the following sections:
 
-- [Concepts](Concepts.md)
+- [Concepts](xref:Concepts)
 
-- [Installing and configuring the software](Installing_and_configuring_the_software.md)
+- [Installing and configuring the software](xref:Installing_and_configuring_the_software)
 
-- [DIS menu](DIS_menu.md)
+- [DIS menu](xref:DIS_menu)
 
-- [XML editor](XML_editor.md)
+- [XML editor](xref:XML_editor)
 
-- [Display editor](Display_editor.md)
+- [Display editor](xref:Display_editor)
 
-- [Function editor](Function_editor.md)
+- [Function editor](xref:Function_editor)
 
-- [Table editor](Table_editor.md)
+- [Table editor](xref:Table_editor)
 
-- [Version editor](Version_editor.md)
+- [Version editor](xref:Version_editor)
 
-- [C editor](C_editor.md)
+- [C editor](xref:C_editor)
 
-- [Debugging QActions and Automation scripts](Debugging_QActions_and_Automation_scripts.md)
+- [Debugging QActions and Automation scripts](xref:Debugging_QActions_and_Automation_scripts)
 
-- [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions.md)
+- [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](xref:Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions)
 
-- [Troubleshooting](Troubleshooting.md)
+- [Troubleshooting](xref:Troubleshooting)
 
-- [DIS reference](DIS_reference.md)
+- [DIS reference](xref:DIS_reference)

@@ -33,7 +33,7 @@ In the *DataMiner.xml* file, you can specify the colors you want to assign to ea
 
 > [!TIP]
 > See also:
-> - [Alarm severity levels](Alarm_types.md#alarm-severity-levels)
+> - [Alarm severity levels](xref:Alarm_types#alarm-severity-levels)
 > - [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 
 #### Example

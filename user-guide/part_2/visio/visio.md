@@ -10,31 +10,31 @@ At Skyline, we do our utmost to keep the DataMiner software in pace with Microso
 
 This section consists of the following topics:
 
-- [Getting started](Getting_started.md)
+- [Getting started](xref:Getting_started)
 
-- [Linking shapes to DataMiner items](Linking_shapes_to_DataMiner_items.md)
+- [Linking shapes to DataMiner items](xref:Linking_shapes_to_DataMiner_items)
 
-- [Making shapes display information](Making_shapes_display_information.md)
+- [Making shapes display information](xref:Making_shapes_display_information)
 
-- [Positioning shapes dynamically](Positioning_shapes_dynamically.md)
+- [Positioning shapes dynamically](xref:Positioning_shapes_dynamically)
 
-- [Generating shapes dynamically](Generating_shapes_dynamically.md)
+- [Generating shapes dynamically](xref:Generating_shapes_dynamically)
 
-- [Working with session variables](Working_with_session_variables.md)
+- [Working with session variables](xref:Working_with_session_variables)
 
-- [Turning shapes into controls](Turning_shapes_into_controls.md)
+- [Turning shapes into controls](xref:Turning_shapes_into_controls)
 
-- [Implementing drag-and-drop functions](Implementing_drag-and-drop_functions.md#implementing-drag-and-drop-functions)
+- [Implementing drag-and-drop functions](xref:Implementing_drag-and-drop_functions#implementing-drag-and-drop-functions)
 
-- [Implementing DataMiner Connectivity Framework functions](Implementing_DataMiner_Connectivity_Framework_functions.md)
+- [Implementing DataMiner Connectivity Framework functions](xref:Implementing_DataMiner_Connectivity_Framework_functions)
 
-- [Implementing EPM functions](Implementing_EPM_functions.md)
+- [Implementing EPM functions](xref:Implementing_EPM_functions)
 
-- [Implementing SRM features](Implementing_SRM_features.md)
+- [Implementing SRM features](xref:Implementing_SRM_features)
 
-- [Miscellaneous](Miscellaneous.md)
+- [Miscellaneous](xref:Miscellaneous)
 
-- [Reference](Reference.md)
+- [Reference](xref:Reference)
 
 > [!NOTE]
 > - DataMiner supports Visio drawings saved in either VDX or VSDX format.

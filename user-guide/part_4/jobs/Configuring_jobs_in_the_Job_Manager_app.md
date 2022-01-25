@@ -6,8 +6,8 @@ uid: Configuring_jobs_in_the_Job_Manager_app
 
 In this section:
 
-- [Configuring job domains](Configuring_job_domains.md)
+- [Configuring job domains](xref:Configuring_job_domains)
 
-- [Configuring job sections](Configuring_job_sections.md)
+- [Configuring job sections](xref:Configuring_job_sections)
 
-- [Configuring a job field](Configuring_a_job_field.md)
+- [Configuring a job field](xref:Configuring_a_job_field)

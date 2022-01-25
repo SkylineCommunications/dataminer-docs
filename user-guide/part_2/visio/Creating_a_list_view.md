@@ -40,8 +40,8 @@ To create a list view, add a shape on the Visio page with the following shape da
 - **Filter**: See [List view filters](#list-view-filters).
 
 > [!NOTE]
-> - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](Embedding_a_Resource_Manager_component.md).
-> - If colors are defined using the *Visual.Background* property of bookings, from DataMiner 9.6.13 onwards, these are displayed in the *Color* column of a *ListView* component showing bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](Embedding_a_Resource_Manager_component.md#customizing-the-color-of-booking-blocks).
+> - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
+> - If colors are defined using the *Visual.Background* property of bookings, from DataMiner 9.6.13 onwards, these are displayed in the *Color* column of a *ListView* component showing bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
 
 ### Component options
 
@@ -60,7 +60,7 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   - StartTime = NOW - 1 day
   - EndTime = NOW + 2 days
 
-  Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](Adding_options_to_a_session_variable_control.md#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
+  Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
 > [!NOTE]
 > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.

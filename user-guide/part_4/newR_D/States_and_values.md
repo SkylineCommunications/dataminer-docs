@@ -22,7 +22,7 @@ This component displays the state, name and, if applicable, the value of a DataM
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
     In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element. Note that column parameter feeds are supported from DataMiner 10.0.12 onwards.
 
@@ -39,7 +39,7 @@ To configure the component:
 
 3. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - In case the component displays more than one item, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 
@@ -102,7 +102,7 @@ This component shows the value of one or more analog parameters with a progress 
 
 To configure the component:
 
-1. Apply a parameter data feed. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply a parameter data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
 2. Optionally, customize the following component options:
 
@@ -114,7 +114,7 @@ To configure the component:
 
 3. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - *Labels*: In this section, you can select whether the parameter name, the element name, the index (for a table parameter) and/or the value should be displayed in the component.
 
@@ -132,7 +132,7 @@ This component displays a numeric parameter value as a gauge.
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
     In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
 
@@ -149,7 +149,7 @@ To configure the component:
 
 3. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - If parameter data input is used, in the *Labels* section, you can select whether the parameter name, the element name, the index (for a table parameter) or the value should be displayed in the component.
 
@@ -190,7 +190,7 @@ This component displays the name and, if applicable, the value of a DataMiner ob
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](Configuring_dashboard_components.md#applying-a-data-feed).
+1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
     In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
 
@@ -207,7 +207,7 @@ To configure the component:
 
 3. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 
-    - The default options available for all components. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
     - If parameter data input is used, in the *Labels* section, you can select whether the parameter name, the element name, the index (for a table parameter) or the value should be displayed in the component.
 

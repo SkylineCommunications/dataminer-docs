@@ -17,4 +17,4 @@ There are two types of groups:
 
 > [!TIP]
 > See also:
-> [Managing user groups](Managing_user_groups.md)
+> [Managing user groups](xref:Managing_user_groups)

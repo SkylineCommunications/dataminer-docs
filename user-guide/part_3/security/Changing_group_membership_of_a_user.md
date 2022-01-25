@@ -6,7 +6,7 @@ uid: Changing_group_membership_of_a_user
 
 1. In the *Users / Groups* section of the System Center module, go to the *users* tab and select the user in question.
 
-    Alternatively, you can also open the user card for the user in question. See [Opening a user card](Opening_a_user_card.md).
+    Alternatively, you can also open the user card for the user in question. See [Opening a user card](xref:Opening_a_user_card).
 
 2. Go to the *Group membership* tab.
 

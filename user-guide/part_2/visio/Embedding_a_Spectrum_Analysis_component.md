@@ -7,7 +7,7 @@ uid: Embedding_a_Spectrum_Analysis_component
 From DataMiner 9.5.11 onwards, it is possible to embed a Spectrum Analysis component in Visio.
 
 > [!NOTE]
-> Alternatively, it is also possible to embed a spectrum thumbnail. See [Linking a shape to an element parameter](Linking_a_shape_to_an_element_parameter.md).
+> Alternatively, it is also possible to embed a spectrum thumbnail. See [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter).
 
 ### Configuring the shape data fields
 

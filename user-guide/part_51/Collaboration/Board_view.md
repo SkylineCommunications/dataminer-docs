@@ -21,9 +21,9 @@ The task status panes are organized left to right and show the logical evolution
         > [!NOTE]
         > By default, the status “Closed” is not listed. If you want the list to show tasks that have been closed, open the status selection box and click the *Looking for closed tasks?* option at the bottom of the list.
 
-- To create a new task under the current project, click *New task*. For more information on how to create a task, see [Creating a new task under the current project](Creating_a_new_task_under_the_current_project.md).
+- To create a new task under the current project, click *New task*. For more information on how to create a task, see [Creating a new task under the current project](xref:Creating_a_new_task_under_the_current_project).
 
-- To consult or edit a task, click the task in the list. The contents of the task will appear in a pop-up window. For more information on how to consult or edit a task, see [Consulting or editing a task](Consulting_or_editing_a_task.md).
+- To consult or edit a task, click the task in the list. The contents of the task will appear in a pop-up window. For more information on how to consult or edit a task, see [Consulting or editing a task](xref:Consulting_or_editing_a_task).
 
 Below the board, a pane is available that consists of two tabs:
 
@@ -31,7 +31,7 @@ Below the board, a pane is available that consists of two tabs:
 
 - *Timeline*: Tasks that have a due date will be displayed on a timeline in this tab. By holding and dragging the mouse pointer to the left or to the right, you can go backwards or forwards in time.
 
-You can change the size of this pane by dragging its upper border up or down, and collapse or expand it using the blue button on the right. Clicking a task in this pane will open the task in a pop-up window. See also [Consulting or editing a task](Consulting_or_editing_a_task.md).
+You can change the size of this pane by dragging its upper border up or down, and collapse or expand it using the blue button on the right. Clicking a task in this pane will open the task in a pop-up window. See also [Consulting or editing a task](xref:Consulting_or_editing_a_task).
 
 > [!NOTE]
 > In the task board, a task group is indicated with a small icon in the top-left corner. However, checking a task group and the tasks it contains is much easier in the *Buckets* and *Timeline* tabs below the board.

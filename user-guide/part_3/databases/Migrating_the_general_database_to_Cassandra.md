@@ -54,7 +54,7 @@ Before the migration to Cassandra can begin, the migration wizard first checks i
     This check may take a few minutes depending on the size and complexity of your system. Once it is complete, the results of the check will be loaded in the wizard window.
 
     > [!NOTE]
-    > To ensure optimal performance, the Cassandra database should be located on a different drive than DataMiner. See also: [Moving the Cassandra database to a different disk drive](Moving_the_Cassandra_database_to_a_different_disk_drive.md).
+    > To ensure optimal performance, the Cassandra database should be located on a different drive than DataMiner. See also: [Moving the Cassandra database to a different disk drive](xref:Moving_the_Cassandra_database_to_a_different_disk_drive).
 
 3. Under *Protocol System Requirements*, check if any protocols are indicated. The wizard will list all protocols that may not be compatible with Cassandra. Incompatible protocols that are in use are indicated with a warning icon, as the migration cannot continue so long as they remain in use unchanged.
 
@@ -186,7 +186,7 @@ After the migration is finished, the DataMiner features that depend on the use o
 > [!NOTE]
 > - To improve efficiency and scalability using Cassandra, after the migration, all trend data is stored in one table, instead of in a table per element.
 > - If an element with a logger table (e.g. an SLA) is stopped at the moment when the migration takes place, the data of that element will not be migrated.
-> - To ensure optimal performance, the Cassandra database should be installed on a different drive than DataMiner. If you migrated to a Cassandra database on the same drive as DataMiner, you can move the database afterwards. See [Moving the Cassandra database to a different disk drive](Moving_the_Cassandra_database_to_a_different_disk_drive.md).
+> - To ensure optimal performance, the Cassandra database should be installed on a different drive than DataMiner. If you migrated to a Cassandra database on the same drive as DataMiner, you can move the database afterwards. See [Moving the Cassandra database to a different disk drive](xref:Moving_the_Cassandra_database_to_a_different_disk_drive).
 
 #### After the migration
 

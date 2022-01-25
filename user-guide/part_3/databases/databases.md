@@ -6,16 +6,16 @@ uid: databases
 
 This section consists of the following topics:
 
-- [General database](General_database.md)
+- [General database](xref:General_database)
 
-- [Keeping a database table from being checked during an upgrade](Keeping_a_database_table_from_being_checked_during_an_upgrade.md)
+- [Keeping a database table from being checked during an upgrade](xref:Keeping_a_database_table_from_being_checked_during_an_upgrade)
 
-- [Offload database](Offload_database.md)
+- [Offload database](xref:Offload_database)
 
-- [Configuring an additional database](Configuring_an_additional_database.md)
+- [Configuring an additional database](xref:Configuring_an_additional_database)
 
-- [DataMiner Indexing Engine](DataMiner_Indexing_Engine.md)
+- [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine)
 
-- [Specifying TTL overrides](Specifying_TTL_overrides.md)
+- [Specifying TTL overrides](xref:Specifying_TTL_overrides)
 
-- [Database queries](Database_queries.md)
+- [Database queries](xref:Database_queries)

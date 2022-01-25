@@ -6,9 +6,9 @@ uid: Backing_up_a_DataMiner_Agent
 
 This section consists of the following topics:
 
-- [Backing up a DataMiner Agent using DataMiner Taskbar Utility](Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility.md)
+- [Backing up a DataMiner Agent using DataMiner Taskbar Utility](xref:Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)
 
-- [Backing up a DataMiner Agent in DataMiner Cube](Backing_up_a_DataMiner_Agent_in_DataMiner_Cube.md)
+- [Backing up a DataMiner Agent in DataMiner Cube](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube)
 
 Please take the following information into account:
 

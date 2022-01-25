@@ -60,7 +60,7 @@ The \[Timer base\] parameter can be set to a value ranging from 0.01 to 10.00.
 
 ### Changing the \[Timer base\] of one element
 
-1. Open the relevant element card. See [Element cards](Element_cards.md).
+1. Open the relevant element card. See [Element cards](xref:Element_cards).
 
 2. Go to the page *General parameters*.
 

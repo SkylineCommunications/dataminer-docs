@@ -14,5 +14,5 @@ Use this action to set the state of a dummy in an Automation script:
 2. Click the last underlined field to either add an existing dummy element or create a new dummy element.
 
     > [!NOTE]
-    > For more information on creating dummy elements, see [Creating a dummy](Script_variables.md#creating-a-dummy).
+    > For more information on creating dummy elements, see [Creating a dummy](xref:Script_variables#creating-a-dummy).
     >

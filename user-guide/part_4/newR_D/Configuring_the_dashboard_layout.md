@@ -12,7 +12,7 @@ The layout of a dashboard can be configured on two levels:
 
     - [Configuring the default component layout](#configuring-the-default-component-layout)
 
-- Overrides for each specific component. For more information, see [Configuring dashboard components](Configuring_dashboard_components.md).
+- Overrides for each specific component. For more information, see [Configuring dashboard components](xref:Configuring_dashboard_components).
 
 ### Customizing the dashboard theme
 
@@ -76,7 +76,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 ##### Using a DataMiner version prior to DataMiner 10.0.2:
 
-1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](Editing_a_dashboard.md).
+1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
 2. In the panel on the right, select the *Layout* tab.
 
@@ -100,7 +100,7 @@ It is possible to customize the theme for one dashboard by overriding the applie
 
 ##### Using DataMiner 10.0.2 or higher:
 
-1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](Editing_a_dashboard.md).
+1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
 2. In the panel on the right, select the *Layout* tab.
 
@@ -117,7 +117,7 @@ To configure a dashboard to use different colors without creating a theme, follo
 
 #### Applying an existing theme to a dashboard
 
-1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](Editing_a_dashboard.md).
+1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
 2. In the panel on the right, select the *Layout* tab.
 
@@ -137,7 +137,7 @@ From DataMiner 10.0.2 onwards, the default component layout is considered part o
 
 To configure the default layout for each of the components in a dashboard:
 
-1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](Editing_a_dashboard.md).
+1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
 2. In the panel on the right, select the *Layout* tab.
 
@@ -162,5 +162,5 @@ To configure the default layout for each of the components in a dashboard:
     - In the *Shadow* section, select the size of the shadow displayed behind the components.
 
 > [!NOTE]
-> For each separate component, it is possible to override this default layout. See [Customizing the component layout](Configuring_dashboard_components.md#customizing-the-component-layout).
+> For each separate component, it is possible to override this default layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 >

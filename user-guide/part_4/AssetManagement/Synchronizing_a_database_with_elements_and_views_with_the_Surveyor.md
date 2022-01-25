@@ -65,7 +65,7 @@ Configuration file syntax:
 | Property | column        | Name of the column contain the property value.                                                                               |
 | DMA      | view_id       | The ID of the existing DataMiner view under which the views have to be created.                                              |
 
-For more information about configuration settings, see [Configuring data mediation settings in DMS Inventory and Asset Management](Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management.md).
+For more information about configuration settings, see [Configuring data mediation settings in DMS Inventory and Asset Management](xref:Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management).
 
 #### Element synchronization file
 
@@ -382,4 +382,4 @@ Example of a mediation configuration file:
 
 > [!NOTE]
 > - The names of the element fields are the same as in the configuration in use up to DataMiner 9.0.3. See [Element synchronization file](#element-synchronization-file).
-> - For more information about configuration settings, see [Configuring data mediation settings in DMS Inventory and Asset Management](Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management.md). However, note that the *AssetMediationConfig.SynchronizeData.Sync.DMA* and *AssetMediationConfig.SynchronizeData.Sync.DB* tags described in that section are replaced by the *AssetMediationConfig.SynchronizeData.Sync.ElementView* tag in this configuration.
+> - For more information about configuration settings, see [Configuring data mediation settings in DMS Inventory and Asset Management](xref:Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management). However, note that the *AssetMediationConfig.SynchronizeData.Sync.DMA* and *AssetMediationConfig.SynchronizeData.Sync.DB* tags described in that section are replaced by the *AssetMediationConfig.SynchronizeData.Sync.ElementView* tag in this configuration.

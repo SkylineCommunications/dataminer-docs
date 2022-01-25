@@ -85,8 +85,8 @@ These can for example be used to:
 
 However, note that a custom script should never do a full edit on a running booking (i.e. a booking for which an event has already been executed). Dedicated functions should be used instead to:
 
-- Assign a resource (see [Assigning resource, profile and parameter values](Silent_actions.md#assigning-resource-profile-and-parameter-values))
+- Assign a resource (see [Assigning resource, profile and parameter values](xref:Silent_actions#assigning-resource-profile-and-parameter-values))
 
-- Change the state of a booking (see [Applying booking life cycle transitions](Silent_actions.md#applying-booking-life-cycle-transitions))
+- Change the state of a booking (see [Applying booking life cycle transitions](xref:Silent_actions#applying-booking-life-cycle-transitions))
 
-- Change the timing of a booking (see [Updating the timing of a booking](Silent_actions.md#updating-the-timing-of-a-booking))
+- Change the timing of a booking (see [Updating the timing of a booking](xref:Silent_actions#updating-the-timing-of-a-booking))
