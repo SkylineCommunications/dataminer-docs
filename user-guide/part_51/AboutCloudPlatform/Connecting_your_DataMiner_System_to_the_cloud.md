@@ -6,7 +6,7 @@ uid: Connecting_your_DataMiner_System_to_the_cloud
 
 > [!NOTE]
 > - This feature is in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/) up to DataMiner 10.1.8. From DataMiner 10.1.9 onwards, it is fully available and no longer subject to change without notice. However, note that the Live Sharing feature remains in soft launch up to DataMiner 10.1.11.
-> - If you are using a DataMiner version between DataMiner 10.1.1 and DataMiner 10.1.9, and your system is **already connected** to the cloud, we recommend to **install the DataMiner Cloud Pack** (see step 2 below) on at least one DMA that was already hosting the cloud gateway. After you have done so, clear the selection of the checkboxes in System Center as detailed in the note under step 4 below.
+> - If you are using a DataMiner version between DataMiner 10.1.1 and DataMiner 10.1.9, and your system is **already connected** to the cloud, we recommend **installing the DataMiner Cloud Pack** (see step 2 below) on at least one DMA that was already hosting the cloud gateway. After you have done so, clear the selection of the checkboxes in System Center as detailed in the note under step 4 below.
 
 To connect your DMS to the cloud:
 
