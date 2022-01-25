@@ -42,7 +42,7 @@ To connect your DMS to the cloud:
     3. Save the file and restart the *DataMiner CloudGateway* Windows service.
 
     > [!NOTE]
-    > As of DataMiner Cloud Pack 2.2.0, a HTTPS setup is automatically detected, so that you no longer need to configure this manually. However, you can still change the format of the secure URLs as described above if necessary.
+    > As of DataMiner Cloud Pack 2.2.0, an HTTPS setup is automatically detected, so that you no longer need to configure this manually. However, you can still change the format of the secure URLs as described above if necessary. Make sure the HTTPS settings are configured in MaintenanceSettings.xml as described in the section [Configuring HTTPS settings in MaintenanceSettings.xml](xref:General_DMA_configuration#configuring-https-settings-in-maintenancesettingsxml).
 
 4. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following user permissions.
 
