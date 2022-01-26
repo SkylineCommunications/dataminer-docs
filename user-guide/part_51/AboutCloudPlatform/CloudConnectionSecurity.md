@@ -17,4 +17,4 @@ All communication between the DataMiner System and the DataMiner Cloud Platform 
 Only outgoing traffic needs to be allowed through for the domain *.dataminer.services.
 
 > [!NOTE]
-> Technical details of this implementation may be subject to change as we regularly review our security implementations.
+> Technical details of this implementation may be subject to change, as we regularly review our security implementations.
