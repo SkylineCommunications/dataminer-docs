@@ -2006,6 +2006,8 @@
           href: part_51\AboutCloudPlatform\Logging_on_to_the_DataMiner_Cloud_Platform.md
         - name: Connecting your DataMiner System to the cloud
           href: part_51\AboutCloudPlatform\Connecting_your_DataMiner_System_to_the_cloud.md
+        - name: Cloud connection security
+          topicUid: CloudConnectionSecurity
     - name: Project Collaboration
       href: part_51\Collaboration\Collaboration.md
       items:
