@@ -224,13 +224,13 @@ A Failover setup will be migrated to Cassandra in the following way:
 
 In a Failover DMS using Cassandra, the Cassandra instances on the two DMAs are clustered. This means that after the migration, the data will be automatically synchronized between the two databases directly. This is different from the way Failover synchronization works with a legacy database, where data is synchronized between the Agents themselves, and between each Agent and its respective database.
 
-![](../../images/Failover_sync_legacy.jpg)
+![](~/user-guide/images/Failover_sync_legacy.jpg)
 
 
 
 
 
-![](../../images/Failover_sync_cass.jpg)
+![](~/user-guide/images/Failover_sync_cass.jpg)
 
 
 

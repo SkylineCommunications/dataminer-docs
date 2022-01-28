@@ -43,23 +43,23 @@ To do so:
 
     - A service definition GUID
 
-        ![](../../images/ServiceDefinitionGUID.png)
+        ![](~/user-guide/images/ServiceDefinitionGUID.png)
 
     - A node ID
 
-        ![](../../images/NodeID.png)
+        ![](~/user-guide/images/NodeID.png)
 
     - A resource GUID
 
-        ![](../../images/ResourceGUID.png)
+        ![](~/user-guide/images/ResourceGUID.png)
 
     - A profile definition GUID
 
-        ![](../../images/ProfileDefinitionGUID.png)
+        ![](~/user-guide/images/ProfileDefinitionGUID.png)
 
     - A profile instance GUID
 
-        ![](../../images/ProfileInstanceGUID.png)
+        ![](~/user-guide/images/ProfileInstanceGUID.png)
 
 ### Creating a booking
 

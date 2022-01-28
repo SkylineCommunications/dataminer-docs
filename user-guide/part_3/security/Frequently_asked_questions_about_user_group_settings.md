@@ -51,7 +51,7 @@ If a user is a member of more than one user group, default user settings for thi
 
 See the following decision flow.
 
-![](../../images/cube_usergroupsettings.jpg)
+![](~/user-guide/images/cube_usergroupsettings.jpg)
 
 
 

@@ -39,4 +39,4 @@ For more information on how to develop DataMiner protocols as Visual Studio solu
 
 ### Graphical representation of the overall concept
 
-![](../../images/dis_concept_general.jpg)
+![](~/user-guide/images/dis_concept_general.jpg)

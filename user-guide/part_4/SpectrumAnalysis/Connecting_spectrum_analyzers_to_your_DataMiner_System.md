@@ -8,7 +8,7 @@ Spectrum analyzers are usually connected to a DataMiner System via a GPIB gatewa
 
 However, in case a Spectrum Analyzer is equipped with a TCP/IP interface, it can also be directly connected to the acquisition LAN.
 
-![](../../images/Spectrum_architecture.jpg)
+![](~/user-guide/images/Spectrum_architecture.jpg)
 
 
 

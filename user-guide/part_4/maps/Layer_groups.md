@@ -30,7 +30,7 @@ The following code sample shows how to define a layer group called “My Layer G
 
 On the map, the above-mentioned code will be rendered in the following way. Notice that, as we did not specify a height attribute in the *\<Group>* tag, the drop-down list of the group is automatically adjusted to the number of items in the list.
 
-![](../../images/layergroups1.png)
+![](~/user-guide/images/layergroups1.png)
 
 
 
@@ -60,7 +60,7 @@ The following code sample shows how the layers in a layer group have been subdiv
 
 On the map, the above-mentioned code will be rendered in the following way.
 
-![](../../images/layergroups2.png)
+![](~/user-guide/images/layergroups2.png)
 
 
 
@@ -81,4 +81,4 @@ The following code sample shows how both the text color and the background color
 
 On the map, the above-mentioned code will be rendered in the following way.
 
-![](../../images/layergroups3.png)
+![](~/user-guide/images/layergroups3.png)

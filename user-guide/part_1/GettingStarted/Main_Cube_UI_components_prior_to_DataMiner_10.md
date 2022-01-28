@@ -36,7 +36,7 @@ In the header bar of DataMiner Cube, using a version prior to DataMiner 10.0.0/1
     > See also:
     > [Chat collaboration](xref:chat#chat-collaboration)
 
-- **![](../../images/card_layout_icon.png) Card layout icon**: An icon that can be used to change the layout of the cards in Cube.
+- **![](~/user-guide/images/card_layout_icon.png) Card layout icon**: An icon that can be used to change the layout of the cards in Cube.
 
     > [!TIP]
     > See also:
@@ -63,13 +63,13 @@ In the header bar of DataMiner Cube, using a version prior to DataMiner 10.0.0/1
 
         - The buttons at the bottom of the box allow you to export, email or copy the information for troubleshooting purposes.
 
-- **![](../../images/updates_icon.png) Updates icon**: An icon that allows you to quickly access the update center to check for and download protocol updates.
+- **![](~/user-guide/images/updates_icon.png) Updates icon**: An icon that allows you to quickly access the update center to check for and download protocol updates.
 
     > [!TIP]
     > See also:
     > [Updating protocols with the Update Center](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System#updating-protocols-with-the-update-center)
 
-- **![](../../images/client_communicator_icon.png) Client communication indicator**: An icon that visualizes the communication streams between the DMA and the DataMiner Cube client application.
+- **![](~/user-guide/images/client_communicator_icon.png) Client communication indicator**: An icon that visualizes the communication streams between the DMA and the DataMiner Cube client application.
 
     - When messages are sent from the client application to the DataMiner Agent or vice versa, the arrows turn blue.
 
@@ -93,7 +93,7 @@ For more information on how to move the navigation pane, see [Moving the navigat
 
 #### Surveyor
 
-The Surveyor is the leftmost tab of the navigation pane, indicated with the following icon: ![](../../images/surveyor_icon.png)
+The Surveyor is the leftmost tab of the navigation pane, indicated with the following icon: ![](~/user-guide/images/surveyor_icon.png)
 
 This tab contains a hierarchical overview of all views, elements, services, etc. in your DataMiner System. It features alarm bubble-up, state indication, etc.
 
@@ -116,16 +116,16 @@ The icons that precede an item name in the tree show what kind of item it is and
 
     | Icon                                                                             | Item description                                                |
     |------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-    | ![](../../images/IconElement.png)             | Element                                                         |
-    | ![](../../images/IconService.png)             | Service                                                         |
-    | ![](../../images/IconServiceTemplate.png)     | Service template                                                |
-    | ![](../../images/IconRG.PNG)         | Redundancy group                                                |
-    | ![](../../images/IconSLA.PNG)             | SLA                                                             |
-    | ![](../../images/Icon_function.png) | Function DVE (requires DataMiner Service & Resource Management) |
-    | ![](../../images/IconProtocol.png)           | Protocol                                                        |
-    | ![](../../images/IconParameter.png) | Parameter                                                       |
-    | ![](../../images/IconScript.png)               | Script                                                          |
-    | ![](../../images/IconSetting.png)     | Setting                                                         |
+    | ![](~/user-guide/images/IconElement.png)             | Element                                                         |
+    | ![](~/user-guide/images/IconService.png)             | Service                                                         |
+    | ![](~/user-guide/images/IconServiceTemplate.png)     | Service template                                                |
+    | ![](~/user-guide/images/IconRG.PNG)         | Redundancy group                                                |
+    | ![](~/user-guide/images/IconSLA.PNG)             | SLA                                                             |
+    | ![](~/user-guide/images/Icon_function.png) | Function DVE (requires DataMiner Service & Resource Management) |
+    | ![](~/user-guide/images/IconProtocol.png)           | Protocol                                                        |
+    | ![](~/user-guide/images/IconParameter.png) | Parameter                                                       |
+    | ![](~/user-guide/images/IconScript.png)               | Script                                                          |
+    | ![](~/user-guide/images/IconSetting.png)     | Setting                                                         |
     | None                                                                               | View                                                            |
 
 - Icons are preceded by a colored bar that indicates the item’s alarm state. In addition to the default colors indicating the alarm severity, the following colors are possible:
@@ -216,7 +216,7 @@ In the Surveyor right-click menu, the following options are available, depending
 
 A list of recently viewed items, such as elements, services, views and apps, is available under the second tab from the left in the navigation pane.
 
-This tab is indicated with the following icon: ![](../../images/IconRecentItems.png)
+This tab is indicated with the following icon: ![](~/user-guide/images/IconRecentItems.png)
 
 The following actions are possible with this list:
 
@@ -237,7 +237,7 @@ The following actions are possible with this list:
 
 A list of DataMiner applications is available under the second tab from the right in the navigation pane.
 
-This tab is indicated with the following icon: ![](../../images/IconApps.png)
+This tab is indicated with the following icon: ![](~/user-guide/images/IconApps.png)
 
 Depending on the configuration of your DataMiner System, the list can contain up to four sections:
 
@@ -255,7 +255,7 @@ Click any app in the list to open it. If you wish to open the app in a new card,
 
 A list of workspaces is available in the first tab from the right in the navigation pane.
 
-This tab is indicated with the following icon: ![](../../images/IconWorkspaces.png)
+This tab is indicated with the following icon: ![](~/user-guide/images/IconWorkspaces.png)
 
 For more information on how to work with workspaces, see [Working with workspaces](xref:Working_with_workspaces).
 
@@ -299,12 +299,12 @@ At the top of each card, there are a number of buttons:
 
 | Button                                                                                     | Description                                                                                                                                                                                                                                                                                    |
 |--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../../images/Hamburger_button.png)   | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](xref:Working_with_cards_in_DataMiner_Cube#card-header-bar-menu). |
-| ![](../../images/Back_button.png)             | Back button. As soon as you have gone from one card to another, this button becomes available, allowing you to go back to a previous card.                                                                                                                                                     |
-| ![](../../images/Maximize_button.png)     | Maximize button. Click this button to expand a card to its maximal size.                                                                                                                                                                                                                       |
-| ![](../../images/Restore_button.png)       | Restore button. If a card has been maximized, use this button to restore it to its previous size.                                                                                                                                                                                              |
-| ![](../../images/Close_button.png)           | Close button. Shift-click the button to close all open cards.                                                                                                                                                                                                                                  |
-| ![](../../images/CubeMaximize00023.png) | Fullscreen button. Displayed in the top-right corner of a page showing data, a table parameter, a visual overview or trending. Expands the page over the entire Cube UI. To exit this fullscreen mode, click the button again.                                                                 |
+| ![](~/user-guide/images/Hamburger_button.png)   | Hamburger button in the top-left corner of a card. Provides access to a shortcut menu with a number of commands. See [Card header bar menu](xref:Working_with_cards_in_DataMiner_Cube#card-header-bar-menu). |
+| ![](~/user-guide/images/Back_button.png)             | Back button. As soon as you have gone from one card to another, this button becomes available, allowing you to go back to a previous card.                                                                                                                                                     |
+| ![](~/user-guide/images/Maximize_button.png)     | Maximize button. Click this button to expand a card to its maximal size.                                                                                                                                                                                                                       |
+| ![](~/user-guide/images/Restore_button.png)       | Restore button. If a card has been maximized, use this button to restore it to its previous size.                                                                                                                                                                                              |
+| ![](~/user-guide/images/Close_button.png)           | Close button. Shift-click the button to close all open cards.                                                                                                                                                                                                                                  |
+| ![](~/user-guide/images/CubeMaximize00023.png) | Fullscreen button. Displayed in the top-right corner of a page showing data, a table parameter, a visual overview or trending. Expands the page over the entire Cube UI. To exit this fullscreen mode, click the button again.                                                                 |
 
 > [!NOTE]
 > To move back and forward between the Visual Overview pages of different cards, use the *Back* and *Forward* options in the right-click menu.

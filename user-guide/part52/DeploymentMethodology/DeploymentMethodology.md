@@ -16,7 +16,7 @@ How you will have to transform your products, how you will be further optimizing
 
 Today you are building the foundation of your business for the coming decade, and you are defining your readiness to deal with the inevitable unexpected.
 
-![](../../images/GRAPH_DigitalTransformation.jpg)
+![](~/user-guide/images/GRAPH_DigitalTransformation.jpg)
 
 Those are also the exact key objectives that you need to keep in mind, because evolving towards an agile data-driven operation involves much more than simply choosing the right technology and “putting that technology into place”.
 

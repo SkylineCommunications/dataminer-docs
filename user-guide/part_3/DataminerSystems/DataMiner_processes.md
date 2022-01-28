@@ -12,7 +12,7 @@ The following overview clearly shows how the DataMiner Agent software is a colle
 
 #### Overview of the DataMiner Agent processes
 
-![](../../images/slprocess_overview.jpg)
+![](~/user-guide/images/slprocess_overview.jpg)
 
 
 

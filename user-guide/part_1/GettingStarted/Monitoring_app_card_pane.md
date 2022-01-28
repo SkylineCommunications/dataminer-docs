@@ -20,7 +20,7 @@ The card pane of the Monitoring app is the large pane on the right side of the a
 
 > [!NOTE]
 > - If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.
-> - If the app is viewed in a browser that supports fullscreen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a fullscreen button is available:<br>![](../../images/CubeMaximize00028.png)
+> - If the app is viewed in a browser that supports fullscreen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a fullscreen button is available:<br>![](~/user-guide/images/CubeMaximize00028.png)
 >
 >    Click this button to view the item in fullscreen mode. To leave fullscreen mode using a keyboard, press Esc or F11, depending on the browser.
 
@@ -87,11 +87,11 @@ The following pages are available:
 
 - *Data*: One or more pages with parameters, as configured in the element protocol. The following icons provide access to additional functionality:
 
-    - ![](../../images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter.
+    - ![](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter.
 
-    - ![](../../images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the trending page, where you can view a trend graph or histogram for the parameter. On the left, the time span for the trend graph can be configured.
+    - ![](~/user-guide/images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the trending page, where you can view a trend graph or histogram for the parameter. On the left, the time span for the trend graph can be configured.
 
-    - ![](../../images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
+    - ![](~/user-guide/images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
 
 - *Alarms*: Displays the active alarms for the element.
 
@@ -159,6 +159,6 @@ From DataMiner 10.0.5 onwards, the Spectrum Analyzer page contains buttons to th
 
 | Button                                                                                                         | Tab description                                                                                                                                                                                                                                                                        |
 |----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../../images/MonitoringX_spectruminfo.png)       | Information tab. Contains basic information about the current measurement points, markers, thresholds and parameters. If no markers or thresholds are available for the current preset, these sections are not displayed in the tab.                                                   |
-| ![](../../images/MonitoringX_spectrumtraces.png)   | Traces tab. Allows you to select whether the current, minimum, maximum and/or average trace should be displayed. However, if a measurement point is selected, only the current trace can be shown.                                                                                     |
-| ![](../../images/MonitoringX_spectrumpresets.png) | Presets tab. This tab shows a list of all available presets. By default, only private presets are shown, i.e. presets that are only available to the current user. To view all presets, select Show shared presets. Select a preset and click Load to display it on the spectrum page. |
+| ![](~/user-guide/images/MonitoringX_spectruminfo.png)       | Information tab. Contains basic information about the current measurement points, markers, thresholds and parameters. If no markers or thresholds are available for the current preset, these sections are not displayed in the tab.                                                   |
+| ![](~/user-guide/images/MonitoringX_spectrumtraces.png)   | Traces tab. Allows you to select whether the current, minimum, maximum and/or average trace should be displayed. However, if a measurement point is selected, only the current trace can be shown.                                                                                     |
+| ![](~/user-guide/images/MonitoringX_spectrumpresets.png) | Presets tab. This tab shows a list of all available presets. By default, only private presets are shown, i.e. presets that are only available to the current user. To view all presets, select Show shared presets. Select a preset and click Load to display it on the spectrum page. |

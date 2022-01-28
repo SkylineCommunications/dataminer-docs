@@ -433,11 +433,11 @@ In the following screenshot, there are three “virtual comments” next to the 
 
 Next to *\<Param>30\</Param>*, for example, you can see *\<!-- System OR Table -->* because, in the parameter definition, the *\<Description>* tag contains “System OR Table”.
 
-![](../../images/dis_protocol_editor_comments_group.png)
+![](~/user-guide/images/dis_protocol_editor_comments_group.png)
 
 
 
-![](../../images/dis_protocol_editor_comments_param.png)
+![](~/user-guide/images/dis_protocol_editor_comments_param.png)
 
 
 

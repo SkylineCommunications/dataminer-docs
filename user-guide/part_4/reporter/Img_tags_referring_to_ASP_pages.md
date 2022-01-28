@@ -8,7 +8,7 @@ On your website, you can show DataMiner report graphs by means of \<img> tags.
 
 In those tags, you simply have to refer to ASP pages on your web server that will then request a report graph from the DataMiner Agent.
 
-![](../../images/reporter_graph_include.jpg)
+![](~/user-guide/images/reporter_graph_include.jpg)
 
 
 

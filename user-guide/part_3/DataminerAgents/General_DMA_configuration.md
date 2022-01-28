@@ -156,7 +156,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 The diagram below shows how communication within a DMS could be set up.
 
-![DMS communication overview](../../images/dms_ip_communication_1021.jpg)
+![DMS communication overview](~/user-guide/images/dms_ip_communication_1021.jpg)
 
 
 
@@ -660,7 +660,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 7. In a command window, execute *nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*), in order to check the status of the cluster. this should result in a list with your new IP, your old IP and all other Cassandra nodes on the server. For example:
 
-    ![](../../images/nodetoolstatus.png)
+    ![](~/user-guide/images/nodetoolstatus.png)
 
 8. In the same command window, execute *nodetool removenode \[host ID of the old IP\]*, e.g. *nodetool removenode 35506039-0f03-4a1e-8642-94484d440116*.
 

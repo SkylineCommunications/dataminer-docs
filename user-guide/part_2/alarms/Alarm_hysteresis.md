@@ -13,7 +13,7 @@ Thanks to alarm threshold hysteresis, you can fine-tune the sensitivity of your 
 
 #### Graphical representation
 
-![](../../images/hysteresis.jpg)
+![](~/user-guide/images/hysteresis.jpg)
 
 
 

@@ -45,7 +45,7 @@ To make a recording:
 
 To play back a recording:
 
-1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click the ![](../../images/spectrum_play.png) icon.
+1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click the ![](~/user-guide/images/spectrum_play.png) icon.
 
 2. If you want to select a shared recording, in the pop-up window, select *Show shared recordings*.
 
@@ -65,7 +65,7 @@ To play back a recording:
 
 5. Click *OK*.
 
-    While the recording is playing, you can stop it at any time by clicking the ![](../../images/spectrum_stop.png) icon in the *Record* section of the ribbon.
+    While the recording is playing, you can stop it at any time by clicking the ![](~/user-guide/images/spectrum_stop.png) icon in the *Record* section of the ribbon.
     From DataMiner 10.2.0/10.1.7 onwards, below the recording, controls are displayed that allow you to skip forward or backward, pause and play again, and fast forward.
 
     - Drag the thumb of the slider control to go to any specific point in the recording.
@@ -82,7 +82,7 @@ To play back a recording:
 
 To manage the available recordings:
 
-1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click the ![](../../images/spectrum_recordings.png) icon.
+1. In the *trace* tab of the spectrum analyzer card, go to the *Recording* section, and click the ![](~/user-guide/images/spectrum_recordings.png) icon.
 
 2. If you also want to manage shared recordings, in the Manage recordings window, select *Show shared recordings*.
 

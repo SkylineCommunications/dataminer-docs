@@ -21,7 +21,7 @@ A regular DataMiner element communicates with a physical device using a DataMine
 
 A simulated DataMiner element communicates with a simulation file, which is a file containing a set of parameter values captured at a certain point in time while the actual communication between a regular DataMiner element and a physical device was being monitored. These parameter values are then used to construct commands and responses according to the rules set out in the DataMiner protocol. That way, a communication stream between a DataMiner element and a non-existent device is simulated.
 
-![](../../images/SimulatedElements.jpg)
+![](~/user-guide/images/SimulatedElements.jpg)
 
 
 

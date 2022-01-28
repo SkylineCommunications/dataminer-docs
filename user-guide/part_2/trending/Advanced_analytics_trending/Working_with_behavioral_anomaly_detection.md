@@ -36,18 +36,18 @@ Based on the behavioral anomaly detection, the following icons can be displayed 
 
 | Icon   | Description     |
 |--------|-----------------|
-| ![Trend graph icon](../../../images/StandardTrendGraphIcon.png) | Standard trend graph icon |
-| ![Upward arrow icon](../../../images/ArrowRight60.png) | Upward arrow  |
-| ![Downward arrow icon](../../../images/ArrowRight120.png)  | Downward arrow  |
-| ![Flat arrow icon](../../../images/ArrowRight.png)  | Flat arrow  |
-| ![Upward level shift icon](../../../images/LevelShiftIncrease.png) ![Red upward level shift icon](../../../images/LevelShiftIncreaseRed.png) | Upward level shift |
-| ![Downward level shift icon](../../../images/LevelShiftDecrease.png) ![Red downward level shift icon](../../../images/LevelShiftDecreaseRed.png) | Downward level shift |
-| ![Upward trend change icon](../../../images/ArrowTrendChangeUp.png) ![Red upward trend change](../../../images/ArrowTrendChangeUpRed.png) | Upward trend change |
-| ![Downward trend change icon](../../../images/ArrowTrendChangeDown.png) ![Red downward trend change](../../../images/ArrowTrendChangeDownRed.png) | Downward trend change |
-| ![Variance increase icon](../../../images/ArrowVarianceChangeUp.png) ![Red variance increase icon](../../../images/ArrowVarianceChangeUpRed.png) | Variance increase |
-| ![Variance decrease icon](../../../images/ArrowVarianceChangeDown.png) ![Red variance decrease icon](../../../images/ArrowVarianceChangeDownRed.png) | Variance decrease |
-| ![Upward outlier icon](../../../images/ArrowOutlierUp.png) ![Red upward outlier icon](../../../images/ArrowOutlierUpRed.png) | Upward outlier |
-| ![Downward outlier icon](../../../images/ArrowOutlierDown.png) ![Red downward outlier icon](../../../images/ArrowOutlierDownRed.png) | Downward outlier |
+| ![Trend graph icon](~/user-guide/images/StandardTrendGraphIcon.png) | Standard trend graph icon |
+| ![Upward arrow icon](~/user-guide/images/ArrowRight60.png) | Upward arrow  |
+| ![Downward arrow icon](~/user-guide/images/ArrowRight120.png)  | Downward arrow  |
+| ![Flat arrow icon](~/user-guide/images/ArrowRight.png)  | Flat arrow  |
+| ![Upward level shift icon](~/user-guide/images/LevelShiftIncrease.png) ![Red upward level shift icon](~/user-guide/images/LevelShiftIncreaseRed.png) | Upward level shift |
+| ![Downward level shift icon](~/user-guide/images/LevelShiftDecrease.png) ![Red downward level shift icon](~/user-guide/images/LevelShiftDecreaseRed.png) | Downward level shift |
+| ![Upward trend change icon](~/user-guide/images/ArrowTrendChangeUp.png) ![Red upward trend change](~/user-guide/images/ArrowTrendChangeUpRed.png) | Upward trend change |
+| ![Downward trend change icon](~/user-guide/images/ArrowTrendChangeDown.png) ![Red downward trend change](~/user-guide/images/ArrowTrendChangeDownRed.png) | Downward trend change |
+| ![Variance increase icon](~/user-guide/images/ArrowVarianceChangeUp.png) ![Red variance increase icon](~/user-guide/images/ArrowVarianceChangeUpRed.png) | Variance increase |
+| ![Variance decrease icon](~/user-guide/images/ArrowVarianceChangeDown.png) ![Red variance decrease icon](~/user-guide/images/ArrowVarianceChangeDownRed.png) | Variance decrease |
+| ![Upward outlier icon](~/user-guide/images/ArrowOutlierUp.png) ![Red upward outlier icon](~/user-guide/images/ArrowOutlierUpRed.png) | Upward outlier |
+| ![Downward outlier icon](~/user-guide/images/ArrowOutlierDown.png) ![Red downward outlier icon](~/user-guide/images/ArrowOutlierDownRed.png) | Downward outlier |
 
 Please note the following regarding these icons:
 

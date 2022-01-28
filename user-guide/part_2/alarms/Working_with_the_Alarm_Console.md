@@ -37,18 +37,18 @@ This section consists of the following topics:
 
 ### Manipulating the Alarm Console
 
-- To collapse the Alarm Console, click the downward arrow button in the top-right corner: ![](../../images/Collapse_Alarm_Console_button.png)
+- To collapse the Alarm Console, click the downward arrow button in the top-right corner: ![](~/user-guide/images/Collapse_Alarm_Console_button.png)
 
     Only the alarm bar will be displayed, which displays the total number of active alarms, the total number of unread alarms and the number of active alarms per severity in the currently selected alarm tab. In addition, the alarm bar also displays a number of buttons that can also be used in the expanded Alarm Console.
 
-- To return the Alarm Console to its original size again, click the upward arrow button: ![](../../images/Expand_Alarm_Console_button.png)
+- To return the Alarm Console to its original size again, click the upward arrow button: ![](~/user-guide/images/Expand_Alarm_Console_button.png)
 
     > [!NOTE]
     > You can also single-click the alarm bar to temporarily open it on top of the open cards. As soon as you click anywhere else, the console will collapse again.
 
-- To maximize the Alarm Console over the entire window, click the maximize button: ![](../../images/Maximize_button00039.png)
+- To maximize the Alarm Console over the entire window, click the maximize button: ![](~/user-guide/images/Maximize_button00039.png)
 
-- To undock the Alarm Console into a separate window, click the undock button: ![](../../images/Undock_button.png)
+- To undock the Alarm Console into a separate window, click the undock button: ![](~/user-guide/images/Undock_button.png)
 
 - If the Alarm Console is undocked in a separate window, close that window to dock the Alarm Console to its original position at the bottom of the main DataMiner Cube window.
 
@@ -273,9 +273,9 @@ To do so:
 
 #### Using the statistical view
 
-To view the alarms in an alarm tab as statistics instead of in a regular list view, click the statistical view button in the alarm bar: ![](../../images/Statistical_View_button.png)
+To view the alarms in an alarm tab as statistics instead of in a regular list view, click the statistical view button in the alarm bar: ![](~/user-guide/images/Statistical_View_button.png)
 
-To return to the regular list view again, click the list view button: ![](../../images/List_View_button.png)
+To return to the regular list view again, click the list view button: ![](~/user-guide/images/List_View_button.png)
 
 The statistical view has three tab pages, each offering a different drill-down approach:
 
@@ -296,7 +296,7 @@ If you double-click an item or right-click it and select *Show alarms*, the alar
 
 To view severity timelines per element or per parameter:
 
-1. Click the reports view button in the alarm bar: ![](../../images/Reports_view_button.png)
+1. Click the reports view button in the alarm bar: ![](~/user-guide/images/Reports_view_button.png)
 
 2. Depending on whether you wish to see these so-called “heat maps” for elements or for parameters, either stay in the *elements* tab, or go to the *parameters* tab.
 
@@ -306,7 +306,7 @@ To view severity timelines per element or per parameter:
 
     - For a parameter heat map, the parameter card is opened. If it is a trended parameter, the trending tab is displayed, otherwise the details tab is displayed.
 
-3. To return to the regular list view again, click the list view button: ![](../../images/List_View_button00045.png)
+3. To return to the regular list view again, click the list view button: ![](~/user-guide/images/List_View_button00045.png)
 
 > [!NOTE]
 > This feature is only available in a DataMiner System using a Cassandra database.
@@ -344,7 +344,7 @@ You can hide the side panel in three ways:
 
 ### Working with the Alarm Console history slider
 
-In the Alarm Console, you can display a timeline at the bottom of the *Active alarms* tab. To do so, click the *History slider* button in the alarm bar: ![](../../images/History_Slider_button.png)
+In the Alarm Console, you can display a timeline at the bottom of the *Active alarms* tab. To do so, click the *History slider* button in the alarm bar: ![](~/user-guide/images/History_Slider_button.png)
 
 > [!TIP]
 > See also:
@@ -565,9 +565,9 @@ From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns a
 
 - Frequency scores are used to detect parameters that frequently go into and out of alarm, or alarms that persist over a long time.
 
-Depending on the focus score, an alarm can be considered unexpected. In that case, this is indicated with the following icon in the *Focus* column: ![](../../images/AlarmFocus.png)
+Depending on the focus score, an alarm can be considered unexpected. In that case, this is indicated with the following icon in the *Focus* column: ![](~/user-guide/images/AlarmFocus.png)
 
-To filter the alarm list to only show such unexpected alarms, click the following button in the alarm bar: ![](../../images/AlarmFocusFilter.png)
+To filter the alarm list to only show such unexpected alarms, click the following button in the alarm bar: ![](~/user-guide/images/AlarmFocusFilter.png)
 
 Please note the following regarding the alarm focus feature:
 
@@ -620,7 +620,7 @@ To do so:
 
 The example below shows a filter for elements matching a particular wildcard expression.
 
-![](../../images/alarm_filter_wildcard_DM9.png)
+![](~/user-guide/images/alarm_filter_wildcard_DM9.png)
 
 
 
@@ -632,7 +632,7 @@ If you want to filter alarms using a regular expression:
 
 2. Specify a regular expression.
 
-![](../../images/alarm_filter_regex_DM9.png)
+![](~/user-guide/images/alarm_filter_regex_DM9.png)
 
 
 
@@ -775,7 +775,7 @@ The levels are indicated as three values, separated by commas. The values repres
 
 To filter alarms based on their RCA level:
 
-1. Click the RCA slider in the alarm bar, indicated by the following icon: ![](../../images/RCA_Filter_icon.png)
+1. Click the RCA slider in the alarm bar, indicated by the following icon: ![](~/user-guide/images/RCA_Filter_icon.png)
 
 2. Select the RCA level.
 

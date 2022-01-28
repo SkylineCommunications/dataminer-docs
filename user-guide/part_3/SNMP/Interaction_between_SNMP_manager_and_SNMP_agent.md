@@ -15,13 +15,13 @@ The SLSNMPManager and SLSNMPAgent processes allow a DataMiner Agent to exchange 
 
 Up to DataMiner 9.0.2, this can be represented as follows:
 
-![](../../images/SNMPbefore903.jpg)
+![](~/user-guide/images/SNMPbefore903.jpg)
 
 
 
 From DataMiner 9.0.3 onwards, a number of changes have been implemented:
 
-![](../../images/SNMPafter903.jpg)
+![](~/user-guide/images/SNMPafter903.jpg)
 
 
 

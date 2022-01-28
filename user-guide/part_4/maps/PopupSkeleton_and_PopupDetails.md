@@ -392,7 +392,7 @@ An example of a marker balloon with three tabs:
 
 On the map, the above-mentioned code will be rendered in the following way.
 
-![](../../images/maps_balloon_tabs.png)
+![](~/user-guide/images/maps_balloon_tabs.png)
 
 
 
@@ -476,4 +476,4 @@ Example:
 </PopupSkeleton>
 ```
 
-![](../../images/maps_popupskeleton_CPElinks.png)
+![](~/user-guide/images/maps_popupskeleton_CPElinks.png)

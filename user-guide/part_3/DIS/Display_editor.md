@@ -47,7 +47,7 @@ If you want a page to have only one column spanning across the entire width, the
 
 Every parameter you drag onto a page is represented by a building block similar to the one in the screen shot below.
 
-![](../../images/dis_display_editor_param.png)
+![](~/user-guide/images/dis_display_editor_param.png)
 
 
 

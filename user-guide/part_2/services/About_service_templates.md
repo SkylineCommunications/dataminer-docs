@@ -30,7 +30,7 @@ In a service template, you have to specify
 
 The moment you apply a service template, it will collect all data that has been specified as “input data”, process it, and automatically create the services.
 
-![](../../images/ServiceTemplateConcept.jpg)
+![](~/user-guide/images/ServiceTemplateConcept.jpg)
 
 
 

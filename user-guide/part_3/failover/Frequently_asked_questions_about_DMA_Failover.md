@@ -297,7 +297,7 @@ In older DataMiner Systems, one way of preventing both Agents from registering t
 
 1. In the *Advanced TCP/IP Settings* of the network interfaces that will use virtual IP addresses, go to the *DNS* tab and clear the option *Register this connection’s addresses in DNS*.
 
-    ![](../../images/advanced_tcpip_settings.png)
+    ![](~/user-guide/images/advanced_tcpip_settings.png)
 
 2. On the DNS server, add fixed records for both the main and the backup DMA. Also add an extra entry for the virtual IP address.
 

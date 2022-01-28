@@ -77,15 +77,15 @@ To display a measurement point, in the settings pane, go to *Manual* > *Measurem
 
 Two additional display options are available in the *Measurement points* tab:
 
-- **![](../../images/measptvisualize_16.png) Visualize measurement points**:
+- **![](~/user-guide/images/measptvisualize_16.png) Visualize measurement points**:
 
     Adds the measurement points as services in the same view as the spectrum analyzer element. These services contain the monitored alarm parameters for the measurement point.
 
     > [!NOTE]
-    > - Measurement points have their own specific icon in the Surveyor: ![](../../images/measurement_point_icon.png)
+    > - Measurement points have their own specific icon in the Surveyor: ![](~/user-guide/images/measurement_point_icon.png)
     > - A service representing a measurement point will only include the spectrum element if there is at least one monitor with at least one parameter that uses this measurement point.
     > - The default opening behavior of measurement point cards can be configured in the user settings. The cards can either open as a service or as a spectrum analyzer card. The alternative opening behavior can be accessed via the measurement point’s context menu. See [Card settings](xref:User_settings#card-settings).
 
-- **![](../../images/combined_measpt_16.png) Combined measurement point view**:
+- **![](~/user-guide/images/combined_measpt_16.png) Combined measurement point view**:
 
     When this option is enabled, you can display multiple measurement points at once by selecting them in the *Manual \> Measurement points* tab of the settings pane.

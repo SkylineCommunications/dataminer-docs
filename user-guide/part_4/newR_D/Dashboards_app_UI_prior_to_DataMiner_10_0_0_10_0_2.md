@@ -10,11 +10,11 @@ The main page of the app consists of a header bar, a navigation pane, and a deta
 
     | Button                                                                              | Description                                                                                    |
     |---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-    | ![](../../images/NewRD_apps.png)         | Apps button, for quick access to other DataMiner web apps.                                     |
+    | ![](~/user-guide/images/NewRD_apps.png)         | Apps button, for quick access to other DataMiner web apps.                                     |
     | Dashboards                                                                            | Click this button to return to the main page of the app at any time.                           |
     | New dashboard                                                                         | Only displayed if a folder or dashboard is selected.                                           |
-    | ![](../../images/NewRD_Settings.png) | Click this button to open a window where you can manage any available dashboard themes.        |
-    | ![](../../images/NewRD_About.png)       | Displays information about the app.                                                            |
+    | ![](~/user-guide/images/NewRD_Settings.png) | Click this button to open a window where you can manage any available dashboard themes.        |
+    | ![](~/user-guide/images/NewRD_About.png)       | Displays information about the app.                                                            |
     | \[User name\]                                                                         | Click the user name and select *Log out* to log out of the app. |
 
     > [!NOTE]
@@ -26,9 +26,9 @@ The main page of the app consists of a header bar, a navigation pane, and a deta
 
     - Use the filter box at the top of the navigation pane to filter the dashboards displayed in the pane.
 
-    - Click the ![](../../images/recent_dashboards.png) button to switch from the tree view to a list of recent items. Click the ![](../../images/treeview_dashboards.png) button to switch back to the tree view.
+    - Click the ![](~/user-guide/images/recent_dashboards.png) button to switch from the tree view to a list of recent items. Click the ![](~/user-guide/images/treeview_dashboards.png) button to switch back to the tree view.
 
-    - Either right-click in the pane or click the ![](../../images/more_dashboards.png) button to open a menu with the following options:
+    - Either right-click in the pane or click the ![](~/user-guide/images/more_dashboards.png) button to open a menu with the following options:
 
         - *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](xref:Deleting_a_dashboard).
 
@@ -50,9 +50,9 @@ The main page of the app consists of a header bar, a navigation pane, and a deta
 
     | Button                                                                            | Description                                                                                              |
     |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-    | ![](../../images/NewRD_Refresh.png) | Loads the most recent data in the displayed dashboard.                                                   |
-    | ![](../../images/NewRD_Edit.png)       | Allows you to start editing the dashboard. In edit mode, the navigation pane on the left will be hidden. |
-    | ![](../../images/NewRD_NoEdit.png)   | Closes edit mode                                                                                         |
+    | ![](~/user-guide/images/NewRD_Refresh.png) | Loads the most recent data in the displayed dashboard.                                                   |
+    | ![](~/user-guide/images/NewRD_Edit.png)       | Allows you to start editing the dashboard. In edit mode, the navigation pane on the left will be hidden. |
+    | ![](~/user-guide/images/NewRD_NoEdit.png)   | Closes edit mode                                                                                         |
 
 > [!NOTE]
 > If the app is viewed using a small screen, no options to edit dashboards or dashboard settings will be available.

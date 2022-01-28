@@ -61,7 +61,7 @@ uid: Adding_a_service
         3. Choose an alarm or trend template, if available.
 
             > [!NOTE]
-            > - You can also quickly change the selected template by clicking the following button to the right of the field: ![](../../images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](xref:Configuring_alarm_templates) and [Configuring trend templates](xref:Configuring_trend_templates).
+            > - You can also quickly change the selected template by clicking the following button to the right of the field: ![](~/user-guide/images/Open_protocols_app_icon.png)<br>This will temporarily open the Protocol & Templates app, where you can make the necessary changes. See [Configuring alarm templates](xref:Configuring_alarm_templates) and [Configuring trend templates](xref:Configuring_trend_templates).
             > - A service that has been created using a service protocol is called an “enhanced service”.
 
 7. Click the *Next* button in the lower right corner to go to the *parameters* page.

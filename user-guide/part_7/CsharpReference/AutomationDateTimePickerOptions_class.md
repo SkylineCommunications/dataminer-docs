@@ -21,7 +21,7 @@ AutomationDateTimePickerOptions configOptionsDateTimePickerDefault = new Automat
 blockDateTimePickerDefault.ConfigOptions = configOptionsDateTimePickerDefault;
 ```
 
-![](../../images/datetimepicker_example.png)
+![](~/user-guide/images/datetimepicker_example.png)
 
 
 

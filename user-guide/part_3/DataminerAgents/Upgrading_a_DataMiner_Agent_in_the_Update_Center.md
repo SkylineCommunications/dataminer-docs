@@ -8,7 +8,7 @@ From DataMiner 9.0.5 onwards, it is possible to upgrade or update a DMA via the 
 
 To do so:
 
-1. From DataMiner 10.0.0/10.0.2 onwards: Click the user icon in the Cube header bar and select *Check for updates*. <br>Prior to DataMiner 10.0.0/10.0.2: Click the updates icon ![update icon](../../images/updates_icon00065.png) in the Cube header bar, or click the question mark icon in the header bar and select *Check for Updates*.
+1. From DataMiner 10.0.0/10.0.2 onwards: Click the user icon in the Cube header bar and select *Check for updates*. <br>Prior to DataMiner 10.0.0/10.0.2: Click the updates icon ![update icon](~/user-guide/images/updates_icon00065.png) in the Cube header bar, or click the question mark icon in the header bar and select *Check for Updates*.
 
     This will open the Update Center window.
 

@@ -21,7 +21,7 @@ AutomationTimeUpDownOptions configOptionsTimeUpDownDefault = new AutomationTimeU
 blockTimeUpDownDefault.ConfigOptions = configOptionsTimeUpDownDefault;
 ```
 
-![](../../images/timeupdown_example.png)
+![](~/user-guide/images/timeupdown_example.png)
 
 
 

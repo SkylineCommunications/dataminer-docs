@@ -31,7 +31,7 @@ On a spectrum analyzer card, you can manage the spectrum monitors for one partic
 
 To access spectrum monitors from a spectrum analyzer card:
 
-- In the *monitors* tab, click either ![](../../images/monitoradd_32.png) *New monitor* or ![](../../images/monitoredit_32.png) *Edit monitor*.
+- In the *monitors* tab, click either ![](~/user-guide/images/monitoradd_32.png) *New monitor* or ![](~/user-guide/images/monitoredit_32.png) *Edit monitor*.
 
     This will open the *Edit monitor* window, which has two panes:
 
@@ -97,7 +97,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 
     > [!NOTE]
     > - To remove a service created by a spectrum monitor, you must either disable the *Create Service* option or remove the monitor itself. Unlike a normal service, it cannot be deleted in the Surveyor.
-    > - Spectrum monitors for which a service has been created are indicated with a special icon in the Surveyor, instead of the regular service icon: ![](../../images/spectrum_monitor.png)
+    > - Spectrum monitors for which a service has been created are indicated with a special icon in the Surveyor, instead of the regular service icon: ![](~/user-guide/images/spectrum_monitor.png)
 
 6. In the *script* section, select the script that is to be executed by the monitor.
 
@@ -182,7 +182,7 @@ To do so:
 
 1. In the ribbon of the spectrum analyzer card, go to the *monitors* tab.
 
-2. Click ![](../../images/prio_over_monitors_32.png) *Take Priority Over Monitors*.
+2. Click ![](~/user-guide/images/prio_over_monitors_32.png) *Take Priority Over Monitors*.
 
 3. In the message box, click *OK*.
 

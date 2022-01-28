@@ -17,7 +17,7 @@ To do so:
 
 3. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
 
-    ![](../../images/CloudAdmin_Selector.png)
+    ![](~/user-guide/images/CloudAdmin_Selector.png)
 
 4. In the sidebar on the left, navigate to *Organization* > *Users*.
 

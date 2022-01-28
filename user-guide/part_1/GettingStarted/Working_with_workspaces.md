@@ -10,7 +10,7 @@ To manage workspaces:
 
 - From DataMiner 10.0.0/10.0.2 onwards: Click the Workspace button at the bottom of the Cube sidebar.
 
-- Prior to DataMiner 10.0.0/10.0.2: Click the workspace icon ![](../../images/IconWorkspaces00024.png) in the Cube navigation pane.
+- Prior to DataMiner 10.0.0/10.0.2: Click the workspace icon ![](~/user-guide/images/IconWorkspaces00024.png) in the Cube navigation pane.
 
 > [!NOTE]
 > - The saved layout can include apps, like for instance Automation, and undocked alarm tabs, but not the position of the complete Alarm Console.

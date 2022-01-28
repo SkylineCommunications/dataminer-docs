@@ -21,7 +21,7 @@ AutomationTimePickerOptions configOptionsTimePickerDefault = new AutomationTimeP
 blockTimePickerDefault.ConfigOptions = configOptionsTimePickerDefault;
 ```
 
-![](../../images/timepicker_example.png)
+![](~/user-guide/images/timepicker_example.png)
 
 
 

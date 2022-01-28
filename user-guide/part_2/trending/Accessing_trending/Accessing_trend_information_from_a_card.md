@@ -10,10 +10,10 @@ On a DMA using a Cassandra database, these trending icons can be displayed diffe
 
 | Trend icon  | Description |
 |-------------|-------------|
-| ![Upward trend icon](../../../images/Trend_icon_increase.png) | The predicted trend value is increasing. Hover over the icon to view the rate of increase. |
-| ![Downward trend icon](../../../images/trend_icon_decrease.png) | The predicted trend value is decreasing. Hover over the icon to view the rate of decrease. |
-| ![Stable trend icon](../../../images/trend_icon_stable.png)   | The predicted trend remains stable. |
-| ![Trend icon without prediction](../../../images/trend_icon_unknown.png) | The trend behavior cannot be predicted, either because there is insufficient data, or because there is too much uncertainty in the direction of the trend during the past hour. On a DMA that does not use a Cassandra database, only this icon is displayed. |
+| ![Upward trend icon](~/user-guide/images/Trend_icon_increase.png) | The predicted trend value is increasing. Hover over the icon to view the rate of increase. |
+| ![Downward trend icon](~/user-guide/images/trend_icon_decrease.png) | The predicted trend value is decreasing. Hover over the icon to view the rate of decrease. |
+| ![Stable trend icon](~/user-guide/images/trend_icon_stable.png)   | The predicted trend remains stable. |
+| ![Trend icon without prediction](~/user-guide/images/trend_icon_unknown.png) | The trend behavior cannot be predicted, either because there is insufficient data, or because there is too much uncertainty in the direction of the trend during the past hour. On a DMA that does not use a Cassandra database, only this icon is displayed. |
 
 > [!NOTE]
 > - Behavior is calculated for single-value parameters and table parameters. In case of partial tables, behavior is only calculated for the rows of the first page.

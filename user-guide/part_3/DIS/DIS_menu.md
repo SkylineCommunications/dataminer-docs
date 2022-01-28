@@ -141,7 +141,7 @@ When working in the XML editor or the C# editor, you can do one of the following
 
 - Click the following button, which is situated in the top-left corner of the DIS Tree window:
 
-    ![](../../images/SyncArrow_16x.jpg)
+    ![](~/user-guide/images/SyncArrow_16x.jpg)
 
 See also: [DIS keyboard shortcuts](xref:DIS_keyboard_shortcuts)
 

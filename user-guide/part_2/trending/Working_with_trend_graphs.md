@@ -16,7 +16,7 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 
 Depending on the type of data that is displayed, the trend line looks different. For example, take a look at this trend graph in DataMiner 10.2.1:
 
-![Trend graph in DataMiner Cube](../../images/Trend_line.png)
+![Trend graph in DataMiner Cube](~/user-guide/images/Trend_line.png)
 
 - The dark full line represents trend information retrieved from the database.
 

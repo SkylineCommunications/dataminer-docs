@@ -6,7 +6,7 @@ uid: Configuring_a_Cassandra_database_on_a_remote_cluster
 
 Different setups are possible where the Cassandra general database runs entirely on one or more external nodes, as illustrated below. However, these require an advanced procedure with manual adjustments of the Cassandra settings.
 
-![DataMiner setup with remote Cassandra cluster](../../images/Cassandra_cluster100231.jpg)
+![DataMiner setup with remote Cassandra cluster](~/user-guide/images/Cassandra_cluster100231.jpg)
 
 
 

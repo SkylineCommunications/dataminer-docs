@@ -8,7 +8,7 @@ DMS Correlation automatically analyzes raw alarm information and real-time param
 
 Based on the rules set by the user, DMS Correlation can create correlated alarms or send notifications via text message or email, so that operators are informed of certain events. It can also trigger Automation scripts, so that automatic countermeasures are possible in case of emergency or preventive actions in case of emerging issues.
 
-![](../../images/correlation_engine_conceptv2.jpg)
+![](~/user-guide/images/correlation_engine_conceptv2.jpg)
 
 
 
@@ -34,7 +34,7 @@ The event is a combination of:
 
 - Rule conditions: These conditions determines when the Correlation rule is triggered. Ideally, a Correlation rule should always contain at least one condition.
 
-![](../../images/Correlation_rulev2.jpg)
+![](~/user-guide/images/Correlation_rulev2.jpg)
 
 
 

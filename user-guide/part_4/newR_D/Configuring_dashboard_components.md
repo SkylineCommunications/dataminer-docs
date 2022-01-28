@@ -32,7 +32,7 @@ In addition, depending on the visualization, additional configuration options ma
 
 To apply a visualization to a component or change the visualization of a component:
 
-1. Click on the component or hover the mouse over the component and click the ![](../../images/DashboardsX_visualizations00095.png) icon.
+1. Click on the component or hover the mouse over the component and click the ![](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
 2. Select the visualization you want to apply from the options displayed below the component.
 
@@ -42,9 +42,9 @@ To apply a visualization to a component or change the visualization of a compone
 
 To apply a data feed or change the data feed of a component:
 
-1. Click on the component or hover the mouse over the component and click the ![](../../images/dashboards_data.png) icon.
+1. Click on the component or hover the mouse over the component and click the ![](~/user-guide/images/dashboards_data.png) icon.
 
-    In the data pane on the right, any data feeds that do not match the visualization of the component will become unavailable. Data feeds that are compatible with the component will be marked with the following icon: ![](../../images/NewRD_datafeed.png)
+    In the data pane on the right, any data feeds that do not match the visualization of the component will become unavailable. Data feeds that are compatible with the component will be marked with the following icon: ![](~/user-guide/images/NewRD_datafeed.png)
 
 2. Drag the compatible data feed onto the component.
 
@@ -68,7 +68,7 @@ To apply a data feed or change the data feed of a component:
 
     - If you try to add a data feed that is not compatible with the component, a red icon will be displayed on the component when you try to drag the data onto it.
 
-3. Some visualizations and data feeds allow you to specify an additional filter feed. In that case, a yellow filter icon will be displayed below the component when you select it or hover the mouse over it: ![](../../images/DashboardsX_filter.png)
+3. Some visualizations and data feeds allow you to specify an additional filter feed. In that case, a yellow filter icon will be displayed below the component when you select it or hover the mouse over it: ![](~/user-guide/images/DashboardsX_filter.png)
 
     After you click this icon, compatible filter feeds will be marked with this icon in the data pane, and you will be able to drag these onto the component just like a data feed.
 

@@ -10,7 +10,7 @@ Your DataMiner System can interface with a multitude of client applications, ran
 
 As shown in the following illustration, there are four main categories of DataMiner interfaces.
 
-![](../../images/3rd_party_System_Interfacing_REV003.jpg)
+![](~/user-guide/images/3rd_party_System_Interfacing_REV003.jpg)
 
 
 

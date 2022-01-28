@@ -18,7 +18,7 @@ uid: How_DataMiner_offloads_data
 
 3. *Mysql.data.dll* pushes the contents to the MySQL database via IP port 3306.
 
-![](../../images/db_offload_mysql.jpg)
+![](~/user-guide/images/db_offload_mysql.jpg)
 
 
 
@@ -40,7 +40,7 @@ uid: How_DataMiner_offloads_data
 
     See also: <https://technet.microsoft.com/en-us/library/cc731402(v=ws.11).aspx>
 
-![](../../images/db_offload_mssql.jpg)
+![](~/user-guide/images/db_offload_mssql.jpg)
 
 
 
@@ -69,7 +69,7 @@ uid: How_DataMiner_offloads_data
 
 4. The Oracle database fetches the CSV file from its (local) shared, and inserts the contents of the file into the table in question.
 
-![](../../images/db_offload_oracle.jpg)
+![](~/user-guide/images/db_offload_oracle.jpg)
 
 
 

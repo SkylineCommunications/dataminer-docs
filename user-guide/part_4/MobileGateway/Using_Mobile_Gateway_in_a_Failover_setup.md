@@ -8,7 +8,7 @@ To use Mobile Gateway in a Failover setup, we advise you to install your cell ph
 
 1. One serial cell phone modem, connected to both the primary DMA and the backup DMA by means of a Mobile Gateway server.
 
-    ![](../../images/mobile_gateway_failover_1.jpg)
+    ![](~/user-guide/images/mobile_gateway_failover_1.jpg)
 
     > [!NOTE]
     > In this scenario:
@@ -19,7 +19,7 @@ To use Mobile Gateway in a Failover setup, we advise you to install your cell ph
 
 2. Two serial cell phone modems, one connected to the primary DMA and the other connected to the backup DMA.
 
-    ![](../../images/mobile_gateway_failover_2.jpg)
+    ![](~/user-guide/images/mobile_gateway_failover_2.jpg)
 
     > [!NOTE]
     > In this scenario:
@@ -30,4 +30,4 @@ To use Mobile Gateway in a Failover setup, we advise you to install your cell ph
 
 3. One serial cell phone modem, connected to another DMA in the DMS cluster.
 
-    ![](../../images/mobile_gateway_failover_3.jpg)
+    ![](~/user-guide/images/mobile_gateway_failover_3.jpg)

@@ -4,7 +4,7 @@ uid: Working_with_spectrum_scripts
 
 ## Working with spectrum scripts
 
-To access spectrum scripts, in the *monitors* tab of a spectrum analyzer element, click either ![](../../images/script_new_32.png) *New script* or ![](../../images/script_edit_32.png) *Edit script*.
+To access spectrum scripts, in the *monitors* tab of a spectrum analyzer element, click either ![](~/user-guide/images/script_new_32.png) *New script* or ![](~/user-guide/images/script_edit_32.png) *Edit script*.
 
 This will open the *Edit script* window, which has two panes:
 

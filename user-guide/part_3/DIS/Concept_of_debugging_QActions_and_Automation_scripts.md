@@ -15,7 +15,7 @@ Below, you can find a graphical representation of the way QActions are debugged.
 
 The numbers in the drawing refer to the phases described in the table below.
 
-![](../../images/DIS_concept_debugging.jpg)
+![](~/user-guide/images/DIS_concept_debugging.jpg)
 
 
 

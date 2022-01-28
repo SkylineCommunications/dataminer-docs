@@ -21,7 +21,7 @@ AutomationDateTimeUpDownOptions configOptionsDateTimeUpDownDefault = new Automat
 blockDateTimeUpDownDefault.ConfigOptions = configOptionsDateTimeUpDownDefault;
 ```
 
-![](../../images/datetimeupdown_example.png)
+![](~/user-guide/images/datetimeupdown_example.png)
 
 
 
