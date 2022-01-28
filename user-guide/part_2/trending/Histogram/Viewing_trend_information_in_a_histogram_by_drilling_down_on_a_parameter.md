@@ -2,13 +2,13 @@
 uid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
 ---
 
-## Viewing trend information in a histogram by drilling down on a parameter
+# Viewing trend information in a histogram by drilling down on a parameter
 
 1. Go to the trend information by drilling down on a parameter in a card. See [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card).
 
-2. Above the trend graph, click *Histogram*.
+1. Above the trend graph, click *Histogram*.
 
-3. To specify further options, below the histogram, click *Advanced*:
+1. To specify further options, below the histogram, click *Advanced*:
 
     - Next to *Start time* and *End time*, specify a custom time interval to represent in the histogram.
 
@@ -19,7 +19,7 @@ uid: Viewing_trend_information_in_a_histogram_by_drilling_down_on_a_parameter
     > [!NOTE]
     > From DataMiner 9.5.2/DataMiner 9.0.0 CU15 onwards, an additional option *Automatic intervals* is available. When this option is selected, DataMiner automatically determines the intervals. Specifying a custom interval width and minimum and maximum value is only possible when this option is not selected.
 
-4. To change the displayed range of data, you can also:
+1. To change the displayed range of data, you can also:
 
     - Zoom in on a particular section, by dragging while keeping the left mouse button clicked, or by using the mouse scroll wheel.
 

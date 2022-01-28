@@ -2,7 +2,7 @@
 uid: Zooming_in_out_on_a_trend_graph
 ---
 
-## Zooming in/out on a trend graph
+# Zooming in/out on a trend graph
 
 You can zoom in and out on graphs in several ways:
 

@@ -71,7 +71,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - To quickly add more parameters to a trend graph, drag an element from the Surveyor and drop it onto the graph. Configure which parameters to add in the pane at the bottom. See [Accessing trend information from the Trending module](xref:Accessing_trend_information_from_the_Trending_module).
 
-- Want to display a custom Y-axis range in a trend graph, instead of the range automatically determined by Cube? Right-click the graph and select *Y-axis settings*. This can for instance be useful to get a different perspective on the graph. See [Using the right-click menu](xref:Using_the_right-click_menu#using-the-right-click-menu).
+- Want to display a custom Y-axis range in a trend graph, instead of the range automatically determined by Cube? Right-click the graph and select *Y-axis settings*. This can for instance be useful to get a different perspective on the graph. See [Using the trending right-click menu](xref:Using_the_right-click_menu).
 
 - Have you made a complicated trend graph with multiple parameters, and would you like to easily retrieve it again later? Save it as a trend group. See [Working with trend groups](xref:Working_with_trend_groups).
 

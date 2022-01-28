@@ -575,17 +575,9 @@
           items:
             - name: Accessing trend information from a card
               topicUid: Accessing_trend_information_from_a_card
-            - name: Displaying alarm template colors in trend graphs
-              topicUid: Displaying_alarm_template_colors_in_trend_graphs
             - name: Accessing trend information from the Trending module
               topicUid: Accessing_trend_information_from_the_Trending_module
-            - name: Working with trend predictions
-              topicUid: Working_with_trend_predictions
-            - name: Working with behavioral anomaly detection
-              topicUid: Working_with_behavioral_anomaly_detection
-            - name: Working with pattern matching
-              topicUid: Working_with_pattern_matching
-        - name: Manipulating trend graphs
+        - name: Working with trend graphs
           topicUid: Manipulating_trend_graphs
           items:
             - name: Panning across a trend graph
@@ -594,7 +586,18 @@
               topicUid: Zooming_in_out_on_a_trend_graph
             - name: Using the right-click menu
               topicUid: Using_the_right-click_menu
-        - name: Viewing trend information in a histogram
+            - name: Displaying alarm template colors in trend graphs
+              topicUid: Displaying_alarm_template_colors_in_trend_graphs
+        - name: Advanced analytics features in trend graphs
+          topicUid: Advanced_analytics_trending
+          items:
+            - name: Working with trend predictions
+              topicUid: Working_with_trend_predictions
+            - name: Working with behavioral anomaly detection
+              topicUid: Working_with_behavioral_anomaly_detection
+            - name: Working with pattern matching
+              topicUid: Working_with_pattern_matching
+        - name: Working with histograms
           topicUid: Viewing_trend_information_in_a_histogram
           items:
             - name: Viewing trend information in a histogram by drilling down on a parameter

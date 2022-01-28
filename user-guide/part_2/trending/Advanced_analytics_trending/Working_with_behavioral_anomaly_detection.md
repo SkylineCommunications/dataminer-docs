@@ -2,12 +2,15 @@
 uid: Working_with_behavioral_anomaly_detection
 ---
 
-## Working with behavioral anomaly detection
+# Working with behavioral anomaly detection
 
 > [!NOTE]
 > - This feature requires a general database of type "Cassandra".
 > - Anomaly detection is only available for numeric parameters that are not part of partial tables. It is also limited to at most 100,000 parameters per DMA.
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config*.
+
+> [!TIP]
+> See also: [Behavioral anomaly detection](xref:Advanced_analytics_features_in_the_Alarm_Console#behavioral-anomaly-detection)
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the following kinds of changes in the behavior of a trend, also known as "change points":
 
@@ -27,24 +30,24 @@ If a trend change, variance change or level shift is unexpected, it will be cons
 > - Whenever an anomalous level shift, trend change or variance change is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:Working_with_the_Alarm_Console#adding-and-removing-alarm-tabs-in-the-alarm-console).
 > - You can configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly See [Configuring anomaly detection alarms for specific parameters](xref:Configuring_alarm_templates#configuring-anomaly-detection-alarms-for-specific-parameters).
 
-#### Trend icons on data pages
+## Trend icons on data pages
 
 Based on the behavioral anomaly detection, the following icons can be displayed next to a trended parameter on a data page:
 
-| Icon                                                                                                                                                                                                                | Description               |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| ![](../../images/StandardTrendGraphIcon.png)                                                                                                                | Standard trend graph icon |
-| ![](../../images/ArrowRight60.png)                                                                                                                                    | Upward arrow              |
-| ![](../../images/ArrowRight120.png)                                                                                                                                  | Downward arrow            |
-| ![](../../images/ArrowRight.png)                                                                                                                                        | Flat arrow                |
-| ![](../../images/LevelShiftIncrease.png) ![](../../images/LevelShiftIncreaseRed.png)                       | Upward level shift        |
-| ![](../../images/LevelShiftDecrease.png) ![](../../images/LevelShiftDecreaseRed.png)                      | Downward level shift      |
-| ![](../../images/ArrowTrendChangeUp.png) ![](../../images/ArrowTrendChangeUpRed.png)                     | Upward trend change       |
-| ![](../../images/ArrowTrendChangeDown.png) ![](../../images/ArrowTrendChangeDownRed.png)             | Downward trend change     |
-| ![](../../images/ArrowVarianceChangeUp.png) ![](../../images/ArrowVarianceChangeUpRed.png)         | Variance increase         |
-| ![](../../images/ArrowVarianceChangeDown.png) ![](../../images/ArrowVarianceChangeDownRed.png) | Variance decrease         |
-| ![](../../images/ArrowOutlierUp.png) ![](../../images/ArrowOutlierUpRed.png)                                     | Upward outlier            |
-| ![](../../images/ArrowOutlierDown.png) ![](../../images/ArrowOutlierDownRed.png)                             | Downward outlier          |
+| Icon   | Description     |
+|--------|-----------------|
+| ![Trend graph icon](../../../images/StandardTrendGraphIcon.png) | Standard trend graph icon |
+| ![Upward arrow icon](../../../images/ArrowRight60.png) | Upward arrow  |
+| ![Downward arrow icon](../../../images/ArrowRight120.png)  | Downward arrow  |
+| ![Flat arrow icon](../../../images/ArrowRight.png)  | Flat arrow  |
+| ![Upward level shift icon](../../../images/LevelShiftIncrease.png) ![Red upward level shift icon](../../../images/LevelShiftIncreaseRed.png) | Upward level shift |
+| ![Downward level shift icon](../../../images/LevelShiftDecrease.png) ![Red downward level shift icon](../../../images/LevelShiftDecreaseRed.png) | Downward level shift |
+| ![Upward trend change icon](../../../images/ArrowTrendChangeUp.png) ![Red upward trend change](../../../images/ArrowTrendChangeUpRed.png) | Upward trend change |
+| ![Downward trend change icon](../../../images/ArrowTrendChangeDown.png) ![Red downward trend change](../../../images/ArrowTrendChangeDownRed.png) | Downward trend change |
+| ![Variance increase icon](../../../images/ArrowVarianceChangeUp.png) ![Red variance increase icon](../../../images/ArrowVarianceChangeUpRed.png) | Variance increase |
+| ![Variance decrease icon](../../../images/ArrowVarianceChangeDown.png) ![Red variance decrease icon](../../../images/ArrowVarianceChangeDownRed.png) | Variance decrease |
+| ![Upward outlier icon](../../../images/ArrowOutlierUp.png) ![Red upward outlier icon](../../../images/ArrowOutlierUpRed.png) | Upward outlier |
+| ![Downward outlier icon](../../../images/ArrowOutlierDown.png) ![Red downward outlier icon](../../../images/ArrowOutlierDownRed.png) | Downward outlier |
 
 Please note the following regarding these icons:
 
@@ -54,7 +57,7 @@ Please note the following regarding these icons:
 
 - The selection of a particular icon is based on the change points that have occurred within a time interval specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. By default, this is set to 3600 seconds.
 
-#### Change points in trend graphs
+## Change points in trend graphs
 
 On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indicates the importance of the change, and the color of the bar indicates the severity.
 

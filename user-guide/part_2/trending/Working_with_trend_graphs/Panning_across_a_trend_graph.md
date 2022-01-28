@@ -2,7 +2,7 @@
 uid: Panning_across_a_trend_graph
 ---
 
-## Panning across a trend graph
+# Panning across a trend graph
 
 You can pan across a graph in several ways:
 

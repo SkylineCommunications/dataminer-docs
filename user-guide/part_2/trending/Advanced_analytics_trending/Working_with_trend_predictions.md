@@ -2,7 +2,7 @@
 uid: Working_with_trend_predictions
 ---
 
-## Working with trend predictions
+# Working with trend predictions
 
 > [!NOTE]
 > - This feature requires a general database of type “Cassandra”.
@@ -20,11 +20,11 @@ The current point in time is displayed with a vertical dashed line marked as “
 
 The predicted trend is displayed as a line surrounded by three shaded areas:
 
-- the largest shaded area shows how the parameter will evolve with 95 % probability
+- The largest shaded area shows how the parameter will evolve with 95 % probability
 
-- the middle area shows the evolution with 90 % probability, and
+- The middle area shows the evolution with 90 % probability, and
 
-- the smallest area shows the evolution with 80 % probability.
+- The smallest area shows the evolution with 80 % probability.
 
 > [!NOTE]
 > - The probability percentages are based on the assumptions made at the moment the graph is generated. If the behavior of the data changes afterwards, the probability may need to be adjusted.

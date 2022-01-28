@@ -2,7 +2,7 @@
 uid: Displaying_alarm_template_colors_in_trend_graphs
 ---
 
-## Displaying alarm template colors in trend graphs
+# Displaying alarm template colors in trend graphs
 
 In the user settings, you can configure the way alarm severity levels are shown in trend graphs.
 
@@ -23,4 +23,3 @@ To switch between these settings:
 > [!NOTE]
 > - The alarm template cannot be displayed in a trend graph if it uses a variable baseline.
 > - An alarm timeline can also be displayed along the X-axis, indicating the severity at each point in time. However, this is only displayed on a parameter card, not in the Trending module or on a view card, and only as long as the initial parameter is displayed.
->

@@ -2,9 +2,9 @@
 uid: Working_with_pattern_matching
 ---
 
-## Working with pattern matching
+# Working with pattern matching
 
-From DataMiner 10.0.7 onwards, on systems using a Cassandra database and DataMiner Indexing, DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, patterns need to be marked with so-called tags.
+From DataMiner 10.0.7 onwards, on systems using a Cassandra and Elasticsearch database, DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, patterns need to be marked with so-called tags.
 
 If you are viewing a trend graph for a single parameter and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. Matches found for the same element/parameter as the one for which a tag was defined will be shown in bright orange, while matches associated with tags created for another element/parameter will be shown in lighter orange.
 
@@ -15,7 +15,10 @@ If you are viewing a trend graph for a single parameter and it contains patterns
 > - If pattern matching is performed on a trend graph showing more than 100,000 data points, an aggregated level of detail will be used to improve performance at the cost of accuracy. If, at the most aggregated level, the number of data points exceeds 100,000 data points, no pattern matching will be performed.
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
 
-#### Defining a tag
+> [!TIP]
+> See also: [Monitoring of trend patterns](xref:Advanced_analytics_features_in_the_Alarm_Console#monitoring-of-trend-patterns)
+
+## Defining a tag
 
 To define a tag for pattern matching:
 
@@ -34,7 +37,7 @@ To define a tag for pattern matching:
 
 5. Click the check mark to save the tag.
 
-#### Editing a tag
+## Editing a tag
 
 To edit an existing tag for pattern matching:
 
@@ -48,7 +51,7 @@ To edit an existing tag for pattern matching:
 
 5. To save any modifications, click the check mark.
 
-#### Deleting a tag
+## Deleting a tag
 
 To delete a tag for pattern matching:
 

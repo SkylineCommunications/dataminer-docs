@@ -2,7 +2,7 @@
 uid: Working_with_the_parameter_pane
 ---
 
-## Working with the parameter pane
+# Working with the parameter pane
 
 In the parameter pane, you can add as many parameters as needed to create a particular trend group. Parameters can also be duplicated or deleted in the pane.
 
@@ -12,11 +12,11 @@ To add parameters with the parameter pane:
 
 1. Click *Add parameter* or drag an element or parameter onto the graph from the navigation pane.
 
-2. Specify the element and parameter, if necessary. For a table parameter you may also need to specify the index.
+1. Specify the element and parameter, if necessary. For a table parameter you may also need to specify the index.
 
-3. Repeat from step 1 until all necessary parameters have been added.
+1. Repeat from step 1 until all necessary parameters have been added.
 
-4. To save the trend group, click *Save as*. For more information on adding a trend group, see [Adding a trend group](xref:Working_with_the_trend_groups_pane#adding-a-trend-group).
+1. To save the trend group, click *Save as*. For more information on adding a trend group, see [Adding a trend group](xref:Working_with_the_trend_groups_pane#adding-a-trend-group).
 
 The following functionalities may also be useful:
 

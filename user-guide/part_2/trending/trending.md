@@ -14,9 +14,11 @@ This section consists of the following topics:
 
 - [Displaying trend graphs](xref:Displaying_trend_graphs)
 
-- [Manipulating trend graphs](xref:Manipulating_trend_graphs)
+- [Working with trend graphs](xref:Manipulating_trend_graphs)
 
-- [Viewing trend information in a histogram](xref:Viewing_trend_information_in_a_histogram)
+- [Advanced analytics features in trend graphs](xref:Advanced_analytics_trending)
+
+- [working with histograms](xref:Viewing_trend_information_in_a_histogram)
 
 - [Working with trend groups](xref:Working_with_trend_groups)
 
@@ -27,4 +29,3 @@ This section consists of the following topics:
 > - [Trending settings](xref:User_settings#trending-settings)
 > - [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component)
 > - [Trend templates](xref:Trend_templates)
->

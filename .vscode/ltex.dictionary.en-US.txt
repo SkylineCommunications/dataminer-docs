@@ -11,3 +11,4 @@ nodetool
 DevCenter
 SLDMADB
 Visio
+SLAnalytics
