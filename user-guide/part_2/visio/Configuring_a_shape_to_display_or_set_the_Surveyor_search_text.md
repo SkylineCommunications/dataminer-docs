@@ -2,7 +2,7 @@
 uid: Configuring_a_shape_to_display_or_set_the_Surveyor_search_text
 ---
 
-## Configuring a shape to display or set the Surveyor search text
+# Configuring a shape to display or set the Surveyor search text
 
 From DataMiner 9.5.9 onwards, you can configure a shape to display the most recently used search entry in the Surveyor, or to trigger a search in the Surveyor with a particular search entry. This can be done with the *SurveyorSearchText* variable. The scope of the variable always has to be set to the current workspace.
 

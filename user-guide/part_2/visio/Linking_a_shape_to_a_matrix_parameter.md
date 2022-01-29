@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_a_matrix_parameter
 ---
 
-## Linking a shape to a matrix parameter
+# Linking a shape to a matrix parameter
 
 Do the following to make a graphical representation of a matrix parameter.
 
@@ -23,7 +23,7 @@ Connections between inputs and outputs will be drawn automatically.
 > [!NOTE]
 > - When you right-click a shape linked to a matrix parameter, the shortcut menu will by default list all inputs defined in the protocol. However, it is possible that the number of inputs and outputs have been limited in the *port.xml* file.
 
-### Drawing the shapes representing the matrix inputs and outputs
+## Drawing the shapes representing the matrix inputs and outputs
 
 1. Draw a number of shapes that each represent an input or an output.
 
@@ -49,7 +49,7 @@ Connections between inputs and outputs will be drawn automatically.
         > - By default, connections will end at the center of the shape.
         > - If you want an “output shape” to show the current Element state, add a shape data field to it of type **Parameter**, and set its value to “*\*\|Alarm*”.
 
-### Drawing the shapes displaying the input and output labels
+## Drawing the shapes displaying the input and output labels
 
 1. Draw a number of shapes that each represent an input label or an output label.
 
@@ -71,7 +71,7 @@ Connections between inputs and outputs will be drawn automatically.
 
         If, in the shape, you type “\*”, that character will be replaced by the current name of the output.
 
-### Combining all shapes into a group representing the matrix
+## Combining all shapes into a group representing the matrix
 
 1. Combine all shapes created in steps 1 and 2 into a group.
 

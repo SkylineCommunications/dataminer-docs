@@ -2,7 +2,7 @@
 uid: Resources
 ---
 
-## Resources
+# Resources
 
 In this section, you can find a wealth of resources:
 

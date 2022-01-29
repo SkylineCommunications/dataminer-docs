@@ -2,14 +2,14 @@
 uid: Restricting_the_number_of_client_sessions_of_a_spectrum_element
 ---
 
-## Restricting the number of client sessions of a spectrum element
+# Restricting the number of client sessions of a spectrum element
 
 The maximum number of concurrent client sessions of a spectrum analyzer element can be restricted by means of the *Spectrum.MaxRealTimeClients* element property.
 
 > [!NOTE]
 > By default, the maximum number of concurrent client sessions is 100. However, when a client starts watching buffers, goes into standby, plays a recording file, etc., the device access is released for other clients to take.
 
-### Adding the Spectrum.MaxRealTimeClients property to a spectrum analyzer element
+## Adding the Spectrum.MaxRealTimeClients property to a spectrum analyzer element
 
 1. Right-click the spectrum element in the Surveyor and select *Properties*.
 
@@ -23,7 +23,7 @@ The maximum number of concurrent client sessions of a spectrum analyzer element 
 
 6. Right-click the spectrum analyzer element in the Surveyor and select *Status \> Restart*.
 
-### Taking over a session from another client
+## Taking over a session from another client
 
 > [!NOTE]
 > This feature is only included in the legacy Element Display application, and is no longer available from DataMiner 9.6.0 onwards.

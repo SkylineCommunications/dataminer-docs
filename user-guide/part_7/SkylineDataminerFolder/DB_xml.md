@@ -2,7 +2,7 @@
 uid: DB_xml
 ---
 
-## DB.xml
+# DB.xml
 
 In the file *DB.xml*, you can specify the configuration data for several databases used by the DataMiner System:
 
@@ -24,7 +24,7 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 
 - Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
-### General database settings
+## General database settings
 
 The configuration data for the general or “local” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “true”.
 
@@ -51,7 +51,7 @@ The following configuration is possible for the general database:
 
 - [Example of a general database configuration](#example-of-a-general-database-configuration)
 
-#### Configuring the maintenance settings
+### Configuring the maintenance settings
 
 In the *Maintenance* tag, several attributes are available with which you can determine when records are removed from the table.
 
@@ -68,7 +68,7 @@ The limiting options can be set to “true” or “false”. If both options ar
 > - For a Cassandra (cluster) database, it is only possible to configure the limitByMonths attribute, not the limitByNumber attribute. Note also that this attribute works in a different way for Cassandra, compared to MySQL or MSSQL: if a record has been stored with a particular limitByMonths and MonthsToKeep setting, this setting permanently applies to that record in Cassandra.
 > - From DataMiner 9.5.5 onwards (or 9.5.6 for an SQL database), the settings determining how long records are kept in the database are determined in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
-#### Configuring how long parameter data are kept in the database for DMS Reporter
+### Configuring how long parameter data are kept in the database for DMS Reporter
 
 In order to make sure that parameter data is not removed from the database too early, two additional attributes are available in the *Maintenance* tag.
 
@@ -79,7 +79,7 @@ This can for instance be of use to ensure that a report with data for the past m
 | initialLoadDays    | The number of days that parameter data will be kept in the rep_pd_info database table on first request. Default: 62. |
 | paramMaxUnusedDays | The maximum number of days between each request for the parameter data to be kept in the rep_pd_info database.       |
 
-##### Example:
+#### Example:
 
 ```xml
 <Maintenance monthsToKeep="12" initialLoadDays="30" paramMaxUnusedDays="15"> </Maintenance>
@@ -87,7 +87,7 @@ This can for instance be of use to ensure that a report with data for the past m
 
 In the example above, the parameter data will be kept in the rep_pd_info table for 30 days. If the parameter data is not requested for 15 consecutive days, all data older than 30 days will be removed.
 
-#### Keeping a separate log for slow database queries
+### Keeping a separate log for slow database queries
 
 In the *Database* tag, you can use the “slowquery” attribute to configure slow query log settings for the database in question. A separate log will then be kept with all database queries that take longer than the configured number of seconds:
 
@@ -105,7 +105,7 @@ Example:
 
 In the above example, the slowquery attribute is set to “5”, so all database queries that take 5 seconds or longer to finish will be logged in the slow query log.
 
-#### Configuring how alarm history slider data are kept in a Cassandra database
+### Configuring how alarm history slider data are kept in a Cassandra database
 
 In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider.
 
@@ -117,7 +117,7 @@ In a Cassandra general database, the timetrace table among others contains “sn
     > - In some cases, e.g. when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
     > - This can only be configured for a regular Cassandra database, not for a Cassandra cluster used by the entire DMS (type=CassandraCluster).
 
-#### Skipping commit log writing of a Cassandra database
+### Skipping commit log writing of a Cassandra database
 
 In order to optimize the writing speed to a Cassandra database, an option can be specified that will skip the writing of the commit log.
 
@@ -138,7 +138,7 @@ To add this option, In *DB.xml*, add a *\<SkipCommitLog>* tag to the currently a
 </DataBases>
 ```
 
-#### Setting the number of retries to connect to the Cassandra database
+### Setting the number of retries to connect to the Cassandra database
 
 From DataMiner 9.6.9 onwards, you can specify how many times the *SLDataGateway* process should try to connect to the Cassandra database at startup.
 
@@ -156,7 +156,7 @@ Between each retry, there will be a 30-second interval. By default, there are 60
 
 If Cassandra still cannot be reached after SLDataGateway has tried to connect for the maximum number of times specified in this setting, there will be no connection. To try to connect after this, a restart of the SLDataGateway process is required.
 
-#### Enabling TLS on the Cassandra database connection
+### Enabling TLS on the Cassandra database connection
 
 From DataMiner 10.2.0/10.1.3 onwards, it is possible to enable TLS on a Cassandra database connection.
 
@@ -180,7 +180,7 @@ To do so
 > - IF TLS is enabled, port 7001 must be opened in the firewall. See [Overview of IP ports used in a DMS](xref:General_DMA_configuration#overview-of-ip-ports-used-in-a-dms).
 > - This procedure only enables TLS on the database connection. It does not enable client authentication.
 
-#### Example of a general database configuration
+### Example of a general database configuration
 
 The following example illustrates the configuration of a MySQL general database (prior to DataMiner 9.5.6).
 
@@ -258,7 +258,7 @@ The following example illustrates the configuration of a general database of typ
 </DataBases>
 ```
 
-### Offload database settings
+## Offload database settings
 
 The configuration data for the offload or “central” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “false”.
 
@@ -289,20 +289,20 @@ For a configuration example, refer to:
 
 - [Example of an offload database configuration](#example-of-an-offload-database-configuration)
 
-#### Keeping a separate log for slow database queries
+### Keeping a separate log for slow database queries
 
 Like for the general database, for the offload database you can keep a separate log for slow database queries.
 
 See [Keeping a separate log for slow database queries](#keeping-a-separate-log-for-slow-database-queries).
 
-#### Specifying the tables to be offloaded
+### Specifying the tables to be offloaded
 
 In the *DataBases.Database.Offloads* tag, add an *\<Offload>* tag for every table of the general database that has to be offloaded. Do not forget to specify a *state="active"* attribute.
 
 > [!NOTE]
 > If no tables are specified in the *\<Offloads>* tag, the alarm table will be the only table that will be offloaded.
 
-#### Specifying which type of average trend data records to offload
+### Specifying which type of average trend data records to offload
 
 In the *DataBases.Database.Offloads.Offload* tag, you can use the *record* attribute to specify the type of average trend data records that should be offloaded.
 
@@ -325,7 +325,7 @@ Example:
 </DataBases>
 ```
 
-#### Specifying the offload rate of real-time trend data records
+### Specifying the offload rate of real-time trend data records
 
 In the DataBases.Database.Offloads.Offload tag, you can use the *rate* attribute to specify two settings (separated by a semicolon):
 
@@ -351,11 +351,11 @@ In the following example, “1;TRUE” means that the real-time trend data recor
 > - If you specify an offload rate, then the real-time trend data records with a negative iStatus value other than -9, -10, -15 and -16 will not be offloaded. Also, since the periodic offloads are not triggered by a user, the *chOwner* field of the offloaded records will be empty.
 > - If you specify an offload interval larger than 24 hours, DataMiner will set the offload interval to the maximum value, i.e. 24 hours.
 
-#### Configuring the collation for an MSSQL database
+### Configuring the collation for an MSSQL database
 
 In the Database.Collation tag, you can specify the collation for an offload database of type Microsoft SQL Server. The default collation is “SQL_Latin1_General_CP1_CI_AS”.
 
-##### Example:
+#### Example:
 
 ```xml
 <DataBase active="true" local="false" type="MSSQL">
@@ -370,7 +370,7 @@ In the Database.Collation tag, you can specify the collation for an offload data
 </DataBase>
 ```
 
-#### Configuring data offloads to an SQL Server database in another domain
+### Configuring data offloads to an SQL Server database in another domain
 
 If the offload database is situated in another domain, you can override the machine name with the IP address. That way, the offload database will be able to access the offload files on the other domain.
 
@@ -388,7 +388,7 @@ Example:
 </DataBase>
 ```
 
-#### Configuring data offloads to an Oracle database
+### Configuring data offloads to an Oracle database
 
 If the offload database is an Oracle Database, then add a *RemoteFileShare* tag with the following attributes:
 
@@ -399,7 +399,7 @@ If the offload database is an Oracle Database, then add a *RemoteFileShare* tag 
 | pwd       | The password with which to connect to the shared folder on the database server.                                      |
 | localPath | The local path to the shared folder on the database server.                                                          |
 
-#### Offloading trend data even if no parameter values change
+### Offloading trend data even if no parameter values change
 
 From DataMiner 8.0.5 onwards, average trend information is only saved to the offload database when a parameter value changes. However, from DataMiner 9.0.0 CU10 onwards, you can add an option to the offload database configuration to revert to the behavior of older DataMiner versions, so that average trend information is offloaded regardless of whether parameter values have changed.
 
@@ -425,7 +425,7 @@ To do so:
 
 4. Save and close *DB.xml*, and restart the DMA.
 
-#### Offloading files to a file cache
+### Offloading files to a file cache
 
 To support the offload of files to a file cache instead of to a MySQL, MSSQL or Oracle offload database, a *FileCache* tag is supported in the DB.xml from DataMiner 10.0.11 onwards.
 
@@ -454,7 +454,7 @@ To configure this:
 > [!NOTE]
 > In DataMiner 10.0.11, this can only be configured in *DB.xml*. However, from DataMiner <br>10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offload database](xref:Offload_database).
 
-#### Example of an offload database configuration
+### Example of an offload database configuration
 
 ```xml
 <DataBases xmlns="http://www.skyline.be/config/db">
@@ -504,7 +504,7 @@ To configure this:
 </DataBases>
 ```
 
-### Indexing database settings
+## Indexing database settings
 
 From DataMiner 9.6.4 onwards, DataMiner Indexing Engine can be installed on DMAs with a Cassandra database. In that case, an additional database will be added to *DB.xml*.
 
@@ -521,7 +521,7 @@ The *\<Database>* tag for an indexing database has the following attributes:
 > - From DataMiner 10.2.0/10.1.1 onwards, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
 > - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
-#### Defining a custom port for an Elasticsearch indexing database
+### Defining a custom port for an Elasticsearch indexing database
 
 From DataMiner 10.0.7 onwards, you can define a custom port for an Elasticsearch Indexing database. By default, port 9200 is used.
 
@@ -544,7 +544,7 @@ To define a different port:
 
 4. Save the file and restart the DMA.
 
-#### Specifying a custom prefix for the Elasticsearch indexes
+### Specifying a custom prefix for the Elasticsearch indexes
 
 To support the possibility to have two independent DataMiner Systems using the same Elasticsearch cluster, from DataMiner 10.0.11 onwards, you can specify a custom prefix for the Elasticsearch indices, instead of the default "dms" prefix.
 
@@ -558,7 +558,7 @@ To do so:
 
 4. Save the file and restart the DMA.
 
-#### Specifying custom credentials for Elasticsearch
+### Specifying custom credentials for Elasticsearch
 
 From DataMiner 10.0.11 onwards, it is possible to configure a custom username and password for Elasticsearch in *DB.xml*.
 
@@ -585,7 +585,7 @@ To do so:
 > [!NOTE]
 > For more information on how to configure TLS and security in Elasticsearch, see [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/).
 
-### CMDB settings
+## CMDB settings
 
 If you have a CMDB (Configuration Management Database) that you want to manage by means of the DMS Inventory & Asset Management module, then you can specify the configuration data for that CMDB in an additional *\<Database>* tag.
 

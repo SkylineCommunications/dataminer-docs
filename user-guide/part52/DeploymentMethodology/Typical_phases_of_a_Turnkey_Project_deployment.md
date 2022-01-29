@@ -2,7 +2,7 @@
 uid: Typical_phases_of_a_Turnkey_Project_deployment
 ---
 
-## Typical phases of a Turnkey Project deployment
+# Typical phases of a Turnkey Project deployment
 
 The deployment of a Turnkey Project follows the classic waterfall approach, where all tasks and activities are first inventoried and laid out in a very detailed Project Plan for subsequent execution by the pre-allocated resources, under the control of a Project Manager. All dependencies are clearly defined and documented, and they are assumed to be complied with in a timely fashion, in line with the Project Plan.
 

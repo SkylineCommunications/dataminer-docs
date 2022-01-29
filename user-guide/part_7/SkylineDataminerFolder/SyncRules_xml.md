@@ -2,7 +2,7 @@
 uid: SyncRules_xml
 ---
 
-## SyncRules.xml
+# SyncRules.xml
 
 From DataMiner version 8.5.5 onwards, the *SyncRules.xml* file is used to prevent file synchronization between DataMiner Agents running different versions of the DataMiner software.
 
@@ -21,7 +21,7 @@ When there is a version difference between DMAs for which synchronization is not
 > - It is possible to check which Sync rules are in use on a DMA by means of the SLClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Verifying Sync rules](xref:SLNetClientTest_tool_diagnostic_procedures#verifying-sync-rules).
 > - Changes to the *SyncRules.xml* file only take effect after a DataMiner restart.
 
-##### Example of a SyncRules.xml file:
+#### Example of a SyncRules.xml file:
 
 ```xml
 <SyncRules xmlns="http://www.skyline.be/config/syncrules">
@@ -31,7 +31,7 @@ When there is a version difference between DMAs for which synchronization is not
 </SyncRules>
 ```
 
-##### Syntax:
+#### Syntax:
 
 - Within the *\<VersionRestrictions>* tag, multiple rules can be specified.
 

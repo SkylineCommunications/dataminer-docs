@@ -2,7 +2,7 @@
 uid: Disabling_the_Loading_message_for_a_page_or_shape
 ---
 
-## Disabling the Loading message for a page or shape
+# Disabling the Loading message for a page or shape
 
 When data linked to a page or shape is retrieved in Visual Overview, a “Loading” message is displayed. In some cases, this can be inconvenient, for example when a shape is linked to a parameter that may or may not exist. Therefore, it is possible to use the *EnableLoading* option to determine whether the message is displayed for a page or for a particular shape.
 

@@ -2,7 +2,7 @@
 uid: SmsOptions_constructor
 ---
 
-## SmsOptions constructor
+# SmsOptions constructor
 
 ```txt
 SmsOptions (string message, string to)

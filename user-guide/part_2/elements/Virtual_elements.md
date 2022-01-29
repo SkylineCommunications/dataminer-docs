@@ -2,7 +2,7 @@
 uid: Virtual_elements
 ---
 
-## Virtual elements
+# Virtual elements
 
 The term “virtual element” is used for two different kinds of elements:
 
@@ -10,13 +10,13 @@ The term “virtual element” is used for two different kinds of elements:
 
 - [Virtual elements used for element connections](#virtual-elements-used-for-element-connections)
 
-### Virtual elements in a redundancy group
+## Virtual elements in a redundancy group
 
 When a redundancy group is created, for each of the primary elements a virtual element is created. The virtual element will either represent the corresponding primary element or its backup, depending on which is operational. Typically these elements will have names surrounded by curly brackets, e.g. {Virtual Element 1}.
 
 For more information, see [About redundancy groups](xref:About_redundancy_groups).
 
-### Virtual elements used for element connections
+## Virtual elements used for element connections
 
 It is possible that for a certain element, not all parameters can be communicated through the regular connection. For instance, for an element with an SNMP connection, there may be a few sensors that require an extra element, e.g. an ADAM I/O Box, to communicate their readings to DataMiner. In that case, a virtual element can be created that combines a number of parameters from different “real” elements. In contrast to those “real” elements, the virtual element does not represent a physical device.
 
@@ -26,7 +26,7 @@ A virtual element is based on a virtual protocol. This is different from a norma
 
 A virtual element can also have new parameters, which often contain the result of a mathematical calculation based on the values of one or more parameters from “real” elements. You could, for instance, retrieve the output level and the input level from a “real” element, calculate the transmission loss and store the result in a new parameter of your virtual element.
 
-#### Configuring virtual elements with the Element Connections module
+### Configuring virtual elements with the Element Connections module
 
 To configure virtual elements in Cube, the *Element Connections* module can be used:
 

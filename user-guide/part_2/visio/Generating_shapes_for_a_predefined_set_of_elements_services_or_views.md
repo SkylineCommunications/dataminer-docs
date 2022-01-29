@@ -2,7 +2,7 @@
 uid: Generating_shapes_for_a_predefined_set_of_elements_services_or_views
 ---
 
-## Generating shapes for a predefined set of elements, services or views
+# Generating shapes for a predefined set of elements, services or views
 
 From DataMiner 9.5.11 onwards, you can specify that a shape should be created automatically for every item in a particular set of elements, services or views.
 
@@ -12,7 +12,7 @@ To do so:
 
 2. Put the shape into a group, and add the necessary group-level shape data fields to the group. See [Group-level shape data](#group-level-shape-data).
 
-### Child-level shape data
+## Child-level shape data
 
 The following shape data fields can be added to a shape that has to represent a particular type of child item.
 
@@ -27,7 +27,7 @@ The following shape data fields can be added to a shape that has to represent a 
 > [!NOTE]
 > Other optional shape data, e.g. **ChildMargin**, can also be specified, in the same manner as for other ChildType shapes. See [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows), [Generating shapes based on child items in a view or a service](xref:Generating_shapes_based_on_child_items_in_a_view_or_a_service) and [Generating shapes that represent alarms](xref:Generating_shapes_that_represent_alarms).
 
-### Group-level shape data
+## Group-level shape data
 
 The following shape data fields can be added to the group containing the table row shapes.
 

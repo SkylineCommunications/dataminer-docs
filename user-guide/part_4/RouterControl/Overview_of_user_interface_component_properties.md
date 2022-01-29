@@ -2,11 +2,11 @@
 uid: Overview_of_user_interface_component_properties
 ---
 
-## Overview of user interface component properties
+# Overview of user interface component properties
 
 Below, you can find the properties of each of the user interface components, as well as the additional optional property groups that can be added to components.
 
-### Extra grid properties
+## Extra grid properties
 
 When one of the below-mentioned controls is placed inside a grid, it will have four extra grid properties:
 
@@ -17,9 +17,9 @@ When one of the below-mentioned controls is placed inside a grid, it will have f
 | Column     | The 0-based number of the column in which the control is located. |
 | ColumnSpan | The number of columns over which the control spans.               |
 
-### Properties per component
+## Properties per component
 
-#### Border
+### Border
 
 None
 
@@ -27,7 +27,7 @@ None
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### Label
+### Label
 
 | Property      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ None
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### Grid
+### Grid
 
 | Property | Description                                                                                                                                                                                |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -58,7 +58,7 @@ None
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### TabControl
+### TabControl
 
 Consists of TabPage components. These have one customizable property, the tab page name, which can have multiple lines. To enter a new line while customizing the tab page name, simply press Enter.
 
@@ -67,7 +67,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > - [Extra grid properties](#extra-grid-properties)
 > - [Creating a dynamic tab page](xref:Creating_a_dynamic_tab_page)
 
-#### TogglePanel
+### TogglePanel
 
 | Property      | Description                                          |
 |---------------|------------------------------------------------------|
@@ -78,7 +78,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### ExpandingPanel
+### ExpandingPanel
 
 | Property        | Description                                                                      |
 |-----------------|----------------------------------------------------------------------------------|
@@ -89,7 +89,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### I/O
+### I/O
 
 | Property                           | Description                                                                                                                                                                                                 |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -105,7 +105,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### Action
+### Action
 
 | Property | Description                                                                                                                                                                                                                                                                            |
 |----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -122,7 +122,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### InfoPanel
+### InfoPanel
 
 | Property | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -133,7 +133,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### Timer
+### Timer
 
 | Property | Description                                                                              |
 |----------|------------------------------------------------------------------------------------------|
@@ -143,7 +143,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-#### Visio
+### Visio
 
 | Property     | Description                                                   |
 |--------------|---------------------------------------------------------------|
@@ -153,7 +153,7 @@ Consists of TabPage components. These have one customizable property, the tab pa
 > See also:
 > [Extra grid properties](#extra-grid-properties)
 
-### Optional property groups
+## Optional property groups
 
 To each of the components mentioned above, additional property groups can be added by means of the *Add* button in the lower left corner of the properties pane. These property groups can also be removed again, by clicking the *x* in the top-right corner of the optional block of properties.
 

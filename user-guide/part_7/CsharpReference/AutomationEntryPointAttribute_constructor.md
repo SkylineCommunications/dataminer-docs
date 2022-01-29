@@ -2,7 +2,7 @@
 uid: AutomationEntryPointAttribute_constructor
 ---
 
-## AutomationEntryPointAttribute constructor
+# AutomationEntryPointAttribute constructor
 
 Initializes a new instance of the *AutomationEntryPointAttribute* class.
 

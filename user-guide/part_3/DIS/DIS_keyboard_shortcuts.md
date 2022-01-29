@@ -2,7 +2,7 @@
 uid: DIS_keyboard_shortcuts
 ---
 
-## DIS keyboard shortcuts
+# DIS keyboard shortcuts
 
 The following table lists the default keyboard shortcuts that you can use while working with DataMiner Integration Studio.
 
@@ -16,7 +16,7 @@ The following table lists the default keyboard shortcuts that you can use while 
 | DIS.ToggleOutliningAtLevel5 | ALT+5             | Collapses all protocol tags of level 5.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | DIS.ToggleOutliningAtLevel6 | ALT+6             | Collapses all protocol tags of level 6.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
-### Changing a keyboard shortcut
+## Changing a keyboard shortcut
 
 If you want to assign another keyboard shortcut to one of the DIS commands listed above, proceed as follows.
 

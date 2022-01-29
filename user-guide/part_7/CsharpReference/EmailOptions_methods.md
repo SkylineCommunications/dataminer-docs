@@ -2,6 +2,6 @@
 uid: EmailOptions_methods
 ---
 
-## EmailOptions methods
+# EmailOptions methods
 
 None

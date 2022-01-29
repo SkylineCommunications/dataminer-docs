@@ -2,7 +2,7 @@
 uid: Working_with_frequency_masks
 ---
 
-## Working with frequency masks
+# Working with frequency masks
 
 > [!NOTE]
 > This feature is only included in the legacy Element Display application, and is no longer available from DataMiner 9.6.0 onwards.
@@ -15,7 +15,7 @@ To access a spectrum element in Element Display, go to *http://**\[MyDMA\]**/Dat
 > See also:
 > [How can I open the legacy System Display and Element Display applications?](xref:DataMiner_client_applications#how-can-i-open-the-legacy-system-display-and-element-display-applications)
 
-### Showing/hiding frequency masks
+## Showing/hiding frequency masks
 
 To show frequency masks in Element Display:
 
@@ -25,7 +25,7 @@ To hide frequency masks in Element Display:
 
 - Go to *Tools \> Frequency Mask* and clear the selection from *View Frequency Mask*.
 
-### Defining frequency masks
+## Defining frequency masks
 
 To define a frequency mask in Element Display:
 
@@ -54,7 +54,7 @@ To define a frequency mask in Element Display:
 > [!NOTE]
 > When the trace breaches the upper or lower bound, FAIL will be displayed instead of PASS, and the shading of the associated area will be color-coded. To customize the colors in question, go to *Options \> Preferences* and select different colors for *Failed Freq Mask Shading*, *Freq Mask Upper Bound* and/or *Freq Mask Lower Bound*.
 
-### Importing and exporting frequency masks
+## Importing and exporting frequency masks
 
 To import a frequency mask in Element Display:
 

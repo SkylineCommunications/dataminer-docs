@@ -2,7 +2,7 @@
 uid: Adding_a_protocol_or_protocol_version_to_your_DataMiner_System
 ---
 
-## Adding a protocol or protocol version to your DataMiner System
+# Adding a protocol or protocol version to your DataMiner System
 
 Before you can start adding elements that represent a particular device, you first have to upload the protocol for that device.
 
@@ -19,11 +19,11 @@ You can upload:
 > [!CAUTION]
 > When you replace a protocol version (i.e. when you add a protocol version that was already available on your DataMiner System), all elements using that protocol version will restart automatically.
 
-### Adding a protocol or protocol version in DataMiner Cube
+## Adding a protocol or protocol version in DataMiner Cube
 
 In DataMiner Cube, you can upload either *Protocol.xml* files or entire protocol packages (extension *.dmprotocol*). In addition, you can also update the protocols in your DMS via the Update Center.
 
-#### Uploading a Protocol.xml file
+### Uploading a Protocol.xml file
 
 1. Go to *Apps* > *Protocols & Templates*.
 
@@ -33,7 +33,7 @@ In DataMiner Cube, you can upload either *Protocol.xml* files or entire protocol
 
 3. In the *Open* dialog box, select the *Protocol.xml* file to be uploaded, and click *Open*.
 
-#### Uploading a protocol package
+### Uploading a protocol package
 
 1. Go to *Apps* > *Protocols & Templates*.
 
@@ -41,7 +41,7 @@ In DataMiner Cube, you can upload either *Protocol.xml* files or entire protocol
 
 3. In the *Open* dialog box, select the *.dmprotocol* package to be uploaded, and click *Open*.
 
-#### Updating protocols with the Update Center
+### Updating protocols with the Update Center
 
 > [!TIP]
 > See also:
@@ -102,7 +102,7 @@ There are different types of updates. The type of update is indicated next to ea
 > - SD Administration: Protocols
 > - Protocol: Adding
 
-### Adding a protocol or protocol version with DataMiner Taskbar Utility
+## Adding a protocol or protocol version with DataMiner Taskbar Utility
 
 Using DataMiner Taskbar Utility, you cannot upload *Protocol.xml* files, only protocol packages (extension *.dmprotocol*).
 

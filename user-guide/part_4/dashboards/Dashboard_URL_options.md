@@ -2,7 +2,7 @@
 uid: Dashboard_URL_options
 ---
 
-## Dashboard URL options
+# Dashboard URL options
 
 When you go directly to a dashboard in a browser using a dashboard URL, you can add options to the dashboard URL to change the way the dashboard is displayed or to determine the dashboard feed. These options are simply added after the URL, and some options can also be combined.
 
@@ -14,7 +14,7 @@ The following sections provide more information on dashboard URL options:
 
 - [Other options](#other-options)
 
-### UI options
+## UI options
 
 The following options apply to the way the user interface is represented.
 
@@ -31,7 +31,7 @@ The following options apply to the way the user interface is represented.
 > [!NOTE]
 > Most of these settings are saved in your browser session, and will be applied to all dashboard pages to which you navigate during that session. This does not apply for the option *?mini=true/false*.
 
-### Feed selection options
+## Feed selection options
 
 The following options determine what feed is used for the dashboard.
 
@@ -45,7 +45,7 @@ The following options determine what feed is used for the dashboard.
 > [!NOTE]
 > In a dashboard where a user must select a feed, the feed selection panel contains a "Permanent link". Right-click *Permanent link* and select *Copy shortcut* in order to copy the full dashboard URL for the current selection.
 
-#### ?element=...
+### ?element=...
 
 You can pass an element to a dashboard by means of the following option:
 
@@ -60,7 +60,7 @@ When you use this option, the following action will occur:
 
 - For feeds that require an ELEMENT, an attempt will be made to automatically link these feeds to the selected element. To do this, additional conditions can be specified by selecting a fixed protocol in the feed and/or by specifying an element mask in the advanced feed options.
 
-#### ?parameter=...
+### ?parameter=...
 
 You can pass a parameter to a dashboard by means of the following option:
 
@@ -78,7 +78,7 @@ When you use this option, the following actions will occur:
 
 - For components that take a parameter with a table index, the table index field can contain a *\[this row\]* placeholder, which will be replaced by the table row index as specified in the URL.
 
-#### ?selection=...
+### ?selection=...
 
 You can pass an entire feed selection to a dashboard by means of the *?selection* option.
 
@@ -133,7 +133,7 @@ viewname|name
 > - *idx\|idx* refers to a row index of a dynamic table.
 > - If you specify strings containing ”!” or “\|” characters, you can encode them as ”!!” and “\|\|”.
 
-#### ?service=...
+### ?service=...
 
 You can pass a service to a dashboard by means of the following option:
 
@@ -157,7 +157,7 @@ When you use this option, the following actions will occur:
     > [!NOTE]
     > For a service state led, the *\[this service\]* placeholder in the linked dashboard title will be replaced by the name of the service for which the LED is displayed.
 
-### Other options
+## Other options
 
 The following options are mainly for internal use or for debugging purposes.
 

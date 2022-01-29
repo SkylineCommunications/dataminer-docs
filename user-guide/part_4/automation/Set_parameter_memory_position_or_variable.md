@@ -2,11 +2,11 @@
 uid: Set_parameter_memory_position_or_variable
 ---
 
-## Set parameter, memory position or variable
+# Set parameter, memory position or variable
 
 For this script action, you must first indicate what is to be set: parameter, memory position or variable. The further configuration options depend on this first choice.
 
-#### For a parameter set
+### For a parameter set
 
 1. In the first underlined field, keep *Parameter* selected.
 
@@ -28,7 +28,7 @@ For this script action, you must first indicate what is to be set: parameter, me
 > [!NOTE]
 > This functionality can also be used to set a matrix crosspoint. In this case, the parameter is “matrix \[matrix size\]”, and you must specify a fixed value of the format *input x -> output y (connected)*.
 
-#### For a memory position set
+### For a memory position set
 
 1. Click the default *Parameter* field to select *Memory position* instead.
 
@@ -47,7 +47,7 @@ For this script action, you must first indicate what is to be set: parameter, me
 
 5. Optionally, click the field next to *offset* and specify an offset value.
 
-#### For a variable set
+### For a variable set
 
 1. Click the default *Parameter* field to select *Variable* instead.
 

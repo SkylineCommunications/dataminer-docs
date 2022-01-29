@@ -2,7 +2,7 @@
 uid: Rolling_back_a_DataMiner_upgrade
 ---
 
-## Rolling back a DataMiner upgrade
+# Rolling back a DataMiner upgrade
 
 By default, prior to DataMiner 10.0.0/10.0.3, when you upgrade a DataMiner Agent, a rollback package is created. This package contains all files replaced during the upgrade. If, for any reason, the DataMiner Agent has to revert to some previous state, you can unpack a rollback package using the DataMiner Taskbar Utility or StandaloneUpgrade.exe. 
 
@@ -12,7 +12,7 @@ However, rollback packages are no longer created in recent DataMiner versions. W
 > See also:
 > [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 
-### Rolling back an upgrade using the DataMiner Taskbar Utility
+## Rolling back an upgrade using the DataMiner Taskbar Utility
 
 > [!NOTE]
 > This is no longer possible from DataMiner 10.0.0/10.0.3 onwards. To downgrade, install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
@@ -34,7 +34,7 @@ However, rollback packages are no longer created in recent DataMiner versions. W
 > [!NOTE]
 > If you roll back a DataMiner Agent using a Cassandra database to a version of DataMiner that does not yet support Cassandra, the upgrade process will try to detect an old SQL configuration and switch back to it if possible. However, it will not check whether this database contains the old data.
 
-### Rolling back an upgrade using StandaloneUpgrade.exe
+## Rolling back an upgrade using StandaloneUpgrade.exe
 
 > [!NOTE]
 > This is no longer supported from DataMiner 10.0.0/10.0.3 onwards. To downgrade, install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).

@@ -2,7 +2,7 @@
 uid: Dashboard_components
 ---
 
-## Dashboard components
+# Dashboard components
 
 The available dashboard components are divided in seven groups, according to what they represent:
 
@@ -20,7 +20,7 @@ The available dashboard components are divided in seven groups, according to wha
 
 - [Other](#other)
 
-### Aggregation
+## Aggregation
 
 This group consists of the following components:
 
@@ -41,7 +41,7 @@ This group consists of the following components:
 > See also:
 > [Working with aggregation rules](xref:Working_with_aggregation_rules)
 
-#### Aggregation
+### Aggregation
 
 Overview of data for one or more aggregation rules in one or more views.
 
@@ -51,7 +51,7 @@ Component-specific options:
 
 - *Highlight important values*: Select this option to give important values a colored background in the overview.
 
-#### Aggregation bar graph
+### Aggregation bar graph
 
 Bar graph representing the aggregated values for one or more aggregation rules in one or more views. Optionally, a filter can be specified for any of the rules. For more information on these filters, see [Aggregation graph filters](#aggregation-graph-filters).
 
@@ -81,7 +81,7 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-#### Aggregation pie graph
+### Aggregation pie graph
 
 Pie chart representing the aggregated values for one or more aggregation rules in one or more views. Optionally, a filter can be specified for any of the rules. For more information on these filters, see [Aggregation graph filters](#aggregation-graph-filters).
 
@@ -105,7 +105,7 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-#### Aggregation trend graph
+### Aggregation trend graph
 
 Trend graph representing one or more aggregation rules in one or more views. The feed for this component consists of one or more groups of aggregation rules. The groups can be given a custom range. Optionally, a filter can be specified for any of the rules. For more information on these filters, see [Aggregation graph filters](#aggregation-graph-filters).
 
@@ -168,7 +168,7 @@ Other component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-#### Aggregation graph filters
+### Aggregation graph filters
 
 In all aggregation graph components, filters can be specified, similar to the filters that can be used throughout DataMiner Cube to get data from a table.
 
@@ -194,7 +194,7 @@ These filters can be specified in two ways:
 
     - *4001* = PK (= ruleID.viewID\[.protocol\]\[.property\].remote pk - with \[\] being optional depending on the rule configuration.)
 
-### Alarms
+## Alarms
 
 This group consists of the following components:
 
@@ -208,7 +208,7 @@ This group consists of the following components:
 
 - [Alarm state service](#alarm-state-service)
 
-#### Alarm count element
+### Alarm count element
 
 Pie chart showing the number of alarms for an element during the last 24 hours.
 
@@ -226,11 +226,11 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-#### Alarm count service
+### Alarm count service
 
 Pie chart showing the number of alarms for a service during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-#### Alarm list
+### Alarm list
 
 Overview of active alarms or alarms in a recent fixed or sliding window.
 
@@ -276,17 +276,17 @@ Component-specific options:
 
 - *Toggle buttons*: Add or remove different options to have these displayed as buttons above the component, which the user can click to change the mode of the alarm list.
 
-#### Alarm state element
+### Alarm state element
 
 Pie chart displaying the percentage of time an element has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-#### Alarm state service
+### Alarm state service
 
 Pie chart displaying the percentage of time a service has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-### DataMiner Agent
+## DataMiner Agent
 
-#### DataMiner time
+### DataMiner time
 
 Displays the current DMA time.
 
@@ -294,7 +294,7 @@ Component-specific options:
 
 - *Text*: Enter text in this box in order to have it displayed in front of the DataMiner time.
 
-#### Visual overview view
+### Visual overview view
 
 Displays the Visual Overview for a particular view, which depends on a view feed.
 
@@ -306,7 +306,7 @@ Component-specific options:
 
 - *Automatically refresh*: Enter the refresh rate for the Visual Overview in this box. By default this is set to 60 seconds. To disable the automatic refresh, set the rate to 0.
 
-### DataMiner element
+## DataMiner element
 
 This group consists of the following components:
 
@@ -329,7 +329,7 @@ This group consists of the following components:
 > [!NOTE]
 > From DataMiner 9.5.1 onwards, not only elements can be used in the feeds for these components, but also enhanced services, i.e. services that use a service protocol.
 
-#### Alarm count element
+### Alarm count element
 
 Pie chart showing the number of alarms for an element during the last 24 hours.
 
@@ -347,15 +347,15 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-#### Alarm state element
+### Alarm state element
 
 Pie chart displaying the percentage of time an element has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-#### Alarm state service
+### Alarm state service
 
 Pie chart displaying the percentage of time a service has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-#### All monitored parameters
+### All monitored parameters
 
 Displays an alarm status indicator for each of the monitored parameters of an element.
 
@@ -363,7 +363,7 @@ Component-specific options:
 
 - *More performance / less graphical*: select this option to use objects that require less resources in order to optimize performance.
 
-#### Data Display page
+### Data Display page
 
 Includes a Data Display page for a particular element in a dashboard. Different layout options are available, and parameter controls can be enabled or disabled.
 
@@ -373,7 +373,7 @@ Component-specific options:
 
 - *Display 'Set parameter' controls*: Select this option to enable users to set the value of write parameters.
 
-#### Element state LED
+### Element state LED
 
 Displays a LED with the color of the element’s alarm severity.
 
@@ -385,11 +385,11 @@ Component-specific options:
 
 - *Limit to parent service*: If the dashboard is service-specific, select this option to limit the displayed element state to the part of the element integrated in the service, instead of showing the overall element state.
 
-#### Reporter severity legend
+### Reporter severity legend
 
 A legend for reporter graphs.
 
-#### Visual overview element
+### Visual overview element
 
 Displays the Visual Overview for a particular element, which depends on an element feed.
 
@@ -404,7 +404,7 @@ Component-specific options:
 > [!NOTE]
 > The Visual Overview settings of the Administrator account are applied. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
-### DataMiner parameter
+## DataMiner parameter
 
 This group consists of the following components:
 
@@ -438,7 +438,7 @@ This group consists of the following components:
 
 - [Trend statistics](#trend-statistics)
 
-#### All monitored parameters
+### All monitored parameters
 
 Displays an alarm status indicator for each of the monitored parameters of a given element.
 
@@ -446,7 +446,7 @@ Component-specific options:
 
 - *More performance / less graphical*: select this option to use objects that require less resources in order to optimize performance.
 
-#### Data Display page
+### Data Display page
 
 Includes a Data Display page for a particular element in a dashboard. Different layout options are available, and parameter controls can be enabled or disabled.
 
@@ -456,7 +456,7 @@ Component-specific options:
 
 - *Display 'Set parameter' controls*: Select this option to allow users to view and set parameter values.
 
-#### Generic real-time parameter
+### Generic real-time parameter
 
 Displays a parameter, optionally with the parameter name, the parameter value, or the parameter set control.
 
@@ -482,7 +482,7 @@ Component-specific options:
 
 - *Custom slider width*: Adjust this value to change the width of the slider.
 
-#### Histogram
+### Histogram
 
 A histogram visualizing parameter values. You can set a custom range and interval amount, as well as several options for the appearance of the histogram.
 
@@ -510,7 +510,7 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the histogram.
 
-#### Parameter state LED
+### Parameter state LED
 
 Displays a LED with the color of the parameter’s alarm severity.
 
@@ -528,7 +528,7 @@ Component-specific options:
 
 - *GUI style*: In the drop-down list, choose a style for the component, depending on whether you need to optimize performance or not.
 
-#### Set parameter
+### Set parameter
 
 Allows dashboard users to change the value of a parameter.
 
@@ -540,7 +540,7 @@ Component-specific options:
 
 - *Display element name*: Enable this option to display the element name.
 
-#### Spectrum thumbnail
+### Spectrum thumbnail
 
 Displays the most recent measurement for a spectrum monitor buffer.
 
@@ -548,7 +548,7 @@ Component-specific options:
 
 - *Buffer to display*: If available, you can select a buffer in the drop-down list for it to be displayed in the thumbnail.
 
-#### Table column bar graph
+### Table column bar graph
 
 Displays the data of selected table column parameters in either a vertical or horizontal bar graph. The table column parameters must be part of one single table in one single element.
 
@@ -587,7 +587,7 @@ Component-specific options:
 
 - *Orientation*: Select whether the bars should be displayed horizontally or vertically.
 
-#### Trend histogram parameter
+### Trend histogram parameter
 
 A histogram representing trend data for one or more parameters.
 
@@ -648,7 +648,7 @@ Other component-specific options:
 
 - *Background color*, *Axis line color*, and *Axis label color*: Click the ellipsis buttons to choose different colors for the components of the histogram.
 
-#### Trend parameter
+### Trend parameter
 
 A custom trend graph for one or more parameters.
 
@@ -712,13 +712,13 @@ Other component-specific options:
 > [!NOTE]
 > If there are exception values in a trend graph, these are displayed below the trend graph, while in the graph itself gaps will be displayed.
 
-#### Trend parameter with history
+### Trend parameter with history
 
 A custom trend graph for one parameter, with additional history information.
 
 This component has the same options as the *Trend parameter* component above, with a few additional options as to the colors used in the graph. Different line colors are available, as well as fill colors when the value is higher or lower than the reference and fill colors for exceptions.
 
-#### Trend parameter with reference value
+### Trend parameter with reference value
 
 A custom trend graph for two parameters, where one of the two is used as a reference.
 
@@ -728,7 +728,7 @@ This component has the same options as the *Trend parameter with history* compon
 
 - *Step plot*: Select this option to display a step graph.
 
-#### Trend sparkline
+### Trend sparkline
 
 A simplified trend graph, which shows trend data for a parameter in a particular time range as a simple image.
 
@@ -742,11 +742,11 @@ Component-specific options:
 
 - *Graph color*: Click the ellipsis button to choose a different color for the graph.
 
-#### Trend statistics
+### Trend statistics
 
 Displays the min/max/avg value for a trended parameter over the specified time.
 
-### DataMiner service
+## DataMiner service
 
 This group consists of the following components:
 
@@ -772,7 +772,7 @@ This group consists of the following components:
 
 - [Visual overview service](#visual-overview-service)
 
-#### Alarm count service
+### Alarm count service
 
 Pie graph showing the number of alarms for a service during the last 24 hours.
 
@@ -790,7 +790,7 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-#### All monitored service parameters
+### All monitored service parameters
 
 Displays an alarm status indicator for each of the monitored parameters of a service.
 
@@ -798,7 +798,7 @@ Component-specific options:
 
 - *More performance / less graphical*: select this option to use objects that require less resources in order to optimize performance.
 
-#### Generic real-time service parameter
+### Generic real-time service parameter
 
 Displays a parameter, optionally with the parameter name, the parameter value, or the parameter set control.
 
@@ -818,11 +818,11 @@ Component-specific options:
 
 - *Display 'Set parameter' control*: Select this option to allow users to view and set parameter values.
 
-#### Reporter severity legend
+### Reporter severity legend
 
 A legend for reporter graphs.
 
-#### Service parameter state LED
+### Service parameter state LED
 
 Displays a LED with the color of the alarm severity of a service parameter.
 
@@ -842,7 +842,7 @@ Component-specific options:
 
 - *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
 
-#### Service parameter trend sparkline
+### Service parameter trend sparkline
 
 A simplified trend graph, which shows trend data for a service parameter in a particular time range as a simple image.
 
@@ -860,7 +860,7 @@ Component-specific options:
 
 - *Graph color*: Click the ellipsis button to choose a different color for the graph.
 
-#### Service parameter trend statistics
+### Service parameter trend statistics
 
 Displays the min/max/avg value for a trended parameter over the specified time.
 
@@ -870,7 +870,7 @@ Component-specific options:
 
 - *Parameter index*: In case of a table parameter, enter the display key of the row in this box.
 
-#### Service state LED
+### Service state LED
 
 Displays a LED with the color of the service’s alarm severity.
 
@@ -882,7 +882,7 @@ Component-specific options:
 
 - *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
 
-#### Service trend parameter
+### Service trend parameter
 
 A trend graph for a service parameter.
 
@@ -900,7 +900,7 @@ Component-specific options:
 
 - *Graph aspect ratio*: Enter a different value in the box to change the width-to-height ratio of the graph.
 
-#### Set service parameter
+### Set service parameter
 
 Allows dashboard users to change the value of a service parameter.
 
@@ -916,7 +916,7 @@ Component-specific options:
 
 - *Display element name*: Select this option to display the element name in the component.
 
-#### Visual overview service
+### Visual overview service
 
 Displays the Visual Overview for a particular service, optionally with interactive functionality and page selector.
 
@@ -931,7 +931,7 @@ Component-specific options:
 > [!NOTE]
 > The Visual Overview settings of the Administrator account are applied. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
-### Other
+## Other
 
 This group consists of the following components:
 
@@ -953,11 +953,11 @@ This group consists of the following components:
 
 - [Video](#video)
 
-#### DataMiner map
+### DataMiner map
 
 Displays a DataMiner map. See [Displaying a DataMiner Map in a DataMiner dashboard](xref:Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard).
 
-#### Feed info
+### Feed info
 
 Displays information about the dashboard feed.
 
@@ -967,11 +967,11 @@ Component-specific options:
 
 - *Style*: In the drop-down list, select whether to display the feed info as normal text or as a title.
 
-#### Feed selector
+### Feed selector
 
 Adds a drop-down list allowing the dashboard user to change the feed directly on the dashboard page.
 
-#### Generic text part
+### Generic text part
 
 Displays custom text.
 
@@ -985,13 +985,13 @@ Component-specific options:
 
 - *Text*: In this box, enter the text that is to be displayed in the component.
 
-#### Google gadget
+### Google gadget
 
 This component was used in older versions of DataMiner to add a Google Gadget to the dashboard.
 
 However, from November 2013 onwards, iGoogle Gadgets are no longer available. For this reason, this component is also no longer available in the *Dashboards* app from DataMiner version 8.5.6 onwards.
 
-#### Group
+### Group
 
 Places a group of components within a custom layout. The group includes components currently used in the dashboard, which are then only shown in the group.
 
@@ -1005,7 +1005,7 @@ Component-specific options:
 
 - *Regions*: Click the *Edit Regions* button to modify the location of the components included in the group.
 
-#### Image component
+### Image component
 
 Displays an image on the dashboard.
 
@@ -1021,7 +1021,7 @@ Component-specific options:
 
 - *Image alignment*: In the drop-down list, select how the image should be aligned.
 
-#### Inline frame
+### Inline frame
 
 Displays a website in an inline frame.
 
@@ -1042,7 +1042,7 @@ Component-specific options:
 
 - *Fixed width*: In the box, fill in the width of the component in pixels. If no value is filled in, the width will be adjusted automatically.
 
-#### Video
+### Video
 
 Displays a video stream, based on an image URL. The configuration of the thumbnail is similar to the configuration of video thumbnails in Visual Overview. For more information on supported formats, see [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail).
 

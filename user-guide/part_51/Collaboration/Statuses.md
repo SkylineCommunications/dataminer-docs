@@ -2,9 +2,9 @@
 uid: Statuses
 ---
 
-## Statuses
+# Statuses
 
-### Project statuses
+## Project statuses
 
 A project can have the following statuses:
 
@@ -17,7 +17,7 @@ A project can have the following statuses:
 | Completed      | All tasks defined in the project have been completed.<br> The Skyline Project Manager has set the status of the project to “Completed” and has assigned it to the Skyline System Engineering Director.                                                                                                                                                                                                                                                 |
 | Closed         | The project is closed.<br> The Skyline System Engineering Director has set the status of the project to “Closed” and will now<br> -  verify whether all contractual obligations have been met, and<br> -  notify Skyline Finance & Administration that the project has been completed (by sending them an FC reference). |
 
-### Task statuses
+## Task statuses
 
 A task can have the following statuses:
 

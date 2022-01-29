@@ -2,13 +2,13 @@
 uid: Logging_on_to_DataMiner_Cube
 ---
 
-## Logging on to DataMiner Cube
+# Logging on to DataMiner Cube
 
 When you open DataMiner Cube, in most cases you will be logged on automatically with your current Windows account. However, if, for example, you explicitly logged out of your previous DataMiner Cube session, or your system uses external authentication, the DataMiner Cube logon screen will be displayed.
 
-### Logging on to DataMiner Cube
+## Logging on to DataMiner Cube
 
-#### Logging on using DataMiner 10.0.0/10.0.2 or higher
+### Logging on using DataMiner 10.0.0/10.0.2 or higher
 
 1. Check if the IP or name that is displayed below the DataMiner logo is that of the DMA you want to connect to. If not, click the IP or name and specify a different IP or name in the box.
 
@@ -26,9 +26,9 @@ When you open DataMiner Cube, in most cases you will be logged on automatically 
 > - When you log out of a DMS using the Cube desktop app, you are returned to the logon screen, but no drop-down box will be available to modify the DMA you connect to. This is intended to ensure that you do not connect to a DMA with a different software version. However, if for some reason, for example for testing or debugging purposes, you do wish to connect to a different DMS using the current DataMiner version, keep Ctrl + Alt+ Shift pressed and you will be able to select a different DMS. Note that this feature should never be used in normal circumstances, as it can cause unexpected behavior.
 > - From DataMiner 10.1.3 onwards, after you have logged out using the Cube desktop app, you can click the arrow button to go back to the start window and select a different DMA to connect to.
 
-#### Using a DataMiner version prior to DataMiner 10.0.0/10.0.2
+### Using a DataMiner version prior to DataMiner 10.0.0/10.0.2
 
-##### Logging on using one of the listed user accounts
+#### Logging on using one of the listed user accounts
 
 1. If you are using the DataMiner Cube desktop application, check the name of the DataMiner Agent in the *Connect to* box. If necessary, specify a different DMA.
 
@@ -45,7 +45,7 @@ When you open DataMiner Cube, in most cases you will be logged on automatically 
 
 4. Click *Log on*.
 
-##### Logging on with a user account that is not in the list
+#### Logging on with a user account that is not in the list
 
 1. If you are using the DataMiner Cube desktop application, check the name of the DataMiner Agent in the *Connect to* box. If necessary, specify a different DMA.
 
@@ -64,7 +64,7 @@ When you open DataMiner Cube, in most cases you will be logged on automatically 
 > [!NOTE]
 > If, on the client computer, no cached user settings can be found for the user account you logged on with, DataMiner Cube will load the default user settings stored on the DataMiner Agent.
 
-### Overriding the default connection type
+## Overriding the default connection type
 
 By default, the type of connection that will be established between DataMiner Cube and the DMA will be the type of connection that is specified in the file *connectionsettings.txt* (located in the following directory on the DMA: *C:\\Skyline DataMiner\\Webpages*). However, on the logon screen, you can override that default connection type for the connection you are about to establish.
 
@@ -93,7 +93,7 @@ To do so, before you log on, do the following:
 > - It is also possible to change the connection settings once you are logged on. To do so, go to *Settings \> computer \> Connection*. See [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings).
 > - Connecting via web services is not possible if WSE is not installed on the DMA.
 
-### Logging off from DataMiner Cube
+## Logging off from DataMiner Cube
 
 Using DataMiner 10.0.0/10.0.2 or higher:
 

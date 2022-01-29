@@ -2,13 +2,13 @@
 uid: Typical_Phases_for_Agile_Scope-Based_projects
 ---
 
-## Typical Phases for Agile Scope-Based projects
+# Typical Phases for Agile Scope-Based projects
 
 The Agile Scope-Based project has a flexible approach, and the Project Squad has maximum freedom to fine-tune the exact working methodology for the type of project at hand, and even depending on the exact activities throughout the execution of the project, on the condition that A) they ensure that it is clearly agreed with the entire Project Squad, and that it is practiced in full by everybody, and B) they comply with the key principles and mindset associated with the Agile Scope-Based project.
 
 The phases and working methodologies outlined below are mandatory for the Project Squad.
 
-### Offering
+## Offering
 
 An Agile Scope-Based project is offered at a fixed price and with an agreed time frame, based on the high-level requirements available and on all other relevant information available at the time of quoting. Everybody trusts and agrees that Skyline leverages its unique experience and expertise to ensure that the offered solution and accompanying budget will reasonably enable the Project Squad to deploy a professional solution in line with the then available requirements and the goals and ambitions driving those.
 
@@ -19,13 +19,13 @@ At the same time, both parties also agree and acknowledge the fact that this doe
 >
 > Anything agreed during the offering phase can therefore still be revisited when needed, on the condition that it is dealt with in the proper prescribed manner by the Project Squad (i.e. applying the necessary time budget balancing to keep them on track towards the end date and in line with the budget).
 
-### Definition of Goals & Ambitions
+## Definition of Goals & Ambitions
 
 At the start of the project, the Project Squad clearly defines its Goals & Ambitions, describing the objective of the project, the expected outcome, and the key benefits that it wants to deliver to the business and end users.
 
 This ensures that the squad has a laser-focused mission that it can continuously refer to while executing the project, so that joint decisions of the Project Squad throughout the project are always aimed at what goes to the heart of the project (which may not always be in line with what was specified in the initial high-level requirements).
 
-### Solution Backlog & Deployment Plan
+## Solution Backlog & Deployment Plan
 
 The Solution Backlog is created as part of a commercial offer for a DataMiner Solution that will be deployed based on the Agile Scope-Based methodology. It contains a list of all known activities required for the deployment of the DataMiner Solution, along with an estimate of the time required for each of those activities (e.g. design of the system architecture, deployment of DMA nodes, creation of project-specific UIs and control surfaces, etc.). Those activities are typically organized in so-called buckets.
 
@@ -37,7 +37,7 @@ Secondly, it also defines the key dependencies for the project, to ensure that a
 
 Thirdly, it also specifies the value strategy. As the ultimate purpose is to deliver maximum value in line with the specified goals, objectives and requirements, and within the agreed time frame and budget, value needs to be clearly defined, and activity planning needs to be aligned with this.
 
-### Setup of the Solution Backlog
+## Setup of the Solution Backlog
 
 At the start of the project, the Project Squad creates the so-called Solution Backlog, which consists of all known high-level activities (a.k.a. buckets) that will be required to design and deploy the envisioned solution, as well as to some extent the items described in the initial requirements for the project (e.g. connectors that will be required, DMA nodes that need to be deployed, ability for an operator to start a recording of a video stream, ability for an operator to track a stream in the network, etc.). The Solution Backlog then serves as the foundation to bring the solution in place.
 
@@ -56,7 +56,7 @@ The following important key principles must be applied when setting up and subse
 
 - The Solution Backlog must be fully documented and managed on Project Collaboration (part of the DataMiner Cloud Platform) by the Project Squad Product Owner, where it must also be tracked, groomed and time-balanced continuously over the course of the project execution. The latter is part of the standard review process and ensures that the Project Squad has visibility on how much of the overall Solution Backlog they have chipped away, and what they still have ahead of them. Furthermore, the Solution Backlog is also instrumental in keeping the Project Squad focused on short-term goals, ensuring that they continuously make maximum progress towards their ultimate end goal.
 
-### Sprint Planning & Execution
+## Sprint Planning & Execution
 
 The project must start as soon as possible and be executed in a continuous succession of short sprints no longer than 4 weeks. The Project Squad focuses continuously on developing the known and well-defined portions of the deliverables. In doing so, they create a foundation that will resolve some of the uncertainty for other work items, which can then in turn be used to further evolve the project in a more efficient manner.
 

@@ -2,7 +2,7 @@
 uid: Attributes_of_the_Layer_tag
 ---
 
-## Attributes of the Layer tag
+# Attributes of the Layer tag
 
 In a map configuration file, the *\<Layer>* tag can have the following attributes:
 
@@ -28,19 +28,19 @@ In a map configuration file, the *\<Layer>* tag can have the following attribute
 
 - [visible](#visible)
 
-### allowToggle
+## allowToggle
 
 If you set this attribute to true, the user interface will allow users to either display or hide the layer.
 
 Default: false
 
-### autoFit
+## autoFit
 
 If you set this attribute to true, when the map is opened, the zoom level will automatically be set in such a way that all markers defined in the layer are visible.
 
 Default: false
 
-### limitToBounds
+## limitToBounds
 
 If this attribute is set to True, the layer only fetches the markers that are within the current bounds. This can be useful for layers with many objects, where fetching all of them at the same time would take much time.
 
@@ -50,7 +50,7 @@ By default, this attribute is set to False.
 > This feature only works for layers of type TableSource and SqlSource. In case of layers of type SqlSource, the SQL query will need to contain a WHERE clause similar to the following one:
 > *where (Latitude \>= \[sw_lat\] and Latitude \<= \[ne_lat\]) and (Longitude \>= \[sw_lon\] and Longitude \<= \[ne_lon\])*
 
-### linked
+## linked
 
 Available from DataMiner 9.6.0 onwards. With this attribute, you can control whether the visibility of a polyline of a particular layer is controlled by the markers on the linked layers.
 
@@ -60,13 +60,13 @@ Example:
 <Layer name="myLayer" autoFit="false" visible="true" toggleGroup="myGroup" allowToggle="true" sourceType="relations" limitToBouncds="false" refresh="3600000" linked="true">
 ```
 
-### maxZoom
+## maxZoom
 
 Maximum zoom level at which this layer is visible. When zooming in more, the layer will become invisible.
 
 By default, a layer is always visible. Zoom levels go from 0 (entire world) up to around 19-23 (depending on the zoom location)
 
-### minZoom
+## minZoom
 
 Minimum zoom level at which the layer is visible. When you zoom out more, the layer will become invisible.
 
@@ -75,13 +75,13 @@ By default, a layer is always visible. Zoom levels go from 0 (entire world) up t
 > [!NOTE]
 > Combining multiple layers that have a minZoom and maxZoom level can provide a drill-down experience, which can for instance be useful when using DMS Maps to display EPM element data.
 
-### name
+## name
 
 The name of the layer.
 
 If you allow the layer to be hidden (see the allowToggle attribute above), then it is this name that will appear in the map legend.
 
-### notifications
+## notifications
 
 Available from DataMiner 9.5.5 onwards. When this attribute is set to “true”, notifications are displayed for the layer.
 
@@ -94,7 +94,7 @@ Example:
 > [!NOTE]
 > If this attribute is not specified, no notifications are displayed for the layer.
 
-### refresh
+## refresh
 
 The interval (in milliseconds) at which the data in the layer needs to be refreshed.
 
@@ -104,7 +104,7 @@ If you set this attribute to 0 or if you leave it out, the layer will not be ref
 > - Augmenting the refresh rate will have a negative impact on the overall performance of DMAs as well as DMA clients.
 > - This attribute does not work for layers of sourceType “traffic”. Traffic information is only retrieved once, and not refreshed afterwards. See [Layers of sourceType “traffic”](xref:Layer_types#layers-of-sourcetype-traffic).
 
-### sourceType
+## sourceType
 
 The type of layer.
 
@@ -127,7 +127,7 @@ The type of layer.
 > - The sourceType attribute of a *\<Layer>* tag dictates which subtags are allowed. A *\<TableSourceInfo>* tag, for example, is only allowed inside a *\<Layer>* tag if sourceType is “table”. For more information, see [Layer types](xref:Layer_types).
 > - The Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
 
-### visible
+## visible
 
 If you set this attribute to false, then the layer will not be visible when the map is opened.
 

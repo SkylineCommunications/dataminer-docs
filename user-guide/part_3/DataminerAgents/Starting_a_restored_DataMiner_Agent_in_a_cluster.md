@@ -2,11 +2,11 @@
 uid: Starting_a_restored_DataMiner_Agent_in_a_cluster
 ---
 
-## Starting a restored DataMiner Agent in a cluster
+# Starting a restored DataMiner Agent in a cluster
 
 If you have restored a DMA in a cluster without using the Taskbar Utility, or if you have restored a DMA in a cluster to a new blank DataMiner Agent instead of restoring an existing Agent, you will need to follow the procedure below to start the DMA and add it to the DMS.
 
-### Starting the DMA
+## Starting the DMA
 
 1. Either shut down the original server, or disconnect it from the network.
 
@@ -18,7 +18,7 @@ If you have restored a DMA in a cluster without using the Taskbar Utility, or if
 
 5. Start the DataMiner software.
 
-### Adding the DMA to the DMS
+## Adding the DMA to the DMS
 
 1. In DataMiner Cube, go to *Apps* > *System Center*.
 

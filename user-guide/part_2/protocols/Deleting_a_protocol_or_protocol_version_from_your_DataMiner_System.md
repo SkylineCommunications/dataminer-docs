@@ -2,7 +2,7 @@
 uid: Deleting_a_protocol_or_protocol_version_from_your_DataMiner_System
 ---
 
-## Deleting a protocol or protocol version from your DataMiner System
+# Deleting a protocol or protocol version from your DataMiner System
 
 If you are absolutely sure that a protocol or a protocol version is no longer used in your DataMiner System, you can choose to delete it.
 

@@ -2,7 +2,7 @@
 uid: Correcting_an_outage_in_the_outage_list
 ---
 
-## Correcting an outage in the outage list
+# Correcting an outage in the outage list
 
 To make a correction on the impact of an existing outage, do the following:
 

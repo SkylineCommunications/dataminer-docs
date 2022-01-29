@@ -2,7 +2,7 @@
 uid: EmailOptions_constructors
 ---
 
-## EmailOptions constructors
+# EmailOptions constructors
 
 ```txt
 public EmailOptions()

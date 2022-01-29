@@ -2,7 +2,7 @@
 uid: ServiceFilter_properties
 ---
 
-## ServiceFilter properties
+# ServiceFilter properties
 
 - [CriticalOnly](#criticalonly)
 
@@ -28,7 +28,7 @@ uid: ServiceFilter_properties
 
 - [WarningOnly](#warningonly)
 
-#### CriticalOnly
+### CriticalOnly
 
 Gets or sets a value indicating whether to only include services with severity state "Critical".
 
@@ -36,7 +36,7 @@ Gets or sets a value indicating whether to only include services with severity s
 bool CriticalOnly
 ```
 
-#### DataMinerID
+### DataMinerID
 
 Gets or set a value limiting the search to the specified DataMiner Agent.
 
@@ -44,7 +44,7 @@ Gets or set a value limiting the search to the specified DataMiner Agent.
 int DataMinerID
 ```
 
-#### ExcludeSubViews
+### ExcludeSubViews
 
 Gets or sets a value indicating whether to only exclude subviews from the search.
 
@@ -55,7 +55,7 @@ bool ExcludeSubViews
 > [!NOTE]
 > If you specify ExcludeSubViews, also specify View or ViewId.
 
-#### MajorOnly
+### MajorOnly
 
 Gets or sets a value indicating whether to only include services with severity state "Major".
 
@@ -63,7 +63,7 @@ Gets or sets a value indicating whether to only include services with severity s
 bool MajorOnly
 ```
 
-#### MinorOnly
+### MinorOnly
 
 Gets or sets a value indicating whether to only include services with severity state "Minor".
 
@@ -71,7 +71,7 @@ Gets or sets a value indicating whether to only include services with severity s
 bool MinorOnly
 ```
 
-#### NameFilter
+### NameFilter
 
 Gets or sets a filter for the service name, which can contain \* and ? as wildcards.
 
@@ -79,7 +79,7 @@ Gets or sets a filter for the service name, which can contain \* and ? as wildca
 string NameFilter
 ```
 
-#### NormalOnly
+### NormalOnly
 
 Gets or sets a value indicating whether to only include services with severity state "Normal".
 
@@ -87,7 +87,7 @@ Gets or sets a value indicating whether to only include services with severity s
 bool NormalOnly
 ```
 
-#### ServiceID
+### ServiceID
 
 Gets or sets a value limiting the search to the service with the specified service ID.
 
@@ -98,7 +98,7 @@ int ServiceID
 > [!NOTE]
 > If you specify *ServiceID*, also specify *DataMinerID*.
 
-#### TimeoutOnly
+### TimeoutOnly
 
 Gets or sets a value indicating whether to only include services with severity state "Timeout".
 
@@ -106,7 +106,7 @@ Gets or sets a value indicating whether to only include services with severity s
 bool TimeoutOnly
 ```
 
-#### View
+### View
 
 Gets or sets the name of the view to search for.
 
@@ -114,7 +114,7 @@ Gets or sets the name of the view to search for.
 string View
 ```
 
-#### ViewID
+### ViewID
 
 Gets or sets the ID of the view to search for.
 
@@ -122,7 +122,7 @@ Gets or sets the ID of the view to search for.
 int ViewID
 ```
 
-#### WarningOnly
+### WarningOnly
 
 Gets or sets a value indicating whether to only include services with severity state "Warning".
 

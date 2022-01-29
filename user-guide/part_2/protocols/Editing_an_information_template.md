@@ -2,11 +2,11 @@
 uid: Editing_an_information_template
 ---
 
-## Editing an information template
+# Editing an information template
 
 You can either edit the complete information template in the Protocols & Templates module, or edit the template for a single parameter.
 
-### Editing the complete information template
+## Editing the complete information template
 
 To make changes to the complete information template:
 
@@ -24,7 +24,7 @@ To make changes to the complete information template:
 > - A protocol’s default information template, which is defined in the *Protocol.xml* file, cannot be edited as described above. The only way to modify it is by making changes to the protocol itself.
 > - If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
 
-### Editing the information template for one parameter
+## Editing the information template for one parameter
 
 To make changes to the information template for one particular parameter:
 

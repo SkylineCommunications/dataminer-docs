@@ -2,9 +2,9 @@
 uid: AutomationEntryPointType_operators
 ---
 
-## AutomationEntryPointType operators
+# AutomationEntryPointType operators
 
-#### Equality
+### Equality
 
 Determines whether the two specified objects are equal. Returns *true* if they are equal.
 
@@ -12,7 +12,7 @@ Determines whether the two specified objects are equal. Returns *true* if they a
 bool operator ==(AutomationEntryPointType a1, AutomationEntryPointType a2)
 ```
 
-#### Inequality
+### Inequality
 
 Determines whether the two specified objects are not equal. Returns *true* if they are not equal.
 

@@ -2,7 +2,7 @@
 uid: SNMP_Managers_xml
 ---
 
-## SNMP Managers.xml
+# SNMP Managers.xml
 
 The file *SNMP Managers.xml* is used for the configuration of remote SNMP Managers.
 
@@ -32,7 +32,7 @@ The file *SNMP Managers.xml* is used for the configuration of remote SNMP Manage
 > [!NOTE]
 > To implement any manual changes to *SNMP Managers.xml*, first stop the DMA and then restart it after your changes have been saved.
 
-#### Example of the \<Configuration> section in the SNMP Managers.xml file
+### Example of the \<Configuration> section in the SNMP Managers.xml file
 
 ```xml
 <SNMP xmlns="http://www.skyline.be/config/snmpmanagers">

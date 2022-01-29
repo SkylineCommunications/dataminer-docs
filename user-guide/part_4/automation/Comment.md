@@ -2,7 +2,7 @@
 uid: Comment
 ---
 
-## Comment
+# Comment
 
 Use this action to add extra comments to the script:
 

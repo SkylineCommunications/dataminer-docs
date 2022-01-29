@@ -2,7 +2,7 @@
 uid: InteractiveUserDetachedException_properties
 ---
 
-## InteractiveUserDetachedException properties
+# InteractiveUserDetachedException properties
 
 | Name                   | Description                                                         |
 |------------------------|---------------------------------------------------------------------|

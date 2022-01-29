@@ -2,15 +2,15 @@
 uid: Making_a_shape_filter_Alarm_Console_tabs_when_clicked
 ---
 
-## Making a shape filter Alarm Console tabs when clicked
+# Making a shape filter Alarm Console tabs when clicked
 
 If you add a shape data field of type **AlarmFilter** to a shape, clicking the shape will cause Alarm Console tabs of type “Active alarms linked to cards” only to show alarms that match the alarm filter specified in the field value.
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type AlarmFilter to the shape, and enter an alarm filter as the value, using the same syntax as in the Alarm Console quick filter.
 
-##### Examples of alarm filters:
+#### Examples of alarm filters:
 
 - To filter out all alarms and information events containing the word “BBC World”:
 
@@ -40,7 +40,7 @@ Add a shape data field of type AlarmFilter to the shape, and enter an alarm filt
 > See also:
 > [Using quick filters](xref:Using_quick_filters)
 
-### Placeholders
+## Placeholders
 
 In some cases, it is possible to use placeholders in the filter condition:
 

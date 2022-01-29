@@ -2,7 +2,7 @@
 uid: Layer_types
 ---
 
-## Layer types
+# Layer types
 
 The following types of layers can be used in a map configuration file:
 
@@ -32,14 +32,14 @@ The following types of layers can be used in a map configuration file:
 
 - [Layers of sourceType “weatherf”](#layers-of-sourcetype-weatherf)
 
-### Layers of sourceType “clouds”
+## Layers of sourceType “clouds”
 
 Set the *sourceType* attribute of a layer to “clouds” if you want that layer to display cloud information.
 
 > [!NOTE]
 > The Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
 
-### Layers of sourceType “connectivity”
+## Layers of sourceType “connectivity”
 
 Available from DataMiner 9.6.9 onwards.
 
@@ -56,7 +56,7 @@ The following additional configuration is possible:
 
 - If you want to show a DCF connection property in the *\<PopupSkeleton>* template, add a *\<Detail>* tag inside the *\<PopupDetails>* tag, and set its *type* attribute to “property” and its *property* attribute to the connection property name. See [PopupSkeleton](xref:PopupSkeleton_and_PopupDetails#popupskeleton).
 
-### Layers of sourceType “objects”
+## Layers of sourceType “objects”
 
 Available from DataMiner 9.6.7 onwards.
 
@@ -68,14 +68,14 @@ In the *\<ObjectsSourceInfo>* tag of an “objects” layer, you can configure a
 
 - *\<ServiceChildren>* for service child objects (i.e. elements and child services)
 
-#### Attributes for \<Element>
+### Attributes for \<Element>
 
 | Attribute | Description                                                                                                                                                                                                                                           |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | id        | Element name or element ID (DMA ID/element ID)                                                                                                                                                                                                        |
 | idVar     | Name of a variable that can be provided in the Maps URL, which will then be used as a dynamic ID.<br> For example, *idVar="MyElement"* will resolve the ID with the URL parameter *dMyElement*. |
 
-#### Attributes for \<ServiceChildren>
+### Attributes for \<ServiceChildren>
 
 | Attribute | Description                                                                                                                                                                                                                                                                                                                     |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -83,7 +83,7 @@ In the *\<ObjectsSourceInfo>* tag of an “objects” layer, you can configure a
 | idVar     | Name of a variable that can be provided in the Maps URL, which will then be used as a dynamic ID.<br> For example, *idVar="MyService"* will resolve the ID with the URL parameter *dMyService*.                                                                           |
 | recursive | Determines whether elements of child services will be included.<br> In an SRM setup, using *recursive="true"* will also allow you to show markers for contributing services. If a service in turn contains an enhanced service, any child elements or services it contains will be included as well. |
 
-#### Subtags of \<Element> and \<ServiceChildren>
+### Subtags of \<Element> and \<ServiceChildren>
 
 | Tag          | Description                                                   |
 |--------------|---------------------------------------------------------------|
@@ -114,7 +114,7 @@ Examples:
 </Title>
 ```
 
-### Layers of sourceType “overlay”
+## Layers of sourceType “overlay”
 
 Set the *sourceType* attribute of a layer to “overlay” if you want that layer to display a static image or if you want to create a GeoJSON layer. The image can be either a common JPG, PNG or GIF image (stored either locally on a DMA or somewhere on the internet), or a special KML image (stored either locally on a DMA, or on a publicly accessible web server).
 
@@ -124,7 +124,7 @@ Set the *sourceType* attribute of a layer to “overlay” if you want that laye
 
 - [Overlays of type “geojson”](#overlays-of-type-geojson)
 
-#### Overlays of type “image”
+### Overlays of type “image”
 
 If you want a layer of sourceType “overlay” to display a JPG, PNG or GIF image, do the following.
 
@@ -155,7 +155,7 @@ Example:
 </Layer>
 ```
 
-#### Overlays of type “kml”
+### Overlays of type “kml”
 
 If you want a layer of sourceType “overlay” to display a KML image, do the following:
 
@@ -193,7 +193,7 @@ If you want a layer of sourceType “overlay” to display a KML image, do the f
 > - For more information on the KML file format, see [http://code.google.com/apis/kml/documentation/mapsSupport.html](http://code.google.com/apis/kml/documentation/mapsSupport.html).
 > - KML layers are always used as the bottom layers of the map, while other layers are drawn from top to bottom as defined in the configuration.
 
-#### Overlays of type “geojson”
+### Overlays of type “geojson”
 
 From DataMiner 9.5.8 onwards, you can add a GeoJSON layer. To do so:
 
@@ -212,7 +212,7 @@ Example:
 </Layer>
 ```
 
-### Layers of sourceType “parameters”
+## Layers of sourceType “parameters”
 
 Set the *sourceType* attribute of a layer to “parameters” if you want that layer to display objects positioned according to latitude and longitude values stored in element or service parameters, and use the following tags to configure the layer.
 
@@ -229,7 +229,7 @@ For more information on those tags, see [Layer configuration tags](xref:Layer_co
 > [!NOTE]
 > On layers of sourceType “parameters”, no markers will be shown unless an element variable is specified in the map URL and a match is found for this variable.
 
-### Layers of sourceType “properties”
+## Layers of sourceType “properties”
 
 Set the *sourceType* attribute of a layer to “properties” if you want that layer to display objects positioned according to latitude and longitude values retrieved from properties of DataMiner views, elements or services, and use the following tags to configure the layer.
 
@@ -243,7 +243,7 @@ Set the *sourceType* attribute of a layer to “properties” if you want that l
 
 For more information on those tags, see [Layer configuration tags](xref:Layer_configuration_tags).
 
-### Layers of SourceType “relations”
+## Layers of SourceType “relations”
 
 Set the *sourceType* attribute of a layer to “relations” if you want that layer to display lines between objects that are related via foreign key relationships in a DataMiner element. If, for example, an EPM element has a Household and an Amplifier table that are linked by means of foreign key relationships, the links between those two tables can be visualized on a map.
 
@@ -283,13 +283,13 @@ From DataMiner 9.6.0 CU3/9.6.9 onwards, the following additional filters can be 
 > - Optionally, the *\<LineOptions>* tag can be used in this tag. See [LineOptions](xref:LineOptions).
 > - From DataMiner 10.0.3 onwards, the recursivefullfilter option is supported for table filters. See [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
-### Layers of sourceType “separator”
+## Layers of sourceType “separator”
 
 Set the *sourceType* attribute of a layer to “separator” if you want that layer to be a dummy layer of which the only function is to display a kind of “section title” in a layer group.
 
 For more information, see [Separators in layer groups](xref:Layer_groups#separators-in-layer-groups).
 
-### Layers of sourceType “sql”
+## Layers of sourceType “sql”
 
 Set the *sourceType* attribute of a layer to “sql” if you want that layer to display objects positioned according to latitude and longitude values retrieved from a database table, and use the following tag to configure the layer.
 
@@ -297,7 +297,7 @@ Set the *sourceType* attribute of a layer to “sql” if you want that layer to
 
 For more information on that tag, see [SqlSourceInfo](xref:SqlSourceInfo).
 
-### Layers of sourceType “table”
+## Layers of sourceType “table”
 
 Set the *sourceType* attribute of a layer to “table” if you want that layer to display objects positioned according to latitude and longitude values retrieved from a dynamic table of a particular DataMiner element, and use the following tags to configure the layer.
 
@@ -313,21 +313,21 @@ Set the *sourceType* attribute of a layer to “table” if you want that layer 
 
 For more information on those tags, see [Layer configuration tags](xref:Layer_configuration_tags).
 
-### Layers of sourceType “traffic”
+## Layers of sourceType “traffic”
 
 Set the *sourceType* attribute of a layer to “traffic” if you want that layer to display traffic information.
 
 > [!NOTE]
 > Traffic information is only retrieved once, and not refreshed afterwards. This means that the “refresh” attribute does not work for layers of sourceType 'traffic'. See [refresh](xref:Attributes_of_the_Layer_tag#refresh).
 
-### Layers of sourceType “weather”
+## Layers of sourceType “weather”
 
 Set the *sourceType* attribute of a layer to “weather” if you want that layer to display weather information with temperatures in degrees Celsius.
 
 > [!NOTE]
 > The Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
 
-### Layers of sourceType “weatherf”
+## Layers of sourceType “weatherf”
 
 Set the *sourceType* attribute of a layer to “weatherf” if you want that layer to display weather information with temperatures in degrees Fahrenheit.
 

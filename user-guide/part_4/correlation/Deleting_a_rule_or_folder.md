@@ -2,7 +2,7 @@
 uid: Deleting_a_rule_or_folder
 ---
 
-## Deleting a rule or folder
+# Deleting a rule or folder
 
 To delete a rule or folder in the Correlation module:
 

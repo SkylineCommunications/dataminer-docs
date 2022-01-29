@@ -2,7 +2,7 @@
 uid: UIBuilder_methods
 ---
 
-## UIBuilder methods
+# UIBuilder methods
 
 - [Append](#append)
 
@@ -20,7 +20,7 @@ uid: UIBuilder_methods
 
 - [ToString](#tostring)
 
-#### Append
+### Append
 
 Adds text to the dialog box (either a text string or a composite format string).
 
@@ -44,7 +44,7 @@ UIBuilder uiBuilder = new UIBuilder();
 uiBuilder.Append("The ID of the selected ticket is {0}", selectedTicketId);
 ```
 
-#### AppendBlock
+### AppendBlock
 
 Adds the specified *UIBlockDefinition* instance to the dialog box.
 
@@ -62,7 +62,7 @@ UIBlockDefinition blockTextBox = new UIBlockDefinition();
 uibDialogBox1.AppendBlock(blockTextBox);
 ```
 
-#### AppendButton
+### AppendButton
 
 Adds a button to the dialog box by providing two arguments:
 
@@ -89,7 +89,7 @@ var uir = engine.ShowUI(uiBuilder);
 string value = uir.GetString("applyButtonDestVar"); // If the button was pressed, the value will be "applyButtonDestVar"; otherwise, null.
 ```
 
-#### AppendDropDown
+### AppendDropDown
 
 Adds a drop-down box to the dialog box by providing two arguments:
 
@@ -115,7 +115,7 @@ string result = uir.GetString("selectionVar");
 engine.GenerateInformation("selectionVar: " + result); // In case "Semi-automatic" was selected, selectionVar will contain "2".
 ```
 
-#### AppendLine
+### AppendLine
 
 Adds a line of text to the dialog box (a new empty line, a specified line of text, or a specified composite format string).
 
@@ -147,7 +147,7 @@ UIBuilder uiBuilder = new UIBuilder();
 uiBuilder.AppendLine("The ID of the selected ticket is {0}", selectedTicketId);
 ```
 
-#### AppendParameter
+### AppendParameter
 
 Adds the display value of a parameter to the dialog box by providing the following arguments:
 
@@ -194,7 +194,7 @@ UIBuilder uiBuilder = new UIBuilder();
 uiBuilder.AppendParameter(200, 4000, 1002, "Row 1");
 ```
 
-#### AppendTextBox
+### AppendTextBox
 
 Adds a text box to the dialog box by providing the following argument:
 
@@ -212,7 +212,7 @@ UIBuilder uiBuilder = new UIBuilder();
 uiBuilder.AppendTextBox("input");
 ```
 
-#### ToString
+### ToString
 
 Gets a string representation of this dialog box.
 

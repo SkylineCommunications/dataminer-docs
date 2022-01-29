@@ -2,7 +2,7 @@
 uid: Monitoring_app_header_bar
 ---
 
-## Monitoring app header bar
+# Monitoring app header bar
 
 > [!NOTE]
 > If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.

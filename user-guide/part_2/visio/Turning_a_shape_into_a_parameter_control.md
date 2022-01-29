@@ -2,7 +2,7 @@
 uid: Turning_a_shape_into_a_parameter_control
 ---
 
-## Turning a shape into a parameter control
+# Turning a shape into a parameter control
 
 Using a shape data field of type **ParameterControl**, you can turn a shape into a parameter control.
 
@@ -14,7 +14,7 @@ Using a shape data field of type **ParameterControl**, you can turn a shape into
 > - This feature only works in DataMiner Cube.
 > - Parameter controls are updated in real time.
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **ParameterControl** to the shape.
 
@@ -41,7 +41,7 @@ Add a shape data field of type **ParameterControl** to the shape.
 > [!NOTE]
 > When specifying a value, you can use placeholders. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values)
 
-### Adding a filter box to a table control
+## Adding a filter box to a table control
 
 When using a shape of type **ParameterControls** to visualize a table in a Visio drawing, you can add a table filter to that shape.
 
@@ -67,7 +67,7 @@ When using a shape of type **ParameterControls** to visualize a table in a Visio
     | ParameterControl        | ID of the table parameter.                                                                                      |
     | ParameterControlOptions | “CustomTextBoxInfo:”, followed by the text that has to appear inside the filter box (e.g. “Enter filter here”). |
 
-### Table row key syntax
+## Table row key syntax
 
 You can refer to table cells in the following ways.
 
@@ -78,7 +78,7 @@ You can refer to table cells in the following ways.
 | Pid:^pk^abc   | Link the shape to the cell with primary key “abc”.                                             |
 | Pid:^pk^abc\* | Link the shape to the last updated cell of which the primary key matches the wildcard “abc\*”. |
 
-### Dynamically disabling a parameter control
+## Dynamically disabling a parameter control
 
 You can dynamically disable parameter controls by configuring a conditional shape manipulation action of the type “Enabled”. See [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
 
@@ -87,7 +87,7 @@ However, to fully disable a control, so that it cannot set session variables, na
 > [!NOTE]
 > In some element protocols, editing of some table cells may be dynamically disabled, based on the value of another cell. In that case, unless a different “Enabled” condition has been configured, a Visio shape that has been turned into a parameter control takes into account this “disableWrite” setting. However, even in this case it is still necessary to use the “AllowControlDisable” option to fully disable the control.
 
-### Allowing dynamic shape behavior
+## Allowing dynamic shape behavior
 
 Up to DataMiner 9.0.0 CU5, **ParameterControl** shapes with dynamic value placeholders only turn into a parameter control when all placeholders can be resolved. Otherwise an element shape is displayed.
 

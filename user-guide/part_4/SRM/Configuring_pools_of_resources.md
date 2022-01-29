@@ -2,7 +2,7 @@
 uid: Configuring_pools_of_resources
 ---
 
-## Configuring pools of resources
+# Configuring pools of resources
 
 This section contains the following topics:
 
@@ -16,7 +16,7 @@ This section contains the following topics:
 
 - [Adding a virtual function as a resource](#adding-a-virtual-function-as-a-resource)
 
-### Adding a pool
+## Adding a pool
 
 To add a resource pool using DataMiner 10.2.0/10.1.5 or higher:
 
@@ -36,7 +36,7 @@ To add a resource pool prior to DataMiner 10.1.5:
 
 3. To further configure the pool, select it in the column on the left, then proceed with the procedures outlined below.
 
-### Configuring pool properties
+## Configuring pool properties
 
 In order to add more information to a pool, for example to make it easier to filter through pools and find the pool you are looking for, you can add properties to the pool:
 
@@ -46,7 +46,7 @@ In order to add more information to a pool, for example to make it easier to fil
 
 3. Click *OK*.
 
-### Adding resource property definitions
+## Adding resource property definitions
 
 In order to define properties for all resources in a pool, and optionally limit the values of the properties, you can define resource property definitions:
 
@@ -60,7 +60,7 @@ In order to define properties for all resources in a pool, and optionally limit 
 
     - Select *Value list*, and, for each possible value for the property, click the *Add value* button and specify the value.
 
-### Adding resources to a pool
+## Adding resources to a pool
 
 To add a resource to a pool using DataMiner 10.2.0/10.1.5 or higher:
 
@@ -129,7 +129,7 @@ To add a resource to a pool prior to DataMiner 10.1.5:
 
 5. Click *OK*.
 
-### Adding a virtual function as a resource
+## Adding a virtual function as a resource
 
 To make it possible to schedule a virtual function as a resource, prior to DataMiner 10.2.0/10.1.5 you must add it as a resource in the *Resources* module using the procedure below. From DataMiner 10.2.0/10.1.5 onwards, you can do so as detailed in [Adding resources to a pool](#adding-resources-to-a-pool).
 

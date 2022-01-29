@@ -2,7 +2,7 @@
 uid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
 ---
 
-## Managing predefined sets of credentials for SNMP authentication
+# Managing predefined sets of credentials for SNMP authentication
 
 From DataMiner 9.5.5 onwards, sets of predefined credentials can be added and managed within DataMiner Cube. These credentials can then be selected when SNMP elements are created or edited, so that credentials do not need to be specified manually.
 

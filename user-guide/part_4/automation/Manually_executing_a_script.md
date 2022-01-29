@@ -2,7 +2,7 @@
 uid: Manually_executing_a_script
 ---
 
-## Manually executing a script
+# Manually executing a script
 
 If you want to manually execute an Automation script, do the following:
 

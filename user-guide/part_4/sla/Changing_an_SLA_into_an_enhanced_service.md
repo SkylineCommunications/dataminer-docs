@@ -2,7 +2,7 @@
 uid: Changing_an_SLA_into_an_enhanced_service
 ---
 
-## Changing an SLA into an enhanced service
+# Changing an SLA into an enhanced service
 
 It is possible to make a modification to the SLA protocol, in order to make the SLA only calculate alarm weights and add alarms to the Active Service Alarms table, but not generate outages. In essence, this reduces the SLA to a kind of enhanced service.
 
@@ -10,7 +10,7 @@ It is possible to make a modification to the SLA protocol, in order to make the 
 > - This configuration option has a serious impact on the functionality of the SLA, and should therefore be applied with extreme care.
 > - **Do not enable or disable this option during runtime.**
 
-### Configuring the option
+## Configuring the option
 
 1. Add the parameter 2060 to the “SLA Basic Definition” protocol by copying the following code into the *Protocol.xml* file.
 

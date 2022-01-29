@@ -2,7 +2,7 @@
 uid: Working_with_Alerter_pop-up_balloons
 ---
 
-## Working with Alerter pop-up balloons
+# Working with Alerter pop-up balloons
 
 When a pop-up balloon appears, it contains the following information about a particular alarm:
 

@@ -2,15 +2,15 @@
 uid: Installing_a_DMS_Dashboard_Gateway
 ---
 
-## Installing a DMS Dashboard Gateway
+# Installing a DMS Dashboard Gateway
 
 For a Dashboard Gateway to function correctly, an additional Windows component, Internet Information Services, must also be installed. On some Windows versions this is installed by default, but on others you will need to install it yourself.
 
-### Installing a Dashboard Gateway on Windows Server 2012
+## Installing a Dashboard Gateway on Windows Server 2012
 
 To install a Dashboard Gateway on Windows Server 2012, you must first install IIS, then install the dashboards, configure IIS, and finally configure the web.config file.
 
-#### Installing IIS
+### Installing IIS
 
 1. Go to *Start \> Server Manager*.
 
@@ -36,13 +36,13 @@ To install a Dashboard Gateway on Windows Server 2012, you must first install II
 
 12. Disable the property *Regular time interval (in minutes)*.
 
-#### Installing the dashboards
+### Installing the dashboards
 
 1. Copy the directory *C:\\Skyline DataMiner\\Webpages\\Dashboards* from the DataMiner Agent to a location on the DataMiner Gateway, such as *C:\\Skyline DataMiner*.
 
 2. Remove all the files and subfolders in the directory *...\\Dashboards\\db*.
 
-#### Configuring IIS
+### Configuring IIS
 
 1. Go to *Start \> Control Panel \> Administrative Tools \> Internet Information Services (IIS) Manager*.
 
@@ -68,7 +68,7 @@ To install a Dashboard Gateway on Windows Server 2012, you must first install II
 
 12. Choose the file name extension *fcss* and the Mime Type *text/plain*, and click *OK* to confirm.
 
-#### Configuring the web.config file
+### Configuring the web.config file
 
 1. In DataMiner, create a new user profile with access to all elements in the DMS. The user also has to have the permission *Modules* > *System configuration* > *Tools* > *Admin tools*. See [Adding a user](xref:Adding_a_user).
 
@@ -92,11 +92,11 @@ To install a Dashboard Gateway on Windows Server 2012, you must first install II
     password="[password of Dashboard user]" description="Dashboard DMA">
     ```
 
-### Installing a Dashboard Gateway on Vista Server
+## Installing a Dashboard Gateway on Vista Server
 
 To install a Dashboard Gateway on Windows Vista Server, you must first install IIS, and then install the dashboards.
 
-#### Installing IIS
+### Installing IIS
 
 1. Go to *Start \> Control Panel \> Programs and features*.
 
@@ -132,20 +132,20 @@ To install a Dashboard Gateway on Windows Vista Server, you must first install I
 
 12. Disable the property *Regular time interval (in minutes)*.
 
-#### Installing the dashboards
+### Installing the dashboards
 
 1. Copy the directory *C:\\Skyline DataMiner\\Webpages\\Dashboards* from the DataMiner Agent to a location on the DataMiner Gateway, such as *C:\\Skyline DataMiner*.
 
 2. Remove all the files and subfolders in the directory *...\\Dashboards\\db*.
 
-### Installing a Dashboard Gateway on Windows Server 2003
+## Installing a Dashboard Gateway on Windows Server 2003
 
 To install a Dashboard Gateway on Windows Server 2003, you must first install IIS, then install the dashboards, configure IIS, and finally configure the web.config file.
 
 > [!NOTE]
 > Windows Server 2003 is not supported from DataMiner 9.0 onwards.
 
-#### Installing IIS
+### Installing IIS
 
 1. Go to *Start \> Control Panel \> Add or Remove Programs*.
 
@@ -187,13 +187,13 @@ To install a Dashboard Gateway on Windows Server 2003, you must first install II
 
 10. Apply the changes.
 
-#### Installing the dashboards
+### Installing the dashboards
 
 1. Copy the directory *C:\\Skyline DataMiner\\Webpages\\Dashboards* from the DataMiner Agent to a location on the DataMiner Gateway, such as *C:\\Skyline DataMiner*.
 
 2. Remove all the files and subfolders in the directory *...\\Dashboards\\db*.
 
-#### Configuring IIS
+### Configuring IIS
 
 1. Go to *Start \> Control Panel \> Administrative Tools \> Internet Information Services (IIS) Manager*.
 
@@ -227,7 +227,7 @@ To install a Dashboard Gateway on Windows Server 2003, you must first install II
 
 13. Select the *Documents* tab page and add the content page *Default.aspx*.
 
-#### Configuring the web.config File
+### Configuring the web.config File
 
 1. In DataMiner, create a new user profile with access to all elements in the DMS. See [Adding a user](xref:Adding_a_user).
 

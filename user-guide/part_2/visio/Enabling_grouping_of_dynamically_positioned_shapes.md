@@ -2,7 +2,7 @@
 uid: Enabling_grouping_of_dynamically_positioned_shapes
 ---
 
-## Enabling grouping of dynamically positioned shapes
+# Enabling grouping of dynamically positioned shapes
 
 To get a cleaner look for Visual Overviews containing many dynamically positioned shapes that are very close together, you can enable shape grouping. This way, dynamically positioned shapes that overlap will be grouped.
 
@@ -22,7 +22,7 @@ The size and geometry of the group shapes will be the same as that of the shape 
 > - From DataMiner 9.5.2 onwards, clicking the grouped shape will open a details pane with more information on the different shapes it combines.
 > - Displaying DCF connections between grouped shapes is possible from DataMiner 9.5.3 onwards. In that case, when an element is represented by a group shape, all connections to that element will be drawn to the group shape.
 
-### Optional grouping configuration
+## Optional grouping configuration
 
 The following optional shape data can be added to the *ShapeGrouping* shape to further fine-tune shape grouping for shapes that are positioned based on a table:
 
@@ -62,7 +62,7 @@ The following optional shape data can be added to the *ShapeGrouping* shape to f
 
     If this shape data is not specified, the primary key column determines the order of the grouping. If two of the values of an *Orderby* column are the same, shapes corresponding to these values can be grouped in either order.
 
-### Configuration of the connection drop-down menu
+## Configuration of the connection drop-down menu
 
 When table connections are used, multiple table connections for shapes that are grouped together will also be grouped together into a single connection. Clicking on a grouped connection will open the details pane of that connection. This details pane will display a drop-down menu where you can select the connection for which details need to be displayed.
 

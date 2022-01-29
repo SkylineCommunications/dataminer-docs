@@ -2,9 +2,9 @@
 uid: SmsOptions_properties
 ---
 
-## SmsOptions properties
+# SmsOptions properties
 
-#### Message
+### Message
 
 Gets or sets the body text of the text message.
 
@@ -12,7 +12,7 @@ Gets or sets the body text of the text message.
 string Message
 ```
 
-#### TO
+### TO
 
 Gets or sets the destination number(s)
 

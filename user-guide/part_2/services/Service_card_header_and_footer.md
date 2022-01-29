@@ -2,7 +2,7 @@
 uid: Service_card_header_and_footer
 ---
 
-## Service card header and footer
+# Service card header and footer
 
 In the header of a service card, a breadcrumb trail is shown. In the header, you can:
 

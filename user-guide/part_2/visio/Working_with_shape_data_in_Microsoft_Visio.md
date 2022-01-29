@@ -2,13 +2,13 @@
 uid: Working_with_shape_data_in_Microsoft_Visio
 ---
 
-## Working with shape data in Microsoft Visio
+# Working with shape data in Microsoft Visio
 
 Microsoft Visio drawings can be enriched with DataMiner functionality using special shape data fields.
 
 Shape data (known as “custom properties” prior to Microsoft Visio 2007) are sets of user-defined fields that hold data. They can be added to pages, shapes, and even groups of shapes.
 
-### Opening the Shape Data pane
+## Opening the Shape Data pane
 
 The *Shape Data* pane lists all shape data linked to the item you selected.
 
@@ -19,7 +19,7 @@ To open this pane:
 > [!NOTE]
 > The title of the *Shape Data* pane contains the name of the currently selected item. If you select a shape, the title will be e.g. “Shape Data - Sheet.27”. If you select a page (by clicking anywhere on that page), the title will be “Shape Data - ThePage”.
 
-### Adding a data field to a page, a shape or a group of shapes
+## Adding a data field to a page, a shape or a group of shapes
 
 1. Select the page, the shape or the group of shapes to which you want to add data.
 
@@ -42,14 +42,14 @@ To open this pane:
 
 4. Click OK.
 
-### Using DataMiner features in Visio
+## Using DataMiner features in Visio
 
 From DataMiner 9.6.9 onwards, an add-in is available in Visio that allows you to manage DataMiner-related data more easily. In addition, you can also access DataMiner stencils, allowing you to speed up the design of visually appealing Visio drawings.
 
 > [!NOTE]
 > Depending on the configuration of the general user settings, this add-in may be unavailable. See [Enabling or disabling the advanced editing Visio add-in](xref:ClientSettings_json#enabling-or-disabling-the-advanced-editing-visio-add-in).
 
-#### Accessing the DataMiner stencils
+### Accessing the DataMiner stencils
 
 DataMiner stencils are preconfigured shapes or groups of shapes that match the DataMiner house style. They use macros that automatically fill in the necessary shape data when you add shapes to a drawing. This way, only minimal information still needs to be filled in to get the shapes ready for use.
 
@@ -72,7 +72,7 @@ To use the DataMiner stencils in Visio:
 > [!NOTE]
 > To use the stencils in Visio, Automation events need to be enabled in the Visio options (Under *Visio Options* > *Advanced* > *General*).
 
-#### Accessing the “Advanced editing” add-in
+### Accessing the “Advanced editing” add-in
 
 1. Open a Visio drawing by right-clicking a Visio drawing in DataMiner Cube and selecting *Edit in Visio*.
 
@@ -80,7 +80,7 @@ To use the DataMiner stencils in Visio:
 
     The *Advanced editing* panel will be opened. This panel will remain available until you close the Visio application.
 
-#### Using the “Advanced editing” panel
+### Using the “Advanced editing” panel
 
 The panel can be used as follows:
 

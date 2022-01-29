@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_a_webpage
 ---
 
-## Linking a shape to a webpage
+# Linking a shape to a webpage
 
 Using a shape data field of type **Link**, you can link a shape to a webpage.
 
@@ -22,7 +22,7 @@ In this section:
 
 - [Examples](#examples)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Link** to the shape, and set its value to:
 
@@ -38,7 +38,7 @@ Default tooltip: *Link to 'http://URL'*
 > - Links starting with *mailto:* are not supported in the DataMiner web apps prior to DataMiner 10.2.0/10.1.8.
 > - If a page needs to be opened in Internet Explorer by default, add *iexplore*\| before the URL and place the URL in double quotation marks, e.g. <br>*iexplore\|"https://dcpdma.skyline.be/"*
 
-### Options for shapes linked to a webpage
+## Options for shapes linked to a webpage
 
 The following options can be configured for shapes linked to a webpage:
 
@@ -92,7 +92,7 @@ The following options can be configured for shapes linked to a webpage:
     > [!NOTE]
     > This feature only works when you have logged on to DataMiner Cube explicitly using Basic Authentication (i.e. with a user name and a password). It will not work when you have logged on with your Windows user credentials.
 
-### Allowing pop-ups
+## Allowing pop-ups
 
 In DataMiner Cube, embedded browser windows suppress pop-ups by default. If, for any reason, you want an embedded browser window to allow pop-ups (e.g. when it has to show an authentication dialog), then you can use the following URL suffix (in upper case):
 
@@ -108,7 +108,7 @@ http://localhost/foo/index.html#SL_ALLOW_POPUPS#
 http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 ```
 
-### Special placeholders that can be used inside a URL
+## Special placeholders that can be used inside a URL
 
 | Placeholder    | Description                                                                                                                                                                                                  |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -123,7 +123,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 > - \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
 > - From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. *#http://www.skyline.be?MyParam=\[param:\<elementname>,1\]*
 
-### Configuring a link to a DataMiner element or view within a webpage embedded in Visual Overview
+## Configuring a link to a DataMiner element or view within a webpage embedded in Visual Overview
 
 From DataMiner 9.5.2 onwards, within a webpage displayed in Visual Overview via a shape data field of type *Link*, you can create a link that will allow the user to navigate to a particular DataMiner element or view.
 
@@ -145,7 +145,7 @@ To do so, use the following configuration in the webpage:
     </a>
     ```
 
-### Examples
+## Examples
 
 ```txt
 http://www.skyline.be

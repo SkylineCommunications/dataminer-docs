@@ -2,9 +2,9 @@
 uid: ScriptDummy_methods
 ---
 
-## ScriptDummy methods
+# ScriptDummy methods
 
-#### GetExternalInterfaces
+### GetExternalInterfaces
 
 Available from DataMiner 10.1.5/10.2.0 onwards. Retrieves all external DataMiner Connectivity Framework interfaces for this dummy.
 
@@ -19,7 +19,7 @@ var dummy = engine.GetDummy(1);
 var externalInterfaces = dummy.GetExternalInterfaces();
 ```
 
-#### GetInternalInterfaces
+### GetInternalInterfaces
 
 Available from DataMiner 10.1.5/10.2.0 onwards.Retrieves all internal DataMiner Connectivity Framework interfaces for this dummy.
 

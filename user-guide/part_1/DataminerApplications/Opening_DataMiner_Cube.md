@@ -2,11 +2,11 @@
 uid: Opening_DataMiner_Cube
 ---
 
-## Opening DataMiner Cube
+# Opening DataMiner Cube
 
-### Opening the desktop application
+## Opening the desktop application
 
-##### From DataMiner 10.0.9 onwards:
+#### From DataMiner 10.0.9 onwards:
 
 Open the DataMiner Cube desktop app via the shortcut on your desktop or in the start menu.
 
@@ -20,7 +20,7 @@ For more information on how to manage the start window of the Cube desktop app, 
 > - If you want to open DataMiner Cube for multiple DataMiner Systems without closing the start window, keep the Ctrl key pressed while you click the tiles.
 > - If you have multiple monitors and want DataMiner Cube to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
 
-##### Prior to DataMiner 10.0.9:
+#### Prior to DataMiner 10.0.9:
 
 If you have installed the desktop DataMiner Cube application, execute the following command in the folder where you installed the application:
 
@@ -31,11 +31,11 @@ DataminerCube.exe
 > [!NOTE]
 > By default, the file is installed in the program files directory, in the folder *Skyline Communications\\DataMiner Cube*. However, it is possible to choose a different folder during installation.
 
-### Managing the start window of the DataMiner Cube desktop app
+## Managing the start window of the DataMiner Cube desktop app
 
 Below you can find more information on the different options available to manage the start window of the DataMiner Cube desktop app, available from DataMiner 10.0.9 onwards.
 
-#### Setting a DMS as the default DMS
+### Setting a DMS as the default DMS
 
 To set a DMS as the default DMS to connect to:
 
@@ -43,7 +43,7 @@ To set a DMS as the default DMS to connect to:
 
 2. Select *Set as default* in the pop-up window and click *Save*.
 
-#### Changing which DMA in a DMS you connect to
+### Changing which DMA in a DMS you connect to
 
 To specify a different DMA in a DMS to connect to:
 
@@ -51,7 +51,7 @@ To specify a different DMA in a DMS to connect to:
 
 - Expand the *Agent* section, select the DMA and click *Save*.
 
-#### Connecting to a DMS using URL arguments
+### Connecting to a DMS using URL arguments
 
 To connect to a DMS using specific URL arguments:
 
@@ -61,7 +61,7 @@ To connect to a DMS using specific URL arguments:
 
 For more information on the possible URL arguments, see [Options for opening DataMiner Cube](#options-for-opening-dataminer-cube).
 
-#### Removing a DMS from the start window
+### Removing a DMS from the start window
 
 To remove the tile representing a DMS from the start window:
 
@@ -69,7 +69,7 @@ To remove the tile representing a DMS from the start window:
 
 2. Click the garbage can icon in the pop-up window.
 
-#### Sorting tiles in groups
+### Sorting tiles in groups
 
 From DataMiner 10.2.0/10.1.3 onwards, you can sort the different tiles in the start window in groups.
 
@@ -81,7 +81,7 @@ From DataMiner 10.2.0/10.1.3 onwards, you can sort the different tiles in the st
 
 - To move a tile to another position or to another group, drag it to its new position.
 
-#### Filtering the displayed tiles
+### Filtering the displayed tiles
 
 To filter the tiles in the start window:
 
@@ -92,7 +92,7 @@ To filter the tiles in the start window:
     > [!NOTE]
     > When the filter does not yield any results, you can click the “+” button or press ENTER to immediately add the DMS you were looking for.
 
-#### Making DataMiner Cube start up with windows
+### Making DataMiner Cube start up with windows
 
 To specify whether the DataMiner Cube should start up when Windows is started:
 
@@ -100,7 +100,7 @@ To specify whether the DataMiner Cube should start up when Windows is started:
 
 2. Select or clear the option *Start with Windows*, depending on whether you want Cube to start with Windows or not.
 
-#### Viewing logging for the start window
+### Viewing logging for the start window
 
 To view logging for the DataMiner Cube start window:
 
@@ -108,7 +108,7 @@ To view logging for the DataMiner Cube start window:
 
 2. Select *View logging*.
 
-### Opening the browser application
+## Opening the browser application
 
 Open Internet Explorer and, depending on your setup, go to one of the following addresses:
 
@@ -126,7 +126,7 @@ https://[DMA]/dataminercube
 > [!CAUTION]
 > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
 
-### Options for opening DataMiner Cube
+## Options for opening DataMiner Cube
 
 You can pass a number of options when starting DataMiner Cube:
 
@@ -168,7 +168,7 @@ You can pass a number of options when starting DataMiner Cube:
 >     - cube://mydma?element=MyElement
 >     - cube://10.11.12.13?view=12
 
-#### alarm=
+### alarm=
 
 From DataMiner 9.0.5 onwards, you can use this option to immediately display a specific alarm card.
 
@@ -183,7 +183,7 @@ http://MyDMA1/DataMinerCube/DataMinerCube.xbap?alarm=48/6713
 > [!NOTE]
 > To quickly find the root alarm ID, right-click the alarm in the Alarm Console and select *Properties*. The root alarm ID will be displayed below the regular ID in the top-right corner of the properties window.
 
-#### app=
+### app=
 
 Name of the app to be opened in a card right after startup.
 
@@ -199,7 +199,7 @@ DataminerCube.exe app="Reports & Dashboards"
 DataminerCube.exe app=settings"|"logging
 ```
 
-#### autoslide=
+### autoslide=
 
 Use this option if you want DataMiner Cube to automatically move to the next workspace every X seconds.
 
@@ -212,7 +212,7 @@ DataminerCube.exe autoslide=15
 
 To disable the autoslide mode, reconnect without the autoslide option.
 
-#### buffer=
+### buffer=
 
 Use this option along with the “*element=*” option to immediately show the buffer of a Spectrum Analyzer element.
 
@@ -242,7 +242,7 @@ Example:
 http://MyDMA1/Dataminercube/dataminercube.xbap?element=34/105&buffer=3:trace1
 ```
 
-#### chain=
+### chain=
 
 Use this option to open a CPE Manager element to a particular chain.
 
@@ -258,13 +258,13 @@ Example:
 > - It is advisable to also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
 > - The chain name is not case sensitive.
 
-#### debug=true
+### debug=true
 
 This option allows you to view functionality that can be useful for debugging, but which is otherwise hidden in the UI.
 
 For example, from DataMiner 9.6.0/9.5.3 onwards, the GUID of service definitions is only shown in the Services app if you use the *debug=true* argument.
 
-#### dte_filtername=filtervalue
+### dte_filtername=filtervalue
 
 Use this option to open a CPE Manager element with a particular filter.
 
@@ -297,7 +297,7 @@ Example:
 > See also:
 > [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)
 
-#### element=
+### element=
 
 Element to be opened in a card right after startup:
 
@@ -319,7 +319,7 @@ DataminerCube.exe host=MyDMA2 element=MyElement"|"MyOtherElement
 DataminerCube.exe host=MyDMA2 element="My element|My other element"
 ```
 
-#### host=
+### host=
 
 IP address or hostname of the DMA to which you want to connect.
 
@@ -330,7 +330,7 @@ http://MyDMA1/DataminerCube/dataminercube.xbap?host=MyDMA2
 DataminerCube.exe host=MyDMA2
 ```
 
-#### lat=
+### lat=
 
 Used along with the “long” URL parameter when a link to a DataMiner map is specified, in order to override the initial center latitude and longitude defined in the map configuration.
 
@@ -346,7 +346,7 @@ Available from DataMiner 9.5.1 onwards.
 > See also:
 > [long=](#long)
 
-#### long=
+### long=
 
 Used along with the “lat” URL parameter when a link to a DataMiner map is specified, in order to override the initial center latitude and longitude defined in the map configuration.
 
@@ -362,7 +362,7 @@ Available from DataMiner 9.5.1 onwards.
 > See also:
 > [lat=](#lat)
 
-#### measpt=
+### measpt=
 
 Used when opening a Spectrum Analyzer element right after startup, in order to immediately open the *Measurement points* tab of the settings pane and select the indicated measurement point.
 
@@ -379,7 +379,7 @@ http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&measpt=1
 > [!NOTE]
 > This option can be combined with the *preset=* option.
 
-#### options=
+### options=
 
 Used along with *preset=*, in order to load a spectrum preset in the Spectrum Analyzer element(s) opened right after startup.*options=* is required in order to specify the preset options.
 
@@ -402,7 +402,7 @@ Example:
 http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105&preset=abc&options=0x208
 ```
 
-#### preset=
+### preset=
 
 Name of the spectrum preset to be loaded in the Spectrum Analyzer element(s) opened right after startup.
 
@@ -419,7 +419,7 @@ http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105|34/106|34/107&pres
 > - Take care when specifying more than one element in the URL. If you used a URL like the one in the second example above, all three elements would be opened in their own card, but as only the first one is a Spectrum Analyzer element, only that element would load the specified preset.
 > - Only public presets can be used, and their *(public)* suffix must be included in the URL.
 
-#### preset=inline
+### preset=inline
 
 The *preset=* option can also be used for inline presets, in which case it works differently from the regular *preset=* option, though it should also always be combined with *element=*.
 
@@ -472,7 +472,7 @@ Property names:
 > - freqStart and freqStop, or
 > - freqCenter and freqSpan.
 
-#### service=
+### service=
 
 Service to be opened in a card right after startup:
 
@@ -497,7 +497,7 @@ DataminerCube.exe host=MyDMA2 service=MyService"|"MyOtherService
 > [!NOTE]
 > In order to open an SLA element, use the *element=* option.
 
-#### view=
+### view=
 
 View to be opened in a card right after startup:
 
@@ -517,7 +517,7 @@ DataminerCube.exe host=MyDMA2 view="My view"
 DataminerCube.exe host=MyDMA2 view=MyView"|"MyOtherView
 ```
 
-#### workspace=
+### workspace=
 
 Name of the workspace to be opened right after startup.
 
@@ -531,7 +531,7 @@ DataminerCube.exe workspace=Classic
 > [!NOTE]
 > If you want an empty workspace to be opened, use the argument *workspace=Clean*.
 
-### Opening a card on a particular page
+## Opening a card on a particular page
 
 From DataMiner 9.6.3 onwards, if you use the *=element*, *=service* or *=view* option to open an element, service or view card at startup, you can have this card opened on a particular page.
 
@@ -571,7 +571,7 @@ For example:
     http://MyDMA1/DataMinerCube/DataMinerCube.xbap?view=SLC::aggregation
     ```
 
-### Combining URL options for DataMiner Cube
+## Combining URL options for DataMiner Cube
 
 You can combine different options using a separator character:
 

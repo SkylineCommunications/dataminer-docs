@@ -2,7 +2,7 @@
 uid: Connecting_to_a_DMA_with_the_SLNetClientTest_tool
 ---
 
-## Connecting to a DMA with the SLNetClientTest tool
+# Connecting to a DMA with the SLNetClientTest tool
 
 Before you can use any of the SLNetClientTest tool functions, you must first connect to a DMA:
 

@@ -2,7 +2,7 @@
 uid: Automatically_displaying_external_and_internal_connections
 ---
 
-## Automatically displaying external and internal connections
+# Automatically displaying external and internal connections
 
 External and internal connections can be displayed automatically based on DataMiner Connectivity Framework data that was either imported or detected.
 
@@ -54,7 +54,7 @@ External and internal connections can be displayed automatically based on DataMi
 
     - [Options for highlighting DCF connections](xref:Options_for_highlighting_DCF_connections)
 
-### Automatically linking interfaces to subshapes
+## Automatically linking interfaces to subshapes
 
 It is possible to have element interfaces linked to subshapes automatically.
 
@@ -77,7 +77,7 @@ To do so, define different interface subshapes on the different parent shapes, t
 > - Interfaces will be resolved in the following order: Interface ID \> Interface name (optionally containing wildcards) \> “\[Auto\]\|ActivePath” \> “\[Auto\]\|Connector” \> “\[Auto\]\|Input” \> “\[Auto\]\|Output” \> “\[Auto\]\|InputOutput” \> “\[Auto\]”.
 > - From DataMiner version 8.5.4 onwards, connections to non-existing interfaces of a parent shape are not shown. The default behavior in older versions is for the connections to be redirected to the center of the parent shape. If you want the same behavior to occur from version 8.5.4 onwards, add a shape data field to the parent shape of type **Options**, and set its value to “*AllowCentralConnectivity*”.
 
-### Linking shapes to dynamically created interfaces
+## Linking shapes to dynamically created interfaces
 
 To link a shape to an interface that is created dynamically based on protocol table data, add a shape data field of type **Options** to the shape and set its value to “*InterfaceParameter:*” followed by a parameter ID. The shape will then be linked to the dynamically created interface with that parameter ID.
 
@@ -95,7 +95,7 @@ In addition, you can specify the following conditions (or a combination of them,
 | Options          | InterfaceParameter:\<paramID>\|InputOutput                     | Only display the shape on interfaces of type InputOutput.                                                                                                       |
 | Options          | InterfaceParameter:\<paramID>\|Internal                        | Only display the shape on interfaces of internal connections. By default, this type of shape is otherwise only displayed on interfaces of external connections. |
 
-### Grouping multiple connection lines by table column
+## Grouping multiple connection lines by table column
 
 From DataMiner 9.5.3 onwards, if multiple connections are displayed between elements with the *MultipleCurvedLinesMode* or *MultipleLinesMode* option, it is possible to these have connection lines grouped by table column.
 

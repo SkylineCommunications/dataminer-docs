@@ -2,7 +2,7 @@
 uid: Making_a_measurement_point_execute_a_script_before_taking_a_trace
 ---
 
-## Making a measurement point execute a script before taking a trace
+# Making a measurement point execute a script before taking a trace
 
 Spectrum measurement points are often configured to set one or more parameters before taking a trace. However, they can also be configured to execute an entire Automation script before taking a trace.
 

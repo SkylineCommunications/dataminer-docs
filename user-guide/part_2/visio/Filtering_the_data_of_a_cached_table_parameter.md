@@ -2,7 +2,7 @@
 uid: Filtering_the_data_of_a_cached_table_parameter
 ---
 
-## Filtering the data of a cached table parameter
+# Filtering the data of a cached table parameter
 
 From DataMiner 9.5.10 onwards, it is possible to configure that certain table parameters have to be cached. Data from the cache can then be used by a *\[Param:\]* placeholder in Visual Overview. See [Configuring caching of specific table parameters](xref:ClientSettings_json#configuring-caching-of-specific-table-parameters).
 

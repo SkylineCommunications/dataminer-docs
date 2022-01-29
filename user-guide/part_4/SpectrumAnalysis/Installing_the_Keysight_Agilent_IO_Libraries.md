@@ -2,16 +2,16 @@
 uid: Installing_the_Keysight_Agilent_IO_Libraries
 ---
 
-## Installing the Keysight/Agilent IO Libraries
+# Installing the Keysight/Agilent IO Libraries
 
 On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Keysight IO Libraries (known as Agilent up till 2014).
 
 > [!NOTE]
 > After installing the IO Libraries or after changing the IO configuration, restart the DMA software.
 
-### Installing the IO Libraries
+## Installing the IO Libraries
 
-##### From DataMiner 9.0 onwards
+#### From DataMiner 9.0 onwards
 
 From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 17.1.20011.
 
@@ -39,7 +39,7 @@ From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 
     > See also:
     > [Configuring the GPIB settings of a spectrum analyzer element](xref:Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element)
 
-##### On legacy systems (up to Windows XP)
+#### On legacy systems (up to Windows XP)
 
 1. On the DataMiner Agent, go to the *C:\\Skyline DataMiner\\Tools* directory.
 
@@ -90,7 +90,7 @@ From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 
 
     If, in step 12, you selected the *IO Config* checkbox, then **IO Config** will automatically appear, allowing you to configure the IO interfaces. See [Configuring the IO interfaces](#configuring-the-io-interfaces).
 
-### Configuring the IO interfaces
+## Configuring the IO interfaces
 
 > [!NOTE]
 > You need system administrator privileges to run **IO Config**.

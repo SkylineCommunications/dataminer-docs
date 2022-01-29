@@ -2,15 +2,15 @@
 uid: DataMiner_processes
 ---
 
-## DataMiner processes
+# DataMiner processes
 
 A DataMiner Agent hosts a number of separate but interacting processes.
 
-### Graphical overview of the processes running on a DataMiner Agent
+## Graphical overview of the processes running on a DataMiner Agent
 
 The following overview clearly shows how the DataMiner Agent software is a collection of separate but interacting processes.
 
-#### Overview of the DataMiner Agent processes
+### Overview of the DataMiner Agent processes
 
 ![](~/user-guide/images/slprocess_overview.jpg)
 
@@ -21,13 +21,13 @@ The following overview clearly shows how the DataMiner Agent software is a colle
 > - [Main DMA software components](#main-dma-software-components)
 > - [Auxiliary DMA software components](#auxiliary-dma-software-components)
 
-### Main DMA software components
+## Main DMA software components
 
 Below, you can find more information on the main DataMiner processes.
 
 For information on the auxiliary processes, see [Auxiliary DMA software components](#auxiliary-dma-software-components)
 
-#### SLDataMiner
+### SLDataMiner
 
 The central process of a DataMiner Agent.
 
@@ -38,7 +38,7 @@ The central process of a DataMiner Agent.
 > [!NOTE]
 > This process is not aware of any other DMAs in the DataMiner System.
 
-#### SLDataGateway
+### SLDataGateway
 
 From DataMiner version 9.0 onwards, this process calculates the average trending information.
 
@@ -50,13 +50,13 @@ If a Cassandra database is installed, this process also handles the following:
 
 - Transfer of data to the SLAnalytics process.
 
-#### SLDMS
+### SLDMS
 
 Takes care of file synchronization within the DataMiner System, triggers connections, etc.
 
 Initiates communication with other DMAs in the DMS. The communication itself, however, is managed by SLNet.
 
-#### SLElement
+### SLElement
 
 Keeps track of parameter values that have to be shown to the user and creates alarms.
 
@@ -66,11 +66,11 @@ On compatible systems, SLElement is run as a 64-bit process. However, it can sti
 > - This process is only aware of parameters that are being monitored and parameters that have to be displayed on the user interface.
 > - In DataMiner versions prior to 9.0, this process also calculates parameter trending values. From DataMiner version 9.0 onwards, this function is taken over by the SLDataGateway process.
 
-#### SLLog
+### SLLog
 
 Manages all interaction with the different log files found in the DataMiner System.
 
-#### SLNet
+### SLNet
 
 Controls all communication among DataMiner Agents, and between DataMiner Agents and their clients.
 
@@ -81,7 +81,7 @@ Controls all communication among DataMiner Agents, and between DataMiner Agents 
 > [!NOTE]
 > Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway and before it is processed further. In the SLNetClientTest tool, several options are available related to the trend cache. However, note that this is an advanced system administration tool that should be used with extreme care. See [Configuring trend caching](xref:SLNetClientTest_tool_advanced_procedures#configuring-trend-caching).
 
-#### SLPort
+### SLPort
 
 Controls all communication from and to devices connected to either a serial port or an IP port.
 
@@ -90,14 +90,14 @@ Types of communication controlled by this process include serial, smart-serial, 
 > [!NOTE]
 > Multiple SLPort processes can run simultaneously. See [Setting the number of simultaneously running SLPort processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slport-processes).
 
-#### SLProtocol
+### SLProtocol
 
 Executes the instructions specified in DataMiner protocols.
 
 > [!NOTE]
 > Multiple SLProtocol processes can run simultaneously. See [Setting the number of simultaneously running SLProtocol processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slprotocol-processes).
 
-#### SLSNMPManager
+### SLSNMPManager
 
 Controls all communication from and to SNMP devices acting as SNMP agents.
 
@@ -105,7 +105,7 @@ Controls all communication from and to SNMP devices acting as SNMP agents.
 > See also:
 > [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)
 
-#### SLWatchdog
+### SLWatchdog
 
 Monitors all other DataMiner processes and takes action
 
@@ -120,13 +120,13 @@ It also keeps track of a number of key performance indicators.
 > - [SLWatchdog](xref:Configuration_of_DataMiner_processes#slwatchdog)
 > - [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 
-### Auxiliary DMA software components
+## Auxiliary DMA software components
 
 Below, you can find more information on the auxiliary DataMiner processes.
 
 For information on the main processes, see [Main DMA software components](#main-dma-software-components).
 
-#### SLAnalytics
+### SLAnalytics
 
 This process is introduced in DataMiner 9.0, and only starts on a DMA that uses a Cassandra database.
 
@@ -135,7 +135,7 @@ The process supports advanced artificial intelligence functions in DataMiner, su
 > [!NOTE]
 > Prior to DataMiner 9.5.5, it is possible to configure when prediction models are backed up, in the file *SLAnalytics.config*. However, from DataMiner 9.5.5 onwards, prediction models are no longer backed up, but instead retrieved from a cache and re-computed in case they are not available in the cache. For more information, see [SLAnalytics.config](xref:SLAnalytics_config#slanalyticsconfig).
 
-#### SLASPConnection
+### SLASPConnection
 
 The DMS Reporter process.
 
@@ -150,7 +150,7 @@ The DMS Reporter process.
 >     - The expiration time, grace time and maximum number of records can be set here, but only for the current session. These settings can be permanently changed in *MaintenanceSettings.xml*.
 >     - Timeline caching and timeline cache verbose logging can be enabled and disabled on this page, or directly in *MaintenanceSettings.xml*.
 
-#### SLAutomation
+### SLAutomation
 
 The DMS Automation process.
 
@@ -161,7 +161,7 @@ The DMS Automation process.
 > See also:
 > [DMS Automation](xref:automation#dms-automation)
 
-#### SLBrain
+### SLBrain
 
 The DMS Correlation process.
 
@@ -169,7 +169,7 @@ The DMS Correlation process.
 > See also:
 > [DMS Correlation](xref:correlation#dms-correlation)
 
-#### SLGSMGateway
+### SLGSMGateway
 
 The DMS Mobile Gateway process.
 
@@ -179,7 +179,7 @@ Sends and receives SMS messages (i.e. text messages).
 > See also:
 > [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
 
-#### SLHelper
+### SLHelper
 
 A helper process that is called upon by other processes to perform actions such as
 
@@ -189,22 +189,22 @@ A helper process that is called upon by other processes to perform actions such 
 
 - etc.
 
-#### SLNetComService
+### SLNetComService
 
 Translates so-called managed code (as used by e.g. SLNet) to native code (as used by e.g. SLDataMiner) and vice versa.
 
-#### SLScheduler
+### SLScheduler
 
 A helper process that is called upon when the Windows Task Scheduler orders that a scheduled task has to be performed.
 
-#### SLScripting
+### SLScripting
 
 Processes QActions when asked to by SLProtocol.
 
 > [!NOTE]
 > C# code in Automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
 
-#### SLSNMPAgent
+### SLSNMPAgent
 
 Communicates with third-party applications acting as SNMP managers (e.g. HP OpenView, IBM NetCool, etc.).
 
@@ -214,7 +214,7 @@ Also sends all outgoing email notifications.
 > See also:
 > [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)
 
-#### SLSpectrum
+### SLSpectrum
 
 The DMS Spectrum Analysis process.
 
@@ -224,10 +224,10 @@ Also manages the time slots assigned to each of the clients that want to use a p
 > See also:
 > [DMS Spectrum Analysis](xref:SpectrumAnalysis#dms-spectrum-analysis)
 
-#### SLTaskBarUtility
+### SLTaskBarUtility
 
 The DataMiner system tray utility that allows you to easily start, stop, backup, restore and upgrade a DMA.
 
-#### SLXML
+### SLXML
 
 Manages all interaction with the different XML files found in the DataMiner System.

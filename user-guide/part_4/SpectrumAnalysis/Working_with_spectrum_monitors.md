@@ -2,7 +2,7 @@
 uid: Working_with_spectrum_monitors
 ---
 
-## Working with spectrum monitors
+# Working with spectrum monitors
 
 A spectrum monitor works as a schedule to run a spectrum script, optionally with any combination of measurement points and/or presets. It can be used to make the spectrum device sweep the input signal at regular intervals to measure particular variables.
 
@@ -23,11 +23,11 @@ The following topics provide more information on working with spectrum monitor:
 > See also:
 > <https://community.dataminer.services/video/spectrum-analyzer-setting-up-continuous-background-rf-measurements/>
 
-### Managing spectrum monitors
+## Managing spectrum monitors
 
 On a spectrum analyzer card, you can manage the spectrum monitors for one particular element. Managing spectrum monitors across all elements is possible in System Center.
 
-#### On a spectrum analyzer card
+### On a spectrum analyzer card
 
 To access spectrum monitors from a spectrum analyzer card:
 
@@ -47,7 +47,7 @@ The following actions are possible to manage the spectrum monitors:
 
 - To find a specific monitor, enter the monitor name or part of the monitor name in the Search box at the top of the left pane. The tree view will then be filtered to only show any monitors matching the name you entered.
 
-#### In System Center
+### In System Center
 
 To access spectrum monitors in System Center:
 
@@ -64,7 +64,7 @@ To access spectrum monitors in System Center:
 > [!NOTE]
 > You can only access spectrum monitors in System Center if you have the user permission *Spectrum* > *Configure scripts & monitors* and there is at least one spectrum protocol with more than one spectrum element available.
 
-### Configuring spectrum monitors
+## Configuring spectrum monitors
 
 When you create a spectrum monitor, you can configure custom parameters that can be viewed in real time. These parameters are in fact variables from the spectrum scripts, that are given more user-friendly names.
 
@@ -144,7 +144,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 > [!NOTE]
 > To deactivate the monitor, at the top of the pane, clear the selection from *Enable this monitor*.
 
-### Watching spectrum buffers
+## Watching spectrum buffers
 
 When you work in real-time interactive mode, this requires part of the limited measuring capacity of the spectrum analyzer. As such, when you are only interested in seeing some of the measurements, which are already executed by scripts for automated performance monitoring, you can watch the so-called spectrum buffers instead.
 
@@ -174,7 +174,7 @@ To view all buffers:
 > See also:
 > [Viewing along with another client](xref:Viewing_spectrum_analyzer_traces#viewing-along-with-another-client)
 
-### Taking priority over a spectrum monitor
+## Taking priority over a spectrum monitor
 
 When a lengthy script is being executed by a monitor, it is possible that the real-time spectrum display does not receive new trace data. In this case, if you have been granted the permission *Spectrum: Take Priority Over Monitors*, you can take priority over the spectrum monitor in DataMiner Cube.
 

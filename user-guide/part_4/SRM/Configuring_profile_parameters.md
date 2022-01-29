@@ -2,7 +2,7 @@
 uid: Configuring_profile_parameters
 ---
 
-## Configuring profile parameters
+# Configuring profile parameters
 
 The parameters in a profile definition are linked to one or more parameters of existing DataMiner protocols. This way, if different protocols have conceptually identical parameters (e.g. “bit rate”), these can be linked to one and the same parameter in the *Profiles* module.
 
@@ -12,7 +12,7 @@ Profile parameters can be configured in two ways. You can either add a parameter
 
 - [Configuring profile parameters by dragging an element onto the module](#configuring-profile-parameters-by-dragging-an-element-onto-the-module)
 
-### Creating a profile parameter with the Add parameter button
+## Creating a profile parameter with the Add parameter button
 
 1. At the bottom of the *Parameters* tab of the list pane, click *Add parameter.*
 
@@ -65,7 +65,7 @@ Profile parameters can be configured in two ways. You can either add a parameter
 
 8. To save the new parameter, click the *Save all changes* button in the lower right corner of the module.
 
-#### Configuring a converter for a profile parameter
+### Configuring a converter for a profile parameter
 
 From DataMiner 10.0.12 onwards, it is possible to configure a converter (i.e. mediation snippet) for a parameter linked to a profile parameter. This allows you to convert parameter values from the format defined in the protocol to a different format defined in the profile parameter.
 
@@ -87,7 +87,7 @@ To configure a converter for a profile parameter:
 
 6. Click *Save* to apply the changes.
 
-### Configuring profile parameters by dragging an element onto the module
+## Configuring profile parameters by dragging an element onto the module
 
 1. Drag an element from the Surveyor onto the *Parameters* tab of the list pane in the *Profiles* module.
 

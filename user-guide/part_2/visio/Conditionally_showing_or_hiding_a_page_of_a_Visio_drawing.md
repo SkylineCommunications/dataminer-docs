@@ -2,7 +2,7 @@
 uid: Conditionally_showing_or_hiding_a_page_of_a_Visio_drawing
 ---
 
-## Conditionally showing or hiding a page of a Visio drawing
+# Conditionally showing or hiding a page of a Visio drawing
 
 A page of a Visio drawing can be shown or hidden:
 
@@ -15,7 +15,7 @@ If a page is hidden, it will not be displayed in the tree view of a card navigat
 > [!NOTE]
 > - If a user opens the Visual pages of a card, but all Visio pages are hidden, e.g. because of conditional hiding, a line of type Info will be added to the Cube logging to indicate this.
 
-### Depending on the current value of a parameter or a property
+## Depending on the current value of a parameter or a property
 
 Add a shape data field of type **Options** to the page, and set its value to:
 
@@ -28,7 +28,7 @@ Hidden=[ParameterOrProperty];Condition;Condition;...
 > - The parameter or property is evaluated only when the page is (re)loaded. The page will not suddenly appear or disappear when the parameter or the property gets updated.
 > - Currently, only the \[param:...\] and \[property:...\] placeholders are supported with this option.
 
-#### Examples
+### Examples
 
 If you use the following option, the page will be visible if property “VisiblePage” contains “Value3”:
 
@@ -42,7 +42,7 @@ If you use the following option, the page will be visible if parameter 177 of th
 Hidden=[Param:*,177];=0;=1;=3
 ```
 
-#### Condition operators
+### Condition operators
 
 | Operator | Description              |
 |----------|--------------------------|
@@ -56,7 +56,7 @@ Hidden=[Param:*,177];=0;=1;=3
 > [!NOTE]
 > String values can only be compared using “=” or “!=”.
 
-### Depending on the DataMiner client application that is being used
+## Depending on the DataMiner client application that is being used
 
 By specifying that certain pages should be hidden in DataMiner Cube, System Display and/or the DataMiner web apps, you can optimize your drawings for the type of client application where they will be used:
 

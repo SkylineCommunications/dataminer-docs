@@ -2,7 +2,7 @@
 uid: Triggering_an_action_when_a_shape_is_dragged_onto_another_shape
 ---
 
-## Triggering an action when a shape is dragged onto another shape
+# Triggering an action when a shape is dragged onto another shape
 
 A shape can be set to perform a particular action when another shape is dropped onto it.
 
@@ -15,7 +15,7 @@ This “drop” behavior will often be implemented to visualize element properti
 > See also:
 > [Triggering an action when the mouse pointer hovers over a shape](xref:Triggering_an_action_when_the_mouse_pointer_hovers_over_a_shape)
 
-### Configuring the shape data field of the target shape
+## Configuring the shape data field of the target shape
 
 Add the following shape data fields to the shape:
 
@@ -49,7 +49,7 @@ Add the following shape data fields to the shape:
     > [!NOTE]
     > The “DropOnly” option can be combined with the “Selectable” option. See [Making shapes selectable](xref:Making_shapes_selectable).
 
-### Example of a “drop target” that visualizes the element name
+## Example of a “drop target” that visualizes the element name
 
 First, we turn a shape into a “drop target” (i.e. a shape onto which we will drop other shapes) by adding to it the following shape data fields:
 
@@ -74,7 +74,7 @@ Then, we make sure that the shapes we intend to drop onto the “drop target” 
 
 When we now drop a shape with a valid element ID onto our newly created “drop target”, the text inside the “drop target” will display the name of the element referred to by the element ID specified in the shape data of the shape we dropped onto the “drop target”.
 
-### Example of a “drop target” that executes an Automation script
+## Example of a “drop target” that executes an Automation script
 
 First, we turn a shape into a “drop target” (i.e. a shape onto which we will drop other shapes) by adding the following shape data fields to it:
 
@@ -103,7 +103,7 @@ Then, we make sure that the shapes we intend to drop onto the “drop target” 
 
 When we now drop a shape with a valid service ID onto our newly created “drop target”, the service ID specified in the shape data of the shape we dropped onto the “drop target” will be passed to the Automation script, which will then be executed.
 
-### Example of a drag-and-drop action that passes on a table filter
+## Example of a drag-and-drop action that passes on a table filter
 
 Create the following four shapes:
 
@@ -146,7 +146,7 @@ Result:
 > [!NOTE]
 > - From DataMiner 9.0 onwards, \[TableIndexFilter\] placeholders can be combined with dynamic placeholders like \[Param:...\], \[Var:...\], etc. in shape data that support this (Parameter, ParameterControl, ParameterControlOptions and Execute). However, note that they cannot be used recursively.
 
-### Configuring drag-and-drop behavior for child shapes
+## Configuring drag-and-drop behavior for child shapes
 
 When child shapes have been generated for every row in a table, it is also possible to drag and drop one child shape onto another.
 

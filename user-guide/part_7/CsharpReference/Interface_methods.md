@@ -2,7 +2,7 @@
 uid: Interface_methods
 ---
 
-## Interface methods
+# Interface methods
 
 - [GetNext](#getnext)
 
@@ -14,7 +14,7 @@ uid: Interface_methods
 
 - [SetPropertyValue](#setpropertyvalue)
 
-#### GetNext
+### GetNext
 
 Returns the interface to which the specified interface is connected.
 
@@ -36,7 +36,7 @@ Example:
 Interface newInterface = nextInterface.GetNext("*",lastInterface);
 ```
 
-#### GetNexts
+### GetNexts
 
 Returns all interfaces connected to the current interface. This is especially useful in cases where a connection splits up into multiple internal connections.
 
@@ -58,7 +58,7 @@ Example:
 Interface[] nextInterfaces = interface.GetNexts("MyConnection",previousInterface);
 ```
 
-#### GetPropertyValue
+### GetPropertyValue
 
 Gets the value of a property by providing the property name.
 
@@ -88,7 +88,7 @@ if(element != null)
 }
 ```
 
-#### HasProperty
+### HasProperty
 
 Determines whether a property with the specified name exists.
 
@@ -116,7 +116,7 @@ if(element != null)
 }
 ```
 
-#### SetPropertyValue
+### SetPropertyValue
 
 Sets the value of a property.
 

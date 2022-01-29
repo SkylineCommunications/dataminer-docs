@@ -2,7 +2,7 @@
 uid: Generating_the_DCF_signal_path_of_a_particular_element_and_interface
 ---
 
-## Generating the DCF signal path of a particular element and interface
+# Generating the DCF signal path of a particular element and interface
 
 From DataMiner 9.5.1 onwards, it is possible to show the DCF signal path of a certain element and interface.
 
@@ -37,7 +37,7 @@ To do so, define the following shapes in Visio:
 
 - Optional additional child shapes in the placeholder shape, for example to display the element name of the shape. For the latter, a child shape should be added with shape data **Element** set to "\*" and shape data **Info** set to "Name".
 
-#### Configuration of the signal path shape
+### Configuration of the signal path shape
 
 The parent shape can contain the following shape data:
 
@@ -49,7 +49,7 @@ The parent shape can contain the following shape data:
 | Filter     | In this optional shape data field, you can define a service filter, by specifying a value with the format *ServiceScope=x* where x is a service name or service ID. Only elements that are in this service will be displayed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Options    | In this optional shape data field, you can specify the following options, separated from each other with pipe (“\|”) characters, to determine how the signal path is displayed:<br> -  **MaxHops=x**, where x is the maximum number of hops displayed (not counting the first shape). For example, if there is only enough room in your signal path container for 3 columns, specify *MaxHops=2*. The default value is 5.<br> -  **MaxShapes=x**, where x is the maximum number of parent element shapes displayed within a single column or hop. For example, if there is room to display many shapes in one column, you could specify *MaxShapes=10*. The default value is 3. |
 
-#### Configuration of the placeholder shapes
+### Configuration of the placeholder shapes
 
 A placeholder shape can have any shape data a normal parent element shape would have, except for the element shape data itself, which is instead determined by the signal path.
 

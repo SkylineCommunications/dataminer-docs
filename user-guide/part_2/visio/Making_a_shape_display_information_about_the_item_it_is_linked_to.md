@@ -2,7 +2,7 @@
 uid: Making_a_shape_display_information_about_the_item_it_is_linked_to
 ---
 
-## Making a shape display information about the item it is linked to
+# Making a shape display information about the item it is linked to
 
 Using a shape data field of type **Info**, you can make shapes display information about the item to which they are linked:
 
@@ -22,7 +22,7 @@ Using a shape data field of type **Info**, you can make shapes display informati
     > See also:
     > [Generating the connectivity chain for an SRM service instance](xref:Generating_the_connectivity_chain_for_an_SRM_service_instance)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Info** to the shape, and set its value to one of the keywords listed below.
 
@@ -189,7 +189,7 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
 
 - **Bookings**: See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
 
-### Placeholder for Info value in shape text
+## Placeholder for Info value in shape text
 
 The info specified in the **Info** field will only appear on the shape if you add shape text that contains a “\*” character. This character will then be replaced by the requested information.
 
@@ -198,7 +198,7 @@ To add text to a shape, just double-click the shape, and enter the text.
 > [!NOTE]
 > From DataMiner 9.0 onwards, if an **Info** shape data field is set to *DATAMINER*, the placeholder is replaced by the name of the DMA that is currently hosting the element, service or redundancy group. In DataMiner versions up to DataMiner 9.0, the placeholder is replaced by the name of the DMA where the element, service or redundancy group was created.
 
-### Element statistics, service statistics, view statistics, etc.
+## Element statistics, service statistics, view statistics, etc.
 
 To display element statistics, service statistics or view statistics, the same placeholders are used as when configuring *MaintenanceSettings.xml* to display these statistics in the Surveyor.
 

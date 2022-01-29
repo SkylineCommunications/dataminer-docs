@@ -2,7 +2,7 @@
 uid: DIS_settings
 ---
 
-## DIS settings
+# DIS settings
 
 In the *DIS Settings* dialog box, you can find all program settings of the DataMiner Integration Studio:
 
@@ -26,7 +26,7 @@ In the *DIS Settings* dialog box, you can find all program settings of the DataM
 
 - [Info](#info)
 
-### DMA
+## DMA
 
 In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to import or publish protocols or Automation scripts, or debug QActions.
 
@@ -78,7 +78,7 @@ To set a DMA as the default DMA:
 
 - Right-click the DMA, and select *Set as Default*.
 
-#### If a DMA uses DataMiner configuration switching
+### If a DMA uses DataMiner configuration switching
 
 If you add a DMA on which DataMiner configuration switching is enabled, you may have to change the port number in the IP address you entered in the *Host* box.
 
@@ -95,11 +95,11 @@ If you add a DMA on which DataMiner configuration switching is enabled, you may 
 > [!NOTE]
 > For more information on switching between DataMiner configurations, refer to the DataMiner Help.
 
-### DLLs
+## DLLs
 
 In the *DLLs* tab, you can specify the DLL import locations.
 
-#### DLL Import locations
+### DLL Import locations
 
 These are the folders that should contain files like *Interop.SLDms.dll*, *SLDatabase.dll*, *SLProtocolTools.dll* or *SLNetTypes.dll*.
 
@@ -113,7 +113,7 @@ If you are working on a local DMA, you can keep the following default folders:
 
  *C:\\Skyline DataMiner\\ProtocolScripts*
 
-### Solutions
+## Solutions
 
 In the *Solutions* tab, you can specify the following default solution folders:
 
@@ -121,7 +121,7 @@ In the *Solutions* tab, you can specify the following default solution folders:
 
 - Default Automation script solutions folder
 
-### Class Library
+## Class Library
 
 In the *Class Library* tab, you can select a base package (shipped with DIS) and specify the location of one or more custom/community packages, which will typically contain code written specifically for a particular vendor or project and maintained by a dedicated team of developers.
 
@@ -131,11 +131,11 @@ DIS will automatically reload the class library packages when packages have been
 
 For more information on Class Library packages, see [Class Library packages](xref:Class_Library_packages)
 
-#### Enable Class Library feature
+### Enable Class Library feature
 
 Clear the *Enable Class Library feature* option if you want to disable the Class Library feature.
 
-#### Automatically generate Class Library code
+### Automatically generate Class Library code
 
 If you select the *Automatically generate Class Library code* option, DIS will automatically regenerate the Class Library QAction 63000 and the Class Library EXE blocks whenever references to class library items have been added, changed or removed.
 
@@ -143,17 +143,17 @@ If you want to force an ad-hoc regeneration of the Code Library QAction 63000 an
 
 See also: [Protocol \> Generate Class Library code](xref:DIS_menu#protocol--generate-class-library-code)
 
-### Interface
+## Interface
 
 In the *Interface* tab, you can change a number of settings pertaining to mouse behavior, highlighting and the file tab search box.
 
-#### Scroll at mouse cursor
+### Scroll at mouse cursor
 
 If you select the *Scroll at mouse cursor* option, hovering with your mouse over a user interface section of DataMiner Integration Studio will suffice to be able to scroll in that section using the mouse wheel.
 
 This means that you will be able to scroll in one section while keeping the keyboard focus on another section.
 
-#### Smart highlighting: case sensitivity
+### Smart highlighting: case sensitivity
 
 This setting controls whether or not the “smart highlighting” feature is case sensitive.
 
@@ -162,7 +162,7 @@ This setting controls whether or not the “smart highlighting” feature is cas
 | Case sensitive   | instances of the selected word will be highlighted throughout the entire XML file only if their casing exactly matches that of the word you selected. |
 | Ignore case      | instances of the selected word will be highlighted throughout the entire XML file regardless of casing.                                               |
 
-#### Highlighting filter box - Case sensitivity
+### Highlighting filter box - Case sensitivity
 
 This setting controls whether or not the full-text search feature in the file tabs is case sensitive.
 
@@ -174,7 +174,7 @@ This setting controls whether or not the full-text search feature in the file ta
 
 The value you specify in this system setting is the default setting. If you want to override this default setting in a particular file tab, you can switch between *Case sensitive* and *Ignore case* by clicking the *aA* button to the right of the search box.
 
-#### Highlighting filter box - Wildcard characters (\* and ?)
+### Highlighting filter box - Wildcard characters (\* and ?)
 
 This setting controls whether or not the full-text search feature will interpret the wildcard characters \* and ? as wildcards or not.
 
@@ -186,11 +186,11 @@ This setting controls whether or not the full-text search feature will interpret
 
 The value you specify in this system setting is the default setting. If you want to override this default setting in a particular file tab, you can switch between *Treat as literal string* and *Interpret as wildcards* by clicking the *\*?* button to the right of the search box.
 
-#### Disable C# syntax highlighting in XML documents
+### Disable C# syntax highlighting in XML documents
 
 If you select the *Disable C# syntax highlighting in XML documents* option, the C# code inside *\<QAction>* and *\<Exe>* tags will be displayed without syntax highlighting.
 
-#### DIS tree view: Show description instead of name
+### DIS tree view: Show description instead of name
 
 Select this option if you want the *DIS Tree* window to display parameter descriptions instead of parameter names.
 
@@ -204,11 +204,11 @@ See the following example. If you select the *DIS tree view: Show description in
 </Param>
 ```
 
-#### Disable highlighting of selected text in XML documents
+### Disable highlighting of selected text in XML documents
 
 By default, if you select a text string in an XML file, all identical text strings in that file will also be highlighted. If you do not want this, select the *Disable highlighting of selected text in XML documents* option.
 
-#### Hide virtual comments in protocol
+### Hide virtual comments in protocol
 
 Select the *Hide virtual comments in protocol* option if you do not want virtual comments to be shown in the XML editor.
 
@@ -216,7 +216,7 @@ Select the *Hide virtual comments in protocol* option if you do not want virtual
 > See also:
 > [Virtual comments](xref:XML_editor#virtual-comments)
 
-#### Only show unresolved links
+### Only show unresolved links
 
 Select the *Only show unresolved links* option if you only want to see the virtual comments that cannot be resolved.
 
@@ -224,7 +224,7 @@ Select the *Only show unresolved links* option if you only want to see the virtu
 > See also:
 > [Virtual comments](xref:XML_editor#virtual-comments)
 
-#### Task URL String Format
+### Task URL String Format
 
 In this box, you can configure the format of the task references, which, in the Version editor, you can link to protocol versions.
 
@@ -234,7 +234,7 @@ In the format string, you can use the “{ref}” placeholder. When, in the Vers
 > See also:
 > [Version editor](xref:Version_editor)
 
-#### Reference URL String Format
+### Reference URL String Format
 
 In this box, you can configure the format of the generic references, which, in the Version editor, you can link to protocol versions.
 
@@ -244,19 +244,19 @@ In the format string, you can use the “{ref}” placeholder. When, in the Vers
 > See also:
 > [Version editor](xref:Version_editor)
 
-### MIB
+## MIB
 
 In the *MIB* tab, you can specify the location of your MIB store.
 
-#### Search missing modules in the MIB store
+### Search missing modules in the MIB store
 
 If you select this option, whenever you load a MIB file into the *DIS MIB Browser*, DataMiner Integration Studio will search the MIB store folder for any referenced MIB module that cannot be found.
 
-#### Save loaded modules in the MIB store
+### Save loaded modules in the MIB store
 
 If you select this option, whenever you load a MIB file into the *DIS MIB Browser*, DataMiner Integration Studio will save that file in the MIB store folder.
 
-### Account
+## Account
 
 In the *Account* tab, you can see
 
@@ -266,7 +266,7 @@ In the *Account* tab, you can see
 
 Also, a button allows you to sign out (and sign in again).
 
-### Updates
+## Updates
 
 In the *Updates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for updates.
 
@@ -274,13 +274,13 @@ In the *Updates* tab, you can indicate whether you want DataMiner Integration St
 
 - If you select the *Get insider builds* option, DataMiner Integration Studio will not only check for main updates, but also for “insider” updates, i.e. pre-release versions for testing purposes.
 
-### Other
+## Other
 
-#### Hide warnings about UTF-8 encoding
+### Hide warnings about UTF-8 encoding
 
 If you select the *Hide warnings about UTF-8 encoding* option, no UTF-8 encoding errors will be displayed in the error list.
 
-#### Fix default XML encoding
+### Fix default XML encoding
 
 Click *Fix default XML encoding* if you want DataMiner Integration Studio to change the encoding of Visual Studio’s “New XML file” template, which, by default, contains the UTF-8 signature header.
 
@@ -289,7 +289,7 @@ Click *Fix default XML encoding* if you want DataMiner Integration Studio to cha
 >     - Unicode (UTF-8 with signature) - Codepage 65001
 > - XML files with an UTF-8 signature header can only be uploaded to DataMiner using DataMiner Cube.
 
-### Info
+## Info
 
 In the *Info* tab, you can find the version of the currently installed DataMiner Integration Studio.
 

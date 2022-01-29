@@ -2,11 +2,11 @@
 uid: Guidelines_for_assigning_alarm_severity_levels
 ---
 
-## Guidelines for assigning alarm severity levels
+# Guidelines for assigning alarm severity levels
 
 When assigning alarm severity levels in an alarm template, you should keep these guidelines in mind.
 
-### General guidelines
+## General guidelines
 
 - You do not always have to use every possible severity level.
 
@@ -32,7 +32,7 @@ When assigning alarm severity levels in an alarm template, you should keep these
 > See also:
 > [Alarm severity levels](xref:Alarm_types#alarm-severity-levels)
 
-### Assigning alarm severity levels to values of analog parameters
+## Assigning alarm severity levels to values of analog parameters
 
 In case of analog parameters, different values can be assigned so-called high and low levels.
 
@@ -50,7 +50,7 @@ A parameter like “audio output level” could be assigned the following alarm 
 > [!NOTE]
 > In the example above, some levels have been left out.
 
-### Assigning alarm severity levels to values of discrete parameters
+## Assigning alarm severity levels to values of discrete parameters
 
 In case of discrete parameters, each value can be assigned a severity level.
 

@@ -2,7 +2,7 @@
 uid: SubscriptOptions_properties
 ---
 
-## SubscriptOptions properties
+# SubscriptOptions properties
 
 - [ForceLockElements](#forcelockelements)
 
@@ -16,7 +16,7 @@ uid: SubscriptOptions_properties
 
 - [WaitWhenLocked](#waitwhenlocked)
 
-#### ForceLockElements
+### ForceLockElements
 
 Gets or sets a value indicating whether the script is allowed to steal the element lock from another user.
 
@@ -24,7 +24,7 @@ Gets or sets a value indicating whether the script is allowed to steal the eleme
 bool ForceLockElements
 ```
 
-#### LockElements
+### LockElements
 
 Gets or sets a value indicating whether the script is allowed to lock the elements it needs.
 
@@ -32,7 +32,7 @@ Gets or sets a value indicating whether the script is allowed to lock the elemen
 bool LockElements
 ```
 
-#### PerformChecks
+### PerformChecks
 
 Gets or sets a value indicating whether the script will verify the outcome of "set parameter" actions.
 
@@ -40,7 +40,7 @@ Gets or sets a value indicating whether the script will verify the outcome of "s
 bool PerformChecks
 ```
 
-#### ScriptName
+### ScriptName
 
 Gets or sets the name of the subscript.
 
@@ -48,7 +48,7 @@ Gets or sets the name of the subscript.
 string Name
 ```
 
-#### Synchronous
+### Synchronous
 
 Gets or sets a value indicating whether the script will be executed synchronously.
 
@@ -56,7 +56,7 @@ Gets or sets a value indicating whether the script will be executed synchronousl
 bool Synchronous
 ```
 
-#### WaitWhenLocked
+### WaitWhenLocked
 
 Gets or sets a value indicating whether the script will delay execution instead of failing when another script is running on the same element or when the element is locked by another user.
 

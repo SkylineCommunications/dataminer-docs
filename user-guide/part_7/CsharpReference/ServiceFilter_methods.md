@@ -2,9 +2,9 @@
 uid: ServiceFilter_methods
 ---
 
-## ServiceFilter methods
+# ServiceFilter methods
 
-#### ByID
+### ByID
 
 Creates a new *ServiceFilter* object with *DataMinerID* and *ServiceID* set to the specified DataMiner Agent ID and service ID, respectively.
 
@@ -18,7 +18,7 @@ Example:
 var filter = ServiceFilter.ByID(200, 4000);
 ```
 
-#### ByName
+### ByName
 
 Creates a new *ServiceFilter* object with *NameFilter* set to the specified name filter.
 
@@ -32,7 +32,7 @@ Example:
 var filter = ServiceFilter.ByName("Test*");
 ```
 
-#### ByView
+### ByView
 
 Creates a new *ServiceFilter* object with *ViewID* set to the specified view ID or *View* set to the specified view name.
 

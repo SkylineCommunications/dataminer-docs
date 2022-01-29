@@ -2,7 +2,7 @@
 uid: Element_states
 ---
 
-## Element states
+# Element states
 
 An element can be in one of three states:
 

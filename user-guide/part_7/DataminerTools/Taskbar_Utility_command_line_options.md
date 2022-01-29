@@ -2,7 +2,7 @@
 uid: Taskbar_Utility_command_line_options
 ---
 
-## Taskbar Utility command line options
+# Taskbar Utility command line options
 
 From DataMiner 9.0.1 onwards, it is possible to make the SLTaskbarUtility perform actions using the command prompt, without any further user interaction.
 
@@ -29,7 +29,7 @@ To do so:
     > [!NOTE]
     > It is still possible to open the SLTaskbarUtility user interface by either double-clicking a file with a DataMiner extension (e.g. dmupgrade, dmbackup, etc.) or entering the path to such a file in a *Command Prompt* window.
 
-### List of possible commands
+## List of possible commands
 
 | Command         | Function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -43,7 +43,7 @@ To do so:
 | -upgrade        | Upgrade the DataMiner Agent(s).<br> Arguments:<br> -  File path to an *dmupgrade* file (mandatory)<br> -  File path to an *UpgradeInfo.xml* file (optional).<br> If you do not specify an *UpgradeInfo.xml* file, only the local DataMiner Agent will be upgraded, with the default upgrade options.<br> For more information about *UpgradeInfo.xml* files, see [UpgradeInfo.xml](#upgradeinfoxml). |
 | -help           | List information about the above-mentioned commands.<br> -  If you want information about all commands, pass the *-help* command without any argument.<br> -  If you want information about one specific command, pass the *-help* command followed by that specific command (e.g. *-help -help*).                                                                                                                                  |
 
-### UpgradeInfo.xml
+## UpgradeInfo.xml
 
 When using the *-upgrade* command, you can specify that the upgrade options have to be taken from an *UpgradeInfo.xml* file.
 
@@ -61,7 +61,7 @@ The options in this file reflect the options available in the Taskbar Utility’
 > See also:
 > [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)
 
-##### Example:
+#### Example:
 
 ```xml
 <UpgradeInfo>

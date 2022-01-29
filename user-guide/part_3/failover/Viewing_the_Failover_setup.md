@@ -2,7 +2,7 @@
 uid: Viewing_the_Failover_setup
 ---
 
-## Viewing the Failover setup
+# Viewing the Failover setup
 
 To view a graphical representation of how two DMAs are set up as each other’s backup:
 

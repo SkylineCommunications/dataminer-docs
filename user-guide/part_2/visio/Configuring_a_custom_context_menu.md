@@ -2,7 +2,7 @@
 uid: Configuring_a_custom_context_menu
 ---
 
-## Configuring a custom context menu
+# Configuring a custom context menu
 
 From DataMiner 9.6.4 onwards, it is possible to configure a custom context menu for a specific shape in Visio.
 

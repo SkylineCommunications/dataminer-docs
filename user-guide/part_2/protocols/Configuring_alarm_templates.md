@@ -2,7 +2,7 @@
 uid: Configuring_alarm_templates
 ---
 
-## Configuring alarm templates
+# Configuring alarm templates
 
 In this section:
 
@@ -28,7 +28,7 @@ In this section:
 
 - [Scheduling an alarm template](#scheduling-an-alarm-template)
 
-### About the alarm template editor
+## About the alarm template editor
 
 To configure an alarm template, you must first open the template editor. This can be done as follows:
 
@@ -73,7 +73,7 @@ For more information on how to configure alarm thresholds, refer to the sections
 
 - When you finish the configuration of an alarm template, from DataMiner 9.0.5 onwards, a dialog box will appear that allows you to immediately link that template to one or more elements.
 
-### Configuring alarm thresholds
+## Configuring alarm thresholds
 
 To determine the alarm thresholds for a parameter, first select the checkbox in the first column next to the parameter to enable alarm monitoring.
 
@@ -112,7 +112,7 @@ When multiple values are specified for one alarm severity, the existing alarm wi
 > See also:
 > [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters)
 
-### Configuring alarm thresholds for matrix parameters
+## Configuring alarm thresholds for matrix parameters
 
 To determine the alarm thresholds for matrix parameters:
 
@@ -137,7 +137,7 @@ To determine the alarm thresholds for matrix parameters:
 > [!NOTE]
 > With the matrix parameter alarm level editor, it is possible to set a different alarm level for any input or output, separately or combined.
 
-### Configuring alarm thresholds for dynamic table parameters
+## Configuring alarm thresholds for dynamic table parameters
 
 By default, each column of a dynamic table that has monitoring enabled will be represented by one row in the alarm template, so the alarm thresholds need to be determined per row.
 
@@ -162,7 +162,7 @@ By default, each column of a dynamic table that has monitoring enabled will be r
     > - If an alarm template contains multiple duplicate instances of the same table column parameter, all those instances are displayed as soon as one of them is marked as being monitored, even if *Only monitored parameters* is selected in the top-right corner of the card.
     > - If you want to configure a table to have all rows monitored, except certain specific rows, add an entry with a filter for those rows above the entry for the entire table, and make sure the entry with the filter is not selected. For example:<br>![](~/user-guide/images/MonitorTableRow.png)
 
-### Configuring alarm hysteresis in an alarm template
+## Configuring alarm hysteresis in an alarm template
 
 Two types of hysteresis are available, Clear hysteresis and Alarm hysteresis, respectively having an effect on the clearing and the triggering of alarms:
 
@@ -183,7 +183,7 @@ Two types of hysteresis are available, Clear hysteresis and Alarm hysteresis, re
 
 
 
-### Configuring an alarm template with dynamic alarm thresholds
+## Configuring an alarm template with dynamic alarm thresholds
 
 You can either define the alarm thresholds as a fixed value, or you can set them as a dynamic threshold that is compared to a certain “normal” value. This value will automatically be determined at runtime, or via a normalization procedure for each separate element.
 
@@ -249,7 +249,7 @@ Both for “absolute” and “relative” alarm thresholds, the “normal” va
 > See also:
 > <https://community.dataminer.services/video/ruis-rapid-recap-smart-baseline/>
 
-### Configuring an alarm template to generate information messages
+## Configuring an alarm template to generate information messages
 
 In the *Info* column, select the checkbox and enter a value to define when you want to receive an information message related to the value of a parameter:
 
@@ -260,7 +260,7 @@ In the *Info* column, select the checkbox and enter a value to define when you w
 > [!NOTE]
 > It is not required to select the checkbox for alarm triggering to generate these information messages.
 
-### Using conditions in an alarm template
+## Using conditions in an alarm template
 
 In the *Condition* column, you can add conditions for the alarm triggering of selected parameters. By specifying such a condition, you can ensure that a parameter is not monitored when another parameter of the same element has a specific value or alarm state. From DataMiner 10.2.0/10.1.11 onwards, it is also possible to let the monitoring of a parameter depend on whether the parameter (or another parameter of the same element) affects a service.
 
@@ -313,7 +313,7 @@ When you click in the selection box in the *Condition* column, the following act
 > See also:
 > <https://community.dataminer.services/video/alarm-templates-conditional-monitoring/>
 
-### Configuring anomaly detection alarms for specific parameters
+## Configuring anomaly detection alarms for specific parameters
 
 From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters.
 
@@ -334,7 +334,7 @@ You can enable or disable this for different types of anomaly detection:
 > [!NOTE]
 > For more information on behavioral anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
-### Setting the autoclear options for alarms in an alarm template
+## Setting the autoclear options for alarms in an alarm template
 
 For each parameter, it is possible to configure whether alarms will be automatically cleared or not, or if the system default settings will apply.
 
@@ -353,7 +353,7 @@ To do so:
 > See also:
 > [Clearing alarms](xref:Clearing_alarms)
 
-### Scheduling an alarm template
+## Scheduling an alarm template
 
 It is possible to schedule an alarm template so that it is only active at certain times. This way, you can for example make sure a particular alarm template is active on weekdays only.
 

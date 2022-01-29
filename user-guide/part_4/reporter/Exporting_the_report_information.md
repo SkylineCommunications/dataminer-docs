@@ -2,7 +2,7 @@
 uid: Exporting_the_report_information
 ---
 
-## Exporting the report information
+# Exporting the report information
 
 For each of the graphs, the information can be exported as a .csv file.
 

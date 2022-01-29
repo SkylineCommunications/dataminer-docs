@@ -2,7 +2,7 @@
 uid: Consulting_or_editing_a_task
 ---
 
-## Consulting or editing a task
+# Consulting or editing a task
 
 To consult or edit a task under the current project, do the following:
 
@@ -41,7 +41,7 @@ In the top-right corner, you can find two buttons:
         | Workaround provided | The time when Skyline provided a workaround.        |
         | Solution provided   | The time when Skyline provide a permanent solution. |
 
-### Task editing limitations
+## Task editing limitations
 
 When editing a task, you are only allowed to make a limited number of changes. See below.
 

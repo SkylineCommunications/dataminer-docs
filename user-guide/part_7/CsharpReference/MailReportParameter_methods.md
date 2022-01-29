@@ -2,13 +2,13 @@
 uid: MailReportParameter_methods
 ---
 
-## MailReportParameter methods
+# MailReportParameter methods
 
 - [ToIncludedParametersString(MailReportParameter\[\])](#toincludedparametersstringmailreportparameter)
 
 - [ToIncludedParametersString(List(MailReportParameter))](#toincludedparametersstringlistmailreportparameter)
 
-#### ToIncludedParametersString(MailReportParameter\[\])
+### ToIncludedParametersString(MailReportParameter\[\])
 
 Converts the provided mail report parameters to a string representation.
 
@@ -16,7 +16,7 @@ Converts the provided mail report parameters to a string representation.
 string ToIncludedParametersString(params MailReportParameter[] params)
 ```
 
-#### ToIncludedParametersString(List(MailReportParameter))
+### ToIncludedParametersString(List(MailReportParameter))
 
 Converts the provided mail report parameter list to a string representation.
 

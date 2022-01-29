@@ -2,7 +2,7 @@
 uid: Message_syntax
 ---
 
-## Message syntax
+# Message syntax
 
 Every message in a communication stream is constructed according to the following syntax:
 

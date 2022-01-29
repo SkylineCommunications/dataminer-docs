@@ -2,7 +2,7 @@
 uid: AutomationEntryPointDelegates_OnSrmStartActionsFailure_Delegate
 ---
 
-## AutomationEntryPointDelegates.OnSrmStartActionsFailure Delegate
+# AutomationEntryPointDelegates.OnSrmStartActionsFailure Delegate
 
 Delegate type for SRM start actions failure.
 

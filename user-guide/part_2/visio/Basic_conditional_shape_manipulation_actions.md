@@ -2,14 +2,14 @@
 uid: Basic_conditional_shape_manipulation_actions
 ---
 
-## Basic conditional shape manipulation actions
+# Basic conditional shape manipulation actions
 
 In some shape data fields, especially fields that display the current value of a parameter, property or session variable, you can specify conditional shape manipulation actions. These allow you to have a shape shown, hidden, flipped, rotated or colored based on the current value of the parameter, property or session variable to which that shape is linked.
 
 > [!NOTE]
 > - To also apply conditional shape manipulation actions on other linked shapes, e.g. shapes linked to Automation scripts, or to combine multiple conditions, see [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
 
-### Action overview
+## Action overview
 
 - **Show;condition**
 
@@ -46,7 +46,7 @@ In some shape data fields, especially fields that display the current value of a
 > [!NOTE]
 > It is not possible to use wildcards in the condition, but you can use regular expressions.
 
-### Condition operators
+## Condition operators
 
 The condition section of the action can contain the following operators:
 
@@ -63,7 +63,7 @@ The condition section of the action can contain the following operators:
 > [!NOTE]
 > String values can only be compared using “=” or “!=”.
 
-### Combining actions and conditions
+## Combining actions and conditions
 
 Actions can be combined using pipe characters (“\|”).
 

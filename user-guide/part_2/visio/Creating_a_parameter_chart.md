@@ -2,7 +2,7 @@
 uid: Creating_a_parameter_chart
 ---
 
-## Creating a parameter chart
+# Creating a parameter chart
 
 Using **Parameters** and **ParametersOptions** shape data fields, you can make a shape or a group of shapes visualize one or more parameters in a chart.
 
@@ -13,7 +13,7 @@ With the **Parameters** shape data field, you specify which parameters should be
 > - Up to DataMiner 8.5, the number of parameters that can be displayed in a Visio chart is limited to 10. From DataMiner 9.0.1/9.0.0 CU2 onwards, the maximum number of parameters has increased to 15.
 > - Alternatively, you can link a shape to a trend component instead. See [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component).
 
-### Configuring the shape data fields
+## Configuring the shape data fields
 
 The chart can consist of one single shape or of several shapes that are grouped together. In the latter case, usually a different shape is used for the title component, the chart component and the legend component.
 
@@ -76,7 +76,7 @@ To configure the shapes:
 > [!NOTE]
 > For more information on how the font of the chart or its components is determined, refer to [Determining the font used in the chart](#determining-the-font-used-in-the-chart).
 
-### Chart types
+## Chart types
 
 | Chart type            | Description                                                                  |
 |-----------------------|------------------------------------------------------------------------------|
@@ -100,7 +100,7 @@ Visio charts of type “area” are updated automatically at regular intervals.
 
 - The first update interval is different from the later update intervals, because the intervals are fixed chronometric increments.
 
-### ChartType options
+## ChartType options
 
 Below, you can find the options that can be specified in the **ParametersOptions** shape data field for a parameter chart (after the chart type).
 
@@ -213,7 +213,7 @@ Below, you can find the options that can be specified in the **ParametersOptions
 
     With this option, you can determine whether the display value of exception values in real-time charts is shown in a label. Can be set to *VisualizeExceptions=true* (default behavior) or *VisualizeExceptions=false*. Available from DataMiner 10.2.0/10.1.6 onwards;
 
-### Determining the font used in the chart
+## Determining the font used in the chart
 
 From DataMiner v8.5.8 onwards, parameter charts inherit the font properties of the shape by default. However, for this to be enabled, the shape must contain some text.
 

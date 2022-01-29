@@ -2,9 +2,9 @@
 uid: ScriptMemory_properties
 ---
 
-## ScriptMemory properties
+# ScriptMemory properties
 
-#### Id
+### Id
 
 Gets the ID of this script memory.
 
@@ -12,7 +12,7 @@ Gets the ID of this script memory.
 int Id
 ```
 
-#### IsVolatile
+### IsVolatile
 
 Gets a value indicating whether the memory file only exists during script execution.
 
@@ -20,7 +20,7 @@ Gets a value indicating whether the memory file only exists during script execut
 bool IsVolatile
 ```
 
-#### LinkedFile
+### LinkedFile
 
 Gets the name of the persistent script memory.
 
@@ -31,7 +31,7 @@ string LinkedFile
 > [!NOTE]
 > For a volatile script memory, this property returns an empty string ("").
 
-#### Name
+### Name
 
 Gets the name of the this script memory.
 

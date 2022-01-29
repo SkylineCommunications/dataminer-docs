@@ -2,7 +2,7 @@
 uid: UIResults_constructor
 ---
 
-## UIResults constructor
+# UIResults constructor
 
 ```txt
 UIResults()

@@ -2,9 +2,9 @@
 uid: AutomationEntryPointAttribute_properties
 ---
 
-## AutomationEntryPointAttribute properties
+# AutomationEntryPointAttribute properties
 
-#### Type
+### Type
 
 Gets the Automation entry point type.
 
@@ -12,6 +12,6 @@ Gets the Automation entry point type.
 AutomationEntryPointType Type
 ```
 
-#### TypeId
+### TypeId
 
 When implemented in a derived class, gets a unique identifier for this attribute. (Inherited from *Attribute*. See <http://msdn2.microsoft.com/en-us/library/e8kc3626>.)

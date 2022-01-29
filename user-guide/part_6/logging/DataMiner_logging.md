@@ -2,7 +2,7 @@
 uid: DataMiner_logging
 ---
 
-## DataMiner logging
+# DataMiner logging
 
 The *DataMiner* page shows the log information for the various DataMiner modules.
 
@@ -20,9 +20,9 @@ This page consists of three sections:
 > [!NOTE]
 > To retrieve a previous log file, right-click an item in the list and select *Open previous*. If there is no previous log file, this option is not available.
 
-### Changing log levels
+## Changing log levels
 
-#### From DataMiner 10.0.4 onwards
+### From DataMiner 10.0.4 onwards
 
 From DataMiner 10.0.4 onwards, the log levels for each module are indicated to the right of the module name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc. At the top of the list, the default settings are displayed.
 
@@ -53,7 +53,7 @@ To change the log levels for a specific module:
 > [!NOTE]
 > Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
 
-#### Prior to DataMiner 10.0.4
+### Prior to DataMiner 10.0.4
 
 The log levels of a DMA are indicated in the group header of that DMA. Example: 0 0 0, 1 0 0, 1 3 2, etc.
 
@@ -73,7 +73,7 @@ In the *Log settings* section, you can change the log levels for all modules of 
 > [!NOTE]
 > Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
 
-### Sorting the log file list
+## Sorting the log file list
 
 At the top of the left-hand list, next to the header, *A-Z* is displayed.
 
@@ -87,7 +87,7 @@ Click this field to change the sort order. Each time you click the field again, 
 
 - By log level, descending (*Level down*)
 
-### Special items in the log file list
+## Special items in the log file list
 
 Some items in the list are of particular note:
 

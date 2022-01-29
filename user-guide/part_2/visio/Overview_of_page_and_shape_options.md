@@ -2,7 +2,7 @@
 uid: Overview_of_page_and_shape_options
 ---
 
-## Overview of page and shape options
+# Overview of page and shape options
 
 Using a shape data field of type **Options**, you can configure a number of page and shape options.
 

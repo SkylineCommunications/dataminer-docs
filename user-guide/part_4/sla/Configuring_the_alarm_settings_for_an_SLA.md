@@ -2,7 +2,7 @@
 uid: Configuring_the_alarm_settings_for_an_SLA
 ---
 
-## Configuring the alarm settings for an SLA
+# Configuring the alarm settings for an SLA
 
 In DataMiner Cube, you can configure the following settings on the *SLA Configuration* page of the SLA element:
 
@@ -16,24 +16,24 @@ In DataMiner Cube, you can configure the following settings on the *SLA Configur
 
 In addition, more recent versions of the *Skyline SLA Definition Basic* protocol also allow certain advanced settings on the *Advanced Configuration* page. See [Advanced SLA alarm configuration](#advanced-sla-alarm-configuration).
 
-### Setting the violation level
+## Setting the violation level
 
 To define the service alarm level from which the SLA must indicate it has been violated, choose a violation level in the drop-down list under *Violation Level* and confirm your choice.
 
-### Setting the delay time
+## Setting the delay time
 
 To set a delay time before the SLA starts indicating that it has been violated, enter a value in the box under *Delay Time*, either by typing it in or by choosing from the drop-down list. Then confirm the value.
 
 It is also possible to indicate that no delay is used, by selecting the *Not used* checkbox.
 
-### Setting a minimum outage threshold
+## Setting a minimum outage threshold
 
 To set an initial time span during which an alarm is not taken into account, enter a value in the box under *Minimum Outage Threshold*, either by typing it in or by choosing from the drop-down list. Then confirm the value.
 
 > [!NOTE]
 > When a delay time has been set, if the alarm is still in effect once the delay time is over, the full duration of the alarm will be taken into account. When a minimum outage threshold has been set, the time set in the minimum outage threshold will not be taken into account for the duration of the alarm.
 
-### Setting a violation filter
+## Setting a violation filter
 
 Not all alarms in a service are equally important. Set a violation filter to give a weight to a certain alarm or to filter out alarms.
 
@@ -44,7 +44,7 @@ Not all alarms in a service are equally important. Set a violation filter to giv
 >
 > If the filtered alarms are set to be shown again later, the alarms that were hidden while this setting was set to *Hide* will not be displayed again.
 
-#### Adding a violation filter
+### Adding a violation filter
 
 To add a violation filter, follow the procedure below:
 
@@ -76,7 +76,7 @@ To add a violation filter, follow the procedure below:
     > [!NOTE]
     > The table is interpreted by DataMiner from top to bottom. It is sorted first on *Violation filter state* and then on ascending *Violation filter sequence*.
 
-#### Violation filter example
+### Violation filter example
 
 Consider the following example:
 
@@ -90,7 +90,7 @@ To get this result, set the following filters:
 | Severity                | ...           | Minor       | 30%    | Continue  | 2        | Enabled |
 | Custom element property | State         | Maintenance | 0%     | Continue  | 3        | Enabled |
 
-### Advanced SLA alarm configuration
+## Advanced SLA alarm configuration
 
 The *Advanced Configuration* page allows you to configure a number of additional settings related to the alarms processed by the SLA. However, you need at least security level 3 in order to change any of the settings on this page. These are also only available in recent versions of the *Skyline SLA Definition Basic* protocol (at least 3.0.0.0).
 

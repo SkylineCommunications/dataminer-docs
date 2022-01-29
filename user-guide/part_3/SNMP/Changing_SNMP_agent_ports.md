@@ -2,7 +2,7 @@
 uid: Changing_SNMP_agent_ports
 ---
 
-## Changing SNMP agent ports
+# Changing SNMP agent ports
 
 By default, a DataMiner Agent acting as an SNMP agent uses UDP port 161. The same port is normally also used by the Windows SNMP service.
 
@@ -10,7 +10,7 @@ To prevent any conflicts between DataMiner Agents and Windows SNMP services, you
 
 For more information about how DataMiner exchanges SNMP messages with devices and third-party SNMP managers, see [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent).
 
-### Changing the SNMP port used by a Windows SNMP service
+## Changing the SNMP port used by a Windows SNMP service
 
 If you want the Windows SNMP service of a particular computer to use a non-default port, open the following file and change the port used by the SNMP service:
 
@@ -22,7 +22,7 @@ In the following example, the SNMP service uses port 161 (i.e. the default port)
 snmp 161/udp #SNMP
 ```
 
-### Changing the SNMP port used by a DataMiner Agent
+## Changing the SNMP port used by a DataMiner Agent
 
 If you want DataMiner to use another port when acting as an SNMP agent, open the file *C:\\Skyline DataMiner\\DataMiner.xml*, and change the port specified in the SNMP tag.
 
@@ -34,7 +34,7 @@ In the following example, DataMiner uses port 461:
 </DataMiner>
 ```
 
-#### Checking which port DataMiner is using
+### Checking which port DataMiner is using
 
 To check which port is used by DataMiner when it acts as an SNMP agent, look in the file *C:\\Skyline DataMiner\\Logging\\SLSNMPAgent.txt*.
 
@@ -53,7 +53,7 @@ If a non-default port is used, you will find a line like the following one:
 > [!NOTE]
 > This information is only included if the log file if the log level is set to 1 or higher.
 
-### Customizing the trap reception ports of a DMA
+## Customizing the trap reception ports of a DMA
 
 In the file *DataMiner.xml*, you can specify a custom SNMPv3 trap reception port. If you do not do so, up to DataMiner 9.0.2, by default port 362 is used for SNMPv3. From DataMiner 9.0.3 onwards, port 162 is used by default.
 

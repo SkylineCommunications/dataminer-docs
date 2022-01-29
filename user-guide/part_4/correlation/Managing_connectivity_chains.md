@@ -2,7 +2,7 @@
 uid: Managing_connectivity_chains
 ---
 
-## Managing connectivity chains
+# Managing connectivity chains
 
 To manage connectivity chains:
 

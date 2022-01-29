@@ -2,7 +2,7 @@
 uid: Virtual_device_connections
 ---
 
-## Virtual device connections
+# Virtual device connections
 
 All devices monitored by your DataMiner System can be assigned a virtual IP address.
 

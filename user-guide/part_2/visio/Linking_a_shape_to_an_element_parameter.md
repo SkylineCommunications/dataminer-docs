@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_an_element_parameter
 ---
 
-## Linking a shape to an element parameter
+# Linking a shape to an element parameter
 
 When you have linked a shape to an element using a shape data field of type **Element**, you can use an additional shape data field of type **Parameter** to link that shape to a particular parameter of that element.
 
@@ -27,7 +27,7 @@ In this section:
 
 - [Examples of shapes linked to parameters](#examples-of-shapes-linked-to-parameters)
 
-### Basic shape data field configuration
+## Basic shape data field configuration
 
 Add a shape data field of type **Parameter** to the shape.
 
@@ -100,7 +100,7 @@ Add a shape data field of type **Parameter** to the shape.
         > [!NOTE]
         > The trended trace record from right before the specified time will be displayed. For this purpose, the trended traces are queried with the following steps until a trace record is found or the maximum search extent has been reached: 1 hour – 3 hours – 12 hours – 24 hours – 48 hours (maximum).
 
-### Showing the parameter value in shape text
+## Showing the parameter value in shape text
 
 The value of the parameter will appear on the shape only if you add shape text that contains a “\*” character. This character will then be replaced by the current value of the parameter.
 
@@ -109,11 +109,11 @@ To add text to a shape, just double-click the shape, and enter the text.
 > [!NOTE]
 > If the shape text contains a “\*” character, this character will not be replaced by the current parameter value if a dynamic behavior option like SHOW, HIDE, ROTATE, FLIPX, or FLIPY has been added to the shape data field of type **Parameter**. A shape linked to a parameter can either display the parameter value or behave dynamically based on that same parameter value.
 
-### Placeholders in the shape text
+## Placeholders in the shape text
 
 Within the text in the shape, which is added by double-clicking the shape in Visio, certain placeholders can be used to display information about the parameter.
 
-#### Placeholder for parameter description
+### Placeholder for parameter description
 
 To make a shape display the parameter description of a parameter it is linked to, use the following placeholder in the shape text. You can combine this with other shape text, for instance with the parameter value as described above.
 
@@ -124,7 +124,7 @@ To make a shape display the parameter description of a parameter it is linked to
 > [!NOTE]
 > For table parameters, the display index is added to the parameter description, similar to the way such parameters are displayed in the Alarm Console.
 
-#### Placeholder for parameter baseline value
+### Placeholder for parameter baseline value
 
 To make a shape display the normalized value of a parameter it is linked to, use the following placeholder in the shape text:
 
@@ -132,7 +132,7 @@ To make a shape display the normalized value of a parameter it is linked to, use
 [NormalizedValue]
 ```
 
-### Retrieving and showing the value of a table parameter using a subscription filter
+## Retrieving and showing the value of a table parameter using a subscription filter
 
 When there are two related tables, and you link a shape to a column parameter of the first table, you can make the shape display the value of a particular row of this column parameter, depending on the value in the linked row of the other table. This is done by specifying a subscription filter on the second table.
 
@@ -165,7 +165,7 @@ This can be done in two ways, depending on the version of DataMiner you are usin
 > See also:
 > [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)
 
-### Displaying history values for parameters
+## Displaying history values for parameters
 
 From DataMiner 10.1.10/10.2.0 onwards, it is possible to make an element shape in Visual Overview show the parameter values for a specific point in the past. This time and date can optionally be selected using another Visual Overview component.
 
@@ -210,7 +210,7 @@ Configure the shape data as follows:
     > See also:
     > [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 
-### Options for shapes linked to parameters
+## Options for shapes linked to parameters
 
 In shapes linked to parameters, several options can be specified within the **Parameter** shape data field:
 
@@ -232,22 +232,22 @@ However, there are also options that should be specified in a separate **Options
 
 - [Ensuring the shape text value is not cleared upon a subscription change](#ensuring-the-shape-text-value-is-not-cleared-upon-a-subscription-change)
 
-#### Making a parameter shape show the parameter alarm state
+### Making a parameter shape show the parameter alarm state
 
 In the value of the **Parameter** shape data field, add the “*\|ALARM*” option. The shape will take the color of the parameter’s current alarm state.
 
 > [!NOTE]
 > If you do not specify this “\|ALARM” option, the shape will take the color of the element’s current alarm state.
 
-#### Making a parameter subshape show an element’s alarm color
+### Making a parameter subshape show an element’s alarm color
 
 If, in a shape linked to an element, you want to have a subshape that has the current alarm color of the element, add a shape data field of type **Parameter** to the subshape and set its value to “*\*\|ALARM*”. That way, the subshape will show the worst alarm state of all parameters of that element, which is equal to the alarm state of the element.
 
-#### Conditional shape manipulation actions
+### Conditional shape manipulation actions
 
 Conditional shape manipulation actions can be specified within the value of the **Parameter** shape data field. See [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions).
 
-#### SpectrumOptions
+### SpectrumOptions
 
 If the value refers to a spectrum analyzer parameter, you can use the following spectrum options in the **Parameter** shape data field (referred to as “SpectrumOptions” in [Basic shape data field configuration](#basic-shape-data-field-configuration)), separated by semicolons (“;”).
 
@@ -261,7 +261,7 @@ If the value refers to a spectrum analyzer parameter, you can use the following 
 > [!NOTE]
 > If the Visio file is displayed using the Monitoring & Control app, the *DisplayMarkers* and *DisplayThresholds* options are only available from DataMiner 9.6.1 onwards.
 
-#### Keeping a shape from turning into a spectrum thumbnail
+### Keeping a shape from turning into a spectrum thumbnail
 
 When a shape is linked to a spectrum analyzer parameter, as described above, by default a spectrum thumbnail is displayed. However, it is possible to keep this image from being displayed, so that the shape is only used as a link to the spectrum analyzer.
 
@@ -272,7 +272,7 @@ To do so, add a shape data field of type **Options** to the shape, and set its v
 | Parameter        | ParameterID\|MonitorRef\|BufferName\|MeasurementPointID\|PresetName\|<br>SpectrumOptions |
 | Options          | LinkingOnly                                                                              |
 
-#### Showing a parameter value for non-initialized parameters
+### Showing a parameter value for non-initialized parameters
 
 In shapes that display a parameter value, you can have empty, non-initialized parameter values replaced by custom text.
 
@@ -282,7 +282,7 @@ To do so, add a shape data field of type **Options** to the shape displaying a p
 EmptyValue=Value to be displayed
 ```
 
-#### Customizing the way a parameter value is displayed
+### Customizing the way a parameter value is displayed
 
 From DataMiner 9.5.13 onwards, the following options can be used (separated by a pipe character) to customize how a parameter value is displayed on a shape linked to a parameter:
 
@@ -299,7 +299,7 @@ For example:
 | Parameter        | 401                  |
 | Options          | Decimals=3\|HideUnit |
 
-#### Ensuring the shape text value is not cleared upon a subscription change
+### Ensuring the shape text value is not cleared upon a subscription change
 
 From DataMiner 10.1.0 \[CU1\]/10.1.4 onwards, when a dynamic part of a **Parameter** shape data field changes, the value from the previous parameter subscription is cleared from the shape text. A new value will only be filled in if the ID of the parameter is valid and a new subscription is made. As such, if the ID of the parameter shape data is not a valid number, the value will remain cleared.
 
@@ -309,7 +309,7 @@ However, it is possible to revert to legacy behavior, where the old value contin
 |------------------|--------------------------------------|
 | Options          | ClearValueOnSubscriptionChange=False |
 
-### Examples of shapes linked to parameters
+## Examples of shapes linked to parameters
 
 ```txt
 350

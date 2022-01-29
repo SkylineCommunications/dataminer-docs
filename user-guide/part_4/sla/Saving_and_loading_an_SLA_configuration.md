@@ -2,7 +2,7 @@
 uid: Saving_and_loading_an_SLA_configuration
 ---
 
-## Saving and loading an SLA configuration
+# Saving and loading an SLA configuration
 
 It is possible to save the configuration of an SLA element in DataMiner Cube. This can be done from any of the following pages: the *SLA Configuration* page, the *Compliance Configuration* page, and the *Violation Configuration* page.
 
@@ -10,7 +10,7 @@ It is possible to save the configuration of an SLA element in DataMiner Cube. Th
 > - The saved configuration includes all parameters on the “Configuration” pages, except the manual reset. Other pages, e.g. *Offline Window*, are not included.
 > - The parameter *Maximum Single Violations Percentage* is only included from versions 2.0.0.26 and 3.0.0.1 of the *Skyline SLA Definition Basic* protocol onwards.
 
-##### Saving the SLA configuration
+#### Saving the SLA configuration
 
 1. At the top of an SLA configuration page, click the *Save/Load Config* button.
 
@@ -25,7 +25,7 @@ It is possible to save the configuration of an SLA element in DataMiner Cube. Th
 
 3. Click the *Save* button.
 
-##### Loading settings that have been saved for a particular configuration page
+#### Loading settings that have been saved for a particular configuration page
 
 1. At the top of an SLA configuration page, click the *Save/Load Config* button.
 
@@ -35,7 +35,7 @@ It is possible to save the configuration of an SLA element in DataMiner Cube. Th
 
 3. Click the *Load* button.
 
-##### Removing existing configuration files
+#### Removing existing configuration files
 
 Existing configuration files can either be removed in the *Documents* module, or via the *Save/Load Config* button of the SLA element:
 

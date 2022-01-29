@@ -2,7 +2,7 @@
 uid: Components_for_multiple_elements_or_services
 ---
 
-## Components for multiple elements or services
+# Components for multiple elements or services
 
 For multiple elements or services, the following building blocks are available in report templates:
 
@@ -26,7 +26,7 @@ For multiple elements or services, the following building blocks are available i
 
 - [Top 10 States/New Alarm Count](#top-10-statesnew-alarm-count)
 
-### Aggregation
+## Aggregation
 
 A graph visualizing the data of one or more aggregation rules. The following options are available:
 
@@ -38,7 +38,7 @@ A graph visualizing the data of one or more aggregation rules. The following opt
 
 - It is possible to show the graph for a view with or without its subviews. To include subviews, select *Include sub-Views*.
 
-### Alarm Distribution Graph
+## Alarm Distribution Graph
 
 Graph showing the distribution of alarms over a selected time span, with several options:
 
@@ -48,7 +48,7 @@ Graph showing the distribution of alarms over a selected time span, with several
 
 - It is possible to include only certain severities or element types.
 
-### Alarm List
+## Alarm List
 
 Overview of an element’s active alarms or historic alarms for a selected time span. The following options are available:
 
@@ -62,7 +62,7 @@ Overview of an element’s active alarms or historic alarms for a selected time 
 
 - You can choose to sort the list either by element name or by alarm time.
 
-### Alarm Scatter Graph
+## Alarm Scatter Graph
 
 Graph comparing the different alarm events versus the alarm states for a selected time span. The following options are available:
 
@@ -72,7 +72,7 @@ Graph comparing the different alarm events versus the alarm states for a selecte
 
 - To include a textual overview, select *Include Textual Overview*. You can then indicate whether the overview should be sorted by *Name*, *# Events*, or *Duration*.
 
-### DMS Status
+## DMS Status
 
 General information about the DMS. The displayed information will contain:
 
@@ -82,15 +82,15 @@ General information about the DMS. The displayed information will contain:
 
 - DataMiner version number and build ID.
 
-### Elements/Services Container
+## Elements/Services Container
 
 A container for element-specific information. Within this container, report components for single elements can be added.
 
-### Info Table
+## Info Table
 
 A list of DMAs, elements, documents, or elements with their state and active alarm count.
 
-### SLA Historic Service Alarm List
+## SLA Historic Service Alarm List
 
 Only applicable for SLA elements. Shows a table with an overview of historic service alarms for several SLA elements, with above this a summary of the total affected time and total violation time, the minimum and the measured availability, etc.
 
@@ -104,7 +104,7 @@ The following options are available:
 
     Use a semicolon to combine several parameters in the filter. For more information on using filters, see [Using quick filters](xref:Using_quick_filters).
 
-### Status Query
+## Status Query
 
 Available from DataMiner 9.5.13 onwards. Overview of parameter states of all included elements. The following options are available:
 
@@ -112,7 +112,7 @@ Available from DataMiner 9.5.13 onwards. Overview of parameter states of all inc
 
 - To add a pie chart for the first parameter in the status query, select *Add pie chart for first parameter*.
 
-### Top 10 States/New Alarm Count
+## Top 10 States/New Alarm Count
 
 An overview of the elements or services that either had the highest number of alarm events or spent the most time in alarm state. The following options are available:
 

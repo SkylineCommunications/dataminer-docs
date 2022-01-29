@@ -2,7 +2,7 @@
 uid: Querying_a_database
 ---
 
-## Querying a database
+# Querying a database
 
 To query a database, do the following:
 

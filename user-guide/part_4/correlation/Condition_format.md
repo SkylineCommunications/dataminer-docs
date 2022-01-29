@@ -2,7 +2,7 @@
 uid: Condition_format
 ---
 
-## Condition format
+# Condition format
 
 A script condition in a Correlation rule should use the following format:
 
@@ -24,7 +24,7 @@ field(value) == "Status: \"OK\""
 > [!NOTE]
 > For more examples, refer to [Examples of script conditions](xref:Examples_of_script_conditions).
 
-#### Available operators
+### Available operators
 
 - Numeric comparison (values parsed into double, using invariant culture)
 
@@ -42,7 +42,7 @@ field(value) == "Status: \"OK\""
 
     - ==
 
-#### Values
+### Values
 
 - String values can be enclosed in double quotes:
 
@@ -72,7 +72,7 @@ field(value) == "Status: \"OK\""
 
     - *\** (asterisk)
 
-#### Remarks
+### Remarks
 
 - Any white space characters (including space, tab, form feed, etc.) in between values, function names, function arguments, etc. are ignored.
 

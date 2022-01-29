@@ -2,7 +2,7 @@
 uid: Adjusting_the_SNMP_inform_message_cache_size
 ---
 
-## Adjusting the SNMP inform message cache size
+# Adjusting the SNMP inform message cache size
 
 To handle situations where inform messages are sent out again while they have already been acknowledged by DataMiner, from DataMiner 10.2.0/10.1.4 onwards, DataMiner by default keeps the latest 20 inform messages per SNMP entity in a cache, so that it can check whether an incoming inform message has already been processed, and discard it if it has.
 

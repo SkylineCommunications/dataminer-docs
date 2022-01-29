@@ -2,13 +2,13 @@
 uid: Script_condition_functions
 ---
 
-## Script condition functions
+# Script condition functions
 
 Below, you find a list of functions you can use in a Correlation script condition.
 
 These functions can also be used as placeholders, for instance in parameters used in Correlation rules. In that case they should be placed between brackets, e.g. \[field(elementname)\].
 
-#### field
+### field
 
 Retrieves one of the following fields from a base alarm.
 
@@ -43,7 +43,7 @@ Retrieves one of the following fields from a base alarm.
 | viewname      | Name of the view containing the element that generated the alarm. If the element can be found in more than one view, then a random name is used. |
 | elementkey    | The DmaID/ElementID (can be used from DataMiner version 8.5.5 onwards)                                                                           |
 
-#### property
+### property
 
 Retrieves a property of a base alarm.
 
@@ -71,7 +71,7 @@ Example:
 property(view.location)
 ```
 
-#### parameter
+### parameter
 
 Retrieves a parameter value.
 
@@ -85,7 +85,7 @@ Parameter(DMAID, elementID, parameterID, rowindex)
 parameter(7,56,110,SLDataMiner)
 ```
 
-#### count
+### count
 
 Returns the number of base alarms.
 
@@ -95,7 +95,7 @@ Example:
 count(*)
 ```
 
-#### min
+### min
 
 Determines the minimum value among all alarm events in the rule bucket.
 
@@ -105,7 +105,7 @@ Example:
 min(field(value))
 ```
 
-#### max
+### max
 
 Determines the maximum value among all alarm events in the rule bucket.
 
@@ -115,7 +115,7 @@ Example:
 max(field(value))
 ```
 
-#### avg
+### avg
 
 Determines the average value among all alarm events in the rule bucket.
 
@@ -125,7 +125,7 @@ Example:
 avg(field(value))
 ```
 
-#### round
+### round
 
 Rounds the value to a certain amount of digits after the comma.
 

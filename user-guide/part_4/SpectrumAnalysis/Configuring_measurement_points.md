@@ -2,7 +2,7 @@
 uid: Configuring_measurement_points
 ---
 
-## Configuring measurement points
+# Configuring measurement points
 
 A measurement point is a series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position. This way, multiple signals can be measured with one single spectrum analyzer.
 
@@ -18,7 +18,7 @@ The following sections provide more information on how to configure measurement 
 > See also:
 > <https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/>
 
-### The measurement point configuration window
+## The measurement point configuration window
 
 On a spectrum analyzer card, go to the *Measurement points* tab in the overhead ribbon, and click *New measurement point* or *Edit measurement point* to open the measurement point configuration window.
 
@@ -44,7 +44,7 @@ The measurement point configuration window consists of:
 > - If the current trace is hidden, this will be reflected in the measurement point. See [Spectrum trace acquisition](xref:Viewing_spectrum_analyzer_traces#spectrum-trace-acquisition).
 > - If no measurement points have been configured yet, the *Edit measurement point* option will not be available.
 
-### Configuring a measurement point
+## Configuring a measurement point
 
 To configure a new or existing measurement point:
 
@@ -71,7 +71,7 @@ To configure a new or existing measurement point:
 
     - Add an amplitude correction. See [Specifying an amplitude correction](xref:Specifying_an_amplitude_correction).
 
-### Displaying measurement points
+## Displaying measurement points
 
 To display a measurement point, in the settings pane, go to *Manual* > *Measurement points*, and select the measurement point you want to display. To quickly find a particular measurement point, use the quick filter in the top right corner.
 

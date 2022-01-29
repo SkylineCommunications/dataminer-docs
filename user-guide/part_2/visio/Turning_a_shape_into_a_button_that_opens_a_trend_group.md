@@ -2,7 +2,7 @@
 uid: Turning_a_shape_into_a_button_that_opens_a_trend_group
 ---
 
-## Turning a shape into a button that opens a trend group
+# Turning a shape into a button that opens a trend group
 
 A Visio shape can be turned into a button that opens a trend group.
 

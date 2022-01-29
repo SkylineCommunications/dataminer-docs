@@ -2,9 +2,9 @@
 uid: Working_with_cards_in_DataMiner_Cube
 ---
 
-## Working with cards in DataMiner Cube
+# Working with cards in DataMiner Cube
 
-### DataMiner Pulse
+## DataMiner Pulse
 
 When no docked cards are open, the card pane in DataMiner Cube displays the “DataMiner Pulse” home page.
 
@@ -26,7 +26,7 @@ On this page, you can find:
 > - Depending on your user permissions, some of these items may not be displayed.
 > - From DataMiner 9.6.1 onwards, the Cube user settings allow you to customize which information is shown on this page. See [Cube settings](xref:User_settings#cube-settings).
 
-### Card types
+## Card types
 
 There are many different types of cards, such as:
 
@@ -54,7 +54,7 @@ There are many different types of cards, such as:
 
 Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or CPE Manager cards (see [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)).
 
-### Card navigation pane
+## Card navigation pane
 
 On the left side of view cards, service cards and element cards, a navigation pane is displayed.
 
@@ -111,7 +111,7 @@ Depending on the type of cards, more nodes may be available, e.g. *AGGREGATION* 
 > - For custom element applications, by default no card navigation pane is displayed. However, it is possible to open this pane by selecting the option *Show card side panel* in the card header menu.
 > - The card navigation pane is only available from DataMiner version 9.0 onwards. In earlier versions of DataMiner, there is instead a rotate button that allows the user to change between a “Visual Overview” side of the card and a “Data Display” side.
 
-### Card header bar menu
+## Card header bar menu
 
 When you click the hamburger button in the top-left corner of a card, a shortcut menu with several commands is opened.
 
@@ -143,7 +143,7 @@ When you click the hamburger button in the top-left corner of a card, a shortcut
 > - Depending on the type of card, more options can be available. These are discussed in detail in the sections of the help related to the item in question.
 > - If some of these options are not available for you, it is possible that you do not have the necessary permissions to use them.
 
-### Opening cards
+## Opening cards
 
 By default, if you left-click items in the Surveyor using a card layout other than the tab layout, each new card you open will replace the previous open, docked card. You can then navigate between the cards with the back and forward commands.
 
@@ -164,7 +164,7 @@ However, you can also open items in a new card next to any cards that are alread
 > [!NOTE]
 > There is a limit to the number of cards, docked or undocked, that can be open on each side of the Cube. By default this number is set to 16, but it can be changed in the user settings. If you try to open more cards, a message will appear, telling you that the maximum number has been reached and you must close a card to continue.
 
-### Changing the card layout
+## Changing the card layout
 
 To change the card layout on the fly, drag the edge of a card to adjust its size.
 
@@ -186,7 +186,7 @@ The following layout options are available:
 | Tab layout        | The different open cards are shown in a row of tabs at the top of the screen. Click a tab to switch to that card.                                                                       |
 | Reset card layout | Resets any manual changes to the card layout, so that the cards again have the size determined by the selected card layout.<br> This option is only available from the Cube header bar. |
 
-### Dragging cards
+## Dragging cards
 
 It is possible to drag a card, by left-clicking and dragging the top edge of the card to its destination.
 
@@ -198,7 +198,7 @@ You can drag a card:
 
 - To undock a card, by dragging it out of the workspace.
 
-### Undocking cards
+## Undocking cards
 
 There are several ways to undock cards:
 
@@ -210,7 +210,7 @@ There are several ways to undock cards:
 
 If you open a different card from inside an undocked card, it will replace the undocked card in the same window.
 
-### Pinning cards
+## Pinning cards
 
 To keep a card open in the same position when other cards are opened, it is possible to pin the card.
 

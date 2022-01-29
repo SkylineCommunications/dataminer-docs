@@ -2,7 +2,7 @@
 uid: Feeds
 ---
 
-## Feeds
+# Feeds
 
 Feeds can be added to a dashboard to allow a user to select a DataMiner object for which information can be displayed in other components.
 
@@ -29,7 +29,7 @@ The following types of feeds are available:
 > See also:
 > [Using dashboard feeds](xref:Using_dashboard_feeds)
 
-### CPE feed
+## CPE feed
 
 This feed allows the user to make a filter selection for a particular EPM element (formerly known as CPE Manager) and EPM chain. It can be used as a filter feed for the parameter feed, so that this feed can in turn be used to display info on EPM parameters.
 
@@ -63,7 +63,7 @@ To configure the component:
 
         - *Show label*: Determines whether the names of the chain filters are displayed next to the selection boxes in the component.
 
-### Drop-down
+## Drop-down
 
 This feed allows the user to select an item in a drop-down list. The selectable items can be based on any data feed.
 
@@ -83,7 +83,7 @@ To configure the component:
 
     - *Feed defaults*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
 
-### List
+## List
 
 This feed allows the user to select one or more items in a list. The selectable items can be based on any data feed.
 
@@ -99,7 +99,7 @@ To configure the component:
 
     - *Feed defaults*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
 
-### Parameter feed
+## Parameter feed
 
 This feed allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once. A *Selected only* toggle button is also available, which can be used to show or hide items that are not selected.
 
@@ -139,7 +139,7 @@ To configure this component:
 
     - *Column order*: Click the up or down arrow next to a column name to change the order in which the columns of the component are displayed. Available from DataMiner 9.6.13 onwards.
 
-### Time range
+## Time range
 
 This feed allows the user to specify a time range.
 
@@ -163,7 +163,7 @@ To configure the component:
 
     - *Pinning as quick pick*: Available from DataMiner 10.0.12 onwards, if *Use quick picks* is enabled. Displays a pin icon next to the time summary in the component, which can be used to add the current time selection as a custom quick pick button. If the current time selection matches the custom quick pick button, clicking the pin icon again will remove the button. You can also remove the button using the garbage can icon on the button itself.
 
-### Tree
+## Tree
 
 This feed allows the user to select one or more items in a tree view. The selectable items can be based on any data feed.
 
@@ -179,7 +179,7 @@ To configure the component:
 
     - *Feed defaults*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
 
-### Trigger
+## Trigger
 
 Available from DataMiner 10.2.0/10.1.1 onwards. This feed allows you to trigger other components either manually or automatically.
 

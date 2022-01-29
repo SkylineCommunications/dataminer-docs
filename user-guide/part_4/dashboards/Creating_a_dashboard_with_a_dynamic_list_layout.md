@@ -2,7 +2,7 @@
 uid: Creating_a_dashboard_with_a_dynamic_list_layout
 ---
 
-## Creating a dashboard with a dynamic list layout
+# Creating a dashboard with a dynamic list layout
 
 If you configure a dashboard to have a dynamic list layout, the components added to the *List Item Template* zone will be repeated.
 
@@ -31,11 +31,11 @@ To create a dashboard with dynamic list layout:
 
 4. Go to *Actions \> Configure Components* to add components. All components added to the *List Item Template* zone are immediately configured to use the Dynamic List Feed you configured earlier. For more information about adding components, see [Configure Components](xref:Configuring_dashboard_components1#configure-components).
 
-### List type options
+## List type options
 
 Depending on the list type you choose when configuring the *Dynamic List Options*, there are different configuration options.
 
-#### Dynamic Table Rows
+### Dynamic Table Rows
 
 When you choose this list type, each row in the dynamic list will represent a row of a dynamic table.
 
@@ -45,7 +45,7 @@ A dynamic list feed must be configured with “Parameter” as fixed selection, 
 > - You can use the *Mask* option on the *Settings* page to limit the included parameters to part of a table.
 > - Unless the list is paginated, new rows will automatically appear in the dashboard when new rows are added to the table.
 
-#### Elements
+### Elements
 
 When you choose this list type, each row in the dynamic list will represent an element that corresponds to the dynamic list feed.
 
@@ -57,7 +57,7 @@ The following options can be configured for this list type:
 
 - Business Intelligence Only: if selected, only SLA elements will be included
 
-#### Parameters
+### Parameters
 
 When you choose this list type, each row in the dynamic list will represent a parameter that corresponds to the dynamic list feed. Dynamic table parameters are included in the list.
 
@@ -71,11 +71,11 @@ The following options can be configured for this list type:
 
 - Average Trended Parameters Only: if selected, only parameters with average trending enabled will be included
 
-#### Redundancy groups
+### Redundancy groups
 
 When you choose this list type, each row in the dynamic list will represent a redundancy group that corresponds to the dynamic list feed. There are no additional options specific to this list type.
 
-#### Services
+### Services
 
 When you choose this list type, each row in the dynamic list will represent a service that corresponds to the dynamic list feed.
 

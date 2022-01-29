@@ -2,9 +2,9 @@
 uid: ScriptParam_methods
 ---
 
-## ScriptParam methods
+# ScriptParam methods
 
-#### SetParamValue
+### SetParamValue
 
 Sets the specified value to the script parameter.
 

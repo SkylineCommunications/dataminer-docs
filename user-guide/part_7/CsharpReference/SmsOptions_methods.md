@@ -2,6 +2,6 @@
 uid: SmsOptions_methods
 ---
 
-## SmsOptions methods
+# SmsOptions methods
 
 None.

@@ -2,7 +2,7 @@
 uid: Adding_a_new_folder
 ---
 
-## Adding a new folder
+# Adding a new folder
 
 To add a new folder in the Correlation module:
 

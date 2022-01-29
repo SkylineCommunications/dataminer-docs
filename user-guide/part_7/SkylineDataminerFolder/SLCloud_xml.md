@@ -2,11 +2,11 @@
 uid: SLCloud_xml
 ---
 
-## SLCloud.xml
+# SLCloud.xml
 
 This XML file supports communication by means of a NATS cloud (from DataMiner 10.1.0/10.1.1 onwards). It is automatically added in the folder *C:\\Skyline DataMiner*.
 
-### Increasing the timeout for the NATS connection
+## Increasing the timeout for the NATS connection
 
 From DataMiner 10.2.0/10.1.5 onwards, you can configure the timeout of the connection to the NATS server in SLCloud.xml:
 

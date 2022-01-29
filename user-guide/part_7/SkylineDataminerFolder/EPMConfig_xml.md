@@ -2,7 +2,7 @@
 uid: EPMConfig_xml
 ---
 
-## EPMConfig.xml
+# EPMConfig.xml
 
 From DataMiner 10.2.0/10.1.7 onwards, it is possible to override the names of EPM topology cells, chains and search chains specified in a protocol with aliases specified in a separate file.
 

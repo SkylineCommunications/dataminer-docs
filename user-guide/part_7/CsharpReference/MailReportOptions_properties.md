@@ -2,9 +2,9 @@
 uid: MailReportOptions_properties
 ---
 
-## MailReportOptions properties
+# MailReportOptions properties
 
-#### MailOptions
+### MailOptions
 
 The email options.
 
@@ -12,7 +12,7 @@ The email options.
 string ReportName
 ```
 
-#### ReportName
+### ReportName
 
 The name of the report template to be used.
 

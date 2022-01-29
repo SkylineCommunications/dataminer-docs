@@ -2,9 +2,9 @@
 uid: Read_parameters_versus_write_parameters
 ---
 
-## Read parameters versus write parameters
+# Read parameters versus write parameters
 
-#### Read parameters
+### Read parameters
 
 Read parameters display a read-only value that has been retrieved from a device.
 
@@ -22,7 +22,7 @@ The way this value is displayed depends on whether it is a discrete or an analog
 > See also:
 > [Changing the way parameters are displayed](xref:Changing_the_way_parameters_are_displayed)
 
-#### Write parameters
+### Write parameters
 
 The value of write parameters can be updated by a user and sent back to the device.
 

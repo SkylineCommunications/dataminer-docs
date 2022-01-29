@@ -2,7 +2,7 @@
 uid: Replicating_an_existing_SLA
 ---
 
-## Replicating an existing SLA
+# Replicating an existing SLA
 
 To replicate an existing SLA located in another DMS, follow the same procedure as for the creation of a new SLA. However, in the *General* section, select the checkbox *Replicate*.
 

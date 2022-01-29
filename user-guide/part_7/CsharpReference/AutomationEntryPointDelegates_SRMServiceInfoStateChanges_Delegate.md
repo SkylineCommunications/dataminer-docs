@@ -2,7 +2,7 @@
 uid: AutomationEntryPointDelegates_SRMServiceInfoStateChanges_Delegate
 ---
 
-## AutomationEntryPointDelegates.SRMServiceInfoStateChanges Delegate
+# AutomationEntryPointDelegates.SRMServiceInfoStateChanges Delegate
 
 Encapsulates a method that will be used as the Automation entry point method with SRM service info state changes.
 

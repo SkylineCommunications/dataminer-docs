@@ -2,9 +2,9 @@
 uid: AutomationEntryPointType_properties
 ---
 
-## AutomationEntryPointType properties
+# AutomationEntryPointType properties
 
-#### DelegateType
+### DelegateType
 
 Gets the entry point delegate type.
 
@@ -12,7 +12,7 @@ Gets the entry point delegate type.
 Type DelegateType
 ```
 
-#### ID
+### ID
 
 Gets the Automation entry point type ID.
 

@@ -2,7 +2,7 @@
 uid: Limiting_the_base_alarms
 ---
 
-## Limiting the base alarms
+# Limiting the base alarms
 
 In the Correlation module, the *Actions* section of the details pane allows you to limit the base alarms for a Correlation rule, as an alternative to or in addition to adding alarm filters.
 

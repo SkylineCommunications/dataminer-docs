@@ -2,7 +2,7 @@
 uid: Generating_the_connectivity_chain_for_an_SRM_service_instance
 ---
 
-## Generating the connectivity chain for an SRM service instance
+# Generating the connectivity chain for an SRM service instance
 
 From DataMiner 9.5.3 onwards, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview.
 
@@ -44,7 +44,7 @@ To have a service instance chain drawn automatically, define the following shape
 > [!NOTE]
 > From DataMiner 10.2.0/10.1.12 onwards, this feature supports lite contributing resources (i.e. contributing resources for which no enhanced element is created). In that case, the connections for the contributing node will be based on the connections in the service definition.
 
-### Displaying connection property shapes for a service connectivity chain
+## Displaying connection property shapes for a service connectivity chain
 
 From DataMiner 9.5.12 onwards, you can have a connection property displayed on top of every connection of the service definition that contains that property.
 

@@ -2,7 +2,7 @@
 uid: Setting_up_an_offload_database
 ---
 
-## Setting up an offload database
+# Setting up an offload database
 
 In this section:
 
@@ -14,7 +14,7 @@ In this section:
 
 - [Automatic creation and verification of the offload database](#automatic-creation-and-verification-of-the-offload-database)
 
-### Server configuration
+## Server configuration
 
 The first step in setting up an offload or “central” database is the configuration of the server that will host the offload database.
 
@@ -102,7 +102,7 @@ Depending on the type of database, the procedure is slightly different.
     GRANT CREATE ANY DIRECTORY TO [user]
     ```
 
-### Allowing ports on Windows Firewall
+## Allowing ports on Windows Firewall
 
 Once the server has been configured, the next step in setting up the offload database is allowing ports on Windows Firewall. This must be done on every DMA in the DMS, as well as on the server the database is located on.
 
@@ -138,7 +138,7 @@ Once the server has been configured, the next step in setting up the offload dat
 
     3. Proceed in the same way as to create an inbound rule (see above).
 
-### DMA configuration
+## DMA configuration
 
 The final step is the configuration of the DMS.
 
@@ -209,7 +209,7 @@ The final step is the configuration of the DMS.
 > - If the offload fails for a specific offload file, this file is moved to a failure folder and an error is logged.
 > - The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](xref:DB_xml#dbxml).
 
-### Automatic creation and verification of the offload database
+## Automatic creation and verification of the offload database
 
 When you install or upgrade a DataMiner Agent using an upgrade package, the offload database is created automatically.
 

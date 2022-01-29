@@ -2,7 +2,7 @@
 uid: Main_Cube_UI_components_prior_to_DataMiner_10
 ---
 
-## Main Cube UI components prior to DataMiner 10
+# Main Cube UI components prior to DataMiner 10
 
 The DataMiner Cube UI consists of the following main components prior to DataMiner 10.0.0/10.0.2:
 
@@ -14,7 +14,7 @@ The DataMiner Cube UI consists of the following main components prior to DataMin
 
 - [Alarm Console](#alarm-console)
 
-### Header bar
+## Header bar
 
 In the header bar of DataMiner Cube, using a version prior to DataMiner 10.0.0/10.0.2, you can find the following items.
 
@@ -75,7 +75,7 @@ In the header bar of DataMiner Cube, using a version prior to DataMiner 10.0.0/1
 
     - Click the icon to view all connected DMAs, grouped per DMS, along with their status. In that list, the right-click menu allows you to start, restart, stop, shut down, reboot or upgrade a DMA, as well as access the *Failover* window. The *System Center* and *Agents* buttons allow quick access to the system configuration.
 
-### DataMiner Cube navigation pane
+## DataMiner Cube navigation pane
 
 The Cube navigation pane, in DataMiner versions prior to DataMiner 10.0.0/10.0.2, consists of:
 
@@ -91,7 +91,7 @@ The Cube navigation pane, in DataMiner versions prior to DataMiner 10.0.0/10.0.2
 
 For more information on how to move the navigation pane, see [Moving the navigation pane](#moving-the-navigation-pane).
 
-#### Surveyor
+### Surveyor
 
 The Surveyor is the leftmost tab of the navigation pane, indicated with the following icon: ![](~/user-guide/images/surveyor_icon.png)
 
@@ -108,7 +108,7 @@ When you click an item in the tree, it opens in a card:
 > - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](#surveyor-right-click-menu).
 > - You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
-##### Icons
+#### Icons
 
 The icons that precede an item name in the tree show what kind of item it is and what state and alarm state it is in.
 
@@ -154,7 +154,7 @@ The icons that precede an item name in the tree show what kind of item it is and
     | White X on red background | Indicates that an element is in an error state.                                                                                                                                                         |
     | Upwards arrow             | Displayed next to a service child in case the capped severity of the service child is lower than the actual severity. The icon has the color of the severity that will bubble up to the parent service. |
 
-##### Special icon settings
+#### Special icon settings
 
 In the DataMiner settings, there are several options to show more alarm information next to an icon than just the current state.
 
@@ -179,7 +179,7 @@ The following options are available:
 > [!NOTE]
 > From DataMiner 10.0.0/10.0.2 onwards, these icon settings can only be used if the *Use modern icons* setting is not enabled.
 
-##### Surveyor right-click menu
+#### Surveyor right-click menu
 
 In the Surveyor right-click menu, the following options are available, depending on what type of item is right-clicked:
 
@@ -212,7 +212,7 @@ In the Surveyor right-click menu, the following options are available, depending
 > - The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
 > - When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
 
-#### Recent items
+### Recent items
 
 A list of recently viewed items, such as elements, services, views and apps, is available under the second tab from the left in the navigation pane.
 
@@ -233,7 +233,7 @@ The following actions are possible with this list:
 > See also:
 > <https://community.dataminer.services/video/ruis-rapid-recap-recent-pinned-items/>
 
-#### Apps
+### Apps
 
 A list of DataMiner applications is available under the second tab from the right in the navigation pane.
 
@@ -251,7 +251,7 @@ Depending on the configuration of your DataMiner System, the list can contain up
 
 Click any app in the list to open it. If you wish to open the app in a new card, use the middle mouse button.
 
-#### Workspaces
+### Workspaces
 
 A list of workspaces is available in the first tab from the right in the navigation pane.
 
@@ -259,9 +259,9 @@ This tab is indicated with the following icon: ![](~/user-guide/images/IconWorks
 
 For more information on how to work with workspaces, see [Working with workspaces](xref:Working_with_workspaces).
 
-#### Moving the navigation pane
+### Moving the navigation pane
 
-##### Changing the navigation pane position
+#### Changing the navigation pane position
 
 By default, the navigation pane is located on the right-hand side of the screen. However, it is possible to place it at the other side of the screen:
 
@@ -272,7 +272,7 @@ By default, the navigation pane is located on the right-hand side of the screen.
 > [!NOTE]
 > The default location of the navigation pane can be specified in *Settings \> User \> Surveyor \> Surveyor docking position*
 
-##### Changing the navigation pane size
+#### Changing the navigation pane size
 
 You can change the size of the navigation pane in the following ways:
 
@@ -287,13 +287,13 @@ You can change the size of the navigation pane in the following ways:
     > [!NOTE]
     > It is also possible to collapse and expand the pane by dragging its edge.
 
-### Card pane
+## Card pane
 
 When you click an item in the Surveyor or when you right-click an alarm in the Alarm Console and select *Open \> Alarm Card*, the details of that item or that alarm are displayed in a special window called a card.
 
 For more information, see [Working with cards in DataMiner Cube](xref:Working_with_cards_in_DataMiner_Cube).
 
-#### Card header bar buttons
+### Card header bar buttons
 
 At the top of each card, there are a number of buttons:
 
@@ -309,7 +309,7 @@ At the top of each card, there are a number of buttons:
 > [!NOTE]
 > To move back and forward between the Visual Overview pages of different cards, use the *Back* and *Forward* options in the right-click menu.
 
-### Alarm Console
+## Alarm Console
 
 The Alarm Console is the section of the DataMiner Cube user interface that allows you to view and manipulate active alarms, historical alarms and information events.
 

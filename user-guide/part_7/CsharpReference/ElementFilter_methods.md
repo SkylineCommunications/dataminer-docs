@@ -2,7 +2,7 @@
 uid: ElementFilter_methods
 ---
 
-## ElementFilter methods
+# ElementFilter methods
 
 - [ByID](#byid)
 
@@ -12,7 +12,7 @@ uid: ElementFilter_methods
 
 - [ByView](#byview)
 
-#### ByID
+### ByID
 
 Retrieves a new *ElementFilter* object that has *DataMinerID* and *ElementID* set to the specified DataMiner Agent ID and element ID, respectively.
 
@@ -26,7 +26,7 @@ Example:
 var filter = ElementFilter.ByID(200, 4000);
 ```
 
-#### ByName
+### ByName
 
 Retrieves a new *ElementFilter* object that has *NameFilter* set to the specified element name filter.
 
@@ -40,7 +40,7 @@ Example:
 var filter = ElementFilter.ByName("Test*");
 ```
 
-#### ByProtocol
+### ByProtocol
 
 Retrieves a new *ElementFilter* object that has *ProtocolName* set to the specified protocol name filter, or *ProtocolName* and *ProtocolVersion* set to the specified protocol name and version filter.
 
@@ -59,7 +59,7 @@ var filter = ElementFilter.ByProtocol("Microsoft Platform");
 var filter = ElementFilter.ByProtocol("Microsoft Platform", "1.0.0.1");
 ```
 
-#### ByView
+### ByView
 
 Retrieves a new *ElementFilter* object that, depending on the parameters specified, has
 

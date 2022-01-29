@@ -2,7 +2,7 @@
 uid: Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file
 ---
 
-## Turning a shape into a tab control that displays pages of a Visio file
+# Turning a shape into a tab control that displays pages of a Visio file
 
 When a shape is linked to a view, a service or an element, it can be turned into a tab control that displays all pages or specific pages of the Visio drawing linked to that view, service or element.
 
@@ -10,7 +10,7 @@ When a shape is linked to a view, a service or an element, it can be turned into
 > See also:
 > [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)
 
-### Configuring a tab control that displays all pages of a Visio drawing
+## Configuring a tab control that displays all pages of a Visio drawing
 
 Add a shape data field of type **Options** to the shape, and set its value to “*InlineVdx*”.
 
@@ -26,7 +26,7 @@ Aside from the default style, from DataMiner 9.5.14 onwards, an alternative styl
 InlineVdx|TabControlStyle=2
 ```
 
-### Configuring a tab control that displays specific pages of a Visio drawing
+## Configuring a tab control that displays specific pages of a Visio drawing
 
 Create a shape, add a shape data field to it of type **VdxPage** of which the value contains the list of pages to be visualized (separated by pipe characters).
 

@@ -2,14 +2,14 @@
 uid: Advanced_Failover_options
 ---
 
-## Advanced Failover options
+# Advanced Failover options
 
 When you click *Advanced* in the *Failover* dialog box, you can specify a number of advanced options in four separate tabs.
 
 > [!NOTE]
 > Some Failover options can also be configured directly in *MaintenanceSettings.xml*. For more information, refer to the Watchdog settings in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).
 
-### Type
+## Type
 
 Go to this tab to specify whether Failover should occur manually or automatically.
 
@@ -20,7 +20,7 @@ Go to this tab to specify whether Failover should occur manually or automaticall
     > [!NOTE]
     > Manual switching is not possible when the backup DMA is not running. In that case the *Switch* button will be unavailable.
 
-### Synchronization
+## Synchronization
 
 Go to this tab to configure the network interface for data synchronization from the online DMA to the backup DMA.
 
@@ -28,7 +28,7 @@ Go to this tab to configure the network interface for data synchronization from 
 > - If there is a third network interface that connects both DMAs using a cross cable, it is advisable to select that one in order to prevent synchronization failures.
 > - Note that synchronization of a Cassandra or Elasticsearch database is taken care of by the database itself, outside of DataMiner.
 
-### Heartbeats
+## Heartbeats
 
 If Failover has been set to occur automatically, the “heartbeats” need to be configured on this tab.
 
@@ -51,7 +51,7 @@ Each heartbeat causes a periodical connection check:
 
 For every heartbeat you configure, you can specify a maximum number of allowed failures. This way, you can keep the backup DMA from taking over each time a single heartbeat fails for one reason or another.
 
-### Virtual IP Addresses
+## Virtual IP Addresses
 
 On this tab, you can configure virtual IP addresses for the different network interfaces. These addresses will be moved between agents when switching.
 

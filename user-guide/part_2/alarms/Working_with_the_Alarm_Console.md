@@ -2,7 +2,7 @@
 uid: Working_with_the_Alarm_Console
 ---
 
-## Working with the Alarm Console
+# Working with the Alarm Console
 
 The Alarm Console is displayed at the bottom of the Cube workspace. It can contain various lists of alarms, such as the active alarms, masked alarms and information events. However, it is highly customizable, so you can adapt both what it displays and how this is displayed.
 
@@ -35,7 +35,7 @@ This section consists of the following topics:
 > See also:
 > <https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/>
 
-### Manipulating the Alarm Console
+## Manipulating the Alarm Console
 
 - To collapse the Alarm Console, click the downward arrow button in the top-right corner: ![](~/user-guide/images/Collapse_Alarm_Console_button.png)
 
@@ -60,7 +60,7 @@ This section consists of the following topics:
     > See also:
     > <https://community.dataminer.services/video/alarm-console-creating-a-workspace-with-a-filtered-alarm-tab-page/>
 
-### Changing the layout of the Alarm Console
+## Changing the layout of the Alarm Console
 
 In this section:
 
@@ -76,7 +76,7 @@ In this section:
 
 - [Using the reports view](#using-the-reports-view)
 
-#### Three default alarm tabs
+### Three default alarm tabs
 
 By default, the Alarm Console contains the following tabs:
 
@@ -92,7 +92,7 @@ By default, the Alarm Console contains the following tabs:
 > [!NOTE]
 > It is possible to set different default tabs in the user settings and group settings. See [Setting the default alarm tabs and columns in the Cube settings](#setting-the-default-alarm-tabs-and-columns-in-the-cube-settings).
 
-#### Adding and removing alarm tabs in the Alarm Console
+### Adding and removing alarm tabs in the Alarm Console
 
 In the Alarm Console, you can add and remove tabs as you see fit. However, this custom layout is only saved across sessions for tabs displaying active alarms or alarms in a sliding window, not for alarm history tabs.
 
@@ -158,7 +158,7 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
 > [!NOTE]
 > When you have created a history alarms tab, you can edit it afterwards, e.g. to change the applied filter and time range, by clicking the pencil icon next to the tab name.
 
-#### Changing the column layout in an alarm tab
+### Changing the column layout in an alarm tab
 
 The list of alarms in an Alarm Console tab can be manipulated in several ways.
 
@@ -166,7 +166,7 @@ The list of alarms in an Alarm Console tab can be manipulated in several ways.
 > See also:
 > <https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/>
 
-##### Sorting and grouping columns
+#### Sorting and grouping columns
 
 To sort the alarms by a particular field:
 
@@ -187,7 +187,7 @@ By default, the Alarm Console is set to group alarms automatically according to 
 > [!NOTE]
 > When alarms have been grouped, you can select all alarms in a group by clicking the group header.
 
-##### Moving and adjusting columns
+#### Moving and adjusting columns
 
 To change the width of a column:
 
@@ -199,7 +199,7 @@ To move a column to another position:
 
 - Click the column header and drag it to the new position.
 
-##### Adding or removing columns
+#### Adding or removing columns
 
 To add or remove columns:
 
@@ -212,19 +212,19 @@ To add or remove columns:
 > See also:
 > [Alarm Console columns](#alarm-console-columns)
 
-##### Renaming a column
+#### Renaming a column
 
 To rename a column:
 
 - Right-click in the table header, and choose *Change column name*.
 
-##### Changing the column alignment
+#### Changing the column alignment
 
 To change the alignment of a column:
 
 - Right-click in the table header, choose *Alignment*, and select *Left*, *Right*, or *Center*.
 
-##### Restoring the default column layout
+#### Restoring the default column layout
 
 To return the columns to the default layout:
 
@@ -233,7 +233,7 @@ To return the columns to the default layout:
 > [!NOTE]
 > User preferences such as column order and grouping are automatically saved in the DMS. So no matter where you log on to the DMS, your personal preferences will always be applied.
 
-#### Setting the default alarm tabs and columns in the Cube settings
+### Setting the default alarm tabs and columns in the Cube settings
 
 It is possible to create a different default layout for the Alarm Console, which is saved across sessions. This can be done both at group level and at user level.
 
@@ -271,7 +271,7 @@ To do so:
 > - Settings that are enforced at group level cannot be changed at user level.
 > - If you create new settings for a group, these will not by default contain the tabs *Active Alarms*, *Information Events* and *Masked alarms*.
 
-#### Using the statistical view
+### Using the statistical view
 
 To view the alarms in an alarm tab as statistics instead of in a regular list view, click the statistical view button in the alarm bar: ![](~/user-guide/images/Statistical_View_button.png)
 
@@ -292,7 +292,7 @@ If you double-click an item or right-click it and select *Show alarms*, the alar
 > [!NOTE]
 > This settings is not remembered across user sessions. If you reconnect to DataMiner Cube, the alarm tab will show a regular list view again.
 
-#### Using the reports view
+### Using the reports view
 
 To view severity timelines per element or per parameter:
 
@@ -311,7 +311,7 @@ To view severity timelines per element or per parameter:
 > [!NOTE]
 > This feature is only available in a DataMiner System using a Cassandra database.
 
-### Using the collapsible side panel of the Alarm Console
+## Using the collapsible side panel of the Alarm Console
 
 For each alarm tab, you can open a side panel in the Alarm Console showing the real-time value and history of a selected alarm.
 
@@ -342,7 +342,7 @@ You can hide the side panel in three ways:
 > [!NOTE]
 > The setting that controls whether the side panel is shown or hidden is a tab setting. This means that you can show the side panel in one tab and hide it in another. It is also a user setting that is remembered across sessions.
 
-### Working with the Alarm Console history slider
+## Working with the Alarm Console history slider
 
 In the Alarm Console, you can display a timeline at the bottom of the *Active alarms* tab. To do so, click the *History slider* button in the alarm bar: ![](~/user-guide/images/History_Slider_button.png)
 
@@ -350,7 +350,7 @@ In the Alarm Console, you can display a timeline at the bottom of the *Active al
 > See also:
 > <https://community.dataminer.services/video/alarm-console-alarm-history/>
 
-#### Active alarms tab timeline
+### Active alarms tab timeline
 
 The timeline in the *Active alarms* tab shows the alarms that were active at a particular point in time.
 
@@ -360,7 +360,7 @@ There are two ways to move the slider to a specific time in the past on the time
 
 - By clicking the clock icon and specifying a date and time.
 
-#### Advanced timeline settings
+### Advanced timeline settings
 
 - With the SLNetClientTest tool, you can configure some advanced settings for the timeline configuration. See [Configuring how long alarm statistics are kept in memory](xref:SLNetClientTest_tool_advanced_procedures#configuring-how-long-alarm-statistics-are-kept-in-memory).
 
@@ -376,7 +376,7 @@ There are two ways to move the slider to a specific time in the past on the time
 
 - How long alarm data remain available to be displayed in the history slider depends on the database configuration. For more information, see [Configuring how long alarm history slider data are kept in Cassandra](xref:Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra).
 
-### Applying alarm filters in the Alarm Console
+## Applying alarm filters in the Alarm Console
 
 The contents of the Alarm Console can be filtered in several ways:
 
@@ -398,7 +398,7 @@ The contents of the Alarm Console can be filtered in several ways:
 
 - [Working with saved alarm filters](#working-with-saved-alarm-filters)
 
-#### Using the Alarm Console quick filter box
+### Using the Alarm Console quick filter box
 
 In the lower right corner of the Alarm Console, a quick filter box is displayed.
 
@@ -433,7 +433,7 @@ This filter box can be used in different ways:
 
 When the filter is applied, the alarm tab is displayed with a blue background to indicate that it is being filtered. The total number of alarms is still indicated in the alarm bar, but the number of filtered alarms that are being displayed is added in parentheses.
 
-#### Using the Alarm Console quick filter buttons
+### Using the Alarm Console quick filter buttons
 
 It is possible to quickly filter an Alarm Console tab so that only alarms of a certain severity are shown.
 
@@ -446,7 +446,7 @@ To quickly clear the filter again, click the leftmost field of the alarm bar, in
 > [!NOTE]
 > The UI of the Alarm Console adapts to the available space on the screen. If there is sufficient room, the different severity levels shown on the alarm tab will be written in full, with an indication of how many alarms have this severity level. If there is less space, only the severity color and the number of alarms with this severity will be displayed. In very narrow windows, a single button will be displayed, which opens a menu with the different severity levels that can be used for filtering.
 
-#### Manually applying an alarm filter in an Alarm Console tab
+### Manually applying an alarm filter in an Alarm Console tab
 
 In the Alarm Console, you can add extra tab pages where you can specify a custom alarm filter.
 
@@ -496,7 +496,7 @@ To do so:
 
 10. If you still want to change some of the filter settings once the filter has been applied, click the pencil icon next to the alarm tab name.
 
-#### Creating a search tab in the Alarm Console
+### Creating a search tab in the Alarm Console
 
 When you are connected to a DMA using at least DataMiner version 10.0.0/10.0.2 with DataMiner Indexing, the Alarm Console provides an additional option to create a dynamic search tab.
 
@@ -523,7 +523,7 @@ To create such a tab:
 
 Once the first 50 alarms have been retrieved, a graphical representation of the alarm distribution will be displayed at the bottom of the tab.
 
-##### Special keywords in the search tab
+#### Special keywords in the search tab
 
 In the search box, you can use the following special keywords, followed by a colon (“:”) and a search phrase:
 
@@ -557,7 +557,7 @@ In the search box, you can use the following special keywords, followed by a col
 
 For example, if you want to search alarms associated with elements of which the name resembles “probe”, then you can enter “Elementname:probe”.
 
-#### Filtering alarms on alarm focus
+### Filtering alarms on alarm focus
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns an estimated likelihood or “alarm focus score” to each alarm, after analyzing the short-term history and current behavior of incoming alarms in real time. The alarm focus score is based on a combination of likelihood, frequency and severity.
 
@@ -586,7 +586,7 @@ Please note the following regarding the alarm focus feature:
 > [!NOTE]
 > You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config.*
 
-#### Applying an alarm filter by dragging an item onto the Alarm Console
+### Applying an alarm filter by dragging an item onto the Alarm Console
 
 Instead of manually applying a filter in a tab, you can also drag an item from the Cube UI onto the Alarm Console to create a tab filtered specifically for that item.
 
@@ -616,7 +616,7 @@ To do so:
 > - Alarm filters based on views also include alarm events based on aggregation rules.
 > - If you want to open a filtered tab containing only alarms related to a particular DMA, this is possible from the *System Center* module. Go to the *Agents* page of System Center and select the DMA in question in the *manage* tab. Then click the *Show agent alarms* link at the top of the pane on the right. The filtered tab will then be opened in the Alarm Console.
 
-#### Alarm filters using wildcard expressions
+### Alarm filters using wildcard expressions
 
 The example below shows a filter for elements matching a particular wildcard expression.
 
@@ -624,7 +624,7 @@ The example below shows a filter for elements matching a particular wildcard exp
 
 
 
-#### Alarm filters using regular expressions
+### Alarm filters using regular expressions
 
 If you want to filter alarms using a regular expression:
 
@@ -636,7 +636,7 @@ If you want to filter alarms using a regular expression:
 
 
 
-##### Syntax
+#### Syntax
 
 You can use any regular expression.
 
@@ -650,7 +650,7 @@ For more information on how to construct regular expressions, here are a few int
 > - DataMiner always wraps a regular expression in ^( and )$. This means that the expression must match the entire string.
 > - The checks are executed using the invariant culture and ignoring case.
 
-##### Examples
+#### Examples
 
 ```txt
 London.*
@@ -698,14 +698,14 @@ MAC-^([0-9A-F]{2}[-]){5}([0-9A-F]{2})
 
     - MAC-99-99-99-99-99
 
-#### Working with saved alarm filters
+### Working with saved alarm filters
 
 When you create a filter in the Alarm Console, you can save it in order to use it again later or in other DataMiner applications.
 
 > [!NOTE]
 > Up to DataMiner 9.0.4, if an alarm filter containing a service is saved, this service is stored by name. This means that if the service name changes, you will need to manually update the filter accordingly. From DataMiner 9.0.5 onwards, services in an alarm filter are stored by ID when possible. This means that a manual update is then only necessary if a filter contains wildcard expressions or regular expressions.
 
-##### To save an alarm filter:
+#### To save an alarm filter:
 
 1. Create a filter as described in [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
@@ -725,7 +725,7 @@ When you create a filter in the Alarm Console, you can save it in order to use i
 
 6. Click *Save*.
 
-##### To use a saved alarm filter:
+#### To use a saved alarm filter:
 
 1. Create a filtered tab as described in steps 1 and 2 in [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
@@ -738,7 +738,7 @@ When you create a filter in the Alarm Console, you can save it in order to use i
 
 4. Proceed as in [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 
-##### To edit or delete a saved alarm filter:
+#### To edit or delete a saved alarm filter:
 
 1. Select the filter from the *Saved filters* as if you were going to use it.
 
@@ -757,7 +757,7 @@ When you create a filter in the Alarm Console, you can save it in order to use i
 
 4. To save any changes, click *OK*.
 
-### Using the RCA slider
+## Using the RCA slider
 
 Alarms on elements, parameters or services included in a connectivity chain have an RCA level. This indicates how far the element, parameter or service is away from the most probable cause of the alarm. In the Alarm Console, it is possible to filter alarms based on Root Cause Analysis (RCA). This way, you can for instance filter out alarms with high RCA levels to get an overview of the root problems only.
 
@@ -790,7 +790,7 @@ To filter alarms based on their RCA level:
 > See also:
 > [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor)
 
-### Configuring a custom alert sound for an alarm tab
+## Configuring a custom alert sound for an alarm tab
 
 From DataMiner 9.5.1 onwards, it is possible to make Cube display a custom alert sound when an alarm enters an alarm tab or increases in severity while it is not yet acknowledged or read (depending on the settings). This is possible for all alarm tabs except tabs showing history alarms or alarms in a sliding window.
 
@@ -835,7 +835,7 @@ To do so:
 >     - *General* > *Alarms* > *Audible Alert* > *Delete audio files*.
 > - If you do not have the right to add audio files, you will not be able to select the *Audible alert* option as long as no audio files have been added yet. Cube checks for the availability of these files when you connect, so if another user adds a file, the *Audible alert* option becomes available after a reconnect.
 
-### Alarm Console columns
+## Alarm Console columns
 
 The table below contains all the columns available in the Alarm Console. By default, not all columns are shown in Cube.
 
@@ -906,7 +906,7 @@ For more information on changing the column layout, see [Changing the column lay
 | Service properties              | Any available custom service properties.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | View properties                 | Any available custom view properties.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-### Alarm Console settings
+## Alarm Console settings
 
 To access specific settings for the Alarm Console, click the hamburger button in the top-left corner of the console.
 
@@ -981,7 +981,7 @@ The following settings are available:
 > [!NOTE]
 > To display Alarm Console group statistics, to display a horizontal scrollbar in the alarm list, or to configure the Alarm Console, refer to the general settings in Cube instead. See [User settings](xref:User_settings).
 
-### Alarm Console right-click menu
+## Alarm Console right-click menu
 
 When you right-click an alarm in the Alarm Console, depending on the configuration, the following options can be available:
 

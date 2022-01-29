@@ -2,7 +2,7 @@
 uid: Deleting_element_data_from_a_MySQL_database
 ---
 
-## Deleting element data from a MySQL database
+# Deleting element data from a MySQL database
 
 On a DMA using a MySQL general database, the current values of all element parameters marked “to be saved” in the element are saved in a local MySQL database table called “elementdata\_\[DMAID\]”. If, for some reason, you want all or some of those parameter values to be cleared, refer to the instructions below.
 
@@ -12,7 +12,7 @@ On a DMA using a MySQL general database, the current values of all element param
 > [!WARNING]
 > Only people with the appropriate skills should be allowed to manipulate database contents directly. Incorrect changes made to the database can damage your entire DataMiner System.
 
-##### For one particular element on a DMA
+#### For one particular element on a DMA
 
 Execute the following SQL delete statement:
 
@@ -23,7 +23,7 @@ DELETE FROM elementdata_[DMAID] WHERE iEID = [Element ID, NOT preceded by the DM
 > [!NOTE]
 > If, for a particular element, you only want to delete values of specific parameters, add a parameter restriction (e.g. “AND iPID = 102” or “AND iPID \>= 100”) to the WHERE clause.
 
-##### For all elements on a DMA
+#### For all elements on a DMA
 
 1. Rename the elementdata\_\[DMAID\] table to elementdata\_\[DMAID\]\_old by executing the following SQL statement:
 

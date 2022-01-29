@@ -2,7 +2,7 @@
 uid: SLNetClientTest_tool_diagnostic_procedures
 ---
 
-## SLNetClientTest tool diagnostic procedures
+# SLNetClientTest tool diagnostic procedures
 
 This section contains the following procedures:
 
@@ -42,7 +42,7 @@ This section contains the following procedures:
 
 - [Retrieving information on open GQI sessions](#retrieving-information-on-open-gqi-sessions)
 
-### Consulting license information for a DMA
+## Consulting license information for a DMA
 
 > [!NOTE]
 > To view license information regarding third-party software, go to *http(s)://**\[DMA name or IP\]**/Licenses* (available from DataMiner 9.5.14 onwards).
@@ -62,7 +62,7 @@ To get an overview of the number of elements monitored with license counters, do
     > [!NOTE]
     > To know the total number allowed by the license, in the list of applications a DMA is licensed for, look for keys with a number at the end, e.g. ELEMENTS500, SPECTRUMELEMENTS10, PROTOCOLMICROSOFTPLATFORM:5. The number indicates the total allowed license counters.
 
-### Verifying Sync rules
+## Verifying Sync rules
 
 The SlNetClientTest tool allows the user to check which Sync rules are in effect on a DMA. To do so:
 
@@ -78,7 +78,7 @@ The SlNetClientTest tool allows the user to check which Sync rules are in effect
 > See also:
 > [SyncRules.xml](xref:SyncRules_xml#syncrulesxml)
 
-### Debugging callback timeout errors
+## Debugging callback timeout errors
 
 When clients connect to a DataMiner Agent via eventing, the server can throw out the client when it takes longer than a particular number of seconds (default: 30) to send a packet of events to that client over the callback connection. In that case, a "callback timeout (waited 30 s)" type error is generated. This mechanism also applies to connections between DataMiner Agents. Possible reasons for such callback timeouts could be an unreachable destination (e.g. client was stopped, or firewall intervened), or also that the packet of data being forwarded is too large.
 
@@ -99,7 +99,7 @@ To debug such errors, you can do the following in the SLNetClientTest tool:
 > [!NOTE]
 > These options are not remembered across SLNet restarts, and apply to one DataMiner Agent only.
 
-### Consulting replication information for other DMAs in a DMS
+## Consulting replication information for other DMAs in a DMS
 
 It is possible to request information on the number of source elements and services on a DMA that are being replicated by other DMAs in the DataMiner System.
 
@@ -107,7 +107,7 @@ To do so:
 
 - In the *Diagnostics* menu, select *Caches & Subscriptions \> ReplicationInfo.*
 
-### Inspecting the active replication buffers
+## Inspecting the active replication buffers
 
 To solve issues with replication buffering, it is possible to inspect the active replication buffers with the SLNetClientTest tool, and also to drop a specific buffer.
 
@@ -130,7 +130,7 @@ To drop one specific replication buffer:
 > [!NOTE]
 > When a replication buffer saves files to disk, those files are located in C:\\Skyline DataMiner\\ System Cache\\SLNet and are named "ReplicationBuffer_clienthostname_ip_dmaid_eid_objectid.bin".
 
-### Consulting Correlation information
+## Consulting Correlation information
 
 The SLNetClientTest tool provides several functions to get more information about Correlation on a DMA.
 
@@ -158,7 +158,7 @@ To consult information about the Correlation rules of a DMA:
 
     The window lists the DMA handling each rule, buckets, sliding window status, etc. The context menu of the entries in the *Buckets* pane provides access to more detailed info.
 
-### Activating verbose Correlation logging
+## Activating verbose Correlation logging
 
 To activate verbose Correlation logging:
 
@@ -175,7 +175,7 @@ To activate verbose Correlation logging:
 > [!NOTE]
 > This option is saved into the file *MaintenanceSettings.xml* under the *\<SLNet>* tag. It is not synchronized across Agents in the DMS.
 
-### Tracking DMA communication
+## Tracking DMA communication
 
 Via the *Follow* menu, you can activate follow mode for several aspects of DMA communication. Messages will then appear in the *Properties* tab of the main menu as the DMA communication is tracked.
 
@@ -211,7 +211,7 @@ To activate follow mode:
 
 To stop follow mode, in the *Follow* menu, select *Stop Following*.
 
-### Consulting connection details
+## Consulting connection details
 
 To view connection details for a specific client or process, do the following:
 
@@ -225,7 +225,7 @@ To view the number of currently active calls between different DMAs in the DMS:
 
     The *Agent Connections* window will be displayed. This window lists among others the number of waiting and active calls towards the DMA (“*Calls to*”) and coming in from a remote DMA (“*Calls From*”), and the number of event packets that have been received from the remote DMA but not yet processed (“*Pending Event Packs*”).
 
-### Creating a dump file for a particular process
+## Creating a dump file for a particular process
 
 With the SLNetClientTest tool, you can create a dump file for a process, i.e. a snapshot of that process at a particular time. To do so:
 
@@ -235,7 +235,7 @@ With the SLNetClientTest tool, you can create a dump file for a process, i.e. a 
 
     A file with the extension .dmp will be saved in the folder *C:\\Skyline Dataminer\\logging\\CrashDump*.
 
-### Requesting information about pending incoming events
+## Requesting information about pending incoming events
 
 With the SLNetClientTest tool, there are two ways to request information on the number of events being passed from one DMA to another:
 
@@ -243,7 +243,7 @@ With the SLNetClientTest tool, there are two ways to request information on the 
 
 - To see the list of incoming event packages waiting to be processed, go to *Diagnostics* > *Connections* > *OpenClientConnections*.
 
-### Exporting data to a CSV file
+## Exporting data to a CSV file
 
 For debugging purposes, you can export data from the SLNetClientTest tool to a CSV file that is updated whenever the data is refreshed. The data in that file can then, for example, be used to track the evolution of a certain value over time.
 
@@ -262,7 +262,7 @@ For debugging purposes, you can export data from the SLNetClientTest tool to a C
 
 To delete existing exports, follow the same procedure, and click delete in the *Export Configuration* window.
 
-### Retrieving DCF debug information
+## Retrieving DCF debug information
 
 To get debug information on DCF connections, from DataMiner 9.0.0 CU16/9.5.3 onwards, you can send SLNet requests for DCF path highlighting with a DEBUG flag.
 
@@ -292,7 +292,7 @@ To retrieve DCF debug information:
 
     In the *Properties* tab of the main window, a new message will appear with the debug information. Select the message to view the details in the *Text* pane on the right.
 
-### Checking a hyperlink filter
+## Checking a hyperlink filter
 
 From DataMiner 9.5.7 onwards, filters can be specified with a *filterElement* attribute in Hyperlink tags in *Hyperlinks.xml*. In the SLNetClientTest tool you can test such filters:
 
@@ -308,7 +308,7 @@ From DataMiner 9.5.7 onwards, filters can be specified with a *filterElement* at
 > See also:
 > [filterElement](xref:Hyperlinks_xml#filterelement)
 
-### Requesting an estimate of the number of rows for a storage type in the database
+## Requesting an estimate of the number of rows for a storage type in the database
 
 From DataMiner 9.5.13 onwards, it is possible to request an estimate of the how many rows there are for a certain storage type in the database.
 
@@ -328,7 +328,7 @@ To request such an estimate:
 
     The estimate will be displayed at the bottom of the window.
 
-### Requesting a list of active merge actions for a protocol
+## Requesting a list of active merge actions for a protocol
 
 From DataMiner 9.5.14 onwards, it is possible to request a list of currently active merge actions for protocols doing aggregation actions. This can be useful as debug information in case aggregated values do not update as intended.
 
@@ -340,7 +340,7 @@ To do so:
 
     The result will be displayed in the *Output* tab of the tool.
 
-### Retrieving connection info for a particular element
+## Retrieving connection info for a particular element
 
 From DataMiner 9.6.13 onwards, it is possible to retrieve connection information for a particular element. This can for instance be useful to detect the reason for timeouts.
 
@@ -352,7 +352,7 @@ To do so:
 
     The connection information will be displayed in the *Output* tab of the tool.     If a timeout status is listed, this is the internal timeout status, without taking the configured element timeout time into account (which means that the element might not yet be considered to be in timeout in DataMiner).
 
-### Retrieving information on open GQI sessions
+## Retrieving information on open GQI sessions
 
 From DataMiner 10.2.0/10.1.7 onwards, you can retrieve information on how many GQI (i.e. generic queries interface, the interface used for queries in the Dashboards app) sessions are currently open.
 

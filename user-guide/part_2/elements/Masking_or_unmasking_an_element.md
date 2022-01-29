@@ -2,7 +2,7 @@
 uid: Masking_or_unmasking_an_element
 ---
 
-## Masking or unmasking an element
+# Masking or unmasking an element
 
 It is possible to mask an element, so that any alarms on that element will not show in the active alarms. This can for instance be done to avoid unnecessary follow-up when an element is being tested.
 
@@ -14,7 +14,7 @@ It is possible to mask an element, so that any alarms on that element will not s
 > See also:
 > [Masking and unmasking alarms](xref:Masking_and_unmasking_alarms)
 
-### Masking an element
+## Masking an element
 
 1. Right-click the element in the Surveyor and select *Mask*.
 
@@ -39,7 +39,7 @@ It is possible to mask an element, so that any alarms on that element will not s
 
 4. Click *Mask*.
 
-### Unmasking an element
+## Unmasking an element
 
 1. Right-click a masked element in the Surveyor, and select *Unmask*.
 

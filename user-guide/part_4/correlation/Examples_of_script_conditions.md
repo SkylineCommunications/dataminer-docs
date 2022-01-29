@@ -2,7 +2,7 @@
 uid: Examples_of_script_conditions
 ---
 
-## Examples of script conditions
+# Examples of script conditions
 
 Below, you can find a number of examples of script conditions you can use in Correlation rules.
 

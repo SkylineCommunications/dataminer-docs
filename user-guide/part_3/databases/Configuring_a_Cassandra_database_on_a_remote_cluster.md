@@ -2,7 +2,7 @@
 uid: Configuring_a_Cassandra_database_on_a_remote_cluster
 ---
 
-## Configuring a Cassandra database on a remote cluster
+# Configuring a Cassandra database on a remote cluster
 
 Different setups are possible where the Cassandra general database runs entirely on one or more external nodes, as illustrated below. However, these require an advanced procedure with manual adjustments of the Cassandra settings.
 
@@ -145,7 +145,7 @@ To link a DMA to a remote server with a Cassandra database:
 
 7. Once you are sure you no longer need the old database data as a backup (e.g. a few months after the migration), remove the old database data folders (by default *C:\\ProgramData\\Cassandra\\SLDMADB* and *C:\\ProgramData\\Cassandra\\sldmadb_ticketing*).
 
-### Configuring a Failover setup with remote Cassandra databases
+## Configuring a Failover setup with remote Cassandra databases
 
 To configure a Failover setup with remote Cassandra databases:
 

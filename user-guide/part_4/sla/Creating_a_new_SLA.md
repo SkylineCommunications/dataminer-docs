@@ -2,7 +2,7 @@
 uid: Creating_a_new_SLA
 ---
 
-## Creating a new SLA
+# Creating a new SLA
 
 If a Service Level Agreement (SLA) exists for a particular service, you can create an SLA element in DataMiner to monitor the SLA parameters. To do so:
 

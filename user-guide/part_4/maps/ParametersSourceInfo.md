@@ -2,7 +2,7 @@
 uid: ParametersSourceInfo
 ---
 
-## ParametersSourceInfo
+# ParametersSourceInfo
 
 In the *\<ParametersSourceInfo>* tag, specify the parameters from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
 
@@ -23,11 +23,11 @@ In the *\<ParametersSourceInfo>* tag, specify the parameters from which to retri
 
 - If the *style* attribute is set to “lines”, the layer will display lines, each connecting two pairs of latitude/longitude values. Each line will be displayed as a geodesic, a segment of a “great circle” representing the shortest distance between two points on the surface of the Earth.
 
-### ParametersSourceInfo subTags
+## ParametersSourceInfo subTags
 
 Inside the *\<ParametersSourceInfo>* tag, you can place the following tags.
 
-#### LatitudePID/LongitudePID/LatitudePID2/LongitudePID2
+### LatitudePID/LongitudePID/LatitudePID2/LongitudePID2
 
 The parameter IDs containing the latitude and longitude values.
 
@@ -35,13 +35,13 @@ The parameter IDs containing the latitude and longitude values.
 
 - If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudePID>* and *\<LongitudePID>* tags, and another pair in the *\<LatitudePID2>* and *\<LongitudePID2>* tags.
 
-#### MarkerSelectionPID
+### MarkerSelectionPID
 
 In this optional tag, you can specify the ID of the parameter containing a marker image ID.
 
 If, for a specific marker, this parameter contains an image ID corresponding to a particular MarkerImage ID, then the marker will be displayed on the map using that specific marker image. If, however, no marker image can be found of which the ID matches the image ID that was retrieved, then the marker will be displayed using the first marker image defined in the *\<MarkerImages>* tag.
 
-#### ViewFilter
+### ViewFilter
 
 In this tag, specify a view ID if you want to narrow down the number of views from which to retrieve the necessary parameter values.
 
@@ -49,11 +49,11 @@ In this tag, specify a view ID if you want to narrow down the number of views fr
 
 - In the includeSubViews attribute, specify whether or not to include the underlying subviews. Default: false
 
-#### ProtocolFilter
+### ProtocolFilter
 
 In this tag, specify the name of a protocol if you want the layer data only to be retrieved from parameters of elements based on that specific protocol.
 
-#### ParameterFilters
+### ParameterFilters
 
 In this optional tag, you can specify one or more filters in *\<ParameterFilter>* tags.
 
@@ -67,11 +67,11 @@ value=[ParameterID][Operator][Value]
 > - There must be a space before and after the operator. Possible operators: == (equal to) and != (not equal to)
 > - In a parameter filter, you can use placeholders referring to variables declared in the *\<ParametersSourceInfo>* tag. The \[DMA_USERNAME\] placeholder, however, is a general placeholder that does not need to be declared. At runtime, it will be replaced by the name of the current user.
 
-### Passing ParametersSourceInfo data along in the map’s URL
+## Passing ParametersSourceInfo data along in the map’s URL
 
 The element, service and view filter can be passed along as a parameter in the map’s URL.
 
-#### elementDataVar
+### elementDataVar
 
 If you want to have an element placed on a map using location coordinates stored in another element, add an elementDataVar attribute to the *\<ParametersSourceInfo>* tag, and set its value to “elementdata”.
 
@@ -105,7 +105,7 @@ Result:
 > [!NOTE]
 > It is possible to specify this attribute in the *\<PropertiesSourceInfo>* tag instead. See [Passing PropertiesSourceInfo data along in the map’s URL](xref:PropertiesSourceInfo#passing-propertiessourceinfo-data-along-in-the-maps-url).
 
-#### elementVar
+### elementVar
 
 If, in the *\<ParametersSourceInfo>* tag, you add an elementVar attribute with value “myElement” (referring to an element using the syntax “DMAID/ElementID” or “NameOfElement”), then you can use a map URL like one of the following instead (notice the “d” in front of the parameter name!):
 
@@ -114,11 +114,11 @@ maps.aspx?config=MyConfigFile&dmyElement=7/46840
 maps.aspx?config=MyConfigFile&dmyElement=VesselData
 ```
 
-#### serviceVar
+### serviceVar
 
 Similar to the elementVar attribute, you can also use the serviceVar attribute to pass a service name or service ID along in the map’s URL. To do so, add a serviceVar attribute with value “myService”, referring to a service using the syntax “DMAID/ServiceID” or “NameOfService”.
 
-##### Example:
+#### Example:
 
 ```xml
 <ParametersSourceInfo type="services" serviceVar="MyService"
@@ -132,7 +132,7 @@ You can then use a map URL like the following:
 http://localhost/maps/map.aspx?config=managedservices&dMyService=ship
 ```
 
-#### idVars
+### idVars
 
 If, in the *\<ParametersSourceInfo>* tag, you add a *\<ViewFilter>* tag with an idVars attribute set to “myView” (referring to a view either by ID or by name), then you can pass the view as a parameter in the map’s URL in the following manner (notice the “d” in front of the parameter name!):
 
@@ -143,9 +143,9 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 > [!NOTE]
 > In the value of an idVars attribute, you can specify several parameters separated by semicolons (”;”).
 
-### Examples
+## Examples
 
-#### Example of a layer retrieving its data from element parameters
+### Example of a layer retrieving its data from element parameters
 
 ```xml
 <Layer sourceType="parameters" refresh="20000" autoFit="true" visible="false" allowToggle="true"  name="element parameters" toggleGroup="Elements">
@@ -175,7 +175,7 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 </Layer>
 ```
 
-#### Example of a layer retrieving its data from service parameters (prior to DataMiner version 9.0.3)
+### Example of a layer retrieving its data from service parameters (prior to DataMiner version 9.0.3)
 
 ```xml
 <Layer sourceType="parameters" refresh="20000" autoFit="true" visible="false" allowToggle="true"  name="service parameters" toggleGroup="Services">
@@ -188,7 +188,7 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 </Layer>
 ```
 
-#### Example of a layer retrieving its data from service parameters and using pop-up balloons (DataMiner 9.0.3 onwards)
+### Example of a layer retrieving its data from service parameters and using pop-up balloons (DataMiner 9.0.3 onwards)
 
 ```xml
 <Layer sourceType="parameters" refresh="20000" autoFit="false" visible="false" allowToggle="true"  name="Service parameters iDirect">
@@ -211,7 +211,7 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 </Layer>
 ```
 
-#### Example of a layer retrieving line data from element parameters
+### Example of a layer retrieving line data from element parameters
 
 ```xml
 <Layer sourceType="parameters" refresh="20000" autoFit="true" visible="false" allowToggle="true" name="element line parameters" toggleGroup="Elements">
@@ -227,7 +227,7 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 </Layer>
 ```
 
-#### Example of a ParametersSourceInfo tag containing parameter filters
+### Example of a ParametersSourceInfo tag containing parameter filters
 
 ```xml
 <ParametersSourceInfo type="elements" filterVars="vessel">

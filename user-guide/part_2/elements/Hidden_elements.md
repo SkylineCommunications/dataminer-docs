@@ -2,7 +2,7 @@
 uid: Hidden_elements
 ---
 
-## Hidden elements
+# Hidden elements
 
 Hidden elements are mostly created for internal purposes. They have no virtual IP address.
 
@@ -13,7 +13,7 @@ You could, for example, create a hidden IO gateway that reads analog and digital
 > [!NOTE]
 > Hidden elements have no influence on the alarm state of a view. They are also not included in DataMiner dashboards or reports.
 
-#### Creating hidden elements
+### Creating hidden elements
 
 To create a hidden element, follow the normal procedure for element creation, but select the option *Hidden*.
 
@@ -21,7 +21,7 @@ To create a hidden element, follow the normal procedure for element creation, bu
 > See also:
 > [Adding and deleting elements](xref:Adding_and_deleting_elements)
 
-#### Viewing hidden elements
+### Viewing hidden elements
 
 To view hidden elements in DataMiner Cube:
 

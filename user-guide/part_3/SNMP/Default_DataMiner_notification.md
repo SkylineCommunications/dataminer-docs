@@ -2,9 +2,9 @@
 uid: Default_DataMiner_notification
 ---
 
-## Default DataMiner notification
+# Default DataMiner notification
 
-### SNMPv1 header data
+## SNMPv1 header data
 
 By default, the header of an SNMPv1 notification will contain the following data.
 
@@ -15,7 +15,7 @@ By default, the header of an SNMPv1 notification will contain the following data
 | generic-trap  | enterpriseSpecific (6)                              |
 | specific-trap | Parameter ID                                        |
 
-### SNMPv2/SNMPv3 special bindings
+## SNMPv2/SNMPv3 special bindings
 
 Contrary to an SNMPv1 notification, an SNMPv2 or SNMPv3 notification does not have header data. Instead, it contains two special bindings at the top of the bindings list.
 
@@ -28,7 +28,7 @@ Contrary to an SNMPv1 notification, an SNMPv2 or SNMPv3 notification does not ha
 
     Default value: 1.3.6.1.4.1.8813.0.3
 
-### Default bindings
+## Default bindings
 
 In the list below, you will find the default bindings contained in a standard SNMP notification sent by DataMiner to third-party SNMP managers.
 

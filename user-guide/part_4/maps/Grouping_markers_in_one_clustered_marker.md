@@ -2,7 +2,7 @@
 uid: Grouping_markers_in_one_clustered_marker
 ---
 
-## Grouping markers in one clustered marker
+# Grouping markers in one clustered marker
 
 Especially for maps with a large number of markers, it can be useful to group multiple markers in one clustered marker. The clustered marker will show the number of markers in the group, and will take the alarm color of the highest alarm level of any of the markers.
 
@@ -16,7 +16,7 @@ In this section:
 
 - [\<MarkerImages> tag](#markerimages-tag)
 
-### Minimal configuration
+## Minimal configuration
 
 The following is the minimal configuration required to use clustered markers:
 
@@ -30,7 +30,7 @@ The following is the minimal configuration required to use clustered markers:
 </MapConfig>
 ```
 
-### Default configuration
+## Default configuration
 
 Clustered markers can be configured using a number of settings. If you do not specify any of those settings, DataMiner will use the following default configuration:
 
@@ -46,7 +46,7 @@ Clustered markers can be configured using a number of settings. If you do not sp
 </ClusteredMarkers>
 ```
 
-### Attributes of the \<ClusteredMarkers> tag
+## Attributes of the \<ClusteredMarkers> tag
 
 The following attributes can be used in the *\<ClusteredMarkers>* tag:
 
@@ -58,13 +58,13 @@ The following attributes can be used in the *\<ClusteredMarkers>* tag:
 | ZoomOnClick     | Determines whether the “zoom on click” feature is enabled.                                                                                                                                                                                                                                                                                                                                                                              |
 | SpiderfyOnClick | Available from DataMiner 9.5.2 onwards.<br> When SpiderfyOnClick is set to “true”, clustered markers will be spiderfied when clicked. As this option replaces the default ZoomOnClick option, in this case, ZoomOnClick should be set to false.<br> E.g.: *\<ClusteredMarkers enable="true" maxzoom="5" gridsize="60" zoomonclick="false" spiderfyonclick="true">* |
 
-### \<MarkerImages> tag
+## \<MarkerImages> tag
 
 In the *\<MarkerImages>* tag, you can define the set of marker images that can be used by the cluster. The configuration settings are identical to those used in the Layers.MarkerImages tag. See [MarkerImages](xref:MarkerImages).
 
 The first MarkerImage will be used for clusters containing a small number of markers, while the last MarkerImage will be used for clusters with a very large number of markers. These images can be small, large, transparent, semi-transparent, etc.
 
-### Defining clustered markers per layer
+## Defining clustered markers per layer
 
 From DataMiner 9.5.5 onwards, it is possible to define clustered markers at layer level.
 

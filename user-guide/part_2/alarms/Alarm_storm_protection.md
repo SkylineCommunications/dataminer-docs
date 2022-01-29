@@ -2,7 +2,7 @@
 uid: Alarm_storm_protection
 ---
 
-## Alarm storm protection
+# Alarm storm protection
 
 In order to avoid Cube getting flooded by a large number of alarms, it is possible to enable alarm storm protection.
 
@@ -25,7 +25,7 @@ These two alarm storm protection types can be combined.
 > See also:
 > <https://community.dataminer.services/video/ruis-rapid-recap-alarm-storm-prevention/>
 
-### Configuring alarm storm protection
+## Configuring alarm storm protection
 
 To configure alarm storm protection:
 
@@ -56,7 +56,7 @@ To configure alarm storm protection:
         > [!NOTE]
         > Only alarm updates with a higher severity than the current severity of an alarm are taken into account.
 
-### About alarm storm mode
+## About alarm storm mode
 
 When alarm storm mode is activated, the following happens:
 

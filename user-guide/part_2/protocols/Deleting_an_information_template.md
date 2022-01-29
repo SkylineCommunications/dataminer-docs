@@ -2,7 +2,7 @@
 uid: Deleting_an_information_template
 ---
 
-## Deleting an information template
+# Deleting an information template
 
 If you are absolutely sure that an information template is no longer being used in your DataMiner System, you can choose to delete it.
 

@@ -2,7 +2,7 @@
 uid: Elements_logging
 ---
 
-## Elements logging
+# Elements logging
 
 The *Elements* page shows the log information for the various elements in the DMS.
 
@@ -22,7 +22,7 @@ This page consists of three sections:
 > - To quickly go to the logging for a particular element from the Surveyor, right-click the element in the Surveyor and select *View \> Log*.
 > - If an element is renamed, the log file for that element will also be renamed.
 
-### Changing log levels
+## Changing log levels
 
 The log levels of each element are indicated to the right of the element name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc.
 
@@ -39,11 +39,11 @@ In the *Log settings* section, you can change the log levels for each element. T
 > [!NOTE]
 > Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
 
-### Sorting the log file list
+## Sorting the log file list
 
 Sorting the log file list in the *Elements* page is done in the same way as for the *DataMiner* page. See [Sorting the log file list](xref:DataMiner_logging#sorting-the-log-file-list).
 
-### Clearing log files
+## Clearing log files
 
 It is possible to clear the log file for an element, or for several elements at a time.
 

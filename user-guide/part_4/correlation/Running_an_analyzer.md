@@ -2,7 +2,7 @@
 uid: Running_an_analyzer
 ---
 
-## Running an analyzer
+# Running an analyzer
 
 To run a Correlation analyzer:
 

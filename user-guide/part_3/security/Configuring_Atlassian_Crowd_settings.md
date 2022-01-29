@@ -2,7 +2,7 @@
 uid: Configuring_Atlassian_Crowd_settings
 ---
 
-## Configuring Atlassian Crowd settings
+# Configuring Atlassian Crowd settings
 
 DataMiner can import users and groups from an Atlassian Crowd server and can also rely on this type of server for user authentication.
 
@@ -12,7 +12,7 @@ This section contains the following information on Atlassian Crowd settings:
 
 - [Authenticating DataMiner users against an Atlassian Crowd server](#authenticating-dataminer-users-against-an-atlassian-crowd-server)
 
-### Importing users and groups from a Crowd server into DataMiner
+## Importing users and groups from a Crowd server into DataMiner
 
 DataMiner can import users and groups from an Atlassian Crowd server.
 
@@ -26,7 +26,7 @@ In the file *DataMiner.xml*, enter a *\<Crowd>* tag like the one in the example 
 
 In the Atlassian Crowd server, make sure there is an application named “dataminer” (as specified in the *DataMiner.xml* file), that it can be accessed using the password specified in the *DataMiner.xml* file, and that it contains the necessary users and user groups. Also make sure to add the IP address of the DataMiner Agent to the list of remote addresses.
 
-### Authenticating DataMiner users against an Atlassian Crowd server
+## Authenticating DataMiner users against an Atlassian Crowd server
 
 From DataMiner 8.5.1 onwards, DataMiner users can be authenticated against an Atlassian Crowd server.
 
@@ -46,7 +46,7 @@ To configure this, open the *DataMiner.xml* file, add an *\<ExternalAuthenticati
 >
 > In case Crowd single sign-on is used, as soon as the DataMiner Agent receives the SSO configuration from the Crowd server it authenticates against, it will pass this configuration on to the DataMiner Cube client in the form of a cookie.
 
-#### autoproxy setting
+### autoproxy setting
 
 When configuring an Atlassian Crowd server in *DataMiner.xml*, you can use the autoproxy setting to override automatic detection of proxy server settings.
 

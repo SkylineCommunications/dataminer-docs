@@ -2,7 +2,7 @@
 uid: Making_a_shape_display_an_image
 ---
 
-## Making a shape display an image
+# Making a shape display an image
 
 Using a shape data field of type **Link**, you can make a shape display an image located on a web server or a DMA.
 
@@ -12,7 +12,7 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
 > See also:
 > [Linking a shape to a video thumbnail](xref:Linking_a_shape_to_a_video_thumbnail)
 
-### In DataMiner Cube
+## In DataMiner Cube
 
 1. Right-click the Visio drawing, and click *Edit Mode*.
 
@@ -36,7 +36,7 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
 
 5. Click Save.
 
-### In Visio
+## In Visio
 
 1. Right-click the Visio drawing, and click *Edit In Visio*.
 
@@ -55,7 +55,7 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
 > [!NOTE]
 > By default, a thumbnail of type *Generic Images* always uses the DMA as a proxy. However, from DataMiner 9.0.0 CU22/9.5.8 onwards, you can add an extra URL parameter, “proxy”, in order to override this behavior. For example: <br>*http://\<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=\<IMG URL>&proxy=false*.
 
-### Displaying images located on a DataMiner Agent
+## Displaying images located on a DataMiner Agent
 
 If you want a shape to display an image located on a DMA, then do the following:
 

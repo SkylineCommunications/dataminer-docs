@@ -2,13 +2,13 @@
 uid: Linking_a_shape_to_a_MULTIPLE_SET_command
 ---
 
-## Linking a shape to a MULTIPLE SET command
+# Linking a shape to a MULTIPLE SET command
 
 Using a shape data field of type **Execute**, you can link a shape to a MULTIPLE SET command.
 
 When you link a shape to a MULTIPLE SET command, that command will be executed each time a user clicks that shape.
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Execute** to the shape, and set its value to:
 
@@ -16,13 +16,13 @@ Add a shape data field of type **Execute** to the shape, and set its value to:
 Multiple Set|ViewID|Protocol|ProtocolVersion|ID of write parameter|NewValue|Tooltip|Options|TableRowKey]
 ```
 
-### Options
+## Options
 
 In the above-mentioned command, you can use the following option.
 
 - **NoConfirmation**: No confirmation box will appear when users click the shape.
 
-### Example
+## Example
 
 ```txt
 Multiple Set||Microsoft Platform|Production|1103|MyNewPassword

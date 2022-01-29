@@ -2,6 +2,6 @@
 uid: UIResults_properties
 ---
 
-## UIResults properties
+# UIResults properties
 
 None

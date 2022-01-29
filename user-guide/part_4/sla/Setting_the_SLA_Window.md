@@ -2,7 +2,7 @@
 uid: Setting_the_SLA_Window
 ---
 
-## Setting the SLA Window
+# Setting the SLA Window
 
 To set the SLA window, do the following:
 

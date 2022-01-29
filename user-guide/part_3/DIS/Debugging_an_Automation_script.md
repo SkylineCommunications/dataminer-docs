@@ -2,7 +2,7 @@
 uid: Debugging_an_Automation_script
 ---
 
-## Debugging an Automation script
+# Debugging an Automation script
 
 When you have finished configuring all necessary settings, you can start debugging.
 

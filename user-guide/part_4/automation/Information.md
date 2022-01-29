@@ -2,7 +2,7 @@
 uid: Information
 ---
 
-## Information
+# Information
 
 Use this action to generate an information event in the Alarm Console:
 

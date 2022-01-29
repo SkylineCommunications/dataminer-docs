@@ -2,7 +2,7 @@
 uid: Configuring_SLA_Compliance
 ---
 
-## Configuring SLA Compliance
+# Configuring SLA Compliance
 
 To configure how many violations are allowed in an SLA or what duration these may have, it is necessary to configure SLA Compliance.
 
@@ -14,7 +14,7 @@ To configure SLA compliance, go to the *Compliance Configuration* page of the SL
 
 - [Setting the limit for a single violation](#setting-the-limit-for-a-single-violation)
 
-### Setting the total violation limit
+## Setting the total violation limit
 
 Under *Total violation*, you can specify how long the SLA may be violated during the SLA window before it is considered breached. Two types of total violation can be configured:
 
@@ -42,7 +42,7 @@ To set an absolute limit:
 
     The maximum total violation time will appear next to *Maximum Total Violation Time*.
 
-### Setting the violation count limit
+## Setting the violation count limit
 
 Under *Violation count*, you can specify how many violations may occur before the SLA will be considered breached. For example, if *Violation count* is set to 2, the SLA will only be considered breached when 3 violations have occurred.
 
@@ -51,7 +51,7 @@ To set a maximum number of violations, enter the desired number in the box under
 > [!NOTE]
 > By default, this field is set to *Not used*. To return the field to the default value, use the *Not used* checkbox.
 
-### Setting the limit for a single violation
+## Setting the limit for a single violation
 
 Under *Single violation*, you can specify how long one single violation may last before the SLA is considered breached. As with the total violation limit, you can set either a relative or an absolute limit.
 

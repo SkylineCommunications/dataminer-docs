@@ -2,7 +2,7 @@
 uid: Upload_report_to_shared_folder
 ---
 
-## Upload report to shared folder
+# Upload report to shared folder
 
 Use this action to upload a report to a shared network folder:
 

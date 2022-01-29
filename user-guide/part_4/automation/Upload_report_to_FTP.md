@@ -2,7 +2,7 @@
 uid: Upload_report_to_FTP
 ---
 
-## Upload report to FTP
+# Upload report to FTP
 
 Use this action to upload a report to an FTP server:
 

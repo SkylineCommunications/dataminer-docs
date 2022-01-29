@@ -2,7 +2,7 @@
 uid: Dashboard_Gateway_troubleshooting
 ---
 
-## Dashboard Gateway troubleshooting
+# Dashboard Gateway troubleshooting
 
 The following issues may occur when you try to access the Dashboard Gateway:
 

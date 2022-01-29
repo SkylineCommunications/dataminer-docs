@@ -2,7 +2,7 @@
 uid: States_and_values
 ---
 
-## States and values
+# States and values
 
 This category contains the following visualizations:
 
@@ -16,7 +16,7 @@ This category contains the following visualizations:
 
 - [State timeline](#state-timeline)
 
-### State
+## State
 
 This component displays the state, name and, if applicable, the value of a DataMiner object. This can be an element, a view, a parameter, etc.
 
@@ -96,7 +96,7 @@ To configure the component:
 
     - If a parameter was added as a feed, in the *Labels* section, you can select whether the parameter name, element name or index should be displayed in the component.
 
-### Progress bar
+## Progress bar
 
 This component shows the value of one or more analog parameters with a progress bar. It is available from DataMiner 10.2.0/10.1.7 onwards.
 
@@ -126,7 +126,7 @@ To configure the component:
 
     - *Layout flow*: If the component displays multiple parameters, this option determines whether the different parameters are displayed in rows or columns. If they are displayed in rows, they will be displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
 
-### Gauge
+## Gauge
 
 This component displays a numeric parameter value as a gauge.
 
@@ -184,7 +184,7 @@ To configure the component:
 
         - Alignment: Available from DataMiner 10.2.0/10.1.6 onwards. Only displayed if *Design* is set to *Small* or *Large*. Allows you to align the contents of the components to the left, in the center or to the right.
 
-### Ring
+## Ring
 
 This component displays the name and, if applicable, the value of a DataMiner object within a colored ring matching the state of the object. This can be an element, a view, a parameter, etc.
 
@@ -240,7 +240,7 @@ To configure the component:
 
         - Alignment: Available from DataMiner 10.2.0/10.1.6 onwards. Only displayed if *Design* is set to *Small* or *Large*. Allows you to align the contents of the components to the left, in the center or to the right.
 
-### State timeline
+## State timeline
 
 This component visualizes the alarm state changes over time of a parameter, element or service. By default, it shows a timeline for the last 24 hours, but a time range feed can be added to set the component to a different time range. Available from DataMiner 10.1.0/10.0.10 onwards.
 

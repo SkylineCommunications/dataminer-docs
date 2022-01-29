@@ -2,7 +2,7 @@
 uid: Eventing_or_polling
 ---
 
-## Eventing or polling
+# Eventing or polling
 
 In a DataMiner System, connections between a client application and a DMA as well as connections between two DMAs are established via a single user-defined TCP port using either .NET Remoting or XML Web Services.
 

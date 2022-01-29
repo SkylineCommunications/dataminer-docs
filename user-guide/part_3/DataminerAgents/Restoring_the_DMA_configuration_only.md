@@ -2,7 +2,7 @@
 uid: Restoring_the_DMA_configuration_only
 ---
 
-## Restoring the DMA configuration only
+# Restoring the DMA configuration only
 
 If you do not use the Taskbar Utility to restore the DMA, there are two ways to restore the DMA configuration:
 
@@ -10,7 +10,7 @@ If you do not use the Taskbar Utility to restore the DMA, there are two ways to 
 
 - Using StandAloneUpgrade.exe
 
-### Restoring the configuration manually
+## Restoring the configuration manually
 
 You can manually restore a DMA configuration by copying the *C:\\Skyline DataMiner\\* directory from one server to another.
 
@@ -20,7 +20,7 @@ You can manually restore a DMA configuration by copying the *C:\\Skyline DataMin
 
 2. In the *C:\\Skyline DataMiner\\* directory, delete *DMS.xml*.
 
-### Restoring the configuration using StandAloneUpgrade.exe
+## Restoring the configuration using StandAloneUpgrade.exe
 
 On servers running Microsoft Windows Server 2008 or higher, backups are taken using *StandAloneUpgrade.exe*. You can restore such a backup as follows:
 

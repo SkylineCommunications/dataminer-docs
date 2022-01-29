@@ -2,7 +2,7 @@
 uid: Locking_an_output
 ---
 
-## Locking an output
+# Locking an output
 
 In the *Router Control* module:
 

@@ -2,7 +2,7 @@
 uid: EmailOptions_properties
 ---
 
-## EmailOptions properties
+# EmailOptions properties
 
 - [BCC](#bcc)
 
@@ -16,7 +16,7 @@ uid: EmailOptions_properties
 
 - [TO](#to)
 
-#### BCC
+### BCC
 
 Gets or sets the blank carbon copy (BCC) destination address(es)
 
@@ -24,7 +24,7 @@ Gets or sets the blank carbon copy (BCC) destination address(es)
 string BCC
 ```
 
-#### CC
+### CC
 
 Gets or sets the carbon copy (CC) destination address(es)
 
@@ -32,7 +32,7 @@ Gets or sets the carbon copy (CC) destination address(es)
 string CC
 ```
 
-#### Message
+### Message
 
 Gets or sets the body text of the email message.
 
@@ -40,7 +40,7 @@ Gets or sets the body text of the email message.
 string Message
 ```
 
-#### SendAsPlainText
+### SendAsPlainText
 
 Gets or sets a value indicating whether the email message should be sent as plain text.
 
@@ -50,7 +50,7 @@ If a report is to be included in a plain text message, it will be attached to th
 bool SendAsPlainText
 ```
 
-#### Title
+### Title
 
 Gets or sets the subject text of the email message.
 
@@ -58,7 +58,7 @@ Gets or sets the subject text of the email message.
 string Title
 ```
 
-#### TO
+### TO
 
 Gets or sets the destination address(es)
 

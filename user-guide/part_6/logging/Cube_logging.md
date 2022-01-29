@@ -2,7 +2,7 @@
 uid: Cube_logging
 ---
 
-## Cube logging
+# Cube logging
 
 The *Cube* page shows internal log information related to DataMiner Cube itself.
 

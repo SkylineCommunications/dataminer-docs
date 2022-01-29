@@ -2,7 +2,7 @@
 uid: Adding_options_to_a_session_variable_control
 ---
 
-## Adding options to a session variable control
+# Adding options to a session variable control
 
 If you turned a shape into a control that allows users to update a session variable, you can add a shape data field of type **SetVarOptions** to that same shape to apply one or more of the following options:
 
@@ -18,7 +18,7 @@ If you turned a shape into a control that allows users to update a session varia
 > - [Initializing a session variable](xref:Initializing_a_session_variable)
 > - [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **SetVarOptions** to the shape, and set its value depending on which of the following options you want to configure:
 
@@ -121,7 +121,7 @@ Add a shape data field of type **SetVarOptions** to the shape, and set its value
 
     If this option is added to the shape, it will not be possible to update the session variable in any other way except via the shape. This option can be used when, for example, you want to prevent that a session variable is updated by a QAction.
 
-### Creating a text box with input validation
+## Creating a text box with input validation
 
 If, in a shape data field of type **SetVar**, you specify a session variable without a value, then the shape turns into a text box that allows the user to enter a value.
 
@@ -142,7 +142,7 @@ ExistingValuesValidation=DmaID/ElementID,PID
 > [!NOTE]
 > A **SetVar** textbox updates the associated session variable using a “textchanged” event. This means that values are validated on the fly while the user is typing.
 
-#### Error message
+### Error message
 
 If users enter a forbidden value, by default, they get the error message: “The value you entered, already exists.” If you want to customize that message, add a “ValidationText” statement to the **SetVarOptions** field:
 
@@ -150,7 +150,7 @@ If users enter a forbidden value, by default, they get the error message: “The
 ValidationText=My special error text
 ```
 
-#### Combining ExistingValuesValidation and ValidationText
+### Combining ExistingValuesValidation and ValidationText
 
 An “ExistingValuesValidation” statement and a “ValidationText” statement can be combined by means of a pipe character (“\|”).
 
@@ -160,7 +160,7 @@ If you enter the following value in a **SetVarOptions** field, the forbidden val
 ExistingValuesValidation=111/10,104|ValidationText=Incorrect value
 ```
 
-### Creating a combo box control
+## Creating a combo box control
 
 To turn a **SetVar** box into a combo box control:
 
@@ -189,7 +189,7 @@ For example:
 | SetVar           | RecursiveVar:\[param:\[Var:Element\],101\] |
 | SetVarOptions    | Control=ComboBox                           |
 
-### Creating a filtered combo box control
+## Creating a filtered combo box control
 
 To turn a **SetVar** box into a combo box control with a search box, which allows faster filtering than a regular combo box control:
 
@@ -206,7 +206,7 @@ For example:
 | SetVar           | \[Sep::;\]MySessionVariable;\[Param:25/1245,568\] |
 | SetVarOptions    | Control=FilterComboBox                            |
 
-### Creating a DateTime control
+## Creating a DateTime control
 
 If, in a shape data field of type **SetVar**, you specify a session variable without a value, the shape becomes a text box that allows the user to enter a value. If you want to turn a **SetVar** box into a datetime control, add an additional shape data field of type **SetVarOptions**, and set its value to “*Control=DateTime*” or “*Control=DateTime\|ShortTime*”.
 
@@ -221,14 +221,14 @@ From DataMiner 10.2.0/10.1.8 onwards, you can also define the culture that shoul
 |------------------|-------------------------------------------|
 | SetVarOptions    | Control=DateTime\|DateTimeCulture=Current |
 
-### Creating a list box control
+## Creating a list box control
 
 If you want to turn a **SetVar** box into a list box control, add an additional shape data field of type **SetVarOptions**, and set its value to “*Control=ListBox*”.
 
 > [!NOTE]
 > Session variable list boxes have a filter box that allows you to narrow down the values.
 
-#### Populating a list box control
+### Populating a list box control
 
 A list box can be populated in two ways. In the shape data field of type **SetVar**, you can
 
@@ -244,7 +244,7 @@ A list box can be populated in two ways. In the shape data field of type **SetVa
 
     - SortColumn=\[Column parameter ID\]: Sorts the items in the list box by the values of this column
 
-#### Linking two list box controls
+### Linking two list box controls
 
 It is possible to link two list boxes. That way, when you select an item in the first list box, you will filter the values displayed in the second list box.
 
@@ -263,7 +263,7 @@ FKColumn=fkcolpid|Filter=[var:OtherList]
 > [!NOTE]
 > In the “Filter” option, you can also use parameter values, property values or a combination of both (\[Param:...\], \[property:...\], etc.).
 
-### Creating a list of profile instances
+## Creating a list of profile instances
 
 If profile instances have been defined in Cube, the list box control can also be used to display a list of profile instances based on the same base instance, so that these can be linked to a session variable.
 
@@ -278,7 +278,7 @@ To create such a control, configure the **SetVar** and SetVarOptions shape data 
 > See also:
 > [The Profiles module](xref:The_Profiles_module)
 
-### Creating a multiple checkbox control
+## Creating a multiple checkbox control
 
 If you want to turn a **SetVar** box into a multiple checkbox control, add an additional shape data field of type **SetVarOptions**, and set its value to “*Control=MultiCheckBoxHorizontal*” or “*Control=MultiCheckBoxVertical*”.
 
@@ -326,7 +326,7 @@ For example:
 |------------------|------------------------------------------------|
 | SetVarOptions    | control=MultiCheckBoxVertical\|SortColumn=1001 |
 
-### Creating a tree control
+## Creating a tree control
 
 You can update a session variable by means of a shape turned into a tree control with a search box above it and a status line below it.
 
@@ -375,7 +375,7 @@ To turn a shape into a tree control:
         SelectedInfoFormatCountIsNull=Nothing selected| SelectedInfoFormatCountIsOne=One item selected| SelectedInfoFormatCountIsMultiple= Multiple ({0}) items selected| SelectedCount
         ```
 
-#### Examples
+### Examples
 
 | Shape data field | Value                                                                                     |
 |------------------|-------------------------------------------------------------------------------------------|
@@ -387,7 +387,7 @@ To turn a shape into a tree control:
 | SetVar           | Tree2:219/125:101                |
 | SetVarOptions    | Control=TreeView\|IconColumn=120 |
 
-#### Examples of SetVarOptions using conditions
+### Examples of SetVarOptions using conditions
 
 | Shape data field | Value                                                                  |
 |------------------|------------------------------------------------------------------------|
@@ -395,7 +395,7 @@ To turn a shape into a tree control:
 | SetVarOptions    | Control=TreeView\|VisibilityConditionColumn=402==\[thisusersfullname\] |
 | SetVarOptions    | Control=TreeView\|VisibilityConditionColumn=510>=4                     |
 
-#### Example of tree control with subscription filters
+### Example of tree control with subscription filters
 
 In the following example, the first subscription filter (“value=101 == 1”) will be used when subscribing to the first table (with ID 100) and the second subscription filter (“value=201 == A”) will be used when subscribing to the second table (with ID 200).
 

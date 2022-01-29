@@ -2,7 +2,7 @@
 uid: Using_Spectrum_Analysis_presets
 ---
 
-## Using Spectrum Analysis presets
+# Using Spectrum Analysis presets
 
 This section consists of the following topics:
 
@@ -22,7 +22,7 @@ This section consists of the following topics:
 > See also:
 > <https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/>
 
-### About presets
+## About presets
 
 Spectrum Analysis presets can be used to reload settings, to reload a set of markers, to save and reload a trace image, to load a reference trace, etc. The following information can be stored in a preset:
 
@@ -50,7 +50,7 @@ Presets can be saved publicly (i.e. shared) or privately:
 
 - Private: Private presets are only available for the user account that created them. Other users will not be able to see or use these presets.
 
-### Saving presets
+## Saving presets
 
 In order to save a configuration, a preset must already exist that you can save the configuration into.
 
@@ -62,7 +62,7 @@ To save a preset in DataMiner Cube:
 
 3. Click *Save*.
 
-### Loading presets
+## Loading presets
 
 To load a preset in DataMiner Cube:
 
@@ -86,7 +86,7 @@ To load a preset in DataMiner Cube:
 > - You can change the reference trace color in the *trace* tab of the ribbon, by clicking *Color* > *Reference trace*, and selecting the new color.
 > - To hide the reference trace, in the *trace* tab of the ribbon, clear the selection from *Show reference*.
 
-### Creating new presets
+## Creating new presets
 
 To create a new preset in DataMiner Cube:
 
@@ -104,7 +104,7 @@ To create a new preset in DataMiner Cube:
 
     The preset will be added to the list of available presets.
 
-### Editing presets
+## Editing presets
 
 For more information on how to save different information in a preset, see [Saving presets](#saving-presets).
 
@@ -121,7 +121,7 @@ To edit the settings, name or description for a preset:
 > [!NOTE]
 > Shared presets can be used in scripts, so modifications could cause a script to malfunction. Therefore, a warning will be shown when you attempt to modify a preset that is currently used by a script.
 
-### Deleting presets
+## Deleting presets
 
 To delete a preset in DataMiner Cube:
 

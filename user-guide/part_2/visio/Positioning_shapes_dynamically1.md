@@ -2,7 +2,7 @@
 uid: Positioning_shapes_dynamically1
 ---
 
-## Positioning shapes dynamically
+# Positioning shapes dynamically
 
 There are two ways to dynamically position shapes in Visio drawings.
 
@@ -14,7 +14,7 @@ Regardless of the method used to dynamically position shapes, it is possible to 
 
 In addition, certain options can be configured for dynamically positioned shapes. See [Options for dynamically positioned shapes](#options-for-dynamically-positioned-shapes).
 
-### Shape positioning based on coordinates stored in properties of elements, services or views
+## Shape positioning based on coordinates stored in properties of elements, services or views
 
 Suppose you have a view that contains three elements, and you want the Visio drawing linked to that view to display automatically positioned shapes representing each of those three elements.
 
@@ -35,7 +35,7 @@ Suppose you have a view that contains three elements, and you want the Visio dra
 
 Result: For every element underneath the view, the drawing will contain a shape linked to that element and positioned based on the coordinates specified in the properties of that element.
 
-#### Shape data
+### Shape data
 
 - **Element or view**: Enter the following if you want a shape to be drawn for every element, service or view specified. If you specify multiple elements, services or views, separate them by colons (”:”).
 
@@ -111,7 +111,7 @@ Result: For every element underneath the view, the drawing will contain a shape 
     > See also:
     > [Table configuration in the protocol](#table-configuration-in-the-protocol)
 
-### Shape positioning based on coordinates stored in dynamic tables
+## Shape positioning based on coordinates stored in dynamic tables
 
 Suppose you want a Visio drawing to contain an automatically positioned shape for every row in a dynamic table of a particular element.
 
@@ -137,7 +137,7 @@ Suppose you want a Visio drawing to contain an automatically positioned shape fo
 > [!NOTE]
 > If you want to refer to a parameter of the current element, you can replace the element reference by an asterisk (“\*”). Example: **Xpos** = \[param:\*,110\]
 
-#### Linking the automatically positioned shapes to elements, services or views fetched from a table
+### Linking the automatically positioned shapes to elements, services or views fetched from a table
 
 The element, service, or view to which a shape has to be linked can also be fetched from a table. In other words, you can dynamically create a shape for every row in a table.
 
@@ -147,7 +147,7 @@ Those dynamically created shapes can be configured as ordinary element, service,
 
 - The table column from which the element has to be fetched (see below), has to contain element IDs (format: DmaID/ElementID), element names, service IDs (format: DmaID/ServiceID), service names, view IDs, or view names.
 
-#### Table configuration in the protocol
+### Table configuration in the protocol
 
 In the protocol, check the definition of the table parameter that will supply the data to be used:
 
@@ -183,7 +183,7 @@ In the protocol, check the definition of the table parameter that will supply th
     <ColumnOption idx="..." pid="..." type="..." value="" options=";HideKPIWhenNotInitialized" />
     ```
 
-#### Applying a row filter before dynamically positioned shapes are generated
+### Applying a row filter before dynamically positioned shapes are generated
 
 From DataMiner 9.0.5 onwards, it is possible to apply a row filter when dynamically positioning shapes based on table data. Using this filter can considerably increase overall performance.
 
@@ -203,7 +203,7 @@ For example:
 > See also:
 > [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions)
 
-#### Dynamically selecting shape templates for dynamically positioned shapes
+### Dynamically selecting shape templates for dynamically positioned shapes
 
 From DataMiner 9.5.8 onwards, it is possible to specify shape templates for the creation of dynamically positioned shapes based on table data. This can be used to avoid having to define multiple dynamically positioned shapes based on the same table but with different subscription filters.
 
@@ -244,7 +244,7 @@ In the following example, a parent shape subscribes to the table, and three chil
     |--------------------|-----------------------------|
     | Template           | \<A>-A\|Parameter:1101\|==3 |
 
-#### Dynamically setting the interfaces of each dynamically positioned element
+### Dynamically setting the interfaces of each dynamically positioned element
 
 If you use shape positioning based on coordinates stored in dynamic tables, you can also dynamically set the interfaces of each dynamically positioned element.
 
@@ -275,7 +275,7 @@ To do so:
 > [!NOTE]
 > Changes to interfaces are automatically processed by DataMiner Cube and reflected in Visual Overview. If, for example, an element with a particular interface is stopped, the interface will no longer be shown in Visual Overview.
 
-### Options for dynamically positioned shapes
+## Options for dynamically positioned shapes
 
 A number of options are available in case you use dynamic positioning of shapes:
 
@@ -285,7 +285,7 @@ A number of options are available in case you use dynamic positioning of shapes:
 
 - [Positioning shapes based on their rotation point](#positioning-shapes-based-on-their-rotation-point)
 
-#### Disabling the automatic selection filter in an EPM environment
+### Disabling the automatic selection filter in an EPM environment
 
 When shapes are dynamically positioned in an EPM environment, a subscription filter is automatically added to the table, which depends on the current selection of the EPM environment. From DataMiner 9.5.1 onwards, it is possible to disable this automatic filter, so that dynamic positioning is applied to all shapes, and not just to those matching the selection filter.
 
@@ -298,7 +298,7 @@ Example:
 | Xpos             | \[param:9/542,110\] |
 | Options          | NoSelectionFilters  |
 
-#### Overriding the default table loading behavior
+### Overriding the default table loading behavior
 
 From DataMiner 9.5.1 onwards, by default, DataMiner only loads those columns of a dynamic table that are needed to display the table connections and any information those shapes have to contain.
 
@@ -308,7 +308,7 @@ However, in some cases it can be useful to have the entire table retrieved, for 
 |------------------|----------------|
 | Options          | ForceFullTable |
 
-#### Positioning shapes based on their rotation point
+### Positioning shapes based on their rotation point
 
 By default, the position of a dynamically positioned shape is determined based on the physical center of the shape. However, from DataMiner 9.5.12 onwards, it is possible to configure the Xpos shape so that the rotation point of the shape is used instead. To do so, add the **Options** shape data field and set it to *PositionOnCenterOfRotation*.
 
@@ -319,7 +319,7 @@ For example:
 | Xpos             | \[param:451/3808,500\]     |
 | Options          | PositionOnCenterOfRotation |
 
-### Connections between dynamically positioned shapes
+## Connections between dynamically positioned shapes
 
 When using dynamic shape positioning based on coordinates stored in tables, the dynamically positioned shapes can be automatically connected by lines.
 
@@ -329,7 +329,7 @@ For this feature to work, the shape positioning data (i.e. the data describing w
 > - Using different tables for the positioning data is supported, but the keys from the different tables that are used to create the connections must be unique over all the tables. The shapes are linked via the primary keys of the positioning data tables, not via a foreign key relation. Each connection line makes a connection between the two primary keys of the dynamically positioned shapes.
 > - Normally, the shape data fields described below will only be used in EPM environments.
 
-#### Dynamic lines
+### Dynamic lines
 
 Line objects that have to be used to automatically connect shapes should be assigned the following three shape data fields:
 
@@ -394,7 +394,7 @@ Line objects that have to be used to automatically connect shapes should be assi
     > See also:
     > [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)
 
-#### Dynamic shapes
+### Dynamic shapes
 
 If you add a shape data field of type **SelectionDetails** to a shape other than a line, you can specify the IDs of any additional tables that you want to see listed in the *Details* pane of the EPM interface when someone selects that shape:
 
@@ -402,13 +402,13 @@ If you add a shape data field of type **SelectionDetails** to a shape other than
 |ExtraTableID1|ExtraTableID2|...
 ```
 
-##### Example:
+#### Example:
 
 ```txt
 |2000
 ```
 
-#### Navigation options for automatically drawn connections
+### Navigation options for automatically drawn connections
 
 By default, when you click a connection, a KPI window appears. However, you can also specify that when you click a connection, you go to another Visio page or you get to see a Visio page in either a new window or a pop-up.
 

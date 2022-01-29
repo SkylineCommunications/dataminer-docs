@@ -2,7 +2,7 @@
 uid: Element_properties1
 ---
 
-## Element properties
+# Element properties
 
 - [DmaId](#dmaid)
 
@@ -24,7 +24,7 @@ uid: Element_properties1
 
 - [ProtocolVersion](#protocolversion)
 
-#### DmaId
+### DmaId
 
 Gets the ID of the DataMiner Agent on which the element was created.
 
@@ -39,7 +39,7 @@ Element element = engine.FindElement(400, 2000);
 int agentId = element.DmaId;
 ```
 
-#### Dummy
+### Dummy
 
 Gets the script dummy that is linked to the element.
 
@@ -47,7 +47,7 @@ Gets the script dummy that is linked to the element.
 ScriptDummy Dummy
 ```
 
-#### ElementId
+### ElementId
 
 Gets the ID of the element that is linked to the dummy.
 
@@ -62,7 +62,7 @@ Element element = engine.FindElement(400, 2000);
 int elementId = element.ElementId;
 ```
 
-#### ElementName
+### ElementName
 
 Gets the name of the element that is linked to the dummy.
 
@@ -77,7 +77,7 @@ Element element = engine.FindElement(400, 2000);
 string elementName = element.ElementName;
 ```
 
-#### Id
+### Id
 
 Gets the ID of the element that is linked to the dummy.
 
@@ -92,7 +92,7 @@ Element element = engine.FindElement(400, 2000);
 int id = element.Id;
 ```
 
-#### IsActive
+### IsActive
 
 Gets a value indicating whether the element is active (i.e. not stopped or paused).
 
@@ -107,7 +107,7 @@ Element element = engine.FindElement(400, 2000);
 bool isActive = element.IsActive;
 ```
 
-#### Name
+### Name
 
 Gets the name of the element.
 
@@ -125,7 +125,7 @@ string elementName = element.Name;
 > [!NOTE]
 > This property returns the following string: "\_\<agentID>\_\<elementID>" (e.g. "\_100_5612"). To retrieve the element name, use the *ElementName* property.
 
-#### PollingIP
+### PollingIP
 
 Gets the polling IP address of the element.
 
@@ -140,7 +140,7 @@ Element element = engine.FindElement(400, 2000);
 string pollingIP = element.PollingIP;
 ```
 
-#### ProtocolName
+### ProtocolName
 
 Gets the name of the protocol of the element.
 
@@ -155,7 +155,7 @@ Element element = engine.FindElement(400, 2000);
 string protocolName = element.ProtocolName;
 ```
 
-#### ProtocolVersion
+### ProtocolVersion
 
 Gets the protocol version used by the element.
 

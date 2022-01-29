@@ -2,7 +2,7 @@
 uid: Example_of_an_Asset_Manager_mediation_configuration_file
 ---
 
-## Example of an Asset Manager mediation configuration file
+# Example of an Asset Manager mediation configuration file
 
 This is an example of a mediation configuration file:
 

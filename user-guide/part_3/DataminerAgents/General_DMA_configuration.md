@@ -2,9 +2,9 @@
 uid: General_DMA_configuration
 ---
 
-## General DMA configuration
+# General DMA configuration
 
-### Changing the DataMiner ID of a DMA
+## Changing the DataMiner ID of a DMA
 
 In the *DataMiner.xml* file of a DMA, you can change its DataMiner ID.
 
@@ -29,11 +29,11 @@ For example, in the tag below, the DataMiner ID has been set to 7:
 <DataMiner id="7">...</DataMiner>
 ```
 
-### Changing the name of a DMA
+## Changing the name of a DMA
 
 By default, a DataMiner Agent always takes the name of its host server. However, it is possible to configure a custom name.
 
-#### Setting the DMA name in Cube
+### Setting the DMA name in Cube
 
 To set a custom DMA name in Cube:
 
@@ -49,7 +49,7 @@ To set a custom DMA name in Cube:
 
     If you only want to change the alias used in DataMiner instead of changing the actual server name, simply click *Apply* without selecting the checkbox.
 
-#### Setting the DMA name in DataMiner.xml
+### Setting the DMA name in DataMiner.xml
 
 Though it is advisable to change a DMA name in Cube, it is also possible to set the DMA name directly in the file *C:\\Skyline DataMiner\\DataMiner.xml*.
 
@@ -76,7 +76,7 @@ To do so:
 
 6. Restart the DataMiner software.
 
-### Specifying your company data
+## Specifying your company data
 
 In your DataMiner System, you can store general information about your company: the name, address, telephone numbers, email address, logo, and website. The company information you provide will be used throughout the DataMiner System:
 
@@ -120,14 +120,14 @@ To specify these data in DataMiner Cube:
 
 5. Click *Save* to apply your changes.
 
-### Configuring the IP network ports
+## Configuring the IP network ports
 
 A DataMiner System makes extensive use of TCP/IP communication. Below, you find an overview of the TCP and UDP ports being used, as well as instruction on how to change port configurations. This information will especially prove useful when you have to configure firewalls in your network.
 
 > [!NOTE]
 > In new DataMiner installations from DataMiner 10.1.11/10.2.0 onwards, only the essential ports are opened by default (80, 8004, as well as 162 from DataMiner 10.1.12 onwards). To make use of DataMiner functionality that requires additional ports, you will need to manually create a firewall rule for those ports.
 
-#### Overview of IP ports used in a DMS
+### Overview of IP ports used in a DMS
 
 | Protocol           | Ports used                                                                                                                                                                            | Application                                                                                                                                   |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -152,7 +152,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 > - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. However, this port is no longer used from those versions onwards and is no longer opened during new installations.
 > - The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
 
-#### Graphical representation of IP communication within a DMS
+### Graphical representation of IP communication within a DMS
 
 The diagram below shows how communication within a DMS could be set up.
 
@@ -168,13 +168,13 @@ The diagram below shows how communication within a DMS could be set up.
 > - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-dma-communication-settings-in-slnetexeconfig)
 > - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
 
-### Configuring the polling request timeout
+## Configuring the polling request timeout
 
 By default, the DMA polling request timeout is set to 60 seconds. If necessary, it can be changed both server-side and client-side.
 
 DMA polling should not be confused with device polling. It enables DMAs to send notifications to other DMAs in the DataMiner System or to client applications.
 
-#### Server-side
+### Server-side
 
 In the *MaintenanceSettings.xml* file of a DMA, you can add a *\<DefaultPollingRequestTimeout>* tag in the *\<SLNet>* section.
 
@@ -184,11 +184,11 @@ This setting will apply to all new inter-DMA connections set up from that DMA.
 > See also:
 > [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
 
-#### Client-side
+### Client-side
 
 On a DataMiner client machine, you can set the client’s polling request timeout by creating an environment variable named *SLNETTYPES* and setting its value to “pollingTimeout=xxx” (xxx being an amount of seconds).
 
-### Configuring outgoing email
+## Configuring outgoing email
 
 A DMS can be configured to send out email notifications and reports via an SMTP server.
 
@@ -204,11 +204,11 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 > See also:
 > <https://community.dataminer.services/video/agents-configuring-an-email-server/>
 
-#### Prerequisite
+### Prerequisite
 
 In order to send out email notifications or email reports, a DataMiner Agent has to be able to connect to an outgoing email server (SMTP Server).
 
-#### Default “From” address
+### Default “From” address
 
 To specify the default “From” address to be used in outgoing email messages, do the following:
 
@@ -222,7 +222,7 @@ To specify the default “From” address to be used in outgoing email messages,
 
 5. Restart the DataMiner Agent.
 
-#### DataMiner.xml configuration
+### DataMiner.xml configuration
 
 If a DataMiner Agent has to be able to send out email messages, then the *DataMiner.xml* file located in the *C:\\Skyline DataMiner* directory of that DataMiner Agent has to have an *\<SMTP>* section containing the necessary email settings.
 
@@ -241,7 +241,7 @@ If a DataMiner Agent has to be able to send out email messages, then the *DataMi
 > [!NOTE]
 > If there are several DataMiner Agents in your DataMiner System, execute the above-mentioned procedure on every DataMiner Agent that has to be able to send email messages.
 
-##### Basic SMTP server settings
+#### Basic SMTP server settings
 
 - **Host**: The name or IP address of the SMTP server.
 
@@ -274,7 +274,7 @@ If a DataMiner Agent has to be able to send out email messages, then the *DataMi
 
     If LoginMethod is set to “NoLoginMethod”, then no password has to be specified.
 
-##### Advanced SMTP server settings
+#### Advanced SMTP server settings
 
 You can specify the following advanced settings. However, these are not mandatory.
 
@@ -290,7 +290,7 @@ You can specify the following advanced settings. However, these are not mandator
 
     Example: *\<From>address@example.com\</From>*
 
-##### Example of how to use GMail as SMTP server
+#### Example of how to use GMail as SMTP server
 
 ```xml
 <SMTP>
@@ -302,11 +302,11 @@ You can specify the following advanced settings. However, these are not mandator
 </SMTP>
 ```
 
-### Forcing a DataMiner Agent to work without virtual IP addresses
+## Forcing a DataMiner Agent to work without virtual IP addresses
 
 In the file *DataMiner.xml*, you can order a DataMiner Agent not to use virtual IP addresses.
 
-#### Disabling all virtual IP addresses
+### Disabling all virtual IP addresses
 
 To force a DataMiner Agent not to use virtual IP addresses, do the following.
 
@@ -329,7 +329,7 @@ Example:
 <DataMiner disableElementIP="true" >...</DataMiner>
 ```
 
-### Setting the indexing options for the server-side search
+## Setting the indexing options for the server-side search
 
 In the file *MaintenanceSettings.xml*, you can prevent certain items from being indexed by the DataMiner Cube server-side search engine.
 
@@ -369,7 +369,7 @@ To do so:
 > - If the *\<SearchOptions>* tag is empty, then there will be no indexing restrictions. In other words, all items will be indexed.
 > - If no *\<SearchOptions>* tag can be found in *MaintenanceSettings.xml*, indexing will be restricted to “trendedParamsOnly” by default.
 
-### Setting up HTTPS on a DMA
+## Setting up HTTPS on a DMA
 
 To set up your own HTTPS web server, you must first install an SSL certificate and set up an HTTPS binding. In addition, the auto-detection settings for DataMiner must be correctly configured to avoid connection issues.
 
@@ -383,7 +383,7 @@ In this section:
 
 - [Configuring HTTPS settings in MaintenanceSettings.xml](#configuring-https-settings-in-maintenancesettingsxml)
 
-#### Installing the HTTPS connection in IIS
+### Installing the HTTPS connection in IIS
 
 1. Open IIS manager. It can be found under the Administrative Tools in the Control Panel of your computer.
 
@@ -397,7 +397,7 @@ In this section:
 
 6. In the *Add Site Binding* window, add an HTTPS binding with the selected certificate.
 
-#### Setting up redirection of all HTTP traffic to HTTPS
+### Setting up redirection of all HTTP traffic to HTTPS
 
 1. Install URL Rewrite 2.0 from the website <http://www.iis.net/downloads/microsoft/url-rewrite>.
 
@@ -443,7 +443,7 @@ In this section:
 > [!NOTE]
 > Instead of redirecting HTTP traffic to HTTPS, it is also possible to close down HTTP completely by removing the HTTP binding, so that only HTTPS traffic is accepted.
 
-#### Specifying auto-detection information for an inter-DMA HTTPS connection
+### Specifying auto-detection information for an inter-DMA HTTPS connection
 
 If the default web server on the server has been modified to only allow HTTPS traffic, there could be problems with the auto-detection of connection settings.
 
@@ -463,7 +463,7 @@ The following auto-detect methods can be specified:
 > [!NOTE]
 > It depends on the HTTP/HTTPS configuration in IIS whether the above configuration is required. For a server accepting both HTTP and HTTPS, it is normally not necessary.
 
-#### Configuring HTTPS settings in MaintenanceSettings.xml
+### Configuring HTTPS settings in MaintenanceSettings.xml
 
 To configure a server to use HTTPS, a line needs to be added to the file *MaintenanceSettings.xml*. To do so:
 
@@ -490,11 +490,11 @@ To configure a server to use HTTPS, a line needs to be added to the file *Mainte
 
 4. Save the file and restart the DMA.
 
-### Changing the IP of a DMA
+## Changing the IP of a DMA
 
 The way you can change the IP of a DMA depends on how your DataMiner System is set up.
 
-#### Standalone DMA
+### Standalone DMA
 
 For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a cluster:
 
@@ -524,7 +524,7 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 7. Restart DataMiner.
 
-#### Single DMA in a DMS
+### Single DMA in a DMS
 
 For a single DMA within a cluster that does not use the Cassandra cluster feature (i.e. one Cassandra cluster for the entire DMS):
 
@@ -575,7 +575,7 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
     5. Close the SLNetClientTest tool.
 
-#### Failover DMA in a DMS
+### Failover DMA in a DMS
 
 For a Failover DMA within a cluster that does not use the Cassandra cluster feature (i.e. one Cassandra cluster for the entire DMS):
 
@@ -636,7 +636,7 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
     5. Close the SLNetClientTest tool.
 
-#### DMA in a DMS using a Cassandra cluster
+### DMA in a DMS using a Cassandra cluster
 
 If your DataMiner System uses the Cassandra cluster feature for its general database (i.e. one Cassandra cluster for the entire DMS), follow the procedure below to change the IP of one of the DMAs in the DMS:
 
@@ -708,7 +708,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 > See also:
 > [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
 
-### Switching between DataMiner configurations on a DMA
+## Switching between DataMiner configurations on a DMA
 
 For staging, demo and testing purposes, you can maintain different DataMiner configurations on one DataMiner Agent and switch between them in a matter of seconds. If necessary, each of these configurations can use a different DataMiner software version. Note that only one of the configurations can be active at any given time.
 
@@ -725,7 +725,7 @@ When adding a DataMiner configuration to a DMA, you can select
 > See also:
 > [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 
-#### Enabling DataMiner configuration switching on a DMA
+### Enabling DataMiner configuration switching on a DMA
 
 1. Take a backup of the *C:\\Skyline DataMiner* folder, and make sure it is not shared.
 
@@ -759,7 +759,7 @@ When adding a DataMiner configuration to a DMA, you can select
     > [!NOTE]
     > DataMiner Taskbar Utility will stop the running DataMiner software to make sure that none of the files in *C:\\Skyline DataMiner* are locked. In certain rare cases, however, files can be locked by third-party processes. If this is the case, then you will have to kill those processes manually and retry step 7.
 
-#### Adding DataMiner configurations to a DMA
+### Adding DataMiner configurations to a DMA
 
 1. Right-click DataMiner Taskbar Utility in the notification area, select *Use Config \> Manage Configs ...*
 
@@ -777,6 +777,6 @@ When adding a DataMiner configuration to a DMA, you can select
 > - For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages* folder of a particular configuration. In that case, copy them to this folder from the folder *C:\\Skyline DataMiner Configs\\Skyline DataMiner\\Webpages*.
 > - After you have created a new configuration, it is possible that the DMA has problems restarting, so a manual restart is advisable.
 
-#### Switching to another DataMiner configuration
+### Switching to another DataMiner configuration
 
 - Right-click DataMiner Taskbar Utility in the notification area, click *Use Config*, and select one of the listed DataMiner configurations.

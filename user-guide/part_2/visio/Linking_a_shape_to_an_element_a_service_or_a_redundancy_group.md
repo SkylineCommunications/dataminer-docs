@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_an_element_a_service_or_a_redundancy_group
 ---
 
-## Linking a shape to an element, a service or a redundancy group
+# Linking a shape to an element, a service or a redundancy group
 
 Using a shape data field of type **Element**, you can link a shape to an element, a service or a redundancy group.
 
@@ -32,7 +32,7 @@ In this section:
 
 - [Service navigation](#service-navigation)
 
-### Basic shape data field configuration
+## Basic shape data field configuration
 
 Add a shape data field of type **Element** to the shape. Set its value to the item reference, optionally followed by a pipe character (“\|”) and the Visio page number (starting from 1) of the page that should be displayed.
 
@@ -42,7 +42,7 @@ ItemReference|VisioPage
 
 If no Visio page is specified, the default page is opened when the shape is clicked.
 
-#### Item reference
+### Item reference
 
 You can refer to an element, service or redundancy group in the following ways:
 
@@ -61,7 +61,7 @@ You can refer to an element, service or redundancy group in the following ways:
 > - If the Visio drawing is linked to an element, you can link the shape to that same element by using an asterisk (“\*”) as element reference.
 > - The item reference can contain placeholders like \[param\], \[this view\] or \[this service\].
 
-#### Examples
+### Examples
 
 - To create a shape that will open the default page of the Visio drawing linked to the element, service or redundancy group with ID 111/273 (i.e. DMA ID 111, item ID 273):
 
@@ -81,7 +81,7 @@ You can refer to an element, service or redundancy group in the following ways:
     |--------------------|------------------|
     | Element            | MySpecialElement |
 
-### Linking a shape to an element that is part of a service
+## Linking a shape to an element that is part of a service
 
 As service aliases are only unique within a particular service, using service aliases will only work in Visio files that are linked to a service and for items (elements or services) belonging to that service.
 
@@ -98,7 +98,7 @@ For example, in a Visio file that is not linked to the service “MyService”, 
 | Element          | MyPartiallyIncludedElement |
 | ServiceContext   | MyService                  |
 
-### Having a subshape of an Element shape display the alarm color of the element
+## Having a subshape of an Element shape display the alarm color of the element
 
 If a shape is linked to an element, and a subshape of this shape should display the current alarm color of the element, add a shape data field of type **Parameter** to the subshape and set its value to “*\*\|ALARM*”.
 
@@ -112,7 +112,7 @@ This way, the subshape will show the worst alarm state of all parameters of the 
 > See also:
 > [Linking a shape to an alarm](xref:Linking_a_shape_to_an_alarm)
 
-### Having the Visio drawing opened in a new card
+## Having the Visio drawing opened in a new card
 
 In order to make sure that the Visio drawing of the element, service or redundancy group linked to the shape is opened in a new card, add the following shape data to the Element shape:
 
@@ -120,7 +120,7 @@ In order to make sure that the Visio drawing of the element, service or redundan
 |------------------|---------------|
 | Options          | OpenInNewCard |
 
-### Making the shape navigate to a specific page
+## Making the shape navigate to a specific page
 
 By default, a shape linked to an element or service navigates to a Visual page when clicked. However, from DataMiner 9.6.12 onwards, you can make the shape navigate to a specific (visual, data or other) page instead.
 
@@ -130,7 +130,7 @@ To do so, add the following shape data to the shape:
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Page             | \-  For a Data page: “*data*” or “*d*”, followed by a colon and the name of the page. To link to a subpage, add a forward slash and the name of the subpage. <br> For example: *data:performance/Task Manager*<br> -  For a Visual page: “*visual*” or “*v*”, followed by a colon and the name of the page.<br> For example: *v:ExamplePage*<br> -  For a different page in the card side panel: a colon followed by the name of the page. <br> For example, to link to the Alarms page: *:alarms* |
 
-### Service navigation
+## Service navigation
 
 When, in a Visio drawing linked to a service, a user clicks a shape linked to another service, this other service is selected in the Surveyor. However, if that service is found in different locations in the Surveyor, DataMiner will use the following algorithm to determine the service to which to jump in the Surveyor:
 

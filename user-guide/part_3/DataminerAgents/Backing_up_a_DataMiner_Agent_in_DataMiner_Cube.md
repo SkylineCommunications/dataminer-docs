@@ -2,11 +2,11 @@
 uid: Backing_up_a_DataMiner_Agent_in_DataMiner_Cube
 ---
 
-## Backing up a DataMiner Agent in DataMiner Cube
+# Backing up a DataMiner Agent in DataMiner Cube
 
 In the *System Center* module, you can configure automatic backups that will run at regular intervals, and execute an immediate backup when necessary.
 
-### Configuring the DataMiner backups
+## Configuring the DataMiner backups
 
 The following steps can be taken to configure the backups for a DMA:
 
@@ -54,7 +54,7 @@ The following steps can be taken to configure the backups for a DMA:
 > [!NOTE]
 > If during a backup operation DataMiner fails to take a backup of the general database, an information event will be generated.
 
-### Taking an instant backup
+## Taking an instant backup
 
 To take an immediate backup of a DMA:
 

@@ -2,7 +2,7 @@
 uid: Conditional_shape_highlighting
 ---
 
-## Conditional shape highlighting
+# Conditional shape highlighting
 
 Visio shapes linked to elements, services, redundancy groups or views can be highlighted based on whether or not a condition is true.
 
@@ -12,7 +12,7 @@ Visio shapes linked to elements, services, redundancy groups or views can be hig
 > - If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted.
 > - If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the *HighlightTarget* shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape will be highlighted as soon as one of the highlight conditions is true. See [Applying highlight styles depending on various conditions](xref:Options_for_highlighting_DCF_connections#applying-highlight-styles-depending-on-various-conditions).
 
-### Configuration
+## Configuration
 
 1. Define a highlight style: create a shape, apply a custom style to it, add a shape data field to it of type **Options** and set its value to “*HighlightStyle*”.
 
@@ -22,7 +22,7 @@ Visio shapes linked to elements, services, redundancy groups or views can be hig
     Condition1|Condition2|...|ConditionX
     ```
 
-### Condition syntax
+## Condition syntax
 
 Every condition specified in a shape data field of type **Highlight** has to have the following syntax:
 
@@ -41,7 +41,7 @@ RegEx has to be a regular expression.
 > [!NOTE]
 > - In conditions, both single equal signs (“=”) and double equal signs (“==”) are supported.
 
-### Creating dynamic conditions
+## Creating dynamic conditions
 
 Inside a condition, you can use placeholders referring to parameter values or session variables. This way, highlight styles can be applied dynamically.
 

@@ -2,7 +2,7 @@
 uid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
 ---
 
-## Starting or stopping a DMA in DataMiner Cube
+# Starting or stopping a DMA in DataMiner Cube
 
 1. Go to *Apps* > *System Center* > *Agents.*
 

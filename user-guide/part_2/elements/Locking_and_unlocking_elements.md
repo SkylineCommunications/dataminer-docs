@@ -2,14 +2,14 @@
 uid: Locking_and_unlocking_elements
 ---
 
-## Locking and unlocking elements
+# Locking and unlocking elements
 
 If a DataMiner element is locked, only the user who locked the element is able to implement any parameter changes on it. In some cases, an element lock can be applied automatically, in particular by the DMS Automation module, but elements can also be locked manually by a user.
 
 > [!NOTE]
 > Locking an element only protects against parameter updates. Users who have the appropriate permissions to do so will still be able to delete an element or edit the element configuration of an element while it is locked by another user.
 
-##### To lock an element:
+#### To lock an element:
 
 1. Click the element in the Surveyor to open the element card.
 
@@ -22,7 +22,7 @@ If a DataMiner element is locked, only the user who locked the element is able t
 > [!NOTE]
 > Locking a replicated element is only possible via the source element, not via the replicated element.
 
-##### To unlock an element:
+#### To unlock an element:
 
 - In the element card menu, select *Unlock element*, or
 

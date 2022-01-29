@@ -2,7 +2,7 @@
 uid: Creating_a_selection_box_with_all_elements_in_a_connectivity_chain
 ---
 
-## Creating a selection box with all elements in a connectivity chain
+# Creating a selection box with all elements in a connectivity chain
 
 When connectivity has been defined in a drawing, you can turn a shape into a selection box containing all elements in the connectivity chain.
 
@@ -17,7 +17,7 @@ Create a shape, add a shape data field of type **Connection** to it, and set its
 
 - On other shapes: the selection box will not include shapes for which the “*DisableConnectivity*” option has been specified.
 
-##### Example:
+#### Example:
 
 | Shape data field | Value                                                                                 |
 |------------------|---------------------------------------------------------------------------------------|

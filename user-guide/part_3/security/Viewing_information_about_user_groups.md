@@ -2,7 +2,7 @@
 uid: Viewing_information_about_user_groups
 ---
 
-## Viewing information about user groups
+# Viewing information about user groups
 
 To view information about an existing user group:
 

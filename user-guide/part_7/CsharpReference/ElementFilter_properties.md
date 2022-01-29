@@ -2,7 +2,7 @@
 uid: ElementFilter_properties
 ---
 
-## ElementFilter properties
+# ElementFilter properties
 
 - [CriticalOnly](#criticalonly)
 
@@ -42,7 +42,7 @@ uid: ElementFilter_properties
 
 - [WarningOnly](#warningonly)
 
-#### CriticalOnly
+### CriticalOnly
 
 Gets or sets a value indicating whether only elements with severity state “Critical” should be included.
 
@@ -52,7 +52,7 @@ Default: false.
 bool CriticalOnly
 ```
 
-#### DataMinerID
+### DataMinerID
 
 Gets or sets a value limiting the search to the specified DataMiner Agent ID.
 
@@ -60,7 +60,7 @@ Gets or sets a value limiting the search to the specified DataMiner Agent ID.
 int DataMinerID
 ```
 
-#### ElementID
+### ElementID
 
 Gets or sets a value limiting the search to the specified element ID.
 
@@ -71,7 +71,7 @@ int ElementID
 > [!NOTE]
 > If you specify *ElementID*, *also specify DataMinerID*.
 
-#### ExcludeSubViews
+### ExcludeSubViews
 
 Gets or sets a value indicating whether subviews should be searched.
 
@@ -84,7 +84,7 @@ bool ExcludeSubViews
 > [!NOTE]
 > If you specify *ExcludeSubViews*, also specify *View* or *ViewId*.
 
-#### IncludeHidden
+### IncludeHidden
 
 Gets or sets a value indicating whether hidden elements should be included.
 
@@ -94,7 +94,7 @@ Default: true
 bool IncludeHidden
 ```
 
-#### IncludePaused
+### IncludePaused
 
 Gets or sets a value indicating whether paused elements should be included.
 
@@ -104,7 +104,7 @@ Default: true
 bool IncludePaused
 ```
 
-#### IncludeServiceElements
+### IncludeServiceElements
 
 Gets or sets a value indicating whether service elements should be included. Available from DataMiner 9.6.11 onwards.
 
@@ -114,7 +114,7 @@ Default: false.
 bool IncludeServiceElements
 ```
 
-#### IncludeStopped
+### IncludeStopped
 
 Gets or sets a value indicating whether stopped elements should be included.
 
@@ -124,7 +124,7 @@ Default: true
 bool IncludeStopped
 ```
 
-#### MajorOnly
+### MajorOnly
 
 Gets or sets a value indicating whether only elements with severity state "Major" should be included.
 
@@ -134,7 +134,7 @@ Default: false.
 bool MajorOnly
 ```
 
-#### MaskedOnly
+### MaskedOnly
 
 Gets or sets a value indicating whether only masked elements should be included.
 
@@ -144,7 +144,7 @@ Default: false.
 bool MaskedOnly
 ```
 
-#### MinorOnly
+### MinorOnly
 
 Gets or sets a value indicating whether only elements with severity state "Minor" should be included.
 
@@ -154,7 +154,7 @@ Default: false.
 bool MinorOnly
 ```
 
-#### NameFilter
+### NameFilter
 
 Gets or sets a filter for the element name, which can contain \* and ? wildcards.
 
@@ -162,7 +162,7 @@ Gets or sets a filter for the element name, which can contain \* and ? wildcards
 string NameFilter
 ```
 
-#### NormalOnly
+### NormalOnly
 
 Gets or sets a value indicating whether only elements with severity state "Normal" should be included.
 
@@ -172,7 +172,7 @@ Default: false.
 bool NormalOnly
 ```
 
-#### ProtocolName
+### ProtocolName
 
 Gets or sets a filter for the protocol name. No wildcards are allowed.
 
@@ -180,7 +180,7 @@ Gets or sets a filter for the protocol name. No wildcards are allowed.
 string ProtocolName
 ```
 
-#### ProtocolVersion
+### ProtocolVersion
 
 Gets or sets a filter for the protocol version. No wildcards are allowed.
 
@@ -188,7 +188,7 @@ Gets or sets a filter for the protocol version. No wildcards are allowed.
 string ProtocolVersion
 ```
 
-#### TimeoutOnly
+### TimeoutOnly
 
 Gets or sets a value indicating whether only elements with severity state "Timeout" should be included.
 
@@ -198,7 +198,7 @@ Default: false.
 bool TimeoutOnly
 ```
 
-#### View
+### View
 
 Gets or sets the name of the view to be searched.
 
@@ -206,7 +206,7 @@ Gets or sets the name of the view to be searched.
 string View
 ```
 
-#### ViewID
+### ViewID
 
 Gets or sets the ID of the view to be searched.
 
@@ -214,7 +214,7 @@ Gets or sets the ID of the view to be searched.
 int ViewID
 ```
 
-#### WarningOnly
+### WarningOnly
 
 Gets or sets a value indicating whether only elements with severity state "Warning" should be included.
 

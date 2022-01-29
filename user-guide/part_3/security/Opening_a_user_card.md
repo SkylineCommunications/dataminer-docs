@@ -2,7 +2,7 @@
 uid: Opening_a_user_card
 ---
 
-## Opening a user card
+# Opening a user card
 
 Security settings for a single user can be configured on a user card.
 

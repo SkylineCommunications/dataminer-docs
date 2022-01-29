@@ -2,7 +2,7 @@
 uid: Making_a_shape_or_page_visible_only_for_a_particular_access_level
 ---
 
-## Making a shape or page visible only for a particular access level
+# Making a shape or page visible only for a particular access level
 
 A shape or a page can be set to be visible only to users with a particular security access level.
 
@@ -10,7 +10,7 @@ A shape or a page can be set to be visible only to users with a particular secur
 > - If the security settings have been configured so as to deny a user access to particular views or elements, then shapes linking to these views or elements will automatically not be displayed in Visual Overview.
 > - For more information on how to make items in a table-based dynamically generated tree control visible based on security access level, see [Creating a tree control](xref:Adding_options_to_a_session_variable_control#creating-a-tree-control).
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Level** to the shape or page, and set its value to the minimum access level the user should have to be able to see the shape or the page.
 
@@ -18,7 +18,7 @@ The shape or the page will only be visible if the access level specified in the 
 
 If, for example, the access level of a shape is 2, then users will only see that shape or that page if their level of access to the object (view, element, service or redundancy group) to which the shape or the page is linked is 1 or 2.
 
-### ExactLevelMatch option
+## ExactLevelMatch option
 
 By default, when an access level is specified, it is interpreted as the minimum security level the user should have. If, however, you want it to the interpreted as the actual security level the user should have, then you can add the “*ExactLevelMatch*” option.
 

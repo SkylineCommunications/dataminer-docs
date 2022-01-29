@@ -2,7 +2,7 @@
 uid: Configuring_the_hover_area_of_a_shape
 ---
 
-## Configuring the hover area of a shape
+# Configuring the hover area of a shape
 
 By default, when the mouse pointer hovers over a shape, the area that is highlighted is always a rectangle shape, which does not take shape rotation or other shape manipulations into account.
 

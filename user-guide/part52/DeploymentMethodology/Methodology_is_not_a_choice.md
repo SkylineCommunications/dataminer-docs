@@ -2,7 +2,7 @@
 uid: Methodology_is_not_a_choice
 ---
 
-## Methodology is not a choice
+# Methodology is not a choice
 
 This document describes in detail the different deployment methodologies that Skyline has developed over time, and the types of projects they are tailored towards. The latter is very important, as the effectiveness of a methodology depends largely on whether the proper methodology was chosen for the actual project at hand.
 

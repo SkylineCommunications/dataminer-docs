@@ -2,7 +2,7 @@
 uid: Silent_actions
 ---
 
-## Silent actions
+# Silent actions
 
 Multiple "silent actions" are possible in scripts, allowing the scripts to interact with bookings without any user interaction. The section below lists the most common use cases. Adjusting bookings in ways that are not described below is not supported and could have a severe impact on the stability of SRM. However, if a specific feature you need is not described here, you can submit a feature request to Skyline to evaluate whether this could be added.
 
@@ -20,7 +20,7 @@ Multiple "silent actions" are possible in scripts, allowing the scripts to inter
 
 - [Updating the timing of a booking](#updating-the-timing-of-a-booking)
 
-### Finding the reference of an object
+## Finding the reference of an object
 
 To configure custom Automation scripts so that they can manipulate SRM objects such as service definitions, resources, profiles, etc., you need to know their object reference.
 
@@ -61,7 +61,7 @@ To do so:
 
         ![](~/user-guide/images/ProfileInstanceGUID.png)
 
-### Creating a booking
+## Creating a booking
 
 The example below shows how a booking can be created without user interaction by means of an Automation script.
 
@@ -162,7 +162,7 @@ public class Script
 }
 ```
 
-### Assigning resource, profile and parameter values
+## Assigning resource, profile and parameter values
 
 The example below shows how resource, profile and parameter values can be assigned to a booking without user interaction by means of an Automation script.
 
@@ -234,7 +234,7 @@ public class Script
 }
 ```
 
-### Adding properties to an existing booking
+## Adding properties to an existing booking
 
 The example below shows how properties can be added to an existing booking without user interaction by means of an Automation script.
 
@@ -260,7 +260,7 @@ public class Script
 }
 ```
 
-### Applying booking life cycle transitions
+## Applying booking life cycle transitions
 
 The example below shows how booking life cycle transitions (Finish, On-Hold, Confirm, Cancel or Delete) can be applied to an existing booking without user interaction by means of an Automation script.
 
@@ -296,7 +296,7 @@ public class Script
 }
 ```
 
-### Applying service state transitions
+## Applying service state transitions
 
 Applying service state transitions (Start, Stop, Pause, Standby, etc.) or forcing the same service state can be done by executing the *SRM_BookingAction* script with following input arguments:
 
@@ -304,7 +304,7 @@ Applying service state transitions (Start, Stop, Pause, Standby, etc.) or forcin
 
 - Action: *{"Events":\["EXTERNAL"\],"ServiceStates":\["\<target service state>"\]}*
 
-### Updating the timing of a booking
+## Updating the timing of a booking
 
 The example below shows how the timing of a booking can be changed without user interaction by means of an Automation script.
 

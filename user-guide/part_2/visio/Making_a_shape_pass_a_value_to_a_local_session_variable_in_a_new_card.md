@@ -2,11 +2,11 @@
 uid: Making_a_shape_pass_a_value_to_a_local_session_variable_in_a_new_card
 ---
 
-## Making a shape pass a value to a local session variable in a new card
+# Making a shape pass a value to a local session variable in a new card
 
 From DataMiner 9.0.1 onwards, it is possible to configure a shape so that when it is clicked by a user, a new card opens and a value is passed to a local session variable on that card.
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add the following two additional shape data fields to a shape that opens a card when clicked (i.e. a shape linked to an element, a service, a view, etc.):
 

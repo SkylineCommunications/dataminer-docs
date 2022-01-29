@@ -2,11 +2,11 @@
 uid: Configuring_alarm_storm_prevention_for_notifications
 ---
 
-## Configuring alarm storm prevention for notifications
+# Configuring alarm storm prevention for notifications
 
 Alarm storm prevention for notifications can be configured on three levels: on system level, on user level, and on group level.
 
-### Configuring alarm storm settings on system level
+## Configuring alarm storm settings on system level
 
 1. In DataMiner Cube, go to *Apps* > *System Center \> System Settings \> notifications alarm storm prevention*.
 
@@ -22,7 +22,7 @@ Alarm storm prevention for notifications can be configured on three levels: on s
 
 3. In the lower right corner, click the *Apply* button.
 
-### Configuring alarm storm settings on user/group level
+## Configuring alarm storm settings on user/group level
 
 1. In DataMiner Cube, go to *Apps* > *System Center \> Users / Groups.*
 

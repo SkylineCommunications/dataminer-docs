@@ -2,7 +2,7 @@
 uid: Activating_the_Asset_Management_database_in_Cube
 ---
 
-## Activating the Asset Management database in Cube
+# Activating the Asset Management database in Cube
 
 Before you activate the Asset Management database in DataMiner Cube:
 

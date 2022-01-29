@@ -2,7 +2,7 @@
 uid: Hyperlinks_xml
 ---
 
-## Hyperlinks.xml
+# Hyperlinks.xml
 
 In the file *Hyperlinks.xml*, you can define custom commands that have to appear in the shortcut menu of the Alarm Console.
 
@@ -25,7 +25,7 @@ In this section:
 
 - [Placeholders](#placeholders)
 
-### File syntax
+## File syntax
 
 The *Hyperlinks.xml* file has to have a *\<HyperLinks>* root tag containing a *\<HyperLink>* tag for every custom command.
 
@@ -65,7 +65,7 @@ See the following example:
 > [!NOTE]
 > - When you specify an Automation script in a hyperlink, you only need to use the “Script:” prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the *type* attribute clearly specifies that it concerns a reference to an Automation script.
 
-### Syntax of second-generation hyperlinks
+## Syntax of second-generation hyperlinks
 
 In the syntax of a second-generation hyperlink, the ID, the version, the type and the actual command must always be specified. In addition to this mandatory configuration, several optional attributes can be configured. More information on this can be found below:
 
@@ -101,7 +101,7 @@ Or:
 </HyperLink>
 ```
 
-#### Content of the Hyperlink tag
+### Content of the Hyperlink tag
 
 Inside the *\<HyperLink>* tag, enter the following content, depending on the type of hyperlink specified in the *type* attribute (see [type](#type)):
 
@@ -125,7 +125,7 @@ Inside the *\<HyperLink>* tag, enter the following content, depending on the typ
 > See also:
 > [type](#type)
 
-#### Attributes of the Hyperlink tag
+### Attributes of the Hyperlink tag
 
 - [alarmAction](#alarmaction)
 
@@ -149,19 +149,19 @@ Inside the *\<HyperLink>* tag, enter the following content, depending on the typ
 
 - [version](#version)
 
-##### alarmAction
+#### alarmAction
 
 If you want the selected alarm or alarms to be acknowledged automatically when a hyperlink is executed, add an *alarmAction* attribute to the *\<HyperLink>* tag and set its value to “acknowledge”.
 
 This attribute is optional.
 
-##### alarmColumn
+#### alarmColumn
 
 If you want a hyperlink to appear not only in the Alarm Console shortcut menu but also as a column in the Alarm Console, add an *alarmColumn* attribute to the *\<HyperLink>* tag and set its value to “true”.
 
 This attribute is optional.
 
-##### filterElement
+#### filterElement
 
 Available from DataMiner 9.5.7 onwards. This optional attribute can be used to add a conditional hyperlink. The hyperlink will only be displayed for alarms matching the specified filter.
 
@@ -192,7 +192,7 @@ From DataMiner 10.0.12 onwards, it is possible to use a filter that checks wheth
 > [!NOTE]
 > The KeyExists filter is not recommended for data retrieval from Cassandra or Elasticsearch, as the filter will only be applied after data is retrieved from these databases.
 
-##### combineParameters
+#### combineParameters
 
 In order to combine parameters in case multiple alarms have been selected, add the optional *combineParameters* attribute to the *\<HyperLink>* tag and set its value to “true”.
 
@@ -215,7 +215,7 @@ Example:
 > [!NOTE]
 > When you use an XML reserved character as a separator, it has to be escaped. (e.g. “&amp;” instead of “&”).
 
-##### descriptionParsing
+#### descriptionParsing
 
 Use this optional attribute if you want the command to appear only in the shortcut menu of alarms and information events with a specific description.
 
@@ -228,11 +228,11 @@ The string you specify in this *descriptionParsing* attribute can contain wildca
 > [!NOTE]
 > Alternatively, you can use the attribute *valueParsing* to have the command appear only for alarms and information events with a particular value.
 
-##### id
+#### id
 
 In this mandatory attribute, specify the unique identifier of the hyperlink. It is primarily used for synchronization purposes.
 
-##### menu
+#### menu
 
 If you add a hyperlink to *Hyperlinks.xml*, by default, it will appear in the “Hyperlinks” submenu of the Alarm Console shortcut menu. However, if you want it to appear in another submenu (or in the root) of the shortcut menu, add the optional *menu* attribute to the *\<HyperLink>* tag and specify a location.
 
@@ -247,13 +247,13 @@ Examples:
 > [!NOTE]
 > If you do not specify a *menu* attribute or if you do not start the value of the menu attribute with “root”, the hyperlink will be added to the default “Hyperlinks” submenu.
 
-##### name
+#### name
 
 In this optional attribute, specify the name of the command as it has to appear in the user interfaces.
 
 If you want a hyperlink of type “script” (i.e. a hyperlink that starts an Automation script) to have a custom name, then enter that name in the *name* attribute. If you leave the *name* attribute empty, the hyperlink will have the name of the script.
 
-##### type
+#### type
 
 In this mandatory attribute, specify the hyperlink type.
 
@@ -272,7 +272,7 @@ In this mandatory attribute, specify the hyperlink type.
 > See also:
 > [Content of the Hyperlink tag](#content-of-the-hyperlink-tag)
 
-##### valueParsing
+#### valueParsing
 
 Use this optional attribute if you want the command to appear only in the shortcut menu of alarms and information events with a specific value.
 
@@ -285,11 +285,11 @@ The string you specify in this *valueParsing* attribute can contain wildcards (q
 > [!NOTE]
 > Alternatively, you can use the attribute *descriptionParsing* to have the command appear only for alarms and information events with a particular description.
 
-##### version
+#### version
 
 In second-generation hyperlinks, this mandatory attribute has to be set to “2”.
 
-### Syntax of legacy hyperlinks
+## Syntax of legacy hyperlinks
 
 A legacy hyperlink must have the following syntax:
 
@@ -297,7 +297,7 @@ A legacy hyperlink must have the following syntax:
 <HyperLink id="..." valueParsing="...">[Hyperlink]</HyperLink>
 ```
 
-#### Content of the Hyperlink tag
+### Content of the Hyperlink tag
 
 Inside the *\<HyperLink>* tag, enter the actual command that has to be displayed on the shortcut menu.
 
@@ -311,13 +311,13 @@ The string you specify can contain:
 
     See [Placeholders](#placeholders).
 
-#### Attributes of the Hyperlink tag
+### Attributes of the Hyperlink tag
 
-##### id
+#### id
 
 In this attribute, specify the unique identifier of the hyperlink. It is primarily used for synchronization purposes.
 
-##### valueParsing
+#### valueParsing
 
 Use this attribute if you want the command to appear only in the shortcut menu of specific alarms and information events.
 
@@ -327,7 +327,7 @@ If you leave this attribute empty, the command will appear in the shortcut menu 
 
 The string you specify in this *valueParsing* attribute can contain wildcards (question marks and asterisks) as well as placeholders. See [Placeholders](#placeholders).
 
-### Upgrading legacy hyperlinks to second-generation hyperlinks
+## Upgrading legacy hyperlinks to second-generation hyperlinks
 
 In a *Hyperlinks.xml* file, you can easily “upgrade” legacy hyperlinks to second-generation hyperlinks.
 
@@ -349,7 +349,7 @@ Example:
 </HyperLink>
 ```
 
-### Keywords
+## Keywords
 
 The string you specify inside the *\<HyperLink>* tag can contain the following keywords. These will be replaced by real-time data in the command that is displayed on the shortcut menu.
 
@@ -380,7 +380,7 @@ The string you specify inside the *\<HyperLink>* tag can contain the following k
 | \[VALUE\]                 | The value of the alarm.                                                                                                |
 | \[VID\]                   | The ID of the view. See [About the \[VID\] keyword](#about-the-vid-keyword).                                           |
 
-#### About the \[ROOTTIME\] and \[TIME\] keywords
+### About the \[ROOTTIME\] and \[TIME\] keywords
 
 By default, the \[ROOTTIME\] and \[TIME\] keywords in second-generation hyperlinks (in *Hyperlinks.xml*) format time strings as ShortDate strings, which are culture-dependent, while legacy hyperlinks use the format of the alarm itself.
 
@@ -409,7 +409,7 @@ For more information on the supported formatting, refer to the following article
 > [!NOTE]
 > In addition to the illegal characters described in the mentioned articles, the “\]” and “\[“ characters are also illegal in these keywords.
 
-#### About the \[VID\] keyword
+### About the \[VID\] keyword
 
 From DataMiner 9.5.1 onwards, it is possible to specify a view filter with the \[VID\] keyword in second-generation hyperlinks of type “Script”, “Execute”, “Url” and “OpenView’”
 
@@ -423,7 +423,7 @@ For example:
 
 The view levels do not need to be specified in any particular order. For example, all of the following view filters are valid: \[VID:0;1;2;3\], \[VID:1;3\], \[VID:0;5\].
 
-### Placeholders
+## Placeholders
 
 Special placeholders allow you to use (parts) of the value of the alarm or information event in the command name that is displayed in the shortcut menu.
 

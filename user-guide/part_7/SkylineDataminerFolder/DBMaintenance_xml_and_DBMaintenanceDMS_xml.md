@@ -2,7 +2,7 @@
 uid: DBMaintenance_xml_and_DBMaintenanceDMS_xml
 ---
 
-## DBMaintenance.xml and DBMaintenanceDMS.xml
+# DBMaintenance.xml and DBMaintenanceDMS.xml
 
 These files mainly contain the “time to live” (TTL) settings of the databases, which determine how long data are kept in the databases.
 
@@ -33,7 +33,7 @@ In this section:
 > - [Specifying TTL overrides](xref:Specifying_TTL_overrides)
 > - [Setting the TTL for database records](xref:SLNetClientTest_tool_advanced_procedures#setting-the-ttl-for-database-records)
 
-### Basic syntax of the TTL settings
+## Basic syntax of the TTL settings
 
 Example of TTL settings in *DBMaintenanceDMS.xml*:
 
@@ -104,7 +104,7 @@ Examples:
 > [!NOTE]
 > From DataMiner 9.6.3 onwards, TTL overrides for trend and alarm records should be configured directly in DataMiner Cube. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
-### Specifying overrides for the trending TTL of protocols
+## Specifying overrides for the trending TTL of protocols
 
 From DataMiner 9.5.6 onwards, you can specify a TTL override for the trending of a specific protocol.
 
@@ -153,7 +153,7 @@ Example of a *DBMaintenanceDMS.xml* file with protocol override:
 > [!NOTE]
 > From DataMiner 9.6.3 onwards, TTL overrides for trend and alarm records should be configured directly in DataMiner Cube. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
-### Overriding default storage behavior for service properties in Cassandra
+## Overriding default storage behavior for service properties in Cassandra
 
 From DataMiner 9.5.14 onwards, timetrace data for a service in the Cassandra database by default only contains the service properties that match with the service key. In earlier versions of DataMiner, the rows contained the service properties of all affected services.
 
@@ -164,7 +164,7 @@ However, note that this can cause a significant increase in disk space usage, es
 > [!NOTE]
 > Activating this option does not rewrite historic data. New rows will again contain the properties, but old rows will not be updated.
 
-### Upgrading to a DataMiner version with DBMaintenance.xml and DBMaintenanceDMS.xml files
+## Upgrading to a DataMiner version with DBMaintenance.xml and DBMaintenanceDMS.xml files
 
 When you upgrade a DataMiner Agent without the two new configuration files to a version with these files, *DBMaintenance.exe* will copy a number of settings from the *DB.xml* and *MaintenanceSettings.xml* files to the new configuration files. See the following table:
 

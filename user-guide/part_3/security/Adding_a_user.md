@@ -2,11 +2,11 @@
 uid: Adding_a_user
 ---
 
-## Adding a user
+# Adding a user
 
 There are two ways to add a new user to a DataMiner System, depending on whether it is a local user or a domain user.
 
-##### To add a local user:
+#### To add a local user:
 
 1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
 
@@ -40,7 +40,7 @@ There are two ways to add a new user to a DataMiner System, depending on whether
 
     The new users will be added to the list of *Local* users.
 
-##### To add an existing domain user:
+#### To add an existing domain user:
 
 1. In the *Users / Groups* section of the System Center module, go to the *users* tab.
 

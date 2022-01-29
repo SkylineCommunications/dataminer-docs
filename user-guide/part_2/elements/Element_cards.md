@@ -2,7 +2,7 @@
 uid: Element_cards
 ---
 
-## Element cards
+# Element cards
 
 To open an element card, click an element in the Surveyor. You can also open elements in other ways, for example by right-clicking an element on a view card and selecting *Open*.
 

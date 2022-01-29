@@ -2,7 +2,7 @@
 uid: ScriptAbortException_methods
 ---
 
-## ScriptAbortException methods
+# ScriptAbortException methods
 
 | Name          | Description                        |
 |---------------|------------------------------------|

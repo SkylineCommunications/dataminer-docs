@@ -2,7 +2,7 @@
 uid: SubscriptOptions_methods
 ---
 
-## SubscriptOptions methods
+# SubscriptOptions methods
 
 - [GetScriptResult](#getscriptresult)
 
@@ -14,7 +14,7 @@ uid: SubscriptOptions_methods
 
 - [StartScript](#startscript)
 
-#### GetScriptResult
+### GetScriptResult
 
 Returns a copy of the script output of the current script and, if the *InheritScriptOutput* option is set to "true", the child scripts. Can be used to pass information from a subscript to the parent script. <br>Available from DataMiner 9.6.8 onwards.
 
@@ -22,7 +22,7 @@ Returns a copy of the script output of the current script and, if the *InheritSc
 Dictionary<string, string> GetScriptResult()
 ```
 
-#### SelectDummy
+### SelectDummy
 
 Links a dummy from the main script to a dummy from a subscript.
 
@@ -75,7 +75,7 @@ script.SelectScriptParam("output", Convert.ToString(outputId));
 script.StartScript();
 ```
 
-#### SelectMemory
+### SelectMemory
 
 Selects a script memory from the main script to be used as the script memory in the subscript.
 
@@ -148,7 +148,7 @@ Examples:
     subscript.StartScript();
     ```
 
-#### SelectScriptParam
+### SelectScriptParam
 
 Links a script parameter from the main script to a script parameter from a subscript.
 
@@ -227,7 +227,7 @@ Examples:
     subscript.StartScript();
     ```
 
-#### StartScript
+### StartScript
 
 Starts the subscript.
 

@@ -2,7 +2,7 @@
 uid: ScriptAbortException_properties
 ---
 
-## ScriptAbortException properties
+# ScriptAbortException properties
 
 | Name                   | Description                                                         |
 |------------------------|---------------------------------------------------------------------|

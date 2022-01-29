@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_an_alarm
 ---
 
-## Linking a shape to an alarm
+# Linking a shape to an alarm
 
 Using a shape data field of type **Alarm**, you can link a shape to an active alarm.
 
@@ -11,7 +11,7 @@ Using a shape data field of type **Alarm**, you can link a shape to an active al
 > - If you want to link to the alarm state of a parameter, use a shape data field of type **Parameter** instead of **Alarm**. See [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter).
 > - If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: “*The value of the alarm is **\[value\]**.*” See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Alarm** to the shape.
 
@@ -43,7 +43,7 @@ Add a shape data field of type **Alarm** to the shape.
 
     This syntax is available from DataMiner 10.0.2 onwards. The IDs are typically retrieved from session variables. If the configured alarm is not found, the shape will not be displayed.
 
-#### ElementReference
+### ElementReference
 
 You can refer to an element in the following ways:
 
@@ -58,7 +58,7 @@ You can refer to an element in the following ways:
 > [!NOTE]
 > If the Visio drawing is linked to an element, you can link the shape to that same element by using an asterisk (“\*”) as element reference.
 
-#### Options
+### Options
 
 In the field value, you can use the following options.
 
@@ -80,7 +80,7 @@ In the field value, you can use the following options.
 > See also:
 > [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)
 
-### Examples
+## Examples
 
 ```txt
 111/273/350

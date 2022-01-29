@@ -2,7 +2,7 @@
 uid: How_do_I_abort_a_running_Automation_script
 ---
 
-## How do I abort a running Automation script?
+# How do I abort a running Automation script?
 
 If the script is an interactive Automation script, and you are the user currently interacting with the script, you can abort the script by clicking the *Abort* button in the dialog box, or by simply closing the dialog box.
 

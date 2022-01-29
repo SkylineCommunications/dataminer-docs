@@ -2,7 +2,7 @@
 uid: List_of_projects
 ---
 
-## List of projects
+# List of projects
 
 The projects listed on this tab are grouped per project status. Each group can be collapsed or expanded at will.
 

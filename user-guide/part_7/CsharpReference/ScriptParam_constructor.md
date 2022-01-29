@@ -2,7 +2,7 @@
 uid: ScriptParam_constructor
 ---
 
-## ScriptParam constructor
+# ScriptParam constructor
 
 ```txt
 public ScriptParam()

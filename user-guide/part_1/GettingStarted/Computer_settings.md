@@ -2,7 +2,7 @@
 uid: Computer_settings
 ---
 
-## Computer settings
+# Computer settings
 
 Any user preferences in DataMiner Cube pertaining to the user’s computer are grouped in the *computer* tab of the *Settings* window.
 
@@ -20,7 +20,7 @@ Like the user settings, the DataMiner Cube computer settings are divided in seve
 
 - [Advanced settings](#advanced-settings)
 
-### Accessing the computer settings
+## Accessing the computer settings
 
 To access the computer settings in DataMiner Cube:
 
@@ -45,9 +45,9 @@ To access the computer settings in DataMiner Cube:
 > [!NOTE]
 > For more information on the user settings tab, see [User settings](xref:User_settings).
 
-### Overview of the computer settings
+## Overview of the computer settings
 
-#### Connection settings
+### Connection settings
 
 On this page, you can select settings related to the connection of your computer to DataMiner Cube. These settings are also available in the Cube logon window. See [Logging on to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube).
 
@@ -63,13 +63,13 @@ On this page, you can select settings related to the connection of your computer
     > See also:
     > [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings)
 
-#### Cube settings
+### Cube settings
 
 This page is available from DataMiner 10.0.12 onwards. It contains the following setting:
 
 - **Display cluster name in header**: Select this option to have the name of the DataMiner System displayed in the Cube header by default.
 
-#### Debug settings
+### Debug settings
 
 This page contains the following debug settings:
 
@@ -86,7 +86,7 @@ This page contains the following debug settings:
     > [!NOTE]
     > This setting is disabled by default. Enabling it will cause memory usage to increase substantially. Therefore, it is recommended to only enable it temporarily for debugging purposes.
 
-#### Performance settings
+### Performance settings
 
 This page contains settings that are related to your computer’s performance:
 
@@ -104,13 +104,13 @@ This page contains settings that are related to your computer’s performance:
 
 - **Trend update frame rate**: Available from DataMiner 9.5.7 onwards. Determines the rate at which trend graphs are redrawn.
 
-#### Visual Overview settings
+### Visual Overview settings
 
 There is only one setting on this page:
 
 - **Working folder**: Select this setting and specify the folder where you want to keep all Visio files that have been edited on your computer. In this folder, the Visio files can be edited offline, so that they can be synchronized later.
 
-#### Advanced settings
+### Advanced settings
 
 On the main *Advanced* page, two settings are available:
 
@@ -120,7 +120,7 @@ On the main *Advanced* page, two settings are available:
 
 There are also two subpages: *Logging* and *Communication*.
 
-##### Logging
+#### Logging
 
 This page allows you to determine the number of log entries kept in the DataMiner logging, as well as the general log level.
 
@@ -133,7 +133,7 @@ This page allows you to determine the number of log entries kept in the DataMine
 > [!NOTE]
 > Be careful about applying the higher levels like *Log_Everything* or *Development_Logging*, as these require a lot of resources.
 
-##### Communication
+#### Communication
 
 This page contains a number of settings regarding communication between the computer and the DMS.
 

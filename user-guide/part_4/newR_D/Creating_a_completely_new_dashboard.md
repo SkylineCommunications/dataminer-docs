@@ -2,7 +2,7 @@
 uid: Creating_a_completely_new_dashboard
 ---
 
-## Creating a completely new dashboard
+# Creating a completely new dashboard
 
 1. On the home page, click *Start with a new blank dashboard*.
 

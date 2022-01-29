@@ -2,9 +2,9 @@
 uid: ScriptDummy_properties
 ---
 
-## ScriptDummy properties
+# ScriptDummy properties
 
-#### Name
+### Name
 
 Gets the name of the dummy.
 

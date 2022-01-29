@@ -2,17 +2,17 @@
 uid: Clicking_the_Publish_button_causes_an_error
 ---
 
-## Clicking the Publish button causes an error
+# Clicking the Publish button causes an error
 
-### Problem
+## Problem
 
 An error occurs when you click the *Publish* button in the XML editor.
 
-### Cause
+## Cause
 
 The DataMiner Agent to which DataMiner Integration Studio is connected does not have a *ClientApps.lic* file.
 
-### Resolution
+## Resolution
 
 1. Send an email to dataminer.licensing@skyline.be to request a *ClientApps.lic* file.
 

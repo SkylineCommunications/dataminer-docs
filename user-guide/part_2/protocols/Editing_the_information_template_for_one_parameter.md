@@ -2,7 +2,7 @@
 uid: Editing_the_information_template_for_one_parameter
 ---
 
-## Editing the information template for one parameter
+# Editing the information template for one parameter
 
 It is possible to edit the information template for a single parameter from the parameter card. This can be particularly useful for users who do not have access to the Protocols & Templates module.
 

@@ -2,7 +2,7 @@
 uid: Advanced_Connectivity_configuration
 ---
 
-## Advanced Connectivity configuration
+# Advanced Connectivity configuration
 
 Element Connectivity information is stored in four tables in the element protocol. It is possible to view and edit these tables within the Cube interface.
 
@@ -14,13 +14,13 @@ To do so:
 
     A window with the four tables will then be displayed, each with an expandable details pane on the right side.
 
-### The Interfaces table
+## The Interfaces table
 
 This table displays the interfaces defined in the protocol, with their interface name and type. the table also displays the interface alarm state, which depends on the alarm state of the parameter that the interface is designed for.
 
 In this table, you can give an interface a custom name by entering a custom value in the *Custom Name* column.
 
-### The Connections table
+## The Connections table
 
 The connections table allows you to view and configure the connections between interfaces.
 
@@ -28,7 +28,7 @@ The connections table allows you to view and configure the connections between i
 > - When an element is restarted, connections and properties that cannot be linked to an existing interface will automatically be deleted.
 > - Resolving multiple external connections on the same interface is only supported from DataMiner 9.5.5 onwards.
 
-#### Adding a connection
+### Adding a connection
 
 1. Next to *\[Add Connection\]*, click the *Add* button.
 
@@ -57,7 +57,7 @@ The connections table allows you to view and configure the connections between i
 >     - Destination element: A
 >     - Destination interface: 1
 
-#### Deleting a connection
+### Deleting a connection
 
 1. Enter the connection ID in the box under *\[Connection to delete\]* and click the green check mark.
 
@@ -65,7 +65,7 @@ The connections table allows you to view and configure the connections between i
 
 3. If a confirmation window appears, click *Yes* to confirm deletion.
 
-### The Interface Properties table and Connection Properties table
+## The Interface Properties table and Connection Properties table
 
 In these tables, it is possible to add and delete custom properties. This is done in the same way as the adding and deleting of connections in the Connections table.
 

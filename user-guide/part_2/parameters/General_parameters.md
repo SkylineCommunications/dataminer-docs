@@ -2,7 +2,7 @@
 uid: General_parameters
 ---
 
-## General parameters
+# General parameters
 
 For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in Cube. This page contains parameters that apply to the DataMiner element itself, rather than the device the element represents. Depending on the type of element, some general parameters may or may not be available. An overview of these parameters can be found below.
 
@@ -13,35 +13,35 @@ For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in C
 > See also:
 > <https://community.dataminer.services/video/ruis-rapid-recap-general-parameters/>
 
-#### \[Lock status\]
+### \[Lock status\]
 
 This general parameter indicates whether the element is locked or unlocked.
 
-#### \[Lock owner\]
+### \[Lock owner\]
 
 If an element is locked, this general parameter indicates the user who locked the element. Otherwise the parameter is “Not initialized”.
 
-#### \[Number of active alarms\]
+### \[Number of active alarms\]
 
 This general parameter indicates how many alarms are present on the element.
 
-#### \[Number of active ... alarms\]
+### \[Number of active ... alarms\]
 
 These general parameters indicate how many alarms of particular alarm levels are present on the element.
 
-#### \[Element alarm state\]
+### \[Element alarm state\]
 
 This general parameter indicates the overall alarm state of the element, i.e. the alarm state of the non-masked alarm with the highest alarm level on the element.
 
-#### \[Number of masked alarms\]
+### \[Number of masked alarms\]
 
 This general parameter indicates how many masked alarms are present on the element.
 
-#### \[Latch state\]
+### \[Latch state\]
 
 This general parameter indicates the highest alarm level that has occurred on the element since the last time the latch state was reset. To reset the latch state, click the *Reset* button underneath this parameter.
 
-#### \[RCA Level\]
+### \[RCA Level\]
 
 If the element is part of an RCA chain, this general parameter indicates its RCA level.
 
@@ -49,7 +49,7 @@ If the element is part of an RCA chain, this general parameter indicates its RCA
 > See also:
 > [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor)
 
-#### \[Priority Level\]
+### \[Priority Level\]
 
 This general parameter is used in order to indicate the priority level of various elements within a redundancy group.
 
@@ -57,7 +57,7 @@ This general parameter is used in order to indicate the priority level of variou
 > See also:
 > [Priority in a redundancy group](xref:About_redundancy_groups#priority-in-a-redundancy-group)
 
-#### \[Timer base\]
+### \[Timer base\]
 
 This parameter can be used to adjust the polling speed of the element.
 
@@ -65,7 +65,7 @@ This parameter can be used to adjust the polling speed of the element.
 > See also:
 > [Changing the polling speed of an element](xref:Changing_the_polling_speed_of_an_element)
 
-#### \[Alarm System Type\]
+### \[Alarm System Type\]
 
 Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a monitored parameter, the value of the alarm property “System Type” will be set to the value of this general parameter.
 
@@ -75,7 +75,7 @@ Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a mo
 > - Updating this general parameter will trigger a "Property Changed" update on the active alarms of the element, even on alarms relying on the topology cell definition in the protocol rather than this general parameter.
 > - Exported DVE elements will not inherit the value of this parameter from the main element. However, virtual functions (used in the SRM Solution) do inherit this parameter from the main element.
 
-#### \[Alarm System Name\]
+### \[Alarm System Name\]
 
 Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a monitored parameter, the value of the alarm property “System Name” will be set to the value of this general parameter.
 
@@ -85,7 +85,7 @@ Available from DataMiner 9.6.11 onwards. If no topology cell is defined for a mo
 > - Updating this general parameter will trigger a "Property Changed" update on the active alarms of the element, even on alarms relying on the topology cell definition in the protocol rather than this general parameter.
 > - Exported DVE elements will not inherit the value of this parameter from the main element. However, virtual functions (used in the SRM Solution) do inherit this parameter from the main element.
 
-#### \[Properties\]
+### \[Properties\]
 
 This table contains an overview of the element properties.
 
@@ -93,11 +93,11 @@ This table contains an overview of the element properties.
 > See also:
 > [Element properties](xref:Element_properties)
 
-#### \[Communication info state\]
+### \[Communication info state\]
 
 This general parameter can be used to determine whether the *\[Communication Info\]* table is updated.
 
-#### \[Communication Info\]
+### \[Communication Info\]
 
 This table contains an overview of the different connections. For each connection, the name, type and communication state is displayed. Depending on the type of connection, additional info can be displayed.
 
@@ -105,7 +105,7 @@ This table contains an overview of the different connections. For each connectio
 > See also:
 > [Checking the connection state of an element](xref:Checking_the_connection_state_of_an_element)
 
-#### DataMiner Connectivity Framework
+### DataMiner Connectivity Framework
 
 The DataMiner Connectivity Framework subpage, which can be accessed via the *Configure* page button on the *General Parameters* page, contains information regarding element connectivity.
 
@@ -113,7 +113,7 @@ The DataMiner Connectivity Framework subpage, which can be accessed via the *Con
 > See also:
 > [Advanced Connectivity configuration](xref:Advanced_Connectivity_configuration)
 
-#### Replication Info
+### Replication Info
 
 The Replication Info subpage, which can be accessed via the *View* page button on the *General Parameters* page, contains information about replicated elements. This subpage contains the following general parameters:
 

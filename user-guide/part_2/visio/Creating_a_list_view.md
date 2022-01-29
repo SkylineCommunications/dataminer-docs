@@ -2,7 +2,7 @@
 uid: Creating_a_list_view
 ---
 
-## Creating a list view
+# Creating a list view
 
 To create a dynamic, filterable list view containing elements, services or bookings, from DataMiner 9.6.4 onwards, it is possible to configure a *ListView* component.
 
@@ -10,7 +10,7 @@ To create a dynamic, filterable list view containing elements, services or booki
 > - In DataMiner 9.6.4, this component can only be used in the visual overview of view cards. From DataMiner 9.6.5 onwards, element cards are also supported.
 > - This component functions in a similar way as the bookings list in the Bookings module and the services list in the Services module. For more information on how to use this component in DataMiner Cube, see [Bookings list](xref:The_Bookings_module#bookings-list).
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 To create a list view, add a shape on the Visio page with the following shape data items:
 
@@ -43,7 +43,7 @@ To create a list view, add a shape on the Visio page with the following shape da
 > - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 > - If colors are defined using the *Visual.Background* property of bookings, from DataMiner 9.6.13 onwards, these are displayed in the *Color* column of a *ListView* component showing bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
 
-### Component options
+## Component options
 
 The following options can be specified in the *ComponentOptions* shape data field:
 
@@ -65,14 +65,14 @@ The following options can be specified in the *ComponentOptions* shape data fiel
 > [!NOTE]
 > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
 
-### List view filters
+## List view filters
 
 In the Filters shape data field, it is possible to filter which information is displayed in the list view.
 
 > [!NOTE]
 > The filters are not case-sensitive. For example, a service with the name "MyName" will be found when the filter *Service.Name == 'myname'* is used
 
-#### Source: Reservations or Bookings
+### Source: Reservations or Bookings
 
 If you set the *Source* shape data field to “Reservations” or “Bookings”, the *Filter* shape data field can contain a booking filter based on any field or property. For example:
 
@@ -102,7 +102,7 @@ To filter on a property with one or more spaces in the property name, use double
 ReservationInstance.Properties."Expected Service State"[String] contains 'STaRt'
 ```
 
-#### Source: Elements or Services
+### Source: Elements or Services
 
 If you set the *Source* shape data field to “Elements” or “Services”, the *Filter* shape data field can contain a view filter to make the list view only show items from one specific view.
 
@@ -197,7 +197,7 @@ From DataMiner 10.0.5 onwards, if you set the *Source* shape data field to “El
     Element.Property.IDP == [var:MySelectedValue]
     ```
 
-#### Source: Resources
+### Source: Resources
 
 If you set the *Source* shape data field to “Resources”, the *Filter* shape data field can contain filters on the name, the ID, or any other field or property of the resources. For example:
 
@@ -237,7 +237,7 @@ Resource.PropertiesDict.Location[string] == '3'
 Resource.Name[string] notContains 'RS' AND Resource.Name[string] notContains 'RT' AND Resource.Name[string] notContains 'ExposeFlow'
 ```
 
-### Session variables
+## Session variables
 
 The following session variables can be used in conjunction with the *ListView* component:
 

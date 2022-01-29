@@ -2,7 +2,7 @@
 uid: Creating_a_custom_report_template_in_an_ASP_editor
 ---
 
-## Creating a custom report template in an ASP editor
+# Creating a custom report template in an ASP editor
 
 To create a custom report template from scratch, do the following:
 
@@ -28,11 +28,11 @@ To create a custom report template from scratch, do the following:
 > See also:
 > [Importing a custom report template made in a third-party editor](xref:Importing_a_custom_report_template_made_in_a_third-party_editor#importing-a-custom-report-template-made-in-a-third-party-editor)
 
-### Passing parameters
+## Passing parameters
 
 Depending on the method that is called, parameters can be passed in a number of different ways.
 
-#### Passing regular parameters
+### Passing regular parameters
 
 Regular parameters can be passed like this:
 
@@ -40,7 +40,7 @@ Regular parameters can be passed like this:
 template.doSomething("some string", 123)
 ```
 
-#### Passing name/value pairs
+### Passing name/value pairs
 
 Name/value pairs have to be passed as objects of type “AssocArray”:
 
@@ -55,7 +55,7 @@ template.doSomething(
 );
 ```
 
-#### Passing parameters using associative arrays
+### Passing parameters using associative arrays
 
 A clean way of passing parameters is by using JavaScript associative arrays:
 
@@ -70,7 +70,7 @@ template.doSomething(
 );
 ```
 
-### Example of a custom report template
+## Example of a custom report template
 
 ```xml
 <%@ Language="JScript" %>

@@ -2,7 +2,7 @@
 uid: Editing_a_user’s_details
 ---
 
-## Editing a user’s details
+# Editing a user’s details
 
 To edit a user’s details:
 

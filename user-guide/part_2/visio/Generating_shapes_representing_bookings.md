@@ -2,7 +2,7 @@
 uid: Generating_shapes_representing_bookings
 ---
 
-## Generating shapes representing bookings
+# Generating shapes representing bookings
 
 From DataMiner 10.0.9 onwards, you can specify that a shape should be created automatically for each booking in a particular set of bookings.
 

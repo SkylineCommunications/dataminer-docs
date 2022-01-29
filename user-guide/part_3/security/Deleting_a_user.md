@@ -2,7 +2,7 @@
 uid: Deleting_a_user
 ---
 
-## Deleting a user
+# Deleting a user
 
 To delete a user from the DMS:
 

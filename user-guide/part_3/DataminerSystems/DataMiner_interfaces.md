@@ -2,11 +2,11 @@
 uid: DataMiner_interfaces
 ---
 
-## DataMiner interfaces
+# DataMiner interfaces
 
 Your DataMiner System can interface with a multitude of client applications, ranging from the standard DataMiner web clients to third-party tools.
 
-### Graphical overview
+## Graphical overview
 
 As shown in the following illustration, there are four main categories of DataMiner interfaces.
 
@@ -14,29 +14,29 @@ As shown in the following illustration, there are four main categories of DataMi
 
 
 
-### Private interfaces
+## Private interfaces
 
 Every DataMiner System ships with a number of private interfaces to connect to the standard DataMiner client applications.
 
-#### Standard DataMiner web client (connecting via .NET Remoting or XML Web Services)
+### Standard DataMiner web client (connecting via .NET Remoting or XML Web Services)
 
 - DataMiner Cube
 
-#### Standard DataMiner mobile client (connecting via the DataMiner Web Services APIs)
+### Standard DataMiner mobile client (connecting via the DataMiner Web Services APIs)
 
 - DataMiner Monitoring & Control app (device-independent)
 
-#### Standard DataMiner tools (connecting via .NET Remoting or XML Web Services)
+### Standard DataMiner tools (connecting via .NET Remoting or XML Web Services)
 
 - DMS Alerter
 
-#### HTML-based reporting tools (connecting via HTML)
+### HTML-based reporting tools (connecting via HTML)
 
 - DMS Reports
 
 - DMS Dashboards
 
-#### Custom apps, developed in-house (connecting via .NET Remoting or XML Web Services)
+### Custom apps, developed in-house (connecting via .NET Remoting or XML Web Services)
 
 - Carrier Management
 
@@ -46,7 +46,7 @@ Every DataMiner System ships with a number of private interfaces to connect to t
 
 - ...
 
-### Standard public interfaces
+## Standard public interfaces
 
 By default, every DataMiner System has a number of standard public interfaces that allow:
 
@@ -60,7 +60,7 @@ By default, every DataMiner System has a number of standard public interfaces th
 
 - Web Services APIs (SOAP XML, XML-RPC).
 
-### Optional public interfaces
+## Optional public interfaces
 
 Optionally, your DataMiner System can be configured to connect to third-party applications via
 
@@ -68,7 +68,7 @@ Optionally, your DataMiner System can be configured to connect to third-party ap
 
 - EGMC2
 
-### Custom interfaces
+## Custom interfaces
 
 On top of all available private and public interfaces, highly specialized, custom interfaces can be developed to allow your DataMiner System to integrate seamlessly into your existing infrastructure.
 

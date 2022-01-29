@@ -2,7 +2,7 @@
 uid: CI_Types
 ---
 
-## CI Types
+# CI Types
 
 The *CI Types* subtab of the *Admin* tab consists of several pages with overview tables. At the top of the pages, buttons are available:
 
@@ -144,7 +144,7 @@ On each of the pages, different settings are available:
 
 - **Activity Management**: The toggle buttons on this page allow you to determine the default behavior of the process activation settings (on the *Processes* > *Activities* tab). If a toggle button is set to *Manual*, users will need to manually enable automation for the relevant activity when completeness is 100%. If a toggle button is set to *Automatic*, automation will be enabled automatically as soon as completeness is 100% for the activity. With the buttons at the bottom of the page, you can set all activities to *Automatic* or *Manual* in one go.
 
-### Using the CI Type Management wizard
+## Using the CI Type Management wizard
 
 On the *CI Types* subtab of the *Admin* tab, several buttons provide access to the CI Type Management wizard. In this wizard, you can configure the CI Type for discovery, provisioning, connectivity, configuration management, software image management and facilities.
 
@@ -154,7 +154,7 @@ In the first window, you can also delete the CI Type with the *Delete* button, b
 
 To save changes to the configuration, use the *Save* button. To do so, you may first need to click *Previous* in order to return to the first window of the wizard.
 
-#### Discovery configuration
+### Discovery configuration
 
 The discovery configuration window of the CI Type Management wizard allows you to edit the current discovery identifiers and add new discovery identifiers:
 
@@ -164,7 +164,7 @@ The discovery configuration window of the CI Type Management wizard allows you t
 
 - **Add New Discovery Identifiers**: To add a new discovery identifier, first select the type, then click the triangle button to expand the configuration section for the identifier. Alternatively, you can immediately click the triangle button to see all possible types. Click "+" next to the type you want to add. Then select a *Match* operator and specify the value that should be used to detect if the CI Type should be used.
 
-#### Provisioning configuration
+### Provisioning configuration
 
 The provisioning configuration window of the CI Type Management wizard contains the following settings:
 
@@ -196,11 +196,11 @@ The provisioning configuration window of the CI Type Management wizard contains 
 
 - **Update Property Script**: The Automation script that should be used to update the properties of the element once it has been created. You can select any of the scripts from the folder configured with the *CI Update Property Script* *Folder* setting on the *Admin* > *Settings* page.
 
-#### Connectivity configuration
+### Connectivity configuration
 
 In the connectivity configuration window, you can select the script that will be used to discover connectivity for this CI Type. You can select any of the scripts from the folder configured with the *Connectivity Discovery Script* *Folder* setting on the *Admin* > *Settings* page.
 
-#### Configuration management configuration
+### Configuration management configuration
 
 The configuration management configuration window of the CI Type Management wizard contains the following settings in the **Backup** section:
 
@@ -216,7 +216,7 @@ In the **Update** section, the following settings are available:
 
 - **Default Update File**: The configuration file that can be used by the update script. Depending on the script configuration, this field may not be required.
 
-#### Software image management configuration
+### Software image management configuration
 
 The software image configuration window of the CI Type Management wizard contains the following settings:
 
@@ -230,6 +230,6 @@ The software image configuration window of the CI Type Management wizard contain
 
 - **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified. In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
 
-#### Facilities configuration
+### Facilities configuration
 
 In the facilities configuration window, you can select the script that should be used for automatic rack assignment. You can select any of the scripts from the folder configured with the *Rack Assignment Script* *Folder* setting on the *Admin* > *Settings* page.

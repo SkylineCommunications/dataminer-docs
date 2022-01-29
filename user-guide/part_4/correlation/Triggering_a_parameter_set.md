@@ -2,7 +2,7 @@
 uid: Triggering_a_parameter_set
 ---
 
-## Triggering a parameter set
+# Triggering a parameter set
 
 To make a Correlation rule trigger a parameter set:
 

@@ -2,7 +2,7 @@
 uid: Dynamic_virtual_elements
 ---
 
-## Dynamic virtual elements
+# Dynamic virtual elements
 
 For cases where a large number of elements are combined, a dynamic virtual element (DVE) can be created. This can for instance be when numerous cards are contained in one chassis and every card should be a separate element.
 
@@ -14,7 +14,7 @@ A dynamic virtual element consists of one main parent DVE, from which child DVEs
 
 - [Enabling or disabling the creation of DVE child elements](#enabling-or-disabling-the-creation-of-dve-child-elements)
 
-### Creating a dynamic virtual element
+## Creating a dynamic virtual element
 
 A parent DVE is created like a regular element, but during creation a DVE protocol is assigned.
 
@@ -41,7 +41,7 @@ New child DVEs will be added in the same view as the parent DVE, except if a vie
 > [!NOTE]
 > It is advisable to specify the view(s) immediately when adding new rows to a DVE table with a view column. This way, unnecessary view updates can be avoided.
 
-### Editing a dynamic virtual element
+## Editing a dynamic virtual element
 
 The child DVEs get all characteristics, including their different protocols, from the parent DVE protocol. They cannot be edited by themselves.
 
@@ -60,7 +60,7 @@ However, it is possible to assign a separate trend template or alarm template to
 > [!NOTE]
 > From DataMiner 9.5.6 onwards, limited editing possibilities are available for DVE child elements, allowing you to modify the description of the element, the alarm and trend template, the parent view(s) and the properties, and allowing you to set the DVE child element to *Hidden*.
 
-### Enabling or disabling the creation of DVE child elements
+## Enabling or disabling the creation of DVE child elements
 
 By default, when a parent element is created, creation of child elements is enabled. However, it is possible to disable or enable the creation of child elements.
 

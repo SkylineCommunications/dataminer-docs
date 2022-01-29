@@ -2,7 +2,7 @@
 uid: Overview_of_the_TicketingGatewayHelper_class
 ---
 
-## Overview of the TicketingGatewayHelper class
+# Overview of the TicketingGatewayHelper class
 
 Below, you can find an overview of all methods, properties and events of the *TicketingGatewayHelper* class.
 
@@ -12,9 +12,9 @@ Below, you can find an overview of all methods, properties and events of the *Ti
 
 - [Events](#events)
 
-### Methods
+## Methods
 
-#### DriverSync
+### DriverSync
 
 Synchronizes the ticketing protocol with DataMiner.
 
@@ -34,7 +34,7 @@ Returns:
 
 - A collection of event messages containing all the verified and updated or deleted tickets.
 
-#### GetMaskedTicketFieldResolvers
+### GetMaskedTicketFieldResolvers
 
 Retrieves the masked resolvers corresponding to one or more filters.
 
@@ -65,7 +65,7 @@ Example:
     }
     ```
 
-#### GetTicketFieldResolvers
+### GetTicketFieldResolvers
 
 Retrieves the non-masked ticket field resolvers corresponding to one or more filters.
 
@@ -81,7 +81,7 @@ Returns:
 
 - The requested ticket field resolvers.
 
-#### GetTicketHistory
+### GetTicketHistory
 
 Retrieves the history for one or more tickets.
 
@@ -97,7 +97,7 @@ Returns:
 
 - The requested collection of TicketHistory objects.
 
-#### GetTickets
+### GetTickets
 
 Retrieves the tickets matching the given filter and links.
 
@@ -120,7 +120,7 @@ Returns:
 
 - A collection of tickets matching the links and filter.
 
-#### NewPagingRequest
+### NewPagingRequest
 
 Use this method to retrieve tickets in a paged fashion. This method requests a new page.
 
@@ -154,7 +154,7 @@ Returns:
 > [!NOTE]
 > Instead of using the page number and calling a NewPagingRequest to retrieve the next page, we advise to use the NextPagingRequest method instead.
 
-#### NextPagingRequest
+### NextPagingRequest
 
 Request the next page of a previously requested set of pages (retrieved via NewPagingRequest).
 
@@ -170,7 +170,7 @@ Returns
 
 - The next page of the set.
 
-#### RemoveTicketFieldResolvers
+### RemoveTicketFieldResolvers
 
 Removes one or more ticket field resolvers.
 
@@ -188,7 +188,7 @@ Returns
 
 - *True* when removing the ticket field resolver(s) was successful, otherwise *False*.
 
-#### RemoveTickets
+### RemoveTickets
 
 Removes one or more tickets.
 
@@ -206,7 +206,7 @@ Returns
 
 - *True* when removing the ticket(s), otherwise *False*.
 
-#### SetTicket
+### SetTicket
 
 Adds or edits a ticket.
 
@@ -226,7 +226,7 @@ Returns:
 
 Example: see[Creating tickets with the Ticketing Gateway API](xref:Creating_tickets_with_the_Ticketing_Gateway_API).
 
-#### SetTicketFieldResolver
+### SetTicketFieldResolver
 
 Adds or edits a ticket field resolver.
 
@@ -246,7 +246,7 @@ Returns
 
 Example: see[Creating tickets with the Ticketing Gateway API](xref:Creating_tickets_with_the_Ticketing_Gateway_API).
 
-#### SetTicketFieldResolvers
+### SetTicketFieldResolvers
 
 Adds or edits multiple ticket field resolvers
 
@@ -264,7 +264,7 @@ Returns
 
 - *True* when adding/editing the ticket field resolvers was successful, otherwise *False*.
 
-#### SetTickets
+### SetTickets
 
 Adds or edits multiple tickets.
 
@@ -282,9 +282,9 @@ Returns:
 
 - *True* when adding/editing the tickets was successful, otherwise *False*.
 
-### Properties
+## Properties
 
-#### IsLicensed
+### IsLicensed
 
 Checks with the server whether a valid Ticketing license is present.
 
@@ -292,9 +292,9 @@ Checks with the server whether a valid Ticketing license is present.
 bool IsLicensed
 ```
 
-### Events
+## Events
 
-#### RequestResponseEvent
+### RequestResponseEvent
 
 Event that is called when the Helper wants to send a message to the server and expects a response.
 

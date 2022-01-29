@@ -2,7 +2,7 @@
 uid: Viewing_protocol_help
 ---
 
-## Viewing protocol help
+# Viewing protocol help
 
 For many protocols in DataMiner, a help section is included with more information. This help section can for instance contain more information on the device the protocol is meant for, the various versions of the protocol, and the information that will be displayed on the element card.
 

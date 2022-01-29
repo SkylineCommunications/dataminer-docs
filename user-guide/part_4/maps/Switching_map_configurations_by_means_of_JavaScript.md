@@ -2,13 +2,13 @@
 uid: Switching_map_configurations_by_means_of_JavaScript
 ---
 
-## Switching map configurations by means of JavaScript
+# Switching map configurations by means of JavaScript
 
 You can switch from one DataMiner Maps configuration to another by means of JavaScript.
 
 This can be useful in scenarios where the maps component is an iframe inside a parent page that allows you to view multiple map configurations. Instead of switching the URL of the iframe, the parent frame can ask the maps frame to load a different configuration.
 
-##### Example:
+#### Example:
 
 Suppose you have a parent HTML file that contains an iframe.
 

@@ -2,7 +2,7 @@
 uid: AutomationEntryPointDelegates_OnSrmQuarantineTrigger_Delegate
 ---
 
-## AutomationEntryPointDelegates.OnSrmQuarantineTrigger Delegate
+# AutomationEntryPointDelegates.OnSrmQuarantineTrigger Delegate
 
 Delegate type for SRM quarantine trigger.
 

@@ -2,7 +2,7 @@
 uid: Configuring_Mobile_Gateway_in_DataMiner_Cube
 ---
 
-## Configuring Mobile Gateway in DataMiner Cube
+# Configuring Mobile Gateway in DataMiner Cube
 
 1. In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.
 
@@ -23,7 +23,7 @@ uid: Configuring_Mobile_Gateway_in_DataMiner_Cube
 
 4. Click the *commands* tab, and configure all the commands you want Mobile Gateway users to be able to enter. See [Commands](#commands)
 
-### Cellphone settings
+## Cellphone settings
 
 In the *cellphone settings* section, enter the following data:
 
@@ -35,7 +35,7 @@ In the *cellphone settings* section, enter the following data:
 
     If no number is specified in this tag, the telephone number of the service center is read from the SIM card. Default: +32475161616
 
-### Destinations
+## Destinations
 
 In the *destination* section, specify which users are allowed to be called by Mobile Gateway.
 
@@ -55,7 +55,7 @@ To delete a custom destination:
 
 - Hover over the destination, and click the small *X*.
 
-### Remote users
+## Remote users
 
 In the *remote users* section, specify which users are allowed to call Mobile Gateway.
 
@@ -75,7 +75,7 @@ To delete a custom user or user group:
 
 - Hover over the user or the user group, and click the small *X*.
 
-### Commands
+## Commands
 
 In the *commands* tab, configure all the commands you want Mobile Gateway users to be able to enter.
 

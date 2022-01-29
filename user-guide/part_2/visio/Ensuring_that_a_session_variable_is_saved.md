@@ -2,7 +2,7 @@
 uid: Ensuring_that_a_session_variable_is_saved
 ---
 
-## Ensuring that a session variable is saved
+# Ensuring that a session variable is saved
 
 From DataMiner 9.0.5 onwards, it is possible to have a session variable saved across sessions.
 

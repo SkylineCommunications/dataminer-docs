@@ -2,11 +2,11 @@
 uid: Adding_a_custom_legend_to_a_map
 ---
 
-## Adding a custom legend to a map
+# Adding a custom legend to a map
 
 It is possible to add a custom legend to a map, which is then visualized as a table. In this legend, you have to define table columns and a row filter. When a user clicks one of the rows in the legend, the contents of that row are then used to filter the markers of all layers of sourceType “table”.
 
-### Custom legend configuration
+## Custom legend configuration
 
 To configure a custom legend, add a *\<CustomLegendBox>* tag, and configure it as follows.
 
@@ -53,7 +53,7 @@ Example:
 </CustomLegendBox>
 ```
 
-### \[CustomLegendBoxFilterValue\] placeholder
+## \[CustomLegendBoxFilterValue\] placeholder
 
 In order to link a custom legend to a layer, use the *\[CustomLegendBoxFilterValue\]* placeholder. This placeholder will be replaced by the *FilterColumnPID* value of the row selected in the legend.
 

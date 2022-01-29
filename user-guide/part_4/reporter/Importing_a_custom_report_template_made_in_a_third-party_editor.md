@@ -2,7 +2,7 @@
 uid: Importing_a_custom_report_template_made_in_a_third-party_editor
 ---
 
-## Importing a custom report template made in a third-party editor
+# Importing a custom report template made in a third-party editor
 
 If you have created a report template using your favorite ASP editor, you have to manually add it to the list of available templates.
 

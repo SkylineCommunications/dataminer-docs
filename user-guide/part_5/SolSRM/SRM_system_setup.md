@@ -2,7 +2,7 @@
 uid: SRM_system_setup
 ---
 
-## SRM system setup
+# SRM system setup
 
 Once the SRM Framework has been installed, several actions are necessary to provision the system:
 

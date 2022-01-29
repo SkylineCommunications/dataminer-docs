@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_an_Automation_script
 ---
 
-## Linking a shape to an Automation script
+# Linking a shape to an Automation script
 
 When a shape is linked to an Automation script, by default this script will be executed each time a user clicks that shape.
 
@@ -73,7 +73,7 @@ To link a shape to an Automation script:
     | VdxPage            | MyPage\|Popup                             |
     | Execute            | Script:MyScript\|Dummy01=\[this service\] |
 
-### Specifying a script to be executed when the page is closed
+## Specifying a script to be executed when the page is closed
 
 From DataMiner 9.5.7 onwards, you can link a page to a script, which is then executed when the card, pop-up window or tooltip showing the page is closed.
 
@@ -85,7 +85,7 @@ For example:
 |------------------|-----------------------------------------------------------------------------------------|
 | OnClose          | Script:MyScript01\|Dummy01=\[this service\]-Script:MyScript02\|Dummy01=\[this service\] |
 
-### Using an alternative separator character
+## Using an alternative separator character
 
 From DataMiner 9.0.5 onwards, it is possible to specify an alternative separator character with a \[sep:XY\] tag.
 
@@ -99,7 +99,7 @@ For example, in the configuration below, the first-level separator “\|” is r
 > See also:
 > [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
-### Passing Automation script output to session variables
+## Passing Automation script output to session variables
 
 From DataMiner 10.0.13 onwards, when an Automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview.
 
@@ -132,7 +132,7 @@ engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValu
     | Execute            | Script:Test_SessionsVariable\|\|\|\|\|NoConfirmation,CloseWhenFinished |
     | Options            | CardVariable                                                           |
 
-### Options
+## Options
 
 In the **Execute** shape data value, you can use the following options (separated by commas).
 

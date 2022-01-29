@@ -2,7 +2,7 @@
 uid: Adding_a_Dashboards_User_to_the_DMS
 ---
 
-## Adding a Dashboards User to the DMS
+# Adding a Dashboards User to the DMS
 
 In order for a new customer to access dashboards with DMS Dashboard Gateway, the following steps are required:
 

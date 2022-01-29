@@ -2,7 +2,7 @@
 uid: Icons
 ---
 
-## Icons
+# Icons
 
 The *C:\\Skyline DataMiner\\Icons\\* directory contains any custom icons that have been configured for elements, services, redundancy groups and views, as well as rules that dictate when they should be displayed.
 
@@ -16,7 +16,7 @@ The icons and the icon rules are specified in the following XML files:
 > - Using custom icons is possible from DataMiner 9.0.5 onwards.
 > - If you have made any changes to these files, restart DataMiner to implement your changes.
 
-### CustomIcons.xml
+## CustomIcons.xml
 
 In the *CustomIcons.xml* file, each *\<Icon>* tag can either contain XAML code or refer to an image file located in the folder *C:\\Skyline DataMiner\\Icons\\Refs\\*. See the following example.
 
@@ -40,7 +40,7 @@ The icon tag can have the following attributes:
 > [!NOTE]
 > If both XAML code and an image file are available for the same icon, the XAML code will be used.
 
-### IconSelectionRules.xml
+## IconSelectionRules.xml
 
 In the *IconSelectionRules.xml* file, you can specify when the icons defined in *CustomIcons.xml* have to be used. See the following example.
 

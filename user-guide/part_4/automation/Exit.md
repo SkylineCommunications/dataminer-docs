@@ -2,7 +2,7 @@
 uid: Exit
 ---
 
-## Exit
+# Exit
 
 Use this action to terminate an Automation script without delay:
 

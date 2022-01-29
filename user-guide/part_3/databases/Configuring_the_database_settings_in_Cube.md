@@ -2,7 +2,7 @@
 uid: Configuring_the_database_settings_in_Cube
 ---
 
-## Configuring the database settings in Cube
+# Configuring the database settings in Cube
 
 To configure a general or “local” database:
 

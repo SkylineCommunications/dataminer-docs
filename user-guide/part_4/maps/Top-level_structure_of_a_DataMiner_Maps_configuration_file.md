@@ -2,7 +2,7 @@
 uid: Top-level_structure_of_a_DataMiner_Maps_configuration_file
 ---
 
-## Top-level structure of a DataMiner Maps configuration file
+# Top-level structure of a DataMiner Maps configuration file
 
 This is an example of a DataMiner Maps configuration file:
 
@@ -41,7 +41,7 @@ See below for more information on the main tags in the above-mentioned example:
 
 - [ToggleGroups](#togglegroups)
 
-### Center
+## Center
 
 In the *\<Center>* tag, specify the latitude and the longitude of the geographic location that has to be in the center of the map when you open it.
 
@@ -71,13 +71,13 @@ From DataMiner 9.5.1 onwards, the following attributes are available to further 
 > - Centering on "lat" and "long" coordinates passed via URL parameters. (See [lat=](xref:Opening_DataMiner_Cube#lat) and [long=](xref:Opening_DataMiner_Cube#long))
 > - Centering on static coordinates defined in the \<Center> tag of the map configuration.
 
-### FilterBox
+## FilterBox
 
 If you add a *\<FilterBox>* tag, the map will contain a filter box that allows users to filter map items based on their name or their alarm severity level.
 
 For more information, see [Adding a filter box to a DataMiner Map](xref:Adding_a_filter_box_to_a_DataMiner_Map).
 
-### InitialZoom
+## InitialZoom
 
 In the *\<InitialZoom>* tag, specify the zoom level at which the map will initially be displayed.
 
@@ -93,7 +93,7 @@ Example:
 <InitialZoom>13</InitialZoom>
 ```
 
-### Layers
+## Layers
 
 In the *\<Layers>* tag, specify a *\<Layer>* tag for every layer that has to be displayed on top of the map.
 
@@ -114,7 +114,7 @@ Example:
 
 For more information, see [Attributes of the Layer tag](xref:Attributes_of_the_Layer_tag).
 
-### LoadStrategy
+## LoadStrategy
 
 Available from DataMiner 9.6.0 CU3/9.6.9 onwards. In the *\<LoadStrategy>* tag, specify whether invisible layers should be preloaded when the map is initialized.
 
@@ -125,7 +125,7 @@ The following values can be specified:
 | all     | Preload all layers when the map is initialized (visible and invisible layers). |
 | visible | Preload only the visible layers when the map is initialized.                   |
 
-### MapType
+## MapType
 
 In the *\<MapType>* tag, specify the type of map that has to be displayed initially.
 
@@ -143,7 +143,7 @@ Example:
 <MapType>road</MapType>
 ```
 
-### PolyLineOptions
+## PolyLineOptions
 
 Available from DataMiner 9.6.0 CU3/9.6.9 onwards. If polylines on the map should be visible even if only the start point or the end point of those lines are visible, specify this tag as follows:
 
@@ -151,7 +151,7 @@ Available from DataMiner 9.6.0 CU3/9.6.9 onwards. If polylines on the map should
 <PolyLineOptions partial="true" />
 ```
 
-### Scripts
+## Scripts
 
 In the *\<Scripts>* tag, specify a *\<Script>* tag for every external JavaScript file that has to be loaded when the map is opened.
 
@@ -172,7 +172,7 @@ In the src attribute of a *\<Script>* tag, specify the path to a JavaScript file
 
 - a path relative to *C:\\Skyline DataMiner\\Webpages\\Maps\\*
 
-### ToggleGroups
+## ToggleGroups
 
 In the *\<ToggleGroups>* tag, you can define layer groups.
 

@@ -2,7 +2,7 @@
 uid: Replicated_elements
 ---
 
-## Replicated elements
+# Replicated elements
 
 With element replication, elements managed by one DMS can be visualized in another DMS.
 
@@ -15,7 +15,7 @@ Unlike a locally managed element, however, a replicated element is not polled. I
 > - A replicated element will go into timeout state both if the element that is being replicated goes into timeout state and when that element is not reachable.
 > - The default connection checking interval is 30 seconds.
 
-#### .NET Remoting
+### .NET Remoting
 
 All information about the remote element is retrieved by means of the .NET Remoting protocol (default port: 8004).
 

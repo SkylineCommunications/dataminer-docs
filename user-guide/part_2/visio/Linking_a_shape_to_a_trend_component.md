@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_a_trend_component
 ---
 
-## Linking a shape to a trend component
+# Linking a shape to a trend component
 
 Using a shape data field of type **Component**, you can configure a Visio shape to display a trend component.
 
@@ -25,7 +25,7 @@ In this section:
 
 - [Filtering the trend legend](#filtering-the-trend-legend)
 
-### Basic shape data configuration
+## Basic shape data configuration
 
 Add the following shape data fields to the shape:
 
@@ -75,7 +75,7 @@ Example:
 | Parameters        | 221:50670:350                                                      |
 | ParametersOptions | Range:Day\|NavigatorChart:false\|ShowLegend:true\|ShowGroups:false |
 
-### Configuring session variables to be set from trace points
+## Configuring session variables to be set from trace points
 
 From DataMiner 9.5.12 onwards, it is possible to configure a trend component so that a session variable is populated with a trace value when the mouse pointer hovers over a graph.
 
@@ -99,7 +99,7 @@ Example of the configuration:
 | SetVar            | ValueTrace:Avg\|MinTrace:Min\|MaxTrace:Max\|TimeTrace:Time |
 | Options           | PageVariable                                               |
 
-### Configuring session variables to be updated with the graph’s time range
+## Configuring session variables to be updated with the graph’s time range
 
 From DataMiner 10.0.13 onwards, it is possible to configure a trend component so that a session variable is populated with the time range displayed in the graph (i.e. the start time and end time).
 
@@ -114,7 +114,7 @@ Example:
 > [!NOTE]
 > The values set in the session variables will be datetime text strings formatted according to the current culture.
 
-### Creating a trend component with command control
+## Creating a trend component with command control
 
 From DataMiner 9.5.3 onwards, you can create a special kind of trend component that incorporates a command control. Depending on the configuration, the command control can be used to manipulate one particular component or several components, which can be on the same page, on the same card or anywhere in Cube.
 
@@ -134,7 +134,7 @@ From DataMiner 9.5.3 onwards, you can create a special kind of trend component t
     | Options          | To turn the shape into a button, specify: *Control=Button*                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
     | Scope            | The scope of the command:<br> -  *Page* (default): All components that can execute the configured command on the same Visio page.<br> -  *Card*: All components that can execute the configured command on all pages of the current Visio file.<br> -  *Application*: All components that can execute the configured command anywhere in the client application (e.g. DataMiner Cube) |
 
-#### Example
+### Example
 
 In the following example, the range of the leftmost trend graph component found on the same Visio page as the command shape will be set to “Week” when the command shape is clicked:
 
@@ -154,7 +154,7 @@ In the following example, the range of the leftmost trend graph component found 
     | Options          | Control=Button     |
     | Scope            | Page               |
 
-### Limiting the displayed values to the top/bottom X
+## Limiting the displayed values to the top/bottom X
 
 From DataMiner 9.6.5 onwards, it is possible to specify that only the top or bottom number of current values of a parameter should be displayed.
 
@@ -175,7 +175,7 @@ For example:
 | ParametersOptions | ShowLegend:true            |
 | Sort              | ASC,limit:2\|DESC,limit:1  |
 
-### Filtering the trend legend
+## Filtering the trend legend
 
 From DataMiner 10.0.2 onwards, it is possible to filter the available elements in the trending legend based on the value of a property.
 

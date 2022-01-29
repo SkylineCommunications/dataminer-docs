@@ -2,7 +2,7 @@
 uid: Viewing_user_information
 ---
 
-## Viewing user information
+# Viewing user information
 
 To view detailed information on a user:
 

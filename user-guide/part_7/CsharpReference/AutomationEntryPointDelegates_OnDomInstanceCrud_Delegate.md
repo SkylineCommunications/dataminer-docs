@@ -2,7 +2,7 @@
 uid: AutomationEntryPointDelegates_OnDomInstanceCrud_Delegate
 ---
 
-## AutomationEntryPointDelegates.OnDomInstanceCrud Delegate
+# AutomationEntryPointDelegates.OnDomInstanceCrud Delegate
 
 Delegate type for DOM instance CRUD.
 

@@ -2,7 +2,7 @@
 uid: How_do_I_parse_Correlation_Alarm_Info_data
 ---
 
-## How do I parse Correlation Alarm Info data?
+# How do I parse Correlation Alarm Info data?
 
 The following sample code shows how you can parse the information in a *\<Correlation Alarm Info>* string:
 

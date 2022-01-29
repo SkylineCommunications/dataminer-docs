@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_a_calculation_involving_multiple_parameters
 ---
 
-## Linking a shape to a calculation involving multiple parameters
+# Linking a shape to a calculation involving multiple parameters
 
 Using a shape data field of type **ParametersSummary**, you can link a shape to a calculation involving multiple parameters, followed by one or more actions to be performed.
 
@@ -13,7 +13,7 @@ Possible actions include: displaying the minimum, maximum, sum or average of a s
 > - All parameter values used in a **ParametersSummary** field must be of type “double”.
 > - By default, the summary value is calculated when all parameter values are available. However, if you add a shape data field of type **Options** and set its value to “*IgnoreUnsetValues*”, the summary value will appear as soon as one of the values is available.
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **ParametersSummary** to the shape, and set its value to:
 
@@ -24,7 +24,7 @@ Add a shape data field of type **ParametersSummary** to the shape, and set its v
 > [!NOTE]
 > Do not combine this shape data field with an **Element** shape data field on the same shape, as the defined actions may not work correctly in that case.
 
-### Syntax of the ParametersSummary value
+## Syntax of the ParametersSummary value
 
 The value of a **ParametersSummary** shape data field has to consist of a number of delimited sections:
 
@@ -52,7 +52,7 @@ Operation|Param1|Param2|...|ParamZ|Actions
 > [!NOTE]
 > By default, a pipe character (“\|”) is used as the separator between the sections. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
-#### Syntax of a Parameter section
+### Syntax of a Parameter section
 
 The string specified in a Parameter section has to consist of a number of delimited sections:
 
@@ -87,7 +87,7 @@ Element:Parameter:Index
 > [!NOTE]
 > By default, a colon (“:”) is used as the separator within a parameter section. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
-#### Syntax of the Actions section
+### Syntax of the Actions section
 
 In the Actions section, you can specify the actions to be performed. If you specify multiple actions, separate them with a colon (”:”):
 
@@ -115,7 +115,7 @@ Action:Action:Action:...
 > - The conditions you specify in case of FLIPX, FLIPY, HIDE, SHOW or ROTATE will be evaluated against the result of the operation on the specified parameters (Min, Max, Avg or Sum).
 > - In conditions, both single equal signs (“=”) and double equal signs (“==”) are supported.
 
-### Examples of ParametersSummary values
+## Examples of ParametersSummary values
 
 Here are a few examples of **ParametersSummary** values:
 

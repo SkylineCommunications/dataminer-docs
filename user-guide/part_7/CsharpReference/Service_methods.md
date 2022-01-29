@@ -2,9 +2,9 @@
 uid: Service_methods
 ---
 
-## Service methods
+# Service methods
 
-#### GetPropertyValue
+### GetPropertyValue
 
 Gets the value of the specified service property.
 
@@ -24,7 +24,7 @@ if(myService.HasProperty("myProperty"))
 }
 ```
 
-#### HasProperty
+### HasProperty
 
 Determines whether this service has a property with the specified property name.
 
@@ -44,7 +44,7 @@ if(myService.HasProperty("myProperty"))
 }
 ```
 
-#### SetPropertyValue
+### SetPropertyValue
 
 Sets the value of the specified service property.
 

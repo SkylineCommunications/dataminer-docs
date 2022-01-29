@@ -2,7 +2,7 @@
 uid: GoTo_and_Label
 ---
 
-## GoTo and Label
+# GoTo and Label
 
 These two script actions are linked:
 

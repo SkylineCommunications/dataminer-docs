@@ -2,7 +2,7 @@
 uid: Searching_in_DataMiner_Cube
 ---
 
-## Searching in DataMiner Cube
+# Searching in DataMiner Cube
 
 This section contains the following topics:
 
@@ -16,9 +16,9 @@ This section contains the following topics:
 
 - [Searching with wildcard characters](#searching-with-wildcard-characters)
 
-### Using the Cube Search box
+## Using the Cube Search box
 
-#### From DataMiner 10.0.0/10.0.2 onwards
+### From DataMiner 10.0.0/10.0.2 onwards
 
 From DataMiner 10.0.0/10.0.2 onwards, to search for an item in the DataMiner System, you can use the search box in the middle of the Cube header bar.
 
@@ -63,7 +63,7 @@ Please note the following
 
 - Hidden elements are not included in the search results.
 
-#### Prior to DataMiner 10.0.0/10.0.2
+### Prior to DataMiner 10.0.0/10.0.2
 
 To search for an item in the DataMiner System using a DataMiner version prior to DataMiner 10.0.0/10.0.2, enter a search term in the Search box at the top of the Cube navigation pane. With every character you type, any available results will appear in the navigation pane.
 
@@ -100,7 +100,7 @@ To search for an item in the DataMiner System using a DataMiner version prior to
 
 - To clear the Search box and erase the list of search results, click the X on the right.
 
-### Search type filter
+## Search type filter
 
 If an advanced search returns several kinds of items, it is possible to filter which categories are displayed. To do so, click the *All types* button in the top-left corner, and select the type you wish to display. For some of these types, an additional filter is displayed when you have selected the type filter.
 
@@ -126,7 +126,7 @@ If an advanced search returns several kinds of items, it is possible to filter w
 | View             | DataMiner views.                                                                                                                                                                                   |
 | Workspaces       | DataMiner workspaces. See[Working with workspaces](xref:Working_with_workspaces).                                                                                                                    |
 
-### Searching for specific DataMiner items
+## Searching for specific DataMiner items
 
 To search for an **element**, enter (part of):
 
@@ -227,7 +227,7 @@ To search for a **document**, enter (part of):
 
 - a file name
 
-### Special search options
+## Special search options
 
 For advanced searches, a number of special search options are available:
 
@@ -280,7 +280,7 @@ For advanced searches, a number of special search options are available:
     | normal           | “                                                                                       |
     | masked           | “                                                                                       |
 
-### Searching with wildcard characters
+## Searching with wildcard characters
 
 You can use the following two wildcard characters:
 
@@ -293,7 +293,7 @@ You can use the following two wildcard characters:
 > - The checks are executed using the invariant culture and ignoring case.
 > - These characters are not supported for the quick search from the Cube search box, only for the advanced search.
 
-#### Examples
+### Examples
 
 ```txt
 London*

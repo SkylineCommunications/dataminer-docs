@@ -2,7 +2,7 @@
 uid: Viewing_aggregation_information
 ---
 
-## Viewing aggregation information
+# Viewing aggregation information
 
 To view aggregation rules for a particular view, open the view card in DataMiner Cube, and go to the *Aggregation* page.
 

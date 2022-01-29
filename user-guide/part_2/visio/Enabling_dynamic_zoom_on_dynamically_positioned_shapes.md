@@ -2,7 +2,7 @@
 uid: Enabling_dynamic_zoom_on_dynamically_positioned_shapes
 ---
 
-## Enabling dynamic zoom on dynamically positioned shapes
+# Enabling dynamic zoom on dynamically positioned shapes
 
 From DataMiner 9.5.1 onwards, dynamic zooming can be configured when shapes are positioned dynamically. When dynamic zooming is enabled, shapes will not change in size when you zoom in, but will instead be repositioned. Shapes will move away from each other when you zoom in and will move closer together when you zoom out.
 
@@ -18,7 +18,7 @@ To enable dynamic zooming on a page, add the following shape data to the page:
 > - When used in combination with grouping overlapping dynamically positioned shapes, several overlapping shapes that were grouped into one shape will be split into separate shapes when you zoom in.<br>See [Enabling grouping of dynamically positioned shapes](xref:Enabling_grouping_of_dynamically_positioned_shapes).
 > - When you use dynamic zooming, shapes will always be displayed using a scale of 100%.
 
-### Disabling rescaling of a particular shape
+## Disabling rescaling of a particular shape
 
 By default, when dynamic zoom is enabled, shapes that are not linked to DataMiner objects are automatically rescaled when you zoom in or out.
 

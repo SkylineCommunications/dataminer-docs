@@ -2,7 +2,7 @@
 uid: Generating_shapes_based_on_table_rows
 ---
 
-## Generating shapes based on table rows
+# Generating shapes based on table rows
 
 In a Visio drawing, you can specify that a shape should be created automatically for every row in a table.
 
@@ -20,7 +20,7 @@ When, inside a Microsoft Visio drawing, you specify placeholders like \[Param: .
 > - It is also possible to make the shapes use a different index than that of the original row. See [Making a shape use a different index than that of the original row](#making-a-shape-use-a-different-index-than-that-of-the-original-row).
 > - Just like for shape positioning based on dynamic tables, you can also use the *LinkElement* and *DynamicData* ColumnOptions in the protocol when generating shapes based on table rows. If the *LinkElement* option is used, the newly created shapes can be linked to a specified element. With the *DynamicData* option, they can have their interface placeholders resolved by dynamic data. For more information, see [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
 
-### Child-level shape data
+## Child-level shape data
 
 The following shape data fields can be added to a shape that has to represent a table row.
 
@@ -48,7 +48,7 @@ The following shape data fields can be added to a shape that has to represent a 
 
     - Row
 
-### Group-level shape data
+## Group-level shape data
 
 The following shape data fields can be added to the group containing the table row shapes.
 
@@ -214,7 +214,7 @@ The following shape data fields can be added to the group containing the table r
     | ChildrenSource     | \*/1600            |
     | Options            | NoSelectionFilters |
 
-### Displaying information from the data table instead of the linked element
+## Displaying information from the data table instead of the linked element
 
 When dynamic shape positioning is used based on data stored in a table, by default all subshapes will be linked to an element ID that was fetched from a column of that table. As a result, those subshapes will only be able to display information from the element to which they are linked.
 
@@ -234,7 +234,7 @@ Example: If you specify the following shape data in the main shape and the subsh
 > - The parameter and table index can either be separated by a comma, as illustrated above, or by a colon. The first separator that is found will be used to separate the parameter from the index, and any other separators will be considered part of the index.
 > - With older versions of DataMiner, if the value of the cell you link to is empty, the display key will be shown instead. From DataMiner 9.0.0 CU15/DataMiner 9.5.3 onwards, in that case no value will be shown. However, to have the display key shown instead, you can specify the keyword *\[DisplayTableIndexValue\]* in the **Parameter** shape data field.
 
-### Making a shape use a different index than that of the original row
+## Making a shape use a different index than that of the original row
 
 Normally, when shapes are created dynamically based on rows in a table, the index used in those dynamically created shapes and subshapes will be the index of the original row. To make a shape use a different index, add the following two shape data fields:
 

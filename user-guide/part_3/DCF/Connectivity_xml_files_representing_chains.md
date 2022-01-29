@@ -2,7 +2,7 @@
 uid: Connectivity_xml_files_representing_chains
 ---
 
-## Connectivity.xml files representing chains
+# Connectivity.xml files representing chains
 
 To configure connectivity chains:
 
@@ -21,7 +21,7 @@ To configure connectivity chains:
     >     - Interface 1 -> Interface 2
     >     - Interface 3 -> Interface 2
 
-### Example of Connectivity.xml files representing a chain
+## Example of Connectivity.xml files representing a chain
 
 The following example illustrates the basic syntax of a *Connectivity.xml* file.
 
@@ -68,7 +68,7 @@ The following example illustrates a *Connectivity.xml* file where hops are confi
 </DCF>
 ```
 
-### Overview of tags and attributes of Connectivity.xml files representing chains
+## Overview of tags and attributes of Connectivity.xml files representing chains
 
 The section below lists the tags and attributes that can be used within a *Connectivity.xml* file:
 
@@ -82,7 +82,7 @@ The section below lists the tags and attributes that can be used within a *Conne
 
 - [referenceValue](#referencevalue)
 
-#### \<Link> tag
+### \<Link> tag
 
 Inside the *\<Links>* tag, add a *\<Link>* tag for every connection in the connectivity path.
 
@@ -144,7 +144,7 @@ A *\<Link>* tag can have the following attributes:
 
     Available from DataMiner 9.5.2 onwards.     This attribute should be set to a number, to indicate the position of this particular connection in the connectivity path. For example, in case of a chain like ElementA \> ElementB \> ElementC \> ElementD, in the corresponding *\<Link>* tags, the hops are configured as 1 > 2 > 3 > 4.     For an example, refer to [Example of Connectivity.xml files representing a chain](#example-of-connectivityxml-files-representing-a-chain).
 
-#### \<Map> tag
+### \<Map> tag
 
 Inside a *\<Link>* tag, you can add a number of *\<Map>* tags, in which you can look up and compare properties of internal connections. If all *\<Map>* tag comparisons inside a *\<Link>* are “true”, then the internal connections in question will be linked.
 
@@ -265,7 +265,7 @@ A *\<Map>* tag can have the following attributes:
 
     Available from DataMiner 9.5.2 onwards.     Determines the logical operator that is used for the tag. By default, this is AND, but you can also set this to OR. In that case, multiple rules will be checked, and if one matches, the connection is added.
 
-#### \<Chains> tag
+### \<Chains> tag
 
 This tag can be used from DataMiner 9.6.4 onwards, in order to configure an external DCF chain of protocols. Specifying such a chain can improve the stability of the generated DCF chain.
 
@@ -303,7 +303,7 @@ A new read-only service property, *Connectivity Status*, will be added as soon a
 > See also:
 > [\<Protocols> tag](#protocols-tag)
 
-#### \<Conditions> tag
+### \<Conditions> tag
 
 Inside the *\<Conditions>* tag, you can add a number of *\<Condition>* tags, which each have their own unique ID, indicated in the “*id*” attribute.
 
@@ -432,7 +432,7 @@ Examples:
 </Conditions>
 ```
 
-#### \<Protocols> tag
+### \<Protocols> tag
 
 This tag can be used from DataMiner 9.5.5 onwards, to avoid chain resolving issues when a new external connection is added between elements that were already part of an operational connectivity chain and another element based on a protocol that was not yet described in the *Connectivity.xml* file.
 
@@ -454,7 +454,7 @@ For example:
 > [!NOTE]
 > From DataMiner 9.6.4 onwards, a *chainId* attribute can be defined in a *Protocol* tag. For more information, see [\<Chains> tag](#chains-tag).
 
-#### referenceValue
+### referenceValue
 
 If, in *referenceValue*, you specify e.g. “*SVCNAME:///*”, this will be replaced at runtime by the name of the current service. If you want to refer to e.g. one particular service instead, you can specify “*SVCNAME:dmaId/serviceId//*”.
 

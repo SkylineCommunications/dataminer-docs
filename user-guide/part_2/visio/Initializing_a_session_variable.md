@@ -2,7 +2,7 @@
 uid: Initializing_a_session_variable
 ---
 
-## Initializing a session variable
+# Initializing a session variable
 
 By adding a shape data field of type **InitVar** to a page of a Visio drawing, you can initialize (i.e. declare) a session variable. The session variable will be loaded as soon as the page is opened in DataMiner.
 
@@ -12,7 +12,7 @@ By adding a shape data field of type **InitVar** to a page of a Visio drawing, y
 > - [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 > - [Adding options to a session variable control](xref:Adding_options_to_a_session_variable_control)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **InitVar** to the page, and set its value to:
 
@@ -31,7 +31,7 @@ Depending on the DataMiner version, different placeholders are supported for thi
 > [!NOTE]
 > If you want to initialize multiple values, separate the entries by pipe characters.
 
-### Initializing a session variable with a GUID
+## Initializing a session variable with a GUID
 
 If you want to initialize a session variable with a GUID, use the following syntax:
 
@@ -39,7 +39,7 @@ If you want to initialize a session variable with a GUID, use the following synt
 VariableName:[Guid]
 ```
 
-### Examples
+## Examples
 
 ```txt
 MyCounter:0

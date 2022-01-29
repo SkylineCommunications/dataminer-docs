@@ -2,7 +2,7 @@
 uid: PropertiesSourceInfo
 ---
 
-## PropertiesSourceInfo
+# PropertiesSourceInfo
 
 In the *\<PropertiesSourceInfo>* tag, specify the DataMiner properties from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
 
@@ -12,11 +12,11 @@ In the *\<PropertiesSourceInfo>* tag, specify the DataMiner properties from whic
 
 - If the style attribute is set to “lines”, the layer will display lines, each connecting two pairs of latitude/longitude values. Each line will be displayed as a geodesic, a segment of a “great circle” representing the shortest distance between two points on the surface of the Earth.
 
-### PropertiesSourceInfo subTags
+## PropertiesSourceInfo subTags
 
 Inside the *\<PropertiesSourceInfo>* tag, you can place the following tags.
 
-#### LatitudePropertyName/LongitudePropertyName/LatitudePropertyName2/Longitude­PropertyName2
+### LatitudePropertyName/LongitudePropertyName/LatitudePropertyName2/Longitude­PropertyName2
 
 The names of the properties containing the latitude and longitude values.
 
@@ -24,7 +24,7 @@ The names of the properties containing the latitude and longitude values.
 
 - If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudePropertyName>* and*\<LongitudePropertyName>* tags, and another pair in the *\<LatitudePropertyName2>* and *\<LongitudePropertyName2>* tags.
 
-#### ViewFilter
+### ViewFilter
 
 In this tag, specify a view ID if you want to narrow down the number of views from which to retrieve the necessary property values.
 
@@ -35,11 +35,11 @@ In this tag, specify a view ID if you want to narrow down the number of views fr
 > [!NOTE]
 > Specifying a *\<ViewFilter>* tag only works if the type attribute of the *\<PropertiesSourceInfo>* tag is set to “views”.
 
-#### ProtocolFilter
+### ProtocolFilter
 
 In this tag, specify the name of a protocol if you want the layer data only to be retrieved from properties of elements based on that specific protocol.
 
-#### PropertyFilters
+### PropertyFilters
 
 In this optional tag, you can specify one or more filters in *\<PropertyFilter>* tags.
 
@@ -53,11 +53,11 @@ value=[PropertyName][Operator][Value]
 > - There must be a space before and after the operator. Possible operators: == (equal to) and != (not equal to)
 > - In a property filter, you can use placeholders referring to variables declared in the *\<PropertiesSourceInfo>* tag. The \[DMA_USERNAME\] placeholder, however, is a general placeholder that does not need to be declared. At runtime, it will be replaced by the name of the current user.
 
-### Passing PropertiesSourceInfo data along in the map’s URL
+## Passing PropertiesSourceInfo data along in the map’s URL
 
 The element, service and view filter can be passed along as a parameter in the map’s URL.
 
-#### elementDataVar
+### elementDataVar
 
 If you want to have an element placed on a map using location coordinates stored in another element, add an elementDataVar attribute to the *\<PropertiesSourceInfo>* tag, and set its value to “elementdata”.
 
@@ -91,7 +91,7 @@ Result:
 > [!NOTE]
 > It is possible to specify this attribute in the *\<ParametersSourceInfo>* tag instead. See [Passing ParametersSourceInfo data along in the map’s URL](xref:ParametersSourceInfo#passing-parameterssourceinfo-data-along-in-the-maps-url).
 
-#### elementVar
+### elementVar
 
 If, in the *\<PropertiesSourceInfo>* tag, you add an elementVar attribute with value “myElement” (referring to an element using the syntax “DMAID/ElementID” or “NameOfElement”), then you can use a map URL like one of the following instead (notice the “d” in front of the parameter name!):
 
@@ -100,11 +100,11 @@ maps.aspx?config=MyConfigFile&dmyElement=7/46840
 maps.aspx?config=MyConfigFile&dmyElement=VesselData
 ```
 
-#### serviceVar
+### serviceVar
 
 Similar to the elementVar attribute, you can also use the serviceVar attribute to pass a service name or service ID along in the map’s URL. To do so, add a serviceVar attribute with value “myService”, referring to a service using the syntax “DMAID/ServiceID” or “NameOfService”.
 
-##### Example:
+#### Example:
 
 ```xml
 <PropertiesSourceInfo type="services" serviceVar="MyService"
@@ -118,7 +118,7 @@ You can then use a map URL like the following:
 http://localhost/maps/map.aspx?config=managedservices&dMyService=ship
 ```
 
-#### idVar
+### idVar
 
 If, in the *\<PropertiesSourceInfo>* tag, you add a *\<ViewFilter>* tag with an idVar attribute set to “myView” (referring to a view either by ID or by name), then you can pass the view as a parameter in the map’s URL like this (notice the “d” in front of the parameter name!):
 
@@ -129,9 +129,9 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 > [!NOTE]
 > In the value of an idVar attribute, you can specify several parameters separated by semicolons (”;”).
 
-### Examples
+## Examples
 
-#### Example of a layer retrieving its data from element properties
+### Example of a layer retrieving its data from element properties
 
 ```xml
 <Layer sourceType="properties" refresh="20000">
@@ -157,7 +157,7 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 </Layer>
 ```
 
-#### Example of a PropertiesSourceInfo tag containing property filters
+### Example of a PropertiesSourceInfo tag containing property filters
 
 ```xml
 <PropertiesSourceInfo type="elements" filterVars="customer">
@@ -172,7 +172,7 @@ maps.aspx?config=MyConfigFile&dmyView=specialview
 </PropertiesSourceInfo>
 ```
 
-#### Example of a PropertiesSourceInfo tag containing an elementDataVar attribute
+### Example of a PropertiesSourceInfo tag containing an elementDataVar attribute
 
 ```xml
 <Layer sourceType="properties" refresh="20000" autoFit="false" visible="false" allowToggle="true"  name="Properties">

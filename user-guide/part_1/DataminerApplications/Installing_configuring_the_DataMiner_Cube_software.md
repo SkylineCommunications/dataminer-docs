@@ -2,7 +2,7 @@
 uid: Installing_configuring_the_DataMiner_Cube_software
 ---
 
-## Installing & configuring the DataMiner Cube software
+# Installing & configuring the DataMiner Cube software
 
 DataMiner Cube can either be used as a desktop application (recommended) or as a browser application in Internet Explorer or Edge. If you browse to the IP or name of your DMA using Google Chrome, Microsoft Edge (without IE compatibility mode), Mozilla Firefox or Safari, by default a landing page is displayed where you can download the desktop application. See [Installing the DataMiner Cube desktop application](#installing-the-dataminer-cube-desktop-application).
 
@@ -13,7 +13,7 @@ Once the application has been installed, each time you reopen its user interface
 > [!NOTE]
 > From DataMiner 10.0.0/10.0.2 onwards, the desktop version of DataMiner Cube runs as a 64-bit process on 64-bit systems and as a 32-bit process on 32-bit systems. If DataMiner Cube is used as a XAML browser application, it always runs as a 32-bit process.
 
-### Prerequisites
+## Prerequisites
 
 - Make sure the client machine meets the minimum requirements detailed in the [DataMiner Client Requirements](https://community.dataminer.services/dataminer-client-requirements/).
 
@@ -27,11 +27,11 @@ Once the application has been installed, each time you reopen its user interface
 > [!NOTE]
 > When you connect to DataMiner using HTTPS, TLS 1.0 is required to install Cube. It is also possible to use TLS 1.1 or TLS 1.2, but in that case Microsoft .NET Framework 4.6.2 is required.
 
-### Installing the DataMiner Cube desktop application
+## Installing the DataMiner Cube desktop application
 
 There are several ways to install the DataMiner Cube desktop application, depending on your DataMiner version.
 
-##### From DataMiner 10.0.0/10.0.4 onwards:
+#### From DataMiner 10.0.0/10.0.4 onwards:
 
 1. Browse to your DMA using a different browser than Internet Explorer.
 
@@ -61,13 +61,13 @@ There are several ways to install the DataMiner Cube desktop application, depend
 
         2. In the *Standalone applications* section, click the *MSI installer* option for DataMiner Cube.
 
-##### From DataMiner 10.0.2 onwards:
+#### From DataMiner 10.0.2 onwards:
 
 If you browse to your DMA using a browser that does not support DataMiner Cube, depending on your configuration, a landing page will be displayed.
 
 On the landing page, click the user icon in the top-right corner and select the DataMiner Cube installation option you prefer under *Standalone applications*.
 
-##### Prior to DataMiner 10.0.0/10.0.2:
+#### Prior to DataMiner 10.0.0/10.0.2:
 
 On the landing page, click *Install DataMiner Cube*.
 
@@ -80,7 +80,7 @@ Alternatively, go to *http://\[DMA name\]/DataminerCubeStandalone/publish.htm* a
 > [!NOTE]
 > Once you have installed the application, it will automatically be updated whenever a new version is available.
 
-### Cleaning up the DataMiner Cube desktop app cache
+## Cleaning up the DataMiner Cube desktop app cache
 
 From DataMiner 10.1.9/10.2.0 onwards, you can remove cached Cube versions and empty the Visio or protocol cache in the start window of the DataMiner Cube desktop application.
 
@@ -94,7 +94,7 @@ To do so:
 
 4. Click *Clean*.
 
-### Uninstalling the DataMiner Cube desktop application
+## Uninstalling the DataMiner Cube desktop application
 
 If you have installed the DataMiner Cube desktop application using the installer available from DataMiner 10.0.9 onwards, you can uninstall the application as follows:
 
@@ -110,7 +110,7 @@ Alternatively, you can uninstall the DataMiner Cube desktop application by runni
 "%LocalAppData%\Skyline\DataMiner\DataMinerCube\DataMinerCube.exe" /Uninstall
 ```
 
-### Changing the default browser engine used in DataMiner Cube
+## Changing the default browser engine used in DataMiner Cube
 
 From DataMiner 9.6.3 onwards, you can change the default browser engine used in DataMiner Cube.
 
@@ -140,11 +140,11 @@ To do so:
 
 4. Click the *Apply* button in the lower right corner to save your changes.
 
-### Configuring Internet Explorer to run DataMiner Cube
+## Configuring Internet Explorer to run DataMiner Cube
 
 Before you can run the DataMiner Cube browser application in Microsoft Internet Explorer, a number of settings must be configured.
 
-#### Adding the DataMiner Cube URL to the “Local intranet” zone
+### Adding the DataMiner Cube URL to the “Local intranet” zone
 
 1. In Microsoft Internet Explorer, select *Tools \> Internet Options*.
 
@@ -154,7 +154,7 @@ Before you can run the DataMiner Cube browser application in Microsoft Internet 
 
 4. Enter the URL in the *Add this website to the zone* box, click *Add* and then click *Close*.
 
-#### Configuring the XBAP settings in Microsoft Internet Explorer
+### Configuring the XBAP settings in Microsoft Internet Explorer
 
 If you want to run the DataMiner Cube client application in Microsoft Internet Explorer, the latter should be allowed to run XAML browser applications.
 
@@ -166,7 +166,7 @@ If you want to run the DataMiner Cube client application in Microsoft Internet E
 
 4. Set *XAML browser applications* to “Enable”.
 
-#### If you plan to use Microsoft Internet Explorer 64-bit edition
+### If you plan to use Microsoft Internet Explorer 64-bit edition
 
 If you intend to run DataMiner Cube in the 64-bit version of Microsoft Internet Explorer, do the following.
 
@@ -174,7 +174,7 @@ If you intend to run DataMiner Cube in the 64-bit version of Microsoft Internet 
 
 2. Go to the following address: *http://\[DMA\]/DataminerCubeStandAlone/Publish.htm,* replacing “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
 
-### Installing the Skyline certificates
+## Installing the Skyline certificates
 
 Installing the Skyline certificates is only required if you intend to run DataMiner Cube in a browser, you are using Windows 8.1, Windows Server 2012 R2 or an earlier Windows version, and no internet connectivity is available.
 

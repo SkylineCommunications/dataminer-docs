@@ -2,7 +2,7 @@
 uid: Viewing_spectrum_analyzer_traces
 ---
 
-## Viewing spectrum analyzer traces
+# Viewing spectrum analyzer traces
 
 This section consists of the following topics:
 
@@ -24,7 +24,7 @@ This section consists of the following topics:
 
 - [Sharing spectrum sessions](#sharing-spectrum-sessions)
 
-### Spectrum trace acquisition
+## Spectrum trace acquisition
 
 As soon as you open the spectrum analyzer card, trace acquisition begins, using the last used settings. The trace is then displayed in the real-time display section.
 
@@ -39,7 +39,7 @@ The speed at which a trace is acquired depends on:
 >
 > You can choose these options in the *trace* tab of the ribbon, or you can right-click the trace in the info pane, and select what is to be displayed.
 
-### Copying spectrum information from the real-time display
+## Copying spectrum information from the real-time display
 
 You can either copy the information from the real-time display to the clipboard, or save it directly to a file.
 
@@ -71,7 +71,7 @@ To save the real-time display as a .jpg file instead:
     > [!NOTE]
     > This option is also available via the right-click menu of the display area.
 
-### Toggling the Automatic standby mode
+## Toggling the Automatic standby mode
 
 If DataMiner Cube detects no activity from the user for some time, the display is set to standby. As soon as you move the mouse pointer over the display, the real-time display of the trace is resumed. You can switch this automatic standby mode on and off, and change the interval after which the display is set to standby.
 
@@ -83,7 +83,7 @@ To do so, on the spectrum analyzer card in DataMiner Cube, go to the *trace* tab
 
 - To change the number of minutes DataMiner will wait before setting the display to standby, next to *Inactivity period*, enter a different value.
 
-### Freezing/unfreezing the trace
+## Freezing/unfreezing the trace
 
 It is possible to manually freeze and unfreeze the trace. To do so:
 
@@ -98,7 +98,7 @@ It is possible to manually freeze and unfreeze the trace. To do so:
 > [!NOTE]
 > When the display is in frozen mode, *Frozen* is displayed in the middle of the graph area.
 
-### Displaying the minimum and maximum hold of the trace
+## Displaying the minimum and maximum hold of the trace
 
 It is possible to display the minimum and/or maximum hold of the trace you are currently viewing. To do so:
 
@@ -126,11 +126,11 @@ It is possible to display the minimum and/or maximum hold of the trace you are c
 > [!NOTE]
 > When you are viewing multiple measurement points at the same time, these options are not available.
 
-### Displaying the average trace
+## Displaying the average trace
 
 It is possible to display the average trace, next to or instead of the actual real-time trace.
 
-##### To display the average trace:
+#### To display the average trace:
 
 1. On the spectrum analyzer card, go to the *trace* tab.
 
@@ -138,7 +138,7 @@ It is possible to display the average trace, next to or instead of the actual re
 
     If you want, you can then hide the actual real-time trace by clearing the selection from *Show current* in the *Current* section.
 
-##### To customize the average trace:
+#### To customize the average trace:
 
 - To change the number of traces that is taken into account to calculate the average, next *to # traces*, select a different number of traces in the drop-down list.
 
@@ -146,11 +146,11 @@ It is possible to display the average trace, next to or instead of the actual re
 
 - To change the color of the average trace, in the *Colors* section, select a different color in the *Average hold* drop-down list.
 
-##### To reset the average calculation:
+#### To reset the average calculation:
 
 - In the *trace* tab, select *Reset average*.
 
-### Customizing the real-time display
+## Customizing the real-time display
 
 Several options are available that allow you to customize the spectrum real-time display.
 
@@ -186,7 +186,7 @@ In addition, in the *trace* tab, you can do the following:
 
     The color of the trace will also be indicated in a legend at the top of the info pane.
 
-### Viewing along with another client
+## Viewing along with another client
 
 When you work in real-time interactive mode, this requires part of the limited measuring capacity of the spectrum analyzer. As such, it can be useful to view along with another open client session instead of creating a session of your own.
 
@@ -204,13 +204,13 @@ To do so:
 > See also:
 > [Watching spectrum buffers](xref:Working_with_spectrum_monitors#watching-spectrum-buffers)
 
-### Sharing spectrum sessions
+## Sharing spectrum sessions
 
 From DataMiner 9.5.13 onwards, it is possible for the same spectrum session to be shared, for instance when multiple users are viewing the same session at the same time, or when one user has multiple cards open showing the same spectrum session.
 
 When session sharing is enabled, all cards showing the same spectrum session will show the same trace using the same settings. The fact that a shared session is being used will be shown in the info pane. If a user changes a setting (e.g. frequency, bandwidth, etc.), this change will immediately be applied to all other cards showing that same session.
 
-#### Enabling shared session mode
+### Enabling shared session mode
 
 To enable sharing of spectrum sessions for a spectrum element:
 

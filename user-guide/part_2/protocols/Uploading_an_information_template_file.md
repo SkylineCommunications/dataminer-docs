@@ -2,7 +2,7 @@
 uid: Uploading_an_information_template_file
 ---
 
-## Uploading an information template file
+# Uploading an information template file
 
 Instead of creating custom information templates in Cube, you can also create them in a third-party XML editor and upload them.
 

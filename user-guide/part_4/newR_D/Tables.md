@@ -2,7 +2,7 @@
 uid: Tables
 ---
 
-## Tables
+# Tables
 
 This category contains the following visualizations:
 
@@ -14,7 +14,7 @@ This category contains the following visualizations:
 
 - [Table](#table)
 
-### Alarm table
+## Alarm table
 
 > [!WARNING]
 > This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
@@ -54,7 +54,7 @@ To configure the component:
 
 3. Optionally, apply a data filter. Element, parameter, index, service and view data can be used as a filter. Various feed components, such as a parameter feed and time range feed, can also be used as a filter. <br>See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
-### Parameter table
+## Parameter table
 
 Displays a data table of an element.
 
@@ -76,7 +76,7 @@ To configure the component:
 
     - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other dashboard components when you hover the mouse pointer over it in order to show as much data as possible.
 
-### Pivot table
+## Pivot table
 
 This component displays a status report for a number of parameters of the elements using the selected protocol and protocol version.
 
@@ -161,7 +161,7 @@ To configure the component, up to DataMiner 9.6.11:
 
 4. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
-### Table
+## Table
 
 This component is introduced in DataMiner 10.0.13 with the purpose of displaying the results of queries in table format. It should always be configured with *Queries* data input. See [Using Queries data input](xref:Configuring_dashboard_components#using-queries-data-input).
 

@@ -2,7 +2,7 @@
 uid: MaintenanceSettings_xml
 ---
 
-## MaintenanceSettings.xml
+# MaintenanceSettings.xml
 
 In the file *MaintenanceSettings.xml*, you can specify a number of general system settings.
 
@@ -15,7 +15,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of general syste
 > [!NOTE]
 > - Up to DataMiner 9.5.4, if this file is missing, DataMiner will not be able to connect with the database. From DataMiner 9.5.5 onwards, if the file is missing, a database connection will be made with the default values.
 
-### Example
+## Example
 
 This is an example of a *MaintenanceSettings.xml* file:
 
@@ -92,11 +92,11 @@ This is an example of a *MaintenanceSettings.xml* file:
 </MaintenanceSettings>
 ```
 
-### Alphabetical overview of settings
+## Alphabetical overview of settings
 
 Below is an alphabetical overview of settings that can be specified in the *MaintenanceSettings.xml* file.
 
-#### Aggregation.Source
+### Aggregation.Source
 
 This tag contains one attribute, *ignoreExceptionValues*. If this attribute is set to *"true"*, all aggregation rules in the DMS will by default ignore parameter exception values. If the attribute is set to *"false"* or if it is not specified, then by default exception values will be taken into account.
 
@@ -115,7 +115,7 @@ Example:
 > [!NOTE]
 > This setting can also be configured on rule level instead of system level, in which case the rule-level configuration takes priority. See [Aggregation](xref:Aggregation).
 
-#### AlarmSettings
+### AlarmSettings
 
 In this tag, you can add the following attributes to control how timeout alarms are visualized in Microsoft Visio shapes:
 
@@ -140,7 +140,7 @@ In this tag, you can add the following attributes to control how timeout alarms 
     | displayTimeout | Shapes linked to elements/parameters will only show the timeout color. The current alarm color will not be shown. This is the default setting.         |
     | displayBoth    | Shapes linked to elements/parameters will show both the current alarm color and the timeout color. The timeout color will be shown as a hatch pattern. |
 
-#### AlarmSettings.AlarmsPerParameter
+### AlarmSettings.AlarmsPerParameter
 
 In this tag, you can specify the maximum number of alarms that are allowed in an alarm tree. Default: 20 alarms.
 
@@ -165,7 +165,7 @@ For example:
 > [!NOTE]
 > In older DataMiner versions, the default value of this tag was 100. To keep this old default value from being used in case *MaintenanceSettings.xml* was created with this value, now if 100 is filled in, DataMiner will automatically use the new default of 20.
 
-#### AlarmSettings.Blinking
+### AlarmSettings.Blinking
 
 In DataMiner Cube, you can use this tag to make elements, services and views blink if they have an alarm of which nobody has taken ownership.
 
@@ -181,7 +181,7 @@ It has three required attributes:
 > - For optimal effect, the blankInterval should be less than the blinkInterval.
 > - There are also several optional filter attributes to enable blinking of alarms based on certain conditions. For more information, see [Making alarms without owner blink](xref:Making_alarms_without_owner_blink).
 
-#### AlarmSettings.MaxFreezeAlarms & AlarmSettings.MaxFreezeTime
+### AlarmSettings.MaxFreezeAlarms & AlarmSettings.MaxFreezeTime
 
 In the *AlarmSettings* tag, you can specify two Alarm Console freeze settings:
 
@@ -191,7 +191,7 @@ In the *AlarmSettings* tag, you can specify two Alarm Console freeze settings:
 
 As soon as either *MaxFreezeTime* or *MaxFreezeAlarms* is reached, the Alarm Console will automatically be unfrozen.
 
-#### AlarmSettings.MustSquashAlarms
+### AlarmSettings.MustSquashAlarms
 
 Available from DataMiner 10.0.12 onwards. Set the value *true* to enable alarm consolidation by default. In that case, consecutive alarm events without a severity change will be combined into a consolidated event. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
 
@@ -225,17 +225,17 @@ The following types of alarm events will not be combined in a consolidated alarm
 > See also:
 > [Alarm linking](xref:Alarm_linking)
 
-#### AlarmSettings.UseCreationTimeAsMainTime
+### AlarmSettings.UseCreationTimeAsMainTime
 
 Default: false
 
-#### AlarmSettings.AutoClear
+### AlarmSettings.AutoClear
 
 If you set this tag to “false”, alarms will not be cleared automatically. Instead, they will get into a “clearable” state, and someone will have to manually clear them.
 
 Default: true
 
-#### AutoElementLock
+### AutoElementLock
 
 When you activate this system-wide setting, an element will automatically be locked when a parameter set is performed on it by a user who is allowed to lock and unlock elements.
 
@@ -254,11 +254,11 @@ A locked element will automatically be unlocked
 > [!NOTE]
 > If the element is already locked, DataMiner will not automatically force unlock it. In that case, the user has to do this manually.
 
-#### BackupSettings
+### BackupSettings
 
 Used to enforce a backup package mechanism on machines running an operating system prior than Windows Server 2008 (no longer supported).
 
-#### DeltCache
+### DeltCache
 
 Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the *C:\\Skyline DataMiner\\System Cache\\DELT\\* folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
 
@@ -266,7 +266,7 @@ Every time a .dmimport package is exported from or imported onto a DataMiner Age
 > - DELT stands for *DataMiner Element Location Transparency*. It is the feature that allows the exporting and importing of packages as well as migration of elements across DMAs in a cluster.
 > - If no cleanup instructions are configured in *MaintenanceSettings.xml*, by default only the 20 most recent packages will be kept.
 
-##### Syntax
+#### Syntax
 
 The *\<DELTCache>* tag and its subtags use the following syntax:
 
@@ -276,7 +276,7 @@ The *\<DELTCache>* tag and its subtags use the following syntax:
 </DELTCache>
 ```
 
-##### Clean-up modes
+#### Clean-up modes
 
 In a *\<DELTCacheMode>* tag, you can specify one of three clean-up modes:
 
@@ -286,7 +286,7 @@ In a *\<DELTCacheMode>* tag, you can specify one of three clean-up modes:
 | CleanupLargerThan         | Use this mode if you want all .dmimport packages deleted that are larger than a specific number of bytes.<br> If, for instance, you add a *\<DELTCacheMode>* tag in which you set the *mode* attribute to “CleanupLargerThan” and the *value* attribute to 2099200, then after each import or export operation, DataMiner will delete all packages larger than 2 MB.                                 |
 | CleanupOlderThan          | Use this mode if you want all .dmimport packages deleted that were created prior to a specific date and time.<br> If, for instance, you add a *\<DELTCacheMode>* tag in which you set the *mode* attribute to “CleanupOlderThan” and the *value* attribute to “11-07-2016 12:00”, then after each import or export operation, DataMiner will delete all packages that were created before that time. |
 
-##### Example 1
+#### Example 1
 
 If you specify the following cleanup condition, after each import or export operation, DataMiner will delete all packages except the 4 most recent ones.
 
@@ -296,7 +296,7 @@ If you specify the following cleanup condition, after each import or export oper
 </DELTCache>
 ```
 
-##### Example 2
+#### Example 2
 
 In the following example, three cleanup conditions have been specified.
 
@@ -310,7 +310,7 @@ When you specify multiple conditions, they will be combined into one expression 
 </DELTCache>
 ```
 
-#### DELTUpgrades
+### DELTUpgrades
 
 From DataMiner 9.5.1 onwards, this tag allows you to configure the automatic cleanup of DELT-related packages in the folder *C:\\Skyline DataMiner\\Upgrades\\*.
 
@@ -334,19 +334,19 @@ Example:
 </DELTUpgrades>
 ```
 
-#### DMSRevision
+### DMSRevision
 
 In this tag, you can specify when a double check has to be done. You can specify as many starting times as you want.
 
 Default: Only at 00:00:00
 
-#### Documents.MaxSize
+### Documents.MaxSize
 
 In this tag, you can specify the maximum size of the documents in the Documents module.
 
 Default: 20 MB
 
-#### Filtering.SlElement
+### Filtering.SlElement
 
 From DataMiner 9.0.1 onwards, the order of operations in a table filter of type "fullFilter" (used in protocols and in the web services) can be determined by means of parentheses, e.g. “*fullfilter=PK \>= 0 AND (101 == 10 OR 101 \> 20) AND (205 EXACT Service)*”.
 
@@ -358,17 +358,17 @@ However, in case you encounter issues with such filters because of this new filt
 </Filtering>
 ```
 
-#### HTTPS
+### HTTPS
 
 See [Configuring HTTPS settings in MaintenanceSettings.xml](xref:General_DMA_configuration#configuring-https-settings-in-maintenancesettingsxml).
 
-#### Logging.MaxSize
+### Logging.MaxSize
 
 In this tag, you can specify the maximum log file size.
 
 Default: 10 MB
 
-#### ProtocolSettings.DCF.CalculateAlarmState
+### ProtocolSettings.DCF.CalculateAlarmState
 
 From DataMiner 10.2.1/10.3.0 onwards, you can use this setting to enable or disable DCF interface state calculation on system level.
 
@@ -384,7 +384,7 @@ You can overrule the setting in a protocol, by setting the Protocol.ParameterGro
 </MaintenanceSettings>
 ```
 
-#### ProtocolSettings.ExecutionVerification
+### ProtocolSettings.ExecutionVerification
 
 In this tag, you can enable or disable the parameter update verification feature.
 
@@ -395,7 +395,7 @@ Default timeout: 30000 milliseconds
 > [!NOTE]
 > In a DataMiner protocol, you can also specify update verification settings on parameter level. See the Protocol.Params.Param tag in the Protocol Development Guide. See <https://help.dataminer.services/development/>.
 
-#### RecycleBinSize
+### RecycleBinSize
 
 In this tag, you can specify the maximum size (in MB) of the DataMiner recycle bin.
 
@@ -404,7 +404,7 @@ In this tag, you can specify the maximum size (in MB) of the DataMiner recycle b
 > - The default recycle bin size is 100 MB.
 > - From DataMiner 9.0.5 onwards, the recycle bin is cleaned to the maximum size and number of files every hour. In previous versions, this was done at DMA startup and when a recycle action took place.
 
-#### Replication.ConnectionMinDelayBeforeRetry
+### Replication.ConnectionMinDelayBeforeRetry
 
 When a DataMiner Agent fails to set up a connection to another DataMiner Agent for replication purposes, further attempts to set up a connection are blocked during a fixed time interval. By default, this interval is set to 60 seconds. In this tag, it is possible to customize the time interval.
 
@@ -426,7 +426,7 @@ Example:
 > - If you change this setting, it will only be applied after a DMA restart.
 > - This setting is not synchronized among DataMiner Agents in a DMS.
 
-#### SLASPConnection.ReportResponseTimeout
+### SLASPConnection.ReportResponseTimeout
 
 In this tag, you can customize how long the SLASPConnection process has to wait for a report to respond. The tag has to contain a number of minutes. If it contains “0” or if the tag cannot be found, then the default timeout is 60 minutes.
 
@@ -450,7 +450,7 @@ When the DMA is started the following line in the SLASPConnection log file menti
 > [!NOTE]
 > If this setting is adjusted, the report’s ASP page also has to be able to run for the modified period of time. This can be configured in IIS or in the ASP file itself, using “Server.ScriptTimeout = 3600;”. In long reports it is also advisable to force sending out the data in packets using “Response.Flush();”.
 
-#### SLASPConnection.TimeLineCache
+### SLASPConnection.TimeLineCache
 
 In this tag, you can specify options for the caching of timeline data in the SLASPConnection process.
 
@@ -467,13 +467,13 @@ The following attributes can be configured:
 > [!NOTE]
 > These settings are not synchronized among the Agents in a DMS.
 
-#### SLNet
+### SLNet
 
 In this tag, you can specify a number of settings of the SLNet application.
 
 For more information, see [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)*.*
 
-#### Spectrum.AlarmRecordings
+### Spectrum.AlarmRecordings
 
 In this tag, you can specify the maximum size (in MB) of the *C:\\Skyline DataMiner\\Spectrum Alarm Recordings* folder.
 
@@ -482,13 +482,13 @@ Default: 250 MB
 > [!NOTE]
 > This setting applies to one DataMiner Agent only. It is not synchronized to other Agents in the cluster.
 
-#### Surveyor
+### Surveyor
 
 In this tag, you can specify which statistical alarm data and/or ticket data you want to have displayed next to elements, services and views in the Surveyor.
 
 For more information, see [Displaying alarm statistics in the Surveyor](xref:Displaying_alarm_statistics_in_the_Surveyor) and [Displaying ticket statistics in the Surveyor](xref:Displaying_ticket_statistics_in_the_Surveyor).
 
-#### Trending.EDCurves
+### Trending.EDCurves
 
 In this tag, you can specify the maximum number of trend graphs that can be loaded simultaneously in Element Display.
 
@@ -497,7 +497,7 @@ Default: 3
 > [!NOTE]
 > The Element Display client application is no longer available from DataMiner 9.6.0 onwards.
 
-#### Trending.SDCurves
+### Trending.SDCurves
 
 In this tag, you can specify the maximum number of trend graphs that can be loaded simultaneously in System Display.
 
@@ -506,7 +506,7 @@ Default: 5
 > [!NOTE]
 > The System Display client application is no longer available from DataMiner 9.6.0 onwards.
 
-#### Trending.TimeSpan
+### Trending.TimeSpan
 
 In this tag, you can specify the period during which the “real-time trending” records have to be kept in the database.
 
@@ -520,7 +520,7 @@ Default value: 24 - Default unit: hours
 > - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 > - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan setting on element level.
 
-#### Trending.TimeSpan1DayRecords
+### Trending.TimeSpan1DayRecords
 
 In this tag, you can specify the period during which the daily “average trending” records have to be kept in the database.
 
@@ -537,7 +537,7 @@ Not active by default.
 > - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1DayRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
 > - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
 
-#### Trending.TimeSpan1HourRecords
+### Trending.TimeSpan1HourRecords
 
 In this tag, you can specify the period during which the 1-hour “average trending” records have to be kept in the database.
 
@@ -554,7 +554,7 @@ By default, 1-hour average trend records are stored for one year.
 > - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1HourRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
 > - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
 
-#### Trending.TimeSpan5MinRecords
+### Trending.TimeSpan5MinRecords
 
 In this tag, you can specify the period during which the 5-minute “average trending” records have to be kept in the database.
 
@@ -571,7 +571,7 @@ By default, 5-minute average trend records are stored for one month.
 > - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan5MinRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
 > - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
 
-#### Trending.TimeSpanSpectrumRecords
+### Trending.TimeSpanSpectrumRecords
 
 In this tag, you can specify the period during which spectrum trend data has to be kept in the database.
 
@@ -585,7 +585,7 @@ By default, spectrum trend data will be kept for one year.
 > - From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 > - The same setting can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpanSpectrumRecords setting on element level.
 
-#### Trending.WarningLevel
+### Trending.WarningLevel
 
 In this tag, you can specify the number of records as from which a special warning message will appear in Trend Display (Element Display) and Trend Overview (System Display).
 
@@ -598,7 +598,7 @@ Default: 5000
 > [!NOTE]
 > The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
 
-#### WatchDog
+### WatchDog
 
 In this tag, the settings of the DataMiner WatchDog process are specified. This process monitors other DataMiner processes and takes action when a process disappears or an anomaly is detected.
 

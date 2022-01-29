@@ -2,27 +2,27 @@
 uid: Tags_in_the_Asset_Manager_mediation_configuration_file
 ---
 
-## Tags in the Asset Manager mediation configuration file
+# Tags in the Asset Manager mediation configuration file
 
-### AssetMediationConfig
+## AssetMediationConfig
 
 This is the root tag of the configuration file.
 
-#### forConfig
+### forConfig
 
 In this mandatory attribute, specify the name (without extension) of the Asset Manager configuration file to which you want to link this data mediation configuration file.
 
 Refer to the AssetManagerConfig.DatabaseConfig tag of the Asset Manager configuration file to find the name. See [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management).
 
-### AssetMediationConfig.SynchronizeData
+## AssetMediationConfig.SynchronizeData
 
 In this tag, specify a *\<Sync>* tag for every synchronization operation.
 
-### AssetMediationConfig.SynchronizeData.Sync
+## AssetMediationConfig.SynchronizeData.Sync
 
 A *\<Sync>* tag contains all information necessary to be able to synchronize the contents of a single column or cell.
 
-#### direction
+### direction
 
 In this attribute, specify the direction of the data synchronization.
 
@@ -32,7 +32,7 @@ In this attribute, specify the direction of the data synchronization.
 | dmaToDb | The data will be copied from the DataMiner database to the CMDB. |
 | dual    | The data will be copied both ways.                               |
 
-#### interval
+### interval
 
 In this attribute, specify how frequently you want the column or cell to be automatically synchronized. Apart from a number of seconds, you can also specify “onChange” or “manual”.
 
@@ -47,7 +47,7 @@ If you do not specify an interval attribute, the data will not be synchronized a
 > [!NOTE]
 > onChange only works when synchronizing from a DataMiner database toward a CMDB.
 
-#### type
+### type
 
 In this attribute, indicate whether the operation will synchronize an entire column or a single cell.
 
@@ -59,7 +59,7 @@ In this attribute, indicate whether the operation will synchronize an entire col
 > [!NOTE]
 > Only matching rows will be synchronized. Missing rows in the database will not automatically be created and extra rows will not be removed.
 
-### AssetMediationConfig.SynchronizeData.Sync.DMA
+## AssetMediationConfig.SynchronizeData.Sync.DMA
 
 In this tag, specify the data in the DataMiner database that has to be synchronized.
 
@@ -83,7 +83,7 @@ Depending on the type of *\<Sync>* tag and the type of DataMiner data to be sync
 | “         | “                  | column            | Parameter ID of the table column                                      |
 | “         | “                  | idx               | The display key of the table row (to be specified as “row X”)         |
 
-### AssetMediationConfig.SynchronizeData.Sync.DB
+## AssetMediationConfig.SynchronizeData.Sync.DB
 
 In this tag, specify the data in the CMDB that has to be synchronized.
 

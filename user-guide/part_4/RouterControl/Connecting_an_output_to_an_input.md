@@ -2,7 +2,7 @@
 uid: Connecting_an_output_to_an_input
 ---
 
-## Connecting an output to an input
+# Connecting an output to an input
 
 In the *Router Control* module:
 

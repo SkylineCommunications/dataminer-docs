@@ -2,11 +2,11 @@
 uid: Constants
 ---
 
-## Constants
+# Constants
 
 This section contains an overview of constants you can use when publishing Reporter components on a website.
 
-### Alarm distribution graph types
+## Alarm distribution graph types
 
 | Constant               | Equivalent | Description                             |
 |------------------------|------------|-----------------------------------------|
@@ -15,7 +15,7 @@ This section contains an overview of constants you can use when publishing Repor
 | DISTRIBUTION_MONTH     | 3          | Last month                              |
 | DISTRIBUTION_YESTERDAY | 7          | Yesterday                               |
 
-### Trend graph types
+## Trend graph types
 
 | Constant        | Equivalent | Description                         |
 |-----------------|------------|-------------------------------------|
@@ -26,7 +26,7 @@ This section contains an overview of constants you can use when publishing Repor
 | TREND_YEAR      | 5          | Last year (1 value every day)       |
 | TREND_YESTERDAY | 6          | Yesterday (1 value every 5 minutes) |
 
-### Time period
+## Time period
 
 | Constant                  | Equivalent | Description                                        |
 |---------------------------|------------|----------------------------------------------------|
@@ -36,11 +36,11 @@ This section contains an overview of constants you can use when publishing Repor
 | TIMEPERIOD_GIVEN_MONTHDAY | 6          | Given day of the month (cannot be used as avgType) |
 | TIMEPERIOD_YESTERDAY      | 7          | Yesterday                                          |
 
-### Alarm severities
+## Alarm severities
 
 To indicate the alarm states to be included, you can specify either one of the predefined constants or a combination of bit flags.
 
-#### Predefined constants
+### Predefined constants
 
 For the list of predefined constants, see the following table.
 
@@ -53,7 +53,7 @@ For the list of predefined constants, see the following table.
 | STATE_TIMEOUT  | 6          | Include timeout alarms/state only  |
 | STATE_ALL      | 7          | Include all alarm states           |
 
-#### Bit flags
+### Bit flags
 
 For the list of alternative bit flags, see the following table. These bit flags can be used to create graphs that show multiple severities at once. They need to be combined using bitwise OR.
 

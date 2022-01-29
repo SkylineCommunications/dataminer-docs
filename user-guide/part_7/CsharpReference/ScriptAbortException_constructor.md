@@ -2,7 +2,7 @@
 uid: ScriptAbortException_constructor
 ---
 
-## ScriptAbortException constructor
+# ScriptAbortException constructor
 
 ```txt
 ScriptAbortException(string message)

@@ -2,11 +2,11 @@
 uid: Formal_roles_for_Agile_Scope-Based_deployment
 ---
 
-## Formal roles for Agile Scope-Based deployment
+# Formal roles for Agile Scope-Based deployment
 
 The roles detailed below are instrumental for the efficient and correct execution of an Agile Scope-Based Project. At the start of the project, these therefore they need to be well defined and formally appointed to qualified individuals who fully understand their role and who are endorsed by everybody to fulfill it. All roles must be reviewed with everybody involved in the Agile Scope-Based Project, to ensure that everybody understands the relevance and purpose of each role. Only when all involved fully understand and grasp the mindset and principles of the methodology, and all involved effectively live this mindset every day within the context of their assigned role, can the merits of the approach come to fruition.
 
-### Project Squad Solution Owner (Skyline staff – optional)
+## Project Squad Solution Owner (Skyline staff – optional)
 
 - Sets the direction for project development and progress.
 
@@ -23,7 +23,7 @@ The roles detailed below are instrumental for the efficient and correct executio
 > [!NOTE]
 > If no dedicated Solution Owner is assigned to a project, which depends on the size, nature and complexity of the project, then the Project Squad Product Owner fulfills the role defined for the Solution Owner.
 
-### Project Squad Product Owner (Skyline staff – mandatory)
+## Project Squad Product Owner (Skyline staff – mandatory)
 
 - Ensures team cohesion, coordination, and operation in line with the methodology.
 
@@ -44,7 +44,7 @@ The roles detailed below are instrumental for the efficient and correct executio
 > [!NOTE]
 > If no dedicated Project Squad Solution Owner is assigned to a project, which depends on the size, nature and complexity of the project, then the Project Squad Product Owner also fulfills the role defined for the Project Squad Solution Owner.
 
-### Agile Coach (Skyline staff or user staff if available – optional)
+## Agile Coach (Skyline staff or user staff if available – optional)
 
 - Transfers Agile knowledge and experience to the team.
 
@@ -75,13 +75,13 @@ Accountabilities that the Agile Coach takes over from the Project Squad Product 
 > [!NOTE]
 > Several accountabilities currently assigned to the Project Squad Product Owner are preferably delegated to a dedicated Agile Coach if available, allowing the Project Squad Product Owner to fully focus on maximizing the value outcome of the Project Squad.
 
-### Development Members (Skyline staff – mandatory)
+## Development Members (Skyline staff – mandatory)
 
 A variety of engineering members, covering the various skills and expertise required for software installation and deployment, system configuration and setup, development of interface connectors, development of workflows and processes, graphical UI design, quality assurance, technical writing, training, etc.
 
 Not all Development Members are necessarily assigned to the Project Squad for the entire duration of the project, and some flexibility on the staffing is possible, provided that it can be planned for. Staffing of the Project Squad is the responsibility of and at the sole discretion of the Project Squad Product Owner. Any references to allocated human resources for the overall project in the Deployment Plan are in generic and average terms for the purpose of planning and tracking the deployment, and hence only indicate the overall average staffing level (i.e. the Deployment Plan does not reference individuals as such).
 
-### Stakeholders Representatives (user staff)
+## Stakeholders Representatives (user staff)
 
 Strong stakeholder representation is key to success in the rollout of Agile projects. After all, the project has a finite timeline and capacity, while the leveraged ICT and software technology offers infinite options. The objective is to deliver as much value as possible, and continuous interaction with the stakeholders in that respect is instrumental in accomplishing this. Depending on the nature of the project, different types of Stakeholder Representatives can be defined, including but not necessarily limited to:
 
@@ -97,7 +97,7 @@ Strong stakeholder representation is key to success in the rollout of Agile proj
 
 - **Management Stakeholder Representative** (Skyline and user staff - recommended): For any project it is also desirable to identify Management Stakeholder Representatives, both from a user and Skyline perspective, and plan for Executive Review Meetings ahead of anticipated critical milestones of the project, to ensure full alignment of the organizations and full backing of the involved leadership.
 
-### End Users (user staff)
+## End Users (user staff)
 
 While not all end users can always be involved in every single step of the project, it is important to acknowledge that they play a vital role in the execution of the project. Their involvement, directly and indirectly, must be fully acknowledged by both the Project Squad and the user organization.
 
@@ -114,7 +114,7 @@ The following roles are essential to enable the Project Squad to efficiently int
 
 - **Change Management Manager**: Manages the end users from a project output perspective, ensuring that all end users are properly prepared to embrace the change and to leverage the new technology to the fullest extent. This is typically done with a comprehensive Change Management Program that is set up and executed by the Change Management Manager.
 
-### Change Management Manager (user staff)
+## Change Management Manager (user staff)
 
 A Change Management Manager is vital to the success of any Digital Transformation project. The introduction of new technology always comes with new paradigms, goals and objectives, as well as new workflows and ways of doing things. The impact of this typically touches upon all possible aspects of the organization, including but not limited to the role of individuals in the organization, the methods, the workflows, practical arrangements, habits that have to change, and much more. If all of these are not thoroughly considered and taken care of in a timely and proactive fashion, i.e. from the very inception of the project and throughout its execution, then this can represent a considerable liability and risk for the success of the entire project.
 

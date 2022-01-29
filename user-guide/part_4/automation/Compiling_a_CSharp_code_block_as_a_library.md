@@ -2,11 +2,11 @@
 uid: Compiling_a_CSharp_code_block_as_a_library
 ---
 
-## Compiling a CSharp code block as a library
+# Compiling a CSharp code block as a library
 
 From DataMiner 9.6.13 onwards, it is possible to have a C# code block in an Automation script in Cube compiled as a separate library.
 
-#### Compiling the library
+### Compiling the library
 
 1. In the Automation module, open the script of which you want to compile a C# code block. Make sure the block contains a namespace with the name of the library you want to create.
 
@@ -22,7 +22,7 @@ From DataMiner 9.6.13 onwards, it is possible to have a C# code block in an Auto
 
 4. Save the script. The library will now be compiled.
 
-#### Importing the library into an Automation script
+### Importing the library into an Automation script
 
 Once you have compiled a C# code block as a library, you can then import that library into other Automation scripts. To do so:
 
@@ -39,7 +39,7 @@ Once you have compiled a C# code block as a library, you can then import that li
     using SrmCustomExceptions;
     ```
 
-#### Using the library in a DataMiner Automation Script Solution
+### Using the library in a DataMiner Automation Script Solution
 
 1. In Visual Studio, create a solution with the library script, and add all other Automation scripts in which you want to use the library to this solution.
 
@@ -77,7 +77,7 @@ Once you have compiled a C# code block as a library, you can then import that li
     </Script>
     ```
 
-#### Remarks regarding compiling C# blocks as libraries
+### Remarks regarding compiling C# blocks as libraries
 
 - On the DMA, the DLL files of the libraries are placed in the folder *C:\\Skyline DataMiner\\Scripts\\Libraries*.
 

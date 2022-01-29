@@ -2,7 +2,7 @@
 uid: Enabling_DataMiner_SNMP_agent_functionality
 ---
 
-## Enabling DataMiner SNMP agent functionality
+# Enabling DataMiner SNMP agent functionality
 
 From DataMiner 9.6.11 onwards, the DataMiner SNMP agent functionality is disabled by default, so that polling of active alarms and general DataMiner information is not possible.
 

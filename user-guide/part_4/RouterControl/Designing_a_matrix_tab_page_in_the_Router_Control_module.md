@@ -2,7 +2,7 @@
 uid: Designing_a_matrix_tab_page_in_the_Router_Control_module
 ---
 
-## Designing a matrix tab page in the Router Control module
+# Designing a matrix tab page in the Router Control module
 
 This section consists of the following topics:
 
@@ -26,7 +26,7 @@ This section consists of the following topics:
 
 - [Deleting a matrix tab page](#deleting-a-matrix-tab-page)
 
-### Adding a matrix to a configuration tab page
+## Adding a matrix to a configuration tab page
 
 1. Select the configuration by clicking its tab to the right of the “Default” tab.
 
@@ -64,7 +64,7 @@ This section consists of the following topics:
 > See also:
 > [Creating a completely new Router Control configuration](xref:Managing_the_Router_Control_configurations#creating-a-completely-new-router-control-configuration)
 
-### Adding a matrix represented by two table parameters
+## Adding a matrix represented by two table parameters
 
 The Router Control module also supports matrices that are represented by two table parameters, i.e. an input and an output table, instead of a matrix parameter. This can improve performance for large matrices (512x512 and more). However, in this case an output cannot be connected to more than one input at a time.
 
@@ -105,7 +105,7 @@ Note that the input and output tables must have at least the following read and 
 | Notes          | Extra information.                                                            |
 | ConnectedInput | Foreign key linking to the inputs table. (Only required for the output table) |
 
-### Creating a dynamic tab control
+## Creating a dynamic tab control
 
 From DataMiner 9.0.5 onwards, when you have added a tab page representing a particular matrix, you can configure it so that a tab page will automatically be created for every input page or for every output page in the matrix.
 
@@ -120,7 +120,7 @@ To do so:
 > [!NOTE]
 > Once the matrix configuration has been loaded, no tab pages will be changed when pages are added to or removed from the linked matrix.
 
-### Adding a component to a matrix tab page
+## Adding a component to a matrix tab page
 
 In the left-hand pane, click one of the following components, and drag it onto an empty spot in the middle pane.
 
@@ -138,7 +138,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 | Timer          | A timer that starts whenever an output is selected, and automatically clears the current input/output selection after a period of time (default: 60 seconds)                                                                                                                                                                                                                                                                                                                                            |
 | Visio          | A panel that contains the Visio drawing of a DataMiner view.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-### Configuring a component on a matrix tab page
+## Configuring a component on a matrix tab page
 
 1. Select the component, or hover over the component and click the green cogwheel in the top-right corner.
 
@@ -148,19 +148,19 @@ In the left-hand pane, click one of the following components, and drag it onto a
 > See also:
 > [Overview of user interface component properties](xref:Overview_of_user_interface_component_properties)
 
-### Deleting a component from a matrix tab page
+## Deleting a component from a matrix tab page
 
 1. Hover over the component and click the X in the top-left corner.
 
 2. In the confirmation box, click *OK*.
 
-### Moving a component on a matrix tab page
+## Moving a component on a matrix tab page
 
 1. Hover over the component and move your cursor onto the four-way arrow.
 
 2. Click the four-way arrow and drag the component onto its new location.
 
-### Attaching a matrix tab page to another matrix element
+## Attaching a matrix tab page to another matrix element
 
 1. Right-click the tab, and click *Edit...*
 
@@ -173,7 +173,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 
 4. Click *OK*.
 
-### Editing the custom theme of a matrix tab page
+## Editing the custom theme of a matrix tab page
 
 1. Right-click the tab, and click *Edit custom theme...*
 
@@ -184,7 +184,7 @@ In the left-hand pane, click one of the following components, and drag it onto a
 > [!NOTE]
 > Router Control themes can be specified on three levels: on global level (i.e. the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
 
-### Deleting a matrix tab page
+## Deleting a matrix tab page
 
 1. Right-click the tab, and click *Delete*
 

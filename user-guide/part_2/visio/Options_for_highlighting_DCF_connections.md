@@ -2,7 +2,7 @@
 uid: Options_for_highlighting_DCF_connections
 ---
 
-## Options for highlighting DCF connections
+# Options for highlighting DCF connections
 
 In addition to the options determining how connections are displayed, there are also a number of options that determine how they can be highlighted:
 
@@ -29,20 +29,20 @@ In addition to the options determining how connections are displayed, there are 
 > See also:
 > [Highlighting a connection chain based on a filter shape](xref:Highlighting_a_connection_chain_based_on_a_filter_shape)
 
-### Controlling highlighting when using physical connectors
+## Controlling highlighting when using physical connectors
 
 When shapes are physically connected via drawn connectors, you can use the “HighlightPath” option to make sure the chain is highlighted when users click a shape or a connection in the chain.
 
 Add a shape data field of type **Options** to the page, and set its value to “*HighlightPath*”.
 
-### Customizing the highlight style
+## Customizing the highlight style
 
 If you want to customize the highlight style, create a shape or a connection, apply a custom style to it, add a shape data field of type **Options** to it and set its value to “*HighlightStyle*”. The shape or connection you created will not be displayed, but its line style will be used for all shapes and connections in the chain.
 
 > [!NOTE]
 > If no highlight style has been defined, the thickness of a highlighted line or border will be three times the normal thickness (with a minimum of 3 px).
 
-### Displaying an animated shape on highlighted connections
+## Displaying an animated shape on highlighted connections
 
 From DataMiner 9.5.12 onwards, it is possible to display an animated shape on a highlighted DCF connection line. This is done using the *HighlightAnimation* option.
 
@@ -58,14 +58,14 @@ For example:
 > - The shape will follow the path of the line, even when *MultipleCurvedLinesMode* is used.
 > - Configuring an offset is possible by positioning the rotation point of the animated shape.
 
-### Ignoring internal connections
+## Ignoring internal connections
 
 From DataMiner 9.5.1 onwards, to ignore the internal structure of elements for path highlighting, add a shape data field of type **Options** to the page, and set its value to “*IgnoreInternalConnections*”.
 
 > [!NOTE]
 > Up to DataMiner 9.0.4, if no interfaces are displayed, an element in a chain will still be highlighted even if it is not connected internally. This option allows you to return to this behavior when using DataMiner version 9.5.1 and higher.
 
-### Ignoring the highlight style
+## Ignoring the highlight style
 
 If you want a particular shape to ignore parts of the custom highlight style you configured, you can add a shape data field of type **Options** to that shape and set its value to one or more of the following options:
 
@@ -81,7 +81,7 @@ If you specify more than one option, separate the options with pipe characters. 
 NoHighlightLineStyle|NoHighlightFillStyle|NoHighlightTextStyle
 ```
 
-### Applying only certain highlight style properties
+## Applying only certain highlight style properties
 
 If you want to apply only certain line properties of a HighlightStyle shape to the shapes and connections, add the “*LineProperty=*” option to the shape’s **Options** shape data field, followed by one or more of the following properties. If you specify multiple properties, separate them by commas.
 
@@ -91,17 +91,17 @@ If you want to apply only certain line properties of a HighlightStyle shape to t
 
 - Dash
 
-##### Example:
+#### Example:
 
 | Shape data field | Value                                       |
 |------------------|---------------------------------------------|
 | Options          | HighlightStyle\|LineProperty=Dash,Thickness |
 
-### Applying highlighting to shapes only
+## Applying highlighting to shapes only
 
 If you only want the shapes to be highlighted and not the connections between them, then add a shape data field of type **Options** to the page, and set its value to “*HighlightShapesOnly*”.
 
-### Conditionally applying a highlight style
+## Conditionally applying a highlight style
 
 - [Applying a highlight style depending on a connection property](#applying-a-highlight-style-depending-on-a-connection-property)
 
@@ -111,7 +111,7 @@ If you only want the shapes to be highlighted and not the connections between th
 
 - [Highlighting connections based on the source and target of the connection](#highlighting-connections-based-on-the-source-and-target-of-the-connection)
 
-#### Applying a highlight style depending on a connection property
+### Applying a highlight style depending on a connection property
 
 To have the highlight style applied conditionally depending on whether a specific connection property condition is fulfilled, add an additional shape data field **Highlight** to the shape determining the highlight style, and specify the following value:
 
@@ -124,7 +124,7 @@ The style of this shape will then be applied to all connections of which the val
 > [!NOTE]
 > The condition in the shape data field of type **Highlight** can contain placeholders referring to session variables (e.g. *\[var:mySessionVariable\]*).
 
-#### Applying highlight styles depending on various conditions
+### Applying highlight styles depending on various conditions
 
 To make a highlighting style conditional, in the **Options** shape data field of the shape that defines the highlight style, add the option “*HighlightTarget=*” followed by one or more of the methods listed below. If you specify multiple methods, separate them by commas.
 
@@ -147,7 +147,7 @@ Example:
 > - By creating different HighlightStyle shapes with different conditions applied, you can combine several highlight styles within the same Visual Overview.
 > - The HighlightTarget option can be combined with the LineProperty option. For example: *HighlightStyle\|HighlightTarget=ConnectionProperty,Select\|LineProperty=Color*. <br>See [Applying only certain highlight style properties](#applying-only-certain-highlight-style-properties).
 
-#### Highlighting connections based on the table column value of connected shapes
+### Highlighting connections based on the table column value of connected shapes
 
 From DataMiner 9.5.3 onwards, a specific type of conditional connection highlighting is available where connections are highlighted depending on the table column value corresponding to the connected shapes.
 
@@ -158,7 +158,7 @@ To enable highlighting based on table column value, add a highlight shape to the
 | Options    | HighlightStyle\|HighlightTarget=TableColumn                                                           |
 | Highlight  | TableColumn:*ColumnParameterID*=*Value* |
 
-#### Highlighting connections based on the source and target of the connection
+### Highlighting connections based on the source and target of the connection
 
 From DataMiner 9.6.1 onwards, it is possible to configure a highlight style that is only applied if the path comes from a certain source and (optionally) goes to a certain destination.
 
@@ -186,7 +186,7 @@ HighlightStyle|HighlightTarget=SourceDestination|Source:Protocol=MyDCFProtocol|D
 HighlightStyle|HighlightTarget=SourceDestination|Source:Tag=MySource|Direction=Backwards
 ```
 
-### Highlighting connections from a Connectivity.xml chain
+## Highlighting connections from a Connectivity.xml chain
 
 In a Visio drawing that contains connected elements, it is possible to highlight DCF connectivity chains configured in *Connectivity.xml* files located in *C:\\Skyline DataMiner\\Connectivity\\* and its subfolders.
 
@@ -210,7 +210,7 @@ To do so:
 > See also:
 > [Connectivity.xml files representing chains](xref:Connectivity_xml_files_representing_chains#connectivityxml-files-representing-chains)
 
-### Disabling path highlighting when a connection line is clicked
+## Disabling path highlighting when a connection line is clicked
 
 By default, when you click a connection line between shapes, the path connected to that line is highlighted. From DataMiner 10.0.3 onwards, you can change this default behavior by adding a *SelectionHighlighting* option to the shape that represents the connection and setting it to “False”.
 

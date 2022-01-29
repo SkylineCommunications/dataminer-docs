@@ -2,7 +2,7 @@
 uid: Triggering_an_action_when_the_mouse_pointer_hovers_over_a_shape
 ---
 
-## Triggering an action when the mouse pointer hovers over a shape
+# Triggering an action when the mouse pointer hovers over a shape
 
 A shape can be set to perform a particular action when a mouse pointer is hovered over it.
 
@@ -13,7 +13,7 @@ A shape can be set to perform a particular action when a mouse pointer is hovere
 > [!NOTE]
 > - From DataMiner 9.5.14 onwards, a different hover style can be configured for a shape. See [Configuring the hover area of a shape](xref:Configuring_the_hover_area_of_a_shape).
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add two shape data fields to the shape:
 
@@ -26,7 +26,7 @@ This “hover” behavior will often be implemented to take a quick peek at elem
 > [!NOTE]
 > This feature can only be used with shapes linked to elements, redundancy groups, services and views.
 
-### Example of a “hover target” that visualizes the element name
+## Example of a “hover target” that visualizes the element name
 
 First, we turn a shape into a “hover target” (i.e. a shape that will visualize data linked to shapes over which we intend to hover) by adding to it the following shape data items:
 

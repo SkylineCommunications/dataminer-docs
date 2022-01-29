@@ -2,15 +2,15 @@
 uid: Adding_options_to_shapes_linked_to_elements_or_services
 ---
 
-## Adding options to shapes linked to elements or services
+# Adding options to shapes linked to elements or services
 
 Using a shape data field of type **ElementOptions**, you can specify options to shapes linked to elements or services.
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **ElementOptions** to the shape, and set its value to one of the options listed below.
 
-### Options
+## Options
 
 The following options can be configured for shapes linked to elements or services:
 

@@ -2,7 +2,7 @@
 uid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
 ---
 
-## Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards
+# Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards
 
 The DataMiner Cube UI consists of the following main components from DataMiner 10.0.0/10.0.2 onwards:
 
@@ -14,7 +14,7 @@ The DataMiner Cube UI consists of the following main components from DataMiner 1
 
 - [Alarm Console](#alarm-console)
 
-### Header bar
+## Header bar
 
 From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the header bar of DataMiner Cube:
 
@@ -92,7 +92,7 @@ From DataMiner 10.0.0/10.0.2 onwards, you can find the following items in the he
 
     - *Sign out*: Ends your current DataMiner Cube session and returns you to the logon screen. If you are using a desktop app, you can click then the arrow button next to the DMA name or IP to go back to the start window and select a different DMS to connect to.
 
-### Sidebar
+## Sidebar
 
 From DataMiner 10.0.0/10.0.2 onwards, on the left-hand side of the Cube UI, a sidebar is displayed. This sidebar contains the following buttons:
 
@@ -120,7 +120,7 @@ To unpin a button again, right-click the button and select *Unpin*. This is not 
 > - At most 4 items can be pinned to the sidebar. If the maximum number of items has been added, the button to pin more items is no longer displayed, until an item is unpinned again.
 > - It is possible to move the position of the sidebar to the right-hand side. To do so, press *Ctrl+Alt+Shift+RightArrow*. To move the pane back to the left-hand side, press *Ctrl+Alt+Shift+LeftArrow*. The sidebar position can also be changed in the Cube settings. See [Cube settings](xref:User_settings#cube-settings).
 
-#### Surveyor pane
+### Surveyor pane
 
 The Surveyor pane contains a hierarchical overview of all views, elements, services, etc. in your DataMiner System. It features alarm bubble-up, state indication, etc.
 
@@ -134,7 +134,7 @@ When you click an item in the tree, it opens in a card:
 > - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](xref:Main_Cube_UI_components_prior_to_DataMiner_10#surveyor-right-click-menu).
 > - You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
-##### Icons
+#### Icons
 
 The icons that precede an item name in the tree show what kind of item it is and what state and alarm state it is in.
 
@@ -178,7 +178,7 @@ The icons that precede an item name in the tree show what kind of item it is and
     | Upwards arrow                                                                                                                                        | Displayed next to a service child in case the capped severity of the service child is lower than the actual severity. The icon has the color of the severity that will bubble up to the parent service.                                                                                                                                                                                                                                                                      |
     | Circle containing a horizontal line, for example:<br> ![](~/user-guide/images/element_unavailable.png) | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. <br> This icon is used from DataMiner 10.0.12 onwards. In this DataMiner version, it is only used for elements, and other items are not displayed when the DMA hosting them is unavailable. From DataMiner 10.0.13 onwards, it is also used for services and redundancy groups. |
 
-##### Surveyor right-click menu
+#### Surveyor right-click menu
 
 In the Surveyor right-click menu, the following options are available, depending on what type of item is right-clicked:
 
@@ -211,7 +211,7 @@ In the Surveyor right-click menu, the following options are available, depending
 > - The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
 > - When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
 
-#### Activity pane
+### Activity pane
 
 The activity button displays a pane listing recently opened items, such as elements, services, views and apps.
 
@@ -226,7 +226,7 @@ The following actions are possible with this list:
 > - The list of recent and pinned items is kept synchronized between DataMiner Cube client and the Monitoring app.
 > - Recent items can be views, elements, services, redundancy groups, service templates and DataMiner modules.
 
-#### Apps pane
+### Apps pane
 
 The apps button displays a list of DataMiner applications.
 
@@ -242,13 +242,13 @@ Depending on the configuration of your DataMiner System, the list can contain up
 
 Click any app in the list to open it. If you wish to open the app in a new card, use the middle mouse button.
 
-### Card pane
+## Card pane
 
 When you open an item in Cube, e.g. an element or an app, it is opened in a so-called card in the large, central pane of the Cube UI.
 
 For more information, see [Working with cards in DataMiner Cube](xref:Working_with_cards_in_DataMiner_Cube).
 
-#### Card header bar buttons
+### Card header bar buttons
 
 At the top of each card, there can be several buttons:
 
@@ -264,7 +264,7 @@ At the top of each card, there can be several buttons:
 > [!NOTE]
 > To move back and forward between the Visual Overview pages of different cards, use the *Back* and *Forward* options in the right-click menu.
 
-### Alarm Console
+## Alarm Console
 
 The Alarm Console is the section of the DataMiner Cube user interface that allows you to view and manipulate active alarms, historical alarms and information events.
 

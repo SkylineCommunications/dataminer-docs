@@ -2,7 +2,7 @@
 uid: Positioning_shapes_in_a_grid_layout
 ---
 
-## Positioning shapes in a grid layout
+# Positioning shapes in a grid layout
 
 In a Visio drawing, you can position shapes in a grid layout. This allows you to create shapes that automatically adapt to the available screen real estate.
 
@@ -14,9 +14,9 @@ In a Visio drawing, you can position shapes in a grid layout. This allows you to
 > See also:
 > <https://community.dataminer.services/video/dataminer-inspire-advanced-visual-overview-features/>
 
-### Configuring the shape data fields
+## Configuring the shape data fields
 
-#### On page level
+### On page level
 
 On page level, use a shape data field of type Layout to define the following grid properties.
 
@@ -28,7 +28,7 @@ On page level, use a shape data field of type Layout to define the following gri
 | VerticalScrollBarVisibility   | Whether or not there has to be a vertical scrollbar. Optional.<br> Possible values: “Auto”, “Hidden”, “Disabled” or “Visible”<br> See also [Column and row definitions](#column-and-row-definitions) .                                                                    |
 | HorizontalScrollbarVisibility | Whether or not there has to be a horizontal scrollbar. Optional.<br> Possible values: “Auto”, “Hidden”, “Disabled” or “Visible”<br> See also [Column and row definitions](#column-and-row-definitions).                                                                   |
 
-#### On shape level
+### On shape level
 
 To every shape that you want to place inside the grid, add a shape data field of type **Layout** and specify the following properties as required. It is not necessary to specify all properties; only add those for which you want the shape to behave different from the default behavior.
 
@@ -48,7 +48,7 @@ To every shape that you want to place inside the grid, add a shape data field of
 | MinHeight=           | The minimum height of the shape.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | MaxHeight=           | The maximum height of the shape.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-### Column and row definitions
+## Column and row definitions
 
 In a column or a row definition, you specify a series of values (one for every column or row), separated by semicolons (”;”). Each of those values can be an integer, an asterisk (“\*”) or “Auto”.
 
@@ -75,7 +75,7 @@ VerticalScrollBarVisibility=Disabled|HorizontalScrollBarVisibility=Disabled
 > [!NOTE]
 > Changing the default scroll behavior is not advised when using components that automatically generate a large number of shapes, as this can lead to unpractical layouts and high resource usage.
 
-### Examples
+## Examples
 
 Example of a page-level value:
 

@@ -2,7 +2,7 @@
 uid: Configuring_RADIUS_settings
 ---
 
-## Configuring RADIUS settings
+# Configuring RADIUS settings
 
 DataMiner users can be authenticated using a RADIUS server.
 

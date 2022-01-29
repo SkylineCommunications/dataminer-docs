@@ -2,11 +2,11 @@
 uid: Making_shapes_selectable
 ---
 
-## Making shapes selectable
+# Making shapes selectable
 
 It is possible to tag a shape as “Selectable”, so that instead of displaying the default hyperlink behavior, it will adopt a specially defined selection style when clicked.
 
-### Tagging a shape as selectable
+## Tagging a shape as selectable
 
 To tag a shape as “Selectable”, add a shape data field to it of type **Options**, and set its value to “*Selectable*”.
 
@@ -14,7 +14,7 @@ To tag a shape as “Selectable”, add a shape data field to it of type **Optio
 Selectable
 ```
 
-### Defining a selection style
+## Defining a selection style
 
 To define the selection style:
 
@@ -30,7 +30,7 @@ To define the selection style:
     SelectionStyle
     ```
 
-### Making a selectable shape get copied to a session variable
+## Making a selectable shape get copied to a session variable
 
 If you want the text in a “Selectable” shape to be copied to a session variable when clicked, do the following:
 
@@ -53,7 +53,7 @@ If you want the text in a “Selectable” shape to be copied to a session varia
 > [!NOTE]
 > When shapes are automatically generated, you can define a “SelectionVar” on group level, i.e. on the shape (or the shape group) where you specified a shape data field of type **Children**.
 
-#### Having the Selectable shape copied to multiple session variables
+### Having the Selectable shape copied to multiple session variables
 
 From DataMiner 9.5.1 onwards, it is possible to have the text of a “Selectable” shape copied to multiple session variables when a shape is clicked.
 
@@ -63,7 +63,7 @@ To do so, instead of specifying one variable name, as described above, specify a
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | Options          | SelectionVar=*Var01*,*Var02*,*Var03* |
 
-#### Having specific information copied to particular session variables
+### Having specific information copied to particular session variables
 
 From DataMiner 9.5.1 onwards, you can also have the session variables listed in a “SelectionVar=” clause set to a particular piece of information about the item to which the clicked Selectable shape is linked.
 

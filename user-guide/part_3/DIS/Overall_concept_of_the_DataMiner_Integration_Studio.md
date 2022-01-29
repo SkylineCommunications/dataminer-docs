@@ -2,11 +2,11 @@
 uid: Overall_concept_of_the_DataMiner_Integration_Studio
 ---
 
-## Overall concept of the DataMiner Integration Studio
+# Overall concept of the DataMiner Integration Studio
 
 DataMiner Integration Studio has many interesting features that facilitate the development of DataMiner protocols.
 
-### DataMiner IDE
+## DataMiner IDE
 
 After installation of the DataMiner Integration Studio extension, Microsoft Visual Studio turns into a full-blown DataMiner IDE with five separate editors:
 
@@ -27,7 +27,7 @@ After installation of the DataMiner Integration Studio extension, Microsoft Visu
 >     - C# 6.0 (when using Visual Studio 2015)
 >     - C# 7.3 (when using Visual Studio 2017 or above)
 
-### Two ways of developing DataMiner protocols and Automation scripts
+## Two ways of developing DataMiner protocols and Automation scripts
 
 DIS offers two distinct ways of developing DataMiner protocols and Automation scripts:
 
@@ -37,6 +37,6 @@ DIS offers two distinct ways of developing DataMiner protocols and Automation sc
 
 For more information on how to develop DataMiner protocols as Visual Studio solutions, see [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](xref:Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions).
 
-### Graphical representation of the overall concept
+## Graphical representation of the overall concept
 
 ![](~/user-guide/images/dis_concept_general.jpg)

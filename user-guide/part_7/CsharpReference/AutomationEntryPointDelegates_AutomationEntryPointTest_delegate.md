@@ -2,7 +2,7 @@
 uid: AutomationEntryPointDelegates_AutomationEntryPointTest_delegate
 ---
 
-## AutomationEntryPointDelegates.AutomationEntryPointTest delegate
+# AutomationEntryPointDelegates.AutomationEntryPointTest delegate
 
 Encapsulates a method that has will be used as the Automation entry point method for testing purposes.
 

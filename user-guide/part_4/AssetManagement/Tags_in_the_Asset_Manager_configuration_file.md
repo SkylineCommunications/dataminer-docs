@@ -2,13 +2,13 @@
 uid: Tags_in_the_Asset_Manager_configuration_file
 ---
 
-## Tags in the Asset Manager configuration file
+# Tags in the Asset Manager configuration file
 
-### AssetManagerConfig
+## AssetManagerConfig
 
 While the configuration file itself can have a random name, its root tag must be named *\<AssetManagerConfig>*.
 
-### AssetManagerConfig.DatabaseConfig
+## AssetManagerConfig.DatabaseConfig
 
 In this mandatory tag, specify the name of the database configuration (as specified in the *DB.xml* file).
 
@@ -16,29 +16,29 @@ In this mandatory tag, specify the name of the database configuration (as specif
 > See also:
 > [DB.xml](xref:DB_xml#dbxml)
 
-### AssetManagerConfig.Schema
+## AssetManagerConfig.Schema
 
 In this mandatory tag, specify the name of the database.
 
-### AssetManagerConfig.DisplayName
+## AssetManagerConfig.DisplayName
 
 In this tag, specify the name of the database as you want it to appear in the *Asset Manager* user interface.
 
 This tag is optional. If it is left empty or if it is not used, then the name of the database shown in the user interface will be the database schema name as specified in the *\<Schema>* tag.
 
-### AssetManagerConfig.HandlingDMA
+## AssetManagerConfig.HandlingDMA
 
 In this tag, specify the ID of the DataMiner Agent that is allowed to connect to the CMDB.
 
 This tag is optional. If it is left empty, if it contains 0 or if it is not used, then every DMA in the DataMiner System will be allowed to connect to the CMDB.
 
-### AssetManagerConfig.RootTable
+## AssetManagerConfig.RootTable
 
 In this mandatory tag, specify the database tables that have to appear in the root of the table tree.
 
 If you specify more than one table, separate the table names by semicolons (”;”).
 
-### AssetManagerConfig.Security
+## AssetManagerConfig.Security
 
 In this tag, you can specify Read and Write permissions on user group level for every table in the database.
 
@@ -53,7 +53,7 @@ For an example, refer to the *\<Security>* section in the example (see [Example 
 > - If you specify multiple table names within an Allow or a Deny tag, separate them by commas.
 > - Multiple Allow tags or multiple Deny tags are not allowed within the same Read or Write tag.
 
-### AssetManagerConfig.Tables
+## AssetManagerConfig.Tables
 
 In this mandatory tag, you can configure how the different tables will be displayed in the *Asset Manager* user interface.
 
@@ -70,7 +70,7 @@ In this mandatory tag, you can configure how the different tables will be displa
 >
 > *\<AssetManagerConfig>*
 
-#### Tables
+### Tables
 
 If you want to change something to the appearance of a table, then add a *\<Table>* tag, and specify the following attributes:
 
@@ -81,7 +81,7 @@ If you want to change something to the appearance of a table, then add a *\<Tabl
 | displayColumn | Yes        | The name of the column of which the values have to replace the table’s primary keys.<br> It is possible to define a display name for a record that combines several columns. To do so, specify a display name containing column names, separated by a space, a dot, brackets, a backslash, a forward slash, parentheses or square brackets. E.g. *displayColumn="column1 (column2:column3)"* |
 | skip          | No         | If this table has to be hidden in the *Logical View*, then set this attribute to “true”.                                                                                                                                                                                                                                                                                                 |
 
-#### Columns
+### Columns
 
 If you want to change something to the appearance of a specific table column, then, inside a *\<Table>* tag, add a *\<Columns>* tag containing a *\<Column>* tag for every column of which you want to change the appearance. For each column, you can specify the following attributes:
 
@@ -115,7 +115,7 @@ Example:
 </AssetManagerConfig>
 ```
 
-#### Columnrelations
+### Columnrelations
 
 To configure advanced deletion behavior of database records, inside a *\<Table>* tag, add a *\<ColumnRelations>* tag, with the following two attributes:
 
@@ -129,20 +129,20 @@ To configure advanced deletion behavior of database records, inside a *\<Table>*
 | onDelete=”DenyLinkedRemoval”   | The user will be denied permission to delete the record and its linked records. It will also be impossible to delete the parent record. |
 | onDelete=”AllowLinkedRemoval”  | Default behavior: only the selected record will be deleted, no linked records.                                                          |
 
-#### Filter
+### Filter
 
 If you want to filter the records displayed in a table, then, inside a *\<Table>* tag, add a *\<Filter>* tag and specify the WHERE clause in a CDATA tag.
 
 > [!NOTE]
 > The value of a definition attribute has to be an ANSI-compliant WHERE clause. Do not use double quotes.
 
-#### Order
+### Order
 
 If you want to define a record sorting order for a table, inside a *\<Table>* tag, add an *\<Order>* tag, and specify what to order by with a definition attribute.
 
 E.g. for ascending order: *definition="columnName ASC"* or for descending order: *definition="columnName DESC"*.
 
-#### Icon
+### Icon
 
 To give a table a custom icon in the tree view, inside the *\<Table>* tag, add an *\<Icon>* tag. The icon can either be defined by means of XAML code in a CDATA tag, or by using a “key” attribute that refers to an icon defined in the *Icons.xml* file.
 
@@ -170,7 +170,7 @@ To give a table a custom icon in the tree view, inside the *\<Table>* tag, add a
     </Table>
     ```
 
-#### PathsToFollow
+### PathsToFollow
 
 For every table, you can specify which table links you want to visualize in the table hierarchy. In some cases, you will have to restrict table linking to prevent possible endless loops.
 
@@ -187,7 +187,7 @@ A *\<Path>* tag can contain the following:
 
 By default, all possible table links will be visualized in the table hierarchy.
 
-#### Security
+### Security
 
 To configure the access rights of groups to the columns of a particular table, inside the *\<Table>* tag, add a *\<Security>* tag. This tag works in the same way as the global security tag. See [AssetManagerConfig.Security](#assetmanagerconfigsecurity) for more information.
 
@@ -211,7 +211,7 @@ Example:
 </Table>
 ```
 
-### AssetManagerConfig.Views
+## AssetManagerConfig.Views
 
 If you want views that are defined in the database to be displayed in the tree view, add this optional tag, containing a *\<View>* tag for every view you want to add.
 
@@ -234,7 +234,7 @@ Example:
 > [!NOTE]
 > In the Asset Manager tree view, these will be displayed as tables. If you select such a table, you will be able to view it, but not edit it.
 
-### AssetManagerConfig.AllLinkedDataOrder
+## AssetManagerConfig.AllLinkedDataOrder
 
 If you want the different database tables to appear in a fixed order in the *All Linked Items View*, then, in this optional tag, specify the tables in the desired order using *\<Table>* tags.
 

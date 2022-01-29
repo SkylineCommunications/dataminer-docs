@@ -2,7 +2,7 @@
 uid: Alarm_types
 ---
 
-## Alarm types
+# Alarm types
 
 Several types of alarms exist in DataMiner. In addition to five alarm severity levels, there are also a number of special alarm types.
 
@@ -12,7 +12,7 @@ Several types of alarms exist in DataMiner. In addition to five alarm severity l
 
 - [Alarm type priority](#alarm-type-priority)
 
-### Alarm severity levels
+## Alarm severity levels
 
 There are four alarm levels, each indicated by a color, as well as one additional “Normal” level, which represents the expected value of a parameter during normal operations.
 
@@ -31,7 +31,7 @@ For the different alarm levels, it is also possible to assign high and low level
 > - [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
 > - [Guidelines for assigning alarm severity levels](xref:Guidelines_for_assigning_alarm_severity_levels)
 
-### Special alarm types
+## Special alarm types
 
 Several special alarm types exist in DataMiner:
 
@@ -43,7 +43,7 @@ Several special alarm types exist in DataMiner:
 
 - Masked alarms, indicated in purple, are “hidden” to prevent unnecessary follow-up. See [Masking and unmasking alarms](xref:Masking_and_unmasking_alarms).
 
-#### Information event
+### Information event
 
 An information event is a message distributed throughout the DataMiner System to draw attention to something. In the Alarm Console, these messages are shown in the default tab *Information events*.
 
@@ -64,7 +64,7 @@ Default alarm color: Gray
 > [!NOTE]
 > You can also make DataMiner generate information events when a discrete parameter reaches a user-defined value or when an analog parameter crosses a user-defined threshold.
 
-#### Timeout
+### Timeout
 
 A timeout is an alarm that indicates that DataMiner has been unable to communicate with a particular element for some time. The time it takes before a timeout is triggered depends on the element configuration.
 
@@ -76,7 +76,7 @@ If an element is in timeout, its parameters will be disabled, as no changes can 
 > - From DataMiner 9.5.4 onwards, timeout alarms have a comment containing the IP address(es) of the connection(s) that caused the timeout.
 > - From DataMiner 9.6.4 onwards, if a timeout occurs while there was already an alarm on an element, there will be a small red x icon next to the bar indicating the severity of that alarm, to make it clear that the status of the alarm is uncertain because of the timeout.
 
-##### Timeout alarms on replicated elements or services
+#### Timeout alarms on replicated elements or services
 
 If a replicated element or service is in timeout state, this can have two different reasons:
 
@@ -86,7 +86,7 @@ If a replicated element or service is in timeout state, this can have two differ
 
 From DataMiner 9.5.5 onwards, the tooltip of the timeout icon in Cube will indicate if the DMA communication is the reason for the timeout.
 
-### Alarm type priority
+## Alarm type priority
 
 The different alarm types all have their own priority in DataMiner. From highest to lowest priority, the following order is applied:
 

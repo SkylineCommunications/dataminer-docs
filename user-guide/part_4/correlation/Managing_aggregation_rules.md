@@ -2,7 +2,7 @@
 uid: Managing_aggregation_rules
 ---
 
-## Managing aggregation rules
+# Managing aggregation rules
 
 In DataMiner Cube, you can configure, create or delete aggregation rules, or create or delete folders for the rules:
 
@@ -10,7 +10,7 @@ In DataMiner Cube, you can configure, create or delete aggregation rules, or cre
 
     In Edit mode, more buttons are available, and the detailed properties for any selected rule are displayed in the pane on the right instead of the aggregation data.
 
-### Managing the folder structure
+## Managing the folder structure
 
 Using the folders in the tree view, you can sort aggregation rules logically, so that users will get useful information combined when they click a folder in View mode.
 
@@ -27,7 +27,7 @@ Using the folders in the tree view, you can sort aggregation rules logically, so
 
 - To rename a folder, select the folder in the list, enter a new name in the *Name* box on the right, and click the *Rename* button.
 
-### Creating and configuring an aggregation rule
+## Creating and configuring an aggregation rule
 
 To create a new aggregation rule:
 

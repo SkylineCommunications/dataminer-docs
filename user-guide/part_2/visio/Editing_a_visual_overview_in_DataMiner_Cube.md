@@ -2,13 +2,13 @@
 uid: Editing_a_visual_overview_in_DataMiner_Cube
 ---
 
-## Editing a visual overview in DataMiner Cube
+# Editing a visual overview in DataMiner Cube
 
 To edit a Visio drawing used within DataMiner Cube (i.e. a visual overview), you can use the right-click menu of the visual overview.
 
 This menu provides access to the options detailed below.
 
-### Edit mode
+## Edit mode
 
 Edit mode allows you to edit the currently assigned drawing within DataMiner Cube, without downloading it to your client computer.
 
@@ -27,13 +27,13 @@ To modify shapes in edit mode:
 
 4. When you have made all necessary modifications, click *Save*. To exit the edit mode, click *Close edit mode*.
 
-### Edit in Visio
+## Edit in Visio
 
 The *Edit in Visio* option downloads the Visio drawing that is currently assigned to the selected view, service or element, and opens it in Microsoft Visio. This allows you to edit the drawing online.
 
 When you have made all necessary modifications, save the drawing. The new version will be uploaded back to the DMS, and the visual side of the card will be refreshed.
 
-### Set as active Visio file
+## Set as active Visio file
 
 This option allows you to assign a different Visio file in several ways. Different possibilities are available depending on whether the visual overview you right-clicked is assigned to a service, a view or an element.
 
@@ -108,6 +108,6 @@ On the visual overview of a **service or view**, the context menu can contain th
 > - [Managing Visio files linked to protocols](xref:Managing_Visio_files_linked_to_protocols)
 > - [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files)
 
-### Download Visio file
+## Download Visio file
 
 The *Download Visio file* option opens the *Save As* dialog box, which allows you to save a copy of the Visio drawing on your local computer.

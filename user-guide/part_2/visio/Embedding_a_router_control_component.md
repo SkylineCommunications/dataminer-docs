@@ -2,7 +2,7 @@
 uid: Embedding_a_router_control_component
 ---
 
-## Embedding a router control component
+# Embedding a router control component
 
 It is possible to embed a router control component in Visual Overview.
 
@@ -10,7 +10,7 @@ It is possible to embed a router control component in Visual Overview.
 > See also:
 > [DMS Router Control](xref:RouterControl#dms-router-control)
 
-### Configuring the shape data fields
+## Configuring the shape data fields
 
 Add a shape data field of type **Component** to the shape, and set its value to “*RouterControl*”.
 
@@ -26,7 +26,7 @@ SessionVariablePrefix=RC;ShowHeaderTabs;ShowHeaderBar
 
 - **ShowHeaderBar**: If this option is included, the header will contain a bar showing “Router Control”, the selected matrix name, the configuration, and an edit button.
 
-### Session variables used with router control components
+## Session variables used with router control components
 
 If a router control component is embedded in Visio, you can use the following session variables:
 
@@ -48,7 +48,7 @@ If a router control component is embedded in Visio, you can use the following se
 > [!NOTE]
 > The *SelectedMatrix* and *SelectedMatrixElement* variables are used for the same purpose, i.e. to refer to the corresponding matrix. If both variables are used at the same time, the system will first check the *SelectedMatrix* variable, and if no result is found, the *SelectedMatrixElement* variable will then be checked.
 
-### Example
+## Example
 
 Using the router control session variables, it is possible to create a “preset” button to navigate to the desired configuration/matrix and select input and output with a single click:
 

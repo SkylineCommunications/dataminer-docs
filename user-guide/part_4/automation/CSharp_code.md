@@ -2,7 +2,7 @@
 uid: CSharp_code
 ---
 
-## CSharp code
+# CSharp code
 
 Use the *C# code* action to include a C# code block in an Automation script.
 

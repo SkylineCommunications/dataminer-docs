@@ -2,7 +2,7 @@
 uid: Configuring_Mobile_Gateway_to_communicate_with_an_SMSEagle_device_via_HTTPS
 ---
 
-## Configuring Mobile Gateway to communicate with an SMSEagle device via HTTPS
+# Configuring Mobile Gateway to communicate with an SMSEagle device via HTTPS
 
 From DataMiner 9.6.10 onwards, it is possible to set up communication with an SMSEagle device via HTTPS. To do so:
 

@@ -2,9 +2,9 @@
 uid: PagerOptions_properties
 ---
 
-## PagerOptions properties
+# PagerOptions properties
 
-#### Message
+### Message
 
 Gets or sets the body text of the message.
 
@@ -19,7 +19,7 @@ PagerOptions options = new PagerOptions("message", "recipient");
 string message = options.Message;
 ```
 
-#### TO
+### TO
 
 Gets or sets the destination number(s)
 

@@ -2,7 +2,7 @@
 uid: Stretching_a_shape_across_an_entire_card
 ---
 
-## Stretching a shape across an entire card
+# Stretching a shape across an entire card
 
 A shape can be stretched across the entire card surface.
 
@@ -13,7 +13,7 @@ A shape can be stretched across the entire card surface.
 > See also:
 > <https://community.dataminer.services/video/visio-adding-a-background/>
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type Stretch to the shape, and set its value to one of the following values:
 

@@ -2,7 +2,7 @@
 uid: Set_element_state
 ---
 
-## Set element state
+# Set element state
 
 Use this action to set the state of a dummy in an Automation script:
 

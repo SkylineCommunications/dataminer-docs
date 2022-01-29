@@ -2,7 +2,7 @@
 uid: Monitoring_app_card_pane
 ---
 
-## Monitoring app card pane
+# Monitoring app card pane
 
 The card pane of the Monitoring app is the large pane on the right side of the app. If no cards are opened, this pane displays the app homepage, which shows a list of recent items. If a card is opened, the displayed content depends on the type of card.
 
@@ -24,7 +24,7 @@ The card pane of the Monitoring app is the large pane on the right side of the a
 >
 >    Click this button to view the item in fullscreen mode. To leave fullscreen mode using a keyboard, press Esc or F11, depending on the browser.
 
-### View cards
+## View cards
 
 On the left side of a view card, a collapsible card navigation pane provides access to the pages of the card. You can resize this pane by dragging its right edge.
 
@@ -52,7 +52,7 @@ View cards can be opened from the navigation or recent items pane, or from the s
 
 The view page in this URL is optional; if it is not specified, the default page is displayed. To go to a visual page, specify *visual/*\<view page>. For example: *http://*\<DMA IP>*/monitoring/view/103/visual/0*
 
-### Service cards
+## Service cards
 
 On the left side of a service card, a collapsible card navigation pane provides access to the pages of the card. You can resize this pane by dragging its right edge.
 
@@ -77,7 +77,7 @@ The service page in this URL is optional; if it is not specified, the default pa
 
 - To go to the page of one of the service children, specify *child/*\<page name>. The page name consists of the DMA ID, the element ID and the page name, separated by %2F.<br>For example: *http://*\<DMA IP>*/monitoring/service/67/511/child/67%2F509%2FPerformance*
 
-### Element cards
+## Element cards
 
 On the left side of an element card, a collapsible card navigation pane provides access to the pages of the card. You can resize this pane by dragging its right edge.
 
@@ -114,7 +114,7 @@ Element cards can be opened from the navigation or recent items pane, or from th
 
 The element page in this URL is optional; if it is not specified, the default page is displayed. The page should be specified in the following format: \<*data or visual*\>/\<*page name*\>. <br>For example: *http://**\<DMA IP>**/monitoring/element/67/4/data/Main*
 
-### Alarm cards
+## Alarm cards
 
 Alarm cards in the Monitoring app display the following information:
 
@@ -135,7 +135,7 @@ In the header of the card, two buttons are available:
 Alarm cards can be accessed from the Alarm Console, but you can also navigate directly to an alarm card by specifying the following URL:
 <br>*http://*\<DMA IP>*/monitoring/alarm/*\<DMA ID>*/*\<alarm ID>
 
-### CPE cards
+## CPE cards
 
 On the left side of a CPE card, a collapsible card navigation pane provides access to the pages of the card. You can resize this pane by dragging its right edge.
 
@@ -151,7 +151,7 @@ CPE cards can be opened from the navigation or recent items pane, or from the se
 > See also:
 > [Working with the Experience and Performance Management interface](xref:Working_with_the_Experience_and_Performance_Management_interface)
 
-### Spectrum analyzer cards
+## Spectrum analyzer cards
 
 A spectrum analyzer card is similar to an element card, but has a special "Spectrum Analyzer" page. From DataMiner 10.0.4 onwards, if you open this spectrum page, a spectrum trace using a new monitor with the most recent preset will be displayed.
 

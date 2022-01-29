@@ -2,7 +2,7 @@
 uid: Creating_an_internal_connectivity_chain
 ---
 
-## Creating an internal connectivity chain
+# Creating an internal connectivity chain
 
 To create a connectivity chain between parameters in an element:
 

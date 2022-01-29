@@ -2,7 +2,7 @@
 uid: Dashboards_app_UI_from_DataMiner_10_0_0_10_0_2_onwards
 ---
 
-## Dashboards app UI from DataMiner 10.0.0/10.0.2 onwards
+# Dashboards app UI from DataMiner 10.0.0/10.0.2 onwards
 
 The main page of the app consists of a header bar, a sidebar, and a details pane.
 

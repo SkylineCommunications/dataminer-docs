@@ -2,7 +2,7 @@
 uid: Email
 ---
 
-## Email
+# Email
 
 Use this action to send a notification via email.
 

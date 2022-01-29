@@ -2,7 +2,7 @@
 uid: NotificationOptions_constructor
 ---
 
-## NotificationOptions constructor
+# NotificationOptions constructor
 
 ```txt
 NotificationOptions(NotificationType type)

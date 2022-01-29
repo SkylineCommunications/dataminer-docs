@@ -2,7 +2,7 @@
 uid: Engine_properties
 ---
 
-## Engine properties
+# Engine properties
 
 - [IsInteractive](#isinteractive)
 
@@ -18,7 +18,7 @@ uid: Engine_properties
 
 - [UserLoginName](#userloginname)
 
-#### IsInteractive
+### IsInteractive
 
 Gets a value indicating whether an interactive client is available for the script.
 
@@ -32,7 +32,7 @@ Example:
 bool isInteractive = engine.IsInteractive;
 ```
 
-#### ProfileManager
+### ProfileManager
 
 Gets the Profile Manager.
 
@@ -46,7 +46,7 @@ Example:
 var profileManager = engine.ProfileManager;
 ```
 
-#### TicketingGateway
+### TicketingGateway
 
 Gets the Ticketing Gateway.
 
@@ -60,7 +60,7 @@ Example:
 var ticketingGateway = engine.TicketingGateway;
 ```
 
-#### Timeout
+### Timeout
 
 Sets or gets the timeout delay for the current C# code block.
 
@@ -77,7 +77,7 @@ var timeout = engine.Timeout;
 > [!NOTE]
 > From DataMiner 10.2.0/10.1.2 onwards, this property can also be used to determine when an interactive Automation script times out.
 
-#### UserCookie
+### UserCookie
 
 Gets the user cookie. Available from DataMiner 10.0.5 onwards.
 
@@ -85,7 +85,7 @@ Gets the user cookie. Available from DataMiner 10.0.5 onwards.
 string UserCookie
 ```
 
-#### UserDisplayName
+### UserDisplayName
 
 Gets the displayed name of the user who is executing the script.
 
@@ -99,7 +99,7 @@ Example:
 engine.Log(engine.UserDisplayName);
 ```
 
-#### UserLoginName
+### UserLoginName
 
 Gets the login name of the user who is executing the script.
 

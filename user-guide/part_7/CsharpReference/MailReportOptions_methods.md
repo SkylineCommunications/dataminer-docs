@@ -2,7 +2,7 @@
 uid: MailReportOptions_methods
 ---
 
-## MailReportOptions methods
+# MailReportOptions methods
 
 - [IncludeElement](#includeelement)
 
@@ -12,7 +12,7 @@ uid: MailReportOptions_methods
 
 - [SetMailOptions](#setmailoptions)
 
-#### IncludeElement
+### IncludeElement
 
 Adds an element to be included in the report.
 
@@ -51,7 +51,7 @@ reportOptions.IncludeElement(dummy1, new MailReportParameter(dummy1, "Bandwidth"
 > [!NOTE]
 > In the example above, the index argument has to contain the display key. If necessary, use the FindDisplayKey method on the element or the dummy to retrieve that key. See [FindDisplayKey](xref:Element_methods#finddisplaykey).
 
-#### IncludeFilteredView
+### IncludeFilteredView
 
 Adds all elements of a given protocol from a given view.
 
@@ -60,7 +60,7 @@ void IncludeFilteredView(string viewName, string protocolName, string protocolVe
 void IncludeFilteredView(string viewName, string protocolName, string protocolVersion, MailReportParameter param1, MailReportParameter param2, MailReportParameter param3)
 ```
 
-#### IncludeView
+### IncludeView
 
 Adds a view to be included in the report.
 
@@ -68,7 +68,7 @@ Adds a view to be included in the report.
 void IncludeView(string viewName)
 ```
 
-#### SetMailOptions
+### SetMailOptions
 
 Configures the following email options:
 

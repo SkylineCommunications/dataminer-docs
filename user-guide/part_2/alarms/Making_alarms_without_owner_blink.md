@@ -2,7 +2,7 @@
 uid: Making_alarms_without_owner_blink
 ---
 
-## Making alarms without owner blink
+# Making alarms without owner blink
 
 In DataMiner Cube, parameters, elements, services, redundancy groups and views can be set to blink if they have an alarm of which nobody has taken ownership.
 
@@ -30,7 +30,7 @@ It is also possible to specify alarm filters, so that blinking is only enabled b
 > - [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 > - [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)
 
-#### Activating alarm blinking on a DMA
+### Activating alarm blinking on a DMA
 
 1. Stop the DataMiner software.
 
@@ -58,7 +58,7 @@ It is also possible to specify alarm filters, so that blinking is only enabled b
 > [!NOTE]
 > Only public alarm filters can be used, not private filters.
 
-#### Overview of filter attributes
+### Overview of filter attributes
 
 The following filter attributes can be used:
 

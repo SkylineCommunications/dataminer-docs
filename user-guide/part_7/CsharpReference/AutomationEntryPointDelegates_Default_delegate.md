@@ -2,7 +2,7 @@
 uid: AutomationEntryPointDelegates_Default_delegate
 ---
 
-## AutomationEntryPointDelegates.Default delegate
+# AutomationEntryPointDelegates.Default delegate
 
 Encapsulates a method that has one *Engine* parameter and no return value.
 

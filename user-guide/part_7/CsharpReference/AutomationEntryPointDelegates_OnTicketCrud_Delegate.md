@@ -2,7 +2,7 @@
 uid: AutomationEntryPointDelegates_OnTicketCrud_Delegate
 ---
 
-## AutomationEntryPointDelegates.OnTicketCrud Delegate
+# AutomationEntryPointDelegates.OnTicketCrud Delegate
 
 Ticket CRUD delegate type.
 

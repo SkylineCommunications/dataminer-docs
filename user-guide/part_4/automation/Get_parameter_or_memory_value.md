@@ -2,11 +2,11 @@
 uid: Get_parameter_or_memory_value
 ---
 
-## Get parameter or memory value
+# Get parameter or memory value
 
 For this script action, you must first indicate what is to be retrieved: a parameter or a memory value. The further configuration options depend on this first choice.
 
-#### For a parameter get
+### For a parameter get
 
 1. In the first underlined field, keep *Parameter* selected.
 
@@ -22,7 +22,7 @@ For this script action, you must first indicate what is to be retrieved: a param
 > [!NOTE]
 > This functionality can also be used to get the value of a matrix crosspoint. To do so, specify the parameter as “matrix \[matrix size\]” and select the input and output.
 
-#### For a memory value get
+### For a memory value get
 
 1. In the first underlined field, select *Memory value*.
 

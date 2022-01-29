@@ -2,7 +2,7 @@
 uid: UIBuilder_example
 ---
 
-## UIBuilder example
+# UIBuilder example
 
 ```txt
 UIBuilder uibDialogBox1 = new UIBuilder();

@@ -2,16 +2,16 @@
 uid: Managing_Visio_files_linked_to_protocols
 ---
 
-## Managing Visio files linked to protocols
+# Managing Visio files linked to protocols
 
 In DataMiner, each protocol has one or more Visio files linked to it. It is possible to change the Visio files linked to a protocol, so that each element based on that particular protocol displays the Visual Overview you have determined.
 
 > [!NOTE]
 > For elements that have been created by a parent element, it may not be possible to change what Visio file is used, except with an Administrator account or via the parent element.
 
-### Switching between different Visio files
+## Switching between different Visio files
 
-#### Switching between Visio files for elements
+### Switching between Visio files for elements
 
 In the Protocols & Templates module, for each protocol, any Visio files linked to it are displayed under *Visio files* in the second column. There can be several different Visio files listed in this section:
 
@@ -32,7 +32,7 @@ To set a different Visio file as the active file for a particular protocol:
 > [!NOTE]
 > From DataMiner 10.0.11 onwards, it is also possible to assign a Visio file to one element only, without affecting the Visio files available for the protocol. For more information, see [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
 
-#### Switching between Visio files for services or views
+### Switching between Visio files for services or views
 
 To set a different Visio file as the active file for a particular service or view:
 
@@ -53,7 +53,7 @@ To set a different Visio file as the active file for a particular service or vie
 > [!NOTE]
 > The option to switch to a different Visio file is also available from an element, service or view card’s header bar menu. See [Card header bar menu](xref:Working_with_cards_in_DataMiner_Cube#card-header-bar-menu).
 
-### Assigning a custom Visio file to a protocol
+## Assigning a custom Visio file to a protocol
 
 In the Protocols & Templates module, you can upload a custom-made Visio file to assign it to a protocol.
 
@@ -73,7 +73,7 @@ In the Protocols & Templates module, you can upload a custom-made Visio file to 
 > See also:
 > [Visio drawings](xref:visio#visio-drawings)
 
-### Removing a Microsoft Visio file assigned to a protocol
+## Removing a Microsoft Visio file assigned to a protocol
 
 If you no longer want a custom Visio file to be linked to a protocol, you can sever the link between the protocol and the Visio file.
 

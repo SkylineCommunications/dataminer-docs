@@ -2,7 +2,7 @@
 uid: RedundancyGroupFilter_methods
 ---
 
-## RedundancyGroupFilter methods
+# RedundancyGroupFilter methods
 
 - [ByID](#byid)
 
@@ -10,7 +10,7 @@ uid: RedundancyGroupFilter_methods
 
 - [ByView](#byview)
 
-#### ByID
+### ByID
 
 Creates a new *RedundancyGroupFilter* object with *DataMinerID* and *GroupID* set to the specified DataMiner Agent ID and redundancy group ID, respectively.
 
@@ -24,7 +24,7 @@ Example:
 var filter = RedundancyGroupFilter.ByID(200, 4000);
 ```
 
-#### ByName
+### ByName
 
 Creates a new *RedundancyGroupFilter* object with *NameFilter* set to the specified name filter.
 
@@ -38,7 +38,7 @@ Example:
 var filter = RedundancyGroupFilter.ByName("Test*");
 ```
 
-#### ByView
+### ByView
 
 Creates a new *RedundancyGroupFilter* object with *ViewID* set to the specified view ID or *View* set to the specified view name.
 

@@ -2,7 +2,7 @@
 uid: Table_parameters
 ---
 
-## Table parameters
+# Table parameters
 
 Different types of table parameters exist in DataMiner Cube, detailed in the sections below. Regardless of the type of table parameter, the following applies:
 
@@ -29,13 +29,13 @@ Different types of table parameters exist in DataMiner Cube, detailed in the sec
     > [!NOTE]
     > From DataMiner 10.2.0/10.2.1 onwards, if you apply a filter to a table before you export it, only the displayed rows will be included in the export.
 
-#### Text tables
+### Text tables
 
 A text table is a special type of read parameter that shows a data table in text format. It is also capable of displaying any block of text received from a device.
 
 Users can select the tab-delimited text, copy it to the Windows clipboard, and paste it in email messages, documents, spreadsheets, etc.
 
-#### Dynamic tables
+### Dynamic tables
 
 A dynamic table is a special type of parameter that is used to visualize and manage large data tables (e.g. SNMP tables).
 
@@ -44,6 +44,6 @@ Every column in a dynamic table is a parameter in itself. Cells in a column can 
 > [!NOTE]
 > The size of icons used in dynamic tables can be adapted in the file *Icons.xml*, with a maximum height of 20 pixels.
 
-#### Direct view tables
+### Direct view tables
 
 A direct view table is a special kind of table that is used to aggregate data from different source elements. More information about direct view tables is available in the [DataMiner Development Library](https://help.dataminer.services/development/).

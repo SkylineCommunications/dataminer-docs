@@ -2,7 +2,7 @@
 uid: Managing_alarm_templates
 ---
 
-## Managing alarm templates
+# Managing alarm templates
 
 In this section:
 
@@ -14,7 +14,7 @@ In this section:
 
 - [Deleting an alarm template](#deleting-an-alarm-template)
 
-### Creating an alarm template
+## Creating an alarm template
 
 To create a new alarm template:
 
@@ -42,7 +42,7 @@ To create a new alarm template:
 
     The template editor now opens, where you can further configure the alarm template. For more information, see [Configuring alarm templates](xref:Configuring_alarm_templates).
 
-### Uploading an alarm template
+## Uploading an alarm template
 
 To upload an existing alarm template for a particular protocol version:
 
@@ -57,7 +57,7 @@ To upload an existing alarm template for a particular protocol version:
     > [!NOTE]
     > Only files that start with *Template\_* will be recognized as alarm templates.
 
-### Assigning an alarm template
+## Assigning an alarm template
 
 You can either assign an alarm template to an item with the Surveyor right-click menu, or in the Protocols & Templates module.
 
@@ -93,7 +93,7 @@ In the Protocols & Templates module:
 > - Right-click an item in the Protocols & Templates module and select *Remove* to quickly remove an alarm template from an item.
 > - Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](xref:Working_with_the_elements_tab).
 
-### Deleting an alarm template
+## Deleting an alarm template
 
 To delete an existing alarm template for a particular protocol version:
 

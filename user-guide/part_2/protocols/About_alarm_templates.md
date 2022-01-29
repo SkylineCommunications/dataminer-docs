@@ -2,7 +2,7 @@
 uid: About_alarm_templates
 ---
 
-## About alarm templates
+# About alarm templates
 
 An alarm template is an XML file that contains all alarm thresholds for all parameters defined in a particular DataMiner protocol. It is an overlay file that overrides the default alarm thresholds defined in a DataMiner protocol.
 

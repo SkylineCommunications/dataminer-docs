@@ -2,7 +2,7 @@
 uid: Working_with_spectrum_scripts
 ---
 
-## Working with spectrum scripts
+# Working with spectrum scripts
 
 To access spectrum scripts, in the *monitors* tab of a spectrum analyzer element, click either ![](~/user-guide/images/script_new_32.png) *New script* or ![](~/user-guide/images/script_edit_32.png) *Edit script*.
 
@@ -22,7 +22,7 @@ The following topics provide more information on spectrum scripts:
 
 - [Executing scripts without running a monitor](#executing-scripts-without-running-a-monitor)
 
-### Managing scripts
+## Managing scripts
 
 In the left pane of the *Edit script* window, the following actions are possible:
 
@@ -32,7 +32,7 @@ In the left pane of the *Edit script* window, the following actions are possible
 
 - To find a specific script, enter the script name or part of the script name in the Search box at the top of the left pane. The tree view will then be filtered to only show any scripts matching the name you entered.
 
-### Editing scripts
+## Editing scripts
 
 To edit a script, in the *Edit script* window, select the script in the pane on the left. In the pane on the right, you can then do the following:
 
@@ -62,7 +62,7 @@ To edit a script, in the *Edit script* window, select the script in the pane on 
     > [!NOTE]
     > When the measurements in a script are executed, this results in new parameters. For instance, a new parameter C/N can be created by executing a script that measures a trace, takes the difference between the noise level and the carrier level and assigns that value to C/N. The new parameters can then be used for trending and alarming. for more information, see [Working with spectrum monitors](xref:Working_with_spectrum_monitors).
 
-### Using global constants
+## Using global constants
 
 Within a script, it is possible that you often use fixed variables to perform a calculation (e.g. a correction factor). Though you can enter this value directly in the script, it is also possible to create a global variable that refers to that global value in the script. This option makes it easier to maintain your scripts.
 
@@ -76,7 +76,7 @@ This opens the *Edit global constants* window, where the following actions are p
 
 - To remove a global constant, select it in the tree view pane, and then click the *Delete* button.
 
-### Executing scripts without running a monitor
+## Executing scripts without running a monitor
 
 Though usually scripts are executed by a monitor, it is also possible for users to execute a script manually in DataMiner Cube.
 

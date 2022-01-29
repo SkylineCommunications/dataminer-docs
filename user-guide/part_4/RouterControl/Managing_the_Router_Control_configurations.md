@@ -2,9 +2,9 @@
 uid: Managing_the_Router_Control_configurations
 ---
 
-## Managing the Router Control configurations
+# Managing the Router Control configurations
 
-### Creating a completely new Router Control configuration
+## Creating a completely new Router Control configuration
 
 1. Go to the middle pane, and click the “+” box to add a configuration tab page next to the “Default” tab.
 
@@ -14,7 +14,7 @@ uid: Managing_the_Router_Control_configurations
 
 4. Click *Backup* to save the configuration to a compressed XML file on the client machine, or click *Upload* to upload the current configuration to the DMS.
 
-### Changing the design of an existing Router Control configuration
+## Changing the design of an existing Router Control configuration
 
 1. Go to the middle pane, and click a configuration tab (either “Default” or one of the custom configurations).
 
@@ -22,7 +22,7 @@ uid: Managing_the_Router_Control_configurations
 
 3. Click *Backup* to save the configuration to a compressed XML file on the client machine, or click *Upload* to upload the current configuration to the DMS.
 
-### Editing the global theme of the Router Control module
+## Editing the global theme of the Router Control module
 
 1. Go to the middle pane, right-click any tab representing a configuration, and select *Edit global theme*.
 
@@ -33,7 +33,7 @@ uid: Managing_the_Router_Control_configurations
 > [!NOTE]
 > Router Control themes can be specified on three levels: on global level (i.e. the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
 
-### Editing the custom theme of a Router Control configuration
+## Editing the custom theme of a Router Control configuration
 
 1. Go to the middle pane, right-click the tab representing the configuration of which you want to edit the theme, and select *Edit custom theme*.
 
@@ -44,13 +44,13 @@ uid: Managing_the_Router_Control_configurations
 > [!NOTE]
 > Router Control themes can be specified on three levels: on global level (i.e. the entire Router Control module), on configuration level, and on matrix level. Themes defined on a higher level are inherited by lower levels, and themes defined on a lower level override the ones defined on a higher level.
 
-### Deleting a Router Control configuration
+## Deleting a Router Control configuration
 
 1. Go to the middle pane, right-click the tab representing the configuration you want to delete (either “Default” or one of the custom configurations), and select *Delete*.
 
 2. In the confirmation box, click *OK*.
 
-### Renaming a Router Control configuration
+## Renaming a Router Control configuration
 
 1. Go to the middle pane, right-click the tab representing the configuration you want to rename (either “Default” or one of the custom configurations), and select *Rename*.
 

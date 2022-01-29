@@ -2,7 +2,7 @@
 uid: UIBlockDefinition_constructor
 ---
 
-## UIBlockDefinition constructor
+# UIBlockDefinition constructor
 
 ```txt
 UIBlockDefinition()

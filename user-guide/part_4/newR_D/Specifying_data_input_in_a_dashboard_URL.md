@@ -2,7 +2,7 @@
 uid: Specifying_data_input_in_a_dashboard_URL
 ---
 
-## Specifying data input in a dashboard URL
+# Specifying data input in a dashboard URL
 
 If a dashboard has been configured with one or more feed components, it is possible to specify data input for these feeds in a dashboard URL. This way, you can immediately make the dashboard display specific data when it is opened.
 

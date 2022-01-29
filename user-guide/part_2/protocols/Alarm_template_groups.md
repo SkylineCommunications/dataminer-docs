@@ -2,9 +2,9 @@
 uid: Alarm_template_groups
 ---
 
-## Alarm template groups
+# Alarm template groups
 
-### About alarm template groups
+## About alarm template groups
 
 Alarm templates can be combined in alarm template groups. With these, users can build alarm template hierarchies allowing alarm thresholds for one or more parameters to be overruled without having to change the base template.
 
@@ -12,7 +12,7 @@ Alarm templates can be combined in alarm template groups. With these, users can 
 > See also:
 > [Creating an alarm template group](#creating-an-alarm-template-group)
 
-#### Example of an alarm template group
+### Example of an alarm template group
 
 For this example, we will assume that you apply a template group with three alarm templates (1, 2 and 3) to a protocol with five parameters (A, B, C, D and E).
 
@@ -30,7 +30,7 @@ Parameter C, for example, is monitored in both template 2 and template 3 (with d
 > [!NOTE]
 > If a filtered table parameter is used in one or more alarm templates in the group, each filtered entry in the alarm template is treated as if it were a separate parameter.
 
-#### Including and excluding parameters in an alarm template
+### Including and excluding parameters in an alarm template
 
 In an alarm template, every parameter can have one of three monitoring states:
 
@@ -43,7 +43,7 @@ In an alarm template, every parameter can have one of three monitoring states:
 > [!NOTE]
 > When you edit an alarm template, do not forget to check the *Allow include/exclude parameters* option in the *Details* section.
 
-### Creating an alarm template group
+## Creating an alarm template group
 
 To create a new alarm template group:
 

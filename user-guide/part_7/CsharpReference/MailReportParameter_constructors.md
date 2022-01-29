@@ -2,7 +2,7 @@
 uid: MailReportParameter_constructors
 ---
 
-## MailReportParameter constructors
+# MailReportParameter constructors
 
 - [MailReportParameter Constructor (Int32)](#mailreportparameter-constructor-int32)
 
@@ -16,7 +16,7 @@ uid: MailReportParameter_constructors
 
 - [MailReportParameter Constructor (IActionableElement, String, String, MailReportParameterFlags)](#mailreportparameter-constructor-iactionableelement-string-string-mailreportparameterflags)
 
-#### MailReportParameter Constructor (Int32)
+### MailReportParameter Constructor (Int32)
 
 Initializes a new instance of the *MailReportOptions* class using the specified parameter ID.
 
@@ -24,7 +24,7 @@ Initializes a new instance of the *MailReportOptions* class using the specified 
 public MailReportParameter(int pid)
 ```
 
-#### MailReportParameter Constructor (IActionableElement, String)
+### MailReportParameter Constructor (IActionableElement, String)
 
 Initializes a new instance of the *MailReportOptions* class using the specified dummy and parameter name.
 
@@ -32,7 +32,7 @@ Initializes a new instance of the *MailReportOptions* class using the specified 
 public MailReportParameter(IActionableElement dummy, string name)
 ```
 
-#### MailReportParameter Constructor (Int32, String)
+### MailReportParameter Constructor (Int32, String)
 
 Initializes a new instance of the *MailReportOptions* class using the specified parameter ID and index.
 
@@ -40,7 +40,7 @@ Initializes a new instance of the *MailReportOptions* class using the specified 
 public MailReportParameter(int pid, string index)
 ```
 
-#### MailReportParameter Constructor (IActionableElement, String, String)
+### MailReportParameter Constructor (IActionableElement, String, String)
 
 Initializes a new instance of the *MailReportOptions* class using the specified dummy, parameter name and index.
 
@@ -48,7 +48,7 @@ Initializes a new instance of the *MailReportOptions* class using the specified 
 public MailReportParameter(IActionableElement dummy, string name, string index)
 ```
 
-#### MailReportParameter Constructor (Int32, String, MailReportParameterFlags)
+### MailReportParameter Constructor (Int32, String, MailReportParameterFlags)
 
 Initializes a new instance of the *MailReportOptions* class using the specified parameter ID, index and mail report parameter options.
 
@@ -56,7 +56,7 @@ Initializes a new instance of the *MailReportOptions* class using the specified 
 public MailReportParameter(int pid, string index, MailReportParameterFlags options)
 ```
 
-#### MailReportParameter Constructor (IActionableElement, String, String, MailReportParameterFlags)
+### MailReportParameter Constructor (IActionableElement, String, String, MailReportParameterFlags)
 
 Initializes a new instance of the *MailReportOptions* class using the specified dummy, name and mail report parameter options.
 

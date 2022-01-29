@@ -2,7 +2,7 @@
 uid: Generating_reports_with_a_report_URL
 ---
 
-## Generating reports with a report URL
+# Generating reports with a report URL
 
 In a report URL, you can combine the following parameters to directly generate a report.
 
@@ -26,7 +26,7 @@ In a report URL, you can combine the following parameters to directly generate a
 > - The “report-view” and “report-protocol” variables should only be used for report templates which can have an unspecified amount of elements.
 > - All URL parameter values must be URL encoded. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
 
-### Examples of a report URLs
+## Examples of a report URLs
 
 Example 1
 

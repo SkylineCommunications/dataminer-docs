@@ -2,7 +2,7 @@
 uid: Clearing_alarms
 ---
 
-## Clearing alarms
+# Clearing alarms
 
 By default, alarms are cleared automatically. However, if you set the AutoClear system setting to “false”, then all alarms will have to be cleared manually.
 
@@ -22,15 +22,15 @@ By default, alarms are cleared automatically. However, if you set the AutoClear 
 > See also:
 > <https://community.dataminer.services/video/alarm-console-working-with-clearable-alarms/>
 
-### Automatic versus manual alarm clearing
+## Automatic versus manual alarm clearing
 
-#### About automatic alarm clearing
+### About automatic alarm clearing
 
 By default, a DataMiner alarm of which the severity returns to normal is automatically cleared by the system.
 
 ![](~/user-guide/images/AlarmClearingAuto.jpg)
 
-#### About manual alarm clearing
+### About manual alarm clearing
 
 A DataMiner alarm of which the severity returns to normal can also be kept in a “clearable” state until a user clears it by hand. This prevents alarms from disappearing from the system before being explicitly cleared by a user.
 
@@ -39,7 +39,7 @@ A DataMiner alarm of which the severity returns to normal can also be kept in a 
 > [!NOTE]
 > Alarms that reoccur before they have been cleared by a user will be linked to the original alarm. In other words, when the same alarm occurs several times in a short period of time, it will only have to be cleared once.
 
-### Manually clearing an alarm
+## Manually clearing an alarm
 
 To manually clear an alarm:
 
@@ -53,7 +53,7 @@ Alternatively, if a column with action buttons to clear alarms has been added in
 > - If the alarm is not yet in a clearable state, the *Clear alarm* option is not shown.
 > - Clearing a clearable correlated alarm also clears the clearable base alarms. For more information on Correlation, see [DMS Correlation](xref:correlation#dms-correlation).
 
-### System-wide AutoClear setting
+## System-wide AutoClear setting
 
 The default AutoClear setting can be configured in the *C:\\Skyline DataMiner\\MaintenanceSettings.xml* file.
 
@@ -63,7 +63,7 @@ If you set the AutoClear setting to FALSE, alarms will not be cleared automatica
 > See also:
 > [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 
-### Overriding the default AutoClear setting on parameter level
+## Overriding the default AutoClear setting on parameter level
 
 When editing an alarm template, you can override the AutoClear system settings for particular alarms.
 

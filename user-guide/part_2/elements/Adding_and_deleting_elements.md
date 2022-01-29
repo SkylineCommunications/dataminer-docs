@@ -2,7 +2,7 @@
 uid: Adding_and_deleting_elements
 ---
 
-## Adding and deleting elements
+# Adding and deleting elements
 
 In this section:
 
@@ -12,7 +12,7 @@ In this section:
 
 - [Deleting an element](#deleting-an-element)
 
-### Adding an element
+## Adding an element
 
 1. Right-click in the Surveyor, and select *New \> Element*.
 
@@ -274,7 +274,7 @@ In this section:
 > See also:
 > [Locating devices in your system to add to your DMS](xref:Locating_devices_in_your_system_to_add_to_your_DMS)
 
-### Duplicating an element
+## Duplicating an element
 
 To quickly add an element that is very similar to an existing element, you can duplicate that existing element:
 
@@ -287,7 +287,7 @@ To quickly add an element that is very similar to an existing element, you can d
 > [!NOTE]
 > When you duplicate an SNMPv3 from another DMA, you will need to enter the SNMPv3 credentials again for the element to work.
 
-### Deleting an element
+## Deleting an element
 
 1. Right-click the element in the Surveyor, and select *Delete*.
 

@@ -2,7 +2,7 @@
 uid: Embedding_an_alarm_timeline_component
 ---
 
-## Embedding an alarm timeline component
+# Embedding an alarm timeline component
 
 Using an alarm timeline component, you can visualize the alarm history of parameters as a dynamic timeline.
 

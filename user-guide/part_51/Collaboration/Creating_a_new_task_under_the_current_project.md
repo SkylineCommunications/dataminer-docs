@@ -2,7 +2,7 @@
 uid: Creating_a_new_task_under_the_current_project
 ---
 
-## Creating a new task under the current project
+# Creating a new task under the current project
 
 As a customer or a DataMiner Strategic Partner, you will always create tasks under an active project. This can be a contracted delivery of a solution or a number of professional services, or an active DataMiner Maintenance & Support contract. Depending on the scope of the project, certain constraints may apply as to which kind of tasks can be created.
 

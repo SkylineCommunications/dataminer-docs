@@ -2,7 +2,7 @@
 uid: Element_methods
 ---
 
-## Element methods
+# Element methods
 
 - [ConnectMatrixCrosspoint](#connectmatrixcrosspoint)
 
@@ -150,7 +150,7 @@ uid: Element_methods
 
 - [Unmask](#unmask)
 
-#### ConnectMatrixCrosspoint
+### ConnectMatrixCrosspoint
 
 Connects the specified matrix crosspoint.
 
@@ -189,7 +189,7 @@ Element element = engine.FindElement(400, 2000);
 element.ConnectMatrixCrosspoint("Example matrix", "Input 1", "Output 10");
 ```
 
-#### DisconnectMatrixCrosspoint
+### DisconnectMatrixCrosspoint
 
 Disconnects the specified matrix crosspoint.
 
@@ -228,7 +228,7 @@ Element element = engine.FindElement(400, 2000);
 element.DisconnectMatrixCrosspoint("Example matrix", "Input 1", "Output 10");
 ```
 
-#### FindDisplayKey
+### FindDisplayKey
 
 Gets the display key that corresponds with the specified primary key.
 
@@ -251,7 +251,7 @@ Element element = engine.FindElement(400, 2000);
 string displayKey = element.FindDisplayKey(“Overview”, "1");
 ```
 
-#### FindParameterID
+### FindParameterID
 
 Gets the ID that corresponds with the specified parameter name. If the parameter is not found, -1 is returned.
 
@@ -272,7 +272,7 @@ Element element = engine.FindElement(400, 2000);
 int parameterId = element.FindParameterID("MyParameter", true);
 ```
 
-#### FindPrimaryKey
+### FindPrimaryKey
 
 Gets the primary key that corresponds with the specified display key.
 
@@ -295,7 +295,7 @@ Element element = engine.FindElement(400, 2000);
 string primaryKey = element.FindPrimaryKey("Overview", "Main");
 ```
 
-#### FindView
+### FindView
 
 Gets the name of the view of which the specified element is a member.
 
@@ -312,7 +312,7 @@ Element element = engine.FindElement(400, 2000);
 string viewName = element.FindView();
 ```
 
-#### FindViews
+### FindViews
 
 Gets the names of all the views of which the specified element is a member.
 
@@ -327,7 +327,7 @@ Element element = engine.FindElement(400, 2000);
 string viewNames = element.FindViews();
 ```
 
-#### FindWriteParameterID
+### FindWriteParameterID
 
 Gets the ID of the write parameter with the specified name. If the parameter is not found, -1 is returned.
 
@@ -342,7 +342,7 @@ Element element = engine.FindElement(400, 2000);
 int parameterId = element.FindWriteParameterID("MyWriteParameter");
 ```
 
-#### GetDisplayValue
+### GetDisplayValue
 
 Gets the display value that corresponds with the specified raw value of the specified parameter.
 
@@ -365,7 +365,7 @@ Element element = engine.FindElement(400, 2000);
 string displayValue = element.GetDisplayValue("MyDiscreteParameter", "1");
 ```
 
-#### GetInterface
+### GetInterface
 
 Retrieves the specified DataMiner Connectivity Framework interface.
 
@@ -391,7 +391,7 @@ var interface = element.GetInterface("MyInterface");
 > [!NOTE]
 > The method caches the interface the first time it is retrieved. The interface will not be updated if it changes while the script is running.
 
-#### GetInterfaces
+### GetInterfaces
 
 Retrieves all DataMiner Connectivity Framework interfaces for a particular element.
 
@@ -409,7 +409,7 @@ var interfaces = element.GetInterfaces();
 > [!NOTE]
 > The method caches the interfaces the first time they are retrieved. The interfaces will not be updated if they change while the script is running.
 
-#### GetInterfacesByName
+### GetInterfacesByName
 
 Retrieves DataMiner Connectivity Framework interfaces by interface name.
 
@@ -432,7 +432,7 @@ Element element = engine.FindElement(400, 2000);
 var interfaces = element.GetInterfacesByName("MyInterface *", true);
 ```
 
-#### GetInterfacesByType
+### GetInterfacesByType
 
 Retrieves the DataMiner Connectivity Framework interfaces of the specified interface type.
 
@@ -449,7 +449,7 @@ Element element = engine.FindElement(400, 2000);
 var interfaces = element.GetInterfacesByType("out");
 ```
 
-#### GetMatrixInputForOutput
+### GetMatrixInputForOutput
 
 Gets the input that is connected to the specified output. Returns 0 when the output is not connected.
 
@@ -484,7 +484,7 @@ Element element = engine.FindElement(400, 2000);
 int connectedInput = element.GetMatrixInputForOutput("Example matrix", "Output 4");
 ```
 
-#### GetParameter
+### GetParameter
 
 Gets the value of the specified parameter.
 
@@ -517,7 +517,7 @@ Element element = engine.FindElement(400, 2000);
 var value = element.GetParameter(“MyTableColumn”, “1”);
 ```
 
-#### GetParameterByPrimaryKey
+### GetParameterByPrimaryKey
 
 Gets the value of the specified parameter using the primary key.
 
@@ -540,7 +540,7 @@ Element element = engine.FindElement(400, 2000);
 var value = element.GetParameterByPrimaryKey("MyTableColumn", "1");
 ```
 
-#### GetParameterDisplay
+### GetParameterDisplay
 
 Gets the display value of the specified parameter. Useful for discrete parameters.
 
@@ -573,7 +573,7 @@ Element element = engine.FindElement(400, 2000);
 var displayValue = element.GetParameterDisplay("MyColumn", "1");
 ```
 
-#### GetParameterDisplayByPrimaryKey
+### GetParameterDisplayByPrimaryKey
 
 Gets the display value of the specified table cell using the column name and the row primary key. If the specified row is not found, “Not Initialized” is returned.
 
@@ -594,7 +594,7 @@ Element element = engine.FindElement(400, 2000);
 var displayValue = element.GetParameterDisplayByPrimaryKey("MyColumn", "1");
 ```
 
-#### GetPropertyValue
+### GetPropertyValue
 
 Retrieves the value of the property with the specified name for this element. If the specified property was not found in the Element.xml of this element, the return value is null.
 
@@ -609,7 +609,7 @@ Element element = engine.FindElement(400, 2000);
 var propertyValue = element.GetPropertyValue("MyProperty");
 ```
 
-#### GetRawValue
+### GetRawValue
 
 Gets the value that corresponds with the specified display value of the specified parameter.
 
@@ -634,7 +634,7 @@ Element element = engine.FindElement(400, 2000);
 string rawValue = element.GetRawValue("MyDiscreteParameter", "Main");
 ```
 
-#### GetReadParameterIDFromWrite
+### GetReadParameterIDFromWrite
 
 Gets the read parameter ID that corresponds with the specified write parameter ID. Returns -1 if the specified parameter was not found or if there is no corresponding write parameter.
 
@@ -655,7 +655,7 @@ Element element = engine.FindElement(400, 2000);
 int readParameterId = element.GetReadParameterIDFromWrite("MyParameter");
 ```
 
-#### GetSpectrumPreset
+### GetSpectrumPreset
 
 Gets an object that can be used to change the given preset. Only shared presets can be opened.
 
@@ -670,7 +670,7 @@ Element element = engine.FindElement(400, 2000);
 var preset = element.GetSpectrumPreset("Preset 1");
 ```
 
-#### GetTableDisplayKeys
+### GetTableDisplayKeys
 
 Gets an array with all the display keys of the specified table parameter.
 
@@ -691,7 +691,7 @@ Element element = engine.FindElement(400, 2000);
 string[] displayKeys = element.GetTableDisplayKeys(“MyTable”);
 ```
 
-#### GetTableKeyMappings
+### GetTableKeyMappings
 
 Gets the primary key to display key map for the specified table parameter.
 
@@ -712,7 +712,7 @@ Element element = engine.FindElement(400, 2000);
 var keyMap = element.GetTableKeyMappings("MyTable");
 ```
 
-#### GetTablePrimaryKeys
+### GetTablePrimaryKeys
 
 Gets an array with all the primary keys of the specified table parameter.
 
@@ -735,7 +735,7 @@ string[] primaryKeys = element.GetTablePrimaryKeys("MyTable");
 
 
 
-#### GetWriteParameterIDFromRead
+### GetWriteParameterIDFromRead
 
 Gets the write parameter ID that corresponds with the specified read parameter ID. Returns -1 in case the specified parameter was not found or if there is no corresponding write parameter.
 
@@ -756,7 +756,7 @@ Element element = engine.FindElement(400, 2000);
 int writeParameterId = element.GetWriteParameterIDFromRead("MyParameter");
 ```
 
-#### HasProperty
+### HasProperty
 
 Determines whether the Element.xml of this element has a property defined with the specified name. Returns true if the Element.xml of this element has a property with the specified name; otherwise, false.
 
@@ -771,7 +771,7 @@ Element element = engine.FindElement(400, 2000);
 bool hasProperty = element.HasProperty("MyProperty");
 ```
 
-#### IsMatrixCrosspointConnected
+### IsMatrixCrosspointConnected
 
 Returns true if the specified matrix crosspoint is connected.
 
@@ -808,7 +808,7 @@ Element element = engine.FindElement(400, 2000);
 bool isConnected = element.IsMatrixCrosspointConnected("Example matrix", "Input 1", "Output 7");
 ```
 
-#### Mask
+### Mask
 
 Masks the element that is linked to the dummy either indefinitely or for a specified period of time.
 
@@ -829,7 +829,7 @@ Element element = engine.FindElement(400, 2000);
 element.Mask("Maintenance window.", 7200);
 ```
 
-#### MaskUntilNormal
+### MaskUntilNormal
 
 Masks the element that is linked to the dummy until all its alarms have been cleared.
 
@@ -844,7 +844,7 @@ Element element = engine.FindElement(400, 2000);
 element.MaskUntilNormal("Suppressed.");
 ```
 
-#### MatrixEnableInputLine
+### MatrixEnableInputLine
 
 Enables or disables the specified matrix input.
 
@@ -879,7 +879,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixEnableInputLine("Example Matrix", "Input 4", false);
 ```
 
-#### MatrixEnableLine
+### MatrixEnableLine
 
 Enables or disables the specified matrix input or output.
 
@@ -916,7 +916,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixEnableLine("Example Matrix", false, "Output 4", true);
 ```
 
-#### MatrixEnableOutputLine
+### MatrixEnableOutputLine
 
 Enables or disables the specified matrix output.
 
@@ -951,7 +951,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixEnableOutputLine("Example Matrix", "Output 2", false);
 ```
 
-#### MatrixGetFollowMode
+### MatrixGetFollowMode
 
 Returns true if “follow mode” is enabled on the specified matrix output.
 
@@ -986,7 +986,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixGetFollowMode("Example Matrix", "Output 1");
 ```
 
-#### MatrixGetIndexFromLabel
+### MatrixGetIndexFromLabel
 
 Gets the index of the input or output that corresponds with the specified input or output label.
 
@@ -1011,7 +1011,7 @@ Element element = engine.FindElement(400, 2000);
 int index = element.MatrixGetIndexFromLabel("Example Matrix", false, "Output 10");
 ```
 
-#### MatrixGetInputIndexFromInputLabel
+### MatrixGetInputIndexFromInputLabel
 
 Gets the index of the input that corresponds with the specified input label.
 
@@ -1034,7 +1034,7 @@ Element element = engine.FindElement(400, 2000);
 int index = element.MatrixGetInputIndexFromInputLabel("Example Matrix", "Input 10");
 ```
 
-#### MatrixGetInputLabel
+### MatrixGetInputLabel
 
 Gets the label of the specified matrix input.
 
@@ -1057,7 +1057,7 @@ Element element = engine.FindElement(400, 2000);
 string inputLabel = element.MatrixGetInputLabel("Example matrix", 10);
 ```
 
-#### MatrixGetInputLockMode
+### MatrixGetInputLockMode
 
 Gets a value indicating whether the specified matrix input is locked.
 
@@ -1092,7 +1092,7 @@ Element element = engine.FindElement(400, 2000);
 bool isLocked = element.MatrixGetInputLockMode("Example matrix", "Input 1");
 ```
 
-#### MatrixGetLabel
+### MatrixGetLabel
 
 Gets the label of the specified matrix input or output.
 
@@ -1117,7 +1117,7 @@ Element element = engine.FindElement(400, 2000);
 string label = element.MatrixGetLabel("Example Matrix", true, 1);
 ```
 
-#### MatrixGetLockMode
+### MatrixGetLockMode
 
 Gets a value indicating whether the specified matrix input or output is locked.
 
@@ -1154,7 +1154,7 @@ Element element = engine.FindElement(400, 2000);
 string label = element.MatrixGetLockMode("Example Matrix", true, "Input 10");
 ```
 
-#### MatrixGetOutputIndexFromOutputLabel
+### MatrixGetOutputIndexFromOutputLabel
 
 Gets the index of the output that corresponds with the specified output label.
 
@@ -1177,7 +1177,7 @@ Element element = engine.FindElement(400, 2000);
 int index = element.MatrixGetOutputIndexFromOutputLabel("Example matrix", "Output 10");
 ```
 
-#### MatrixGetOutputLabel
+### MatrixGetOutputLabel
 
 Gets the label of the specified matrix output.
 
@@ -1200,7 +1200,7 @@ Element element = engine.FindElement(400, 2000);
 string label = element.MatrixGetOutputLabel("Example Matrix", 10);
 ```
 
-#### MatrixGetOutputLockMode
+### MatrixGetOutputLockMode
 
 Gets a value indicating whether the specified matrix output is locked.
 
@@ -1235,7 +1235,7 @@ Element element = engine.FindElement(400, 2000);
 bool isLocked = element.MatrixGetOutputLockMode("Example matrix", "Output 4");
 ```
 
-#### MatrixIsInputLineEnabled
+### MatrixIsInputLineEnabled
 
 Returns true if the specified matrix input is enabled.
 
@@ -1270,7 +1270,7 @@ Element element = engine.FindElement(400, 2000);
 bool isInputEnabled = element.MatrixIsInputLineEnabled("Example Matrix", "Input 4");
 ```
 
-#### MatrixIsLineEnabled
+### MatrixIsLineEnabled
 
 Returns true if the specified matrix input or output is enabled.
 
@@ -1307,7 +1307,7 @@ Element element = engine.FindElement(400, 2000);
 bool isInputEnabled = element.MatrixIsLineEnabled("Example Matrix", true, "Input 4");
 ```
 
-#### MatrixIsOutputLineEnabled
+### MatrixIsOutputLineEnabled
 
 Returns true if the specified matrix output is enabled.
 
@@ -1342,7 +1342,7 @@ Element element = engine.FindElement(400, 2000);
 bool isOutputEnabled = element.MatrixIsInputLineEnabled("Example Matrix", "Output 4");
 ```
 
-#### MatrixSetFollowMaster
+### MatrixSetFollowMaster
 
 Configures a slave output to follow a master output on the specified matrix.
 
@@ -1377,7 +1377,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixSetFollowMaster("Example Matrix", "Output 4", "Output 6");
 ```
 
-#### MatrixSetFollowMode
+### MatrixSetFollowMode
 
 Enables or disables the “follow mode” of the specified matrix output.
 
@@ -1412,7 +1412,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixSetFollowMode("Example Matrix", "Output 10", false);
 ```
 
-#### MatrixSetInputLabel
+### MatrixSetInputLabel
 
 Sets the label of the specified matrix input.
 
@@ -1447,7 +1447,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixSetInputLabel("Example Matrix", "Input 1", "Main");
 ```
 
-#### MatrixSetInputLockMode
+### MatrixSetInputLockMode
 
 Locks or unlocks the specified matrix input.
 
@@ -1482,7 +1482,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixSetInputLockMode("Example matrix", "Input 2", true);
 ```
 
-#### MatrixSetLabel
+### MatrixSetLabel
 
 Sets the label of the specified matrix input or output.
 
@@ -1519,7 +1519,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixSetLabel("Example Matrix", true, "Input 1", "Main");
 ```
 
-#### MatrixSetLockMode
+### MatrixSetLockMode
 
 Locks or unlocks the specified matrix input or output.
 
@@ -1556,7 +1556,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixSetLockMode("Example Matrix", true, "Input 4", false);
 ```
 
-#### MatrixSetOutputLabel
+### MatrixSetOutputLabel
 
 Sets the label of the specified matrix output.
 
@@ -1591,7 +1591,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixSetOutputLabel("Example Matrix", "Output 1", "A");
 ```
 
-#### MatrixSetOutputLockMode
+### MatrixSetOutputLockMode
 
 Locks or unlocks the specified matrix output.
 
@@ -1626,7 +1626,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixSetOutputLockMode("Example Matrix", "Output 1", true);
 ```
 
-#### MatrixStopBeingMaster
+### MatrixStopBeingMaster
 
 Stops the specified matrix output from being a master output.
 
@@ -1661,7 +1661,7 @@ Element element = engine.FindElement(400, 2000);
 element.MatrixStopBeingMaster("Example Matrix", "Output 1");
 ```
 
-#### Pause
+### Pause
 
 Pauses the element that is linked to the dummy.
 
@@ -1676,7 +1676,7 @@ Element element = engine.FindElement(400, 2000);
 element.Pause();
 ```
 
-#### RemoveAlarmTemplate
+### RemoveAlarmTemplate
 
 Removes the link between an element and the alarm template that is assigned to it. In other words, sets the element to “not monitored”.
 
@@ -1691,7 +1691,7 @@ Element element = engine.FindElement(400, 2000);
 element.RemoveAlarmTemplate();
 ```
 
-#### RemoveTrendTemplate
+### RemoveTrendTemplate
 
 Removes the link between an element and the trend template that is assigned to it. In other words, disables trending for the element.
 
@@ -1706,7 +1706,7 @@ Element element = engine.FindElement(400, 2000);
 element.RemoveTrendTemplate();
 ```
 
-#### Restart
+### Restart
 
 Restarts the element that is linked to the dummy.
 
@@ -1721,7 +1721,7 @@ Element element = engine.FindElement(400, 2000);
 element.Restart();
 ```
 
-#### SetAlarmTemplate
+### SetAlarmTemplate
 
 Assigns the specified alarm template to the element.
 
@@ -1736,7 +1736,7 @@ Element element = engine.FindElement(400, 2000);
 element.SetAlarmTemplate("Template 1");
 ```
 
-#### SetParameter
+### SetParameter
 
 Sets the value of the specified parameter.
 
@@ -1771,7 +1771,7 @@ Element element = engine.FindElement(400, 2000);
 element.SetParameter("Example Column Parameter", "Row 1", "Example Value");
 ```
 
-#### SetParameterByPrimaryKey
+### SetParameterByPrimaryKey
 
 Sets the value of a cell specified using the primary key instead of the display key.
 
@@ -1794,7 +1794,7 @@ Element element = engine.FindElement(400, 2000);
 element.SetParameterByPrimaryKey("Example Column Parameter", "Row 1", "Example Value");
 ```
 
-#### SetPropertyValue
+### SetPropertyValue
 
 Sets the value of a writable element property.
 
@@ -1814,7 +1814,7 @@ element.SetPropertyValue("My Custom Property", "Example Value");
 >
 > Note that this check causes an average delay of 50 ms. In case many property sets have to be executed and they are not immediately retrieved, we therefore recommend not to select this option.
 
-#### SetTrendTemplate
+### SetTrendTemplate
 
 Assigns the specified trend template to the element.
 
@@ -1829,7 +1829,7 @@ Element element = engine.FindElement(400, 2000);
 element.SetTrendTemplate("Trend Template 1");
 ```
 
-#### SpectrumDisableMonitor
+### SpectrumDisableMonitor
 
 Disables a spectrum monitor.
 
@@ -1850,7 +1850,7 @@ Element element = engine.FindElement(7, 32);
 element.SpectrumDisableMonitor("Monitor Name");
 ```
 
-#### SpectrumEnableMonitor
+### SpectrumEnableMonitor
 
 Enables a spectrum monitor.
 
@@ -1871,7 +1871,7 @@ Element element = engine.FindElement(7, 32);
 element.SpectrumEnableMonitor("Monitor Name");
 ```
 
-#### SpectrumFindMeasurementPointIdByName
+### SpectrumFindMeasurementPointIdByName
 
 Gets the ID that corresponds with the specified spectrum measurement point name. Returns -1 if the corresponding measurement point is not found.
 
@@ -1886,7 +1886,7 @@ var element = engine.FindElement("MySpectrumElement");
 int measurementPointId = element.SpectrumFindMeasurementPointIdByName("MyMeasurement PointName");
 ```
 
-#### SpectrumFindMonitorIdByName
+### SpectrumFindMonitorIdByName
 
 Gets the ID that corresponds with the specified spectrum monitor name. Returns -1 if the corresponding spectrum monitor is not found.
 
@@ -1901,7 +1901,7 @@ var element = engine.FindElement("MySpectrumElement ");
 int monitorId = element.SpectrumFindMonitorIdByName("MyMonitorName");
 ```
 
-#### SpectrumIsMonitorEnabled
+### SpectrumIsMonitorEnabled
 
 Returns a value indicating whether the specified spectrum monitor is enabled.
 
@@ -1917,7 +1917,7 @@ var element = engine.FindElement("MySpectrumElement ");
 bool isEnabled = element.SpectrumIsMonitorEnabled("MyMonitorName ");
 ```
 
-#### SpectrumSelectMeasurementPointsForMonitor
+### SpectrumSelectMeasurementPointsForMonitor
 
 Selects the measurement point(s) on which a spectrum monitor has to be executed.
 
@@ -1933,7 +1933,7 @@ var element = engine.FindElement("MySpectrumElement ");
 element.SpectrumSelectMeasurementPointsForMonitor("MyMonitorName ", new string[]{"MyMeasurementPoint"});
 ```
 
-#### Start
+### Start
 
 Starts the element that is linked to the dummy.
 
@@ -1948,7 +1948,7 @@ Element element = engine.FindElement(400, 2000);
 element.Start();
 ```
 
-#### Stop
+### Stop
 
 Stops the element that is linked to the dummy.
 
@@ -1963,7 +1963,7 @@ Element element = engine.FindElement(400, 2000);
 element.Stop();
 ```
 
-#### Unmask
+### Unmask
 
 Unmasks the element that is linked to the dummy.
 

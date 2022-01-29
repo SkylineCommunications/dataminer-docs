@@ -2,7 +2,7 @@
 uid: Configuring_trend_templates
 ---
 
-## Configuring trend templates
+# Configuring trend templates
 
 In this section:
 
@@ -10,7 +10,7 @@ In this section:
 
 - [Changing the trend template for one parameter](#changing-the-trend-template-for-one-parameter)
 
-### Configuring a trend template in the Protocols & Templates module
+## Configuring a trend template in the Protocols & Templates module
 
 To configure a trend template:
 
@@ -60,7 +60,7 @@ To configure a trend template:
 > [!NOTE]
 > From DataMiner 9.5.4 onwards, the trend template options button also provides an option to configure which trend data is offloaded to the offload database. For more information, see [Configuring trend templates to exclude/include data in offloads](xref:Configuring_data_offloads#configuring-trend-templates-to-excludeinclude-data-in-offloads).
 
-### Changing the trend template for one parameter
+## Changing the trend template for one parameter
 
 Both from the Alarm Console and from a parameter card, it is possible to quickly change the trend template for one particular parameter. This can be particularly useful for users who do not have access to the Protocols & Templates module.
 

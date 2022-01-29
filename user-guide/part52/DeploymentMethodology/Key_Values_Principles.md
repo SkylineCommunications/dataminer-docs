@@ -2,7 +2,7 @@
 uid: Key_Values_Principles
 ---
 
-## Key Values & Principles
+# Key Values & Principles
 
 In an Agile Scope-Based project, there is maximum trust that all involved parties and individuals have the desire and ambition to deliver the best possible solution within the allocated time frame and hence also within the allocated budget, and to do so as efficiently as possible. That is the common high-level objective for everybody involved, the foundation of the Agile methodology.
 

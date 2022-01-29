@@ -2,11 +2,11 @@
 uid: Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing
 ---
 
-## Calibrating the X and Y coordinates in a Visio drawing
+# Calibrating the X and Y coordinates in a Visio drawing
 
 If, in a Visio drawing, you want to position shapes using X and Y coordinates, you have to calibrate the X- and Y-axis.
 
-### Calibrating the X- and Y-axis
+## Calibrating the X- and Y-axis
 
 Create two dummy shapes, and add two shape data fields to each of them: one of type **XPos** and one of type **YPos**.
 
@@ -26,7 +26,7 @@ Create two dummy shapes, and add two shape data fields to each of them: one of t
 
 Result: The page now has a virtual grid in relation to which all other shapes can be positioned.
 
-### Example
+## Example
 
 If you want a Visio page to have an X-Y grid of 100 by 50, create the following shapes.
 

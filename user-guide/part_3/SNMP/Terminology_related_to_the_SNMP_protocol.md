@@ -2,7 +2,7 @@
 uid: Terminology_related_to_the_SNMP_protocol
 ---
 
-## Terminology related to the SNMP protocol
+# Terminology related to the SNMP protocol
 
 When dealing with the SNMP protocol, you have to be familiar with the following terminology.
 

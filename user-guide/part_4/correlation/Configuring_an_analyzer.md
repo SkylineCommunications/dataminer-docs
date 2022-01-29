@@ -2,7 +2,7 @@
 uid: Configuring_an_analyzer
 ---
 
-## Configuring an analyzer
+# Configuring an analyzer
 
 To configure a Correlation analyzer:
 

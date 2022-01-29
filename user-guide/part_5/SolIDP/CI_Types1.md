@@ -2,7 +2,7 @@
 uid: CI_Types1
 ---
 
-## CI Types
+# CI Types
 
 CI Types are defined in JSON format and consist of:
 
@@ -161,7 +161,7 @@ The example below illustrates a CI Type with SNMPv2 discovery actions.
 }
 ```
 
-### Conditions
+## Conditions
 
 This is an array of conditions. A condition references a discovery action and defines how the response of the device can be used to identify the device type.
 
@@ -192,7 +192,7 @@ A conditions evaluates to *True* when the value matches with the response from t
 > [!NOTE]
 > The conditions need to be logically combined in the *ConditionOptions* in order for the device type to be identified. If there is just a single condition, the *ConditionOptions* should be "1".
 
-### ConditionsOptions
+## ConditionsOptions
 
 This string defines how the conditions are logically combined to identify the device type of a discovered device. The condition is referenced by its order in the *Conditions* array. A value "1 or 2" in the *ConditionOptions* means that the first condition or the second condition needs to evaluate to true.
 
@@ -213,7 +213,7 @@ The following logical operands can be used in the *ConditionsOptions*.
 > - The precedence of the logical operators is as follows: the priority of *Not* is the highest, followed by *And*, followed by *Or*.
 > - Parentheses are not supported in the *ConditionsOptions*.
 
-### Configurations
+## Configurations
 
 This section allows you to configure parameter sets on the newly created element. It is typically used in case an element requires more configuration than what is available during regular element creation. This can for example be when an element requires that a username or password are configured in dedicated parameters, when a button needs to clicked to connect or to log on to the device, etc.
 
@@ -247,7 +247,7 @@ The example below configures *Administrator* as a username in PID 300, configure
 ]
 ```
 
-### Provisioning
+## Provisioning
 
 The provisioning part of the JSON contains all the information required to create an element in DataMiner. It contains the following sections:
 
@@ -262,7 +262,7 @@ The provisioning part of the JSON contains all the information required to creat
 > [!NOTE]
 > The provisioning part supports the use of keywords (see [Using keywords or placeholders](#using-keywords-or-placeholders)). At runtime, these placeholders are filled in with values.
 
-#### Configuration
+### Configuration
 
 The *Configuration* section contains the following fields:
 
@@ -290,7 +290,7 @@ The *Configuration* section contains the following fields:
 | SnmpWriteCommunityString | Deprecated. Specify an empty string "".                                                                                                                                                                      |
 | TimeoutTime              | Deprecated. Specify the integer value 0.                                                                                                                                                                     |
 
-##### Ports
+#### Ports
 
 This section allows you to configure all the connections for the element.
 
@@ -536,7 +536,7 @@ For each connection, this section also has to contain one of the following array
     ]
     ```
 
-##### Slowpoll
+#### Slowpoll
 
 This section allows you to configure the slow poll settings of the element. When an element is in a timeout state, the DMA can force it to go into so-called slow poll mode. While the element is in that special poll mode, the DMA will not send any commands to the element. Instead, it will just send a simple ping command at regular intervals. As soon as the element responds to that ping command, the DMA will start polling the element the normal way again.
 
@@ -566,7 +566,7 @@ The example below will activate slow poll mode after 5 timeouts, with an ping in
 ]
 ```
 
-##### Properties
+#### Properties
 
 This section allows you to configure the element properties. The properties item is an array of names and values.
 
@@ -584,14 +584,14 @@ The example below specifies values for the element properties *Source* and *Plat
 ]
 ```
 
-#### DmaID
+### DmaID
 
 In this field, specify the DataMiner ID of the DMA where the element must be created.
 
 > [!NOTE]
 > If you specify 0, the element will be created based on the configured IP ranges. If no IP ranges are specified, the fallback Agent will be used. See [Provisioning](xref:Provisioning).
 
-#### View
+### View
 
 This field is an array of integers. The integers identify the view ID of the DataMiner views to which the element will be assigned after creation.
 
@@ -600,7 +600,7 @@ If the fields *View* and *ViewName* are not specified, if they are empty arrays 
 > [!NOTE]
 > An element can be assigned to multiple views, but an element cannot appear directly under a view and a child view of that view. For example, when View B is under View A and the *View* field refers to View A and View B, the element will be created under View B (the child view) only.
 
-#### ViewName
+### ViewName
 
 This field is an array of strings. The strings identify the view name of the DataMiner views to which the element will be assigned after creation. If a view with this name does not exist, a view with this name will be created under the Root view.
 
@@ -609,7 +609,7 @@ If the fields *View* and *ViewName* are not specified, if they are empty arrays 
 > [!NOTE]
 > An element can be assigned to multiple views, but an element cannot appear directly under a view and a child view of that view. For example, when View B is under View A and the *ViewName* field refers to View A and View B, the element will be created under View B (the child view) only.
 
-#### Using keywords or placeholders
+### Using keywords or placeholders
 
 The provisioning item in the CI Type supports the following keywords and placeholders:
 
@@ -693,7 +693,7 @@ Other metadata examples:
 
     - Metadata value: "customGetCommunity"
 
-### SoftwareUpgrades
+## SoftwareUpgrades
 
 This is an array of software upgrade information. This information is used when a software upgrade needs to be performed on an element.
 
@@ -708,7 +708,7 @@ The following mandatory fields need to be specified for a software upgrade:
 
 - **Version**: The version of the software that will be deployed on the element.
 
-### Autocreate
+## Autocreate
 
 This field indicates whether elements for this CI Type can be automatically created or not. This field supports boolean values.
 
@@ -719,7 +719,7 @@ This field indicates whether elements for this CI Type can be automatically crea
 > [!NOTE]
 > If you set this field to *True* but *Create Completeness* is not 100%, the field will automatically be set to *False*.
 
-### SoftwareUpgrade
+## SoftwareUpgrade
 
 This field indicates whether a software upgrade is available for the elements. The fields supports boolean values:
 
@@ -730,6 +730,6 @@ This field indicates whether a software upgrade is available for the elements. T
 > [!NOTE]
 > If you set this field to *True* but neither *Software Update Completeness* nor *Software Compliance Completeness* is 100%, the field will automatically be set to *False*.
 
-### SoftwareVersionPID
+## SoftwareVersionPID
 
 This fields indicates the parameter ID of the selected protocol where it is possible to see information about the software version the element is running. This is a numeric field.

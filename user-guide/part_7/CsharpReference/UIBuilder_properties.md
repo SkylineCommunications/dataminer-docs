@@ -2,7 +2,7 @@
 uid: UIBuilder_properties
 ---
 
-## UIBuilder properties
+# UIBuilder properties
 
 - [ColumnDefs](#columndefs)
 
@@ -27,7 +27,7 @@ uid: UIBuilder_properties
 > [!NOTE]
 > Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.
 
-#### ColumnDefs
+### ColumnDefs
 
 Gets or sets the widths (in pixels) of all columns of the dialog box grid, separated by semicolons.
 
@@ -55,7 +55,7 @@ uibd.Column = 0; //on column pos 0 (0-based)
 uibd.ColumnSpan = 5 // if column pos=1, columnspan = 4
 ```
 
-#### Height
+### Height
 
 Gets or sets the fixed height (in pixels) of the dialog box.
 
@@ -65,7 +65,7 @@ int Height
 
 Example: See [UIBuilder example](xref:UIBuilder_example).
 
-#### MaxHeight
+### MaxHeight
 
 Gets or sets the maximum height (in pixels) of the dialog box.
 
@@ -75,7 +75,7 @@ int MaxHeight
 
 Example: See [UIBuilder example](xref:UIBuilder_example).
 
-#### MaxWidth
+### MaxWidth
 
 Gets or sets the maximum width (in pixels) of the dialog box.
 
@@ -85,7 +85,7 @@ int MaxWidth
 
 Example: See [UIBuilder example](xref:UIBuilder_example).
 
-#### MinHeight
+### MinHeight
 
 Gets or sets the minimum height (in pixels) of the dialog box.
 
@@ -95,7 +95,7 @@ int MinHeight
 
 Example: See [UIBuilder example](xref:UIBuilder_example).
 
-#### MinWidth
+### MinWidth
 
 Gets or sets the minimum width (in pixels) of the dialog box.
 
@@ -105,7 +105,7 @@ int MinWidth
 
 Example: See [UIBuilder example](xref:UIBuilder_example).
 
-#### RequireResponse
+### RequireResponse
 
 Gets or sets a value indicating whether the dialog box expects some action from the user (e.g. clicking a button, selecting a checkbox, selecting an entry in a selection box, etc.).
 
@@ -115,7 +115,7 @@ bool RequireResponse
 
 Example: See [UIBuilder example](xref:UIBuilder_example).
 
-#### RowDefs
+### RowDefs
 
 Gets or sets the height (in pixels) of all rows of the dialog box grid, separated by semicolons.
 
@@ -132,7 +132,7 @@ string RowDefs
 
 Example: See [UIBuilder example](xref:UIBuilder_example).
 
-#### Title
+### Title
 
 Gets or sets the title of the dialog box. Available from DataMiner 9.6.6 onwards.
 
@@ -150,7 +150,7 @@ uib.Title = "Interactive Automation script"
 > [!NOTE]
 > In case no title is specified, the name of the Automation script is used as the title.
 
-#### Width
+### Width
 
 Gets or sets the fixed width (in pixels) of the dialog box.
 

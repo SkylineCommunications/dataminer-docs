@@ -2,7 +2,7 @@
 uid: Duplicating_a_dashboard
 ---
 
-## Duplicating a dashboard
+# Duplicating a dashboard
 
 1. In the list of dashboards on the left, select the dashboard that you want to duplicate.
 

@@ -2,7 +2,7 @@
 uid: Specifying_an_amplitude_correction
 ---
 
-## Specifying an amplitude correction
+# Specifying an amplitude correction
 
 You can specify an amplitude correction in order to e.g. compensate for amplitude slope or/and other amplitude distortions on the cable path to a spectrum analyzer.
 

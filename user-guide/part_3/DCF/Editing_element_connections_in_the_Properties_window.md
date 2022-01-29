@@ -2,7 +2,7 @@
 uid: Editing_element_connections_in_the_Properties_window
 ---
 
-## Editing element connections in the Properties window
+# Editing element connections in the Properties window
 
 To edit the connections for an element that has in/out interfaces defined in its protocol:
 

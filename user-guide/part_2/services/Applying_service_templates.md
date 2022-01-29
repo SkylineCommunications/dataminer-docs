@@ -2,7 +2,7 @@
 uid: Applying_service_templates
 ---
 
-## Applying service templates
+# Applying service templates
 
 This section consists of the following topics:
 
@@ -12,7 +12,7 @@ This section consists of the following topics:
 
 - [Example of applying a service template](#example-of-applying-a-service-template)
 
-### Applying a service template
+## Applying a service template
 
 1. Right-click the service template in the Surveyor, and select *Apply*.
 
@@ -30,7 +30,7 @@ This section consists of the following topics:
 
 3. Depending on the option you have selected above, you may still need to click *Apply*. If the service template was configured to require confirmation before it is applied, you will still need to set *Confirm service creation* to *true* in order to create the service.
 
-### Tips for applying service templates
+## Tips for applying service templates
 
 - If you use the CSV import feature, or if you choose *\<create all options>* before applying the template, the process will run in a background thread and a *Background Tasks* window will appear where you can follow the progress. You can also abort any running service template application tasks in this window.
 
@@ -65,7 +65,7 @@ This section consists of the following topics:
 
     - From DataMiner 9.0.4 onwards, while editing the service template in Cube, in the *Advanced* options of the *General* tab, select the option *Keep duplicates of generated services when re-applying*.
 
-### Example of applying a service template
+## Example of applying a service template
 
 To apply the service template created in our earlier example (see [Example of creating a service template](xref:Creating_a_service_template#example-of-creating-a-service-template)):
 

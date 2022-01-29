@@ -2,7 +2,7 @@
 uid: Visual_overview_page_priority
 ---
 
-## Visual overview page priority
+# Visual overview page priority
 
 When a visual overview is (re)loaded in DataMiner, the page to be displayed is determined in the following way (top-down):
 

@@ -2,7 +2,7 @@
 uid: Configuring_a_job_field
 ---
 
-## Configuring a job field
+# Configuring a job field
 
 When you are configuring a job section, you can edit or create job fields. See [Configuring job sections](xref:Configuring_job_sections).
 

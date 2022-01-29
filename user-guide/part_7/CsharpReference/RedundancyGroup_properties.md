@@ -2,9 +2,9 @@
 uid: RedundancyGroup_properties
 ---
 
-## RedundancyGroup properties
+# RedundancyGroup properties
 
-#### DmaId
+### DmaId
 
 Gets the DataMiner Agent ID of the redundancy group.
 
@@ -12,7 +12,7 @@ Gets the DataMiner Agent ID of the redundancy group.
 int DmaId
 ```
 
-#### GroupId
+### GroupId
 
 Gets the ID of the redundancy group.
 
@@ -20,7 +20,7 @@ Gets the ID of the redundancy group.
 int GroupId
 ```
 
-#### Mode
+### Mode
 
 Gets or sets the current operating mode of the redundancy group:
 
@@ -34,7 +34,7 @@ Gets or sets the current operating mode of the redundancy group:
 RedundancyMode Mode
 ```
 
-#### Name
+### Name
 
 Gets the name of the redundancy group.
 

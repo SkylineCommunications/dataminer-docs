@@ -2,7 +2,7 @@
 uid: Working_with_reference_lines
 ---
 
-## Working with reference lines
+# Working with reference lines
 
 In the real-time interface, you can add reference lines in order to help you make measurements. These are listed separately in the info pane.
 
@@ -12,7 +12,7 @@ Two types of reference lines are available:
 
 - Frequency reference lines: vertical line in the spectrum.
 
-### Adding reference lines
+## Adding reference lines
 
 - To create an amplitude reference line, there are two ways:
 
@@ -26,7 +26,7 @@ Two types of reference lines are available:
 
     - In the info pane, click the button *Add frequency line*.
 
-### Linking reference lines to measurement points
+## Linking reference lines to measurement points
 
 From DataMiner version 9.0.3 onwards, reference lines can be linked to measurement points. This way, if you switch to a measurement point, only the reference lines that are linked to it are displayed.
 
@@ -48,7 +48,7 @@ In addition, you can also configure to which measurement points an existing refe
 > [!NOTE]
 > In case a measurement point is removed, any reference lines linked to it will not be removed from presets they have been stored in. However, they will no longer be displayed in the spectrum graph or info pane.
 
-### Reference line options
+## Reference line options
 
 The following options are available for spectrum reference lines:
 

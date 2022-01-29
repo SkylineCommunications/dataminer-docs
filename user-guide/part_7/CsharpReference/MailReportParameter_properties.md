@@ -2,7 +2,7 @@
 uid: MailReportParameter_properties
 ---
 
-## MailReportParameter properties
+# MailReportParameter properties
 
 - [Options](#options)
 
@@ -10,7 +10,7 @@ uid: MailReportParameter_properties
 
 - [RowFilter](#rowfilter)
 
-#### Options
+### Options
 
 Gets or sets the mail report parameter options.
 
@@ -18,7 +18,7 @@ Gets or sets the mail report parameter options.
 MailReportParameterFlags Options
 ```
 
-#### ParameterID
+### ParameterID
 
 Gets or sets the parameter ID.
 
@@ -26,7 +26,7 @@ Gets or sets the parameter ID.
 int ParameterID
 ```
 
-#### RowFilter
+### RowFilter
 
 Gets or sets the row filter.
 

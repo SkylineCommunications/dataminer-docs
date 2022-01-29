@@ -2,7 +2,7 @@
 uid: Adding_CSharp_code_to_an_Automation_script
 ---
 
-## Adding CSharp code to an Automation script
+# Adding CSharp code to an Automation script
 
 In this section:
 
@@ -20,7 +20,7 @@ In this section:
 
 - [Online help and user assistance](#online-help-and-user-assistance)
 
-### Adding CSharp code to a script in Cube
+## Adding CSharp code to a script in Cube
 
 To add C# code to a script:
 
@@ -74,7 +74,7 @@ To add C# code to a script:
 > [!NOTE]
 > From DataMiner 9.6.4 onwards, DataMiner uses the .NET Compiler Platform SDK (version 2.9) to validate and compile C# scripts, allowing the use of C# syntax up to and including version 7.3.
 
-### Engine object
+## Engine object
 
 You can interact with the DMS Automation Engine by interacting with an instance of the Engine class.
 
@@ -95,7 +95,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 > See also:
 > [Engine class](xref:Engine_class)
 
-### Script class
+## Script class
 
 - For small Automation scripts, you can enter the logic to be executed without wrapping your code in a class and method.
 
@@ -160,7 +160,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 	>
     > - From DataMiner 9.5.12 onwards, custom entry points are possible. see [Custom entry points](#custom-entry-points).
 
-### Preprocessor directives
+## Preprocessor directives
 
 From DataMiner 10.1.0 CU3/10.1.6 onwards, DataMiner compiles C# blocks of Automation scripts with the following preprocessor directives:
 
@@ -180,7 +180,7 @@ From DataMiner 10.1.0 CU3/10.1.6 onwards, DataMiner compiles C# blocks of Automa
     #endif
     ```
 
-### Script timeout
+## Script timeout
 
 To prevent problems caused by faulty script statements, every C# code block has a default timeout delay of 10 minutes. If the execution of a C# code block takes longer than 10 minutes, it is aborted.
 
@@ -192,7 +192,7 @@ Example:
 engine.Timeout = TimeSpan.FromMinutes(30);
 ```
 
-### Custom entry points
+## Custom entry points
 
 Up to DataMiner 9.5.12, an Automation script can only have one fixed entry point, i.e. the "Run" method in the "Script" class. However, from DataMiner 9.5.12 onwards, you can define custom entry points:
 
@@ -243,19 +243,19 @@ Restrictions:
 
 - The script must contain the string "class Script" as otherwise DataMiner will wrap the code. See [Script class](#script-class).
 
-### Online help and user assistance
+## Online help and user assistance
 
 > [!TIP]
 > See also:
 > <https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/>
 
-#### Sample snippets in shortcut menu
+### Sample snippets in shortcut menu
 
 When you right-click in the code editor, a shortcut menu will appear. From the *Sample Snippets* submenu, you can select a number of C# sample snippets.
 
 These snippets will prove helpful when learning how to use C# code in DMS Automation scripts, and will also provide a way to quickly add frequently used code.
 
-#### Syntax check
+### Syntax check
 
 To verify the syntax of the C# code you entered in the code editor:
 
@@ -263,7 +263,7 @@ To verify the syntax of the C# code you entered in the code editor:
 
     If errors are found, these are enumerated in a field next to the *Validate* field. Click this field to quickly navigate to the errors in the code block.
 
-#### IntelliSense
+### IntelliSense
 
 The code editor features IntelliSense. When you type “engine.”, for example, you will get a list of all functions available for this object. You can then just scroll through the list and select the appropriate function by pressing TAB.
 

@@ -2,7 +2,7 @@
 uid: Booking_Manager_user_interface
 ---
 
-## Booking Manager user interface
+# Booking Manager user interface
 
 The Booking Manager app is the main interface used to interact with the generic SRM Solution.
 
@@ -14,7 +14,7 @@ This app consists of three tabs:
 
 - [The Admin tab](#the-admin-tab)
 
-### The Bookings tab
+## The Bookings tab
 
 This tab displays information about current, past and future bookings.
 
@@ -102,11 +102,11 @@ This tab displays information about current, past and future bookings.
 
     - **Try Leave Quarantine**: Starts the wizard to take the booking out of quarantine.
 
-### The Config tab
+## The Config tab
 
 This tab provides an overview of all configuration parameters for the Booking Manager.
 
-#### General subtab
+### General subtab
 
 - *Application Setup* settings:
 
@@ -158,7 +158,7 @@ This tab provides an overview of all configuration parameters for the Booking Ma
     | Retry Timeout  | The retry timeout time for retrieval of SRM data in a DataMiner cluster. Default: *20 s* |
     | Retry Interval | The retry interval for retrieval of SRM data in a DataMiner cluster. Default: *15 ms*    |
 
-#### Wizard subtab
+### Wizard subtab
 
 - *Type of Wizard* settings:
 
@@ -202,7 +202,7 @@ This tab provides an overview of all configuration parameters for the Booking Ma
     | Event rescheduling delay      | Indicates the delay period before a booking ends or starts when its timing is adjusted. When the *Finish* button is pressed for an ongoing booking, the action to stop the booking will be executed after this delay time. When the *Start* button is pressed for a confirmed booking, the delay between the time the button is pressed and the new start time of the booking. |
     | Friendly booking reference    | Allows you to specify a user-friendly booking reference. This reference will be used in the Booking ID field in the Booking Wizard and will also be mentioned in the booking overview tables.                                                                                                                                                                                                                                                |
 
-#### Lifecycle colors subtab
+### Lifecycle colors subtab
 
 - *Lifecycle colors* settings:
 
@@ -218,7 +218,7 @@ This tab provides an overview of all configuration parameters for the Booking Ma
     | Canceled       | The color used in the Booking Manager for bookings in the “Canceled” state.       |
     | Quarantined    | The color used in the Booking Manager for bookings in the “Quarantined” state.    |
 
-#### Services and SLA subtab
+### Services and SLA subtab
 
 - *Service states* settings:
 
@@ -243,7 +243,7 @@ This tab provides an overview of all configuration parameters for the Booking Ma
     | SLA Tracking (Post-roll)     | Allows you to specify whether SLA tracking should be enabled during post-roll, in case *SLA tracking mode* is set to *Reservation State* or *Combined*.            |
     | SLA Tracking (Service State) | In this table, you can configure for which service states SLA tracking should be enabled if *SLA tracking mode* is set to *Reservation State* or *Combined*.       |
 
-#### Timeline subtab
+### Timeline subtab
 
 This subtab displays a toggle button, *Custom*, which determines whether custom information is displayed in the booking blocks on the timeline.
 
@@ -259,7 +259,7 @@ To add a row:
 
 To remove a row, right-click the row and select *Delete Selected Item(s)*. Alternatively, you can clear all items in the table at the same time by selecting *Clear Table*.
 
-#### Properties subtab
+### Properties subtab
 
 This subtab displays a toggle button, *Custom properties*, which determines whether property customization is enabled. This feature allows you to choose which properties should be added to a booking.
 
@@ -291,7 +291,7 @@ Via the right-click menu of this table, you can add a property, duplicate a prop
 
 - *Delete*: Allows you to remove the property. However, for any previously created bookings that use the deleted property, the property will remain available.
 
-#### Events subtab
+### Events subtab
 
 This subtab displays a toggle button, *Custom events*, which determines whether event customization is enabled. This feature allows you to choose which events should be added to a booking.
 
@@ -333,7 +333,7 @@ Via the right-click menu of this table, you can add an event, duplicate an event
 
 - *Delete*: Allows you to remove a particular entry.
 
-### The Admin tab
+## The Admin tab
 
 This tab consists of the following subtabs:
 

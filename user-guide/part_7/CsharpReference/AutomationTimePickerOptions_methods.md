@@ -2,6 +2,6 @@
 uid: AutomationTimePickerOptions_methods
 ---
 
-## AutomationTimePickerOptions methods
+# AutomationTimePickerOptions methods
 
 None

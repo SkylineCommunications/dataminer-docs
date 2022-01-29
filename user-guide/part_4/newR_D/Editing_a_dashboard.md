@@ -2,7 +2,7 @@
 uid: Editing_a_dashboard
 ---
 
-## Editing a dashboard
+# Editing a dashboard
 
 To edit an existing dashboard:
 

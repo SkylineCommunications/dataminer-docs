@@ -2,7 +2,7 @@
 uid: SubscriptOptions_constructor
 ---
 
-## SubscriptOptions constructor
+# SubscriptOptions constructor
 
 ```txt
 public SubscriptOptions()

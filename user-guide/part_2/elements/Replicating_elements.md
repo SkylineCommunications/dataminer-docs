@@ -2,7 +2,7 @@
 uid: Replicating_elements
 ---
 
-## Replicating elements
+# Replicating elements
 
 If you want an element to act as a replica of an element managed in another DMS, you can either create a new element for this, or edit an existing element.
 

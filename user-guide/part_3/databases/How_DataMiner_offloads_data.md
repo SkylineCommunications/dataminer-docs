@@ -2,9 +2,9 @@
 uid: How_DataMiner_offloads_data
 ---
 
-## How DataMiner offloads data
+# How DataMiner offloads data
 
-### Offload database of type MySQL
+## Offload database of type MySQL
 
 1. *SLDatabase.dll* orders *Mysql.data.dll* to load a CSV file into a particular database table by sending it the query to be executed.
 
@@ -22,7 +22,7 @@ uid: How_DataMiner_offloads_data
 
 
 
-### Offload database of type Microsoft SQL Server
+## Offload database of type Microsoft SQL Server
 
 1. *SLDatabase.dll* orders *system.data.dll* to load a CSV file into a particular database table by sending it the query to be executed.
 
@@ -49,7 +49,7 @@ uid: How_DataMiner_offloads_data
 >
 > See also: [Configuring data offloads to an SQL Server database in another domain](xref:DB_xml#configuring-data-offloads-to-an-sql-server-database-in-another-domain)
 
-### Offload database of type Oracle
+## Offload database of type Oracle
 
 1. DataMiner copies the CSV file to be offloaded to the shared folder on the Oracle database server via IP ports 139 and 445.
 

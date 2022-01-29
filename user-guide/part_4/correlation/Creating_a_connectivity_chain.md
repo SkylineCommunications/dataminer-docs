@@ -2,7 +2,7 @@
 uid: Creating_a_connectivity_chain
 ---
 
-## Creating a connectivity chain
+# Creating a connectivity chain
 
 To create a connectivity chain:
 

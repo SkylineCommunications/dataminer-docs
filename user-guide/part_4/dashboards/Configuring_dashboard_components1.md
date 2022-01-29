@@ -2,7 +2,7 @@
 uid: Configuring_dashboard_components1
 ---
 
-## Configuring dashboard components
+# Configuring dashboard components
 
 To configure the components of a dashboard, you must first access the dashboard editor. This can be done in two ways:
 
@@ -20,7 +20,7 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 
 - Settings, see [Settings](#settings).
 
-### Add/Remove Components
+## Add/Remove Components
 
 1. Go to *Actions \> Add/Remove Components*.
 
@@ -44,7 +44,7 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 > - Edit: allows you to configure the component.
 > - View Info: opens a pop-up window with some more details about the component.
 
-### Configure Components
+## Configure Components
 
 1. Go to *Actions \> Configure Components* and select a component, or click the *Configure* button for one of the components.
 
@@ -83,7 +83,7 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 > [!NOTE]
 > To see a preview of your dashboard at this point, click *Preview dashboard* below the list of configuration options. The preview will open in a different window.
 
-### Feeds
+## Feeds
 
 1. Go to *Actions \> Feeds* to access the Feeds editor.
 
@@ -114,7 +114,7 @@ In the dashboard editor, click *Actions* in the top-right corner to access the v
 > - In the Feeds editor, you can delete feeds that are not in use by clicking the red x next to the feed.
 > - In a dashboard where a user must select a feed, in the feed selection panel, it is possible to save a particular feed as default.
 
-### Settings
+## Settings
 
 Go to *Actions \> Settings* to access the general dashboard settings.
 

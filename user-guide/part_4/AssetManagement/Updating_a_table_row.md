@@ -2,7 +2,7 @@
 uid: Updating_a_table_row
 ---
 
-## Updating a table row
+# Updating a table row
 
 In the *Asset Manager* module, there are several ways to update a table row:
 

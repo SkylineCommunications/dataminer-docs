@@ -2,7 +2,7 @@
 uid: Configuring_data_offloads
 ---
 
-## Configuring data offloads
+# Configuring data offloads
 
 In this section:
 
@@ -12,7 +12,7 @@ In this section:
 
 - [Configuring trend templates to exclude/include data in offloads](#configuring-trend-templates-to-excludeinclude-data-in-offloads)
 
-### Configuring the offload rate
+## Configuring the offload rate
 
 The offload rate for trend data and alarm data can be configured in System Center.
 
@@ -72,7 +72,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
     - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the final option *Only keep the latest parameter value in the database* is not selected. If all values should be kept, make sure the option is selected.
 
-### Disabling data offloads to the offload database on element level
+## Disabling data offloads to the offload database on element level
 
 By default, data offloads are enabled for every element. In every *Element.xml* file, you should find the following setting:
 
@@ -104,7 +104,7 @@ If, for a particular element, you want to disable data offloads to the offload d
 
     The data associated with this element will no longer be offloaded.
 
-### Configuring trend templates to exclude/include data in offloads
+## Configuring trend templates to exclude/include data in offloads
 
 From DataMiner 9.5.4 onwards, it is possible to configure whether real-time and/or average trending for particular parameters should be included in offloads. This can be done directly in the trend template containing these parameters:
 

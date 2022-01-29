@@ -2,7 +2,7 @@
 uid: List_of_tasks_linked_to_a_project
 ---
 
-## List of tasks linked to a project
+# List of tasks linked to a project
 
 When you click a project in the *My projects* tab, you will see the list of tasks linked to that particular project, grouped per task status. Each group can be collapsed or expanded at will.
 

@@ -2,7 +2,7 @@
 uid: Charts
 ---
 
-## Charts
+# Charts
 
 This category contains the following visualizations:
 
@@ -14,7 +14,7 @@ This category contains the following visualizations:
 
 - [Pie & donut chart](#pie--donut-chart)
 
-### Column & Bar chart
+## Column & Bar chart
 
 This chart can be used to display the elements or services in a view that caused the most or the least alarms in a selected time range and were in an alarm state for the longest or the shortest period of time. From DataMiner 10.0.13 onwards, it can also be used to represent any data based on a data query in the form of a bar chart. In that case the bars can represent any number of variables for any set of categories.
 
@@ -97,7 +97,7 @@ To configure the component:
 
     - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
 
-### Bar chart (horizontal)
+## Bar chart (horizontal)
 
 This chart is the same as the regular bar chart, except that the bars are displayed horizontally.
 
@@ -107,7 +107,7 @@ However, note that any features that have been added to the regular bar chart co
 
 For more information, see [Column & Bar chart](#column--bar-chart).
 
-### Line & area chart
+## Line & area chart
 
 This component can be used to display a trend graph.
 
@@ -214,7 +214,7 @@ To configure the component:
 
     - *Additional lines* > *Show boundary lines*: Allows you to display one or more boundary lines. You can configure where a line should be displayed by adding a Y-axis value in the *Boundary value* box. The color of a boundary line can be customized in the *Boundary line color* box. The *Add boundary line* option below this allows you to add additional boundary lines. To remove a boundary line, click the x to the right of the line name.
 
-### Pie & donut chart
+## Pie & donut chart
 
 This component is introduced in DataMiner 10.0.13 with the purpose of displaying the results of queries in a chart shaped like a pie or donut.
 

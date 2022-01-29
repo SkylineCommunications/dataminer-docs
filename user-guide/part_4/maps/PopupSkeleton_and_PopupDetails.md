@@ -2,11 +2,11 @@
 uid: PopupSkeleton_and_PopupDetails
 ---
 
-## PopupSkeleton and PopupDetails
+# PopupSkeleton and PopupDetails
 
 In the *\<PopupSkeleton>* and *\<PopupDetails>* tags, you can specify the contents of the balloon that will appear when you click a marker.
 
-### PopupSkeleton
+## PopupSkeleton
 
 In the *\<PopupSkeleton>* tag, specify all fixed content, including the necessary placeholders for variable data. Use HTML syntax inside a CDATA tag and put the placeholders between square brackets.
 
@@ -19,11 +19,11 @@ In the *\<PopupSkeleton>* tag, specify all fixed content, including the necessar
 > See also:
 > [Examples of PopupSkeleton and PopupDetails configuration](#examples-of-popupskeleton-and-popupdetails-configuration)
 
-### PopupDetails
+## PopupDetails
 
 In the *\<PopupDetails>* tag, add a *\<Detail>* tag for every placeholder used in the *\<PopupSkeleton>* tag.
 
-#### Attributes of the Detail tag
+### Attributes of the Detail tag
 
 | Attribute   | Value / Description                                                                                                                                                                                                                                                                                                                                                                                              |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,7 +42,7 @@ In the *\<PopupDetails>* tag, add a *\<Detail>* tag for every placeholder used i
 | view        | A view ID or a view name preceded by a dot (“.”).<br> Available from DataMiner 9.5.2 onwards.                                                                                                                                                                                                                                                                                                                    |
 | type        | See [Type overview](#type-overview).                                                                                                                                                                                                                                                                                                                                                                             |
 
-##### Type overview
+#### Type overview
 
 The following table provides an overview of the different possible values for the type attribute.
 
@@ -58,7 +58,7 @@ The following table provides an overview of the different possible values for th
 | *service/\[service subtype\]*                                                                                                                                    | Instead of *\[service subtype\]*, depending on what should be retrieved, specify the following:<br> -  *id*: The service ID (format: dmaId/serviceId).<br> -  *name*: The service name.<br> -  *property*: A property of the service.<br> -  *alarmcount*: The number of alarms linked to the service.<br> -  *alarmstate*: The current alarm state of the service.                                                                                                                                                                                                                                                                                                       |
 | *view/\[view subtype\]*                                                                                                                                          | Instead of *\[view subtype\]*, depending on what should be retrieved, specify the following:<br> -  *id*: The view ID.<br> -  *name*: The view name.<br> -  *property*: A property of the view.<br> -  *alarmcount*: The number of alarms linked to the view.<br> -  *alarmstate*: The current alarm state of the view.                                                                                                                                                                                                                                                                                                                                                   |
 
-#### Specific PopDetails configurations
+### Specific PopDetails configurations
 
 In each *\<Detail>* tag, the attributes that should be specified depend on what is to be retrieved:
 
@@ -114,7 +114,7 @@ In each *\<Detail>* tag, the attributes that should be specified depend on what 
     | alias       | The alias of the element in the service. If no alias is configured, specify the actual name of the element instead. |
     | pid         | The ID of the parameter that is to be retrieved.                                                                    |
 
-### Placeholders
+## Placeholders
 
 The following placeholders do not need to be defined in *\<Detail>* tags. They are always available (depending on the context):
 
@@ -154,7 +154,7 @@ To determine the detail source, the following items are checked (in this order):
 >
 > To use URL parameters, specify an *elementVar* or *serviceVar* attribute, or add a *\<ViewFilter>* subtag within the *\<Details>* tag, and add the parameter using the *idVar* attribute in the subtag. E.g.: *ViewFilter includeSubViews="true" idVar="myView"/>*. A similar *\<ViewFilter>* subtag can be used in the *\<PropertiesSourceInfo>* tag. For more information, refer to [idVar](xref:PropertiesSourceInfo#idvar).
 
-### Examples of PopupSkeleton and PopupDetails configuration
+## Examples of PopupSkeleton and PopupDetails configuration
 
 This section contains the following examples:
 
@@ -178,7 +178,7 @@ This section contains the following examples:
 
 - [Navigating to EPM information from a map using JavaScript](#navigating-to-epm-information-from-a-map-using-javascript)
 
-#### Showing cell values from a dynamic table row
+### Showing cell values from a dynamic table row
 
 An example where placeholders are replaced by cell values from the currently selected dynamic table row:
 
@@ -195,7 +195,7 @@ An example where placeholders are replaced by cell values from the currently sel
 </PopupDetails>
 ```
 
-#### Showing property values
+### Showing property values
 
 An example where placeholders are replaced by property values retrieved from the current element, service or view:
 
@@ -212,7 +212,7 @@ An example where placeholders are replaced by property values retrieved from the
 </PopupDetails>
 ```
 
-#### Showing parameter values
+### Showing parameter values
 
 An example where placeholders are replaced by parameter values retrieved from the current element or service:
 
@@ -227,7 +227,7 @@ An example where placeholders are replaced by parameter values retrieved from th
 </PopupDetails>
 ```
 
-#### Showing parameter values from an element included in a service
+### Showing parameter values from an element included in a service
 
 An example where placeholders are replaced with parameter values from an element included in a service shown on the map.
 
@@ -244,7 +244,7 @@ An example where placeholders are replaced with parameter values from an element
 </PopupDetails>
 ```
 
-#### Displaying a map layer
+### Displaying a map layer
 
 An example of a marker balloon containing a map layer:
 
@@ -261,7 +261,7 @@ An example of a marker balloon containing a map layer:
 >
 > Example: *\<a href=”#” class=”showlayer”>\<small>\[Network\]\</small>\</a>*
 
-#### Showing values returned by an SQL query
+### Showing values returned by an SQL query
 
 On a layer of sourceType “sql”, you can show marker balloons containing values returned by an SQL query.
 
@@ -323,7 +323,7 @@ The “column” attributes of the *\<Detail>* tags have to contain name of colu
 </Layer>
 ```
 
-#### Showing data of another element in a pop-up balloon
+### Showing data of another element in a pop-up balloon
 
 It is possible to show data from another element in a pop-up balloon.
 
@@ -333,7 +333,7 @@ That other element can be selected in two ways:
 
 - Putting the data element in the same view as the marker element.
 
-##### Specifying the other element in the URL of the map
+#### Specifying the other element in the URL of the map
 
 Pass the other element in a URL variable:
 
@@ -352,7 +352,7 @@ Refer to that variable in the configuration file:
 > [!NOTE]
 > The URL variable has to contain either the element name or the element ID (i.e. DmaID/ElementID).
 
-##### Putting the data element in the same view as the marker element
+#### Putting the data element in the same view as the marker element
 
 Create a view that contains two elements: the marker element (i.e. the element containing the marker coordinates) and the data element (i.e. the element that contains the data to be shown in the pop-up balloon). Use *\<Detail>* tags of type “parameter_sameviewelement” or “property_sameviewelement” to fetch data from the data element:
 
@@ -363,7 +363,7 @@ Create a view that contains two elements: the marker element (i.e. the element c
 </PopupDetails>
 ```
 
-#### Adding tab pages to a marker balloon
+### Adding tab pages to a marker balloon
 
 An example of a marker balloon with three tabs:
 
@@ -396,7 +396,7 @@ On the map, the above-mentioned code will be rendered in the following way.
 
 
 
-#### Displaying EPM tables in a marker pop-up balloon
+### Displaying EPM tables in a marker pop-up balloon
 
 In the following example, the contents of columns 7002, 7005 and 7006 from table 7000 will be displayed in divisions #CM, #eMTA and #STB respectively, and filtered based on the content of column 7003, which will be compared against the value of the “data-cpe-type” attribute.
 
@@ -432,7 +432,7 @@ In the following example, the contents of columns 7002, 7005 and 7006 from table
 </PopupSkeleton>
 ```
 
-#### Navigating to EPM information from a map using JavaScript
+### Navigating to EPM information from a map using JavaScript
 
 From DataMiner 9.5.1 onwards, you can configure the *\<PopupSkeleton>* tag so that a user can navigate from the pop-up balloon to the EPM interface or display particular EPM information from the pop-up balloon.
 

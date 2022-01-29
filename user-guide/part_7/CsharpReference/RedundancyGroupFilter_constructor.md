@@ -2,7 +2,7 @@
 uid: RedundancyGroupFilter_constructor
 ---
 
-## RedundancyGroupFilter constructor
+# RedundancyGroupFilter constructor
 
 ```txt
 public RedundancyGroupFilter()

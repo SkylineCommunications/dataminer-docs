@@ -2,9 +2,9 @@
 uid: ScriptParam_properties
 ---
 
-## ScriptParam properties
+# ScriptParam properties
 
-#### Id
+### Id
 
 Gets the ID of the script parameter
 
@@ -12,7 +12,7 @@ Gets the ID of the script parameter
 int Id
 ```
 
-#### Name
+### Name
 
 Gets the name of the script parameter.
 
@@ -20,7 +20,7 @@ Gets the name of the script parameter.
 string Name
 ```
 
-#### Value
+### Value
 
 Gets the value of the script parameter.
 

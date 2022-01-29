@@ -2,7 +2,7 @@
 uid: Conditionally_including_an_element_in_a_service
 ---
 
-## Conditionally including an element in a service
+# Conditionally including an element in a service
 
 During service creation or while editing a service, it is possible to include an element based on certain conditions, and/or to only let it influence the alarm severity of a service based on certain conditions.
 

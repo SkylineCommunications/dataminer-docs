@@ -2,7 +2,7 @@
 uid: Other
 ---
 
-## Other
+# Other
 
 This category contains the following visualizations:
 
@@ -18,7 +18,7 @@ This category contains the following visualizations:
 
 - [Visual overview](#visual-overview)
 
-### Node edge graph
+## Node edge graph
 
 > [!WARNING]
 > This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
@@ -126,7 +126,7 @@ To configure the component:
 
     - *Edge style*: Select whether the connections should be displayed as curly or straight lines.
 
-### Parameter page
+## Parameter page
 
 This component displays a particular data page of an element.
 
@@ -142,7 +142,7 @@ To configure the component:
 
 3. Optionally, to customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
-### Service definition
+## Service definition
 
 Available from DataMiner 10.0.5 onwards. This component displays a service definition as a node edge graph. It can display the graph based on a service definition feed or a booking feed. Any nodes that are linked to a particular resource will display alarm and element info in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
 
@@ -194,7 +194,7 @@ To configure the component:
 
     - *Edge style*: Determines whether curly or straight edges are used in the graph.
 
-### Spectrum analyzer
+## Spectrum analyzer
 
 This component can be used to display a spectrum graph. Available from DataMiner 10.0.10 onwards.
 
@@ -226,7 +226,7 @@ Please note the following regarding this component.
 
 - In DataMiner 10.0.10 only, it was possible to configure a trigger action on a spectrum analyzer component, so that clicking the component opened another dashboard. However, this feature is no longer available from DataMiner 10.0.11 onwards.
 
-### Trend statistics
+## Trend statistics
 
 This component displays the minimum, average and maximum value of one or more trended parameters. Available from DataMiner 9.6.13 onwards;
 
@@ -257,7 +257,7 @@ To configure the component:
 
     - *Maximum columns per page*: Determines the maximum number of parameters for which statistics can be displayed next to each other on a single page.
 
-### Visual overview
+## Visual overview
 
 This component displays a Visio file linked to an element.
 

@@ -2,7 +2,7 @@
 uid: Dynamically_generating_shapes_for_elements_connected_to_views_out_of_scope
 ---
 
-## Dynamically generating shapes for elements connected to views out of scope
+# Dynamically generating shapes for elements connected to views out of scope
 
 It is possible to have shapes created dynamically for elements with external connections to views that are not displayed on the Visio drawing.
 

@@ -2,7 +2,7 @@
 uid: Turning_a_shape_into_a_redundancy_group_selection_box
 ---
 
-## Turning a shape into a redundancy group selection box
+# Turning a shape into a redundancy group selection box
 
 In a Visio drawing, elements belonging to the same redundancy group can be highlighted by means of a selection box.
 

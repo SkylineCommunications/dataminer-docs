@@ -2,7 +2,7 @@
 uid: ScriptMemory_constructor
 ---
 
-## ScriptMemory constructor
+# ScriptMemory constructor
 
 ```txt
 public ScriptMemory()

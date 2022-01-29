@@ -2,7 +2,7 @@
 uid: Managing_element_properties
 ---
 
-## Managing element properties
+# Managing element properties
 
 In this section:
 
@@ -14,7 +14,7 @@ In this section:
 
 - [Deleting a custom property](#deleting-a-custom-property)
 
-### Accessing element properties
+## Accessing element properties
 
 To access the properties of an element:
 
@@ -27,7 +27,7 @@ To access the properties of an element:
 > [!NOTE]
 > To access properties of views and services, you can also use the Surveyor right-click menu.
 
-### Adding a custom property to an item
+## Adding a custom property to an item
 
 > [!TIP]
 > See also:
@@ -71,7 +71,7 @@ To add a custom property to a DataMiner item, which can be an element, but also 
 
 7. In the *Properties* dialog box, click *OK*.
 
-### Editing custom properties
+## Editing custom properties
 
 > [!NOTE]
 > If an element has been created by another parent element, it is possible that some of its properties cannot be edited, except by an Administrator or via the parent element.
@@ -95,7 +95,7 @@ To add a custom property to a DataMiner item, which can be an element, but also 
     > - If you change the property name, the value of that property will be lost.
     > - From DataMiner 9.5.0 CU8/9.5.12 onwards, changing the property name via the *Edit* option is no longer possible. Instead, you will need to delete the property with the old name and create a property with the new name.
 
-### Deleting a custom property
+## Deleting a custom property
 
 1. Right-click the item and select *Properties*.
 

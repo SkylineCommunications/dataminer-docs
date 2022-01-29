@@ -2,7 +2,7 @@
 uid: ConnectionSettings_txt
 ---
 
-## ConnectionSettings.txt
+# ConnectionSettings.txt
 
 This file contains default connection settings to be used by DataMiner client applications when connecting from specific IP addresses.
 
@@ -28,7 +28,7 @@ This file contains default connection settings to be used by DataMiner client ap
     | A range of IP addresses               | 10.10.1.1-10.10.1.100 |
     | A single IP address                   | 10.10.7.1             |
 
-### ConnectionSettings.txt Options
+## ConnectionSettings.txt Options
 
 - **type=**
 
@@ -88,7 +88,7 @@ This file contains default connection settings to be used by DataMiner client ap
 > - Lines starting with a “#” character are considered to be comments and are ignored.
 > - The file list the most specific ranges first. When looking up the settings for an IP address, the first matching IP range defines the settings.
 
-### Example
+## Example
 
 ```txt
 10.10.7.1 type=RemotingConnection;polling=1000;zip=true

@@ -2,7 +2,7 @@
 uid: Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes
 ---
 
-## Configuring a page to update a session variable when another session variable changes
+# Configuring a page to update a session variable when another session variable changes
 
 From DataMiner 9.5.2 onwards, it is possible to have an open Visual Overview page update a session variable when another session variable changes.
 
@@ -10,7 +10,7 @@ From DataMiner 9.5.2 onwards, it is possible to have an open Visual Overview pag
 > See also:
 > [Linking a shape to a SET command](xref:Linking_a_shape_to_a_SET_command)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Execute** on page level. Set the shape data field to the following value:
 
@@ -48,7 +48,7 @@ If you wish to use a different separator than a dash, add the \[sep:XY\] option 
 > See also:
 > [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
-### Option
+## Option
 
 If you want the set commands in the **Execute** field to be performed each time the card is opened, add a page-level shape data field of type **Options**, and set its value to “ExecuteSetsOnInit”.
 
@@ -56,7 +56,7 @@ If you want the set commands in the **Execute** field to be performed each time 
 ExecuteSetsOnInit
 ```
 
-### Example
+## Example
 
 ```txt
 Set|Variable|DestVar1|[var:V1]|SetTrigger=ValueChanged

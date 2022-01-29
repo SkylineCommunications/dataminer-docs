@@ -2,7 +2,7 @@
 uid: General
 ---
 
-## General
+# General
 
 This category contains the following visualizations:
 
@@ -26,13 +26,13 @@ This category contains the following visualizations:
 
 - [Web](#web)
 
-### Block
+## Block
 
 This component consists of an empty block, which can be used as a divider between other components.
 
 In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
-### Button
+## Button
 
 > [!WARNING]
 > This feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
@@ -86,7 +86,7 @@ To configure the component:
 
             - *Custom success message*: Allows you to configure a custom message to be displayed when the script has been successfully executed.
 
-### Button panel
+## Button panel
 
 > [!WARNING]
 > This feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
@@ -103,7 +103,7 @@ This component will display a button panel with buttons representing the rows of
 
 To avoid unwanted interaction with the buttons, they are not active while the button panel is being edited. However, it is possible to press them or rotate them in order to check what they look like when a user interacts with them. Buttons can also be locked in the button panel element to keep users from interacting with them.
 
-#### Configuring the button panel component
+### Configuring the button panel component
 
 To configure the component in the Dashboards app:
 
@@ -125,11 +125,11 @@ To configure the component in the Dashboards app:
 
 6. Optionally, to use a different polling interval for this component than the standard interval configured for the dashboard, in the *WebSocket settings* section, clear the checkbox and specify a different polling interval (in seconds).
 
-#### Configuring the button panel element
+### Configuring the button panel element
 
 In the button panel element, you can configure how the buttons should be displayed in a dashboard.
 
-##### Button panel table
+#### Button panel table
 
 In the table listing the buttons, add the buttons that you want to display and specify their *Position*, *Height*, *Width*, etc. The available columns depend on the protocol configuration (see [Configuring the button panel element protocol](#configuring-the-button-panel-element-protocol)). However, the following possible columns are of particular note:
 
@@ -189,7 +189,7 @@ In the table listing the buttons, add the buttons that you want to display and s
 
     - For a rotate button: largedecrease;smalldecrease;smallincrease;largeincrease
 
-##### Other parameters
+#### Other parameters
 
 From DataMiner 9.6.13 onwards, if a separate parameter is used for the advanced configuration of the entire panel, it can be configured with a setting to allow free configuration of the button panel layout:
 
@@ -208,7 +208,7 @@ Note that this same parameter also allows you to set the panel to a fixed layout
 > [!NOTE]
 > This parameter must be defined using the *panelAdvancedLayout* dashboard option in the protocol. See [Configuring the button panel element protocol](#configuring-the-button-panel-element-protocol).
 
-#### Configuring the button panel element protocol
+### Configuring the button panel element protocol
 
 Within the *Param* tag of the protocol, the following tags can be used to configure the button panel functionality.
 
@@ -290,7 +290,7 @@ Within the *Param* tag of the protocol, the following tags can be used to config
     </Param>
     ```
 
-### Clock (analog)
+## Clock (analog)
 
 This component displays an analog clock that indicates the current time.
 
@@ -308,7 +308,7 @@ In the *Component \> Layout* tab, the following options can be configured:
 
 - *Show date*: Select this option to display the date below the clock.
 
-### Clock (digital)
+## Clock (digital)
 
 This component displays a digital clock that indicates the current time.
 
@@ -326,14 +326,14 @@ In the *Component \> Layout* tab, the following options can be configured:
 
 - *Show date*: Select this option to display the date below the clock.
 
-### Generic map
+## Generic map
 
 To configure the component, in the *Settings* tab, specify a map configuration.
 
 > [!NOTE]
 > For more information, see [Displaying a DataMiner Map in a DataMiner dashboard](xref:Displaying_a_DataMiner_Map_in_a_DataMiner_dashboard).
 
-### Group
+## Group
 
 Available from DataMiner 9.6.12 onwards. This component can be used to display a group of other components. This is especially used in order to repeat the same components for each data item in a group feed, for example for each parameter in a group of parameters.
 
@@ -369,7 +369,7 @@ To configure this component:
 
     - *Data limit*: Determine the maximum number of items for which the component can display data.
 
-### Image
+## Image
 
 This component displays an uploaded image.
 
@@ -395,7 +395,7 @@ In the *Component \> Layout* tab, the following options can be configured:
 
 - *Vertical alignment*: Allows you to set the vertical alignment of the image within the component to *Top*, *Center* or *Bottom*.
 
-### Text
+## Text
 
 This component displays a block of static text.
 
@@ -415,7 +415,7 @@ In the *Component \> Layout* tab, the following options can be configured:
 
 - *Horizontal alignment*: Allows you to set the horizontal alignment of the text to *Left*, *Center* or *Right*.
 
-### Web
+## Web
 
 This component displays a webpage or a block of static HTML.
 

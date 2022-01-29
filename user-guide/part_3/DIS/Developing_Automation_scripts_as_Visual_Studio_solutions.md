@@ -2,7 +2,7 @@
 uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 ---
 
-## Developing Automation scripts as Visual Studio solutions
+# Developing Automation scripts as Visual Studio solutions
 
 As from DISv2.31, similar to DataMiner protocols, it is also possible to develop Automation scripts as Visual Studio solutions.
 
@@ -15,7 +15,7 @@ As from DISv2.31, similar to DataMiner protocols, it is also possible to develop
     > [!NOTE]
     > If you want an external DLL file to be placed in a specific folder instead of C:\\DataMiner\\ProtocolScripts, then specify the full path to that folder in the *DataMiner DLL Path* property of that DLL file.
 
-### Creating an Automation Script solution
+## Creating an Automation Script solution
 
 To create a new Automation script solution containing one dummy Automation script, do the following:
 
@@ -35,7 +35,7 @@ To create a new Automation script solution containing one dummy Automation scrip
 > [!NOTE]
 > If another solution is open when you perform step 1, you will be asked whether you want to save unsaved changes.
 
-### Creating a new script in a solution
+## Creating a new script in a solution
 
 To create a new script in an Automation script solution, do the following:
 
@@ -47,7 +47,7 @@ To create a new script in an Automation script solution, do the following:
 
 4. Click *OK*.
 
-### Adding an existing script to a solution
+## Adding an existing script to a solution
 
 To add an existing Automation script to an Automation script solution, do the following:
 
@@ -62,7 +62,7 @@ To add an existing Automation script to an Automation script solution, do the fo
 > [!NOTE]
 > When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transfered to the newly created C# project.
 
-### Saving a compiled script
+## Saving a compiled script
 
 To save a compiled version of an Automation script to a file (with all C# code in its Exe block), do the following:
 
@@ -74,7 +74,7 @@ To save a compiled version of an Automation script to a file (with all C# code i
 
 4. Click *Save*.
 
-### Uploading a script to a DataMiner Agent
+## Uploading a script to a DataMiner Agent
 
 To upload an Automation script to a DataMiner Agent, do the following:
 

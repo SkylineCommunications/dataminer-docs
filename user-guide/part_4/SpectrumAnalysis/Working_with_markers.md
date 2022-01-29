@@ -2,7 +2,7 @@
 uid: Working_with_markers
 ---
 
-## Working with markers
+# Working with markers
 
 Markers can be used to help you make measurements, by identifying points of traces. There is no limit to the number of markers you can place.
 
@@ -20,7 +20,7 @@ The following sections provide more information on working with markers in Cube:
 
 - [Marker options](#marker-options)
 
-### Adding a marker
+## Adding a marker
 
 1. In the info pane, to the left of the real-time display on the spectrum analyzer card, click the *Add marker* button.
 
@@ -49,7 +49,7 @@ The following sections provide more information on working with markers in Cube:
 
 6. Click *OK* to save your changes and close the pop-up window.
 
-### Moving a marker
+## Moving a marker
 
 To move a marker in Cube, you can:
 
@@ -74,7 +74,7 @@ To move a marker in Cube, you can:
     > [!NOTE]
     > These options are also available in the *markers* menu in the ribbon.
 
-### Marker options
+## Marker options
 
 In the ribbon of a spectrum analyzer card, the *markers* tab provides several additional options:
 

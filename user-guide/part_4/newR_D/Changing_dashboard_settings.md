@@ -2,7 +2,7 @@
 uid: Changing_dashboard_settings
 ---
 
-## Changing dashboard settings
+# Changing dashboard settings
 
 1. Select the dashboard in the list pane.
 

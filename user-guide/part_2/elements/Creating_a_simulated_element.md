@@ -2,7 +2,7 @@
 uid: Creating_a_simulated_element
 ---
 
-## Creating a simulated element
+# Creating a simulated element
 
 To create a simulated element:
 
@@ -30,7 +30,7 @@ To create a simulated element:
 > See also:
 > [Simulated elements](xref:Simulated_elements)
 
-### Creating a simulation file
+## Creating a simulation file
 
 > [!NOTE]
 > This feature is available in DataMiner Cube from DataMiner 10.0.6 onwards. Prior to this DataMiner version, it is only included in the legacy System Display application, which is no longer available from DataMiner 9.6.0 onwards.

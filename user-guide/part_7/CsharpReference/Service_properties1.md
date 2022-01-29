@@ -2,9 +2,9 @@
 uid: Service_properties1
 ---
 
-## Service properties
+# Service properties
 
-#### DmaId
+### DmaId
 
 Gets the DataMiner ID of the service.
 
@@ -12,7 +12,7 @@ Gets the DataMiner ID of the service.
 int DmaId
 ```
 
-#### Name
+### Name
 
 Gets the name of the service.
 
@@ -20,7 +20,7 @@ Gets the name of the service.
 string Name
 ```
 
-#### ServiceId
+### ServiceId
 
 Gets the ID of the service.
 

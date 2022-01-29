@@ -2,7 +2,7 @@
 uid: SpectrumPreset_constructor
 ---
 
-## SpectrumPreset constructor
+# SpectrumPreset constructor
 
 ```txt
 SpectrumPreset(IActionableElement element, string presetName)

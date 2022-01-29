@@ -2,7 +2,7 @@
 uid: Updating_elements
 ---
 
-## Updating elements
+# Updating elements
 
 In this section:
 
@@ -10,7 +10,7 @@ In this section:
 
 - [Setting a parameter value in multiple elements](#setting-a-parameter-value-in-multiple-elements)
 
-### Updating a single element
+## Updating a single element
 
 If you want to update one element:
 
@@ -26,7 +26,7 @@ If you want to update one element:
 > - When you edit a replicated element, if you want to change the remote element, you will need to enter the user credentials for the remote DMA again. See [Replicating elements](xref:Replicating_elements).
 > - Some elements may be created by a different parent element. In that case, editing these elements may not be possible, except by an Administrator, or via the parent element.
 
-### Setting a parameter value in multiple elements
+## Setting a parameter value in multiple elements
 
 1. Right-click an element in the Surveyor and click *Multiple set*.
 

@@ -2,11 +2,11 @@
 uid: Elements1
 ---
 
-## Elements
+# Elements
 
 The *C:\\Skyline DataMiner\\Elements\\* directory contains a subdirectory for every element on the DMA.
 
-### Files found in every Element subdirectory
+## Files found in every Element subdirectory
 
 Each element subdirectory contains the following files:
 
@@ -21,7 +21,7 @@ Each element subdirectory contains the following files:
 
 
 
-### Element.xml
+## Element.xml
 
 Every element on a DMA has its own *Element.xml* file. It contains the complete element definition:
 
@@ -50,7 +50,7 @@ Several things can be configured in this file:
     > [!NOTE]
     > From DataMiner 9.6.0 \[CU1\]/9.6.3 onwards, this can be customized in DataMiner Cube instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
-### Description.xml
+## Description.xml
 
 Every element on a DMA has its own *Description.xml* file. In that file, you can specify aliases for each of the parameters of that element.
 

@@ -2,7 +2,7 @@
 uid: UIBlockDefinition_properties
 ---
 
-## UIBlockDefinition properties
+# UIBlockDefinition properties
 
 - [AllowedFileNameExtensions](#allowedfilenameextensions)
 
@@ -86,7 +86,7 @@ uid: UIBlockDefinition_properties
 
 - [Width](#width)
 
-#### AllowedFileNameExtensions
+### AllowedFileNameExtensions
 
 Gets or sets the allowed file name extensions. Available from DataMiner 10.1.12 onwards.
 
@@ -107,7 +107,7 @@ uibDef.AllowedFileNameExtensions = new List<string>() { ".txt", ".csv" };
 >
 > An error will be thrown when you try to add a file that is larger than the allowed file size or that does not have an allowed file name extension. Also, the "Choose file" pop-up window will only list files with an allowed extension and dragging an item other than a file or a folder onto the script's drop zone will no longer be possible.
 
-#### AllowMultipleFiles
+### AllowMultipleFiles
 
 Gets or sets a value indicating whether multiple files can be uploaded. Available from DataMiner 10.1.8/10.2.0 onwards.
 
@@ -137,7 +137,7 @@ uibDef.VerticalAlignment = GetVerticalAlignment(verticalAlignment);
 uibDef.AllowMultipleFiles = true;
 ```
 
-#### Column
+### Column
 
 Gets or sets the zero-based index of the column in which the dialog box item has to be placed.
 
@@ -157,7 +157,7 @@ blockItem.Column = 1; //Text box situated in second column from the left
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### ColumnSpan
+### ColumnSpan
 
 Gets or sets the number of joining columns the dialog box item is allowed to occupy.
 
@@ -178,7 +178,7 @@ blockItem.ColumnSpan = 2;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### ConfigOptions
+### ConfigOptions
 
 Used with a UIBlockType Time to get or set the configuration options.
 
@@ -205,7 +205,7 @@ config.Format = DateTimeFormat.ShortDate;
 uibDef.ConfigOptions = config;
 ```
 
-#### Decimals
+### Decimals
 
 Gets or sets the number of decimals to show.
 
@@ -237,7 +237,7 @@ numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 uib.AppendBlock(numericBlock);
 ```
 
-#### DestVar
+### DestVar
 
 Gets or sets the alias that will be used to retrieve the value entered or selected by the user from the *UIResults* object.
 
@@ -283,7 +283,7 @@ uir = engine.ShowUI(uibDialogBox1);
 enteredText = uir.GetString("myText");
 ```
 
-#### DisplayFilter
+### DisplayFilter
 
 Gets or sets a value indicating whether a filter box is available for the control.
 
@@ -307,7 +307,7 @@ blockItem.DisplayFilter = true;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### Extra
+### Extra
 
 Gets or sets the ID of the parameter that has to be displayed in the dialog box item.
 
@@ -335,7 +335,7 @@ blockItem.Extra = "7/253:83";
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### HasPeekIcon
+### HasPeekIcon
 
 Gets or sets a value indicating whether the password box shows an icon that, when clicked, will allow you to display the value inside the password box. Available from DataMiner 9.6.6 onwards.
 
@@ -353,7 +353,7 @@ Example:
 blockPasswordBox.HasPeekIcon = allowPeek;
 ```
 
-#### Height
+### Height
 
 Gets or sets the fixed height (in pixels) of the dialog box item.
 
@@ -376,7 +376,7 @@ blockItem.Height = 100;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### HorizontalAlignment
+### HorizontalAlignment
 
 Gets or sets the horizontal alignment of the dialog box item: “Center”, “Left”, “Right” or “Stretch”
 
@@ -396,7 +396,7 @@ blockItem.HorizontalAlignment = "Left";
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### InitialValue
+### InitialValue
 
 Gets or sets the value that will be assigned to the dialog box item the moment the dialog box opens.
 
@@ -421,7 +421,7 @@ blockCalendar.InitialValue = saveNow.ToString("dd/MM/yyyy HH:mm:ss");
 uib.AppendBlock(blockCalendar);
 ```
 
-#### IsEnabled
+### IsEnabled
 
 Gets or sets a value indicating whether the control is enabled in the UI. Default: true.
 
@@ -433,7 +433,7 @@ UIBlockType: *All*
 bool IsEnabled
 ```
 
-#### IsMultiline
+### IsMultiline
 
 Gets or sets a value indicating whether users are able to enter multiple lines of text.
 
@@ -453,7 +453,7 @@ blockItem.IsMultiline = true;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### IsRequired
+### IsRequired
 
 Gets or sets a value indicating whether this input control requires a value. Available from DataMiner 10.0.5 onwards. Returns true if a value is required; otherwise returns false.
 
@@ -475,7 +475,7 @@ UIBlockType:
 bool IsRequired
 ```
 
-#### IsSorted
+### IsSorted
 
 Gets or sets a value indicating whether items in the control are sorted naturally.
 
@@ -503,7 +503,7 @@ blockItem.IsSorted = true;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### Margin
+### Margin
 
 Gets or sets the margin (in pixels) around the dialog box item.
 
@@ -531,7 +531,7 @@ blockItem.Margin = "5;5;5;5";
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### MaxFileSizeInBytes
+### MaxFileSizeInBytes
 
 Gets or sets the maximum allowed file size. Available from DataMiner 10.1.12 onwards.
 
@@ -552,7 +552,7 @@ uibDef.MaxFileSizeInBytes = 100000;
 >
 > An error will be thrown when you try to add a file that is larger than the allowed file size or that does not have an allowed file name extension. Also, the "Choose file" pop-up window will only list files with an allowed extension and dragging an item other than a file or a folder onto the script's drop zone will no longer be possible.
 
-#### MaxHeight
+### MaxHeight
 
 Gets or sets the maximum height (in pixels) of the dialog box item.
 
@@ -572,7 +572,7 @@ blockItem.MaxHeight = 100;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### MaxWidth
+### MaxWidth
 
 Gets or sets the maximum width (in pixels) of the dialog box item.
 
@@ -592,7 +592,7 @@ blockItem.MaxWidth = 100;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### MinHeight
+### MinHeight
 
 Gets or sets the minimum height (in pixels) of the dialog box item.
 
@@ -612,7 +612,7 @@ blockItem.MinHeight = 100;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### MinWidth
+### MinWidth
 
 Gets or sets the minimum width (in pixels) of the dialog box item.
 
@@ -632,7 +632,7 @@ blockItem.MinWidth = 100;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### PlaceholderText
+### PlaceholderText
 
 Gets or sets the placeholder text, i.e. the text that should be displayed as long as the control is empty (e.g. “In this box, enter...”). Available from DataMiner 10.0.5 onwards.
 
@@ -650,7 +650,7 @@ UIBlockType:
 string PlaceholderText
 ```
 
-#### RangeHigh
+### RangeHigh
 
 Gets or sets the maximum value of the range.
 
@@ -682,7 +682,7 @@ numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 uib.AppendBlock(numericBlock);
 ```
 
-#### RangeLow
+### RangeLow
 
 Gets or sets the minimum value of the range.
 
@@ -714,7 +714,7 @@ numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 uib.AppendBlock(numericBlock);
 ```
 
-#### RangeStep
+### RangeStep
 
 Gets or sets the step size.
 
@@ -746,7 +746,7 @@ numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 uib.AppendBlock(numericBlock);
 ```
 
-#### Row
+### Row
 
 Gets or sets the zero-based index of the row in which the dialog box item has to be placed.
 
@@ -766,7 +766,7 @@ blockItem.Row = 2; //Text box situated in third row from the top
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### RowSpan
+### RowSpan
 
 Gets or sets the number of joining rows the dialog box item is allowed to occupy.
 
@@ -786,7 +786,7 @@ blockItem.Row = 2; blockItem.RowSpan = 2;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### Style
+### Style
 
 Gets or sets the style of the dialog box.
 
@@ -808,7 +808,7 @@ PropertiesTitle.Type = UIBlockType.StaticText;
 PropertiesTitle.Style = "Title2";
 ```
 
-#### Text
+### Text
 
 Gets or sets the text that has to appear in the dialog box item.
 
@@ -832,7 +832,7 @@ blockItem.Row = 2; blockItem.Text = "OK";
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### Title
+### Title
 
 Gets or sets the title
 
@@ -840,7 +840,7 @@ Gets or sets the title
 string Title
 ```
 
-#### TooltipText
+### TooltipText
 
 Available from DataMiner 10.0.8 onwards. Gets or sets the text of the tooltip for a component of an interactive Automation script. This tooltip is only displayed if the script is run within one of the DataMiner web apps, for example the Jobs app.
 
@@ -876,7 +876,7 @@ input3.TooltipText = "drop-down no filter - tooltip text";
 uib.AppendBlock(input3);
 ```
 
-#### Type
+### Type
 
 Gets or sets the *UIBlockType* of the dialog box item. See [UIBlockType enumeration](xref:UIBlockType_enumeration).
 
@@ -895,7 +895,7 @@ blockItem.Type = UIBlockType.TextBox;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### TreeViewItems
+### TreeViewItems
 
 Contains each item of the tree view as a TreeViewItem. Available from DataMiner 10.0.10 onwards.
 
@@ -933,7 +933,7 @@ Note that a *TreeViewItem* is an object in the *Skyline.DataMiner.Net.Automation
 var treeViewItem = new TreeViewItem("displayValue", "keyValue", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None };
 ```
 
-#### ValidationState
+### ValidationState
 
 Gets or sets a value indicating the validation state. Available from DataMiner 10.0.5 onwards.
 
@@ -960,7 +960,7 @@ string ValidationState
 > [!NOTE]
 > This property should be used in combination with the *WantsOnChange* property (see [WantsOnChange](#wantsonchange)). If *WantsOnChange* is true, the interactive Automation script will have its ShowUI(String) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults. This functionality will allow you to offer clear feedback on user input.
 
-#### ValidationText
+### ValidationText
 
 Gets or sets the text that will be displayed if *ValidationState* is false. Available from DataMiner 10.0.5 onwards.
 
@@ -985,7 +985,7 @@ string ValidationText
 > [!NOTE]
 > This property should be used in combination with the *WantsOnChange* property (see [WantsOnChange](#wantsonchange)). If *WantsOnChange* is true, the interactive Automation script will have its ShowUI(String) method return each time the user input changes. This will also be indicated by the \_ONCHANGE key, which is returned in the UIResults. This functionality will allow you to offer clear feedback on user input.
 
-#### VerticalAlignment
+### VerticalAlignment
 
 Gets or sets the vertical alignment of the dialog box item: “Center”, “Top”, “Bottom” or “Stretch”
 
@@ -1008,7 +1008,7 @@ uibDialogBox1.AppendBlock(blockItem);
 > [!NOTE]
 > If no vertical alignment option is set, by default “Top” alignment is applied.
 
-#### WantsOnChange
+### WantsOnChange
 
 Gets or sets a value indicating whether an update of the current value of the dialog box item will trigger an OnChange event.
 
@@ -1053,7 +1053,7 @@ blockItem.WantsOnChange = true;
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### WantsOnFocusLost
+### WantsOnFocusLost
 
 Available from DataMiner 10.1.10/10.2.0 onwards. Gets or sets a value indicating whether an OnChange event will be triggered when the component loses focus.
 
@@ -1064,7 +1064,7 @@ bool WantsOnFocusLost
 > [!NOTE]
 > Applicable only in case *Type* is set to Calendar, CheckBox, CheckBoxList, DropDown, Numeric, PasswordBox, RadioButtonList, TextBox or Time.
 
-#### Width
+### Width
 
 Gets or sets the fixed width (in pixels) of the dialog box item.
 

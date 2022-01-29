@@ -2,7 +2,7 @@
 uid: Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element
 ---
 
-## Configuring the GPIB settings of a spectrum analyzer element
+# Configuring the GPIB settings of a spectrum analyzer element
 
 When adding or updating a spectrum analyzer element, at some point during element creation, you can specify the settings of the GPIB/LAN gateway through which DataMiner will communicate with the spectrum analyzer.
 
@@ -14,11 +14,11 @@ When adding or updating a spectrum analyzer element, at some point during elemen
 > See also:
 > [Adding and deleting elements](xref:Adding_and_deleting_elements)
 
-#### Using DataMiner version 9.0.0 and higher
+### Using DataMiner version 9.0.0 and higher
 
 From DataMiner 9.0.0 onwards, DataMiner supports both the SICL API and the VISA API. Depending on whether version M.01.01.04 or version 17.1.20011 of the IO libraries is used, the settings during element creation should be configured in a different way.
 
-##### Using version M.01.01.04 of the IO libraries, and SICL communication:
+#### Using version M.01.01.04 of the IO libraries, and SICL communication:
 
 - During element creation, set the *Device address* to “*gpib0,10*”.
 
@@ -29,7 +29,7 @@ From DataMiner 9.0.0 onwards, DataMiner supports both the SICL API and the VISA 
 
 - In the *I/O API* field, select *SICL*.
 
-##### Using version M.01.01.04 of the IO libraries, and VISA communication:
+#### Using version M.01.01.04 of the IO libraries, and VISA communication:
 
 - In the IO configuration app, create a new *VISA LAN Client* interface, and enter the IP address of the GPIB interface.
 
@@ -39,7 +39,7 @@ From DataMiner 9.0.0 onwards, DataMiner supports both the SICL API and the VISA 
 
 - In the *I/O API* field, select *SICL*.
 
-##### Using version 17.1.20011 of the IO libraries:
+#### Using version 17.1.20011 of the IO libraries:
 
 - During element creation, set the *Device address* to the appropriate VISA or SICL address, which can be found by running *Keysight Connection Expert* and checking the *Instruments* list.
 
@@ -49,7 +49,7 @@ From DataMiner 9.0.0 onwards, DataMiner supports both the SICL API and the VISA 
 
 - Set the *I/O API* field, select *SICL* or *VISA*, as appropriate.
 
-#### Using legacy DataMiner versions
+### Using legacy DataMiner versions
 
 Up to DataMiner 8.5, the following settings are available:
 

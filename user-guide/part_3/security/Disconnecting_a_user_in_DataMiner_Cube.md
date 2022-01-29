@@ -2,7 +2,7 @@
 uid: Disconnecting_a_user_in_DataMiner_Cube
 ---
 
-## Disconnecting a user in DataMiner Cube
+# Disconnecting a user in DataMiner Cube
 
 In DataMiner Cube, users who have been granted the permission *Disconnect other users* can disconnect other users from a DataMiner Agent.
 

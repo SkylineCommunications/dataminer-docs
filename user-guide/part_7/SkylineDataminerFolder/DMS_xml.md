@@ -2,7 +2,7 @@
 uid: DMS_xml
 ---
 
-## DMS.xml
+# DMS.xml
 
 This file contains a list of all DMAs in the DMS cluster.
 
@@ -12,7 +12,7 @@ This file contains a list of all DMAs in the DMS cluster.
 
 - Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
-##### Example:
+#### Example:
 
 ```xml
 <DMS errorTime="30000">
@@ -23,7 +23,7 @@ This file contains a list of all DMAs in the DMS cluster.
 > [!NOTE]
 > From DataMiner 10.2.0/10.1.6 onwards, the use of hostnames instead of IP addresses is supported in DMS.xml.
 
-### Attributes of the DMS tag
+## Attributes of the DMS tag
 
 | Attribute               | Description                                              | Default value |
 |-------------------------|----------------------------------------------------------|---------------|
@@ -34,7 +34,7 @@ This file contains a list of all DMAs in the DMS cluster.
 | asynchronousTimeoutTime | Asynchronous call timeout                                | 60 seconds    |
 | asynchronousRetries     | Number of retries before performing an asynchronous call | 4             |
 
-### Failover subtag
+## Failover subtag
 
 If a Failover setup has been implemented in the DMS, a *Failover* subtag in the *DMS.xml* file contains the Failover configuration. To modify this configuration, go to the System Center in DataMiner Cube. See [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
 

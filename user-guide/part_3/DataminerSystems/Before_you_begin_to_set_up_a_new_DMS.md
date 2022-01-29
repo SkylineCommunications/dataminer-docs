@@ -2,7 +2,7 @@
 uid: Before_you_begin_to_set_up_a_new_DMS
 ---
 
-## Before you begin to set up a new DMS
+# Before you begin to set up a new DMS
 
 Before you set up a new DataMiner System (DMS), decide which DataMiner Agent will be the “primary DMA” during the initial DMS setup.
 

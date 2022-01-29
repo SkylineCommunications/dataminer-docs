@@ -2,7 +2,7 @@
 uid: Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility
 ---
 
-## Restoring a DMA using the DataMiner Taskbar Utility
+# Restoring a DMA using the DataMiner Taskbar Utility
 
 1. Make sure the DMA is prepared for the restoration. See [Preparing the destination server for a DMA restoration](xref:Preparing_the_destination_server_for_a_DMA_restoration).
 

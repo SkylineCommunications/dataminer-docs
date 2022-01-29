@@ -2,7 +2,7 @@
 uid: Element_reports
 ---
 
-## Element reports
+# Element reports
 
 To view report information on the *Element* page, you first have to select an element. You can still select a different element afterwards by clicking *CHANGE* to the right of the element name in the header.
 

@@ -2,11 +2,11 @@
 uid: Checking_the_upgrade_history_of_a_DataMiner_Agent
 ---
 
-## Checking the upgrade history of a DataMiner Agent
+# Checking the upgrade history of a DataMiner Agent
 
 You can easily check which upgrades have been performed on a particular DataMiner Agent.
 
-### In the C:\\Skyline DataMiner\\Upgrades\\ folder
+## In the C:\\Skyline DataMiner\\Upgrades\\ folder
 
 Go to the *C:\\Skyline DataMiner\\Upgrades\\* folder of the DataMiner Agent and open the file *VersionHistory.txt*. That file lists all the major upgrades that have been performed on that DataMiner Agent, each with the date at which the DataMiner Agent was first started after that particular upgrade.
 
@@ -25,7 +25,7 @@ Upgrade log files have a timestamp in their file name:
 update.log.YYYY_MM_DD_HH_MM_SS.txt
 ```
 
-### In DataMiner Cube
+## In DataMiner Cube
 
 From DataMiner 10.0.0/10.0.2 onwards:
 

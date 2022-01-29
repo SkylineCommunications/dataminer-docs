@@ -2,7 +2,7 @@
 uid: Recycle_bin
 ---
 
-## Recycle bin
+# Recycle bin
 
 > [!TIP]
 > See also:

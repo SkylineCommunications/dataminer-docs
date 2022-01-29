@@ -2,7 +2,7 @@
 uid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
 ---
 
-## Embedding a dashboard component in a webpage or Visio drawing
+# Embedding a dashboard component in a webpage or Visio drawing
 
 From DataMiner 10.0.8 onwards, you can embed individual components in a Visio drawing or a web page.
 

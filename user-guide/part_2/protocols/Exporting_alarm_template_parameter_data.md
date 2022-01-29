@@ -2,7 +2,7 @@
 uid: Exporting_alarm_template_parameter_data
 ---
 
-## Exporting alarm template parameter data
+# Exporting alarm template parameter data
 
 From DataMiner 9.5.14 onwards, it is possible to export the parameter data from an alarm template or an alarm template group to a CSV file. This can for instance be useful for debugging purposes.
 

@@ -2,7 +2,7 @@
 uid: Debugging_CSharp_scripts
 ---
 
-## Debugging CSharp scripts
+# Debugging CSharp scripts
 
 To execute scripts in debug mode:
 

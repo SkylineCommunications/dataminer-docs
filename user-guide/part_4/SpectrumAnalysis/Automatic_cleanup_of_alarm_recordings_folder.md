@@ -2,13 +2,13 @@
 uid: Automatic_cleanup_of_alarm_recordings_folder
 ---
 
-## Automatic cleanup of alarm recordings folder
+# Automatic cleanup of alarm recordings folder
 
 When spectrum monitors generate an alarm, they create an alarm recording and store it in the folder *C:\\Skyline DataMiner\\Spectrum Alarm Recordings\\*.
 
 By default, that folder has a maximum size of 250MB. However, if necessary, this maximum size can be changed in *Maintenancesettings.xml*.
 
-### Clean-up procedure
+## Clean-up procedure
 
 When the folder *C:\\Skyline DataMiner\\Spectrum Alarm Recordings\\* is full, DataMiner will automatically remove recordings using a particular algorithm.
 

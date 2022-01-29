@@ -2,7 +2,7 @@
 uid: Overview_of_the_DataMiner_PTP_app_UI
 ---
 
-## Overview of the DataMiner PTP app UI
+# Overview of the DataMiner PTP app UI
 
 In DataMiner Cube’s navigation pane, the DataMiner PTP app is available in the *Applications* section of the *Apps* tab.
 
@@ -18,7 +18,7 @@ From PTP version 1.1.0 onwards, the app consists of the following tabs:
 
 - [The Help tab](#the-help-tab)
 
-### The Summary tab
+## The Summary tab
 
 This tab shows an overall summary of the entire PTP stack.
 
@@ -75,11 +75,11 @@ The information in this tab is displayed in several separate blocks.
 
 - The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g. *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
 
-#### Special PTP parameters in the Summary tab
+### Special PTP parameters in the Summary tab
 
 Below you can find more information on certain parameters in the *Summary* tab.
 
-##### Clock Source
+#### Clock Source
 
 This parameter can have the following values:
 
@@ -99,7 +99,7 @@ This parameter can have the following values:
 
 - **Internal Oscillator** (0xA0): Any device of which the frequency is not based on atomic resonance or calibrated against international standards for frequency, but instead based on a free-running oscillator with epoch determined in an arbitrary or unknown manner.
 
-##### Clock Class
+#### Clock Class
 
 This parameter can have the following values:
 
@@ -123,7 +123,7 @@ This parameter can have the following values:
 
 - **255**: Indicates a slave-only clock.
 
-##### Clock Accuracy
+#### Clock Accuracy
 
 This parameter can have the following values:
 
@@ -165,11 +165,11 @@ This parameter can have the following values:
 
 - **254** (0xFE): Unknown.
 
-##### Clock Variance
+#### Clock Variance
 
 Log-scaled statistic that represents the jitter and wander of the clock’s oscillator over a Sync message interval.
 
-### The Nodes tab
+## The Nodes tab
 
 This tab consists of the following subtabs:
 
@@ -211,7 +211,7 @@ This tab consists of the following subtabs:
 
     - A cogwheel icon that can be used to select a different PTP analyzer to compare with.
 
-### The Topology tab
+## The Topology tab
 
 This tab shows a graphical overview of how the different PTP nodes are connected, using DataMiner DCF. For each node, an icon is displayed indicating the type of node. For more information on these icons, see [Types of PTP devices](xref:Types_of_PTP_devices). Note that for the grandmaster clocks, the current active grandmaster (as detected by the PTP probe) is indicated by a small clock icon on the left.
 
@@ -230,7 +230,7 @@ Alarm states are indicated as follows:
 > [!NOTE]
 > New PTP nodes are automatically displayed in the top-left corner of the topology page.
 
-### The Admin tab
+## The Admin tab
 
 This tab consists of three different sections:
 
@@ -248,6 +248,6 @@ This tab consists of three different sections:
 
     - **Role assignment**: Launches the role assignment wizard, allowing you to change the roles that were assigned to the different PTP devices, or to assign roles to newly added devices.
 
-### The Help tab
+## The Help tab
 
 This tab contains links to this section of the DataMiner Help and to a page with more information about PTP in general. It also displays version information for the PTP app.

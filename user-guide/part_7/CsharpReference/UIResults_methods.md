@@ -2,7 +2,7 @@
 uid: UIResults_methods
 ---
 
-## UIResults methods
+# UIResults methods
 
 - [GetChecked](#getchecked)
 
@@ -22,7 +22,7 @@ uid: UIResults_methods
 
 - [WasOnChange](#wasonchange)
 
-#### GetChecked
+### GetChecked
 
 Gets a boolean value (i.e. true or false) from the *UIResults* object.
 
@@ -67,7 +67,7 @@ var uir = engine.ShowUI(uiBuilder);
 bool selection = uir.GetChecked("chekBoxList", "2");
 ```
 
-#### GetDateTime
+### GetDateTime
 
 Gets a date/time value from the *UIResults* object.
 
@@ -98,7 +98,7 @@ uir = engine.ShowUI(uib);
 selection = uir.GetDateTime("calendar");
 ```
 
-#### GetExpanded
+### GetExpanded
 
 Gets the key values of the tree view items that are expanded for the specified key.
 
@@ -122,7 +122,7 @@ if (_treeResults?.GetExpanded("treevar").Contains(treeViewItem.KeyValue) == true
 }
 ```
 
-#### GetString
+### GetString
 
 Gets a string value from the *UIResults* object.
 
@@ -147,7 +147,7 @@ uir = engine.ShowUI(uibDialogBox1);
 enteredText = uir.GetString("myText");
 ```
 
-#### GetUploadedFilePath
+### GetUploadedFilePath
 
 Retrieves the selected upload file path. Available from DataMiner 10.0.0/10.0.2 onwards.
 
@@ -175,7 +175,7 @@ string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 > See also:
 > [FileSelector](xref:UIBlockType_enumeration#fileselector)
 
-#### WasBack
+### WasBack
 
 Returns a value indicating whether the user clicked the *Back* button.
 
@@ -201,7 +201,7 @@ if (uir.WasBack())
 }
 ```
 
-#### WasButtonPressed
+### WasButtonPressed
 
 Returns a value indicating whether a specific button was clicked.
 
@@ -234,7 +234,7 @@ do
 } while (!uir.WasButtonPressed("buttonGo"));
 ```
 
-#### WasForward
+### WasForward
 
 Returns a value indicating whether the user clicked the *Forward* button.
 
@@ -260,7 +260,7 @@ if (uir.WasForward())
 }
 ```
 
-#### WasOnChange
+### WasOnChange
 
 Use this method to check whether or not the user changed the value of a particular dialog box item:
 

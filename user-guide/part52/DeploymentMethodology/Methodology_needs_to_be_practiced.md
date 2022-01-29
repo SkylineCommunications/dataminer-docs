@@ -2,7 +2,7 @@
 uid: Methodology_needs_to_be_practiced
 ---
 
-## Methodology needs to be practiced
+# Methodology needs to be practiced
 
 A clear understanding and execution of these methodologies by all involved parties and individuals is also essential to a successful deployment of the envisioned solution. In other words, once the most suitable methodology has been identified, it must be applied religiously for it to be effective.
 

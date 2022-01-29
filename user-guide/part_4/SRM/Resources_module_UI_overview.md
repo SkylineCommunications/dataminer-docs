@@ -2,7 +2,7 @@
 uid: Resources_module_UI_overview
 ---
 
-## Resources module UI overview
+# Resources module UI overview
 
 The module consist of a pane on the left, listing resource pools, and a pane on the right with three tabs, *resources*, *properties* and *occupancy*.
 

@@ -2,7 +2,7 @@
 uid: Turning_a_shape_into_a_control_to_update_a_session_variable
 ---
 
-## Turning a shape into a control to update a session variable
+# Turning a shape into a control to update a session variable
 
 Using a shape data field of type **SetVar**, you can turn a shape or a page into a control that allows users to update a session variable.
 
@@ -13,7 +13,7 @@ Using a shape data field of type **SetVar**, you can turn a shape or a page into
 > - [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable)
 > - [Embedding a router control component](xref:Embedding_a_router_control_component)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **SetVar** to the shape or the page, and set its value as described below.
 
@@ -74,7 +74,7 @@ Add a shape data field of type **SetVar** to the shape or the page, and set its 
 
     See [Configuring session variables to be set from trace points](xref:Linking_a_shape_to_a_trend_component#configuring-session-variables-to-be-set-from-trace-points).
 
-### Indicating the scope of the variable
+## Indicating the scope of the variable
 
 Session variables can have one of following scopes:
 
@@ -94,7 +94,7 @@ To a scope other than the default scope, add an additional shape data field of t
 | Current Visio page | PageVariable       |
 | Current workspace  | WorkspaceVariable. |
 
-### Examples
+## Examples
 
 ```txt
 MyVar

@@ -2,21 +2,21 @@
 uid: Discrete_analog_and_hybrid_parameters
 ---
 
-## Discrete, analog and hybrid parameters
+# Discrete, analog and hybrid parameters
 
-#### Discrete parameters
+### Discrete parameters
 
 These parameters can have one of a limited set of predefined values. These can for instance be different strings.
 
 For more information on how to update discrete parameters, see [Updating discrete parameters](xref:Updating_discrete_parameters).
 
-#### Analog parameters
+### Analog parameters
 
 These parameters can have a value within a predefined range delimited by a minimum and a maximum.
 
 For more information on how to update analog parameters, see [Updating analog parameters](xref:Updating_analog_parameters).
 
-#### Hybrid parameters
+### Hybrid parameters
 
 These parameters are similar to analog parameters, but can have a so-called exceptional, discrete value (e.g. “Undefined”).
 

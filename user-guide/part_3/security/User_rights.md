@@ -2,7 +2,7 @@
 uid: User_rights
 ---
 
-## User rights
+# User rights
 
 Users get access to the DataMiner System according to the rights that have been granted to their account.
 

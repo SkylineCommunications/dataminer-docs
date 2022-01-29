@@ -2,7 +2,7 @@
 uid: SLAnalytics_config
 ---
 
-## SLAnalytics.config
+# SLAnalytics.config
 
 Prior to DataMiner 9.5.5, this file is used to configure settings for the SLAnalytics process. It is located in the folder *C:\\Skyline DataMiner\\Files*.
 
@@ -13,7 +13,7 @@ Prior to DataMiner 9.5.5, this file is used to configure settings for the SLAnal
 > [!NOTE]
 > Changes made to the *SLAnalytics.config* file only take effect after a DataMiner restart.
 
-### TimeOfBackup and BackupInterval
+## TimeOfBackup and BackupInterval
 
 These settings determine the interval to back up the current prediction model in the file *Timeseries.models,* located in the folder *C:\\Skyline DataMiner\\Analytics*.
 
@@ -28,7 +28,7 @@ Both the *TimeOfBackup* and *BackupInterval* setting can contain a value indicat
 
 - *BackupInterval* has to contain a number equal to or greater than 5. If it contains a number smaller than 5, this setting will be disregarded. In that case, if *TimeOfBackup* contains a number of seconds equal to or greater than 0, only one backup will be taken.
 
-### arrowWindowLength and updateArrowTime
+## arrowWindowLength and updateArrowTime
 
 Available from DataMiner 9.0.5 onwards. These settings control the behavior of trend prediction icons:
 
@@ -36,7 +36,7 @@ Available from DataMiner 9.0.5 onwards. These settings control the behavior of t
 
 - **updateArrowTime**: The time between two updates of the trend icon when an element card stays open. Default value: 300 seconds (i.e. 5 minutes).
 
-### Example of SLAnalytics.config configuration
+## Example of SLAnalytics.config configuration
 
 ```xml
 <configuration version="1">

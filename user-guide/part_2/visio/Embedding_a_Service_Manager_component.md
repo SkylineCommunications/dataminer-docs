@@ -2,7 +2,7 @@
 uid: Embedding_a_Service_Manager_component
 ---
 
-## Embedding a Service Manager component
+# Embedding a Service Manager component
 
 From DataMiner 9.5.4 onwards, for systems with the appropriate licenses, it is possible to embed a Service Manager component in Visio. With this component, you can essentially embed the *Services* app in Visio.
 
@@ -18,7 +18,7 @@ In this section:
 
 - [Configuring command controls for a Service Manager component](#configuring-command-controls-for-a-service-manager-component)
 
-### Basic shape data field configuration
+## Basic shape data field configuration
 
 Configure the following shape data fields on the shape that is to contain the Service Manager component:
 
@@ -59,7 +59,7 @@ Configure the following shape data fields on the shape that is to contain the Se
     | Component          | ServiceManager                                                                                                                               |
     | ComponentOptions   | interface=definition;SessionVariablePrefix=SKYLINE;HideHeader=true;<br>HideTabs=true;HideNodeConfiguration=true;AutoLoadExternalChanges=true |
 
-### Using session variables with a Service Manager component
+## Using session variables with a Service Manager component
 
 The following session variables can be used in a Visual Overview containing a Service Manager component:
 
@@ -86,7 +86,7 @@ The following session variables can be used in a Visual Overview containing a Se
     | SetVar             | SKYLINESelectedServiceDefinition:00000000-0000-0000-0000-000000000000 |
     | Options            | CardVariable                                                          |
 
-### Configuring command controls for a Service Manager component
+## Configuring command controls for a Service Manager component
 
 From DataMiner 9.5.6 onwards, you can turn a shape into a command control that can be used to manipulate a Service Manager component. Depending on the configuration, the command control can be used to manipulate one particular component or several components, which can be on the same page, on the same card or anywhere in Cube.
 

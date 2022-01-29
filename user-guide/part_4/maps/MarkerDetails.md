@@ -2,7 +2,7 @@
 uid: MarkerDetails
 ---
 
-## MarkerDetails
+# MarkerDetails
 
 In the *\<MarkerDetails>* tag, placeholders can be defined so that marker images can be generated dynamically.
 

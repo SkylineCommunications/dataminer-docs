@@ -2,7 +2,7 @@
 uid: Testing_a_Correlation_rule
 ---
 
-## Testing a Correlation rule
+# Testing a Correlation rule
 
 To test a Correlation rule in DataMiner Cube:
 

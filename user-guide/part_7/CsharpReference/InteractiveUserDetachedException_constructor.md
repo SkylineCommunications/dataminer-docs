@@ -2,7 +2,7 @@
 uid: InteractiveUserDetachedException_constructor
 ---
 
-## InteractiveUserDetachedException constructor
+# InteractiveUserDetachedException constructor
 
 ```txt
 InteractiveUserDetachedException(string message)

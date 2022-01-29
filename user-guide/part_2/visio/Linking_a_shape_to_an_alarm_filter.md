@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_an_alarm_filter
 ---
 
-## Linking a shape to an alarm filter
+# Linking a shape to an alarm filter
 
 If you link a shape to an alarm filter, it can be used to show statistical information about the alarms that match the filter.
 
@@ -49,7 +49,7 @@ Configure the shape data fields as follows:
     |--------------------|--------------------|
     | AlarmTab           | Name=MyFilteredTab |
 
-### Placeholders
+## Placeholders
 
 The value of an **AlarmSummary** shape data field can contain dynamic placeholders like \[param:...\], etc. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 

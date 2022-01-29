@@ -2,7 +2,7 @@
 uid: Changing_the_way_table_parameters_are_loaded
 ---
 
-## Changing the way table parameters are loaded
+# Changing the way table parameters are loaded
 
 By default, lazy loading is activated for table parameters in Cube. This means that table parameters are only loaded when the page containing the table parameter is opened.
 

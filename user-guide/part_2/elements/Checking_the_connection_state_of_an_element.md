@@ -2,7 +2,7 @@
 uid: Checking_the_connection_state_of_an_element
 ---
 
-## Checking the connection state of an element
+# Checking the connection state of an element
 
 To check the connection state of an element:
 

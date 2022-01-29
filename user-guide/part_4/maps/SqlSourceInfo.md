@@ -2,7 +2,7 @@
 uid: SqlSourceInfo
 ---
 
-## SqlSourceInfo
+# SqlSourceInfo
 
 In the *\<SqlSourceInfo>* tag, you have to specify the SQL SELECT statement that has to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
 
@@ -22,15 +22,15 @@ In the *\<SqlSourceInfo>* tag, you have to specify the SQL SELECT statement that
     > [!NOTE]
     > If there is no *dataminerVAr* attribute or if the specified DMA does not exist, the DMA specified in the *\<DataMinerID>* subtag will be used instead.
 
-### SqlSourceInfo subtags
+## SqlSourceInfo subtags
 
 Inside the *\<SqlSourceInfo>* tag, specify the following tags.
 
-#### DataMinerID
+### DataMinerID
 
 The DataMiner ID of the DMA that hosts the database containing the table from which the marker coordinates will be retrieved.
 
-#### Target
+### Target
 
 The name of the database containing the table from which the marker coordinates will be retrieved.
 
@@ -44,14 +44,14 @@ Possible values:
 
 Default: local
 
-#### Sql
+### Sql
 
 The SELECT statement that will retrieve the necessary data.
 
 > [!NOTE]
 > In this statement, you can use the *\[DMA_USERNAME\]* placeholder. At runtime, it will be replaced by the name of the current user.
 
-### Example
+## Example
 
 ```xml
 <Layer sourceType="sql" refresh="20000">
@@ -72,7 +72,7 @@ The SELECT statement that will retrieve the necessary data.
 </Layer>
 ```
 
-### Structure of the database table
+## Structure of the database table
 
 The records in the database table from which to retrieve the marker coordinates have to contain the following fields.
 
@@ -92,7 +92,7 @@ The name of the database table as well as the names of the table fields can be c
 > [!NOTE]
 > In case of normal, point-shaped markers, only Latitude and Longitude are mandatory fields. In case of line-shaped markers, also the Latitude2 and Longitude2 fields are mandatory.
 
-### Date picker controls
+## Date picker controls
 
 On layers of sourcetype “sql”, you can display date picker controls. That way, you can allow users to specify the dates used in the SQL statement.
 

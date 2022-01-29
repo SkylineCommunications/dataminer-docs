@@ -2,7 +2,7 @@
 uid: AutomationEntryPointDelegates_UninstallApp_Delegate
 ---
 
-## AutomationEntryPointDelegates.UninstallApp Delegate
+# AutomationEntryPointDelegates.UninstallApp Delegate
 
 Delegate type for App package uninstallation.
 

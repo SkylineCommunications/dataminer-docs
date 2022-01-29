@@ -2,9 +2,9 @@
 uid: Advanced_protocol_functionality
 ---
 
-## Advanced protocol functionality
+# Advanced protocol functionality
 
-### Generating a protocol-specific MIB
+## Generating a protocol-specific MIB
 
 If you want to be able to control an element using a particular protocol version via SNMP, you have to create a MIB file based on the parameter information found in that protocol version.
 
@@ -19,7 +19,7 @@ To do so, in DataMiner Cube:
 
 3. In the *Save As* dialog box, select a name and a location for the MIB that is about to be generated, and click *Save*.
 
-### Generating a list of all parameters in a protocol version
+## Generating a list of all parameters in a protocol version
 
 In DataMiner Cube, you can export the parameters for a particular protocol, or for an element using this protocol. If you export the parameters for an element, the export will include any element-specific changes towards the general protocol, such as parameter description overrides.
 
@@ -42,7 +42,7 @@ To export the parameters of a protocol version or an element using the protocol:
     >
     > For example: *0:Disconnected\|1:Connecting\|2:Connected\|3:Disconnecting\|4:Hardware Not Present\|5:Hardware Disabled\|6:Hardware Malfunction\|7:Media Disconnected\|8:Authenticating\|9:Authentication Succeeded\|10:Authentication Failed*
 
-### Making changes to a protocol.xml file
+## Making changes to a protocol.xml file
 
 DataMiner Cube features a Protocol Editor functionality that can be used to make small changes to a *Protocol.xml* file.
 

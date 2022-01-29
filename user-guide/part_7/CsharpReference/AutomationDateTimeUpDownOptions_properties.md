@@ -2,7 +2,7 @@
 uid: AutomationDateTimeUpDownOptions_properties
 ---
 
-## AutomationDateTimeUpDownOptions properties
+# AutomationDateTimeUpDownOptions properties
 
 - [AllowSpin](#allowspin)
 
@@ -22,7 +22,7 @@ uid: AutomationDateTimeUpDownOptions_properties
 
 - [UpdateValueOnEnterKey](#updatevalueonenterkey)
 
-#### AllowSpin
+### AllowSpin
 
 Enables or disables the spinner button.
 
@@ -32,7 +32,7 @@ bool AllowSpin
 
 Default: True
 
-#### ClipValueToMinMax
+### ClipValueToMinMax
 
 Enables or disables the *ClipValueToMinMax* option.
 
@@ -42,7 +42,7 @@ bool ClipValueToMinMax
 
 Default: False
 
-#### Format
+### Format
 
 Gets or sets the date and time format used by the date-time up-down control.
 
@@ -82,7 +82,7 @@ Default:
 DateTimeFormat.Custom
 ```
 
-#### FormatString
+### FormatString
 
 Gets or sets the date-time format to be used by the control when Format is set to 'Custom'.
 
@@ -92,7 +92,7 @@ String FormatString
 
 Default: G (from DataMiner 9.5.4 onwards; previously the default value was null)
 
-#### Kind
+### Kind
 
 Gets or sets the DateTimeKind (.NET) used by the datetime up-down control.
 
@@ -106,7 +106,7 @@ Default:
 DateTimeKind.Unspecified
 ```
 
-#### Maximum
+### Maximum
 
 Gets or sets the maximum timestamp.
 
@@ -120,7 +120,7 @@ Default:
 DateTime.MaxValue
 ```
 
-#### Minimum
+### Minimum
 
 Gets or sets the minimum timestamp.
 
@@ -134,7 +134,7 @@ Default:
 DateTime.MinValue
 ```
 
-#### ShowButtonSpinner
+### ShowButtonSpinner
 
 Show or hides the spinner button.
 
@@ -144,7 +144,7 @@ bool ShowButtonSpinner
 
 Default: True
 
-#### UpdateValueOnEnterKey
+### UpdateValueOnEnterKey
 
 Enables or disables the option to trigger an update with the control when the Enter key is pressed.
 

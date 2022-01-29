@@ -2,7 +2,7 @@
 uid: Adding_options_to_a_parameter_control
 ---
 
-## Adding options to a parameter control
+# Adding options to a parameter control
 
 If you used a shape data field of type **ParameterControl** to turn a shape into a parameter control, then you can use an additional shape data field of type **ParameterControlOptions** to configure the control settings.
 
@@ -10,7 +10,7 @@ If you used a shape data field of type **ParameterControl** to turn a shape into
 > See also:
 > [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **ParameterControlOptions** to the shape, and set its value to:
 
@@ -18,7 +18,7 @@ Add a shape data field of type **ParameterControlOptions** to the shape, and set
 Option|Option|...
 ```
 
-### Options
+## Options
 
 Possible options:
 
@@ -72,7 +72,7 @@ Possible options:
 
 - [ValueFont](#valuefont)
 
-#### Checkbox
+### Checkbox
 
 If certain types of parameters are displayed as a “Lite” parameter, you can use this option to display a checkbox. This is the case for toggle button parameters that represent a boolean value (i.e. 0 and 1) and for hybrid parameters:
 
@@ -93,7 +93,7 @@ IncludeWrite|Lite|CheckBox
 > See also:
 > [IncludeWrite](#includewrite)<br> [Lite](#lite)
 
-#### ClientSidePollingInterval
+### ClientSidePollingInterval
 
 Available from DataMiner 10.0.9 onwards. When you have turned a shape into a table control that displays a direct view table, you can use this option to have the table refreshed at regular intervals.
 
@@ -101,7 +101,7 @@ Available from DataMiner 10.0.9 onwards. When you have turned a shape into a tab
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ParameterControlOptions | *ClientSidePollingInterval:\<interval>*<br> For example: To configure a polling interval of 1 minute, specify *ClientSidePollingInterval:00:01:00*. |
 
-#### ClientSideRowFilter
+### ClientSideRowFilter
 
 When displaying a table parameter in Visio, use this option to specify a client-side row filter.
 
@@ -112,7 +112,7 @@ If, for example, you set **ParameterControlOptions** to “*ClientSideRowFilter:
 > [!NOTE]
 > Since DataMiner 9.6.4, table column names in DataMiner Cube no longer display the name of the table as a suffix in parentheses. As such, from DataMiner 9.6.8 onwards, *ClientSideRowFilter* supports both the table name with and without this suffix. For example, a column with parameter description "Value (Table1)", will match both the filter *Value:5* and "*Value (Table1)":5*.
 
-#### ColumnWidths
+### ColumnWidths
 
 When displaying a table parameter in Visio, use this option to control the width of the table columns.
 
@@ -134,7 +134,7 @@ ColumnWidths:100,50,100,a
 > - The width of an “autosize” column will not be recalculated when cell content changes, nor when the user scrolls the list (in order to avoid flickering). However, it will be recalculated when rows are added or removed.
 > - The autosize behavior of a column will be disabled if that column is resized manually. To re-enable the autosize behavior, the user has to double-click the column resize icon.
 
-#### CustomColors
+### CustomColors
 
 When you turn a shape into a parameter control of type “Lite” (see below), you can use the “CustomColors” option to customize the colors of that parameter control.
 
@@ -156,11 +156,11 @@ IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuff
 > - If no custom color is defined, the control will take the default color depending on the current Cube theme (white/black).
 > - Colors can be specified in one of the following hexadecimal formats: #RRGGBB, #AARRGGBB, RRGGBB, AARRGGBB. Values can be separated with a comma or a semicolon.
 
-#### CustomTextBoxInfo:\[Text\]
+### CustomTextBoxInfo:\[Text\]
 
 See [Adding a filter box to a table control](xref:Turning_a_shape_into_a_parameter_control#adding-a-filter-box-to-a-table-control).
 
-#### CustomTitle:\[Text\]
+### CustomTitle:\[Text\]
 
 When you turn a shape into a parameter control of type “Lite”, you can use the “CustomTitle” option to specify a custom label.
 
@@ -171,7 +171,7 @@ When you turn a shape into a parameter control of type “Lite”, you can use t
 > See also:
 > [Lite](#lite)
 
-#### DisableSetVarOnParameterUpdate
+### DisableSetVarOnParameterUpdate
 
 When the cells of one or more selected rows are changed in a table update, by default, the values of selection session variables are set again. From DataMiner 9.6.1 onwards, this behavior can be disabled with the *DisableSetVarOnParameterUpdate* option. If this option is specified, table updates will no longer set any session variables.
 
@@ -183,7 +183,7 @@ For example:
 | ParameterControl        | 500                            |
 | ParameterControlOptions | DisableSetVarOnParameterUpdate |
 
-#### DisableWritePids
+### DisableWritePids
 
 When displaying a dynamic table on a Visio page using a shape data field of type **ParameterControl**, it is possible to specify which columns should be displayed as read-only.
 
@@ -195,7 +195,7 @@ In the following example, the write parameters 1005, 1007 and 1009 have been dis
 DisableWritePids:1005,1007,1009
 ```
 
-#### DoubleClickAction
+### DoubleClickAction
 
 From DataMiner 9.5.12 onwards, it is possible to override the default double-click action for an embedded table parameter control, so that double-clicking a table cell does not display parameter information, but instead opens a visual overview in an undocked window.
 
@@ -217,25 +217,25 @@ For example:
 | LinkOptions             | Width=1200\|Height=800     |
 | VdxPage                 | ContentPage\|Window        |
 
-#### Filter
+### Filter
 
 See [Adding a filter box to a table control](xref:Turning_a_shape_into_a_parameter_control#adding-a-filter-box-to-a-table-control).
 
-#### HideSlider
+### HideSlider
 
 If you specify this option on numeric write parameters, the slider will be removed from the parameter control.
 
-#### HideTableIndex
+### HideTableIndex
 
 If you specify this option, the index part of table parameters will not be displayed.
 
-#### IncludeWrite
+### IncludeWrite
 
 If, in the shape data field of type **ParameterControl**, you have specified a read parameter, then you can add the “*IncludeWrite*” option to allow users to change the parameter value via the associated write parameter.
 
 If, in the shape data field of type **ParameterControl**, you have specified a write parameter, there is no need to specify this “*IncludeWrite*” option.
 
-#### IncludedPids and TableRowFilter
+### IncludedPids and TableRowFilter
 
 Using the “IncludedPids” and “TableRowFilter” options in **ParameterControlOptions**, you can filter out specific columns and rows when **ParameterControl** refers to a dynamic table.
 
@@ -278,11 +278,11 @@ TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1)
 > - From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
 > - Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)). E.g. *\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)*
 
-#### LedBar
+### LedBar
 
 Parameter controls that display analog parameters can be displayed either as a LED bar or as an oscilloscope. The user can switch between the two display modes via the context menu. Specify “*LedBar*” in the **ParameterControlOptions** to make sure the parameter control is initially displayed as a LED bar.
 
-#### Lite
+### Lite
 
 Specify this option if you want to use the “Lite” version of a parameter control. These types of controls occupy less space on the screen as they combine the read and write parameters on a single line.
 
@@ -296,7 +296,7 @@ If you specify this option, you can also add additional options to customize the
 
 - [ValueFont](#valuefont)
 
-#### MultipleValueSep
+### MultipleValueSep
 
 In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, when multiple rows are selected, the default separator is a pipe character ("\|"). With the *MultipleValueSep* option, you can specify a different separator. To do so, add the separator of your choice after “*MultipleValueSep=*”.
 
@@ -309,26 +309,26 @@ MultipleValueSep=;
 > [!NOTE]
 > For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
 
-#### Oscilloscope
+### Oscilloscope
 
 Parameter controls that display analog parameters can be displayed either as a LED bar or as an oscilloscope. The user can switch between the two display modes via the context menu. Specify “*Oscilloscope*” in the **ParameterControlOptions** to make sure the parameter control is initially displayed as an oscilloscope.
 
-#### ShowTableName=true
+### ShowTableName=true
 
 If the parameter control is based on a table parameter, from DataMiner version 10.0.0 up to 10.0.9, by default the table name is also displayed. This is no longer the case from DataMiner 10.0.10 onwards. To still have the table name displayed from this DataMiner version onwards, add the parameter control option *ShowTableName=true*.
 
-#### SingleSelection
+### SingleSelection
 
 In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, you can use this option on the table parameter control to make sure that only a single row can be selected.
 
 > [!NOTE]
 > For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
 
-#### Table
+### Table
 
 See [Adding a filter box to a table control](xref:Turning_a_shape_into_a_parameter_control#adding-a-filter-box-to-a-table-control).
 
-#### TitleFont
+### TitleFont
 
 When you turn a shape into a parameter control of type “Lite”, from DataMiner 9.5.4 onwards, you can use the *TitleFont* option to customize the font of the parameter label.
 
@@ -354,14 +354,14 @@ Example:
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | ParameterControlOptions | Lite\|TitleFont:Family=Calibri;Size=32;Stretch=Condensed;Weight=Bold;<br>Style=Italic;Underline\|ValueFont:Family=Arial;Size=14 |
 
-#### UpdateSelectionOnLinkedVariables
+### UpdateSelectionOnLinkedVariables
 
 In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, you can use this option on the table parameter control to make sure the linked session variables are monitored, and the selected row is updated.
 
 > [!NOTE]
 > For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
 
-#### ValueFont
+### ValueFont
 
 When you turn a shape into a parameter control of type “Lite”, from DataMiner 9.5.4 onwards, you can use the *ValueFont* option to customize the font used for the parameter value.
 

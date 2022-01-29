@@ -2,7 +2,7 @@
 uid: Adding_a_regular_DataMiner_Agent
 ---
 
-## Adding a regular DataMiner Agent
+# Adding a regular DataMiner Agent
 
 > [!TIP]
 > See also:

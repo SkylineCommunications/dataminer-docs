@@ -2,7 +2,7 @@
 uid: Changing_parameter_names_for_a_particular_element
 ---
 
-## Changing parameter names for a particular element
+# Changing parameter names for a particular element
 
 To change the names of parameters for one particular element.
 

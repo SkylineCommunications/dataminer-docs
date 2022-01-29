@@ -2,7 +2,7 @@
 uid: Configuring_LDAP_settings
 ---
 
-## Configuring LDAP settings
+# Configuring LDAP settings
 
 DataMiner supports any LDAP compatible directory (e.g. OpenLDAP) as an alternative to Active Directory for importing users and groups into a DMA.
 
@@ -16,7 +16,7 @@ This section contains the following information on the configuration of LDAP set
 
 - [Automatic refresh of group membership and user information](#automatic-refresh-of-group-membership-and-user-information)
 
-### Configuring LDAP settings in DataMiner Cube
+## Configuring LDAP settings in DataMiner Cube
 
 From DataMiner 9.5.5 onwards, most custom LDAP settings can be configured in DataMiner Cube.
 
@@ -69,7 +69,7 @@ To do so:
 
 4. Click the *Apply* button in the lower right corner.
 
-### LDAP section in DataMiner.xml
+## LDAP section in DataMiner.xml
 
 To establish a link between a DMA and an LDAP other than Active Directory, open the *DataMiner.xml* file and add or modify the *\<LDAP>* tag (which should contain all necessary LDAP server settings).
 
@@ -80,7 +80,7 @@ To establish a link between a DMA and an LDAP other than Active Directory, open 
 > See also:
 > [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 
-#### OpenLDAP
+### OpenLDAP
 
 The following example shows how Global Telecom Company (“GTC”) has configured the LDAP tag for OpenLDAP:
 
@@ -107,7 +107,7 @@ The following example shows how Global Telecom Company (“GTC”) has configure
 </LDAP>
 ```
 
-#### Active Directory
+### Active Directory
 
 The following example shows how Global Telecom Company (“GTC”) has configured the LDAP tag for Active Directory:
 
@@ -140,7 +140,7 @@ The following example shows how Global Telecom Company (“GTC”) has configure
 > [!NOTE]
 > Normally, when using Active Directory, you do not have to add an \<LDAP> tag. However, if you have to specify non-default settings (e.g. when you want to link to a secondary domain controller), add an \<LDAP> tag and specify all necessary settings.
 
-### Remarks regarding LDAP settings
+## Remarks regarding LDAP settings
 
 - If no naming context is specified, in case of Active Directory, it will be auto-discovered. When OpenLDAP is used, a naming context should be specified. In *DataMiner.xml*, this is done using the *namingContext* attribute.
 
@@ -187,7 +187,7 @@ The following example shows how Global Telecom Company (“GTC”) has configure
     > [!NOTE]
     > This timeout applies to every individual LDAP query. As a result, a request to refresh all groups (which consists of multiple requests) could have a total timeout that is much larger than the configured value.
 
-### Automatic refresh of group membership and user information
+## Automatic refresh of group membership and user information
 
 When using Active Directory, group and user data are refreshed automatically. However, for versions of DataMiner prior to DataMiner 7.5, if you are using an LDAP-compatible directory other than Active Directory and you want to have group and user data refreshed automatically, you should create a scheduled task that executes a JavaScript file containing the following code:
 

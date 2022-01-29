@@ -2,7 +2,7 @@
 uid: DataMiner_xml
 ---
 
-## DataMiner.xml
+# DataMiner.xml
 
 In the file *DataMiner.xml*, you can specify a number of general system settings.
 
@@ -12,7 +12,7 @@ In the file *DataMiner.xml*, you can specify a number of general system settings
 
 - Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
-### Example
+## Example
 
 This is an example of a *DataMiner.xml* file:
 
@@ -38,7 +38,7 @@ This is an example of a *DataMiner.xml* file:
 </DataMiner>
 ```
 
-### Alphabetical overview of settings
+## Alphabetical overview of settings
 
 Below you can find an alphabetical overview of settings that can be specified in the *DataMiner.xml* file.
 

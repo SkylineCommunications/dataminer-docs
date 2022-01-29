@@ -2,7 +2,7 @@
 uid: Configuring_Indexing_backups
 ---
 
-## Configuring Indexing backups
+# Configuring Indexing backups
 
 Backups of the Indexing database are not included in a DataMiner restore package. Instead, the backups are stored at a fixed location, which must be specified during the installation of DataMiner Indexing (see [Installing DataMiner Indexing Engine](xref:Installing_DataMiner_Indexing_Engine)). This location is the same for all Indexing servers in the cluster.
 

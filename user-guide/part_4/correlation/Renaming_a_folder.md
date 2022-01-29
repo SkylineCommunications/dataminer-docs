@@ -2,7 +2,7 @@
 uid: Renaming_a_folder
 ---
 
-## Renaming a folder
+# Renaming a folder
 
 You can change the name of a folder in the following ways:
 

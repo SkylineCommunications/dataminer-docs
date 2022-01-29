@@ -2,7 +2,7 @@
 uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
 ---
 
-## Migrating the general database to a DMS Cassandra cluster
+# Migrating the general database to a DMS Cassandra cluster
 
 From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as the general database for the entire DataMiner System. Previously it was already possible to use a separate Cassandra cluster for each DataMiner node. However, DataMiner 10.1.0/10.1.2 introduces the “Cassandra cluster” feature, which allows you to have all DataMiner nodes in a DataMiner System use one and the same Cassandra cluster as their general database.
 
@@ -15,13 +15,13 @@ From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as 
 > - [DMA in a DMS using a Cassandra cluster](xref:General_DMA_configuration#dma-in-a-dms-using-a-cassandra-cluster)
 > - [General database settings](xref:DB_xml#general-database-settings)
 
-### Installation and configuration
+## Installation and configuration
 
-#### Starting from an SQL setup
+### Starting from an SQL setup
 
 If your DataMiner System currently uses SQL databases, from DataMiner 10.2.0/10.2.2 onwards, you can use a migrator tool to switch to a Cassandra cluster setup. For more information, see [Cassandra Cluster migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/).
 
-#### Starting from a Cassandra setup
+### Starting from a Cassandra setup
 
 If you are already using a Cassandra database for each DMA, to switch to using the Cassandra cluster feature for your DMS, from DataMiner 10.2.0/10.2.2 onwards, you can also use the [Cassandra Cluster migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/). 
 
@@ -56,17 +56,17 @@ For earlier DataMiner versions, follow the procedure below.
 
 8. Once you are sure you no longer need the old database data as a backup (e.g. a few months after the migration), remove the old database data folders (by default *C:\\ProgramData\\Cassandra\\SLDMADB* and *C:\\ProgramData\\Cassandra\\sldmadb_ticketing*).
 
-### Limitations
+## Limitations
 
 - .dmimport packages created on a DMS using a Cassandra cluster do not contain any database data, and it is not possible to import database data from .dmimport packages into such a DMS.
 
 - If the Cassandra cluster feature is used, alarm and information event information is always migrated to Elasticsearch. It is not possible to use this feature without enabling indexing on alarms.
 
-### Cluster health monitoring
+## Cluster health monitoring
 
 If a Cassandra node in the cluster goes down or if a Cassandra node is down when DataMiner starts up, an alarm will be generated in the Alarm Console. This alarm also indicates how much the health of the cluster is affected by the node being down, as this depends on multiple factors, including the cluster size and replication factor.
 
-### Customizing the consistency level of the Cassandra cluster
+## Customizing the consistency level of the Cassandra cluster
 
 When the Cassandra cluster feature is used, you can customize the consistency level for the Cassandra queries. You can do so as follows:
 

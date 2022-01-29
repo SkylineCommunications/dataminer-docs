@@ -2,7 +2,7 @@
 uid: AutomationDateTimePickerOptions_properties
 ---
 
-## AutomationDateTimePickerOptions properties
+# AutomationDateTimePickerOptions properties
 
 - [AutoCloseCalendar](#autoclosecalendar)
 
@@ -23,7 +23,7 @@ uid: AutomationDateTimePickerOptions_properties
 > [!NOTE]
 > All properties of the *AutomationDateTimeUpDownOptions* class can also be used.
 
-#### AutoCloseCalendar
+### AutoCloseCalendar
 
 When true, the calendar pop-up will close when the user clicks a new date.
 
@@ -33,7 +33,7 @@ bool AutoCloseCalendar
 
 Default: False
 
-#### CalendarDisplayMode
+### CalendarDisplayMode
 
 Gets or sets the display mode of the calendar inside the date-time picker control.
 
@@ -55,7 +55,7 @@ Default:
 CalendarMode.Month
 ```
 
-#### ShowDropDownButton
+### ShowDropDownButton
 
 Enables or disables the drop-down button to show the calendar control.
 
@@ -65,7 +65,7 @@ bool ShowDropDownButton
 
 Default: True
 
-#### TimeFormat
+### TimeFormat
 
 Gets or sets the time format.
 
@@ -101,7 +101,7 @@ Default:
 DateTimeFormat.ShortTime
 ```
 
-#### TimeFormatString
+### TimeFormatString
 
 Gets or sets the time format string used when TimeFormat is set to “Custom”.
 
@@ -109,7 +109,7 @@ Gets or sets the time format string used when TimeFormat is set to “Custom”.
 String TimeFormatString
 ```
 
-#### TimePickerAllowSpin
+### TimePickerAllowSpin
 
 Enables or disables the spinner button of the calendar control.
 
@@ -119,7 +119,7 @@ bool TimePickerAllowSpin
 
 Default: True
 
-#### TimePickerShowButtonSpinner
+### TimePickerShowButtonSpinner
 
 Shows or hides the spin box of the calendar control.
 
@@ -129,7 +129,7 @@ bool TimePickerShowButtonSpinner
 
 Default: False
 
-#### TimePickerVisible
+### TimePickerVisible
 
 Shows or hides the time picker within the calendar control.
 

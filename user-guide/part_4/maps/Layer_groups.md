@@ -2,11 +2,11 @@
 uid: Layer_groups
 ---
 
-## Layer groups
+# Layer groups
 
 In the *\<ToggleGroups>* tag of a map configuration file, add a *\<Group>* tag for every layer group you want to define.
 
-### Defining layer groups
+## Defining layer groups
 
 A *\<Group>* tag can have the following two attributes:
 
@@ -38,7 +38,7 @@ On the map, the above-mentioned code will be rendered in the following way. Noti
 > - All layers of which the *\<Layer>* tag does not contain a toggleGroup attribute will be put into a default layer group called “Layers”.
 > - If you put multiple layers with the same name into the same layer group, then those layers will be merged and represented by one single layer in that layer group. This means that when you activate that single layer, all layers that were merged into it will become visible.
 
-### Separators in layer groups
+## Separators in layer groups
 
 In a layer group, you can insert separators by defining dummy layers of sourceType “separator”. Layers of this type do not have any function other than displaying a kind of “section title” in a layer group.
 
@@ -64,7 +64,7 @@ On the map, the above-mentioned code will be rendered in the following way.
 
 
 
-### Text color and background color of layer group items
+## Text color and background color of layer group items
 
 It is possible to change both the text color and the background color of any item in a layer group, whatever its sourceType.
 

@@ -2,7 +2,7 @@
 uid: Changing_the_display_settings_for_analog_parameters
 ---
 
-## Changing the display settings for analog parameters
+# Changing the display settings for analog parameters
 
 You can specify whether analog parameters are displayed as a LED bar or as an oscilloscope:
 
@@ -10,7 +10,7 @@ You can specify whether analog parameters are displayed as a LED bar or as an os
 
 - by determining the preferred display mode in the user settings. See [Data Display settings](xref:User_settings#data-display-settings).
 
-### LED bar
+## LED bar
 
 A LED bar shows the current value of a parameter on a scale that represents its entire range.
 
@@ -22,7 +22,7 @@ If the parameter is being monitored, different parts of the LED bar will be colo
 
 If the parameter is not being monitored, all these parts will be white.
 
-### Oscilloscope
+## Oscilloscope
 
 An oscilloscope shows the evolution of a parameter value on a time scale.
 

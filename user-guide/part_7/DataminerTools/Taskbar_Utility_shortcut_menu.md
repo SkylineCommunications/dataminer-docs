@@ -2,7 +2,7 @@
 uid: Taskbar_Utility_shortcut_menu
 ---
 
-## Taskbar Utility shortcut menu
+# Taskbar Utility shortcut menu
 
 When you right-click the DataMiner Taskbar Utility system tray icon, a menu appears with the following commands:
 

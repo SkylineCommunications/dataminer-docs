@@ -2,7 +2,7 @@
 uid: Components_for_one_single_element_or_service
 ---
 
-## Components for one single element or service
+# Components for one single element or service
 
 For one single element or service, the following building blocks are available in report templates:
 
@@ -46,7 +46,7 @@ For one single element or service, the following building blocks are available i
 
 - [Visual Overview](#visual-overview)
 
-### Alarm Distribution Graph
+## Alarm Distribution Graph
 
 Graph showing the distribution of alarms over a selected time span, with several options:
 
@@ -56,7 +56,7 @@ Graph showing the distribution of alarms over a selected time span, with several
 
 - It is possible to include only certain severities.
 
-### Alarm List
+## Alarm List
 
 Overview of an element’s active alarms or historic alarms, with the following options:
 
@@ -70,11 +70,11 @@ Overview of an element’s active alarms or historic alarms, with the following 
 
 - You can choose to sort the list either by element name or by alarm time.
 
-### Alarm State
+## Alarm State
 
 Pie graph showing how long an element or service has been in each alarm state. You can choose between many different time spans, or set a custom time span.
 
-### CPE
+## CPE
 
 Only available in a DMS with EPM (formerly known as CPE) implementation. The following items can be displayed with this component:
 
@@ -105,7 +105,7 @@ When you generate a report with this component, you can then:
 > [!NOTE]
 > If the report is generated as Excel/CSV, at most 1 million total table rows of a partial table can be displayed. If the report is generated as HTML/MHT, only the first page of a partial table will be displayed, using the page size configured in the protocol.
 
-### DMS Status
+## DMS Status
 
 General information about the DMS. The displayed information will contain:
 
@@ -115,11 +115,11 @@ General information about the DMS. The displayed information will contain:
 
 - DataMiner version number and build ID.
 
-### Element/Service info
+## Element/Service info
 
 General information about the element or service.
 
-### Heat Map
+## Heat Map
 
 Heat map with average trend values. The following options are available:
 
@@ -127,26 +127,26 @@ Heat map with average trend values. The following options are available:
 
 - You can choose between three options for the way the colors will be applied: *Highlight Highest Values*, *Highlight Lowest Values*, *Apply Alarm Template*.
 
-### Info Table
+## Info Table
 
 List of active alarms or list of documents for the element, depending on your selection.
 
-### New Alarm Types
+## New Alarm Types
 
 Pie graph showing the number of alarms for each alarm severity. You can choose between many different time spans, or set a custom time span.
 
-### Parameter Reports
+## Parameter Reports
 
 A parameter report with current reading and trending information for each parameter contained in the report. Each parameter will be displayed with a background color matching its alarm state.
 
 > [!NOTE]
 > Up to DataMiner 9.5.11, this component only supports element parameters, not parameters of enhanced services.
 
-### Bookings / Reservations
+## Bookings / Reservations
 
 Available from DataMiner 9.5.4 onwards on systems with the appropriate Service & Resource Management licenses. See [Bookings / Reservations component of custom templates](xref:Bookings_Reservations_component_of_custom_templates#bookings--reservations-component-of-custom-templates).
 
-### SLA Historic Service Alarm List
+## SLA Historic Service Alarm List
 
 Only applicable for SLA elements. This component shows a table with an overview of historic service alarms for the SLA, with above this a summary listing the following items:
 
@@ -184,11 +184,11 @@ The following options are available:
     > See also:
     > [Setting the offline window for an SLA](xref:Setting_the_offline_window_for_an_SLA)
 
-### Spectrum Buffers
+## Spectrum Buffers
 
 Only applicable for Spectrum Analyzer elements. Shows the contents of the last measured trace for each of the available spectrum monitor buffers.
 
-### State Timeline
+## State Timeline
 
 A timeline showing the alarm state of the element or service in the selected time span. The following options are available:
 
@@ -198,7 +198,7 @@ A timeline showing the alarm state of the element or service in the selected tim
 
 - You can choose to only show the *Textual Overview*, instead of the timeline.
 
-### State Timeline (Parameters)
+## State Timeline (Parameters)
 
 A timeline showing the alarm state of the selected parameters in the selected time span. The following options are available:
 
@@ -208,7 +208,7 @@ A timeline showing the alarm state of the selected parameters in the selected ti
 
 - You can choose to only show the *Textual Overview*, instead of the timeline.
 
-### Status Report
+## Status Report
 
 Overview of the status of each parameter. Parameters that are in an alarm state will have a matching background color. For parameters that have average trending enabled, a clickable link will allow you to go to the trend graph for that parameter.
 
@@ -222,7 +222,7 @@ The following options are available for this component:
 
 - To add tables as an Excel attachment to an email report, select *Add tables as Excel attachment also*. The report will then have a link to the Excel file next to all of its status report tables. Only one Excel file, named ExcelTableData.xls, will be included in the email report, with different tables on different worksheets in the file.
 
-### Status Query
+## Status Query
 
 Overview of parameter states of all elements using the same protocol as the current element. The following options are available:
 
@@ -234,7 +234,7 @@ Overview of parameter states of all elements using the same protocol as the curr
 > - To view parameters of multiple elements or protocols, up to DataMiner 9.5.12, add this component in an “Elements/Services container” building block, in a template type for multiple elements/services. From DataMiner 9.5.13 onwards, this component is also available in templates for multiple elements/services. See [Status Query](xref:Components_for_multiple_elements_or_services#status-query).
 > - From DataMiner 9.6.0 CU23/10.0.0 CU13/10.1.0 CU2/10.1.5 onwards, if a report containing a status query is exported to CSV/Excel, the status query result will be included as a separate CSV file or Excel table.
 
-### Trend Graphs
+## Trend Graphs
 
 Trend graph per parameter, with the following options:
 
@@ -244,7 +244,7 @@ Trend graph per parameter, with the following options:
 
 - To add an overview comparing the data with a previous time span, select *Include overview instead of TOC*.
 
-### Top Parameters
+## Top Parameters
 
 Overview of the parameters that had the most alarm events in a selected time span. The following options are available:
 
@@ -252,6 +252,6 @@ Overview of the parameters that had the most alarm events in a selected time spa
 
 - The list can be limited to 10, 20, 30, 40 or 50 parameters.
 
-### Visual Overview
+## Visual Overview
 
 The Visual Overview for the element or service.

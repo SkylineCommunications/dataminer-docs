@@ -2,7 +2,7 @@
 uid: Creating_a_range_slider_control
 ---
 
-## Creating a range slider control
+# Creating a range slider control
 
 In a Visio file, you can draw a range slider that visualizes and controls a certain parameter.
 

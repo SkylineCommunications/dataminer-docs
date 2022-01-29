@@ -2,7 +2,7 @@
 uid: Embedding_a_Resource_Manager_component
 ---
 
-## Embedding a Resource Manager component
+# Embedding a Resource Manager component
 
 For DMAs with a Resource Manager license, it is possible to embed a Resource Manager component in Visual Overview, which will allow users to get a timeline overview of which bookings have been made.
 
@@ -23,7 +23,7 @@ In this section:
 
 - [Customizing the color of booking blocks](#customizing-the-color-of-booking-blocks)
 
-### Configuring the shape data fields of the timeline component
+## Configuring the shape data fields of the timeline component
 
 When you have created the shape that should display the Resource Manager timeline, add a shape data field of type **Component** to it, and set its value to “*Reservations*” or “*Bookings*”.
 
@@ -51,7 +51,7 @@ Please note the following regarding this component:
 
 - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Creating a list view](xref:Creating_a_list_view).
 
-### Adding session variable controls for a Resource Manager component
+## Adding session variable controls for a Resource Manager component
 
 When you have linked a shape to a Resource Manager timeline, you can add shapes that update session variables to the Visio drawing, in order to make it possible for users to determine what is displayed on the timeline.
 
@@ -73,7 +73,7 @@ The following session variables can be used specifically for a Resource Manager 
 
 - [YAxisResources](#yaxisresources)
 
-#### ReservationsFilter
+### ReservationsFilter
 
 To allow users to specify which booking blocks are displayed on the resource bands, use the session variable *ReservationsFilter*.
 
@@ -86,7 +86,7 @@ Use the *ALL* keyword if you want to clear the filter and display all bookings. 
 | SetVar           | ReservationsFilter:Resource=Antenna 2 |
 | SetVar           | ReservationsFilter:ALL                |
 
-#### Navigate
+### Navigate
 
 To turn separate shapes into navigation controls, use the session variable *Navigate* on those shapes.
 
@@ -123,19 +123,19 @@ To turn separate shapes into navigation controls, use the session variable *Navi
 > - The last of the above-mentioned *Navigate* options will often be used together with a shape data field of type *SetVarOptions* set to “Control=DateTime”, which will turn the shape into a date picker. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control).
 > - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, it is possible to load a specific time slot immediately when a user navigates to the page. To do so, use the **InitVar** shape data on page level instead of the SetVar shape data mentioned above.
 
-#### ResourcesInSelectedReservation
+### ResourcesInSelectedReservation
 
 When a booking block is selected, this session variable will contain a comma-separated list of resource GUIDs.
 
 Available from DataMiner 9.6.3 onwards.
 
-#### TimerangeOfSelectedReservation
+### TimerangeOfSelectedReservation
 
 When a booking block is selected, this session variable will contain the start-stop time range of the booking, inflated by 10%. Values in this session variable will be serialized, e.g. “5248098399646517511;5248392353962787511”.
 
 Available from DataMiner 9.6.3 onwards.
 
-#### Viewport
+### Viewport
 
 When you pan or zoom in on the timeline, this session variable will contain the time range that is visible on the screen. From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, this session variable can also be used to zoom to a specific time range as soon as the component is loaded.
 
@@ -149,7 +149,7 @@ Available from DataMiner 9.6.3 onwards.
 > - Prior to DataMiner 9.6.11, the scope of this session variable is always global. From DataMiner 9.6.11 onwards, the card, page and workspace scope are also supported.
 > - If both *Viewport* and *Navigate* are used, the *Navigate* variable will be processed after the *Viewport* variable.
 
-#### YAxisResources
+### YAxisResources
 
 To allow users to specify what is displayed on the Y-axis, use the session variable *YaxisResources*.
 
@@ -219,7 +219,7 @@ To allow users to specify what is displayed on the Y-axis, use the session varia
     > [!NOTE]
     > You can use the “Minify/Compact” function at https://jsonformatter.org/ to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
 
-### Making shapes display information about objects selected on the timeline
+## Making shapes display information about objects selected on the timeline
 
 To have shapes display information about an object selected on the timeline, the following session variables can be configured:
 
@@ -256,7 +256,7 @@ To have properties of Resource Manager objects stored in a variable:
 
 - Configure a shape to display the variable. See [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable).
 
-### Specifying custom actions in a Resource Manager component
+## Specifying custom actions in a Resource Manager component
 
 If a **ComponentActions** shape data field has been added to the *Reservations* or *Bookings* shape, this shape data field can be configured to contain JSON objects with the following properties:
 
@@ -283,7 +283,7 @@ Example of a JSON string with three custom actions:
 > [!NOTE]
 > You can use the “Minify/Compact” function at https://jsonformatter.org/ to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
 
-### Configuring command controls for a Resource Manager component
+## Configuring command controls for a Resource Manager component
 
 If *ComponentActions* shape data are defined on a Resource Manager component in Visio, the selection behavior of the bookings timeline is different from the default behavior: instead of zooming in on the selected range, the component shows a context menu that allows the user to select one of the available actions.
 
@@ -339,7 +339,7 @@ In that case, you can for instance define the following command control shapes:
     | CommandParameter   | Action1                 |
     | Scope              | Page                    |
 
-### Customizing the color of booking blocks
+## Customizing the color of booking blocks
 
 The color of a timeline booking block can be customized with the following properties of the booking:
 

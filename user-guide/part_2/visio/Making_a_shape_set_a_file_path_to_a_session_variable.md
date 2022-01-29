@@ -2,7 +2,7 @@
 uid: Making_a_shape_set_a_file_path_to_a_session_variable
 ---
 
-## Making a shape set a file path to a session variable
+# Making a shape set a file path to a session variable
 
 From DataMiner 9.5.12 onwards, it is possible to change a shape into a control that opens a dialog box where you can select a file. The session variable will then be populated with the path to that file.
 

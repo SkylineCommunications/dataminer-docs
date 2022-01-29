@@ -2,7 +2,7 @@
 uid: Engine_methods
 ---
 
-## Engine methods
+# Engine methods
 
 - [AcknowledgeAlarm](#acknowledgealarm)
 
@@ -118,7 +118,7 @@ uid: Engine_methods
 
 - [UnSetFlag](#unsetflag)
 
-#### AcknowledgeAlarm
+### AcknowledgeAlarm
 
 Acknowledges the specified alarm tree using the provided comment message.
 
@@ -139,7 +139,7 @@ engine.AcknowledgeAlarm(7,304022,"Alarm acknowledged")
 engine.AcknowledgeAlarm(7, 400, 304022, "Alarm acknowledged.");
 ```
 
-#### AddError
+### AddError
 
 Adds an error message to the Automation script, which will eventually cause the script to fail.
 
@@ -153,7 +153,7 @@ Example:
 engine.AddError("A non-fatal error has occurred.");
 ```
 
-#### AddOrUpdateScriptOutput
+### AddOrUpdateScriptOutput
 
 Adds a key to the script output if it has not been added yet. If the key already exists, it will be updated with the specified value. Available from DataMiner 10.0.2 onwards.
 
@@ -161,7 +161,7 @@ Adds a key to the script output if it has not been added yet. If the key already
 void AddOrUpdateScriptOutput(string key, string value)
 ```
 
-#### AddScriptOutput
+### AddScriptOutput
 
 Adds a key and value to the dictionary that will be passed to the parent script. <br>Available from DataMiner 9.6.8 onwards.
 
@@ -176,7 +176,7 @@ Exceptions:
 | ArgumentNullException | *key* is null. |
 | ArgumentException     | An element with the same key already exists.  |
 
-#### ClearScriptOutput
+### ClearScriptOutput
 
 Removes the entry with the specified key from the script output. Available from DataMiner 10.0.2 onwards.
 
@@ -184,7 +184,7 @@ Removes the entry with the specified key from the script output. Available from 
 void ClearScriptOutput(string key)
 ```
 
-#### ClearScriptResult
+### ClearScriptResult
 
 Clears the script output. Available from DataMiner 10.0.2 onwards.
 
@@ -192,7 +192,7 @@ Clears the script output. Available from DataMiner 10.0.2 onwards.
 void ClearScriptResult()
 ```
 
-#### CreateExtraDummy
+### CreateExtraDummy
 
 Adds an additional dummy to the Automation script.
 
@@ -207,7 +207,7 @@ Example:
 ScriptDummy extradummy1 = engine.CreateExtraDummy(366,22);
 ```
 
-#### Dispose
+### Dispose
 
 Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
 
@@ -218,7 +218,7 @@ void Dispose()
 Implements: *IDisposable.Dispose*() (see
 <https://docs.microsoft.com/en-us/dotnet/api/system.idisposable.dispose?redirectedfrom=MSDN&view=netframework-4.7.2#System_IDisposable_Dispose>)
 
-#### Dispose (Boolean)
+### Dispose (Boolean)
 
 Releases the unmanaged resources used by the Engine and optionally releases the managed resources.
 
@@ -228,7 +228,7 @@ void Dispose(bool A_0)
 
 If the boolean is set to *true*, both managed and unmanaged resources are released; otherwise only unmanaged resources are released.
 
-#### ExitFail
+### ExitFail
 
 Aborts the Automation script, and indicates that it has failed.
 
@@ -245,7 +245,7 @@ Example:
 engine.ExitFail("A fatal error has occurred.");
 ```
 
-#### ExitSuccess
+### ExitSuccess
 
 Aborts the Automation script, but does not indicate that it has failed.
 
@@ -262,7 +262,7 @@ Example:
 engine.ExitSuccess("The script has been stopped.");
 ```
 
-#### FindElement
+### FindElement
 
 Retrieves an element
 
@@ -287,7 +287,7 @@ Element myElement = engine.FindElement("myElement");
 Element myElement = engine.FindElement(7,32);
 ```
 
-#### FindElementByKey
+### FindElementByKey
 
 Retrieves an element by key (DmaID/ElementID).
 
@@ -303,7 +303,7 @@ Example:
 Element myElement = engine.FindElementByKey("7/32");
 ```
 
-#### FindElements
+### FindElements
 
 Retrieves all elements matching the specified filter.
 
@@ -378,7 +378,7 @@ var enhancedServiceElement = engine.FindElements(filter).FirstOrDefault();
 
 
 
-#### FindElementsByName
+### FindElementsByName
 
 Retrieves all elements of which the name matches the specified name mask.
 
@@ -398,7 +398,7 @@ Example:
 Element[] elements = engine.FindElementsByName("Test*");
 ```
 
-#### FindElementsByProtocol
+### FindElementsByProtocol
 
 Retrieves all elements using the specified protocol version.
 
@@ -419,7 +419,7 @@ Elements[] elements = engine.FindElementsByProtocol("Microsoft Platform");
 Elements[] elements = engine.FindElementsByProtocol("Microsoft Platform","1.1.0.48");
 ```
 
-#### FindElementsInView
+### FindElementsInView
 
 Retrieves either all elements in the specified view. or all elements using a specific protocol version in the specified view.
 
@@ -448,7 +448,7 @@ Elements[] elements = engine.FindElementsInView(14,"Microsoft Platform","1.1.0.4
 Elements[] elements = engine.FindElementsInView("MySpecialElements","Microsoft Platform","1.1.0.48");
 ```
 
-#### FindInteractiveClient
+### FindInteractiveClient
 
 In an Automation script executed from e.g. a scheduled background task or as a Correlation action, you can use the *FindInteractiveClient* method to ask for input from a user.
 
@@ -507,7 +507,7 @@ bool ok = engine.FindInteractiveClient("Some text", 100, "userCookie:" + connect
 > [!NOTE]
 > In DataMiner Cube, you can also use the script action *Find interactive client*, instead of using C#.
 
-#### FindRedundancyGroup
+### FindRedundancyGroup
 
 Retrieves a redundancy group
 
@@ -538,7 +538,7 @@ RedundancyGroup group = engine.FindRedundancyGroup("MySpecialRedundancyGroup");
 RedundancyGroup group = engine.FindRedundancyGroup(7,24);
 ```
 
-#### FindRedundancyGroupByKey
+### FindRedundancyGroupByKey
 
 Retrieves a redundancy group by key (DmaID/GroupID).
 
@@ -554,7 +554,7 @@ Example:
 RedundancyGroup group = engine.FindRedundancyGroupByKey("7/24");
 ```
 
-#### FindRedundancyGroups
+### FindRedundancyGroups
 
 Retrieves all redundancy groups matching the specified filter.
 
@@ -583,7 +583,7 @@ RedundancyGroupFilter myGroupFilter = RedundancyGroupFilter.ByView("MyView");
 RedundancyGroup[] groups = engine.FindRedundancyGroups(myGroupFilter);
 ```
 
-#### FindRedundancyGroupsByName
+### FindRedundancyGroupsByName
 
 Retrieves all redundancy groups of which the name matches the specified name mask.
 
@@ -603,7 +603,7 @@ Example:
 RedundancyGroup[] groups = engine.FindRedundancyGroupsByName("Test*");
 ```
 
-#### FindRedundancyGroupsInView
+### FindRedundancyGroupsInView
 
 Retrieves all redundancy groups in the specified view.
 
@@ -622,7 +622,7 @@ RedundancyGroup[] groups = engine.FindRedundancyGroupsInView(17);
 RedundancyGroup[] groups = engine.FindRedundancyGroupsInView("MySpecialView");
 ```
 
-#### FindService
+### FindService
 
 Retrieves a service
 
@@ -647,7 +647,7 @@ Service myService = engine.FindService("MyService");
 Service myService = engine.FindService(3, 56);
 ```
 
-#### FindServiceByKey
+### FindServiceByKey
 
 Retrieves a service by key (DmaID/ServiceID).
 
@@ -663,7 +663,7 @@ Example:
 Service myService = engine.FindServiceByKey("3/56");
 ```
 
-#### FindServices
+### FindServices
 
 Retrieves all services matching the specified filter.
 
@@ -708,7 +708,7 @@ ServiceFilter myServiceFilter = ServiceFilter.ByView("MyView");
 Service[] services = engine.FindServices(myServiceFilter);
 ```
 
-#### FindServicesByName
+### FindServicesByName
 
 Retrieves all services of which the name matches the specified name mask.
 
@@ -728,7 +728,7 @@ Example:
 Service[] services = engine.FindServicesByName("Test*");
 ```
 
-#### FindServicesInView
+### FindServicesInView
 
 Retrieves all services in the specified view.
 
@@ -747,7 +747,7 @@ Service[] services = engine.FindServicesInView(19);
 Service[] services = engine.FindServicesInView("MySpecialView");
 ```
 
-#### FindServiceTemplate
+### FindServiceTemplate
 
 Retrieves the service template with the specified DataMiner Agent ID and service template ID.
 
@@ -763,7 +763,7 @@ Example:
 Service service = engine.FindServiceTemplate(200, 400);
 ```
 
-#### FindServiceTemplates
+### FindServiceTemplates
 
 Retrieves the service templates matching the specified service filter.
 
@@ -780,7 +780,7 @@ ServiceFilter filter = new ServiceFilter{ CriticalOnly = true};
 Service[] services = engine.FindServiceTemplates(filter);
 ```
 
-#### GenerateInformation
+### GenerateInformation
 
 Generates an information message with the specified text.
 
@@ -794,7 +794,7 @@ Example:
 engine.GenerateInformation("Hello World!");
 ```
 
-#### GetAlarmProperty
+### GetAlarmProperty
 
 Retrieves the value of the specified custom alarm property.
 
@@ -813,7 +813,7 @@ string propertyValue = engine.GetAlarmProperty(200, 59851, "SourceDetail");
 string propertyValue = engine.GetAlarmProperty(200, 400, 59851, "SourceDetail");
 ```
 
-#### GetDummy
+### GetDummy
 
 Retrieves an object representing one of the script dummies. Through this object, actions like “set parameter” can be executed.
 
@@ -834,7 +834,7 @@ ScriptDummy dummyTest = engine.GetDummy(5);
 ScriptDummy dummyTest = engine.GetDummy("matrix");
 ```
 
-#### GetMemory
+### GetMemory
 
 Retrieves an object representing one of the script’s memory files. Through this object, data can be read from or written into the memory file.
 
@@ -855,7 +855,7 @@ ScriptMemory memoryData = engine.GetMemory(3);
 ScriptMemory memoryData = engine.GetMemory("name");
 ```
 
-#### GetScriptOutput
+### GetScriptOutput
 
 Returns the script output of the specified key. If a subscript fails or throws an exception, its script output will still be filled in. Available from DataMiner 10.0.2 onwards.
 
@@ -863,7 +863,7 @@ Returns the script output of the specified key. If a subscript fails or throws a
 string GetScriptOutput(string key)
 ```
 
-#### GetScriptParam
+### GetScriptParam
 
 Retrieves an object representing a script parameter. Through this object, its value can be retrieved.
 
@@ -884,7 +884,7 @@ ScriptParam param = engine.GetScriptParam(5);
 ScriptParam param = engine.GetScriptParam("input");
 ```
 
-#### GetScriptResult
+### GetScriptResult
 
 Returns a copy of the script output of the current script and, if the *InheritScriptOutput* option is set to "true", the child scripts. If a subscript fails or throws an exception, its script output will still be filled in.<br>Available from DataMiner 10.0.2 onwards.
 
@@ -892,7 +892,7 @@ Returns a copy of the script output of the current script and, if the *InheritSc
 Dictionary<string, string> GetScriptResult()
 ```
 
-#### GetUserConnection
+### GetUserConnection
 
 Returns a connection that impersonates the user who ran the script based on Engine#UserCookie. If no user cookie is present on the script, the returned IConnection will act as the SLManagedAutomation connection. Available from DataMiner 10.0.10 onwards.
 
@@ -900,7 +900,7 @@ Returns a connection that impersonates the user who ran the script based on Engi
 IConnection GetUserConnection()
 ```
 
-#### LoadDoubleValue
+### LoadDoubleValue
 
 Retrieves a double value from a global script variable.
 
@@ -920,7 +920,7 @@ double myValue = engine.LoadDoubleValue("MyVariable");
 > - [LoadValue](#loadvalue)
 > - [LoadStringValue](#loadstringvalue)
 
-#### LoadStringValue
+### LoadStringValue
 
 Retrieves a string value from a global script variable.
 
@@ -940,7 +940,7 @@ string myValue = engine.LoadStringValue("MyVariable");
 > - [LoadValue](#loadvalue)
 > - [LoadDoubleValue](#loaddoublevalue)
 
-#### LoadValue
+### LoadValue
 
 Retrieves a value from a global script variable.
 
@@ -960,7 +960,7 @@ object myValue = engine.LoadValue("MyVariable");
 > - [LoadStringValue](#loadstringvalue)
 > - [LoadDoubleValue](#loaddoublevalue)
 
-#### Log
+### Log
 
 Adds an entry in the SLAutomation.txt log file.
 
@@ -1000,7 +1000,7 @@ engine.Log("My log message", LogType.Always, 5);
 engine.Log("My log message", LogType.Always, 5, "Initialize");
 ```
 
-#### PrepareMailReport
+### PrepareMailReport
 
 Returns a *MailReportOptions* object, which you can use to configure and launch an email report.
 
@@ -1018,7 +1018,7 @@ reportOptions.EmailOptions.SendAsPlainText = true;
 engine.SendReport(reportOptions);
 ```
 
-#### PrepareSubScript
+### PrepareSubScript
 
 Returns a *SubScriptOptions* object, which you can use to configure and launch a subscript.
 
@@ -1036,7 +1036,7 @@ subscriptInfo.Synchronous = true;
 subscriptInfo.StartScript();
 ```
 
-#### RunClientProgram
+### RunClientProgram
 
 Launches an application on the client in an interactive script.
 
@@ -1059,7 +1059,7 @@ engine.RunClientProgram("notepad.exe", @"c:\skyline dataminer\logging\slerrors.t
 engine.RunClientProgram(@"C:\Skyline DataMiner\Tools\SLTaskbarUtility\SLTaskbarUtility.exe", @"\h", true);
 ```
 
-#### SaveValue
+### SaveValue
 
 Saves a value to a global script variable. This value can then be reused elsewhere in the same script.
 
@@ -1078,7 +1078,7 @@ engine.SaveValue("MyVariable", 10.8);
 engine.SaveValue("MyVariable", "MyValue");
 ```
 
-#### SendEmail
+### SendEmail
 
 Sends an email message.
 
@@ -1104,7 +1104,7 @@ engine.SendEmail(myEmailOptions);
 engine.SendEmail("The message I want to send.","The title of my message","support@gtc.com");
 ```
 
-#### SendPager
+### SendPager
 
 Sends a pager message.
 
@@ -1130,7 +1130,7 @@ engine.SendPager(myPagerOptions);
 engine.SendPager("The message I want to send.","USER:ADMIN");
 ```
 
-#### SendReport
+### SendReport
 
 Sends an email report.
 
@@ -1150,7 +1150,7 @@ reportOptions.EmailOptions.SendAsPlainText = true;
 engine.SendReport(reportOptions);
 ```
 
-#### SendSms
+### SendSms
 
 Sends a text message (SMS).
 
@@ -1176,7 +1176,7 @@ engine.SendSms(mySmsOptions);
 engine.SendSms("My Message","USER:ADMIN");
 ```
 
-#### SetAlarmProperties
+### SetAlarmProperties
 
 Sets the specified custom alarm properties to the specified values.
 
@@ -1199,7 +1199,7 @@ engine.SetAlarmProperties(200, 400, 521655, new string[]{"Property A", "Property
 > - In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.
 > - When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.
 
-#### SetAlarmProperty
+### SetAlarmProperty
 
 Updates a custom alarm property.
 
@@ -1222,7 +1222,7 @@ engine.SetAlarmProperty(200, 400, 521655, "Property A", "Value A");
 > - In DataMiner versions prior to 9.0, this method cannot be used to override alarm property values that are defined in the element protocol.
 > - When an alarm property value has been defined in the element protocol and this method is used to explicitly assign a new value to the property, the new value will only be retained until the severity of the alarm changes. After this, the value from the protocol is used again.
 
-#### SetFlag
+### SetFlag
 
 Using this method, you can set the following script options at runtime:
 
@@ -1259,7 +1259,7 @@ Using this method, you can set the following script options at runtime:
     engine.SetFlag(RunTimeFlags.NoKeyCaching);
     ```
 
-#### ShowProgress
+### ShowProgress
 
 Displays a progress message during the execution of an interactive Automation script.
 
@@ -1274,7 +1274,7 @@ string progress = "Session is successfully booked.";
 engine.ShowProgress(progress);
 ```
 
-#### ShowUI
+### ShowUI
 
 Displays a custom-made dialog box of an interactive Automation script.
 
@@ -1299,7 +1299,7 @@ uib.AppendBlock(blockButton);
 engine.ShowUI(uib);
 ```
 
-#### Sleep
+### Sleep
 
 Causes the Automation script to pause for the specified amount of time (in milliseconds).
 
@@ -1313,7 +1313,7 @@ Example:
 engine.Sleep(200);
 ```
 
-#### UnSetFlag
+### UnSetFlag
 
 Available from DataMiner 10.0.0/10.0.2 onwards. This method allows you to clear the specified runtime flag.
 

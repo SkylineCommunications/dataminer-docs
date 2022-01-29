@@ -2,7 +2,7 @@
 uid: Configuring_the_dashboard_layout
 ---
 
-## Configuring the dashboard layout
+# Configuring the dashboard layout
 
 The layout of a dashboard can be configured on two levels:
 
@@ -14,7 +14,7 @@ The layout of a dashboard can be configured on two levels:
 
 - Overrides for each specific component. For more information, see [Configuring dashboard components](xref:Configuring_dashboard_components).
 
-### Customizing the dashboard theme
+## Customizing the dashboard theme
 
 The theme of the dashboard determines which colors are used in the dashboard.
 
@@ -27,9 +27,9 @@ The theme of the dashboard determines which colors are used in the dashboard.
 > [!NOTE]
 > To manage the available dashboard themes, click the cog wheel button in the header bar of the app. This will display an overview of all the themes, with the option to modify or delete them.
 
-#### Creating a new dashboard theme
+### Creating a new dashboard theme
 
-##### Using DataMiner 10.0.2 or higher:
+#### Using DataMiner 10.0.2 or higher:
 
 1. Click the user icon in the top-right corner of the Dashboards app and select the *Configuration* or *Settings* option.
 
@@ -74,7 +74,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 6. When the theme is fully configured, click *Save*.
 
-##### Using a DataMiner version prior to DataMiner 10.0.2:
+#### Using a DataMiner version prior to DataMiner 10.0.2:
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
@@ -94,11 +94,11 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 4. If you wish to use this same dashboard theme in other dashboards, specify a name in the *Theme name* box and click *Save theme*.
 
-#### Overriding a dashboard theme
+### Overriding a dashboard theme
 
 It is possible to customize the theme for one dashboard by overriding the applied theme, without creating or applying a new theme. Note that this is no longer possible from DataMiner 10.0.12 onwards.
 
-##### Using DataMiner 10.0.2 or higher:
+#### Using DataMiner 10.0.2 or higher:
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
@@ -111,11 +111,11 @@ It is possible to customize the theme for one dashboard by overriding the applie
 > [!NOTE]
 > If you do want to save the modified dashboard theme as a new theme, click *Save as new theme*. However, if you only want to customize the theme for a single dashboard, there is no need to click this button.
 
-##### Using a DataMiner version prior to DataMiner 10.0.2:
+#### Using a DataMiner version prior to DataMiner 10.0.2:
 
 To configure a dashboard to use different colors without creating a theme, follow the steps detailed in the section [Creating a new dashboard theme](#creating-a-new-dashboard-theme), but do not apply the last step.
 
-#### Applying an existing theme to a dashboard
+### Applying an existing theme to a dashboard
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
@@ -127,13 +127,13 @@ To configure a dashboard to use different colors without creating a theme, follo
 
 4. Select the theme you wish to use.
 
-### Configuring the default component layout
+## Configuring the default component layout
 
-##### Using DataMiner 10.0.2 or higher:
+#### Using DataMiner 10.0.2 or higher:
 
 From DataMiner 10.0.2 onwards, the default component layout is considered part of the default theme. It can be configured via the dashboards settings. See [Customizing the dashboard theme](#customizing-the-dashboard-theme).
 
-##### Using a DataMiner version prior to DataMiner 10.0.2:
+#### Using a DataMiner version prior to DataMiner 10.0.2:
 
 To configure the default layout for each of the components in a dashboard:
 

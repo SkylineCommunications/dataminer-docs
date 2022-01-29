@@ -2,7 +2,7 @@
 uid: DMA_configuration_related_to_client_applications
 ---
 
-## DMA configuration related to client applications
+# DMA configuration related to client applications
 
 This section consists of the following topics:
 
@@ -10,7 +10,7 @@ This section consists of the following topics:
 
 - [Configuring client communication settings](#configuring-client-communication-settings)
 
-### Configuring the default landing page
+## Configuring the default landing page
 
 In the file *Config.manual.asp*, located in the folder *C:\\Skyline DataMiner\\WebPages\\*, you can specify what happens when a user browses directly to the IP of the DMA. In some cases, a customizable landing page can be displayed instead of a client application.
 
@@ -33,7 +33,7 @@ In this section:
 > - Some of the settings in the *Config.manual.asp* file are only available from DataMiner 9.0 onwards. If you upgrade to 9.0 from an older version of DataMiner, the file will not be updated automatically, so some settings may need to be added manually.
 > - The file is NOT automatically synchronized on other DMAs in the DMS.
 
-#### Setting the default client application
+### Setting the default client application
 
 1. Open *C:\\Skyline DataMiner\\WebPages\\config.manual.asp* in a text editor.
 
@@ -64,7 +64,7 @@ In this section:
     var defaultHTMLApp = "";
     ```
 
-#### Redirection overview
+### Redirection overview
 
 The behavior of the specified setting depends on:
 
@@ -78,7 +78,7 @@ The behavior of the specified setting depends on:
 | Microsoft Windows | Other             | A landing page with two options:<br> -  Install the DataMiner Cube desktop app<br> -  Open the Monitoring & Control app<br> If the default application for other browsers specified in *Config.manual.asp* is “HTML5”, you will be redirected to the Monitoring & Control app instead. |
 | Other             | Other             | Monitoring & Control app                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-#### Showing the company logo on the landing page
+### Showing the company logo on the landing page
 
 It is possible to customize the landing page so that the company logo is displayed.
 
@@ -93,7 +93,7 @@ It is possible to customize the landing page so that the company logo is display
 > [!NOTE]
 > To set your company logo in DataMiner Cube, go to *System Center > Agents > System > System Logo*.
 
-#### Removing applications from the default landing page
+### Removing applications from the default landing page
 
 It is possible to customize the landing page so that certain applications are not listed on it.
 
@@ -107,7 +107,7 @@ It is possible to customize the landing page so that certain applications are no
     var disallowed = ["InstallCube","HTML5"];
     ```
 
-#### Making users download the Microsoft .NET Framework from an internal server
+### Making users download the Microsoft .NET Framework from an internal server
 
 When a user selects the *Install DataMiner Cube* option from the landing page, a setup program will first check whether Microsoft .NET Framework 4 is installed. If this is not the case, the user will be redirected to *http://dmaip/Tools/InstallNet4.asp*, where the Microsoft .NET Framework 4.6 installer can be downloaded.
 
@@ -129,7 +129,7 @@ To make users download the installer from an internal server:
 
 4. Make sure that, on all necessary computers, the browser security settings allow users to download the file you specified in step 3.
 
-#### Example of a config.manual.asp file
+### Example of a config.manual.asp file
 
 ```xml
 <%
@@ -161,7 +161,7 @@ var defaultHTMLApp = "";
 %>
 ```
 
-### Configuring client communication settings
+## Configuring client communication settings
 
 Users can define whether DataMiner Cube has to automatically detect the settings to be used when establishing a connection toward a certain DataMiner Agent.
 
@@ -172,7 +172,7 @@ If it is set to automatically detect the connection settings, Cube will connect 
 > - [Configuring the IP network ports](xref:General_DMA_configuration#configuring-the-ip-network-ports)
 > - [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
 
-#### .NET Remoting with or without eventing
+### .NET Remoting with or without eventing
 
 By default, clients connecting to a DataMiner Agent use .NET Remoting with eventing.
 
@@ -187,7 +187,7 @@ By default, clients connecting to a DataMiner Agent use .NET Remoting with event
 > [!NOTE]
 > When a fallback from polling to eventing occurs, an information event is generated that contains the IP address and port that the events are sent to. Clients can use this information to detect why they cannot receive events via the callback method. When a client connects, the log files and diagnostic info also contain the external client IP address as seen from the DataMiner Agent.
 
-#### Manual configuration of client communication settings
+### Manual configuration of client communication settings
 
 To customize how Cube connects to a DMA for a specific computer:
 

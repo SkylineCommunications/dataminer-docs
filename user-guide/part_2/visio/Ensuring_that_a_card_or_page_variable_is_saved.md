@@ -2,7 +2,7 @@
 uid: Ensuring_that_a_card_or_page_variable_is_saved
 ---
 
-## Ensuring that a card or page variable is saved
+# Ensuring that a card or page variable is saved
 
 From DataMiner 10.2.0/10.1.2 onwards, it is possible to have a card or page variable saved across sessions.
 

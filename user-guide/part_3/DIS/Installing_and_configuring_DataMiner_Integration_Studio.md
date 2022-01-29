@@ -2,9 +2,9 @@
 uid: Installing_and_configuring_DataMiner_Integration_Studio
 ---
 
-## Installing and configuring DataMiner Integration Studio
+# Installing and configuring DataMiner Integration Studio
 
-### Installing the DataMinerIntegrationStudio.vsix extension
+## Installing the DataMinerIntegrationStudio.vsix extension
 
 To install DataMiner Integration Studio, you have to install the *DataMinerIntegrationStudio.vsix* extension file on top of Microsoft Visual Studio.
 
@@ -40,7 +40,7 @@ To install DataMiner Integration Studio, you have to install the *DataMinerInteg
 > [!NOTE]
 > The above-mentioned procedure can also be used to upgrade DataMiner Integration Studio.
 
-### Changing the DataMiner Integration Studio settings
+## Changing the DataMiner Integration Studio settings
 
 After installing DataMiner Integration Studio, you can configure its settings from within the Microsoft Visual Studio interface.
 

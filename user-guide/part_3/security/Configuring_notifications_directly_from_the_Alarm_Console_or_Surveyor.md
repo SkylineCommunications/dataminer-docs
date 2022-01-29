@@ -2,7 +2,7 @@
 uid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
 ---
 
-## Configuring notifications directly from the Alarm Console or Surveyor
+# Configuring notifications directly from the Alarm Console or Surveyor
 
 To configure an alarm filter for personal notifications directly from the Alarm Console or the Surveyor:
 

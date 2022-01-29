@@ -2,7 +2,7 @@
 uid: Using_quick_filters
 ---
 
-## Using quick filters
+# Using quick filters
 
 You will often find filter boxes in DataMiner Cube that you can use to filter the displayed data. This can for instance be at the top of a card side panel, above a table or in the Alarm Console.
 
@@ -19,7 +19,7 @@ In this section:
 > - [Using the Alarm Console quick filter box](xref:Working_with_the_Alarm_Console#using-the-alarm-console-quick-filter-box)
 > - <https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/>
 
-### Tips on the use of quick filters
+## Tips on the use of quick filters
 
 - The filter box is a combo box, which means you can type in it or click the magnifying glass icon on the right side of the box to choose from a list of suggestions. Depending on where you are using the filter box, it could be that you first have to type a few characters before suggestions appear.
 
@@ -70,7 +70,7 @@ In this section:
 > - When you use the Alarm Console quick filter to filter the alarms shown in an alarm tab, the total number of alarms will still be displayed in the alarm bar, with the filtered number of alarms added in parentheses.
 > - In the Alarm Console quick filter, to search for exact matches in alarm properties, square brackets can be used. For example, if there are two alarms, one with property "bbc1", the other with property "bbc", using the search term "bbc" will return both alarms. However, using the search term "\[bbc\]" will only return the latter.
 
-### Using filters in drop-down lists
+## Using filters in drop-down lists
 
 From DataMiner 9.5.4 onwards, in several places in DataMiner Cube, drop-down lists feature a filter box that can be used to find an item in the list more quickly.
 
@@ -78,7 +78,7 @@ Such drop-down list controls can for example be found in the element, service, r
 
 By default, DataMiner will simply look for the text you enter in the filter. However, it is also possible to use regular expressions, if you add the prefix *regex:* in front of your filter entry.
 
-### Using regular expressions in quick filters
+## Using regular expressions in quick filters
 
 In quick filters on element, service and view cards, regular expressions can be used, with the following syntax:
 

@@ -2,7 +2,7 @@
 uid: ClientSettings_json
 ---
 
-## ClientSettings.json
+# ClientSettings.json
 
 Within the subfolder *C:\\Skyline DataMiner\\Users*, there is a file *ClientSettings.json*, which contains client settings that apply for all users. Some of these settings, e.g. *MaxNumberOfSimultaneousNewAlarmsBeforeDelayingSort*, can only be configured directly within this file:
 
@@ -28,7 +28,7 @@ Within the subfolder *C:\\Skyline DataMiner\\Users*, there is a file *ClientSett
 
 The folder also contains a subfolder for each user, which in turn contains a user-specific *ClientSettings.json* file. However, all settings in that file can be configured via the Cube UI.
 
-### Setting the maximum number of alarms before alarm sorting is delayed
+## Setting the maximum number of alarms before alarm sorting is delayed
 
 There is a limit to the number of alarms that can be generated within 100 ms before sorting of the Alarm Console is paused. When more alarms are generated, a “Loading” message is displayed until 250 ms have passed without any new alarm.
 
@@ -62,7 +62,7 @@ To do so:
 > [!NOTE]
 > In a DataMiner System, make sure all DataMiner Agents have this setting set to the same value.
 
-### Setting demo languages to be available in Cube
+## Setting demo languages to be available in Cube
 
 From DataMiner 9.5.2 onwards, by default, only officially supported languages are available in the Cube user settings. Currently, these are Dutch, English, French, German, Spanish, Russian and Portuguese (Portugal).
 
@@ -78,7 +78,7 @@ To be able to select a demo language, do the following:
 
 4. If Cube was already open, reconnect to Cube.
 
-### Limiting the properties to which Cube subscribes
+## Limiting the properties to which Cube subscribes
 
 To improve the memory usage of DataMiner Cube in systems with many properties, from DataMiner 9.5.0 \[CU6\]/9.5.10 onwards, it is possible to configure Cube so that it only subscribes to a subset of properties, instead of all the properties of the DMS.
 
@@ -118,7 +118,7 @@ This can be done using the settings *commonServer.ui.Subscribe_To_All_Properties
 
 5. If Cube was already open, reconnect to Cube.
 
-### Configuring caching of specific table parameters
+## Configuring caching of specific table parameters
 
 From DataMiner 9.5.10 onwards, it is possible to configure that certain table parameters have to be cached. These can for instance be tables containing connections between dynamically positioned shapes.
 
@@ -184,7 +184,7 @@ The following example illustrates how to configure the caching of an input table
 > [!NOTE]
 > After you update this setting, force a synchronization of the *ClientSettings.json* file in the DataMiner System. See [Forcing synchronization of a file with the DMS](xref:Synchronizing_data_between_DataMiner_Agents#forcing-synchronization-of-a-file-with-the-dms).
 
-### Configuring EPM card behavior based on Surveyor selection
+## Configuring EPM card behavior based on Surveyor selection
 
 From DataMiner 9.6.7 onwards, it is possible to configure whether an EPM card is opened based on a selection in the Surveyor or not. By default, an EPM card will only be opened if a launch button is clicked in the Surveyor topology. However, it is possible to customize this behavior for a specific user so that an EPM card will be opened as soon the user selects an item in the Surveyor topology.
 
@@ -208,7 +208,7 @@ To do so:
 
 4. If Cube was already open, reconnect to Cube.
 
-### Enabling or disabling the advanced editing Visio add-in
+## Enabling or disabling the advanced editing Visio add-in
 
 From DataMiner 9.6.9 onwards, an advanced editing add-in is available in Visio if a Visio file is opened from Visual Overview (see [Using DataMiner features in Visio](xref:Working_with_shape_data_in_Microsoft_Visio#using-dataminer-features-in-visio)). In the shared client settings file, it is possible to enable or disable this add-in. To do so:
 
@@ -230,7 +230,7 @@ From DataMiner 9.6.9 onwards, an advanced editing add-in is available in Visio i
 
 4. If Cube was already open, reconnect to Cube.
 
-### Setting the default time zone for DataMiner web apps
+## Setting the default time zone for DataMiner web apps
 
 From DataMiner 9.6.11 onwards, the time displayed in the DataMiner web apps (e.g. the Jobs app, the Dashboards app, etc.) is based on a time zone setting in the file *C:\\Skyline DataMiner\\Users\\ClientSettings.json*. To modify this setting:
 
@@ -265,7 +265,7 @@ From DataMiner 9.6.11 onwards, the time displayed in the DataMiner web apps (e.g
 
 3. Save and close the file.
 
-### Configuring settings for Cube UI freezing
+## Configuring settings for Cube UI freezing
 
 From DataMiner 9.6.13 onwards, the Cube logging can display logs of type "Freeze" to indicate when the Cube UI has been frozen. In *C:\\Skyline DataMiner\\Users\\ClientSettings.json*, you can configure how long the Cube UI has to be frozen before an entry is logged in the Cube logging. In addition, you can also configure how long the UI has been frozen before a pop-up is displayed.
 
@@ -296,7 +296,7 @@ Example:
  },
 ```
 
-### Making Cube unload data pages when you navigate away
+## Making Cube unload data pages when you navigate away
 
 From DataMiner 10.0.0/10.0.2 onwards, you can enable a setting that clears each data page from memory when you navigate to a different page. Enabling this setting can be useful to decrease memory usage, but may result in reduced responsiveness when navigating between data pages in Cube.
 
@@ -318,7 +318,7 @@ To enable this setting:
 
 3. Save and close the file.
 
-### Having a forward button displayed in card headers
+## Having a forward button displayed in card headers
 
 By default, the header of cards in DataMiner Cube does not display a forward button. However, from DataMiner 10.0.4 onwards, it is possible to configure a setting in *ClientSettings.json* to make sure such a button is displayed.
 

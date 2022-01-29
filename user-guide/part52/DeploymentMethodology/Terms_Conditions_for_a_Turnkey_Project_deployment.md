@@ -2,7 +2,7 @@
 uid: Terms_Conditions_for_a_Turnkey_Project_deployment
 ---
 
-## Terms & Conditions for a Turnkey Project deployment
+# Terms & Conditions for a Turnkey Project deployment
 
 For a Turnkey Project to be executed as planned, in line with the anticipated timeline, the offered price and the allocated human resources, it must be governed by the following specific and general terms & conditions. Strict compliance of all involved parties with these terms & conditions is an absolute must to ensure a successful execution in line with the provided Project Plan.
 

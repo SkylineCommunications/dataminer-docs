@@ -2,7 +2,7 @@
 uid: Creating_a_simulated_spectrum_element
 ---
 
-## Creating a simulated spectrum element
+# Creating a simulated spectrum element
 
 For demo purposes, it can be useful to set up a simulated spectrum element. This element will show data from a spectrum recording, rather than actual real-time data.
 

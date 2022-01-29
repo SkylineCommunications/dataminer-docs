@@ -2,7 +2,7 @@
 uid: Deleting_a_row_from_a_table
 ---
 
-## Deleting a row from a table
+# Deleting a row from a table
 
 In the *Asset Manager* module, there are several ways to delete a row from a table:
 

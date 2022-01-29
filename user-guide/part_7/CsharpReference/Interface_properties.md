@@ -2,7 +2,7 @@
 uid: Interface_properties
 ---
 
-## Interface properties
+# Interface properties
 
 - [CustomName](#customname)
 
@@ -18,7 +18,7 @@ uid: Interface_properties
 
 - [Type](#type)
 
-#### CustomName
+### CustomName
 
 Gets the custom name of the interface.
 
@@ -26,7 +26,7 @@ Gets the custom name of the interface.
 string CustomName
 ```
 
-#### DmaId
+### DmaId
 
 Gets the ID of the DataMiner Agent on which the element resides.
 
@@ -34,7 +34,7 @@ Gets the ID of the DataMiner Agent on which the element resides.
 int DmaId
 ```
 
-#### EId
+### EId
 
 Gets the ID of the element this interface belongs to.
 
@@ -42,7 +42,7 @@ Gets the ID of the element this interface belongs to.
 int EId
 ```
 
-#### InterfaceId
+### InterfaceId
 
 Gets the ID of this interface.
 
@@ -50,7 +50,7 @@ Gets the ID of this interface.
 int InterfaceId
 ```
 
-#### IsInternal
+### IsInternal
 
 Available from DataMiner 10.1.5/10.2.0 onwards. Gets a value indicating whether this interface is internal.
 
@@ -58,7 +58,7 @@ Available from DataMiner 10.1.5/10.2.0 onwards. Gets a value indicating whether 
 bool IsInternal
 ```
 
-#### Name
+### Name
 
 Gets the name of this interface.
 
@@ -66,7 +66,7 @@ Gets the name of this interface.
 string Name
 ```
 
-#### Type
+### Type
 
 Gets the type of interface:
 

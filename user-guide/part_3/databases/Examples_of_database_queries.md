@@ -2,9 +2,9 @@
 uid: Examples_of_database_queries
 ---
 
-## Examples of database queries
+# Examples of database queries
 
-### Microsoft SQL Server queries
+## Microsoft SQL Server queries
 
 If the offload database is a Microsoft SQL Server database, then every DMA instructed to offload (some of) its data will copy that data to its local, publicly shared *C:\\Skyline DataMiner\\System Cache\\Offload* folder.
 
@@ -17,7 +17,7 @@ BULK INSERT ALARM FROM '\\DataMiner-1\Offload\alarm\file.dat' WITH (FIELDTERMINA
 > [!NOTE]
 > On Microsoft SQL Server, only users who are a member of the sysadmin and bulkadmin fixed server role can execute BULK INSERT statements.
 
-### Oracle database queries
+## Oracle database queries
 
 If the offload database is an Oracle database, then every DMA instructed to offload (some of) its data, will log on to a shared folder on the server hosting the offload database, where it will place files containing the data to be offloaded.
 

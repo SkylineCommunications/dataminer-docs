@@ -2,7 +2,7 @@
 uid: Testing_alarm_forwarding
 ---
 
-## Testing alarm forwarding
+# Testing alarm forwarding
 
 1. Open a telnet session.
 

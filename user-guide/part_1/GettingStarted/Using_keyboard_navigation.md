@@ -2,7 +2,7 @@
 uid: Using_keyboard_navigation
 ---
 
-## Using keyboard navigation
+# Using keyboard navigation
 
 The following keyboard shortcuts are available in Cube:
 

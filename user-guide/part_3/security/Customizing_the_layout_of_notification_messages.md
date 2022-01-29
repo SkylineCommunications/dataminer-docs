@@ -2,11 +2,11 @@
 uid: Customizing_the_layout_of_notification_messages
 ---
 
-## Customizing the layout of notification messages
+# Customizing the layout of notification messages
 
 By default, all notification messages have a standard, hard-coded layout. However, if necessary, you can design custom notification message templates and store them in a file called *NotifyTemplates.xml*.
 
-### Creating a NotifyTemplates.xml file
+## Creating a NotifyTemplates.xml file
 
 If you want to customize the layout of all or some of the notification messages sent by a particular DataMiner Agent, do the following:
 
@@ -21,7 +21,7 @@ If you want to customize the layout of all or some of the notification messages 
 > - If you want to use special characters in this file, see [Using special characters in NotifyTemplates.xml](#using-special-characters-in-notifytemplatesxml).
 > - The *NotifyTemplates.xml* file is not synchronized across the DMS. In other words, every DMA can have its own *NotifyTemplates.xml* file.
 
-### Template names
+## Template names
 
 When defining notification message templates in the *NotifyTemplates.xml* file, make sure each template has one of the following mandatory names.
 
@@ -41,7 +41,7 @@ When defining notification message templates in the *NotifyTemplates.xml* file, 
 
     The notification message sent independently (not as a result of some triggered orrelation rule).
 
-##### Template name prefixes indicating the message format
+#### Template name prefixes indicating the message format
 
 In the above-mentioned template names, *\[Format\]* must be replaced by one of the following words that indicate the format of the template:
 
@@ -56,7 +56,7 @@ Example: The template called “text-notifications” should contain the templat
 > [!NOTE]
 > HTML templates will be inserted into the *\[contents\]* placeholder located in the *\<body>* tag of the file *C:\\Skyline DataMiner\\NotifyMail.html*.
 
-### Using special characters in NotifyTemplates.xml
+## Using special characters in NotifyTemplates.xml
 
 1. Open *NotifyTemplates.xml* in a text editor that supports file encodings.
 
@@ -70,7 +70,7 @@ Example: The template called “text-notifications” should contain the templat
 
 4. Enter all necessary text, which can now contain all kinds of special characters.
 
-### Example of a NotifyTemplates.xml file
+## Example of a NotifyTemplates.xml file
 
 The following example shows a *NotifyTemplates.xml* file in which two templates have been defined: one for plain-text notifications and another one for HTML notifications:
 
@@ -154,13 +154,13 @@ The following example shows a *NotifyTemplates.xml* file in which two templates 
 > [!NOTE]
 > In the example above, a number of placeholders are enclosed in square brackets. For more information, see [Notification template placeholders](#notification-template-placeholders)*.*
 
-### Defining the use of notification message templates in Correlation rules
+## Defining the use of notification message templates in Correlation rules
 
 When defining a Correlation rule, you can also define the notification message to be sent when that Correlation rule is triggered.
 
 If you want the notification message to be formatted according to the *correlation-infoheader*, *correlation-infoitem* and *correlation-infofooter* templates you specified in the file *NotifyTemplates.xml*, just insert an *\[info\]* placeholder in the message body (or click *Insert Placeholder* on the right of the text box, and select *More info (base alarms)*).
 
-### Notification template placeholders
+## Notification template placeholders
 
 When defining a notification message template in the *NotifyTemplates.xml* file, you can use the following placeholders.
 

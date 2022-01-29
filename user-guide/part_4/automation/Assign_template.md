@@ -2,7 +2,7 @@
 uid: Assign_template
 ---
 
-## Assign template
+# Assign template
 
 Use this action to assign an alarm or trend template to a dummy:
 

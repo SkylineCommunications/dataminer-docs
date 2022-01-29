@@ -2,7 +2,7 @@
 uid: Adding_and_deleting_trend_templates
 ---
 
-## Adding and deleting trend templates
+# Adding and deleting trend templates
 
 In this section:
 
@@ -12,7 +12,7 @@ In this section:
 
 - [Deleting a trend template](#deleting-a-trend-template)
 
-### Creating a trend template
+## Creating a trend template
 
 To create a new trend template:
 
@@ -42,7 +42,7 @@ To create a new trend template:
 > See also:
 > [Configuring trend templates](xref:Configuring_trend_templates)
 
-### Uploading a trend template
+## Uploading a trend template
 
 To upload a trend template for a particular protocol version:
 
@@ -57,7 +57,7 @@ To upload a trend template for a particular protocol version:
     > [!NOTE]
     > Only files that start with *Template\_* will be recognized as trend templates.
 
-### Deleting a trend template
+## Deleting a trend template
 
 To delete an existing trend template for a particular protocol version:
 

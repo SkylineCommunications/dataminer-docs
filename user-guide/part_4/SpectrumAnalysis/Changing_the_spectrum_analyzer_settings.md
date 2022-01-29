@@ -2,7 +2,7 @@
 uid: Changing_the_spectrum_analyzer_settings
 ---
 
-## Changing the spectrum analyzer settings
+# Changing the spectrum analyzer settings
 
 With the settings pane on the right side of the card, you can change the settings that determine what trace is retrieved. The trace window is then immediately updated according to the changes.
 

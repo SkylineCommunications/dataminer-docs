@@ -2,7 +2,7 @@
 uid: Deleting_a_dashboard1
 ---
 
-## Deleting a dashboard
+# Deleting a dashboard
 
 To duplicate a dashboard:
 

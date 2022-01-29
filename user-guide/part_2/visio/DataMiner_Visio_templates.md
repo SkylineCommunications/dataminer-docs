@@ -2,7 +2,7 @@
 uid: DataMiner_Visio_templates
 ---
 
-## DataMiner Visio templates
+# DataMiner Visio templates
 
 On a DataMiner Agent, you can find a number of default Visio drawings. If you want to create your own default drawings, you can either make copies of the drawings supplied by Skyline and adapt those copies, or create your own default drawings from scratch.
 
@@ -12,11 +12,11 @@ In this section:
 
 - [Creating your own Microsoft Visio templates](#creating-your-own-microsoft-visio-templates)
 
-### Overview of the default Visio templates supplied by Skyline
+## Overview of the default Visio templates supplied by Skyline
 
 Every DataMiner Agent is shipped with the following default Visio files.
 
-#### C:\\Skyline DataMiner\\Views\\Templates
+### C:\\Skyline DataMiner\\Views\\Templates
 
 | Type of file                               | File name(s)                                                                                                                                                                                                           |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -28,7 +28,7 @@ Every DataMiner Agent is shipped with the following default Visio files.
 > [!NOTE]
 > From DataMiner version 9.0 onwards, if you create a new Visual Overview, by default the .vsdx version of the template file is used.
 
-#### C:\\Skyline DataMiner\\Views\\Default
+### C:\\Skyline DataMiner\\Views\\Default
 
 | File name                  | Description                                                                                                   |
 |----------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -39,7 +39,7 @@ Every DataMiner Agent is shipped with the following default Visio files.
 > [!NOTE]
 > The above-mentioned default drawings can be overwritten during DataMiner software updates. We therefore advise you not to make any changes to those drawings.
 
-### Creating your own Microsoft Visio templates
+## Creating your own Microsoft Visio templates
 
 If you want to create your own set of Visio templates, you can:
 

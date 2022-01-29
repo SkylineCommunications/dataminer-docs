@@ -2,12 +2,12 @@
 uid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
 ---
 
-## Upgrading a DataMiner Agent using DataMiner Taskbar Utility
+# Upgrading a DataMiner Agent using DataMiner Taskbar Utility
 
 > [!TIP]
 > See also: [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 
-### Before upgrading your DataMiner System
+## Before upgrading your DataMiner System
 
 If you intend to upgrade your entire DataMiner System (i.e. all DMAs in the cluster), then first log on to the DataMiner System with administrative privileges:
 
@@ -15,7 +15,7 @@ If you intend to upgrade your entire DataMiner System (i.e. all DMAs in the clus
 
 2. Go to the *slnet* tab page, specify the user credentials and click *Test & Save Connection*.
 
-### Performing a DataMiner Upgrade
+## Performing a DataMiner Upgrade
 
 > [!NOTE]
 > When you upgrade systems prior to DataMiner version 8.5.0, it is recommended to start the upgrade from a client machine rather than from a DataMiner Agent. During the upgrade process, all open Internet Explorer windows will be closed. As a consequence, if you start the process from a DataMiner Agent, you will not be able to follow the progress of the upgrade being performed. From version 8.5.0 onwards, the files *SLSystemDisplay.ocx* and *SLElementDisplay.ocx* are removed from the folder *C:\\Skyline DataMiner\\Files*, which makes it possible to leave Internet Explorer open during the update.

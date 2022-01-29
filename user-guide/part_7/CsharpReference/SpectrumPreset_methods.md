@@ -2,7 +2,7 @@
 uid: SpectrumPreset_methods
 ---
 
-## SpectrumPreset methods
+# SpectrumPreset methods
 
 - [GetCenterFrequency](#getcenterfrequency)
 
@@ -42,7 +42,7 @@ uid: SpectrumPreset_methods
 
 - [SetVBW](#setvbw)
 
-#### GetCenterFrequency
+### GetCenterFrequency
 
 Retrieves the center frequency.
 
@@ -59,7 +59,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double centerFrequency = preset.GetCenterFrequency();
 ```
 
-#### GetFrequencySpan
+### GetFrequencySpan
 
 Retrieves the frequency span.
 
@@ -76,7 +76,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double frequencySpan = preset.GetFrequencySpan();
 ```
 
-#### GetRBW
+### GetRBW
 
 Retrieves the resolution bandwidth (RBW) value.
 
@@ -93,7 +93,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double rbw = preset.GetRBW();
 ```
 
-#### GetReferenceLevel
+### GetReferenceLevel
 
 Retrieves the reference level.
 
@@ -110,7 +110,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double referenceLevel = preset.GetReferenceLevel();
 ```
 
-#### GetReferenceScale
+### GetReferenceScale
 
 Retrieves the reference scale.
 
@@ -127,7 +127,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double referenceScale = preset.GetReferenceScale();
 ```
 
-#### GetStartFrequency
+### GetStartFrequency
 
 Retrieves the start frequency.
 
@@ -144,7 +144,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double startFrequency = preset.GetStartFrequency();
 ```
 
-#### GetStopFrequency
+### GetStopFrequency
 
 Retrieves the stop frequency.
 
@@ -161,7 +161,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double stopFrequency = preset.GetStopFrequency();
 ```
 
-#### GetSweepTime
+### GetSweepTime
 
 Retrieves the sweep time.
 
@@ -178,7 +178,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double sweepTime = preset.GetSweepTime();
 ```
 
-#### GetVBW
+### GetVBW
 
 Retrieves the video bandwidth (VBW).
 
@@ -195,7 +195,7 @@ SpectrumPreset preset = elementSa.GetSpectrumPreset("MyPreset");
 double vbw = preset.GetVBW();
 ```
 
-#### Save
+### Save
 
 Saves the preset.
 
@@ -213,7 +213,7 @@ preset.SetCenterFrequency(100000000);
 preset.Save();
 ```
 
-#### SetCenterFrequency
+### SetCenterFrequency
 
 Sets the center frequency.
 
@@ -231,7 +231,7 @@ preset.SetCenterFrequency(100000000);
 preset.Save();
 ```
 
-#### SetFrequencySpan
+### SetFrequencySpan
 
 Sets the frequency span.
 
@@ -249,7 +249,7 @@ preset.SetFrequencySpan(10000000);
 preset.Save();
 ```
 
-#### SetRBW
+### SetRBW
 
 Sets the resolution bandwidth (RBW).
 
@@ -267,7 +267,7 @@ preset.SetRBW(1000000);
 preset.Save();
 ```
 
-#### SetReferenceLevel
+### SetReferenceLevel
 
 Sets the reference level.
 
@@ -285,7 +285,7 @@ preset.SetReferenceLevel(100);
 preset.Save();
 ```
 
-#### SetReferenceScale
+### SetReferenceScale
 
 Sets the reference scale.
 
@@ -303,7 +303,7 @@ preset.SetReferenceScale(100);
 preset.Save();
 ```
 
-#### SetStartFrequency
+### SetStartFrequency
 
 Sets the start frequency.
 
@@ -321,7 +321,7 @@ preset.SetStartFrequency(100000000);
 preset.Save();
 ```
 
-#### SetStopFrequency
+### SetStopFrequency
 
 Sets the stop frequency.
 
@@ -339,7 +339,7 @@ preset.SetStopFrequency(10000000000);
 preset.Save();
 ```
 
-#### SetSweepTime
+### SetSweepTime
 
 Sets the sweep time.
 
@@ -357,7 +357,7 @@ preset.SetSweepTime(10);
 preset.Save();
 ```
 
-#### SetVBW
+### SetVBW
 
 Sets the video bandwidth (VBW).
 

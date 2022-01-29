@@ -2,9 +2,9 @@
 uid: Prerequisites
 ---
 
-## Prerequisites
+# Prerequisites
 
-### Communication
+## Communication
 
 DataMiner Integration Studio has to be able to connect to addresses in the following ranges:
 
@@ -16,7 +16,7 @@ DataMiner Integration Studio has to be able to connect to addresses in the follo
 
 - https://\*.skyline.be/\*
 
-### Microsoft Visual Studio
+## Microsoft Visual Studio
 
 DataMiner Integration Studio is a Microsoft Visual Studio extension.
 

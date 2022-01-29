@@ -2,7 +2,7 @@
 uid: Discovery
 ---
 
-## Discovery
+# Discovery
 
 On the *Discovery* subtab of the *Admin* tab, you can verify and configure the discovery profiles and scan ranges for device discovery. The tab consists of three pages:
 

@@ -2,7 +2,7 @@
 uid: Configuring_notifications_in_System_Center
 ---
 
-## Configuring notifications in System Center
+# Configuring notifications in System Center
 
 To configure notifications in System Center:
 

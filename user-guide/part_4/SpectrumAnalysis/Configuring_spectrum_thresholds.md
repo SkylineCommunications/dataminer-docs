@@ -2,14 +2,14 @@
 uid: Configuring_spectrum_thresholds
 ---
 
-## Configuring spectrum thresholds
+# Configuring spectrum thresholds
 
 In DataMiner Cube, you can define thresholds that can be used in scripts to detect spectrum threshold violations.
 
 > [!NOTE]
 > For more information on spectrum scripts, see [Working with spectrum scripts](xref:Working_with_spectrum_scripts).
 
-### Threshold Edit Mode
+## Threshold Edit Mode
 
 To create or edit thresholds, you must first activate the Threshold edit mode:
 
@@ -21,7 +21,7 @@ To create or edit thresholds, you must first activate the Threshold edit mode:
 
 To leave the mode, in the *thresholds* tab, click *Threshold edit mode* again.
 
-### Creating spectrum thresholds
+## Creating spectrum thresholds
 
 To create a threshold, while in Threshold edit mode:
 

@@ -2,7 +2,7 @@
 uid: PropertyConfiguration_xml
 ---
 
-## PropertyConfiguration.xml
+# PropertyConfiguration.xml
 
 In the *PropertyConfiguration.xml* file, you can define custom properties to be linked to elements, parameters and alarms.
 
@@ -20,7 +20,7 @@ Several custom options can be configured in this file:
 
 - [Having a property value copied to an alarm field](#having-a-property-value-copied-to-an-alarm-field)
 
-### Customizing how properties are displayed in the Surveyor
+## Customizing how properties are displayed in the Surveyor
 
 If, while creating or editing a property, you select *Display this property in the Surveyor*, the property will be displayed next to the item in the Surveyor in the format *\[Property name\]*: *\[Property value\]*.
 
@@ -46,11 +46,11 @@ To do so:
 > See also:
 > [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item)
 
-### Configuring alarm properties to motivate actions
+## Configuring alarm properties to motivate actions
 
 If you define an alarm property, you can specify that users have to motivate their intention to take a particular alarm action (mask, unmask, clear, etc.). For more information, see [Enforcing motivation of alarm actions](xref:Enforcing_motivation_of_alarm_actions).
 
-### Configuring properties for Alarm Console grouping
+## Configuring properties for Alarm Console grouping
 
 If property columns are added for service or view properties in the Alarm Console, and an alarm affects more than one service or view, this can result in multiple comma-separated property values in the property columns in the Alarm Console. When you apply grouping in the Alarm Console based on property columns, by default such an entry with multiple property values is taken as a whole for the grouping.
 
@@ -94,7 +94,7 @@ To do so:
 
 4. Restart DataMiner.
 
-### Disabling alarm updates for changes of read-only alarm properties
+## Disabling alarm updates for changes of read-only alarm properties
 
 In a DataMiner protocol, a property can be configured on a parameter to get its value from another parameter in that same protocol. This property will then be available as a read-only property in the system.
 
@@ -124,7 +124,7 @@ To disable alarm updates on changes of such a read-only property (possible from 
 
 4. Restart DataMiner.
 
-### Having a property value copied to an alarm field
+## Having a property value copied to an alarm field
 
 From DataMiner 9.6.1 onwards, it is possible to have the value of a property that is available for an alarm copied to a predefined field of the alarm (i.e. the *Owner*, *Comment*, *Element Name* or *Parameter Name* field) or to another property.
 

@@ -2,7 +2,7 @@
 uid: Options_for_displaying_DCF_connections
 ---
 
-## Options for displaying DCF connections
+# Options for displaying DCF connections
 
 A number of different options are available for connections displayed in Visual Overview:
 
@@ -21,7 +21,7 @@ A number of different options are available for connections displayed in Visual 
 | RetrieveInternalConnectivity                                                                         | [Subscribing to internal connections when using dynamic positioning](#subscribing-to-internal-connections-when-using-dynamic-positioning) |
 | LinkConnectionProperty                                                                               | [Linking connection properties](#linking-connection-properties)                                                                           |
 
-### Using existing lines as connectivity lines
+## Using existing lines as connectivity lines
 
 By default, straight lines will be drawn automatically to visualize connectivity. However, it is also possible to manually draw fixed lines and have those used instead.
 
@@ -31,13 +31,13 @@ If you want to use existing lines to visualize connectivity, then add a shape da
 > - Make sure the manually drawn lines are connected to the correct interfaces. If a line is connected to the parent shape of an interface instead of the interface itself, the path will not be used.
 > - If you draw a connection line to a shape that is not linked to a DataMiner object, you will need to make sure a connection point is configured on the shape, as otherwise it will not be clickable and highlightable in DataMiner. To add a connection point, in Visio, select the connection point tool in the ribbon (displayed as a blue X in the *Home* tab), select the shape, and then click the shape again while keeping the Ctrl key pressed.
 
-### Enabling view connections
+## Enabling view connections
 
 In order to make it possible to connect views with DCF connections, add a shape data field of type **Options** to the connectivity shape and set its value to “*EnableViewConnectivity*”.
 
 A view is considered to be connected to another view if the elements in those views are connected. This means that the element connectivity is aggregated in the view connectivity, allowing element connectivity to be grouped by view.
 
-### Placing connection lines in the background or in the foreground
+## Placing connection lines in the background or in the foreground
 
 By default, external and internal connections are drawn like this:
 
@@ -55,11 +55,11 @@ If you want to override this default behavior, add a shape data field of type **
 | ConnectionLinesOnForeground          | All connections (internal and external) are drawn in the foreground.                                                                                                                                                                                 |
 | InterfaceConnectionLinesOnBackground | \-  All external connections are drawn in the background.<br> -  All internal connections are drawn in the foreground. |
 
-### Hiding all connections of an element
+## Hiding all connections of an element
 
 If you do not want the connections of a particular element to be displayed, add a shape data field of type **Options** to the shape that represents the element and set its value to “*DisableConnectivity*”.
 
-### Displaying connections when some interfaces are missing
+## Displaying connections when some interfaces are missing
 
 By default, internal connections between interfaces that are not shown in a Visio drawing will not be drawn. If, for example, a connection is present from interface A to interface B and another connection is present from interface B to interface C, no connection will be shown when only interface A and C are shown on the Visio drawing.
 
@@ -74,7 +74,7 @@ To do so, add a shape data field of type **Option** to the shape and set its val
 > [!NOTE]
 > Prior to DataMiner 9.6.11, this option is not compatible with the *FollowPathColor* option. See [Making connections inherit alarm colors](#making-connections-inherit-alarm-colors).
 
-### Displaying connection properties
+## Displaying connection properties
 
 To have a connection property displayed on top of every connection that contains that property:
 
@@ -111,7 +111,7 @@ To have a connection property displayed on top of every connection that contains
 > - On connection property shapes, conditional shape manipulation actions can be defined that check conditions such as the value of the property, whether a connection is highlighted, and whether the mouse pointer is on a connection.<br>See [Conditional manipulation of connection shapes](xref:Extended_conditional_shape_manipulation_actions#conditional-manipulation-of-connection-shapes).
 > - Displaying connection properties between dynamically generated shapes is only supported from DataMiner 9.0.5 CU1 onwards.
 
-### Displaying DCF connection property information
+## Displaying DCF connection property information
 
 It is possible to have a pop-up box with more information on the connection properties appear when a user clicks a particular connection.
 
@@ -137,7 +137,7 @@ To have a pop-up box displayed with connection property information:
 > - An arrow that indicates the direction of the connection.
 > - All connection and interface properties of the connection.
 
-### Making connections inherit alarm colors
+## Making connections inherit alarm colors
 
 It is possible to activate “follow mode”, so that connection lines will automatically adopt the alarm color of the shapes they connect. That way, you can clearly pinpoint a problem in a chain and indicate its impact. Alternatively, you can instead make the connections inherit the alarm color of the interfaces.
 
@@ -159,7 +159,7 @@ The following additional options are also available:
 
 - **FollowInput**: If you want a series of interconnected shapes to take on a specific color by default, then add a shape data field of type **Options** to the first shape in the series and set its value to “*FollowInput*”.
 
-### Using a pathing algorithm to display connection lines
+## Using a pathing algorithm to display connection lines
 
 From DataMiner 9.5.1 onwards, it is possible to use a pathing algorithm to automatically draw connection lines as clearly visible as possible, using a combination of horizontal and vertical lines.
 
@@ -184,7 +184,7 @@ The algorithm will attempt to do the following things, in order of priority:
 > [!NOTE]
 > The *StraightLines* option does not work in conjunction with the *MultipleLinesMode* or *MultipleCurvedLinesMode* options.
 
-### Making connections take the alarm color of connected interfaces
+## Making connections take the alarm color of connected interfaces
 
 From DataMiner 9.5.2 onwards, you can make connection lines take the alarm color of the interfaces they are connected to.
 
@@ -200,7 +200,7 @@ To do so, add a shape data field of type **Options** to the **Connection** shape
 > [!NOTE]
 > Using this option together with the option *EnableViewConnectivity* is only supported from DataMiner 9.5.3 onwards.
 
-### Subscribing to internal connections when using dynamic positioning
+## Subscribing to internal connections when using dynamic positioning
 
 By default, from DataMiner 9.5.3 onwards, when dynamic positioning is used, internal connections are not subscribed to. If you do want to subscribe to internal connections when using dynamic positioning, specify the following shape data on the **Connectivity** shape:
 
@@ -208,7 +208,7 @@ By default, from DataMiner 9.5.3 onwards, when dynamic positioning is used, inte
 |------------------|------------------------------|
 | Options          | RetrieveInternalConnectivity |
 
-### Linking connection properties
+## Linking connection properties
 
 From DataMiner 9.5.9 onwards, it is possible to link connection properties of internal connections to connection properties of external connections.
 

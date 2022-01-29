@@ -2,6 +2,6 @@
 uid: PagerOptions_methods
 ---
 
-## PagerOptions methods
+# PagerOptions methods
 
 None

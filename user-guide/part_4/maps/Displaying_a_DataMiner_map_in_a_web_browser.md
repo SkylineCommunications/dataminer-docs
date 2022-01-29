@@ -2,7 +2,7 @@
 uid: Displaying_a_DataMiner_map_in_a_web_browser
 ---
 
-## Displaying a DataMiner map in a web browser
+# Displaying a DataMiner map in a web browser
 
 1. Open a web browser.
 
@@ -24,7 +24,7 @@ Example: If you want to display a DataMiner map using the settings specified in 
 http://MyDma/maps/map.aspx?config=mymap
 ```
 
-### Displaying a DataMiner Map in a Visio file
+## Displaying a DataMiner Map in a Visio file
 
 1. In a Microsoft Visio file, draw the shape in which you want the DataMiner map to be displayed.
 

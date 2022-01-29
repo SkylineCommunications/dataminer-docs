@@ -2,7 +2,7 @@
 uid: Migrating_the_general_database_to_Cassandra
 ---
 
-## Migrating the general database to Cassandra
+# Migrating the general database to Cassandra
 
 From DataMiner 9.0 onwards, it is possible to migrate a general or “local” MySQL or MS SQL database to Cassandra. Though DataMiner can still be used with a MySQL or MS SQL database, switching to Cassandra leads to enhanced performance. Certain DataMiner features are only available if a Cassandra database is used.
 
@@ -16,7 +16,7 @@ Before you can migrate to Cassandra, DataMiner has to check if your system is re
 > See also:
 > <https://community.dataminer.services/video/cassandra-migrating-to-cassandra/>
 
-#### Prerequisites
+### Prerequisites
 
 The migration procedure has the following prerequisites:
 
@@ -28,7 +28,7 @@ The migration procedure has the following prerequisites:
 
 - A sufficiently large time window for the migration. On average, this takes 1 hour per 5 GB of the database. For large systems it can take up to 48 hours.
 
-#### Before you start the migration wizard
+### Before you start the migration wizard
 
 Before you start the Cassandra migration wizard, it is advisable to check the following things:
 
@@ -40,7 +40,7 @@ Before you start the Cassandra migration wizard, it is advisable to check the fo
 
 - Do not specify the loopback IP address (127.0.0.1) as the first IP address for an Agent that is to use Cassandra.
 
-#### Preparing for the Cassandra migration
+### Preparing for the Cassandra migration
 
 Before the migration to Cassandra can begin, the migration wizard first checks if your system is ready:
 
@@ -135,7 +135,7 @@ Before the migration to Cassandra can begin, the migration wizard first checks i
 > - If not all Agents in a DataMiner System have been migrated to Cassandra, DataMiner features that specifically rely on Cassandra will not yet be available.
 > - In a Failover setup, it will only be possible to migrate if both DMAs are ready for the migration. For more information on migrating a Failover DMS, see [Switching to Cassandra in a Failover setup](#switching-to-cassandra-in-a-failover-setup).
 
-#### Migrating to Cassandra
+### Migrating to Cassandra
 
 After you have followed the procedure above and system requirements are met, you can carry out the migration to Cassandra as described below.
 
@@ -188,7 +188,7 @@ After the migration is finished, the DataMiner features that depend on the use o
 > - If an element with a logger table (e.g. an SLA) is stopped at the moment when the migration takes place, the data of that element will not be migrated.
 > - To ensure optimal performance, the Cassandra database should be installed on a different drive than DataMiner. If you migrated to a Cassandra database on the same drive as DataMiner, you can move the database afterwards. See [Moving the Cassandra database to a different disk drive](xref:Moving_the_Cassandra_database_to_a_different_disk_drive).
 
-#### After the migration
+### After the migration
 
 1. If MySQL or MSSQL are no longer used on the DMA server, disable the relevant service:
 
@@ -204,7 +204,7 @@ After the migration is finished, the DataMiner features that depend on the use o
 
 2. Once you are sure you no longer need the old database data as a backup (e.g. a few months after the migration), remove the old database data folder (e.g. for MySQL: *C:\\ProgramData\\MySQL\\MySQL Server 5.5\\data\\sldmadb*).
 
-#### Switching to Cassandra in a Failover setup
+### Switching to Cassandra in a Failover setup
 
 A Failover setup will be migrated to Cassandra in the following way:
 
@@ -234,7 +234,7 @@ In a Failover DMS using Cassandra, the Cassandra instances on the two DMAs are c
 
 
 
-#### Cassandra database security
+### Cassandra database security
 
 After the general database has been migrated to Cassandra, the database will by default have the two superusers specified in the table below. These superusers are necessary for the proper functioning of the database, and should never be deleted.
 

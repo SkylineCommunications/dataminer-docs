@@ -2,7 +2,7 @@
 uid: Reports_page_overview
 ---
 
-## Reports page overview
+# Reports page overview
 
 On the *Reports* page, depending on the type of card, a number of graphs can display alarm information for a particular time span:
 

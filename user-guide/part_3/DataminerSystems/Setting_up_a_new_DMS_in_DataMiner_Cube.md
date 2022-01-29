@@ -2,7 +2,7 @@
 uid: Setting_up_a_new_DMS_in_DataMiner_Cube
 ---
 
-## Setting up a new DMS in DataMiner Cube
+# Setting up a new DMS in DataMiner Cube
 
 1. Add the master DMA to the DMS.
 

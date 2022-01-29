@@ -2,7 +2,7 @@
 uid: Importing_and_exporting_elements
 ---
 
-## Importing and exporting elements
+# Importing and exporting elements
 
 In this section:
 
@@ -13,7 +13,7 @@ In this section:
 > [!NOTE]
 > For more information on importing and exporting elements, services, etc. using .dmimport packages, see [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA).
 
-### Importing elements from a CSV file
+## Importing elements from a CSV file
 
 > [!TIP]
 > See also:
@@ -39,7 +39,7 @@ In this section:
 > - For more information on how DataMiner checks for duplicate names, see [Duplicate name check](#duplicate-name-check).
 > - As CSV separator settings may have changed in DataMiner 10.0.0/10.0.2, before you import a CSV file that was exported using a version of Cube prior to 10.0.0/10.0.2, make sure to check the separator used in that file.
 
-#### Duplicate name check
+### Duplicate name check
 
 When you import elements via a CSV file, DataMiner checks for duplicate names.
 
@@ -57,7 +57,7 @@ Name checks are case-insensitive. This means that for instance “element1” is
     Import elements failed. Line 1 contains existing element name (DMS). (MyElementName)
     ```
 
-### Exporting elements to a CSV file
+## Exporting elements to a CSV file
 
 > [!NOTE]
 > To export element information to a printer or to the clipboard, you can also follow this procedure.
@@ -103,7 +103,7 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
     - Determine the printing settings, for an export to a printer.
 
-### Altering an exported CSV file in a third-party application
+## Altering an exported CSV file in a third-party application
 
 When altering an exported CSV file in a third-party application like Microsoft Excel, in order to import the altered file into a DMS afterwards, take the following into account:
 

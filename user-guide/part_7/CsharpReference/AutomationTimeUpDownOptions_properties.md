@@ -2,7 +2,7 @@
 uid: AutomationTimeUpDownOptions_properties
 ---
 
-## AutomationTimeUpDownOptions properties
+# AutomationTimeUpDownOptions properties
 
 - [AllowSpin](#allowspin)
 
@@ -20,7 +20,7 @@ uid: AutomationTimeUpDownOptions_properties
 
 - [UpdateValueOnEnterKey](#updatevalueonenterkey)
 
-#### AllowSpin
+### AllowSpin
 
 Enables or disables the spinner button.
 
@@ -30,7 +30,7 @@ bool AllowSpin
 
 Default: True
 
-#### ClipValueToMinMax
+### ClipValueToMinMax
 
 Enables or disables the ClipValueToMinMax option.
 
@@ -40,7 +40,7 @@ bool ClipValueToMinMax
 
 Default: False
 
-#### FractionalSecondsDigitsCount
+### FractionalSecondsDigitsCount
 
 Gets or sets the number of digits to be used in order to represent the fractions of seconds.
 
@@ -50,7 +50,7 @@ int FractionalSecondsDigitsCount
 
 Default: 0
 
-#### Maximum
+### Maximum
 
 Gets or sets the maximum time span.
 
@@ -64,7 +64,7 @@ Default:
 Timespan.MaxValue
 ```
 
-#### Minimum
+### Minimum
 
 Gets or sets the minimum time span.
 
@@ -78,7 +78,7 @@ Default:
 Timespan.MinValue
 ```
 
-#### ShowButtonSpinner
+### ShowButtonSpinner
 
 Shows or hides the spinner button.
 
@@ -88,7 +88,7 @@ bool ShowButtonSpinner
 
 Default: True
 
-#### ShowSeconds
+### ShowSeconds
 
 Enables or disables displaying seconds in the control.
 
@@ -98,7 +98,7 @@ bool ShowSeconds
 
 Default: True
 
-#### UpdateValueOnEnterKey
+### UpdateValueOnEnterKey
 
 Enables or disables the option to trigger an update with the control when the Enter key is pressed.
 

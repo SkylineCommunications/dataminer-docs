@@ -2,7 +2,7 @@
 uid: RedundancyGroupFilter_properties
 ---
 
-## RedundancyGroupFilter properties
+# RedundancyGroupFilter properties
 
 - [DataMinerID](#dataminerid)
 
@@ -16,7 +16,7 @@ uid: RedundancyGroupFilter_properties
 
 - [ViewID](#viewid)
 
-#### DataMinerID
+### DataMinerID
 
 Gets or sets a value limiting the search to the specified DataMiner Agent ID.
 
@@ -24,7 +24,7 @@ Gets or sets a value limiting the search to the specified DataMiner Agent ID.
 int DataMinerID
 ```
 
-#### ExcludeSubViews
+### ExcludeSubViews
 
 Gets or sets a value indicating whether subviews should be searched.
 
@@ -35,7 +35,7 @@ bool ExcludeSubViews
 > [!NOTE]
 > If you specify *ExcludeSubViews*, also specify *View* or *ViewId*.
 
-#### GroupID
+### GroupID
 
 Gets or sets a value limiting the search to the specified redundancy group ID.
 
@@ -46,7 +46,7 @@ int GroupID
 > [!NOTE]
 > If you specify *GroupID*, also specify *DataMinerID*.
 
-#### NameFilter
+### NameFilter
 
 Gets or sets a filter for the redundancy group name, which can contain \* and ? wildcards.
 
@@ -54,7 +54,7 @@ Gets or sets a filter for the redundancy group name, which can contain \* and ? 
 string NameFilter
 ```
 
-#### View
+### View
 
 Gets or sets the name of the view to be searched.
 
@@ -62,7 +62,7 @@ Gets or sets the name of the view to be searched.
 string View
 ```
 
-#### ViewID
+### ViewID
 
 Gets or sets the ID of the view to be searched.
 

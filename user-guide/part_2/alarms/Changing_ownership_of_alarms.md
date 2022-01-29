@@ -2,7 +2,7 @@
 uid: Changing_ownership_of_alarms
 ---
 
-## Changing ownership of alarms
+# Changing ownership of alarms
 
 The Alarm Ownership feature allows unambiguous assignment of responsibility for individual alarm events, as well as tracking of those responsibilities.
 
@@ -14,7 +14,7 @@ When the DataMiner System generates a new alarm event, the *Alarm Type* property
 
 - [Example of ownership transitions](#example-of-ownership-transitions)
 
-### Taking ownership of an alarm
+## Taking ownership of an alarm
 
 To indicate to other users that you are aware of an issue and working on a resolution, you can take responsibility for an alarm record by taking ownership of it.
 
@@ -31,7 +31,7 @@ When you take ownership of an alarm event, a new alarm record is added to the li
 > - You cannot take ownership of alarm events that are owned by someone else. In that case, ownership will first need to be released.
 > - It is only possible to take ownership of clearable alarms from DataMiner version 8.5.6 onwards.
 
-### Releasing ownership of an alarm
+## Releasing ownership of an alarm
 
 After you have taken ownership of an alarm event, it is possible to release ownership again in case you cannot resolve the alarm situation or your motivation to take ownership no longer stands.
 
@@ -44,7 +44,7 @@ To do so:
 
 When you release ownership of an alarm event, an alarm record will be added to the life cycle of that alarm event. Both the Alarm Type property and the User Status property of that record will be set to “Unresolved”. The Owner property of that record and all subsequent records added to the life cycle of the alarm will be set to “System” until someone else takes ownership of the alarm.
 
-### Example of ownership transitions
+## Example of ownership transitions
 
 The following example illustrates how the *Alarm Type*, *Owner* and *User Status* properties of alarm records reflect ownership transitions.
 

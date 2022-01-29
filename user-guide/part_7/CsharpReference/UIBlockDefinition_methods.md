@@ -2,7 +2,7 @@
 uid: UIBlockDefinition_methods
 ---
 
-## UIBlockDefinition methods
+# UIBlockDefinition methods
 
 - [AddCheckBoxListOption](#addcheckboxlistoption)
 
@@ -14,7 +14,7 @@ uid: UIBlockDefinition_methods
 
 - [ToString](#tostring)
 
-#### AddCheckBoxListOption
+### AddCheckBoxListOption
 
 Adds an entry to a checkbox list. Available from DataMiner 9.6.6 onwards.
 
@@ -38,7 +38,7 @@ blockItem.AddCheckBoxListOption("2","Second option");
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### AddDropDownOption
+### AddDropDownOption
 
 Adds an entry to a drop-down list.
 
@@ -62,7 +62,7 @@ blockItem.AddDropDownOption("option_b","Second option");
 uibDialogBox1.AppendBlock(blockItem);
 ```
 
-#### AddRadioButtonListOption
+### AddRadioButtonListOption
 
 Adds an entry to a radio button list. Available from DataMiner 9.6.6 onwards.
 
@@ -89,7 +89,7 @@ foreach (string sOption in dropDownOptions)
 }
 ```
 
-#### ToCode
+### ToCode
 
 Returns a string representation of the dialog box item.
 
@@ -135,7 +135,7 @@ string result = numericBlock.ToCode();
 // [/UI]
 ```
 
-#### ToString
+### ToString
 
 Returns a string representation of the specified block type
 

@@ -2,7 +2,7 @@
 uid: Restoring_the_database_only
 ---
 
-## Restoring the database only
+# Restoring the database only
 
 If you do not use the Taskbar Utility to restore a DMA, there are two ways you can restore the DMA database:
 
@@ -10,7 +10,7 @@ If you do not use the Taskbar Utility to restore a DMA, there are two ways you c
 
 - by manually copying the data files.
 
-### Restoring the database dump
+## Restoring the database dump
 
 1. If it is not running yet, start the MySQL service.
 
@@ -25,7 +25,7 @@ The restore operation, displayed in a command window, can take up to several hou
 > [!NOTE]
 > If the restore operation does not start, then open the batch file in Microsoft Notepad, and check the location of MySQL. Depending on the MySQL version, the location should be either *C:\\MySQL\\bin\\* or *C:\\Program Files\\MySQL\\MySQL Server 5.0\\bin\\*.
 
-### Copying the data files manually
+## Copying the data files manually
 
 When both the original and the destination server run the exact same version of MySQL, you can restore the database simply by copying the data files.
 

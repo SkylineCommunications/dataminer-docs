@@ -2,7 +2,7 @@
 uid: Unlocking_an_output
 ---
 
-## Unlocking an output
+# Unlocking an output
 
 In the *Router Control* module:
 

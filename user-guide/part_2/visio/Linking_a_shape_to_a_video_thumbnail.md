@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_a_video_thumbnail
 ---
 
-## Linking a shape to a video thumbnail
+# Linking a shape to a video thumbnail
 
 Using a shape data field of type **Link**, you can link a shape to a video thumbnail.
 
@@ -38,7 +38,7 @@ Please note the following:
 > See also:
 > [Making a shape display an image](xref:Making_a_shape_display_an_image)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Link** to the shape, and configure one of the following values, depending on your setup:
 
@@ -51,7 +51,7 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 > - Adding "#" in front of the URL ensures that the video is displayed in an embedded browser. If you do not add this, the shape is rendered as it is drawn in Visio and clicking it opens your default browser and navigates to the link.
 > - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding “*toolbar=false*” or “*showtoolbar=false*” to the value of the **Link** shape data. For example: *#http://\<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC<br>&source=http://\<DMAIP>/myvideo.mpeg&showtoolbar=false*
 
-### Video server parameters
+## Video server parameters
 
 The parameters you are allowed to pass inside the URL depend on the type of the video server.
 
@@ -87,7 +87,7 @@ Depending on the DataMiner version, additional configuration is possible in the 
     > - When the authentication token expires, the URL has to be updated with the new token.
     > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 
-### Allowed paths in case of connection via DataMiner proxy
+## Allowed paths in case of connection via DataMiner proxy
 
 If a client does not have direct access to the video server, it can request a video feed via the DataMiner Agent acting as a proxy server.
 
@@ -121,7 +121,7 @@ If more URLs need to be added to the list of allowed URLs, do the following:
 
 Example: If, under *C:\\Skyline DataMiner\\Webpages*, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
 
-### Ignoring validation errors during HTTP parsing
+## Ignoring validation errors during HTTP parsing
 
 From DataMiner 9.5.5 onwards, you can configure the thumbnail web.config file to ignore any validation errors that occur during HTTP parsing.
 
@@ -151,7 +151,7 @@ To do so:
     > See also:
     > [https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequest­element.useunsafeheaderparsing.aspx](https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequestelement.useunsafeheaderparsing.aspx)
 
-### Configuring a thumbnail for HTTP Live Streaming
+## Configuring a thumbnail for HTTP Live Streaming
 
 From DataMiner 10.1.11/10.2.0 onwards, HLS (HTTPS Live Streaming) is supported for video thumbnails. No additional plugins need to be installed for this.
 

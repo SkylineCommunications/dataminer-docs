@@ -2,7 +2,7 @@
 uid: About_trend_templates
 ---
 
-## About trend templates
+# About trend templates
 
 Trend templates allow to define exactly for which parameters trending information has to be logged in the trending database, and which kind of trending information has to be included.
 

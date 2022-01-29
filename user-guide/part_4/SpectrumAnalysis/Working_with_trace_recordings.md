@@ -2,7 +2,7 @@
 uid: Working_with_trace_recordings
 ---
 
-## Working with trace recordings
+# Working with trace recordings
 
 In DataMiner Cube, you can make and play back recordings of a trace.
 
@@ -16,7 +16,7 @@ The following sections provide more information on working with trace recordings
 
 - [Managing recordings](#managing-recordings)
 
-### Making a trace recording
+## Making a trace recording
 
 To make a recording:
 
@@ -41,7 +41,7 @@ To make a recording:
 > - From DataMiner 10.2.0/10.1.7 onwards, if you close a recording without saving it, it will automatically be saved as a private recording.
 > - If a user makes a trace recording, information events will be generated detailing when the recording was started and stopped, and who made the recording.
 
-### Playing a recording
+## Playing a recording
 
 To play back a recording:
 
@@ -78,7 +78,7 @@ To play back a recording:
 > - The traces shown during a recording have an associated date/timestamp, displayed in the bottom-right corner.
 > - Spectrum recordings can also be created automatically by a spectrum monitor when an alarm occurs (see [Configuring spectrum monitors](xref:Working_with_spectrum_monitors#configuring-spectrum-monitors)). You can view such a recording by right-clicking the alarm in the Alarm Console and selecting *Show alarm trace recording*.
 
-### Managing recordings
+## Managing recordings
 
 To manage the available recordings:
 

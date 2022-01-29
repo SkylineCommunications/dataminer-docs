@@ -2,7 +2,7 @@
 uid: Discovery_profiles
 ---
 
-## Discovery profiles
+# Discovery profiles
 
 The following mechanisms are supported for discovery:
 
@@ -53,7 +53,7 @@ In general, every profile contains a list of discovery actions. Such an action c
 > [!NOTE]
 > In a given discovery profile, the *ProtocolType* in the actions has to be the same. In other words, the actions need to use the same discovery mechanism.
 
-### SNMP discovery
+## SNMP discovery
 
 SNMP discovery actions have the following fields:
 
@@ -212,7 +212,7 @@ In addition to the discovery actions, the discovery profile also needs to contai
 
         - MD5/SHA-1/SHA-224 and AES256
 
-### HTTP discovery
+## HTTP discovery
 
 HTTP discovery actions have the following fields:
 
@@ -254,7 +254,7 @@ The example below illustrates a discovery profile with one HTTP discovery action
 
 In the example above, the discovery action will perform an HTTP GET towards the device on port 80 using the path and query component */about/index.html?q=version&src=client*.
 
-### Serial discovery
+## Serial discovery
 
 Serial discovery actions have the following fields:
 
@@ -290,7 +290,7 @@ The example below illustrates a discovery profile with one serial discovery acti
 > [!NOTE]
 > During serial discovery, the command will first be sent via UDP. If the device does not respond in 5 seconds, the command will be sent via TCP.
 
-### Telnet discovery
+## Telnet discovery
 
 Telnet discovery actions have the following fields:
 
@@ -353,7 +353,7 @@ For example:
 }
 ```
 
-### WMI discovery
+## WMI discovery
 
 WMI discovery actions have the following fields:
 

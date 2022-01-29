@@ -2,7 +2,7 @@
 uid: Automatically_generating_service_RCA_chains_based_on_connectivity
 ---
 
-## Automatically generating service RCA chains based on connectivity
+# Automatically generating service RCA chains based on connectivity
 
 From DataMiner 9.5.2 onwards, it is possible to have RCA chains generated automatically for elements in a service, based on connectivity.
 
@@ -21,7 +21,7 @@ In addition, some configuration is necessary in the relevant *Service.xml* file(
 > [!NOTE]
 > A DCF-based RCA chain has priority over any other RCA chain defined in the service or the service template.
 
-### Example of Connectivity.xml files representing a chain
+## Example of Connectivity.xml files representing a chain
 
 The following example illustrates the basic syntax of a *Connectivity.xml* file.
 
@@ -55,7 +55,7 @@ The following example illustrates the basic syntax of a *Connectivity.xml* file.
 </DCF>
 ```
 
-### Service.xml configuration for automatic RCA chain generation for services
+## Service.xml configuration for automatic RCA chain generation for services
 
 In the *Service.xml* files for which RCA chains should be generated, information must be added about the element that serves as the entry point to calculate the DCF chain.
 
@@ -67,7 +67,7 @@ This information is added in the *\<RCA>* tag. For example:
 </RCA>
 ```
 
-#### Attributes of the \<DCF> tag
+### Attributes of the \<DCF> tag
 
 | Attribute    | Description                                                                                                                                                                                                                                                                                                                                      |
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -76,7 +76,7 @@ This information is added in the *\<RCA>* tag. For example:
 | interfaceID  | The interface from which to start.                                                                                                                                                                                                                                                                                                               |
 | addExternals | \-  True: External connections will be added<br> -  False: No external connections will be added.<br> Default: False                                                                                               |
 
-#### Example of a Service.xml file:
+### Example of a Service.xml file:
 
 ```xml
 <Service version="2" dmaid="131" id="5" name="Parent Service" description="myService" vdxfile="" ignoreTimeouts="false" isTemplate="false" generatedFromTemplate=""  type="" timestamp="636168981380371823" keepCopiesOnReApply="false">
@@ -93,7 +93,7 @@ This information is added in the *\<RCA>* tag. For example:
 </Service>
 ```
 
-### Service.xml configuration for automatic RCA chain generation for service templates
+## Service.xml configuration for automatic RCA chain generation for service templates
 
 From DataMiner 9.5.3 onwards, automatic RCA chain generation based on connectivity is also supported for service templates. In that case, in the *Service.xml* file of the service template, information must be added about the element and interface that serve as the entry point to calculate the DCF chain.
 
@@ -108,7 +108,7 @@ This information is added in the *\<RCA>* tag. For example:
 > [!NOTE]
 > If interfaces or elements are not found during service creation, an error will be thrown and service creation will stop.
 
-#### Attributes of the \<DCF> tag
+### Attributes of the \<DCF> tag
 
 | Attribute          | Description                                                                                                                                                                                                                                                                                                                                      |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -123,7 +123,7 @@ This information is added in the *\<RCA>* tag. For example:
 > [!NOTE]
 > Though it is not possible to use wildcards for the *templateEntryPoint* or *templateInterface*, it is possible to use placeholders from the service template.
 
-#### Example of a Service.xml file:
+### Example of a Service.xml file:
 
 ```xml
 <Service version="2" dmaid="131" id="18" name="MyDCFTemplate" description="" vdxfile="" ignoreTimeouts="false" isTemplate="true" generatedFromTemplate="" type="" timestamp="636253477373961897" keepCopiesOnReApply="false">

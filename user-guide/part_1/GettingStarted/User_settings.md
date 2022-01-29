@@ -2,11 +2,11 @@
 uid: User_settings
 ---
 
-## User settings
+# User settings
 
 Many settings in DataMiner can be adapted according to the preferences of the user. This can be done in the *Settings* window.
 
-### Accessing the user settings
+## Accessing the user settings
 
 The user settings can be accessed in different ways:
 
@@ -28,7 +28,7 @@ The settings window consists of two tabs. The tab with the user settings is open
 > - For more information on the computer settings, see [Computer settings](xref:Computer_settings).
 > - Depending on the configuration of your user account, it is possible that some settings are not shown.
 
-### Overview of the user settings
+## Overview of the user settings
 
 The DataMiner Cube user settings are divided in several different sections:
 
@@ -58,7 +58,7 @@ The DataMiner Cube user settings are divided in several different sections:
 
 - [Advanced settings](#advanced-settings)
 
-#### General settings
+### General settings
 
 On the *General* page, the following settings are available:
 
@@ -69,7 +69,7 @@ On the *General* page, the following settings are available:
 
 - **Show DMA status messages**: Select this setting to no longer be notified when a DMA in your system is not running, disconnected, starting, or switching over to another DMA in Failover.
 
-#### Alarm Console settings
+### Alarm Console settings
 
 On the *Alarm Console* page, several settings are available:
 
@@ -132,7 +132,7 @@ On the *Alarm Console* page, several settings are available:
     > See also:
     > [Setting the default alarm tabs and columns in the Cube settings](xref:Working_with_the_Alarm_Console#setting-the-default-alarm-tabs-and-columns-in-the-cube-settings)
 
-##### Alarm Console \> Card-specific
+#### Alarm Console \> Card-specific
 
 From DataMiner 9.5.6 onwards, the Alarm Console page also has a *Card-specific* subpage, where you can configure custom active alarms tabs for the ALARMS pages of element, service or view cards. For element cards, you can also configure custom alarm tabs for cards of specific element protocols.
 
@@ -147,7 +147,7 @@ To configure a custom tab page:
 > [!NOTE]
 > It is not possible to remove the three default tab pages (*Active alarms*, *Masked alarms* and *Information events*).
 
-#### Card settings
+### Card settings
 
 On the *Card* page, the settings are divided into four sections, i.e. a section for view cards, element cards, service cards, and all cards. Some settings return in several sections, so that they can be applied separately for different types of card.
 
@@ -214,7 +214,7 @@ On the *Card* page, the settings are divided into four sections, i.e. a section 
 
     - *Update automatically*: The new settings saved in the updated preset are automatically loaded.
 
-#### Connection settings
+### Connection settings
 
 On the *Connection* page, the following settings are available:
 
@@ -222,7 +222,7 @@ On the *Connection* page, the following settings are available:
 
 - **Automatic reconnect after connection loss**: Select this setting to ensure that DataMiner Cube will automatically reconnect after connection has been lost.
 
-#### Cube settings
+### Cube settings
 
 On the *Cube* page, the following settings are available:
 
@@ -244,7 +244,7 @@ On the *Cube* page, the following settings are available:
 
 - **Display the server time in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether server time is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
-#### Cube sides settings
+### Cube sides settings
 
 On the *Cube sides* page, you can change the following settings for each side of Cube:
 
@@ -252,7 +252,7 @@ On the *Cube sides* page, you can change the following settings for each side of
 
 - **# Cards**: The maximum number of cards that can be opened on a Cube side.
 
-#### Data Display settings
+### Data Display settings
 
 On the *Data Display* page, several settings are available, some of which are only applicable for Lite mode.
 
@@ -305,7 +305,7 @@ On the *Data Display* page, several settings are available, some of which are on
 > [!NOTE]
 > Up to DataMiner 9.0.0, this section also includes the trending settings. In later versions, these settings have been moved to a separate section. See [Trending settings](#trending-settings).
 
-#### Icons settings
+### Icons settings
 
 These settings allow you to specify which alarm levels and icons are shown next to the icons of views, services and elements in the DataMiner Cube user interface.
 
@@ -327,7 +327,7 @@ These settings allow you to specify which alarm levels and icons are shown next 
 > See also:
 > [Special icon settings](xref:Main_Cube_UI_components_prior_to_DataMiner_10#special-icon-settings)
 
-#### Regional settings
+### Regional settings
 
 On the *Regional* page, the following settings are available:
 
@@ -344,7 +344,7 @@ On the *Regional* page, the following settings are available:
     > - When you copy data to the Windows clipboard, that data will always be delimited by TAB characters, regardless of this setting.
     > - This setting only determines the separator used for CSV exports via Cube. Exports that are done via the server, such as service template exports, use the settings of the server.
 
-#### Surveyor/Sidebar settings
+### Surveyor/Sidebar settings
 
 On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page, the following settings are available:
 
@@ -360,7 +360,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Launch EPM card on filter selection**: Available from DataMiner 10.2.0/10.1.3 onwards. Select this checkbox to have an EPM card opened when an item is selected in a filter in an EPM topology tab.
 
-#### Trending settings
+### Trending settings
 
 - **Trend Y-axis mode**: Select *Auto* to automatically optimize the vertical range of a trend graph during pan and zoom operations. Select *Range* to fix the vertical range to the minimum and maximum defined in the protocol.
 
@@ -412,7 +412,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Visualize change points**: Available from DataMiner 10.0.0/10.0.2 onwards. When this option is disabled, change points detected based on trend data analysis will no longer be displayed.
 
-#### Visual Overview settings
+### Visual Overview settings
 
 On the *Visual Overview* page, the following settings are available:
 
@@ -422,7 +422,7 @@ On the *Visual Overview* page, the following settings are available:
 
 - **Maximum number of child shapes in a ‘Children’ container shape**: Enter a value in the box to determine the maximum number of dynamically generated Visio shapes in a “Children” container shape. For more information, see [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows) and [Generating shapes based on child items in a view or a service](xref:Generating_shapes_based_on_child_items_in_a_view_or_a_service).
 
-#### Advanced settings
+### Advanced settings
 
 On the *Advanced* page, the following settings are available:
 

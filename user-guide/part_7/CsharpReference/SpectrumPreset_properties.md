@@ -2,6 +2,6 @@
 uid: SpectrumPreset_properties
 ---
 
-## SpectrumPreset properties
+# SpectrumPreset properties
 
 None

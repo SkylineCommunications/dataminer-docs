@@ -2,9 +2,9 @@
 uid: Could_not_find_SLScripting_process_is_DataMiner_running
 ---
 
-## Could not find SLScripting process, is DataMiner running?
+# Could not find SLScripting process, is DataMiner running?
 
-### Problem
+## Problem
 
 After clicking *Attach* in the *DIS Inject* window, you get the following error:
 
@@ -12,15 +12,15 @@ After clicking *Attach* in the *DIS Inject* window, you get the following error:
 Visual Studio needs to run as administrator to perform this action.
 ```
 
-### Cause
+## Cause
 
 Microsoft Visual Studio is not allowed to attach to the DataMiner SLScripting process.
 
-### Resolution
+## Resolution
 
 Run Microsoft Visual Studio as an administrator.
 
-#### To change the privilege level of VSLauncher.exe
+### To change the privilege level of VSLauncher.exe
 
 1. Exit Microsoft Visual Studio
 
@@ -34,7 +34,7 @@ Run Microsoft Visual Studio as an administrator.
 
 6. Click *OK*.
 
-#### To associate XML files with VSLauncher.exe
+### To associate XML files with VSLauncher.exe
 
 1. Right-click an XML file and select *Open With \> Choose Default Program.*
 

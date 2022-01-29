@@ -2,6 +2,6 @@
 uid: AutomationDateTimeUpDownOptions_methods
 ---
 
-## AutomationDateTimeUpDownOptions methods
+# AutomationDateTimeUpDownOptions methods
 
 None

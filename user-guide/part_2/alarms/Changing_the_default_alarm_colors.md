@@ -2,7 +2,7 @@
 uid: Changing_the_default_alarm_colors
 ---
 
-## Changing the default alarm colors
+# Changing the default alarm colors
 
 In the *DataMiner.xml* file, you can specify the colors you want to assign to each of the alarm states:
 
@@ -36,7 +36,7 @@ In the *DataMiner.xml* file, you can specify the colors you want to assign to ea
 > - [Alarm severity levels](xref:Alarm_types#alarm-severity-levels)
 > - [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 
-#### Example
+### Example
 
 In the following example, the default alarm colors up to DataMiner 9.6.4 have been configured:
 

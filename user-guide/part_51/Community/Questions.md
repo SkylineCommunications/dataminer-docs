@@ -2,7 +2,7 @@
 uid: Questions
 ---
 
-## Questions
+# Questions
 
 On the Questions page, you can actively participate in the DataMiner community by asking or replying to any question related to
 

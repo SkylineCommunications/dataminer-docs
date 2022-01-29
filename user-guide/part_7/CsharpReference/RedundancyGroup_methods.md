@@ -2,9 +2,9 @@
 uid: RedundancyGroup_methods
 ---
 
-## RedundancyGroup methods
+# RedundancyGroup methods
 
-#### IsInMaintenance
+### IsInMaintenance
 
 Checks whether the specified element in the redundancy group is in maintenance mode.
 
@@ -35,7 +35,7 @@ var redundancyGroup = engine.FindRedundancyGroup("MyRedundancyGroup");
 bool isInMaintenance = redundancyGroup.IsInMaintenance(200, 4000);
 ```
 
-#### SetMaintenanceMode
+### SetMaintenanceMode
 
 Changes a specified element in the redundancy group
 

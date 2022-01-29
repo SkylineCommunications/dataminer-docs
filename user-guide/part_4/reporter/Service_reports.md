@@ -2,7 +2,7 @@
 uid: Service_reports
 ---
 
-## Service reports
+# Service reports
 
 To view report information on the *Service* page, you first have to select a service. You can still select a different service afterwards by clicking *CHANGE* to the right of the service name in the header.
 

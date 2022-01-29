@@ -2,7 +2,7 @@
 uid: AutomationTimePickerOptions_properties
 ---
 
-## AutomationTimePickerOptions properties
+# AutomationTimePickerOptions properties
 
 - [EndTime](#endtime)
 
@@ -17,7 +17,7 @@ uid: AutomationTimePickerOptions_properties
 > [!NOTE]
 > All properties of the *AutomationDateTimeUpDownOptions* class can also be used.
 
-#### EndTime
+### EndTime
 
 Gets or sets the last time listed in the time picker control.
 
@@ -34,7 +34,7 @@ TimeSpan.FromMinutes(1439)
 > [!NOTE]
 > 1439 = 1440 minutes (1 day) minus a minute
 
-#### MaxDropDownHeight
+### MaxDropDownHeight
 
 Gets or sets the height of the time picker control.
 
@@ -44,7 +44,7 @@ double MaxDropDownHeight
 
 Default: 130
 
-#### ShowDropDownButton
+### ShowDropDownButton
 
 Enables or disables the drop-down button of the time picker control.
 
@@ -54,7 +54,7 @@ bool ShowDropDownButton
 
 Default: True
 
-#### StartTime
+### StartTime
 
 Gets or sets the earliest time listed in the time picker control.
 
@@ -68,7 +68,7 @@ Default:
 TimeSpan.Zero
 ```
 
-#### TimeInterval
+### TimeInterval
 
 Gets or sets the time interval between two time items in the time picker control.
 

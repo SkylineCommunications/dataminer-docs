@@ -2,7 +2,7 @@
 uid: Generating_shapes_based_on_child_items_in_a_view_or_a_service
 ---
 
-## Generating shapes based on child items in a view or a service
+# Generating shapes based on child items in a view or a service
 
 In a Visio drawing linked to a view or a service, you can specify that a shape should be created automatically for every child item of that view or service.
 
@@ -14,7 +14,7 @@ To implement this feature, do the following:
 
 2. Group those shapes, and add the necessary group-level shape data fields to the group. See [Group-level shape data](#group-level-shape-data).
 
-### Child-level shape data
+## Child-level shape data
 
 The following shape data fields can be added to a shape that has to represent a particular type of child item.
 
@@ -98,7 +98,7 @@ The following shape data fields can be added to a shape that has to represent a 
         |--------------------|---------------------------------------------|
         | ChildrenFilter     | ResourceMapping=mapped,unmapped,inheritance |
 
-### Group-level shape data
+## Group-level shape data
 
 The following shape data fields can be added to the group containing the shapes that have to represent the different child items.
 

@@ -2,7 +2,7 @@
 uid: Viewing_a_list_of_current_active_service_alarms
 ---
 
-## Viewing a list of current active service alarms
+# Viewing a list of current active service alarms
 
 To view a list of the alarms that are currently affecting the SLA, go to the *Active Service Alarms* page of the SLA element.
 

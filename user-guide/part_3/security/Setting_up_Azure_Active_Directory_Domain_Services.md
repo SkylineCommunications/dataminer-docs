@@ -2,11 +2,11 @@
 uid: Setting_up_Azure_Active_Directory_Domain_Services
 ---
 
-## Setting up Azure Active Directory Domain Services
+# Setting up Azure Active Directory Domain Services
 
 The recommended way to connect your DataMiner System with Azure AD is via SAML. See [Configuring external authentication via an identity provider using SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML). However, if this is not possible, you also have the possibility to connect via LDAP. To do so, you will first need to deploy the Azure AD Domain Services and then configure the DNS servers.
 
-#### Deploying the Azure AD DS
+### Deploying the Azure AD DS
 
 1. Navigate to *portal.azure.com* and log in.
 
@@ -35,7 +35,7 @@ The recommended way to connect your DataMiner System with Azure AD is via SAML. 
 > [!NOTE]
 > In a production environment, it is recommended to create the virtual network and the Azure AD domain services in different resource groups.
 
-#### Configuring the DNS servers
+### Configuring the DNS servers
 
 1. Navigate to portal.azure.com and do the following:
 

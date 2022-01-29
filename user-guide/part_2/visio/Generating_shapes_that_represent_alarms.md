@@ -2,7 +2,7 @@
 uid: Generating_shapes_that_represent_alarms
 ---
 
-## Generating shapes that represent alarms
+# Generating shapes that represent alarms
 
 In a Visio drawing, you can specify that a shape should be created automatically for every alarm associated with the object to which the Visio drawing is linked (e.g. a view). Those automatically generated “alarm shapes” can be set to show the alarm severity color and the contents of one particular detail of the alarm in question (by specifying the name of the Alarm Console column displaying that field).
 
@@ -16,11 +16,11 @@ To implement this feature, do the following:
 > - The shape created in step 1 can itself be a group that contains a number of subshapes, each with their own **Alarm** and **Info** data fields. That way, you can e.g. visualize different details of one particular alarm.
 > - From DataMiner 9.5.3 onwards, by default the shapes representing the alarms are ordered according to the time of the alarms.
 
-### Child-level shape data
+## Child-level shape data
 
 The child-level shape data must be configured differently depending on whether an alarm will be represented by a single shape or by a number of shapes grouped together.
 
-#### A single shape represents an alarm
+### A single shape represents an alarm
 
 The following shape data fields can be added to a single shape representing an alarm:
 
@@ -45,7 +45,7 @@ The following shape data fields can be added to a single shape representing an a
 
     Make sure that the element associated with the alarm has a custom property named “ElementPropertyName”, which contains a name or an ID of an element, view, service or redundancy group. If you want to rule out any mix-up between IDs, you can use “ItemType” to indicate that the name or ID you specified, refers to an element, a view, a service or a redundancy group.     Example: If you set the link value to *ELEMENTPROPERTY:MyAlarmLink\|Element*, the shape will link to the element name or element ID stored in the element property named “MyAlarmLink”.
 
-#### A group of shapes represents an alarm
+### A group of shapes represents an alarm
 
 To display different pieces of information for each alarm, you can group several shapes together, so that they together represent the child shape. In that case the shape data fields should be configured as follows:
 
@@ -61,7 +61,7 @@ To display different pieces of information for each alarm, you can group several
 
     - **Info** (configured the same way as for a single shape).
 
-### Group-level shape data
+## Group-level shape data
 
 The following shape data fields can be added to the group containing the alarm shapes.
 

@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_a_dashboard_component
 ---
 
-## Linking a shape to a dashboard component
+# Linking a shape to a dashboard component
 
 From DataMiner 10.0.8 onwards, it is possible to link a shape to a component from the cross-platform Dashboards app.
 

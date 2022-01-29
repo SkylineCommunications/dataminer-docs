@@ -2,7 +2,7 @@
 uid: Creating_a_ticket
 ---
 
-## Creating a ticket
+# Creating a ticket
 
 This action is only available if:
 

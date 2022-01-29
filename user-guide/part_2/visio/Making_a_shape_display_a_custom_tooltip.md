@@ -2,7 +2,7 @@
 uid: Making_a_shape_display_a_custom_tooltip
 ---
 
-## Making a shape display a custom tooltip
+# Making a shape display a custom tooltip
 
 Using a shape data field of type **Info**, you can add custom tooltips to shapes. Alternatively, you can also use a shape data field of type **Tooltip** in order to display information about the item to which a shape is linked.
 
@@ -10,7 +10,7 @@ Using a shape data field of type **Info**, you can add custom tooltips to shapes
 > See also:
 > <https://community.dataminer.services/video/visio-adding-a-tooltip-on-a-view-object/>
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Info** to the shape, and set its value to the text that has to appear in the tooltip when users hover over the shape.
 

@@ -2,7 +2,7 @@
 uid: PagerOptions_constructor
 ---
 
-## PagerOptions constructor
+# PagerOptions constructor
 
 ```txt
 PagerOptions(string message, string to)

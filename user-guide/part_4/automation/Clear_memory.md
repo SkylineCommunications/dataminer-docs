@@ -2,7 +2,7 @@
 uid: Clear_memory
 ---
 
-## Clear memory
+# Clear memory
 
 Use this action to clear the content of an Automation script’s memory file:
 

@@ -2,7 +2,7 @@
 uid: Making_an_SLA_generate_tickets
 ---
 
-## Making an SLA generate tickets
+# Making an SLA generate tickets
 
 On the *Ticket Creation* page of SLA elements, a parameter is provided that can be used to make DataMiner automatically generate tickets.
 
@@ -20,7 +20,7 @@ The parameter, *Generate Ticket*, can have five different values:
 
 To automatically generate tickets, this parameter must be used in conjunction with the Automation and Correlation modules in DataMiner.
 
-### Example of usage
+## Example of usage
 
 1. The SLA element detects an outage.
 

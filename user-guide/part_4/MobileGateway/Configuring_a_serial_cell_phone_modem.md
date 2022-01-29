@@ -2,7 +2,7 @@
 uid: Configuring_a_serial_cell_phone_modem
 ---
 
-## Configuring a serial cell phone modem
+# Configuring a serial cell phone modem
 
 To configure a cell phone modem that is physically connected to one of your DataMiner Agents via a serial connection:
 
@@ -27,7 +27,7 @@ To configure a cell phone modem that is physically connected to one of your Data
 
 8. Select the *Mobile Gateway* tab and configure the necessary settings. For more information, see [Configuring Mobile Gateway in DataMiner Cube](xref:Configuring_Mobile_Gateway_in_DataMiner_Cube).
 
-### Example of a Config.xml for a serial modem
+## Example of a Config.xml for a serial modem
 
 ```xml
 <GSMConfig xmlns="http://www.skyline.be/config/config">
@@ -58,7 +58,7 @@ To configure a cell phone modem that is physically connected to one of your Data
 </GSMConfig>
 ```
 
-### Configuring a virtual COM port on a DataMiner Agent
+## Configuring a virtual COM port on a DataMiner Agent
 
 If a Mobile Gateway is connected to a DataMiner Agent through a serial gateway, then you need to configure a virtual COM port on the DataMiner Agent, and map it to the port on the serial gateway to which the Mobile Gateway is connected.
 

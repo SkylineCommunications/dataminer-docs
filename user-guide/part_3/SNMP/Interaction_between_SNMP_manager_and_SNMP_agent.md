@@ -2,7 +2,7 @@
 uid: Interaction_between_SNMP_manager_and_SNMP_agent
 ---
 
-## Interaction between SNMP manager and SNMP agent
+# Interaction between SNMP manager and SNMP agent
 
 The SLSNMPManager and SLSNMPAgent processes allow a DataMiner Agent to exchange SNMP messages with devices and third-party SNMP managers.
 
@@ -11,7 +11,7 @@ The SLSNMPManager and SLSNMPAgent processes allow a DataMiner Agent to exchange 
 > - [Changing SNMP agent ports](xref:Changing_SNMP_agent_ports)
 > - [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings)
 
-### Graphical representation
+## Graphical representation
 
 Up to DataMiner 9.0.2, this can be represented as follows:
 
@@ -27,7 +27,7 @@ From DataMiner 9.0.3 onwards, a number of changes have been implemented:
 
 
 
-### SLSNMPManager
+## SLSNMPManager
 
 The SLSNMPManager process communicates with devices acting as SNMP agents.
 
@@ -53,7 +53,7 @@ The UDP ports to be used are set as follows:
 
     To receive the notifications of any version on a different port, specify this in the file *DataMiner.xml*. See [Customizing the trap reception ports of a DMA](xref:Changing_SNMP_agent_ports#customizing-the-trap-reception-ports-of-a-dma).
 
-### SLSNMPAgent
+## SLSNMPAgent
 
 The SLSNMPAgent process communicates with third-party applications acting as SNMP managers (e.g. HP OpenView, IBM NetCool, etc.).
 

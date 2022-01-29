@@ -2,7 +2,7 @@
 uid: Bookings_Reservations_tab
 ---
 
-## Bookings / Reservations tab
+# Bookings / Reservations tab
 
 To view a default report of bookings within the system:
 

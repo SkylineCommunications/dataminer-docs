@@ -2,9 +2,9 @@
 uid: ScriptMemory_methods
 ---
 
-## ScriptMemory methods
+# ScriptMemory methods
 
-#### Clear
+### Clear
 
 Removes all values from the memory file.
 
@@ -22,7 +22,7 @@ if(memory != null)
 }
 ```
 
-#### Get
+### Get
 
 Gets one of the values from the memory file. The memory position can be specified by name or by ID.
 
@@ -43,7 +43,7 @@ ScriptMemory memory = engine.GetMemory("myMemory");
 object myValue = memory.Get("myEntryDescription");
 ```
 
-#### Set
+### Set
 
 Sets the given value in the memory file. The memory position can be specified by name or by ID.
 

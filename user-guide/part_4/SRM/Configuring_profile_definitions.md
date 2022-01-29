@@ -2,7 +2,7 @@
 uid: Configuring_profile_definitions
 ---
 
-## Configuring profile definitions
+# Configuring profile definitions
 
 Profile definitions combine a number of parameters and scripts that are needed to fully configure a certain device.
 

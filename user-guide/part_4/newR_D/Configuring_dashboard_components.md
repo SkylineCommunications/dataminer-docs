@@ -2,7 +2,7 @@
 uid: Configuring_dashboard_components
 ---
 
-## Configuring dashboard components
+# Configuring dashboard components
 
 Each dashboard component consists of a visualization and a data feed.
 
@@ -28,7 +28,7 @@ The following actions are then possible to configure the component:
 
 In addition, depending on the visualization, additional configuration options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
 
-### Applying a visualization
+## Applying a visualization
 
 To apply a visualization to a component or change the visualization of a component:
 
@@ -38,7 +38,7 @@ To apply a visualization to a component or change the visualization of a compone
 
     As soon as the mouse pointer hovers over the different visualizations, a preview will be displayed in the component.
 
-### Applying a data feed
+## Applying a data feed
 
 To apply a data feed or change the data feed of a component:
 
@@ -72,11 +72,11 @@ To apply a data feed or change the data feed of a component:
 
     After you click this icon, compatible filter feeds will be marked with this icon in the data pane, and you will be able to drag these onto the component just like a data feed.
 
-#### Using Queries data input
+### Using Queries data input
 
 From DataMiner 10.0.13 onwards, a special type of data feed is available, using the Generic Query Interface. This “Queries” data item allows you to construct a query in order to tap into the wealth of data available in your DataMiner System.
 
-##### Creating a query
+#### Creating a query
 
 You can create a query as follows:
 
@@ -198,7 +198,7 @@ You can create a query as follows:
 
 6. Drag the configured query to the component in order to use it.
 
-##### Importing a query
+#### Importing a query
 
 From DataMiner 10.1.4 onwards, you can import a query from a different dashboard in the DMS. To do so:
 
@@ -208,7 +208,7 @@ From DataMiner 10.1.4 onwards, you can import a query from a different dashboard
 
 3. Click *Import*. The query will now be available for use in the data pane.
 
-##### Notes on GQI queries
+#### Notes on GQI queries
 
 Please note the following regarding query data input:
 
@@ -225,7 +225,7 @@ Please note the following regarding query data input:
 
 - From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range feed by selecting the *From feed* checkbox.
 
-### Customizing the component layout
+## Customizing the component layout
 
 Each component in a dashboard has a number of default options. By default, the configuration of these options is determined on dashboard level. However, it is possible to override this. The way this can be done depends on the DataMiner version.
 
@@ -274,7 +274,7 @@ Prior to DataMiner 10.0.8:
 
 Depending on the visualization, additional layout options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
 
-### Deleting a component
+## Deleting a component
 
 You can delete a dashboard component as follows:
 

@@ -2,7 +2,7 @@
 uid: Class_Library_packages
 ---
 
-## Class Library packages
+# Class Library packages
 
 A Class Library package (CLP) contains generic code that can be shared by multiple QActions and Automation scripts.
 
@@ -36,7 +36,7 @@ For more detailed information on Class Library packages, see the following secti
 
 - [Class Library versions](#class-library-versions)
 
-### Types of Class Library packages
+## Types of Class Library packages
 
 There are two types of Class Library packages:
 
@@ -45,7 +45,7 @@ There are two types of Class Library packages:
 | Base packages                             | Default packages shipped with DIS.                                                                                                                    |
 | Custom packages, a.k.a Community packages | Packages containing code which was written specifically for a particular vendor or project and which is maintained by a dedicated team of developers. |
 
-### Structure of a Class Library package
+## Structure of a Class Library package
 
 A Class Library package is basically a zip file containing
 
@@ -66,7 +66,7 @@ Package.zip
         …
 ```
 
-### Manifest.xml file
+## Manifest.xml file
 
 The Manifest.xml file, which must be placed in the zip file’s root folder, describes the content of the package and lists the dependencies between the package in question and other packages.
 
@@ -100,9 +100,9 @@ For more information about the tags used in a Manifest.xml file, see below:
 > If you want IntelliSense support when creating a Manifest.xml file, make sure to add the correct XML namespace to the \<CodePackage> tag:
 > *\<CodePackage xmlns=”http://www.skyline.be/ClassLibrary”>*
 
-### Version numbering
+## Version numbering
 
-#### Base packages
+### Base packages
 
 Base packages, i.e. default packages shipped with DIS, have a version number made up of four components:
 
@@ -113,11 +113,11 @@ Base packages, i.e. default packages shipped with DIS, have a version number mad
 | Major change              | Increment this number when the package contains changes that break functionality present in the previous version (e.g. API changes).          |
 | Iteration                 | Increment this number when the package contains changes that do not break functionality present in the previous version (e.g. API additions). |
 
-#### Community packages
+### Community packages
 
 If you create a custom community package, you are free to use your own versioning system as long as the version number is made up of four components.
 
-### DLL references
+## DLL references
 
 When an external DLL file is needed to be able to execute a piece of code, a “DllImport” line has to be added above that piece of code.
 
@@ -130,7 +130,7 @@ In the following example, a “DllImport” line was added above a piece of code
 Void Method1(){…}
 ```
 
-### Restrictions
+## Restrictions
 
 When DIS loads a package, it will combine C# code from different sources into a single C# code unit. This means, that it will not be possible to use certain C# features.
 
@@ -145,9 +145,9 @@ The following C#/.NET features are currently not supported:
 
 - DllImport tags need to be fully qualified. Use e.g. *\[Skyline.DataMiner.Library.Common.Attributes.DllImport("Newtonsoft.Json.dll")\]* instead of *\[DllImport("Newtonsoft.Json.dll")\]*. If a DllImport tag is not fully qualified, DIS will not be able to detect the DLL file before compiling the code.
 
-### Class Library versions
+## Class Library versions
 
-#### Ranges
+### Ranges
 
 | Range   | Supported as from DataMiner version... |
 |---------|----------------------------------------|
@@ -155,7 +155,7 @@ The following C#/.NET features are currently not supported:
 | 1.1.x.x | 9.6.3                                  |
 | 1.2.x.x | 10.0.3                                 |
 
-#### Released versions
+### Released versions
 
 [DIS 2.18](https://community.dataminer.services/documentation/dis-v2-18-release-notes/)
 

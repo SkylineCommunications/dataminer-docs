@@ -2,7 +2,7 @@
 uid: Logging_on_to_the_Dashboards_App
 ---
 
-## Logging on to the Dashboards App
+# Logging on to the Dashboards App
 
 In most cases, logging on to the *Dashboards* App is similar to logging on to DataMiner Cube. See [Logging on to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube).
 

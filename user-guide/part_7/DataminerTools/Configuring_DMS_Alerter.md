@@ -2,7 +2,7 @@
 uid: Configuring_DMS_Alerter
 ---
 
-## Configuring DMS Alerter
+# Configuring DMS Alerter
 
 It is possible to configure DMS Alerter to your personal preferences. These user settings are stored on the server, so that you will always have your personal settings, no matter from which device you log on to Alerter.
 
@@ -22,7 +22,7 @@ This section consists of the following topics:
 
 - [Configuring options related to acknowledging alarms](#configuring-options-related-to-acknowledging-alarms)
 
-### Connecting DMS Alerter to another DataMiner System
+## Connecting DMS Alerter to another DataMiner System
 
 Do the following if you want DMS Alerter to connect to another DataMiner System.
 
@@ -46,7 +46,7 @@ Do the following if you want DMS Alerter to connect to another DataMiner System.
 > - In the DMS Connections tab, the option *Show message when SLAlerter loses connection* determines whether users will be notified when the connection to the DMS is lost. By default, this option is enabled.
 > - If the connection to the DMS is lost, this is logged in the Event Viewer with an "SLAlerter lost connection" message. In the Alerter application itself, the user will be redirected to the login screen, in the same manner as when the connection is lost in DataMiner Cube.
 
-### Setting your startup preferences for DMS Alerter
+## Setting your startup preferences for DMS Alerter
 
 Do the following to configure the startup settings of DMS Alerter.
 
@@ -65,7 +65,7 @@ Do the following to configure the startup settings of DMS Alerter.
 
 4. Click *OK*.
 
-### Setting an alarm filter in DMS Alerter
+## Setting an alarm filter in DMS Alerter
 
 It is possible to filter the alarms that will generate alerts, so that your attention is only drawn to a specific subset of alarms. To do so, you can use a combination of client-side filters and server-side filters.
 
@@ -92,7 +92,7 @@ To configure Alerter filters:
 > [!NOTE]
 > DMS Alerter never shows masked alarms.
 
-### Configuring alarm storm prevention in Alerter
+## Configuring alarm storm prevention in Alerter
 
 In case many alarms occur at the same time, it is possible to make sure that you are not flooded with alarm notifications. Instead, an alarm storm can be triggered, so that you receive only one notification that warns about the start of an alarm storm.
 
@@ -113,7 +113,7 @@ To configure alarm storm prevention:
 > [!NOTE]
 > Alerter alarm storm prevention can also be configured on system level, rather than on user level only. For more information, see [Configuring alarm storm prevention for notifications](xref:Configuring_alarm_storm_prevention_for_notifications).
 
-### Setting the notification options in DMS Alerter
+## Setting the notification options in DMS Alerter
 
 Do the following if you want to change settings with regard to alarm sounds and pop-up balloons:
 
@@ -146,7 +146,7 @@ Do the following if you want to change settings with regard to alarm sounds and 
 
 4. If you just want to hear the generic computer beep when a pop-up balloon appears, select the *Enable beep* option.
 
-### Configuring Alerter pop-up balloons
+## Configuring Alerter pop-up balloons
 
 By default, a pop-up balloon only shows the alarm severity, element name, parameter name, parameter value and timestamp. However, it is possible to configure the balloons to also show any of the alarm properties that can be shown in the DataMiner Cube Alarm Console.
 
@@ -167,7 +167,7 @@ To do so:
 > - You can add as many alarm properties to the pop-up balloons as you like. If too many properties are added to show them at once in the balloon, it will be possible to scroll through them with a scrollbar.
 > - An element name, service name or view name will be underlined to indicate that you can click these to respectively open the element, service or view information in your default client application.
 
-### Configuring options related to acknowledging alarms
+## Configuring options related to acknowledging alarms
 
 From DataMiner 10.0.10 onwards, it is possible to fine-tune what happens when an alarm is acknowledged via an Alerter pop-up balloon.
 

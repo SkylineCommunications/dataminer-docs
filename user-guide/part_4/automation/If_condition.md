@@ -2,7 +2,7 @@
 uid: If_condition
 ---
 
-## If condition
+# If condition
 
 Add an If condition to make certain actions in the script depend on one or more conditions.
 

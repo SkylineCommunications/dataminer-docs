@@ -2,7 +2,7 @@
 uid: Cleaning_up_unused_files_on_a_DMA
 ---
 
-## Cleaning up unused files on a DMA
+# Cleaning up unused files on a DMA
 
 > [!TIP]
 > See also:

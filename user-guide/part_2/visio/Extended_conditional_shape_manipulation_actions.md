@@ -2,7 +2,7 @@
 uid: Extended_conditional_shape_manipulation_actions
 ---
 
-## Extended conditional shape manipulation actions
+# Extended conditional shape manipulation actions
 
 To apply conditional shape manipulation actions to any type of linked shape, or to combine multiple conditions, a different configuration is required than for the basic conditional shape manipulation actions.
 
@@ -24,7 +24,7 @@ In this section:
 > - These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
 > - For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions).
 
-### Configuring the shape data fields
+## Configuring the shape data fields
 
 Depending on the action or actions you want to apply, create the following shape data fields.
 
@@ -41,13 +41,13 @@ Depending on the action or actions you want to apply, create the following shape
 
 As the value for the above-mentioned shape data fields, you need to enter a single condition or multiple conditions combined into one. Regardless of whether a single or multiple conditions are used, each condition has to be assigned an alias.
 
-##### Single condition:
+#### Single condition:
 
 ```txt
 Alias-”Alias”|”Target”|”What”|”Condition”
 ```
 
-##### Multiple conditions combined:
+#### Multiple conditions combined:
 
 ```txt
 “Logical expression”-”Alias1”|”Target”|”What”|”Condition”
@@ -56,7 +56,7 @@ Alias-”Alias”|”Target”|”What”|”Condition”
                             -...
 ```
 
-##### Condition components:
+#### Condition components:
 
 | Condition component | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,7 +66,7 @@ Alias-”Alias”|”Target”|”What”|”Condition”
 | What                | Can be configured as follows:<br> - *ALARMLEVEL*<br> -  *NAME:* *\[Name of the element, view or service specified in the Target\]*<br> -  *PARAMETER:* \[Parameter ID\]<br>Alternatively, you can simply specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.<br> -  *PROPERTY:* *\[Property name\]*<br> -  *Protocol* (from DataMiner 9.6.4 onwards)<br> -  From DataMiner 9.0.2 onwards, it is also possible to use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition). |
 | Condition           | The condition that determines whether the shape manipulation is applied. If you want to check if the specified “What” matches with a regular expression, start the condition with “*Regex=*”, followed by the regular expression.<br> Multiple conditions can be combined within this part of the condition, using a semicolon. In that case, each condition should include an operator and a value. The complete condition component will only function correctly if all conditions within it are correctly configured.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-##### Using an asterisk in a condition:
+#### Using an asterisk in a condition:
 
 Up to DataMiner 9.5.4, when an asterisk ("\*") is used in shape data to refer to an element, view or service, the asterisk is replaced with the first element ID, view ID or service ID that is found from the parent shape upwards, but the current shape is not checked.
 
@@ -74,7 +74,7 @@ From DataMiner 9.5.4 onwards, however, the current shape is checked as well. Thi
 
 For backwards compatibility, if you want asterisk characters to be resolved from the parent shape, you can add the *StartResolvingFromParent* option. See [StartResolvingFromParent](xref:Overview_of_page_and_shape_options).
 
-### Changing the separator character in the condition
+## Changing the separator character in the condition
 
 To change the separator character in part of the condition, you must add the \[sep:XY\] option in the first position of that part of the condition. For example:
 
@@ -98,7 +98,7 @@ In addition, from DataMiner 9.5.13 onwards, it is possible to use the \[sep:XY\]
 > See also:
 > [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
-### Using statistics in the condition
+## Using statistics in the condition
 
 From DataMiner 9.0.2 onwards, you can use alarm statistics in the “What” part of the condition. The following table lists the available items, and indicates whether they can be used to retrieve data for a view, a service or an element.
 
@@ -137,7 +137,7 @@ From DataMiner 9.0.2 onwards, you can use alarm statistics in the “What” par
 > - #NormalAlarms can only be used if, in the file *MaintenanceSettings.xml*, the *\<AutoClear>* tag is set to "false".
 > - On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example *#Tickets:Internal*.
 
-### Specifying a default return value
+## Specifying a default return value
 
 By default, if the condition cannot be evaluated (e.g. because the element or parameter does not exist), it always returns false. However, from DataMiner 9.5.5 onwards, you can specify that the condition must return “true” when it cannot be evaluated.
 
@@ -152,7 +152,7 @@ For example, with the configuration below, if the A condition cannot be evaluate
 > [!NOTE]
 > The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g. *Min*, *Max*, *Concat* or *Avg*. To combine these options, use a semicolon (“;”). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
 
-### Conditional manipulation of connection shapes
+## Conditional manipulation of connection shapes
 
 When conditional shape manipulation actions are defined on connection property shapes, there are additional possibilities for the “What” field of the condition.
 
@@ -198,7 +198,7 @@ The following conditions can be defined:
     | Options            | ConnectionProperty:Speed                 |
     | Highlight          | A\|Connection\|Property:Speed\|\>=5\|Max |
 
-### Examples
+## Examples
 
 Single conditions:
 

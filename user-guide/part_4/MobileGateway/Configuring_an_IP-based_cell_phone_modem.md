@@ -2,7 +2,7 @@
 uid: Configuring_an_IP-based_cell_phone_modem
 ---
 
-## Configuring an IP-based cell phone modem
+# Configuring an IP-based cell phone modem
 
 To configure an IP-based cell phone modem that is connected to your DataMiner System via the TCP/IP network:
 
@@ -32,7 +32,7 @@ To configure an IP-based cell phone modem that is connected to your DataMiner Sy
 >
 > The first DataMiner Agent that sends a request to the device receives ALL unread messages.
 
-### Example of a Config.xml file for an ip-based modem
+## Example of a Config.xml file for an ip-based modem
 
 ```xml
 <GSMConfig xmlns="http://www.skyline.be/config/config">

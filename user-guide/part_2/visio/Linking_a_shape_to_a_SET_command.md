@@ -2,7 +2,7 @@
 uid: Linking_a_shape_to_a_SET_command
 ---
 
-## Linking a shape to a SET command
+# Linking a shape to a SET command
 
 Using a shape data field of type **Execute**, you can link a shape to a SET command.
 
@@ -11,7 +11,7 @@ When you link a shape to a SET command, that command will be executed each time 
 > [!NOTE]
 > - A shape linked to a SET command will not be displayed if the element to which it is linked cannot be found.
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Execute** to the shape, and set its value to:
 
@@ -23,7 +23,7 @@ Set|DmaID/ElementID|ID of write parameter:TableRowKey|NewValue|Options
 > - In the syntax above, “*:TableRowKey*” is optional.
 > - Table rows can be referenced either by primary key or by display key.
 
-### Example
+## Example
 
 ```txt
 Set|17/22954|1103|MyNewPassword
@@ -31,7 +31,7 @@ Set|17/22954|1103|MyNewPassword
 
 When users click the shape, a confirmation box will appear asking them whether they want the SET command to be executed. If they click *Yes*, the command will be executed.
 
-### Options
+## Options
 
 In the above-mentioned command, you can use the following options.
 
@@ -59,7 +59,7 @@ In the above-mentioned command, you can use the following options.
     > - If "SetTrigger=ValueChanged" is used instead of "SetTrigger=Event" in the example above, clicking the same input or output multiple times causes the set command to be executed only once.
     > - All set commands with a "SetTrigger=Event" option will be triggered when an event occurs, even those that do not contain an \[Event:\] placeholder.
 
-### About using separator characters
+## About using separator characters
 
 If you use the option mentioned above, the character that is used to separate the different parts of the SET command cannot be used in the ConfirmationMessage text.
 

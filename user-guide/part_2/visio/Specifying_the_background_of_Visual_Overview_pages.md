@@ -2,13 +2,13 @@
 uid: Specifying_the_background_of_Visual_Overview_pages
 ---
 
-## Specifying the background of Visual Overview pages
+# Specifying the background of Visual Overview pages
 
 > [!TIP]
 > See also:
 > <https://community.dataminer.services/video/visio-adding-a-background/>
 
-### Specifying background pages in Visio
+## Specifying background pages in Visio
 
 In Visio, it is possible to configure a page as a background page, and configure other pages to use it as a background. The background page itself will not be displayed in Visual Overview.
 
@@ -28,7 +28,7 @@ To configure a page to use a particular background page as its background:
 
 3. Click *OK* to close the *Page Properties* window.
 
-### Specifying the background color of Visual Overview pages
+## Specifying the background color of Visual Overview pages
 
 In Visio drawings, two page-level shape data fields can be used to specify the background color of the Visual Overview pages in DataMiner.
 
@@ -36,20 +36,20 @@ In Visio drawings, two page-level shape data fields can be used to specify the b
 
 - Use a shape data field of type **OuterBackground** to set the background color of the entire card.
 
-#### Configuring the shape data fields
+### Configuring the shape data fields
 
 Add a shape data field of type **InnerBackground** or **OuterBackground** to the page, and set its value to a valid ARGB value.
 
 The alpha value, which indicates the opacity (i.e. level of transparency) of the color, is optional.
 
-#### Examples
+### Examples
 
 ```txt
 #FFFF00 (without alpha value)
 #FF99CCFF (with alpha value)
 ```
 
-### Priority of background pages vs. background colors
+## Priority of background pages vs. background colors
 
 It is possible to combine the use of a background page with the use of background colors. In that case, the following order will be applied to determine which background is displayed (from back to front):
 

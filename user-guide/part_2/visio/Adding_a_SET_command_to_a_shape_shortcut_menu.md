@@ -2,11 +2,11 @@
 uid: Adding_a_SET_command_to_a_shape_shortcut_menu
 ---
 
-## Adding a SET command to a shape shortcut menu
+# Adding a SET command to a shape shortcut menu
 
 If a shape is linked to an element, you can use a shape data field of type **Set** to add a SET command to the shape’s shortcut menu. Such a menu command will allow users to change parameter values simply by right-clicking a shape.
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Set** to the shape, and set its value to:
 
@@ -17,7 +17,7 @@ ID of a write parameter;Shortcut menu command[;TableRow]
 > [!NOTE]
 > If you want to add multiple commands, separate the entries by pipe characters.
 
-### Examples
+## Examples
 
 ```txt
 1103;Change password

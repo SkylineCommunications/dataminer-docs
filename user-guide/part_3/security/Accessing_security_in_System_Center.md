@@ -2,7 +2,7 @@
 uid: Accessing_security_in_System_Center
 ---
 
-## Accessing security in System Center
+# Accessing security in System Center
 
 Most security settings for users or user groups are configured in the *System Center* module.
 

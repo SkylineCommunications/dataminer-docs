@@ -2,7 +2,7 @@
 uid: Making_a_shape_display_the_value_of_an_element_or_service_property
 ---
 
-## Making a shape display the value of an element or service property
+# Making a shape display the value of an element or service property
 
 Using a shape data field of type **Property**, a shape linked to an element or a service can be set to display the current value of a certain property of that element or service.
 
@@ -10,7 +10,7 @@ Using a shape data field of type **Property**, a shape linked to an element or a
 > See also:
 > [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter)
 
-### Configuring the shape data field
+## Configuring the shape data field
 
 Add a shape data field of type **Property** to the shape, and set its value to the name of a particular property:
 
@@ -21,7 +21,7 @@ PropertyName|Options
 > [!NOTE]
 > PropertyName can also contain placeholders like “\[param:...\]”.
 
-### Options
+## Options
 
 Optionally, you can make a shape appear, disappear, flip, or rotate based on the current value of a property.
 
@@ -29,13 +29,13 @@ Optionally, you can make a shape appear, disappear, flip, or rotate based on the
 > See also:
 > [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)
 
-### Placeholder for property value in shape text
+## Placeholder for property value in shape text
 
 The value of the property will appear on the shape only if you add shape text that contains a “\*” character. This character will then be replaced by the current value of the property.
 
 To add text to a shape, just double-click the shape, and enter the text.
 
-### Example
+## Example
 
 ```txt
 Type|HIDE;=1|ROTATE;>1,30

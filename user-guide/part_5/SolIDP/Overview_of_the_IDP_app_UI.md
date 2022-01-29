@@ -2,7 +2,7 @@
 uid: Overview_of_the_IDP_app_UI
 ---
 
-## Overview of the IDP app UI
+# Overview of the IDP app UI
 
 The *DataMiner Infrastructure, Discovery and Provisioning* app (or IDP app) is available in the *Applications* section of the apps list in the Surveyor.
 
@@ -26,11 +26,11 @@ By default, the app consists of the following tabs:
 
 - [About](#about)
 
-### Overview
+## Overview
 
 This tab consists of a summary of the actions of the app, KPIs, alarms, statistics per DMA and a general map overview.
 
-### Inventory
+## Inventory
 
 This tab consists of the following subtabs:
 
@@ -81,7 +81,7 @@ This tab consists of the following subtabs:
 
     - *Clean All*: Removes all entries from the *Deleted Elements* table.
 
-### Connectivity
+## Connectivity
 
 This tab consists of the following subtabs:
 
@@ -99,7 +99,7 @@ This tab consists of the following subtabs:
 
     - *Provision DCF*: (Called "Provision All DCF" prior to IDP 1.1.18.) Provisions the discovered connections for the selected element(s) in DCF.
 
-### Configuration
+## Configuration
 
 This tab consists of the following subtabs:
 
@@ -143,7 +143,7 @@ This tab consists of the following subtabs:
     > [!NOTE]
     > Files can only be compared if they have an extension listed under *Admin* > *Configuration* > *Backup*. See [Configuration](xref:Configuration).
 
-### Software
+## Software
 
 This tab allows you to manage software updates of managed elements. At the top of the tab, a graph displays a summary of the software status of all managed devices.
 
@@ -155,7 +155,7 @@ The table below this lists the managed elements of which the CI Type has *Softwa
 
 - *Check compliancy*: Checks if the selected elements use the expected software version.
 
-### Facilities
+## Facilities
 
 This tab displays an overview of the levels in the infrastructure, with KPIs and a table that allows you to easily navigate to the rack of the managed devices.
 
@@ -164,7 +164,7 @@ This tab displays an overview of the levels in the infrastructure, with KPIs and
 > - The *Expected Energy Consumption* is based on the element property *Energy Expected Consumption*. This property can be supplied in the CI Type definition or via the update properties script.
 > - To calculate the *Actual Energy Consumption* KPI, an aggregation rule named *Energy Consumption* is needed on the Facilities view. This aggregation rule should be in the folder *RLM*, and it should use the aggregation type *calculate the sum* of the relevant parameter values, and have *Include subview (recursion)* selected. As the expected consumption is measured in kWh, we recommend to also measure the actual consumption in kWh.
 
-### Processes
+## Processes
 
 This tab consists of the following subtabs:
 
@@ -218,10 +218,10 @@ This tab consists of the following subtabs:
 > - Activity settings **can be disabled by default**, depending on the configuration on the *Admin* > *CI Types* > *Activity Management* page. To perform any of these actions for a specific CI Type, make sure the relevant setting on this tab is enabled.
 > - Prior to IDP 1.1.11, this tab was called *Workflows*. The *Activities* subtab was called *Automation* prior to IDP 1.1.16.
 
-### Admin
+## Admin
 
 This tab allows you to manage various settings. See [Advanced configuration for Administrators](xref:Advanced_configuration_for_Administrators).
 
-### About
+## About
 
 This tab contains links to the IDP Help and to information about the Provisioning API. It also displays DataMiner IDP version information.

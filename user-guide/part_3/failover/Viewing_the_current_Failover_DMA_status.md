@@ -2,7 +2,7 @@
 uid: Viewing_the_current_Failover_DMA_status
 ---
 
-## Viewing the current Failover DMA status
+# Viewing the current Failover DMA status
 
 In the *Failover Config* window, the current status of the two DMAs is displayed by means of LEDs, which are refreshed once a minute.
 

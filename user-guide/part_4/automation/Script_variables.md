@@ -2,7 +2,7 @@
 uid: Script_variables
 ---
 
-## Script variables
+# Script variables
 
 For most script actions, variables are required. There are three kinds of variables:
 
@@ -18,7 +18,7 @@ When you add a script action that contains a variable, a line will automatically
 > - Prior to running a script, operators will first have to link the dummies and parameters to actual elements and values in the DMS. Therefore, it is best to give the variables a meaningful name the operators will be able to work with.
 > - To remove a variable, click the x to the right of it.
 
-### Creating a dummy
+## Creating a dummy
 
 To create a new line in the *DUMMIES* section:
 
@@ -34,7 +34,7 @@ You can then further specify the dummy properties in the *DUMMIES* section:
 
 3. Optionally, to link a default element to a dummy, select an element in the underlined field next to *Configuration element* for this dummy. This can be particularly useful when a table parameter column is selected, as you will then be able to select an index from the available indices of the table of that default element in a drop-down list.
 
-### Creating a parameter
+## Creating a parameter
 
 To create a new line in the *PARAMETERS* section:
 
@@ -48,11 +48,11 @@ You can then further specify the parameter properties in the *PARAMETERS* sectio
 
 2. Optionally, link a memory file to the parameter to suggest possible values to the user who executes the script. To do so, click the underlined section next to *Values file* and select the file.
 
-### Creating a memory file
+## Creating a memory file
 
 There are two kinds of memory files: memory files created within the script, and permanent memory files that contain an array of values.
 
-#### Memory files created within the script
+### Memory files created within the script
 
 These files are used to hold a particular value used in a script. Within the script editor, you can manage these memory files as follows:
 
@@ -63,7 +63,7 @@ These files are used to hold a particular value used in a script. Within the scr
     > [!NOTE]
     > For volatile memory files, the life cycle of the values stored in the memory spaces is limited to the execution time of the script. Once the script is terminated, all data stored in the memory spaces is lost. For non-volatile memory files, the life cycle of the values stored in the memory spaces is unlimited. The values are stored in a file on the hard disk of the DMA. They will survive different script cycles and even DMA reboots.
 
-#### Permanent memory files
+### Permanent memory files
 
 Outside of a script, you can create permanent memory files that contain an array of values. For example, a permanent memory file named “Cities” could have the names of various cities as its values.
 

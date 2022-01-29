@@ -2,7 +2,7 @@
 uid: SMS
 ---
 
-## SMS
+# SMS
 
 Use this action to send a text message notification to a user:
 

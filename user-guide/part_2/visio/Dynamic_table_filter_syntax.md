@@ -2,7 +2,7 @@
 uid: Dynamic_table_filter_syntax
 ---
 
-## Dynamic table filter syntax
+# Dynamic table filter syntax
 
 For the **SubscriptionFilter**, **ParameterSubscriptionFilter** and **TableRowFilter** components, it is possible to configure a dynamic table filter. This filter can consist of the following components, separated by semicolons.
 
