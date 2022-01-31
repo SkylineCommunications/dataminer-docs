@@ -96,7 +96,7 @@ Examples:
 - To specify a period of 1 hour, you can use “1h”, “3600s” or “3600”.
 
 > [!NOTE]
-> - Strings without unit will be interpreted as a number of seconds.<br>For example, “3600” will be interpreted as 3600 seconds.
+> - Strings without unit will be interpreted as a number of seconds. For example, “3600” will be interpreted as 3600 seconds.
 > - For a logger table, the TTL value can be set to “-1” to indicate that the TTL value is specified in the protocol.
 > - From DataMiner 9.5.13 onwards, if the TTL value is set to “0” for a particular type of data, no data of that type will be stored in the database.
 > - For an indexing database, it is possible to specify “infinite”, in which case the data will be kept indefinitely.
@@ -157,7 +157,7 @@ Example of a *DBMaintenanceDMS.xml* file with protocol override:
 
 From DataMiner 9.5.14 onwards, timetrace data for a service in the Cassandra database by default only contains the service properties that match with the service key. In earlier versions of DataMiner, the rows contained the service properties of all affected services.
 
-It is possible to revert to the earlier behavior by adding the following tag in the *\<MaintenanceConfig>* tag of the *DBMaintenance.xml* or *DBMaintenanceDMS.xml* file: <br>*\<TimeTrace duplicateAllServiceProperties="True" />*.
+It is possible to revert to the earlier behavior by adding the following tag in the *\<MaintenanceConfig>* tag of the *DBMaintenance.xml* or *DBMaintenanceDMS.xml* file: *\<TimeTrace duplicateAllServiceProperties="True" />*.
 
 However, note that this can cause a significant increase in disk space usage, especially in systems with many services and service properties.
 
@@ -168,13 +168,13 @@ However, note that this can cause a significant increase in disk space usage, es
 
 When you upgrade a DataMiner Agent without the two new configuration files to a version with these files, *DBMaintenance.exe* will copy a number of settings from the *DB.xml* and *MaintenanceSettings.xml* files to the new configuration files. See the following table:
 
-| Existing setting                                                | New setting          |
-|-----------------------------------------------------------------|----------------------|
-| DB.xml<br> \> Maintenance \> MonthsToKeep                       | Alarm TTL            |
-| DB.xml<br> \> Historyslider \> TimeToKeep                       | TimeTrace TTL        |
-| MaintenanceSettings.xml<br> \> Trending \> TimeSpan             | RealTimeTrending TTL |
-| MaintenanceSettings.xml<br> \> Trending \> TimeSpan5MinRecords  | FiveMinTrending TTL  |
-| MaintenanceSettings.xml<br> \> Trending \> TimeSpan1HourRecords | OneHourTrending TTL  |
-| MaintenanceSettings.xml<br> \> Trending \> TimeSpan1DayRecords  | OneDayTrending TTL   |
+| Existing setting                                            | New setting          |
+|-------------------------------------------------------------|----------------------|
+| DB.xml \> Maintenance \> MonthsToKeep                       | Alarm TTL            |
+| DB.xml \> Historyslider \> TimeToKeep                       | TimeTrace TTL        |
+| MaintenanceSettings.xml \> Trending \> TimeSpan             | RealTimeTrending TTL |
+| MaintenanceSettings.xml \> Trending \> TimeSpan5MinRecords  | FiveMinTrending TTL  |
+| MaintenanceSettings.xml \> Trending \> TimeSpan1HourRecords | OneHourTrending TTL  |
+| MaintenanceSettings.xml \> Trending \> TimeSpan1DayRecords  | OneDayTrending TTL   |
 
 When you downgrade to a DataMiner Agent without the two new configuration files, *DBMaintenance.exe* will revert the above-mentioned copy actions and update the settings in question in both the *DB.xml* and *MaintenanceSettings.xml* files.

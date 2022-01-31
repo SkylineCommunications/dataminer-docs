@@ -4,7 +4,7 @@ uid: Hyperlinks_xml
 
 # Hyperlinks.xml
 
-In the file *Hyperlinks.xml*, you can define custom commands that have to appear in the shortcut menu of the Alarm Console.
+In the file *Hyperlinks.xml*, you can define custom commands that will be displayed in the shortcut menu of the Alarm Console.
 
 DataMiner administrators will often create custom commands that open a web page, start an executable file or execute an Automation script.
 
@@ -105,16 +105,32 @@ Or:
 
 Inside the *\<HyperLink>* tag, enter the following content, depending on the type of hyperlink specified in the *type* attribute (see [type](#type)):
 
-| Type          | Contents of the \<Hyperlink> tag                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| url           | The URL that should be opened.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| execute       | The name of the executable file.<br> From DataMiner 9.0.5 onwards, you can specify a path to the executable file that includes spaces, but only if it is enclosed in double quotation marks. Anything that is added after a space and is not enclosed within quotation marks will be interpreted as an argument.<br> E.g. *\<HyperLink id="20" version="2" type="execute" name="MyApp" menu="root" \>"C:\\Program Files (x86)\\MyApp\\App.exe" \[ENAME\]\</HyperLink>*                                                                     |
-| script        | The Automation script execution command. This should be configured in the same way as when you link a shape to an Automation script in Visio.<br> See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script) for more information.<br> Note: It is not necessary to use the “Script:” prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to. |
-| openview      | The view ID. Alternatively, you can use the \[VID\] placeholder to open the view of the selected alarm.<br> From DataMiner 9.6.3 onwards, you can also have the view opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[VID\]::Aggregation*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).                                                                                                                       |
-| openservice   | The service ID. Alternatively, you can use the \[SID\] placeholder to open the service of the selected alarm.<br> From DataMiner 9.6.3 onwards, you can also have the service opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[SID\]:d:Australia Service*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).                                                                                                       |
-| openelement   | The element ID. Alternatively, you can use the \[EID\] placeholder to open the element of the selected alarm.<br> From DataMiner 9.6.3 onwards, you can also have the element opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[EID\]:Data:Performance/Ping*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).                                                                                                     |
-| openparameter | The parameter ID. Alternatively, you can use the \[PID\] placeholder to open the parameter of the selected alarm.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| reference     | The ID of a legacy hyperlink.<br> See [Upgrading legacy hyperlinks to second-generation hyperlinks](#upgrading-legacy-hyperlinks-to-second-generation-hyperlinks) for more information.                                                                                                                                                                                                                                                                                                                                                                               |
+- **Type "url"**: The URL that should be opened.
+
+- **Type "execute"**: The name of the executable file.
+
+  From DataMiner 9.0.5 onwards, you can specify a path to the executable file that includes spaces, but only if it is enclosed in double quotation marks. Anything that is added after a space and is not enclosed within quotation marks will be interpreted as an argument. For example: *\<HyperLink id="20" version="2" type="execute" name="MyApp" menu="root" \>"C:\\Program Files (x86)\\MyApp\\App.exe" \[ENAME\]\</HyperLink>*
+
+- **Type "script"**: The Automation script execution command. This should be configured in the same way as when you link a shape to an Automation script in a Visio drawing. See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script) for more information.
+
+  > [!NOTE]
+  > It is not necessary to use the “Script:” prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to.
+
+- **Type "openview"**: The view ID. Alternatively, you can use the \[VID\] placeholder to open the view of the selected alarm.
+  
+  From DataMiner 9.6.3 onwards, you can also have the view opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[VID\]::Aggregation*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
+
+- **Type "openservice"**: The service ID. Alternatively, you can use the \[SID\] placeholder to open the service of the selected alarm.
+
+  From DataMiner 9.6.3 onwards, you can also have the service opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[SID\]:d:Australia Service*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
+
+- **Type "openelement"**: The element ID. Alternatively, you can use the \[EID\] placeholder to open the element of the selected alarm.
+
+  From DataMiner 9.6.3 onwards, you can also have the element opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[EID\]:Data:Performance/Ping*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
+
+- **Type "openparameter"**: The parameter ID. Alternatively, you can use the \[PID\] placeholder to open the parameter of the selected alarm.
+
+- **Type "reference"**: The ID of a legacy hyperlink. See [Upgrading legacy hyperlinks to second-generation hyperlinks](#upgrading-legacy-hyperlinks-to-second-generation-hyperlinks) for more information.
 
 > [!NOTE]
 > The string you specify can contain:
@@ -122,8 +138,7 @@ Inside the *\<HyperLink>* tag, enter the following content, depending on the typ
 > - Placeholders, which allow you to insert parts of the value of the alarm or information event in the command that is displayed. See [Placeholders](#placeholders).
 
 > [!TIP]
-> See also:
-> [type](#type)
+> See also: [type](#type)
 
 ### Attributes of the Hyperlink tag
 
@@ -255,22 +270,29 @@ If you want a hyperlink of type “script” (i.e. a hyperlink that starts an Au
 
 #### type
 
-In this mandatory attribute, specify the hyperlink type.
+In this mandatory attribute, specify the hyperlink type. The following types are supported:
 
-| Type          | Function                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| url           | Opens a URL in your web browser.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| execute       | Runs an executable file.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| script        | Runs an Automation script.<br> See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script) for information on how to specify the script to be run.<br> Note: It is not necessary to use the “Script:” prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to. |
-| openview      | Opens a DataMiner view in a new card.<br> If the \[VID\] placeholder is used in the \<Hyperlink> tag, the view of the selected alarm is opened.                                                                                                                                                                                                                                                                                                                                      |
-| openservice   | Opens a DataMiner service in a new card.<br> If the \[SID\] placeholder is used in the \<Hyperlink> tag, the service of the selected alarm is opened.                                                                                                                                                                                                                                                                                                                                |
-| openelement   | Opens a DataMiner element in a new card.<br> If the \[EID\] placeholder is used in the \<Hyperlink> tag, the element of the selected alarm is opened.                                                                                                                                                                                                                                                                                                                                |
-| openparameter | Opens a DataMiner parameter in a new card.<br> If the \[PID\] placeholder is used in the \<Hyperlink> tag, the parameter of the selected alarm is opened.                                                                                                                                                                                                                                                                                                                            |
-| reference     | Refers to a legacy hyperlink.<br> See [Upgrading legacy hyperlinks to second-generation hyperlinks](#upgrading-legacy-hyperlinks-to-second-generation-hyperlinks) for more information.                                                                                                                                                                                                                                                                                              |
+- **url**: Opens a URL in a web browser.
+
+- **execute**: Runs an executable file.
+
+- **script**: Runs an Automation script. For information on how to specify the script to be run, see [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script).
+
+  > [!NOTE]
+  > It is not necessary to use the “Script:” prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to.
+
+- **openview**: Opens a DataMiner view in a new card. If the \[VID\] placeholder is used in the \<Hyperlink> tag, the view of the selected alarm is opened.
+
+- **openservice**: Opens a DataMiner service in a new card. If the \[SID\] placeholder is used in the \<Hyperlink> tag, the service of the selected alarm is opened.
+
+- **openelement**: Opens a DataMiner element in a new card. If the \[EID\] placeholder is used in the \<Hyperlink> tag, the element of the selected alarm is opened.
+
+- **openparameter**: Opens a DataMiner parameter in a new card. If the \[PID\] placeholder is used in the \<Hyperlink> tag, the parameter of the selected alarm is opened.
+
+- **reference**: Refers to a legacy hyperlink. See [Upgrading legacy hyperlinks to second-generation hyperlinks](#upgrading-legacy-hyperlinks-to-second-generation-hyperlinks) for more information.
 
 > [!TIP]
-> See also:
-> [Content of the Hyperlink tag](#content-of-the-hyperlink-tag)
+> See also: [Content of the Hyperlink tag](#content-of-the-hyperlink-tag)
 
 #### valueParsing
 
@@ -297,7 +319,7 @@ A legacy hyperlink must have the following syntax:
 <HyperLink id="..." valueParsing="...">[Hyperlink]</HyperLink>
 ```
 
-### Content of the Hyperlink tag
+### Content of the Hyperlink tag (legacy)
 
 Inside the *\<HyperLink>* tag, enter the actual command that has to be displayed on the shortcut menu.
 
@@ -311,13 +333,13 @@ The string you specify can contain:
 
     See [Placeholders](#placeholders).
 
-### Attributes of the Hyperlink tag
+### Attributes of the Hyperlink tag (legacy)
 
-#### id
+#### id (legacy)
 
 In this attribute, specify the unique identifier of the hyperlink. It is primarily used for synchronization purposes.
 
-#### valueParsing
+#### valueParsing (legacy)
 
 Use this attribute if you want the command to appear only in the shortcut menu of specific alarms and information events.
 

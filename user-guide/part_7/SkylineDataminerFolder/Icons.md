@@ -31,11 +31,21 @@ In the *CustomIcons.xml* file, each *\<Icon>* tag can either contain XAML code o
 
 The icon tag can have the following attributes:
 
-| Attribute | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | Unique identifier of the icon within a particular theme.                                                                                                                                                                                                                                                                                                                                                                                           |
-| ref       | Name of the image file, which must be located in the folder <br>*C:\\Skyline DataMiner\\Icons\\Refs\\*.<br> -  Preferred format: PNG<br> -  From DataMiner 10.0.5 onwards, SVG is also supported<br> -  Size: 16x16 px |
-| theme     | Theme to which the icon belongs:<br> -  dark (default theme; can also be referred to with “black”)<br> -  light (can also be referred to with “white”)                                                                                                                                                               |
+- **key**: Unique identifier of the icon within a particular theme.
+
+- **ref**: Name of the image file, which must be located in the folder *C:\\Skyline DataMiner\\Icons\\Refs\\*.
+
+  - Preferred format: PNG.
+  
+  - From DataMiner 10.0.5 onwards, SVG is also supported
+  
+  - Size: 16x16 px
+
+- **theme**: Theme to which the icon belongs:
+
+  - dark (default theme; can also be referred to with “black”)
+  
+  - light (can also be referred to with “white”)
 
 > [!NOTE]
 > If both XAML code and an image file are available for the same icon, the XAML code will be used.
@@ -68,12 +78,41 @@ In the *IconSelectionRules.xml* file, you can specify when the icons defined in 
 
 The following tags and attributes are available:
 
-| Tag        | Attribute | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SelectIcon | type      | Type of object to which the icon applies: “element”, “service”, “redundancy”, or “view”                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| SelectIcon | key       | Key of the icon as defined in *CustomIcons.xml*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| SelectIcon | layer     | Layer (optional, in case of multiple layers)<br> Note: When determining which icons to display for a particular object, in case of multiple layers, the rules that apply to the same object type are checked from top to bottom. For each layer, the first matching icon is added to the object.                                                                                                                                                                                                                                                                                                                                                                                     |
-| Field      | type      | Type of field within the rule: “operator”, “name”, “property”, “elementtype”, “protocol”, “functionguid”<br> Note: <br> -  “elementtype” can only be used if SelectIcon type is “element”.<br> -  “protocol” can only be used if SelectIcon type is “element” or “service” and if the element or service has a protocol assigned.<br> -  “functionguid” can be used from DataMiner 9.5.14 onwards. It allows icons to be configured for specific elements linked to protocol functions. |
-| Field      | operator  | If field type is “operator”, field operator can be set to “)”, “(“, “and”, “or”, or “not”.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Field      | name      | If field type is “property”, field name must contain the property name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Field      | value     | The value to be checked:<br> -  A fixed value<br> -  A value with \* and ? wildcards<br> -  A regular expression (syntax identical to that of the regular expressions used in service template definitions)<br> Note: In case of values with wildcards or regular expressions, a full match is expected. Example: “A?C” will not match “XXX.ABC.YYY”                                                                                                                                    |
+### SelectIcon tag
+
+Attributes:
+
+- **type**: The type of object to which the icon applies: “element”, “service”, “redundancy”, or “view”.
+
+- **key**: The key of the icon as defined in *CustomIcons.xml*.
+
+- **layer**: The layer (optional, in case of multiple layers)
+
+  > [!NOTE]
+  > To determine which icon is displayed for a particular object, in case of multiple layers, the rules that apply to the same object type are checked from top to bottom. For each layer, the first matching icon is added to the object.
+
+### Field tag
+
+Attributes:
+
+- **type**: The type of field within the rule: “operator”, “name”, “property”, “elementtype”, “protocol”, or “functionguid”.
+
+  > [!NOTE]
+  > - “elementtype” can only be used if SelectIcon type is “element”.
+  > - “protocol” can only be used if SelectIcon type is “element” or “service” and if the element or service has a protocol assigned.
+  > - “functionguid” can be used from DataMiner 9.5.14 onwards. It allows icons to be configured for specific elements linked to protocol functions.
+
+- **operator**: If field type is “operator”, field operator can be set to “)”, “(“, “and”, “or”, or “not”.
+
+- **name**: If field type is “property”, field name must contain the property name.
+
+- **value**: The value to be checked:
+
+  - A fixed value
+  
+  - A value with \* and ? wildcards
+  
+  - A regular expression (syntax identical to that of the regular expressions used in service template definitions)
+  
+    > [!NOTE]
+    >  In case of values with wildcards or regular expressions, a full match is expected. Example: “A?C” will not match “XXX.ABC.YYY”
