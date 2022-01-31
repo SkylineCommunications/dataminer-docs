@@ -22,7 +22,7 @@ To connect your DMS to the cloud:
 
         - *wss://tunnel.dataminer.services/*
 
-2. Download the appropriate DataMiner Cloud Pack installer from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
+2. Download the appropriate DataMiner Cloud Pack installer from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
 
 3. For Cloud Pack versions prior to 2.2.0: If your system has been configured to use HTTPS, and the localhost HTTP endpoint has been disabled, carry out the following additional steps:
 
