@@ -10,9 +10,7 @@ This file contains default connection settings to be used by DataMiner client ap
 > - An update of this file does not require a restart of the DataMiner software.
 > - This file is not synchronized throughout the DataMiner System.
 
-- This file is located in the following folder:
-
-    *C:\\Skyline DataMiner\\Webpages\\*
+- This file is located in the folder *C:\\Skyline DataMiner\\Webpages\\*.
 
 - ConnectionSettings.txt format:
 
@@ -32,56 +30,59 @@ This file contains default connection settings to be used by DataMiner client ap
 
 - **type=**
 
-    The type of connection.     Possible values:
+  The type of connection.     Possible values:
 
-    - RemotingConnection (.NET Remoting)
+  - RemotingConnection (.NET Remoting)
 
-    - WSConnection (Web Services - deprecated from DataMiner 10.0.11 onwards)
+  - WSConnection (Web Services - deprecated from DataMiner 10.0.11 onwards)
 
 - **polling=**
 
-    Polling interval     Possible values:
+  Polling interval     Possible values:
 
-    - Number of milliseconds (minimum: 100)
+  - Number of milliseconds (minimum: 100)
 
-    - 0 (no polling)
+  - 0 (no polling)
 
 - **serverport=**
 
-    Server port onto which the client has to connect.     Possible values:
+  Server port onto which the client has to connect.     Possible values:
 
-    - Port number
+  - Port number
 
-    - 0 (no override - connect to default port)
+  - 0 (no override - connect to default port)
 
 - **zip=**
 
-    Whether or not the communication has to be zipped.     Possible values:
+  Whether or not the communication has to be zipped.     Possible values:
 
-    - true
+  - true
 
-    - false
+  - false
 
 - **cache=**
 
-    The type of data that has to be cached on the client machine.
-    When this option is set to its default value (“objects”), a number of objects (e.g. DataMiner Protocols) are cached on the client machine. Once these objects are present on the client, data traffic between DMA and client drops substantially.     Possible values:
+  The type of data that has to be cached on the client machine.
+  
+  When this option is set to its default value (“objects”), a number of objects (e.g. DataMiner Protocols) are cached on the client machine. Once these objects are present on the client, data traffic between DMA and client drops substantially.     Possible values:
 
-    - all
+  - all
 
-    - none
+  - none
 
-    - objects (default)
+  - objects (default)
 
-    - events
+  - events
 
 - **resolve=**
 
-    Whether or not hostnames have to be resolved to IP addresses before the connection is set up.     Possible values:
+  Whether or not hostnames have to be resolved to IP addresses before the connection is set up.
 
-    - true (default)
+  Possible values:
 
-    - false
+  - true (default)
+
+  - false
 
 > [!NOTE]
 > - If a client connects to a DataMiner Agent via a load balancing URL (i.e. a hostname redirecting to different IP addresses when resolved), by default the hostname will be explicitly resolved before the connection is set up. If, for some IP addresses, you want to prevent this from happening, in ConnectionSettings.txt specify “resolve=false” next to those IP addresses.

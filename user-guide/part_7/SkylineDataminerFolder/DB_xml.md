@@ -14,15 +14,12 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 
 - [CMDB settings](#cmdb-settings)
 
-> [!TIP]
-> See also:
-> [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management)
+  > [!TIP]
+  > See also: [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management)
 
-- This file is located in the following folder:
+This file is located in the folder *C:\\Skyline DataMiner\\*.
 
-    *C:\\Skyline DataMiner\\*
-
-- Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
+Before you make changes to this file, always **stop DataMiner**. Restart DataMiner when your changes have been saved.
 
 ## General database settings
 
@@ -55,31 +52,31 @@ The following configuration is possible for the general database:
 
 In the *Maintenance* tag, several attributes are available with which you can determine when records are removed from the table.
 
-| Attribute     | Description                                                                                                                 |
-|---------------|-----------------------------------------------------------------------------------------------------------------------------|
-| monthsToKeep  | The maximum number of months records should be kept in the table if limitByMonths is used.                                  |
-| limitByMonths | Determines whether alarms that pass the monthsToKeep threshold should be removed.                                           |
-| limitByNumber | Determines whether the number of alarms should be reduced to the \<Min> amount once the \<Max> threshold has been exceeded. |
+These attributes are **only used prior to DataMiner 9.5.5 (or 9.5.6 for an SQL database)**. From DataMiner 9.5.5 onwards (or 9.5.6 for an SQL database), the settings determining how long records are kept in the database are determined in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+
+- **monthsToKeep**: The maximum number of months records should be kept in the table if limitByMonths is used.
+
+- **limitByMonths**: Determines whether alarms that pass the monthsToKeep threshold should be removed.
+
+- **limitByNumber**: Determines whether the number of alarms should be reduced to the \<Min> amount once the \<Max> threshold has been exceeded. Not used for Cassandra databases.
 
 The limiting options can be set to “true” or “false”. If both options are set to “true”, the records will be deleted from the table either after a certain amount of time, or as soon as the table contains a specific number of records, whichever comes first.
 
 > [!NOTE]
 > - It is advisable to configure these settings through the Cube client interface, rather than directly in the .xml file. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 > - For a Cassandra (cluster) database, it is only possible to configure the limitByMonths attribute, not the limitByNumber attribute. Note also that this attribute works in a different way for Cassandra, compared to MySQL or MSSQL: if a record has been stored with a particular limitByMonths and MonthsToKeep setting, this setting permanently applies to that record in Cassandra.
-> - From DataMiner 9.5.5 onwards (or 9.5.6 for an SQL database), the settings determining how long records are kept in the database are determined in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Configuring how long parameter data are kept in the database for DMS Reporter
 
-In order to make sure that parameter data is not removed from the database too early, two additional attributes are available in the *Maintenance* tag.
+In order to make sure that parameter data is not removed from the database too early, two additional attributes are available in the *Maintenance* tag:
 
-This can for instance be of use to ensure that a report with data for the past month will contain all parameter information for the entire month, as otherwise data might already have been removed during database maintenance.
+- **initialLoadDays**: The number of days that parameter data will be kept in the rep_pd_info database table on first request. Default: 62.
 
-| Attribute          | Description                                                                                                          |
-|--------------------|----------------------------------------------------------------------------------------------------------------------|
-| initialLoadDays    | The number of days that parameter data will be kept in the rep_pd_info database table on first request. Default: 62. |
-| paramMaxUnusedDays | The maximum number of days between each request for the parameter data to be kept in the rep_pd_info database.       |
+- **paramMaxUnusedDays** The maximum number of days between each request for the parameter data to be kept in the rep_pd_info database.
 
-#### Example:
+This configuration can for instance be of use to ensure that a report with data for the past month will contain all parameter information for the entire month, as otherwise data might already have been removed during database maintenance.
+
+Example:
 
 ```xml
 <Maintenance monthsToKeep="12" initialLoadDays="30" paramMaxUnusedDays="15"> </Maintenance>
@@ -89,11 +86,11 @@ In the example above, the parameter data will be kept in the rep_pd_info table f
 
 ### Keeping a separate log for slow database queries
 
-In the *Database* tag, you can use the “slowquery” attribute to configure slow query log settings for the database in question. A separate log will then be kept with all database queries that take longer than the configured number of seconds:
+In the *Database* tag, you can use the **slowquery** attribute to configure slow query log settings for the database in question. A separate log will then be kept with all database queries that take longer than the configured number of seconds:
 
-- The log file is kept in the following location: <br>*C:\\Skyline DataMiner\\Logging\\SLDatabase_SlowQuery\[ProcessName\].txt*
+- The log file is kept in the following location: *C:\\Skyline DataMiner\\Logging\\SLDatabase_SlowQuery\[ProcessName\].txt*
 
-- Each log entry has the following syntax: Date Time \| ThreadId \| DatabaseName \| QueryTime \| Query
+- Each log entry has the following syntax: *Date Time \| ThreadId \| DatabaseName \| QueryTime \| Query*
 
 - The default value of the slowquery attribute is 600 (i.e. 10 minutes).
 
@@ -289,7 +286,7 @@ For a configuration example, refer to:
 
 - [Example of an offload database configuration](#example-of-an-offload-database-configuration)
 
-### Keeping a separate log for slow database queries
+### Keeping a separate log for slow offload database queries
 
 Like for the general database, for the offload database you can keep a separate log for slow database queries.
 
@@ -306,10 +303,8 @@ In the *DataBases.Database.Offloads* tag, add an *\<Offload>* tag for every tabl
 
 In the *DataBases.Database.Offloads.Offload* tag, you can use the *record* attribute to specify the type of average trend data records that should be offloaded.
 
-| If the record attribute is set to ... | then ...                                            |
-|---------------------------------------|-----------------------------------------------------|
-| 5                                     | The 5-minute trend data records will be offloaded.  |
-| 60                                    | The 60-minute trend data records will be offloaded. |
+- If the record attribute is set to 5, the 5-minute trend data records will be offloaded.
+- If the record attribute is set to 60, the 60-minute trend data records will be offloaded.
 
 Example:
 
@@ -355,7 +350,7 @@ In the following example, “1;TRUE” means that the real-time trend data recor
 
 In the Database.Collation tag, you can specify the collation for an offload database of type Microsoft SQL Server. The default collation is “SQL_Latin1_General_CP1_CI_AS”.
 
-#### Example:
+Example:
 
 ```xml
 <DataBase active="true" local="false" type="MSSQL">
@@ -392,12 +387,13 @@ Example:
 
 If the offload database is an Oracle Database, then add a *RemoteFileShare* tag with the following attributes:
 
-| Attribute | Description                                                                                                          |
-|-----------|----------------------------------------------------------------------------------------------------------------------|
-| path      | The UNC path to the shared folder (located on the database server) in which the DMAs will place the “offload” files. |
-| uid       | The username with which to connect to the shared folder on the database server.                                      |
-| pwd       | The password with which to connect to the shared folder on the database server.                                      |
-| localPath | The local path to the shared folder on the database server.                                                          |
+- **path**: The UNC path to the shared folder (located on the database server) in which the DMAs will place the “offload” files.
+
+- **uid**: The username with which to connect to the shared folder on the database server.
+
+- **pwd**: The password with which to connect to the shared folder on the database server.
+
+- **localPath** The local path to the shared folder on the database server.
 
 ### Offloading trend data even if no parameter values change
 
@@ -452,7 +448,7 @@ To configure this:
 5. Save and close *DB.xml*, and restart the DMA.
 
 > [!NOTE]
-> In DataMiner 10.0.11, this can only be configured in *DB.xml*. However, from DataMiner <br>10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offload database](xref:Offload_database).
+> In DataMiner 10.0.11, this can only be configured in *DB.xml*. However, from DataMiner 10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offload database](xref:Offload_database).
 
 ### Example of an offload database configuration
 
@@ -510,11 +506,11 @@ From DataMiner 9.6.4 onwards, DataMiner Indexing Engine can be installed on DMAs
 
 The *\<Database>* tag for an indexing database has the following attributes:
 
-| Attribute | Description                                                          |
-|-----------|----------------------------------------------------------------------|
-| active    | If set to true, the database is active.                              |
-| search    | If set to true, indicates that the database is an indexing database. |
-| type      | Currently only “Elasticsearch” is supported.                         |
+- **active**: If set to true, the database is active.
+
+- **search**: If set to true, indicates that the database is an indexing database.
+
+- **type**: Currently only “Elasticsearch” is supported.
 
 > [!NOTE]
 > - There can only be one active indexing database on a DMA.
@@ -540,7 +536,7 @@ To define a different port:
     ```
 
     > [!NOTE]
-    > The port specified in DB.xml must always be the same as the port defined in the Elasticsearch configuration. By default, this configuration is located in the folder <br>*C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
+    > The port specified in *DB.xml* must always be the same as the port defined in the Elasticsearch configuration. By default, this configuration is located in the folder *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
 
 4. Save the file and restart the DMA.
 

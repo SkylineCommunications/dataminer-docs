@@ -19,8 +19,6 @@ Each element subdirectory contains the following files:
 > [!NOTE]
 > The folder of matrix elements can also contain a file with matrix label aliases, usually called *Port.xml* or *Ports.xml*. The name of this file depends on the element protocol.
 
-
-
 ## Element.xml
 
 Every element on a DMA has its own *Element.xml* file. It contains the complete element definition:
@@ -39,7 +37,7 @@ Several things can be configured in this file:
 
 - To enable or disable the creation of DVE child elements, a *dvecreate* attribute can be added. For more information, see [Enabling or disabling the creation of DVE child elements](xref:Dynamic_virtual_elements#enabling-or-disabling-the-creation-of-dve-child-elements).
 
-- To enable an element simulation, a *simulation* attribute can be added. For more information, see [What happens when you enable simulation?](xref:Simulated_elements#what-happens-when-you-enable-simulation).
+- To enable an element simulation, a *simulation* attribute can be added. For more information, see [What happens when you enable simulation?](xref:Simulated_elements#what-happens-when-you-enable-simulation)
 
 - To enable data offloads to the offload database on element level, a *\<CentralOffload>* tag can be added. See [Disabling data offloads to the offload database on element level](xref:Configuring_data_offloads#disabling-data-offloads-to-the-offload-database-on-element-level).
 
