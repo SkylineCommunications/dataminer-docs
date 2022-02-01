@@ -232,7 +232,9 @@ From DataMiner 9.6.9 onwards, an advanced editing add-in is available in Visio i
 
 ## Setting the default time zone for DataMiner web apps
 
-From DataMiner 9.6.11 onwards, the time displayed in the DataMiner web apps (e.g. the Jobs app, the Dashboards app, etc.) is based on a time zone setting in the file *C:\\Skyline DataMiner\\Users\\ClientSettings.json*. To modify this setting:
+From DataMiner 9.6.11 onwards, the time displayed in the DataMiner web apps (e.g. the Jobs app, the Dashboards app, etc.) is based on a time zone setting in the file *C:\\Skyline DataMiner\\Users\\ClientSettings.json*. If this setting is not configured, the time zone of the client browser is used instead.
+
+To configure this setting:
 
 1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
 
