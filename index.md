@@ -10,4 +10,4 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 
 ## Product directory
 
-- [User Guide](user-guide/Part1GettingStarted/Part1GettingStarted.md)
+- [User Guide](xref:Part1GettingStarted)
