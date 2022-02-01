@@ -3,8 +3,6 @@
     "content": [
       {
         "files": [
-          "connectors/**.md",
-          "connectors/**/toc.yml",
           "user-guide/**.md",
           "user-guide/**/toc.yml",
           "toc.yml",
