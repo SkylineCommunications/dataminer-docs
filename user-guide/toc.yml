@@ -969,9 +969,8 @@
           topicUid: Assigning_user_settings_to_a_user_group
         - name: Configuring a set of user group settings
           topicUid: Configuring_a_set_of_user_group_settings
-          items:
-            - name: Managing predefined sets of credentials for SNMP authentication
-              topicUid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
+        - name: Managing predefined sets of credentials for SNMP authentication
+          topicUid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
         - name: Frequently asked questions about user group settings
           topicUid: Frequently_asked_questions_about_user_group_settings
         - name: Advanced security configuration

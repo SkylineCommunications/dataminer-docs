@@ -20,6 +20,8 @@ This section consists of the following topics:
 
 - [Configuring a set of user group settings](xref:Configuring_a_set_of_user_group_settings)
 
+- [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication)
+
 - [Frequently asked questions about user group settings](xref:Frequently_asked_questions_about_user_group_settings)
 
 - [Advanced security configuration](xref:Advanced_security_configuration)
