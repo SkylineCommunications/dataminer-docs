@@ -13,3 +13,5 @@ SLDMADB
 Visio
 SLAnalytics
 Alerter
+Rui
+autoclear
