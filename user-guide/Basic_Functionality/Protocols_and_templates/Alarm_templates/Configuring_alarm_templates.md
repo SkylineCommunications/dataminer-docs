@@ -230,6 +230,8 @@ In the *Info* column, select the checkbox and enter a value to define when you w
 
 - For an analog parameter, you can enter any value, and an information message will be generated each time a parameter value change occurs that crosses this boundary. The information message will indicate the change with *Dropped below* or *Escalated above*.
 
+- For parameters of type string or double, from DataMiner 10.2.2/10.3.0 onwards, you can enter values that contain a wildcard (\* or ?).
+
 > [!NOTE]
 > It is not required to select the checkbox for alarm triggering to generate these information messages.
 
