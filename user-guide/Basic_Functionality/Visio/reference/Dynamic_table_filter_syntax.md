@@ -175,11 +175,22 @@ For example:
 fullFilter=((PK >= 5) AND ((101 IN_RANGE 0/10) OR (102 == 50))) OR (103 IS true)
 ```
 
+From DataMiner 9.6.6 onwards, several of these filters can be combined, and it is also possible to combine a FULLFILTER= type filter with a VALUE= type filter. The resulting query will be an AND combination of the filters.
+
+From DataMiner 10.2.0/10.2.2 onwards, it is possible to use regular expressions in this type of filter. For this purpose, use the REGEX keyword to indicate that the next part of the filter, enclosed in single quotation marks, is a regular expression.
+
+For example:
+
+```txt
+fullFilter=(512 REGEX '^(?:Zand|Ambachten)[\'\\\\]+straat' AND 510 == 1000)
+```
+
+In the example above, the regular expression contains a single quotation mark and a backslash character that are part of the query. Since the "fullfilter" syntax requires these characters to be escaped, they have been escaped with an additional backslash character, and as a backslash character in a regular expression also needs to be escaped, four backslash characters are needed here.
+
 > [!NOTE]
 > - String values should be enclosed in single quotation marks (').
 > - Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
 > - If you encounter issues with this type of filter after an upgrade to 9.0.1 because of the changed behavior, you can revert to the old behavior by specifying *\<SLElement fallback="true" />* in *MaintenanceSettings.xml*. See [Filtering.SlElement](xref:MaintenanceSettings_xml#filteringslelement).
-> - From DataMiner 9.6.6 onwards, several of these filters can be combined and it is also possible to combine a FULLFILTER= type filter with a VALUE= type filter. The resulting query will be an AND combination of the filters.
 > - This type of filter is not supported to filter the list of elements from which a direct view retrieves data.
 
 ## RECURSIVEFULLFILTER
