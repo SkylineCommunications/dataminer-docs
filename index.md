@@ -8,6 +8,6 @@ We are steadily expanding this documentation so that it will become a comprehens
 
 Can't find what you need here? Go to our [DataMiner Community website](https://community.dataminer.services/) for questions, use cases, additional resources, etc.
 
-## Product directory
+## Contents
 
 - [User Guide](xref:Part1GettingStarted)
