@@ -32,18 +32,7 @@ When you right-click anywhere in the trend graph window, a shortcut menu appears
   > [!NOTE]
   > If you right-click while the cursor is on the trend graph itself, the trace point information will be included in the copied image. If you want to copy the graph without the trace point information, right-click in the area to the left of the Y-axis.
 
-- **Export to CSV**: Allows you to export trend data to a CSV file. When you select this command, the *Export trend graph to CSV file* window opens, where you can specify:
-
-  - Which curves should be exported.
-
-  - Which data should be exported: all or a custom data set.
-
-  - Whether a block graph or a line graph should be exported.
-
-  - Whether gaps should be excluded (possible from DataMiner 10.0.12 onwards). If you select to ignore or exclude gaps, any gaps in the trend data will be skipped in the export.
-
-    > [!NOTE]
-    > Up to DataMiner 10.0.2, the line graph is a reduced format containing only one value per timestamp. From DataMiner 10.0.3 onwards, the line graph is no longer considered a reduced format and intermediary points are added if no data is available at certain timestamps (which can happen when a value remained constant).
+- **Export to CSV**: See [Exporting a trend graph](xref:Exporting_a_trend_graph).
 
 - **Show most detailed data**: If you select this option, the most detailed data available will be shown, rather than average data.
 
