@@ -15,5 +15,4 @@ This section consists of the following topics:
 - [Assigning trend templates](xref:Assigning_trend_templates)
 
 > [!TIP]
-> See also:
-> [Trending](xref:trending)
+> See also: [Trending](xref:trending)

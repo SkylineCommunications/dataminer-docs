@@ -613,7 +613,7 @@
               topicUid: Working_with_the_parameter_pane
         - name: Setting the default sliding window size for real-time trending
           topicUid: Setting_the_default_sliding_window_size_for_real-time_trending
-    - name: Protocols and Templates
+    - name: Protocols and templates
       topicUid: protocols
       items:
         - name: Protocols
