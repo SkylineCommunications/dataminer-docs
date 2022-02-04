@@ -584,6 +584,8 @@
               topicUid: Panning_across_a_trend_graph
             - name: Zooming in/out on a trend graph
               topicUid: Zooming_in_out_on_a_trend_graph
+            - name: Exporting a trend graph
+              topicUid: Exporting_a_trend_graph
             - name: Using the right-click menu
               topicUid: Using_the_right-click_menu
             - name: Displaying alarm template colors in trend graphs

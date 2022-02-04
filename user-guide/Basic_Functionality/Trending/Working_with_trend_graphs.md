@@ -30,6 +30,8 @@ You can change which data are shown in the graph by directly manipulating the tr
 
 - [Zooming in/out on a trend graph](xref:Zooming_in_out_on_a_trend_graph#zooming-inout-on-a-trend-graph)
 
+- [Exporting a trend graph](xref:Exporting_a_trend_graph)
+
 - [Using the trending right-click menu](xref:Using_the_right-click_menu)
 
 - [Displaying alarm template colors in trend graphs](xref:Displaying_alarm_template_colors_in_trend_graphs)
