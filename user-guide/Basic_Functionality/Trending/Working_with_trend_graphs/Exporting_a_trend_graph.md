@@ -18,7 +18,10 @@ To export a trend graph:
 
    - *Line graph instead of block graph*: Exports one value per timestamp, which will allow you to draw a line graph. If you do not select this option, two values are exported per timestamp, which will allow you to draw a block graph. From DataMiner 10.2.2/10.3.0 onwards, this option does not include intermediary points in the export. To include those, select *Fixed interval*.
 
-   - *Fixed interval*: Available from DataMiner 10.2.2/10.3.0 onwards. Select this option to have data points distributed equally and to ignore gaps smaller than the average trending interval. This option can only be used when you export average trend data for double, number or analog parameters.
+   - *Fixed interval*: Available from DataMiner 10.2.2/10.3.0 onwards. Select this option to have data points distributed equally and to ignore gaps smaller than the average trending interval. 
+   
+     >[!NOTE]
+     >This option is only available for double, number or analog parameters, and only for average trend data. This means that type *5-minute interval* or *60-minute interval* must be selected under *Data to be exported*.
 
    - *Exclude gaps*: Available from DataMiner 10.0.12 onwards. Select this option to skip any gaps in the trend data in the export. This option is automatically selected if *Fixed interval* is selected.
 
