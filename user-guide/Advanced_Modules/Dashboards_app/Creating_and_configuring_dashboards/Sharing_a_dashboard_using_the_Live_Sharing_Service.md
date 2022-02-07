@@ -14,10 +14,10 @@ uid: Sharing_a_dashboard_using_the_Live_Sharing_Service
 
     > [!NOTE]
     > - Make sure you have the necessary user permissions for this:
-    >     - To edit the dashboard, you need the user permission *Modules* > *Reports & Dashboards* > *Dashboards* > *Edit*.
+    >     - To edit the dashboard, you need the user permission [Modules > Reports & Dashboards > Dashboards > Edit](xref:DataMiner_user_permissions#modules--reports--dashboards--dashboards--edit).
     >     - In DataMiner 10.1.2, you need the user permission *Other* > *CCALinkAccount*.
-    >     - In DataMiner 10.1.3, you need the user permission *System configuration* > *Cloud sharing* > *Account linking*.
-    >     - From DataMiner 10.1.4 onwards, you need the appropriate *Live sharing* user permissions. See [Live sharing](xref:DataMiner_user_permissions#live-sharing).
+    >     - In DataMiner 10.1.3, you need the user permission [Modules > System configuration > Cloud sharing/gateway > Account linking](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--account-linking).
+    >     - From DataMiner 10.1.4 onwards, you need the appropriate [Live sharing user permissions](xref:DataMiner_user_permissions#general--live-sharing).
     > - If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
 
 3. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
