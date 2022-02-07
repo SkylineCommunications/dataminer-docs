@@ -33,7 +33,7 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
    1. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
-   1. Click *OK* to save the configuration.
+   1. Click *Apply* or *OK* to save the configuration (depending on your DataMiner version).
 
       Once you have completed the configuration, the IP addresses will be changed. Because of this, it could take a while before you can reconnect to the system.
 
@@ -47,7 +47,7 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
    1. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
-   1. Click *OK* to save the configuration.
+   1. Click *Apply* or *OK* to save the configuration (depending on your DataMiner version).
 
 To enable Failover using DataMiner version **10.1.7 or lower**:
 
