@@ -12,8 +12,8 @@ Before you start the actual configuration, make sure you have the following:
 
 - A pair of additional IP addresses or a hostname
 
-    > [!NOTE]
-    > To avoid possible conflicts, make sure these IP addresses are not used anywhere else and that these are reserved for the Failover pair.
+  > [!NOTE]
+  > To avoid possible conflicts, make sure these IP addresses are not used anywhere else and that these are reserved for the Failover pair.
 
 ## Primary DataMiner Agent
 
@@ -25,7 +25,7 @@ The backup DMA must be a newly installed DataMiner Agent.
 
 - The DataMiner ID of this DMA must be identical to the DataMiner ID of the primary DMA.
 
-    For more information on how to change the DataMiner ID, see [Changing the DataMiner ID of a DMA](xref:General_DMA_configuration#changing-the-dataminer-id-of-a-dma).
+  For more information on how to change the DataMiner ID, see [Changing the DataMiner ID of a DMA](xref:General_DMA_configuration#changing-the-dataminer-id-of-a-dma).
 
 - The backup DMA may not be a member of a DMS cluster.
 

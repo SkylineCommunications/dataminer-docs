@@ -6,11 +6,11 @@ uid: Preferred_configuration_using_virtual_IP_addresses__best_practice
 
 When setting up a Failover pair of DMAs with virtual IP addresses, ideally you should:
 
-- have two different network connections, and
+- Have two different network connections.
 
-- define four different heartbeats.
+- Define four different heartbeats.
 
-### Two network connections
+## Two network connections
 
 Each of the two DMAs should have two network cards, connected to two different networks.
 
@@ -23,7 +23,7 @@ Make sure to respect the order of the connections in the *Network Connections* l
 > [!NOTE]
 > To avoid possible issues in case a NIC is unplugged, you can specify the order of the network adapters used by a DMA (the first being used for the corporate network, the second for the acquisition network). To do so, configure the *NetworkAdapters* tag in the file *DataMiner.xml* (see [DataMiner.NetworkAdapters](xref:DataMiner_xml#dataminernetworkadapters)). However, note that to do so, you will need to stop both Failover Agents and then restart them once the file has been modified. If you do this for an existing Failover setup, you will also need to make sure that the changes you make match the IP configuration in DMS.xml.
 
-### Four heartbeats
+## Four heartbeats
 
 You should configure four different heartbeats.
 

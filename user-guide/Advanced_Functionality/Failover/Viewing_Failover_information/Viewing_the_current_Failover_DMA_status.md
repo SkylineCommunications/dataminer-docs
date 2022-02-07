@@ -8,11 +8,11 @@ In the *Failover Config* window, the current status of the two DMAs is displayed
 
 These LEDs can have one of the following three colors:
 
-| Color       | Description                            |
-|-------------|----------------------------------------|
-| Green       | No problems detected.                  |
-| Red         | A problem has been detected.           |
-| Transparent | Status information is being retrieved. |
+- Green: No problems detected.
+
+- Red: A problem has been detected.
+
+- Transparent: Status information is being retrieved.
 
 To view more detailed information, click the *Status* button at the bottom of the dialog box.
 
@@ -23,10 +23,7 @@ This will open the *Status* dialog box, which displays a number of status parame
 > - If no status information can be retrieved from a DMA, you will notice an *Agent Status* item with the value “Unreachable”.
 > - If a Cassandra database is used, and both database nodes are down, the system will fall back to file offloading. See also: [Switching to Cassandra in a Failover setup](xref:Migrating_the_general_database_to_Cassandra#switching-to-cassandra-in-a-failover-setup).
 
-- **Failover Status**: “Online”, “Offline”, “Going Online”, etc.
-
-    > [!NOTE]
-    > This parameter does not have a color.
+- **Failover Status**: “Online”, “Offline”, “Going Online”, etc. This parameter does not have a color.
 
 - **Configuration**: “Valid” or “Invalid”
 
@@ -38,18 +35,17 @@ This will open the *Status* dialog box, which displays a number of status parame
 
 - **Sync Connection**: “Available” or “Not Available”
 
-    In case of “Not Available”, a reason will be displayed.     This status is only available for the DMA that is currently online.
+    In case of “Not Available”, a reason will be displayed. This status is only available for the DMA that is currently online.
 
 - **DB Sync**: “Active” or “Failing”
 
-    | Setting | Description                                                                                                                                                                                                                                                                                                       |
-    |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Active    | There has been at least one successful forward operation.                                                                                                                                                                                                                                                         |
-    | Failing   | There is a problem with the forwarding of alarm events to the backup DMA. More information will be displayed in the *Failure Reason* column. The time of the last successful DB Sync check is also listed.<br> This status is only available for the DMA that is currently online. |
+  - "Active" means there has been at least one successful forward operation.
+  
+  - "Failing" means there is a problem with the forwarding of alarm events to the backup DMA. More information will be displayed in the *Failure Reason* column. The time of the last successful DB Sync check is also listed. This status is only available for the DMA that is currently online.
 
 - **DB Sync Stack**: “OK” or “Too Large”
 
-    When this status is in error but the DB Sync status is not, the sync might be going on, but it might not be able to keep up. The amount of queries/files left to be forwarded is also listed between brackets.
+    When this status is in error, but the DB Sync status is not, the sync might be going on, but it might not be able to keep up. The amount of queries/files left to be forwarded is also listed between brackets.
     This status is only available for the DMA that is currently online.
 
 - **RTE Count**: The current number of runtime errors on the DataMiner Agent.
@@ -69,5 +65,4 @@ This will open the *Status* dialog box, which displays a number of status parame
     “Failing” means that the database server is probably not running or that there is a configuration issue.
 
 > [!TIP]
-> See also:
-> [Viewing DMA synchronization information](xref:Synchronizing_the_DMA_databases#viewing-dma-synchronization-information)
+> See also: [Viewing DMA synchronization information](xref:Synchronizing_the_DMA_databases#viewing-dma-synchronization-information)

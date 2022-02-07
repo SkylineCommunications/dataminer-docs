@@ -5,77 +5,75 @@ uid: Failover_configuration_in_Cube
 # Failover configuration in Cube
 
 > [!TIP]
-> See also:
-> <https://community.dataminer.services/video/agents-configuring-dma-failover/>
+> See also: [Agents – Configuring DMA Failover](https://community.dataminer.services/video/agents-configuring-dma-failover/) on DataMiner Dojo.
 
 To enable Failover using DataMiner version **10.1.8 or higher**:
 
 1. Make sure both DMAs are prepared and you have the necessary prerequisites. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
-2. If you intend to configure Failover with a **shared hostname** instead of virtual IP addresses, make sure the IIS extension “Application Request Routing” is installed on both DMAs. See
-<https://www.iis.net/downloads/microsoft/application-request-routing>.
+1. If you intend to configure Failover with a **shared hostname** instead of virtual IP addresses, make sure the IIS extension “Application Request Routing” is installed on both DMAs. See [Application Request Routing](https://www.iis.net/downloads/microsoft/application-request-routing) (external link).
 
-3. On the primary DMA, open DataMiner Cube.
+1. On the primary DMA, open DataMiner Cube.
 
-4. Go to *Apps* > *System Center* > *Agents.*
+1. Go to *Apps* > *System Center* > *Agents.*
 
-5. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
+1. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
 
-6. Click the *Failover* button in the lower right corner.
+1. Click the *Failover* button in the lower right corner.
 
-7. Select the type of Failover you want to configure: *Failover (Virtual IP)* or *Failover (Hostname)*.
+1. Select the type of Failover you want to configure: *Failover (Virtual IP)* or *Failover (Hostname)*.
 
-8. If you selected *Failover (Virtual IP)*:
+1. If you selected *Failover (Virtual IP)*:
 
-    1. On the left, specify the virtual IP addresses that are to be used to access the Failover Agent.
+   1. On the left, specify the virtual IP addresses that are to be used to access the Failover Agent.
 
-    2. In the box indicating the primary DMA, click the *x.x.x.x* placeholders, and specify the current IP addresses of the corporate and the acquisition network interfaces of the primary DMA.
+   1. In the box indicating the primary DMA, click the *x.x.x.x* placeholders, and specify the current IP addresses of the corporate and the acquisition network interfaces of the primary DMA.
 
-    3. In the box indicating the backup DMA, click the *x.x.x.x* placeholder, and specify the current IP addresses of the corporate and the acquisition network interfaces of the backup DMA.
+   1. In the box indicating the backup DMA, click the *x.x.x.x* placeholder, and specify the current IP addresses of the corporate and the acquisition network interfaces of the backup DMA.
 
-    4. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
+   1. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
-    5. Click *OK* to save the configuration.
+   1. Click *OK* to save the configuration.
 
-        Once you have completed the configuration, the IP addresses will be changed. Because of this, it could take a while before you can reconnect to the system.
+      Once you have completed the configuration, the IP addresses will be changed. Because of this, it could take a while before you can reconnect to the system.
 
-9. If you selected *Failover (Hostname)*:
+1. If you selected *Failover (Hostname)*:
 
-    1. On the left, specify the shared hostname that is to be used to access the Failover Agent.
+   1. On the left, specify the shared hostname that is to be used to access the Failover Agent.
 
-    2. In the box indicating the primary DMA, specify the hostname of the primary DMA.
+   1. In the box indicating the primary DMA, specify the hostname of the primary DMA.
 
-    3. In the box indicating the backup DMA, specify the hostname of the backup DMA.
+   1. In the box indicating the backup DMA, specify the hostname of the backup DMA.
 
-    4. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
+   1. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
-    5. Click *OK* to save the configuration.
+   1. Click *OK* to save the configuration.
 
 To enable Failover using DataMiner version **10.1.7 or lower**:
 
 1. Make sure both DMAs are prepared and you have a pair of IP addresses available that are not currently used. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
-2. On the primary DMA, open DataMiner Cube.
+1. On the primary DMA, open DataMiner Cube.
 
-3. Go to *Apps* > *System Center* > *Agents.*
+1. Go to *Apps* > *System Center* > *Agents.*
 
-4. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
+1. On the *Manage* tab, select the primary DMA in the list of DataMiner Agents.
 
-5. Click the *Failover* button in the lower right corner.
+1. Click the *Failover* button in the lower right corner.
 
-6. In the *Failover* window, select the *Failover* checkbox.
+1. In the *Failover* window, select the *Failover* checkbox.
 
-7. On the left, specify the virtual IP addresses that are to be used to access the Failover Agent.
+1. On the left, specify the virtual IP addresses that are to be used to access the Failover Agent.
 
-8. In the box indicating the primary DMA, click the *x.x.x.x* placeholders, and specify the current IP addresses of the corporate and the acquisition network interfaces of the primary DMA.
+1. In the box indicating the primary DMA, click the *x.x.x.x* placeholders, and specify the current IP addresses of the corporate and the acquisition network interfaces of the primary DMA.
 
-9. In the box indicating the backup DMA, click the *x.x.x.x* placeholder, and specify the current IP addresses of the corporate and the acquisition network interfaces of the backup DMA.
+1. In the box indicating the backup DMA, click the *x.x.x.x* placeholder, and specify the current IP addresses of the corporate and the acquisition network interfaces of the backup DMA.
 
-10. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
+1. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 
-11. Click *OK* to save the configuration.
+1. Click *OK* to save the configuration.
 
-    Once you have completed the configuration, the IP addresses will be changed. Because of this, it could take a while before you can reconnect to the system.
+   Once you have completed the configuration, the IP addresses will be changed. Because of this, it could take a while before you can reconnect to the system.
 
 > [!NOTE]
 > - Both DMAs store the full Failover configuration in their *DMS.xml* file. Each time the Failover configuration is changed, a copy of the old *DMS.xml* file will be moved to the folder *C:\\Skyline DataMiner\\Recycle Bin*.
