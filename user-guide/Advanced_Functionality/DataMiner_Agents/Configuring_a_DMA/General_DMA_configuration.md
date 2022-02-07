@@ -436,12 +436,13 @@ In this section:
 
         > [!NOTE]
         > - The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. https://www.myhost.com/{R:1}.
-        > - The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
+        > - The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. TLS/SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
 
     8. Set *Redirect type* to *Found (302)*.
 
 > [!NOTE]
-> Instead of redirecting HTTP traffic to HTTPS, it is also possible to close down HTTP completely by removing the HTTP binding, so that only HTTPS traffic is accepted.
+> - Instead of redirecting HTTP traffic to HTTPS, it is also possible to close down HTTP completely by removing the HTTP binding, so that only HTTPS traffic is accepted. Once the binding is removed you can close port 80 in the Windows Firewall.
+> - When failover is active and HTTPS traffic is required, it is required to add the Virtual IP (or the shared hostname) in the Subject Alternative Name of the TLS/SSL certificate on both DataMiner agents.
 
 ### Specifying auto-detection information for an inter-DMA HTTPS connection
 
