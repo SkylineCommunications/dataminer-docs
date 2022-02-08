@@ -582,6 +582,9 @@ Permission to use the Monitoring app. Available from DataMiner 10.2.0/10.2.2 onw
 
 ### Modules \> Planned Maintenance
 
+> [!NOTE]
+> These user permissions are only displayed if the DMA uses an Elasticsearch database.
+
 #### Modules \> Planned Maintenance \> UI available
 
 Permission to view the Planned Maintenance (PLM) app in Cube. Available from DataMiner 10.2.0/10.1.2 onwards.
