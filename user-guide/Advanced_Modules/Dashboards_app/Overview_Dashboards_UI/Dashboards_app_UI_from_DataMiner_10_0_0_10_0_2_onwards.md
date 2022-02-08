@@ -59,7 +59,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
    | Start editing  | Allows you to start editing the dashboard. In edit mode, the navigation pane on the left will be hidden. |
    | Stop editing | Closes edit mode |
    | Clear all  | Only displayed if the dashboard contains at least one feed. Clears the selection of all the feeds in the dashboard. |
-   | Start sharing | Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard using the Live Sharing Service](xref:Sharing_a_dashboard_using_the_Live_Sharing_Service). This feature is only available if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). |
+   | Start sharing | Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). |
 
    In the settings of the Dashboards app, you can configure whether the edit mode and clear feeds buttons are always displayed or “pinned” to the header bar, or instead accessible via an arrow button in the top-right corner of a dashboard.
 

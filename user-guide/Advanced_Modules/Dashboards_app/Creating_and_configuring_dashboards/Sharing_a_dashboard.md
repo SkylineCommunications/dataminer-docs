@@ -1,8 +1,10 @@
 ---
-uid: Sharing_a_dashboard_using_the_Live_Sharing_Service
+uid: Sharing_a_dashboard
 ---
 
-# Sharing a dashboard using the Live Sharing Service
+# Sharing a dashboard
+
+## Sharing a dashboard using the Live Sharing Service
 
 > [!NOTE]
 > - Prior to DataMiner 10.1.12, this feature is only available in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
@@ -33,4 +35,12 @@ uid: Sharing_a_dashboard_using_the_Live_Sharing_Service
 > [!NOTE]
 > - You can stop sharing a dashboard by clicking the ... button again and selecting *Manage share*. This will open a pop-up box where you can delete the share or update the message.
 > - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries using feeds, and visualizations based on query feeds (e.g. node edge graph, table). If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+>
+
+## Sharing a dashboard as a PDF
+
+This feature is currently still in preview. To activate it, the soft-launch option *ReportsAndDashboardsExport* must be activated. For more information, refer to [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/) on DataMiner Dojo.
+
+> [!NOTE]
+> Sharing a dashboard as a PDF report is possible from the Automation, Correlation and Scheduler modules even if the *ReportsAndDashboardsExport* soft-launch option is not activated. For more information, see [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard)
 >
