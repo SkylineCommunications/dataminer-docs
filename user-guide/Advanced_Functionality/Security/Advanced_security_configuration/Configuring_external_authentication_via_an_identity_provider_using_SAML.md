@@ -58,13 +58,13 @@ To create a DataMiner metadata file, proceed as follows:
     <?xml version="1.0" encoding="UTF-8"?>
     <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
       <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com" index="0" isDefault="true"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login" index="1" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root" index="2" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard" index="3" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring" index="4" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs" index="5" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing" index="6" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/" index="0" isDefault="true"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="1" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="2" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="3" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="4" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="5" isDefault="false"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="6" isDefault="false"/>
         <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[FOR EVERY CUSTOM APP URL, ADD AN ASSERTION LIKE THE ONES ABOVE WITH AN INCREMENTED INDEX. IF YOU DO NOT HAVE CUSTOM APPS, REMOVE THIS EXAMPLE.]" index="7" isDefault="false"/>
       </md:SPSSODescriptor>
     </md:EntityDescriptor>
@@ -114,20 +114,20 @@ As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applicat
 
 4. Go to *Single sign-on*, select "SAML", and edit the following settings in *Basic SAML Configuration*:
 
-    - Set *Entity ID* to ``https://[your application name]``. This entity ID must be identical to the one that is specified in the ``spMetadata.xml`` file.
+    - Set *Entity ID* to ``https://[your application name]/``. This entity ID must be identical to the one that is specified in the ``spMetadata.xml`` file.
 
     - Under *Reply URL*, specify the following URLs:
 
         - ``https://[your application name]/root/``
-        - ``https://[your application name]/ticketing``
-        - ``https://[your application name]/jobs``
-        - ``https://[your application name]/monitoring``
-        - ``https://[your application name]/dashboard``
-        - ``https://[your application name]/root``
-        - ``https://[your application name]/login``
-        - ``https://[your application name]``
+        - ``https://[your application name]/ticketing/``
+        - ``https://[your application name]/jobs/``
+        - ``https://[your application name]/monitoring/``
+        - ``https://[your application name]/dashboard/``
+        - ``https://[your application name]/root/``
+        - ``https://[your application name]/login/``
+        - ``https://[your application name]/``
 
-    - Set *Sign on URL* to ``https://[your application name]``.
+    - Set *Sign on URL* to ``https://[your application name]/``.
 
 #### Retrieving the identity provider's metadata file on Azure AD
 
@@ -276,7 +276,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
     The location where the SAML assertion is sent with a POST operation.
 
-    - In this box, enter e.g. ``https://dataminer.example.com/root``.
+    - In this box, enter e.g. ``https://dataminer.example.com/root/``.
     - Select the following checkboxes:
     
         - *Use this for Recipient URL and Destination URL*
@@ -284,17 +284,17 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
         
     - Enter the following additional URLs:
     
-        - ``https://dataminer.example.com/login``
-        - ``https://dataminer.example.com/dashboard``
-        - ``https://dataminer.example.com/monitoring``
-        - ``https://dataminer.example.com/jobs``
-        - ``https://dataminer.example.com/ticketing``
+        - ``https://dataminer.example.com/login/``
+        - ``https://dataminer.example.com/dashboard/``
+        - ``https://dataminer.example.com/monitoring/``
+        - ``https://dataminer.example.com/jobs/``
+        - ``https://dataminer.example.com/ticketing/``
         
     **Audience URI**
 
     The intended audience of the SAML assertion.
 
-    In this box, enter ``https://dataminer.example.com/root``.
+    In this box, enter ``https://dataminer.example.com/root/``.
 
     **Name ID format**
 
