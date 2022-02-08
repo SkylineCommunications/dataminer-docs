@@ -442,7 +442,7 @@ In this section:
 
 > [!NOTE]
 > - Instead of redirecting HTTP traffic to HTTPS, it is also possible to close down HTTP completely by removing the HTTP binding, so that only HTTPS traffic is accepted. Once the binding is removed you can close port 80 in the Windows Firewall.
-> - When Failover is active and HTTPS traffic is required, it is required to add the Virtual IP (or the shared hostname) in the Subject Alternative Name of the TLS/SSL certificate on both DataMiner Agents.
+> - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the Subject Alternative Name of the TLS/SSL certificate on both DataMiner Agents.
 
 ### Specifying auto-detection information for an inter-DMA HTTPS connection
 
