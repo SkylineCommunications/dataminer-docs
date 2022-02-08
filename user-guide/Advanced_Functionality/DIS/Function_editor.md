@@ -12,42 +12,32 @@ If you click *Function Editor* in the file tab header when editing a function XM
 The following sections provide more information on the Function Editor:
 
 - [Function](#function)
-
 - [Pages](#pages)
-
 - [Layout / Parameters](#layout--parameters)
-
 - [Apply changes / Cancel](#apply-changes--cancel)
-
 - [Warning](#warning)
 
-### Function
+## Function
 
 This selection box contains all functions defined in the function XML file you are editing. If you select a function from the list, the *Pages* section will show a list of all pages defined for that specific function, and the *Layout* section will display the page that was set as default.
 
 To add a new function to the function XML file:
 
 1. Click *New function.*
-
-2. In the *Add new function* box,
+1. In the *Add new function* box,
 
     - enter the name of the new function,
-
     - select a profile,
-
     - select an entry point,
-
     - configure the interfaces, and
-
     - click *OK*.
 
 To delete a function from the function XML file:
 
 1. In the *Function* selection box, select the function you want to delete, and click the red X.
+1. In the *Delete function* box, click *Yes* to confirm the deletion.
 
-2. In the *Delete function* box, click *Yes* to confirm the deletion.
-
-### Pages
+## Pages
 
 In the *Pages* list on the left, you can find the list of pages defined in the function selected in the *Function* section above.
 
@@ -66,13 +56,13 @@ When you right-click a page, a shortcut menu will appear, containing the followi
 | Move Down      | CTRL+DOWN         | Moves a page one position down in the list. |
 | Remove         | DELETE            | Removes the entire page.                    |
 
-### Layout / Parameters
+## Layout / Parameters
 
 You can drag parameters from the *Parameters* list on the right, which contains all parameters defined in the protocol XML file linked to the function XML file you are editing, onto a column in the *Layout* section, which represents the layout of the selected page. An extra column is suggested the moment you drag a parameter onto the *Layout* section. If you drop the parameter onto that extra column, a new column will be added to the page.
 
 If you want a page to have only one column spanning across the entire width, then, in the *Options* section below, select *Wide column*. Note that this only works if no parameters have been added except in the left-most column.
 
-#### Layout
+### Layout
 
 Every parameter you drag onto a page is represented by a building block that, by default, shows the ID and the name of the parameter.
 
@@ -82,7 +72,7 @@ In case of a table parameter, you can click the *Edit Parameter* button in the t
 
 When you right-click after selecting a parameter (or multiple parameters), a shortcut menu appears.
 
-| Select…                   | in order to…                                    |
+| Select...                 | in order to...                                  |
 |---------------------------|-------------------------------------------------|
 | Go To XML (Apply Changes) | Save all changes and return to the XML editor.  |
 | Remove                    | Remove the selected parameter(s) from the page. |
@@ -90,27 +80,25 @@ When you right-click after selecting a parameter (or multiple parameters), a sho
 > [!NOTE]
 > To select more than one parameter box, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive parameter boxes, click the first one in the list and then click the last one while holding down the SHIFT key.
 
-#### Parameters
+### Parameters
 
 By default, the *Parameters* list shows the ID and the name of every parameter defined in the protocol XML file linked to the function XML file you are editing.
 
 At the bottom of the *Parameters* list, you can select *Group by page* to have the parameters in the list grouped by protocol page, and you can open a filter section that will allow you to filter the list.
 
-### Apply changes / Cancel
+## Apply changes / Cancel
 
 If you want to save the changes you made and return to the XML editor, click *Apply Changes*. If you want to discard the changes you made, click *Cancel*.
 
-### Warning
+## Warning
 
 A warning box can appear when you try to open the function editor.
 
 Errors that cause this *Warning* box to appear include:
 
 - No default page
-
-- …
+- ...
 
 > [!NOTE]
 > - Parameters of which the RTDisplay attribute is set to False will be ignored. This way, we avoid problems with “disappearing parameters” in protocols in which multiple parameters have been assigned identical names.
 > - When you place two parameters at the same location, a red box will be drawn around those parameters, and a warning icon will appear next to the page. You can then drag one of the parameters to another location to resolve the problem.
->
