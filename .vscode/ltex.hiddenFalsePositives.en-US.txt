@@ -47,3 +47,6 @@
 {"rule":"ENGLISH_WORD_REPEAT_RULE","sentence":"^\\QClick the Tree view button button to switch back to the tree view.\\E$"}
 {"rule":"POSSESSIVE_APOSTROPHE","sentence":"^\\QThe main page of the app consists of a header bar, a navigation pane, and a details pane.\\E$"}
 {"rule":"PHRASE_REPETITION","sentence":"^\\QApps button Apps button, for quick access to other DataMiner web apps.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIn DataMiner 10.1.2, you need the user permission Other > CCALinkAccount.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QTo activate it, the soft-launch option ReportsAndDashboardsExport must be activated.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q!NOTE Sharing a dashboard as a PDF report is possible from the Automation, Correlation and Scheduler modules even if the ReportsAndDashboardsExport soft-launch option is not activated.\\E$"}

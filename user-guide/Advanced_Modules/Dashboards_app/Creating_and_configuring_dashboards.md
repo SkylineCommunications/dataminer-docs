@@ -14,7 +14,7 @@ In this section:
 
 - [Deleting a dashboard](xref:Deleting_a_dashboard)
 
-- [Sharing a dashboard using the Live Sharing Service](xref:Sharing_a_dashboard_using_the_Live_Sharing_Service)
+- [Sharing a dashboard](xref:Sharing_a_dashboard)
 
 - [Editing a dashboard](xref:Editing_a_dashboard)
 
