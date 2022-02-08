@@ -8,9 +8,9 @@ The layout of a dashboard can be configured on two levels:
 
 - The layout of the dashboard on the whole. For more information, see:
 
-    - [Customizing the dashboard theme](#customizing-the-dashboard-theme)
+  - [Customizing the dashboard theme](#customizing-the-dashboard-theme)
 
-    - [Configuring the default component layout](#configuring-the-default-component-layout)
+  - [Configuring the default component layout](#configuring-the-default-component-layout)
 
 - Overrides for each specific component. For more information, see [Configuring dashboard components](xref:Configuring_dashboard_components).
 
@@ -29,18 +29,18 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 ### Creating a new dashboard theme
 
-#### Using DataMiner 10.0.2 or higher:
+#### Creating a new theme in DataMiner 10.0.2 or higher
 
 1. Click the user icon in the top-right corner of the Dashboards app and select the *Configuration* or *Settings* option.
 
-2. In the *Dashboards settings* window, click the *New theme* button.
+1. In the *Dashboards settings* window, click the *New theme* button.
 
     > [!NOTE]
     > From DataMiner 10.0.12 onwards you can also create a new theme directly from the Layout pane of a dashboard, using the *New theme* button there. The available options will be the same as described below.
 
-3. In the *Theme* name box, specify a unique name for the new theme.
+1. In the *Theme* name box, specify a unique name for the new theme.
 
-4. Configure the theme:
+1. Configure the theme:
 
     - Set a background color in RGB format.
 
@@ -70,17 +70,17 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
         - In the *Shadow* section, you can select the size of the shadow displayed behind the components.
 
-5. If you want the new dashboard theme to be the new default theme, click the *Set as default* toggle button.
+1. If you want the new dashboard theme to be the new default theme, click the *Set as default* toggle button.
 
-6. When the theme is fully configured, click *Save*.
+1. When the theme is fully configured, click *Save*.
 
-#### Using a DataMiner version prior to DataMiner 10.0.2:
+#### Creating a new theme in a DataMiner version prior to DataMiner 10.0.2
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
-2. In the panel on the right, select the *Layout* tab.
+1. In the panel on the right, select the *Layout* tab.
 
-3. In the *Custom* section of the panel, specify the following custom colors according to your preference, either by specifying an RGB value or by using the color picker boxes on the right:
+1. In the *Custom* section of the panel, specify the following custom colors according to your preference, either by specifying an RGB value or by using the color picker boxes on the right:
 
     - *Background*: The background color of the dashboard itself.
 
@@ -92,26 +92,26 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
         At the top of the *Custom* section, the selected theme colors are displayed for your reference.
 
-4. If you wish to use this same dashboard theme in other dashboards, specify a name in the *Theme name* box and click *Save theme*.
+1. If you wish to use this same dashboard theme in other dashboards, specify a name in the *Theme name* box and click *Save theme*.
 
 ### Overriding a dashboard theme
 
 It is possible to customize the theme for one dashboard by overriding the applied theme, without creating or applying a new theme. Note that this is no longer possible from DataMiner 10.0.12 onwards.
 
-#### Using DataMiner 10.0.2 or higher:
+#### Overriding a dashboard theme in DataMiner 10.0.2 or higher
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
-2. In the panel on the right, select the *Layout* tab.
+1. In the panel on the right, select the *Layout* tab.
 
-3. Select the *Override* checkbox.
+1. Select the *Override* checkbox.
 
-4. Specify the colors and component layout according to your preference. See [Creating a new dashboard theme](#creating-a-new-dashboard-theme).
+1. Specify the colors and component layout according to your preference. See [Creating a new dashboard theme](#creating-a-new-dashboard-theme).
 
 > [!NOTE]
 > If you do want to save the modified dashboard theme as a new theme, click *Save as new theme*. However, if you only want to customize the theme for a single dashboard, there is no need to click this button.
 
-#### Using a DataMiner version prior to DataMiner 10.0.2:
+#### Overriding a dashboard theme in a DataMiner version prior to DataMiner 10.0.2
 
 To configure a dashboard to use different colors without creating a theme, follow the steps detailed in the section [Creating a new dashboard theme](#creating-a-new-dashboard-theme), but do not apply the last step.
 
@@ -119,47 +119,47 @@ To configure a dashboard to use different colors without creating a theme, follo
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
-2. In the panel on the right, select the *Layout* tab.
+1. In the panel on the right, select the *Layout* tab.
 
-3. Click the box *Search for a theme*. From DataMiner 10.0.12 onwards, just click the box indicating the currently used theme.
+1. Click the box *Search for a theme*. From DataMiner 10.0.12 onwards, just click the box indicating the currently used theme.
 
-    A list of available themes will be displayed below the box. Enter a term in the box to filter the displayed themes (prior to DataMiner 10.0.12 only).
+   A list of available themes will be displayed below the box. Enter a term in the box to filter the displayed themes (prior to DataMiner 10.0.12 only).
 
-4. Select the theme you wish to use.
+1. Select the theme you wish to use.
 
 ## Configuring the default component layout
 
-#### Using DataMiner 10.0.2 or higher:
+### Using DataMiner 10.0.2 or higher
 
 From DataMiner 10.0.2 onwards, the default component layout is considered part of the default theme. It can be configured via the dashboards settings. See [Customizing the dashboard theme](#customizing-the-dashboard-theme).
 
-#### Using a DataMiner version prior to DataMiner 10.0.2:
+### Using a DataMiner version prior to DataMiner 10.0.2
 
 To configure the default layout for each of the components in a dashboard:
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
-2. In the panel on the right, select the *Layout* tab.
+1. In the panel on the right, select the *Layout* tab.
 
-3. Configure the following options in the expandable sections according to your preference:
+1. Configure the following options in the expandable sections according to your preference:
 
-    - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
+   - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
 
-    - In the *Container* section, specify the following:
+   - In the *Container* section, specify the following:
 
-        - *Show indicators*: Enable this option to visualize the margin, padding and component zones of each component.
+     - *Show indicators*: Enable this option to visualize the margin, padding and component zones of each component.
 
-        - *Vertical margin*: The amount of space (in pixels) above the components.
+     - *Vertical margin*: The amount of space (in pixels) above the components.
 
-        - *Horizontal margin*: The amount of space (in pixels) next to the components.
+     - *Horizontal margin*: The amount of space (in pixels) next to the components.
 
-        - *Vertical padding*: The amount of space (in pixels) that should be left free at the top of the bottom inside the components.
+     - *Vertical padding*: The amount of space (in pixels) that should be left free at the top of the bottom inside the components.
 
-        - *Horizontal padding*: The amount of space (in pixels) that should be left free on the left and right side of the components.
+     - *Horizontal padding*: The amount of space (in pixels) that should be left free on the left and right side of the components.
 
-    - In the *Borders* section, select the type of border that should be displayed around the components.
+   - In the *Borders* section, select the type of border that should be displayed around the components.
 
-    - In the *Shadow* section, select the size of the shadow displayed behind the components.
+   - In the *Shadow* section, select the size of the shadow displayed behind the components.
 
 > [!NOTE]
 > For each separate component, it is possible to override this default layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).

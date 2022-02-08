@@ -4,7 +4,7 @@ uid: Available_visualizations
 
 # Available visualizations
 
-Many different visualizations are available in the Dashboards app, in the categories listed below:
+Many visualizations are available in the Dashboards app, in the categories listed below:
 
 - [General](xref:General)
 

@@ -1459,16 +1459,94 @@
           items:
             - name: General
               topicUid: General
+              items:
+              - name: Block
+                topicUid: DashboardBlock
+              - name: Button
+                topicUid: DashboardButton
+              - name: Button panel
+                topicUid: DashboardButtonPanel
+              - name: Clock (analog)
+                topicUid: DashboardClockAnalog
+              - name: Clock (digital)
+                topicUid: DashboardClockDigital
+              - name: Generic map
+                topicUid: DashboardGenericMap
+              - name: Group
+                topicUid: DashboardGroup
+              - name: Image
+                topicUid: DashboardImage
+              - name: Text
+                topicUid: DashboardText
+              - name: Web
+                topicUid: DashboardWeb
             - name: States and values
               topicUid: States_and_values
+              items:
+              - name: State
+                topicUid: DashboardState
+              - name: Progress bar
+                topicUid: DashboardProgressBar
+              - name: Gauge
+                topicUid: DashboardGauge
+              - name: Ring
+                topicUid: DashboardRing
+              - name: State timeline
+                topicUid: DashboardStateTimeline
             - name: Tables
               topicUid: Tables
+              items:
+              - name: Alarm table
+                topicUid: DashboardAlarmTable
+              - name: Parameter table
+                topicUid: DashboardParameterTable
+              - name: Pivot table
+                topicUid: DashboardPivotTable
+              - name: Table
+                topicUid: DashboardTable
             - name: Charts
               topicUid: Charts
+              items:
+              - name: Column & Bar chart
+                topicUid: ColumnAndBarChart
+              - name: Bar chart (horizontal)
+                topicUid: BarChartHorizontal
+              - name: Line & area chart
+                topicUid: LineAndAreaChart
+              - name: Pie & donut chart
+                topicUid: PieAndDonutChart
             - name: Other
               topicUid: Other
+              items:
+              - name: Node edge graph
+                topicUid: DashboardNodeEdgeGraph
+              - name: Parameter page
+                topicUid: DashboardParameterPage
+              - name: Service definition
+                topicUid: DashboardServiceDefinition
+              - name: Spectrum Analyzer
+                topicUid: DashboardSpectrumAnalyzer
+              - name: Trend statistics
+                topicUid: DashboardTrendStatistics
+              - name: Visual Overview
+                topicUid: DashboardVisualOverview
             - name: Feeds
               topicUid: Feeds
+              items:
+              - name: CPE feed
+                topicUid: DashboardCPEFeed
+              - name: Drop-down feed
+                topicUid: DashboardDropdownFeed
+              - name: List feed
+                topicUid: DashboardListFeed
+              - name: Parameter feed
+                topicUid: DashboardParameterFeed
+              - name: Time range feed
+                topicUid: DashboardTimeRangeFeed
+              - name: Tree feed
+                topicUid: DashboardTreeFeed
+              - name: Trigger feed
+                topicUid: DashboardTriggerFeed
         - name: Using dashboard feeds
           topicUid: Using_dashboard_feeds
           items:
@@ -1484,7 +1562,7 @@
           topicUid: Customizing_the_Dashboards_app
         - name: Dashboard Gateway installation
           topicUid: Dashboard_Gateway_installation
-    - name: DMS Dashboards
+    - name: DMS Dashboards (legacy)
       topicUid: dashboards
       items:
         - name: Accessing dashboards

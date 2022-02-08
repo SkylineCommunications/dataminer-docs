@@ -26,29 +26,29 @@ To view aggregation data:
 
 - Click a rule in the pane on the left to see aggregated data for this particular rule.
 
-    > [!NOTE]
-    > If a rule is grayed out, that means it is currently disabled. In that case, no data will be shown when you click the rule.
+  > [!NOTE]
+  > If a rule is grayed out, that means it is currently disabled. In that case, no data will be shown when you click the rule.
 
 - Use the *Search* box at the top of the list of rules to quickly find a rule.
 
 - Click *Refresh* to manually refresh the displayed data.
 
-    > [!NOTE]
-    > If a rule has been configured to update automatically, this will happen after the configured time, even if the *Refresh* button is not used.
+  > [!NOTE]
+  > If a rule has been configured to update automatically, this will happen after the configured time, even if the *Refresh* button is not used.
 
 - At the top of the pane on the right:
 
-    - Click *TREE* to see a table with a tree view showing the subviews for each view and their corresponding aggregation rules.
+  - Click *TREE* to see a table with a tree view showing the subviews for each view and their corresponding aggregation rules.
 
-    - Click *TABLE* to see the aggregation rules for the view in a table with functions such as: a quick filter, sorting by column header, and a right-click menu to copy or export the table or parts of the table.
+  - Click *TABLE* to see the aggregation rules for the view in a table with functions such as: a quick filter, sorting by column header, and a right-click menu to copy or export the table or parts of the table.
 
-    > [!NOTE]
-    > Whether you select *TREE* or *TABLE*, the aggregation rules will be shown in a table where each row represents a view, and each column contains the data for one particular rule.
+  > [!NOTE]
+  > Whether you select *TREE* or *TABLE*, the aggregation rules will be shown in a table where each row represents a view, and each column contains the data for one particular rule.
 
 - For any rules that have trending enabled, a trending icon is shown in the table with aggregation rule details. If you have the necessary permission to access trending, you can click the icon to open a window with detailed trending information, similar to the information shown when you drill down on a regular parameter. For more information, see [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card).
 
 > [!NOTE]
 > Aggregation information can also be viewed in the Reports & Dashboards module:
-> - For more information on reports, see [DMS Reporter](xref:reporter#dms-reporter).
-> - For more information on dashboards, see [DMS Dashboards](xref:dashboards#dms-dashboards).
+> - For more information on reports, see [DMS Reporter](xref:reporter).
+> - For more information on dashboards, see [DMS Dashboards](xref:dashboards).
 >

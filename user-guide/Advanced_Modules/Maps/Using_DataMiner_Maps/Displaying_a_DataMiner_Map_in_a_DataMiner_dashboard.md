@@ -30,7 +30,7 @@ Using the legacy Reports & Dashboards module (prior to DataMiner 9.6.11):
 
     > [!TIP]
     > See also:
-    > [DMS Dashboards](xref:dashboards#dms-dashboards)
+    > [DMS Dashboards](xref:dashboards)
 
 2. In the *Add/Remove Components* pane, click *Other*.
 
