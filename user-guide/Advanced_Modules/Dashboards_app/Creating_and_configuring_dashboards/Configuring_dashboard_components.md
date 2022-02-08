@@ -32,45 +32,45 @@ In addition, depending on the visualization, additional configuration options ma
 
 To apply a visualization to a component or change the visualization of a component:
 
-1. Click on the component or hover the mouse over the component and click the ![](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
+1. Click on the component or hover the mouse over the component and click the ![Visualization icon](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
-2. Select the visualization you want to apply from the options displayed below the component.
+1. Select the visualization you want to apply from the options displayed below the component.
 
-    As soon as the mouse pointer hovers over the different visualizations, a preview will be displayed in the component.
+   As soon as the mouse pointer hovers over the different visualizations, a preview will be displayed in the component.
 
 ## Applying a data feed
 
 To apply a data feed or change the data feed of a component:
 
-1. Click on the component or hover the mouse over the component and click the ![](~/user-guide/images/dashboards_data.png) icon.
+1. Click on the component or hover the mouse over the component and click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon.
 
-    In the data pane on the right, any data feeds that do not match the visualization of the component will become unavailable. Data feeds that are compatible with the component will be marked with the following icon: ![](~/user-guide/images/NewRD_datafeed.png)
+   In the data pane on the right, any data feeds that do not match the visualization of the component will become unavailable. Data feeds that are compatible with the component will be marked with the following icon: ![Compatible data feed icon](~/user-guide/images/NewRD_datafeed.png)
 
-2. Drag the compatible data feed onto the component.
+1. Drag the compatible data feed onto the component.
 
-    - To find specific data more quickly, you can use the filter box at the top of each data section.
+   - To find specific data more quickly, you can use the filter box at the top of each data section.
 
-        For parameters, you can select a specific parameter by first selecting *Element* or *Service* in the *From* box and then specifying a filter. Alternatively, you can select a parameter by first selecting *Protocol* in the *From* box and then specifying a protocol in the filter.
+     For parameters, you can select a specific parameter by first selecting *Element* or *Service* in the *From* box and then specifying a filter. Alternatively, you can select a parameter by first selecting *Protocol* in the *From* box and then specifying a protocol in the filter.
 
-    - For some components, you can add the complete set of a certain type of items. In that case, the data feed icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
+   - For some components, you can add the complete set of a certain type of items. In that case, the data feed icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
 
-        > [!NOTE]
-        > If you add the entire *Bookings* data set to a *Drop-down*, *List* or *Tree* feed, you will also need to link this to a *Time range* feed.
+     > [!NOTE]
+     > If you add the entire *Bookings* data set to a *Drop-down*, *List* or *Tree* feed, you will also need to link this to a *Time range* feed.
 
-    - A data feed can also be provided by a feed component. When such a component has been added to the dashboard, the *Feeds* section is added to the available data in the *Data* pane. You can then drag an entry from this section to a component in order to link the component to the feed component.
+   - A data feed can also be provided by a feed component. When such a component has been added to the dashboard, the *Feeds* section is added to the available data in the *Data* pane. You can then drag an entry from this section to a component in order to link the component to the feed component.
 
-    - Some components allow you to specify multiple data feeds. For example, for a *State* component and a *Line chart* component, multiple parameters can be dragged onto the component.
+   - Some components allow you to specify multiple data feeds. For example, for a *State* component and a *Line chart* component, multiple parameters can be dragged onto the component.
 
-        > [!NOTE]
-        > From DataMiner 10.0.12 onwards, for some visualizations that use multiple data feeds (e.g. Parameter table, State), you can modify the order in which these data feeds are displayed.
-        >
-        > To do so, in the *Data in component* section of the data pane, click the arrow icons next to the data feeds to place them higher or lower in the order.
+     > [!NOTE]
+     > From DataMiner 10.0.12 onwards, for some visualizations that use multiple data feeds (e.g. Parameter table, State), you can modify the order in which these data feeds are displayed.
+     >
+     > To do so, in the *Data in component* section of the data pane, click the arrow icons next to the data feeds to place them higher or lower in the order.
 
-    - If you try to add a data feed that is not compatible with the component, a red icon will be displayed on the component when you try to drag the data onto it.
+   - If you try to add a data feed that is not compatible with the component, a red icon will be displayed on the component when you try to drag the data onto it.
 
-3. Some visualizations and data feeds allow you to specify an additional filter feed. In that case, a yellow filter icon will be displayed below the component when you select it or hover the mouse over it: ![](~/user-guide/images/DashboardsX_filter.png)
+1. Some visualizations and data feeds allow you to specify an additional filter feed. In that case, a yellow filter icon will be displayed below the component when you select it or hover the mouse over it: ![Filter icon](~/user-guide/images/DashboardsX_filter.png)
 
-    After you click this icon, compatible filter feeds will be marked with this icon in the data pane, and you will be able to drag these onto the component just like a data feed.
+   After you click this icon, compatible filter feeds will be marked with this icon in the data pane, and you will be able to drag these onto the component just like a data feed.
 
 ### Using Queries data input
 
@@ -82,14 +82,14 @@ You can create a query as follows:
 
 1. In edit mode, select the dashboard component for which you want to use a query as a data input. At present, this is support for Bar chart, Pie chart, State and Table components.
 
-2. In the data pane, select *Queries* and click the + icon to add a new query.
+1. In the data pane, select *Queries* and click the + icon to add a new query.
 
-3. Specify a name for the query.
+1. Specify a name for the query.
 
     > [!NOTE]
     > From DataMiner 10.1.0/10.1.1 onwards, specifying a name is optional. However, note that this is still recommended, as a name can help clarify what the purpose of the query is.
 
-4. In the drop-down box below this, select the data source you want to use. The following options are currently available:
+1. In the drop-down box below this, select the data source you want to use. The following options are currently available:
 
     - *Get alarms*: Available from DataMiner 10.2.0/10.1.9 onwards. The alarms in the DataMiner System. Several columns, such as *Element Name*, *Parameter Description*, *Value* and *Time*, are included by default. Others can be added with a *Select* operation (see below).
 
@@ -108,12 +108,8 @@ You can create a query as follows:
 
     - *Get parameter table by ID*: The selected parameter table from the element with the specified DataMiner ID and element ID. From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that allows you to retrieve a parameter table from an existing feed in the dashboard.
 
-
-
         > [!NOTE]
         > When you use this data source, from DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in the *Settings* pane. When you enable this, the component will automatically refresh the data when changes are detected.
-
-
 
     - *Get parameters for element where*: The selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query. From DataMiner 10.2.0/10.1.5 onwards, if a protocol and version have been specified, a *Use feed* checkbox is available that allows you to also retrieve parameters from an existing feed in the dashboard.
 
@@ -136,18 +132,14 @@ You can create a query as follows:
     > [!NOTE]
     > By default, only a limited number of columns will be displayed in the dashboard for certain data sources. For example, for a parameter table, only the first 10 columns are displayed by default. In such a case, you can use the *Select* operator to display other columns or more columns than this default (see below).
 
-5. Select an operator. This step is optional; if you do not select an operator, the entire data set will be used. The following operators are available:
+1. Select an operator. This step is optional; if you do not select an operator, the entire data set will be used. The following operators are available:
 
     - *Aggregate*: Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g. Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.
 
         You can then further filter the result by applying another operator. An additional *Group by* operator is available for this, which will display the result of the aggregation operation for each different item in the column selected in the *Group by column* box.
 
-
-
         > [!NOTE]
         > From DataMiner 10.1.0/10.1.3 onwards, exception values are not taken into account, except for the Count and Distinct Count methods.
-
-
 
     - *Column manipulations*: Creates a new column based on existing columns. When you select this option, you also need to select a manipulation method.
 
@@ -169,13 +161,9 @@ You can create a query as follows:
 
         From DataMiner 10.1.11 onwards, an additional option, *Return no rows when feed is empty*, is available. When you select this option, in case the feed is empty, an empty table will be returned instead of the entire table.
 
-
-
         > [!NOTE]
         > - Index feeds are only supported from DataMiner 10.2.0/10.1.5 onwards.
-        > - If the *regex* or *not regex* filter method is used and *Use feed* is selected, from DataMiner 10.1.2/10.1.5 onwards, if the feed contains multiple values, these are combined with an "or" operator.
-
-
+        > - If the *regex* or *not regex* filter method is used, and *Use feed* is selected, from DataMiner 10.1.2/10.1.5 onwards, if the feed contains multiple values, these are combined with an "or" operator.
 
     - *Join*: Joins two tables together. When you select this option, in the *Type* drop-down box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
@@ -189,14 +177,10 @@ You can create a query as follows:
 
     - *Top X*: Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* checkbox.
 
-
-
         > [!NOTE]
         > From DataMiner 10.1.0/10.1.3 onwards, exception values are not taken into account by this operator.
 
-
-
-6. Drag the configured query to the component in order to use it.
+1. Drag the configured query to the component in order to use it.
 
 #### Importing a query
 
@@ -204,16 +188,17 @@ From DataMiner 10.1.4 onwards, you can import a query from a different dashboard
 
 1. In the data pane, select *Queries* and click the import icon (to the right of the + icon).
 
-2. In the dialog box, select the dashboard from which you want to import the query and the query itself, and specify a name for the query in your dashboard.
+1. In the dialog box, select the dashboard from which you want to import the query and the query itself, and specify a name for the query in your dashboard.
 
-3. Click *Import*. The query will now be available for use in the data pane.
+1. Click *Import*. The query will now be available for use in the data pane.
 
 #### Notes on GQI queries
 
 Please note the following regarding query data input:
 
-- It is possible to refer to a query in the dashboard URL, using the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]
-<br>*In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
+- It is possible to refer to a query in the dashboard URL, using the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]*
+
+  In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
 
 - When a query has been created, the columns from the table that results from the query are available as individual data items in the data pane, so that you can use them to filter or group a component.
 
@@ -233,7 +218,7 @@ From DataMiner 10.0.8 onwards:
 
 1. Select the component and go to the *Layout* tab on the right.
 
-2. In the *Styles* section, you can then change the component theme in different ways:
+1. In the *Styles* section, you can then change the component theme in different ways:
 
     - To change the component theme to one of the different existing component themes for your current dashboard theme, click the current theme and select a different theme in the drop-down list.
 
@@ -247,9 +232,9 @@ Prior to DataMiner 10.0.8:
 
 1. Select the component and go to the *Layout* tab on the right.
 
-2. Clear the checkbox *Inherit from dashboard*.
+1. Clear the checkbox *Inherit from dashboard*.
 
-3. Configure the following options in the expandable sections according to your preference:
+1. Configure the following options in the expandable sections according to your preference:
 
     - In the *Title* section, select the alignment for the component title and specify whether a border should be displayed around the title.
 

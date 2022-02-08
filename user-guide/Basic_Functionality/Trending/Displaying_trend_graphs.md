@@ -10,7 +10,7 @@ There are several ways to access trend information:
 
 - In the Trending module in DataMiner Cube. See [Accessing trend information from the Trending module](xref:Accessing_trend_information_from_the_Trending_module).
 
-- In a DataMiner dashboard. See [Line & area chart](xref:Charts#line--area-chart).
+- In a DataMiner dashboard. See [Line & area chart](xref:LineAndAreaChart).
 
 - In the Monitoring app. See [Element cards](xref:Monitoring_app_card_pane#element-cards).
 

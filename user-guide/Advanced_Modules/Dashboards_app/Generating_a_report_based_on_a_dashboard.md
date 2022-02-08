@@ -12,20 +12,20 @@ When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is availabl
 
 - Via *Options*, at the top of the window, you can configure these general settings for the report:
 
-    - *Add DMS info*: Select this option to include your company details in the report.
+  - *Add DMS info*: Select this option to include your company details in the report.
 
-    - *Add DMS logo*: Select this option to display the company logo in the report.
+  - *Add DMS logo*: Select this option to display the company logo in the report.
 
-        > [!NOTE]
-        > To check your company details and logo in DataMiner Cube, go to System Center \> *Agents* > *System*.
+    > [!NOTE]
+    > To check your company details and logo in DataMiner Cube, go to System Center \> *Agents* > *System*.
 
-    - *Include CSV*: Includes a CSV file for each component of the dashboard. Only supported for specific components, such as the line graph, pivot table, and table component. Available from DataMiner 10.2.0/10.1.7 onwards.
+  - *Include CSV*: Includes a CSV file for each component of the dashboard. Only supported for specific components, such as the line graph, pivot table, and table component. Available from DataMiner 10.2.0/10.1.7 onwards.
 
-    - *Include feeds*: Select this option to also include feed components in the report.
+  - *Include feeds*: Select this option to also include feed components in the report.
 
-    - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
+  - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
 
-    - *Dashboard width*: Allows you to select a custom width for the report.
+  - *Dashboard width*: Allows you to select a custom width for the report.
 
 - Below this, the dashboard is displayed. If any data feeds should be specified for the report, you can do so here.
 

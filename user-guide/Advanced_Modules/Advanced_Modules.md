@@ -4,34 +4,34 @@ uid: Part4AdvancedModules
 
 # Advanced DataMiner modules
 
-- [DMS Automation](xref:automation#dms-automation)
+- [DMS Automation](xref:automation)
 
-- [DMS Business Intelligence](xref:sla#dms-business-intelligence)
+- [DMS Business Intelligence](xref:sla)
 
-- [DMS Correlation](xref:correlation#dms-correlation)
+- [DMS Correlation](xref:correlation)
 
-- [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)
+- [DMS Experience and Performance Management](xref:EPM)
 
-- [Dashboards app](xref:newR_D#dashboards-app)
+- [Dashboards app](xref:newR_D)
 
-- [DMS Dashboards](xref:dashboards#dms-dashboards)
+- [DMS Dashboards](xref:dashboards)
 
-- [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management)
+- [DMS Inventory & Asset Management](xref:AssetManagement)
 
-- [DMS Job Manager](xref:jobs#dms-job-manager)
+- [DMS Job Manager](xref:jobs)
 
-- [DMS Maps](xref:maps#dms-maps)
+- [DMS Maps](xref:maps)
 
-- [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
+- [DMS Mobile Gateway](xref:MobileGateway)
 
-- [DMS Reporter](xref:reporter#dms-reporter)
+- [DMS Reporter](xref:reporter)
 
-- [DMS Router Control](xref:RouterControl#dms-router-control)
+- [DMS Router Control](xref:RouterControl)
 
-- [DMS Scheduler](xref:scheduler#dms-scheduler)
+- [DMS Scheduler](xref:scheduler)
 
-- [Service and Resource Management](xref:SRM#service-and-resource-management)
+- [Service and Resource Management](xref:SRM)
 
-- [DMS Spectrum Analysis](xref:SpectrumAnalysis#dms-spectrum-analysis)
+- [DMS Spectrum Analysis](xref:SpectrumAnalysis)
 
-- [DMS Ticketing](xref:ticketing#dms-ticketing)
+- [DMS Ticketing](xref:ticketing)
