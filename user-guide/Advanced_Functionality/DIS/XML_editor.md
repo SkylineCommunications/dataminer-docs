@@ -11,11 +11,6 @@ If you open a protocol XML file or an Automation script XML file in Microsoft Vi
 > - To create a new Automation script XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Automation Script Template, and click Open.
 > - To create a new function XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Function Template, click Open, specify the function file version, select the associated protocol XML file, and click OK.
 
-The following sections contain more information on this file tab:
-
-- [File tab header](#file-tab-header)
-- [Inside the file tab](#inside-the-file-tab)
-
 ## File tab header
 
 After you install the *DataMinerIntegrationStudio.vsix* extension, a file tab containing a protocol XML file or an Automation script XML file will have a custom header containing a number of buttons as well as a search box.

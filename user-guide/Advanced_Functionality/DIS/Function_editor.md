@@ -9,14 +9,6 @@ If you click *Function Editor* in the file tab header when editing a function XM
 > [!NOTE]
 > If you open a function XML file and click *Function Editor* in the file tab header, DIS will ask you to open the associated protocol XML file as well if you have not yet done so already.
 
-The following sections provide more information on the Function Editor:
-
-- [Function](#function)
-- [Pages](#pages)
-- [Layout / Parameters](#layout--parameters)
-- [Apply changes / Cancel](#apply-changes--cancel)
-- [Warning](#warning)
-
 ## Function
 
 This selection box contains all functions defined in the function XML file you are editing. If you select a function from the list, the *Pages* section will show a list of all pages defined for that specific function, and the *Layout* section will display the page that was set as default.

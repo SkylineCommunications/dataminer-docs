@@ -1101,7 +1101,7 @@
           topicUid: Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions
           items:
             - name: Developing DataMiner protocols as Visual Studio solutions
-              topicUid: Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions
+              topicUid: Developing_DataMiner_protocols_as_Visual_Studio_solutions
             - name: Developing Automation scripts as Visual Studio solutions
               topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
         - name: Troubleshooting
