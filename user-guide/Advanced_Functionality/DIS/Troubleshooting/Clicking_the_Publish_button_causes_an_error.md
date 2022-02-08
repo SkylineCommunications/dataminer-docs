@@ -15,9 +15,7 @@ The DataMiner Agent to which DataMiner Integration Studio is connected does not 
 ## Resolution
 
 1. Send an email to dataminer.licensing@skyline.be to request a *ClientApps.lic* file.
-
-2. When you receive a reply from Skyline with an attached *ClientApps.lic* file, do the following:
+1. When you receive a reply from Skyline with an attached *ClientApps.lic* file, do the following:
 
     1. Place the ClientApps.lic file in the C:\\Skyline DataMiner directory of the DataMiner Agent.
-
-    2. Restart the DataMiner Agent.
+    1. Restart the DataMiner Agent.
