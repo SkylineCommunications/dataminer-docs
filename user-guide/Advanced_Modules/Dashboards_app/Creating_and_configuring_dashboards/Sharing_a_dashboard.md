@@ -51,13 +51,13 @@ To do so:
 
 1. Click *URL*.
 
-1. To append ``embed=true`` to the URL, select *Embed*.
+1. To get a URL that is optimized for being embedded in another page, select *Embed*.
 
 1. To get an uncompressed version of the URL, select *Use uncompressed URL parameters*.
 
 1. To the right of the URL, click the *Copy* button.
 
-## Sharing a dashboard as a PDF report
+## Sharing a dashboard as a PDF report via email
 
 This feature is currently still in preview. To use it, the soft-launch option *ReportsAndDashboardsExport* must be activated. For more information, refer to [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/) on DataMiner Dojo.
 
