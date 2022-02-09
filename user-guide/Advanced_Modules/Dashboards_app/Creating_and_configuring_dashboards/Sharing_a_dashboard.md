@@ -51,7 +51,7 @@ To do so:
 
 1. Click *URL*.
 
-1. To get a URL that is optimized for being embedded in another page, select *Embed*.
+1. To get a URL that only shows the dashboard without the rest of the app, select *Embed*.
 
 1. To get an uncompressed version of the URL, select *Use uncompressed URL parameters*.
 
