@@ -27,7 +27,7 @@ From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detec
 If a trend change, variance change or level shift is unexpected, it will be considered anomalous. Level shifts that have a different direction than previous recent jumps or that jump to a previously unseen level will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction were detected during the last weeks.
 
 > [!NOTE]
-> - Whenever an anomalous level shift, trend change or variance change is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:Working_with_the_Alarm_Console#adding-and-removing-alarm-tabs-in-the-alarm-console).
+> - Whenever an anomalous level shift, trend change or variance change is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
 > - You can configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly See [Configuring anomaly detection alarms for specific parameters](xref:Configuring_alarm_templates#configuring-anomaly-detection-alarms-for-specific-parameters).
 
 ## Trend icons on data pages

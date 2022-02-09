@@ -81,7 +81,7 @@ The pane consists of a tree view with several fixed nodes:
 - **ALARMS**: Displays an overview of all alarms on the selected item.
 
     > [!NOTE]
-    > If this page is open, the card’s header bar menu contains an additional item, *Alarm Console*, with the same settings as in the Alarm Console menu. For more information, see [Alarm Console settings](xref:Working_with_the_Alarm_Console#alarm-console-settings).
+    > If this page is open, the card’s header bar menu contains an additional item, *Alarm Console*, with the same settings as in the Alarm Console menu. For more information, see [Alarm Console settings](xref:AlarmConsoleSettings).
 
 - **REPORTS**: Displays graphical reports of the alarm distribution, alarm events, alarm states, and alarms on a timeline.
 

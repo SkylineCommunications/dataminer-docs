@@ -6,18 +6,10 @@ uid: Using_quick_filters
 
 You will often find filter boxes in DataMiner Cube that you can use to filter the displayed data. This can for instance be at the top of a card side panel, above a table or in the Alarm Console.
 
-In this section:
-
-- [Tips on the use of quick filters](#tips-on-the-use-of-quick-filters)
-
-- [Using filters in drop-down lists](#using-filters-in-drop-down-lists)
-
-- [Using regular expressions in quick filters](#using-regular-expressions-in-quick-filters)
-
 > [!TIP]
 > See also:
-> - [Using the Alarm Console quick filter box](xref:Working_with_the_Alarm_Console#using-the-alarm-console-quick-filter-box)
-> - <https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/>
+> - [Using the Alarm Console quick filter box](xref:ApplyingAlarmFiltersInTheAlarmConsole#using-the-alarm-console-quick-filter-box)
+> - [Rui’s Rapid Recap – Quick filters](https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/) on DataMiner Dojo
 
 ## Tips on the use of quick filters
 
@@ -60,11 +52,11 @@ In this section:
 
 - When you apply a quick filter on a paged table, all pages of the table are considered for the filter, but some restrictions apply:
 
-    - As in this case filtering is applied server-side instead of client-side, prefixes like “regex:”, “trending”, or “severity:” cannot be used. In addition, to launch a search, you have to explicitly press the Enter key or click an arrow button.
+  - As in this case filtering is applied server-side instead of client-side, prefixes like “regex:”, “trending”, or “severity:” cannot be used. In addition, to launch a search, you have to explicitly press the Enter key or click an arrow button.
 
-    - In this case, it is not possible to filter on column parameters of type *discreet*, *button* or *togglebutton*.
+  - In this case, it is not possible to filter on column parameters of type *discreet*, *button* or *togglebutton*.
 
-    - Using negative filters with “!” is supported for page tables from DataMiner 9.5.4 onwards.
+  - Using negative filters with “!” is supported for page tables from DataMiner 9.5.4 onwards.
 
 > [!NOTE]
 > - When you use the Alarm Console quick filter to filter the alarms shown in an alarm tab, the total number of alarms will still be displayed in the alarm bar, with the filtered number of alarms added in parentheses.

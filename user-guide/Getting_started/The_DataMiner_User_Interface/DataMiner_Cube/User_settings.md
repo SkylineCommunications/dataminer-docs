@@ -12,15 +12,15 @@ The user settings can be accessed in different ways:
 
 - From DataMiner 10.0.0/10.0.2 onwards:
 
-    - Click the apps button in the sidebar and select *Settings* at the bottom of the apps panel.
+  - Click the apps button in the sidebar and select *Settings* at the bottom of the apps panel.
 
-    - Click the user icon in the header bar and select *Settings* in the menu.
+  - Click the user icon in the header bar and select *Settings* in the menu.
 
 - Prior to DataMiner 10.0.0/10.0.2:
 
-    - In the navigation pane, click the apps button and select *Settings*.
+  - In the navigation pane, click the apps button and select *Settings*.
 
-    - Click the current user in the header bar, and click *Settings*.
+  - Click the current user in the header bar, and click *Settings*.
 
 The settings window consists of two tabs. The tab with the user settings is opened by default. It consists of different pages that you can navigate between using the table of contents on the left.
 
@@ -30,7 +30,7 @@ The settings window consists of two tabs. The tab with the user settings is open
 
 ## Overview of the user settings
 
-The DataMiner Cube user settings are divided in several different sections:
+The DataMiner Cube user settings are divided in the following sections:
 
 - [General settings](#general-settings)
 
@@ -79,58 +79,56 @@ On the *Alarm Console* page, several settings are available:
 
 - **Alarm Console time format**: Select *Today/Yesterday* to use the numeric date format only for dates earlier than “Yesterday”, or select *Full date* to always display the complete date in numeric format.
 
-    The setting will be applied on the time columns and group headers in the Alarm Console, the side panel of the Alarm Console, alarm cards and alarm lists in Visio.
+  The setting will be applied on the time columns and group headers in the Alarm Console, the side panel of the Alarm Console, alarm cards and alarm lists in Visio.
 
-    > [!NOTE]
-    > The current default setting is “Today/Yesterday”, so only timestamps older than 2 days will show the full date.
+  > [!NOTE]
+  > The current default setting is “Today/Yesterday”, so only timestamps older than 2 days will show the full date.
 
 - **Alarm double-click action**: From DataMiner 9.0.5 onwards, this setting determines what happens when you double-click an alarm in the Alarm Console. If *Open alarm card* is selected, the alarm card will be opened. If *Open side panel* is selected, the alarm side panel is opened, or closed in case it was already open. If the default option *Open element card* is selected:
 
-    - For an alarm on an element, the element card is opened.
+  - For an alarm on an element, the element card is opened.
 
-    - For an alarm on a service, the service card is opened.
+  - For an alarm on a service, the service card is opened.
 
-    - For an aggregation alarm, the view card is opened, displaying the relevant aggregation rule.
+  - For an aggregation alarm, the view card is opened, displaying the relevant aggregation rule.
 
 - **Time before alarm banner hides**: Select this setting to set a delay of 30 seconds before the alarm banner hides. In order to set a different delay, select the setting and enter a different number of seconds in the box on the right.
 
 - **Enable alarm storm protection by grouping alarms with the same parameter name**: Select this setting to group alarms with the same parameter name as soon as a certain number of these alarms occur at the same time. Configure when to start and stop grouping in the boxes below the setting.
 
-    > [!NOTE]
-    > From DataMiner version 8.5.2 onwards, this setting is enabled by default, with a start value of 2000 and a stop value of 1900.
+  > [!NOTE]
+  > From DataMiner version 8.5.2 onwards, this setting is enabled by default, with a start value of 2000 and a stop value of 1900.
 
-    > [!TIP]
-    > See also:
-    > [Alarm storm protection](xref:Alarm_storm_protection)
+  > [!TIP]
+  > See also: [Alarm storm protection](xref:Alarm_storm_protection)
 
 - **Enable alarm storm protection by applying a delay on the alarms**: Available from DataMiner 9.5.2/9.5.0 CU4 onwards. When you select this setting, as soon as the specified number of alarms occur within the specified time range, these alarms will be delayed until the specified period of time has passed. The alarm storm protection is applied as long as there are more alarms than the number specified next to *Stop delaying below*. As long as the alarms are delayed, they will not be displayed in Cube. If an alarm is cleared before the delay time has passed, it will not be displayed at all.
 
-    While Cube is in alarm storm mode, a red *Alarm storm mode* label is displayed at the top of the window. If you click this label, a card is opened listing all alarms that are currently delayed, in the same layout as in the Alarm Console. This list is not automatically updated, but can be refreshed using a refresh button on the right-hand side.
+  While Cube is in alarm storm mode, a red *Alarm storm mode* label is displayed at the top of the window. If you click this label, a card is opened listing all alarms that are currently delayed, in the same layout as in the Alarm Console. This list is not automatically updated, but can be refreshed using a refresh button on the right-hand side.
 
-    > [!NOTE]
-    > This alarm storm protection is triggered by the total number of alarm updates, information events included.
+  > [!NOTE]
+  > This alarm storm protection is triggered by the total number of alarm updates, information events included.
 
 - **Filter the alarms before they enter Cube**: Select this setting and then select one of the existing alarm filters in the drop-down list in order to apply it as a server-side alarm filter. When you do so, the *Active alarms* tab of the Alarm Console will only list alarms that match this filter.
 
-    > [!NOTE]
-    > - When you have modified this setting, you will need to reconnect your DataMiner Cube session in order to apply the change.
-    > - Applying this setting can lead to inconsistencies between the Alarm Console and element alarm states. In other words, alarms could be present in the DMS that cannot be seen in the Alarm Console, because the server side filter overrides any other filter you set in the Alarm Console.
-    > - If this setting is applied, the message *Limited Alarm Access* is shown at the top of the screen. If you hover the mouse pointer over this text, a list of possible inconsistencies will be shown.
-    > - For more information on alarm filters, see [Alarm filters](xref:Alarm_filters).
+  > [!NOTE]
+  > - When you have modified this setting, you will need to reconnect your DataMiner Cube session in order to apply the change.
+  > - Applying this setting can lead to inconsistencies between the Alarm Console and element alarm states. In other words, alarms could be present in the DMS that cannot be seen in the Alarm Console, because the server side filter overrides any other filter you set in the Alarm Console.
+  > - If this setting is applied, the message *Limited Alarm Access* is shown at the top of the screen. If you hover the mouse pointer over this text, a list of possible inconsistencies will be shown.
+  > - For more information on alarm filters, see [Alarm filters](xref:Alarm_filters).
 
 - **Condition to set an alarm unread**: Available from DataMiner 9.5.11 onwards. This setting determines when a read alarm should become unread again. The following options are available:
 
-    - *On each alarm update*: A read alarm will become unread again when it is updated (default behavior).
+  - *On each alarm update*: A read alarm will become unread again when it is updated (default behavior).
 
-    - *On each alarm update with increases severity*: A read alarm will only become unread again if its severity is increased by an update.
+  - *On each alarm update with increases severity*: A read alarm will only become unread again if its severity is increased by an update.
 
 - **Keep track of the full history of a correlated alarm**: Available from DataMiner 9.6.1 onwards. If this option is selected, the entire alarm tree will be shown for a correlated alarm in the Alarm Console. Otherwise, only the most recent alarm will be displayed, and its sources will be displayed underneath. By default, this option is selected.
 
 - **Configure Alarm Console**: With this setting you can configure the tabs in the Alarm Console for the different sides of the Cube.
 
     > [!TIP]
-    > See also:
-    > [Setting the default alarm tabs and columns in the Cube settings](xref:Working_with_the_Alarm_Console#setting-the-default-alarm-tabs-and-columns-in-the-cube-settings)
+    > See also: [Setting the default alarm tabs and columns in the Cube settings](xref:ChangingTheAlarmConsoleLayout#setting-the-default-alarm-tabs-and-columns-in-the-cube-settings)
 
 #### Alarm Console \> Card-specific
 
@@ -140,9 +138,9 @@ To configure a custom tab page:
 
 1. In the first column, select the type of card for which you wish to configure a custom tab.
 
-2. In the second column, right-click to add a tab page or select an existing tab page.
+1. In the second column, right-click to add a tab page or select an existing tab page.
 
-3. In the remaining columns, specify any options that should apply to the custom tab page, similar to the regular Alarm Console configuration setting mentioned above.
+1. In the remaining columns, specify any options that should apply to the custom tab page, similar to the regular Alarm Console configuration setting mentioned above.
 
 > [!NOTE]
 > It is not possible to remove the three default tab pages (*Active alarms*, *Masked alarms* and *Information events*).
@@ -170,7 +168,7 @@ On the *Card* page, the settings are divided into four sections, i.e. a section 
     | Show in drop-down box                     | To go to a different Data Display page, you must select it in a drop-down box at the top of the card. Note that the navigation pane will still have a DATA heading, but no pages will be shown underneath the heading. |
     | Show in both side panel and drop-down box | To go to a different Data Display page, you can either select it in the navigation pane, or in the drop-down box.                                                                                                      |
 
-- **How to show service card Data pages**: This setting provides three options for navigation between Data Display pages on an service card:
+- **How to show service card Data pages**: This setting provides three options for navigation between Data Display pages on a service card:
 
     | Option                         | Description                                                                                                    |
     |----------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -180,7 +178,7 @@ On the *Card* page, the settings are divided into four sections, i.e. a section 
 
 - **Default view/element/EPM/service card page**: With these settings you can choose which page of view, element, EPM and service cards will be shown when you open them.
 
-    By default this is the Visual Overview page. It is also possible to set cards to show a Data Display page or one of the default pages, to show the page that was last visible when the card was closed, or to show the Visual Overview page only if a Visio file has been assigned to it.
+    By default, this is the Visual Overview page. It is also possible to set cards to show a Data Display page or one of the default pages, to show the page that was last visible when the card was closed, or to show the Visual Overview page only if a Visio file has been assigned to it.
 
 - **Open element cards undocked**: Select this setting to open element cards in a new, undocked window. The setting also applies to parameter cards.
 
@@ -195,24 +193,24 @@ On the *Card* page, the settings are divided into four sections, i.e. a section 
 
 - **Show breadcrumbs**: Select one of the following three options:
 
-    - **Full**: Always displays all breadcrumbs on cards.
+  - **Full**: Always displays all breadcrumbs on cards.
 
-    - **Views only**: Only displays breadcrumbs on view cards. These breadcrumbs only contain other views. (This corresponds to the functionality of the breadcrumbs prior to DataMiner 9.0.0.)
+  - **Views only**: Only displays breadcrumbs on view cards. These breadcrumbs only contain other views. (This corresponds to the functionality of the breadcrumbs prior to DataMiner 9.0.0.)
 
-    - **None**: No breadcrumbs are displayed at the top of cards. For optimal performance in very complex systems, use this setting.
+  - **None**: No breadcrumbs are displayed at the top of cards. For optimal performance in very complex systems, use this setting.
 
-    > [!NOTE]
-    > When you have modified this setting, reconnect your DataMiner Cube session to make sure the change is applied throughout the UI.
+  > [!NOTE]
+  > When you have modified this setting, reconnect your DataMiner Cube session to make sure the change is applied throughout the UI.
 
 - **Default opening behavior for cards showing measurement points**: With this setting, you can select whether measurement point cards will by default display a service or a spectrum analyzer when opened. The alternative opening behavior can then be accessed via the measurement point’s context menu.
 
 - **Spectrum card behavior upon preset modification**: From DataMiner 9.5.1 onwards, this setting can be used to determine what happens when a spectrum card has loaded a particular preset and this preset is edited elsewhere. Three different kinds of behavior are possible:
 
-    - *Notify*: An information bar is displayed on the element card, which allows the user to reload the spectrum preset.
+  - *Notify*: An information bar is displayed on the element card, which allows the user to reload the spectrum preset.
 
-    - *Skip*: The settings that were originally saved in the preset remain in use.
+  - *Skip*: The settings that were originally saved in the preset remain in use.
 
-    - *Update automatically*: The new settings saved in the updated preset are automatically loaded.
+  - *Update automatically*: The new settings saved in the updated preset are automatically loaded.
 
 ### Connection settings
 
@@ -235,8 +233,7 @@ On the *Cube* page, the following settings are available:
 - **Use compact alarm banner**: Available from DataMiner 10.0.0/10.0.2 onwards. If the alarms are configured to be shown in a banner (in the Alarm Console settings), this setting determines whether a full banner is displayed in the header, or only a banner containing the number of alarms and the highest severity.
 
     > [!TIP]
-    > See also:
-    > [Alarm Console settings](xref:Working_with_the_Alarm_Console#alarm-console-settings)
+    > See also: [Alarm Console settings](xref:AlarmConsoleSettings)
 
 - **Welcome page** > **Show the ... section**: Available from DataMiner 9.5.14 onwards. These settings determine whether the different optional sections are displayed on the DataMiner Pulse welcome page in Cube.
 
@@ -384,15 +381,15 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Left mouse button action on graph**: Select the action executed by dragging the left mouse button on a trend graph.
 
-    - Up to DataMiner 10.0.6, the default action is *Select*, which means that the left mouse button can be used to select a section of the graph to zoom in on. Other options are *Pan* or *None*.
+  - Up to DataMiner 10.0.6, the default action is *Select*, which means that the left mouse button can be used to select a section of the graph to zoom in on. Other options are *Pan* or *None*.
 
-    - From DataMiner 10.0.7 onwards, the default action is *Pan*. Other options are *Select*, *Zoom* or *None*. The *Zoom* option does the same as the *Select* option from earlier DataMiner versions. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
+  - From DataMiner 10.0.7 onwards, the default action is *Pan*. Other options are *Select*, *Zoom* or *None*. The *Zoom* option does the same as the *Select* option from earlier DataMiner versions. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
 
 - **Right mouse button action on graph**: Select the action executed by dragging the right mouse button on a trend graph.
 
-    - Up to DataMiner 10.0.6, the default action is *Pan*. Other options are *None* or *Select*, which allows you to use the left mouse button to select a section of the graph to zoom in on.
+  - Up to DataMiner 10.0.6, the default action is *Pan*. Other options are *None* or *Select*, which allows you to use the left mouse button to select a section of the graph to zoom in on.
 
-    - From DataMiner 10.0.7 onwards, the default action is *Zoom*, which does the same as the *Select* option from earlier DataMiner versions. Other options are *Pan*, *Select* or *None*. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
+  - From DataMiner 10.0.7 onwards, the default action is *Zoom*, which does the same as the *Select* option from earlier DataMiner versions. Other options are *Pan*, *Select* or *None*. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
 
 - **Hotkey for mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Allows you to specify which key can be used in order to apply an action on a trend graph by pressing this key and dragging with the left mouse button at the same time. The default hotkey is *Ctrl*. Other options are *Alt* and *Shift*.
 
@@ -400,7 +397,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Extend trend data from the database with real-time parameter changes**: Available from DataMiner 9.5.7 onwards. From that version of DataMiner onwards, by default, trend graphs are redrawn after each parameter change. When this setting is enabled, parameter changes will be displayed using a lighter color in order to clearly show the difference between this parameter data and “confirmed” trend data from the database. The moment a trend data update is received, the confirmed trend data will be drawn using the standard trend data color.
 
-- **Current timeline**: Available from DataMiner 9.5.9 onwards (previously available as “Follow mode”). Determines the behavior of a trend graph’s current time line. The following options are available:
+- **Current timeline**: Available from DataMiner 9.5.9 onwards (previously available as “Follow mode”). Determines the behavior of a trend graph’s current timeline. The following options are available:
 
     | Value | Behavior                                                                                                                                                                  |
     |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -18,7 +18,7 @@ There are several ways you can view comments on an alarm:
 
 - Right-click the alarm in the Alarm Console, and select *View comment*.
 
-- Add the column *Comment* to the Alarm Console. See [Changing the column layout in an alarm tab](xref:Working_with_the_Alarm_Console#changing-the-column-layout-in-an-alarm-tab).
+- Add the column *Comment* to the Alarm Console. See [Changing the column layout in an alarm tab](xref:ChangingTheAlarmConsoleLayout#changing-the-column-layout-in-an-alarm-tab).
 
 - Open the alarm card to read the comments at the bottom of the *details* pane. See [Alarm cards](xref:Alarm_cards).
 

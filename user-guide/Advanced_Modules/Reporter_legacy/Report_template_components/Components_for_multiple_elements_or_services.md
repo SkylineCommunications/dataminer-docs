@@ -4,27 +4,7 @@ uid: Components_for_multiple_elements_or_services
 
 # Components for multiple elements or services
 
-For multiple elements or services, the following building blocks are available in report templates:
-
-- [Aggregation](#aggregation)
-
-- [Alarm Distribution Graph](#alarm-distribution-graph)
-
-- [Alarm List](#alarm-list)
-
-- [Alarm Scatter Graph](#alarm-scatter-graph)
-
-- [DMS Status](#dms-status)
-
-- [Elements/Services Container](#elementsservices-container)
-
-- [Info Table](#info-table)
-
-- [SLA Historic Service Alarm List](#sla-historic-service-alarm-list)
-
-- [Status Query](#status-query)
-
-- [Top 10 States/New Alarm Count](#top-10-statesnew-alarm-count)
+For multiple elements or services, the building blocks described below are available in report templates.
 
 ## Aggregation
 

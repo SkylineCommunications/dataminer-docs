@@ -4,47 +4,7 @@ uid: Components_for_one_single_element_or_service
 
 # Components for one single element or service
 
-For one single element or service, the following building blocks are available in report templates:
-
-- [Alarm Distribution Graph](#alarm-distribution-graph)
-
-- [Alarm List](#alarm-list)
-
-- [Alarm State](#alarm-state)
-
-- [CPE](#cpe)
-
-- [DMS Status](#dms-status)
-
-- [Element/Service info](#elementservice-info)
-
-- [Heat Map](#heat-map)
-
-- [Info Table](#info-table)
-
-- [New Alarm Types](#new-alarm-types)
-
-- [Parameter Reports](#parameter-reports)
-
-- [Bookings / Reservations](#bookings--reservations)
-
-- [SLA Historic Service Alarm List](#sla-historic-service-alarm-list)
-
-- [Spectrum Buffers](#spectrum-buffers)
-
-- [State Timeline](#state-timeline)
-
-- [State Timeline (Parameters)](#state-timeline-parameters)
-
-- [Status Report](#status-report)
-
-- [Status Query](#status-query)
-
-- [Trend Graphs](#trend-graphs)
-
-- [Top Parameters](#top-parameters)
-
-- [Visual Overview](#visual-overview)
+For one single element or service, the building blocks described below are available in report templates.
 
 ## Alarm Distribution Graph
 
@@ -66,7 +26,9 @@ Overview of an element’s active alarms or historic alarms, with the following 
 
 - In order to only include certain parameters, you can apply a filter.
 
-    Up to DataMiner 9.5.0, you can enter a filter directly, in order to filter on parameter name. Use a semicolon to combine several parameters in the filter, e.g. “Audio Output Level;CPU:SLelement.0”. For more information, see [Using quick filters](xref:Using_quick_filters).     From DataMiner 9.5.1 onwards, you can select one of the alarm filters saved in the DMS. For more information on saved alarm filters, see [Working with saved alarm filters](xref:Working_with_the_Alarm_Console#working-with-saved-alarm-filters).
+  Up to DataMiner 9.5.0, you can enter a filter directly, in order to filter on parameter name. Use a semicolon to combine several parameters in the filter, e.g. “Audio Output Level;CPU:SLelement.0”. For more information, see [Using quick filters](xref:Using_quick_filters).
+
+  From DataMiner 9.5.1 onwards, you can select one of the alarm filters saved in the DMS. For more information on saved alarm filters, see [Working with saved alarm filters](xref:ApplyingAlarmFiltersInTheAlarmConsole#working-with-saved-alarm-filters).
 
 - You can choose to sort the list either by element name or by alarm time.
 
@@ -86,13 +48,13 @@ Only available in a DMS with EPM (formerly known as CPE) implementation. The fol
 
 - A top X list of alarm states or alarm count. This is an overview of the items that either had the highest number of alarm events or spent the most time in alarm state. The following options are available:
 
-    - You can choose between many different time spans, or set a custom time span.
+  - You can choose between many different time spans, or set a custom time span.
 
-    - You can exclude or include certain alarm severities
+  - You can exclude or include certain alarm severities
 
-    - A textual overview can be included, which can be sorted either by name or by rank.
+  - A textual overview can be included, which can be sorted either by name or by rank.
 
-    - The list can be limited to the top 10, 20, 30, 40 or 50 objects.
+  - The list can be limited to the top 10, 20, 30, 40 or 50 objects.
 
 When you generate a report with this component, you can then:
 

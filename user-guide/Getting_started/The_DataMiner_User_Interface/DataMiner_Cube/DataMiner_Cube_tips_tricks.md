@@ -10,26 +10,26 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Too many alarms in your Alarm Console? Adding conditions in the alarm template can help you reduce unnecessary alarms. See [Using conditions in an alarm template](xref:Configuring_alarm_templates#using-conditions-in-an-alarm-template).
 
-- You can drag and drop an element, service or view to the Alarm Console to instantly create an alarm tab linked to it. See [Applying an alarm filter by dragging an item onto the Alarm Console](xref:Working_with_the_Alarm_Console#applying-an-alarm-filter-by-dragging-an-item-onto-the-alarm-console).
+- You can drag and drop an element, service or view to the Alarm Console to instantly create an alarm tab linked to it. See [Applying an alarm filter by dragging an item onto the Alarm Console](xref:ApplyingAlarmFiltersInTheAlarmConsole#applying-an-alarm-filter-by-dragging-an-item-onto-the-alarm-console).
 
 - Would you like to get a list of alarms in Word or Excel? Just drag them from the Alarm Console and drop them onto your Word or Excel document.
 
     > [!NOTE]
     > If you drag a list of more than 100 items to an application like Word or Excel, only the first 100 items will be copied.
 
-- Do you want to see more information in your Alarm Console? Add extra columns. Those can even contain action buttons to quickly mask or acknowledge an alarm. [Changing the column layout in an alarm tab](xref:Working_with_the_Alarm_Console#changing-the-column-layout-in-an-alarm-tab).
+- Do you want to see more information in your Alarm Console? Add extra columns. Those can even contain action buttons to quickly mask or acknowledge an alarm. [Changing the column layout in an alarm tab](xref:ChangingTheAlarmConsoleLayout#changing-the-column-layout-in-an-alarm-tab).
 
 - Did you know DataMiner can make alarms blink as long as they are not acknowledged? [Making alarms without owner blink](xref:Making_alarms_without_owner_blink).
 
-- Want to see which alarms were active in your system at a certain point in time? Use the history slider in the Alarm Console. See [Active alarms tab timeline](xref:Working_with_the_Alarm_Console#active-alarms-tab-timeline).
+- Want to see which alarms were active in your system at a certain point in time? Use the history slider in the Alarm Console. See [Active alarms tab timeline](xref:WorkingWithTheAlarmConsoleHistorySlider#active-alarms-tab-timeline).
 
-- Want to know which elements, parameters or severities appear most frequently in your active or history alarms? Click the *Statistical view* icon in the alarm bar. See [Using the statistical view](xref:Working_with_the_Alarm_Console#using-the-statistical-view).
+- Want to know which elements, parameters or severities appear most frequently in your active or history alarms? Click the *Statistical view* icon in the alarm bar. See [Using the statistical view](xref:ChangingTheAlarmConsoleLayout#using-the-statistical-view).
 
 - Did you know the alarms right-click menu can be extended with additional items, such as hyperlinks, or options to start a program or script? See [Adding a custom command to the Alarm Console shortcut menu](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu).
 
-- Would you like to group alarms in the Alarm Console differently? Disable *Automatically group according to arrangement* to customize grouping, even combining multiple fields. See [Alarm Console settings](xref:Working_with_the_Alarm_Console#alarm-console-settings).
+- Would you like to group alarms in the Alarm Console differently? Disable *Automatically group according to arrangement* to customize grouping, even combining multiple fields. See [Alarm Console settings](xref:AlarmConsoleSettings).
 
-- Want to make sure an alarm only shows in the Alarm Console if it has been active for a while, instead of just for a couple of seconds? Use the *Delay* option. See [Alarm Console settings](xref:Working_with_the_Alarm_Console#alarm-console-settings).
+- Want to make sure an alarm only shows in the Alarm Console if it has been active for a while, instead of just for a couple of seconds? Use the *Delay* option. See [Alarm Console settings](xref:AlarmConsoleSettings).
 
 ### About shortcuts
 

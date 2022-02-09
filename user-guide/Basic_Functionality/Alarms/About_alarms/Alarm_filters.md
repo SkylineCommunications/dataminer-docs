@@ -30,4 +30,4 @@ Three types of alarm filters are available:
 
 > [!TIP]
 > See also:
-> [Applying alarm filters in the Alarm Console](xref:Working_with_the_Alarm_Console#applying-alarm-filters-in-the-alarm-console)
+> [Applying alarm filters in the Alarm Console](xref:ApplyingAlarmFiltersInTheAlarmConsole#applying-alarm-filters-in-the-alarm-console)

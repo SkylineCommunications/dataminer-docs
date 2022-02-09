@@ -88,6 +88,27 @@
               topicUid: Alarm_cards
             - name: Working with the Alarm Console
               topicUid: Working_with_the_Alarm_Console
+              items:
+                - name: Manipulating the Alarm Console
+                  topicUid: Manipulating_the_Alarm_Console
+                - name: Changing the layout of the Alarm Console
+                  topicUid: ChangingTheAlarmConsoleLayout
+                - name: Using the collapsible side panel of the Alarm Console
+                  topicUid: UsingTheCollapsibleSidePanel
+                - name: Working with the Alarm Console history slider
+                  topicUid: WorkingWithTheAlarmConsoleHistorySlider
+                - name: Applying alarm filters in the Alarm Console
+                  topicUid: ApplyingAlarmFiltersInTheAlarmConsole
+                - name: Using the RCA slider
+                  topicUid: UsingTheRCASlider
+                - name: Configuring a custom alert sound for an alarm tab
+                  topicUid: ConfiguringACustomAlertSoundForAnAlarmTab
+                - name: Alarm Console columns
+                  topicUid: AlarmConsoleColumns
+                - name: Alarm Console settings
+                  topicUid: AlarmConsoleSettings
+                - name: Alarm Console right-click menu
+                  topicUid: AlarmConsoleRightClickMenu
             - name: Changing ownership of alarms
               topicUid: Changing_ownership_of_alarms
             - name: Masking and unmasking alarms
