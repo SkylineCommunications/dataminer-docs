@@ -61,28 +61,28 @@ Prior to DataMiner 10.2.0/10.2.2, you can pass data to a dashboard using the fol
 
 ``url?<datatype1>=<datakeys1>&<datatype2>=<datakeys2>&...``
 
-In the syntax above, "datatype" is one of the objects mentioned below (e.g. elements), and "datakeys" is its identifier (e.g. the DMA ID and element ID).
+In the syntax above, "datatype" is one of the objects mentioned below (e.g. "elements"), and "datakeys" is its identifier (e.g. the DMA ID and element ID).
 
 Within one object, use a slash (“/”) as the separator between its components. If different objects of the same type are specified, use “%1D” as the separator between the objects.
 
 For example:
 
-- ``http://myDma/Dashboard/#/myDashboard?elements=1/1%1D1/2&views=1&parameters=1/1/1%1D1/1/2/myIndex``
+- ``https://myDma/Dashboard/#/myDashboard?elements=1/1%1D1/2&views=1&parameters=1/1/1%1D1/1/2/myIndex``
 
   This URL opens a dashboard in which the elements 1/1 and 1/2, view 1 and parameters 1/1/1 and 1/1/2/myIndex are selected by default.
 
-- ``http://myDma/Dashboard/#/myDashboard?time%20spans=1549753200000/1549835265007``
+- ``https://myDma/Dashboard/#/myDashboard?time%20spans=1549753200000/1549835265007``
 
   This URL opens a dashboard with a time range filter from 1549753200000 to 1549835265007.
 
 > [!NOTE]
 > - This syntax continues to be supported in recent DataMiner versions.
-> - Additional URL options are possible from DataMiner 10.0.2 onwards. To only display a dashboard, without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well. For example: *http://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
+> - From DataMiner 10.0.2 onwards, to only display a dashboard without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 
 ## Supported objects
 
-Within the dashboard URL, the following objects can be specified:
+Within the dashboard URL, the following data objects can be specified:
 
 - *elements*: Requires the DMA ID and element ID.
 
