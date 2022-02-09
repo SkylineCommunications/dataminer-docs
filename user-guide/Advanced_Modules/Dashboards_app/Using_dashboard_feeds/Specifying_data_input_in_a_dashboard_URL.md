@@ -43,7 +43,7 @@ This JSON object has to have the following structure:
 
 - When you provide data in the (optional) *select* item, that data will only be used to select items in selection boxes on the dashboard. It will not be used in the URL feed.
 
-- In the *components* item, you can provide data to be selected in specific components referred to by their ID. ``<component-data>`` is an array consisting of the component ID and the data that should be passed to the component:
+- In the *components* item, you can provide data to be selected in specific components referred to by their ID. ``<component-data>`` is an array of objects containing the component ID and the data that should be passed to the component:
 
   ```json
   {
@@ -56,6 +56,9 @@ This JSON object has to have the following structure:
   > You can find the ID of each component in the lower right corner of the component while in edit mode.
 
 ## Legacy syntax
+
+> [!NOTE]
+> To ensure backwards compatibility, this syntax continues to be supported in recent DataMiner versions for now. However, we recommend that you use the JSON syntax instead, as it allows more flexibility. In addition, at some point in the future, the legacy syntax may no longer be supported.
 
 Prior to DataMiner 10.2.0/10.2.2, you can pass data to a dashboard using the following URL syntax:
 
@@ -76,7 +79,6 @@ For example:
   This URL opens a dashboard with a time range filter from 1549753200000 to 1549835265007.
 
 > [!NOTE]
-> - This syntax continues to be supported in recent DataMiner versions.
 > - From DataMiner 10.0.2 onwards, to only display a dashboard without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 
