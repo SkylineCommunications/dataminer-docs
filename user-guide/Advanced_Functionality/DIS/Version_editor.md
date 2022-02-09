@@ -82,6 +82,7 @@ In this tab, you can find an overview of all versions of the current protocol.
     - To a minor version, you can add a list of features, changes and fixes, and a list of references. See also [Current version](#current-version).
 
 > [!NOTE]
-> - All four parts of a version number (branch, system, major and minor) are editable. When you change one of those four numbers of a particular version, its entire version tree will be adapted.
+> - All four parts of a version number (branch, system, major and minor) are editable anywhere in the tree. When you update a version number, all child items will be updated accordingly and recursively.
 > - When you select a version that is not the current version, you can click the *Set this version as current button* to make that version the current version. Also, in the version tree on the left, you can right-click a version and select *Set as current version*. The current version and all its parent versions will be marked in bold.
+> - When you create a new version, the *Based On* field will now automatically be populated when possible.
 > - When you add a minor version, this new version will automatically inherit all data from the current version and become itself the new current version.

@@ -32,10 +32,20 @@ To fix all errors of one particular type or severity at the same time, do the fo
 
 When, for an error listed in the *DIS Validator* pane, there is more information available than what is being displayed, an information icon will appear next to the description. If you click such an information icon, the additional information will be displayed in a pop-up window.
 
+When you right-click an error in the list, a shortcut menu offers you the following options:
+
+| Command | Function |
+|---------|----------|
+| Navigate | Go to the line in the protocol that triggered the error. |
+| Copy | Copy the error to the Windows Clipboard. |
+| Show Details... | Show all details of the error in a separate window. |
+| Suppress... | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
+| Postpone \> This error... | |
+| Postpone \> All errors of this type... ||
+
 > [!NOTE]
-> In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key.
->
-> Use this feature to e.g. copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
+> - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key. Use this feature to e.g. copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
+> - Use the filter box in the top-right corner to filter the validation results.
 
 ### Compare
 
@@ -70,6 +80,10 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 | Copy | Copy the error to the Windows Clipboard. |
 | Show Details... | Show all details of the error in a separate window. |
 | Suppress... | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
+
+> [!NOTE]
+> - In the DIS Comparer pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key. Use this feature to e.g. copy or suppress a number of results in one go. However, note that suppressing a number of results will only work when all selected items have the same error code.
+> - Use the filter box in the top-right corner to filter the comparison results.
 
 ### Refactor
 
@@ -283,7 +297,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Command | Function |
 |---------|----------|
 | Edit Table | Open the parameter in the table editor.<br>(only for table parameters) |
-| Add New Column | Add a new column to a table parameter. |
+| Add New Column | Add a new column to a table parameter.<br>- The new column will automatically be assigned a default parameter ID.<br>- The name of the new column will get a prefix containing the name of the table parameter.<br>- The description of the new column will get a suffix containing the description of the table in parenthesis.<br>- When the last column of the table is a displayKey column, then the new column will be inserted before that displayKey column.<br>- When the last column of the table has a write column next to it, then the new column will be added to the right of the write column. It will not be added in between a read and a write column. |
 | Generate Write Parameter | Create an identical parameter of type “Write”.<br> (only for read parameters) |
 | Include in Group | Include the parameter in one of the listed groups of type “poll”.<br> From now on, this command is only available for SNMP parameters (i.e. parameters with an \<SNMP> subtag). |
 | Generate New Trigger | Create a new “on change” trigger that will get activated when the parameter changes. |
