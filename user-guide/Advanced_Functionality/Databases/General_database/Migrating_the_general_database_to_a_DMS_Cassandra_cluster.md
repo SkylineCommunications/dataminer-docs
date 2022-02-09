@@ -6,7 +6,7 @@ uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
 
 From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as the general database for the entire DataMiner System. Previously it was already possible to use a separate Cassandra cluster for each DataMiner node. However, DataMiner 10.1.0/10.1.2 introduces the “Cassandra cluster” feature, which allows you to have all DataMiner nodes in a DataMiner System use one and the same Cassandra cluster as their general database.
 
-![](~/user-guide/images/Cassandra_cluster.jpg)
+![Cassandra cluster](~/user-guide/images/Cassandra_cluster.jpg)
 
 
 
@@ -17,44 +17,9 @@ From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as 
 
 ## Installation and configuration
 
-### Starting from an SQL setup
+Regardless of whether your DataMiner System currently uses SQL databases or Cassandra databases per DMA, from DataMiner 10.2.0/10.2.2 onwards, you can use a migrator tool to switch to a Cassandra cluster setup. For more information, see [Cassandra Cluster Migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/).
 
-If your DataMiner System currently uses SQL databases, from DataMiner 10.2.0/10.2.2 onwards, you can use a migrator tool to switch to a Cassandra cluster setup. For more information, see [Cassandra Cluster migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/).
-
-### Starting from a Cassandra setup
-
-If you are already using a Cassandra database for each DMA, to switch to using the Cassandra cluster feature for your DMS, from DataMiner 10.2.0/10.2.2 onwards, you can also use the [Cassandra Cluster migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/). 
-
-For earlier DataMiner versions, follow the procedure below.
-
-1. Make sure the Cassandra cluster software is installed on each DMA. A [standalone installer](https://community.dataminer.services/documentation/standalone-cassandra-cluster-installer/) is available for this on DataMiner Dojo.
-
-2. Install DataMiner Indexing on each DMA in the cluster if you have not done so already. See [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine).
-
-3. Migrate the database data to the Cassandra cluster. A [Cassandra to Cassandra Cluster Migrator](https://community.dataminer.services/documentation/cassandra-to-cassandra-cluster-migrator/) tool is available for this on DataMiner Dojo.
-
-    > [!NOTE]
-    > We recommend that DataMiner is stopped before the migration is started. While it is possible to run the migration while DataMiner is running, any data that is stored in the source database during the migration may not be migrated to the target data­base.
-
-4. In DataMiner Cube, go to *System Center* > *Database*.
-
-5. On the *General* tab, select *Database per cluster* in the *Type* drop-down box.
-
-6. Select *CassandraCluster* in the *Database* box, specify the name, DB server and credentials to connect to the Cassandra cluster, and click *Save*.
-
-7. If Cassandra is no longer used on the DMA servers themselves, disable the Cassandra service:
-
-    1. Run *services.msc*.
-
-    2. In the *Services* window, right-click the *cassandra* service and select *Properties*.
-
-    3. If the service is currently running, click the *Stop* button.
-
-    4. In the *Startup type* box, select *Disabled*.
-
-    5. Click *OK*.
-
-8. Once you are sure you no longer need the old database data as a backup (e.g. a few months after the migration), remove the old database data folders (by default *C:\\ProgramData\\Cassandra\\SLDMADB* and *C:\\ProgramData\\Cassandra\\sldmadb_ticketing*).
+In earlier DataMiner versions, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.2.0 or 10.2.2 (or higher) and use the above-mentioned Cassandra Cluster Migrator instead.
 
 ## Limitations
 
