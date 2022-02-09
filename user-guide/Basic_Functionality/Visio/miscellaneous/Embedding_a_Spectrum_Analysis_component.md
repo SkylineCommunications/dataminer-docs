@@ -15,21 +15,21 @@ Configure the following shape data fields on the shape that is to contain the Sp
 
 - Shape data field: **Element**
 
-    The value of this shape data field should indicate the spectrum element of which the interface should be loaded.
+  The value of this shape data field should indicate the spectrum element of which the interface should be loaded.
 
 - Shape data field: **Component**
 
-    The value of this shape data field should be set to *Spectrum*, to indicate that a spectrum component should be created.
+  The value of this shape data field should be set to *Spectrum*, to indicate that a spectrum component should be created.
 
 - Shape data field: **ComponentOptions**
 
-    This is an optional shape data field, which can contain the following options, separated by pipe ("\|") characters.
+  This is an optional shape data field, which can contain the following options, separated by pipe ("\|") characters.
 
-    | Option     | Description                                                                                                                                                                                                                                                                                                                               |
-    |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Preset=      | Should be followed by a preset name. Indicates that a particular preset should be loaded. It is also possible to specify an inline preset, using the same syntax as for the *preset=inline* URL parameter. See [preset=inline](xref:Opening_DataMiner_Cube#presetinline). |
-    | Measpts=     | Should be followed by one or more measurement point IDs, separated by semicolons.                                                                                                                                                                                                                                                         |
-    | ViewOptions= | Should be configured in the same way as the *options=* URL parameter. See [options=](xref:Opening_DataMiner_Cube#options).                                                                                                                                                |
+  | Option     | Description |
+  |------------|-------------|
+  | Preset=    | Should be followed by a preset name. Indicates that a particular preset should be loaded. It is also possible to specify an inline preset, using the same syntax as for the *preset=inline* URL parameter. See [preset=inline](xref:Opening_DataMiner_Cube#presetinline). |
+  | Measpts=   | Should be followed by one or more measurement point IDs, separated by semicolons. |
+  | ViewOptions= | Should be configured in the same way as the *options=* URL parameter. See [options=](xref:Opening_DataMiner_Cube#options). |
 
 > [!NOTE]
 > - These options all support dynamic placeholders. Dynamic changes to the preset or measurement points will be applied immediately. Dynamic changes to view options will only be applied when a preset is loaded.

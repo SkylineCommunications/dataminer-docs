@@ -56,6 +56,9 @@ Add a shape data field of type **Parameter** to the shape.
   ParameterID|MonitorRef|ScriptVariable|MeasurementPointID|PresetName|SpectrumOptions
   ```
 
+  > [!NOTE]
+  > It is also possible to embed a full Spectrum Analysis component in Visio. See [Embedding a Spectrum Analysis component](xref:Embedding_a_Spectrum_Analysis_component)
+
   Regarding this configuration:
 
   - A shape linked to a spectrum analyzer parameter will by default be turned into a spectrum analyzer thumbnail. However, it is possible to configure an option to prevent this, so that the shape only serves as a link to the spectrum analyzer. See [Keeping a shape from turning into a spectrum thumbnail](#keeping-a-shape-from-turning-into-a-spectrum-thumbnail).
