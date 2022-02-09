@@ -19,7 +19,7 @@ From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as 
 
 Regardless of whether your DataMiner System currently uses SQL databases or Cassandra databases per DMA, from DataMiner 10.2.0/10.2.2 onwards, you can use a migrator tool to switch to a Cassandra cluster setup. For more information, see [Cassandra Cluster Migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/).
 
-In earlier DataMiner versions, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.2.0 or 10.2.2 and use the above-mentioned Cassandra Cluster Migrator instead.
+In earlier DataMiner versions, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.2.0 or 10.2.2 (or higher) and use the above-mentioned Cassandra Cluster Migrator instead.
 
 ## Limitations
 
