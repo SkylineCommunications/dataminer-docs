@@ -10,7 +10,7 @@ To do so, when you are configuring the dashboard:
 
 1. Select the component you want to link to a URL feed.
 
-2. In the *Data* tab, go to *Feeds* > *URL*, and drag the URL feed you want to use to the component.
+1. In the *Data* tab, go to *Feeds* > *URL*, and drag the URL feed you want to use to the component.
 
 > [!NOTE]
 > When the dashboard has a feed that contains the same data as the URL, that feed will overwrite the data from the URL.

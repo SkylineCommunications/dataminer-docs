@@ -50,3 +50,6 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIn DataMiner 10.1.2, you need the user permission Other > CCALinkAccount.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QTo activate it, the soft-launch option ReportsAndDashboardsExport must be activated.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q!NOTE Sharing a dashboard as a PDF report is possible from the Automation, Correlation and Scheduler modules even if the ReportsAndDashboardsExport soft-launch option is not activated.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QSLAs (using the argument slas): By specifying the DMA ID and element ID.\\E$"}
+{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QFor example: http://\\[DMA IP\\]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true\nThe showAdvancedSettings=true URL option can be used with some components in order to make additional functionality available.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QFor example: http://\\[DMA IP\\]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true\nThe showAdvancedSettings=true URL option can be used with some components in order to make additional functionality available.\\E$"}
