@@ -30,7 +30,7 @@ DIS offers two distinct ways of developing DataMiner protocols and Automation sc
 - As ready-to-use XML files containing all necessary information.
 - As Visual Studio solutions.
 
-For more information on how to develop DataMiner protocols as Visual Studio solutions, see [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](xref:Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions).
+For more information on how to develop DataMiner protocols and Automation scripts as Visual Studio solutions, see [Developing DataMiner protocols and Automation scripts as Visual Studio solutions](xref:Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions).
 
 ## Graphical representation of the overall concept
 

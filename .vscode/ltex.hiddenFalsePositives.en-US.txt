@@ -53,4 +53,5 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QSLAs (using the argument slas): By specifying the DMA ID and element ID.\\E$"}
 {"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QFor example: http://\\[DMA IP\\]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true\nThe showAdvancedSettings=true URL option can be used with some components in order to make additional functionality available.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QFor example: http://\\[DMA IP\\]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true\nThe showAdvancedSettings=true URL option can be used with some components in order to make additional functionality available.\\E$"}
-{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QFor example: https://\\[DMA IP\\]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true\nThe showAdvancedSettings=true URL option can be used with some components in order to make additional functionality available.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qand/or placeholders.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qwildcards.\\E$"}
