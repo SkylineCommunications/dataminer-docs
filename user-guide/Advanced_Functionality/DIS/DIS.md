@@ -4,7 +4,7 @@ uid: DIS
 
 # DataMiner Integration Studio
 
-Version: 2.34
+Version: 2.35
 
 This chapter consists of the following sections:
 

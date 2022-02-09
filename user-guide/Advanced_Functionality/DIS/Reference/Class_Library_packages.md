@@ -336,3 +336,7 @@ The following C#/.NET features are currently not supported:
 - 1.2.0.8
 
     - RN 30232: Extended authentication algorithm support
+
+[DIS 2.35](https://community.dataminer.services/documentation/dis-v2-35-release-notes/)
+
+- No changes to the Class Library base packages
