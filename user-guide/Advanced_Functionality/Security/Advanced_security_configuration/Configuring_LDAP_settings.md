@@ -6,6 +6,9 @@ uid: Configuring_LDAP_settings
 
 DataMiner supports any LDAP-compatible directory (e.g. OpenLDAP) as an alternative to Active Directory for importing users and groups into a DMA.
 
+> [!TIP]
+> See also: [Lightweight Directory Access Protocol](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ldap/lightweight-directory-access-protocol-ldap-api)
+
 ## Configuring LDAP settings in DataMiner Cube
 
 From DataMiner 9.5.5 onwards, most custom LDAP settings can be configured in DataMiner Cube.
