@@ -1,0 +1,595 @@
+- name: DataMiner Protocol Development Guidelines
+  topicUid: CodingGuidelines
+  items:
+    - name: General
+      topicUid: CODGeneral
+      items:
+        - name: Protocol name
+          topicUid: Protocol_name
+        - name: Formatting
+          topicUid: Formatting
+          items:
+            - name: Indentation
+              topicUid: Indentation
+            - name: Alignment and wording
+              topicUid: Alignment_and_wording
+        - name: Names
+          topicUid: Names
+          items:
+            - name: Unique and meaningful names
+              topicUid: Unique_and_meaningful_names
+            - name: Parameter names
+              topicUid: Parameter_names
+            - name: QAction and Action names
+              topicUid: QAction_and_Action_names
+            - name: Trigger names
+              topicUid: Trigger_names
+            - name: Group names
+              topicUid: Group_names
+            - name: DMS element names
+              topicUid: DMS_element_names
+        - name: ID values
+          topicUid: ID_values
+          items:
+            - name: ID range
+              topicUid: ID_range
+            - name: ID gaps
+              topicUid: ID_gaps
+            - name: ID ordering
+              topicUid: ID_ordering
+            - name: ID grouping
+              topicUid: ID_grouping
+        - name: C# code conventions
+          topicUid: C_code_conventions
+          items:
+            - name: General
+              topicUid: General_COD
+            - name: Capitalization style
+              topicUid: Capitalization_style
+            - name: Namespaces
+              topicUid: Namespaces
+            - name: Classes, structs and interfaces
+              topicUid: Classes_structs_and_interfaces
+            - name: Enumerations
+              topicUid: Enumerations
+            - name: Methods
+              topicUid: Methods
+            - name: Properties
+              topicUid: Properties
+            - name: Fields
+              topicUid: Fields
+            - name: Parameters
+              topicUid: Parameters1
+            - name: Local variables
+              topicUid: Local_variables
+            - name: Ordering
+              topicUid: Ordering
+            - name: Layout
+              topicUid: Layout
+            - name: Spacing
+              topicUid: Spacing
+            - name: Readability
+              topicUid: Readability
+            - name: Maintainability
+              topicUid: Maintainability
+            - name: XML documentation
+              topicUid: XML_documentation
+            - name: Commenting
+              topicUid: Commenting
+    - name: Administrative metadata
+      topicUid: CODAdminMetadata
+      items:
+        - name: Comment metadata
+          topicUid: Comment_metadata
+        - name: Protocol metadata
+          topicUid: Protocol_metadata
+    - name: User interface
+      topicUid: CODUserInterface
+      items:
+        - name: Element wizard
+          topicUid: Element_wizard
+          items:
+            - name: Default settings
+              topicUid: Default_settings
+            - name: Connection names
+              topicUid: Connection_names
+        - name: Protocol pages
+          topicUid: Protocol_pages
+          items:
+            - name: Page layout
+              topicUid: Page_layout
+            - name: Look and feel
+              topicUid: Look_and_feel
+            - name: General page
+              topicUid: General_page
+            - name: Core functionality pages
+              topicUid: Core_functionality_pages
+            - name: Web interface page
+              topicUid: Web_interface_page
+        - name: Displayed text
+          topicUid: Displayed_text
+          items:
+            - name: Title case
+              topicUid: Title_case
+            - name: Brand and product names
+              topicUid: Brand_and_product_names
+            - name: Acronyms and initialisms
+              topicUid: Acronyms_and_initialisms
+        - name: Parameters
+          topicUid: Parameters2
+          items:
+            - name: Parameter descriptions and values
+              topicUid: Parameter_descriptions_and_values
+            - name: Unit of measure
+              topicUid: Unit_of_measure
+            - name: Value range
+              topicUid: Value_range
+            - name: Date and time values
+              topicUid: Date_and_time_values
+            - name: Exceptional states
+              topicUid: Exceptional_states
+            - name: Tooltips
+              topicUid: Tooltips
+            - name: Octet values
+              topicUid: Octet_values
+            - name: Error Counter values
+              topicUid: Error_Counter_values
+        - name: Tables
+          topicUid: Tables_COD
+          items:
+            - name: Column names
+              topicUid: Column_names
+            - name: Column descriptions
+              topicUid: Column_descriptions
+            - name: Column header options
+              topicUid: Column_header_options
+        - name: Buttons
+          topicUid: Buttons
+        - name: Toggle buttons
+          topicUid: Toggle_buttons
+        - name: Page buttons
+          topicUid: Page_buttons
+          items:
+            - name: Page button dimensions
+              topicUid: Page_button_dimensions
+            - name: Page button labels
+              topicUid: Page_button_labels
+            - name: Page button content
+              topicUid: Page_button_content
+        - name: Progress bars
+          topicUid: Progress_bars
+    - name: Monitoring
+      topicUid: CODMonitoring
+      items:
+        - name: Trending
+          topicUid: Trending1
+        - name: Alarming
+          topicUid: Alarming1
+    - name: Protocol
+      topicUid: CODProtocol
+      items:
+        - name: API
+          topicUid: API
+          items:
+            - name: Device API
+              topicUid: Device_API
+            - name: DataMiner API
+              topicUid: DataMiner_API
+        - name: Communication
+          topicUid: Communication1
+        - name: Logic
+          topicUid: Logic1
+          items:
+            - name: Operation duration
+              topicUid: Operation_duration
+            - name: Operation execution delay
+              topicUid: Operation_execution_delay
+            - name: Value update verification
+              topicUid: Value_update_verification
+            - name: Protocol threads
+              topicUid: Protocol_threads
+        - name: Timers
+          topicUid: Timers1
+          items:
+            - name: Number of timers
+              topicUid: Number_of_timers
+            - name: Default timer speeds
+              topicUid: Default_timer_speeds
+            - name: Timer speed restrictions
+              topicUid: Timer_speed_restrictions
+            - name: Starting/stopping timers
+              topicUid: Starting_stopping_timers
+            - name: Timer content
+              topicUid: Timer_content
+        - name: DVE
+          topicUid: DVE
+          items:
+            - name: DVE names
+              topicUid: DVE_names
+            - name: DVE export rules
+              topicUid: DVE_export_rules
+            - name: DVE child element deletion
+              topicUid: DVE_child_element_deletion
+        - name: Tables
+          topicUid: Tables1
+          items:
+            - name: Primary keys
+              topicUid: Primary_keys1
+            - name: Display keys
+              topicUid: Display_keys1
+            - name: Key column description
+              topicUid: Key_column_description
+            - name: Data handling
+              topicUid: Data_handling
+            - name: Integrity constraints
+              topicUid: Integrity_constraints
+            - name: Preserve state option
+              topicUid: Preserve_state_option
+        - name: Parameters
+          topicUid: Parameters3
+          items:
+            - name: Saving parameters
+              topicUid: Saving_parameters
+            - name: Loading parameters in SLElement
+              topicUid: Loading_parameters_in_SLElement
+        - name: QActions
+          topicUid: QActions
+          items:
+            - name: Functionality
+              topicUid: Functionality
+            - name: Maintainability
+              topicUid: Maintainability1
+            - name: Robustness
+              topicUid: Robustness
+            - name: Conditional execution
+              topicUid: Conditional_execution
+            - name: Localization
+              topicUid: Localization
+            - name: Inter-process communication
+              topicUid: Inter-process_communication
+            - name: Exception handling
+              topicUid: Exception_handling
+            - name: Logging
+              topicUid: Logging
+            - name: Multi-threading
+              topicUid: Multi-threading1
+            - name: Thread.Sleep
+              topicUid: Thread_Sleep
+            - name: StyleCop
+              topicUid: StyleCop
+        - name: .NET Recommendations
+          topicUid: _NET_Recommendations
+          items:
+            - name: Microbenchmarking
+              topicUid: Microbenchmarking
+            - name: String vs. StringBuilder
+              topicUid: String_vs_StringBuilder
+            - name: Conditional statements
+              topicUid: Conditional_statements
+            - name: Loops
+              topicUid: Loops
+            - name: Collections
+              topicUid: Collections
+            - name: Linq
+              topicUid: Linq
+    - name: Validation
+      topicUid: CODValidation
+      items:
+        - name: General
+          topicUid: General1
+        - name: Spell checker
+          topicUid: Spell_checker
+        - name: DIS validator
+          topicUid: DIS_validator
+        - name: Stream Viewer
+          topicUid: Stream_Viewer
+        - name: Log files
+          topicUid: Log_files
+        - name: Alarm Console
+          topicUid: Alarm_Console
+    - name: Points of attention
+      topicUid: CODAttention
+      items:
+        - name: Skyline Driver Passport Platform
+          topicUid: Skyline_Driver_Passport_Platform
+        - name: Minimum DMA version
+          topicUid: Minimum_DMA_version
+- name: DataMiner Development Tools
+  topicUid: TOOLS
+  items:
+    - name: CI/CD Pipeline
+      topicUid: TOOProtocolDevelopmentWithCICD
+      items:
+        - name: High-level overview
+          topicUid: High-level_overview
+        - name: Components
+          topicUid: Components
+          items:
+            - name: Gerrit
+              topicUid: Gerrit
+            - name: Jenkins
+              topicUid: Jenkins
+            - name: SonarQube
+              topicUid: SonarQube
+        - name: Protocol development with CI/CD Pipeline
+          topicUid: Protocol_development_with_CI_CD_Pipeline
+          items:
+            - name: Protocols as a Visual Studio solution
+              topicUid: Protocols_as_a_Visual_Studio_solution
+            - name: Git protocol repositories
+              topicUid: Git_protocol_repositories
+            - name: Pipeline stages for protocols
+              topicUid: Pipeline_stages_for_protocols
+        - name: Function development with CI/CD pipeline
+          topicUid: Function_development_with_CI_CD_pipeline
+          items:
+            - name: Pipeline stages for functions
+              topicUid: Pipeline_stages_for_functions
+        - name: Automation script development with CI/CD pipeline
+          topicUid: Automation_script_development_with_CI_CD_pipeline
+          items:
+            - name: Automation scripts as a Visual Studio solution
+              topicUid: Automation_scripts_as_a_Visual_Studio_solution
+            - name: Pipeline stages for Automation scripts
+              topicUid: Pipeline_stages_for_Automation_scripts
+        - name: Visual overview development with CI/CD pipeline
+          topicUid: Visual_overview_development_with_CI_CD_pipeline
+          items:
+            - name: Pipeline stages for visual overviews
+              topicUid: Pipeline_stages_for_visual_overviews
+        - name: Dashboard Development with CI/CD pipeline
+          topicUid: Dashboard_Development_with_CI_CD_pipeline
+          items:
+            - name: Pipeline stages for dashboards
+              topicUid: Pipeline_stages_for_dashboards
+        - name: Install package development with CICD pipeline
+          topicUid: Install_package_development_with_CICD_pipeline
+          items:
+            - name: Creating a repository for an install package
+              topicUid: Creating_a_repository_for_an_install_package
+            - name: Pipeline stages for install packages
+              topicUid: Pipeline_stages_for_install_packages
+        - name: FAQ
+          topicUid: FAQ
+    - name: DataMiner Application Package Builder
+      topicUid: TOODataMinerPackageBuilder
+      items:
+        - name: Installation
+          topicUid: Installation
+        - name: Use case
+          topicUid: Use_case
+        - name: Usage
+          topicUid: Usage
+          items:
+            - name: Content tab
+              topicUid: Content_tab
+            - name: DMAPP tab
+              topicUid: DMAPP_tab
+            - name: DMAPP (Legacy) tab
+              topicUid: DMAPP_Legacy_tab
+            - name: DMT tab
+              topicUid: DMT_tab
+            - name: Profiles
+              topicUid: Profiles
+            - name: DMAppBuilderConfig.xml
+              topicUid: DMAppBuilderConfig_xml
+            - name: CLI (legacy packages only)
+              topicUid: CLI_legacy_packages_only
+            - name: Logging
+              topicUid: Logging1
+    - name: Skyline Driver Passport Platform
+      topicUid: TOODriverPassportPlatform
+      items:
+        - name: Platform location
+          topicUid: Platform_location
+        - name: Platform capabilities
+          topicUid: Platform_capabilities
+        - name: Using the Driver Passport Platform
+          topicUid: Using_the_Driver_Passport_Platform
+        - name: Notifications
+          topicUid: Notifications
+        - name: Viewing test results
+          topicUid: Viewing_test_results
+    - name: Nodetool
+      topicUid: TOONodetool
+      items:
+        - name: Logging queries
+          topicUid: Logging_queries
+    - name: QA Device Simulator
+      topicUid: TOOQASNMPSimulator
+      items:
+        - name: Simulations
+          topicUid: Simulations
+          items:
+            - name: Creating SNMP simulations
+              topicUid: Creating_SNMP_simulations
+            - name: Creating HTTP simulations
+              topicUid: Creating_HTTP_simulations
+            - name: Running simulations
+              topicUid: Running_simulations
+            - name: Static simulations
+              topicUid: Static_simulations
+            - name: Artificial dynamic simulations
+              topicUid: Artificial_dynamic_simulations
+            - name: Realistic dynamic simulations
+              topicUid: Realistic_dynamic_simulations
+        - name: Trap sender
+          topicUid: Trap_sender
+          items:
+            - name: File menu
+              topicUid: File_menu
+            - name: General configuration
+              topicUid: General_config
+            - name: Packet interval schedule
+              topicUid: Packet_interval_schedule
+            - name: Loaded packets
+              topicUid: Loaded_packets
+            - name: Packet configuration and bindings
+              topicUid: Packet_configuration_and_bindings
+            - name: Sending
+              topicUid: Sending
+        - name: Trap receiver
+          topicUid: Trap_receiver
+    - name: SLC SE Repository Manager
+      topicUid: TOOSLCSERepositoryManager
+      items:
+        - name: Cloning a repository
+          topicUid: Cloning_a_repository
+        - name: Pushing to a repository
+          topicUid: Pushing_to_a_repository
+        - name: Creating a repository
+          topicUid: Creating_a_repository
+        - name: Reloading the tree
+          topicUid: Reloading_the_tree
+        - name: Removing a repository
+          topicUid: Removing_a_repository
+        - name: Options window
+          topicUid: Options_window
+        - name: Sandbox mode
+          topicUid: Sandbox_mode
+        - name: Updating .gitignore and Jenkins file
+          topicUid: Updating_gitignore_and_Jenkins_file
+    - name: SLNetClientTest
+      topicUid: TOOSLNetClientTest
+      items:
+        - name: Connection
+          topicUid: Connection
+        - name: Protocol pending calls
+          topicUid: Protocol_pending_calls
+        - name: Inspect table content
+          topicUid: Inspect_table_content
+        - name: Parameter table rows
+          topicUid: Parameter_table_rows
+        - name: Stack sizes
+          topicUid: Stack_sizes
+        - name: Parameter notification queue
+          topicUid: Parameter_notification_queue
+        - name: Sync status
+          topicUid: Sync_status
+        - name: Trend data
+          topicUid: Trend_data
+        - name: Request dump
+          topicUid: Request_dump
+        - name: SLNet event subscriptions
+          topicUid: SLNet_event_subscriptions
+        - name: Capturing SLNet calls
+          topicUid: Capturing_SLNet_calls
+        - name: QAction metrics
+          topicUid: QAction_metrics
+        - name: Checking whether protocol buffer serialization is enabled
+          topicUid: Checking_whether_protocol_buffer_serialization_is_enabled
+        - name: Viewing the connection timeout states of an element
+          topicUid: Viewing_the_connection_timeout_states_of_an_element
+    - name: SourceTree
+      topicUid: TOOSourceTree
+      items:
+        - name: Installing SourceTree
+          topicUid: Installing_SourceTree
+        - name: Using SourceTree
+          topicUid: Using_SourceTree
+    - name: TortoiseSVN
+      topicUid: TOOTortoiseSVN
+      items:
+        - name: Installation
+          topicUid: Installation1
+        - name: Configuration
+          topicUid: TurtoiseSVNConfiguration
+        - name: Usage
+          topicUid: Usage1
+          items:
+            - name: Shell extension
+              topicUid: Shell_extension
+            - name: Repository
+              topicUid: Repository
+            - name: Working copy
+              topicUid: Working_copy
+            - name: Pulling content
+              topicUid: Pulling_content
+            - name: Locking files
+              topicUid: Locking_files
+            - name: Adding new content
+              topicUid: Adding_new_content
+            - name: Pushing changes
+              topicUid: Pushing_changes
+            - name: Reverting changes
+              topicUid: Reverting_changes
+            - name: Removing files
+              topicUid: Removing_files
+        - name: Troubleshooting
+          topicUid: TortoiseSVNTroubleshooting
+          items:
+            - name: Locking failed while acquiring a lock
+              topicUid: Locking_failed_while_acquiring_a_lock
+            - name: Merging conflicts
+              topicUid: Merging_conflicts
+    - name: Visual Studio
+      topicUid: TOOVisualStudio
+      items:
+        - name: Installation procedure
+          topicUid: Installation_procedure
+        - name: Settings
+          topicUid: VisualStudioSettings
+          items:
+            - name: Text editor general
+              topicUid: Text_editor_general
+            - name: C# settings
+              topicUid: C_settings
+        - name: Shortcuts
+          topicUid: Shortcuts
+        - name: Plugins
+          topicUid: Plugins
+          items:
+            - name: DataMiner Integration Studio (DIS)
+              topicUid: DataMiner_Integration_Studio_DIS
+            - name: Visual Studio spell checker
+              topicUid: Visual_Studio_spell_checker
+            - name: C# outline
+              topicUid: C_outline
+            - name: StyleCop
+              topicUid: StyleCop1
+            - name: CodeMaid
+              topicUid: CodeMaid
+            - name: SonarLint
+              topicUid: SonarLint
+    - name: WFetch
+      topicUid: TOOWFetch
+    - name: Upgrade packages
+      topicUid: TOOUpgradePackageContent
+      items:
+        - name: Contents of an upgrade package
+          topicUid: Contents_of_an_upgrade_package
+        - name: Steps taken during an upgrade operation
+          topicUid: Steps_taken_during_an_upgrade_operation
+        - name: Actions that can be performed during an upgrade operation
+          topicUid: Actions_that_can_be_performed_during_an_upgrade_operation
+    - name: Application packages
+      topicUid: TOOApplicationPackages
+- name: DataMiner Device-Specific Integrations
+  topicUid: DSI
+  items:
+    - name: Spectrum analyzer
+      topicUid: DSISpectrum
+      items:
+        - name: Internal spectrum parameters
+          topicUid: Internal_spectrum_parameters
+        - name: RBW and VBW units
+          topicUid: RBW_and_VBW_units
+        - name: Implementation routine
+          topicUid: Implementation_routine
+    - name: Ember plus
+      topicUid: DSIEmberPlus
+      items:
+        - name: Glow
+          topicUid: Glow
+        - name: EmBER
+          topicUid: EmBER
+        - name: S101
+          topicUid: S101
+        - name: Usage
+          topicUid: Usage2
+        - name: Library
+          topicUid: Library
+        - name: DMS protocol
+          topicUid: DMS_protocol
+        - name: Viewer
+          topicUid: Viewer

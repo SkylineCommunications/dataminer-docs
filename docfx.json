@@ -5,6 +5,8 @@
         "files": [
           "user-guide/**.md",
           "user-guide/**/toc.yml",
+          "develop/**.md",
+          "develop/toc.yml",
           "toc.yml",
           "*.md"
         ]
@@ -14,7 +16,8 @@
       {
         "files": [
           "images/**",
-          "user-guide/images/**"
+          "user-guide/images/**",
+          "develop/images/**"
         ]
       }
     ],
