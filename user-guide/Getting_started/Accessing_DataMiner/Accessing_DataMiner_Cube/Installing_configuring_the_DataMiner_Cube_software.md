@@ -39,11 +39,11 @@ There are several ways to install the DataMiner Cube desktop application, depend
 
 1. Install DataMiner Cube in one of the following ways:
 
-   - Prior to DataMiner 10.0.9: To install DataMiner Cube using the ClickOnce web installer, on the landing page, click the button *Install DataMiner Cube* and select *Click-once installation*.
+   - **Prior to DataMiner 10.0.9**: To install DataMiner Cube using the ClickOnce web installer, on the landing page, click the button *Install DataMiner Cube* and select *Click-once installation*.
 
-   - From DataMiner 10.0.9 onwards:
+   - **From DataMiner 10.0.9 onwards**:
 
-     1. Select *Desktop installation* and run the downloaded file.
+     1. On the DataMiner landing page, select *Desktop installation* and run the downloaded file.
 
      1. In the installation window, open the *Options* section and adjust the options depending on whether you want a shortcut to be added to the desktop and/or start menu and on whether you want DataMiner Cube to start with Windows.
 
@@ -55,11 +55,11 @@ There are several ways to install the DataMiner Cube desktop application, depend
      > - The *Start with Windows* feature requires write access to the key *HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run*.
      > - The eventing communication mode will only be available if the firewall allows the application *%LocalAppData%\\Skyline\\DataMiner\\DataMinerCube\\DataMinerCube.exe* to accept incoming connections.
 
-   - It is also possible to install DataMiner Cube using an MSI installer, but this is not recommended as this requires manual updating when a new version is available:
+   - From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available. Typically, this is only used by a system administrator to deploy DataMiner Cube in bulk on many client machines at the same time using some form of automation. The MSI installer can be found in the folder *C:\\Skyline DataMiner\\Webpages\\Tools\\Installs* on each DMA.
 
-     1. On the landing page, click the button *Install DataMiner Cube* and select *Other install options*.
-
-     1. In the *Standalone applications* section, click the *MSI installer* option for DataMiner Cube.
+     > [!NOTE]
+     > - If you install DataMiner Cube with the MSI installer, you will also have to manually install the corresponding CefSharp version using the separate CefSharp MSI installation package, which is available on demand.
+     > - Prior to DataMiner 10.0.9, the MSI installer is available via the DataMiner landing page, via *Install DataMiner Cube* > *Other install options* > *MSI installer*.
 
 ### From DataMiner 10.0.2 onwards
 
