@@ -104,7 +104,7 @@ To prepare the destination server, there are several possibilities:
 
   1. In the *C:\\Skyline DataMiner* folder, clear the content of the *Security.xml* file. In addition, we recommend that you also remove the DataMiner users in Windows (by running compmgmt.msc), as DataMiner will not remove them.
 
-  1. Remove the file *C:\\Skyline DataMiner\\files\\SyncInfo\\{DO_NOT_REMOVE_68EE4388-7EF6-4cb4-B38F-5E0045175340}.xml.
+  1. Remove the file *C:\\Skyline DataMiner\\files\\SyncInfo\\{DO_NOT_REMOVE_68EE4388-7EF6-4cb4-B38F-5E0045175340}.xml*.
 
   1. Start DataMiner. During startup, the necessary database tables will be created.
 
