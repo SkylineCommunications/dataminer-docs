@@ -4,17 +4,7 @@ uid: Configuring_LDAP_settings
 
 # Configuring LDAP settings
 
-DataMiner supports any LDAP compatible directory (e.g. OpenLDAP) as an alternative to Active Directory for importing users and groups into a DMA.
-
-This section contains the following information on the configuration of LDAP settings:
-
-- [Configuring LDAP settings in DataMiner Cube](#configuring-ldap-settings-in-dataminer-cube)
-
-- [LDAP section in DataMiner.xml](#ldap-section-in-dataminerxml)
-
-- [Remarks regarding LDAP settings](#remarks-regarding-ldap-settings)
-
-- [Automatic refresh of group membership and user information](#automatic-refresh-of-group-membership-and-user-information)
+DataMiner supports any LDAP-compatible directory (e.g. OpenLDAP) as an alternative to Active Directory for importing users and groups into a DMA.
 
 ## Configuring LDAP settings in DataMiner Cube
 
@@ -24,50 +14,50 @@ To do so:
 
 1. Go to *System Center* > *System settings* > *LDAP*.
 
-2. Select the checkbox *Use custom configuration.*
+1. Select the checkbox *Use custom configuration.*
 
-3. Configure the following settings as required to connect to the LDAP server:
+1. Configure the following settings as required to connect to the LDAP server:
 
-    In the *general* tab:
+   In the *general* tab:
 
-    | Setting                              | Description                                                                                                                                                                                                                                                                                                                                                             |
-    |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Host                                   | The name or IP of the LDAP server.                                                                                                                                                                                                                                                                                                                                      |
-    | Port                                   | The port to connect to the LDAP server.                                                                                                                                                                                                                                                                                                                                 |
-    | Authentication type                    | The authentication method to access the LDAP server. The following authentication types are available: *Anonymous*, *Max*, *Member System*, *Password*, *SASL*, and *Simple*. |
-    | Naming context                         | A suffix that identifies the top entry of the LDAP hierarchy.                                                                                                                                                                                                                                                                                                           |
-    | Use fully qualified domain name (FQDN) | When selected, the full user names will be retrieved by means of LDAP. Otherwise, full user names will be retrieved by means of NetAPI instead.                                                                                                                                                                                                                         |
-    | User name                              | The user name to connect to the LDAP server, if necessary.                                                                                                                                                                                                                                                                                                              |
-    | Password                               | The password to connect to the LDAP server, if necessary.                                                                                                                                                                                                                                                                                                               |
+   - **Host**: The name or IP of the LDAP server.
 
-    In the *User* tab:
+   - **Port**: The port to connect to the LDAP server.
 
-    | Setting    | Description                                                                                                 |
-    |--------------|-------------------------------------------------------------------------------------------------------------|
-    | Class name   | The object class(es) that identify users.<br> Multiple values can be separated with pipe characters (“\|”). |
-    | Account name | The user’s account name.                                                                                    |
-    | Display name | The user name that will be displayed.                                                                       |
-    | Description  | The user’s description.                                                                                     |
-    | Email        | The user’s email address.                                                                                   |
-    | Phone        | The user’s fixed phone number.                                                                              |
-    | Mobile       | The user’s mobile phone number.                                                                             |
-    | Pager        | The user’s pager number.                                                                                    |
-    | Filter       | The LDAP search filter to find all users.<br> Note that in XML ampersands must be encoded as “&amp;”.       |
+   - **Authentication type**: The authentication method to access the LDAP server. The following authentication types are available: *Anonymous*, *Max*, *Member System*, *Password*, *SASL*, and *Simple*.
 
-    In the *Group* tab:
+   - **Naming context**: A suffix that identifies the top entry of the LDAP hierarchy.
 
-    | Setting   | Description                                                                                                  |
-    |-------------|--------------------------------------------------------------------------------------------------------------|
-    | Class name  | The object class(es) that identify groups.<br> Multiple values can be separated with pipe characters (“\|”). |
-    | Name        | The name of the group.                                                                                       |
-    | Alias       | The alias of the group.                                                                                      |
-    | Description | The description of the group.                                                                                |
-    | Filter      | The LDAP search filter to find all groups.<br> Note that in XML ampersands must be encoded as “&amp;”.       |
+   - **Use fully qualified domain name (FQDN)**: When this option is selected, the full user names will be retrieved by means of LDAP. Otherwise, full user names will be retrieved by means of NetAPI instead.
+
+   - **User name**: The user name to connect to the LDAP server, if necessary.
+
+   - **Password**: The password to connect to the LDAP server, if necessary.
+
+   In the *User* tab:
+
+   - **Class name**: The object class(es) that identify users. Multiple values can be separated with pipe characters (“\|”).
+   - **Account name**: The user’s account name.
+   - **Display name**: The user name that will be displayed.
+   - **Description**: The user’s description.
+   - **Email**: The user’s email address.
+   - **Phone**: The user’s fixed phone number.
+   - **Mobile**: The user’s mobile phone number.
+   - **Pager**: The user’s pager number.
+   - **Filter**: The LDAP search filter to find all users. Note that in XML ampersands must be encoded as “&amp;”.
+
+   In the *Group* tab:
+
+   - **Class name**: The object class(es) that identify groups. Multiple values can be separated with pipe characters (“\|”).
+   - **Name**: The name of the group.
+   - **Alias**: The alias of the group.
+   - **Description**: The description of the group.
+   - **Filter**: The LDAP search filter to find all groups. Note that in XML ampersands must be encoded as “&amp;”.
 
     > [!NOTE]
     > If a setting is left empty, the default setting will be applied.
 
-4. Click the *Apply* button in the lower right corner.
+1. Click the *Apply* button in the lower right corner.
 
 ## LDAP section in DataMiner.xml
 
@@ -77,8 +67,7 @@ To establish a link between a DMA and an LDAP other than Active Directory, open 
 > To apply the changes in *DataMiner.xml* in DataMiner, the DMA needs to be restarted. As such, from DataMiner 9.5.5 onwards, it is best to configure these settings in DataMiner Cube instead. See [Configuring LDAP settings in DataMiner Cube](#configuring-ldap-settings-in-dataminer-cube).
 
 > [!TIP]
-> See also:
-> [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
+> See also: [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
 
 ### OpenLDAP
 
@@ -146,15 +135,17 @@ The following example shows how Global Telecom Company (“GTC”) has configure
 
 - In *DataMiner.xml*, the hostname can be specified either in the host attribute of the *\<LDAP>* tag or in the *namingContext* attribute of that same tag.
 
-    If you specify it in the *namingContext* attribute, be sure to put it in front of the actual naming context data, separated by means of a forward slash.     Examples:
+  If you specify it in the *namingContext* attribute, be sure to put it in front of the actual naming context data, separated by means of a forward slash.
 
-    ```xml
-    <LDAP host="dc.gtc.local" namingContext="dc=GTC,dc=local">
-    ```
+  Examples:
 
-    ```xml
-    <LDAP namingContext="dc.gtc.local/dc=GTC,dc=local">
-    ```
+  ```xml
+  <LDAP host="dc.gtc.local" namingContext="dc=GTC,dc=local">
+  ```
+
+  ```xml
+  <LDAP namingContext="dc.gtc.local/dc=GTC,dc=local">
+  ```
 
 - If the LDAP server requires authentication, enter both the user name and the password, and set the authentication type to “simple” (using the *auth* attribute in *DataMiner.xml*).
 
@@ -168,24 +159,24 @@ The following example shows how Global Telecom Company (“GTC”) has configure
 
 - When a user group in the DataMiner domain contains users from another domain, by default, referrals are used to retrieve these users. This means that when information is asked from the DataMiner domain about a different domain, the request is automatically forwarded. However, if referrals are not configured, this will not work, so that it can appear that a domain group does not contain any users. In that case, the attribute *referralConfigured="false"* should be added to the LDAP tag in *DataMiner.xml*, so that a connection is made with the other Domain Controller and the latter is queried directly.
 
-    ```xml
-    <LDAP referralConfigured="false" />
-    ```
+  ```xml
+  <LDAP referralConfigured="false" />
+  ```
 
 - To connect to the LDAP server with SSL, from DataMiner 9.5.6 onwards, specify the attribute *useSSL=true* in the LDAP tag. The password is encrypted after the first usage. (Default SSL port: 636.)
 
 - From DataMiner 10.0.6 onwards, an individual LDAP query will time out after 5 minutes. This timeout interval can be customized in the *\<QueryTimeout>* subtag of the *\<LDAP>* tag.
 
-    ```xml
-    <DataMiner>
-      <LDAP>
-        <QueryTimeout>300</QueryTimeout>
-      </LDAP>
-    </DataMiner>
-    ```
+  ```xml
+  <DataMiner>
+    <LDAP>
+      <QueryTimeout>300</QueryTimeout>
+    </LDAP>
+  </DataMiner>
+  ```
 
-    > [!NOTE]
-    > This timeout applies to every individual LDAP query. As a result, a request to refresh all groups (which consists of multiple requests) could have a total timeout that is much larger than the configured value.
+  > [!NOTE]
+  > This timeout applies to every individual LDAP query. As a result, a request to refresh all groups (which consists of multiple requests) could have a total timeout that is much larger than the configured value.
 
 ## Automatic refresh of group membership and user information
 
