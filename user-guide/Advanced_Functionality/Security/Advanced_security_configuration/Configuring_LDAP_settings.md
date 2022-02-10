@@ -14,24 +14,20 @@ To do so:
 
 1. Go to *System Center* > *System settings* > *LDAP*.
 
-1. Select the checkbox *Use custom configuration.*
+1. In DataMiner versions prior to DataMiner 10.1.0 [CU11]/10.2.2, select the checkbox *Use custom configuration*.
 
 1. Configure the following settings as required to connect to the LDAP server:
 
    In the *general* tab:
 
    - **Host**: The name or IP of the LDAP server.
-
    - **Port**: The port to connect to the LDAP server.
-
    - **Authentication type**: The authentication method to access the LDAP server. The following authentication types are available: *Anonymous*, *Max*, *Member System*, *Password*, *SASL*, and *Simple*.
-
    - **Naming context**: A suffix that identifies the top entry of the LDAP hierarchy.
-
+   - **Referral configured**: Available from DataMiner 10.1.0 [CU11]/10.2.2 onwards. To use referrals to retrieve users from another domain in case these are part of a user group in the DataMiner domain, select this option. This means that when information is asked from the DataMiner domain about a different domain, the request is automatically forwarded. If you do not select this option, instead a connection is made with the other Domain Controller and the latter is queried directly.
+   - **SSL/TLS**: Available from DataMiner 10.1.0 [CU11]/10.2.2 onwards. Select this option if you want DataMiner to use SSL/TLS when connecting to the LDAP server.
    - **Use fully qualified domain name (FQDN)**: When this option is selected, the full user names will be retrieved by means of LDAP. Otherwise, full user names will be retrieved by means of NetAPI instead.
-
    - **User name**: The user name to connect to the LDAP server, if necessary.
-
    - **Password**: The password to connect to the LDAP server, if necessary.
 
    In the *User* tab:
