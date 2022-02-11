@@ -33,7 +33,7 @@ To define a tag for pattern matching:
    > [!NOTE]
    > Prior to DataMiner 10.0.13, patterns can only be detected in the trending for a specific parameter ID, without taking any possible table index into account. Clearing the *\[Display key instance\] only* checkbox therefore results in the behavior of DataMiner versions prior to 10.0.13.
 
-1. From DataMiner 10.0.13 onwards, optionally select *Generate an alarm when detected* to have DataMiner generate a “suggestion event” type of alarm whenever the pattern is detected. For more information, see [Monitoring of trend patterns](xref:Advanced_analytics_features_in_the_Alarm_Console#monitoring-of-trend-patterns).
+1. From DataMiner 10.0.13 onwards, optionally select *Generate an alarm when detected* to have DataMiner generate a “suggestion event” type of alarm whenever the pattern is detected. DataMiner will then also monitor the affected parameters in real time and save every pattern occurrence in the Elasticsearch database. For more information, see [Monitoring of trend patterns](xref:Advanced_analytics_features_in_the_Alarm_Console#monitoring-of-trend-patterns).
 
 1. Click the check mark to save the tag.
 
