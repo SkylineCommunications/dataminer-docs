@@ -33,19 +33,23 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   Right-click in either of the panes or click the ... button to open a menu with the following options:
 
-  - *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](xref:Deleting_a_dashboard).
+  - *Create folder* or *New folder*: Adds a new folder in the selected folder.
 
-  - *Rename*: Only available if a dashboard or a folder is selected.
+  - *Create dashboard* or *New dashboard*: Adds a new dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a completely new dashboard](xref:Creating_a_completely_new_dashboard).
+
+  - *Import dashboard*: Allows you to import an example dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a dashboard based on an example](xref:Creating_a_dashboard_based_on_an_example).
+
+  - *Edit*: Available from DataMiner 10.2.0/10.1.12 onwards, if a dashboard folder is selected. Opens a pop-up window where you can rename the folder. 
+
+    The pop-up window also contains the option *Preserve feed selections*. When this option is selected, any feed selection you make in a dashboard in the folder is preserved when you navigate to another dashboard in the folder. Note that this only applies to the folder itself, not to any other folders it may contain.
+
+  - *Rename*: Only available if a dashboard is selected, or if a folder is selected prior to DataMiner 10.2.0/10.1.12. Allows you to rename the dashboard or folder.
 
   - *Duplicate* or *Copy*: Only available if a dashboard is selected. See [Duplicating a dashboard](xref:Duplicating_a_dashboard)
 
   - *Move*: Only available if a dashboard or folder is selected. See [Managing dashboard folders](xref:Managing_dashboard_folders).
 
-  - *Import dashboard*: Allows you to import an example dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a dashboard based on an example](xref:Creating_a_dashboard_based_on_an_example).
-
-  - *Create dashboard* or *New dashboard*: Adds a new dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a completely new dashboard](xref:Creating_a_completely_new_dashboard).
-
-  - *Create folder* or *New folder*: Adds a new folder in the selected folder.
+  - *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](xref:Deleting_a_dashboard).
 
 - The large pane on the right shows any folder or dashboard selected in the navigation pane.
 
