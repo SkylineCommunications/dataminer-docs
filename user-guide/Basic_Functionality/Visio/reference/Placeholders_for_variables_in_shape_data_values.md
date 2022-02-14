@@ -243,7 +243,7 @@ This placeholder can only be used inside another placeholder, or in a URL for a 
 - The primary IP address
 
 > [!TIP]
-> See also: [Special placeholders that can be used inside a URL](xref:Linking_a_shape_to_a_webpage#special-placeholders-that-can-be-used-inside-a-url)
+> See also: [Special placeholders that can be used inside a URL](xref:Linking_a_shape_to_a_webpage#special-placeholders-that-can-be-used-within-a-url)
 
 ### \[Element:\<input>,\<output>\]
 
