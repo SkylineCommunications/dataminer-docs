@@ -26,14 +26,18 @@ Configure the shape data fields as follows:
    - **ApplyLinkedViewServiceOrElementFilter**: Can be “true” or “false”. If true, an additional dynamic filter is added, requiring the alarms to match the view, service or element to which the Visio file is linked.
 
    - **Alarm**: Use this option if you want the shape background to take the color associated with the summary alarm state of the alarm list.
-   
-   - **FilterContext=X**: Supported from DataMiner 10.0.3 onwards. This option allows you to add an element, service or view filter. “X” can be the name or ID of the element, service or view.
+
+   - **FilterContext=X**: Supported from DataMiner 10.0.3 onwards. This option allows you to add an element, service or view filter. “X” can be the name or ID of the element, service or view. From DataMiner 10.3.0/10.2.3 onwards, you can also add an EPM system name filter. In that case, “X” should be “SystemName=” followed by the EPM system name.
 
    For example:
 
-   | Shape data field | Value                                                      |
+   | Shape data field   | Value                                                      |
    |--------------------|------------------------------------------------------------|
    | AlarmSummary       | all\|MySharedFilter\|false\|Alarm\|FilterContext=MyService |
+
+   | Shape data field   | Value                                                      |
+   |--------------------|------------------------------------------------------------|
+   | AlarmSummary       | active\|MySharedFilter\|false\|Alarm\|FilterContext=SystemName=MyEPMSystemName |
 
 1. Optionally, from DataMiner 9.5.8/9.5.0 \[CU4\] onwards, to customize the default alarm level of the shape when the filter yields no results, add a shape data field of type **Options** and set its value to *DefaultAlarmLevel=*AlarmLevel. For example:
 
