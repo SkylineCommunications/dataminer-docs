@@ -15,39 +15,39 @@ Configure the shape data fields as follows:
 
 1. Add a shape data field of type **AlarmSummary** to the shape, and set its value as follows:
 
-    ```txt
-    type|sharedfiltername|ApplyLinkedViewServiceOrElementFilter|Alarm|FilterContext=X
-    ```
+   ```txt
+   type|sharedfiltername|ApplyLinkedViewServiceOrElementFilter|Alarm|FilterContext=X
+   ```
 
-    Refer to the table below for the value syntax:
+   - **type**: Can be “all”, “active”, “information”, or “masked”. This corresponds with the type of alarm list: all alarms (including suggestion events), active alarms, information events or masked alarms.
 
-    | Value                               | Explanation                                                                                                                                                                          |
-    |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | type                                  | Can be “all”, “active”, “information”, or “masked”<br> This is the type of alarm list: all alarms (including suggestion events), active alarms, information events or masked alarms. |
-    | sharedfiltername                      | The name of the shared alarm filter, without “(shared filter)” suffix.                                                                                                               |
-    | ApplyLinkedViewServiceOrElementFilter | “true” or “false”<br> If true, an additional dynamic filter is added, requiring the alarms to match the view, service or element to which the Visio file is linked.                  |
-    | Alarm                                 | Use this option if you want the shape background to take the color associated with the summary alarm state of the alarm list.                                                        |
-    | FilterContext=X                       | Available from DataMiner 10.0.3 onwards.<br> This option allows you to add an element, service or view filter. “X” can be the name or ID of the element, service or view.            |
+   - **sharedfiltername**: The name of the shared alarm filter, without “(shared filter)” suffix.
 
-    For example:
+   - **ApplyLinkedViewServiceOrElementFilter**: Can be “true” or “false”. If true, an additional dynamic filter is added, requiring the alarms to match the view, service or element to which the Visio file is linked.
 
-    | Shape data field | Value                                                      |
-    |--------------------|------------------------------------------------------------|
-    | AlarmSummary       | all\|MySharedFilter\|false\|Alarm\|FilterContext=MyService |
+   - **Alarm**: Use this option if you want the shape background to take the color associated with the summary alarm state of the alarm list.
+   
+   - **FilterContext=X**: Supported from DataMiner 10.0.3 onwards. This option allows you to add an element, service or view filter. “X” can be the name or ID of the element, service or view.
 
-2. Optionally, from DataMiner 9.5.8/9.5.0 \[CU4\] onwards, to customize the default alarm level of the shape when the filter yields no results, add a shape data field of type **Options** and set its value to *DefaultAlarmLevel=*AlarmLevel. For example:
+   For example:
 
-    | Shape data field | Value                    |
-    |--------------------|--------------------------|
-    | Options            | DefaultAlarmLevel=Normal |
+   | Shape data field | Value                                                      |
+   |--------------------|------------------------------------------------------------|
+   | AlarmSummary       | all\|MySharedFilter\|false\|Alarm\|FilterContext=MyService |
 
-3. Optionally, from DataMiner 10.0.2 onwards, you can configure the shape so that clicking it opens an alarm tab in the Alarm Console, containing the alarms matching the alarm filter. To do so, add a shape data field of type **AlarmTab**, and set it to *Name=**AlarmTabName*.
+1. Optionally, from DataMiner 9.5.8/9.5.0 \[CU4\] onwards, to customize the default alarm level of the shape when the filter yields no results, add a shape data field of type **Options** and set its value to *DefaultAlarmLevel=*AlarmLevel. For example:
 
-    For example:
+   | Shape data field | Value                    |
+   |--------------------|--------------------------|
+   | Options            | DefaultAlarmLevel=Normal |
 
-    | Shape data field | Value              |
-    |--------------------|--------------------|
-    | AlarmTab           | Name=MyFilteredTab |
+1. Optionally, from DataMiner 10.0.2 onwards, you can configure the shape so that clicking it opens an alarm tab in the Alarm Console, containing the alarms matching the alarm filter. To do so, add a shape data field of type **AlarmTab**, and set it to *Name=**AlarmTabName*.
+
+   For example:
+
+   | Shape data field | Value              |
+   |--------------------|--------------------|
+   | AlarmTab           | Name=MyFilteredTab |
 
 ## Placeholders
 
