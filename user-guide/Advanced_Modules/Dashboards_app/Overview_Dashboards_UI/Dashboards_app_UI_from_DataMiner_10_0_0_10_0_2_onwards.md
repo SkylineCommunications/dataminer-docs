@@ -41,7 +41,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   - *Import dashboard*: Allows you to import an example dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a dashboard based on an example](xref:Creating_a_dashboard_based_on_an_example).
 
-  - *Edit*: Available from DataMiner 10.2.0/10.1.12 onwards, if a dashboard folder is selected. Opens a pop-up window where you can rename the folder. 
+  - *Edit*: Available from DataMiner 10.2.0/10.1.12 onwards, if a dashboard folder is selected. Opens a pop-up window where you can rename the folder.
 
     The pop-up window also contains the option *Preserve feed selections*. When this option is selected, any feed selection you make in a dashboard in the folder is preserved when you navigate to another dashboard in the folder. Note that this only applies to the folder itself, not to any other folders it may contain.
 
@@ -55,23 +55,23 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
 - The large pane on the right shows any folder or dashboard selected in the navigation pane.
 
-   If no dashboard is selected, buttons are available that allow you to create a new blank dashboard, to create a dashboard based on an example or to navigate to a recently used dashboard.
+  If no dashboard is selected, buttons are available that allow you to create a new blank dashboard, to create a dashboard based on an example or to navigate to a recently used dashboard.
 
-   If an empty folder is selected, from DataMiner 10.0.13 onwards, buttons are available that allow you to create or import a dashboard directly in that folder.
+  If an empty folder is selected, from DataMiner 10.0.13 onwards, buttons are available that allow you to create or import a dashboard directly in that folder.
 
-   If a dashboard is selected, the header bar of this pane can display a number of buttons, depending on the dashboard and the settings of the app:
+  If a dashboard is selected, the header bar of this pane can display a number of buttons, depending on the dashboard and the settings of the app:
 
-   - Refresh button ![Refresh button](~/user-guide/images/DashboardsX_refresh.png) : Loads the most recent data in the displayed dashboard.
+  - Refresh button ![Refresh button](~/user-guide/images/DashboardsX_refresh.png) : Loads the most recent data in the displayed dashboard.
 
-   - **Start editing**: Allows you to start editing the dashboard. In edit mode, the navigation pane on the left will be hidden.
+  - **Start editing**: Allows you to start editing the dashboard. In edit mode, the navigation pane on the left will be hidden.
 
-   - **Stop editing**: Closes edit mode.
+  - **Stop editing**: Closes edit mode.
 
-   - **Clear all**: Only displayed if the dashboard contains at least one feed. Clears the selection of all the feeds in the dashboard.
+  - **Clear all**: Only displayed if the dashboard contains at least one feed. Clears the selection of all the feeds in the dashboard.
 
-   - **Share** or **Start sharing**: Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+  - **Share** or **Start sharing**: Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-   In the settings of the Dashboards app, you can configure whether the edit mode and clear feeds buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
+  In the settings of the Dashboards app, you can configure whether the edit mode and clear feeds buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
 
 > [!NOTE]
 > If the app is viewed on a small screen, no options to edit dashboards or dashboard settings will be available.
