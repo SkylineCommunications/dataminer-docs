@@ -33,6 +33,8 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   Right-click in either of the panes or click the ... button to open a menu with the following options:
 
+  - *Open in new tab*: Opens the selected dashboard in a new browser tab.
+
   - *Create folder* or *New folder*: Adds a new folder in the selected folder.
 
   - *Create dashboard* or *New dashboard*: Adds a new dashboard. By default, it will be added in the selected folder, but a different folder can be specified. See [Creating a completely new dashboard](xref:Creating_a_completely_new_dashboard).
