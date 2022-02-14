@@ -4,7 +4,7 @@ uid: Placeholders_for_variables_in_shape_data_values
 
 # Placeholders for variables in shape data values
 
-### Info keywords
+## Info keywords
 
 A number of keywords can be used in **Info** shape data fields to display information about a shape. These keywords, wrapped in square brackets, can also be used as placeholders in the value of shape data fields. For example:
 
@@ -21,157 +21,7 @@ For an overview of the different keywords, see [Making a shape display informati
 > - To prevent infinite loops, do not use alarm keywords in shape data items of type **Alarm**.
 > - These keywords cannot be used inside other placeholders.
 
-### Other placeholders
-
-The following placeholders can be used in shape data values.
-
-- [\[AggregationRule:...\]](#aggregationrule)
-
-- [\[attachedproperty:...\]](#attachedproperty)
-
-- [\[Avg:X,Y,Z\]](#avgxyz)
-
-- [\[cardvar:VariableName\]](#cardvarvariablename)
-
-- [\[ConnectionLineDisplayIdx\]](#connectionlinedisplayidx)
-
-- [\[ConnectionLineIdx\]](#connectionlineidx)
-
-- [\[ConnectionlineFromKey\]](#connectionlinefromkey)
-
-- [\[ConnectionLineToKey\]](#connectionlinetokey)
-
-- [\[DataMinerTime\]](#dataminertime)
-
-- [\[DestinationInterfaceElementID\]](#destinationinterfaceelementid)
-
-- [\[DestinationInterfaceElementName\]](#destinationinterfaceelementname)
-
-- [\[DestinationInterfaceIdx\]](#destinationinterfaceidx)
-
-- [\[DestinationInterfaceLinkedIdx\]](#destinationinterfacelinkedidx)
-
-- [\[DestinationInterfaceName\]](#destinationinterfacename)
-
-- [\[displaytableindex\]](#displaytableindex)
-
-- [\<DMAIP>](#dmaip)
-
-- [\[Element:\<input>,\<output>\]](#elementinputoutput)
-
-- [\[EscapeDataString:x\]](#escapedatastringx)
-
-- [\[Event:...\]](#event)
-
-- [\[Field\]](#field)
-
-- [\[FieldID\]](#fieldid)
-
-- [\[firstmac\]](#firstmac)
-
-- [\[Guid\]](#guid)
-
-- [\[Interlace:\<array1>,\<array2>,\<oldSep>,\<newSep>\]](#interlacearray1array2oldsepnewsep)
-
-- [\[LocalTime\]](#localtime)
-
-- [\[Max:X,Y,Z\]](#maxxyz)
-
-- [\[Min:X,Y,Z\]](#minxyz)
-
-- [\[pagevar:VariableName\]](#pagevarvariablename)
-
-- [\[param:DmaID/ElementID,ParameterID\]](#paramdmaidelementidparameterid)
-
-- [\[param:DmaID/ElementID,ParameterID,TableRow\]](#paramdmaidelementidparameteridtablerow)
-
-- [\[ParentTableIndex\]](#parenttableindex)
-
-- [\[ParentDisplayTableIndex\]](#parentdisplaytableindex)
-
-- [\[Profile:...\]](#profile)
-
-- [\[property:PropertyName\]](#propertypropertyname)
-
-- [\[RegexReplace:x,y,z\]](#regexreplacexyz)
-
-- [\[Reservation:...\]](#reservation)
-
-- [\[Resource:...\]](#resource)
-
-- [\[ServiceDefinition:\]](#servicedefinition)
-
-- [\[servicedefinitionfilter\]](#servicedefinitionfilter)
-
-- [\[ServiceFilter\]](#servicefilter)
-
-- [\[ServiceFilterIdx\]](#servicefilteridx)
-
-- [\[ServiceFilterName\]](#servicefiltername)
-
-- [\[ServiceSelectionFilter\]](#serviceselectionfilter)
-
-- [\[Service definition properties\]](#service-definition-properties)
-
-- [\[Service definition property:\<property name>\]](#service-definition-propertyproperty-name)
-
-- [\[SLAFromService:\<service(s)>\]](#slafromserviceservices)
-
-- [\[SourceInterfaceElementID\]](#sourceinterfaceelementid)
-
-- [\[SourceInterfaceElementName\]](#sourceinterfaceelementname)
-
-- [\[SourceInterfaceIdx\]](#sourceinterfaceidx)
-
-- [\[SourceInterfaceLinkedIdx\]](#sourceinterfacelinkedidx)
-
-- [\[SourceInterfaceName\]](#sourceinterfacename)
-
-- [\[Subtract:...\]](#subtract)
-
-- [\[Sum:X,Y,Z\]](#sumxyz)
-
-- [\[tableindex\]](#tableindex)
-
-- [\[tableIndexFilter\]](#tableindexfilter)
-
-- [\[TableIndexFilterResolved\]](#tableindexfilterresolved)
-
-- [\[TableDisplayIndexResolved\]](#tabledisplayindexresolved)
-
-- [\[ThisGroup\]](#thisgroup)
-
-- [\[thisMAC\]](#thismac)
-
-- [\[thisusername\]](#thisusername)
-
-- [\[thisuserfullname\]](#thisuserfullname)
-
-- [\[This card object\]](#this-card-object)
-
-- [\[This card objectID\]](#this-card-objectid)
-
-- [\[this element\]](#this-element)
-
-- [\[this ElementID\]](#this-elementid)
-
-- [\[This EnhancedServiceID\]](#this-enhancedserviceid)
-
-- [\[this service\]](#this-service)
-
-- [\[this ServiceID\]](#this-serviceid)
-
-- [\[this view\]](#this-view)
-
-- [\[this ViewID\]](#this-viewid)
-
-- [\[UTCTime\]](#utctime)
-
-- [\[var:VariableName\]](#varvariablename)
-
-- [\[xpos\]](#xpos)
-
-- [\[ypos\]](#ypos)
+## Other placeholders
 
 > [!NOTE]
 > - Placeholders are case-insensitive. In other words, you can use “\[this service\]”, “\[This Service\]”, etc.
@@ -179,7 +29,7 @@ The following placeholders can be used in shape data values.
 > - Using placeholders directly in the text of a shape is supported from DataMiner 9.5.8 onwards.
 > - Many of the advanced features described below apply to DataMiner Cube only.
 
-## \[AggregationRule:...\]
+### \[AggregationRule:...\]
 
 The placeholder \[AggregationRule: *folder/rule, view ID, protocol, element property, view property, remote primary key*\] can be used to link a shape to an aggregation rule, in order to display aggregated parameter values. See [Linking a shape to an aggregation rule](xref:Linking_a_shape_to_an_aggregation_rule).
 
@@ -200,17 +50,26 @@ It can also be used with:
 
 The placeholder takes the following arguments:
 
-| Argument           | Description                                                                                                                                                                                               |
-|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Folder/rule        | Location of the rule in the aggregation directory.<br> Note: You don’t have to specify the root directory.                                                                                                |
-| View ID            | ID of the view on which the aggregation rule is calculated.                                                                                                                                               |
-| Protocol           | Protocol by which the aggregation rule is grouped.<br> Note: You can only group by base protocols.                                                                                                        |
-| Element property   | Element property by which the aggregation rule is grouped.                                                                                                                                                |
-| View property      | View property by which the aggregation rule is grouped.                                                                                                                                                   |
-| Remote primary key | Remote primary key of the table row on which the aggregation rule is calculated (string or numeric value).<br> Note: In case a discrete is used for the remote primary key, do not use the display value. |
+- **Folder/rule**: The location of the rule in the aggregation directory. The root directory does not need to be specified.
+
+- **View ID**: The ID of the view on which the aggregation rule is calculated.
+
+- **Protocol**: The protocol by which the aggregation rule is grouped.
+
+  > [!NOTE]
+  > Grouping is only possible by base protocols.
+
+- **Element property**: The element property by which the aggregation rule is grouped.
+
+- **View property**: The view property by which the aggregation rule is grouped.
+
+- **Remote primary key**: The remote primary key of the table row on which the aggregation rule is calculated (string or numeric value).
+
+  > [!NOTE]
+  > In case a discrete parameter is used for the remote primary key, do not use the display value.
 
 > [!NOTE]
-> - It is not necessary to fill in all the values. If the view ID or the remote primary key are not filled in, these will automatically be replaced by -1. In the most extreme case, it is possible to configure the placeholder with only the aggregation rule name, if it is a rule in the root folder.
+> - Not all the values need to be filled in. If the view ID or the remote primary key are not filled in, these will automatically be replaced by -1. In the most extreme case, it is possible to configure the placeholder with only the aggregation rule name, if it is a rule in the root folder.
 > - Grouping can be defined either by element property or by view property. Within the same aggregation rule, it is not possible to group by both properties.
 > - Using other placeholders within this placeholder is only supported from DataMiner 9.5.0 onwards.
 
@@ -220,7 +79,7 @@ Example:
 [AggregationRule:Server farm/Avg Load,-1,,,1]
 ```
 
-## \[attachedproperty:...\]
+### \[attachedproperty:...\]
 
 Unlike the \[property:...\] placeholder, which fetches a property of the object linked to the shape, the \[attachedproperty:...\] placeholder fetches a property of the object linked to the Visio drawing. This placeholder is mostly of use in Visio drawings that position shapes dynamically based on coordinates.
 
@@ -256,37 +115,36 @@ If ServiceA has the following two properties:
 
 - In the drawing linked to ServiceA, two shapes will be positioned:
 
-    - One shape linked to object 1/2 at longitude 0 and latitude 1.
+  - One shape linked to object 1/2 at longitude 0 and latitude 1.
 
-    - One shape linked to object 1/3 at longitude 1 and latitude 1.
+  - One shape linked to object 1/3 at longitude 1 and latitude 1.
 
 - In the drawing linked to ServiceB, two shapes will be positioned:
 
-    - One shape linked to object 1/2 at longitude 1 and latitude 1.
+  - One shape linked to object 1/2 at longitude 1 and latitude 1.
 
-    - One shape linked to object 1/3 at longitude 0 and latitude 1.
+  - One shape linked to object 1/3 at longitude 0 and latitude 1.
 
-## \[Avg:X,Y,Z\]
+### \[Avg:X,Y,Z\]
 
 Available from DataMiner 9.5.8 onwards.
 
 Average of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
-## \[cardvar:VariableName\]
+### \[cardvar:VariableName\]
 
 Reference to a session variable (scope: current DataMiner Cube card).
 
 As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
 
-## \[ConnectionLineDisplayIdx\]
+### \[ConnectionLineDisplayIdx\]
 
 Display key of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[ConnectionLineIdx\]
+### \[ConnectionLineIdx\]
 
 Primary key of the connection that was clicked.
 
@@ -294,23 +152,21 @@ Primary key of the connection that was clicked.
 > See also:
 > [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[ConnectionlineFromKey\]
+### \[ConnectionlineFromKey\]
 
 Starting point of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[ConnectionLineToKey\]
+### \[ConnectionLineToKey\]
 
 End point of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[DataMinerTime\]
+### \[DataMinerTime\]
 
 Available from DataMiner 9.6.7 onwards.
 
@@ -324,65 +180,59 @@ By default, the regional date/time format will be used. To use a different forma
 
 The time in the placeholder is refreshed every second.
 
-## \[DestinationInterfaceElementID\]
+### \[DestinationInterfaceElementID\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The DMA ID and element ID of the destination interface of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[DestinationInterfaceElementName\]
+### \[DestinationInterfaceElementName\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The element name of the destination interface of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[DestinationInterfaceIdx\]
+### \[DestinationInterfaceIdx\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The interface ID of the destination interface of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[DestinationInterfaceLinkedIdx\]
+### \[DestinationInterfaceLinkedIdx\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The primary key of the table row to which the destination interface of the connection that was clicked is linked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[DestinationInterfaceName\]
+### \[DestinationInterfaceName\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The interface name of the destination interface of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[displaytableindex\]
+### \[displaytableindex\]
 
 When, inside a Microsoft Visio drawing, you specify placeholders like \[param: ...\] and \[property: ...\] in child shape data items of type “Row”, you can use \[displaytableindex\] inside those placeholders. This placeholder will then dynamically be replaced by the row’s display index.
 
 > [!TIP]
-> See also:
-> [\[tableindex\]](#tableindex)
+> See also: [\[tableindex\]](#tableindex)
 
-## \<DMAIP>
+### \<DMAIP>
 
 This placeholder can only be used inside another placeholder, or in a URL for a shape data field of type **Link**. It is replaced with the first configured value from the following list that can be found for the DMA you are connecting to:
 
@@ -393,10 +243,9 @@ This placeholder can only be used inside another placeholder, or in a URL for a 
 - The primary IP address
 
 > [!TIP]
-> See also:
-> [Special placeholders that can be used inside a URL](xref:Linking_a_shape_to_a_webpage#special-placeholders-that-can-be-used-inside-a-url)
+> See also: [Special placeholders that can be used inside a URL](xref:Linking_a_shape_to_a_webpage#special-placeholders-that-can-be-used-inside-a-url)
 
-## \[Element:\<input>,\<output>\]
+### \[Element:\<input>,\<output>\]
 
 Available from DataMiner 10.1.12/10.2.0 onwards.
 
@@ -408,7 +257,7 @@ This placeholder can be used to refer to the name or the ID of an element.
 
 For example: *\[Element:231/15,Name\]*
 
-## \[EscapeDataString:x\]
+### \[EscapeDataString:x\]
 
 Use this placeholder to insert a URL-encoded string into the value of a shape data field.
 
@@ -416,7 +265,7 @@ If, for example, you enter “\[EscapeDataString:String to be encoded+?\]” in 
 
 Note that the string to be encoded can itself contain dynamic placeholders.
 
-## \[Event:...\]
+### \[Event:...\]
 
 Available from DataMiner 9.6.13 onwards. This placeholder can be used to trigger an action when a particular event occurs. It should be defined as follows: *\[Event:**\<EventName>**,**\<ArgumentName>**\]*
 
@@ -424,43 +273,45 @@ During the event, the \[Event:...\] placeholder will be replaced by the value of
 
 - Prior to DataMiner 10.2.0/10.1.1, only one Router Control event is supported:
 
-    - EventName: *IOClicked*
+  - EventName: *IOClicked*
 
-    - Possible arguments:
+  - Possible arguments:
 
-        | Argument         | Description                                                                                                |
-        |--------------------|------------------------------------------------------------------------------------------------------------|
-        | Label              | The label of the input or output that was clicked.                                                         |
-        | Index              | The index of the input or output that was clicked.                                                         |
-        | DCF interface ID   | The ID of the DCF interface that is linked to the input or output that was clicked.                        |
-        | DCF interface name | The name of the DCF interface that is linked to the input or output that was clicked.                      |
-        | Type               | Available from DataMiner 10.0.3 onwards. Can be "input" or "output", depending on the type of interface.   |
-        | Matrix             | Available from DataMiner 10.0.3 onwards. The name of the matrix that contains the clicked input or output. |
+    - **Label**: The label of the input or output that was clicked.
 
-    - Example: *\[Event:IOClicked,Label\]*
+    - **Index**: The index of the input or output that was clicked.
+
+    - **DCF interface ID**: The ID of the DCF interface that is linked to the input or output that was clicked.
+
+    - **DCF interface name**: The name of the DCF interface that is linked to the input or output that was clicked.
+
+    - **Type**: Available from DataMiner 10.0.3 onwards. Can be "input" or "output", depending on the type of interface.
+
+    - **Matrix**: Available from DataMiner 10.0.3 onwards. The name of the matrix that contains the clicked input or output.
+
+  - Example: *\[Event:IOClicked,Label\]*
 
 - From DataMiner 10.2.0/10.1.1 onwards, this placeholder can also be used with the **NodeDoubleClicked** tag. In this case, the event will be triggered when a node is double-clicked in an embedded service definition (see [Embedding a Service Manager component](xref:Embedding_a_Service_Manager_component)). The event placeholder will then be replaced with the value of its argument.
 
-    - Possible arguments:
+  - Possible arguments:
 
-        | Argument | Description                               |
-        |------------|-------------------------------------------|
-        | ID         | The ID of the service definition node.    |
-        | Label      | The label of the service definition node. |
+    - **ID**: The ID of the service definition node.
 
-    - Example: *\[event:NodeDoubleClicked,ID\]*
+    - **Label**: The label of the service definition node.
+
+  - Example: *\[event:NodeDoubleClicked,ID\]*
 
 > [!NOTE]
 > - If you specify multiple \[Event:...\] placeholders in a shape data field, only one action will be triggered when that event occurs.
 > - It is advised not to insert \[Event:...\] placeholders in other dynamic parts or placeholders.
 
-## \[Field\]
+### \[Field\]
 
 Reference to the current field selection (only for EPM environments).
 
 From DataMiner 9.5.1 onwards, this placeholder can also be used inside other placeholders.
 
-## \[FieldID\]
+### \[FieldID\]
 
 Available from DataMiner 9.5.1 onwards.
 
@@ -468,21 +319,21 @@ Reference to the ID of the currently selected field (only for EPM environments).
 
 This placeholder can also be used inside other placeholders. For example, if you specify *\[param:1/1,101:\[fieldID\]\]*, this will be replaced by parameter 101, with the ID of the selected field as the row index.
 
-## \[firstmac\]
+### \[firstmac\]
 
 The first MAC address in the list of active MAC addresses on the client machine.
 
-## \[Guid\]
+### \[Guid\]
 
 The GUID. This can for example be used to initialize a session variable with a particular GUID. See [Initializing a session variable with a GUID](xref:Initializing_a_session_variable#initializing-a-session-variable-with-a-guid).
 
-## \[Interlace:\<array1>,\<array2>,\<oldSep>,\<newSep>\]
+### \[Interlace:\<array1>,\<array2>,\<oldSep>,\<newSep>\]
 
 Available from DataMiner 9.5.8 onwards. Splits the specified arrays delimited with \<oldSep>, and interlaces them using \<newSep> as separator.
 
 For example, if you specify “*\[Interlace:X\|Y\|Z,1\|2\|3,A\|B\|C,\|,;\]*” in the shape data, this will be resolved to “X;1;A;Y;2;B;Z;3;C”.
 
-## \[LocalTime\]
+### \[LocalTime\]
 
 Available from DataMiner 9.6.9 onwards. Reference to the current DataMiner time in the time zone of the connected client machine.
 
@@ -495,25 +346,25 @@ By default, this time will be displayed in the regional date/time format. If you
 > [!NOTE]
 > The time shown by this dynamic placeholder is refreshed every second.
 
-## \[Max:X,Y,Z\]
+### \[Max:X,Y,Z\]
 
 Available from DataMiner 9.5.8 onwards.
 
 Maximum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
-## \[Min:X,Y,Z\]
+### \[Min:X,Y,Z\]
 
 Available from DataMiner 9.5.8 onwards.
 
 Minimum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
-## \[pagevar:VariableName\]
+### \[pagevar:VariableName\]
 
 Reference to a session variable (scope: current Visio page).
 
 As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
 
-## \[param:DmaID/ElementID,ParameterID\]
+### \[param:DmaID/ElementID,ParameterID\]
 
 Reference to a parameter belonging to a specific element.
 
@@ -521,7 +372,7 @@ The element can be specified either by its name or by its ID (DmaID/ElementID). 
 
 > [!NOTE]
 > - As parameters of which the value is an empty string are considered initialized, you can use a \[param:...\] placeholders to refer to a parameter containing an empty string.
-> - Inside a \[param:...\] placeholder, you can use \[var:...\] placeholders to refer to a session variables. Example: \[param:\[var:Element\],101\]
+> - Inside a \[param:...\] placeholder, you can use \[var:...\] placeholders to refer to session variables. Example: \[param:\[var:Element\],101\]
 
 From DataMiner 9.6.7 onwards, you can use this placeholder to refer to a column parameter. In that case, all the values of that column parameter will be retrieved, with a pipe character (“\|”) as separator.
 
@@ -537,7 +388,7 @@ If you want a custom separator instead of the default separator (“\|”), spec
 |------------------|--------------------|
 | Options          | MultipleValueSep=; |
 
-## \[param:DmaID/ElementID,ParameterID,TableRow\]
+### \[param:DmaID/ElementID,ParameterID,TableRow\]
 
 Reference to a dynamic table parameter belonging to a specific element.
 
@@ -547,10 +398,10 @@ TableRow - which can refer to either the primary key or the display key - can be
 
 > [!NOTE]
 > - As parameters of which the value is an empty string are considered initialized, you can use a \[param:...\] placeholders to refer to a parameter containing an empty string.
-> - Inside a \[param:...\] placeholder, you can use \[var:...\] placeholders to refer to a session variables. Example: \[param:\[var:Element\],101,5\]
+> - Inside a \[param:...\] placeholder, you can use \[var:...\] placeholders to refer to session variables. Example: \[param:\[var:Element\],101,5\]
 > - If you use this placeholder in the **Parameter** shape data field when linking a shape to a parameter, and the cell the placeholder refers to contains a parameter ID, instead of the cell value, the value of the parameter corresponding to that ID is displayed.
 
-## \[ParentTableIndex\]
+### \[ParentTableIndex\]
 
 This placeholder can be used when hierarchical shapes are created dynamically based on rows in a table. The placeholder will be replaced by the index of the table row associated with the immediate parent shape.
 
@@ -559,7 +410,7 @@ This placeholder can be used when hierarchical shapes are created dynamically ba
 >
 > \[ParentTableIndex\] should only be used when the index has to be retrieved from a nested row-based child shape.
 
-## \[ParentDisplayTableIndex\]
+### \[ParentDisplayTableIndex\]
 
 This placeholder can be used when hierarchical shapes are created dynamically based on rows in a table. The placeholder will be replaced by the display index of the table row associated with the immediate parent shape.
 
@@ -568,11 +419,11 @@ This placeholder can be used when hierarchical shapes are created dynamically ba
 >
 > \[ParentDisplayTableIndex\] should only be used when the index has to be retrieved from a nested row-based child shape.
 
-## \[Profile:...\]
+### \[Profile:...\]
 
 Reference to specific profile instances. See [Creating a list of profile instances](xref:Adding_options_to_a_session_variable_control#creating-a-list-of-profile-instances).
 
-## \[property:PropertyName\]
+### \[property:PropertyName\]
 
 Reference to a custom DataMiner property.
 
@@ -583,13 +434,12 @@ Reference to a custom DataMiner property.
 If you want to override the above-mentioned general rule, you can add to the shape a data field of type **Options** and set its value to either “ForcePropertyFromShape” or “ForcePropertyFromPage”.
 
 > [!TIP]
-> See also:
-> [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services)
+> See also: [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services)
 
 > [!NOTE]
 > If the specified property refers to a non-existing element, service or redundancy group, then the shape will not be displayed.
 
-## \[RegexReplace:x,y,z\]
+### \[RegexReplace:x,y,z\]
 
 Use this placeholder to have a value placed in a text string based on the result of a regular expression.
 
@@ -601,7 +451,7 @@ In this placeholder, specify three items, separated by commas:
 | y    | The input (e.g. a session variable).              |
 | z    | The string that will replace each of the matches. |
 
-#### Example:
+Example:
 
 In case the *sessionvar* variable contains the value “*alpha\|beta\|gamma\|delta*”, you can place the following placeholder in the value of a shape data field:
 
@@ -618,7 +468,7 @@ value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
 > [!NOTE]
 > \[RegexReplace:x,y,z\] placeholders can be nested.
 
-## \[Reservation:...\]
+### \[Reservation:...\]
 
 From DataMiner 9.6.7 onwards, this placeholder can be used to retrieve a property of a booking, which can be a profile instance GUID, a resource GUID or a custom property.
 
@@ -630,77 +480,77 @@ For this purpose, the following basic syntax is used:
 
 - This syntax consists of the following components:
 
-    - The GUID of the booking or the name or ID of the service linked to it (or a \[this service\] placeholder referring to a service).
+  - The GUID of the booking or the name or ID of the service linked to it (or a \[this service\] placeholder referring to a service).
 
-    - The property to be retrieved, which can be specified as follows:
+  - The property to be retrieved, which can be specified as follows:
 
-        | Property                                            | Value returned                                                                                                                                                                       |
-        |-------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-        | ProfileID                                             | The GUID of the profile instance linked to the resource retrieved from the booking. If this property is used, the node ID must be specified in *\<argA>*. |
-        | ResourceID                                            | The GUID of the resource linked to the booking. If this property is used, the node ID must be specified in *\<argA>*.                                     |
-        | Property=*\<propName>* | The value of a custom property of the booking. The name of that custom property must be specified in \<propName>.                                                                    |
+    - **ProfileID**: The GUID of the profile instance linked to the resource retrieved from the booking. If this property is used, the node ID must be specified in *\<argA>*.
 
-        > [!NOTE]
-        > In case the property is not present for a particular booking, nothing will be displayed.
+    - **ResourceID**: The GUID of the resource linked to the booking. If this property is used, the node ID must be specified in *\<argA>*.
 
-        For example:
+    - **Property=*\<propName>***: The value of a custom property of the booking. The name of that custom property must be specified in \<propName>.
 
-        ```txt
-        [reservation:[this service],Property=Class]
-        ```
+    > [!NOTE]
+    > In case the property is not present for a particular booking, nothing will be displayed.
 
-    - The arguments necessary to be able to retrieve the property, specified using the following syntax: *\<ArgumentName>=\<ArgumentValue>*. For example, *NodeID=15*.
+    For example:
 
-        Depending on the specified property, these arguments may not be needed.
+    ```txt
+    [reservation:[this service],Property=Class]
+    ```
+
+  - The arguments necessary to be able to retrieve the property, specified using the following syntax: *\<ArgumentName>=\<ArgumentValue>*. For example, *NodeID=15*.
+
+    Depending on the specified property, these arguments may not be needed.
 
 - Alternatively, from DataMiner 9.6.8 onwards, you can add “,*start*” or “*,end*” within this placeholder in order to retrieve the start or end time of a specific booking.
 
-    For example, to retrieve the start time of a booking, configure the placeholder as follows:
+  For example, to retrieve the start time of a booking, configure the placeholder as follows:
 
-    ```txt
-    [Reservation:<ReservationGuid>,Start]
-    ```
+  ```txt
+  [Reservation:<ReservationGuid>,Start]
+  ```
 
 - From DataMiner 10.0.6 onwards, this placeholder can also be used to retrieve the ID of a booking, using the following syntax:
 
-    ```txt
-    [reservation:<bookingID or service name or service ID or placeholder referring to a service>,ID]
-    ```
+  ```txt
+  [reservation:<bookingID or service name or service ID or placeholder referring to a service>,ID]
+  ```
 
-    For example:
+  For example:
 
-    ```txt
-    [reservation:[this service],ID]
-    ```
+  ```txt
+  [reservation:[this service],ID]
+  ```
 
 - From DataMiner 10.0.10 onwards, this placeholder can also be used to retrieve the status of a booking (e.g. “Ended”, “Pending”, “Ongoing”, etc.), using similar syntax:
 
-    ```txt
-    [reservation:<bookingID or service name or service ID or placeholder referring to a service>,Status]
-    ```
+  ```txt
+  [reservation:<bookingID or service name or service ID or placeholder referring to a service>,Status]
+  ```
 
-    For example:
+  For example:
 
-    ```txt
-    [reservation:[var:IdOfSelection],Status]
-    ```
+  ```txt
+  [reservation:[var:IdOfSelection],Status]
+  ```
 
 - From DataMiner 10.1.10/10.2.0 onwards, this placeholder can also be used to retrieve the ID of the service definition of a booking, using the following syntax:
 
-    ```txt
-    [reservation:<service ID or booking ID>,ServiceDefinitionID]
-    ```
+  ```txt
+  [reservation:<service ID or booking ID>,ServiceDefinitionID]
+  ```
 
-    For example:
+  For example:
 
-    ```txt
-    [reservation:[this service],ServiceDefinitionID]
-    ```
+  ```txt
+  [reservation:[this service],ServiceDefinitionID]
+  ```
 
 > [!NOTE]
 > This placeholder can be used inside a \[Sum:...\] or \[Subtract:...\] placeholder.
 
-## \[Resource:...\]
+### \[Resource:...\]
 
 From DataMiner 9.6.8 onwards, this placeholder can be used to retrieve a property of a resource, which can be the name of the resource, the ID of the element linked to the resource, or a custom property.
 
@@ -716,23 +566,23 @@ This syntax consists of the following components:
 
 - The property to be retrieved, which can be specified as follows:
 
-    | Property                                            | Value returned                                                                                                                                                                                                            |
-    |-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | FullElementID                                         | The ID of the resource element (i.e. the DVE representing the resource) in the format DmaID/ElementID. This can for instance be used to link to an actual element in *Element* shape data. |
-    | Name                                                  | The name of the resource.                                                                                                                                                                                                 |
-    | Property=*\<propName>* | The value of a custom property of the resource. The name of that custom property must be specified in \<propName>, e.g. *Property=State*.                                                  |
+  - **FullElementID**: The ID of the resource element (i.e. the DVE representing the resource) in the format DmaID/ElementID. This can for instance be used to link to an actual element in *Element* shape data.
 
-## \[ServiceDefinition:\]
+  - **Name**: The name of the resource.
+
+  - **Property=*\<propName>***: The value of a custom property of the resource. The name of that custom property must be specified in \<propName>, e.g. *Property=State*.
+
+### \[ServiceDefinition:\]
 
 Full syntax: *\[ServiceDefinition:*\<ServiceDefinitionID>*,*\<Property>*\]*
 
 From DataMiner 10.1.10/1.20 onwards, you can use this placeholder to retrieve one of the following properties of a service definition:
 
-| Property                 | Description                                                                                                                                                                                                 |
-|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name                     | The name of the service definition.                                                                                                                                                                         |
-| Actions                  | The name of the scripts that are defined on the service definition.<br> Names of multiple actions will be separated by colons (“:”). This will allow them to be inserted directly into e.g. a SetVar shape. |
-| Property=\<propertyName> | The value of any of the custom properties of the service definition.                                                                                                                                        |
+- **Name**: The name of the service definition.
+
+- **Actions**: The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allow them to be inserted directly into e.g. a SetVar shape.
+
+- **Property=*\<propertyName>***: The value of a custom property of the service definition.
 
 For example:
 
@@ -740,44 +590,42 @@ For example:
 [ServiceDefinition:[reservation:[this service],ServiceDefinitionID],Actions]
 ```
 
-## \[servicedefinitionfilter\]
+### \[servicedefinitionfilter\]
 
 Reference to the row filter of an included table parameter (in a Visio file linked to a service).
 
 > [!NOTE]
 > This placeholder can also refer to mediation layer parameters. This allows you to use the same Visio file for different services based on the same service definition.
 
-## \[ServiceFilter\]
+### \[ServiceFilter\]
 
 Reference to the service that was clicked in the service list (only for EPM environments).
 
 > [!NOTE]
 > This placeholder works in exactly the same way as the \[ServiceFilterName\] placeholder.
 
-## \[ServiceFilterIdx\]
+### \[ServiceFilterIdx\]
 
 Reference to the primary key of the selected service in the Service Overview Manager. This placeholder can only be used in **AlarmFilter** shape data when a Service Overview Manager is used.
 
 > [!TIP]
-> See also:
-> [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)
+> See also: [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)
 
-## \[ServiceFilterName\]
+### \[ServiceFilterName\]
 
 Reference to the service that was clicked in the service list (only for EPM environments).
 
 > [!NOTE]
 > This placeholder works in exactly the same way as the \[ServiceFilter\] placeholder.
 
-## \[ServiceSelectionFilter\]
+### \[ServiceSelectionFilter\]
 
 Used when embedding an alarm timeline component, in order to select a single parameter to be displayed based on the service/location.
 
 > [!TIP]
-> See also:
-> [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component)
+> See also: [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component)
 
-## \[Service definition properties\]
+### \[Service definition properties\]
 
 Available from DataMiner 9.5.3 onwards.
 
@@ -790,10 +638,9 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 - For a connection line, all properties defined for that line in the service definition will be shown.
 
 > [!TIP]
-> See also:
-> [Making a shape display a custom tooltip](xref:Making_a_shape_display_a_custom_tooltip)
+> See also: [Making a shape display a custom tooltip](xref:Making_a_shape_display_a_custom_tooltip)
 
-## \[Service definition property:\<property name>\]
+### \[Service definition property:\<property name>\]
 
 Available from DataMiner 9.5.3 onwards.
 
@@ -806,10 +653,9 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 - For a connection line, the property has to be one of the properties defined for that line in the service definition.
 
 > [!TIP]
-> See also:
-> [Making a shape display a custom tooltip](xref:Making_a_shape_display_a_custom_tooltip)
+> See also: [Making a shape display a custom tooltip](xref:Making_a_shape_display_a_custom_tooltip)
 
-## \[SLAFromService:\<service(s)>\]
+### \[SLAFromService:\<service(s)>\]
 
 Available from DataMiner 9.5.11 onwards.
 
@@ -821,57 +667,52 @@ For example, if a system contains two services, Service A (with two SLAs with ID
 [SLAFromService:Service A;Service B]
 ```
 
-## \[SourceInterfaceElementID\]
+### \[SourceInterfaceElementID\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The DMA ID and element ID of the source interface of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[SourceInterfaceElementName\]
+### \[SourceInterfaceElementName\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The element name of the source interface of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[SourceInterfaceIdx\]
+### \[SourceInterfaceIdx\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The interface ID of the source interface of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[SourceInterfaceLinkedIdx\]
+### \[SourceInterfaceLinkedIdx\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The primary key of the table row to which the source interface of the connection that was clicked is linked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[SourceInterfaceName\]
+### \[SourceInterfaceName\]
 
 Available from DataMiner 9.5.3 onwards.
 
 The interface name of the source interface of the connection that was clicked.
 
 > [!TIP]
-> See also:
-> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
+> See also: [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections)
 
-## \[Subtract:...\]
+### \[Subtract:...\]
 
 From DataMiner 9.6.8 onwards, this placeholder can be used to calculate datetime and time span values by subtracting one or more values from a specified value. For example:
 
@@ -893,7 +734,7 @@ From DataMiner 9.6.8 onwards, this placeholder can be used to calculate datetime
 
 By default, datetime and time span values will be displayed in the regional date/time format. If you want such a value to be displayed in another format, then specify the format inside the placeholder, for example: *\[Subtract:23:33:15,00:03:15\|Format=HH:mm\]*
 
-## \[Sum:X,Y,Z\]
+### \[Sum:X,Y,Z\]
 
 Available from DataMiner 9.5.8 onwards.
 
@@ -901,127 +742,117 @@ Sum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
 From DataMiner 9.6.8 onwards, this placeholder also supports datetime and time span values.
 
-## \[tableindex\]
+### \[tableindex\]
 
 When, inside a Microsoft Visio drawing, you specify placeholders like \[param: ...\] and \[property: ...\] in child shape data items of type “Row”, you can use \[tableindex\] inside those placeholders. This placeholder will then dynamically be replaced by the row’s table index.
 
 > [!TIP]
-> See also:
-> [\[displaytableindex\]](#displaytableindex)
+> See also: [\[displaytableindex\]](#displaytableindex)
 
-## \[tableIndexFilter\]
+### \[tableIndexFilter\]
 
 Takes the table index of the item that is dropped onto or hovered over the item in which this placeholder has been specified.
 
 > [!TIP]
-> See also:
-> [Example of a drag-and-drop action that passes on a table filter](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#example-of-a-drag-and-drop-action-that-passes-on-a-table-filter)
+> See also: [Example of a drag-and-drop action that passes on a table filter](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#example-of-a-drag-and-drop-action-that-passes-on-a-table-filter)
 
-## \[TableIndexFilterResolved\]
+### \[TableIndexFilterResolved\]
 
 When drag-and-drop behavior has been configured for child shapes, this placeholder represents the primary key of the row represented by the dragged shape.
 
 > [!TIP]
-> See also:
-> [Configuring drag-and-drop behavior for child shapes](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#configuring-drag-and-drop-behavior-for-child-shapes)
+> See also: [Configuring drag-and-drop behavior for child shapes](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#configuring-drag-and-drop-behavior-for-child-shapes)
 
-## \[TableDisplayIndexResolved\]
+### \[TableDisplayIndexResolved\]
 
 When drag-and-drop behavior has been configured for child shapes, this placeholder represents the display key of the row represented by the dragged shape.
 
 > [!TIP]
-> See also:
-> [Configuring drag-and-drop behavior for child shapes](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#configuring-drag-and-drop-behavior-for-child-shapes)
+> See also: [Configuring drag-and-drop behavior for child shapes](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#configuring-drag-and-drop-behavior-for-child-shapes)
 
-## \[ThisGroup\]
+### \[ThisGroup\]
 
 This placeholder can be used from DataMiner 9.5.1 onwards. It is replaced with all the security groups that the currently logged-in user is part of. Multiple groups will be concatenated with a pipe ("\|") character.
 
-## \[thisMAC\]
+### \[thisMAC\]
 
 All MAC addresses of the client machine, separated by pipe characters (“\|”).
 
-## \[thisusername\]
+### \[thisusername\]
 
 The name of the current user.
 
-## \[thisuserfullname\]
+### \[thisuserfullname\]
 
 The full name of the current user.
 
-## \[This card object\]
+### \[This card object\]
 
 The name of the view, service or element to which the Visio file is linked.
 
-## \[This card objectID\]
+### \[This card objectID\]
 
 The ID of the view, service or element to which the Visio file is linked.
 
-## \[this element\]
+### \[this element\]
 
 Reference to the element to which the Visio drawing is linked.
 
 It is possible to override the default behavior of this placeholder for child shapes. In case you want the placeholder to refer to the element linked to the parent shape of a child shape, instead of the element linked to the entire Visio drawing, add a shape data field of type **Options**, and set its value to “*ForcePropertyFromParent*”.
 
 > [!TIP]
-> See also:
-> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
+> See also: [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
-## \[this ElementID\]
+### \[this ElementID\]
 
 Reference to the element ID of the element to which the Visio drawing is linked. This placeholder is resolved as *DataMinerID/ElementID.*
 
 It is possible to override the default behavior of this placeholder for child shapes. In case you want the placeholder to refer to the element linked to the parent shape of a child shape, instead of the element linked to the entire Visio drawing, add a shape data field of type **Options**, and set its value to “*ForcePropertyFromParent*”.
 
 > [!TIP]
-> See also:
-> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
+> See also: [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
-## \[This EnhancedServiceID\]
+### \[This EnhancedServiceID\]
 
 In a drawing linked to an enhanced service, you can refer to this service with this placeholder.
 
-## \[this service\]
+### \[this service\]
 
 Reference to the service to which the Visio drawing is linked.
 
 It is possible to override the default behavior of this placeholder for child shapes. In case you want the placeholder to refer to the service linked to the parent shape of a child shape, instead of the service linked to the entire Visio drawing, add a shape data field of type **Options**, and set its value to “*ForcePropertyFromParent*”.
 
 > [!TIP]
-> See also:
-> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
+> See also: [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
-## \[this ServiceID\]
+### \[this ServiceID\]
 
 Reference to the service to which the Visio drawing is linked. This placeholder is resolved as *DataMinerID/ServiceID.*
 
 It is possible to override the default behavior of this placeholder for child shapes. In case you want the placeholder to refer to the service linked to the parent shape of a child shape, instead of the service linked to the entire Visio drawing, add a shape data field of type **Options**, and set its value to “*ForcePropertyFromParent*”.
 
 > [!TIP]
-> See also:
-> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
+> See also: [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
-## \[this view\]
+### \[this view\]
 
 Reference to the view to which the Visio drawing is linked.
 
 It is possible to override the default behavior of this placeholder for child shapes. In case you want the placeholder to refer to the view linked to the parent shape of a child shape, instead of the view linked to the entire Visio drawing, add a shape data field of type **Options**, and set its value to “*ForcePropertyFromParent*”.
 
 > [!TIP]
-> See also:
-> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
+> See also: [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
-## \[this ViewID\]
+### \[this ViewID\]
 
 Reference to the view ID of the view to which the Visio drawing is linked.
 
 It is possible to override the default behavior of this placeholder for child shapes. In case you want the placeholder to refer to the view linked to the parent shape of a child shape, instead of the view linked to the entire Visio drawing, add a shape data field of type **Options**, and set its value to “*ForcePropertyFromParent*”.
 
 > [!TIP]
-> See also:
-> [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
+> See also: [ForcePropertyFrom Parent](xref:Overview_of_page_and_shape_options)
 
-## \[UTCTime\]
+### \[UTCTime\]
 
 Available from DataMiner 9.6.9 onwards. Reference to the current DataMiner time in the UTC time zone.
 
@@ -1034,13 +865,13 @@ By default, this time will be displayed in the regional date/time format. If you
 > [!NOTE]
 > The time shown by this dynamic placeholder is refreshed every second.
 
-## \[var:VariableName\]
+### \[var:VariableName\]
 
 Reference to a session variable (scope: current DataMiner Cube session).
 
 As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
 
-## \[xpos\]
+### \[xpos\]
 
 In child shapes of a shape that is dynamically linked to an element (i.e. shape data field of type **Element** set to \*), you can use \[xpos\] and \[ypos\] placeholders.
 
@@ -1048,6 +879,6 @@ In references to table parameters, for example, you can specify the tableIndex u
 
 Example: The parameter reference *13206:\[xpos\]\_0\|Alarm* will become *13206:5_0\|Alarm* if the shape is displayed in horizontal position 5.
 
-## \[ypos\]
+### \[ypos\]
 
-See \[xpos\].
+See [\[xpos\]](#xpos).
