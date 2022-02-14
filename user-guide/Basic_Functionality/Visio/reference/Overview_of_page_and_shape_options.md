@@ -246,6 +246,8 @@ Shape-level option.
 
 Available from DataMiner 10.0.9 onwards. Can be added to shapes displaying parameter values. Set this option to true to convert large values to more legible values with a different unit (e.g. to convert 1000 Mb to 1 Gb). The following units are converted out of the box: bytes (B), bits (b), bits per second (bps), bytes per second (Bps) and Kibibytes (kiB). For other units, the dynamic conversion must be defined in the element’s protocol.
 
+From DataMiner 10.3.0/10.2.3 onwards, this feature can instead be enabled by the *DynamicUnits* [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/), and you can use the *DynamicUnits=\[true/false\]* option on a shape to override the default behavior determined by the soft-launch option.
+
 ## DynamicZoom
 
 Page-level option.
