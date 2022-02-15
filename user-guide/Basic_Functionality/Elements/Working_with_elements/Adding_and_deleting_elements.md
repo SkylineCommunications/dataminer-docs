@@ -251,7 +251,7 @@ In this section:
         > [!TIP]
         > See also:
         > - [Enabling the virtual SNMP agent of an element](xref:Enabling_the_virtual_SNMP_agent_of_an_element)
-        > - [Forcing a DataMiner Agent to work without virtual IP addresses](xref:General_DMA_configuration#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses)
+        > - [Forcing a DataMiner Agent to work without virtual IP addresses](xref:Forcing_a_DMA_to_work_without_virtual_IPs)
 
     - **Hidden**: Select this checkbox if you want the element to be hidden.
 

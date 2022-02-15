@@ -14,7 +14,7 @@ https://[DMA]/monitoring
 Alternatively, you can directly browse to the IP of the DMA in a browser other than Internet Explorer. If you do so, depending on your default application settings, either a redirect to */monitoring* will occur, or a landing page will be displayed from which you can open the Monitoring app.
 
 > [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
+> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
 The first time you start the app, you will be asked to enter your credentials. To log on automatically in the future, enable *Keep me logged in*.
 

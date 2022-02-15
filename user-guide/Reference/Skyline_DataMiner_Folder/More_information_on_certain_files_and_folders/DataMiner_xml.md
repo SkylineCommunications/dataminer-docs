@@ -44,11 +44,11 @@ Below you can find an overview of the main settings that can be specified in *Da
 
 This tag can have the following attributes:
 
-- **disableElementIP**: Optional attribute. See [Forcing a DataMiner Agent to work without virtual IP addresses](xref:General_DMA_configuration#forcing-a-dataminer-agent-to-work-without-virtual-ip-addresses).
+- **disableElementIP**: Optional attribute. See [Forcing a DataMiner Agent to work without virtual IP addresses](xref:Forcing_a_DMA_to_work_without_virtual_IPs).
 
 - **elementid**: The ID of the most recently added element.
 
-- **id**: The DMA ID. See [Changing the DataMiner ID of a DMA](xref:General_DMA_configuration#changing-the-dataminer-id-of-a-dma).
+- **id**: The DMA ID. See [Changing the DataMiner ID of a DMA](xref:Changing_the_DMA_ID).
 
 - **licenseNotice**: Automatically generated attribute. Contains information about which license notices have been generated for this DMA.
 
@@ -86,9 +86,9 @@ See [Changing the default alarm colors](xref:Changing_the_default_alarm_colors).
 
 This tag can have several subtags:
 
-- **DMAName**: See [Changing the name of a DMA](xref:General_DMA_configuration#changing-the-name-of-a-dma).
+- **DMAName**: See [Changing the name of a DMA](xref:Changing_the_name_of_a_DMA).
 
-- **Location1** / **Location2** / **Location3**: Location information of the DataMiner Agent. This information can also be found and modified in DataMiner Cube. See [Specifying your company data](xref:General_DMA_configuration#specifying-your-company-data).
+- **Location1** / **Location2** / **Location3**: Location information of the DataMiner Agent. This information can also be found and modified in DataMiner Cube. See [Specifying your company data](xref:Specifying_your_company_data).
 
 In addition, the tag can have one optional attribute, **publicDNS**. When a DNS name is specified for this attribute, it will be used instead of the DataMiner IP address for links to the DataMiner user interface in notification emails.
 
@@ -305,7 +305,7 @@ This can be done in two ways:
 
 ### DataMiner.SMTP
 
-See [Configuring outgoing email](xref:General_DMA_configuration#configuring-outgoing-email).
+See [Configuring outgoing email](xref:Configuring_outgoing_email).
 
 ### DataMiner.SNMP
 

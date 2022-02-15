@@ -360,7 +360,7 @@ However, in case you encounter issues with such filters because of this new filt
 
 ### HTTPS
 
-See [Configuring HTTPS settings in MaintenanceSettings.xml](xref:General_DMA_configuration#configuring-https-settings-in-maintenancesettingsxml).
+See [Configuring HTTPS settings in MaintenanceSettings.xml](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-settings-in-maintenancesettingsxml).
 
 ### Logging.MaxSize
 

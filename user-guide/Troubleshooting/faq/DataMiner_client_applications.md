@@ -104,10 +104,10 @@ http://[Element]/ElementDisplay.htm
 > - System Display and Element Display will automatically disconnect when the DMA to which you are connected goes offline.
 
 > [!CAUTION]
-> We strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information - including logon credentials - is sent as plain, unencrypted text over the internet.<br> See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
+> We strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information - including logon credentials - is sent as plain, unencrypted text over the internet.<br> See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
 > [!NOTE]
-> If required, the ActiveX controls can also be installed by means of an msi installation package.
+> If required, the ActiveX controls can also be installed by means of an MSI installation package.
 
 Once installed, each time you reopen their user interface and connect to a DataMiner Agent, their version will be checked. If newer versions of the ActiveX controls are available, they will automatically be downloaded and installed.
 

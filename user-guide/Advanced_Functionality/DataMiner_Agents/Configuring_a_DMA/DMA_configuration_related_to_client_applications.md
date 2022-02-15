@@ -169,7 +169,7 @@ If it is set to automatically detect the connection settings, Cube will connect 
 
 > [!TIP]
 > See also:
-> - [Configuring the IP network ports](xref:General_DMA_configuration#configuring-the-ip-network-ports)
+> - [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)
 > - [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
 
 ### .NET Remoting with or without eventing

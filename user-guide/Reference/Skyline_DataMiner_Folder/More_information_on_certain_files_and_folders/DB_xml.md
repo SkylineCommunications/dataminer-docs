@@ -174,7 +174,7 @@ To do so
     ```
 
 > [!NOTE]
-> - IF TLS is enabled, port 7001 must be opened in the firewall. See [Overview of IP ports used in a DMS](xref:General_DMA_configuration#overview-of-ip-ports-used-in-a-dms).
+> - IF TLS is enabled, port 7001 must be opened in the firewall. See [Overview of IP ports used in a DMS](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms).
 > - This procedure only enables TLS on the database connection. It does not enable client authentication.
 
 ### Example of a general database configuration

@@ -9,7 +9,7 @@ Prior to DataMiner 10.0.0/10.0.2, the primary web application to monitor a DMS i
 The DataMiner Monitoring & Control app features a user interface similar to that of DataMiner Cube, with a header bar, a navigation pane, an Alarm Console and a card area.
 
 > [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:General_DMA_configuration#setting-up-https-on-a-dma).
+> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
 > [!NOTE]
 > From DataMiner 9.0 onwards, the Monitoring & Control app is no longer compatible with Internet Explorer version 8 or lower.

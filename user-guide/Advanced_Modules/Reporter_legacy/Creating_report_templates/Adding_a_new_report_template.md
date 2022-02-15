@@ -37,7 +37,7 @@ To add a new report template in the Reporter app:
     - To use an alternative header in the report, select *Use alternative header*. The alternate header contains only the company logo.
 
         > [!NOTE]
-        > The default header mentions the company data specified in your DMS. For more information on how to change this information, see [Specifying your company data](xref:General_DMA_configuration#specifying-your-company-data).
+        > The default header mentions the company data specified in your DMS. For more information on how to change this information, see [Specifying your company data](xref:Specifying_your_company_data).
 
     - To attach a spreadsheet document to the report, select *Attach Excel/OpenDocument Spreadsheet*. This .ods document will contain a separate worksheet for every table or graph in the report.
 

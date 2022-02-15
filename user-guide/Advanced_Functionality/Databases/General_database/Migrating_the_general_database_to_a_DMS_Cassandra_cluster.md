@@ -12,7 +12,7 @@ From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as 
 
 > [!TIP]
 > See also:
-> - [DMA in a DMS using a Cassandra cluster](xref:General_DMA_configuration#dma-in-a-dms-using-a-cassandra-cluster)
+> - [DMA in a DMS using a Cassandra cluster](xref:Changing_the_IP_of_a_DMA#dma-in-a-dms-using-a-cassandra-cluster)
 > - [General database settings](xref:DB_xml#general-database-settings)
 
 ## Installation and configuration
