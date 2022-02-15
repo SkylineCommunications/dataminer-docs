@@ -53,7 +53,7 @@ To add an existing Automation script to an Automation script solution, do the fo
 
 ## Saving a compiled script to a file
 
-To save a compiled version of an Automation script to a file (with all C# code in its Exe block), do the following:
+To save a compiled version of an Automation script to a file (with all C# code in its Exe blocks), do the following:
 
 1. Open the XML file containing the Automation script that you want to compile.
 1. Select *File \> Save Compiled Script As...*
