@@ -35,9 +35,9 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 ## Graphical representation of IP communication within a DMS
 
-The diagram below shows how communication within a DMS could be set up.
+The diagram below shows how communication within a DMS could be set up. The blue lines indicate the communication towards the databases (in this case an Elasticsearch and Cassandra cluster of three nodes each).
 
-![DMS communication overview](~/user-guide/images/dms_ip_communication_1021.jpg)
+![DMS communication overview](~/user-guide/images/dms_ip_communication_with_DB.png)
 
 > [!NOTE]
 > We do not recommend letting a DMA connect to another DMA via Web Services. From DataMiner 10.0.11, connecting via Web Services is no longer supported.
