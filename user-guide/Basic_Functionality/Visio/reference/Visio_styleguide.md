@@ -1,10 +1,10 @@
 ---
-uid: Visio_styleguide
+uid: Visio_style_guide
 ---
 
-# Visio styleguide
+# Visio style guide
 
-In this styleguide, you can find a number of formatting conventions as well as information about the standard DataMiner stencils and Skyline icons.
+In this style guide, you can find a number of formatting conventions as well as information about the standard DataMiner stencils and Skyline icons.
 
 Applying these conventions and using these standard stencils and icons will ensure your Visio drawings are designed according to the DataMiner house style.
 
@@ -86,7 +86,7 @@ Parallel lines and images must be neatly aligned with each other.
 
 ## Stencils
 
-Microsoft Visio allows the use of so-called stencil files. Each stencil file contains a collection of template shapes that can be dragged onto a drawing.
+Microsoft Visio allows the use of so-called stencil files, which contain a collection of template shapes that can be dragged onto a drawing.
 
 Skyline provides the following DataMiner stencil files that will help you design Visio drawings according to the DataMiner house style:
 
@@ -94,7 +94,7 @@ Skyline provides the following DataMiner stencil files that will help you design
 - Buttons
 - KPI
 
-Typically, a Visio shape will consist of a number of different shapes, grouped together, each with a number of shape data fields. These fields are used to configure DataMiner functionality when a drawing is used in Visual Overview. Previously, the person who designed a drawing had to keep track of which shape data fields were configured in which shapes. When adding a shape from a DataMiner stencil, you only have to enter the group-level shape data. All other shape data in underlying child-level shapes will be added automatically. Note that the names of automatically added shape data fields will all start with an underscore character.
+Typically, a Visio shape will consist of a number of different shapes, grouped together, each with a number of shape data fields. These fields are used to configure DataMiner functionality when a drawing is used in Visual Overview. Previously, the person who designed a drawing had to keep track of which shape data fields were configured in which shapes. When adding a shape from a DataMiner stencil, you only have to enter the group-level shape data. All other shape data in the underlying child-level shapes will be added automatically by means of macros. Note that the names of automatically added shape data fields will all start with an underscore character.
 
 ### Icons
 
@@ -132,15 +132,27 @@ The KPI stencil contains the following building blocks. Each will show read-only
 - Parameter list (normal/compact/multi)
 - Connection blocks
 
+If you want to replace an icon in a KPI, do the following:
+
+1. Open the *Icon* stencil by clicking *More Shapes* in the *Shapes* task pane.
+1. Select the correct icon and drag it onto the Visio page.
+1. Delete the existing icon in the KPI block.
+1. Select the colored *ParamAlarmLayer* shape, and while pressing CTRL, select the new icon.
+1. In the *Home* tab of the Visio ribbon, go to *Align*, click *Align Center* and then *Align Middle*. The icon should now be in the correct spot.
+1. Select the icon again, go to *Home > Line* in the Visio ribbon, and select line color "White" (or optionally 254,255,255).
+1. Click a random location in the Visio drawing to unselect the icon shape.
+1. Click the KPI shape, and while pressing CTRL, select the new icon shape.
+1. Go to *Home > Group* in the Visio ribbon, and click *Add to Group*.
+
 > [!NOTE]
 > - All shapes available in the KPI stencil refer to one element. This means that all parameters shown in the list have to belong to the same element. If you want to refer to a parameter belonging to another element, you can customize the shape.
 > - When working with stencils in Visio, make sure the stencils are open in the *Shapes* task pane and that macros are enabled.
 
 ### Where to find the DataMiner stencils
 
-To download a package with the latest versions of the DataMiner stencils, go to [Skylicons](https://skyline.be/skylicons/), and click **download visio stencil** in the website's header bar.
+DataMiner upgrade packages always contain the latest versions of the DataMiner stencils. During a DataMiner upgrade, the latest versions of the DataMiner stencils will be installed automatically.
 
-DataMiner upgrade packages always contain the latest versions of the DataMiner stencils.
+If you want to download a zip package with the latest versions of the DataMiner stencils, go to [Skylicons](https://skyline.be/skylicons/), and click **download visio stencil** in the website's header bar.
 
 ## Skylicons
 
@@ -152,4 +164,4 @@ By clicking **download visio stencil** in the header bar of the [Skylicons](http
 
 ## More information
 
-A wide range of Visio examples can be found on [DataMiner Dojo](https://community.dataminer.services/use-cases/).
+A wide range of Visio examples can be found in the [use case library](https://community.dataminer.services/use-cases/) on DataMiner Dojo.
