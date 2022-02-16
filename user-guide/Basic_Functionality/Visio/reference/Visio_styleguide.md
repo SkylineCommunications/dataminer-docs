@@ -133,13 +133,8 @@ The KPI stencil contains the following building blocks. Each will show read-only
 - Connection blocks
 
 > [!NOTE]
-> All shapes available in the KPI stencil refer to one element. This means that all parameters shown in the list have to belong to the same element. If you want to refer to a parameter belonging to another element, you can customize the shape.
-
-
-The most important thing to check. Is the stencil open in the 'Shapes task pane' in Visio? If not, you will have to open it. If it was open, then it might be useful to check if the Button stencil is open. Sometimes the reference gets broken when both stencils are open. In general, there's no problem if you first open the KPI stencil. The best thing to do here is close all stencils, and reopen them.
-
-
-
+> - All shapes available in the KPI stencil refer to one element. This means that all parameters shown in the list have to belong to the same element. If you want to refer to a parameter belonging to another element, you can customize the shape.
+> - When working with stencils in Visio, make sure the stencils are open in the *Shapes* task pane and that macros are enabled.
 
 ### Where to find the DataMiner stencils
 
@@ -149,7 +144,7 @@ DataMiner upgrade packages always contain the latest versions of the DataMiner s
 
 ## Skylicons
 
-All standard Skyline icons can be downloaded from the [Skylicons](https://skyline.be/skylicons/) website in PNG, XAML or SVG format (either duotone or monotone).
+All standard Skyline icons can be downloaded from the [Skylicons](https://skyline.be/skylicons/) website in PNG, XAML or SVG format.
 
 To request a new icon or to request an update of an existing icon, send an email to [team.marketing@skyline.be](mailto:team.marketing@skyline.be).
 
