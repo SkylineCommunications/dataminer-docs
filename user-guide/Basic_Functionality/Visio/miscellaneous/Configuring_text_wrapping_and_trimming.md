@@ -14,7 +14,7 @@ For example:
 |-----------------|-------|
 |TextStyle         | TextWrapping=Wrap\|TextTrimming=WordEllipsis
 
-**TextWrapping** can be set to the following values:
+**TextWrapping** determines if and how the text is wrapped. It can be set to the following values:
 
 - **NoWrap**: The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width or height will not be shown.
 
@@ -22,13 +22,13 @@ For example:
 
 - **WrapWithOverflow**: The text will automatically wrap onto a new line when the width of the shape is exceeded. The text can be shown past the boundaries of the shape height. (Default behavior.)
 
-**TextTrimming** can be set to the following values:
+**TextTrimming** determines what happens when the text does not fit in the shape and has to be cut off. It can be set to the following values:
 
-- **CharacterEllipsis**: The text will be cut off where it no longer fits, and “...” will be added to indicate that there is more text than fits in the shape.
+- **CharacterEllipsis**: The text will be cut off at the point where it no longer fits, and “...” will be added to indicate that there is more text than fits in the shape.
 
 - **WordEllipsis**: The text will be cut off at the nearest full word when it no longer fits, and “...” will be added to indicate that there is more text than fits in the shape.
 
 - **None**: The text will be cut off when it does not fit, but no “...” will be displayed. (Default behavior.)
 
 > [!NOTE]
-> When TextWrapping is set to its default value (i.e. “WrapWithOverflow”), setting TextTrimming to “CharacterEllipsis” or “WordEllipsis” will have no effect.
+> When TextWrapping is set to its default value (i.e. “WrapWithOverflow”), the text will always be fully displayed, so setting TextTrimming to “CharacterEllipsis” or “WordEllipsis” will have no effect.
