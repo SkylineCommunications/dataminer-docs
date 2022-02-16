@@ -51,12 +51,21 @@ To add an existing Automation script to an Automation script solution, do the fo
 > [!NOTE]
 > When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
-## Saving a compiled script
+## Saving a compiled script to a file
 
-To save a compiled version of an Automation script to a file (with all C# code in its Exe block), do the following:
+To save a compiled version of an Automation script to a file (with all C# code in its Exe blocks), do the following:
 
 1. Open the XML file containing the Automation script that you want to compile.
-1. Select *File \> Save Compiled Automation Script...*
+1. Select *File \> Save Compiled Script As...*
+1. Enter a file name and a folder.
+1. Click *Save*.
+
+## Saving all compiled scripts in a solution to a zip file
+
+To save a compiled version of all Automation scripts in a solution to a zip file (with all C# code in their Exe blocks), do the following:
+
+1. Open the XML files containing the Automation scripts that you want to compile.
+1. Select *File \> Save All Compiled Scripts As...*
 1. Enter a file name and a folder.
 1. Click *Save*.
 

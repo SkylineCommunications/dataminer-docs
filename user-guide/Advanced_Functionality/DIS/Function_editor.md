@@ -15,7 +15,7 @@ This selection box contains all functions defined in the function XML file you a
 
 To add a new function to the function XML file:
 
-1. Click *New function.*
+1. Click *New function*.
 1. In the *Add new function* box,
 
     - enter the name of the new function,

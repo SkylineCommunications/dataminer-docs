@@ -340,3 +340,7 @@ The following C#/.NET features are currently not supported:
 [DIS 2.35](https://community.dataminer.services/documentation/dis-v2-35-release-notes/)
 
 - No changes to the Class Library base packages
+
+[DIS 2.36](https://community.dataminer.services/documentation/dis-v2-36-release-notes/)
+
+- No changes to the Class Library base packages

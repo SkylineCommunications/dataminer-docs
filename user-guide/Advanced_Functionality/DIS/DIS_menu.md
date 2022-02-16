@@ -19,6 +19,7 @@ The following sections provide more information on the DIS menu:
 - [Tool Windows \> DIS Inject](#tool-windows--dis-inject)
 - [Tool Windows \> DIS MIB Browser](#tool-windows--dis-mib-browser)
 - [Tool Windows \> DIS Grid View](#tool-windows--dis-grid-view)
+- [Tool Windows \> DIS Diagram](#tool-windows--dis-diagram)
 - [Tool Windows \> DIS Validator](#tool-windows--dis-validator)
 - [Tool Windows \> DIS Comparer](#tool-windows--dis-comparer)
 - [Settings](#settings)
@@ -40,7 +41,7 @@ In the *DMA* submenu, you can find the following commands:
 
 - Import Protocol
 
-    If you click *Import Protocol*, the *Import Protocol* dialog box will allow you to import a copy of an existing protocol XML file found on the DMA to which DIS is connected.     In order to make a clear distinction between main protocols and DVE protocols, the *Import Protocol* dialog box lists all available protocols in a three-level tree structure:
+    If you click *Import Protocol*, the *Import Protocol* dialog box will allow you to import a copy of an existing protocol XML file found on the DMA to which DIS is connected. In order to make a clear distinction between main protocols and DVE protocols, the *Import Protocol* dialog box lists all available protocols in a three-level tree structure:
 
     - Level 1: Main protocols
     - Level 2: Protocol versions
@@ -49,23 +50,21 @@ In the *DMA* submenu, you can find the following commands:
     You can import multiple protocols at once (even a combination of main protocols and DVE protocols). Select the protocols you want to import, and click *Import*. Each protocol will be opened in a separate tab.
 
     > [!NOTE]
-    > In order to prevent users from accidentally publishing a DVE protocol, it is not possible to publish a DVE protocol from inside DIS.
-    > When DIS detects that the *Protocol/Name* tag contains a *parentProtocol* attribute and that it is not empty, publishing will fail and a warning message will appear.
-
-    See [DMA](xref:DIS_settings#dma)
-
-    > [!NOTE]
+    > - Use the filter box in the top-right corner to filter the list of protocols.
+    > - In order to prevent users from accidentally publishing a DVE protocol, it is not possible to publish a DVE protocol from inside DIS. When DIS detects that the *Protocol/Name* tag contains a *parentProtocol* attribute and that it is not empty, publishing will fail and a warning message will appear.
     > - When DIS connects to a DataMiner Agent, it always uses polling.
-    > - If this *Import Protocol* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
+    > - If this *Import Protocol* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect. See [DMA](xref:DIS_settings#dma)
 
 - Import Automation script
 
     If you click *Import Automation script*, the *Import Automation Script* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA to which DIS is connected.
-    You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.     See [DMA](xref:DIS_settings#dma)
+
+    You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.
 
     > [!NOTE]
+    > - Use the filter box in the top-right corner to filter the list of Automation scripts.
     > - When DIS connects to a DataMiner Agent, it always uses polling.
-    > - If this *Import Automation script..* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect.
+    > - If this *Import Automation script..* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect. See [DMA](xref:DIS_settings#dma)
 
 ## Protocol \> Generate QAction helper code
 
@@ -462,6 +461,22 @@ When you right-click a row, a shortcut menu appears.
 | Duplicate | Duplicate the row you right-clicked. |
 | Delete | Delete a row from the list. |
 | Navigate | Make the cursor in the file tab containing the protocol code jump to the corresponding *\<Discreet>* tag.<br> Note: Instead of selecting *Navigate*, you can also press F12. |
+
+## Tool Windows \> DIS Diagram
+
+If you click *Tool Windows \> DIS Diagram*, the *DIS Protocol Diagram* window will appear.
+
+This window shows a graphical representation of a protocol. It allows you to see how a protocol is built, navigate through its logic and investigate flow issues.
+
+When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action or a timer. You can then set the required depth, i.e. the number of levels you want to have displayed starting from the item you selected, and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree or TopBottomTree).
+
+In the diagram itself, each item (parameter, QAction, session, response, group, trigger, action, timer) is represented by a box with a particular icon and color, showing the ID and name of the item.
+
+- Click the ID of an item to navigate to that item in the protocol.xml file.
+- Hover over an item to see a tooltip with its full name and full description.
+- Double-click a box representing an item to make that item the new starting point of the diagram. This will cause the entire diagram to be redrawn.
+
+In the top-left corner of the diagram, you also have a number of zoom options: a slider to adjust to zoom factor, a *1:1* button (to switch to zoom factor 1) and a *Fill* button to automatically adjust the zoom factor to the current size of the diagram window.
 
 ## Tool Windows \> DIS Validator
 
