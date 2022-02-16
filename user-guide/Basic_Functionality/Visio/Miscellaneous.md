@@ -53,3 +53,5 @@ DataMiner Visual Overview supports a host of different features, and there are m
 - [Ensuring that a card or page variable is saved](xref:Ensuring_that_a_card_or_page_variable_is_saved)
 
 - [Setting the background color of a static shape](xref:Setting_the_background_color_of_a_static_shape)
+
+- [Configuring a shape's text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming)

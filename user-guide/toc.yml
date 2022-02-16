@@ -575,6 +575,8 @@
               topicUid: Ensuring_that_a_card_or_page_variable_is_saved
             - name: Setting the background color of a static shape
               topicUid: Setting_the_background_color_of_a_static_shape
+            - name: Configuring a shape's text wrapping and trimming
+              topicUid: Configuring_text_wrapping_and_trimming
         - name: Reference
           topicUid: Reference
           items:
