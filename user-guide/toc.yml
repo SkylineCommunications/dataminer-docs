@@ -33,6 +33,15 @@
           items:
             - name: Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards
               topicUid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
+              items:
+                - name: DataMiner Cube header bar
+                  topicUID: DataMiner_Cube_header_bar
+                - name: DataMiner Cube sidebar
+                  topicUID: DataMiner_Cube_sidebar
+                - name: DataMiner Cube card pane
+                  topicUID: DataMiner_Cube_card_pane
+                - name: DataMiner Cube Alarm Console
+                  topicUID: DataMiner_Cube_Alarm_Console
             - name: Main Cube UI components prior to DataMiner 10
               topicUid: Main_Cube_UI_components_prior_to_DataMiner_10
             - name: Working with cards in DataMiner Cube
@@ -575,6 +584,8 @@
               topicUid: Ensuring_that_a_card_or_page_variable_is_saved
             - name: Setting the background color of a static shape
               topicUid: Setting_the_background_color_of_a_static_shape
+            - name: Configuring a shape's text wrapping and trimming
+              topicUid: Configuring_text_wrapping_and_trimming
         - name: Reference
           topicUid: Reference
           items:

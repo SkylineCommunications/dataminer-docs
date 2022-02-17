@@ -24,9 +24,9 @@ From DataMiner 10.0.0/10.0.2 onwards, to search for an item in the DataMiner Sys
 
 As soon as you click the search box, a list of suggestions is shown below. Initially, this list shows recent items (with any pinned items at the top), but it is updated with search results as soon as you type anything in the box.
 
-Click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in a side panel. You can also right-click a suggestion in the list to open the same right-click menu as in the Surveyor (see [Surveyor right-click menu](xref:Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards#surveyor-right-click-menu)).
+Click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in a side panel. You can also right-click a suggestion in the list to open the same right-click menu as in the Surveyor (see [Surveyor right-click menu](xref:DataMiner_Cube_sidebar#surveyor-right-click-menu)).
 
-From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](xref:Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards#sidebar)).
+From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](xref:DataMiner_Cube_sidebar)).
 
 Please note the following
 

@@ -6,7 +6,7 @@ uid: The_DataMiner_Cube_user_interface
 
 This section consists of the following topics:
 
-- [Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards](xref:Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards#main-cube-ui-components-from-dataminer-10001002-onwards)
+- [Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards](xref:Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards)
 
 - [Main Cube UI components prior to DataMiner 10](xref:Main_Cube_UI_components_prior_to_DataMiner_10)
 
