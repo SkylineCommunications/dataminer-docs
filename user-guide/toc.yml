@@ -2396,6 +2396,8 @@
     - name: Tools
       topicUid: DataminerTools
       items:
+        - name: DataMiner Teams bot
+          topicUid: DataMiner_Teams_bot
         - name: DMS Alerter
           topicUid: DMS_Alerter
           items:

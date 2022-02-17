@@ -18,6 +18,6 @@ To do so:
 
 1. Click DataMiner Systems in the pane on the left, and then select your DataMiner System in the main pane.
 
-1. Click the *Edit* button at the top of the pane on the left. 
+1. Click the *Edit* button at the top of the pane on the left.
 
 1. Set the *Allow CloudFeed Data Offload* setting to *On* or *Off*, depending on whether you want this to be enabled or not.
