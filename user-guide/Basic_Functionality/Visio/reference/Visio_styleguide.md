@@ -14,7 +14,7 @@ Applying these conventions and using these standard stencils and icons will ensu
 
 #### Color palettes​
 
-Default DataMiner color palette
+##### Default DataMiner color palette
 
 ​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(0,67,115);">0,67,115</span>
 ​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(0,114,198);">0,114,198*</span>
@@ -22,7 +22,7 @@ Default DataMiner color palette
 
 *ThemeAccentColor​
 
-Custom​ color palette
+##### Custom​ color palette
 
 <span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(100,125,125);">100,125,125</span>
 ​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(160,177,135);">160,177,135</span>
@@ -34,7 +34,7 @@ Custom​ color palette
 
 #### Alarm colors​
 
-Default alarm colors
+These are the default alarm colors used in a DataMiner System.
 
 | Alarm type/severity | Default color |
 | ------------------- | ------------- |
@@ -95,11 +95,7 @@ Default font: Segoe UI​
 
 ### Alignment
 
-Parallel lines and images must be neatly aligned with each other.
-
-Example 1:
-
-Example 2:
+Parallel lines, images, parameters, etc. must be neatly aligned with each other.
 
 ## Stencils
 
@@ -212,3 +208,5 @@ By clicking **download visio stencil** in the header bar of the [Skylicons](http
 ## More information
 
 A wide range of Visio examples can be found in the [use case library](https://community.dataminer.services/use-cases/) on DataMiner Dojo.
+
+Also on DataMiner Dojo, you can find a [DataMiner Inspire video](https://community.dataminer.services/video/dataminer-inspire-the-new-dataminer-stencils-style-guide/) on how to use the DataMiner stencils.
