@@ -14,39 +14,56 @@ Applying these conventions and using these standard stencils and icons will ensu
 
 #### Color palettes​
 
-- DataMiner colors​
+Default DataMiner color palette
 
-    - ThemeAccentColor​
+​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(0,67,115);">0,67,115</span>
+​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(0,114,198);">0,114,198*</span>
+​<span style="padding:5px;width:200px;text-align:center;color:black;background-color:rgb(229,229,229);">229,229,229</span>
 
-- Custom​ color palettes
+*ThemeAccentColor​
 
-    - Not related/similar to the DataMiner colors above​
-    - Be aware of color blindness​
+Custom​ color palette
+
+<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(100,125,125);">100,125,125</span>
+​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(160,177,135);">160,177,135</span>
+​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(50,135,155);">50,135,155</span>
+​<span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(190,170,135);">190,170,135</span>
+
+> [!NOTE]
+> When configuring color palettes, think of people with visual impairments (e.g. color blindness).
 
 #### Alarm colors​
 
-- Not monitored, error, notice, information​
-- Normal​
-- Warning​
-- Minor​
-- Major​
-- Critical​
-- Timeout​
-- Initial​
-- Masked​
+Default alarm colors
+
+| Alarm type/severity | Default color |
+| ------------------- | ------------- |
+| Not monitored, error, notice, information​ | <span style="padding:5px;width:200px;text-align:center;color:black;background-color:rgb(204,204,204);">204,204,204</span> |
+| Normal | <span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(22,198,12);">22,198,12</span> |
+| Warning | <span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(59,120,255);">59,120,255</span> |
+| Minor | <span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(97,214,214);">97,214,214</span> |
+| Major | <span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(245,210,40);">245,210,40</span> |
+| Critical | <span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(240,50,65);">240,50,65</span> |
+| Timeout | <span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(255,155,15);">255,155,15</span> |
+| Initial​ | <span style="padding:5px;width:200px;text-align:center;color:black;background-color:rgb(242,242,242);">242,242,242</span> |
+| Masked | <span style="padding:5px;width:200px;text-align:center;color:white;background-color:rgb(136,23,152);">136,23,152</span> |​
+
+> [!NOTE]
+> You can change the default alarm colors in the DataMiner.xml file. See [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
 
 #### Changing colors
 
 You are allowed to
 
-- lighten or darken colors (max. 20 percent)​
+- lighten or darken colors by a maximum of 20 percent​
 - use transparency​
 
-Dark Theme compatible​
+> [!NOTE]
+> When changing colors, make sure they are compatible with the Skyline Black theme.
 
-### Fonts
+### Font
 
-Segoe UI​
+Default font: Segoe UI​
 
 - Preferably in one of the following colors:
 
@@ -74,15 +91,15 @@ Segoe UI​
 - Info labels​
 - Fields that can contain dynamic values​
 
-* Except short words such as "the" and "of" if they are not the first word.
+*Except short words such as "the" and "of" if they are not the first word.
 
 ### Alignment
 
 Parallel lines and images must be neatly aligned with each other.
 
-**Example 1**
+Example 1:
 
-**Example 2**
+Example 2:
 
 ## Stencils
 
@@ -99,6 +116,14 @@ Typically, a Visio shape will consist of a number of different shapes, grouped t
 ### Icons
 
 The Icons stencil contains all icons found on the [Skylicons](https://skyline.be/skylicons/) website.
+
+Icons can be used
+
+- next to a title​
+- in a KPI​
+- on action buttons​
+- in diagrams
+- ...
 
 See also [Skylicons](#skylicons)
 
@@ -146,7 +171,6 @@ If you want to replace an icon in a KPI, do the following:
 
 > [!NOTE]
 > - All shapes available in the KPI stencil refer to one element. This means that all parameters shown in the list have to belong to the same element. If you want to refer to a parameter belonging to another element, you can customize the shape.
-> - When working with stencils in Visio, make sure the stencils are open in the *Shapes* task pane and that macros are enabled.
 
 ### Where to find the DataMiner stencils
 
@@ -154,13 +178,19 @@ DataMiner upgrade packages always contain the latest versions of the DataMiner s
 
 If you want to download a zip package with the latest versions of the DataMiner stencils, go to [Skylicons](https://skyline.be/skylicons/), and click **download visio stencil** in the website's header bar.
 
+### Additional remarks regarding the DataMiner stencils
+
+- When working with stencils in Visio, make sure the stencils are open in the *Shapes* task pane and that macros are enabled.
+- When you edit a Visio drawing from within DataMiner Cube, the stencils will be loaded automatically. In Microsoft Visio, you will find them in the list of stencils under *DataMiner*.
+- In some cases, no *DataMiner* section will be available in the list of stencils the first time you open a Visio drawing after upgrading to a newer DataMiner version. If so, exit Microsoft Visio and open it again.
+
 ## Skylicons
 
 All standard Skyline icons can be downloaded from the [Skylicons](https://skyline.be/skylicons/) website in PNG, XAML or SVG format.
 
-To request a new icon or to request an update of an existing icon, send an email to [team.marketing@skyline.be](mailto:team.marketing@skyline.be).
-
 By clicking **download visio stencil** in the header bar of the [Skylicons](https://skyline.be/skylicons/) website, you can download a package with the latest versions of the DataMiner stencils. One of those stencils contains the entire collection of Skyline icons.
+
+> To request a new icon or to request an update of an existing icon, send an email to [team.marketing@skyline.be](mailto:team.marketing@skyline.be).
 
 ## More information
 
