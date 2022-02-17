@@ -90,25 +90,25 @@ Microsoft Visio allows the use of so-called stencil files, which contain a colle
 
 Skyline provides the following DataMiner stencil files that will help you design Visio drawings according to the DataMiner house style:
 
-- Icons 
-- Buttons
-- KPI
+- [Icons](#icons) 
+- [Buttons](#buttons)
+- [KPI](#kpi)
 
 Typically, a Visio shape will consist of a number of different shapes, grouped together, each with a number of shape data fields. These fields are used to configure DataMiner functionality when a drawing is used in Visual Overview. Previously, the person who designed a drawing had to keep track of which shape data fields were configured in which shapes. When adding a shape from a DataMiner stencil, you only have to enter the group-level shape data. All other shape data in the underlying child-level shapes will be added automatically by means of macros. Note that the names of automatically added shape data fields will all start with an underscore character.
 
 ### Icons
 
-The icons stencil contains all icons found on the [Skylicons](https://skyline.be/skylicons/) website.
+The Icons stencil contains all icons found on the [Skylicons](https://skyline.be/skylicons/) website.
 
 See also [Skylicons](#skylicons)
 
 ### Buttons
 
-The buttons stencil contains three types of buttons that can be placed on Data pages.
+The Buttons stencil contains three types of buttons that can be placed on Data pages.
 
 #### Action button
 
-Clicking an action button will cause an action to be performed. Use this type of button to change the state of e.g. a parameter, to launch an interactive Automation script, etc.
+Clicking an action button will cause an action to be performed immediately. Use this type of button to change the state of e.g. a parameter, to launch an interactive Automation script, etc.
 
 Action buttons are rounded rectangles.
 
@@ -116,11 +116,11 @@ Action buttons are rounded rectangles.
 
 A toggle button is used to switch between two states.
 
-It is represented as a slider with text on its left or its right (depending on the alignment). This text can either be supplied by read parameter values or be custom text.
+It is represented as a slider with text on its left or its right (depending on the button's alignment). This text can either be supplied by read parameter values or be custom text configured for each of the states.
 
 #### Link button
 
-A link button will open a pop-up window containing a message.
+A link button will open a pop-up window containing auxiliary information.
 
 Link buttons are rectangles of which the button text will always end with an ellipsis ("...").
 
