@@ -1,0 +1,625 @@
+apiRules:
+- exclude:
+    uidRegex: ^Tamir\.SharpSsh\.jsch\.ChannelSftp$
+    type: Type
+- exclude:
+    uidRegex: ^Tamir\.SharpSsh\.jsch\.HostKey$
+    type: Type
+- exclude:
+    uidRegex: ^Tamir\.SharpSsh\.jsch\.JSchException$
+    type: Type
+- exclude:
+    uidRegex: ^Tamir\.SharpSsh\.java\.Exception$
+    type: Type
+- exclude:
+    uidRegex: ^SLDataGateway\.API\.Types\.Querying\.IQuery$
+    type: Type
+- exclude:
+    uidRegex: ^SLDataGateway\.API\.Types\.Querying\.IQuery`1$
+    type: Type
+- exclude:
+    uidRegex: ^SLDataGateway\.API\.Types\.Repositories\.IDataSetRepository`1$
+    type: Type
+- exclude:
+    uidRegex: ^SLDataGateway\.API\.Types\.Repositories\.ISearchableRepository\.ProfileParameterCategory$
+    type: Type
+- exclude:
+    uidRegex: ^SLLoggerUtil\.LoggerCategoryUtil\.ILoggerCategory$
+    type: Type
+- exclude:
+    uidRegex: ^SLNetTypes\.DataMiner\.Net\.RedundancyGroupID$
+    type: Type
+- exclude:
+    uidRegex: ^SLNetTypes\.DataMiner\.Net\.ReservationInstanceID$
+    type: Type
+- exclude:
+    uidRegex: ^SLNetTypes\.DataMiner\.Net\.ServiceID$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.APIDeployment\.Url\.Blocks\.SelectorBlock$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.AppPackages\.AppConfigurationContext$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.AppPackages\.AppInstallContext$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.AppPackages\.AppUninstallContext$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Apps\.DataMinerObjectModel\.DomDefinitionId$
+    type: Type
+- exclude:
+    uidRegex: ^SLNetTypes\.Apps\.DataMinerObjectModel\.Actions\.ExecuteScriptDomActionContext$
+    type: Type    
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Apps\.DataMinerObjectModel\.DomInstanceId$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Apps\.ManagerStore\.IAdditionalOperationMeta$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.AutomationScriptID$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Connection$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.DMAObjectRef$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.DerivedElementID$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ElementID$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ErrorData$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.GuidDMAObjectRefExtentions$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.GuidWithModuleIdDMAObjectRef`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.History\.CrudType$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IConnection$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IDMAObjectRef$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IDMAObjectRefVisitor$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IGuidDMAObjectRef$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IGuidDMAObjectRef`1$
+    type: Type    
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IManager\.Helper\.IManagerErrorEventArgs$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IManager\.Helper\.IManagerHelper`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IManager\.Helper\.IManagerRequestResponseEventArgs$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IManager\.Messages\.IManagerEventMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IManager\.Objects\.IManagerFilterableObject$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IManager\.Objects\.IManagerIdentifiableObject`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IManager\.Objects\.IManagerObject$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.IModuleIdReferencer$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ITracingData$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Info\.IDObjects\.Abstracts\.IDMAObjectRefToStringParser$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.InfoData$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Jobs\.JobDomain$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Jobs\.JobDomainCrudHelperComponent$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ManagerStore\.ICrudHelperComponent`1$
+    type: Type
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.MediationSnippets\.MediationSnippetCrudHelperComponent$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.MediationSnippets\.MediationSnippet$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AlarmEventMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AlarmTemplateCondition$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AlarmTemplateEventMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AutomationCheckType$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AutomationScriptAttachOptions$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DMSMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DynamicTableIndicesResponse$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ElementInfoEventMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.EventMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ExceptionMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetAlarmTemplateResponseMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetProfileDefinitionMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetProfileInstanceMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetProfileManagerParameterMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetProtocolInfoResponseMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.IProfileManagerRequestMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.LiteRedundancyGroupInfoEvent$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ManagerStoreCrudResponse`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ManagerStoreNextPagingRequest`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ManagerStorePagingResponse`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ManagerStoreStartPagingRequest`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ParameterValue$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ParameterVirtualAttribute$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ProfileManagerResponseMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PropertyInfo$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PropertyInfo.DataTypes$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.RedundancyMode$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.AlarmID$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.CompiledFilter`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.DynamicListExposer`2$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.FilterCompiler`1$
+    type: Type
+- exclude:
+    uidRegex: Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.FullObjectExposer`1
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.ManagedFilter`2$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.PagingCookie$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.ParameterID$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SetParameterMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SetParameterTableIndexPreference
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SetProfileDefinitionMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SetProfileInstanceMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SetProfileManagerParameterMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.TargetedClientRequestMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ClientRequestMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.IAutomationScriptResponseMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.TicketingGatewayEventMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.TicketingResponseMessage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ownership\.SimpleByteReader$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ownership\.SimpleByteWriter$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.PersistentConnectionStore$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Profiles\.Events\.ProfileManagerEventArgs$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Profiles\.ProfileManagerConfigurationHelper$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Profiles\.TableProfileDefinition$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ResourceManager\.Helpers\.PieceMeal$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ResourceManager\.Objects\.StartActionsFailureErrorData$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.SLDataGateway\.Types\.FullTableDefinition`1$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.SRM\.Capabilities\.ResourceCapabilityUsage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.SRM\.Capacities\.MultiResourceCapacityUsage$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ServiceManager\.Objects\.SRMServiceState$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ServiceProfiles\.ServiceProfileDefinition$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ServiceProfiles\.ServiceProfileInstance$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing\.Helpers\.Visualization\.VisualFieldEnum$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing\.Objects\.TicketFieldConcatItem$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing\.Interfaces\.ITicketLicenseCheckable$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Tickets\.TicketCrudHelperComponent$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Tickets\.TicketFieldResolverCrudHelperComponent$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Time\.TimeRange$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ToolsSpace\.Collections\.JSONSerializableDictionary$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ViewID$
+    type: Type
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.WarningData$
+    type: Type
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Storage\.Types\.DataTypes
+    type: Namespace
+- exclude:
+    uidRegex: ^SLLoggerUtil\.IProvidedLogger
+    type: Type
+- include:
+    uidRegex: ^SLLoggerUtil\.
+    type: Namespace   
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Library\.Common
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Library\.Protocol
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Library\.Automation
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Automation$
+    type: Namespace
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Scripting\.ConcreteSLProtocol$
+    type: Type
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Scripting$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.AppInstaller$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.AppInstaller\.ContentParser$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.AppInstaller\.Helpers$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Apps\.Utils$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Automation$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.AlarmTemplateHelper$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.AlarmTemplateHelper\.Exceptions$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Correlation$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Jobs$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.GenericEnums$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.LogHelpers$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ManagerStore$
+    type: Namespace
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AutomationCheck$
+    type: Class
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AutomationMemoryInfoPosition$
+    type: Class
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AutomationScriptOptions$
+    type: Class    
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.BA$
+    type: Class
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DataMinerUserGroupElement$
+    type: Class    
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DataMinerUserGroupParameter$
+    type: Class
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DataMinerUserGroupView$
+    type: Class 
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.Parameter$
+    type: Class 
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ParameterVirtualInfo$
+    type: Class 
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PPPPSA$
+    type: Class 
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PPPSA$
+    type: Class 
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PPSA$
+    type: Class 
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PropertyInfo$
+    type: Class 
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PSA$
+    type: Class 
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PUIA$
+    type: Class
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.UIA$
+    type: Class
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Messages
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.MediaSnippets$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Profiles$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ProfileManager\.Export$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ProfileManager\.Export\.Exceptions$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ProfileManager\.Import$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ProfileManager\.Import\.Exceptions$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Records$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Sections$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.ServiceProfiles$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.SimulationHelper$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing\.Helpers$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing\.Helpers\.Visualization$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing\.Interfaces$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing\.Objects$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Ticketing\.Validators$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Tickets$
+    type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Trending$
+    type: Namespace
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.
+    type: Namespace
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.*$
+    type: Namespace
+- exclude:
+    uidRegex: ^Skyline\.DataMiner\.Net\.*$
+    type: Namespace
+- exclude:
+    uidRegex: ^SLDataGateway\.
+    type: Namespace
+- exclude:
+    uidRegex: ^System$
+    type: Namespace
+- exclude:
+    uidRegex: ^XCrypt$
+    type: Namespace
+- exclude:
+    uidRegex: ^Amib\.Threading$
+    type: Namespace
+- exclude:
+    hasAttribute:
+      uid: System.ComponentModel.EditorBrowsableAttribute
+      ctorArguments:
+      - System.ComponentModel.EditorBrowsableState.Never
+attributeRules:
+- exclude:
+    uidRegex: ^System\.ComponentModel\.Design$
+    type: Namespace
+- exclude:
+    uidRegex: ^System\.ComponentModel\.Design\.Serialization$
+    type: Namespace
+- exclude:
+    uidRegex: ^System\.Xml\.Serialization$
+    type: Namespace
+- exclude:
+    uidRegex: ^System\.Web\.Compilation$
+    type: Namespace
+- exclude:
+    uidRegex: ^System\.Runtime\.Versioning$
+    type: Namespace
+- exclude:
+    uidRegex: ^System\.Runtime\.ConstrainedExecution$
+    type: Namespace
+- exclude:
+    uidRegex: ^System\.EnterpriseServices$
+    type: Namespace
+- exclude:
+    uidRegex: ^System\.Diagnostics\.CodeAnalysis$
+    type: Namespace
+- include:
+    uidRegex: ^System\.Diagnostics\.(ConditionalAttribute|EventLogPermissionAttribute|PerformanceCounterPermissionAttribute)$
+    type: Type
+- exclude:
+    uidRegex: '^System\.Diagnostics\.[^.]+$'
+    type: Type
+- include:
+    uidRegex: ^System\.ComponentModel\.(BindableAttribute|BrowsableAttribute|ComplexBindingPropertiesAttribute|DataObjectAttribute|DefaultBindingPropertyAttribute|ListBindableAttribute|LookupBindingPropertiesAttribute|SettingsBindableAttribute|TypeConverterAttribute)$
+    type: Type
+- exclude:
+    uidRegex: '^System\.ComponentModel\.[^.]+$'
+    type: Type
+- exclude:
+    uidRegex: ^System\.Reflection\.DefaultMemberAttribute$
+    type: Type
+- exclude:
+    uidRegex: ^System\.CodeDom\.Compiler\.GeneratedCodeAttribute$
+    type: Type
+- include:
+    uidRegex: ^System\.Runtime\.CompilerServices\.ExtensionAttribute$
+    type: Type
+- exclude:
+    uidRegex: '^System\.Runtime\.CompilerServices\.[^.]+$'
+    type: Type
+- include:
+    uidRegex: ^System\.Runtime\.InteropServices\.(ComVisibleAttribute|GuidAttribute|ClassInterfaceAttribute|InterfaceTypeAttribute)$
+    type: Type
+- exclude:
+    uidRegex: '^System\.Runtime\.InteropServices\.[^.]+$'
+    type: Type
+- include:
+    uidRegex: ^System\.Security\.(SecurityCriticalAttribute|SecurityTreatAsSafeAttribute|AllowPartiallyTrustedCallersAttribute)$
+    type: Type
+- exclude:
+    uidRegex: '^System\.Security\.[^.]+$'
+    type: Type
+- include:
+    uidRegex: ^System\.Web\.UI\.(ControlValuePropertyAttribute|PersistenceModeAttribute|ValidationPropertyAttribute|WebResourceAttribute|TemplateContainerAttribute|ThemeableAttribute|TemplateInstanceAttribute)$
+    type: Type
+- exclude:
+    uidRegex: '^System\.Web\.UI\.[^.]+$'
+    type: Type
+- include:
+    uidRegex: ^System\.Windows\.Markup\.(ConstructorArgumentAttribute|DesignerSerializationOptionsAttribute|ValueSerializerAttribute|XmlnsCompatibleWithAttribute|XmlnsDefinitionAttribute|XmlnsPrefixAttribute)$
+    type: Type
+- exclude:
+    uidRegex: '^System\.Windows\.Markup\.[^.]+$'
+    type: Type

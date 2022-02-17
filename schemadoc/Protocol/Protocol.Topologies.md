@@ -1,0 +1,17 @@
+---
+uid: Protocol.Topologies
+---
+
+# Topologies element
+
+Contains several Topology tags, each representing the connections in a diagram displayed in an EPM (formerly known as CPE) element.
+
+## Parent
+
+[Protocol](xref:Protocol)
+
+## Children
+
+|Name|Occurrences|Description|
+|--- |--- |--- |
+|&nbsp;&nbsp;[Topology](xref:Protocol.Topologies.Topology)|[0, *]|Defines a topology.|

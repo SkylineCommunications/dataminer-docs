@@ -1,4 +1,19 @@
 {
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/**.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "disableGitFeatures": true,
+      "disableDefaultFilter": false,
+      "filter": "filterConfig.yml"
+    }
+  ],
   "build": {
     "content": [
       {
@@ -10,6 +25,18 @@
           "toc.yml",
           "*.md"
         ]
+      },
+	  {
+        "files": [
+          "schemadoc/**.md",
+          "schemadoc/toc.yml"
+        ]
+      },
+	  {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
       }
     ],
     "resource": [
@@ -17,10 +44,13 @@
         "files": [
           "images/**",
           "user-guide/images/**",
-          "develop/images/**"
+          "develop/images/**",
+		  "schemadoc/Protocol/images/**",
+		  "schemadoc/Automation/images/**"
         ]
       }
     ],
+	"overwrite": "overwrite/*.md",
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
