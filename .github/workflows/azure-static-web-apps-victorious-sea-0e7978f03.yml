@@ -19,11 +19,12 @@ jobs:
           submodules: true
       - name: choco install docfx
         run: |
-          choco install docfx -y --version=2.58
+          choco install docfx -y
         env:
           CI: true
       - name: build documentation
         run: |
+          docfx metadata
           docfx build -t default,templates/slc_template
       - name: publish results
         uses: actions/upload-artifact@v2.2.4

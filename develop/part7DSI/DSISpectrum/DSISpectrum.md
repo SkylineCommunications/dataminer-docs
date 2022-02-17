@@ -25,7 +25,8 @@ In this section:
 
 - [Implementation routine](xref:Implementation_routine)
 
-> [!TIP]
-> See also:
-> DataMiner Protocol Markup Language:<br> -  Protocol.Display [type](xref:MARProtocolDisplay#type)
->
+## See also
+
+DataMiner Protocol Markup Language:
+
+- [Protocol.Display@type](xref:Protocol.Display-type)

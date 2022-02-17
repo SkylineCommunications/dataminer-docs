@@ -1245,7 +1245,7 @@ $(function () {
     $("code.hljs").each(function() {
         var $this = $(this);
         var language = /lang-(.+?)(\s|$)/.exec($this.attr("class"))[1].toUpperCase();
-        if (language === 'CS') {
+        if (language === 'CS' || language == "CSHARP") {
             language = "C#";
         }
         if (language === 'JS') {

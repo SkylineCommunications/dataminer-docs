@@ -1,0 +1,26 @@
+---
+uid: ConnectionsHttp
+---
+
+# HTTP
+
+In this section:
+
+- <xref:ConnectionsHttpIntroduction>
+- <xref:ConnectionsHttpImplementing>
+- <xref:ConnectionsHttpElementConfiguration>
+- <xref:ConnectionsHttpDynamicIp>
+- <xref:ConnectionsHttpHttps>
+- <xref:ConnectionsHttpParsingHtml>
+- <xref:ConnectionsHttpParsingJson>
+- <xref:ConnectionsHttpPingGroup>
+- <xref:ConnectionsHttpExamples>
+
+## See also
+
+DataMiner Protocol Markup Language:
+
+- [Protocol.HTTP](xref:Protocol.HTTP)
+- [Protocol.Params.Param.Type@options](xref:Protocol.Params.Param.Type-options):
+  - [ssh pwd](xref:Protocol.Params.Param.Type-options#ssh-pwd)
+  - [ssh username](xref:Protocol.Params.Param.Type-options#ssh-username)
