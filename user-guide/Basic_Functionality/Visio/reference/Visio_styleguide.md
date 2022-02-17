@@ -131,23 +131,40 @@ See also [Skylicons](#skylicons)
 
 The Buttons stencil contains three types of buttons that can be placed on Data pages.
 
-#### Action button
+- [Action buttons](#action-buttons) 
+- [Toggle buttons](#toggle-buttons)
+- [Link buttons](#link-buttons)
 
-Clicking an action button will cause an action to be performed immediately. Use this type of button to change the state of e.g. a parameter, to launch an interactive Automation script, etc.
+#### Action buttons
+
+Clicking an action button will cause an action to be performed immediately. Use this type of button to change the value of e.g. a parameter or a session variable, to launch a non-interactive Automation script, etc.
 
 Action buttons are rounded rectangles.
 
-#### Toggle button
+#### Toggle buttons
 
-A toggle button is used to switch between two states.
+A toggle button is used to switch between two values/states.
 
 It is represented as a slider with text on its left or its right (depending on the button's alignment). This text can either be supplied by read parameter values or be custom text configured for each of the states.
 
-#### Link button
+The color of a toggle button should be set to the ThemeAccentColor.
 
-A link button will open a pop-up window containing auxiliary information.
+#### Link buttons
 
-Link buttons are rectangles of which the button text will always end with an ellipsis ("...").
+A link button is used to open a pop-up window containing auxiliary information, to start an interactive Automation script, etc.
+
+Link buttons are rectangles of which the button text will always end with an ellipsis ("..."). This ellipsis will indicate that further action will be necessary after clicking the button.
+
+#### Additional remarks regarding buttons
+
+As to text on buttons
+
+- Use short, clear words.
+- Preferably use one word only.
+
+    If necessary​, use up to a maximum of three words. If a longer description is needed, use a tooltip.
+
+When multiple buttons belong to the same context​, consider grouping them under a label
 
 ### KPI
 
