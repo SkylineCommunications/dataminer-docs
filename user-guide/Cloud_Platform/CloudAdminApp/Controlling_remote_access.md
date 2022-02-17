@@ -34,4 +34,4 @@ If you have the Owner or Admin role on DCP, you can enable or disable the remote
 
 1. Click the *Edit* button at the top of the pane on the left. 
 
-1. Set the Remote Access setting to *On* or *Off*, depending on whether you want this to be enabled or not.
+1. Set the *Remote Access* setting to *On* or *Off*, depending on whether you want this to be enabled or not.

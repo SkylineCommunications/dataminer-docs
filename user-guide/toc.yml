@@ -2227,6 +2227,8 @@
           topicUid: Giving_users_access_to_cloud_features
         - name: Controlling remote access
           topicUid: Controlling_remote_access
+        - name: Controlling cloud feed data offloads
+          topicUid: Controlling_cloudfeed_data_offloads
 - name: DataMiner Professional Services
   topicUid: Part52ProfessionalServices
   items:

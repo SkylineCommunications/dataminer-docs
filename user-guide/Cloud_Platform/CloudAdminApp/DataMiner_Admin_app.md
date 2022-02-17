@@ -12,5 +12,7 @@ The Admin app is intended for the management of your cloud-connected DataMiner S
 
 - [Controlling remote access](xref:Controlling_remote_access)
 
+- [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads)
+
 > [!WARNING]
 > This app is currently still being developed. As a consequence, some actions in the app are not yet supported and some interactions have not yet been streamlined. Moreover, all information in this section is subject to change.
