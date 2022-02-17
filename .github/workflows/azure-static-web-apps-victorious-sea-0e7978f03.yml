@@ -22,9 +22,11 @@ jobs:
           choco install docfx -y
         env:
           CI: true
-      - name: build documentation
+      - name: build metadata
         run: |
           docfx metadata
+      - name: build documentation
+        run: |
           docfx build -t default,templates/slc_template
       - name: publish results
         uses: actions/upload-artifact@v2.2.4
