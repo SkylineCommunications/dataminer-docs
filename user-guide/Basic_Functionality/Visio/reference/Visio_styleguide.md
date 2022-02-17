@@ -172,7 +172,7 @@ The KPI stencil contains the following building blocks. Each will show read-only
 
 - Single parameters (with or without icons)
 - Parameter list (normal/compact/multi)
-- Connection blocks
+- Connection blocks to be used in diagrams
 
 If you want to replace an icon in a KPI, do the following:
 
