@@ -590,6 +590,21 @@ For example:
 [ServiceDefinition:[reservation:[this service],ServiceDefinitionID],Actions]
 ```
 
+From DataMiner 10.2.0/10.2.3 onwards, you can pass a node label in this placeholder to look up a node ID. For example:
+
+```txt
+[ServiceDefinition:aaaa-bbb-ccc-ddd,NodeID|NodeLabel=Primary Receiver]
+```
+
+You can for instance use this to find a resource by passing a label of a service definition node. For example:
+
+```txt
+[Reservation:[this service],ResourceID|NodeID=[ServiceDefinition:aaaa-bbb-ccc-ddd,NodeID|NodeLabel=Primary Receiver]]
+```
+
+> [!NOTE]
+> Passing a label of a service definition node is preferable over passing the service definition node ID, as this ID is susceptible to change.
+
 ### \[servicedefinitionfilter\]
 
 Reference to the row filter of an included table parameter (in a Visio file linked to a service).
