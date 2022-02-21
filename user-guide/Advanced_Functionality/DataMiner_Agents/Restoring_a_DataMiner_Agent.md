@@ -24,5 +24,4 @@ The following procedures are described in this section:
 > Do not use DMAUpgrade (System Display) to restore backups.
 
 > [!TIP]
-> See also:
-> <https://community.dataminer.services/video/backup-restoring-and-migrating-a-dataminer-agent/>
+> See also: [Backup – Restoring and migrating a DataMiner Agent](https://community.dataminer.services/video/backup-restoring-and-migrating-a-dataminer-agent/) on DataMiner Dojo.
