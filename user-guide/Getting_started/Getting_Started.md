@@ -15,12 +15,13 @@ uid: Part1GettingStarted
 
 - [Basic DataMiner functionality](xref:Part2BasicFunctionalities#basic-dataminer-functionality)
 
-### More on specific DataMiner modules
+### Find out all about the Cloud Platform
+
+- [DataMiner Cloud Platform](xref:Part51CloudPlatform)
+
+### More on specific DataMiner modules and apps
 
 - [Advanced DataMiner modules](xref:Part4AdvancedModules#advanced-dataminer-modules)
-
-### Discover our DataMiner Standard Apps
-
 - [DataMiner Standard Apps](xref:Part5StandardApps#dataminer-standard-apps)
 
 ### Are you a DataMiner Administrator?
@@ -33,4 +34,4 @@ uid: Part1GettingStarted
 - [Troubleshooting](xref:Part6Troubleshooting#troubleshooting)
 
 > [!NOTE]
-> For video demonstrations by subject-matter experts, practical use cases, and much more, go to:<br/><https://community.dataminer.services/videos/>.
+> For video demonstrations by subject-matter experts, practical use cases, and much more, go to <https://community.dataminer.services/videos/>.
