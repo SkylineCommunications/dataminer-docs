@@ -21,7 +21,7 @@ The *Facilities* subtab of the *Admin* tab consists of the following pages:
 
 - **View Settings**: Allows you to configure the rack view structure and to set prefixes for each level in the structure. You can also configure the following settings here:
 
-  - **Automatically Update Views**: If this setting is enabled, rack views will automatically be added or updated with elements based on the element properties detected in the DMS.
+  - **Automatically Update Views**: This setting is considered obsolete and is no longer available from IDP version 1.1.19 onwards. When this setting is selected, rack views are automatically added or updated with elements based on the element properties detected in the DMS. From IDP 1.1.19 onwards, this behavior is by default always activated.
 
   - **Automatically Remove Deleted Protocols**: If this setting is enabled, protocols that can no longer be found in the system are removed from the *Protocols Table*. If it is disabled, they remain in the table but are marked as *Deleted*.
 
