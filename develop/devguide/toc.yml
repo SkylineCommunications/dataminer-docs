@@ -333,6 +333,8 @@
         href: Connector/AdvancedDcfDataMinerClassLibrary.md
       - name: DCF Helper class
         href: Connector/AdvancedDcfHelper.md
+      - name: DCF best practices
+        href: Connector/AdvancedDcfBestPractices.md
     - name: Inter-element communication
       href: Connector/AdvancedInterElementCommunication.md
       items:

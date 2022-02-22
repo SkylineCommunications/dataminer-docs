@@ -20,3 +20,4 @@ In this section:
 - <xref:AdvancedDcfTables>
 - <xref:AdvancedDcfDataMinerClassLibrary>
 - <xref:AdvancedDcfHelper>
+- <xref:AdvancedDcfBestPractices>
