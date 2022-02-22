@@ -4,6 +4,8 @@ uid: LogicParameters
 
 # Parameters
 
+## Parameter types
+
 A protocol parameter is a versatile component. A parameter can represent a table, a table column, an internal placeholder to hold a value (e.g. a counter, a buffer), a UI component (e.g. a button), etc.
 
 > [!NOTE]
@@ -11,7 +13,7 @@ A protocol parameter is a versatile component. A parameter can represent a table
 
 The following subsections introduce the different types of parameters that are defined in DPML
 
-## Read, write, fixed and dummy parameters
+### Read, write, fixed and dummy parameters
 
 |Type  |Description  |
 |---------|---------|
@@ -42,7 +44,7 @@ In the example above, the Interprete tag is used to define the length of the fix
 
 A parameter of type dummy is typically used to hold data that is not of real interest, e.g. to hold part of the response that is not processed or to trigger a QAction.
 
-## Element information
+### Element information
 
 The following parameter types can be used to obtain element-related information as specified in the element wizard:
 
@@ -100,7 +102,7 @@ use in Interprete: numeric text, length 4, string
 -> bytes = 35414646 (ASCII values of bus address)
 > - When multiple connections are defined, the parameters of type "ip", "pollingip" and "bus" will show a semicolon-separated list of values.
 
-## DataMiner Agent information
+### DataMiner Agent information
 
 |Type  |Description  |
 |---------|---------|
@@ -111,7 +113,7 @@ use in Interprete: numeric text, length 4, string
 > - The value of these parameters is filled in by the DataMiner software. It is not possible to use a trigger on value change on these parameters to capture the value set by software.
 > - Parameters of types specified in this section cannot be displayed. To show the values of these parameters, define a parameter of type "read" and perform a "copy" action to copy the value of this parameter to the "read" parameter. Alternatively, a SendToDisplay method call (SLProtocol) can be used.
 
-## Internal parameters
+### Internal parameters
 
 When developing a protocol, a number of building blocks such as parameters, actions, triggers, etc. are specified. In addition to the parameters defined by the developer, a number of general internal parameters are defined for each element. These general parameters are all defined in the 65000 range. For an overview of these parameters, refer to <xref:ReservedIDsParameters>.
 
@@ -130,7 +132,7 @@ Since DataMiner version 9.0.1 (RN 12263), general parameters can be loaded dynam
 
 You can override the above-mentioned default behavior by adding a GeneralParameters tag to the protocol. In this tag, you can specify for each of the different types of general parameters whether you want these added to elements based on the protocol in question. Refer to [Protocol.GeneralParameters](xref:Protocol.GeneralParameters) in the DataMiner Protocol Markup Language section for more information.
 
-## Other parameter types
+### Other parameter types
 
 |Type  |Description  |
 |---------|---------|
@@ -144,3 +146,19 @@ You can override the above-mentioned default behavior by adding a GeneralParamet
 |response     |A parameter that contains multiple bytes can be split up into smaller pieces when it refers to another response. See [Parameters of type response](xref:ConnectionsSerialCreatingCommandsAndResponses#parameters-of-type-response).         |
 |trailer     |Parameter used to define the end of a frame. See [Header and trailer](xref:ConnectionsSerialCreatingCommandsAndResponses#header-and-trailer).         |
 |write bit     |Parameters of type "write bit" change data in the group. See [Write bit](xref:ConnectionsSerialCreatingCommandsAndResponses#write-bit).         |
+
+## Parameter change events
+
+When a parameter change triggers (e.g. by performing a protocol.SetParameter call), the following steps are executed:
+
+- If there are triggers that trigger on a change of the parameter, these are executed. If there are no triggers defined that trigger on this parameter but there are triggers defined that trigger on each parameter change (i.e. [Trigger\On](xref:Protocol.Triggers.Trigger.On) is set to "each"), these are executed.
+- If the parameter has one of the following options: [ssh username](xref:Protocol.Params.Param.Type-options#ssh-username), [ssh password](xref:Protocol.Params.Param.Type-options#ssh-pwd), [ssh options](xref:Protocol.Params.Param.Type-options#ssh-options), [dynamic ip](xref:Protocol.Params.Param.Type-options#dynamic-ip), then this setting is updated.
+- If the parameter has Param@save set to `true`, the value is saved.
+- If the paramete  has Param@setter set to `true`, the value gets copied to the corresponding read parameter.
+- If snmpSet, snmpSetAndGet, snmpSetWithWait or snmpSetAndGetWithWait is used, the corresponding SNMP operation is executed.
+- If there are QActions that trigger on this parameter [QAction@triggers](xref:Protocol.QActions.QAction-triggers), these are executed.
+- If [data distribution](xref:AdvancedInterElementCommunicationDataDistribution) is configured ([Param/Type@distribution](xref:Protocol.Params.Param.Type-distribution)), the value is distributed.
+- If the [dynamic SNMP Get](xref:Protocol.Params.Param.Type-options#dynamic-snmp-get) option or [dynamicSnmpGet](xref:Protocol.Params.Param.Type-dynamicSnmpGet) is used, the SNMP get is scheduled.
+
+> [!NOTE]
+> The [SLProtocol.SetParameterBinary](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterBinary(System.Int32,System.Byte[])) method (or Notify 177 [NT_SET_BINARY_DATA](xref:NT_SET_BINARY_DATA)) does not trigger change and therefore does not execute the steps metnioned above.
