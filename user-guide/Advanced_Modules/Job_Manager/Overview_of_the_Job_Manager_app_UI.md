@@ -11,7 +11,7 @@ You can access the Jobs Manager app via the link ``https://[MyDataMiner]/Jobs`` 
 
 The main page of the app consists of a header bar, a side panel and an overview panel. In DataMiner 10.0.0/10.0.2, some changes are implemented in the UI.
 
-## [From DataMiner 10.0.0/10.0.2 onwards](#tabs/DM10-0-0-10-0-2)
+## [From DataMiner 10.0.0/10.0.2 onwards](#tabs/tabid-1)
 
 - The header bar contains, from left to right:
 
@@ -74,7 +74,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
   > [!NOTE]
   > The timeline view is not available on small screens.
 
-## [Earlier DataMiner versions](#tabs/earlier-versions)
+## [Earlier DataMiner versions](#tabs/tabid-2)
 
 - The header bar contains, from left to right:
 
@@ -105,4 +105,4 @@ The main page of the app consists of a header bar, a side panel and an overview 
     > [!NOTE]
     > The timeline view is not available on small screens.
 
----
+***
