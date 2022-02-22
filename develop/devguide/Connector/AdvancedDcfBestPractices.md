@@ -47,7 +47,7 @@ Use the DCF Helper, which contains methods for you to create connections safely 
 
 External connections can be managed in several ways:
 
-- **Manager Element**: A manager element is responsible for creates connections between elements.
+- **Manager Element**: A manager element is responsible for creating connections between elements.
 - **Automation script**: An Automation script is used to edit connections (e.g. via the EditConnection SLNet message).
 - **Manual Configuration**: Users create and define the connections themselves.
 - **Distributed setup: element to element**: Each element manages its connections to other elements. Note: This is risky due to overlap between elements and needs to be managed properly.
