@@ -12,5 +12,7 @@ uid: Accessing_the_Sharing_module
     You will now see all data that others have shared with you.
 
 > [!NOTE]
-> - When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a DataMiner Cloud Platform account.
-> - For more information on how to share dashboards, see [Sharing a dashboard](xref:Sharing_a_dashboard).
+> When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a DataMiner Cloud Platform account.
+
+> [!TIP]
+> See also: [Sharing a dashboard](xref:Sharing_a_dashboard).

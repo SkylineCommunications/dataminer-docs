@@ -2,7 +2,7 @@
 uid: CloudAdminApp
 ---
 
-# DataMiner Admin app
+# DCP Admin app
 
 The Admin app is intended for the management of your cloud-connected DataMiner Systems. It also allows you to manage the details of your organization(s) on the DataMiner Cloud Platform.
 

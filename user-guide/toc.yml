@@ -2143,6 +2143,8 @@
           topicUid: Logging_on_to_the_DataMiner_Cloud_Platform
         - name: Connecting your DataMiner System to the cloud
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
+        - name: Linking your DataMiner account to your DCP account
+          topicUid: Linking_your_DataMiner_and_DCP_account
         - name: Cloud connection security
           topicUid: CloudConnectionSecurity
     - name: Project Collaboration
@@ -2190,10 +2192,10 @@
     - name: DataMiner Sharing
       topicUid: Sharing
       items:
-        - name: About the Sharing module
-          topicUid: About_the_Sharing_module
         - name: Accessing the Sharing module
           topicUid: Accessing_the_Sharing_module
+        - name: Managing your shares
+          topicUid: Managing_your_shares
     - name: DataMiner Community
       topicUid: Community
       items:

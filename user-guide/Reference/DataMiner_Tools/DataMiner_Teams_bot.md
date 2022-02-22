@@ -6,6 +6,12 @@ uid: DataMiner_Teams_bot
 
 If your DataMiner System is connected to the cloud with a recent version of the DataMiner Cloud Pack (2.2 or higher), you can interact with your DataMiner System in Microsoft Teams using the DataMiner Teams bot.
 
+> [!NOTE]
+> We highly recommend that you install the latest version of the DataMiner Cloud Pack. With older versions, not all DataMiner Teams bot features may be available.
+
+> [!TIP]
+> See also: [DataMiner Cloud Platform](xref:Part51CloudPlatform)
+
 ## DataMiner Teams bot installation
 
 To install the DataMiner Teams bot:
@@ -44,6 +50,9 @@ When you start a conversation with the Teams bot, you will first need to log in:
    1. Log in with your DataMiner account.
 
    1. Click *Link accounts*.
+
+> [!NOTE]
+> The DataMiner Teams bot can also be used in group chats and channel conversations.
 
 ## Available options
 
