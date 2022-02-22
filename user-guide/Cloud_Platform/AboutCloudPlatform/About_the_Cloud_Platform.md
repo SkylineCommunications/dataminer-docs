@@ -10,4 +10,6 @@ In this section:
 
 - [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
+- [Linking your DataMiner account to your DCP account](xref:Linking_your_DataMiner_and_DCP_account)
+
 - [Cloud connection security](xref:CloudConnectionSecurity)
