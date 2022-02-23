@@ -725,7 +725,10 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 177 call <see href="xref:NT_SET_BINARY_DATA">NT_SET_BINARY_DATA</see>.</description>
 		///			</item>
 		///			<item>
-		///				<description>Setting a parameter value using this method does not trigger a change event.</description>
+		///				<description>Only supported for parameters with <see href="xref:Protocol.Params.Param.Interprete.LengthType">LengthType</see> set to <c>fixed</c>, <c>next param</c> or <c>last next param</c>. For parameters with LengthType set to <c>fixed</c>, the number of bytes that will be set is limited to the value specified in <see href="xref:Protocol.Params.Param.Interprete.Length">Length</see>.</description>
+		///			</item>
+		///			<item>
+		///				<description>Setting a parameter value using this method does not trigger a change event. Refer to <see href="xref:LogicParameters#parameter-change-events"/> for more information on the implications.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>

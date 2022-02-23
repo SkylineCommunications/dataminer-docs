@@ -24,9 +24,9 @@ protocol.NotifyProtocol(177/*NT_SET_BINARY_DATA*/ , parameterID, data);
 
 ## Remarks
 
-- Setting a parameter value using this method does not trigger a change event.
-
+- Only supported for parameters with [LengthType](xref:Protocol.Params.Param.Interprete.LengthType) set to `fixed`, `next param` or `last next param`. For parameters with LengthType set to `fixed`, the number of bytes that will be set is limited to the value specified in [Length](xref:Protocol.Params.Param.Interprete.Length).
+- Setting a parameter value using this method does not trigger a change event. Refer to [Parameter change events](xref:LogicParameters#parameter-change-events) for more information on the implications.
 
 ## See also
 
-- SetParameterBinary
+- [SLProtocol.SetParameterBinary](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterBinary(System.Int32,System.Byte[]))
