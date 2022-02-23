@@ -697,17 +697,17 @@ Permission to generate SNMP MIB files based on DataMiner protocols.
 
 Permission to access the alarm templates user interface.
 
-#### Modules \> Protocols & Templates \> Alarm templates \> Add alarm templates
+#### Modules \> Protocols & Templates \> Alarm templates \> Add
 
-Permission to create alarm templates.
+Permission to create alarm templates. Prior to DataMiner 10.2.0/10.2.3, this user permission is called "Add alarm templates".
 
-#### Modules \> Protocols & Templates \> Alarm templates \> Edit alarm templates
+#### Modules \> Protocols & Templates \> Alarm templates \> Edit
 
-Permission to update alarm templates.
+Permission to update alarm templates. Prior to DataMiner 10.2.0/10.2.3, this user permission is called "Edit alarm templates".
 
-#### Modules \> Protocols & Templates \> Alarm templates \> Delete alarm templates
+#### Modules \> Protocols & Templates \> Alarm templates \> Delete
 
-Permission to delete alarm templates.
+Permission to delete alarm templates. Prior to DataMiner 10.2.0/10.2.3, this user permission is called "Delete alarm templates".
 
 ### Modules \> Protocols & Templates \> Trend templates
 
@@ -1588,9 +1588,9 @@ Permission to see and control the background tasks of all users.
 
 Permission to execute SQL queries against the general or offload database.
 
-#### Modules \> System configuration \> Tools \> Best practices analyzer \> Read
+#### Modules \> System configuration \> Tools \> Best practices analyzer \> UI Available
 
-Permission to read a BPA test. Available from DataMiner 10.0.9 onwards.
+Permission to read a BPA test. Available from DataMiner 10.0.9 onwards. Prior to DataMiner 10.2.0/10.2.3, this user permission is called "Read".
 
 #### Modules \> System configuration \> Tools \> Best practices analyzer \> Add/Edit
 
