@@ -70,7 +70,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
     - To customize the name of the table containing the snapshot data in the offload database, specify a custom name next to *Remote table name*.
 
-    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the final option *Only keep the latest parameter value in the database* is not selected. If all values should be kept, make sure the option is selected.
+    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the option *Only keep the latest parameter value in the database* is selected. If this option is not selected, all values will be kept.
 
 ## Disabling data offloads to the offload database on element level
 
