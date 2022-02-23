@@ -149,16 +149,16 @@ You can override the above-mentioned default behavior by adding a GeneralParamet
 
 ## Parameter change events
 
-When a parameter change triggers (e.g. by performing a protocol.SetParameter call), the following steps are executed:
+When a parameter change triggers (e.g. when a protocol.SetParameter call is performed), the following steps are executed:
 
-- If there are triggers that trigger on a change of the parameter, these are executed. If there are no triggers defined that trigger on this parameter but there are triggers defined that trigger on each parameter change (i.e. [Trigger\On](xref:Protocol.Triggers.Trigger.On) is set to "each"), these are executed.
+- If there are triggers that trigger on a change of the parameter, these are executed. If there are no triggers defined that trigger on this parameter, but there are triggers defined that trigger on each parameter change (i.e. [Trigger\On](xref:Protocol.Triggers.Trigger.On) is set to "each"), these are executed.
 - If the parameter has one of the following options: [ssh username](xref:Protocol.Params.Param.Type-options#ssh-username), [ssh password](xref:Protocol.Params.Param.Type-options#ssh-pwd), [ssh options](xref:Protocol.Params.Param.Type-options#ssh-options), [dynamic ip](xref:Protocol.Params.Param.Type-options#dynamic-ip), then this setting is updated.
 - If the parameter has Param@save set to `true`, the value is saved.
-- If the paramete  has Param@setter set to `true`, the value gets copied to the corresponding read parameter.
+- If the parameter has Param@setter set to `true`, the value gets copied to the corresponding read parameter.
 - If snmpSet, snmpSetAndGet, snmpSetWithWait or snmpSetAndGetWithWait is used, the corresponding SNMP operation is executed.
 - If there are QActions that trigger on this parameter [QAction@triggers](xref:Protocol.QActions.QAction-triggers), these are executed.
 - If [data distribution](xref:AdvancedInterElementCommunicationDataDistribution) is configured ([Param/Type@distribution](xref:Protocol.Params.Param.Type-distribution)), the value is distributed.
 - If the [dynamic SNMP Get](xref:Protocol.Params.Param.Type-options#dynamic-snmp-get) option or [dynamicSnmpGet](xref:Protocol.Params.Param.Type-dynamicSnmpGet) is used, the SNMP get is scheduled.
 
 > [!NOTE]
-> The [SLProtocol.SetParameterBinary](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterBinary(System.Int32,System.Byte[])) method (or Notify 177 [NT_SET_BINARY_DATA](xref:NT_SET_BINARY_DATA)) does not trigger change and therefore does not execute the steps metnioned above.
+> The [SLProtocol.SetParameterBinary](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterBinary(System.Int32,System.Byte[])) method (or Notify 177 [NT_SET_BINARY_DATA](xref:NT_SET_BINARY_DATA)) does not trigger change and therefore does not execute the steps mentioned above.
