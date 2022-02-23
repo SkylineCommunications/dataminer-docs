@@ -336,6 +336,8 @@
           topicUid: AdvancedDcfDataMinerClassLibrary
         - name: DCF Helper class
           topicUid: AdvancedDcfHelper
+        - name: DCF best practices
+          topicUid: AdvancedDcfBestPractices
       - name: Inter-element communication
         topicUid: AdvancedInterElementCommunication
         items:
