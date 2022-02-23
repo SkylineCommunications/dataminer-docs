@@ -242,6 +242,9 @@ This placeholder can only be used inside another placeholder, or in a URL for a 
 
 - The primary IP address
 
+> [!NOTE]
+> From DataMiner 10.2.0/10.2.3 onwards, the URI scheme of the DMA (i.e. HTTP or HTTPS) is automatically applied when this placeholder is resolved, unless the placeholder does not represent the URI host (e.g. when it is used as a query argument).
+
 > [!TIP]
 > See also: [Special placeholders that can be used inside a URL](xref:Linking_a_shape_to_a_webpage#special-placeholders-that-can-be-used-within-a-url)
 
