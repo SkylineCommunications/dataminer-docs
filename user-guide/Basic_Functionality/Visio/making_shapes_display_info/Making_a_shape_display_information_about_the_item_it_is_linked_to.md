@@ -32,161 +32,157 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
 
   To display information about the element to which the shape is linked, specify:
 
-  - ALARM TEMPLATE
+  - *ALARM TEMPLATE*
 
-  - DATAMINER
+  - *DATAMINER*
 
-  - DESCRIPTION
+  - *DESCRIPTION*
 
-  - DISPLAY TYPE
+  - *DISPLAY TYPE*
 
-  - ELEMENT NAME
+  - *ELEMENT NAME*
 
-  - ELEMENT STATISTICS:...
+  - *ELEMENT STATISTICS:...*
 
-  - ID
+  - *ID*
 
-  - IMPACTED SERVICES
+  - *IMPACTED SERVICES*
 
-  - IP
+  - *IP*
 
-  - NAME
+  - *NAME*
 
-  - POLLING IP
+  - *POLLING IP*
 
-  - PORT INFO
+  - *PORT INFO*
 
-  - PROTOCOL
+  - *PROTOCOL*
 
-  - PROTOCOL TYPE
+  - *PROTOCOL TYPE*
 
-  - PROTOCOL VERSION
+  - *PROTOCOL VERSION*
 
-  - REDUNDANCY STATE
+  - *REDUNDANCY STATE*
 
-  - STATE
+  - *STATE*
 
-  - TREND TEMPLATE
+  - *TREND TEMPLATE*
 
-  - TYPE
+  - *TYPE*
 
 - **Services**:
 
   To display information about the service to which the shape is linked, specify:
 
-  - DATAMINER
+  - *DATAMINER*
 
-  - DESCRIPTION
+  - *DESCRIPTION*: The description of the service element.
 
-  - ELEMENT NAME
+  - *ELEMENT NAME*: Displays the element alias if one exists; otherwise the actual element name is displayed.
 
-  - FORCE ELEMENT NAME
+  - *FORCE ELEMENT NAME*: Displays the actual name of the service element, not the element alias.
 
-  - ID
+  - *ID*
 
-  - NAME
+  - *NAME*
 
-  - SERVICE DESCRIPTION *(enhanced service only)*
+  - *SERVICE DESCRIPTION*: The description of the service itself (enhanced service only).
 
-  - SERVICE STATISTICS:...
-
-  > [!NOTE]
-  > - **ELEMENT NAME vs. FORCE ELEMENT NAME:**<br>In Visio drawings linked to a service, shapes that display the name of a service element (using a shape data field **Info** set to “ELEMENT NAME”) display the element alias if one exists. If you want to override this default behavior and force a shape to display the actual name of a service element, use a shape data field **Info** set to “FORCE ELEMENT NAME”.
-  > - **DESCRIPTION vs. SERVICE DESCRIPTION:**<br>When a shape is linked to an enhanced service, and you set the Info field to “DESCRIPTION”, the shape will contain the description of the service element. To make it display the description of the service instead, set the Info field to “SERVICE DESCRIPTION”.
+  - *SERVICE STATISTICS:...*
 
 - **Redundancy groups**:
 
   To display information about the redundancy group to which the shape is linked, specify:
 
-  - DATAMINER
+  - *DATAMINER*
 
-  - DESCRIPTION
+  - *DESCRIPTION*
 
-  - ID
+  - *ID*
 
-  - NAME
+  - *NAME*
 
 - **Views**:
 
   To display information about the view to which the shape is linked, specify:
 
-  - ID
+  - *ID*
 
-  - NAME
+  - *NAME*
 
-  - VIEW NAME
+  - *VIEW NAME*
 
-  - VIEW STATISTICS:...
+  - *VIEW STATISTICS:...*
 
 - **Alarms**:
 
   To display information about the alarm to which the shape is linked, specify:
 
-  - ALARM ID
+  - *ALARM ID*
 
-  - ALARM TYPE
+  - *ALARM TYPE*
 
-  - ALARMPROPERTY:*PropertyName*
+  - *ALARMPROPERTY:\<PropertyName>*
 
-  - COMMENT
+  - *COMMENT*
 
-  - ELEMENT NAME
+  - *ELEMENT NAME*
 
-  - ELEMENT TYPE
+  - *ELEMENT TYPE*
 
-  - ELEMENTPROPERTY:*PropertyName*
+  - *ELEMENTPROPERTY:\<PropertyName>*
 
-  - OWNER
+  - *OWNER*
 
-  - PARAMETER DESCRIPTION
+  - *PARAMETER DESCRIPTION*
 
-  - PARAMETER KEY
+  - *PARAMETER KEY*
 
-  - RCA LEVEL
+  - *RCA LEVEL*
 
-  - REDUNDANCY STATE
+  - *REDUNDANCY STATE*
 
-  - ROOT ALARM ID
+  - *ROOT ALARM ID*
 
-  - ROOT TIME
+  - *ROOT TIME*
 
-  - SERVICE IMPACT
+  - *SERVICE IMPACT*
 
-  - SERVICES
+  - *SERVICES*
 
-  - SEVERITY
+  - *SEVERITY*
 
-  - SOURCE
+  - *SOURCE*
 
-  - STATUS
+  - *STATUS*
 
-  - TIME
+  - *TIME*
 
-  - USER STATUS
+  - *USER STATUS*
 
-  - VALUE
+  - *VALUE*
 
 - **Interfaces**:
 
   To display information about the DCF Interface to which the shape is linked, specify:
 
-  - CUSTOM NAME
+  - *CUSTOM NAME*
 
 - **Virtual function resources**:
 
   To display information about the virtual function resource to which the shape is linked, specify:
 
-  - NAME
+  - *NAME*
 
-  - ELEMENT NAME
+  - *ELEMENT NAME*
 
-  - RESOURCE NAME
+  - *RESOURCE NAME*
 
-  - RESOURCE ID
+  - *RESOURCE ID*
 
-  - FUNCTION NAME
+  - *FUNCTION NAME*
 
-  - IN USE: Displays "true" or "false" depending on whether the resource is being used in any bookings (supported from DataMiner 10.3.0/10.2.3 onwards).
+  - *IN USE*: Displays "true" or "false" depending on whether the resource is being used in any bookings (supported from DataMiner 10.3.0/10.2.3 onwards). This check is performed when the visual overview is opened or when the resource itself is changed. Note that using this placeholder may affect performance in case the system contains a large number of bookings.
 
 - **Bookings**: See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
 

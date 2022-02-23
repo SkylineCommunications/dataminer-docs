@@ -575,7 +575,7 @@ This syntax consists of the following components:
   - **InUse**: From DataMiner 10.3.0/10.2.3 onwards, you can specify *InUse* to make the placeholder indicate whether a resource is being used in any bookings (with the result "true" or "false"). This check is performed when the visual overview is opened or when the GUID or the resource itself is changed. Note that using this placeholder may affect performance in case the system contains a large number of bookings.
 
   ```txt
-  [Resource:<GUID>,<InUse]
+  [Resource:<GUID>,InUse]
   ```
 
 ### \[ServiceDefinition:\]
