@@ -186,6 +186,8 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
 
   - FUNCTION NAME
 
+  - IN USE: Displays "true" or "false" depending on whether the resource is being used in any bookings (supported from DataMiner 10.3.0/10.2.3 onwards).
+
 - **Bookings**: See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
 
 ## Placeholder for Info value in shape text
