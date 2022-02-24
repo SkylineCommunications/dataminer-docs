@@ -91,7 +91,7 @@ This tab consists of the following subtabs:
 
   - *Show details*: Displays detailed information on the connectivity discovery operation for the selected element in a pane on the right. This includes the status (*OK* or *NOK*), chassis ID and progress. It also includes the following two tables:
 
-    - *Discovered Connections*: Lists the connections that have been discovered on the element and for which the elements on both side of the connection have reported its existence. You can select a discovered connection and click *Provision DCF* to provision the connection and remove it from the *Discovered Connections* table.
+    - *Discovered Connections*: Lists the connections that have been discovered on the element and for which the elements on both side of the connection have reported its existence. You can select a discovered connection and click *Provision DCF* to provision the connection. The *Include Managed* toggle button at the top determines whether discovered connections that are already provisioned by IDP are included in the table or not.
 
     - *Unresolved Connections*: Lists the connections that were only discovered by the selected element, i.e. connections for which the element at the other side of the connection is still unknown. These connections cannot be provisioned in DCF.
 
