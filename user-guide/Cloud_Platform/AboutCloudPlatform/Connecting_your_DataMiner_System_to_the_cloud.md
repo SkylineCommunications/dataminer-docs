@@ -10,7 +10,7 @@ uid: Connecting_your_DataMiner_System_to_the_cloud
 
 To connect your DMS to the cloud:
 
-1. Verify that the following requirements are met:
+1. Verify that the following **requirements** are met:
 
     - All DataMiner Agents in the DataMiner System are running DataMiner version 10.1.1 or higher.
 
@@ -18,13 +18,16 @@ To connect your DMS to the cloud:
 
     - Each DMA that will be connected to the cloud can reach the following endpoints:
 
-        - *https://\*.dataminer.services/*
+        - ``https://*.dataminer.services/``
 
-        - *wss://tunnel.dataminer.services/*
+        - ``wss://tunnel.dataminer.services/``
 
-1. Download the appropriate DataMiner Cloud Pack installer from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
+1. Download the appropriate DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
 
-1. For Cloud Pack versions prior to 2.2.0: If your system has been configured to use HTTPS, and the localhost HTTP endpoint has been disabled, carry out the following additional steps:
+   > [!NOTE]
+   > Any DataMiner installation using version 10.1.12 or higher should already include .NET 5, so you can choose the package without .NET 5 if you are using such a version.
+
+1. **For Cloud Pack versions prior to 2.2.0**: If your system has been configured to use **HTTPS**, and the localhost HTTP endpoint has been disabled, carry out the following additional steps:
 
     1. Add an *appsettings.custom.json* file to installation directory of DataMiner Cloud Gateway. By default, this directory is *C:\\Program Files\\Skyline Communications\\DataMiner CloudGateway*.
 
@@ -44,27 +47,26 @@ To connect your DMS to the cloud:
     > [!NOTE]
     > As of DataMiner Cloud Pack 2.2.0, an HTTPS setup is automatically detected, so that you no longer need to configure this manually. However, you can still change the format of the secure URLs as described above if necessary. Make sure the HTTPS settings are configured in MaintenanceSettings.xml as described in the section [Configuring HTTPS settings in MaintenanceSettings.xml](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-settings-in-maintenancesettingsxml).
 
-1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following user permissions. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
+1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 
     From DataMiner 10.1.4 onwards:
 
-    - *System configuration* > *Tools* > *Admin tools* (no longer required from DataMiner 10.1.9 onwards)
+    - [System configuration > Cloud gateway > Connect to DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
 
-    - *System configuration* > *Cloud gateway* > *Connect to DCP*
+    - [System configuration > Cloud gateway > Disconnect from DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
 
-    - *System configuration* > *Cloud gateway* > *Disconnect from DCP*
+    - [System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) (no longer required from DataMiner 10.1.9 onwards)
 
     Prior to DataMiner 10.1.4:
 
-    - *System configuration* > *Tools* > *Admin tools*
+    - [System configuration > Cloud sharing > Connect to cloud](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
 
-    - *System configuration* > *Cloud sharing* > *Connect to cloud*
+    - [System configuration > Cloud sharing > Disconnect from cloud](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
 
-    - *System configuration* > *Cloud sharing* > *Disconnect from cloud*
+    - [System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools)
 
     > [!TIP]
-    > See also:
-    > [User rights](xref:User_rights)
+    > See also: [User rights](xref:User_rights)
 
 1. On the System Center \> *Cloud* page, click the *Connect* button. A pop-up browser window will open.
 
@@ -85,6 +87,8 @@ To connect your DMS to the cloud:
 1. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Registered*. This can take up to half a minute.
 
 1. While optional, we strongly recommend you verify your organizations' cloud connection, more information about this can be found on the [cloud connection verification](Cloud_connection_verification.md) page.
+
+
 
 > [!NOTE]
 > Make sure that all users that should be able to share data with the cloud have the necessary user permissions under [Modules > System configuration > Cloud sharing/gateway](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway).
