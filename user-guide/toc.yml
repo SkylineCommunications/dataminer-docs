@@ -2225,6 +2225,8 @@
       items:
         - name: Accessing the Admin app
           topicUid: Accessing_the_Admin_app
+        - name: Getting your DMS cloud connection verified
+          topicUid: CloudConnectionVerification
         - name: Giving users access to cloud features
           topicUid: Giving_users_access_to_cloud_features
         - name: Controlling remote access

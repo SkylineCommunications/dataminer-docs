@@ -86,7 +86,7 @@ To connect your DMS to the cloud:
 
 1. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Registered*. This can take up to half a minute.
 
-1. While optional, we strongly recommend you verify your organizations' cloud connection, more information about this can be found on the [cloud connection verification](Cloud_connection_verification.md) page.
+1. To ensure that you can make optimal use of your cloud connection, get your cloud connection verified. See [Getting your DMS cloud connection verified](xref:CloudConnectionVerification).
 
 > [!NOTE]
 > Make sure that all users that should be able to share data with the cloud have the necessary user permissions under [Modules > System configuration > Cloud sharing/gateway](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway).
