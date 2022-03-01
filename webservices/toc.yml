@@ -1,0 +1,1251 @@
+- name: Web Services (v1)
+  href: WS_v1\WS_v1.md
+  items:
+    - name: About the Web Services (v1)
+      href: WS_About_v1\WS_About_v1.md
+      items:
+        - name: Using the Web Services (v1)
+          href: WS_About_v1\Using_the_Web_Services_v1.md
+        - name: Interfaces and WSDL files
+          href: WS_About_v1\Interfaces_and_WSDL_files.md
+    - name: Methods (v1)
+      href: WS_Methods_v1_overview\WS_Methods_v1_overview.md
+      items:
+        - name: ActivateElement
+          href: WS_Methods_v1_methodspt1\WS_Methods_v1_methodspt1.md
+        - name: AddBookingAttachment
+          href: WS_Methods_v1_methodspt1\AddBookingAttachment.md
+        - name: AddCommentToAlarm
+          href: WS_Methods_v1_methodspt1\AddCommentToAlarm.md
+        - name: AddElementToPinned
+          href: WS_Methods_v1_methodspt1\AddElementToPinned.md
+        - name: AddElementToRecent
+          href: WS_Methods_v1_methodspt1\AddElementToRecent.md
+        - name: AddElementToView
+          href: WS_Methods_v1_methodspt1\AddElementToView.md
+        - name: AddElementsToRecent
+          href: WS_Methods_v1_methodspt1\AddElementsToRecent.md
+        - name: AddJobAttachment
+          href: WS_Methods_v1_methodspt1\AddJobAttachment.md
+        - name: AddOrUpdateJobsSectionDefinitionField
+          href: WS_Methods_v1_methodspt1\AddOrUpdateJobsSectionDefinitionField.md
+        - name: AddServiceToPinned
+          href: WS_Methods_v1_methodspt1\AddServiceToPinned.md
+        - name: AddServiceToRecent
+          href: WS_Methods_v1_methodspt1\AddServiceToRecent.md
+        - name: AddServicesToRecent
+          href: WS_Methods_v1_methodspt1\AddServicesToRecent.md
+        - name: AddTicketAttachment
+          href: WS_Methods_v1_methodspt1\AddTicketAttachment.md
+        - name: AddTicketField
+          href: WS_Methods_v1_methodspt1\AddTicketField.md
+        - name: AddTicketType
+          href: WS_Methods_v1_methodspt1\AddTicketType.md
+        - name: AddViewToPinned
+          href: WS_Methods_v1_methodspt1\AddViewToPinned.md
+        - name: AddViewToRecent
+          href: WS_Methods_v1_methodspt1\AddViewToRecent.md
+        - name: AddViewsToRecent
+          href: WS_Methods_v1_methodspt1\AddViewsToRecent.md
+        - name: AddVisioFile
+          href: WS_Methods_v1_methodspt1\AddVisioFile.md
+        - name: AddVisioFileToProtocol
+          href: WS_Methods_v1_methodspt1\AddVisioFileToProtocol.md
+        - name: AssignAlarmTemplate
+          href: WS_Methods_v1_methodspt1\AssignAlarmTemplate.md
+        - name: AssignVisioFileToProtocol
+          href: WS_Methods_v1_methodspt1\AssignVisioFileToProtocol.md
+        - name: AssignVisioFileToService
+          href: WS_Methods_v1_methodspt1\AssignVisioFileToService.md
+        - name: AssignVisioFileToView
+          href: WS_Methods_v1_methodspt1\AssignVisioFileToView.md
+        - name: CancelAsyncRequest
+          href: WS_Methods_v1_methodspt1\CancelAsyncRequest.md
+        - name: ChangePassword
+          href: WS_Methods_v1_methodspt1\ChangePassword.md
+        - name: ClearRecents
+          href: WS_Methods_v1_methodspt1\ClearRecents.md
+        - name: ConnectApp
+          href: WS_Methods_v1_methodspt1\ConnectApp.md
+        - name: ConnectAppAndInfo
+          href: WS_Methods_v1_methodspt1\ConnectAppAndInfo.md
+        - name: ConnectAppAndInfoStep2
+          href: WS_Methods_v1_methodspt1\ConnectAppAndInfoStep2.md
+        - name: ConnectAppAndInfoUsingTicket
+          href: WS_Methods_v1_methodspt1\ConnectAppAndInfoUsingTicket.md
+        - name: ConnectMatrixCrosspoint
+          href: WS_Methods_v1_methodspt1\ConnectMatrixCrosspoint.md
+        - name: ConnectMatrixCrosspointForLabels
+          href: WS_Methods_v1_methodspt1\ConnectMatrixCrosspointForLabels.md
+        - name: ContinueAutomationScript
+          href: WS_Methods_v1_methodspt1\ContinueAutomationScript.md
+        - name: CreateAlarmTemplate
+          href: WS_Methods_v1_methodspt1\CreateAlarmTemplate.md
+        - name: CreateElement
+          href: WS_Methods_v1_methodspt1\CreateElement.md
+        - name: CreateJob
+          href: WS_Methods_v1_methodspt1\CreateJob.md
+        - name: CreateJobsDomain
+          href: WS_Methods_v1_methodspt1\CreateJobsDomain.md
+        - name: CreateJobsSectionDefinition
+          href: WS_Methods_v1_methodspt1\CreateJobsSectionDefinition.md
+        - name: CreateJobTemplate
+          href: WS_Methods_v1_methodspt1\CreateJobTemplate.md
+        - name: CreateNoteForElement
+          href: WS_Methods_v1_methodspt1\CreateNoteForElement.md
+        - name: CreateNoteForService
+          href: WS_Methods_v1_methodspt1\CreateNoteForService.md
+        - name: CreateNoteForView
+          href: WS_Methods_v1_methodspt1\CreateNoteForView.md
+        - name: CreateSLAElement
+          href: WS_Methods_v1_methodspt1\CreateSLAElement.md
+        - name: CreateService
+          href: WS_Methods_v1_methodspt1\CreateService.md
+        - name: CreateServiceByApplyingServiceTemplate
+          href: WS_Methods_v1_methodspt1\CreateServiceByApplyingServiceTemplate.md
+        - name: CreateServiceTemplate
+          href: WS_Methods_v1_methodspt1\CreateServiceTemplate.md
+        - name: CreateTicket
+          href: WS_Methods_v1_methodspt1\CreateTicket.md
+        - name: CreateView
+          href: WS_Methods_v1_methodspt1\CreateView.md
+        - name: DeleteAlarmTemplate
+          href: WS_Methods_v1_methodspt1\DeleteAlarmTemplate.md
+        - name: DeleteBookingAttachments
+          href: WS_Methods_v1_methodspt1\DeleteBookingAttachments.md
+        - name: DeleteElement
+          href: WS_Methods_v1_methodspt1\DeleteElement.md
+        - name: DeleteJob
+          href: WS_Methods_v1_methodspt1\DeleteJob.md
+        - name: DeleteJobAttachments
+          href: WS_Methods_v1_methodspt1\DeleteJobAttachments.md
+        - name: DeleteJobs
+          href: WS_Methods_v1_methodspt1\DeleteJobs.md
+        - name: DeleteJobsDomain
+          href: WS_Methods_v1_methodspt1\DeleteJobsDomain.md
+        - name: DeleteJobsSectionDefinition
+          href: WS_Methods_v1_methodspt1\DeleteJobsSectionDefinition.md
+        - name: DeleteJobsSectionDefinitionField
+          href: WS_Methods_v1_methodspt1\DeleteJobsSectionDefinitionField.md
+        - name: DeleteJobsSectionDefinitionFromDomain
+          href: WS_Methods_v1_methodspt1\DeleteJobsSectionDefinitionFromDomain.md
+        - name: DeleteJobTemplate
+          href: WS_Methods_v1_methodspt1\DeleteJobTemplate.md
+        - name: DeleteRedundancyGroup
+          href: WS_Methods_v1_methodspt1\DeleteRedundancyGroup.md
+        - name: DeleteService
+          href: WS_Methods_v1_methodspt1\DeleteService.md
+        - name: DeleteServiceTemplate
+          href: WS_Methods_v1_methodspt1\DeleteServiceTemplate.md
+        - name: DeleteTicketAttachments
+          href: WS_Methods_v1_methodspt1\DeleteTicketAttachments.md
+        - name: DeleteTicketField
+          href: WS_Methods_v1_methodspt1\DeleteTicketField.md
+        - name: DeleteTicketType
+          href: WS_Methods_v1_methodspt1\DeleteTicketType.md
+        - name: DeleteView
+          href: WS_Methods_v1_methodspt1\DeleteView.md
+        - name: DeleteVisioFile
+          href: WS_Methods_v1_methodspt1\DeleteVisioFile.md
+        - name: DeleteVisioFileFromProtocol
+          href: WS_Methods_v1_methodspt1\DeleteVisioFileFromProtocol.md
+        - name: DetachAutomationScript
+          href: WS_Methods_v1_methodspt1\DetachAutomationScript.md
+        - name: DetachServiceFromServiceTemplate
+          href: WS_Methods_v1_methodspt1\DetachServiceFromServiceTemplate.md
+        - name: DuplicateJobsDomain
+          href: WS_Methods_v1_methodspt1\DuplicateJobsDomain.md
+        - name: DuplicateJobsSectionDefinition
+          href: WS_Methods_v1_methodspt1\DuplicateJobsSectionDefinition.md
+        - name: EditElement
+          href: WS_Methods_v1_methodspt1\EditElement.md
+        - name: EditSLAElement
+          href: WS_Methods_v1_methodspt1\EditSLAElement.md
+        - name: EditService
+          href: WS_Methods_v1_methodspt1\EditService.md
+        - name: EditTicketField
+          href: WS_Methods_v1_methodspt1\EditTicketField.md
+        - name: EditTicketFieldOrder
+          href: WS_Methods_v1_methodspt1\EditTicketFieldOrder.md
+        - name: EditTicketType
+          href: WS_Methods_v1_methodspt1\EditTicketType.md
+        - name: EditView
+          href: WS_Methods_v1_methodspt1\EditView.md
+        - name: ExecuteAutomationScript
+          href: WS_Methods_v1_methodspt1\ExecuteAutomationScript.md
+        - name: ExecuteAutomationScriptWithOutput
+          href: WS_Methods_v1_methodspt1\ExecuteAutomationScriptWithOutput.md
+        - name: ExecuteGenericAsyncRequest
+          href: WS_Methods_v1_methodspt1\ExecuteGenericAsyncRequest.md
+        - name: ExecuteVisioShapeAction
+          href: WS_Methods_v1_methodspt1\ExecuteVisioShapeAction.md
+        - name: GenerateTicketBasedOnAlarm
+          href: WS_Methods_v1_methodspt1\GenerateTicketBasedOnAlarm.md
+        - name: GetActiveAlarmCountForElement
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmCountForElement.md
+        - name: GetActiveAlarmCountForElementV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmCountForElementV2.md
+        - name: GetActiveAlarmCountForService
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmCountForService.md
+        - name: GetActiveAlarmCountForServiceV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmCountForServiceV2.md
+        - name: GetActiveAlarmCountForView
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmCountForView.md
+        - name: GetActiveAlarmCountForViewV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmCountForViewV2.md
+        - name: GetActiveAlarmPagesForElement
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmPagesForElement.md
+        - name: GetActiveAlarmPagesForService
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmPagesForService.md
+        - name: GetActiveAlarmPagesForView
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmPagesForView.md
+        - name: GetActiveAlarms
+          href: WS_Methods_v1_methodspt1\GetActiveAlarms.md
+        - name: GetActiveAlarmsCached
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsCached.md
+        - name: GetActiveAlarmsCount
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsCount.md
+        - name: GetActiveAlarmsCountV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsCountV2.md
+        - name: GetActiveAlarmsForElement
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForElement.md
+        - name: GetActiveAlarmsForElementCached
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForElementCached.md
+        - name: GetActiveAlarmsForElementSorted
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForElementSorted.md
+        - name: GetActiveAlarmsForElementSortedV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForElementSortedV2.md
+        - name: GetActiveAlarmsForElementV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForElementV2.md
+        - name: GetActiveAlarmsForService
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForService.md
+        - name: GetActiveAlarmsForServiceCached
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForServiceCached.md
+        - name: GetActiveAlarmsForServiceSorted
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForServiceSorted.md
+        - name: GetActiveAlarmsForServiceSortedV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForServiceSortedV2.md
+        - name: GetActiveAlarmsForServiceV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForServiceV2.md
+        - name: GetActiveAlarmsForView
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForView.md
+        - name: GetActiveAlarmsForViewCached
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForViewCached.md
+        - name: GetActiveAlarmsForViewSorted
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForViewSorted.md
+        - name: GetActiveAlarmsForViewSortedV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForViewSortedV2.md
+        - name: GetActiveAlarmsForViewV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsForViewV2.md
+        - name: GetActiveAlarmsSorted
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsSorted.md
+        - name: GetActiveAlarmsSortedV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsSortedV2.md
+        - name: GetActiveAlarmsV2
+          href: WS_Methods_v1_methodspt1\GetActiveAlarmsV2.md
+        - name: GetActiveTickets
+          href: WS_Methods_v1_methodspt1\GetActiveTickets.md
+        - name: GetActiveTicketsV2
+          href: WS_Methods_v1_methodspt1\GetActiveTicketsV2.md
+        - name: GetAffectedJobDomains
+          href: WS_Methods_v1_methodspt1\GetAffectedJobDomains.md
+        - name: GetAffectedTickets
+          href: WS_Methods_v1_methodspt1\GetAffectedTickets.md
+        - name: GetAggregationDataTree
+          href: WS_Methods_v1_methodspt1\GetAggregationDataTree.md
+        - name: GetAggregationRules
+          href: WS_Methods_v1_methodspt1\GetAggregationRules.md
+        - name: GetAlarmCountForElement
+          href: WS_Methods_v1_methodspt1\GetAlarmCountForElement.md
+        - name: GetAlarmCountForParameter
+          href: WS_Methods_v1_methodspt1\GetAlarmCountForParameter.md
+        - name: GetAlarmCountForService
+          href: WS_Methods_v1_methodspt1\GetAlarmCountForService.md
+        - name: GetAlarmDetails
+          href: WS_Methods_v1_methodspt1\GetAlarmDetails.md
+        - name: GetAlarmHistory
+          href: WS_Methods_v1_methodspt1\GetAlarmHistory.md
+        - name: GetAlarmPages
+          href: WS_Methods_v1_methodspt1\GetAlarmPages.md
+        - name: GetAlarmPageUpdates
+          href: WS_Methods_v1_methodspt1\GetAlarmPageUpdates.md
+        - name: GetAlarmPageUpdatesV2
+          href: WS_Methods_v1_methodspt1\GetAlarmPageUpdatesV2.md
+        - name: GetAlarmPagesV2
+          href: WS_Methods_v1_methodspt1\GetAlarmPagesV2.md
+        - name: GetAlarmPageWithAlarms
+          href: WS_Methods_v1_methodspt1\GetAlarmPageWithAlarms.md
+        - name: GetAlarmPageWithAlarmsV2
+          href: WS_Methods_v1_methodspt1\GetAlarmPageWithAlarmsV2.md
+        - name: GetAlarms
+          href: WS_Methods_v1_methodspt1\GetAlarms.md
+        - name: GetAlarmStateForElement
+          href: WS_Methods_v1_methodspt1\GetAlarmStateForElement.md
+        - name: GetAlarmStateForObjects
+          href: WS_Methods_v1_methodspt1\GetAlarmStateForObjects.md
+        - name: GetAlarmStateForView
+          href: WS_Methods_v1_methodspt1\GetAlarmStateForView.md
+        - name: GetAlarmStateForViews
+          href: WS_Methods_v1_methodspt1\GetAlarmStateForViews.md
+        - name: GetAlarmStatesForElement
+          href: WS_Methods_v1_methodspt1\GetAlarmStatesForElement.md
+        - name: GetAlarmStatesForParameter
+          href: WS_Methods_v1_methodspt1\GetAlarmStatesForParameter.md
+        - name: GetAlarmStatesForService
+          href: WS_Methods_v1_methodspt1\GetAlarmStatesForService.md
+        - name: GetAlarmStateTimelineForElement
+          href: WS_Methods_v1_methodspt1\GetAlarmStateTimelineForElement.md
+        - name: GetAlarmStateTimelineForParameter
+          href: WS_Methods_v1_methodspt1\GetAlarmStateTimelineForParameter.md
+        - name: GetAlarmStateTimelineForService
+          href: WS_Methods_v1_methodspt1\GetAlarmStateTimelineForService.md
+        - name: GetAlarmsV2
+          href: WS_Methods_v1_methodspt1\GetAlarmsV2.md
+        - name: GetAllItemsForView
+          href: WS_Methods_v1_methodspt1\GetAllItemsForView.md
+        - name: GetAllRedundancyGroups
+          href: WS_Methods_v1_methodspt1\GetAllRedundancyGroups.md
+        - name: GetAllRedundancyGroupsSorted
+          href: WS_Methods_v1_methodspt1\GetAllRedundancyGroupsSorted.md
+        - name: GetAllViewsForParent
+          href: WS_Methods_v1_methodspt1\GetAllViewsForParent.md
+        - name: GetAnnotationsLinkForElement
+          href: WS_Methods_v1_methodspt1\GetAnnotationsLinkForElement.md
+        - name: GetAnnotationsLinkForService
+          href: WS_Methods_v1_methodspt1\GetAnnotationsLinkForService.md
+        - name: GetAnnotationsLinkForView
+          href: WS_Methods_v1_methodspt1\GetAnnotationsLinkForView.md
+        - name: GetAutomationScript
+          href: WS_Methods_v1_methodspt1\GetAutomationScript.md
+        - name: GetAutomationScripts
+          href: WS_Methods_v1_methodspt1\GetAutomationScripts.md
+        - name: GetAvailableAlarmProperties
+          href: WS_Methods_v1_methodspt1\GetAvailableAlarmProperties.md
+        - name: GetAvailableVisioFiles
+          href: WS_Methods_v1_methodspt1\GetAvailableVisioFiles.md
+        - name: GetAvailableVisioFilesForProtocol
+          href: WS_Methods_v1_methodspt1\GetAvailableVisioFilesForProtocol.md
+        - name: GetBooking
+          href: WS_Methods_v1_methodspt1\GetBooking.md
+        - name: GetBookingAttachmentNames
+          href: WS_Methods_v1_methodspt1\GetBookingAttachmentNames.md
+        - name: GetBookingManagers
+          href: WS_Methods_v1_methodspt1\GetBookingManagers.md
+        - name: GetBookings
+          href: WS_Methods_v1_methodspt1\GetBookings.md
+        - name: GetBookingsForJob
+          href: WS_Methods_v1_methodspt1\GetBookingsForJob.md
+        - name: GetBookingsForJobSection
+          href: WS_Methods_v1_methodspt1\GetBookingsForJobSection.md
+        - name: GetBookingsForService
+          href: WS_Methods_v1_methodspt1\GetBookingsForService.md
+        - name: GetButtonPanelInfo
+          href: WS_Methods_v1_methodspt1\GetButtonPanelInfo.md
+        - name: GetCapacityParametersForResource
+          href: WS_Methods_v1_methodspt1\GetCapacityParametersForResource.md
+        - name: GetClientDefaultTimeZone
+          href: WS_Methods_v1_methodspt1\GetClientDefaultTimeZone.md
+        - name: GetCurrentAlarmByRootID
+          href: WS_Methods_v1_methodspt1\GetCurrentAlarmByRootID.md
+        - name: GetCurrentAlarmByRootIDV2
+          href: WS_Methods_v1_methodspt1\GetCurrentAlarmByRootIDV2.md
+        - name: GetDashboardsForElement
+          href: WS_Methods_v1_methodspt1\GetDashboardsForElement.md
+        - name: GetDashboardsForService
+          href: WS_Methods_v1_methodspt1\GetDashboardsForService.md
+        - name: GetDashboardsForView
+          href: WS_Methods_v1_methodspt1\GetDashboardsForView.md
+        - name: GetDataMinerAgentAlarmColors
+          href: WS_Methods_v1_methodspt1\GetDataMinerAgentAlarmColors.md
+        - name: GetDataMinerAgentTime
+          href: WS_Methods_v1_methodspt1\GetDataMinerAgentTime.md
+        - name: GetDataMinerAgentTimeUTC
+          href: WS_Methods_v1_methodspt1\GetDataMinerAgentTimeUTC.md
+        - name: GetDataMinerAgentsInfo
+          href: WS_Methods_v1_methodspt1\GetDataMinerAgentsInfo.md
+        - name: GetDataMinerAgentsLicenseInfo
+          href: WS_Methods_v1_methodspt1\GetDataMinerAgentsLicenseInfo.md
+        - name: GetDataMinerAgentsStatistics
+          href: WS_Methods_v1_methodspt1\GetDataMinerAgentsStatistics.md
+        - name: GetDataMinerAPIVersion
+          href: WS_Methods_v1_methodspt1\GetDataMinerAPIVersion.md
+        - name: GetDataMinerClusterName
+          href: WS_Methods_v1_methodspt1\GetDataMinerClusterName.md
+        - name: GetDataMinerCustomerInfo
+          href: WS_Methods_v1_methodspt1\GetDataMinerCustomerInfo.md
+        - name: GetDataMinerOEMInfo
+          href: WS_Methods_v1_methodspt1\GetDataMinerOEMInfo.md
+        - name: GetDataMinerProviderInfo
+          href: WS_Methods_v1_methodspt1\GetDataMinerProviderInfo.md
+        - name: GetDataMinerProviderTheme
+          href: WS_Methods_v1_methodspt1\GetDataMinerProviderTheme.md
+        - name: GetDocuments
+          href: WS_Methods_v1_methodspt1\GetDocuments.md
+        - name: GetEditParameter
+          href: WS_Methods_v1_methodspt1\GetEditParameter.md
+        - name: GetEditParameterTable
+          href: WS_Methods_v1_methodspt1\GetEditParameterTable.md
+        - name: GetElement
+          href: WS_Methods_v1_methodspt1\GetElement.md
+        - name: GetElementAlarmCountForView
+          href: WS_Methods_v1_methodspt1\GetElementAlarmCountForView.md
+        - name: GetElementAlarmStatesForView
+          href: WS_Methods_v1_methodspt1\GetElementAlarmStatesForView.md
+        - name: GetElementByName
+          href: WS_Methods_v1_methodspt1\GetElementByName.md
+        - name: GetElementConfiguration
+          href: WS_Methods_v1_methodspt1\GetElementConfiguration.md
+        - name: GetElementIndexPageForService
+          href: WS_Methods_v1_methodspt1\GetElementIndexPageForService.md
+        - name: GetElementIndexPageForView
+          href: WS_Methods_v1_methodspt1\GetElementIndexPageForView.md
+        - name: GetElementsForProtocol
+          href: WS_Methods_v1_methodspt1\GetElementsForProtocol.md
+        - name: GetElementsForService
+          href: WS_Methods_v1_methodspt1\GetElementsForService.md
+        - name: GetElementsForServiceCached
+          href: WS_Methods_v1_methodspt1\GetElementsForServiceCached.md
+        - name: GetElementsForServiceCount
+          href: WS_Methods_v1_methodspt1\GetElementsForServiceCount.md
+        - name: GetElementsForServiceSorted
+          href: WS_Methods_v1_methodspt1\GetElementsForServiceSorted.md
+        - name: GetElementsForView
+          href: WS_Methods_v1_methodspt1\GetElementsForView.md
+        - name: GetElementsForViewCached
+          href: WS_Methods_v1_methodspt1\GetElementsForViewCached.md
+        - name: GetElementsForViewCount
+          href: WS_Methods_v1_methodspt1\GetElementsForViewCount.md
+        - name: GetElementsForViewSorted
+          href: WS_Methods_v1_methodspt1\GetElementsForViewSorted.md
+        - name: GetElementsLiteForView
+          href: WS_Methods_v1_methodspt1\GetElementsLiteForView.md
+        - name: GetElementsLiteForViewSorted
+          href: WS_Methods_v1_methodspt1\GetElementsLiteForViewSorted.md
+        - name: GetFullService
+          href: WS_Methods_v1_methodspt1\GetFullService.md
+        - name: GetGenericAsyncMultiResponse
+          href: WS_Methods_v1_methodspt1\GetGenericAsyncMultiResponse.md
+        - name: GetGenericAsyncResponse
+          href: WS_Methods_v1_methodspt1\GetGenericAsyncResponse.md
+        - name: GetHistogramSnapshotForTableColumnParameter
+          href: WS_Methods_v1_methodspt1\GetHistogramSnapshotForTableColumnParameter.md
+        - name: GetHistogramSnapshotForView
+          href: WS_Methods_v1_methodspt1\GetHistogramSnapshotForView.md
+        - name: GetHistogramTrendDataForParameter
+          href: WS_Methods_v1_methodspt1\GetHistogramTrendDataForParameter.md
+        - name: GetHistoryAlarmsForElement
+          href: WS_Methods_v1_methodspt1\GetHistoryAlarmsForElement.md
+        - name: GetHistoryAlarmsForParameter
+          href: WS_Methods_v1_methodspt1\GetHistoryAlarmsForParameter.md
+        - name: GetHistoryAlarmsForService
+          href: WS_Methods_v1_methodspt1\GetHistoryAlarmsForService.md
+        - name: GetHistoryAlarmsForView
+          href: WS_Methods_v1_methodspt1\GetHistoryAlarmsForView.md
+        - name: GetHistoryTickets
+          href: WS_Methods_v1_methodspt1\GetHistoryTickets.md
+        - name: GetHistoryTicketsV2
+          href: WS_Methods_v1_methodspt1\GetHistoryTicketsV2.md
+        - name: GetInformationEvents
+          href: WS_Methods_v1_methodspt1\GetInformationEvents.md
+        - name: GetInformationEventsSorted
+          href: WS_Methods_v1_methodspt1\GetInformationEventsSorted.md
+        - name: GetInformationEventsSortedV2
+          href: WS_Methods_v1_methodspt1\GetInformationEventsSortedV2.md
+        - name: GetInformationEventsV2
+          href: WS_Methods_v1_methodspt1\GetInformationEventsV2.md
+        - name: GetJob
+          href: WS_Methods_v1_methodspt1\GetJob.md
+        - name: GetJobAttachmentNames
+          href: WS_Methods_v1_methodspt1\GetJobAttachmentNames.md
+        - name: GetJobFieldOptions
+          href: WS_Methods_v1_methodspt1\GetJobFieldOptions.md
+        - name: GetJobs
+          href: WS_Methods_v1_methodspt1\GetJobs.md
+        - name: GetJobsDomain
+          href: WS_Methods_v1_methodspt1\GetJobsDomain.md
+        - name: GetJobsDomains
+          href: WS_Methods_v1_methodspt1\GetJobsDomains.md
+        - name: GetJobsHistory
+          href: WS_Methods_v1_methodspt1\GetJobsHistory.md
+        - name: GetJobsSectionDefinition
+          href: WS_Methods_v1_methodspt1\GetJobsSectionDefinition.md
+        - name: GetJobsSectionDefinitions
+          href: WS_Methods_v1_methodspt1\GetJobsSectionDefinitions.md
+        - name: GetJobsSectionDefinitionV2
+          href: WS_Methods_v1_methodspt1\GetJobsSectionDefinitionV2.md
+        - name: GetJobsSectionDefinitionsV2
+          href: WS_Methods_v1_methodspt1\GetJobsSectionDefinitionsV2.md
+        - name: GetJobSuggestions
+          href: WS_Methods_v1_methodspt1\GetJobSuggestions.md
+        - name: GetJobTemplate
+          href: WS_Methods_v1_methodspt1\GetJobTemplate.md
+        - name: GetJobTemplates
+          href: WS_Methods_v1_methodspt1\GetJobTemplates.md
+        - name: GetJobTemplateV2
+          href: WS_Methods_v1_methodspt1\GetJobTemplateV2.md
+        - name: GetJobTemplatesV2
+          href: WS_Methods_v1_methodspt1\GetJobTemplatesV2.md
+        - name: GetMapConfigs
+          href: WS_Methods_v1_methodspt1\GetMapConfigs.md
+        - name: GetMaskedAlarms
+          href: WS_Methods_v1_methodspt1\GetMaskedAlarms.md
+        - name: GetMaskedAlarmsCached
+          href: WS_Methods_v1_methodspt1\GetMaskedAlarmsCached.md
+        - name: GetMaskedAlarmsForElement
+          href: WS_Methods_v1_methodspt2\WS_Methods_v1_methodspt2.md
+        - name: GetMaskedAlarmsForElementCached
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForElementCached.md
+        - name: GetMaskedAlarmsForElementSorted
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForElementSorted.md
+        - name: GetMaskedAlarmsForElementSortedV2
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForElementSortedV2.md
+        - name: GetMaskedAlarmsForElementV2
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForElementV2.md
+        - name: GetMaskedAlarmsForService
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForService.md
+        - name: GetMaskedAlarmsForServiceCached
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForServiceCached.md
+        - name: GetMaskedAlarmsForServiceSorted
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForServiceSorted.md
+        - name: GetMaskedAlarmsForServiceSortedV2
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForServiceSortedV2.md
+        - name: GetMaskedAlarmsForServiceV2
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForServiceV2.md
+        - name: GetMaskedAlarmsForView
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForView.md
+        - name: GetMaskedAlarmsForViewCached
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForViewCached.md
+        - name: GetMaskedAlarmsForViewSorted
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForViewSorted.md
+        - name: GetMaskedAlarmsForViewSortedV2
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForViewSortedV2.md
+        - name: GetMaskedAlarmsForViewV2
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsForViewV2.md
+        - name: GetMaskedAlarmsSorted
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsSorted.md
+        - name: GetMaskedAlarmsSortedV2
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsSortedV2.md
+        - name: GetMaskedAlarmsV2
+          href: WS_Methods_v1_methodspt2\GetMaskedAlarmsV2.md
+        - name: GetMatrixConnections
+          href: WS_Methods_v1_methodspt2\GetMatrixConnections.md
+        - name: GetMatrixInputsForOutput
+          href: WS_Methods_v1_methodspt2\GetMatrixInputsForOutput.md
+        - name: GetMatrixInputsForOutputLabel
+          href: WS_Methods_v1_methodspt2\GetMatrixInputsForOutputLabel.md
+        - name: GetMatrixOutputsForInput
+          href: WS_Methods_v1_methodspt2\GetMatrixOutputsForInput.md
+        - name: GetMatrixOutputsForInputLabel
+          href: WS_Methods_v1_methodspt2\GetMatrixOutputsForInputLabel.md
+        - name: GetMeasurementPoints
+          href: WS_Methods_v1_methodspt2\GetMeasurementPoints.md
+        - name: GetMemoryFiles
+          href: WS_Methods_v1_methodspt2\GetMemoryFiles.md
+        - name: GetMonitoredParametersForElement
+          href: WS_Methods_v1_methodspt2\GetMonitoredParametersForElement.md
+        - name: GetMonitoredParametersForService
+          href: WS_Methods_v1_methodspt2\GetMonitoredParametersForService.md
+        - name: GetNearby
+          href: WS_Methods_v1_methodspt2\GetNearby.md
+        - name: GetNotesForElement
+          href: WS_Methods_v1_methodspt2\GetNotesForElement.md
+        - name: GetNotesForService
+          href: WS_Methods_v1_methodspt2\GetNotesForService.md
+        - name: GetNotesForView
+          href: WS_Methods_v1_methodspt2\GetNotesForView.md
+        - name: GetPagesForElement
+          href: WS_Methods_v1_methodspt2\GetPagesForElement.md
+        - name: GetPagesForElementCached
+          href: WS_Methods_v1_methodspt2\GetPagesForElementCached.md
+        - name: GetPagesForElementSorted
+          href: WS_Methods_v1_methodspt2\GetPagesForElementSorted.md
+        - name: GetPagesForProtocol
+          href: WS_Methods_v1_methodspt2\GetPagesForProtocol.md
+        - name: GetPagesForProtocolSorted
+          href: WS_Methods_v1_methodspt2\GetPagesForProtocolSorted.md
+        - name: GetPagesForServiceElement
+          href: WS_Methods_v1_methodspt2\GetPagesForServiceElement.md
+        - name: GetPagesForServiceElementV2
+          href: WS_Methods_v1_methodspt2\GetPagesForServiceElementV2.md
+        - name: GetPagesForServiceSorted
+          href: WS_Methods_v1_methodspt2\GetPagesForServiceSorted.md
+        - name: GetParameter
+          href: WS_Methods_v1_methodspt2\GetParameter.md
+        - name: GetParameterByName
+          href: WS_Methods_v1_methodspt2\GetParameterByName.md
+        - name: GetParameterForService
+          href: WS_Methods_v1_methodspt2\GetParameterForService.md
+        - name: GetParameterForServiceWithDynamicUnits
+          href: WS_Methods_v1_methodspt2\GetParameterForServiceWithDynamicUnits.md
+        - name: GetParameterInfo
+          href: WS_Methods_v1_methodspt2\GetParameterInfo.md
+        - name: GetParameters
+          href: WS_Methods_v1_methodspt2\GetParameters.md
+        - name: GetParametersByPageForElement
+          href: WS_Methods_v1_methodspt2\GetParametersByPageForElement.md
+        - name: GetParametersByPageForElementCached
+          href: WS_Methods_v1_methodspt2\GetParametersByPageForElementCached.md
+        - name: GetParametersByPageForElementSorted
+          href: WS_Methods_v1_methodspt2\GetParametersByPageForElementSorted.md
+        - name: GetParametersByPageForServiceElement
+          href: WS_Methods_v1_methodspt2\GetParametersByPageForServiceElement.md
+        - name: GetParametersForCPEChain
+          href: WS_Methods_v1_methodspt2\GetParametersForCPEChain.md
+        - name: GetParametersForElement
+          href: WS_Methods_v1_methodspt2\GetParametersForElement.md
+        - name: GetParametersForElementFiltered
+          href: WS_Methods_v1_methodspt2\GetParametersForElementFiltered.md
+        - name: GetParametersForElementSorted
+          href: WS_Methods_v1_methodspt2\GetParametersForElementSorted.md
+        - name: GetParametersForProtocol
+          href: WS_Methods_v1_methodspt2\GetParametersForProtocol.md
+        - name: GetParametersForProtocolFiltered
+          href: WS_Methods_v1_methodspt2\GetParametersForProtocolFiltered.md
+        - name: GetParametersForProtocolSorted
+          href: WS_Methods_v1_methodspt2\GetParametersForProtocolSorted.md
+        - name: GetParametersForService
+          href: WS_Methods_v1_methodspt2\GetParametersForService.md
+        - name: GetParametersForServiceSorted
+          href: WS_Methods_v1_methodspt2\GetParametersForServiceSorted.md
+        - name: GetParametersSorted
+          href: WS_Methods_v1_methodspt2\GetParametersSorted.md
+        - name: GetParameterWithDynamicUnits
+          href: WS_Methods_v1_methodspt2\GetParameterWithDynamicUnits.md
+        - name: GetPinned
+          href: WS_Methods_v1_methodspt2\GetPinned.md
+        - name: GetPropertiesForElement
+          href: WS_Methods_v1_methodspt2\GetPropertiesForElement.md
+        - name: GetPropertiesForService
+          href: WS_Methods_v1_methodspt2\GetPropertiesForService.md
+        - name: GetPropertiesForView
+          href: WS_Methods_v1_methodspt2\GetPropertiesForView.md
+        - name: GetProtocolInfoForElement
+          href: WS_Methods_v1_methodspt2\GetProtocolInfoForElement.md
+        - name: GetProtocolsForView
+          href: WS_Methods_v1_methodspt2\GetProtocolsForView.md
+        - name: GetRecent
+          href: WS_Methods_v1_methodspt2\GetRecent.md
+        - name: GetRedundancyGroup
+          href: WS_Methods_v1_methodspt2\GetRedundancyGroup.md
+        - name: GetRedundancyGroupsForView
+          href: WS_Methods_v1_methodspt2\GetRedundancyGroupsForView.md
+        - name: GetRedundancyGroupsLiteForView
+          href: WS_Methods_v1_methodspt2\GetRedundancyGroupsLiteForView.md
+        - name: GetRegionalSettings
+          href: WS_Methods_v1_methodspt2\GetRegionalSettings.md
+        - name: GetResource
+          href: WS_Methods_v1_methodspt2\GetResource.md
+        - name: GetResourceCapacityTrend
+          href: WS_Methods_v1_methodspt2\GetResourceCapacityTrend.md
+        - name: GetResources
+          href: WS_Methods_v1_methodspt2\GetResources.md
+        - name: GetSLAElementConfiguration
+          href: WS_Methods_v1_methodspt2\GetSLAElementConfiguration.md
+        - name: GetScatterDataForElements
+          href: WS_Methods_v1_methodspt2\GetScatterDataForElements.md
+        - name: GetScatterDataForServices
+          href: WS_Methods_v1_methodspt2\GetScatterDataForServices.md
+        - name: GetSearchItems
+          href: WS_Methods_v1_methodspt2\GetSearchItems.md
+        - name: GetSecurityInfo
+          href: WS_Methods_v1_methodspt2\GetSecurityInfo.md
+        - name: GetService
+          href: WS_Methods_v1_methodspt2\GetService.md
+        - name: GetServiceAlarmCountForView
+          href: WS_Methods_v1_methodspt2\GetServiceAlarmCountForView.md
+        - name: GetServiceAlarmStatesForView
+          href: WS_Methods_v1_methodspt2\GetServiceAlarmStatesForView.md
+        - name: GetServiceByName
+          href: WS_Methods_v1_methodspt2\GetServiceByName.md
+        - name: GetServiceConfiguration
+          href: WS_Methods_v1_methodspt2\GetServiceConfiguration.md
+        - name: GetServiceDefinition
+          href: WS_Methods_v1_methodspt2\GetServiceDefinition.md
+        - name: GetServiceDefinitions
+          href: WS_Methods_v1_methodspt2\GetServiceDefinitions.md
+        - name: GetServiceParameters
+          href: WS_Methods_v1_methodspt2\GetServiceParameters.md
+        - name: GetServicesForFilter
+          href: WS_Methods_v1_methodspt2\GetServicesForFilter.md
+        - name: GetServicesForServiceTemplate
+          href: WS_Methods_v1_methodspt2\GetServicesForServiceTemplate.md
+        - name: GetServicesForServiceTemplateSorted
+          href: WS_Methods_v1_methodspt2\GetServicesForServiceTemplateSorted.md
+        - name: GetServicesForView
+          href: WS_Methods_v1_methodspt2\GetServicesForView.md
+        - name: GetServicesForViewSorted
+          href: WS_Methods_v1_methodspt2\GetServicesForViewSorted.md
+        - name: GetServicesLiteForView
+          href: WS_Methods_v1_methodspt2\GetServicesLiteForView.md
+        - name: GetServiceTemplate
+          href: WS_Methods_v1_methodspt2\GetServiceTemplate.md
+        - name: GetSnmpManagers
+          href: WS_Methods_v1_methodspt2\GetSnmpManagers.md
+        - name: GetSpectrumBuffersByMonitorId
+          href: WS_Methods_v1_methodspt2\GetSpectrumBuffersByMonitorId.md
+        - name: GetSpectrumMonitors
+          href: WS_Methods_v1_methodspt2\GetSpectrumMonitors.md
+        - name: GetSpectrumParameters
+          href: WS_Methods_v1_methodspt2\GetSpectrumParameters.md
+        - name: GetSpectrumPresets
+          href: WS_Methods_v1_methodspt2\GetSpectrumPresets.md
+        - name: GetStateForElement
+          href: WS_Methods_v1_methodspt2\GetStateForElement.md
+        - name: GetTableForParameter
+          href: WS_Methods_v1_methodspt2\GetTableForParameter.md
+        - name: GetTableForParameterCached
+          href: WS_Methods_v1_methodspt2\GetTableForParameterCached.md
+        - name: GetTableForParameterFiltered
+          href: WS_Methods_v1_methodspt2\GetTableForParameterFiltered.md
+        - name: GetTableForParameterSorted
+          href: WS_Methods_v1_methodspt2\GetTableForParameterSorted.md
+        - name: GetTableForParameterV2
+          href: WS_Methods_v1_methodspt2\GetTableForParameterV2.md
+        - name: GetTableRowForParameter
+          href: WS_Methods_v1_methodspt2\GetTableRowForParameter.md
+        - name: GetThirdPartyNotices
+          href: WS_Methods_v1_methodspt2\GetThirdPartyNotices.md
+        - name: GetTicket
+          href: WS_Methods_v1_methodspt2\GetTicket.md
+        - name: GetTicketAttachmentNames
+          href: WS_Methods_v1_methodspt2\GetTicketAttachmentNames.md
+        - name: GetTicketFields
+          href: WS_Methods_v1_methodspt2\GetTicketFields.md
+        - name: GetTicketType
+          href: WS_Methods_v1_methodspt2\GetTicketType.md
+        - name: GetTicketTypes
+          href: WS_Methods_v1_methodspt2\GetTicketTypes.md
+        - name: GetTicketV2
+          href: WS_Methods_v1_methodspt2\GetTicketV2.md
+        - name: GetTopologyChainsForCPE
+          href: WS_Methods_v1_methodspt2\GetTopologyChainsForCPE.md
+        - name: GetTopologyFieldsForCPEChain
+          href: WS_Methods_v1_methodspt2\GetTopologyFieldsForCPEChain.md
+        - name: GetTrendDataCustomTimespanForParameter
+          href: WS_Methods_v1_methodspt2\GetTrendDataCustomTimespanForParameter.md
+        - name: GetTrendDataForParameter
+          href: WS_Methods_v1_methodspt2\GetTrendDataForParameter.md
+        - name: GetTrendDataForParameterByName
+          href: WS_Methods_v1_methodspt2\GetTrendDataForParameterByName.md
+        - name: GetTrendDataForTableParameter
+          href: WS_Methods_v1_methodspt2\GetTrendDataForTableParameter.md
+        - name: GetTrendDataForTableParameterV2
+          href: WS_Methods_v1_methodspt2\GetTrendDataForTableParameterV2.md
+        - name: GetTrendDataSimplifiedForParameter
+          href: WS_Methods_v1_methodspt2\GetTrendDataSimplifiedForParameter.md
+        - name: GetTrendStatisticsForParameter
+          href: WS_Methods_v1_methodspt2\GetTrendStatisticsForParameter.md
+        - name: GetTrendStatisticsForService
+          href: WS_Methods_v1_methodspt2\GetTrendStatisticsForService.md
+        - name: GetUserGroups
+          href: WS_Methods_v1_methodspt2\GetUserGroups.md
+        - name: GetUsers
+          href: WS_Methods_v1_methodspt2\GetUsers.md
+        - name: GetValuesForCPETopologyField
+          href: WS_Methods_v1_methodspt2\GetValuesForCPETopologyField.md
+        - name: GetValuesForCPETopologyFieldSorted
+          href: WS_Methods_v1_methodspt2\GetValuesForCPETopologyFieldSorted.md
+        - name: GetValuesForCPETopologyFieldV2
+          href: WS_Methods_v1_methodspt2\GetValuesForCPETopologyFieldV2.md
+        - name: GetView
+          href: WS_Methods_v1_methodspt2\GetView.md
+        - name: GetViewByName
+          href: WS_Methods_v1_methodspt2\GetViewByName.md
+        - name: GetViewsForParent
+          href: WS_Methods_v1_methodspt2\GetViewsForParent.md
+        - name: GetViewsForParentCached
+          href: WS_Methods_v1_methodspt2\GetViewsForParentCached.md
+        - name: GetViewsForParentCount
+          href: WS_Methods_v1_methodspt2\GetViewsForParentCount.md
+        - name: GetViewsForParentSorted
+          href: WS_Methods_v1_methodspt2\GetViewsForParentSorted.md
+        - name: GetViewsTreeForElement
+          href: WS_Methods_v1_methodspt2\GetViewsTreeForElement.md
+        - name: GetViewsTreeForView
+          href: WS_Methods_v1_methodspt2\GetViewsTreeForView.md
+        - name: GetViewTree
+          href: WS_Methods_v1_methodspt2\GetViewTree.md
+        - name: GetVisioForCPE
+          href: WS_Methods_v1_methodspt2\GetVisioForCPE.md
+        - name: GetVisioForElement
+          href: WS_Methods_v1_methodspt2\GetVisioForElement.md
+        - name: GetVisioForElementCached
+          href: WS_Methods_v1_methodspt2\GetVisioForElementCached.md
+        - name: GetVisioForService
+          href: WS_Methods_v1_methodspt2\GetVisioForService.md
+        - name: GetVisioForServiceCached
+          href: WS_Methods_v1_methodspt2\GetVisioForServiceCached.md
+        - name: GetVisioForView
+          href: WS_Methods_v1_methodspt2\GetVisioForView.md
+        - name: GetVisioForViewCached
+          href: WS_Methods_v1_methodspt2\GetVisioForViewCached.md
+        - name: GetVisioPagesForCPE
+          href: WS_Methods_v1_methodspt2\GetVisioPagesForCPE.md
+        - name: GetVisioPagesForElement
+          href: WS_Methods_v1_methodspt2\GetVisioPagesForElement.md
+        - name: GetVisioPagesForService
+          href: WS_Methods_v1_methodspt2\GetVisioPagesForService.md
+        - name: GetVisioPagesForView
+          href: WS_Methods_v1_methodspt2\GetVisioPagesForView.md
+        - name: GetVisioThumbnailForElement
+          href: WS_Methods_v1_methodspt2\GetVisioThumbnailForElement.md
+        - name: GetVisioThumbnailForService
+          href: WS_Methods_v1_methodspt2\GetVisioThumbnailForService.md
+        - name: GetVisioThumbnailForView
+          href: WS_Methods_v1_methodspt2\GetVisioThumbnailForView.md
+        - name: IsConnectionAlive
+          href: WS_Methods_v1_methodspt2\IsConnectionAlive.md
+        - name: IsFeatureAvailable
+          href: WS_Methods_v1_methodspt2\IsFeatureAvailable.md
+        - name: IsGenericAsyncResponseAvailable
+          href: WS_Methods_v1_methodspt2\IsGenericAsyncResponseAvailable.md
+        - name: LoadSpectrumPreset
+          href: WS_Methods_v1_methodspt2\LoadSpectrumPreset.md
+        - name: LogOut
+          href: WS_Methods_v1_methodspt2\LogOut.md
+        - name: MaskAlarm
+          href: WS_Methods_v1_methodspt2\MaskAlarm.md
+        - name: MaskElement
+          href: WS_Methods_v1_methodspt2\MaskElement.md
+        - name: PauseElement
+          href: WS_Methods_v1_methodspt2\PauseElement.md
+        - name: ReapplyService
+          href: WS_Methods_v1_methodspt2\ReapplyService.md
+        - name: ReconnectAppAndInfo
+          href: WS_Methods_v1_methodspt2\ReconnectAppAndInfo.md
+        - name: ReleaseOwnershipAlarm
+          href: WS_Methods_v1_methodspt2\ReleaseOwnershipAlarm.md
+        - name: RemoveElementFromPinned
+          href: WS_Methods_v1_methodspt2\RemoveElementFromPinned.md
+        - name: RemoveElementFromView
+          href: WS_Methods_v1_methodspt2\RemoveElementFromView.md
+        - name: RemoveNoteFromElement
+          href: WS_Methods_v1_methodspt2\RemoveNoteFromElement.md
+        - name: RemoveNoteFromService
+          href: WS_Methods_v1_methodspt2\RemoveNoteFromService.md
+        - name: RemoveNoteFromView
+          href: WS_Methods_v1_methodspt2\RemoveNoteFromView.md
+        - name: RemoveServiceFromPinned
+          href: WS_Methods_v1_methodspt2\RemoveServiceFromPinned.md
+        - name: RemoveTicket
+          href: WS_Methods_v1_methodspt2\RemoveTicket.md
+        - name: RemoveTickets
+          href: WS_Methods_v1_methodspt2\RemoveTickets.md
+        - name: RemoveTicketV2
+          href: WS_Methods_v1_methodspt2\RemoveTicketV2.md
+        - name: RemoveViewFromPinned
+          href: WS_Methods_v1_methodspt2\RemoveViewFromPinned.md
+        - name: ReorderPinned
+          href: WS_Methods_v1_methodspt2\ReorderPinned.md
+        - name: RequestLoginAsTicket
+          href: WS_Methods_v1_methodspt2\RequestLoginAsTicket.md
+        - name: RestartElement
+          href: WS_Methods_v1_methodspt2\RestartElement.md
+        - name: SaveJobsSectionDomainConfig
+          href: WS_Methods_v1_methodspt2\SaveJobsSectionDomainConfig.md
+        - name: SaveSpectrumPreset
+          href: WS_Methods_v1_methodspt2\SaveSpectrumPreset.md
+        - name: SetMeasurementPoints
+          href: WS_Methods_v1_methodspt2\SetMeasurementPoints.md
+        - name: SetParameter
+          href: WS_Methods_v1_methodspt2\SetParameter.md
+        - name: SetParameterRow
+          href: WS_Methods_v1_methodspt2\SetParameterRow.md
+        - name: SetPropertyValue
+          href: WS_Methods_v1_methodspt2\SetPropertyValue.md
+        - name: SetRedundancyGroupMaintenance
+          href: WS_Methods_v1_methodspt2\SetRedundancyGroupMaintenance.md
+        - name: SetRedundancyGroupMode
+          href: WS_Methods_v1_methodspt2\SetRedundancyGroupMode.md
+        - name: SetSpectrumParameter
+          href: WS_Methods_v1_methodspt2\SetSpectrumParameter.md
+        - name: StopElement
+          href: WS_Methods_v1_methodspt2\StopElement.md
+        - name: SwitchRedundancyGroup
+          href: WS_Methods_v1_methodspt2\SwitchRedundancyGroup.md
+        - name: TakeOwnershipAlarm
+          href: WS_Methods_v1_methodspt2\TakeOwnershipAlarm.md
+        - name: TestElementDeviceConnectivity
+          href: WS_Methods_v1_methodspt2\TestElementDeviceConnectivity.md
+        - name: ToggleMatrixCrosspoint
+          href: WS_Methods_v1_methodspt2\ToggleMatrixCrosspoint.md
+        - name: ToggleMatrixCrosspointForLabels
+          href: WS_Methods_v1_methodspt2\ToggleMatrixCrosspointForLabels.md
+        - name: TriggerSnmpResyncActiveAlarms
+          href: WS_Methods_v1_methodspt2\TriggerSnmpResyncActiveAlarms.md
+        - name: TryConnectAndInfo
+          href: WS_Methods_v1_methodspt2\TryConnectAndInfo.md
+        - name: UnhideJobSectionDefinition
+          href: WS_Methods_v1_methodspt2\UnhideJobSectionDefinition.md
+        - name: UnhideJobSectionDefinitionField
+          href: WS_Methods_v1_methodspt2\UnhideJobSectionDefinitionField.md
+        - name: UnmaskAlarm
+          href: WS_Methods_v1_methodspt2\UnmaskAlarm.md
+        - name: UnmaskElement
+          href: WS_Methods_v1_methodspt2\UnmaskElement.md
+        - name: UpdateAlarmTemplate
+          href: WS_Methods_v1_methodspt2\UpdateAlarmTemplate.md
+        - name: UpdateDomainSectionDefinitionConfiguration
+          href: WS_Methods_v1_methodspt2\UpdateDomainSectionDefinitionConfiguration.md
+        - name: UpdateJob
+          href: WS_Methods_v1_methodspt2\UpdateJob.md
+        - name: UpdateJobsDomain
+          href: WS_Methods_v1_methodspt2\UpdateJobsDomain.md
+        - name: UpdateJobsSectionDefinition
+          href: WS_Methods_v1_methodspt2\UpdateJobsSectionDefinition.md
+        - name: UpdateJobsSectionDefinitionFieldOrder
+          href: WS_Methods_v1_methodspt2\UpdateJobsSectionDefinitionFieldOrder.md
+        - name: UpdateJobTemplate
+          href: WS_Methods_v1_methodspt2\UpdateJobTemplate.md
+        - name: UpdateNoteForElement
+          href: WS_Methods_v1_methodspt2\UpdateNoteForElement.md
+        - name: UpdateNoteForService
+          href: WS_Methods_v1_methodspt2\UpdateNoteForService.md
+        - name: UpdateNoteForView
+          href: WS_Methods_v1_methodspt2\UpdateNoteForView.md
+        - name: UpdateServiceTemplate
+          href: WS_Methods_v1_methodspt2\UpdateServiceTemplate.md
+        - name: UpdateTicket
+          href: WS_Methods_v1_methodspt2\UpdateTicket.md
+    - name: Custom data types (v1)
+      href: WS_CustomDataTypes_v1\WS_CustomDataTypes_v1.md
+      items:
+        - name: AnalogTrendDataResponseMessage
+          href: WS_CustomDataTypes_v1\AnalogTrendDataResponseMessage.md
+        - name: DMAAggregationRule
+          href: WS_CustomDataTypes_v1\DMAAggregationRule.md
+        - name: DMAAggregationTableColumn
+          href: WS_CustomDataTypes_v1\DMAAggregationTableColumn.md
+        - name: DMAAlarm
+          href: WS_CustomDataTypes_v1\DMAAlarm.md
+        - name: DMAAlarmColors
+          href: WS_CustomDataTypes_v1\DMAAlarmColors.md
+        - name: DMAAlarmFilterItem
+          href: WS_CustomDataTypes_v1\DMAAlarmFilterItem.md
+        - name: DMAAlarmFilterV2
+          href: WS_CustomDataTypes_v1\DMAAlarmFilterV2.md
+        - name: DMAAlarmPage
+          href: WS_CustomDataTypes_v1\DMAAlarmPage.md
+        - name: DMAAlarmPageUpdate
+          href: WS_CustomDataTypes_v1\DMAAlarmPageUpdate.md
+        - name: DMAAlarmTemplate
+          href: WS_CustomDataTypes_v1\DMAAlarmTemplate.md
+        - name: DMAAlarmTemplateCondition
+          href: WS_CustomDataTypes_v1\DMAAlarmTemplateCondition.md
+        - name: DMAAlarmTemplateConditionRule
+          href: WS_CustomDataTypes_v1\DMAAlarmTemplateConditionRule.md
+        - name: DMAAlarmTemplateGroupEntry
+          href: WS_CustomDataTypes_v1\DMAAlarmTemplateGroupEntry.md
+        - name: DMAAlarmTemplateScheduleEntry
+          href: WS_CustomDataTypes_v1\DMAAlarmTemplateScheduleEntry.md
+        - name: DMAAlarmTemplateParameter
+          href: WS_CustomDataTypes_v1\DMAAlarmTemplateParameter.md
+        - name: DMAAutomationScript
+          href: WS_CustomDataTypes_v1\DMAAutomationScript.md
+        - name: DMAAutomationScriptDummy
+          href: WS_CustomDataTypes_v1\DMAAutomationScriptDummy.md
+        - name: DMAAutomationScriptMemoryFile
+          href: WS_CustomDataTypes_v1\DMAAutomationScriptMemoryFile.md
+        - name: DMAAutomationScriptParameter
+          href: WS_CustomDataTypes_v1\DMAAutomationScriptParameter.md
+        - name: DMABaseline
+          href: WS_CustomDataTypes_v1\DMABaseline.md
+        - name: DMABooking
+          href: WS_CustomDataTypes_v1\DMABooking.md
+        - name: DMABookingLite
+          href: WS_CustomDataTypes_v1\DMABookingLite.md
+        - name: DMABookingManager
+          href: WS_CustomDataTypes_v1\DMABookingManager.md
+        - name: DMAButtonPanelInfo
+          href: WS_CustomDataTypes_v1\DMAButtonPanelInfo.md
+        - name: DMACache
+          href: WS_CustomDataTypes_v1\DMACache.md
+        - name: DMAColor
+          href: WS_CustomDataTypes_v1\DMAColor.md
+        - name: DMAConnectAndInfo
+          href: WS_CustomDataTypes_v1\DMAConnectAndInfo.md
+        - name: DMADashboard
+          href: WS_CustomDataTypes_v1\DMADashboard.md
+        - name: DMADocument
+          href: WS_CustomDataTypes_v1\DMADocument.md
+        - name: DMADocumentFolder
+          href: WS_CustomDataTypes_v1\DMADocumentFolder.md
+        - name: DMAElement
+          href: WS_CustomDataTypes_v1\DMAElement.md
+        - name: DMAElementBasePortInfo
+          href: WS_CustomDataTypes_v1\DMAElementBasePortInfo.md
+        - name: DMAElementConfiguration
+          href: WS_CustomDataTypes_v1\DMAElementConfiguration.md
+        - name: DMAElementLite
+          href: WS_CustomDataTypes_v1\DMAElementLite.md
+        - name: DMAElementPage
+          href: WS_CustomDataTypes_v1\DMAElementPage.md
+        - name: DMAElementSNMPPortInfo
+          href: WS_CustomDataTypes_v1\DMAElementSNMPPortInfo.md
+        - name: DMAElementSNMPV3PortInfo
+          href: WS_CustomDataTypes_v1\DMAElementSNMPV3PortInfo.md
+        - name: DMAFunctionDefinitionLite
+          href: WS_CustomDataTypes_v1\DMAFunctionDefinitionLite.md
+        - name: DMAGenericProperty
+          href: WS_CustomDataTypes_v1\DMAGenericProperty.md
+        - name: DMAHysteresisInfo
+          href: WS_CustomDataTypes_v1\DMAHysteresisInfo.md
+        - name: DMAInfo
+          href: WS_CustomDataTypes_v1\DMAInfo.md
+        - name: DMAJob
+          href: WS_CustomDataTypes_v1\DMAJob.md
+        - name: DMAJobDomainLite
+          href: WS_CustomDataTypes_v1\DMAJobDomainLite.md
+        - name: DMAJobFieldFilter
+          href: WS_CustomDataTypes_v1\DMAJobFieldFilter.md
+        - name: DMAJobFieldPossibleValues
+          href: WS_CustomDataTypes_v1\DMAJobFieldPossibleValues.md
+        - name: DMAJobFieldValueDisplay
+          href: WS_CustomDataTypes_v1\DMAJobFieldValueDisplay.md
+        - name: DMAJobSection
+          href: WS_CustomDataTypes_v1\DMAJobSection.md
+        - name: DMAJobSuggestion
+          href: WS_CustomDataTypes_v1\DMAJobSuggestion.md
+        - name: DMAJobTemplate
+          href: WS_CustomDataTypes_v1\DMAJobTemplate.md
+        - name: DMALicenseInfo
+          href: WS_CustomDataTypes_v1\DMALicenseInfo.md
+        - name: DMALicenses
+          href: WS_CustomDataTypes_v1\DMALicenses.md
+        - name: DMAMapConfigLite
+          href: WS_CustomDataTypes_v1\DMAMapConfigLite.md
+        - name: DMAMapURLParam
+          href: WS_CustomDataTypes_v1\DMAMapURLParam.md
+        - name: DMAMatrixConnection
+          href: WS_CustomDataTypes_v1\DMAMatrixConnection.md
+        - name: DMANote
+          href: WS_CustomDataTypes_v1\DMANote.md
+        - name: DMAObject
+          href: WS_CustomDataTypes_v1\DMAObject.md
+        - name: DMAParameter
+          href: WS_CustomDataTypes_v1\DMAParameter.md
+        - name: DMAParameterEdit
+          href: WS_CustomDataTypes_v1\DMAParameterEdit.md
+        - name: DMAParameterEditDiscreet
+          href: WS_CustomDataTypes_v1\DMAParameterEditDiscreet.md
+        - name: DMAParameterInfo
+          href: WS_CustomDataTypes_v1\DMAParameterInfo.md
+        - name: DMAParameterPosition
+          href: WS_CustomDataTypes_v1\DMAParameterPosition.md
+        - name: DMAParameterTable
+          href: WS_CustomDataTypes_v1\DMAParameterTable.md
+        - name: DMAParameterTableCell
+          href: WS_CustomDataTypes_v1\DMAParameterTableCell.md
+        - name: DMAParameterTableCellV2
+          href: WS_CustomDataTypes_v1\DMAParameterTableCellV2.md
+        - name: DMAParameterTableColumn
+          href: WS_CustomDataTypes_v1\DMAParameterTableColumn.md
+        - name: DMAParameterTableRow
+          href: WS_CustomDataTypes_v1\DMAParameterTableRow.md
+        - name: DMAParameterTableRowV2
+          href: WS_CustomDataTypes_v1\DMAParameterTableRowV2.md
+        - name: DMAProperty
+          href: WS_CustomDataTypes_v1\DMAProperty.md
+        - name: DMAPropertyFilter
+          href: WS_CustomDataTypes_v1\DMAPropertyFilter.md
+        - name: DMAProtocolPage
+          href: WS_CustomDataTypes_v1\DMAProtocolPage.md
+        - name: DMARecent
+          href: WS_CustomDataTypes_v1\DMARecent.md
+        - name: DMARedundancyElement
+          href: WS_CustomDataTypes_v1\DMARedundancyElement.md
+        - name: DMARedundancyGroup
+          href: WS_CustomDataTypes_v1\DMARedundancyGroup.md
+        - name: DMARedundancyVirtualElement
+          href: WS_CustomDataTypes_v1\DMARedundancyVirtualElement.md
+        - name: DMARegionalSettings
+          href: WS_CustomDataTypes_v1\DMARegionalSettings.md
+        - name: DMAResource
+          href: WS_CustomDataTypes_v1\DMAResource.md
+        - name: DMAResourceCapacityTrend
+          href: WS_CustomDataTypes_v1\DMAResourceCapacityTrend.md
+        - name: DMAResourceCapacityTrendPoint
+          href: WS_CustomDataTypes_v1\DMAResourceCapacityTrendPoint.md
+        - name: DMASearchItem
+          href: WS_CustomDataTypes_v1\DMASearchItem.md
+        - name: DMASectionDefinition
+          href: WS_CustomDataTypes_v1\DMASectionDefinition.md
+        - name: DMASectionDefinitionField
+          href: WS_CustomDataTypes_v1\DMASectionDefinitionField.md
+        - name: DMASectionDomainConfig
+          href: WS_CustomDataTypes_v1\DMASectionDomainConfig.md
+        - name: DMASecurity
+          href: WS_CustomDataTypes_v1\DMASecurity.md
+        - name: DMASerialPortInfo
+          href: WS_CustomDataTypes_v1\DMASerialPortInfo.md
+        - name: DMAServiceConfiguration
+          href: WS_CustomDataTypes_v1\DMAServiceConfiguration.md
+        - name: DMAServiceConfigurationGroup
+          href: WS_CustomDataTypes_v1\DMAServiceConfigurationGroup.md
+        - name: DMAServiceConfigurationParameter
+          href: WS_CustomDataTypes_v1\DMAServiceConfigurationParameter.md
+        - name: DMAServiceConfigurationTrigger
+          href: WS_CustomDataTypes_v1\DMAServiceConfigurationTrigger.md
+        - name: DMAServiceDefinition
+          href: WS_CustomDataTypes_v1\DMAServiceDefinition.md
+        - name: DMAServiceDefinitionEdgeLite
+          href: WS_CustomDataTypes_v1\DMAServiceDefinitionEdgeLite.md
+        - name: DMAServiceDefinitionNode
+          href: WS_CustomDataTypes_v1\DMAServiceDefinitionNode.md
+        - name: DMAServiceInfoGroupDefinition
+          href: WS_CustomDataTypes_v1\DMAServiceInfoGroupDefinition.md
+        - name: DMAServiceParams
+          href: WS_CustomDataTypes_v1\DMAServiceParams.md
+        - name: DMAServiceParameter
+          href: WS_CustomDataTypes_v1\DMAServiceParameter.md
+        - name: DMAServiceParametersElement
+          href: WS_CustomDataTypes_v1\DMAServiceParametersElement.md
+        - name: DMAServiceTemplate
+          href: WS_CustomDataTypes_v1\DMAServiceTemplate.md
+        - name: DMAServiceTemplateConfigurationTrigger
+          href: WS_CustomDataTypes_v1\DMAServiceTemplateConfigurationTrigger.md
+        - name: DMAServiceTemplateMissingData
+          href: WS_CustomDataTypes_v1\DMAServiceTemplateMissingData.md
+        - name: DMAServiceTemplateRequiredData
+          href: WS_CustomDataTypes_v1\DMAServiceTemplateRequiredData.md
+        - name: DMAServiceTemplateRequiredInputData
+          href: WS_CustomDataTypes_v1\DMAServiceTemplateRequiredInputData.md
+        - name: DMASLAElementConfiguration
+          href: WS_CustomDataTypes_v1\DMASLAElementConfiguration.md
+        - name: DMASnmpManager
+          href: WS_CustomDataTypes_v1\DMASnmpManager.md
+        - name: DMASpectrumBuffer
+          href: WS_CustomDataTypes_v1\DMASpectrumBuffer.md
+        - name: DMASpectrumMeasptModel
+          href: WS_CustomDataTypes_v1\DMASpectrumMeasptModel.md
+        - name: DMASpectrumPreset
+          href: WS_CustomDataTypes_v1\DMASpectrumPreset.md
+        - name: DMAStatistics
+          href: WS_CustomDataTypes_v1\DMAStatistics.md
+        - name: DMASTString
+          href: WS_CustomDataTypes_v1\DMASTString.md
+        - name: DMATicket
+          href: WS_CustomDataTypes_v1\DMATicket.md
+        - name: DMATicketField
+          href: WS_CustomDataTypes_v1\DMATicketField.md
+        - name: DMATicketFieldConcatItem
+          href: WS_CustomDataTypes_v1\DMATicketFieldConcatItem.md
+        - name: DMATicketFieldPossibleValue
+          href: WS_CustomDataTypes_v1\DMATicketFieldPossibleValue.md
+        - name: DMATicketFieldValueDisplay
+          href: WS_CustomDataTypes_v1\DMATicketFieldValueDisplay.md
+        - name: DMATicketLinkField
+          href: WS_CustomDataTypes_v1\DMATicketLinkField.md
+        - name: DMATicketLinkValue
+          href: WS_CustomDataTypes_v1\DMATicketLinkValue.md
+        - name: DMATicketType
+          href: WS_CustomDataTypes_v1\DMATicketType.md
+        - name: DMATimeline
+          href: WS_CustomDataTypes_v1\DMATimeline.md
+        - name: DMATimeZoneInfo
+          href: WS_CustomDataTypes_v1\DMATimeZoneInfo.md
+        - name: DMATopologyChainsField
+          href: WS_CustomDataTypes_v1\DMATopologyChainsField.md
+        - name: DMATopologyFieldValues
+          href: WS_CustomDataTypes_v1\DMATopologyFieldValues.md
+        - name: DMATrendData
+          href: WS_CustomDataTypes_v1\DMATrendData.md
+        - name: DMAUser
+          href: WS_CustomDataTypes_v1\DMAUser.md
+        - name: DMAUserGroup
+          href: WS_CustomDataTypes_v1\DMAUserGroup.md
+        - name: DMAView
+          href: WS_CustomDataTypes_v1\DMAView.md
+        - name: DMAViewTree
+          href: WS_CustomDataTypes_v1\DMAViewTree.md
+        - name: DMAVisio
+          href: WS_CustomDataTypes_v1\DMAVisio.md
+        - name: DMAVisioPage
+          href: WS_CustomDataTypes_v1\DMAVisioPage.md
+        - name: DMAVisioRegion
+          href: WS_CustomDataTypes_v1\DMAVisioRegion.md
+        - name: DMAVisioRegionAction
+          href: WS_CustomDataTypes_v1\DMAVisioRegionAction.md
+- name: Web Services (v0)
+  href: WS_v0\WS_v0.md
+  items:
+    - name: About the Web Services (v0)
+      href: WS_About_v0\WS_About_v0.md
+      items:
+        - name: Using the Web Services (v0)
+          href: WS_About_v0\Using_the_Web_Services_v0.md
+        - name: Interfaces and WSDL files
+          href: WS_About_v0\Interfaces_and_WSDL_files1.md
+    - name: Methods (v0)
+      href: WS_Methods_v0\WS_Methods_v0.md
+      items:
+        - name: CleanupConnections
+          href: WS_Methods_v0\CleanupConnections.md
+        - name: Connect
+          href: WS_Methods_v0\Connect.md
+        - name: CreateAutomationScript
+          href: WS_Methods_v0\CreateAutomationScript.md
+        - name: GetActiveAlarmsFromElement
+          href: WS_Methods_v0\GetActiveAlarmsFromElement.md
+        - name: GetActiveAlarmsFromView
+          href: WS_Methods_v0\GetActiveAlarmsFromView.md
+        - name: GetElementByPollingIp
+          href: WS_Methods_v0\GetElementByPollingIp.md
+        - name: GetElementNameByPollingIp
+          href: WS_Methods_v0\GetElementNameByPollingIp.md
+        - name: GetElementStateByID
+          href: WS_Methods_v0\GetElementStateByID.md
+        - name: GetElementStateByName
+          href: WS_Methods_v0\GetElementStateByName.md
+        - name: GetElements
+          href: WS_Methods_v0\GetElements.md
+        - name: GetElementsFiltered
+          href: WS_Methods_v0\GetElementsFiltered.md
+        - name: GetElementsFromView
+          href: WS_Methods_v0\GetElementsFromView.md
+        - name: GetParameterValueByElementID
+          href: WS_Methods_v0\GetParameterValueByElementID.md
+        - name: GetParameterValueByElementName
+          href: WS_Methods_v0\GetParameterValueByElementName.md
+        - name: GetParameterValueByIds
+          href: WS_Methods_v0\GetParameterValueByIds.md
+        - name: GetProtocolForElement
+          href: WS_Methods_v0\GetProtocolForElement.md
+        - name: GetServiceElementListByID
+          href: WS_Methods_v0\GetServiceElementListByID.md
+        - name: GetServiceElementListByName
+          href: WS_Methods_v0\GetServiceElementListByName.md
+        - name: GetServicePropertiesByID
+          href: WS_Methods_v0\GetServicePropertiesByID.md
+        - name: GetServicePropertiesByName
+          href: WS_Methods_v0\GetServicePropertiesByName.md
+        - name: GetServices
+          href: WS_Methods_v0\GetServices.md
+        - name: GetServicesAlarmStateByID
+          href: WS_Methods_v0\GetServicesAlarmStateByID.md
+        - name: GetServicesAlarmStateByName
+          href: WS_Methods_v0\GetServicesAlarmStateByName.md
+        - name: GetSubViews
+          href: WS_Methods_v0\GetSubViews.md
+        - name: RequestLoginAsTicket
+          href: WS_Methods_v0\RequestLoginAsTicket1.md
+        - name: SetParameterValueByElementID
+          href: WS_Methods_v0\SetParameterValueByElementID.md
+    - name: Custom data types (v0)
+      href: WS_CustomDataTypes_v0\WS_CustomDataTypes_v0.md
+      items:
+        - name: AlarmEventMessage
+          href: WS_CustomDataTypes_v0\AlarmEventMessage.md
+        - name: AutomationStatement
+          href: WS_CustomDataTypes_v0\AutomationStatement.md
+        - name: CreateAutomationInfo
+          href: WS_CustomDataTypes_v0\CreateAutomationInfo.md
+        - name: DMAElement
+          href: WS_CustomDataTypes_v0\DMAElement1.md
+        - name: ParamValue
+          href: WS_CustomDataTypes_v0\ParamValue.md
+- name: Reference
+  href: WS_REF\WS_REF.md
+  items:
+    - name: Recent changes
+      href: WS_recent_changes\WS_recent_changes.md

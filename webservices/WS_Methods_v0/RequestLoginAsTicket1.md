@@ -1,0 +1,20 @@
+---
+uid: RequestLoginAsTicket1
+---
+
+# RequestLoginAsTicket
+
+Use this method to request a logon ticket that can then be added to e.g. a DataMiner Maps URL.
+
+## Input
+
+| Item       | Format | Description                                   |
+|------------|--------|-----------------------------------------------|
+| Connection | String | The connection ID. See [Connect](xref:Connect). |
+
+## Output
+
+| Item                        | Format | Description       |
+|-----------------------------|--------|-------------------|
+| RequestLoginAsTicket­Result | String | The logon ticket. |
+

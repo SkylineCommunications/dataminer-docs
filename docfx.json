@@ -22,6 +22,8 @@
           "user-guide/**/toc.yml",
           "develop/**.md",
           "develop/toc.yml",
+          "webservices/**.md",
+          "webservices/toc.yml",
           "toc.yml",
           "*.md"
         ]

@@ -1,0 +1,22 @@
+---
+uid: GetBookings
+---
+
+# GetBookings
+
+Use this method to retrieve all bookings matching a filter. Available from DataMiner 10.0.3 onwards.
+
+## Input
+
+| Item       | Format  | Description                                                          |
+|------------|---------|----------------------------------------------------------------------|
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .                 |
+| Filter     | String  | The filter that the bookings must match.                             |
+| Amount     | Integer | The number of bookings matching the filter that should be retrieved. |
+
+## Output
+
+| Item              | Format                                                                         | Description                       |
+|-------------------|--------------------------------------------------------------------------------|-----------------------------------|
+| GetBookingsResult | Array of DMABooking (see [DMABooking](xref:DMABooking)) | The bookings matching the filter. |
+
