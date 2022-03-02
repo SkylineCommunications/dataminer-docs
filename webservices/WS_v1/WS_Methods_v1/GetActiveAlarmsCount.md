@@ -10,11 +10,10 @@ Use this method to count the number of active alarms.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
 | Item                        | Format  | Description                        |
 |-----------------------------|---------|------------------------------------|
 | GetActiveAlarms­CountResult | Integer | The total number of active alarms. |
-

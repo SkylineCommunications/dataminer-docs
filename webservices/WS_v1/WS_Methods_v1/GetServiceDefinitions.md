@@ -10,11 +10,10 @@ Use this method to retrieve all available service definitions. Available from Da
 
 | Item       | Format | Description                                                                          |
 |------------|--------|--------------------------------------------------------------------------------------|
-| Connection | String | The connection string. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                         | Format                             | Description                                                                                                                            |
-|------------------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| GetServiceDefinitions­Result | Array of DMAServiceDef­initionLite | A DMAServiceDefinitionLite object for each of the available service definitions, containing the ID and name of the service definition. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetServiceDefinitions­Result | Array of DMAServiceDefinitionLite | A DMAServiceDefinitionLite object for each of the available service definitions, containing the ID and name of the service definition. |

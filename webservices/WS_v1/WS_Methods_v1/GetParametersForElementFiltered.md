@@ -10,7 +10,7 @@ Use this method to retrieve the parameters of a particular element that match a 
 
 | Item                 | Format  | Description                                                                      |
 |----------------------|---------|----------------------------------------------------------------------------------|
-| Connection           | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection           | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID                | Integer | The ID of the DMA where the element was originally created.                      |
 | ElementID            | Integer | The ID of the element.                                                           |
 | Filter.IncludeHidden | Boolean | Determines whether protocol parameters without display positions are included.   |
@@ -22,7 +22,6 @@ Use this method to retrieve the parameters of a particular element that match a 
 
 ## Output
 
-| Item                                   | Format                                                                               | Description                                                              |
-|----------------------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| GetParametersFor­ElementFilteredResult | Array of DMAParameter (see [DMAParameter](xref:DMAParameter)) | The parameters of the specified element that match the specified filter. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetParametersFor­ElementFilteredResult | Array of [DMAParameter](xref:DMAParameter) | The parameters of the specified element that match the specified filter. |

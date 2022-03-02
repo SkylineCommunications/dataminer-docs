@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of active alarms with a particular
 
 | Item           | Format  | Description                                                                         |
 |----------------|---------|-------------------------------------------------------------------------------------|
-| Connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .                                |
+| Connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                                |
 | WithAlarmState | String  | The alarm severity.                                                                 |
 | Index          | Integer | The point from which to start returning alarms.                                     |
 | Count          | Integer | The number of alarms to be returned.                                                |
@@ -21,7 +21,6 @@ Use this method to retrieve a specific number of active alarms with a particular
 
 ## Output
 
-| Item                         | Format                                                                   | Description                                                 |
-|------------------------------|--------------------------------------------------------------------------|-------------------------------------------------------------|
-| GetActiveAlarms­SortedResult | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The requested number of active alarms, sorted as specified. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetActiveAlarms­SortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active alarms, sorted as specified. |

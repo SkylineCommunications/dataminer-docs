@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of masked element alarms.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .    |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
 | DmaID      | Integer | The DMA ID.                                                                         |
 | ElementID  | Integer | The element ID.                                                                     |
 | Index      | Integer | The point from which to start returning alarms.                                     |
@@ -22,7 +22,6 @@ Use this method to retrieve a specific number of masked element alarms.
 
 ## Output
 
-| Item                                   | Format                                                                   | Description                                                         |
-|----------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------|
-| GetMaskedAlarmsFor­ElementSortedResult | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The requested number of masked element alarms, sorted as specified. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetMaskedAlarmsFor­ElementSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of masked element alarms, sorted as specified. |

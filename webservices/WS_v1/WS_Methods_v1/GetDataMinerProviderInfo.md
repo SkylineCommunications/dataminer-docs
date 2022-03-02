@@ -12,7 +12,6 @@ None.
 
 ## Output
 
-| Item                            | Format          | Description                                                                               |
-|---------------------------------|-----------------|-------------------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetDataMinerProvider­InfoResult | Array of string | The information regarding the provider, such as the company name and contact information. |
-

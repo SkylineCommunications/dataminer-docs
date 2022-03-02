@@ -10,11 +10,10 @@ Use this method to retrieve all properties that are available for alarm filterin
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                               | Format                                                                            | Description                                                 |
-|------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------------------------|
-| GetAvailableAlarmProp­ertiesResult | Array of DMAProperty<br> ([DMAProperty](xref:DMAProperty)) | An array with all properties available for alarm filtering. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetAvailableAlarmPropertiesResult | Array of DMAProperty ([DMAProperty](xref:DMAProperty)) | An array with all properties available for alarm filtering. |

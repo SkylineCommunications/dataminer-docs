@@ -10,11 +10,10 @@ Use this method to retrieve the permissions granted to the current user account.
 
 | Item       | Format | Description                                                                      |
 |------------|--------|----------------------------------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                  | Format                                                 | Description                                                  |
-|-----------------------|--------------------------------------------------------|--------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetSecurityInfoResult | [DMASecurity](xref:DMASecurity) | The list of permissions granted to the current user account. |
-

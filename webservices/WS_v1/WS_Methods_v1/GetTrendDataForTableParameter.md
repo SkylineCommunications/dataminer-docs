@@ -10,19 +10,18 @@ With this method, real-time data is only retrieved in case no average trending i
 
 ## Input
 
-| Item         | Format       | Description                                                                                                                                        |
-|--------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Connection   | String       | The connection ID. See [ConnectApp](xref:ConnectApp) .                                                                   |
-| DmaID        | Integer      | The DataMiner Agent ID.                                                                                                                            |
-| ElementID    | Integer      | The element ID.                                                                                                                                    |
-| ParameterID  | Integer      | The parameter ID.                                                                                                                                  |
-| TableIndex   | String       | The primary key.                                                                                                                                   |
+| Item | Format | Description |
+|--|--|--|
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| DmaID | Integer | The DataMiner Agent ID. |
+| ElementID | Integer | The element ID. |
+| ParameterID | Integer | The parameter ID. |
+| TableIndex | String | The primary key. |
 | UtcStartTime | Long integer | The start time of the timespan for which alarm state changes should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| UtcEndTime   | Long integer | The end time of the timespan for which alarm state changes should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT).   |
+| UtcEndTime | Long integer | The end time of the timespan for which alarm state changes should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
 
 ## Output
 
-| Item                                 | Format                                                   | Description                                                                 |
-|--------------------------------------|----------------------------------------------------------|-----------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetTrendDataForTable­ParameterResult | [DMATrendData](xref:DMATrendData) | The trend data for the specified primary key within the specified timespan. |
-

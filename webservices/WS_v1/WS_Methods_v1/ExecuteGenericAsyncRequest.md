@@ -14,12 +14,12 @@ To execute a method asynchronously, do the following:
 
 1. Send the task to the server using the *ExecuteGenericAsyncRequest* method.
 
-2. Check whether the server has finished executing the task using the *IsGenericAsyncResponseAvailable* method (see [IsGenericAsyncResponseAvailable](xref:IsGenericAsyncResponseAvailable)).
+1. Check whether the server has finished executing the task using the *IsGenericAsyncResponseAvailable* method (see [IsGenericAsyncResponseAvailable](xref:IsGenericAsyncResponseAvailable)).
 
-	> [!NOTE]
-	> To cancel the execution, use the method *CancelAsyncRequest*. See [CancelAsyncRequest](xref:CancelAsyncRequest).
+   > [!NOTE]
+   > To cancel the execution, use the method *CancelAsyncRequest*. See [CancelAsyncRequest](xref:CancelAsyncRequest).
 
-3. If the server has finished executing the task, use the *GetGenericAsyncResponse* method to retrieve the result (see [GetGenericAsyncResponse](xref:GetGenericAsyncResponse)).
+1. If the server has finished executing the task, use the *GetGenericAsyncResponse* method to retrieve the result (see [GetGenericAsyncResponse](xref:GetGenericAsyncResponse)).
 
 ## Input
 
@@ -30,7 +30,6 @@ To execute a method asynchronously, do the following:
 
 ## Output
 
-| Item                              | Format | Description                                                                                                                                                                                                                                                                                                                                                                   |
-|-----------------------------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ExecuteGeneric­AsyncRequestResult | String | The ticket that has to be passed along when executing the *IsGenericAsyncResponseAvailable* method (see [IsGenericAsyncResponseAvailable](xref:IsGenericAsyncResponseAvailable)) or the *GetGenericAsyncResponse* method (see [GetGenericAsyncResponse](xref:GetGenericAsyncResponse)). |
-
+| Item | Format | Description |
+|--|--|--|
+| ExecuteGeneric­AsyncRequestResult | String | The ticket that has to be passed along when executing the [IsGenericAsyncResponseAvailable](xref:IsGenericAsyncResponseAvailable) method or the [GetGenericAsyncResponse](xref:GetGenericAsyncResponse) method. |

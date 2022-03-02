@@ -16,13 +16,12 @@ Use this method to retrieve all data of a particular service, including a list o
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                              |
 | ServiceID  | Integer | The service ID.                                      |
 
 ## Output
 
-| Item                 | Format                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Description                                 |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| GetFullServiceResult | Array of:<br> -  DMAElement (see [DMAElement](xref:DMAElement))<br> -  DMAServiceParametersElement (see [DMAServiceParametersElement](xref:DMAServiceParametersElement)) objects<br> -  DMAProperty (see [DMAProperty](xref:DMAProperty)) objects | The complete data of the specified service. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetFullServiceResult | Array of:<br> -  [DMAElement](xref:DMAElement)<br> -  [DMAServiceParametersElement](xref:DMAServiceParametersElement) objects<br> -  [DMAProperty](xref:DMAProperty) objects | The complete data of the specified service. |

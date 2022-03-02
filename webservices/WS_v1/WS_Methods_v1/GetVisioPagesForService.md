@@ -10,7 +10,7 @@ Use this method to retrieve a list of the pages of the Visio file linked to a pa
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ServiceID  | Integer | The service ID.                                                                  |
 
@@ -19,4 +19,3 @@ Use this method to retrieve a list of the pages of the Visio file linked to a pa
 | Item                           | Format                | Description                                                  |
 |--------------------------------|-----------------------|--------------------------------------------------------------|
 | GetVisioPagesFor­ServiceResult | Array of DMAVisioPage | A list of the pages of the Visio file linked to the service. |
-

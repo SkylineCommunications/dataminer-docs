@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of parameters on a particular Data
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ElementID  | Integer | The element ID.                                                                  |
 | PageName   | String  | The name of the Data Display page.                                               |
@@ -23,7 +23,6 @@ Use this method to retrieve a specific number of parameters on a particular Data
 
 ## Output
 
-| Item                                       | Format                                                                               | Description                                              |
-|--------------------------------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------|
-| GetParametersByPage­ForElementSortedResult | Array of DMAParameter (see [DMAParameter](xref:DMAParameter)) | The requested number of parameters, sorted as specified. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetParametersByPage­ForElementSortedResult | Array of [DMAParameter](xref:DMAParameter) | The requested number of parameters, sorted as specified. |

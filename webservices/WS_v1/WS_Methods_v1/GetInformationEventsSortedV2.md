@@ -12,7 +12,7 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item         | Format       | Description                                                                                     |
 |--------------|--------------|-------------------------------------------------------------------------------------------------|
-| Connection   | String       | The connection ID. See [ConnectApp](xref:ConnectApp) .                                            |
+| Connection   | String       | The connection ID. See [ConnectApp](xref:ConnectApp).                                           |
 | UtcStartTime | Long integer | The start time of the period for which information events are retrieved.                        |
 | UtcEndTime   | Long integer | The end time of the period for which information events are retrieved.                          |
 | Index        | Integer      | The point from which to start returning information events.                                     |
@@ -21,7 +21,6 @@ Available from DataMiner 10.0.7 onwards.
 
 ## Output
 
-| Item                                | Format                                                                   | Description                                                                                             |
-|-------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| GetInformationEvents­SortedV2Result | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The information events for the indicated period, sorted as required, as well as the alarm cache status. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetInformationEvents­SortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The information events for the indicated period, sorted as required, as well as the alarm cache status. |

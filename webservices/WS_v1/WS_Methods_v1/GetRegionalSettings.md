@@ -10,11 +10,10 @@ Use this method to retrieve the regional settings.
 
 | Item       | Format | Description                                                                      |
 |------------|--------|----------------------------------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                       | Format                                                                                           | Description            |
-|----------------------------|--------------------------------------------------------------------------------------------------|------------------------|
-| GetRegionalSettings­Result | DMARegionalSettings (see [DMARegionalSettings](xref:DMARegionalSettings)) | The regional settings. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetRegionalSettings­Result | [DMARegionalSettings](xref:DMARegionalSettings) | The regional settings. |

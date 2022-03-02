@@ -10,7 +10,7 @@ Use this method to remove an element from a specified view.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ElementID  | Integer | The element ID.                                                                  |
 | ViewID     | Integer | The ID of the view from which the element must be removed.                       |
@@ -18,4 +18,3 @@ Use this method to remove an element from a specified view.
 ## Output
 
 None.
-

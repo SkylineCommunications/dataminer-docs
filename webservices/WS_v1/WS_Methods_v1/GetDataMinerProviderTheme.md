@@ -15,4 +15,3 @@ None.
 | Item                             | Format           | Description                                    |
 |----------------------------------|------------------|------------------------------------------------|
 | GetDataMinerProvider­ThemeResult | DMAProviderTheme | The provider’s theme and branding information. |
-

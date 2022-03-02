@@ -10,7 +10,7 @@ Use this method to retrieve the topology chains for a particular CPE element.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ElementID  | Integer | The element ID.                                                                  |
 
@@ -18,5 +18,4 @@ Use this method to retrieve the topology chains for a particular CPE element.
 
 | Item                           | Format                    | Description                                                  |
 |--------------------------------|---------------------------|--------------------------------------------------------------|
-| GetTopologyChains­ForCPEResult | Array of DMATopologyChain | The names of the topology chains for the specfified element. |
-
+| GetTopologyChains­ForCPEResult | Array of DMATopologyChain | The names of the topology chains for the specified element. |

@@ -10,13 +10,12 @@ Use this method to retrieve the first letters of all the elements in a view.
 
 | Item            | Format  | Description                                          |
 |-----------------|---------|------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ViewID          | Integer | The view ID.                                         |
-| IncludeSubViews | Boolean | Whether or not to include the subviews.              |
+| IncludeSubViews | Boolean | Whether subviews should be included.              |
 
 ## Output
 
 | Item                              | Format          | Description                                                  |
 |-----------------------------------|-----------------|--------------------------------------------------------------|
-| GetElementIndexPage­ForViewResult | Array of string | The first letters of all the elements in the specified view. |
-
+| GetElementIndexPage­ForViewResult  | Array of string | The first letters of all the elements in the specified view. |

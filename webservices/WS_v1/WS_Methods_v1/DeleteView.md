@@ -10,10 +10,9 @@ Use this method to delete a specified view.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ViewID     | Integer | The view ID.                                         |
 
 ## Output
 
 None.
-

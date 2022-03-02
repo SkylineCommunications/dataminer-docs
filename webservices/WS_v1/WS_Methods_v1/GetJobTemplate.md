@@ -12,7 +12,7 @@ Available from DataMiner 9.6.6 onwards.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | TemplateID | String | The ID of the job template.                          |
 
 ## Output
@@ -20,4 +20,3 @@ Available from DataMiner 9.6.6 onwards.
 | Item                 | Format                                                       | Description                 |
 |----------------------|--------------------------------------------------------------|-----------------------------|
 | GetJobTemplateResult | [DMAJobTemplate](xref:DMAJobTemplate) | The requested job template. |
-

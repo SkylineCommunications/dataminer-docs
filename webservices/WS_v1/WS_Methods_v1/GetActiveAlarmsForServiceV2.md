@@ -12,13 +12,12 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                              |
 | ServiceID  | Integer | The service ID.                                      |
 
 ## Output
 
-| Item                               | Format                                                                   | Description                                                                    |
-|------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| GetActiveAlarmsFor­ServiceV2Result | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The active alarms of the specified service, as well as the alarm cache status. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetActiveAlarmsFor­ServiceV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified service, as well as the alarm cache status. |

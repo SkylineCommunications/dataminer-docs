@@ -10,7 +10,7 @@ Use this method to retrieve the current alarm state of an element.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                              |
 | ElementID  | Integer | The element ID.                                      |
 
@@ -19,4 +19,3 @@ Use this method to retrieve the current alarm state of an element.
 | Item                           | Format | Description                                       |
 |--------------------------------|--------|---------------------------------------------------|
 | GetAlarmStateFor­ElementResult | String | The current alarm state of the specified element. |
-

@@ -10,7 +10,7 @@ Use this method to retrieve the data of a particular service by name.
 
 | Item        | Format | Description                                                                      |
 |-------------|--------|----------------------------------------------------------------------------------|
-| Connection  | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection  | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ServiceName | String | The service name.                                                                |
 
 ## Output
@@ -18,4 +18,3 @@ Use this method to retrieve the data of a particular service by name.
 | Item                   | Format                                               | Description                        |
 |------------------------|------------------------------------------------------|------------------------------------|
 | GetServiceByNameResult | [DMAElement](xref:DMAElement) | The data of the specified service. |
-

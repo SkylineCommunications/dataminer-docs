@@ -10,14 +10,14 @@ Use this method to create a new element on the specified DataMiner Agent.
 
 | Item          | Format                   | Description                                                                         |
 |---------------|--------------------------|-------------------------------------------------------------------------------------|
-| Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp) .                            |
+| Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
 | DmaID         | Integer                  | The DataMiner Agent ID.                                                             |
 | ViewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
-| Configuration | DMAElementConfigu­ration | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
+| Configuration | DMAElementConfiguration  | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
 
 > [!NOTE]
 > -  When you create an element, the “State” property of the DMAElementConfiguration object should be *Active*, *Paused* or *Stopped*.
-> -  From DataMiner 9.5.5 onwards, it is possible to specify a different SNMP version than is configured in the protocol.
+> -  From DataMiner 9.5.5 onwards, it is possible to specify a different SNMP version than is configured in the protocol. For more information on the configuration, refer to the examples below.
 
 ## Output
 
@@ -25,3 +25,57 @@ Use this method to create a new element on the specified DataMiner Agent.
 |---------------------|-----------------|-----------------------------------------------------|
 | CreateElementResult | Array of string | The DataMiner ID and element ID of the new element. |
 
+## Examples
+
+### Request specifying SNMPv2 for an SNMPv1, SNMPv2 or SNMPv3 protocol
+
+```xml
+<CreateElement xmlns="http://www.skyline.be/api/v1">
+...
+   <configuration>
+   ...
+      <Ports>
+         <DMAElementBasePortInfo xsi:type="DMAElementSNMPPortInfo">
+            <SNMPVersion>2</SNMPVersion>
+            <DeviceAddress>string</DeviceAddress>
+            <IPAddress>string</IPAddress>
+            <Network>string</Network>
+            <PortNumber>int</PortNumber>
+            <GetCommunity>string</GetCommunity>
+            <SetCommunity>string</SetCommunity>
+            <ElementTimeoutTime>int</ElementTimeoutTime>
+            <TimeoutTime>int</TimeoutTime>
+            <Retries>int</Retries>
+         </DMAElementBasePortInfo>
+      </Ports>
+   </configuration>
+</CreateElement>
+```
+
+### Request specifying SNMPv3 for an SNMPv1, SNMPv2 or SNMPv3 protocol
+
+```xml
+<CreateElement xmlns="http://www.skyline.be/api/v1">
+...
+   <configuration>
+   ...
+      <Ports>
+         <DMAElementBasePortInfo xsi:type="DMAElementSNMPV3PortInfo">
+            <DeviceAddress>string</DeviceAddress>
+            <IPAddress>string</IPAddress>
+            <Network>string</Network>
+            <PortNumber>int</PortNumber>
+            <Username>string</Username>
+            <AuthType>string</AuthType>
+            <PrivType>string</PrivType>
+            <SecurityLevel>string</SecurityLevel>
+            <AuthPassword>string</AuthPassword>
+            <PrivPassword>string</PrivPassword>
+            <ElementTimeoutTime>int</ElementTimeoutTime>
+            <TimeoutTime>int</TimeoutTime>
+            <Retries>int</Retries>
+         </DMAElementBasePortInfo>
+      </Ports>
+   </configuration>
+</CreateElement>
+```

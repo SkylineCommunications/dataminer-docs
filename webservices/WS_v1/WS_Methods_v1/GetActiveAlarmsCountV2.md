@@ -12,11 +12,10 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
 | Item                          | Format                       | Description                                                           |
 |-------------------------------|------------------------------|-----------------------------------------------------------------------|
 | GetActiveAlarms­CountV2Result | DMAAlarmCountAnd­CacheStatus | The total number of active alarms, as well as the alarm cache status. |
-

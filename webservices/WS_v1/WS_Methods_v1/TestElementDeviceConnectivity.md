@@ -8,15 +8,14 @@ This method allows you to test a connection to a device, without actually creati
 
 ## Input
 
-| Item          | Format                   | Description                                                                                                                                                 |
-|---------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp) .                                                                        |
-| DmaID         | Integer                  | The DataMiner Agent ID.                                                                                                                                     |
-| Configuration | DMAElement­Configuration | The element configuration for which the connection is to be tested.<br> See [DMAElementConfiguration](xref:DMAElementConfiguration). |
+| Item | Format | Description |
+|--|--|--|
+| Connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
+| DmaID | Integer | The DataMiner Agent ID. |
+| Configuration | [DMAElementConfiguration](xref:DMAElementConfiguration) | The element configuration for which the connection is to be tested. |
 
 ## Output
 
-| Item                                 | Format          | Description                                                                                                  |
-|--------------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | TestElementDevice­ConnectivityResult | Array of string | The result of the connection test, containing the connection state as well as any errors that were returned. |
-

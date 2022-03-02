@@ -12,7 +12,7 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ViewID     | Integer | The view ID.                                         |
 
 ## Output
@@ -20,4 +20,3 @@ Available from DataMiner 10.0.7 onwards.
 | Item                             | Format                           | Description                                                                                  |
 |----------------------------------|----------------------------------|----------------------------------------------------------------------------------------------|
 | GetActiveAlarmCountForViewResult | DMAAlarmCountData­AndCacheStatus | An array listing the alarm count for each severity level, along with the alarm cache status. |
-

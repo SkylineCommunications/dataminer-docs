@@ -10,11 +10,10 @@ Use this method to retrieve statistics for every DMA in the DMS. These statistic
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                                | Format                                                                                  | Description                                     |
-|-------------------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetDataMinerAgents­StatisticsResult | Array of DMAStatistics (see [DMAStatistics](xref:DMAStatistics)) | The statistics for each of the DMAs in the DMS. |
-

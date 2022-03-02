@@ -10,7 +10,7 @@ Use this method to retrieve the data for a particular parameter, with dynamic un
 
 | Item        | Format  | Description                                                                                                 |
 |-------------|---------|-------------------------------------------------------------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .                            |
+| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                            |
 | DmaID       | Integer | The DataMiner Agent ID.                                                                                     |
 | ElementID   | Integer | The element ID.                                                                                             |
 | ParameterID | Integer | The parameter ID.                                                                                           |
@@ -18,7 +18,6 @@ Use this method to retrieve the data for a particular parameter, with dynamic un
 
 ## Output
 
-| Item                                | Format                                                   | Description                                              |
-|-------------------------------------|----------------------------------------------------------|----------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetParameterWith­DynamicUnitsResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameter, with dynamic units. |
-

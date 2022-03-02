@@ -12,7 +12,7 @@ Available from DataMiner 9.0.5 onwards.
 
 | Item          | Format                      | Description                                                                               |
 |---------------|-----------------------------|-------------------------------------------------------------------------------------------|
-| Connection    | String                      | The connection string. See [ConnectApp](xref:ConnectApp) .                                  |
+| Connection    | String                      | The connection string. See [ConnectApp](xref:ConnectApp).                                 |
 | DmaID         | Integer                     | The DataMiner Agent ID.                                                                   |
 | ElementID     | Integer                     | The ID of the SLA element.                                                                |
 | ViewIDs       | Array of Integer            | The IDs of the views in which the element should be created.                              |
@@ -21,4 +21,3 @@ Available from DataMiner 9.0.5 onwards.
 ## Output
 
 None.
-

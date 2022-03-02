@@ -7,7 +7,7 @@ uid: ConnectAppAndInfoStep2
 Use this method for the second step in a two-step authentication process, in order to retrieve the connection string, along with information about the DataMiner Agent (time, alarm colors, etc.) and the user permissions granted.
 
 > [!CAUTION]
-> We strongly advise to use a secured connection (HTTPS), as otherwise logon credentials are sent as plain, unencrypted text over the internet.
+> We strongly recommend that you use a secured connection (HTTPS), as otherwise logon credentials are sent as plain, unencrypted text over the internet.
 
 ## Input
 
@@ -21,7 +21,6 @@ Use this method for the second step in a two-step authentication process, in ord
 
 ## Output
 
-| Item                          | Format                                                             | Description                                                                                     |
-|-------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | ConnectAppAndInfo­Step2Result | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |
-

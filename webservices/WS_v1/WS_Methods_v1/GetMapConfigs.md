@@ -10,11 +10,10 @@ Use this method to retrieve all map configurations available in the system.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                | Format                                                                                           | Description                                                   |
-|---------------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| GetMapConfigsResult | Array of DMAMapConfigLite (see [DMAMapConfigLite](xref:DMAMapConfigLite)) | The map configurations with the corresponding map parameters. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetMapConfigsResult | Array of [DMAMapConfigLite](xref:DMAMapConfigLite) | The map configurations with the corresponding map parameters. |

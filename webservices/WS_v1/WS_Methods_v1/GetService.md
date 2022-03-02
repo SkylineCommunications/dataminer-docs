@@ -10,7 +10,7 @@ Use this method to retrieve the data of a particular service.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ServiceID  | Integer | The service ID.                                                                  |
 
@@ -19,4 +19,3 @@ Use this method to retrieve the data of a particular service.
 | Item             | Format                                               | Description                        |
 |------------------|------------------------------------------------------|------------------------------------|
 | GetServiceResult | [DMAElement](xref:DMAElement) | The data of the specified service. |
-

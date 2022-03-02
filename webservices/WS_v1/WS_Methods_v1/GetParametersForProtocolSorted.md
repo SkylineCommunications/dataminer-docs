@@ -13,7 +13,7 @@ Use this method to retrieve specific number of parameters for a specified protoc
 
 | Item                   | Format  | Description                                                                      |
 |------------------------|---------|----------------------------------------------------------------------------------|
-| Connection             | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection             | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ProtocolName           | String  | The name of the protocol                                                         |
 | ProtocolVersion        | String  | The protocol version                                                             |
 | includeWriteParameters | Boolean | Indicates whether write parameters should be included.                           |
@@ -23,7 +23,6 @@ Use this method to retrieve specific number of parameters for a specified protoc
 
 ## Output
 
-| Item                                  | Format                                                                               | Description                                                     |
-|---------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| GetParametersFor­ProtocolSortedResult | Array of DMAParameter (see [DMAParameter](xref:DMAParameter)) | The parameters for the specified protocol, sorted as requested. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetParametersFor­ProtocolSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified protocol, sorted as requested. |

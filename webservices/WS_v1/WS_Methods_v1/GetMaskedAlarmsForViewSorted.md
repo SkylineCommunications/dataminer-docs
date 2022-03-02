@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of masked view alarms.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .    |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
 | ViewID     | Integer | The view ID.                                                                        |
 | Index      | Integer | The point from which to start returning alarms.                                     |
 | Count      | Integer | The number of alarms to be returned.                                                |
@@ -21,7 +21,6 @@ Use this method to retrieve a specific number of masked view alarms.
 
 ## Output
 
-| Item                                | Format                                                                   | Description                                                    |
-|-------------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------|
-| GetMaskedAlarmsFor­ViewSortedResult | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The masked alarms for the specified view, sorted as requested. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetMaskedAlarmsFor­ViewSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The masked alarms for the specified view, sorted as requested. |

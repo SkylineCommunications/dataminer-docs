@@ -8,13 +8,13 @@ Use this method to retrieve the parameters for a specified chain of a CPE elemen
 
 ## Input
 
-| Item       | Format          | Description                                                                                                                                             |
-|------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Connection | String          | The connection ID. See [ConnectApp](xref:ConnectApp) .                                                                        |
-| DmaID      | Integer         | The DataMiner Agent ID.                                                                                                                                 |
-| ElementID  | Integer         | The element ID.                                                                                                                                         |
-| Chain      | String          | The name of the chain.                                                                                                                                  |
-| Filters    | Array of string | The filters that are applied to the CPE chain (optional). If no filters are specified, only KPI parameters that do not need a filter will be retrieved. |
+| Item | Format | Description |
+|--|--|--|
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| DmaID | Integer | The DataMiner Agent ID. |
+| ElementID | Integer | The element ID. |
+| Chain | String | The name of the chain. |
+| Filters | Array of string | The filters that are applied to the CPE chain (optional). If no filters are specified, only KPI parameters that do not need a filter will be retrieved. |
 
 ## Output
 
@@ -28,4 +28,3 @@ Use this method to retrieve the parameters for a specified chain of a CPE elemen
 > -  FixedFilter indicates whether a fixed filter is used to retrieve the data.
 >
 > See [DMAParameterTableRow](xref:DMAParameterTableRow).
-

@@ -16,7 +16,7 @@ If the user credentials passed to the method prove to be valid, a connection ID 
 | Item       | Format | Description                                                                                             |
 |------------|--------|---------------------------------------------------------------------------------------------------------|
 | Connection | String | The IP address or the host name.                                                                        |
-| Login      | String | The user name. In case of a domain user, you can use: *DomainName\\UserName* |
+| Login      | String | The username. In case of a domain user, you can use: *DomainName\\UserName* |
 | Password   | String | The password.                                                                                           |
 
 ## Output
@@ -24,4 +24,3 @@ If the user credentials passed to the method prove to be valid, a connection ID 
 | Item          | Format | Description        |
 |---------------|--------|--------------------|
 | ConnectResult | String | The connection ID. |
-

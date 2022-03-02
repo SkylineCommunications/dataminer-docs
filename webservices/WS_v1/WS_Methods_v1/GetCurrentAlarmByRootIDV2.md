@@ -12,13 +12,12 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item        | Format  | Description                                          |
 |-------------|---------|------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID       | Integer | The DataMiner Agent ID.                              |
 | RootAlarmID | Integer | The root alarm ID.                                   |
 
 ## Output
 
-| Item                             | Format                                           | Description                                                                                       |
-|----------------------------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetCurrentAlarmBy­RootIDV2Result | [DMAAlarm](xref:DMAAlarm) | The current alarm associated with the specified root alarm ID, as well as the alarm cache status. |
-

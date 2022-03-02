@@ -10,7 +10,7 @@ Use this method to retrieve all jobs in the domain matching a particular filter.
 
 | Item                | Format                     | Description                                                                     |
 |---------------------|----------------------------|---------------------------------------------------------------------------------|
-| Connection          | String                     | The connection ID. See [ConnectApp](xref:ConnectApp) .                            |
+| Connection          | String                     | The connection ID. See [ConnectApp](xref:ConnectApp).                            |
 | DomainID            | String                     | The ID of the job domain.                                                       |
 | Filter.SearchText   | String                     | The text that the job suggestions should match.                                 |
 | Filter.FieldFilters | Array of DMAJobFieldFilter | See [DMAJobFieldFilter](xref:DMAJobFieldFilter).         |
@@ -24,4 +24,3 @@ Use this method to retrieve all jobs in the domain matching a particular filter.
 | Item          | Format                                                             | Description                             |
 |---------------|--------------------------------------------------------------------|-----------------------------------------|
 | GetJobsResult | Array of DMAJob (see [DMAJob](xref:DMAJob)) | The jobs matching the specified filter. |
-

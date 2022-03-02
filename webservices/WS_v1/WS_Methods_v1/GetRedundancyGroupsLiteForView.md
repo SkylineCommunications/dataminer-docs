@@ -12,13 +12,12 @@ This method is a faster alternative to the method *GetRedundancyGroupsForView*, 
 
 | Item            | Format  | Description                                                                      |
 |-----------------|---------|----------------------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ViewID          | Integer | The view ID.                                                                     |
 | IncludeSubViews | Boolean | Indicates whether redundancy groups from subviews are included.                  |
 
 ## Output
 
-| Item                                  | Format                                                                                     | Description                                  |
-|---------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------|
-| GetRedundancyGroups­LiteForViewResult | Array of DMAElementLite (see [DMAElementLite](xref:DMAElementLite)) | The redundancy groups in the specified view. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetRedundancyGroups­LiteForViewResult | Array of [DMAElementLite](xref:DMAElementLite) | The redundancy groups in the specified view. |

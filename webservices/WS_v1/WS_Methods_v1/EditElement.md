@@ -10,7 +10,7 @@ Use this method to edit a specified element.
 
 | Item          | Format                   | Description                                                                         |
 |---------------|--------------------------|-------------------------------------------------------------------------------------|
-| Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp) .                            |
+| Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
 | DmaID         | Integer                  | The DataMiner Agent ID.                                                             |
 | ElementID     | Integer                  | The element ID.                                                                     |
 | ViewIDs       | Array of Integer         | The IDs of the views that should contain the element.                               |
@@ -19,4 +19,3 @@ Use this method to edit a specified element.
 ## Output
 
 None.
-

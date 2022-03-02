@@ -10,12 +10,11 @@ Use this method to retrieve alarm page details, including limited alarms. This m
 
 | Item             | Format | Description                                                                                                  |
 |------------------|--------|--------------------------------------------------------------------------------------------------------------|
-| Connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp) .                                                         |
+| Connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp).                                                         |
 | DMAAlarmFilterV2 | Array  | The filter that the alarms must match. See [DMAAlarmFilterV2](xref:DMAAlarmFilterV2). |
 
 ## Output
 
-| Item                          | Format                                                                   | Description                                |
-|-------------------------------|--------------------------------------------------------------------------|--------------------------------------------|
-| GetAlarmPageWith­AlarmsResult | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The alarms matching the filter on the page |
-
+| Item | Format | Description |
+|--|--|--|
+| GetAlarmPageWith­AlarmsResult | Array of [DMAAlarm](xref:DMAAlarm) | The alarms matching the filter on the page |

@@ -10,7 +10,7 @@ Use this method to retrieve a snapshot of trend data for a specified table colum
 
 | Item           | Format          | Description                                                                                        |
 |----------------|-----------------|----------------------------------------------------------------------------------------------------|
-| Connection     | String          | The connection ID. See [ConnectApp](xref:ConnectApp) .                                               |
+| Connection     | String          | The connection ID. See [ConnectApp](xref:ConnectApp).                                              |
 | DmaID          | Integer         | The DataMiner Agent ID.                                                                            |
 | ElementID      | Integer         | The element ID.                                                                                    |
 | ParameterID    | Integer         | The parameter ID.                                                                                  |
@@ -20,10 +20,9 @@ Use this method to retrieve a snapshot of trend data for a specified table colum
 
 ## Output
 
-| Item                                               | Format                                                                               | Description                                             |
-|----------------------------------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetHistogramSnapshotFor­TableColumnParameterResult | Array of DMATrendData (see [DMATrendData](xref:DMATrendData)) | The histogram for the specified table column parameter. |
 
 > [!NOTE]
 > The DMATrendData array includes an array of timestamps of type “long”. These values should be divided by 1000 to get the correct boundary values.
-

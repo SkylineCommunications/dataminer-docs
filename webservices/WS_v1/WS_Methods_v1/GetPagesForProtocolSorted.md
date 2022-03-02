@@ -10,7 +10,7 @@ Use this method to retrieve a specific number of pages for a specified protocol.
 
 | Item            | Format  | Description                                                                      |
 |-----------------|---------|----------------------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ProtocolName    | String  | The name of the protocol                                                         |
 | ProtocolVersion | String  | The protocol version                                                             |
 | Index           | Integer | The point from which to start returning child pages.                             |
@@ -19,7 +19,6 @@ Use this method to retrieve a specific number of pages for a specified protocol.
 
 ## Output
 
-| Item                             | Format                                                                                        | Description                                               |
-|----------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| GetPagesForProtocol­SortedResult | Array of DMAProtocolPage (see [DMAProtocolPage](xref:DMAProtocolPage)) | The pages of the specified protocol, sorted as requested. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetPagesForProtocol­SortedResult | Array of [DMAProtocolPage](xref:DMAProtocolPage) | The pages of the specified protocol, sorted as requested. |

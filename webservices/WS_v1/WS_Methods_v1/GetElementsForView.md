@@ -10,14 +10,13 @@ Use this method to retrieve the list of child items (elements and/or services) i
 
 | Item            | Format  | Description                                                        |
 |-----------------|---------|--------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .               |
+| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).               |
 | ViewID          | Integer | The view ID.                                                       |
-| IncludeSubViews | Boolean | Whether or not to also search the subviews of the specified view.  |
-| IncludeServices | Boolean | Whether or not to also include the services in the specified view. |
+| IncludeSubViews | Boolean | Whether subviews of the specified view should be included in the search.  |
+| IncludeServices | Boolean | Whether services in the specified view should also be included. |
 
 ## Output
 
-| Item                      | Format                                                                         | Description                                            |
-|---------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetElementsForView­Result | Array of DMAElement (see [DMAElement](xref:DMAElement)) | The list of all the child items in the specified view. |
-

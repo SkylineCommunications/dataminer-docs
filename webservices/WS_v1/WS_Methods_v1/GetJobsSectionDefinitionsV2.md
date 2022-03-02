@@ -8,14 +8,13 @@ Use this method to retrieve all job section definitions from a specific domain. 
 
 ## Input
 
-| Item       | Format | Description                                          |
-|------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
-| DomainID   | String | The domain ID                                        |
+| Item | Format | Description |
+|--|--|--|
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| DomainID | String | The domain ID |
 
 ## Output
 
-| Item                               | Format                                                                                                        | Description                                |
-|------------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------------------------------|
-| GetJobsSectionDefi­nitionsV2Result | Array of DMASectionDefini­tion (see [DMASectionDefinition](xref:DMASectionDefinition)) | All job section definitions in the domain. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetJobsSectionDefinitionsV2Result | Array of [DMASectionDefinition](xref:DMASectionDefinition) | All job section definitions in the domain. |

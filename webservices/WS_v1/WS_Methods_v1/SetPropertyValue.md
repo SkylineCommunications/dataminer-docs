@@ -10,7 +10,7 @@ Use this method to change the value of a property of a specified object, which c
 
 | Item          | Format  | Description                                                                      |
 |---------------|---------|----------------------------------------------------------------------------------|
-| Connection    | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection    | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ObjectType    | String  | The type of DataMiner object: view, service, element.                            |
 | DmaID         | Integer | The DataMiner Agent ID.                                                          |
 | ObjectID      | Integer | The ID of the view, service or element.                                          |
@@ -20,4 +20,3 @@ Use this method to change the value of a property of a specified object, which c
 ## Output
 
 None.
-

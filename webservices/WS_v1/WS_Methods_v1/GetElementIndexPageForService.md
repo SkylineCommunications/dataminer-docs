@@ -10,7 +10,7 @@ Use this method to retrieve the first letters of all the elements in a service.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                              |
 | ServiceID  | Integer | The service ID.                                      |
 
@@ -19,4 +19,3 @@ Use this method to retrieve the first letters of all the elements in a service.
 | Item                                 | Format          | Description                                                     |
 |--------------------------------------|-----------------|-----------------------------------------------------------------|
 | GetElementIndexPage­ForServiceResult | Array of string | The first letters of all the elements in the specified service. |
-

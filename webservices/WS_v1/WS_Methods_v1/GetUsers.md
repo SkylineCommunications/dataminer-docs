@@ -10,11 +10,10 @@ Use this method to retrieve the users configured on a DMA.
 
 | Item       | Format | Description                                                                      |
 |------------|--------|----------------------------------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
 | Item           | Format           | Description                                         |
 |----------------|------------------|-----------------------------------------------------|
 | GetUsersResult | Array of DMAUser | See [DMAUser](xref:DMAUser). |
-

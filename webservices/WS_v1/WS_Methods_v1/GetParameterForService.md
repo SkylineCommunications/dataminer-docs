@@ -10,7 +10,7 @@ Use this method to retrieve a specific parameter for a service.
 
 | Item        | Format  | Description                                                                      |
 |-------------|---------|----------------------------------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID       | Integer | The DataMiner Agent ID.                                                          |
 | ServiceID   | Integer | The service ID.                                                                  |
 | ParameterID | Integer | The parameter ID.                                                                |
@@ -18,7 +18,6 @@ Use this method to retrieve a specific parameter for a service.
 
 ## Output
 
-| Item                          | Format                                                   | Description                                                    |
-|-------------------------------|----------------------------------------------------------|----------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetParameterForSer­viceResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameters of the specified service. |
-

@@ -10,7 +10,7 @@ Use this method to retrieve the Data Display pages of a specified element that i
 
 | Item         | Format  | Description                                                                      |
 |--------------|---------|----------------------------------------------------------------------------------|
-| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ServiceDmaID | Integer | The DataMiner Agent ID that is linked to the service.                            |
 | ServiceID    | Integer | The service ID.                                                                  |
 | ElementDmaID | Integer | The DataMiner Agent ID that is linked to the element.                            |
@@ -18,7 +18,6 @@ Use this method to retrieve the Data Display pages of a specified element that i
 
 ## Output
 
-| Item                             | Format                                                                                     | Description                                          |
-|----------------------------------|--------------------------------------------------------------------------------------------|------------------------------------------------------|
-| GetPagesForService­ElementResult | Array of DMAElementPage (see [DMAElementPage](xref:DMAElementPage)) | All the Data Display pages of the specified element. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetPagesForService­ElementResult | Array of [DMAElementPage](xref:DMAElementPage) | All the Data Display pages of the specified element. |

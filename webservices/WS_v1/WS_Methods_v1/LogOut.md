@@ -10,9 +10,8 @@ Use this method to log out.
 
 | Item       | Format | Description                                                                      |
 |------------|--------|----------------------------------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
 None.
-

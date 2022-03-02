@@ -12,7 +12,7 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item         | Format  | Description                                                                      |
 |--------------|---------|----------------------------------------------------------------------------------|
-| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ServiceDmaID | Integer | The DataMiner Agent ID that is linked to the service.                            |
 | ServiceID    | Integer | The service ID.                                                                  |
 | ElementDmaID | Integer | The DataMiner Agent ID that is linked to the element.                            |
@@ -20,7 +20,6 @@ Available from DataMiner 10.0.7 onwards.
 
 ## Output
 
-| Item                               | Format                                                                                     | Description                                                                             |
-|------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| GetPagesForService­ElementV2Result | Array of DMAElementPage (see [DMAElementPage](xref:DMAElementPage)) | All the Data Display pages of the specified element, as well as the alarm cache status. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetPagesForService­ElementV2Result | Array of [DMAElementPage](xref:DMAElementPage) | All the Data Display pages of the specified element, as well as the alarm cache status. |

@@ -10,11 +10,10 @@ Use this method to retrieve all resources in the DataMiner System.
 
 | Item       | Format | Description                                                                          |
 |------------|--------|--------------------------------------------------------------------------------------|
-| Connection | String | The connection string. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item               | Format                                                                            | Description                            |
-|--------------------|-----------------------------------------------------------------------------------|----------------------------------------|
-| GetResourcesResult | Array of DMAResource (see [DMAResource](xref:DMAResource)) | The resources in the DataMiner System. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetResourcesResult | Array of [DMAResource](xref:DMAResource) | The resources in the DataMiner System. |

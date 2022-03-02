@@ -7,14 +7,14 @@ uid: ConnectAppAndInfo
 Use this method to retrieve the connection string (GUID) needed to be able to connect to the host, together with information about the DataMiner Agent (time, alarm colors, etc.) and the user permissions granted.
 
 > [!CAUTION]
-> We strongly advise to use a secured connection (HTTPS), as otherwise logon credentials are sent as plain, unencrypted text over the internet.
+> We strongly recommend that you use a secured connection (HTTPS), as otherwise logon credentials are sent as plain, unencrypted text over the internet.
 
 ## Input
 
 | Item               | Format | Description                                                                              |
 |--------------------|--------|------------------------------------------------------------------------------------------|
 | Host               | String | The host name. Obsolete. Keep this field empty.                                          |
-| Login              | String | The user name.                                                                           |
+| Login              | String | The username.                                                                           |
 | Password           | String | The password.                                                                            |
 | ClientAppName      | String | The name of the client application                                                       |
 | ClientAppVersion   | String | The version of the client application. Optional. Used in logging and information events. |
@@ -26,11 +26,10 @@ Use this method to retrieve the connection string (GUID) needed to be able to co
 
 ## Output
 
-| Item                     | Format                                                             | Description                                                                                     |
-|--------------------------|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | ConnectAppAndInfo­Result | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |
 
 > [!NOTE]
 > -  When two-step authentication is required, the MessageType property will contain “Challenge” and the Message property will contain the challenge to which the user has to respond.
-> -  From DataMiner 9.5.5 onwards, the response contains a cookie with a timestamp, client info hash, user name and password. The client application can then store that cookie to allow the user either to reconnect in the same session or to automatically log in with the ‘Remember me’ option.<br>To reconnect to the Web Services API, you can use the *ReconnectAppAndInfo* method. This method is identical to the *ConnectAppAndInfo* method, except that the user name and password combination is replaced by a cookie parameter. Also, the *ReconnectAppAndInfo* method will reuse the existing cookie instead of generating a new one. See [ReconnectAppAndInfo](xref:ReconnectAppAndInfo).
-
+> -  From DataMiner 9.5.5 onwards, the response contains a cookie with a timestamp, client info hash, username and password. The client application can then store that cookie to allow the user either to reconnect in the same session or to automatically log in with the ‘Remember me’ option.<br>To reconnect to the Web Services API, you can use the *ReconnectAppAndInfo* method. This method is identical to the *ConnectAppAndInfo* method, except that the username and password combination is replaced by a cookie parameter. Also, the *ReconnectAppAndInfo* method will reuse the existing cookie instead of generating a new one. See [ReconnectAppAndInfo](xref:ReconnectAppAndInfo).

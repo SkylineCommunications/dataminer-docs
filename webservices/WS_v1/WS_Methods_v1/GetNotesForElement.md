@@ -10,13 +10,12 @@ Use this method to retrieve the notes for a particular element.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ElementID  | Integer | The element ID.                                                                  |
 
 ## Output
 
-| Item                      | Format                                                                | Description                          |
-|---------------------------|-----------------------------------------------------------------------|--------------------------------------|
-| GetNotesForElement­Result | Array of DMANote (see [DMANote](xref:DMANote)) | The notes for the specified element. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetNotesForElement­Result | Array of [DMANote](xref:DMANote) | The notes for the specified element. |

@@ -10,14 +10,13 @@ Use this method to retrieve information about measurement points (available from
 
 | Item       | Format           | Description                                                                                            |
 |------------|------------------|--------------------------------------------------------------------------------------------------------|
-| Connection | String           | The connection ID. See [ConnectApp](xref:ConnectApp) .                       |
+| Connection | String           | The connection ID. See [ConnectApp](xref:ConnectApp).                       |
 | DmaID      | Integer          | The DataMiner Agent ID.                                                                                |
 | ElementID  | Integer          | The element ID.                                                                                        |
 | SessionID  | Unsigned integer | The client subscription ID from the WebSocket subscription with which the spectrum session was started |
 
 ## Output
 
-| Item                        | Format                                                                                                              | Description                                                |
-|-----------------------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| GetMeasurement­PointsResult | Array of DMASpectrumMeaspt­Model (See [DMASpectrumMeasptModel](xref:DMASpectrumMeasptModel)) | An array containing information on each measurement point. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetMeasurement­PointsResult | Array of [DMASpectrumMeasptModel](xref:DMASpectrumMeasptModel) | An array containing information on each measurement point. |

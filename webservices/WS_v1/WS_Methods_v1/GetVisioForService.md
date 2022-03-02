@@ -14,7 +14,7 @@ All images are in PNG format, and are base64 encoded.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ServiceID  | Integer | The service ID.                                                                  |
 | Width      | Integer | The width of the image to be returned.                                           |
@@ -23,7 +23,6 @@ All images are in PNG format, and are base64 encoded.
 
 ## Output
 
-| Item                     | Format                                           | Description                                                                       |
-|--------------------------|--------------------------------------------------|-----------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetVisioForServiceResult | [DMAVisio](xref:DMAVisio) | The Visio file linked to the specified service, returned as an interactive image. |
-

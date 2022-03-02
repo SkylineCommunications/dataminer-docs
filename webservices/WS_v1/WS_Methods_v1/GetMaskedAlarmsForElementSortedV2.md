@@ -15,7 +15,7 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .    |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
 | DmaID      | Integer | The DMA ID.                                                                         |
 | ElementID  | Integer | The element ID.                                                                     |
 | Index      | Integer | The point from which to start returning alarms.                                     |
@@ -24,7 +24,6 @@ Available from DataMiner 10.0.7 onwards.
 
 ## Output
 
-| Item                                     | Format                                                                   | Description                                                                                            |
-|------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| GetMaskedAlarmsFor­ElementSortedV2Result | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The requested number of masked element alarms, sorted as specified, as well as the alarm cache status. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetMaskedAlarmsFor­ElementSortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of masked element alarms, sorted as specified, as well as the alarm cache status. |

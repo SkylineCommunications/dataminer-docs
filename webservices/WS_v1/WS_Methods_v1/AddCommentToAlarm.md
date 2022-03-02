@@ -10,7 +10,7 @@ Use this method to add a comment to an alarm.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                              |
 | AlarmID    | Integer | The alarm ID.                                        |
 | Comment    | String  | The comment to be added to the alarm.                |
@@ -18,4 +18,3 @@ Use this method to add a comment to an alarm.
 ## Output
 
 None.
-

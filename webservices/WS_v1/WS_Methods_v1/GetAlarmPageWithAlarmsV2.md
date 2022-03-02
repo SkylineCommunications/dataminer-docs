@@ -12,12 +12,11 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item             | Format | Description                                                                                                  |
 |------------------|--------|--------------------------------------------------------------------------------------------------------------|
-| Connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp) .                                                         |
+| Connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp).                                                         |
 | DMAAlarmFilterV2 | Array  | The filter that the alarms must match. See [DMAAlarmFilterV2](xref:DMAAlarmFilterV2). |
 
 ## Output
 
-| Item                            | Format                                                                   | Description                                                                    |
-|---------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| GetAlarmPageWith­AlarmsV2Result | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The alarms matching the filter on the page, as well as the alarm cache status. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetAlarmPageWith­AlarmsV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The alarms matching the filter on the page, as well as the alarm cache status. |

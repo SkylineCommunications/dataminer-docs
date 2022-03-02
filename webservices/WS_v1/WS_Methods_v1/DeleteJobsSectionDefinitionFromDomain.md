@@ -12,13 +12,12 @@ Available from DataMiner 10.0.9 onwards.
 
 | Item                | Format | Description                                          |
 |---------------------|--------|------------------------------------------------------|
-| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DomainID            | String | The domain ID.                                       |
 | SectionDefinitionID | String | The ID of the job section definition.                |
 
 ## Output
 
-| Item                                          | Format  | Description                                                                                                                                                                         |
-|-----------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | DeleteJobsSection­DefinitionFromDomain­Result | Boolean | Returns “true” if the job section definition has been fully deleted, or “false” if the job section definition has been hidden instead, because it has already been used previously. |
-

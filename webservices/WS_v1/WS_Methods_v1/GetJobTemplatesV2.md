@@ -10,12 +10,11 @@ Use this method to retrieve all the job templates available in a specific domain
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DomainID   | String | The domain ID.                                       |
 
 ## Output
 
-| Item                     | Format                                                                                       | Description                  |
-|--------------------------|----------------------------------------------------------------------------------------------|------------------------------|
-| GetJobTemplatesV2­Result | Array of DMAJobTem­plate (see [DMAJobTemplate](xref:DMAJobTemplate) ) | The available job templates. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetJobTemplatesV2­Result | Array of [DMAJobTemplate](xref:DMAJobTemplate) | The available job templates. |

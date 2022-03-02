@@ -10,11 +10,10 @@ Use this method to retrieve all available job domains. Available from DataMiner 
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                 | Format                                                                                           | Description                |
-|----------------------|--------------------------------------------------------------------------------------------------|----------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetJobsDomainsResult | Array of DMAJobDomainLite (see [DMAJobDomainLite](xref:DMAJobDomainLite)) | The available job domains. |
-

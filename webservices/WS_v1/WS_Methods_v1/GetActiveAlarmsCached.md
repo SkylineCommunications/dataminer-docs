@@ -11,20 +11,19 @@ Use this method to retrieve only active alarms added or changed since a particul
 
 ## Input
 
-| Item         | Format       | Description                                                                                                                                                                                                                                            |
-|--------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Connection   | String       | The connection ID. See [ConnectApp](xref:ConnectApp) .                                                                                                                                                                                                   |
-| Index        | Integer      | The point from which to start returning alarms.                                                                                                                                                                                                        |
-| Count        | Integer      | The number of alarms to be returned.                                                                                                                                                                                                                   |
-| OrderBy      | String       | The Alarm Console column(s) by which to order the alarms (separated by semicolons).                                                                                                                                                                    |
+| Item | Format | Description |
+|--|--|--|
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| Index | Integer | The point from which to start returning alarms. |
+| Count | Integer | The number of alarms to be returned. |
+| OrderBy | String | The Alarm Console column(s) by which to order the alarms (separated by semicolons). |
 | CacheDateUTC | Long Integer | If you enter a timestamp in UTC format (milliseconds since midnight January 1, 1970 GMT), then the method will return only active alarms that were added or changed since that particular point in time. If you enter -1, there will be no date check. |
 
 ## Output
 
-| Item                         | Format                                                          | Description                                                           |
-|------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------------|
-| GetActiveAlarms­CachedResult | DMACache (see [DMACache](xref:DMACache)) | The active alarms added or changed since the specified point in time. |
+| Item | Format | Description |
+|--|--|--|
+| GetActiveAlarms­CachedResult | [DMACache](xref:DMACache) | The active alarms added or changed since the specified point in time. |
 
 > [!NOTE]
-> In this case, the DMACache ([DMACache](xref:DMACache)) object will contain an array of DMAAlarm ([DMAAlarm](xref:DMAAlarm)) objects.-
-
+> In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAAlarm](xref:DMAAlarm) objects.

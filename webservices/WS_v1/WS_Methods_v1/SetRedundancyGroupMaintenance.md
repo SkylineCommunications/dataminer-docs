@@ -10,7 +10,7 @@ Use this method to set a redundancy group element either in maintenance or out o
 
 | Item              | Format  | Description                                                                            |
 |-------------------|---------|----------------------------------------------------------------------------------------|
-| Connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .       |
+| Connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp).       |
 | DmaID             | Integer | The DataMiner Agent ID.                                                                |
 | RedundancyGroupID | Integer | The redundancy group ID.                                                               |
 | ElementDmaID      | Integer | The DataMiner Agent ID that is linked to the element.                                  |
@@ -20,4 +20,3 @@ Use this method to set a redundancy group element either in maintenance or out o
 ## Output
 
 None.
-

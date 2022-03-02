@@ -14,7 +14,7 @@ All images are in PNG format, and are base64 encoded.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ElementID  | Integer | The element ID.                                                                  |
 | Width      | Integer | The width of the image to be returned.                                           |
@@ -23,7 +23,6 @@ All images are in PNG format, and are base64 encoded.
 
 ## Output
 
-| Item                               | Format                                           | Description                                                                 |
-|------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetVisioThumbnailFor­ElementResult | [DMAVisio](xref:DMAVisio) | The Visio file linked to the specified element, returned as a static image. |
-

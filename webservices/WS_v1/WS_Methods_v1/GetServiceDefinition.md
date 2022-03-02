@@ -10,12 +10,11 @@ Use this method to retrieve a specific service definition. Available from DataMi
 
 | Item                | Format | Description                                                                          |
 |---------------------|--------|--------------------------------------------------------------------------------------|
-| Connection          | String | The connection string. See [ConnectApp](xref:ConnectApp) . |
+| Connection          | String | The connection string. See [ConnectApp](xref:ConnectApp). |
 | ServiceDefinitionID | String | The ID of the service definition.                                                    |
 
 ## Output
 
-| Item                        | Format                                                                                              | Description                       |
-|-----------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------------|
-| GetServiceDefinition­Result | DMAServiceDefinition (see [DMAServiceDefinition](xref:DMAServiceDefinition)) | The requested service definition. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetServiceDefinition­Result | [DMAServiceDefinition](xref:DMAServiceDefinition) | The requested service definition. |

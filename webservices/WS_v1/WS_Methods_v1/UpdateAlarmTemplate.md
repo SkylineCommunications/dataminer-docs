@@ -10,10 +10,9 @@ Use this method to update an existing alarm template. Available from DataMiner 1
 
 | Item       | Format           | Description                                                                      |
 |------------|------------------|----------------------------------------------------------------------------------|
-| Connection | String           | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String           | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | Template   | DMAAlarmTemplate | See [DMAAlarmTemplate](xref:DMAAlarmTemplate).            |
 
 ## Output
 
 None.
-

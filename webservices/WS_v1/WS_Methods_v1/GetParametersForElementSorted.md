@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of element parameters.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ElementID  | Integer | The element ID.                                                                  |
 | Index      | Integer | The point from which to start returning parameters.                              |
@@ -22,7 +22,6 @@ Use this method to retrieve a specific number of element parameters.
 
 ## Output
 
-| Item                                 | Format                                                                               | Description                                                    |
-|--------------------------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| GetParametersFor­ElementSortedResult | Array of DMAParameter (see [DMAParameter](xref:DMAParameter)) | The parameters for the specified element, sorted as requested. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetParametersFor­ElementSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified element, sorted as requested. |

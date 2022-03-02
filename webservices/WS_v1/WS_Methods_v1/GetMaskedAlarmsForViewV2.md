@@ -12,12 +12,11 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ViewID     | Integer | The view ID.                                                                     |
 
 ## Output
 
-| Item                            | Format                                                                   | Description                                                                                 |
-|---------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| GetMaskedAlarmsFor­ViewV2Result | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The list of all the masked alarms of the specified view, as well as the alarm cache status. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetMaskedAlarmsFor­ViewV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified view, as well as the alarm cache status. |

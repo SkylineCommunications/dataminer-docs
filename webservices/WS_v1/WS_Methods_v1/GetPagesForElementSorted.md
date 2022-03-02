@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of Data Display pages of a particu
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ElementID  | Integer | The element ID.                                                                  |
 | Index      | Integer | The point from which to start returning Data Display pages.                      |
@@ -22,7 +22,6 @@ Use this method to retrieve a specific number of Data Display pages of a particu
 
 ## Output
 
-| Item                            | Format                                                                                     | Description                                                      |
-|---------------------------------|--------------------------------------------------------------------------------------------|------------------------------------------------------------------|
-| GetPagesForElement­SortedResult | Array of DMAElementPage (see [DMAElementPage](xref:DMAElementPage)) | The requested number of Data Display pages, sorted as specified. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetPagesForElement­SortedResult | Array of [DMAElementPage](xref:DMAElementPage) | The requested number of Data Display pages, sorted as specified. |

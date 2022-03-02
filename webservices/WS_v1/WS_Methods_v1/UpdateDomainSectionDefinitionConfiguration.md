@@ -10,11 +10,10 @@ Use this method to update all client info of section definitions in a domain. Re
 
 | Item          | Format                           | Description                                                                       |
 |---------------|----------------------------------|-----------------------------------------------------------------------------------|
-| Connection    | String                           | The connection ID. See [ConnectApp](xref:ConnectApp) .  |
+| Connection    | String                           | The connection ID. See [ConnectApp](xref:ConnectApp).  |
 | DomainID      | String                           | The jobs domain ID.                                                               |
 | Configuration | Array of DMASection­DomainConfig | See [DMASectionDomainConfig](xref:DMASectionDomainConfig). |
 
 ## Output
 
 None.
-

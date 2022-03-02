@@ -12,15 +12,14 @@ This method is a faster alternative to the method *GetElementsForView*, as it re
 
 | Item                     | Format  | Description                                                                 |
 |--------------------------|---------|-----------------------------------------------------------------------------|
-| Connection               | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .                        |
+| Connection               | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                      |
 | ViewID                   | Integer | The view ID.                                                                |
-| IncludeSubViews          | Boolean | Whether or not to also search the subviews of the specified view.           |
-| IncludeServices          | Boolean | Whether or not to also include the services in the specified view.          |
-| includeRedundancy­Groups | Boolean | Whether or not to also include the redundancy groups in the specified view. |
+| IncludeSubViews          | Boolean | Whether the subviews of the specified view should be included in the search. |
+| IncludeServices          | Boolean | Whether the services in the specified view should also be included.          |
+| includeRedundancy­Groups | Boolean | Whether the redundancy groups in the specified view should also be included. |
 
 ## Output
 
-| Item                          | Format                                                                                      | Description                                                          |
-|-------------------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetElementsLiteFor­ViewResult | Array of DMAElement­Lite (See [DMAElementLite](xref:DMAElementLite)) | A list with basic info about all the elements in the specified view. |
-

@@ -7,14 +7,14 @@ uid: ConnectApp
 Use this method to retrieve the connection ID (GUID) needed to be able to connect to the host.
 
 > [!CAUTION]
-> We strongly advise to use a secured connection (HTTPS), as otherwise logon credentials are sent as plain, unencrypted text over the internet.
+> We strongly recommend that you use a secured connection (HTTPS), as otherwise logon credentials are sent as plain, unencrypted text over the internet.
 
 ## Input
 
 | Item               | Format | Description                                                                              |
 |--------------------|--------|------------------------------------------------------------------------------------------|
 | Host               | String | The host name. Obsolete. Keep this field empty.                                          |
-| Login              | String | The user name.                                                                           |
+| Login              | String | The username.                                                                           |
 | Password           | String | The password.                                                                            |
 | ClientAppName      | String | The name of the client application                                                       |
 | ClientAppVersion   | String | The version of the client application. Optional. Used in logging and information events. |
@@ -29,4 +29,3 @@ Use this method to retrieve the connection ID (GUID) needed to be able to connec
 | Item             | Format | Description        |
 |------------------|--------|--------------------|
 | ConnectAppResult | String | The connection ID. |
-

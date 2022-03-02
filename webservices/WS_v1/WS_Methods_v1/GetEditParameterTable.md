@@ -10,7 +10,7 @@ Use this method to retrieve all the information necessary to be able to present 
 
 | Item        | Format  | Description                                          |
 |-------------|---------|------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID       | Integer | The DataMiner Agent ID.                              |
 | ElementID   | Integer | The element ID.                                      |
 | ParameterID | Integer | The parameter ID.                                    |
@@ -18,7 +18,6 @@ Use this method to retrieve all the information necessary to be able to present 
 
 ## Output
 
-| Item                         | Format                                                           | Description                                |
-|------------------------------|------------------------------------------------------------------|--------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetEditParameterTable­Result | [DMAParameterEdit](xref:DMAParameterEdit) | The properties of the specified parameter. |
-

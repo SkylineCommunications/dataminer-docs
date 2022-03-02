@@ -10,7 +10,7 @@ Use this method to retrieve the data of all the parameters of a particular eleme
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ElementID  | Integer | The element ID.                                                                  |
 
@@ -18,5 +18,4 @@ Use this method to retrieve the data of all the parameters of a particular eleme
 
 | Item                           | Format                                                                               | Description                                              |
 |--------------------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------|
-| GetParametersFor­ElementResult | Array of DMAParameter (see [DMAParameter](xref:DMAParameter)) | The data of all the parameters of the specified element. |
-
+| GetParametersFor­ElementResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters of the specified element. |

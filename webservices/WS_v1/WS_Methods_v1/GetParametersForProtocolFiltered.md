@@ -10,7 +10,7 @@ Use this method to retrieve the parameters of a particular protocol that match a
 
 | Item                 | Format  | Description                                                                      |
 |----------------------|---------|----------------------------------------------------------------------------------|
-| Connection           | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection           | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ProtocolName         | String  | The name of the protocol                                                         |
 | ProtocolVersion      | String  | The protocol version                                                             |
 | Filter.IncludeHidden | Boolean | Determines whether protocol parameters without display positions are included.   |
@@ -21,7 +21,6 @@ Use this method to retrieve the parameters of a particular protocol that match a
 
 ## Output
 
-| Item                                    | Format                                                                               | Description                                                               |
-|-----------------------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| GetParametersFor­ProtocolFilteredResult | Array of DMAParameter (see [DMAParameter](xref:DMAParameter)) | The parameters of the specified protocol that match the specified filter. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetParametersFor­ProtocolFilteredResult | Array of [DMAParameter](xref:DMAParameter) | The parameters of the specified protocol that match the specified filter. |

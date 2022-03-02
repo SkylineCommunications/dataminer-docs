@@ -10,7 +10,7 @@ Use this method to retrieve the information events for a specified timespan, sor
 
 | Item         | Format       | Description                                                                                     |
 |--------------|--------------|-------------------------------------------------------------------------------------------------|
-| Connection   | String       | The connection ID. See [ConnectApp](xref:ConnectApp) .                                            |
+| Connection   | String       | The connection ID. See [ConnectApp](xref:ConnectApp).                                           |
 | UtcStartTime | Long integer | The start time of the period for which information events are retrieved.                        |
 | UtcEndTime   | Long integer | The end time of the period for which information events are retrieved.                          |
 | Index        | Integer      | The point from which to start returning information events.                                     |
@@ -19,7 +19,6 @@ Use this method to retrieve the information events for a specified timespan, sor
 
 ## Output
 
-| Item                              | Format                                                                   | Description                                                          |
-|-----------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------|
-| GetInformationEvents­SortedResult | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The information events for the indicated period, sorted as required. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetInformationEvents­SortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The information events for the indicated period, sorted as required. |

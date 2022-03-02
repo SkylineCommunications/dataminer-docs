@@ -10,12 +10,11 @@ Use this method to retrieve all changes that were made to a job, with the most r
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | JobID      | String | The job ID.                                          |
 
 ## Output
 
 | Item                  | Format                        | Description                                                  |
 |-----------------------|-------------------------------|--------------------------------------------------------------|
-| GetJobsHistoryRe­sult | Array of DMAJobHistory­Change | The changes that were made to the specified job in the past. |
-
+| GetJobsHistoryResult  | Array of DMAJobHistory­Change  | The changes that were made to the specified job in the past. |

@@ -10,7 +10,7 @@ Use this method to retrieve a particular parameter for a service, with dynamic u
 
 | Item        | Format  | Description                                                                      |
 |-------------|---------|----------------------------------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID       | Integer | The DataMiner Agent ID.                                                          |
 | ServiceID   | Integer | The service ID.                                                                  |
 | ParameterID | Integer | The parameter ID.                                                                |
@@ -18,7 +18,6 @@ Use this method to retrieve a particular parameter for a service, with dynamic u
 
 ## Output
 
-| Item                                          | Format                                                   | Description                                                                       |
-|-----------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetParameterForServiceWithDynamic­UnitsResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameter of the specified service, with dynamic units. |
-

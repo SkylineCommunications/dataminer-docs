@@ -10,13 +10,12 @@ Use this method to retrieve the notes for a particular service.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ServiceID  | Integer | The service ID.                                                                  |
 
 ## Output
 
-| Item                      | Format                                                                | Description                          |
-|---------------------------|-----------------------------------------------------------------------|--------------------------------------|
-| GetNotesForService­Result | Array of DMANote (see [DMANote](xref:DMANote)) | The notes for the specified service. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetNotesForService­Result | Array of [DMANote](xref:DMANote) | The notes for the specified service. |

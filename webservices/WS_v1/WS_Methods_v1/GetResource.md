@@ -10,12 +10,11 @@ Use this method to retrieve a specific resource.
 
 | Item       | Format | Description                                                                      |
 |------------|--------|----------------------------------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ResourceID | String | The resource ID.                                                                 |
 
 ## Output
 
-| Item              | Format                                                                   | Description             |
-|-------------------|--------------------------------------------------------------------------|-------------------------|
-| GetResourceResult | DMAResource (see [DMAResource](xref:DMAResource)) | The requested resource. |
-
+| Item              | Format                          | Description             |
+|-------------------|---------------------------------|-------------------------|
+| GetResourceResult | [DMAResource](xref:DMAResource) | The requested resource. |

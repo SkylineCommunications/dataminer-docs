@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of service parameters.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID      | Integer | The DataMiner Agent ID.                                                          |
 | ServiceID  | Integer | The service ID.                                                                  |
 | Index      | Integer | The point from which to start returning parameters.                              |
@@ -22,7 +22,6 @@ Use this method to retrieve a specific number of service parameters.
 
 ## Output
 
-| Item                                 | Format                                                                               | Description                                                    |
-|--------------------------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| GetParametersForSer­viceSortedResult | Array of DMAParameter (see [DMAParameter](xref:DMAParameter)) | The parameters for the specified service, sorted as requested. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetParametersForSer­viceSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified service, sorted as requested. |

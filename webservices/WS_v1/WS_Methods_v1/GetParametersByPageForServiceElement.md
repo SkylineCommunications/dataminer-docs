@@ -10,7 +10,7 @@ Use this method to retrieve the data of all the parameters on a particular Data 
 
 | Item         | Format  | Description                                                                      |
 |--------------|---------|----------------------------------------------------------------------------------|
-| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ServiceDmaID | Integer | The DataMiner Agent ID that is linked to the service.                            |
 | ServiceID    | Integer | The service ID.                                                                  |
 | ElementDmaID | Integer | The DataMiner Agent ID that is linked to the element.                            |
@@ -19,7 +19,6 @@ Use this method to retrieve the data of all the parameters on a particular Data 
 
 ## Output
 
-| Item                                        | Format                                                                               | Description                                                   |
-|---------------------------------------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| GetParametersByPage­ForServiceElementResult | Array of DMAParameter (see [DMAParameter](xref:DMAParameter)) | The data of all the parameters on the specified element page. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetParametersByPage­ForServiceElementResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters on the specified element page. |

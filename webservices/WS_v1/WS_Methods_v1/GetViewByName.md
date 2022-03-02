@@ -10,7 +10,7 @@ Use this method to retrieve the data of a particular view by name.
 
 | Item       | Format | Description                                                                      |
 |------------|--------|----------------------------------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | ViewName   | String | The view name.                                                                   |
 
 ## Output
@@ -18,4 +18,3 @@ Use this method to retrieve the data of a particular view by name.
 | Item                | Format                                         | Description                     |
 |---------------------|------------------------------------------------|---------------------------------|
 | GetViewByNameResult | [DMAView](xref:DMAView) | The data of the specified view. |
-

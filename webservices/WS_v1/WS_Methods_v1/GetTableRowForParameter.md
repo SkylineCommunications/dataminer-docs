@@ -10,7 +10,7 @@ Use this method to retrieve one specific row of a particular table parameter.
 
 | Item        | Format  | Description                                                                      |
 |-------------|---------|----------------------------------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp) . |
+| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | DmaID       | Integer | The DataMiner Agent ID.                                                          |
 | ElementID   | Integer | The element ID.                                                                  |
 | ParameterID | Integer | The parameter ID.                                                                |
@@ -18,7 +18,6 @@ Use this method to retrieve one specific row of a particular table parameter.
 
 ## Output
 
-| Item                           | Format                                                                   | Description                        |
-|--------------------------------|--------------------------------------------------------------------------|------------------------------------|
-| GetTableRowForParam­eterResult | [DMAParameterTableRow](xref:DMAParameterTableRow) | The specified table parameter row. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetTableRowForParameterResult | [DMAParameterTableRow](xref:DMAParameterTableRow) | The specified table parameter row. |

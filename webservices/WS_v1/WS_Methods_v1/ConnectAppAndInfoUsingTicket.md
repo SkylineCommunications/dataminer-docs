@@ -22,7 +22,6 @@ The method is used to display web apps inside DataMiner Cube, so that it is not 
 
 ## Output
 
-| Item                                | Format                                                             | Description                                                                                     |
-|-------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | ConnectAppAndInfo­UsingTicketResult | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |
-

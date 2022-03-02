@@ -15,7 +15,7 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp) .    |
+| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
 | ViewID     | Integer | The view ID.                                                                        |
 | Index      | Integer | The point from which to start returning alarms.                                     |
 | Count      | Integer | The number of alarms to be returned.                                                |
@@ -23,7 +23,6 @@ Available from DataMiner 10.0.7 onwards.
 
 ## Output
 
-| Item                                  | Format                                                                   | Description                                                                                       |
-|---------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| GetMaskedAlarmsFor­ViewSortedV2Result | Array of DMAAlarm (see [DMAAlarm](xref:DMAAlarm)) | The masked alarms for the specified view, sorted as requested, as well as the alarm cache status. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetMaskedAlarmsFor­ViewSortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The masked alarms for the specified view, sorted as requested, as well as the alarm cache status. |
