@@ -1,5 +1,5 @@
 ---
-uid: WS_Methods_v1_methodspt1
+uid: ActivateElementv1
 ---
 
 # ActivateElement
@@ -17,4 +17,3 @@ Use this method to activate an element.
 ## Output
 
 None.
-

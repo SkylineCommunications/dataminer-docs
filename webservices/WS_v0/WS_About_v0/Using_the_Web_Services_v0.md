@@ -6,7 +6,7 @@ uid: Using_the_Web_Services_v0
 
 1. Load the WSDL file.
 
-   See [Interfaces and WSDL files](xref:Interfaces_and_WSDL_files1#interfaces-and-wsdl-files).
+   See [Interfaces and WSDL files](xref:Interfaces_and_WSDL_files).
 
 1. Call the *Connect* method to request a connection ID.
 
