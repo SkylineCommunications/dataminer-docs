@@ -86,6 +86,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMAInfo](xref:DMAInfo)
 
+- [DMAInputData](xref:DMAInputData)
+
 - [DMAJob](xref:DMAJob)
 
 - [DMAJobDomainLite](xref:DMAJobDomainLite)

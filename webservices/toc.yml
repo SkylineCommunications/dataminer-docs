@@ -992,6 +992,8 @@
           href: WS_CustomDataTypes_v1\DMAHysteresisInfo.md
         - name: DMAInfo
           href: WS_CustomDataTypes_v1\DMAInfo.md
+        - name: DMAInputData
+          href: WS_CustomDataTypes_v1\DMAInputData.md
         - name: DMAJob
           href: WS_CustomDataTypes_v1\DMAJob.md
         - name: DMAJobDomainLite
