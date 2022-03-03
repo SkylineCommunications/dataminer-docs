@@ -254,6 +254,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMATimeZoneInfo](xref:DMATimeZoneInfo)
 
+- [DMATopAlarmCountData](xref:DMATopAlarmCountData)
+
 - [DMATopologyChainsField](xref:DMATopologyChainsField)
 
 - [DMATopologyFieldValues](xref:DMATopologyFieldValues)

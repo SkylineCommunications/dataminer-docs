@@ -21,4 +21,4 @@ Use this method to retrieve the elements with the largest/smallest number of ala
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementAlarmCount­ForViewResult | Array of DMATop­AlarmCountData | The elements with the largest/smallest number of alarms for each alarm severity. |
+| GetElementAlarmCount­ForViewResult | Array of [DMATopAlarmCountData](xref:DMATopAlarmCountData) | The elements with the largest/smallest number of alarms for each alarm severity. |

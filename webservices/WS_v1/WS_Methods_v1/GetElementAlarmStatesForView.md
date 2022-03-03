@@ -21,4 +21,4 @@ Use this method to retrieve the relative duration (in percent) of each alarm sev
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementAlarmStates­ForViewResult | Array of DMATop­AlarmStateData | The relative duration (double) of each alarm severity for the elements within the specified limitations. |
+| GetElementAlarmStates­ForViewResult | Array of [DMATopAlarmCountData](xref:DMATopAlarmCountData) | The relative duration (double) of each alarm severity for the elements within the specified limitations. |

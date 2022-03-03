@@ -16,4 +16,4 @@ Use this method to retrieve all available job domains. Available from DataMiner 
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobsDomainsResult | Array of DMAJobDomainLite (see [DMAJobDomainLite](xref:DMAJobDomainLite)) | The available job domains. |
+| GetJobsDomainsResult | Array of [DMAJobDomainLite](xref:DMAJobDomainLite) | The available job domains. |

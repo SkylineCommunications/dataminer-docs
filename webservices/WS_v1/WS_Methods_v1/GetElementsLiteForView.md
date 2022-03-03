@@ -6,7 +6,7 @@ uid: GetElementsLiteForView
 
 Use this method to retrieve a list of all the elements from a specified view. Optionally, services and redundancy groups can also be included.
 
-This method is a faster alternative to the method *GetElementsForView*, as it retrieves only basic information about the elements. See [GetElementsForView](xref:GetElementsForView).
+This method is a faster alternative to the method [GetElementsForView](xref:GetElementsForView), as it retrieves only basic information about the elements.
 
 ## Input
 

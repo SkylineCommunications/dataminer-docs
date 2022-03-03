@@ -1162,6 +1162,8 @@
           topicUid: DMATimeline
         - name: DMATimeZoneInfo
           topicUid: DMATimeZoneInfo
+        - name: DMATopAlarmCountData
+          topicUID: DMATopAlarmCountData
         - name: DMATopologyChainsField
           topicUid: DMATopologyChainsField
         - name: DMATopologyFieldValues

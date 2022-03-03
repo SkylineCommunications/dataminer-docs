@@ -6,7 +6,7 @@ uid: GetElementsLiteForViewSorted
 
 Use this method to retrieve a list of a number of elements from a specified view. Optionally, services and redundancy groups can also be included.
 
-This method is a faster alternative to the method *GetElementsForViewSorted*, as it retrieves only basic information about the elements.
+This method is a faster alternative to the method [GetElementsForViewSorted](xref:GetElementsForViewSorted), as it retrieves only basic information about the elements.
 
 ## Input
 
