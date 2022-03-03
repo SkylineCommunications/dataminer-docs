@@ -5,7 +5,7 @@ uid: TOOProtocolDevelopmentWithCICD
 # CI/CD Pipeline
 
 > [!IMPORTANT]
-> This section might include some information which is only applicable to Skyline employees and/or links which are only accessible to Skyline employees.
+> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
 - [High-level overview](xref:High-level_overview#high-level-overview)
 

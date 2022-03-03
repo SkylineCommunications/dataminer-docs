@@ -24,7 +24,7 @@ In SVN, you perform a checkout to obtain a working copy of an SVN repository and
 ![](~/develop/images/SVNcheckout.jpg)
 <br>Figure 18: SVN checkout
 
-Git, on the other hand, works decentralized. You can clone a Git repository which results in a local clone of that repository with remote-tracking branches for each branch in the cloned repository. You can then perform commits on this local repository. However, performing a commit on your local repository will not result in any changes on the Git repository you originally cloned.
+Git, on the other hand, works decentralized. You can clone a Git repository, which results in a local clone of that repository with remote-tracking branches for each branch in the cloned repository. You can then perform commits on this local repository. However, performing a commit on your local repository will not result in any changes on the Git repository you originally cloned.
 
 ![](~/develop/images/GitClone.jpg)
 <br>Figure 19: Git clone

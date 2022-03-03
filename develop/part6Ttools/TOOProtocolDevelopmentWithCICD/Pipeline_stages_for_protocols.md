@@ -256,7 +256,7 @@ Additionally, the following information in the checklist itself should correspon
 - Initials of integration engineer
 
 > [!NOTE]
-> You should always use the latest version of the checklist which is available on Dojo: <https://community.dataminer.services/documentation/protocol-development-checklists/>
+> You should always use the latest version of the checklist, which is available on Dojo: <https://community.dataminer.services/documentation/protocol-development-checklists/>
 
 ## Quality Gate
 
@@ -415,7 +415,7 @@ This step performs the actual push to SVN. Once this step is executed, you shoul
 
 This step performs cleanup of the workspace and send an email containing a report giving an overview of the number of issues detected in DIS and SonarQube.
 
-The report also contains an overall quality score which is calculated using the following metrics:
+The report also contains an overall quality score, which is calculated using the following metrics:
 
 - Number of Critical Issues reported by the DIS Validator
 

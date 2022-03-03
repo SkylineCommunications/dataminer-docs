@@ -403,6 +403,7 @@
   - name: Questions & Answers
     href: Connector/QuestionsAndAnswers.md
 - name: Automation scripts
+  href: Automation/Automation_dev.md
   items:
   - name: Actions
     href: Automation/AutomationActions.md

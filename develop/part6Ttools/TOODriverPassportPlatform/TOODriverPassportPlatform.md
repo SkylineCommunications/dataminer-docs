@@ -5,7 +5,7 @@ uid: TOODriverPassportPlatform
 # Skyline Driver Passport Platform
 
 > [!IMPORTANT]
-> This section might include some information which is only applicable to Skyline employees and/or links which are only accessible to Skyline employees.
+> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
 The Skyline Driver Passport Platform allows you to schedule remote installations of a DMAPP and will measure the performance impact. You can define and create any test; the only requirement is that the test should be included in a DMAPP or DMT and the intent should be to obtain performance KPIs from that test.
 

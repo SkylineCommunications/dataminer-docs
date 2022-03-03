@@ -406,6 +406,7 @@
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
   - name: Automation scripts
+    topicUid: Automation_dev
     items:
     - name: Actions
       topicUid:  AutomationActions

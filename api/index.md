@@ -2,7 +2,7 @@
 uid: ApiDocumentation
 ---
 
-# Api Documentation
+# API Documentation
 
 ## Namespaces
 
