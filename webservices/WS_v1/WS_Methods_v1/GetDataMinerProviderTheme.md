@@ -14,4 +14,4 @@ None.
 
 | Item                             | Format           | Description                                    |
 |----------------------------------|------------------|------------------------------------------------|
-| GetDataMinerProvider­ThemeResult | DMAProviderTheme | The provider’s theme and branding information. |
+| GetDataMinerProvider­ThemeResult | [DMAProviderTheme](xref:DMAProviderTheme) | The provider’s theme and branding information. |

@@ -160,6 +160,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMAProviderInfo](xref:DMAProviderInfo)
 
+- [DMAProviderTheme](xref:DMAProviderTheme)
+
 - [DMARecent](xref:DMARecent)
 
 - [DMARedundancyElement](xref:DMARedundancyElement)

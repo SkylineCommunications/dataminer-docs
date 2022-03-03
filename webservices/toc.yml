@@ -1066,6 +1066,8 @@
           topicUid: DMAProtocolPage
         - name: DMAProviderInfo
           topicUid: DMAProviderInfo
+        - name: DMAProviderTheme
+          topicUid: DMAProviderTheme
         - name: DMARecent
           topicUid: DMARecent
         - name: DMARedundancyElement
