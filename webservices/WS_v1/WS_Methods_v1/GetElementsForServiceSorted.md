@@ -26,4 +26,4 @@ Use this method to retrieve a specific number of service child items (elements a
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementsForService­SortedResult | Array of DMAElement (see [DMAElement](xref:DMAElement)) | The requested number of service child items, sorted as specified. |
+| GetElementsForService­SortedResult | Array of [DMAElement](xref:DMAElement) | The requested number of service child items, sorted as specified. |

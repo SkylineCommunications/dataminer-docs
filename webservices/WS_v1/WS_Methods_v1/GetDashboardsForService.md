@@ -18,4 +18,4 @@ Use this method to retrieve the dashboards applicable for a specified service.
 
 | Item | Format | Description |
 |--|--|--|
-| GetDashboardsFor­ServiceResult | Array of DMADashboard (see [DMADashboard](xref:DMADashboard)) | The dashboards applicable for the specified service. |
+| GetDashboardsFor­ServiceResult | Array of [DMADashboard](xref:DMADashboard) | The dashboards applicable for the specified service. |

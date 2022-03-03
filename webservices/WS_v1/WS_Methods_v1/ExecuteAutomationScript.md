@@ -16,9 +16,9 @@ Use this method to execute an interactive Automation script.
 | Script.Description | String | The description of the Automation script. |
 | Script.Settings.Require­Interactive | Boolean | Determines whether the script will require interaction from the user. |
 | Script.Settings.HasFind­InteractiveClient | Boolean | Determines if a pop-up window will be displayed asking clients to attach to the script. |
-| Script.Parameters | Array of DMAAutoma­tionScriptParameter | The parameters used in the script. See [DMAAutomationScriptParameter](xref:DMAAutomationScriptParameter). |
-| Script.Dummies | Array of DMAAutoma­tionScriptDummy | The dummies used in the script. See [DMAAutomationScriptDummy](xref:DMAAutomationScriptDummy). |
-| Script.MemoryFiles | Array of DMAAutoma­tionScriptMemoryFile | The memory files used in the script. See [DMAAutomationScriptMemoryFile](xref:DMAAutomationScriptMemoryFile). |
+| Script.Parameters | Array of [DMAAutomationScriptParameter](xref:DMAAutomationScriptParameter) | The parameters used in the script. |
+| Script.Dummies | Array of [DMAAutomationScriptDummy](xref:DMAAutomationScriptDummy) | The dummies used in the script. |
+| Script.MemoryFiles | Array of [DMAAutomationScriptMemoryFile](xref:DMAAutomationScriptMemoryFile) | The memory files used in the script. |
 | Script.ScriptOptions.WaitForScript | Boolean | Determines whether you will need to wait for the script to finish before you can continue. |
 | Script.ScriptOptions.CheckSets | Boolean | Determines whether the script will wait for a return value indicating whether the update was successful every time it performs a parameter update. |
 | Script.ScriptOptions.LockElements | Boolean | Determines whether the script will lock elements. |

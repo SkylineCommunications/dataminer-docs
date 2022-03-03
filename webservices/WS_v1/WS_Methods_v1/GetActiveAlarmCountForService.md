@@ -18,4 +18,4 @@ Use this method to retrieve the number of active alarms for a particular service
 
 | Item                                 | Format            | Description                                               |
 |--------------------------------------|-------------------|-----------------------------------------------------------|
-| GetActiveAlarmCount­ForServiceResult | DMAAlarmCountData | An array listing the alarm count for each severity level. |
+| GetActiveAlarmCount­ForServiceResult | [DMAAlarmCountData](xref:DMAAlarmCountData) | An array listing the alarm count for each severity level. |

@@ -14,6 +14,10 @@ uid: WS_CustomDataTypes_v1
 
 - [DMAAlarmColors](xref:DMAAlarmColors)
 
+- [DMAAlarmCountData](xref:DMAAlarmCountData)
+
+- [DMAAlarmDetails](xref:DMAAlarmDetails)
+
 - [DMAAlarmFilterItem](xref:DMAAlarmFilterItem)
 
 - [DMAAlarmFilterV2](xref:DMAAlarmFilterV2)
@@ -21,6 +25,8 @@ uid: WS_CustomDataTypes_v1
 - [DMAAlarmPage](xref:DMAAlarmPage)
 
 - [DMAAlarmPageUpdate](xref:DMAAlarmPageUpdate)
+
+- [DMAAlarmStateData](xref:DMAAlarmStateData)
 
 - [DMAAlarmTemplate](xref:DMAAlarmTemplate)
 
@@ -69,6 +75,8 @@ uid: WS_CustomDataTypes_v1
 - [DMAElementBasePortInfo](xref:DMAElementBasePortInfo)
 
 - [DMAElementConfiguration](xref:DMAElementConfiguration)
+
+- [DMAElementID](xref:DMAElementID)
 
 - [DMAElementLite](xref:DMAElementLite)
 
@@ -140,11 +148,17 @@ uid: WS_CustomDataTypes_v1
 
 - [DMAParameterTableRowV2](xref:DMAParameterTableRowV2)
 
+- [DMAProfileParameterLink](xref:DMAProfileParameterLink)
+
+- [DMAProfileParameterLite](xref:DMAProfileParameterLite)
+
 - [DMAProperty](xref:DMAProperty)
 
 - [DMAPropertyFilter](xref:DMAPropertyFilter)
 
 - [DMAProtocolPage](xref:DMAProtocolPage)
+
+- [DMAProviderInfo](xref:DMAProviderInfo)
 
 - [DMARecent](xref:DMARecent)
 

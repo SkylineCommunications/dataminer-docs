@@ -22,4 +22,4 @@ This method is a faster alternative to the method *GetElementsForView*, as it re
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementsLiteFor­ViewResult | Array of DMAElement­Lite (See [DMAElementLite](xref:DMAElementLite)) | A list with basic info about all the elements in the specified view. |
+| GetElementsLiteFor­ViewResult | Array of [DMAElementLite](xref:DMAElementLite) | A list with basic info about all the elements in the specified view. |

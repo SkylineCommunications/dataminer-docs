@@ -18,4 +18,4 @@ Use this method to retrieve the alarm details for a specified alarm.
 
 | Item                  | Format    | Description                                    |
 |-----------------------|-----------|------------------------------------------------|
-| GetAlarmDetailsResult | AlarmInfo | The alarm information for the specified alarm. |
+| GetAlarmDetailsResult | [DMAAlarmDetails](xref:DMAAlarmDetails) | The alarm information for the specified alarm. |

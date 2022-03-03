@@ -30,4 +30,4 @@ Use this method to retrieve the rows from a table parameter added or changed sin
 | GetTableForParameterCachedResult | [DMACache](xref:DMACache) | The table rows added or changed since the specified point in time. |
 
 > [!NOTE]
-> In this case, the DMACache object (see [DMACache](xref:DMACache)) will contain an array of DMAParameterTableRow objects (see [DMAParameterTableRow](xref:DMAParameterTableRow)).
+> In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAParameterTableRow](xref:DMAParameterTableRow) objects.

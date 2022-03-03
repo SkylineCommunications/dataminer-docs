@@ -18,4 +18,4 @@ Use this method to retrieve the data of a number of specified aggregation rules.
 
 | Item | Format | Description |
 |--|--|--|
-| GetAggregation­DataTreeResult | Array of DMAAggrega­tionTableColumn (see [DMAAggregationTableColumn](xref:DMAAggregationTableColumn)) | The data of the specified aggregation rules. |
+| GetAggregation­DataTreeResult | Array of [DMAAggregationTableColumn](xref:DMAAggregationTableColumn) | The data of the specified aggregation rules. |

@@ -4,7 +4,7 @@ uid: GetJobsSectionDefinition
 
 # GetJobsSectionDefinition
 
-Use this method to retrieve a particular job section definition. Can only be used in case there is only one job domain. Otherwise, use GetJobsSectionDefinitionV2 (see [GetJobsSectionDefinitionV2](xref:GetJobsSectionDefinitionV2).
+Use this method to retrieve a particular job section definition. Can only be used in case there is only one job domain. Otherwise, use [GetJobsSectionDefinitionV2](xref:GetJobsSectionDefinitionV2).
 
 ## Input
 
@@ -17,4 +17,4 @@ Use this method to retrieve a particular job section definition. Can only be use
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobsSectionDefinitionResult | Array of DMASectionDefinition (see [DMASectionDefinition](xref:DMASectionDefinition)) | The requested job section definition. |
+| GetJobsSectionDefinitionResult | Array of [DMASectionDefinition](xref:DMASectionDefinition) | The requested job section definition. |

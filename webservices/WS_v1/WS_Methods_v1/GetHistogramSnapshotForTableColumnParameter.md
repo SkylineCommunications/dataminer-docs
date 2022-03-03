@@ -22,7 +22,7 @@ Use this method to retrieve a snapshot of trend data for a specified table colum
 
 | Item | Format | Description |
 |--|--|--|
-| GetHistogramSnapshotFor­TableColumnParameterResult | Array of DMATrendData (see [DMATrendData](xref:DMATrendData)) | The histogram for the specified table column parameter. |
+| GetHistogramSnapshotFor­TableColumnParameterResult | Array of [DMATrendData](xref:DMATrendData) | The histogram for the specified table column parameter. |
 
 > [!NOTE]
 > The DMATrendData array includes an array of timestamps of type “long”. These values should be divided by 1000 to get the correct boundary values.

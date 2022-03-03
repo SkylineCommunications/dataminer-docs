@@ -14,7 +14,7 @@ Use this method to update an existing service template. Available from DataMiner
 | DmaID | Integer | The DataMiner Agent ID. |
 | ServiceTemplateID | Integer | The service template ID. |
 | ViewIDs | Array of Integer | The IDs of the views in which the service template should be created. |
-| Template | Array | The service template configuration. See [DMAServiceTemplate](xref:DMAServiceTemplate). |
+| Template | [DMAServiceTemplate](xref:DMAServiceTemplate) | The service template configuration. |
 | ExtraOptions.AutoUpdateExistingServices | Boolean | Indicates whether existing services generated with the service template should be updated automatically. |
 
 ## Output

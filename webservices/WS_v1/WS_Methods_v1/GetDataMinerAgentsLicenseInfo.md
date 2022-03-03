@@ -16,4 +16,4 @@ Use this method to retrieve license information for the different DataMiner Agen
 
 | Item | Format | Description |
 |--|--|--|
-| GetDataMinerAgents­LicenseInfoResult | Array of DMALicenseInfo (see [DMALicenseInfo](xref:DMALicenseInfo)) | The license information for each of the DMAs in the DMS. |
+| GetDataMinerAgents­LicenseInfoResult | Array of [DMALicenseInfo](xref:DMALicenseInfo) | The license information for each of the DMAs in the DMS. |

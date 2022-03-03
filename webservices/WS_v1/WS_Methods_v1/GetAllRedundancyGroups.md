@@ -14,6 +14,6 @@ Use this method to retrieve a list of all the redundancy groups.
 
 ## Output
 
-| Item                          | Format                                                                                                  | Description                    |
-|-------------------------------|---------------------------------------------------------------------------------------------------------|--------------------------------|
-| GetAllRedundancy­GroupsResult | Array of DMARedun­dancyGroup (see [DMARedundancyGroup](xref:DMARedundancyGroup)) | The list of redundancy groups. |
+| Item | Format | Description |
+|--|--|--|
+| GetAllRedundancy­GroupsResult | Array of [DMARedundancyGroup](xref:DMARedundancyGroup) | The list of redundancy groups. |

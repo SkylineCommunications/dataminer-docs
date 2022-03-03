@@ -23,4 +23,4 @@ Use this method to create a service by applying a specified service template.
 
 | Item | Format | Description |
 |--|--|--|
-| CreateServiceByApplying­ServiceTemplateResult | DMAServiceTemplateMissing­Data (see [DMAServiceTemplateMissingData](xref:DMAServiceTemplateMissingData)) | An array indicating any input data that are still missing in order to apply the service template. |
+| CreateServiceByApplying­ServiceTemplateResult | [DMAServiceTemplateMissingData](xref:DMAServiceTemplateMissingData) | An array indicating any input data that are still missing in order to apply the service template. |

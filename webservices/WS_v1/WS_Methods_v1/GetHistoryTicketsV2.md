@@ -30,7 +30,7 @@ Use this method to retrieve the tickets created in a particular timespan. The ti
 
 | Item | Format | Description |
 |--|--|--|
-| GetHistoryTicketsResult | Array | Array of DMATicket (see [DMATicket](xref:DMATicket)), with an additional *HasNextPage* field indicating if another page of tickets is available. |
+| GetHistoryTicketsResult | Array | Array of [DMATicket](xref:DMATicket), with an additional *HasNextPage* field indicating if another page of tickets is available. |
 
 > [!NOTE]
 > As there can be a large number of tickets, this method makes use of paging, so that you do not have to download all tickets at once. To get the first page of tickets, execute the method with *PageNumber* = 0, and *Count* equaling the number of tickets you want to retrieve on one page (e.g. 50). In the response, the *HasNextPage* indicates if there is another page after the current page.

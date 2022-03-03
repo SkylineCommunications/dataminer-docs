@@ -11,7 +11,7 @@ Use this method to create a job domain. Available from DataMiner 10.0.9 onwards.
 | Item | Format | Description |
 |--|--|--|
 | Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| Domain | Array of DMASectionDefinition | The section definitions used by the domain. See [DMASectionDefinition](xref:DMASectionDefinition). |
+| Domain | Array of [DMASectionDefinition](xref:DMASectionDefinition) | The section definitions used by the domain. |
 
 ## Output
 

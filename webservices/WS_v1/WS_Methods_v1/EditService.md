@@ -14,7 +14,7 @@ Use this method to edit a specified service.
 | DmaID         | Integer                  | The DataMiner Agent ID.                                                             |
 | ServiceID     | Integer                  | The service ID.                                                                     |
 | ViewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
-| Configuration | DMAServiceConfigu­ration | See [DMAServiceConfiguration](xref:DMAServiceConfiguration). |
+| Configuration | DMAServiceConfiguration | See [DMAServiceConfiguration](xref:DMAServiceConfiguration). |
 
 ## Output
 

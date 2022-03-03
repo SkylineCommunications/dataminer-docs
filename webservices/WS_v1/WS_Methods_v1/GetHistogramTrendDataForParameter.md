@@ -23,7 +23,7 @@ Use this method to retrieve a snapshot of trend data for a specified parameter.
 
 | Item | Format | Description |
 |--|--|--|
-| GetHistogramTrendData­ForParameterResult | Array of DMATrendData (see [DMATrendData](xref:DMATrendData)) | The trend data for the specified parameter. |
+| GetHistogramTrendData­ForParameterResult | Array of [DMATrendData](xref:DMATrendData) | The trend data for the specified parameter. |
 
 > [!NOTE]
 > The DMATrendData array includes an array of timestamps of type “long”. These values should be divided by 1000 to get the correct boundary values.

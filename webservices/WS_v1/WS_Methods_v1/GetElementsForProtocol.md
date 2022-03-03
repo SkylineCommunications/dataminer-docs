@@ -18,4 +18,4 @@ Use this method to retrieve the list of all the elements based on a particular p
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementsForProtocolResult | Array of DMAElement (see [DMAElement](xref:DMAElement)) | The list of all the elements based on the specified protocol. |
+| GetElementsForProtocolResult | Array of [DMAElement](xref:DMAElement) | The list of all the elements based on the specified protocol. |

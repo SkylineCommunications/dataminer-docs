@@ -17,4 +17,4 @@ Use this method to retrieve all the capacity parameters for a specific resource.
 
 | Item                                    | Format                            | Description                                         |
 |-----------------------------------------|-----------------------------------|-----------------------------------------------------|
-| GetCapacityParame­tersForResourceResult | Array of DMAProfilePa­rameterLite | The ID and name of each of the capacity parameters. |
+| GetCapacityParametersForResourceResult | Array of [DMAProfileParameterLite](xref:DMAProfileParameterLite) | The ID and name of each of the capacity parameters. |

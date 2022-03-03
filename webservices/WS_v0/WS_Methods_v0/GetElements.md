@@ -14,7 +14,6 @@ Use this method to request a list of all the elements in the DMS.
 
 ## Output
 
-| Item              | Format                                                                                    | Description                  |
-|-------------------|-------------------------------------------------------------------------------------------|------------------------------|
-| GetElementsResult | Array of DMAElement (see[DMAElement](xref:DMAElement1#dmaelement)) | All the elements in the DMS. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetElementsResult | Array of [DMAElement](xref:DMAElement1) | All the elements in the DMS. |

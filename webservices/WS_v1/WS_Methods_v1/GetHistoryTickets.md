@@ -38,4 +38,4 @@ Use this method to retrieve the tickets created in a particular timespan. The ti
 
 | Item | Format | Description |
 |--|--|--|
-| GetHistoryTicketsResult | Array | Array of DMATicket (see [DMATicket](xref:DMATicket)), with the page session ID and the total number of tickets. |
+| GetHistoryTicketsResult | Array | Array of [DMATicket](xref:DMATicket), with the page session ID and the total number of tickets. |

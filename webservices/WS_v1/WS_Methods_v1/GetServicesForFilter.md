@@ -8,10 +8,10 @@ Use this method to retrieve the services matching a specific property filter. Av
 
 ## Input
 
-| Item                              | Format                     | Description                                                                                  |
-|-----------------------------------|----------------------------|----------------------------------------------------------------------------------------------|
-| Connection                        | String                     | The connection ID. See [ConnectApp](xref:ConnectApp).             |
-| GenericFilter.PropertyFilters | Array of DMAPropertyFilter | The property filters. See [DMAPropertyFilter](xref:DMAPropertyFilter). |
+| Item | Format | Description |
+|--|--|--|
+| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| GenericFilter.PropertyFilters | Array of [DMAPropertyFilter](xref:DMAPropertyFilter) | The property filters. |
 
 ## Output
 

@@ -27,4 +27,4 @@ This method is a faster alternative to the method *GetElementsForViewSorted*, as
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementsLiteFor­ViewSortedResult | Array of DMAElement­Lite (See [DMAElementLite](xref:DMAElementLite)) | A list with basic info about certain elements in the specified view. |
+| GetElementsLiteFor­ViewSortedResult | Array of [DMAElementLite](xref:DMAElementLite) | A list with basic info about certain elements in the specified view. |

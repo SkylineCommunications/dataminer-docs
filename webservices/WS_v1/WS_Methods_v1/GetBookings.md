@@ -16,6 +16,6 @@ Use this method to retrieve all bookings matching a filter. Available from DataM
 
 ## Output
 
-| Item              | Format                                                                         | Description                       |
-|-------------------|--------------------------------------------------------------------------------|-----------------------------------|
-| GetBookingsResult | Array of DMABooking (see [DMABooking](xref:DMABooking)) | The bookings matching the filter. |
+| Item | Format | Description |
+|--|--|--|
+| GetBookingsResult | Array of [DMABooking](xref:DMABooking) | The bookings matching the filter. |

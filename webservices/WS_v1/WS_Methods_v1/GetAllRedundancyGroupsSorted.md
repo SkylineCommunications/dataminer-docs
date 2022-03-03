@@ -22,4 +22,4 @@ Use this method to retrieve a specific number of redundancy groups.
 
 | Item | Format | Description |
 |--|--|--|
-| GetAllRedundancy­GroupsSortedResult | Array of DMARedun­dancyGroup (see [DMARedundancyGroup](xref:DMARedundancyGroup)) | The redundancy groups, sorted as requested. |
+| GetAllRedundancy­GroupsSortedResult | Array of [DMARedundancyGroup](xref:DMARedundancyGroup) | The redundancy groups, sorted as requested. |

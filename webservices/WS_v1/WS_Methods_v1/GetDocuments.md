@@ -18,4 +18,4 @@ Use this method to retrieve a list of available (general and protocol) documents
 
 | Item | Format | Description |
 |--|--|--|
-| GetDocumentsResult | DMADocumentFolder (see [DMADocumentFolder](xref:DMADocumentFolder)) | The document folders and documents in the specified folder. |
+| GetDocumentsResult | [DMADocumentFolder](xref:DMADocumentFolder) | The document folders and documents in the specified folder. |

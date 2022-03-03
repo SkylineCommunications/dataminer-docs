@@ -13,7 +13,7 @@ Use this method to create a new service on a specified DataMiner Agent.
 | Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
 | DmaID         | Integer                  | The DataMiner Agent ID.                                                             |
 | ViewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
-| Configuration | DMAServiceConfigu­ration | See [DMAServiceConfiguration](xref:DMAServiceConfiguration). |
+| Configuration | DMAServiceConfiguration | See [DMAServiceConfiguration](xref:DMAServiceConfiguration). |
 
 ## Output
 

@@ -24,4 +24,4 @@ Use this method to retrieve job suggestions matching a particular filter.
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobSuggestionsResult | Array of DMAJobSuggestion (see [DMAJobSuggestion](xref:DMAJobSuggestion)) | The job suggestions matching the filter. |
+| GetJobSuggestionsResult | Array of [DMAJobSuggestion](xref:DMAJobSuggestion) | The job suggestions matching the filter. |

@@ -15,6 +15,6 @@ Use this method to retrieve a list of the bookings for a specific job.
 
 ## Output
 
-| Item                     | Format                                                                                      | Description                         |
-|--------------------------|---------------------------------------------------------------------------------------------|-------------------------------------|
-| GetBookingsForJob­Result | Array of DMABooking­Lite (see [DMABookingLite](xref:DMABookingLite)) | The bookings for the specified job. |
+| Item | Format | Description |
+|--|--|--|
+| GetBookingsForJob­Result | Array of [DMABookingLite](xref:DMABookingLite) | The bookings for the specified job. |

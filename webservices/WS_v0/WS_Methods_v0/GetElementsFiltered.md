@@ -19,7 +19,6 @@ Use this method to request a specified series of elements.
 
 ## Output
 
-| Item                      | Format                                                                                    | Description                       |
-|---------------------------|-------------------------------------------------------------------------------------------|-----------------------------------|
-| GetElementsFilteredResult | Array of DMAElement (see[DMAElement](xref:DMAElement1#dmaelement)) | The specified series of elements. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetElementsFilteredResult | Array of [DMAElement](xref:DMAElement1) | The specified series of elements. |

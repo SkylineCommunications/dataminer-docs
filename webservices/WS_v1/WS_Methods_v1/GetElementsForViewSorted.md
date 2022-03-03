@@ -27,4 +27,4 @@ Use this method to retrieve a specific number of view child items (elements and/
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementsForView­SortedResult | Array of DMAElement (see [DMAElement](xref:DMAElement)) | The child items in the specified view, sorted as requested. |
+| GetElementsForView­SortedResult | Array of [DMAElement](xref:DMAElement) | The child items in the specified view, sorted as requested. |

@@ -22,4 +22,4 @@ Use this method to retrieve the number of alarms for every alarm severity for th
 
 | Item                             | Format            | Description                                               |
 |----------------------------------|-------------------|-----------------------------------------------------------|
-| GetAlarmCountForPa­rameterResult | DMAAlarmCountData | An array listing the alarm count for each severity level. |
+| GetAlarmCountForPa­rameterResult | [DMAAlarmCountData](xref:DMAAlarmCountData) | An array listing the alarm count for each severity level. |

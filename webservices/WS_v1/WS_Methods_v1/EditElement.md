@@ -14,7 +14,7 @@ Use this method to edit a specified element.
 | DmaID         | Integer                  | The DataMiner Agent ID.                                                             |
 | ElementID     | Integer                  | The element ID.                                                                     |
 | ViewIDs       | Array of Integer         | The IDs of the views that should contain the element.                               |
-| Configuration | DMAElementConfigu­ration | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
+| Configuration | DMAElementConfiguration | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
 
 ## Output
 

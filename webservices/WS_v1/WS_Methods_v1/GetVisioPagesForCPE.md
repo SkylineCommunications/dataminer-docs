@@ -20,4 +20,4 @@ Use this method to retrieve a list of the pages of the Visio file linked to a pa
 
 | Item | Format | Description |
 |--|--|--|
-| GetVisioPagesForCPE­Result | Array of DMAVisioPage (see [DMAVisioPage](xref:DMAVisioPage)) | A list of the pages of the Visio file linked to the CPE element. |
+| GetVisioPagesForCPE­Result | Array of [DMAVisioPage](xref:DMAVisioPage) | A list of the pages of the Visio file linked to the CPE element. |

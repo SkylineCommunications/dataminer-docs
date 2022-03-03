@@ -21,6 +21,6 @@ Use this method to retrieve all jobs in the domain matching a particular filter.
 
 ## Output
 
-| Item          | Format                                                             | Description                             |
-|---------------|--------------------------------------------------------------------|-----------------------------------------|
-| GetJobsResult | Array of DMAJob (see [DMAJob](xref:DMAJob)) | The jobs matching the specified filter. |
+| Item | Format | Description |
+|--|--|--|
+| GetJobsResult | Array of [DMAJob](xref:DMAJob) | The jobs matching the specified filter. |

@@ -25,4 +25,4 @@ Available from DataMiner version 9.5.1 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetAlarmStateTimeline­ForParameterResult | DMATimeline (see[DMATimeline](xref:DMATimeline)) | An array of alarm state changes along with the start time and end time of the timespan in which they occur. |
+| GetAlarmStateTimeline­ForParameterResult | [DMATimeline](xref:DMATimeline) | An array of alarm state changes along with the start time and end time of the timespan in which they occur. |

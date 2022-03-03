@@ -16,4 +16,4 @@ Use this method to retrieve all properties that are available for alarm filterin
 
 | Item | Format | Description |
 |--|--|--|
-| GetAvailableAlarmPropertiesResult | Array of DMAProperty ([DMAProperty](xref:DMAProperty)) | An array with all properties available for alarm filtering. |
+| GetAvailableAlarmPropertiesResult | Array of [DMAProperty](xref:DMAProperty) | An array with all properties available for alarm filtering. |

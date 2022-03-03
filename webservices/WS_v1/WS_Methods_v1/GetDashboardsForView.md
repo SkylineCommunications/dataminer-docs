@@ -17,4 +17,4 @@ Use this method to retrieve the dashboards applicable for a specified view.
 
 | Item | Format | Description |
 |--|--|--|
-| GetDashboardsFor­ViewResult | Array of DMADashboard (see [DMADashboard](xref:DMADashboard)) | The dashboards applicable for the specified view. |
+| GetDashboardsFor­ViewResult | Array of [DMADashboard](xref:DMADashboard) | The dashboards applicable for the specified view. |

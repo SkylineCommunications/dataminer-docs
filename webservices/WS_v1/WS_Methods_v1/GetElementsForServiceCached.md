@@ -29,4 +29,4 @@ Use this method to retrieve only service child items (elements and/or services) 
 | GetElementsForService­CachedResult | [DMACache](xref:DMACache) | The service child items (elements and/or services) added or changed since the specified point in time. |
 
 > [!NOTE]
-> In this case, the DMACache object (see [DMACache](xref:DMACache)) will contain an array of DMAElement objects (see [DMAElement](xref:DMAElement)).
+> In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAElement](xref:DMAElement) objects.

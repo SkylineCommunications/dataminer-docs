@@ -15,7 +15,6 @@ Use this method to request a list of all the elements and services in a specific
 
 ## Output
 
-| Item                               | Format                                                                                     | Description                                         |
-|------------------------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| GetServiceElement­ListByNameResult | Array of DMAElement (see [DMAElement](xref:DMAElement1#dmaelement)) | The elements and services in the specified service. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetServiceElement­ListByNameResult | Array of [DMAElement](xref:DMAElement1) | The elements and services in the specified service. |

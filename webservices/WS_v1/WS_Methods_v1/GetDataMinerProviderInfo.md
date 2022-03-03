@@ -14,4 +14,4 @@ None.
 
 | Item | Format | Description |
 |--|--|--|
-| GetDataMinerProvider­InfoResult | Array of string | The information regarding the provider, such as the company name and contact information. |
+| GetDataMinerProvider­InfoResult | [DMAProviderInfo](xref:DMAProviderInfo) | The information regarding the provider, such as the company name and contact information. |

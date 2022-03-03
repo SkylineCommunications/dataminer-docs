@@ -17,4 +17,4 @@ Use this method to retrieve the available aggregation rules.
 
 | Item                       | Format                                                                                                  | Description                      |
 |----------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------|
-| GetAggregationRules­Result | Array of DMAAggrega­tionRule (see [DMAAggregationRule](xref:DMAAggregationRule)) | The available aggregation rules. |
+| GetAggregationRules­Result | Array of [DMAAggregationRule](xref:DMAAggregationRule) | The available aggregation rules. |

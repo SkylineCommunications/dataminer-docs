@@ -28,4 +28,4 @@ Use this method to retrieve the Data Display pages of a particular element added
 | GetPagesForElement­CachedResult | [DMACache](xref:DMACache) | The Data Display pages added or changed since the specified point in time. |
 
 > [!NOTE]
-> In this case, the DMACache object (see [DMACache](xref:DMACache)) will contain an array of DMAElementPage objects (see [DMAElementPage](xref:DMAElementPage)).
+> In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAElementPage](xref:DMAElementPage) objects.

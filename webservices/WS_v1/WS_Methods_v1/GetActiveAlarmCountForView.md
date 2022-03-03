@@ -17,4 +17,4 @@ Use this method to retrieve the number of active alarms for a particular view.
 
 | Item                             | Format            | Description                                               |
 |----------------------------------|-------------------|-----------------------------------------------------------|
-| GetActiveAlarmCountForViewResult | DMAAlarmCountData | An array listing the alarm count for each severity level. |
+| GetActiveAlarmCountForViewResult | [DMAAlarmCountData](xref:DMAAlarmCountData) | An array listing the alarm count for each severity level. |

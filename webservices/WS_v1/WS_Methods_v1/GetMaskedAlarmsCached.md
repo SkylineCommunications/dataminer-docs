@@ -26,4 +26,4 @@ Use this method to retrieve only masked alarms that have been added or changed s
 | GetMaskedAlarms­CachedResult | [DMACache](xref:DMACache) | The masked alarms added or changed since the specified point in time. |
 
 > [!NOTE]
-> In this case, the DMACache object (see [DMACache](xref:DMACache)) will contain an array of DMAElement objects (see [DMAElement](xref:DMAElement)).
+> In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAElement](xref:DMAElement) objects.

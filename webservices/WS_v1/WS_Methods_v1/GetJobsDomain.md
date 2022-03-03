@@ -17,4 +17,4 @@ Use this method to retrieve a job domain. Available from DataMiner 10.0.9 onward
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobsDomainResult | DMAJobsDomain | The job domain, consisting of an array of DMASectionDefinition. (See [DMASectionDefinition](xref:DMASectionDefinition)) |
+| GetJobsDomainResult | DMAJobsDomain | The job domain, consisting of an array of [DMASectionDefinition](xref:DMASectionDefinition). |

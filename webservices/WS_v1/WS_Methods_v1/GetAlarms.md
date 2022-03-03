@@ -11,7 +11,7 @@ Use this method to retrieve alarms matching a DMAAlarmFilterV2 object. (Availabl
 | Item             | Format | Description                                                                                                  |
 |------------------|--------|--------------------------------------------------------------------------------------------------------------|
 | Connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp).                                                         |
-| DMAAlarmFilterV2 | Array  | The filter that the alarms must match. See [DMAAlarmFilterV2](xref:DMAAlarmFilterV2). |
+| DMAAlarmFilterV2 | [DMAAlarmFilterV2](xref:DMAAlarmFilterV2)  | The filter that the alarms must match. |
 
 ## Output
 

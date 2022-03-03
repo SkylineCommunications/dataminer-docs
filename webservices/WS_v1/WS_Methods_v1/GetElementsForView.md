@@ -19,4 +19,4 @@ Use this method to retrieve the list of child items (elements and/or services) i
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementsForView­Result | Array of DMAElement (see [DMAElement](xref:DMAElement)) | The list of all the child items in the specified view. |
+| GetElementsForView­Result | Array of [DMAElement](xref:DMAElement) | The list of all the child items in the specified view. |

@@ -18,4 +18,4 @@ Use this method to retrieve a list of the bookings for a specific job section. A
 
 | Item | Format | Description |
 |--|--|--|
-| GetBookingsForJobSec­tionResult | Array of DMABooking­Lite (see [DMABookingLite](xref:DMABookingLite)) | The bookings for the specified job section. |
+| GetBookingsForJobSectionResult | Array of [DMABookingLite](xref:DMABookingLite) | The bookings for the specified job section. |

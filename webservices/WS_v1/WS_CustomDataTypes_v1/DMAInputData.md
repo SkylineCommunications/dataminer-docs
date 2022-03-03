@@ -12,7 +12,7 @@ Represents an input data object, which can be:
 
   - *RequireValidElementName* (bool): Determines whether a valid element name is required as input.
 
-- *DMAInputDataFixedValue*: Indicates a fixed value that is used as input. Consists of one *DMASTString*. See [DMASTString](xref:DMASTString).
+- *DMAInputDataFixedValue*: Indicates a fixed value that is used as input. Consists of one [DMASTString](xref:DMASTString).
 
 - *DMAInputDataTableRowIndex*: Indicates a table row from which the input data will be retrieved.
 

@@ -13,11 +13,11 @@ Available from DataMiner 10.0.7 onwards.
 | Item             | Format | Description                                                                                                  |
 |------------------|--------|--------------------------------------------------------------------------------------------------------------|
 | Connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp).                                                        |
-| DMAAlarmFilterV2 | Array  | The filter that the alarms must match. See [DMAAlarmFilterV2](xref:DMAAlarmFilterV2). |
+| DMAAlarmFilterV2 | [DMAAlarmFilterV2](xref:DMAAlarmFilterV2)  | The filter that the alarms must match. |
 | GroupBy          | String | Either “time” (default) or “severity”.                                                                       |
 
 ## Output
 
-| Item                  | Format                                                                               | Description                                                                            |
-|-----------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| GetAlarmPagesV2Result | Array of DMAAlarmPage (see [DMAAlarmPage](xref:DMAAlarmPage)) | The alarm pages, filtered and grouped as specified, as well as the alarm cache status. |
+| Item | Format | Description |
+|--|--|--|
+| GetAlarmPagesV2Result | Array of [DMAAlarmPage](xref:DMAAlarmPage) | The alarm pages, filtered and grouped as specified, as well as the alarm cache status. |

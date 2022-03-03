@@ -920,6 +920,10 @@
           topicUid: DMAAlarm
         - name: DMAAlarmColors
           topicUid: DMAAlarmColors
+        - name: DMAAlarmCountData
+          topicUid: DMAAlarmCountData
+        - name: DMAAlarmDetails
+          topicUid: DMAAlarmDetails
         - name: DMAAlarmFilterItem
           topicUid: DMAAlarmFilterItem
         - name: DMAAlarmFilterV2
@@ -928,6 +932,8 @@
           topicUid: DMAAlarmPage
         - name: DMAAlarmPageUpdate
           topicUid: DMAAlarmPageUpdate
+        - name: DMAAlarmStateData
+          topicUid: DMAAlarmStateData
         - name: DMAAlarmTemplate
           topicUid: DMAAlarmTemplate
         - name: DMAAlarmTemplateCondition
@@ -976,6 +982,8 @@
           topicUid: DMAElementBasePortInfo
         - name: DMAElementConfiguration
           topicUid: DMAElementConfiguration
+        - name: DMAElementID
+          topicUid: DMAElementID
         - name: DMAElementLite
           topicUid: DMAElementLite
         - name: DMAElementPage
@@ -1046,12 +1054,18 @@
           topicUid: DMAParameterTableRow
         - name: DMAParameterTableRowV2
           topicUid: DMAParameterTableRowV2
+        - name: DMAProfileParameterLink
+          topicUid: DMAProfileParameterLink
+        - name: DMAProfileParameterLite
+          topicUid: DMAProfileParameterLite
         - name: DMAProperty
           topicUid: DMAProperty
         - name: DMAPropertyFilter
           topicUid: DMAPropertyFilter
         - name: DMAProtocolPage
           topicUid: DMAProtocolPage
+        - name: DMAProviderInfo
+          topicUid: DMAProviderInfo
         - name: DMARecent
           topicUid: DMARecent
         - name: DMARedundancyElement

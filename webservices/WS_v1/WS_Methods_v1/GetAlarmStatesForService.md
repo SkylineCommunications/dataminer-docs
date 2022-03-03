@@ -18,6 +18,6 @@ Use this method to retrieve the relative duration (in percent) of every alarm se
 
 ## Output
 
-| Item                            | Format            | Description                                                 |
-|---------------------------------|-------------------|-------------------------------------------------------------|
-| GetAlarmStatesForSer­viceResult | DMAAlarmStateData | An array listing the relative duration of each alarm state. |
+| Item | Format | Description |
+|--|--|--|
+| GetAlarmStatesForSer­viceResult | [DMAAlarmStateData](xref:DMAAlarmStateData) | An array listing the relative duration of each alarm state. |

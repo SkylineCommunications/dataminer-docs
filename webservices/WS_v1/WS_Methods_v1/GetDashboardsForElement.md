@@ -18,4 +18,4 @@ Use this method to retrieve the dashboards applicable for a specified element.
 
 | Item | Format | Description |
 |--|--|--|
-| GetDashboardsFor­ElementResult | Array of DMADashboard (see [DMADashboard](xref:DMADashboard)) | The dashboards applicable for the specified element. |
+| GetDashboardsFor­ElementResult | Array of [DMADashboard](xref:DMADashboard) | The dashboards applicable for the specified element. |
