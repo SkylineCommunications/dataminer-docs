@@ -7,7 +7,7 @@ uid: GetTrendDataForParameter
 Use this method to retrieve the trend data of a particular parameter.
 
 > [!NOTE]
-> This method is deprecated. Use GetTrendDataSimplifiedForParameter instead (see [GetTrendDataSimplifiedForParameter](xref:GetTrendDataSimplifiedForParameter)).
+> This method is deprecated. Use [GetTrendDataSimplifiedForParameter](xref:GetTrendDataSimplifiedForParameter) instead.
 
 ## Input
 

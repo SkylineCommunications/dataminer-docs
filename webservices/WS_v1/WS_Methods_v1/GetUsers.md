@@ -16,4 +16,4 @@ Use this method to retrieve the users configured on a DMA.
 
 | Item           | Format           | Description                                         |
 |----------------|------------------|-----------------------------------------------------|
-| GetUsersResult | Array of DMAUser | See [DMAUser](xref:DMAUser). |
+| GetUsersResult | Array of [DMAUser](xref:DMAUser) | An array of DMAUser objects, consisting of the login name, full name, and email address of each user. |

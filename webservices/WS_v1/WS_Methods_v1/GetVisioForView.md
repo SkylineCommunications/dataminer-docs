@@ -6,7 +6,7 @@ uid: GetVisioForView
 
 Use this method to retrieve a specific page of the Visio file linked to a particular view as an image of a specified size.
 
-The page is returned as an interactive image containing clickable regions linked to a certain action, and scrollable child regions. If you want the page to be returned as a static image, then use GetVisioThumbnailForView instead (see [GetVisioThumbnailForView](xref:GetVisioThumbnailForView) ).
+The page is returned as an interactive image containing clickable regions linked to a certain action, and scrollable child regions. If you want the page to be returned as a static image, then use [GetVisioThumbnailForView](xref:GetVisioThumbnailForView) instead.
 
 All images are in PNG format, and are base64 encoded.
 

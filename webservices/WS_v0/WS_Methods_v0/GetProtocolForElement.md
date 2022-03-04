@@ -18,4 +18,3 @@ Use this method to request all information regarding the protocol of a specific 
 | Item                         | Format       | Description                                                      |
 |------------------------------|--------------|------------------------------------------------------------------|
 | GetProtocolForElement­Result | ProtocolInfo | All information regarding the protocol of the specified element. |
-

@@ -18,4 +18,4 @@ Use this method to retrieve an existing service template. Available from DataMin
 
 | Item                      | Format                   | Description                                                               |
 |---------------------------|--------------------------|---------------------------------------------------------------------------|
-| GetServiceTemplate­Result | DMAServiceTemplate array | See [DMAServiceTemplate](xref:DMAServiceTemplate). |
+| GetServiceTemplate­Result | [DMAServiceTemplate](xref:DMAServiceTemplate) | The requested service template. |

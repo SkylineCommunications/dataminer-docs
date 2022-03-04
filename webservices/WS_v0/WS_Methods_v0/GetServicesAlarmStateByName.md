@@ -18,4 +18,3 @@ Use this method to request the current alarm state of a specific service (refere
 | Item                               | Format | Description                                       |
 |------------------------------------|--------|---------------------------------------------------|
 | GetServicesAlarmStateBy­NameResult | String | The current alarm state of the specified service. |
-

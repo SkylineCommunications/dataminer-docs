@@ -17,7 +17,6 @@ Use this method to request the current state and current value(s) of specific pa
 
 ## Output
 
-| Item                                | Format                                                                        | Description                                 |
-|-------------------------------------|-------------------------------------------------------------------------------|---------------------------------------------|
-| GetParameterValueBy­ElementIDResult | Array of ParamValue (see[ParamValue](xref:ParamValue)) | The properties of the requested parameters. |
-
+| Item | Format | Description |
+|--|--|--|
+| GetParameterValueBy­ElementIDResult | Array of [ParamValue](xref:ParamValue) | The properties of the requested parameters. |

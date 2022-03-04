@@ -20,17 +20,16 @@ Use this method as an alternative to the GetTableForParameter method, in order t
 
 The following filters can be specified in the input for this method:
 
-| Filter                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| columns=pid1,pid2,... | In this filter, you can list the columns to be retrieved.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| hide-cells            | If this filter is added, the array of DMAParameterTableRowV2 objects returned by the method will contain only a primary key column and a display key column.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| as-kpi                | Supported from DataMiner 10.0.0 onwards. Allows you to filter based on the following table column KPI options:<br> -  KPIHideWrite<br> -  HideKPI<br> -  HideKPIWhenNotInitialized<br> -  KPIShowDisplayKey<br> -  KPIShowPrimaryKey<br> -  DisableHistogram |
+| Filter | Description |
+|--|--|
+| columns=pid1,pid2,... | In this filter, you can list the columns to be retrieved. |
+| hide-cells | If this filter is added, the array of [DMAParameterTableRowV2](xref:DMAParameterTableRowV2) objects returned by the method will contain only a primary key column and a display key column. |
+| as-kpi | Supported from DataMiner 10.0.0 onwards. Allows you to filter based on the following table column KPI options:<br> -  KPIHideWrite<br> -  HideKPI<br> -  HideKPIWhenNotInitialized<br> -  KPIShowDisplayKey<br> -  KPIShowPrimaryKey<br> -  DisableHistogram |
 
-In addition, you can specify all filters available for the *GetTableForParameterFiltered* method. See [Filters](xref:GetTableForParameterFiltered#filters).
+In addition, you can specify all filters available for the [GetTableForParameterFiltered](xref:GetTableForParameterFiltered) method. See [Filters](xref:GetTableForParameterFiltered#filters).
 
 ## Output
 
-| Item                         | Format                                                             | Description                                                                       |
-|------------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetTableForParameterV2Result | [DMAParameterTable](xref:DMAParameterTable) | An array of column objects and row objects, with the page count and current page. |
-

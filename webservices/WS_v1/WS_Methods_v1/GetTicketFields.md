@@ -22,4 +22,4 @@ This method can also be used to see which third-party fields are available, and 
 
 | Item | Format | Description |
 |--|--|--|
-| GetTicketFieldsResult | Array of [DMATicketField](xref:DMATicketField) | Array containing two sets of DMATicketField entries, with the fields for this ticket type in DataMiner, and the fields for the corresponding third-party ticket type respectively. |
+| GetTicketFieldsResult | Array of [DMATicketField](xref:DMATicketField) | Array containing two sets of DMATicketField entries, with the fields for this ticket type in DataMiner, and the fields for the corresponding third-party ticket type, respectively. |

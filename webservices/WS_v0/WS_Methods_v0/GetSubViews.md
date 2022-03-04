@@ -18,4 +18,3 @@ Use this method to request the names of all subviews of a specified view.
 | Item              | Format          | Description                                          |
 |-------------------|-----------------|------------------------------------------------------|
 | GetSubViewsResult | Array of string | The names of all the subviews of the specified view. |
-

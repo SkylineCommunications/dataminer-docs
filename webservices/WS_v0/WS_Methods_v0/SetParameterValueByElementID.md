@@ -17,8 +17,8 @@ Use this method to update the value of a parameter linked to an element (referen
 | DmaID      | Integer | The DataMiner Agent ID.                                               |
 | ElementID  | Integer | The element ID.                                                       |
 | ParamName  | String  | The parameter name.                                                   |
-| ParamPKey  | Object  | The primary key of a row. <br>Available from DataMiner 9.5.1 onwards. |
-| ParamDKey  | Object  | The display key of a row. <br>Available from DataMiner 9.5.1 onwards. |
+| ParamPKey  | Object  | The primary key of a row. Available from DataMiner 9.5.1 onwards. |
+| ParamDKey  | Object  | The display key of a row. Available from DataMiner 9.5.1 onwards. |
 | ParamValue | Object  | The new parameter value.                                              |
 
 > [!NOTE]
@@ -27,4 +27,3 @@ Use this method to update the value of a parameter linked to an element (referen
 ## Output
 
 None.
-

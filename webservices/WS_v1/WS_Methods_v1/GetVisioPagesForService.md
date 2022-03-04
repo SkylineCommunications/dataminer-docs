@@ -18,4 +18,4 @@ Use this method to retrieve a list of the pages of the Visio file linked to a pa
 
 | Item                           | Format                | Description                                                  |
 |--------------------------------|-----------------------|--------------------------------------------------------------|
-| GetVisioPagesFor­ServiceResult | Array of DMAVisioPage | A list of the pages of the Visio file linked to the service. |
+| GetVisioPagesFor­ServiceResult | Array of [DMAVisioPage](xref:DMAVisioPage) | A list of the pages of the Visio file linked to the service. |

@@ -9,7 +9,7 @@ Use this method to log on to the DataMiner System and request authentication.
 If the user credentials passed to the method prove to be valid, a connection ID will be returned. This ID has to be passed to each of the methods listed below for identification purposes.
 
 > [!NOTE]
-> Each time you call the *Connect* method, the *CleanupConnections* method is called automatically in order to clean up any unused connections before setting up a new one. See [CleanupConnections](xref:CleanupConnections).
+> Each time you call the *Connect* method, the [CleanupConnections](xref:CleanupConnections) method is called automatically in order to clean up any unused connections before setting up a new one.
 
 ## Input
 

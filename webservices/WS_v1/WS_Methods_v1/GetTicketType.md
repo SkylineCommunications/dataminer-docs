@@ -18,6 +18,6 @@ Use this method to retrieve the ticket type for a ticket with a specific ID.
 
 ## Output
 
-| Item                | Format                                                     | Description                              |
-|---------------------|------------------------------------------------------------|------------------------------------------|
+| Item | Format | Description |
+|--|--|--|
 | GetTicketTypeResult | [DMATicketType](xref:DMATicketType) | The ticket type of the specified ticket. |

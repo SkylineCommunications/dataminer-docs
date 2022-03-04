@@ -21,4 +21,3 @@ Examples of element states: Active, Stopped, etc.
 | Item                      | Format | Description                       |
 |---------------------------|--------|-----------------------------------|
 | GetElementStateByIDResult | String | The current state of the element. |
-

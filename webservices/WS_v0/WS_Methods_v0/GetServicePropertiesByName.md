@@ -15,7 +15,6 @@ Use this method to request the properties of a specific service (referenced by n
 
 ## Output
 
-| Item                              | Format                                                                         | Description                                                         |
-|-----------------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| GetServiceProperties­ByNameResult | Array of ParamValue (see [ParamValue](xref:ParamValue)) | All properties of the specified service (and their current values). |
-
+| Item | Format | Description |
+|--|--|--|
+| GetServiceProperties­ByNameResult | Array of [ParamValue](xref:ParamValue) | All properties of the specified service (and their current values). |

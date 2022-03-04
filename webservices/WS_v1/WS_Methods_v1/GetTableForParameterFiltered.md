@@ -23,7 +23,7 @@ The following filters can be specified in the input for this method:
 
 - **VALUE=**
 
-  Specify a value filter with the structure “ParameterID Operator Value”. For example, to only include rows where the column with parameter ID 51 contains the value “3”, specify *VALUE=51 == 3*.
+  Specify a value filter with the structure “ParameterID Operator Value”. For example, to only include rows where the column with parameter ID 51 contains the value “3”, specify `VALUE=51 == 3`.
 
   The parameter ID can be:
 
@@ -41,7 +41,9 @@ The following filters can be specified in the input for this method:
 
   - For numeric and string values: *\>*, *\>=*, *\<*, *\<=,* *in_range*, *out_range*
 
-  In addition, string values can use the wildcards *\** and *?* if the *==* or *!=* operator is used.     The value can be:
+  In addition, string values can use the wildcards *\** and *?* if the *==* or *!=* operator is used.
+
+  The value can be:
 
   - A single value
 
@@ -68,19 +70,19 @@ The following filters can be specified in the input for this method:
 
   This filter is similar in structure to the VALUE= filter, and is used to resolve foreign key relations to other tables or recursively. Only the == operator is allowed.
 
-  For example, to only include rows that have a relation path to the row in table 2000 with primary key “xyz”, specify *fk=2000 == xyz*. You can also specify a column parameter ID from the target table instead.
+  For example, to only include rows that have a relation path to the row in table 2000 with primary key “xyz”, specify `fk=2000 == xyz`. You can also specify a column parameter ID from the target table instead.
 
 - **PK**=
 
-  Primary key filter, for example *pk=xyz*.
+  Primary key filter, for example `pk=xyz`.
 
 - **DK**=
 
-  Display key filter, to be used for tables that have a display color or for which advanced naming is active. For example, *dk=xyz*.
+  Display key filter, to be used for tables that have a display color or for which advanced naming is active. For example, `dk=xyz`.
 
 - **CHAIN**=
 
-  This filter can be used to pass along a custom table relation chain (affects fk filters). Normally, the rows are implicitly joined together and resolved for tables based on the chains defined in the protocol.
+  This filter can be used to pass along a custom table relation chain (affects FK filters). Normally, the rows are implicitly joined together and resolved for tables based on the chains defined in the protocol.
 
 - **PAGE**=
 
@@ -88,9 +90,9 @@ The following filters can be specified in the input for this method:
 
 - **SORT**=
 
-  This filter determines how to sort the filter results. It should be followed by one or more parameter IDs, separated by pipe characters (“\|”). The default order is ascending, but DESC can be added in the filter to apply descending sort order instead. For example, *SORT=12502\|DESC*.
+  This filter determines how to sort the filter results. It should be followed by one or more parameter IDs, separated by pipe characters (“\|”). The default order is ascending, but DESC can be added in the filter to apply descending sort order instead. For example, `SORT=12502|DESC`.
 
-  From DataMiner 10.0.0 onwards, you can also specify *SORT=NONE*, to avoid any kind of sorting of the results, which may improve performance.
+  From DataMiner 10.0.0 onwards, you can also specify `SORT=NONE`, to avoid any kind of sorting of the results, which may improve performance.
 
 - **RESOLVE**=
 
@@ -98,7 +100,7 @@ The following filters can be specified in the input for this method:
 
   This filter should be followed by a comma-separated string containing the parameter IDs to resolve. If all parameter IDs should be resolved, “*all*” can be specified instead.
 
-  For example, if *resolve=1005,2000* is specified, the value in column 1005 (which should be a primary key of table 2000), will be replaced by the display key of that row in table 2000.
+  For example, if `resolve=1005,2000` is specified, the value in column 1005 (which should be a primary key of table 2000) will be replaced by the display key of that row in table 2000.
 
 - **NONRECURSIVE**
 
@@ -106,11 +108,11 @@ The following filters can be specified in the input for this method:
 
 - **RECURSIVE**
 
-  While dynamic table queries on tables follow recursive links by default, they do not do so automatically when the filtered table directly has a foreign key to itself, and it is not being filtered on columns from other linked tables. From DataMiner 9.5.3 onwards, you can use the “recursive” option to force recursion in this scenario. For example: * value=201 == XXXXX;recursive*.
+  While dynamic table queries on tables follow recursive links by default, they do not do so automatically when the filtered table directly has a foreign key to itself, and it is not being filtered on columns from other linked tables. From DataMiner 9.5.3 onwards, you can use the “recursive” option to force recursion in this scenario. For example: `value=201 == XXXXX;recursive`.
 
   When combined with NONRECURSIVE in the same query, NONRECURSIVE takes precedence.
 
-  From DataMiner 9.6.5 onwards, different recursion modes can be specified, as detailed in the table below. In case no recursion mode is specified, *recursive=downNoLocal* is applied.
+  From DataMiner 9.6.5 onwards, different recursion modes can be specified, as detailed in the table below. In case no recursion mode is specified, `recursive=downNoLocal` is applied.
 
   | Recursion mode | Description  |
   |----------------|--------------|

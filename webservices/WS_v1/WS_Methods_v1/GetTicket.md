@@ -23,4 +23,4 @@ Use this method to retrieve a particular ticket.
 
 | Item            | Format    | Description                                             |
 |-----------------|-----------|---------------------------------------------------------|
-| GetTicketResult | DMATicket | See [DMATicket](xref:DMATicket). |
+| GetTicketResult | [DMATicket](xref:DMATicket) | The requested ticket. |

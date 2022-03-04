@@ -6,7 +6,7 @@ uid: GetTrendDataForTableParameter
 
 Use this method to retrieve the trend data for a parameter from within a particular timespan by primary key.
 
-With this method, real-time data is only retrieved in case no average trending is available. To retrieve real-time data in case there is average trending, use *GetTrendDataForTableParameterV2* (see [GetTrendDataForTableParameterV2](xref:GetTrendDataForTableParameterV2)).
+With this method, real-time data is only retrieved in case no average trending is available. To retrieve real-time data in case there is average trending, use [GetTrendDataForTableParameterV2](xref:GetTrendDataForTableParameterV2).
 
 ## Input
 
