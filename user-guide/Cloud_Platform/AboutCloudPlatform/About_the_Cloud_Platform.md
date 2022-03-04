@@ -12,4 +12,5 @@ In this section:
 
 - [Linking your DataMiner account to your DCP account](xref:Linking_your_DataMiner_and_DCP_account)
 
-- [Cloud connection security](xref:CloudConnectionSecurity)
+> [!TIP]
+> See also: [Cloud connectivity and security](xref:Cloud_connectivity_and_security)

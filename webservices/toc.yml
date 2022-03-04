@@ -8,6 +8,8 @@
           topicUid: Using_the_Web_Services_v1
         - name: Interfaces and WSDL files
           topicUid: Interfaces_and_WSDL_files
+        - name: Examples
+          topicUID: WS_v1_examples
     - name: Methods (v1)
       topicUid: WS_Methods_v1_overview
       items:
