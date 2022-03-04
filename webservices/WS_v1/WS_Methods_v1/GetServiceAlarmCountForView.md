@@ -21,4 +21,4 @@ Use this method to retrieve the services with the largest/smallest number of ala
 
 | Item | Format | Description |
 |--|--|--|
-| GetServiceAlarmCount­ForViewResult | Array of DMATop­AlarmCountData | The services with the largest/smallest number of alarms for each alarm severity. |
+| GetServiceAlarmCount­ForViewResult | Array of [DMATopAlarmCountData](xref:DMATopAlarmCountData) | The services with the largest/smallest number of alarms for each alarm severity. |
