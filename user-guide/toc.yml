@@ -973,14 +973,18 @@
         - name: About DMS Security
           topicUid: About_DMS_Security
           items:
-            - name: User identification
-              topicUid: User_identification
+            - name: User management
+              topicUid: User_management
             - name: User rights
               topicUid: User_rights
             - name: User groups
               topicUid: User_groups
             - name: Types of users
               topicUid: Types_of_users
+            - name: Encryption in DataMiner
+              topicUid: Encryption_in_DataMiner
+            - name: Cloud connectivity and security
+              topicUID: Cloud_connectivity_and_security
         - name: Managing users
           topicUid: Managing_users
           items:
@@ -2145,8 +2149,6 @@
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
         - name: Linking your DataMiner account to your DCP account
           topicUid: Linking_your_DataMiner_and_DCP_account
-        - name: Cloud connection security
-          topicUid: CloudConnectionSecurity
     - name: Project Collaboration
       topicUid: Collaboration
       items:

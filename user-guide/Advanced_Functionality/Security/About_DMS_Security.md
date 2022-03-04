@@ -8,13 +8,12 @@ DataMiner has a standard, fully integrated security module that allows you to co
 
 The following topics provide more information on DMS Security:
 
-- [User identification](xref:User_identification)
-
+- [User management](xref:User_management)
 - [User rights](xref:User_rights)
-
 - [User groups](xref:User_groups)
-
 - [Types of users](xref:Types_of_users)
+- [Encryption in DataMiner](xref:Encryption_in_DataMiner)
+- [Cloud connectivity and security](xref:Cloud_connectivity_and_security)
 
 > [!TIP]
 > See also:
