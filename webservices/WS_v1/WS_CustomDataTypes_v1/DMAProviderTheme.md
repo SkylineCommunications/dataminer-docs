@@ -12,5 +12,5 @@ uid: DMAProviderTheme
 | AccentTextColor | [DMAColor](xref:DMAColor) | The text color used when the background has the accent color. |
 | BackGroundColor | [DMAColor](xref:DMAColor) | The background color. |
 | Background | String | The background image. |
-| Logo | String | The product logo. |
-| LogoLarge | String | The large version of the product logo. |
+| Logo | String | The product logo (base64-encoded string). |
+| LogoLarge | String | The large version of the product logo (base64-encoded string). |

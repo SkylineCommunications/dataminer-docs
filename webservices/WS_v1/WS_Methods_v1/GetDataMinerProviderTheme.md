@@ -4,7 +4,10 @@ uid: GetDataMinerProviderTheme
 
 # GetDataMinerProviderTheme
 
-Use this method to retrieve the provider theme and branding information.
+Use this method to retrieve the provider theme and branding information. The method retrieves this information from the DataMiner license.
+
+> [!NOTE]
+> To create or modify a custom theme, contact Skyline Communications.
 
 ## Input
 
