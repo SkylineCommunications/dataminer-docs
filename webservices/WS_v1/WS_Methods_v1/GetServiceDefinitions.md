@@ -16,4 +16,4 @@ Use this method to retrieve all available service definitions. Available from Da
 
 | Item | Format | Description |
 |--|--|--|
-| GetServiceDefinitions­Result | Array of DMAServiceDefinitionLite | A DMAServiceDefinitionLite object for each of the available service definitions, containing the ID and name of the service definition. |
+| GetServiceDefinitions­Result | Array of [DMAServiceDefinitionLite](xref:DMAServiceDefinitionLite) | A DMAServiceDefinitionLite object for each of the available service definitions, containing the ID and name of the service definition. |

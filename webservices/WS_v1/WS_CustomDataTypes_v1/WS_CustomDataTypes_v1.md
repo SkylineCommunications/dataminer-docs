@@ -202,6 +202,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMAServiceDefinitionEdgeLite](xref:DMAServiceDefinitionEdgeLite)
 
+- [DMAServiceDefinitionLite](xref:DMAServiceDefinitionLite)
+
 - [DMAServiceDefinitionNode](xref:DMAServiceDefinitionNode)
 
 - [DMAServiceInfoGroupDefinition](xref:DMAServiceInfoGroupDefinition)
