@@ -256,6 +256,8 @@ uid: WS_CustomDataTypes_v1
 
 - [DMATopAlarmCountData](xref:DMATopAlarmCountData)
 
+- [DMATopAlarmStateData](xref:DMATopAlarmStateData)
+
 - [DMATopologyChainsField](xref:DMATopologyChainsField)
 
 - [DMATopologyFieldValues](xref:DMATopologyFieldValues)
