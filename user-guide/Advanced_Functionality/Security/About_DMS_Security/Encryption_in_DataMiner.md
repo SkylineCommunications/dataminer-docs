@@ -13,7 +13,7 @@ In the context of a DataMiner System, we can distinguish between two types of pa
 
 ### User passwords
 
-Passwords for external users in the DataMiner System are always managed by the User Directory (Active Directory, OpenLDAP,...). To verify password security requirements, we recommend users consult their respective User Directory documentation.
+Passwords for external users in the DataMiner System are always managed by the User Directory (Active Directory, OpenLDAP, etc.). To verify password security requirements, we recommend that users consult their respective User Directory documentation.
 
 For local DataMiner users, [Windows will store the (hashed) password](https://docs.microsoft.com/en-us/windows-server/security/kerberos/passwords-technical-overview). The complexity and renewal policies in Windows apply to local DataMiner users.
 
@@ -45,11 +45,11 @@ Here we can distinguish several communication flows:
 
 ### DataMiner Cube
 
-DataMiner Cube will communicate with the DataMiner backend over .NET Remoting. By default, this is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel.
+DataMiner Cube will communicate with the DataMiner back end over .NET Remoting. By default, this is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel.
 
 ### DataMiner Web Apps & API
 
-By default, the DataMiner Web Apps (Reports, Dashboards, Monitoring,...) are served over HTTP, which is unencrypted. We recommend [enabling HTTPS and disabling HTTP](xref:Setting_up_HTTPS_on_a_DMA) to ensure all traffic is encrypted.
+By default, the DataMiner Web Apps (Reports, Dashboards, Monitoring, etc.) are served over HTTP, which is unencrypted. We recommend that you [enable HTTPS and disabling HTTP](xref:Setting_up_HTTPS_on_a_DMA) to ensure all traffic is encrypted.
 
 ### Inter-DataMiner
 
@@ -70,11 +70,11 @@ Depending on the type of device, DataMiner supports different communication prot
 
 For DataMiner Systems configured to use a Cassandra database, it is possible to [enable TLS encryption between DataMiner and the Cassandra cluster](xref:DB_xml#enabling-tls-on-the-cassandra-database-connection). Please refer to the official Cassandra documentation on [enabling TLS encryption](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/configuration/secureSSLClientToNode.html).
 
-We recommended changing the default Cassandra credentials.
+We recommend changing the default Cassandra credentials.
 
 ### Elasticsearch
 
-For DataMiner Systems configured to use an Elasticsearch database, it is recommended to enable HTTPS. Please refer to the official Elasticsearch documentation on [enabling TLS encryption](https://www.elastic.co/blog/configuring-ssl-tls-and-https-to-secure-elasticsearch-kibana-beats-and-logstash).
+For DataMiner Systems configured to use an Elasticsearch database, we recommend enabling HTTPS. Please refer to the official Elasticsearch documentation on [enabling TLS encryption](https://www.elastic.co/blog/configuring-ssl-tls-and-https-to-secure-elasticsearch-kibana-beats-and-logstash).
 
 ### NATS
 
