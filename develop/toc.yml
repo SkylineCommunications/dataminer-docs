@@ -302,6 +302,8 @@
           topicUid: AdvancedLoggerTablesQuerying
         - name: Extending logger tables
           topicUid: AdvancedLoggerTablesExtending
+        - name: Defining a logger table of type DirectConnection with a primary key
+          topicUid: AdvancedLoggerTablesDefiningDirectConnectionTable
       - name: Dynamic Virtual Elements
         topicUid: AdvancedDVEs
         items: 
@@ -403,6 +405,9 @@
           topicUid: AdvancedDataMinerMediationLayerDataPages
       - name: EPM integration in Cube
         topicUid: AdvancedEpm
+        items:
+        - name: Launching EPM objects by clicking buttons in Data Display table cells
+          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
   - name: Automation scripts

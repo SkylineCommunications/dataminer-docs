@@ -18,6 +18,20 @@ namespace Skyline.DataMiner.Net.Profiles
         public bool IsHidden { get; set; }
 
 		/// <summary>
+		/// Gets or sets a value indicating whether this profile instance should inherit the "IsHidden" property of a profile parameter.
+		/// </summary>
+		/// <value><c>true</c> if this profile instance should inherit the "IsHidden" property of a profile parameter; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <para>Default value: <c>false</c>.</para>
+		/// <para>Feature introduced in DataMiner 10.2.3 (RN 32131).</para>
+		/// </remarks>
+		/// <examples>
+		/// <para>If a parameter of profile definition A is hidden, and you want profile instance A to inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to <c>true</c>.</para>
+		/// <para>If a parameter of profile definition A is hidden, and you want profile instance B to not inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to <c>false</c> and “IsHidden” to <c>true</c>.</para>
+		/// </examples>
+		public bool InheritIsHidden { get; set; }
+
+		/// <summary>
 		/// Initializes a new instance of the <see cref="ParameterSettings"/> class.
 		/// </summary>
 		public ParameterSettings()

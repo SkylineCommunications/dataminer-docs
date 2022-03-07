@@ -83,11 +83,15 @@ Example:
 
 See also [Configuring a smart-serial connection as a server](xref:ConnectionsSmartSerialServer)
 
-### maxReceiveBuffer=X
+### maxReceiveBuffer:X
 
 Up to DataMiner 10.0.2, for connections of type “smart-serial”, data is passed from the SLPort process to the SLProtocol process every 100 ms. From DataMiner 10.0.2 (RN 24282) onwards, data is passed to SLProtocol every 15 ms.
 
 If the maxReceiveBuffer option is used, each time the specified number of bytes is received, these are transferred from the SLPort process to the SLProtocol process. This option is only applicable for connections of type "smart-serial".
+
+```xml
+<Type relativeTimers="true" advanced="" communicationOptions="maxReceiveBuffer:8120">smart-serial</Type>
+```
 
 ### notifyConnectionPIDs:x,y
 

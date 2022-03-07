@@ -4,7 +4,7 @@ uid: Using_the_Driver_Passport_Platform
 
 # Using the Driver Passport Platform
 
-To access the platform, go to <http://10.11.2.57/DataMinercube/> and log on using your domain credentials. Then go to DataMiner Apps in the Cube sidebar and select *Driver Passport Platform*.
+To access the platform, go to <cube://slc-h57-g02.skyline.local?element=%22Driver%20Passport%20Platform%22> and log on using your domain credentials. Then go to DataMiner Apps in the Cube sidebar and select *Driver Passport Platform*.
 
 The *Overview* page of the platform contains two tabs, *Overview* and *Finished*.
 

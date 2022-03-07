@@ -22,6 +22,10 @@ Currently, the pipeline consists of the following steps:
 
     See [Validate solution](#validate-solution).
 
+- Validate tag
+
+    See [Validate tag](#validate-tag).
+
 - Prepare solution
 
     See [Prepare solution](#prepare-solution).
@@ -99,6 +103,15 @@ The pipeline will only continue if exactly one solution file has been detected i
 ## Validate solution
 
 This step verifies whether the projects in the solution that correspond with C# exe blocks of Automation scripts make use of NuGet packages. If they do, the pipeline will fail, as using NuGet packages in these projects is currently not supported.
+
+## Validate tag
+
+This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
+
+- The tag has the correct format.
+- The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.X" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
+- All expected previous minor versions of the tag are present. For example, if a commit has been tagged with "1.0.0.4", the tags "1.0.0.1", "1.0.0.2" and "1.0.0.3" are expected to be present already.
+- The tag is an annotated tag and not a lightweight tag.
 
 ## Prepare solution
 

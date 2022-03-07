@@ -14,6 +14,10 @@ Currently, the pipeline consists of the following steps:
 
     See [Declarative checkout from SCM](#declarative-checkout-from-scm).
 
+- Validate tag
+
+    See [Validate tag](#validate-tag).
+
 - Check Visio File Size
 
     See [Check Visio File Size](#check-visio-file-size).
@@ -43,6 +47,15 @@ When a new Git repository is created using the SLC SE Repository Manager tool, t
 ## Declarative checkout from SCM
 
 In this step, Jenkins loads the current repository from Git.
+
+## Validate tag
+
+This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
+
+- The tag has the correct format.
+- The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.X" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
+- All expected previous minor versions of the tag are present. For example, if a commit has been tagged with "1.0.0.4", the tags "1.0.0.1", "1.0.0.2" and "1.0.0.3" are expected to be present already.
+- The tag is an annotated tag and not a lightweight tag.
 
 ## Check Visio File Size
 
