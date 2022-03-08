@@ -130,3 +130,6 @@ The following table contains an overview of all Notify types.
 |117     |DMS_DISTRIBUTE_TRAP         |         |
 |118     |DMS_ISDOING_DOUBLECHECK         |         |
 |119     |DMS_INIT_SLNET         |         |
+|120     |DMS_RELOAD_FAILOVERINFO         |         |
+|121     |DMS_SERVICE_TRIGGERS         |         |
+|122     |DMS_GET_SYNC_STATUS         |         |

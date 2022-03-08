@@ -747,6 +747,9 @@ Contains one of the following values:
 |Samples/us|samples per microsecond|
 |Samples/Week|samples per week|
 |Samples/Year|samples per year|
+|SCMD|Standard cubic meter per day|
+|SCMH|Standard cubic meter per hour|
+|SCMM|Standard cubic meter per minute|
 |sdln|SD lines|
 |sdpx|SD pixels|
 |Segments|segments|

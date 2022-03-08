@@ -106,7 +106,7 @@ namespace Skyline.DataMiner.Net.Jobs
 		/// <list type="bullet">
 		/// <item><description>If, for a particular job or booking instance (i.e. ReservationInstance), this property contains view IDs, then the job or booking instance will only be accessible to users who have access to at least one of the specified views. For example, if you have access to the view with ID 10, and you display a list of jobs or booking instances, it will only contain the jobs or booking instances of which the list of values in the SecurityViewIDs property includes "10" or no IDs at all.</description></item>
 		/// <item><description>The values in this property can be filtered using a “Contains” filter. Example: JobExposers.SecurityViewIDs.Contains(136).</description></item>
-		/// <item><description>This property renders the SecurityViewID property obsolete.</description></item>
+		/// <item><description>This property renders the <see cref="Job.SecurityViewID"/> property obsolete.</description></item>
 		/// </list>
 		/// </remarks>
 		public List<int> SecurityViewIDs
