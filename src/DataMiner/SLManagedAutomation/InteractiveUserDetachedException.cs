@@ -3,7 +3,7 @@
 namespace Skyline.DataMiner.Automation
 {
 	/// <summary>
-	/// The exception that is thrown when user-interaction is attempted on a script that has been detached from the client.
+	/// The exception that is thrown when user interaction is attempted on a script that has been detached from the client.
 	/// </summary>
 	public class InteractiveUserDetachedException : DataMinerException
 	{

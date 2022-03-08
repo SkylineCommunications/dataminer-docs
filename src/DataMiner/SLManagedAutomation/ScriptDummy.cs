@@ -13,26 +13,31 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets the DataMiner agent ID.
 		/// </summary>
+		/// <value>The DataMiner agent ID.</value>
 		public virtual int DmaId { get; }
 
 		/// <summary>
 		/// Gets the element ID.
 		/// </summary>
+		/// <value>The element ID.</value>
 		public virtual int ElementId { get; }
 
 		/// <summary>
 		/// Gets the <see cref="ElementInfoEventMessage"/> object.
 		/// </summary>
+		/// <value>The <see cref="ElementInfoEventMessage"/> object.</value>
 		public virtual ElementInfoEventMessage ElementInfo { get; }
 
 		/// <summary>
 		/// Gets the element name.
 		/// </summary>
+		/// <value>The element name.</value>
 		public virtual string ElementName { get; }
 
 		/// <summary>
 		/// Gets the ID.
 		/// </summary>
+		/// <value>The ID.</value>
 		public virtual int Id { get; }
 
 		///// <summary>
@@ -40,12 +45,13 @@ namespace Skyline.DataMiner.Automation
 		///// </summary>
 		//public virtual InterfaceInfoEventMessage InterfaceInfo { get; }
 
-
+		
 		public virtual bool IsActive { get; }
 
 		/// <summary>
-		/// Gets the element name.
+		/// Gets the name of the dummy.
 		/// </summary>
+		/// <value>The name of the dummy.</value>
 		/// <remarks>
 		/// <note type="note">
 		/// <para>To retrieve the name of the element the dummy is linked to, use the <see cref="ScriptDummy.ElementName"/> property.</para>
@@ -62,21 +68,25 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets the polling IP address.
 		/// </summary>
+		/// <value>The polling IP address.</value>
 		public virtual string PollingIP { get; }
 
 		/// <summary>
-		/// 
+		/// Gets the protocol info response message.
 		/// </summary>
+		/// <value>The protocol info response message.</value>
 		public virtual GetProtocolInfoResponseMessage Protocol { get; }
 
 		/// <summary>
 		/// Gets the protocol name.
 		/// </summary>
+		/// <value>The protocol name.</value>
 		public virtual string ProtocolName { get; }
 
 		/// <summary>
 		/// Gets the protocol version.
 		/// </summary>
+		/// <value>The protocol version.</value>
 		public virtual string ProtocolVersion { get; }
 
 

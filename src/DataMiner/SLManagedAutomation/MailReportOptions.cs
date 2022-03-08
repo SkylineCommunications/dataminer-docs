@@ -34,6 +34,20 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Allows including table cells.</para>
 		/// </remarks>
+		/// <example>
+		/// <para>For an example showing how to pass single-value parameters as well as table cells to a report, see below:</para>
+		/// <code>
+		/// Element dummy1 = engine.FindElement("My Element");
+		/// MailReportOptions reportOptions = engine.PrepareMailReport("Report Name");
+		/// // Add single-value parameter
+		/// reportOptions.IncludeElement(dummy1, new MailReportParameter(dummy1, "Total Processor Load");
+		/// // Add table cell
+		/// reportOptions.IncludeElement(dummy1, new MailReportParameter(dummy1, "Bandwidth", "Eth0");
+		/// </code>
+		/// <note type="note">
+		/// <para>In the example above, the index argument has to contain the display key. If necessary, use the FindDisplayKey method on the element or the dummy to retrieve that key. See <see cref="Element.FindDisplayKey(int, String)"/>.</para>
+		/// </note>
+		/// </example>
 		public void IncludeElement(IActionableElement dummy, params MailReportParameter[] @params) { }
 
 		/// <summary>

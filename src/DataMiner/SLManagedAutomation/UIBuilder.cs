@@ -40,6 +40,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The width (in pixels) of all columns of the dialog box grid, separated by semicolons.</value>
 		/// <remarks>
+		/// <para>Instead of a pixel value, you can also specify the following values:</para>
 		/// <list type="bullet">
 		/// <item><description>"auto" or "a": The width of the column will be automatically adapted to the widest dialog box item in that column.</description></item>
 		/// <item><description>*: The column will have the largest possible width, depending on the width of the other columns.</description></item>
@@ -134,7 +135,7 @@ namespace Skyline.DataMiner.Automation
 		public int MinWidth { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether the dialog box expects some action from the user (e.g. clicking a button, selecting a check box, selecting an entry in a selection box, etc.).
+		/// Gets or sets a value indicating whether the dialog box expects some action from the user (e.g. clicking a button, selecting a checkbox, selecting an entry in a selection box, etc.).
 		/// </summary>
 		/// <value><c>true</c> if the dialog box expects some action from the user; otherwise, <c>false</c>.</value>
 		/// <example>

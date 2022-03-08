@@ -61,7 +61,7 @@ namespace Skyline.DataMiner.Net.Sections
 		/// <value><c>true</c> if this field is optional; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>When set to <c>false</c>, the sections must always contain a value for this field.</para>
-		/// <para>Since DataMiner 9.6.11 (RN 22824, RN 23048), when you configure a job section, it is now possible to turn mandatory fields into optional fields and vice versa, even if those fields are in use.</para>
+		/// <para>From DataMiner 9.6.11 (RN 22824, RN 23048) onwards, when you configure a job section, it is now possible to turn mandatory fields into optional fields and vice versa, even if those fields are in use.</para>
 		/// </remarks>
 		//[DataMember(Name = "IsOptional")]
         public bool IsOptional { get; set; }

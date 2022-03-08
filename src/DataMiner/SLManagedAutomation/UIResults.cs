@@ -21,14 +21,14 @@ namespace Skyline.DataMiner.Automation
 		public UIResults() { }
 
 		/// <summary>
-		/// Gets a value indicating whether the specified destination variable that is linked to a check box was checked.
+		/// Gets a value indicating whether the specified destination variable that is linked to a checkbox was selected.
 		/// </summary>
 		/// <param name="key">The destination variable name.</param>
-		/// <returns><c>true</c> if the specified check box is checked; otherwise, <c>false</c>.</returns>
+		/// <returns><c>true</c> if the specified checkbox is selected; otherwise, <c>false</c>.</returns>
 		/// <example>
 		/// <code>
 		/// UIResults uir = null;
-		/// bool isChecked;
+		/// bool isSelected;
 		/// UIBlockDefinition blockCheckBox = new UIBlockDefinition();
 		/// blockCheckBox.Type = UIBlockType.CheckBox;
 		/// blockCheckBox.DestVar = "checkbox";
@@ -36,17 +36,17 @@ namespace Skyline.DataMiner.Automation
 		/// uib.AppendBlock(blockCheckBox);
 		/// ...
 		/// uir = engine.ShowUI(uib);
-		/// isChecked = uir.GetChecked("checkbox");
+		/// isSelected = uir.GetChecked("checkbox");
 		/// </code>
 		/// </example>
 		public bool GetChecked(string key) { return false; }
 
 		/// <summary>
-		/// Gets a value indicating whether the specified check box list item of the specified destination variable that is linked to a check box list was checked.
+		/// Gets a value indicating whether the specified checkbox list item of the specified destination variable that is linked to a checkbox list was selected.
 		/// </summary>
-		/// <param name="key">The value of the check box.</param>
-		/// <param name="value"><c>true</c> if the specified check box list item is checked; otherwise, <c>false</c>.</param>
-		/// <returns><c>true</c> if the specified check box list item is checked; otherwise, <c>false</c>.</returns>
+		/// <param name="key">The value of the checkbox.</param>
+		/// <param name="value"><c>true</c> if the specified checkbox list item is selected; otherwise, <c>false</c>.</param>
+		/// <returns><c>true</c> if the specified checkbox list item is selected; otherwise, <c>false</c>.</returns>
 		/// <example>
 		/// <code>
 		/// UIBuilder uiBuilder = new UIBuilder();
@@ -60,7 +60,7 @@ namespace Skyline.DataMiner.Automation
 		/// ...
 		/// var uir = engine.ShowUI(uiBuilder);
 		/// 
-		/// bool selection = uir.GetChecked("chekBoxList", "2");
+		/// bool selected = uir.GetChecked("chekBoxList", "2");
 		/// </code>
 		/// </example>
 		public bool GetChecked(string key, string value) { return false; }
@@ -173,7 +173,7 @@ namespace Skyline.DataMiner.Automation
 		/// <returns><c>true</c> if the user clicked the <c>Back</c> button; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>Only applicable for scripts that support this feature.</para>
-		/// <note type="note">To enable the Back and Forward buttons, from the General Page in the Automation App, expand Show Details and check the "Supports back/forward buttons in interactive mode" check box.</note>
+		/// <note type="note">To enable the Back and Forward buttons, from the General Page in the Automation App, expand Show Details and check the "Supports back/forward buttons in interactive mode" checkbox.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -227,7 +227,7 @@ namespace Skyline.DataMiner.Automation
 		/// <returns><c>true</c> if the user clicked the <c>Forward</c> button; otherwise, <c>false</c>.</returns>
 		/// <remarks>
 		/// <para>Only applicable for scripts that support this feature.</para>
-		/// <note type="note">To enable the Back and Forward buttons, from the General Page in the Automation App, expand Show Details and check the "Supports back/forward buttons in interactive mode" check box.</note>
+		/// <note type="note">To enable the Back and Forward buttons, from the General Page in the Automation App, expand Show Details and check the "Supports back/forward buttons in interactive mode" checkbox.</note>
 		/// </remarks>
 		/// <example>
 		/// <code>

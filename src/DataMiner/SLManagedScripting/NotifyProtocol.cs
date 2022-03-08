@@ -586,7 +586,7 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 196 call (“NT_GET_KEYS_FOR_INDEX”).</description>
 		///			</item>
 		///			<item>
-		///				<description>Since DataMiner 9.0.0 [CU14] (Main Release) and DataMiner 9.0.5 [CU1] (Feature Release) (RN 15333), this call does no longer perform a case sensitive lookup. In case a case-sensitive lookup is required, use the NT_GET_KEYS_FOR_INDEX_CASED notify type (411).</description>
+		///				<description>From DataMiner 9.0.0 [CU14] (Main Release) and DataMiner 9.0.5 [CU1] (Feature Release) (RN 15333) onwards, this call does no longer perform a case sensitive lookup. In case a case-sensitive lookup is required, use the NT_GET_KEYS_FOR_INDEX_CASED notify type (411).</description>
 		///			</item>
 		///		</list>
 		/// </remarks>

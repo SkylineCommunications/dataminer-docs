@@ -90,6 +90,11 @@ namespace Skyline.DataMiner.Automation
 		/// Gets the name of the element.
 		/// </summary>
 		/// <value>The name of the element.</value>
+		/// <remarks>
+		/// <note type="note">
+		/// <para>This property returns the following string: "_&lt;agentID&gt;_&lt;elementID&gt; (e.g. "_100_5612"). To retrieve the element name, use the <see cref="Element.ElementName"/> property.</para>
+		/// </note>
+		/// </remarks>
 		/// <example>
 		/// <code>
 		/// Element element = engine.FindElement(400, 2000);
@@ -2945,10 +2950,9 @@ namespace Skyline.DataMiner.Automation
 		public virtual void Pause() { }
 
 		/// <summary>
-		/// Removes the link between this element and the alarm template that is assigned to it.
+		/// Removes the link between this element and the alarm template that is assigned to it. This sets the element to “Not Monitored”.
 		/// </summary>
 		/// <example>
-		/// <remarks>In other words, set the element to “Not Monitored”.</remarks>
 		/// <code>
 		/// Element element = engine.FindElement(400, 2000);
 		/// element.RemoveAlarmTemplate();
@@ -2957,9 +2961,8 @@ namespace Skyline.DataMiner.Automation
 		public virtual void RemoveAlarmTemplate() { }
 
 		/// <summary>
-		/// Removes the link between an element and the trend template that is assigned to it.
+		/// Removes the link between an element and the trend template that is assigned to it. This disables trending for the element.
 		/// </summary>
-		/// <remarks>In other words, dis­able trending for the element.</remarks>
 		/// <example>
 		/// <code>
 		/// Element element = engine.FindElement(400, 2000);
@@ -3100,19 +3103,19 @@ namespace Skyline.DataMiner.Automation
         /// </code>
         /// </example>
         /// <remarks>
-        /// <para>Since DataMiner 10.0.5 (RN 25025, RN 25195), this method will only return after having checked that the property was set correctly.</para>
+        /// <para>From DataMiner 10.0.5 (RN 25025, RN 25195) onwards, this method will only return after having checked that the property was set correctly.</para>
         /// <para>Prior to DataMiner 10.0.5, when the value of an element property was updated using the SetPropertyValue method on an Element object and immediately retrieved using the GetPropertyValue method, in some cases, the value returned by that last method would incorrectly be the previous value.</para>
         /// <note type="note">
         /// <para>The SetPropertyValue method will only perform the above-mentioned check when the “check sets” option is enabled.</para>
         /// <list type="bullet">
         /// <item>
-        /// <description>Before launching a script in Cube, select the “After executing a SET command, check if the read parameter or property has been set to the new value” check box in the script execution window.</description>
+        /// <description>Before launching a script in Cube, select the “After executing a SET command, check if the read parameter or property has been set to the new value” checkbox in the script execution window.</description>
         /// </item>
         /// <item>
         /// <description>When launching a script using ExecuteScriptMessage, make sure to activate the CHECKSETS option(“CHECKSETS:TRUE”).</description>
         /// </item>
         /// </list>
-        /// <para>With this option enabled, the SetPropertyValue method will take slightly longer to execute.When a large number of properties need to be updated which do not need to be retrieved immediately, you can disable this option in order to increase performance.</para>
+        /// <para>With this option enabled, the SetPropertyValue method will take slightly longer to execute. When a large number of properties need to be updated that do not need to be retrieved immediately, you can disable this option in order to increase performance.</para>
         /// </note>
         /// </remarks>
         public virtual void SetPropertyValue(string propertyName, string propertyValue) { }
@@ -3183,6 +3186,12 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="measurementPointName">The name of the measurement point.</param>
 		/// <returns>The ID that corresponds with the specified spectrum measurement point name or -1 when not found.</returns>
+		/// <example>
+		/// <code>
+		/// var element = engine.FindElement("MySpectrumElement");
+		/// int measurementPointId = element.SpectrumFindMeasurementPointIdByName("MyMeasurement PointName");
+		/// </code>
+		/// </example>
 		public virtual int SpectrumFindMeasurementPointIdByName(string measurementPointName) { return 0; }
 
 		/// <summary>
@@ -3190,6 +3199,12 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="monitorName">The spectrum monitor name.</param>
 		/// <returns>The ID that corresponds with the specified spectrum monitor name or -1 when not found.</returns>
+		/// <example>
+		/// <code>
+		/// var element = engine.FindElement("MySpectrumElement ");
+		/// int monitorId = element.SpectrumFindMonitorIdByName("MyMonitorName");
+		/// </code>
+		/// </example>
 		public virtual int SpectrumFindMonitorIdByName(string monitorName) { return 0; }
 
 		/// <summary>
@@ -3197,6 +3212,12 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="monitorName">The name of the spectrum monitor.</param>
 		/// <returns><c>true</c> if the specified spectrum monitor is enabled; otherwise, <c>false</c>.</returns>
+		/// <example>
+		/// <code>
+		/// var element = engine.FindElement("MySpectrumElement");
+		/// bool isEnabled = element.SpectrumIsMonitorEnabled("MyMonitorName ");
+		/// </code>
+		/// </example>
 		public virtual bool SpectrumIsMonitorEnabled(string monitorName) { return false; }
 
 		/// <summary>
@@ -3204,6 +3225,12 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="monitorId">The ID of the spectrum monitor.</param>
 		/// <returns><c>true</c> if the specified spectrum monitor is enabled; otherwise, <c>false</c>.</returns>
+		/// <example>
+		/// <code>
+		/// var element = engine.FindElement(10);
+		/// bool isEnabled = element.SpectrumIsMonitorEnabled("MyMonitorName ");
+		/// </code>
+		/// </example>
 		public virtual bool SpectrumIsMonitorEnabled(int monitorId) { return false; }
 
 		/// <summary>
@@ -3211,6 +3238,12 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="monitorName">The name of the spectrum monitor.</param>
 		/// <param name="measurementPointNames">The names of the measurement points.</param>
+		/// <example>
+		/// <code>
+		/// var element = engine.FindElement("MySpectrumElement ");
+		/// element.SpectrumSelectMeasurementPointsForMonitor("MyMonitorName ", new string[]{"MyMeasurementPoint"});
+		/// </code>
+		/// </example>
 		public virtual void SpectrumSelectMeasurementPointsForMonitor(string monitorName, params string[] measurementPointNames) { }
 
 		/// <summary>
@@ -3218,6 +3251,12 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="monitorId">The ID of the spectrum monitor.</param>
 		/// <param name="measurementPointIds">The IDs of the measurement points.</param>
+		/// <example>
+		/// <code>
+		/// var element = engine.FindElement("MySpectrumElement ");
+		/// element.SpectrumSelectMeasurementPointsForMonitor("MyMonitorName ", new int[]{1, 2});
+		/// </code>
+		/// </example>
 		public virtual void SpectrumSelectMeasurementPointsForMonitor(int monitorId, params int[] measurementPointIds) { }
 
 		/// <summary>

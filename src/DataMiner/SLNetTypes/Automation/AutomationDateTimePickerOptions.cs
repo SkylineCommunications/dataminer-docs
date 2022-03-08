@@ -75,6 +75,7 @@ namespace Skyline.DataMiner.Automation
 		/// Gets or sets a value indicating whether to close the calendar pop-up when the user clicks a new date.
 		/// </summary>
 		/// <value><c>true</c> to close the calendar pop-up when the user clicks a new date; otherwise, <c>false</c>.</value>
+		/// <remarks>Default: <c>false</c>.</remarks>
 		public bool AutoCloseCalendar { get; set; }
 
 		/// <summary>
@@ -115,7 +116,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value><c>true</c> to shows the spin box of the calendar control; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <para>Default: true.</para>
+		/// <para>Default: <c>false</c>.</para>
 		/// </remarks>
 		public bool TimePickerShowButtonSpinner { get; set; }
 
