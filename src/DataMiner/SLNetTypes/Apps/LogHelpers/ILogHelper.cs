@@ -175,8 +175,14 @@ namespace Skyline.DataMiner.Net.LogHelpers
 		/// <summary>
 		/// Gets a value indicating whether LogEntries are flushed to database after upserting.
 		/// </summary>
-		/// <value><see langword="true" /> (default) if the logger will wait for the database to respond after writing.
-		/// If <see langword="false" />, no guarantees can be made that the LogEntries are written to the database.</value>
+		/// <value>If set to <see langword="true" /> (default), the logger will wait for the database to respond after writing log entries to the database.
+		/// If set to <see langword="false" />, the LogHelper will not wait for the database to respond after writing log entries to the database.</value>
+		/// <remarks>
+		/// <note type="note">
+		/// <para>If you set this option to false, there are no guarantees that all log entries will get stored in the database, especially in case of e.g.connection issues or exceptions.</para>
+		/// </note>
+		/// <para>Feature introduced in DataMiner 10.2.0 (RN 28837).</para>
+		/// </remarks>
 		bool FlushToDatabaseAfterUpsert { get; }
 
 		///<summary>Gets the logger instance</summary>
@@ -236,6 +242,10 @@ namespace Skyline.DataMiner.Net.LogHelpers
 		/// Changes the flush to database after upsert configuration.
 		/// </summary>
 		/// <param name="flushToDatabaseAfterUpsert"><c>true</c> to flush to the database after upsert; otherwise, <c>false</c>.</param>
+		/// <remarks>
+		/// <para>Feature introduced in DataMiner 10.2.0 (RN 28837).</para>
+		/// </remarks>
+		/// <seealso cref="ILogHelper.FlushToDatabaseAfterUpsert"/>
 		void ChangeFlushToDatabaseAfterUpsert(bool flushToDatabaseAfterUpsert);
 	}
 }

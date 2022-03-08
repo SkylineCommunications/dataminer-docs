@@ -820,6 +820,11 @@
             items: 
             - name: '@default'
               href: Protocol\Protocol.Params.Param.Database.ColumnDefinition-default.md
+          - name: Connection
+            href: Protocol\Protocol.Params.Param.Database.Connection.md
+            items:
+            - name: Type
+              href: Protocol\Protocol.Params.Param.Database.Connection.Type.md
           - name: CQLOptions
             href: Protocol\Protocol.Params.Param.Database.CQLOptions.md
             items: 
@@ -1873,6 +1878,22 @@
                             href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference-type.md
                         - name: TaskId
                           href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.TaskId.md
+                      - name: Suppressions
+                        href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.md
+                        items:
+                        - name: Suppression
+                          href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression.md
+                          items:
+                          - name: '@type'
+                            href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression-type.md
+                          - name: '@taskId'
+                            href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression-taskId.md
+                          - name: Location
+                            href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression.Location.md
+                          - name: Reason
+                            href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression.Reason.md
+                          - name: ResultId
+                            href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression.ResultId.md
               - name: SupportedVersions
                 href: Protocol\Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.md
                 items: 

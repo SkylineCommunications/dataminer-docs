@@ -43,7 +43,7 @@ namespace Skyline.DataMiner.Net.SimulationHelper
 		}
 
 		/// <summary>
-		/// Enables a simulation on a specific element.
+		/// Enables a simulation on the specified element.
 		/// <remarks>
 		/// <note type="note">
 		/// <para>The simulation needs to be loaded in memory of DataMiner at startup. If that was not the case, all simulations can be reloaded with <see cref="LoadSimulations"/>.</para></note>

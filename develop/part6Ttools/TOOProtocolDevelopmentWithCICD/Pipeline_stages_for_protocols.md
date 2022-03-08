@@ -6,109 +6,57 @@ uid: Pipeline_stages_for_protocols
 
 Currently, the pipeline for protocol development consists of the following steps:
 
-- Loading Jenkinsfile
+- [Loading Jenkinsfile](#loading-jenkinsfile)
 
-    See [Loading Jenkinsfile](#loading-jenkinsfile).
+- [Declarative checkout from SCM](#declarative-checkout-from-scm)
 
-- Declarative checkout from SCM
+- [Detect solution](#detect-solution)
 
-    See [Declarative checkout from SCM](#declarative-checkout-from-scm).
+- [Validate solution](#validate-solution)
 
-- Detect solution
+- [Validate tag](#validate-tag)
 
-    See [Detect solution](#detect-solution).
+- [Prepare solution](#prepare-solution)
 
-- Validate solution
+- [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
 
-    See [Validate solution](#validate-solution).
+- [Sync DIS version](#sync-dis-version)
 
-- Validate tag
+- [Build QuickActions on latest feature release](#build-quickactions-on-latest-feature-release)
 
-    See [Validate tag](#validate-tag).
+- [Scan Test Projects](#scan-test-projects)
 
-- Prepare solution
+- [Run Unit Tests](#run-unit-tests)
 
-    See [Prepare solution](#prepare-solution).
+- [Run Integration Tests](#run-integration-tests)
 
-- Sync DataMiner feature release DLLs
+- [SonarQube analysis](#sonarqube-analysis)
 
-    See [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls).
+- [Convert Solution to XML](#convert-solution-to-xml)
 
-- Sync DIS version
+- [Initialize validator](#initialize-validator)
 
-    See [Sync DIS version](#sync-dis-version).
+- [Run Validator](#run-validator)
 
-- Build QuickActions on latest feature release
+- [Run Major Change Checker](#run-major-change-checker)
 
-    See [Build QuickActions on latest feature release](#build-quickactions-on-latest-feature-release).
+- [Verify developer checklist](#verify-developer-checklist)
 
-- Scan test projects
+- [Quality Gate](#quality-gate)
 
-    See [Scan Test Projects](#scan-test-projects).
+- [Prepare Driver Passport Platform Scheduling](#prepare-driver-passport-platform-scheduling)
 
-- Run unit tests
+- [Schedule Driver Passport Platform](#schedule-driver-passport-platform)
 
-    See [Run Unit Tests](#run-unit-tests).
+- [(Development) DCP registration](#development-dcp-registration)
 
-- Run integration tests
+- [(Release) DCP registration](#release-dcp-registration)
 
-    See [Run Integration Tests](#run-integration-tests).
+- [(Release) Prepare for SVN](#release-prepare-for-svn)
 
-- SonarQube analysis
+- [(Release) Push to SVN](#release-push-to-svn)
 
-    See [SonarQube analysis](#sonarqube-analysis).
-
-- Convert solution to XML
-
-    See [Convert Solution to XML](#convert-solution-to-xml).
-
-- Initialize validator
-
-    See [Initialize validator](#initialize-validator).
-
-- Run validator
-
-    See [Run Validator](#run-validator).
-
-- Run major change checker
-
-    See [Run Major Change Checker](#run-major-change-checker).
-
-- Verify developer checklist.
-
-    See [Verify developer checklist](#verify-developer-checklist).
-
-- Quality Gate
-
-    See [Quality Gate](#quality-gate).
-
-- Prepare Driver Passport Platform Scheduling
-
-    See [Prepare Driver Passport Platform Scheduling](#prepare-driver-passport-platform-scheduling).
-
-- Schedule Driver Passport Platform
-
-    See [Schedule Driver Passport Platform](#schedule-driver-passport-platform).
-
-- (Development) DCP registration
-
-    See [(Development) DCP registration](#development-dcp-registration).
-
-- (Release) DCP registration
-
-    See [(Release) DCP registration](#release-dcp-registration).
-
-- (Release) Prepare for SVN
-
-    See [(Release) Prepare for SVN](#release-prepare-for-svn).
-
-- (Release) Push to SVN
-
-    See [(Release) Push to SVN](#release-push-to-svn).
-
-- Declarative post actions
-
-    See [Declarative Post Actions](#declarative-post-actions).
+- [Declarative Post Actions](#declarative-post-actions)
 
 ## Loading Jenkinsfile
 
@@ -148,33 +96,35 @@ Please note the following
 
 - Remaining manual actions:
 
-    - Pre-development:
+  - Pre-development:
 
-        - Creating the new driver/vendor/customer records (also for DVEs).
+    - Creating the new driver/vendor/customer records (also for DVEs).
 
-        - Selecting the right driver in the task.
+    - Selecting the right driver in the task.
 
-    - Workflow:
+  - Workflow:
 
-        - Adjusting completion percentage during development.
+    - Adjusting completion percentage during development.
 
-        - Changing the task status (in development, code review, QA, etc.)
+    - Changing the task status (in development, code review, QA, etc.)
 
-        - Changing the task assignee.
+    - Changing the task assignee.
 
-    - Administration:
+  - Administration:
 
-        - Registering the DVEs.
+    - Registering the DVEs.
 
-        - Create the driver help file(s).
+    - Create the driver help file(s).
 
 ## Validate tag
 
 This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
 
-- The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.X" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
-
+- The tag matches the version that is mentioned in the protocol XML file.
+- The tag has the correct format.
+- The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.x" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
 - All expected previous minor versions of the tag are present. For example, if a commit has been tagged with "1.0.0.4", the tags "1.0.0.1", "1.0.0.2" and "1.0.0.3" are expected to be present already.
+- The tag is an annotated tag and not a lightweight tag.
 
 ## Prepare solution
 
@@ -327,7 +277,7 @@ No test package will be created if any of the following is applicable:
 
 - No simulation files could be found for the connections. This will mark the stage as unstable.
 
-#### Simulation files
+### Simulation files
 
 In order for the pipeline to generate a test package, all you need to do is provide the required simulation files. The simulation files must be provided on the shares in **the following folder**:
 
@@ -353,11 +303,11 @@ For **SNMP simulations**, two files should be provided:
 
 - *Connection\_\<connectionNumber>.xml*: This is the SNMP simulation file.
 
-    For more information on how to create this file, see [Realistic dynamic simulations](xref:Realistic_dynamic_simulations):
+  For more information on how to create this file, see [Realistic dynamic simulations](xref:Realistic_dynamic_simulations):
 
-    - How to generate the file that holds the dynamic data (.txt): [Retrieving real device data](xref:Realistic_dynamic_simulations#retrieving-real-device-data)
+  - How to generate the file that holds the dynamic data (.txt): [Retrieving real device data](xref:Realistic_dynamic_simulations#retrieving-real-device-data)
 
-    - How to create the file the SNMP simulation file (.xml): [Configuring the simulation file to poll the database](xref:Realistic_dynamic_simulations#configuring-the-simulation-file-to-poll-the-database)
+  - How to create the file the SNMP simulation file (.xml): [Configuring the simulation file to poll the database](xref:Realistic_dynamic_simulations#configuring-the-simulation-file-to-poll-the-database)
 
 The Driver Passport Platform will use these files to automatically start a QA Device Simulator instance and ingest the dynamic data into the database.
 
@@ -405,7 +355,7 @@ It performs the same actions as the development registration except that the dri
 
 ## (Release) Prepare for SVN
 
-In case a tag was detected and the version should therefore be pushed to SVN, some preparatory steps are performed.
+In case a tag was detected, and the version should therefore be pushed to SVN, some preparatory steps are performed.
 
 ## (Release) Push to SVN
 
@@ -429,4 +379,4 @@ The report also contains an overall quality score which is calculated using the 
 
 - Number of Major Issue reported by SonarQube
 
-![](~/develop/images/PipelineEquation.png)
+![Overall quality score calculation](~/develop/images/PipelineEquation.png)

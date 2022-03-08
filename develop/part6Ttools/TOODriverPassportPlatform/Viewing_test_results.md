@@ -8,7 +8,7 @@ Once a test has run its course, a test plan will automatically be created by the
 
 For each test plan build, test cases are inserted corresponding to each DMAPP used for this test.
 
-You can view the results of a test via the TestLink instance at <http://10.11.2.57/TestLink/index.php>.
+You can view the results of a test via the TestLink instance at <https://slc-h57-g02.skyline.local/TestLink/login.php>.
 
 To view test results, in the top menu bar, click the *Test Reports* icon, and then select the test plan for which you want to view a report.
 
