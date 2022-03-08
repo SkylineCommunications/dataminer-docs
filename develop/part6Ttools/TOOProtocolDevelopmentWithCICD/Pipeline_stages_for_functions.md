@@ -6,21 +6,13 @@ uid: Pipeline_stages_for_functions
 
 Currently, the pipeline for function development consists of the following steps:
 
-- Loading Jenkinsfile
+- [Loading Jenkinsfile](#loading-jenkinsfile)
 
-    See [Loading Jenkinsfile](#loading-jenkinsfile).
+- [Declarative checkout from SCM](#declarative-checkout-from-scm)
 
-- Declarative checkout from SCM
+- [(Release) Prepare for SVN](#release-prepare-for-svn)
 
-    See [Declarative checkout from SCM](#declarative-checkout-from-scm).
-
-- (Release) Prepare for SVN
-
-    See [(Release) Prepare for SVN](#release-prepare-for-svn).
-
-- (Release) Push to SVN
-
-    See [(Release) Push to SVN](#release-push-to-svn).
+- [(Release) Push to SVN](#release-push-to-svn)
 
 - Declarative post actions
 
@@ -34,7 +26,7 @@ In this step, Jenkins loads the current repository from Git.
 
 ## (Release) Prepare for SVN
 
-In case a tag was detected and the version should therefore be pushed to SVN, some preparatory steps are performed.
+In case a tag was detected, and the version should therefore be pushed to SVN, some preparatory steps are performed.
 
 ## (Release) Push to SVN
 

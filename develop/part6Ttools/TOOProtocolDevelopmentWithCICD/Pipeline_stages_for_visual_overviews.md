@@ -6,37 +6,21 @@ uid: Pipeline_stages_for_visual_overviews
 
 Currently, the pipeline consists of the following steps:
 
-- Loading Jenkinsfile
+- [Loading Jenkinsfile](#loading-jenkinsfile)
 
-    See [Loading Jenkinsfile](#loading-jenkinsfile).
+- [Declarative checkout from SCM](#declarative-checkout-from-scm)
 
-- Declarative checkout from SCM
+- [Validate tag](#validate-tag)
 
-    See [Declarative checkout from SCM](#declarative-checkout-from-scm).
+- [Check Visio File Size](#check-visio-file-size)
 
-- Validate tag
+- [(Development) Catalog registration](#development-catalog-registration)
 
-    See [Validate tag](#validate-tag).
+- [(Release) Prepare for SVN](#release-prepare-for-svn)
 
-- Check Visio File Size
+- [(Release) Catalog registration](#release-catalog-registration)
 
-    See [Check Visio File Size](#check-visio-file-size).
-
-- (Development) Catalog registration
-
-    See [(Development) Catalog registration](#development-catalog-registration).
-
-- (Release) Prepare for SVN
-
-    See [(Release) Prepare for SVN](#release-prepare-for-svn).
-
-- (Release) Catalog registration
-
-    See [(Release) Catalog registration](#release-catalog-registration).
-
-- (Release) Push to SVN
-
-    See [(Release) Push to SVN](#release-push-to-svn).
+- [(Release) Push to SVN](#release-push-to-svn)
 
 - Declarative post actions
 
@@ -53,7 +37,7 @@ In this step, Jenkins loads the current repository from Git.
 This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
 
 - The tag has the correct format.
-- The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.X" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
+- The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.x" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
 - All expected previous minor versions of the tag are present. For example, if a commit has been tagged with "1.0.0.4", the tags "1.0.0.1", "1.0.0.2" and "1.0.0.3" are expected to be present already.
 - The tag is an annotated tag and not a lightweight tag.
 
@@ -71,7 +55,7 @@ This stage will perform registration in the catalog.
 
 ## (Release) Prepare for SVN
 
-In case a tag was detected and the version should therefore be pushed to SVN, some preparatory steps are performed.
+In case a tag was detected, and the version should therefore be pushed to SVN, some preparatory steps are performed.
 
 ## (Release) Catalog registration
 
