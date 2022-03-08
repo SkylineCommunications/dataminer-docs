@@ -20,9 +20,9 @@ uint viewID = (uint) protocol.NotifyDataMiner(2 /*NT_ADD_VIEW*/, viewDetails, el
 - viewDetails (string[]):
   - name (string): Name of the new view.
   - parentViewID (string): ID of the view to which this new view has to be added. Specify -1 to add the view to the root view.
-  - viewID (string): The ID of the view to be created. Any non-positive integer gets ignored and a new ID is automatically provided. Supported since DataMiner 10.2.3 (RN 32244).
+  - viewID (string): The ID of the view to be created. Any non-positive integer gets ignored, and a new ID is automatically provided. Supported since DataMiner 10.2.3 (RN 32244).
   - propertyName (string): Name of a property to be added. Supported since DataMiner 10.2.3 (RN 32244).
-  - propertyType (string): Type of a property to be added, must be `read-only`, `generic` or `read-write`. Supported since DataMiner 10.2.3 (RN 32244).
+  - propertyType (string): Type of a property to be added. Must be `read-only`, `generic` or `read-write`. Supported since DataMiner 10.2.3 (RN 32244).
   - propertyValue (string): The value of a property to be added. Supported since DataMiner 10.2.3 (RN 32244).
   - The previous three items (propertyName, propertyType, propertyValue) can be repeated to add additional properties. Supported since DataMiner 10.2.3 (RN 32244).
 - elementIDs (string[]): global element IDs of the elements that should be included in the new view.

@@ -4,7 +4,7 @@ uid: AdvancedLoggerTablesDefiningDirectConnectionTable
 
 # Defining a logger table of type DirectConnection with a primary key
 
-Since DataMiner 10.2.3 (RN 32375), it is possible to define a logger table of type DirectConnection with a primary key.
+Starting from DataMiner 10.2.3 (RN 32375), it is possible to define a logger table of type DirectConnection with a primary key.
 
 In the [Param](xref:Protocol.Params.Param) element of the logger table, do the following:
 
@@ -30,14 +30,11 @@ For example:
 ## Overview of the possible ArrayOptions@index and Connection.Type combinations
 
 - Connection type: DirectConnection
-  - No index defined: The data will be pushed via the direct connection and the ID will be
-assigned by the database. Updating the data will not be possible in this case.
-  - Index defined: The data will be pushed via the direct connection and the ID will be
-assigned by the column template that is being sent via the direct connection by means
-of an “InitializeWriteAction”.
+  - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
+  - Index defined: The data will be pushed via the direct connection and the ID will be assigned by the column template that is being sent via the direct connection by means of an “InitializeWriteAction”.
 
   > [!NOTE]
-  > When using DirectConnection in combination with a defined index, the TTL of the table should always be infinite.
+  > When DirectConnection is used in combination with a defined index, the TTL of the table should always be infinite.
 
 - Connection type: SLProtocol
   - No index defined: Currently not supported.
