@@ -11,9 +11,9 @@ namespace Skyline.DataMiner.Automation
 	public class ScriptDummy : IActionableElement
 	{
 		/// <summary>
-		/// Gets the DataMiner agent ID.
+		/// Gets the DataMiner Agent ID.
 		/// </summary>
-		/// <value>The DataMiner agent ID.</value>
+		/// <value>The DataMiner Agent ID.</value>
 		public virtual int DmaId { get; }
 
 		/// <summary>
