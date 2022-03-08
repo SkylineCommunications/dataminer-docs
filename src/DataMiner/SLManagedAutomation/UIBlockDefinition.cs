@@ -33,7 +33,7 @@ namespace Skyline.DataMiner.Automation
 		/// <description>In Automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector are taken into account from DataMiner 10.1.12 onwards.
 		/// 
 		/// An error will be thrown when you try to add a file that is larger than the allowed file size or that
-		/// does not have an allowed file name extension.Also, the “Choose file” pop-up window will
+		/// does not have an allowed file name extension. Also, the “Choose file” pop-up window will
 		/// only list files with an allowed extension and dragging an item other than a file or a folder onto
 		/// the script’s drop zone will no longer be possible.
 		/// </description>
@@ -51,10 +51,11 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		public List<string> AllowedFileNameExtensions { get; set; }
-		
+
 		/// <summary>
 		/// Gets or sets a value indicating whether multiple files can be uploaded.
 		/// </summary>
+		/// <value><c>true</c> if multiple files can be uploaded; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>In an interactive Automation script that is used in the DataMiner web apps, you can use this property to configure a file selector component that allows the user to upload multiple files. To do so, set the property AllowMultipleFiles to <c>true</c>.</para>
 		/// <para>With this configuration, users will be able to add files one by one, but they will not be able to add the same file twice. They will also be able to add a file by dragging it to the file selector.</para>
@@ -162,7 +163,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The alias that will be used to retrieve the value entered or selected by the user from the <see cref="UIResults"/> object.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calender, CheckBox, CheckBoxList, DropDown, TextBox or Time.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calender, CheckBox, CheckBoxList, DropDown, TextBox, Time or TreeView.</para>
 		/// <para>Note: Unlike a variable, a DestVar alias does not have to be declared.</para>
 		/// </remarks>
 		/// <example>
@@ -186,11 +187,12 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets or sets a value indicating whether a filter box is available for the control.
 		/// </summary>
+		/// <value><c>true</c> if a filter box is available for the control; otherwise, <c>false</c>.</value>
 		/// <remarks>
+		/// <para>Default: <c>false</c>.</para>
 		/// <para>Available from DataMiner 9.5.6 onwards.</para>
 		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>
 		/// </remarks>
-		/// <value><c>true</c> if a filter box is available for the control; otherwise, <c>false</c>.</value>
 		/// <example>
 		/// <code>
 		/// UIBlockDefinition blockItem = new UIBlockDefinition();
@@ -208,7 +210,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value>The ID of the parameter that has to be displayed in the dialog box item.</value>
 		/// <remarks>
 		/// <para>Applicable only when <see cref="Type"/> is set to Parameter or Numeric.</para>
-		/// <para>For a dialog box item of type Numeric, this property allows to have a check box with multiple discrete values. In case multiple discrete values are defined, separate these with a semicolon (';'). If you do not want any check box, but only the numeric box, then leave this property empty.</para>
+		/// <para>For a dialog box item of type Numeric, this property allows to have a checkbox with multiple discrete values. In case multiple discrete values are defined, separate these with a semicolon (';'). If you do not want any checkbox, but only the numeric box, then leave this property empty.</para>
 		/// <para>For a dialog box item of type Parameter, the ID syntax is as follows: DmaID/ElementID:ParamID[:index]</para>
 		/// </remarks>
 		/// <example>
@@ -227,7 +229,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value><c>true</c> if the peek icon is shown; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <list type="unordered">
+		/// <list type="bullet">
 		/// <item><description>Only applicable for password boxes.</description></item>
 		/// <item><description>Feature introduced in DataMiner 9.6.6 (RN 21518).</description></item>
 		/// </list>
@@ -276,7 +278,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value>The value that will be assigned to the dialog box item the moment the dialog box opens.</value>
 		/// <remarks>
 		/// <para>For a dialog box item of type CheckBoxList, you can specify several values separated by semicolons.</para>
-		/// <para>For a dialog box item of type Numeric, the initial value has to be of format "DoubleValue;Boolean;SelectedDiscreetString". The DoubleValue contains the value of the numeric box. The Boolean ("true" or "false") determines whether the discreet check box is checked (true) or unchecked (false). The SelectedDiscreetString selects the discreet with that exact name in case multiple discrete values are defined. If case you only want to visualize the numeric box, it is sufficient to only specify the DoubleValue (RN 6825).</para>
+		/// <para>For a dialog box item of type Numeric, the initial value has to be of format "DoubleValue;Boolean;SelectedDiscreetString". The DoubleValue contains the value of the numeric box. The Boolean ("true" or "false") determines whether the discreet checkbox is selected (true) or not (false). The SelectedDiscreetString selects the discreet with that exact name in case multiple discrete values are defined. If case you only want to visualize the numeric box, it is sufficient to only specify the DoubleValue (RN 6825).</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
@@ -324,6 +326,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value><c>true</c> if this input control requires a valued; otherwise, <c>false</c>.</value>
 		/// <remarks>
 		/// <para>If <c>true</c>, the control will be marked “Invalid” when empty.</para>
+		/// <para>Refer to <see cref="UIBlockDefinition.ValidationState"/> for an overview of the types that support this property.</para>
 		/// <para>Feature introduced in DataMiner 10.0.5 (RN 25183, RN 25253).</para>
 		/// </remarks>
 		public bool IsRequired { get; set; }
@@ -462,6 +465,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>Text that will be displayed as long as the control is empty (e.g. “In this box, enter...”).</value>
 		/// <remarks>
+		/// <para>Refer to <see cref="UIBlockDefinition.ValidationState"/> for an overview of the types that support this property.</para>
 		/// <para>Feature introduced in DataMiner 10.0.5 (RN 25183, RN 25253).</para>
 		/// </remarks>
 		public string PlaceholderText { get; set; }
@@ -593,7 +597,7 @@ namespace Skyline.DataMiner.Automation
 		/// <value>The style of the dialog box.</value>
 		/// <remarks>
 		/// <para>It is possible to add one of three title styles to a text block:</para>
-		/// <list type="unordered">
+		/// <list type="bullet">
 		/// <item><description>“Title1” (highest level, all lower case)</description></item>
 		/// <item><description>“Title2” (medium level, all upper case)</description></item>
 		/// <item><description>“Title3” (lowest level, all upper case)</description></item>
@@ -630,6 +634,7 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets or sets the text of the tooltip for a component of an interactive Automation script.
 		/// </summary>
+		/// <value>The text of the tooltip for a component of an interactive Automation script.</value>
 		/// <remarks>
 		/// <para>This tooltip is only displayed if the script is run within one of the DataMiner web apps, for example the Jobs app.</para>
 		/// <para>Available from DataMiner 10.0.8 onwards.</para>
@@ -678,10 +683,12 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Contains each item of the tree view as a TreeViewItem.
 		/// </summary>
+		/// <value>The items of the tree view as a TreeViewItem.</value>
 		/// <remarks>
 		/// <para>Only applicable if UIBlockType is set to TreeView.</para>
 		/// <para>Available from DataMiner 10.0.10 onwards.</para>
 		/// </remarks>
+		/// <seealso cref="TreeViewItem"/>
 		public List<TreeViewItem> TreeViewItems { get; set; }
 
 		/// <summary>
@@ -701,7 +708,7 @@ namespace Skyline.DataMiner.Automation
 		/// <listheader>
 		/// <term></term>
 		/// <term>IsRequired</term>
-		/// <term>Placeholder</term>
+		/// <term>PlaceholderText</term>
 		/// <term>ValidationText</term>
 		/// </listheader>
 		/// <item>
@@ -735,7 +742,7 @@ namespace Skyline.DataMiner.Automation
 		/// <term>X</term>
 		/// </item>
 		/// <item>
-		/// <term>FileUpload</term>
+		/// <term>FileSelector</term>
 		/// <term></term>
 		/// <term></term>
 		/// <term>X</term>
@@ -872,7 +879,7 @@ namespace Skyline.DataMiner.Automation
 		public int Width { get; set; }
 
 		/// <summary>
-		/// Adds an entry to a check box list.
+		/// Adds an entry to a checkbox list.
 		/// </summary>
 		/// <param name="option"></param>
 		/// <remarks>
@@ -882,7 +889,7 @@ namespace Skyline.DataMiner.Automation
 		public void AddCheckBoxListOption(string option) { }
 
 		/// <summary>
-		/// Adds an entry to a check box list.
+		/// Adds an entry to a checkbox list.
 		/// </summary>
 		/// <param name="rawValue">The raw value.</param>
 		/// <param name="displayValue">The display value.</param>

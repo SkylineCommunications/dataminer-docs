@@ -11,16 +11,19 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets the DataMiner Agent ID of this redundancy group.
 		/// </summary>
+		/// <value>The DataMiner Agent ID of this redundancy group.</value>
 		public int DmaId { get; }
 
 		/// <summary>
 		/// Gets the ID of this redundancy group.
 		/// </summary>
+		/// <value>The ID of this redundancy group.</value>
 		public int GroupId { get; }
 
 		/// <summary>
 		/// Gets or sets the current operating mode of the redundancy group.
 		/// </summary>
+		/// <value>The current operating mode of the redundancy group.</value>
 		/// <exception cref="ArgumentException">
 		/// The redundancy group was not found.<br />
 		/// -or-<br />
@@ -31,11 +34,13 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets the name of the redundancy group.
 		/// </summary>
+		/// <value>The name of the redundancy group.</value>
 		public string Name { get; }
 
 		/// <summary>
 		/// Gets the raw info of the redundancy group.
 		/// </summary>
+		/// <value>The raw info of the redundancy group.</value>
 		public LiteRedundancyGroupInfoEvent RawInfo { get; }
 
 		/// <summary>

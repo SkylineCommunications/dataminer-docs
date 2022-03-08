@@ -26,7 +26,7 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Retrieves the non-masked ticket field resolvers corresponding to one or more filters.
 		/// </summary>
-		/// <param name="filters">A collection of filters. Each filter will be processed separately and the results will be added to the final response.</param>
+		/// <param name="filters">A collection of filters. Each filter will be processed separately, and the results will be added to the final response.</param>
 		/// <returns> The requested <see cref="TicketFieldResolver"/> objects.</returns>
 		public virtual IEnumerable<TicketFieldResolver> GetTicketFieldResolvers(params TicketFieldResolver[] filters) { return null; }
 
@@ -58,7 +58,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="error">String with notifications and/or errors that occurred.</param>
 		/// <param name="resolvers">The ticket field resolvers you wish to add or edit.</param>
-		/// <returns><c>true</c> when add/editing the ticket field resolver(s) was successful; otherwise, <c>false</c>.</returns>
+		/// <returns><c>true</c> when adding/editing the ticket field resolver(s) was successful; otherwise, <c>false</c>.</returns>
 		public virtual bool SetTicketFieldResolvers(out string error, ref TicketFieldResolver[] resolvers) { error = ""; return false; }
 
 		/// <summary>
@@ -66,7 +66,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="error">String with notifications and/or errors that occurred.</param>
 		/// <param name="tickets">The tickets you wish to add or edit.</param>
-		/// <returns><c>true</c> when add/editing the ticket(s) was successful; otherwise, <c>false</c>.</returns>
+		/// <returns><c>true</c> when adding/editing the ticket(s) was successful; otherwise, <c>false</c>.</returns>
 		public virtual bool SetTickets(out string error, ref Ticket[] tickets) { error = ""; return false; }
 
 		/// <summary>

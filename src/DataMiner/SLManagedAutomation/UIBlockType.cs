@@ -80,7 +80,7 @@
 		/// </example>
 		Parameter = 6,
 		/// <summary>
-		/// Check box.
+		/// Checkbox.
 		/// </summary>
 		/// <example>
 		/// <code>
@@ -123,7 +123,7 @@
 		/// </summary>
 		GlobalSettings = 10,
 		/// <summary>
-		/// Check box list.
+		/// Checkbox list.
 		/// </summary>
 		/// <example>
 		/// <code>
@@ -140,14 +140,14 @@
 		/// <remarks>
 		/// <para>Allows you to define a newly created dialog box item displaying a numeric value.</para>
 		/// <para>The initial value has to have the following format: [DoubleValue];[Boolean];[SelectedDiscreetString]</para>
-		/// <list type="unordered">
+		/// <list type="bullet">
 		/// <item><description>DoubleValue: Value of the numeric box.</description></item>
-		/// <item><description>Boolean: Indicates whether the discrete check box is selected (true) or cleared (false).</description></item>
+		/// <item><description>Boolean: Indicates whether the discrete checkbox is selected (true) or cleared (false).</description></item>
 		/// <item><description>SelectedDiscreetString: selects the discrete parameter with that exact name in case multiple discrete parameters are defined.</description></item>
 		/// </list>
 		/// <para>Example: <code>string sel_numericValue = "10;true;Discreet 2";</code></para>
-		/// <para>If you want a check box with one or more discrete values, then use the Extra property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no check box, then leave the Extra property empty. In that case, just set the initial value to the DoubleValue.</para>
-		/// <para>If you set the WantsOnChange property to “true”, then both the check box and the discrete combo box will trigger a change.</para>
+		/// <para>If you want a checkbox with one or more discrete values, then use the Extra property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no checkbox, then leave the Extra property empty. In that case, just set the initial value to the DoubleValue.</para>
+		/// <para>If you set the WantsOnChange property to “true”, then both the checkbox and the discrete combo box will trigger a change.</para>
 		/// <para>Optionally you can provide a RangeHigh (maximum value), a RangeLow (minimum value), a RangeStep (increment or decrement steps) and the number of decimals.</para>
 		/// <para>Note: From DataMiner 9.5.5 onwards, you can specify the WantsOnChange property to have a small delay before a change is triggered by the numeric box itself, in order to avoid updates being sent as soon as a single character is changed in the numeric box. See WantsOnChange.</para>
 		/// </remarks>

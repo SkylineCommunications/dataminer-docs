@@ -33,15 +33,15 @@
 		}
 
 		/// <summary>
-		/// Gets or sets the blank carbon copy (bcc) recipients.
+		/// Gets or sets the blank carbon copy (BCC) recipients.
 		/// </summary>
-		/// <value>The blank carbon copy (bcc) recipients.</value>
+		/// <value>The blank carbon copy (BCC) recipients.</value>
 		public string BCC { get; set; }
 
 		/// <summary>
-		/// Gets or sets the carbon copy (cc) recipients.
+		/// Gets or sets the carbon copy (CC) recipients.
 		/// </summary>
-		/// <value>The carbon copy (cc) recipients.</value>
+		/// <value>The carbon copy (CC) recipients.</value>
 		public string CC { get; set; }
 
 		/// <summary>

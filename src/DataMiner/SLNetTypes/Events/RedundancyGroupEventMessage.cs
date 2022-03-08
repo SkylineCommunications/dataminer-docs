@@ -6,5 +6,26 @@ using System.Threading.Tasks;
 
 namespace Skyline.DataMiner.Net.Messages
 {
-	public enum RedundancyMode { Undefined, Automatic, ManualSwitchBack, Manual }
+	/// <summary>
+	/// Specifies the redundancy mode.
+	/// </summary>
+	public enum RedundancyMode
+	{
+		/// <summary>
+		/// Undefined.
+		/// </summary>
+		Undefined,
+		/// <summary>
+		/// Automatic.
+		/// </summary>
+		Automatic,
+		/// <summary>
+		/// Manual switchback.
+		/// </summary>
+		ManualSwitchBack,
+		/// <summary>
+		/// Manual.
+		/// </summary>
+		Manual
+	}
 }

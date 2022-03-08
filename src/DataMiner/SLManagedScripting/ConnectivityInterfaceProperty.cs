@@ -43,7 +43,7 @@
 		/// </summary>
 		/// <value>The ID of the interface property.</value>
 		/// <remarks>
-		/// <para>Can be set since DataMiner 8.5.3 (RN 8854).</para>
+		/// <para>Can be set from DataMiner 8.5.3 (RN 8854) onwards.</para>
 		/// </remarks>
 		public int InterfacePropertyId { get; set; }
 
@@ -52,7 +52,7 @@
 		/// </summary>
 		/// <value>The name of the interface property.</value>
 		/// <remarks>
-		/// <para>Can be set since DataMiner 8.5.3 (RN 8854).</para>
+		/// <para>Can be set from DataMiner 8.5.3 (RN 8854) onwards.</para>
 		/// </remarks>
 		public string InterfacePropertyName { get; set; }
 
@@ -61,7 +61,7 @@
 		/// </summary>
 		/// <value>The type of the interface property.</value>
 		/// <remarks>
-		/// <para>Can be set since DataMiner 8.5.3 (RN 8854).</para>
+		/// <para>Can be set from DataMiner 8.5.3 (RN 8854) onwards.</para>
 		/// </remarks>
 		public string InterfacePropertyType { get; set; }
 
@@ -70,7 +70,7 @@
 		/// </summary>
 		/// <value>The value of the interface property.</value>
 		/// <remarks>
-		/// <para>Can be set since DataMiner 8.5.3 (RN 8854).</para>
+		/// <para>Can be set from DataMiner 8.5.3 (RN 8854) onwards.</para>
 		/// </remarks>
 		public string InterfacePropertyValue { get; set; }
 

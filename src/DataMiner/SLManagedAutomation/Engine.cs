@@ -30,7 +30,7 @@ namespace Skyline.DataMiner.Automation
         /// Gets the raw SLNet connection.
         /// </summary>
         /// <value>The raw SLNet connection.</value>
-        /// <remarks>It is advised to used the <see cref="SendSLNetMessage(DMSMessage)"/> or <see cref="SendSLNetSingleResponseMessage(DMSMessage)"/> method instead of the raw connection to send messages (as the method on the raw connection does not encapsulate the messages with an impersonate message.). Since DataMiner 10.0.1, to send multiple messages, the <see cref="SendSLNetMessages(DMSMessage[])"/> method can be used.</remarks>
+        /// <remarks>It is advised to used the <see cref="SendSLNetMessage(DMSMessage)"/> or <see cref="SendSLNetSingleResponseMessage(DMSMessage)"/> method instead of the raw connection to send messages (as the method on the raw connection does not encapsulate the messages with an impersonate message.). From DataMiner 10.0.1 onwards, to send multiple messages, the <see cref="SendSLNetMessages(DMSMessage[])"/> method can be used.</remarks>
         public static Connection SLNetRaw { get; }
 
 		/// <summary>
@@ -114,6 +114,11 @@ namespace Skyline.DataMiner.Automation
 		/// Gets or sets the timeout for the current C# code block.
 		/// </summary>
 		/// <value>The timeout for the current C# code block.</value>
+		/// <remarks>
+		/// <note type="note">
+		/// <para>From DataMiner 10.2.0/10.1.2 onwards, this property can also be used to determine when an interactive Automation script times out.</para>
+		/// </note>
+		/// </remarks>
 		/// <example>
 		/// <code>
 		/// var timeout = engine.Timeout;
@@ -210,7 +215,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="key">The key to add or update.</param>
 		/// <param name="value">The value.</param>
 		/// <remarks>
-		/// <para>If the key already exists, it will update it with the specified value.</para>
+		/// <para>If the key already exists, it will be updated with the specified value.</para>
 		/// <para>Feature introduced in DataMiner 10.0.2 (RN 23936).</para>
 		/// </remarks>
 		public virtual void AddOrUpdateScriptOutput(string key, string value)
@@ -497,8 +502,8 @@ namespace Skyline.DataMiner.Automation
 		/// <item><description>If the user clicks Attach, the script will start in a pop-up window.</description></item>
 		/// <item><description>If the user clicks Ignore, the message box will be closed.</description></item>
 		/// </list>
-		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see Find interactive client.</note>
-		/// <para>Since DataMiner 9.6.9 (RN 22227), it is possible to find an interactive client by user cookie instead of by user name.</para>
+		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see <see href="xref:AutomationActionFindInteractiveClient">Find interactive client</see>.</note>
+		/// <para>From DataMiner 9.6.9 (RN 22227) onwards, it is possible to find an interactive client by user cookie instead of by user name.</para>
 		/// <code>bool ok = engine.FindInteractiveClient("Some text", 100, "userCookie:" + connection.ConnectionID);</code>
 		/// </remarks>
 		/// <example>
@@ -536,7 +541,7 @@ namespace Skyline.DataMiner.Automation
 		/// <item><description>If the user clicks Ignore, the message box will be closed.</description></item>
 		/// </list>
 		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see Find interactive client.</note>
-		/// <para>Since DataMiner 9.6.9 (RN 22227), it is possible to find an interactive client by user cookie instead of by user name.</para>
+		/// <para>From DataMiner 9.6.9 (RN 22227) onwards, it is possible to find an interactive client by user cookie instead of by user name.</para>
 		/// <code>bool ok = engine.FindInteractiveClient("Some text", 100, "userCookie:" + connection.ConnectionID, AutomationScriptAttachOptions.None);</code>
 		/// </remarks>
 		/// <example>

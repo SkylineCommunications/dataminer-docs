@@ -175,7 +175,7 @@ namespace Skyline.DataMiner.Automation
 		/// subscript.SelectMemory(1, memory); // The subscript has a script memory with ID 1 and this memory will be linked to the parent memory.
 		/// subscript.StartScript();
 		/// </code>
-		/// <para>Sub script:</para>
+		/// <para>Sub-script:</para>
 		/// <code>
 		/// var memory = engine.GetMemory(1);
 		/// engine.GenerateInformation(Convert.ToString(memory.Get(1))); // This will generate an information event with value: "MyValue".
@@ -224,7 +224,7 @@ namespace Skyline.DataMiner.Automation
 		/// subscript.SelectMemory("subscriptMemory", memory); // The subscript has a script memory with name "subscriptMemory" and this memory will be linked to the parent memory.
 		/// subscript.StartScript();
 		/// </code>
-		/// <para>Sub script:</para>
+		/// <para>Sub-script:</para>
 		/// <code>
 		/// var memory = engine.GetMemory("subscriptMemory");
 		/// engine.GenerateInformation(Convert.ToString(memory.Get(1))); // This will generate an information event with value: "MyValue".
@@ -250,7 +250,7 @@ namespace Skyline.DataMiner.Automation
 		///
 		/// subscript.StartScript();
 		/// </code>
-		/// <para>Sub script:</para>
+		/// <para>Sub-script:</para>
 		/// <code>
 		/// var myParam = engine.GetScriptParam(1);
 		///
@@ -298,7 +298,7 @@ namespace Skyline.DataMiner.Automation
 		///
 		/// subscript.StartScript();
 		/// </code>
-		/// <para>Sub script:</para>
+		/// <para>Sub-script:</para>
 		/// <code>
 		/// var myParam = engine.GetScriptParam("subscriptParam");
 		///
@@ -331,7 +331,7 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Starts the subscript.
 		/// </summary>
-		/// <exception cref="DataMinerException">Running the sub script failed.</exception>
+		/// <exception cref="DataMinerException">Running the sub-script failed.</exception>
 		/// <example>
 		/// <code>
 		/// var script = engine.PrepareSubScript("My SubScript");
@@ -345,7 +345,7 @@ namespace Skyline.DataMiner.Automation
 		public void StartScript() { }
 
 		/// <summary>
-		/// Returns a copy of the script output of the current script and, if the <see cref="SubScriptOptions.InheritScriptOutput" /> option is set to “true”, the child scripts.For more information, see below.
+		/// Returns a copy of the script output of the current script and, if the <see cref="SubScriptOptions.InheritScriptOutput" /> option is set to <c>true</c>, the child scripts. For more information, see below.
 		/// </summary>
 		/// <returns>The script results.</returns>
 		/// <remarks>This method can be used to pass information from a subscript to the parent script.

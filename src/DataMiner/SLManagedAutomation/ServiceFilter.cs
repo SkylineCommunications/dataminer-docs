@@ -48,6 +48,7 @@
 		/// <summary>
 		/// Gets or sets a filter for the service name, which can contain * and ? as wildcards.
 		/// </summary>
+		/// <value>A filter for the service name, which can contain * and ? as wildcards.</value>
 		public string NameFilter { get; set; }
 
 		/// <summary>

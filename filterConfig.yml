@@ -1,4 +1,7 @@
 apiRules:
+- include:
+    uiRegex: ^Skyline\.DataMiner\.Net\.AutomationUI\.Objects
+    type: Namespace
 - exclude:
     uidRegex: ^Tamir\.SharpSsh\.jsch\.ChannelSftp$
     type: Type
@@ -162,9 +165,6 @@ apiRules:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AutomationCheckType$
     type: Type
 - exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.AutomationScriptAttachOptions$
-    type: Type
-- exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DMSMessage$
     type: Type
 - exclude:
@@ -226,9 +226,6 @@ apiRules:
     type: Type
 - exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.PropertyInfo.DataTypes$
-    type: Type
-- exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.RedundancyMode$
     type: Type
 - exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.SLDataGateway\.AlarmID$

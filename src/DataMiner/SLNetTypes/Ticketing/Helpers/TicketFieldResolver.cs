@@ -561,7 +561,7 @@ namespace Skyline.DataMiner.Net.Ticketing.Helpers
 	/// </summary>
 	/// <remarks>
 	/// <para>Depending on whether the linked cause is open or cleared, a <see cref="Ticket"/> can only be:</para>
-	/// <list type="unordered">
+	/// <list type="bullet">
 	///  <item>Open and alarm active</item>
 	///  <item>Open and alarm not active (Cause is cleared)</item>
 	///  <item>Closed and alarm active</item>

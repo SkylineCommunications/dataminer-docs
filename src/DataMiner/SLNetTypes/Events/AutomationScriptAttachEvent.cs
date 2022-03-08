@@ -11,18 +11,18 @@ namespace Skyline.DataMiner.Net.Messages
 	public enum AutomationScriptAttachOptions
 	{
 		/// <summary>
-		/// None.
+		/// No options.
 		/// </summary>
 		None,
 
 		/// <summary>
-		/// When present, a pop-up should be displayed instead of an information bar.
+		/// Presents the user with a pop-up window instead of the default dialog box.
 		/// </summary>
 		[Obsolete("by default, a popup is displayed. This option is not needed", false)]
 		DisplayPopup = 0x00000001,
 
 		/// <summary>
-		/// When present, the client should try to attach to the request immediately, without waiting for the client to click anything.
+		/// Attaches immediately, without the user having to confirm anything.
 		/// </summary>
 		AttachImmediately = 0x00000002
 	}

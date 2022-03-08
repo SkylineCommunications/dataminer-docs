@@ -102,6 +102,7 @@ namespace Skyline.DataMiner.Automation
 		/// Gets or sets a value indicating whether to enable the ClipValueToMinMax option.
 		/// </summary>
 		/// <value><c>true</c> to enable the ClipValueToMinMax option; otherwise, <c>false</c>.</value>
+		/// <remarks>Default: <c>false</c>.</remarks>
 		public bool ClipValueToMinMax { get; set; }
 
 		/// <summary>

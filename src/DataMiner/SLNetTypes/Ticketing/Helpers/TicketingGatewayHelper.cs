@@ -162,7 +162,7 @@ namespace Skyline.DataMiner.Net.Ticketing
 		/// </summary>
 		/// <returns>Retrieves the trace data of the last call.</returns>
 		/// <remarks>
-		/// <para>Since DataMiner 9.6.10 (RN 22526), for each call that failed, an entry of type TicketingManagerError. Reason.LegacyError will now be added to the TraceData. The value of the error will be stored in the <see cref="TicketingManagerError.LegacyErrorMessage"/> property.</para>
+		/// <para>From DataMiner 9.6.10 (RN 22526) onwards, for each call that failed, an entry of type TicketingManagerError. Reason.LegacyError will now be added to the TraceData. The value of the error will be stored in the <see cref="TicketingManagerError.LegacyErrorMessage"/> property.</para>
 		/// </remarks>
 		public TraceData GetTraceDataLastCall()
         {
