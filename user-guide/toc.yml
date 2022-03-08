@@ -1611,6 +1611,8 @@
           items:
             - name: Configuring feed components
               topicUid: Configuring_feed_components
+            - name: Configuring query (GQI) data feeds
+              topicUID: Configuring_GQI_feeds
             - name: Specifying data input in a dashboard URL
               topicUid: Specifying_data_input_in_a_dashboard_URL
             - name: Configuring a dashboard to use a URL feed without a feed component
