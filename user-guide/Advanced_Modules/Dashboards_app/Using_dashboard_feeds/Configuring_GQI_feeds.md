@@ -123,9 +123,11 @@ From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter valu
 
 - *Feed*: The name of the feed that should provide the data. If only one feed is available, it will automatically be selected.
 
-- *Type*: The type of data that needs to be selected. If the feed only provides one type of data, it will automatically be selected.
+- *Type*: The type of data that needs to be selected. If the feed only provides one type of data, it will automatically be selected. The type *Query rows* (available from DataMiner 10.2.4/10.3.0 onwards) allows you to link the filter to rows from another query, if a compatible query is available.
 
 - *Property*: The property by which the column will be filtered (depending on the type of data).
+
+  If *Type* is set to *Query rows*, instead of a property, you can select the columns from the table containing the query rows. However, note that you will only be able to select columns that are compatible with the type of column you are filtering.
 
 From DataMiner 10.1.11 onwards, an additional option, *Return no rows when feed is empty*, is available. When you select this option, in case the feed is empty, an empty table will be returned instead of the entire table.
 
