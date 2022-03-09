@@ -20,9 +20,9 @@ uid: Changing_dashboard_settings
 
    - *Number of columns*: Available from DataMiner 10.0.10 onwards. Allows you to configure in how many columns components can be displayed in the dashboard (maximum: 50). If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary.
 
-   - *Allowed to view the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to restrict access to the dashboard to specific users only.
+   - *Allowed to view the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to restrict access to the dashboard to specific users only. From DataMiner 10.2.4/10.3.0 onwards, you can also select entire user groups.
 
-   - *Allowed to edit the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to assign edit permission for the dashboard to specific users only.
+   - *Allowed to edit the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to assign edit permission for the dashboard to specific users only. From DataMiner 10.2.4/10.3.0 onwards, you can also select entire user groups.
 
      > [!NOTE]
      > The built-in Administrator account always has full access to all dashboards.
