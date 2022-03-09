@@ -30,6 +30,8 @@ The following settings are available:
   >     - If neither base nor correlated alarm match the filter, neither are displayed.
   > - If a quick filter is applied with the filter box in the lower right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
 
+- **Automatic incident tracking**: This option is only available in a DMS using Cassandra, and only if automatic incident tracking is enabled in System Center. For more information, see [Automatic incident tracking](xref:Advanced_analytics_features_in_the_Alarm_Console#automatic-incident-tracking).
+
 - **Text to speech**: Select to enable Text to speech, so that new alarm events are read out loud.
 
 - **Freeze**: Select to stop displaying new incoming events in the currently selected alarm tab. Other open alarm tabs will not be frozen.
@@ -49,6 +51,8 @@ The following settings are available:
   > It is possible to set a delay timer on when the alarm banner hides. For more information, see [User settings](xref:User_settings).
 
 - **Statistical view**: Select to view the alarms in the alarm tab as statistics. For more information, see [Using the statistical view](xref:ChangingTheAlarmConsoleLayout#using-the-statistical-view).
+
+- **Reports view**: This option is only available in a DMS using Cassandra. Select to view severity timelines per element or per parameter. For more information, see [Using the reports view](xref:ChangingTheAlarmConsoleLayout#using-the-reports-view).
 
 - **Show side panel**: Select to show the collapsible side panel in the Alarm Console.
 

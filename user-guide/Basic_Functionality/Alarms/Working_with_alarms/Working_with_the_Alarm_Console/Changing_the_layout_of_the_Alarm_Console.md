@@ -184,7 +184,7 @@ To do so:
 
    1. At the bottom of the third column, set the default Alarm Console settings for the selected tab.
 
-      The same options are available as under the Alarm Console settings button, with the exception of the *Freeze*, *Show in banner* and *Statistical view* options. You can also set the RCA filter for the tab.
+      The same options are available as under the Alarm Console settings button, except the *Freeze*, *Show in banner* and *Statistical view* options. You can also set the RCA filter for the tab.
 
       > [!TIP]
       > See also: [Alarm Console settings](xref:AlarmConsoleSettings)
