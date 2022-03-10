@@ -110,9 +110,14 @@ There is only one setting on this page:
 
 ### Advanced settings
 
-On the main *Advanced* page, two settings are available:
+On the main *Advanced* page, the following settings are available:
 
 - **Connection timeout (ms)**: In the box next to this setting, you can specify the number of milliseconds for the connection timeout.
+
+- **Enable browser cache**: Available from DataMiner 10.2.4/10.3.0 onwards. Select this checkbox to enable the cache of the Chromium browser engine. Enabling this cache can make web applications load faster and can provide a better single sign-on experience in case SAML authentication is used.
+
+  > [!NOTE]
+  > Enabling this setting involves a potential security risk: If multiple DataMiner users share the same Windows account on a particular computer, they will also share the same browser cache and, as a consequence, the same authentication on third-party websites.
 
 - **DataMiner Cube computer \[computername\] reset**: Click the button next to this setting to reset all computer settings back to default. In normal circumstances, this option should never have to be used.
 
