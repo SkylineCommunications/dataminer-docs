@@ -2,7 +2,7 @@
 uid: NT_CREATE_FOLDER
 ---
 
-#NT_CREATE_FOLDER (181)
+# NT_CREATE_FOLDER (181)
 
 Creates a folder in the C:\ Skyline DataMiner\Documents folder.
 

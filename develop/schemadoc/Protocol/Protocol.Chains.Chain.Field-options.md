@@ -542,4 +542,4 @@ More tab pages can be specified, separated with colons (“:”), for example:
 TopologyChains:LogicalView-Logical:PhysicalView-Physical:CombinedView-Logical,Physical
 ```
 
-![alt text](~/schemadoc/Protocol/images/TopologyChains.png "TopologyChains")
+![alt text](~/develop/schemadoc/Protocol/images/TopologyChains.png "TopologyChains")

@@ -8,7 +8,7 @@
           ]
         }
       ],
-      "dest": "api",
+      "dest": "develop/api/types",
       "disableGitFeatures": true,
       "disableDefaultFilter": false,
       "filter": "filterConfig.yml"
@@ -22,22 +22,10 @@
           "user-guide/**/toc.yml",
           "develop/**.md",
           "develop/toc.yml",
-          "webservices/**.md",
-          "webservices/toc.yml",
+		  "develop/**/toc.yml",
+		  "develop/api/types/*.yml",
           "toc.yml",
           "*.md"
-        ]
-      },
-	  {
-        "files": [
-          "schemadoc/**.md",
-          "schemadoc/toc.yml"
-        ]
-      },
-	  {
-        "files": [
-          "api/**.yml",
-          "api/index.md"
         ]
       }
     ],
@@ -47,8 +35,8 @@
           "images/**",
           "user-guide/images/**",
           "develop/images/**",
-		  "schemadoc/Protocol/images/**",
-		  "schemadoc/Automation/images/**"
+		  "develop/schemadoc/Protocol/images/**",
+		  "develop/schemadoc/Automation/images/**"
         ]
       }
     ],

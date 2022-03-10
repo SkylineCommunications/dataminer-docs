@@ -61,7 +61,7 @@ In this case, the destination consists of three parts:
 
 1. Column parameter ID, where the received alarm level value will be forwarded to (2004 in the given example). The alarm level value will be set as the content of the corresponding cell.
 
-    ![alt text](~/schemadoc/Protocol/images/AlarmLevelLinking1.svg "Alarm level linking to a regular column.")
+    ![alt text](~/develop/schemadoc/Protocol/images/AlarmLevelLinking1.svg "Alarm level linking to a regular column.")
 
     From DataMiner 9.0.0 (RN 10406) onwards, it is also possible to specify a column parameter ID that holds primary keys. In this case, the alarm level value will not be set as the cell value, but the alarm level of the primary key cell will correspond with the highest alarm level present in any of the other columns in the row and the linked columns.
 
@@ -70,7 +70,7 @@ In this case, the destination consists of three parts:
 
     In the example below, the instance alarm level is "Major" (4) and the bubble up level is "Critical" (5). As a result, the cell alarm level is "Critical" (5), as this is the most severe alarm level.
 
-    ![alt text](~/schemadoc/Protocol/images/AlarmLevelLinking2.svg "Alarm level linking to a primary key column.")
+    ![alt text](~/develop/schemadoc/Protocol/images/AlarmLevelLinking2.svg "Alarm level linking to a primary key column.")
 
     As the name suggests, the “bubble up level” can be used for alarm bubble up (see [SeverityBubbleUp](xref:Protocol.SeverityBubbleUp) to pass alarm severities between linked tables (e.g. used in CPE Managers).
 
