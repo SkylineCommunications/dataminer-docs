@@ -29,6 +29,8 @@ To configure the component:
      > [!NOTE]
      > When you update a filter that is already used in the component, re-add the filter in order to update it in the component.
 
+   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
+
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
@@ -49,7 +51,7 @@ To configure the component:
 
    - *Show maximum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the maximum trend data. By default, this is disabled.
 
-   - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group.
+   - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
 
    - *Use percentage based values*: This option is only displayed if the component displays resource capacity information. If you select this option, the chart will display percentage values instead of absolute values.
 
