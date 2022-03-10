@@ -226,7 +226,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="text">A composite format string that should be appended.</param>
 		/// <param name="args">An object array that contains zero or more objects to format in the appended text.</param>
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
-		/// <remarks>This is a convenience method, that calls String.Format(System.String, System.Object[]).</remarks>
+		/// <remarks>This is a convenience method that calls String.Format(System.String, System.Object[]).</remarks>
 		/// <exception cref="ArgumentNullException"><c>format</c> or <c>args</c> is <see langword="null"/>.</exception>
 		/// <exception cref="FormatException"><c>format</c> is invalid.<br />
 		/// -or-<br />
