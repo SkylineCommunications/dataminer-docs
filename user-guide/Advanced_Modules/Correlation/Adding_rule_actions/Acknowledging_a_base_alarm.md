@@ -10,4 +10,4 @@ In the *Actions* section of the details pane:
 
 1. Click *Add Action* and select *Acknowledge base alarm*.
 
-2. Optionally, click the underlined field on the second line to specify a comment.
+1. Optionally, click the underlined field on the second line to specify a comment.
