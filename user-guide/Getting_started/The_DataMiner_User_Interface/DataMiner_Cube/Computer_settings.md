@@ -26,21 +26,21 @@ To access the computer settings in DataMiner Cube:
 
 1. Go to the *Settings* window:
 
-    - From DataMiner 10.0.0/10.0.2 onwards:
+   - From DataMiner 10.0.0/10.0.2 onwards:
 
-        - Click the apps button in the sidebar and select *Settings* at the bottom of the apps panel, or
+     - Click the apps button in the sidebar and select *Settings* at the bottom of the apps panel, or
 
-        - Click the user icon in the header bar and select *Settings* in the menu.
+     - Click the user icon in the header bar and select *Settings* in the menu.
 
-    - Prior to DataMiner 10.0.0/10.0.2:
+   - Prior to DataMiner 10.0.0/10.0.2:
 
-        - In the navigation pane, click the apps button and select *Settings*, or
+     - In the navigation pane, click the apps button and select *Settings*, or
 
-        - Click the current user in the header bar, and click *Settings*.
+     - Click the current user in the header bar, and click *Settings*.
 
-2. Click the *computer* tab.
+1. Click the *computer* tab.
 
-    The tab consists of 5 pages that you can navigate between using the table of contents on the left.
+   The tab consists of 5 pages that you can navigate between using the table of contents on the left.
 
 > [!NOTE]
 > For more information on the user settings tab, see [User settings](xref:User_settings).
@@ -53,15 +53,14 @@ On this page, you can select settings related to the connection of your computer
 
 - **Automatic log-on with saved user name and password**: Select this setting to have DataMiner Cube remember your user name and password, so that you do not have to enter these except after an explicit logout.
 
-- **Connection type**: Select a connection type in the drop-down list. By default this is set to *Auto*. When you select other connection types, *Remoting* or *Web services*, more settings will appear that need to be specified (destination port, polling interval, etc.).
+- **Connection type**: Select a connection type in the drop-down list. By default, this is set to *Auto*. When you select other connection types, *Remoting* or *Web services*, more settings will appear that need to be specified (destination port, polling interval, etc.).
 
-    > [!NOTE]
-    > - Connecting via web services is not possible if WSE is not installed on the DMA.
-    > - As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
+  > [!NOTE]
+  > - Connecting via web services is not possible if WSE is not installed on the DMA.
+  > - As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
 
-    > [!TIP]
-    > See also:
-    > [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings)
+  > [!TIP]
+  > See also: [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings)
 
 ### Cube settings
 
@@ -75,16 +74,15 @@ This page contains the following debug settings:
 
 - **Debug settings visible**: Select this setting along with the user setting *Show General Parameters debug page* to show an additional Data Display page called *General parameters DEBUG*. This page contains general parameters that are only used for debug purposes and that are not usually displayed.
 
-    > [!TIP]
-    > See also:
-    > [Data Display settings](xref:User_settings#data-display-settings)
+  > [!TIP]
+  > See also: [Data Display settings](xref:User_settings#data-display-settings)
 
 - **Trace mode**: When you enable this setting, Cube debug logging is saved in a file in the following folder: *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\Traces*. This mode is meant to solve issues, and will not be needed in normal circumstances.
 
 - **Enable trend logging**: This setting is available from DataMiner 9.5.11 onwards. If you enable this setting, a number of log files will be kept with regard to trending.
 
-    > [!NOTE]
-    > This setting is disabled by default. Enabling it will cause memory usage to increase substantially. Therefore, it is recommended to only enable it temporarily for debugging purposes.
+  > [!NOTE]
+  > This setting is disabled by default. Enabling it will cause memory usage to increase substantially. Therefore, it is recommended to only enable it temporarily for debugging purposes.
 
 ### Performance settings
 
@@ -92,15 +90,15 @@ This page contains settings that are related to your computer’s performance:
 
 - **Use of animation**: Enables animations in the Cube UI.
 
-    > [!NOTE]
-    > Up to DataMiner 9.0.3, this setting is called *3D effects*.
+  > [!NOTE]
+  > Up to DataMiner 9.0.3, this setting is called *3D effects*.
 
 - **Use hardware rendering**: Select this setting to set the graphics rendering mode to hardware rendering.
 
 - **Frame rate**: Determines the frame rate of all animations used in DataMiner Cube, including the “progress bar” animation in the logon screen that starts when you click the *Log on* button. Set to 60 by default.
 
-    > [!NOTE]
-    > When you change this frame rate setting, restart DataMiner Cube to have the change take effect.
+  > [!NOTE]
+  > When you change this frame rate setting, restart DataMiner Cube to have the change take effect.
 
 - **Trend update frame rate**: Available from DataMiner 9.5.7 onwards. Determines the rate at which trend graphs are redrawn.
 
