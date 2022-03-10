@@ -45,7 +45,7 @@ namespace Skyline.DataMiner.Automation
 		/// <item><description>"auto" or "a": The width of the column will be automatically adapted to the widest dialog box item in that column.</description></item>
 		/// <item><description>*: The column will have the largest possible width, depending on the width of the other columns.</description></item>
 		/// </list>
-		/// <note type="note">If automatic ColumnDefs are specified, e.g. "a;a;a;a", and you want to show a UIBlockDefinition with a columnspan, then the space for each column will be equal, so other blocks will also move. To avoid this, you can change the ColumnDefs to "a;a;a;a;*". The extra '*' column will use all extra available space. Then change the columnpsan so the block uses that new '*' column.</note>
+		/// <note type="note">If automatic ColumnDefs are specified, e.g. "a;a;a;a", and you want to show a UIBlockDefinition with a columnspan, then the space for each column will be equal, so other blocks will also move. To avoid this, you can change the ColumnDefs to "a;a;a;a;*". The extra '*' column will use all extra available space. Then change the columnspan so the block uses that new '*' column.</note>
 		/// <para>Example:</para>
 		/// <example>
 		/// <code>
@@ -226,7 +226,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="text">A composite format string that should be appended.</param>
 		/// <param name="args">An object array that contains zero or more objects to format in the appended text.</param>
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
-		/// <remarks>This is a convenience method, which calls String.Format(System.String, System.Object[]).</remarks>
+		/// <remarks>This is a convenience method that calls String.Format(System.String, System.Object[]).</remarks>
 		/// <exception cref="ArgumentNullException"><c>format</c> or <c>args</c> is <see langword="null"/>.</exception>
 		/// <exception cref="FormatException"><c>format</c> is invalid.<br />
 		/// -or-<br />
@@ -336,7 +336,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="text">A composite format string that should be appended.</param>
 		/// <param name="args">An object array that contains zero or more objects to format in the appended text.</param>
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
-		/// <remarks>This is a convenience method which calls String.Format(System.String, System.Object[]).</remarks>
+		/// <remarks>This is a convenience method that calls String.Format(System.String, System.Object[]).</remarks>
 		/// <exception cref="ArgumentNullException"><c>format</c> or <c>args</c> is <see langword="null"/>.</exception>
 		/// <exception cref="FormatException"><c>format</c> is invalid.<br />
 		/// -or-<br />
