@@ -84,7 +84,7 @@ To connect your DMS to the cloud:
 
 1. Select the checkbox to agree to the terms of service and click *Connect*.
 
-1. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Registered*. This can take up to half a minute.
+1. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Connected*. This can take up to half a minute.
 
 1. To ensure that you can make optimal use of your cloud connection, get your cloud connection verified. See [Getting your DMS cloud connection verified](xref:CloudConnectionVerification).
 
