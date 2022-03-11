@@ -2,7 +2,7 @@
 uid: ApiDocumentation
 ---
 
-# Api Documentation
+# API Documentation
 
 ## Namespaces
 
@@ -21,7 +21,7 @@ uid: ApiDocumentation
 
 |Namespace|Description|
 |--- |--- |
-|[NT notify types](xref:NTNotifyTypesOverview)|Notify types overview.|
+|[NT notify types](xref:NTNotifyTypesOverview)|NT Notify types overview.|
 |[DMS notify types](xref:SLDmsNotifyTypes)|DMS notify types overview.|
 
 ## Error codes

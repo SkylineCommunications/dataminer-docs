@@ -485,11 +485,27 @@
         topicUid:  ClassLibraryMonitorsStoppingAStoppedMonitor
     - name: Examples
       topicUid:  ClassLibraryExamples
-- name: Api documentation
+- name: API documentation
   topicUid: ApiDocumentation
   items:
   - name: Namespaces
-    topicUid: Skyline.DataMiner.Scripting.SLProtocol
+    items:
+    - name: Skyline.DataMiner.Scripting
+      topicUid: Skyline.DataMiner.Scripting
+    - name: Skyline.DataMiner.Automation
+      topicUid: Skyline.DataMiner.Automation
+    - name: Skyline.DataMiner.Library.Common
+      topicUid: Skyline.DataMiner.Library.Common
+    - name: Skyline.DataMiner.Library.Automation
+      topicUid: Skyline.DataMiner.Library.Automation
+    - name: Skyline.DataMiner.Library.Protocol
+      topicUid: Skyline.DataMiner.Library.Protocol
+    - name: Skyline.DataMiner.Net
+      topicUid: Skyline.DataMiner.Net
+    - name: Interop.SLDms
+      topicUid: Interop.SLDms
+    - name: Tamir.SharpSsh
+      topicUid: Tamir.SharpSsh
   - name: Notify types
     items:
     - name: NT notify types

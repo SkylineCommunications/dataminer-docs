@@ -90,13 +90,30 @@ namespace Skyline.DataMiner.Automation
 		/// </exception>
 		public void IncludeFilteredView(string viewName, string protocolName, string protocolVersion, params string[] @params) { }
 
-		
+		/// <summary>
+		/// Adds the specified reservation GUID.
+		/// </summary>
+		/// <param name="reservationGuid">The reservation GUID.</param>
+		/// <example>
+		/// <code>
+		/// MailReportOptions reportOptions = engine.PrepareMailReport("myTemplate");
+		/// 
+		/// reportOptions.IncludeReservationGuid(new Guid("{12776948-CF8E-4A5D-AC2B-A9D1AB0D8A68}"));
+		/// </code>
+		/// </example>
 		public void IncludeReservationGuid(ValueType reservationGuid) { }
 
 		/// <summary>
 		/// Adds a view to be included in the report.
 		/// </summary>
 		/// <param name="viewName">The name of the view.</param>
+		/// <example>
+		/// <code>
+		/// MailReportOptions reportOptions = engine.PrepareMailReport("myTemplate");
+		/// 
+		/// reportOptions.IncludeView("myView");
+		/// </code>
+		/// </example>
 		public void IncludeView(string viewName) { }
 
 		/// <summary>
@@ -110,6 +127,22 @@ namespace Skyline.DataMiner.Automation
 		/// Sets the mail options.
 		/// </summary>
 		/// <param name="mailOptions">The mail options.</param>
+		/// <example>
+		/// <code>
+		/// MailReportOptions reportOptions = engine.PrepareMailReport("myTemplate");
+		///
+		/// string title = "Load Overview";
+		/// string message = "Information about last day's load";
+		///
+		/// EmailOptions emailOptions = new EmailOptions();
+		/// emailOptions.Title = title;
+		/// emailOptions.Message = message;
+		/// emailOptions.TO = "user.demuynck@domain.com";
+		/// emailOptions.SendAsPlainText = true;
+		/// 
+		/// reportOptions.SetMailOptions(emailOptions);
+		/// </code>
+		/// </example>
 		public void SetMailOptions(EmailOptions mailOptions) { }
 
 		/// <summary>
@@ -118,6 +151,16 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="message">The message.</param>
 		/// <param name="title">The title.</param>
 		/// <param name="to">The recipients.</param>
+		/// <example>
+		/// <code>
+		/// MailReportOptions reportOptions = engine.PrepareMailReport("myTemplate");
+		/// 
+		/// string title = "Load Overview";
+		/// string message = "Information about last day's load";
+		/// string to = "user@domain.com";
+		/// reportOptions.SetMailOptions(message, title, to);
+		/// </code>
+		/// </example>
 		public void SetMailOptions(string message, string title, string to) { }
 	}
 }
