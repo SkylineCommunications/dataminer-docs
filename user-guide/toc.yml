@@ -597,6 +597,8 @@
               topicUid: Placeholders_for_variables_in_shape_data_values
             - name: Dynamic table filter syntax
               topicUid: Dynamic_table_filter_syntax
+            - name: Visio style guide
+              topicUID: Visio_style_guide
     - name: Trending
       topicUid: trending
       items:
