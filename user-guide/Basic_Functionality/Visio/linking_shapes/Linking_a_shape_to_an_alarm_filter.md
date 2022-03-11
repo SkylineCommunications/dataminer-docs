@@ -27,7 +27,12 @@ Configure the shape data fields as follows:
 
    - **Alarm**: Use this option if you want the shape background to take the color associated with the summary alarm state of the alarm list.
 
-   - **FilterContext=X**: Supported from DataMiner 10.0.3 onwards. This option allows you to add an element, service or view filter. “X” can be the name or ID of the element, service or view. From DataMiner 10.3.0/10.2.3 onwards, you can also add an EPM system name filter. In that case, “X” should be “SystemName=” followed by the EPM system name.
+   - **FilterContext=X**: Allows you to specify a filter context.
+
+     - From DataMiner 10.0.3 onwards, this can be an **element, service or view filter**. In this case, “X” is the name or ID of the element, service or view.
+     - From DataMiner 10.3.0/10.2.3 onwards, you can add an **EPM system name filter**. In that case, “X” should be “SystemName=” followed by the EPM system name.
+     - From DataMiner 10.3.0/10.2.3 onwards, you can add an **EPM system type filter**. In that case, “X” should be “SystemType=” followed by the EPM system type.
+     - The SystemName and SystemType context can be combined using the syntax `FilterContext=SystemName=X;SystemType=Y`.
 
    For example:
 
