@@ -169,13 +169,14 @@ To do so
      <UID>myUserId</UID>
      <PWD>myPassword</PWD>
      <DB>SLDMADB</DB>
-    <TLSEnabled>true</TLSEnabled>
+     <TLSEnabled>true</TLSEnabled>
     </DataBase>
     ```
 
 > [!NOTE]
-> - IF TLS is enabled, port 7001 must be opened in the firewall. See [Overview of IP ports used in a DMS](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms).
 > - This procedure only enables TLS on the database connection. It does not enable client authentication.
+> - From DataMiner 10.1.3 onwards TLS 1.0 is supported. From DataMiner 10.2.4/10.2.0-CU1 onwards, TLS 1.0, 1.1 and 1.2 are supported.
+> - When Cassandra is hosted on the local DataMiner server, and DataMiner Failover is active, Cassandra will use TCP port 7001 for TLS encrypted inter-node communication (instead of port 7000). Make sure this port is allowed through the firewall of both Failover agents.
 
 ### Example of a general database configuration
 

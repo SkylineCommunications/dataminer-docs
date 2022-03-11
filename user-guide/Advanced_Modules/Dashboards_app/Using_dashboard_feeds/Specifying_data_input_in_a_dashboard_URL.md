@@ -7,7 +7,8 @@ uid: Specifying_data_input_in_a_dashboard_URL
 If a dashboard has been configured with one or more feed components, it is possible to specify data input for these feeds in a dashboard URL. This way, you can immediately make the dashboard display specific data when it is opened.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.2.2 onwards, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter “d” is used instead of “data”.
+> - From DataMiner 10.2.0/10.2.2 onwards, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter “d” is used instead of “data”.
+> - To refer to a query in the dashboard URL, using the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]*. In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
 
 ## JSON syntax
 

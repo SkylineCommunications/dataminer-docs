@@ -8,7 +8,7 @@ This dashboard component is introduced in DataMiner 10.0.13 with the purpose of 
 
 To configure the component:
 
-1. Apply a query data feed. See [Using Queries data input](xref:Configuring_dashboard_components#using-queries-data-input).
+1. Apply a query data feed. See [Configuring query (GQI) data feeds](xref:Configuring_GQI_feeds).
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 

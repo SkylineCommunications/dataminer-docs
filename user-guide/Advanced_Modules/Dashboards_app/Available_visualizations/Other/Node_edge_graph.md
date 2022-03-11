@@ -65,6 +65,12 @@ To configure the component:
 
       1. Optionally, next to *Weight*, specify a number to indicate the relative importance of the edge. This will determine the thickness of the connection line.
 
+1. From DataMiner 10.2.4/10.3.0 onwards, optionally, you can make the edges show a direction. To do so, in the *Settings* tab, activate the *Visualize directions* toggle button, and select how the direction should be shown:
+
+   - *Flow*: The direction is visualized by means of animated edges. This is the default option.
+
+   - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
+
 1. Optionally, fine-tune the layout of the component with the following settings in the *Layout* tab:
 
    - *Column filters*: Only available up to DataMiner 10.1.10. Optionally, you can specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:

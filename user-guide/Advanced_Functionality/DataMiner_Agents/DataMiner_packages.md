@@ -22,7 +22,7 @@ The following types of DataMiner packages are available:
 
 - [Import package (.dmimport)](#import-package-dmimport)
 
-### Upgrade package (.dmupgrade)
+## Upgrade package (.dmupgrade)
 
 Package containing all files necessary to upgrade a DataMiner Agent to a newer version.
 
@@ -33,7 +33,7 @@ Package containing all files necessary to upgrade a DataMiner Agent to a newer v
 > [!NOTE]
 > The maximum upload size of upgrade packages is limited depending on the DataMiner version, but it is possible to increase this limit. See [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_tool_advanced_procedures#increasing-the-maximum-upload-size-for-upgrade-packages-in-a-dms).
 
-### Update package (.dmupdate)
+## Update package (.dmupdate)
 
 Package containing minor updates for an existing release. Update packages contain mostly bug fixes, but can also contain new features. The packages are very similar to upgrade packages, but they only contain the files that have changed compared to the base version for which they are an update.
 
@@ -41,7 +41,7 @@ Package containing minor updates for an existing release. Update packages contai
 
 - File extension: *.dmupdate*
 
-### Backup package (.dmbackup)
+## Backup package (.dmbackup)
 
 Package containing all files necessary to restore a particular DataMiner Agent installation.
 
@@ -49,7 +49,7 @@ Package containing all files necessary to restore a particular DataMiner Agent i
 
 - File extension: *.dmbackup*
 
-### Application package (.dmapp)
+## Application package (.dmapp)
 
 Package containing all files necessary to install a particular DataMiner app on an existing DataMiner System.
 
@@ -61,7 +61,7 @@ Package containing all files necessary to install a particular DataMiner app on 
 > - These packages can be installed in the same way as a .dmupgrade package. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility)*.*
 > - .dmapp packages can also contain report templates, dashboards and aggregation rules.
 
-### Protocol package (.dmprotocol)
+## Protocol package (.dmprotocol)
 
 Package containing all files necessary to install a particular DataMiner protocol on an existing DataMiner System.
 
@@ -81,7 +81,7 @@ The actual content of a protocol package differs from that of the other packages
 
 - Protocol-specific help
 
-### Import package (.dmimport)
+## Import package (.dmimport)
 
 Depending on what was exported into the package, this package may contain elements, services, views, properties, protocols, Automation scripts, etc.
 
@@ -90,5 +90,4 @@ Depending on what was exported into the package, this package may contain elemen
 - File extension: *.dmimport*
 
 > [!TIP]
-> See also:
-> [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA)
+> See also: [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA)

@@ -116,5 +116,4 @@ Remember that the CPU usage being high could mean that a QAction executed so fas
 To reset the metrics, select *Diagnostics* > *DMA*, and then select *Reset QAction Metrics (QAction)*, *Reset QAction Metrics (Element)* or *Reset QAction Metrics (Protocol)* from the menu. *Feature introduced in DataMiner 8.5.1 (RN 8345)*.
 
 > [!NOTE]
-> It is also possible to request or reset the QAction metrics using a Notify type 226 (NT_DIAG) call. See [NT_DIAG (226)](xref:Notify_Types#nt_diag-226).
->
+> It is also possible to request or reset the QAction metrics using a Notify type 226 (NT_DIAG) call. See [NT_DIAG (226)](xref:NT_DIAG).

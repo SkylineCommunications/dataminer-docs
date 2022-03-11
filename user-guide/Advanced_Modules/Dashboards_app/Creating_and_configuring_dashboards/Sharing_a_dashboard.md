@@ -39,6 +39,9 @@ uid: Sharing_a_dashboard
 > - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries using feeds, and visualizations based on query feeds (e.g. node edge graph, table). If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 >
 
+> [!TIP]
+> See also: [Cloud connectivity and security](xref:Cloud_connectivity_and_security)
+
 ## Sharing a dashboard URL
 
 From DataMiner 10.2.0/10.2.2 onwards, you can generate a URL to easily share a dashboard with other people who have the necessary rights to access it.

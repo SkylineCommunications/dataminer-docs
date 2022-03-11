@@ -8,11 +8,9 @@ DMS Correlation automatically analyzes raw alarm information and real-time param
 
 Based on the rules set by the user, DMS Correlation can create correlated alarms or send notifications via text message or email, so that operators are informed of certain events. It can also trigger Automation scripts, so that automatic countermeasures are possible in case of emergency or preventive actions in case of emerging issues.
 
-![](~/user-guide/images/correlation_engine_conceptv2.jpg)
+![Correlation engine concept](~/user-guide/images/correlation_engine_conceptv2.jpg)
 
-
-
-### Correlation rules: basic concept
+## Correlation rules: basic concept
 
 Each of the Correlation rules in the knowledge base consists of:
 
@@ -34,11 +32,9 @@ The event is a combination of:
 
 - Rule conditions: These conditions determines when the Correlation rule is triggered. Ideally, a Correlation rule should always contain at least one condition.
 
-![](~/user-guide/images/Correlation_rulev2.jpg)
+![Correlation rule concept](~/user-guide/images/Correlation_rulev2.jpg)
 
-
-
-### Correlation in DataMiner Cube vs. System Display
+## Correlation in DataMiner Cube vs. System Display
 
 Two different engines are available for DMS Correlation: the System Display engine, now deprecated, and the DataMiner Cube Correlation engine. Rules that were created in the System Display engine are still available in DataMiner Cube, though they are indicated as deprecated. The Cube Correlation Engine offers several functions that were not available in System Display, such as:
 
@@ -48,11 +44,11 @@ Two different engines are available for DMS Correlation: the System Display engi
 
 - Elaborate Correlation rule conditions
 
-### Correlation in DataMiner clusters
+## Correlation in DataMiner clusters
 
 Up to DataMiner version 8.5.5, DMS Correlation only supported generating correlated alarm events on elements that were hosted on the DMA executing the Correlation rule action. From DataMiner 8.5.5 onwards, Correlation alarm events can be created on any element in the cluster.
 
-#### Which DMA handles which rule?
+### Which DMA handles which rule?
 
 In the DMS, each rule is either handled by one specific DMA, or handled by all DMAs separately, depending on whether the option *Correlate across DMAs* is selected. (See [General configuration of Correlation rules](xref:General_configuration_of_Correlation_rules).)
 
@@ -60,7 +56,7 @@ In the DMS, each rule is either handled by one specific DMA, or handled by all D
 
 - Otherwise, each DMA will individually manage the rule for its local alarm events only. There will be no actions combining base alarm events from multiple DMAs. This means that, for example, if there are three different elements, each on a different DMA, for which a Correlation rule triggers an alarm, these could trigger three separate correlated alarms, rather than one combined alarm.
 
-#### What if the connection between Agents is lost?
+### What if the connection between Agents is lost?
 
 If a rule is managed by one single DMA, events will be collected from the point of view of that DMA:
 
@@ -80,4 +76,3 @@ When contact with the remote Agent is re-established, this can also cause action
 
 > [!NOTE]
 > If an alarm event was both cleared and generated on a remote Agent while no connection was available with that Agent, this event will never be included as a base alarm event for a Correlation rule handled only by the local Agent.
->

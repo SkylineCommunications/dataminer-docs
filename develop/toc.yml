@@ -1,3 +1,444 @@
+- name: DataMiner Development Guide
+  topicUid: DevelopmentGuide
+  items:
+  - name: Connectors
+    items:
+    - name: Introduction
+      topicUid: Introduction
+    - name: Connector fundamentals
+      topicUid: ConnectorFundamentals
+      items:
+      - name: Metadata
+        topicUid: Metadata
+      - name: Logic
+        topicUid: Logic
+        items:
+        - name: Parameters
+          topicUid: LogicParameters
+        - name: Groups
+          topicUid: LogicGroups
+        - name: Timers
+          topicUid: LogicTimers
+        - name: Triggers
+          topicUid: LogicTriggers
+        - name: Actions
+          topicUid: LogicActions
+          items:
+          - name: Actions Overview
+            topicUid: LogicActionsOverview
+        - name: QActions
+          topicUid: LogicQActions
+        - name: Conditions
+          topicUid: LogicConditions
+        - name: Examples
+          topicUid: LogicExamples
+      - name: Inner workings
+        topicUid: InnerWorkings
+        items:
+        - name: Introduction
+          topicUid: InnerWorkingsIntroduction
+        - name: SLDataMiner
+          topicUid: InnerWorkingsSLDataMiner
+        - name: SLProtocol
+          topicUid: InnerWorkingsSLProtocol
+        - name: SLScripting
+          topicUid: InnerWorkingsSLScripting
+        - name: SLElement
+          topicUid: InnerWorkingsSLElement
+        - name: Change-based event handling
+          topicUid: InnerWorkingsChangeBasedEventHandling
+        - name: Internal storage
+          topicUid: InnerWorkingsInternalStorage
+        - name: Overview
+          topicUid: InnerWorkingsOverview
+      - name: Reserved IDs
+        topicUid: ReservedIDs
+        items:
+        - name: Reserved parameter IDs
+          topicUid: ReservedIDsParameters
+        - name: DataMiner element control protocol
+          topicUid: ReservedIDsElementControlProtocol
+        - name: Aggregator
+          topicUid: ReservedIDsAggregator
+        - name: Enhanced service
+          topicUid: ReservedIDsEnhancedService
+        - name: SLA
+          topicUid: ReservedIDsSLA
+        - name: Spectrum analyzer
+          topicUid: ReservedIDsSpectrumAnalyzer
+    - name: UI Components
+      topicUid: UIComponents
+      items:
+      - name: Visualizing UI components
+        topicUid: UIComponentsVisualization
+      - name: Label
+        topicUid: UIComponentsLabel
+      - name: Text box
+        topicUid: UIComponentsTextBox
+      - name: Drop-down list
+        topicUid: UIComponentsDropDownList
+      - name: Combo box
+        topicUid: UIComponentsComboBox
+      - name: Slider
+        topicUid: UIComponentsSlider
+      - name: Button
+        topicUid: UIComponentsButton
+      - name: Toggle button
+        topicUid: UIComponentsToggleButton
+      - name: Page button
+        topicUid: UIComponentsPageButton
+      - name: Datetime picker
+        topicUid: UIComponentsDateTimePicker
+      - name: Duration picker
+        topicUid: UIComponentsDurationPicker
+      - name: Analog
+        topicUid: UIComponentsAnalog
+      - name: Progress bar
+        topicUid: UIComponentsProgressBar
+      - name: Title
+        topicUid: UIComponentsTitle
+      - name: Group box
+        topicUid: UIComponentsGroupBox
+      - name: Chart
+        topicUid: UIComponentsChart
+      - name: Table
+        topicUid: UIComponentsTable
+        items:
+        - name: Defining a table
+          topicUid: UIComponentsTableDefinition
+        - name: Column option types
+          topicUid: UIComponentsTableColumnOptionTypes
+        - name: Primary keys
+          topicUid: UIComponentsTablePrimaryKeys
+        - name: Display keys
+          topicUid: UIComponentsTableDisplayKeys
+        - name: Foreign keys
+          topicUid: UIComponentsTableForeignKeys
+        - name: Relations
+          topicUid: UIComponentsTableRelations
+        - name: Setting row text color
+          topicUid: UIComponentsTableSettingRowTextColor
+        - name: Configuring buttons to open DataMiner objects from table cells
+          topicUid: UIComponentsTableRowButtons
+      - name: Custom table context menu
+        topicUid: UIComponentsCustomTableContextMenu
+      - name: Matrix
+        topicUid: UIComponentsMatrix
+        items:
+        - name: Matrix parameters
+          topicUid: UIComponentsMatrixParameters
+        - name: Composing crosspoints on matrix parameters
+          topicUid: UIComponentsMatrixComposingCrosspoints
+        - name: Setting crosspoints
+          topicUid: UIComponentsMatrixSettingCrosspoints
+        - name: Dynamically changing matrix configuration
+          topicUid: UIComponentsMatrixChangeConfiguration
+        - name: Setting input/output names via a table
+          topicUid: UIComponentsMatrixSettingNames
+        - name: Discreet info
+          topicUid: UIComponentsMatrixDiscreetInfo
+        - name: Matrix development using DIS
+          topicUid: UIComponentsMatrixDis
+        - name: Exercise
+          topicUid: UIComponentsMatrixExercise
+      - name: Tree control
+        topicUid: UIComponentsTreeControl
+        items:
+        - name: TreeControl tag
+          topicUid: UIComponentsTreeControlTag
+        - name: Advanced hierarchy
+          topicUid: UIComponentsTreeControlAdvancedHierarchy
+        - name: Alarm bubble-Up
+          topicUid: UIComponentsTreeControlAlarmBubbleUp
+        - name: Icons
+          topicUid: UIComponentsTreeControlIcons
+        - name: M:N relations
+          topicUid: UIComponentsTreeControlMNRelations
+    - name: Connections
+      topicUid: Connections
+      items:
+      - name: Introduction
+        topicUid: ConnectionsIntroduction
+      - name: Virtual
+        topicUid: ConnectionsVirtual
+      - name: SNMP
+        topicUid: ConnectionsSnmp
+        items:
+        - name: Introduction
+          topicUid: ConnectionsSnmpIntroduction
+        - name: Retrieving a variable
+          topicUid: ConnectionsSnmpRetrievingAVariable
+        - name: Retrieving multiple variables
+          topicUid: ConnectionsSnmpRetrievingMultipleVariables
+        - name: Dynamically retrieving a value
+          topicUid: ConnectionsSnmpDynamicallyRetrievingAVariable
+        - name: Altering a variable
+          topicUid: ConnectionsSnmpAlteringAVariable
+        - name: Altering multiple variables
+          topicUid: ConnectionsSnmpAlteringMultipleVariables
+        - name: Retrieving tables
+          topicUid: ConnectionsSnmpRetrievingTables
+        - name: Altering a table cell
+          topicUid: ConnectionsSnmpAlteringATableCell
+        - name: Traps
+          topicUid: ConnectionsSnmpTraps
+        - name: Ping groups
+          topicUid: ConnectionsSnmpPingGroups
+        - name: Bitrate calculations
+          topicUid: ConnectionsSnmpBitRateCalculations
+        - name: Protocol inner workings
+          topicUid: ConnectionsSnmpProtocolInnterWorkings
+        - name: Exercise
+          topicUid: ConnectionsSnmpExercise
+      - name: Serial
+        topicUid: ConnectionsSerial
+        items:
+        - name: Introduction
+          topicUid: ConnectionsSerialIntroduction
+        - name: Creating commands and responses
+          topicUid: ConnectionsSerialCreatingCommandsAndResponses
+        - name: Pairs
+          topicUid: ConnectionsSerialPairs
+        - name: Break signal
+          topicUid: ConnectionsSerialBreakSignal
+        - name: Displaying bytes as numbers
+          topicUid: ConnectionsSerialDisplayingBytesAsNumbers
+        - name: Ping pair
+          topicUid: ConnectionsSerialPingPair
+        - name: Serially polling different devices from a single element
+          topicUid: ConnectionsSerialSeriallyPollingDevices
+        - name: Serial single
+          topicUid: ConnectionsSerialSerialSingle
+        - name: Dynamic polling
+          topicUid: ConnectionsSerialDynamicPolling
+        - name: Secure Shell (SSH)
+          topicUid: ConnectionsSerialSecureShell
+        - name: SSL/TLS encryption
+          topicUid: ConnectionsSerialSslTls
+        - name: Socket buffer
+          topicUid: ConnectionsSerialSocketBuffer
+        - name: Exercise
+          topicUid: ConnectionsSerialExercise
+      - name: Smart serial
+        topicUid: ConnectionsSmartSerial
+        items:
+        - name: Introduction
+          topicUid: ConnectionsSmartSerialIntroduction
+        - name: Data forwarding from SLPort to SLProtocol
+          topicUid: ConnectionsSmartSerialDataForwarding
+        - name: Configuring a smart-serial connection as a server
+          topicUid: ConnectionsSmartSerialServer
+        - name: Smart-serial behavior after a physical device disconnect
+          topicUid: ConnectionsSmartSerialBehaviorAfterDisconnect
+        - name: Logging incoming data
+          topicUid: ConnectionsSmartSerialLogging
+      - name: HTTP
+        topicUid: ConnectionsHttp
+        items:
+        - name: Introduction
+          topicUid: ConnectionsHttpIntroduction
+        - name: Implementing HTTP communication
+          topicUid: ConnectionsHttpImplementing
+        - name: Element configuration
+          topicUid: ConnectionsHttpElementConfiguration
+        - name: Dynamically changing the IP and port
+          topicUid: ConnectionsHttpDynamicIp
+        - name: HTTPS
+          topicUid: ConnectionsHttpHttps
+        - name: Parsing HTML
+          topicUid: ConnectionsHttpParsingHtml
+        - name: Parsing JSON
+          topicUid: ConnectionsHttpParsingJson
+        - name: Ping group
+          topicUid: ConnectionsHttpPingGroup
+        - name: Examples
+          topicUid: ConnectionsHttpExamples
+      - name: WebSockets
+        topicUid: ConnectionsWebSockets
+        items:
+        - name: Introduction
+          topicUid: ConnectionsWebSocketsIntroduction
+        - name: Implementing a WebSocket
+          topicUid: ConnectionsWebSocketsImplementation
+        - name: Connection status
+          topicUid: ConnectionsWebSocketsConnectionStatus
+        - name: Communication
+          topicUid: ConnectionsWebSocketsCommunication
+        - name: Dynamically changing the WebSocket IP and port
+          topicUid: ConnectionsWebSocketsDynamicIp
+      - name: Ping group
+        topicUid: ConnectionsPingGroup
+      - name: Service
+        topicUid: ConnectionsService
+      - name: Redundant polling
+        topicUid: ConnectionsRedundantPolling
+      - name: Dynamically changing a connection of a group
+        topicUid: ConnectionsDynamicallyChangingGroupConnection
+    - name: Monitoring
+      topicUid: Monitoring
+      items:
+      - name: Alarming
+        topicUid: MonitoringAlarming
+      - name: Trending
+        topicUid: MonitoringTrending
+    - name: Advanced functionality
+      topicUid: AdvancedFunctionality
+      items:
+      - name: View tables
+        topicUid: AdvancedViewTables
+        items:
+        - name: View tables in the same element
+          topicUid: AdvancedViewTablesSameElement
+        - name: View tables from other elements
+          topicUid: AdvancedViewTablesOtherElement
+        - name: Forcing a (direct) view table refresh from within a protocol
+          topicUid: AdvancedViewTablesForcingARefresh
+      - name: Logger tables
+        topicUid: AdvancedLoggerTables
+        items:
+        - name: Implementing logger tables
+          topicUid: AdvancedLoggerTablesImplementation
+        - name: Querying logger tables
+          topicUid: AdvancedLoggerTablesQuerying
+        - name: Extending logger tables
+          topicUid: AdvancedLoggerTablesExtending
+        - name: Defining a logger table of type DirectConnection with a primary key
+          topicUid: AdvancedLoggerTablesDefiningDirectConnectionTable
+      - name: Dynamic Virtual Elements
+        topicUid: AdvancedDVEs
+        items: 
+        - name: Implementing DVE functionality
+          topicUid: AdvancedDVEsImplementation
+        - name: Export rules
+          topicUid: AdvancedDVEsExportRules
+        - name: Views
+          topicUid: AdvancedDVEsViews
+        - name: Timeout state
+          topicUid: AdvancedDVEsTimeoutState
+        - name: Severity state column
+          topicUid: AdvancedDVEsSeverityState
+        - name: Toggling DVE creation
+          topicUid: AdvancedDVEsTogglingCreation
+        - name: Remarks
+          topicUid: AdvancedDVEsRemarks
+        - name: Exercise
+          topicUid: AdvancedDVEsExercise
+      - name: DataMiner Connectivity Framework
+        topicUid: AdvancedDcf
+        items:
+        - name: Interfaces and connections
+          topicUid: AdvancedDcfInterfacesAndConnections
+        - name: Defining interfaces
+          topicUid: AdvancedDcfDefiningInterfaces
+        - name: DCF and matrices
+          topicUid: AdvancedDcfMatrices
+        - name: DataMiner DCF tables
+          topicUid: AdvancedDcfTables
+        - name: DCF in the DataMiner class library
+          topicUid: AdvancedDcfDataMinerClassLibrary
+        - name: DCF Helper class
+          topicUid: AdvancedDcfHelper
+        - name: DCF best practices
+          topicUid: AdvancedDcfBestPractices
+      - name: Inter-element communication
+        topicUid: AdvancedInterElementCommunication
+        items:
+        - name: Element connections
+          topicUid: AdvancedInterElementCommunicationElementConnections
+        - name: Data distribution
+          topicUid: AdvancedInterElementCommunicationDataDistribution
+        - name: Parameter replication
+          topicUid: AdvancedInterElementCommunicationParameterReplication
+        - name: Class Library
+          topicUid: AdvancedInterElementCommunicationClassLibrary
+      - name: Multi-threading
+        topicUid: AdvancedMultiThreading
+      - name: Multi-threaded timers
+        topicUid: AdvancedMultiThreadedTimers
+        items:
+        - name: Introduction
+          topicUid: AdvancedMultiThreadedTimersIntroduction
+        - name: SNMP
+          topicUid: AdvancedMultiThreadedTimersSnmp
+        - name: Serial
+          topicUid: AdvancedMultiThreadedTimersSerial
+        - name: SSH
+          topicUid: AdvancedMultiThreadedTimersSsh
+        - name: HTTP
+          topicUid: AdvancedMultiThreadedTimersHttp
+      - name: Custom properties
+        topicUid: AdvancedCustomProperties
+        items:
+        - name: Custom element properties
+          topicUid: AdvancedCustomPropertiesCustomElementProperties
+        - name: Editing custom properties
+          topicUid: AdvancedCustomPropertiesEditingCustomProperties
+      - name: DataMiner data persistence
+        topicUid: AdvancedDataMinerDataPersistence
+        items:
+        - name: Standalone parameters
+          topicUid: AdvancedDataMinerDataPersistenceStandaloneParameters
+        - name: Persisting tables
+          topicUid: AdvancedDataMinerDataPersistencePersistingTables
+        - name: DataMiner general database - RDBMS
+          topicUid: AdvancedDataMinerDataPersistenceRdbms
+        - name: DataMiner general database - NoSQL database - Cassandra
+          topicUid: AdvancedDataMinerDataPersistenceNoSqlCassandra
+      - name: DataMiner Mediation Layer
+        topicUid: AdvancedDataMinerMediationLayer
+        items:
+        - name: Introduction
+          topicUid: AdvancedDataMinerMediationLayerIntroduction
+        - name: Creating a base protocol
+          topicUid: AdvancedDataMinerMediationLayerCreatingABaseProtocol
+        - name: Linking a device protocol to a base protocol
+          topicUid: AdvancedDataMinerMediationLayerLinking
+        - name: Base protocol hierarchies
+          topicUid: AdvancedDataMinerMediationLayerBaseProtocolHierarchies
+        - name: Linking parameters
+          topicUid: AdvancedDataMinerMediationLayerLinkingParameters
+        - name: Syntax of Mediation/LinkTo tags
+          topicUid: AdvancedDataMinerMediationLayerSyntaxOfMediationLinkToTags
+        - name: Linking table parameters
+          topicUid: AdvancedDataMinerMediationLayerLinkingTableParameters
+        - name: Data pages
+          topicUid: AdvancedDataMinerMediationLayerDataPages
+      - name: EPM integration in Cube
+        topicUid: AdvancedEpm
+        items:
+        - name: Launching EPM objects by clicking buttons in Data Display table cells
+          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+    - name: Questions & Answers
+      topicUid: QuestionsAndAnswers
+  - name: Automation scripts
+    items:
+    - name: Actions
+      topicUid:  AutomationActions
+    - name: UIBlockType overview
+      topicUid:  UIBlockTypesOverview
+  - name: Class Library
+    items:
+    - name: Introduction
+      topicUid:  ClassLibraryIntroduction
+    - name: Lazy loading
+      topicUid:  ClassLibraryLazyLoading
+    - name: InterApp classes
+      topicUid:  ClassLibraryInterAppClasses
+    - name: Monitors
+      topicUid:  ClassLibraryMonitors
+      items:
+      - name: Requirements
+        topicUid:  ClassLibraryMonitorsRequirements
+      - name: Getting started
+        topicUid:  ClassLibraryMonitorsGettingStarted
+      - name: Cleanup rules
+        topicUid:  ClassLibraryMonitorsCleanupRules
+      - name: Starting a started monitor
+        topicUid:  ClassLibraryMonitorsStartingAStartedMonitor
+      - name: Stopping a stopped monitor
+        topicUid:  ClassLibraryMonitorsStoppingAStoppedMonitor
+    - name: Examples
+      topicUid:  ClassLibraryExamples
 - name: DataMiner Protocol Development Guidelines
   topicUid: CodingGuidelines
   items:

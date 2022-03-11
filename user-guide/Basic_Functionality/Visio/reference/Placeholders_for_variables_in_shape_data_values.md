@@ -242,6 +242,9 @@ This placeholder can only be used inside another placeholder, or in a URL for a 
 
 - The primary IP address
 
+> [!NOTE]
+> From DataMiner 10.2.0/10.2.3 onwards, the URI scheme of the DMA (i.e. HTTP or HTTPS) is automatically applied when this placeholder is resolved, unless the placeholder does not represent the URI host (e.g. when it is used as a query argument).
+
 > [!TIP]
 > See also: [Special placeholders that can be used inside a URL](xref:Linking_a_shape_to_a_webpage#special-placeholders-that-can-be-used-within-a-url)
 
@@ -552,7 +555,7 @@ For this purpose, the following basic syntax is used:
 
 ### \[Resource:...\]
 
-From DataMiner 9.6.8 onwards, this placeholder can be used to retrieve a property of a resource, which can be the name of the resource, the ID of the element linked to the resource, or a custom property.
+From DataMiner 9.6.8 onwards, this placeholder can be used to retrieve a property of a resource, which can be the name of the resource, the ID of the element linked to the resource, a custom property, etc.
 
 For this purpose, the following syntax must be used:
 
@@ -572,6 +575,12 @@ This syntax consists of the following components:
 
   - **Property=*\<propName>***: The value of a custom property of the resource. The name of that custom property must be specified in \<propName>, e.g. *Property=State*.
 
+  - **InUse**: From DataMiner 10.3.0/10.2.3 onwards, you can specify *InUse* to make the placeholder indicate whether a resource is being used in any bookings (with the result "true" or "false"). This check is performed when the visual overview is opened or when the GUID or the resource itself is changed. Note that using this placeholder may affect performance in case the system contains a large number of bookings.
+
+  ```txt
+  [Resource:<GUID>,InUse]
+  ```
+
 ### \[ServiceDefinition:\]
 
 Full syntax: *\[ServiceDefinition:*\<ServiceDefinitionID>*,*\<Property>*\]*
@@ -589,6 +598,21 @@ For example:
 ```txt
 [ServiceDefinition:[reservation:[this service],ServiceDefinitionID],Actions]
 ```
+
+From DataMiner 10.2.0/10.2.3 onwards, you can pass a node label in this placeholder to look up a node ID. For example:
+
+```txt
+[ServiceDefinition:aaaa-bbb-ccc-ddd,NodeID|NodeLabel=Primary Receiver]
+```
+
+You can for instance use this to find a resource by passing a label of a service definition node. For example:
+
+```txt
+[Reservation:[this service],ResourceID|NodeID=[ServiceDefinition:aaaa-bbb-ccc-ddd,NodeID|NodeLabel=Primary Receiver]]
+```
+
+> [!NOTE]
+> Passing a label of a service definition node is preferable over passing the service definition node ID, as this ID is susceptible to change.
 
 ### \[servicedefinitionfilter\]
 

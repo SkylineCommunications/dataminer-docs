@@ -203,8 +203,7 @@ internal static void GlowPackageReady(SLProtocol protocol, byte[] framedPackage
 }
 ```
 
-> [!TIP]
-> See also:
-> -  [Logic](xref:Logic)
-> -  [Smart serial](xref:Smart_serial)
->
+## See also
+
+- [Logic](xref:Logic)
+- [Smart serial](xref:ConnectionsSmartSerial)

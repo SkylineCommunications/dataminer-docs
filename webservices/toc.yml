@@ -1,0 +1,1272 @@
+- name: Web Services (v1)
+  topicUid: WS_v1
+  items:
+    - name: About the Web Services (v1)
+      topicUid: WS_About_v1
+      items:
+        - name: Using the Web Services (v1)
+          topicUid: Using_the_Web_Services_v1
+        - name: Interfaces and WSDL files
+          topicUid: Interfaces_and_WSDL_files
+        - name: Examples
+          topicUID: WS_v1_examples
+    - name: Methods (v1)
+      topicUid: WS_Methods_v1_overview
+      items:
+        - name: ActivateElement
+          topicUid: ActivateElementv1
+        - name: AddBookingAttachment
+          topicUid: AddBookingAttachment
+        - name: AddCommentToAlarm
+          topicUid: AddCommentToAlarm
+        - name: AddElementToPinned
+          topicUid: AddElementToPinned
+        - name: AddElementToRecent
+          topicUid: AddElementToRecent
+        - name: AddElementToView
+          topicUid: AddElementToView
+        - name: AddElementsToRecent
+          topicUid: AddElementsToRecent
+        - name: AddJobAttachment
+          topicUid: AddJobAttachment
+        - name: AddOrUpdateJobsSectionDefinitionField
+          topicUid: AddOrUpdateJobsSectionDefinitionField
+        - name: AddServiceToPinned
+          topicUid: AddServiceToPinned
+        - name: AddServiceToRecent
+          topicUid: AddServiceToRecent
+        - name: AddServicesToRecent
+          topicUid: AddServicesToRecent
+        - name: AddTicketAttachment
+          topicUid: AddTicketAttachment
+        - name: AddTicketField
+          topicUid: AddTicketField
+        - name: AddTicketType
+          topicUid: AddTicketType
+        - name: AddViewToPinned
+          topicUid: AddViewToPinned
+        - name: AddViewToRecent
+          topicUid: AddViewToRecent
+        - name: AddViewsToRecent
+          topicUid: AddViewsToRecent
+        - name: AddVisioFile
+          topicUid: AddVisioFile
+        - name: AddVisioFileToProtocol
+          topicUid: AddVisioFileToProtocol
+        - name: AssignAlarmTemplate
+          topicUid: AssignAlarmTemplate
+        - name: AssignVisioFileToProtocol
+          topicUid: AssignVisioFileToProtocol
+        - name: AssignVisioFileToService
+          topicUid: AssignVisioFileToService
+        - name: AssignVisioFileToView
+          topicUid: AssignVisioFileToView
+        - name: CancelAsyncRequest
+          topicUid: CancelAsyncRequest
+        - name: ChangePassword
+          topicUid: ChangePassword
+        - name: ClearRecents
+          topicUid: ClearRecents
+        - name: ConnectApp
+          topicUid: ConnectApp
+        - name: ConnectAppAndInfo
+          topicUid: ConnectAppAndInfo
+        - name: ConnectAppAndInfoStep2
+          topicUid: ConnectAppAndInfoStep2
+        - name: ConnectAppAndInfoUsingTicket
+          topicUid: ConnectAppAndInfoUsingTicket
+        - name: ConnectMatrixCrosspoint
+          topicUid: ConnectMatrixCrosspoint
+        - name: ConnectMatrixCrosspointForLabels
+          topicUid: ConnectMatrixCrosspointForLabels
+        - name: ContinueAutomationScript
+          topicUid: ContinueAutomationScript
+        - name: CreateAlarmTemplate
+          topicUid: CreateAlarmTemplate
+        - name: CreateElement
+          topicUid: CreateElement
+        - name: CreateJob
+          topicUid: CreateJob
+        - name: CreateJobsDomain
+          topicUid: CreateJobsDomain
+        - name: CreateJobsSectionDefinition
+          topicUid: CreateJobsSectionDefinition
+        - name: CreateJobTemplate
+          topicUid: CreateJobTemplate
+        - name: CreateNoteForElement
+          topicUid: CreateNoteForElement
+        - name: CreateNoteForService
+          topicUid: CreateNoteForService
+        - name: CreateNoteForView
+          topicUid: CreateNoteForView
+        - name: CreateSLAElement
+          topicUid: CreateSLAElement
+        - name: CreateService
+          topicUid: CreateService
+        - name: CreateServiceByApplyingServiceTemplate
+          topicUid: CreateServiceByApplyingServiceTemplate
+        - name: CreateServiceTemplate
+          topicUid: CreateServiceTemplate
+        - name: CreateTicket
+          topicUid: CreateTicket
+        - name: CreateView
+          topicUid: CreateView
+        - name: DeleteAlarmTemplate
+          topicUid: DeleteAlarmTemplate
+        - name: DeleteBookingAttachments
+          topicUid: DeleteBookingAttachments
+        - name: DeleteElement
+          topicUid: DeleteElement
+        - name: DeleteJob
+          topicUid: DeleteJob
+        - name: DeleteJobAttachments
+          topicUid: DeleteJobAttachments
+        - name: DeleteJobs
+          topicUid: DeleteJobs
+        - name: DeleteJobsDomain
+          topicUid: DeleteJobsDomain
+        - name: DeleteJobsSectionDefinition
+          topicUid: DeleteJobsSectionDefinition
+        - name: DeleteJobsSectionDefinitionField
+          topicUid: DeleteJobsSectionDefinitionField
+        - name: DeleteJobsSectionDefinitionFromDomain
+          topicUid: DeleteJobsSectionDefinitionFromDomain
+        - name: DeleteJobTemplate
+          topicUid: DeleteJobTemplate
+        - name: DeleteRedundancyGroup
+          topicUid: DeleteRedundancyGroup
+        - name: DeleteService
+          topicUid: DeleteService
+        - name: DeleteServiceTemplate
+          topicUid: DeleteServiceTemplate
+        - name: DeleteTicketAttachments
+          topicUid: DeleteTicketAttachments
+        - name: DeleteTicketField
+          topicUid: DeleteTicketField
+        - name: DeleteTicketType
+          topicUid: DeleteTicketType
+        - name: DeleteView
+          topicUid: DeleteView
+        - name: DeleteVisioFile
+          topicUid: DeleteVisioFile
+        - name: DeleteVisioFileFromProtocol
+          topicUid: DeleteVisioFileFromProtocol
+        - name: DetachAutomationScript
+          topicUid: DetachAutomationScript
+        - name: DetachServiceFromServiceTemplate
+          topicUid: DetachServiceFromServiceTemplate
+        - name: DuplicateJobsDomain
+          topicUid: DuplicateJobsDomain
+        - name: DuplicateJobsSectionDefinition
+          topicUid: DuplicateJobsSectionDefinition
+        - name: EditElement
+          topicUid: EditElement
+        - name: EditSLAElement
+          topicUid: EditSLAElement
+        - name: EditService
+          topicUid: EditService
+        - name: EditTicketField
+          topicUid: EditTicketField
+        - name: EditTicketFieldOrder
+          topicUid: EditTicketFieldOrder
+        - name: EditTicketType
+          topicUid: EditTicketType
+        - name: EditView
+          topicUid: EditView
+        - name: ExecuteAutomationScript
+          topicUid: ExecuteAutomationScript
+        - name: ExecuteAutomationScriptWithOutput
+          topicUid: ExecuteAutomationScriptWithOutput
+        - name: ExecuteGenericAsyncRequest
+          topicUid: ExecuteGenericAsyncRequest
+        - name: ExecuteVisioShapeAction
+          topicUid: ExecuteVisioShapeAction
+        - name: GenerateTicketBasedOnAlarm
+          topicUid: GenerateTicketBasedOnAlarm
+        - name: GetActiveAlarmCountForElement
+          topicUid: GetActiveAlarmCountForElement
+        - name: GetActiveAlarmCountForElementV2
+          topicUid: GetActiveAlarmCountForElementV2
+        - name: GetActiveAlarmCountForService
+          topicUid: GetActiveAlarmCountForService
+        - name: GetActiveAlarmCountForServiceV2
+          topicUid: GetActiveAlarmCountForServiceV2
+        - name: GetActiveAlarmCountForView
+          topicUid: GetActiveAlarmCountForView
+        - name: GetActiveAlarmCountForViewV2
+          topicUid: GetActiveAlarmCountForViewV2
+        - name: GetActiveAlarmPagesForElement
+          topicUid: GetActiveAlarmPagesForElement
+        - name: GetActiveAlarmPagesForService
+          topicUid: GetActiveAlarmPagesForService
+        - name: GetActiveAlarmPagesForView
+          topicUid: GetActiveAlarmPagesForView
+        - name: GetActiveAlarms
+          topicUid: GetActiveAlarms
+        - name: GetActiveAlarmsCached
+          topicUid: GetActiveAlarmsCached
+        - name: GetActiveAlarmsCount
+          topicUid: GetActiveAlarmsCount
+        - name: GetActiveAlarmsCountV2
+          topicUid: GetActiveAlarmsCountV2
+        - name: GetActiveAlarmsForElement
+          topicUid: GetActiveAlarmsForElement
+        - name: GetActiveAlarmsForElementCached
+          topicUid: GetActiveAlarmsForElementCached
+        - name: GetActiveAlarmsForElementSorted
+          topicUid: GetActiveAlarmsForElementSorted
+        - name: GetActiveAlarmsForElementSortedV2
+          topicUid: GetActiveAlarmsForElementSortedV2
+        - name: GetActiveAlarmsForElementV2
+          topicUid: GetActiveAlarmsForElementV2
+        - name: GetActiveAlarmsForService
+          topicUid: GetActiveAlarmsForService
+        - name: GetActiveAlarmsForServiceCached
+          topicUid: GetActiveAlarmsForServiceCached
+        - name: GetActiveAlarmsForServiceSorted
+          topicUid: GetActiveAlarmsForServiceSorted
+        - name: GetActiveAlarmsForServiceSortedV2
+          topicUid: GetActiveAlarmsForServiceSortedV2
+        - name: GetActiveAlarmsForServiceV2
+          topicUid: GetActiveAlarmsForServiceV2
+        - name: GetActiveAlarmsForView
+          topicUid: GetActiveAlarmsForView
+        - name: GetActiveAlarmsForViewCached
+          topicUid: GetActiveAlarmsForViewCached
+        - name: GetActiveAlarmsForViewSorted
+          topicUid: GetActiveAlarmsForViewSorted
+        - name: GetActiveAlarmsForViewSortedV2
+          topicUid: GetActiveAlarmsForViewSortedV2
+        - name: GetActiveAlarmsForViewV2
+          topicUid: GetActiveAlarmsForViewV2
+        - name: GetActiveAlarmsSorted
+          topicUid: GetActiveAlarmsSorted
+        - name: GetActiveAlarmsSortedV2
+          topicUid: GetActiveAlarmsSortedV2
+        - name: GetActiveAlarmsV2
+          topicUid: GetActiveAlarmsV2
+        - name: GetActiveTickets
+          topicUid: GetActiveTickets
+        - name: GetActiveTicketsV2
+          topicUid: GetActiveTicketsV2
+        - name: GetAffectedJobDomains
+          topicUid: GetAffectedJobDomains
+        - name: GetAffectedTickets
+          topicUid: GetAffectedTickets
+        - name: GetAggregationDataTree
+          topicUid: GetAggregationDataTree
+        - name: GetAggregationRules
+          topicUid: GetAggregationRules
+        - name: GetAlarmCountForElement
+          topicUid: GetAlarmCountForElement
+        - name: GetAlarmCountForParameter
+          topicUid: GetAlarmCountForParameter
+        - name: GetAlarmCountForService
+          topicUid: GetAlarmCountForService
+        - name: GetAlarmDetails
+          topicUid: GetAlarmDetails
+        - name: GetAlarmHistory
+          topicUid: GetAlarmHistory
+        - name: GetAlarmPages
+          topicUid: GetAlarmPages
+        - name: GetAlarmPageUpdates
+          topicUid: GetAlarmPageUpdates
+        - name: GetAlarmPageUpdatesV2
+          topicUid: GetAlarmPageUpdatesV2
+        - name: GetAlarmPagesV2
+          topicUid: GetAlarmPagesV2
+        - name: GetAlarmPageWithAlarms
+          topicUid: GetAlarmPageWithAlarms
+        - name: GetAlarmPageWithAlarmsV2
+          topicUid: GetAlarmPageWithAlarmsV2
+        - name: GetAlarms
+          topicUid: GetAlarms
+        - name: GetAlarmStateForElement
+          topicUid: GetAlarmStateForElement
+        - name: GetAlarmStateForObjects
+          topicUid: GetAlarmStateForObjects
+        - name: GetAlarmStateForView
+          topicUid: GetAlarmStateForView
+        - name: GetAlarmStateForViews
+          topicUid: GetAlarmStateForViews
+        - name: GetAlarmStatesForElement
+          topicUid: GetAlarmStatesForElement
+        - name: GetAlarmStatesForParameter
+          topicUid: GetAlarmStatesForParameter
+        - name: GetAlarmStatesForService
+          topicUid: GetAlarmStatesForService
+        - name: GetAlarmStateTimelineForElement
+          topicUid: GetAlarmStateTimelineForElement
+        - name: GetAlarmStateTimelineForParameter
+          topicUid: GetAlarmStateTimelineForParameter
+        - name: GetAlarmStateTimelineForService
+          topicUid: GetAlarmStateTimelineForService
+        - name: GetAlarmsV2
+          topicUid: GetAlarmsV2
+        - name: GetAllItemsForView
+          topicUid: GetAllItemsForView
+        - name: GetAllRedundancyGroups
+          topicUid: GetAllRedundancyGroups
+        - name: GetAllRedundancyGroupsSorted
+          topicUid: GetAllRedundancyGroupsSorted
+        - name: GetAllViewsForParent
+          topicUid: GetAllViewsForParent
+        - name: GetAnnotationsLinkForElement
+          topicUid: GetAnnotationsLinkForElement
+        - name: GetAnnotationsLinkForService
+          topicUid: GetAnnotationsLinkForService
+        - name: GetAnnotationsLinkForView
+          topicUid: GetAnnotationsLinkForView
+        - name: GetAutomationScript
+          topicUid: GetAutomationScript
+        - name: GetAutomationScripts
+          topicUid: GetAutomationScripts
+        - name: GetAvailableAlarmProperties
+          topicUid: GetAvailableAlarmProperties
+        - name: GetAvailableVisioFiles
+          topicUid: GetAvailableVisioFiles
+        - name: GetAvailableVisioFilesForProtocol
+          topicUid: GetAvailableVisioFilesForProtocol
+        - name: GetBooking
+          topicUid: GetBooking
+        - name: GetBookingAttachmentNames
+          topicUid: GetBookingAttachmentNames
+        - name: GetBookingManagers
+          topicUid: GetBookingManagers
+        - name: GetBookings
+          topicUid: GetBookings
+        - name: GetBookingsForJob
+          topicUid: GetBookingsForJob
+        - name: GetBookingsForJobSection
+          topicUid: GetBookingsForJobSection
+        - name: GetBookingsForService
+          topicUid: GetBookingsForService
+        - name: GetButtonPanelInfo
+          topicUid: GetButtonPanelInfo
+        - name: GetCapacityParametersForResource
+          topicUid: GetCapacityParametersForResource
+        - name: GetClientDefaultTimeZone
+          topicUid: GetClientDefaultTimeZone
+        - name: GetCurrentAlarmByRootID
+          topicUid: GetCurrentAlarmByRootID
+        - name: GetCurrentAlarmByRootIDV2
+          topicUid: GetCurrentAlarmByRootIDV2
+        - name: GetDashboardsForElement
+          topicUid: GetDashboardsForElement
+        - name: GetDashboardsForService
+          topicUid: GetDashboardsForService
+        - name: GetDashboardsForView
+          topicUid: GetDashboardsForView
+        - name: GetDataMinerAgentAlarmColors
+          topicUid: GetDataMinerAgentAlarmColors
+        - name: GetDataMinerAgentTime
+          topicUid: GetDataMinerAgentTime
+        - name: GetDataMinerAgentTimeUTC
+          topicUid: GetDataMinerAgentTimeUTC
+        - name: GetDataMinerAgentsInfo
+          topicUid: GetDataMinerAgentsInfo
+        - name: GetDataMinerAgentsLicenseInfo
+          topicUid: GetDataMinerAgentsLicenseInfo
+        - name: GetDataMinerAgentsStatistics
+          topicUid: GetDataMinerAgentsStatistics
+        - name: GetDataMinerAPIVersion
+          topicUid: GetDataMinerAPIVersion
+        - name: GetDataMinerClusterName
+          topicUid: GetDataMinerClusterName
+        - name: GetDataMinerCustomerInfo
+          topicUid: GetDataMinerCustomerInfo
+        - name: GetDataMinerOEMInfo
+          topicUid: GetDataMinerOEMInfo
+        - name: GetDataMinerProviderInfo
+          topicUid: GetDataMinerProviderInfo
+        - name: GetDataMinerProviderTheme
+          topicUid: GetDataMinerProviderTheme
+        - name: GetDocuments
+          topicUid: GetDocuments
+        - name: GetEditParameter
+          topicUid: GetEditParameter
+        - name: GetEditParameterTable
+          topicUid: GetEditParameterTable
+        - name: GetElement
+          topicUid: GetElement
+        - name: GetElementAlarmCountForView
+          topicUid: GetElementAlarmCountForView
+        - name: GetElementAlarmStatesForView
+          topicUid: GetElementAlarmStatesForView
+        - name: GetElementByName
+          topicUid: GetElementByName
+        - name: GetElementConfiguration
+          topicUid: GetElementConfiguration
+        - name: GetElementIndexPageForService
+          topicUid: GetElementIndexPageForService
+        - name: GetElementIndexPageForView
+          topicUid: GetElementIndexPageForView
+        - name: GetElementsForProtocol
+          topicUid: GetElementsForProtocol
+        - name: GetElementsForService
+          topicUid: GetElementsForService
+        - name: GetElementsForServiceCached
+          topicUid: GetElementsForServiceCached
+        - name: GetElementsForServiceCount
+          topicUid: GetElementsForServiceCount
+        - name: GetElementsForServiceSorted
+          topicUid: GetElementsForServiceSorted
+        - name: GetElementsForView
+          topicUid: GetElementsForView
+        - name: GetElementsForViewCached
+          topicUid: GetElementsForViewCached
+        - name: GetElementsForViewCount
+          topicUid: GetElementsForViewCount
+        - name: GetElementsForViewSorted
+          topicUid: GetElementsForViewSorted
+        - name: GetElementsLiteForView
+          topicUid: GetElementsLiteForView
+        - name: GetElementsLiteForViewSorted
+          topicUid: GetElementsLiteForViewSorted
+        - name: GetFullService
+          topicUid: GetFullService
+        - name: GetGenericAsyncMultiResponse
+          topicUid: GetGenericAsyncMultiResponse
+        - name: GetGenericAsyncResponse
+          topicUid: GetGenericAsyncResponse
+        - name: GetHistogramSnapshotForTableColumnParameter
+          topicUid: GetHistogramSnapshotForTableColumnParameter
+        - name: GetHistogramSnapshotForView
+          topicUid: GetHistogramSnapshotForView
+        - name: GetHistogramTrendDataForParameter
+          topicUid: GetHistogramTrendDataForParameter
+        - name: GetHistoryAlarmsForElement
+          topicUid: GetHistoryAlarmsForElement
+        - name: GetHistoryAlarmsForParameter
+          topicUid: GetHistoryAlarmsForParameter
+        - name: GetHistoryAlarmsForService
+          topicUid: GetHistoryAlarmsForService
+        - name: GetHistoryAlarmsForView
+          topicUid: GetHistoryAlarmsForView
+        - name: GetHistoryTickets
+          topicUid: GetHistoryTickets
+        - name: GetHistoryTicketsV2
+          topicUid: GetHistoryTicketsV2
+        - name: GetInformationEvents
+          topicUid: GetInformationEvents
+        - name: GetInformationEventsSorted
+          topicUid: GetInformationEventsSorted
+        - name: GetInformationEventsSortedV2
+          topicUid: GetInformationEventsSortedV2
+        - name: GetInformationEventsV2
+          topicUid: GetInformationEventsV2
+        - name: GetJob
+          topicUid: GetJob
+        - name: GetJobAttachmentNames
+          topicUid: GetJobAttachmentNames
+        - name: GetJobFieldOptions
+          topicUid: GetJobFieldOptions
+        - name: GetJobs
+          topicUid: GetJobs
+        - name: GetJobsDomain
+          topicUid: GetJobsDomain
+        - name: GetJobsDomains
+          topicUid: GetJobsDomains
+        - name: GetJobsHistory
+          topicUid: GetJobsHistory
+        - name: GetJobsSectionDefinition
+          topicUid: GetJobsSectionDefinition
+        - name: GetJobsSectionDefinitions
+          topicUid: GetJobsSectionDefinitions
+        - name: GetJobsSectionDefinitionV2
+          topicUid: GetJobsSectionDefinitionV2
+        - name: GetJobsSectionDefinitionsV2
+          topicUid: GetJobsSectionDefinitionsV2
+        - name: GetJobSuggestions
+          topicUid: GetJobSuggestions
+        - name: GetJobTemplate
+          topicUid: GetJobTemplate
+        - name: GetJobTemplates
+          topicUid: GetJobTemplates
+        - name: GetJobTemplateV2
+          topicUid: GetJobTemplateV2
+        - name: GetJobTemplatesV2
+          topicUid: GetJobTemplatesV2
+        - name: GetMapConfigs
+          topicUid: GetMapConfigs
+        - name: GetMaskedAlarms
+          topicUid: GetMaskedAlarms
+        - name: GetMaskedAlarmsCached
+          topicUid: GetMaskedAlarmsCached
+        - name: GetMaskedAlarmsForElement
+          topicUid: GetMaskedAlarmsForElementv1
+        - name: GetMaskedAlarmsForElementCached
+          topicUid: GetMaskedAlarmsForElementCached
+        - name: GetMaskedAlarmsForElementSorted
+          topicUid: GetMaskedAlarmsForElementSorted
+        - name: GetMaskedAlarmsForElementSortedV2
+          topicUid: GetMaskedAlarmsForElementSortedV2
+        - name: GetMaskedAlarmsForElementV2
+          topicUid: GetMaskedAlarmsForElementV2
+        - name: GetMaskedAlarmsForService
+          topicUid: GetMaskedAlarmsForService
+        - name: GetMaskedAlarmsForServiceCached
+          topicUid: GetMaskedAlarmsForServiceCached
+        - name: GetMaskedAlarmsForServiceSorted
+          topicUid: GetMaskedAlarmsForServiceSorted
+        - name: GetMaskedAlarmsForServiceSortedV2
+          topicUid: GetMaskedAlarmsForServiceSortedV2
+        - name: GetMaskedAlarmsForServiceV2
+          topicUid: GetMaskedAlarmsForServiceV2
+        - name: GetMaskedAlarmsForView
+          topicUid: GetMaskedAlarmsForView
+        - name: GetMaskedAlarmsForViewCached
+          topicUid: GetMaskedAlarmsForViewCached
+        - name: GetMaskedAlarmsForViewSorted
+          topicUid: GetMaskedAlarmsForViewSorted
+        - name: GetMaskedAlarmsForViewSortedV2
+          topicUid: GetMaskedAlarmsForViewSortedV2
+        - name: GetMaskedAlarmsForViewV2
+          topicUid: GetMaskedAlarmsForViewV2
+        - name: GetMaskedAlarmsSorted
+          topicUid: GetMaskedAlarmsSorted
+        - name: GetMaskedAlarmsSortedV2
+          topicUid: GetMaskedAlarmsSortedV2
+        - name: GetMaskedAlarmsV2
+          topicUid: GetMaskedAlarmsV2
+        - name: GetMatrixConnections
+          topicUid: GetMatrixConnections
+        - name: GetMatrixInputsForOutput
+          topicUid: GetMatrixInputsForOutput
+        - name: GetMatrixInputsForOutputLabel
+          topicUid: GetMatrixInputsForOutputLabel
+        - name: GetMatrixOutputsForInput
+          topicUid: GetMatrixOutputsForInput
+        - name: GetMatrixOutputsForInputLabel
+          topicUid: GetMatrixOutputsForInputLabel
+        - name: GetMeasurementPoints
+          topicUid: GetMeasurementPoints
+        - name: GetMemoryFiles
+          topicUid: GetMemoryFiles
+        - name: GetMonitoredParametersForElement
+          topicUid: GetMonitoredParametersForElement
+        - name: GetMonitoredParametersForService
+          topicUid: GetMonitoredParametersForService
+        - name: GetNearby
+          topicUid: GetNearby
+        - name: GetNotesForElement
+          topicUid: GetNotesForElement
+        - name: GetNotesForService
+          topicUid: GetNotesForService
+        - name: GetNotesForView
+          topicUid: GetNotesForView
+        - name: GetPagesForElement
+          topicUid: GetPagesForElement
+        - name: GetPagesForElementCached
+          topicUid: GetPagesForElementCached
+        - name: GetPagesForElementSorted
+          topicUid: GetPagesForElementSorted
+        - name: GetPagesForProtocol
+          topicUid: GetPagesForProtocol
+        - name: GetPagesForProtocolSorted
+          topicUid: GetPagesForProtocolSorted
+        - name: GetPagesForServiceElement
+          topicUid: GetPagesForServiceElement
+        - name: GetPagesForServiceElementV2
+          topicUid: GetPagesForServiceElementV2
+        - name: GetPagesForServiceSorted
+          topicUid: GetPagesForServiceSorted
+        - name: GetParameter
+          topicUid: GetParameter
+        - name: GetParameterByName
+          topicUid: GetParameterByName
+        - name: GetParameterForService
+          topicUid: GetParameterForService
+        - name: GetParameterForServiceWithDynamicUnits
+          topicUid: GetParameterForServiceWithDynamicUnits
+        - name: GetParameterInfo
+          topicUid: GetParameterInfo
+        - name: GetParameters
+          topicUid: GetParameters
+        - name: GetParametersByPageForElement
+          topicUid: GetParametersByPageForElement
+        - name: GetParametersByPageForElementCached
+          topicUid: GetParametersByPageForElementCached
+        - name: GetParametersByPageForElementSorted
+          topicUid: GetParametersByPageForElementSorted
+        - name: GetParametersByPageForServiceElement
+          topicUid: GetParametersByPageForServiceElement
+        - name: GetParametersForCPEChain
+          topicUid: GetParametersForCPEChain
+        - name: GetParametersForElement
+          topicUid: GetParametersForElement
+        - name: GetParametersForElementFiltered
+          topicUid: GetParametersForElementFiltered
+        - name: GetParametersForElementSorted
+          topicUid: GetParametersForElementSorted
+        - name: GetParametersForProtocol
+          topicUid: GetParametersForProtocol
+        - name: GetParametersForProtocolFiltered
+          topicUid: GetParametersForProtocolFiltered
+        - name: GetParametersForProtocolSorted
+          topicUid: GetParametersForProtocolSorted
+        - name: GetParametersForService
+          topicUid: GetParametersForService
+        - name: GetParametersForServiceSorted
+          topicUid: GetParametersForServiceSorted
+        - name: GetParametersSorted
+          topicUid: GetParametersSorted
+        - name: GetParameterWithDynamicUnits
+          topicUid: GetParameterWithDynamicUnits
+        - name: GetPinned
+          topicUid: GetPinned
+        - name: GetPropertiesForElement
+          topicUid: GetPropertiesForElement
+        - name: GetPropertiesForService
+          topicUid: GetPropertiesForService
+        - name: GetPropertiesForView
+          topicUid: GetPropertiesForView
+        - name: GetProtocolInfoForElement
+          topicUid: GetProtocolInfoForElement
+        - name: GetProtocolsForView
+          topicUid: GetProtocolsForView
+        - name: GetRecent
+          topicUid: GetRecent
+        - name: GetRedundancyGroup
+          topicUid: GetRedundancyGroup
+        - name: GetRedundancyGroupsForView
+          topicUid: GetRedundancyGroupsForView
+        - name: GetRedundancyGroupsLiteForView
+          topicUid: GetRedundancyGroupsLiteForView
+        - name: GetRegionalSettings
+          topicUid: GetRegionalSettings
+        - name: GetResource
+          topicUid: GetResource
+        - name: GetResourceCapacityTrend
+          topicUid: GetResourceCapacityTrend
+        - name: GetResources
+          topicUid: GetResources
+        - name: GetSLAElementConfiguration
+          topicUid: GetSLAElementConfiguration
+        - name: GetScatterDataForElements
+          topicUid: GetScatterDataForElements
+        - name: GetScatterDataForServices
+          topicUid: GetScatterDataForServices
+        - name: GetSearchItems
+          topicUid: GetSearchItems
+        - name: GetSecurityInfo
+          topicUid: GetSecurityInfo
+        - name: GetService
+          topicUid: GetService
+        - name: GetServiceAlarmCountForView
+          topicUid: GetServiceAlarmCountForView
+        - name: GetServiceAlarmStatesForView
+          topicUid: GetServiceAlarmStatesForView
+        - name: GetServiceByName
+          topicUid: GetServiceByName
+        - name: GetServiceConfiguration
+          topicUid: GetServiceConfiguration
+        - name: GetServiceDefinition
+          topicUid: GetServiceDefinition
+        - name: GetServiceDefinitions
+          topicUid: GetServiceDefinitions
+        - name: GetServiceParameters
+          topicUid: GetServiceParameters
+        - name: GetServicesForFilter
+          topicUid: GetServicesForFilter
+        - name: GetServicesForServiceTemplate
+          topicUid: GetServicesForServiceTemplate
+        - name: GetServicesForServiceTemplateSorted
+          topicUid: GetServicesForServiceTemplateSorted
+        - name: GetServicesForView
+          topicUid: GetServicesForView
+        - name: GetServicesForViewSorted
+          topicUid: GetServicesForViewSorted
+        - name: GetServicesLiteForView
+          topicUid: GetServicesLiteForView
+        - name: GetServiceTemplate
+          topicUid: GetServiceTemplate
+        - name: GetSnmpManagers
+          topicUid: GetSnmpManagers
+        - name: GetSpectrumBuffersByMonitorId
+          topicUid: GetSpectrumBuffersByMonitorId
+        - name: GetSpectrumMonitors
+          topicUid: GetSpectrumMonitors
+        - name: GetSpectrumParameters
+          topicUid: GetSpectrumParameters
+        - name: GetSpectrumPresets
+          topicUid: GetSpectrumPresets
+        - name: GetStateForElement
+          topicUid: GetStateForElement
+        - name: GetTableForParameter
+          topicUid: GetTableForParameter
+        - name: GetTableForParameterCached
+          topicUid: GetTableForParameterCached
+        - name: GetTableForParameterFiltered
+          topicUid: GetTableForParameterFiltered
+        - name: GetTableForParameterSorted
+          topicUid: GetTableForParameterSorted
+        - name: GetTableForParameterV2
+          topicUid: GetTableForParameterV2
+        - name: GetTableRowForParameter
+          topicUid: GetTableRowForParameter
+        - name: GetThirdPartyNotices
+          topicUid: GetThirdPartyNotices
+        - name: GetTicket
+          topicUid: GetTicket
+        - name: GetTicketAttachmentNames
+          topicUid: GetTicketAttachmentNames
+        - name: GetTicketFields
+          topicUid: GetTicketFields
+        - name: GetTicketType
+          topicUid: GetTicketType
+        - name: GetTicketTypes
+          topicUid: GetTicketTypes
+        - name: GetTicketV2
+          topicUid: GetTicketV2
+        - name: GetTopologyChainsForCPE
+          topicUid: GetTopologyChainsForCPE
+        - name: GetTopologyFieldsForCPEChain
+          topicUid: GetTopologyFieldsForCPEChain
+        - name: GetTrendDataCustomTimespanForParameter
+          topicUid: GetTrendDataCustomTimespanForParameter
+        - name: GetTrendDataForParameter
+          topicUid: GetTrendDataForParameter
+        - name: GetTrendDataForParameterByName
+          topicUid: GetTrendDataForParameterByName
+        - name: GetTrendDataForTableParameter
+          topicUid: GetTrendDataForTableParameter
+        - name: GetTrendDataForTableParameterV2
+          topicUid: GetTrendDataForTableParameterV2
+        - name: GetTrendDataSimplifiedForParameter
+          topicUid: GetTrendDataSimplifiedForParameter
+        - name: GetTrendStatisticsForParameter
+          topicUid: GetTrendStatisticsForParameter
+        - name: GetTrendStatisticsForService
+          topicUid: GetTrendStatisticsForService
+        - name: GetUserGroups
+          topicUid: GetUserGroups
+        - name: GetUsers
+          topicUid: GetUsers
+        - name: GetValuesForCPETopologyField
+          topicUid: GetValuesForCPETopologyField
+        - name: GetValuesForCPETopologyFieldSorted
+          topicUid: GetValuesForCPETopologyFieldSorted
+        - name: GetValuesForCPETopologyFieldV2
+          topicUid: GetValuesForCPETopologyFieldV2
+        - name: GetView
+          topicUid: GetView
+        - name: GetViewByName
+          topicUid: GetViewByName
+        - name: GetViewsForParent
+          topicUid: GetViewsForParent
+        - name: GetViewsForParentCached
+          topicUid: GetViewsForParentCached
+        - name: GetViewsForParentCount
+          topicUid: GetViewsForParentCount
+        - name: GetViewsForParentSorted
+          topicUid: GetViewsForParentSorted
+        - name: GetViewsTreeForElement
+          topicUid: GetViewsTreeForElement
+        - name: GetViewsTreeForView
+          topicUid: GetViewsTreeForView
+        - name: GetViewTree
+          topicUid: GetViewTree
+        - name: GetVisioForCPE
+          topicUid: GetVisioForCPE
+        - name: GetVisioForElement
+          topicUid: GetVisioForElement
+        - name: GetVisioForElementCached
+          topicUid: GetVisioForElementCached
+        - name: GetVisioForService
+          topicUid: GetVisioForService
+        - name: GetVisioForServiceCached
+          topicUid: GetVisioForServiceCached
+        - name: GetVisioForView
+          topicUid: GetVisioForView
+        - name: GetVisioForViewCached
+          topicUid: GetVisioForViewCached
+        - name: GetVisioPagesForCPE
+          topicUid: GetVisioPagesForCPE
+        - name: GetVisioPagesForElement
+          topicUid: GetVisioPagesForElement
+        - name: GetVisioPagesForService
+          topicUid: GetVisioPagesForService
+        - name: GetVisioPagesForView
+          topicUid: GetVisioPagesForView
+        - name: GetVisioThumbnailForElement
+          topicUid: GetVisioThumbnailForElement
+        - name: GetVisioThumbnailForService
+          topicUid: GetVisioThumbnailForService
+        - name: GetVisioThumbnailForView
+          topicUid: GetVisioThumbnailForView
+        - name: IsConnectionAlive
+          topicUid: IsConnectionAlive
+        - name: IsFeatureAvailable
+          topicUid: IsFeatureAvailable
+        - name: IsGenericAsyncResponseAvailable
+          topicUid: IsGenericAsyncResponseAvailable
+        - name: LoadSpectrumPreset
+          topicUid: LoadSpectrumPreset
+        - name: LogOut
+          topicUid: LogOut
+        - name: MaskAlarm
+          topicUid: MaskAlarm
+        - name: MaskElement
+          topicUid: MaskElement
+        - name: PauseElement
+          topicUid: PauseElement
+        - name: ReapplyService
+          topicUid: ReapplyService
+        - name: ReconnectAppAndInfo
+          topicUid: ReconnectAppAndInfo
+        - name: ReleaseOwnershipAlarm
+          topicUid: ReleaseOwnershipAlarm
+        - name: RemoveElementFromPinned
+          topicUid: RemoveElementFromPinned
+        - name: RemoveElementFromView
+          topicUid: RemoveElementFromView
+        - name: RemoveNoteFromElement
+          topicUid: RemoveNoteFromElement
+        - name: RemoveNoteFromService
+          topicUid: RemoveNoteFromService
+        - name: RemoveNoteFromView
+          topicUid: RemoveNoteFromView
+        - name: RemoveServiceFromPinned
+          topicUid: RemoveServiceFromPinned
+        - name: RemoveTicket
+          topicUid: RemoveTicket
+        - name: RemoveTickets
+          topicUid: RemoveTickets
+        - name: RemoveTicketV2
+          topicUid: RemoveTicketV2
+        - name: RemoveViewFromPinned
+          topicUid: RemoveViewFromPinned
+        - name: ReorderPinned
+          topicUid: ReorderPinned
+        - name: RequestLoginAsTicket
+          topicUid: RequestLoginAsTicket
+        - name: RestartElement
+          topicUid: RestartElement
+        - name: SaveJobsSectionDomainConfig
+          topicUid: SaveJobsSectionDomainConfig
+        - name: SaveSpectrumPreset
+          topicUid: SaveSpectrumPreset
+        - name: SetMeasurementPoints
+          topicUid: SetMeasurementPoints
+        - name: SetParameter
+          topicUid: SetParameter
+        - name: SetParameterRow
+          topicUid: SetParameterRow
+        - name: SetPropertyValue
+          topicUid: SetPropertyValue
+        - name: SetRedundancyGroupMaintenance
+          topicUid: SetRedundancyGroupMaintenance
+        - name: SetRedundancyGroupMode
+          topicUid: SetRedundancyGroupMode
+        - name: SetSpectrumParameter
+          topicUid: SetSpectrumParameter
+        - name: StopElement
+          topicUid: StopElement
+        - name: SwitchRedundancyGroup
+          topicUid: SwitchRedundancyGroup
+        - name: TakeOwnershipAlarm
+          topicUid: TakeOwnershipAlarm
+        - name: TestElementDeviceConnectivity
+          topicUid: TestElementDeviceConnectivity
+        - name: ToggleMatrixCrosspoint
+          topicUid: ToggleMatrixCrosspoint
+        - name: ToggleMatrixCrosspointForLabels
+          topicUid: ToggleMatrixCrosspointForLabels
+        - name: TriggerSnmpResyncActiveAlarms
+          topicUid: TriggerSnmpResyncActiveAlarms
+        - name: TryConnectAndInfo
+          topicUid: TryConnectAndInfo
+        - name: UnhideJobSectionDefinition
+          topicUid: UnhideJobSectionDefinition
+        - name: UnhideJobSectionDefinitionField
+          topicUid: UnhideJobSectionDefinitionField
+        - name: UnmaskAlarm
+          topicUid: UnmaskAlarm
+        - name: UnmaskElement
+          topicUid: UnmaskElement
+        - name: UpdateAlarmTemplate
+          topicUid: UpdateAlarmTemplate
+        - name: UpdateDomainSectionDefinitionConfiguration
+          topicUid: UpdateDomainSectionDefinitionConfiguration
+        - name: UpdateJob
+          topicUid: UpdateJob
+        - name: UpdateJobsDomain
+          topicUid: UpdateJobsDomain
+        - name: UpdateJobsSectionDefinition
+          topicUid: UpdateJobsSectionDefinition
+        - name: UpdateJobsSectionDefinitionFieldOrder
+          topicUid: UpdateJobsSectionDefinitionFieldOrder
+        - name: UpdateJobTemplate
+          topicUid: UpdateJobTemplate
+        - name: UpdateNoteForElement
+          topicUid: UpdateNoteForElement
+        - name: UpdateNoteForService
+          topicUid: UpdateNoteForService
+        - name: UpdateNoteForView
+          topicUid: UpdateNoteForView
+        - name: UpdateServiceTemplate
+          topicUid: UpdateServiceTemplate
+        - name: UpdateTicket
+          topicUid: UpdateTicket
+    - name: Custom data types (v1)
+      topicUid: WS_CustomDataTypes_v1
+      items:
+        - name: AnalogTrendDataResponseMessage
+          topicUid: AnalogTrendDataResponseMessage
+        - name: DMAAggregationRule
+          topicUid: DMAAggregationRule
+        - name: DMAAggregationTableColumn
+          topicUid: DMAAggregationTableColumn
+        - name: DMAAlarm
+          topicUid: DMAAlarm
+        - name: DMAAlarmColors
+          topicUid: DMAAlarmColors
+        - name: DMAAlarmCountData
+          topicUid: DMAAlarmCountData
+        - name: DMAAlarmDetails
+          topicUid: DMAAlarmDetails
+        - name: DMAAlarmFilterItem
+          topicUid: DMAAlarmFilterItem
+        - name: DMAAlarmFilterV2
+          topicUid: DMAAlarmFilterV2
+        - name: DMAAlarmPage
+          topicUid: DMAAlarmPage
+        - name: DMAAlarmPageUpdate
+          topicUid: DMAAlarmPageUpdate
+        - name: DMAAlarmStateData
+          topicUid: DMAAlarmStateData
+        - name: DMAAlarmTemplate
+          topicUid: DMAAlarmTemplate
+        - name: DMAAlarmTemplateCondition
+          topicUid: DMAAlarmTemplateCondition
+        - name: DMAAlarmTemplateConditionRule
+          topicUid: DMAAlarmTemplateConditionRule
+        - name: DMAAlarmTemplateGroupEntry
+          topicUid: DMAAlarmTemplateGroupEntry
+        - name: DMAAlarmTemplateScheduleEntry
+          topicUid: DMAAlarmTemplateScheduleEntry
+        - name: DMAAlarmTemplateParameter
+          topicUid: DMAAlarmTemplateParameter
+        - name: DMAAutomationScript
+          topicUid: DMAAutomationScript
+        - name: DMAAutomationScriptDummy
+          topicUid: DMAAutomationScriptDummy
+        - name: DMAAutomationScriptMemoryFile
+          topicUid: DMAAutomationScriptMemoryFile
+        - name: DMAAutomationScriptParameter
+          topicUid: DMAAutomationScriptParameter
+        - name: DMABaseline
+          topicUid: DMABaseline
+        - name: DMABooking
+          topicUid: DMABooking
+        - name: DMABookingLite
+          topicUid: DMABookingLite
+        - name: DMABookingManager
+          topicUid: DMABookingManager
+        - name: DMAButtonPanelInfo
+          topicUid: DMAButtonPanelInfo
+        - name: DMACache
+          topicUid: DMACache
+        - name: DMAColor
+          topicUid: DMAColor
+        - name: DMAConnectAndInfo
+          topicUid: DMAConnectAndInfo
+        - name: DMADashboard
+          topicUid: DMADashboard
+        - name: DMADocument
+          topicUid: DMADocument
+        - name: DMADocumentFolder
+          topicUid: DMADocumentFolder
+        - name: DMAElement
+          topicUid: DMAElement
+        - name: DMAElementBasePortInfo
+          topicUid: DMAElementBasePortInfo
+        - name: DMAElementConfiguration
+          topicUid: DMAElementConfiguration
+        - name: DMAElementID
+          topicUid: DMAElementID
+        - name: DMAElementLite
+          topicUid: DMAElementLite
+        - name: DMAElementPage
+          topicUid: DMAElementPage
+        - name: DMAElementSNMPPortInfo
+          topicUid: DMAElementSNMPPortInfo
+        - name: DMAElementSNMPV3PortInfo
+          topicUid: DMAElementSNMPV3PortInfo
+        - name: DMAFunctionDefinitionLite
+          topicUid: DMAFunctionDefinitionLite
+        - name: DMAGenericProperty
+          topicUid: DMAGenericProperty
+        - name: DMAHysteresisInfo
+          topicUid: DMAHysteresisInfo
+        - name: DMAInfo
+          topicUid: DMAInfo
+        - name: DMAInputData
+          topicUid: DMAInputData
+        - name: DMAJob
+          topicUid: DMAJob
+        - name: DMAJobDomainLite
+          topicUid: DMAJobDomainLite
+        - name: DMAJobFieldFilter
+          topicUid: DMAJobFieldFilter
+        - name: DMAJobFieldPossibleValues
+          topicUid: DMAJobFieldPossibleValues
+        - name: DMAJobFieldValueDisplay
+          topicUid: DMAJobFieldValueDisplay
+        - name: DMAJobSection
+          topicUid: DMAJobSection
+        - name: DMAJobSuggestion
+          topicUid: DMAJobSuggestion
+        - name: DMAJobTemplate
+          topicUid: DMAJobTemplate
+        - name: DMALicenseInfo
+          topicUid: DMALicenseInfo
+        - name: DMALicenses
+          topicUid: DMALicenses
+        - name: DMAMapConfigLite
+          topicUid: DMAMapConfigLite
+        - name: DMAMapURLParam
+          topicUid: DMAMapURLParam
+        - name: DMAMatrixConnection
+          topicUid: DMAMatrixConnection
+        - name: DMANote
+          topicUid: DMANote
+        - name: DMAObject
+          topicUid: DMAObject
+        - name: DMAParameter
+          topicUid: DMAParameter
+        - name: DMAParameterEdit
+          topicUid: DMAParameterEdit
+        - name: DMAParameterEditDiscreet
+          topicUid: DMAParameterEditDiscreet
+        - name: DMAParameterInfo
+          topicUid: DMAParameterInfo
+        - name: DMAParameterPosition
+          topicUid: DMAParameterPosition
+        - name: DMAParameterTable
+          topicUid: DMAParameterTable
+        - name: DMAParameterTableCell
+          topicUid: DMAParameterTableCell
+        - name: DMAParameterTableCellV2
+          topicUid: DMAParameterTableCellV2
+        - name: DMAParameterTableColumn
+          topicUid: DMAParameterTableColumn
+        - name: DMAParameterTableRow
+          topicUid: DMAParameterTableRow
+        - name: DMAParameterTableRowV2
+          topicUid: DMAParameterTableRowV2
+        - name: DMAProfileParameterLink
+          topicUid: DMAProfileParameterLink
+        - name: DMAProfileParameterLite
+          topicUid: DMAProfileParameterLite
+        - name: DMAProperty
+          topicUid: DMAProperty
+        - name: DMAPropertyFilter
+          topicUid: DMAPropertyFilter
+        - name: DMAProtocolPage
+          topicUid: DMAProtocolPage
+        - name: DMAProviderInfo
+          topicUid: DMAProviderInfo
+        - name: DMAProviderTheme
+          topicUid: DMAProviderTheme
+        - name: DMARecent
+          topicUid: DMARecent
+        - name: DMARedundancyElement
+          topicUid: DMARedundancyElement
+        - name: DMARedundancyGroup
+          topicUid: DMARedundancyGroup
+        - name: DMARedundancyVirtualElement
+          topicUid: DMARedundancyVirtualElement
+        - name: DMARegionalSettings
+          topicUid: DMARegionalSettings
+        - name: DMAResource
+          topicUid: DMAResource
+        - name: DMAResourceCapacityTrend
+          topicUid: DMAResourceCapacityTrend
+        - name: DMAResourceCapacityTrendPoint
+          topicUid: DMAResourceCapacityTrendPoint
+        - name: DMASearchItem
+          topicUid: DMASearchItem
+        - name: DMASectionDefinition
+          topicUid: DMASectionDefinition
+        - name: DMASectionDefinitionField
+          topicUid: DMASectionDefinitionField
+        - name: DMASectionDomainConfig
+          topicUid: DMASectionDomainConfig
+        - name: DMASecurity
+          topicUid: DMASecurity
+        - name: DMASerialPortInfo
+          topicUid: DMASerialPortInfo
+        - name: DMAServiceConfiguration
+          topicUid: DMAServiceConfiguration
+        - name: DMAServiceConfigurationGroup
+          topicUid: DMAServiceConfigurationGroup
+        - name: DMAServiceConfigurationParameter
+          topicUid: DMAServiceConfigurationParameter
+        - name: DMAServiceConfigurationTrigger
+          topicUid: DMAServiceConfigurationTrigger
+        - name: DMAServiceDefinition
+          topicUid: DMAServiceDefinition
+        - name: DMAServiceDefinitionEdgeLite
+          topicUid: DMAServiceDefinitionEdgeLite
+        - name: DMAServiceDefinitionLite
+          topicUID: DMAServiceDefinitionLite
+        - name: DMAServiceDefinitionNode
+          topicUid: DMAServiceDefinitionNode
+        - name: DMAServiceInfoGroupDefinition
+          topicUid: DMAServiceInfoGroupDefinition
+        - name: DMAServiceParams
+          topicUid: DMAServiceParams
+        - name: DMAServiceParameter
+          topicUid: DMAServiceParameter
+        - name: DMAServiceParametersElement
+          topicUid: DMAServiceParametersElement
+        - name: DMAServiceTemplate
+          topicUid: DMAServiceTemplate
+        - name: DMAServiceTemplateConfigurationTrigger
+          topicUid: DMAServiceTemplateConfigurationTrigger
+        - name: DMAServiceTemplateMissingData
+          topicUid: DMAServiceTemplateMissingData
+        - name: DMAServiceTemplateRequiredData
+          topicUid: DMAServiceTemplateRequiredData
+        - name: DMAServiceTemplateRequiredInputData
+          topicUid: DMAServiceTemplateRequiredInputData
+        - name: DMASLAElementConfiguration
+          topicUid: DMASLAElementConfiguration
+        - name: DMASnmpManager
+          topicUid: DMASnmpManager
+        - name: DMASpectrumBuffer
+          topicUid: DMASpectrumBuffer
+        - name: DMASpectrumMeasptModel
+          topicUid: DMASpectrumMeasptModel
+        - name: DMASpectrumPreset
+          topicUid: DMASpectrumPreset
+        - name: DMAStatistics
+          topicUid: DMAStatistics
+        - name: DMASTString
+          topicUid: DMASTString
+        - name: DMATicket
+          topicUid: DMATicket
+        - name: DMATicketField
+          topicUid: DMATicketField
+        - name: DMATicketFieldConcatItem
+          topicUid: DMATicketFieldConcatItem
+        - name: DMATicketFieldPossibleValue
+          topicUid: DMATicketFieldPossibleValue
+        - name: DMATicketFieldValueDisplay
+          topicUid: DMATicketFieldValueDisplay
+        - name: DMATicketLinkField
+          topicUid: DMATicketLinkField
+        - name: DMATicketLinkValue
+          topicUid: DMATicketLinkValue
+        - name: DMATicketType
+          topicUid: DMATicketType
+        - name: DMATimeline
+          topicUid: DMATimeline
+        - name: DMATimeZoneInfo
+          topicUid: DMATimeZoneInfo
+        - name: DMATopAlarmCountData
+          topicUID: DMATopAlarmCountData
+        - name: DMATopAlarmStateData
+          topicUID: DMATopAlarmStateData
+        - name: DMATopologyChainsField
+          topicUid: DMATopologyChainsField
+        - name: DMATopologyFieldValues
+          topicUid: DMATopologyFieldValues
+        - name: DMATrendData
+          topicUid: DMATrendData
+        - name: DMAUser
+          topicUid: DMAUser
+        - name: DMAUserGroup
+          topicUid: DMAUserGroup
+        - name: DMAView
+          topicUid: DMAView
+        - name: DMAViewTree
+          topicUid: DMAViewTree
+        - name: DMAVisio
+          topicUid: DMAVisio
+        - name: DMAVisioPage
+          topicUid: DMAVisioPage
+        - name: DMAVisioRegion
+          topicUid: DMAVisioRegion
+        - name: DMAVisioRegionAction
+          topicUid: DMAVisioRegionAction
+- name: Web Services (v0)
+  topicUid: WS_v0
+  items:
+    - name: About the Web Services (v0)
+      topicUid: WS_About_v0
+      items:
+        - name: Using the Web Services (v0)
+          topicUid: Using_the_Web_Services_v0
+        - name: Interfaces and WSDL files
+          topicUid: Interfaces_and_WSDL_filesv0
+    - name: Methods (v0)
+      topicUid: WS_Methods_v0
+      items:
+        - name: CleanupConnections
+          topicUid: CleanupConnections
+        - name: Connect
+          topicUid: Connect
+        - name: CreateAutomationScript
+          topicUid: CreateAutomationScript
+        - name: GetActiveAlarmsFromElement
+          topicUid: GetActiveAlarmsFromElement
+        - name: GetActiveAlarmsFromView
+          topicUid: GetActiveAlarmsFromView
+        - name: GetElementByPollingIp
+          topicUid: GetElementByPollingIp
+        - name: GetElementNameByPollingIp
+          topicUid: GetElementNameByPollingIp
+        - name: GetElementStateByID
+          topicUid: GetElementStateByID
+        - name: GetElementStateByName
+          topicUid: GetElementStateByName
+        - name: GetElements
+          topicUid: GetElements
+        - name: GetElementsFiltered
+          topicUid: GetElementsFiltered
+        - name: GetElementsFromView
+          topicUid: GetElementsFromView
+        - name: GetParameterValueByElementID
+          topicUid: GetParameterValueByElementID
+        - name: GetParameterValueByElementName
+          topicUid: GetParameterValueByElementName
+        - name: GetParameterValueByIds
+          topicUid: GetParameterValueByIds
+        - name: GetProtocolForElement
+          topicUid: GetProtocolForElement
+        - name: GetServiceElementListByID
+          topicUid: GetServiceElementListByID
+        - name: GetServiceElementListByName
+          topicUid: GetServiceElementListByName
+        - name: GetServicePropertiesByID
+          topicUid: GetServicePropertiesByID
+        - name: GetServicePropertiesByName
+          topicUid: GetServicePropertiesByName
+        - name: GetServices
+          topicUid: GetServices
+        - name: GetServicesAlarmStateByID
+          topicUid: GetServicesAlarmStateByID
+        - name: GetServicesAlarmStateByName
+          topicUid: GetServicesAlarmStateByName
+        - name: GetSubViews
+          topicUid: GetSubViews
+        - name: RequestLoginAsTicket
+          topicUid: RequestLoginAsTicket1
+        - name: SetParameterValueByElementID
+          topicUid: SetParameterValueByElementID
+    - name: Custom data types (v0)
+      topicUid: WS_CustomDataTypes_v0
+      items:
+        - name: AlarmEventMessage
+          topicUid: AlarmEventMessage
+        - name: AutomationStatement
+          topicUid: AutomationStatement
+        - name: CreateAutomationInfo
+          topicUid: CreateAutomationInfo
+        - name: DMAElement
+          topicUid: DMAElement1
+        - name: ParamValue
+          topicUid: ParamValue

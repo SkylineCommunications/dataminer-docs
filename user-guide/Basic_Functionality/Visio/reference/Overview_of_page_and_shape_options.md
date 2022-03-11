@@ -980,7 +980,7 @@ To do so, you have to specify three colors on page level:
 Example:
 
 ```txt
-#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|#FFFFFF=ThemeBackground
+#000000=ThemeForeground|#FF0000=ThemeAccentColor|#FFFFFF=ThemeBackground
 ```
 
 If you specify the value above, in a theme with a light background, black text and shapes will be displayed on a white background, while in a theme with a dark background, the colors will be reversed. In other words, all items in the drawing that use the colors specified in the option will be assigned the theme color.

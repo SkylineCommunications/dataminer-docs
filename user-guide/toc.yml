@@ -973,14 +973,18 @@
         - name: About DMS Security
           topicUid: About_DMS_Security
           items:
-            - name: User identification
-              topicUid: User_identification
+            - name: User management
+              topicUid: User_management
             - name: User rights
               topicUid: User_rights
             - name: User groups
               topicUid: User_groups
             - name: Types of users
               topicUid: Types_of_users
+            - name: Encryption in DataMiner
+              topicUid: Encryption_in_DataMiner
+            - name: Cloud connectivity and security
+              topicUID: Cloud_connectivity_and_security
         - name: Managing users
           topicUid: Managing_users
           items:
@@ -1607,6 +1611,8 @@
           items:
             - name: Configuring feed components
               topicUid: Configuring_feed_components
+            - name: Configuring query (GQI) data feeds
+              topicUID: Configuring_GQI_feeds
             - name: Specifying data input in a dashboard URL
               topicUid: Specifying_data_input_in_a_dashboard_URL
             - name: Configuring a dashboard to use a URL feed without a feed component
@@ -2143,8 +2149,8 @@
           topicUid: Logging_on_to_the_DataMiner_Cloud_Platform
         - name: Connecting your DataMiner System to the cloud
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
-        - name: Cloud connection security
-          topicUid: CloudConnectionSecurity
+        - name: Linking your DataMiner account to your DCP account
+          topicUid: Linking_your_DataMiner_and_DCP_account
     - name: Project Collaboration
       topicUid: Collaboration
       items:
@@ -2190,10 +2196,10 @@
     - name: DataMiner Sharing
       topicUid: Sharing
       items:
-        - name: About the Sharing module
-          topicUid: About_the_Sharing_module
         - name: Accessing the Sharing module
           topicUid: Accessing_the_Sharing_module
+        - name: Managing your shares
+          topicUid: Managing_your_shares
     - name: DataMiner Community
       topicUid: Community
       items:
@@ -2223,8 +2229,14 @@
       items:
         - name: Accessing the Admin app
           topicUid: Accessing_the_Admin_app
+        - name: Getting your DMS cloud connection verified
+          topicUid: CloudConnectionVerification
         - name: Giving users access to cloud features
           topicUid: Giving_users_access_to_cloud_features
+        - name: Controlling remote access
+          topicUid: Controlling_remote_access
+        - name: Controlling cloud feed data offloads
+          topicUid: Controlling_cloudfeed_data_offloads
 - name: DataMiner Professional Services
   topicUid: Part52ProfessionalServices
   items:
@@ -2392,6 +2404,8 @@
     - name: Tools
       topicUid: DataminerTools
       items:
+        - name: DataMiner Teams bot
+          topicUid: DataMiner_Teams_bot
         - name: DMS Alerter
           topicUid: DMS_Alerter
           items:
@@ -2737,5 +2751,56 @@
           topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
         - name: Offline demo license for DMA to be installed by user
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+    - name: DataMiner metrics
+      topicUid: dataminer_metrics
+      items:
+        - name: Alarm benchmarks
+          topicUid: alarm_benchmarks
+        - name: Alarm focus benchmarks
+          topicUid: alarm_focus_benchmarks
+        - name: Automatic incident tracking benchmarks
+          topicUid: automatic_incident_tracking_benchmarks
+        - name: Automation benchmarks
+          topicUid: automation_benchmarks
+        - name: Behavioral anomaly detection benchmarks
+          topicUid: behavioral_anomaly_detection_benchmarks
+        - name: Cassandra write performance benchmarks
+          topicUid: cassandra_write_performance_benchmarks
+        - name: Change history metrics
+          topicUid: change_history_benchmarks
+        - name: Cloud benchmarks
+          topicUid: cloud_benchmarks
+        - name: Dashboards benchmarks
+          topicUid: dashboards_benchmarks
+        - name: DataMiner Object Model benchmarks
+          topicUid: dataminer_object_model_benchmarks
+        - name: Direct view benchmarks
+          topicUid: direct_view_benchmarks
+        - name: Dynamic virtual element benchmarks
+          topicUid: dynamic_virtual_element_benchmarks
+        - name: Element benchmarks
+          topicUid: element_benchmarks
+        - name: Failover benchmarks
+          topicUid: failover_benchmarks
+        - name: History set benchmarks
+          topicUid: history_set_benchmarks
+        - name: Mobile gateway benchmarks
+          topicUid: mobile_gateway_benchmarks
+        - name: Parameter set benchmarks
+          topicUid: parameter_set_benchmarks
+        - name: Pattern matching benchmarks
+          topicUid: pattern_matching_benchmarks
+        - name: Profile manager benchmarks
+          topicUid: profile_manager_benchmarks
+        - name: Service benchmarks
+          topicUid: service_benchmarks
+        - name: Service profile benchmarks
+          topicUid: service_profile_benchmarks
+        - name: Service & Resource Management benchmarks
+          topicUid: service_resource_management_benchmarks
+        - name: View benchmarks
+          topicUid: view_benchmarks
+        - name: Visual Overview benchmarks
+          topicUid: visual_overview_benchmarks
     - name: Glossary
       topicUid: glossary

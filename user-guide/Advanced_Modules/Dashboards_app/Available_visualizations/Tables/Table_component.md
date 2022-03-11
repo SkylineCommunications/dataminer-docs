@@ -4,7 +4,7 @@ uid: DashboardTable
 
 # Table
 
-This dashboard component is introduced in DataMiner 10.0.13 with the purpose of displaying the results of queries in table format. It should always be configured with *Queries* data input. See [Using Queries data input](xref:Configuring_dashboard_components#using-queries-data-input).
+This dashboard component is introduced in DataMiner 10.0.13 with the purpose of displaying the results of queries in table format. It should always be configured with *Queries* data input. See [Configuring query (GQI) data feeds](xref:Configuring_GQI_feeds).
 
 It displays the different possible data sources of queries as follows:
 

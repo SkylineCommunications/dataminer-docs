@@ -14,4 +14,3 @@ You can collapse or expand folders in the tree view of the Correlation module:
 
     > [!NOTE]
     > If you select *Collapse all*, the root folder will not be collapsed.
-    >

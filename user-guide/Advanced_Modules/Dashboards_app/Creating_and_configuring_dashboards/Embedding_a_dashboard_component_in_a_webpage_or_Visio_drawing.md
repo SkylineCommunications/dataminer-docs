@@ -25,4 +25,4 @@ To do so:
     > [!NOTE]
     > - “SERIALIZED-COMPONENT” is a serialized representation of the component in JSON format.
     > - If the component contains data, that data will automatically be included into the URL. See [Configuring a dashboard to use a URL feed without a feed component](xref:Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component).
-    >
+    > - An embedded dashboard component is sometimes called a "volatile dashboard", as a temporary dashboard is generated to render the component.

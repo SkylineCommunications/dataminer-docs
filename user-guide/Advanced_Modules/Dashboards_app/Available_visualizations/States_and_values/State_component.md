@@ -10,7 +10,11 @@ To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
-   In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element. Note that column parameter feeds are supported from DataMiner 10.0.12 onwards.
+   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
+
+   - Column parameter feeds are supported from DataMiner 10.0.12 onwards.
+
+   - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
    > [!NOTE]
    > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *feeds* section of the data pane so that it can be used as a feed for other components. This way, if the input for this component changes, it will also change for all other components using this component as their feed. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
@@ -21,7 +25,7 @@ To configure the component:
 
    - If the component shows a parameter with a unit, but you do not want the unit to be displayed, in the *Settings* tab, clear the *Show units* option (available from DataMiner 10.1.9/10.2.0 onwards).
 
-   - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together.
+   - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
 
 1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 

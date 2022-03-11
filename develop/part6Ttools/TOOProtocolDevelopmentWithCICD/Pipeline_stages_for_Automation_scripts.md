@@ -6,81 +6,45 @@ uid: Pipeline_stages_for_Automation_scripts
 
 Currently, the pipeline consists of the following steps:
 
-- Loading Jenkinsfile
+- [Loading Jenkinsfile](#loading-jenkinsfile)
 
-    See [Loading Jenkinsfile](#loading-jenkinsfile).
+- [Declarative checkout from SCM](#declarative-checkout-from-scm)
 
-- Declarative checkout from SCM
+- [Detect solution](#detect-solution)
 
-    See [Declarative checkout from SCM](#declarative-checkout-from-scm).
+- [Validate solution](#validate-solution)
 
-- Detect solution
+- [Validate tag](#validate-tag)
 
-    See [Detect solution](#detect-solution).
+- [Prepare solution](#prepare-solution)
 
-- Validate solution
+- [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
 
-    See [Validate solution](#validate-solution).
+- [Sync DIS version](#sync-dis-version)
 
-- Prepare solution
+- [Build on latest feature release](#build-on-latest-feature-release)
 
-    See [Prepare solution](#prepare-solution).
+- [Scan Test Projects](#scan-test-projects)
 
-- Sync DataMiner feature release DLLs
+- [Run Unit Tests](#run-unit-tests)
 
-    See [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls).
+- [Run Integration Tests](#run-integration-tests)
 
-- Sync DIS version
+- [SonarQube analysis](#sonarqube-analysis)
 
-    See [Sync DIS version](#sync-dis-version).
+- [Convert Solution to XML](#convert-solution-to-xml)
 
-- Build on latest feature release
+- [Quality Gate](#quality-gate)
 
-    See [Build on latest feature release](#build-on-latest-feature-release).
+- [(Development) Catalog Registration](#development-catalog-registration)
 
-- Scan test projects
+- [(Release) Prepare for SVN](#release-prepare-for-svn)
 
-    See [Scan Test Projects](#scan-test-projects).
+- [(Release) Catalog Registration](#release-catalog-registration)
 
-- Run unit tests
+- [(Release) Push to SVN](#release-push-to-svn)
 
-    See [Run Unit Tests](#run-unit-tests).
-
-- Run integration tests
-
-    See [Run Integration Tests](#run-integration-tests).
-
-- SonarQube analysis
-
-    See [SonarQube analysis](#sonarqube-analysis).
-
-- Convert solution to XML
-
-    See [Convert Solution to XML](#convert-solution-to-xml).
-
-- Quality Gate
-
-    See [Quality Gate](#quality-gate).
-
-- (Development) Catalog Registration
-
-    See [(Development) Catalog Registration](#development-catalog-registration).
-
-- (Release) Prepare for SVN
-
-    See [(Release) Prepare for SVN](#release-prepare-for-svn).
-
-- (Release) Catalog Registration
-
-    See [(Release) Catalog Registration](#release-catalog-registration).
-
-- (Release) Push to SVN
-
-    See [(Release) Push to SVN](#release-push-to-svn).
-
-- Declarative Post Actions
-
-    See [Declarative Post Actions](#declarative-post-actions).
+- [Declarative Post Actions](#declarative-post-actions)
 
 ## Loading Jenkinsfile
 
@@ -99,6 +63,15 @@ The pipeline will only continue if exactly one solution file has been detected i
 ## Validate solution
 
 This step verifies whether the projects in the solution that correspond with C# exe blocks of Automation scripts make use of NuGet packages. If they do, the pipeline will fail, as using NuGet packages in these projects is currently not supported.
+
+## Validate tag
+
+This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
+
+- The tag has the correct format.
+- The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.x" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
+- All expected previous minor versions of the tag are present. For example, if a commit has been tagged with "1.0.0.4", the tags "1.0.0.1", "1.0.0.2" and "1.0.0.3" are expected to be present already.
+- The tag is an annotated tag and not a lightweight tag.
 
 ## Prepare solution
 
@@ -171,7 +144,7 @@ This stage will perform registration in the catalog.
 
 ## (Release) Prepare for SVN
 
-In case a tag was detected and the version should therefore be pushed to SVN, some preparatory steps are performed.
+In case a tag was detected, and the version should therefore be pushed to SVN, some preparatory steps are performed.
 
 ## (Release) Catalog Registration
 
@@ -196,4 +169,4 @@ The report also contains an overall quality score which is calculated using the 
 
 - Number of Major Issue reported by SonarQube
 
-![](~/develop/images/PipelineEquation2.png)
+![Overall quality score calculation](~/develop/images/PipelineEquation2.png)

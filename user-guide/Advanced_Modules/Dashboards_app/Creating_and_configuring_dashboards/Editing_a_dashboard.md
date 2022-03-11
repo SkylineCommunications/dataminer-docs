@@ -31,3 +31,6 @@ To edit an existing dashboard:
    - To change the overall layout of the dashboard, see [Configuring the dashboard layout](xref:Configuring_the_dashboard_layout).
 
 1. When ready, click *Stop editing* in the header bar.
+
+> [!NOTE]
+> It is currently not possible to edit a dashboard that is being shared. To edit such a dashboard, you will need to temporarily stop sharing it and then share it again once you are done editing.
