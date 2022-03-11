@@ -19,7 +19,14 @@ The DataMiner Cloud Platform is hosted in Microsoft Azure on the following endpo
 - ``https://*.dataminer.services/``
 - ``wss://tunnel.dataminer.services/``
 
-When you connect your DataMiner System to the DataMiner Cloud Platform, a secure connect flow needs to be completed. The administrator needs to authenticate on the DataMiner System and then needs to authenticate towards the DataMiner Cloud Platform. 
+At present, the following IP addresses are used to connect to the DataMiner Cloud Platform:
+
+- 52.149.106.174
+- 20.50.2.35
+- 20.50.217.191
+- 20.103.147.5
+
+When you connect your DataMiner System to the DataMiner Cloud Platform, a secure connect flow needs to be completed. The administrator needs to authenticate on the DataMiner System and then needs to authenticate towards the DataMiner Cloud Platform.
 
 At the end of this flow, a secure JSON Web Token is delivered directly from the DataMiner Cloud Platform to the DataMiner System, which is used by the DataMiner System to authenticate towards the DataMiner Cloud Platform.
 
