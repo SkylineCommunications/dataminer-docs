@@ -65,7 +65,7 @@ To set up your own HTTPS web server, you must first install an SSL certificate a
    1. Set *Redirect type* to *Found (302)*.
 
 > [!NOTE]
-> - Instead of redirecting HTTP traffic to HTTPS, we recommend disabling HTTP completely by removing the HTTP binding, meaning only HTTPS traffic is accepted. Once the binding is removed you can close port 80 in the Windows Firewall.
+> - Instead of redirecting HTTP traffic to HTTPS, we recommend disabling HTTP completely by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
 > - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the Subject Alternative Name of the TLS/SSL certificate on both DataMiner Agents.
 
 ## Specifying auto-detection information for an inter-DMA HTTPS connection
