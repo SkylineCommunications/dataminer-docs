@@ -8,6 +8,9 @@ In this style guide, you can find a number of formatting conventions as well as 
 
 Applying these conventions and using these standard stencils and icons will ensure your Visio drawings are designed according to the DataMiner house style.
 
+> [!NOTE]
+> The conventions listed in this section should be considered recommendations. They are in no way mandatory.
+
 ## Conventions
 
 ### Colors
