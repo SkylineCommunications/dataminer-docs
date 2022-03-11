@@ -12,7 +12,7 @@ Service templates allow you to create entire series of almost identical services
 
 - [Examples](#examples)
 
-### What is specified in a service template?
+## What is specified in a service template?
 
 In a service template, you have to specify
 
@@ -22,22 +22,20 @@ In a service template, you have to specify
 
 - The properties of the services to be created
 
-- Whether or not an SLA has to be linked to the services to be created
+- Whether an SLA has to be linked to the services to be created
 
 - The view to which to link the services to be created
 
-### Concept
+## Concept
 
 The moment you apply a service template, it will collect all data that has been specified as “input data”, process it, and automatically create the services.
 
-![](~/user-guide/images/ServiceTemplateConcept.jpg)
+![Service template concept](~/user-guide/images/ServiceTemplateConcept.jpg)
 
-
-
-### Examples
+## Examples
 
 Below you will find examples of how to define a service template that will automatically create a service for every row in a dynamic table parameter of a certain type of element. The examples start from the following premise: for each of your “Microsoft Platform” elements, you want to create a service for every process of which the name starts with “SL”. Each of those services, named *\[computer model\]\_\[process\]*, has to include the CPU and the memory usage of the process in question.
 
-- [Example of creating a service template](xref:Creating_a_service_template#example-of-creating-a-service-template)
+- [Example of creating a service template](xref:ST_example_ST_creation)
 
 - [Example of applying a service template](xref:Applying_service_templates#example-of-applying-a-service-template)

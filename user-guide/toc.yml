@@ -292,6 +292,27 @@
               topicUid: About_service_templates
             - name: Creating a service template
               topicUid: Creating_a_service_template
+              items:
+                - name: Specifying general characteristics of a service template
+                  topicUid: ST_specifying_general_characteristics
+                - name: Specifying the input data for a service template
+                  topicUid: ST_specifying_input_data
+                - name: Using groups of service template child elements
+                  topicUid: ST_using_groups_of_child_elements
+                - name: Creating child elements in service templates
+                  topicUid: ST_creating_child_elements
+                - name: Determining the characteristics of generated services
+                  topicUid: ST_Determining_characteristics_generated_service
+                - name: Specifying root cause information in a service template
+                  topicUid: ST_Specifying_root_cause_info
+                - name: Specifying an SLA in a service template
+                  topicUid: ST_specifying_an_sla
+                - name: Specifying the destination view of a service template
+                  topicUid: ST_specifying_the_destination_view
+                - name: Specifying the order to select data in a service template
+                  topicUid: ST_specifying_the_order_to_select_data
+                - name: Example of creating a service template
+                  topicUid: ST_example_ST_creation
             - name: Applying service templates
               topicUid: Applying_service_templates
             - name: Managing service templates
