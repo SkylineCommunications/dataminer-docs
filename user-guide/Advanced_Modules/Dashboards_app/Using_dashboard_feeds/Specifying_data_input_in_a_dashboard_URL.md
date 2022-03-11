@@ -122,4 +122,6 @@ Within the dashboard URL, the following data objects can be specified:
 
 - *service definitions*: Requires the service definition ID. Supported from DataMiner 10.0.5 onwards.
 
-- *cpes*: To specify an EPM filter. Requires the DMA ID, the element ID, the field PID, the field value, the table index PID, and the index value. Prior to DataMiner 10.0.5, the DMA ID, the element ID, the field PID, the table PID, and the value are required.
+- *cpes*: Deprecated from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (but still supported for the sake of backwards compatibility). To specify an EPM filter. Requires the DMA ID, the element ID, the field PID, the field value, the table index PID, and the index value. Prior to DataMiner 10.0.5, the DMA ID, the element ID, the field PID, the table PID, and the value are required.
+
+- *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes"). To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
