@@ -60,11 +60,12 @@ To set up your own HTTPS web server, you must first install an SSL certificate a
       > [!NOTE]
       > - The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. ``https://www.myhost.com/{R:1}``.
       > - The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. TLS/SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
+      > - The redirect rule should skip the redirect on 'localhost'.
 
    1. Set *Redirect type* to *Found (302)*.
 
 > [!NOTE]
-> - Instead of redirecting HTTP traffic to HTTPS, it is also possible to close down HTTP completely by removing the HTTP binding, so that only HTTPS traffic is accepted. Once the binding is removed you can close port 80 in the Windows Firewall.
+> - Instead of redirecting HTTP traffic to HTTPS, we recommend disabling HTTP completely by removing the HTTP binding, meaning only HTTPS traffic is accepted. Once the binding is removed you can close port 80 in the Windows Firewall.
 > - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the Subject Alternative Name of the TLS/SSL certificate on both DataMiner Agents.
 
 ## Specifying auto-detection information for an inter-DMA HTTPS connection
