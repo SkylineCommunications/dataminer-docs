@@ -37,4 +37,5 @@ The following topics provide more information related to this database:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/cassandra-tips-tricks/>
+> - [Securing the DataMiner databases](xref:Database_security)
+> - [Cassandra  – tips & tricks](https://community.dataminer.services/video/cassandra-tips-tricks/) on DataMiner Dojo

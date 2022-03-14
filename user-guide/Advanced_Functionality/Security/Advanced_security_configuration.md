@@ -6,6 +6,8 @@ uid: Advanced_security_configuration
 
 In this section:
 
+- [Securing the DataMiner databases](xref:Database_security)
+
 - [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
 
 - [Configuring LDAP settings](xref:Configuring_LDAP_settings)

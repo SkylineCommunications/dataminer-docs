@@ -17,4 +17,5 @@ The following topics provide more information on DMS Security:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/security-introduction-to-dataminer-security/>
+> - [Security – Introduction to DataMiner Security](https://community.dataminer.services/video/security-introduction-to-dataminer-security/) on DataMiner Dojo
+> - [Securing the DataMiner databases](xref:Database_security)
