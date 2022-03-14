@@ -161,7 +161,7 @@ This step performs the actual push to SVN. Once this step is executed, you shoul
 
 This step performs cleanup of the workspace and sends an email containing a report giving an overview of the number of issues detected in SonarQube.
 
-The report also contains an overall quality score which is calculated using the following metrics:
+The report also contains an overall quality score, which is calculated using the following metrics:
 
 - Number of Blocker Issues reported by SonarQube
 
