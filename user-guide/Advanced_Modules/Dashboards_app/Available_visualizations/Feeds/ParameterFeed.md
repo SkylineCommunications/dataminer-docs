@@ -16,6 +16,8 @@ To configure this component:
 
    From DataMiner 10.0.0/10.0.2 onwards, multiple view filters can be applied to a parameter feed. Parameters in those views will then be included as soon as they are included in one of the view filters.
 
+   From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
+
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
