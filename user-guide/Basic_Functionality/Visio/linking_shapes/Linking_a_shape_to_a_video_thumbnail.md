@@ -8,18 +8,6 @@ Using a shape data field of type **Link**, you can link a shape to a video thumb
 
 When you link a shape to a video thumbnail, the video feed from the video server channel specified in the shape data field will appear inside the shape.
 
-In this section:
-
-- [Configuring the shape data field](#configuring-the-shape-data-field)
-
-- [Video server parameters](#video-server-parameters)
-
-- [Allowed paths in case of connection via DataMiner proxy](#allowed-paths-in-case-of-connection-via-dataminer-proxy)
-
-- [Ignoring validation errors during HTTP parsing](#ignoring-validation-errors-during-http-parsing)
-
-- [Configuring a thumbnail for HTTP Live Streaming](#configuring-a-thumbnail-for-http-live-streaming)
-
 Please note the following:
 
 - In DataMiner versions up to 8.5.8, Adobe Flash is used to display video thumbnails. From DataMiner 9.0 onwards, HTML is used instead. Both MJPEG and HTML5 video types are supported. The latter can be used for live video streaming. However, note that most browsers only support video streaming over TCP.
@@ -32,11 +20,8 @@ Please note the following:
 
 - From DataMiner 10.1.11/10.2.0 onwards, HLS (HTTPS Live Streaming) is supported. See [Configuring a thumbnail for HTTP Live Streaming](#configuring-a-thumbnail-for-http-live-streaming).
 
-
-
 > [!TIP]
-> See also:
-> [Making a shape display an image](xref:Making_a_shape_display_an_image)
+> See also: [Making a shape display an image](xref:Making_a_shape_display_an_image)
 
 ## Configuring the shape data field
 
@@ -49,7 +34,7 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 
 > [!NOTE]
 > - Adding "#" in front of the URL ensures that the video is displayed in an embedded browser. If you do not add this, the shape is rendered as it is drawn in Visio and clicking it opens your default browser and navigates to the link.
-> - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding “*toolbar=false*” or “*showtoolbar=false*” to the value of the **Link** shape data. For example: *#http://\<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC<br>&source=http://\<DMAIP>/myvideo.mpeg&showtoolbar=false*
+> - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding “*toolbar=false*” or “*showtoolbar=false*” to the value of the **Link** shape data. For example: `#http://<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC&source=http://<DMAIP>/myvideo.mpeg&showtoolbar=false`
 
 ## Video server parameters
 
@@ -61,31 +46,27 @@ Depending on the DataMiner version, additional configuration is possible in the 
 
 - From DataMiner 9.5.1 onwards, the VLC component of video thumbnails sends a **referer HTTP header** when requesting the source URL. The referer URL is by default the URL of the DMA, but you can change it by specifying the parameter *referer=* in the URL of the video thumbnail. For example:
 
-    ```txt
-    #http://localhost/VideoThumbnails/video.htm?type=VLC&source=http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4&referer=http%3A%2F%2Fsome%2Freferer%2F.
-    ```
+  ```txt
+  #http://localhost/VideoThumbnails/video.htm?type=VLC&source=http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4&referer=http%3A%2F%2Fsome%2Freferer%2F.
+  ```
 
 - From DataMiner 9.5.4 onwards, you can add a **password and username** in the URL for basic HTTP authentication. However, in that case we advise to always use HTTPS, as otherwise the username and password will not be encrypted. For example:
 
-
-
-    ```txt
-    #https://dma/VideoThumbnails/Video.htm?type=Generic%20Images&source=http%3A%2F%2F10.0.20.101%2Fimages%2Fthumbs%2F4.jpg&user=admin&password=test&refresh=1000
-    ```
-
-
+  ```txt
+  #https://dma/VideoThumbnails/Video.htm?type=Generic%20Images&source=http%3A%2F%2F10.0.20.101%2Fimages%2Fthumbs%2F4.jpg&user=admin&password=test&refresh=1000
+  ```
 
 - From DataMiner 10.2.0/10.1.1 onwards, you can use the *auth=* URL option to specify an **HTTP authorization header** that will be added to the HTTP request when a thumbnail image is requested from the video server. This option is required when the video server expects an authentication token (for example OAuth2). For example:
 
-    ```txt
-    #https://dma/videothumbnails/video.htm?type=Generic%20Images&source=https%3A%2F%2F77.158.55.113%2Fvos-api%2Fmonitor%2Fv1%2Fservices%2F55002da8-37fd-43de-82a9-f6b75089d8c9%2Fthumbnail&auth=bearer%20580a4efa-0aab-4882-af91-7b0118c67f5d
-    ```
+  ```txt
+  #https://dma/videothumbnails/video.htm?type=Generic%20Images&source=https%3A%2F%2F77.158.55.113%2Fvos-api%2Fmonitor%2Fv1%2Fservices%2F55002da8-37fd-43de-82a9-f6b75089d8c9%2Fthumbnail&auth=bearer%20580a4efa-0aab-4882-af91-7b0118c67f5d
+  ```
 
-    > [!NOTE]
-    > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
-    > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: *https://\<DMAIP>/VideoThumbnails/Video.htm?type=<br>Generic%20VLC&source=\[EscapeDataString:\[param:\*,10014\]\]*
-    > - When the authentication token expires, the URL has to be updated with the new token.
-    > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
+  > [!NOTE]
+  > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
+  > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
+  > - When the authentication token expires, the URL has to be updated with the new token.
+  > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 
 ## Allowed paths in case of connection via DataMiner proxy
 
@@ -106,18 +87,18 @@ If more URLs need to be added to the list of allowed URLs, do the following:
 
 1. On a DMA with version 8.5.8 or lower, open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config*.
 
-    On a DMA with version 9.0 or higher, open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
+   On a DMA with version 9.0 or higher, open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
 
-2. Go to the *appSettings* section.
+1. Go to the *appSettings* section.
 
-3. Add all additional paths to the *ExtraAllowedPaths* key, separated by semicolons (”;”):
+1. Add all additional paths to the *ExtraAllowedPaths* key, separated by semicolons (”;”):
 
-    ```xml
-    <add key="ExtraAllowedPaths" value="" />
-    ```
+   ```xml
+   <add key="ExtraAllowedPaths" value="" />
+   ```
 
-    > [!NOTE]
-    > If you just add a single slash (“/”) in the value of the ExtraAllowedPaths key, all possible URLs will be allowed.
+   > [!NOTE]
+   > If you just add a single slash (“/”) in the value of the ExtraAllowedPaths key, all possible URLs will be allowed.
 
 Example: If, under *C:\\Skyline DataMiner\\Webpages*, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
 
@@ -132,24 +113,23 @@ To do so:
 
 1. Open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
 
-2. Add the following option:
+1. Add the following option:
 
-    ```xml
-    <add key="UseUnsafeHeaderParsing" value="true" />
-    ```
+   ```xml
+   <add key="UseUnsafeHeaderParsing" value="true" />
+   ```
 
-    > [!NOTE]
-    > When this property is set to false (the default setting), the following validation is performed during HTTP parsing:
-    > - In end-of-line code, only CRLF is allowed, not CR or LF alone.
-    > - Headers names may not have spaces in them.
-    > - If multiple status lines exist, all additional status lines are treated as malformed header name/value pairs.
-    > - The status line must have a status description, in addition to a status code.
-    >
-    > Regardless of whether the property is set to true or false, header names may not contain non-ASCII characters.
+   > [!NOTE]
+   > When this property is set to false (the default setting), the following validation is performed during HTTP parsing:
+   > - In end-of-line code, only CRLF is allowed, not CR or LF alone.
+   > - Headers names may not have spaces in them.
+   > - If multiple status lines exist, all additional status lines are treated as malformed header name/value pairs.
+   > - The status line must have a status description, in addition to a status code.
+   >
+   > Regardless of whether the property is set to true or false, header names may not contain non-ASCII characters.
 
-    > [!TIP]
-    > See also:
-    > [https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequest­element.useunsafeheaderparsing.aspx](https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequestelement.useunsafeheaderparsing.aspx)
+  > [!TIP]
+  > See also: <https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequest­element.useunsafeheaderparsing.aspx>
 
 ## Configuring a thumbnail for HTTP Live Streaming
 
@@ -165,4 +145,3 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 > - For more information on HLS, see <https://github.com/video-dev/hls.js/>
 > - All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>.
 > - If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.
->
