@@ -49,7 +49,7 @@ Implementing a Zero Trust architecture requires applying the principle of least 
 
 To enable the *CassandraAuthorizer* in Cassandra:
 
-1. Set the *authorizer* to *CassandraAuthorizer* in your *cassandra.yaml* file (typically located in the Cassandra installation folder):
+1. Set the *authorizer* field to *CassandraAuthorizer* in your *cassandra.yaml* file (located in the Cassandra installation folder):
 
    `authorizer: CassandraAuthorizer`
 
