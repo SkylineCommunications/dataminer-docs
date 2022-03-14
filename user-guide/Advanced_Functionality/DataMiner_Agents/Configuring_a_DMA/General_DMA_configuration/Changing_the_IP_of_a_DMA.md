@@ -34,6 +34,12 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
    1. Restart the elasticsearch-service-x64 service.
 
+1. If the server has NATS installed:
+
+   1. Open the file *SLCloud.xml*, located in the folder *C:\\Skyline DataMiner\\*.
+
+   1. Replace any references to the old IP address with the new IP address, and save the file.
+
 1. Restart DataMiner.
 
 ## Single DMA in a DMS
@@ -67,6 +73,12 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
    1. Restart the elasticsearch-service-x64 service.
+
+1. If the server has NATS installed:
+
+   1. Open the file *SLCloud.xml*, located in the folder *C:\\Skyline DataMiner\\*.
+
+   1. Replace any references to the old IP address with the new IP address, and save the file.
 
 1. Restart DataMiner.
 
