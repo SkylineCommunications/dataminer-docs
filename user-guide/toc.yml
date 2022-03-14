@@ -1060,6 +1060,8 @@
         - name: Advanced security configuration
           topicUid: Advanced_security_configuration
           items:
+            - name: Securing the DataMiner Databases
+              topicUID: Database_security
             - name: Customizing the layout of notification messages
               topicUid: Customizing_the_layout_of_notification_messages
             - name: Configuring LDAP settings
