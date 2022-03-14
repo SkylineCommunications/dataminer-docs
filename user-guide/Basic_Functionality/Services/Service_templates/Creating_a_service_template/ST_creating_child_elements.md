@@ -58,7 +58,8 @@ To add a child element:
         - For a matrix or table parameter, optionally specify particular inputs/outputs or rows in the box underneath *Included rows/inputs/outputs*, with wildcards if necessary.
 
         > [!NOTE]
-        > If you include a table parameter using placeholders, you can use wildcards to dynamically include only the table rows with a matching display key. If you do not want the set of rows to change dynamically, but only want to include the first match found when the service is generated, use the prefix “!1st!” before the wildcard. For example: *!1st!\*\_BBC\_\**
+        > - If you include a table parameter using placeholders, you can use wildcards to dynamically include only the table rows with a matching display key. If you do not want the set of rows to change dynamically, but only want to include the first match found when the service is generated, use the prefix “!1st!” before the wildcard. For example: *!1st!\*\_BBC\_\**
+        > - From DataMiner 10.2.4/10.3.0 onwards, it is possible reference a table row by primary key, using the prefix `^pk^` in the placeholder. For example: `[element:1:param:1002:^pk^myPrimaryKey]`.
 
    1. In the *Conditions* section, two options can be selected:
 
