@@ -116,14 +116,13 @@ As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applicat
 
     - Set *Entity ID* to ``https://[your application name]/``. This entity ID must be identical to the one that is specified in the ``spMetadata.xml`` file.
 
-    - Under *Reply URL*, specify the following URLs:
+    - Under *Reply URL*, specify the following URLs (note the trailing '/'):
 
         - ``https://[your application name]/root/``
         - ``https://[your application name]/ticketing/``
         - ``https://[your application name]/jobs/``
         - ``https://[your application name]/monitoring/``
         - ``https://[your application name]/dashboard/``
-        - ``https://[your application name]/root/``
         - ``https://[your application name]/login/``
         - ``https://[your application name]/``
 
