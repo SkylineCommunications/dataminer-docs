@@ -15,5 +15,5 @@ Use this action to terminate an Automation script without delay:
 2. Click the underlined field after the colon and enter the message that must be displayed in the Automation logging, as well as in the Alarm Console in case of failure.
 
 > [!NOTE]
-> It is also possible to add this action within a C# block in a script. For more information, see [ExitFail](xref:Engine_methods#exitfail) and [ExitSuccess](xref:Engine_methods#exitsuccess).
+> It is also possible to add this action within a C# block in a script. For more information, see [ExitFail](xref:Skyline.DataMiner.Automation.Engine#Skyline_DataMiner_Automation_Engine_ExitFail_System_String_) and [ExitSuccess](xref:Skyline.DataMiner.Automation.Engine#Skyline_DataMiner_Automation_Engine_ExitSuccess_System_String_).
 >

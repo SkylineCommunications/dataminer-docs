@@ -92,8 +92,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
 > You can also make sure no exception is thrown when an undefined or empty parameter is encountered in C# code by selecting the general option *C#: Return NULL instead of an exception upon a GetParameter of a non-initialized parameter*. See [General script configuration](xref:General_script_configuration).
 
 > [!TIP]
-> See also:
-> [Engine class](xref:Engine_class)
+> See also: [Skyline.DataMiner.Automation.Engine](xref:Skyline.DataMiner.Automation.Engine)
 
 ## Script class
 

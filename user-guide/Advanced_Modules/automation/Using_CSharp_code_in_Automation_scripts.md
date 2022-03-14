@@ -17,5 +17,4 @@ The following sections provide more information on using C# code in DMS Automati
 - [Compiling a CSharp code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library)
 
 > [!TIP]
-> See also:
-> [Automation script CSharp code reference](xref:CsharpReference#automation-script-csharp-code-reference)
+> See also: [Skyline.DataMiner.Automation](xref:Skyline.DataMiner.Automation)
