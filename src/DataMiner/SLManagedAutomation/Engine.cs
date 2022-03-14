@@ -269,6 +269,11 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="key">The key.</param>
 		/// <returns>The created dummy.</returns>
 		/// <exception cref="DataMinerException">The specified element was not found.</exception>
+		/// <example>
+		/// <code>
+		/// ScriptDummy extradummy1 = engine.CreateExtraDummy(366,22, "myDummy");
+		/// </code>
+		/// </example>
 		public ScriptDummy CreateExtraDummy(int dataMinerID, int elementID, string key) { return null; }
 
 		/// <summary>

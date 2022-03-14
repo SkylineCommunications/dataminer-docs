@@ -32,4 +32,4 @@ Usually, this text will appear as a pop-up warning when a potentially dangerous 
 </Param>
 ```
 
-![alt text](~/schemadoc/Protocol/images/confirmationMessageBox.png "Confirmation message box")
+![alt text](~/develop/schemadoc/Protocol/images/confirmationMessageBox.png "Confirmation message box")

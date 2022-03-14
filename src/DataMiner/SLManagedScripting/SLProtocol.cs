@@ -1439,7 +1439,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value1">Depends on the type of message to send.</param>
 		/// <param name="value2">Depends on the type of message to send.</param>
 		/// <returns>Depends on the type of message that has been sent.</returns>
-		/// <remarks>Refer to [Notify Types overview](xref:NotifyTypesOverview) for an overview of the available Notify types.</remarks>
+		/// <remarks>Refer to [Notify Types overview](xref:NTNotifyTypesOverview) for an overview of the available Notify types.</remarks>
 		object NotifyDataMiner(int iType, object value1, object value2);
 
 		/// <summary>
@@ -1449,7 +1449,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value1">Depends on the type of message to send.</param>
 		/// <param name="value2">Depends on the type of message to send.</param>
 		/// <returns>Depends on the type of message that has been sent.</returns>
-		/// <remarks>Refer to [Notify Types overview](xref:NotifyTypesOverview) for an overview of the available Notify types.</remarks>
+		/// <remarks>Refer to [Notify Types overview](xref:NTNotifyTypesOverview) for an overview of the available Notify types.</remarks>
 		object NotifyProtocol(int iType, object value1, object value2);
 
 		/// <summary>
@@ -1459,7 +1459,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value1">Depends on the type of message to send.</param>
 		/// <param name="value2">Depends on the type of message to send.</param>
 		/// <returns>(int): HRESULT value.</returns>
-		/// <remarks>Refer to [Notify Types overview](xref:NotifyTypesOverview) for an overview of the available Notify types.</remarks>
+		/// <remarks>Refer to [Notify Types overview](xref:NTNotifyTypesOverview) for an overview of the available Notify types.</remarks>
 		int NotifyDataMinerQueued(int iType, object value1, object value2);
 
 		/// <summary>

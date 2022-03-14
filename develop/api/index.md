@@ -2,7 +2,7 @@
 uid: ApiDocumentation
 ---
 
-# Api Documentation
+# API Documentation
 
 ## Namespaces
 
@@ -16,6 +16,13 @@ uid: ApiDocumentation
 |[Skyline.DataMiner.Net](xref:Skyline.DataMiner.Net)|This namespace contains SLNet types.|
 |[Interop.SLDms](xref:Interop.SLDms)|***Deprecated*** This namespace contains types for interacting with a DataMiner System.|
 |[Tamir.SharpSsh](xref:Tamir.SharpSsh)|***Deprecated*** This namespace contains classes implementing SSH File Transfer Protocol (SFTP) and Secure Copy (SCP) functionality. **NOTE:** This namespace is obsolete for SCP and SFTP implementations. Please refer to the following page for an alternative for such implementations: https://github.com/sshnet/SSH.NET.|
+
+## Notify types
+
+|Namespace|Description|
+|--- |--- |
+|[NT notify types](xref:NTNotifyTypesOverview)|NT Notify types overview.|
+|[DMS notify types](xref:SLDmsNotifyTypes)|DMS notify types overview.|
 
 ## Error codes
 

@@ -11,4 +11,4 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 ## Contents
 
 - [User Guide](xref:Part1GettingStarted)
-- [Web Services](xref:WS_v1)
+- [Developer documentation](xref:DevelopIndex)

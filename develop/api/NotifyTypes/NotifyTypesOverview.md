@@ -1,11 +1,11 @@
 ---
-uid: NotifyTypesOverview
+uid: NTNotifyTypesOverview
 ---
 
-# Notify Types
+# NT Notify Types
 
 > [!WARNING]
-> The table below gives an overview of all the defined Notify types. However, the Notify types for which no additional documentation is provided should not be used.
+> The table below gives an overview of all the defined NT Notify types. However, the Notify types for which no additional documentation is provided should not be used.
 
 |ID|Name|Description|
 |--- |--- |--- |

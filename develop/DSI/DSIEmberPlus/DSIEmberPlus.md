@@ -2,7 +2,7 @@
 uid: DSIEmberPlus
 ---
 
-# Ember plus
+# Ember+
 
 Ember+ is a control protocol defined by the Lawo Group, allowing communication between two endpoints: a data provider (typically a device exposing a set of controllable parameters) and a consumer (typically a monitoring system).
 

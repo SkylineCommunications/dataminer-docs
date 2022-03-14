@@ -2,7 +2,7 @@
 uid: SLDmsNotifyTypes
 ---
 
-# SLDms Notify Types
+# DMS Notify Types
 
 The following table contains an overview of all Notify types.
 
