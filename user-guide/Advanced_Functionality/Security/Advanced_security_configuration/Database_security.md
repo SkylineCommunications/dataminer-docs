@@ -106,7 +106,7 @@ To update the Java installation:
 
 1. Update the binaries in *C:\Program Files\Cassandra\Java*.
 
-1. Stop the Cassandra service.
+1. Start the Cassandra service.
 
 1. Start your DataMiner Agent.
 
