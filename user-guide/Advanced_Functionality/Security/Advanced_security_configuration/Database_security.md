@@ -47,19 +47,19 @@ We also recommend that you create a new superuser and disable the default *cassa
 
 Implementing a Zero Trust architecture requires applying the principle of least privilege across your infrastructure. This is especially true for your databases. By default, DataMiner installs Cassandra with authorizer **AllowAllAuthorizer**, effectively granting all permissions to all roles. However, Cassandra also supports the **CassandraAuthorizer**, which allows more granular permission management.
 
-To enable the *CassandraAuthorizer*:
+To enable the *CassandraAuthorizer* in Cassandra:
 
-1. Set the authorizer in your *cassandra.yaml* file:
+1. Set the *authorizer* to *CassandraAuthorizer* in your *cassandra.yaml* file (typically located in the Cassandra installation folder):
 
    `authorizer: CassandraAuthorizer`
 
-1. Grant the *dataminer* role permission on the DataMiner keyspaces.
+1. Grant your DataMiner database user full permissions on the DataMiner keyspaces. You can do so by executing the following queries (using DevCenter, the DataMiner Cube Query Executor, or your preferred query tool):
 
-   `GRANT CREATE ON ALL KEYSPACES TO dataminer;`
+   `GRANT CREATE ON ALL KEYSPACES TO <YOUR DATABASE USER/ROLE>;`
 
-   `GRANT ALL ON KEYSPACE "SLDMADB" TO dataminer;`
+   `GRANT ALL ON KEYSPACE "SLDMADB" TO <YOUR DATABASE USER/ROLE>;`
 
-   `GRANT ALL ON KEYSPACE "sldmadb_ticketing" TO dataminer;`
+   `GRANT ALL ON KEYSPACE "sldmadb_ticketing" TO <YOUR DATABASE USER/ROLE>;`
 
 > [!NOTE]
 > For Cassandra clusters, DataMiner requires **full permissions** on all keyspaces.
