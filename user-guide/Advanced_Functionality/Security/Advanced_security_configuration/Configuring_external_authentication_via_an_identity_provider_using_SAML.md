@@ -145,17 +145,17 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
     - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
 
         1. In the *Client secrets* section, click *New client secret*.
-        2. Enter a description and an expiration date for the application secret.
+        1. Enter a description and an expiration date for the application secret.
     
     - **Username** and **Password**: The Azure AD user account that DataMiner will use to request data from Azure AD. Technically this can be any account, but we recommend that you create an account that will be use exclusively for this purpose. Note that, depending on the method of querying, specifying this account can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
 
-2. Configure DataMiner with this information:
+1. Configure DataMiner with this information:
 
     1. Stop the DMA for which you want to configure this.
 
-    2. On the DMA, go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
+    1. On the DMA, go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
-    3. In the *DataMiner.xml* file, specify the information you previously gathered using the same syntax as in the following example:
+    1. In the *DataMiner.xml* file, specify the information you previously gathered using the same syntax as in the following example:
 
         ```xml
         <AzureAD
@@ -169,9 +169,9 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
         > [!NOTE]
         > From DataMiner 10.1.11/10.2.0 onwards, DataMiner supports Azure AD application querying. If this is used instead of delegated querying, an authentication secret will suffice and no username and password will need to be specified here.
 
-    4. Save the file and restart DataMiner.
+    1. Save the file and restart DataMiner.
 
-3. On the application (DataMiner) root page, click *API Permissions* in the pane on the left and make sure the necessary permissions are enabled:
+1. On the application (DataMiner) root page, click *API Permissions* in the pane on the left and make sure the necessary permissions are enabled:
 
     For delegated querying:
 
@@ -185,32 +185,32 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
     - Microsoft Graph \> User.Read.All – Application
     - Microsoft Graph \> User.Read – Delegated
 
-4. Restart DataMiner.
+1. Restart DataMiner.
 
-5. Add the Azure AD users to DataMiner:
+1. Add the Azure AD users to DataMiner:
 
     1. Open DataMiner Cube and log in with an existing Administrator account.
-    2. Add the users/groups as described in [Adding a user](xref:Adding_a_user) and [Adding a user group](xref:Adding_a_user_group). If you choose to add an existing user or group, you will be presented a list of all users and groups available on Azure AD.
-    3. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
+    1. Add the users/groups as described in [Adding a user](xref:Adding_a_user) and [Adding a user group](xref:Adding_a_user_group). If you choose to add an existing user or group, you will be presented a list of all users and groups available on Azure AD.
+    1. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
 
     It is now possible to log in to DataMiner with any of the Azure AD user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
 
 #### Configuring automatic creation of users authenticated by Azure AD using SAML
 
-From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAML can be automatically created and assigned to groups in DataMiner.
+From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAML can be automatically created and assigned to groups in DataMiner. This is often referred to as JIT (Just-In-Time) Provisioning.
 
 1. Go to *User Attributes & Claims* and add a group claim.
 
     > [!NOTE]
     > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
 
-2. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD.
+1. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD.
 
-3. Stop DataMiner.
+1. Stop DataMiner.
 
-4. Go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
+1. Go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
-5. In the *DataMiner.xml* file, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
+1. In the *DataMiner.xml* file, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
 
     ```xml
     <DataMiner ...>
@@ -237,9 +237,9 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
     > - It will only be possible to add a user to a single group.
     > - The user information that is created will not be updated.
 
-6. Save the *DataMiner.xml* file.
+1. Save the *DataMiner.xml* file.
 
-7. Restart the DataMiner Agent.
+1. Restart the DataMiner Agent.
 
 ### Okta
 
@@ -248,11 +248,11 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 1. Launch the App Integration Wizard
 
     1. In the Admin Console, go to *Applications \> Applications*.
-    2. Click *Create App Integration*.
-    3. To create a SAML integration, select "SAML 2.0" as the *Sign-on method*.
-    4. Click *Next*.
+    1. Click *Create App Integration*.
+    1. To create a SAML integration, select "SAML 2.0" as the *Sign-on method*.
+    1. Click *Next*.
 
-2. Configure the general settings:
+1. Configure the general settings:
 
    **App name**
 
@@ -269,7 +269,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    > [!TIP]
    > It is recommended to use a PNG image with a transparent background and a landscape orientation.
 
-3. Configure the SAML settings:
+1. Configure the SAML settings:
 
     **Single sign on URL**
 
