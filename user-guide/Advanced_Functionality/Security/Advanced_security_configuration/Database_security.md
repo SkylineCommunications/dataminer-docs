@@ -112,18 +112,18 @@ To update the Java version:
 
 1. Start your DataMiner Agent.
 
-## Elasticsearch
+## Elasticsearch database
 
 <!-- TODO: enable authentication -->
 <!-- TODO: enable TLS encryption -->
 
 ### Updating Elasticsearch
 
-By default, DataMiner install Elasticsearch 6.8.23. For more information about how you can upgrade your Elasticsearch version, please refer to [upgrading elasticsearch](https://community.dataminer.services/documentation/upgrading-elasticsearch-from-one-minor-version-to-another/).
+By default, DataMiner installs Elasticsearch 6.8.23. For more information about how you can upgrade your Elasticsearch version, refer to [Upgrading Elasticsearch](https://community.dataminer.services/documentation/upgrading-elasticsearch-from-one-minor-version-to-another/) on DataMiner Dojo.
 
 ### Updating Java
 
-By default, DataMiner installs Elasticsearch with its own Java installation. This is typically located in *C:\Program Files\Elasticsearch\Java\bin*. DataMiner deploys Elasticsearch with **Java 1.8.0_121**.
+By default, DataMiner installs Elasticsearch with its own Java installation. This is typically located in the folder *C:\Program Files\Elasticsearch\Java\bin*. DataMiner deploys Elasticsearch with **Java 1.8.0_121**.
 
 To update the Java version:
 
