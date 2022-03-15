@@ -73,7 +73,7 @@ To enable the *CassandraAuthorizer* in Cassandra:
 
 ### Encryption at rest
 -->
-### Firewall Ports
+### Firewall ports
 
 The following ports should be opened in the firewall, depending on your setup:
 
