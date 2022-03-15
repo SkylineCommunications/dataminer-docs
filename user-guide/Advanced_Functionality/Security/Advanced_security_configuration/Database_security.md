@@ -10,7 +10,7 @@ uid: Database_security
 
 By default, DataMiner installs Cassandra with the PasswordAuthenticator enabled. Cassandra comes installed with a default *cassandra* user. When DataMiner installs Cassandra (e.g. during migration or installation), an extra superuser named *root* is created.
 
-#### Configuring more secure passwords for the default users
+#### Configuring strong passwords for the default users
 
 We highly recommend that you configure more secure passwords for the default user. Preferably, these passwords should be randomly generated and stored in a password vault.
 
@@ -43,7 +43,9 @@ We also recommend that you create a new superuser and disable the default *cassa
 > [!NOTE]
 > You can also configure Cassandra to use an LDAP server for authentication. However, this is beyond the scope of this guide.
 
-### Enabling the *CassandraAuthorizer*
+### Authorization
+
+#### Enabling the *CassandraAuthorizer*
 
 Implementing a Zero Trust architecture requires applying the principle of least privilege across your infrastructure. This is especially true for your databases. By default, DataMiner installs Cassandra with authorizer **AllowAllAuthorizer**, effectively granting all permissions to all roles. However, Cassandra also supports the **CassandraAuthorizer**, which allows more granular permission management.
 
@@ -71,7 +73,7 @@ To enable the *CassandraAuthorizer* in Cassandra:
 
 ### Encryption at rest
 -->
-### Configuring the firewall
+### Firewall ports
 
 The following ports should be opened in the firewall, depending on your setup:
 
