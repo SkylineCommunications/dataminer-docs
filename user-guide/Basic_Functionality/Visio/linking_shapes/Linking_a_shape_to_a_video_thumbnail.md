@@ -10,6 +10,8 @@ When you link a shape to a video thumbnail, the video feed from the video server
 
 Please note the following:
 
+- From DataMiner 10.2.0 \[CU1]/10.2.4 onwards, HTML5 video thumbnails are **muted** by default.
+
 - Video servers that only accept **TLS 1.2** are supported from DataMiner 10.2.0/10.1.1 onwards.
 
 - From DataMiner 10.2.0/10.1.11 onwards, **HLS** (HTTPS Live Streaming) is supported. See [Configuring a thumbnail for HTTP Live Streaming](#configuring-a-thumbnail-for-http-live-streaming).
@@ -67,6 +69,18 @@ Depending on the DataMiner version, additional configuration is possible in the 
   > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
   > - When the authentication token expires, the URL has to be updated with the new token.
   > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
+
+- From DataMiner 10.2.0 \[CU1]/10.2.4 onwards, it is possible to specify the **volume for the VLC player** in the URL. The volume should be specified as a percentage, ranging from 0 (i.e. muted) to 100. For example:
+
+  ```txt
+  #https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50
+  ```
+
+- From DataMiner 10.2.0 \[CU1]/10.2.4 onwards, you can specify that the video should play continuously in a **loop**, by adding `loop=true` to the URL. By default, this is considered to be false.
+
+  ```txt
+  #https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true
+  ```
 
 ## Allowed paths in case of connection via DataMiner proxy
 
