@@ -183,7 +183,44 @@ More logging can be obtained by creating a file with the name "SLSSHExt.txt". Th
 
 ## SSH support in DataMiner
 
-### Key exchange algorithms
+### [From DataMiner 10.3.0/10.2.4 onwards](#tab/ssh1-1)
+
+#### Key exchange algorithms
+
+DataMiner will propose the following key exchange algorithms to the server in the following order:
+
+1. ecdh-sha2-nistp521
+1. ecdh-sha2-nistp384
+1. ecdh-sha2-nistp256
+1. diffie-hellman-group14-sha1
+1. diffie-hellman-group1-sha1
+1. diffie-hellman-group-exchange-sha1
+
+#### Ciphers
+
+DataMiner will propose the following ciphers to the server in the following order:
+
+1. aes256-ctr
+1. aes128-ctr
+1. aes128-cbc
+1. 3des-cbc
+
+#### Hash-based Message Authentication Codes (HMAC)
+
+DataMiner will propose the following hash-based message authentication algorithms (HMAC) to the server in the following order:
+
+1. HMAC-SHA2-256
+1. HMAC-SHA1
+1. HMAC-MD5
+
+#### Host key types
+
+- ssha-rsa
+- ssh-dss
+
+#### [Prior to DataMiner 10.3.0/10.2.4](#tab/ssh-2)
+
+#### Key exchange algorithms
 
 DataMiner will propose the following key exchange algorithms to the server in the following order:
 
@@ -192,26 +229,28 @@ DataMiner will propose the following key exchange algorithms to the server in th
 1. diffie-hellman-group14-sha1 (introduced in DataMiner 9.5.2 - RN14766)
 1. ecdh-sha2-nistp256 (introduced in DataMiner 9.5.2 - RN14877)
 
-### Ciphers
+#### Ciphers
 
 DataMiner will propose the following ciphers to the server in the following order:
 
 1. 3des-cbc
 1. aes128-cbc
-1. aes128-ctr (Introduced in DataMiner 9.5.2 - RN14766)
+1. aes128-ctr (Introduced in DataMiner 9.5.2 - RN 14766)
 
-### Hash-based Message Authentication Codes (HMAC)
+#### Hash-based Message Authentication Codes (HMAC)
 
 DataMiner will propose the following hash-based message authentication algorithms (HMAC) to the server in the following order:
 
-1. hmac-md5
-1. hmac-sha1
-1. hmac-sha2-256 (Introduced in DataMiner 9.5.2 - RN14877)
+1. HMAC-MD5
+1. HMAC-SHA1
+1. HMAC-SHA2-256 (Introduced in DataMiner 9.5.2 - RN 14877)
 
-### Host key types
+#### Host key types
 
 - ssha-rsa
 - ssh-dss
+
+***
 
 ## Selecting the key exchange algorithm
 
