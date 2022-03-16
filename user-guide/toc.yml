@@ -1986,6 +1986,13 @@
           topicUid: The_Bookings_module
         - name: The Services module
           topicUid: The_Services_module
+          items:
+            - name: Using the overview tab
+              topicUID: SRM_Services_overview
+            - name: Using the definitions tab
+              topicUID: SRM_Services_definitions
+            - name: Using the profiles tab
+              topicUID: SRM_Services_profiles
         - name: SRM code snippets
           topicUid: SRM_code_snippets
         - name: Advanced SRM settings
