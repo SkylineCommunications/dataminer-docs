@@ -151,7 +151,7 @@ To enable authentication, follow these steps:
 1. Start your DataMiner Agent.
 
 > [!NOTE]
-> To keep using Kibana, set also set credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in C:\Program Files\Elasticsearch\Kibana\config).
+> To keep using Kibana, also set credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in C:\Program Files\Elasticsearch\Kibana\config).
 
 ### Updating Elasticsearch
 
