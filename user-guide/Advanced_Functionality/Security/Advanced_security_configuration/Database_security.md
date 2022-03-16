@@ -129,6 +129,7 @@ To enable authentication, follow these steps:
 1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
 
 `xpack.security.enabled: true`
+
 `xpack.security.transport.ssl.enabled: true`
 
 1. Now execute the **elasticsearch-setup-passwords.bat** script (as Administrator) with the *interactive* argument.
@@ -140,9 +141,13 @@ To enable authentication, follow these steps:
 1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner agent in *C:\Skyline DataMiner\db.xml*.
 
 `<DataBase active="true" search="true" **type="Elasticsearch"**>
+
 		<DBServer>[ELASTIC IP]</DBServer>
+		
 		<UID>[YOUR ELASTIC USER]</UID>
+		
 		<PWD>[YOUR STRONG PASSWORD]</PWD>
+		
 	</DataBase>`
 
 1. Start the *elasticsearch-service-x64* service.
