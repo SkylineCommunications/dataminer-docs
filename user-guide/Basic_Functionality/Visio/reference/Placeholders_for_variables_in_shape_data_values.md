@@ -585,13 +585,17 @@ This syntax consists of the following components:
 
 Full syntax: *\[ServiceDefinition:*\<ServiceDefinitionID>*,*\<Property>*\]*
 
-From DataMiner 10.1.10/1.20 onwards, you can use this placeholder to retrieve one of the following properties of a service definition:
+From DataMiner 10.2.0/10.1.10 onwards, you can use this placeholder to retrieve properties of a service definition.
+
+The following properties are supported:
 
 - **Name**: The name of the service definition.
 
 - **Actions**: The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allow them to be inserted directly into e.g. a SetVar shape.
 
 - **Property=*\<propertyName>***: The value of a custom property of the service definition.
+
+- **Type**: Supported from DataMiner 10.3.0/10.2.4 onwards. The type of service definition (*SRM*, *Skyline Process Automation*, or *Custom Process Automation*).
 
 For example:
 
