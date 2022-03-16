@@ -42,6 +42,11 @@ In the header section of the service definition panel, you can specify the follo
 
 - **Description**: A general description of the service definition.
 
+- **Type**: Displayed from DataMiner 10.2.4/10.3.0 onwards. Indicates the type of service definition, which can be *SRM*, *Skyline Process Automation* or *Custom Automation*. By default, when you create a new service definition, type is set to *SRM*. At present, you cannot modify this within the DataMiner Cube UI.
+
+  > [!NOTE]
+  > Service definitions of type *Skyline Process Automation* cannot be duplicated.
+
 - **Template**: This checkbox determines whether the service definition is considered to be a template or not. If a service definition is configured as a service definition template, it will be treated differently while scripts to create bookings are running. This option is particularly useful in case the service definition is systematically modified during the script, in order to reduce the required resources.
 
 - **Visio**: Allows you to select the Visio file that will be used for services generated for this service definition. Either select one of the available files in the drop-down list, or click *New upload* to add a new file.
