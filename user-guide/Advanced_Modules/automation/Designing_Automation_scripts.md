@@ -21,4 +21,3 @@ As soon as there are unsaved changes in a script, “*\[modified\]*” is added 
 
 > [!NOTE]
 > If a script contains errors, a warning message will be displayed in red at the bottom of the editor pane, and the *Save script* button will be temporarily disabled.
->

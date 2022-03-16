@@ -20,4 +20,3 @@ If Microsoft Visual Studio (or another debugger) is installed on the DataMiner A
 
 > [!NOTE]
 > In Microsoft Visual Studio, it may be necessary to disable the *JustMyCode* option.
->

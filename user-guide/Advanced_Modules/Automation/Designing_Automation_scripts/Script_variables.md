@@ -30,9 +30,9 @@ You can then further specify the dummy properties in the *DUMMIES* section:
 
 1. To change the name of the dummy, enter a new name next to *Dummy*.
 
-2. To change the protocol for a dummy, click the underlined sections next to *Protocol* and *Versions* respectively, and select a new protocol and protocol version.
+1. To change the protocol for a dummy, click the underlined sections next to *Protocol* and *Versions* respectively, and select a new protocol and protocol version.
 
-3. Optionally, to link a default element to a dummy, select an element in the underlined field next to *Configuration element* for this dummy. This can be particularly useful when a table parameter column is selected, as you will then be able to select an index from the available indices of the table of that default element in a drop-down list.
+1. Optionally, to link a default element to a dummy, select an element in the underlined field next to *Configuration element* for this dummy. This can be particularly useful when a table parameter column is selected, as you will then be able to select an index from the available indices of the table of that default element in a drop-down list.
 
 ## Creating a parameter
 
@@ -46,7 +46,7 @@ You can then further specify the parameter properties in the *PARAMETERS* sectio
 
 1. To change the name of the parameter, enter a new name next to *Parameter*.
 
-2. Optionally, link a memory file to the parameter to suggest possible values to the user who executes the script. To do so, click the underlined section next to *Values file* and select the file.
+1. Optionally, link a memory file to the parameter to suggest possible values to the user who executes the script. To do so, click the underlined section next to *Values file* and select the file.
 
 ## Creating a memory file
 
@@ -60,8 +60,8 @@ These files are used to hold a particular value used in a script. Within the scr
 
 - To configure a memory file, click the underlined sections in the *MEMORY FILES* section. The first section determines the memory file name, the second determines whether the file is volatile or persistent.
 
-    > [!NOTE]
-    > For volatile memory files, the life cycle of the values stored in the memory spaces is limited to the execution time of the script. Once the script is terminated, all data stored in the memory spaces is lost. For non-volatile memory files, the life cycle of the values stored in the memory spaces is unlimited. The values are stored in a file on the hard disk of the DMA. They will survive different script cycles and even DMA reboots.
+  > [!NOTE]
+  > For volatile memory files, the life cycle of the values stored in the memory spaces is limited to the execution time of the script. Once the script is terminated, all data stored in the memory spaces is lost. For non-volatile memory files, the life cycle of the values stored in the memory spaces is unlimited. The values are stored in a file on the hard disk of the DMA. They will survive different script cycles and even DMA reboots.
 
 ### Permanent memory files
 

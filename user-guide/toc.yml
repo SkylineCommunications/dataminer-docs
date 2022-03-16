@@ -1255,7 +1255,7 @@
               topicUid: Assign_dummy
             - name: Assign template
               topicUid: Assign_template
-            - name: CSharp code
+            - name: C# code
               topicUid: CSharp_code
             - name: Clear memory
               topicUid: Clear_memory
@@ -1300,16 +1300,16 @@
               topicUid: Manually_executing_a_script
             - name: Script execution options
               topicUid: Script_execution_options
-        - name: Using CSharp code in Automation scripts
+        - name: Using C# code in Automation scripts
           topicUid: Using_CSharp_code_in_Automation_scripts
           items:
-            - name: Adding CSharp code to an Automation script
+            - name: Adding C# code to an Automation script
               topicUid: Adding_CSharp_code_to_an_Automation_script
-            - name: Debugging CSharp scripts
+            - name: Debugging C# scripts
               topicUid: Debugging_CSharp_scripts
-            - name: Building interactive Automation scripts with CSharp
+            - name: Building interactive Automation scripts with C#
               topicUid: Building_interactive_Automation_scripts_with_CSharp
-            - name: Compiling a CSharp code block as a library
+            - name: Compiling a C# code block as a library
               topicUid: Compiling_a_CSharp_code_block_as_a_library
         - name: Special parameters available in DMS Automation scripts
           topicUid: Special_parameters_available_in_DMS_Automation_scripts

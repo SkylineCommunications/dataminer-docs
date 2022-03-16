@@ -12,7 +12,7 @@ In a C# block of an Automation script, you can connect to the CMDB of the Invent
     Skyline.DataMiner.SLDatabaseSystem.Data
     ```
 
-2. Refer to the following DLL files:
+1. Refer to the following DLL files:
 
     ```txt
     C:\Skyline DataMiner\Files\SLDatabase.dll
@@ -20,7 +20,7 @@ In a C# block of an Automation script, you can connect to the CMDB of the Invent
     C:\Skyline DataMiner\Files\System.XML.dll
     ```
 
-3. Copy the following snippet in the C# block and make sure the database name matches the name that is specified in *DB.xml*:
+1. Copy the following snippet in the C# block and make sure the database name matches the name that is specified in *DB.xml*:
 
     ```cs
     String dbName = "db-name"; //Name must be identical to name defined in db.xml

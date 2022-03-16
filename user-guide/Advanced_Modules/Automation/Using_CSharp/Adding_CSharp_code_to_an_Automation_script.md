@@ -2,11 +2,11 @@
 uid: Adding_CSharp_code_to_an_Automation_script
 ---
 
-# Adding CSharp code to an Automation script
+# Adding C# code to an Automation script
 
 In this section:
 
-- [Adding CSharp code to a script in Cube](#adding-csharp-code-to-a-script-in-cube)
+- [Adding C# code to a script in Cube](#adding-c-code-to-a-script-in-cube)
 
 - [Engine object](#engine-object)
 
@@ -20,56 +20,48 @@ In this section:
 
 - [Online help and user assistance](#online-help-and-user-assistance)
 
-## Adding CSharp code to a script in Cube
+## Adding C# code to a script in Cube
 
 To add C# code to a script:
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 
-2. In the *Automation* module, select the script to which you want to add C# code.
+1. In the *Automation* module, select the script to which you want to add C# code.
 
-3. In the *Add Action* selection box, select *C# Code*.
+1. In the *Add Action* selection box, select *C# Code*.
 
-4. In the field mentioning *Enter code here*, enter the C# code.
+1. In the field mentioning *Enter code here*, enter the C# code.
 
-5. Click the downward arrow next to *Advanced* to configure any of the following settings:
+1. Click the downward arrow next to *Advanced* to configure any of the following settings:
 
-    - *Namespace references*: Allows you to provide namespace references.
+   - *Namespace references*: Allows you to provide namespace references.
 
+     > [!NOTE]
+     > - This is only applicable in case the script block only contains the lines of code to execute (i.e. it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
+     > - The following using statements are added by default:
+     >     - using System
+     >     - using System.IO
+     >     - using Skyline.DataMiner.Automation
+     >     - using Skyline.DataMiner.Net
+     >     - using Skyline.DataMiner.Net.Exceptions
+     >     - using Skyline.DataMiner.Net.Messages
+     >     - using Skyline.DataMiner.Net.AutomationUI
+     > - To reference additional DLLs, e.g. a custom DLL placed in the *C:\\Skyline DataMiner\\ProtocolScripts* folder, you need to specify an absolute path.
 
+   - *DLL references*: Allows you to reference DLLs that are required by the Automation script.
 
-        > [!NOTE]
-        > - This is only applicable in case the script block only contains the lines of code to execute (i.e. it does not make use of classes/methods). In case the C# block does make use of classes/methods, the using statement can be provided in the C# block itself.
-        > - The following using statements are added by default:
-        >     - using System
-        >     - using System.IO
-        >     - using Skyline.DataMiner.Automation
-        >     - using Skyline.DataMiner.Net
-        >     - using Skyline.DataMiner.Net.Exceptions
-        >     - using Skyline.DataMiner.Net.Messages
-        >     - using Skyline.DataMiner.Net.AutomationUI
-        > - To reference additional DLLs, e.g. a custom DLL placed in the *C:\\Skyline DataMiner\\ProtocolScripts* folder, you need to specify an absolute path.
+     > [!NOTE]
+     > The following DLLs are referenced by default:
+     > - System.dll
+     > - System.Core.dll (from DataMiner 9.5.13 onwards)
+     > - System.Xml.dll (from DataMiner 9.5.13 onwards)
+     > - SLManagedAutomation.dll
+     > - SLNetTypes.dll
+     > - Skyline.DataMiner.Storage.Types.dll
+     > - SLLoggerUtil.dll
+     > - SLAnalyticsTypes.dll (from DataMiner 10.1.11 onwards)
 
-
-
-    - *DLL references*: Allows you to reference DLLs that are required by the Automation script.
-
-
-
-        > [!NOTE]
-        > The following DLLs are referenced by default:
-        > - System.dll
-        > - System.Core.dll (from DataMiner 9.5.13 onwards)
-        > - System.Xml.dll (from DataMiner 9.5.13 onwards)
-        > - SLManagedAutomation.dll
-        > - SLNetTypes.dll
-        > - Skyline.DataMiner.Storage.Types.dll
-        > - SLLoggerUtil.dll
-        > - SLAnalyticsTypes.dll (from DataMiner 10.1.11 onwards
-
-
-
-    - *Script references*: Allows you to refer to other C# blocks. See [Compiling a CSharp code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library).
+   - *Script references*: Allows you to refer to other C# blocks. See [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library).
 
 > [!NOTE]
 > From DataMiner 9.6.4 onwards, DataMiner uses the .NET Compiler Platform SDK (version 2.9) to validate and compile C# scripts, allowing the use of C# syntax up to and including version 7.3.
@@ -156,8 +148,8 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
     >                }
     >            }
     >        }
-	>
-    > - From DataMiner 9.5.12 onwards, custom entry points are possible. see [Custom entry points](#custom-entry-points).
+    >
+    > - From DataMiner 9.5.12 onwards, custom entry points are possible. See [Custom entry points](#custom-entry-points).
 
 ## Preprocessor directives
 
@@ -245,8 +237,7 @@ Restrictions:
 ## Online help and user assistance
 
 > [!TIP]
-> See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/>
+> See also: [Rui’s Rapid Recap – C# Automation snippets](https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/) on DataMiner Dojo
 
 ### Sample snippets in shortcut menu
 
@@ -260,7 +251,7 @@ To verify the syntax of the C# code you entered in the code editor:
 
 - Below the editor field, click *Validate*.
 
-    If errors are found, these are enumerated in a field next to the *Validate* field. Click this field to quickly navigate to the errors in the code block.
+  If errors are found, these are enumerated in a field next to the *Validate* field. Click this field to quickly navigate to the errors in the code block.
 
 ### IntelliSense
 

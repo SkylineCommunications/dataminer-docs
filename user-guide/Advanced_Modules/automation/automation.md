@@ -16,7 +16,7 @@ This section consists of the following topics:
 
 - [Running Automation scripts](xref:Running_Automation_scripts)
 
-- [Using CSharp code in Automation scripts](xref:Using_CSharp_code_in_Automation_scripts)
+- [Using C# code in Automation scripts](xref:Using_CSharp_code_in_Automation_scripts)
 
 - [Special parameters available in DMS Automation scripts](xref:Special_parameters_available_in_DMS_Automation_scripts)
 

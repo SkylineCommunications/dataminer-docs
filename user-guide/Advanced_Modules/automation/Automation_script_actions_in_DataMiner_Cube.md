@@ -12,7 +12,7 @@ The following actions are available in Cube:
 
 - [Assign template](xref:Assign_template)
 
-- [CSharp code](xref:CSharp_code)
+- [C# code](xref:CSharp_code)
 
 - [Clear memory](xref:Clear_memory)
 

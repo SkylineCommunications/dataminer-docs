@@ -8,15 +8,14 @@ Use this action to assign an Automation script’s dummy to a specific element b
 
 1. Click the left-most underlined field to select or create a dummy element.
 
-    > [!NOTE]
-    > For more information on creating dummy elements, see [Creating a dummy](xref:Script_variables#creating-a-dummy).
+   > [!NOTE]
+   > For more information on creating dummy elements, see [Creating a dummy](xref:Script_variables#creating-a-dummy).
 
-2. Select how the new element will be determined:
+1. Select how the new element will be determined:
 
-    - For a pre-determined element, select *Value* to select a specific element, and enter the element name or ID.
+   - For a pre-determined element, select *Value* to select a specific element, and enter the element name or ID.
 
-    - For an element determined by a script variable, select *Variable* and select the variable.
+   - For an element determined by a script variable, select *Variable* and select the variable.
 
-    > [!NOTE]
-    > The value of the variable or the directly specified value should contain either the dmaID and elementID formatted as “dmaID/elementID” or the element name.
-    >
+   > [!NOTE]
+   > The value of the variable or the directly specified value should contain either the dmaID and elementID formatted as “dmaID/elementID” or the element name.
