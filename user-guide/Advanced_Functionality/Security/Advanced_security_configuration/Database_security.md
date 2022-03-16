@@ -114,8 +114,43 @@ To update the Java version:
 
 ## Elasticsearch database
 
-<!-- TODO: enable authentication -->
 <!-- TODO: enable TLS encryption -->
+
+### Authentication
+
+By default, Elasticsearch does **not** require authentication, meaning anyone can access or alter the data. Therefore, it's **highly recommended** to enable authentication on your Elasticsearch cluster. 
+
+To enable authentication, follow these steps:
+
+1. Stop your DataMiner
+
+1. Stop the *elasticsearch-service-x64* service
+ 
+1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
+
+`xpack.security.enabled: true`
+`xpack.security.transport.ssl.enabled: true`
+
+1. Now execute the **elasticsearch-setup-passwords.bat** script (as Administrator) with the *interactive* argument.
+
+`C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
+
+   1. The script will ask you to enter the new credentials for several users. Ideally these are random generated, strong passwords.
+
+1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner agent in *C:\Skyline DataMiner\db.xml*.
+
+`<DataBase active="true" search="true" **type="Elasticsearch"**>
+		<DBServer>[ELASTIC IP]</DBServer>
+		<UID>[YOUR ELASTIC USER]</UID>
+		<PWD>[YOUR STRONG PASSWORD]</PWD>
+	</DataBase>`
+
+1. Start the *elasticsearch-service-x64* service.
+
+1. Start your DataMiner Agent.
+
+> [!NOTE]
+> To keep using Kibana, set also set credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in C:\Program Files\Elasticsearch\Kibana\config).
 
 ### Updating Elasticsearch
 
