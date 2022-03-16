@@ -595,7 +595,7 @@ The following properties are supported:
 
 - **Property=*\<propertyName>***: The value of a custom property of the service definition.
 
-- **Type**: Supported from DataMiner 10.3.0/10.2.4 onwards. The type of service definition (*SRM*, *Skyline Process Automation*, or *Custom Process Automation*).
+- **Type**: Supported from DataMiner 10.3.0/10.2.4 onwards. The type of service definition. This can be *Default* (representing the default type "SRM"), *ProcessAutomation* (representing the type "Skyline Process Automation"), or *CustomProcessAutomation*.
 
 For example:
 
