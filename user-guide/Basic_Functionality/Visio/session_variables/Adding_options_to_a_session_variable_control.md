@@ -117,6 +117,14 @@ Add a shape data field of type **SetVarOptions** to the shape, and set its value
 
     If this option is added to the shape, it will not be possible to update the session variable in any other way except via the shape. This option can be used when, for example, you want to prevent that a session variable is updated by a QAction.
 
+- **Control to set a duration:**
+
+   From DataMiner 10.3.0/10.2.4 onwards, a SetVar shape can be configured to set a duration in a session variable. See [Creating a control to set a duration in a session variable](#creating-a-control-to-set-a-duration-in-a-session-variable).
+
+    ```txt
+    Control=Duration
+    ```
+
 ## Creating a text box with input validation
 
 If, in a shape data field of type **SetVar**, you specify a session variable without a value, then the shape turns into a text box that allows the user to enter a value.
@@ -401,3 +409,42 @@ In the following example, the first subscription filter (“value=101 == 1”) w
 | SetVar             | MyVar:\[this elementID\]:100:200 |
 | SetVarOptions      | Control=TreeView                 |
 | SubscriptionFilter | value=101 == 1\|value=201 == A   |
+
+## Creating a control to set a duration in a session variable
+
+From DataMiner 10.3.0/10.2.4 onwards, you can configure a SetVar shape to set a duration of type TimeSpan in a session variable.
+
+To do so:
+
+1. Add a shape data field of type **SetVar** to the shape. As the value of this shape data field, specify the name of the session variable.
+
+1. Add a shape data field of type **SetVarOptions** to the shape. As the value of this shape data field, specify `Control=Duration`, optionally followed by a number of options, separated by pipe characters (“|”).
+
+    The following options can be used:
+
+    | SetVarOption | Description |
+    |--------------|-------------|
+    | ShowInfinity=true/false | When this option is set to true, next to the duration selector, a checkbox is displayed that can be used to set the duration to infinity, which will replace the value of the session variable with TimeSpan.MaxValue. Default: False. |
+    | Minimum= | The minimum duration. Default: 1 minute. |
+    | Maximum= | The maximum duration. Default: 1 week. |
+
+    To specify the duration, you can use the following units:
+
+    | Unit | Description | Example |
+    |------|-------------|---------|
+    | No unit | If no unit is specified, the specified number <br>is considered to be a number of days. | 1 |
+    | s | seconds | 1s |
+    | m | minutes | 1m |
+    | h | hours | 1h |
+    | d | days | 1d |
+    | mo | months (1 month = 30 days) | 1mo |
+    | y | years (1 year = 365 days) | 1y |
+
+    For example:
+
+    | Shape data field   | Value                            |
+    |--------------------|----------------------------------|
+    | SetVarOptions      | Control=Duration\|minimum=5\|maximum=25\|showInfinity=false |
+
+> [!NOTE]
+> A page-level **InitVar** shape data field can be used to set the initial value of the duration in the session variable. To set the maximum time span value, InitVar can be set to `Infinity`. See [Initializing a session variable](xref:Initializing_a_session_variable).
