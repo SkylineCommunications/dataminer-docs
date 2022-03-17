@@ -287,8 +287,10 @@ When a standard drop-down list is configured, the items to choose from are stati
 </Param>
 ```
 
+This also works for tables (from DataMiner 8 onwards (RN 5817)). It is not only possible to refer to a standalone parameter, another column of the same table can also be specified. This makes it possible to have a list of different items for every row.
+
 > [!NOTE]
-> This also works for tables (since DataMiner version 8). It is not only possible to refer to a standalone parameter, another column of the same table can also be specified. This makes it possible to have a list of different items for every row.
+> The column that is referred to by the dependencyId attribute must be displayed in the table.
 
 ## See also
 

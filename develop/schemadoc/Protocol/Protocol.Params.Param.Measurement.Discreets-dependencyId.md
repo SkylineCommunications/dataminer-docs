@@ -18,6 +18,9 @@ If the discrete values of the parameter depend on the current state of another p
 
 This parameter can be a single parameter or a column. In case of a column, the cell value will contain the semicolon-separated string with the possible items.
 
+> [!NOTE]
+> The column that is referred to by the dependencyId attribute must be displayed in the table.
+
 DependencyId can be used either with Measurement Type “string” or “discreet”.
 
 As from DataMiner 8.0.2, System Display and Cube behave in the same way. If no dependencyValues are defined, an empty list will be shown (RN 5817).
