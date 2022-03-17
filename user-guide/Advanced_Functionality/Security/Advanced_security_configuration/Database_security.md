@@ -76,7 +76,7 @@ To run Cassandra as a non-SYSTEM user:
 
 1. Open an Administrator command prompt
 
-1. Execute *compmgmt.msc* to open Computer Management
+1. Execute the *compmgmt.msc* command to open Computer Management
 
 1. Navigate to *Computer Management (Local)* > *System Tools* > *Local Users and Groups* > *Users*
 
@@ -90,17 +90,20 @@ To run Cassandra as a non-SYSTEM user:
 
 1. **Check** the *User cannot change password* and *Password never expires* field
 
-1. Now grant the user write access to the following folders:
+1. Now grant the user *Modify* access to the following folders:
 
-- c:\Program Files\Cassandra\data
+   - c:\Program Files\Cassandra\data
 
-- c:\Program Files\Cassandra\logs
+   - c:\Program Files\Cassandra\logs
 
-- c:\Program Files\Cassandra\bin\daemon\
+   - c:\Program Files\Cassandra\bin\daemon\
 
-- c:\ProgramData\Cassandra
+   - c:\ProgramData\Cassandra
+
+> [!NOTE]
+> Do **not** grant the permissions on the entire *C:\Program Files\Cassandra* folder as this may introduce vulnerabilities.
  
-1. Go back to the command prompt and execute *services.msc* to open the Service Manager
+1. Go back to the command prompt and execute the *services.msc* command to open the Service Manager
 
 1. Stop the *Cassandra* service
 
