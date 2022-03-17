@@ -62,4 +62,4 @@ For this script action, you must first indicate what is to be set: parameter, me
 
     - Click the *Value* field to select *Variable* instead, and select the variable.
 
-1. Optionally, click the field next to *offset* and specify an offset value.
+1. If necessary, click the *offset* field to specify an offset value. From DataMiner 10.1.0 \[CU13], 10.2.0 \[CU1] and 10.2.4 onwards, by default, *without value offset* is displayed. Click that field to switch it to *with value offset* and then specify the value.
