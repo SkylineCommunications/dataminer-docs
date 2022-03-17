@@ -66,6 +66,54 @@ To enable the *CassandraAuthorizer* in Cassandra:
 > [!NOTE]
 > For Cassandra clusters, DataMiner requires **full permissions** on all keyspaces.
 
+### Running Cassandra as a non-SYSTEM user (Windows)
+
+By default, DataMiner will run Cassandra service with SYSTEM privileges. To reduce the impact of a breach through the Cassandra service, we recommend running Cassandra as a restricted user.
+
+To run Cassandra as a non-SYSTEM user:
+
+1. Stop the DataMiner Agent
+
+1. Open an Administrator command prompt
+
+1. Execute *compmgmt.msc* to open Computer Management
+
+1. Navigate to *Computer Management (Local)* > *System Tools* > *Local Users and Groups* > *Users*
+
+1. Right click *Users* and select *New User*
+
+1. Fill in a *User Name*, for example *cassandra_service*
+
+1. Configure a strong password
+
+1. **Uncheck** the *User must change password at next logon* field
+
+1. **Check** the *User cannot change password* and *Password never expires* field
+
+1. Now grant the user write access to the following folders:
+
+- c:\Program Files\Cassandra\data
+
+- c:\Program Files\Cassandra\logs
+
+- c:\Program Files\Cassandra\bin\daemon\
+
+- c:\ProgramData\Cassandra
+ 
+1. Go back to the command prompt and execute *services.msc* to open the Service Manager
+
+1. Stop the *Cassandra* service
+
+1. Right click the *Cassandra* service and open *Properties*
+
+1. Open the *Log On* tab and select *This account*
+
+1. Fill in the credentials for the user you created earlier
+
+1. Click *Apply* and *OK* to close the properties window
+
+1. Start the *Cassandra* service
+
 <!-- TODO encryption
 ### Client-Node Encryption
 
