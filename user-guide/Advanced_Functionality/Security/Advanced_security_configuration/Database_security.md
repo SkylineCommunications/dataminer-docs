@@ -118,13 +118,13 @@ To update the Java version:
 
 ### Authentication
 
-By default, Elasticsearch does **not** require authentication, meaning anyone can access or alter the data. Therefore, it's **highly recommended** to enable authentication on your Elasticsearch cluster. 
+By default, Elasticsearch does **not** require authentication, which means anyone can access or alter the data. We therefore **highly recommend that you enable authentication** on your Elasticsearch cluster. 
 
-To enable authentication, follow these steps:
+To enable authentication:
 
-1. Stop your DataMiner
+1. Stop your DataMiner Agent.
 
-1. Stop the *elasticsearch-service-x64* service
+1. Stop the *elasticsearch-service-x64* service.
  
 1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
 
@@ -132,19 +132,21 @@ To enable authentication, follow these steps:
 
     `xpack.security.transport.ssl.enabled: true`
 
-1. Now execute the **elasticsearch-setup-passwords.bat** script (as Administrator) with the *interactive* argument.
+1. Execute the **elasticsearch-setup-passwords.bat** script (as Administrator) with the *interactive* argument.
 
-`C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
+   `C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
 
-   1. The script will ask you to enter the new credentials for several users. Ideally these are random generated, strong passwords.
+1. When the script prompts you to do so, enter the new credentials for several users. Ideally these are random-generated, strong passwords.
 
-1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner agent in *C:\Skyline DataMiner\db.xml*.
+1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner Agent in *C:\Skyline DataMiner\db.xml*.
 
-```<DataBase active="true" search="true" type="Elasticsearch">
-	<DBServer>[ELASTIC IP]</DBServer>		
-	<UID>[YOUR ELASTIC USER]</UID>		
-	<PWD>[YOUR STRONG PASSWORD]</PWD>		
-</DataBase>```
+   ```
+   <DataBase active="true" search="true" type="Elasticsearch">
+   	<DBServer>[ELASTIC IP]</DBServer>		
+   	<UID>[YOUR ELASTIC USER]</UID>		
+   	<PWD>[YOUR STRONG PASSWORD]</PWD>		
+   </DataBase>
+   ```
 
 1. Start the *elasticsearch-service-x64* service.
 
