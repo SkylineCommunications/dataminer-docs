@@ -21,6 +21,28 @@ Apart from directory users, DataMiner also has a notion of local users, i.e. use
 
 For more information see [Types of users](xref:Types_of_users).
 
+## Default Users
+
+DataMiner has one built-in user, named 'Administrator'. This user is also the local Administrator on the Windows server hosting DataMiner. This user is inteded for recovery and initial configuration purposed. Once the system is configured, and Operator users have been created, we recommend disabling the local Administrator on the DataMiner server.
+
+To **disable** the local Administrator:
+
+1. Open a PowerShell console as Administrator
+
+1. Execute the following command:
+
+`Get-LocalUser Administrator | Disable-LocalUser`
+
+To **enable** the local Administrator:
+
+1. Open a PowerShell console as Administrator
+
+1. Execute the following command:
+
+`Get-LocalUser Administrator | Enable-LocalUser`
+
+Next to the built-in DataMiner user, it's also important to secure the default users of the DataMiner **databases**. For more information, see [Securing the DataMiner databases](xref:Database_security).
+
 ## User authentication
 
 To actually sign in users in DataMiner, several authentication methods are supported:
