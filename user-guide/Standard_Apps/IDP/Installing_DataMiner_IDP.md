@@ -10,9 +10,10 @@ To install and set up DataMiner IDP:
 
     - DataMiner version 10.0.0 CU9 or higher must be installed in your DMS.
 
-    - If you want to use scheduled activities, DataMiner Indexing must be installed in your DMS.
+    - If you want to use scheduled activities, DataMiner Indexing(Elastic Search) must be installed in your DMS.
 
-    - If you want to use Process Automation, DataMiner SRM, Process Automation and Token activity must be installed. If you want to be able to repeat processes with a timer, you also need to install the Repeat Gateway.
+    - If you want to use Process Automation then the DataMiner SRM, Process Automation and Token activity must be installed. If you want to be able to repeat processes with a timer, you also need to install the Repeat Gateway.
+    - First install the SRM package before installing the IDP package.
 
 1. Double-click the DataMiner IDP package.
 
