@@ -4,6 +4,9 @@ uid: TOODataMinerPackageBuilder
 
 # DataMiner Application Package Builder
 
+> [!IMPORTANT]
+> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 The DataMiner Application Package Builder can be used to create DataMiner application (legacy) packages (\*.dmapp) and DataMiner test packages (\*.dmt).
 
 - **DataMiner application packages** are used to deploy applications and solutions on a DataMiner Platform. From DataMiner 10.0.11 onwards, a new format and features have been introduced for these packages.
