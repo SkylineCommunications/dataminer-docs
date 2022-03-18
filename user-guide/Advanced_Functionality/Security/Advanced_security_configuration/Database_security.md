@@ -117,7 +117,7 @@ To run Cassandra as a non-SYSTEM user:
 
 1. Start the *Cassandra* service
 
-> [!TIP] We also provide a PowerShell script to modify the Cassandra service user. The *Modify-CassandraServiceUser* Powershell script is available [here] (https://github.com/SkylineCommunications/Modify-CassandraServiceUser).
+> [!TIP] We also provide a PowerShell script to modify the Cassandra service user. The *Modify-CassandraServiceUser* Powershell script is available [here](https://github.com/SkylineCommunications/Modify-CassandraServiceUser).
 
 <!-- TODO encryption
 ### Client-Node Encryption
