@@ -6,7 +6,7 @@ uid: Database_security
 
 ## Cassandra general database (default)
 
-### Authentication
+### Cassandra authentication
 
 By default, DataMiner installs Cassandra with the PasswordAuthenticator enabled. Cassandra comes installed with a default *cassandra* user. When DataMiner installs Cassandra (e.g. during migration or installation), an extra superuser named *root* is created.
 
@@ -68,56 +68,59 @@ To enable the *CassandraAuthorizer* in Cassandra:
 
 ### Running Cassandra as a non-SYSTEM user (Windows)
 
-By default, DataMiner will run Cassandra service with SYSTEM privileges. To reduce the impact of a breach through the Cassandra service, we recommend running Cassandra as a restricted user.
+By default, DataMiner will run the Cassandra service with SYSTEM privileges. To reduce the impact of a breach through the Cassandra service, we recommend running Cassandra as a restricted user.
 
 To run Cassandra as a non-SYSTEM user:
 
-1. Stop the DataMiner Agent
+1. Stop the DataMiner Agent.
 
-1. Open an Administrator command prompt
+1. Open a command prompt as Administrator.
 
-1. Execute the *compmgmt.msc* command to open Computer Management
+1. Execute the *compmgmt.msc* command to open Computer Management.
 
-1. Navigate to *Computer Management (Local)* > *System Tools* > *Local Users and Groups* > *Users*
+1. Navigate to *Computer Management (Local)* > *System Tools* > *Local Users and Groups* > *Users*.
 
-1. Right click *Users* and select *New User*
+1. Right click *Users* and select *New User*.
 
-1. Fill in a *User Name*, for example *cassandra_service*
+1. Fill in a *User Name*, for example *cassandra_service*.
 
-1. Configure a strong password
+1. Configure a strong password.
 
-1. **Uncheck** the *User must change password at next logon* field
+1. Clear the checkbox the *User must change password at next logon*.
 
-1. **Check** the *User cannot change password* and *Password never expires* field
+1. Select the checkboxes *User cannot change password* and *Password never expires*.
 
-1. Now grant the user *Modify* access to the following folders:
+1. Grant the user *Modify* access to the following folders:
 
-   - c:\Program Files\Cassandra\data
+   - *C:\\Program Files\\Cassandra\\data*
 
-   - c:\Program Files\Cassandra\logs
+   - *C:\\Program Files\\Cassandra\\logs*
 
-   - c:\Program Files\Cassandra\bin\daemon\
+   - *C:\\Program Files\\Cassandra\\bin\\daemon\\*
 
-   - c:\ProgramData\Cassandra
+   - *C:\\ProgramData\\Cassandra*
 
-   > [!NOTE]
-   > Do **not** grant the permissions on the entire *C:\Program Files\Cassandra* folder as this may introduce vulnerabilities.
- 
-1. Go back to the command prompt and execute the *services.msc* command to open the Service Manager
+   > [!CAUTION]
+   > Do not grant the permissions on the entire *C:\Program Files\Cassandra* folder, as this may introduce vulnerabilities.
 
-1. Stop the *Cassandra* service
+1. Go back to the command prompt and execute the *services.msc* command to open the Service Manager.
 
-1. Right click the *Cassandra* service and open *Properties*
+1. Stop the *Cassandra* service.
 
-1. Open the *Log On* tab and select *This account*
+1. Right-click the *Cassandra* service and open *Properties*.
 
-1. Fill in the credentials for the user you created earlier
+1. Open the *Log On* tab and select *This account*.
 
-1. Click *Apply* and *OK* to close the properties window
+1. Fill in the credentials for the user you created earlier.
 
-1. Start the *Cassandra* service
+1. Click *Apply* and *OK* to close the properties window.
 
-> [!TIP] We also provide a PowerShell script to modify the Cassandra service user. The *Modify-CassandraServiceUser* Powershell script is available [here](https://github.com/SkylineCommunications/Modify-CassandraServiceUser).
+1. Start the *Cassandra* service.
+
+1. Start the DataMiner Agent.
+
+> [!TIP]
+> A PowerShell script is available to modify the Cassandra service user. You can download this *Modify-CassandraServiceUser* Powershell script from [GitHub](https://github.com/SkylineCommunications/Modify-CassandraServiceUser).
 
 <!-- TODO encryption
 ### Client-Node Encryption
@@ -147,7 +150,7 @@ By default, DataMiner installs Cassandra 3.11. However, Cassandra 4.0 is also su
 > [!NOTE]
 > Cassandra 4.0 is no longer supported on Windows, which means that extra Linux servers will be required to host the Cassandra database.
 
-### Updating Java
+### Updating Java for Cassandra
 
 By default, DataMiner installs Cassandra with its own Java installation. This is typically located in *C:\Program Files\Cassandra\Java\bin*. DataMiner deploys Cassandra with **Java 1.8.0_91**.
 
@@ -169,9 +172,9 @@ To update the Java version:
 
 <!-- TODO: enable TLS encryption -->
 
-### Authentication
+### Elasticsearch authentication
 
-By default, Elasticsearch does **not** require authentication, which means anyone can access or alter the data. We therefore **highly recommend that you enable authentication** on your Elasticsearch cluster. 
+By default, Elasticsearch does **not** require authentication, which means anyone can access or alter the data. We therefore **highly recommend that you enable authentication** on your Elasticsearch cluster.
 
 To enable authentication:
 
@@ -193,11 +196,11 @@ To enable authentication:
 
 1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner Agent in *C:\Skyline DataMiner\db.xml*.
 
-   ```
+   ```xml
    <DataBase active="true" search="true" type="Elasticsearch">
-   	<DBServer>[ELASTIC IP]</DBServer>		
-   	<UID>[YOUR ELASTIC USER]</UID>		
-   	<PWD>[YOUR STRONG PASSWORD]</PWD>		
+      <DBServer>[ELASTIC IP]</DBServer>
+      <UID>[YOUR ELASTIC USER]</UID>
+      <PWD>[YOUR STRONG PASSWORD]</PWD>
    </DataBase>
    ```
 
@@ -212,7 +215,7 @@ To enable authentication:
 
 By default, DataMiner installs Elasticsearch 6.8.23. For more information about how you can upgrade your Elasticsearch version, refer to [Upgrading Elasticsearch](https://community.dataminer.services/documentation/upgrading-elasticsearch-from-one-minor-version-to-another/) on DataMiner Dojo.
 
-### Updating Java
+### Updating Java for Elasticsearch
 
 By default, DataMiner installs Elasticsearch with its own Java installation. This is typically located in the folder *C:\Program Files\Elasticsearch\Java\bin*. DataMiner deploys Elasticsearch with **Java 1.8.0_121**.
 
