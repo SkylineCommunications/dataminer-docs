@@ -35,13 +35,13 @@ To install the SRM Framework:
     > - [Creating a view](xref:Managing_views#creating-a-view)
     > - [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 
-4. Create an element with the name *SRM Log Manager*, using the protocol *Generic Bookings Log*.
+4. If the Booking Manager App version is lower than SRM-1.2.19, create an element with the name *SRM Log Manager*, using the protocol *Generic Bookings Log*.
 
     > [!TIP]
     > See also:
     > [Adding and deleting elements](xref:Adding_and_deleting_elements)
 
-5. On the *Configuration* page of the *SRM Log Manager* element, set the *Path* parameter to a shared folder accessible from both the client machine and the DataMiner servers.
+5. If the Booking Manager App version is lower than SRM-1.2.19, on the *Configuration* page of the *SRM Log Manager* element, set the *Path* parameter to a shared folder accessible from both the client machine and the DataMiner servers.
 
 6. Create an element with the name *SRM Booking Manager*, using the protocol *Skyline Booking Manager* (Production version).
 
