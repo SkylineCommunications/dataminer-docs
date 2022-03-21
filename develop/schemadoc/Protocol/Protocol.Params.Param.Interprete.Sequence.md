@@ -19,12 +19,18 @@ string
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[loop](xref:Protocol.Params.Param.Interprete.Sequence-loop)|unsignedInt||Specifies the loop value for the sequence (integer).|
-|[noset](xref:Protocol.Params.Param.Interprete.Sequence-noset)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||When set to “true”, sequences will not be taken into account when the parameter gets a new value.|
+|[noset](xref:Protocol.Params.Param.Interprete.Sequence-noset)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)|Yes|Always use this attribute with value set to `true`.|
 
 ## Remarks
 
 - Only use a Sequence on communication parameters (i.e. parameters that are directly filled in by polling via SNMP, serial, etc.). Do not use it for custom/retrieved parameters (parameters filled in via a QAction.)
-- The Sequence should always be provided with the `noset="true"` attribute. Refer to [noset](xref:Protocol.Params.Param.Interprete.Sequence-noset) for more information about this attribute.
+- The Sequence should always be provided with the `noset="true"` attribute.
+- On write parameters, use the reverse math operation in the reverse order compared to the corresponding read parameter.
+
+  Example
+
+  - Read parameter: `<Sequence noset=”true”>div:100;+:5</Sequence>`.
+  - Write parameter: `<Sequence noset=”true”>min:5;factor:100</Sequence> or <Sequence noset=”true”>-:5;*:100</Sequence>`.
 - Contains at least one of the following mathematical operations, which must be specified using one of the following predefined formats:
 
   - Fixed value: `[operation]:[value]`
