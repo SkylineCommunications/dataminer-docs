@@ -367,15 +367,15 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Trend Y-axis includes exceptions**: Select this setting to allow the vertical range of the Y-axis to extend with exception values.
 
-- **Show alarm template colors on vertical axis**: Enable this setting to show the alarm colors next to the vertical axis of trend graphs. The setting *Display the alarm template in the trend graph* allows you to further specify how the alarm colors are displayed.
+- **Show alarm template colors on vertical axis**: Obsolete from DataMiner 10.3.0/10.2.4 onwards. Enable this setting to show the alarm colors next to the vertical axis of trend graphs. The setting *Display the alarm template in the trend graph* allows you to further specify how the alarm colors are displayed.
 
-- **Display the alarm template in the trend graph**: In the drop-down list next to this setting, choose *Line* to show alarm template colors as a small line next to the Y-axis, or *Band* to show them as semi-transparent horizontal bands across the trend graph.
+- **Display the alarm template in the trend graph**: In the drop-down list next to this setting, choose *Line* to show alarm template colors as a small line next to the Y-axis, or *Band* to show them as semi-transparent horizontal bands across the trend graph. From DataMiner 10.3.0/10.2.4 onwards, the checkbox in front of this setting must be selected for alarm colors to be shown next to the vertical axis of trend graphs.
 
 - **Show most detailed data**: If you select this option, the most detailed data available will be shown, rather than average data. In order to ensure optimal performance in case a large amount of trend data must be displayed, this option is by default not selected.
 
-- **Show percentile**: Available from DataMiner 10.0.12 onwards. Select this option to show a percentile line on trend graphs by default.
+- **Show percentile**: Obsolete from DataMiner 10.3.0/10.2.4 onwards. Available from DataMiner 10.0.12 onwards. Select this option to show a percentile line on trend graphs by default.
 
-- **Percentile to calculate**: Available from DataMiner 10.0.12 onwards, if *Show percentile* is selected. Allows you to configure which percentile is displayed. By default, this is set to *95*.
+- **Percentile to calculate**: Available from DataMiner 10.0.12 onwards, if *Show percentile* is selected. From DataMiner 10.3.0/10.2.4 onwards, select the checkbox in front of this setting to show a percentile line. You can then configure which percentile is displayed. By default, this is set to *95*.
 
 - **Trend prediction range**: Select either *Manual*, if you want to manually change the trend prediction range, or *Auto*, if you want DataMiner to select the range depending on the zoom level.
 
@@ -408,6 +408,12 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 - **Visualize trend predictions**: Available from DataMiner 9.5.13 onwards. When this option is disabled, predicted trend data based on trend data analysis will no longer be displayed.
 
 - **Visualize change points**: Available from DataMiner 10.0.0/10.0.2 onwards. When this option is disabled, change points detected based on trend data analysis will no longer be displayed.
+
+- **Update interval**: Available from DataMiner 10.3.0/10.2.4 onwards. Allows you to specify a custom refresh rate for trend graphs (ranging from 5 seconds to 5 minutes). By default, this is set to 2 minutes.
+
+> [!NOTE]
+> - Changing this refresh rate can have a minor effect on overall performance, especially when trend graphs with more than 10 parameters are opened.
+> - If you change this setting, you will need to close and reopen any currently opened trend graphs for the setting to take effect on them.
 
 ### Visual Overview settings
 
