@@ -73,6 +73,8 @@
               topicUid: Monitoring_app_card_pane
         - name: The legacy Monitoring & Control app user interface
           topicUid: The_legacy_Monitoring_Control_app_user_interface
+    - name: Ziine Demo System
+      topicUid: ZiineDemoSystem    
 - name: Basic DataMiner functionality
   topicUid: Part2BasicFunctionalities
   items:
