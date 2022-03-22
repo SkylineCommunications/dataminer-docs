@@ -6,8 +6,21 @@ uid: ZiineDemoSystem
 
 This section will be dedicated to our Ziine Demo System. It will contain several topics from "how to connect" and "what is available" to "how does this demo work".
 
-## How to connect
+## Connecting to Ziine
 
-In case this is the very first time you connect to a DataMiner system it is possible that you don't have he DataMiner Cube desktop application installed yet. To do so, you first need to log in on [DataMiner Services](https://dataminer.services) with your Dojo account. On the landing page, you can follow the steps described in [Installing the DataMiner Cube desktop application](xref:Installing_configuring_the_DataMiner_Cube_software#Installing-the-DataMiner-Cube-desktop-application).
+To connect to the Ziine Demo System:
 
-Once the application has been installed, you can add Agent ziine.skyline.be to your overview and connect to it.
+1. If you do not have the DataMiner Cube desktop application installed yet:
+
+   1. Go to [dataminer.services](https://dataminer.services).
+
+   1. Log on using your DataMiner Cloud Platform account.
+
+   1. In the top-right corner, select *Install DataMiner Cube* > *Desktop installation*.
+
+   > [!TIP]
+   > See also: [Installing the DataMiner Cube desktop application](xref:Installing_configuring_the_DataMiner_Cube_software#installing-the-dataminer-cube-desktop-application)
+
+1. Open the DataMiner Cube desktop application.
+
+1. Connect to the DataMiner System *ziine.skyline.be* as described under [Opening the desktop application](xref:Opening_DataMiner_Cube#opening-the-desktop-application).
