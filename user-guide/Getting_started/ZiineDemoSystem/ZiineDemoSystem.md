@@ -4,7 +4,7 @@ uid: ZiineDemoSystem
 
 # Ziine Demo System
 
-This section will be dedicated to our Ziine Demo System. It will contain several topics from "how to connect" and "what is available" to "how does this demo work".
+The Ziine Demo System allows you to explore many different DataMiner features in a functioning DataMiner System. This includes the standard DataMiner monitoring and Visual Overview features, and also several DataMiner Solutions and standard apps.
 
 ## Connecting to Ziine
 
