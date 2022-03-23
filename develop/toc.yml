@@ -4604,19 +4604,19 @@
       items:
         - name: Logging queries
           topicUid: Logging_queries
-    - name: NuGet
+    - name: NuGet packages
       topicUid: TOONuGet
       items:
-        - name: Consuming NuGet
+        - name: Consuming NuGet packages
           topicUid: Consuming_NuGet
-        - name: Creating NuGet
-          topicUid: Creating_NuGet
-        - name: Advanced Assembly Knowledge
+        - name: Producing NuGet packages
+          topicUid: Producing_NuGet
+        - name: Advanced assembly knowledge
           topicUid: Advanced_Assembly_Knowledge
           items:
-          - name: Compilation-Time Assembly Binding
+          - name: Compilation-time assembly binding
             topicUid: Compilation_Time_Assembly_Binding
-          - name: Run-Time Assembly Binding
+          - name: Run-time assembly binding
             topicUid: Run_Time_Assembly_Binding
     - name: QA Device Simulator
       topicUid: TOOQASNMPSimulator

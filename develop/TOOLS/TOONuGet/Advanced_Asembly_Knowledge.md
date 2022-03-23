@@ -2,22 +2,18 @@
 uid: Advanced_Assembly_Knowledge
 ---
 
-# Advanced Assembly Knowledge
+# Advanced assembly knowledge
 
-NuGets will be using and installing DLLs in the background. Issues may occur from assembly binding that might be difficult to debug.
+NuGets use and install DLLs in the background. Issues may occur from assembly binding that might be difficult to debug.
 
-Issues having to do with:
->- DLLs for the same library but with other versions.
->- Dependencies between DLLs and NuGet packages.
+These issues have to do with:
 
-This can cause exceptions during Serialize & Deserialize for example. (“Class A not being able to deserialize into a type of Class A”)
+- DLLs for the same library but with other versions.
 
-Our suggestion here is to try and make sure you keep the versions of libraries in-sync as much as possible.
+- Dependencies between DLLs and NuGet packages.
 
-The following is detailed background information that explains more about how DLLs are loaded up in DataMiner, which can help with debugging.
+This can cause exceptions during serializing and deserializing, for example “Class A not being able to deserialize into a type of Class A”.
 
-There are two parts to loading assemblies. Compilation Time Assembly Loading and Run-time Assembly loading. Remember that it’s not because something works during compilation that it will work at runtime.
+Our suggestion here is to try and make sure you keep the versions of libraries in sync as much as possible.
 
-- [Compilation-Time Assembly Binding](xref:Compilation_Time_Assembly_Binding)
-
-- [Run-Time Assembly Binding](xref:Run_Time_Assembly_Binding)
+To help with debugging, it can be useful to know more about how DLLs are loaded in DataMiner. There are two parts to loading assemblies: [Compilation-time assembly binding](xref:Compilation_Time_Assembly_Binding) and [Run-time assembly binding](xref:Run_Time_Assembly_Binding). Remember that it is not because something works during compilation that it will work at run-time.

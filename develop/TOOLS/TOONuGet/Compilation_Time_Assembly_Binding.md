@@ -2,19 +2,16 @@
 uid: Compilation_Time_Assembly_Binding
 ---
 
-# Compilation-Time Assembly Binding
+# Compilation-time assembly binding
 
-This happens when:
-- Visual Studio Building
-- First time a QAction runs on DataMiner
-- Automationscript is uploaded or its library script changes
+This happens at the following times:
 
-To compile, the compiler only requires the directly referenced assemblies.
-The compiler doesn’t know about transitive dependencies for that assembly.
+- During Visual Studio building.
 
-    To understand better, the following example will be used:
-    you have a custom solution using the class Library and you’re using that custom solution in an automation script.
-    
-    During compile time of the script it will search for the custom solution dll and verify for errors.
-    It won’t care about class library DLLs being present or not
-    It won’t report any errors that may happen from the class library being present or not.
+- The first time a QAction runs on DataMiner.
+
+- When an Automation script is uploaded or its library script changes.
+
+To compile, the compiler only requires the directly referenced assemblies. The compiler does not know about transitive dependencies for that assembly.
+
+To better understand this, imagine the following example: You have a custom solution using the Class Library, and you are using that custom solution in an Automation script. During compile time of the script, it will search for the custom solution DLL and verify for errors. It will not care about whether Class Library DLLs are present. It will not report any errors that may happen because the Class Library is or is not present.
