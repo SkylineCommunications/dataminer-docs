@@ -12,3 +12,4 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 
 - [User Guide](xref:Part1GettingStarted)
 - [Developer documentation](xref:DevelopIndex)
+- [DataMiner Compendium](xref:Compendium_index)
