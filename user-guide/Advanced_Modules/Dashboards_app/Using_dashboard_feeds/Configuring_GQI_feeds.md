@@ -41,7 +41,7 @@ Available from DataMiner 10.3.0/10.2.4 onwards. Retrieves external data based on
 
 This is the most basic procedure to use an external data source in a query:
 
-1. In the Automation app, add a script containing a new class that implements the *IGQICustomDatasource* interface (see [Interfaces](#interfaces-in-the-custom-data-script )).
+1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see [Interfaces](#interfaces-in-the-custom-data-script)).
 
 1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
@@ -51,7 +51,7 @@ This is the most basic procedure to use an external data source in a query:
    using Skyline.DataMiner.Analytics.GenericInterface;
 
    [GQIMetaData(Name = "People")]
-   public class MyCustomDataSource : IGQICustomDataSource
+   public class MyDataSource : IGQIDataSource
    {
    ...
    }
@@ -74,26 +74,26 @@ Depending on how the script is configured, there can be additional configuration
 
 A custom data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
 
-##### IGQICustomDataSource
+##### IGQIDataSource
 
 This is the only required interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
 
-| Method | Input arguments | Output arguments | Description |
-|--------|-----------------|------------------|-------------|
-| GetColumns | - | GQICustomColumn[] | The GQI will request the columns. |
-| GetNextPage | GetNextPageInputArgs | GQICustomPage | The GQI will request data. |
+| Method      | Input arguments      | Output arguments | Description                       |
+| ----------- | -------------------- | ---------------- | --------------------------------- |
+| GetColumns  | -                    | GQIColumn[]      | The GQI will request the columns. |
+| GetNextPage | GetNextPageInputArgs | GQIPage          | The GQI will request data.        |
 
 ##### IGQIInputArguments
 
 This interface can be used to have the user specify an argument, for example the CSV file from which data should be parsed, or a filter that should be applied. This interface has the following methods:
 
-| Method | Input arguments | Output arguments | Description |
-|--------|-----------------|------------------|-------------|
-| GetInputArguments | - | AGQICustomArgument[] | Asks for additional information from the user when the data source is configured. |
-| OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Event to indicate that the arguments have been processed. |
+| Method               | Input arguments               | Output arguments               | Description                                                                       |
+| -------------------- | ----------------------------- | ------------------------------ | --------------------------------------------------------------------------------- |
+| GetInputArguments    | -                             | GQIArgument[]                  | Asks for additional information from the user when the data source is configured. |
+| OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Event to indicate that the arguments have been processed.                         |
 
 > [!NOTE]
-> The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a text input argument, and the content of the text argument will be forwarded to the custom data source implementation without validation.
+> The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the custom data source implementation without validation.
 
 ##### IGQIOnInit
 
@@ -135,58 +135,58 @@ The following flowchart illustrates the GQI life cycle when a query is fetched:
 
 To build the custom data source, you can use the objects detailed below.
 
-##### GQICustomColumn
+##### GQIColumn
+
+This is an abstract class, with the derived types *GQIStringColumn*, *GQIBooleanColumn*, *GQIIntColumn*, *GQIDateTimeColumn* and *GQIDoubleColumn*, and with the following properties:
+
+| Property | Type          | Required | Description                                                                                                                            |
+| -------- | ------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Name     | String        | Yes      | The column name.                                                                                                                       |
+| Type     | GQIColumnType | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: String, Int, DateTime, Boolean or Double. |
+
+##### GQIPage
 
 This object has the following properties:
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| Name | String | Yes | The column name. |
-| Type | GQICustomColumnType | Yes | The type of data in the column. GQICustomColumnType is an enum that contains the following values: String, Int, DateTime, Boolean or Double. |
+| Property    | Type     | Required | Description                                                                            |
+| ----------- | -------- | -------- | -------------------------------------------------------------------------------------- |
+| Rows        | GQIRow[] | Yes      | The rows of the page.                                                                  |
+| HasNextPage | Boolean  | No       | True if additional pages can be retrieved, False if the current page is the last page. |
 
-##### GQICustomPage
-
-This object has the following properties:
-
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| Rows | GQICustomRow[] | Yes | The rows of the page. |
-| HasNextPage | Boolean | No | True if additional pages can be retrieved, False if the current page is the last page. |
-
-##### GQICustomRow
+##### GQIRow
 
 This object has the following properties:
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| Cells | GQICustomCell[] | Yes | The cells of the row. |
+| Property | Type      | Required | Description           |
+| -------- | --------- | -------- | --------------------- |
+| Cells    | GQICell[] | Yes      | The cells of the row. |
 
-##### GQICustomCell
+##### GQICell
 
 This object has the following properties:
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| Value | Object | No | The value of the cell. |
-| DisplayValue | String | No | The display value of the cell. |
+| Property     | Type   | Required | Description                    |
+| ------------ | ------ | -------- | ------------------------------ |
+| Value        | Object | No       | The value of the cell.         |
+| DisplayValue | String | No       | The display value of the cell. |
 
 > [!NOTE]
 > The type of value of a cell must match the type of the corresponding column.
 
-##### AGQICustomArgument
+##### GQIArgument
 
-This is an abstract class, with the derived types *GQITextArgument* and *GQIDoubleArgument*, and with the following properties:
+This is an abstract class, with the derived types *GQIStringArgument* and *GQIDoubleArgument*, and with the following properties:
 
-| Property | Type | Required | Description |
-|----------|------|----------|-------------|
-| Name | String | Yes | The name of the input argument. |
-| IsRequired | Boolean | No | Indicates whether the argument is required. |
+| Property   | Type    | Required | Description                                 |
+| ---------- | ------- | -------- | ------------------------------------------- |
+| Name       | String  | Yes      | The name of the input argument.             |
+| IsRequired | Boolean | No       | Indicates whether the argument is required. |
 
 #### Example custom data script
 
 Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
 
-First the *IGQICustomDataSource* interface is implemented, then *GetColumns* is used to define the custom columns for the data source. In this case, there are 5 columns. The *GetNextPage* method then returns the actual data to the GQI. In this case these are 3 rows, defined as an array of cells. For each cell, a display value can also be defined. In this case, this is done for the cells within the *Height* column to indicate the unit of measure. The *HasNextPage* property is set to *False* to indicate that no additional pages need to be fetched.
+First the *IGQIDataSource* interface is implemented, then *GetColumns* is used to define the custom columns for the data source. In this case, there are 5 columns. The *GetNextPage* method then returns the actual data to the GQI. In this case these are 3 rows, defined as an array of cells. For each cell, a display value can also be defined. In this case, this is done for the cells within the *Height* column to indicate the unit of measure. The *HasNextPage* property is set to *False* to indicate that no additional pages need to be fetched.
 
 The optional *IGQIInputArguments* interface is also implemented in the example, in this case to allow the user to add an input argument indicating the minimum age for the records that will be retrieved. The argument is indicated as required, so the user will have to specify it to be able to configure the query. The argument value is retrieved with *OnArgumentsProcessedInputArgs* and used to filter the returned data.
 
@@ -197,26 +197,26 @@ using System.Linq;
 using Skyline.DataMiner.Analytics.GenericInterface;
 
 [GQIMetaData(Name = "People")]
-public class MyCustomDataSource : IGQICustomDataSource, IGQIInputArguments
+public class MyDataSource : IGQIDataSource, IGQIInputArguments
 {
     private GQIDoubleArgument _argument = new GQIDoubleArgument("Age") { IsRequired = true };
     private double _minimumAge;
 
-    public GQICustomColumn[] GetColumns()
+    public GQIColumn[] GetColumns()
     {
-        return new GQICustomColumn[]
+        return new GQIColumn[]
         {
-            new GQICustomColumn("Name", GQICustomColumnType.String),
-            new GQICustomColumn("Age", GQICustomColumnType.Int),
-            new GQICustomColumn("Height (m)", GQICustomColumnType.Double),
-            new GQICustomColumn("Birthday", GQICustomColumnType.DateTime),
-            new GQICustomColumn("Likes apples", GQICustomColumnType.Boolean)
+            new GQIStringColumn("Name"),
+            new GQIIntColumn("Age"),
+            new GQIDoubleColumn("Height (m)"),
+            new GQIDateTimeColumn("Birthday"),
+            new GQIBooleanColumn("Likes apples")
         };
     }
 
-    public AGQICustomArgument[] GetInputArguments()
+    public GQIArgument[] GetInputArguments()
     {
-        return new AGQICustomArgument[] { _argument };
+        return new GQIArgument[] { _argument };
     }
 
     public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
@@ -225,41 +225,41 @@ public class MyCustomDataSource : IGQICustomDataSource, IGQIInputArguments
         return new OnArgumentsProcessedOutputArgs();
     }
 
-    public GQICustomPage GetNextPage(GetNextPageInputArgs args)
+    public GQIPage GetNextPage(GetNextPageInputArgs args)
     {
-        var rows = new List<GQICustomRow>() {
-            new GQICustomRow(
-                new GQICustomCell[]
+        var rows = new List<GQIRow>() {
+            new GQIRow(
+                new GQICell[]
                     {
-                        new GQICustomCell() { Value = "Alice" },
-                        new GQICustomCell() { Value = 32 },
-                        new GQICustomCell() { Value = 1.74, DisplayValue = "1.74 m" },
-                        new GQICustomCell() { Value = new DateTime(1990, 5, 12) },
-                        new GQICustomCell() { Value = true }
+                        new GQICell() { Value = "Alice" },
+                        new GQICell() { Value = 32 },
+                        new GQICell() { Value = 1.74, DisplayValue = "1.74 m" },
+                        new GQICell() { Value = new DateTime(1990, 5, 12) },
+                        new GQICell() { Value = true }
                     }),
-            new GQICustomRow(
-                new GQICustomCell[]
+            new GQIRow(
+                new GQICell[]
                     {
-                        new GQICustomCell() { Value = "Bob" },
-                        new GQICustomCell() { Value = 22 },
-                        new GQICustomCell() { Value = 1.85, DisplayValue = "1.85 m" },
-                        new GQICustomCell() { Value = new DateTime(2000, 1, 22) },
-                        new GQICustomCell() { Value = true }
+                        new GQICell() { Value = "Bob" },
+                        new GQICell() { Value = 22 },
+                        new GQICell() { Value = 1.85, DisplayValue = "1.85 m" },
+                        new GQICell() { Value = new DateTime(2000, 1, 22) },
+                        new GQICell() { Value = true }
                     }),
-            new GQICustomRow(
-                new GQICustomCell[]
+            new GQIRow(
+                new GQICell[]
                     {
-                        new GQICustomCell() { Value = "Carol" },
-                        new GQICustomCell() { Value = 27 },
-                        new GQICustomCell() { Value = 1.67, DisplayValue = "1.67 m" },
-                        new GQICustomCell() { Value = new DateTime(1995, 10, 3) },
-                        new GQICustomCell() { Value = false }
+                        new GQICell() { Value = "Carol" },
+                        new GQICell() { Value = 27 },
+                        new GQICell() { Value = 1.67, DisplayValue = "1.67 m" },
+                        new GQICell() { Value = new DateTime(1995, 10, 3) },
+                        new GQICell() { Value = false }
                     })
             };
 
         var filteredRows = rows.Where(row => (int)row.Cells[1].Value > _minimumAge).ToArray();
 
-        return new GQICustomPage(filteredRows)
+        return new GQIPage(filteredRows)
         {
             HasNextPage = false
         };
