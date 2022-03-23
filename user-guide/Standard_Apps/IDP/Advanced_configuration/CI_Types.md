@@ -22,127 +22,137 @@ The *CI Types* subtab of the *Admin* tab consists of several pages with overview
   > - The wizard also allows you to select "None", so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
   > - By default, CI Types generated based on a protocol with an SNMPv3 connection have SNMPv2 port settings configured on that connection, as there is no way to automatically find out the security levels, algorithms and passwords.
 
-On each of the pages, different settings are available:
+On each of the pages, different settings are available. These are explained in the next sections. 
 
-- **Overview**: For each CI Type, an *Edit* button is available in this table. It opens the CI Type Management wizard. See [Using the CI Type Management wizard](#using-the-ci-type-management-wizard).
+## Overview
 
-- **Discovery**: Overview of discovery details for CI Types, with the following columns:
+This page contains an overview of all CI Types in the IDP app. 
 
-  - **CI Type**: Contains the names of the CI Types.
+For each CI Type, an *Edit* button is available in this table. It opens the CI Type Management wizard. See [Using the CI Type Management wizard](#using-the-ci-type-management-wizard).
 
-  - **Discovery**: Determines whether the Discovery activity is enabled or not.
+## Discovery
 
-  - **Completeness**: Indicates whether mandatory fields are filled in. If there is a discovery condition, this is set to 100%.
+This page contains an overview of discovery details for CI Types, with the following columns:
 
-  - **Identifiers**: Contains a textual representation of the discovery identifiers and the conditions that should be used when a device is discovered. These can be configured via the *Advanced* button.
+- **CI Type**: Contains the names of the CI Types.
 
-  - **Advanced**: Contains a button that can be used to launch the CI Type Management wizard for the relevant CI Type. See [Discovery configuration](#discovery-configuration).
+- **Discovery**: Determines whether the Discovery activity is enabled or not.
 
-- **Provisioning**: Overview of provisioning details for CI Types, with the following columns:
+- **Completeness**: Indicates whether mandatory fields are filled in. If there is a discovery condition, this is set to 100%.
 
-  - **CI Type**: Contains the names of the CI Types.
+- **Identifiers**: Contains a textual representation of the discovery identifiers and the conditions that should be used when a device is discovered. These can be configured via the *Advanced* button.
 
-  - **Create**: Determines whether the Provisioning activity is enabled or not.
+- **Advanced**: Contains a button that can be used to launch the CI Type Management wizard for the relevant CI Type. See [Discovery configuration](#discovery-configuration).
 
-  - **Completeness**: Indicates the percentage of mandatory fields that are filled in for the provisioning configuration. The mandatory fields are *Element Name*, *Initial Protocol* and *Initial Protocol Version*.
+## Provisioning 
 
-  - **Element Name**: The name of the provisioned element. This name cannot be modified here.
+This page contains an overview of provisioning details for CI Types, with the following columns:
 
-  - **Description**: The description of the provisioned element.
+- **CI Type**: Contains the names of the CI Types.
 
-  - **DMA**: The DMA where the element should be created. You can select any of the DMAs in the DMS, or select *Based on device address* to have a DMA assigned based on the discovered IP address (see [Provisioning](xref:Provisioning)).
+- **Create**: Determines whether the Provisioning activity is enabled or not.
 
-  - **Default Element State**: Allows you to set the state the provisioned element will have when it is created, i.e. *Active*, *Paused* or *Stopped*.
+- **Completeness**: Indicates the percentage of mandatory fields that are filled in for the provisioning configuration. The mandatory fields are *Element Name*, *Initial Protocol* and *Initial Protocol Version*.
 
-  - **Initial Protocol**: The protocol that should be used for the provisioned element.
+- **Element Name**: The name of the provisioned element. This name cannot be modified here.
 
-  - **Initial Protocol Version**: The protocol version that should be used for the provisioned element.
+- **Description**: The description of the provisioned element.
 
-  - **Initial Alarm Template**: The alarm template that should be used for the provisioned element. This field can be left empty.
+- **DMA**: The DMA where the element should be created. You can select any of the DMAs in the DMS, or select *Based on device address* to have a DMA assigned based on the discovered IP address (see [Provisioning](xref:Provisioning)).
 
-  - **Initial Trend Template**: The trend template that should be used for the provisioned element. This field can be left empty.
+- **Default Element State**: Allows you to set the state the provisioned element will have when it is created, i.e. *Active*, *Paused* or *Stopped*.
 
-  - **Initial Views**: The view or views the provisioned element should be placed in. These can be configured via the *Advanced* button.
+- **Initial Protocol**: The protocol that should be used for the provisioned element.
 
-  - **Update Property Script**: The Automation script that should be used to update the properties of the element once it has been created. You can select any of the scripts from the folder configured with the *CI Update Property Script* *Folder* setting on the *Admin* > *Settings* page.
+- **Initial Protocol Version**: The protocol version that should be used for the provisioned element.
 
-  - **Password Setup**: Displays the number of steps configured for the password setup (configurable via the *Advanced* button).
+- **Initial Alarm Template**: The alarm template that should be used for the provisioned element. This field can be left empty.
 
-  - **Advanced**: Contains a button that launches a wizard where you can configure the provisioning details for the CI Type. This includes advanced settings that are not available in the table. See [Provisioning configuration](#provisioning-configuration).
+- **Initial Trend Template**: The trend template that should be used for the provisioned element. This field can be left empty.
 
-- **Connectivity**:
+- **Initial Views**: The view or views the provisioned element should be placed in. These can be configured via the *Advanced* button.
 
-  - **CI Type**: Contains the names of the CI Types.
+- **Update Property Script**: The Automation script that should be used to update the properties of the element once it has been created. You can select any of the scripts from the folder configured with the *CI Update Property Script* *Folder* setting on the *Admin* > *Settings* page.
 
-  - **Connectivity Discovery**: Determines whether the Connectivity Discovery activity is enabled or not.
+- **Password Setup**: Displays the number of steps configured for the password setup (configurable via the *Advanced* button).
 
-  - **Completeness Connectivity Discovery**: Indicates how complete the connectivity discovery configuration is for the CI Type. Enabling connectivity discovery on the *Processes* > *Automation* page is only possible if this indicates 100%.
+- **Advanced**: Contains a button that launches a wizard where you can configure the provisioning details for the CI Type. This includes advanced settings that are not available in the table. See [Provisioning configuration](#provisioning-configuration).
 
-  - **Connectivity Discovery Script**: Allows you to select the script that will be used to discover connectivity for this CI Type. You can select any of the scripts from the folder configured with the *Connectivity Discovery Script* *Folder* setting on the *Admin* > *Settings* page.
+## Connectivity
 
-  - **Advanced**: Contains a button that launches a wizard where you can configure the connectivity discovery details for the CI Type. See [Connectivity configuration](#connectivity-configuration).
+- **CI Type**: Contains the names of the CI Types.
 
-- **Configuration Management**:
+- **Connectivity Discovery**: Determines whether the Connectivity Discovery activity is enabled or not.
 
-  - **CI Type**: Contains the names of the CI Types.
+- **Completeness Connectivity Discovery**: Indicates how complete the connectivity discovery configuration is for the CI Type. Enabling connectivity discovery on the *Processes* > *Automation* page is only possible if this indicates 100%.
 
-  - **Backup**: Determines whether the Take Backup activity is enabled or not.
+- **Connectivity Discovery Script**: Allows you to select the script that will be used to discover connectivity for this CI Type. You can select any of the scripts from the folder configured with the *Connectivity Discovery Script* *Folder* setting on the *Admin* > *Settings* page.
 
-  - **Backup Script**: Allows you to select the script that will be used to take a configuration backup of this CI Type. You can select any of the scripts from the folder configured with the *Backup Script* *Folder* setting on the *Admin* > *Settings* page.
+- **Advanced**: Contains a button that launches a wizard where you can configure the connectivity discovery details for the CI Type. See [Connectivity configuration](#connectivity-configuration).
 
-  - **Checksum Parameter**: Used in order to enable the triggering of alarms in case of configuration changes. Contains the current checksum value that the alarm baseline is compared with. A difference between this parameter and the baseline value will cause an alarm to be generated with the severity configured in the element alarm template.
+## Configuration Management
 
-  - **Set Checksum in Alarm Template**: Used in order to enable the triggering of alarms in case of configuration changes. If this parameter is enabled and a configuration change is detected, *Checksum Parameter* is updated with the current checksum value, and the previous value is set as the alarm baseline value. If this parameter or *Take Backup* (via *Processes* > *Automation*) are disabled, the value 0 will be set to both *Checksum Parameter* and the alarm baseline.
+- **CI Type**: Contains the names of the CI Types.
 
-  - **Completeness Update**: Indicates the percentage of mandatory fields that are filled in with regard to the configuration update.
+- **Backup**: Determines whether the Take Backup activity is enabled or not.
 
-  - **Configuration Update**: Determines whether the Configuration Update activity is enabled or not.
+- **Backup Script**: Allows you to select the script that will be used to take a configuration backup of this CI Type. You can select any of the scripts from the folder configured with the *Backup Script* *Folder* setting on the *Admin* > *Settings* page.
 
-  - **Update Script**: Allows you to select the script that will be used to do a configuration update for this CI Type. You can select any of the scripts from the folder configured with the *Configuration Management* > *Update Script Folder* setting on the *Admin* > *Settings* page.
+- **Checksum Parameter**: Used in order to enable the triggering of alarms in case of configuration changes. Contains the current checksum value that the alarm baseline is compared with. A difference between this parameter and the baseline value will cause an alarm to be generated with the severity configured in the element alarm template.
 
-  - **Default Script**: Available from IDP 1.1.18 onwards. Allows you to select the script that will be used to restore the default configuration for this CI Type. You can select any of the scripts from the folder configured with the *Configuration Management* > *Default Script Folder* setting on the *Admin* > *Settings* page.
+- **Set Checksum in Alarm Template**: Used in order to enable the triggering of alarms in case of configuration changes. If this parameter is enabled and a configuration change is detected, *Checksum Parameter* is updated with the current checksum value, and the previous value is set as the alarm baseline value. If this parameter or *Take Backup* (via *Processes* > *Automation*) are disabled, the value 0 will be set to both *Checksum Parameter* and the alarm baseline.
 
-  - **Default Location**: (Called "Default Update File" prior to IDP 1.1.18.) The configuration file that can be used by the update script. Depending on the script configuration, this field may not be required.
+- **Completeness Update**: Indicates the percentage of mandatory fields that are filled in with regard to the configuration update.
 
-  - **Advanced**: Contains a button that launches a wizard where you can specify all the Configuration Management settings for the CI Type. See [Configuration management configuration](#configuration-management-configuration).
+- **Configuration Update**: Determines whether the Configuration Update activity is enabled or not.
 
-- **Software Management**:
+- **Update Script**: Allows you to select the script that will be used to do a configuration update for this CI Type. You can select any of the scripts from the folder configured with the *Configuration Management* > *Update Script Folder* setting on the *Admin* > *Settings* page.
 
-  - **CI Type**: Contains the names of the CI Types.
+- **Default Script**: Available from IDP 1.1.18 onwards. Allows you to select the script that will be used to restore the default configuration for this CI Type. You can select any of the scripts from the folder configured with the *Configuration Management* > *Default Script Folder* setting on the *Admin* > *Settings* page.
 
-  - **Update**: Determines whether the Software Update activity is enabled or not.
+- **Default Location**: (Called "Default Update File" prior to IDP 1.1.18.) The configuration file that can be used by the update script. Depending on the script configuration, this field may not be required.
 
-  - **Completeness Update**: Indicates the percentage of mandatory fields that are filled in for the software update configuration. Enabling software updates on the *Processes* > *Automation* page is only possible if this field indicates 100%.
+- **Advanced**: Contains a button that launches a wizard where you can specify all the Configuration Management settings for the CI Type. See [Configuration management configuration](#configuration-management-configuration).
 
-  - **Update Script Name**: Allows you to select the script that will be used to set a software configuration on the CI Type. You can select any of the scripts from the folder configured with the *Update Script* *Folder* setting on the *Admin* > *Settings* page.
+ ## Software Management
 
-  - **Update Image File Location**: Allows you to specify the network path or URL to the configuration files that may be used in the script. If these are not required, set this field to *None*.
+- **CI Type**: Contains the names of the CI Types.
 
-  - **Compliance Check**: Determines whether the Software Compliancy activity is enabled or not.
+- **Update**: Determines whether the Software Update activity is enabled or not.
 
-  - **Completeness Compliance**: Indicates the percentage of mandatory fields that are filled in for the software compliance configuration. Enabling software compliancy on the *Processes* > *Automation* page is only possible if this field indicates 100%.
+- **Completeness Update**: Indicates the percentage of mandatory fields that are filled in for the software update configuration. Enabling software updates on the *Processes* > *Automation* page is only possible if this field indicates 100%.
 
-  - **Version Baseline**: Allows you to specify the software version that is considered compliant.
+- **Update Script Name**: Allows you to select the script that will be used to set a software configuration on the CI Type. You can select any of the scripts from the folder configured with the *Update Script* *Folder* setting on the *Admin* > *Settings* page.
 
-  - **Version Parameter**: Displays the parameter name of the element where the software version is checked. This can be configured via the *Advanced* button.
+- **Update Image File Location**: Allows you to specify the network path or URL to the configuration files that may be used in the script. If these are not required, set this field to *None*.
 
-  - **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified (via the *Advanced* page button). In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+- **Compliance Check**: Determines whether the Software Compliancy activity is enabled or not.
 
-  - **Advanced**: Contains a button that launches a wizard where you can specify the software update script and image file location, as well as the compliancy version and the compliancy version parameter. See [Software image management configuration](#software-image-management-configuration).
+- **Completeness Compliance**: Indicates the percentage of mandatory fields that are filled in for the software compliance configuration. Enabling software compliancy on the *Processes* > *Automation* page is only possible if this field indicates 100%.
 
-- **Facilities**:
+- **Version Baseline**: Allows you to specify the software version that is considered compliant.
 
-  - **CI Type**: Contains the names of the CI Types.
+- **Version Parameter**: Displays the parameter name of the element where the software version is checked. This can be configured via the *Advanced* button.
 
-  - **Rack Assignment**: Determines whether the Rack Assignment activity is enabled or not.
+- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified (via the *Advanced* page button). In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
 
-  - **Completeness Rack Assignment**: Indicates how complete the rack assignment configuration is for the CI Type. Enabling automatic rack assignment on the *Processes* > *Automation* page is only possible if this indicates 100%.
+- **Advanced**: Contains a button that launches a wizard where you can specify the software update script and image file location, as well as the compliancy version and the compliancy version parameter. See [Software image management configuration](#software-image-management-configuration).
 
-  - **Rack Assignment Script**: Allows you to select the script that should be used for automatic rack assignment. You can select any of the scripts from the folder configured with the *Rack Assignment Script* *Folder* setting on the *Admin* > *Settings* page.
+## Facilities
 
-  - **Advanced**: Contains a button that launches a wizard where you can specify the rack assignment settings for the CI Type. See [Facilities configuration](#facilities-configuration).
+- **CI Type**: Contains the names of the CI Types.
 
-- **Activity Management**: The toggle buttons on this page allow you to determine the default behavior of the process activation settings (on the *Processes* > *Activities* tab). If a toggle button is set to *Manual*, users will need to manually enable automation for the relevant activity when completeness is 100%. If a toggle button is set to *Automatic*, automation will be enabled automatically as soon as completeness is 100% for the activity. With the buttons at the bottom of the page, you can set all activities to *Automatic* or *Manual* in one go.
+- **Rack Assignment**: Determines whether the Rack Assignment activity is enabled or not.
+
+- **Completeness Rack Assignment**: Indicates how complete the rack assignment configuration is for the CI Type. Enabling automatic rack assignment on the *Processes* > *Automation* page is only possible if this indicates 100%.
+
+- **Rack Assignment Script**: Allows you to select the script that should be used for automatic rack assignment. You can select any of the scripts from the folder configured with the *Rack Assignment Script* *Folder* setting on the *Admin* > *Settings* page.
+
+- **Advanced**: Contains a button that launches a wizard where you can specify the rack assignment settings for the CI Type. See [Facilities configuration](#facilities-configuration).
+
+## Activity Management
+
+- The toggle buttons on this page allow you to determine the default behavior of the process activation settings (on the *Processes* > *Activities* tab). If a toggle button is set to *Manual*, users will need to manually enable automation for the relevant activity when completeness is 100%. If a toggle button is set to *Automatic*, automation will be enabled automatically as soon as completeness is 100% for the activity. With the buttons at the bottom of the page, you can set all activities to *Automatic* or *Manual* in one go.
 
 ## Using the CI Type Management wizard
 
