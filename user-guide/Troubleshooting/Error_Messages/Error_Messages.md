@@ -23,3 +23,5 @@ This section provides more information on the following error messages:
 - [Unknown Error](xref:Unknown_Error)
 
 - [Retrieving the data failed as the request timed out](xref:Retrieving_the_data_failed_as_the_request_timed_out)
+
+- [Investigating NATS issues](xref:Investigating_NATS_Issues)
