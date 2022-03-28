@@ -4,8 +4,6 @@ uid: ClassLibraryElementCreation
 
 # Element creation
 
-## Introduction
-
 This section provides more information on how to create elements using the class library.
 
 To create an element, use the [CreateElement](xref:Skyline.DataMiner.Library.Common.IDma.CreateElement(Skyline.DataMiner.Library.Common.ElementConfiguration)) method of the [IDma](xref:Skyline.DataMiner.Library.Common.IDma) interface.
@@ -14,16 +12,16 @@ This method takes an [ElementConfiguration](xref:Skyline.DataMiner.Library.Commo
 The ElementConfiguration constructors require the element name and the protocol to be specified.
 Other configuration settings can be specified via the properties of the ElementConfiguration object:
 
-- [AdvancedSettings](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.AdvancedSettings): Allows configuring advanced element settings such as the timeout, whether the element is hidden, etc.
-- [AlarmTemplate](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.AlarmTemplate): Allows specifying an alarm template to be used.
-- [Connections](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Connections): Allows specifying the connections, if any. See <xref:ClassLibraryElementCreation#creating-an-element-with-connections>.
-- [Description](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Description): Allows providing a description for the element.
-- [DveSettings](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.DveSettings): Allows configuring DVE-related settings such as whether DVE creation is enabled or disabled.
-- [Properties](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Properties): Allows configuring element properties. See <xref:ClassLibraryElementCreation#creating-an-element-with-properties>.
-- [State](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.State): Allows configuring the state. Must be either Active, Paused or Stopped.
-- [TrendTemplate](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.TrendTemplate): Allows specifying an alarm template to be used.
-- [Type](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Type): Allows specifying the type.
-- [Views](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Views): Allows specifying the views the created element should be part of. See <xref:ClassLibraryElementCreation#creating-an-element-in-specific-views>.
+- [AdvancedSettings](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.AdvancedSettings): Allows you to configure advanced element settings such as the timeout, whether the element is hidden, etc.
+- [AlarmTemplate](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.AlarmTemplate): Allows you to specify an alarm template to be used.
+- [Connections](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Connections): Allows you to specify the connections, if any. See [Creating an element with connections](xref:ClassLibraryElementCreation#creating-an-element-with-connections).
+- [Description](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Description): Allows you to provide a description for the element.
+- [DveSettings](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.DveSettings): Allows you to configure DVE-related settings such as whether DVE creation is enabled or disabled.
+- [Properties](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Properties): Allows you to configure element properties. See [Creating an element with properties](xref:ClassLibraryElementCreation#creating-an-element-with-properties).
+- [State](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.State): Allows you to configure the state. Must be either Active, Paused or Stopped.
+- [TrendTemplate](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.TrendTemplate): Allows you to specify a trend template to be used.
+- [Type](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Type): Allows you to specify the type.
+- [Views](xref:Skyline.DataMiner.Library.Common.ElementConfiguration.Views): Allows you to specify the views the created element should be part of. See [Creating an element in specific views](xref:ClassLibraryElementCreation#creating-an-element-in-specific-views).
 
 ## Creating an element with properties
 
