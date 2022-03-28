@@ -1,5 +1,5 @@
 ---
-uid: Compendium_index
+uid: CompendiumIndex
 ---
 
 - [About DataMiner](xref:Comp_About_DataMiner)

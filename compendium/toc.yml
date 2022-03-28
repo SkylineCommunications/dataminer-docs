@@ -1,5 +1,5 @@
 - name: DataMiner Compendium
-  topicUid: Compendium_index
+  topicUid: CompendiumIndex
   items:
     - name: About DataMiner
       topicUid: Comp_About_DataMiner
