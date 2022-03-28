@@ -22,15 +22,15 @@ The *CI Types* subtab of the *Admin* tab consists of several pages with overview
   > - The wizard also allows you to select "None", so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
   > - By default, CI Types generated based on a protocol with an SNMPv3 connection have SNMPv2 port settings configured on that connection, as there is no way to automatically find out the security levels, algorithms and passwords.
 
-On each of the pages, different settings are available. These are explained in the next sections. 
+On each of the pages, different settings are available. These are explained in the sections below.
 
-## Overview
+## Overview page
 
-This page contains an overview of all CI Types in the IDP app. 
+This page contains an overview of all CI Types in the IDP app.
 
 For each CI Type, an *Edit* button is available in this table. It opens the CI Type Management wizard. See [Using the CI Type Management wizard](#using-the-ci-type-management-wizard).
 
-## Discovery
+## Discovery page
 
 This page contains an overview of discovery details for CI Types, with the following columns:
 
@@ -44,7 +44,7 @@ This page contains an overview of discovery details for CI Types, with the follo
 
 - **Advanced**: Contains a button that can be used to launch the CI Type Management wizard for the relevant CI Type. See [Discovery configuration](#discovery-configuration).
 
-## Provisioning 
+## Provisioning page
 
 This page contains an overview of provisioning details for CI Types, with the following columns:
 
@@ -78,7 +78,9 @@ This page contains an overview of provisioning details for CI Types, with the fo
 
 - **Advanced**: Contains a button that launches a wizard where you can configure the provisioning details for the CI Type. This includes advanced settings that are not available in the table. See [Provisioning configuration](#provisioning-configuration).
 
-## Connectivity
+## Connectivity page
+
+This page contains an overview of connectivity details for CI Types, with the following columns:
 
 - **CI Type**: Contains the names of the CI Types.
 
@@ -90,7 +92,9 @@ This page contains an overview of provisioning details for CI Types, with the fo
 
 - **Advanced**: Contains a button that launches a wizard where you can configure the connectivity discovery details for the CI Type. See [Connectivity configuration](#connectivity-configuration).
 
-## Configuration Management
+## Configuration Management page
+
+This page contains an overview of configuration management details for CI Types, with the following columns:
 
 - **CI Type**: Contains the names of the CI Types.
 
@@ -114,7 +118,9 @@ This page contains an overview of provisioning details for CI Types, with the fo
 
 - **Advanced**: Contains a button that launches a wizard where you can specify all the Configuration Management settings for the CI Type. See [Configuration management configuration](#configuration-management-configuration).
 
- ## Software Management
+## Software Management page
+
+This page contains an overview of software management details for CI Types, with the following columns:
 
 - **CI Type**: Contains the names of the CI Types.
 
@@ -138,7 +144,9 @@ This page contains an overview of provisioning details for CI Types, with the fo
 
 - **Advanced**: Contains a button that launches a wizard where you can specify the software update script and image file location, as well as the compliancy version and the compliancy version parameter. See [Software image management configuration](#software-image-management-configuration).
 
-## Facilities
+## Facilities page
+
+This page contains an overview of facilities configuration details for CI Types, with the following columns:
 
 - **CI Type**: Contains the names of the CI Types.
 
@@ -150,9 +158,13 @@ This page contains an overview of provisioning details for CI Types, with the fo
 
 - **Advanced**: Contains a button that launches a wizard where you can specify the rack assignment settings for the CI Type. See [Facilities configuration](#facilities-configuration).
 
-## Activity Management
+## Activity Management page
 
-- The toggle buttons on this page allow you to determine the default behavior of the process activation settings (on the *Processes* > *Activities* tab). If a toggle button is set to *Manual*, users will need to manually enable automation for the relevant activity when completeness is 100%. If a toggle button is set to *Automatic*, automation will be enabled automatically as soon as completeness is 100% for the activity. With the buttons at the bottom of the page, you can set all activities to *Automatic* or *Manual* in one go.
+The toggle buttons on this page allow you to determine the default behavior of the process activation settings (on the *Processes* > *Activities* tab).
+
+If a toggle button is set to *Manual*, users will need to manually enable automation for the relevant activity when completeness is 100%. If a toggle button is set to *Automatic*, automation will be enabled automatically as soon as completeness is 100% for the activity.
+
+With the buttons at the bottom of the page, you can set all activities to *Automatic* or *Manual* in one go.
 
 ## Using the CI Type Management wizard
 
