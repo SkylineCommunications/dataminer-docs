@@ -4,56 +4,44 @@ uid: GeneralLayout
 
 # DataMiner System layout
 
-A DataMiner System (DMS) is a cluster of interconnected DataMiner Agents.
+A DataMiner System (DMS) is a cluster of one or more TCP/IP interconnected DataMiner Agents (DMAs).
 
-As to software, all DataMiner Agents in a DMS are identical. Each of them is a fully functional monitoring system.
+As to software, all DataMiner Agents in a DMS are identical. Each DMA is also a fully functional DataMiner System by itself, offering all the features and capabilities of DataMiner. This means that the smallest and most simple version of a DataMiner System is a single DMA. Typically, multiple DMAs are deployed to create a DMS, with the number of DMAs depending on the required overall processing capacity and potentially also on certain architectural considerations or preferences.
 
-In a DMS, there is no central server and there are no dedicated client terminals. DataMiner users can log on to any of the DMAs in the cluster and will perceive the DMS as a single entity.
+In a DMS, there is no central server and there are no dedicated client terminals. When DataMiner users log on to any of the DMAs in the cluster, they will perceive the DMS as a single entity.
 
 ## DataMiner Agents
 
-A DataMiner Agent (DMA) is a piece of industry-standard computing hardware running the DataMiner Agent software on top of a Microsoft Windows operating system (see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/)).
+A DataMiner Agent (DMA) is a physical or virtual compute instance running the DataMiner Agent software on top of a Microsoft Windows operating system (see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/)). A DMA is often also referred to as a DataMiner Node.
 
-The DataMiner Agent software is essentially a collection of services of which the names all start with “SL” (e.g. SLNet, SLProtocol, SLLog, etc.).
+The DataMiner Agent software is essentially a collection of services of which most names start with “SL” (e.g. SLNet, SLProtocol, SLLog, etc.).
 
 > [!NOTE]
 > By default, on DataMiner Agents running Windows 2008 Server or Windows Vista (or higher), the startup type of the DataMiner services is set to "Automatic (Delayed Start)". This means that DataMiner waits until all Windows services are up and running before launching its own services.
 
 ## DataMiner clients
 
-DataMiner client applications connect to only one DMA in the DMS (their so-called primary DMA). Through that "single point of contact", they then have access to all information in the DMS.
+DataMiner client applications only need to connect to one DMA in the DMS, and this can be any of the DMAs. All DMAs in the DMS have an equivalent status. Through this "single point of contact", users have access to all information in the entire DMS. The only constraints a user can potentially experience in terms of accessing certain information are defined by the DataMiner security configuration.
 
-## DataMiner databases
+In other words, a DataMiner client can access the DataMiner System by connecting to any DMA, and it will get a consolidated view of the entire managed operation and all its managed objects across all DMAs in the DMS.
 
-On each of the DataMiner Agents, you will find a general or "local" database. Prior to DataMiner 9.0, this is by default a MySQL database. From DataMiner 9.0 onwards, a Cassandra database is used by default. However, an MSSQL database is also supported.
+## DataMiner database
 
-Optionally, the data stored in a general database can be automatically offloaded to an offload or "central" database installed on a dedicated database server. This is especially useful when you intend to use that data for heavy-duty reporting or billing purposes.
+For storage of data, DataMiner comes fully integrated with industry-standard data storage solutions.
 
-## Dual LAN architecture
+The **general database** is the mandatory storage solution required for a fully operational DataMiner System. The DataMiner System uses the general database to store and retrieve data. To do so as efficiently as possible, it relies on references and IDs. This makes the database less readable for a third-party software application without intimate knowledge of the data structures used by DataMiner. The general database is therefore considered to be exclusively used by the DataMiner System. The DataMiner System also includes all the logic required to maintain the good health and optimal performance of the general database, as this database is intended to be zero-maintenance and require no Database Admin. Prior to DataMiner 9.0, the general database is by default a MySQL database. From DataMiner 9.0 onwards, a Cassandra database is used by default. However, an MSSQL database is also supported. Note that in older DataMiner versions, the general database was known as the "local database".
 
-Typically, every DataMiner Agent is equipped with a dual Ethernet interface card.
-
-### Primary port
-
-- Connection: Connected to the corporate IP network
-- Purpose: Communicating with clients (web browsers, SNMP Managers, telnet applications, ...)
-- Data: Processed data (e.g. alarms, real-time data, reports, ...)
-
-### Secondary port
-
-- Connection: Connected to the "acquisition LAN" (i.e. the dedicated DataMiner LAN)
-- Purpose: Collecting information from the Elements
-- Data: Raw data
+The **offload database** is an optional second data storage solution that can be added to a DataMiner System for the purpose of exporting the data and making it available for third-party software applications. When the DataMiner System is configured to also offload its data to the offload database, it will translate the data to more human-readable data (e.g. element ID references are replaced with element names), so that it is easier for third party applications to digest it. A DataMiner System will only write data to the offload database but not read from it. The DataMiner System will also not perform maintenance of the offload database.
 
 ## DataMiner Probes
 
-A DataMiner Probe (DMP) provides standalone intelligent network management functionality, and typically reports to a central system. It has limited capabilities compared to a full DataMiner Agent, and typically, but not necessarily, runs on a small-form-factor computer in remote and unmanned locations where communication channels often have capacity constraints and/or intermittent availability.
+A DataMiner Probe (DMP) provides standalone intelligent network management functionality, and typically reports to a central system. It has limited capabilities compared to a full DataMiner Agent, and typically, but not necessarily, runs on a small-form-factor compute instance in remote and unmanned locations where communication channels often have capacity constraints and/or intermittent availability.
 
-DMPs can support a multitude of applications, and are typically installed in e.g. remote VSAT terminals, satellite hubs, terrestrial transmitter sites, small network nodes, cellular network base centers, etc.
+DMPs can support a multitude of applications and are typically installed in e.g. remote VSAT terminals, satellite hubs, terrestrial transmitter sites, small network nodes, cellular network base centers, etc.
 
 ## DMA peripherals
 
-In some network setups, special interfacing tools called "DMA peripherals" are used to connect a DMA to third-party devices. Typically, the intelligence is embedded in the DMA, while the peripherals themselves are used for medium interfacing and conversion.
+In some network setups, special third-party interfacing hardware called "DMA peripherals" is used to connect a DMA to third-party devices. Typically, the intelligence is embedded in the DMA, while the peripherals are used for medium interfacing and conversion.
 
 Frequently used peripherals include:
 
