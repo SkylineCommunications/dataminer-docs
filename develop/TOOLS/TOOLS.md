@@ -12,6 +12,8 @@ In this section, you can find information on the following useful tools for syst
 
 - [Nodetool](xref:TOONodetool#nodetool)
 
+- [Nuget packages](xref:TOONuGet)
+
 - [CI/CD Pipeline](xref:TOOProtocolDevelopmentWithCICD#cicd-pipeline)
 
 - [QA Device Simulator](xref:TOOQASNMPSimulator#qa-device-simulator)
