@@ -573,6 +573,8 @@
       topicUid:  ClassLibraryIntroduction
     - name: Lazy loading
       topicUid:  ClassLibraryLazyLoading
+    - name: Element creation
+      topicUid: ClassLibraryElementCreation
     - name: InterApp classes
       topicUid:  ClassLibraryInterAppClasses
     - name: Monitors
