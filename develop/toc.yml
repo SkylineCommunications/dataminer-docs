@@ -573,6 +573,8 @@
       topicUid:  ClassLibraryIntroduction
     - name: Lazy loading
       topicUid:  ClassLibraryLazyLoading
+    - name: Element creation
+      topicUid: ClassLibraryElementCreation
     - name: InterApp classes
       topicUid:  ClassLibraryInterAppClasses
     - name: Monitors
@@ -4604,6 +4606,20 @@
       items:
         - name: Logging queries
           topicUid: Logging_queries
+    - name: NuGet packages
+      topicUid: TOONuGet
+      items:
+        - name: Consuming NuGet packages
+          topicUid: Consuming_NuGet
+        - name: Producing NuGet packages
+          topicUid: Producing_NuGet
+        - name: Advanced assembly knowledge
+          topicUid: Advanced_Assembly_Knowledge
+          items:
+          - name: Compilation-time assembly binding
+            topicUid: Compilation_Time_Assembly_Binding
+          - name: Run-time assembly binding
+            topicUid: Run_Time_Assembly_Binding
     - name: QA Device Simulator
       topicUid: TOOQASNMPSimulator
       items:

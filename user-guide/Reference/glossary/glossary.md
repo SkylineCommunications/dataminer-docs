@@ -129,7 +129,7 @@ uid: glossary
 | Discrete parameter | Parameter with a limited set of predefined values. See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |
 | Disk Space Watcher | DataMiner functionality that monitors the predicted available space on the C: drive of a DataMiner Agent. See [General database](xref:General_database). |
 | DLL | Dynamic Link Library. A library containing codes and functions that can be used by multiple applications at the same time. |
-| DMA | DataMiner Agent. A piece of hardware running the DataMiner software. |
+| DMA | DataMiner Agent. A physical or virtual compute instance running the DataMiner Agent software on top of a Microsoft Windows operating system. Also called "DataMiner Node". |
 | DMB | Digital Multimedia Broadcasting. Technology similar to DVB-H that allows multimedia to be broadcast to mobile devices. |
 | DMP | DataMiner Probe. Also known as external DataMiner Agent. A DataMiner Probe has limited capabilities compared to a full DataMiner Agent, and often runs on a small-form-factor computer in remote and unmanned locations with limited communication capacity. |
 | DMS | DataMiner System. One or more DMAs integrated into one cluster via an IP network. |

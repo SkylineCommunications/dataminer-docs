@@ -357,7 +357,7 @@ From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter valu
 
 - *Feed*: The name of the feed that should provide the data. If only one feed is available, it will automatically be selected.
 
-- *Type*: The type of data that needs to be selected. If the feed only provides one type of data, it will automatically be selected. The type *Query rows* (available from DataMiner 10.2.4/10.3.0 onwards) allows you to link the filter to rows from another query, if a compatible query is available.
+- *Type*: The type of data that needs to be selected. If the feed only provides one type of data, it will automatically be selected. The type *Query rows* (available from DataMiner 10.2.0 [CU2]/10.2.4 onwards) allows you to link the filter to rows from another query, if a compatible query is available.
 
 - *Property*: The property by which the column will be filtered (depending on the type of data).
 
