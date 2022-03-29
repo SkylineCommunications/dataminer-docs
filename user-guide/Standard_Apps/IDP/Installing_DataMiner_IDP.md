@@ -8,11 +8,11 @@ To install and set up DataMiner IDP:
 
 1. Make sure the necessary prerequisites are available:
 
-    - DataMiner version 10.0.0 CU9 or higher must be installed in your DMS.
+    - DataMiner version **10.1.0 CU10** or higher must be installed in your DMS. For older IDP versions (prior to IDP 1.1.20), the minimum supported version is DataMiner 10.0.0 CU9.
 
-    - If you want to use scheduled activities, your DMS must use an Elasticsearch database.
+    - If you want to use scheduled activities, your DMS must use an **Elasticsearch database**.
 
-    - If you want to use Process Automation, make sure DataMiner SRM, Process Automation, and Token activity are installed before you install the IDP package. If you want to be able to repeat processes with a timer, the Repeat Gateway also has to be installed. 
+    - If you want to use Process Automation, make sure **DataMiner SRM, Process Automation, and Token activity** are installed before you install the IDP package. If you want to be able to repeat processes with a timer, the **Repeat Gateway** also has to be installed.
 
 1. Double-click the DataMiner IDP package.
 
@@ -60,7 +60,7 @@ To install and set up DataMiner IDP:
 1. On the *IDP Extra Configurations* page:
    - Optionally customize the HTTP binding address, with the corresponding HTTP mode and port.
    - Optionally specify the path and credentials for the configuration archive.
-   - From IDP version 1.1.18 onwards, optionally specify the credentials for the working directories.
+   - Optionally specify the credentials for file transfers. Note that prior to IDP 1.1.20 (from IDP version 1.1.18 onwards), these are mentioned as the credentials for the working directories.
 
     > [!NOTE]
     > Aside from the HTTP binding address, mode and port, you can also configure these settings in the IDP app after the initial setup, via *Admin* > *Configuration* > *Network Shares*.

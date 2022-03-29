@@ -2128,6 +2128,8 @@
               topicUid: Configuration
             - name: Facilities
               topicUid: Facilities
+            - name: Activities
+              topicUid: Admin_activities
             - name: Settings
               topicUid: Settings
         - name: Reference
