@@ -51,7 +51,7 @@ working and summarize the implementation method.*
     1. Use another tool (e.g. MibBrowser) to test the connection.
     1. Check the community strings.
 
-1. What is the meaning of the actions "Execute", "Execute Next", "Execute One", "Add to Execute" and "Force Execute" on a group?
+1. *What is the meaning of the actions "Execute", "Execute Next", "Execute One", "Add to Execute" and "Force Execute" on a group?*
 
     Groups added by a timer or an "add to execute" actions are added to the end of the queue. There is no check if the group is already present in the queue. When the action "execute one" is used, there will first be a check whether the group is already present.
 
@@ -124,7 +124,7 @@ working and summarize the implementation method.*
 1. *Is there a mistake in the code below?*
 
    ```xml
-    <ColumnOption idx="11" pid="112" type="custom" value="" options=";element"/>
+    <ColumnOption idx="1" pid="305" type="retrieved" value="" options="save"/>
     ```
 
     There should be a semicolon (“;”) before the save.
