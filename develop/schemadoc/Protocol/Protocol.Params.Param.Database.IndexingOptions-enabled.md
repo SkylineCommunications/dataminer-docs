@@ -17,3 +17,8 @@ Specifies whether the data of the logger table will be stored in the Elastic dat
 ## Remarks
 
 Default value: false.
+
+## See also
+
+- Development Guide:
+  - [Logger tables](xref:AdvancedLoggerTables)
