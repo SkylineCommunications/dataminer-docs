@@ -31,6 +31,20 @@ Example:
 </Param>
 ```
 
+### customDatabaseName
+
+To be used in combination with the [database](xref:Protocol.Params.Param.ArrayOptions-options#database) option.
+
+By default, the name of the logger table in the database will be `elementdata_[AgentId]_[ElementId]_[TableParameterId]` (e.g. "elementdata_346_353_1000") and this table will be created in the default local DataMiner schema. When the `customDatabaseName` option is used, the table is created in a separate table schema (where the name of the schema is the name specified in the option) and the name of the table within this schema is the name of your table.
+
+Example:
+
+```xml
+<ArrayOptions ... options="database;customDatabaseName=myName">
+```
+
+See also: [Logger tables](xref:AdvancedLoggerTables).
+
 ### database
 
 This option should only be used for logger tables.
@@ -57,7 +71,7 @@ See also: [Logger tables](xref:AdvancedLoggerTables).
 
 To be used in combination with the [database](xref:Protocol.Params.Param.ArrayOptions-options#database) option.
 
-By default, the name of the logger table in the database will be elementdata_[AgentId]_[ElementId]_[TableParameterId] (e.g. "elementdata_346_353_1000"). This table will be created in the default local DataMiner schema. When using the `databaseName` option, the table is created in a separate table schema (where the name of the schema is the name of the element) and the name of the table within the schema is the name of the table.
+By default, the name of the logger table in the database will be `elementdata_[AgentId]_[ElementId]_[TableParameterId]` (e.g. "elementdata_346_353_1000"). This table will be created in the default local DataMiner schema. When the `databaseName` option is used, the table is created in a separate table schema (where the name of the schema is the name of the element) and the name of the table within the schema is the name of the table.
 
 Example:
 
@@ -71,26 +85,12 @@ See also: [Logger tables](xref:AdvancedLoggerTables).
 
 To be used in combination with the [database](xref:Protocol.Params.Param.ArrayOptions-options#database) option.
 
-By default, the name of the logger table in the database will be elementdata_[AgentId]_[ElementId]_[TableParameterId] (e.g. "elementdata_346_353_1000") and this table will be created in the default local DataMiner schema. When using the `databaseNameProtocol` option, the table is created in a separate table schema (where the name of the schema is the name of the protocol) and the name of the table within this schema is the name of the table.
+By default, the name of the logger table in the database will be `elementdata_[AgentId]_[ElementId]_[TableParameterId]` (e.g. "elementdata_346_353_1000") and this table will be created in the default local DataMiner schema. When the `databaseNameProtocol` option is used, the table is created in a separate table schema (where the name of the schema is the name of the protocol) and the name of the table within this schema is the name of the table.
 
 Example:
 
 ```xml
 <ArrayOptions ... options="database;databaseNameProtocol">
-```
-
-See also: [Logger tables](xref:AdvancedLoggerTables).
-
-### customDatabaseName
-
-To be used in combination with the [database](xref:Protocol.Params.Param.ArrayOptions-options#database) option.
-
-By default, the name of the logger table in the database will be elementdata_[AgentId]_[ElementId]_[TableParameterId] (e.g. "elementdata_346_353_1000") and this table will be created in the default local DataMiner schema. When using the `customDatabaseName` option, the table is created in a separate table schema (where the name of the schema is the name specified in the option) and the name of the table within this schema is the name of your table.
-
-Example:
-
-```xml
-<ArrayOptions ... options="database;customDatabaseName=myName">
 ```
 
 See also: [Logger tables](xref:AdvancedLoggerTables).
