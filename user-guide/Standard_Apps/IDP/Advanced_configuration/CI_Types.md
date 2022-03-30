@@ -160,11 +160,7 @@ This page contains an overview of facilities configuration details for CI Types,
 
 ## Activity Management page
 
-The toggle buttons on this page allow you to determine the default behavior of the process activation settings (on the *Processes* > *Activities* tab).
-
-If a toggle button is set to *Manual*, users will need to manually enable automation for the relevant activity when completeness is 100%. If a toggle button is set to *Automatic*, automation will be enabled automatically as soon as completeness is 100% for the activity.
-
-With the buttons at the bottom of the page, you can set all activities to *Automatic* or *Manual* in one go.
+From IDP 1.1.20 onwards, this page is no longer available. The functionality that was previously available here is now available on the *Admin* > *Activities* > *Default Behavior* page. See [Default behavior](xref:Admin_activities#default-behavior)
 
 ## Using the CI Type Management wizard
 

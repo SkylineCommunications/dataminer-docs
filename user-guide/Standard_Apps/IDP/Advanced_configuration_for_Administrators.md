@@ -16,8 +16,9 @@ On the *Admin* tab of the IDP app, various settings are available that can be us
 
 - [Facilities](xref:Facilities)
 
+- [Activities](xref:Admin_activities)
+
 - [Settings](xref:Settings)
 
 > [!NOTE]
 > To enable or disable the different operations of DataMiner IDP, such as discovery and provisioning, go to the *Processes* > *Activities* page of the IDP app.
->
