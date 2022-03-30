@@ -166,9 +166,9 @@ This tab displays an overview of the levels in the infrastructure, with KPIs and
 
 ## Processes
 
-This tab displays an overview of scheduled activities or processes, depending on whether IDP is used together with DataMiner Process Automation. If Process Automation is not used, the *New* button allows you to schedule a new discovery activity. With DataMiner Process Automation, the *New* button opens the Process Automation wizard.
+If IDP is used together with DataMiner Process Automation, this tab displays an overview of scheduled processes.
 
-In the Process Automation wizard, you can create or schedule processes consisting of one or more activities. To do so:
+Click the *New* button to open the Process Automation wizard. In this wizard, you can create or schedule processes consisting of one or more activities. To do so:
 
 - In the first step of the wizard, specify:
 
