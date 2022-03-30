@@ -193,3 +193,42 @@ localDMS.Notify(92 /*DMS_REFRESH_LDAP*/, 0, "", "", localReturn);
 > - From DataMiner 9.5.0/9.0.3 onwards, when Active Directory is used, by default DataMiner automatically receives updates whenever changes occur in the domain. You can disable this by setting the *notifications* attribute of the LDAP tag to false (*\<LDAP notifications="false" />*) in the *DataMiner.xml* file.
 > - From DataMiner 10.1.9/10.2.0 onwards, LDAP notification behavior is disabled by default, and instead the LDAP system is polled on an hourly basis. Set the *notifications* attribute of the LDAP tag to true to enable this behavior again.
 >
+
+## Active Directory Forest with multiple domains
+
+When you have an Active Directory Forest with multiple domains, you need to create a custom configuration.
+
+In Active Directory, do the following:
+
+- Use universal security groups.
+
+  > [!IMPORTANT]
+  > If you do not use universal security groups, DataMiner will only have access to the users that are in the same domain as the DataMiner agent.
+
+- Specify the necessary trusts between the different domains.
+
+  > [!IMPORTANT]
+  > If you do not specify trusts between domains, users from one domain will not be able to log in to another domain. 
+
+  > [!NOTE]
+  > Parent-child trusts are created automatically.
+
+In DataMiner, do the following:
+
+- Set the naming context to the top entry of the forest hierarchy.
+
+  > [!IMPORTANT]
+  > Directory traversal happens top to bottom. If you start somewhere else, any parent or sibling domains will not be included.
+
+- Query the Global Catalog on port 3268.
+
+  > [!IMPORTANT]
+  > Querying the Global Catalog is required to get information from other domains than the one you are querying against.
+
+- Use a user account that has permission to query the top entry of the forest hierarchy.
+
+  > [!IMPORTANT]
+  > Directory traversal happens top to bottom. If you do not have access to query against the top level of the forest, any parent or sibling domains of the child domain you are querying against will not be included.
+
+> [!IMPORTANT]
+> When adding existing groups in DataMiner, all domain groups will appear to be in the same domain as the DataMiner agent. However, this is only a visualization issue. Functionality is not affected.
