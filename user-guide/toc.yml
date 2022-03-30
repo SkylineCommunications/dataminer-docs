@@ -995,7 +995,7 @@
     - name: Security
       topicUid: security
       items:
-        - name: About DMS Security
+        - name: About DataMiner security
           topicUid: About_DMS_Security
           items:
             - name: User management
