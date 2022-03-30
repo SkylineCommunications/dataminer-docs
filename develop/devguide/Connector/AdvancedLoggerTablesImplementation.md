@@ -22,7 +22,7 @@ To implement a logger table, perform the following steps:
     </Param>
     ```
 
-    In case the logger table persists in Cassandra, also provide a Database.CQLOptions.Clustering tag. From DataMiner version 9.0.0 onwards, if the Param.Database.CQLOptions.Clustering tag is used, the primary key (i.e. index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
+    In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. From DataMiner version 9.0.0 onwards, if the Param.Database.CQLOptions.Clustering tag is used, the primary key (i.e. index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
 
     ```xml
     <Param id="5200" trending="false">
@@ -49,7 +49,7 @@ To implement a logger table, perform the following steps:
 
     From DataMiner 9.0.0 onwards, parentheses can be used to form composite partitioning keys (RN12170).
 
-1. For every column parameter, define the database type to be used. This is done via the Database.ColumnDefinition tag.
+1. For every column parameter, define the database type to be used. This is done via the [Database.ColumnDefinition](xref:Protocol.Params.Param.Database.ColumnDefinition) tag.
 
     ```xml
     <Param id="5204" trending="false">
@@ -174,7 +174,7 @@ To implement a logger table, perform the following steps:
 
     - It is not strictly necessary to include a column in a logger table used for partitioning. However, it is strongly advised to do so, as otherwise the table will not automatically remove old data.
 
-    - Partitioning in Cassandra is supported from DataMiner version 9.0.0 (RN12170) onwards. If ColumnDefinition is set to "DATETIME" and the Partition tag is set, Cassandra will use a TTL with the specified time. (See Time to live.)
+    - Partitioning in Cassandra is supported from DataMiner version 9.0.0 (RN12170) onwards. If ColumnDefinition is set to "DATETIME" and the Partition tag is set, Cassandra will use a TTL with the specified time. (See [Time to live](xref:AdvancedDataMinerDataPersistenceNoSqlCassandra#time-to-live).)
 
       From DataMiner version 9.5.7 (RN 16738) onwards, you can specify the TTL of a logger table column via the Partition tag on any column. This is also supported for Elasticsearch.
 
@@ -217,7 +217,7 @@ To implement a logger table, perform the following steps:
 
 From DataMiner 9.6.4 (RN 13552) onwards, it is possible to store a logger table in Elasticsearch instead of Cassandra.
 
-To indicate that a logger table should be stored in Elasticsearch instead of Cassandra, set the IndexingOptions@enabled attribute to true:
+To indicate that a logger table should be stored in Elasticsearch instead of Cassandra, set the [IndexingOptions@enabled](xref:Protocol.Params.Param.Database.IndexingOptions-enabled) attribute to true:
 
 ```xml
 <Database>
@@ -251,7 +251,7 @@ From DataMiner 9.6.4 (RN 19993) onwards, in order to prevent indices from rollin
 
 With Cassandra, the design of a logger table is very important. Think about what queries will be performed on the table and then design the table accordingly, as this will determine what the partitioning key should be and whether clustering columns are required.
 
-For more information on the Cassandra data model, refer to DataMiner general database – NoSQL Database – Cassandra.
+For more information on the Cassandra data model, refer to [DataMiner general database – NoSQL Database – Cassandra](xref:AdvancedDataMinerDataPersistenceNoSqlCassandra).
 
 ## Best practices
 
@@ -263,3 +263,14 @@ In order to make a protocol compatible with both RDBMS (SQL) and Cassandra, and 
 - If the rows in the logger table should only be added and never overwritten, use an auto-increment PK for the parameter table. If you do so, DataMiner does not need to scan the entire table first to check if a row already exists, which allows a higher insertion rate.
 - Do not choose the auto-increment PK in DataMiner as partition key. This would lead to a very high cardinality and would mean that you would have to know beforehand what this value is before being able to query the row.
 - AddRow calls are blocking calls, meaning there is no advantage to add rows multi-threaded. It will even have the downside that threads will start to block each other and new threads are created to try to compensate. Therefore, it is better to have one thread running that gets items to be added from a ConcurrentQueue.
+
+## See also
+
+- [Protocol.Params.Param.ArrayOptions-options](xref:Protocol.Params.Param.ArrayOptions-options)
+  - [database](xref:Protocol.Params.Param.ArrayOptions-options#database) option
+  - [databaseName](xref:Protocol.Params.Param.ArrayOptions-options#databasename) option
+  - [databaseNameProtocol](xref:Protocol.Params.Param.ArrayOptions-options#databasenameprotocol) option
+  - [customDatabaseName](xref:Protocol.Params.Param.ArrayOptions-options#customdatabasename) option
+- [Protocol.Params.Param.Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering)
+- [Protocol.Params.Param.Database.ColumnDefinition](xref:Protocol.Params.Param.Database.ColumnDefinition)
+- [Protocol.Params.Param.Database.IndexingOptions@enabled](xref:Protocol.Params.Param.Database.IndexingOptions-enabled)
