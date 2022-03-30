@@ -2276,6 +2276,8 @@
           topicUid: Controlling_remote_access
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
+    - name: DataMiner Teams bot
+      topicUid: DataMiner_Teams_bot
 - name: DataMiner Professional Services
   topicUid: Part52ProfessionalServices
   items:
@@ -2443,8 +2445,6 @@
     - name: Tools
       topicUid: DataminerTools
       items:
-        - name: DataMiner Teams bot
-          topicUid: DataMiner_Teams_bot
         - name: DMS Alerter
           topicUid: DMS_Alerter
           items:

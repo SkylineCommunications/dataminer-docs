@@ -6,8 +6,6 @@ uid: DataminerTools
 
 This section provides information on the following tools:
 
-- [DataMiner Teams bot](xref:DataMiner_Teams_bot)
-
 - [DMS Alerter](xref:DMS_Alerter)
 
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
@@ -18,4 +16,3 @@ This section provides information on the following tools:
 
 > [!NOTE]
 > For more information on other DataMiner tools or third-party tools, refer to <https://community.dataminer.services/documentation/category/resources/tools/>.
->
