@@ -194,33 +194,41 @@ localDMS.Notify(92 /*DMS_REFRESH_LDAP*/, 0, "", "", localReturn);
 > - From DataMiner 10.1.9/10.2.0 onwards, LDAP notification behavior is disabled by default, and instead the LDAP system is polled on an hourly basis. Set the *notifications* attribute of the LDAP tag to true to enable this behavior again.
 >
 
-## Active Directory Forest with multiple domains ##
+## Active Directory Forest with multiple domains
 
-When you're working with a forest that has multiple domains, you'll need to create a custom configuration.
+When you have an Active Directory Forest with multiple domains, you need to create a custom configuration.
 
-In Active Directory, make sure to:
+In Active Directory, do the following:
 
 - Use universal security groups.
+
   > [!IMPORTANT]
-  > If you don't use universal security groups, DataMiner will only have access to the users that are in the same domain the DataMiner agent is in.
+  > If you do not use universal security groups, DataMiner will only have access to the users that are in the same domain as the DataMiner agent.
+
 - Specify the necessary trusts between the different domains.
+
   > [!IMPORTANT]
-  > If you don't specify trusts between domains, users from one domain will not be able to log in on another domain. 
+  > If you do not specify trusts between domains, users from one domain will not be able to log in to another domain. 
+
   > [!NOTE]
   > Parent-child trusts are created automatically.
 
-In DataMiner, you'll need to:
+In DataMiner, do the following:
 
-- Fill in the naming context with the top entry of the forest hierarchy.
+- Set the naming context to the top entry of the forest hierarchy.
+
   > [!IMPORTANT]
-  > Directory traversal happens top to bottom. If you start somewhere else, any parent or sibling domains won't be included.
+  > Directory traversal happens top to bottom. If you start somewhere else, any parent or sibling domains will not be included.
+
 - Query the Global Catalog on port 3268.
+
   > [!IMPORTANT]
-  > Querying the Global Catalog is required to get information from other domains than the one you're querying against.
-- Use a user that has access to query the top entry of the forest hierarchy.
+  > Querying the Global Catalog is required to get information from other domains than the one you are querying against.
+
+- Use a user account that has permission to query the top entry of the forest hierarchy.
+
   > [!IMPORTANT]
-  > Directory traversal happens top to bottom. If you don't have access to query against the top level of the forest, any parent or sibling domains of the child domain you're querying against won't be included.
+  > Directory traversal happens top to bottom. If you do not have access to query against the top level of the forest, any parent or sibling domains of the child domain you are querying against will not be included.
 
 > [!IMPORTANT]
-> When adding existing groups in DataMiner, all domain groups will appear to be in the same domain the DataMiner agent is in.
-> This is however only a visualization issue and functionality is not affected.
+> When adding existing groups in DataMiner, all domain groups will appear to be in the same domain as the DataMiner agent. However, this is only a visualization issue. Functionality is not affected.
