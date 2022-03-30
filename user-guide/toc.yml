@@ -1010,55 +1010,58 @@
               topicUid: Encryption_in_DataMiner
             - name: Cloud connectivity and security
               topicUID: Cloud_connectivity_and_security
-        - name: Managing users
-          topicUid: Managing_users
-          items:
-            - name: Accessing security in System Center
-              topicUid: Accessing_security_in_System_Center
-            - name: Opening a user card
-              topicUid: Opening_a_user_card
-            - name: Adding a user
-              topicUid: Adding_a_user
-            - name: Deleting a user
-              topicUid: Deleting_a_user
-            - name: Viewing user information
-              topicUid: Viewing_user_information
-            - name: Editing a user’s details
-              topicUid: Editing_a_user’s_details
-            - name: Changing group membership of a user
-              topicUid: Changing_group_membership_of_a_user
-            - name: Disconnecting a user in DataMiner Cube
-              topicUid: Disconnecting_a_user_in_DataMiner_Cube
-        - name: Configuring user notifications
-          topicUid: Configuring_user_notifications
-          items:
-            - name: Configuring notifications in System Center
-              topicUid: Configuring_notifications_in_System_Center
-            - name: Configuring notifications directly from the Alarm Console or Surveyor
-              topicUid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
-            - name: Configuring alarm storm prevention for notifications
-              topicUid: Configuring_alarm_storm_prevention_for_notifications
-        - name: Managing user groups
-          topicUid: Managing_user_groups
-          items:
-            - name: Viewing information about user groups
-              topicUid: Viewing_information_about_user_groups
-            - name: Adding a user group
-              topicUid: Adding_a_user_group
-            - name: Configuring a user group
-              topicUid: Configuring_a_user_group
-            - name: Deleting a user group
-              topicUid: Deleting_a_user_group
         - name: DataMiner user permissions
           topicUid: DataMiner_user_permissions
-        - name: Assigning user settings to a user group
-          topicUid: Assigning_user_settings_to_a_user_group
-        - name: Configuring a set of user group settings
-          topicUid: Configuring_a_set_of_user_group_settings
-        - name: Managing predefined sets of credentials for SNMP authentication
-          topicUid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
-        - name: Frequently asked questions about user group settings
-          topicUid: Frequently_asked_questions_about_user_group_settings
+        - name: Basic security configuration
+          topicUid: Basic_security_configuration
+          items:
+            - name: Managing users
+              topicUid: Managing_users
+              items:
+                - name: Accessing security in System Center
+                  topicUid: Accessing_security_in_System_Center
+                - name: Opening a user card
+                  topicUid: Opening_a_user_card
+                - name: Adding a user
+                  topicUid: Adding_a_user
+                - name: Deleting a user
+                  topicUid: Deleting_a_user
+                - name: Viewing user information
+                  topicUid: Viewing_user_information
+                - name: Editing a user’s details
+                  topicUid: Editing_a_user’s_details
+                - name: Changing group membership of a user
+                  topicUid: Changing_group_membership_of_a_user
+                - name: Disconnecting a user in DataMiner Cube
+                  topicUid: Disconnecting_a_user_in_DataMiner_Cube
+            - name: Configuring user notifications
+              topicUid: Configuring_user_notifications
+              items:
+                - name: Configuring notifications in System Center
+                  topicUid: Configuring_notifications_in_System_Center
+                - name: Configuring notifications directly from the Alarm Console or Surveyor
+                  topicUid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
+                - name: Configuring alarm storm prevention for notifications
+                  topicUid: Configuring_alarm_storm_prevention_for_notifications
+            - name: Managing user groups
+              topicUid: Managing_user_groups
+              items:
+                - name: Viewing information about user groups
+                  topicUid: Viewing_information_about_user_groups
+                - name: Adding a user group
+                  topicUid: Adding_a_user_group
+                - name: Configuring a user group
+                  topicUid: Configuring_a_user_group
+                - name: Deleting a user group
+                  topicUid: Deleting_a_user_group
+            - name: Assigning user settings to a user group
+              topicUid: Assigning_user_settings_to_a_user_group
+            - name: Configuring a set of user group settings
+              topicUid: Configuring_a_set_of_user_group_settings
+            - name: Managing predefined sets of credentials for SNMP authentication
+              topicUid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
+            - name: Frequently asked questions about user group settings
+              topicUid: Frequently_asked_questions_about_user_group_settings
         - name: Advanced security configuration
           topicUid: Advanced_security_configuration
           items:
