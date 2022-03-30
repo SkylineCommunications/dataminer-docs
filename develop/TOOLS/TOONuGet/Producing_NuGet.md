@@ -38,7 +38,7 @@ For example:
 </package>
 ```
 > [!NOTE]
-> - Even when using NuSpec Files, the Assembly Version and Assembly File Version for the projects should be updated.
+> Even when NuSpec files are used, the Assembly Version and Assembly File Version for the projects should be updated.
 
 
 The pipeline will automatically create pre-release packages, which can be used during development. Every build will have its own pre-release package. Every release will have a signed released package.
