@@ -27,9 +27,9 @@ To install the DataMiner Teams bot:
 
 1. Click this DataMiner search result and click *Add*. This will start a private conversation between you and the DataMiner Teams bot.
 
-1. It is also possible to immediately add the Teams bot to a specific team, chat, or meeting. This can be done by clicking on the expand button.
+   You can also immediately add the Teams bot to a specific team, chat, or meeting. To do so, click the triangle button next to *Add* and select the relevant option.
 
-    ![DataMiner app in Teams apps store](~/user-guide/images/DataMinerTeamsAppAddTo.png)
+   ![DataMiner app in Teams apps store](~/user-guide/images/DataMinerTeamsAppAddTo.png)
 
 ## Starting a conversation with the Teams bot
 
