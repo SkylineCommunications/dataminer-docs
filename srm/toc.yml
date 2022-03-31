@@ -1,0 +1,14 @@
+- name: SRM documentation
+  topicUid: srm_index
+  items:
+  - name: SRM use cases
+    topicUid: srm_use_cases
+    items:
+    - name: Resource Automation
+      topicUid: srm_resource_automation
+    - name: Resource Scheduling
+      topicUid: srm_resource_scheduling
+    - name: Resource Orchestration
+      topicUid: srm_resource_orchestration
+    - name: Service Orchestration
+      topicUid: srm_service_orchestration
