@@ -124,3 +124,14 @@ From DataMiner 10.0.12 (RN 27547) onwards, DirectView updates are supported in t
 > From DataMiner 10.0.13 (RN 27785) onwards, updates are also sent to subscribers for direct views when cell alarm levels in the source data tables change because of updates that do not change the cell value (e.g. when a cell in a source table gets masked).
 >
 > Note that this functionality does not work yet for foreign key linked tables where certain columns are also exported.
+
+## Allowing different remote element sources in view table columns
+
+From DataMiner 10.2.4 onwards (RN 32579), it is possible to have multiple sets of elements referenced by different columns within the same view table.
+
+In the following example, parameters 201 and 301 each contain a list of remote elements, and both can be used within the same view table (in different ColumnOption tags).
+
+```xml
+<ColumnOption idx="3" pid="2004" type="retrieved" options=";view=:201:1000:3"/>
+<ColumnOption idx="4" pid="2005" type="retrieved" options=";view=:301:1000:4"/>
+```
