@@ -133,6 +133,10 @@ When you have done so:
 
 ## Connecting with DataMiner
 
+1. Ensure TLS encryption is working by connecting to the Cassandra database through DevCenter.
+
+1. Stop the DataMiner agent.
+
 1. In the `C:\Skyline DataMiner` folder, open *DB.xml*.
 
 1. Locate the active *&lt;Database&gt;* tag for Cassandra and add **&lt;TLSEnabled&gt;true&lt;/TLSEnabled&gt;**.
@@ -161,7 +165,7 @@ When you have done so:
 
    1. Click *Next* and *Finish* to complete the import.
 
-1. Restart your DataMiner Agent. It should now communicate with the database over a TLS secured channel.
+1. Start the DataMiner Agent. It should now communicate with the database over a TLS encrypted channel.
 
 > [!NOTE]
 > The *Cassandra* and *SLDBConnection* DataMiner log files can help in case you need to troubleshoot issues.
