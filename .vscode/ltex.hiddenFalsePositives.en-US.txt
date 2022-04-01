@@ -55,3 +55,4 @@
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QFor example: http://\\[DMA IP\\]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true\nThe showAdvancedSettings=true URL option can be used with some components in order to make additional functionality available.\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qand/or placeholders.\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qwildcards.\\E$"}
+{"rule":"COMMA_COMPOUND_SENTENCE_2","sentence":"^\\QA virtual function only describes the functions a specific connector can expose and the parameters related to this.\\E$"}

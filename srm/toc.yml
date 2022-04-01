@@ -14,5 +14,12 @@
       topicUid: srm_service_orchestration
   - name: SRM concepts
     topicUid: srm_concepts
+    items:
+    - name: SRM definitions
+      topicUid: srm_definitions
+    - name: SRM instantiations
+      topicUid: srm_instantiations
+    - name: SRM scripting
+      topicUid: srm_scripting
   - name: Getting started with SRM
     topicUid: srm_getting_started
