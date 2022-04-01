@@ -13,12 +13,12 @@ uid: Investigating_NATS_Issues
       - [Does a NATS reset fix it?](#does-a-nats-reset-fix-it)
       - [Can new NATS connections be established?](#can-new-nats-connections-be-established)
       - [What's in the NAS and NATS logging?](#whats-in-the-nas-and-nats-logging)
-      - [If all else fails...](#if-all-else-fails)
+      - [If all else fails](#if-all-else-fails)
 - [Algorithms used by DataMiner for configuring NATS](#algorithms-used-by-dataminer-for-configuring-nats)
       - [Clustering algorithms](#clustering-algorithms)
 
 The following is a list of actions that can be taken in order to investigate NATS issues. Parts of this may reference to interfaces/classes of SLMessageBroker.dll (this is our wrapper for the NATS interface) which will likely only be useful for developers.
- 
+
 #### Is there an SLMessageBroker.Crash.txt file?
 
 *C:\Skyline DataMiner\Logging\SLMessageBroker.Crash.txt* is a file that is generated whenever a process failed to create an ISLMessageBroker (aka an instance of our wrapper). If the problem lies with NATS itself, then this file generally isn't very useful, but it's always worth checking it first because it might just immediately solve the problem or point you in the right direction
@@ -29,7 +29,7 @@ Some of the most frequent errors:
 - **Invalid SLCloud.xml (missing attribute):** Attributes are normally filled in automatically when NATS is installed. IF attributes are missing, there's a good chance something went wrong during installation and NATS isn't (correctly) installed.
 
 Additionally check *C:\Skyline DataMiner\Logging\SLMessageBroker.txt*. This file logs information whenever a NATS or STAN connection is established (when an ISLMessageBroker is created or recovers from a disconnect). If successful reconnects are logged after the last error in the .Crash file, it's possible that there was just a temporary disconnect that's already resolved. If this happens, a restart of the service or DMA will likely make the problem go away. If the problem is indeed gone after a restart, you may want to investigate if the app causing the problem can be made more resilient (e.g. by installing the latest updates)
- 
+
 #### Were the installation and clustering successful?
 
 An unsuccessful installation will typically result in one or more of the following scenarios:
@@ -46,12 +46,11 @@ For error information, check the logging in *C:\Skyline DataMiner\Logging*
 
 Note that these log files will contain much more useful logging on level 5 than they do on log level 0.
 The clustering step is skipped if the DMA is a standalone agent.
- 
 
 #### What's in SLCloud.xml?
 
 NATS can be configured correctly, but none of that matters if SLCloud.xml doesn't contain the right NATS servers. It should contain all servers that ISLMessageBroker can connect to. Note that this doesn't necessarily include the local NATS service (e.g. in a cluster of 2 agents).
- 
+
 Example of SLCloud.xml on a standalone agent
 
 ```xml
@@ -74,24 +73,23 @@ Example of SLCloud.xml on a standalone agent
 </SLCloud>
 ```
 
-
 #### Are NAS and NATS running?
 
 Double-check the status of NAS ([NATS Account Server](https://github.com/nats-io/nats-account-server)) and NATS in the Task Manager.
 There is no case where NAS and/or NATS are stopped on purpose. However, a problem was encountered in the past where NATS was stuck in the "stopping" state and nats-streaming-server.exe had to be manually killed in order for the process to be able to restore itself.
 
 If you see that NAS is running but NATS is not, the most likely cause is a firewall issue. When NATS is installed, entries are automatically added to the Windows Firewall, but if there's an additional firewall in between the DMAs in a DMS, the rules need to be added/modified manually. The ports that need to be opened are 4222 (NATS communication), 6222 (NATS clustering), 9090 (NAS). They need to be opened between all DMAs. 8222 is for monitoring only and doesn't have to be opened in the firewall.
- 
+
 Typically, in case of a firewall issue, the *C:\Skyline DataMiner\NATS\nats-account-server\nats-account-server.log* file of a DMA where NATS doesn't start will contain something similar to this near the top of the file: "Unable to initialize from primary, will use what is on disk".
- 
+
 #### What do the configs look like?
 
 Compare the actual contents of each config to the example configs below. Depending on the number of DMAs in the cluster (a failover pair counts as 2 DMAs), the expected config will be different.
- 
+
 A few details to pay attention to:
 
 - If NATS is configured as standalone, the resolver in nats-server.config will be set to 0.0.0.0. This is the only difference with the config in case of 2 DMAs, where the resolver is set to one of the DMAs' IP addresses. It must be the same one for both DMAs!
-- The Cluster ID must be identical on all DMAs in the cluster.	
+- The Cluster ID must be identical on all DMAs in the cluster. 
 - In a cluster of 3 or more agents, there is always exactly 1 primary NAS. All non-primary NAS must have the same primary configured.
 - In a cluster of 3 or more DMAs, every DMA must have a unique Node ID. By default, this is generated based on the IP of the DMA. NATS internally makes subscriptions based on these IDs, so some non-alphanumeric characters (quotes, dots, underscores, lesser/greater than, etc.) should be avoided.
 
@@ -138,7 +136,7 @@ The following values can vary on each DMS:
 - **streaming.cluster_id:** Based on the cluster name in DataMiner.
 - **streaming.cluster.peers:** streaming.cluster.node_id: Based on the IP of the local Agent.
 - **cluster.routes:** IP addresses of up to 3 other agents in the cluster
- 
+
 NATS cluster of exactly 2 agents
 
 ```txt
@@ -167,7 +165,7 @@ streaming: {
 ```
   
 The only difference between this config and a config of an agent that has a standalone NATS is that the resolver is different from 0.0.0.0
- 
+
 Standalone NATS
 
 ```txt
@@ -214,7 +212,7 @@ store: {
 ```
 
 There should only be one primary NAS in each DMS. Every other NAS should be configured as a secondary. The exception to this is a cluster of exactly 2 agents, where both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
- 
+
 Secondary NAS
 
 ```txt
@@ -238,7 +236,7 @@ To trigger a NATS reset:
 2. Send a NATSCustodianResetNatsRequest message, leaving all fields to the default values (IsDistributed = false)
 
 This will recalculate the NAS and NATS configs in the entire cluster, so any faulty configurations are cleaned up automatically.
- 
+
 #### Can new NATS connections be established?
 
 Try restarting things one by one to see whether its functionality is restored, or whether the error changes. Restart things in the following order:
@@ -252,7 +250,7 @@ Try restarting things one by one to see whether its functionality is restored, o
 
 To check the NAS logging, usually the logging of the server that's configured as resolver on the NATS server that's having issues will suffice.
 When checking the NATS logging, it's important that you check the logging of all ANTS servers in the cluster. If NATS is running as a cluster, it needs to maintain a certain degree of consistency (this is done through the [RAFT](https://docs.nats.io/running-a-nats-service/configuration/clustering/jetstream_clustering#raft) consensus algorithm). If NATS receives conflicting info from its peers, it will simply shut itself down.
- 
+
 For example, take a case where in a cluster of 4 agents:
 
 - Agent 1 can only reach Agent 2,
@@ -262,12 +260,47 @@ For example, take a case where in a cluster of 4 agents:
 
 This will result in Agent 2 receiving different information about the same cluster from its peers. Because Agent 2 can't resolve this, it will simply shut itself down, without stating a particular reason for doing so. This makes it look like Agent 2 is the one that's experiencing issues because it's the only one where NATS won't start, while it's the only server where all the connects are working correctly.
 
-#### If all else fails...
+#### If all else fails
 
-Run *C:\Skyline DataMiner\Files\SLEndpointTool_Console.exe* and uninstall NAS (with default settings).
-This executable should be run as Administrator as it will attempt to (re)create firewall rules.
-This will also uninstall anything that depends on NAS, which is literally everything that SLEndpointTool is able to install. When it's done, run it again to install NATS (also with default settings). This will also install NAS (because NATS depends on it).
- 
+- Stop DataMiner
+- Open CMD as Administrator
+  - This is necessary because the tool we will run creates/modifies firewall rules on windows
+- Navigate to C:\Skyline DataMiner\Files and run SLEndpointTool_Console.exe
+- Uninstall NAS
+
+```cmd
+CMD
+C:\Skyline DataMiner\Files>SLEndpointTool_Console.exe
+Install or Uninstall? (I/U): U
+You have chosen to Uninstall
+Root installation directory? (Empty for default):
+Resource directory? (Empty for default):
+Which endpoint? (NAS, NATS, API, Swarming): NAS
+Use default values? (Y/N): Y
+You have chosen to use the DEFAULTS
+...
+```
+
+- Verify that the C:\Skyline DataMiner\NATS folder is empty and the NATS/NAS services are gone from the task manager
+- Run the SLEndpointTool_Console.exe tool again
+- Install NATS
+
+```cmd
+CMD
+C:\Skyline DataMiner\Files>SLEndpointTool_Console.exe
+Install or Uninstall? (I/U): I
+You have chosen to Install
+Root installation directory? (Empty for default):
+Resource directory? (Empty for default):
+Which endpoint? (NAS, NATS, API, Swarming): NATS
+Use default values? (Y/N): Y
+You have chosen to use the DEFAULTS
+...
+```
+
+- Verify that the NATS/NAS services are running again, that the folders were created under C:\Skyline DataMiner\NATS and that the firewall rules are OK (port 9090, 4222 and 6222 should be open)
+- Start DataMiner
+
 This will leave the system with a standalone NATS setup with all default settings. If that DMA is in a cluster and/or Failover pair, restart the Agent and send a NATSCustodianResetNatsRequest (IsDistributed = false) to any Agent in the cluster that's not an offline Failover agent. This will trigger the NATS reset routine on all Agents in the cluster, which recalculates the entire NAS and NATS configuration on the entire cluster and restarts both services.
 
 # Algorithms used by DataMiner for configuring NATS
