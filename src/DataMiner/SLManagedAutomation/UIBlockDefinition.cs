@@ -700,7 +700,7 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets or sets a value indicating the validation state.
 		/// </summary>
-		/// <value><c>true</c> if the state is valid; otherwise, <c>false</c>.</value>
+		/// <value><c>Valid</c> if the state is valid; <c>Invalid</c> if the state is invalid; Otherwise <c>NotValidated</c>.</value>
 		/// <remarks>
 		/// <para>The ValidationState and ValidationText properties should be used in combination with the  <see cref="WantsOnChange"/> property. If <see cref="WantsOnChange"/> is <c>true</c>, the interactive Automation script will have its <see cref="Engine.ShowUI"/> method return each time the user input changes. This will also be indicated by the _ONCHANGE key, which is returned in the <see cref="UIResults"/>. This functionality will allow you to offer clear feedback on user input.</para>
 		/// <para>The following table gives an overview of which input controls support which properties:</para>
