@@ -1070,6 +1070,21 @@
               items:
                 - name: Cassandra general database
                   topicUid: Security_Cassandra_general
+                  items:
+                    - name: Cassandra authentication
+                      topicUid: Cassandra_authentication
+                    - name: Cassandra authorization
+                      topicUid: Cassandra_authorization
+                    - name: Encryption in Cassandra
+                      topicUid: Security_Cassandra_TLS
+                    - name: Running Cassandra as a non-SYSTEM user (Windows)
+                      topicUid: Running_Cassandra_as_non-SYSTEM_user
+                    - name: Firewall ports used with Cassandra
+                      topicUid: Cassandra_firewall
+                    - name: Updating Cassandra
+                      topicUid: Cassandra_updating
+                    - name: Updating Java for Cassandra
+                      topicUid: Cassandra_Java_updating
                 - name: Elasticsearch database
                   topicUid: Security_Elasticsearch
             - name: Customizing the layout of notification messages
