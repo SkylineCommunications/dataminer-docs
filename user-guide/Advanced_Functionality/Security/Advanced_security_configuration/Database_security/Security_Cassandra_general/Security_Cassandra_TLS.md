@@ -165,7 +165,7 @@ When you have done so:
 
    1. Click *Next* and *Finish* to complete the import.
 
-1. Start the DataMiner Agent. It should now communicate with the database over a TLS encrypted channel.
+1. Start the DataMiner Agent. It should now communicate with the database over a TLS-encrypted channel.
 
 > [!NOTE]
 > The *Cassandra* and *SLDBConnection* DataMiner log files can help in case you need to troubleshoot issues.
