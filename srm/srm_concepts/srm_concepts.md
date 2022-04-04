@@ -27,7 +27,7 @@ The tables below summarize the components and their scope.
 
   | | Resource Automation | Resource Scheduling | Resource Orchestration | Service Orchestration |
   |--|---------------------|---------------------|------------------------|-----------------------|
-  | Element | Yes | Yes | Yes | Yes |
+  | [Element](xref:srm_instantiations#element) | Yes | Yes | Yes | Yes |
   | Virtual function resource | Yes | Yes | Yes | Yes |
   | Resource pool | Yes | Yes | Yes | Yes |
   | Profile instance | Yes | Yes | Yes | Yes |
