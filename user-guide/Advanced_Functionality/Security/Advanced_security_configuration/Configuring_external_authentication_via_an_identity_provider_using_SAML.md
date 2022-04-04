@@ -161,7 +161,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
         <AzureAD
          tenantId="[GUID]"
          clientId="[GUID]"
-         clientSecret="[the DataMiner application secret]"
+         clientSecret="[the DataMiner application secret value]"
          username="[username]"
          password="[password]" />
         ```
@@ -199,7 +199,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
 From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAML can be automatically created and assigned to groups in DataMiner. This is often referred to as JIT (Just-In-Time) Provisioning.
 
-1. Go to *User Attributes & Claims* and add a group claim.
+1. Go to *Single Sign-on > Attributes & Claims* and add a group claim.
 
     > [!NOTE]
     > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
