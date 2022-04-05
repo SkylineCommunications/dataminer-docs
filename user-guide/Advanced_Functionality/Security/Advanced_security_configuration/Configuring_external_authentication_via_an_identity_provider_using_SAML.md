@@ -114,19 +114,22 @@ As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applicat
 
 4. Go to *Single sign-on*, select "SAML", and edit the following settings in *Basic SAML Configuration*:
 
-    - Set *Entity ID* to ``https://[your application name]/``. This entity ID must be identical to the one that is specified in the ``spMetadata.xml`` file.
+    - Set *Entity ID* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
 
-    - Under *Reply URL*, specify the following URLs (note the trailing '/'):
+    - Under *Reply URL*, specify the following URLs, replacing ``dataminer.example.com`` with the IP address or DNS name in the *spMetadata.xml* file (note the trailing "/"):
 
-        - ``https://[your application name]/root/``
-        - ``https://[your application name]/ticketing/``
-        - ``https://[your application name]/jobs/``
-        - ``https://[your application name]/monitoring/``
-        - ``https://[your application name]/dashboard/``
-        - ``https://[your application name]/login/``
-        - ``https://[your application name]/``
+        - ``https://dataminer.example.com/root/``
+        - ``https://dataminer.example.com/ticketing/``
+        - ``https://dataminer.example.com/jobs/``
+        - ``https://dataminer.example.com/monitoring/``
+        - ``https://dataminer.example.com/dashboard/``
+        - ``https://dataminer.example.com/login/``
+        - ``https://dataminer.example.com/``
 
-    - Set *Sign on URL* to ``https://[your application name]/``.
+    - Set *Sign on URL* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
+
+    > [!TIP]
+    > See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)
 
 #### Retrieving the identity provider's metadata file on Azure AD
 
