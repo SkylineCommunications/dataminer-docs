@@ -17,7 +17,7 @@ You can do so by executing the following queries (using DevCenter, the DataMiner
 `ALTER USER root WITH PASSWORD '<NEW PASSWORD>'`
 
 > [!TIP]
-> To easily change the password for the Cassandra database, execute the [change-cassandra-password-script](https://github.com/SkylineCommunications/change-db-password-scripts).
+> To easily change the password for the Cassandra database, execute the [change-cassandra-password-script](https://github.com/SkylineCommunications/change-db-password-scripts). This script allows you to change the database credentials without having to restart your DataMiner.
 
 ## Creating a new superuser and removing the default user
 
