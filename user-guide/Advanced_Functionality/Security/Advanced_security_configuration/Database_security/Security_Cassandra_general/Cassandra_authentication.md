@@ -32,9 +32,9 @@ We also recommend that you create a new superuser and disable the default *cassa
 
    `CREATE ROLE dataminer WITH PASSWORD '<STRONG PASSWORD>' AND LOGIN = true;`
 
-1. Finally, set the new credentials in DataMiner Cube. For more information, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
+1. Set the new credentials in DataMiner Cube. For more information, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
-1. Now you can delete the *root* user from Cassandra:
+1. Delete the *root* user from Cassandra:
 
    `DROP ROLE IF EXISTS root;`
 
