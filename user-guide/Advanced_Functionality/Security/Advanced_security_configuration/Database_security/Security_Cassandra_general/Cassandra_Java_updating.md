@@ -11,7 +11,7 @@ To update the Java version:
 1. Download the latest OpenJDK 8 Java binaries from the official website.
 
 > [!TIP]
-> You can download the latest OpenJDK binaries from [wiki.openjdk.java.net](https://wiki.openjdk.java.net/display/jdk8u/Main).
+> You can download the latest OpenJDK binaries from [the OpenJDK wiki](https://wiki.openjdk.java.net/display/jdk8u/Main).
 
 1. Stop the *Cassandra* service.
 
