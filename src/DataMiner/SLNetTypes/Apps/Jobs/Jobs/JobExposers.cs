@@ -13,7 +13,7 @@ namespace Skyline.DataMiner.Net.Jobs
 	/// </summary>
 	/// <example>
 	/// <code>
-	/// var jmHelper = new JobManagerHelper(msg => Engine.SLNetRaw.HandleMessages(msg));
+	/// var jmHelper = new JobManagerHelper(engine.SendSLNetMessages);
 	/// 
 	/// var templates = jmHelper.JobTemplates.Read(JobTemplateExposers.Name.Equal("MyJobTemplate"));
 	/// </code>
