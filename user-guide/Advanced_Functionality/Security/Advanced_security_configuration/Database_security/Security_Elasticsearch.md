@@ -2,7 +2,7 @@
 uid: Security_Elasticsearch
 ---
 
-# Elasticsearch database
+# Securing the Elasticsearch database
 
 <!-- TODO: enable TLS encryption -->
 

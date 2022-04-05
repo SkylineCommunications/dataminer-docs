@@ -1068,7 +1068,7 @@
             - name: Securing the DataMiner Databases
               topicUID: Database_security
               items:
-                - name: Cassandra general database
+                - name: Securing the Cassandra general database
                   topicUid: Security_Cassandra_general
                   items:
                     - name: Cassandra authentication
@@ -1085,7 +1085,7 @@
                       topicUid: Cassandra_updating
                     - name: Updating Java for Cassandra
                       topicUid: Cassandra_Java_updating
-                - name: Elasticsearch database
+                - name: Securing the Elasticsearch database
                   topicUid: Security_Elasticsearch
             - name: Customizing the layout of notification messages
               topicUid: Customizing_the_layout_of_notification_messages

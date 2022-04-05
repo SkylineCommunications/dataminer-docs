@@ -2,7 +2,7 @@
 uid: Security_Cassandra_general
 ---
 
-# Cassandra general database (default)
+# Securing the Cassandra general database (default)
 
 - [Cassandra authentication](xref:Cassandra_authentication)
 - [Cassandra authorization](xref:Cassandra_authorization)
