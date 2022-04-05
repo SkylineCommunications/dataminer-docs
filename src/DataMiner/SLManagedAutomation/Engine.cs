@@ -21,19 +21,6 @@ namespace Skyline.DataMiner.Automation
 		~Engine() { }
 
 		/// <summary>
-		/// Gets the persistent connection store.
-		/// </summary>
-		/// <value>The persistent connection store.</value>
-		public static PersistentConnectionStore SLNet { get; }
-
-        /// <summary>
-        /// Gets the raw SLNet connection.
-        /// </summary>
-        /// <value>The raw SLNet connection.</value>
-        /// <remarks>It is advised to used the <see cref="SendSLNetMessage(DMSMessage)"/> or <see cref="SendSLNetSingleResponseMessage(DMSMessage)"/> method instead of the raw connection to send messages (as the method on the raw connection does not encapsulate the messages with an impersonate message.). From DataMiner 10.0.1 onwards, to send multiple messages, the <see cref="SendSLNetMessages(DMSMessage[])"/> method can be used.</remarks>
-        public static Connection SLNetRaw { get; }
-
-		/// <summary>
 		/// Gets the instance ID.
 		/// </summary>
 		/// <value>The instance ID.</value>
