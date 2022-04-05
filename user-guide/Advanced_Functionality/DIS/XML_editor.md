@@ -69,8 +69,9 @@ If you want to compare two protocols, do the following:
 
     1. Click *OK*.
 
-1. Click *Compare* to have the two protocols compared.
-1. If necessary, click *Export* to have the result of the comparison exported to a CSV file.
+    After selecting the two protocols, the comparison will start automatically.
+
+1. If necessary, click *Compare* to redo the comparison or click *Export* to have the result of the comparison exported to a CSV file.
 
 When you right-click an error in the list, a shortcut menu offers you the following options:
 
