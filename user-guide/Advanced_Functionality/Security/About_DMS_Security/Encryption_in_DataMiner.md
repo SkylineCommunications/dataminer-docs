@@ -72,9 +72,15 @@ For DataMiner Systems configured to use a Cassandra database, it is possible to 
 
 We recommend changing the default Cassandra credentials.
 
+> [!NOTE]
+> For more information see [Securing Cassandra general database](xref:Security_Cassandra_general).
+
 ### Elasticsearch
 
 For DataMiner Systems configured to use an Elasticsearch database, we recommend enabling HTTPS. Please refer to the official Elasticsearch documentation on [enabling TLS encryption](https://www.elastic.co/blog/configuring-ssl-tls-and-https-to-secure-elasticsearch-kibana-beats-and-logstash).
+
+> [!NOTE]
+> For more information see [Securing Elasticsearch](xref:Security_Elasticsearch).
 
 ### NATS
 
