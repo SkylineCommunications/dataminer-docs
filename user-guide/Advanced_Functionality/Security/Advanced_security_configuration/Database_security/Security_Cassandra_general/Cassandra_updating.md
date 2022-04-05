@@ -48,7 +48,7 @@ To update the Cassandra version:
 
 1. Create a new folder named *logs* in *C:\Program Files\Cassandra*
 
-1. Copy the **old** *daemon* folder from *C:\Program Files\Cassandra_bak\bin\daemon* to *C:\Program Files\Cassandra\bin\*
+1. Copy the **old** *daemon* folder from *C:\Program Files\Cassandra_bak\bin\daemon* to *C:\Program Files\Cassandra\bin*
 
 1. Open a PowerShell prompt (as Administrator) and execute the following commands:
 
