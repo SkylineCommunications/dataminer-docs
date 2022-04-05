@@ -32,9 +32,13 @@ We also recommend that you create a new superuser and disable the default *cassa
 
    `CREATE ROLE dataminer WITH PASSWORD '<STRONG PASSWORD>' AND LOGIN = true;`
 
-1. Finally, set the new credentials in DataMiner Cube. For more information, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
+1. Set the new credentials in DataMiner Cube. For more information, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
-1. You may need to **restart DataMiner** for the changes to take effect.
+1. Delete the *root* user from Cassandra:
+
+   `DROP ROLE IF EXISTS root;`
+
+1. **Restart DataMiner** for the changes to take effect.
 
 > [!NOTE]
 > You can also configure Cassandra to use an LDAP server for authentication. However, this is beyond the scope of this guide.
