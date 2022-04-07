@@ -61,11 +61,11 @@ To update the Cassandra version:
 
 `cd 'C:\Program Files\Cassandra\bin\'; .\cassandra.ps1 -install`
 
-1. Verify the *Cassandra* service is created and can be started
-
 1. Now we need to make sure the location of the *Jvm* is correctly set in the registry. To do so, execute the following PowerShell command:
 
 `Set-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Apache Software Foundation\Procrun 2.0\cassandra\Parameters\Java" -Name "Jvm" -Value "C:\Program Files\Cassandra\Java\bin\server\jvm.dll"`
+
+1. Verify the *Cassandra* service is created and can be started
 
 1. Following an upgrade of Cassandra it's (sometimes) necessary to perform a *nodetool upgradesstables* on your nodes to convert sstables to the new Cassandra version. 
 
@@ -78,4 +78,5 @@ To update the Cassandra version:
 
 > [!TIP]
 > After starting the Cassandra service, verify the expected Cassandra version is logged in *C:\Program Files\Cassandra\Logs\system.log*. For example: *Cassandra version: 3.11.12*
+> If the service does not start and no logs are created, ensure the *Jvm* registry key is referencing the correct location.
 > Verify the system is running stable by executing: `nodetool status`
