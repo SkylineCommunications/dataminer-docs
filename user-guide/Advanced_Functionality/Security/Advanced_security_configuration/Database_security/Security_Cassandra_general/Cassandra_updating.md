@@ -16,11 +16,10 @@ Alternatively, you can verify the Cassandra version with the following *nodetool
 
 `nodetool version`
 
-By default, DataMiner installs **Cassandra 3.11**. However, Cassandra 4.0 is also supported.
+By default, DataMiner installs **Cassandra 3.7**. However, Cassandra 3.11 and 4.0 are also supported.
 
 > [!NOTE]
-> Cassandra 4.0 is no longer supported on Windows, which means that extra Linux servers will be required to host the Cassandra database.
-> Older DataMiner versions deployed Cassandra 3.7.
+> Cassandra 4.0 is **no longer supports Windows**, which means that extra Linux servers will be required to host the Cassandra database.
 
 ## Updating the Cassandra version
 
@@ -50,20 +49,31 @@ To update the Cassandra version:
 
 1. Copy the **old** *daemon* folder from *C:\Program Files\Cassandra_bak\bin\daemon* to *C:\Program Files\Cassandra\bin*
 
-1. Open a PowerShell prompt (as Administrator) and execute the following commands:
+1. To use *nodetool*, set the system wide environment variables *JAVA_HOME* and *CASSANDRA_HOME* to the correct locations:
 
-`$env:CASSANDRA_HOME='C:\progra~1\Cassandra\'`
+`[System.Environment]::SetEnvironmentVariable('CASSANDRA_HOME','C:\progra~1\Cassandra\',[System.EnvironmentVariableTarget]::Machine)`
 
-`$env:JAVA_HOME='C:\progra~1\Cassandra\Java\'`
+`[System.Environment]::SetEnvironmentVariable('JAVA_HOME','C:\progra~1\Cassandra\Java\',[System.EnvironmentVariableTarget]::Machine)`
+
+1. Open a PowerShell prompt (as Administrator) and execute the following command to register the Cassandra service:
 
 `cd 'C:\Program Files\Cassandra\bin\'; .\cassandra.ps1 -install`
 
 1. Verify the *Cassandra* service is created and can be started
 
-1. Finally, start the DataMiner agent and assert no Error alarms are visible in the Alarm Console.
+1. Now we need to make sure the location of the *Jvm* is correctly set in the registry. To do so, execute the following PowerShell command:
+
+`Set-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Apache Software Foundation\Procrun 2.0\cassandra\Parameters\Java" -Name "Jvm" -Value "C:\Program Files\Cassandra\Java\bin\server\jvm.dll"`
+
+1. Following an upgrade of Cassandra it's (sometimes) necessary to perform a *nodetool upgradesstables* on your nodes to convert sstables to the new Cassandra version. 
+
+`nodetool upgradesstables`
+
+> [!WARNING]
+> Converting the sstables can take a while depending on the size of your database.
+
+1. Finally, start the DataMiner agent and assert no error alarms are visible in the Alarm Console.
 
 > [!TIP]
-> If the service cannot start, verify that under **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Apache Software Foundation\Procrun 2.0\cassandra\Parameters\Java** the *Jvm* registry key is set to *C:\Program Files\Cassandra\Java\bin\server\jvm.dll*.
 > After starting the Cassandra service, verify the expected Cassandra version is logged in *C:\Program Files\Cassandra\Logs\system.log*. For example: *Cassandra version: 3.11.12*
-> Verify the system is running stable by executing:
-> `nodetool status`
+> Verify the system is running stable by executing: `nodetool status`
