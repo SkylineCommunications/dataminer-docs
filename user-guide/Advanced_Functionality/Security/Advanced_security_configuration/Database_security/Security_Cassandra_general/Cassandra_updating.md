@@ -21,6 +21,9 @@ By default, DataMiner installs **Cassandra 3.7**. However, Cassandra 3.11 and 4.
 > [!NOTE]
 > Cassandra 4.0 is **no longer supports Windows**, which means that extra Linux servers will be required to host the Cassandra database.
 
+> [!TIP]
+> To limit the impact of a breach through Cassandra, we recommend running the Cassandra service as non-SYSTEM user. For more details, please refer to [Running Cassandra as non-SYSTEM user](xref:Running_Cassandra_as_non-SYSTEM_user).
+
 ## Updating the Cassandra version
 
 As with all software it's a best practice to ensure you're running the latest version to minimize the number of known vulnerabilities.
