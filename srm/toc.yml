@@ -12,7 +12,7 @@
       topicUid: srm_resource_orchestration
     - name: Service Orchestration
       topicUid: srm_service_orchestration
-  - name: SRM concepts
+  - name: SRM framework concepts
     topicUid: srm_concepts
     items:
     - name: SRM definitions

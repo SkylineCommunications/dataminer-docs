@@ -2,7 +2,10 @@
 uid: srm_concepts
 ---
 
-# SRM concepts
+# SRM framework concepts
+
+> [!NOTE]
+> The concepts explained in this section are the main concepts used within the SRM framework, which builds on the core DataMiner SRM functionality to provide a versatile toolset to manage services and resources. For more information on SRM concepts in the context of the core SRM functionality, see [Concepts](xref:Concepts1).
 
 DataMiner Service and Resource Management makes use of many dedicated DataMiner components to configure the management and orchestration of services end to end. This section provides a high-level overview of these components and explains how they can be used.
 
@@ -29,12 +32,12 @@ The tables below summarize the components and their scope.
   |--|---------------------|---------------------|------------------------|-----------------------|
   | [Element](xref:srm_instantiations#element) | Yes | Yes | Yes | Yes |
   | [Virtual function resource](xref:srm_instantiations#virtual-function-resource) | Yes | Yes | Yes | Yes |
-  | Resource pool | Yes | Yes | Yes | Yes |
-  | Profile instance | Yes | Yes | Yes | Yes |
-  | Service profile instance | No | No | No | Yes |
-  | Booking | No | Yes | Yes | Yes |
-  | Contributing booking | No | No | No | Yes |
-  | Virtual platform | No | Yes | Yes | Yes |
+  | [Resource pool](xref:srm_instantiations#resource-pool) | Yes | Yes | Yes | Yes |
+  | [Profile instance](xref:srm_instantiations#profile-instance) | Yes | Yes | Yes | Yes |
+  | [Service profile instance](xref:srm_instantiations#service-profile-instance) | No | No | No | Yes |
+  | [Booking](xref:srm_instantiations#booking) | No | Yes | Yes | Yes |
+  | [Contributing booking](xref:srm_instantiations#contributing-booking) | No | No | No | Yes |
+  | [Virtual platform](xref:srm_instantiations#virtual-platform) | No | Yes | Yes | Yes |
 
 - [SRM scripting](xref:srm_scripting)
 

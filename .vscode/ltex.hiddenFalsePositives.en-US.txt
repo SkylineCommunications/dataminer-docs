@@ -56,3 +56,4 @@
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qand/or placeholders.\\E$"}
 {"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qwildcards.\\E$"}
 {"rule":"COMMA_COMPOUND_SENTENCE_2","sentence":"^\\QA virtual function only describes the functions a specific connector can expose and the parameters related to this.\\E$"}
+{"rule":"POSSESSIVE_APOSTROPHE","sentence":"^\\QYou can create such a profile instance in the Profiles module by specifying the name of the base profile and adding the suffix \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q (e.g. \"Encoding_Start\").\\E$"}

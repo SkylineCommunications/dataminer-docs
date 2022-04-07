@@ -38,7 +38,7 @@ Different types of profile parameters exist:
 
 - Capacity: A parameter that will be used to request a specific capacity of a resource. For example, bit rate on a router interface.
 
-- Capability: A parameter that will be used to request a specific capability of a resource. For example, HD and UHD of an encoding function.
+- Capability: A parameter that will be used to request a specific capability of a resource. For example, HD and UHD for an encoding function.
 
 ## Profile definition
 
