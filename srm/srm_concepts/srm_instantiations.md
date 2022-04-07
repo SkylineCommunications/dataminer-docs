@@ -29,7 +29,7 @@ As a resource represents a specific virtual function, and the virtual function l
 
 By default, a virtual function resource is represented as a virtual element while the booking using that resource is active.
 
-> ![NOTE]
+> [!NOTE]
 > A resource can also be created manually in the [Resources module](xref:The_Resources_module) without a corresponding virtual function. As such, a resource could be any object you want to be able to schedule for use. However, note that in that case no orchestration or automation is supported in the SRM framework.
 
 ## Resource pool
@@ -40,7 +40,7 @@ A resource pool is a container that groups several resources. One resource can b
 
 A profile instance is linked to a specific profile definition and has values assigned for each of the profile parameters listed in that profile definition. Multiple profile instances can be created for the same profile definition, typically each with different values.
 
-As a profile definition is a group of configuration, monitoring, capability, and capacity parameters, a profile instance linked to that profile definition will filter out resources that do not provide the capacity and/or capability defined in the instance. This way, when a booking is created, DataMiner SRM can not only check whether resources are available according to the requested timing, but also according to the required capacities and capabilities.
+As a profile definition is a group of configuration, monitoring, capability, and capacity parameters, a profile instance linked to that profile definition will filter out resources that do not provide the capacity and/or capability defined in the instance. This way, when a booking is created, DataMiner SRM can check whether resources are available not only according to the requested timing, but also according to the required capacities and capabilities.
 
 For example, an "Encoding HD" instance could contain the values for each of the profile parameters required to orchestrate a resource. As a capability, the instance could contain the "HD" value, so that resources that cannot provide this specific capability are filtered out during the booking creation process.
 
@@ -56,7 +56,7 @@ A service profile instance is linked to a specific service profile definition an
 
 When users create a booking using a service profile, they can select a service profile definition, potentially one of the associated service definitions, and then a service profile instance. This almost fully defines all settings required to spin up a service. With this approach, users do not have to select profile instances for each virtual function in the service definition.
 
-While using service profile instances requires more initial configuration efforts, it will highly decrease the time spent to create each booking.
+While using service profile instances requires more initial configuration effort, it will highly decrease the time spent to create each booking.
 
 ## Booking
 
@@ -71,7 +71,7 @@ When users create a booking, they need to select the timing as well as a service
 Based on the selected service definition, profile instances for each of the included virtual functions will filter out resources that do not have the requested capacities and/or capabilities. The resources selected by the user to be included in the booking will be considered "booked" for the full duration of the booking. This includes:
 
 - The **pre-roll** time: This is the period before the service goes on air. It ensures that there is a margin of time to configure resources and make sure everything is set up.
-- The on-air time: This is the time when the **service is active**.
+- The time when the **service is active**, i.e. the on-air time.
 - The **post-roll** time: This is the period right after the service has stopped being on air. It ensures that there is a margin of time to tear down services and reconfigure devices to their base profile. It also provides a margin in case there is an overrun, as the resources remain booked during this time.
 
 For each booking, a DataMiner service is automatically created that persists throughout the above-mentioned stages. Once the booking is completed, by default, the service is removed again.

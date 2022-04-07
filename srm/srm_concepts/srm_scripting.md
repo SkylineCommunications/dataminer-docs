@@ -37,10 +37,10 @@ Data Transfer Rules are used at the moment when a booking is created, to transfe
 
 Data Transfer Rules are implemented as custom Automation scripts.
 
-Two types of DTR exist:
+Two types of Data Transfer Rules exist:
 
-- Regular DTR
-- Service Profile DTR
+- Regular Data Transfer Rules
+- Service Profile Data Transfer Rules
 
 ### Regular Data Transfer Rules
 
@@ -64,6 +64,22 @@ When a Service Profile DTR script is executed, this does not immediately update 
 
 ## Custom events
 
+Custom events are only applicable in the context of Service Orchestration.
+
+In addition to the default booking orchestration events (start of pre-roll, stop of pre-roll, start of post-roll, stop of post-roll), additional custom events can be configured for bookings. This can be configured in the [Booking Manager app](xref:SolSRM).
+
+These custom events are linked to Automation scripts that can execute any action. Specific booking information can be added in the events, such as a booking reference.
+
 ## Contributing conversion script
 
+Contributing conversion scripts are only used in the context of Service Orchestration.
+
+A contributing conversion script is executed after a booking is converted into a contributing resource. This script is typically used to enrich the contributing resource with additional capacities, capabilities or properties.
+
 ## Created booking script
+
+Created booking scripts are only used in the context of Service Orchestration.
+
+A created booking script is executed after the creation of a booking is completed. It is typically used to finalize the configuration of the booking based on custom rules, for example to assign resources to virtual functions that were hidden in the service definition.
+
+Created booking scripts do not support any user interaction. They cannot be used to modify the events, resources or timing that have been configured for a booking.
