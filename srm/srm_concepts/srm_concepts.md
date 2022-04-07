@@ -43,9 +43,9 @@ The tables below summarize the components and their scope.
 
   | | Resource Automation | Resource Scheduling | Resource Orchestration | Service Orchestration |
   |--|---------------------|---------------------|------------------------|-----------------------|
-  | Profile-Load Script (PLS) | Yes | Yes | Yes | Yes |
-  | Life cycle Service Orchestration (LSO) script | No | No | No | Yes |
-  | Data Transfer Rules (DTR) | No | No | No | Yes |
-  | Custom events | No | No | No | Yes |
-  | Contributing conversion script | No | No | No | Yes |
-  | Created booking script | No | No | No | Yes |
+  | [Profile-Load Script (PLS)](xref:srm_scripting#profile-load-script-pls) | Yes | Yes | Yes | Yes |
+  | [Life cycle Service Orchestration (LSO) script](xref:srm_scripting#life-cycle-service-orchestration-lso-script) | No | No | No | Yes |
+  | [Data Transfer Rules (DTR)](xref:srm_scripting#data-transfer-rules-dtr) | No | No | No | Yes |
+  | [Custom events](xref:srm_scripting#custom-events) | No | No | No | Yes |
+  | [Contributing conversion script](xref:srm_scripting#contributing-conversion-script) | No | No | No | Yes |
+  | [Created booking script](xref:srm_scripting#created-booking-script) | No | No | No | Yes |
