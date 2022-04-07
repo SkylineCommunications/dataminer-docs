@@ -182,7 +182,7 @@ The final step is the configuration of the DMS.
 
     2. Prior to DataMiner 10.0.13 only: In the column on the left, select any of the Agents in the DMS. The offload database will always be synced with the entire DMS, so it is irrelevant which Agent is selected.
 
-    3. Check the *Activate this database* checkbox to activate the offload database.
+    3. Prior to DataMiner 10.1.1 only: Check the *Activate this database* checkbox to activate the offload database. From 10.1.1 onwards, select *DataBase* as *Type*.
 
     4. Select the type of database: MySQL, MSSQL or Oracle.
 
