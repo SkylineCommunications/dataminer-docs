@@ -2377,6 +2377,11 @@
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
               topicUid: Changing_the_maximum_size_of_DataMiner_log_files
+    - name: Troubleshooting procedures
+      topicUid: Troubleshooting_procedures
+      items:
+        - name: Investigating_NATS_Issues
+          topicUid: Investigating_NATS_Issues
 - name: Reference
   topicUid: Part7Reference
   items:
