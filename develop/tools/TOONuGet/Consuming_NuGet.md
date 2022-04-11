@@ -13,6 +13,23 @@ DIS and CI/CD support NuGets of the following types:
 - PackageReference
 - Packages.config
 
+> [!IMPORTANT]
+> If you encounter issues with NuGets and building solutions locally, it's often related to the Windows 260 character max path length. This is usually indicated with exceptions speaking about not finding part of the path. To fix this:
+> - You need to use PackageReferences for your NuGets.
+>   - VS Options, search for NuGets. Set the default to use PackageReferences.
+>   - Uninstall all your NuGets and close your visual studio solution.
+>   - Open your solution and install all the NuGets again and select PackageReferences if you get asked.
+> - You need to adjust "%userprofile%\AppData\Roaming\NuGet\NuGet.Config"
+> - Add or update this tag: 
+```xml
+<configuration>
+  ...
+	<config>
+		<add key="globalPackagesFolder" value="c:\pfpr" />
+	</config>
+</configuration>
+```
+
 Within Skyline, we have an internal NuGet store (<http://devcore3:81/nuget>) where Skyline employees can produce and consume private libraries. You will need to add this store in the Visual Studio options to use it.
 
 ## Using the Class Library as a NuGet
