@@ -492,9 +492,9 @@ See [Creating a text block control](xref:Creating_a_text_block_control).
 
 ## HoverType=Geometry
 
-Shape-level option.
+Page- and shape-level option.
 
-Available from DataMiner 9.5.14 onwards. Allows you to specify a different hover style for a shape.
+Available from DataMiner 9.5.14 onwards. Allows you to specify a different hover style for shapes.
 
 See [Configuring the hover area of a shape](xref:Configuring_the_hover_area_of_a_shape).
 
