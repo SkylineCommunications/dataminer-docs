@@ -116,3 +116,9 @@ The panel can be used as follows:
   > To add a placeholder (i.e. a dynamic part) in a value, add a square bracket (“\[“), select the placeholder from the list, and press TAB.
 
 - To change one of the data items to a different data item, in the data box, specify a different item. If you specify a data item that is unknown to DataMiner or that is already in the list, it will be highlighted.
+
+- From DataMiner 10.2.5/10.3.0, the following special options are available via the "..." button in the top-right corner of the *Advanced Editing* panel:
+
+  - *Add theming*: Adds the following theme options to the page-level *Options* data field: `#000000=ThemeForeground|#FF0000=ThemeAccentColor|#FFFFFF=ThemeBackground`. If no page-level *Options* data field exists yet, it will be created. For more information, see [#RRGGBB=ThemeForeground\|#RRGGBB=ThemeAccentColor\|#RRGGBB=ThemeBackground](xref:Overview_of_page_and_shape_options#rrggbbthemeforegroundrrggbbthemeaccentcolorrrggbbthemebackground).
+
+  - *Add pretty hover*: Adds the `HoverType=Geometry` option to the page-level *Options* data field. If no page-level *Options* data field exists yet, it will be created. For more information, see [HoverType=Geometry](xref:Overview_of_page_and_shape_options#hovertypegeometry).
