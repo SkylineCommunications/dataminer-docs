@@ -153,7 +153,7 @@ The following values can vary in each DMS:
 
 - **streaming.cluster_id**: Based on the cluster name in DataMiner.
 - **streaming.cluster.peers** and **streaming.cluster.node_id**: Based on the IP of the local Agent.
-- **cluster.routes:** IP addresses of up to 3 other Agents in the cluster.
+- **cluster.routes:** IP addresses of up to 4 other Agents in the cluster.
 
 #### Cluster of 2 DMAs
 
