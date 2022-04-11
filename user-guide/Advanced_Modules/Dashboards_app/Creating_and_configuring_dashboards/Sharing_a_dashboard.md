@@ -16,7 +16,7 @@ uid: Sharing_a_dashboard
 
     > [!NOTE]
     > - Make sure you have the necessary user permissions for this:
-    >     - To edit the dashboard, you need the user permission [Modules > Reports & Dashboards > Dashboards > Edit](xref:DataMiner_user_permissions#modules--reports--dashboards--dashboards--edit).
+    >     - Prior to DataMiner 10.2.0 \[CU2\]/10.2.5, to edit the dashboard, you need the user permission [Modules > Reports & Dashboards > Dashboards > Edit](xref:DataMiner_user_permissions#modules--reports--dashboards--dashboards--edit).
     >     - In DataMiner 10.1.2, you need the user permission *Other* > *CCALinkAccount*.
     >     - In DataMiner 10.1.3, you need the user permission [Modules > System configuration > Cloud sharing/gateway > Account linking](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--account-linking).
     >     - From DataMiner 10.1.4 onwards, you need the appropriate [Live sharing user permissions](xref:DataMiner_user_permissions#general--live-sharing).
