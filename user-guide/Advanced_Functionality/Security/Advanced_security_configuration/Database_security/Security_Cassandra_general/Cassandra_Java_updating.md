@@ -11,10 +11,10 @@ To update the Java version:
 1. Download the latest OpenJDK 8 Java binaries from the official website.
 
    > [!NOTE]
-   > You can download the latest OpenJDK binaries from [the OpenJDK wiki](https://wiki.openjdk.java.net/display/jdk8u/Main).
+   > You can download the latest OpenJDK binaries from [the OpenJDK wiki](https://wiki.openjdk.java.net/display/jdk8u/Main). Make sure to download the **Windows x64** archive.
 
 1. Stop the *Cassandra* service.
 
-1. Update the binaries in *C:\Program Files\Cassandra\Java*.
+1. Extract the OpenJDK archive and update the binaries in *C:\Program Files\Cassandra\Java*.
 
 1. Start the *Cassandra* service.
