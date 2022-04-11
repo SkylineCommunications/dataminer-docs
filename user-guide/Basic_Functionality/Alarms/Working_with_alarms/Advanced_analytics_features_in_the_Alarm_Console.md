@@ -66,9 +66,7 @@ The value of the suggestion event mentions what kind of issue is expected, e.g. 
 
 ## Automatic incident tracking
 
-This DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this happens completely automatically, without any configuration by the user. Based on what it has learned from past alarm activity in your system and based on a broad range of auxiliary data, DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
-
-To activate this feature, in the Alarm Console hamburger menu, select *Automatic incident tracking*. However, note that the feature must also be activated in System Center. See [Configuration in System Center](#configuration-in-system-center). From DataMiner 10.2.0/10.2.1 onwards, it is enabled by default in new installations and in systems upgrading from DataMiner versions that did not support automatic incident tracking yet.
+This DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this can happen completely automatically, without any configuration by the user. Based on what it has learned from past alarm activity in your system and based on a broad range of auxiliary data, DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
 
 Several factors are taken into account for the grouping:
 
@@ -98,24 +96,6 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 
 - If a group is cleared, any alarms in the group that are still active may be regrouped if other matching alarms exist, either in a new group or in an existing one.
 
-In the Alarm Console, alarm groups are displayed as a special kind of alarm entries:
-
-- The icon of an alarm group is similar to that of a correlated alarm.
-
-- The alarm color of an alarm group entry reflects the highest severity of the alarms within the group, but the severity of the group itself is *Suggestion*.
-
-- The parameter description of the entry is *Alarm Group*.
-
-- The value of the entry is the reason why the alarms are grouped. If there is no single obvious reason, the value will be Group with multiple reasons.
-
-- The root time of the group is the time when the most recent alarm in the group occurred, at the moment when the group was created.
-
-- If alarms are added to a group or removed from a group, the alarm type will be updated from *New alarm* to *Base alarms changed*.
-
-- You can expand the group to view all alarms within it.
-
-- If all alarm entries within an alarm group are masked, the group is automatically masked as well. However, as soon as one of the entries is unmasked, the group is also unmasked.
-
 > [!NOTE]
 > - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
@@ -133,6 +113,10 @@ In DataMiner Cube, you can enable this feature in System Center, via *System set
 - *Maximum time interval*: The maximum time interval between alarms that can be grouped as one incident. If the root times of alarms are further apart than the configured interval, the alarms will not be grouped.
 
 - *Maximum group events rate*: Available from DataMiner 10.2.1/10.2.0 onwards. The maximum number of alarm group events that can be generated per second. This setting is used to avoid possible performance issues during alarm floods. If more events are generated per second than the specified number, the generation of events is slowed down, and a notice alarm is generated. As soon as the number of generated events drops below the threshold again, the notice alarm is cleared and events are again generated as quickly as possible. Default value: 100.
+
+### Activating automatic incident tracking
+
+When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic incident tracking*. From DataMiner 10.2.0/10.2.1 onwards, it is enabled by default in new installations and in systems upgrading from DataMiner versions that did not support automatic incident tracking yet.
 
 ### Configuration of incident tracking based on properties
 
@@ -168,8 +152,6 @@ In addition, the following configuration is needed in the file *C:\\Skyline Data
     </item>
     ```
 
-
-
 - For an **alarm property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the alarm property.
 
     ```xml
@@ -198,6 +180,41 @@ In addition, the following configuration is needed in the file *C:\\Skyline Data
     ```
 
 - After you have edited the configuration file, **restart the SLAnalytics process** to make sure your changes take effect.
+
+### Alarm groups in the Alarm Console
+
+In the Alarm Console, alarm groups are displayed as a special kind of alarm entries:
+
+- The icon of an alarm group is similar to that of a correlated alarm.
+
+- The alarm color of an alarm group entry reflects the highest severity of the alarms within the group, but the severity of the group itself is *Suggestion*.
+
+- The parameter description of the entry is *Alarm Group*.
+
+- The value of the entry is the reason why the alarms are grouped. If there is no single obvious reason, the value will be Group with multiple reasons.
+
+- The root time of the group is the time when the most recent alarm in the group occurred, at the moment when the group was created.
+
+- If alarms are added to a group or removed from a group, the alarm type will be updated from *New alarm* to *Base alarms changed*.
+
+- You can expand the group to view all alarms within it.
+
+- If all alarm entries within an alarm group are masked, the group is automatically masked as well. However, as soon as one of the entries is unmasked, the group is also unmasked.
+
+### Manually updating an alarm group
+
+From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm group. In the Alarm Console, you can add or remove alarms, create an alarm group manually, or rename an alarm group.
+
+- To **create an alarm group**, right-click an alarm that is not part of an alarm group yet, and select *Add to incident*. In the pop-up window, select to create a new incident and add the alarm to it.
+
+- To **add an alarm** to an existing alarm group, right-click an alarm that is not part of an alarm group yet, and select *Add to incident*. In the pop-up window, select to add the alarm to an existing alarm group.
+
+- To **remove an alarm** from an alarm group, right-click the alarm and select *Remove from incident*.
+
+- To **rename an alarm group**, click the pencil icon next to the alarm group name and specify a new name.
+
+> [!NOTE]
+> When an alarm group has been updated manually, it will no longer be updated automatically.
 
 ## Monitoring of trend patterns
 
