@@ -8,13 +8,9 @@ uid: Cassandra_updating
 
 We recommend that you periodically update your Cassandra database to ensure that all known vulnerabilities are fixed.
 
-You can verify your version of Cassandra by executing the following query:
+You can verify your version of Cassandra by executing the following *nodetool* command inside *C:\Program Files\Cassandra\bin*:
 
-`SELECT cql_version FROM system.local;`
-
-Alternatively, you can verify the Cassandra version with the following *nodetool* command:
-
-`nodetool version`
+`.\nodetool version`
 
 By default, DataMiner installs **Cassandra 3.7**. However, Cassandra 3.11 and 4.0 are also supported.
 
@@ -40,7 +36,7 @@ To update the Cassandra version:
 
 1. Rename the *C:\Program Files\Cassandra* folder to *Cassandra_bak*
 
-1. Create a new folder named *Cassandra* in *C:\Program Files\*
+1. Create a new folder named *Cassandra* in *C:\Program Files*
 
 1. Copy the downloaded Cassandra binaries to this new *Cassandra* folder
 
@@ -54,7 +50,7 @@ To update the Cassandra version:
 
 1. Create a new folder named *logs* in *C:\Program Files\Cassandra*
 
-1. To use *nodetool*, set the system wide environment variables *JAVA_HOME* and *CASSANDRA_HOME* to the correct locations:
+1. To use *nodetool*, set the system wide environment variables *JAVA_HOME* and *CASSANDRA_HOME* to the correct locations by executing the following PowerShell commands:
 
 `[System.Environment]::SetEnvironmentVariable('CASSANDRA_HOME','C:\progra~1\Cassandra\',[System.EnvironmentVariableTarget]::Machine)`
 
@@ -76,11 +72,11 @@ To update the Cassandra version:
 
 `Set-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Apache Software Foundation\Procrun 2.0\cassandra\Parameters\Java" -Name "Options" -Value $options.Options`
 
-1. Verify the *Cassandra* service is created and can be started
+1. Verify the *Cassandra* service is created and can be started from task manager (or Service Manager)
 
-1. Following an upgrade of Cassandra it's (sometimes) necessary to perform a *nodetool upgradesstables* on your nodes to convert sstables to the new Cassandra version. 
+1. Following an upgrade of Cassandra it's (sometimes) necessary to perform a *nodetool upgradesstables* on your nodes to convert sstables to the new Cassandra version. Run the following command inside the *C:\Program Files\Cassandra\bin* folder.
 
-`nodetool upgradesstables`
+`.\nodetool upgradesstables`
 
 > [!WARNING]
 > Converting the sstables can take a while depending on the size of your database.
