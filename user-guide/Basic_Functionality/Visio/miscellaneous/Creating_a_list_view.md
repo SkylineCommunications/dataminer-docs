@@ -58,7 +58,7 @@ The following options can be specified in the *ComponentOptions* shape data fiel
 - **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. If these shape data are not specified, the following values are used by default:
 
   - StartTime = NOW - 1 day
-  - EndTime = NOW + 2 days
+  - EndTime = NOW + 1 day
 
   Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
