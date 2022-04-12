@@ -10,7 +10,7 @@ The phases and working methodologies outlined below are mandatory for the Projec
 
 ## Offering
 
-An Agile Scope-Based project is offered at a fixed price and with an agreed time frame, based on the high-level requirements available and on all other relevant information available at the time of quoting. Everybody trusts and agrees that Skyline leverages its unique experience and expertise to ensure that the offered solution and accompanying budget will reasonably enable the Project Squad to deploy a professional solution in line with the then available requirements and the goals and ambitions driving those.
+An Agile Scope-Based project is offered at a fixed price and with an agreed time frame, based on the high-level requirements available and on all other relevant information available at the time of quoting. Everybody trusts and agrees that Skyline leverages its unique experience and expertise to ensure that the offered solution and accompanying budget will reasonably enable the Project Squad to deploy a professional solution in line with the Deployment Plan created during the Offering stage.
 
 At the same time, both parties also agree and acknowledge the fact that this does not mean that the proposed solution and budget, which is finite, can include all imaginable desires, wishes, hopes and ambitions of all possible individuals that are and will be involved with the project during its execution. Therefore, the concept of value needs to be carefully applied throughout the execution of the project, and the joint Project Squad will be trusted to deliver the best possible solution in the most efficient manner. After all, this is the ambition of all parties involved.
 
@@ -19,23 +19,42 @@ At the same time, both parties also agree and acknowledge the fact that this doe
 >
 > Anything agreed during the offering phase can therefore still be revisited when needed, on the condition that it is dealt with in the proper prescribed manner by the Project Squad (i.e. applying the necessary time budget balancing to keep them on track towards the end date and in line with the budget).
 
-## Definition of Goals & Ambitions
+### Definition of Goals & Objectives
 
-At the start of the project, the Project Squad clearly defines its Goals & Ambitions, describing the objective of the project, the expected outcome, and the key benefits that it wants to deliver to the business and end users.
+At the start of the Offering exercise, the Project Squad clearly describes the key objectives of the project, the expected outcome, and the main benefits that it wants to deliver to the business and end users. 
 
-This ensures that the squad has a laser-focused mission that it can continuously refer to while executing the project, so that joint decisions of the Project Squad throughout the project are always aimed at what goes to the heart of the project (which may not always be in line with what was specified in the initial high-level requirements).
+The goal is not to provide an extended list of requirements or activities to be done, but rather what the end-goal is, closer to a Project Mission Statement, setting the direction for the work to be done, ensuring that the squad has a laser-focused mission that it can continuously refer to while executing the project, so that joint decisions of the Project Squad throughout the project are always aimed at what goes to the heart of the project (which may not always be in line with what was specified in the initial high-level requirements).
+ 
 
-## Solution Backlog & Deployment Plan
+### Preliminary Solution Backlog
 
-The Solution Backlog is created as part of a commercial offer for a DataMiner Solution that will be deployed based on the Agile Scope-Based methodology. It contains a list of all known activities required for the deployment of the DataMiner Solution, along with an estimate of the time required for each of those activities (e.g. design of the system architecture, deployment of DMA nodes, creation of project-specific UIs and control surfaces, etc.). Those activities are typically organized in so-called buckets.
+The Preliminary Solution Backlog is created as part of a commercial offer for a DataMiner Solution that will be deployed based on the Agile Scope-Based methodology. It contains a preliminary list of all known activities required for the deployment of the DataMiner Solution, along with the effort size (time-budget estimate) required for each of those activities, and their uncertainty score. Activities are usually grouped in so-called buckets.
 
-Note that because of the nature of the activities, estimates on an activity level cannot be perfect, but ultimately this does not matter much as there is complete flexibility to move around time budget during the execution of the project. The main purpose of the Solution Backlog is really to get a solid estimate of the overall consolidated workload for the design and deployment of the DataMiner Solution, and to quote and plan that.
+The Uncertainty Score is the risk level for the estimate accuracy, a high uncertainty score reflects some level of ambiguity in the requirement, indicating that additional discussion is needed to fine-tune and clarify the activity.
 
-The Deployment Plan is also created as part of the commercial offer for a DataMiner Solution. It entails three different key components. Firstly, it maps the overall workload defined by the Solution Backlog over time to ensure that a reliable timeline is available for the overall project. The latter is also defined by factors such as the average number of people that will be working on the project. It determines how much time people can spend on work and takes proper buffers into account for project ramp up time, risk mitigation, etc. in order to establish a reliable end date for the project.
+Note that because of the nature of software projects, time forecasts on an activity level cannot be perfect. The main purpose of the Preliminary Solution Backlog is to get a realistic estimate of the overall consolidated workload for the design and deployment of the DataMiner Solution that fulfills the project's Goals & Objectives, within a committed fixed budget and delivery time frame. The Agile Scope-Based methodology allows exactly for that, as there's complete flexibility to move around time budget between activities based on priorities (e.g. spend less time on GUI work and shift that time to automation logic).
 
-Secondly, it also defines the key dependencies for the project, to ensure that all parties understand which dependencies apply between the different activities, so that everything can be planned and prioritized with those in mind.
+### Value Delivery Plan
 
-Thirdly, it also specifies the value strategy. As the ultimate purpose is to deliver maximum value in line with the specified goals, objectives and requirements, and within the agreed time frame and budget, value needs to be clearly defined, and activity planning needs to be aligned with this.
+Outlines the delivery strategy, how the work that needs to be done is prioritized in order to maximize value. As the ultimate purpose is to deliver maximum value in line with the specified goals, objectives and requirements, and within the agreed time frame and budget, value needs to be clearly defined, and activity planning needs to be aligned with this. 
+
+Typically, starts with the objectives that provide maximum value first with the goal of having a Minimum Viable Product allowing to use and experiment the product early on. Alternatively, it may start with deliverables with higher levels of uncertainty, to confirm they can be achieved before venturing into the larger project.
+
+
+### Projected Workload
+
+Maps the overall effort defined by the Preliminary Solution Backlog over time to ensure that a reliable timeline is available for the overall project. 
+
+It factors in average number of people working on the project, their actual capacity, and takes proper buffers into account for project ramp up time, risk mitigation, etc. 
+
+### Dependencies, Assumptions & Constraints
+
+Defines the key dependencies for the project, to ensure that all parties understand which dependencies apply between the different activities so that everything can be planned and prioritized with those in mind.
+
+
+
+
+
 
 ## Setup of the Solution Backlog
 
