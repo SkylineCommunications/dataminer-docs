@@ -66,7 +66,7 @@ The value of the suggestion event mentions what kind of issue is expected, e.g. 
 
 ## Automatic incident tracking
 
-This DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this can happen completely automatically, without any configuration by the user. Based on what it has learned from past alarm activity in your system and based on a broad range of auxiliary data, DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
+This DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this can happen completely automatically, without any configuration by the user. DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
 
 Several factors are taken into account for the grouping:
 
@@ -100,9 +100,11 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 > - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
 
-### Configuration in System Center
+### Automatic incident tracking configuration in System Center
 
-In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *automatic incident tracking*. The following settings are available there:
+In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *automatic incident tracking*. From DataMiner 10.2.0/10.2.1 onwards, in new installations and in systems upgrading from DataMiner versions that did not support automatic incident tracking yet, it is enabled by default.
+
+The following settings are available in System Center:
 
 - *Enabled*: Allows you to activate or deactivate this feature. Note that when you upgrade to DataMiner 10.0.11, the feature is automatically disabled, unless it has previously been activated as a soft-launch feature.
 
@@ -116,7 +118,7 @@ In DataMiner Cube, you can enable this feature in System Center, via *System set
 
 ### Activating automatic incident tracking
 
-When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic incident tracking*. From DataMiner 10.2.0/10.2.1 onwards, it is enabled by default in new installations and in systems upgrading from DataMiner versions that did not support automatic incident tracking yet.
+When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic incident tracking*.
 
 ### Configuration of incident tracking based on properties
 
