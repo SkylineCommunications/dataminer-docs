@@ -17,7 +17,7 @@ You can create a query as follows:
 1. Specify a name for the query.
 
    > [!NOTE]
-   > From DataMiner 10.1.0/10.1.1 onwards, specifying a name is optional. However, note that this is still recommended, as a name can help clarify what the purpose of the query is.
+   > From DataMiner 10.2.0 [CU2]/10.2.5 onwards, a query must have a unique name. If you edit an existing query that has no name, you will need to specify a unique name for it. Prior to this, starting from DataMiner 10.1.0/10.1.1, a query name is optional but highly recommended.
 
 1. In the drop-down box below this, select the data source you want to use. See [Query data sources](#query-data-sources).
 
