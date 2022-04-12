@@ -66,9 +66,9 @@ The value of the suggestion event mentions what kind of issue is expected, e.g. 
 
 ## Automatic incident tracking
 
-This DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this happens completely automatically, without any configuration by the user. DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
+This DataMiner Analytics feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. Unlike Correlation tracking, this happens completely automatically, without any configuration by the user. Based on what it has learned from past alarm activity in your system and based on a broad range of auxiliary data, DataMiner Analytics automatically detects which alarms share a common trait and groups them as one incident.
 
-To activate this feature, in the Alarm Console hamburger menu, select *Automatic incident tracking*. However, note that the feature must also be activated in System Center. See [Configuration in System Center](#configuration-in-system-center). From DataMiner 10.2.0/10.2.1 onwards, in new installations and in systems upgrading from DataMiner versions that did not support automatic incident tracking yet, the feature is enabled by default in System Center.
+To activate this feature, in the Alarm Console hamburger menu, select *Automatic incident tracking*. However, note that the feature must also be activated in System Center. See [Configuration in System Center](#configuration-in-system-center). From DataMiner 10.2.0/10.2.1 onwards, it is enabled by default in new installations and in systems upgrading from DataMiner versions that did not support automatic incident tracking yet.
 
 Several factors are taken into account for the grouping:
 
