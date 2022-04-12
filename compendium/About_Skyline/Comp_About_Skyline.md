@@ -24,7 +24,7 @@ More info: [www.skyline.be](http://www.skyline.be)
 
 - **7000+ connectors for interfacing with data sources (devices, systems, etc.) from 1000+ vendors**
 
-- **9000+ nodes deployed**
+- **10000+ nodes deployed**
 
 As a result of our continuous far-reaching innovation, we have been recognized for our leadership in shaping the future of end-to-end multi-vendor network management & OSS solutions, proven by the many [awards](https://www.skyline.be/skyline/awards):
 
