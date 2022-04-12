@@ -48,7 +48,20 @@ To apply a data feed or change the data feed of a component:
 
    - To find specific data more quickly, you can use the **filter box** at the top of each data section.
 
-     For parameters, you can select a specific parameter by first selecting *Element* or *Service* in the *From* box and then specifying a filter. Alternatively, you can select a parameter by first selecting *Protocol* in the *From* box and then specifying a protocol in the filter.
+     - For **parameters**, you can select a specific parameter by first selecting *Element* or *Service* in the *From* box and then specifying a filter. Alternatively, you can select a parameter by first selecting *Protocol* in the *From* box and then specifying a protocol in the filter.
+
+     - For **elements**, from DataMiner 10.2.5/10.3.0 onwards, you can click the filter icon next to the filter box at the top to get additional filtering options:
+
+       - Specify a view in the *View* bow to only load elements in that view (and its subviews)
+
+       - Specify a protocol in the *Protocol* box to only load elements using that protocol.
+
+       - Select the *EPM managers* checkbox to only load EPM Manager elements.
+
+       - Select the *Spectrum analyzers* checkbox to only load Spectrum elements.
+
+       > [!NOTE]
+       > These filters are applied server-side, so if your DMS has many elements, these can help you load the elements you need much faster.
 
    - For some components, you can add the **complete set** of a certain type of items. In that case, the data feed icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
 
