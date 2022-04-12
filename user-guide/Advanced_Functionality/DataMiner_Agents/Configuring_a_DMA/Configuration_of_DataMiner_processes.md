@@ -33,10 +33,6 @@ To set a different number:
 
 ## Setting the number of simultaneously running SLProtocol processes
 
-In the file *DataMiner.xml*, you can set the number of simultaneously running SLProtocol processes.
-
-### ProcessOptions
-
 The number of simultaneously running SLProtocol processes can be set in the *\<ProcessOptions>* tag of the *DataMiner.xml* file.
 
 By default, the number of simultaneously running processes is set to 5.
@@ -59,7 +55,7 @@ To set a different number:
 
 1. Save the file and restart DataMiner.
 
-### Separate SLProtocol process for every protocol being used
+## Configuring a separate SLProtocol process for every protocol used
 
 For testing purposes, you can order a DataMiner Agent to spread its elements across different SLProtocol processes based on the protocol they are using.
 
@@ -86,7 +82,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
 
 1. Restart the DataMiner software.
 
-## Having separate SLScripting processes created for every protocol being used
+## Configuring a separate SLScripting process for every protocol used
 
 If you suspect that a particular protocol is causing a problem in the SLScripting process, then you can have separate SLScripting processes created for every protocol being used. This will then allow you to pinpoint the protocol that is causing the problem.
 
@@ -111,7 +107,7 @@ To have separate SLScripting processes created for every protocol being used, do
 > [!WARNING]
 > Never use this option in a production environment without having consulted Skyline Tech Support.
 
-## Having separate SLScripting processes created for each SLProtocol process
+## Configuring a separate SLScripting process for each SLProtocol process
 
 In a system where the load for one particular protocol has to be spread over several processes, because otherwise too much memory would be needed for one process, it can be useful to have a dedicated SLScripting process created for each SLProtocol process:
 
