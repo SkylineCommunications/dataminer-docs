@@ -4,17 +4,15 @@ uid: Configuring_dashboard_components
 
 # Configuring dashboard components
 
-Each dashboard component consists of a visualization and a data feed.
+Each dashboard component consists of **a visualization and a data feed**.
 
 When a dashboard is in edit mode, visualizations are available via the green panel on the left, and data feeds are available via the *Data* pane on the right.
 
 There are several ways to add a component:
 
-- Drag a visualization from the pane on the left onto an empty section of the dashboard. A data feed will then need to be applied to the component.
+- **Drag a visualization** from the pane on the left onto an empty section of the dashboard. A data feed will then need to be applied to the component.
 
-- Drag a data feed from the *Data* pane on the right onto an empty section of the dashboard. A visualization will then still need to be applied to the component.
-
-The following actions are then possible to configure the component:
+- **Drag a data feed** from the *Data* pane on the right onto an empty section of the dashboard. A visualization will then still need to be applied to the component.
 
 The following actions are then possible to configure the component:
 
@@ -32,9 +30,9 @@ In addition, depending on the visualization, additional configuration options ma
 
 To apply a visualization to a component or change the visualization of a component:
 
-1. Click on the component or hover the mouse over the component and click the ![Visualization icon](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
+1. Click on the component or hover the mouse over the component and **click the ![Visualization icon](~/user-guide/images/DashboardsX_visualizations00095.png) icon**.
 
-1. Select the visualization you want to apply from the options displayed below the component.
+1. **Select the visualization** you want to apply from the options displayed below the component.
 
    As soon as the mouse pointer hovers over the different visualizations, a preview will be displayed in the component.
 
@@ -42,33 +40,33 @@ To apply a visualization to a component or change the visualization of a compone
 
 To apply a data feed or change the data feed of a component:
 
-1. Click on the component or hover the mouse over the component and click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon.
+1. Click on the component or hover the mouse over the component and **click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon**.
 
    In the data pane on the right, any data feeds that do not match the visualization of the component will become unavailable. Data feeds that are compatible with the component will be marked with the following icon: ![Compatible data feed icon](~/user-guide/images/NewRD_datafeed.png)
 
-1. Drag the compatible data feed onto the component.
+1. **Drag the compatible data feed** onto the component.
 
-   - To find specific data more quickly, you can use the filter box at the top of each data section.
+   - To find specific data more quickly, you can use the **filter box** at the top of each data section.
 
      For parameters, you can select a specific parameter by first selecting *Element* or *Service* in the *From* box and then specifying a filter. Alternatively, you can select a parameter by first selecting *Protocol* in the *From* box and then specifying a protocol in the filter.
 
-   - For some components, you can add the complete set of a certain type of items. In that case, the data feed icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
+   - For some components, you can add the **complete set** of a certain type of items. In that case, the data feed icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
 
      > [!NOTE]
      > If you add the entire *Bookings* data set to a *Drop-down*, *List* or *Tree* feed, you will also need to link this to a *Time range* feed.
 
-   - A data feed can also be provided by a feed component. When such a component has been added to the dashboard, the *Feeds* section is added to the available data in the *Data* pane. You can then drag an entry from this section to a component in order to link the component to the feed component.
+   - A data feed can also be provided by a **feed component**. When such a component has been added to the dashboard, the *Feeds* section is added to the available data in the *Data* pane. You can then drag an entry from this section to a component in order to link the component to the feed component.
 
-   - Some components allow you to specify multiple data feeds. For example, for a *State* component and a *Line chart* component, multiple parameters can be dragged onto the component.
+   - Some components allow you to specify **multiple data feeds**. For example, for a *State* component and a *Line chart* component, multiple parameters can be dragged onto the component.
 
      > [!NOTE]
      > From DataMiner 10.0.12 onwards, for some visualizations that use multiple data feeds (e.g. Parameter table, State), you can modify the order in which these data feeds are displayed.
      >
      > To do so, in the *Data in component* section of the data pane, click the arrow icons next to the data feeds to place them higher or lower in the order.
 
-   - If you try to add a data feed that is not compatible with the component, a red icon will be displayed on the component when you try to drag the data onto it.
+   - If you try to add a data feed that is **not compatible** with the component, a red icon will be displayed on the component when you try to drag the data onto it.
 
-1. Some visualizations and data feeds allow you to specify an additional filter feed. In that case, a yellow filter icon will be displayed below the component when you select it or hover the mouse over it: ![Filter icon](~/user-guide/images/DashboardsX_filter.png)
+1. Some visualizations and data feeds allow you to specify an **additional filter feed**. In that case, a yellow filter icon will be displayed below the component when you select it or hover the mouse over it: ![Filter icon](~/user-guide/images/DashboardsX_filter.png)
 
    After you click this icon, compatible filter feeds will be marked with this icon in the data pane, and you will be able to drag these onto the component just like a data feed.
 
@@ -76,21 +74,21 @@ To apply a data feed or change the data feed of a component:
 
 Each component in a dashboard has a number of default options. By default, the configuration of these options is determined on dashboard level. However, it is possible to override this. The way this can be done depends on the DataMiner version.
 
-From DataMiner 10.0.8 onwards:
+### [From DataMiner 10.0.8 onwards](#tab/tabid-1)
 
-1. Select the component and go to the *Layout* tab on the right.
+1. Select the component and go to the ***Layout*** tab on the right.
 
-1. In the *Styles* section, you can then change the component theme in different ways:
+1. In the ***Styles* section**, you can then change the component theme in different ways:
 
-    - To change the component theme to one of the different existing component themes for your current dashboard theme, click the current theme and select a different theme in the drop-down list.
+    - To **change the component theme** to one of the different existing component themes for your current dashboard theme, click the current theme and select a different theme in the drop-down list.
 
-    - To customize the component theme, either select *Custom theme* in the drop-down list, or enable the *Customize* toggle button to customize the currently selected theme.
+    - To **customize the component theme**, depending on your DataMiner version, either enable the *Customize* toggle button to customize the currently selected theme, or select *Custom theme* in the drop-down list.
 
-        You can then configure the title, color, spacing, border and shadow in the box below. These are the same as the options detailed below for earlier DataMiner versions, except that the *Container* section is now called the *Spacing* section. In addition, from DataMiner 10.0.9 onwards, you can also set the component border to only be shown for specific sides, e.g. at the top and bottom only. From DataMiner 10.0.12 onwards, under *Colors* > *Color palette*, you can customize additional component colors, e.g. for the lines in a line chart.
+      You can then configure the title, color, spacing, border and shadow in the box below. These are the same as the options detailed below for earlier DataMiner versions, except that the *Container* section is now called the *Spacing* section. In addition, from DataMiner 10.0.9 onwards, you can also set the component border to only be shown for specific sides, e.g. at the top and bottom only. From DataMiner 10.0.12 onwards, under *Colors* > *Color palette*, you can customize additional component colors, e.g. for the lines in a line chart.
 
-        When you have customized a component theme, you can also save it, so that it becomes available with the other component themes for the current dashboard theme. To do so, click *Save as component theme* and specify the name of the theme. However, note that this is only possible if the dashboard is currently using a saved dashboard theme. If it is not, you will first need to save the dashboard theme before you can save the component theme.
+      When you have customized a component theme, you can also save it, so that it becomes available with the other component themes for the current dashboard theme. To do so, click *Save as component theme* and specify the name of the theme. However, note that this is only possible if the dashboard is currently using a saved dashboard theme. If it is not, you will first need to save the dashboard theme before you can save the component theme.
 
-Prior to DataMiner 10.0.8:
+### [Prior to DataMiner 10.0.8](#tab/tabid-2)
 
 1. Select the component and go to the *Layout* tab on the right.
 
@@ -120,6 +118,8 @@ Prior to DataMiner 10.0.8:
     - In the *Shadow* section, select the size of the shadow displayed behind the components.
 
 Depending on the visualization, additional layout options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
+
+***
 
 ## Deleting a component
 
