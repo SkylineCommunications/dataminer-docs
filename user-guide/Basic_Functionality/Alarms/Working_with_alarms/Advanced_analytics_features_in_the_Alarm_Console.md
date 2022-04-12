@@ -50,7 +50,7 @@ In addition, proactive cap detection is currently only supported for parameters 
 
 However, note that in case there is both a data range in the protocol and an alarm threshold in an alarm template, the alarm template will get precedence.
 
-### Configuration in System Center
+### Proactive cap detection configuration in System Center
 
 In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *proactive cap detection*. The following settings are available there:
 
@@ -220,7 +220,7 @@ From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm
 
 ## Monitoring of trend patterns
 
-From DataMiner 10.0.7 onwards, DataMiner can recognize patterns in trend graphs. From DataMiner 10.0.13 onwards, you can also activate alarm monitoring of trend patterns, so that a "suggestion event" type alarm is triggered whenever a specific pattern is detected (see [Suggestion events](#suggestion-events) ).
+From DataMiner 10.0.7 onwards, DataMiner can recognize patterns in trend graphs. From DataMiner 10.0.13 onwards, you can also activate alarm monitoring of trend patterns, so that a "suggestion event" type alarm is triggered whenever a specific pattern is detected (see [Suggestion events](#suggestion-events)).
 
 You can activate this type of monitoring by selecting a pattern in a trend graph, creating a tag for it, and activating the option *Generate an alarm when detected.* For more detailed information on how to do this, see [Working with pattern matching](xref:Working_with_pattern_matching).
 
@@ -230,20 +230,18 @@ The following limitations apply:
 
 - For the monitoring of trend patterns, DataMiner will use a maximum of 2 GB of internal memory.
 
-    - As soon as DataMiner uses more than 1.5 GB of internal memory for this feature, the following notice will be displayed in the Alarm Console:
+  - As soon as DataMiner uses more than 1.5 GB of internal memory for this feature, the following notice will be displayed in the Alarm Console:
 
-        *Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.*
+    *Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.*
 
-        This notice will appear at most every 2 weeks or after a DataMiner restart.
-        In order to reduce memory usage, you can either remove patterns for which monitoring has been activated or restrict the number of parameters for which it has been activated (e.g. by specifying a display key in case of table parameters).
+    This notice will appear at most every 2 weeks or after a DataMiner restart. In order to reduce memory usage, you can either remove patterns for which monitoring has been activated or restrict the number of parameters for which it has been activated (e.g. by specifying a display key in case of table parameters).
 
-    - As soon as DataMiner uses more than 2 GB of internal memory for this feature, the following notice will be displayed in the Alarm Console:
+  - As soon as DataMiner uses more than 2 GB of internal memory for this feature, the following notice will be displayed in the Alarm Console:
 
-        *Pattern matching memory critical, patterns with suggestion events enabled may not match properly.*
+    *Pattern matching memory critical, patterns with suggestion events enabled may not match properly.*
 
-        This notice will appear at most every 2 weeks or after a DataMiner restart.
-        Also, when you create a pattern in this case, DataMiner will not activate monitoring, even if you selected the *Generate an alarm when detected* option.
+    This notice will appear at most every 2 weeks or after a DataMiner restart. Also, when you create a pattern in this case, DataMiner will not activate monitoring, even if you selected the option *Generate an alarm when detected*.
 
-    - DataMiner checks all changes made to parameters for which patterns are being monitored in real time. If there are more than 6000 parameter changes per second, the following notice will be displayed in the Alarm Console:
+  - DataMiner checks all changes made to parameters for which patterns are being monitored in real time. If there are more than 6000 parameter changes per second, the following notice will be displayed in the Alarm Console:
 
-        *High load on pattern matching functionality: reduced pattern match accuracy.*
+    *High load on pattern matching functionality: reduced pattern match accuracy.*
