@@ -12,22 +12,24 @@ uid: Working_with_behavioral_anomaly_detection
 > [!TIP]
 > See also: [Behavioral anomaly detection](xref:Advanced_analytics_features_in_the_Alarm_Console#behavioral-anomaly-detection)
 
-From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the following kinds of changes in the behavior of a trend, also known as "change points":
+From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the changes in the behavior of a trend, also known as "change points". The following kinds of change points can be detected:
 
-- **Outlier**: A value suddenly spikes upwards or downwards, but returns to its previous, normal behavior after a few points.
+- **Flatline**: A fluctuating value suddenly remains constant. This type of change point can be detected from DataMiner 10.2.5/10.3.0 onwards.
 
 - **Level shift**: A value shifts upwards or downwards and then stays at that level, e.g. a value fluctuating around 0 that starts to fluctuate around 10.
 
-- **Variance change**: The variance of a value either increases or decreases. For example, a series like 0.5, 0.6, -0.5, -0.2, 1, …, 5, 8, 9, -5, -6, -2.1, … indicates a variance increase. The value is first fluctuating around 0 between 1 and -1 and then starts fluctuating around 0 between 10 and -10.
+- **Outlier**: A value suddenly spikes upwards or downwards, but returns to its previous, normal behavior after a few points.
 
 - **Trend change**: A value suddenly starts to increase or decrease at an unusual rate. For example, a value fluctuating around 10 (i.e. a trend slope of 0) that suddenly starts to increase by 1 unit per second (i.e. a trend slope of 1).
 
+- **Variance change**: The variance of a value either increases or decreases. For example, a series like 0.5, 0.6, -0.5, -0.2, 1, …, 5, 8, 9, -5, -6, -2.1, … indicates a variance increase. The value is first fluctuating around 0 between 1 and -1 and then starts fluctuating around 0 between 10 and -10.
+
 - **Unlabeled change**: If a change point cannot be classified as one of the above-mentioned change points, it is considered an unlabeled change.
 
-If a trend change, variance change or level shift is unexpected, it will be considered anomalous. Level shifts that have a different direction than previous recent jumps or that jump to a previously unseen level will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction were detected during the last weeks.
+If a change point other than an outlier or unlabeled change is unexpected, it will be considered anomalous. Level shifts that have a different direction than previous recent jumps or that jump to a previously unseen level will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction were detected during the last weeks. A flatline will be considered anomalous when no recent flatline change point of approximately the same length or longer is detected.
 
 > [!NOTE]
-> - Whenever an anomalous level shift, trend change or variance change is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
+> - Whenever an anomalous change point is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
 > - You can configure alarm templates to have alarms generated instead of suggestion events, depending on the parameter and the type of anomaly See [Configuring anomaly detection alarms for specific parameters](xref:Configuring_alarm_templates#configuring-anomaly-detection-alarms-for-specific-parameters).
 
 ## Trend icons on data pages
@@ -48,6 +50,7 @@ Based on the behavioral anomaly detection, the following icons can be displayed 
 | ![Variance decrease icon](~/user-guide/images/ArrowVarianceChangeDown.png) ![Red variance decrease icon](~/user-guide/images/ArrowVarianceChangeDownRed.png) | Variance decrease |
 | ![Upward outlier icon](~/user-guide/images/ArrowOutlierUp.png) ![Red upward outlier icon](~/user-guide/images/ArrowOutlierUpRed.png) | Upward outlier |
 | ![Downward outlier icon](~/user-guide/images/ArrowOutlierDown.png) ![Red downward outlier icon](~/user-guide/images/ArrowOutlierDownRed.png) | Downward outlier |
+| ![Flatline icon](~/user-guide/images/ArrowFlatline.png) ![Red flatline icon](~/user-guide/images/ArrowFlatlineRed.png) | Flatline |
 
 Please note the following regarding these icons:
 
