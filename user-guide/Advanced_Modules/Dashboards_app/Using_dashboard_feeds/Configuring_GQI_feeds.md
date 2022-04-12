@@ -71,7 +71,7 @@ This is the most basic procedure to use an external data source in a query:
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 
 > [!NOTE]
-> From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of a custom data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, you may need to select a column.
+> From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of a custom data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, when you have selected a table feed, you may need to select a specific column.
 
 #### Interfaces in the custom data script
 
