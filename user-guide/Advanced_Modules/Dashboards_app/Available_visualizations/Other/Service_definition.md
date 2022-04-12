@@ -55,3 +55,6 @@ To configure the component:
    - *Enable zooming*: Determines whether users will be able to zoom in and out on the graph.
 
    - *Edge style*: Determines whether curly or straight edges are used in the graph.
+
+> [!NOTE]
+> From DataMiner 10.2.5/10.3.0 onwards, service definitions of type "ProcessAutomation" are displayed differently from other service definitions. Arrows will automatically be drawn to represent the detected connections between the nodes. In addition, different function shapes will reflect the different function types, if these have been configured in the Process Automation framework.
