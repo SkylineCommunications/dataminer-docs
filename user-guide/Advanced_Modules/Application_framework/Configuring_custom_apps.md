@@ -126,4 +126,28 @@ To go back to a previous version of a custom app:
 
 ## Organizing the apps on the landing page in sections
 
-To create sections in an application, open the App.info.json file in the correct application folder (C:\Skyline DataMiner\applications\APP_ID) and add section names to the Sections array.
+It is possible to organize the custom apps on the landing page in different sections. However, at present this is only possibly by changing the configuration of the apps in JSON.
+
+To do so:
+
+1. On the DMA, go to the app folder: `C:\Skyline DataMiner\applications\[APP_ID]`
+1. Open the file *App.info.json*.
+1. Add the section names to the *Sections* array and save the file.
+
+   For example:
+
+   ```json
+   {
+      "__type":"Skyline.DataMiner.Web.Common.v1.DMAApplicationVersionInfo",
+      "PublicVersion":1,
+      "DraftVersion":0,
+      "Sections": [
+         "My section 1",
+         "My section 2"
+      ],
+      "Security":{
+         "__type":"Skyline.DataMiner.Web.Common.v1.Dashboards.DMAApplicationSecurityConfig",
+         "AllowView":[],
+         "AllowEdit":[]
+      }
+   }
