@@ -237,17 +237,7 @@ See [Configuring the TCP-IP socket settings](xref:Configuring_the_TCP-IP_socket_
 
 ### DataMiner.ProcessOptions
 
-See:
-
-- [Setting the number of simultaneously running SLPort processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slport-processes)
-
-- [Setting the number of simultaneously running SLProtocol processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slprotocol-processes)
-
-- [Having separate SLScripting processes created for every protocol being used](xref:Configuration_of_DataMiner_processes#having-separate-slscripting-processes-created-for-every-protocol-being-used)
-
-- [Having replicated elements handled by one SLProtocol process](xref:Configuration_of_DataMiner_processes#having-replicated-elements-handled-by-one-slprotocol-process)
-
-- [Running SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service)
+See [Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes)
 
 ### DataMiner.QOS
 
