@@ -2402,8 +2402,10 @@
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
-        - name: Investigating_NATS_Issues
+        - name: Investigating NATS issues
           topicUid: Investigating_NATS_Issues
+        - name: 'Sharing dashboard' window does not disappear
+          topicUID: Sharing_dashboard_window_does_not_disappear
 - name: Reference
   topicUid: Part7Reference
   items:
