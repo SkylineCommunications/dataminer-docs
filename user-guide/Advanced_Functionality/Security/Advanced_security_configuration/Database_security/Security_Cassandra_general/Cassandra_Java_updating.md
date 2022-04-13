@@ -6,12 +6,15 @@ uid: Cassandra_Java_updating
 
 By default, DataMiner installs Cassandra with its own Java 8 installation. This is typically located in *C:\Program Files\Cassandra\Java\bin*. DataMiner deploys Cassandra with **Java 1.8.0_91**. Cassandra depends on **Java 8**. We **do not recommend** deploying Java 11.
 
+> [!TIP]
+> A PowerShell script to update the Java version is available at [Cassandra Hardening](https://github.com/SkylineCommunications/cassandra-hardening).
+
 To update the Java version:
 
-1. Download the latest OpenJDK 8 Java binaries from the official website.
+1. Download the latest OpenJDK 8 JRE binaries from the official website.
 
    > [!NOTE]
-   > You can download the latest OpenJDK 8 JRE binaries from [the OpenJDK wiki](https://wiki.openjdk.java.net/display/jdk8u/Main). Make sure to download the **Windows x64** archive. For example: *OpenJDK8U-jre_x64_windows_8u322b06.zip*
+   > You can download the latest OpenJDK 8 JRE binaries from [the OpenJDK Wiki](https://wiki.openjdk.java.net/display/jdk8u/Main). Make sure to download the **Windows x64** archive. For example: *OpenJDK8U-jre_x64_windows_8u322b06.zip*
 
 1. Stop the *Cassandra* service.
 
