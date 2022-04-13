@@ -4,7 +4,7 @@ uid: DashboardServiceDefinition
 
 # Service definition
 
-This dashboard component displays a service definition as a node edge graph. It can display the graph based on a service definition feed or a booking feed. Any nodes that are linked to a particular resource will display alarm and element info in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
+This component displays a service definition as a node edge graph. It can display the graph based on a service definition feed or a booking feed. Any nodes that are linked to a particular resource will display alarm and element info in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
 
 Available from DataMiner 10.0.5 onwards.
 

@@ -5,9 +5,9 @@ uid: DashboardButton
 # Button
 
 > [!WARNING]
-> This feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> In the Dashboards app, this feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/). However, it is fully available in the [DataMiner Application Framework](xref:Application_framework).
 
-This dashboard component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButton* is enabled.
+In the Dashboards app, this component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButton* is enabled. In the DataMiner Application Framework, it is available by default.
 
 The component can be linked to one or more button parameters, so that users can click a button to execute a particular action.
 
@@ -23,7 +23,7 @@ To configure the component:
 
    - In case the component displays more than one parameter, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 
-     - *Layout*: Determines whether the different items are displayed next to each other or below each other. However, note that when the dashboard is used on a small screen, they will always be displayed below each other.
+     - *Layout*: Determines whether the different items are displayed next to each other or below each other. However, note that when the items are viewed on a small screen, they will always be displayed below each other.
 
      - *Maximum rows per page*: Determines how many items can at most be displayed below each other on a single page.
 
@@ -33,7 +33,7 @@ To configure the component:
 
 1. Optionally, configure the following settings in the *Settings* tab:
 
-   - To use a different polling interval for this component than the standard interval configured for the dashboard, in the *WebSocket settings* section, clear the checkbox and specify a different polling interval (in seconds).
+   - To use a custom polling interval for this component, in the *WebSocket settings* section, clear the checkbox and specify a different polling interval (in seconds).
 
    - In case the component displays more than one parameter, configure how the parameters should be grouped: by parameter, by element, by table index (if relevant) or by all the above together.
 
@@ -42,7 +42,7 @@ To configure the component:
      - Depending on the script configuration, it may be possible to configure the parameters and/or dummies used in the script. For each of the parameters and dummies, a checkbox allows you to select whether these are required, i.e. whether the script can be executed only if these are filled in.
 
        > [!NOTE]
-       > The input for an interactive Automation script in a dashboard can be specified by the user or retrieved via linked feeds. In case both are possible for the same component, user input always takes precedence.
+       > The input for an interactive Automation script can be specified by the user or retrieved via linked feeds. In case both are possible for the same component, user input always takes precedence.
        >
        > In case several feeds are linked to the component, they are considered in the order they were added. For example, if 2 feeds are used and the feed that was first added is applicable, the second feed will be ignored.
 

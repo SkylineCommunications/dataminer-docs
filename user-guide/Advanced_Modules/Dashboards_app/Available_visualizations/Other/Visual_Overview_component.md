@@ -4,7 +4,7 @@ uid: DashboardVisualOverview
 
 # Visual overview
 
-This dashboard component displays a Visio file linked to an element.
+This component displays a Visio file linked to an element.
 
 To configure this component:
 
@@ -16,11 +16,10 @@ To configure this component:
 
    - *Page selection*: In case the Visio drawing consists of several pages, select this checkbox to display a page selection drop-down list at the top of the component.
 
-   - *Default page*: In case the Visio drawing consists of several pages, select the page that should be displayed by default in this drop-down list. Keep in mind that if *Page selection* is not selected, this is the only page the user of the dashboard will be able to see.
+   - *Default page*: In case the Visio drawing consists of several pages, select the page that should be displayed by default in this drop-down list. Keep in mind that if *Page selection* is not selected, this is the only page the user will be able to see.
 
 1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
 > [!NOTE]
-> - Spectrum components are currently not yet supported in visual overviews within dashboards.
+> - Spectrum components are currently not yet supported in visual overviews within dashboards or custom apps.
 > - Quick filters are supported for table parameters in visual overview components from DataMiner 10.0.12 onwards. See [Using quick filters](xref:Using_quick_filters).
->

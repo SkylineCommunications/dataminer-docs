@@ -7,7 +7,7 @@ uid: DashboardNodeEdgeGraph
 > [!WARNING]
 > This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
-This dashboard component is available in soft launch from DataMiner 10.0.4 onwards, if the soft-launch option *ReportsAndDashboardsPTP* is enabled. From DataMiner 10.2.0/10.1.5 onwards, it is available without the soft-launch option.
+Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is available in soft launch from DataMiner 10.0.4 onwards, if the soft-launch option *ReportsAndDashboardsPTP* is enabled.
 
 This component allows you to visualize any type of objects (i.e. “nodes”) and the connections between them (i.e. “edges”). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data
 
@@ -100,7 +100,7 @@ To configure the component:
 
      - *Highlight/Show entire path*: When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure they are a part of (from root to leaves).
 
-   - *Node positions*: By default, this is set to *Layered*, which means nodes are displayed in different layers. Set this to *Custom* if you want to allow users with dashboard editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
+   - *Node positions*: By default, this is set to *Layered*, which means nodes are displayed in different layers. Set this to *Custom* if you want to allow users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
 
    - Direction: Determines how different nodes are displayed depending on their importance, as indicated by their configured weight:
 

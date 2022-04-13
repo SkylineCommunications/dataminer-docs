@@ -35,3 +35,5 @@ uid: Part4AdvancedModules
 - [DMS Spectrum Analysis](xref:SpectrumAnalysis)
 
 - [DMS Ticketing](xref:ticketing)
+
+- [DataMiner Application Framework](xref:Application_framework)
