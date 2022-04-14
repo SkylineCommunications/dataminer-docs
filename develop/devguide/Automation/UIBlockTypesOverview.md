@@ -4,6 +4,29 @@ uid: UIBlockTypesOverview
 
 # UIBlockType overview
 
+Tye [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines different types of UI components.
+
+|Name  |Description  |
+|---------|---------|
+|Button     |Button.         |
+|Calendar     |Calender control.         |
+|CheckBox     |Checkbox.         |
+|CheckBoxList     |Checkbox list.         |
+|DropDown     |Drop-down list.         |
+|Executable     |Executable.         |
+|FileSelector     |File selector.         |
+|GlobalSettings     |Global settings.         |
+|Numeric     |Numeric.         |
+|Parameter     |Text displaying the value of a parameter.         |
+|PasswordBox     |Password input box.         |
+|RadioButtonList     |Radio button list.         |
+|StaticText     |Static text.         |
+|TextBox     |Text box.         |
+|Time     |Item that displays a time value.         |
+|TreeView     |Tree view control.         |
+|Undefined     |Undefined.         |
+|Variable     |Variable.         |
+
 ## Button
 
 Allows you to define a newly created dialog box item as a button.
