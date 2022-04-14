@@ -4,7 +4,7 @@ uid: UIBlockTypesOverview
 
 # UIBlockType overview
 
-Tye [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines different types of UI components.
+The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines different types of UI components.
 
 |Name  |Description  |
 |---------|---------|
