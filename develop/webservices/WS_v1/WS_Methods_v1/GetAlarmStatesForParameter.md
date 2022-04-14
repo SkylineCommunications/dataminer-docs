@@ -10,13 +10,13 @@ Use this method to retrieve the relative duration (in percent) of every alarm se
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ElementID | Integer | The element ID. |
-| ParameterID | Integer | The parameter ID. |
-| TableIndex | String | The table index. This field must be specified for table column parameters; otherwise it must be left empty. |
-| UtcStartTime | Long integer | The start time of the timespan for which the alarm states should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| UtcEndTime | Long integer | The end time of the timespan for which the alarm states should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| elementID | Integer | The element ID. |
+| parameterID | Integer | The parameter ID. |
+| tableIndex | String | The table index. This field must be specified for table column parameters; otherwise it must be left empty. |
+| utcStartTime | Long integer | The start time of the timespan for which the alarm states should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| utcEndTime | Long integer | The end time of the timespan for which the alarm states should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
 
 ## Output
 

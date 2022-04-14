@@ -10,7 +10,7 @@ Use this method to retrieve the system info for DataMiner. This is the informati
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 

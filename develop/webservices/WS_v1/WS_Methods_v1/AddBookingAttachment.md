@@ -10,10 +10,10 @@ Use this method to add an attachment file to a booking. Available from DataMiner
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| BookingID  | String | The booking ID.                                      |
-| FileName   | String | The name of the attachment file.                     |
-| Path       | String | The file path of the attachment file.                |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| bookingID  | String | The booking ID.                                      |
+| fileName   | String | The name of the attachment file.                     |
+| path       | String | The file path of the attachment file.                |
 
 ## Output
 

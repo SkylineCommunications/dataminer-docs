@@ -12,10 +12,10 @@ This method is a faster alternative to the method [GetElementsForView](xref:GetE
 
 | Item                     | Format  | Description                                                                 |
 |--------------------------|---------|-----------------------------------------------------------------------------|
-| Connection               | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                      |
-| ViewID                   | Integer | The view ID.                                                                |
-| IncludeSubViews          | Boolean | Whether the subviews of the specified view should be included in the search. |
-| IncludeServices          | Boolean | Whether the services in the specified view should also be included.          |
+| connection               | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                      |
+| viewID                   | Integer | The view ID.                                                                |
+| includeSubViews          | Boolean | Whether the subviews of the specified view should be included in the search. |
+| includeServices          | Boolean | Whether the services in the specified view should also be included.          |
 | includeRedundancy­Groups | Boolean | Whether the redundancy groups in the specified view should also be included. |
 
 ## Output

@@ -10,9 +10,9 @@ Use this method to delete several attachments from a job.
 
 | Item       | Format          | Description                                          |
 |------------|-----------------|------------------------------------------------------|
-| Connection | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| JobID      | String          | The ID of the job.                                   |
-| FileNames  | Array of string | The names of the attachment files.                   |
+| connection | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| jobID      | String          | The ID of the job.                                   |
+| fileNames  | Array of string | The names of the attachment files.                   |
 
 ## Output
 

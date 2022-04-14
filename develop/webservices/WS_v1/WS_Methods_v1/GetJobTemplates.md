@@ -12,7 +12,7 @@ Available from DataMiner 9.6.6 onwards.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 

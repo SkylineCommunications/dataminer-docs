@@ -13,10 +13,10 @@ Use this method to retrieve a specific number of redundancy groups.
 
 | Item       | Format  | Description                                                                     |
 |------------|---------|---------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                           |
-| Index      | Integer | The point from which to start returning redundancy groups.                      |
-| Count      | Integer | The number of redundancy groups to be returned.                                 |
-| OrderBy    | String  | The field(s) by which to order the redundancy groups (separated by semicolons). |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                           |
+| index      | Integer | The point from which to start returning redundancy groups.                      |
+| count      | Integer | The number of redundancy groups to be returned.                                 |
+| orderBy    | String  | The field(s) by which to order the redundancy groups (separated by semicolons). |
 
 ## Output
 

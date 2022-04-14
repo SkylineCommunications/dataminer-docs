@@ -13,9 +13,9 @@ Use this method to add a new field to a specified ticket type (called â€œdomainâ
 
 | Item         | Format               | Description                                                       |
 |--------------|----------------------|-------------------------------------------------------------------|
-| Connection   | String               | The connection ID. See [ConnectApp](xref:ConnectApp).              |
-| TicketTypeID | GUID                 | The GUID of the ticket type to which you are adding the field.    |
-| Field        | DMATicketField array | See [DMATicketField](xref:DMATicketField). |
+| connection   | String               | The connection ID. See [ConnectApp](xref:ConnectApp).              |
+| ticketTypeID | GUID                 | The GUID of the ticket type to which you are adding the field.    |
+| field        | DMATicketField array | See [DMATicketField](xref:DMATicketField). |
 
 > [!NOTE]
 > It is not possible to add a ticket field of type *State*.

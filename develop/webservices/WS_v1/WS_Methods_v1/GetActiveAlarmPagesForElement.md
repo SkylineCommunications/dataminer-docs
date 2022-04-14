@@ -10,10 +10,10 @@ Use this method to retrieve the number of active alarms of an element, grouped e
 
 | Item       | Format  | Description                                           |
 |------------|---------|-------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).  |
-| DmaID      | Integer | The DataMiner Agent ID.                               |
-| ElementID  | Integer | The element ID.                                       |
-| GroupOn    | String  | The property by which to group: “time” or “severity”. |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).  |
+| dmaID      | Integer | The DataMiner Agent ID.                               |
+| elementID  | Integer | The element ID.                                       |
+| groupOn    | String  | The property by which to group: “time” or “severity”. |
 
 ## Output
 

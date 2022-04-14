@@ -13,10 +13,10 @@ Use this method to generate a ticket based on the properties of a particular ala
 
 | Item         | Format  | Description                                          |
 |--------------|---------|------------------------------------------------------|
-| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TicketTypeID | GUID    | The GUID of the ticket type.                         |
-| DmaID        | Integer | The DataMiner Agent ID.                              |
-| AlarmID      | Integer | The alarm ID.                                        |
+| connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| ticketTypeID | GUID    | The GUID of the ticket type.                         |
+| dmaID        | Integer | The DataMiner Agent ID.                              |
+| alarmID      | Integer | The alarm ID.                                        |
 
 ## Output
 

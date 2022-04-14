@@ -10,9 +10,9 @@ Use this method to delete a specified redundancy group.
 
 | Item              | Format  | Description                                          |
 |-------------------|---------|------------------------------------------------------|
-| Connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID             | Integer | The DataMiner Agent ID.                              |
-| RedundancyGroupID | Integer | The ID of the redundancy group.                      |
+| connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID             | Integer | The DataMiner Agent ID.                              |
+| redundancyGroupID | Integer | The ID of the redundancy group.                      |
 
 ## Output
 

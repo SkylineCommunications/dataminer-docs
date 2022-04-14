@@ -12,12 +12,12 @@ Available from DataMiner version 9.5.1 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ElementID | Integer | The element ID. |
-| UtcStartTime | Long integer | The start time of the timespan for which alarm state changes should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| UtcEndTime | Long integer | The end time of the timespan for which alarm state changes should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| MaxPoints | Integer | The maximum number of alarm state changes that should be returned. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| elementID | Integer | The element ID. |
+| utcStartTime | Long integer | The start time of the timespan for which alarm state changes should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| utcEndTime | Long integer | The end time of the timespan for which alarm state changes should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| maxPoints | Integer | The maximum number of alarm state changes that should be returned. |
 
 ## Output
 

@@ -13,10 +13,10 @@ Use this method to add an attachment file to a ticket.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TicketID   | String | The ID of the ticket.                                |
-| FileName   | String | The name of the attachment file.                     |
-| Path       | String | The file path of the attachment file.                |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| ticketID   | String | The ID of the ticket.                                |
+| fileName   | String | The name of the attachment file.                     |
+| path       | String | The file path of the attachment file.                |
 
 ## Output
 

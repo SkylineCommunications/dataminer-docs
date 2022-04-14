@@ -10,7 +10,7 @@ Use this method to retrieve all available Visio files that can be assigned to vi
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 

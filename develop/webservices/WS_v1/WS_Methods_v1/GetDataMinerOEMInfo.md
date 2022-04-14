@@ -10,7 +10,7 @@ Use this method to retrieve co-branding version information from the OEM.xml fil
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 

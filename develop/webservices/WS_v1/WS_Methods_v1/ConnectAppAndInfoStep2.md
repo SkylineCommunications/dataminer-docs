@@ -13,8 +13,8 @@ Use this method for the second step in a two-step authentication process, in ord
 
 | Item              | Format | Description                                                       |
 |-------------------|--------|-------------------------------------------------------------------|
-| Connection        | String | The connection ID.                                                |
-| ChallengeResponse | String | Response from the user to the challenge issued in the first step. |
+| connection        | String | The connection ID.                                                |
+| challengeResponse | String | Response from the user to the challenge issued in the first step. |
 
 > [!NOTE]
 > The connection ID and challenge are returned in the first step of the authentication. For more info, see [ConnectAppAndInfo](xref:ConnectAppAndInfo).

@@ -15,11 +15,11 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
-| ViewID     | Integer | The view ID.                                                                        |
-| Index      | Integer | The point from which to start returning alarms.                                     |
-| Count      | Integer | The number of alarms to be returned.                                                |
-| OrderBy    | String  | The Alarm Console column(s) by which to order the alarms (separated by semicolons). |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
+| viewID     | Integer | The view ID.                                                                        |
+| index      | Integer | The point from which to start returning alarms.                                     |
+| count      | Integer | The number of alarms to be returned.                                                |
+| orderBy    | String  | The Alarm Console column(s) by which to order the alarms (separated by semicolons). |
 
 ## Output
 

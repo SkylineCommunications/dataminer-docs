@@ -10,9 +10,9 @@ Use this method to retrieve the first letters of all the elements in a view.
 
 | Item            | Format  | Description                                          |
 |-----------------|---------|------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID          | Integer | The view ID.                                         |
-| IncludeSubViews | Boolean | Whether subviews should be included.              |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID          | Integer | The view ID.                                         |
+| includeSubViews | Boolean | Whether subviews should be included.              |
 
 ## Output
 

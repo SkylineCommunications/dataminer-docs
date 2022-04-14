@@ -10,11 +10,11 @@ Use this method to retrieve the number of alarms for every alarm severity for th
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ServiceID | Integer | The service ID. |
-| UtcStartTime | Long integer | The start time of the timespan for which the alarm count should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| UtcEndTime | Long integer | The end time of the timespan for which the alarm count should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| serviceID | Integer | The service ID. |
+| utcStartTime | Long integer | The start time of the timespan for which the alarm count should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| utcEndTime | Long integer | The end time of the timespan for which the alarm count should be retrieved, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
 
 ## Output
 

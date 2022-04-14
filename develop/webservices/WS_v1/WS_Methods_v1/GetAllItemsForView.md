@@ -10,9 +10,9 @@ Use this method to retrieve all items (elements, services, service templates, re
 
 | Item            | Format  | Description                                          |
 |-----------------|---------|------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID          | Integer | The ID of the view.                                  |
-| IncludeSubViews | Boolean | Indicates whether subviews should be included.       |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID          | Integer | The ID of the view.                                  |
+| includeSubViews | Boolean | Indicates whether subviews should be included.       |
 
 ## Output
 

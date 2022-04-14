@@ -10,8 +10,8 @@ Use this method to retrieve the current alarm states of a number of views.
 
 | Item       | Format           | Description                                          |
 |------------|------------------|------------------------------------------------------|
-| Connection | String           | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewIDs    | Array of integer | The list of view IDs.                                |
+| connection | String           | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewIDs    | Array of integer | The list of view IDs.                                |
 
 ## Output
 

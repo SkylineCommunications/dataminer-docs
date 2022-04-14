@@ -10,7 +10,7 @@ Use this method to retrieve the list of DataMiner Agents in the DataMiner System
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 

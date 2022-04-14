@@ -10,9 +10,9 @@ Use this method to retrieve a list of the bookings for a specific job section. A
 
 | Item                | Format | Description                                          |
 |---------------------|--------|------------------------------------------------------|
-| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| JobID               | String | The ID of the job.                                   |
-| SectionDefinitionID | String | The ID of the job section definition.                |
+| connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| jobID               | String | The ID of the job.                                   |
+| sectionDefinitionID | String | The ID of the job section definition.                |
 
 ## Output
 

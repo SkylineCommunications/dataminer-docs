@@ -10,8 +10,8 @@ Use this method to retrieve all available Visio files assigned to a protocol.
 
 | Item         | Format | Description                                          |
 |--------------|--------|------------------------------------------------------|
-| Connection   | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ProtocolName | String | The name of the protocol.                            |
+| connection   | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| protocolName | String | The name of the protocol.                            |
 
 ## Output
 

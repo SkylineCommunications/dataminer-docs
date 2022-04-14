@@ -13,10 +13,10 @@ Use this method to delete several attachments from a ticket.
 
 | Item       | Format          | Description                                          |
 |------------|-----------------|------------------------------------------------------|
-| Connection | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer         | The DataMiner Agent ID.                              |
-| TicketID   | Integer         | The ID of the ticket.                                |
-| FileNames  | Array of string | The names of the attachment files.                   |
+| connection | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer         | The DataMiner Agent ID.                              |
+| ticketID   | Integer         | The ID of the ticket.                                |
+| fileNames  | Array of string | The names of the attachment files.                   |
 
 ## Output
 

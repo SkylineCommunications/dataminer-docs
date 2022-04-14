@@ -10,14 +10,14 @@ Use this method to retrieve a snapshot of trend data for a specified parameter.
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ElementID | Integer | The element ID. |
-| ParameterID | Integer | The parameter ID. |
-| TableIndex | String | The (optional) table index |
-| TrendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*. |
-| IntervalAmount | Integer | The number of intervals used in the histogram. |
-| AsPercentage | Boolean | Indicates whether the histogram should use percentages (= true) or absolute frequencies (= false). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| elementID | Integer | The element ID. |
+| parameterID | Integer | The parameter ID. |
+| tableIndex | String | The (optional) table index |
+| trendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*. |
+| intervalAmount | Integer | The number of intervals used in the histogram. |
+| asPercentage | Boolean | Indicates whether the histogram should use percentages (= true) or absolute frequencies (= false). |
 
 ## Output
 

@@ -10,8 +10,8 @@ Use this method to retrieve all the capacity parameters for a specific resource.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ResourceID | String | The resource ID.                                     |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| resourceID | String | The resource ID.                                     |
 
 ## Output
 

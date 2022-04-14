@@ -13,9 +13,9 @@ Use this method to edit the order of the ticket fields for a specific ticket typ
 
 | Item         | Format          | Description                                          |
 |--------------|-----------------|------------------------------------------------------|
-| Connection   | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TicketTypeID | GUID            | The GUID of the ticket type.                         |
-| FieldNames   | Array of string | The names of the fields in the new order.            |
+| connection   | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| ticketTypeID | GUID            | The GUID of the ticket type.                         |
+| fieldNames   | Array of string | The names of the fields in the new order.            |
 
 ## Output
 

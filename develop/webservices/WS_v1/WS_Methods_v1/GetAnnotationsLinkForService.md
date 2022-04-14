@@ -10,9 +10,9 @@ Use this method to retrieve a link to open the annotations page of the specified
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                              |
-| ServiceID  | Integer | The service ID.                                      |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                              |
+| serviceID  | Integer | The service ID.                                      |
 
 ## Output
 

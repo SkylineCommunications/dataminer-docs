@@ -10,9 +10,9 @@ Use this method to delete a specified service.
 
 | Item              | Format  | Description                                          |
 |-------------------|---------|------------------------------------------------------|
-| Connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID             | Integer | The DataMiner Agent ID.                              |
-| ServiceTemplateID | Integer | The service template ID.                             |
+| connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID             | Integer | The DataMiner Agent ID.                              |
+| serviceTemplateID | Integer | The service template ID.                             |
 
 ## Output
 

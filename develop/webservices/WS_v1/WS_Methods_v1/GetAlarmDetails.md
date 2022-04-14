@@ -10,9 +10,9 @@ Use this method to retrieve the alarm details for a specified alarm.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                              |
-| AlarmID    | Integer | The alarm ID.                                        |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                              |
+| alarmID    | Integer | The alarm ID.                                        |
 
 ## Output
 

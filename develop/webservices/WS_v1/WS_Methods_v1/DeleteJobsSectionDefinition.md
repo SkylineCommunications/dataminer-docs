@@ -13,8 +13,8 @@ Use this method to delete a job section definition. No longer supported from Dat
 
 | Item                | Format | Description                                          |
 |---------------------|--------|------------------------------------------------------|
-| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| SectionDefinitionID | String | The ID of the job section definition.                |
+| connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| sectionDefinitionID | String | The ID of the job section definition.                |
 
 ## Output
 
