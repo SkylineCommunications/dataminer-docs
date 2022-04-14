@@ -2296,6 +2296,8 @@
           topicUid: Controlling_remote_access
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
+        - name: Managing the nodes of a cloud-connected DMS
+          topicUID: Managing_cloud-connected_nodes
     - name: DataMiner Teams bot
       topicUid: DataMiner_Teams_bot
 - name: DataMiner Professional Services
