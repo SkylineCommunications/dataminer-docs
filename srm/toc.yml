@@ -23,3 +23,6 @@
       topicUid: srm_scripting
   - name: Getting started with SRM
     topicUid: srm_getting_started
+    items:
+    - name: Deploying the SRM framework
+      topicUid: deploying_srm
