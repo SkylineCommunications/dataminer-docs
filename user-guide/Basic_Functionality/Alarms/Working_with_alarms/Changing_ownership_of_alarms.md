@@ -8,12 +8,6 @@ The Alarm Ownership feature allows unambiguous assignment of responsibility for 
 
 When the DataMiner System generates a new alarm event, the *Alarm Type* property is set to “New Alarm”, the *Owner* property is set to “System”, and the *User Status* property is set to “Not Assigned”.
 
-- [Taking ownership of an alarm](#taking-ownership-of-an-alarm)
-
-- [Releasing ownership of an alarm](#releasing-ownership-of-an-alarm)
-
-- [Example of ownership transitions](#example-of-ownership-transitions)
-
 ## Taking ownership of an alarm
 
 To indicate to other users that you are aware of an issue and working on a resolution, you can take responsibility for an alarm record by taking ownership of it.
@@ -22,7 +16,7 @@ To do so:
 
 1. Right-click the alarm event in the *Active Alarms* tab of the Alarm Console, and select *Take Ownership*.
 
-2. In the *Take Ownership* window, enter a comment explaining why you are taking ownership of the alarm event.
+1. In the *Take Ownership* window, enter a comment explaining why you are taking ownership of the alarm event.
 
 When you take ownership of an alarm event, a new alarm record is added to the life cycle of that alarm event, where the *Alarm Type* property has been set to “Acknowledged”. The *Owner* property of the new alarm records that are added to the life cycle of that alarm will contain your user name.
 
@@ -61,4 +55,3 @@ The following example illustrates how the *Alarm Type*, *Owner* and *User Status
 
 > [!NOTE]
 > Whenever users take or release ownership of alarm events, they are invited to add a comment. Whether they do so or not, the DataMiner System will automatically add a comment as well. This automatically added comment will reveal who took or released ownership and when this was done.
->

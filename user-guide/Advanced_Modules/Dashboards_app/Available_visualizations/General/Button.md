@@ -55,3 +55,6 @@ To configure the component:
        - *Show success popup*: Determines whether a pop-up message is displayed when the script has been successfully executed. By default enabled.
 
        - *Custom success message*: Allows you to configure a custom message to be displayed when the script has been successfully executed.
+
+> [!NOTE]
+> From DataMiner 10.2.5/10.3.0 onwards, the output of an interactive Automation script can be used as a feed for other components, for example in a GQI query.

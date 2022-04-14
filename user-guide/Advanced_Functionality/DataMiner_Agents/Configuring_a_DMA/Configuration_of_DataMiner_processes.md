@@ -33,10 +33,6 @@ To set a different number:
 
 ## Setting the number of simultaneously running SLProtocol processes
 
-In the file *DataMiner.xml*, you can set the number of simultaneously running SLProtocol processes.
-
-### ProcessOptions
-
 The number of simultaneously running SLProtocol processes can be set in the *\<ProcessOptions>* tag of the *DataMiner.xml* file.
 
 By default, the number of simultaneously running processes is set to 5.
@@ -59,7 +55,7 @@ To set a different number:
 
 1. Save the file and restart DataMiner.
 
-### Separate SLProtocol process for every protocol being used
+## Configuring a separate SLProtocol process for every protocol used
 
 For testing purposes, you can order a DataMiner Agent to spread its elements across different SLProtocol processes based on the protocol they are using.
 
@@ -86,7 +82,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
 
 1. Restart the DataMiner software.
 
-## Having separate SLScripting processes created for every protocol being used
+## Configuring a separate SLScripting process for every protocol used
 
 If you suspect that a particular protocol is causing a problem in the SLScripting process, then you can have separate SLScripting processes created for every protocol being used. This will then allow you to pinpoint the protocol that is causing the problem.
 
@@ -111,7 +107,7 @@ To have separate SLScripting processes created for every protocol being used, do
 > [!WARNING]
 > Never use this option in a production environment without having consulted Skyline Tech Support.
 
-## Having separate SLScripting processes created for each SLProtocol process
+## Configuring a separate SLScripting process for each SLProtocol process
 
 In a system where the load for one particular protocol has to be spread over several processes, because otherwise too much memory would be needed for one process, it can be useful to have a dedicated SLScripting process created for each SLProtocol process:
 
@@ -135,6 +131,44 @@ In a system where the load for one particular protocol has to be spread over sev
 
 > [!WARNING]
 > Never use this option in a production environment without having consulted Skyline Tech Support.
+
+## Configuring separate SLProtocol and SLScripting instances for a specific protocol
+
+As some protocols have QActions that require a large amount of memory, elements using these protocols can cause SLScripting to run out of memory when they run together in the same process instance. From DataMiner 10.2.5/10.3.0 onwards, you can prevent this by making such elements run in their own SLProtocol and SLScripting instances.
+
+When a protocol is flagged to run in separate instances, every element using that protocol will be started in a new instance of SLProtocol and SLScripting. When the element is stopped, these instances are taken down again, and when the element restarts, new instances are created.
+
+To configure this:
+
+1. Stop the DataMiner software.
+
+1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+1. In the *\<ProcessOptions>* element, specify a *\<SeparateProcesses>* element listing the protocols that should run in separate SLProtocol and SLScripting instances. For example:
+
+   ```xml
+   <DataMiner>
+      ...
+      <ProcessOptions protocolProcesses="3" scriptingProcesses="protocol">
+         <SeparateProcesses>
+            <Protocols>
+               <Protocol>
+                  <Name>MyElementProtocol</Name>
+               </Protocol>
+            </Protocols>
+         </SeparateProcesses>
+      </ProcessOptions>
+      ...
+   </DataMiner>
+   ```
+
+1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+1. Restart the DataMiner software.
+
+> [!NOTE]
+> - A separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the *SeparateProcesses* tag, the configuration of the *scriptingProcesses* attribute will be overridden to "protocol", except if it is set to "\[Service]" (see [Running SLScripting as a service](#running-slscripting-as-a-service)). Configuring separate SLProtocol and SLScripting instances for a protocol is not compatible with a configuration where SLScripting is configured as a service. If you do configure both of these options, the configuration to run separate SLProtocol and SLScripting instances will be ignored, and a notice alarm will be generated with more information.
+> - DataMiner.xml files are not synchronized in a DMS. If your DMS consists of multiple DMAs, you will need to edit the DataMiner.xml file on each of the DMAs.
 
 ## Having replicated elements handled by one SLProtocol process
 

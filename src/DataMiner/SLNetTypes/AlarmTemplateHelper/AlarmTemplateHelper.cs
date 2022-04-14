@@ -22,7 +22,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 	/// </remarks>
 	/// <example>
 	/// <code>
-	/// AlarmTemplateHelper helper = new AlarmTemplateHelper(Engine.SLNetRaw.HandleMessages);
+	/// AlarmTemplateHelper helper = new AlarmTemplateHelper(engine.SendSLNetMessages);
 	/// 
 	/// var id = new AlarmTemplateID("AlarmTemplate", "Protocol", "1.0.0.0");
 	/// var rowId = new AlarmTemplateRowID(1, "condition", "filter");

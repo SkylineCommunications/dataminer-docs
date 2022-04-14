@@ -11,13 +11,11 @@ Thanks to alarm threshold hysteresis, you can fine-tune the sensitivity of your 
 > - [Configuring alarm hysteresis in an alarm template](xref:Configuring_alarm_templates#configuring-alarm-hysteresis-in-an-alarm-template)
 > - [Polling.xml](xref:Polling_xml#pollingxml)
 
-### Graphical representation
+## Graphical representation
 
 ![](~/user-guide/images/hysteresis.jpg)
 
-
-
-### Methods
+## Methods
 
 DataMiner supports two methods of hysteresis:
 

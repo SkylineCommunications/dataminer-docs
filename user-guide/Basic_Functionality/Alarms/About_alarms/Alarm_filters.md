@@ -29,5 +29,4 @@ Three types of alarm filters are available:
 > - If you have been granted the user permission *Edit/delete protected filters*, you will be able to make changes to protected filters even if you were not the one who created them.
 
 > [!TIP]
-> See also:
-> [Applying alarm filters in the Alarm Console](xref:ApplyingAlarmFiltersInTheAlarmConsole#applying-alarm-filters-in-the-alarm-console)
+> See also: [Applying alarm filters in the Alarm Console](xref:ApplyingAlarmFiltersInTheAlarmConsole#applying-alarm-filters-in-the-alarm-console)

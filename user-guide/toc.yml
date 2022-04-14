@@ -1068,9 +1068,24 @@
             - name: Securing the DataMiner Databases
               topicUID: Database_security
               items:
-                - name: Cassandra general database
+                - name: Securing the Cassandra general database
                   topicUid: Security_Cassandra_general
-                - name: Elasticsearch database
+                  items:
+                    - name: Cassandra authentication
+                      topicUid: Cassandra_authentication
+                    - name: Cassandra authorization
+                      topicUid: Cassandra_authorization
+                    - name: Encryption in Cassandra
+                      topicUid: Security_Cassandra_TLS
+                    - name: Running Cassandra as a non-SYSTEM user (Windows)
+                      topicUid: Running_Cassandra_as_non-SYSTEM_user
+                    - name: Firewall ports used with Cassandra
+                      topicUid: Cassandra_firewall
+                    - name: Updating Cassandra
+                      topicUid: Cassandra_updating
+                    - name: Updating Java for Cassandra
+                      topicUid: Cassandra_Java_updating
+                - name: Securing the Elasticsearch database
                   topicUid: Security_Elasticsearch
             - name: Customizing the layout of notification messages
               topicUid: Customizing_the_layout_of_notification_messages
@@ -2384,6 +2399,13 @@
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
               topicUid: Changing_the_maximum_size_of_DataMiner_log_files
+    - name: Troubleshooting procedures
+      topicUid: Troubleshooting_procedures
+      items:
+        - name: Investigating NATS issues
+          topicUid: Investigating_NATS_Issues
+        - name: Sharing dashboard window does not disappear
+          topicUID: Sharing_dashboard_window_does_not_disappear
 - name: Reference
   topicUid: Part7Reference
   items:
