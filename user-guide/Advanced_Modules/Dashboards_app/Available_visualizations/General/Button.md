@@ -9,9 +9,21 @@ uid: DashboardButton
 
 In the Dashboards app, this component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButton* is enabled. In the DataMiner Application Framework, it is available by default.
 
-The component can be linked to one or more button parameters, so that users can click a button to execute a particular action.
-
 To configure the component:
+
+## [In the DataMiner Application Framework](#tab/tabid-1)
+
+1. In the *Settings* tab, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring custom app events](xref:Configuring_custom_apps#configuring-custom-app-events).
+
+1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+
+   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+
+   - *Label*: Determines which text is displayed on the button.
+
+   - *Icon*: Allows you to select an icon to be displayed next to the label.
+
+## [In the Dashboards app](#tab/tabid-2)
 
 1. Apply a parameter data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
@@ -56,5 +68,7 @@ To configure the component:
 
        - *Custom success message*: Allows you to configure a custom message to be displayed when the script has been successfully executed.
 
+***
+
 > [!NOTE]
-> From DataMiner 10.2.5/10.3.0 onwards, the output of an interactive Automation script can be used as a feed for other components, for example in a GQI query.
+> From DataMiner 10.2.5/10.3.0 onwards, the output of an (interactive) Automation script can be used as a feed for other components, for example in a GQI query.

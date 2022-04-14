@@ -21,7 +21,7 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
 - *Alarm*: Nodes and edges are colored according to the highest severity of the parameters in the tooltip.
 
-To configure the component:
+## Basic component configuration
 
 1. Add the query data feeds that will represent the nodes and edges.
 
@@ -71,47 +71,70 @@ To configure the component:
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
 
-1. Optionally, fine-tune the layout of the component with the following settings in the *Layout* tab:
+## Component actions configuration
 
-   - *Column filters*: Only available up to DataMiner 10.1.10. Optionally, you can specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
+If you add a node edge graph to a custom app using the DataMiner Application Framework, you can also configure actions for the component. This feature is not available in the Dashboards app.
 
-     - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
+To configure actions:
 
-     - Alternatively, from DataMiner 10.20/10.1.8 onwards, you can filter on specific text instead. To do so, select the column you want to use for highlighting, specify the text, and select the highlight color. By default, the value will need to be equal to the specified text to be highlighted. However, you can change this by clicking *equal* above the text box and selecting *contain* or *match regex* instead, depending on the type of filtering you want to apply. You can also apply a negative filter by clicking *does*, which will make this field switch to *does not* instead.
+1. In the *Component* \> *Settings* pane, under the nodes or edges you want to configure actions for, expand the *Actions* section.
 
-     - Multiple filters can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters.
+1. Click *Add action*.
 
-     - You can remove a column filter again by selecting *No color* instead of a specific color.
+1. To specify how the action is triggered, at the top of the action configuration section, click the icon for click, double-click, or button in tooltip.
 
-   - *Filters & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the *Query filter* component, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
+1. In the *Label* box, specify a label for the action.
 
-     - *Conditional coloring*: (Replaces the *Column filters* option from prior to 10.1.11.) This option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
+1. In the *Icon* box, select an icon for the action.
 
-       - If the column you want to use for highlighting contains discrete values, click the color icon next to a value and then specify a highlight color for that value. If there are too many values to easily list them, you will first need to specify a filter in order to select a value.
+1. In the *Action* box, select the action that should be executed. See [Configuring custom app events](xref:Configuring_custom_apps#configuring-custom-app-events).
 
-       - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
+> [!NOTE]
+> You can also override the default action for a node or edge using the *Add override* option.
 
-     - *Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled
+## Layout configuration
 
-     - *Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.
+You can fine-tune the layout of the component with the following settings in the *Layout* tab:
 
-       > [!NOTE]
-       > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
+- *Column filters*: Only available up to DataMiner 10.1.10. Optionally, you can specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
 
-     - *Highlight/Show entire path*: When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure they are a part of (from root to leaves).
+  - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
 
-   - *Node positions*: By default, this is set to *Layered*, which means nodes are displayed in different layers. Set this to *Custom* if you want to allow users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
+  - Alternatively, from DataMiner 10.20/10.1.8 onwards, you can filter on specific text instead. To do so, select the column you want to use for highlighting, specify the text, and select the highlight color. By default, the value will need to be equal to the specified text to be highlighted. However, you can change this by clicking *equal* above the text box and selecting *contain* or *match regex* instead, depending on the type of filtering you want to apply. You can also apply a negative filter by clicking *does*, which will make this field switch to *does not* instead.
 
-   - Direction: Determines how different nodes are displayed depending on their importance, as indicated by their configured weight:
+  - Multiple filters can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters.
 
-     - *Backwards*: Nodes are displayed from right to left in order of importance.
+  - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-     - *Downwards*: Nodes are displayed from top to bottom in order of importance.
+- *Filters & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the *Query filter* component, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
 
-     - *Forwards*: Nodes are displayed from left to right in order of importance;
+  - *Conditional coloring*: (Replaces the *Column filters* option from prior to 10.1.11.) This option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
 
-     - *Upwards*: Nodes are displayed from bottom to top in order of importance
+    - If the column you want to use for highlighting contains discrete values, click the color icon next to a value and then specify a highlight color for that value. If there are too many values to easily list them, you will first need to specify a filter in order to select a value.
 
-   - *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can use the scroll wheel of the mouse to zoom in or out. Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
+    - If the column you want to use for highlighting contains values for which a specific range can be specified, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
 
-   - *Edge style*: Select whether the connections should be displayed as curly or straight lines.
+  - *Highlight*: When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled
+
+  - *Opacity*: When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.
+
+    > [!NOTE]
+    > When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized.
+
+  - *Highlight/Show entire path*: When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure they are a part of (from root to leaves).
+
+- *Node positions*: By default, this is set to *Layered*, which means nodes are displayed in different layers. Set this to *Custom* if you want to allow users with editing permission to drag and drop the nodes to a custom position. In that case, it is also possible to select a group of nodes by keeping the Ctrl key pressed while clicking them, and then move them together.
+
+- Direction: Determines how different nodes are displayed depending on their importance, as indicated by their configured weight:
+
+  - *Backwards*: Nodes are displayed from right to left in order of importance.
+
+  - *Downwards*: Nodes are displayed from top to bottom in order of importance.
+
+  - *Forwards*: Nodes are displayed from left to right in order of importance;
+
+  - *Upwards*: Nodes are displayed from bottom to top in order of importance
+
+- *Zooming*: Select whether users should be able to zoom in on the component or not. When this option is enabled, you can use the scroll wheel of the mouse to zoom in or out. Alternatively, you can right-click and drag across an area of the graph to zoom in on that area. Enabling this option also makes it possible to pan the graph by dragging it while keeping the left mouse button pressed.
+
+- *Edge style*: Select whether the connections should be displayed as curly or straight lines.

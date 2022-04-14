@@ -5,7 +5,7 @@ uid: Deleting_custom_apps
 # Deleting a custom application
 
 > [!NOTE]
-> To add, edit, delete, and publish custom applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps).
+> To add, edit, delete, or publish custom applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps).
 
 To delete an existing custom application:
 

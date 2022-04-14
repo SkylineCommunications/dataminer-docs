@@ -5,7 +5,7 @@ uid: Editing_custom_apps
 # Editing a custom application
 
 > [!NOTE]
-> To add, edit, delete, and publish custom applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps).
+> To add, edit, delete, or publish custom applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps).
 
 To edit an existing custom application:
 
@@ -19,3 +19,6 @@ To edit an existing custom application:
 1. Edit the app as needed. See [Configuring custom applications](xref:Configuring_custom_apps).
 
 1. When the app is ready, click the ![Publish](~/user-guide/images/AppPublishIcon.png) icon in the header bar to save your changes and publish it.
+
+   > [!NOTE]
+   > When you edit an existing app but do not publish your changes, the app will be reverted to a draft app.

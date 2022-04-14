@@ -5,7 +5,7 @@ uid: Creating_custom_apps
 # Creating custom applications
 
 > [!NOTE]
-> To add, edit, delete, and publish custom applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps).
+> To add, edit, delete, or publish custom applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps).
 
 To create a new custom application:
 
@@ -24,4 +24,4 @@ To create a new custom application:
 1. When your app is ready, click the ![Publish](~/user-guide/images/AppPublishIcon.png) icon in the header bar to save your changes and publish it.
 
    > [!NOTE]
-   > When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to have it saved as a draft. However, draft apps are not shown by default on the landing page. To view them, click the cogwheel button and activate *Show draft applications*.
+   > When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to save it as a draft. However, draft apps are not shown by default on the landing page. To view them, click the cogwheel button and activate *Show draft applications*.

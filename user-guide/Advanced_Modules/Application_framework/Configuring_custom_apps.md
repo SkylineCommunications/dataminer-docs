@@ -5,7 +5,7 @@ uid: Configuring_custom_apps
 # Configuring custom applications
 
 > [!NOTE]
-> To add, edit, delete, and publish custom applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps).
+> To add, edit, delete, or publish custom applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps).
 
 ## Customizing the icon and color of an app
 
@@ -37,6 +37,9 @@ Custom apps can consist of one or more pages. To configure a page in a custom ap
 
 1. If one or more actions should be triggered when the page is loaded, in the page configuration pane, open the *Events* section and click the configuration button next to *On page load*. Then configure the action(s) that should be triggered. See [Configuring custom app events](#configuring-custom-app-events)
 
+> [!NOTE]
+> To delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon.
+
 ## Configuring a panel of a custom app
 
 In addition to pages, panels can be configured in custom apps. These contain secondary content that can be shown on top of pages. Panels can be shown or hidden via actions, for example when a user clicks a button.
@@ -51,15 +54,18 @@ In addition to pages, panels can be configured in custom apps. These contain sec
 
 1. Click the pencil icon to configure the components on the panel. Configuring these components is done in the same way as configuring components in the Dashboards app. See [Configuring dashboard components](xref:Configuring_dashboard_components). For a list of the available components, refer to [Available visualizations](xref:Available_visualizations) in the Dashboards section.
 
+> [!NOTE]
+> To delete a panel, click the garbage can icon next to the panel name in the page configuration pane, and then click the confirmation icon.
+
 ## Configuring the header bar of a custom app page
 
 1. Click the *headerbar* toggle button.
 
 1. Click the "+" icon on the left or right side of the page header bar, depending on where you want to add a button to the header bar.
 
-1. Enter a name for the button in the header bar.
+1. Enter a name for the button. You can do so directly on the button in the header bar, or in the page configuration pane.
 
-1. In the page configuration pane, select an icon for the button.
+1. In the page configuration pane, expand the *Icon* section to select an icon for the button.
 
 1. If you want the button to be a drop-down box, click the ![Set as drop-down](~/user-guide/images/AppSetAsDropdown.png) icon.
 
@@ -71,6 +77,9 @@ In addition to pages, panels can be configured in custom apps. These contain sec
 
 1. Add and configure additional buttons if needed.
 
+> [!NOTE]
+> To delete a button, click the garbage can icon next to that button in the page configuration pane, and then click the confirmation icon.
+
 ## Configuring custom app events
 
 At present two types of events can be configured in the DataMiner Application Framework:
@@ -80,7 +89,7 @@ At present two types of events can be configured in the DataMiner Application Fr
 
 For each of these events, you can configure actions as follows:
 
-- To launch a script, select *Launch a script* and select the script.
+- To launch a script, select *Launch a script* and select the script. If the script requires input such as dummies and parameters, configure these as well. The *Use feed* checkbox allows you to link a parameter to an existing feed. Optionally, click the *Show settings* button to configure [script execution options](xref:Script_execution_options).
 
 - To navigate to a URL, select *Navigate to a URL* and specify the URL.
 
@@ -92,9 +101,13 @@ For each of these events, you can configure actions as follows:
 
 - To open another app, select *Open an app* and select the app. You can select any of the custom apps that have been published in your DMS.
 
+- To execute an action for a specific component, select *Execute component action* and specify which action should be executed. This option is only displayed if there is a component action that can be executed. For example, if you configure this action for a [Table](xref:DashboardTable) component, you can select the options *Clear selection*, *Fetch the data*, or *Select an item*.
+
 - After you have configured an action, you can click *Upon completion* to configure another action that should occur as soon as the previous action is completed. Alternatively, you can configure another action that should happen at the same time with the *Add action* button in the lower right corner.
 
-> [!NOTE]
+- To remove an action, in the action configuration window, click the garbage can icon in the top-right corner of the section for that action, and then click the confirmation icon.
+
+> [!TIP]
 > Actions can be combined and chained to create more complex behavior. For example, an *Open a page* action can be followed by an *Open a panel* action to open a panel on a specific page. While the panel is being opened, a *Launch a script* action can execute an Automation script that updates parameters that will be displayed on that panel. All of this can be triggered from a header bar button, for example on the initial page.
 
 ## Configuring custom app security
