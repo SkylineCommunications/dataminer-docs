@@ -2187,8 +2187,6 @@
         - name: Interacting with the Booking Manager app using custom Automation scripts
           topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
           items:
-            - name: Script types
-              topicUid: Script_types
             - name: Silent actions
               topicUid: Silent_actions
             - name: Frequently asked questions related to bookings and scripting
