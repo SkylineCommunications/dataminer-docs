@@ -21,4 +21,4 @@ To edit an existing custom application:
 1. When the app is ready, click the ![Publish](~/user-guide/images/AppPublishIcon.png) icon in the header bar to save your changes and publish it.
 
    > [!NOTE]
-   > When you edit an existing app but do not publish your changes, the app will be reverted to a draft app.
+   > Once an app has been published, it is not possible to revert it to a draft.
