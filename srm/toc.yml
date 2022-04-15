@@ -26,3 +26,7 @@
     items:
     - name: Deploying the SRM framework
       topicUid: deploying_srm
+    - name: Provisioning the data acquisition and control plane
+      topicUid: provisioning_srm
+    - name: Implementing a function
+      topicUid: implementing_function_srm
