@@ -22,7 +22,7 @@ To upgrade the DxMs used by the nodes in a cloud-connected DataMiner System:
 
 1. Click the *Manage nodes* button at the top of the pane on the left.
 
-1. To upgrade all installed DxMs to the latest version, click *Install latest available versions*. Alternatively, to upgrade specific DxMs only, click the *Upgrade* button for those DxMs.
+1. To upgrade all DxMs installed on a node to the latest version, click *Install latest available versions*. Alternatively, to upgrade specific DxMs only, click the *Upgrade* button for those DxMs.
 
    > [!NOTE]
    > If a node has a higher DxM version installed than the current version, a *Downgrade* button will be displayed instead.
