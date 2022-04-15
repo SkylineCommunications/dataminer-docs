@@ -10,10 +10,10 @@ Use this method to retrieve the data of a particular parameter by name.
 
 | Item          | Format  | Description                                                                                                 |
 |---------------|---------|-------------------------------------------------------------------------------------------------------------|
-| Connection    | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                            |
-| ElementName   | String  | The element name.                                                                                           |
-| ParameterName | Integer | The parameter name.                                                                                         |
-| TableIndex    | String  | The table index. This field must be specified for table column parameters; otherwise it must be left empty. |
+| connection    | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                            |
+| elementName   | String  | The element name.                                                                                           |
+| parameterName | Integer | The parameter name.                                                                                         |
+| tableIndex    | String  | The table index. This field must be specified for table column parameters; otherwise it must be left empty. |
 
 ## Output
 

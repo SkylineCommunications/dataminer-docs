@@ -10,9 +10,9 @@ Use this method to retrieve the data of all services in a particular view.
 
 | Item            | Format  | Description                                                                      |
 |-----------------|---------|----------------------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID          | Integer | The view ID.                                                                     |
-| IncludeSubViews | Boolean | Indicates whether services from subviews are included.                           |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID          | Integer | The view ID.                                                                     |
+| includeSubViews | Boolean | Indicates whether services from subviews are included.                           |
 
 ## Output
 

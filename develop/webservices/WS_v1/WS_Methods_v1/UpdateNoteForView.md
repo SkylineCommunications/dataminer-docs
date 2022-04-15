@@ -10,9 +10,9 @@ Use this method to update a specific note for a particular view.
 
 | Item       | Format  | Description                                                                          |
 |------------|---------|--------------------------------------------------------------------------------------|
-| Connection | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
-| ViewID     | Integer | The ID of the view for which the note should be updated.                             |
-| Note.ID    | Integer | The ID of the note.                                                                  |
+| connection | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
+| viewID     | Integer | The ID of the view for which the note should be updated.                             |
+| note.ID    | Integer | The ID of the note.                                                                  |
 
 ## Output
 

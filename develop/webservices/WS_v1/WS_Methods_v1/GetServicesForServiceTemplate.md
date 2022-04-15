@@ -10,9 +10,9 @@ Use this method to retrieve all the services attached to a specified service tem
 
 | Item              | Format  | Description                                                                      |
 |-------------------|---------|----------------------------------------------------------------------------------|
-| Connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID             | Integer | The DataMiner Agent ID.                                                          |
-| ServiceTemplateID | Integer | The ID of the service template.                                                  |
+| connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID             | Integer | The DataMiner Agent ID.                                                          |
+| serviceTemplateID | Integer | The ID of the service template.                                                  |
 
 ## Output
 

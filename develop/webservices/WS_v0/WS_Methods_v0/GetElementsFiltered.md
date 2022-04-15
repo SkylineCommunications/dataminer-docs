@@ -13,9 +13,9 @@ Use this method to request a specified series of elements.
 
 | Item       | Format  | Description                                       |
 |------------|---------|---------------------------------------------------|
-| Connection | String  | The connection ID. See [Connect](xref:Connect).     |
-| Index      | Integer | The point from which to start returning elements. |
-| Count      | Integer | The number of elements to be returned.            |
+| connection | String  | The connection ID. See [Connect](xref:Connect).     |
+| index      | Integer | The point from which to start returning elements. |
+| count      | Integer | The number of elements to be returned.            |
 
 ## Output
 

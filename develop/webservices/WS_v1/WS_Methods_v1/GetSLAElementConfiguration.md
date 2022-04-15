@@ -12,9 +12,9 @@ Available from DataMiner 9.0.5 onwards.
 
 | Item       | Format  | Description                                                                          |
 |------------|---------|--------------------------------------------------------------------------------------|
-| Connection | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                              |
-| ElementID  | Integer | The ID of the SLA element.                                                           |
+| connection | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                              |
+| elementID  | Integer | The ID of the SLA element.                                                           |
 
 ## Output
 

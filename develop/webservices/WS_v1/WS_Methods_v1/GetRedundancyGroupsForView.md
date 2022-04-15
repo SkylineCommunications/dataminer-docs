@@ -10,9 +10,9 @@ Use this method to retrieve all the redundancy groups for a particular view.
 
 | Item            | Format  | Description                                                                      |
 |-----------------|---------|----------------------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID          | Integer | The view ID.                                                                     |
-| IncludeSubViews | Boolean | Indicates whether redundancy groups from subviews are included.                  |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID          | Integer | The view ID.                                                                     |
+| includeSubViews | Boolean | Indicates whether redundancy groups from subviews are included.                  |
 
 ## Output
 

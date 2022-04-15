@@ -10,9 +10,9 @@ This method allows you to test a connection to a device, without actually creati
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| Configuration | [DMAElementConfiguration](xref:DMAElementConfiguration) | The element configuration for which the connection is to be tested. |
+| connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| configuration | [DMAElementConfiguration](xref:DMAElementConfiguration) | The element configuration for which the connection is to be tested. |
 
 ## Output
 

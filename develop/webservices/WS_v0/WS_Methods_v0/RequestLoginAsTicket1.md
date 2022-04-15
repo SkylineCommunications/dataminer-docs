@@ -10,7 +10,7 @@ Use this method to request a logon ticket that can then be added to e.g. a DataM
 
 | Item       | Format | Description                                   |
 |------------|--------|-----------------------------------------------|
-| Connection | String | The connection ID. See [Connect](xref:Connect). |
+| connection | String | The connection ID. See [Connect](xref:Connect). |
 
 ## Output
 

@@ -13,9 +13,9 @@ Use this method to request the current state and current value(s) of specific pa
 
 | Item        | Format          | Description                                   |
 |-------------|-----------------|-----------------------------------------------|
-| Connection  | String          | The connection ID. See [Connect](xref:Connect). |
+| connection  | String          | The connection ID. See [Connect](xref:Connect). |
 | ElementName | String          | The element name.                             |
-| Parameters  | Array of string | The names or IDs of the requested parameters. |
+| parameters  | Array of string | The names or IDs of the requested parameters. |
 
 ## Output
 

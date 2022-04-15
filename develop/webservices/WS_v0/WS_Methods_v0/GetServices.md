@@ -10,7 +10,7 @@ Use this method to request a list of all the services in the DMS.
 
 | Item       | Format | Description                                   |
 |------------|--------|-----------------------------------------------|
-| Connection | String | The connection ID. See [Connect](xref:Connect). |
+| connection | String | The connection ID. See [Connect](xref:Connect). |
 
 ## Output
 

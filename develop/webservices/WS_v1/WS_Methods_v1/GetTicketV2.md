@@ -14,9 +14,9 @@ Use this method to retrieve a specific ticket.
 
 | Item           | Format  | Description                                                                      |
 |----------------|---------|----------------------------------------------------------------------------------|
-| Connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TicketID       | Integer | The ID of the ticket.                                                            |
-| IncludeHistory | Boolean | Determines whether the revision history of the ticket is included.               |
+| connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| ticketID       | Integer | The ID of the ticket.                                                            |
+| includeHistory | Boolean | Determines whether the revision history of the ticket is included.               |
 
 ## Output
 

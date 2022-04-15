@@ -10,10 +10,10 @@ Use this method to retrieve the data of all the parameters on a particular Data 
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                          |
-| ElementID  | Integer | The element ID.                                                                  |
-| PageName   | String  | The name of the element page.                                                    |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                          |
+| elementID  | Integer | The element ID.                                                                  |
+| pageName   | String  | The name of the element page.                                                    |
 
 ## Output
 

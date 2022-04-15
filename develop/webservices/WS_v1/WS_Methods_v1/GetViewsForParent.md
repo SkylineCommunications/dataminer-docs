@@ -10,8 +10,8 @@ Use this method to retrieve all the views in a particular parent view.
 
 | Item         | Format  | Description                                                                      |
 |--------------|---------|----------------------------------------------------------------------------------|
-| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ParentViewID | Integer | The parent view ID.                                                              |
+| connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| parentViewID | Integer | The parent view ID.                                                              |
 
 ## Output
 

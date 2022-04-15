@@ -10,7 +10,7 @@ Use this method to request the properties of a specific service (referenced by n
 
 | Item        | Format | Description                                   |
 |-------------|--------|-----------------------------------------------|
-| Connection  | String | The connection ID. See [Connect](xref:Connect). |
+| connection  | String | The connection ID. See [Connect](xref:Connect). |
 | ServiceName | String | The service name.                             |
 
 ## Output

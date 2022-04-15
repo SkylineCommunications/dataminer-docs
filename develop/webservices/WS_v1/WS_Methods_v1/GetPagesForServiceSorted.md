@@ -13,12 +13,12 @@ Use this method to retrieve a specific number of Data Display pages of a particu
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                          |
-| ServiceID  | Integer | The service ID.                                                                  |
-| Index      | Integer | The point from which to start returning Data Display pages.                      |
-| Count      | Integer | The number of Data Display pages to be returned.                                 |
-| OrderBy    | String  | The field(s) by which to order the Data Display pages (separated by semicolons). |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                          |
+| serviceID  | Integer | The service ID.                                                                  |
+| index      | Integer | The point from which to start returning Data Display pages.                      |
+| count      | Integer | The number of Data Display pages to be returned.                                 |
+| orderBy    | String  | The field(s) by which to order the Data Display pages (separated by semicolons). |
 
 ## Output
 

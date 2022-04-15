@@ -14,11 +14,11 @@ All images are in PNG format, and are base64 encoded.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID     | Integer | The view ID.                                                                     |
-| Width      | Integer | The width of the image to be returned.                                           |
-| Height     | Integer | The height of the image to be returned.                                          |
-| Page       | Integer | The page of the Visio file to be returned.                                       |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID     | Integer | The view ID.                                                                     |
+| width      | Integer | The width of the image to be returned.                                           |
+| height     | Integer | The height of the image to be returned.                                          |
+| page       | Integer | The page of the Visio file to be returned.                                       |
 
 ## Output
 

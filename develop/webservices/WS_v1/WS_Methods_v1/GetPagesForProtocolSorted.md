@@ -10,12 +10,12 @@ Use this method to retrieve a specific number of pages for a specified protocol.
 
 | Item            | Format  | Description                                                                      |
 |-----------------|---------|----------------------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ProtocolName    | String  | The name of the protocol                                                         |
-| ProtocolVersion | String  | The protocol version                                                             |
-| Index           | Integer | The point from which to start returning child pages.                             |
-| Count           | Integer | The number of pages to be returned.                                              |
-| OrderBy         | String  | The field(s) by which to order the pages (separated by semicolons).              |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| protocolName    | String  | The name of the protocol                                                         |
+| protocolVersion | String  | The protocol version                                                             |
+| index           | Integer | The point from which to start returning child pages.                             |
+| count           | Integer | The number of pages to be returned.                                              |
+| orderBy         | String  | The field(s) by which to order the pages (separated by semicolons).              |
 
 ## Output
 

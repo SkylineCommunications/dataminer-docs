@@ -10,7 +10,7 @@ Use this method to retrieve all resources in the DataMiner System.
 
 | Item       | Format | Description                                                                          |
 |------------|--------|--------------------------------------------------------------------------------------|
-| Connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
+| connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 

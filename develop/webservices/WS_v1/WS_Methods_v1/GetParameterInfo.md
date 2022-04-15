@@ -10,10 +10,10 @@ Use this method to retrieve general information for a particular parameter.
 
 | Item        | Format  | Description                                                                      |
 |-------------|---------|----------------------------------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID       | Integer | The DataMiner Agent ID.                                                          |
-| ElementID   | Integer | The element ID.                                                                  |
-| ParameterID | Integer | The parameter ID.                                                                |
+| connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID       | Integer | The DataMiner Agent ID.                                                          |
+| elementID   | Integer | The element ID.                                                                  |
+| parameterID | Integer | The parameter ID.                                                                |
 
 ## Output
 

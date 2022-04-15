@@ -10,8 +10,8 @@ Use this method to request the current alarm state of a specific service (refere
 
 | Item       | Format  | Description                                   |
 |------------|---------|-----------------------------------------------|
-| Connection | String  | The connection ID. See [Connect](xref:Connect). |
-| DmaID      | Integer | The DataMiner Agent ID.                       |
+| connection | String  | The connection ID. See [Connect](xref:Connect). |
+| DMAID      | Integer | The DataMiner Agent ID.                       |
 | ServiceID  | Integer | The service ID.                               |
 
 ## Output

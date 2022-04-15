@@ -13,9 +13,9 @@ Use this method to retrieve the names of all files attached to a specific ticket
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                          |
-| TicketID   | Integer | The ticket ID.                                                                   |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                          |
+| ticketID   | Integer | The ticket ID.                                                                   |
 
 ## Output
 

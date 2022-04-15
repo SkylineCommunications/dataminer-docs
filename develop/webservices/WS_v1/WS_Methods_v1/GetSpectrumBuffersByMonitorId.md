@@ -10,10 +10,10 @@ Use this method to retrieve the spectrum buffers for a particular spectrum monit
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                          |
-| ElementID  | Integer | The element ID of the spectrum analyzer element.                                 |
-| MonitorID  | Integer | The ID of the spectrum monitor.                                                  |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                          |
+| elementID  | Integer | The element ID of the spectrum analyzer element.                                 |
+| monitorID  | Integer | The ID of the spectrum monitor.                                                  |
 
 ## Output
 

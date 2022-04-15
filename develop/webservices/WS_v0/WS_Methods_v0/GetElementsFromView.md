@@ -10,9 +10,9 @@ Use this method to request a list of all the elements in a specific view.
 
 | Item            | Format  | Description                                                              |
 |-----------------|---------|--------------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [Connect](xref:Connect).                            |
-| ViewName        | String  | The view name.                                                           |
-| IncludeSubViews | Boolean | If true, then all the elements in the subviews will be returned as well. |
+| connection      | String  | The connection ID. See [Connect](xref:Connect).                            |
+| viewName        | String  | The view name.                                                           |
+| includeSubViews | Boolean | If true, then all the elements in the subviews will be returned as well. |
 
 ## Output
 
