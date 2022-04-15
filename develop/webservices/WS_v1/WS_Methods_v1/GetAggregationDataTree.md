@@ -10,9 +10,9 @@ Use this method to retrieve the data of a number of specified aggregation rules.
 
 | Item       | Format         | Description                                                                                |
 |------------|----------------|--------------------------------------------------------------------------------------------|
-| Connection | String         | The connection ID. See [ConnectApp](xref:ConnectApp).                                       |
-| RuleIDs    | Array of GUIDs | The aggregation rule GUIDs.                                                                |
-| RootViewID | Integer        | The view for which results are returned. To retrieve all aggregation data, specify -1. |
+| connection | String         | The connection ID. See [ConnectApp](xref:ConnectApp).                                       |
+| ruleIDs    | Array of GUIDs | The aggregation rule GUIDs.                                                                |
+| rootViewID | Integer        | The view for which results are returned. To retrieve all aggregation data, specify -1. |
 
 ## Output
 

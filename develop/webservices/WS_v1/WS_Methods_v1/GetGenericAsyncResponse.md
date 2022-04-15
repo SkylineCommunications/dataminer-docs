@@ -13,7 +13,7 @@ Use this method to retrieve the result of a task that was sent to the server usi
 
 | Item | Format | Description |
 |--|--|--|
-| Ticket | String | The ticket that was returned by the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
+| ticket | String | The ticket that was returned by the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
 
 ## Output
 

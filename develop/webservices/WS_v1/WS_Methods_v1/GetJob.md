@@ -10,9 +10,9 @@ Use this method to retrieve a specific job.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DomainID   | String | The ID of the job domain.                            |
-| JobID      | String | The ID of the job.                                   |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| domainID   | String | The ID of the job domain.                            |
+| jobID      | String | The ID of the job.                                   |
 
 ## Output
 

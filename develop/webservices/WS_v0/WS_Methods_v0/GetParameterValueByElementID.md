@@ -10,10 +10,10 @@ Use this method to request the current state and current value(s) of specific pa
 
 | Item       | Format          | Description                                   |
 |------------|-----------------|-----------------------------------------------|
-| Connection | String          | The connection ID. See [Connect](xref:Connect). |
-| DmaID      | Integer         | The DataMiner Agent ID.                       |
+| connection | String          | The connection ID. See [Connect](xref:Connect). |
+| DMAID      | Integer         | The DataMiner Agent ID.                       |
 | ElementID  | Integer         | The element ID.                               |
-| Parameters | Array of string | The names or IDs of the requested parameters. |
+| parameters | Array of string | The names or IDs of the requested parameters. |
 
 ## Output
 

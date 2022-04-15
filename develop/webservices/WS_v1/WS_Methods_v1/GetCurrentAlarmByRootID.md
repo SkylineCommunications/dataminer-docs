@@ -10,9 +10,9 @@ Use this method to retrieve the current alarm associated with a particular root 
 
 | Item        | Format  | Description                                          |
 |-------------|---------|------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID       | Integer | The DataMiner Agent ID.                              |
-| RootAlarmID | Integer | The root alarm ID.                                   |
+| connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID       | Integer | The DataMiner Agent ID.                              |
+| rootAlarmID | Integer | The root alarm ID.                                   |
 
 ## Output
 

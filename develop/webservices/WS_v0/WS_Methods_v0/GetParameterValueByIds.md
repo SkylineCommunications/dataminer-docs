@@ -13,11 +13,11 @@ Use this method to request the value of a specific parameter (referenced by Data
 
 | Item        | Format  | Description                                   |
 |-------------|---------|-----------------------------------------------|
-| Connection  | String  | The connection ID. See [Connect](xref:Connect). |
-| DataminerID | Integer | The DataMiner Agent ID.                       |
-| ElementID   | Integer | The element ID.                               |
-| ParameterID | Integer | The parameter ID.                             |
-| TableIndex  | String  | The table index.                              |
+| connection  | String  | The connection ID. See [Connect](xref:Connect). |
+| dataminerID | Integer | The DataMiner Agent ID.                       |
+| elementID   | Integer | The element ID.                               |
+| parameterID | Integer | The parameter ID.                             |
+| tableIndex  | String  | The table index.                              |
 
 ## Output
 

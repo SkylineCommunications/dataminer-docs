@@ -10,8 +10,8 @@ Use this method to update an existing job template.
 
 | Item       | Format         | Description                                                                          |
 |------------|----------------|--------------------------------------------------------------------------------------|
-| Connection | String         | The connection string. See [ConnectApp](xref:ConnectApp). |
-| Template   | [DMAJobTemplate](xref:DMAJobTemplate) | The job template configuration. |
+| connection | String         | The connection string. See [ConnectApp](xref:ConnectApp). |
+| template   | [DMAJobTemplate](xref:DMAJobTemplate) | The job template configuration. |
 
 ## Output
 

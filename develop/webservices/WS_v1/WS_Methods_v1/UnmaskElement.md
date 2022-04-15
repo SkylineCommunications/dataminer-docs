@@ -10,10 +10,10 @@ Use this method to unmask an element.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                          |
-| ElementID  | Integer | The element ID.                                                                  |
-| Comment    | String  | Extra information.                                                               |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                          |
+| elementID  | Integer | The element ID.                                                                  |
+| comment    | String  | Extra information.                                                               |
 
 ## Output
 

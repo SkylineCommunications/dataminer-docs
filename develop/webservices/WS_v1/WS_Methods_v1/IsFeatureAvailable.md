@@ -10,11 +10,10 @@ Use this method to check whether a particular feature is available on the DMA. A
 
 | Item        | Format | Description              |
 |-------------|--------|--------------------------|
-| FeatureName | String | The name of the feature. |
+| featureName | String | The name of the feature. |
 
 ## Output
 
-| Item                      | Format  | Description                                         |
-|---------------------------|---------|-----------------------------------------------------|
-| IsFeatureAvailable­Result | Boolean | Whether or not the feature is available on the DMA. |
-
+| Item                     | Format  | Description                                  |
+|--------------------------|---------|----------------------------------------------|
+| IsFeatureAvailable­Result | Boolean | Whether the feature is available on the DMA. |

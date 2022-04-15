@@ -14,12 +14,12 @@ All images are in PNG format, and are base64 encoded.
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID | Integer | The view ID. |
-| Width | Integer | The width of the image to be returned. |
-| Height | Integer | The height of the image to be returned. |
-| Page | Integer | The page of the Visio file to be returned. |
-| CacheDateUTC | Long integer | If you enter a timestamp in UTC format (milliseconds since midnight January 1, 1970 GMT), then the method will only return the requested page if it has been added or changed since that particular point in time. If you enter -1, there will be no date check. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID | Integer | The view ID. |
+| width | Integer | The width of the image to be returned. |
+| height | Integer | The height of the image to be returned. |
+| page | Integer | The page of the Visio file to be returned. |
+| cacheDateUTC | Long integer | If you enter a timestamp in UTC format (milliseconds since midnight January 1, 1970 GMT), then the method will only return the requested page if it has been added or changed since that particular point in time. If you enter -1, there will be no date check. |
 
 ## Output
 

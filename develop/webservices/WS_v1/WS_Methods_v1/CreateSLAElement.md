@@ -12,10 +12,10 @@ Available from DataMiner 9.0.5 onwards.
 
 | Item          | Format                      | Description                                                                               |
 |---------------|-----------------------------|-------------------------------------------------------------------------------------------|
-| Connection    | String                      | The connection string. See [ConnectApp](xref:ConnectApp).                                 |
-| DmaID         | Integer                     | The DataMiner Agent ID.                                                                   |
-| ViewIDs       | Array of Integer            | The IDs of the views in which the element should be created.                              |
-| Configuration | DMASLAElementCon­figuration | See [DMASLAElementConfiguration](xref:DMASLAElementConfiguration). |
+| connection    | String                      | The connection string. See [ConnectApp](xref:ConnectApp).                                 |
+| dmaID         | Integer                     | The DataMiner Agent ID.                                                                   |
+| viewIDs       | Array of Integer            | The IDs of the views in which the element should be created.                              |
+| configuration | DMASLAElementCon­figuration | See [DMASLAElementConfiguration](xref:DMASLAElementConfiguration). |
 
 > [!NOTE]
 > When you create an SLA element, the “State” property of the DMASLAElementConfiguration object should be *Active*, *Paused* or *Stopped*.

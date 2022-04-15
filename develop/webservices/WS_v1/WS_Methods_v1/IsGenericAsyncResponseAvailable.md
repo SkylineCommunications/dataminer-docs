@@ -15,7 +15,7 @@ If this method returns true, you can use the [GetGenericAsyncResponse](xref:GetG
 
 | Item | Format | Description |
 |--|--|--|
-| Ticket | String | The ticket that was returned by the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
+| ticket | String | The ticket that was returned by the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
 
 ## Output
 

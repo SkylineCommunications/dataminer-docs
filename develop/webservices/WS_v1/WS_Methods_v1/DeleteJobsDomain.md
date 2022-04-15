@@ -10,8 +10,8 @@ Use this method to delete a jobs domain.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DomainID   | String | The ID of the job domain.                            |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| domainID   | String | The ID of the job domain.                            |
 
 ## Output
 

@@ -14,10 +14,10 @@ Use this method to retrieve a particular ticket.
 
 | Item           | Format  | Description                                                                      |
 |----------------|---------|----------------------------------------------------------------------------------|
-| Connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID          | Integer | The ID of the DMA.                                                               |
-| TicketID       | Integer | The ID of the ticket.                                                            |
-| IncludeHistory | Boolean | Determines whether the revision history of the ticket is included.               |
+| connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID          | Integer | The ID of the DMA.                                                               |
+| ticketID       | Integer | The ID of the ticket.                                                            |
+| includeHistory | Boolean | Determines whether the revision history of the ticket is included.               |
 
 ## Output
 

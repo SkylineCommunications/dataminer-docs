@@ -10,8 +10,8 @@ Use this method to update a jobs domain. Available from DataMiner 10.0.9 onwards
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| Domain | Array of [DMASectionDefinition](xref:DMASectionDefinition) | The section definitions used by the domain. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| domain | Array of [DMASectionDefinition](xref:DMASectionDefinition) | The section definitions used by the domain. |
 
 ## Output
 

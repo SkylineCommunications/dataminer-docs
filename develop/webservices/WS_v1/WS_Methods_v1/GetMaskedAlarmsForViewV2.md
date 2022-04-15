@@ -12,8 +12,8 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID     | Integer | The view ID.                                                                     |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID     | Integer | The view ID.                                                                     |
 
 ## Output
 

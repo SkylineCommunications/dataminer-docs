@@ -10,11 +10,11 @@ Use this method to retrieve a particular parameter for a service, with dynamic u
 
 | Item        | Format  | Description                                                                      |
 |-------------|---------|----------------------------------------------------------------------------------|
-| Connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID       | Integer | The DataMiner Agent ID.                                                          |
-| ServiceID   | Integer | The service ID.                                                                  |
-| ParameterID | Integer | The parameter ID.                                                                |
-| TableIndex  | String  | The table index (in case the parameter is a table parameter).                    |
+| connection  | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID       | Integer | The DataMiner Agent ID.                                                          |
+| serviceID   | Integer | The service ID.                                                                  |
+| parameterID | Integer | The parameter ID.                                                                |
+| tableIndex  | String  | The table index (in case the parameter is a table parameter).                    |
 
 ## Output
 

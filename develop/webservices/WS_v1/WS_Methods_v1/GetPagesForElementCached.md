@@ -13,13 +13,13 @@ Use this method to retrieve the Data Display pages of a particular element added
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ElementID | Integer | The element ID. |
-| Index | Integer | The point from which to start returning Data Display pages. |
-| Count | Integer | The number of Data Display pages to be returned. |
-| OrderBy | String | The field(s) by which to order the Data Display pages (separated by semicolons). |
-| CacheDateUTC | Long integer | If you enter a timestamp in UTC format (milliseconds since midnight January 1, 1970 GMT), then the method will return only Data Display pages that were added or changed since that particular point in time. If you enter -1, there will be no date check. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| elementID | Integer | The element ID. |
+| index | Integer | The point from which to start returning Data Display pages. |
+| count | Integer | The number of Data Display pages to be returned. |
+| orderBy | String | The field(s) by which to order the Data Display pages (separated by semicolons). |
+| cacheDateUTC | Long integer | If you enter a timestamp in UTC format (milliseconds since midnight January 1, 1970 GMT), then the method will return only Data Display pages that were added or changed since that particular point in time. If you enter -1, there will be no date check. |
 
 ## Output
 

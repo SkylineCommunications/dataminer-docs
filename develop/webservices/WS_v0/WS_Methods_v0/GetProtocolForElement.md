@@ -10,8 +10,8 @@ Use this method to request all information regarding the protocol of a specific 
 
 | Item        | Format | Description                                   |
 |-------------|--------|-----------------------------------------------|
-| Connection  | String | The connection ID. See [Connect](xref:Connect). |
-| ElementName | String | The element name.                             |
+| connection  | String | The connection ID. See [Connect](xref:Connect). |
+| elementName | String | The element name.                             |
 
 ## Output
 

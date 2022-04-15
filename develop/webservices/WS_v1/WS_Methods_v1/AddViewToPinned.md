@@ -10,8 +10,8 @@ Use this method to pin a view in the Recent list.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID     | Integer | The ID of the view to be pinned.                     |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID     | Integer | The ID of the view to be pinned.                     |
 
 ## Output
 

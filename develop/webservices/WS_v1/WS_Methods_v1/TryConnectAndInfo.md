@@ -10,10 +10,10 @@ Use this method to retrieve the connection string using the configured authentic
 
 | Item               | Format | Description                                                                              |
 |--------------------|--------|------------------------------------------------------------------------------------------|
-| ClientAppUrl       | String | The URL of the client application.                                                       |
-| ClientAppName      | String | The name of the client application                                                       |
-| ClientAppVersion   | String | The version of the client application. Optional. Used in logging and information events. |
-| ClientComputerName | String | The name of the client computer. Optional. Used in logging and information events.       |
+| clientAppUrl       | String | The URL of the client application.                                                       |
+| dlientAppName      | String | The name of the client application                                                       |
+| clientAppVersion   | String | The version of the client application. Optional. Used in logging and information events. |
+| clientComputerName | String | The name of the client computer. Optional. Used in logging and information events.       |
 
 > [!NOTE]
 > -  Prior to DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12, for the *ClientAppName*, a registered app name must be specified. If this is not done, the connection will be removed after 10 minutes. To request a valid *ClientAppName*, contact your Skyline Technical Account Manager. From DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12 onwards, this registration is no longer required.

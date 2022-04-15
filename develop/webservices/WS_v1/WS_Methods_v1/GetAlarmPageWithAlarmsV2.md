@@ -13,7 +13,7 @@ Available from DataMiner 10.0.7 onwards.
 | Item             | Format | Description                                                                                                  |
 |------------------|--------|--------------------------------------------------------------------------------------------------------------|
 | Connection       | String | The connection ID. See [ConnectApp](xref:ConnectApp).                                                         |
-| DMAAlarmFilterV2 | [DMAAlarmFilterV2](xref:DMAAlarmFilterV2)  | The filter that the alarms must match. |
+| filter           | [DMAAlarmFilterV2](xref:DMAAlarmFilterV2)  | The filter that the alarms must match. |
 
 ## Output
 

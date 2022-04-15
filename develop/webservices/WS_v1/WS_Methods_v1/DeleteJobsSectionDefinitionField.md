@@ -10,10 +10,10 @@ Use this method to delete a job section definition field.
 
 | Item                | Format | Description                                          |
 |---------------------|--------|------------------------------------------------------|
-| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DomainID            | String | The domain ID.                                       |
-| SectionDefinitionID | String | The ID of the job section definition.                |
-| Field ID            | String | The ID of the job section definition field.          |
+| connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| domainID            | String | The domain ID.                                       |
+| sectionDefinitionID | String | The ID of the job section definition.                |
+| fieldID            | String | The ID of the job section definition field.          |
 
 ## Output
 

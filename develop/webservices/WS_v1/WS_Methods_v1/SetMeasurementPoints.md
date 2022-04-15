@@ -10,11 +10,11 @@ Use this method to set the measurement point cycle of a spectrum analyzer (avail
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ElementID | Integer | The element ID. |
-| Measpts | Array of unsigned integers | An array of measurement point IDs |
-| SessionID | Unsigned integer | The client subscription ID from the WebSocket subscription with which the spectrum session was started |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| elementID | Integer | The element ID. |
+| measpts | Array of unsigned integers | An array of measurement point IDs |
+| sessionID | Unsigned integer | The client subscription ID from the WebSocket subscription with which the spectrum session was started |
 
 ## Output
 

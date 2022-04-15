@@ -10,8 +10,8 @@ Use this method to retrieve a list of the pages of the Visio file linked to a pa
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID     | Integer | The view ID.                                                                     |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID     | Integer | The view ID.                                                                     |
 
 ## Output
 

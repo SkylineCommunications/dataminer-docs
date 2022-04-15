@@ -10,11 +10,11 @@ Use this method to retrieve all the monitored parameters for all elements of a s
 
 | Item                | Format  | Description                                                                      |
 |---------------------|---------|----------------------------------------------------------------------------------|
-| Connection          | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID               | Integer | The DataMiner Agent ID.                                                          |
-| ServiceID           | Integer | The service ID.                                                                  |
-| IncludeTableIndices | Boolean | Indicates whether table indices should be included.                              |
-| Filter              | String  | Optional parameter name filter supporting regular expressions.                   |
+| connection          | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID               | Integer | The DataMiner Agent ID.                                                          |
+| serviceID           | Integer | The service ID.                                                                  |
+| includeTableIndices | Boolean | Indicates whether table indices should be included.                              |
+| filter              | String  | Optional parameter name filter supporting regular expressions.                   |
 
 ## Output
 

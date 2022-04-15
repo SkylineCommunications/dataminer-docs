@@ -10,8 +10,8 @@ Use this method to retrieve a particular job section definition. Can only be use
 
 | Item                | Format | Description                                          |
 |---------------------|--------|------------------------------------------------------|
-| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| SectionDefinitionID | String | The job section definition ID.                       |
+| connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| sectionDefinitionID | String | The job section definition ID.                       |
 
 ## Output
 

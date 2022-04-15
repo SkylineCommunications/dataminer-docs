@@ -10,9 +10,9 @@ Use this method to retrieve a list of the pages of the Visio file linked to a pa
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                          |
-| ElementID  | Integer | The element ID.                                                                  |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                          |
+| elementID  | Integer | The element ID.                                                                  |
 
 ## Output
 

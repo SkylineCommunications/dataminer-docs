@@ -14,15 +14,15 @@ Use this method to retrieve the active tickets for this DMA, i.e. tickets that a
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| PageNumber | Integer | The page number (cf. note below). |
-| Count | Integer | The number of tickets to be retrieved. |
-| Filter | Array | An array of various filters that can be used to determine which tickets are retrieved. |
-| Filter.TicketTypeID | GUID | The GUID of the ticket type (or “domain” in the Ticketing app). |
-| Filter.Filters | Array of DMATicket­FieldValueDisplay | See [DMATicketFieldValueDisplay](xref:DMATicketFieldValueDisplay). |
-| Filter.Affecting.Value | Array | Array containing the DMA ID, the ID and the name of a DataMiner object. |
-| Filter.Affecting.Type | String | The type of the affected DataMiner object. Possible values are: "Element", "Service", "Redundancy Group", "Alarm", or "View". |
-| SearchText | String | A piece of text used to filter the tickets, similar to the quick filter in the Ticketing app. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| pageNumber | Integer | The page number (cf. note below). |
+| count | Integer | The number of tickets to be retrieved. |
+| filter | Array | An array of various filters that can be used to determine which tickets are retrieved. |
+| filter.TicketTypeID | GUID | The GUID of the ticket type (or “domain” in the Ticketing app). |
+| filter.Filters | Array of DMATicket­FieldValueDisplay | See [DMATicketFieldValueDisplay](xref:DMATicketFieldValueDisplay). |
+| filter.Affecting.Value | Array | Array containing the DMA ID, the ID and the name of a DataMiner object. |
+| filter.Affecting.Type | String | The type of the affected DataMiner object. Possible values are: "Element", "Service", "Redundancy Group", "Alarm", or "View". |
+| filter.SearchText | String | A piece of text used to filter the tickets, similar to the quick filter in the Ticketing app. |
 
 ## Output
 

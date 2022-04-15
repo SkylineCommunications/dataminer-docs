@@ -10,8 +10,8 @@ Use this method to retrieve the view structure within the specified parent view.
 
 | Item         | Format  | Description                                                                      |
 |--------------|---------|----------------------------------------------------------------------------------|
-| Connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ParentViewID | Integer | The ID of the parent view.                                                       |
+| connection   | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| parentViewID | Integer | The ID of the parent view.                                                       |
 
 ## Output
 

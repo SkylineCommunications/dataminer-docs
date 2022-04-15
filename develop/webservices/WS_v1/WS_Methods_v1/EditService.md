@@ -10,11 +10,11 @@ Use this method to edit a specified service.
 
 | Item          | Format                   | Description                                                                         |
 |---------------|--------------------------|-------------------------------------------------------------------------------------|
-| Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
-| DmaID         | Integer                  | The DataMiner Agent ID.                                                             |
-| ServiceID     | Integer                  | The service ID.                                                                     |
-| ViewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
-| Configuration | DMAServiceConfiguration | See [DMAServiceConfiguration](xref:DMAServiceConfiguration). |
+| connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
+| dmaID         | Integer                  | The DataMiner Agent ID.                                                             |
+| serviceID     | Integer                  | The service ID.                                                                     |
+| viewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
+| configuration | DMAServiceConfiguration | See [DMAServiceConfiguration](xref:DMAServiceConfiguration). |
 
 ## Output
 

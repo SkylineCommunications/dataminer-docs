@@ -10,11 +10,11 @@ Available from DataMiner 9.5.5 onwards. Use this method to use a cookie (receive
 
 | Item | Format | Description |
 |--|--|--|
-| Host | String | The host name. |
-| Cookie | String | The cookie retrieved using the [ConnectAppAndInfo](xref:ConnectAppAndInfo) method. |
-| ClientAppName | String | The name of the client application. |
-| ClientAppVersion | String | The version of the client application. |
-| ClientComputerName | String | The name of the client computer. |
+| host | String | The host name. |
+| cookie | String | The cookie retrieved using the [ConnectAppAndInfo](xref:ConnectAppAndInfo) method. |
+| clientAppName | String | The name of the client application. |
+| clientAppVersion | String | The version of the client application. |
+| clientComputerName | String | The name of the client computer. |
 
 > [!NOTE]
 > Prior to DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12, for the *ClientAppName*, a registered app name must be specified. If this is not done, the connection will be removed after 10 minutes. To request a valid *ClientAppName*, contact your Skyline Technical Account Manager. From DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12 onwards, this registration is no longer required.

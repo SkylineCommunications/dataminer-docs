@@ -12,8 +12,8 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| Filters | Array of [DMAAlarmFilterV2](xref:DMAAlarmFilterV2) filters | The filters that the alarms must match. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| filters | Array of [DMAAlarmFilterV2](xref:DMAAlarmFilterV2) filters | The filters that the alarms must match. |
 
 ## Output
 

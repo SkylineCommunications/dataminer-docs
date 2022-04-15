@@ -12,8 +12,8 @@ Available from DataMiner 9.6.6 onwards.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TemplateID | String | The ID of the job template.                          |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| templateID | String | The ID of the job template.                          |
 
 ## Output
 

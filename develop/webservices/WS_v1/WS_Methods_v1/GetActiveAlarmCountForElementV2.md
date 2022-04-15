@@ -12,9 +12,9 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                              |
-| ElementID  | Integer | The element ID.                                      |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                              |
+| elementID  | Integer | The element ID.                                      |
 
 ## Output
 

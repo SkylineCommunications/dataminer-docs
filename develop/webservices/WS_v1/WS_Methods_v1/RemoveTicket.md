@@ -14,9 +14,9 @@ Use this method to remove a particular ticket.
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The ID of the DMA. |
-| TicketID | Integer | The ID of the ticket. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The ID of the DMA. |
+| ticketID | Integer | The ID of the ticket. |
 
 ## Output
 

@@ -10,8 +10,8 @@ Use this method to retrieve all the job templates available in a specific domain
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DomainID   | String | The domain ID.                                       |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| domainID   | String | The domain ID.                                       |
 
 ## Output
 

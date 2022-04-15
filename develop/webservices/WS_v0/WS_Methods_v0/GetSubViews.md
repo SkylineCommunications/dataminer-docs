@@ -10,7 +10,7 @@ Use this method to request the names of all subviews of a specified view.
 
 | Item           | Format | Description                                   |
 |----------------|--------|-----------------------------------------------|
-| Connection     | String | The connection ID. See [Connect](xref:Connect). |
+| connection     | String | The connection ID. See [Connect](xref:Connect). |
 | parentViewName | String | The name of the parent view.                  |
 
 ## Output

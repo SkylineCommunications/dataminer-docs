@@ -10,8 +10,8 @@ Use this method to request a list of all the elements that poll a specific IP ad
 
 | Item       | Format | Description                                   |
 |------------|--------|-----------------------------------------------|
-| Connection | String | The connection ID. See [Connect](xref:Connect). |
-| IP         | String | The IP address                                |
+| connection | String | The connection ID. See [Connect](xref:Connect). |
+| ip         | String | The IP address                                |
 
 ## Output
 

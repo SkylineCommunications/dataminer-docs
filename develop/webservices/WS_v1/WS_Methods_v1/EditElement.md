@@ -10,11 +10,11 @@ Use this method to edit a specified element.
 
 | Item          | Format                   | Description                                                                         |
 |---------------|--------------------------|-------------------------------------------------------------------------------------|
-| Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
-| DmaID         | Integer                  | The DataMiner Agent ID.                                                             |
-| ElementID     | Integer                  | The element ID.                                                                     |
-| ViewIDs       | Array of Integer         | The IDs of the views that should contain the element.                               |
-| Configuration | DMAElementConfiguration | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
+| connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
+| dmaID         | Integer                  | The DataMiner Agent ID.                                                             |
+| elementID     | Integer                  | The element ID.                                                                     |
+| viewIDs       | Array of Integer         | The IDs of the views that should contain the element.                               |
+| configuration | DMAElementConfiguration | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
 
 ## Output
 

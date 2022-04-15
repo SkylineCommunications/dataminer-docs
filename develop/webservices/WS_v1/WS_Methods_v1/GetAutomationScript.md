@@ -10,8 +10,8 @@ Use this method to retrieve an Automation script.
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ScriptName | String | The name of the Automation script.                   |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| scriptName | String | The name of the Automation script.                   |
 
 ## Output
 

@@ -13,14 +13,14 @@ Use this method to retrieve a specific number of service child items (elements a
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ServiceID | Integer | The service ID. |
-| IncludeServices | Boolean | Whether child services of the specified service should be included. |
-| StartsWith | String | If you enter a piece of text in this field, the method will only return service child items of which the name starts with that piece of text. |
-| Index | Integer | The point from which to start returning child items. |
-| Count | Integer | The number of child items to be returned. |
-| OrderBy | String | The field(s) by which to order the child items (separated by semicolons). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| serviceID | Integer | The service ID. |
+| includeServices | Boolean | Whether child services of the specified service should be included. |
+| startsWith | String | If you enter a piece of text in this field, the method will only return service child items of which the name starts with that piece of text. |
+| index | Integer | The point from which to start returning child items. |
+| count | Integer | The number of child items to be returned. |
+| orderBy | String | The field(s) by which to order the child items (separated by semicolons). |
 
 ## Output
 
