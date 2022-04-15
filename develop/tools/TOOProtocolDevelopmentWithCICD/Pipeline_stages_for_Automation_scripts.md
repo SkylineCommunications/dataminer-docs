@@ -24,6 +24,8 @@ Currently, the pipeline consists of the following steps:
 
 - [Build on latest feature release](#build-on-latest-feature-release)
 
+- [Convert Solution to XML](#convert-solution-to-xml)
+
 - [Scan Test Projects](#scan-test-projects)
 
 - [Run Unit Tests](#run-unit-tests)
@@ -31,8 +33,6 @@ Currently, the pipeline consists of the following steps:
 - [Run Integration Tests](#run-integration-tests)
 
 - [SonarQube analysis](#sonarqube-analysis)
-
-- [Convert Solution to XML](#convert-solution-to-xml)
 
 - [Quality Gate](#quality-gate)
 
@@ -89,6 +89,14 @@ This step ensures that the pipeline uses the latest version of DIS. It verifies 
 
 During this step, the solution is built against the latest DataMiner feature release.
 
+## Convert Solution to XML
+
+This step converts the protocol Visual Studio solution back to a protocol XML file.
+
+## Build dmapp Package
+
+This step creates a .dmapp package containing the Automation scripts.
+
 ## Scan Test Projects
 
 This step scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
@@ -104,10 +112,6 @@ This step executes the integration test projects. If no integration test project
 ## SonarQube analysis
 
 This step performs SonarQube C# code analysis on the code provided in the Exe blocks.
-
-## Convert Solution to XML
-
-This step converts the protocol Visual Studio solution back to a protocol XML file.
 
 ## Quality Gate
 

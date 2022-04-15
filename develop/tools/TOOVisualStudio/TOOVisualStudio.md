@@ -13,3 +13,5 @@ In this section:
 - [Shortcuts](xref:Shortcuts)
 
 - [Plugins](xref:Plugins)
+
+- [NuGet packages](xref:VisualStudioNuGetPackages)

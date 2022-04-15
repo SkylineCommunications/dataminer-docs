@@ -24,6 +24,10 @@ Currently, the pipeline for protocol development consists of the following steps
 
 - [Build QuickActions on latest feature release](#build-quickactions-on-latest-feature-release)
 
+- [Convert Solution to XML](#convert-solution-to-xml)
+
+- [Create Protocol Package](#create-protocol-package)
+
 - [Scan Test Projects](#scan-test-projects)
 
 - [Run Unit Tests](#run-unit-tests)
@@ -31,8 +35,6 @@ Currently, the pipeline for protocol development consists of the following steps
 - [Run Integration Tests](#run-integration-tests)
 
 - [SonarQube analysis](#sonarqube-analysis)
-
-- [Convert Solution to XML](#convert-solution-to-xml)
 
 - [Initialize validator](#initialize-validator)
 
@@ -42,11 +44,11 @@ Currently, the pipeline for protocol development consists of the following steps
 
 - [Verify developer checklist](#verify-developer-checklist)
 
-- [Quality Gate](#quality-gate)
-
 - [Prepare Driver Passport Platform Scheduling](#prepare-driver-passport-platform-scheduling)
 
-- [Schedule Driver Passport Platform](#schedule-driver-passport-platform)
+- [Quality Gate](#quality-gate)
+
+- [(Release) Schedule Driver Passport Platform](#schedule-driver-passport-platform)
 
 - [(Development) DCP registration](#development-dcp-registration)
 
@@ -142,6 +144,14 @@ This step ensures that the pipeline uses the latest version of DIS. It verifies 
 
 During this step, the solution is built against the latest DataMiner feature release.
 
+## Convert Solution to XML
+
+This step converts the protocol Visual Studio solution back to a protocol XML file.
+
+## Create Protocol Package
+
+This step creates a .dmprotocol package including the protocol XML, assemblies, Visio and Help files.
+
 ## Scan Test Projects
 
 This step scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
@@ -160,10 +170,6 @@ This step executes the integration test projects. If no integration test project
 ## SonarQube analysis
 
 This step performs SonarQube C# code analysis on the QAction code.
-
-## Convert Solution to XML
-
-This step converts the protocol Visual Studio solution back to a protocol XML file.
 
 ## Initialize validator
 
@@ -208,6 +214,64 @@ Additionally, the following information in the checklist itself should correspon
 > [!NOTE]
 > You should always use the latest version of the checklist, which is available on Dojo: <https://community.dataminer.services/documentation/protocol-development-checklists/>
 
+## Prepare Driver Passport Platform Scheduling
+
+This stage is responsible for creating a DataMiner Test Package (.dmt). The test package includes references to the simulation files to use when running the test package.
+
+This stage will be skipped if the protocol version is not an initial version of a range (i.e. the Minor value of the Version is not equal to 1).
+
+No test package will be created if any of the following is applicable:
+
+- The protocol has only virtual connections.
+
+- The protocol has at least one connection type that is not supported by the Driver Passport Platform. The connection types that are currently supported by the Driver Passport platform are SNMP and HTTP.
+
+- No simulation files could be found for the connections. This will mark the stage as unstable.
+
+### Simulation files
+
+In order for the pipeline to generate a test package, all you need to do is provide the required simulation files. The simulation files must be provided on the shares in **the following folder**:
+
+*S:\\Public\\Simulations\\Protocol Simulations\\*\<Vendor>*\\*\<ProtocolName>*\\*\<version>*\\*\<customer>
+
+- **Vendor**: The name of the vendor as mentioned in the *Vendor* tag of the protocol.
+
+- **ProtocolName**: The name of the protocol as mentioned in the *Name* tag of the protocol.
+
+- **version**: The version of the protocol as mentioned in the *Version* tag of the protocol.
+
+- **customer**: The name of the customer. The expected customer name is retrieved by the CI/CD pipeline via the task mentioned in the protocol.
+
+> [!NOTE]
+>
+> - In case multiple tasks are defined, which results in multiple customers, providing simulation files for only one customer is sufficient.
+> - In case no simulation files were found by the CI/CD for any of the expected customers, the pipeline will perform a fallback to a simulation of another customer (if present) for this version.
+
+A simulation must be provided for each connection of the protocol. The **name of the simulation file** must be *Connection\_**\<connectionNumber>*, where *\<connectionNumber>* denotes the zero-based connection number, e.g. *Connection_0*.
+
+For **SNMP simulations**, two files should be provided:
+
+- *Connection\_\<connectionNumber>.txt*: This file contains the dynamic data.
+
+- *Connection\_\<connectionNumber>.xml*: This is the SNMP simulation file.
+
+  For more information on how to create this file, see [Realistic dynamic simulations](xref:Realistic_dynamic_simulations):
+
+  - How to generate the file that holds the dynamic data (.txt): [Retrieving real device data](xref:Realistic_dynamic_simulations#retrieving-real-device-data)
+
+  - How to create the file the SNMP simulation file (.xml): [Configuring the simulation file to poll the database](xref:Realistic_dynamic_simulations#configuring-the-simulation-file-to-poll-the-database)
+
+The Driver Passport Platform will use these files to automatically start a QA Device Simulator instance and ingest the dynamic data into the database.
+
+> [!NOTE]
+> A simulation must also be provided for an SNMP connection that only processes traps. You can use the empty simulation file available in *S:\\Public\\Simulations\\DummySnmpSimulation_ForNonPollingConnections.zip* as the simulation file for such a connection.
+
+For **HTTP simulations**, the following file should be provided:
+
+- *Connection\_\<connectionNumber>.pdml*
+
+    For more information on how to create this file, see [Creating HTTP simulations](xref:Creating_HTTP_simulations).
+
 ## Quality Gate
 
 This step verifies the results of different previous pipeline steps and checks whether the results are according to some preconfigured quality level.
@@ -240,7 +304,7 @@ For non-initial versions, the validator quality gate settings will be configured
 
 > [!NOTE]
 > The following error codes are currently ignored:
-> -  1401: "x% of monitored parameters do not have default alarm values set”
+> - 1401: "x% of monitored parameters do not have default alarm values set”
 
 ### SonarQube
 
@@ -263,64 +327,7 @@ This quality gate verifies whether the protocol does not exceed any of the limit
 > [!NOTE]
 > The Quality Gate will currently only verify SonarQube analysis results for initial developments (i.e. protocols with version 1.0.0.1).
 
-## Prepare Driver Passport Platform Scheduling
-
-This stage is responsible for creating a DataMiner Test Package (.dmt). The test package includes references to the simulation files to use when running the test package.
-
-This stage will be skipped if the protocol version is not an initial version of a range (i.e. the Minor value of the Version is not equal to 1).
-
-No test package will be created if any of the following is applicable:
-
-- The protocol has only virtual connections.
-
-- The protocol has at least one connection type that is not supported by the Driver Passport Platform. The connection types that are currently supported by the Driver Passport platform are SNMP and HTTP.
-
-- No simulation files could be found for the connections. This will mark the stage as unstable.
-
-### Simulation files
-
-In order for the pipeline to generate a test package, all you need to do is provide the required simulation files. The simulation files must be provided on the shares in **the following folder**:
-
-*S:\\Public\\Simulations\\Protocol Simulations\\*\<Vendor>*\\*\<ProtocolName>*\\*\<version>*\\*\<customer>
-
-- **Vendor**: The name of the vendor as mentioned in the *Vendor* tag of the protocol.
-
-- **ProtocolName**: The name of the protocol as mentioned in the *Name* tag of the protocol.
-
-- **version**: The version of the protocol as mentioned in the *Version* tag of the protocol.
-
-- **customer**: The name of the customer. The expected customer name is retrieved by the CI/CD pipeline via the task mentioned in the protocol.
-
-> [!NOTE]
-> -  In case multiple tasks are defined, which results in multiple customers, providing simulation files for only one customer is sufficient.
-> -  In case no simulation files were found by the CI/CD for any of the expected customers, the pipeline will perform a fallback to a simulation of another customer (if present) for this version.
-
-A simulation must be provided for each connection of the protocol. The **name of the simulation file** must be *Connection\_**\<connectionNumber>*, where *\<connectionNumber>* denotes the zero-based connection number, e.g. *Connection_0*.
-
-For **SNMP simulations**, two files should be provided:
-
-- *Connection\_\<connectionNumber>.txt*: This file contains the dynamic data.
-
-- *Connection\_\<connectionNumber>.xml*: This is the SNMP simulation file.
-
-  For more information on how to create this file, see [Realistic dynamic simulations](xref:Realistic_dynamic_simulations):
-
-  - How to generate the file that holds the dynamic data (.txt): [Retrieving real device data](xref:Realistic_dynamic_simulations#retrieving-real-device-data)
-
-  - How to create the file the SNMP simulation file (.xml): [Configuring the simulation file to poll the database](xref:Realistic_dynamic_simulations#configuring-the-simulation-file-to-poll-the-database)
-
-The Driver Passport Platform will use these files to automatically start a QA Device Simulator instance and ingest the dynamic data into the database.
-
-> [!NOTE]
-> A simulation must also be provided for an SNMP connection that only processes traps. You can use the empty simulation file available in *S:\\Public\\Simulations\\DummySnmpSimulation_ForNonPollingConnections.zip* as the simulation file for such a connection.
-
-For **HTTP simulations**, the following file should be provided:
-
-- *Connection\_\<connectionNumber>.pdml*
-
-    For more information on how to create this file, see [Creating HTTP simulations](xref:Creating_HTTP_simulations).
-
-## Schedule Driver Passport Platform
+## (Release) Schedule Driver Passport Platform
 
 This stage will push the created DataMiner Test (.dmt) package to the Driver Passport Platform. It is only executed for protocol versions that are an initial version of a range (i.e. the Minor value of the Version is equal to 1).
 

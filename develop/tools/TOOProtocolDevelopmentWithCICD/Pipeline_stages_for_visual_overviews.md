@@ -49,6 +49,10 @@ In this step, Jenkins verifies the file size of the Visio file in the repository
 
 - If the file size is over 10 MB, the pipeline will be marked as unstable.
 
+## Build dmapp Package
+
+This step creates a .dmapp package containing the Visio.
+
 ## (Development) Catalog registration
 
 This stage will perform registration in the catalog.
