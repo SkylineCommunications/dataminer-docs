@@ -16,7 +16,7 @@ DataMiner is a standard, proven and very widely adopted and endorsed, open and f
 
 DataMiner has powerful data ingest and control plane capabilities, enabling operators to ingest data from any product, irrespective of the interface or the protocol required, transparently across any vendor or domain boundaries, covering both hardware products, software products and cloud services. With DataMiner in place, users have the unconditional guarantee that they can truly ingest any data from across their entire operation, in a secure, scalable, and fully standardized way. And because of the open architecture, anybody can design, build, and deploy new connectors for that purpose, fully supporting devops operations.  
 
-    This part of the DataMiner System is all about creating a fully standardized and real-time updated digital twin of the entire underlying operation, which is a unique proposition and key differentiator compared to the proliferation of general-purpose data collection solutions. In that sense, DataMiner really stands for a class of its own, providing out of the box what would be otherwise a complex, cumbersome and expensive mash-up of disparate software components.
+This part of the DataMiner System is all about creating a fully standardized and real-time updated digital twin of the entire underlying operation, which is a unique proposition and key differentiator compared to the proliferation of general-purpose data collection solutions. In that sense, DataMiner really stands for a class of its own, providing out of the box what would be otherwise a complex, cumbersome and expensive mash-up of disparate software components.
 
 ### Data processing & workflow
 
