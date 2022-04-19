@@ -29,12 +29,12 @@ As a resource represents a specific virtual function, and the virtual function l
 
 By default, a virtual function resource is represented as a virtual element while the booking using that resource is active.
 
-> [!NOTE]
-> A resource can also be created manually in the [Resources module](xref:The_Resources_module) without a corresponding virtual function. As such, a resource could be any object you want to be able to schedule for use. However, note that in that case no orchestration or automation is supported in the SRM framework.
-
 ## Resource pool
 
 A resource pool is a container that groups several resources. One resource can be part of one or more resource pools.
+
+> [!NOTE]
+> A resource can also be created manually in the [Resources module](xref:The_Resources_module) without a corresponding virtual function. As such, a resource could be any object you want to be able to schedule for use. However, note that in that case no orchestration or automation is supported in the SRM framework.
 
 ## Profile instance
 

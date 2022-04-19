@@ -28,5 +28,7 @@
       topicUid: deploying_srm
     - name: Provisioning the data acquisition and control plane
       topicUid: provisioning_srm
-    - name: Implementing a function
+    - name: Implementing virtual functions
       topicUid: implementing_function_srm
+    - name: Provisioning virtual function resources
+      topicUid: provisioning_VFRs

@@ -2,11 +2,11 @@
 uid: implementing_function_srm
 ---
 
-# Implementing a function
+# Implementing virtual functions
 
 ## Creating profile parameters
 
-To manage the service flow, SRM will need to orchestrate one or multiple virtual resources, either ad hoc (with Resource Automation), or at the start and end of a booking (with Resource Orchestration or Service Orchestration). Configurations will need to be applied at the start and stop of each booking, and for this purpose, you will need to add [profile parameters](xref:srm_definitions#profile-parameter).
+To manage the service flow, SRM will need to orchestrate one or multiple virtual function resources, either ad hoc (with Resource Automation), or at the start and end of a booking (with Resource Orchestration or Service Orchestration). Configurations will need to be applied at the start and stop of each booking, and for this purpose, you will need to add [profile parameters](xref:srm_definitions#profile-parameter).
 
 First, **for each virtual function** that you want to create, **identify the various configuration parameters** that will need to be orchestrated. Then make sure there is **a profile parameter for each of these parameters**. You can add these in the [Profiles module](xref:Configuring_profile_parameters).
 
@@ -16,7 +16,9 @@ For example, in DataMiner 10.2.0:
 
 Secondly, it is also important to identify **capacity and capability parameters**. A specific parameter could be a capacity limitation or could be a specific capability provided by a function resource. For each identified capability and capacity, make sure there is a profile parameter in the [Profiles module](xref:Configuring_profile_parameters). The capacity or capability checkbox must be selected for these parameters.
 
-When all profile parameters have been created, these can be used in profile definitions to orchestrate and filter out the virtual resources.
+For example, to make sure it will be possible to configure the interfaces of virtual function resources, you will need to create the ResourceInputInterfaces and ResourceOutputInterfaces capabilities (see [Provisioning virtual function resources](xref:provisioning_VFRs)).
+
+When all profile parameters have been created, these can be used in profile definitions to orchestrate and filter out the virtual function resources.
 
 > [!NOTE]
 >
@@ -116,7 +118,7 @@ A [Profile-Load Script (PLS)](xref:srm_scripting#profile-load-script-pls) is res
 
 To create a PLS:
 
-1. Start from the example script SRM_ProfileLoadScriptTemplate, which is included in the SRM installation.
+1. Start from the example script *SRM_ProfileLoadScriptTemplate*, which is included in the SRM framework.
 1. Configure the script to set the configuration parameters on the virtual function of a connector.
 1. To make sure the PLS is executed when a specific virtual function is orchestrated, when you have created the script, assign it to a profile definition:
 
