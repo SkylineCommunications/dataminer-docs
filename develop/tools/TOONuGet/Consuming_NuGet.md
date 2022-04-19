@@ -6,7 +6,7 @@ uid: Consuming_NuGet
 
 You can consume NuGet packages in your Visual Studio protocol or Automation script solution by going to the NuGet Manager, searching for existing NuGets and installing them.
 
-When DIS compiles the Automation script or protocol, it will extract the required DLLs from the NuGets and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, those folders with DLLs need to be placed in the *Skyline DataMiner/ProtocolScripts/DllImports* folder.
+When DIS compiles the Automation script or protocol, it will extract the required DLLs from the NuGets and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, those folders with DLLs need to be placed in the *Skyline DataMiner/ProtocolScripts/DllImport* folder.
 
 DIS and CI/CD support NuGets of the following types:
 

@@ -4768,14 +4768,15 @@
               topicUid: DataMiner_Integration_Studio_DIS
             - name: Visual Studio spell checker
               topicUid: Visual_Studio_spell_checker
-            - name: C# outline
-              topicUid: C_outline
-            - name: StyleCop
-              topicUid: StyleCop1
             - name: CodeMaid
               topicUid: CodeMaid
             - name: SonarLint
               topicUid: SonarLint
+        - name: NuGet packages
+          topicUid: VisualStudioNuGetPackages
+          items:
+            - name: StyleCop.Analyzers
+              topicUid: StyleCopAnalyzers
     - name: WFetch
       topicUid: TOOWFetch
     - name: Upgrade packages
