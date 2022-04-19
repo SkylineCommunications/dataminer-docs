@@ -389,7 +389,7 @@ Permission to download software from the DataMiner Cloud Platform.
 
 #### General \> Live sharing \> UI available
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to view items that have been shared in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *View shared items* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to view the sharing UI and to view items that have been shared in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *View shared items* in earlier DataMiner versions.)
 
 #### General \> Live sharing \> Share
 
