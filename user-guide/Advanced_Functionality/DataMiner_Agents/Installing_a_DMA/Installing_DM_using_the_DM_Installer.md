@@ -1,5 +1,5 @@
 ---
-uid: Installing_DM_using_the_DM_Installer
+uid: Installing_DM_using_the_DM_installer
 ---
 
 # Installing DataMiner using the DataMiner Installer

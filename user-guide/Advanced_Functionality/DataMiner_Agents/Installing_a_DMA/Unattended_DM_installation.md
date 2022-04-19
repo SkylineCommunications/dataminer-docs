@@ -377,314 +377,305 @@ The example below is used to create the following cluster:
 
 The example below is used to create a cluster of three DMAS, all using the same Cassandra cluster as their general database.
 
-::: {width="100%" align="left"}
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  \<DMS>
-    \<!\-- DataMiner version \--\>
-     \<DataMinerVersion>DataMiner 10.0.12.0-9536 Full Upgrade (rc)\</DataMinerVersion>
-    \<!\-- Name of the DataMiner cluster \--\>
-     \<ClusterName>CassandraClusterDMS\</ClusterName>
-     \<!\-- timeout in minutes \--\>
-     \<Timeout>15\</Timeout>
-    \<!\-- Configuration belonging to a DataMiner agent \--\>
-     \<DMA>
-       \<!\-- The DataMiner ID \--\>
-         \<ID>101\</ID>
-         \<!\-- The name of the machine \--\>
-       \<MachineName>SLC-H70-G01\</MachineName>
-       \<Location>Local\</Location>
-       \<!\-- The IP of this agent \--\>
-         \<IP1>10.11.1.70\</IP1>
-       \<!\-- DB.xml settings \--\>
-         \<DataBase type=\"CassandraCluster\"\>
-          \<!\-- The name of the Cassandra database. Keyspaces will be prefixed using this value \--\>
-             \<DB>SLDMADB\</DB>
-          \<!\-- IP of the Cassandra database \--\>
-             \<DBServer>10.11.1.70,10.11.2.70,10.11.3.70\</DBServer>
-             \<ConnectString/>
-          \<!\-- Cassandra username \--\>
-             \<UID>root\</UID>
-          \<!\-- Cassandra password \--\>
-             \<PWD>root\</PWD>
-             \<Maintenance>
-             \<!\-- Any tag that also exists in the DB.xml for local DB \--\>
-             \</Maintenance>
-         \</DataBase>
-       \<SearchDataBase>
-          \<!\-- IP of the Elastic database \--\>
-             \<DBServer>127.0.0.1\</DBServer>
-          \<!\-- Elastic username \--\>
-             \<UID>elastic\</UID>
-          \<!\-- Elastic password \--\>
-             \<PWD>root123\</PWD>
-         \</SearchDataBase>
-       \<!\-- Settings used to install and configure Cassandra with \--\>
-         \<CassandraClusterSettings>
-           \<!\-- cassandra.yaml setting \'listen_adress\' \--\>
-             \<ListenAddress>10.11.1.70\</ListenAddress>
-           \<!\-- cassandra.yaml setting \'seed_provider\': The seeds which will be used to connect to Cassandra with. \--\>
-             \<Seeds>10.11.1.70,10.11.2.70,10.11.3.70\</Seeds>
-           \<!\-- cassandra.yaml setting \'cluster_name\': The name of the Cassandra cluster. Should be the same for all agents. \--\>
-             \<ClusterName>DMS\</ClusterName>
-           \<!\-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing \--\>
-             \<ClusterSize>3\</ClusterSize>
-           \<!\-- cassandra.yaml setting \'native_transport_port\': CQL Native transport port \--\>
-             \<Port>9042\</Port>
-           \<!\-- Configuration setting after Cassandra has been installed. The system auth replication factor will be set to this value \--\>
-             \<SystemAuthReplicationFactor>3\</SystemAuthReplicationFactor>
-          \<!\-- The replication factor of the default keyspace. \--\>
-             \<DefaultKeyspaceReplicationFactor>3\</DefaultKeyspaceReplicationFactor>
-           \<!\-- cassandra.yaml setting \'rpc_address\': If left empty, will not be defined in the yaml. \--\>
-             \<RpcAddress>0.0.0.0\</RpcAddress>
-           \<!\-- cassandra.yaml setting \'broadcast_rpc_address\': If left empty, will not be defined in the yaml. \--\>
-             \<BroadCastRpcAddress>10.11.1.70\</BroadCastRpcAddress>
-          \<!\-- The location where Cassandra will be installed. \--\>
-             \<TargetInstallationDirectory>C:\\Program Files\\Cassandra\</TargetInstallationDirectory>
-           \<!\-- cassandra.yaml setting \'data_file_directories\' Directory where Cassandra data will be stored. \--\>
-             \<DataPath>C:\\ProgramData\\Cassandra\</DataPath>
-           \<!\-- cassandra.yaml setting \'endpoint_snitch\': possible values: SimpleSnitch, GossipingPropertyFileSnitch, PropertyFileSnitch, Ec2Snitch, Ec2MultiRegionSnitch, RackInferringSnitch \--\>
-             \<Snitch>GossipingPropertyFileSnitch\</Snitch>
-           \<!\-- Whether or not this DMA is responsible for configuring the Cassandra cluster after it has been created.
-                This includes creating the defined user as well as setting the system auth replication factor.
-              This value should be true for only 1 DMA.
-          \--\>
-             \<IsResponsibleForConfiguration>true\</IsResponsibleForConfiguration>
-         \</CassandraClusterSettings>
-         \<!\-- Settings used to install and configure Elastic with \--\>
-         \<ElasticClusterSettings>
-             \<!\--The Ip\'s of the other cluster, one is enough. Best to fill in with master node ip\'s\--\>
-             \<DiscoveryHosts>127.0.0.1\</DiscoveryHosts>
-              \<!\-- elasticsearch.yaml setting \'NetworkHost\': The IP you want to bind elastic to. \--\>
-             \<NetworkHost>0.0.0.0\</NetworkHost>
-              \<!\-- The IP you want elastic to publish to. Should not be set to 0.0.0.0 when there are virtual IP\'s configured\--\>
-             \<NetworkPublishHost>0.0.0.0\</NetworkPublishHost>
-              \<!\-- elasticsearch.yaml setting \'cluster_name\': The name of the Elastic cluster. Should be the same for all agents. \--\>
-             \<ClusterName>DMS\</ClusterName>
-             \<!\-- The name that the Elastic node should have. \--\>
-             \<NodeName>NodeName\</NodeName>
-              \<!\-- The minimum master nodes for the Elastic cluster. Should be set to 1 in case of single node and to 2 in case of a cluster. \--\>
-             \<MinimumMasterNodes>1\</MinimumMasterNodes>
-             \<!\-- Define whether or not this node is a master node. \--\>
-             \<MasterNode>true\</MasterNode>
-             \<!\-- Define whether or not this node is a data node. Best to set this to true\--\>
-             \<DataNode>true\</DataNode>
-             \<!\-- The location the data will be saved on. \--\>
-             \<DataPath>C:\\ProgramData\\Elasticsearch\</DataPath>
-             \<!\-- The location where Elastic will be installed. \--\>
-             \<TargetInstallationDirectory>C:\\Program Files\\Elasticsearch\</TargetInstallationDirectory>
-         \</ElasticClusterSettings>
-     \</DMA>
-    \<!\-- Configuration belonging to a DataMiner agent \--\>
-     \<DMA>
-       \<!\-- The DataMiner ID \--\>
-         \<ID>102\</ID>
-         \<!\-- The name of the machine \--\>
-       \<MachineName>SLC-H70-G02\</MachineName>
-       \<Location>Local\</Location>
-       \<!\-- The IP of this agent \--\>
-         \<IP1>10.11.2.70\</IP1>
-       \<!\-- DB.xml settings \--\>
-         \<DataBase type=\"CassandraCluster\"\>
-          \<!\-- The name of the Cassandra database. Keyspaces will be prefixed using this value \--\>
-             \<DB>SLDMADB\</DB>
-          \<!\-- IP of the Cassandra database \--\>
-             \<DBServer>10.11.1.70,10.11.2.70,10.11.3.70\</DBServer>
-             \<ConnectString/>
-          \<!\-- Cassandra username \--\>
-             \<UID>root\</UID>
-          \<!\-- Cassandra password \--\>
-             \<PWD>root\</PWD>
-             \<Maintenance>
-             \<!\-- Any tag that also exists in the DB.xml for local DB \--\>
-             \</Maintenance>
-         \</DataBase>
-       \<SearchDataBase>
-          \<!\-- IP of the Elastic database \--\>
-             \<DBServer>127.0.0.1\</DBServer>
-          \<!\-- Elastic username \--\>
-             \<UID>elastic\</UID>
-          \<!\-- Elastic password \--\>
-             \<PWD>root123\</PWD>
-         \</SearchDataBase>
-       \<!\-- Settings used to install and configure Cassandra with \--\>
-         \<CassandraClusterSettings>
-           \<!\-- cassandra.yaml setting \'listen_adress\' \--\>
-             \<ListenAddress>10.11.2.70\</ListenAddress>
-           \<!\-- cassandra.yaml setting \'seed_provider\': The seeds which will be used to connect to Cassandra with. \--\>
-             \<Seeds>10.11.1.70,10.11.2.70,10.11.3.70\</Seeds>
-           \<!\-- cassandra.yaml setting \'cluster_name\': The name of the Cassandra cluster. Should be the same for all agents. \--\>
-             \<ClusterName>DMS\</ClusterName>
-           \<!\-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing \--\>
-             \<ClusterSize>3\</ClusterSize>
-           \<!\-- cassandra.yaml setting \'native_transport_port\': CQL Native transport port \--\>
-             \<Port>9042\</Port>
-           \<!\-- Configuration setting after Cassandra has been installed. The system auth replication factor will be set to this value \--\>
-             \<SystemAuthReplicationFactor>3\</SystemAuthReplicationFactor>
-          \<!\-- The replication factor of the default keyspace used. \--\>
-             \<DefaultKeyspaceReplicationFactor>3\</DefaultKeyspaceReplicationFactor>
-           \<!\-- cassandra.yaml setting \'rpc_address\': If left empty, will not be defined in the yaml. \--\>
-             \<RpcAddress>0.0.0.0\</RpcAddress>
-           \<!\-- cassandra.yaml setting \'broadcast_rpc_address\': If left empty, will not be defined in the yaml. \--\>
-             \<BroadCastRpcAddress>10.11.2.70\</BroadCastRpcAddress>
-          \<!\-- The location where Cassandra will be installed. \--\>
-             \<TargetInstallationDirectory>C:\\Program Files\\Cassandra\</TargetInstallationDirectory>
-           \<!\-- cassandra.yaml setting \'data_file_directories\' Directory where Cassandra data will be stored. \--\>
-             \<DataPath>C:\\ProgramData\\Cassandra\</DataPath>
-           \<!\-- cassandra.yaml setting \'endpoint_snitch\': possible values: SimpleSnitch, GossipingPropertyFileSnitch, PropertyFileSnitch, Ec2Snitch, Ec2MultiRegionSnitch, RackInferringSnitch \--\>
-             \<Snitch>GossipingPropertyFileSnitch\</Snitch>
-           \<!\-- Whether or not this DMA is responsible for configuring the Cassandra cluster after it has been created.
-                This includes creating the defined user as well as setting the system auth replication factor.
-              This value should be true for only 1 DMA.
-          \--\>
-             \<IsResponsibleForConfiguration>false\</IsResponsibleForConfiguration>
-         \</CassandraClusterSettings>
-         \<!\-- Settings used to install and configure Elastic with \--\>
-         \<ElasticClusterSettings>
-             \<!\--The Ip\'s of the other cluster, one is enough. Best to fill in with master node ip\'s\--\>
-             \<DiscoveryHosts>127.0.0.1\</DiscoveryHosts>
-              \<!\-- elasticsearch.yaml setting \'NetworkHost\': The IP you want to bind elastic to. \--\>
-             \<NetworkHost>0.0.0.0\</NetworkHost>
-              \<!\-- The IP you want elastic to publish to. Should not be set to 0.0.0.0 when there are virtual IP\'s configured\--\>
-             \<NetworkPublishHost>0.0.0.0\</NetworkPublishHost>
-              \<!\-- elasticsearch.yaml setting \'cluster_name\': The name of the Elastic cluster. Should be the same for all agents. \--\>
-             \<ClusterName>DMS\</ClusterName>
-             \<!\-- The name that the Elastic node should have\--\>
-             \<NodeName>NodeName\</NodeName>
-              \<!\-- The minimum master nodes for the Elastic cluster. Should be set to 1 in case of single node and to 2 in case of a cluster. \--\>
-             \<MinimumMasterNodes>1\</MinimumMasterNodes>
-             \<!\-- Define whether or not this node is a master node. \--\>
-             \<MasterNode>true\</MasterNode>
-             \<!\-- Define whether or not this node is a data node. Best to set this to true\--\>
-             \<DataNode>true\</DataNode>
-             \<!\-- The location the data will be saved on. \--\>
-             \<DataPath>C:\\ProgramData\\Elasticsearch\</DataPath>
-             \<!\-- The location where Elastic will be installed. \--\>
-             \<TargetInstallationDirectory>C:\\Program Files\\Elasticsearch\</TargetInstallationDirectory>
-         \</ElasticClusterSettings>
-     \</DMA>
-    \<!\-- Configuration belonging to a DataMiner agent \--\>
-     \<DMA>
-       \<!\-- The DataMiner ID \--\>
-         \<ID>103\</ID>
-         \<!\-- The name of the machine \--\>
-       \<MachineName>SLC-H70-G03\</MachineName>
-       \<Location>Local\</Location>
-       \<!\-- The IP of this agent \--\>
-         \<IP1>10.11.3.70\</IP1>
-       \<!\-- DB.xml settings \--\>
-         \<DataBase type=\"CassandraCluster\"\>
-          \<!\-- The name of the Cassandra database. Keyspaces will be prefixed using this value \--\>
-             \<DB>SLDMADB\</DB>
-          \<!\-- IP of the Cassandra database \--\>
-             \<DBServer>10.11.1.70,10.11.2.70,10.11.3.70\</DBServer>
-             \<ConnectString/>
-          \<!\-- Cassandra username \--\>
-             \<UID>root\</UID>
-          \<!\-- Cassandra password \--\>
-             \<PWD>root\</PWD>
-             \<Maintenance>
-             \<!\-- Any tag that also exists in the DB.xml for local DB \--\>
-             \</Maintenance>
-         \</DataBase>
-       \<SearchDataBase>
-          \<!\-- IP of the Elastic database \--\>
-             \<DBServer>127.0.0.1\</DBServer>
-          \<!\-- Elastic username \--\>
-             \<UID>elastic\</UID>
-          \<!\-- Elastic password \--\>
-             \<PWD>root123\</PWD>
-         \</SearchDataBase>
-       \<!\-- Settings used to install and configure Cassandra with \--\>
-         \<CassandraClusterSettings>
-           \<!\-- cassandra.yaml setting \'listen_adress\' \--\>
-             \<ListenAddress>10.11.3.70\</ListenAddress>
-           \<!\-- cassandra.yaml setting \'seed_provider\': The seeds which will be used to connect to Cassandra with. \--\>
-             \<Seeds>10.11.1.70,10.11.2.70,10.11.3.70\</Seeds>
-           \<!\-- cassandra.yaml setting \'cluster_name\': The name of the Cassandra cluster. Should be the same for all agents. \--\>
-             \<ClusterName>DMS\</ClusterName>
-           \<!\-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing \--\>
-             \<ClusterSize>3\</ClusterSize>
-           \<!\-- cassandra.yaml setting \'native_transport_port\': CQL Native transport port \--\>
-             \<Port>9042\</Port>
-           \<!\-- Configuration setting after Cassandra has been installed. The system auth replication factor will be set to this value \--\>
-             \<SystemAuthReplicationFactor>3\</SystemAuthReplicationFactor>
-          \<!\-- The replication factor of the default keyspace used. \--\>
-             \<DefaultKeyspaceReplicationFactor>3\</DefaultKeyspaceReplicationFactor>
-           \<!\-- cassandra.yaml setting \'rpc_address\': If left empty, will not be defined in the yaml. \--\>
-             \<RpcAddress>0.0.0.0\</RpcAddress>
-           \<!\-- cassandra.yaml setting \'broadcast_rpc_address\': If left empty, will not be defined in the yaml. \--\>
-             \<BroadCastRpcAddress>10.11.3.70\</BroadCastRpcAddress>
-          \<!\-- The location where Cassandra will be installed. \--\>
-             \<TargetInstallationDirectory>C:\\Program Files\\Cassandra\</TargetInstallationDirectory>
-           \<!\-- cassandra.yaml setting \'data_file_directories\' Directory where Cassandra data will be stored. \--\>
-             \<DataPath>C:\\ProgramData\\Cassandra\</DataPath>
-           \<!\-- cassandra.yaml setting \'endpoint_snitch\': possible values: SimpleSnitch, GossipingPropertyFileSnitch, PropertyFileSnitch, Ec2Snitch, Ec2MultiRegionSnitch, RackInferringSnitch \--\>
-             \<Snitch>GossipingPropertyFileSnitch\</Snitch>
-           \<!\-- Whether or not this DMA is responsible for configuring the Cassandra cluster after it has been created.
-                This includes creating the defined user as well as setting the system auth replication factor.
-              This value should be true for only 1 DMA.
-          \--\>
-             \<IsResponsibleForConfiguration>false\</IsResponsibleForConfiguration>
-         \</CassandraClusterSettings>
-         \<!\-- Settings used to install and configure Elastic with \--\>
-         \<ElasticClusterSettings>
-             \<!\--The Ip\'s of the other cluster, one is enough. Best to fill in with master node ip\'s\--\>
-             \<DiscoveryHosts>127.0.0.1\</DiscoveryHosts>
-              \<!\-- elasticsearch.yaml setting \'NetworkHost\': The IP you want to bind elastic to. \--\>
-             \<NetworkHost>0.0.0.0\</NetworkHost>
-              \<!\-- The IP you want elastic to publish to. Should not be set to 0.0.0.0 when there are virtual IP\'s configured\--\>
-             \<NetworkPublishHost>0.0.0.0\</NetworkPublishHost>
-              \<!\-- elasticsearch.yaml setting \'cluster_name\': The name of the Elastic cluster. Should be the same for all agents. \--\>
-             \<ClusterName>DMS\</ClusterName>
-             \<!\-- The name that the Elastic node should have\--\>
-             \<NodeName>NodeName\</NodeName>
-              \<!\-- The minimum master nodes for the Elastic cluster. Should be set to 1 in case of single node and to 2 in case of a cluster. \--\>
-             \<MinimumMasterNodes>1\</MinimumMasterNodes>
-             \<!\-- Define whether or not this node is a master node. \--\>
-             \<MasterNode>true\</MasterNode>
-             \<!\-- Define whether or not this node is a data node. Best to set this to true\--\>
-             \<DataNode>true\</DataNode>
-             \<!\-- The location the data will be saved on. \--\>
-             \<DataPath>C:\\ProgramData\\Elasticsearch\</DataPath>
-             \<!\-- The location where Elastic will be installed. \--\>
-             \<TargetInstallationDirectory>C:\\Program Files\\Elasticsearch\</TargetInstallationDirectory>
-         \</ElasticClusterSettings>
-     \</DMA>
-  \</DMS>
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-:::
+```xml
+<DMS>
+  <!-- DataMiner version -->
+  <DataMinerVersion>DataMiner 10.0.12.0-9536 Full Upgrade (rc)</DataMinerVersion>
+  <!-- Name of the DataMiner cluster -->
+  <ClusterName>CassandraClusterDMS</ClusterName>
+  <!-- timeout in minutes -->
+  <Timeout>15</Timeout>
+  <!-- Configuration belonging to a DataMiner agent -->
+  <DMA>
+    <!-- The DataMiner ID -->
+    <ID>101</ID>
+    <!-- The name of the machine -->
+    <MachineName>SLC-H70-G01</MachineName>
+    <Location>Local</Location>
+    <!-- The IP of this agent -->
+    <IP1>10.11.1.70</IP1>
+    <!-- DB.xml settings -->
+    <DataBase type="CassandraCluster">
+      <!-- The name of the Cassandra database. Keyspaces will be prefixed using this value -->
+      <DB>SLDMADB</DB>
+      <!-- IP of the Cassandra database -->
+      <DBServer>10.11.1.70,10.11.2.70,10.11.3.70</DBServer>
+      <ConnectString/>
+      <!-- Cassandra username -->
+      <UID>root</UID>
+      <!-- Cassandra password -->
+      <PWD>root</PWD>
+      <Maintenance>
+        <!-- Any tag that also exists in the DB.xml for local DB -->
+      </Maintenance>
+    </DataBase>
+    <SearchDataBase>
+      <!-- IP of the Elastic database -->
+      <DBServer>127.0.0.1</DBServer>
+      <!-- Elastic username -->
+      <UID>elastic</UID>
+      <!-- Elastic password -->
+      <PWD>root123</PWD>
+    </SearchDataBase>
+    <!-- Settings used to install and configure Cassandra with -->
+    <CassandraClusterSettings>
+      <!-- cassandra.yaml setting 'listen_adress' -->
+      <ListenAddress>10.11.1.70</ListenAddress>
+      <!-- cassandra.yaml setting 'seed_provider': The seeds which will be used to connect to Cassandra with. -->
+      <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>
+      <!-- cassandra.yaml setting 'cluster_name': The name of the Cassandra cluster. Should be the same for all agents. -->
+      <ClusterName>DMS</ClusterName>
+      <!-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing -->
+      <ClusterSize>3</ClusterSize>
+      <!-- cassandra.yaml setting 'native_transport_port': CQL Native transport port -->
+      <Port>9042</Port>
+      <!-- Configuration setting after Cassandra has been installed. The system auth replication factor will be set to this value -->
+      <SystemAuthReplicationFactor>3</SystemAuthReplicationFactor>
+      <!-- The replication factor of the default keyspace. -->
+      <DefaultKeyspaceReplicationFactor>3</DefaultKeyspaceReplicationFactor>
+      <!-- cassandra.yaml setting 'rpc_address': If left empty, will not be defined in the yaml. -->
+      <RpcAddress>0.0.0.0</RpcAddress>
+      <!-- cassandra.yaml setting 'broadcast_rpc_address': If left empty, will not be defined in the yaml. -->
+      <BroadCastRpcAddress>10.11.1.70</BroadCastRpcAddress>
+      <!-- The location where Cassandra will be installed. -->
+      <TargetInstallationDirectory>C:\Program Files\Cassandra</TargetInstallationDirectory>
+      <!-- cassandra.yaml setting 'data_file_directories' Directory where Cassandra data will be stored. -->
+      <DataPath>C:\ProgramData\Cassandra</DataPath>
+      <!-- cassandra.yaml setting 'endpoint_snitch': possible values: SimpleSnitch, GossipingPropertyFileSnitch, PropertyFileSnitch, Ec2Snitch, Ec2MultiRegionSnitch, RackInferringSnitch -->
+      <Snitch>GossipingPropertyFileSnitch</Snitch>
+      <!-- Whether or not this DMA is responsible for configuring the Cassandra cluster after it has been created.
+              This includes creating the defined user as well as setting the system auth replication factor.
+             This value should be true for only 1 DMA.
+         -->
+      <IsResponsibleForConfiguration>true</IsResponsibleForConfiguration>
+    </CassandraClusterSettings>
+    <!-- Settings used to install and configure Elastic with -->
+    <ElasticClusterSettings>
+      <!--The Ip's of the other cluster, one is enough. Best to fill in with master node ip's-->
+      <DiscoveryHosts>127.0.0.1</DiscoveryHosts>
+      <!-- elasticsearch.yaml setting 'NetworkHost': The IP you want to bind elastic to. -->
+      <NetworkHost>0.0.0.0</NetworkHost>
+      <!-- The IP you want elastic to publish to. Should not be set to 0.0.0.0 when there are virtual IP's configured-->
+      <NetworkPublishHost>0.0.0.0</NetworkPublishHost>
+      <!-- elasticsearch.yaml setting 'cluster_name': The name of the Elastic cluster. Should be the same for all agents. -->
+      <ClusterName>DMS</ClusterName>
+      <!-- The name that the Elastic node should have. -->
+      <NodeName>NodeName</NodeName>
+      <!-- The minimum master nodes for the Elastic cluster. Should be set to 1 in case of single node and to 2 in case of a cluster. -->
+      <MinimumMasterNodes>1</MinimumMasterNodes>
+      <!-- Define whether or not this node is a master node. -->
+      <MasterNode>true</MasterNode>
+      <!-- Define whether or not this node is a data node. Best to set this to true-->
+      <DataNode>true</DataNode>
+      <!-- The location the data will be saved on. -->
+      <DataPath>C:\ProgramData\Elasticsearch</DataPath>
+      <!-- The location where Elastic will be installed. -->
+      <TargetInstallationDirectory>C:\Program Files\Elasticsearch</TargetInstallationDirectory>
+    </ElasticClusterSettings>
+  </DMA>
+  <!-- Configuration belonging to a DataMiner agent -->
+  <DMA>
+    <!-- The DataMiner ID -->
+    <ID>102</ID>
+    <!-- The name of the machine -->
+    <MachineName>SLC-H70-G02</MachineName>
+    <Location>Local</Location>
+    <!-- The IP of this agent -->
+    <IP1>10.11.2.70</IP1>
+    <!-- DB.xml settings -->
+    <DataBase type="CassandraCluster">
+      <!-- The name of the Cassandra database. Keyspaces will be prefixed using this value -->
+      <DB>SLDMADB</DB>
+      <!-- IP of the Cassandra database -->
+      <DBServer>10.11.1.70,10.11.2.70,10.11.3.70</DBServer>
+      <ConnectString/>
+      <!-- Cassandra username -->
+      <UID>root</UID>
+      <!-- Cassandra password -->
+      <PWD>root</PWD>
+      <Maintenance>
+        <!-- Any tag that also exists in the DB.xml for local DB -->
+      </Maintenance>
+    </DataBase>
+    <SearchDataBase>
+      <!-- IP of the Elastic database -->
+      <DBServer>127.0.0.1</DBServer>
+      <!-- Elastic username -->
+      <UID>elastic</UID>
+      <!-- Elastic password -->
+      <PWD>root123</PWD>
+    </SearchDataBase>
+    <!-- Settings used to install and configure Cassandra with -->
+    <CassandraClusterSettings>
+      <!-- cassandra.yaml setting 'listen_adress' -->
+      <ListenAddress>10.11.2.70</ListenAddress>
+      <!-- cassandra.yaml setting 'seed_provider': The seeds which will be used to connect to Cassandra with. -->
+      <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>
+      <!-- cassandra.yaml setting 'cluster_name': The name of the Cassandra cluster. Should be the same for all agents. -->
+      <ClusterName>DMS</ClusterName>
+      <!-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing -->
+      <ClusterSize>3</ClusterSize>
+      <!-- cassandra.yaml setting 'native_transport_port': CQL Native transport port -->
+      <Port>9042</Port>
+      <!-- Configuration setting after Cassandra has been installed. The system auth replication factor will be set to this value -->
+      <SystemAuthReplicationFactor>3</SystemAuthReplicationFactor>
+      <!-- The replication factor of the default keyspace used. -->
+      <DefaultKeyspaceReplicationFactor>3</DefaultKeyspaceReplicationFactor>
+      <!-- cassandra.yaml setting 'rpc_address': If left empty, will not be defined in the yaml. -->
+      <RpcAddress>0.0.0.0</RpcAddress>
+      <!-- cassandra.yaml setting 'broadcast_rpc_address': If left empty, will not be defined in the yaml. -->
+      <BroadCastRpcAddress>10.11.2.70</BroadCastRpcAddress>
+      <!-- The location where Cassandra will be installed. -->
+      <TargetInstallationDirectory>C:\Program Files\Cassandra</TargetInstallationDirectory>
+      <!-- cassandra.yaml setting 'data_file_directories' Directory where Cassandra data will be stored. -->
+      <DataPath>C:\ProgramData\Cassandra</DataPath>
+      <!-- cassandra.yaml setting 'endpoint_snitch': possible values: SimpleSnitch, GossipingPropertyFileSnitch, PropertyFileSnitch, Ec2Snitch, Ec2MultiRegionSnitch, RackInferringSnitch -->
+      <Snitch>GossipingPropertyFileSnitch</Snitch>
+      <!-- Whether or not this DMA is responsible for configuring the Cassandra cluster after it has been created.
+              This includes creating the defined user as well as setting the system auth replication factor.
+             This value should be true for only 1 DMA.
+         -->
+      <IsResponsibleForConfiguration>false</IsResponsibleForConfiguration>
+    </CassandraClusterSettings>
+    <!-- Settings used to install and configure Elastic with -->
+    <ElasticClusterSettings>
+      <!--The Ip's of the other cluster, one is enough. Best to fill in with master node ip's-->
+      <DiscoveryHosts>127.0.0.1</DiscoveryHosts>
+      <!-- elasticsearch.yaml setting 'NetworkHost': The IP you want to bind elastic to. -->
+      <NetworkHost>0.0.0.0</NetworkHost>
+      <!-- The IP you want elastic to publish to. Should not be set to 0.0.0.0 when there are virtual IP's configured-->
+      <NetworkPublishHost>0.0.0.0</NetworkPublishHost>
+      <!-- elasticsearch.yaml setting 'cluster_name': The name of the Elastic cluster. Should be the same for all agents. -->
+      <ClusterName>DMS</ClusterName>
+      <!-- The name that the Elastic node should have-->
+      <NodeName>NodeName</NodeName>
+      <!-- The minimum master nodes for the Elastic cluster. Should be set to 1 in case of single node and to 2 in case of a cluster. -->
+      <MinimumMasterNodes>1</MinimumMasterNodes>
+      <!-- Define whether or not this node is a master node. -->
+      <MasterNode>true</MasterNode>
+      <!-- Define whether or not this node is a data node. Best to set this to true-->
+      <DataNode>true</DataNode>
+      <!-- The location the data will be saved on. -->
+      <DataPath>C:\ProgramData\Elasticsearch</DataPath>
+      <!-- The location where Elastic will be installed. -->
+      <TargetInstallationDirectory>C:\Program Files\Elasticsearch</TargetInstallationDirectory>
+    </ElasticClusterSettings>
+  </DMA>
+  <!-- Configuration belonging to a DataMiner agent -->
+  <DMA>
+    <!-- The DataMiner ID -->
+    <ID>103</ID>
+    <!-- The name of the machine -->
+    <MachineName>SLC-H70-G03</MachineName>
+    <Location>Local</Location>
+    <!-- The IP of this agent -->
+    <IP1>10.11.3.70</IP1>
+    <!-- DB.xml settings -->
+    <DataBase type="CassandraCluster">
+      <!-- The name of the Cassandra database. Keyspaces will be prefixed using this value -->
+      <DB>SLDMADB</DB>
+      <!-- IP of the Cassandra database -->
+      <DBServer>10.11.1.70,10.11.2.70,10.11.3.70</DBServer>
+      <ConnectString/>
+      <!-- Cassandra username -->
+      <UID>root</UID>
+      <!-- Cassandra password -->
+      <PWD>root</PWD>
+      <Maintenance>
+        <!-- Any tag that also exists in the DB.xml for local DB -->
+      </Maintenance>
+    </DataBase>
+    <SearchDataBase>
+      <!-- IP of the Elastic database -->
+      <DBServer>127.0.0.1</DBServer>
+      <!-- Elastic username -->
+      <UID>elastic</UID>
+      <!-- Elastic password -->
+      <PWD>root123</PWD>
+    </SearchDataBase>
+    <!-- Settings used to install and configure Cassandra with -->
+    <CassandraClusterSettings>
+      <!-- cassandra.yaml setting 'listen_adress' -->
+      <ListenAddress>10.11.3.70</ListenAddress>
+      <!-- cassandra.yaml setting 'seed_provider': The seeds which will be used to connect to Cassandra with. -->
+      <Seeds>10.11.1.70,10.11.2.70,10.11.3.70</Seeds>
+      <!-- cassandra.yaml setting 'cluster_name': The name of the Cassandra cluster. Should be the same for all agents. -->
+      <ClusterName>DMS</ClusterName>
+      <!-- The size of the cluster. When installing Cassandra, the installer will wait till it sees this number of nodes before continuing -->
+      <ClusterSize>3</ClusterSize>
+      <!-- cassandra.yaml setting 'native_transport_port': CQL Native transport port -->
+      <Port>9042</Port>
+      <!-- Configuration setting after Cassandra has been installed. The system auth replication factor will be set to this value -->
+      <SystemAuthReplicationFactor>3</SystemAuthReplicationFactor>
+      <!-- The replication factor of the default keyspace used. -->
+      <DefaultKeyspaceReplicationFactor>3</DefaultKeyspaceReplicationFactor>
+      <!-- cassandra.yaml setting 'rpc_address': If left empty, will not be defined in the yaml. -->
+      <RpcAddress>0.0.0.0</RpcAddress>
+      <!-- cassandra.yaml setting 'broadcast_rpc_address': If left empty, will not be defined in the yaml. -->
+      <BroadCastRpcAddress>10.11.3.70</BroadCastRpcAddress>
+      <!-- The location where Cassandra will be installed. -->
+      <TargetInstallationDirectory>C:\Program Files\Cassandra</TargetInstallationDirectory>
+      <!-- cassandra.yaml setting 'data_file_directories' Directory where Cassandra data will be stored. -->
+      <DataPath>C:\ProgramData\Cassandra</DataPath>
+      <!-- cassandra.yaml setting 'endpoint_snitch': possible values: SimpleSnitch, GossipingPropertyFileSnitch, PropertyFileSnitch, Ec2Snitch, Ec2MultiRegionSnitch, RackInferringSnitch -->
+      <Snitch>GossipingPropertyFileSnitch</Snitch>
+      <!-- Whether or not this DMA is responsible for configuring the Cassandra cluster after it has been created.
+              This includes creating the defined user as well as setting the system auth replication factor.
+             This value should be true for only 1 DMA.
+         -->
+      <IsResponsibleForConfiguration>false</IsResponsibleForConfiguration>
+    </CassandraClusterSettings>
+    <!-- Settings used to install and configure Elastic with -->
+    <ElasticClusterSettings>
+      <!--The Ip's of the other cluster, one is enough. Best to fill in with master node ip's-->
+      <DiscoveryHosts>127.0.0.1</DiscoveryHosts>
+      <!-- elasticsearch.yaml setting 'NetworkHost': The IP you want to bind elastic to. -->
+      <NetworkHost>0.0.0.0</NetworkHost>
+      <!-- The IP you want elastic to publish to. Should not be set to 0.0.0.0 when there are virtual IP's configured-->
+      <NetworkPublishHost>0.0.0.0</NetworkPublishHost>
+      <!-- elasticsearch.yaml setting 'cluster_name': The name of the Elastic cluster. Should be the same for all agents. -->
+      <ClusterName>DMS</ClusterName>
+      <!-- The name that the Elastic node should have-->
+      <NodeName>NodeName</NodeName>
+      <!-- The minimum master nodes for the Elastic cluster. Should be set to 1 in case of single node and to 2 in case of a cluster. -->
+      <MinimumMasterNodes>1</MinimumMasterNodes>
+      <!-- Define whether or not this node is a master node. -->
+      <MasterNode>true</MasterNode>
+      <!-- Define whether or not this node is a data node. Best to set this to true-->
+      <DataNode>true</DataNode>
+      <!-- The location the data will be saved on. -->
+      <DataPath>C:\ProgramData\Elasticsearch</DataPath>
+      <!-- The location where Elastic will be installed. -->
+      <TargetInstallationDirectory>C:\Program Files\Elasticsearch</TargetInstallationDirectory>
+    </ElasticClusterSettings>
+  </DMA>
+</DMS>
+```
 
 ## Unattended installation logging
 
-During the installation, all actions and errors are reported in a log
-file, which can be found in the temporary folder
-[%Temp%\\DataMinerInstallerLog]{.FM_Emphasis}.
+During the installation, all actions and errors are reported in a log file, which can be found in the temporary folder* %Temp%\DataMinerInstallerLog*.
 
 The following error codes can be returned after the installation:
 
-::: {width="100%" align="left"}
-  Internal name                     Error code   Description
-  --------------------------------- ------------ -------------------------------------------------------------------------------------------
-  ERROR_SUCCESS                     0            Success
-  ERROR_CANCELLED                   10           The user has canceled the installation.
-  ERROR_DATAMINERALREADYINSTALLED   20           DataMiner was already installed.
-  ERROR_VERIFY                      100          Something is wrong with the setup file, possibly a required package is not included.
-  ERROR_LICENSE                     200          No license file present.
-  ERROR_CUSTOMIZE                   300          Something is wrong in the configuration XML file. Refer to the log file for more details.
-  ERROR_CUSTOMIZE_XMLMISSING        310          The XML file is missing.
-  ERROR_INSTALLING                  400          Something went wrong during installation, but no more details are available.
-  ERROR_INSTALLING_DISKSPACE        401          Installation could not continue because there is not enough disk space.
-  ERROR_INSTALLING_COPYRESOURCE     402          Installation failed when copying a resource (e.g. VC++, .NET, or DataMiner package).
-  ERROR_INSTALLING_PREREQ           410          Installation of a certain prerequisite failed (e.g. VC++ or .NET)
-  ERROR_INSTALLING_DATABASE         420          Installation of the database failed (Cassandra or MySQL).
-  ERROR_INSTALLING_DATAMINER        430          Installation of DataMiner failed. Refer to the log file for more details.
-  ERROR_CONFIGURATION               500          Something went wrong during the DMS configuration, but no more details are available.
-  ERROR_CONFIGURATION_ONLINE        510          Not all Agents in the cluster went online.
-  ERROR_CONFIGURATION_CLUSTER       520          Failed to create the cluster.
-  ERROR_CONFIGURATION_FAILOVER      530          Failed to set up Failover.
-  ERROR_CONFIGURATION_READY         540          Not all Agents were configured correctly.
-  ERROR_APPLICATION_PACKAGES        650          Failed while installing an extra package.
-:::
-
-
-
+| Internal name | Error code | Description |
+| ------------- | ---------- | ----------- |
+| ERROR_SUCCESS | 0 | Success |
+| ERROR_CANCELLED | 10 | The user has canceled the installation. |
+| ERROR_DATAMINERALREADYINSTALLED | 20 |  DataMiner was already installed. |
+| ERROR_VERIFY | 100 | Something is wrong with the setup file, possibly a required package is not included. |
+| ERROR_LICENSE | 200 | No license file present. |
+| ERROR_CUSTOMIZE | 300 |  Something is wrong in the configuration XML file. Refer to the log file for more details. |
+| ERROR_CUSTOMIZE_XMLMISSING | 310 | The XML file is missing. |
+| ERROR_INSTALLING | 400 | Something went wrong during installation, but no more details are available. |
+| ERROR_INSTALLING_DISKSPACE | 401 | Installation could not continue because there is not enough disk space. |
+| ERROR_INSTALLING_COPYRESOURCE | 402 | Installation failed when copying a resource (e.g. VC++, .NET, or DataMiner package). |
+| ERROR_INSTALLING_PREREQ | 410 |  Installation of a certain prerequisite failed (e.g. VC++ or .NET) |
+| ERROR_INSTALLING_DATABASE | 420 |  Installation of the database failed (Cassandra or MySQL). |
+| ERROR_INSTALLING_DATAMINER | 430 | Installation of DataMiner failed. Refer to the log file for more details. |
+| ERROR_CONFIGURATION | 500 | Something went wrong during the DMS configuration, but no more details are available. |
+| ERROR_CONFIGURATION_ONLINE | 510 | Not all Agents in the cluster went online. |
+| ERROR_CONFIGURATION_CLUSTER |  520 | Failed to create the cluster. |
+| ERROR_CONFIGURATION_FAILOVER | 530 | Failed to set up Failover. |
+| ERROR_CONFIGURATION_READY | 540 | Not all Agents were configured correctly. |
+| ERROR_APPLICATION_PACKAGES | 650 | Failed while installing an extra package. |

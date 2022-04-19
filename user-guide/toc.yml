@@ -763,6 +763,17 @@
       items:
         - name: Installing a DataMiner Agent
           topicUid: Installing_a_DataMiner_Agent
+          items:
+            - name: Installing Windows
+              topicUid: Installing_Windows
+            - name: Installing DataMiner using the DataMiner Installer
+              topicUID: Installing_DM_using_the_DM_installer
+            - name: Unattended DataMiner installation
+              topicUID: Unattended_DM_installation
+            - name: Checking the DataMiner installation
+              topicUID: Checking_the_DM_installation
+            - name: Frequently asked questions
+              topicUID: Installing_a_DMA_FAQ
         - name: Configuring a DataMiner Agent
           topicUid: Configuring_a_DataMiner_Agent
           items:
