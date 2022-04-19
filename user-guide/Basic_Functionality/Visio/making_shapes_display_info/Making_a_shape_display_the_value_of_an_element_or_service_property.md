@@ -10,6 +10,10 @@ Using a shape data field of type **Property**, a shape linked to an element or a
 > See also:
 > [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter)
 
+> [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _data > PROPERTIES_.
+
 ## Configuring the shape data field
 
 Add a shape data field of type **Property** to the shape, and set its value to the name of a particular property:

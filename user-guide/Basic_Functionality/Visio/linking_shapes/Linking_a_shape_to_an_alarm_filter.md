@@ -7,9 +7,11 @@ uid: Linking_a_shape_to_an_alarm_filter
 If you link a shape to an alarm filter, it can be used to show statistical information about the alarms that match the filter.
 
 > [!NOTE]
+>
 > - Depending on their security level, different users may see different statistics.
 > - Because Visio files need to be able to display information for all users, only shared filters can be used.
 > - Cleared alarms are automatically removed from alarm filters in Visio. For information or suggestion events, this means that only open events are included, e.g. when a backup is currently ongoing.
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _linking > ALARM_.
 
 Configure the shape data fields as follows:
 
@@ -36,27 +38,27 @@ Configure the shape data fields as follows:
 
    For example:
 
-   | Shape data field   | Value                                                      |
-   |--------------------|------------------------------------------------------------|
-   | AlarmSummary       | all\|MySharedFilter\|false\|Alarm\|FilterContext=MyService |
+   | Shape data field | Value                                                      |
+   | ---------------- | ---------------------------------------------------------- |
+   | AlarmSummary     | all\|MySharedFilter\|false\|Alarm\|FilterContext=MyService |
 
-   | Shape data field   | Value                                                      |
-   |--------------------|------------------------------------------------------------|
-   | AlarmSummary       | active\|MySharedFilter\|false\|Alarm\|FilterContext=SystemName=MyEPMSystemName |
+   | Shape data field | Value                                                                          |
+   | ---------------- | ------------------------------------------------------------------------------ |
+   | AlarmSummary     | active\|MySharedFilter\|false\|Alarm\|FilterContext=SystemName=MyEPMSystemName |
 
 1. Optionally, from DataMiner 9.5.8/9.5.0 \[CU4\] onwards, to customize the default alarm level of the shape when the filter yields no results, add a shape data field of type **Options** and set its value to *DefaultAlarmLevel=*AlarmLevel. For example:
 
    | Shape data field | Value                    |
-   |--------------------|--------------------------|
-   | Options            | DefaultAlarmLevel=Normal |
+   | ---------------- | ------------------------ |
+   | Options          | DefaultAlarmLevel=Normal |
 
-1. Optionally, from DataMiner 10.0.2 onwards, you can configure the shape so that clicking it opens an alarm tab in the Alarm Console, containing the alarms matching the alarm filter. To do so, add a shape data field of type **AlarmTab**, and set it to *Name=**AlarmTabName*.
+1. Optionally, from DataMiner 10.0.2 onwards, you can configure the shape so that clicking it opens an alarm tab in the Alarm Console, containing the alarms matching the alarm filter. To do so, add a shape data field of type **AlarmTab**, and set it to _Name=\*\*AlarmTabName_.
 
    For example:
 
    | Shape data field | Value              |
-   |--------------------|--------------------|
-   | AlarmTab           | Name=MyFilteredTab |
+   | ---------------- | ------------------ |
+   | AlarmTab         | Name=MyFilteredTab |
 
 ## Placeholders
 
@@ -65,7 +67,7 @@ The value of an **AlarmSummary** shape data field can contain dynamic placeholde
 In addition, you can also use the following placeholders in the shape text itself, so that they are replaced by statistical information in Visual Overview.
 
 | Placeholder  | Value                        |
-|--------------|------------------------------|
+| ------------ | ---------------------------- |
 | #Alarms      | Number of alarms             |
 | #NewAlarms   | Number of new alarms         |
 | #Critical    | Number of critical alarms    |

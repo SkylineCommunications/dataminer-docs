@@ -10,11 +10,14 @@ By default, this will cause the Visio drawing linked to that view to be opened e
 
 > [!TIP]
 > See also:
+>
 > - [Disabling the default hyperlink behavior of a linked shape](xref:Disabling_the_default_hyperlink_behavior_of_a_linked_shape)
 > - [Making a shape launch the Device Discovery app](xref:Making_a_shape_launch_the_Device_Discovery_app)
 
 > [!NOTE]
+>
 > - Visio shapes linked to views will not be displayed if, for any reason, those links cannot be resolved. Link problems can occur due to insufficient user rights, missing DataMiner items, invalid parameter values, etc.
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _linking > OBJECTS_.
 
 ## Configuring the shape data field
 
@@ -37,6 +40,7 @@ View ID|tab page index
 ```
 
 > [!NOTE]
+>
 > - If you want to link the shape to the root of the Surveyor, enter “-1”, “root”, or the name of the root.
 > - While using the name of a view might be more convenient, we advise you to always use its (unique) ID. If, in a Visio drawing, you use the name of a view, the link to that view will be broken the moment someone changes that name. If, on the other hand, you use the view ID, the link to that view will remain, even if its name is changed.
 
@@ -46,9 +50,9 @@ From DataMiner 10.0.5 onwards, you can specify which of the view's alarm levels 
 
 To do so, add a shape data field of type **AlarmLevel**, and set it to one of the values specified below:
 
-| Shape data field | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AlarmLevel       | One of the following values should be specified:<br> -  **Instance**: Displays the alarm level of the monitored aggregation rules on the view.<br> -  **BubbleUp**: Displays the highest alarm level of any child object.<br> -  **Summary**: Displays the highest of the *Instance* and *BubbleUp* alarm levels. |
+| Shape data field | Value                                                                                                                                                                                                                                                                                                          |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AlarmLevel       | One of the following values should be specified:<br> - **Instance**: Displays the alarm level of the monitored aggregation rules on the view.<br> - **BubbleUp**: Displays the highest alarm level of any child object.<br> - **Summary**: Displays the highest of the _Instance_ and _BubbleUp_ alarm levels. |
 
 ## Examples
 

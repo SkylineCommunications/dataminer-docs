@@ -22,6 +22,8 @@ Please note the following:
 
 - In DataMiner versions up to 8.5.8, Adobe Flash is used to display video thumbnails. From DataMiner 9.0 onwards, HTML is used instead. Both **MJPEG and HTML5** video types are supported. The latter can be used for live video streaming. However, note that most browsers only support video streaming over TCP.
 
+- For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _linking > THUMBNAIL_.
+
 > [!TIP]
 > See also: [Making a shape display an image](xref:Making_a_shape_display_an_image)
 
@@ -35,18 +37,19 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 ```
 
 > [!NOTE]
+>
 > - Adding "#" in front of the URL ensures that the video is displayed in an embedded browser. If you do not add this, the shape is rendered as it is drawn in Visio and clicking it opens your default browser and navigates to the link.
-> - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding “*toolbar=false*” or “*showtoolbar=false*” to the value of the **Link** shape data. For example: `#http://<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC&source=http://<DMAIP>/myvideo.mpeg&showtoolbar=false`
+> - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding “_toolbar=false_” or “_showtoolbar=false_” to the value of the **Link** shape data. For example: `#http://<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC&source=http://<DMAIP>/myvideo.mpeg&showtoolbar=false`
 
 ## Video server parameters
 
 The parameters you are allowed to pass inside the URL depend on the type of the video server.
 
-All supported video server types and their associated parameters are defined in the file *C:\\Skyline DataMiner\\videoservers.xml*.
+All supported video server types and their associated parameters are defined in the file _C:\\Skyline DataMiner\\videoservers.xml_.
 
 Depending on the DataMiner version, additional configuration is possible in the URL:
 
-- From DataMiner 9.5.1 onwards, the VLC component of video thumbnails sends a **referer HTTP header** when requesting the source URL. The referer URL is by default the URL of the DMA, but you can change it by specifying the parameter *referer=* in the URL of the video thumbnail. For example:
+- From DataMiner 9.5.1 onwards, the VLC component of video thumbnails sends a **referer HTTP header** when requesting the source URL. The referer URL is by default the URL of the DMA, but you can change it by specifying the parameter _referer=_ in the URL of the video thumbnail. For example:
 
   ```txt
   #http://localhost/VideoThumbnails/video.htm?type=VLC&source=http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4&referer=http%3A%2F%2Fsome%2Freferer%2F.
@@ -58,15 +61,16 @@ Depending on the DataMiner version, additional configuration is possible in the 
   #https://dma/VideoThumbnails/Video.htm?type=Generic%20Images&source=http%3A%2F%2F10.0.20.101%2Fimages%2Fthumbs%2F4.jpg&user=admin&password=test&refresh=1000
   ```
 
-- From DataMiner 10.2.0/10.1.1 onwards, you can use the *auth=* URL option to specify an **HTTP authorization header** that will be added to the HTTP request when a thumbnail image is requested from the video server. This option is required when the video server expects an authentication token (for example OAuth2). For example:
+- From DataMiner 10.2.0/10.1.1 onwards, you can use the _auth=_ URL option to specify an **HTTP authorization header** that will be added to the HTTP request when a thumbnail image is requested from the video server. This option is required when the video server expects an authentication token (for example OAuth2). For example:
 
   ```txt
   #https://dma/videothumbnails/video.htm?type=Generic%20Images&source=https%3A%2F%2F77.158.55.113%2Fvos-api%2Fmonitor%2Fv1%2Fservices%2F55002da8-37fd-43de-82a9-f6b75089d8c9%2Fthumbnail&auth=bearer%20580a4efa-0aab-4882-af91-7b0118c67f5d
   ```
 
   > [!NOTE]
+  >
   > - Always make sure that the parameters of the URL are URL-encoded, as illustrated in the examples above.
-  > - Use the *EscapeDataString* placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
+  > - Use the _EscapeDataString_ placeholder when you add parameters, properties or other DataMiner data sources in the URL (see [\[EscapeDataString:x\]](xref:Placeholders_for_variables_in_shape_data_values#escapedatastringx)). For example: `https://<DMAIP>/VideoThumbnails/Video.htm?type=Generic%20VLC&source=[EscapeDataString:[param:*,10014]]`
   > - When the authentication token expires, the URL has to be updated with the new token.
   > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 
@@ -99,13 +103,13 @@ http://ipaddress/images/getthumbnail/...
 
 If more URLs need to be added to the list of allowed URLs, do the following:
 
-1. On a DMA with version 8.5.8 or lower, open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config*.
+1. On a DMA with version 8.5.8 or lower, open _C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config_.
 
-   On a DMA with version 9.0 or higher, open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
+   On a DMA with version 9.0 or higher, open _C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config_.
 
-1. Go to the *appSettings* section.
+1. Go to the _appSettings_ section.
 
-1. Add all additional paths to the *ExtraAllowedPaths* key, separated by semicolons (”;”):
+1. Add all additional paths to the _ExtraAllowedPaths_ key, separated by semicolons (”;”):
 
    ```xml
    <add key="ExtraAllowedPaths" value="" />
@@ -114,7 +118,7 @@ If more URLs need to be added to the list of allowed URLs, do the following:
    > [!NOTE]
    > If you just add a single slash (“/”) in the value of the ExtraAllowedPaths key, all possible URLs will be allowed.
 
-Example: If, under *C:\\Skyline DataMiner\\Webpages*, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
+Example: If, under _C:\\Skyline DataMiner\\Webpages_, you created your own folder named _MyThumbnails_, then add _/MyThumbnails/_ to the value of the _ExtraAllowedPaths_ key.
 
 ## Ignoring validation errors during HTTP parsing
 
@@ -125,7 +129,7 @@ From DataMiner 9.5.5 onwards, you can configure the thumbnail web.config file to
 
 To do so:
 
-1. Open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
+1. Open the file _C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config_.
 
 1. Add the following option:
 
@@ -135,6 +139,7 @@ To do so:
 
    > [!NOTE]
    > When this property is set to false (the default setting), the following validation is performed during HTTP parsing:
+   >
    > - In end-of-line code, only CRLF is allowed, not CR or LF alone.
    > - Headers names may not have spaces in them.
    > - If multiple status lines exist, all additional status lines are treated as malformed header name/value pairs.
@@ -142,8 +147,8 @@ To do so:
    >
    > Regardless of whether the property is set to true or false, header names may not contain non-ASCII characters.
 
-  > [!TIP]
-  > See also: <https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequest­element.useunsafeheaderparsing.aspx>
+> [!TIP]
+> See also: <https://msdn.microsoft.com/en-us/library/system.net.configuration.httpwebrequest­element.useunsafeheaderparsing.aspx>
 
 ## Configuring a thumbnail for HTTP Live Streaming
 
@@ -156,6 +161,7 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 ```
 
 > [!NOTE]
+>
 > - For more information on HLS, see <https://github.com/video-dev/hls.js/>
 > - All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>.
 > - If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.

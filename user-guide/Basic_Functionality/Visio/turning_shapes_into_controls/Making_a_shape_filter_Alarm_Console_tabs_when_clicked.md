@@ -6,6 +6,10 @@ uid: Making_a_shape_filter_Alarm_Console_tabs_when_clicked
 
 If you add a shape data field of type **AlarmFilter** to a shape, clicking the shape will cause Alarm Console tabs of type “Active alarms linked to cards” only to show alarms that match the alarm filter specified in the field value.
 
+> [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _linking > ALARM_.
+
 ## Configuring the shape data field
 
 Add a shape data field of type AlarmFilter to the shape, and enter an alarm filter as the value, using the same syntax as in the Alarm Console quick filter.
@@ -14,27 +18,27 @@ Add a shape data field of type AlarmFilter to the shape, and enter an alarm filt
 
 - To filter out all alarms and information events containing the word “BBC World”:
 
-    ```txt
-    BBC World
-    ```
+  ```txt
+  BBC World
+  ```
 
 - To filter out all critical alarms:
 
-    ```txt
-    severity:critical
-    ```
+  ```txt
+  severity:critical
+  ```
 
 - To filter out all alarms and information events of which the “Value” column contains “50”:
 
-    ```txt
-    value:50
-    ```
+  ```txt
+  value:50
+  ```
 
 - To filter out all alarms with a service impact less than 2:
 
-    ```txt
-    "Service Impact"<2
-    ```
+  ```txt
+  "Service Impact"<2
+  ```
 
 > [!TIP]
 > See also:
@@ -44,13 +48,13 @@ Add a shape data field of type AlarmFilter to the shape, and enter an alarm filt
 
 In some cases, it is possible to use placeholders in the filter condition:
 
-- In EPM environments, the filter condition can contain the *\[servicefilter\]* and *\[servicefiltername\]* placeholder.
+- In EPM environments, the filter condition can contain the _\[servicefilter\]_ and _\[servicefiltername\]_ placeholder.
 
-- If a Service Overview Manager element is used, the filter condition can contain the placeholder *\[ServiceFilterIdx\]*.
+- If a Service Overview Manager element is used, the filter condition can contain the placeholder _\[ServiceFilterIdx\]_.
 
 > [!TIP]
 > See also:
+>
 > - [\[ServiceFilterName\]](xref:Placeholders_for_variables_in_shape_data_values#servicefiltername)
 > - [\[ServiceFilter\]](xref:Placeholders_for_variables_in_shape_data_values#servicefilter)
 > - [\[ServiceFilterIdx\]](xref:Placeholders_for_variables_in_shape_data_values#servicefilteridx)
->

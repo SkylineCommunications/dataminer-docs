@@ -11,6 +11,8 @@ A shape can be set to perform a particular action when a mouse pointer is hovere
 > [Triggering an action when a shape is dragged onto another shape](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape)
 
 > [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _data > DRAG AND DROP_.
 > - From DataMiner 9.5.14 onwards, a different hover style can be configured for a shape. See [Configuring the hover area of a shape](xref:Configuring_the_hover_area_of_a_shape).
 
 ## Configuring the shape data field
@@ -19,7 +21,7 @@ Add two shape data fields to the shape:
 
 - one of type **Element** or **View**, of which you leave the value empty, and
 
-- one of type **HoverTarget**, of which you set the value to *TRUE*.
+- one of type **HoverTarget**, of which you set the value to _TRUE_.
 
 This “hover” behavior will often be implemented to take a quick peek at element or service properties.
 
@@ -32,7 +34,7 @@ First, we turn a shape into a “hover target” (i.e. a shape that will visuali
 
 - **Element**: \<empty>
 
-- **HoverTarget**: *TRUE*
+- **HoverTarget**: _TRUE_
 
 - **Info**: ELEMENT NAME
 
@@ -43,10 +45,10 @@ Then, we make sure that the shapes over which we intend to hover contain valid s
 
 - **Element**: DmaID/ElementID
 
-    Example:
+  Example:
 
-    ```txt
-    111/313
-    ```
+  ```txt
+  111/313
+  ```
 
 When we now hover over a shape with a valid element ID, the text inside the “hover target” will display the name of the element referred to by the element ID specified in the shape data of the shape over which we are hovering.

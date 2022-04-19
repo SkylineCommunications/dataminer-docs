@@ -7,7 +7,9 @@ uid: Docking_a_shape_to_one_or_more_borders_of_a_Visio_drawing
 A shape can be docked to one or more borders of a Visio drawing. This is only possible for shapes that act as controls (e.g. web browser controls, parameter controls, child item containers, SetVar controls, command buttons, etc.).
 
 > [!NOTE]
+>
 > - Docked shapes are resized relative to the size (aspect ratio) of the drawing.
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _positioning > DOCKING_.
 
 ## Configuring the shape data field
 

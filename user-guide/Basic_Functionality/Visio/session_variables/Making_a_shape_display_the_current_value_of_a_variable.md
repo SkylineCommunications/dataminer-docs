@@ -8,9 +8,14 @@ Using a shape data field of type **Variable**, you can make a shape display the 
 
 > [!TIP]
 > See also:
+>
 > - [Initializing a session variable](xref:Initializing_a_session_variable)
 > - [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 > - [Adding options to a session variable control](xref:Adding_options_to_a_session_variable_control)
+
+> [!NOTE]
+>
+> - For examples of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The examples can be found on the Visual page _data > VARIABLE1_ and _VARIABLE2_.
 
 ## Configuring the shape data field
 
@@ -38,4 +43,4 @@ To add text to a shape, just double-click the shape, and enter the text.
 
 ## Using the current value of a session variable in an expression
 
-If you want to use the current value of a session variable in an expression (e.g. the value of some shape data field), use a *\[var:...\]*, *\[WorkspaceVar:...\]*, *\[cardvar:...\]* or *\[pagevar:...\]* placeholder (depending on the scope). This way you can e.g. link a shape to an element or view using a session variable.
+If you want to use the current value of a session variable in an expression (e.g. the value of some shape data field), use a _\[var:...\]_, _\[WorkspaceVar:...\]_, _\[cardvar:...\]_ or _\[pagevar:...\]_ placeholder (depending on the scope). This way you can e.g. link a shape to an element or view using a session variable.

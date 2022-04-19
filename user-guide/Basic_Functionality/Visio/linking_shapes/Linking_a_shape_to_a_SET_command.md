@@ -9,7 +9,9 @@ Using a shape data field of type **Execute**, you can link a shape to a SET comm
 When you link a shape to a SET command, that command will be executed each time a user clicks that shape.
 
 > [!NOTE]
+>
 > - A shape linked to a SET command will not be displayed if the element to which it is linked cannot be found.
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _linking > EXE_.
 
 ## Configuring the shape data field
 
@@ -20,7 +22,8 @@ Set|DmaID/ElementID|ID of write parameter:TableRowKey|NewValue|Options
 ```
 
 > [!NOTE]
-> - In the syntax above, “*:TableRowKey*” is optional.
+>
+> - In the syntax above, “_:TableRowKey_” is optional.
 > - Table rows can be referenced either by primary key or by display key.
 
 ## Example
@@ -29,35 +32,36 @@ Set|DmaID/ElementID|ID of write parameter:TableRowKey|NewValue|Options
 Set|17/22954|1103|MyNewPassword
 ```
 
-When users click the shape, a confirmation box will appear asking them whether they want the SET command to be executed. If they click *Yes*, the command will be executed.
+When users click the shape, a confirmation box will appear asking them whether they want the SET command to be executed. If they click _Yes_, the command will be executed.
 
 ## Options
 
 In the above-mentioned command, you can use the following options.
 
-- **NoConfirmation**: If you add the option “*NoConfirmation*”, no confirmation box will appear when users click the shape.
+- **NoConfirmation**: If you add the option “_NoConfirmation_”, no confirmation box will appear when users click the shape.
 
 - **ConfirmationMessage**: Use this option to specify a custom SET confirmation message that will be displayed when the shape is clicked.
 
-    Example:
+  Example:
 
-    ```txt
-    Set|234/20|101|2|ConfirmationMessage=My custom message.
-    ```
+  ```txt
+  Set|234/20|101|2|ConfirmationMessage=My custom message.
+  ```
 
 - **SetTrigger=ValueChanged**: Use this option to update parameters or session variables when a specific value changes. See [Configuring a page to update parameters on session variable changes](xref:Configuring_a_page_to_update_parameters_on_session_variable_changes) or [Configuring a page to update a session variable when another session variable changes](xref:Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes).
 
 - **SetTrigger=Event**: Available from DataMiner 10.0.3 onwards. Use this option to update parameters or session variables when an event occurs on the open Visual Overview page.
 
-    For example, if the configuration below is used with an embedded Router Control component, every time the event is triggered in the component, the set command will be executed with the label of the clicked matrix. Clicking the same input or output multiple times will each time cause the set command to be executed.
+  For example, if the configuration below is used with an embedded Router Control component, every time the event is triggered in the component, the set command will be executed with the label of the clicked matrix. Clicking the same input or output multiple times will each time cause the set command to be executed.
 
-    | Shape data field | Value                                                      |
-    |--------------------|------------------------------------------------------------|
-    | Execute            | Set\|1/1\|350\|\[Event:IOClicked,Label\]\|SetTrigger=Event |
+  | Shape data field | Value                                                      |
+  | ---------------- | ---------------------------------------------------------- |
+  | Execute          | Set\|1/1\|350\|\[Event:IOClicked,Label\]\|SetTrigger=Event |
 
-    > [!NOTE]
-    > - If "SetTrigger=ValueChanged" is used instead of "SetTrigger=Event" in the example above, clicking the same input or output multiple times causes the set command to be executed only once.
-    > - All set commands with a "SetTrigger=Event" option will be triggered when an event occurs, even those that do not contain an \[Event:\] placeholder.
+  > [!NOTE]
+  >
+  > - If "SetTrigger=ValueChanged" is used instead of "SetTrigger=Event" in the example above, clicking the same input or output multiple times causes the set command to be executed only once.
+  > - All set commands with a "SetTrigger=Event" option will be triggered when an event occurs, even those that do not contain an \[Event:\] placeholder.
 
 ## About using separator characters
 

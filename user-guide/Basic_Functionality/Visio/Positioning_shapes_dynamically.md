@@ -6,6 +6,10 @@ uid: Positioning_shapes_dynamically
 
 There are several ways to configure shapes in Visio so that they are positioned dynamically in Visual Overview.
 
+> [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _positioning > DYNAMIC_.
+
 This section consists of the following topics:
 
 - [Calibrating the X and Y coordinates in a Visio drawing](xref:Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing)

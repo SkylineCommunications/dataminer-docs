@@ -10,6 +10,10 @@ If you used a shape data field of type **ParameterControl** to turn a shape into
 > See also:
 > [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control)
 
+> [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _controls > PARAM_.
+
 ## Configuring the shape data field
 
 Add a shape data field of type **ParameterControlOptions** to the shape, and set its value to:
@@ -80,8 +84,8 @@ If certain types of parameters are displayed as a “Lite” parameter, you can 
 
 - For a hybrid parameter, a checkbox will be displayed in Visual Overview that can be cleared to set the parameter to the exception value, or selected to set the parameter to any normal value.
 
-    > [!NOTE]
-    > The behavior of a hybrid parameter checkbox configured with this option is the opposite as the behavior for hybrid parameter checkboxes in Data Display.
+  > [!NOTE]
+  > The behavior of a hybrid parameter checkbox configured with this option is the opposite as the behavior for hybrid parameter checkboxes in Data Display.
 
 In order to specify this option, set **ParameterControlOptions** to the following value:
 
@@ -97,9 +101,9 @@ IncludeWrite|Lite|CheckBox
 
 Available from DataMiner 10.0.9 onwards. When you have turned a shape into a table control that displays a direct view table, you can use this option to have the table refreshed at regular intervals.
 
-| Shape data field        | Value                                                                                                                                                                                                     |
-|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ParameterControlOptions | *ClientSidePollingInterval:\<interval>*<br> For example: To configure a polling interval of 1 minute, specify *ClientSidePollingInterval:00:01:00*. |
+| Shape data field        | Value                                                                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ParameterControlOptions | _ClientSidePollingInterval:\<interval>_<br> For example: To configure a polling interval of 1 minute, specify _ClientSidePollingInterval:00:01:00_. |
 
 ### ClientSideRowFilter
 
@@ -107,16 +111,16 @@ When displaying a table parameter in Visio, use this option to specify a client-
 
 Use the same syntax as in a filter box (e.g. in the top-right corner of a card).
 
-If, for example, you set **ParameterControlOptions** to “*ClientSideRowFilter:Name:abc*”, the table will only display rows of which the “Name” column contains “abc”.
+If, for example, you set **ParameterControlOptions** to “_ClientSideRowFilter:Name:abc_”, the table will only display rows of which the “Name” column contains “abc”.
 
 > [!NOTE]
-> Since DataMiner 9.6.4, table column names in DataMiner Cube no longer display the name of the table as a suffix in parentheses. As such, from DataMiner 9.6.8 onwards, *ClientSideRowFilter* supports both the table name with and without this suffix. For example, a column with parameter description "Value (Table1)", will match both the filter *Value:5* and "*Value (Table1)":5*.
+> Since DataMiner 9.6.4, table column names in DataMiner Cube no longer display the name of the table as a suffix in parentheses. As such, from DataMiner 9.6.8 onwards, _ClientSideRowFilter_ supports both the table name with and without this suffix. For example, a column with parameter description "Value (Table1)", will match both the filter _Value:5_ and "_Value (Table1)":5_.
 
 ### ColumnWidths
 
 When displaying a table parameter in Visio, use this option to control the width of the table columns.
 
-Set **ParameterControlOptions** to “*ColumnWidths*:”, followed by a comma-separated list of widths (in pixels).
+Set **ParameterControlOptions** to “_ColumnWidths_:”, followed by a comma-separated list of widths (in pixels).
 
 Example:
 
@@ -131,6 +135,7 @@ ColumnWidths:100,50,100,a
 ```
 
 > [!NOTE]
+>
 > - The width of an “autosize” column will not be recalculated when cell content changes, nor when the user scrolls the list (in order to avoid flickering). However, it will be recalculated when rows are added or removed.
 > - The autosize behavior of a column will be disabled if that column is resized manually. To re-enable the autosize behavior, the user has to double-click the column resize icon.
 
@@ -145,7 +150,7 @@ IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuff
 ```
 
 | Color definition | Description                                                                                     |
-|------------------|-------------------------------------------------------------------------------------------------|
+| ---------------- | ----------------------------------------------------------------------------------------------- |
 | text             | The color of the default text.                                                                  |
 | text.disabled    | The color of the text when the value is “not initialized”.                                      |
 | text.titlesuffix | The color of the table index suffix in the title.                                               |
@@ -153,6 +158,7 @@ IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuff
 | bg.hovereditor   | The color of the background when hovering the mouse cursor over the editor part of the control. |
 
 > [!NOTE]
+>
 > - If no custom color is defined, the control will take the default color depending on the current Cube theme (white/black).
 > - Colors can be specified in one of the following hexadecimal formats: #RRGGBB, #AARRGGBB, RRGGBB, AARRGGBB. Values can be separated with a comma or a semicolon.
 
@@ -173,12 +179,12 @@ When you turn a shape into a parameter control of type “Lite”, you can use t
 
 ### DisableSetVarOnParameterUpdate
 
-When the cells of one or more selected rows are changed in a table update, by default, the values of selection session variables are set again. From DataMiner 9.6.1 onwards, this behavior can be disabled with the *DisableSetVarOnParameterUpdate* option. If this option is specified, table updates will no longer set any session variables.
+When the cells of one or more selected rows are changed in a table update, by default, the values of selection session variables are set again. From DataMiner 9.6.1 onwards, this behavior can be disabled with the _DisableSetVarOnParameterUpdate_ option. If this option is specified, table updates will no longer set any session variables.
 
 For example:
 
 | Shape data              | Value                          |
-|-------------------------|--------------------------------|
+| ----------------------- | ------------------------------ |
 | Element                 | 123/4                          |
 | ParameterControl        | 500                            |
 | ParameterControlOptions | DisableSetVarOnParameterUpdate |
@@ -187,7 +193,7 @@ For example:
 
 When displaying a dynamic table on a Visio page using a shape data field of type **ParameterControl**, it is possible to specify which columns should be displayed as read-only.
 
-Add a shape data field of type **ParameterControlOptions** to the shape, and set its value to “*DisableWritePids:*”, followed by a comma-separated list of parameters to be disabled.
+Add a shape data field of type **ParameterControlOptions** to the shape, and set its value to “_DisableWritePids:_”, followed by a comma-separated list of parameters to be disabled.
 
 In the following example, the write parameters 1005, 1007 and 1009 have been disabled:
 
@@ -201,16 +207,16 @@ From DataMiner 9.5.12 onwards, it is possible to override the default double-cli
 
 To do so, add the following shape data to the shape with the **ParameterControl** shape data:
 
-| Shape data field        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ParameterControlOptions | Set this field to *DoubleClickAction=OpenPage*.                                                                                                                                                                                                                                                                                                                                                                              |
-| LinkOptions             | The width and height of the undocked window that will be opened when the shape is double-clicked, in the format *Width=**x**\|Height=**x**.* <br> See [Configuring the size of the window](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing#configuring-the-size-of-the-window). |
-| VdxPage                 | Set this field to MyPage*\|Window,* where MyPage is a page name of the visual overview of the element containing the table.                                                                                                                                                                                                                                |
+| Shape data field        | Description                                                                                                                                                                                                                                                                                                |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ParameterControlOptions | Set this field to _DoubleClickAction=OpenPage_.                                                                                                                                                                                                                                                            |
+| LinkOptions             | The width and height of the undocked window that will be opened when the shape is double-clicked, in the format _Width=**x**\|Height=**x**._ <br> See [Configuring the size of the window](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing#configuring-the-size-of-the-window). |
+| VdxPage                 | Set this field to MyPage*\|Window,* where MyPage is a page name of the visual overview of the element containing the table.                                                                                                                                                                                |
 
 For example:
 
 | Shape data field        | Value                      |
-|-------------------------|----------------------------|
+| ----------------------- | -------------------------- |
 | Element                 | 17/10                      |
 | ParameterControl        | 200                        |
 | ParameterControlOptions | DoubleClickAction=OpenPage |
@@ -231,17 +237,17 @@ If you specify this option, the index part of table parameters will not be displ
 
 ### IncludeWrite
 
-If, in the shape data field of type **ParameterControl**, you have specified a read parameter, then you can add the “*IncludeWrite*” option to allow users to change the parameter value via the associated write parameter.
+If, in the shape data field of type **ParameterControl**, you have specified a read parameter, then you can add the “_IncludeWrite_” option to allow users to change the parameter value via the associated write parameter.
 
-If, in the shape data field of type **ParameterControl**, you have specified a write parameter, there is no need to specify this “*IncludeWrite*” option.
+If, in the shape data field of type **ParameterControl**, you have specified a write parameter, there is no need to specify this “_IncludeWrite_” option.
 
 ### IncludedPids and TableRowFilter
 
 Using the “IncludedPids” and “TableRowFilter” options in **ParameterControlOptions**, you can filter out specific columns and rows when **ParameterControl** refers to a dynamic table.
 
-- Use the “*IncludedPids*” option to specify the IDs of the columns to be displayed.
+- Use the “_IncludedPids_” option to specify the IDs of the columns to be displayed.
 
-- Use the “*TableRowFilter*” option to filter out specific rows. This is a server-side filter that accepts a semicolon-separated list of PID=value pairs. From DataMiner 10.2.0/10.1.3 onwards, fullfilter syntax is supported for this option (see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)).
+- Use the “_TableRowFilter_” option to filter out specific rows. This is a server-side filter that accepts a semicolon-separated list of PID=value pairs. From DataMiner 10.2.0/10.1.3 onwards, fullfilter syntax is supported for this option (see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax)).
 
 Examples:
 
@@ -272,15 +278,16 @@ TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1)
 - Fullfilter syntax (supported from DataMiner 10.1.3 onwards): Display rows for which the primary key is 0 or the display key is 1.
 
 > [!NOTE]
-> - As *TableRowFilter* is a server-side filter, for discrete parameters you should use the raw values instead of the display values in the filter.
+>
+> - As _TableRowFilter_ is a server-side filter, for discrete parameters you should use the raw values instead of the display values in the filter.
 > - In the TableRowFilter and IncludedPIDs options, you can use placeholders like “\[Param:...\]”, “\[Var:...\]”, etc. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
-> - To specify a client-side filter for a table parameter, use the *ClientSideRowFilter* option instead: [ClientSideRowFilter](#clientsiderowfilter).
+> - To specify a client-side filter for a table parameter, use the _ClientSideRowFilter_ option instead: [ClientSideRowFilter](#clientsiderowfilter).
 > - From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
-> - Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)). E.g. *\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)*
+> - Note that semicolons are not supported in the fullfilter syntax unless you specify that a different separator than a semicolon applies for the filter (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)). E.g. _\[sep:;£\]TableRowFilter:FULLFILTER=(PK == a;b) OR (DK == 1)_
 
 ### LedBar
 
-Parameter controls that display analog parameters can be displayed either as a LED bar or as an oscilloscope. The user can switch between the two display modes via the context menu. Specify “*LedBar*” in the **ParameterControlOptions** to make sure the parameter control is initially displayed as a LED bar.
+Parameter controls that display analog parameters can be displayed either as a LED bar or as an oscilloscope. The user can switch between the two display modes via the context menu. Specify “_LedBar_” in the **ParameterControlOptions** to make sure the parameter control is initially displayed as a LED bar.
 
 ### Lite
 
@@ -298,7 +305,7 @@ If you specify this option, you can also add additional options to customize the
 
 ### MultipleValueSep
 
-In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, when multiple rows are selected, the default separator is a pipe character ("\|"). With the *MultipleValueSep* option, you can specify a different separator. To do so, add the separator of your choice after “*MultipleValueSep=*”.
+In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, when multiple rows are selected, the default separator is a pipe character ("\|"). With the _MultipleValueSep_ option, you can specify a different separator. To do so, add the separator of your choice after “_MultipleValueSep=_”.
 
 For example, to use a semicolon as separator, specify the following:
 
@@ -307,22 +314,22 @@ MultipleValueSep=;
 ```
 
 > [!NOTE]
-> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
+> For more information on how this is configured in the protocol, refer to the _SelectionSetVar_ option in the [DataMiner Development Library](https://help.dataminer.services/development/).
 
 ### Oscilloscope
 
-Parameter controls that display analog parameters can be displayed either as a LED bar or as an oscilloscope. The user can switch between the two display modes via the context menu. Specify “*Oscilloscope*” in the **ParameterControlOptions** to make sure the parameter control is initially displayed as an oscilloscope.
+Parameter controls that display analog parameters can be displayed either as a LED bar or as an oscilloscope. The user can switch between the two display modes via the context menu. Specify “_Oscilloscope_” in the **ParameterControlOptions** to make sure the parameter control is initially displayed as an oscilloscope.
 
 ### ShowTableName=true
 
-If the parameter control is based on a table parameter, from DataMiner version 10.0.0 up to 10.0.9, by default the table name is also displayed. This is no longer the case from DataMiner 10.0.10 onwards. To still have the table name displayed from this DataMiner version onwards, add the parameter control option *ShowTableName=true*.
+If the parameter control is based on a table parameter, from DataMiner version 10.0.0 up to 10.0.9, by default the table name is also displayed. This is no longer the case from DataMiner 10.0.10 onwards. To still have the table name displayed from this DataMiner version onwards, add the parameter control option _ShowTableName=true_.
 
 ### SingleSelection
 
 In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, you can use this option on the table parameter control to make sure that only a single row can be selected.
 
 > [!NOTE]
-> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
+> For more information on how this is configured in the protocol, refer to the _SelectionSetVar_ option in the [DataMiner Development Library](https://help.dataminer.services/development/).
 
 ### Table
 
@@ -330,28 +337,28 @@ See [Adding a filter box to a table control](xref:Turning_a_shape_into_a_paramet
 
 ### TitleFont
 
-When you turn a shape into a parameter control of type “Lite”, from DataMiner 9.5.4 onwards, you can use the *TitleFont* option to customize the font of the parameter label.
+When you turn a shape into a parameter control of type “Lite”, from DataMiner 9.5.4 onwards, you can use the _TitleFont_ option to customize the font of the parameter label.
 
-To do so, specify *TitleFont:* followed by one or more of the following font options (default separator: semicolon):
+To do so, specify _TitleFont:_ followed by one or more of the following font options (default separator: semicolon):
 
-| Option             | Description                                                                                                                                                                   |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Family=            | Name of the font (e.g. *Arial*)                                                                                                                    |
-| Size=              | Pixel size of the font (e.g. *18*)                                                                                                                 |
-| Stretch=           | *Normal*, *Condensed*, or *Expanded*                                                         |
-| Weight=            | Weight of the font (e.g. *Bold*)                                                                                                                   |
-| Style=             | Style of the font (e.g. *Italic*, *Oblique*)                                                                            |
-| Underline          | Text is underlined                                                                                                                                                            |
-| BaseLine           | Text is underlined, but the line is closer to the text than when using “Underline”                                                                                            |
-| StrikeThrough      | Text has a line drawn through it                                                                                                                                              |
-| Overline           | Text has a line drawn above it                                                                                                                                                |
-| TextFormattingMode | Formatting mode (e.g. *Ideal*, *Display*)                                                                               |
-| TextRenderingMode  | Rendering mode (e.g. *Auto*, *Aliased*, *Grayscale*, *ClearType*) |
+| Option             | Description                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| Family=            | Name of the font (e.g. _Arial_)                                                    |
+| Size=              | Pixel size of the font (e.g. _18_)                                                 |
+| Stretch=           | _Normal_, _Condensed_, or _Expanded_                                               |
+| Weight=            | Weight of the font (e.g. _Bold_)                                                   |
+| Style=             | Style of the font (e.g. _Italic_, _Oblique_)                                       |
+| Underline          | Text is underlined                                                                 |
+| BaseLine           | Text is underlined, but the line is closer to the text than when using “Underline” |
+| StrikeThrough      | Text has a line drawn through it                                                   |
+| Overline           | Text has a line drawn above it                                                     |
+| TextFormattingMode | Formatting mode (e.g. _Ideal_, _Display_)                                          |
+| TextRenderingMode  | Rendering mode (e.g. _Auto_, _Aliased_, _Grayscale_, _ClearType_)                  |
 
 Example:
 
 | Shape data              | Value                                                                                                                           |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | ParameterControlOptions | Lite\|TitleFont:Family=Calibri;Size=32;Stretch=Condensed;Weight=Bold;<br>Style=Italic;Underline\|ValueFont:Family=Arial;Size=14 |
 
 ### UpdateSelectionOnLinkedVariables
@@ -359,30 +366,30 @@ Example:
 In a DataMiner protocol, a column can be linked to a Visio session variable, so that session variables are set upon selection of a table row. In that case, you can use this option on the table parameter control to make sure the linked session variables are monitored, and the selected row is updated.
 
 > [!NOTE]
-> For more information on how this is configured in the protocol, refer to the *SelectionSetVar* option in the [DataMiner Development Library](https://help.dataminer.services/development/).
+> For more information on how this is configured in the protocol, refer to the _SelectionSetVar_ option in the [DataMiner Development Library](https://help.dataminer.services/development/).
 
 ### ValueFont
 
-When you turn a shape into a parameter control of type “Lite”, from DataMiner 9.5.4 onwards, you can use the *ValueFont* option to customize the font used for the parameter value.
+When you turn a shape into a parameter control of type “Lite”, from DataMiner 9.5.4 onwards, you can use the _ValueFont_ option to customize the font used for the parameter value.
 
-To do so, specify *ValueFont:* followed by one or more of the following font options (default separator: semicolon):
+To do so, specify _ValueFont:_ followed by one or more of the following font options (default separator: semicolon):
 
-| Option             | Description                                                                                                                                                                   |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Family=            | Name of the font (e.g. *Arial*)                                                                                                                    |
-| Size=              | Pixel size of the font (e.g. *18*)                                                                                                                 |
-| Stretch=           | *Normal*, *Condensed*, or *Expanded*                                                         |
-| Weight=            | Weight of the font (e.g. *Bold*)                                                                                                                   |
-| Style=             | Style of the font (e.g. *Italic*, *Oblique*)                                                                            |
-| Underline          | Text is underlined                                                                                                                                                            |
-| BaseLine           | Text is underlined, but the line is closer to the text than when using “Underline”                                                                                            |
-| StrikeThrough      | Text has a line drawn through it                                                                                                                                              |
-| Overline           | Text has a line drawn above it                                                                                                                                                |
-| TextFormattingMode | Formatting mode (e.g. *Ideal*, *Display*)                                                                               |
-| TextRenderingMode  | Rendering mode (e.g. *Auto*, *Aliased*, *Grayscale*, *ClearType*) |
+| Option             | Description                                                                        |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| Family=            | Name of the font (e.g. _Arial_)                                                    |
+| Size=              | Pixel size of the font (e.g. _18_)                                                 |
+| Stretch=           | _Normal_, _Condensed_, or _Expanded_                                               |
+| Weight=            | Weight of the font (e.g. _Bold_)                                                   |
+| Style=             | Style of the font (e.g. _Italic_, _Oblique_)                                       |
+| Underline          | Text is underlined                                                                 |
+| BaseLine           | Text is underlined, but the line is closer to the text than when using “Underline” |
+| StrikeThrough      | Text has a line drawn through it                                                   |
+| Overline           | Text has a line drawn above it                                                     |
+| TextFormattingMode | Formatting mode (e.g. _Ideal_, _Display_)                                          |
+| TextRenderingMode  | Rendering mode (e.g. _Auto_, _Aliased_, _Grayscale_, _ClearType_)                  |
 
 Example:
 
 | Shape data              | Value                                                                                                                           |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | ParameterControlOptions | Lite\|TitleFont:Family=Calibri;Size=32;Stretch=Condensed;Weight=Bold;<br>Style=Italic;Underline\|ValueFont:Family=Arial;Size=14 |

@@ -21,6 +21,10 @@ Using a shape data field of type **Info**, you can make shapes display informati
   > [!TIP]
   > See also: [Generating the connectivity chain for an SRM service instance](xref:Generating_the_connectivity_chain_for_an_SRM_service_instance)
 
+> [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _data > PROPERTIES_.
+
 ## Configuring the shape data field
 
 Add a shape data field of type **Info** to the shape, and set its value to one of the keywords listed below.
@@ -32,157 +36,157 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
 
   To display information about the element to which the shape is linked, specify:
 
-  - *ALARM TEMPLATE*
+  - _ALARM TEMPLATE_
 
-  - *DATAMINER*
+  - _DATAMINER_
 
-  - *DESCRIPTION*
+  - _DESCRIPTION_
 
-  - *DISPLAY TYPE*
+  - _DISPLAY TYPE_
 
-  - *ELEMENT NAME*
+  - _ELEMENT NAME_
 
-  - *ELEMENT STATISTICS:...*
+  - _ELEMENT STATISTICS:..._
 
-  - *ID*
+  - _ID_
 
-  - *IMPACTED SERVICES*
+  - _IMPACTED SERVICES_
 
-  - *IP*
+  - _IP_
 
-  - *NAME*
+  - _NAME_
 
-  - *POLLING IP*
+  - _POLLING IP_
 
-  - *PORT INFO*
+  - _PORT INFO_
 
-  - *PROTOCOL*
+  - _PROTOCOL_
 
-  - *PROTOCOL TYPE*
+  - _PROTOCOL TYPE_
 
-  - *PROTOCOL VERSION*
+  - _PROTOCOL VERSION_
 
-  - *REDUNDANCY STATE*
+  - _REDUNDANCY STATE_
 
-  - *STATE*
+  - _STATE_
 
-  - *TREND TEMPLATE*
+  - _TREND TEMPLATE_
 
-  - *TYPE*
+  - _TYPE_
 
 - **Services**:
 
   To display information about the service to which the shape is linked, specify:
 
-  - *DATAMINER*
+  - _DATAMINER_
 
-  - *DESCRIPTION*: The description of the service element.
+  - _DESCRIPTION_: The description of the service element.
 
-  - *ELEMENT NAME*: Displays the element alias if one exists; otherwise the actual element name is displayed.
+  - _ELEMENT NAME_: Displays the element alias if one exists; otherwise the actual element name is displayed.
 
-  - *FORCE ELEMENT NAME*: Displays the actual name of the service element, not the element alias.
+  - _FORCE ELEMENT NAME_: Displays the actual name of the service element, not the element alias.
 
-  - *ID*
+  - _ID_
 
-  - *NAME*
+  - _NAME_
 
-  - *SERVICE DESCRIPTION*: The description of the service itself (enhanced service only).
+  - _SERVICE DESCRIPTION_: The description of the service itself (enhanced service only).
 
-  - *SERVICE STATISTICS:...*
+  - _SERVICE STATISTICS:..._
 
 - **Redundancy groups**:
 
   To display information about the redundancy group to which the shape is linked, specify:
 
-  - *DATAMINER*
+  - _DATAMINER_
 
-  - *DESCRIPTION*
+  - _DESCRIPTION_
 
-  - *ID*
+  - _ID_
 
-  - *NAME*
+  - _NAME_
 
 - **Views**:
 
   To display information about the view to which the shape is linked, specify:
 
-  - *ID*
+  - _ID_
 
-  - *NAME*
+  - _NAME_
 
-  - *VIEW NAME*
+  - _VIEW NAME_
 
-  - *VIEW STATISTICS:...*
+  - _VIEW STATISTICS:..._
 
 - **Alarms**:
 
   To display information about the alarm to which the shape is linked, specify:
 
-  - *ALARM ID*
+  - _ALARM ID_
 
-  - *ALARM TYPE*
+  - _ALARM TYPE_
 
-  - *ALARMPROPERTY:\<PropertyName>*
+  - _ALARMPROPERTY:\<PropertyName>_
 
-  - *COMMENT*
+  - _COMMENT_
 
-  - *ELEMENT NAME*
+  - _ELEMENT NAME_
 
-  - *ELEMENT TYPE*
+  - _ELEMENT TYPE_
 
-  - *ELEMENTPROPERTY:\<PropertyName>*
+  - _ELEMENTPROPERTY:\<PropertyName>_
 
-  - *OWNER*
+  - _OWNER_
 
-  - *PARAMETER DESCRIPTION*
+  - _PARAMETER DESCRIPTION_
 
-  - *PARAMETER KEY*
+  - _PARAMETER KEY_
 
-  - *RCA LEVEL*
+  - _RCA LEVEL_
 
-  - *REDUNDANCY STATE*
+  - _REDUNDANCY STATE_
 
-  - *ROOT ALARM ID*
+  - _ROOT ALARM ID_
 
-  - *ROOT TIME*
+  - _ROOT TIME_
 
-  - *SERVICE IMPACT*
+  - _SERVICE IMPACT_
 
-  - *SERVICES*
+  - _SERVICES_
 
-  - *SEVERITY*
+  - _SEVERITY_
 
-  - *SOURCE*
+  - _SOURCE_
 
-  - *STATUS*
+  - _STATUS_
 
-  - *TIME*
+  - _TIME_
 
-  - *USER STATUS*
+  - _USER STATUS_
 
-  - *VALUE*
+  - _VALUE_
 
 - **Interfaces**:
 
   To display information about the DCF Interface to which the shape is linked, specify:
 
-  - *CUSTOM NAME*
+  - _CUSTOM NAME_
 
 - **Virtual function resources**:
 
   To display information about the virtual function resource to which the shape is linked, specify:
 
-  - *NAME*
+  - _NAME_
 
-  - *ELEMENT NAME*
+  - _ELEMENT NAME_
 
-  - *RESOURCE NAME*
+  - _RESOURCE NAME_
 
-  - *RESOURCE ID*
+  - _RESOURCE ID_
 
-  - *FUNCTION NAME*
+  - _FUNCTION NAME_
 
-  - *IN USE*: Displays "true" or "false" depending on whether the resource is being used in any bookings (supported from DataMiner 10.3.0/10.2.3 onwards). This check is performed when the visual overview is opened or when the resource itself is changed. Note that using this placeholder may affect performance in case the system contains a large number of bookings.
+  - _IN USE_: Displays "true" or "false" depending on whether the resource is being used in any bookings (supported from DataMiner 10.3.0/10.2.3 onwards). This check is performed when the visual overview is opened or when the resource itself is changed. Note that using this placeholder may affect performance in case the system contains a large number of bookings.
 
 - **Bookings**: See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
 
@@ -193,12 +197,12 @@ The info specified in the **Info** field will only appear on the shape if you ad
 To add text to a shape, just double-click the shape, and enter the text.
 
 > [!NOTE]
-> From DataMiner 9.0 onwards, if an **Info** shape data field is set to *DATAMINER*, the placeholder is replaced by the name of the DMA that is currently hosting the element, service or redundancy group. In DataMiner versions up to DataMiner 9.0, the placeholder is replaced by the name of the DMA where the element, service or redundancy group was created.
+> From DataMiner 9.0 onwards, if an **Info** shape data field is set to _DATAMINER_, the placeholder is replaced by the name of the DMA that is currently hosting the element, service or redundancy group. In DataMiner versions up to DataMiner 9.0, the placeholder is replaced by the name of the DMA where the element, service or redundancy group was created.
 
 ## Element statistics, service statistics, view statistics, etc.
 
-To display element statistics, service statistics or view statistics, the same placeholders are used as when configuring *MaintenanceSettings.xml* to display these statistics in the Surveyor.
+To display element statistics, service statistics or view statistics, the same placeholders are used as when configuring _MaintenanceSettings.xml_ to display these statistics in the Surveyor.
 
-For example, to display the number tickets for an element, you can set the value of the **Info** field to *ELEMENT STATISTICS:\[#Tickets\]*.
+For example, to display the number tickets for an element, you can set the value of the **Info** field to _ELEMENT STATISTICS:\[#Tickets\]_.
 
 For more information, see [Displaying alarm statistics in the Surveyor](xref:Displaying_alarm_statistics_in_the_Surveyor) or [Displaying ticket statistics in the Surveyor](xref:Displaying_ticket_statistics_in_the_Surveyor).

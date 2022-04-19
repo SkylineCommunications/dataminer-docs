@@ -6,23 +6,27 @@ uid: Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing
 
 If, in a Visio drawing, you want to position shapes using X and Y coordinates, you have to calibrate the X- and Y-axis.
 
+> [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _positioning > DYNAMIC_.
+
 ## Calibrating the X- and Y-axis
 
 Create two dummy shapes, and add two shape data fields to each of them: one of type **XPos** and one of type **YPos**.
 
 1. Create a dummy shape in the top-left corner with the following shape data fields:
 
-    | Shape data field | Value                                                                |
-    |--------------------|----------------------------------------------------------------------|
-    | XPos               | *\[Leftmost position on the X-axis\]* |
-    | YPos               | *\[Topmost position on the Y-axis\]*  |
+   | Shape data field | Value                                 |
+   | ---------------- | ------------------------------------- |
+   | XPos             | _\[Leftmost position on the X-axis\]_ |
+   | YPos             | _\[Topmost position on the Y-axis\]_  |
 
 2. Create a dummy shape in the lower right corner with the following shape data fields:
 
-    | Shape data field | Value                                                                  |
-    |--------------------|------------------------------------------------------------------------|
-    | XPos               | *\[Rightmost position on the X-axis\]*  |
-    | YPos               | *\[Bottommost position on the Y-axis\]* |
+   | Shape data field | Value                                   |
+   | ---------------- | --------------------------------------- |
+   | XPos             | _\[Rightmost position on the X-axis\]_  |
+   | YPos             | _\[Bottommost position on the Y-axis\]_ |
 
 Result: The page now has a virtual grid in relation to which all other shapes can be positioned.
 
@@ -32,14 +36,14 @@ If you want a Visio page to have an X-Y grid of 100 by 50, create the following 
 
 - In the top-left corner, create a shape with the following shape data fields:
 
-    | Shape data field | Value |
-    |--------------------|-------|
-    | XPos               | 00    |
-    | YPos               | 00    |
+  | Shape data field | Value |
+  | ---------------- | ----- |
+  | XPos             | 00    |
+  | YPos             | 00    |
 
 - In the lower right corner, create a shape with the following shape data fields:
 
-    | Shape data field | Value |
-    |--------------------|-------|
-    | XPos               | 100   |
-    | YPos               | 50    |
+  | Shape data field | Value |
+  | ---------------- | ----- |
+  | XPos             | 100   |
+  | YPos             | 50    |

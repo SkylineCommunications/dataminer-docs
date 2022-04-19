@@ -13,7 +13,9 @@ A page of a Visio drawing can be shown or hidden:
 If a page is hidden, it will not be displayed in the tree view of a card navigation pane.
 
 > [!NOTE]
+>
 > - If a user opens the Visual pages of a card, but all Visio pages are hidden, e.g. because of conditional hiding, a line of type Info will be added to the Cube logging to indicate this.
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _misc > CUBE ONLY_.
 
 ## Depending on the current value of a parameter or a property
 
@@ -25,6 +27,7 @@ Hidden=[ParameterOrProperty];Condition;Condition;...
 ```
 
 > [!NOTE]
+>
 > - The parameter or property is evaluated only when the page is (re)loaded. The page will not suddenly appear or disappear when the parameter or the property gets updated.
 > - Currently, only the \[param:...\] and \[property:...\] placeholders are supported with this option.
 
@@ -45,7 +48,7 @@ Hidden=[Param:*,177];=0;=1;=3
 ### Condition operators
 
 | Operator | Description              |
-|----------|--------------------------|
+| -------- | ------------------------ |
 | =        | equal to                 |
 | \>=      | greater than or equal to |
 | \>       | greater than             |
@@ -74,10 +77,9 @@ Hidden=SD|Cube|Mobile
 
 Examples:
 
-- If you specify *Hidden=SD\|Hidden=Cube*, the page will only be shown in web apps such as the Monitoring app and the Dashboards app.
+- If you specify _Hidden=SD\|Hidden=Cube_, the page will only be shown in web apps such as the Monitoring app and the Dashboards app.
 
-- If you specify *Hidden=Mobile\|Hidden=Cube*, the page will only be shown in System Display.
+- If you specify _Hidden=Mobile\|Hidden=Cube_, the page will only be shown in System Display.
 
 > [!NOTE]
 > The System Display client application is no longer available from DataMiner 9.6.0 onwards.
->

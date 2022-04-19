@@ -21,23 +21,25 @@ In this section:
 - [Examples](#examples)
 
 > [!NOTE]
-> - These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
+>
+> - These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the _Show_, _Hide_, _FlipX_, _FlipY_ and _Enabled_ actions are supported on shapes that are not linked to an element, service or view. The same goes for the _Collapse_ action, available from DataMiner 10.1.8 onwards. For the _Enabled_ action, the shape does have to be clickable.
 > - For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions).
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _misc > MANIPULATION_.
 
 ## Configuring the shape data fields
 
 Depending on the action or actions you want to apply, create the following shape data fields.
 
-| Shape data field | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Blink            | Makes a shape blink when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Collapse         | Hides a shape when the condition is true, without actually removing the shape. <br> This can be convenient as an alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them, allowing better performance but leading to more memory usage. It can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using *Hide* shape data.<br> Available from DataMiner 10.1.8/10.2.0 onwards. |
-| Enabled          | Enables user interaction when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| FlipX            | Makes a shape flip horizontally when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| FlipY            | Makes a shape flip vertically when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Hide             | Makes a shape disappear when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Highlight        | Highlights the shape when the condition is true.<br> Available from DataMiner 9.0.1 onwards.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Show             | Makes a shape appear when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Shape data field | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blink            | Makes a shape blink when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Collapse         | Hides a shape when the condition is true, without actually removing the shape. <br> This can be convenient as an alternative to the _ChildrenFilter_ shape data, as it will keep all shapes in memory instead of removing and recreating them, allowing better performance but leading to more memory usage. It can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using _Hide_ shape data.<br> Available from DataMiner 10.1.8/10.2.0 onwards. |
+| Enabled          | Enables user interaction when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| FlipX            | Makes a shape flip horizontally when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| FlipY            | Makes a shape flip vertically when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Hide             | Makes a shape disappear when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Highlight        | Highlights the shape when the condition is true.<br> Available from DataMiner 9.0.1 onwards.                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Show             | Makes a shape appear when the condition is true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 As the value for the above-mentioned shape data fields, you need to enter a single condition or multiple conditions combined into one. Regardless of whether a single or multiple conditions are used, each condition has to be assigned an alias.
 
@@ -58,13 +60,13 @@ Alias-”Alias”|”Target”|”What”|”Condition”
 
 #### Condition components:
 
-| Condition component | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Logical expression  | The expression that combines the defined aliases using “and”, “or”, “(“, “)” or “not”. Example: \<A>or\<B>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| Alias               | \<A>, \<B>, \<C>, ...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Target              | The DataMiner object to which the action should be applied. This can be an element, service, view or connection. Use the following syntax (optionally using wildcards or placeholders):<br> -  *Element:Element name or ID*<br> -  *Service:Service name or ID*<br> -  *View:View name or ID*<br> -  *Connection*<br> -  *Value*<br> The default target is *Element*, so if only a name or ID is specified, without a preceding keyword, this will be considered an element name or ID.<br> If the target is set to *Value*, the “What” has to contain the value to be evaluated. The latter can also be a placeholder referring to a session variable.                                                                                                                    |
-| What                | Can be configured as follows:<br> - *ALARMLEVEL*<br> -  *NAME:* *\[Name of the element, view or service specified in the Target\]*<br> -  *PARAMETER:* \[Parameter ID\]<br>Alternatively, you can simply specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.<br> -  *PROPERTY:* *\[Property name\]*<br> -  *Protocol* (from DataMiner 9.6.4 onwards)<br> -  From DataMiner 9.0.2 onwards, it is also possible to use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition). |
-| Condition           | The condition that determines whether the shape manipulation is applied. If you want to check if the specified “What” matches with a regular expression, start the condition with “*Regex=*”, followed by the regular expression.<br> Multiple conditions can be combined within this part of the condition, using a semicolon. In that case, each condition should include an operator and a value. The complete condition component will only function correctly if all conditions within it are correctly configured.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Condition component | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Logical expression  | The expression that combines the defined aliases using “and”, “or”, “(“, “)” or “not”. Example: \<A>or\<B>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Alias               | \<A>, \<B>, \<C>, ...                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Target              | The DataMiner object to which the action should be applied. This can be an element, service, view or connection. Use the following syntax (optionally using wildcards or placeholders):<br> - _Element:Element name or ID_<br> - _Service:Service name or ID_<br> - _View:View name or ID_<br> - _Connection_<br> - _Value_<br> The default target is _Element_, so if only a name or ID is specified, without a preceding keyword, this will be considered an element name or ID.<br> If the target is set to _Value_, the “What” has to contain the value to be evaluated. The latter can also be a placeholder referring to a session variable. |
+| What                | Can be configured as follows:<br> - _ALARMLEVEL_<br> - _NAME:_ _\[Name of the element, view or service specified in the Target\]_<br> - _PARAMETER:_ \[Parameter ID\]<br>Alternatively, you can simply specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.<br> - _PROPERTY:_ _\[Property name\]_<br> - _Protocol_ (from DataMiner 9.6.4 onwards)<br> - From DataMiner 9.0.2 onwards, it is also possible to use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition).                             |
+| Condition           | The condition that determines whether the shape manipulation is applied. If you want to check if the specified “What” matches with a regular expression, start the condition with “_Regex=_”, followed by the regular expression.<br> Multiple conditions can be combined within this part of the condition, using a semicolon. In that case, each condition should include an operator and a value. The complete condition component will only function correctly if all conditions within it are correctly configured.                                                                                                                           |
 
 #### Using an asterisk in a condition:
 
@@ -72,7 +74,7 @@ Up to DataMiner 9.5.4, when an asterisk ("\*") is used in shape data to refer to
 
 From DataMiner 9.5.4 onwards, however, the current shape is checked as well. This for example allows you to use asterisk characters in a “Show” condition specified in a top-level shape.
 
-For backwards compatibility, if you want asterisk characters to be resolved from the parent shape, you can add the *StartResolvingFromParent* option. See [StartResolvingFromParent](xref:Overview_of_page_and_shape_options).
+For backwards compatibility, if you want asterisk characters to be resolved from the parent shape, you can add the _StartResolvingFromParent_ option. See [StartResolvingFromParent](xref:Overview_of_page_and_shape_options).
 
 ## Changing the separator character in the condition
 
@@ -103,25 +105,25 @@ In addition, from DataMiner 9.5.13 onwards, it is possible to use the \[sep:XY\]
 From DataMiner 9.0.2 onwards, you can use alarm statistics in the “What” part of the condition. The following table lists the available items, and indicates whether they can be used to retrieve data for a view, a service or an element.
 
 | Statistical data      | View | Service | Element |
-|-----------------------|------|---------|---------|
-| #CriticalElements     | X    | X       |        |
-| #MajorElements        | X    | X       |        |
-| #MinorElements        | X    | X       |        |
-| #WarningElements      | X    | X       |        |
-| #NormalElements       | X    | X       |        |
-| #TimeoutElements      | X    | X       |        |
-| #NoticeElements       | X    | X       |        |
-| #ErrorElements        | X    | X       |        |
-| #MaskedElements       | X    | X       |        |
-| #TotalElements        | X    | X       |        |
-| #TotalElementsInAlarm | X    | X       |        |
-| #CriticalServices     | X    |        |        |
-| #MajorServices        | X    |        |        |
-| #MinorServices        | X    |        |        |
-| #WarningServices      | X    |        |        |
-| #NormalServices       | X    |        |        |
-| #TotalServices        | X    |        |        |
-| #TotalServicesInAlarm | X    |        |        |
+| --------------------- | ---- | ------- | ------- |
+| #CriticalElements     | X    | X       |         |
+| #MajorElements        | X    | X       |         |
+| #MinorElements        | X    | X       |         |
+| #WarningElements      | X    | X       |         |
+| #NormalElements       | X    | X       |         |
+| #TimeoutElements      | X    | X       |         |
+| #NoticeElements       | X    | X       |         |
+| #ErrorElements        | X    | X       |         |
+| #MaskedElements       | X    | X       |         |
+| #TotalElements        | X    | X       |         |
+| #TotalElementsInAlarm | X    | X       |         |
+| #CriticalServices     | X    |         |         |
+| #MajorServices        | X    |         |         |
+| #MinorServices        | X    |         |         |
+| #WarningServices      | X    |         |         |
+| #NormalServices       | X    |         |         |
+| #TotalServices        | X    |         |         |
+| #TotalServicesInAlarm | X    |         |         |
 | #CriticalAlarms       | X    | X       | X       |
 | #MajorAlarms          | X    | X       | X       |
 | #MinorAlarms          | X    | X       | X       |
@@ -134,69 +136,70 @@ From DataMiner 9.0.2 onwards, you can use alarm statistics in the “What” par
 | #TotalAlarms          | X    | X       | X       |
 
 > [!NOTE]
-> - #NormalAlarms can only be used if, in the file *MaintenanceSettings.xml*, the *\<AutoClear>* tag is set to "false".
-> - On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example *#Tickets:Internal*.
+>
+> - #NormalAlarms can only be used if, in the file _MaintenanceSettings.xml_, the _\<AutoClear>_ tag is set to "false".
+> - On a DMA with a Ticketing module, you can also use the placeholder _#Tickets_ to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example _#Tickets:Internal_.
 
 ## Specifying a default return value
 
 By default, if the condition cannot be evaluated (e.g. because the element or parameter does not exist), it always returns false. However, from DataMiner 9.5.5 onwards, you can specify that the condition must return “true” when it cannot be evaluated.
 
-To do so, add *DefaultReturnValue=True* to the condition.
+To do so, add _DefaultReturnValue=True_ to the condition.
 
 For example, with the configuration below, if the A condition cannot be evaluated because the element does not exist, “true” will be returned, and the shape will be shown.
 
 | Shape data field | Value                                                                         |
-|------------------|-------------------------------------------------------------------------------|
+| ---------------- | ----------------------------------------------------------------------------- |
 | Show             | \<A>-A\|Element:NonExistingElement\|Parameter:1\|\>0\|DefaultReturnValue=True |
 
 > [!NOTE]
-> The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g. *Min*, *Max*, *Concat* or *Avg*. To combine these options, use a semicolon (“;”). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
+> The DefaultReturnValue option is placed in the same position as a possible calculation option, e.g. _Min_, _Max_, _Concat_ or _Avg_. To combine these options, use a semicolon (“;”). See also: [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes).
 
 ## Conditional manipulation of connection shapes
 
 When conditional shape manipulation actions are defined on connection property shapes, there are additional possibilities for the “What” field of the condition.
 
 > [!NOTE]
-> Connection property shapes are shapes that have an **Options** shape data field with the value *ConnectionProperty:PropertyName*. See [Displaying connection properties](xref:Options_for_displaying_DCF_connections#displaying-connection-properties).
+> Connection property shapes are shapes that have an **Options** shape data field with the value _ConnectionProperty:PropertyName_. See [Displaying connection properties](xref:Options_for_displaying_DCF_connections#displaying-connection-properties).
 
 The following conditions can be defined:
 
-- *Does a connection property have a specific string value?*
+- _Does a connection property have a specific string value?_
 
-    This condition will be true if a connection property has a specific string value.     If a line represents multiple connections, the different values of that same property will be concatenated.
-    Example:
+  This condition will be true if a connection property has a specific string value. If a line represents multiple connections, the different values of that same property will be concatenated.
+  Example:
 
-    | Shape data field | Value                                  |
-    |--------------------|----------------------------------------|
-    | Options            | ConnectionProperty:State               |
-    | Show               | A\|Connection\|Property:State\|=Active |
+  | Shape data field | Value                                  |
+  | ---------------- | -------------------------------------- |
+  | Options          | ConnectionProperty:State               |
+  | Show             | A\|Connection\|Property:State\|=Active |
 
-- *Is a connection highlighted?*
+- _Is a connection highlighted?_
 
-    This condition will be true if the connection is either highlighted or not.     Example:
+  This condition will be true if the connection is either highlighted or not. Example:
 
-    | Shape data field | Value                                |
-    |--------------------|--------------------------------------|
-    | Options            | ConnectionProperty:Bandwidth         |
-    | FlipX              | A\|Connection\|IsHighlighted\|=false |
+  | Shape data field | Value                                |
+  | ---------------- | ------------------------------------ |
+  | Options          | ConnectionProperty:Bandwidth         |
+  | FlipX            | A\|Connection\|IsHighlighted\|=false |
 
-- *Is the mouse pointer on a connection?*
+- _Is the mouse pointer on a connection?_
 
-    This condition will be true if the mouse pointer is either on the connection or not.     Example:
+  This condition will be true if the mouse pointer is either on the connection or not. Example:
 
-    | Shape data field | Value                             |
-    |--------------------|-----------------------------------|
-    | Options            | ConnectionProperty:Bandwidth      |
-    | FlipY              | A\|Connection\|IsMouseOver\|=true |
+  | Shape data field | Value                             |
+  | ---------------- | --------------------------------- |
+  | Options          | ConnectionProperty:Bandwidth      |
+  | FlipY            | A\|Connection\|IsMouseOver\|=true |
 
-- *Does a connection property have a specific numeric value?*
+- _Does a connection property have a specific numeric value?_
 
-    This condition will be true if a connection property is greater or smaller than a specific value.     For lines that represent multiple connections, you can specify the calculation that has to be made with the different values of that same property. The default calculation is *Sum*, but you can also specify *Min*, *Max*, *Concat* and *Avg*. Note that when you use *Concat*, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>).     Example:
+  This condition will be true if a connection property is greater or smaller than a specific value. For lines that represent multiple connections, you can specify the calculation that has to be made with the different values of that same property. The default calculation is _Sum_, but you can also specify _Min_, _Max_, _Concat_ and _Avg_. Note that when you use _Concat_, the result will no longer be a numeric value but a string value (e.g. \<value1>, \<value2>). Example:
 
-    | Shape data field | Value                                    |
-    |--------------------|------------------------------------------|
-    | Options            | ConnectionProperty:Speed                 |
-    | Highlight          | A\|Connection\|Property:Speed\|\>=5\|Max |
+  | Shape data field | Value                                    |
+  | ---------------- | ---------------------------------------- |
+  | Options          | ConnectionProperty:Speed                 |
+  | Highlight        | A\|Connection\|Property:Speed\|\>=5\|Max |
 
 ## Examples
 

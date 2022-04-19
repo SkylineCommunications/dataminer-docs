@@ -6,6 +6,10 @@ uid: Grouping_shapes
 
 If, in a Visio drawing, you have to link more than one shape to the same element, view or service, then first group those shapes, and then specify shape data of type **Element**, **View** or **Service** on group level. This will considerably enhance performance.
 
+> [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem).
+
 ## Example of grouping shapes
 
 Suppose that you want to draw a square that has to display the alarm color of the element to which it is linked, and that the name of that element has to be displayed to the right of that square.
@@ -14,9 +18,9 @@ Suppose that you want to draw a square that has to display the alarm color of th
 
 2. To the right of the square, draw a text box.
 
-    - Inside the text box, enter “\*”.
+   - Inside the text box, enter “\*”.
 
-    - Add a shape data field of type **Info** to the text box, and set its value to “*ELEMENT NAME*”.
+   - Add a shape data field of type **Info** to the text box, and set its value to “_ELEMENT NAME_”.
 
 3. Group the square and the text box.
 
@@ -36,18 +40,18 @@ For example:
 
 - Group shape data:
 
-    | Shape data field | Value     |
-    |--------------------|-----------|
-    | Element            | MyElement |
-    | Enabled            | false     |
+  | Shape data field | Value     |
+  | ---------------- | --------- |
+  | Element          | MyElement |
+  | Enabled          | false     |
 
 - Subshape shape data:
 
-    | Shape data field | Value                             |
-    |--------------------|-----------------------------------|
-    | Execute            | Script:MyExampleScript\|dummy1=\* |
-    | Options            | NoCopyElementProperty             |
-    | Enabled            | true                              |
+  | Shape data field | Value                             |
+  | ---------------- | --------------------------------- |
+  | Execute          | Script:MyExampleScript\|dummy1=\* |
+  | Options          | NoCopyElementProperty             |
+  | Enabled          | true                              |
 
 When there are multiple grouping levels, the element will be determined bottom-up. Starting from the subshape, the parent shapes are checked one by one in search of a valid element ID. If you want a parent shape linked to an element ID to be ignored, add a shape data field to it of type **Options**, and set its value to “SkipAsHost”.
 
@@ -59,4 +63,4 @@ When there are multiple grouping levels, the element will be determined bottom-u
 
 When working with shape groups, you can extend the shortcut menu of the container shape with shortcut menu items from its child shapes.
 
-To do so, in a child shape of which the shortcut menu items have to be added to the shortcut menu of the container shape, add a shape data field of type **Options** and set its value to “*PushContextMenu*”.
+To do so, in a child shape of which the shortcut menu items have to be added to the shortcut menu of the container shape, add a shape data field of type **Options** and set its value to “_PushContextMenu_”.

@@ -4,6 +4,10 @@ uid: Specifying_the_background_of_Visual_Overview_pages
 
 # Specifying the background of Visual Overview pages
 
+> [!NOTE]
+>
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _misc > COLORS_.
+
 > [!TIP]
 > See also:
 > <https://community.dataminer.services/video/visio-adding-a-background/>
@@ -14,19 +18,19 @@ In Visio, it is possible to configure a page as a background page, and configure
 
 To set a page as a background page in Visio:
 
-1. Right-click the page tab of the background page at the bottom of the window, and select *Page setup*.
+1. Right-click the page tab of the background page at the bottom of the window, and select _Page setup_.
 
-2. In the *Page Properties* tab, next to *Type*, select *Background*.
+2. In the _Page Properties_ tab, next to _Type_, select _Background_.
 
-3. Click *OK* to close the *Page Properties* window.
+3. Click _OK_ to close the _Page Properties_ window.
 
 To configure a page to use a particular background page as its background:
 
-1. Right-click the page tab of the page, and select *Page setup*.
+1. Right-click the page tab of the page, and select _Page setup_.
 
-2. In the *Page Properties* tab, next to *Background*, select the background page you wish to use.
+2. In the _Page Properties_ tab, next to _Background_, select the background page you wish to use.
 
-3. Click *OK* to close the *Page Properties* window.
+3. Click _OK_ to close the _Page Properties_ window.
 
 ## Specifying the background color of Visual Overview pages
 

@@ -7,9 +7,11 @@ uid: Linking_a_shape_to_an_alarm
 Using a shape data field of type **Alarm**, you can link a shape to an active alarm.
 
 > [!NOTE]
+>
 > - Shape data fields of type **Alarm** are mostly used in combination with shape data fields of type **Info**. See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 > - If you want to link to the alarm state of a parameter, use a shape data field of type **Parameter** instead of **Alarm**. See [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter).
-> - If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: “*The value of the alarm is **\[value\]**.*” See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
+> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _linking > ALARM_.
+> - If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use _Info_ keywords in the shape text, by placing them in square brackets in the text. For example: “_The value of the alarm is **\[value\]**._” See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 ## Configuring the shape data field
 
@@ -17,31 +19,32 @@ Add a shape data field of type **Alarm** to the shape.
 
 - To link the shape to an alarm on a simple parameter, set the value of the shape data field to:
 
-    ```txt
-    ElementReference/ParameterID|Options
-    ```
+  ```txt
+  ElementReference/ParameterID|Options
+  ```
 
-    See [ElementReference](#elementreference) and [Options](#options)
+  See [ElementReference](#elementreference) and [Options](#options)
 
 - To link the shape to an alarm on a table parameter, set the value of the shape data field to:
 
-    ```txt
-    ElementReference/ParameterID:TableRowKey|Options
-    ```
+  ```txt
+  ElementReference/ParameterID:TableRowKey|Options
+  ```
 
-    See [ElementReference](#elementreference) and [Options](#options)
+  See [ElementReference](#elementreference) and [Options](#options)
 
-    > [!NOTE]
-    > - Table rows can be referenced either by primary key or by display key.
-    > - The table row key can contain “\*” and “?” wildcards. Example: *2/36/114:Equip\* 4\|Alarm*
+  > [!NOTE]
+  >
+  > - Table rows can be referenced either by primary key or by display key.
+  > - The table row key can contain “\*” and “?” wildcards. Example: _2/36/114:Equip\* 4\|Alarm_
 
 - To link the shape to an alarm via the root alarm ID, set the value of the shape data field to:
 
-    ```txt
-    DmaID/RootAlarmID
-    ```
+  ```txt
+  DmaID/RootAlarmID
+  ```
 
-    This syntax is available from DataMiner 10.0.2 onwards. The IDs are typically retrieved from session variables. If the configured alarm is not found, the shape will not be displayed.
+  This syntax is available from DataMiner 10.0.2 onwards. The IDs are typically retrieved from session variables. If the configured alarm is not found, the shape will not be displayed.
 
 ### ElementReference
 
@@ -53,7 +56,7 @@ You can refer to an element in the following ways:
 
 - Element name mask containing wildcard characters (”?” and/or “\*”).
 
-    In the latter case, the shape will dynamically refer to the first element in the view of which the name matches that name mask.
+  In the latter case, the shape will dynamically refer to the first element in the view of which the name matches that name mask.
 
 > [!NOTE]
 > If the Visio drawing is linked to an element, you can link the shape to that same element by using an asterisk (“\*”) as element reference.
@@ -64,15 +67,16 @@ In the field value, you can use the following options.
 
 - **ALARM**: The shape will take the color of the current alarm state.
 
-    > [!NOTE]
-    > When there is no alarm, the shape will take the “Normal” color, which is by default green (even if the parameter is not being monitored).
+  > [!NOTE]
+  > When there is no alarm, the shape will take the “Normal” color, which is by default green (even if the parameter is not being monitored).
 
 - **SHOW;condition**: The shape will be shown if the condition is TRUE.
 
 - **HIDE;condition**: The shape will be hidden if the condition is TRUE.
 
 > [!NOTE]
-> - If you specify a SHOW or HIDE condition, the shape has to have a shape data field of type **Info** of which the value is set to the alarm property to be tested.<br>Example: If you specify “*SHOW;!=critical high*” in the **Alarm** field, then you have to specify “*SEVERITY*” in the **Info** field.
+>
+> - If you specify a SHOW or HIDE condition, the shape has to have a shape data field of type **Info** of which the value is set to the alarm property to be tested.<br>Example: If you specify “_SHOW;!=critical high_” in the **Alarm** field, then you have to specify “_SEVERITY_” in the **Info** field.
 > - SHOW and HIDE conditions cannot be combined in one single **Alarm** field.
 > - In conditions, both single equal signs (“=”) and double equal signs (“==”) are supported.
 

@@ -16,11 +16,11 @@ To connect to the Ziine Demo System:
 
    1. Log on using your DataMiner Cloud Platform account.
 
-   1. In the top-right corner, select *Install DataMiner Cube* > *Desktop installation*.
+   1. In the top-right corner, select _Install DataMiner Cube_ > _Desktop installation_.
 
    > [!TIP]
    > See also: [Installing the DataMiner Cube desktop application](xref:Installing_configuring_the_DataMiner_Cube_software#installing-the-dataminer-cube-desktop-application)
 
 1. Open the DataMiner Cube desktop application.
 
-1. Connect to the DataMiner System *ziine.skyline.be* as described under [Opening the desktop application](xref:Opening_DataMiner_Cube#opening-the-desktop-application).
+1. Connect to the DataMiner System _the [Ziine Demo System](xref:ZiineDemoSystem)_ as described under [Opening the desktop application](xref:Opening_DataMiner_Cube#opening-the-desktop-application).

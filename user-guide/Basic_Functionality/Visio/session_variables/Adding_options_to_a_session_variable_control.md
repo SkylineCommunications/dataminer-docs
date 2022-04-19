@@ -14,9 +14,14 @@ If you turned a shape into a control that allows users to update a session varia
 
 > [!TIP]
 > See also:
+>
 > - [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 > - [Initializing a session variable](xref:Initializing_a_session_variable)
 > - [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable)
+
+> [!NOTE]
+>
+> - For examples of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The examples can be found on the Visual page _data > VARIABLE1_ and _VARIABLE2_.
 
 ## Configuring the shape data field
 
@@ -24,106 +29,106 @@ Add a shape data field of type **SetVarOptions** to the shape, and set its value
 
 - **Text box with input validation**:
 
-    ```txt
-    ExistingValuesValidation=DmaID/ElementID,PID
-    ```
+  ```txt
+  ExistingValuesValidation=DmaID/ElementID,PID
+  ```
 
-    The value you enter in the **SetVar** text box will be validated against the list of possible values stored in the specified parameter of the specified element. See [Creating a text box with input validation](#creating-a-text-box-with-input-validation).
+  The value you enter in the **SetVar** text box will be validated against the list of possible values stored in the specified parameter of the specified element. See [Creating a text box with input validation](#creating-a-text-box-with-input-validation).
 
-    ```txt
-    ValidationText=xxx
-    ```
+  ```txt
+  ValidationText=xxx
+  ```
 
-    The default validation error message will be replaced by the message you specified. See [Creating a text box with input validation](#creating-a-text-box-with-input-validation).
+  The default validation error message will be replaced by the message you specified. See [Creating a text box with input validation](#creating-a-text-box-with-input-validation).
 
 - **Combo box control**:
 
-    ```txt
-    Control=ComboBox
-    ```
+  ```txt
+  Control=ComboBox
+  ```
 
-    The **SetVar** text box will be turned into a combo box control. See [Creating a combo box control](#creating-a-combo-box-control).
+  The **SetVar** text box will be turned into a combo box control. See [Creating a combo box control](#creating-a-combo-box-control).
 
 - **Filtered combo box control:**
 
-    ```txt
-    Control=FilterComboBox
-    ```
+  ```txt
+  Control=FilterComboBox
+  ```
 
-    The **SetVar** text box will be turned into a combo box control with search box, to allow easy filtering. Available from DataMiner 10.0.3 onwards. See [Creating a filtered combo box control](#creating-a-filtered-combo-box-control).
+  The **SetVar** text box will be turned into a combo box control with search box, to allow easy filtering. Available from DataMiner 10.0.3 onwards. See [Creating a filtered combo box control](#creating-a-filtered-combo-box-control).
 
 - **DateTime control**:
 
-    ```txt
-    Control=DateTime|ShortTime
-    ```
+  ```txt
+  Control=DateTime|ShortTime
+  ```
 
-    The **SetVar** text box will be turned into a datetime control. See [Creating a DateTime control](#creating-a-datetime-control).
+  The **SetVar** text box will be turned into a datetime control. See [Creating a DateTime control](#creating-a-datetime-control).
 
 - **List box control**:
 
-    ```txt
-    Control=ListBox|DisplayColumn=COLPID|SetColumn=COLPID|FKColumn=FKCOLPID| Filter=[...]
-    ```
+  ```txt
+  Control=ListBox|DisplayColumn=COLPID|SetColumn=COLPID|FKColumn=FKCOLPID| Filter=[...]
+  ```
 
-    The **SetVar** text box will be turned into a list box control. See [Creating a list box control](#creating-a-list-box-control) or [Creating a list of profile instances](#creating-a-list-of-profile-instances).
+  The **SetVar** text box will be turned into a list box control. See [Creating a list box control](#creating-a-list-box-control) or [Creating a list of profile instances](#creating-a-list-of-profile-instances).
 
 - **Multiple checkbox control**:
 
-    ```txt
-    Control=MultiCheckBoxHorizontal
-    Control=MultiCheckBoxVertical
-    ```
+  ```txt
+  Control=MultiCheckBoxHorizontal
+  Control=MultiCheckBoxVertical
+  ```
 
-    The **SetVar** text box will be turned into a multiple checkbox control. See [Creating a multiple checkbox control](#creating-a-multiple-checkbox-control).
+  The **SetVar** text box will be turned into a multiple checkbox control. See [Creating a multiple checkbox control](#creating-a-multiple-checkbox-control).
 
 - **Search box**:
 
-    ```txt
-    Control=SearchTextBox|TextBoxInfo=Enter a search string
-    ```
+  ```txt
+  Control=SearchTextBox|TextBoxInfo=Enter a search string
+  ```
 
-    The **SetVar** text box will be turned into a search box containing the watermark text “Enter a search string”.
+  The **SetVar** text box will be turned into a search box containing the watermark text “Enter a search string”.
 
 - **Control displayed as a custom Visio shape**:
 
-    From DataMiner 9.0.5 onwards, by default the SetVar shape is shown as a basic button shape, even if a custom shape is configured in Visio. To revert to the legacy behavior and show the custom shape, add the following option in the **SetVarOptions** shape data field:
+  From DataMiner 9.0.5 onwards, by default the SetVar shape is shown as a basic button shape, even if a custom shape is configured in Visio. To revert to the legacy behavior and show the custom shape, add the following option in the **SetVarOptions** shape data field:
 
-    ```txt
-    Control=Shape
-    ```
+  ```txt
+  Control=Shape
+  ```
 
 - **Tree control**:
 
-    ```txt
-    VariableName:ElementID:TableID:TableID:...
-    ```
+  ```txt
+  VariableName:ElementID:TableID:TableID:...
+  ```
 
-    The **SetVar** text box will be turned into a tree control. See [Creating a tree control](#creating-a-tree-control).
+  The **SetVar** text box will be turned into a tree control. See [Creating a tree control](#creating-a-tree-control).
 
 - **Control that does not update the variable when the source is updated:**
 
-    From DataMiner 9.5.6 onwards, by default all SetVar shapes are updated when their source is updated (e.g. the session variable is cleared when an item is selected in a list box and the corresponding row is deleted from the source table). However, you can prevent this by specifying the following **SetVarOptions** value:
+  From DataMiner 9.5.6 onwards, by default all SetVar shapes are updated when their source is updated (e.g. the session variable is cleared when an item is selected in a list box and the corresponding row is deleted from the source table). However, you can prevent this by specifying the following **SetVarOptions** value:
 
-    ```txt
-    DisableSetOnSourceUpdate
-    ```
+  ```txt
+  DisableSetOnSourceUpdate
+  ```
 
 - **Unique variable update control:**
 
-    ```txt
-    OneWayToVariable
-    ```
+  ```txt
+  OneWayToVariable
+  ```
 
-    If this option is added to the shape, it will not be possible to update the session variable in any other way except via the shape. This option can be used when, for example, you want to prevent that a session variable is updated by a QAction.
+  If this option is added to the shape, it will not be possible to update the session variable in any other way except via the shape. This option can be used when, for example, you want to prevent that a session variable is updated by a QAction.
 
 - **Control to set a duration:**
 
-   From DataMiner 10.3.0/10.2.4 onwards, a SetVar shape can be configured to set a duration in a session variable. See [Creating a control to set a duration in a session variable](#creating-a-control-to-set-a-duration-in-a-session-variable).
+  From DataMiner 10.3.0/10.2.4 onwards, a SetVar shape can be configured to set a duration in a session variable. See [Creating a control to set a duration in a session variable](#creating-a-control-to-set-a-duration-in-a-session-variable).
 
-    ```txt
-    Control=Duration
-    ```
+  ```txt
+  Control=Duration
+  ```
 
 ## Creating a text box with input validation
 
@@ -168,7 +173,7 @@ ExistingValuesValidation=111/10,104|ValidationText=Incorrect value
 
 To turn a **SetVar** box into a combo box control:
 
-1. Add an additional shape data field of type **SetVarOptions**, and set its value to “*Control=ComboBox*”.
+1. Add an additional shape data field of type **SetVarOptions**, and set its value to “_Control=ComboBox_”.
 
 1. In the shape data field of type **SetVar**, you can then
 
@@ -180,16 +185,16 @@ To turn a **SetVar** box into a combo box control:
 
 1. In the **SetVarOptions** shape data field, you can then use the following options to override the default behavior, using a pipe character (“\|”) as separator:
 
-   - *DisplayColumn=\[Column parameter ID\]*: Show the value of this column and set the session variable to this value when it is selected in the combo box.
+   - _DisplayColumn=\[Column parameter ID\]_: Show the value of this column and set the session variable to this value when it is selected in the combo box.
 
-   - *SetColumn=\[Column parameter ID\]*: Set the value of the session variable to the value of this column. This overrides the DisplayColumn option as far as the set value is concerned.
+   - _SetColumn=\[Column parameter ID\]_: Set the value of the session variable to the value of this column. This overrides the DisplayColumn option as far as the set value is concerned.
 
-   - *SortColumn=\[Column parameter ID\]*: Sorts the items in the combo box by the values of this column
+   - _SortColumn=\[Column parameter ID\]_: Sorts the items in the combo box by the values of this column
 
 For example:
 
 | Shape data field | Value                                      |
-|------------------|--------------------------------------------|
+| ---------------- | ------------------------------------------ |
 | SetVar           | RecursiveVar:\[param:\[Var:Element\],101\] |
 | SetVarOptions    | Control=ComboBox                           |
 
@@ -197,7 +202,7 @@ For example:
 
 To turn a **SetVar** box into a combo box control with a search box, which allows faster filtering than a regular combo box control:
 
-1. Add an additional shape data field of type **SetVarOptions**, and set its value to “*Control=FilterComboBox*”.
+1. Add an additional shape data field of type **SetVarOptions**, and set its value to “_Control=FilterComboBox_”.
 
 1. In the shape data field of type **SetVar**, specify a list of fixed values or refer to a table parameter containing a number of values (optionally using dynamic placeholders). This is the same as for a regular combo box control.
 
@@ -206,28 +211,28 @@ To turn a **SetVar** box into a combo box control with a search box, which allow
 For example:
 
 | Shape data field | Value                                             |
-|------------------|---------------------------------------------------|
+| ---------------- | ------------------------------------------------- |
 | SetVar           | \[Sep::;\]MySessionVariable;\[Param:25/1245,568\] |
 | SetVarOptions    | Control=FilterComboBox                            |
 
 ## Creating a DateTime control
 
-If, in a shape data field of type **SetVar**, you specify a session variable without a value, the shape becomes a text box that allows the user to enter a value. If you want to turn a **SetVar** box into a datetime control, add an additional shape data field of type **SetVarOptions**, and set its value to “*Control=DateTime*” or “*Control=DateTime\|ShortTime*”.
+If, in a shape data field of type **SetVar**, you specify a session variable without a value, the shape becomes a text box that allows the user to enter a value. If you want to turn a **SetVar** box into a datetime control, add an additional shape data field of type **SetVarOptions**, and set its value to “_Control=DateTime_” or “_Control=DateTime\|ShortTime_”.
 
 | Value                       | DateTime format     |
-|-----------------------------|---------------------|
+| --------------------------- | ------------------- |
 | Control=DateTime            | mm/dd/yyyy hh:mm:ss |
 | Control=DateTime\|ShortTime | mm/dd/yyyy hh:mm    |
 
-From DataMiner 10.2.0/10.1.8 onwards, you can also define the culture that should be used for the datetime, by adding *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value. For example:
+From DataMiner 10.2.0/10.1.8 onwards, you can also define the culture that should be used for the datetime, by adding _DateTimeCulture=_ followed by _Current_ or _Invariant_. The latter is the default value. For example:
 
 | Shape data field | Value                                     |
-|------------------|-------------------------------------------|
+| ---------------- | ----------------------------------------- |
 | SetVarOptions    | Control=DateTime\|DateTimeCulture=Current |
 
 ## Creating a list box control
 
-If you want to turn a **SetVar** box into a list box control, add an additional shape data field of type **SetVarOptions**, and set its value to “*Control=ListBox*”.
+If you want to turn a **SetVar** box into a list box control, add an additional shape data field of type **SetVarOptions**, and set its value to “_Control=ListBox_”.
 
 > [!NOTE]
 > Session variable list boxes have a filter box that allows you to narrow down the values.
@@ -275,17 +280,17 @@ If profile instances have been defined in Cube, the list box control can also be
 
 To create such a control, configure the **SetVar** and SetVarOptions shape data fields as follows:
 
-| Shape data field | Value |
-|--|--|
-| SetVar | *xxx:\[profile:yyy\]*<br> -  xxx = name of a session variable<br> -  yyy = name of the base instance |
-| SetVarOptions | *Control=ListBox* |
+| Shape data field | Value                                                                                              |
+| ---------------- | -------------------------------------------------------------------------------------------------- |
+| SetVar           | _xxx:\[profile:yyy\]_<br> - xxx = name of a session variable<br> - yyy = name of the base instance |
+| SetVarOptions    | _Control=ListBox_                                                                                  |
 
 > [!TIP]
 > See also: [The Profiles module](xref:The_Profiles_module)
 
 ## Creating a multiple checkbox control
 
-If you want to turn a **SetVar** box into a multiple checkbox control, add an additional shape data field of type **SetVarOptions**, and set its value to “*Control=MultiCheckBoxHorizontal*” or “*Control=MultiCheckBoxVertical*”.
+If you want to turn a **SetVar** box into a multiple checkbox control, add an additional shape data field of type **SetVarOptions**, and set its value to “_Control=MultiCheckBoxHorizontal_” or “_Control=MultiCheckBoxVertical_”.
 
 In this case, the value of the shape data field of type **SetVar** has to refer to a table of which the display key column contains the checkbox labels to be shown:
 
@@ -293,28 +298,28 @@ In this case, the value of the shape data field of type **SetVar** has to refer 
 VariableName:[Param:dmaid/elementId,pid]
 ```
 
-The session variable will contain the names of the selected checkboxes, separated by pipe characters. When, for example, checkbox 1, 2 and 4 are selected, the session variable will contain the value “*Checkbox1\|Checkbox2\|Checkbox4*”. If you want to use another separator, add a shape data field of type **SetVarOptions** to the shape and set its value to “*MultipleValueSep=*” followed by the character of your choice:
+The session variable will contain the names of the selected checkboxes, separated by pipe characters. When, for example, checkbox 1, 2 and 4 are selected, the session variable will contain the value “_Checkbox1\|Checkbox2\|Checkbox4_”. If you want to use another separator, add a shape data field of type **SetVarOptions** to the shape and set its value to “_MultipleValueSep=_” followed by the character of your choice:
 
 ```txt
 MultipleValueSep=;
 ```
 
 > [!NOTE]
-> Up to DataMiner 9.5.1, only a single character can be specified as a separator after MultipleValueSep. From DataMiner 9.5.2 onwards, you can also specify separators that consist of multiple characters. E.g.: *MultipleValueSep=-AND-*
+> Up to DataMiner 9.5.1, only a single character can be specified as a separator after MultipleValueSep. From DataMiner 9.5.2 onwards, you can also specify separators that consist of multiple characters. E.g.: _MultipleValueSep=-AND-_
 
-By default, when no checkboxes are selected, the value of the session variable will be empty. If, however, you want the session variable to have a fixed value in case none of the checkboxes are selected, then add a shape data field of type **SetVarOptions** to the shape and set its value to “*EmptyValue=*” followed by the value of your choice:
+By default, when no checkboxes are selected, the value of the session variable will be empty. If, however, you want the session variable to have a fixed value in case none of the checkboxes are selected, then add a shape data field of type **SetVarOptions** to the shape and set its value to “_EmptyValue=_” followed by the value of your choice:
 
 ```txt
 EmptyValue=0
 ```
 
-Using a shape data field of type InitVar you can choose to have the session variable initialized when the Visio page is first opened. However, you can also use the SetVarOption “*InitVarWithFirstSelection*” to have the session variable set to the first checkbox value in the series the moment the checkbox data is retrieved:
+Using a shape data field of type InitVar you can choose to have the session variable initialized when the Visio page is first opened. However, you can also use the SetVarOption “_InitVarWithFirstSelection_” to have the session variable set to the first checkbox value in the series the moment the checkbox data is retrieved:
 
 ```txt
 InitVarWithFirstSelection
 ```
 
-If you want the checkboxes to be selected by default, use the SetVarOption “*InitNewCheckBoxChecked*”:
+If you want the checkboxes to be selected by default, use the SetVarOption “_InitNewCheckBoxChecked_”:
 
 ```txt
 InitNewCheckBoxChecked
@@ -323,12 +328,12 @@ InitNewCheckBoxChecked
 > [!NOTE]
 > In DataMiner Cube, from version 9.5.1 onwards, right-clicking a multiple checkbox control displays a context menu that allows you to select or deselect all checkboxes, or invert the current selection.
 
-From DataMiner 9.5.0/9.5.3 onwards, by default, the checkboxes are sorted by the display key. To override this default order, use the SetVarOption “*SortColumn=*\[Column parameter ID\]”.
+From DataMiner 9.5.0/9.5.3 onwards, by default, the checkboxes are sorted by the display key. To override this default order, use the SetVarOption “_SortColumn=_\[Column parameter ID\]”.
 
 For example:
 
 | Shape data field | Value                                          |
-|------------------|------------------------------------------------|
+| ---------------- | ---------------------------------------------- |
 | SetVarOptions    | control=MultiCheckBoxVertical\|SortColumn=1001 |
 
 ## Creating a tree control
@@ -339,30 +344,30 @@ To turn a shape into a tree control:
 
 1. Add a shape data field of type **SetVar** to the shape. As the value of this shape data field, specify the name of the session variable, followed by the list of tables that will populate the tree control. If you specify multiple tables, make sure there are foreign key relationships between them.
 
-    Syntax of the SetVar value:
+   Syntax of the SetVar value:
 
-    ```txt
-    VariableName:ElementID:TableID:TableID:...
-    ```
+   ```txt
+   VariableName:ElementID:TableID:TableID:...
+   ```
 
-1. Add a shape data field of **SetVarOptions** to the shape. As the value of this shape data field, specify “*Control=TreeView*”, optionally followed by a number of options, separated by pipe characters (“\|”).
+1. Add a shape data field of **SetVarOptions** to the shape. As the value of this shape data field, specify “_Control=TreeView_”, optionally followed by a number of options, separated by pipe characters (“\|”).
 
-    The following options can be used:
+   The following options can be used:
 
-    | SetVarOption | Description |
-    |--------------|-------------|
-    | DisplayColumn | The ID of the column to be used for the tree item. Default: Primary key. |
-    | IconColumn | The ID of the column that contains the icon to be shown in front of the tree item.<br> Note: All icons must have a height of exactly 16 px. |
-    | MultipleValueSep | The session variable will contain the names of the selected tree items, separated by pipe characters. When, for example, tree items 1, 2 and 4 are selected, the session variable will contain the value “X\|Y\|Z” (note: X, Y, Z depending on the above-mentioned SetColumn setting). If you want to use another separator, add a shape data field of type **SetVarOptions** to the shape and set its value to “*MultipleValueSep=*” followed by the character of your choice. <br> Note that from DataMiner 9.5.2 onwards, you can also specify a separator consisting of multiple characters, e.g. *MultipleValueSep=-AND-*. |
-    | SetColumn | The ID of the column of which the value will be assigned to the session variable. |
-    | SingleSelectionMode | Specify this option if users are only allowed to select one single item in the tree control. By default, users are allowed to select multiple items. |
-    | SortColumn | Specify this option to configure the way items are sorted in the tree control. If you set the value to “SortColumn=*ParameterId*,*ParameterId*,...”, each tree level will sort its items based on the values of the specified column. If no sorting column is specified, the items are sorted based on the display value. String values are sorted using natural sorting. |
-    | ViewColumn | One or more column IDs, separated by commas, referring to columns with view names in the table containing the tree items to be shown. For example: *ViewColumn=2011,3011*<br> If the indicated columns contain a view for a particular tree item, that tree item will only be visible for users with permission to access that view. Tree items of which the view columns are empty will be visible to all users. |
-    | VisibilityColumn | The ID of the column that will determine whether the item is shown in the tree control. If this column contains “1”, then the item will be shown.<br> Note: VisibilityColumn may refer to a parameter of type “discreet”. |
-    | VisibilityConditionColumn= | Available from DataMiner 9.0.5 onwards. Allows you to use the value of a column in a condition. If the condition is true, the tree item is shown, otherwise it is hidden. If a tree control is populated by multiple tables, you can configure a condition for each of those tables.<br> Supported operators: ==, !=, \>, \>=, \<, \<=<br> For columns of type String only the “==” and “!=” operators can be used.<br> For examples, see [Examples of SetVarOptions using conditions](#examples-of-setvaroptions-using-conditions). |
+   | SetVarOption               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+   | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | DisplayColumn              | The ID of the column to be used for the tree item. Default: Primary key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+   | IconColumn                 | The ID of the column that contains the icon to be shown in front of the tree item.<br> Note: All icons must have a height of exactly 16 px.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+   | MultipleValueSep           | The session variable will contain the names of the selected tree items, separated by pipe characters. When, for example, tree items 1, 2 and 4 are selected, the session variable will contain the value “X\|Y\|Z” (note: X, Y, Z depending on the above-mentioned SetColumn setting). If you want to use another separator, add a shape data field of type **SetVarOptions** to the shape and set its value to “_MultipleValueSep=_” followed by the character of your choice. <br> Note that from DataMiner 9.5.2 onwards, you can also specify a separator consisting of multiple characters, e.g. _MultipleValueSep=-AND-_. |
+   | SetColumn                  | The ID of the column of which the value will be assigned to the session variable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+   | SingleSelectionMode        | Specify this option if users are only allowed to select one single item in the tree control. By default, users are allowed to select multiple items.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+   | SortColumn                 | Specify this option to configure the way items are sorted in the tree control. If you set the value to “SortColumn=_ParameterId_,_ParameterId_,...”, each tree level will sort its items based on the values of the specified column. If no sorting column is specified, the items are sorted based on the display value. String values are sorted using natural sorting.                                                                                                                                                                                                                                                       |
+   | ViewColumn                 | One or more column IDs, separated by commas, referring to columns with view names in the table containing the tree items to be shown. For example: _ViewColumn=2011,3011_<br> If the indicated columns contain a view for a particular tree item, that tree item will only be visible for users with permission to access that view. Tree items of which the view columns are empty will be visible to all users.                                                                                                                                                                                                               |
+   | VisibilityColumn           | The ID of the column that will determine whether the item is shown in the tree control. If this column contains “1”, then the item will be shown.<br> Note: VisibilityColumn may refer to a parameter of type “discreet”.                                                                                                                                                                                                                                                                                                                                                                                                       |
+   | VisibilityConditionColumn= | Available from DataMiner 9.0.5 onwards. Allows you to use the value of a column in a condition. If the condition is true, the tree item is shown, otherwise it is hidden. If a tree control is populated by multiple tables, you can configure a condition for each of those tables.<br> Supported operators: ==, !=, \>, \>=, \<, \<=<br> For columns of type String only the “==” and “!=” operators can be used.<br> For examples, see [Examples of SetVarOptions using conditions](#examples-of-setvaroptions-using-conditions).                                                                                            |
 
-    > [!NOTE]
-    > The border and background of the tree control can be configured by setting the border and background of the shape.
+   > [!NOTE]
+   > The border and background of the tree control can be configured by setting the border and background of the shape.
 
 1. From DataMiner 10.0.5 onwards, if you want to use one or more subscription filters, add the **SubscriptionFilter** shape data field. Set this field to one or more filters, separated by pipe characters, to apply these to the table(s) specified in the **SetVar** shape data field. See [Example of tree control with subscription filters](#example-of-tree-control-with-subscription-filters).
 
@@ -382,30 +387,30 @@ To turn a shape into a tree control:
 
 ### Examples
 
-| Shape data field | Value |
-|------------------|---------------------|
-| SetVar           | Tree2:219/346:1000:3000:5000:7000 |
+| Shape data field | Value                                                                                 |
+| ---------------- | ------------------------------------------------------------------------------------- |
+| SetVar           | Tree2:219/346:1000:3000:5000:7000                                                     |
 | SetVarOptions    | Control=TreeView\|DisplayColumn=1002,5002,7002\|VisibilityColumn=5004\|SetColumn=7003 |
 
 | Shape data field | Value                            |
-|------------------|----------------------------------|
+| ---------------- | -------------------------------- |
 | SetVar           | Tree2:219/125:101                |
 | SetVarOptions    | Control=TreeView\|IconColumn=120 |
 
 ### Examples of SetVarOptions using conditions
 
-| Shape data field | Value |
-|------------------|-------|
-| SetVarOptions    | Control=TreeView\|VisibilityConditionColumn=3==my value |
+| Shape data field | Value                                                                  |
+| ---------------- | ---------------------------------------------------------------------- |
+| SetVarOptions    | Control=TreeView\|VisibilityConditionColumn=3==my value                |
 | SetVarOptions    | Control=TreeView\|VisibilityConditionColumn=402==\[thisusersfullname\] |
-| SetVarOptions    | Control=TreeView\|VisibilityConditionColumn=510>=4 |
+| SetVarOptions    | Control=TreeView\|VisibilityConditionColumn=510>=4                     |
 
 ### Example of tree control with subscription filters
 
 In the following example, the first subscription filter (“value=101 == 1”) will be used when subscribing to the first table (with ID 100) and the second subscription filter (“value=201 == A”) will be used when subscribing to the second table (with ID 200).
 
 | Shape data field   | Value                            |
-|--------------------|----------------------------------|
+| ------------------ | -------------------------------- |
 | SetVar             | MyVar:\[this elementID\]:100:200 |
 | SetVarOptions      | Control=TreeView                 |
 | SubscriptionFilter | value=101 == 1\|value=201 == A   |
@@ -420,31 +425,31 @@ To do so:
 
 1. Add a shape data field of type **SetVarOptions** to the shape. As the value of this shape data field, specify `Control=Duration`, optionally followed by a number of options, separated by pipe characters (“|”).
 
-    The following options can be used:
+   The following options can be used:
 
-    | SetVarOption | Description |
-    |--------------|-------------|
-    | ShowInfinity=true/false | When this option is set to true, next to the duration selector, a checkbox is displayed that can be used to set the duration to infinity, which will replace the value of the session variable with TimeSpan.MaxValue. Default: False. |
-    | Minimum= | The minimum duration. Default: 1 minute. |
-    | Maximum= | The maximum duration. Default: 1 week. |
+   | SetVarOption            | Description                                                                                                                                                                                                                            |
+   | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | ShowInfinity=true/false | When this option is set to true, next to the duration selector, a checkbox is displayed that can be used to set the duration to infinity, which will replace the value of the session variable with TimeSpan.MaxValue. Default: False. |
+   | Minimum=                | The minimum duration. Default: 1 minute.                                                                                                                                                                                               |
+   | Maximum=                | The maximum duration. Default: 1 week.                                                                                                                                                                                                 |
 
-    To specify the duration, you can use the following units:
+   To specify the duration, you can use the following units:
 
-    | Unit | Description | Example |
-    |------|-------------|---------|
-    | No unit | If no unit is specified, the specified number <br>is considered to be a number of days. | 1 |
-    | s | seconds | 1s |
-    | m | minutes | 1m |
-    | h | hours | 1h |
-    | d | days | 1d |
-    | mo | months (1 month = 30 days) | 1mo |
-    | y | years (1 year = 365 days) | 1y |
+   | Unit    | Description                                                                             | Example |
+   | ------- | --------------------------------------------------------------------------------------- | ------- |
+   | No unit | If no unit is specified, the specified number <br>is considered to be a number of days. | 1       |
+   | s       | seconds                                                                                 | 1s      |
+   | m       | minutes                                                                                 | 1m      |
+   | h       | hours                                                                                   | 1h      |
+   | d       | days                                                                                    | 1d      |
+   | mo      | months (1 month = 30 days)                                                              | 1mo     |
+   | y       | years (1 year = 365 days)                                                               | 1y      |
 
-    For example:
+   For example:
 
-    | Shape data field   | Value                            |
-    |--------------------|----------------------------------|
-    | SetVarOptions      | Control=Duration\|minimum=5\|maximum=25\|showInfinity=false |
+   | Shape data field | Value                                                       |
+   | ---------------- | ----------------------------------------------------------- |
+   | SetVarOptions    | Control=Duration\|minimum=5\|maximum=25\|showInfinity=false |
 
 > [!NOTE]
 > A page-level **InitVar** shape data field can be used to set the initial value of the duration in the session variable. To set the maximum time span value, InitVar can be set to `Infinity`. See [Initializing a session variable](xref:Initializing_a_session_variable).
