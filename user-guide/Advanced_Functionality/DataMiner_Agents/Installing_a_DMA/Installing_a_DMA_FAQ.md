@@ -87,260 +87,161 @@ For more information, see <http://support.microsoft.com/kb/825791>.
 
 ## What do I do if I have backup problems on a 64-bit OS?
 
-Problem with NTBackup
+### Problem with NTBackup
 
-On 64-bit systems, a DataMiner backup procedure can fail with the
-following message:
+On 64-bit systems, a DataMiner backup procedure can fail with the following message:
 
-::: {width="100%" align="left"}
-  ----------------------------------------------------------------------------------------------
-  Backup job had errors!! Backup-process failed. The system cannot find the file specified.(2)
-  ----------------------------------------------------------------------------------------------
-:::
+```txt
+Backup job had errors!! Backup-process failed. The system cannot find the file specified.(2)
+```
 
-This error is caused by SLDMS being unable to start or locate the
-ntbackup process.
+This error is caused by SLDMS being unable to start or locate the ntbackup process.
 
 To solve this problem, proceed as follows:
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}Copy the
-[ntbackup.exe]{.FM_Code} file from the [C:\\WINDOWS\\system32
-]{.FM_Code}directory of a 32-bit system to the [C:\\Skyline
-DataMiner\\Files]{.FM_Code} directory of the 64-bit system.
+- Copy the *ntbackup.exe* file from the *C:\WINDOWS\system32* directory of a 32-bit system to the *C:\Skyline DataMiner\Files*  directory of the 64-bit system.
 
-Problem with DataMiner database dump
+### Problem with DataMiner database dump
 
-On 64-bit systems, a DataMiner backup procedure can fail the moment a
-database dump has to be performed.
+On 64-bit systems, a DataMiner backup procedure can fail the moment a database dump has to be performed.
 
-This error is caused by SLDMS being unable to start or locate
-mysqldump.exe.
+This error is caused by SLDMS being unable to start or locate *mysqldump.exe*.
 
 To solve this problem, proceed as follows:
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}Create a dummy
-[C:\\MySQL\\bin]{.FM_Code} directory containing the mysqldump.exe file.
+- Create a dummy *C:\MySQL\bin* directory containing the *mysqldump.exe* file.
 
-[8.8[]{.FMAutoNumber_1
-style="padding-left: 58pt;"}]{.FM_SLC_Light_Blue}[]{#XREF_17029_7_10_How_do_I}How
-do I configure IIS 6 on a 64-bit system?
+## How do I configure IIS 6 on a 64-bit system?
 
-Problems with an incorrect IIS configuration
+### Problems with an incorrect IIS configuration
 
 When IIS is incorrectly configured, the following problems may occur:
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}When browsing to the
-DMA:
+- When browsing to the DMA:
 
-::: {width="100%" align="left"}
-  ---------------------
-  Service Unavailable
-  ---------------------
-:::
+    ```txt
+    Service Unavailable
+    ```
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}Errors coming from
-W3SVC-WP in the event viewer of the DMA:
+- Errors coming from W3SVC-WP in the event viewer of the DMA:
 
-::: {width="100%" align="left"}
-+-----------------------------------------------------------------------+
-| Id 2268: Could not load all ISAPI filters for site/service. Therefore |
-| startup aborted.                                                      |
-|                                                                       |
-| Id 2274:                                                              |
-| C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_filter.dll  |
-| could not be loaded due to a configuration problem \[\...\]           |
-|                                                                       |
-| Id 1062: It is not possible to run different versions of ASP.NET in   |
-| the same IIS process. Please use the IIS Administration tool to       |
-| reconfigure you server to run the application in a separate process.  |
-+-----------------------------------------------------------------------+
-:::
+    ```txt
+    Id 2268: Could not load all ISAPI filters for site/service. Therefore startup aborted.
+    Id 2274: C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_filter.dll could not be loaded due to a configuration problem [...]
+    Id 1062: It is not possible to run different versions of ASP.NET in the same IIS process. Please use the IIS Administration tool to reconfigure you server to run the application in a separate process.
+    ```
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}When browsing to ASP.NET
-applications (Dashboards):
+- When browsing to ASP.NET applications (Dashboards):
 
-::: {width="100%" align="left"}
-+-----------------------------------------------------------------------+
-| 404 (Not Found)                                                       |
-|                                                                       |
-| 403 (Forbidden)                                                       |
-+-----------------------------------------------------------------------+
-:::
+    ```txt
+    404 (Not Found)
+    403 (Forbidden)
+    ```
 
-To avoid these problems, first of all make sure that the following
-programs/frameworks are installed:
+To avoid these problems, first of all make sure that the following programs/frameworks are installed:
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}IIS
+- IIS
+- .NET Framework 3.5
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}.NET Framework 3.5
+If they are, make sure IIS has been correctly configured. See [Correctly configuring IIS 6](#correctly-configuring-iis-6).
 
-If they are, make sure IIS has been correctly configured. See [Correctly
-configuring IIS 6](#XREF_46268_Correctly).
+### Correctly configuring IIS 6
 
-[]{#XREF_46268_Correctly}Correctly configuring IIS 6
+To correctly configure IIS, on top of the standard DataMiner Agent installation, do the following:
 
-To correctly configure IIS, on top of the standard DataMiner Agent
-installation, do the following:
+1. Open a command prompt window, by going to *Start > Run* and entering `cmd`.
 
-1.[]{.FMAutoNumber_1 style="padding-left: 12pt;"}Open a command prompt
-window, by going to [Start]{.FM_Emphasis} > [Run]{.FM_Emphasis} and
-entering [cmd]{.FM_Code}.
+    > [!NOTE]
+    > It is advisable to run *cmd.exe* as an Administrator.
 
-::: {width="100%" align="left"}
-  ------- -----------------------------------------------------------------
-  NOTE:   It is advisable to run [cmd.exe]{.FM_Code} as an Administrator.
-  ------- -----------------------------------------------------------------
-:::
+1. Type the following command, and then press *ENTER*:
 
-2.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}Type the following
-command, and then press [Enter]{.FM_Code}:
+    ```txt
+    Cscript %SYSTEMDRIVE%\\inetpub\\adminscripts\\adsutil.vbs
+    SET W3SVC/AppPools/Enable32bitAppOnWin64 1
+    ```
 
-::: {width="100%" align="left"}
-+-----------------------------------------------------------------------+
-| Cscript %SYSTEMDRIVE%\\inetpub\\adminscripts\\adsutil.vbs             |
-|                                                                       |
-| SET W3SVC/AppPools/Enable32bitAppOnWin64 1                            |
-+-----------------------------------------------------------------------+
-:::
+1. Type the following command, and then press *ENTER*:
 
-3.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}Type the following
-command, and then press [Enter]{.FM_Code}:
+    ```txt
+    %SYSTEMROOT%\Microsoft.NET\Framework\v1.1.4322\aspnet_regiis.exe -i
+    ```
 
-::: {width="100%" align="left"}
-  -------------------------------------------------------------------------
-  %SYSTEMROOT%\\Microsoft.NET\\Framework\\v1.1.4322\\aspnet_regiis.exe -i
-  -------------------------------------------------------------------------
-:::
+1. Type the following command, and then press *ENTER*:
 
-4.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}Type the following
-command, and then press [Enter]{.FM_Code}:
+    ```txt
+    %SYSTEMROOT%\Microsoft.NET\Framework\v2.0.50727\aspnet_regiis.exe -i
+    ```
 
-::: {width="100%" align="left"}
-  --------------------------------------------------------------------------
-  %SYSTEMROOT%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_regiis.exe -i
-  --------------------------------------------------------------------------
-:::
+1. Open IIS Manager.
 
-5.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}Open IIS Manager.
+1. In the Web Service Extensions list (see left tree pane), set the following extensions to "Allowed":
 
-6.[]{.FMAutoNumber_1 style="padding-left: 10pt;"}In the Web Service
-Extensions list (see left tree pane), set the following extensions to
-[Allowed]{.FM_Emphasis}:
+    - ASP.NET version 1.1.4322
+    - ASP.NET version 2.0.50727
+    - Active Server Pages
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}ASP.NET version 1.1.4322
+1. In File Explorer, execute `C:\Skyline DataMiner\Tools\ConfigureIIs.js`. When the execution is ready, a message box will appear.
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}ASP.NET version
-2.0.50727
+1. In the left pane of the IIS Manager, open the website and verify that the Dashboards item is an application (cogwheel icon).
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}Active Server Pages
+    If it is not, proceed as follows:
 
-7.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}In File Explorer,
-execute [C:\\Skyline DataMiner\\Tools\\ConfigureIIs.js]{.FM_Code}. When
-the execution is ready, a message box will appear.
+    1. Right-click > *Properties*
+    1. Click *Create Application*.
+    1. On the *Documents* tab, make sure that the default document is "default.aspx".
+    1. On the *Directory Security* tab, click *Edit* (next to *Authentication and access control*), and make sure that "Integrated Windows Authentication" is selected.
 
-8.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}In the left pane of the
-IIS Manager, open the website and verify that the Dashboards item is an
-application (cogwheel icon).
+1. Restart IIS:
 
-If it is not, proceed as follows:
+    - In the left pane, right-click COMPUTERNAME and select *All Tasks > Restart IIS*.
+    - Alternatively, you can run the `iisreset` command from a command prompt.
 
-a.[]{.FMAutoNumber_1 style="padding-left: 10pt;"}Right-click \>
-Properties
+## What do I do if there is an error when the MySQL service is started?
 
-b.[]{.FMAutoNumber_1 style="padding-left: 10pt;"}Click [Create
-Application]{.FM_Emphasis}.
+After installing MySQL, the following error may occur when the MySQL service attempts to start:
 
-c.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}On the
-[Documents]{.FM_Emphasis} tab, make sure that the default document is
-"default.aspx".
-
-d.[]{.FMAutoNumber_1 style="padding-left: 10pt;"}On the [Directory
-Security]{.FM_Emphasis} tab, click [Edit]{.FM_Emphasis} (next to
-Authentication and access control), and make sure that Integrated
-Windows Authentication is selected.
-
-9.[]{.FMAutoNumber_1 style="padding-left: 10pt;"}Restart IIS:
-
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}In the left pane,
-right-click COMPUTERNAME and select [All Tasks]{.FM_Emphasis} > [Restart
-IIS]{.FM_Emphasis}.
-
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}Alternatively, you can
-run the [iisreset]{.FM_Code} command from a command prompt.
-
-[8.9[]{.FMAutoNumber_1
-style="padding-left: 58pt;"}]{.FM_SLC_Light_Blue}What do I do if there
-is an error when the MySQL service is started?
-
-After installing MySQL, the following error may occur when the MySQL
-service attempts to start:
-
-::: {width="100%" align="left"}
-+-----------------------------------------------------------------------+
-| MySQL service cannot start (event viewer error message:               |
-|                                                                       |
-| Default storage engine \<InnoDB> is not available)                    |
-+-----------------------------------------------------------------------+
-:::
+```txt
+MySQL service cannot start (event viewer error message: Default storage engine <InnoDB> is not available)
+```
 
 To resolve this issue, proceed as follows:
 
-1.[]{.FMAutoNumber_1 style="padding-left: 12pt;"}Go to the MySQL Server
-installation directory:
+1. Go to the MySQL Server installation directory:
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}On an x86 machine:
-[C:\\Program Files\\MySQL\\MySQL Server x.x\\Data]{.FM_Code}.
+    - On an x86 machine: *C:\Program Files\MySQL\MySQL Server x.x\Data*
+    - On an x64 machine: *C:\Program Files(86)\MySQL\MySQL Server x.x\Data*
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}On an x64 machine:
-[C:\\Program Files(86)\\MySQL\\MySQL Server x.x\\Data]{.FM_Code}.
+1. Remove the following files:
 
-2.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}Remove the following
-files:
+    - ib_logfile0
+    - ib_logfile1
+    - ibdata1
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}ib_logfile0
+1. Start the MySQL service manually.
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}ib_logfile1
+For more information, see <http://forums.mysql.com/read.php?22,58270,122989#msg-122989>.
 
-•[]{.FMAutoNumber_1 style="padding-left: 14pt;"}ibdata1
-
-3.[]{.FMAutoNumber_1 style="padding-left: 11pt;"}Start the MySQL service
-manually.
-
-For more information, see
-[<http://forums.mysql.com/read.php?22,58270,122989#msg-122989>]{.FM_Hyperlink}
-
-[8.10[]{.FMAutoNumber_1
-style="padding-left: 52pt;"}]{.FM_SLC_Light_Blue}What do I do if I get a
-"Trust not granted" error when opening Cube?
+## What do I do if I get a "Trust not granted" error when opening Cube?
 
 Install the necessary certificates.
 
-For more information, see [http://\[DMA\]/tools/]{.FM_Hyperlink}.
+For more information, see <http://[DMA]/tools/>.
 
-[8.11[]{.FMAutoNumber_1
-style="padding-left: 52pt;"}]{.FM_SLC_Light_Blue}What do I do if I get
-an "unauthorized access exception" after saving annotations?
+## What do I do if I get an "unauthorized access exception" after saving annotations?
 
 On Windows 7, the following error may occur after saving annotations:
 
-::: {width="100%" align="left"}
-  ---------------------------------------------------------------------------------------------------
-  SYSTEM.UNAUTHORIZEDACCESSEXCEPTION: RETRIEVING THE COM CLASS FACTORY FOR COMPONENT WITH CLSID\...
-  ---------------------------------------------------------------------------------------------------
-:::
+```txt
+SYSTEM.UNAUTHORIZEDACCESSEXCEPTION: RETRIEVING THE COM CLASS FACTORY FOR COMPONENT WITH CLSID...
+```
 
-This is because the IIS_IUSRS group has not been granted "Local
-Activation" permission on SLDMS.
+This is because the IIS_IUSRS group has not been granted "Local Activation" permission on SLDMS.
 
-::: {width="100%" align="left"}
-  ----------- ----------------------------------------------------------------
-  See also:   [How do I manually configure DCOM?](#XREF_83871_7_16_How_do_I)
-  ----------- ----------------------------------------------------------------
-:::
+> [!TIP]
+> See also: [How do I manually configure DCOM?](#how-do-i-manually-configure-dcom)
 
-[8.12[]{.FMAutoNumber_1
-style="padding-left: 52pt;"}]{.FM_SLC_Light_Blue}[]{#XREF_48738_8_14_How_do_I}How
-do I manually configure Windows Firewall?
+## How do I manually configure Windows Firewall?
 
 Normally, Windows Firewall is configured automatically when you install
 the Skyline software by means of the installation CD.
