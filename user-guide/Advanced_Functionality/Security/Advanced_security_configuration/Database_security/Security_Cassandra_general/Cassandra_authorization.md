@@ -14,6 +14,8 @@ To enable the *CassandraAuthorizer* in Cassandra:
 
    `authorizer: CassandraAuthorizer`
 
+1. Now **restart** the Cassandra service to enable the *CassandraAuthorizer*.
+
 1. Grant your DataMiner database user full permissions on the DataMiner keyspaces. You can do so by executing the following queries (using DevCenter, the DataMiner Cube Query Executor, or your preferred query tool):
 
    `GRANT CREATE ON ALL KEYSPACES TO <YOUR DATABASE USER/ROLE>;`
