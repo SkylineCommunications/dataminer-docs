@@ -123,7 +123,7 @@ To enable client-server TLS encryption:
 
 ## Configuring the server_encryption_options
 
-The *server_encryption_options* allow you to encrypt all the traffic between the Cassandra nodes, this is often referred to as *inter-node* encryption.
+The *server_encryption_options* allow you to encrypt all the traffic between the Cassandra nodes, which is often referred to as *inter-node* encryption.
 
 To enable inter-node TLS encryption:
 
