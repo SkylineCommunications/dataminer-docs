@@ -4,7 +4,13 @@ uid: Installing_a_DataMiner_Agent
 
 # Installing a DataMiner Agent
 
-For detailed information on how to install a DataMiner Agent, see <https://community.dataminer.services/documentation/dataminer-installation-guide/>.
+For detailed information on how to install a DataMiner Agent, see below.
 
 > [!NOTE]
 > The server onto which you plan to install the DataMiner Agent software has to comply with the DataMiner system requirements. See [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+
+- [Installing Windows](xref:Installing_Windows)
+- [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_Installer)
+- [Unattended DataMiner installation](xref:Unattended_DM_installation)
+- [Checking the DataMiner Installation]()
+- [Frequently asked questions]()
