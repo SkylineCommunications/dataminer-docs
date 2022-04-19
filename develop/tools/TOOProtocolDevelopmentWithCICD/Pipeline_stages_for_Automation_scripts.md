@@ -24,27 +24,29 @@ Currently, the pipeline consists of the following steps:
 
 - [Build on latest feature release](#build-on-latest-feature-release)
 
-- [Convert Solution to XML](#convert-solution-to-xml)
+- [Convert solution to XML](#convert-solution-to-xml)
 
-- [Scan Test Projects](#scan-test-projects)
+- [Build .dmapp package](#build-dmapp-package)
 
-- [Run Unit Tests](#run-unit-tests)
+- [Scan test projects](#scan-test-projects)
 
-- [Run Integration Tests](#run-integration-tests)
+- [Run unit tests](#run-unit-tests)
+
+- [Run integration tests](#run-integration-tests)
 
 - [SonarQube analysis](#sonarqube-analysis)
 
-- [Quality Gate](#quality-gate)
+- [Quality gate](#quality-gate)
 
-- [(Development) Catalog Registration](#development-catalog-registration)
+- [(Development) Catalog registration](#development-catalog-registration)
 
 - [(Release) Prepare for SVN](#release-prepare-for-svn)
 
-- [(Release) Catalog Registration](#release-catalog-registration)
+- [(Release) Catalog registration](#release-catalog-registration)
 
 - [(Release) Push to SVN](#release-push-to-svn)
 
-- [Declarative Post Actions](#declarative-post-actions)
+- [Declarative post actions](#declarative-post-actions)
 
 ## Loading Jenkinsfile
 
@@ -89,23 +91,23 @@ This step ensures that the pipeline uses the latest version of DIS. It verifies 
 
 During this step, the solution is built against the latest DataMiner feature release.
 
-## Convert Solution to XML
+## Convert solution to XML
 
 This step converts the protocol Visual Studio solution back to a protocol XML file.
 
-## Build dmapp Package
+## Build .dmapp package
 
 This step creates a .dmapp package containing the Automation scripts.
 
-## Scan Test Projects
+## Scan test projects
 
 This step scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
 
-## Run Unit Tests
+## Run unit tests
 
 This step executes the unit test projects. If no unit test projects were detected, this step is skipped.
 
-## Run Integration Tests
+## Run integration tests
 
 This step executes the integration test projects. If no integration test projects were detected, this step is skipped.
 
@@ -113,11 +115,11 @@ This step executes the integration test projects. If no integration test project
 
 This step performs SonarQube C# code analysis on the code provided in the Exe blocks.
 
-## Quality Gate
+## Quality gate
 
 This step verifies the results of different previous pipeline steps and checks whether the results are according to some preconfigured quality level.
 
-### Unit/Integration Tests
+### Unit/integration tests
 
 The quality gate will fail as soon as one test fails.
 
@@ -142,7 +144,7 @@ This quality gate verifies whether the Automation script does not exceed any of 
 > [!NOTE]
 > The Quality Gate will currently only verify SonarQube analysis results for initial developments (i.e. Automation scripts tagged as version 1.0.0.1).
 
-## (Development) Catalog Registration
+## (Development) Catalog registration
 
 This stage will perform registration in the catalog.
 
@@ -150,7 +152,7 @@ This stage will perform registration in the catalog.
 
 In case a tag was detected, and the version should therefore be pushed to SVN, some preparatory steps are performed.
 
-## (Release) Catalog Registration
+## (Release) Catalog registration
 
 This stage will perform registration in the catalog.
 
@@ -161,7 +163,7 @@ This step performs the actual push to SVN. Once this step is executed, you shoul
 > [!NOTE]
 > Whereas old Automation scripts were stored on SVN under the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation%20Scripts>, the CI/CD pipeline pushes Automation scripts to the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation>.
 
-## Declarative Post Actions
+## Declarative post actions
 
 This step performs cleanup of the workspace and sends an email containing a report giving an overview of the number of issues detected in SonarQube.
 

@@ -12,7 +12,9 @@ Currently, the pipeline consists of the following steps:
 
 - [Validate tag](#validate-tag)
 
-- [Check Visio File Size](#check-visio-file-size)
+- [Check Visio file size](#check-visio-file-size)
+
+- [Build .dmapp package](#build-dmapp-package)
 
 - [(Development) Catalog registration](#development-catalog-registration)
 
@@ -41,7 +43,7 @@ This step is only executed for pipeline runs for a tag. It will verify whether t
 - All expected previous minor versions of the tag are present. For example, if a commit has been tagged with "1.0.0.4", the tags "1.0.0.1", "1.0.0.2" and "1.0.0.3" are expected to be present already.
 - The tag is an annotated tag and not a lightweight tag.
 
-## Check Visio File Size
+## Check Visio file size
 
 In this step, Jenkins verifies the file size of the Visio file in the repository:
 
@@ -49,9 +51,9 @@ In this step, Jenkins verifies the file size of the Visio file in the repository
 
 - If the file size is over 10 MB, the pipeline will be marked as unstable.
 
-## Build dmapp Package
+## Build .dmapp package
 
-This step creates a .dmapp package containing the Visio.
+This step creates a .dmapp package containing the Visio file.
 
 ## (Development) Catalog registration
 

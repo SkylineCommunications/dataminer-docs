@@ -24,31 +24,31 @@ Currently, the pipeline for protocol development consists of the following steps
 
 - [Build QuickActions on latest feature release](#build-quickactions-on-latest-feature-release)
 
-- [Convert Solution to XML](#convert-solution-to-xml)
+- [Convert solution to XML](#convert-solution-to-xml)
 
-- [Create Protocol Package](#create-protocol-package)
+- [Create protocol package](#create-protocol-package)
 
-- [Scan Test Projects](#scan-test-projects)
+- [Scan test projects](#scan-test-projects)
 
-- [Run Unit Tests](#run-unit-tests)
+- [Run unit tests](#run-unit-tests)
 
-- [Run Integration Tests](#run-integration-tests)
+- [Run integration tests](#run-integration-tests)
 
 - [SonarQube analysis](#sonarqube-analysis)
 
 - [Initialize validator](#initialize-validator)
 
-- [Run Validator](#run-validator)
+- [Run validator](#run-validator)
 
-- [Run Major Change Checker](#run-major-change-checker)
+- [Run major change checker](#run-major-change-checker)
 
 - [Verify developer checklist](#verify-developer-checklist)
 
-- [Prepare Driver Passport Platform Scheduling](#prepare-driver-passport-platform-scheduling)
+- [Prepare Driver Passport Platform scheduling](#prepare-driver-passport-platform-scheduling)
 
-- [Quality Gate](#quality-gate)
+- [Quality gate](#quality-gate)
 
-- [(Release) Schedule Driver Passport Platform](#schedule-driver-passport-platform)
+- [(Release) Schedule Driver Passport Platform](#release-schedule-driver-passport-platform)
 
 - [(Development) DCP registration](#development-dcp-registration)
 
@@ -58,7 +58,7 @@ Currently, the pipeline for protocol development consists of the following steps
 
 - [(Release) Push to SVN](#release-push-to-svn)
 
-- [Declarative Post Actions](#declarative-post-actions)
+- [Declarative post actions](#declarative-post-actions)
 
 ## Loading Jenkinsfile
 
@@ -144,26 +144,26 @@ This step ensures that the pipeline uses the latest version of DIS. It verifies 
 
 During this step, the solution is built against the latest DataMiner feature release.
 
-## Convert Solution to XML
+## Convert solution to XML
 
 This step converts the protocol Visual Studio solution back to a protocol XML file.
 
-## Create Protocol Package
+## Create protocol package
 
 This step creates a .dmprotocol package including the protocol XML, assemblies, Visio and Help files.
 
-## Scan Test Projects
+## Scan test projects
 
 This step scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
 
-## Run Unit Tests
+## Run unit tests
 
 This step executes the unit test projects. If no unit test projects were detected, this step is skipped.
 
 > [!NOTE]
 > In case the tests fail, the unit tests will be executed against DataMiner 10.0.3 CU1 (if the protocol supports this version). The purpose of this is to support unit tests that were created using the SLProtocol API up to version 10.0.3 CU1. RN 27995 introduced changes to the API that could make a unit test fail if it depends on the prior implementation of the API. If unit tests using the DataMiner DLLs of 10.0.3 CU1 are re-executed, tests that are failing because of the changed API will succeed in the second execution.
 
-## Run Integration Tests
+## Run integration tests
 
 This step executes the integration test projects. If no integration test projects were detected, this step is skipped.
 
@@ -181,11 +181,11 @@ In case you create a new major or system range (i.e. D equals 1, and B or C do n
 
 In case you create a new branch version, e.g. 2.0.0.1, and you do not specify a based on version, then this will be assumed to be a brand-new development. The Validator quality gate settings for an initial version will therefore be applied.
 
-## Run Validator
+## Run validator
 
 This step runs the validator on the protocol XML file that was generated in the previous step.
 
-## Run Major Change Checker
+## Run major change checker
 
 For every new minor version, the pipeline will execute the DIS Major Change Checker to verify whether the new version does not have any major changes.
 
@@ -214,7 +214,7 @@ Additionally, the following information in the checklist itself should correspon
 > [!NOTE]
 > You should always use the latest version of the checklist, which is available on Dojo: <https://community.dataminer.services/documentation/protocol-development-checklists/>
 
-## Prepare Driver Passport Platform Scheduling
+## Prepare Driver Passport Platform scheduling
 
 This stage is responsible for creating a DataMiner Test Package (.dmt). The test package includes references to the simulation files to use when running the test package.
 
@@ -272,11 +272,11 @@ For **HTTP simulations**, the following file should be provided:
 
     For more information on how to create this file, see [Creating HTTP simulations](xref:Creating_HTTP_simulations).
 
-## Quality Gate
+## Quality gate
 
 This step verifies the results of different previous pipeline steps and checks whether the results are according to some preconfigured quality level.
 
-### Unit/Integration Tests
+### Unit/integration tests
 
 The quality gate will fail as soon as one test fails.
 
@@ -325,7 +325,7 @@ This quality gate verifies whether the protocol does not exceed any of the limit
 - Duplicated Blocks: 200
 
 > [!NOTE]
-> The Quality Gate will currently only verify SonarQube analysis results for initial developments (i.e. protocols with version 1.0.0.1).
+> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e. protocols with version 1.0.0.1).
 
 ## (Release) Schedule Driver Passport Platform
 
@@ -368,7 +368,7 @@ In case a tag was detected, and the version should therefore be pushed to SVN, s
 
 This step performs the actual push to SVN. Once this step is executed, you should find a new version of the protocol on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
 
-## Declarative Post Actions
+## Declarative post actions
 
 This step performs cleanup of the workspace and send an email containing a report giving an overview of the number of issues detected in DIS and SonarQube.
 
