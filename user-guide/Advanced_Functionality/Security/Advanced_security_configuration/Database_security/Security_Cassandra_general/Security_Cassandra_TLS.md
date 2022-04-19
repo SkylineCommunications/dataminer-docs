@@ -93,9 +93,13 @@ Now the certificates are all set, and you can configure the Cassandra cluster to
 
 ## Configuring the client_encryption_options
 
-1. Copy the Java KeyStores to the corresponding node
+The *client_encryption_options* allow you to encrypt all the traffic between DataMiner and Cassandra.
 
-1. Open the cassandra.yaml file, and locate the client_encryption_options.
+To enable client-server TLS encryption:
+
+1. Copy the Java KeyStores to the node
+
+1. Open the *cassandra.yaml* file, and locate the *client_encryption_options*.
 
 1. Set *enabled* to **true** to enable TLS.
 
@@ -104,7 +108,7 @@ Now the certificates are all set, and you can configure the Cassandra cluster to
    > [!NOTE]
    > In order to test your changes without production impact, you can set *optional* to **true** until you have verified whether you can connect using TLS.
 
-1. Set keystore to the path to the .jks file containing the certificates. Set keystore_password to the *&lt;STRONG PASSWORD&gt;* you used to generate them.
+1. Set *keystore* to the path to the .jks file containing the certificates. Set *keystore_password* to the *&lt;STRONG PASSWORD&gt;* you used to generate them.
 
    ```txt
    client_encryption_options:
@@ -113,6 +117,38 @@ Now the certificates are all set, and you can configure the Cassandra cluster to
       optional: false
       keystore: path/to/<NODE IP>.jks
       keystore_password: <STRONG PASSWORD>
+   ```
+
+1. Save the changes in the *cassandra.yaml* and **restart** the Cassandra service.
+
+## Configuring the server_encryption_options
+
+The *server_encryption_options* allow you to encrypt all the traffic between the Cassandra nodes, which is often referred to as *inter-node* encryption.
+
+To enable inter-node TLS encryption:
+
+1. Copy the Java KeyStores to the corresponding node
+
+1. Open the *cassandra.yaml* file, and locate the *server_encryption_options*.
+
+1. Set *internode_encryption* to **all** to enable TLS.
+
+1. Set *optional* to **false** to make sure TLS encrypted is required.
+
+   > [!NOTE]
+   > In order to test your changes without production impact, you can set *optional* to **true** until you have verified whether you can connect using TLS.
+
+1. Set *keystore* and *truststore* to the path to the .jks file containing the certificates. Set *keystore_password* and *truststore_password* to the *&lt;STRONG PASSWORD&gt;* you used to generate the certificates.
+
+   ```txt
+   server_encryption_options:
+      internode_encryption: all
+      # If enabled and optional is set to true, both encrypted and unencrypted connections are handled.
+      optional: false
+      keystore: path/to/<NODE IP>.jks
+      keystore_password: <YOUR PASSWORD>
+      truststore: /path/to/<NODE IP>.jks
+      truststore_password: <YOUR PASSWORD>
    ```
 
 1. Save the changes in the *cassandra.yaml* and **restart** the Cassandra service.
