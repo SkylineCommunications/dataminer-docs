@@ -89,7 +89,7 @@ ReservationInstance.Status[Int32] == 3
 ```
 
 ```txt
-ReservationInstance.End[DateTime] >01/22/2019 11:17:32
+(ReservationInstance.End[DateTime] >01/22/2019 11:17:32)
 ```
 
 ```txt
