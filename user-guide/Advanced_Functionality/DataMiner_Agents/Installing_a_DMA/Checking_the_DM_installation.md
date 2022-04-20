@@ -6,7 +6,7 @@ uid: Checking_the_DM_installation
 
 After installation, it is advisable to do the following checks in order to be sure that everything has been installed properly.
 
-- Check the log in the *C:\ProgramData* folder. As this is a hidden folder, you may first need to enable the option *Show hidden files, folders and drives* in *Folder options*.
+- Check the log in the *C:\ProgramData* folder. As this is a hidden folder, you may first need to enable the *Show hidden files, folders and drives* option in *Folder options*.
 
 - Go to *Control Panel > Uninstall a program* to check if all prerequisites have been installed:
 
@@ -47,21 +47,21 @@ After installation, it is advisable to do the following checks in order to be su
 
     - Under *Internet Information Services > World Wide Web Services > Security*, the feature *Windows Authentication* must be enabled.
 
-    - The feature Simple Network Management Protocol must be enabled.
+    - The *Simple Network Management Protocol* feature must be enabled.
 
     > [!NOTE]
     > From Windows Server 2012 onwards, these features are all listed in the tab *IIS*, except for *Simple Network Management Protocol*, which can be found under *Local Server Services > SNMP Service*.
 
-- On a x64 system, check if *Enable32bitApplications* is set to "true":
+- On a x64 system, check if *Enable32bitApplications* is set to true:
 
     1. Go to *Internet Information Services (IIS) Manager*.
     1. Open the tree in *Connections*.
     1. Click *Application Pools*.
-    1. For each Application Pool, do the following check:
+    1. For each application pool, do the following check:
 
         1. Click *Application Pool*.
         1. In *Actions*, click *Advanced Settings*.
-        1. Check if *Enable 32-Bit Applications* is "True".
+        1. Check if *Enable 32-Bit Applications* is set to true.
 
 - Open Internet Explorer and go to <http://localhost/dataminercube/>.
 

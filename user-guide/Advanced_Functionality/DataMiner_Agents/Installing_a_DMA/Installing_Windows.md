@@ -44,7 +44,7 @@ Follow the wizard and choose the correct OS. If it is not available in the list,
 
 1. Insert the Windows installation CD and restart the computer. If the computer does not boot from the CD, then check the boot sequence in the BIOS settings.
 
-2. Follow the Windows installation procedure. The HD must be formatted using the NTFS file system.
+1. Follow the Windows installation procedure. The HD must be formatted using the NTFS file system.
 
     > [!NOTE]
     > It is recommended to create only one partition because the DataMiner software only needs one. If there is a second physical HD available, it can be used:
@@ -62,13 +62,12 @@ Follow the wizard and choose the correct OS. If it is not available in the list,
     - Default: Typical TCP/IP Settings
     - Workgroup: SKYLINE
 
-3. Activate Windows.
+1. Activate Windows.
 
 > [!NOTE]
 > After installing Microsoft Windows:
->
 > - Make sure to log on with the Administrator account before you continue. Do not use a regular user account with administrative rights.
-> - Make sure the Windows setting "fast startup" is not activated.
+> - Make sure the Windows setting *fast startup* is not activated.
 
 ## Installing the Windows device drivers
 
@@ -80,15 +79,15 @@ as this will only slow down the start-up time and consume precious resources.
 After installing the necessary drivers, you might need to install some additional drivers for hardware like multiport IO cards. Check the Device Manager:
 
 1. Go to *Start > Control Panel > System*, go to the *Hardware* tab if necessary, and click *Device Manager*.
-2. If you notice any items marked with an exclamation icon, proceed to step 3. Otherwise, close the Device Manager.
-3. Right-click an item marked with an exclamation icon, and select *Properties*. Then choose to reinstall the driver.
-4. Select *Search for a suitable driver for my device (recommended)*, and click *Next*.
-5. Insert the CD containing the driver for the device in question, and click *Next*.
-6. Finish the wizard.
-7. Repeat steps 3 to 6 for all other items marked with an exclamation icon.
+1. If you notice any items marked with an exclamation icon, proceed to step 3. Otherwise, close the Device Manager.
+1. Right-click an item marked with an exclamation icon, and select *Properties*. Then choose to reinstall the driver.
+1. Select *Search for a suitable driver for my device (recommended)*, and click *Next*.
+1. Insert the CD containing the driver for the device in question, and click *Next*.
+1. Finish the wizard.
+1. Repeat steps 3 to 6 for all other items marked with an exclamation icon.
 
 > [!NOTE]
 > The driver for the PCI serial port can be found on the MOXA CD:
-> - DRIVERS\\WIN...\\SMARTIO\\MXSER.INF
+> - DRIVERS\WIN...\SMARTIO\MXSER.INF
 > When this driver is installed, the Found New Hardware wizard will start. Follow the wizard and let it search for the suitable driver on the MOXA CD:
-> - DRIVERS\\WIN\...\\SMARTIO\\MXSPORT.INF
+> - DRIVERS\WIN...\SMARTIO\MXSPORT.INF
