@@ -89,11 +89,15 @@ ReservationInstance.Status[Int32] == 3
 ```
 
 ```txt
-ReservationInstance.End[DateTime] >01/22/2019 11:17:32
+(ReservationInstance.End[DateTime] >01/22/2019 11:17:32)
 ```
 
 ```txt
 ReservationInstance.Properties.Class[String] == 'Silver'
+```
+
+```txt
+ReservationInstance.Name[string] notContains 'Decoder' AND (ReservationInstance.Start[DateTime] >02/16/2021 21:23:05)
 ```
 
 To filter on a property with one or more spaces in the property name, use double quotation marks around the property name. For example:
