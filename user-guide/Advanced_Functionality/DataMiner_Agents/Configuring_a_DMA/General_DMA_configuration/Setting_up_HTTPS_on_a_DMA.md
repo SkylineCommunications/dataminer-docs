@@ -66,7 +66,8 @@ To set up your own HTTPS web server, you must first install an SSL certificate a
 
 > [!NOTE]
 > - Instead of redirecting HTTP traffic to HTTPS, we recommend disabling HTTP completely by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
-> - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the Subject Alternative Name of the TLS/SSL certificate on both DataMiner Agents.
+> - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the *Subject Alternative Name* field of the TLS/SSL certificate on both DataMiner Agents.
+> - To connect to your DMA **using the IP address**, ensure the *Subject Alternative Namve* field of the TLS/SSL certificate contains the IP address.
 
 ## Specifying auto-detection information for an inter-DMA HTTPS connection
 
