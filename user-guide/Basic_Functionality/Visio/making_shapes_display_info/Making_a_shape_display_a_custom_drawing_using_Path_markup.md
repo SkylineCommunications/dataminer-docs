@@ -12,28 +12,21 @@ Add a shape data field of type **Path** to a shape, and enter path markup in its
 data;Stroke;Fill;StrokeThickness;Tooltip;YAxisUp;bottomLeftX;bottomLeftY;topRightX;topRightY;link
 ```
 
-> [!NOTE]
->
-> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _data > PATH_.
+> [!TIP]
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[data > PATH]* page.
+
 
 ## Syntax
 
 See below for more information on the different components of the Path string.
 
 - **data**: The Path markup that defines the drawing. For more information on Path markup, see <http://msdn.microsoft.com/en-us/library/ms752293(v=vs.110).aspx>.
-
 - **Stroke**: The line color (name of color or "#aarrggbb").
-
 - **Fill**: The line color (name of color or "#aarrggbb").
-
 - **Strokethickness**: The line thickness.
-
 - **Tooltip**: The tooltip text.
-
 - **YAxisUp**: 0 or 1.
-
 - **bottomLeftX;bottomLeftY;topRightX;topRightY**: The coordinates of the lower left and top-right corner of the shape. To be used when using relative positioning.
-
 - **link**: The name or the ID of the element or service to jump to when the shape is clicked. When you right-click the shape, you will see the default shortcut menu of that element or service.
 
 ### Example of a Path string
@@ -90,7 +83,7 @@ YLabel
 ```
 
 > [!NOTE]
-> For this label feature to work, you have to specify bottomLeft and topRight coordinates in the path data.
+> For this label feature to work, you have to specify *bottomLeft* and *topRight* coordinates in the path data.
 
 ## Making subshapes display units of measure
 
@@ -129,6 +122,5 @@ To do so, add the following option to the shape:
 | Options          | EnableHorizontalZoom |
 
 > [!NOTE]
->
 > - If labels are defined for the path shapes, these will update along with the zoom level.
 > - Zooming in on the Visual Overview page is still possible when the mouse pointer is not over the shape.

@@ -7,9 +7,8 @@ uid: Basic_conditional_shape_manipulation_actions
 In some shape data fields, especially fields that display the current value of a parameter, property or session variable, you can specify conditional shape manipulation actions. These allow you to have a shape shown, hidden, flipped, rotated or colored based on the current value of the parameter, property or session variable to which that shape is linked.
 
 > [!NOTE]
->
 > - To also apply conditional shape manipulation actions on other linked shapes, e.g. shapes linked to Automation scripts, or to combine multiple conditions, see [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
-> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _misc > MANIPULATION_.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[misc > MANIPULATION]* page.
 
 ## Action overview
 
@@ -23,11 +22,11 @@ In some shape data fields, especially fields that display the current value of a
 
 - **FlipX;condition**
 
-  The shape will be flipped around its X-axis if the condition is TRUE.
+  The shape will be flipped around its X axis if the condition is TRUE.
 
 - **FlipY;condition**
 
-  The shape will be flipped around its Y-axis if the condition is TRUE.
+  The shape will be flipped around its Y axis if the condition is TRUE.
 
 - **Rotate;condition,degrees**
 
@@ -63,11 +62,11 @@ The condition section of the action can contain the following operators:
 | !=       | not equal to             |
 
 > [!NOTE]
-> String values can only be compared using “=” or “!=”.
+> String values can only be compared using "=" or "!=".
 
 ## Combining actions and conditions
 
-Actions can be combined using pipe characters (“\|”).
+Actions can be combined using pipe characters ("\|").
 
 - Example:
 
@@ -75,7 +74,7 @@ Actions can be combined using pipe characters (“\|”).
   FlipX;<10|Rotate;=10,90|FlipY;>10
   ```
 
-Within one type of action, multiple conditions can be separated by semicolons (”;”).
+Within one type of action, multiple conditions can be separated by semicolons (";").
 
 - Examples
 
@@ -84,7 +83,7 @@ Within one type of action, multiple conditions can be separated by semicolons (�
   176|LineColor;=9,Pink;=15,AliceBlue|FillColor;=9,AliceBlue;=15,Pink
   ```
 
-If you combine unconditional actions, separate them by semicolons (”;”), but make sure to repeat the action.
+If you combine unconditional actions, separate them by semicolons (";"), but make sure to repeat the action.
 
 - Example:
 

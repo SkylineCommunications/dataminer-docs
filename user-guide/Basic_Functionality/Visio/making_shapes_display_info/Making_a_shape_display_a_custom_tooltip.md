@@ -6,13 +6,9 @@ uid: Making_a_shape_display_a_custom_tooltip
 
 Using a shape data field of type **Info**, you can add custom tooltips to shapes. Alternatively, you can also use a shape data field of type **Tooltip** in order to display information about the item to which a shape is linked.
 
-> [!NOTE]
->
-> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _data > OTHER_.
-
 > [!TIP]
-> See also:
-> <https://community.dataminer.services/video/visio-adding-a-tooltip-on-a-view-object/>
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[data > OTHER]* page.
+> - See also: <https://community.dataminer.services/video/visio-adding-a-tooltip-on-a-view-object/>
 
 ## Configuring the shape data field
 
@@ -30,5 +26,5 @@ For example, to create a tooltip that contains some text and mentions the name o
 | Shape data field | Value                         |
 | ---------------- | ----------------------------- |
 | Element          | The element name              |
-| Info             | _Name_                        |
-| Tooltip          | _Linked to element: \[Name\]_ |
+| Info             | *Name*                        |
+| Tooltip          | *Linked to element: \[Name\]* |
