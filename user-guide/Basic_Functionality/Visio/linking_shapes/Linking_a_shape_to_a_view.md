@@ -10,14 +10,12 @@ By default, this will cause the Visio drawing linked to that view to be opened e
 
 > [!TIP]
 > See also:
->
 > - [Disabling the default hyperlink behavior of a linked shape](xref:Disabling_the_default_hyperlink_behavior_of_a_linked_shape)
 > - [Making a shape launch the Device Discovery app](xref:Making_a_shape_launch_the_Device_Discovery_app)
 
 > [!NOTE]
->
 > - Visio shapes linked to views will not be displayed if, for any reason, those links cannot be resolved. Link problems can occur due to insufficient user rights, missing DataMiner items, invalid parameter values, etc.
-> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _linking > OBJECTS_.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > OBJECTS]* page.
 
 ## Configuring the shape data field
 
@@ -40,19 +38,18 @@ View ID|tab page index
 ```
 
 > [!NOTE]
->
-> - If you want to link the shape to the root of the Surveyor, enter “-1”, “root”, or the name of the root.
+> - If you want to link the shape to the root of the Surveyor, enter "-1", "root", or the name of the root.
 > - While using the name of a view might be more convenient, we advise you to always use its (unique) ID. If, in a Visio drawing, you use the name of a view, the link to that view will be broken the moment someone changes that name. If, on the other hand, you use the view ID, the link to that view will remain, even if its name is changed.
 
 ## Customizing the displayed view alarm level
 
-From DataMiner 10.0.5 onwards, you can specify which of the view's alarm levels should be reflected by the shape's background color.: the alarm level of the monitored aggregation rules on the view, the alarm level of the child objects of the view, or a combination of both.
+From DataMiner 10.0.5 onwards, you can specify which of the view's alarm levels should be reflected by the shape's background color: the alarm level of the monitored aggregation rules on the view, the alarm level of the child objects of the view, or a combination of both.
 
 To do so, add a shape data field of type **AlarmLevel**, and set it to one of the values specified below:
 
-| Shape data field | Value                                                                                                                                                                                                                                                                                                          |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AlarmLevel       | One of the following values should be specified:<br> - **Instance**: Displays the alarm level of the monitored aggregation rules on the view.<br> - **BubbleUp**: Displays the highest alarm level of any child object.<br> - **Summary**: Displays the highest of the _Instance_ and _BubbleUp_ alarm levels. |
+| Shape data field | Value |
+| ---------------- | ----- |
+| AlarmLevel | One of the following values should be specified:<br>- **Instance**: Displays the alarm level of the monitored aggregation rules on the view.<br>- **BubbleUp**: Displays the highest alarm level of any child object.<br>- **Summary**: Displays the highest of the *Instance* and *BubbleUp* alarm levels. |
 
 ## Examples
 
@@ -66,10 +63,10 @@ If you set the value above, clicking the shape will open the Visio drawing linke
 MySpecialView
 ```
 
-If you set the value above, clicking the shape will open the Visio drawing linked to the view named “MySpecialView”.
+If you set the value above, clicking the shape will open the Visio drawing linked to the view named "MySpecialView".
 
 ```txt
 Main Site|2
 ```
 
-If you set the value above, clicking the shape will open the Visio drawing linked to the view named “Main Site”, on its second tab page.
+If you set the value above, clicking the shape will open the Visio drawing linked to the view named "Main Site", on its second tab page.

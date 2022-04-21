@@ -7,8 +7,7 @@ uid: Linking_a_shape_to_an_Automation_script
 When a shape is linked to an Automation script, by default this script will be executed each time a user clicks that shape.
 
 > [!NOTE]
->
-> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _linking > EXE_.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > EXE]* page.
 > - Aside from the default **Execute** shape data, you can also use **OnClose** shape data to link to a script. See [Specifying a script to be executed when the page is closed](#specifying-a-script-to-be-executed-when-the-page-is-closed).
 
 To link a shape to an Automation script:
@@ -19,7 +18,7 @@ To link a shape to an Automation script:
   Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...|ParameterName1=SingleValue;ParameterName2=#ValueFile;...| MemoryName=MemoryFileName;...|Tooltip|Options
   ```
 
-  - In the example above, two parameters are included. The first parameter is assigned a single value, and the second parameter is assigned a so-called permanent memory file (i.e. an array of values). Notice that, in the latter case, a hash character (“#”) has to be placed in front of the name of the array.<br>See also: [Creating a memory file](xref:Script_variables#creating-a-memory-file)
+  - In the example above, two parameters are included. The first parameter is assigned a single value, and the second parameter is assigned a so-called permanent memory file (i.e. an array of values). Notice that, in the latter case, a hash character ("#") has to be placed in front of the name of the array.<br>See also: [Creating a memory file](xref:Script_variables#creating-a-memory-file)
 
   - If you use the syntax above, make sure to always include 5 pipe characters ("\|"). If you do not need some parts of the syntax, e.g. because no memory files are used, just add nothing between those pipe characters.
 
@@ -27,7 +26,7 @@ To link a shape to an Automation script:
 
   - Examples:
 
-    - To execute the script “MyScript” with a particular dummy and parameter, the following value can be specified. In this case, no confirmation box will appear and SET commands will be executed without waiting for a return value. Also, when users hover over the shape, they will see a custom tooltip.
+    - To execute the script "MyScript" with a particular dummy and parameter, the following value can be specified. In this case, no confirmation box will appear and SET commands will be executed without waiting for a return value. Also, when users hover over the shape, they will see a custom tooltip.
 
       | Shape data field | Value                                                                                       |
       | ---------------- | ------------------------------------------------------------------------------------------- |
@@ -40,7 +39,6 @@ To link a shape to an Automation script:
       | Execute          | Script:MyScript |
 
       > [!NOTE]
-      >
       > - If a script uses a parameter that has a memory file assigned to it, users can right-click the shape and select a value from the memory file. This way, the parameter can be set immediately, without confirmation.
       > - Up to DataMiner 9.0.4, it is not possible to execute an Automation script from Visual Overview if some values for the parameters still have to be entered by the operator.
 
@@ -48,15 +46,11 @@ To link a shape to an Automation script:
 
   - The following prefixes can be used:
 
-    - _Parameters:_
-
-    - _Dummies:_
-
-    - _MemoryFiles:_
-
-    - _Options:_
-
-    - _Tooltip:_
+    - "Parameters:"
+    - "Dummies:"
+    - "MemoryFiles:"
+    - "Options:"
+    - "Tooltip:"
 
   - If you use these prefixes, you must use them for every component. The components can be specified in any order.
 
@@ -80,7 +74,7 @@ To link a shape to an Automation script:
 
 From DataMiner 9.5.7 onwards, you can link a page to a script, which is then executed when the card, pop-up window or tooltip showing the page is closed.
 
-To do so, add an **OnClose** shape data field to the page, and set it to the script that is to be executed. To specify more than one script, use a dash (“-”) as the separator character.
+To do so, add an **OnClose** shape data field to the page, and set it to the script that is to be executed. To specify more than one script, use a dash ("-") as the separator character.
 
 For example:
 
@@ -92,41 +86,38 @@ For example:
 
 From DataMiner 9.0.5 onwards, it is possible to specify an alternative separator character with a \[sep:XY\] tag.
 
-For example, in the configuration below, the first-level separator “\|” is replaced by “\*” and the “=” separator is replaced by “?”.
+For example, in the configuration below, the first-level separator "\|" is replaced by "\*" and the "=" separator is replaced by "?".
 
 ```txt
 [sep:|$]Script:MyAutomationScript$[sep:=?]MyDummy?221/65$[sep:=?]Parameter?101$$$NoWait
 ```
 
 > [!TIP]
-> See also:
-> [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
+> See also: [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
 ## Passing Automation script output to session variables
 
 From DataMiner 10.0.13 onwards, when an Automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview.
 
-To configure this in the script, use the _CreateKey(string variablename)_ method (namespace: _Skyline.DataMiner.Automation_, class name: _UIVariables.VisualOverview_).
+To configure this in the script, use the *CreateKey(string variablename)* method (namespace: *Skyline.DataMiner.Automation*, class name: *UIVariables.VisualOverview*).
 
-In the following example, a session variable named “MyOutput” will be created and it will receive the value “MyValue”.
+In the following example, a session variable named "MyOutput" will be created and it will receive the value "MyValue".
 
 ```txt
 engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValue");
 ```
 
-- If you execute the same Automation script on different pages, you can use the _SessionVariablePrefix_ option to make sure the output is saved in separate session variables.<br>If, for example, you use prefix “One\_” on one page and prefix “Two\_” on another page, and the Automation scripts pass their output to a session variable named “MyPage”, then the output will end up in two separate session variables named “One_MyPage” and “Two_MyPage” respectively.
+- If you execute the same Automation script on different pages, you can use the *SessionVariablePrefix* option to make sure the output is saved in separate session variables.<br>If, for example, you use prefix "One\_" on one page and prefix "Two\_" on another page, and the Automation scripts pass their output to a session variable named "MyPage", then the output will end up in two separate session variables named "One_MyPage" and "Two_MyPage" respectively.
 
-- When you set the _SetVarOnFail_ option to true (either on page level or shape level), the session variables will always be created, regardless of whether the script finishes successfully or not.
+- When you set the *SetVarOnFail* option to true (either on page level or shape level), the session variables will always be created, regardless of whether the script finishes successfully or not.
 
 - In case the session variable (in this case "MyOutput") already exists, it will be updated; otherwise it will be created as a new session variable.
 
 - By default, the scope of the session variable will be global. If a different scope should be used, configure this using the **Options** shape data field on the Execute shape, with one of the following values
 
-  - _CardVariable_ (for a card variable)
-
-  - _PageVariable_ (for a page variable)
-
-  - _WorkspaceVariable_ (for a workspace variable)
+  - "CardVariable" (for a card variable)
+  - "PageVariable" (for a page variable)
+  - "WorkspaceVariable" (for a workspace variable)
 
   For example:
 
@@ -166,5 +157,4 @@ In the **Execute** shape data value, you can use the following options (separate
   | Execute          | Script:\<myScript>\|Parameters:IDParam=\[event:NodeDoubleClicked,ID\]\|Options:\<possibleOptions>\|Trigger=Event |
 
   > [!TIP]
-  > See also:
-  > [\[Event:...\]](xref:Placeholders_for_variables_in_shape_data_values#event)
+  > See also: [\[Event:...\]](xref:Placeholders_for_variables_in_shape_data_values#event)
