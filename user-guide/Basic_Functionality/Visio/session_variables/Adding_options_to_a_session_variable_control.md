@@ -84,7 +84,7 @@ Add a shape data field of type **SetVarOptions** to the shape, and set its value
   Control=SearchTextBox|TextBoxInfo=Enter a search string
   ```
 
-  The **SetVar** text box will be turned into a search box containing the watermark text “Enter a search string”.
+  The **SetVar** text box will be turned into a search box containing the watermark text "Enter a search string".
 
 - **Control displayed as a custom Visio shape**:
 
@@ -136,8 +136,7 @@ If you want to have the contents of such a text box validated against a list of 
 ExistingValuesValidation=DmaID/ElementID,PID
 ```
 
-- If the Visio drawing is linked to a protocol, “DmaID/ElementID” can be replaced by "\*".
-
+- If the Visio drawing is linked to a protocol, "DmaID/ElementID" can be replaced by "\*".
 - "PID" has to refer to either a table or a table column.
 
   - In case of a table, the forbidden values will be the values in the table's displaykey column.
