@@ -7,24 +7,20 @@ uid: Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file
 When a shape is linked to a view, a service or an element, it can be turned into a tab control that displays all pages or specific pages of the Visio drawing linked to that view, service or element.
 
 > [!TIP]
-> See also:
-> [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)
-
-> [!NOTE]
->
-> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem).
+> - See also: [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view.
 
 ## Configuring a tab control that displays all pages of a Visio drawing
 
-Add a shape data field of type **Options** to the shape, and set its value to “_InlineVdx_”.
+Add a shape data field of type **Options** to the shape, and set its value to "InlineVdx".
 
-If you want to apply the background of the shape to the tab control, add the option “_ApplyShapeBackground_”.
+If you want to apply the background of the shape to the tab control, add the option "ApplyShapeBackground".
 
 ```txt
 InlineVdx|ApplyShapeBackground
 ```
 
-Aside from the default style, from DataMiner 9.5.14 onwards, an alternative style is possible for tab controls. To configure this alternative style, add the option “_TabControlStyle=2_”.
+Aside from the default style, from DataMiner 9.5.14 onwards, an alternative style is possible for tab controls. To configure this alternative style, add the option "TabControlStyle=2".
 
 ```txt
 InlineVdx|TabControlStyle=2
@@ -48,11 +44,11 @@ Page1|Page2//SubA|Page2//SubB|Pag2//Sub3
 
 To fine-tune the way the tab control is displayed, a number of options can be used:
 
-- Normally, the pages you specify in a tab control shape will also appear as pages of the main Visio file. If you do not want a page to appear as a page of the main Visio file, you can add a shape data item of type **Options** to that page, and set its value to “_Hidden_”.
+- Normally, the pages you specify in a tab control shape will also appear as pages of the main Visio file. If you do not want a page to appear as a page of the main Visio file, you can add a shape data item of type **Options** to that page, and set its value to "Hidden".
 
-- If you want the tab control to inherit the background color from the shape that contains it, you can add a shape data item of type **Options** to the shape, and set its value to “_ApplyShapeBackground_”.
+- If you want the tab control to inherit the background color from the shape that contains it, you can add a shape data item of type **Options** to the shape, and set its value to "ApplyShapeBackground".
 
-- From DataMiner 9.6.4 onwards, an alternative style can be configured for the tab control. To configure this alternative style, add a shape data field of type **Options** and set its value to _TabControlStyle=2_.
+- From DataMiner 9.6.4 onwards, an alternative style can be configured for the tab control. To configure this alternative style, add a shape data field of type **Options** and set its value to "TabControlStyle=2".
 
   For example:
 
