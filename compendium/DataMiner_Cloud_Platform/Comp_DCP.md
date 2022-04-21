@@ -48,7 +48,7 @@ The DataMiner Project Collaboration module is specifically tailored towards mana
 
 Skyline provides a full-fledged and fully integrated cloud-based collaboration ecosystem for project squads, named DataMiner Project Collaboration. It allows the squads, which typically consist of both Skyline staff and users of a DataMiner Solution, to manage the entire design and deployment process of the solution.
 
-When a DataMiner Solution is ordered, an intake process will train and prepare the users of the solution for the project. As part of this, they will be provided access to the Project Collaboration module in the DataMiner Cloud Platform.
+When a DataMiner Solution is ordered, the intake process will train and prepare the users of the solution for the project. As part of this, they will be provided access to the Project Collaboration module in the DataMiner Cloud Platform.
 
 ![Project Collaboration – Board view](~/compendium/images/CC_collaboration_2.png)
 
