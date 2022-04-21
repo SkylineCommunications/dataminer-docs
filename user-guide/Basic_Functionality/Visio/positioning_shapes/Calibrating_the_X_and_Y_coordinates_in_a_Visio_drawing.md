@@ -4,13 +4,12 @@ uid: Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing
 
 # Calibrating the X and Y coordinates in a Visio drawing
 
-If, in a Visio drawing, you want to position shapes using X and Y coordinates, you have to calibrate the X- and Y-axis.
+If, in a Visio drawing, you want to position shapes using X and Y coordinates, you have to calibrate the X and Y axis.
 
-> [!NOTE]
->
-> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _positioning > DYNAMIC_.
+> [!TIP]
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[positioning > DYNAMIC]* page.
 
-## Calibrating the X- and Y-axis
+## Calibrating the X and Y axis
 
 Create two dummy shapes, and add two shape data fields to each of them: one of type **XPos** and one of type **YPos**.
 
@@ -18,15 +17,15 @@ Create two dummy shapes, and add two shape data fields to each of them: one of t
 
    | Shape data field | Value                                 |
    | ---------------- | ------------------------------------- |
-   | XPos             | _\[Leftmost position on the X-axis\]_ |
-   | YPos             | _\[Topmost position on the Y-axis\]_  |
+   | XPos             | *\[Leftmost position on the X-axis\]* |
+   | YPos             | *\[Topmost position on the Y-axis\]*  |
 
-2. Create a dummy shape in the lower right corner with the following shape data fields:
+1. Create a dummy shape in the lower right corner with the following shape data fields:
 
    | Shape data field | Value                                   |
    | ---------------- | --------------------------------------- |
-   | XPos             | _\[Rightmost position on the X-axis\]_  |
-   | YPos             | _\[Bottommost position on the Y-axis\]_ |
+   | XPos             | *\[Rightmost position on the X-axis\]*  |
+   | YPos             | *\[Bottommost position on the Y-axis\]* |
 
 Result: The page now has a virtual grid in relation to which all other shapes can be positioned.
 

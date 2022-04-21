@@ -6,17 +6,13 @@ uid: Re-arranging_dynamically_positioned_shapes
 
 When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually.
 
-1. Right-click the page, and select _Arrange_. This will activate the special “Arrange” mode.
-
-2. Re-arrange the shapes using drag-and-drop.
-
-3. When you have finished re-arranging the shapes, click _Apply_.
+1. Right-click the page, and select *Arrange*. This will activate the special "Arrange" mode.
+1. Re-arrange the shapes using drag-and-drop.
+1. When you have finished re-arranging the shapes, click *Apply*.
 
 > [!NOTE]
->
-> - In DataMiner versions prior to 9.0.0, users need to have the permission “Edit Visio drawings” to use this functionality. From version 9.0.0 onwards, this is no longer required.
-> - For an example of use, refer to the view "Linking Shapes" on the [Ziine Demo System](xref:ZiineDemoSystem). The example can be found on the Visual page _positioning > DYNAMIC_.
+> In DataMiner versions prior to 9.0.0, users need to have the *Edit Visio drawings* permission to use this functionality. From version 9.0.0 onwards, this is no longer required.
 
 > [!TIP]
-> See also:
-> [ArrangeMode](xref:Overview_of_page_and_shape_options)
+> - See also: [ArrangeMode](xref:Overview_of_page_and_shape_options)
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[positioning > DYNAMIC]* page.
