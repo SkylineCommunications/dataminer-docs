@@ -4,11 +4,11 @@ uid: DashboardClockDigital
 
 # Clock (digital)
 
-This dashboard component displays a digital clock that indicates the current time.
+This component displays a digital clock that indicates the current time.
 
 In the *Settings* tab, the following settings can be configured for this component:
 
-- To use a different polling interval for this component than the standard interval configured for the dashboard, in the *WebSocket settings* section, clear the checkbox and specify a different polling interval (in seconds).
+- To use a custom polling interval for this component, in the *WebSocket settings* section, clear the checkbox and specify a different polling interval (in seconds).
 
 - In the *General* section, you can specify whether the current DataMiner time should be displayed (i.e. the time of the DataMiner Agent to which you are connected) or the local time.
 

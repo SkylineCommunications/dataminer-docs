@@ -2118,6 +2118,19 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
+    - name: DataMiner Application Framework
+      topicUID: Application_framework
+      items:
+        - name: Accessing custom applications
+          topicUid: Accessing_custom_apps
+        - name: Creating custom applications
+          topicUid: Creating_custom_apps
+        - name: Editing a custom application
+          topicUid: Editing_custom_apps
+        - name: Configuring custom applications
+          topicUid: Configuring_custom_apps
+        - name: Deleting a custom application
+          topicUid: Deleting_custom_apps
 - name: DataMiner Standard Apps
   topicUid: Part5StandardApps
   items:

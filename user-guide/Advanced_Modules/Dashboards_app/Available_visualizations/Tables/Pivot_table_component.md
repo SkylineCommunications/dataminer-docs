@@ -4,7 +4,7 @@ uid: DashboardPivotTable
 
 # Pivot table
 
-This dashboard component displays a status report for a number of parameters of the elements using the selected protocol and protocol version.
+This component displays a status report for a number of parameters of the elements using the selected protocol and protocol version.
 
 From DataMiner 9.6.13 onwards, it is possible to export this status report to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
 

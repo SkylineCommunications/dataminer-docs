@@ -7,7 +7,7 @@ uid: DashboardAlarmTable
 > [!WARNING]
 > This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
-This dashboard component is available in soft launch from DataMiner 9.6.8 onwards, if the soft-launch option *ReportsAndDashboardsAlarmList* is enabled. From DataMiner 10.2.0/10.1.5 onwards, it is available without the soft-launch option.
+Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is available in soft launch from DataMiner 9.6.8 onwards.
 
 The component displays a list of alarms or information events, which can be filtered in multiple ways.
 
@@ -38,6 +38,6 @@ To configure the component:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
-   - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other dashboard components when you hover the mouse pointer over it in order to show as much data as possible.
+   - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other components when you hover the mouse pointer over it in order to show as much data as possible.
 
 1. Optionally, apply a data filter. Element, parameter, index, service and view data can be used as a filter. Various feed components, such as a parameter feed and time range feed, can also be used as a filter. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).

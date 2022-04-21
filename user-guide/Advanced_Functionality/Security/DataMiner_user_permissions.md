@@ -1643,3 +1643,25 @@ Permission to view trend graphs of parameters that are being trended.
 #### Modules \> Trending \> View Histogram
 
 Permission to view histograms of parameters that are being trended.
+
+### Modules \> User-definable apps
+
+#### Modules \> User-definable apps \> View apps
+
+Permission to view custom DataMiner apps created using the DataMiner Application Framework and to access the framework itself. You need to have this permission to be able to use any of the other "User-definable apps" permissions.
+
+#### Modules \> User-definable apps \> Add
+
+Permission to add custom DataMiner apps using the DataMiner Application Framework.
+
+#### Modules \> User-definable apps \> Edit
+
+Permission to edit custom DataMiner apps created using the DataMiner Application Framework.
+
+#### Modules \> User-definable apps \> Delete
+
+Permission to delete custom DataMiner apps created using the DataMiner Application Framework.
+
+#### Modules \> User-definable apps \> Publish
+
+Permission to publish custom DataMiner apps created using the DataMiner Application Framework.
