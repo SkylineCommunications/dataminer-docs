@@ -25,7 +25,7 @@ By default, DataMiner installs **Cassandra 3.7**. However, Cassandra 3.11 and 4.
 As with all software, it is good practice to ensure you are running the latest version to minimize the number of known vulnerabilities.
 
 > [!TIP]
-> A PowerShell script is available to update Cassandra more easily, For more details see [Cassandra Hardening](https://github.com/SkylineCommunications/cassandra-hardening).
+> A PowerShell script is available to update Cassandra easily. For more details see [Cassandra Hardening](https://github.com/SkylineCommunications/cassandra-hardening).
 
 To update the Cassandra version:
 
