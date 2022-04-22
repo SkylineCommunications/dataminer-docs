@@ -8,43 +8,35 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
 
 ## Installing the HTTPS binding in IIS
 
-1. Open IIS manager. It can be found under the Administrative Tools in the Control Panel of your computer.
-
-1. Select the Computer name in the *Connections* pane on the left, and double-click *Server Certificates* in the pane on the right.
-
-1. Right-click in the *Server Certificates* list and select *Import*.
-
+1. Open IIS manager. It can be found under *Administrative Tools* in the *Control Panel* of your computer.
+1. In the *Connections* pane on the left, select the computer name, and double-click *Server Certificates* in the pane on the right.
+1. Right-click in the *Server Certificates* list, and select *Import*.
 1. Browse to your certificate, and click *OK*.
-
-1. In the *Connections* pane on the left, right-click the website and select *Edit Bindings*.
-
+1. In the *Connections* pane on the left, right-click the website, and select *Edit Bindings*.
 1. In the *Add Site Binding* window, add an HTTPS binding with the selected certificate.
-
 1. Allow *inbound* TCP port **443** through the Windows Firewall.
 
 > [!TIP]
-> It is a best practice to disable **HTTP** completely by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
+> It is good practice to completely disable **HTTP** by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
 
 ## Setting up redirection of all HTTP traffic to HTTPS
 
-1. Install URL Rewrite 2.0 from the website <http://www.iis.net/downloads/microsoft/url-rewrite>.
+1. Install URL Rewrite 2.0 from the following website: <http://www.iis.net/downloads/microsoft/url-rewrite>
 
    > [!NOTE]
-   > This step is no longer required from DataMiner 10.0.0/10.0.2 onwards, as this module is automatically included in DataMiner upgrades from this version onwards.
+   > From DataMiner 10.0.0/10.0.2 onwards, this step is no longer required. This module is included all DataMiner upgrades as from DataMiner 10.0.0/10.0.2.
 
 1. Update the default website bindings in IIS to have both HTTP and HTTPS bindings:
 
    1. In IIS manager, click *Sites* in the *Connections* pane on the left.
-
-   1. Right-click *Default Web Site* and select *Bindings*.
-
+   1. Right-click *Default Web Site*, and select *Bindings*.
    1. Click *Add* to add the HTTPS binding.
 
 1. Configure URL rewriting rules at global level:
 
    1. In IIS manager, select the *Default Web Site* in the *Connections* pane on the left, and double-click *URL Rewrite* in the pane on the right.
 
-   1. Right-click in the list of rules on the right and select *Add Rule(s)*.
+   1. Right-click in the list of rules on the right, and select *Add Rule(s)*.
 
    1. Under *Inbound rules*, select *Blank rule*, and click *OK*.
 
@@ -53,21 +45,19 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
    1. Under *Conditions*, click *Add*, and add the following condition:
 
       - **Input**: {HTTPS}
-
       - **Type**: Matches the Pattern
-
       - **Pattern**: off
 
-   1. Under *Action*, set the *Action type* to *Redirect*.
+   1. Under *Action*, set the *Action type* to "Redirect".
 
    1. Under *Redirect URL*, fill in the full HTTPS URL for your web server.
 
       > [!NOTE]
-      > - The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. ``https://www.myhost.com/{R:1}``.
+      > - The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. `https://www.myhost.com/{R:1}`.
       > - The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. TLS/SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
-      > - The redirect rule should skip the redirect on 'localhost'.
+      > - The redirect rule should skip the redirect on `localhost`.
 
-   1. Set *Redirect type* to *Found (302)*.
+   1. Set *Redirect type* to "Found (302)".
 
 > [!NOTE]
 > - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the *Subject Alternative Name* field of the TLS/SSL certificate on both DataMiner Agents.
@@ -95,11 +85,13 @@ The following auto-detect methods can be specified:
 
 ## Configuring HTTPS settings in MaintenanceSettings.xml
 
-To configure a server to use HTTPS, a line needs to be added to the file *MaintenanceSettings.xml*. To do so:
+To configure a server to use HTTPS, a line needs to be added to the *MaintenanceSettings.xml* file.
+
+To do so:
 
 1. Stop the DataMiner software.
 
-1. On a DataMiner Agent, open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+1. On a DataMiner Agent, open *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
 
 1. Add an HTTPS tag with the necessary attributes. For example:
 
@@ -113,9 +105,8 @@ To configure a server to use HTTPS, a line needs to be added to the file *Mainte
 
     The HTTPS tag has to contain the following attributes:
 
-    - **enabled**: Enables HTTPS when set to “true”.
-
-    - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. “\*.skyline.local”). For example, “dma01.skyline.be” matches the wildcard certificate for “*.skyline.be”.
+    - **enabled**: Enables HTTPS when set to "true".
+    - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "\*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be".
 
       This name should also be configured in the DNS server pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
 
@@ -123,10 +114,16 @@ To configure a server to use HTTPS, a line needs to be added to the file *Mainte
 
 ## Common issues after configuring HTTPS
 
-1. My connection times out or the site cannot be reached.
-   Most likely, the **inbound** TCP port for HTTPS connections (default 443) is not allowed through the Windows firewall. 
-   This can also happen when you're still connecting over *HTTP* while the server only accepts *HTTPS* connections. Make sure your URL starts with *https://*.
-1. My browser displays a warning **“This site is not secure“** when I connect to my DataMiner system.
-   Most likely, the URL does not match the *Common Name (CN)* or *Subject Alternative Name (SAN)* field of the TLS certificate. For example, https://localhost or https://10.10.10.10 does not match *datamniner.skyline.be*. To fix this, update the certificate so the *Subject Alternative Name (SAN)* matches the URL, or use an URL matching the *Common Name (CN)* or *Subject Alternative Name (SAN)* field.
-1. I cannot login to the DataMiner Web Applications, eg. Monitoring, Dashboards, Ticketing.
-   Make sure HTTPS is configured in the *MaintenanceSettings.xml* and the *name* attribute matches the *Common Name (CN)* of the TLS certificate.
+- **My connection times out or the site cannot be reached**
+
+    Most likely, the **inbound** TCP port for HTTPS connections (default 443) is not allowed through the Windows firewall.
+
+    This can also happen when you are still connecting over *HTTP* while the server only accepts *HTTPS* connections. Make sure your URL starts with `https://`.
+
+- **My browser displays a 'This site is not secure' warning when I connect to my DataMiner system**
+
+    Most likely, the URL does not match the *Common Name (CN)* or *Subject Alternative Name (SAN)* field of the TLS certificate. For example, `https://localhost` or `https://10.10.10.10` does not match *dataminer.skyline.be*. To fix this, update the certificate so the *Subject Alternative Name (SAN)* matches the URL, or use a URL that matches the *Common Name (CN)* or *Subject Alternative Name (SAN)* field.
+
+- **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, Ticketing, etc.)**
+
+    Make sure that HTTPS is configured in the *MaintenanceSettings.xml* file and that the *name* attribute matches the *Common Name (CN)* of the TLS certificate.
