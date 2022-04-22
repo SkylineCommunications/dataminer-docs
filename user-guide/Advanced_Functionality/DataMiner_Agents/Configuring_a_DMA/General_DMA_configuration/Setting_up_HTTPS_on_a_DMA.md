@@ -20,7 +20,7 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
 
 1. In the *Add Site Binding* window, add an HTTPS binding with the selected certificate.
 
-1. Allow *inbound* TCP port 443 through the Windows Firewall.
+1. Allow *inbound* TCP port **443** through the Windows Firewall.
 
 > [!TIP]
 > It is a best practice to disable **HTTP** completely by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
