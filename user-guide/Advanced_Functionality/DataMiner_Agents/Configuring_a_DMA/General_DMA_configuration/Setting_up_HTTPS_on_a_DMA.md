@@ -70,7 +70,6 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
    1. Set *Redirect type* to *Found (302)*.
 
 > [!NOTE]
-> - 
 > - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the *Subject Alternative Name* field of the TLS/SSL certificate on both DataMiner Agents.
 > - To connect to your DMA **using the IP address**, make sure the *Subject Alternative Name* field of the TLS/SSL certificate contains the IP address.
 
