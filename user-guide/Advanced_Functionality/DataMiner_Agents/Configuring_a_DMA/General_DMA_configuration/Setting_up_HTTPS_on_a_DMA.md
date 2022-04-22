@@ -121,7 +121,7 @@ To configure a server to use HTTPS, a line needs to be added to the file *Mainte
 
 1. Save the file and restart the DMA.
 
-## Common issues aftering configuring HTTPS
+## Common issues after configuring HTTPS
 
 1. My connection times out or the site cannot be reached.
    Most likely, the **inbound** TCP port for HTTPS connections (default 443) is not allowed through the Windows firewall. 
