@@ -8,6 +8,9 @@ Using a shape data field of type **Execute**, you can link a shape to a MULTIPLE
 
 When you link a shape to a MULTIPLE SET command, that command will be executed each time a user clicks that shape.
 
+> [!TIP]
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > EXE]* page.
+
 ## Configuring the shape data field
 
 Add a shape data field of type **Execute** to the shape, and set its value to:
