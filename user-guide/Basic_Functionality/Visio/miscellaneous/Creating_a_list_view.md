@@ -55,7 +55,7 @@ The following options can be specified in the *ComponentOptions* shape data fiel
 
 - **SessionVariablePrefix=\[prefix\]**: When you specify this option, a unique prefix is assigned to the session variable names. This option allows you to avoid having multiple *ListView* components using the exact same session variables.
 
-- **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. If these shape data are not specified, the following values are used by default:
+- **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These DateTime values will always be interpret as **UTC DateTime values**. If these shape data are not specified, the following values are used by default:
 
   - StartTime = NOW - 1 day
   - EndTime = NOW + 1 day
