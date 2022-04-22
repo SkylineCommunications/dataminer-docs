@@ -31,9 +31,9 @@ The next step is to create [profile definitions](xref:srm_definitions#profile-de
 
 You can configure the profile definitions in the [Profiles module](xref:Configuring_profile_definitions):
 
-- For each virtual function that you want to use, make sure there is a profile definition with a similar name as the virtual function.
-- For each virtual function interface that needs to be supported, make sure there is a profile definition with a similar name as the interface.
-- Add the related profile parameters to the profile definitions.
+- **For each virtual function** that you want to use, make sure there is a **profile definition with a similar name** as the virtual function.
+- **For each virtual function interface** that needs to be supported, make sure there is a **profile definition with a similar name** as the interface.
+- **Add the related profile parameters** to the profile definitions.
 
 For example, in DataMiner 10.2.0:
 
@@ -41,7 +41,7 @@ For example, in DataMiner 10.2.0:
 
 ## Creating profile instances
 
-While [profile instances](xref:srm_instantiations#profile-instance) can also be added later, we recommend that you already create at least one profile instance for each virtual function during setup. You can do so in the [Profiles module](xref:Configuring_profile_instances).
+While [profile instances](xref:srm_instantiations#profile-instance) can also be added later, we recommend that you already **create at least one profile instance for each virtual function** during setup. You can do so in the [Profiles module](xref:Configuring_profile_instances).
 
 For example, in DataMiner 10.2.0:
 
@@ -51,7 +51,7 @@ For example, in DataMiner 10.2.0:
 
 As any device or platform in the solution must be considered from a function perspective rather than a physical device perspective, [virtual functions](xref:srm_definitions#virtual-function) are essential in DataMiner SRM.
 
-You can create virtual functions using DataMiner Integration Studio (version 2.37 or above):
+You can **create virtual functions using DataMiner Integration Studio** (version 2.37 or above):
 
 1. Open Visual Studio (with [DataMiner Integration Studio](xref:DIS) installed).
 

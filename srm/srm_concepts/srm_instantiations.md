@@ -8,7 +8,7 @@ This section explains the instantiations in the SRM framework, which are actual 
 
 ## Element
 
-A DataMiner element represents a data source that is monitored by the DataMiner System. An element retrieves information from a data source based on what is defined in a connector. Typically, an element is linked to a single physical device or platform.
+A DataMiner element **represents a data source** that is monitored by the DataMiner System. An element retrieves information from a data source based on what is defined in a connector. Typically, an element is linked to a single physical device or platform.
 
 While the connector defines how to communicate with a data source and which information should be retrieved from the data source, the element using that connector actually retrieves the information. Usually, an element is created for each data source.
 
@@ -19,26 +19,26 @@ For example, an element could be created to represent a cloud-based server. The 
 
 ## Virtual function resource
 
-While a virtual function is a definition, a virtual function resource is the corresponding actual virtual function instance exposed by the platform. Consequently, this object is also known as a "virtual function instance". For example, a cloud-based platform could expose 4 encoding instances and 4 decoding instances. Each encoding instance is an instance of the virtual function "encoding".
+While a virtual function is a definition, a virtual function resource is the corresponding **actual virtual function instance exposed by the platform**. Consequently, this object is also known as a "virtual function instance". For example, a cloud-based platform could expose 4 encoding instances and 4 decoding instances. Each encoding instance is an instance of the virtual function "encoding".
 
 Both the terms "virtual function resource" and "virtual function instance" are used in the SRM framework, but these mean exactly the same thing. In the example above, the 4 encoding virtual function instances exposed by the platform are represented as 4 different resources, each based on the same virtual function. These resources are managed by DataMiner Resource Manager.
 
 The technique used by the SRM framework is very similar to the technique used to generate [Dynamic Virtual Elements](xref:Dynamic_virtual_elements) (DVEs). A virtual function is created based on a main element and only visualizes a selection of metrics of that main element, i.e. the metrics that are relevant for that particular virtual function. The main difference with DVEs is that the definition for virtual functions is not coded into the connector itself but defined in a separate *functions.xml* file.
 
-As a resource represents a specific virtual function, and the virtual function links to a profile definition grouping multiple profile parameters, resources can expose capacities and capabilities listed in that linked profile definition. For example, if an encoding instance is only capable of providing SD encoding, when a resource with HD capability is requested, this encoding instance will not be a candidate.
+As a resource represents a specific virtual function, and the virtual function links to a profile definition grouping multiple profile parameters, resources can expose **capacities and capabilities** listed in that linked profile definition. For example, if an encoding instance is only capable of providing SD encoding, when a resource with HD capability is requested, this encoding instance will not be a candidate.
 
 By default, a virtual function resource is represented as a virtual element while the booking using that resource is active.
 
 ## Resource pool
 
-A resource pool is a container that groups several resources. One resource can be part of one or more resource pools.
+A resource pool is a **container that groups several resources**. One resource can be part of one or more resource pools.
 
 > [!NOTE]
 > A resource can also be created manually in the [Resources module](xref:The_Resources_module) without a corresponding virtual function. As such, a resource could be any object you want to be able to schedule for use. However, note that in that case no orchestration or automation is supported in the SRM framework.
 
 ## Profile instance
 
-A profile instance is linked to a specific profile definition and has values assigned for each of the profile parameters listed in that profile definition. Multiple profile instances can be created for the same profile definition, typically each with different values.
+A profile instance is**linked to a specific profile definition and has values assigned for each of the profile parameters listed in that profile definition**. Multiple profile instances can be created for the same profile definition, typically each with different values.
 
 As a profile definition is a group of configuration, monitoring, capability, and capacity parameters, a profile instance linked to that profile definition will filter out resources that do not provide the capacity and/or capability defined in the instance. This way, when a booking is created, DataMiner SRM can check whether resources are available not only according to the requested timing, but also according to the required capacities and capabilities.
 
@@ -46,13 +46,13 @@ For example, an "Encoding HD" instance could contain the values for each of the 
 
 ### State profile instance
 
-A state profile instance is a specific kind of profile instance that can be defined to make sure that a specific profile will be applied when a booking is in the corresponding state (e.g. "Start" or "Stop"). You can create such a profile instance in the [Profiles module](xref:The_Profiles_module) by specifying the name of the base profile and adding the suffix "_[state]" (e.g. "Encoding_Start").
+A state profile instance is a specific kind of profile instance that can be defined to make sure that a specific profile will be **applied when a booking is in the corresponding state** (e.g. "Start" or "Stop"). You can create such a profile instance in the [Profiles module](xref:The_Profiles_module) by specifying the name of the base profile and adding the suffix "_[state]" (e.g. "Encoding_Start").
 
 ## Service profile instance
 
 Service profile instances are only used in the context of Service Orchestration.
 
-A service profile instance is linked to a specific service profile definition and has one or more specific profile instances assigned for each of the virtual functions listed in the definition.
+A service profile instance is **linked to a specific service profile definition and has one or more specific profile instances assigned for each of the virtual functions** listed in the definition.
 
 When users create a booking using a service profile, they can select a service profile definition, potentially one of the associated service definitions, and then a service profile instance. This almost fully defines all settings required to spin up a service. With this approach, users do not have to select profile instances for each virtual function in the service definition.
 
@@ -64,7 +64,7 @@ The definition of a booking differs depending on the SRM use case, as detailed b
 
 ### Service Orchestration
 
-In the context of Service Orchestration, a booking is an object linked to a service definition that has a specific time aspect. For each of the virtual functions listed in the service definition, a corresponding resource is assigned and managed.
+In the context of Service Orchestration, a booking is an **object linked to a service definition that has a specific time aspect**. For each of the virtual functions listed in the service definition, a corresponding resource is assigned and managed.
 
 When users create a booking, they need to select the timing as well as a service definition. For the timing, it is possible that a start and a stop time are selected (e.g. in case of an occasional-use event), or that only a start time is selected (for a permanent event).
 
@@ -80,17 +80,17 @@ Optionally, a DataMiner service can be made persistent and multiple (non-overlap
 
 ### Resources Orchestration or Resource Scheduling
 
-A booking in the context of Resource Orchestration or Resource Scheduling is similar to a Service Orchestration booking, except that no service definition is selected at booking creation time. Users can freely add any available virtual function resource in the booking.
+A booking in the context of Resource Orchestration or Resource Scheduling is **similar to a Service Orchestration** booking, except that **no service definition is selected at booking creation time**. Users can freely add any available virtual function resource in the booking.
 
 ## Contributing booking
 
 Contributing bookings are only used in the context of Service Orchestration.
 
-A contributing booking is a booking that is converted into a virtual function resource so that it can be used in another booking. The resource representing a contributing booking is only available for the duration of the main booking that contains it as a resource.
+A contributing booking is a **booking that is converted into a virtual function resource** so that it can be used in another booking. The resource representing a contributing booking is only available for the duration of the main booking that contains it as a resource.
 
 ## Virtual platform
 
-A virtual platform groups various components into a single domain, such as a separate virtual platform for Satellite Downlink, Encoding, etc. This is used in DataMiner Systems that have multiple booking applications, to differentiate between the components that can be used by these separate applications:
+A virtual platform **groups various components into a single domain**, such as a separate virtual platform for Satellite Downlink, Encoding, etc. This is used in DataMiner Systems that have multiple booking applications, to differentiate between the components that can be used by these separate applications:
 
 - Virtual platforms can group **resource pools** to differentiate between resources that can be used by specific booking applications. This is intended to be used in cases where there are multiple booking applications, but these cannot share all resources. A virtual platform can be linked to one or more resource pools. In addition, as a resource can be added to multiple resource pools, it can also be added into resource pools of different virtual platforms, so that it is possible to share a resource between virtual platforms.
 - A virtual platform can group **service definitions** in order to clearly indicate which types of bookings are available in a specific domain.

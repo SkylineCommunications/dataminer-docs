@@ -1,5 +1,5 @@
 ---
-uid: Reference2
+uid: Reference_Booking_Manager
 ---
 
 # Reference
@@ -88,12 +88,12 @@ Other supported values for this property are:
 
 **Mandatory**: No
 
-This property is used to define the script that should be executed when the Profile Load script is applied on a contributing DVE. The script can have custom code to go through the details of the contributing booking and do actions on included resources).
+This property is used to define the script that should be executed when the Profile-Load Script is applied on a contributing DVE. The script can have custom code to go through the details of the contributing booking and do actions on included resources.
 
 Either just use the script name as the property value, or specify the script in the following JSON format: *{"ScriptName":"My_Script_Name", "ExtraParameters":{"Param1":"Value1","Param2":"Value2, (...), "ParamN":"ValueN"}}*. "ExtraParameters" represents the input parameters of the script.
 
 > [!NOTE]
-> Ideally, the Profile Load script should always be defined on the profile definition. The *ApplyProfileScript* property should only be used if that is not possible for some reason.
+> Ideally, the Profile-Load Script should always be defined on the profile definition. The *ApplyProfileScript* property should only be used if that is not possible for some reason.
 
 **Example value**:
 

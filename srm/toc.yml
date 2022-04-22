@@ -32,3 +32,5 @@
       topicUid: implementing_function_srm
     - name: Provisioning virtual function resources
       topicUid: provisioning_VFRs
+    - name: Additional configuration for Service Orchestration
+      topicUid: config_service_orchestration

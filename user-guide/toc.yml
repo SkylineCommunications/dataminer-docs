@@ -2172,18 +2172,8 @@
     - name: Booking Manager app
       topicUid: SolSRM
       items:
-        - name: Quick Start Guide
-          topicUid: Quick_Start_Guide
-          items:
-            - name: SRM Framework installation
-              topicUid: SRM_Framework_installation
-            - name: SRM system setup
-              topicUid: SRM_system_setup
-        - name: Using the Booking Manager app
-          topicUid: Using_the_Booking_Manager_app
-          items:
-            - name: Booking Manager user interface
-              topicUid: Booking_Manager_user_interface
+        - name: Booking Manager user interface
+          topicUid: Booking_Manager_user_interface
         - name: Interacting with the Booking Manager app using custom Automation scripts
           topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
           items:
@@ -2192,10 +2182,7 @@
             - name: Frequently asked questions related to bookings and scripting
               topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
         - name: Reference
-          topicUid: Reference2
-          items:
-            - name: SRM properties for use with the Booking Manager app
-              topicUid: Reference2
+          topicUid: Reference_Booking_Manager
 - name: DataMiner Cloud Platform
   topicUid: Part51CloudPlatform
   items:
