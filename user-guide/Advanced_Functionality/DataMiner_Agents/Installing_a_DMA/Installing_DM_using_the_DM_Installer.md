@@ -11,6 +11,8 @@ Before you run the installer, install the latest .NET Framework version.
 - For more information on recommended versions, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
 - For installation information, see <https://docs.microsoft.com/en-us/dotnet/framework/install/>
 
+In addition, make sure the Windows setting "fast startup" is not activated.
+
 ## Running the installer
 
 The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation. A custom installation can for instance be used to install a MySQL database instead of a Cassandra database.
@@ -19,6 +21,8 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 > The default installation requires that the built-in Windows Administrator account is enabled and that WinPcap is installed.
 
 ### Default DataMiner installation
+
+1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
 
 1. Double-click *Setup.exe*.
 
@@ -51,6 +55,8 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 > To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
 
 ### Custom DataMiner installation
+
+1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
 
 1. Double-click *Setup.exe*.
 

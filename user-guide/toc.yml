@@ -764,8 +764,6 @@
         - name: Installing a DataMiner Agent
           topicUid: Installing_a_DataMiner_Agent
           items:
-            - name: Installing Windows
-              topicUid: Installing_Windows
             - name: Installing DataMiner using the DataMiner Installer
               topicUID: Installing_DM_using_the_DM_installer
             - name: Unattended DataMiner installation
