@@ -10,39 +10,33 @@ If Windows has already been installed on the machine you are preparing, you can 
 
 ## Supported Windows versions
 
-A DataMiner Agent can be hosted on machines running the following operating systems.
+A DataMiner Agent can be installed on machines running the following operating systems:
 
-- Windows 8
-- Windows 10
-- Windows 2012 Server
+- Windows 2012 Server R2
 - Windows 2016 Server
 - Windows 2019 Server
 
 > [!NOTE]
-> Whatever operating system you use, make sure you have installed the latest service pack.
+> Whichever operating system you use, make sure you have installed the latest service pack.
 
 ## Important remarks
 
-- If the computer has RAID controller hardware, depending on the type of hardware, you may need to install Windows on one HD first. Then, after the installation is
-completed, you can insert the second HD and let it rebuild. Check the documentation of the raid controller if you are not sure about this.
+- If the computer has RAID controller hardware, depending on the type of hardware, you may need to install Windows on one HD first. Then, after the installation is completed, you can insert the second HD and let it rebuild. Check the documentation of the raid controller if you are not sure about this.
 
 - If the DMA is configured to use the SATA RAID, the BIOS should be set as follows:
- 
-    1. Enter the BIOS (e.g. by pressing *DELETE*).
-    1. Go to *Advanced > Onboard device > SATA configuration*.
-    1. Do the following:
-    
-        - Set **Onchip Serial SATA** to "ENHANCED MODE".
-        - Set **SATA mode** to "RAID".
 
-- If you are installing a COMPAQ computer, you must first boot it with the "SMARTSTART FOR SERVERS" CD. This will prepare the computer for a Windows installation.
-Follow the wizard and choose the correct OS. If it is not available in the list, choose OTHER OS. The installation of Windows may fail during setup if you do not prepare the computer using the above-mentioned CD.
+  1. Enter the BIOS (e.g. by pressing *DELETE*).
+  1. Go to *Advanced* > *Onboard device* > *SATA configuration*.
+  1. Do the following:
 
-- After installing Microsoft Windows make sure to log on with the Administrator account before you continue. Do not use a regular user account with administrative rights.
+     - Set **Onchip Serial SATA** to "ENHANCED MODE".
+     - Set **SATA mode** to "RAID".
+
+- After installing Windows, make sure to **log on with the Administrator account** before you continue. Do not use a regular user account with administrative rights.
 
 ## Installation
 
-1. Insert the Windows installation CD and restart the computer. If the computer does not boot from the CD, then check the boot sequence in the BIOS settings.
+1. Insert the Windows installation CD and restart the computer. If the computer does not boot from the CD, check the boot sequence in the BIOS settings.
 
 1. Follow the Windows installation procedure. The HD must be formatted using the NTFS file system.
 

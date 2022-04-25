@@ -23,23 +23,24 @@ Once the installation process has started, the installer will go through the fol
 
 1. Automatic installation of any missing prerequisites:
 
-    - VC++ redistributables if required
-    - .NET Framework if required
-    - Database software: MySQL or Cassandra, depending on the configuration
+   - VC++ redistributables if required
+   - .NET Framework if required
+   - Database software: MySQL or Cassandra, depending on the configuration
 
-    > [!NOTE]
-    > - The installer requires that at least .Net Framework 4.5 is already installed. If this is not the case, you will not be able to run the installer.
-    > - WinPcap can only be installed during an attended installation. For an unattended installation, make sure it is installed beforehand.
+   > [!NOTE]
+   >
+   > - The installer requires that at least .Net Framework 4.5 is already installed. If this is not the case, you will not be able to run the installer.
+   > - WinPcap can only be installed during an attended installation. For an unattended installation, make sure it is installed beforehand.
 
-1. Installation of the DataMiner version provided in the installer
+1. Installation of the DataMiner version provided in the installer.
 
-1. DataMiner startup
+1. DataMiner startup.
 
-1. Configuration performed on all DMAs
+1. Configuration performed on all DMAs.
 
-1. Installation application packages, if any
+1. Installation application packages, if any.
 
-1. Full synchronization of the DMS
+1. Full synchronization of the DMS.
 
 When the installation has finished, you can get the %errorlevel% to see if the installation succeeded. In the example below, the installation failed, resulting in error 650.
 
@@ -49,7 +50,7 @@ C:\Users>Administrator>echo %errorlevel%
 650
 ```
 
-If something goes wrong during the configuration, e.g. the connection with one of the servers is lost or a DMA is not correctly configured, configuration changes will be reverted and the installation process will install a standalone Agent. Information on the issue can be found in the log file. See [Unattended installation logging](#unattended-installation-logging).
+If something goes wrong during the configuration, e.g. the connection with one of the servers is lost or a DMA is not correctly configured, configuration changes will be reverted, and the installation process will install a standalone Agent. Information on the issue can be found in the log file. See [Unattended installation logging](#unattended-installation-logging).
 
 ## Unattended installation configuration file
 
@@ -58,7 +59,7 @@ The XML configuration is done in the *InstallConfiguration.xml* file. The settin
 The *InstallConfiguration.xml* file must use the syntax detailed below.
 
 > [!NOTE]
->  You can check the validity of an *InstallConfiguration.xml* file using the [InstallConfiguration Schema file](https://community.dataminer.services/documentation/installconfiguration-xsd/) available on Dojo.
+> You can check the validity of an *InstallConfiguration.xml* file using the [InstallConfiguration Schema file](https://community.dataminer.services/documentation/installconfiguration-xsd/) available on Dojo.
 
 ### DMS tag
 
@@ -66,31 +67,31 @@ The main *DMS* tag has the following possible subtags:
 
 - **DataMinerVersion**
 
-    Optional. The version of DataMiner to use when installing. If this version cannot be found in *Setup.exe*, the version contained in *Setup.exe* will be used instead.
+  Optional. The version of DataMiner to use when installing. If this version cannot be found in *Setup.exe*, the version contained in *Setup.exe* will be used instead.
 
 - **ClusterName**
 
-    The name of the cluster.
+  The name of the cluster.
 
-    This tag can be omitted when installing a standalone DMA or a single Failover system. In that case, the cluster name will by default be set to "DMS".
+  You can omit this tag when installing a standalone DMA or a single Failover system. In that case, the cluster name will by default be set to "DMS".
 
 - **Timeout**
 
-    The time (in minutes) to wait for communication between DMAs in order to set up a DMS. Once this time has lapsed, the installer will fall back to the installation of a standalone DMA. For most installations, a timeout value between 30 and 60 minutes should suffice. For large clusters, a higher timeout value may be needed.
+  The time (in minutes) to wait for communication between DMAs in order to set up a DMS. Once this time has lapsed, the installer will fall back to the installation of a standalone DMA. For most installations, a timeout value between 30 and 60 minutes should suffice. For large clusters, a higher timeout value may be needed.
 
 - **DMA**
 
-    For each separate DMA and for each Failover pair a DMA tag must be present. For more information, see [DMA tag](#dma-tag).
+  For each separate DMA and for each Failover pair a DMA tag must be present. For more information, see [DMA tag](#dma-tag).
 
 - **CentralDatabase**
 
-    Optional. Indicates the central database type to use (*MySQL*, *MSSQL* or *Oracle*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *ConnectString*, *UID* (user), *PWD* (password) and *Offload*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g. in the *Offload* tag.
+  Optional. Indicates the central database type to use (*MySQL*, *MSSQL* or *Oracle*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *ConnectString*, *UID* (user), *PWD* (password) and *Offload*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g. in the *Offload* tag.
 
 - **Package**
 
-    Optional. One tag per additional application package that should be installed for all DMAs in the DMS. The package can either be included in the same folder as *Setup.exe* or in a different folder.
+  Optional. One tag per additional application package that should be installed for all DMAs in the DMS. The package can either be included in the same folder as *Setup.exe* or in a different folder.
 
-    In a *Package* tag, you can specify the relative or UNC path to the package to be installed (including the package extension).
+  In a *Package* tag, you can specify the relative or UNC path to the package to be installed (including the package extension).
 
 ### DMA tag
 
@@ -98,80 +99,81 @@ The *DMA* tag has the following possible subtags:
 
 - **ID**
 
-    The ID of the DMA that is being installed.
+  The ID of the DMA that is being installed.
 
 - **MachineName**
 
-    The name of the server where the DMA is installed.
+  The name of the server where the DMA is installed.
 
 - **IP1**
 
-    The IP address of the server where the DMA is installed.
+  The IP address of the server where the DMA is installed.
 
 - **IP2**
 
-    Optional additional IP address of the server where the DMA is installed.
+  Optional additional IP address of the server where the DMA is installed.
 
 - **Failover1**
 
-    Required in case of a Failover setup. The IP address of the Failover DMA.
+  Required in case of a Failover setup. The IP address of the Failover DMA.
 
 - **Failover2**
 
-    Optional in case of a Failover setup. Additional IP address of the Failover DMA, in case IP2 is specified for the other DMA.
+  Optional in case of a Failover setup. Additional IP address of the Failover DMA, in case IP2 is specified for the other DMA.
 
 - **FailoverMachineName**
 
-    Required in case of a Failover setup. The server name of the Failover DMA.
+  Required in case of a Failover setup. The server name of the Failover DMA.
 
 - **VirtualIP1**
 
-    Required in case of a Failover setup. The virtual IP to be used by the Failover pair.
+  Required in case of a Failover setup. The virtual IP to be used by the Failover pair.
 
 - **VirtualIP2**
 
-    Optional in case of a Failover setup. Additional virtual IP address of the Failover DMA, in case IP2 is specified.
+  Optional in case of a Failover setup. Additional virtual IP address of the Failover DMA, in case IP2 is specified.
 
 - **IPMask1**
 
-    Required in case of a Failover setup. The subnet mask for the Failover configuration.
+  Required in case of a Failover setup. The subnet mask for the Failover configuration.
 
 - **IPMask2**
 
-    Optional in case of a Failover setup. Additional subnet mask for the Failover configuration, in case IP2 is specified.
+  Optional in case of a Failover setup. Additional subnet mask for the Failover configuration, in case IP2 is specified.
 
 - **Database**
 
-    Indicates the database type to use (*Cassandra*, *CassandraCluster*, *MySQL* or *MSSQL*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *DBDrive*, *ConnectString*, *UID* (user), *PWD* (password) and *Maintenance*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g. in the *Maintenance* tag.
+  Indicates the database type to use (*Cassandra*, *CassandraCluster*, *MySQL* or *MSSQL*) using the *type* attribute. This tag must contain the following subtags, detailing the configuration for the *Db.xml* file: *DB*, *DBServer*, *DBDrive*, *ConnectString*, *UID* (user), *PWD* (password) and *Maintenance*. It is possible to leave some of these tags empty, in which case the default configuration will be applied. In addition, any other tags that can be configured in *Db.xml* can also be specified here, e.g. in the *Maintenance* tag.
 
-    Note that for a non-Cassandra database, the drive specified in *DBDrive* must be C.
+  Note that for a non-Cassandra database, the drive specified in *DBDrive* must be C.
 
 - **Location**
 
-    Optional. Allows you to specify details about the location where the DMA is installed.
+  Optional. Allows you to specify details about the location where the DMA is installed.
 
 - **Package**
 
-    Optional. One tag per additional package included in the *Setup.exe* that should be installed for this DMA only.
+  Optional. One tag per additional package included in the *Setup.exe* that should be installed for this DMA only.
 
-    In a *Package* tag, you can specify the relative or UNC path to the package to be installed (including the package extension).
+  In a *Package* tag, you can specify the relative or UNC path to the package to be installed (including the package extension).
 
 - **CassandraClusterSettings**
 
-    Used in case a database of type *CassandraCluster* is installed. See [CassandraClusterSettings tag](#cassandraclustersettings-tag).
+  Used in case a database of type *CassandraCluster* is installed. See [CassandraClusterSettings tag](#cassandraclustersettings-tag).
 
 - **ElasticClusterSettings**
 
-    Used in case a database of type *CassandraCluster* is installed. See [ElasticClusterSettings tag](#elasticclustersettings-tag).
+  Used in case a database of type *CassandraCluster* is installed. See [ElasticClusterSettings tag](#elasticclustersettings-tag).
 
 - **SearchDataBase**
 
-    Used in case a database of type *CassandraCluster* is installed. This tag must contain the following subtags, detailing the configuration for the Elasticsearch database in the *Db.xml* file: *DBServer*, *UID* (user) and *PWD* (password).
+  Used in case a database of type *CassandraCluster* is installed. This tag must contain the following subtags, detailing the configuration for the Elasticsearch database in the *Db.xml* file: *DBServer*, *UID* (user) and *PWD* (password).
 
 > [!NOTE]
+>
 > - Make sure the correct subnet mask and IP are specified, as the installation will fail if these are incorrect, and this could also cause your Ethernet adapter settings to be changed to incorrect values.
 > - You can only specify packages either in the *DMA* tag or in the *DMS* tag, not in both.
-> - In case Cassandra had already been installed previously and the cluster name is changed with the new installer, Cassandra will not be automatically reconfigured. This must be done manually.
+> - In case Cassandra had already been installed previously, and the cluster name is changed with the new installer, Cassandra will not be automatically reconfigured. This must be done manually.
 > - Installing a Cassandra cluster is only possible if there is no existing Cassandra or Elasticsearch installation on the server.
 
 ### CassandraClusterSettings tag
@@ -180,65 +182,65 @@ The *CassandraClusterSettings* tag has the following possible subtags:
 
 - **ListenAddress**
 
-    The IP address that should be filled in for the *listen_address* setting in the *cassandra.yaml* file.
+  The IP address that should be filled in for the *listen_address* setting in the *cassandra.yaml* file.
 
 - **Seeds**
 
-    The IP addresses of the different Cassandra nodes in the system, which will be filled in for the *seed_provider* setting in the *cassandra.yaml* file. It is recommended to configure at most 3 seed IP addresses per data center.
+  The IP addresses of the different Cassandra nodes in the system, which will be filled in for the *seed_provider* setting in the *cassandra.yaml* file. It is recommended to configure at most 3 seed IP addresses per data center.
 
 - **ClusterName**
 
-    The name of the Cassandra cluster, which will be filled in for the *cluster_name* setting in the *cassandra.yaml* file. This must be the same for all DMAs.
+  The name of the Cassandra cluster, which will be filled in for the *cluster_name* setting in the *cassandra.yaml* file. This must be the same for all DMAs.
 
 - **ClusterSize**
 
-    The size of the cluster. When installing Cassandra, the installer will wait until this number of nodes are online before it continues.
+  The size of the cluster. When installing Cassandra, the installer will wait until this number of nodes are online before it continues.
 
 - **Port**
 
-    The CQL native transport port, which will be filled in for the *native_transport_port* setting in the *cassandra.yaml* file.
+  The CQL native transport port, which will be filled in for the *native_transport_port* setting in the *cassandra.yaml* file.
 
 - **SystemAuthReplicationFactor**
 
-    The replication factor for the *system_auth* keyspace. This keyspace contains the data required to log in to Cassandra. The replication factor determines how many replicas will exist for each row of this keyspace.
+  The replication factor for the *system_auth* keyspace. This keyspace contains the data required to log in to Cassandra. The replication factor determines how many replicas will exist for each row of this keyspace.
 
 - **DefaultKeyspaceReplicationFactor**
 
-    The replication factor of the default keyspace.
+  The replication factor of the default keyspace.
 
 - **RpcAddress**
 
-    The IP address that Cassandra will use for client-based communication, such as through the CQL protocol.
+  The IP address that Cassandra will use for client-based communication, such as through the CQL protocol.
 
-    If this is left empty, it will not be defined in the *cassandra.yaml* file.
+  If this is left empty, it will not be defined in the *cassandra.yaml* file.
 
 - **BroadCastRpcAddress**
 
-    The address that Cassandra nodes will publish to connected clients.
+  The address that Cassandra nodes will publish to connected clients.
 
-    If most clients are outside the cluster's local network, this is typically the public address. Otherwise, it is typically the local network address.
+  If most clients are outside the cluster's local network, this is typically the public address. Otherwise, it is typically the local network address.
 
-    If this is left empty, it will not be defined in the *cassandra.yaml* file.
+  If this is left empty, it will not be defined in the *cassandra.yaml* file.
 
 - **TargetInstallationDirectory**
 
-    The location where Cassandra will be installed.
+  The location where Cassandra will be installed.
 
 - **DataPath**
 
-    The location where Cassandra data will be stored.
+  The location where Cassandra data will be stored.
 
 - **Snitch**
 
-    The value that should be filled in for the *endpoint_snitch* setting in the *cassandra.yaml* file. The following values are supported: "SimpleSnitch", "GossipingPropertyFileSnitch", "PropertyFileSnitch", "Ec2Snitch", "Ec2MultiRegionSnitch", "RackInferringSnitch".
+  The value that should be filled in for the *endpoint_snitch* setting in the *cassandra.yaml* file. The following values are supported: "SimpleSnitch", "GossipingPropertyFileSnitch", "PropertyFileSnitch", "Ec2Snitch", "Ec2MultiRegionSnitch", "RackInferringSnitch".
 
-    Cassandra uses this setting to figure out the network topology, so that it can route requests efficiently and optimize the way data replicas are spread around the cluster. The recommended value is "GossipingPropertyFileSnitch". Other values are commonly used when the Cassandra nodes are hosted in the cloud.
+  Cassandra uses this setting to figure out the network topology, so that it can route requests efficiently and optimize the way data replicas are spread around the cluster. The recommended value is "GossipingPropertyFileSnitch". Other values are commonly used when the Cassandra nodes are hosted in the cloud.
 
 - **IsResponsibleForConfiguration**
 
-    Determines whether this DMA will be responsible for configuring the Cassandra cluster after it has been created. This includes creating the defined user as well as setting the *system auth* replication factor.
+  Determines whether this DMA will be responsible for configuring the Cassandra cluster after it has been created. This includes creating the defined user as well as setting the *system auth* replication factor.
 
-    This should only be set to true for 1 DMA. Possible values: true, false.
+  This should only be set to true for 1 DMA. Possible values: true, false.
 
 ### ElasticClusterSettings tag
 
@@ -246,45 +248,45 @@ The *ElasticClusterSettings* tag has the following possible subtags:
 
 - **DiscoveryHosts**
 
-    The IP addresses of the other nodes in the cluster. Not all IP addresses are needed, but ideally, the master node IP addresses should be included.
+  The IP addresses of the other nodes in the cluster. Not all IP addresses are needed, but ideally, the master node IP addresses should be included.
 
 - **NetworkHost**
 
-    The IP address Elasticsearch should be bound to. This corresponds with the *NetworkHost* setting in the *elasticsearch.yaml* file.
+  The IP address Elasticsearch should be bound to. This corresponds with the *NetworkHost* setting in the *elasticsearch.yaml* file.
 
 - **NetworkPublishHost**
 
-    The IP address Elasticsearch should publish to. If virtual IPs are configured, this should not be set to "0.0.0.0".
+  The IP address Elasticsearch should publish to. If virtual IPs are configured, this should not be set to "0.0.0.0".
 
 - **ClusterName**
 
-    The name of the Elasticsearch cluster. This must be the same for all DMAs.
+  The name of the Elasticsearch cluster. This must be the same for all DMAs.
 
 - **NodeName**
 
-    The name of the Elasticsearch node.
+  The name of the Elasticsearch node.
 
 - **MinimumMasterNodes**
 
-    The minimum number of master nodes for the Elasticsearch cluster. Set this to 1 for a single node and to 2 for a cluster.
+  The minimum number of master nodes for the Elasticsearch cluster. Set this to 1 for a single node and to 2 for a cluster.
 
 - **MasterNode**
 
-    Determines whether this node is a master node. Possible values: true, false
+  Determines whether this node is a master node. Possible values: true, false
 
 - **DataNode**
 
-    Determines whether this node is a data node. Possible values: true, false.
+  Determines whether this node is a data node. Possible values: true, false.
 
-    Recommended value: true.
+  Recommended value: true.
 
 - **DataPath**
 
-    The location where Elasticsearch data will be stored.
+  The location where Elasticsearch data will be stored.
 
 - **TargetInstallationDirectory**
 
-    The location where Elasticsearch will be installed.
+  The location where Elasticsearch will be installed.
 
 ## Unattended installation configuration file examples
 

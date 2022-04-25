@@ -66,12 +66,12 @@ This could be the case if IIS was installed after the .NET framework. If these t
 1. In the *Open* text box, type `cmd` and press *ENTER*.
 1. At the command prompt, type the following command, and then press *ENTER*:
 
-    ```txt
-    %windir%\Microsoft.NET\Framework\1.1.4322\aspnet_regiis.exe -i
-    ```
+   ```txt
+   %windir%\Microsoft.NET\Framework\1.1.4322\aspnet_regiis.exe -i
+   ```
 
-    > [!NOTE]
-    > In this path, "1.1.4322" represents the version number of the .NET Framework that you installed on your server.
+   > [!NOTE]
+   > In this path, "1.1.4322" represents the version number of the .NET Framework that you installed on your server.
 
 For more information, see <http://support.microsoft.com/kb/306005/>.
 
@@ -167,51 +167,51 @@ To correctly configure IIS, on top of the standard DataMiner Agent installation,
 
 1. Open a command prompt window, by going to *Start > Run* and entering `cmd`.
 
-    > [!NOTE]
-    > It is advisable to run *cmd.exe* as an Administrator.
+   > [!NOTE]
+   > It is advisable to run *cmd.exe* as an Administrator.
 
 1. Type the following command, and then press *ENTER*:
 
-    ```txt
-    Cscript %SYSTEMDRIVE%\inetpub\adminscripts\adsutil.vbs
-    SET W3SVC/AppPools/Enable32bitAppOnWin64 1
-    ```
+   ```txt
+   Cscript %SYSTEMDRIVE%\inetpub\adminscripts\adsutil.vbs
+   SET W3SVC/AppPools/Enable32bitAppOnWin64 1
+   ```
 
 1. Type the following command, and then press *ENTER*:
 
-    ```txt
-    %SYSTEMROOT%\Microsoft.NET\Framework\v1.1.4322\aspnet_regiis.exe -i
-    ```
+   ```txt
+   %SYSTEMROOT%\Microsoft.NET\Framework\v1.1.4322\aspnet_regiis.exe -i
+   ```
 
 1. Type the following command, and then press *ENTER*:
 
-    ```txt
-    %SYSTEMROOT%\Microsoft.NET\Framework\v2.0.50727\aspnet_regiis.exe -i
-    ```
+   ```txt
+   %SYSTEMROOT%\Microsoft.NET\Framework\v2.0.50727\aspnet_regiis.exe -i
+   ```
 
 1. Open IIS Manager.
 
 1. In the Web Service Extensions list (see left tree pane), set the following extensions to "Allowed":
 
-    - ASP.NET version 1.1.4322
-    - ASP.NET version 2.0.50727
-    - Active Server Pages
+   - ASP.NET version 1.1.4322
+   - ASP.NET version 2.0.50727
+   - Active Server Pages
 
 1. In *File Explorer*, execute `C:\Skyline DataMiner\Tools\ConfigureIIs.js`. When the execution is ready, a message box will appear.
 
 1. In the left pane of the IIS Manager, open the website and verify that the Dashboards item is an application (cogwheel icon).
 
-    If it is not, proceed as follows:
+   If it is not, proceed as follows:
 
-    1. Right-click > *Properties*
-    1. Click *Create Application*.
-    1. On the *Documents* tab, make sure that the default document is "default.aspx".
-    1. On the *Directory Security* tab, click *Edit* (next to *Authentication and access control*), and make sure that "Integrated Windows Authentication" is selected.
+   1. Right-click > *Properties*
+   1. Click *Create Application*.
+   1. On the *Documents* tab, make sure that the default document is "default.aspx".
+   1. On the *Directory Security* tab, click *Edit* (next to *Authentication and access control*), and make sure that "Integrated Windows Authentication" is selected.
 
 1. Restart IIS:
 
-    - In the left pane, right-click COMPUTERNAME and select *All Tasks > Restart IIS*.
-    - Alternatively, you can run the `iisreset` command from a command prompt.
+   - In the left pane, right-click COMPUTERNAME and select *All Tasks > Restart IIS*.
+   - Alternatively, you can run the `iisreset` command from a command prompt.
 
 ## What do I do if there is an error when the MySQL service is started?
 
@@ -225,14 +225,14 @@ To resolve this issue, proceed as follows:
 
 1. Go to the MySQL Server installation directory:
 
-    - On an x86 machine: *C:\Program Files\MySQL\MySQL Server x.x\Data*
-    - On an x64 machine: *C:\Program Files(86)\MySQL\MySQL Server x.x\Data*
+   - On an x86 machine: *C:\Program Files\MySQL\MySQL Server x.x\Data*
+   - On an x64 machine: *C:\Program Files(86)\MySQL\MySQL Server x.x\Data*
 
 1. Remove the following files:
 
-    - ib_logfile0
-    - ib_logfile1
-    - ibdata1
+   - ib_logfile0
+   - ib_logfile1
+   - ibdata1
 
 1. Start the MySQL service manually.
 
@@ -259,9 +259,7 @@ This is because the IIS_IUSRS group has not been granted "Local Activation" perm
 
 ## How do I manually configure Windows Firewall?
 
-Normally, Windows Firewall is configured automatically when you install the Skyline software by means of the installation CD.
-
-However, if you want to configure it manually, do as follows:
+Normally, Windows Firewall is configured automatically when you install DataMiner. However, if you want to configure it manually, do the following:
 
 1. Go to *Start > Control Panel > Windows Firewall*.
 
@@ -277,20 +275,20 @@ However, if you want to configure it manually, do as follows:
 
 1. On the *Inbound Rules* tab page, the following ports will need to be added:
 
-    |Name | Port number | Protocol |
-    |-----| ----------- | -------- |
-    | HTTP Port | 80 | TCP |
-    | NATS Ports | 4222<br>6222<br>8222 | TCP |
-    | SLNet Remoting Port | 8004 | TCP |
-    | NAS Port | 9090 | TCP |
+   |Name | Port number | Protocol |
+   |-----| ----------- | -------- |
+   | HTTP Port | 80 | TCP |
+   | NATS Ports | 4222<br>6222<br>8222 | TCP |
+   | SLNet Remoting Port | 8004 | TCP |
+   | NAS Port | 9090 | TCP |
 
-    To do so, for each of the ports, do the following:
+   To do so, for each of the ports, do the following:
 
-    1. Click *New rule*.
-    1. In the wizard, select *Port* and click *Next*.
-    1. Select whether the rule applies to *TCP* or *UDP*, add the port and click *Next*.
-    1. Make sure *Allow the connection* is selected and click *Next* until you reach the last step of the wizard.
-    1. Enter the name of the rule, as specified in the table above, and click *Finish*.
+   1. Click *New rule*.
+   1. In the wizard, select *Port* and click *Next*.
+   1. Select whether the rule applies to *TCP* or *UDP*, add the port and click *Next*.
+   1. Make sure *Allow the connection* is selected and click *Next* until you reach the last step of the wizard.
+   1. Enter the name of the rule, as specified in the table above, and click *Finish*.
 
 If the computer will be polled by a DataMiner element running the Microsoft Platform protocol driver, the following three additional steps have to be executed:
 
@@ -298,15 +296,13 @@ If the computer will be polled by a DataMiner element running the Microsoft Plat
 
 1. In the *Open* text box, type `netsh firewall set service RemoteAdmin`, and press *ENTER*.
 
-    A message box will appear, notifying you that the firewall changes have successfully been applied.
+   A message box will appear, notifying you that the firewall changes have successfully been applied.
 
 1. Exit the command prompt window.
 
 ## How do I manually configure DCOM?
 
-Normally, DCOM is configured automatically when you install DataMiner by means of the installation CD.
-
-However, if you want to configure it manually, do the following:
+Normally, DCOM is configured automatically when you install DataMiner. However, if you want to configure it manually, do the following:
 
 1. Select *Start > Run*.
 
@@ -324,15 +320,15 @@ However, if you want to configure it manually, do the following:
 
 1. Grant an additional permission to the following accounts:
 
-    | Account | Additional permission |
-    |---------|---------|
-    | \[ComputerName\]IUSR_\[ComputerName\] | Allow Local Activation |
-    | \[ComputerName\]Users | Allow Local Activation |
+   | Account | Additional permission |
+   |---------|---------|
+   | \[ComputerName\]IUSR_\[ComputerName\] | Allow Local Activation |
+   | \[ComputerName\]Users | Allow Local Activation |
 
-    If these accounts are not listed even though they exist, see [Adding an account to the Group or User names list](#adding-an-account-to-the-group-or-user-names-list) for instructions on how to add them to the Group or user names list.
+   If these accounts are not listed even though they exist, see [Adding an account to the Group or User names list](#adding-an-account-to-the-group-or-user-names-list) for instructions on how to add them to the Group or user names list.
 
-    > [!NOTE]
-    > If the above-mentioned accounts do not exist on your system, you do not need to create them.
+   > [!NOTE]
+   > If the above-mentioned accounts do not exist on your system, you do not need to create them.
 
 1. Click *OK* on the open dialog boxes until you are back in the *DCOM Config* node of the *Component Services* tree.
 
@@ -344,18 +340,18 @@ However, if you want to configure it manually, do the following:
 
 1. Grant an additional permission to the following accounts:
 
-    | Account | Additional permission |
-    | ------- | --------------------- |
-    | \[ComputerName\]ASPNET | Allow Local Activation |
-    | \[ComputerName\]Network Service | Allow Local Activation |
-    | \[ComputerName\]IIS_WPG | Allow Local Activation |
-    | \[ComputerName\]IIS_IUSRS | Allow Local Activation |
-    | IIS APPPOOLDefaultAppPool | Allow Local Activation |
+   | Account | Additional permission |
+   | ------- | --------------------- |
+   | \[ComputerName\]ASPNET | Allow Local Activation |
+   | \[ComputerName\]Network Service | Allow Local Activation |
+   | \[ComputerName\]IIS_WPG | Allow Local Activation |
+   | \[ComputerName\]IIS_IUSRS | Allow Local Activation |
+   | IIS APPPOOLDefaultAppPool | Allow Local Activation |
 
-    If these accounts are not listed even though they exist, see [Adding an account to the Group or User names list](#adding-an-account-to-the-group-or-user-names-list) for instructions on how to add them to the Group or user names list.
+   If these accounts are not listed even though they exist, see [Adding an account to the Group or User names list](#adding-an-account-to-the-group-or-user-names-list) for instructions on how to add them to the Group or user names list.
 
-    > [!NOTE]
-    > If the above-mentioned accounts do not exist on your system, you do not need to create them.
+   > [!NOTE]
+   > If the above-mentioned accounts do not exist on your system, you do not need to create them.
 
 1. Close the *Component Services* window.
 
