@@ -52,7 +52,9 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. When DataMiner has successfully restarted, click *Close*.
 
 > [!NOTE]
-> To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
+>
+> - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
+> - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_DataMiner_Indexing_Engine) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ### Custom DataMiner installation
 
@@ -104,4 +106,6 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. When DataMiner has successfully restarted, click *Close*.
 
 > [!NOTE]
-> To view detailed log information on the installation process, in the last step of the Installer, click the *open log files* button.
+>
+> - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
+> - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_DataMiner_Indexing_Engine) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
