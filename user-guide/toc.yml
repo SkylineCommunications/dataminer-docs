@@ -2223,6 +2223,8 @@
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
         - name: Linking your DataMiner account to your DCP account
           topicUid: Linking_your_DataMiner_and_DCP_account
+        - name: Cloud data storage policies
+          topicUID: Cloud_data_storage_policies
     - name: Project Collaboration
       topicUid: Collaboration
       items:
