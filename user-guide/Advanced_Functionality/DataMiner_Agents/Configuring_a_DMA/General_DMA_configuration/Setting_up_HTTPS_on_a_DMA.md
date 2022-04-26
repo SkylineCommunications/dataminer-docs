@@ -15,6 +15,12 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
 1. In the *Connections* pane on the left, right-click the website, and select *Edit Bindings*.
 1. In the *Add Site Binding* window, add an HTTPS binding with the selected certificate.
 1. Allow *inbound* TCP port **443** through the Windows Firewall.
+1. Optionally (though **recommended**), enable *HTTP String Transport Security* (*HSTS*) in IIS to prevent SSL stripping attacks:
+   1. In IIS manager, click *Sites* in the *Connections* pane on the left.
+   1. Open *Default Web Site* and click *HSTS* in the *Actions* pane.
+   1. Select the *Enable* checkbox.
+   1. Set the *Max-Age* to **31536000** (seconds). This will ensure recurring connections are using HTTPS for the next year.
+   1. Click *OK* to complete the HSTS setup.
 
 > [!TIP]
 > It is good practice to completely disable **HTTP** by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
