@@ -5,8 +5,8 @@ uid: NTNotifyTypesOverview
 # NT Notify Types
 
 > [!WARNING]
-> The table below gives an overview of all the defined NT Notify types. This is part of the internal communication channel between DataMiner processes, therefore Notify types for which no additional documentation is provided should not be used.
-> These types are shared between the SLDataMiner and SLProtocol process, but many of them are only supported by one the two processes. Their documentation should mention if they are to be used with a NotifyProtocol, NotifyDataminer, or both.
+> The table below gives an overview of all the defined NT Notify types. This is part of the internal communication between DataMiner processes. Notify types for which no additional documentation is provided should therefore not be used.
+> These types are shared between the SLDataMiner and SLProtocol process, but many of them are only supported by one the two processes. Their documentation should mention if they are to be used with a NotifyProtocol, a NotifyDataMiner, or both.
 
 |ID|Name|Description|
 |--- |--- |--- |
