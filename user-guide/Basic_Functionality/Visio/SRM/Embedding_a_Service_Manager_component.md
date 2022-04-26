@@ -32,6 +32,10 @@ Configure the following shape data fields on the shape that is to contain the Se
    - **HideTabs=** : When set to *true*, hides the tab selection, so that only the diagram tab is displayed.
    - **HideNodeConfiguration=** : When set to *true*, hides the lower part of the diagram, where the selected node can be configured.
    - **HideFunctionsTree=** : When set to *true*, hides the tree view on the left-hand side with functions to drag and drop. This will typically be used together with the “ReadOnly=” option.
+
+     > [!NOTE]
+     > The *HideChildFunctions*, *HideHeader*, *HideTabs*, *HideNodeConfiguration*, and HideFunctionsTree component options can only be used together with the component option *Interface=definition*.
+
    - **Interface=definition**: Links the shape to a service definition. (The service definition is determined by the *SelectedServiceDefinition* variable, mentioned below.)
    - **ReadOnly=** : When set to *true*, prevents the user from making any changes to the service definition.
    - **SessionVariablePrefix=*X*** : Defines an optional prefix (in this case “X”) for all session variable names linked with this component.
