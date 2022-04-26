@@ -278,7 +278,8 @@ Normally, Windows Firewall is configured automatically when you install DataMine
    |Name | Port number | Protocol |
    |-----| ----------- | -------- |
    | HTTP Port | 80 | TCP |
-   | NATS Ports | 4222<br>6222<br>8222 | TCP |
+   | HTTPS Port | 443 | TCP |
+   | NATS Ports | 4222<br>6222 | TCP |
    | SLNet Remoting Port | 8004 | TCP |
    | NAS Port | 9090 | TCP |
 
