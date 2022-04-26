@@ -27,5 +27,4 @@ uid: ApiDocumentation
 ## Error codes
 
 - [DataMiner error codes](xref:DataMinerErrorCodes)
-- [Severity codes](xref:SeverityCodes)
 - [Error code table](xref:ErrorCodeTable)
