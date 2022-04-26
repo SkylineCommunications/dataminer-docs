@@ -5,7 +5,8 @@ uid: NTNotifyTypesOverview
 # NT Notify Types
 
 > [!WARNING]
-> The table below gives an overview of all the defined NT Notify types. However, the Notify types for which no additional documentation is provided should not be used.
+> The table below gives an overview of all the defined NT Notify types. This is part of the internal communication between DataMiner processes. Notify types for which no additional documentation is provided should therefore not be used.
+> These types are shared between the SLDataMiner and SLProtocol process, but many of them are only supported by one the two processes. Their documentation should mention if they are to be used with a NotifyProtocol, a NotifyDataMiner, or both.
 
 |ID|Name|Description|
 |--- |--- |--- |
@@ -466,3 +467,6 @@ uid: NTNotifyTypesOverview
 |454|<xref:NT_ADD_VIEWS>|Creates multiple views.|
 |455|NT_ADD_VIEWS_NO_LOCK||
 |456|NT_ADD_VIEWS_PARENT_AS_NAME||
+|457|NT_RESERVE_DATA_COOKIES||
+|458|NT_DIRECT_VIEW_REMOTE_COOKIE||
+|459|NT_ELEMENT_DEINIT_COMPLETE||
