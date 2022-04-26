@@ -18,7 +18,7 @@ In addition, make sure the Windows setting "fast startup" is not activated.
 The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation. A custom installation can for instance be used to install a MySQL database instead of a Cassandra database.
 
 > [!NOTE]
-> The default installation requires that the built-in Windows Administrator account is enabled and that WinPcap is installed.
+> The default installation requires that WinPcap is installed for systems intended for DataMiner Failover.
 
 ### Default DataMiner installation
 
@@ -54,6 +54,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
+> - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
 > - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_DataMiner_Indexing_Engine) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ### Custom DataMiner installation
@@ -74,14 +75,15 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
    - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally *MySQL Workbench*.
 
      > [!NOTE]
-     > If a MySQL database is used, certain DataMiner features (e.g. trend predictions) will not be available.
+     > MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations.
+     > If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
 
    - If you wish to install Cassandra but use a different drive than the default C drive, keep Cassandra selected and click *select data drive*. Then select the drive and click *OK*.
 
      > [!NOTE]
      > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/), or check with your Technical Account Manager.
 
-   - To install WinPcap, click *Install WinPcap*. The Setup Wizard of WinPcap is launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
+   - On systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap is launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
 
      On Windows 8 and Windows Server 2012, click *Run without getting online help*. Follow the WinPcap setup. When an error occurs, click *OK*.
 
@@ -108,4 +110,5 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
+> - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
 > - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_DataMiner_Indexing_Engine) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
