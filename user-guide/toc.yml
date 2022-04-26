@@ -770,6 +770,8 @@
               topicUID: Unattended_DM_installation
             - name: Checking the DataMiner installation
               topicUID: Checking_the_DM_installation
+            - name: Regarding antivirus software
+              topicUID: Regarding_antivirus_software
             - name: Frequently asked questions
               topicUID: Installing_a_DMA_FAQ
         - name: Configuring a DataMiner Agent
