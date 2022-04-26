@@ -879,8 +879,6 @@
     items:
     - name: DataMiner error codes
       topicUid: DataMinerErrorCodes
-    - name: Severity codes
-      topicUid: SeverityCodes
     - name: Error codes table
       topicUid: ErrorCodeTable
 - name: Schema reference

@@ -15,7 +15,7 @@ uid: ApiDocumentation
 |[Skyline.DataMiner.Library.Protocol](xref:Skyline.DataMiner.Library.Protocol)|This namespace contains types used for development of protocols.|
 |[Skyline.DataMiner.Net](xref:Skyline.DataMiner.Net)|This namespace contains SLNet types.|
 |[Interop.SLDms](xref:Interop.SLDms)|***Deprecated*** This namespace contains types for interacting with a DataMiner System.|
-|[Tamir.SharpSsh](xref:Tamir.SharpSsh)|***Deprecated*** This namespace contains classes implementing SSH File Transfer Protocol (SFTP) and Secure Copy (SCP) functionality. **NOTE:** This namespace is obsolete for SCP and SFTP implementations. Please refer to the following page for an alternative for such implementations: https://github.com/sshnet/SSH.NET.|
+|[Tamir.SharpSsh](xref:Tamir.SharpSsh)|***Deprecated*** This namespace contains classes implementing SSH File Transfer Protocol (SFTP) and Secure Copy (SCP) functionality. **NOTE:** This namespace is obsolete for SCP and SFTP implementations. Please refer to the following page for an alternative for such implementations: <https://github.com/sshnet/SSH.NET>. |
 
 ## Notify types
 
@@ -27,5 +27,4 @@ uid: ApiDocumentation
 ## Error codes
 
 - [DataMiner error codes](xref:DataMinerErrorCodes)
-- [Severity codes](xref:SeverityCodes)
 - [Error code table](xref:ErrorCodeTable)
