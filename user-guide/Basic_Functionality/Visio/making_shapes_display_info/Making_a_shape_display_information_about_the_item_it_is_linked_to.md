@@ -49,6 +49,9 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
   - *STATE*
   - *TREND TEMPLATE*
   - *TYPE*
+  - *AVERAGE VALUE* (see [Displaying history values for parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters))
+  - *MINIMUM VALUE* (see [Displaying history values for parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters))
+  - *MAXIMUM VALUE* (see [Displaying history values for parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters))
 
 - **Services**:
 
