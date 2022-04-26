@@ -2505,6 +2505,8 @@
               topicUid: Taskbar_Utility_shortcut_menu
             - name: Taskbar Utility command line options
               topicUid: Taskbar_Utility_command_line_options
+        - name: SLLogCollector
+          topicUid: SLLogCollector
         - name: SLNetClientTest tool
           topicUid: SLNetClientTest_tool
           items:
