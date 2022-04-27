@@ -16,4 +16,4 @@ uid: Protocol.ProcessAutomation
 
 ## Remarks
 
-This tag should only be used in the Process Automation Queue Driver.
+This tag should only be used in the Process Automation queue connector.
