@@ -7,8 +7,11 @@ uid: Specifying_data_input_in_a_dashboard_URL
 If a dashboard has been configured with one or more feed components, it is possible to specify data input for these feeds in a dashboard URL. This way, you can immediately make the dashboard display specific data when it is opened.
 
 > [!NOTE]
+>
 > - From DataMiner 10.2.0/10.2.2 onwards, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter “d” is used instead of “data”.
 > - To refer to a query in the dashboard URL, using the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]*. In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
+> - From DataMiner 10.0.2 onwards, to only display a dashboard without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
+> - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 
 ## JSON syntax
 
@@ -78,10 +81,6 @@ For example:
 - ``https://myDma/Dashboard/#/myDashboard?time%20spans=1549753200000/1549835265007``
 
   This URL opens a dashboard with a time range filter from 1549753200000 to 1549835265007.
-
-> [!NOTE]
-> - From DataMiner 10.0.2 onwards, to only display a dashboard without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
-> - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 
 ## Supported objects
 
