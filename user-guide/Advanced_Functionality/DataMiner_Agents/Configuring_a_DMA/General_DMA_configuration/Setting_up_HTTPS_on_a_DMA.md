@@ -115,7 +115,7 @@ To do so:
     - **enabled**: Enables HTTPS when set to "true".
     - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "\*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be".
 
-      This name should also be configured in the DNS server pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
+      This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
 
 1. Save the file and restart the DMA.
 
@@ -134,3 +134,11 @@ To do so:
 - **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, Ticketing, etc.)**
 
     Make sure that HTTPS is configured in the *MaintenanceSettings.xml* file and that the *name* attribute matches the *Common Name (CN)* of the TLS certificate.
+    
+- **The webpage could not be found (HTTP 404 error)**
+
+   Most likely the IIS binding has set a *Host Name* that doesn't match with the URL. Remove the *Host Name* from the binding or make sure the URL matches the binding.
+
+- **Cannot reach this page**
+
+   Make sure the DNS server has *DNS record* for the hostname of the URL. For example, *dataminer.skyline.be* will need to resolve to an reachable IP address.
