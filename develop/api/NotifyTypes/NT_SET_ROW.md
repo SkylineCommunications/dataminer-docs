@@ -34,7 +34,7 @@ else
   - rowDetails[3]: (bool) enableCellActions: When set to true, protocol.Clear and protocol.Leave can be used as cell values, which will clear or preserve the cell content, respectively. (Optional, default: false.)
 - rowData (object[]): The row data to set. In order to preserve the value of a cell, provide a null reference for that cell.
 
-Preforming a set on a **remote element**:
+Performing a set on a **remote element**:
 
 ```csharp
 int dmaId = protocol.DataMinerID;
