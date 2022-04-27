@@ -1,10 +1,10 @@
 ---
-uid: uid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-pid
+uid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-pid
 ---
 
 # pid attribute
 
-Parameter ID of the parameter that will contain the option value.
+Specifies the parameter ID of the parameter that will contain the option value.
 
 ## Content Type
 
@@ -18,8 +18,9 @@ Parameter ID of the parameter that will contain the option value.
 
 ```xml
 <ProcessAutomation>
-	<ProcessAutomationOptions>
-		<ProcessAutomationOption name="QueueSize" pid="557"></ProcessAutomationOption>
-        <ProcessAutomationOption name="QueueSizeMax" pid="558"></ProcessAutomationOption>
-	<ProcessAutomationOptions>
+   <ProcessAutomationOptions>
+      <ProcessAutomationOption name="QueueSize" pid="557"></ProcessAutomationOption>
+      <ProcessAutomationOption name="QueueSizeMax" pid="558"></ProcessAutomationOption>
+   <ProcessAutomationOptions>
 <ProcessAutomation>
+```

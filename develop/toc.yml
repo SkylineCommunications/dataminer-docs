@@ -2362,6 +2362,19 @@
           items: 
           - name: DefaultValue
             topicUid: Protocol.PortSettings.Type.DefaultValue
+      - name: ProcessAutomation
+        topicUid: Protocol.ProcessAutomation
+        items:
+        - name: ProcessAutomationOptions
+          topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions
+          items:
+          - name: ProcessAutomationOption
+            topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption
+            items:
+            - name: '@name'
+              topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-name
+            - name: '@pid'
+              topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-pid
       - name: Provider
         topicUid: Protocol.Provider
       - name: QActions

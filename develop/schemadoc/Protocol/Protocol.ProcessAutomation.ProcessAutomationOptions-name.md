@@ -1,10 +1,10 @@
 ---
-uid: uid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-name
+uid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-name
 ---
 
 # name attribute
 
-Name of the option so the client can identify it.
+Specifies the name of the option, which is used by the client to identify it.
 
 ## Content Type
 
@@ -14,12 +14,17 @@ string
 
 [ProcessAutomationOption](xref:Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption)
 
+## Remarks
+
+Currently, only the names QueueSize and QueueSizeMax are supported by the client.
+
 ## Examples
 
 ```xml
 <ProcessAutomation>
-	<ProcessAutomationOptions>
-		<ProcessAutomationOption name="QueueSize" pid="557"></ProcessAutomationOption>
-        <ProcessAutomationOption name="QueueSizeMax" pid="558"></ProcessAutomationOption>
-	<ProcessAutomationOptions>
+   <ProcessAutomationOptions>
+      <ProcessAutomationOption name="QueueSize" pid="557"></ProcessAutomationOption>
+      <ProcessAutomationOption name="QueueSizeMax" pid="558"></ProcessAutomationOption>
+   <ProcessAutomationOptions>
 <ProcessAutomation>
+```

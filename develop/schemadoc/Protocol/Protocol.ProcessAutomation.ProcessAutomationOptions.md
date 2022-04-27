@@ -1,18 +1,17 @@
 ---
 uid: Protocol.ProcessAutomation.ProcessAutomationOptions
---
+---
 
-# ProcessAutomationOptions Element
+# ProcessAutomationOptions element
 
-Additional options for the Process Automation Queue.
+Additional options for the Process Automation queue.
 
 ## Parent
+
 [ProcessAutomation](xref:Protocol.ProcessAutomation)
 
 ## Children
+
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|***All***|||
-|&nbsp;&nbsp;[ProcessAutomationOption](xref:Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption)|[0, 1]|The additional options for the Process Automation Queue.|
-
-## Remarks
+|&nbsp;&nbsp;[ProcessAutomationOption](xref:Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption)|[0, 1]|The additional options for the Process Automation queue.|
