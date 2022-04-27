@@ -134,11 +134,11 @@ To do so:
 - **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, Ticketing, etc.)**
 
     Make sure that HTTPS is configured in the *MaintenanceSettings.xml* file and that the *name* attribute matches the *Common Name (CN)* of the TLS certificate.
-    
+
 - **The webpage could not be found (HTTP 404 error)**
 
-   Most likely the IIS binding has set a *Host Name* that doesn't match with the URL. Remove the *Host Name* from the binding or make sure the URL matches the binding.
+   Most likely the IIS binding has set a *Host Name* that does not match the URL. Remove the *Host Name* from the binding or make sure the URL matches the binding.
 
 - **Cannot reach this page**
 
-   Make sure the DNS server has *DNS record* for the hostname of the URL. For example, *dataminer.skyline.be* will need to resolve to an reachable IP address.
+   Make sure the DNS server has a *DNS record* for the hostname of the URL. For example, *dataminer.skyline.be* will need to resolve to a reachable IP address.
