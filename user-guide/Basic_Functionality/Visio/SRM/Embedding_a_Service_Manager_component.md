@@ -123,4 +123,5 @@ From DataMiner 9.5.6 onwards, you can turn a shape into a command control that c
      - *Application*: All components that can execute the configured command anywhere in the client application (e.g. DataMiner Cube).
 
 > [!NOTE]
-> To show or hide shapes to indicate whether the commands are currently available, you can use the *HasPendingChanges* session variable. See [Using session variables with a Service Manager component](#using-session-variables-with-a-service-manager-component).
+> - If you want to use a command with *Page* scope, you must add the shape data **Options** to the ServiceManager shape and set it to *PageVariable*. Similarly, if you want to use a command with *Card* scope, you must add the shape data **Options** to the ServiceManager shape and set it to *CardVariable*. For the *Application* scope, no such restriction applies.
+> - To show or hide shapes to indicate whether the commands are currently available, you can use the *HasPendingChanges* session variable. See [Using session variables with a Service Manager component](#using-session-variables-with-a-service-manager-component).
