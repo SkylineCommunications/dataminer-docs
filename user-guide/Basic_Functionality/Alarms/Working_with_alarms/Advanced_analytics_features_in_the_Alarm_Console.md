@@ -80,6 +80,8 @@ Several factors are taken into account for the grouping:
 
 - Parameter information
 
+- View information
+
 - Time
 
 - Alarm focus information
