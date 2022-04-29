@@ -2370,17 +2370,6 @@
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
   items:
-    - name: Frequently asked questions
-      topicUid: faq
-      items:
-        - name: General configuration
-          topicUid: General_configuration
-        - name: IDs of views, elements, services, redundancy groups and parameters
-          topicUid: IDs_of_views_elements_services_redundancy_groups_and_parameters
-        - name: Databases
-          topicUid: Databases1
-        - name: DataMiner client applications
-          topicUid: DataMiner_client_applications
     - name: Error messages
       topicUid: ErrorMessages
       items:
@@ -2602,5 +2591,16 @@
           topicUid: view_benchmarks
         - name: Visual Overview benchmarks
           topicUid: visual_overview_benchmarks
+    - name: Frequently asked questions
+      topicUid: faq
+      items:
+        - name: General configuration
+          topicUid: General_configuration
+        - name: IDs of views, elements, services, redundancy groups and parameters
+          topicUid: IDs_of_views_elements_services_redundancy_groups_and_parameters
+        - name: Databases
+          topicUid: Databases1
+        - name: DataMiner client applications
+          topicUid: DataMiner_client_applications
     - name: Glossary
       topicUid: glossary
