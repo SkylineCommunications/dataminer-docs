@@ -218,7 +218,9 @@ From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm
 - To **rename an alarm group**, click the pencil icon next to the alarm group name and specify a new name.
 
 > [!NOTE]
-> When an alarm group has been updated manually, it will no longer be updated automatically.
+>
+> - When an alarm group has been updated manually, it will no longer be updated automatically.
+> - From DataMiner 10.2.6/10.3.0 onwards, you can manually create an alarm group even when the *Automatic incident tracking* option is not activated in the alarm tab.
 
 ## Monitoring of trend patterns
 
