@@ -101,13 +101,13 @@ From DataMiner 10.0.13 onwards, when an Automation script executed in Visual Ove
 
 To configure this in the script, use the *CreateKey(string variablename)* method (namespace: *Skyline.DataMiner.Automation*, class name: *UIVariables.VisualOverview*).
 
-In the following example, a session variable named "MyOutput" will be created and it will receive the value "MyValue".
+In the following example, a session variable named "MyOutput" will be created, and it will receive the value "MyValue".
 
 ```txt
 engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValue");
 ```
 
-- If you execute the same Automation script on different pages, you can use the *SessionVariablePrefix* option to make sure the output is saved in separate session variables.<br>If, for example, you use prefix "One\_" on one page and prefix "Two\_" on another page, and the Automation scripts pass their output to a session variable named "MyPage", then the output will end up in two separate session variables named "One_MyPage" and "Two_MyPage" respectively.
+- If you execute the same Automation script on different pages, you can use the *SessionVariablePrefix* option to make sure the output is saved in separate session variables. For example, if you use prefix "One\_" on one page and prefix "Two\_" on another page, and the Automation scripts pass their output to a session variable named "MyPage", then the output will end up in two separate session variables named "One_MyPage" and "Two_MyPage" respectively.
 
 - When you set the *SetVarOnFail* option to true (either on page level or shape level), the session variables will always be created, regardless of whether the script finishes successfully or not.
 
