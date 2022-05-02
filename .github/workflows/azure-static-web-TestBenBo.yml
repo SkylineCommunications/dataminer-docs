@@ -1,3 +1,5 @@
+name: Azure Static Web Apps CI/CD
+
 on:
   push:
     branches:
@@ -31,15 +33,17 @@ jobs:
         with:
           name: _site
           path: _site/
-
-  build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+          
+  deploy_job:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
+#    needs: build_job
+    name: Deploy Job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
         with:
-          submodules: true
+          name: _site
+          path: _site 
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -62,6 +66,6 @@ jobs:
       - name: Close Pull Request
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
-        with:
+        with
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_SAND_072BC7D03 }}
           action: "close"
