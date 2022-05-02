@@ -89,11 +89,15 @@ To add a resource to a pool using DataMiner 10.2.0/10.1.5 or higher:
 
    - *Instance*: If a virtual function is selected in the *Function* field, here you can select one of the available entrypoint table instances. For example, if the linked element is a provisioning element, the instance can indicate which of its provisioned elements the resource should be linked to. In case the selected virtual function does not define an entrypoint table, the drop-down box will only show the option \<none>.
 
-     > [!NOTE]
-     > When a resource linked to a virtual function is saved, a corresponding (virtual) element is created, and its name and ID will be displayed.
+   - *Function instance name*: Available from DataMiner 10.2.0 \[CU3]/10.2.6 onwards. Allows you to modify the name of the DVE linked to a function resource.
 
-     > [!WARNING]
-     > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+   > [!NOTE]
+   >
+   > - When a resource linked to a virtual function is saved, a corresponding (virtual) element is created, and its name and ID will be displayed.
+   > - We highly recommend that updating the name of a function instance is done via the resource. Strictly speaking, this is also possible via the DVE parent, but if you change the name there, the resource will not be updated.
+
+   > [!WARNING]
+   > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
 1. In the *properties* subtab, configure any properties if necessary. With the buttons in the lower right corner, you can add, edit and delete resource properties.
 
