@@ -97,7 +97,7 @@ For example, in the configuration below, the first-level separator "\|" is repla
 
 ## Passing Automation script output to session variables
 
-From DataMiner 10.0.13 onwards, when an Automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview.
+From DataMiner 10.0.13 onwards, when an Automation script executed in Visual Overview finishes successfully, the output values of that script can be passed to session variables in Visual Overview. From DataMiner 10.2.6/10.3.0 onwards, this is also supported for interactive Automation scripts.
 
 To configure this in the script, use the *CreateKey(string variablename)* method (namespace: *Skyline.DataMiner.Automation*, class name: *UIVariables.VisualOverview*).
 
