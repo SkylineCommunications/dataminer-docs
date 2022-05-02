@@ -83,4 +83,24 @@ By default, DataMiner sends the WebSocket messages as binary data (i.e. a frame 
 
 If the message you want to send only contains text and the server does not seem to support binary formatted messages, try to add `<WebSocketMessageType>text</WebSocketMessageType>` to the `<Command>`. This will result in the command being sent as UTF-8 encoded text (Opcode 0x1, RFC 6455).
 
-In case the server supports text frames, it should now respond to this command. Note that the WebSocketMessageType tag is only supported since DataMiner 9.5.1 (RN 14177).
+In case the server supports text frames, it should now respond to this command. Note that the WebSocketMessageType tag is only supported since DataMiner 9.5.1 (RN 14177). 
+
+In case the driver is set to use unicode and the response for the websocket is saved in a parameter of type "string", this behaviour can cause some issues when using Getparameter() to fetch the websocket response from within a Qaction. When the unicode tag is set, string parameters will be saved as UTF-16. The websocket however, will try to store it's response as UTF-8. When using Getparameter(), the received value will thus be wrongly encoded, which causes special characters to not be shown correctly. To solve this, one can add the following tags to the qaction that parses the data:
+```
+inputParameters="[ID of the websocket response parameter]" options="binary"
+```
+
+That way, the response can be encoded manualy:
+
+```
+object[] bytestream = websocketResponse as object[];
+byte[] response = new byte[bytestream.Length];
+for (int i = 0; i < response.Length; i++)
+{
+   response[i] = (byte)bytestream[i];
+}
+
+string data = System.Text.Encoding.UTF8.GetString(response);
+processData(data);
+```
+
