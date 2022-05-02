@@ -217,6 +217,8 @@ From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm
 
 - To **rename an alarm group**, click the pencil icon next to the alarm group name and specify a new name.
 
+- To **move an alarm** from one alarm group to another (supported from DataMiner 10.2.6/10.3.0 onwards), right-click the alarm and select *Move to another incident*. You will then be able to select a different incident or create a new one to add the alarm to.
+
 > [!NOTE]
 >
 > - When an alarm group has been updated manually, it will no longer be updated automatically.
