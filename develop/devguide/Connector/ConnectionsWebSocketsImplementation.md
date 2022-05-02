@@ -81,18 +81,21 @@ When the WebSocket server closes the connection for some reason, the element goe
 
 By default, DataMiner sends the WebSocket messages as binary data (i.e. a frame with Opcode 0x2, RFC 6455). Some WebSocket servers will reply with an \[ACK\] packet but ignore the message as the server does not support binary formatted messages.
 
-If the message you want to send only contains text and the server does not seem to support binary formatted messages, try to add `<WebSocketMessageType>text</WebSocketMessageType>` to the `<Command>`. This will result in the command being sent as UTF-8 encoded text (Opcode 0x1, RFC 6455).
+If the message you want to send only contains text and the server does not seem to support binary formatted messages, try to add `<WebSocketMessageType>text</WebSocketMessageType>` to the `<Command>`. This will result in the command being sent as UTF-8 encoded text (Opcode 0x1, RFC 6455). 
 
-In case the server supports text frames, it should now respond to this command. Note that the WebSocketMessageType tag is only supported since DataMiner 9.5.1 (RN 14177). 
+In case the server supports text frames, it should now respond to this command. Note that the WebSocketMessageType tag is only supported from DataMiner 9.5.1 (RN 14177) onwards.
 
-In case the driver is set to use unicode and the response for the websocket is saved in a parameter of type "string", this behaviour can cause some issues when using Getparameter() to fetch the websocket response from within a Qaction. When the unicode tag is set, string parameters will be saved as UTF-16. The websocket however, will try to store it's response as UTF-8. When using Getparameter(), the received value will thus be wrongly encoded, which causes special characters to not be shown correctly. To solve this, one can add the following tags to the qaction that parses the data:
-```
+## Unicode protocols
+
+If the protocol is set to use Unicode and the response for the WebSocket is saved in a parameter of type "string", this behavior can cause issues in case Getparameter() is used to fetch the WebSocket response from within a QAction. When the Unicode tag is set, string parameters will be saved as UTF-16. The WebSocket, however, will try to store its response as UTF-8. When Getparameter() is used, the received value will therefore not be encoded correctly, which will cause special characters to not be shown correctly. To solve this, add the following tags to the QAction that parses the data:
+
+```cs
 inputParameters="[ID of the websocket response parameter]" options="binary"
 ```
 
-That way, the response can be encoded manualy:
+That way, the response can be encoded manually:
 
-```
+```cs
 object[] bytestream = websocketResponse as object[];
 byte[] response = new byte[bytestream.Length];
 for (int i = 0; i < response.Length; i++)
