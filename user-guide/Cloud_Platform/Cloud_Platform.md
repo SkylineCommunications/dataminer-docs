@@ -28,4 +28,4 @@ The home page also lists the DataMiner Systems that have been [connected to the 
 When your DMS has been connected to the cloud, you can also make use of the [DataMiner Teams bot](xref:DataMiner_Teams_bot).
 
 > [!TIP]
-> For more information about the security of the DataMiner Cloud Platform, please refer to [Cloud Connectivity and Security](xref:Cloud_connectivity_and_security).
+> For information about the security of the DataMiner Cloud Platform, see [Cloud connectivity and security](xref:Cloud_connectivity_and_security).
