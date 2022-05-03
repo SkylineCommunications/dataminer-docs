@@ -67,15 +67,16 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: _site
-          path: _site 
-      - uses: bacongobbler/azure-blob-storage-upload@main
+          path: _site
+      - name: Upload the new files
+        uses: bacongobbler/azure-blob-storage-upload@main
         with:
           source_dir: _site
           container_name: docs
           connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT_CONNECTION_STRING }}
+          sync: true
           # WARNING: this will overwrite existing blobs in your blob storage
           overwrite: 'true'
-          
           
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
