@@ -87,7 +87,7 @@ In case the server supports text frames, it should now respond to this command. 
 
 ## Unicode protocols
 
-If the protocol is set to use Unicode and the response for the WebSocket is saved in a parameter of type "string", this behavior can cause issues in case Getparameter() is used to fetch the WebSocket response from within a QAction. When the Unicode tag is set, string parameters will be saved as UTF-16. The WebSocket, however, will try to store its response as UTF-8. When Getparameter() is used, the received value will therefore not be encoded correctly, which will cause special characters to not be shown correctly. To solve this, add the following tags to the QAction that parses the data:
+If the protocol is set to use Unicode and the response for the WebSocket is saved in a parameter of type "string", this behavior can cause issues in case [GetParameter()](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameter(System.Int32)) is used to fetch the WebSocket response from within a QAction. If the Unicode tag is set, string parameters will be saved as UTF-16. The WebSocket, however, will try to store its response as UTF-8. When [GetParameter()](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameter(System.Int32)) is used, the received value will therefore not be encoded correctly, which will cause special characters to not be shown correctly. To solve this, add the following tags to the QAction that parses the data:
 
 ```xml
 inputParameters="[ID of the websocket response parameter]" options="binary"
