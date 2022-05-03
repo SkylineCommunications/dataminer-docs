@@ -207,18 +207,23 @@ In the Alarm Console, alarm groups are displayed as a special kind of alarm entr
 
 ### Manually updating an alarm group
 
-From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm group. In the Alarm Console, you can add or remove alarms, create an alarm group manually, or rename an alarm group.
+From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm group or "incident". In the Alarm Console, you can add or remove alarms, create an alarm group manually, or rename an alarm group.
 
 - To **create an alarm group**, right-click an alarm that is not part of an alarm group yet, and select *Add to incident*. In the pop-up window, select to create a new incident and add the alarm to it.
 
-- To **add an alarm** to an existing alarm group, right-click an alarm that is not part of an alarm group yet, and select *Add to incident*. In the pop-up window, select to add the alarm to an existing alarm group.
+- To **add an alarm** to an existing alarm group, right-click an alarm that is not part of an alarm group yet, and select *Add to incident*. In the pop-up window, select to add the alarm to an existing incident.
 
-- To **remove an alarm** from an alarm group, right-click the alarm and select *Remove from incident*.
+- To **remove an alarm** from an alarm group, right-click an alarm that is part of an incident and select *Remove from incident*.
 
 - To **rename an alarm group**, click the pencil icon next to the alarm group name and specify a new name.
 
+- To **move an alarm** from one alarm group to another (supported from DataMiner 10.2.6/10.3.0 onwards), right-click an alarm that is part of an incident and select *Move to another incident*. You will then be able to select a different incident or create a new one to add the alarm to.
+
 > [!NOTE]
-> When an alarm group has been updated manually, it will no longer be updated automatically.
+>
+> - When an alarm group has been updated manually, it will no longer be updated automatically.
+> - From DataMiner 10.2.6/10.3.0 onwards, you can manually create an alarm group even when the *Automatic incident tracking* option is not activated in the alarm tab.
+> - From DataMiner 10.2.6/10.3.0 onwards, the right-click menu of an incident also allows you to take/(force) release ownership of an incident, to add a comment, and to clear an incident in case it was created manually.
 
 ## Monitoring of trend patterns
 
