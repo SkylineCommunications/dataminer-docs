@@ -59,13 +59,13 @@ Example:
 
 The following session variables can be used in a Visual Overview containing a Service Manager component:
 
-- **HasPendingChanges**: Depending on whether any unsaved changes have been made to the service definition, this variable will be set to TRUE or FALSE.
+- **HasPendingChanges**: Depending on whether any unsaved changes have been made to the (selected) service definition, this variable will be set to true or false.
 
-  To be used with the *SaveAll*/*DiscardAll* commands. See [Configuring command controls for a Service Manager component](#configuring-command-controls-for-a-service-manager-component).
+  Recommended when *SaveAll*/*DiscardAll* commands are used. See [Configuring command controls for a Service Manager component](#configuring-command-controls-for-a-service-manager-component).
 
-- **CurrentHasPendingChanges**: Available from DataMiner 9.5.9 onwards. Depending on whether any unsaved changes have been made to the service definition, this variable will be set to TRUE or FALSE.
+- **CurrentHasPendingChanges**: Available from DataMiner 9.5.9 onwards. Depending on whether any unsaved changes have been made to the (selected) service definition, this variable will be set to true or false.
 
-  To be used with the *SaveCurrent*/*DiscardCurrent* commands. See [Configuring command controls for a Service Manager component](#configuring-command-controls-for-a-service-manager-component).
+  Recommended when *SaveAll*/*DiscardAll* commands are used. See [Configuring command controls for a Service Manager component](#configuring-command-controls-for-a-service-manager-component).
 
 - **SelectedEdgeID**: The currently selected connection line.
 
@@ -113,10 +113,10 @@ From DataMiner 9.5.6 onwards, you can turn a shape into a command control that c
 
    - **Command**: Set the value to the name of the command to be executed when the shape is clicked. The following commands are supported:
 
-     - *SaveAll*: Saves all pending changes. Can be used when the Service Manager shape has no interface value specified or when it is configured with **ComponentOptions**: *interface=Overview*.
-     - *DiscardAll*: Discards all pending changes. Can be used when the Service Manager shape has no interface value specified or when it is configured with **ComponentOptions**: *interface=Overview*.
-     - *SaveCurrent*: Saves pending changes for the current service definition. Can be used when the Service Manager shape is configured with **ComponentOptions**: *interface=Definition*.
-     - *DiscardCurrent*: Discards pending changes for the current service definition. Can be used when the Service Manager shape is configured with **ComponentOptions**: *interface=Definition*.
+     - *SaveAll*: Saves all pending changes. Can be used when the Service Manager shape has no interface value specified or when it is configured with **ComponentOptions**: *interface=overview* or *interface=definitions*.
+     - *DiscardAll*: Discards all pending changes. Can be used when the Service Manager shape has no interface value specified or when it is configured with **ComponentOptions**: *interface=overview* or *interface=definitions*.
+     - *SaveCurrent*: Saves pending changes for the current service definition. Can be used when the Service Manager shape is configured with **ComponentOptions**: *interface=definition*.
+     - *DiscardCurrent*: Discards pending changes for the current service definition. Can be used when the Service Manager shape is configured with **ComponentOptions**: *interface=definition*.
 
      Optionally, you can include the command prefix specified in the shape of the Service Manager component, e.g. “*One_SaveAll*”.
 
