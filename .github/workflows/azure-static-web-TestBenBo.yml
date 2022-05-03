@@ -75,8 +75,6 @@ jobs:
           container_name: docs
           connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT_CONNECTION_STRING }}
           sync: true
-          # WARNING: this will overwrite existing blobs in your blob storage
-          overwrite: 'true'
           
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
