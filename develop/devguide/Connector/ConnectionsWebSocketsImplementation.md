@@ -79,7 +79,7 @@ When the WebSocket server closes the connection for some reason, the element goe
 
 ## Binary vs. Text Data Frames
 
-By default, DataMiner sends the WebSocket messages as binary data (i.e. a frame with Opcode 0x2, RFC 6455). Some WebSocket servers will reply with an \[ACK\] packet but ignore the message as the server does not support binary formatted messages.
+By default, DataMiner sends the WebSocket messages as binary data (i.e. a frame with Opcode 0x2, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)). Some WebSocket servers will reply with an \[ACK\] packet but ignore the message as the server does not support binary formatted messages.
 
 If the message you want to send only contains text and the server does not seem to support binary formatted messages, try to add `<WebSocketMessageType>text</WebSocketMessageType>` to the `<Command>`. This will result in the command being sent as UTF-8 encoded text (Opcode 0x1, [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455#section-11.8)). 
 
