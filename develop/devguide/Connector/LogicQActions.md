@@ -370,7 +370,7 @@ From DataMiner version 8.0.9 onwards, it is also possible to use [ProtocolName] 
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll;[ProtocolName].[ProtocolVersion].QAction.1.dll">
 ```
 
-A QAction results in a DLL which is also stored in this folder. This raises the question whether a QAction can reference another QAction to use functionality defined in the other QAction. This is indeed possible.
+A QAction results in a DLL that is stored in the same folder (`C:\Skyline DataMiner\ProtocolScripts`). This raises the question whether a QAction can reference another QAction to use functionality defined in the other QAction. This is indeed possible.
 
 Referencing another QAction is mainly done in case the referenced QAction contains generic code. This allows you to centralize code in one QAction that is then used by other QActions that make use of the functionality defined in this generic QAction. This is the recommended practice as it helps to avoid code duplication.
 
