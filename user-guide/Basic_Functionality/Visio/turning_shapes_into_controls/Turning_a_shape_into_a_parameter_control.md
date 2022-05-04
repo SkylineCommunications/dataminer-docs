@@ -7,10 +7,12 @@ uid: Turning_a_shape_into_a_parameter_control
 Using a shape data field of type **ParameterControl**, you can turn a shape into a parameter control.
 
 > [!TIP]
+>
 > - See also: [Adding options to a parameter control](xref:Adding_options_to_a_parameter_control)
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > PARAM]* page.
 
 > [!NOTE]
+>
 > - This feature only works in DataMiner Cube.
 > - Parameter controls are updated in real time.
 
