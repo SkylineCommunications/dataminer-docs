@@ -38,6 +38,30 @@ DataminerCube.exe
 
 Below you can find more information on the different options available to manage the start window of the DataMiner Cube desktop app, available from DataMiner 10.0.9 onwards.
 
+### Selecting your Cube update track
+
+From DataMiner 10.2.0 \[CU3]/10.2.6 onwards, Cube can automatically update to a more recent version than the DataMiner version installed on the server. This way you can use the latest Cube features as soon as they are released without having to wait for a server upgrade.
+
+In the Cube start window, you can select which Cube update track should be used:
+
+1. Click the cogwheel icon in the lower right corner of the start window.
+
+1. Select *Settings*.
+
+1. In the *Settings* dialog, select the update track you want to use:
+
+   - **Development**: Use the latest available development version.
+   - **Preview**: Use a preview of the latest DataMiner Cube version, even if it has not been released yet.
+   - **Release**: Use the latest released DataMiner Cube version, so you can enjoy all the latest and greatest features.
+   - **Release (delayed 2 weeks)**: Wait to use the latest released DataMiner Cube version until 2 weeks after the release date.
+
+1. Click *Save*.
+
+> [!NOTE]
+>
+> - You can also right-click the tile representing a particular DMS/DMA in the start window and select *Connect using* to select a specific Cube version to connect to that DMS/DMA with.
+> - Limitations to the possible Cube versions can be configured in the [system settings](xref:DMA_configuration_related_to_client_applications#managing-client-versions).
+
 ### Setting a DMS as the default DMS
 
 To set a DMS as the default DMS to connect to:
@@ -63,6 +87,20 @@ To connect to a DMS using specific URL arguments:
 1. Expand the *Advanced* section, specify the URL arguments and click *Save*.
 
 For more information on the possible URL arguments, see [Options for opening DataMiner Cube](#options-for-opening-dataminer-cube).
+
+### Configuring whether to connect with HTTPS only
+
+From DataMiner 10.2.6/10.3.0 onwards, you can configure whether Cube should connect to a specific DMS using HTTPS only or whether it can fall back to HTTP if HTTPS is not available.
+
+To do so:
+
+1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
+
+1. Expand the *Advanced* section.
+
+1. In the *Transport* box, select *HTTP or HTTPS* or *HTTPS only*, depending on your preference.
+
+1. Click *Save*.
 
 ### Removing a DMS from the start window
 
@@ -111,6 +149,16 @@ To view logging for the DataMiner Cube start window:
 
 1. Select *View logging*.
 
+### Checking the software version for the start window
+
+From DataMiner 10.2.6/10.3.0 onwards, you can check which software version the start window currently uses.
+
+To do so:
+
+1. Click the cogwheel icon in the lower right corner of the start window.
+
+1. Select *About*.
+
 ## Opening the browser application
 
 Open Internet Explorer and, depending on your setup, go to one of the following addresses:
@@ -141,6 +189,8 @@ You can pass a number of options when starting DataMiner Cube:
 - [autoslide=](#autoslide)
 
 - [buffer=](#buffer)
+
+- [bypassProxy=true](#bypassproxytrue)
 
 - [chain=](#chain)
 
@@ -247,6 +297,13 @@ Example:
 ```txt
 http://MyDMA1/Dataminercube/dataminercube.xbap?element=34/105&buffer=3:trace1
 ```
+
+### bypassProxy=true
+
+Available from DataMiner 10.2.0 \[CU3]/10.2.6 onwards. This option will allow Cube to communicate directly with the offline DMA in a Failover setup, so that it can request version info from both the online and the offline DMA.
+
+> [!NOTE]
+> This option is only applicable for the Cube desktop app, not for the browser app.
 
 ### chain=
 

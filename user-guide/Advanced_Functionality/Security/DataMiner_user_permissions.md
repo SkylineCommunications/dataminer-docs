@@ -1570,6 +1570,10 @@ Available from DataMiner 9.5.4 onwards. Permissions to edit credentials in the c
 
 Available from DataMiner 9.5.4 onwards. Permissions to delete credentials from the credentials library.
 
+### Modules \> System configuration \> System settings \> Manage client versions
+
+Available from DataMiner 10.2.0 \[CU3]/10.2.6 onwards. Permission to configure the client update mode.
+
 ### Modules \> System configuration \> Tools
 
 #### Modules \> System configuration \> Tools \> Synchronization / clean up unused
