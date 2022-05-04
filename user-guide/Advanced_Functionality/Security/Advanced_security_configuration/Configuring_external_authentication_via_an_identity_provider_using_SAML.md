@@ -86,6 +86,7 @@ To create a DataMiner metadata file, proceed as follows:
 DataMiner currently supports the following identity providers:
 
 - [Azure Active Directory](#azure-active-directory)
+- [Azure B2C](#azure-b2c)
 - [Okta](#okta)
 
 ### Azure Active Directory
@@ -244,6 +245,24 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
 1. Save the *DataMiner.xml* file.
 
 1. Restart the DataMiner Agent.
+
+### Azure B2C
+
+DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onwards. To configure this:
+
+1. Configure Azure B2C. See [Azure Active Directory B2C documentation | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory-b2c/).
+1. Create a DataMiner metadata file. You can do this in the same way as for [Azure AD](#creating-a-dataminer-metadata-file).
+1. Set up an Azure AD Enterprise application. You can do this in the same way as for [Azure AD](#setting-up-an-azure-ad-enterprise-application).
+1. Configure policies for Azure B2C. See [Tutorial: Create user flows and custom policies in Azure Active Directory B2C | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy).
+1. Get the metadata URL:
+
+   1. In Azure, go to *App registrations*, select your app, and select *Overview* > *Endpoints*.
+   1. Select the Azure AD B2C SAML metadata endpoint, e.g. `https://dataminerservices.b2clogin.com/dataminerservices.onmicrosoft.com/<policy-name>/Samlp/metadata`, and replace \<policy-name> with the name of the policy you created earlier.
+
+1. Configure DataMiner to import users and groups from Azure B2C. You can do this in the same way as for [Azure AD](#configuring-dataminer-to-import-users-and-groups-from-azure-ad).
+
+   > [!NOTE]
+   > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element in *DataMiner.xml* that refers to a claim containing a valid email address.
 
 ### Okta
 
