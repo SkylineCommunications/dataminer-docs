@@ -57,6 +57,44 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
+  
+  
+  deploy_job_Storage_Account:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    needs: build_job
+    name: Deploy Job to Storage account
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: _site
+          path: _site
+      - name: Upload the new files
+        uses: bacongobbler/azure-blob-storage-upload@main
+        with:
+          source_dir: _site
+          container_name: docs
+          connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }}
+          # Sync: true keeps the source and destination in sync,
+          # otherwise changed files and new would be pushed, but deleted wouldn't be removed.
+          sync: true
+          
+  reindex_azure_search:
+    runs-on: ubuntu-latest
+    needs: deploy_job_Storage_Account
+    name: Re-index azure search
+    steps:
+    - name: Azure Cognitive Search Reindex
+      # You may pin to the exact commit or the version.
+      # uses: andrewconnell/azure-search-index@ac64a40924771a415e01d52db4c1d557ecd3a99f
+      uses: andrewconnell/azure-search-index@1.0.1
+      with:
+        # Name of the Azure Cognitive Search resource.
+        azure-search-instance: srch-docs
+        # Search indexer to reindex
+        azure-search-indexer: azureblob-indexer
+        # Admin key used to connect to Azure Cognitive Search instance
+        azure-search-admin-key: ${{ secrets.AZURE_SEARCH_ADMIN_KEY_INDEXER }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
