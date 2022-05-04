@@ -305,6 +305,8 @@ You can enable or disable this for different types of anomaly detection:
 
    - *Level shift*: Enables or disables alarms for level shift anomalies.
 
+   - *Flatline monitor*: Enables or disables alarms for flatline anomalies. Available from DataMiner 10.2.6/10.3.0 onwards.
+
 > [!NOTE]
 > For more information on behavioral anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
