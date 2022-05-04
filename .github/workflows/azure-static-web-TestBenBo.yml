@@ -75,6 +75,7 @@ jobs:
           container_name: docs
           connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT_CONNECTION_STRING }}
           sync: true
+          
   reindex_azure_search:
     runs-on: ubuntu-latest
     needs: deploy_job_Storage_Account
@@ -90,7 +91,7 @@ jobs:
         # Search indexer to reindex
         azure-search-indexer: azureblob-indexer
         # Admin key used to connect to Azure Cognitive Search instance
-        azure-search-admin-key: C3E3EB2F8B9A323005377EFF8CA01720    
+        azure-search-admin-key: ${{ secrets.AZURE_SEARCH_ADMIN_KEY }}
           
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
