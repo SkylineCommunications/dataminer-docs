@@ -69,6 +69,46 @@ When using a shape of type **ParameterControls** to visualize a table in a Visio
    | ParameterControl        | ID of the table parameter.                                                                                      |
    | ParameterControlOptions | "CustomTextBoxInfo:", followed by the text that has to appear inside the filter box (e.g. "Enter filter here"). |
 
+## Adding a Refresh and/or Sort button to a table control
+
+When you use a shape of type **ParameterControls** to visualize a table in a Visio drawing, from DataMiner 10.2.6/10.3.0 onwards, you can add a *Refresh* button and/or a *Sort* button to that shape. To do so, use the *Refresh* and/or *Sort* parameter control options, respectively.
+
+For example, to add both buttons:
+
+1. Create three shapes and group them:
+
+   - A shape to contain the table.
+   - A shape representing the *Refresh* button.
+   - A shape representing the *Sort* button.
+
+1. Add the following shape data field to the shape that has to contain the table:
+
+   | Shape data field        | Value |
+   | ----------------------- | ----- |
+   | ParameterControlOptions | Table |
+
+1. Add the following shape data field to the shape representing the *Refresh* button:
+
+   | Shape data field        | Value   |
+   | ----------------------- | ------- |
+   | ParameterControlOptions | Refresh |
+
+1. Add the following shape data field to the shape representing the *Sort* button:
+
+   | Shape data field        | Value  |
+   | ----------------------- | ------ |
+   | ParameterControlOptions | Sort   |
+
+1. Add the following shape data fields to the group:
+
+   | Shape data field        | Value                                                                                                           |
+   | ----------------------- | --------------------------------------------------------------------------------------------------------------- |
+   | Element                 | Element ID or element name.                                                                                     |
+   | ParameterControl        | ID of the table parameter.                                                                                      |
+
+> [!NOTE]
+> The *Refresh* and *Sort* buttons will only be displayed when necessary.
+
 ## Table row key syntax
 
 You can refer to table cells in the following ways.

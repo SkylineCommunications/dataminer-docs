@@ -42,8 +42,10 @@ Possible options:
 - [Lite](#lite)
 - [MultipleValueSep](#multiplevaluesep)
 - [Oscilloscope](#oscilloscope)
+- [Refresh](#refresh)
 - [ShowTableName=true](#showtablenametrue)
 - [SingleSelection](#singleselection)
+- [Sort](#sort)
 - [Table](#table)
 - [TitleFont](#titlefont)
 - [UpdateSelectionOnLinkedVariables](#updateselectiononlinkedvariables)
@@ -290,6 +292,10 @@ MultipleValueSep=;
 
 Parameter controls that display analog parameters can be displayed either as a LED bar or as an oscilloscope. The user can switch between the two display modes via the context menu. Specify "Oscilloscope" in the **ParameterControlOptions** to make sure the parameter control is initially displayed as an oscilloscope.
 
+### Refresh
+
+See [Adding a Refresh and/or Sort button to a table control](xref:Turning_a_shape_into_a_parameter_control##adding-a-refresh-andor-sort-button-to-a-table-control).
+
 ### ShowTableName=true
 
 If the parameter control is based on a table parameter, from DataMiner version 10.0.0 up to 10.0.9, by default the table name is also displayed. This is no longer the case from DataMiner 10.0.10 onwards. To still have the table name displayed from this DataMiner version onwards, add the parameter control option "ShowTableName=true".
@@ -300,6 +306,10 @@ In a DataMiner protocol, a column can be linked to a Visio session variable, so 
 
 > [!NOTE]
 > For more information on how this is configured in the protocol, refer to the "SelectionSetVar" option in the [Developer documentation](https://aka.dataminer.services/DeveloperDocumentation).
+
+### Sort
+
+See [Adding a Refresh and/or Sort button to a table control](xref:Turning_a_shape_into_a_parameter_control##adding-a-refresh-andor-sort-button-to-a-table-control).
 
 ### Table
 
