@@ -289,9 +289,11 @@ When you click in the selection box in the *Condition* column, the following act
 
 ## Configuring anomaly detection alarms for specific parameters
 
-From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters.
+From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template.
 
-You can enable or disable this for different types of anomaly detection:
+If you enable this, prior to DataMiner 10.2.6/10.3.0, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters. From DataMiner 10.2.6/10.3.0 onwards, these alarms are generated whenever a change point is detected for which anomaly monitoring is enabled, even if this change point is not significant enough to be considered an anomaly.
+
+To enable or disable different types of anomaly alarm monitoring:
 
 1. Click the cogwheel button in the top-right corner of the alarm template editor.
 
