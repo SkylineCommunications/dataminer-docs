@@ -4,7 +4,7 @@ uid: Protocol.ExportRules.ExportRule-whereTag
 
 # whereTag attribute
 
-Specifies, together with the whereValue attribute, a condition so the export rule will only be applied if the condition is met.
+Specifies, together with the [whereValue](xref:Protocol.ExportRules.ExportRule-whereValue) attribute, a condition so the export rule will only be applied if the condition is met.
 
 ## Content Type
 
@@ -27,7 +27,7 @@ Example:
           <Position>
               <Page>General</Page>
               <Row>0</Row>
-             <Column>0</Column>
+              <Column>0</Column>
           </Position>
       </Positions>
   </Param>

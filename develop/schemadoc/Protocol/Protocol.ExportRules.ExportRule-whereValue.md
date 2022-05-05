@@ -4,7 +4,7 @@ uid: Protocol.ExportRules.ExportRule-whereValue
 
 # whereValue attribute
 
-Specifies, together with the whereTag attribute, a condition so the export rule will only be applied if the condition is met.
+Specifies, together with the [whereTag](xref:Protocol.ExportRules.ExportRule-whereTag) attribute, a condition so the export rule will only be applied if the condition is met.
 
 ## Content Type
 
