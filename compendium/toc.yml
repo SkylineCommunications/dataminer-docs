@@ -1,9 +1,0 @@
-- name: DataMiner Compendium
-  topicUid: CompendiumIndex
-  items:
-    - name: About DataMiner
-      topicUid: Comp_About_DataMiner
-    - name: About Skyline Communications
-      topicUid: Comp_About_Skyline
-    - name: DataMiner Cloud Platform
-      topicUid: Comp_DCP

@@ -18,8 +18,8 @@
     "content": [
       {
         "files": [
-          "compendium/**.md",
-          "compendium/**/toc.yml",
+          "dataminer-overview/**.md",
+          "dataminer-overview/**/toc.yml",
           "user-guide/**.md",
           "user-guide/**/toc.yml",
           "develop/**.md",
@@ -35,7 +35,7 @@
       {
         "files": [
           "images/**",
-          "compendium/images/**",
+          "dataminer-overview/images/**",
           "user-guide/images/**",
           "develop/images/**",
 		  "develop/schemadoc/Protocol/images/**",

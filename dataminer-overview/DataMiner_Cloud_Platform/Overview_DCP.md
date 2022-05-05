@@ -1,5 +1,5 @@
 ---
-uid: Comp_DCP
+uid: Overview_DCP
 ---
 
 # DataMiner Cloud Platform
@@ -18,7 +18,7 @@ The services are bundled into different tiers to which users can subscribe. Each
 > [!TIP]
 > For more information on how to access the DataMiner Cloud Platform, see [DataMiner Cloud Services](https://skyline.be/dataminer/cloud-services).
 
-![Cloud services](~/compendium/images/CC_cloud_services.png)
+![Cloud services](~/dataminer-overview/images/CC_cloud_services.png)
 
 ## Cloud-connected DataMiner Systems
 
@@ -44,13 +44,13 @@ The entire Skyline community, counting well over 350 subject-matter experts, use
 
 The DataMiner Project Collaboration module is specifically tailored towards managing design and development activities for modern ICT media and broadband solutions. It enables agile collaboration between members of a distributed DevOps team, ensuring the delivery of maximum value in a continuous manner.
 
-![DataMiner Project Collaboration](~/compendium/images/CC_collaboration_1.png)
+![DataMiner Project Collaboration](~/dataminer-overview/images/CC_collaboration_1.png)
 
 Skyline provides a full-fledged and fully integrated cloud-based collaboration ecosystem for project squads, named DataMiner Project Collaboration. It allows the squads, which typically consist of both Skyline staff and users of a DataMiner Solution, to manage the entire design and deployment process of the solution.
 
 When a DataMiner Solution is ordered, the intake process will train and prepare the users of the solution for the project. As part of this, they will be provided access to the Project Collaboration module in the DataMiner Cloud Platform.
 
-![Project Collaboration – Board view](~/compendium/images/CC_collaboration_2.png)
+![Project Collaboration – Board view](~/dataminer-overview/images/CC_collaboration_2.png)
 
 DataMiner Project Collaboration is tailored specifically towards the deployment of complex ICT media and broadband solutions and fully aligns with agile concepts. It features built-in workflows to ensure that the joint project squad can efficiently collaborate in a distributed constellation and focus their energy on maximizing the value delivery.
 
@@ -87,7 +87,7 @@ The DataMiner Live Sharing Service ensures that the right data is readily availa
 - **Secure**: Share data over a single secured connection via the DataMiner Cloud Platform.
 - **Automated**: Automatically share data with your stakeholders upon certain events in DataMiner (e.g. an incident, a new service set up for a customer, etc.).
 
-![Shared dashboard](~/compendium/images/CC_sharing.png)
+![Shared dashboard](~/dataminer-overview/images/CC_sharing.png)
 
 The Live Sharing Service includes multiple security gates:
 
@@ -117,7 +117,7 @@ You can control DataMiner via Microsoft Teams with commands such as "show alarms
 
 This allows intuitive scenario-driven interactive conversations, for example:
 
-![Teams bot conversation](~/compendium/images/CC_teams_conversation.png)
+![Teams bot conversation](~/dataminer-overview/images/CC_teams_conversation.png)
 
 > [!TIP]
 > See also: [DataMiner Teams bot](xref:DataMiner_Teams_bot)

@@ -1,5 +1,5 @@
 ---
-uid: Comp_About_Skyline
+uid: Overview_About_Skyline
 ---
 
 # About Skyline Communications
@@ -27,7 +27,7 @@ Founded in 1985, Skyline has decades of industry-specific NMS and OSS expertise.
 
 As a result of its continuous far-reaching innovation, Skyline has been recognized for its leadership in shaping the future of end-to-end multi-vendor network management and OSS solutions.
 
-![Awards](~/compendium/images/awards.png)
+![Awards](~/dataminer-overview/images/awards.png)
 
 > [!TIP]
 > See also: [Awards & achievements](https://www.skyline.be/skyline/awards)

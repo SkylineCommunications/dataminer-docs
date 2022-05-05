@@ -1,5 +1,5 @@
 ---
-uid: Comp_About_DataMiner
+uid: Overview_About_DataMiner
 ---
 
 # About DataMiner
