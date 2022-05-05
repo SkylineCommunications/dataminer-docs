@@ -73,7 +73,13 @@ jobs:
         with:
           source_dir: _site
           container_name: docs
+<<<<<<< HEAD:.github/workflows/azure-static-web-TestBenBo.yml
           connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT_CONNECTION_STRING }}
+=======
+          connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }}
+          # Sync: true keeps the source and destination in sync,
+          # otherwise changed files and new would be pushed, but deleted wouldn't be removed.
+>>>>>>> 2e8eedd42094a18fad9ac0537b90d278cfa77026:.github/workflows/azure-static-web-apps-victorious-sea-0e7978f03.yml
           sync: true
           
   reindex_azure_search:
@@ -87,12 +93,21 @@ jobs:
       uses: andrewconnell/azure-search-index@1.0.1
       with:
         # Name of the Azure Cognitive Search resource.
+<<<<<<< HEAD:.github/workflows/azure-static-web-TestBenBo.yml
         azure-search-instance: search-docs-testing
         # Search indexer to reindex
         azure-search-indexer: azureblob-indexer
         # Admin key used to connect to Azure Cognitive Search instance
         azure-search-admin-key: ${{ secrets.AZURE_SEARCH_ADMIN_KEY }}
           
+=======
+        azure-search-instance: srch-docs-001
+        # Search indexer to reindex
+        azure-search-indexer: docs-indexer-001
+        # Admin key used to connect to Azure Cognitive Search instance
+        azure-search-admin-key: ${{ secrets.AZURE_SEARCH_ADMIN_KEY_INDEXER }}
+
+>>>>>>> 2e8eedd42094a18fad9ac0537b90d278cfa77026:.github/workflows/azure-static-web-apps-victorious-sea-0e7978f03.yml
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
