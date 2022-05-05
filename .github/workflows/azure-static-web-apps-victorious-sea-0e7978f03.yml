@@ -91,9 +91,9 @@ jobs:
       uses: andrewconnell/azure-search-index@1.0.1
       with:
         # Name of the Azure Cognitive Search resource.
-        azure-search-instance: srch-docs
+        azure-search-instance: srch-docs-001
         # Search indexer to reindex
-        azure-search-indexer: azureblob-indexer
+        azure-search-indexer: docs-indexer-001
         # Admin key used to connect to Azure Cognitive Search instance
         azure-search-admin-key: ${{ secrets.AZURE_SEARCH_ADMIN_KEY_INDEXER }}
 
