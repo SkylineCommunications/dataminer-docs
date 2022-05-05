@@ -289,15 +289,13 @@ When you click in the selection box in the *Condition* column, the following act
 
 ## Configuring anomaly detection alarms for specific parameters
 
-From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template.
-
-If you enable this, prior to DataMiner 10.2.6/10.3.0, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters. From DataMiner 10.2.6/10.3.0 onwards, these alarms are generated whenever a change point is detected for which anomaly monitoring is enabled, even if this change point is not significant enough to be considered an anomaly.
+From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. If you enable this, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters.
 
 To enable or disable different types of anomaly alarm monitoring:
 
 1. Click the cogwheel button in the top-right corner of the alarm template editor.
 
-1. Select the option *Advanced configuration of anomaly detection*. Three extra columns will be displayed in the template editor.
+1. Select the option *Advanced configuration of anomaly detection*. Several extra columns will be displayed in the template editor.
 
 1. Click the toggle buttons in these columns to configure alarms for specific types of anomaly detection:
 
@@ -310,7 +308,9 @@ To enable or disable different types of anomaly alarm monitoring:
    - *Flatline monitor*: Enables or disables alarms for flatline anomalies. Available from DataMiner 10.2.6/10.3.0 onwards.
 
 > [!NOTE]
-> For more information on behavioral anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+>
+> - Prior to DataMiner 10.2.6/10.3.0, a behavioral change in the trend data of a parameter is only considered an anomaly if it is sufficiently significant with respect to other behavioral changes in the recent history of the parameter. From DataMiner 10.2.6/10.3.0 onwards, when you enable alarm monitoring for a specific type of anomaly, it is assumed that you wish to be alerted to all behavioral changes of that type. As such, behavioral changes of a specific type on a trended parameter will always be considered to be behavioral anomalies if anomaly monitoring is enabled on this type and parameter, even if the behavioral change point is not significantly different from other behavioral changes in the recent history of the trended parameter.
+> - For more information on behavioral anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
 ## Setting the autoclear options for alarms in an alarm template
 
