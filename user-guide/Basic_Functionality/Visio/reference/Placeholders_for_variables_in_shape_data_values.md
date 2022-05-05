@@ -575,11 +575,16 @@ This syntax consists of the following components:
 
   - **Property=*\<propName>***: The value of a custom property of the resource. The name of that custom property must be specified in \<propName>, e.g. *Property=State*.
 
-  - **InUse**: From DataMiner 10.3.0/10.2.3 onwards, you can specify *InUse* to make the placeholder indicate whether a resource is being used in any bookings (with the result "true" or "false"). This check is performed when the visual overview is opened or when the GUID or the resource itself is changed. Note that using this placeholder may affect performance in case the system contains a large number of bookings.
+  - **InUse**: From DataMiner 10.3.0/10.2.3 onwards, you can specify *InUse* to make the placeholder indicate whether a resource is being used in any bookings (with the result "true" or "false"). From DataMiner 10.3.0/10.2.6 onwards, this placeholder can also be used for a shape linked to an element, to indicate whether the element is being used in a resource, is a DVE parent of a function resource, or represents the physical device corresponding with a virtual function resource.
 
-  ```txt
-  [Resource:<GUID>,InUse]
-  ```
+    ```txt
+    [Resource:<GUID>,InUse]
+    ```
+
+    > [!NOTE]
+    >
+    > - Prior to DataMiner 10.2.6/10.3.0, the *InUse* check is only performed when the visual overview is opened or when the resource itself is changed.
+    > - Using the *InUse* placeholder may affect performance in case the system contains a large number of bookings.
 
 ### \[ServiceDefinition:\]
 

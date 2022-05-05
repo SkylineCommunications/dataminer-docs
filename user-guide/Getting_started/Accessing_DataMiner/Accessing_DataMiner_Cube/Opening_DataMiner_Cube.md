@@ -6,7 +6,7 @@ uid: Opening_DataMiner_Cube
 
 ## Opening the desktop application
 
-#### From DataMiner 10.0.9 onwards:
+### [From DataMiner 10.0.9 onwards](#tab/tabid-1)
 
 Open the DataMiner Cube desktop app via the shortcut on your desktop or in the start menu.
 
@@ -17,10 +17,11 @@ Click a tile to connect to the corresponding DMS. In case the DMS you want to co
 For more information on how to manage the start window of the Cube desktop app, see [Managing the start window of the DataMiner Cube desktop app](#managing-the-start-window-of-the-dataminer-cube-desktop-app).
 
 > [!NOTE]
+>
 > - If you want to open DataMiner Cube for multiple DataMiner Systems without closing the start window, keep the Ctrl key pressed while you click the tiles.
 > - If you have multiple monitors and want DataMiner Cube to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
 
-#### Prior to DataMiner 10.0.9:
+### [Prior to DataMiner 10.0.9](#tab/tabid-2)
 
 If you have installed the desktop DataMiner Cube application, execute the following command in the folder where you installed the application:
 
@@ -30,6 +31,8 @@ DataminerCube.exe
 
 > [!NOTE]
 > By default, the file is installed in the program files directory, in the folder *Skyline Communications\\DataMiner Cube*. However, it is possible to choose a different folder during installation.
+
+***
 
 ## Managing the start window of the DataMiner Cube desktop app
 
@@ -41,7 +44,7 @@ To set a DMS as the default DMS to connect to:
 
 1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
 
-2. Select *Set as default* in the pop-up window and click *Save*.
+1. Select *Set as default* in the pop-up window and click *Save*.
 
 ### Changing which DMA in a DMS you connect to
 
@@ -49,7 +52,7 @@ To specify a different DMA in a DMS to connect to:
 
 1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
 
-- Expand the *Agent* section, select the DMA and click *Save*.
+1. Expand the *Agent* section, select the DMA and click *Save*.
 
 ### Connecting to a DMS using URL arguments
 
@@ -57,7 +60,7 @@ To connect to a DMS using specific URL arguments:
 
 1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
 
-2. Expand the *Advanced* section, specify the URL arguments and click *Save*.
+1. Expand the *Advanced* section, specify the URL arguments and click *Save*.
 
 For more information on the possible URL arguments, see [Options for opening DataMiner Cube](#options-for-opening-dataminer-cube).
 
@@ -67,7 +70,7 @@ To remove the tile representing a DMS from the start window:
 
 1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
 
-2. Click the garbage can icon in the pop-up window.
+1. Click the garbage can icon in the pop-up window.
 
 ### Sorting tiles in groups
 
@@ -96,9 +99,9 @@ To filter the tiles in the start window:
 
 To specify whether the DataMiner Cube should start up when Windows is started:
 
-1.  Click the cogwheel icon in the lower right corner of the start window.
+1. Click the cogwheel icon in the lower right corner of the start window.
 
-2. Select or clear the option *Start with Windows*, depending on whether you want Cube to start with Windows or not.
+1. Select or clear the option *Start with Windows*, depending on whether you want Cube to start with Windows or not.
 
 ### Viewing logging for the start window
 
@@ -106,7 +109,7 @@ To view logging for the DataMiner Cube start window:
 
 1. Click the cogwheel icon in the lower right corner of the window.
 
-2. Select *View logging*.
+1. Select *View logging*.
 
 ## Opening the browser application
 
@@ -118,13 +121,14 @@ https://[DMA]/dataminercube
 ```
 
 > [!NOTE]
+>
 > - In the above-mentioned address, replace “\[DMA\]” by the IP address or the hostname of the DataMiner Agent you want to connect to.
-> - If DataMiner Cube has been set as the default client, it is not necessary to add <br>“*/dataminercube*” in the URL.
+> - If DataMiner Cube has been set as the default client, it is not necessary to add “*/dataminercube*” in the URL.
 > - DataMiner Cube will automatically disconnect when the DMA to which you are connected goes offline.
 > - It is good practice to encode URLs according to the W3C guidelines. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
 
 > [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise using HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
 ## Options for opening DataMiner Cube
 
@@ -163,10 +167,12 @@ You can pass a number of options when starting DataMiner Cube:
 - [workspace=](#workspace)
 
 > [!NOTE]
+>
 > - For the desktop application, prior to DataMiner 10.0.9, these options can only be passed along if you installed the application using an .msi file. From DataMiner 10.0.9 onwards, you can pass these options in the Cube start window by clicking ... in the top-right corner of the button representing the DMS you want to connect to, and specifying the URL arguments in the *Advanced* section.
 > - From DataMiner 10.1.3 onwards, if the Cube desktop app is installed, you can use the cube:// protocol to connect to a specific host. For example:
->     - cube://mydma?element=MyElement
->     - cube://10.11.12.13?view=12
+>
+>   - cube://mydma?element=MyElement
+>   - cube://10.11.12.13?view=12
 
 ### alarm=
 
@@ -255,8 +261,9 @@ Example:
     ```
 
 > [!NOTE]
+>
 > - It is advisable to also pass the element ID. If no element ID is specified, the first element of type “element manager” will be used.
-> - The chain name is not case sensitive.
+> - The chain name is not case-sensitive.
 
 ### debug=true
 
@@ -287,6 +294,7 @@ Example:
     ```
 
 > [!NOTE]
+>
 > - It is advisable to also pass the element ID and chain. If no element ID is specified, the first element of type “element manager” will be used. If no chain is specified, the first chain containing the specified filter will be used.
 > - When multiple filters are specified, only the lowest filter in the selected chain will be used. However, if no chain is specified, all filters are used to find the correct chain.
 > - If only one row matches the filter, an object will be loaded.
@@ -294,8 +302,7 @@ Example:
 > - URLs containing filters must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
 
 > [!TIP]
-> See also:
-> [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)
+> See also: [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)
 
 ### element=
 
@@ -343,8 +350,7 @@ http://localhost/maps/map.aspx?config=ExampleConfig&lat=42&long=12.30
 Available from DataMiner 9.5.1 onwards.
 
 > [!TIP]
-> See also:
-> [long=](#long)
+> See also: [long=](#long)
 
 ### long=
 
@@ -359,8 +365,7 @@ http://localhost/maps/map.aspx?config=ExampleConfig&lat=42&long=12.30
 Available from DataMiner 9.5.1 onwards.
 
 > [!TIP]
-> See also:
-> [lat=](#lat)
+> See also: [lat=](#lat)
 
 ### measpt=
 
@@ -416,6 +421,7 @@ http://MyDMA1/DataminerCube/dataminercube.xbap?element=34/105|34/106|34/107&pres
 ```
 
 > [!NOTE]
+>
 > - Take care when specifying more than one element in the URL. If you used a URL like the one in the second example above, all three elements would be opened in their own card, but as only the first one is a Spectrum Analyzer element, only that element would load the specified preset.
 > - Only public presets can be used, and their *(public)* suffix must be included in the URL.
 
@@ -469,6 +475,7 @@ Property names:
 
 > [!NOTE]
 > When you specify an inline preset definition, you have to define at least the following properties:
+>
 > - freqStart and freqStop, or
 > - freqCenter and freqSpan.
 
@@ -539,7 +546,7 @@ To do so, add the following:
 
 - A colon, followed by “*data*” or “*d*” for a data page or “*visual*” or “*v*” for a visual page.
 
-    If the page is not grouped under the data or visual pages, only add a colon.
+  If the page is not grouped under the data or visual pages, only add a colon.
 
 - A second colon, followed by the name of the page.
 
@@ -549,27 +556,27 @@ For example:
 
 - To open the subpage “ping” of the data page “performance” of the element with ID 48/70:
 
-    ```txt
-    http://MyDMA1/DataMinerCube/DataMinerCube.xbap?element=48/70:data:performance/ping
-    ```
+  ```txt
+  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?element=48/70:data:performance/ping
+  ```
 
 - To open the page “help” of the element with ID 48/70:
 
-    ```txt
-    http://MyDMA1/DataMinerCube/DataMinerCube.xbap?element=48/70::help
-    ```
+  ```txt
+  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?element=48/70::help
+  ```
 
 - To open the data page “Australia service” of the service with ID 48/105:
 
-    ```txt
-    http://MyDMA1/DataMinerCube/DataMinerCube.xbap?service=48/105:d:Australia Service
-    ```
+  ```txt
+  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?service=48/105:d:Australia Service
+  ```
 
 - To open the page “aggregation” of the view “SLC”:
 
-    ```txt
-    http://MyDMA1/DataMinerCube/DataMinerCube.xbap?view=SLC::aggregation
-    ```
+  ```txt
+  http://MyDMA1/DataMinerCube/DataMinerCube.xbap?view=SLC::aggregation
+  ```
 
 ## Combining URL options for DataMiner Cube
 

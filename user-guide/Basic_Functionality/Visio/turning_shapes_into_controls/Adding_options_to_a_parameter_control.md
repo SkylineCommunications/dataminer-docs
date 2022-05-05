@@ -7,6 +7,7 @@ uid: Adding_options_to_a_parameter_control
 If you used a shape data field of type **ParameterControl** to turn a shape into a parameter control, then you can use an additional shape data field of type **ParameterControlOptions** to configure the control settings.
 
 > [!TIP]
+>
 > - See also: [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control)
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > PARAM]* page.
 
@@ -41,8 +42,10 @@ Possible options:
 - [Lite](#lite)
 - [MultipleValueSep](#multiplevaluesep)
 - [Oscilloscope](#oscilloscope)
+- [Refresh](#refresh)
 - [ShowTableName=true](#showtablenametrue)
 - [SingleSelection](#singleselection)
+- [Sort](#sort)
 - [Table](#table)
 - [TitleFont](#titlefont)
 - [UpdateSelectionOnLinkedVariables](#updateselectiononlinkedvariables)
@@ -66,6 +69,7 @@ IncludeWrite|Lite|CheckBox
 
 > [!TIP]
 > See also:
+>
 > - [IncludeWrite](#includewrite)
 > - [Lite](#lite)
 
@@ -107,6 +111,7 @@ ColumnWidths:100,50,100,a
 ```
 
 > [!NOTE]
+>
 > - The width of an "autosize" column will not be recalculated when cell content changes, nor when the user scrolls the list (in order to avoid flickering). However, it will be recalculated when rows are added or removed.
 > - The autosize behavior of a column will be disabled if that column is resized manually. To re-enable the autosize behavior, the user has to double-click the column resize icon.
 
@@ -129,6 +134,7 @@ IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuff
 | bg.hovereditor   | The color of the background when hovering the mouse cursor over the editor part of the control. |
 
 > [!NOTE]
+>
 > - If no custom color is defined, the control will take the default color depending on the current Cube theme (white/black).
 > - Colors can be specified in one of the following hexadecimal formats: #RRGGBB, #AARRGGBB, RRGGBB, AARRGGBB. Values can be separated with a comma or a semicolon.
 
@@ -178,9 +184,9 @@ To do so, add the following shape data to the shape with the **ParameterControl*
 
 | Shape data field | Description                    |
 | ---------------- | ------------------------------ |
-| ParameterControlOptions | Set this field to _DoubleClickAction=OpenPage_. |
-| LinkOptions | The width and height of the undocked window that will be opened when the shape is double-clicked, in the format *Width=**x**\|Height=**x**.*<br> See [Configuring the size of the window](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing#configuring-the-size-of-the-window). |
-| VdxPage | Set this field to MyPage*\|Window,* where MyPage is a page name of the visual overview of the element containing the table. |
+| ParameterControlOptions | Set this field to *DoubleClickAction=OpenPage*. |
+| LinkOptions | The width and height of the undocked window that will be opened when the shape is double-clicked, in the format *Width=**x**\|Height=**x***. See [Configuring the size of the window](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing#configuring-the-size-of-the-window). |
+| VdxPage | Set this field to ***MyPage**\|Window*, where *MyPage* is a page name of the visual overview of the element containing the table. |
 
 For example:
 
@@ -237,7 +243,7 @@ TableRowFilter:106=sl*
 TableRowFilter:42002 in_range 1/5
 ```
 
-- Row filter: Display only rows where parameter 42002 has a value between 1 and 5.<br>For this example, advanced dynamic table filter syntax is used. For more information, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+- Row filter: Display only rows where parameter 42002 has a value between 1 and 5. For this example, advanced dynamic table filter syntax is used. For more information, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 ```txt
 TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1)
@@ -246,6 +252,7 @@ TableRowFilter:FULLFILTER=(PK == 0) OR (DK == 1)
 - Fullfilter syntax (supported from DataMiner 10.1.3 onwards): Display rows for which the primary key is 0 or the display key is 1.
 
 > [!NOTE]
+>
 > - As "TableRowFilter" is a server-side filter, for discrete parameters you should use the raw values instead of the display values in the filter.
 > - In the "TableRowFilter" and "IncludedPIDs" options, you can use placeholders like "\[Param:...\]", "\[Var:...\]", etc. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 > - To specify a client-side filter for a table parameter, use the "ClientSideRowFilter" option instead: [ClientSideRowFilter](#clientsiderowfilter).
@@ -285,6 +292,10 @@ MultipleValueSep=;
 
 Parameter controls that display analog parameters can be displayed either as a LED bar or as an oscilloscope. The user can switch between the two display modes via the context menu. Specify "Oscilloscope" in the **ParameterControlOptions** to make sure the parameter control is initially displayed as an oscilloscope.
 
+### Refresh
+
+See [Adding a Refresh and/or Sort button to a table control](xref:Turning_a_shape_into_a_parameter_control##adding-a-refresh-andor-sort-button-to-a-table-control).
+
 ### ShowTableName=true
 
 If the parameter control is based on a table parameter, from DataMiner version 10.0.0 up to 10.0.9, by default the table name is also displayed. This is no longer the case from DataMiner 10.0.10 onwards. To still have the table name displayed from this DataMiner version onwards, add the parameter control option "ShowTableName=true".
@@ -295,6 +306,10 @@ In a DataMiner protocol, a column can be linked to a Visio session variable, so 
 
 > [!NOTE]
 > For more information on how this is configured in the protocol, refer to the "SelectionSetVar" option in the [Developer documentation](https://aka.dataminer.services/DeveloperDocumentation).
+
+### Sort
+
+See [Adding a Refresh and/or Sort button to a table control](xref:Turning_a_shape_into_a_parameter_control##adding-a-refresh-andor-sort-button-to-a-table-control).
 
 ### Table
 
@@ -322,9 +337,9 @@ To do so, specify "TitleFont:", followed by one or more of the following font op
 
 Example:
 
-| Shape data              | Value                                                                                                                           |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| ParameterControlOptions | Lite\|TitleFont:Family=Calibri;Size=32;Stretch=Condensed;Weight=Bold;<br>Style=Italic;Underline\|ValueFont:Family=Arial;Size=14 |
+| Shape data              | Value                                                                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| ParameterControlOptions | Lite\|TitleFont:Family=Calibri;Size=32;Stretch=Condensed;Weight=Bold;Style=Italic;Underline\|ValueFont:Family=Arial;Size=14 |
 
 ### UpdateSelectionOnLinkedVariables
 
@@ -355,6 +370,6 @@ To do so, specify "ValueFont:", followed by one or more of the following font op
 
 Example:
 
-| Shape data              | Value                                                                                                                           |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| ParameterControlOptions | Lite\|TitleFont:Family=Calibri;Size=32;Stretch=Condensed;Weight=Bold;<br>Style=Italic;Underline\|ValueFont:Family=Arial;Size=14 |
+| Shape data              | Value                                                                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| ParameterControlOptions | Lite\|TitleFont:Family=Calibri;Size=32;Stretch=Condensed;Weight=Bold;Style=Italic;Underline\|ValueFont:Family=Arial;Size=14 |
