@@ -74,7 +74,7 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **show shares**: Shows the dashboards that have been shared with you.
 
-- **show view ‘*view name*’**: Shows the visual overview of the specified view
+- **show view ‘*view name*’**: Shows the visual overview of the specified view, as well as the alarm status and the number of active alarms. With the buttons in the response, you can request the alarms of the view or open the view in the Monitoring app via remote access.
 
 - **help**: Shows more detailed help information, if available.
 
