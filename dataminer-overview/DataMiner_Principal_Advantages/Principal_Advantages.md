@@ -55,7 +55,7 @@ Integrating new technologies, strategic changes in your business models, launchi
 - featuring powerful versioning and live run-time evolutions
 - supported by IDE toolset (DataMiner Integration Studio)
 - collaborative CI/CD setting
- 
+
 **Purpose designed**
 
 While DataMiner manages mainstream ICT infrastructure and resources like a champion, it really shines in a media & broadband context. Simply because it was purpose-designed by subject matter experts for this kind of ecosystem. Because at the end of the day, media & broadband is just much more than mainstream ICT.
@@ -64,4 +64,3 @@ While DataMiner manages mainstream ICT infrastructure and resources like a champ
 - integration of signal routing solutions (L-band, ASI, SDI or IP)
 - button control panels
 - media & broadband service end points (STBs, modems, OLTs, OTT software clients and apps, etc.)
-
