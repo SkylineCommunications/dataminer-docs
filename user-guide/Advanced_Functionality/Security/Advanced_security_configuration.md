@@ -8,7 +8,7 @@ In this section:
 
 - [Securing the DataMiner databases](xref:Database_security)
 
-- [Securing the Web Server](xref:WebServer_security)
+- [Securing the webserver](xref:HTTP_Headers)
 
 - [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
 
