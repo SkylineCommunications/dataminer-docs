@@ -54,10 +54,8 @@ $(function () {
       $('#searchinput').focus();
     });
     
-    searchButton.click();
-
     //the close button in the overlay
-	  var closeSearch = $('.closebtn');
+	var closeSearch = $('.closebtn');
     //attach a click handler to the close icon
     closeSearch.on('click', function () {
       $('#overlay').hide(); //hide the overlay
