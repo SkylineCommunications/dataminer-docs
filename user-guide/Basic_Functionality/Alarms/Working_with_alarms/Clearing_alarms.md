@@ -6,16 +6,8 @@ uid: Clearing_alarms
 
 By default, alarms are cleared automatically. However, if you set the AutoClear system setting to “false”, then all alarms will have to be cleared manually.
 
-- [Automatic versus manual alarm clearing](#automatic-versus-manual-alarm-clearing)
-
-- [Manually clearing an alarm](#manually-clearing-an-alarm)
-
-- [System-wide AutoClear setting](#system-wide-autoclear-setting)
-
-- [Overriding the default AutoClear setting on parameter level](#overriding-the-default-autoclear-setting-on-parameter-level)
-
 > [!NOTE]
-> - It is possible that because of database issues, duplicate alarms are created for column parameters. In that case, the oldest one will automatically be cleared, and the following comment will be added to the alarm:<br>*Detected duplicate alarm on column parameter. Clearing alarm for PID \[x\] with ROOTKey \[y\] found alarm with other ROOTKey \[z\]*
+> - It is possible that because of database issues, duplicate alarms are created for column parameters. In that case, the oldest one will automatically be cleared, and the following comment will be added to the alarm: *Detected duplicate alarm on column parameter. Clearing alarm for PID \[x\] with ROOTKey \[y\] found alarm with other ROOTKey \[z\]*
 > - In DataMiner 10.2.0/10.1.6, a protection mode has been added to avoid reduced performance of the system when an alarm storm happens that causes there to be a large number of clearable alarms at the same time. By default, when there are more than 1000 clearable alarm trees on a DMA, the newly generated clearable alarms will be closed instead of clearable. Once the number of clearable alarm trees has dropped to less than 100, this protection mode is lifted and newly generated alarms will be clearable again. Note that these default values can be customized in DataMiner.xml (see [DataMiner.xml](xref:DataMiner_xml#dataminerxml)).
 
 > [!TIP]
@@ -27,13 +19,13 @@ By default, alarms are cleared automatically. However, if you set the AutoClear 
 
 By default, a DataMiner alarm of which the severity returns to normal is automatically cleared by the system.
 
-![](~/user-guide/images/AlarmClearingAuto.jpg)
+![Automatic alarm clearing](~/user-guide/images/AlarmClearingAuto.jpg)
 
 ### About manual alarm clearing
 
 A DataMiner alarm of which the severity returns to normal can also be kept in a “clearable” state until a user clears it by hand. This prevents alarms from disappearing from the system before being explicitly cleared by a user.
 
-![](~/user-guide/images/AlarmClearingManual.jpg)
+![Manual alarm clearing](~/user-guide/images/AlarmClearingManual.jpg)
 
 > [!NOTE]
 > Alarms that reoccur before they have been cleared by a user will be linked to the original alarm. In other words, when the same alarm occurs several times in a short period of time, it will only have to be cleared once.

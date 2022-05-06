@@ -13,7 +13,7 @@ Use this method to retrieve the result of multiple tasks that were sent to the s
 
 | Item | Format | Description |
 |--|--|--|
-| Tickets | Array of string | The tickets that were returned by the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
+| tickets | Array of string | The tickets that were returned by the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
 
 ## Output
 

@@ -13,12 +13,12 @@ Use this method to retrieve the connection string (GUID) needed to be able to co
 
 | Item               | Format | Description                                                                              |
 |--------------------|--------|------------------------------------------------------------------------------------------|
-| Host               | String | The host name. Obsolete. Keep this field empty.                                          |
-| Login              | String | The username.                                                                           |
-| Password           | String | The password.                                                                            |
-| ClientAppName      | String | The name of the client application                                                       |
-| ClientAppVersion   | String | The version of the client application. Optional. Used in logging and information events. |
-| ClientComputerName | String | The name of the client computer. Optional. Used in logging and information events.       |
+| host               | String | The host name. Obsolete. Keep this field empty.                                          |
+| login              | String | The username.                                                                           |
+| password           | String | The password.                                                                            |
+| clientAppName      | String | The name of the client application                                                       |
+| clientAppVersion   | String | The version of the client application. Optional. Used in logging and information events. |
+| clientComputerName | String | The name of the client computer. Optional. Used in logging and information events.       |
 
 > [!NOTE]
 > -  Prior to DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12, for the *ClientAppName*, a registered app name must be specified. If this is not done, the connection will be removed after 10 minutes. To request a valid *ClientAppName*, contact your Skyline Technical Account Manager. From DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12 onwards, this registration is no longer required. The client app name is then merely used in the audit trail.

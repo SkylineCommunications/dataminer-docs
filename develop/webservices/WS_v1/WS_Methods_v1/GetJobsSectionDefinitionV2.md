@@ -10,9 +10,9 @@ Use this method to retrieve a job section definition from a specific domain. Ava
 
 | Item                | Format | Description                                          |
 |---------------------|--------|------------------------------------------------------|
-| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| SectionDefinitionID | String | The job section definition ID.                       |
-| DomainID            | String | The domain ID.                                       |
+| connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| sectionDefinitionID | String | The job section definition ID.                       |
+| domainID            | String | The domain ID.                                       |
 
 ## Output
 

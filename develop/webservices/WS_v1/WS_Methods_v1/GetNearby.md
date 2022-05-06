@@ -10,10 +10,10 @@ Use this method to retrieve all the nearby elements and services based on latitu
 
 | Item       | Format | Description                                                                      |
 |------------|--------|----------------------------------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| Latitude   | Double | Latitude.                                                                        |
-| Longitude  | Double | Longitude.                                                                       |
-| Accuracy   | Double | Accuracy (in meters).                                                            |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| latitude   | Double | Latitude.                                                                        |
+| longitude  | Double | Longitude.                                                                       |
+| accuracy   | Double | Accuracy (in meters).                                                            |
 
 ## Output
 

@@ -13,8 +13,8 @@ Use this method to delete a specific ticket type (called “domain” in the Tic
 
 | Item         | Format | Description                                          |
 |--------------|--------|------------------------------------------------------|
-| Connection   | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TicketTypeID | GUID   | The GUID of the ticket type.                         |
+| connection   | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| ticketTypeID | GUID   | The GUID of the ticket type.                         |
 
 ## Output
 

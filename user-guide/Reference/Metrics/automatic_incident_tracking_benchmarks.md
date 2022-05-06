@@ -16,5 +16,5 @@ uid: automatic_incident_tracking_benchmarks
 
 | \# | Specification | Scope | Metric | Remarks | Configuration |
 | -- | ------------- | ----- | ------ | ------- | ------------- |
-| 1 | Create group with 2,000 base alarms | DMS | 68 s | Create 2,000 alarms on the same parameter (in a table) and wait until all these alarms are grouped. Alarms are only grouped after the focus score has been calculated. | No other tests running. |
-| 2 | Clear group with 2,000 base alarms | DMS | 20 s | Clear all 2,000 base alarms from a group and wait until the group itself has been cleared. | No other tests running. |
+| 1 | Create group with 2,000 base alarms | DMS | 13 s | Create 2,000 alarms on the same parameter (in a table) and wait until all these alarms are grouped. Alarms are only grouped after the focus score has been calculated. | No other tests running. |
+| 2 | Clear group with 2,000 base alarms | DMS | 17 s | Clear all 2,000 base alarms from a group and wait until the group itself has been cleared. | No other tests running. |

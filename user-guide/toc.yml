@@ -763,6 +763,17 @@
       items:
         - name: Installing a DataMiner Agent
           topicUid: Installing_a_DataMiner_Agent
+          items:
+            - name: Installing DataMiner using the DataMiner Installer
+              topicUID: Installing_DM_using_the_DM_installer
+            - name: Unattended DataMiner installation
+              topicUID: Unattended_DM_installation
+            - name: Checking the DataMiner installation
+              topicUID: Checking_the_DM_installation
+            - name: Regarding antivirus software
+              topicUID: Regarding_antivirus_software
+            - name: Frequently asked questions
+              topicUID: Installing_a_DMA_FAQ
         - name: Configuring a DataMiner Agent
           topicUid: Configuring_a_DataMiner_Agent
           items:
@@ -995,7 +1006,7 @@
     - name: Security
       topicUid: security
       items:
-        - name: About DMS Security
+        - name: About DataMiner security
           topicUid: About_DMS_Security
           items:
             - name: User management
@@ -1010,64 +1021,82 @@
               topicUid: Encryption_in_DataMiner
             - name: Cloud connectivity and security
               topicUID: Cloud_connectivity_and_security
-        - name: Managing users
-          topicUid: Managing_users
-          items:
-            - name: Accessing security in System Center
-              topicUid: Accessing_security_in_System_Center
-            - name: Opening a user card
-              topicUid: Opening_a_user_card
-            - name: Adding a user
-              topicUid: Adding_a_user
-            - name: Deleting a user
-              topicUid: Deleting_a_user
-            - name: Viewing user information
-              topicUid: Viewing_user_information
-            - name: Editing a user’s details
-              topicUid: Editing_a_user’s_details
-            - name: Changing group membership of a user
-              topicUid: Changing_group_membership_of_a_user
-            - name: Disconnecting a user in DataMiner Cube
-              topicUid: Disconnecting_a_user_in_DataMiner_Cube
-        - name: Configuring user notifications
-          topicUid: Configuring_user_notifications
-          items:
-            - name: Configuring notifications in System Center
-              topicUid: Configuring_notifications_in_System_Center
-            - name: Configuring notifications directly from the Alarm Console or Surveyor
-              topicUid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
-            - name: Configuring alarm storm prevention for notifications
-              topicUid: Configuring_alarm_storm_prevention_for_notifications
-        - name: Managing user groups
-          topicUid: Managing_user_groups
-          items:
-            - name: Viewing information about user groups
-              topicUid: Viewing_information_about_user_groups
-            - name: Adding a user group
-              topicUid: Adding_a_user_group
-            - name: Configuring a user group
-              topicUid: Configuring_a_user_group
-            - name: Deleting a user group
-              topicUid: Deleting_a_user_group
         - name: DataMiner user permissions
           topicUid: DataMiner_user_permissions
-        - name: Assigning user settings to a user group
-          topicUid: Assigning_user_settings_to_a_user_group
-        - name: Configuring a set of user group settings
-          topicUid: Configuring_a_set_of_user_group_settings
-        - name: Managing predefined sets of credentials for SNMP authentication
-          topicUid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
-        - name: Frequently asked questions about user group settings
-          topicUid: Frequently_asked_questions_about_user_group_settings
+        - name: Basic security configuration
+          topicUid: Basic_security_configuration
+          items:
+            - name: Managing users
+              topicUid: Managing_users
+              items:
+                - name: Accessing security in System Center
+                  topicUid: Accessing_security_in_System_Center
+                - name: Opening a user card
+                  topicUid: Opening_a_user_card
+                - name: Adding a user
+                  topicUid: Adding_a_user
+                - name: Deleting a user
+                  topicUid: Deleting_a_user
+                - name: Viewing user information
+                  topicUid: Viewing_user_information
+                - name: Editing a user’s details
+                  topicUid: Editing_a_user’s_details
+                - name: Changing group membership of a user
+                  topicUid: Changing_group_membership_of_a_user
+                - name: Disconnecting a user in DataMiner Cube
+                  topicUid: Disconnecting_a_user_in_DataMiner_Cube
+            - name: Configuring user notifications
+              topicUid: Configuring_user_notifications
+              items:
+                - name: Configuring notifications in System Center
+                  topicUid: Configuring_notifications_in_System_Center
+                - name: Configuring notifications directly from the Alarm Console or Surveyor
+                  topicUid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
+                - name: Configuring alarm storm prevention for notifications
+                  topicUid: Configuring_alarm_storm_prevention_for_notifications
+            - name: Managing user groups
+              topicUid: Managing_user_groups
+              items:
+                - name: Viewing information about user groups
+                  topicUid: Viewing_information_about_user_groups
+                - name: Adding a user group
+                  topicUid: Adding_a_user_group
+                - name: Configuring a user group
+                  topicUid: Configuring_a_user_group
+                - name: Deleting a user group
+                  topicUid: Deleting_a_user_group
+            - name: Assigning user settings to a user group
+              topicUid: Assigning_user_settings_to_a_user_group
+            - name: Configuring a set of user group settings
+              topicUid: Configuring_a_set_of_user_group_settings
+            - name: Managing predefined sets of credentials for SNMP authentication
+              topicUid: Managing_predefined_sets_of_credentials_for_SNMP_authentication
+            - name: Frequently asked questions about user group settings
+              topicUid: Frequently_asked_questions_about_user_group_settings
         - name: Advanced security configuration
           topicUid: Advanced_security_configuration
           items:
             - name: Securing the DataMiner Databases
               topicUID: Database_security
               items:
-                - name: Cassandra general database
+                - name: Securing the Cassandra general database
                   topicUid: Security_Cassandra_general
-                - name: Elasticsearch database
+                  items:
+                    - name: Cassandra authentication
+                      topicUid: Cassandra_authentication
+                    - name: Cassandra authorization
+                      topicUid: Cassandra_authorization
+                    - name: Encryption in Cassandra
+                      topicUid: Security_Cassandra_TLS
+                    - name: Running Cassandra as a non-SYSTEM user (Windows)
+                      topicUid: Running_Cassandra_as_non-SYSTEM_user
+                    - name: Firewall ports used with Cassandra
+                      topicUid: Cassandra_firewall
+                    - name: Updating Cassandra
+                      topicUid: Cassandra_updating
+                    - name: Updating Java for Cassandra
+                      topicUid: Cassandra_Java_updating
+                - name: Securing the Elasticsearch database
                   topicUid: Security_Elasticsearch
             - name: Customizing the layout of notification messages
               topicUid: Customizing_the_layout_of_notification_messages
@@ -2100,6 +2129,19 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
+    - name: DataMiner Application Framework
+      topicUID: Application_framework
+      items:
+        - name: Accessing custom applications
+          topicUid: Accessing_custom_apps
+        - name: Creating custom applications
+          topicUid: Creating_custom_apps
+        - name: Editing a custom application
+          topicUid: Editing_custom_apps
+        - name: Configuring custom applications
+          topicUid: Configuring_custom_apps
+        - name: Deleting a custom application
+          topicUid: Deleting_custom_apps
 - name: DataMiner Standard Apps
   topicUid: Part5StandardApps
   items:
@@ -2128,6 +2170,8 @@
               topicUid: Configuration
             - name: Facilities
               topicUid: Facilities
+            - name: Activities
+              topicUid: Admin_activities
             - name: Settings
               topicUid: Settings
         - name: Reference
@@ -2190,6 +2234,8 @@
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
         - name: Linking your DataMiner account to your DCP account
           topicUid: Linking_your_DataMiner_and_DCP_account
+        - name: Cloud data storage policies
+          topicUID: Cloud_data_storage_policies
     - name: Project Collaboration
       topicUid: Collaboration
       items:
@@ -2276,6 +2322,10 @@
           topicUid: Controlling_remote_access
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
+        - name: Managing the nodes of a cloud-connected DMS
+          topicUID: Managing_cloud-connected_nodes
+    - name: DataMiner Teams bot
+      topicUid: DataMiner_Teams_bot
 - name: DataMiner Professional Services
   topicUid: Part52ProfessionalServices
   items:
@@ -2320,17 +2370,6 @@
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
   items:
-    - name: Frequently asked questions
-      topicUid: faq
-      items:
-        - name: General configuration
-          topicUid: General_configuration
-        - name: IDs of views, elements, services, redundancy groups and parameters
-          topicUid: IDs_of_views_elements_services_redundancy_groups_and_parameters
-        - name: Databases
-          topicUid: Databases1
-        - name: DataMiner client applications
-          topicUid: DataMiner_client_applications
     - name: Error messages
       topicUid: ErrorMessages
       items:
@@ -2377,6 +2416,13 @@
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
               topicUid: Changing_the_maximum_size_of_DataMiner_log_files
+    - name: Troubleshooting procedures
+      topicUid: Troubleshooting_procedures
+      items:
+        - name: Investigating NATS issues
+          topicUid: Investigating_NATS_Issues
+        - name: Sharing dashboard window does not disappear
+          topicUID: Sharing_dashboard_window_does_not_disappear
 - name: Reference
   topicUid: Part7Reference
   items:
@@ -2443,8 +2489,6 @@
     - name: Tools
       topicUid: DataminerTools
       items:
-        - name: DataMiner Teams bot
-          topicUid: DataMiner_Teams_bot
         - name: DMS Alerter
           topicUid: DMS_Alerter
           items:
@@ -2463,6 +2507,8 @@
               topicUid: Taskbar_Utility_shortcut_menu
             - name: Taskbar Utility command line options
               topicUid: Taskbar_Utility_command_line_options
+        - name: SLLogCollector
+          topicUid: SLLogCollector
         - name: SLNetClientTest tool
           topicUid: SLNetClientTest_tool
           items:
@@ -2545,5 +2591,16 @@
           topicUid: view_benchmarks
         - name: Visual Overview benchmarks
           topicUid: visual_overview_benchmarks
+    - name: Frequently asked questions
+      topicUid: faq
+      items:
+        - name: General configuration
+          topicUid: General_configuration
+        - name: IDs of views, elements, services, redundancy groups and parameters
+          topicUid: IDs_of_views_elements_services_redundancy_groups_and_parameters
+        - name: Databases
+          topicUid: Databases1
+        - name: DataMiner client applications
+          topicUid: DataMiner_client_applications
     - name: Glossary
       topicUid: glossary

@@ -24,7 +24,7 @@ On a DataMiner Agent you can find different kinds of “objects”, representing
 
 | Concept | Description |
 |--|--|
-| An element | A device that is monitored by the DataMiner System. |
+| An element | A data source that is monitored by the DataMiner System. |
 | A parameter | A variable that refers to pieces of data in the system. Its value may be detected by DataMiner, or may depend on user input. Values may be part of a range limited by a particular minimum and maximum, or part of a limited set of predetermined values. |
 | A service | A group of elements or partial elements, combined from the perspective of a particular business aspect. As such, a DataMiner service can reflect all components required for an actual business service. |
 | A view | A folder that can contain elements, services and other DataMiner components. Logically combining components in a view allows the user to quickly access all components that belong together in some way. |

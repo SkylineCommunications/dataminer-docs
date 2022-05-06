@@ -10,11 +10,11 @@ Use this method to retrieve the possible values of a particular topology field o
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ElementID | Integer | The CPE element ID. |
-| FieldPID | Integer | The parameter ID that is used to request possible field values, retrieved via the GetTopologyFieldsForCPEChain method. See [GetTopologyFieldsForCPEChain](xref:GetTopologyFieldsForCPEChain). |
-| Filters | Array of string | A string array of filters in the format “VALUE=TableIndexPID == theSelectedValue“. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| elementID | Integer | The CPE element ID. |
+| fieldPID | Integer | The parameter ID that is used to request possible field values, retrieved via the GetTopologyFieldsForCPEChain method. See [GetTopologyFieldsForCPEChain](xref:GetTopologyFieldsForCPEChain). |
+| filters | Array of string | A string array of filters in the format “VALUE=TableIndexPID == theSelectedValue“. |
 
 ## Output
 

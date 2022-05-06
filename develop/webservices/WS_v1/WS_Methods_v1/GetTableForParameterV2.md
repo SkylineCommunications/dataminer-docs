@@ -10,11 +10,11 @@ Use this method as an alternative to the GetTableForParameter method, in order t
 
 | Item        | Format           | Description                                                                      |
 |-------------|------------------|----------------------------------------------------------------------------------|
-| Connection  | String           | The connection ID.                                                               |
-| DmaID       | Integer          | The DataMiner Agent ID.                                                          |
-| ElementID   | Integer          | The element ID.                                                                  |
-| ParameterID | Integer          | The parameter ID.                                                                |
-| Filters     | Array of strings | One or more filters, separated by semicolons (“;”).<br> See [Filters](#filters). |
+| connection  | String           | The connection ID.                                                               |
+| dmaID       | Integer          | The DataMiner Agent ID.                                                          |
+| elementID   | Integer          | The element ID.                                                                  |
+| parameterID | Integer          | The parameter ID.                                                                |
+| filters     | Array of strings | One or more filters, separated by semicolons (“;”).<br> See [Filters](#filters). |
 
 ### Filters
 

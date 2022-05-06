@@ -25,8 +25,8 @@ To execute a method asynchronously, do the following:
 
 | Item       | Format          | Description                               |
 |------------|-----------------|-------------------------------------------|
-| Method     | String          | The name of the method.                   |
-| Parameters | Array of string | The arguments to be passed to the method. |
+| method     | String          | The name of the method.                   |
+| parameters | Array of string | The arguments to be passed to the method. |
 
 ## Output
 

@@ -10,8 +10,8 @@ Use this method to retrieve the names of all files attached to a specific job. A
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| JobID      | String | The job ID.                                          |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| jobID      | String | The job ID.                                          |
 
 ## Output
 

@@ -13,8 +13,8 @@ Use this method to update an existing ticket.
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
-| Ticket | Array | Array similar to the DMATicketNew array specified when creating a ticket, but with in addition the DataMiner ID and ticket ID of the ticket you want to update. |
+| connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
+| ticket | Array | Array similar to the DMATicketNew array specified when creating a ticket, but with in addition the DataMiner ID and ticket ID of the ticket you want to update. |
 
 > [!TIP]
 > See also: [CreateTicket](xref:CreateTicket)

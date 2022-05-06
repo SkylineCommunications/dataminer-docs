@@ -10,9 +10,9 @@ Use this method to retrieve the list of all the elements based on a particular p
 
 | Item            | Format | Description                                          |
 |-----------------|--------|------------------------------------------------------|
-| Connection      | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ProtocolName    | String | The name of the protocol.                            |
-| ProtocolVersion | String | The protocol version.                                |
+| connection      | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| protocolName    | String | The name of the protocol.                            |
+| protocolVersion | String | The protocol version.                                |
 
 ## Output
 

@@ -10,10 +10,10 @@ Use this method to update a specific note for a particular element.
 
 | Item       | Format  | Description                                                                          |
 |------------|---------|--------------------------------------------------------------------------------------|
-| Connection | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                              |
-| ElementID  | Integer | The ID of the element for which the note should be updated.                          |
-| Note.ID    | Integer | The ID of the note.                                                                  |
+| connection | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                              |
+| elementID  | Integer | The ID of the element for which the note should be updated.                          |
+| note.ID    | Integer | The ID of the note.                                                                  |
 
 ## Output
 

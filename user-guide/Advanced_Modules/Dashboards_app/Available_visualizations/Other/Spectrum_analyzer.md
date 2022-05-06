@@ -4,7 +4,7 @@ uid: DashboardSpectrumAnalyzer
 
 # Spectrum analyzer
 
-This dashboard component can be used to display a spectrum graph. Available from DataMiner 10.0.10 onwards.
+This component can be used to display a spectrum graph. Available from DataMiner 10.0.10 onwards.
 
 To configure the component:
 
@@ -14,9 +14,9 @@ To configure the component:
 
 Please note the following regarding this component.
 
-- The displayed trace colors and grid colors depend on the preset and cannot be changed in the dashboard configuration. The same goes for the background color and text color of the spectrum graph, and for the show/hide settings for the grid and for axis labels.
+- The displayed trace colors and grid colors depend on the preset and cannot be changed in the component configuration. The same goes for the background color and text color of the spectrum graph, and for the show/hide settings for the grid and for axis labels.
 
-- You can let the dashboard user select the spectrum preset by adding a drop-down feed component as a data source for the spectrum analyzer component. Use the *Spectrum presets* group as a data source for the feed component and then add a protocol filter to configure it.
+- You can let the user select the spectrum preset by adding a drop-down feed component as a data source for the spectrum analyzer component. Use the *Spectrum presets* group as a data source for the feed component and then add a protocol filter to configure it.
 
 - To add a spectrum buffer to a feed component, you can either add an individual spectrum buffer, or add the spectrum buffers group and then add a spectrum element filter.
 
@@ -28,8 +28,8 @@ Please note the following regarding this component.
 
   1. Optionally, add a spectrum preset filter.
 
-  1. Add a list feed to the dashboard (see [List](xref:DashboardListFeed)) and add the spectrum session feed from your spectrum analyzer as its input.
+  1. Add a list feed component (see [List](xref:DashboardListFeed)) and add the spectrum session feed from your spectrum analyzer as its input.
 
-  The dashboard will then show a list of all the available measurement points, with a colored LED. This LED will be a filled circle for the active measurement point and an empty circle for other measurement points. If measurement points are selected in the list, this will update the spectrum session, so that the spectrum analyzer visualization shows those measurement points.
+  A list of all the available measurement points will then be shown, with a colored LED. This LED will be a filled circle for the active measurement point and an empty circle for other measurement points. If measurement points are selected in the list, this will update the spectrum session, so that the spectrum analyzer visualization shows those measurement points.
 
 - In DataMiner 10.0.10 only, it was possible to configure a trigger action on a spectrum analyzer component, so that clicking the component opened another dashboard. However, this feature is no longer available from DataMiner 10.0.11 onwards.

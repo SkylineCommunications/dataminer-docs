@@ -13,12 +13,12 @@ Use this method to update the value of a parameter linked to an element (referen
 
 | Item       | Format  | Description                                                           |
 |------------|---------|-----------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [Connect](xref:Connect).                         |
-| DmaID      | Integer | The DataMiner Agent ID.                                               |
+| connection | String  | The connection ID. See [Connect](xref:Connect).                         |
+| DMAID      | Integer | The DataMiner Agent ID.                                               |
 | ElementID  | Integer | The element ID.                                                       |
 | ParamName  | String  | The parameter name.                                                   |
-| ParamPKey  | Object  | The primary key of a row. Available from DataMiner 9.5.1 onwards. |
-| ParamDKey  | Object  | The display key of a row. Available from DataMiner 9.5.1 onwards. |
+| paramPKey  | Object  | The primary key of a row. Available from DataMiner 9.5.1 onwards. |
+| paramDKey  | Object  | The display key of a row. Available from DataMiner 9.5.1 onwards. |
 | ParamValue | Object  | The new parameter value.                                              |
 
 > [!NOTE]

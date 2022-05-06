@@ -10,8 +10,8 @@ Use this method to retrieve all domains that a specific section definition is li
 
 | Item                | Format | Description                                          |
 |---------------------|--------|------------------------------------------------------|
-| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| SectionDefinitionID | String | The ID of the job section definition.                |
+| connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| sectionDefinitionID | String | The ID of the job section definition.                |
 
 ## Output
 

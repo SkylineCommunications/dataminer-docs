@@ -10,10 +10,10 @@ Use this method to remove a specific note from a particular element.
 
 | Item       | Format  | Description                                                                          |
 |------------|---------|--------------------------------------------------------------------------------------|
-| Connection | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                              |
-| ElementID  | Integer | The ID of the element from which the note should be removed.                         |
-| NoteID     | Integer | The ID of the note.                                                                  |
+| connection | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                              |
+| elementID  | Integer | The ID of the element from which the note should be removed.                         |
+| noteID     | Integer | The ID of the note.                                                                  |
 
 ## Output
 

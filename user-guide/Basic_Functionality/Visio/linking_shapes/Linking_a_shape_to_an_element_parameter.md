@@ -197,6 +197,9 @@ Configure the shape data as follows:
     > [!TIP]
     > See also: [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 
+> [!NOTE]
+> To make element shapes display the average value, minimum value, or maximum value of a parameter they are linked to, you can use the placeholders `[average value]`, `[minimum value]`, and `[maximum value]` in the shape text. These placeholders will only show values for history parameter values based on average trend data.
+
 ## Options for shapes linked to parameters
 
 In shapes linked to parameters, several options can be specified within the **Parameter** shape data field:

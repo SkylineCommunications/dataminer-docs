@@ -11,9 +11,9 @@ Use this method to cancel an asynchronous request for a specific ticket.
 
 ## Input
 
-| Item   | Format | Description                                                                                    |
-|--------|--------|------------------------------------------------------------------------------------------------|
-| Ticket | String | The ticket returned by the *ExecuteGenericAsyncRequest* method. |
+| Item   | Format | Description                                                     |
+|--------|--------|-----------------------------------------------------------------|
+| ticket | String | The ticket returned by the *ExecuteGenericAsyncRequest* method. |
 
 ## Output
 

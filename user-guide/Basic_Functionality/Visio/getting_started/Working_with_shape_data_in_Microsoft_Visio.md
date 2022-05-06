@@ -23,24 +23,24 @@ To open this pane:
 
 1. Select the page, the shape or the group of shapes to which you want to add data.
 
-    For more information on how to group shapes, see [Grouping shapes](xref:Grouping_shapes).
+   For more information on how to group shapes, see [Grouping shapes](xref:Grouping_shapes).
 
-2. Right-click in the *Shape Data* pane, and click *Define Shape Data*.
+1. Right-click in the *Shape Data* pane, and click *Define Shape Data*.
 
-3. In the *Define Shape Data* dialog box, click *New*, and then do the following:
+1. In the *Define Shape Data* dialog box, click *New*, and then do the following:
 
-    1. In the *Label* box, enter the name of the data field. Example: *Element*, *Execute*, *Link*, etc.
+   1. In the *Label* box, enter the name of the data field. Example: *Element*, *Execute*, *Link*, etc.
 
-        For a complete overview of all DataMiner shape data fields, see [Overview of DataMiner shape data fields](xref:Overview_of_DataMiner_shape_data_fields).
+      For a complete overview of all DataMiner shape data fields, see [Overview of DataMiner shape data fields](xref:Overview_of_DataMiner_shape_data_fields).
 
-    2. In the *Type* list, select “String”.
+   1. In the *Type* list, select “String”.
 
-    3. In the *Value* box, enter the value. Example: *112/1457*, *MyElement*, *Script:MyScript*, *#http://www.skyline.be*, ...
+   1. In the *Value* box, enter the value. Example: *112/1457*, *MyElement*, *Script:MyScript*, *#http://www.skyline.be*, ...
 
-    > [!NOTE]
-    > When you open the *Define Shape Data* dialog box, you might notice a data item named “Property1”. Instead of creating a new data item, you can also rename that “Property1” item that Visio has created for you.
+   > [!NOTE]
+   > When you open the *Define Shape Data* dialog box, you might notice a data item named “Property1”. Instead of creating a new data item, you can also rename that “Property1” item that Visio has created for you.
 
-4. Click OK.
+1. Click OK.
 
 ## Using DataMiner features in Visio
 
@@ -57,17 +57,17 @@ To use the DataMiner stencils in Visio:
 
 1. In the *Shapes* pane, go to *More Shapes* > *DataMiner*.
 
-2. Select the group of stencils you want to use.
+1. Select the group of stencils you want to use.
 
-    Currently the following groups of stencils are available:
+   Currently, the following groups of stencils are available:
 
-    - *Buttons*: Contains various kinds of buttons, including action buttons, page buttons and toggle buttons.
+   - *Buttons*: Contains various kinds of buttons, including action buttons, page buttons and toggle buttons.
 
-    - *Icons*: Contains a collection of general and DataMiner-specific icons, such as a satellite, antenna, filter, redundancy group, ticket, etc.
+   - *Icons*: Contains a collection of general and DataMiner-specific icons, such as a satellite, antenna, filter, redundancy group, ticket, etc.
 
-    - *KPI*: Contains stencils that can be used to display information on one or more parameters. There are also blocks available with preconfigured connection points, so that you can easily show the logical connections between parameters.
+   - *KPI*: Contains stencils that can be used to display information on one or more parameters. There are also blocks available with preconfigured connection points, so that you can easily show the logical connections between parameters.
 
-3. Drag the stencils you want to use from the *Shapes* pane to the drawing.
+1. Drag the stencils you want to use from the *Shapes* pane to the drawing.
 
 > [!NOTE]
 > To use the stencils in Visio, Automation events need to be enabled in the Visio options (Under *Visio Options* > *Advanced* > *General*).
@@ -76,9 +76,9 @@ To use the DataMiner stencils in Visio:
 
 1. Open a Visio drawing by right-clicking a Visio drawing in DataMiner Cube and selecting *Edit in Visio*.
 
-2. Go to the *Add-ins* menu in Visio and click *Advanced editing*.
+1. Go to the *Add-ins* menu in Visio and click *Advanced editing*.
 
-    The *Advanced editing* panel will be opened. This panel will remain available until you close the Visio application.
+   The *Advanced editing* panel will be opened. This panel will remain available until you close the Visio application.
 
 ### Using the “Advanced editing” panel
 
@@ -92,27 +92,33 @@ The panel can be used as follows:
 
 - To add a data item to the page:
 
-    1. Click the page background, so that no shapes are selected.
+  1. Click the page background, so that no shapes are selected.
 
-    2. In the *Advanced editing* panel, click *Add page data*.
+  1. In the *Advanced editing* panel, click *Add page data*.
 
-    3. Select a data item in the drop-down list.
+  1. Select a data item in the drop-down list.
 
-    4. In the value box next to the data item, specify the value.
+  1. In the value box next to the data item, specify the value.
 
 - To add a data item to a shape:
 
-    1. Select the shape.
+  1. Select the shape.
 
-    2. In the *Advanced editing* panel, click *Add shape data*.
+  1. In the *Advanced editing* panel, click *Add shape data*.
 
-    3. Select a data item in the drop-down list.
+  1. Select a data item in the drop-down list.
 
-    4. In the value box next to the data item, specify the value.
+  1. In the value box next to the data item, specify the value.
 
 - To change the value of an existing data item, simply specify the new value in the value box.
 
-    > [!NOTE]
-    > - To add a placeholder (i.e. a dynamic part) in a value, add a square bracket (“\[“), select the placeholder from the list, and press TAB.
+  > [!NOTE]
+  > To add a placeholder (i.e. a dynamic part) in a value, add a square bracket (“\[“), select the placeholder from the list, and press TAB.
 
 - To change one of the data items to a different data item, in the data box, specify a different item. If you specify a data item that is unknown to DataMiner or that is already in the list, it will be highlighted.
+
+- From DataMiner 10.2.5/10.3.0, the following special options are available via the "..." button in the top-right corner of the *Advanced Editing* panel:
+
+  - *Add theming*: Adds the following theme options to the page-level *Options* data field: `#000000=ThemeForeground|#FF0000=ThemeAccentColor|#FFFFFF=ThemeBackground`. If no page-level *Options* data field exists yet, it will be created. For more information, see [#RRGGBB=ThemeForeground\|#RRGGBB=ThemeAccentColor\|#RRGGBB=ThemeBackground](xref:Overview_of_page_and_shape_options#rrggbbthemeforegroundrrggbbthemeaccentcolorrrggbbthemebackground).
+
+  - *Add pretty hover*: Adds the `HoverType=Geometry` option to the page-level *Options* data field. If no page-level *Options* data field exists yet, it will be created. For more information, see [HoverType=Geometry](xref:Overview_of_page_and_shape_options#hovertypegeometry).

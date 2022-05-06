@@ -10,9 +10,9 @@ Use this method to retrieve all available monitors for a particular spectrum ele
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                          |
-| ElementID  | Integer | The element ID of the spectrum analyzer element.                                 |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                          |
+| elementID  | Integer | The element ID of the spectrum analyzer element.                                 |
 
 ## Output
 

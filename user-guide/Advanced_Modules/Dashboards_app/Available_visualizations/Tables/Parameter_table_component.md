@@ -4,7 +4,7 @@ uid: DashboardParameterTable
 
 # Parameter table
 
-This dashboard component displays a data table of an element.
+This component displays a data table of an element.
 
 To configure the component:
 
@@ -22,4 +22,4 @@ To configure the component:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
-   - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other dashboard components when you hover the mouse pointer over it in order to show as much data as possible.
+   - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other components when you hover the mouse pointer over it in order to show as much data as possible.

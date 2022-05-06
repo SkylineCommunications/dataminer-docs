@@ -24,6 +24,17 @@ To add a new function to the function XML file:
     - configure the interfaces, and
     - click *OK*.
 
+To edit a function:
+
+1. In the *Function* selection box, select the function you want to edit, and click the edit icon.
+1. In the *Edit function...* window,
+
+    - change the name of the function,
+    - select a profile,
+    - select an entry point,
+    - configure the interfaces, and
+    - click *OK*.
+
 To delete a function from the function XML file:
 
 1. In the *Function* selection box, select the function you want to delete, and click the red X.

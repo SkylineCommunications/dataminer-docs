@@ -23,5 +23,4 @@ Thanks to this method of alarm linking, (nearly) every alarm in the DataMiner Sy
 > If an alarm update does not change the severity of the alarm, from DataMiner 10.0.12 onwards, the alarm record can be combined with the previous records into one consolidated event. This behavior can be enabled in the MaintenanceSettings.xml file. For more information, see [AlarmSettings.MustSquashAlarms](xref:MaintenanceSettings_xml#alarmsettingsmustsquashalarms).
 
 > [!TIP]
-> See also:
-> [Clearing alarms](xref:Clearing_alarms)
+> See also: [Clearing alarms](xref:Clearing_alarms)

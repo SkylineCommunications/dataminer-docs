@@ -10,8 +10,8 @@ Use this method to create a job template.
 
 | Item       | Format         | Description                                                        |
 |------------|----------------|--------------------------------------------------------------------|
-| Connection | String         | The connection string. See [ConnectApp](xref:ConnectApp).           |
-| Template   | DMAJobTemplate | See [DMAJobTemplate](xref:DMAJobTemplate). |
+| connection | String         | The connection string. See [ConnectApp](xref:ConnectApp).           |
+| template   | DMAJobTemplate | See [DMAJobTemplate](xref:DMAJobTemplate). |
 
 ## Output
 

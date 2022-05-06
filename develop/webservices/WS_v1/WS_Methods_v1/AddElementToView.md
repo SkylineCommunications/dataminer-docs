@@ -10,10 +10,10 @@ Use this method to add an element to a specified view.
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                              |
-| ElementID  | Integer | The element ID.                                      |
-| ViewID     | Integer | The view ID.                                         |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                              |
+| elementID  | Integer | The element ID.                                      |
+| viewID     | Integer | The view ID.                                         |
 
 ## Output
 

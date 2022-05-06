@@ -7,13 +7,13 @@ uid: Conditionally_showing_or_hiding_a_page_of_a_Visio_drawing
 A page of a Visio drawing can be shown or hidden:
 
 - depending on the current value of a parameter or a property (see [Depending on the current value of a parameter or a property](#depending-on-the-current-value-of-a-parameter-or-a-property)).
-
 - depending on the DataMiner client application that is being used (see [Depending on the DataMiner client application that is being used](#depending-on-the-dataminer-client-application-that-is-being-used)).
 
 If a page is hidden, it will not be displayed in the tree view of a card navigation pane.
 
 > [!NOTE]
 > - If a user opens the Visual pages of a card, but all Visio pages are hidden, e.g. because of conditional hiding, a line of type Info will be added to the Cube logging to indicate this.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[misc > CUBE ONLY]* page.
 
 ## Depending on the current value of a parameter or a property
 
@@ -30,7 +30,7 @@ Hidden=[ParameterOrProperty];Condition;Condition;...
 
 ### Examples
 
-If you use the following option, the page will be visible if property “VisiblePage” contains “Value3”:
+If you use the following option, the page will be visible if property *VisiblePage* contains "Value3":
 
 ```txt
 Visible=[Property:VisiblePage];=Value3
@@ -45,7 +45,7 @@ Hidden=[Param:*,177];=0;=1;=3
 ### Condition operators
 
 | Operator | Description              |
-|----------|--------------------------|
+| -------- | ------------------------ |
 | =        | equal to                 |
 | \>=      | greater than or equal to |
 | \>       | greater than             |
@@ -54,16 +54,14 @@ Hidden=[Param:*,177];=0;=1;=3
 | !=       | not equal to             |
 
 > [!NOTE]
-> String values can only be compared using “=” or “!=”.
+> String values can only be compared using "=" or "!=".
 
 ## Depending on the DataMiner client application that is being used
 
 By specifying that certain pages should be hidden in DataMiner Cube, System Display and/or the DataMiner web apps, you can optimize your drawings for the type of client application where they will be used:
 
-- hide pages using “Cube only” features in System Display and mobile apps,
-
+- hide pages using "Cube only" features in System Display and mobile apps,
 - make specially designed pages for web apps only,
-
 - ...
 
 Add a shape data field of type **Options** to the page, and set its value to:
@@ -74,10 +72,8 @@ Hidden=SD|Cube|Mobile
 
 Examples:
 
-- If you specify *Hidden=SD\|Hidden=Cube*, the page will only be shown in web apps such as the Monitoring app and the Dashboards app.
-
-- If you specify *Hidden=Mobile\|Hidden=Cube*, the page will only be shown in System Display.
+- If you specify "Hidden=SD\|Hidden=Cube", the page will only be shown in web apps such as the Monitoring app and the Dashboards app.
+- If you specify "Hidden=Mobile\|Hidden=Cube", the page will only be shown in System Display.
 
 > [!NOTE]
 > The System Display client application is no longer available from DataMiner 9.6.0 onwards.
->

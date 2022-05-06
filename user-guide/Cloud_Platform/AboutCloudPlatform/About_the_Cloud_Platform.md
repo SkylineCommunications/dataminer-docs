@@ -12,5 +12,9 @@ In this section:
 
 - [Linking your DataMiner account to your DCP account](xref:Linking_your_DataMiner_and_DCP_account)
 
+- [Cloud data storage policies](xref:Cloud_data_storage_policies)
+
 > [!TIP]
-> See also: [Cloud connectivity and security](xref:Cloud_connectivity_and_security)
+>
+> - For information on the available DCP apps, see [DataMiner Cloud Platform](xref:Part51CloudPlatform).
+> - For information on security, see [Cloud connectivity and security](xref:Cloud_connectivity_and_security).

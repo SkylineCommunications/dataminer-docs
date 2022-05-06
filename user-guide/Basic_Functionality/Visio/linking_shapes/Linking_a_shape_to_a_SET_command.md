@@ -10,6 +10,7 @@ When you link a shape to a SET command, that command will be executed each time 
 
 > [!NOTE]
 > - A shape linked to a SET command will not be displayed if the element to which it is linked cannot be found.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > EXE]* page.
 
 ## Configuring the shape data field
 
@@ -20,7 +21,7 @@ Set|DmaID/ElementID|ID of write parameter:TableRowKey|NewValue|Options
 ```
 
 > [!NOTE]
-> - In the syntax above, “*:TableRowKey*” is optional.
+> - In the syntax above, ":TableRowKey" is optional.
 > - Table rows can be referenced either by primary key or by display key.
 
 ## Example
@@ -35,15 +36,15 @@ When users click the shape, a confirmation box will appear asking them whether t
 
 In the above-mentioned command, you can use the following options.
 
-- **NoConfirmation**: If you add the option “*NoConfirmation*”, no confirmation box will appear when users click the shape.
+- **NoConfirmation**: If you add the option "NoConfirmation", no confirmation box will appear when users click the shape.
 
 - **ConfirmationMessage**: Use this option to specify a custom SET confirmation message that will be displayed when the shape is clicked.
 
-    Example:
+  Example:
 
-    ```txt
-    Set|234/20|101|2|ConfirmationMessage=My custom message.
-    ```
+  ```txt
+  Set|234/20|101|2|ConfirmationMessage=My custom message.
+  ```
 
 - **SetTrigger=ValueChanged**: Use this option to update parameters or session variables when a specific value changes. See [Configuring a page to update parameters on session variable changes](xref:Configuring_a_page_to_update_parameters_on_session_variable_changes) or [Configuring a page to update a session variable when another session variable changes](xref:Configuring_a_page_to_update_a_session_variable_when_another_session_variable_changes).
 
@@ -52,8 +53,8 @@ In the above-mentioned command, you can use the following options.
     For example, if the configuration below is used with an embedded Router Control component, every time the event is triggered in the component, the set command will be executed with the label of the clicked matrix. Clicking the same input or output multiple times will each time cause the set command to be executed.
 
     | Shape data field | Value                                                      |
-    |--------------------|------------------------------------------------------------|
-    | Execute            | Set\|1/1\|350\|\[Event:IOClicked,Label\]\|SetTrigger=Event |
+    | ---------------- | ---------------------------------------------------------- |
+    | Execute          | Set\|1/1\|350\|\[Event:IOClicked,Label\]\|SetTrigger=Event |
 
     > [!NOTE]
     > - If "SetTrigger=ValueChanged" is used instead of "SetTrigger=Event" in the example above, clicking the same input or output multiple times causes the set command to be executed only once.
@@ -63,7 +64,7 @@ In the above-mentioned command, you can use the following options.
 
 If you use the option mentioned above, the character that is used to separate the different parts of the SET command cannot be used in the ConfirmationMessage text.
 
-If you want to use e.g. a pipe character in the ConfirmationMessage text, you have to change the separator character by adding a \[sep:XY\] option in front of the entire SET command, where “X” is the default separator, and “Y” is the separator that is being used instead:
+If you want to use e.g. a pipe character in the ConfirmationMessage text, you have to change the separator character by adding a \[sep:XY\] option in front of the entire SET command, where "X" is the default separator, and "Y" is the separator that is being used instead:
 
 ```txt
 [sep:|;]Set;234/20;101;2;ConfirmationMessage=Message with a |.

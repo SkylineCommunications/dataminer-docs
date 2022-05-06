@@ -10,15 +10,15 @@ Use this method to retrieve a snapshot of trend data for a specified protocol pa
 
 | Item            | Format  | Description                                                                                                 |
 |-----------------|---------|-------------------------------------------------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                                                       |
-| ViewID          | Integer | The ID of the view.                                                                                         |
-| IncludeSubViews | Boolean | Indicates whether subviews should be included.                                                              |
-| ProtocolName    | String  | The name of the protocol.                                                                                   |
-| ProtocolVersion | String  | The version of the protocol.                                                                                |
-| ParameterID     | Integer | The ID of the parameter.                                                                                    |
-| TableIndex      | String  | The table index. This field must be specified for table column parameters; otherwise it must be left empty. |
-| IntervalAmount  | Integer | The number of intervals used in the histogram.                                                              |
-| AsPercentages   | Boolean | Indicates whether the histogram should use percentages (= true) or absolute frequencies (= false).          |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                                                       |
+| viewID          | Integer | The ID of the view.                                                                                         |
+| includeSubViews | Boolean | Indicates whether subviews should be included.                                                              |
+| protocolName    | String  | The name of the protocol.                                                                                   |
+| protocolVersion | String  | The version of the protocol.                                                                                |
+| parameterID     | Integer | The ID of the parameter.                                                                                    |
+| tableIndex      | String  | The table index. This field must be specified for table column parameters; otherwise it must be left empty. |
+| intervalAmount  | Integer | The number of intervals used in the histogram.                                                              |
+| asPercentages   | Boolean | Indicates whether the histogram should use percentages (= true) or absolute frequencies (= false).          |
 
 ## Output
 

@@ -10,9 +10,9 @@ Use this method to retrieve the number of active alarms for a particular element
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                              |
-| ElementID  | Integer | The element ID.                                      |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                              |
+| elementID  | Integer | The element ID.                                      |
 
 ## Output
 

@@ -12,9 +12,9 @@ Available from DataMiner 10.0.9 onwards.
 
 | Item                | Format | Description                                          |
 |---------------------|--------|------------------------------------------------------|
-| Connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DomainID            | String | The domain ID.                                       |
-| SectionDefinitionID | String | The ID of the job section definition.                |
+| connection          | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| domainID            | String | The domain ID.                                       |
+| sectionDefinitionID | String | The ID of the job section definition.                |
 
 ## Output
 

@@ -10,11 +10,11 @@ Use this method to retrieve the trend data of a particular parameter by paramete
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ElementName | String | The element name. |
-| ParameterName | String | The parameter name. |
-| TableIndex | String | The (optional) table index (which, if specified, must be the display column). |
-| TrendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| elementName | String | The element name. |
+| parameterName | String | The parameter name. |
+| tableIndex | String | The (optional) table index (which, if specified, must be the display column). |
+| trendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*. |
 
 ## Output
 

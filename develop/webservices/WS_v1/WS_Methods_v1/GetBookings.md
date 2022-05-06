@@ -10,9 +10,9 @@ Use this method to retrieve all bookings matching a filter. Available from DataM
 
 | Item       | Format  | Description                                                          |
 |------------|---------|----------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                 |
-| Filter     | String  | The filter that the bookings must match.                             |
-| Amount     | Integer | The number of bookings matching the filter that should be retrieved. |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                 |
+| filter     | String  | The filter that the bookings must match.                             |
+| amount     | Integer | The number of bookings matching the filter that should be retrieved. |
 
 ## Output
 

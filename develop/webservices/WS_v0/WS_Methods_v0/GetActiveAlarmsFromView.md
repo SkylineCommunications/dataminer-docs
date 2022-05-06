@@ -10,8 +10,8 @@ Use this method to request a list of all the alarms of a specific view (referenc
 
 | Item       | Format | Description                                   |
 |------------|--------|-----------------------------------------------|
-| Connection | String | The connection ID. See [Connect](xref:Connect). |
-| ViewName   | String | The view name.                                |
+| connection | String | The connection ID. See [Connect](xref:Connect). |
+| viewName   | String | The view name.                                |
 
 ## Output
 

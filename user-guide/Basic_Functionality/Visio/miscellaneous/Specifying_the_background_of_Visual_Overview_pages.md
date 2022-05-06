@@ -5,8 +5,8 @@ uid: Specifying_the_background_of_Visual_Overview_pages
 # Specifying the background of Visual Overview pages
 
 > [!TIP]
-> See also:
-> <https://community.dataminer.services/video/visio-adding-a-background/>
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[misc > COLORS]* page.
+> - See also: <https://community.dataminer.services/video/visio-adding-a-background/>
 
 ## Specifying background pages in Visio
 
@@ -15,25 +15,20 @@ In Visio, it is possible to configure a page as a background page, and configure
 To set a page as a background page in Visio:
 
 1. Right-click the page tab of the background page at the bottom of the window, and select *Page setup*.
-
-2. In the *Page Properties* tab, next to *Type*, select *Background*.
-
-3. Click *OK* to close the *Page Properties* window.
+1. In the *Page Properties* tab, next to *Type*, select *Background*.
+1. Click *OK* to close the *Page Properties* window.
 
 To configure a page to use a particular background page as its background:
 
 1. Right-click the page tab of the page, and select *Page setup*.
-
-2. In the *Page Properties* tab, next to *Background*, select the background page you wish to use.
-
-3. Click *OK* to close the *Page Properties* window.
+1. In the *Page Properties* tab, next to *Background*, select the background page you wish to use.
+1. Click *OK* to close the *Page Properties* window.
 
 ## Specifying the background color of Visual Overview pages
 
 In Visio drawings, two page-level shape data fields can be used to specify the background color of the Visual Overview pages in DataMiner.
 
 - Use a shape data field of type **InnerBackground** to set the background color of a particular page of a Visio drawing.
-
 - Use a shape data field of type **OuterBackground** to set the background color of the entire card.
 
 ### Configuring the shape data fields
@@ -54,13 +49,8 @@ The alpha value, which indicates the opacity (i.e. level of transparency) of the
 It is possible to combine the use of a background page with the use of background colors. In that case, the following order will be applied to determine which background is displayed (from back to front):
 
 1. OuterBackground setting on Visio background page.
-
-2. OuterBackground setting on default Visio page.
-
-3. Drawing on Visio background page.
-
-4. InnerBackground setting on Visio background page.
-
-5. InnerBackground setting on default Visio page.
-
-6. Drawing on default Visio page.
+1. OuterBackground setting on default Visio page.
+1. Drawing on Visio background page.
+1. InnerBackground setting on Visio background page.
+1. InnerBackground setting on default Visio page.
+1. Drawing on default Visio page.

@@ -13,12 +13,12 @@ Use this method to retrieve the trend data of a particular parameter.
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ElementID | Integer | The element ID. |
-| ParameterID | Integer | The parameter ID. |
-| TableIndex | String | The (optional) table index (which, if specified, must be the display column). |
-| TrendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| elementID | Integer | The element ID. |
+| parameterID | Integer | The parameter ID. |
+| tableIndex | String | The (optional) table index (which, if specified, must be the display column). |
+| trendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*. |
 
 ## Output
 

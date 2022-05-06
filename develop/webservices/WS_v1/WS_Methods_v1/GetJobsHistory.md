@@ -10,8 +10,8 @@ Use this method to retrieve all changes that were made to a job, with the most r
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| JobID      | String | The job ID.                                          |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| jobID      | String | The job ID.                                          |
 
 ## Output
 

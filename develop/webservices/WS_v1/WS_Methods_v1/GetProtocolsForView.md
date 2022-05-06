@@ -10,9 +10,9 @@ Use this method to retrieve all protocols for the specified view.
 
 | Item            | Format  | Description                                                                      |
 |-----------------|---------|----------------------------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID          | Integer | The view ID.                                                                     |
-| IncludeSubViews | Boolean | Indicates whether protocols from subviews should be included.                    |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID          | Integer | The view ID.                                                                     |
+| includeSubViews | Boolean | Indicates whether protocols from subviews should be included.                    |
 
 ## Output
 

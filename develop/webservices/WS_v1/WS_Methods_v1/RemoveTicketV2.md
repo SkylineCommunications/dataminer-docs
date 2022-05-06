@@ -10,8 +10,8 @@ Use this method to remove a specific ticket. From DataMiner 10.0.13 onwards, thi
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TicketID   | Integer | The ID of the ticket.                                                            |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| ticketID   | Integer | The ID of the ticket.                                                            |
 
 ## Output
 

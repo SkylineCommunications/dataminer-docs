@@ -13,8 +13,8 @@ Use this method to add a new ticket type (called “domain” in the Ticketing a
 
 | Item           | Format | Description                                          |
 |----------------|--------|------------------------------------------------------|
-| Connection     | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TicketTypeName | String | The name of the new ticket type.                     |
+| connection     | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| ticketTypeName | String | The name of the new ticket type.                     |
 
 ## Output
 

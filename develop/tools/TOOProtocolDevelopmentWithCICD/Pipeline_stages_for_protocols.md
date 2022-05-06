@@ -24,29 +24,31 @@ Currently, the pipeline for protocol development consists of the following steps
 
 - [Build QuickActions on latest feature release](#build-quickactions-on-latest-feature-release)
 
-- [Scan Test Projects](#scan-test-projects)
+- [Convert solution to XML](#convert-solution-to-xml)
 
-- [Run Unit Tests](#run-unit-tests)
+- [Create protocol package](#create-protocol-package)
 
-- [Run Integration Tests](#run-integration-tests)
+- [Scan test projects](#scan-test-projects)
+
+- [Run unit tests](#run-unit-tests)
+
+- [Run integration tests](#run-integration-tests)
 
 - [SonarQube analysis](#sonarqube-analysis)
 
-- [Convert Solution to XML](#convert-solution-to-xml)
-
 - [Initialize validator](#initialize-validator)
 
-- [Run Validator](#run-validator)
+- [Run validator](#run-validator)
 
-- [Run Major Change Checker](#run-major-change-checker)
+- [Run major change checker](#run-major-change-checker)
 
 - [Verify developer checklist](#verify-developer-checklist)
 
-- [Quality Gate](#quality-gate)
+- [Prepare Driver Passport Platform scheduling](#prepare-driver-passport-platform-scheduling)
 
-- [Prepare Driver Passport Platform Scheduling](#prepare-driver-passport-platform-scheduling)
+- [Quality gate](#quality-gate)
 
-- [Schedule Driver Passport Platform](#schedule-driver-passport-platform)
+- [(Release) Schedule Driver Passport Platform](#release-schedule-driver-passport-platform)
 
 - [(Development) DCP registration](#development-dcp-registration)
 
@@ -56,7 +58,7 @@ Currently, the pipeline for protocol development consists of the following steps
 
 - [(Release) Push to SVN](#release-push-to-svn)
 
-- [Declarative Post Actions](#declarative-post-actions)
+- [Declarative post actions](#declarative-post-actions)
 
 ## Loading Jenkinsfile
 
@@ -142,28 +144,32 @@ This step ensures that the pipeline uses the latest version of DIS. It verifies 
 
 During this step, the solution is built against the latest DataMiner feature release.
 
-## Scan Test Projects
+## Convert solution to XML
+
+This step converts the protocol Visual Studio solution back to a protocol XML file.
+
+## Create protocol package
+
+This step creates a .dmprotocol package including the protocol XML, assemblies, Visio and Help files.
+
+## Scan test projects
 
 This step scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
 
-## Run Unit Tests
+## Run unit tests
 
 This step executes the unit test projects. If no unit test projects were detected, this step is skipped.
 
 > [!NOTE]
 > In case the tests fail, the unit tests will be executed against DataMiner 10.0.3 CU1 (if the protocol supports this version). The purpose of this is to support unit tests that were created using the SLProtocol API up to version 10.0.3 CU1. RN 27995 introduced changes to the API that could make a unit test fail if it depends on the prior implementation of the API. If unit tests using the DataMiner DLLs of 10.0.3 CU1 are re-executed, tests that are failing because of the changed API will succeed in the second execution.
 
-## Run Integration Tests
+## Run integration tests
 
 This step executes the integration test projects. If no integration test projects were detected, this step is skipped.
 
 ## SonarQube analysis
 
 This step performs SonarQube C# code analysis on the QAction code.
-
-## Convert Solution to XML
-
-This step converts the protocol Visual Studio solution back to a protocol XML file.
 
 ## Initialize validator
 
@@ -175,11 +181,11 @@ In case you create a new major or system range (i.e. D equals 1, and B or C do n
 
 In case you create a new branch version, e.g. 2.0.0.1, and you do not specify a based on version, then this will be assumed to be a brand-new development. The Validator quality gate settings for an initial version will therefore be applied.
 
-## Run Validator
+## Run validator
 
 This step runs the validator on the protocol XML file that was generated in the previous step.
 
-## Run Major Change Checker
+## Run major change checker
 
 For every new minor version, the pipeline will execute the DIS Major Change Checker to verify whether the new version does not have any major changes.
 
@@ -208,62 +214,7 @@ Additionally, the following information in the checklist itself should correspon
 > [!NOTE]
 > You should always use the latest version of the checklist, which is available on Dojo: <https://community.dataminer.services/documentation/protocol-development-checklists/>
 
-## Quality Gate
-
-This step verifies the results of different previous pipeline steps and checks whether the results are according to some preconfigured quality level.
-
-### Unit/Integration Tests
-
-The quality gate will fail as soon as one test fails.
-
-### Validator
-
-The quality gate verifies whether the protocol does not exceed any of the limits set for the validator quality gate. For initial protocols (i.e. version 1.0.0.1), the following limits are configured:
-
-- Critical: 0
-
-- Major: 0
-
-- Minor: 0
-
-- Warning: No limitation
-
-For non-initial versions, the validator quality gate settings will be configured based on the results of the previous version (i.e. the version this protocol version is based on):
-
-- Critical issues: 0 allowed
-
-- Major issues: Must not exceed the major issue count of the previous version (i.e. the version this protocol version is based on).
-
-- Minor issues: Must not exceed the minor issue count of the previous version (i.e. the version this protocol version is based on).
-
-- Warnings: Unlimited.
-
-> [!NOTE]
-> The following error codes are currently ignored:
-> -  1401: "x% of monitored parameters do not have default alarm values set”
-
-### SonarQube
-
-This quality gate verifies whether the protocol does not exceed any of the limits set for the SonarQube code analysis. Currently, the following limits have been configured:
-
-- Blocker Issues: 0
-
-- Bugs: 20
-
-- Critical Issues: 10
-
-- Code Smells: 100
-
-- Major Issues: 100
-
-- Minor Issues: 100
-
-- Duplicated Blocks: 200
-
-> [!NOTE]
-> The Quality Gate will currently only verify SonarQube analysis results for initial developments (i.e. protocols with version 1.0.0.1).
-
-## Prepare Driver Passport Platform Scheduling
+## Prepare Driver Passport Platform scheduling
 
 This stage is responsible for creating a DataMiner Test Package (.dmt). The test package includes references to the simulation files to use when running the test package.
 
@@ -292,8 +243,9 @@ In order for the pipeline to generate a test package, all you need to do is prov
 - **customer**: The name of the customer. The expected customer name is retrieved by the CI/CD pipeline via the task mentioned in the protocol.
 
 > [!NOTE]
-> -  In case multiple tasks are defined, which results in multiple customers, providing simulation files for only one customer is sufficient.
-> -  In case no simulation files were found by the CI/CD for any of the expected customers, the pipeline will perform a fallback to a simulation of another customer (if present) for this version.
+>
+> - In case multiple tasks are defined, which results in multiple customers, providing simulation files for only one customer is sufficient.
+> - In case no simulation files were found by the CI/CD for any of the expected customers, the pipeline will perform a fallback to a simulation of another customer (if present) for this version.
 
 A simulation must be provided for each connection of the protocol. The **name of the simulation file** must be *Connection\_**\<connectionNumber>*, where *\<connectionNumber>* denotes the zero-based connection number, e.g. *Connection_0*.
 
@@ -320,7 +272,62 @@ For **HTTP simulations**, the following file should be provided:
 
     For more information on how to create this file, see [Creating HTTP simulations](xref:Creating_HTTP_simulations).
 
-## Schedule Driver Passport Platform
+## Quality gate
+
+This step verifies the results of different previous pipeline steps and checks whether the results are according to some preconfigured quality level.
+
+### Unit/integration tests
+
+The quality gate will fail as soon as one test fails.
+
+### Validator
+
+The quality gate verifies whether the protocol does not exceed any of the limits set for the validator quality gate. For initial protocols (i.e. version 1.0.0.1), the following limits are configured:
+
+- Critical: 0
+
+- Major: 0
+
+- Minor: 0
+
+- Warning: No limitation
+
+For non-initial versions, the validator quality gate settings will be configured based on the results of the previous version (i.e. the version this protocol version is based on):
+
+- Critical issues: 0 allowed
+
+- Major issues: Must not exceed the major issue count of the previous version (i.e. the version this protocol version is based on).
+
+- Minor issues: Must not exceed the minor issue count of the previous version (i.e. the version this protocol version is based on).
+
+- Warnings: Unlimited.
+
+> [!NOTE]
+> The following error codes are currently ignored:
+> - 1401: "x% of monitored parameters do not have default alarm values set”
+
+### SonarQube
+
+This quality gate verifies whether the protocol does not exceed any of the limits set for the SonarQube code analysis. Currently, the following limits have been configured:
+
+- Blocker Issues: 0
+
+- Bugs: 20
+
+- Critical Issues: 10
+
+- Code Smells: 100
+
+- Major Issues: 100
+
+- Minor Issues: 100
+
+- Duplicated Blocks: 200
+
+> [!NOTE]
+> The quality gate will currently only verify SonarQube analysis results for initial developments (i.e. protocols with version 1.0.0.1).
+
+## (Release) Schedule Driver Passport Platform
 
 This stage will push the created DataMiner Test (.dmt) package to the Driver Passport Platform. It is only executed for protocol versions that are an initial version of a range (i.e. the Minor value of the Version is equal to 1).
 
@@ -361,7 +368,7 @@ In case a tag was detected, and the version should therefore be pushed to SVN, s
 
 This step performs the actual push to SVN. Once this step is executed, you should find a new version of the protocol on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
 
-## Declarative Post Actions
+## Declarative post actions
 
 This step performs cleanup of the workspace and send an email containing a report giving an overview of the number of issues detected in DIS and SonarQube.
 

@@ -50,9 +50,9 @@ In case of version 1.1.0.48 of the “Microsoft Platform” protocol, the follow
 dllImport="[ProtocolName]_[ProtocolVersion].dll"
 ```
 
-From DataMiner 9.6.12 (RN 23565) onwards, it is possible to refer to DLLs that are stored in a subfolder of the ProtocolScripts folder. In that case, you must mention the subfolder when you specify the DLL in the protocol.
+From DataMiner 9.6.12 (RN 23565) onwards, it is possible to refer to DLLs that are stored in a subfolder of the ProtocolScripts folder. In that case, you must mention the subfolder when you specify the DLL in the protocol. For example, to use "test.dll" stored in `C:\Skyline DataMiner\ProtocolScripts\SubFolder`, configure the dllImport attribute of the QAction tag as follows: dllImport="SubFolder\test.dll".
 
-For example, to use "test.dll" stored in C:\Skyline DataMiner\ProtocolScripts\SubFolder, configure the dllImport attribute of the QAction tag as follows: dllImport="SubFolder\test.dll".
+If the DLL file is stored in the `C:\Skyline DataMiner\ProtocolScripts\DllImport` folder, there is no need to specify the subfolder in the protocol. From DataMiner 9.6.12 (RN 23565) onwards, DLL files stored in *C:\Skyline DataMiner\ProtocolScripts\DllImport* will take precedence over DLL files stored in *C:\Skyline DataMiner\ProtocolScripts*.
 
 From DataMiner 9.6.12 (RN 23565) onwards, it is also possible to reference DLLs with the same name but with different assembly versions within the same driver, though not within the same QAction.
 
@@ -70,5 +70,5 @@ For example, the following QAction definitions are possible within a single prot
 >
 > - A leading slash before the folder name is supported, but not required.
 > - A folder separator can be a forward slash or backslash.
-> - DLL files stored in C:\Skyline DataMiner\Files\ will take precedence over DLL files in other folders if they are not strongly named (signed). This is standard Microsoft .NET assembly resolving behavior.
+> - DLL files stored in `C:\Skyline DataMiner\Files\` will take precedence over DLL files in other folders if they are not strongly named (signed). This is standard Microsoft .NET assembly resolving behavior. If the files in `C:\Skyline DataMiner\Files\` do not take precedence, DLL files stored in `C:\Skyline DataMiner\ProtocolScripts\DllImport` will take precedence over DLL files in other folders.
 > - In the details of a DLL, "File Version" and "Product Version" reflect the projects file version at compilation. Other tools might be needed to check the actual assembly version

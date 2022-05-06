@@ -4,7 +4,7 @@ uid: DashboardServiceDefinition
 
 # Service definition
 
-This dashboard component displays a service definition as a node edge graph. It can display the graph based on a service definition feed or a booking feed. Any nodes that are linked to a particular resource will display alarm and element info in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
+This component displays a service definition as a node edge graph. It can display the graph based on a service definition feed or a booking feed. Any nodes that are linked to a particular resource will display alarm and element info in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
 
 Available from DataMiner 10.0.5 onwards.
 
@@ -55,3 +55,6 @@ To configure the component:
    - *Enable zooming*: Determines whether users will be able to zoom in and out on the graph.
 
    - *Edge style*: Determines whether curly or straight edges are used in the graph.
+
+> [!NOTE]
+> From DataMiner 10.2.5/10.3.0 onwards, service definitions of type "ProcessAutomation" are displayed differently from other service definitions. Arrows will automatically be drawn to represent the detected connections between the nodes. In addition, different function shapes will reflect the different function types, if these have been configured in the Process Automation framework. Function nodes with function type “UserTask”, “ScriptTask”, “ResourceTask” or “Gateway” will also display the number of tokens currently in queue or in progress.

@@ -4,7 +4,7 @@ uid: DashboardWeb
 
 # Web
 
-This dashboard component displays a webpage or a block of static HTML.
+This component displays a webpage or a block of static HTML.
 
 - To configure the component as a webpage:
 
@@ -22,4 +22,3 @@ In the *Component* > *Layout* tab, only the default options are available for th
 
 > [!NOTE]
 > This component does not allow the use of scripts, buttons or other input controls.
->

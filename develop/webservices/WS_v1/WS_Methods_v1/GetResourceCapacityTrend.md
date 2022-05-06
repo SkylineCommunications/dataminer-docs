@@ -12,11 +12,11 @@ Available from DataMiner 10.0.2 onwards.
 
 | Item              | Format       | Description                                                                          |
 |-------------------|--------------|--------------------------------------------------------------------------------------|
-| Connection        | String       | The connection ID. See [ConnectApp](xref:ConnectApp).     |
-| ResourceID        | String       | The resource ID.                                                                     |
-| CapacityProfileID | String       | The ID of the capacity profile.                                                      |
-| SinceUTC          | Long integer | The starting time (in UTC format) from which data points and info must be retrieved. |
-| UntilUTC          | Long integer | The end time (in UTC format) until which data points and info must be retrieved.     |
+| connection        | String       | The connection ID. See [ConnectApp](xref:ConnectApp).     |
+| resourceID        | String       | The resource ID.                                                                     |
+| capacityProfileID | String       | The ID of the capacity profile.                                                      |
+| sinceUTC          | Long integer | The starting time (in UTC format) from which data points and info must be retrieved. |
+| untilUTC          | Long integer | The end time (in UTC format) until which data points and info must be retrieved.     |
 
 ## Output
 

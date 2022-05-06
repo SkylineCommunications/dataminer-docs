@@ -15,12 +15,12 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
-| DmaID      | Integer | The DMA ID.                                                                         |
-| ServiceID  | Integer | The service ID.                                                                     |
-| Index      | Integer | The point from which to start returning alarms.                                     |
-| Count      | Integer | The number of alarms to be returned.                                                |
-| OrderBy    | String  | The Alarm Console column(s) by which to order the alarms (separated by semicolons). |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
+| dmaID      | Integer | The DMA ID.                                                                         |
+| serviceID  | Integer | The service ID.                                                                     |
+| index      | Integer | The point from which to start returning alarms.                                     |
+| count      | Integer | The number of alarms to be returned.                                                |
+| orderBy    | String  | The Alarm Console column(s) by which to order the alarms (separated by semicolons). |
 
 ## Output
 

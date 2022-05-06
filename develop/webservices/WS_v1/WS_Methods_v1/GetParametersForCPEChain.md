@@ -10,11 +10,11 @@ Use this method to retrieve the parameters for a specified chain of a CPE elemen
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ElementID | Integer | The element ID. |
-| Chain | String | The name of the chain. |
-| Filters | Array of string | The filters that are applied to the CPE chain (optional). If no filters are specified, only KPI parameters that do not need a filter will be retrieved. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| elementID | Integer | The element ID. |
+| chain | String | The name of the chain. |
+| filters | Array of string | The filters that are applied to the CPE chain (optional). If no filters are specified, only KPI parameters that do not need a filter will be retrieved. |
 
 ## Output
 

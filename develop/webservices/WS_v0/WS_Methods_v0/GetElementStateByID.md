@@ -12,8 +12,8 @@ Examples of element states: Active, Stopped, etc.
 
 | Item       | Format  | Description                                   |
 |------------|---------|-----------------------------------------------|
-| Connection | String  | The connection ID. See [Connect](xref:Connect). |
-| DmaID      | Integer | The DataMiner Agent ID.                       |
+| connection | String  | The connection ID. See [Connect](xref:Connect). |
+| DMAID      | Integer | The DataMiner Agent ID.                       |
 | ElementID  | Integer | The element ID.                               |
 
 ## Output

@@ -10,10 +10,10 @@ Use this method to retrieve the number of active alarms of a service, grouped ei
 
 | Item       | Format  | Description                                           |
 |------------|---------|-------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).  |
-| DmaID      | Integer | The DataMiner Agent ID.                               |
-| ServiceID  | Integer | The service ID.                                       |
-| GroupOn    | String  | The property by which to group: “time” or “severity”. |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).  |
+| dmaID      | Integer | The DataMiner Agent ID.                               |
+| serviceID  | Integer | The service ID.                                       |
+| groupOn    | String  | The property by which to group: “time” or “severity”. |
 
 ## Output
 

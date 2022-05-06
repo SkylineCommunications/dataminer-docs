@@ -12,32 +12,33 @@ To configure this, follow the steps below:
 
 1. Go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
-2. In *DataMiner.xml*, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
+1. In *DataMiner.xml*, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
 
-    ```xml
-    <DataMiner ...>
-      ...
-      <ExternalAuthentication
-        type="SAML"
-        ipMetadata="[Path/URL of the identity provider’s metadata file]"
-        spMetadata="[Path/URL of the service provider’s metadata file]"
-        timeout="300" />
-      ...
-    </DataMiner>
-    ```
+   ```xml
+   <DataMiner ...>
+     ...
+     <ExternalAuthentication
+       type="SAML"
+       ipMetadata="[Path/URL of the identity provider’s metadata file]"
+       spMetadata="[Path/URL of the service provider’s metadata file]"
+       timeout="300" />
+     ...
+   </DataMiner>
+   ```
 
-    | Attribute | Description |
-    | --------- | ----------- |
-    | type | SAML (Identity federation using SAML assertions) |
-    | ipMetadata | The path to or the URL of the identity provider's metadata file.<br/>The way in which to retrieve this metadata file will depend on the identity provider you are using. See [Identity providers](#identity-providers) |
-    | spMetadata | The path to or the URL of the service provider's metadata file.<br/> See [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file) |
-    | timeout | Optional attribute. The amount of time DataMiner should wait for the user to be authenticated by the identity provider. If this attribute is not specified, DataMiner will wait 300 seconds (5 minutes). |
+   | Attribute | Description |
+   | --------- | ----------- |
+   | type | SAML (Identity federation using SAML assertions) |
+   | ipMetadata | The path to or the URL of the identity provider's metadata file. The way in which to retrieve this metadata file will depend on the identity provider you are using. See [Identity providers](#identity-providers) |
+   | spMetadata | The path to or the URL of the service provider's metadata file. See [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file) |
+   | timeout | Optional attribute. The amount of time DataMiner should wait for the user to be authenticated by the identity provider. If this attribute is not specified, DataMiner will wait 300 seconds (5 minutes). |
 
-3. Save and close the file, and restart the DMA.
+1. Save and close the file, and restart the DMA.
 
 Once this has been configured, if users try to log in to the DMA using external authentication via SAML, they will be redirected to a login page of the identity provider. That page will authenticate them and return a SAML response, which DataMiner can use to either grant or deny access.
 
 > [!NOTE]
+>
 > - From DataMiner 10.2.0/10.1.4 onwards, Cube uses the Chromium web browser engine to handle SAML external authentication. That engine supports a wider range of identity providers than the Internet Explorer engine that was used previously.
 > - When external authentication is enabled, it is no longer possible to log in with local accounts, except the local Administrator account.
 > - DataMiner will expect one of the claims provided by the identity provider to be the "name" claim: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name``. This field must contain either the username or the email address.
@@ -45,8 +46,7 @@ Once this has been configured, if users try to log in to the DMA using external 
 > - If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, it is recommended to avoid using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
 
 > [!TIP]
-> See also:
-> [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library
+> See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library
 
 ## Creating a DataMiner metadata file
 
@@ -54,29 +54,29 @@ To create a DataMiner metadata file, proceed as follows:
 
 1. Copy the following template into a new XML file named e.g. *spMetadata.xml*:
 
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
-      <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/" index="0" isDefault="true"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="1" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="2" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="3" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="4" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="5" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="6" isDefault="false"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[FOR EVERY CUSTOM APP URL, ADD AN ASSERTION LIKE THE ONES ABOVE WITH AN INCREMENTED INDEX. IF YOU DO NOT HAVE CUSTOM APPS, REMOVE THIS EXAMPLE.]" index="7" isDefault="false"/>
-      </md:SPSSODescriptor>
-    </md:EntityDescriptor>
-    ```
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/" index="0" isDefault="true"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="1" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="2" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="3" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="4" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="5" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="6" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[FOR EVERY CUSTOM APP URL, ADD AN ASSERTION LIKE THE ONES ABOVE WITH AN INCREMENTED INDEX. IF YOU DO NOT HAVE CUSTOM APPS, REMOVE THIS EXAMPLE.]" index="7" isDefault="false"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
 
-2. Replace \[ENTITYID\] with the unique service provider ID that is assigned to DataMiner when you register it with the identity provider.
+1. Replace \[ENTITYID\] with the unique service provider ID that is assigned to DataMiner when you register it with the identity provider.
 
-   The way in which you can find this ID will depend on the identity provider you are using. See [Identity providers](#identity-providers)
+   The way you can find this ID will depend on the identity provider you are using. See [Identity providers](#identity-providers).
 
-3. Replace ``https://dataminer.example.com`` with the IP address or the DNS name of your DataMiner System. Make sure the endpoint addresses in the location attributes match the DataMiner application endpoints you specified when you registered DataMiner with the identity provider.
+1. Replace ``https://dataminer.example.com`` with the IP address or the DNS name of your DataMiner System. Make sure the endpoint addresses in the location attributes match the DataMiner application endpoints you specified when you registered DataMiner with the identity provider.
 
-    The way in which you configure this will depend on the identity provider you are using. See [Identity providers](#identity-providers)
+   The way you configure this will depend on the identity provider you are using. See [Identity providers](#identity-providers).
 
 > [!NOTE]
 > The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
@@ -86,6 +86,7 @@ To create a DataMiner metadata file, proceed as follows:
 DataMiner currently supports the following identity providers:
 
 - [Azure Active Directory](#azure-active-directory)
+- [Azure B2C](#azure-b2c)
 - [Okta](#okta)
 
 ### Azure Active Directory
@@ -98,35 +99,38 @@ As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applicat
 
 1. In Azure AD, register DataMiner as an Enterprise Application:
 
-    1. Navigate to ``portal.azure.com`` and log in.
-    2. Select the Azure Active Directory service.
-    3. In the pane on the left, click *Enterprise applications*.
-    4. At the top, click *New application*.
-    5. Click *Create your own application*.
-    6. Select *Integrate another application you don’t find in the gallery* and click *Create*.
+   1. Navigate to ``portal.azure.com`` and log in.
+   1. Select the Azure Active Directory service.
+   1. In the pane on the left, click *Enterprise applications*.
+   1. At the top, click *New application*.
+   1. Click *Create your own application*.
+   1. Select *Integrate another application you don’t find in the gallery* and click *Create*.
 
-2. In the pane on the left, go to *Users and groups*.
+1. In the pane on the left, go to *Users and groups*.
 
-3. Add the necessary users and groups, and assign the necessary roles.
+1. Add the necessary users and groups, and assign the necessary roles.
 
    > [!NOTE]
    > Make sure that all users have their *Email* field filled in. Azure will not authenticate users with an empty *Email* field.
 
-4. Go to *Single sign-on*, select "SAML", and edit the following settings in *Basic SAML Configuration*:
+1. Go to *Single sign-on*, select "SAML", and edit the following settings in *Basic SAML Configuration*:
 
-    - Set *Entity ID* to ``https://[your application name]/``. This entity ID must be identical to the one that is specified in the ``spMetadata.xml`` file.
+   - Set *Entity ID* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
 
-    - Under *Reply URL*, specify the following URLs (note the trailing '/'):
+   - Under *Reply URL*, specify the following URLs, replacing ``dataminer.example.com`` with the IP address or DNS name in the *spMetadata.xml* file (note the trailing "/"):
 
-        - ``https://[your application name]/root/``
-        - ``https://[your application name]/ticketing/``
-        - ``https://[your application name]/jobs/``
-        - ``https://[your application name]/monitoring/``
-        - ``https://[your application name]/dashboard/``
-        - ``https://[your application name]/login/``
-        - ``https://[your application name]/``
+     - ``https://dataminer.example.com/root/``
+     - ``https://dataminer.example.com/ticketing/``
+     - ``https://dataminer.example.com/jobs/``
+     - ``https://dataminer.example.com/monitoring/``
+     - ``https://dataminer.example.com/dashboard/``
+     - ``https://dataminer.example.com/login/``
+     - ``https://dataminer.example.com/``
 
-    - Set *Sign on URL* to ``https://[your application name]/``.
+   - Set *Sign on URL* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
+
+   > [!TIP]
+   > See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)
 
 #### Retrieving the identity provider's metadata file on Azure AD
 
@@ -138,71 +142,71 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
 1. Gather the following information:
 
-    - **Client ID** and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
+   - **Client ID** and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
 
-        Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
+     Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
 
-    - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
+   - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
 
-        1. In the *Client secrets* section, click *New client secret*.
-        1. Enter a description and an expiration date for the application secret.
-    
-    - **Username** and **Password**: The Azure AD user account that DataMiner will use to request data from Azure AD. Technically this can be any account, but we recommend that you create an account that will be use exclusively for this purpose. Note that, depending on the method of querying, specifying this account can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
+     1. In the *Client secrets* section, click *New client secret*.
+     1. Enter a description and an expiration date for the application secret.
+
+   - **Username** and **Password**: The Azure AD user account that DataMiner will use to request data from Azure AD. Technically this can be any account, but we recommend that you create an account that will be use exclusively for this purpose. Note that, depending on the method of querying, specifying this account can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
 
 1. Configure DataMiner with this information:
 
-    1. Stop the DMA for which you want to configure this.
+   1. Stop the DMA for which you want to configure this.
 
-    1. On the DMA, go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
+   1. On the DMA, go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
-    1. In the *DataMiner.xml* file, specify the information you previously gathered using the same syntax as in the following example:
+   1. In the *DataMiner.xml* file, specify the information you previously gathered using the same syntax as in the following example:
 
-        ```xml
-        <AzureAD
-         tenantId="[GUID]"
-         clientId="[GUID]"
-         clientSecret="[the DataMiner application secret]"
-         username="[username]"
-         password="[password]" />
-        ```
+      ```xml
+      <AzureAD
+       tenantId="[GUID]"
+       clientId="[GUID]"
+       clientSecret="[the DataMiner application secret value]"
+       username="[username]"
+       password="[password]" />
+      ```
 
-        > [!NOTE]
-        > From DataMiner 10.1.11/10.2.0 onwards, DataMiner supports Azure AD application querying. If this is used instead of delegated querying, an authentication secret will suffice and no username and password will need to be specified here.
+      > [!NOTE]
+      > From DataMiner 10.1.11/10.2.0 onwards, DataMiner supports Azure AD application querying. If this is used instead of delegated querying, an authentication secret will suffice and no username and password will need to be specified here.
 
-    1. Save the file and restart DataMiner.
+   1. Save the file and restart DataMiner.
 
 1. On the application (DataMiner) root page, click *API Permissions* in the pane on the left and make sure the necessary permissions are enabled:
 
-    For delegated querying:
+   For delegated querying:
 
-    - Microsoft Graph \> GroupMember.Read.All – Delegated – Read groups memberships
-    - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
-    - Microsoft Graph \> User.Read.All – Delegated – Read all users’ full profiles
+   - Microsoft Graph \> GroupMember.Read.All – Delegated – Read groups memberships
+   - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
+   - Microsoft Graph \> User.Read.All – Delegated – Read all users’ full profiles
 
-    For application querying (supported from DataMiner 10.1.11/10.2.0 onwards):
+   For application querying (supported from DataMiner 10.1.11/10.2.0 onwards):
 
-    - Microsoft Graph \> GroupMember.Read.All – Application
-    - Microsoft Graph \> User.Read.All – Application
-    - Microsoft Graph \> User.Read – Delegated
+   - Microsoft Graph \> GroupMember.Read.All – Application
+   - Microsoft Graph \> User.Read.All – Application
+   - Microsoft Graph \> User.Read – Delegated
 
 1. Restart DataMiner.
 
 1. Add the Azure AD users to DataMiner:
 
-    1. Open DataMiner Cube and log in with an existing Administrator account.
-    1. Add the users/groups as described in [Adding a user](xref:Adding_a_user) and [Adding a user group](xref:Adding_a_user_group). If you choose to add an existing user or group, you will be presented a list of all users and groups available on Azure AD.
-    1. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
+   1. Open DataMiner Cube and log in with an existing Administrator account.
+   1. Add the users/groups as described in [Adding a user](xref:Adding_a_user) and [Adding a user group](xref:Adding_a_user_group). If you choose to add an existing user or group, you will be presented a list of all users and groups available on Azure AD.
+   1. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
 
-    It is now possible to log in to DataMiner with any of the Azure AD user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
+   It is now possible to log in to DataMiner with any of the Azure AD user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
 
 #### Configuring automatic creation of users authenticated by Azure AD using SAML
 
 From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAML can be automatically created and assigned to groups in DataMiner. This is often referred to as JIT (Just-In-Time) Provisioning.
 
-1. Go to *User Attributes & Claims* and add a group claim.
+1. Go to *Single Sign-on > Attributes & Claims* and add a group claim.
 
-    > [!NOTE]
-    > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
+   > [!NOTE]
+   > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
 
 1. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD.
 
@@ -212,34 +216,53 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
 
 1. In the *DataMiner.xml* file, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
 
-    ```xml
-    <DataMiner ...>
-      ...
-      <ExternalAuthentication
-        type="SAML"
-        ipMetadata="[Path/URL of the identity provider’s metadata file]"
-        spMetadata="[Path/URL of the service provider’s metadata file]"
-        timeout="300">
-        <AutomaticUserCreation enabled="true">
-          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
-          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
-          <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
-          <Groups claims="true">[group claim name]</Groups>
-        </AutomaticUserCreation>
-      </ExternalAuthentication>
-      ...
-    </DataMiner>
-    ```
+   ```xml
+   <DataMiner ...>
+     ...
+     <ExternalAuthentication
+       type="SAML"
+       ipMetadata="[Path/URL of the identity provider’s metadata file]"
+       spMetadata="[Path/URL of the service provider’s metadata file]"
+       timeout="300">
+       <AutomaticUserCreation enabled="true">
+         <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
+         <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
+         <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
+         <Groups claims="true">[group claim name]</Groups>
+       </AutomaticUserCreation>
+     </ExternalAuthentication>
+     ...
+   </DataMiner>
+   ```
 
-    > [!NOTE]
-    > If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
-    > - The name of the group as specified in Cube will be used instead.
-    > - It will only be possible to add a user to a single group.
-    > - The user information that is created will not be updated.
+   > [!NOTE]
+   > If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
+   >
+   > - The name of the group as specified in Cube will be used instead.
+   > - It will only be possible to add a user to a single group.
+   > - The user information that is created will not be updated.
 
 1. Save the *DataMiner.xml* file.
 
 1. Restart the DataMiner Agent.
+
+### Azure B2C
+
+DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onwards. To configure this:
+
+1. Configure Azure B2C. See [Azure Active Directory B2C documentation | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory-b2c/).
+1. Create a DataMiner metadata file. You can do this in the same way as for [Azure AD](#creating-a-dataminer-metadata-file).
+1. Set up an Azure AD Enterprise application. You can do this in the same way as for [Azure AD](#setting-up-an-azure-ad-enterprise-application).
+1. Configure policies for Azure B2C. See [Tutorial: Create user flows and custom policies in Azure Active Directory B2C | Microsoft Docs](https://docs.microsoft.com/en-us/azure/active-directory-b2c/tutorial-create-user-flows?pivots=b2c-custom-policy).
+1. Get the metadata URL:
+
+   1. In Azure, go to *App registrations*, select your app, and select *Overview* > *Endpoints*.
+   1. Select the Azure AD B2C SAML metadata endpoint, e.g. `https://dataminerservices.b2clogin.com/dataminerservices.onmicrosoft.com/<policy-name>/Samlp/metadata`, and replace \<policy-name> with the name of the policy you created earlier.
+
+1. Configure DataMiner to import users and groups from Azure B2C. You can do this in the same way as for [Azure AD](#configuring-dataminer-to-import-users-and-groups-from-azure-ad).
+
+   > [!NOTE]
+   > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element in *DataMiner.xml* that refers to a claim containing a valid email address.
 
 ### Okta
 
@@ -247,65 +270,53 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
 1. Launch the App Integration Wizard
 
-    1. In the Admin Console, go to *Applications \> Applications*.
-    1. Click *Create App Integration*.
-    1. To create a SAML integration, select "SAML 2.0" as the *Sign-on method*.
-    1. Click *Next*.
+   1. In the Admin Console, go to *Applications \> Applications*.
+   1. Click *Create App Integration*.
+   1. To create a SAML integration, select "SAML 2.0" as the *Sign-on method*.
+   1. Click *Next*.
 
 1. Configure the general settings:
 
-   **App name**
+   - **App name**: The name of your application. Fill in “DataMiner” (or some other preferred name).
 
-   The name of your application. Fill in “DataMiner” (or some other preferred name).
+   - **App logo**: Optional logo to be linked to your application.
 
-   **App logo**
+     - Format: PNG, JPG or GIF
+     - Max. size: 1 MB
+     - Min. resolution: 420 x 120 pixels
 
-   Optional logo to be linked to your application.
-
-   - Format: PNG, JPG or GIF
-   - Max. size: 1 MB
-   - Min. resolution: 420 x 120 pixels
-    
-   > [!TIP]
-   > It is recommended to use a PNG image with a transparent background and a landscape orientation.
+     > [!TIP]
+     > It is recommended to use a PNG image with a transparent background and a landscape orientation.
 
 1. Configure the SAML settings:
 
-    **Single sign on URL**
+   - **Single sign on URL**: The location where the SAML assertion is sent with a POST operation.
 
-    The location where the SAML assertion is sent with a POST operation.
+     - In this box, enter e.g. ``https://dataminer.example.com/root/``.
+     - Select the following checkboxes:
 
-    - In this box, enter e.g. ``https://dataminer.example.com/root/``.
-    - Select the following checkboxes:
-    
-        - *Use this for Recipient URL and Destination URL*
-        - *Allow this app to request other SSO URLs*
-        
-    - Enter the following additional URLs:
-    
-        - ``https://dataminer.example.com/login/``
-        - ``https://dataminer.example.com/dashboard/``
-        - ``https://dataminer.example.com/monitoring/``
-        - ``https://dataminer.example.com/jobs/``
-        - ``https://dataminer.example.com/ticketing/``
-        
-    **Audience URI**
+       - *Use this for Recipient URL and Destination URL*
+       - *Allow this app to request other SSO URLs*
 
-    The intended audience of the SAML assertion.
+     - Enter the following additional URLs:
 
-    In this box, enter ``https://dataminer.example.com/root/``.
+       - ``https://dataminer.example.com/login/``
+       - ``https://dataminer.example.com/dashboard/``
+       - ``https://dataminer.example.com/monitoring/``
+       - ``https://dataminer.example.com/jobs/``
+       - ``https://dataminer.example.com/ticketing/``
 
-    **Name ID format**
+   - **Audience URI**: The intended audience of the SAML assertion.
 
-    The username format you are sending in the SAML Response.
+     In this box, enter ``https://dataminer.example.com/root/``.
 
-    Select "EmailAddress".
+   - **Name ID format**: The username format you are sending in the SAML Response.
 
-    **Application username**
+     Select "EmailAddress".
 
-    The default value to use for the username with the application.
+   - **Application username**: The default value to use for the username with the application.
 
-    Select "Email".
+     Select "Email".
 
 ## Error messages
 

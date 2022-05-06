@@ -17,7 +17,7 @@ You can create a query as follows:
 1. Specify a name for the query.
 
    > [!NOTE]
-   > From DataMiner 10.1.0/10.1.1 onwards, specifying a name is optional. However, note that this is still recommended, as a name can help clarify what the purpose of the query is.
+   > From DataMiner 10.2.0 [CU2]/10.2.5 onwards, a query must have a unique name. If you edit an existing query that has no name, you will need to specify a unique name for it. Prior to this, starting from DataMiner 10.1.0/10.1.1, a query name is optional but highly recommended.
 
 1. In the drop-down box below this, select the data source you want to use. See [Query data sources](#query-data-sources).
 
@@ -69,6 +69,9 @@ This is the most basic procedure to use an external data source in a query:
 1. In the *Data source* drop-down box, select the name of your custom data source.
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
+
+> [!NOTE]
+> From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of a custom data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, if you link to an existing query feed with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or query rows. Then you will need to select the property you want to use. In most cases, you can select the property in a drop-down list, except if *Type* is set to *Query rows* or *Script output*, in which case you will have to specify the value yourself. For query rows, when you start typing the value, DataMiner will propose any matching values it can find.
 
 #### Interfaces in the custom data script
 

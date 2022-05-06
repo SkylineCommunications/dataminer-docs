@@ -9,6 +9,7 @@ uid: Part7Reference
 - [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 - [Obtaining a DataMiner license](xref:DataminerLicenses#obtaining-a-dataminer-license)
 - [DataMiner metrics](xref:dataminer_metrics)
+- [Frequently asked questions](xref:faq)
 - [Glossary](xref:glossary)
 
 > [!NOTE]

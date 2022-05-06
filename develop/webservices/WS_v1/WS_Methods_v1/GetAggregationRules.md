@@ -10,8 +10,8 @@ Use this method to retrieve the available aggregation rules.
 
 | Item            | Format  | Description                                                     |
 |-----------------|---------|-----------------------------------------------------------------|
-| Connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).            |
-| ActiveRulesOnly | Boolean | Indicates whether only active rules should be retrieved or not. |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).            |
+| activeRulesOnly | Boolean | Indicates whether only active rules should be retrieved or not. |
 
 ## Output
 

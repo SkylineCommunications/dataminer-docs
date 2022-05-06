@@ -12,11 +12,11 @@ The advantage of using this method instead of *SetParameter* is that only one u
 
 | Item             | Format  | Description                                                                      |
 |------------------|---------|----------------------------------------------------------------------------------|
-| Connection       | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID            | Integer | The DataMiner Agent ID.                                                          |
-| ElementID        | Integer | The element ID.                                                                  |
-| TableIndex       | String  | The table index.                                                                 |
-| DMAParameterSets | Array   | Array consisting of the column parameter IDs and the corresponding new values.   |
+| connection       | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID            | Integer | The DataMiner Agent ID.                                                          |
+| elementID        | Integer | The element ID.                                                                  |
+| tableIndex       | String  | The table index.                                                                 |
+| parameterSets    | DMAParameterSets | Array consisting of the column parameter IDs and the corresponding new values. |
 
 ## Output
 

@@ -12,7 +12,7 @@ Examples of element states: Active, Stopped, etc.
 
 | Item        | Format | Description                                   |
 |-------------|--------|-----------------------------------------------|
-| Connection  | String | The connection ID. See [Connect](xref:Connect). |
+| connection  | String | The connection ID. See [Connect](xref:Connect). |
 | ElementName | String | The element name.                             |
 
 ## Output

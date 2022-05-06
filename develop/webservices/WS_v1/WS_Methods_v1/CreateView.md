@@ -10,9 +10,9 @@ Use this method to create a new view.
 
 | Item         | Format  | Description                                              |
 |--------------|---------|----------------------------------------------------------|
-| Connection   | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
-| ParentViewID | Integer | The ID of the parent view.                               |
-| ViewName     | String  | The name of the new view.                                |
+| connection   | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
+| parentViewID | Integer | The ID of the parent view.                               |
+| viewName     | String  | The name of the new view.                                |
 
 ## Output
 

@@ -10,9 +10,9 @@ Use this method to retrieve the data of a particular redundancy group.
 
 | Item              | Format  | Description                                                                      |
 |-------------------|---------|----------------------------------------------------------------------------------|
-| Connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID             | Integer | The DataMiner Agent ID.                                                          |
-| RedundancyGroupID | Integer | The redundancy group ID.                                                         |
+| connection        | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID             | Integer | The DataMiner Agent ID.                                                          |
+| redundancyGroupID | Integer | The redundancy group ID.                                                         |
 
 ## Output
 

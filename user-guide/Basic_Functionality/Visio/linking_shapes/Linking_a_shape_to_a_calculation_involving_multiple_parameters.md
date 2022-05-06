@@ -10,8 +10,9 @@ Possible actions include: displaying the minimum, maximum, sum or average of a s
 
 > [!NOTE]
 > - This feature only works in DataMiner Cube.
-> - All parameter values used in a **ParametersSummary** field must be of type “double”.
-> - By default, the summary value is calculated when all parameter values are available. However, if you add a shape data field of type **Options** and set its value to “*IgnoreUnsetValues*”, the summary value will appear as soon as one of the values is available.
+> - All parameter values used in a **ParametersSummary** field must be of type "double".
+> - By default, the summary value is calculated when all parameter values are available. However, if you add a shape data field of type **Options** and set its value to "IgnoreUnsetValues", the summary value will appear as soon as one of the values is available.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > SUM]* page.
 
 ## Configuring the shape data field
 
@@ -35,11 +36,11 @@ Operation|Param1|Param2|...|ParamZ|Actions
 - **Operation**: The operation to be performed with the specified parameters:
 
     | Operation | Description                     |
-    |-------------|---------------------------------|
-    | Min         | Minimum value                   |
-    | Max         | Maximum value (default)         |
-    | Sum         | Sum of all parameter values     |
-    | Avg         | Average of all parameter values |
+    | --------- | ------------------------------- |
+    | Min       | Minimum value                   |
+    | Max       | Maximum value (default)         |
+    | Sum       | Sum of all parameter values     |
+    | Avg       | Average of all parameter values |
 
 - **Param1 \> ParamZ**: The list of parameters on which the specified operation has to be performed.
 
@@ -50,7 +51,7 @@ Operation|Param1|Param2|...|ParamZ|Actions
     See [Syntax of the Actions section](#syntax-of-the-actions-section).
 
 > [!NOTE]
-> By default, a pipe character (“\|”) is used as the separator between the sections. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+> By default, a pipe character ("\|") is used as the separator between the sections. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
 ### Syntax of a Parameter section
 
@@ -63,39 +64,35 @@ Element:Parameter:Index
 - **Element**: The element
 
     - DMAID/ElementID
-
     - Element name
-
-    - Element name filter (containing “?” and/or “\*” wildcards)
+    - Element name filter (containing "?" and/or "\*" wildcards)
 
 - **Parameter**: The parameter
 
     - Parameter ID
-
     - Parameter name (can also be the parameter alias specified in *informations.xml* or *description.xml*)
-
-    - Parameter name filter (containing “?” and/or “\*” wildcards)
+    - Parameter name filter (containing "?" and/or "\*" wildcards)
 
 - **Index**: The table index (in case of a dynamic table parameter)
 
-    - From DataMiner 10.2.1/10.3.0 onwards, you can refer to the index using a subscription filter. This can be any filter that can be passed to a parameter change subscription (e.g. “VALUE=\<PID> == \<value>”, “fullFilter=(...)”, etc.). For more information, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+    - From DataMiner 10.2.1/10.3.0 onwards, you can refer to the index using a subscription filter. This can be any filter that can be passed to a parameter change subscription (e.g. "VALUE=\<PID> == \<value>", "fullFilter=(...)", etc.). For more information, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
-    - From DataMiner 9.6.7 onwards, it is possible to refer to several rows, a column, or a full table. For instance, to refer to all rows that start with “SL”, you can specify “*101/201:500:SL\*\|*”. To refer to a column, specify the column parameter, e.g. “*101/201:501*”. To refer to an entire table, specify the table parameter, e.g. “*101/201:500*”.
+    - From DataMiner 9.6.7 onwards, it is possible to refer to several rows, a column, or a full table. For instance, to refer to all rows that start with "SL", you can specify "101/201:500:SL\*\|". To refer to a column, specify the column parameter, e.g. "101/201:501". To refer to an entire table, specify the table parameter, e.g. "101/201:500".
 
     - Up to DataMiner 9.6.0, if you specify a table parameter, only one row is allowed to match the filter.
 
 > [!NOTE]
-> By default, a colon (“:”) is used as the separator within a parameter section. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+> By default, a colon (":") is used as the separator within a parameter section. However, it is possible to specify an alternative separator in a \[sep:XY\] tag. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
 ### Syntax of the Actions section
 
-In the Actions section, you can specify the actions to be performed. If you specify multiple actions, separate them with a colon (”:”):
+In the Actions section, you can specify the actions to be performed. If you specify multiple actions, separate them with a colon (":"):
 
 ```txt
 Action:Action:Action:...
 ```
 
-- **ALARM**: The shape will be filled with the maximum (default) or minimum alarm severity color. If you want to display the latch color, add a **Latch** shape data field next to the **ParametersSummary** field and set it to “TRUE”.
+- **ALARM**: The shape will be filled with the maximum (default) or minimum alarm severity color. If you want to display the latch color, add a **Latch** shape data field next to the **ParametersSummary** field and set it to TRUE.
 
 - **FLIPX;condition1;condition2;...** : The shape will be flipped on its X-axis if one of the conditions is true.
 
@@ -110,10 +107,10 @@ Action:Action:Action:...
 - NONE: No action will be performed.
 
 > [!NOTE]
-> - If the shape text contains a “\*” character, it will be replaced by the Min, Max, Avg or Sum value.
+> - If the shape text contains a "\*" character, it will be replaced by the Min, Max, Avg or Sum value.
 > - In all sections of the ParametersSummary value, you can use \[Property:...\] placeholders.
 > - The conditions you specify in case of FLIPX, FLIPY, HIDE, SHOW or ROTATE will be evaluated against the result of the operation on the specified parameters (Min, Max, Avg or Sum).
-> - In conditions, both single equal signs (“=”) and double equal signs (“==”) are supported.
+> - In conditions, both single equal signs ("=") and double equal signs ("==") are supported.
 
 ## Examples of ParametersSummary values
 

@@ -10,8 +10,8 @@ Use this method to retrieve a link to open the annotations page of the specified
 
 | Item       | Format  | Description                                          |
 |------------|---------|------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID     | Integer | The view ID.                                         |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID     | Integer | The view ID.                                         |
 
 ## Output
 

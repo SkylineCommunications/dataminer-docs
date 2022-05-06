@@ -27,9 +27,9 @@ The roles detailed below are instrumental for the efficient and correct executio
 
 - Ensures team cohesion, coordination, and operation in line with the methodology.
 
-- Facilitates all formal process activities (e.g. Sprint Planning, Retrospect, Solution Backlog Grooming and Balancing, etc.).
+- Facilitates all formal process activities (e.g. Sprint Planning, Retrospect, Solution Backlog Refinement and Balancing, etc.).
 
-- Performs continuous Solution Backlog grooming and balancing.
+- Performs continuous Solution Backlog refinement and balancing.
 
 - Accountable for all administrative duties (e.g. Solution Backlog updates).
 
@@ -62,7 +62,7 @@ Accountabilities that the Agile Coach takes over from the Project Squad Product 
 
 - Ensures team cohesion, coordination, and operation in line with the methodology.
 
-- Facilitates all formal process activities (e.g. Sprint Planning, Review, Retrospect, Solution Backlog Grooming and Balancing, etc.).
+- Facilitates all formal process activities (e.g. Sprint Planning, Review, Retrospect, Solution Backlog Refinement and Balancing, etc.).
 
 - Ensures clear and fully transparent communication between all Project Squad members.
 

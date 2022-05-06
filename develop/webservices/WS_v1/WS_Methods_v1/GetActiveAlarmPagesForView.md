@@ -10,9 +10,9 @@ Use this method to retrieve the number of active alarms of a view, grouped eithe
 
 | Item       | Format  | Description                                           |
 |------------|---------|-------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ViewID     | Integer | The view ID.                                          |
-| GroupOn    | String  | The property by which to group: “time” or “severity”. |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| viewID     | Integer | The view ID.                                          |
+| groupOn    | String  | The property by which to group: “time” or “severity”. |
 
 ## Output
 

@@ -10,14 +10,14 @@ Use this method to retrieve the trend statistics for a specified service. Availa
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ServiceID | Integer | The service ID. |
-| Filter | String | Optional parameter name filter supporting regular expressions. |
-| TrendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*, *CustomAmountHours* or *Custom*. |
-| CustomAmountHours | Integer | The custom amount of hours for the trend span in case TrendSpan is set to *CustomAmountHours*. |
-| UtcCustomStartTime | Long integer | The custom start time of the trend span in case TrendingSpanType is set to *Custom*. |
-| UtcCustomEndTime | Long integer | The custom end time of the trend span in case TrendingSpanType is set to *Custom*. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| serviceID | Integer | The service ID. |
+| filter | String | Optional parameter name filter supporting regular expressions. |
+| trendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*, *CustomAmountHours* or *Custom*. |
+| customAmountHours | Integer | The custom amount of hours for the trend span in case TrendSpan is set to *CustomAmountHours*. |
+| utcCustomStartTime | Long integer | The custom start time of the trend span in case TrendingSpanType is set to *Custom*. |
+| utcCustomEndTime | Long integer | The custom end time of the trend span in case TrendingSpanType is set to *Custom*. |
 
 ## Output
 

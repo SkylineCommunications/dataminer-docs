@@ -10,8 +10,8 @@ Use this method to create DMS Automation scripts made up of statements that each
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [Connect](xref:Connect). |
-| ScriptInfo | [CreateAutomationInfo](xref:CreateAutomationInfo) | The statements that make up the script. |
+| connection | String | The connection ID. See [Connect](xref:Connect). |
+| scriptInfo | [CreateAutomationInfo](xref:CreateAutomationInfo) | The statements that make up the script. |
 
 ## Output
 

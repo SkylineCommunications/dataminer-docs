@@ -13,8 +13,8 @@ Use this method to remove multiple tickets.
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| Tickets | Array of DMATicketUpdate | A DMATicketUpdate object for each ticket that must be removed, consisting of the DataMinerID and ID of the ticket. |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| tickets | Array of DMATicketUpdate | A DMATicketUpdate object for each ticket that must be removed, consisting of the DataMinerID and ID of the ticket. |
 
 ## Output
 

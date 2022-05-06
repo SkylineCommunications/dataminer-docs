@@ -10,7 +10,7 @@ Use this method to request a list of all the elements and services in a specific
 
 | Item       | Format  | Description                                   |
 |------------|---------|-----------------------------------------------|
-| Connection | String  | The connection ID. See [Connect](xref:Connect). |
+| connection | String  | The connection ID. See [Connect](xref:Connect). |
 | DmaID      | Integer | The DataMiner Agent ID.                       |
 | ServiceID  | Integer | The service ID.                               |
 

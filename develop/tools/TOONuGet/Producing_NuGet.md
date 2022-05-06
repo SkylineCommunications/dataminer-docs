@@ -9,6 +9,7 @@ Automatic creation and publishing of NuGets from the community class library or 
 You can enable the stages to handle NuGets by clicking the NuGet button in the SLC SE RepoManager. This will add a *JenkinsNuGetConfiguration.xml* file that allows configuration of these stages (Enable/Disable creation, Signing, Publishing of NuGets).
 
 > [!IMPORTANT]
+>
 > - The NuGet name must always begin with `Skyline.DataMiner`.
 > - The NuGet Name must be unique.
 
@@ -37,5 +38,8 @@ For example:
   </metadata>
 </package>
 ```
+
+> [!NOTE]
+> Even when NuSpec files are used, the Assembly Version and Assembly File Version for the projects should be updated.
 
 The pipeline will automatically create pre-release packages, which can be used during development. Every build will have its own pre-release package. Every release will have a signed released package.

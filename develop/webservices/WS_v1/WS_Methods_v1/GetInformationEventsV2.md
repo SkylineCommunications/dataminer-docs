@@ -12,9 +12,9 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item         | Format       | Description                                                              |
 |--------------|--------------|--------------------------------------------------------------------------|
-| Connection   | String       | The connection ID. See [ConnectApp](xref:ConnectApp).                     |
-| UtcStartTime | Long integer | The start time of the period for which information events are retrieved. |
-| UtcEndTime   | Long integer | The end time of the period for which information events are retrieved.   |
+| connection   | String       | The connection ID. See [ConnectApp](xref:ConnectApp).                     |
+| utcStartTime | Long integer | The start time of the period for which information events are retrieved. |
+| utcEndTime   | Long integer | The end time of the period for which information events are retrieved.   |
 
 ## Output
 

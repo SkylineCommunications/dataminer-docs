@@ -13,13 +13,13 @@ Use this method to retrieve a specific number of parameters on a particular Data
 
 | Item       | Format  | Description                                                                      |
 |------------|---------|----------------------------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID      | Integer | The DataMiner Agent ID.                                                          |
-| ElementID  | Integer | The element ID.                                                                  |
-| PageName   | String  | The name of the Data Display page.                                               |
-| Index      | Integer | The point from which to start returning parameters.                              |
-| Count      | Integer | The number of parameters to be returned.                                         |
-| OrderBy    | String  | The field(s) by which to order the parameters (separated by semicolons).         |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID      | Integer | The DataMiner Agent ID.                                                          |
+| elementID  | Integer | The element ID.                                                                  |
+| pageName   | String  | The name of the Data Display page.                                               |
+| index      | Integer | The point from which to start returning parameters.                              |
+| count      | Integer | The number of parameters to be returned.                                         |
+| orderBy    | String  | The field(s) by which to order the parameters (separated by semicolons).         |
 
 ## Output
 

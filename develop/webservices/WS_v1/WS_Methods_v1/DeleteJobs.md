@@ -10,9 +10,9 @@ Use this method to delete several jobs at the same time. If any of the specified
 
 | Item       | Format          | Description                                          |
 |------------|-----------------|------------------------------------------------------|
-| Connection | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DomainID   | String          | The ID of the job domain.                            |
-| JobIDs     | Array of string | The IDs of the jobs.                                 |
+| connection | String          | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| domainID   | String          | The ID of the job domain.                            |
+| jobIDs     | Array of string | The IDs of the jobs.                                 |
 
 ## Output
 

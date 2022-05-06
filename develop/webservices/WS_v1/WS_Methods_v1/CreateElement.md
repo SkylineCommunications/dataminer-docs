@@ -10,10 +10,10 @@ Use this method to create a new element on the specified DataMiner Agent.
 
 | Item          | Format                   | Description                                                                         |
 |---------------|--------------------------|-------------------------------------------------------------------------------------|
-| Connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
-| DmaID         | Integer                  | The DataMiner Agent ID.                                                             |
-| ViewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
-| Configuration | DMAElementConfiguration  | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
+| connection    | String                   | The connection string. See [ConnectApp](xref:ConnectApp).                           |
+| dmaID         | Integer                  | The DataMiner Agent ID.                                                             |
+| viewIDs       | Array of Integer         | The IDs of the views in which the element should be created.                        |
+| configuration | DMAElementConfiguration  | See [DMAElementConfiguration](xref:DMAElementConfiguration). |
 
 > [!NOTE]
 > -  When you create an element, the “State” property of the DMAElementConfiguration object should be *Active*, *Paused* or *Stopped*.

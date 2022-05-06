@@ -10,8 +10,8 @@ Use this method to retrieve a specific service definition. Available from DataMi
 
 | Item                | Format | Description                                                                          |
 |---------------------|--------|--------------------------------------------------------------------------------------|
-| Connection          | String | The connection string. See [ConnectApp](xref:ConnectApp). |
-| ServiceDefinitionID | String | The ID of the service definition.                                                    |
+| connection          | String | The connection string. See [ConnectApp](xref:ConnectApp). |
+| serviceDefinitionID | String | The ID of the service definition.                                                    |
 
 ## Output
 

@@ -10,8 +10,8 @@ Use this method to retrieve the names of all files attached to a specific bookin
 
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| BookingID  | String | The booking ID.                                      |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| bookingID  | String | The booking ID.                                      |
 
 ## Output
 

@@ -13,9 +13,9 @@ Use this method to edit a specific ticket type (called “domain” in the Ticke
 
 | Item           | Format | Description                                          |
 |----------------|--------|------------------------------------------------------|
-| Connection     | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| TicketTypeID   | GUID   | The GUID of the ticket type.                         |
-| TicketTypeName | String | The name of the ticket type.                         |
+| connection     | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| ticketTypeID   | GUID   | The GUID of the ticket type.                         |
+| ticketTypeName | String | The name of the ticket type.                         |
 
 ## Output
 

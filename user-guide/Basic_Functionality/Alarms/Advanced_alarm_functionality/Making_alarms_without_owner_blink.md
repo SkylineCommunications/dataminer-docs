@@ -30,46 +30,45 @@ It is also possible to specify alarm filters, so that blinking is only enabled b
 > - [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
 > - [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions)
 
-### Activating alarm blinking on a DMA
+## Activating alarm blinking on a DMA
 
 1. Stop the DataMiner software.
 
-2. On a DataMiner Agent, open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+1. On a DataMiner Agent, open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
 
-3. Inside the *\<AlarmSettings>* tag, specify a *\<Blinking>* tag like the following one:
+1. In the *\<AlarmSettings>* tag, specify a *\<Blinking>* tag like the following one:
 
-    ```xml
-    <AlarmSettings>
-      <Blinking enabled="true"
-        alarmFilter="MyPublicAlarmFilter"
-        elementFilter="MyPublicElementFilter"
-        serviceFilter="MyPublicServiceFilter"
-        viewFilter="MyPublicViewFilter"
-        serviceSeveritiesFilter="minor,major"
-        blankInterval="200"
-      blinkInterval="1000" />
-    </AlarmSettings>
-    ```
+   ```xml
+   <AlarmSettings>
+     <Blinking enabled="true"
+       alarmFilter="MyPublicAlarmFilter"
+       elementFilter="MyPublicElementFilter"
+       serviceFilter="MyPublicServiceFilter"
+       viewFilter="MyPublicViewFilter"
+       serviceSeveritiesFilter="minor,major"
+       blankInterval="200"
+     blinkInterval="1000" />
+   </AlarmSettings>
+   ```
 
-4. Save the file and restart the DMA.
+1. Save the file and restart the DMA.
 
-    In case DataMiner Cube was open while you edited the settings, the changes will only be applied after you close and reopen Cube.
+   In case DataMiner Cube was open while you edited the settings, the changes will only be applied after you close and reopen Cube.
 
 > [!NOTE]
 > Only public alarm filters can be used, not private filters.
 
-### Overview of filter attributes
+## Overview of filter attributes
 
 The following filter attributes can be used:
 
-| Attribute               | Description                                                                                                                                                                                                                                           |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| alarmFilter             | The name of a shared, public alarm filter. Alarms will only blink if they match the filter.                                                                                                                                                           |
-| elementFilter           | The name of a shared, public alarm filter. Elements will only blink if they match the filter.                                                                                                                                                         |
-| serviceFilter           | The name of a shared, public alarm filter. Services will only blink if they match the filter.                                                                                                                                                         |
-| viewFilter              | The name of a shared, public alarm filter. Views will only blink if they match the filter. <br> Note that any alarm that is contained in a view that matches the filter will blink, and any other views that contain that same alarm will also blink. |
-| serviceSeveritiesFilter | Comma-separated list of alarm severities. If the overall alarm severity of a service matches one of the listed severities, it will blink.                                                                                                             |
+| Attribute | Description |
+|--|--|
+| alarmFilter | The name of a shared, public alarm filter. Alarms will only blink if they match the filter. |
+| elementFilter | The name of a shared, public alarm filter. Elements will only blink if they match the filter. |
+| serviceFilter | The name of a shared, public alarm filter. Services will only blink if they match the filter. |
+| viewFilter | The name of a shared, public alarm filter. Views will only blink if they match the filter. Note that any alarm that is contained in a view that matches the filter will blink, and any other views that contain that same alarm will also blink. |
+| serviceSeveritiesFilter | Comma-separated list of alarm severities. If the overall alarm severity of a service matches one of the listed severities, it will blink. |
 
 > [!NOTE]
 > If you only set the *serviceFilter* attribute and not the *serviceSeveritiesFilter*, you could see services blink that are not supposed to blink. This is because the alarm severity of a service can be limited to a certain level during service creation. However, if only a *serviceFilter* is set, then alarms that are not within the set limit could still make the service blink. By specifying a *serviceSeveritiesFilter*, you can correct this unwanted behavior, by adding the specific severities for which the service is allowed to blink.
->

@@ -10,8 +10,8 @@ Use this method make DataMiner resend the active alarms to an SNMP Manager.
 
 | Item          | Format  | Description                                                                      |
 |---------------|---------|----------------------------------------------------------------------------------|
-| Connection    | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| SnmpManagerID | Integer | The ID of the SNMP Manager                                                       |
+| connection    | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| snmpManagerID | Integer | The ID of the SNMP Manager                                                       |
 
 ## Output
 

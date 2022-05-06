@@ -19,5 +19,4 @@ This section consists of the following topics:
 - [Alarm storm protection](xref:Alarm_storm_protection)
 
 > [!TIP]
-> See also:
-> [Configuring properties for Alarm Console grouping](xref:PropertyConfiguration_xml#configuring-properties-for-alarm-console-grouping)
+> See also: [Configuring properties for Alarm Console grouping](xref:PropertyConfiguration_xml#configuring-properties-for-alarm-console-grouping)

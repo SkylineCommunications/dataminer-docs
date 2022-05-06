@@ -281,3 +281,4 @@ uid: ErrorCodeTable
 |SL_PAGED_SESSION_CONCURRENT_LIMIT|0x80040326|Too many concurrent paged table sessions.|
 |SL_PAGED_SESSION_NOT_FOUND|0x80040327|Paged table session not found.|
 |SL_PAGED_SESSION_PAGE_NOT_FOUND|0x80040328|Paged table session page not found.|
+|SL_SYSTEM_REQUIREMENTS_NOT_MET|0x80040329|The system does not meet the requirements for this functionality.|

@@ -13,14 +13,14 @@ Use this method to retrieve a specific number of services attached to a specifie
 
 | Item | Format | Description |
 |--|--|--|
-| Connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| DmaID | Integer | The DataMiner Agent ID. |
-| ServiceTemplateID | Integer | The ID of the service template. |
-| StartsWith | String | If, in this field, you enter a piece of text, then the method will only return services of which the name starts with that piece of text. |
-| Query | String | If, in this field, you enter a piece of text, then the method will only return services of which the name contains that piece of text. |
-| Index | Integer | The point from which to start returning services. |
-| Count | Integer | The number of services to be returned. |
-| OrderBy | String | The field(s) by which to order the services (separated by semicolons). |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| dmaID | Integer | The DataMiner Agent ID. |
+| serviceTemplateID | Integer | The ID of the service template. |
+| startsWith | String | If, in this field, you enter a piece of text, then the method will only return services of which the name starts with that piece of text. |
+| query | String | If, in this field, you enter a piece of text, then the method will only return services of which the name contains that piece of text. |
+| index | Integer | The point from which to start returning services. |
+| count | Integer | The number of services to be returned. |
+| orderBy | String | The field(s) by which to order the services (separated by semicolons). |
 
 ## Output
 

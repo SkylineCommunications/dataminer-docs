@@ -10,10 +10,10 @@ Use this method to retrieve the drop-down options for a specific job field.
 
 | Item       | Format  | Description                                                |
 |------------|---------|------------------------------------------------------------|
-| Connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).      |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).      |
 | fieldID    | String  | The ID of the job field.                                   |
-| PageSize   | Integer | The number of options retrieved.                           |
-| Filter     | String  | Case-insensitive filter on the display name of the options |
+| pageSize   | Integer | The number of options retrieved.                           |
+| filter     | String  | Case-insensitive filter on the display name of the options |
 
 ## Output
 

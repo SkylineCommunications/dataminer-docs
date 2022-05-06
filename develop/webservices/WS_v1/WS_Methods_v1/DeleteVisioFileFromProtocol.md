@@ -10,9 +10,9 @@ Use this method to delete a specified Visio file that can be assigned to a proto
 
 | Item          | Format | Description                                          |
 |---------------|--------|------------------------------------------------------|
-| Connection    | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ProtocolName  | String | The name of the protocol.                            |
-| VisioFileName | String | The file name of the Visio file.                     |
+| connection    | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
+| protocolName  | String | The name of the protocol.                            |
+| visioFileName | String | The file name of the Visio file.                     |
 
 ## Output
 
