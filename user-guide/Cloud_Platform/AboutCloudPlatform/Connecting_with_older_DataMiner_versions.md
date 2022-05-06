@@ -48,12 +48,12 @@ To connect your DMS to the cloud:
 
    > [!NOTE]
    >
-   > - In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to the cloud. However, these will no longer be used, and they are no longer available from DataMiner 10.1.9 onwards. If you are using an **older DataMiner version**, make sure **none of these checkboxes are selected**.
+   > - In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to the cloud. However, these are no longer used and are unavailable in later DataMiner versions. If you are using an **older DataMiner version**, make sure **none of these checkboxes are selected**.
    > - Internet Explorer is not supported for this. If your default browser is Internet Explorer, you may need to change this temporarily in order to continue with this procedure.
 
 1. Specify the following information in the pop-up window:
 
-   - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
+   - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system or by clicking *Create new* and specifying your name and DNS.
 
    - *DMS name*: Specify the name you want to use for your DMS.
 
