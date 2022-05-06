@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-}
+
 button,
 a {
   color: #337ab7;
@@ -366,7 +366,7 @@ article section {
   box-shadow: 0 0 10px #111;
 }
 #search {
-  display: none;
+  /* display: none; */
 }
 
 /* Search results display*/
@@ -1139,4 +1139,80 @@ div.embeddedvideo iframe {
 .code-header > .action .successful-copy-alert.is-transparent {
   opacity: 0;
   transition: 500ms opacity ease-in-out;
+}
+
+.search-button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: #fff;
+}
+
+.search-button:hover {
+  color: unset;
+  text-decoration: unset;
+}
+
+.search-button:hover {
+  transition: 0.1s;
+  opacity: .5;
+}
+
+.search-button> i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 0.25em;
+}
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.overlay-content {
+  width: 100%;
+  margin: 4em 0 1em 4em;
+  display: inline-block;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-size: 5em;
+  font-weight: bolder;
+  cursor: pointer;
+  color: white;
+  line-height: 60px;
+}
+
+#overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: 2px solid white;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+#overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.overlay-results {
+  color: white;
+  margin: 0 4em;
 }
