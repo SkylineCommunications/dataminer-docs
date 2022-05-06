@@ -77,7 +77,7 @@ jobs:
           connection_string: ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }}
           # Sync: true keeps the source and destination in sync,
           # otherwise changed files and new would be pushed, but deleted wouldn't be removed.
-          sync: true
+          sync: 'true'
           
   reindex_azure_search:
     runs-on: ubuntu-latest
