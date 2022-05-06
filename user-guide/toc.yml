@@ -2233,7 +2233,7 @@
         - name: Connecting your DataMiner System to the cloud
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
           items:
-            - name: Connecting_with_older_DataMiner_versions
+            - name: Connecting with older DataMiner versions
               topicUid: Connecting_with_older_DataMiner_versions
         - name: Linking your DataMiner account to your DCP account
           topicUid: Linking_your_DataMiner_and_DCP_account

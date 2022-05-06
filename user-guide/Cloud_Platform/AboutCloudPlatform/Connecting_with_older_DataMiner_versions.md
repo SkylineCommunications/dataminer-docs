@@ -11,55 +11,53 @@ To connect your DMS to the cloud:
 
 1. Verify that the following **requirements** are met:
 
-    - All DataMiner Agents in the DataMiner System are running DataMiner version 10.1.1 or higher.
+   - All DataMiner Agents in the DataMiner System are running DataMiner version 10.1.1 or higher.
 
-    - Prior to DataMiner 10.1.9: The *CloudConnectedAgents* soft-launch option is enabled on all DMAs in the cluster. For more information, see <https://community.dataminer.services/documentation/soft-launch-options/>.
-     
-    > [!NOTE]
-    > Live Sharing was still in soft-launch until DataMiner version 10.1.12. To be able to use this feature the *CloudConnectedAgents* soft-launch option still needs to be enabled on all DMAs in the cluster.
+   - The *CloudConnectedAgents* soft-launch option is enabled on all DMAs in the cluster. For more information, see <https://community.dataminer.services/documentation/soft-launch-options/>.
 
-    - Each DMA that will be connected to the cloud can reach the following endpoints:
+   - Each DMA that will be connected to the cloud can reach the following endpoints:
 
-        - ``https://*.dataminer.services/``
+     - ``https://*.dataminer.services/``
 
-        - ``wss://tunnel.dataminer.services/``
+     - ``wss://tunnel.dataminer.services/``
 
 1. Download the appropriate DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
 
 1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 
-    Prior to DataMiner 10.1.4:
+   Prior to DataMiner 10.1.4:
 
-    - [System configuration > Cloud sharing > Connect to cloud](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
+   - [System configuration > Cloud sharing > Connect to cloud](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
 
-    - [System configuration > Cloud sharing > Disconnect from cloud](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
+   - [System configuration > Cloud sharing > Disconnect from cloud](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
 
-    - [System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools)
+   - [System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools)
 
-    From DataMiner 10.1.4 onwards:
+   From DataMiner 10.1.4 onwards:
 
-    - [System configuration > Cloud gateway > Connect to DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
+   - [System configuration > Cloud gateway > Connect to DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
 
-    - [System configuration > Cloud gateway > Disconnect from DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
+   - [System configuration > Cloud gateway > Disconnect from DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
 
-    - [System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) (no longer required from DataMiner 10.1.9 onwards)
+   - [System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) (no longer required from DataMiner 10.1.9 onwards)
 
-    > [!TIP]
-    > See also: [User rights](xref:User_rights)
+   > [!TIP]
+   > See also: [User rights](xref:User_rights)
 
 1. On the System Center \> *Cloud* page, click the *Connect* button. A pop-up browser window will open.
 
-    > [!NOTE]
-    > - In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to the cloud. However, these will no longer be used, and they are no longer available from DataMiner 10.1.9 onwards. If you are using an **older DataMiner version**, make sure **none of these checkboxes are selected**.
-    > - Internet Explorer is not supported for this. If your default browser is Internet Explorer, you may need to change this temporarily in order to continue with this procedure.
+   > [!NOTE]
+   >
+   > - In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to the cloud. However, these will no longer be used, and they are no longer available from DataMiner 10.1.9 onwards. If you are using an **older DataMiner version**, make sure **none of these checkboxes are selected**.
+   > - Internet Explorer is not supported for this. If your default browser is Internet Explorer, you may need to change this temporarily in order to continue with this procedure.
 
 1. Specify the following information in the pop-up window:
 
-    - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
+   - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
 
-    - DMS name: Specify the name you want to use for your DMS.
+   - *DMS name*: Specify the name you want to use for your DMS.
 
-    - DMS URL: Specify a URL-friendly version of the DMS name.
+   - *DMS URL*: Specify a URL-friendly version of the DMS name.
 
 1. Select the checkbox to agree to the terms of service and click *Connect*.
 
