@@ -18,6 +18,8 @@
     "content": [
       {
         "files": [
+          "dataminer-overview/**.md",
+          "dataminer-overview/**/toc.yml",
           "user-guide/**.md",
           "user-guide/**/toc.yml",
           "srm/**.md",
@@ -35,6 +37,7 @@
       {
         "files": [
           "images/**",
+          "dataminer-overview/images/**",
           "user-guide/images/**",
           "srm/images/**",
           "develop/images/**",

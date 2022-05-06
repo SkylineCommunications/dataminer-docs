@@ -1,0 +1,9 @@
+- name: DataMiner Overview
+  topicUid: OverviewIndex
+  items:
+    - name: About DataMiner
+      topicUid: Overview_About_DataMiner
+    - name: About Skyline Communications
+      topicUid: Overview_About_Skyline
+    - name: DataMiner Cloud Platform
+      topicUid: Overview_DCP

@@ -4,7 +4,7 @@ uid: DashboardImage
 
 # Image
 
-This dashboard component displays an uploaded image.
+This component displays an uploaded image.
 
 To configure this component:
 

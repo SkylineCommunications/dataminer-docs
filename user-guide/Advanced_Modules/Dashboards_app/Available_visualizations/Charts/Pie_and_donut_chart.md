@@ -4,7 +4,7 @@ uid: PieAndDonutChart
 
 # Pie & donut chart
 
-This dashboard component is introduced in DataMiner 10.0.13 with the purpose of displaying the results of queries in a chart shaped like a pie or donut.
+This component is displays the results of queries in a chart shaped like a pie or donut. It is available from DataMiner 10.0.13 onwards.
 
 To configure the component:
 

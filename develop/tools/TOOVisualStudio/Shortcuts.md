@@ -4,8 +4,8 @@ uid: Shortcuts
 
 # Shortcuts
 
-- For Visual Studio 2015, see <https://msdn.microsoft.com/en-us/library/da5kh0wa.aspx>.
+- For Visual Studio 2022, see <https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2022>.
 
-- For Visual Studio 2013, see <https://msdn.microsoft.com/en-us/library/da5kh0wa(v=vs.120).aspx>.
+- For Visual Studio 2019, see <https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019>.
 
-- For Visual Studio 2010, see <https://msdn.microsoft.com/en-us/library/da5kh0wa(v=vs.100).aspx>.
+- For Visual Studio 2017, see <https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2017>.

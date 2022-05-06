@@ -10,10 +10,6 @@ In this section:
 
 - [Visual Studio spell checker](xref:Visual_Studio_spell_checker)
 
-- [C outline](xref:C_outline)
-
-- [StyleCop](xref:StyleCop1#stylecop)
-
 - [CodeMaid](xref:CodeMaid)
 
 - [SonarLint](xref:SonarLint)

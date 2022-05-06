@@ -4,7 +4,7 @@ uid: DashboardText
 
 # Text
 
-This dashboard component displays a block of static text.
+This component displays a block of static text.
 
 To configure this component:
 

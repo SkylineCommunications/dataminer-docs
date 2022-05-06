@@ -4,7 +4,7 @@ uid: DashboardParameterPage
 
 # Parameter page
 
-This dashboard component displays a particular data page of an element.
+This component displays a particular data page of an element.
 
 To configure the component:
 

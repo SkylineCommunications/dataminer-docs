@@ -4,7 +4,7 @@ uid: Protocol.ExportRules.ExportRule-whereValue
 
 # whereValue attribute
 
-Specifies, together with the whereTag attribute, a condition so the export rule will only be applied if the condition is met.
+Specifies, together with the [whereTag](xref:Protocol.ExportRules.ExportRule-whereTag) attribute, a condition so the export rule will only be applied if the condition is met.
 
 ## Content Type
 
@@ -18,55 +18,58 @@ string
 
 Example:
 
-```xml
-<ExportRule table="*" whereTag="Protocol/Params/Param/Name" whereValue="My param" />
-```
-
-Example:
-
-- Position element 1:
+- Two parameters:
 
   ```xml
-    <Position>
-      <Page>Export Items</Page>
-      <Row>1</Row>
-     <Column>0</Column>
-  </Position>
-  ```
-
-- Position element 2:
-
-  ```xml
-  <Position>
-      <Page>Export Items Details</Page>
-      <Row>2</Row>
-      <Column>1</Column>
-  </Position>
+  <Param id="1">
+      <Name>My param</Name>
+      <Positions>
+          <Position>
+              <Page>General</Page>
+              <Row>0</Row>
+             <Column>0</Column>
+          </Position>
+      </Positions>
+  </Param>
+  <Param id="2">
+      <Name>Other param</Name>
+      <Positions>
+          <Position>
+              <Page>General</Page>
+              <Row>1</Row>
+              <Column>0</Column>
+          </Position>
+      </Positions>
+  </Param>
   ```
 
 - Export rule:
 
   ```xml
-  <ExportRule table="1000" tag="Protocol/Params/Param/Display/Positions/Position/Page" value="General" regex="Export Items"/>
+  <ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Row" value="2" whereTag="Protocol/Params/Param/Name" whereValue="My param" />
   ```
 
 - Result:
-  - Position element 1:
 
-    ```xml
-    <Position>
-        <Page>General</Page>
-        <Row>1</Row>
-        <Column>0</Column>
-    </Position>
-    ```
-
-  - Position element 2:
-
-     ```xml
-    <Position>
-        <Page>General Details</Page>
-        <Row>2</Row>
-        <Column>1</Column>
-    </Position>
-     ```
+  ```xml
+  <Param id="1">
+      <Name>My param</Name>
+      <Positions>
+          <Position>
+              <Page>General</Page>
+              <Row>2</Row>
+              <Column>0</Column>
+          </Position>
+      </Positions>
+  </Param>
+  <Param id="2">
+      <Name>Other param</Name>
+      <Positions>
+          <Position>
+              <Page>General</Page>
+              <Row>1</Row>
+              <Column>0</Column>
+          </Position>
+      </Positions>
+  </Param>
+  ```

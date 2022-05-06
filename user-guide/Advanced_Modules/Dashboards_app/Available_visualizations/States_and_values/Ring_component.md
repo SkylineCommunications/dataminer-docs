@@ -33,7 +33,7 @@ To configure the component:
 
    - In case the component displays more than one parameter, in the *Advanced* > *Layout* section, you can adjust the way the different items are displayed:
 
-     - *Layout flow*: Determines whether the different items are displayed next to each other or below each other. However, note that when the dashboard is used on a small screen, they will always be displayed below each other.
+     - *Layout flow*: Determines whether the different items are displayed next to each other or below each other. However, note that when the items are viewed on a small screen, they will always be displayed below each other.
 
      - *Maximum rows per page*: Determines how many items can at most be displayed below each other on a single page.
 

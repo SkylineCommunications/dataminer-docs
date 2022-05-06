@@ -16,8 +16,16 @@ To update the Java version:
    > [!NOTE]
    > You can download the latest OpenJDK 8 JRE binaries from [the OpenJDK Wiki](https://wiki.openjdk.java.net/display/jdk8u/Main). Make sure to download the **Windows x64** archive. For example: *OpenJDK8U-jre_x64_windows_8u322b06.zip*
 
+1. Stop the DataMiner Agent.
+
 1. Stop the *Cassandra* service.
 
-1. Extract the OpenJDK archive and update the binaries in *C:\Program Files\Cassandra\Java*.
+1. Rename the *C:\Program Files\Cassandra\Java* folder to *C:\Program Files\Cassandra\Java_bak*.
+
+1. Create a new *Java* folder in *C:\Program Files\Cassandra*.
+
+1. Extract the OpenJDK archive you downloaded and copy the binaries to *C:\Program Files\Cassandra\Java*.
 
 1. Start the *Cassandra* service.
+
+1. Start the DataMiner Agent.

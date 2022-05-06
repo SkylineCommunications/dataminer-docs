@@ -27,7 +27,7 @@ To configure the component:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
-   - *Layout*: In case trend statistics are displayed for multiple parameters, this setting determines whether the blocks of statistics are displayed next to each other or below each other. However, note that when the dashboard is used on a small screen, they will always be displayed below each other.
+   - *Layout*: In case trend statistics are displayed for multiple parameters, this setting determines whether the blocks of statistics are displayed next to each other or below each other. However, note that when the statistics are viewed on a small screen, they will always be displayed below each other.
 
    - *Maximum rows per page*: Determines the maximum number of parameters for which statistics can be displayed below each other on a single page.
 

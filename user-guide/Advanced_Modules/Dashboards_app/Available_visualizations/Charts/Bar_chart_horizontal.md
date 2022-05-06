@@ -4,6 +4,8 @@ uid: BarChartHorizontal
 
 # Bar chart (horizontal)
 
+Deprecated since DataMiner 10.0.13.
+
 This chart is the same as the regular bar chart, except that the bars are displayed horizontally.
 
 Aside from the option to stack the bars, which is not available for the horizontal bar chart, it features the same options as the vertical bar chart.

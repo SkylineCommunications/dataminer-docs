@@ -159,7 +159,7 @@ namespace Skyline.DataMiner.Automation
 		public void SelectMemory(int id, string val) { }
 
 		/// <summary>
-		/// Selects a script memory from the main script to be used as the script memory with the specified ID in the subscript.
+		/// Selects a persistent script memory from the main script to be used as the persistent script memory with the specified ID in the subscript.
 		/// </summary>
 		/// <param name="id"></param>
 		/// <param name="memory"></param>
@@ -204,7 +204,7 @@ namespace Skyline.DataMiner.Automation
 		public void SelectMemory(string name, string val) { }
 
 		/// <summary>
-		/// Selects a script memory from the main script to be used as the script memory in the subscript.
+		/// Selects a persistent script memory from the main script to be used as the persistent script memory in the subscript.
 		/// </summary>
 		/// <param name="name">The name of the script memory of the subscript.</param>
 		/// <param name="memory">The script memory of the main script to link.</param>

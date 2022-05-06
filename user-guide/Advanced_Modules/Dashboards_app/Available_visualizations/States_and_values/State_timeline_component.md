@@ -16,4 +16,4 @@ To configure the component:
 
    - If the component uses a table or column parameter data feed, add an index filter feed.
 
-1. Optionally, add a *Time range* component to the dashboard and configure the state timeline component to use it as a filter feed.
+1. Optionally, add a *Time range* component and configure the state timeline component to use it as a filter feed.
