@@ -358,7 +358,6 @@ article section {
   box-shadow: 0 0 10px #111;
 }
 #search {
-  display: none;
 }
 
 /* Search results display*/
