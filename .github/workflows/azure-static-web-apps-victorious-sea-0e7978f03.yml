@@ -19,7 +19,7 @@ jobs:
           submodules: true
       - name: choco install docfx
         run: |
-          choco install docfx -y --version=3.0.0-beta1.1201
+          choco install docfx -y -pre
         env:
           CI: true
       - name: build metadata -f
