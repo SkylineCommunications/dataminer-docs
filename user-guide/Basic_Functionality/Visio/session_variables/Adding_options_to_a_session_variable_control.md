@@ -262,9 +262,9 @@ Second listbox shape:
 | SetVar           | MyVarName;\[Param:dmaid/elementid,2000\]                                          |
 | SetVarOptions    | Control=ListBox\|displaycolumn=2003\|FKColumn=2004\|Filter=\[var:FilterVariable\] |
 
+In the "FKColumn" option, specify the parameter ID of the column that contains the foreign keys. In the example above, column 2004 of the table with parameter ID 2000 will contain references to primary keys of table 1000.
 
-- In the "FKColumn" option, specify the parameter ID of the column that contains the foreign keys. In the example above, column 2004 of table with parameterid 2000 will contain references to primary keys of table 1000.
-- In the "Filter" option, you can indicate that the list has to be filtered. In the example above, the list will be filtered by foreign key value, based on the value of the session variable that was set in the "FilterVariable" by the first listbox shape.
+In the "Filter" option, you can indicate that the list has to be filtered. In the example above, the list will be filtered by foreign key value, based on the value of the session variable that was set in the "FilterVariable" by the first listbox shape.
 
 > [!NOTE]
 > In the "Filter" option, you can also use parameter values, property values or a combination of both (\[Param:...\], \[property:...\], etc.).
