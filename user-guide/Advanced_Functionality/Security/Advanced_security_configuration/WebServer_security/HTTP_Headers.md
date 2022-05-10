@@ -71,11 +71,12 @@ To bypass TLS encryption on websites served over HTTPS, attackers can use *SSL s
 
 To enable *Strict Transport Security*:
 
+### [Windows Server 2019 or newer](#tab/hsts-1)
 1. Open *IIS Manager*.
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the *Actions* pane, click *HSTS*.
+1. In the *Actions* pane, click *HSTS*. Windows Server versions older than 2019, 
 
 1. In the pop-up, select *Enable*.
 
@@ -86,6 +87,23 @@ To enable *Strict Transport Security*:
 1. Optionally, select *Preload*.
 
 1. Click *OK*.
+
+### [Older Windows Server versions](#tab/hsts-2)
+1. Open *IIS Manager*.
+
+1. In the *Connections* pane on the left, select *Default Web Site*.
+
+1. In the middle pane, double-click *HTTP Reponse Headers*.
+
+1. In the *Actions* pane, click *Add...*.
+
+1. Set the *Name* to *Strict-Transport-Security*.
+
+1. Set the *Value* to *max-age=31536000; includeSubDomains* (i.e. 1 year).
+
+1. Click *OK*.
+
+***
 
 > [!TIP]
 > For information about HSTS, see [HSTS Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html).
