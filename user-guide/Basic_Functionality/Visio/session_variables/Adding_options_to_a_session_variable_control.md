@@ -248,14 +248,23 @@ It is possible to link two list boxes. That way, when you select an item in the 
 
 In the second list box, use the SetVarOption "FKColumn" to define a foreign key relationship between the two datasets. In that option, specify the column in the second list box that contains the foreign keys that link to the first list box.
 
-Example:
+First listbox shape:
 
-```txt
-FKColumn=fkcolpid|Filter=[var:OtherList]
-```
+| Shape data field | Value                                         |
+| ---------------- | --------------------------------------------- |
+| SetVar           | FilterVariable;\[Param:dmaid/elementid,1000\] |
+| SetVarOptions    | Control=ListBox\|displaycolumn=1002           |
 
-- In the "FKColumn" option, specify the parameter ID of the column that contains the foreign keys.
-- In the "Filter" option, you can indicate that the list has to be filtered. In the example above, the list will be filtered by foreign key value, based on the value of the session variable that was set in the "OtherList" box.
+Second listbox shape:
+
+| Shape data field | Value                                                                             |
+| ---------------- | --------------------------------------------------------------------------------- |
+| SetVar           | MyVarName;\[Param:dmaid/elementid,2000\]                                          |
+| SetVarOptions    | Control=ListBox\|displaycolumn=2003\|FKColumn=2004\|Filter=\[var:FilterVariable\] |
+
+
+- In the "FKColumn" option, specify the parameter ID of the column that contains the foreign keys. In the example above, column 2004 of table with parameterid 2000 will contain references to primary keys of table 1000.
+- In the "Filter" option, you can indicate that the list has to be filtered. In the example above, the list will be filtered by foreign key value, based on the value of the session variable that was set in the "FilterVariable" by the first listbox shape.
 
 > [!NOTE]
 > In the "Filter" option, you can also use parameter values, property values or a combination of both (\[Param:...\], \[property:...\], etc.).
