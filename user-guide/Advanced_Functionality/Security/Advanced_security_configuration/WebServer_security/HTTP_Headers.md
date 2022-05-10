@@ -76,7 +76,7 @@ To enable *Strict Transport Security*:
 
 1. In the *Connections* pane on the left, select *Default Web Site*.
 
-1. In the *Actions* pane, click *HSTS*. Windows Server versions older than 2019, 
+1. In the *Actions* pane, click *HSTS*.
 
 1. In the pop-up, select *Enable*.
 
