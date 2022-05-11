@@ -15,3 +15,6 @@ The DataMiner Application Framework allows you to create custom low-code applica
 - [Configuring custom applications](xref:Configuring_custom_apps)
 
 - [Deleting a custom application](xref:Deleting_custom_apps)
+
+> [!NOTE]
+> The Application Framework requires the "Low-Code Apps" license. For more information on acquiring this license, contact the Skyline Sales department.
