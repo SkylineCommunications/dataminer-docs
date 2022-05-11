@@ -2283,6 +2283,8 @@
           topicUid: Accessing_the_Catalog_module
         - name: Looking up a DataMiner connector
           topicUid: Looking_up_a_DataMiner_connector
+        - name: Deploying a DataMiner connector to your system
+          topicUID: Deploying_a_DataMiner_connector_to_your_system
     - name: DataMiner Sharing
       topicUid: Sharing
       items:

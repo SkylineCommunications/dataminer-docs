@@ -2,7 +2,7 @@
 uid: CloudConnectionVerification
 ---
 
-# Getting your DMS cloud connection verified
+# Getting your organization verified
 
 To make sure you can get the most out of your DataMiner System being cloud connected, you need to get your cloud connection verified. This verification ensures that you have access to all the current and upcoming new cloud features.
 
