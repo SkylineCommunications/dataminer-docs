@@ -4,7 +4,7 @@ uid: CloudConnectionVerification
 
 # Getting your organization verified
 
-To make sure you can get the most out of your DataMiner System being cloud connected, you need to get your cloud connection verified. This verification ensures that you have access to all the current and upcoming new cloud features.
+To make sure you can get the most out of your DataMiner System being cloud connected, you need to get your organization verified. This verification ensures that you have access to all the current and upcoming new cloud features.
 
 Current benefits include access to the cloud catalog in order to install protocols directly from the DataMiner Cloud Platform using the artifact deployer (available starting from Cloud Pack v2.4).
 
