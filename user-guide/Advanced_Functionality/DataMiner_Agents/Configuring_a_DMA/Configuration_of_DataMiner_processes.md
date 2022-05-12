@@ -138,6 +138,9 @@ As some protocols have QActions that require a large amount of memory, elements 
 
 When a protocol is flagged to run in separate instances, every element using that protocol will be started in a new instance of SLProtocol and SLScripting. When the element is stopped, these instances are taken down again, and when the element restarts, new instances are created.
 
+> [!NOTE]
+> It's also possible to configure this behavior in the protocol itself using the [RunInSeparateInstance](xref:Protocol.SystemOptions.RunInSeparateInstance) tag, which doesn't require a DataMiner restart.
+
 To configure this:
 
 1. Stop the DataMiner software.
