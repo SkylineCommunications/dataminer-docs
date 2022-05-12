@@ -9,7 +9,6 @@
         }
       ],
       "dest": "develop/api/types",
-      "disableGitFeatures": true,
       "disableDefaultFilter": false,
       "filter": "filterConfig.yml"
     }
@@ -61,7 +60,6 @@
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "cleanupCacheHistory": false
   }
 }
