@@ -37,6 +37,30 @@ Since DataMiner version 8.0.5, it is possible to define a column of type "displa
 
 It is not allowed to set values to this column. The column will automatically be filled in by the SLElement process. This column also does not support alarming or trending. When a column of type “displaykey” is used in a table, it must be defined as the last column of that table.
 
+## NamingFormat
+
+Another way to define a display key using naming is by using the NamingFormat tag:
+
+```xml
+<Param id="2000" trending="false">
+  <Name>Transport Streams</Name>
+  <Description>Transport Streams</Description>
+  <Type>array</Type>
+  <ArrayOptions index="0">
+     <NamingFormat><![CDATA[;Input;1005;TS;2004]]></NamingFormat>
+     <ColumnOption idx="0" pid="2001" type="retrieved" options="" />
+           <ColumnOption idx="1" pid="2002" type="retrieved" options=";save;foreignKey=1000" />
+           <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
+           <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
+           ...
+           <ColumnOption idx="71" pid="2899" type="displaykey" options="" />
+  </ArrayOptions>
+```
+
+The first character defines the separator and can be freely chosen. It will be replaced by an empty string when the display key is formed. The use of the CDATA block allows the use of characters like “<”, “>” and “&” that are otherwise encoded in XML.
+
+In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input 2 TS 3".
+
 ## Naming
 
 Naming can be used to define a display key for a table. The example below defines a display key using a combination of parameters from three different tables (table 1000, 2000 and 3000).
@@ -65,33 +89,7 @@ See also:
 - [Relations](xref:UIComponentsTableRelations)
 - [Protocol.Params.Param.ArrayOptions@options: naming](xref:Protocol.Params.Param.ArrayOptions-options#naming)
 
-## NamingFormat
-
-Another way to define a display key using naming is by using the NamingFormat tag:
-
-```xml
-<Param id="2000" trending="false">
-  <Name>Transport Streams</Name>
-  <Description>Transport Streams</Description>
-  <Type>array</Type>
-  <ArrayOptions index="0">
-     <NamingFormat><![CDATA[;Input;1005;TS;2004]]></NamingFormat>
-     <ColumnOption idx="0" pid="2001" type="retrieved" options="" />
-           <ColumnOption idx="1" pid="2002" type="retrieved" options=";save;foreignKey=1000" />
-           <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
-           <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
-           ...
-           <ColumnOption idx="71" pid="2899" type="displaykey" options="" />
-  </ArrayOptions>
-```
-
-The first character defines the separator and can be freely chosen. It will be replaced by an empty string when the display key is formed. The use of the CDATA block allows the use of characters like “<”, “>” and “&” that are otherwise encoded in XML.
-
-In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input 2 TS 3".
-
-See also: Protocol/Params/Param/ArrayOptions/NamingFormat
-
-## displaycolumn attribute
+## displayColumn attribute
 
 Using the displayColumn attribute, you can specify that values of a particular column will serve as the display key.
 
@@ -106,4 +104,6 @@ Using the displayColumn attribute, you can specify that values of a particular c
 
 ## See also
 
+- [Protocol.Params.Param.ArrayOptions.NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat)
+- [ArrayOptions@options: naming option](xref:Protocol.Params.Param.ArrayOptions-options#naming)
 - [Protocol.Params.Param.ArrayOptions@displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn)
