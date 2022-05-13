@@ -18,10 +18,10 @@ string
 
 Possible values:
 
-|Value|Description
-|--- |--- |
-|true|The parameter will be exported to all of the exported protocols.|
-|Table parameter ID(s)|The parameter will only be exported to the exported protocol used for the specified table(s). Multiple table IDs must be separated by a semicolon.|
+| Value | Description |
+| ----- | ----------- |
+| true | The parameter will be exported to all of the exported protocols. |
+| Table parameter ID(s) | The parameter will only be exported to the exported protocol used for the specified table(s).<br>Multiple table IDs must be separated by a semicolon. |
 
 ## Examples
 
