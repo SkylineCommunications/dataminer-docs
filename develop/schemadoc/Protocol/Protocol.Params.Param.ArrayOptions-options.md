@@ -132,7 +132,7 @@ This option replaces the display column. Via this option it is possible to defin
 The first character is the separator.
 
 > [!NOTE]
-> This option cannot be used together with *displaycolumn*.
+> This option cannot be used together with [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn).
 
 Example:
 
