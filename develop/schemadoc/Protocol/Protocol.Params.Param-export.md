@@ -21,11 +21,12 @@ Possible values:
 |Value|Description
 |--- |--- |
 |true|The parameter will be exported to all of the exported protocols.|
-|A table parameter ID|The parameter will only be exported to the exported protocol used for a specific table.|
+|Table parameter ID(s)|The parameter will only be exported to the exported protocol used for the specified table(s). Multiple table IDs must be separated by a semicolon.|
 
 ## Examples
 
 ```xml
 <Param id="1" export="true"></Param>
 <Param id="2" export="10000"></Param>
+<Param id="10" trending="false" export="100;200"></Param>
 ```
