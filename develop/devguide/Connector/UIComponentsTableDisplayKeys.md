@@ -35,7 +35,7 @@ Since DataMiner version 8.0.5, it is possible to define a column of type "displa
 <ColumnOption idx="1" pid="1502" type="displaykey" value="" options=""/>
 ```
 
-It is not allowed to set values to this column. The column will automatically be filled in by the SLElement process. This column also does not support alarming or trending. When a column of type “displaykey” is used in a table, it must be defined as the last column of that table.
+It is not allowed to set values to this column. The column will automatically be filled in by the SLElement process. This column also does not support alarming or trending. When a column of type "displaykey" is used in a table, it must be defined as the last column of that table.
 
 ## NamingFormat
 
@@ -49,11 +49,11 @@ Another way to define a display key using naming is by using the NamingFormat ta
   <ArrayOptions index="0">
      <NamingFormat><![CDATA[;Input;1005;TS;2004]]></NamingFormat>
      <ColumnOption idx="0" pid="2001" type="retrieved" options="" />
-           <ColumnOption idx="1" pid="2002" type="retrieved" options=";save;foreignKey=1000" />
-           <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
-           <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
-           ...
-           <ColumnOption idx="71" pid="2899" type="displaykey" options="" />
+        <ColumnOption idx="1" pid="2002" type="retrieved" options=";save;foreignKey=1000" />
+        <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
+        <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
+        ...
+        <ColumnOption idx="71" pid="2899" type="displaykey" options="" />
   </ArrayOptions>
 ```
 
@@ -79,7 +79,6 @@ Naming can be used to define a display key for a table. The example below define
 The naming option defines the separator ("/"), followed by a comma-separated list of column parameter IDs, which together make up a unique label for a row.
 
 > [!NOTE]
->
 > - In case you want to use values from columns in other tables, make sure the necessary table links exist.
 > - All values used to compose the naming result must be filled in before the parameter value that will trigger the alarm. See Column processing order in tables (fix in DataMiner version 7.5).
 
@@ -98,9 +97,8 @@ Using the displayColumn attribute, you can specify that values of a particular c
 ```
 
 > [!NOTE]
->
 > - The column referred to in the displayColumn attribute must never be the column holding the primary key, as this would result in the creation of an unnecessary mapping between primary key and display key.
-> - For performance reasons, using either the “naming” option or NamingFormat tag is favored over using the displayColumn attribute for new protocols.
+> - For performance reasons, using either the "naming" option or NamingFormat tag is favored over using the displayColumn attribute for new protocols.
 
 ## See also
 
