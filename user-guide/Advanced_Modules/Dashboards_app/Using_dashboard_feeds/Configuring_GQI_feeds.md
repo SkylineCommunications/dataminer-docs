@@ -178,12 +178,22 @@ This object has the following properties:
 
 ##### GQIArgument
 
-This is an abstract class, with the derived types *GQIStringArgument* and *GQIDoubleArgument*, and with the following properties:
+This is an abstract class with the following properties.
 
 | Property   | Type    | Required | Description                                 |
 | ---------- | ------- | -------- | ------------------------------------------- |
 | Name       | String  | Yes      | The name of the input argument.             |
 | IsRequired | Boolean | No       | Indicates whether the argument is required. |
+
+All supported derived types:
+
+- `GQIStringArgument`
+- `GQIDoubleArgument`
+- `GQIBooleanArgument`
+- `GQIDateTimeArgument`
+- `GQIIntArgument`
+- `GQIStringDropdownArgument`
+- `GQIStringListArgument`
 
 #### Example custom data script
 
