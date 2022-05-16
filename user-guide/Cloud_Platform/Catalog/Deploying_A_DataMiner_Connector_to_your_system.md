@@ -2,26 +2,26 @@
 uid: Deploying_A_DataMiner_Connector_to_your_system
 ---
 
-# Deploying a DataMiner connector to your Cloud Connected system
+# Deploying a DataMiner connector to your system
 
-## Requirements to be able to use this feature
+To deploy a connector to your DataMiner System from the Catalog module:
 
-First of all make sure that the DataMiner System you want to deploy to is connected to the cloud. You can find documentation about getting your system connected to the cloud [here](xref:Connecting_your_DataMiner_System_to_the_cloud).
+1. Make sure the following requirements are met:
 
-Be sure to check if your organization has been verified already. This is necessary so we can check for which connectors your organization has acquired licenses. If your organization is not verified you will not be able to deploy any connector to your system. Take a look at the [guide](xref:CloudConnectionVerification) for more info on how you can get your organization verified.
+   - Your DataMiner System is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+   - Your organization has been verified. This is necessary for DCP to be able to check for which connectors your organization has acquired a license. See [Getting your organization verified](xref:CloudConnectionVerification).
+   - Your DCP account is linked to a DataMiner user account. See [Linking your DataMiner account to your DCP account](xref:Linking_your_DataMiner_and_DCP_account).
 
-The last thing you need to do is link your DCP account to a DataMiner user. To do this you can follow [this](xref:Linking_your_DataMiner_and_DCP_account) guide.
+1. Look up the connector in the catalog. See [Looking up a DataMiner connector](xref:Looking_up_a_DataMiner_connector).
 
-## How to deploy to your system
+1. Click the *Deploy* button.
 
-To deploy a connector you must first find it in the Catalog. Once you have located your connector you will be able to see a button that says "deploy".
+   > [!NOTE]
+   >
+   > - The *Deploy* button is only available if your organization has a license for the displayed connector. Otherwise, it is grayed out and displays the text "No License". In that case, to be able to deploy the connector, contact <licensing@skyline.be>.
+   > - To deploy a specific version of a connector, click the version history of the connector, and then click the *Deploy* button next to the relevant version.
+
+1. Select the target cloud-connected system and confirm the deployment. The connector will then be pushed to the DataMiner System.
 
 > [!NOTE]
-> You will only see the deploy button if your organization has a license for that specific connector. If your organization does not have a license the button will be greyed out and have the text "No License" in it. In that case we suggest you contact licensing@skyline.be.
-
-After clicking the deploy button you will be presented with a list of Cloud Connected systems for your organization that you can deploy the connector to. Select your target system(s) and confirm the deploy action. This will push the connector to your DataMiner System.
-
-> [!NOTE]
-> Pushing a connector will never change the production version for that connector on the DataMiner System.
-
-If you want to deploy a specific version of a connector you can click on the version history of the connector. Every version will have a deploy button next to it that can be used to deploy that specific version to your DataMiner System(s).
+> Deploying a connector from the catalog will never change the production version for that connector in the DataMiner System.
