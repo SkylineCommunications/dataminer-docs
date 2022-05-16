@@ -128,10 +128,14 @@ $(function () {
       const html = [];
 
       for (const result of data.value) {
-        const title = getTitle(result.metadata_title);
-        const url = getUrl(result.storage_path);
-        const htmlString = `<div class="result"><a href="${url}?q=${searchTerm}"><div class="url">${url}</div><div class="title">${title}</div></a></div>`;
-        html.push(htmlString)
+        if (result.metadata_storage_name !== "toc.html" && result.metadata_title !== null) {
+          // results with toc.html files (table of contents) + without title are skipped
+          const title = getTitle(result.metadata_title);
+          const url = getUrl(result.storage_path);
+          const htmlString = `<div class="result"><a href="${url}?q=${searchTerm}"><div class="url">${url}</div><div class="title">${title}</div></a></div>`;
+          html.push(htmlString)
+        }
+
       }
 
       addHtmlToResultElement(html.join(''))
