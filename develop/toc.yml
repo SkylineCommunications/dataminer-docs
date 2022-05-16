@@ -2464,6 +2464,11 @@
         items: 
         - name: '@includepages'
           topicUid: Protocol.SNMP-includepages
+      - name: SystemOptions
+        topicUid: Protocol.SystemOptions
+        items:
+        - name: RunInSeparateInstance
+          topicUid: Protocol.SystemOptions.RunInSeparateInstance
       - name: Threads
         topicUid: Protocol.Threads
         items: 

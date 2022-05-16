@@ -4,13 +4,13 @@ uid: Protocol.SystemOptions.RunInSeparateInstance
 
 # RunInSeparateInstance element
 
-Allows you to flag a protocol as requiring a separate SLProtocol and SLScripting instance due to memory load.
+Allows you to flag a protocol as requiring a separate SLProtocol and SLScripting instance because of memory load.
 
-This feature was introduced in DataMiner 10.2.7 (RN 33358).
+This feature is introduced in DataMiner 10.2.7 (RN 33358).
 
-# Type
+## Type
 
-bool
+Boolean
 
 ## Parent
 
@@ -18,11 +18,11 @@ bool
 
 ## Remarks
 
-This feature extends on RN32742, which was introduced in 10.2.5, where elements could be run separately by referencing the protocol in the DataMiner.xml: [Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes)
+This feature extends the functionality of RN 32742, introduced in 10.2.5, which allows you to run elements separately by referencing the protocol in *DataMiner.xml*. See [Configuring separate SLProtocol and SLScripting instances for a specific protocol](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol).
 
-The intention behind this option is to flag protocols that require a lot of memory in SLScripting and SLProtocol, or that are prone to crash SLScripting and need to be isolated until they have been made stable.
+This option can be used to flag protocols that require a lot of memory in SLScripting and SLProtocol or protocols that cause SLScripting issues and need to be isolated until they have been made stable.
 
-## Examples
+## Example
 
 ```xml
 <RunInSeparateInstance>true</RunInSeparateInstance>
