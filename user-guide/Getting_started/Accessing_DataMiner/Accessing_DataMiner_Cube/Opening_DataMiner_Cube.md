@@ -50,10 +50,14 @@ In the Cube start window, you can select which Cube update track should be used:
 
 1. In the *Settings* dialog, select the update track you want to use:
 
-   - **Development**: Use the latest available development version.
-   - **Preview**: Use a preview of the latest DataMiner Cube version, even if it has not been released yet.
    - **Release**: Use the latest released DataMiner Cube version, so you can enjoy all the latest and greatest features.
    - **Release (delayed 2 weeks)**: Wait to use the latest released DataMiner Cube version until 2 weeks after the release date.
+
+   > [!NOTE]
+   > For Skyline employees only, two additional tracks are available for development purposes:
+   >
+   > - **Preview**: Use a preview of the latest DataMiner Cube version, even if it has not been released yet.
+   > - **Development**: Use the latest available development version.
 
 1. Click *Save*.
 
@@ -190,8 +194,6 @@ You can pass a number of options when starting DataMiner Cube:
 
 - [buffer=](#buffer)
 
-- [bypassProxy=true](#bypassproxytrue)
-
 - [chain=](#chain)
 
 - [debug=true](#debugtrue)
@@ -297,13 +299,6 @@ Example:
 ```txt
 http://MyDMA1/Dataminercube/dataminercube.xbap?element=34/105&buffer=3:trace1
 ```
-
-### bypassProxy=true
-
-Available from DataMiner 10.2.0 \[CU3]/10.2.6 onwards. This option will allow Cube to communicate directly with the offline DMA in a Failover setup, so that it can request version info from both the online and the offline DMA.
-
-> [!NOTE]
-> This option is only applicable for the Cube desktop app, not for the browser app.
 
 ### chain=
 
