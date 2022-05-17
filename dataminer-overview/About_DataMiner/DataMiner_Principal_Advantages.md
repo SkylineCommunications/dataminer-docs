@@ -45,7 +45,6 @@ The DataMiner data acquisition & control layer is based on truly unique and inno
 - Apply standard alarm templates
 - Integrate your automation and orchestration workflows
 - Forecasting and anomaly detection with integrated AI functionality
-- Test
 
 ## Technology
 
