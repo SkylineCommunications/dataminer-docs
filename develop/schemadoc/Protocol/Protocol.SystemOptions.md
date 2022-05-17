@@ -10,4 +10,7 @@ uid: Protocol.SystemOptions
 
 ## Children
 
-[RunInSeparateInstance](xref:Protocol.SystemOptions.RunInSeparateInstance)
+|Name|Occurrences|Description|
+|--- |--- |--- |
+|***All***|||
+|&nbsp;&nbsp;[RunInSeparateInstance](xref:Protocol.SystemOptions.RunInSeparateInstance)|[0, 1]|Allows you to flag a protocol as requiring a separate SLProtocol and SLScripting instance because of memory load.|
