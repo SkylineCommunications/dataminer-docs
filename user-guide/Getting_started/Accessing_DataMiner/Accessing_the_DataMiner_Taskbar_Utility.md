@@ -4,11 +4,11 @@ uid: Accessing_the_DataMiner_Taskbar_Utility
 
 # Accessing the DataMiner Taskbar Utility
 
-#### Installing the Taskbar Utility
+## Installing the Taskbar Utility
 
 The DataMiner Taskbar Utility is installed automatically on a DataMiner Agent server along with recent versions of DataMiner.
 
-#### Accessing the Taskbar Utility functionalities
+## Accessing the Taskbar Utility functionalities
 
 If the application is not running:
 
@@ -25,5 +25,4 @@ If the application is running:
 > It is also possible to run an upgrade or restore a backup with the Taskbar Utility by directly double-clicking the upgrade or backup package.
 
 > [!TIP]
-> See also:
-> [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
+> See also: [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
