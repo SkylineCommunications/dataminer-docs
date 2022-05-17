@@ -26,7 +26,8 @@ At present, the following IP addresses are used to connect to the DataMiner Clou
 - 20.50.217.191
 - 20.103.147.5
 
-The DataMiner Cloud Platform sends e-mails from the following domain:
+The DataMiner Cloud Platform sends emails from the following domain:
+
 - dataminer.services
 
 When you connect your DataMiner System to the DataMiner Cloud Platform, a secure connect flow needs to be completed. The administrator needs to authenticate on the DataMiner System and then needs to authenticate towards the DataMiner Cloud Platform.
@@ -42,6 +43,7 @@ All communication between the DataMiner System and the DataMiner Cloud Platform 
 Only outgoing traffic needs to be allowed through for the domain *.dataminer.services.
 
 > [!NOTE]
+>
 > - Technical details of this implementation may be subject to change, as we regularly review our security implementations.
 > - Users can disconnect their system from the DataMiner Cloud Platform at any given time. For more information, please refer to [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
@@ -65,12 +67,12 @@ When a dashboard is shared, DataMiner will build a whitelist based on the API ca
 
 ## Encryption
 
-All data is encrypted at rest using AES-256 encryption. They keys are managed by our cloud providers, which also control the key rotation schedule. For more information see [database security](https://docs.microsoft.com/en-us/azure/cosmos-db/database-security?tabs=sql-api).
+All data is encrypted at rest using AES-256 encryption. The keys are managed by our cloud providers, which also control the key rotation schedule. For more information, see [Database security](https://docs.microsoft.com/en-us/azure/cosmos-db/database-security?tabs=sql-api).
 
 ## Physical Security
 
-Currently, the DataMiner Cloud Platform is hosted on Microsoft Azure. For more information, see [Azure Physical Security](https://docs.microsoft.com/en-us/azure/security/fundamentals/physical-security#physical-security).
+Currently, the DataMiner Cloud Platform is hosted on Microsoft Azure. For more information, see [Azure physical security](https://docs.microsoft.com/en-us/azure/security/fundamentals/physical-security#physical-security).
 
 ## Disaster Recovery
 
-All data on the DataMiner Cloud Platform is backupped multiple times per day and stored in a geo-redundant setup.
+All data on the DataMiner Cloud Platform is backed up multiple times per day and stored in a geo-redundant setup.
