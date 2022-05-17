@@ -2286,6 +2286,8 @@
           topicUid: Accessing_the_Catalog_module
         - name: Looking up a DataMiner connector
           topicUid: Looking_up_a_DataMiner_connector
+        - name: Deploying a DataMiner connector to your system
+          topicUID: Deploying_A_DataMiner_Connector_to_your_system
     - name: DataMiner Sharing
       topicUid: Sharing
       items:
@@ -2322,7 +2324,7 @@
       items:
         - name: Accessing the Admin app
           topicUid: Accessing_the_Admin_app
-        - name: Getting your DMS cloud connection verified
+        - name: Getting your organization verified
           topicUid: CloudConnectionVerification
         - name: Giving users access to cloud features
           topicUid: Giving_users_access_to_cloud_features
