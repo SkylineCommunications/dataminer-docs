@@ -42,3 +42,9 @@ In each of the examples above, the card will be opened on a particular page:
 
 > [!NOTE]
 > From DataMiner 10.2.3 onwards, EPM cards can be saved in workspaces; however, this is only supported when the card layout is set to “Tab layout”.
+
+Starting from DataMiner 10.2.6 (RN 33295), if the SystemName contains colons (e.g. a MAC address), you can now replace the default separator (i.e. colon) by another one (e.g. a pipe character) by placing a `[sep:XY]` prefix in front of the system name. See the following example:
+
+```xml
+<Value type="open">{EPM=[sep::|]CPE/'00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
+```
