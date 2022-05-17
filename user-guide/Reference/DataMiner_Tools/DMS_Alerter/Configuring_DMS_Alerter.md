@@ -43,6 +43,7 @@ Do the following if you want DMS Alerter to connect to another DataMiner System.
 1. In the *Options* dialog box, click *OK*.
 
 > [!NOTE]
+>
 > - In the DMS Connections tab, the option *Show message when SLAlerter loses connection* determines whether users will be notified when the connection to the DMS is lost. By default, this option is enabled.
 > - If the connection to the DMS is lost, this is logged in the Event Viewer with an "SLAlerter lost connection" message. In the Alerter application itself, the user will be redirected to the login screen, in the same manner as when the connection is lost in DataMiner Cube.
 
