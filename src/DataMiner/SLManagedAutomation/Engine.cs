@@ -113,6 +113,21 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public TimeSpan Timeout { get; set; }
 
+		/// <summary>
+		/// Gets the name of the user that triggered the script.
+		/// </summary>
+		/// <value>The name of the user that triggered the script.</value>
+		/// <remarks>
+		/// <note type="note">
+		/// <para>When a scheduled task, a correlation rule or a redundancy group triggers a script to execute, this TriggeredByName will be filled in with 'Scheduled task <name task>', 'Correlation-rule <name rule>' or 'Redundancy' respectively</para>
+		/// </note>
+		/// </remarks>	
+		/// <example>
+		/// <code>
+		/// engine.Log(engine.TriggeredByName);
+		/// </code>
+		/// </example>
+		public string TriggeredByName { get; }
 
         /// <summary>
         /// Gets the user cookie.
