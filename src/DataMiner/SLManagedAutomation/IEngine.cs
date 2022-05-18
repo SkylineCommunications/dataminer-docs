@@ -1256,12 +1256,12 @@ namespace Skyline.DataMiner.Automation
 		int InstanceId { get; }
 
 		/// <summary>
-		/// Gets the name of the user that triggered the script.
+		/// Gets the name of the user who triggered the script.
 		/// </summary>
-		/// <value>The name of the user that triggered the script.</value>
+		/// <value>The name of the user who triggered the script.</value>
 		/// <remarks>
 		/// <note type="note">
-		/// <para>When a scheduled task, a correlation rule or a redundancy group triggers a script to execute, this TriggeredByName will be filled in with 'Scheduled task <name task>', 'Correlation-rule <name rule>' or 'Redundancy' respectively</para>
+		/// <para>When a scheduled task, a Correlation rule, or a redundancy group trigger a script to execute, this TriggeredByName will be filled in with "Scheduled task [name task]", "Correlation-rule [name rule]", or "Redundancy", respectively.</para>
 		/// </note>
 		/// </remarks>		
 		/// <example>
