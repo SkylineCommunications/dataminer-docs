@@ -370,7 +370,7 @@ Default: 10 MB
 
 ### ProtocolSettings.DCF.CalculateAlarmState
 
-From DataMiner 10.2.1/10.3.0 onwards, you can use this setting to enable or disable DCF interface state calculation on system level.
+From DataMiner 10.2.0 [CU4]/10.2.1 onwards, you can use this setting to enable or disable DCF interface state calculation on system level.
 
 You can overrule the setting in a protocol, by setting the Protocol.ParameterGroups.Group@calculateAlarmState attribute to true or false.
 
