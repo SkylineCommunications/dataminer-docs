@@ -8,5 +8,13 @@
           topicUid: Overview_Advantages
     - name: About Skyline Communications
       topicUid: Overview_About_Skyline
+    - name: About DataMiner
+      topicUid: Overview_About_DataMiner
+    - name: DataMiner Principal Advantages
+      topicUid: Overview_Advantages
+    - name: Standardized Foundation
+      topicUid: Standardized_Foundation
+    - name: References and Usecases
+      topicUid: References_and_use_cases
     - name: DataMiner Cloud Platform
       topicUid: Overview_DCP
