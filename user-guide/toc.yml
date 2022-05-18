@@ -2237,6 +2237,9 @@
           topicUid: Logging_on_to_the_DataMiner_Cloud_Platform
         - name: Connecting your DataMiner System to the cloud
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
+          items:
+            - name: Connecting with older DataMiner versions
+              topicUid: Connecting_with_older_DataMiner_versions
         - name: Linking your DataMiner account to your DCP account
           topicUid: Linking_your_DataMiner_and_DCP_account
         - name: Cloud data storage policies
@@ -2283,6 +2286,8 @@
           topicUid: Accessing_the_Catalog_module
         - name: Looking up a DataMiner connector
           topicUid: Looking_up_a_DataMiner_connector
+        - name: Deploying a DataMiner connector to your system
+          topicUID: Deploying_A_DataMiner_Connector_to_your_system
     - name: DataMiner Sharing
       topicUid: Sharing
       items:
@@ -2319,7 +2324,7 @@
       items:
         - name: Accessing the Admin app
           topicUid: Accessing_the_Admin_app
-        - name: Getting your DMS cloud connection verified
+        - name: Getting your organization verified
           topicUid: CloudConnectionVerification
         - name: Giving users access to cloud features
           topicUid: Giving_users_access_to_cloud_features

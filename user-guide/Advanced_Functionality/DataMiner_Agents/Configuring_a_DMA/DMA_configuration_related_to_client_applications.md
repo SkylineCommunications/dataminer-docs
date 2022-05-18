@@ -219,3 +219,25 @@ To use polling (1000 ms) by default, change this as follows:
 ```
 
 For more detailed information on where you can find this file and on the different settings it contains, see [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt).
+
+## Managing client versions
+
+From DataMiner 10.2.0 \[CU3]/10.2.6 onwards, Cube can automatically update to a more recent version than the DataMiner version installed on the server. This way, users can use the latest Cube features as soon as these are released without having to wait for a server upgrade. However, in the Cube system settings, you can configure limitations on which client version should be used:
+
+1. In DataMiner Cube, go to System Center > *System settings* > *Manage client versions*.
+
+1. Select which client versions should be used:
+
+   - **Allow automatic updates**: This will allow automatic updates to higher versions of Cube, depending on the [configuration in the Cube start window](xref:Opening_DataMiner_Cube#selecting-your-cube-update-track).
+
+     > [!NOTE]
+     > When a new DMA is added to a cluster, that DMA will by default use this setting. If you use a different setting, keep in mind that you will still need to adjust this for this DMA.
+
+   - **Force the matching release version**: This will force users to always use the Cube version that was shipped with the current DataMiner upgrade package.
+
+   - **Force a specific version**: This will force users to always use a particular Cube version. When you select this option, a dialog will be displayed where you will need to select a *Cube.zip* and *versions.txt* file. You can obtain these files from the folder `/Webpages/DataMinerCubeStandAlone/` in an upgrade package or on another DataMiner Agent (e.g. a staging platform).
+
+> [!NOTE]
+>
+> - To access this configuration, you need the user permissions [Modules > Documents > Add](xref:DataMiner_user_permissions#modules--documents--add), [Modules > System settings > System settings available](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--system-settings-available), and [Modules > System settings > Manage client versions](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--manage-client-versions).
+> - By default, this is configured for the entire DMS. If you select the checkbox *Allow individual agent configuration*, you can configure different client version settings per DMA instead. However, this is not recommended as users will end up using a different version of Cube depending on which DMA they connect to.

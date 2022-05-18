@@ -10,7 +10,7 @@ You can enable the stages to handle NuGets by clicking the NuGet button in the S
 
 > [!IMPORTANT]
 >
-> - The NuGet name must always begin with `Skyline.DataMiner`.
+> - The NuGet name must always begin with `SLC.`.
 > - The NuGet Name must be unique.
 
 To configure the name and version of your NuGets, all standard options are available. The easiest way to do this is to go to the project settings and adjust the assembly info.
@@ -27,8 +27,8 @@ For example:
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Skyline.DataMiner.Library.Common</id>
-    <version>1.2.1.1</version>
+    <id>SLC.Lib.Common</id>
+    <version>1.2.2.2</version>
     <authors>Skyline Communications</authors>
     <license type="expression">MIT</license>
     <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>

@@ -26,7 +26,7 @@ It is possible to let users dynamically change the names of matrix inputs/output
 The discreetDestination option defines the XML file that will contain the table data. The name of the file is typically "ports.xml", but another name can be used. Each time the table is updated, the changes will be forwarded to the associated XML file.
 
 > [!NOTE]
-> The XML file is stored in the folder C:\Skyline DataMiner\Elements\[Element Name]\
+> The XML file is stored in the folder C:\Skyline DataMiner\Elements\\[Element Name]\
 
 The XML file will contain the following, where the content of Value tags corresponds with the primary key column of the table and the content of Display tags corresponds with the column holding the display keys.
 
