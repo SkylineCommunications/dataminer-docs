@@ -129,7 +129,7 @@ private Ticket CreateTicket(TicketFieldResolver resolver)
 {
     Ticket ticket = new Ticket();
     ticket.CustomFieldResolverID = resolver.ID;
-    ticket.CustomTicketFields["Status"] = "Created";
+    ticket.CustomTicketFields["Status"] = new GenericEnumEntry<int>(){Name = "Created", Value = 0};
     ticket.CustomTicketFields["User"] = "John";
     ticket.CustomTicketFields["Mail"] = "john@company.com";
     ...
