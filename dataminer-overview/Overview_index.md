@@ -10,6 +10,6 @@ We are working on adding more information to this section soon, so check back fo
 
 At present, the following information is available:
 
-- [About DataMiner](xref:Overview_About_DataMiner)
-- [About Skyline Communications](xref:Overview_About_Skyline)
+- [General Introduction](xref:Overview_General_Introduction)
+- [DataMiner Platform - Empowering your Digital Transformation](xref:Overview_Platform_intro)
 - [DataMiner Cloud Platform](xref:Overview_DCP)

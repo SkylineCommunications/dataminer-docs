@@ -1,5 +1,5 @@
 ---
-uid: Standardized_Foundation
+uid: Overview_Standardized_Foundation
 ---
 
 # Standardized Foundation

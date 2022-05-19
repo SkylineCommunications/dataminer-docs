@@ -1,20 +1,29 @@
 - name: DataMiner Overview
   topicUid: OverviewIndex
   items:
-    - name: About DataMiner
-      topicUid: Overview_About_DataMiner
+    - name: General Introduction
+      topicUid: Overview_General_Introduction
       items:
+        - name: About Skyline Communications
+          topicUid: Overview_About_Skyline
+        - name: About DataMiner
+          topicUid: Overview_About_DataMiner
         - name: DataMiner Principal Advantages
-          topicUid: Overview_Advantages
-    - name: About Skyline Communications
-      topicUid: Overview_About_Skyline
-    - name: About DataMiner
-      topicUid: Overview_About_DataMiner
-    - name: DataMiner Principal Advantages
-      topicUid: Overview_Advantages
-    - name: Standardized Foundation
-      topicUid: Standardized_Foundation
-    - name: References and Usecases
-      topicUid: References_and_use_cases
+          topicUid: Overview_Principal_Advantages
+        - name: Standardized Foundation
+          topicUid: Overview_Standardized_Foundation
+        - name: References and use cases
+          topicUid: Overview_References_and_use_cases
+    - name: DataMiner Platform - Empowering your Digital Transformation
+      topicUid: Overview_Platform_intro
+      items:
+        - name: Agility – The cornerstone of any successful data-drive media operation
+          topicUid: Overview_Platform_Agility
+        - name: Prepare your organization for the new data-driven future
+          topicUid: Overview_Platform_Prepare
+        - name: DataMiner Digital Transformation Suite
+          topicUid: Overview_Platform_DTS_Suite
+        - name: Open Software Platform for any of your monitoring and orchestration needs
+          topicUid: Overview_Platform_Open_Platform
     - name: DataMiner Cloud Platform
       topicUid: Overview_DCP

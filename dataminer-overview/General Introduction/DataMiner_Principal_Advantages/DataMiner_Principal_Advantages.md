@@ -1,5 +1,5 @@
 ---
-uid: Overview_Advantages
+uid: Overview_Principal_Advantages
 ---
 
 # DataMiner Principal Advantages
