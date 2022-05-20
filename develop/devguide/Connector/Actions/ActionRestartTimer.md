@@ -18,7 +18,7 @@ Specifies the ID of the timer on which this action needs to be executed
 
 ### Type@reschedule
 
-(Optional) If this attribute is set to "true", the timer will immediately start again.
+(Optional.) If this attribute is set to "true", the timer will immediately start again.
 
 Default: false
 

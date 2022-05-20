@@ -23,7 +23,7 @@ Specifies the ID(s) of the parameter(s) to set.
 
 #### Type@nr
 
-(optional): Specifies the connection number. Default: 0.
+(Optional.) Specifies the connection number. Default: 0.
 
 ## On group
 
@@ -35,7 +35,7 @@ Specifies the ID(s) of the group(s) for which the parameter(s) need to be set.
 
 #### Type@nr
 
-(optional): Specifies the connection number. Default: 0.
+(Optional.) Specifies the connection number. Default: 0.
 
 ## Examples
 
