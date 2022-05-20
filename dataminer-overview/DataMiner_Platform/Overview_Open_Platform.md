@@ -6,7 +6,7 @@ uid: Overview_Platform_Open_Platform
 
 DataMiner is built around the following strategic pillars:
 
-![Pillars](~/dataminer-overview/images/DA_Pillars.png)
+![Pillars](~/dataminer-overview/images/DA_Pillars_updated.png)
 
 - **End-to-end Network Management System**: DataMiner enables end-to-end integration of even the most complex technical ecosystems.
 
