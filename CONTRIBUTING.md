@@ -326,6 +326,9 @@ Until a pull request is merged, everyone can review it and add comments of their
 > [!NOTE]
 > You can also submit a review without adding comments directly in a file, by only clicking the green review button and using the window displayed above.
 
+> [!TIP]
+> If the Markdown source looks confusing, and you would prefer to see a preview of a file, in the *Files changed* tab, click "..." in the top-right corner of the box representing the file, and select *View file*. However, note that it is not possible to submit comments in this preview.
+
 ## Making a larger contribution
 
 **Check with the [Skyline documentation team](mailto:team.technical.writing@skyline.be) before you use the procedure below.** This way you can avoid unnecessary work, e.g. because the information you want to add is already available elsewhere in the documentation. If you are unsure of how to fit your information in the current structure of the documentation, or if you do not feel comfortable working in Markdown, **you can always submit your contribution by emailing it to <team.technical.writing@skyline.be> instead**.
