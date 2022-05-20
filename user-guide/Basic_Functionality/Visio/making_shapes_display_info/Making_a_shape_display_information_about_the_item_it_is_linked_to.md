@@ -52,7 +52,7 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
   - *AVERAGE VALUE* (see [Displaying history values for parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters))
   - *MINIMUM VALUE* (see [Displaying history values for parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters))
   - *MAXIMUM VALUE* (see [Displaying history values for parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters))
-  - *IN USE*: Displays "true" or "false" depending on whether the element is being used in a resource, is a DVE parent of a function resource, or represents the physical device corresponding with a virtual function resource (supported from DataMiner 10.3.0/10.2.6 onwards).
+  - *IN USE*: Displays "true" or "false" depending on whether the element is being used in a resource, is a DVE parent of a function resource, or represents the physical device corresponding with a virtual function resource (supported from DataMiner 10.3.0/10.2.6 onwards). Note that the [UseResource=true](xref:Linking_a_shape_to_a_resource) option must be specified on the element shape for this to work.
 
 - **Services**:
 

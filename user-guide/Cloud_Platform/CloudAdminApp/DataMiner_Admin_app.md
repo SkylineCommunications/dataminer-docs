@@ -8,7 +8,7 @@ The Admin app is intended for the management of your cloud-connected DataMiner S
 
 - [Accessing the Admin app](xref:Accessing_the_Admin_app)
 
-- [Getting your DMS cloud connection verified](xref:CloudConnectionVerification)
+- [Getting your organization verified](xref:CloudConnectionVerification)
 
 - [Giving users access to cloud features](xref:Giving_users_access_to_cloud_features)
 

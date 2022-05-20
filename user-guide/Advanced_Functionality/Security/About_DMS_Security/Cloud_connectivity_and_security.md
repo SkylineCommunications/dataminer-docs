@@ -26,6 +26,10 @@ At present, the following IP addresses are used to connect to the DataMiner Clou
 - 20.50.217.191
 - 20.103.147.5
 
+The DataMiner Cloud Platform sends emails from the following domain:
+
+- dataminer.services
+
 When you connect your DataMiner System to the DataMiner Cloud Platform, a secure connect flow needs to be completed. The administrator needs to authenticate on the DataMiner System and then needs to authenticate towards the DataMiner Cloud Platform.
 
 At the end of this flow, a secure JSON Web Token is delivered directly from the DataMiner Cloud Platform to the DataMiner System, which is used by the DataMiner System to authenticate towards the DataMiner Cloud Platform.
@@ -39,6 +43,7 @@ All communication between the DataMiner System and the DataMiner Cloud Platform 
 Only outgoing traffic needs to be allowed through for the domain *.dataminer.services.
 
 > [!NOTE]
+>
 > - Technical details of this implementation may be subject to change, as we regularly review our security implementations.
 > - Users can disconnect their system from the DataMiner Cloud Platform at any given time. For more information, please refer to [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
@@ -59,3 +64,15 @@ When a dashboard is shared, DataMiner will generate a special cloud user (see [T
 ### Web Application Firewall (WAF)
 
 When a dashboard is shared, DataMiner will build a whitelist based on the API calls (and their parameters) of the dashboard. For example, consider your dashboard is displaying all active alarms for element 'SOC' with Element ID 100 and DataMiner ID 2000. When the dashboard is shared, DataMiner will infer it calls the GetActiveAlarmsForElement API with parameters Element ID 100 and DataMiner ID 200. If that shared dashboard connection were to suddenly request the active alarms for a different element, or even a different API call, DataMiner will block the request.
+
+## Encryption
+
+All data is encrypted at rest using AES-256 encryption. The keys are managed by our cloud providers, which also control the key rotation schedule. For more information, see [Database security](https://docs.microsoft.com/en-us/azure/cosmos-db/database-security?tabs=sql-api).
+
+## Physical Security
+
+Currently, the DataMiner Cloud Platform is hosted on Microsoft Azure. For more information, see [Azure physical security](https://docs.microsoft.com/en-us/azure/security/fundamentals/physical-security#physical-security).
+
+## Disaster Recovery
+
+All data on the DataMiner Cloud Platform is backed up multiple times per day and stored in a geo-redundant setup.

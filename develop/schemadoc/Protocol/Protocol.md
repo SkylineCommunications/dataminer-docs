@@ -51,6 +51,7 @@ The root element of a DataMiner protocol.
 |&nbsp;&nbsp;[Responses](xref:Protocol.Responses)|[0, 1]|Contains all responses defined in the protocol.|
 |&nbsp;&nbsp;[SeverityBubbleUp](xref:Protocol.SeverityBubbleUp)|[0, 1]|Used to pass alarm severities to linked tables.|
 |&nbsp;&nbsp;[SNMP](xref:Protocol.SNMP)|[0, 1]|Specifies how the MIB file for the protocol will be created.|
+|&nbsp;&nbsp;[SystemOptions](xref:Protocol.SystemOptions)|[0, 1]|Specifies system-related options.|
 |&nbsp;&nbsp;[Threads](xref:Protocol.Threads)|[0, 1]|Specifies additional threads that will be used by the protocol. This allows you to separate time-critical actions from device-polling actions.|
 |&nbsp;&nbsp;[Timers](xref:Protocol.Timers)|[0, 1]|Contains all timers defined in the protocol.|
 |&nbsp;&nbsp;[Topology](xref:Protocol.Topology)|[0, 1]|Defines a topology. In this element, you can specify several Cell elements, each representing a cell in the diagram displayed in the CPE Manager.|

@@ -575,7 +575,7 @@ This syntax consists of the following components:
 
   - **Property=*\<propName>***: The value of a custom property of the resource. The name of that custom property must be specified in \<propName>, e.g. *Property=State*.
 
-  - **InUse**: From DataMiner 10.3.0/10.2.3 onwards, you can specify *InUse* to make the placeholder indicate whether a resource is being used in any bookings (with the result "true" or "false"). From DataMiner 10.3.0/10.2.6 onwards, this placeholder can also be used for a shape linked to an element, to indicate whether the element is being used in a resource, is a DVE parent of a function resource, or represents the physical device corresponding with a virtual function resource.
+  - **InUse**: From DataMiner 10.3.0/10.2.3 onwards, you can specify *InUse* to make the placeholder indicate whether a resource is being used in any bookings (with the result "true" or "false"). From DataMiner 10.3.0/10.2.6 onwards, this placeholder can also be used for a shape linked to an element, to indicate whether the element is being used in a resource, is a DVE parent of a function resource, or represents the physical device corresponding with a virtual function resource. However, note that the [UseResource=true](xref:Linking_a_shape_to_a_resource) option must be specified on the element shape for this to work.
 
     ```txt
     [Resource:<GUID>,InUse]

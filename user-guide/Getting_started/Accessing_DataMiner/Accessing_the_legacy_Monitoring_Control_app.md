@@ -23,11 +23,12 @@ The first time you start the app, you will be asked to enter your account detail
 If, in the future, you want to log on automatically, select *remember me* to have your account details saved locally on your device.
 
 > [!NOTE]
+>
 > - When a user for whom two-step authentication is enabled logs on to DataMiner using the app, a challenge will be shown to which the user has to respond. If that response is correct, then access will be granted. If not, access will be denied and the user will be redirected to the logon screen.
 > - From DataMiner 9.6.7 onwards, it is possible to add this app to the home screen of a mobile device. The way this is done depends on the device and browser used. For example, when using Chrome on Android, you can add the app to the home screen by browsing to the app and then selecting *Add to Home screen* in the Chrome settings.
 
 > [!TIP]
 > See also:
+>
 > - [Configuring the default landing page](xref:DMA_configuration_related_to_client_applications#configuring-the-default-landing-page)
 > - [The legacy Monitoring & Control app user interface](xref:The_legacy_Monitoring_Control_app_user_interface#the-legacy-monitoring--control-app-user-interface)
->

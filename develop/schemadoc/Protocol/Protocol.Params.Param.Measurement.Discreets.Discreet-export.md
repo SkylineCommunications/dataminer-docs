@@ -20,7 +20,7 @@ In the example below, the exported protocol will contain the following discreet 
 
 - table 1000: OK, Failure and Fine
 - table 1200: GOOD and failure
-- able 3000: Failure and fine
+- table 3000: Failure and fine
 
 ```xml
 <Param>

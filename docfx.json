@@ -9,7 +9,6 @@
         }
       ],
       "dest": "develop/api/types",
-      "disableGitFeatures": true,
       "disableDefaultFilter": false,
       "filter": "filterConfig.yml"
     }
