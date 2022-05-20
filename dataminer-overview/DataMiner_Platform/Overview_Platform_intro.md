@@ -2,19 +2,17 @@
 uid: Overview_Platform_intro
 ---
 
-# DataMiner Platform – Empowering your Digital Transformation
+# DataMiner platform – empowering your digital transformation
 
-DataMiner is the key enabling technology for your Digital Transformation
-Nowadays, the transitions are fundamentally different in nature as compared to anything else we experienced in the past decades. Today you are not simply moving an existing business and workflows to a new generation of technology. Instead, All-IP, virtualized and cloudified products create endless possibilities to build and shape a business in many ways.
+DataMiner is a key enabling technology for your digital transformation.
 
-But it's not about technology itself. Today's new enabling technologies impact and change everything we are accustomed to in a business. 
-That's why your strategic goals is to build an agile operation that is prepared for the unexpected and able to adapt and evolve quickly.
+The transitions nowadays are fundamentally different in nature compared to anything we experienced in the past decades. Today you are not simply moving an existing business and workflows to a new generation of technology. Instead, all-IP, virtualized, and cloudified products create endless possibilities to build and shape a business in many ways.
 
-But simply deploying all-IP or cloud-based technology won't magically launch your organization into a new era. It's about how you use that transformational technology to empower your operations.
+Today's new enabling technologies affect and change everything we are accustomed to in a business. That is why it is an important strategic goal to build an agile operation that is prepared for the unexpected and able to adapt and evolve quickly. Simply deploying all-IP or cloud-based technology will not magically launch an organization into the new era. How you use that transformational technology to empower your operations is what will make the difference.
 
 This section elaborates on the different topics listed below:
 
-- Agility - The cornerstone of any successful data-driven media operation
-- Prepare your organization for the new data-driven future
-- DataMiner Digital Transformation Suite
-- Open Software Platform for any of your monitoring and orchestration needs
+- [Agility – the cornerstone of any successful data-driven media operation](xref:Overview_Platform_Agility)
+- [Preparing your organization for the new data-driven future](xref:Overview_Platform_Prepare)
+- [DataMiner Digital Transformation Suite](xref:Overview_Platform_DTS_Suite)
+- [Open software platform for any of your monitoring and orchestration needs](xref:Overview_Platform_Open_Platform)
