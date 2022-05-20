@@ -15,7 +15,9 @@ These actions are similar to the "lock" and "unlock" actions. The only differenc
 
 ### Type@nr
 
-Specifies the connection on which the lock has to be taken.
+(optional) Specifies the connection on which the lock has to be taken/released.
+
+Default: 0
 
 ## Examples
 
