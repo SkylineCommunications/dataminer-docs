@@ -71,7 +71,7 @@ This is an example of *italics*.
 
 ### Lists
 
-DFM supports both bulleted and numbered lists.
+DFM supports both bulleted and numbered lists. Use numbered lists if the order of the list items is important, for example in a procedure where each list item represents a step of the procedure. Otherwise, use bulleted lists.
 
 To create a bulleted list, add a hyphen at the start of each list item. For example:
 
@@ -325,6 +325,9 @@ Until a pull request is merged, everyone can review it and add comments of their
 
 > [!NOTE]
 > You can also submit a review without adding comments directly in a file, by only clicking the green review button and using the window displayed above.
+
+> [!TIP]
+> If the Markdown source looks confusing, and you would prefer to see a preview of a file, in the *Files changed* tab, click "..." in the top-right corner of the box representing the file, and select *View file*. However, note that it is not possible to submit comments in this preview.
 
 ## Making a larger contribution
 
