@@ -71,7 +71,7 @@ This is an example of *italics*.
 
 ### Lists
 
-DFM supports both bulleted and numbered lists.
+DFM supports both bulleted and numbered lists. Use numbered lists if the order of the list items is important, for example in a procedure where each list item represents a step of the procedure. Otherwise, use bulleted lists.
 
 To create a bulleted list, add a hyphen at the start of each list item. For example:
 
