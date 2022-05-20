@@ -45,6 +45,9 @@ My text.
 My additional text.
 ```
 
+> [!NOTE]
+> Every page should also end in an empty line.
+
 ### Italics and bold
 
 To display text in bold, add two asterisks before and after the text.
