@@ -9,7 +9,7 @@ When a booking starts, SRM will go over all resources and configure them one by 
 
 As with Resource Scheduling, a DataMiner service will be used to aggregate the alarm state of all resources and to provide a single interface to access them.
 
-![Resource Orchestration concept](~/srm/images/SRM_resource_orchestration.png)
+![Resource Orchestration concept](~/user-guide/images/SRM_resource_orchestration.png)
 
 Resource orchestration can be combined with Resource Scheduling, in case extra resources, which were not initially part of the booking, need to be booked to deliver a service.
 

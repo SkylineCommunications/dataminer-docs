@@ -8,7 +8,7 @@ Service Orchestration involves the complete scheduled orchestration of a service
 
 For each type of service that needs to be on air, dedicated development is required to define the type of resources that will be part of the booking, to define how these will be interconnected, and to fully customize the configuration steps based on the target service state.
 
-![Service Orchestration concept](~/srm/images/SRM_service_orchestration.png)
+![Service Orchestration concept](~/user-guide/images/SRM_service_orchestration.png)
 
 Service orchestration can be combined with Resource Scheduling in case extra resources, which were not initially part of the booking, need to be booked to accommodate last-minute changes.
 

@@ -10,7 +10,7 @@ When a booking starts, a DataMiner service is dynamically generated to aggregate
 
 No automation happens when the service is generated. The users will need to manually trigger the configuration of the resources in booking. They can do so either by navigating to the relevant resource from the service card or by triggering a Resource Automation action from the same service card.
 
-![Resource Scheduling concept](~/srm/images/SRM_resource_scheduling.png)
+![Resource Scheduling concept](~/user-guide/images/SRM_resource_scheduling.png)
 
 Triggering the configuration is typically done during the pre-roll phase before the booking starts. During pre-roll, all resources are already reserved for the booking. Similarly, resetting all resources is typically done during the post-roll phase.
 

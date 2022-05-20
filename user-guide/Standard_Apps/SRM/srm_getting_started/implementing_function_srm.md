@@ -12,7 +12,7 @@ First, **for each virtual function** that you want to create, **identify the var
 
 For example, in DataMiner 10.2.0:
 
-![Profile parameters in Cube](~/srm/images/ProfileParametersExample.png)
+![Profile parameters in Cube](~/user-guide/images/ProfileParametersExample.png)
 
 Secondly, it is also important to identify **capacity and capability parameters**. A specific parameter could be a capacity limitation or could be a specific capability provided by a function resource. For each identified capability and capacity, make sure there is a profile parameter in the [Profiles module](xref:Configuring_profile_parameters). The capacity or capability checkbox must be selected for these parameters.
 
@@ -37,7 +37,7 @@ You can configure the profile definitions in the [Profiles module](xref:Configur
 
 For example, in DataMiner 10.2.0:
 
-![Profile definitions in Cube](~/srm/images/ProfileDefinitionsExample.png)
+![Profile definitions in Cube](~/user-guide/images/ProfileDefinitionsExample.png)
 
 ## Creating profile instances
 
@@ -45,7 +45,7 @@ While [profile instances](xref:srm_instantiations#profile-instance) can also be 
 
 For example, in DataMiner 10.2.0:
 
-![Profile instances in Cube](~/srm/images/ProfileInstancesExample.png)
+![Profile instances in Cube](~/user-guide/images/ProfileInstancesExample.png)
 
 ## Creating virtual functions
 
@@ -59,22 +59,22 @@ You can **create virtual functions using DataMiner Integration Studio** (version
 
 1. In the *New File* window, select *DataMiner Function Template* and click *Open*.
 
-   ![New File window](~/srm/images/NewFunctionTemplate.png)
+   ![New File window](~/user-guide/images/NewFunctionTemplate.png)
 
 1. Specify the path to the connector exposing the function and click *OK*.
 
-   ![New Function window](~/srm/images/NewFunction.png)
+   ![New Function window](~/user-guide/images/NewFunction.png)
 
 1. At the top of the code editor, click *Function Editor*.
 
-   ![Function editor](~/srm/images/FunctionEditor.png)
+   ![Function editor](~/user-guide/images/FunctionEditor.png)
 
    > [!TIP]
    > See also: [Function editor](xref:Function_editor)
 
 1. Click *New function* to start creating a new function.
 
-   ![New Function option in Function editor](~/srm/images/FunctionEditorNewFunction.png)
+   ![New Function option in Function editor](~/user-guide/images/FunctionEditorNewFunction.png)
 
 1. In the *Edit Function* window:
 
@@ -93,13 +93,13 @@ You can **create virtual functions using DataMiner Integration Studio** (version
 
 1. At the bottom of the Function editor, click *New page*.
 
-   ![New Function option in Function editor](~/srm/images/FunctionEditorNewPage.png)
+   ![New Function option in Function editor](~/user-guide/images/FunctionEditorNewPage.png)
 
 1. Specify a name for the page and click *OK*.
 
 1. Add parameters that need to be displayed by the virtual function resource by dragging them from the *Parameters* column on the right to the *Layout* section in the middle.
 
-   ![New Function option in Function Editor](~/srm/images/FunctionEditorParameters.png)
+   ![New Function option in Function Editor](~/user-guide/images/FunctionEditorParameters.png)
 
 1. To save the virtual function, in the top-right corner, click *Apply Changes*.
 

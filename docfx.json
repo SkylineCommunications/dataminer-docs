@@ -22,8 +22,6 @@
           "dataminer-overview/**/toc.yml",
           "user-guide/**.md",
           "user-guide/**/toc.yml",
-          "srm/**.md",
-          "srm/**/toc.yml",
           "develop/**.md",
           "develop/toc.yml",
 		  "develop/**/toc.yml",
@@ -39,7 +37,6 @@
           "images/**",
           "dataminer-overview/images/**",
           "user-guide/images/**",
-          "srm/images/**",
           "develop/images/**",
 		  "develop/schemadoc/Protocol/images/**",
 		  "develop/schemadoc/Automation/images/**"

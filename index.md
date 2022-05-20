@@ -13,4 +13,3 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 - [DataMiner Overview](xref:OverviewIndex)
 - [User Guide](xref:Part1GettingStarted)
 - [Developer documentation](xref:DevelopIndex)
-- [SRM documentation](xref:srm_index)

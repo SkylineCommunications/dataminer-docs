@@ -2142,7 +2142,7 @@
           topicUid: Configuring_custom_apps
         - name: Deleting a custom application
           topicUid: Deleting_custom_apps
-- name: DataMiner Standard Apps
+- name: DataMiner Standard Apps & Frameworks
   topicUid: Part5StandardApps
   items:
     - name: DataMiner IDP app
@@ -2193,20 +2193,56 @@
               topicUid: Types_of_PTP_devices
             - name: Overview of the DataMiner PTP app UI
               topicUid: Overview_of_the_DataMiner_PTP_app_UI
-    - name: Booking Manager app
-      topicUid: SolSRM
+    - name: Service & Resource Management Framework
+      topicUid: srm_index
       items:
-        - name: Booking Manager user interface
-          topicUid: Booking_Manager_user_interface
-        - name: Interacting with the Booking Manager app using custom Automation scripts
-          topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
-          items:
-            - name: Silent actions
-              topicUid: Silent_actions
-            - name: Frequently asked questions related to bookings and scripting
-              topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
-        - name: Reference
-          topicUid: Reference_Booking_Manager
+      - name: SRM use cases
+        topicUid: srm_use_cases
+        items:
+        - name: Resource Automation
+          topicUid: srm_resource_automation
+        - name: Resource Scheduling
+          topicUid: srm_resource_scheduling
+        - name: Resource Orchestration
+          topicUid: srm_resource_orchestration
+        - name: Service Orchestration
+          topicUid: srm_service_orchestration
+      - name: SRM framework concepts
+        topicUid: srm_concepts
+        items:
+        - name: SRM definitions
+          topicUid: srm_definitions
+        - name: SRM instantiations
+          topicUid: srm_instantiations
+        - name: SRM scripting
+          topicUid: srm_scripting
+      - name: Getting started with SRM
+        topicUid: srm_getting_started
+        items:
+        - name: Deploying the SRM framework
+          topicUid: deploying_srm
+        - name: Provisioning the data acquisition and control plane
+          topicUid: provisioning_srm
+        - name: Implementing virtual functions
+          topicUid: implementing_function_srm
+        - name: Provisioning virtual function resources
+          topicUid: provisioning_VFRs
+        - name: Additional configuration for Service Orchestration
+          topicUid: config_service_orchestration
+      - name: Booking Manager app
+        topicUid: SolSRM
+        items:
+          - name: Booking Manager user interface
+            topicUid: Booking_Manager_user_interface
+          - name: Interacting with the Booking Manager app using custom Automation scripts
+            topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
+            items:
+              - name: Silent actions
+                topicUid: Silent_actions
+              - name: Frequently asked questions related to bookings and scripting
+                topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
+          - name: SRM properties for use with the Booking Manager app
+            topicUid: SRM_properties_Booking_Manager
 - name: DataMiner Cloud Platform
   topicUid: Part51CloudPlatform
   items:

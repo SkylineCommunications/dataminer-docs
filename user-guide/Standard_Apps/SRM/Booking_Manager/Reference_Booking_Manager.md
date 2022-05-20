@@ -1,10 +1,8 @@
 ---
-uid: Reference_Booking_Manager
+uid: SRM_properties_Booking_Manager
 ---
 
-# Reference
-
-## SRM properties for use with the Booking Manager app
+# SRM properties for use with the Booking Manager app
 
 The overview below lists the different properties you can use for service definitions and other SRM objects when you use the Booking Manager standard app.
 

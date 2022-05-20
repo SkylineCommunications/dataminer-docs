@@ -8,7 +8,7 @@ With Resource Automation, users can apply a configuration to a resource at any t
 
 With a click of a button, a complex configuration can quickly and reliably be applied to a resource. The configuration is applied using a Profile-Load Script (PLS). The PLS translates a preset into individual sets on a connector. For each connector, a specific PLS must be implemented.
 
-![Resource Automation concept](~/srm/images/SRM_resource_automation_PLS.png)
+![Resource Automation concept](~/user-guide/images/SRM_resource_automation_PLS.png)
 
 In case a resource has been reserved for a booking that is already active, triggering Resource Automation for that same resource could potentially affect the service associated with that booking. In this case, the framework will notify the end user about the conflict.
 

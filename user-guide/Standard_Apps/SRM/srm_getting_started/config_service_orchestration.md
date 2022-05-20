@@ -50,4 +50,4 @@ To configure DTR:
 
 1. Configure the script to process information and set this information on a different virtual function block.
 
-1. In the Services module, add a [Data Transfer Rules Configuration](xref:Reference_Booking_Manager#data-transfer-rules-configuration) property to the service definition and set its value to a JSON configuration describing when to trigger and which specific DTR rule to execute.
+1. In the Services module, add a [Data Transfer Rules Configuration](xref:SRM_properties_Booking_Manager#data-transfer-rules-configuration) property to the service definition and set its value to a JSON configuration describing when to trigger and which specific DTR rule to execute.
