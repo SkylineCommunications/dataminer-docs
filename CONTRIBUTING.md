@@ -152,7 +152,7 @@ To create a table, use pipe characters to show the column edges. Each table shou
 | Column name | Another Column name |
 |-------------|---------------------|
 | Column text | More column text    |
-| Column text | More cColumn text   |
+| Column text | More column text   |
 ```
 
 You can align the pipe characters so that the table also looks like a table in the Markdown source, but this is not necessary. If you specify the table above as follows, it will look exactly the same in the published version of the documentation:
@@ -161,7 +161,7 @@ You can align the pipe characters so that the table also looks like a table in t
 | Column name | Another Column name |
 |--|--|
 | Column text | More column text |
-| Column text | More cColumn text |
+| Column text | More column text |
 ```
 
 If table cells contain a lot of text, it can be next to impossible to keep everything neatly aligned in the Markdown source, so in that case this second syntax may be preferable. Just make sure you use the correct number of pipe characters so that your number of columns is the same in each row, otherwise the table will not be generated correctly.
