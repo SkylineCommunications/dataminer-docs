@@ -8,8 +8,6 @@ This section provides a bird's eye view on all things DataMiner. If you are look
 
 We are working on adding more information to this section soon, so check back for updates frequently.
 
-At present, the following information is available:
-
-- [About DataMiner](xref:Overview_About_DataMiner)
-- [About Skyline Communications](xref:Overview_About_Skyline)
+- [General introduction](xref:Overview_General_Introduction)
+- [DataMiner platform – empowering your digital transformation](xref:Overview_Platform_intro)
 - [DataMiner Cloud Platform](xref:Overview_DCP)
