@@ -18,8 +18,9 @@ uid: glossary
 | Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration. See [Alarms](xref:alarms). |
 | Alarm banner | Banner at the top of the DataMiner Cube UI that displays the number of new alarms, the color of the most severe among them, and service impact information. See [Alarm Console settings](xref:AlarmConsoleSettings). |
 | Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |
-| Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus). |
+| Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected. See [Filtering alarms on alarm focus](xref:Advanced_analytics_features_in_the_Alarm_Console#filtering-alarms-on-alarm-focus). |
 | Alarm hysteresis | Type of hysteresis where the moment when the severity of an alarm increases is delayed. See [Alarm hysteresis](xref:Alarm_hysteresis). |
+| Alarm group | A group of alarms creased by (Automatic) Incident Tracking. See [Automatic Incident Tracking](xref:AdvancedAnalyticsFeaturesInTheAlarmConsole#automatic-incident-tracking). |
 | Alarm priority | Relative importance of an alarm type within the different DataMiner applications. See [Alarm type priority](xref:Alarm_types#alarm-type-priority). |
 | Alarm storm | Situation where the system is flooded by a large number of alarms. See [Alarm storm protection](xref:Alarm_storm_protection). |
 | Alarm tab | Tab in the Alarm Console in DataMiner Cube or the DataMiner Monitoring app. |
