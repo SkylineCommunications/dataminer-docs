@@ -8,8 +8,14 @@ uid: TOODataMinerDevPackages
 
 ### Dev Packs
 
-Development packages contain the necessary DLLs for development of protocols or Automation scripts to be used on a DataMiner system.
+Development packages are NuGets available on the public [nuget store](https://www.nuget.org/) that contain the necessary DLLs for development of protocols or Automation scripts to be used on a DataMiner system.
 They allow access to the SLProtocol interface and IEngine interface respectively within your Visual Studio projects.
+
+There are three packages available:
+
+* Skyline.DataMiner.Dev.Automation
+* Skyline.DataMiner.Dev.Protocol
+* Skyline.DataMiner.Dev.Common
 
 ### DataMiner
 
