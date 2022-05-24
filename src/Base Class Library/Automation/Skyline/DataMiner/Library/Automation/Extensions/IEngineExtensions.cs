@@ -6,7 +6,7 @@
 	using System;
 
 	/// <summary>
-	/// Defines extension methods on the <see cref="IEngine"/> interface.
+	/// Defines extension methods on the IEngine interface.
 	/// </summary>
 	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedAutomation.dll")]
 	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
@@ -27,7 +27,7 @@
 		/// <summary>
 		/// Retrieves an object implementing the <see cref="IDms"/> interface.
 		/// </summary>
-		/// <param name="engine">The <see cref="IEngine"/> implementation.</param>
+		/// <param name="engine">The IEngine implementation.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="engine"/> is <see langword="null" />.</exception>
 		/// <returns>The <see cref="IDms"/> object.</returns>
 		public static IDms GetDms(this IEngine engine)

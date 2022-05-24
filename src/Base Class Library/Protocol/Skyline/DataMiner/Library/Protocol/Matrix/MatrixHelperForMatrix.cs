@@ -23,7 +23,7 @@
 		/// <param name="matrixSerializedParameterId">The parameter ID of the single parameter that contains all the matrix content in one JSON serialized string.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">Invalid <paramref name="matrixConnectionsBufferParameterId"/>.
 		/// -or-
@@ -52,7 +52,7 @@
 		/// <param name="discreetInfoParameterId">The parameter ID of the discreet info type parameter.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">Invalid <paramref name="matrixConnectionsBufferParameterId"/>.
 		/// -or-
@@ -77,7 +77,7 @@
 		/// <param name="discreetInfoParameterId">The parameter ID of the discreet info type parameter.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">The driver does not have one matrix parameter of type read and write.
 		/// -or-

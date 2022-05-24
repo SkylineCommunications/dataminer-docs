@@ -113,7 +113,7 @@
 		internal ServiceParamsConfiguration ParamsSettingsConfiguration { get; set; }
 
 		/// <summary>
-		/// Gets or sets the <see cref="ServiceInfoParams"/> object of the included element.
+		/// Gets or sets the ServiceInfoParams object of the included element.
 		/// </summary>
 		protected ServiceInfoParams IncludedElement { get; set; }
 

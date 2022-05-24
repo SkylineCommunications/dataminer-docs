@@ -133,7 +133,7 @@
 		/// <summary>
 		/// Processes write parameter changes on matrix, discreet info, or table.
 		/// </summary>
-		/// <param name="protocol">Link with SLProtocol process. This needs to be the SLProtocol object that triggered the QAction as the <see cref="SLProtocol.GetTriggerParameter"/> method is internally being called.</param>
+		/// <param name="protocol">Link with SLProtocol process. This needs to be the SLProtocol object that triggered the QAction as the SLProtocol.GetTriggerParameter method is being called internally.</param>
 		/// <param name="triggerParameter">ID of the parameter that triggered the QAction.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.</exception>
 		public void ProcessParameterSetFromUI(SLProtocol protocol, int triggerParameter = 0)

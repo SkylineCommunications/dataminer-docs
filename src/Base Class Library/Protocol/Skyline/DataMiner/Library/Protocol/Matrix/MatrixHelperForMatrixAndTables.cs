@@ -25,7 +25,7 @@
 		/// <param name="matrixSerializedParameterId">The parameter ID of the single parameter that contains all the matrix content in one JSON serialized string.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">Invalid <paramref name="matrixConnectionsBufferParameterId"/>.
 		/// -or-
@@ -66,7 +66,7 @@
 		/// <param name="outputsTableParameterId">The parameter ID of the table that represents the outputs.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">Invalid <paramref name="matrixConnectionsBufferParameterId"/>.
 		/// -or-
@@ -101,7 +101,7 @@
 		/// <param name="discreetInfoParameterId">The parameter ID of the discreet info type parameter.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">Invalid parameter for virtual sets cannot be found. This needs to be a displayed write string parameter with the same parameter name as the parameter name referred to by the found outputsTableParameter appended with "VirtualSets".
 		/// -or-
