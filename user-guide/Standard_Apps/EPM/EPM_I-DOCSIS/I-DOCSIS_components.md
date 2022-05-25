@@ -12,7 +12,7 @@ Collector connectors interface with the main data sources (CMTS and CCAP devices
 
 These connectors do not ship out with the solution packages. They need to be installed separately as necessary.
 
-For an overview of the available collector connectors, see [Supported technologies for I-DOCSIS](xref:DOCSIS_supported_technologies).
+For an overview of the available collector connectors, see [Supported technologies for I-DOCSIS](xref:I-DOCSIS_supported_technologies).
 
 ### EPM connectors
 
@@ -27,8 +27,38 @@ These are the required EPM connectors, which are included in the EPM Solution pa
 
 ## Correlation rules
 
+The I-DOCSIS EPM Solution uses the following Correlation rules:
+
+- **EPM BE to WM**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and Workflow Managers.
+- **WM to EPM BE**: Operates within the messaging system domain taking care of simple notifications between Workflow Managers and EPM back-end elements.
+- **EPM BE to EPM FE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
+- **EPM FE to BE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
+
 ## Automation scripts
+
+The I-DOCSIS EPM Solution uses the following Automation scripts:
+
+- **CCAP to EPM FE**: Operates within the messaging system domain taking care of simple notifications between CCAP elements and the EPM engine.
+- **EPM FE to EPM BE**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.
+- **EPM BE to CCAP Pair**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and CCAP collectors.
+- **EPM BE to WM**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and Workflow Managers.
+- **WM to BE**: Operates within the messaging system domain taking care of simple notifications between Workflow Managers and EPM back-end elements.
+- **EPM BE to FE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
+- **EPM FE to BE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
 
 ## Dashboards
 
+The I-DOCSIS EPM Solution includes the following dashboards:
+
+- I-DOCSIS CCAP
+- I-DOCSIS Channel Utilization
+- I-DOCSIS Network
+- I-DOCSIS Service Group [Fiber Node]
+
 ## Visuals
+
+The I-DOCSIS EPM Solution includes the following visual overviews:
+
+- Network
+- CCAP Core
+- Service Group [Fiber Node]
