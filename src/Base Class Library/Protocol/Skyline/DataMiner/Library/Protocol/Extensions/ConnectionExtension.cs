@@ -6,7 +6,7 @@
 	using System;
 
 	/// <summary>
-	/// Defines extension methods on the <see cref="SLProtocol"/> interface.
+	/// Defines extension methods on the SLProtocol interface.
 	/// </summary>
 	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedScripting.dll")]
 	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
@@ -25,9 +25,9 @@
 #pragma warning restore S1104 // Fields should not have public accessibility
 
 		/// <summary>
-		/// Gets an object implementing the <see cref="IDms"/> interface using an instance of the <see cref="SLProtocol"/> class.
+		/// Gets an object implementing the <see cref="IDms"/> interface using an instance of the SLProtocol class.
 		/// </summary>
-		/// <param name="protocol">The <see cref="SLProtocol"/> instance.</param>
+		/// <param name="protocol">The SLProtocol instance.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null" />.</exception>
 		/// <returns>Object implementing the <see cref="IDms"/> interface.</returns>
 		public static IDms GetDms(this SLProtocol protocol)

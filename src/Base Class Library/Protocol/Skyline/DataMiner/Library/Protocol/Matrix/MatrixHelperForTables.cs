@@ -23,7 +23,7 @@
 		/// <param name="matrixSerializedParameterId">The parameter ID of the single parameter that contains all the matrix content in one JSON serialized string.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">Invalid <paramref name="matrixConnectionsBufferParameterId"/>.
 		/// -or-
@@ -60,7 +60,7 @@
 		/// <param name="maxOutputCount">The maximum amount of outputs. The <see cref="MatrixHelper.DisplayedOutputs"/> property cannot be larger than this value.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">Invalid <paramref name="matrixConnectionsBufferParameterId"/>.
 		/// -or-
@@ -92,7 +92,7 @@
 		/// <param name="maxOutputCount">The maximum amount of outputs. The <see cref="MatrixHelper.DisplayedOutputs"/> property cannot be larger than this value.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null"/>.
 		/// -or-
-		/// <see cref="GetElementProtocolResponseMessage"/> is <see langword="null"/>.
+		/// GetElementProtocolResponseMessage is <see langword="null"/>.
 		/// </exception>
 		/// <exception cref="ArgumentException">A valid <paramref name="maxInputCount"/> and <paramref name="maxOutputCount"/> needs to be provided when there is no matrix parameter.
 		/// -or-
