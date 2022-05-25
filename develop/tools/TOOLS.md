@@ -34,6 +34,8 @@ In this section, you can find information on the following useful tools for syst
 
 - [Application packages](xref:TOOApplicationPackages#application-packages)
 
+- [DataMiner Development Packages](xref:TOODataMinerDevPackages)
+
 You can also find information on the following tools on DataMiner Dojo:
 
 | Tool                          | Description and link                                                                                                                                                                                                                                                 |
