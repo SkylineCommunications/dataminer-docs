@@ -27,17 +27,17 @@ The foundation of DataMiner is its powerful and versatile data acquisition and c
 A unique catalog of 7000+ connectors already exist. In addition, you can leverage DataMiner Development Packages to build you own connectors (also known as "protocols" or "drivers").
 
 > [!TIP]
-> See also: [About DataMiner](xref:Overview_About_DataMiner)
+> See also: [About DataMiner](https://aka.dataminer.services/about-dataminer)
 
 ### About Skyline Communications
 
-At Skyline Communications, we deal in world-class solutions that are deployed by leading companies around the globe. Check out [our proven track record](xref:Overview_About_Skyline) and see how we make our customers' lives easier by empowering them to take their operations to the next level.
+At Skyline Communications, we deal in world-class solutions that are deployed by leading companies around the globe. Check out [our proven track record](https://aka.dataminer.services/about-skyline) and see how we make our customers' lives easier by empowering them to take their operations to the next level.
 
 ## Requirements
 
 The "DataMiner Integration Studio" Visual Studio extension is required for development of connectors and Automation scripts using DataMiner Development Packages.
 
-See [Installing DataMiner Integration Studio](xref:Installing_and_configuring_DataMiner_Integration_Studio)
+See [Installing DataMiner Integration Studio](https://aka.dataminer.services/DisInstallation)
 
 ## Versioning
 
