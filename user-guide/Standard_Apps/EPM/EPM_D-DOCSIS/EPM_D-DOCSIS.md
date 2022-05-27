@@ -8,6 +8,6 @@ The D-DOCSIS branch of the DataMiner EPM Solution is designed to manage DOCSIS d
 
 - [EPM D-DOCSIS architecture](xref:D-DOCSIS_architecture)
 - [EPM D-DOCSIS components](xref:D-DOCSIS_components)
-- [EPM D-DOCSIS deployment]
 - [Supported technologies for D-DOCSIS](xref:D-DOCSIS_supported_technologies)
-- [Available KPIs in D-DOCSIS]
+- [EPM D-DOCSIS deployment](xref:D-DOCSIS_deployment)
+- [Available KPIs in D-DOCSIS](xref:D-DOCSIS_KPIs)

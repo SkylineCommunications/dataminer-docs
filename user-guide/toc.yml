@@ -2147,9 +2147,38 @@
           topicUid: Configuring_custom_apps
         - name: Deleting a custom application
           topicUid: Deleting_custom_apps
-- name: DataMiner Standard Apps
+- name: DataMiner Standard Apps & Solutions
   topicUid: Part5StandardApps
   items:
+    - name: DataMiner EPM Solution
+      topicUid: SolEPM
+      items:
+        - name: DataMiner EPM I-DOCSIS
+          topicUid: EPM_I-DOCSIS
+          items:
+            - name: EPM I-DOCSIS architecture
+              topicUid: I-DOCSIS_architecture
+            - name: EPM I-DOCSIS components
+              topicUid: I-DOCSIS_components
+            - name: Supported technologies for I-DOCSIS
+              topicUid: I-DOCSIS_supported_technologies
+            - name: EPM I-DOCSIS deployment
+              topicUid: I-DOCSIS_deployment
+            - name: Available KPIs in I-DOCSIS
+              topicUid: I-DOCSIS_KPIs
+        - name: DataMiner EPM D-DOCSIS
+          topicUid: EPM_D-DOCSIS
+          items:
+            - name: EPM D-DOCSIS architecture
+              topicUid: D-DOCSIS_architecture
+            - name: EPM D-DOCSIS components
+              topicUid: D-DOCSIS_components
+            - name: Supported technologies for D-DOCSIS
+              topicUid: D-DOCSIS_supported_technologies
+            - name: EPM D-DOCSIS deployment
+              topicUid: D-DOCSIS_deployment
+            - name: Available KPIs in D-DOCSIS
+              topicUid: D-DOCSIS_KPIs
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:

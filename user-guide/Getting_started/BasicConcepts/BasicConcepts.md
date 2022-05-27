@@ -69,4 +69,4 @@ The DataMiner Standard Apps combine different DataMiner features into one ready-
 The package contains all the necessary components and default configurations, including protocols, views, Automation scripts, etc. Certain DataMiner features and licenses can be required as prerequisites, depending on the app.
 
 > [!TIP]
-> See also: [DataMiner Standard Apps](xref:Part5StandardApps#dataminer-standard-apps)
+> See also: [DataMiner Standard Apps](xref:Part5StandardApps)

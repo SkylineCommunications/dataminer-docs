@@ -22,7 +22,7 @@ uid: Part1GettingStarted
 ### More on specific DataMiner modules and apps
 
 - [Advanced DataMiner modules](xref:Part4AdvancedModules#advanced-dataminer-modules)
-- [DataMiner Standard Apps](xref:Part5StandardApps#dataminer-standard-apps)
+- [DataMiner Standard Apps](xref:Part5StandardApps)
 
 ### Are you a DataMiner Administrator?
 
