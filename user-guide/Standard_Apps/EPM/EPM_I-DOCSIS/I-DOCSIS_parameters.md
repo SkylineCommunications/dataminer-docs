@@ -1,12 +1,14 @@
 ---
-uid: I-DOCSIS_KPIs
+uid: I-DOCSIS_parameters
 ---
 
-# Available KPIs in I-DOCSIS
+# Available parameters in I-DOCSIS
 
-This section lists the available KPIs for each topology level in the I-DOCSIS branch of the EPM Solution.
+This section lists the available parameters for each topology level in the I-DOCSIS branch of the EPM Solution.
 
 ## Network
+
+### Network KPIs & KQIs
 
 - **Number Market**
 - **Number Hub**
@@ -26,7 +28,15 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Jitter**: Calculated. The average jitter for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
+### Network system parameters
+
+- **ID**
+- **Name**
+- **Network**
+
 ## Market
+
+### Market KPIs & KQIs
 
 - **Number Hub**
 - **Number CCAP Core**
@@ -45,7 +55,15 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Jitter**: Calculated. The average jitter for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
+### Market system parameters
+
+- **ID**
+- **Name**
+- **Network**
+
 ## Hub
+
+### Hub KPIs & KQIs
 
 - **Number CCAP Core**
 - **Number Service Group**
@@ -63,7 +81,15 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Jitter**: Calculated. The average jitter for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
+### Hub system parameters
+
+- **ID**
+- **Name**
+- **Network**
+
 ## CCAP Core (CMTS)
+
+### CCAP Core (CMTS) KPIs & KQIs
 
 - **Number Service Group**
 - **Number CM**
@@ -81,7 +107,24 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 - **CMTS State**: Direct value. Possible values: *OK* if the CMTS is reachable, and *Timeout* if the CMTS is not reachable.
 
+### CCAP Core (CMTS) system parameters
+
+- **Name**
+- **System Name**
+- **Device Type**
+- **Serial Number**
+- **Model**
+- **IPv4**
+- **City**
+- **Site**
+- **Software Version**
+- **Network Name**
+- **Market Name**
+- **Hub Name**
+
 ## Linecard
+
+### Linecard KPIs & KQIs
 
 - **Number CM**
 - **Number CM Offline**
@@ -99,7 +142,15 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Jitter**: Calculated. The average jitter for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
+### Linecard system parameters
+
+- **ID**
+- **Name**
+- **CCAP Core Name**
+
 ## DS Port
+
+### DS Port KPIS & KQIs
 
 - **Number CM**: The number of CMs served by the DS port. Calculated by aggregating the number of CMs associated with the DS port.
 - **Number CM Offline**: The number of offline CMs associated with the DS port, from the CCAP perspective. Calculated by aggregating the number of CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (1 Other = Offline, 8 Operational = Online, any other value = Initializing).
@@ -116,6 +167,8 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 
 ## US Port
 
+### US Port KPIS & KQIs
+
 - **Number CM**: The number of CMs served by the US port. Calculated by aggregating the number of CMs associated with the US port.
 - **Number CM Offline**: The number of offline CMs associated with the US port, from the CCAP perspective. Calculated by aggregating the number of CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (1 Other = Offline, 8 Operational = Online, any other value = Initializing).
 - **Percentage CM Offline**: The percentage of offline CMs associated with the US port, from the CCAP perspective. Calculated based on the CMs reported as offline by the CCAP (OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6) (1 Other = Offline, 8 Operational = Online, any other value = Initializing).
@@ -130,6 +183,8 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
 ## DS Service Group
+
+### DS Service Group KPIS & KQIs
 
 - **Number CM**
 - **Number CM Offline**
@@ -153,7 +208,15 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Jitter**: Calculated. The average jitter for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
+### DS Service Group system parameters
+
+- **Name**
+- **FN Name**
+- **Linecard Name**
+
 ## US Service Group
+
+### US Service Group KPIS & KQIs
 
 - **Number CM**
 - **Number CM Offline**
@@ -177,7 +240,15 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Jitter**: Calculated. The average jitter for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
+### US Service Group system parameters
+
+- **Name**
+- **FN Name**
+- **Linecard Name**
+
 ## Service Group (Fiber Node)
+
+### Service Group (Fiber Node) KPIS & KQIs
 
 - **Number CM**
 - **Number CM Offline**
@@ -216,11 +287,18 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Average Jitter**: Calculated. The average jitter for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
+### Service Group (Fiber Node) system parameters
+
+- **Name**
+- **MAC Domain**
+- **Cable Interface**
+- **DS SG Name**
+- **US SG Name**
+
 ## Node Segment
 
-- **Name**: Direct value. Concatenation of the CMTS name and the unique combination of a DS port and US port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the I-DOCSIS service. There will be a node segment every time the connector detects a unique US/DS port combination serving at least one cable modem.
-- **DS Port**: Direct value. The DS port associated with the node segment.
-- **US Port**: Direct value. The US port associated with the node segment.
+### Node segment KPIs & KQIs
+
 - **Number CM**: Calculated. The number of cable modems associated with the node segment.
 - **Number CM Offline**: Calculated. The number of cable modems associated with the node segment that are reporting a status other than Operational.
 - **Percentage CM Offline**: Calculated. The percentage of cable modems associated with the node segment that are reporting a status other than Operational.
@@ -252,6 +330,12 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **Percentage CM Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by reflection.
 - **Number CM Group Delay or Reflection OOS**: Calculated. The number of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
 - **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
+
+### Node segment system parameters
+
+- **Name**: Direct value. Concatenation of the CMTS name and the unique combination of a DS port and US port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the I-DOCSIS service. There will be a node segment every time the connector detects a unique US/DS port combination serving at least one cable modem.
+- **DS Port**: Direct value. The DS port associated with the node segment.
+- **US Port**: Direct value. The US port associated with the node segment.
 
 ## CM DS QAM CH
 
@@ -317,6 +401,8 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 
 ## DS OFDM CH
 
+## DS OFDM CH KPIs & KQIs
+
 - **Ch ID**
 - **OFDM Lower Freq.**: Direct value. Represents either the lower boundary frequency of the lower guardband or, if no guardband is defined, the lower boundary frequency of the lowest active subcarrier of the OFDM downstream channel.
 - **OFDM Upper Freq.**: Direct value. Represents either the upper boundary frequency of the upper guardband or, if no guardband is defined, the upper boundary frequency of the highest active subcarrier of the OFDM downstream channel.
@@ -328,6 +414,8 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **OFDM PNM RX MER Mean**
 
 ## US OFDMA CH
+
+### US OFDMA CH KPIs & KQIs
 
 - **Ch ID**
 - **OFDMA Lower Freq.**
@@ -344,6 +432,13 @@ This section lists the available KPIs for each topology level in the I-DOCSIS br
 - **OFDMA Microreflections**
 - **OFDMA US Mean StdDev Rx MER**
 - **OFDMA US T4timeouts**
+
+### US OFDMA CH system parameters
+
+- **ID**
+- **Frequency**
+- **Width**
+- **Modulation**
 
 ## Cable Modem
 

@@ -10,4 +10,4 @@ The I-DOCSIS branch of the DataMiner EPM Solution is designed to manage Integrat
 - [EPM I-DOCSIS components](xref:I-DOCSIS_components)
 - [Supported technologies for I-DOCSIS](xref:I-DOCSIS_supported_technologies)
 - [EPM I-DOCSIS deployment](xref:I-DOCSIS_deployment)
-- [Available KPIs in I-DOCSIS](xref:I-DOCSIS_KPIs)
+- [Available parameters in I-DOCSIS](xref:I-DOCSIS_parameters)

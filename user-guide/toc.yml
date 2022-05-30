@@ -2164,8 +2164,8 @@
               topicUid: I-DOCSIS_supported_technologies
             - name: EPM I-DOCSIS deployment
               topicUid: I-DOCSIS_deployment
-            - name: Available KPIs in I-DOCSIS
-              topicUid: I-DOCSIS_KPIs
+            - name: Available parameters in I-DOCSIS
+              topicUid: I-DOCSIS_parameters
         - name: DataMiner EPM D-DOCSIS
           topicUid: EPM_D-DOCSIS
           items:
@@ -2177,8 +2177,8 @@
               topicUid: D-DOCSIS_supported_technologies
             - name: EPM D-DOCSIS deployment
               topicUid: D-DOCSIS_deployment
-            - name: Available KPIs in D-DOCSIS
-              topicUid: D-DOCSIS_KPIs
+            - name: Available parameters in D-DOCSIS
+              topicUid: D-DOCSIS_parameters
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:
