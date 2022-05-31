@@ -259,7 +259,7 @@ DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onw
    1. In Azure, go to *App registrations*, select your app, and select *Overview* > *Endpoints*.
    1. Select the Azure AD B2C SAML metadata endpoint, e.g. `https://dataminerservices.b2clogin.com/dataminerservices.onmicrosoft.com/<policy-name>/Samlp/metadata`, and replace \<policy-name> with the name of the policy you created earlier.
 
-1. Configure DataMiner to import users and groups from Azure B2C. You can do this in the same way as for [Azure AD](#configuring-dataminer-to-import-users-and-groups-from-azure-ad).
+1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Azure AD](#configuring-automatic-creation-of-users-authenticated-by-azure-ad-using-saml). The IPmetadata you need for that is the link you created in step 5.
 
    > [!NOTE]
    > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element in *DataMiner.xml* that refers to a claim containing a valid email address.
