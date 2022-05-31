@@ -33,7 +33,7 @@ To configure these job sections:
 
         - *Booking manager*: Available for a booking section. Determines which Booking Manager element is used. Once jobs have been created with the selected booking manager element, you will no longer be able to modify this selection.
 
-        - *Booking script*: Available for a booking section. Determines which script is executed when you click an action in the job section. This can for example be a script to create a new booking.
+        - *Booking script*: Available for a booking section. Determines which script is executed when you click an action in the job section. This can for example be a script to create a new booking. See [Configuring jobs linked to bookings](xref:Configuring_jobs_linked_to_bookings).
 
         - *Allow multiple instances*: Available for a fields section. If this option is selected, and a new job is created, it will then be possible to specify additional instances in tabs. In the list view, the different instances will be separated by a pipe character.
 
@@ -62,7 +62,7 @@ To configure these job sections:
 
             - For a booking section, you will need to select the *Booking manager* element to be used. Once jobs have been created with the selected booking manager element, you will no longer be able to modify this selection.
 
-            - For a booking section, you will also need to select the *Booking script*, which is the script that should be executed when you click an action in the job section. This can for example be a script to create a new booking.
+            - For a booking section, you will also need to select the *Booking script*, which is the script that should be executed when you click an action in the job section. This can for example be a script to create a new booking. See [Configuring jobs linked to bookings](xref:Configuring_jobs_linked_to_bookings).
 
             - For a fields section, in case multiple instances of this section should be available, select *Allow multiple instances*. <br>When a new job is created, it will then be possible to specify additional instances in tabs. In the list view, the different instances will be separated by a pipe character.
 
