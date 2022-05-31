@@ -1796,6 +1796,8 @@
               topicUid: Configuring_job_domains
             - name: Configuring job sections
               topicUid: Configuring_job_sections
+            - name: Configuring jobs linked to bookings
+              topicUid: Configuring_jobs_linked_to_bookings
             - name: Configuring a job field
               topicUid: Configuring_a_job_field
         - name: Working with the jobs timeline
