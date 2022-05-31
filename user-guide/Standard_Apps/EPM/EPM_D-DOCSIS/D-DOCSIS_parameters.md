@@ -67,10 +67,10 @@ This section lists the available parameters for each topology level in the D-DOC
 - **DS OFDM Utilization**: Calculated. The DS OFDM utilization of the fiber node. This is the average of the DS OFDM utilization from the node segments of the fiber node.
 - **US OFDMA Utilization**: Calculated. The US OFDMA utilization of the fiber node. This is the average of the US OFDMA utilization from the node segments of the fiber node.
 - **Number RPD**: Calculated. The number of RPDs using the fiber node. This is the sum of the number of node segments associated with the fiber node ID.
-- **Cable Interface**: Calculated. The fiber node cable interface name. Retrieved by associating the MAC domain with the interface name in the interfaces table.
-- **DS Service Group Name**: Calculated. The downstream service group name. Retrieved by associating the fiber node name to the port information returned from Smart PHY to get the service group name.
-- **US Service Group Name**: Calculated. The upstream service group name. Retrieved by associating the fiber node name to the port information returned from Smart PHY to get the service group name.
-- **Service Template**: Calculated. The fiber node service template. Retrieved by associating the fiber node name to the port template information returned from Smart PHY to get the service group name.
+- **Cable Interface**: Calculated. The fiber node cable interface name. Calculated by associating the MAC domain with the interface name in the interfaces table.
+- **DS Service Group Name**: Calculated. The downstream service group name. Calculated by associating the fiber node name to the port information returned from Smart PHY to get the service group name.
+- **US Service Group Name**: Calculated. The upstream service group name. Calculated by associating the fiber node name to the port information returned from Smart PHY to get the service group name.
+- **Service Template**: Calculated. The fiber node service template. Calculated by associating the fiber node name to the port template information returned from Smart PHY to get the service group name.
 - **CCAP Core Name**: Calculated. The name of the CCAP associated with the fiber node, based on the name of the CCAP Core element.
 - **Hub**: Calculated. The parent hub of the fiber node.
 - **Market**: Calculated. The parent market of the fiber node.
@@ -355,3 +355,274 @@ This section lists the available parameters for each topology level in the D-DOC
 - **Name**: Converted. The name of the controller, including associated CCAP. Based on the name from the physical interfaces.
 - **System Name**: Direct value. The name of the controller interface. OID 1.3.6.1.2.1.47.1.1.1.1.7.
 - **DPIC Interface Name**: Calculated. The DPIC interface name, including associated CCAP. Calculated by getting the interface name using the numbers to match to the interface table depending on the controller name.
+
+## DS Controller
+
+- **Name**: Converted. The name of the controller, including associated CCAP. Based on the name from the physical interfaces.
+- **System Name**: Direct value. The name of the controller interface. OID 1.3.6.1.2.1.47.1.1.1.1.7.
+- **DPIC Interface Name**: Calculated. The DPIC interface name, including associated CCAP. Calculated by getting the interface name using the numbers to match to the interface table depending on the controller name.
+
+## Fiber Node
+
+### Fiber Node KPIS & KQIs
+
+- **Name**: Converted. The fiber node name. This is the node status table index converted to ASCII format.
+- **Number CM**: Calculated. The total number of CMs from the node segments in the level.
+- **Number CM Offline**: Calculated. The total number of offline CMs from the node segments in the level.
+- **DS QAM Utilization**: Calculated. The DS QAM utilization of the fiber node. This is the average of the DS QAM utilization from the node segments of the fiber node.
+- **US QAM Utilization**: Calculated. The US QAM utilization of the fiber node. This is the average of the US QAM utilization from the node segments of the fiber node.
+- **DS OFDM Utilization**: Calculated. The DS OFDM utilization of the fiber node. This is the average of the DS OFDM utilization from the node segments of the fiber node.
+- **US OFDMA Utilization**: Calculated. The US OFDMA utilization of the fiber node. This is the average of the US OFDMA utilization from the node segments of the fiber node.
+- **Number RPD**: Calculated. The number of RPDs using the fiber node. This is the sum of the number of node segments associated with the fiber node ID.
+- **Cable Interface**: Calculated. The fiber node cable interface name. Calculated by associating the MAC domain with the interface name in the interfaces table.
+- **DS Service Group Name**: Calculated. The downstream service group name. Calculated by associating the fiber node name to the port information returned from Smart PHY to get the service group name.
+- **US Service Group Name**: Calculated. The upstream service group name. Calculated by associating the fiber node name to the port information returned from Smart PHY to get the service group name.
+- **Service Template**: Calculated. The fiber node service template. Calculated by associating the fiber node name to the port template information returned from Smart PHY to get the service group name.
+- **CCAP Core Name**: Calculated. The name of the CCAP associated with the fiber node, based on the name of the CCAP Core element.
+- **Hub**: Calculated. The parent hub of the fiber node.
+- **Market**: Calculated. The parent market of the fiber node.
+
+### Fiber Node data layer parameters
+
+- **Cable Interface**: The cable interface. Retrieved from IFXtable. MIB OID 1.3.6.1.2.1.31.1.1.1.1.
+- **Node Name**: The node status name. Retrieved from IFXtable. MIB OID 1.3.6.1.2.1.31.1.1.1.1.
+- **Service Group**
+- **QAM DS Utilization**: The quadrature amplitude modulation downstream utilization. Calculated based on GetUtilization() method.
+- **QAM US Utilization**: The quadrature amplitude modulation upstream utilization. Calculated based on GetUtilization() method.
+- **OFDM DS Utilization**: The orthogonal frequency division multiple access downstream utilization. Calculated based on GetUtilization() method.
+- **OFDMA US Utilization**: The orthogonal frequency division multiple access upstream utilization. Calculated based on GetUtilization() method.
+- **Modem Count**: The number of modems. Calculated based on the CM MAC domain interface.
+- **RPD Count**: The number of RPDs. Calculated using a counter based on the unique RPD ID attached to the CM.
+- **Offline Modems**: The percentage of modems offline. Calculated based on the number of unregistered modems compared to the modem count.
+- **Instance**: Internal ID used to synchronize data to EPM.
+- **Name**: Internal name used for EPM.
+- **System ID**: The system fiber node ID.
+- **System Name**: Unique period-separated data on the fiber node.
+- **MAC Domain**: MAC domain information of the fiber node.
+- **Cable Interface**: Based on mapping the MAC domain of the fiber node to the InterfaceX.
+- **SG System ID**: The service group associated with the fiber node.
+- **SG ID**: Internal ID used to synchronize data with EPM.
+- **SG Name**: The service group name associated with the fiber node.
+- **DS SG System ID**: The DS service group ID associated with the fiber node.
+- **DS SG ID**: Internal ID used to synchronize data with EPM.
+- **DS SG Name**: The DS service group name associated with the fiber node.
+- **US Controller ID**: Internal ID used to synchronize data with EPM.
+- **US Controller Name**: The US controller associated with the fiber node.
+- **US SG System ID**: The US service group ID associated with the fiber node.
+- **US SG ID**: Internal ID used to synchronize data with EPM
+- **US SG Name**: The US service group name associated with the fiber node.
+- **DS Controller ID**: Internal ID used to synchronize data with EPM
+- **DS Controller Name**: The DS controller associated with the fiber node.
+
+## Node Segment
+
+### Node Segment KPIs & KQIs
+
+- **Number CM**: Calculated. The number of cable modems (CMs) the RPD is managing. Calculated by counting the number of CMs connected to the RPD.
+- **Percentage CM Offline**: Calculated. The percentage of CMs linked to the RPD that are offline.
+- **Percentage CM DS Partial Service**: Calculated. The percentage of CMs linked to the RPD that have CMs with DS partial service channels. Calculated based on the CMs with DS channels in the CM impaired table on the CCAP.
+- **Number CM DS Partial Service**: Calculated. The number of CMs linked to the RPD that have CMs with DS partial service channels. Calculated by counting the CMs with DS channels in the CM impaired table on the CCAP.
+- **Percentage CM US Partial Service**: Calculated. The percentage of CMs linked to the RPD that have CMs with US partial service channels. Calculated based on the CMs with US channels in the CM impaired table on the CCAP.
+- **Number CM US Partial Service**: Calculated. The number of CMs linked to the RPD that have CMs with US partial service channels. Calculated by counting the CMs with US channels in the CM impaired table on the CCAP.
+- **Percentage CM TX LVL OOS**: Calculated. The percentage of US ATDMA channels of CMs linked to the RPD that have the power status OOS. Calculated based on the CMs with US channels of type ATDMA in the CM upstream channels table with Rx power that is OOS.
+- **Percentage CWERR OOS**: Calculated. The percentage of US ATDMA channels of CMs linked to the RPD that have post-FEC OOS. Calculated based on the CMs with US channels of type ATDMA in the CM upstream channels table with post-FEC that is OOS.
+- **Percentage SNR OOS**: Calculated. The percentage of US ATDMA channels of CMs linked to the RPD that have signal noise OOS. Calculated based on the CMs with US channels of type ATDMA in the CM upstream channels table with SNR that is OOS.
+- **Percentage Time Offset OOS**: Calculated. The percentage of US ATDMA channels of CMs linked to the RPD that have high resolution timing offset OOS. Calculated based on the CMs with US channels of type ATDMA in the CM upstream channels table with high resolution timing offset that is OOS.
+- **DS SCQAM Utilization**: Calculated. The average percentage of DS QAM utilization of CMs linked to the RPD. Calculated based on the DS QAM utilization of channels associated to CMs managed by the RPD.
+- **US ATDMA Utilization**: Calculated. The average percentage of US QAM utilization of CMs linked to the RPD. Calculated based on the US QAM utilization of channels associated to CMs managed by the RPD.
+- **OFDMA Utilization**: Calculated. The average percentage of US OFDM utilization of CMs linked to the RPD. Calculated based on the US OFDM utilization of channels associated to CMs managed by the RPD.
+- **Number L2TPv3 Session in Error**: Calculated. The number of L2TPv3 sessions that are in error. Calculated by counting the number of sessions from RPD depi (retrieved with the call "show cable rpd depi") that do not have the remote state "UP".
+- **Percentage L2TPv3 Session in Error**: Calculated. The percentage of L2TPv3 sessions that are in error. Calculated based on the sessions from RPD depi (retrieved with the call "show cable rpd depi") that do not have the remote state "UP".
+- **Temperature**: The temperature of the RPD. Calculated by scaling the value from the RPD Sensors table.
+- **Destination IF In Utilization**: Calculated. The In (Upstream) Utilization of the external interface(s) connected to the RPD. This is the data that flows from the RPD up to a CIN device (i.e. Layer 2 Switch). Calculated by mapping the In utilization (calculated using the change in input octets) of the external interface(s) connected to the RPD.
+- **Destination IF Out Utilization**: Calculated. The Out (Downstream) Utilization of the external interface(s) connected to the RPD. This is the data that flows from the CIN device (i.e. Layer 2 Switch) to the RPD interface(s). Calculated by mapping the Out utilization (calculated using the change in output octets) of the external interface(s) connected to the RPD.
+- **Number CM OFDM CH 1 Profile 0**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the first profile available (i.e. 0).
+- **Number CM OFDM CH 1 Profile 1**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the second profile available (i.e. 1).
+- **Number CM OFDM CH 1 Profile 2**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the third profile available (i.e. 2).
+- **Number CM OFDM CH 1 Profile 3**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the fourth profile available (i.e. 3).
+- **Percentage CM OFDM CH 1 Profile 0**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the first profile available (i.e. 0).
+- **Percentage CM OFDM CH 1 Profile 1**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the second profile available (i.e. 1).
+- **Percentage CM OFDM CH 1 Profile 2**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the third profile available (i.e. 2).
+- **Percentage CM OFDM CH 1 Profile 3**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the fourth profile available (i.e. 3).
+- **Number CM OFDM CH 2 Profile 0**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the first profile available (i.e. 0).
+- **Number CM OFDM CH 2 Profile 1**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the second profile available (i.e. 1).
+- **Number CM OFDM CH 2 Profile 2**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the third profile available (i.e. 2).
+- **Number CM OFDM CH 2 Profile 3**: Calculated. The number of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the fourth profile available (i.e. 3).
+- **Percentage CM OFDM CH 2 Profile 0**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the first profile available (i.e. 0).
+- **Percentage CM OFDM CH 2 Profile 1**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the second profile available (i.e. 1).
+- **Percentage CM OFDM CH 2 Profile 2**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the third profile available (i.e. 2).
+- **Percentage CM OFDM CH 2 Profile 3**: Calculated. The percentage of CMs linked to the RPD with OFDM CH 2 Current Profile equal to the fourth profile available (i.e. 3).
+- **Average OFDM CH 1 Utilization**: Calculated. The average channel 1 utilization for the RPD's CMs. Calculated by averaging the utilization (OID: 1.3.6.1.4.1.4491.2.1.28.1.19.1.20) for all CH 1 instances reported by the RPD's CMs.
+- **Number MTA**: Calculated. The total number of Multimedia Terminal Adapters (MTAs) for the level.
+- **Percentage MTA Offline**: Calculated. The percentage of offline Multimedia Terminal Adapters (MTAs) for the level.
+- **Number DSG**: Calculated. The total number of set-top gateways (DSGs) for the level.
+- **Percentage DSG Offline**: Calculated. The percentage of offline set-top gateways (DSGs) for the level.
+- **Aux Status**: Calculated. The Aux Core RPD State for the first active auxiliary (non-principle) core. Calculated by retrieving the Aux Core RPD State value (OID: 1.3.6.1.4.1.4491.2.1.30.1.1.4.1.12, Table: RPD CCAP Cores) for the first active (core mode) auxiliary (non-principal) core and mapping it to the corresponding RPD.
+- **\# 3.1 CM**: Calculated. The total number of CMs that are currently running DOCSIS 3.1. Calculated based on the base CLI call "show cable modem docsis device-class".
+- **\# CM OFDM**: Calculated. The number of CMs using OFDM. Calculated by counting the number of CMs with OFDM Status equal to Active.
+- **Percentage CM OFDM**: Calculated. The percentage of CMs using OFDM. Calculated based on the CMs with OFDM Status equal to Active.
+- **Number CM OFDM Partial**: Calculated. The number of CMs using OFDM in a partial state. Calculated by counting the number of CMs actively using OFDM with DS Service Status equal to Partial.
+- **Percentage CM OFDM Partial**: Calculated. The percentage of CMs using OFDM in a partial state. Calculated based on the CMs actively using OFDM with DS Service Status equal to Partial.
+- **Number CM OFDM Profile Downgrade**: Calculated. The number of CMs that have downgraded to a lower OFDM profile for at least one channel. Calculated by counting the number of CMs with OFDM CH 1 Profile Status or OFDM CH 2 Profile Status equal to Downgrade.
+- **Percentage CM OFDM Profile Downgrade**: Calculated. The percentage of CMs that have downgraded to a lower OFDM profile for at least one channel. Calculated based on the CMs with OFDM CH 1 Profile Status or OFDM CH 2 Profile Status equal to Downgrade.
+- **Nearcast Video Interface**: Calculated. The Nearcast Video Interface, calculated by retrieving the core assignment using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **Nearcast Video Service Group**: Calculated. The Nearcast Video Service Group, calculated by retrieving the ports using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **Nearcast Video Controller**: Calculated. The Nearcast Video Controller, calculated by retrieving the templates using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **Nearcast Video DEPI**: Calculated. The Nearcast Video DEPI, calculated using the RPD cores interface to the Nearcast interface to retrieve the address.
+- **Nearcast Video Controller Profile**: Calculated. The Nearcast Video Controller Profile, calculated by retrieving the templates using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **Broadcast Video Interface**: Calculated. The Broadcast Video Interface, calculated by retrieving the core assignment using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **Broadcast Video Service Group**: Calculated. The Broadcast Video Service Group, calculated by retrieving the ports using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **Broadcast Video Controller**: Calculated. The Broadcast Video Controller, calculated by retrieving the templates using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **Broadcast Video DEPI**: Calculated. The Broadcast Video DEPI, calculated using the RPD cores interface to the Nearcast interface to retrieve the address.
+- **Broadcast Video Controller Profile**: Calculated. The Broadcast Video Controller Profile, calculated by retrieving the templates using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **US AVG Post-FEC**: Calculated. The average of the US AVG Post-FEC for all associated CMs.
+- **US Number Partial Service**: Calculated. The percentage of CMs linked to the RPD that have CMs with US partial service channels. Calculated based on the CMs with US channels in the CM impaired table on the CCAP (OID 1.3.6.1.4.1.9.9.116.1.5.13.1.2).
+- **US Percent Partial Service**: Calculated. The number of CMs linked to the RPD that have CMs with US partial service channels. Calculated by counting the CMs with US channels in the CM impaired table on the CCAP (OID 1.3.6.1.4.1.9.9.116.1.5.13.1.2).
+- **US AVG Power**: Calculated. The average of the US AVG Power for all associated CMs.
+- **US AVG SNR**: Calculated. The average of the US AVG SNR for all associated CMs.
+- **Out of Band Interface**: Calculated. The Out of Band Interface, calculated by retrieving the cores using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
+- **Number Cores**: Calculated. The number of cores, including remote, associated with the RPD. The value is obtained by counting unique Core MAC associations from the RPD CCAP Cores table (MIB OID: 1.3.6.1.4.1.4491.2.1.30.1.1.4.1.12) and the RPD RPM Cores table (Vecima RPM Apigee: rpd/mac-address;rpd/ccap-cores/ccap-core/state).
+
+### Node Segment system parameters
+
+- **Name**: Direct value. The RPD name. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.1.2.1.5.
+- **Uptime**: Direct value. The RPD uptime. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.1.1.1.2.
+- **Device Type**: Direct value. The RPD type. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.1.2.1.6.
+- **Vendor**: Direct value. The RPD vendor. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.1.2.1.1.
+- **Serial Number**: Direct value. The RPD serial number. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.1.2.1.4.
+- **Model**: Direct value. The RPD model. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.1.2.1.3.
+- **Software Version**: Direct value. The RPD software version. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.1.2.1.8.
+- **IP**: Converted. The RPD IPv6 address. Extracted from RPD IP table index (OID 1.3.6.1.4.1.4491.2.1.30.1.3.6.1.1).
+- **City**: Direct value. The city of the RPD location. Retrieved from the custom property *Location City*.
+- **Site**: Direct value. The site of the RPD location. Retrieved from the custom property *Location Site*.
+- **Service Template**: Direct value. The RPD service template. Retrieved using the Smart PHY API (call: v1/smartphycache/rpd/details/active/1).
+- **Status**: Direct value. The RPD status. Retrieved using the Smart PHY API (call: v1/smartphycache/rpd/details/active/1).
+- **Sensors**: Direct value. The RPD Sensors table. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.2.2.
+- **Interfaces**: Direct value. The RPD Interfaces table. SNMP OID: 1.3.6.1.4.1.4491.2.1.30.1.2.4.
+- **Sessions**: Direct value. The RPD DEPI sessions table. Retrieved using the call "show cable rpd depi".
+- **RPD Tunnel Summary**: Direct value. The RPD Sessions Tunnel summary. Retrieved by the RPD Tunnel Summary table from CLI (call: show cable rpd depi).
+- **Latitude**: Direct value. The RPD latitude. Retrieved using the Smart PHY API (call: v1/smartphycache/rpd/details/active/1).
+- **Longitude**: Direct value. The RPD longitude. Retrieved using the Smart PHY API (call: v1/smartphycache/rpd/details/active/1).
+- **Remote Cores Connected**: Direct value. The remote cores connected to the RPD. Retrieved from the Vecima Apigee API (call:/rpm/V1/restconf/data/entra/r-phy/rpds?fields=rpd/mac-address;rpd/ccap-cores/ccap-core/state) and Ceeview (call: /rpds/1/details Query: Rpm = ""fields=mac-address;state;ccap-cores/ccap-core/state"", Ceeview = ""glassCore,modelNumber,vendorName,deviceAlias,connectedCores,isConnected,bootTime,bootTimeUTC,uptime,disConnectedAt,connectedAt,glassCoreMAC,rpdEndpoint""").
+- **Cores Connected**: Direct value. The cores connected to the RPD. These are the RPD CCAP Core rows from the RPD CCAP Cores table (OID: 1.3.6.1.4.1.4491.2.1.30.1.1.4).
+- **US Channels**: Direct value. The RPD's upstream channels. Retrieved by filtering the Upstream Channels table (1.3.6.1.4.1.4491.2.1.20.1.4) to the RPD.
+- **MLD**: Information on the Multicast Listener Discovery (MLD) Neighbors. Retrieved using the call "show mld group | no-more".
+
+## Service Group
+
+### Service Group KPIs & KQIs
+
+- **Name**: Direct value. The CCAP core name concatenated with system name. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **System ID**: Direct value. Last period-separated value in instance data. MIB OID 1.3.6.1.4.1.4491.2.1.20.1.12.
+- **System Name**: Direct value. This is a similar string from the US and DS service group prefixed with the fiber node name. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **FN Name**: Converted. The fiber node name. This is the node status table index converted to ASCII format.
+- **DS SG Name**: Direct value. The DS service name from the RPD. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **US SG Name**: Direct value. The US service name from the RPD. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **CCAP Name**: Direct value. The name of the CCAP where the service group resides. Retrieved from OID 1.3.6.1.2.1.1.5.
+
+## DS Service Group
+
+### DS Service Group KPIs & KQIs
+
+- **Name**: Direct value. The CCAP core name concatenated with system name. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **System ID**: Direct value. Last period-separated value in instance data. MIB OID 1.3.6.1.4.1.4491.2.1.20.1.12.
+- **System Name**: Direct value. This is a similar string from the US and DS service group prefixed with the fiber node name. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **FN Name**: Converted. The fiber node name. This is the node status table index converted to ASCII format.
+- **DS SG Name**: Direct value. The DS service name from the RPD. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **CCAP Name**: Direct value. The name of the CCAP where the service group resides. Retrieved from OID 1.3.6.1.2.1.1.5.
+
+## US Service Group
+
+### US Service Group KPIs & KQIs
+
+- **Name**: Direct value. The CCAP core name concatenated with system name. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **System ID**: Direct value. Last period-separated value in instance data. MIB OID 1.3.6.1.4.1.4491.2.1.20.1.12.
+- **System Name**: Direct value. This is a similar string from the US and DS service group prefixed with the fiber node name. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **FN Name**: Converted. The fiber node name. This is the node status table index converted to ASCII format.
+- **US SG Name**: Direct value. The US service name from the RPD. Retrieved using the call "v1/smartphycache/rpd/details/active/1".
+- **CCAP Name**: Direct value. The name of the CCAP where the service group resides. Retrieved from OID 1.3.6.1.2.1.1.5.
+
+## Core Leaf
+
+### Core Leaf KPIs & KQIs
+
+- **Number IF Down**: Calculated. The number of Interfaces that were once known to be up to DataMiner, but which are currently down. Calculated by counting the number of qualifying DCF Interfaces with Operational Status equal to Down.
+- **Number IF Over-Utilized**: Calculated. The number of interfaces that are over-utilized according to the Utilization Threshold configuration. Calculated by counting the number of DCF interfaces above the utilization threshold.
+- **Number IF with Errors**: Calculated. The number of interfaces with 1 or more errors (In/Out). Calculated by counting the number of DCF interfaces with errors.
+- **Number CCAP Unreachable**: Calculated. The number of CCAP cores that are unreachable to the core leaf. The calculation is based on the implicated IF interfaces operational statuses, which can be UP (Unreachable) or Down (Reachable). A CCAP is considered unreachable if there is not at least one pair of interfaces with Operation Status equal to UP allowing for a connection between the core leaf and the CCAP.
+- **Redundancy**: Calculated. The redundancy configuration of the entity. Calculated by retrieving the redundancy value (MIB OID: 1.3.6.1.4.1.2636.3.1.14.1.7) of the first entry in the Redundancy table (MIB OID: 1.3.6.1.4.1.2636.3.1.14).
+- **CPU Utilization**: Direct value. The CPU utilization percentage of the flexible PIC concentrator. MIB OID 1.3.6.1.4.1.2636.3.1.13.1.8.*.
+- **Memory Utilization**: Direct value. The percentage of kernel memory used for this subject. MIB OID 1.3.6.1.4.1.2636.3.1.13.1.11.*.
+- **Temperature**: Direct value. The temperature sensors values. Retrieved from the Sensors/Operation Overview table. MIB OID 1.3.6.1.4.1.2636.3.1.13.
+- **BGP Status: Calculated**. The global status of the Border Gateway Protocol (BGP) interfaces:
+
+  - Fail: At least one entry in the State column (BGP M2 Peers table) is empty.
+  - OK: All entries in the State column (BGP M2 Peers table) are populated.
+
+- **ISIS Neighbors Status**: Calculated. The global status of the Intermediate System-to-Intermediate System Protocol (ISIS) Neighbors interfaces:
+
+  - Fail: At least one entry in the State column (ISIS Neighbors table) has a value other than "Enabled".
+  - OK: All entries in the State column (ISIS Neighbors table) are equal to "Enabled".
+
+- **PIM Neighbors Status**: Calculated. The global status of the Protocol-Independent Multicast (PIM) Neighbors interfaces:
+
+  - Fail: No neighbors are found, which means that the PIM Neighbors table will be empty.
+  - OK: At least one neighbor is found in the PIM Neighbors table.
+
+- **MLD Status**: Calculated. The global status of the Multicast Listener Discovery (MLD) Neighbors:
+
+  - Fail: No neighbors are found, which means that the MLD Neighbors table will be empty
+  - OK: At least one neighbor is found in the MLD Neighbors table.
+
+- **Last Updated**: Calculated. The last time the CLI was updated This is updated to the current time after the CLI finishes polling.
+- **Status**: Calculated. Indication of whether the protocol is actively polling the CLI interface. This is updated to the current status of CLI polling.
+
+### Core Leaf system parameters
+
+- **Name**: Direct value. The DataMiner element name. Retrieved from OID 1.3.6.1.2.1.1.5.
+- **Hub**: Direct value. The name of the physical location (also known as "Site") of the entity. Retrieved from the custom property *Location Name*.
+- **Market**: Direct value. The region where the entity is physically located. Retrieved from the custom property *Location Region*.
+- **System Description**: Direct value. The system description of the entity (also known as "Software Description" or "Software Version"). Requires trending for integration with IDP. SNMP MIB: 1.3.6.1.2.1.1.1.0.
+- **Uptime**: Direct value. The time since the network management part of the system was last re-initialized. MIB OID: 1.3.6.1.2.1.1.3.0
+- **Entity Type**: Direct value. The entity type (also known as device type), retrieved from the associated *ENTITY TYPE* custom property.
+- **Serial Number**: Direct value. The entity serial number. MIB OID: 1.3.6.1.4.1.2636.3.1.13.
+- **Model**: Direct value. The device model. MIB OID 1.3.6.1.2.1.1.2.0.
+- **IP**: Direct value. The IP address of the device. Retrieved from the element configuration.
+- **City**: Direct value. The city of the system location. Retrieved from the custom property *Location City*.
+- **Site**: Direct value. The site of the system location. Retrieved from the custom property *Location Site*.
+- **Last Config Change**: Direct value. The date and time when the configuration was last changed. MIB OID 1.3.6.1.4.1.2636.3.18.1.3.0.
+- **Software Version**: Direct value. The system software version. MIB OID 1.3.6.1.2.1.25.6.3.1.2.2.
+- **Sensors**: Direct value. The entity sensors information. SNMP OID: 1.3.6.1.4.1.2636.3.1.13.
+- **Interfaces**: Direct value. The entity interfaces details. SNMP OID: 1.3.6.1.2.1.2.2.
+- **ARP**: Direct value. The entity address resolution protocol (ARP) details. SNMP OID: 1.3.6.1.2.1.4.22.
+- **LLDP**: Direct value. The entity Link Layer Discovery Protocol details. SNMP OID: 1.0.8802.1.1.2.1.4.1.
+- **Inventory**: Direct value. The entity inventory details. Retrieved using the call "show chassis hardware | no-more".
+- **IPv4**: Direct value. The entity IPv4 statistics. SNMP MIB: 1.3.6.1.2.1.4.x.x.
+- **IPv6**: Direct value. The entity IPv6 statistics. SNMP MIB: 1.3.6.1.4.1.2636.3.11.1.1.x.x.
+- **OPTIC**: Direct value. The entity optics details. Retrieved using the call "show interfaces diagnostics optics | no-more".
+- **STATS**: Calculated. The interface statistics. This is a combination of the ifTable (SNMP OID 1.3.6.1.2.1.2.2) and ifXTable (SNMP OID 1.3.6.1.2.1.31.1.1) filtered to bandwidths larger than 10000 Mbps.
+- **LLDP**: Direct value. The remote LLDP connections. SNMP OID: 1.0.8802.1.1.2.1.4.1.
+
+### Core Leaf data layer parameters
+
+**Part State**: The current part state. MIB OID 1.3.6.1.4.1.2636.3.1.13.1.6.
+**Name**: The interface name. MIB OID 1.3.6.1.2.1.2.2.1.2. Retrieves SNMP data from PID 202.
+**Local Interface Description**: The Link Layer Discovery Protocol Interface Description. MIB OID 1.0.8802.1.1.2.1.4.1.1.10. Retrieves SNMP data from PID 33308.
+**Remote Interface Description**: The value used to identify the port component associated with the remote system. MIB OID 1.0.8802.1.1.2.1.4.1.1.7.
+**Remote System Name**: The value used to identify the system name of the remote system. MIB OID 1.0.8802.1.1.2.1.4.1.1.9.
+**Remote System Description**: The system description of the remote system. MIB OID 1.0.8802.1.1.2.1.4.1.1.10.
+**Name (IDX)**:The inventory item name (show chassis hardware | no-more).
+**Function**: Calculated. The element CIN function as specified in the associated *CIN FUNCTION* property.
+**Core Leaf**: Calculated. Table displaying all CIN (Converged Interconnect Network) entities operating as core leaves, which means they should be directly connected to at least one CCAP core. The table displays all CIN entities with Function equal to Core Leaf.
+**Core Leaf Relations**: Calculated. Table displaying all known CIN relations from the perspective of the core Leaves. The source in the table will list all known core leaves, and the destinations all connections/relations within the CIN. The relations are learned via LLDP or similar protocol.
+**Destination Hop**: Calculated. Incremental counter of the known relations from the given source to destinations of the same function. Note that multiple connections (interfaces) between a source and a destination are counted as a single hop as the hop count is only affected by the existence of at least one connection between the source and the given destination. For example, if a source is known to be connected to 10 destinations with function "CCAP Core", then there will be 10 incremental hops for the source.
+**CIN Interface**: Calculated. CIN facing interfaces to be used by EPM towards CIN entities relations and KPI reporting. These are the CIN facing interfaces as provisioned through EPM.
+**Source IF Operational Status**: Calculated. The operational status of core leaf interface(s) connected to other CIN entities.
+**Destination IF Operational Status**: Calculated. The operational status of external interface(s) connected to the core leaf.
+**Utilization Status**: Calculated. The utilization status of the interface (retrieved from the CIN Interface table), which can be *OK* or *Overutilized*. This status is based on the utilization threshold set for each entity type.
+**Connection Status**: Calculated. The connection status (OK/Unreachable) according to ping result. The ping is performed against the IP address reported in the CIN Overview table. The frequency of the ping is determined by the virtual interval.
+**BGP**: Information on the Border Gateway Protocol (BGP) interfaces. MIB OID: 1.3.6.1.4.1.2636.5.1.1.2.1.1.
+**ISIS**: Information on the Intermediate System-to-Intermediate System Protocol (ISIS) Neighbors interfaces. MIB OID: 1.3.6.1.2.1.138.1.6.1.
+**PIM**: Information on the Protocol-Independent Multicast (PIM) Neighbors interfaces. Retrieved using the call "show pim neighbors | no-more".
+
+## Spine
