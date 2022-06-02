@@ -10,6 +10,7 @@ A shape can be stretched across the entire card surface.
 > When a shape is stretched across the entire card, then the card header, the card navigation pane and the card footer will slowly fade away. Moving the mouse pointer around on the card will make them reappear.
 
 > [!TIP]
+>
 > - See also: <https://community.dataminer.services/video/visio-adding-a-background/>
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[positioning > STRETCH]* page.
 

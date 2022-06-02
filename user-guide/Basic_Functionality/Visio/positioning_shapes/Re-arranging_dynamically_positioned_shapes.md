@@ -14,5 +14,6 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 > In DataMiner versions prior to 9.0.0, users need to have the *Edit Visio drawings* permission to use this functionality. From version 9.0.0 onwards, this is no longer required.
 
 > [!TIP]
+>
 > - See also: [ArrangeMode](xref:Overview_of_page_and_shape_options)
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[positioning > DYNAMIC]* page.

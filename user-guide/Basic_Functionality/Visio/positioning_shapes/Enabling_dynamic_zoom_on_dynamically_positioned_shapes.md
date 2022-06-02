@@ -15,7 +15,8 @@ To enable dynamic zooming on a page, add the following shape data to the page:
 | Options          | DynamicZoom |
 
 > [!NOTE]
-> - When used in combination with grouping overlapping dynamically positioned shapes, several overlapping shapes that were grouped into one shape will be split into separate shapes when you zoom in.<br>See [Enabling grouping of dynamically positioned shapes](xref:Enabling_grouping_of_dynamically_positioned_shapes).
+>
+> - When used in combination with grouping overlapping dynamically positioned shapes, several overlapping shapes that were grouped into one shape will be split into separate shapes when you zoom in. See [Enabling grouping of dynamically positioned shapes](xref:Enabling_grouping_of_dynamically_positioned_shapes).
 > - When you use dynamic zooming, shapes will always be displayed using a scale of 100%.
 
 ## Disabling rescaling of a particular shape
@@ -30,4 +31,3 @@ From DataMiner 9.5.4 onwards, it is possible to disable the rescaling of a shape
 
 > [!NOTE]
 > This option does not work for shapes on Visio background pages.
->
