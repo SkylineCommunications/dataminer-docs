@@ -144,9 +144,11 @@ streaming: {
     dir: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\fileStore"
 }
 cluster: {
+    name: DMS # Same on each node. Does not need to be the same as streaming.cluster_id
     routes: ["nats://10.10.73.10:6222/","nats://10.10.73.20:6222/"]
     listen: 0.0.0.0:6222
 }
+server_name: MyServerName # Unique on each node
 ```
 
 The following values can vary in each DMS:
@@ -182,6 +184,7 @@ streaming: {
     }
     credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
 }
+server_name: MyServerName
 ```
   
 The only difference between this config and a config of an Agent that has a standalone NATS is that the resolver is different from 0.0.0.0.
@@ -213,7 +216,18 @@ streaming: {
     }
     credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
 }
+server_name: MyServerName
 ```  
+
+> [!NOTE]
+> - From DataMiner 10.1.0 \[CU12]/10.2.3 onwards, STAN is no longer used by the core processes because of performance issues. The streaming configuration can therefore be simplified as follows:
+>
+> ```txt
+> streaming: {
+>    cluster_id: SomeName # Unique on each node
+>    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
+> }
+> ```
 
 ### nas.config
 
