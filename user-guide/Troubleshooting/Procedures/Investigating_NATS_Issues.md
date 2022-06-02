@@ -220,14 +220,14 @@ server_name: MyServerName
 ```  
 
 > [!NOTE]
-> - Since DataMiner 10.1.0(CU12)/10.2.3, STAN is no longer used by the core processes due to performance issues, hence the streaming configuration can be simplified as follows:
-
-```txt
- streaming: {
-    cluster_id: SomeName # Unique on each node
-    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
-}
-```
+> - From DataMiner 10.1.0 \[CU12]/10.2.3 onwards, STAN is no longer used by the core processes because of performance issues. The streaming configuration can therefore be simplified as follows:
+>
+> ```txt
+> streaming: {
+>    cluster_id: SomeName # Unique on each node
+>    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
+> }
+> ```
 
 ### nas.config
 
