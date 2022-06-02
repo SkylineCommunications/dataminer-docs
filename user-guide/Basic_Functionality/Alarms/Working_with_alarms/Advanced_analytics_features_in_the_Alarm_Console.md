@@ -219,6 +219,24 @@ From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm
 
 - To **move an alarm** from one alarm group to another (supported from DataMiner 10.2.6/10.3.0 onwards), right-click an alarm that is part of an incident and select *Move to another incident*. You will then be able to select a different incident or create a new one to add the alarm to.
 
+- From DataMiner 10.2.7/10.3.0 onwards, you can also modify an alarm group with **drag-and-drop editing**. To do so:
+
+  1. In the Alarm Console, open the side panel. See [Alarm Console right-click menu](xref:AlarmConsoleRightClickMenu).
+
+  1. Select the alarm group in the Alarm Console.
+
+  1. In the side panel, click *Drag-and-drop editing*.
+
+     This will freeze the current alarm tab. To make changes, you can then:
+
+     - Drag an alarm from the alarm tab to the side panel to add it to the alarm group.
+     - Click the *x* next to an alarm in the side panel to remove it from the alarm group.
+
+     > [!NOTE]
+     > If you right-click an alarm group and select *Edit incident*, this will open the side panel and activate drag-and-drop editing, so you can edit the alarm group in the same way as described here.
+
+  1. When you are done, click *Apply*.
+
 > [!NOTE]
 >
 > - When an alarm group has been updated manually, it will no longer be updated automatically.
