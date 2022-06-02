@@ -66,12 +66,12 @@ The following sections will explain the structure of the tables in both database
 ### MySQL table structure
 
 ```txt
-CREATE TABLE \`<tablename>\` (
-\`Oid\` VARCHAR(<length>) NOT NULL,
-\`Time\` BIGINT(20) UNSIGNED NOT NULL,
-\`Type\` VARCHAR(50) NOT NULL,
-\`Value\` TEXT NULL,
-PRIMARY KEY (\`Oid\`, \`Time\`)
+CREATE TABLE `<tablename>` (
+`Oid` VARCHAR(<length>) NOT NULL,
+`Time` BIGINT(20) UNSIGNED NOT NULL,
+`Type` VARCHAR(50) NOT NULL,
+`Value` TEXT NULL,
+PRIMARY KEY (`Oid`, `Time`)
 )
 ```
 
