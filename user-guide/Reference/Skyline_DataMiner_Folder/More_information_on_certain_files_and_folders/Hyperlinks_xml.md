@@ -10,20 +10,9 @@ DataMiner administrators will often create custom commands that open a web page,
 
 > [!TIP]
 > See also:
-> - <https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/>
+>
+> - [Alarm Console – Extending the right-click menu](https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/) on DataMiner Dojo
 > - [Adding a custom command to the Alarm Console shortcut menu](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu)
-
-In this section:
-
-- [File syntax](#file-syntax)
-
-- [Syntax of second-generation hyperlinks](#syntax-of-second-generation-hyperlinks)
-
-- [Upgrading legacy hyperlinks to second-generation hyperlinks](#upgrading-legacy-hyperlinks-to-second-generation-hyperlinks)
-
-- [Keywords](#keywords)
-
-- [Placeholders](#placeholders)
 
 ## File syntax
 
@@ -32,7 +21,6 @@ The *Hyperlinks.xml* file has to have a *\<HyperLinks>* root tag containing a *\
 There are two types of hyperlinks:
 
 - Second-generation hyperlinks
-
 - Legacy hyperlinks
 
 See the following example:
@@ -63,15 +51,11 @@ See the following example:
 ```
 
 > [!NOTE]
-> - When you specify an Automation script in a hyperlink, you only need to use the “Script:” prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the *type* attribute clearly specifies that it concerns a reference to an Automation script.
+> When you specify an Automation script in a hyperlink, you only need to use the “Script:” prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the *type* attribute clearly specifies that it concerns a reference to an Automation script.
 
 ## Syntax of second-generation hyperlinks
 
-In the syntax of a second-generation hyperlink, the ID, the version, the type and the actual command must always be specified. In addition to this mandatory configuration, several optional attributes can be configured. More information on this can be found below:
-
-- [Content of the Hyperlink tag](#content-of-the-hyperlink-tag)
-
-- [Attributes of the Hyperlink tag](#attributes-of-the-hyperlink-tag)
+In the syntax of a second-generation hyperlink, the ID, the version, the type and the actual command must always be specified. In addition to this mandatory configuration, several optional attributes can be configured.
 
 A second-generation hyperlink can for instance have the following syntax:
 
@@ -103,7 +87,7 @@ Or:
 
 ### Content of the Hyperlink tag
 
-Inside the *\<HyperLink>* tag, enter the following content, depending on the type of hyperlink specified in the *type* attribute (see [type](#type)):
+In the *\<HyperLink>* tag, enter the following content, depending on the type of hyperlink specified in the *type* attribute (see [type](#type)):
 
 - **Type "url"**: The URL that should be opened.
 
@@ -134,6 +118,7 @@ Inside the *\<HyperLink>* tag, enter the following content, depending on the typ
 
 > [!NOTE]
 > The string you specify can contain:
+>
 > - Keywords, which allow you to insert real-time data in the command name that is displayed. See [Keywords](#keywords).
 > - Placeholders, which allow you to insert parts of the value of the alarm or information event in the command that is displayed. See [Placeholders](#placeholders).
 
@@ -143,25 +128,15 @@ Inside the *\<HyperLink>* tag, enter the following content, depending on the typ
 ### Attributes of the Hyperlink tag
 
 - [alarmAction](#alarmaction)
-
 - [alarmColumn](#alarmcolumn)
-
 - [filterElement](#filterelement)
-
 - [combineParameters](#combineparameters)
-
 - [descriptionParsing](#descriptionparsing)
-
 - [id](#id)
-
 - [menu](#menu)
-
 - [name](#name)
-
 - [type](#type)
-
 - [valueParsing](#valueparsing)
-
 - [version](#version)
 
 #### alarmAction
@@ -254,9 +229,7 @@ If you add a hyperlink to *Hyperlinks.xml*, by default, it will appear in the �
 Examples:
 
 - Enter “root” to make it appear in the root of the shortcut menu.
-
 - Enter e.g. “root/MyLinks” to make it appear in the “MyLinks” submenu.
-
 - Enter e.g. “root/MyLinks/Scripts” to make it appear in the “MyLinks/Scripts” submenu.
 
 > [!NOTE]
@@ -273,22 +246,16 @@ If you want a hyperlink of type “script” (i.e. a hyperlink that starts an Au
 In this mandatory attribute, specify the hyperlink type. The following types are supported:
 
 - **url**: Opens a URL in a web browser.
-
 - **execute**: Runs an executable file.
-
 - **script**: Runs an Automation script. For information on how to specify the script to be run, see [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script).
 
   > [!NOTE]
   > It is not necessary to use the “Script:” prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to.
 
 - **openview**: Opens a DataMiner view in a new card. If the \[VID\] placeholder is used in the \<Hyperlink> tag, the view of the selected alarm is opened.
-
 - **openservice**: Opens a DataMiner service in a new card. If the \[SID\] placeholder is used in the \<Hyperlink> tag, the service of the selected alarm is opened.
-
 - **openelement**: Opens a DataMiner element in a new card. If the \[EID\] placeholder is used in the \<Hyperlink> tag, the element of the selected alarm is opened.
-
 - **openparameter**: Opens a DataMiner parameter in a new card. If the \[PID\] placeholder is used in the \<Hyperlink> tag, the parameter of the selected alarm is opened.
-
 - **reference**: Refers to a legacy hyperlink. See [Upgrading legacy hyperlinks to second-generation hyperlinks](#upgrading-legacy-hyperlinks-to-second-generation-hyperlinks) for more information.
 
 > [!TIP]
@@ -325,13 +292,8 @@ Inside the *\<HyperLink>* tag, enter the actual command that has to be displayed
 
 The string you specify can contain:
 
-- Keywords, which allow you to insert real-time data in the command name that is displayed.
-
-    See [Keywords](#keywords)
-
-- Placeholders, which allow you to insert parts of the value of the alarm or information event in the command that is displayed.
-
-    See [Placeholders](#placeholders).
+- [Keywords](#keywords), which allow you to insert real-time data in the command name that is displayed.
+- [Placeholders](#placeholders), which allow you to insert parts of the value of the alarm or information event in the command that is displayed.
 
 ### Attributes of the Hyperlink tag (legacy)
 
@@ -375,32 +337,32 @@ Example:
 
 The string you specify inside the *\<HyperLink>* tag can contain the following keywords. These will be replaced by real-time data in the command that is displayed on the shortcut menu.
 
-| Keyword                   | Description                                                                                                            |
-|---------------------------|------------------------------------------------------------------------------------------------------------------------|
-| \[ALARMID\]               | The ID of the alarm or the information event.                                                                          |
-| \[ALARMTYPE\]             | The type of the alarm.                                                                                                 |
-| \[COMMENT\]               | The comment added to the alarm.                                                                                        |
-| \[DISPLAYVALUE\]          | The value of a discrete parameter. Supported from DataMiner 10.0.6 onwards, and in second-generation hyperlinks only.  |
-| \[DMAID\]                 | The ID of the DataMiner Agent.                                                                                         |
-| \[EID\]                   | The ID of the element.                                                                                                 |
-| \[ENAME\]                 | The element name.                                                                                                      |
-| \[OWNER\]                 | The owner of the alarm.                                                                                                |
-| \[PID\]                   | The ID of the parameter.                                                                                               |
-| \[PNAME\]                 | The parameter name.                                                                                                    |
-| \[POLLINGIP\]             | The IP address of the device.                                                                                          |
-| \[PROPERTY:ALARM:name\]   | The value of the alarm property called “name”.                                                                         |
-| \[PROPERTY:ELEMENT:name\] | The value of the element property called “name”.                                                                       |
-| \[PROPERTY:VIEW:name\]    | The value of the view property called “name”.                                                                          |
-| \[RCA\]                   | The RCA level of the alarm.                                                                                            |
-| \[ROOTKEY\]               | The ID of the root alarm. See [About the \[ROOTTIME\] and \[TIME\] keywords](#about-the-roottime-and-time-keywords).   |
-| \[ROOTTIME\]              | The root time of the alarm. See [About the \[ROOTTIME\] and \[TIME\] keywords](#about-the-roottime-and-time-keywords). |
-| \[SEVERITY\]              | The severity level of the alarm.                                                                                       |
-| \[SID\]                   | The ID of the service.                                                                                                 |
-| \[STATUS\]                | The status of the alarm.                                                                                               |
-| \[TIME\]                  | The time of the alarm.                                                                                                 |
-| \[USERSTATUS\]            | The user status of the alarm.                                                                                          |
-| \[VALUE\]                 | The value of the alarm.                                                                                                |
-| \[VID\]                   | The ID of the view. See [About the \[VID\] keyword](#about-the-vid-keyword).                                           |
+| Keyword | Description |
+|--|--|
+| \[ALARMID\] | The ID of the alarm or the information event. |
+| \[ALARMTYPE\] | The type of the alarm. |
+| \[COMMENT\] | The comment added to the alarm. |
+| \[DISPLAYVALUE\] | The value of a discrete parameter. Supported from DataMiner 10.0.6 onwards, and in second-generation hyperlinks only. |
+| \[DMAID\] | The ID of the DataMiner Agent. |
+| \[EID\] | The ID of the element. |
+| \[ENAME\] | The element name. |
+| \[OWNER\] | The owner of the alarm. |
+| \[PID\] | The ID of the parameter. |
+| \[PNAME\] | The parameter name. |
+| \[POLLINGIP\] | The IP address of the device. |
+| \[PROPERTY:ALARM:name\] | The value of the alarm property called “name”. |
+| \[PROPERTY:ELEMENT:name\] | The value of the element property called “name”. |
+| \[PROPERTY:VIEW:name\] | The value of the view property called “name”. |
+| \[RCA\] | The RCA level of the alarm. |
+| \[ROOTKEY\] | The ID of the root alarm. See [About the \[ROOTTIME\] and \[TIME\] keywords](#about-the-roottime-and-time-keywords). |
+| \[ROOTTIME\] | The root time of the alarm. See [About the \[ROOTTIME\] and \[TIME\] keywords](#about-the-roottime-and-time-keywords). |
+| \[SEVERITY\] | The severity level of the alarm. |
+| \[SID\] | The ID of the service. |
+| \[STATUS\] | The status of the alarm. |
+| \[TIME\] | The time of the alarm. |
+| \[USERSTATUS\] | The user status of the alarm. |
+| \[VALUE\] | The value of the alarm. |
+| \[VID\] | The ID of the view. See [About the \[VID\] keyword](#about-the-vid-keyword). |
 
 ### About the \[ROOTTIME\] and \[TIME\] keywords
 
@@ -414,18 +376,17 @@ For example:
 [ROOTTIME:yyyy-MM-dd HH:mm:ss]
 ```
 
-- E.g.: 2017-12-06 14:04:00
+- E.g. 2017-12-06 14:04:00
 
 ```txt
 [TIME:yyyy-MM-dd]
 ```
 
-- E.g.: 2017-12-06
+- E.g. 2017-12-06
 
 For more information on the supported formatting, refer to the following articles:
 
 - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
-
 - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
 
 > [!NOTE]
@@ -438,9 +399,7 @@ From DataMiner 9.5.1 onwards, it is possible to specify a view filter with the \
 For example:
 
 - **\[VID\]**: The view of the selected alarm as well as all its parent views up to and including the root view.
-
 - **\[VID:0;1\]**: The view of the selected alarm as well as two view levels up (level 0 being the parent views, and level 1 being the “grandparent” views).
-
 - **\[VID:0\]**: The view of the selected alarm as well as one view level up (level 0 being the parent views).
 
 The view levels do not need to be specified in any particular order. For example, all of the following view filters are valid: \[VID:0;1;2;3\], \[VID:1;3\], \[VID:0;5\].
@@ -463,5 +422,4 @@ Example:
 ```
 
 > [!TIP]
-> See also:
-> - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
+> See also: [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
