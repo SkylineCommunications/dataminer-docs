@@ -34,4 +34,4 @@ For more information on how to develop DataMiner protocols and Automation script
 
 ## Graphical representation of the overall concept
 
-![](~/user-guide/images/dis_concept_general.jpg)
+![](~/develop/images/dis_concept_general.jpg)

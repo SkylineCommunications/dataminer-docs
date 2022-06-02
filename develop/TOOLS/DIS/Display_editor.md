@@ -37,7 +37,7 @@ If you want a page to have only one column spanning across the entire width, the
 
 Every parameter you drag onto a page is represented by a building block similar to the one in the screen shot below.
 
-![](~/user-guide/images/dis_display_editor_param.png)
+![](~/develop/images/dis_display_editor_param.png)
 
 By default, a parameter building block shows the ID, the name and the type of the parameter. When you hover with the mouse over it, a tooltip will appear, showing the contents of the parameter’s *\<Information>\<Subtext>* tag.
 
