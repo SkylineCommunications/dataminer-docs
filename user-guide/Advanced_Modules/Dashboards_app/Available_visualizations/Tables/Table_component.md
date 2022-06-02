@@ -56,3 +56,15 @@ The export file will be named “Query XXX” (XXX being the name of the query, 
 
 > [!NOTE]
 > To only export specific columns, first apply a filter by dragging the columns onto the table component before you export the component.
+
+## Filtering the table
+
+From DataMiner 10.2.7/10.3.0 onwards, a search box is available that allows you to filter the table component.
+
+To do so:
+
+1. Hover over the table component and click the search icon in the lower right corner.
+
+1. Specify the filter text (case-insensitive) in the search box.
+
+   This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Configuring_GQI_feeds).
