@@ -290,8 +290,8 @@ To allow users to specify what is displayed on the Y-axis, use the session varia
 
   | Shape data field | Value                           |
   |--------------------|---------------------------------|
-  | InitVar            | [sep::^]YAxisResources^\[{...json...}\] |
-  | SetVar             | [sep::^]YAxisResources^\[{...json...}\] |
+  | InitVar            | [sep::^]YaxisResources^\[{...json...}\] |
+  | SetVar             | [sep::^]YaxisResources^\[{...json...}\] |
 
   The JSON object for the custom bands can be configured with the following properties:
 
