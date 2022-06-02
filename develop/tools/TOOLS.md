@@ -6,6 +6,10 @@ uid: TOOLS
 
 In this section, you can find information on the following useful tools for system developers:
 
+- [DataMiner Integration Studio](xref:DIS)
+
+- [CI/CD Pipeline](xref:TOOProtocolDevelopmentWithCICD)
+
 - [DataMiner Application Package Builder](xref:TOODataMinerPackageBuilder)
 
 - [Skyline Driver Passport Platform](xref:TOODriverPassportPlatform)
@@ -13,8 +17,6 @@ In this section, you can find information on the following useful tools for syst
 - [Nodetool](xref:TOONodetool)
 
 - [Nuget packages](xref:TOONuGet)
-
-- [CI/CD Pipeline](xref:TOOProtocolDevelopmentWithCICD)
 
 - [QA Device Simulator](xref:TOOQASNMPSimulator)
 

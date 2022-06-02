@@ -13,18 +13,17 @@ You could, for example, create a hidden IO gateway that reads analog and digital
 > [!NOTE]
 > Hidden elements have no influence on the alarm state of a view. They are also not included in DataMiner dashboards or reports.
 
-### Creating hidden elements
+## Creating hidden elements
 
 To create a hidden element, follow the normal procedure for element creation, but select the option *Hidden*.
 
 > [!TIP]
-> See also:
-> [Adding and deleting elements](xref:Adding_and_deleting_elements)
+> See also: [Adding and deleting elements](xref:Adding_and_deleting_elements)
 
-### Viewing hidden elements
+## Viewing hidden elements
 
 To view hidden elements in DataMiner Cube:
 
 1. On the *Elements* page of a view card, click the filter icon in the lower right corner.
 
-2. Select *Hidden elements*.
+1. Select *Hidden elements*.

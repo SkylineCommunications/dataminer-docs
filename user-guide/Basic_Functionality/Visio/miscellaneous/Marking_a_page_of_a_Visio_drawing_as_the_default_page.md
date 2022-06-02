@@ -9,8 +9,7 @@ Using a shape data field of type **InlineVdx**, you can mark a page of a Visio d
 When, for example, a shape data field of type **VdxPage** is set to “\[auto\]”, DataMiner will visualize the page of which the **InlineVdx** field is set to *TRUE*.
 
 > [!TIP]
-> See also:
-> [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)
+> See also: [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)
 
 ## Configuring the shape data field
 

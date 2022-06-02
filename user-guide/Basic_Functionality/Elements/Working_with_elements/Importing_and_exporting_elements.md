@@ -4,35 +4,29 @@ uid: Importing_and_exporting_elements
 
 # Importing and exporting elements
 
-In this section:
-
-- [Importing elements from a CSV file](#importing-elements-from-a-csv-file)
-
-- [Exporting elements to a CSV file](#exporting-elements-to-a-csv-file)
-
 > [!NOTE]
 > For more information on importing and exporting elements, services, etc. using .dmimport packages, see [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA).
 
 ## Importing elements from a CSV file
 
 > [!TIP]
-> See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/>
+> See also: [Rui’s Rapid Recap – Bulk editing via CSV import](https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/) on DataMiner Dojo.
 
 1. Either open the card of the view where you want to import the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
 
-2. In the menu, select *Actions \> Import*.
+1. In the menu, select *Actions \> Import*.
 
-    > [!NOTE]
-    > If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
+   > [!NOTE]
+   > If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
 
-3. In the lower left corner of the *Import* window, click *Import elements from CSV* (up to DataMiner 9.6.3).
+1. In the lower left corner of the *Import* window, click *Import elements from CSV* (up to DataMiner 9.6.3).
 
-    From DataMiner 9.6.3 onwards, select the option *Import comma-separated file*.
+   From DataMiner 9.6.3 onwards, select the option *Import comma-separated file*.
 
-4. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
+1. In the *Import file* dialog box, select the CSV file you want to import, and click *Open*.
 
 > [!NOTE]
+>
 > - If DataMiner detects invalid data when elements are imported, a notice will be generated. This can for instance be the case when you import a new element and data is missing, or when something is wrong with the formatting.
 > - Only import CSV files that have been created by DataMiner during a previous export. See [Exporting elements to a CSV file](#exporting-elements-to-a-csv-file).
 > - For more information on how you can modify an exported CSV file for later import, see [Altering an exported CSV file in a third-party application](#altering-an-exported-csv-file-in-a-third-party-application).
@@ -47,15 +41,15 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
 - **Check for duplicate element names in the CSV file**: If several lines in the CSV file contain the same element name, none of the lines sharing that same name will be imported. For each of those lines, an error message like the following one will be generated:
 
-    ```txt
-    Import elements failed. Line 7 contains existing element name (in import file).(MyElementName)
-    ```
+  ```txt
+  Import elements failed. Line 7 contains existing element name (in import file).(MyElementName)
+  ```
 
 - **Check for duplicate names in the DataMiner System**: If a line in the CSV file contains an element name that already exists within the DataMiner System, that line will not be imported and an error message like the following one will be generated:
 
-    ```txt
-    Import elements failed. Line 1 contains existing element name (DMS). (MyElementName)
-    ```
+  ```txt
+  Import elements failed. Line 1 contains existing element name (DMS). (MyElementName)
+  ```
 
 ## Exporting elements to a CSV file
 
@@ -64,44 +58,45 @@ Name checks are case-insensitive. This means that for instance “element1” is
 
 1. Either open the card of the view from which you want to export the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
 
-    > [!NOTE]
-    > - To export all elements in a DMS, use the root view.
-    > - If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
-    > - From DataMiner 10.0.9 onwards, you can select multiple elements in the list on a view card (using Shift or Ctrl) and right-click them to export those elements only.
+   > [!NOTE]
+   >
+   > - To export all elements in a DMS, use the root view.
+   > - If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
+   > - From DataMiner 10.0.9 onwards, you can select multiple elements in the list on a view card (using Shift or Ctrl) and right-click them to export those elements only.
 
-2. In the menu, select *Actions \> Export*.
+1. In the menu, select *Actions \> Export*.
 
-3. In the lower left corner of the *Export* window, click *Export all elements to CSV* (up to DataMiner 9.6.3).
+1. In the lower left corner of the *Export* window, click *Export all elements to CSV* (up to DataMiner 9.6.3).
 
-    From DataMiner 9.6.3 onwards, select the option *Export to comma-separated file (\*.csv), clipboard or print*.
+   From DataMiner 9.6.3 onwards, select the option *Export to comma-separated file (\*.csv), clipboard or print*.
 
-4. In the *WHAT* section of the *Export* window, select what is to be included in the export:
+1. In the *WHAT* section of the *Export* window, select what is to be included in the export:
 
-    - All data,
+   - All data,
 
-    - The data displayed in the element list of a view card,
+   - The data displayed in the element list of a view card,
 
-    - *Only IDs*, with or without view IDs, or
+   - *Only IDs*, with or without view IDs, or
 
-    - *Only IP addresses with hostnames*, with or without DMA IP addresses and polling IP addresses/Serial Gateways.
+   - *Only IP addresses with hostnames*, with or without DMA IP addresses and polling IP addresses/Serial Gateways.
 
-5. In the *HOW* section of the *Export* window, select what kind of export you want to make:
+1. In the *HOW* section of the *Export* window, select what kind of export you want to make:
 
-    - *export to CSV:* exports the element information to a CSV file, which can be used for an import in DataMiner.
+   - *export to CSV:* exports the element information to a CSV file, which can be used for an import in DataMiner.
 
-    - *copy to clipboard*: makes a copy of the element information to the clipboard.
+   - *copy to clipboard*: makes a copy of the element information to the clipboard.
 
-    - *print*: exports the element information to a printer.
+   - *print*: exports the element information to a printer.
 
-6. Click *Export*.
+1. Click *Export*.
 
-7. Depending on the type of export you selected, you will still need to:
+1. Depending on the type of export you selected, you will still need to:
 
-    - Indicate where the file is to be saved and optionally specify a custom file name, for an export to CSV;
+   - Indicate where the file is to be saved and optionally specify a custom file name, for an export to CSV;
 
-    - Click *OK* in a confirmation message, for a copy to clipboard; or
+   - Click *OK* in a confirmation message, for a copy to clipboard; or
 
-    - Determine the printing settings, for an export to a printer.
+   - Determine the printing settings, for an export to a printer.
 
 ## Altering an exported CSV file in a third-party application
 

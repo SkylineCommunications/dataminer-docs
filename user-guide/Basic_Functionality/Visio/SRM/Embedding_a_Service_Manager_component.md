@@ -50,10 +50,10 @@ Configure the following shape data fields on the shape that is to contain the Se
 
 Example:
 
-| Shape data field   | Value                                                                                                                                        |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Component          | ServiceManager                                                                                                                               |
-| ComponentOptions   | interface=definition;SessionVariablePrefix=SKYLINE;HideHeader=true;HideTabs=true;HideNodeConfiguration=true;AutoLoadExternalChanges=true |
+| Shape data field | Value |
+|--|--|
+| Component | ServiceManager |
+| ComponentOptions | interface=definition;SessionVariablePrefix=SKYLINE;HideHeader=true;HideTabs=true;HideNodeConfiguration=true;AutoLoadExternalChanges=true |
 
 ## Using session variables with a Service Manager component
 

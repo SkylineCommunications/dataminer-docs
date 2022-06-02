@@ -7,6 +7,7 @@ uid: Linking_a_shape_to_an_Automation_script
 When a shape is linked to an Automation script, by default this script will be executed each time a user clicks that shape.
 
 > [!NOTE]
+>
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > EXE]* page.
 > - Aside from the default **Execute** shape data, you can also use **OnClose** shape data to link to a script. See [Specifying a script to be executed when the page is closed](#specifying-a-script-to-be-executed-when-the-page-is-closed).
 
@@ -18,7 +19,7 @@ To link a shape to an Automation script:
   Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...|ParameterName1=SingleValue;ParameterName2=#ValueFile;...| MemoryName=MemoryFileName;...|Tooltip|Options
   ```
 
-  - In the example above, two parameters are included. The first parameter is assigned a single value, and the second parameter is assigned a so-called permanent memory file (i.e. an array of values). Notice that, in the latter case, a hash character ("#") has to be placed in front of the name of the array.<br>See also: [Creating a memory file](xref:Script_variables#creating-a-memory-file)
+  - In the example above, two parameters are included. The first parameter is assigned a single value, and the second parameter is assigned a so-called permanent memory file (i.e. an array of values). Notice that, in the latter case, a hash character ("#") has to be placed in front of the name of the array. See also: [Creating a memory file](xref:Script_variables#creating-a-memory-file)
 
   - If you use the syntax above, make sure to always include 5 pipe characters ("\|"). If you do not need some parts of the syntax, e.g. because no memory files are used, just add nothing between those pipe characters.
 
@@ -39,6 +40,7 @@ To link a shape to an Automation script:
       | Execute          | Script:MyScript |
 
       > [!NOTE]
+      >
       > - If a script uses a parameter that has a memory file assigned to it, users can right-click the shape and select a value from the memory file. This way, the parameter can be set immediately, without confirmation.
       > - Up to DataMiner 9.0.4, it is not possible to execute an Automation script from Visual Overview if some values for the parameters still have to be entered by the operator.
 

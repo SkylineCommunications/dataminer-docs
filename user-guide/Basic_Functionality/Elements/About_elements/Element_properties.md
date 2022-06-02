@@ -15,5 +15,4 @@ There are two types of properties:
 - **read-write**: The property and its value can both be displayed and edited. Properties of this type are managed by DataMiner users.
 
 > [!TIP]
-> See also:
-> [Managing element properties](xref:Managing_element_properties)
+> See also: [Managing element properties](xref:Managing_element_properties)

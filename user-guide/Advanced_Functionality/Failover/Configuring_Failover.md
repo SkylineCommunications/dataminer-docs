@@ -18,5 +18,4 @@ The following sections contain more information on configuring Failover:
 > Failover is always one-to-one. A backup DMA can only have one primary DMA.
 
 > [!TIP]
-> See also:
-> [Preferred configuration using virtual IP addresses (best practice)](xref:Preferred_configuration_using_virtual_IP_addresses__best_practice)
+> See also: [Preferred configuration using virtual IP addresses (best practice)](xref:Preferred_configuration_using_virtual_IP_addresses__best_practice)
