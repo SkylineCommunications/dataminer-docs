@@ -7,7 +7,7 @@ uid: TOOQASNMPSimulator
 > [!IMPORTANT]
 > This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
-The main purpose of this tool is to simulate device behavior while the device is not available. It allows you to poll simulated SNMP devices with static and changing data. You can send and receive traps. It is also able to reply to incoming inform messages. Polling dynamically simulated HTTP devices (GET and POST operations) is also supported. The tool is available on the intranet (*Intranet* > *DataMiner* > *Documents* > *Tools*).
+The main purpose of this tool is to simulate device behavior while the device is not available. It allows you to poll simulated SNMP devices with static and changing data. You can send and receive traps. It is also able to reply to incoming inform messages. Polling dynamically simulated HTTP devices (GET and POST operations) is also supported. This tool is available on every DMA from DataMiner 10.1.5 onwards. It is located in the folder `C:\Skyline DataMiner\Tools\QADeviceSimulator`.
 
 ![](~/develop/images/QA_Device_Simulator.png)
 <br>Figure 82: QA Device Simulator
