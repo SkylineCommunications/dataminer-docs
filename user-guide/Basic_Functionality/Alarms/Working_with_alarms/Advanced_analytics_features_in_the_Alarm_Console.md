@@ -227,7 +227,7 @@ From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm
 
   1. In the side panel, click *Drag-and-drop editing*.
 
-     This will freeze the current alarm tab. To make changes, you can then:
+     This will freeze the current alarm tab and lock the side panel to the currently selected alarm group. To make changes, you can then:
 
      - Drag an alarm from the alarm tab to the side panel to add it to the alarm group.
      - Click the *x* next to an alarm in the side panel to remove it from the alarm group.
