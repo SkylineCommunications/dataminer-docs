@@ -24,12 +24,14 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
     - *Sign out*: Logs you out of the app and returns you to the logon screen.
 
-- The sidebar on the left contains two icons, which can be used to expand different panes:
+- The sidebar on the left contains icons that can be used to expand different panes:
 
   | Icon | Description |
   |------|-------------|
   | ![Navigation pane icon](~/user-guide/images/DashboardsX_navigation.png) | Opens the navigation pane, which allows you to navigate through the different dashboard folders in the app. Click a folder or dashboard to view it in the details pane on the right. |
   | ![Recent items icon](~/user-guide/images/DashboardsX_recent.png) | Displays a list of recent items. |
+  | ![Private dashboards icon](~/user-guide/images/DashboardsX_private.png) | Displays a list of private dashboards. These are dashboards that can only be accessed by specific users (configured in the [dashboard settings](xref:Changing_dashboard_settings)). This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are private dashboards available. |
+  | ![Shared dashboards icon](~/user-guide/images/DashboardsX_shared.png) | Displays a list of dashboards that have been shared in the cloud. This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are shared dashboards available. |
 
   Right-click in either of the panes or click the ... button to open a menu with the following options:
 
