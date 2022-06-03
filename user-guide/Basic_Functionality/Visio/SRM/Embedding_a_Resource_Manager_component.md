@@ -290,8 +290,16 @@ To allow users to specify what is displayed on the Y-axis, use the session varia
 
   | Shape data field | Value                           |
   |--------------------|---------------------------------|
-  | InitVar            | [sep::^]YaxisResources^\[{*...json...*}, {*...json...*}, ...\] |
-  | SetVar             | [sep::§]YaxisResources§\[{*...json...*}, {*...json...*}, ...\] |
+  | InitVar            | `[sep::^]YaxisResources^[{*...json...*}, {*...json...*}, ...]` |
+
+  or
+
+  | Shape data field | Value                           |
+  |--------------------|---------------------------------|
+  | SetVar             | `[sep::§]YaxisResources§[{*...json...*}, {*...json...*}, ...]` |
+
+  > [!NOTE]
+  > Adding `[sep::§]` is strongly recommended in order to avoid parsing problems. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
 
   The JSON object for the custom bands can be configured with the following properties:
 
