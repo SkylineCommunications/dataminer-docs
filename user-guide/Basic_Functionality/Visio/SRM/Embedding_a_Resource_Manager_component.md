@@ -286,12 +286,12 @@ To allow users to specify what is displayed on the Y-axis, use the session varia
 
     Creates a band for each resource in the system. This is not recommended when there are many resources. If only *YaxisResources* is specified without any additional configuration, this will have the same effect.
 
-- To specify custom bands on the timeline, from DataMiner 9.5.3 onwards, you can use one of the following configuration for the *YaxisResources* session variable:
+- To specify custom bands on the timeline, from DataMiner 9.5.3 onwards, you can use the following configuration for the *YaxisResources* session variable:
 
   | Shape data field | Value                           |
   |--------------------|---------------------------------|
-  | InitVar            | [sep::^]YaxisResources^\[{...json...}\] |
-  | SetVar             | [sep::^]YaxisResources^\[{...json...}\] |
+  | InitVar            | [sep::^]YaxisResources^\[{*...json...*}, {*...json...*}, ...\] |
+  | SetVar             | [sep::§]YaxisResources§\[{*...json...*}, {*...json...*}, ...\] |
 
   The JSON object for the custom bands can be configured with the following properties:
 
