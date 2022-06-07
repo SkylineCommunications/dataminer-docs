@@ -6,17 +6,86 @@ uid: D-DOCSIS_parameters_cm
 
 ## KPIs & KQIs
 
+- **IPv4 Address**: Converted. The cable modem (CM) IPv4 address.
+
+  OID 1.3.6.1.4.1.4491.2.1.20.1.3.1.5.
+
+- **Status**: Direct value. The operational status of the cable modem.
+
+  OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6.
+
+- **Last Reg Time**: Converted. The last time the CM registered with the CCAP core.
+
+  Converted to datetime format from OID 1.3.6.1.4.1.4491.2.1.20.1.3.1.14.
+
 - **MAC State**: Direct value. The state of the cable modem as reported by the media access layer. Retrieved using the call "show cable modem docsis device-class".
-- **US Time Offset Status**: Calculated. The CM US time offset status based on the existence of offending upstream channels. This is calculated if any channels in the cable modem have a high resolution timing offset that is out of spec.
-- **Primary SID**: Direct value. The primary service identifier (SID) of the cable modem. Retrieved using the call "show cable modem docsis device-class".
-- **Reg Priv**: Direct value. Indicates whether Baseline Privacy Interface (BPI) or BPI Plus (BPI+) encryption is enabled for the CM. Retrieved using the call "show cable modem docsis device-class".
-- **Device Class**: Direct value. Displays the device class information for the PacketCable device (using the call "show cable modem docsis device-class"). The modem can report its device class type during registration. Some possible values are:
+
+- **DS Service Status**: Calculated. The CM DS service status based on the existence of impaired DS channels
+
+  Calculated based on the CM Impaired Channels table to check whether if any DS channels are impaired.
+
+  - CM Impaired Table OID: 1.3.6.1.4.1.9.9.116.1.5.13.
+  - DS Channel Index OID: 1.3.6.1.4.1.9.9.116.1.5.13.1.7.
+
+  Possible values:
+
+  - *OK*: There is no impaired channel.
+  - *Partial*: There is at least 1 impaired channel affecting the CM.
+
+- **US Service Status**: Calculated. The CM US service status based on the existence of impaired US channels
+
+  Calculated based on the CM Impaired Channels table to check whether if any US channels are impaired.
+
+  - CM Impaired Table OID: 1.3.6.1.4.1.9.9.116.1.5.13.
+  - US Channel Index OID: 1.3.6.1.4.1.9.9.116.1.5.13.1.8.
+
+  Possible values:
+
+  - *OK*: There is no impaired channel.
+  - *Partial*: There is at least 1 impaired channel affecting the CM.
+
+- **US SNR Status**: Calculated. The CM US SNR status based on operational thresholds.
+
+  Calculated based on the existence of at least one associated upstream channel that is above the US SNR threshold. Users can set a threshold, which will be used to determine the US SNR Status.
+
+  - *OK*: The US SNR is at or below the threshold.
+  - *OOS*: The US SNR is above the threshold.
+
+  CM Upstream Channels OID: 1.3.6.1.4.1.4491.2.1.20.1.4.
+
+- **US AVG SNR**: Calculated. The average SNR of all US channels associated with the CM, as reported on the CM upstream channels.
+
+  - CM Upstream Channels OID: 1.3.6.1.4.1.4491.2.1.20.1.4.
+  - SNR OID: 1.3.6.1.4.1.4491.2.1.20.1.4.1.4.
+
+- **US Time Offset Status**: Calculated. The CM US time offset status based on the existence of offending upstream channels.
+
+  This status is based on the existence of at least one associated upstream channel (CM Upstream Channels (SNMP MIB)) that is above the US time offset threshold. Users can set a threshold, which will be used to determine the US Time Offset Status.
+
+  - *OK*: The US Time Offset is at or below the threshold.
+  - *OOS*: The US Time Offset is above the threshold.
+
+  Timing offset CLI call: show cable modem ver | i (MAC Address)|(Timing Offset)
+
+- **Primary SID**: Direct value. The primary service identifier (SID) of the cable modem.
+
+  Retrieved using the call "show cable modem docsis device-class".
+
+- **Reg Priv**: Direct value. Indicates whether Baseline Privacy Interface (BPI) or BPI Plus (BPI+) encryption is enabled for the CM.
+
+  Retrieved using the call "show cable modem docsis device-class".
+
+- **Device Class**: Direct value. Displays the device class information for the PacketCable device.
+
+  The modem can report its device class type during registration. Some possible values are:
 
   - CM or eCM: A standalone cable modem or embedded CM.
   - ePS: Embedded portal services.
   - eMTA: Embedded multimedia terminal adapter.
   - eSTB: Embedded set-top box.
   - unavailable: The CM has not reported its device class.
+
+  Retrieved using the call "show cable modem docsis device-class".
 
 ## System parameters
 

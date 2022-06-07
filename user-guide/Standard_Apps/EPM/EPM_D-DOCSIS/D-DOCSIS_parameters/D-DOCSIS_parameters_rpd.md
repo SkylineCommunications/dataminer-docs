@@ -388,55 +388,174 @@ uid: D-DOCSIS_parameters_rpd
 ## Data layer parameters
 
 - **Number CM**: The number of cable modems (CMs).
+
 - **Number CM Offline**: The number of CMs with MAC Status in Offline state.
+
 - **Percentage CM Offline**: The percentage of CMs with MAC Status in Offline state.
+
 - **Number CM DS Partial Service**: The number of CMs with DS Service Status in Partial state.
+
 - **Percentage CM DS Partial Service**: The percentage of CMs with DS Service Status in Partial state.
+
 - **Number CM US Partial Service**: The number of CMs with US Service Status in Partial state.
+
 - **Percentage CM US Partial Service**: The percentage of CMs with US Service Status in Partial state.
+
 - **Number CM US SNR OOS**: The number of CMs with US SNR in OOS state.
+
 - **Percentage CM US SNR OOS**: The percentage of CMs with US SNR in OOS state.
+
 - **Number CM US Time Offset OOS**: The number of CMs with US Time Offset in OOS state.
+
 - **Percentage CM US Time Offset OOS**: The percentage of CMs with US Time Offset in OOS state.
+
 - **Number CM US Power OOS**: The number of CMs with US Power in OOS state.
+
 - **Percentage CM US Power OOS**: The percentage of CMs with US Power in OOS state.
+
 - **Number CM US Post-FEC OOS**: The number of CMs with US Post-FEC in OOS state.
+
 - **Percentage CM US Post-FEC OOS**: The percentage of CMs with US Post-FEC in OOS state.
+
 - **DOCSIS DS QAM Utilization**: The average DOCSIS DS QAM Channels Utilization.
+
 - **DOCSIS US QAM Utilization**: The average DOCSIS US QAM Channels Utilization.
+
 - **DOCSIS DS OFDM Utilization**: The average DOCSIS DS OFDM Channels Utilization.
+
 - **DOCSIS US OFDM Utilization**: The average DOCSIS US OFDM Channels Utilization.
-- **L2TP Session Status**: The RPD overall L2TP session status. This value is derived from the RPD DEPI table (CLI). The status *OK* means all associated sessions are in the state *UP*. The status *NOK* means at least one associated session is in a state other than *UP*.
+
+- **L2TP Session Status**: The RPD overall L2TP session status.
+
+  This value is derived from the RPD DEPI table (CLI).
+
+  - The status *OK* means all associated sessions are in the state *UP*.
+  - The status *NOK* means at least one associated session is in a state other than *UP*.
+
 - **Number L2TP Session in Error**: The number of RPD L2TP sessions with a status other than *UP*.
+
 - **Percentage L2TP Session in Error**: The percentage of RPD L2TP sessions with a status other than *UP*.
+
 - **MAC**: The media access control address.
-- **Service Template**: The service template associated with the RPD. Retrieved using the call "service-catalog-topology/get-service-template-list", parameter: rpdServiceTemplate ("command not found").
-- **Status**: The status of the RPD. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Status.
-- **CCAP Core**: The CCAP core associated with the RPD. Retrieved using the call "rpd-pairing/query-rpd-pairing", parameter: CCAP Core.
-- **CCAP Core Interface**: The CCAP core interface associated with the RPD. Retrieved using the call "rpd-pairing/query-rpd-pairing", parameter: CCAP Core Interface.
-- **Fiber Node ID**: The fiber node ID associated with the RPD. Retrieved using the call "show cable rpd \<rpdmac> md-association"
-- **Fiber Node**: The fiber node associated with the RPD. Retrieved using the call "show cable rpd \<rpdmac> md-association"
-- **Cable Interface**: The CCAP core cable interface serving the RPD. Retrieved using the call "show cable rpd \<rpdmac> md-association"
-- **DS Data Service Group**: The downstream data service group. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Downstream Data Service Group.
-- **DS Data Controller**: The downstream data controller. Retrieved using the call "show cable rpd \<rpdmac> md-association".
-- **DS Data DEPI**: The downstream external PHY interface. Retrieved using the call "show cable rpd depi".
-- **US Data Service Group**: The upstream data service group. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Upstream Data Service Group.
-- **US Data Controller**: The upstream data controller. Retrieved using the call "show cable rpd \<rpdmac> md-association".
-- **NC Video Interface**: The narrowcast video interface. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Narrowcast Video Interface.
-- **NC Video Service Group**: The narrowcast video service group. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Narrowcast Video Service Group.
-- **NC Video Controller**: The narrowcast video controller. Retrieved by matching the interface profile using the CLI property, parameter: Narrowcast Video Profile.
-- **NC Video DEPI**: The narrowcast video downstream external PHY interface. Retrieved using the call "show cable rpd depi".
-- **NC Video Controller Profile**: The narrowcast video controller profile ID. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: NCV Controller Profile.
-- **BC Video Interface**: The broadcast video interface. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Broadcast Video Interface.
-- **BC Video Service Group**: The broadcast video service group. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Broadcast Video Service Group.
-- **BC Video Controller**: The broadcast video controller. Retrieved by matching the interface profile using the CLI property, parameter: Narrowcast Video Profile.
-- **BC Video DEPI**: The broadcast video downstream external PHY interface. Retrieved using the call "show cable rpd depi".
-- **BC Video Controller Profile**: The broadcast video controller profile ID. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: BCV Controller Profile.
-- **OOB Video Interface**: The out-of-band video interface. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Out Of Band Interface.
-- **Additional Cores**: The IPv6 of the additional core interfaces. Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Additional Cores.
-- **Latitude**: The RPD location latitude. Retrieved using the call "show Rpd Location".
-- **Longitude**: The RPD location longitude. Retrieved using the call "show Rpd Location".
-- **Market**: The market associated with the RPD CCAP core. Retrieved using the call "virtual element from summarytable".
-- **Hub**: The hub associated with the RPD CCAP core. Retrieved using the call "virtual element from summarytable".
-- **RPD Relations**: Table displaying all known CIN relations from the perspective of the RPD. The source in the table will list all known RPDs, and the destinations all connections/relations within the CIN. The relations are learned via LLDP or similar protocol.
-- **Destination Hop**: Incremental counter of the known relations from the given source to destinations of the same function. Note that multiple connections (interfaces) between a source and a destination are counted as a single hop as the hop count is only affected by the existence of at least one connection between the source and the given destination. For example, if a source is known to be connected to 2 destinations with function "Node Leaf", then there will be 2 incremental hops for the source.
+
+- **Service Template**: The service template associated with the RPD.
+
+  Retrieved using the call "service-catalog-topology/get-service-template-list", parameter: rpdServiceTemplate ("command not found").
+
+- **Status**: The status of the RPD.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Status.
+
+- **CCAP Core**: The CCAP core associated with the RPD.
+
+  Retrieved using the call "rpd-pairing/query-rpd-pairing", parameter: CCAP Core.
+
+- **CCAP Core Interface**: The CCAP core interface associated with the RPD.
+
+  Retrieved using the call "rpd-pairing/query-rpd-pairing", parameter: CCAP Core Interface.
+
+- **Fiber Node ID**: The fiber node ID associated with the RPD.
+
+  Retrieved using the call "show cable rpd \<rpdmac> md-association"
+
+- **Fiber Node**: The fiber node associated with the RPD.
+
+  Retrieved using the call "show cable rpd \<rpdmac> md-association"
+
+- **Cable Interface**: The CCAP core cable interface serving the RPD.
+
+  Retrieved using the call "show cable rpd \<rpdmac> md-association"
+
+- **DS Data Service Group**: The downstream data service group.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Downstream Data Service Group.
+
+- **DS Data Controller**: The downstream data controller.
+
+  Retrieved using the call "show cable rpd \<rpdmac> md-association".
+
+- **DS Data DEPI**: The downstream external PHY interface.
+
+  Retrieved using the call "show cable rpd depi".
+
+- **US Data Service Group**: The upstream data service group.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Upstream Data Service Group.
+
+- **US Data Controller**: The upstream data controller.
+
+  Retrieved using the call "show cable rpd \<rpdmac> md-association".
+
+- **NC Video Interface**: The narrowcast video interface.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Narrowcast Video Interface.
+
+- **NC Video Service Group**: The narrowcast video service group.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Narrowcast Video Service Group.
+
+- **NC Video Controller**: The narrowcast video controller.
+
+  Retrieved by matching the interface profile using the CLI property, parameter: Narrowcast Video Profile.
+
+- **NC Video DEPI**: The narrowcast video downstream external PHY interface.
+
+  Retrieved using the call "show cable rpd depi".
+
+- **NC Video Controller Profile**: The narrowcast video controller profile ID.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: NCV Controller Profile.
+
+- **BC Video Interface**: The broadcast video interface.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Broadcast Video Interface.
+
+- **BC Video Service Group**: The broadcast video service group.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Broadcast Video Service Group.
+
+- **BC Video Controller**: The broadcast video controller.
+
+  Retrieved by matching the interface profile using the CLI property, parameter: BC Video Profile.
+
+- **BC Video DEPI**: The broadcast video downstream external PHY interface.
+
+  Retrieved using the call "show cable rpd depi".
+
+- **BC Video Controller Profile**: The broadcast video controller profile ID.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: BCV Controller Profile.
+
+- **OOB Video Interface**: The out-of-band video interface.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Out Of Band Interface.
+
+- **Additional Cores**: The IPv6 of the additional core interfaces.
+
+  Retrieved using the call "rpd-pairing/query-rpd-name-pairing", parameter: Additional Cores.
+
+- **Latitude**: The RPD location latitude.
+
+  Retrieved using the call "show Rpd Location".
+
+- **Longitude**: The RPD location longitude.
+
+  Retrieved using the call "show Rpd Location".
+
+- **Market**: The market associated with the RPD CCAP core.
+
+  Retrieved using the call "virtual element from summarytable".
+
+- **Hub**: The hub associated with the RPD CCAP core.
+
+  Retrieved using the call "virtual element from summarytable".
+
+- **RPD Relations**: Table displaying all known CIN relations from the perspective of the RPD.
+
+  The source in the table will list all known RPDs, and the destinations all connections/relations within the CIN.
+
+  The relations are learned via LLDP or similar protocol.
+
+- **Destination Hop**: Incremental counter of the known relations from the given source to destinations of the same function.
+
+  Note that multiple connections (interfaces) between a source and a destination are counted as a single hop as the hop count is only affected by the existence of at least one connection between the source and the given destination. For example, if a source is known to be connected to 2 destinations with function "Node Leaf", then there will be 2 incremental hops for the source.
