@@ -170,6 +170,7 @@ To configure this:
 1. Restart the DataMiner software.
 
 > [!NOTE]
+>
 > - A separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the *SeparateProcesses* tag, the configuration of the *scriptingProcesses* attribute will be overridden to "protocol", except if it is set to "\[Service]" (see [Running SLScripting as a service](#running-slscripting-as-a-service)). Configuring separate SLProtocol and SLScripting instances for a protocol is not compatible with a configuration where SLScripting is configured as a service. If you do configure both of these options, the configuration to run separate SLProtocol and SLScripting instances will be ignored, and a notice alarm will be generated with more information.
 > - DataMiner.xml files are not synchronized in a DMS. If your DMS consists of multiple DMAs, you will need to edit the DataMiner.xml file on each of the DMAs.
 
@@ -416,6 +417,7 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - When a single polling response is not able to empty the stack of queued messages on the server, the next polling request will be scheduled after 100ms (fixed value).
 > - Unzipping/unpacking polling response data on the client can be done while another polling request is already in progress.
 
@@ -583,7 +585,7 @@ Example:
 
 From DataMiner 10.1.0/10.1.1 onwards, DataMiner processes use the NATS open-source messaging system to communicate with each other. Some settings for NATS can be fine-tuned in *MaintenanceSettings.xml*, using the following tags:
 
-- *NATSDisasterCheck*: Set this to true or false in order to respectively activate or deactivate automatic detection and triggering of NATS cluster self healing (default: false).
+- *NATSDisasterCheck*: Set this to true or false in order to respectively activate or deactivate automatic detection and triggering of NATS cluster self-healing (default: false).
 
 - *NATSResetWindow*: Specify a value in seconds to set a window during which only one NATS reset can occur. This prevents situations where NATS disaster recovery is triggered too often. The minimum value is 60. If a lower value is specified, 60 will be used instead.
 
