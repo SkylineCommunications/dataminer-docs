@@ -57,14 +57,39 @@ The export file will be named “Query XXX” (XXX being the name of the query, 
 > [!NOTE]
 > To only export specific columns, first apply a filter by dragging the columns onto the table component before you export the component.
 
-## Filtering the table
+## Filtering and sorting the table
 
-From DataMiner 10.2.7/10.3.0 onwards, a search box is available that allows you to filter the table component.
+From DataMiner 10.2.7/10.3.0 onwards, users can filter and sort the contents of a table component in a dashboard.
 
-To do so:
+To apply a **general filter** across the table, a search box is available:
 
 1. Hover over the table component and click the search icon in the lower right corner.
 
 1. Specify the filter text (case-insensitive) in the search box.
 
    This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Configuring_GQI_feeds).
+
+To apply a **filter based on a specific column**:
+
+1. Right-click the column header and select *Filter*.
+
+1. Configure the different fields of the filter, depending on the type of value in the column.
+
+   - For string values or GUIDs:
+
+     - To switch between a positive or negative filter, click *does* or *does not*.
+     - To switch to a different type of filter, click the second filter field. This will toggle between *contain*, *equal*, and *match regex*.
+     - In the third field of the filter, specify a filter value.
+     - If necessary, click the + icon to add more conditions. As soon as one of the specified conditions applies, a value will be shown (i.e. conditions are combined using "OR").
+
+   - For numeric or datetime values, specify one or more ranges that a value should be in. As soon as one of the specified conditions applies, a value will be shown (i.e. conditions are combined using "OR").
+   - For booleans, specify whether the value should be true or false.
+
+1. Click *Apply filter*.
+
+> [!NOTE]
+> If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
+
+To **sort the table**, you can click a column header. To apply additional sorting, press Ctrl while clicking one or more additional headers Alternatively, you can also select one of the available sorting options in the column header right-click menu.
+
+To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.
