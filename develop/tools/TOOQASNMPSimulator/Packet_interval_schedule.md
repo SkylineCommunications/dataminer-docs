@@ -5,7 +5,7 @@ uid: Packet_interval_schedule
 # Packet interval schedule
 
 ![](~/develop/images/QADS_TrapSenderIntervalSchedule.png)
-<br>Figure 91: Trap Sender packet interval schedule
+<br>Trap Sender packet interval schedule
 
 The main options are:
 
@@ -17,8 +17,8 @@ The main options are:
 
 - *Rate*: Use this option if you want to send a specified number of packets in 1 second, and repeat this after a specified number of seconds.
 
-    > [!NOTE]
-    > If you want to use the *Rate* option, make sure that the either *Loop* or *Random loop* is selected, as otherwise this feature will not work.
+  > [!NOTE]
+  > If you want to use the *Rate* option, make sure that the either *Loop* or *Random loop* is selected, as otherwise this feature will not work.
 
 Additional options:
 

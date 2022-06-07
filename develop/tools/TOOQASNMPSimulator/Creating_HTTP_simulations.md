@@ -27,7 +27,7 @@ Creating an HTTP simulation requires a bit more work.
       - *simulationPorts*: Either specify a range using a hyphen (“-”), e.g. "50000-50005", or a port number.
 
       > [!NOTE]
-      > The port number must be \> 1024.
+      > The port number must be greater than or equal to 1024.
 
       The *deviceIP* and *devicePort* are used to be able to extract the appropriate data from the PDML part. The *simulationIP* and *simulationPorts* are used to specify where the simulation needs to run.
 
