@@ -4,59 +4,7 @@ uid: SLNetClientTest_tool_advanced_procedures
 
 # SLNetClientTest tool advanced procedures
 
-The following procedures can be applied to troubleshoot errors. However, be very careful when you apply them as they can strongly influence the functionality of your DataMiner System.
-
-- [Editing the connection string between two DataMiner Agents](#editing-the-connection-string-between-two-dataminer-agents)
-
-- [Disabling replication buffering](#disabling-replication-buffering)
-
-- [Making DataMiner Cube ignore view updates](#making-dataminer-cube-ignore-view-updates)
-
-- [Configuring how long alarm statistics are kept in memory](#configuring-how-long-alarm-statistics-are-kept-in-memory)
-
-- [Aborting a running Automation script](#aborting-a-running-automation-script)
-
-- [Removing references to items that no longer exist](#removing-references-to-items-that-no-longer-exist)
-
-- [Comparing the views on two Agents in a DMS](#comparing-the-views-on-two-agents-in-a-dms)
-
-- [Having RCA chains updated by the DCF engine](#having-rca-chains-updated-by-the-dcf-engine)
-
-- [Increasing the maximum upload size for upgrade packages in a DMS](#increasing-the-maximum-upload-size-for-upgrade-packages-in-a-dms)
-
-- [Managing base subscriptions](#managing-base-subscriptions)
-
-- [Configuring trend caching](#configuring-trend-caching)
-
-- [Modifying the engine ID of a DMA](#modifying-the-engine-id-of-a-dma)
-
-- [Changing the service template child element and child service limitations](#changing-the-service-template-child-element-and-child-service-limitations)
-
-- [Forcing file synchronization between DMAs](#forcing-file-synchronization-between-dmas)
-
-- [Setting the TTL for database records](#setting-the-ttl-for-database-records)
-
-- [Enabling or disabling protocol buffer serialization](#enabling-or-disabling-protocol-buffer-serialization)
-
-- [Managing scheduled tasks for maintenance of a Cassandra database](#managing-scheduled-tasks-for-maintenance-of-a-cassandra-database)
-
-- [Creating an enhanced view](#creating-an-enhanced-view)
-
-- [Generating SMIv2 MIB files](#generating-smiv2-mib-files)
-
-- [Fine-tuning the CPECollectorHelper API timeout](#fine-tuning-the-cpecollectorhelper-api-timeout)
-
-- [Changing the number of records in the protocol cache](#changing-the-number-of-records-in-the-protocol-cache)
-
-- [Checking or modifying the settings related to a Refused DMA state](#checking-or-modifying-the-settings-related-to-a-refused-dma-state)
-
-- [Managing trend patterns](#managing-trend-patterns)
-
-- [Fine-tuning NATS settings](#fine-tuning-nats-settings)
-
-- [Changing the grace period for the SLNetCom Notification thread](#changing-the-grace-period-for-the-slnetcom-notification-thread)
-
-- [Specifying credentials for a shared backup path for Elasticsearch](#specifying-credentials-for-a-shared-backup-path-for-elasticsearch)
+The procedures below can be applied to troubleshoot errors. However, be very careful when you apply them as they can strongly influence the functionality of your DataMiner System.
 
 ## Editing the connection string between two DataMiner Agents
 
@@ -66,18 +14,16 @@ To do so:
 
 1. In the *Advanced* menu, select *Edit Connection Uris.*
 
-2. In the *Connection String Configuration* dialog box, right-click in the list, and select *Add New Destination*.
+1. In the *Connection String Configuration* dialog box, right-click in the list, and select *Add New Destination*.
 
-3. In the *Edit Connection String* dialog box, configure the following settings.
+1. In the *Edit Connection String* dialog box, configure the following settings.
 
-    | Setting                            | Description                                                                                                                                                                                                                                                         |
-    |--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | From                                 | The DataMiner Agent from which will be connected.                                                                                                                                                                                                                   |
-    | To                                   | The primary IP address of the DataMiner Agent to which will be connected. From DataMiner 10.0.0 CU15/10.1.0 CU4/10.1.7 onwards, wildcards are supported in this field. If there is no exact match, the connection string will be set for all matching destinations. |
-    | Update All Connections To This Agent | Select this option if you want to update all connection strings to the DataMiner Agent specified in *To*.                                                                                                                            |
-    | New Connection String                | The IP address to be used when connecting to the DataMiner Agent specified in *To*.<br> Syntax example:<br> http://\[IP address to connect\]:8004/SLNetService                                                                       |
+   - *From*: The DataMiner Agent from which will be connected.
+   - *To*: The primary IP address of the DataMiner Agent to which will be connected. From DataMiner 10.0.0 CU15/10.1.0 CU4/10.1.7 onwards, wildcards are supported in this field. If there is no exact match, the connection string will be set for all matching destinations.
+   - *Update All Connections To This Agent*: Select this option if you want to update all connection strings to the DataMiner Agent specified in *To*.
+   - *New Connection String*: The IP address to be used when connecting to the DataMiner Agent specified in *To*. Syntax example: `http://[IP address to connect]:8004/SLNetService`.
 
-4. Click *OK* to save the configuration, and then click *Done*.
+1. Click *OK* to save the configuration, and then click *Done*.
 
 > [!NOTE]
 > From DataMiner 10.0.0 CU15/10.1.0 CU4/10.1.7 onwards, if DataMiner fails to automatically detect the SLNet target port (via port 80 or 443), the connection attempt will continue on the default port 8004. To skip this auto-detection and immediately use the default port 8004, you can set the connection string to *auto://nodetect*. This can for instance be useful in case port 80 is blocked between the DMAs.
@@ -90,13 +36,13 @@ To do so:
 
 1. In the *Advanced* menu, select *Options* > *SLNet options.*
 
-2. In the list at the top of the *SLNet Options* window, select *DisableReplicationBuffering*.
+1. In the list at the top of the *SLNet Options* window, select *DisableReplicationBuffering*.
 
-    A list of the Agents in the cluster will be displayed, indicating for each of them whether replication buffering is disabled.
+   A list of the Agents in the cluster will be displayed, indicating for each of them whether replication buffering is disabled.
 
-3. In the *Value* column, right-click the “false” value for the Agent for which you wish to disable replication buffering, and select *Edit value*.
+1. In the *Value* column, right-click the "false" value for the Agent for which you wish to disable replication buffering, and select *Edit value*.
 
-4. Enter “true” and click *OK*.
+1. Enter "true" and click *OK*.
 
 > [!NOTE]
 > This option is saved into the file *MaintenanceSettings.xml* under the *\<SLNet>* tag. It is not synchronized across Agents in the DMS.
@@ -109,13 +55,13 @@ To do so:
 
 1. In the *Advanced* menu, select *Options* > *SLNet options.*
 
-2. In the list at the top of the *SLNet Options* window, select *ClientSkipViewUpdates*.
+1. In the list at the top of the *SLNet Options* window, select *ClientSkipViewUpdates*.
 
-    A list of the Agents in the cluster will be displayed, indicating for each of them whether client view updates are ignored.
+   A list of the Agents in the cluster will be displayed, indicating for each of them whether client view updates are ignored.
 
-3. In the *Value* column, right-click the “false” value for the Agent for which you want client view updates to be ignored, and select *Edit value*.
+1. In the *Value* column, right-click the "false" value for the Agent for which you want client view updates to be ignored, and select *Edit value*.
 
-4. Enter “true” and click *OK*.
+1. Enter "true" and click *OK*.
 
 > [!NOTE]
 > You can also configure this setting directly in the file *MaintenanceSettings.xml*. See [Making DataMiner Cube ignore view updates](xref:Configuration_of_DataMiner_processes#making-dataminer-cube-ignore-view-updates).
@@ -128,25 +74,25 @@ To configure the time range that the most recent active alarms will be kept in m
 
 1. In the *Advanced* menu, select *Options* > *SLNet options.*
 
-2. In the list at the top of the *SLNet Options* window, select *ActiveAlarmStatsTimeToKeep*.
+1. In the list at the top of the *SLNet Options* window, select *ActiveAlarmStatsTimeToKeep*.
 
-    A list of the Agents in the cluster will be displayed, indicating for each of them how long the alarm statistics are kept (in days). The default time is 2 days.
+   A list of the Agents in the cluster will be displayed, indicating for each of them how long the alarm statistics are kept (in days). The default time is 2 days.
 
-3. In the *Value* column, right-click the value you want to update, and select *Edit value*.
+1. In the *Value* column, right-click the value you want to update, and select *Edit value*.
 
-4. Enter the new number of days and click *OK*.
+1. Enter the new number of days and click *OK*.
 
 To configure how long time ranges other than the most recent one will be kept in memory after they have been requested:
 
 1. In the *Advanced* menu, select *Options* > *SLNet options.*
 
-2. In the list at the top of the *SLNet Options* window, select *ActiveAlarmStatsExpirationTime*.
+1. In the list at the top of the *SLNet Options* window, select *ActiveAlarmStatsExpirationTime*.
 
-    A list of the Agents in the cluster will be displayed, indicating for each of them how long the time ranges are kept (in minutes). The default time is 10 minutes.
+   A list of the Agents in the cluster will be displayed, indicating for each of them how long the time ranges are kept (in minutes). The default time is 10 minutes.
 
-3. In the *Value* column, right-click the value you want to update, and select *Edit value*.
+1. In the *Value* column, right-click the value you want to update, and select *Edit value*.
 
-4. Enter the new number of minutes and click *OK*.
+1. Enter the new number of minutes and click *OK*.
 
 ## Aborting a running Automation script
 
@@ -154,11 +100,11 @@ To abort an Automation script while it is running:
 
 1. In the *Advanced menu, select Automation*.
 
-    The *Maintain Automation* window will open.
+   The *Maintain Automation* window will open.
 
-2. Go to the *Running Scripts* tab.
+1. Go to the *Running Scripts* tab.
 
-3. In the list of scripts, right-click the entry corresponding to the script you want to abort, and click *Abort Now*.
+1. In the list of scripts, right-click the entry corresponding to the script you want to abort, and click *Abort Now*.
 
 ## Removing references to items that no longer exist
 
@@ -166,11 +112,11 @@ With the SLNetClientTest tool, you can check if the *Views.xml* contains referen
 
 1. In the *Advanced* menu, go to *Clear From* > *Views.xml.*
 
-2. In the *Clear From Views.xml* window, go to the *Clear by Removed Element* tab, and click *Find Removed Elements*.
+1. In the *Clear From Views.xml* window, go to the *Clear by Removed Element* tab, and click *Find Removed Elements*.
 
-    A dialog box will open with the IDs of all elements, services and redundancy groups that no longer exist but are still mentioned in *Views.xml*.
+   A dialog box will open with the IDs of all elements, services and redundancy groups that no longer exist but are still mentioned in *Views.xml*.
 
-3. Click *Yes* to confirm the deletion.
+1. Click *Yes* to confirm the deletion.
 
 ## Comparing the views on two Agents in a DMS
 
@@ -180,34 +126,35 @@ To do so:
 
 1. In the *Advanced* menu, go to *Clear From* > *Views.xml.*
 
-2. In the *Clear From Views.xml* window, go to the *Compare Agents* tab.
+1. In the *Clear From Views.xml* window, go to the *Compare Agents* tab.
 
-3. Next to *Agent A* and *Agent B*, select the two Agents.
+1. Next to *Agent A* and *Agent B*, select the two Agents.
 
-4. Click *Compare.*
+1. Click *Compare.*
 
-    If differences are detected between the Agents, these will be shown in the list at the bottom of the window.
+   If differences are detected between the Agents, these will be shown in the list at the bottom of the window.
 
 ## Having RCA chains updated by the DCF engine
 
 You can make the DataMiner Connectivity Framework Engine update RCA chains automatically. To do so, generate the RCA chains by sending an SLNet message *GetRCAConnectivity* with the following arguments:
 
-| Argument     | Value                                                                                                                                                                                                                                                                                      |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ActivePath   | true or false<br> -  If “true”, then property-based path highlighting will be used.<br> -  If “false”, only external connections will be taken into account. |
-| AutoGenerate | true                                                                                                                                                                                                                                                                                       |
-| ChainName    | The name of the DCF chain (which specifies the *Connectivity.xml* file to be used) or the automatically generated context GUID (type = service link).                                                                                                       |
-| ContextID    |                                                                                                                                                                                                                                                                                            |
-| DataMinerID  | The entry point.                                                                                                                                                                                                                                                                           |
-| ElementID    |                                                                                                                                                                                                                                                                                            |
-| RCAChainName | The name of the RCA chain.                                                                                                                                                                                                                                                                 |
+- *ActivePath*: true or false.
+
+  - If "true", property-based path highlighting will be used.
+  - If "false", only external connections will be taken into account.
+
+- *AutoGenerate*: true.
+- *ChainName*: The name of the DCF chain (which specifies the *Connectivity.xml* file to be used) or the automatically generated context GUID (type = service link).
+- *ContextID*
+- *DataMinerID*: The entry point.
+- *ElementID*
+- *RCAChainName*: The name of the RCA chain.
 
 > [!NOTE]
 > A DMS Correlation license is required to be able to configure RCA chains.
 
 > [!TIP]
-> See also:
-> [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files)
+> See also: [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files)
 
 ## Increasing the maximum upload size for upgrade packages in a DMS
 
@@ -223,17 +170,17 @@ However, it is also possible to increase the maximum upload size via the SLNetCl
 
 1. In the *Advanced* menu, go to *Options* > *SLNet Options.*
 
-2. In the drop-down list next to *Option values for*, select *MaxUploadSize*.
+1. In the drop-down list next to *Option values for*, select *MaxUploadSize*.
 
-3. Right-click the indicated value for this setting, and select *Edit value*.
+1. Right-click the indicated value for this setting, and select *Edit value*.
 
-4. Enter a new value and click *OK*.
+1. Enter a new value and click *OK*.
 
 ## Managing base subscriptions
 
-The “base subscriptions” feature allows you to increase performance when retrieving element and parameter information by caching the data in SLNet.
+The "base subscriptions" feature allows you to increase performance when retrieving element and parameter information by caching the data in SLNet.
 
-When a client (e.g. DataMiner Cube) opens an element card, a subscription is made for that element. SLNet then retrieves the element data from the other processes (SLDataminer, SLElement, etc.), caches it, and makes arrangements so changes get pushed to it immediately. When a client closes an element card, the subscription is removed, and the cached data is cleared.
+When a client (e.g. DataMiner Cube) opens an element card, a subscription is made for that element. SLNet then retrieves the element data from the other processes (SLDataminer, SLElement, etc.), caches it, and makes arrangements so that changes get pushed to it immediately. When a client closes an element card, the subscription is removed, and the cached data is cleared.
 
 However, if a base subscription has been defined for an element, the subscription for this element stays open permanently. As a consequence, when you open an element card for such an element, SLNet will send the data to the client instantly, as it does not have to do any initial setup. This is particularly useful for elements that are accessed very frequently.
 
@@ -243,54 +190,53 @@ In order to ensure that the subscription for a particular element stays open:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-2. In the *Message Type* drop-down list, select *BaseSubscriptionMessage*.
+1. In the *Message Type* drop-down list, select *BaseSubscriptionMessage*.
 
-3. Select the *BaseSubscriptions* row and click the ... button on the right in order to open the *BaseSubscription Collection Editor*.
+1. Select the *BaseSubscriptions* row and click the ... button on the right in order to open the *BaseSubscription Collection Editor*.
 
-4. Click the *Add* button to add a new element subscription.
+1. Click the *Add* button to add a new element subscription.
 
-5. Fill in the following properties, and then click *OK*:
+1. Fill in the following properties, and then click *OK*:
 
-    - The *DmaID* and *ElementID* of the element.
+   - The *DmaID* and *ElementID* of the element.
 
-    - The *MessageType*, usually “ParameterChangeEventMessage”.
+   - The *MessageType*, usually "ParameterChangeEventMessage".
 
-    - The *Name* of the subscription, e.g. “MyElementSubscription”.
+   - The *Name* of the subscription, e.g. "MyElementSubscription".
 
-    - The *Type*, in this case “Element”.
+   - The *Type*, in this case "Element".
 
-        > [!NOTE]
-        > The *Type* determines how specific the subscription is. If, for instance, you select “Parameter” instead of “Element”, you subscribe to all ParameterChangeEvents for a specific parameter only. In that case, the *ParameterID* field also needs to be filled in.
+     > [!NOTE]
+     > The *Type* determines how specific the subscription is. If, for instance, you select "Parameter" instead of "Element", you subscribe to all ParameterChangeEvents for a specific parameter only. In that case, the *ParameterID* field also needs to be filled in.
 
-6. In the *Build Message* tab, make sure “Set” is selected as the *Type*, and click *Send Message* to save the subscription.
+1. In the *Build Message* tab, make sure "Set" is selected as the *Type*, and click *Send Message* to save the subscription.
 
-7. After you have received a positive response, in the *Build Message* tab, select “Subscribe” as the *Type*, and click *Send Message*.
+1. After you have received a positive response, in the *Build Message* tab, select "Subscribe" as the *Type*, and click *Send Message*.
 
 > [!NOTE]
-> - To remove the subscription, in the *Build Message* tab, select “Remove” as the *Type*, and click *Send Message*.
+>
+> - To remove the subscription, in the *Build Message* tab, select "Remove" as the *Type*, and click *Send Message*.
 > - After you have set the subscription, you can test the functionality by going to *Diagnostics* > *Connection Details* > *BaseSubscriptionManager*. In the subscription set, you will then be able to see all the elements you are subscribed to.
 
 ## Configuring trend caching
 
-Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway and before it is processed further. This speeds up e.g. switching a trend graph's range from last day to last week, closing a trending card and opening it again shortly afterwards, opening the same trend graph on multiple clients, etc. In the SLNetClientTest tool, several options are available related to the trend cache.
+Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway, and before it is processed further. This speeds up e.g. switching a trend graph's range from last day to last week, closing a trending card and opening it again shortly afterwards, opening the same trend graph on multiple clients, etc. In the SLNetClientTest tool, several options are available related to the trend cache.
 
 Most of the trend cache options can be configured as follows:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-2. In the drop-down list at the top of the window, select an option and then configure it using the right-click menu in the pane below.
+1. In the drop-down list at the top of the window, select an option and then configure it using the right-click menu in the pane below.
 
-    The following options are available:
+   The following options are available:
 
-    | Option                    | Description                                                                                                                                                                                                                            |
-    |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | TrendCacheEnable            | Can be set to “true” or “false” in order to enable or disable trend caching.                                                                                                                                                           |
-    | TrendCacheExpirationTime    | A value in seconds (by default 120 seconds). Determines how long an entry remains in the cache.                                                                                                                                        |
-    | TrendCacheLogVerbose        | Can be set to “true” or “false” in order to enable or disable additional logging in the *SLNet.txt* log file, indicating whether a trend data request was resolved from the database or from the cache. |
-    | TrendCacheMaxRecordsInCache | The maximum number of trend records in the cache, by default 1000000. Older entries will be removed to make room for new entries.                                                                                                      |
+   - *TrendCacheEnable*: Can be set to "true" or "false" in order to enable or disable trend caching.
+   - *TrendCacheExpirationTime*: A value in seconds (by default 120 seconds). Determines how long an entry remains in the cache.
+   - *TrendCacheLogVerbose*: Can be set to "true" or "false" in order to enable or disable additional logging in the *SLNet.txt* log file, indicating whether a trend data request was resolved from the database or from the cache.
+   - *TrendCacheMaxRecordsInCache*: The maximum number of trend records in the cache, by default 1000000. Older entries will be removed to make room for new entries.
 
-    > [!NOTE]
-    > These options are not synchronized among the Agents in a DMS.
+   > [!NOTE]
+   > These options are not synchronized among the Agents in a DMS.
 
 In addition, if you go to *Diagnostics* > *Caches & Subscriptions* > *Trend Cache*, you can also:
 
@@ -306,49 +252,48 @@ With the SLNetClientTest tool, you can modify this engine ID:
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-2. In the *Message Type* drop-down list, select *SNMPManagersConfigurationRequestMessage*.
+1. In the *Message Type* drop-down list, select *SNMPManagersConfigurationRequestMessage*.
 
-3. Click the field next to the *Agents* argument and then click the *...* button to open the *ObjectEditorForm* window.
+1. Click the field next to the *Agents* argument and then click the *...* button to open the *ObjectEditorForm* window.
 
-4. In the *ObjectEditorForm* window, configure the following variables:
+1. In the *ObjectEditorForm* window, configure the following variables:
 
-    - **DataMinerID**: The DataMinerID indicated in the file *SNMP managers.xml* for the DMA in question.
+   - *DataMinerID*: The DataMinerID indicated in the file *SNMP managers.xml* for the DMA in question.
 
-    - **EngineBoots**: The number of times the SNMP engine restarted. Usually, this is set to 0.
+   - *EngineBoots*: The number of times the SNMP engine restarted. Usually, this is set to 0.
 
-    - **Text**: The "text" for the EngineID. Depending on the *Type* variable, this text can be an IPv4 address, an IPv6 address, a MAC address, regular text or octets (bytes).
+   - *Text*: The "text" for the EngineID. Depending on the *Type* variable, this text can be an IPv4 address, an IPv6 address, a MAC address, regular text or octets (bytes).
 
-    - **Type**: Determines the type of info entered in the *Text* variable. The following types can be selected:
+   - *Type*: Determines the type of info entered in the *Text* variable. The following types can be selected:
 
-        - *IPv4*: IPv4 address, e.g. "10.11.12.13".
+     - *IPv4*: IPv4 address, e.g. "10.11.12.13".
 
-        - *IPv6*: IPv6 address, e.g. "fd7a:e0de:acc2::".
+     - *IPv6*: IPv6 address, e.g. "fd7a:e0de:acc2::".
 
-        - *MAC*: MAC address, e.g. "1234567890ABCDEF".
+     - *MAC*: MAC address, e.g. "1234567890ABCDEF".
 
-        - *Text*: regular text, e.g. "MyID".
+     - *Text*: regular text, e.g. "MyID".
 
-        - *Octets*: bytes, e.g. "12:34:56:78:90:AB:CD:EF".
+     - *Octets*: bytes, e.g. "12:34:56:78:90:AB:CD:EF".
 
-        - *LocalEngine*, *Reserved* or *EnterpriseSpecific*: these types function in the same manner as *Octets* and are included for the sake of completeness. However, these should not be used in normal circumstances.
+     - *LocalEngine*, *Reserved* or *EnterpriseSpecific*: these types function in the same manner as *Octets* and are included for the sake of completeness. However, these should not be used in normal circumstances.
 
-    - All other variables in this window are for viewing purposes only and should not be modified.
+   - All other variables in this window are for viewing purposes only and should not be modified.
 
-5. Click *OK* to close the *ObjectEditorForm* window.
+1. Click *OK* to close the *ObjectEditorForm* window.
 
-6. Enter the following values for the arguments in the *Build Message* window:
+1. Enter the following values for the arguments in the *Build Message* window:
 
-    - **DataMinerID** and **HostingDataMinerID**: The DMA to which the message should be sent, which should be the same as the DataMinerID in the *ObjectEditorForm* window.
+   - *DataMinerID* and *HostingDataMinerID*: The DMA to which the message should be sent, which should be the same as the DataMinerID in the *ObjectEditorForm* window.
 
-    - **Get**: False.
+   - *Get*: False.
 
-    - **Set**: True.
+   - *Set*: True.
 
-7. Click *Send Message*.
+1. Click *Send Message*.
 
 > [!TIP]
-> See also:
-> [SNMP Managers.xml](xref:SNMP_Managers_xml#snmp-managersxml)
+> See also: [SNMP Managers.xml](xref:SNMP_Managers_xml#snmp-managersxml)
 
 ## Changing the service template child element and child service limitations
 
@@ -358,17 +303,17 @@ However, it is possible to change this limit using the SLNetClientTest tool. To 
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-2. Next to *Option values for*:
+1. Next to *Option values for*:
 
-    - To change the limit for the total number of services created by a service template, select *ServiceTemplateWarnCount*.
+   - To change the limit for the total number of services created by a service template, select *ServiceTemplateWarnCount*.
 
-    - To change the limit for the total number of elements in generated services, select *ServiceTemplateWarnElementCount*.
+   - To change the limit for the total number of elements in generated services, select *ServiceTemplateWarnElementCount*.
 
     The value for the selected setting will then be displayed.
 
-3. Right-click the displayed record and select *Edit value*.
+1. Right-click the displayed record and select *Edit value*.
 
-4. Enter the new value and click *OK*, then click *OK* to close the *SLNet Options* window.
+1. Enter the new value and click *OK*, then click *OK* to close the *SLNet Options* window.
 
 ## Forcing file synchronization between DMAs
 
@@ -376,57 +321,56 @@ Usually, when two files have the exact same timestamp, these are not synchronize
 
 1. In the *Advanced* menu, select *Force Sync*.
 
-2. Go to the *DMA* tab. The tab consists of two buttons, and two options:
+1. Go to the *DMA* tab. The tab consists of two buttons, and two options:
 
-    - **Force Sync DMA** button: Starts synchronization of the connected DMA only.
+   - *Force Sync DMA* button: Starts synchronization of the connected DMA only.
 
-    - **Force Sync DMS** button: Starts synchronization of all files in the DMS.
+   - *Force Sync DMS* button: Starts synchronization of all files in the DMS.
 
-    - **Verify size/CRC for files that have the same time in the SyncInfo changes file**: If this option is selected, when you click the *Force Sync* button, the DMA or DMS will be checked for files that were changed at the same moment, but have a different content. Any inconsistencies will be mentioned in information events. Extra log information can also be found in *SLDMS.txt* and *SLErrors.txt*.
+   - *Verify size/CRC for files that have the same time in the SyncInfo changes file*: If this option is selected, when you click the *Force Sync* button, the DMA or DMS will be checked for files that were changed at the same moment, but have a different content. Any inconsistencies will be mentioned in information events. Extra log information can also be found in *SLDMS.txt* and *SLErrors.txt*.
 
-    - **Fix inconsistency problems**: If this option is selected, when you click the *Force Sync* button, any inconsistencies that are found will be resolved. This option can only be selected if the option above is selected as well.
+   - *Fix inconsistency problems*: If this option is selected, when you click the *Force Sync* button, any inconsistencies that are found will be resolved. This option can only be selected if the option above is selected as well.
 
-3. Select the options you want to apply, and either click *Force Sync DMA* or *Force Sync DMS*, depending on whether you want to sync the currently connected DMA only, or all DMAs in the DMS.
+1. Select the options you want to apply, and either click *Force Sync DMA* or *Force Sync DMS*, depending on whether you want to sync the currently connected DMA only, or all DMAs in the DMS.
 
 ## Setting the TTL for database records
 
-From DataMiner 9.5.6 onwards, it is possible to update the “time to live” or TTL of database records via the SLNetClientTest tool.
+From DataMiner 9.5.6 onwards, it is possible to update the "time to live" or TTL of database records via the SLNetClientTest tool.
 
 > [!NOTE]
 > From DataMiner 9.6.0/9.6.3 onwards, this can instead be done within the Cube UI. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 1. In the *Advanced* menu, select *TTL*.
 
-2. Under *Sync Type*, select whether you want the TTL to be applied to the *DMA* only or to the entire *DMS*.
+1. Under *Sync Type*, select whether you want the TTL to be applied to the *DMA* only or to the entire *DMS*.
 
-3. Select the tab corresponding to the type of record for which a TTL will be specified:
+1. Select the tab corresponding to the type of record for which a TTL will be specified:
 
-    - *DataType*: Allows you to specify a TTL for specific data types, e.g. *Alarm*, *TimeTrace*, etc.
+   - *DataType*: Allows you to specify a TTL for specific data types, e.g. *Alarm*, *TimeTrace*, etc.
 
-    - *LoggerTable*: Allows you to specify a TTL for a logger table. The name of the table must be specified in the *Table* box.
+   - *LoggerTable*: Allows you to specify a TTL for a logger table. The name of the table must be specified in the *Table* box.
 
-    - *Trending*: Allows you to specify a different TTL for real-time (“*RT*”), 5-minute, 1-hour and 1-day trending records.
+   - *Trending*: Allows you to specify a different TTL for real-time ("*RT*"), 5-minute, 1-hour and 1-day trending records.
 
-    - *Protocol*: Allows you to specify overrides for a protocol. The name of the protocol must be specified in the *Protocol* box.
+   - *Protocol*: Allows you to specify overrides for a protocol. The name of the protocol must be specified in the *Protocol* box.
 
-4. Specify the TTL:
+1. Specify the TTL:
 
-    - To customize the default TTL, add a value (in seconds) in the *DefaultTTL* box.
+   - To customize the default TTL, add a value (in seconds) in the *DefaultTTL* box.
 
-    - To override the TTL for records in the general or “local” database, add a value (in seconds) in the *LocalTTL* box.
+   - To override the TTL for records in the general or "local" database, add a value (in seconds) in the *LocalTTL* box.
 
-    - To override the TTL for records in the indexing database, add a value (in seconds) in the *IndexingTTL* box.
+   - To override the TTL for records in the indexing database, add a value (in seconds) in the *IndexingTTL* box.
 
-    - If you do not want to edit a particular field, just leave it blank.
+   - If you do not want to edit a particular field, just leave it blank.
 
-5. Click *Update*.
+1. Click *Update*.
 
 > [!NOTE]
 > To find out what the currently used TTL values are, run the *GetTTLRequest* via the message builder.
 
 > [!TIP]
-> See also:
-> - [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml)
+> See also: [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml)
 
 ## Enabling or disabling protocol buffer serialization
 
@@ -470,11 +414,11 @@ A maintenance task has the following fields:
 
 - *Triggers*: A list of triggers that will execute the task automatically. Each trigger consists of the following fields:
 
-    - *Slot*: A custom object containing the day of the week and the time of the next execution.
+  - *Slot*: A custom object containing the day of the week and the time of the next execution.
 
-    - *Frequency*: A time span indicating the frequency at which the task needs to be run.
+  - *Frequency*: A time span indicating the frequency at which the task needs to be run.
 
-    Leaving the list of triggers empty will still schedule the task, but it will then only run when executed manually.
+  Leaving the list of triggers empty will still schedule the task, but it will then only run when executed manually.
 
 ## Creating an enhanced view
 
@@ -484,11 +428,11 @@ To create such an enhanced view:
 
 1. Go to the *Build Message* tab of the main window.
 
-2. In the *Message Type* drop-down list, select *EnhanceViewWithElementRequestMessage*.
+1. In the *Message Type* drop-down list, select *EnhanceViewWithElementRequestMessage*.
 
-3. Specify the ID of the view you want to enhance and the ID of the element you want to use for this.
+1. Specify the ID of the view you want to enhance and the ID of the element you want to use for this.
 
-4. Click *Send Message*.
+1. Click *Send Message*.
 
 ## Generating SMIv2 MIB files
 
@@ -501,29 +445,29 @@ To generate such a MIB file:
 
 1. Go to *Advanced* > *Tests* > *Generate MIB for SNMP Manager*.
 
-2. In the pop-up window, select an SNMP manager and click *Generate*.
+1. In the pop-up window, select an SNMP manager and click *Generate*.
 
-3. In the dialog box, browse to where you want to save the MIB file, optionally customize the file name, and click *Save*.
+1. In the dialog box, browse to where you want to save the MIB file, optionally customize the file name, and click *Save*.
 
 ## Fine-tuning the CPECollectorHelper API timeout
 
 When a call is performed via the CPECollectorHelper API, a timeout is calculated that is scaled based on how many items are requested. This way, the timeout time is dynamically adjusted to the number of requested items. This is calculated based on the following formula:
 
-*Total Timeout = ((requested number of items / EPMBulkCount) + 1) \* EPMASyncTimeout*
+`Total Timeout = ((requested number of items / EPMBulkCount) + 1) * EPMASyncTimeout`
 
 From DataMiner 10.0.9 onwards, you can fine-tune how the timeout is calculated using the SLNetClientTest tool:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-2. Depending on what you want to configure, select one of the following options in the drop-down box at the top of the window:
+1. Depending on what you want to configure, select one of the following options in the drop-down box at the top of the window:
 
-    - *EPMAsyncTimeout*: The base value for a timeout when the CPE collector contacts another DataMiner Agent.
+   - *EPMAsyncTimeout*: The base value for a timeout when the CPE collector contacts another DataMiner Agent.
 
-    - *EPMBulkCount*: The maximum number of items that can be requested in bulk before the timeout is increased.
+   - *EPMBulkCount*: The maximum number of items that can be requested in bulk before the timeout is increased.
 
-3. Right-click the setting in the table and select *Edit Value*.
+1. Right-click the setting in the table and select *Edit Value*.
 
-4. Specify the new value and click *OK*.
+1. Specify the new value and click *OK*.
 
 > [!CAUTION]
 > Be careful when changing these values, as an incorrect configuration can lead to problems with EPM. If the EPMAsyncTimeout is too low, it can occur that not all data is displayed in the EPM elements, but it if it is too high, the system may become unresponsive. The inverse is the case for the EPMBulkCount.
@@ -536,13 +480,13 @@ To change this setting:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-2. Select *protocolCacheMru* in the drop-down box at the top of the pop-up window.
+1. Select *protocolCacheMru* in the drop-down box at the top of the pop-up window.
 
-3. Right-click the current value and select *Edit Value*.
+1. Right-click the current value and select *Edit Value*.
 
-4. Specify the new value in the pop-up window and click OK.
+1. Specify the new value in the pop-up window and click OK.
 
-5. Click OK again to close the *SLNet Options* window.
+1. Click OK again to close the *SLNet Options* window.
 
 ## Checking or modifying the settings related to a Refused DMA state
 
@@ -558,20 +502,18 @@ With the SLNetClientTest tool, you can check and modify the thresholds defined f
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-2. In the drop-down list at the top of the window, select an option and then configure it using the right-click menu in the pane below.
+1. In the drop-down list at the top of the window, select an option and then configure it using the right-click menu in the pane below.
 
-    | Setting               | Description                                                                                                                                                                  |
-    |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | MaxAgentConnectsPerHour | The maximum number of connections SLNet is allowed to set up with a DMA within one hour. If more connections have been made, further connections are refused for 30 minutes. |
-    | QueuedStackOverflow     | The maximum number of messages that can be pending for an SLNet subscriber. If more messages are queued than this maximum, the connection is destroyed.                      |
+   - *MaxAgentConnectsPerHour*: The maximum number of connections SLNet is allowed to set up with a DMA within one hour. If more connections have been made, further connections are refused for 30 minutes.
+   - *QueuedStackOverflow*: The maximum number of messages that can be pending for an SLNet subscriber. If more messages are queued than this maximum, the connection is destroyed.
 
 If the underlying issue is resolved, you can also clear the refusal state using SLNetClientTest tool:
 
 1. Go to *Info* > *A - M* > *DataMinerInfo*.
 
-2. Right-click the DMA with the “Refused” connection state and select *Clear Connection Refusal*.
+1. Right-click the DMA with the "Refused" connection state and select *Clear Connection Refusal*.
 
-3. Click *OK* to close the pop-up window.
+1. Click *OK* to close the pop-up window.
 
 ## Managing trend patterns
 
@@ -584,8 +526,7 @@ To do so, go to *Advanced* > *Analytics* > *Pattern Matching*. This will open a 
 - To remove a pattern, select it in the list and click the *Delete* button.
 
 > [!TIP]
-> See also:
-> [Working with pattern matching](xref:Working_with_pattern_matching)
+> See also: [Working with pattern matching](xref:Working_with_pattern_matching)
 
 ## Fine-tuning NATS settings
 
@@ -595,17 +536,17 @@ To do so:
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-2. Depending on what you want to check or configure, select one of the following options in the drop-down box at the top of the window:
+1. Depending on what you want to check or configure, select one of the following options in the drop-down box at the top of the window:
 
-    - *NATSDisasterCheck*: If this is set to true, automatic detection and triggering of NATS cluster self healing is activated (default: false).
+   - *NATSDisasterCheck*: If this is set to true, automatic detection and triggering of NATS cluster self-healing is activated (default: false).
 
-    - *NATSResetWindow*: A value in seconds representing the time window during which only one NATS reset can occur. This prevents situations where NATS disaster recovery is triggered too often. The minimum value is 60.
+   - *NATSResetWindow*: A value in seconds representing the time window during which only one NATS reset can occur. This prevents situations where NATS disaster recovery is triggered too often. The minimum value is 60.
 
-    - *NATSRestartTimeout*: The maximum time (in seconds) to wait for NATS to restart (default: 10). A NATS restart can for example be necessary when an Agent goes offline or is removed from the DMS.
+   - *NATSRestartTimeout*: The maximum time (in seconds) to wait for NATS to restart (default: 10). A NATS restart can for example be necessary when an Agent goes offline or is removed from the DMS.
 
-3. To modify the setting, right-click it in the table and select *Edit Value*.
+1. To modify the setting, right-click it in the table and select *Edit Value*.
 
-4. Specify the new value and click *OK*.
+1. Specify the new value and click *OK*.
 
 ## Changing the grace period for the SLNetCom Notification thread
 
@@ -615,13 +556,13 @@ If necessary, you can change the duration of this grace period using the SLNetCl
 
 1. Go to *Advanced* > *Options* > *SLNet Options*.
 
-2. In the drop-down box, select *SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin*.
+1. In the drop-down box, select *SLNetCOMNotificationsStackExceedsThresholdGracePeriodInMin*.
 
-3. Right- click the DMA for which you want to edit the grace period and select *Edit value*.
+1. Right- click the DMA for which you want to edit the grace period and select *Edit value*.
 
-4. Specify the new value and click *OK*.
+1. Specify the new value and click *OK*.
 
-5. Click *OK* to close the *SLNet Options* window.
+1. Click *OK* to close the *SLNet Options* window.
 
 ## Specifying credentials for a shared backup path for Elasticsearch
 
@@ -631,8 +572,8 @@ To do so:
 
 1. Go to the *Build Message* tab of the main window.
 
-2. In the *Filter* box, specify *SetElasticBackupPath*. A message ending in *SetElasticBackupPath* should then be selected in the *Message Type* box.
+1. In the *Filter* box, specify *SetElasticBackupPath*. A message ending in *SetElasticBackupPath* should then be selected in the *Message Type* box.
 
-3. Specify the backup path, password and username in the corresponding fields.
+1. Specify the backup path, password and username in the corresponding fields.
 
-4. Click *Send Message*.
+1. Click *Send Message*.
