@@ -19,9 +19,22 @@ uid: D-DOCSIS_parameters_node_segment
 - **DS SCQAM Utilization**: Calculated. The average percentage of DS QAM utilization of CMs linked to the RPD. Calculated based on the DS QAM utilization of channels associated to CMs managed by the RPD.
 - **US ATDMA Utilization**: Calculated. The average percentage of US QAM utilization of CMs linked to the RPD. Calculated based on the US QAM utilization of channels associated to CMs managed by the RPD.
 - **OFDMA Utilization**: Calculated. The average percentage of US OFDM utilization of CMs linked to the RPD. Calculated based on the US OFDM utilization of channels associated to CMs managed by the RPD.
-- **Number L2TPv3 Session in Error**: Calculated. The number of L2TPv3 sessions that are in error. Calculated by counting the number of sessions from RPD depi (retrieved with the call "show cable rpd depi") that do not have the remote state "UP".
-- **Percentage L2TPv3 Session in Error**: Calculated. The percentage of L2TPv3 sessions that are in error. Calculated based on the sessions from RPD depi (retrieved with the call "show cable rpd depi") that do not have the remote state "UP".
-- **Temperature**: The temperature of the RPD. Calculated by scaling the value from the RPD Sensors table.
+
+- **Number L2TPv3 Session in Error**: Calculated. The number of L2TPv3 sessions that are in error.
+
+  Calculated by counting the number of sessions from RPD depi (retrieved with the call "show cable rpd depi") that do not have the remote state "UP".
+
+- **Percentage L2TPv3 Session in Error**: Calculated. The percentage of L2TPv3 sessions that are in error.
+
+  Calculated based on the sessions from RPD depi (retrieved with the call "show cable rpd depi") that do not have the remote state "UP".
+
+- **Temperature**: The temperature of the RPD.
+
+  Calculated by scaling the value from the RPD Sensors table.
+
+  - RPD Sensors table OID: 1.3.6.1.4.1.4491.2.1.30.1.2.2.
+  - Value column OID: 1.3.6.1.4.1.4491.2.1.30.1.2.2.1.4.
+
 - **Destination IF In Utilization**: Calculated. The In (Upstream) Utilization of the external interface(s) connected to the RPD. This is the data that flows from the RPD up to a CIN device (i.e. Layer 2 Switch). Calculated by mapping the In utilization (calculated using the change in input octets) of the external interface(s) connected to the RPD.
 - **Destination IF Out Utilization**: Calculated. The Out (Downstream) Utilization of the external interface(s) connected to the RPD. This is the data that flows from the CIN device (i.e. Layer 2 Switch) to the RPD interface(s). Calculated by mapping the Out utilization (calculated using the change in output octets) of the external interface(s) connected to the RPD.
 - **Number CM OFDM CH 1 Profile 0**: Calculated. The number of CMs linked to the RPD with OFDM CH 1 Current Profile equal to the first profile available (i.e. 0).
@@ -61,7 +74,7 @@ uid: D-DOCSIS_parameters_node_segment
 - **Broadcast Video Interface**: Calculated. The Broadcast Video Interface, calculated by retrieving the core assignment using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
 - **Broadcast Video Service Group**: Calculated. The Broadcast Video Service Group, calculated by retrieving the ports using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
 - **Broadcast Video Controller**: Calculated. The Broadcast Video Controller, calculated by retrieving the templates using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
-- **Broadcast Video DEPI**: Calculated. The Broadcast Video DEPI, calculated using the RPD cores interface to the Nearcast interface to retrieve the address.
+- **Broadcast Video DEPI**: Calculated. The Broadcast Video DEPI, calculated using the RPD cores interface to the Broadcast interface to retrieve the address.
 - **Broadcast Video Controller Profile**: Calculated. The Broadcast Video Controller Profile, calculated by retrieving the templates using Smart PHY RPD data (call: v1/smartphycache/rpd/details/active/1) and mapping this to the RPD.
 - **US AVG Post-FEC**: Calculated. The average of the US AVG Post-FEC for all associated CMs.
 - **US Number Partial Service**: Calculated. The percentage of CMs linked to the RPD that have CMs with US partial service channels. Calculated based on the CMs with US channels in the CM impaired table on the CCAP (OID 1.3.6.1.4.1.9.9.116.1.5.13.1.2).

@@ -1,36 +1,58 @@
 ---
-uid: D-DOCSIS_parameters_hub
+uid: D-DOCSIS_parameters_market
 ---
 
-# D-DOCSIS parameters – Hub
+# D-DOCSIS parameters – Market
 
 ## KPIs & KQIs
 
-- **Total CCAP**: Calculated. The number of CCAPs in the level.
+- **Total CCAP**: Calculated. The total number of CCAPs.
 
-- **Total RPD**: Calculated. The number of RPDs monitored by every CCAP in the level.
+  Sum of the hub statistics from the EPM Hub Overview.
 
-- **Percent RPD Offline**: Calculated. The percentage of RPDs in the level that are offline.
+- **Total RPD**: Calculated. The total number of RPDs.
 
-- **Total CIN Devices**: Calculated. The total number of CIN devices, including Spine (NCS), Core Node (DPA), and Core Leaf (RPA).
+  Sum of the hub statistics from the EPM Hub Overview.
 
-- **Percent CIN Devices Offline**: Calculated. The percentage of CIN devices in the level that are offline.
+- **Percent RPD Offline**: Calculated. The percentage of RPDs that are offline.
 
-- **Total CM**: Calculated. The total number of CMs in every CCAP in the level.
+  Sum of the hub statistics from the EPM Hub Overview.
 
-- **Percent CM Offline**: Calculated. The percentage of CMs that are offline in every CCAP in the level.
+- **Total CIN Devices**: Calculated. The total number of CIN devices.
 
-- **Number Ports Over-Utilized**: Calculated. The total number of ports that are over-utilized in the level.
+  Sum of the hub statistics from the EPM Hub Overview.
 
-- **Percent Ports Over-Utilized**: Calculated. The percentage of ports that are over-utilized in the level.
+- **Percent CIN Devices Offline**: Calculated. The percentage of CIN devices that are offline.
 
-- **Number MTA**: Calculated. The number of Multimedia Terminal Adapters (MTAs) for the level.
+  Sum of the hub statistics from the EPM Hub Overview.
+
+- **Total CM**: Calculated. The total number of cable modem devices.
+
+  Sum of the hub statistics from the EPM Hub Overview.
+
+- **Percent CM Offline**: Calculated. The percentage of cable modem devices that are offline.
+
+  Sum of the hub statistics from the EPM Hub Overview.
+
+- **Number Ports Over-Utilized**: Calculated. The total number of ports that are over-utilized.
+
+  Sum of the hub statistics from the EPM Hub Overview.
+
+- **Percent Ports Over-Utilized**: Calculated. The percentage of ports that are over-utilized.
+
+  Sum of the hub statistics from the EPM Hub Overview.
+
+- **Number MTA: Calculated**. The total number of Multimedia Terminal Adapters (MTAs) for the level.
 
 - **Percentage MTA Offline**: Calculated. The percentage of offline Multimedia Terminal Adapters (MTAs) for the level.
 
 - **Number DSG**: Calculated. The total number of set-top gateways (DSGs) for the level.
 
-- **Percentage DSG Offline**: Calculated. The percentage of offline set-top gateways (DSGs) for the level.
+- **Percentage DSG Offline**: Calculated. The percentage of offline set-top gateways (DSGs) for the level
+
+- **Number CIN Entity**: Calculated. The total number of CIN entities associated with the given market that comply with the function description Core Leaf, Spine, or Node Leaf. The function is found in the specific entity type table (e.g. Spine table).
+
+- **Percentage CIN Entity Offline**: Calculated. The percentage of CIN entities associated with the given market reporting a connection status equal to "Unreachable".
 
 - **Last Updated**: Calculated. The last time an update was completed.
 
@@ -42,35 +64,35 @@ uid: D-DOCSIS_parameters_hub
 
 - **Name**: Converted. The fiber node name.
 
-  This is the node status table index converted to ASCII format.
+  This is the Node Status table index converted to ASCII characters.
 
   Node Status table OID: 1.3.6.1.4.1.4491.2.1.20.1.12.
 
-- **Number CM**: Calculated. The total number of CMs in the level.
+- **Number CM**: Calculated. The number of CMs in the level.
 
-  This is the sum of the number of CMs from the node segments.
+  This is the sum of the number of CMs from node segments.
 
-- **Number CM Offline**: Calculated. The total number of offline CMs from the node segments in the level.
+- **Number CM Offline**: Calculated. The number of CMs that are offline in the level.
 
   This is the sum of the number of offline CMs from node segments.
 
 - **DS QAM Utilization**: Calculated. The DS QAM utilization of the fiber node.
 
-  This is the average of the DS QAM utilization of the node segments of the fiber node.
+  This is the sum of the DS QAM utilization of the fiber node from the node segments.
 
 - **US QAM Utilization**: Calculated. The US QAM utilization of the fiber node.
 
-  This is the average of the US QAM utilization of the node segments of the fiber node.
+  This is the sum of the US QAM utilization of the fiber node from the node segments.
 
 - **DS OFDM Utilization**: Calculated. The DS OFDM utilization of the fiber node.
 
-  This is the average of the DS OFDM utilization of the node segments of the fiber node.
+  This is the sum of the DS OFDM utilization of the fiber node from the node segments.
 
 - **US OFDMA Utilization**: Calculated. The US OFDMA utilization of the fiber node.
 
-  This is the average of the US OFDMA utilization of the node segments of the fiber node.
+  This is the sum of the US OFDMA utilization of the fiber node from the node segments.
 
-- **Number RPD**: Calculated. The number of RPDs using the fiber node.
+- **Number RPD**: Calculated. The number of RPDs utilizing the fiber node.
 
   This is the sum of the number of node segments associated with the fiber node ID.
 

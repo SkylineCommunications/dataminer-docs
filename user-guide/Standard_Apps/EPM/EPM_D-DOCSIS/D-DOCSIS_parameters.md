@@ -7,7 +7,7 @@ uid: D-DOCSIS_parameters
 This section lists the available parameters for each topology level in the D-DOCSIS branch of the EPM Solution.
 
 - [Network](xref:D-DOCSIS_parameters_network)
-- Market (TBD)
+- [Market](xref:D-DOCSIS_parameters_market)
 - [Hub](xref:D-DOCSIS_parameters_hub)
 - [CCAP Core](xref:D-DOCSIS_parameters_ccap_core)
 - [RPD](xref:D-DOCSIS_parameters_rpd)

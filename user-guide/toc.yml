@@ -2152,6 +2152,8 @@
               items:
                 - name: Network
                   topicUid: D-DOCSIS_parameters_network
+                - name: Market
+                  topicUid: D-DOCSIS_parameters_market
                 - name: Hub
                   topicUid: D-DOCSIS_parameters_hub
                 - name: CCAP Core

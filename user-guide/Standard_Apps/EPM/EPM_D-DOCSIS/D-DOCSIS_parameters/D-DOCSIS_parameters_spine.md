@@ -33,7 +33,10 @@ uid: D-DOCSIS_parameters_spine
   - Fail: No neighbors are found.
   - OK: At least one neighbor is found.
 
-- **Last Updated**: Calculated. The last time the CLI was updated. This is updated to the current time after the CLI finishes polling.
+- **Last Updated**: Calculated. The last time the CLI was updated.
+
+  This is updated to the current time after the CLI finishes polling.
+
 - **Status**: Calculated. Indication of whether the protocol is actively polling the CLI interface. This is updated to the current status of CLI polling.
 
 ## System parameters
