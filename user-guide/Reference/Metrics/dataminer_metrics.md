@@ -59,7 +59,7 @@ All specifications are provided based on the assumption that DMAs are running on
 - [Failover benchmarks](xref:failover_benchmarks)
 - [History set benchmarks](xref:history_set_benchmarks)
 - [Mobile Gateway benchmarks](xref:mobile_gateway_benchmarks)
-- [NATS Benchmarks](xref:nats_benchmarks)
+- [NATS benchmarks](xref:nats_benchmarks)
 - [Parameter set benchmarks](xref:parameter_set_benchmarks)
 - [Pattern matching benchmarks](xref:pattern_matching_benchmarks)
 - [Profile Manager benchmarks](xref:profile_manager_benchmarks)
