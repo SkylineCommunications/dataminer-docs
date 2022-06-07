@@ -100,6 +100,9 @@ To have separate SLScripting processes created for every protocol being used, do
    </DataMiner>
    ```
 
+   > [!NOTE]
+   > If scriptingProcesses is set to "protocol", an SLScripting process is initialized for every SLProtocol process (see [Configuring a separate SLScripting process for each SLProtocol process](#configuring-a-separate-slscripting-process-for-each-slprotocol-process)). As an SLProtocol process is used for every protocol when protocolProcesses is set to "protocol", combining these two attributes effectively initializes a separate SLScripting process for every protocol.
+
 1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
 
 1. Restart the DataMiner software.
@@ -193,6 +196,35 @@ To do so:
   ...
 </DataMiner>
 ```
+
+## Setting the number of simultaneously running SLScripting processes
+
+From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScripting processes can be set in the *\<ProcessOptions>* tag of the *DataMiner.xml* file.
+
+1. Stop the DataMiner software.
+
+1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+1. In the *\<ProcessOptions>* tag, set the *scriptingProcesses* attribute to the desired number. For example:
+
+   ```xml
+   <DataMiner>
+     <ProcessOptions protocolProcesses="5" scriptingProcesses="3" />
+   </DataMiner>
+   ```
+
+1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+1. Restart the DataMiner software.
+
+> [!NOTE]
+> The SLProtocol processes will be assigned one of the available SLScripting processes in a round-robin way. For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3:
+>
+> - SLScripting 1 will host SLProtocol #1 and #4
+> - SLScripting 2 will host SLProtocol #2 and #5
+> - SLScripting 3 will host SLProtocol #3
+>
+> Assigning more SLScripting processes than SLProtocol processes will give every SLProtocol process its own instance without launching additional SLScripting processes.
 
 ## Running SLScripting as a service
 
