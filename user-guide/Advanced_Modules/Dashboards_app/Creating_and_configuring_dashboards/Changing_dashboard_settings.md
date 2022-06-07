@@ -6,7 +6,7 @@ uid: Changing_dashboard_settings
 
 1. Select the dashboard in the list pane.
 
-1. In the dashboard header bar, click the pencil icon.
+1. In the dashboard header bar, click the pencil icon to start editing.
 
 1. Without selecting any of the dashboard components, go to the settings tab on the right.
 
@@ -17,6 +17,8 @@ uid: Changing_dashboard_settings
    - *Use dynamic units*: Available from DataMiner 10.0.11 onwards. This option determines whether parameter units will change dynamically based on their value and protocol definition, in components where this is supported.
 
    - *Allow components to shift*: This option determines whether components will move to make room for a component that is dragged across the dashboard. If the option is not selected, the position of the components becomes fixed.
+
+   - *Fit to view*: Available from DataMiner 10.2.7/10.3.0 onwards. Select this option to make sure all components are automatically adjusted to always be fully visible, so the user does not need to scroll.
 
    - *Number of columns*: Available from DataMiner 10.0.10 onwards. Allows you to configure in how many columns components can be displayed in the dashboard (maximum: 50). If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary.
 
@@ -36,4 +38,7 @@ uid: Changing_dashboard_settings
 
    - *Slow polling timer*: The polling interval (in s) for components that do not display real-time information.
 
-1. Close edit mode by clicking the “x” in the top-right corner of the dashboard.
+1. Click the pencil icon again to leave edit mode.
+
+> [!NOTE]
+> The settings for a page or panel of a custom low-code app can be configured in the same way as those for a dashboard. See [Configuring custom applications](xref:Configuring_custom_apps).
