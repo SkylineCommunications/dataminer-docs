@@ -59,7 +59,7 @@ Once all the necessary data has been collected, it needs to be imported in the d
 1. Click the *Import file(s)* button and select the files that were generated in the previous step. It is possible to select multiple files at the same time.
 
    > [!NOTE]
-   > Until the import is finished, the UI will freeze. The import operation may take some time, depending on the size of your file. To get an idea of the import progress, you can execute a select count(\*) … query on your table (if you know the number of rows that need to be imported).
+   > The import operation may take some time, depending on the size of your file. From DataMiner 10.2.7/10.3.0 onwards, a progress bar is displayed. In older versions of this tool, the UI will freeze until the import is finished. To get an idea of the import progress in that case, you can execute a select count(\*) … query on your table (if you know the number of rows that need to be imported).
 
 The following sections will explain the structure of the tables in both databases. They are quite similar.
 
