@@ -9,9 +9,10 @@ You can consume NuGet packages in your Visual Studio protocol or Automation scri
 When DIS compiles the Automation script or protocol, it will extract the required DLLs from the NuGets and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, those folders with DLLs need to be placed in the *Skyline DataMiner/ProtocolScripts/DllImport* folder.
 
 > [!NOTE]
-> Support for subfolders in the ProtocolScripts folder has been introduced in DataMiner 9.6.12 (RN 23565).
-> The notion of the DllImport subfolder of ProtocolScripts has only been introduced in DataMiner 10.0.10 (RN 26605). This means that prior to DataMiner 10.0.10, only the Files and ProtocolScripts folder were used as hint paths. For example, when you have e.g. the following QAction@dllImport value "slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll", it will try to find the assembly at the following location: C:\Skyline DataMiner\ProtocolScripts\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll".
-> Starting from DataMiner 10.0.10, the ProtocolScripts\DllImport folder has been added as an additional hint path (which is probed before the Files and ProtocolScripts folders). For the previous example, this means the following path would be tried first:  "C:\Skyline DataMiner\ProtocolScripts\DllImport\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll".
+> Support for subfolders in the ProtocolScripts folder is introduced in DataMiner 9.6.12 (RN 23565). However, the DllImport subfolder of the ProtocolScripts folder is  only introduced in DataMiner 10.0.10 (RN 26605).
+> 
+> This means that prior to DataMiner 10.0.10, only the Files and ProtocolScripts folder are used as hint paths. For example, when you have the QAction@dllImport value `slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`, DataMiner will try to find the assembly in the location `C:\Skyline DataMiner\ProtocolScripts\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`. 
+> Starting from DataMiner 10.0.10, the ProtocolScripts\\DllImport folder is added as an additional hint path (which is probed before the Files and ProtocolScripts folders). For the previous example, this means the following path will be tried first:  `C:\Skyline DataMiner\ProtocolScripts\DllImport\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`.
 >
 > Also note that only from DataMiner 10.0.10 onwards, subfolder paths for assemblies in a .dmprotocol package will be preserved during installation. This means that prior to DataMiner 10.0.10, you have to put the DLLs in the correct subfolder manually if a subfolder structure should be used.
 
