@@ -10,7 +10,7 @@ uid: D-DOCSIS_parameters_rpd
 
   Calculated by counting the number of CMs connected to the RPD.
 
-- **Percentage CM Offline**: Calculated. The percentage of CMs linked to the RPD that are offline.
+- **Percentage CM Offline**: Calculated. The percentage of offline CMs linked to the RPD.
 
 - **Percentage CM DS Partial Service**: Calculated. The percentage of CMs linked to the RPD that have CMs with DS partial service channels.
 
@@ -359,11 +359,11 @@ uid: D-DOCSIS_parameters_rpd
 
 - **Sessions**: Direct value. The RPD DEPI sessions table.
 
-  Call: show cable rpd depi.
+  Retrieved using the call "show cable rpd depi".
 
 - **RPD Tunnel Summary**: Direct value. The RPD Sessions Tunnel summary.
 
-  Retrieved by the RPD Tunnel Summary table from CLI (call: show cable rpd depi).
+  Retrieved from the RPD Tunnel Summary table from CLI (call: show cable rpd depi).
 
 - **Latitude**: Direct value. The RPD latitude.
 

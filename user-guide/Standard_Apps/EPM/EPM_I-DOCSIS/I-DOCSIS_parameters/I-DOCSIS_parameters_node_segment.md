@@ -74,7 +74,7 @@ uid: I-DOCSIS_parameters_node_segment
 
 ## System parameters
 
-- **Name \[IDX]**: Direct value. The display name of the node segment. 
+- **Name \[IDX]**: Direct value. The display name of the node segment.
 
   Concatenation of the CMTS name and the unique combination of a DS port and US port, using "/" as a separator. This entity is dynamically created by the connector logic from the perspective of the I-DOCSIS service. There will be a node segment every time the connector detects a unique US/DS port combination serving at least one cable modem.
 

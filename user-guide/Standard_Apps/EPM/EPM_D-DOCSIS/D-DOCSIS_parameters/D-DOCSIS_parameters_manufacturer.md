@@ -7,8 +7,11 @@ uid: D-DOCSIS_parameters_manufacturer
 ## KPIs & KQIs
 
 - **Number CM: Calculated**. The number of CMs for the given manufacturer.
+
 - **Number CM Online**: Calculated. The number of CMs online for the given manufacturer.
+
 - **Number CM Offline**: Calculated. The number of CMs offline for the given manufacturer.
+
 - **Percentage CM Offline**: Calculated. The percentage of CMs offline for the given manufacturer.
 
 ## System parameters

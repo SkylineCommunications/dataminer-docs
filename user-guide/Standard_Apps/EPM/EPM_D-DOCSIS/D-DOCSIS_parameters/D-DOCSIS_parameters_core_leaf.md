@@ -6,33 +6,70 @@ uid: D-DOCSIS_parameters_core_leaf
 
 ## KPIs & KQIs
 
-- **Number IF Down**: Calculated. The number of interfaces that were once known to be up to DataMiner, but which are currently down. Calculated by counting the number of qualifying DCF Interfaces with Operational Status equal to Down.
-- **Number IF Over-Utilized**: Calculated. The number of interfaces that are over-utilized according to the Utilization Threshold configuration. Calculated by counting the number of DCF interfaces above the utilization threshold.
-- **Number IF with Errors**: Calculated. The number of interfaces with 1 or more errors (In/Out). Calculated by counting the number of DCF interfaces with errors.
-- **Number CCAP Unreachable**: Calculated. The number of CCAP cores that are unreachable to the core leaf. The calculation is based on the implicated IF interfaces operational statuses, which can be UP (Unreachable) or Down (Reachable). A CCAP is considered unreachable if there is not at least one pair of interfaces with Operation Status equal to UP allowing for a connection between the core leaf and the CCAP.
-- **Redundancy**: Calculated. The redundancy configuration of the entity. Calculated by retrieving the redundancy value (MIB OID: 1.3.6.1.4.1.2636.3.1.14.1.7) of the first entry in the Redundancy table (MIB OID: 1.3.6.1.4.1.2636.3.1.14).
-- **CPU Utilization**: Direct value. The CPU utilization percentage of the flexible PIC concentrator. MIB OID 1.3.6.1.4.1.2636.3.1.13.1.8.*.
-- **Memory Utilization**: Direct value. The percentage of kernel memory used for this subject. MIB OID 1.3.6.1.4.1.2636.3.1.13.1.11.*.
-- **Temperature**: Direct value. The temperature sensors values. Retrieved from the Sensors/Operation Overview table. MIB OID 1.3.6.1.4.1.2636.3.1.13.
+- **Number IF Down**: Calculated. The number of interfaces that were once known to be up to DataMiner, but which are currently down.
+
+  Calculated by counting the number of qualifying DCF Interfaces with Operational Status equal to Down.
+
+  - Interface table OID: 1.3.6.1.2.1.2.2.
+  - Operational Status OID: 1.3.6.1.2.1.2.2.1.8.
+
+- **Number IF Over-Utilized**: Calculated. The number of interfaces that are over-utilized according to the utilization threshold configuration.
+
+  Calculated by counting the number of DCF interfaces above the utilization threshold.
+
+  - In utilization calculated from In octets OID 1.3.6.1.2.1.2.2.1.10.
+  - Out utilization calculated from out octets OID 1.3.6.1.2.1.2.2.1.16.
+  - The total utilization is the average of the in and out utilization.
+
+- **Number IF with Errors**: Calculated. The number of interfaces with 1 or more errors (In/Out).
+
+  Calculated by counting the number of DCF interfaces with errors.
+
+  - Input Errors OID: 1.3.6.1.2.1.2.2.1.14.
+  - Output Errors OID: 1.3.6.1.2.1.2.2.1.20.
+
+- **Number CCAP Unreachable**: Calculated. The number of CCAP cores that are unreachable to the core leaf.
+
+  The calculation is based on the implicated IF interfaces operational statuses, which can be UP (Unreachable) or Down (Reachable). A CCAP is considered unreachable if there is not at least one pair of interfaces with Operation Status equal to UP allowing for a connection between the core leaf and the CCAP.
+
+  - Interface table OID: 1.3.6.1.2.1.2.2.
+  - Operational Status OID: 1.3.6.1.2.1.2.2.1.8.
+
+- **Redundancy**: Calculated. The redundancy configuration of the entity.
+
+  Calculated by retrieving the redundancy value (MIB OID: 1.3.6.1.4.1.2636.3.1.14.1.7) of the first entry in the Redundancy table (MIB OID: 1.3.6.1.4.1.2636.3.1.14).
+
+- **CPU Utilization**: Direct value. The CPU utilization percentage of the flexible PIC concentrator.
+
+  MIB OID: 1.3.6.1.4.1.2636.3.1.13.1.8.*.
+
+- **Memory Utilization**: Direct value. The percentage of kernel memory used for this subject.
+
+  MIB OID: 1.3.6.1.4.1.2636.3.1.13.1.11.*.
+
+- **Temperature**: Direct value. The temperature sensors values.
+
+  Retrieved from the Sensors/Operation Overview table. MIB OID 1.3.6.1.4.1.2636.3.1.13.
+
 - **BGP Status: Calculated**. The global status of the Border Gateway Protocol (BGP) interfaces:
 
-  - Fail: At least one entry in the State column (BGP M2 Peers table) is empty.
-  - OK: All entries in the State column (BGP M2 Peers table) are populated.
+  - *Fail*: At least one entry in the State column (BGP M2 Peers table) is empty.
+  - *OK*: All entries in the State column (BGP M2 Peers table) are populated.
 
 - **ISIS Neighbors Status**: Calculated. The global status of the Intermediate System to Intermediate System Protocol (ISIS) Neighbors interfaces:
 
-  - Fail: At least one entry in the State column (ISIS Neighbors table) has a value other than "Enabled".
-  - OK: All entries in the State column (ISIS Neighbors table) are equal to "Enabled".
+  - *Fail*: At least one entry in the State column (ISIS Neighbors table) has a value other than "Enabled".
+  - *OK*: All entries in the State column (ISIS Neighbors table) are equal to "Enabled".
 
 - **PIM Neighbors Status**: Calculated. The global status of the Protocol-Independent Multicast (PIM) Neighbors interfaces:
 
-  - Fail: No neighbors are found, which means that the PIM Neighbors table will be empty.
-  - OK: At least one neighbor is found in the PIM Neighbors table.
+  - *Fail*: No neighbors are found, which means that the PIM Neighbors table will be empty.
+  - *OK*: At least one neighbor is found in the PIM Neighbors table.
 
 - **MLD Status**: Calculated. The global status of the Multicast Listener Discovery (MLD) Neighbors:
 
-  - Fail: No neighbors are found, which means that the MLD Neighbors table will be empty
-  - OK: At least one neighbor is found in the MLD Neighbors table.
+  - *Fail*: No neighbors are found, which means that the MLD Neighbors table will be empty
+  - *OK*: At least one neighbor is found in the MLD Neighbors table.
 
 - **Last Updated**: Calculated. The last time the CLI was updated.
 
