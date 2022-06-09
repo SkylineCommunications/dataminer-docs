@@ -64,7 +64,7 @@ The pipeline will only continue if exactly one solution file has been detected i
 
 ## Validate solution
 
-This step verifies whether the Automation script(s) have C# code blocks. If not, the SonarQube stage will be skipped.
+This step verifies whether there are C# code blocks in the Automation script(s). If not, the SonarQube stage will be skipped.
 
 ## Validate tag
 
