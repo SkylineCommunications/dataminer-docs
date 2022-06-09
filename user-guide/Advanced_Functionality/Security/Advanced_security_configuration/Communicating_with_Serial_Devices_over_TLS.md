@@ -1,10 +1,10 @@
 ---
-uid: Enabling_TLS_encryption
+uid: Communicating_with_Serial_Devices_over_TLS
 ---
 
-# Enabling TLS encryption
+# Communicating with Serial Devices over TLS
 
-From DataMiner 10.0.2 onwards, it is possible to enable TLS encryption on a DMA. When this is done, SSL/TLS encryption can be enabled when a TCP/IP element is created or edited.
+From DataMiner 10.0.2 onwards, it is possible to enable TLS on elements that behave as a server (e.g. Smart Serial). When this is enabled, SSL/TLS encryption can be enabled when a TCP/IP element is created or edited.
 
 To enable TLS encryption, do the following on every DMA in the DMS that is to contain such elements:
 
@@ -34,8 +34,3 @@ To enable TLS encryption, do the following on every DMA in the DMS that is to co
 > - PFX files are not synchronized among the DMAs in a cluster.
 > - If you replace a PKCS12 file on a DataMiner Agent, all elements using the TCP/IP port in question must be stopped and restarted for the changes to take effect.
 > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
-
-> [!TIP]
-> See also:
-> - [Enabling TLS on the Cassandra database connection](xref:DB_xml#enabling-tls-on-the-cassandra-database-connection)
-> - [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/) on Dojo
