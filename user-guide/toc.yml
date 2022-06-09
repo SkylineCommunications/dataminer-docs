@@ -28,6 +28,8 @@
                 topicUID: Configuring_Internet_Explorer_to_run_DataMiner_Cube
               - name: Installing the Skyline certificates
                 topicUID: Installing_the_Skyline_certificates
+              - name: DataMiner Cube deployment methods
+                topicUID: DataMiner_Cube_deployment_methods
             - name: Opening DataMiner Cube
               topicUid: Opening_DataMiner_Cube
             - name: Logging on to DataMiner Cube
