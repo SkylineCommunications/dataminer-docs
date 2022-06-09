@@ -95,9 +95,9 @@ Begin by checking and applying everything to meet the DataMiner, DIS, protocol a
 Now there are 4 steps for development:
 
 1. Creating an API with messages that define the data you want to share.
-1. Creating executors that define how to process a message.
-1. Parsing a received call.
-1. Sending a call.
+2. Creating executors that define how to process a message.
+3. Parsing a received call.
+4. Sending a call.
 
 ### Creating an API
 
@@ -107,7 +107,7 @@ The first step is to create your API, with the classes that will represent your 
 - Creating the API in a precompile QAction and copying it to where you need it.
 
 > [!NOTE]
-> The API with classes of type Message must be inside a precompile QAction and any namespaces you use have to be the same in the source and destination.
+> Namespaces you use have to be the same in the source and destination. It is strongly recommended to create the API in a separate custom solution and use NuGet Dlls or Class Library Code Generation.
 
 The InterApp framework allows a lot of freedom in the creation of the message classes. The default internal serializer was created to be able to handle almost anything: custom classes, inheritance, abstraction, interfaces, private fields, public properties, objects, etc. There is no need to worry about any JSON properties, or anything to do with how it serializes in the background. Just create the classes as you see fit. Any class that you want to define as a possible message you simply inherit from the InterAppCalls.CallSingle.Message class.
 
@@ -142,8 +142,6 @@ A few common examples:
 
 You create it by making a new class that inherits from the MessageExecutor\<T\>, where T is a class from your messages defined in the API.
 
-There must be a one-to-one relationship. Linking is handled by correctly inheriting.
-
 > [!NOTE]
 > The API with classes of type Executor must be inside a precompile QAction.
 
@@ -158,11 +156,11 @@ The Visual Studio IDE will then assist you in correctly implementing your execut
 The executor has several methods that will by default be called when a message is executed (in the specified order):
 
 1. DataGets (always)
-1. Parse (always)
-1. Validate (always)
-1. Modify (if validate was true)
-1. DataSets (if validate was true)
-1. CreateReturnMessage (always)
+2. Parse (always)
+3. Validate (always)
+4. Modify (if validate was true)
+5. DataSets (if validate was true)
+6. CreateReturnMessage (always)
 
 Default execute code (happens in background):
 
@@ -239,20 +237,57 @@ You get the raw value from the parameter and you use the InterAppCallFactory to 
 
 ```csharp
 string raw = Convert.ToString(protocol.GetParameter(protocol.GetTriggerParameter()));
-
-IInterAppCall receivedCall = InterAppCallFactory.CreateFromRaw(raw);
+List<Type> knownTypes = new List<Type> {typeof(Chain), typeof(Product)};
+IInterAppCall receivedCall = InterAppCallFactory.CreateFromRaw(raw, knownTypes);
 ```
+> [!IMPORTANT]
+> It is not possible to receive both single messages and InterApp calls on the same parameter. We recommend to just stick to the InterApp call.
 
-Now you loop through all the messages in this call and call the TryExecute.
+From Class Library versions 1.2.2.1/1.1.4.1 and higher internal reflection code was removed to support te use of NuGets.
+This has made the use of KnownTypes mandatory.
 
 ```csharp
+List<Type> knownTypes = new List<Type> { typeof(DeleteLineup),typeof(DeleteLineupResult)};
+```
+
+> [!IMPORTANT]
+> The list must be the same at the sender and the receiver side and that it should contain every single class in your API
+
+It is for example not supported to have Protocol A have (Type1, Type2, Type3) as KnownTypes members while Automation script B only has members (Type1, Type2).
+If this rule is broken, it can lead to situations where the serialization will define "ChildClass" as the Type whereas the deserialization expects "NameSpace.ChildClass".
+
+> [!TIP]
+> It's recommended to add the knownTypes as a public static list inside of a custom solution where all your Messages are written to avoid having to copy paste and maintain them from several locations.
+
+You can use the class library SerializerFactory to create the InterAppSerializer with the list of types.
+
+```csharp
+var customSerializer = SerializerFactory.CreateInterAppSerializer(typeof(Message), knownTypes);
+```
+
+Pass this serializer along to all your methods that need it (see Custom serializer).
+
+### Executor triggering
+
+From Class Library versions 1.2.2.1/1.1.4.1 and higher internal reflection code was removed to support te use of NuGets.
+This has made the use of a message to executor Dictionary mandatory.
+
+The Execute methods take a dictionary where you provide the mapping.
+The key of the dictionary is the message type. The value of the dictionary is the executor type.
+
+```csharp
+Dictionary<Type, Type> msgToExecutor = new Dictionary<Type, Type>
+{
+    {typeof(DeleteLineup),typeof(DeleteLineupExecutor)}
+};
+
 List<Message> returnMessages = new List<Message>();
 
 foreach (var message in receivedCall.Messages)
 {
     Message returnMessage;
     
-    message.TryExecute (protocol, protocol, out returnMessage);
+    message.TryExecute (protocol, protocol, msgToExecutor, out returnMessage);
 
     if (returnMessage != null)
     {
@@ -264,37 +299,13 @@ foreach (var message in receivedCall.Messages)
 This will look in the background for the executor matching the received response and then perform the following methods (in the specified order):
 
 1. DataGets (always)
-1. Parse (always)
-1. Validate (always)
-1. Modify (if validate was true)
-1. DataSets (if validate was true)
-
-
-### CreateReturnMessage (always)
-
-The dataSource object is used for the DataGets.
-
-The dataDestination object is used for the DataSets.
-
-The out optionalReturnMessage is created in CreateReturnMessage
-
-If your setup will only be sending a single message at a time, you could also opt to work with the Message class directly instead of the InterAppCall. Then your QAction must use the MessageFactory instead of the InterAppFactory.
-
-```csharp
-string raw = Convert.ToString(protocol.GetParameter(protocol.GetTriggerParameter()));
-
-Message receivedMsg = MessageFactory.CreateFromRaw(raw);
-
-if(receivedMsg != null)
-{
-    Message optionalReturn;
-
-    receivedMsg.TryExecute(protocol, protocol, out optionalReturn);
-}
-```
+2. Parse (always)
+3. Validate (always)
+4. Modify (if validate was true)
+5. DataSets (if validate was true)
 
 > [!IMPORTANT]
-> It is not possible to receive both single messages and InterApp calls on the same parameter. We recommend to just stick to the InterApp call.
+> Essential information required for user success: Any change to the API and added executors need to be synced with the message to executor dictionary.
 
 ### Sending a call without expected return
 
@@ -319,7 +330,7 @@ myCommands.Messages.Add(deleteCmd);
 Then send the call to the right parameter in the system.
 
 ```csharp
-myCommands.Send(protocol.SLNet.RawConnection, 152, 22, 9000000);
+myCommands.Send(protocol.SLNet.RawConnection, 152, 22, 9000000, knownTypes);
 ```
 
 You pass along the SLNet RawConnection, the DataMiner ID, the element ID and the receiver parameter ID, which should by default be 9 million.
@@ -330,7 +341,7 @@ The full code is therefore:
 IInterAppCall myCommands = InterAppCallFactory.CreateNew();
 DeleteLineup deleteCmd = new DeleteLineup { LineupId = "tableKey" };
 myCommands.Messages.Add(deleteCmd);
-myCommands.Send(protocol.SLNet.RawConnection, 152, 22, 9000000);
+myCommands.Send(protocol.SLNet.RawConnection, 152, 22, 9000000, knownTypes);
 ```
 
 ### Sending a call with expected return
@@ -362,7 +373,7 @@ myCommands.Messages.Add(deleteCmd);
 Then send the call to the right parameter in the system and include a timeout timespan. Note that this now returns an IEnumerable\<Message\> that will provide you with the returned message of each command you sent in the InterApp as they come back.
 
 ```csharp
-var responses = myCommands.Send(protocol.SLNet.RawConnection, 152, 22, 9000000, new TimeSpan(0, 1, 0));
+var responses = myCommands.Send(protocol.SLNet.RawConnection, 152, 22, 9000000, new TimeSpan(0, 1, 0), knownTypes);
 ```
 
 You pass along the SLNet RawConnection, the DataMiner ID, the element ID and the receiver parameter ID, which should by default be 9 million.
@@ -376,7 +387,7 @@ foreach (Message returnedMsg in responses)
 {
     Message optionalReturn;
 
-    returnedMsg.TryExecute(protocol, protocol, out optionalReturn);
+    returnedMsg.TryExecute(protocol, protocol, msgToExecutor, out optionalReturn);
 }
 ```
 
@@ -388,12 +399,12 @@ myCommands.ReturnAddress = new ReturnAddress(152, 22, 9000001);
 DeleteLineup deleteCmd = new DeleteLineup { LineupId = "tableKey" };
 myCommands.Messages.Add(deleteCmd);
 
-var responses = myCommands.Send(protocol.SLNet.RawConnection, 152, 22, 9000000, new TimeSpan(0, 1, 0));
+var responses = myCommands.Send(protocol.SLNet.RawConnection, 152, 22, 9000000, new TimeSpan(0, 1, 0), knownTypes);
 
 foreach (Message returnedMsg in responses)
 {
     Message optionalReturn;
-    returnedMsg.TryExecute(protocol, protocol, out optionalReturn);
+    returnedMsg.TryExecute(protocol, protocol, msgToExecutor, out optionalReturn);
 }
 ```
 
@@ -415,16 +426,11 @@ deleteReply.Send(
   protocol.SLNet.RawConnection,
   receivedMessage.ReturnAddress.AgentId,
   receivedMessage.ReturnAddress.ElementId,
-  receivedMessage.ReturnAddress.ParameterId);
+  receivedMessage.ReturnAddress.ParameterId,
+  knownTypes);
 ```
 
 ## Tweaking the system
-
-The basic functionality described above is very flexible and easy to maintain. It does come with some downsides in terms of speed. In a busy system, you can expect around 200 to 500 ms for a single message and its reply (without any additional device or protocol logic).
-
-In most cases, this should not be a big issue. Most of this time is handled in SLScripting and should not affect SLNet, SLProtocol, SLElement, SLDataGateway or any of the other DataMiner services. This timing is mostly due to the flexible nature of the internal serializer and the lookup mechanics to find the correct executor.
-
-However, if the speed of the communication is very important to your project, there are some tweaks you can do. These will come at the cost of increasing code maintenance, though. Using the techniques described in this topic, you can reduce the total speed to less than 50 ms.
 
 The current recommendation is to use the default functionality and only look into the tweaks below if they are a specific requirement of your project.
 
@@ -435,45 +441,3 @@ The InterAppCall library uses a special serializer that was deliberately tweaked
 Any factory method that creates an InterApp call or Message, and any method to send the InterApp or message has an overload that takes a class implementing the Library.Common.Serializing.ISerializer interface.
 
 This interface requires one method to serialize and one method to deserialize. You can create your own logic to do this and provide this to your methods and it will override the internal serializer with your own logic.
-
-### Known types
-
-There is a way to keep using the internal serializer but remove the slowest parts of the code by providing a list of all the known types within your API.
-
-```csharp
-List<Type> knownTypes = new List<Type> { typeof(DeleteLineup),typeof(DeleteLineupResult)};
-```
-
-> [!IMPORTANT]
-> It is extremely important that this list is the same at the sender and the receiver side and that it contains every single class in your API (I.e. it is for example not supported to have Protocol A have (Type1, Type2, Type3) as KnownTypes members while Automation script B only has members (Type1, Type2). If this rule is broken, it can lead to situations where the serialization will define "ChildClass" as the Type whereas the deserialization expects "NameSpace.ChildClass".). Although this adds a lot of additional maintenance, the speed increases are significant if it is done correctly.
-
-You can use the class library SerializerFactory to create the InterAppSerializer with the list of types.
-
-```csharp
-var customSerializer = SerializerFactory.CreateInterAppSerializer(typeof(Message), knownTypes);
-```
-
-Pass this serializer along to all your methods that need it (see Custom serializer).
-
-### Executor lookup
-
-Finding the right executor for the right message can also be a costly operation. The Execute methods have an overload that can take a dictionary where you provide the mapping yourself.
-
-The key of the dictionary is the message type. The value of the dictionary is the executor type.
-
-```csharp
-Dictionary<Type, Type> msgToExecutor = new Dictionary<Type, Type>
-{
-    {typeof(DeleteLineup),typeof(DeleteLineupExecutor)}
-};
-```
-
-If this is provided to the Execute method, the provided mapping will then be used to find the right executor, which can speed up the code.
-
-```csharp
-Message optionalReturn;
-Message.TryExecute(protocol, protocol, msgToExecutor, out optionalReturn);
-```
-
-> [!IMPORTANT]
-> Essential information required for user successAny change to the API and added executors need to be synced with this dictionary.

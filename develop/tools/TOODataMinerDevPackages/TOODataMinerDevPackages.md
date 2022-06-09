@@ -39,6 +39,23 @@ The "DataMiner Integration Studio" Visual Studio extension is required for devel
 
 See [Installing DataMiner Integration Studio](https://aka.dataminer.services/DisInstallation)
 
+> [!IMPORTANT]
+> DevPacks can have unstable behavior when installed with PackageReferences due to an open bug for NuGet (https://github.com/NuGet/Home/issues/3830).
+> To avoid problems it's mandatory to make sure all your nugets are installed using packages.config.
+
+> [!TIP]
+> You can verify that by searching your solution *.csproj files for PackageReference and finding zero hits.
+
+![alt text](../../../images/DevPack_PackageReferenceMistake.png "PackageReferenceSearch")
+
+If you do find hits, you'll have to migrate the solution to packages.config:
+
+- In the NuGet Package Manager, note down all current installed packages and their versions.
+- Uninstall every NuGet
+- Verify Visual Studio Options\NuGet Package Manager\General\Default package management format is set to Packages.config
+- Close Visual Studio
+- Open Visual Studio and install all NuGets again, as Packages.Config.
+
 ## Versioning
 
 Versioning scheme:

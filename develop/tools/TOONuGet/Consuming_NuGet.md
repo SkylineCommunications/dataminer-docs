@@ -21,9 +21,6 @@ DIS and CI/CD support NuGets of the following types:
 - PackageReference
 - Packages.config
 
-> [!IMPORTANT]
-> If you encounter issues with NuGets and building solutions locally, this is often related to the maximum path length of 260 characters in Windows. See [Fixing issues related to the path length](#fixing-issues-related-to-the-path-length)
-
 Within Skyline, we have an internal NuGet store (<http://devcore3:81/nuget>) where Skyline employees can produce and consume private libraries. You will need to add this store in the Visual Studio options to use it.
 
 ## Using the Class Library as a NuGet
@@ -53,29 +50,4 @@ A NuGet with direct communication will circumvent the use of DataMiner processes
 
 - Communication will be hidden from the Stream Viewer.
 
-- Unless this is taken into account during development, there will be no element timeouts when communication is lsot.
-
-## Fixing issues related to the path length
-
-Issues with NuGets and building solutions locally are often related to the maximum path length of 260 characters in Windows. This usually results in exceptions mentioning not finding part of the path.
-
-To fix this:
-
-- Use *PackageReferences* for your NuGets:
-
-  1. In the Visual Studio menu bar, select *Debug* > *Options*
-  1. In the Options window, search for "NuGet".
-  1. Set *Default package management format* to *PackageReferences*.
-  1. Uninstall all your NuGets and close your Visual Studio solution.
-  1. Open your solution, install all the NuGets again, and select *PackageReferences* when prompted.
-
-- Adjust `%userprofile%\AppData\Roaming\NuGet\NuGet.Config`, by adding or updating the following tag:
-
-  ```xml
-  <configuration>
-    ...
-     <config>
-        <add key="globalPackagesFolder" value="c:\pfpr" />
-     </config>
-  </configuration>
-  ```
+- Unless this is taken into account during development, there will be no element timeouts when communication is lost.
