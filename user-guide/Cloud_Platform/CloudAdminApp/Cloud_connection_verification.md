@@ -16,7 +16,7 @@ To get your organization verified on DCP:
 
    ![Organization selector](~/user-guide/images/CloudAdmin_Selector.png)
 
-1. In the sidebar on the left, go to *Organization* > *Manage*.
+1. In the sidebar on the left, go to *Organization* > *Overview*.
 
 1. Click the *Request verification* button. This will create a pre-configured email to the Skyline verification team with all the information they need in order to verify your cloud connection.
 

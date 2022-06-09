@@ -25,10 +25,10 @@ To do so:
 
 1. Specify the email address that is used for the user on the DataMiner Cloud Platform, and click *Add*.
 
-1. In the sidebar on the left, navigate to *DataMiner Systems*.
+1. In the sidebar on the left, under *DataMiner Systems*, select the DataMiner System you want to add the user to.
 
-1. In the list, select the DataMiner System you want to add the user to.
+1. Select the *Users* page for the DataMiner System.
 
-1. At the top of the window, click *Add user*.
+1. At the top of the page, click *Add user*.
 
 1. Specify the email address that is used for the user on the DataMiner Cloud Platform, and click *Add*.

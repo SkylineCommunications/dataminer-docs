@@ -18,5 +18,7 @@ The Admin app is intended for the management of your cloud-connected DataMiner S
 
 - [Managing the nodes of a cloud-connected DMS](xref:Managing_cloud-connected_nodes)
 
+- [Managing DCP keys](xref:Managing_DCP_keys)
+
 > [!WARNING]
 > This app is currently still being developed. As a consequence, some actions in the app are not yet supported and some interactions have not yet been streamlined. Moreover, all information in this section is subject to change.
