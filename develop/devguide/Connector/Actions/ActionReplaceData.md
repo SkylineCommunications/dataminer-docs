@@ -22,7 +22,7 @@ Specifies the replacement(s). This is formatted using a semicolon as follows:
 
 *oldValue(s)*;*newValue(s)*
 
-Optionally, a third item can be provided "use_offset" ("*oldValue(s)*;*newValue(s)*;use_offset"), to indicate that the replacement should be performed on the first x bytes (as denoted in the startoffset attribute) and the last y bytes (as denoted in the endoffset attribute) (see example below).
+Optionally, a third item can be provided, "use_offset" ("*oldValue(s)*;*newValue(s)*;use_offset"), to indicate that the replacement should be performed on the first x bytes (as denoted in the startoffset attribute) and the last y bytes (as denoted in the endoffset attribute) (see example below).
 
 It is also possible to specify multiple replacements. To specify multiple replacements, separate these by hyphens ("-").
 
@@ -31,10 +31,11 @@ It is also possible to specify multiple replacements. To specify multiple replac
 The number of old values specified must match the number of new values specified.
 
 > [!NOTE]
-> In case the number of old values does not match the number of new values (or the incoming data is smaller than the sum of the specified start and end offset), the element log will  contain the following log line (Debug logging, Level 5):
-> `CAction::ReplaceData|DBG|5|After replace` followed by the incoming data.
+> In case the number of old values does not match the number of new values (or the incoming data is smaller than the sum of the specified start and end offset), the element log will contain the following log line (Debug logging, Level 5), followed by the incoming data:
+>
+> `CAction::ReplaceData|DBG|5|After replace`
 
-The old and new value must be a hex string, optionally prefixed with '0x' or '0X' (e.g. 0x0F0E).
+The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g. 0x0F0E).
 
 #### Type@startoffset
 
@@ -58,7 +59,7 @@ Specifies the replacement(s). This is formatted using a semicolon as follows:
 
 *oldValue(s)*;*newValue(s)*
 
-Optionally, a third item can be provided "use_offset" ("*oldValue(s)*;*newValue(s)*;use_offset"), to indicate that the replacement should be performed on the first x bytes (as denoted in the startoffset attribute) and the last y bytes (as denoted in the endoffset attribute) (see example below).
+Optionally, a third item can be provided, "use_offset" ("*oldValue(s)*;*newValue(s)*;use_offset"), to indicate that the replacement should be performed on the first x bytes (as denoted in the startoffset attribute) and the last y bytes (as denoted in the endoffset attribute) (see example below).
 
 It is also possible to specify multiple replacements. To specify multiple replacements, separate these by hyphens ("-").
 
@@ -67,10 +68,11 @@ It is also possible to specify multiple replacements. To specify multiple replac
 The number of old values specified must match the number of new values specified.
 
 > [!NOTE]
-> In case the number of old values does not match the number of new values (or the incoming data is smaller than the sum of the specified start and end offset), the element log will  contain the following log line (Debug logging, Level 5):
-> `CAction::ReplaceData|DBG|5|After replace` followed by the incoming data.
+> In case the number of old values does not match the number of new values (or the incoming data is smaller than the sum of the specified start and end offset), the element log will contain the following log line (Debug logging, Level 5), followed by the incoming data:
+>
+> `CAction::ReplaceData|DBG|5|After replace`
 
-The old and new value must be a hex string, optionally prefixed with '0x' or '0X' (e.g. 0x0F0E).
+The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g. 0x0F0E).
 
 #### Type@startoffset
 
@@ -94,7 +96,7 @@ Specifies the replacement(s). This is formatted using a semicolon as follows:
 
 *oldValue(s)*;*newValue(s)*
 
-Optionally, a third item can be provided "use_offset" ("*oldValue(s)*;*newValue(s)*;use_offset"), to indicate that the replacement should be performed on the first x bytes (as denoted in the startoffset attribute) and the last y bytes (as denoted in the endoffset attribute) (see example below).
+Optionally, a third item can be provided, "use_offset" ("*oldValue(s)*;*newValue(s)*;use_offset"), to indicate that the replacement should be performed on the first x bytes (as denoted in the startoffset attribute) and the last y bytes (as denoted in the endoffset attribute) (see example below).
 
 It is also possible to specify multiple replacements. To specify multiple replacements, separate these by hyphens ("-").
 
@@ -103,10 +105,11 @@ It is also possible to specify multiple replacements. To specify multiple replac
 The number of old values specified must match the number of new values specified.
 
 > [!NOTE]
-> In case the number of old values does not match the number of new values (or the incoming data is smaller than the sum of the specified start and end offset), the element log will  contain the following log line (Debug logging, Level 5):
-> `CAction::ReplaceData|DBG|5|After replace` followed by the incoming data.
+> In case the number of old values does not match the number of new values (or the incoming data is smaller than the sum of the specified start and end offset), the element log will contain the following log line (Debug logging, Level 5), followed by the incoming data:
+>
+> `CAction::ReplaceData|DBG|5|After replace`
 
-The old and new value must be a hex string, optionally prefixed with '0x' or '0X' (e.g. 0x0F0E).
+The old and new value must be a hex string, optionally prefixed with "0x" or "0X" (e.g. 0x0F0E).
 
 #### Type@startoffset
 
@@ -145,7 +148,7 @@ Example on command:
 </Action>
 ```
 
-Example on response
+Example on response:
 
 In the following example, 1BC2 will be replaced by 02. The first and the last byte in the data string will be left unchanged:
 
