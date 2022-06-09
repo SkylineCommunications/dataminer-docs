@@ -30,8 +30,12 @@ As with all software, it is good practice to ensure you are running the latest v
 To update the Cassandra version:
 
 1. Ensure you have a **full backup** of the Cassandra database.
-1. Download the latest Cassandra *3.11.X* binaries from the [official website](https://cassandra.apache.org/_/download.html) and *extract* the archive.
-1. Stop the DataMiner agent.
+1. Download the latest Cassandra *3.11.X* binaries from the [official website](https://cassandra.apache.org/_/download.html) and extract the archive.
+1. Stop the DataMiner Agent.
+1. Go to the *C:\Program Files\Cassandra\bin* folder and run the following command to push all data from memory to disk and stop processing new requests:
+
+   `.\nodetool drain`
+
 1. Stop the Cassandra service.
 1. Rename the *C:\Program Files\Cassandra* folder to *Cassandra_bak*.
 1. Create a new folder named *Cassandra* in *C:\Program Files*.
@@ -63,7 +67,7 @@ To update the Cassandra version:
 
    `Set-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Apache Software Foundation\Procrun 2.0\cassandra\Parameters\Java" -Name "Options" -Value $options.Options`
 
-1. Verify that the *Cassandra* service has been created and that it can be started from the task manager (or the service manager).
+1. Verify that the *Cassandra* service has been created and that it can be started from the Task Manager (or the Services Manager).
 
 1. After a Cassandra upgrade, it is (sometimes) necessary to execute *nodetool upgradesstables* on your nodes to convert sstables to the new Cassandra version. Go to the *C:\Program Files\Cassandra\bin* folder and run the following command:
 
