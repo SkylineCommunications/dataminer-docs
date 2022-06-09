@@ -13,5 +13,4 @@ On a DMA where the Ticketing module has been activated, additional ticketing inf
 - To view ticketing information in the Alarm Console, right-click the column header of the Alarm Console tab, and select *Add/Remove column* > *Ticket* > *\[Domain name\]* > *\[Field name\]*. The domain and field names depend on the Ticketing configuration of your DMA.
 
 > [!NOTE]
-> The web browser engine that is used to display Ticketing pop-up windows depends on the default web browser engine configuration in Cube. See [Changing the default browser engine used in DataMiner Cube](xref:Installing_configuring_the_DataMiner_Cube_software#changing-the-default-browser-engine-used-in-dataminer-cube).
->
+> The web browser engine that is used to display Ticketing pop-up windows depends on the default web browser engine configuration in Cube. See [Changing the default browser engine used in DataMiner Cube](xref:Changing_the_default_browser_engine_used_in_DataMiner_Cube).

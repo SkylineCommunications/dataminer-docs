@@ -13,6 +13,21 @@
           items:
             - name: Installing & configuring the DataMiner Cube software
               topicUid: Installing_configuring_the_DataMiner_Cube_software
+              items:
+              - name: Prerequisites
+                topicUID: Prerequisites_Cube
+              - name: Installing the DataMiner Cube desktop application
+                topicUID: Installing_the_DataMiner_Cube_desktop_application
+              - name: Cleaning up the DataMiner Cube desktop app cache
+                topicUID: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
+              - name: Uninstalling the DataMiner Cube desktop application
+                topicUID: Uninstalling_the_DataMiner_Cube_desktop_application
+              - name: Changing the default browser engine used in DataMiner Cube
+                topicUID: Changing_the_default_browser_engine_used_in_DataMiner_Cube
+              - name: Configuring Internet Explorer to run DataMiner Cube
+                topicUID: Configuring_Internet_Explorer_to_run_DataMiner_Cube
+              - name: Installing the Skyline certificates
+                topicUID: Installing_the_Skyline_certificates
             - name: Opening DataMiner Cube
               topicUid: Opening_DataMiner_Cube
             - name: Logging on to DataMiner Cube
