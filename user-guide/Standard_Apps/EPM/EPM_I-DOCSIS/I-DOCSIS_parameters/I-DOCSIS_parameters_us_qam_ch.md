@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_us_qam_ch
 
 # I-DOCSIS parameters – US QAM CH
 
+This page contains an overview of the US QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
+
 - **Name \[IDX]**: Direct value. The display name of the upstream channel.
 
   Concatenation of the CMTS Name and the US Ch Name, using "/" as a separator.

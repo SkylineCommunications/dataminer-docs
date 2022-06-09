@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_service_group_fiber_node
 
 # I-DOCSIS parameters – Service Group (Fiber Node)
 
+This page contains an overview of the Service Group (Fiber Node) parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number CM**

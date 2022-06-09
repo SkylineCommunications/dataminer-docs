@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_node_segment
 
 # I-DOCSIS parameters – Node Segment
 
+This page contains an overview of the Node Segment parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number CM**: Calculated. The number of cable modems associated with the node segment.

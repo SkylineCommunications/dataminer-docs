@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_node_segment
 
 # D-DOCSIS parameters – Node Segment
 
+This page contains an overview of the Node Segment parameters available in the D-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number CM**: Calculated. The number of cable modems (CMs) the RPD is managing.
@@ -301,7 +303,7 @@ uid: D-DOCSIS_parameters_node_segment
 
 - **Remote Cores Connected**: Direct value. The remote cores connected to the RPD.
 
-  Retrieved from the Vecima Apigee API (call:/rpm/V1/restconf/data/entra/r-phy/rpds?fields=rpd/mac-address;rpd/ccap-cores/ccap-core/state) and Ceeview (call: /rpds/1/details Query: Rpm = ""fields=mac-address;state;ccap-cores/ccap-core/state"", Ceeview = ""glassCore,modelNumber,vendorName,deviceAlias,connectedCores,isConnected,bootTime,bootTimeUTC,uptime,disConnectedAt,connectedAt,glassCoreMAC,rpdEndpoint""").
+  Retrieved from the Vecima Apigee API (call:/rpm/V1/restconf/data/entra/r-phy/rpds?fields=rpd/mac-address;rpd/ccap-cores/ccap-core/state) and Ceeview (call: /rpds/1/details Query: Rpm = "fields=mac-address;state;ccap-cores/ccap-core/state", Ceeview = "glassCore,modelNumber,vendorName,deviceAlias,connectedCores,isConnected,bootTime,bootTimeUTC,uptime,disConnectedAt,connectedAt,glassCoreMAC,rpdEndpoint").
 
 - **Cores Connected**: Direct value. The cores connected to the RPD.
 

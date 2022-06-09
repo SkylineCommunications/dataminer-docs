@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_cm
 
 # D-DOCSIS parameters – CM
 
+This page contains an overview of the CM parameters available in the D-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **IPv4 Address**: Converted. The cable modem (CM) IPv4 address.
@@ -103,9 +105,9 @@ uid: D-DOCSIS_parameters_cm
 
 - **OFDM Status**: Calculated. The operational status of the OFDM function according to support and availability:
 
-  - *Active*: The CM supports OFDM (""Reg Version"" greater or equal to 3.1) and at least 1 profile is assigned to it (""based on OFDM Profile ID List"").
+  - *Active*: The CM supports OFDM ("Reg Version" greater or equal to 3.1) and at least 1 profile is assigned to it (based on OFDM Profile ID List).
   - *Inactive*: The CM supports OFDM, but there is no profile assigned to it.
-  - *Not Supported*: The CM does not support OFDM (""Reg Version"" less than 3.1).
+  - *Not Supported*: The CM does not support OFDM ("Reg Version" less than 3.1).
 
 - **OFDM CH 1 IF**: Calculated. The name of the OFDM channel 1 interface.
 

@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_us_controller
 
 # D-DOCSIS parameters – US Controller
 
+This page contains an overview of the US Controller parameters available in the D-DOCSIS branch of the EPM Solution.
+
 - **Name (IDX)**: Converted. The name of the controller, including associated CCAP.
 
   Based on the name from the physical interfaces. Includes the CCAP name.

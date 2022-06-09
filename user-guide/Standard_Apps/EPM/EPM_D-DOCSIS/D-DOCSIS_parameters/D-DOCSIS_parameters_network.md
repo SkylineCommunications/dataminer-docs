@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_network
 
 # D-DOCSIS parameters – Network
 
+This page contains an overview of the Network parameters available in the D-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **MAC Address**: Direct value. The media access control address of the cable modem (CM). If the CM has multiple MAC addresses, this is the MAC address associated with the MAC domain interface.

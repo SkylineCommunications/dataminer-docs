@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_linecard
 
 # I-DOCSIS parameters – Linecard
 
+This page contains an overview of the Linecard parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number CM**

@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_hub
 
 # D-DOCSIS parameters – Hub
 
+This page contains an overview of the Hub parameters available in the D-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Total CCAP**: Calculated. The number of CCAPs in the level.

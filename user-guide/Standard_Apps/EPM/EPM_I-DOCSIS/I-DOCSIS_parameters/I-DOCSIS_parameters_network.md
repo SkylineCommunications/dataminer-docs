@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_network
 
 # I-DOCSIS parameters – Network
 
+This page contains an overview of the Network parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number Market**

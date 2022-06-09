@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_dpic_interface
 
 # D-DOCSIS parameters – DPIC Interface
 
+This page contains an overview of the DPIC Interface parameters available in the D-DOCSIS branch of the EPM Solution.
+
 - **Name**: Direct value. The description of the interface.
 
   MIB OID 1.3.6.1.2.1.2.2.1.2.

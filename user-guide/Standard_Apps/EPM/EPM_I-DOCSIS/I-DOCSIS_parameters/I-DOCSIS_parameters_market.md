@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_market
 
 # I-DOCSIS parameters – Market
 
+This page contains an overview of the Market parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number Hub**

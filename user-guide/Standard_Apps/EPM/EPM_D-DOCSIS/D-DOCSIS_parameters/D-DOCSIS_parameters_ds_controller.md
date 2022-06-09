@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_ds_controller
 
 # D-DOCSIS parameters – DS Controller
 
+This page contains an overview of the DS Controller parameters available in the D-DOCSIS branch of the EPM Solution.
+
 - **Name (IDX)**: Converted. The name of the controller, including associated CCAP.
 
   Based on the name from the physical interfaces. Includes the CCAP name.

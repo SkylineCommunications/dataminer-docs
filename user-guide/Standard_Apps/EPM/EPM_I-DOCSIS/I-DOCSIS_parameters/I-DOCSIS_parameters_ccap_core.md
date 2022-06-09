@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_ccap_core
 
 # I-DOCSIS parameters – CCAP Core
 
+This page contains an overview of the CCAP Core parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number Service Group**

@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_dpic
 
 # D-DOCSIS parameters – DPIC
 
+This page contains an overview of the DPIC parameters available in the D-DOCSIS branch of the EPM Solution.
+
 - **Name (IDX)**: Direct value. The name of the interface.
 
   Retrieved by mapping the physical interface name to the primary key of the module table.

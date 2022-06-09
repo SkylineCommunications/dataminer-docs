@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_ds_qam_ch
 
 # I-DOCSIS parameters – DS QAM CH
 
+This page contains an overview of the DS QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
+
 - **Name \[IDX]**: Direct value. The display name of the downstream channel.
 
   Concatenation of the CMTS name and the DS channel name, using "/" as a separator.
@@ -50,7 +52,7 @@ uid: I-DOCSIS_parameters_ds_qam_ch
 
 - **DS QAM Ch Corrected Packet Ratio**: Calculated. The average value of the DS QAM Ch Corrected Packet Ratio related to the cable modems served by the given channel.
 
-  Calculated as follows: Corrected Ratio = (Corrected Difference \* 100) / (Corrected Difference + Unerrored Difference + Uncorrected Difference). 
+  Calculated as follows: Corrected Ratio = (Corrected Difference \* 100) / (Corrected Difference + Unerrored Difference + Uncorrected Difference).
 
   - Corrected: OID 1.3.6.1.2.1.10.127.1.1.4.1.9
 
@@ -70,7 +72,7 @@ uid: I-DOCSIS_parameters_ds_qam_ch
 
 - **DS QAM Ch Utilization**: Calculated. The average value of the DS QAM Ch Utilization related to the cable modems served by the given channel.
 
-  Calculated as follows: DS QAM Ch Utilization = (Current Nº octets transmitted - Nº octets transmitted previously) \* 8 \* 100 / (Delta \* Interface's current bandwidth). 
+  Calculated as follows: DS QAM Ch Utilization = (Current Nº octets transmitted - Nº octets transmitted previously) \* 8 \* 100 / (Delta \* Interface's current bandwidth).
 
   - Nº octets transmitted: OID 1.3.6.1.2.1.2.2.1.16
 

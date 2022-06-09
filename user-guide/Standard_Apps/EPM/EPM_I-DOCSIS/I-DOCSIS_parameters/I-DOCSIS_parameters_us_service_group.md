@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_us_service_group
 
 # I-DOCSIS parameters – US Service Group
 
+This page contains an overview of the US Service Group parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number CM**

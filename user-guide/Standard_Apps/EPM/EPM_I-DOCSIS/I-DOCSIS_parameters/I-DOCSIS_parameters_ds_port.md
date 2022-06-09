@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_ds_port
 
 # I-DOCSIS parameters – DS Port
 
+This page contains an overview of the DS Port parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number CM**: Calculated. The number of CMs served by the DS port.

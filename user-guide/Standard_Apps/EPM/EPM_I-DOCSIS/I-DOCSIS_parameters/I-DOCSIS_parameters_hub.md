@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_hub
 
 # I-DOCSIS parameters – Hub
 
+This page contains an overview of the Hub parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number CCAP Core**

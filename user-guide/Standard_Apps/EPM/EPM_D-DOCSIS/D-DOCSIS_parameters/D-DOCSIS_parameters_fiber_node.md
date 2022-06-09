@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_fiber_node
 
 # D-DOCSIS parameters – Fiber Node
 
+This page contains an overview of the Fiber Node parameters available in the D-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Name**: Converted. The fiber node name.

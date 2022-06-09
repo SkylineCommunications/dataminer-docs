@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_us_port
 
 # I-DOCSIS parameters – US Port
 
+This page contains an overview of the US Port parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Number CM**: Calculated. The number of CMs served by the US port.

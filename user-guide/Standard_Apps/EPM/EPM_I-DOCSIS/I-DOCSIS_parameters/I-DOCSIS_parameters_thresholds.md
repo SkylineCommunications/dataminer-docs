@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_thresholds
 
 # I-DOCSIS parameters – Thresholds
 
+This page contains an overview of the Thresholds parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## Upstream QAM Channel Thresholds
 
 - **Upstream Maximum Timing Offset**: Calculated. The upper boundary for acceptable upstream (US) timing offset from the CMTS perspective.

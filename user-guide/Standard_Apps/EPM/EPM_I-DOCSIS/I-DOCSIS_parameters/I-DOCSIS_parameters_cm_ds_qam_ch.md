@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_cm_ds_qam_ch
 
 # I-DOCSIS parameters – CM DS QAM CH
 
+This page contains an overview of the CM DS QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
+
 - **Name \[IDX]**: Direct value. The display name of the CM-channel relation.
 
   Concatenation of the CM MAC, CMTS Name, and DS Ch Name, using "/" as a separator.

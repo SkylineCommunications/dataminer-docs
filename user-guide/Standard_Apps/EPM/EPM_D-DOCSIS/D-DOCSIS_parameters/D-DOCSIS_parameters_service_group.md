@@ -4,6 +4,8 @@ uid: D-DOCSIS_parameters_service_group
 
 # D-DOCSIS parameters – Service Group
 
+This page contains an overview of the Service Group parameters available in the D-DOCSIS branch of the EPM Solution.
+
 ## KPIs & KQIs
 
 - **Name \[IDX]**: Direct value. The CCAP core name concatenated with system name.

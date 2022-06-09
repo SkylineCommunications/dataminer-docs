@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_cable_modem
 
 # I-DOCSIS parameters – Cable Modem
 
+This page contains an overview of the Cable Modem parameters available in the I-DOCSIS branch of the EPM Solution.
+
 ## CM Info
 
 - **MAC \[IDX]**: Direct value. The MAC address of the cable modem.

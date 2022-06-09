@@ -4,6 +4,8 @@ uid: I-DOCSIS_parameters_ds_ofdm_ch
 
 # I-DOCSIS parameters – DS OFDM CH
 
+This page contains an overview of the DS OFDM CH parameters available in the I-DOCSIS branch of the EPM Solution.****
+
 ## KPIs & KQIs
 
 - **Ch ID**
