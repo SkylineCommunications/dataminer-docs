@@ -78,11 +78,11 @@ The pipeline will only continue if exactly one solution file has been detected i
 
 This step verifies whether the [protocol metadata](xref:Metadata) corresponds with what is registered on DCP:
 
-- The [element type](xref:Protocol.ElementType) mentioned in the protocol must correspond with the element type registered on the DCP driver record.
-- The [vendor](xref:Protocol.Vendor) mentioned in the protocol must correspond with the vendor registered on the DCP driver record.
-- The [vendor OID](xref:Protocol.VendorOID) mentioned in the protocol must correspond with the vendor OID registered on the DCP driver record.
-- The [device OID](xref:Protocol.DeviceOID) mentioned in the protocol must correspond with the device OID registered on the DCP driver record.
-- The [integration ID](xref:Protocol.IntegrationID) mentioned in the protocol must correspond with the integration OID registered on the DCP driver record.
+- The [element type](xref:Protocol.ElementType) mentioned in the protocol must correspond with the element type registered in the DCP driver record.
+- The [vendor](xref:Protocol.Vendor) mentioned in the protocol must correspond with the vendor registered in the DCP driver record.
+- The [vendor OID](xref:Protocol.VendorOID) mentioned in the protocol must correspond with the vendor OID registered in the DCP driver record.
+- The [device OID](xref:Protocol.DeviceOID) mentioned in the protocol must correspond with the device OID registered in the DCP driver record.
+- The [integration ID](xref:Protocol.IntegrationID) mentioned in the protocol must correspond with the integration OID registered in the DCP driver record.
 
 This step also retrieves information from the protocol such as the integration ID, developer initials, DCP task ID, etc.
 
