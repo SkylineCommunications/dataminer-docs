@@ -32,6 +32,10 @@ To update the Cassandra version:
 1. Ensure you have a **full backup** of the Cassandra database.
 1. Download the latest Cassandra *3.11.X* binaries from the [official website](https://cassandra.apache.org/_/download.html) and *extract* the archive.
 1. Stop the DataMiner agent.
+1. Push all data from memory to disk and stop processing new requests. Go to the *C:\Program Files\Cassandra\bin* folder and run the following command:
+
+   `.\nodetool drain`
+
 1. Stop the Cassandra service.
 1. Rename the *C:\Program Files\Cassandra* folder to *Cassandra_bak*.
 1. Create a new folder named *Cassandra* in *C:\Program Files*.
