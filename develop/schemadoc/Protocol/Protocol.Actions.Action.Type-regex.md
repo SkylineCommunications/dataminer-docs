@@ -4,7 +4,7 @@ uid: Protocol.Actions.Action.Type-regex
 
 # regex attribute
 
-If Type is "aggregate", this attribute allows to specify the regular expression to use for filtering.
+If Action/Type is "aggregate", this attribute allows to specify the regular expression to use for filtering.
 
 ## Content Type
 
