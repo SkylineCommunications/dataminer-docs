@@ -143,13 +143,13 @@ To do so:
 
     Make sure that HTTPS is configured in the *MaintenanceSettings.xml* file and that the *name* attribute matches the *Common Name (CN)* of the TLS certificate.
 
-- *My Visio page no longer works*
+- **My Visual Overview page no longer works**
 
-    Make sure to convert all URLs in your Visio from http:// to **https://**.
+    Make sure to convert all URLs in your Visio drawing from `http://` to `https://`.
 
-- *I can no longer launch DataMiner Cube from the DataMiner Cube Start Window*
+- **I can no longer launch DataMiner Cube from the DataMiner Cube start window**
 
-    It's possible you added the DMS based on the IP address, which may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP addres.
+    If you added the DMS based on the IP address, this may no longer work if HTTPS is required. Add a new DataMiner System and **use the FQDN** instead of the IP address. See [Opening DataMiner Cube](xref:Opening_DataMiner_Cube).
 
 - **The webpage could not be found (HTTP 404 error)**
 
