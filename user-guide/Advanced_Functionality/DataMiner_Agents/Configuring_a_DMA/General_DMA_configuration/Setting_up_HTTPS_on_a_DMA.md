@@ -119,6 +119,14 @@ To do so:
 
 1. Save the file and restart the DMA.
 
+> [!TIP]
+> See also:
+>
+> - [Securing the DataMiner web server](xref:Webserver_security)
+> - [Disabling legacy SSL/TLS protocols](xref:Disabling_legacy_protocols)
+> - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
+> - [TLS encryption in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/)
+
 ## Common issues after configuring HTTPS
 
 - **My connection times out or the site cannot be reached**

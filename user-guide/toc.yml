@@ -1115,11 +1115,13 @@
                       topicUid: Cassandra_Java_updating
                 - name: Securing the Elasticsearch database
                   topicUid: Security_Elasticsearch
-            - name: Securing the webserver
+            - name: Securing the web server
               topicUID: Webserver_security
               items:
                 - name: HTTP headers
                   topicUid: HTTP_Headers
+                - name: Disabling legacy protocols
+                  topicUid: Disabling_legacy_protocols 
             - name: Customizing the layout of notification messages
               topicUid: Customizing_the_layout_of_notification_messages
             - name: Configuring LDAP settings
