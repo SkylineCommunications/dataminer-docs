@@ -78,6 +78,7 @@ The pipeline will only continue if exactly one solution file has been detected i
 
 This step verifies whether the [protocol metadata](xref:Metadata) corresponds with what is registered on DCP:
 
+- The type of the main connection (e.g. [type](xref:Protocol.Type)) mentioned in the protocol must correspond with the element type registered in the DCP driver record.
 - The [element type](xref:Protocol.ElementType) mentioned in the protocol must correspond with the element type registered in the DCP driver record.
 - The [vendor](xref:Protocol.Vendor) mentioned in the protocol must correspond with the vendor registered in the DCP driver record.
 - The [vendor OID](xref:Protocol.VendorOID) mentioned in the protocol must correspond with the vendor OID registered in the DCP driver record.
