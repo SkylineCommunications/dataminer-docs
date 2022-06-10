@@ -1113,7 +1113,7 @@
                       topicUid: Cassandra_Java_updating
                 - name: Securing the Elasticsearch database
                   topicUid: Security_Elasticsearch
-            - name: Securing the webserver
+            - name: Securing the web server
               topicUID: Webserver_security
               items:
                 - name: HTTP headers
