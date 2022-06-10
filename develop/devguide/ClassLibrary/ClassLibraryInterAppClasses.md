@@ -95,9 +95,9 @@ Begin by checking and applying everything to meet the DataMiner, DIS, protocol a
 Now there are 4 steps for development:
 
 1. Creating an API with messages that define the data you want to share.
-2. Creating executors that define how to process a message.
-3. Parsing a received call.
-4. Sending a call.
+1. Creating executors that define how to process a message.
+1. Parsing a received call.
+1. Sending a call.
 
 ### Creating an API
 
@@ -107,7 +107,7 @@ The first step is to create your API, with the classes that will represent your 
 - Creating the API in a precompile QAction and copying it to where you need it.
 
 > [!NOTE]
-> Namespaces you use have to be the same in the source and destination. It is strongly recommended to create the API in a separate custom solution and use NuGet Dlls or Class Library Code Generation.
+> Namespaces you use have to be the same in the source and destination. We strongly recommend creating the API in a separate custom solution and using NuGet DLLs or class library code generation.
 
 The InterApp framework allows a lot of freedom in the creation of the message classes. The default internal serializer was created to be able to handle almost anything: custom classes, inheritance, abstraction, interfaces, private fields, public properties, objects, etc. There is no need to worry about any JSON properties, or anything to do with how it serializes in the background. Just create the classes as you see fit. Any class that you want to define as a possible message you simply inherit from the InterAppCalls.CallSingle.Message class.
 
@@ -156,11 +156,11 @@ The Visual Studio IDE will then assist you in correctly implementing your execut
 The executor has several methods that will by default be called when a message is executed (in the specified order):
 
 1. DataGets (always)
-2. Parse (always)
-3. Validate (always)
-4. Modify (if validate was true)
-5. DataSets (if validate was true)
-6. CreateReturnMessage (always)
+1. Parse (always)
+1. Validate (always)
+1. Modify (if validate was true)
+1. DataSets (if validate was true)
+1. CreateReturnMessage (always)
 
 Default execute code (happens in background):
 
@@ -240,24 +240,23 @@ string raw = Convert.ToString(protocol.GetParameter(protocol.GetTriggerParameter
 List<Type> knownTypes = new List<Type> {typeof(Chain), typeof(Product)};
 IInterAppCall receivedCall = InterAppCallFactory.CreateFromRaw(raw, knownTypes);
 ```
-> [!IMPORTANT]
-> It is not possible to receive both single messages and InterApp calls on the same parameter. We recommend to just stick to the InterApp call.
 
-From Class Library versions 1.2.2.1/1.1.4.1 and higher internal reflection code was removed to support te use of NuGets.
-This has made the use of KnownTypes mandatory.
+> [!IMPORTANT]
+> It is not possible to receive both single messages and InterApp calls on the same parameter. We recommend just sticking to the InterApp call.
+
+From class library versions 1.2.2.1 and 1.1.4.1 onwards, internal reflection code is removed to support the use of NuGets. This makes the use of "knownTypes" mandatory.
 
 ```csharp
 List<Type> knownTypes = new List<Type> { typeof(DeleteLineup),typeof(DeleteLineupResult)};
 ```
 
 > [!IMPORTANT]
-> The list must be the same at the sender and the receiver side and that it should contain every single class in your API
+> The list must be the same at the sender and the receiver side, and it should contain every single class in your API.
 
-It is for example not supported to have Protocol A have (Type1, Type2, Type3) as KnownTypes members while Automation script B only has members (Type1, Type2).
-If this rule is broken, it can lead to situations where the serialization will define "ChildClass" as the Type whereas the deserialization expects "NameSpace.ChildClass".
+It is for example not supported to have protocol A with (Type1, Type2, Type3) as knownTypes members while Automation script B only has the members (Type1, Type2). If this rule is broken, it can lead to situations where the serialization will define "ChildClass" as the Type whereas the deserialization expects "NameSpace.ChildClass".
 
-> [!TIP]
-> It's recommended to add the knownTypes as a public static list inside of a custom solution where all your Messages are written to avoid having to copy paste and maintain them from several locations.
+> [!NOTE]
+> We recommend that you add the knownTypes as a public static list in a custom solution where all your messages are written. This way you avoid having to copy/paste and maintain them from several locations.
 
 You can use the class library SerializerFactory to create the InterAppSerializer with the list of types.
 
@@ -265,15 +264,13 @@ You can use the class library SerializerFactory to create the InterAppSerializer
 var customSerializer = SerializerFactory.CreateInterAppSerializer(typeof(Message), knownTypes);
 ```
 
-Pass this serializer along to all your methods that need it (see Custom serializer).
+Pass this serializer along to all your methods that need it (see [Custom serializer](#custom-serializer)).
 
 ### Executor triggering
 
-From Class Library versions 1.2.2.1/1.1.4.1 and higher internal reflection code was removed to support te use of NuGets.
-This has made the use of a message to executor Dictionary mandatory.
+From class library versions 1.2.2.1 and 1.1.4.1 onwards, internal reflection code is removed to support the use of NuGets. This makes the use of a message to executor dictionary mandatory.
 
-The Execute methods take a dictionary where you provide the mapping.
-The key of the dictionary is the message type. The value of the dictionary is the executor type.
+The Execute methods take a dictionary where you provide the mapping. The key of the dictionary is the message type. The value of the dictionary is the executor type.
 
 ```csharp
 Dictionary<Type, Type> msgToExecutor = new Dictionary<Type, Type>
@@ -299,13 +296,13 @@ foreach (var message in receivedCall.Messages)
 This will look in the background for the executor matching the received response and then perform the following methods (in the specified order):
 
 1. DataGets (always)
-2. Parse (always)
-3. Validate (always)
-4. Modify (if validate was true)
-5. DataSets (if validate was true)
+1. Parse (always)
+1. Validate (always)
+1. Modify (if validate was true)
+1. DataSets (if validate was true)
 
 > [!IMPORTANT]
-> Essential information required for user success: Any change to the API and added executors need to be synced with the message to executor dictionary.
+> Any changes to the API and added executors need to be synced with the message to executor dictionary.
 
 ### Sending a call without expected return
 
