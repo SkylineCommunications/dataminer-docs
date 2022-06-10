@@ -6,7 +6,7 @@ uid: Part1GettingStarted
 
 ### Get to know the basics
 
-- [Basic concepts](xref:BasicConcepts#basic-concepts)
+- [Basic concepts](xref:BasicConcepts)
 - [DataMiner System layout](xref:GeneralLayout#dataminer-system-layout)
 - [Accessing DataMiner](xref:DataminerApplications#accessing-dataminer)
 - [The DataMiner user interface](xref:GettingStarted#the-dataminer-user-interface)
