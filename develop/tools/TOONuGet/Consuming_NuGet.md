@@ -47,7 +47,5 @@ Try to avoid using NuGets that perform direct external communication (unless usi
 A NuGet with direct communication will circumvent the use of DataMiner processes. This will cause the following issues:
 
 - It will not be possible to edit some communication settings (e.g. retries, timeouts) via the element settings.
-
 - Communication will be hidden from the Stream Viewer.
-
 - Unless this is taken into account during development, there will be no element timeouts when communication is lost.
