@@ -4,7 +4,7 @@ uid: Protocol.Actions.Action.Type-script
 
 # script attribute
 
-If Type is "wmi", this attribute specifies the WMI class (e.g. Win32_PerfRawData_PerfOS_Memory).
+If Action/Type is "wmi", this attribute specifies the WMI class (e.g. Win32_PerfRawData_PerfOS_Memory).
 
 ## Content Type
 

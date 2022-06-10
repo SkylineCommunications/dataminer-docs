@@ -4,7 +4,7 @@ uid: Protocol.Actions.Action.Type-reschedule
 
 # reschedule attribute
 
-If Type is "restart timer and this attribute is set to “true”, then the timer will immediately start again.
+If Action/Type is "restart timer" and this attribute is set to “true”, then the timer will immediately start again.
 
 ## Content Type
 

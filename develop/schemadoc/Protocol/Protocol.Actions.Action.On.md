@@ -22,7 +22,7 @@ Defines, together with [Type](xref:Protocol.Actions.Action.Type), how this actio
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Actions.Action.On-id)|[TypeSemicolonSeparatedNumbers](xref:Protocol-TypeSemicolonSeparatedNumbers)||The ID of the parameter, command, response, etc. In case the "id" attribute is not present, the trigger will apply to all items of the type specified in /Protocol/Actions/Action/On.|
-|[nr](xref:Protocol.Actions.Action.On-nr)|string||If Type of this action is set to "reverse", this attribute specifies the (0-based) position(s) of the parameter(s) in the command/response.|
+|[nr](xref:Protocol.Actions.Action.On-nr)|string||If Action/Type is "reverse", this attribute specifies the (0-based) position(s) of the parameter(s) in the command/response. If Action/Type is "set next", this attribute specifies the (1-based) position(s) of the pair(s) in the group.|
 
 ## Remarks
 
