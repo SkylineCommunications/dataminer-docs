@@ -220,8 +220,8 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Calculated by counting the number of CMs with OFDM Status equal to "Active".
 
-  - CM is considered to have OFDM status active if reg. ver. >= 3.1 and has DS profiles.
-  - Reg. ver. from CLI call: show cable modem device-class.
+  - A CM is considered to have OFDM status active if the registration version is higher than or equal to 3.1, and it has DS profiles.
+  - Registration version from CLI call "show cable modem device-class".
   - CM 3.1 Registration OID: 1.3.6.1.4.1.4491.2.1.28.1.3.
   - DS Profile ID List OID: 1.3.6.1.4.1.4491.2.1.28.1.3.1.2.
 

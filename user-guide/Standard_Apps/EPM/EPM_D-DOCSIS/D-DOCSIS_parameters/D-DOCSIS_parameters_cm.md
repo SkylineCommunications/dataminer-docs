@@ -159,7 +159,7 @@ This page contains an overview of the CM parameters available in the D-DOCSIS br
 
 - **OFDM CH 1 Preferred Profile**: Direct value. The current channel 1 preferred profile.
 
-  Retrieved using the call "show cable modem phy ofdm", using the RecmProf listed in the CLI response.
+  Retrieved using the call "show cable modem phy ofdm", using the recommended profile listed in the CLI response.
 
 - **OFDM CH 2**: Calculated. The ID of OFDM channel 2.
 
