@@ -350,9 +350,9 @@ The string you specify inside the *\<HyperLink>* tag can contain the following k
 | \[PID\] | The ID of the parameter. |
 | \[PNAME\] | The parameter name. |
 | \[POLLINGIP\] | The IP address of the device. |
-| \[PROPERTY:ALARM:name\] | The value of the alarm property called “name”. |
-| \[PROPERTY:ELEMENT:name\] | The value of the element property called “name”. |
-| \[PROPERTY:VIEW:name\] | The value of the view property called “name”. |
+| \[PROPERTY:ALARM:name\] | The value of the alarm property called “name”. See [About the \[PROPERTY:\] keywords](#about-the-property-keywords). |
+| \[PROPERTY:ELEMENT:name\] | The value of the element property called “name”. See [About the \[PROPERTY:\] keywords](#about-the-property-keywords). |
+| \[PROPERTY:VIEW:name\] | The value of the view property called “name”. See [About the \[PROPERTY:\] keywords](#about-the-property-keywords). |
 | \[RCA\] | The RCA level of the alarm. |
 | \[ROOTKEY\] | The ID of the root alarm. See [About the \[ROOTTIME\] and \[TIME\] keywords](#about-the-roottime-and-time-keywords). |
 | \[ROOTTIME\] | The root time of the alarm. See [About the \[ROOTTIME\] and \[TIME\] keywords](#about-the-roottime-and-time-keywords). |
@@ -391,6 +391,23 @@ For more information on the supported formatting, refer to the following article
 
 > [!NOTE]
 > In addition to the illegal characters described in the mentioned articles, the “\]” and “\[“ characters are also illegal in these keywords.
+
+### About the \[PROPERTY:\] keywords
+
+Prior to DataMiner 10.2.7/10.3.0, the \[PROPERTY:ALARM:name\], \[PROPERTY:ELEMENT:name\], and \[PROPERTY:VIEW:name\] keywords can only be used in second-generation hyperlinks of type "url", "execute", and "script".
+
+From DataMiner 10.2.7/10.3.0 onwards, these keywords can also be used in second-generation hyperlinks of type "openview", "openservice", "openelement" and "openparameter".
+
+For example, if a hyperlink of type "openelement" contains the following content, and an alarm is selected that has a valid ID defined for the "Booking Manager Element ID" property, you can use this hyperlink to open that element:
+
+```txt
+[PROPERTY:ALARM:Booking Manager Element ID]
+```
+
+> [!NOTE]
+>
+> - If you want to use a view property, service property, or element property in a hyperlink, make sure the option *Make this property available for alarm filtering* is enabled for that property. See [Managing element properties](xref:Managing_element_properties).
+> - If you use a view property on an alarm of an element contained in multiple views, the hyperlink will use the property of the view with the lowest ID.
 
 ### About the \[VID\] keyword
 
