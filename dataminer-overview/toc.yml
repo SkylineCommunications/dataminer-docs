@@ -14,7 +14,7 @@
           topicUid: Overview_Standardized_Foundation
         - name: References and use cases
           topicUid: Overview_References_and_use_cases
-    - name: DataMiner platform – empowering your digital transformation
+    - name: DataMiner platform – Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:
         - name: Agility - the cornerstone of any successful data-driven media operation
@@ -27,3 +27,27 @@
           topicUid: Overview_Platform_Open_Platform
     - name: DataMiner Cloud Platform
       topicUid: Overview_DCP
+    - name: Training Courses and Certification
+      topicUid: Overview_Training_intro
+      items:
+        - name: Free Self-paced DataMiner Training
+          topicUid: Overview_Training_selfpaced
+        - name: Dedicated DataMiner Training
+          topicUid: Overview_Training_dedicated
+        - name: DataMiner Certification
+          topicUid: Overview_Training_certification
+        - name: Video Library
+          topicUid: Overview_Training_videolibrary
+        - name: Agile Awareness Training
+          topicUid: Overview_Training_agile_aw
+    - name: Technical Support and Maintenance
+      topicUid: Overview_Support_intro
+      items:
+        - name: Warranty
+          topicUid: Overview_Support_warranty
+        - name: DMS Maintenance and Support
+          topicUid: Overview_Support_DMS_M_and_S
+        - name: Upgrade Policy and Timing
+          topicUid: Overview_Support_upgrade_policy
+        - name: Technical Support Escalations and SLAs
+          topicUid: Overview_Support_Escalations_SLAs
