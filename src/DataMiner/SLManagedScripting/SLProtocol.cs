@@ -1382,7 +1382,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>The SetParametersIndex method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndex method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndex method. If a single cell needs to be updated use the SetParameterIndex method.</description>
+		///				<description>Prior to DataMiner 10.2.7 (RN 33198), the SetParametersIndex method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndex method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndex method. If a single cell needs to be updated use the SetParameterIndex method.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method should only be used in case multiple distinct cells need to be set(e.g., cells in different tables). When appropriate, use the SetRow, FillArray, FillArrayNoDelete, NotifyProtocol type 220 call, etc.to set multiple cells belonging to the same row, column or table, respectively.</description>
@@ -1408,7 +1408,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>The SetParametersIndex method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndex method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndex method. If a single cell needs to be updated use the SetParameterIndex method.</description>
+		///				<description>Prior to DataMiner 10.2.7 (RN 33198), the SetParametersIndex method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndex method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndex method. If a single cell needs to be updated use the SetParameterIndex method.</description>
 		///			</item>
 		///			<item>
 		///				<description>This method should only be used in case multiple distinct cells need to be set(e.g., cells in different tables). When appropriate, use the SetRow, FillArray, FillArrayNoDelete, NotifyProtocol type 220 call, etc.to set multiple cells belonging to the same row, column or table, respectively.</description>
@@ -1557,7 +1557,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///			<description>The SetParametersIndex method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndex method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndex method. If a single cell needs to be updated use the SetParameterIndex method.</description>
+		///			<description>Prior to DataMiner 10.2.7 (RN 33198), the SetParametersIndexByKey method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndexByKey method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndexByKey method. If a single cell needs to be updated use the SetParameterIndexByKey method.</description>
 		///			</item>
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
@@ -1583,7 +1583,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type="bullet" >
 		///			<item>
-		///			<description>The SetParametersIndex method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndex method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndex method. If a single cell needs to be updated use the SetParameterIndex method.</description>
+		///			<description>Prior to DataMiner 10.2.7 (RN 33198), the SLProtocol.SetParametersIndexByKey method cannot be used to update a single cell. In case a single cell must be updated, use the SetParameterIndexByKey method instead. In cases where you dynamically set a number of cells, make sure to check the number of cells that will need to be updated. In case multiple cells need to be updated, use the SetParametersIndexByKey method. If a single cell needs to be updated use the SetParameterIndexByKey method.</description>
 		///			</item>
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.0.3.</description>

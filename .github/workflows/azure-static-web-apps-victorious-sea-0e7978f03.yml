@@ -22,9 +22,9 @@ jobs:
           choco install docfx -y
         env:
           CI: true
-      - name: build metadata -f
+      - name: build metadata
         run: |
-          docfx metadata
+          docfx metadata -f
       - name: build documentation
         run: |
           docfx build -t default,templates/slc_template -f
