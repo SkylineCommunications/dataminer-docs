@@ -14,7 +14,7 @@ Rights can be granted according to three concepts:
 
 - **Access levels**: Access levels can be assigned both to users and to individual parameters.
 
-    Users will only be able to set parameters of which the access level is equal or lower than the access level they have been granted. Example: A user with access level 3 can update parameters with access level 3, 4, 5, etc.
+    Users will only be able to set parameters of which the access level is equal or higher than the access level they have been granted. Example: A user with access level 3 can update parameters with access level 3, 4, 5, etc.
 
     Access levels range from 1 (the highest level) to 100 (the lowest level).
 
