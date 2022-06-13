@@ -8,57 +8,56 @@ From DataMiner 10.0.9 onwards, you can specify that a shape should be created au
 
 To do so:
 
-1. Create the shape representing the booking items, add a **ChildType** shape data field to that shape, and set its value to *Booking*.
+1. Create the shape representing a booking, and add the necessary child-level shape data fields to it. See [Child-level shape data](#child-level-shape-data).
 
-2. Create a shape group containing the ChildType shape, add a **Children** shape data field to the shape group, and set its value to *Booking*.
+1. Put the shape into a group, and add the necessary group-level shape data fields to the group. See [Group-level shape data](#group-level-shape-data).
 
-    By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e. from 1 day in the past to 2 days in the future).
+   By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e. from 1 day in the past to 2 days in the future).
 
 > [!NOTE]
-> Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders.
->
+> Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders. See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
 
 ## Child-level shape data
 
-The following shape data fields can be added to a shape that has to represent a table row.
-
-- **ChildMargin**: In this optional shape data field, you can specify the space between the different child items within the container shape.
-
-    - A space relative to the width of the shape representing a child item, or
-    - A fixed space (in pixels).
-
-    Examples:
-    
-    ```txt
-    1/20
-    ```
-    
-    If the child shapes have a width of 100 px, the space between the child shapes will be 5 px (a twentieth of 100 px).
-    
-    ```txt
-    5
-    ```
-
-   The space between the child shapes will always be 5 px
+The following shape data fields can be added to a shape that has to represent a booking:
 
 - **ChildType**: In this mandatory shape data field, specify the following value:
 
-    - Booking
+  - Booking
+
+- **ChildMargin**: In this optional shape data field, you can specify the space between the different child items within the container shape.
+
+  - A space relative to the width of the shape representing a child item, or
+  - A fixed space (in pixels).
+
+  Examples:
+
+  ```txt
+  1/20
+  ```
+
+  If the child shapes have a width of 100 px, the space between the child shapes will be 5 px (a twentieth of 100 px).
+
+  ```txt
+  5
+  ```
+
+   The space between the child shapes will always be 5 px
 
 ## Group-level shape data
 
-The following shape data fields can be added to the group containing the table row shapes.
+The following shape data fields can be added to the group containing the booking shapes:
 
 - **Children**: In this mandatory shape data field, specify the following value:
 
-    - Booking
+  - Booking
 
-    > [!NOTE]
-    > With the DataMiner Cube user setting *Maximum number of child shapes in a Children container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100
+  > [!NOTE]
+  > With the DataMiner Cube user setting *Maximum number of child shapes in a Children container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100
 
-- **ChildrenOptions**: In this optional shape data field, you can specify a number of options.
+- **ChildrenOptions**: In this optional shape data field, you can specify the following option:
 
-    - **Center**: If you want the generated shapes to be centered, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to "Center".
+  - **Center**: If you want the generated shapes to be centered, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to "Center".
 
 - **ChildrenSort**: In this optional shape data field, you can specify how the different child item shapes should be sorted. To sort the bookings, add a **ChildrenSort** shape data field to the shape group and set its value to “Name” (i.e. the default setting), “Property\|Start time” or “Property\|End time”, optionally followed by “,asc” (i.e. the default order) or “,desc”.
 
@@ -66,18 +65,18 @@ The following shape data fields can be added to the group containing the table r
 
 - **ChildrenPanel**: In this optional shape data field, you can specify how the child items have to be organized within the container shape.
 
-    Possible values:
+  Possible values:
 
-    - Stack
-    - StackHorizontal
-    - StackVertical
-    - Grid\|Cols=999
-    - Grid\|Rows=999
-    - Wrap
-    - WrapVertical
-    - WrapHorizontal
+  - Stack
+  - StackHorizontal
+  - StackVertical
+  - Grid\|Cols=999
+  - Grid\|Rows=999
+  - Wrap
+  - WrapVertical
+  - WrapHorizontal
 
 - **ChildrenSource**: To add bookings from a specific time range, add a **ChildrenSource** shape data field to the shape group and set its value to that time range (e.g. “StartTime=\<dateTime>; EndTime=\<dateTime>”).
 
-     > [!NOTE]
-     > Using a *ChildrenSource* shape data field set to a specific time range will add the bookings in this time range to the ones that are already in the cache. This means that if there were other bookings in the cache already, shapes will be generated for those as well. If you want to filter the bookings to only show shapes in a specific time range, use a *ChildrenFilter* shape data field instead.
+  > [!NOTE]
+  > Using a *ChildrenSource* shape data field set to a specific time range will add the bookings in this time range to the ones that are already in the cache. This means that if there were other bookings in the cache already, shapes will be generated for those as well. If you want to filter the bookings to only show shapes in a specific time range, use a *ChildrenFilter* shape data field instead.
