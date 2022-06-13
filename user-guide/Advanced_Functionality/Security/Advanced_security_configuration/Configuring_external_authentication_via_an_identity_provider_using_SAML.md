@@ -189,8 +189,6 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
    - Microsoft Graph \> User.Read.All – Application
    - Microsoft Graph \> User.Read – Delegated
 
-1. Restart DataMiner.
-
 1. Add the Azure AD users to DataMiner:
 
    1. Open DataMiner Cube and log in with an existing Administrator account.
