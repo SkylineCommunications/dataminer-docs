@@ -26,8 +26,12 @@ Before a set on the param is done, the values of extra params (id 1, 2 and 3) ne
 
 ```xml
 <Dependencies>
-	<Id>1</Id>
-	<Id>2</Id>
-	<Id>3</Id>
+   <Id>1</Id>
+   <Id>2</Id>
+   <Id>3</Id>
 </Dependencies>
 ```
+
+## Remarks
+
+Linked parameters must have their [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) tag set to true.
