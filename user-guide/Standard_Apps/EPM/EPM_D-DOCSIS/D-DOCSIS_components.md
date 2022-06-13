@@ -37,21 +37,6 @@ The following system connectors are supported (but not required):
 - [Cox IDP EPM Connectivity](https://catalog.dataminer.services/result/driver/6929)
 - [Cox HP Network Automation](https://catalog.dataminer.services/result/driver/7038)
 
-## Correlation rules
-
-The D-DOCSIS EPM Solution uses the following Correlation rules:
-
-- CcapRequestToEPM
-- CcapRequestToWM
-- CinRequestToEPM
-- CinRequestToWM
-- EPMBEToCollector
-- EPMFEToEPMBE
-- KAFKARequestToWM
-- WMResponseToCollector
-- WMResponseToEPM
-- WMResponseToKAFKA
-
 ## Automation scripts
 
 The D-DOCSIS EPM Solution uses the following Automation scripts:
@@ -93,8 +78,7 @@ The D-DOCSIS EPM Solution includes the following visual overviews:
 - D-DOCSIS Network
 - D-DOCSIS Market
 - D-DOCSIS Hub
-- Skyline CCAP Platform EPM: Includes visualization for CCAPs, RPDs, CMs, and CIN entities
-- Skyline DataMiner IT Tools
+- Skyline CCAP Platform EPM: Includes visualization for CCAP, RPD, CM, Node Leaf, Core Leaf, and Spine entities
 
 > [!NOTE]
 >
@@ -108,12 +92,13 @@ The D-DOCSIS EPM Solution includes several alarm and trend templates. These are 
 - Alarm templates:
 
   - Skyline CCAP Platform EPM
-  - Cisco CBR-8 CCAP Platform Collector
+  - Cisco/Cox CBR-8 CCAP Platform Collector
   - Cisco Manager CIN Platform
+  - Juniper Networks Manager CIN Platform
 
 - Trend templates:
 
   - Skyline CCAP Platform EPM
-  - Cisco CBR-8 CCAP Platform Collector
+  - Cisco/Cox CBR-8 CCAP Platform Collector
   - Cisco Manager CIN Platform
-  - Juniper Networks manager CIN Platform
+  - Juniper Networks Manager CIN Platform

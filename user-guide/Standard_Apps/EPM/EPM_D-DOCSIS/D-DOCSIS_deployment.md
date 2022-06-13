@@ -42,6 +42,10 @@ To deploy the D-DOCSIS branch of the EPM Solution:
    The following elements should be created:
 
    - **Collector elements**, as necessary. The solution expects these to be created within the hub-level views. For an overview of the supported collectors, see [Supported technologies for D-DOCSIS](xref:D-DOCSIS_supported_technologies).
+
+        > [!NOTE]
+        > Large deployments could greatly benefit from the use of DataMiner IDP. See [IDP](xref:SolIDP).
+
    - **Back-end EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
    - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
    - **System elements**, as necessary in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
@@ -54,8 +58,3 @@ To deploy the D-DOCSIS branch of the EPM Solution:
 
    - For a Visio drawing linked to a specific connector (e.g. EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
    - For a Visio drawings linked to a view, upload the drawing to the view. See [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
-
-1. **Add the Correlation rules** from the EPM package to the DMS. To do so, copy the Correlation rules to the folder `C:\Skyline DataMiner\Correlation` of the target DMA and **restart** the DMA.
-
-   > [!NOTE]
-   > As these Correlation rules require specific connectors and Automation scripts to function properly, make sure these have all been loaded properly before you add the Correlation rules. If you are deploying the EPM Solution for the first time, the necessary elements need to be created first before the Correlation rules can be deployed. We also recommend that you review the Correlation rules both when you initially deploy them and during each upgrade.
