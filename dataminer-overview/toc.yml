@@ -27,27 +27,27 @@
           topicUid: Overview_Platform_Open_Platform
     - name: DataMiner Cloud Platform
       topicUid: Overview_DCP
-    - name: Training Courses and Certification
+    - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
-        - name: Free Self-paced DataMiner Training
+        - name: Free self-paced DataMiner training
           topicUid: Overview_Training_selfpaced
-        - name: Dedicated DataMiner Training
+        - name: Dedicated DataMiner training
           topicUid: Overview_Training_dedicated
-        - name: DataMiner Certification
+        - name: DataMiner certification
           topicUid: Overview_Training_certification
-        - name: Video Library
+        - name: Video library
           topicUid: Overview_Training_videolibrary
         - name: Agile Awareness Training
           topicUid: Overview_Training_agile_aw
-    - name: Technical Support and Maintenance
+    - name: Technical support and maintenance
       topicUid: Overview_Support_intro
       items:
         - name: Warranty
           topicUid: Overview_Support_warranty
         - name: DMS Maintenance and Support
           topicUid: Overview_Support_DMS_M_and_S
-        - name: Upgrade Policy and Timing
+        - name: Upgrade policy and timing
           topicUid: Overview_Support_upgrade_policy
-        - name: Technical Support Escalations and SLAs
+        - name: Technical support escalations and SLAs
           topicUid: Overview_Support_Escalations_SLAs

@@ -4,19 +4,20 @@ uid: Overview_Training_videolibrary
 
 # Video Library
 
-Next to the above, Skyline offers specialized tutorials and trainings, covering a vast number of topics, and taking educational television to the next level.
+Skyline also offers specialized tutorials and training courses, covering a vast number of topics.
 
-The DataMiner Dojo Video Library is designed to share knowledge with an ever-growing global DataMiner community, and to empower users and partners to leverage the unique capabilities of DataMiner.
+The DataMiner Dojo Video Library is designed to share knowledge with an ever-growing global DataMiner community. It empowers users and partners to leverage the unique capabilities of DataMiner.
 
   ![Videolibrary](~/dataminer-overview/images/TR_videolibrary.png)
 
-The knowledge is served in bite size topics:
-- how-to’s
-- in-depth and technical hands-on sessions
-- practical use cases & real-life case studies
-- new product introductions
-- technology partner cases
-- etc.
+The knowledge is served in bite-size topics:
+
+- How-to's
+- In-depth and technical hands-on sessions
+- Practical use cases and real-life case studies
+- Introductions of new products
+- Technology partner cases
+- Etc.
 
 > [!TIP]
-Please refer to [Videos](https://community.dataminer.services/videos/) for a complete overview.
+> For a complete overview, refer to [Videos](https://community.dataminer.services/videos/) on DataMiner Dojo.

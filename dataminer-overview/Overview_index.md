@@ -11,5 +11,5 @@ We are working on adding more information to this section soon, so check back fo
 - [General introduction](xref:Overview_General_Introduction)
 - [DataMiner platform – empowering your digital transformation](xref:Overview_Platform_intro)
 - [DataMiner Cloud Platform](xref:Overview_DCP)
-- [Training Courses and Certification](xref:Overview_Training_intro)
-- [Technical Support and Maintenance](xref:Overview_Support_intro)
+- [Training courses and certification](xref:Overview_Training_intro)
+- [Technical support and maintenance](xref:Overview_Support_intro)
