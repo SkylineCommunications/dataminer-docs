@@ -18,4 +18,4 @@ To do so:
 
    This page details what has been deployed, when, and by whom, and whether the deployment succeeded, is pending, or failed.
 
-   Click an item in the list to view more detailed information, including version information and event information that can be used for debugging. For example, in case a pending deployment is queued because of other deployments, you will be able to see this in the event information.
+   Click an item in the list to view more detailed information, including version information and event information that can be used for debugging.
