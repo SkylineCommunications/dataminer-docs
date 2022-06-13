@@ -6,7 +6,6 @@ uid: NT_PUT_PARAMETER_INDEX
 
 Sets the value of a cell in a table, identified by the primary key (or row number) of the row and column position, with the specified value.
 
-
 ## Parameters
 
 Setting a **single cell**:
@@ -57,8 +56,8 @@ Setting **multiple cells**:
 
 ## Remarks
 
-- Prior to DataMiner 10.2.7 (RN 33198), the syntax shown in "Setting multiple cells" does not work when the arrays tableIds, rowKeys, columnNumbers and values only have a single item.
-- The SLProtocol interface defines the following wrapper methods for this call.
+- Prior to DataMiner 10.2.7 (RN 33198), the syntax shown in "Setting multiple cells" does not work when the arrays tableIds, rowKeys, columnNumbers, and values only have a single item.
+- The SLProtocol interface defines the following wrapper methods for this call:
   - [SetParameterIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterIndex(System.Int32,System.Int32,System.Int32,System.Object))
   - [SetParameterIndexByKey](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterIndexByKey(System.Int32,System.String,System.Int32,System.Object))
   - [SetParametersIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParametersIndex(System.Int32[],System.Int32[],System.Int32[],System.Object[]))
