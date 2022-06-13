@@ -84,7 +84,7 @@ Always keep the column processing order in mind when implementing tables. The fo
   - If you use a QAction on the table without row="true" to fill in custom/retrieved columns => problematic since data is sent to SLElement before that QAction will go off.
   - If you use concatenation to fill in the columns that are part of the display key => no problem since data is buffered before data is sent to SLElement.
 
- > [!NOTE]
+> [!NOTE]
 > For a detailed overview of how SNMP tables are processed internally, see How tables are processed internally.
 
 The column processing order can be overruled in the protocol with the processingOrder option in the ArrayOptions options attribute.
