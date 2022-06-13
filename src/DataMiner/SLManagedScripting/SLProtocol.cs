@@ -339,7 +339,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///			<description>This overload is currently not supported.</description>
+		///			<description>This overload is supported from DataMiner 10.2.7 (RN 28573) onwards.</description>
 		///			</item>
 		///			<item>
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
@@ -424,7 +424,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///			<description>This overload is currently not supported.</description>
+		///			<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
@@ -481,7 +481,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This overload is currently not supported.</description>
+		///				<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
@@ -512,7 +512,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This overload is currently not supported.</description>
+		///				<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method is defined as an SLProtocol extension method in the NotifyProtocol class.</description>
