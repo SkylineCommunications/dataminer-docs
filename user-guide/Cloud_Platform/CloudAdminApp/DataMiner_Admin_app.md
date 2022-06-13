@@ -20,5 +20,11 @@ The Admin app is intended for the management of your cloud-connected DataMiner S
 
 - [Managing DCP keys](xref:Managing_DCP_keys)
 
+- [Viewing information on deployments](xref:Viewing_info_on_deployments)
+
+- [Viewing information on shares](xref:Viewing_info_on_shares)
+
 > [!WARNING]
-> This app is currently still being developed. As a consequence, some actions in the app are not yet supported and some interactions have not yet been streamlined. Moreover, all information in this section is subject to change.
+>
+> - Depending on your user permissions, some pages in the DCP Admin app may not be available for you.
+> - This app is currently still being developed. As a consequence, some actions in the app are not yet supported and some interactions have not yet been streamlined. Moreover, all information in this section is subject to change.

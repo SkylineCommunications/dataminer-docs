@@ -2283,9 +2283,13 @@
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
         - name: Managing the nodes of a cloud-connected DMS
-          topicUID: Managing_cloud-connected_nodes
+          topicUid: Managing_cloud-connected_nodes
         - name: Managing DCP keys
-          topicUID: Managing_DCP_keys
+          topicUid: Managing_DCP_keys
+        - name: Viewing information on deployments
+          topicUid: Viewing_info_on_deployments
+        - name: Viewing information on shares
+          topicUid: Viewing_info_on_shares
     - name: DataMiner Teams bot
       topicUid: DataMiner_Teams_bot
 - name: DataMiner Professional Services
