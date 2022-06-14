@@ -1263,7 +1263,8 @@ namespace Skyline.DataMiner.Automation
 		/// <note type="note">
 		/// <para>When a scheduled task, a Correlation rule, or a redundancy group trigger a script to execute, this TriggeredByName will be filled in with "Scheduled task [name task]", "Correlation-rule [name rule]", or "Redundancy", respectively.</para>
 		/// </note>
-		/// <remarks>Feature introduced in DataMiner 10.2.6/10.3.0 (RN 33122).</remarks>
+		/// <para>Feature introduced in DataMiner 10.2.6/10.3.0 (RN 33122).</para>
+		/// </remarks>
 		/// <example>
 		/// <code>
 		/// engine.Log(engine.TriggeredByName);
