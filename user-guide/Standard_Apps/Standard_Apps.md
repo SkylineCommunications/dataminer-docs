@@ -2,10 +2,12 @@
 uid: Part5StandardApps
 ---
 
-# DataMiner Standard Apps & Frameworks
+# DataMiner Standard Apps, Frameworks & Solutions
 
-- [DataMiner IDP app](xref:SolIDP#dataminer-idp-app)
+- [DataMiner EPM Solution](xref:SolEPM)
 
-- [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app)
+- [DataMiner IDP app](xref:SolIDP)
+
+- [DataMiner PTP app](xref:SolPTP)
 
 - [Service & Resource Management Framework](xref:srm_index)
