@@ -4,7 +4,7 @@ uid: Protocol.Actions.Action.Type-arguments
 
 # arguments attribute
 
-If Type is "wmi", this attribute specifies the names of the columns to be returned (separated by semicolons).
+If Action/Type is "wmi", this attribute specifies the names of the columns to be returned (separated by semicolons).
 
 ## Content Type
 

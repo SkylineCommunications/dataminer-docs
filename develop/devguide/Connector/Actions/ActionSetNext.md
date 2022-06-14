@@ -6,14 +6,14 @@ uid: LogicActionSetNext
 
 This action can be executed on pairs only.
 
-This action dynamically sets the value of the next attribute. Normally this is set to a fixed value in the driver, but in certain cases, you want to be able to change it dynamically.
+This action dynamically sets the value of the [next](xref:Protocol.Groups.Group.Content.Param-next) attribute. Normally this is set to a fixed value in the driver, but in certain cases, you want to be able to change it dynamically.
 
 > [!NOTE]
-> Only supported for SNMP, serial, smart-serial and GPIB.
+> Only supported for serial, smart-serial and GPIB.
 
 ## Attributes
 
-### Type@nr
+### On@nr
 
 Specifies the 1-based position(s) of the pair(s) in the group on which the next value needs to be set.
 
@@ -44,7 +44,7 @@ Specifies the 1-based position(s) of the pair(s) in the group on which the next 
 
 ```xml
 <Trigger id="527">
-   <On id="3">Group</On>
+   <On id="3">group</On>
    <Time>before</Time>
    <Type>action</Type>
    <Content>

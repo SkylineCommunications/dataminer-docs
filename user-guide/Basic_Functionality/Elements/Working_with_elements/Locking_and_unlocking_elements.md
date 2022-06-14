@@ -9,20 +9,20 @@ If a DataMiner element is locked, only the user who locked the element is able t
 > [!NOTE]
 > Locking an element only protects against parameter updates. Users who have the appropriate permissions to do so will still be able to delete an element or edit the element configuration of an element while it is locked by another user.
 
-#### To lock an element:
+## Locking an element
 
 1. Click the element in the Surveyor to open the element card.
 
-2. Go to the *General parameters* page.
+1. Go to the *General parameters* page.
 
-3. Click the hamburger button in the top left corner of the card and select *Lock element*.
+1. Click the hamburger button in the top left corner of the card and select *Lock element*.
 
-    At the bottom of the card, a notice will be displayed detailing the name of the element and the user who locked the element.
+   At the bottom of the card, a notice will be displayed detailing the name of the element and the user who locked the element.
 
 > [!NOTE]
 > Locking a replicated element is only possible via the source element, not via the replicated element.
 
-#### To unlock an element:
+## Unlocking an element
 
 - In the element card menu, select *Unlock element*, or
 
@@ -30,4 +30,3 @@ If a DataMiner element is locked, only the user who locked the element is able t
 
 > [!NOTE]
 > You can only use the *Unlock element* option if you were the user who locked the element. If a different user locked the element, and you have the appropriate permissions to do so, right-click the notice and select *Force unlock element* instead.
->

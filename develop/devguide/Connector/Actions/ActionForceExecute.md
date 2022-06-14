@@ -6,10 +6,13 @@ uid: LogicActionForceExecute
 
 Can only be executed on a group.
 
-This action will place the specified group at the front of the queue for immediate execution. If a group of pair is being executed, the execution of that group will be interrupted.
+"force execute" will make sure the group is executed as soon as possible.
 
-> [!CAUTION]
-> Only use this action on a group of pairs, never in a timer, as this “force execute” group is only called when another group is being executed or when the queue is not empty. “force execute” is used with a trigger before/after command/response to execute the “force execute” group, for example with new settings before continuing the execution of the group that was being executed.
+The ongoing content item (Action, Pair, Param, Session, or Trigger) of the ongoing group (if any) will finish, then the group you want to "force execute" will be executed, and then the remaining items of the originally ongoing group will be executed.
+
+Note that if some "force execute" actions were previously called and not yet executed, those will still have priority over potential new "force execute" action executions.
+
+If no group was being executed, the "force execute" group will be added at the front of the queue.
 
 ## Attributes
 

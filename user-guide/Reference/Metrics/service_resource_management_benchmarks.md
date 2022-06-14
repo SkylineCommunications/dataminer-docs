@@ -100,3 +100,5 @@ uid: service_resource_management_benchmarks
 | 53 | SRM standard solution: Service creation delay | DMS | 28.4 s |||
 | 54 | SRM standard solution: Service deleting delay | DMS | 18.9 s |||
 | 55 | Bookings app with 5000 bookings in viewport/timerange | DataMiner Cube | 1 s | Follow mode enabled (= update every second), initial loading around 2.5 s | Running Automation script "RT_SRM_Resource_5000bookings_NoProperties" |
+| 56 | Resources + bookings timeline on root view  | DataMiner Cube | 8 s | Loaded 1235 active resources from the system with +1000 ongoing permanent bookings. |
+| 57 | All resources timeline on root view  | DataMiner Cube | 42 s | Loaded approx. 5620 active resources from the system. 80-95% of the execution happens externally (so no client code involved). Fetching and loading all resources + resource bands from the root view takes 2 to 3.5 s. |

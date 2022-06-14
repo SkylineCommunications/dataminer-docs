@@ -100,6 +100,9 @@ To have separate SLScripting processes created for every protocol being used, do
    </DataMiner>
    ```
 
+   > [!NOTE]
+   > If scriptingProcesses is set to "protocol", an SLScripting process is initialized for every SLProtocol process (see [Configuring a separate SLScripting process for each SLProtocol process](#configuring-a-separate-slscripting-process-for-each-slprotocol-process)). As an SLProtocol process is used for every protocol when protocolProcesses is set to "protocol", combining these two attributes effectively initializes a separate SLScripting process for every protocol.
+
 1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
 
 1. Restart the DataMiner software.
@@ -170,6 +173,7 @@ To configure this:
 1. Restart the DataMiner software.
 
 > [!NOTE]
+>
 > - A separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the *SeparateProcesses* tag, the configuration of the *scriptingProcesses* attribute will be overridden to "protocol", except if it is set to "\[Service]" (see [Running SLScripting as a service](#running-slscripting-as-a-service)). Configuring separate SLProtocol and SLScripting instances for a protocol is not compatible with a configuration where SLScripting is configured as a service. If you do configure both of these options, the configuration to run separate SLProtocol and SLScripting instances will be ignored, and a notice alarm will be generated with more information.
 > - DataMiner.xml files are not synchronized in a DMS. If your DMS consists of multiple DMAs, you will need to edit the DataMiner.xml file on each of the DMAs.
 
@@ -192,6 +196,35 @@ To do so:
   ...
 </DataMiner>
 ```
+
+## Setting the number of simultaneously running SLScripting processes
+
+From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScripting processes can be set in the *\<ProcessOptions>* tag of the *DataMiner.xml* file.
+
+1. Stop the DataMiner software.
+
+1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+1. In the *\<ProcessOptions>* tag, set the *scriptingProcesses* attribute to the desired number. For example:
+
+   ```xml
+   <DataMiner>
+     <ProcessOptions protocolProcesses="5" scriptingProcesses="3" />
+   </DataMiner>
+   ```
+
+1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+
+1. Restart the DataMiner software.
+
+> [!NOTE]
+> The SLProtocol processes will be assigned one of the available SLScripting processes in a round-robin way. For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3:
+>
+> - SLScripting 1 will host SLProtocol #1 and #4
+> - SLScripting 2 will host SLProtocol #2 and #5
+> - SLScripting 3 will host SLProtocol #3
+>
+> Assigning more SLScripting processes than SLProtocol processes will give every SLProtocol process its own instance without launching additional SLScripting processes.
 
 ## Running SLScripting as a service
 
@@ -416,6 +449,7 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - When a single polling response is not able to empty the stack of queued messages on the server, the next polling request will be scheduled after 100ms (fixed value).
 > - Unzipping/unpacking polling response data on the client can be done while another polling request is already in progress.
 
@@ -583,7 +617,7 @@ Example:
 
 From DataMiner 10.1.0/10.1.1 onwards, DataMiner processes use the NATS open-source messaging system to communicate with each other. Some settings for NATS can be fine-tuned in *MaintenanceSettings.xml*, using the following tags:
 
-- *NATSDisasterCheck*: Set this to true or false in order to respectively activate or deactivate automatic detection and triggering of NATS cluster self healing (default: false).
+- *NATSDisasterCheck*: Set this to true or false in order to respectively activate or deactivate automatic detection and triggering of NATS cluster self-healing (default: false).
 
 - *NATSResetWindow*: Specify a value in seconds to set a window during which only one NATS reset can occur. This prevents situations where NATS disaster recovery is triggered too often. The minimum value is 60. If a lower value is specified, 60 will be used instead.
 

@@ -71,7 +71,7 @@ If, for any reason, you want to reinstall Cube, you need to clean the XBAP cache
 
 1. Check if Internet Explorer has been correctly configured to run Cube for this DMA.
 
-    See [Configuring Internet Explorer to run DataMiner Cube](xref:Installing_configuring_the_DataMiner_Cube_software#configuring-internet-explorer-to-run-dataminer-cube).
+    See [Configuring Internet Explorer to run DataMiner Cube](xref:Configuring_Internet_Explorer_to_run_DataMiner_Cube).
 
 2. If Internet Explorer has been configured correctly, clear the XBAP cache:
 

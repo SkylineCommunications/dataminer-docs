@@ -59,8 +59,6 @@ working and summarize the implementation method.*
 
     "execute next" will add the group just after the group that is currently being executed. "execute one top" will insert it only if the group is not present in the queue.
 
-    Be careful with "force execute": If no group is being executed (the queue is empty), this group will not be executed.
-
     "force execute" is used with a trigger before/after command/response to execute the force execute group with, for example, with new settings before continuing the execution of the current group. The group executed "by force" will interrupt the current group being executed between two pairs.
 
 1. *What is the meaning of this piece of code taken from a parameter with ID 200? Is there something missing in order for this code to work? If so, what is missing?*

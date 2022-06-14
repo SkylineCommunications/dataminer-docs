@@ -34,7 +34,7 @@ When this simulation containing the *ProxyAgent* is running, the tool will auto
 These files will contain all variable bindings coming from the device that the proxy captures. Each line contains a timestamp, OID, binding type and value. All are separated by #@#
 
 ![](~/develop/images/QADS_ProxySimulationFile.png)
-<br>Figure 84: Proxy simulation file
+<br>Proxy simulation file
 
 ## Putting real device data in the database
 
@@ -42,36 +42,36 @@ Once all the necessary data has been collected, it needs to be imported in the d
 
 1. In the menu bar of the QA Device Simulator tool, select *Advanced* > *Import proxysimulation to DB*.
 
-    A pop-up window will open where you need to configure the necessary fields:
+   A pop-up window will open where you need to configure the necessary fields:
 
-	![](~/develop/images/QADS_ImportProxySim.png)
-	<br>Figure 85: Import proxysimulation to DB window
+   ![](~/develop/images/QADS_ImportProxySim.png)
+   <br>Import proxysimulation to DB window
 
-2. Select a database, i.e. MySQL or Cassandra.
+1. Select a database, i.e. MySQL or Cassandra.
 
-3. Enter the database server, the user and password to connect to the server.
+1. Enter the database server, the user and password to connect to the server.
 
-4. Specify the name of the table where the data should be added.
+1. Specify the name of the table where the data should be added.
 
-    > [!NOTE]
-    > If the specified database and/or table do not exist yet, they will be created automatically.
+   > [!NOTE]
+   > If the specified database and/or table do not exist yet, they will be created automatically.
 
-5. Click the *Import file(s)* button and select the files that were generated in the previous step. It is possible to select multiple files at the same time.
+1. Click the *Import file(s)* button and select the files that were generated in the previous step. It is possible to select multiple files at the same time.
 
-    > [!NOTE]
-    > Until the import is finished, the UI will freeze. The import operation may take some time, depending on the size of your file. To get an idea of the import progress, you can execute a select count(\*) … query on your table (if you know the number of rows that need to be imported).
+   > [!NOTE]
+   > The import operation may take some time, depending on the size of your file. From DataMiner 10.2.7/10.3.0 onwards, a progress bar is displayed. In older versions of this tool, the UI will freeze until the import is finished. To get an idea of the import progress in that case, you can execute a select count(\*) … query on your table (if you know the number of rows that need to be imported).
 
 The following sections will explain the structure of the tables in both databases. They are quite similar.
 
 ### MySQL table structure
 
 ```txt
-CREATE TABLE \`<tablename>\` (
-\`Oid\` VARCHAR(<length>) NOT NULL,
-\`Time\` BIGINT(20) UNSIGNED NOT NULL,
-\`Type\` VARCHAR(50) NOT NULL,
-\`Value\` TEXT NULL,
-PRIMARY KEY (\`Oid\`, \`Time\`)
+CREATE TABLE `<tablename>` (
+`Oid` VARCHAR(<length>) NOT NULL,
+`Time` BIGINT(20) UNSIGNED NOT NULL,
+`Type` VARCHAR(50) NOT NULL,
+`Value` TEXT NULL,
+PRIMARY KEY (`Oid`, `Time`)
 )
 ```
 
@@ -82,7 +82,7 @@ PRIMARY KEY (\`Oid\`, \`Time\`)
 Example:
 
 ![](~/develop/images/QADS_MySQLTableStructure.png)
-<br>Figure 86: Example MySQL table structure
+<br>Example MySQL table structure
 
 ### Cassandra table structure
 
@@ -103,7 +103,7 @@ CREATE TABLE <keyspace>.<tablename> (
 Example:
 
 ![](~/develop/images/QADS_CassandraTableStructure.png)
-<br>Figure 87: Example Cassandra table structure
+<br>Example Cassandra table structure
 
 ## Configuring the simulation file to poll the database
 
@@ -111,39 +111,38 @@ Finally, configure the simulation file to poll the database:
 
 1. Do a normal walk on the device using the *Tools* > *Create SNMP simulation file* functionality from the menu bar. See [Creating SNMP simulations](xref:Creating_SNMP_simulations).
 
-2. Adapt the generated simulation file as follows:
+1. Adapt the generated simulation file as follows:
 
-    - The *Agents* tag needs to be replaced by a *DatabaseAgents* tag
+   - The *Agents* tag needs to be replaced by a *DatabaseAgents* tag
 
-    - The *Agent* tag needs to be replaced by a *DatabaseAgent* tag
+   - The *Agent* tag needs to be replaced by a *DatabaseAgent* tag
 
-    - Several mandatory attributes need to be added to the *DatabaseAgent* tag
+   - Several mandatory attributes need to be added to the *DatabaseAgent* tag
 
-        - *databaseType*: This can be MySQL or Cassandra
+     - *databaseType*: This can be MySQL or Cassandra
 
-		- *databaseServer*
+     - *databaseServer*
 
-		- *databaseName*
+     - *databaseName*
 
-		- *databaseTable*
+     - *databaseTable*
 
-		- *user*
+     - *user*
 
-		- *password*
+     - *password*
 
-        See the following example:
+   See the following example:
 
-		```xml
-		<?xml version="1.0" encoding="utf-8" ?>
-		*20<Simulation>
-		*20  <DatabaseAgents>
-		*20    <DatabaseAgent ip="10.2.1.22" MacAddress="" SNMPVersion="2" Name="Cisco Switch" Port="7001" AutoBuildVersion="1.2" databaseType="MySQL" databaseServer="localhost" databaseName="demo" databaseTable="cisco" user="root" password="" />
-		*20  </DatabaseAgents>
-		*20  <Definitions>
-		```
+   ```xml
+   <?xml version="1.0" encoding="utf-8" ?>
+      <Simulation>
+        <DatabaseAgents>
+          <DatabaseAgent ip="10.2.1.22" MacAddress="" SNMPVersion="2" Name="Cisco Switch" Port="7001" AutoBuildVersion="1.2" databaseType="MySQL" databaseServer="localhost" databaseName="demo" databaseTable="cisco" user="root" password="" />
+        </DatabaseAgents>
+        <Definitions>
+   ```
 
-3. Place the simulation file in the folder *C:\\QASNMPSimulations*. The tool will now be able to run it.
+1. Place the simulation file in the folder *C:\\QASNMPSimulations*. The tool will now be able to run it.
 
 > [!NOTE]
 > SNMPv3 is not yet supported.
->

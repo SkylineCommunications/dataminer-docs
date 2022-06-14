@@ -198,7 +198,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>This overload is currently not supported.</description>
+		///				<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the table did contain rows with other primary keys than the ones provided in the method call, these rows will be removed. In case this is undesired, use the FillArrayNoDelete method instead.</description>
@@ -270,7 +270,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type="bullet">
 		///			<item>
-		///				<description>This overload is currently not supported.</description>
+		///				<description>This overload is supported from DataMiner 10.2.7 onwards (RN 28573).</description>
 		///			</item>
 		///			<item>
 		///				<description>In case the data contains null references, the corresponding cells will be cleared.</description>

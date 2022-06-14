@@ -23,6 +23,23 @@ Configure the following shape data fields on the shape that is to contain the Se
 
    - **AutoLoadExternalChanges=** : When set to *true*, external changes are automatically loaded, if there have been no local changes. This keeps an information bar from being displayed at the bottom of the visual overview, asking the user to load or discard the external changes.
    - **AutoIgnoreExternalChanges=** : Available from DataMiner 10.0.13 onwards. When set to *true*, external changes are automatically discarded. This keeps an information bar from being displayed at the bottom of the visual overview, asking the user to load or discard the external changes.
+   - **FunctionTypes=** : Available from DataMiner 10.2.7/10.3.0 onwards. Can be used as a filter to only include specific types of functions. 
+
+     Should be set to a comma-separated list of values. Possible values:
+
+     - Undefined (i.e. NULL value)
+     - UserTask
+     - ScriptTask
+     - ResourceTask
+     - Gateway
+     - NoneStartEvent
+     - TimeStartEvent
+     - EndEvent
+
+     This component option only works in conjunction with the options *Interface=definition* or *Interface=definitions*. It can be used in combination with the *HideChildFunctions* option, and it can be set dynamically via session variables.
+
+     The filter will be cleared when no FunctionTypes option is specified or when the FunctionTypes option is set to an empty list of values. Parent functions that do not match the filter but have child functions that match the filter will be displayed in the function tree so that it is possible to navigate to one of the child functions.
+
    - **HideAddButton** : Available from DataMiner 10.2.6/10.3.0 onwards. When set to *true*, no options to add a service definition will be displayed.
    - **HideChildFunctions=*X*** : Available from DataMiner 9.5.5 onwards. Allows you to filter on particular functions that should not be displayed in the component. “X” should be a collection of GUIDs, separated by a comma. Alternatively, you can also specify *\** or *ALL*, to filter all child functions. Note that if you specify the parent GUID of a particular function, this will also block all child functions of that function. The GUIDs can be found in the function XMLs.
    - **HideDeleteButton** : Available from DataMiner 10.2.6/10.3.0 onwards. When set to *true*, no options to delete a service definition will be displayed.
@@ -50,10 +67,10 @@ Configure the following shape data fields on the shape that is to contain the Se
 
 Example:
 
-| Shape data field   | Value                                                                                                                                        |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Component          | ServiceManager                                                                                                                               |
-| ComponentOptions   | interface=definition;SessionVariablePrefix=SKYLINE;HideHeader=true;HideTabs=true;HideNodeConfiguration=true;AutoLoadExternalChanges=true |
+| Shape data field | Value |
+|--|--|
+| Component | ServiceManager |
+| ComponentOptions | interface=definition;SessionVariablePrefix=SKYLINE;HideHeader=true;HideTabs=true;HideNodeConfiguration=true;AutoLoadExternalChanges=true |
 
 ## Using session variables with a Service Manager component
 

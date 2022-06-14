@@ -6,7 +6,6 @@ uid: NT_PUT_PARAMETER_INDEX
 
 Sets the value of a cell in a table, identified by the primary key (or row number) of the row and column position, with the specified value.
 
-
 ## Parameters
 
 Setting a **single cell**:
@@ -57,12 +56,12 @@ Setting **multiple cells**:
 
 ## Remarks
 
-- When setting a single cell, make sure to use the syntax as shown in the "setting a single cell" section above. The syntax shown in "Setting multiple cells" does not work when the arrays tableIds, rowKeys, columnNumbers and values only have a single item.
-  - The SLProtocol interface defines the following wrapper methods for this call.
-  - SetParameterIndex (see SLProtocol.SetParameterIndex method)
-  - SetParameterIndexByKey (see SLProtocol.SetParameterIndexByKey method)
-  - SetParametersIndex (see SLProtocol.SetParametersIndex method)
-  - SetParametersIndexByKey (see SLProtocol.SetParametersIndexByKey method)
+- Prior to DataMiner 10.2.7 (RN 33198), the syntax shown in "Setting multiple cells" does not work when the arrays tableIds, rowKeys, columnNumbers, and values only have a single item.
+- The SLProtocol interface defines the following wrapper methods for this call:
+  - [SetParameterIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterIndex(System.Int32,System.Int32,System.Int32,System.Object))
+  - [SetParameterIndexByKey](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterIndexByKey(System.Int32,System.String,System.Int32,System.Object))
+  - [SetParametersIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParametersIndex(System.Int32[],System.Int32[],System.Int32[],System.Object[]))
+  - [SetParametersIndexByKey](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParametersIndexByKey(System.Int32[],System.String[],System.Int32[],System.Object[]))
 
 Example:
 

@@ -17,7 +17,7 @@ To connect to the Ziine Demo System:
    1. In the top-right corner, select *Install DataMiner Cube > Desktop installation*.
 
    > [!TIP]
-   > See also: [Installing the DataMiner Cube desktop application](xref:Installing_configuring_the_DataMiner_Cube_software#installing-the-dataminer-cube-desktop-application)
+   > See also: [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application)
 
 1. Open the DataMiner Cube desktop application.
 

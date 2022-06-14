@@ -19,4 +19,4 @@ This will open a window consisting of the following sections:
 - In the middle, you can find more details about the trap that is selected in the overview on the left. See [Packet configuration and bindings](xref:Packet_configuration_and_bindings).
 
 ![](~/develop/images/QADS_TrapSender.png)
-<br>Figure 88: SNMP Trap Sender window
+<br>SNMP Trap Sender window

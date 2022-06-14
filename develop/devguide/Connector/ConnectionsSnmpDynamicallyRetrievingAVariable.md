@@ -36,7 +36,7 @@ When you divide a large SNMP table into 2 different SNMP tables (for example, to
 The group will be added to the end of the group execution queue as it was added by a timer or an "add to execute" action.
 
 > [!NOTE]
-> This should not be used to force a get after a set as the OID needs to be set in the parameter of the dynamic SNMP. The feature was created because a device did not send traps, but an OID of the parameter that was updated. By capturing this OID and this NF, it was possible to poll the new data without any delay.
+> This should not be used to force a get after a set as the OID needs to be set in the parameter of the dynamic SNMP. The feature was created because a device did not send the updated value(s) via traps, but only the OID(s) of the parameter(s) for which the value had changed. By capturing this OID and using this NF, it is possible to poll the new data without any delay.
 
 Since, when there are different parameters with the same OID, one of them will be used randomly for the get, from DataMiner version 8.0 onwards, it is possible to skip certain parameters to be evaluated if they need to be retrieved via dynamic SNMP get.
 

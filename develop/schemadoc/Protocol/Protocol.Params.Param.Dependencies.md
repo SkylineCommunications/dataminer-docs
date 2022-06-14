@@ -19,3 +19,5 @@ Allows you to link one or more parameters.
 ## Remarks
 
 This is mostly used for situations in which clicking a button executes a command that includes several parameters. Execution of such a command will only proceed if all dependent parameters have a valid value.
+
+Linked parameters must have their [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) tag set to true.

@@ -1,8 +1,8 @@
 ---
-uid: Overview_Advantages
+uid: Overview_Principal_Advantages
 ---
 
-# DataMiner Principal Advantages
+# DataMiner principal advantages
 
 DataMiner converts flexible new technologies into one consolidated operational platform and gives you the agility to continuously evolve in a fast-changing world with many unknowns.
 

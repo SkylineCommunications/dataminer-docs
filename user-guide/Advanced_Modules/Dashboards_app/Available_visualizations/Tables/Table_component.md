@@ -16,6 +16,9 @@ It displays the different possible data sources of queries as follows:
 
 - If parameters are retrieved by protocol or profile definition, each row will represent a matching element, and for each parameter a column will show the corresponding values.
 
+> [!NOTE]
+> From DataMiner 10.2.7/10.3.0 onwards, users can copy a cell, a column, a row, or the entire table via the right-click menu of the component. Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
+
 ## Layout configuration
 
 In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
@@ -56,3 +59,40 @@ The export file will be named “Query XXX” (XXX being the name of the query, 
 
 > [!NOTE]
 > To only export specific columns, first apply a filter by dragging the columns onto the table component before you export the component.
+
+## Filtering and sorting the table
+
+From DataMiner 10.2.7/10.3.0 onwards, users can filter and sort the contents of a table component in a dashboard.
+
+To apply a **general filter** across the table, a search box is available:
+
+1. Hover over the table component and click the search icon in the lower right corner.
+
+1. Specify the filter text (case-insensitive) in the search box.
+
+   This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Configuring_GQI_feeds).
+
+To apply a **filter based on a specific column**:
+
+1. Right-click the column header and select *Filter*.
+
+1. Configure the different fields of the filter, depending on the type of value in the column.
+
+   - For string values or GUIDs:
+
+     - To switch between a positive or negative filter, click *does* or *does not*.
+     - To switch to a different type of filter, click the second filter field. This will toggle between *contain*, *equal*, and *match regex*.
+     - In the third field of the filter, specify a filter value.
+     - If necessary, click the + icon to add more conditions. As soon as one of the specified conditions applies, a value will be shown (i.e. conditions are combined using "OR").
+
+   - For numeric or datetime values, specify one or more ranges that a value should be in. As soon as one of the specified conditions applies, a value will be shown (i.e. conditions are combined using "OR").
+   - For booleans, specify whether the value should be true or false.
+
+1. Click *Apply filter*.
+
+> [!NOTE]
+> If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
+
+To **sort the table**, you can click a column header. To apply additional sorting, press Ctrl while clicking one or more additional headers Alternatively, you can also select one of the available sorting options in the column header right-click menu.
+
+To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.

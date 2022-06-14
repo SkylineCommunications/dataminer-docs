@@ -9,7 +9,7 @@ This functionality allows you to visualize traps and inform messages for all app
 You can access the trap sender functionality of the tool by selecting *Tools* > *Trap and Inform Monitor* in the menu bar. The following window then opens:
 
 ![](~/develop/images/QADS_TrapAndInformMonitor.png)
-<br>Figure 96: Trap and Inform Monitor window
+<br>Trap and Inform Monitor window
 
 To start the tool, select an IP in the drop-down box and enter a port. Then click the *Start* button.
 

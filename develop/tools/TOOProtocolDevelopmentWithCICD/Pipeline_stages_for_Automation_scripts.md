@@ -64,7 +64,7 @@ The pipeline will only continue if exactly one solution file has been detected i
 
 ## Validate solution
 
-This step verifies whether the projects in the solution that correspond with C# exe blocks of Automation scripts make use of NuGet packages. If they do, the pipeline will fail, as using NuGet packages in these projects is currently not supported.
+This step verifies whether there are C# code blocks in the Automation script(s). If not, the SonarQube stage will be skipped.
 
 ## Validate tag
 

@@ -13,6 +13,23 @@
           items:
             - name: Installing & configuring the DataMiner Cube software
               topicUid: Installing_configuring_the_DataMiner_Cube_software
+              items:
+              - name: Prerequisites
+                topicUID: Prerequisites_Cube
+              - name: Installing the DataMiner Cube desktop application
+                topicUID: Installing_the_DataMiner_Cube_desktop_application
+              - name: Cleaning up the DataMiner Cube desktop app cache
+                topicUID: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
+              - name: Uninstalling the DataMiner Cube desktop application
+                topicUID: Uninstalling_the_DataMiner_Cube_desktop_application
+              - name: Changing the default browser engine used in DataMiner Cube
+                topicUID: Changing_the_default_browser_engine_used_in_DataMiner_Cube
+              - name: Configuring Internet Explorer to run DataMiner Cube
+                topicUID: Configuring_Internet_Explorer_to_run_DataMiner_Cube
+              - name: Installing the Skyline certificates
+                topicUID: Installing_the_Skyline_certificates
+              - name: DataMiner Cube deployment methods
+                topicUID: DataMiner_Cube_deployment_methods
             - name: Opening DataMiner Cube
               topicUid: Opening_DataMiner_Cube
             - name: Logging on to DataMiner Cube
@@ -1098,11 +1115,13 @@
                       topicUid: Cassandra_Java_updating
                 - name: Securing the Elasticsearch database
                   topicUid: Security_Elasticsearch
-            - name: Securing the webserver
+            - name: Securing the web server
               topicUID: Webserver_security
               items:
                 - name: HTTP headers
                   topicUid: HTTP_Headers
+                - name: Disabling legacy protocols
+                  topicUid: Disabling_legacy_protocols 
             - name: Customizing the layout of notification messages
               topicUid: Customizing_the_layout_of_notification_messages
             - name: Configuring LDAP settings
@@ -1178,77 +1197,6 @@
               topicUid: Connectivity_xml_files_representing_chains
             - name: Automatically generating service RCA chains based on connectivity
               topicUid: Automatically_generating_service_RCA_chains_based_on_connectivity
-    - name: DataMiner Integration Studio
-      topicUid: DIS
-      items:
-        - name: Concepts
-          topicUid: Concepts
-          items:
-            - name: Overall concept of the DataMiner Integration Studio
-              topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
-            - name: Concept of debugging QActions and Automation scripts
-              topicUid: Concept_of_debugging_QActions_and_Automation_scripts
-        - name: Installing and configuring the software
-          topicUid: Installing_and_configuring_the_software
-          items:
-            - name: Prerequisites
-              topicUid: Prerequisites
-            - name: Installing and configuring DataMiner Integration Studio
-              topicUid: Installing_and_configuring_DataMiner_Integration_Studio
-            - name: Configuring Microsoft Visual Studio
-              topicUid: Configuring_Microsoft_Visual_Studio
-        - name: DIS menu
-          topicUid: DIS_menu
-        - name: XML editor
-          topicUid: XML_editor
-        - name: Display editor
-          topicUid: Display_editor
-        - name: Function editor
-          topicUid: Function_editor
-        - name: Table editor
-          topicUid: Table_editor
-        - name: Version editor
-          topicUid: Version_editor
-        - name: C# editor
-          topicUid: C_editor
-        - name: Debugging QActions and Automation scripts
-          topicUid: Debugging_QActions_and_Automation_scripts
-          items:
-            - name: Preparing to debug on the local DataMiner Agent
-              topicUid: Preparing_to_debug_on_the_local_DataMiner_Agent
-            - name: Preparing to debug on a remote DataMiner Agent
-              topicUid: Preparing_to_debug_on_a_remote_DataMiner_Agent
-            - name: Debugging a QAction
-              topicUid: Debugging_a_QAction
-            - name: Debugging an Automation script
-              topicUid: Debugging_an_Automation_script
-        - name: Developing DataMiner protocols and Automation scripts as Visual Studio solutions
-          topicUid: Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions
-          items:
-            - name: Developing DataMiner protocols as Visual Studio solutions
-              topicUid: Developing_DataMiner_protocols_as_Visual_Studio_solutions
-            - name: Developing Automation scripts as Visual Studio solutions
-              topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
-        - name: Troubleshooting
-          topicUid: Troubleshooting
-          items:
-            - name: Repairing an incorrectly installed DIS package on Visual Studio 2010
-              topicUid: Repairing_an_incorrectly_installed_DIS_package_on_Visual_Studio_2010
-            - name: Could not find SLScripting process, is DataMiner running?
-              topicUid: Could_not_find_SLScripting_process_is_DataMiner_running
-            - name: Clicking the Publish button causes an error
-              topicUid: Clicking_the_Publish_button_causes_an_error
-        - name: DIS reference
-          topicUid: DIS_reference
-          items:
-            - name: DIS settings
-              topicUid: DIS_settings
-            - name: DIS keyboard shortcuts
-              topicUid: DIS_keyboard_shortcuts
-            - name: Microsoft Visual Studio keyboard shortcuts
-              topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
-            - name: Class Library packages
-              topicUid: Class_Library_packages
     - name: TCP-IP sockets
       topicUid: TCPIPSockets
       items:
@@ -1796,6 +1744,8 @@
               topicUid: Configuring_job_domains
             - name: Configuring job sections
               topicUid: Configuring_job_sections
+            - name: Configuring jobs linked to bookings
+              topicUid: Configuring_jobs_linked_to_bookings
             - name: Configuring a job field
               topicUid: Configuring_a_job_field
         - name: Working with the jobs timeline
@@ -2354,7 +2304,13 @@
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
         - name: Managing the nodes of a cloud-connected DMS
-          topicUID: Managing_cloud-connected_nodes
+          topicUid: Managing_cloud-connected_nodes
+        - name: Managing DCP keys
+          topicUid: Managing_DCP_keys
+        - name: Viewing information on deployments
+          topicUid: Viewing_info_on_deployments
+        - name: Viewing information on shares
+          topicUid: Viewing_info_on_shares
     - name: DataMiner Teams bot
       topicUid: DataMiner_Teams_bot
 - name: DataMiner Professional Services

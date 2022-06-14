@@ -15,11 +15,11 @@ This action either closes the port of which the connection number is specified i
 
 ### Type@nr
 
-(optional): Specifies the connection number. Default: 0.
+(Optional.) Specifies the connection number. Default: 0.
 
 ### Type@id
 
-(optional):  Applicable for smart IP only. Specifies the ID of the parameter that holds the client IP and port (IP:port).
+(Optional.) Applicable for smart IP only. Specifies the ID of the parameter that holds the client IP and port (IP:port).
 
 ## Examples
 

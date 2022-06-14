@@ -7,6 +7,7 @@ uid: Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file
 When a shape is linked to a view, a service or an element, it can be turned into a tab control that displays all pages or specific pages of the Visio drawing linked to that view, service or element.
 
 > [!TIP]
+>
 > - See also: [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view.
 

@@ -7,7 +7,7 @@
 	using System;
 
 	/// <summary>
-	/// Defines extension methods on the <see cref="SLNetConnection"/> class.
+	/// Defines extension methods on the SLNetConnection class.
 	/// </summary>
 	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedScripting.dll")]
 	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
@@ -26,9 +26,9 @@
 #pragma warning restore S1104 // Fields should not have public accessibility
 
 		/// <summary>
-		/// Gets an object implementing the <see cref="IDms"/> interface using an instance of the <see cref="SLNetConnection"/> class.
+		/// Gets an object implementing the <see cref="IDms"/> interface using an instance of the SLNetConnection class.
 		/// </summary>
-		/// <param name="connection">The <see cref="SLNetConnection"/> connection.</param>
+		/// <param name="connection">The SLNetConnection connection.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="connection"/> is <see langword="null" />.</exception>
 		/// <returns>Object implementing the <see cref="IDms"/> interface.</returns>
 		public static IDms GetDms(this SLNetConnection connection)

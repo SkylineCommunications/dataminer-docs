@@ -21,7 +21,11 @@ Specifies the ID(s) of the parameters to retrieve.
 
 ### Type@id
 
-(optional): Specifies the ID of the parameter to retrieve. If not provided, the corresponding read parameter of the parameter specified in On@id is used.
+(Optional.) Specifies the ID of the parameter to retrieve. If not provided, the corresponding read parameter of the parameter specified in On@id is used.
+
+#### Type@nr
+
+(Optional.) Specifies the connection number. Default: 0.
 
 ## Examples
 

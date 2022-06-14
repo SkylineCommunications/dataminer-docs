@@ -20,7 +20,7 @@ To install and set up the DataMiner PTP app:
 5. Open DataMiner Cube by browsing to the name or IP of the server in Internet Explorer.
 
     > [!NOTE]
-    > You may need to add this address to the trusted locations in the Internet Explorer settings in order to gain access. See [Configuring Internet Explorer to run DataMiner Cube](xref:Installing_configuring_the_DataMiner_Cube_software#configuring-internet-explorer-to-run-dataminer-cube).
+    > You may need to add this address to the trusted locations in the Internet Explorer settings in order to gain access. See [Configuring Internet Explorer to run DataMiner Cube](xref:Configuring_Internet_Explorer_to_run_DataMiner_Cube).
 
 6. In DataMiner Cube, go to *Apps* > *Automation*.
 

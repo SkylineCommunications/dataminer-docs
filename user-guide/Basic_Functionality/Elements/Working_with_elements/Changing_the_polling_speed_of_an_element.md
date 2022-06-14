@@ -6,14 +6,6 @@ uid: Changing_the_polling_speed_of_an_element
 
 The polling speed of an element is determined by the timers specified in the element protocol. You can slow down or speed up these timers by changing the value of the element’s \[Timer base\] parameter.
 
-- [Required protocol settings to allow timer base changes](#required-protocol-settings-to-allow-timer-base-changes)
-
-- [\[Timer Base\] parameter functionality](#timer-base-parameter-functionality)
-
-- [Changing the \[Timer base\] of one element](#changing-the-timer-base-of-one-element)
-
-- [Changing the \[Timer base\] of several elements at once](#changing-the-timer-base-of-several-elements-at-once)
-
 ## Required protocol settings to allow timer base changes
 
 The \[Timer base\] parameter will only affect so-called relative timers. As such, it can only be used in conjunction with element protocols where the *relativeTimers* attribute of the *Protocol.Type* tag has been set to “*true*” or “*true with reset*”.
@@ -62,22 +54,21 @@ The \[Timer base\] parameter can be set to a value ranging from 0.01 to 10.00.
 
 1. Open the relevant element card. See [Element cards](xref:Element_cards).
 
-2. Go to the page *General parameters*.
+1. Go to the page *General parameters*.
 
-3. Enter the desired value next to *\[Timer base\]* and click the green check mark icon.
+1. Enter the desired value next to *\[Timer base\]* and click the green check mark icon.
 
 ## Changing the \[Timer base\] of several elements at once
 
 1. In the Surveyor, right-click one of the elements in question and select *Multiple Set*.
 
-2. In the *Multiple Set* dialog box, set the *Parameter* selection box to *\[Timer base\]*.
+1. In the *Multiple Set* dialog box, set the *Parameter* selection box to *\[Timer base\]*.
 
-3. Below this, in the box next to *Value*, enter the new \[Timer base\] value or use the slider to select the value.
+1. Below this, in the box next to *Value*, enter the new \[Timer base\] value or use the slider to select the value.
 
-4. In the list on the right, select all elements for which you want the \[Timer base\] parameter to be changed.
+1. In the list on the right, select all elements for which you want the \[Timer base\] parameter to be changed.
 
-5. Click the *SET* button.
+1. Click the *SET* button.
 
 > [!NOTE]
 > This is only possible with elements that use the same protocol and protocol version.
->
