@@ -4,7 +4,9 @@ uid: I-DOCSIS_parameters_ds_ofdm_ch
 
 # I-DOCSIS parameters – DS OFDM CH
 
-This page contains an overview of the DS OFDM CH parameters available in the I-DOCSIS branch of the EPM Solution.****
+These parameters are currently still under development.
+
+<!-- This page contains an overview of the DS OFDM CH parameters available in the I-DOCSIS branch of the EPM Solution.
 
 ## KPIs & KQIs
 
@@ -28,4 +30,4 @@ This page contains an overview of the DS OFDM CH parameters available in the I-D
 
 - **OFDM Uncorrectable Ratio**
 
-- **OFDM PNM RX MER Mean**
+- **OFDM PNM RX MER Mean** -->

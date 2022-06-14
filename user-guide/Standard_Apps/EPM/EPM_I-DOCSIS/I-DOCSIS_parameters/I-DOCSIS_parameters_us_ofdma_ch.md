@@ -4,7 +4,9 @@ uid: I-DOCSIS_parameters_us_ofdma_ch
 
 # I-DOCSIS parameters – US OFDMA CH
 
-This page contains an overview of the US OFDMA CH parameters available in the I-DOCSIS branch of the EPM Solution.
+These parameters are currently still under development.
+
+<!-- This page contains an overview of the US OFDMA CH parameters available in the I-DOCSIS branch of the EPM Solution.
 
 ## KPIs & KQIs
 
@@ -46,4 +48,4 @@ This page contains an overview of the US OFDMA CH parameters available in the I-
 
 - **Width**
 
-- **Modulation**
+- **Modulation** -->
