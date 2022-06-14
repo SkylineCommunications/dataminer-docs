@@ -14,7 +14,7 @@ Rights can be granted according to three concepts:
 
 - **Access levels**: Access levels can be assigned both to users and to individual parameters.
 
-    The lower the number of a user's access level, the more levels they can access, because they will be able to access all parameters for which a security level with a higher number is defined (see [level attribute](xref:Protocol.Params.Param-level). For example, a user with access level 3 can update parameters with security level 3, 4, 5, etc.
+    The lower the number of a user's access level, the more levels they can access, because they will be able to access all parameters for which a security level with a higher number is defined (see [level attribute](xref:Protocol.Params.Param-level)). For example, a user with access level 3 can update parameters with security level 3, 4, 5, etc.
 
     Access levels for regular users range from 1 (the level with most access) to 100 (the level with least access). The Administrator user has access level 0.
 
