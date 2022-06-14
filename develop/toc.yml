@@ -4630,6 +4630,8 @@
               topicUid: Automation_scripts_as_a_Visual_Studio_solution
             - name: Pipeline stages for Automation scripts
               topicUid: Pipeline_stages_for_Automation_scripts
+            - name: Deploying Automation scripts from a GitHub repository
+              topicUid: Deploying_Automation_scripts_from_a GitHub_repository
         - name: Visual overview development with CI/CD pipeline
           topicUid: Visual_overview_development_with_CI_CD_pipeline
           items:

@@ -1,5 +1,5 @@
 ---
-uid: GitHub_Action_for_CI_CD
+uid: Deploying_Automation_scripts_from_a GitHub_repository
 ---
 
 # Deploying Automation scripts from a GitHub repository
