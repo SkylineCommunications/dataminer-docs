@@ -35,4 +35,4 @@ The key should be added as a secret in the repository. This way the key is store
 
    ![Search for action](~/develop/images/GitHub_workflow_marketplace.png)
 
-1. Copy and paste the template code and fill in the required parameters. More information about the action itself can be found [here](https://github.com/marketplace/actions/skyline-dataminer-deploy-action)
+1. Copy and paste the template code and fill in the required parameters. More information about the parameters and action itself can be found [here](https://github.com/marketplace/actions/skyline-dataminer-deploy-action).
