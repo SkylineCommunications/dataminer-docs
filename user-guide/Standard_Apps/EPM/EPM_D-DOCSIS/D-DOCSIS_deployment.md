@@ -43,8 +43,8 @@ To deploy the D-DOCSIS branch of the EPM Solution:
 
    - **Collector elements**, as necessary. The solution expects these to be created within the hub-level views. For an overview of the supported collectors, see [Supported technologies for D-DOCSIS](xref:D-DOCSIS_supported_technologies).
 
-        > [!NOTE]
-        > Large deployments could greatly benefit from the use of DataMiner IDP. See [IDP](xref:SolIDP).
+     > [!NOTE]
+     > Large deployments could greatly benefit from the use of DataMiner IDP. See [DataMiner IDP app](xref:SolIDP).
 
    - **Back-end EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
    - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.

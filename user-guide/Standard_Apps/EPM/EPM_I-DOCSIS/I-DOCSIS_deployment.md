@@ -49,11 +49,10 @@ To deploy the I-DOCSIS branch of the EPM Solution:
 
    - **Collector elements, CMTS/CCAP collector elements, and CM collector elements**, as necessary. The solution expects these to be created within the hub-level views. For an overview of the supported collectors, see [Supported technologies for I-DOCSIS](xref:I-DOCSIS_supported_technologies).
 
-        > [!NOTE]
-        > Large deployments could greatly benefit from the use of DataMiner IDP. See [IDP](xref:SolIDP).
-
-        > [!NOTE]
-        > The DataMiner element names must match the CCAP names as defined in SNMP. This is required to properly link the topology visuals to the elements. To rename a CCAP Platform element, first change the user-defined CCAP name in SNMP to the new name, then rename the element in Surveyor to match the new name.
+     > [!NOTE]
+     >
+     > - Large deployments could greatly benefit from the use of DataMiner IDP. See [DataMiner IDP app](xref:SolIDP).
+     > - The DataMiner element names must match the CCAP names as defined in SNMP. This is required to properly link the topology visuals to the elements. To rename a CCAP Platform element, first change the user-defined CCAP name in SNMP to the new name, then rename the element in Surveyor to match the new name.
 
    - **Back-end EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
    - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
