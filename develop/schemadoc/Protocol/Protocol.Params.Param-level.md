@@ -22,6 +22,8 @@ If you do not specify the *level* attribute, the parameter will have level 0xFFF
 
 The lower the number of a user's security level, the more levels they can access. For example, a user with security level 3 can see level 3, 4, 5, etc. A user with security level 0 (i.e. the Administrator account) can see all levels.
 
+See also: [User rights](xref:User_rights).
+
 ## Examples
 
 ```xml
