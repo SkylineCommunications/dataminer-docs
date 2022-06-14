@@ -10,7 +10,7 @@ uid: I-DOCSIS_components
 
 Collector connectors interface with the main data sources (CMTS and CCAP devices, APIs, etc.). For example, we use collector connectors to poll a CMTS device and obtain the necessary information needed to present DOCSIS data throughout the EPM topology.
 
-These connectors do not ship out with the solution packages. They need to be installed separately as necessary.
+While these connectors ship out with the solution packages, they need to be contracted separately as necessary.
 
 For an overview of the available collector connectors, see [Supported technologies for I-DOCSIS](xref:I-DOCSIS_supported_technologies).
 
@@ -22,7 +22,6 @@ These are the required EPM connectors, which are included in the EPM Solution pa
 
 - [Skyline EPM Platform](https://catalog.dataminer.services/result/driver/7207)
 - [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209)
-- [Generic DOCSIS CM Collector](https://catalog.dataminer.services/result/driver/4207)
 - [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/result/driver/7212)
 
 ## Correlation rules
