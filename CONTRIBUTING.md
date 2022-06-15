@@ -491,6 +491,63 @@ The Skyline documentation team will then need to merge your pull request, so tha
 
 When all the necessary changes have been made and the draft branch is ready for publication, create a pull request as detailed above, but select the main branch instead of the draft branch as the base.
 
+### Making a local test build before pushing changes	
+
+Before pushing your changes to the repository, it is always a good idea to make a test build on your local machine. Especially when those changes involve e.g. adding new sections and/or updating toc.yml files.
+
+To be able to make a local test build, you need to have DocFX installed. DocFX is the static website generator that is being used under the hood to create the <https://docs.dataminer.services/> website.
+
+#### Installing and configuring DocFX	
+
+The easiest way to install DocFX on a Microsoft Windows machine, is to download and extract the DocFx zip package:
+
+1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.2).
+ 
+    > [!CAUTION]
+    > It is advised not to use any of the beta versions.
+
+1. Extract `docfx.zip` to a random folder (e.g. `C:\DocFX`) 
+
+1. Add the folder (e.g. `C:\DocFX`) to the environment variable `Path` (user variable or system variable).
+
+1. Test whether DocFX was installed correctly:
+
+    1. Open a command prompt.
+    1. Enter `docfx help`.
+    
+    If information similar to the following text is returned, then DocFx was installed correctly:
+
+    ```txt
+    docfx 2.58.4.0
+    Copyright (C) 2022 ¸ Microsoft Corporation. All rights reserved.
+    This is open-source software under MIT License.  
+    ...
+    ```
+
+> [!TIP]
+> Alternative ways to install DocFx can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
+
+#### Making a test build	
+
+When you have finished making a series of changes to a user guide in Visual Studio Code, do the following to make a test build on your local machine.
+
+1. If no Terminal pane is open in Visual Studio Code, then go to *Terminal > New Terminal*.
+
+1. In the Terminal pane, do the following:
+
+    1. Enter `clear` to clear the Terminal.
+    
+    1. Enter `docfx metadata` to extract the necessary metadata from the programming code. Based on this metadata, DocFx will automatically generate the code documentation found in e.g. the [Developer documentation](xref:DevelopIndex) section.
+    
+        > [!NOTE]
+        > After running the `docfx metadata` command, 5 warnings will appear in the Terminal. These can be ignored.
+     
+    1. Enter `docfx build -f` to make a test build.
+    
+    1. Enter `docfx serve _site`, and go to <http://localhost:8080/> to preview the website.
+    
+        When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
+
 ## References
 
 As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs contributor guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.
