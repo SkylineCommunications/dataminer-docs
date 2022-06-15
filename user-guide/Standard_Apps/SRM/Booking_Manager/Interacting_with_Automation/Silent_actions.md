@@ -167,7 +167,7 @@ public class Script
 The example below shows how resource, profile and parameter values can be assigned to a booking without user interaction by means of an Automation script.
 
 > [!NOTE]
-> In case the booking is already running, you must force the service state to transition again so that LSO and Profile Load scripts will be executed to apply new settings or to configure the new resource.
+> In case the booking is already running, you must force the service state to transition again so that LSO and Profile-Load Scripts will be executed to apply new settings or to configure the new resource.
 
 ```cs
 using System;
