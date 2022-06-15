@@ -491,6 +491,73 @@ The Skyline documentation team will then need to merge your pull request, so tha
 
 When all the necessary changes have been made and the draft branch is ready for publication, create a pull request as detailed above, but select the main branch instead of the draft branch as the base.
 
+### Making a local test build before pushing changes	
+
+Before you push your changes to the repository, it is often a good idea to make a test build on your local machine. This is especially the case if your changes involve adding or removing files, adding cross-references, changing headers, and/or updating a toc.yml file.
+
+To be able to make a local test build, you need to have DocFX installed. DocFX is the static website generator that is used under the hood to create the <https://docs.dataminer.services/> website.
+
+#### Installing and configuring DocFX	
+
+To install DocFX on a Microsoft Windows machine:
+
+1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.2).
+ 
+    > [!CAUTION]
+    > We recommend that you do not use any of the beta versions.
+
+1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
+
+1. Add the folder (e.g. `C:\DocFX`) to the environment variable **Path** (user variable or system variable).
+
+    On Windows 10 systems, do the following: 
+
+    1. In your Windows search box, enter "path".
+    1. Click *Edit the system environment variables*.
+    1. In the *Advanced* tab of the *System Properties* window, click *Environment Variables*.
+    1. In the *Environment Variables* window, select the **Path** variable in either the *User variables for \<user\>* list or the *System variables* list, and click *Edit*.
+    1. In the *Edit environment variable* window, click *New*, enter e.g. `C:\DocFX`, and click *OK*.
+
+1. Test whether DocFX was installed correctly:
+
+    1. Open a command prompt.
+    1. Enter `docfx help`.
+    
+    If information similar to the following text is returned, DocFX was installed correctly:
+
+    ```txt
+    docfx 2.58.4.0
+    Copyright (C) 2022 ¸ Microsoft Corporation. All rights reserved.
+    This is open-source software under MIT License.  
+    ...
+    ```
+
+> [!TIP]
+> Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
+
+#### Making a test build	
+
+When you have finished making a series of changes to documentation in Visual Studio Code, do the following to make a test build on your local machine.
+
+1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
+
+1. In the Terminal pane, do the following:
+
+    1. Enter `clear` to clear the terminal.
+    
+    1. Enter `docfx metadata -f` to extract the necessary metadata from the programming code. Based on the metadata, DocFX will automatically generate part of the documentation found in the [Developer documentation](xref:DevelopIndex) section.
+    
+        > [!NOTE]
+        > After you run the `docfx metadata -f` command, 5 warnings will appear in the terminal. These can be ignored. If you made a change to one or more files in the `src` folder, and more than 5 warnings appear in the terminal, check the warnings to see what went wrong and make the necessary corrections.
+     
+    1. Enter `docfx build -f` to make a test build.
+    
+    1. Enter `docfx serve _site`.
+    
+    1. In a browser, go to <http://localhost:8080/> to preview the website.
+    
+        When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
+
 ## References
 
 As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs contributor guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.
