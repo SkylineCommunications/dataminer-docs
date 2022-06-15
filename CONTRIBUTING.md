@@ -493,20 +493,20 @@ When all the necessary changes have been made and the draft branch is ready for 
 
 ### Making a local test build before pushing changes	
 
-Before pushing your changes to the repository, it is always a good idea to make a test build on your local machine. Especially when those changes involve e.g. adding new sections and/or updating toc.yml files.
+Before you push your changes to the repository, it is often a good idea to make a test build on your local machine. This is especially the case if your changes involve adding or removing files, adding cross-references, changing headers, and/or updating a toc.yml file.
 
-To be able to make a local test build, you need to have DocFX installed. DocFX is the static website generator that is being used under the hood to create the <https://docs.dataminer.services/> website.
+To be able to make a local test build, you need to have DocFX installed. DocFX is the static website generator that is used under the hood to create the <https://docs.dataminer.services/> website.
 
 #### Installing and configuring DocFX	
 
-The easiest way to install DocFX on a Microsoft Windows machine, is to download and extract the DocFx zip package:
+To install DocFX on a Microsoft Windows machine:
 
 1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.2).
  
     > [!CAUTION]
-    > It is advised not to use any of the beta versions.
+    > We recommend that you do not use any of the beta versions.
 
-1. Extract `docfx.zip` to a random folder (e.g. `C:\DocFX`) 
+1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
 
 1. Add the folder (e.g. `C:\DocFX`) to the environment variable `Path` (user variable or system variable).
 
@@ -515,7 +515,7 @@ The easiest way to install DocFX on a Microsoft Windows machine, is to download 
     1. Open a command prompt.
     1. Enter `docfx help`.
     
-    If information similar to the following text is returned, then DocFx was installed correctly:
+    If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
     docfx 2.58.4.0
@@ -525,26 +525,28 @@ The easiest way to install DocFX on a Microsoft Windows machine, is to download 
     ```
 
 > [!TIP]
-> Alternative ways to install DocFx can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
+> Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
 #### Making a test build	
 
-When you have finished making a series of changes to a user guide in Visual Studio Code, do the following to make a test build on your local machine.
+When you have finished making a series of changes to documentation in Visual Studio Code, do the following to make a test build on your local machine.
 
-1. If no Terminal pane is open in Visual Studio Code, then go to *Terminal > New Terminal*.
+1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
 
 1. In the Terminal pane, do the following:
 
-    1. Enter `clear` to clear the Terminal.
+    1. Enter `clear` to clear the terminal.
     
-    1. Enter `docfx metadata` to extract the necessary metadata from the programming code. Based on this metadata, DocFx will automatically generate the code documentation found in e.g. the [Developer documentation](xref:DevelopIndex) section.
+    1. Enter `docfx metadata -f` to extract the necessary metadata from the programming code. Based on the metadata, DocFX will automatically generate part of the documentation found in the [Developer documentation](xref:DevelopIndex) section.
     
         > [!NOTE]
-        > After running the `docfx metadata` command, 5 warnings will appear in the Terminal. These can be ignored.
+        > After you run the `docfx metadata -f` command, 5 warnings will appear in the terminal. These can be ignored. If you made a change to one or more files in the `src` folder, and more than 5 warnings appear in the terminal, check the warnings to see what went wrong and make the necessary corrections.
      
     1. Enter `docfx build -f` to make a test build.
     
-    1. Enter `docfx serve _site`, and go to <http://localhost:8080/> to preview the website.
+    1. Enter `docfx serve _site`.
+    
+    1. In a browser, go to <http://localhost:8080/> to preview the website.
     
         When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
 
