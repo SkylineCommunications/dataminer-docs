@@ -12,7 +12,7 @@ Groups Other child elements.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Other](xref:Protocol.Params.Param.Interprete.Others.Other)|[0, *]|When an incoming character does not match the rawtype of a parameter, DataMiner will try to match the symbol to the rawtype of the parameter to which a Protocol.Params.Param.Interprete.Others.Other tag refers to, if any.|
 

@@ -12,14 +12,14 @@ Contains the displayed value(s) of the parameter.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[dependencyId](xref:Protocol.Params.Param.Measurement.Discreets-dependencyId)|[TypeParamId](xref:Protocol-TypeParamId)||If the discrete values of the parameter depend on the current state of another parameter, the ID of that other parameter can be specified using this attribute.|
 |[matrixLayout](xref:Protocol.Params.Param.Measurement.Discreets-matrixLayout)|||Configures the layout of the matrix.|
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Discreet](xref:Protocol.Params.Param.Measurement.Discreets.Discreet)|[0, *]|Specifies a value and a text string. The latter will be displayed on the user interface if the former matches the value of the parameter.|
 

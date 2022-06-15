@@ -19,7 +19,7 @@ Allows displaying a parameter as a chart.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Parameters](xref:Protocol.Params.Param.Display.ParametersView.Parameters)|[0, 1]|If you use */Protocol/Params/Param/Display/ParametersView* to display a parameter as a chart, then here you have to define the parameters holding the actual values to be displayed.|
 

@@ -12,7 +12,7 @@ Specifies how a parameter value is processed.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Alignment](xref:Protocol.Params.Param.Interprete.Alignment)|[0, 1]|Used to retrieve BCD numbers from an incoming stream.|

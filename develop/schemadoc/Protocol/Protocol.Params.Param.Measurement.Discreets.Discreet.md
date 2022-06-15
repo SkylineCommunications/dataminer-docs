@@ -12,7 +12,7 @@ Specifies a value and a text string. The latter will be displayed on the user in
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[dependencyValues](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-dependencyValues)|string||When the parameter depends on the current value of another parameter, dependencyValues can be used to specify whether the discreet value should be available.|
 |[displayIconAndLabel](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-displayIconAndLabel)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||Specifies whether to show only the icon (false) or to show the icon together with the display value of the discrete entry (true).|
@@ -22,7 +22,7 @@ Specifies a value and a text string. The latter will be displayed on the user in
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Display](xref:Protocol.Params.Param.Measurement.Discreets.Discreet.Display)||Specifies the string to be displayed when the value of the parameter matches the contents of the Protocol.Params.Param.Measurement.Discreets.Discreet.Value tag.|

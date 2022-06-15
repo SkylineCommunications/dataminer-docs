@@ -12,7 +12,7 @@ Defines a parameter group.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[calculateAlarmState](xref:Protocol.ParameterGroups.Group-calculateAlarmState)|[TypeParamId](xref:Protocol-EnumTrueFalse)||Specifies whether to disable the interface state calculation.|
 |[dynamicId](xref:Protocol.ParameterGroups.Group-dynamicId)|[TypeParamId](xref:Protocol-TypeParamId)||Specifies the ID of the table parameter.|
@@ -54,8 +54,7 @@ Property information associated with interfaces and connections of specific elem
 > - When a group is defined like this, all rows that match the dynamicIndex filter in the table of which the parameter ID matches the ID specified in dynamicId will be considered part of the parameter group.
 > - The name of the parameter group will be the name defined in the prototype, concatenated with the index of the row. If, for example, the table with parameter ID 6 contains a row with index (displaycolumn) “StreamData”, then the name of the parameter group will be “Port StreamData” and the group will contain all the columns with index “Dog”.
 > - If you define a table with the ”;element option” property, parameter groups will be exported to the matching DVE element.
-> - If you defined a table parameter that is a matrix, the connections table will automatically be filled with the crosspoints that are connected.
-> - Example: Parameter group 4 has all its inputs and outputs selected (*). You can also define if you only want a certain set via x,y filtering (x is the input filter and y is the output filter).
+> - If you defined a table parameter that is a matrix, the connections table will automatically be filled with the crosspoints that are connected. Example: Parameter group 4 has all its inputs and outputs selected (*). You can also define if you only want a certain set via x,y filtering (x is the input filter and y is the output filter).
 > - If you want to turn the inputs into interfaces, the type of the parameter group must be “in”, if you want to turn the outputs into interfaces, the type of the parameter group must be “out”, and if you want a combination, the type of the parameter group must be “inout”.
 > - Parameter groups with dynamicId do not yet support tables with advanced naming.
 > - When dynamicId and dynamicIndex are not present, there must be a Params tag with a number of Param subtags.

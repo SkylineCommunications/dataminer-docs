@@ -16,7 +16,7 @@ Specifies on which Data Display page the parameter should be displayed.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[measType](xref:Protocol.Params.Param.Display.Positions.Position.Page-measType)|[EnumParamMeasurementType](xref:Protocol-EnumParamMeasurementType)||Specifies that this parameter has to be displayed in a specific way on the specified page.|
 

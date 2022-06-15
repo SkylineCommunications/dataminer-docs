@@ -12,7 +12,7 @@ Defines the location of the parameter on the user interface.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Column](xref:Protocol.Params.Param.Display.Positions.Position.Column)||Specifies the horizontal position of the parameter on the Data Display page specified in Protocol. Params.Param.Display.Positions.Position.Page.|

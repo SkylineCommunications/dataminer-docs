@@ -12,7 +12,7 @@ Specifies indexing options (Elastic).
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[enabled](xref:Protocol.Params.Param.Database.IndexingOptions-enabled)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)|Yes|Specifies whether the data of the logger table will be stored in the Elastic database instead of Cassandra. When set to true, the data of the logger table will be stored in the Elastic database instead of Cassandra|
 

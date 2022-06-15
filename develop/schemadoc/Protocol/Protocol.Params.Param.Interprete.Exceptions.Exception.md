@@ -12,14 +12,14 @@ Defines an exception for an exception value you want to intercept of which the I
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Params.Param.Interprete.Exceptions.Exception-id)|unsignedInt|Yes|Specifies the unique ID of the exception.|
 |[value](xref:Protocol.Params.Param.Interprete.Exceptions.Exception-value)|string|Yes|Specifies the incoming text or numeric value that you want to match with an exception value.|
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Display](xref:Protocol.Params.Param.Interprete.Exceptions.Exception.Display)||Specifies the text that has to be displayed when the incoming value matches the contents of the value attribute of /Protocol/Params/Param/Interprete/Exceptions/Exception.|

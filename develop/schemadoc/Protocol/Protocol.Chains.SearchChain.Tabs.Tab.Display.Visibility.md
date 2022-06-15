@@ -18,6 +18,6 @@ Configures chain tab visibility settings.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Standalone](xref:Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility.Standalone)|[1, *]|Configures the values the referenced parameter should have in order to switch the visibility to the opposite setting of the one defined in the Visibility@default attribute.|

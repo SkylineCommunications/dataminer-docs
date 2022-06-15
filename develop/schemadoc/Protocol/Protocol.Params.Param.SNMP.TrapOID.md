@@ -16,7 +16,7 @@ string
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[checkBindings](xref:Protocol.Params.Param.SNMP.TrapOID-checkBindings)|string||Specifies basic filtering on the trap bindings.|
 |[ipid](xref:Protocol.Params.Param.SNMP.TrapOID-ipid)|string||Specifies the ID of the parameter holding IP addresses.|

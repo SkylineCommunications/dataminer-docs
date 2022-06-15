@@ -12,7 +12,7 @@ Defines a parameter.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[confirmPopup](xref:Protocol.Params.Param-confirmPopup)|[EnumParamConfirmPopup](xref:Protocol-EnumParamConfirmPopup)||Overrides the "*Never ask for confirmation after setting parameter value*" setting in DataMiner Cube.|
 |[duplicateAs](xref:Protocol.Params.Param-duplicateAs)|[TypeCommaSeparatedNumbers](xref:Protocol-TypeCommaSeparatedNumbers)||Takes the value of another parameter and displays it in a column of a view table.|
@@ -32,7 +32,7 @@ Defines a parameter.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Alarm](xref:Protocol.Params.Param.Alarm)|[0, 1]|Specifies the default parameter alarming configuration.|
