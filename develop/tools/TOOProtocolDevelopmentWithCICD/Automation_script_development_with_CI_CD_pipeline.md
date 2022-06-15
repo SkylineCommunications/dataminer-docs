@@ -7,3 +7,5 @@ uid: Automation_script_development_with_CI_CD_pipeline
 - [Automation scripts as a Visual Studio solution](xref:Automation_scripts_as_a_Visual_Studio_solution)
 
 - [Pipeline stages for Automation scripts](xref:Pipeline_stages_for_Automation_scripts)
+
+- [Deploying Automation scripts from a GitHub repository](xref:Deploying_Automation_scripts_from_a GitHub_repository)
