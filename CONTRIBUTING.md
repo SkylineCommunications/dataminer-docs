@@ -384,6 +384,9 @@ When you add a page to the documentation:
   ---
   ```
 
+  > [!NOTE]
+  > Do not use spaces in a UID.
+ 
 - Add the new page to the relevant *toc.yml* file so that it is included in the table of contents. To do so, specify the name and UID as follows:
 
   ```yml
