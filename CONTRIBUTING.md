@@ -514,8 +514,8 @@ To install DocFX on a Microsoft Windows machine:
 
     1. In your Windows search box, enter "path".
     1. Click *Edit the system environment variables*.
-    1. In the *Advanced* tab of the *System Properties* window, click *Environment Variables...*
-    1. In the *Environment Variables* window, select the **Path** variable in either the *User variables for \<user\>* list or the *System variables* list, and click *Edit...*
+    1. In the *Advanced* tab of the *System Properties* window, click *Environment Variables*.
+    1. In the *Environment Variables* window, select the **Path** variable in either the *User variables for \<user\>* list or the *System variables* list, and click *Edit*.
     1. In the *Edit environment variable* window, click *New*, enter e.g. `C:\DocFX`, and click *OK*.
 
 1. Test whether DocFX was installed correctly:
