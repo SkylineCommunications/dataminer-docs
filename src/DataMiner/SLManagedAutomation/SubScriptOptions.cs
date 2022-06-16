@@ -64,15 +64,15 @@ namespace Skyline.DataMiner.Automation
 		public bool WaitWhenLocked { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether the script will return more detailled error information instead of throwing an exception. This is supported from DataMiner 10.3.0/10.2.7 onwards.
+		/// Gets or sets a value indicating whether the script will return more detailed error information instead of throwing an exception. This is supported from DataMiner 10.3.0/10.2.7 onwards.
 		/// </summary>
 		/// <value><c>true</c> if the script will return more detailed error info instead of throwing an exception; otherwise, <c>false</c>.</value>
 		public bool ExtendedErrorInfo { get; set; }
 
 		/// <summary>
-		/// Gets a value indicating whether the script had an error and the <see cref="ExentedErrorInfo"/> was <c>true</c>. This is supported from DataMiner 10.3.0/10.2.7 onwards.
+		/// Gets a value indicating whether the script had an error and the <see cref="SubScriptOptions.ExtendedErrorInfo"/> was <c>true</c>. This is supported from DataMiner 10.3.0/10.2.7 onwards.
 		/// </summary>
-		/// <value><c>true</c> if the script had an error and the <see cref="ExentedErrorInfo"/> was <c>true</c>; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> if the script had an error and the <see cref="SubScriptOptions.ExtendedErrorInfo"/> was <c>true</c>; otherwise, <c>false</c>.</value>
 		public bool HadError { get; }
 
 		/// <summary>
@@ -374,7 +374,7 @@ namespace Skyline.DataMiner.Automation
 		}
 
 		/// <summary>
-		/// Returns the error messages of the script after execution when the <see cref="ExendedErrorInfo"/> option is set to <c>true</c>. This is supported from DataMiner 10.3.0/10.2.7 onwards.
+		/// Returns the error messages of the script after execution when the <see cref="SubScriptOptions.ExtendedErrorInfo"/> option is set to <c>true</c>. This is supported from DataMiner 10.3.0/10.2.7 onwards.
 		/// </summary>
 		/// <returns>The error messages of the script.</returns>
 		/// <example>
