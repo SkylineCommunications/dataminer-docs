@@ -2,9 +2,9 @@
 uid: Configuring_Internet_Explorer_to_run_DataMiner_Cube
 ---
 
-<!-- To be replaced with Configuring_Microsoft_edge_to_run_Cube -->
+<!-- To be replaced with Configuring_Microsoft_edge_to_run_Cube - this page can be moved to the FAQs as a question for legacy systems -->
 
-# ConfiguringInternet Explorer  to run DataMiner Cube
+# Configuring Internet Explorer to run DataMiner Cube
 
 Before you can run the DataMiner Cube browser application in Microsoft Internet Explorer, a number of settings must be configured.
 

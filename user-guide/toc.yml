@@ -855,6 +855,8 @@
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
             - name: Rolling back a DataMiner upgrade
               topicUid: Rolling_back_a_DataMiner_upgrade
+            - name: Configuring the default upgrade options
+              topicUID: Configuring_the_default_upgrade_options
         - name: Uninstalling a DataMiner Agent
           topicUid: Uninstalling_a_DataMiner_Agent
         - name: DataMiner packages

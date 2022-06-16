@@ -12,7 +12,7 @@ Before you can run the DataMiner Cube browser application in Microsoft Edge, a n
 
    1. In the pane on the left, select *Default browser*.
 
-   1. Next to Internet Explorer mode pages, click Add.
+   1. Next to *Internet Explorer mode pages*, click *Add*.
 
    1. In the dialog, specify the URL to open DataMiner Cube for your DMA, e.g. `https://MyDMA/DataMinerCube/DataMinerCube.xbap`.
 
