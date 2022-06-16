@@ -29,41 +29,76 @@ Below you can find an overview of the different methods that can be used to depl
 ## Launcher installation
 
 - Individual users can obtain the launcher either from a local DMA or from <https://dataminer.services/>.
-- When the launcher is downloaded from a local DMA, that DMA will automatically be added to the start window when you first start up.
-- The application runs from `%LocalAppData%\Skyline\DataMiner\DataMinerCube`.
+
+    When the launcher is downloaded from a local DMA, that DMA will automatically be added to the start window when you first start up.
+
+- Launcher installation uses the same approach as the [Microsoft Teams Desktop Installer](https://docs.microsoft.com/en-us/microsoftteams/get-clients).
+
+- The application runs from `%LocalAppData%\Skyline\DataMiner\DataMinerCube`. It installs and updates automatically.
+
+- Installation does not require administrator rights.
 
 ## Bootstrap MSI installation
 
-- Bootstrap MSI installation uses the same approach as the [Microsoft Teams Machine-Wide Installer](https://docs.microsoft.com/en-us/microsoftteams/msi-deployment#how-the-microsoft-teams-msi-package-works).
-- The launcher automatically gets installed for each individual user the next time they sign in on that machine. This avoids the need for each individual user to download and install the launcher.
-- It is possible to provide a default configuration for all users by preparing a `CubeLauncherConfig.json` file and placing it in the folder where the bootstrapper is installed.<br>Default installation folder: `C:\Program Files\Skyline Communications\DataMiner Cube\`
-- When deployed via a script, the target folder can be customized with the INSTALLDIR parameter:
+- The bootstrap MSI installation package can be obtained from <https://community.dataminer.services/download/dataminer-cube-msi-bootstrap/>.
 
-    ```txt
-    msiexec.exe /q /i bootstrap.msi INSTALLDIR="C:\DataMinerCube\"
-    ```
+- Bootstrap MSI installation uses the same approach as the [Microsoft Teams Machine-Wide Installer](https://docs.microsoft.com/en-us/microsoftteams/msi-deployment#how-the-microsoft-teams-msi-package-works).
+
+- The launcher automatically gets installed for each individual user the next time they sign in on that machine. This avoids the need for each individual user to download and install the launcher.
+
+- It is possible to provide a default configuration for all users by preparing a `CubeLauncherConfig.json` file and placing it in the folder where the bootstrapper is installed.<br>Default installation folder: `C:\Program Files\Skyline Communications\DataMiner Cube\`
 
 ## Shared MSI installation
 
 - Classic MSI deployment.
+
 - The launcher and a specific Cube version get installed in a shared location.<br>Default location: `C:\Program Files\Skyline Communications\DataMiner Cube\`
+
 - Recommended when users have no permission to download or execute new applications.
+
 - Only a single executable needs to be allowed on the Windows Firewall.
+
 - Multiple versions can be installed side by side.
+
 - No support for automatic updates.
 
 ## CefSharp MSI
 
 - Can be combined with any of the Cube deployment methods.
+
 - Avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
+
 - Deployment is in a fixed location: `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CefSharp\`
+
 - Windows 8, 8.1 and 2012 R2 require Microsoft Visual C++ Runtime 2015 to be installed separately. For more information, see [the latest supported Visual C++ downloads](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0).
 
-## Remarks
+## General remarks
 
-- The MSI packages require administrator rights for installation.
-- The MSI packages require a 64-bit operating system.
+- All MSI packages require administrator rights for installation.
+
+- All MSI packages require a 64-bit operating system.
+
 - The launcher is backwards compatible and can be used to deploy any 9.x or 10.x Cube version. Shared MSI installation packages can be provided on demand for older versions.
+
+- All packages support using the INSTALLDIR parameter to customize the target folder (default folder: `%ProgramFiles\Skyline Communications\DataMiner Cube`).
+
+    Examples:
+
+    ```txt
+    msiexec /i CubeVersion-10.2.1.msi INSTALLDIR="C:\DataMinerCube\"
+
+    msiexec.exe /q /i bootstrap.msi INSTALLDIR="C:\DataMinerCube\"
+
+    ```
+
+    For more information on msiexec command line arguments, see:
+
+    - <https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec>
+    - <https://docs.microsoft.com/en-us/windows/win32/msi/command-line-options>
+
+    > [!NOTE]
+    > If a previous version of the application is already installed, newer versions will be installed alongside it and the INSTALLDIR parameter will be ignored.
+
 - To allow seamless use of `cube://` hyperlinks in web browsers, the following group policies can be configured (examples for [Microsoft Edge](https://docs.microsoft.com/en-us/deployedge/microsoft-edge-policies#urlallowlist), but similar for [Google Chrome](https://chromeenterprise.google/policies/?policy=URLAllowlist)):
 
     - Allow from any source:
@@ -78,3 +113,9 @@ Below you can find an overview of the different methods that can be used to depl
         ```txt
         [HKEY_CURRENT_USER\Software\Policies\Microsoft\Edge] "AutoLaunchProtocolsFromOrigins"="[{\"allowed_origins\":[\"http://intranet/\"],\"protocol\":\"cube\"}]"
         ```
+
+
+
+
+
+
