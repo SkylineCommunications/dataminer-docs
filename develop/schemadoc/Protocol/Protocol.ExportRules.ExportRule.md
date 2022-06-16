@@ -12,7 +12,7 @@ Defines a rule that are used for changing the displayed items in a Dynamic Virtu
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[attribute](xref:Protocol.ExportRules.ExportRule-attribute)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)||Specifies the attribute of the XML element specified in the "tag" attribute on which to apply this rule.|
 |[name](xref:Protocol.ExportRules.ExportRule-name)|string||Specifies the name of the export rule.|

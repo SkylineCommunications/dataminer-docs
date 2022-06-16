@@ -16,7 +16,7 @@ Specifies how the parameter has to be displayed on the user interface.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[case](xref:Protocol.Params.Param.Measurement.Type-case)|[EnumParamMeasurementTypeCase](xref:Protocol-EnumParamMeasurementTypeCase)||Specifies the casing to be used.|
 |[continuous](xref:Protocol.Params.Param.Measurement.Type-continuous)|[EnumOnOff](xref:Protocol-EnumOnOff)||*** No documentation available yet. ***|

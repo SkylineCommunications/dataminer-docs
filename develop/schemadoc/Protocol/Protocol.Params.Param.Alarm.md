@@ -12,7 +12,7 @@ Specifies the default parameter alarming configuration.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[activeTime](xref:Protocol.Params.Param.Alarm-activeTime)|unsignedInt||In case of a constant alarm: the time (in milliseconds) before the alarm is cleared.|
 |[options](xref:Protocol.Params.Param.Alarm-options)|string||Specifies a number of options, separated by semicolons (”;”). These options can only be used if the table is linked to another table.|
@@ -20,7 +20,7 @@ Specifies the default parameter alarming configuration.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[CH](xref:Protocol.Params.Param.Alarm.CH)|[0, 1]|Defines the default value in the alarm template that this parameter must equal or exceed in order for DataMiner to create a new "critical high" alarm.|

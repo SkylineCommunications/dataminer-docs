@@ -12,7 +12,7 @@ Defines a group.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[connection](xref:Protocol.Groups.Group-connection)|unsignedInt||Specifies the connection to be used (used in case multiple connections are defined).|
 |[connectionPID](xref:Protocol.Groups.Group-connectionPID)|unsignedInt||Allows to dynamically select an HTTP connection by referring to the connection by means of a parameter ID.|

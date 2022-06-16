@@ -16,7 +16,7 @@ Specifies the parameter type.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[alarmRegistration](xref:Protocol.Params.Param.Type-alarmRegistration)|string||Allows to trigger a QAction when specific parameters go into alarm.|
 |[distribution](xref:Protocol.Params.Param.Type-distribution)|string||Used in situations in which elements of a certain type are linked to each other as parent and child.|

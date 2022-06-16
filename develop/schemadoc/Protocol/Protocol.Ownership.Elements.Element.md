@@ -12,7 +12,7 @@ Declares ownership of specific DataMiner elements.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Protocol](xref:Protocol.Ownership.Elements.Element.Protocol)||Declares ownership of DataMiner elements running the specified protocol. Supported wildcard characters: '*' and '?'.|

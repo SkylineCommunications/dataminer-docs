@@ -16,7 +16,7 @@ Defines, together with [On](xref:Protocol.Actions.Action.On), how the action is 
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[allowed](xref:Protocol.Actions.Action.Type-allowed)|string||If Action/Type is "stuffing": If the byte specified in the "value" attribute is followed by one of the characters specified in this attribute, then it will not be repeated.|
 |[arguments](xref:Protocol.Actions.Action.Type-arguments)|string||If Action/Type is "wmi", this attribute specifies the names of the columns to be returned (separated by semicolons).|

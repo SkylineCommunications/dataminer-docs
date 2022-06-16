@@ -12,7 +12,7 @@ Specifies a connection. This typically contains a request and a response.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.HTTP.Session.Connection-id)|unsignedInt|Yes|The unique connection ID.|
 |[ignoreTimeout](xref:Protocol.HTTP.Session.Connection-ignoreTimeout)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||If the HTTP connection should ignore timeout, set this attribute to true.|
