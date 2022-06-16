@@ -46,31 +46,72 @@ Below you can find an overview of the different methods that can be used to depl
 
 - The launcher automatically gets installed for each individual user the next time they sign in on that machine. This avoids the need for each individual user to download and install the launcher.
 
-- It is possible to provide a default configuration for all users by preparing a `CubeLauncherConfig.json` file and placing it in the folder where the bootstrapper is installed.<br>Default installation folder: `C:\Program Files\Skyline Communications\DataMiner Cube\`
+- It is possible to provide a default configuration for all users by preparing a `CubeLauncherConfig.json` file and placing it in the folder where the bootstrapper is installed.
+
+    Default installation folder: `C:\Program Files\Skyline Communications\DataMiner Cube\`
 
 ## Shared MSI installation
 
-- Classic MSI deployment.
+- Classic DataMiner Cube MSI installation with side-by-side version support.
 
-- The launcher and a specific Cube version get installed in a shared location.<br>Default location: `C:\Program Files\Skyline Communications\DataMiner Cube\`
+- Package located on the local DMA: `C:\Skyline DataMiner\Webpages\Tools\Installs\DataMiner Cube.msi`
+
+- The launcher and a specific Cube version get installed in a shared location.
+
+    Default location: `C:\Program Files\Skyline Communications\DataMiner Cube\`
 
 - Recommended when users have no permission to download or execute new applications.
 
 - Only a single executable needs to be allowed on the Windows Firewall.
 
-- Multiple versions can be installed side by side.
-
 - No support for automatic updates.
+
+- The `CubeVersion.msi` packages contain the following optional features (which are not exposed in the UI wizard):
+
+    - *MainFeature*: CubeLauncher + one Cube version (mandatory).
+    - *Autorun*: Adds a registry key to show the CubeLauncher icon in the notification area (i.e. "systray") at logon for all users.
+    
+        - If enabled, users cannot disable the autorun feature.
+        - If not enabled, each user can choose to enable the autorun feature.
+
+    - *ProtocolHandler*: Adds a registry key to support the `cube://` protocol handler for all users.
+
+    Example showing how to select individual features:
+
+    ```txt
+    msiexec /i CubeVersion-10.2.1.msi ADDLOCAL=MainFeature,Autorun,ProtocolHandler
+    ```
+    
+    Example showing how to select all features:
+
+    ```txt
+    msiexec /i CubeVersion-10.2.1.msi ADDLOCAL=ALL
+    ```
+
+    Installing multiple `CubeVersion.msi` packages side-by-side will keep the latest version of DataMinerCube.exe (i.e. the launcher) in place:
+
+    - Installing an older version after a newer version will not overwrite the launcher.
+    - Uninstalling the newest version will not roll back the launcher to the previously installed version.
+
+    > [!CAUTION]
+    > Uninstalling the last installed version (regardless of whether this is a newer or older version) will remove the desktop and start menu shortcuts. To restore these shortcuts, repair one of the other installed versions by running a command like the following one: `msiexec /fs CubeVersion-10.2.1.msi`
 
 ## CefSharp MSI
 
-- Can be combined with any of the Cube deployment methods.
+- Whatever Cube deployment method you use, you can install the CefSharp web browser plugin using one of the following packages.
 
-- Avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
+    - Use [CefSharp v81](https://community.dataminer.services/download/dataminer-cube-msi-cefsharp-v81/) to installs CefSharp v81 on clients where you installed DataMiner Cube v10.2.2 using the Cube MSI installer.
+    - Use [CefSharp v96](https://community.dataminer.services/download/dataminer-cube-msi-cefsharp-v96/) to install CefSharp v96 on clients where you installed DataMiner Cube v10.2.0 or v10.2.3 and above using the Cube MSI installer.
 
-- Deployment is in a fixed location: `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CefSharp\`
+- Installing the CefSharp web browser plugin is mandatory when you opted for the shared MSI deployment.
 
-- Windows 8, 8.1 and 2012 R2 require Microsoft Visual C++ Runtime 2015 to be installed separately. For more information, see [the latest supported Visual C++ downloads](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0).
+- Installing the CefSharp web browser plugin avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
+
+- The CefSharp web browser plugin will always be installed in the following folder: `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CefSharp\`
+
+- Windows 8, 8.1 and 2012 R2 require Microsoft Visual C++ Runtime 2015 to be installed separately.
+
+    For more information, see [the latest supported Visual C++ downloads](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0).
 
 ## General remarks
 
@@ -80,7 +121,9 @@ Below you can find an overview of the different methods that can be used to depl
 
 - The launcher is backwards compatible and can be used to deploy any 9.x or 10.x Cube version. Shared MSI installation packages can be provided on demand for older versions.
 
-- All packages support using the INSTALLDIR parameter to customize the target folder (default folder: `%ProgramFiles\Skyline Communications\DataMiner Cube`).
+- All packages support using the INSTALLDIR parameter to customize the target folder.
+
+    Ddefault folder: `%ProgramFiles\Skyline Communications\DataMiner Cube`
 
     Examples:
 
@@ -88,7 +131,6 @@ Below you can find an overview of the different methods that can be used to depl
     msiexec /i CubeVersion-10.2.1.msi INSTALLDIR="C:\DataMinerCube\"
 
     msiexec.exe /q /i bootstrap.msi INSTALLDIR="C:\DataMinerCube\"
-
     ```
 
     For more information on msiexec command line arguments, see:
@@ -113,9 +155,3 @@ Below you can find an overview of the different methods that can be used to depl
         ```txt
         [HKEY_CURRENT_USER\Software\Policies\Microsoft\Edge] "AutoLaunchProtocolsFromOrigins"="[{\"allowed_origins\":[\"http://intranet/\"],\"protocol\":\"cube\"}]"
         ```
-
-
-
-
-
-
