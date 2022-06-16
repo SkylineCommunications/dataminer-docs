@@ -27,6 +27,15 @@
           topicUid: Overview_Platform_Open_Platform
     - name: DataMiner Cloud Platform
       topicUid: Overview_DCP
+    - name: Agile Parternship
+      topicUid: Overview_Agile_Partnership_intro
+      items:
+        - name: Delivering Value
+          topicUid: Overview_Agile_Partnership_delivering_value
+        - name: Principles Agile Partnership
+          topicUid: Overview_Agile_Partnership_principles
+        - name: Agile Scope Based Deployment
+          topicUid: Overview_Agile_Partnership_scope_based_deployment
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -51,3 +60,10 @@
           topicUid: Overview_Support_upgrade_policy
         - name: Technical support escalations and SLAs
           topicUid: Overview_Support_Escalations_SLAs
+    - name: Compliance Statements
+      topicUid: Overview_Compliance_Statements_intro
+      items:
+        - name: Requirements vs Goals & Objectives
+          topicUid: Overview_Compliance_Statements_RvsG_O
+        - name: Tender Compliancy (licenses / engineering days)
+          topicUid: Overview_Compliance_Statements_Tender_Compliancy
