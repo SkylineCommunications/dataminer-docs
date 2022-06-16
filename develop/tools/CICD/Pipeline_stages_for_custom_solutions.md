@@ -132,4 +132,4 @@ If the repository contains a JenkinsNuGetConfiguration.xml file that indicates t
 
 ## Declarative post actions
 
-This step performs cleanup of the workspace and send an email containing a report giving an overview of the number of issues detected by SonarQube.
+This step performs a cleanup of the workspace and sends an email containing a report with an overview of the number of issues detected by SonarQube.

@@ -6,7 +6,7 @@ uid: Producing_NuGet
 
 Automatic creation and publishing of NuGets from the community class library or from [custom solutions](xref:Custom_solution_development_with_CI_CD_Pipeline) is supported through the Skyline CI/CD pipelines.
 
-On the [custom solutions tab](xref:Repository_types#custom-solutions) of the SLC SE RepoManager tool, you can enable the NuGet related stages by clicking the NuGet button. This will add a *JenkinsNuGetConfiguration.xml* file that allows configuration of these stages (enable/disable creation, signing, publishing of NuGet packages). For more info on the expected content of this file, refer to the [NuGet stages XML schema](xref:SchemaNuGetStagesConfig) documentation.
+On the [custom solutions tab](xref:Repository_types#custom-solutions) of the SLC SE RepoManager tool, you can enable the NuGet-related stages by clicking the NuGet button. This will add a *JenkinsNuGetConfiguration.xml* file that allows configuration of these stages (enable/disable creation, signing, publishing of NuGet packages). For more information on the expected content of this file, refer to the [NuGet stages XML schema](xref:SchemaNuGetStagesConfig) documentation.
 
 > [!IMPORTANT]
 >
@@ -20,11 +20,12 @@ For example:
 ![Assembly info in project settings](~/develop/images/Assembly_info_NuGet.png)
 
 > [!TIP]
-> In case your source files have been documented with [XML documentation comments](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/), make sure to set the [DocumentationFile](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/output#documentationfile) compiler option. You can set this option for a project in Visual Studio, by selecting the project in Solution Explorer, right click and choose Properties. Then, from the Build tab, check the XML Documentation File checkbox. This will generate an XML file in addition to the assembly which will be included in the NuGet package. Developers making use of your NuGet package will then be able to see this documentation in IntelliSense and the object browser.
+> In case your source files have been documented with [XML documentation comments](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/), make sure to set the [DocumentationFile](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/output#documentationfile) compiler option. You can set this option for a project in Visual Studio by selecting the project in Solution Explorer, right-clicking and selecting *Properties*. Then, from the *Build* tab, select the *XML Documentation File* checkbox. This will generate an XML file in addition to the assembly, which will be included in the NuGet package. Developers making use of your NuGet package will then be able to see this documentation in IntelliSense and the object browser.
 
 ## Automatic NuSpec file creation
 
 The CI/CD pipeline will look for the presence of NuSpec files for the .NET Framework class library projects in the solution.
+
 If no NuSpec file was found, the pipeline will automatically create one by extracting the required metadata from the AssemblyInfo.cs file of the project.
 
 The pipeline expects the following to present in the AssemblyInfo.cs file:
@@ -33,7 +34,7 @@ The pipeline expects the following to present in the AssemblyInfo.cs file:
 - A description must be provided (with a maximum length of 4000 characters).
 - A copyright must be provided.
 
-Other package metadata will that will be configured:
+Other package metadata that will be configured:
 
 - The authors will be set to "Skyline Communications".
 - The license will be set to MIT license.
@@ -46,13 +47,13 @@ The pipeline will perform the following checks on the NuSpec file:
 
 - The ID of the package must start with `Skyline.DataMiner.`
 - The version must be a valid version.
-- The authors field must not be empty and shorter than 4000 characters.
-- The description field must not be empty and shorter than 4000 characters.
+- The authors field must not be empty and must be shorter than 4000 characters.
+- The description field must not be empty and must be shorter than 4000 characters.
 - The NuSpec file must contain a valid license.
-- The copyright field must not be empty and shorter than 4000 characters.
+- The copyright field must not be empty and must be shorter than 4000 characters.
 
 > [!NOTE]
-> If you use the `$id$`, `$version$`, `$author$`, `$title$`, `$description$`, `$copyright$` placeholder tokens in the corresponding fields of the NuSpec file these will be replaced with the corresponding info from the AssemblyInfo file from the project.
+> If you use the `$id$`, `$version$`, `$author$`, `$title$`, `$description$`, or `$copyright$` placeholder tokens in the corresponding fields of the NuSpec file, these will be replaced with the corresponding info from the AssemblyInfo file from the project.
 
 > [!NOTE]
 > For more information about the NuSpec schema, refer to [.nuspec reference](https://docs.microsoft.com/en-us/nuget/reference/nuspec).
