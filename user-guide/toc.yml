@@ -794,35 +794,34 @@
         - name: Configuring a DataMiner Agent
           topicUid: Configuring_a_DataMiner_Agent
           items:
-            - name: General DMA configuration
-              topicUid: General_DMA_configuration
-              items:
-                - name: Changing the DataMiner ID of a DMA
-                  topicUid: Changing_the_DMA_ID
-                - name: Changing the name of a DMA
-                  topicUid: Changing_the_name_of_a_DMA
-                - name: Specifying your company data
-                  topicUid: Specifying_your_company_data
-                - name: Configuring the IP network ports
-                  topicUid: Configuring_the_IP_network_ports
-                - name: Configuring the polling request timeout
-                  topicUid: Configuring_the_polling_request_timeout
-                - name: Configuring outgoing email
-                  topicUid: Configuring_outgoing_email
-                - name: Forcing a DataMiner Agent to work without virtual IP addresses
-                  topicUid: Forcing_a_DMA_to_work_without_virtual_IPs
-                - name: Setting the indexing options for the server-side search
-                  topicUid: Setting_the_indexing_options_for_the_server-side_search
-                - name: Setting up HTTPS on a DMA
-                  topicUid: Setting_up_HTTPS_on_a_DMA
-                - name: Changing the IP of a DMA
-                  topicUid: Changing_the_IP_of_a_DMA
-                - name: Switching between DataMiner configurations on a DMA
-                  topicUid: Switching_between_DataMiner_configurations
-            - name: Configuration of DataMiner processes
-              topicUid: Configuration_of_DataMiner_processes
+            - name: Changing the DataMiner ID of a DMA
+              topicUid: Changing_the_DMA_ID
+            - name: Changing the name of a DMA
+              topicUid: Changing_the_name_of_a_DMA
+            - name: Specifying your company data
+              topicUid: Specifying_your_company_data
+            - name: Configuring the IP network ports
+              topicUid: Configuring_the_IP_network_ports
+            - name: Configuring the polling request timeout
+              topicUid: Configuring_the_polling_request_timeout
+            - name: Configuring outgoing email
+              topicUid: Configuring_outgoing_email
+            - name: Setting up HTTPS on a DMA
+              topicUid: Setting_up_HTTPS_on_a_DMA
+            - name: Configuring the landing page of a DMA
+              topicUID: Configuring_the_landing_page
             - name: DMA configuration related to client applications
               topicUid: DMA_configuration_related_to_client_applications
+            - name: Changing the IP of a DMA
+              topicUid: Changing_the_IP_of_a_DMA
+            - name: Forcing a DataMiner Agent to work without virtual IP addresses
+              topicUid: Forcing_a_DMA_to_work_without_virtual_IPs
+            - name: Setting the indexing options for the server-side search
+              topicUid: Setting_the_indexing_options_for_the_server-side_search
+            - name: Switching between DataMiner configurations on a DMA
+              topicUid: Switching_between_DataMiner_configurations
+            - name: Configuring DataMiner processes
+              topicUid: Configuration_of_DataMiner_processes
         - name: Backing up a DataMiner Agent
           topicUid: Backing_up_a_DataMiner_Agent
           items:

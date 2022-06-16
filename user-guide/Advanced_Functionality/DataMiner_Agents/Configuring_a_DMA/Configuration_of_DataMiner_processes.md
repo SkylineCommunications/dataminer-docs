@@ -2,7 +2,7 @@
 uid: Configuration_of_DataMiner_processes
 ---
 
-# Configuration of DataMiner processes
+# Configuring DataMiner processes
 
 ## Setting the number of simultaneously running SLPort processes
 

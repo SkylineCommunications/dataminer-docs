@@ -1,0 +1,43 @@
+---
+uid: Configuring_Microsoft_edge_to_run_Cube
+---
+
+# Configuring Microsoft Edge to run DataMiner Cube
+
+Before you can run the DataMiner Cube browser application in Microsoft Edge, a number of settings must be configured.
+
+1. Activate IE compatibility mode:
+
+   1. In Microsoft Edge, click the ... button in the top-right corner and select *Settings*.
+
+   1. In the pane on the left, select *Default browser*.
+
+   1. Next to Internet Explorer mode pages, click Add.
+
+   1. In the dialog, specify the URL to open DataMiner Cube for your DMA, e.g. `https://MyDMA/DataMinerCube/DataMinerCube.xbap`.
+
+1. Add the DataMiner Cube URL to the "Local intranet" zone:
+
+   1. In the Windows Control Panel, select *Network and Internet*.
+
+   1. Click *Internet Options*.
+
+   1. In the *Security* tab, select *Trusted sites* and click the *Sites* button.
+
+   1. Enter the URL in the *Add this website to the zone* box, click *Add* and then click *Close*.
+
+1. Configure the XBAP settings:
+
+   1. In the Windows Control Panel, select *Network and Internet*.
+
+   1. Click *Internet Options*.
+
+   1. In the *Security* tab, select *Trusted sites*.
+
+   1. Click the *Custom level* button.
+
+   1. In the *Security Settings* dialog box, go to *.NET Framework*.
+
+   1. Set *XAML browser applications* to *Enable*.
+
+

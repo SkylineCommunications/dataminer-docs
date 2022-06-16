@@ -36,6 +36,7 @@ There are several ways to install the DataMiner Cube desktop application, depend
    - From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available. Typically, this is only used by a system administrator to deploy DataMiner Cube in bulk on many client machines at the same time using some form of automation. The MSI installer can be found in the folder `C:\Skyline DataMiner\Webpages\Tools\Installs` on each DMA.
 
      > [!NOTE]
+     >
      > - If you install DataMiner Cube with the MSI installer, you will also have to manually install the corresponding CefSharp version using the separate CefSharp MSI installation package, which is available on demand.
      > - Prior to DataMiner 10.0.9, the MSI installer is available via the DataMiner landing page, via *Install DataMiner Cube* > *Other install options* > *MSI installer*.
 
@@ -52,7 +53,7 @@ On the landing page, click *Install DataMiner Cube*.
 Alternatively, go to `http://[DMA name]/DataminerCubeStandalone/publish.htm` and click *Install*.
 
 > [!TIP]
-> See also: [Configuring the default landing page](xref:DMA_configuration_related_to_client_applications#configuring-the-default-landing-page)
+> See also: [Configuring whether the landing page is displayed](xref:Configuring_the_landing_page#configuring-whether-the-landing-page-is-displayed)
 
 > [!NOTE]
 > Once you have installed the application, it will automatically be updated whenever a new version is available.
