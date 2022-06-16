@@ -16,7 +16,7 @@ This tab lists repositories that contain a Visual Studio solution of a specific 
 
 Changes made to a protocol repository trigger the corresponding [protocol CI/CD pipeline](xref:Pipeline_stages_for_protocols).
 
-## Visios
+## Visio files
 
 This tab lists repositories that contain a Visio file.
 
