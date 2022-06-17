@@ -2,16 +2,11 @@
 uid: Overview_Agile_Partnership_intro
 ---
 
-# Agile Partnership
+# Agile partnership
 
-Skyline Communications aims to create an agile partnership with its users. In the first place, Agile needs to be a **mindset shared by the entire team** on how to successfully manage and execute a project.
+Skyline Communications aims to create an agile partnership with its users. Agile needs to be a **mindset shared by the entire team** with respect to how a project is successfully managed and executed.
 
-
-This chapter provides a brief overview of the principles and how we deliver value together with you.
-Moreover, the "Agile Scope-based methodology" is introduced, as we believe this is the preferred one above other deployment methods such as “turn-key” (waterfall) or  “agile time and materials based”.
+This section provides a brief overview of the [principles](xref:Overview_Agile_Partnership_principles) and [how we deliver value together with you](xref:Overview_Agile_Partnership_delivering_value). It also introduces the [Agile scope-based methodology](xref:Overview_Agile_Partnership_scope_based_deployment), as we believe this is to be preferred over other deployment methods such as "turnkey" (waterfall) or "Agile time & materials".
 
 > [!TIP]
-> For more information about our professional services and the three distinct deployment models for a DataMiner project, please visit [Professional Services](https://community.dataminer.services/professional-services/).
-
-> [!TIP]
-> DataMiner Deployment methodologies are equally detailed in the DataMiner Help. For more information, please visit [DataMiner Professional Services](https://docs.dataminer.services/user-guide/Professional_Services/Professional_Services.html).
+> For more information about our professional services and the three distinct deployment models for a DataMiner project, please visit [Professional Services](https://community.dataminer.services/professional-services/) on DataMiner Dojo, or [DataMiner Professional Services](https://docs.dataminer.services/user-guide/Professional_Services/Professional_Services.html) in the DataMiner User Guide.

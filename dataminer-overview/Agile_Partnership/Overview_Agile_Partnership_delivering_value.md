@@ -2,14 +2,16 @@
 uid: Overview_Agile_Partnership_delivering_value
 ---
 
-# Delivering Value
+# Delivering value
 
-One of the **key objectives during the execution of any Digital Transformation projects is the delivery of value**, and to ensure that this comes as early as possible and is gradually increased throughout the execution process:
+One of the **key objectives during the execution of any digital transformation project is the delivery of value**. To ensure that value is delivered as early as possible and gradually increases throughout the execution process:
 
-- This process starts already during the inception of the project, not at the execution.
-- Value Delivery can be considered at various levels, starting from the top-level overall Project, down to more detailed activities.  It is a general mindset that must be applied throughout.
-- Value should be defined as an outcome or a result, and not a feature or capability 
-- Value goes beyond a feature and capability, and includes for example also adaption of those features and capabilities
+- The process of delivering value already starts during the inception of the project, instead of only during execution.
 
-> [!IMPORTANT]
-> “What really matters are the goals & objectives, and to what extend the expected value of those can be delivered. And ultimately, the value will come from the actual implementation, not the level of compliance with the initial requirements.”
+- Value delivery can be considered at various levels, starting from the top-level overall project down to more detailed activities. It is a general mindset that must be applied throughout.
+
+- Value should be defined as an outcome or a result, not a feature or capability.
+
+- Value goes beyond features or capabilities and for example also includes adoption of those features and capabilities.
+
+> What really matters are the goals & objectives and to what extent their expected value can be delivered. Ultimately, the value results from the actual implementation, not from the level of compliance with the initial requirements.

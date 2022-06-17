@@ -2,16 +2,21 @@
 uid: Overview_Agile_Partnership_principles
 ---
 
-# Principles Agile Partnership
+# Principles agile partnership
 
-Skyline Communications aims to create an agile partnership with its users, below are some of the principles on how both companies can work together.
+Skyline Communications aims to create an agile partnership with its users. Below are some of the principles determining how both companies can work together.
 
-- Together the customer/users and Skyline Communications create a **Project Squad** with only one clearly defined goal.
-- The customer/users and Skyline Communications fully **embrace the Agile Partnership**, based on the general Agile Principles - collaboration – responding to change – working software – individuals & interactions…
-- The customer/users and Skyline Communications define **clear roles** for everybody in the Project Squad, and who decides - product owner, stakeholders, business representative.
-- The customer/users and Skyline Communications **fully acknowledge the challenges** that are inevitably ahead of us and will work to mitigate those - change management, our responsibility to balance the time budgets, etc.
-- The customer/users and Skyline Communications embrace and are religious about the **key methodologies and principles** required to be successful - transparency, weigh value vs effort, early demonstrators, the value of retrospect, stakeholder involvement, etc.
-- The customer/users and Skyline Communications leverage **tools & technology** to keep us focused on the execution - Project Collaboration, DataMiner Cloud Platform, MS365, Teams, QA Automation, Deployment automation, etc.
+- Together, the customer/users and Skyline Communications create a **Project Squad** with only one clearly defined goal.
+
+- The customer/users and Skyline Communications fully **embrace the agile partnership**, based on the general agile principles, which especially value collaboration, responding to change, working software, and individuals & interactions.
+
+- The customer/users and Skyline Communications define **clear roles** for everybody in the Project Squad, including who decides: product owner, stakeholders, business representative.
+
+- The customer/users and Skyline Communications **fully acknowledge the challenges** ahead and will work to mitigate those: change management, responsibility to balance time budgets, etc.
+
+- The customer/users and Skyline Communications fully embrace the **key methodologies and principles** required to be successful: transparency, weighing value vs. effort, early demonstrators, the value of retrospect, stakeholder involvement, etc.
+
+- The customer/users and Skyline Communications leverage **tools and technology** to stay focused on the execution: Project Collaboration, DataMiner Cloud Platform, Microsoft 365, Teams, QA automation, deployment automation, etc.
 
 > [!TIP]
-> DataMiner Dojo Community has a dedicated [Agile Webspace](https://community.dataminer.services/agile-webspace/).
+> DataMiner Dojo Community has a dedicated [Agile page](https://community.dataminer.services/agile-webspace/).

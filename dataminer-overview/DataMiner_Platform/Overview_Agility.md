@@ -18,4 +18,4 @@ To find out more, watch our online session with Disney at [Agility - The corners
 - What should you expect in the future?
 
 > [!TIP]
-> DataMiner Dojo Community has a dedicated [Agile Webspace](https://community.dataminer.services/agile-webspace/).
+> DataMiner Dojo Community has a dedicated [Agile page](https://community.dataminer.services/agile-webspace/).
