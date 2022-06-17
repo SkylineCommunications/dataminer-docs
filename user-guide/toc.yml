@@ -945,8 +945,6 @@
               topicUid: Advanced_Failover_options
         - name: Preferred configuration using virtual IP addresses (best practice)
           topicUid: Preferred_configuration_using_virtual_IP_addresses__best_practice
-        - name: Linking an element to a fixed DMA - Force Agent
-          topicUid: Linking_an_element_to_a_fixed_DMA_Force_Agent
         - name: Synchronizing the DMA databases
           topicUid: Synchronizing_the_DMA_databases
         - name: Ending a Failover configuration
@@ -2023,8 +2021,6 @@
               topicUid: Working_with_markers
             - name: Working with reference lines
               topicUid: Working_with_reference_lines
-            - name: Working with frequency masks
-              topicUid: Working_with_frequency_masks
             - name: Using Spectrum Analysis presets
               topicUid: Using_Spectrum_Analysis_presets
             - name: Working with trace recordings

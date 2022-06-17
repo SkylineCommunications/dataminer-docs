@@ -20,8 +20,5 @@ The following procedures are described in this section:
 
 - [Starting a restored DataMiner Agent in a cluster](xref:Starting_a_restored_DataMiner_Agent_in_a_cluster)
 
-> [!WARNING]
-> Do not use DMAUpgrade (System Display) to restore backups.
-
 > [!TIP]
 > See also: [Backup – Restoring and migrating a DataMiner Agent](https://community.dataminer.services/video/backup-restoring-and-migrating-a-dataminer-agent/) on DataMiner Dojo.

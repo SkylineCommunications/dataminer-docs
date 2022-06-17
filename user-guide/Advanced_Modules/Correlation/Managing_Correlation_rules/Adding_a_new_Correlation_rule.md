@@ -22,6 +22,7 @@ To create a functional new rule, you will also need to do the following:
 
 > [!NOTE]
 > The following minimum requirements must be met before you can enable a Correlation rule:
+>
 > - At least one valid rule action is configured.
 > - At least one of the following conditions is met:
 >   - A valid alarm filter is configured.
@@ -35,4 +36,4 @@ You can also add a new rule by duplicating an existing rule and then changing th
   Alternatively, you can also select the rule, click the More... button at the bottom of the pane, and select *Duplicate*.
 
 > [!NOTE]
-> In DataMiner Cube, it is possible to add Correlation rules that use the deprecated System Display Correlation engine. To do so, right-click in the tree view pane (or click the More... button at the bottom of the pane) and select *Advanced* > *Old engine* > *Add rule*.
+> In DataMiner Cube, it is possible to add Correlation rules that use the deprecated System Display Correlation engine. To do so, right-click in the tree view pane (or click the *More...* button at the bottom of the pane) and select *Advanced* > *Old engine* > *Add rule*.

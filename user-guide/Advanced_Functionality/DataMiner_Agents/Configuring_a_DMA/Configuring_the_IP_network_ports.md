@@ -14,24 +14,24 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | Protocol | Ports used | Application      |
 |----------|------------|------------------|
 | SNMP     | 161/udp<br> 162/udp | SNMP    |
-| .Net Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication<br> DataMiner Cube<br> System Display, Element Display (deprecated)<br> DMS Alerter |
-| HTTP(S) | 80/tcp<br> 443/tcp | DataMiner Cube<br> System Display, Element Display (deprecated)<br> DMS Alerter<br> Web apps (e.g. Monitoring, Jobs)<br> Dashboards, Reporter |
-| HTTP(S) | 9200/tcp | Indexing Engine (server listening for client requests)  |
-| N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups)                                                                        |
+| .Net Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication<br> DataMiner Cube<br> DMS Alerter |
+| HTTP(S) | 80/tcp<br> 443/tcp | DataMiner Cube<br> DMS Alerter<br> Web apps (e.g. Monitoring, Jobs)<br> Dashboards, Reporter |
+| HTTP(S) | 9200/tcp | Indexing Engine (server listening for client requests) |
+| N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups) |
 | N/A     | 7001/tcp | Cassandra: TLS setup (available from DataMiner 10.1.3 onwards) |
-| N/A     | 7199/tcp | Cassandra cluster backups      |
+| N/A     | 7199/tcp | Cassandra cluster backups |
 | N/A     | 9042/tcp | Cassandra (server listening for client requests) |
-| N/A     | 9200/tcp | Elasticsearch       |
+| N/A     | 9200/tcp | Elasticsearch |
 | N/A     | 9300/tcp | Elasticsearch (inter-node communication) |
 | Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
 | NAS    | 9090/tcp  | NATS Account Server (required from DataMiner 10.1.1 onwards) |
 | Telnet | 23/tcp   | Stream (by default disabled from DataMiner 9.6.5 onwards) |
 
 > [!NOTE]
-> - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
+>
+> - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](xref:DataMiner_xml)
 > - Prior to DataMiner 10.0.8, ports 7001, 7199, 9142 and 9160 are also opened during Cassandra installation. However, from DataMiner 10.0.8 onwards, only the essential ports 7000 and 9042 are opened.
 > - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. However, this port is no longer used from those versions onwards and is no longer opened during new installations.
-> - The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
 
 ## Graphical representation of IP communication within a DMS
 
