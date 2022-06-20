@@ -12,7 +12,7 @@ Specifies which groups have to be executed, and when.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Timers.Timer-id)|[TypeObjectId](xref:Protocol-TypeObjectId)|Yes|Specifies the unique timer ID.|
 |[fixedTimer](xref:Protocol.Timers.Timer-fixedTimer)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||If, in case of a relative timer protocol, this attribute is set to "true", the user will not be able to change the interval.|

@@ -376,7 +376,7 @@ This step performs the actual push to SVN. Once this step is executed, you shoul
 
 ## Declarative post actions
 
-This step performs cleanup of the workspace and send an email containing a report giving an overview of the number of issues detected in DIS and SonarQube.
+This step performs a cleanup of the workspace and sends an email containing a report with an overview of the number of issues detected in DIS and SonarQube.
 
 The report also contains an overall quality score, which is calculated using the following metrics:
 

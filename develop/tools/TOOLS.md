@@ -8,7 +8,7 @@ In this section, you can find information on the following useful tools for syst
 
 - [DataMiner Integration Studio](xref:DIS)
 
-- [CI/CD Pipeline](xref:TOOProtocolDevelopmentWithCICD)
+- [CI/CD](xref:DevelopmentWithCICD)
 
 - [DataMiner Application Package Builder](xref:TOODataMinerPackageBuilder)
 
