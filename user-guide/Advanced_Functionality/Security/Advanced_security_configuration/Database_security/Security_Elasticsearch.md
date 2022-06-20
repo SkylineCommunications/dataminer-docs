@@ -47,7 +47,7 @@ To enable authentication in Elasticsearch 6.8.X:
 
 By default all client-server communication with Elasticsearch is unencrypted.
 
- To configure SSL/TLS encryption in Elasticsearch:
+To configure SSL/TLS encryption in Elasticsearch:
 
 1. Request or generate a TLS certificate. Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
 
@@ -59,24 +59,24 @@ By default all client-server communication with Elasticsearch is unencrypted.
    xpack.security.http.ssl.truststore.path: path/to/your/certificate
    ```
 
-1. Optionally, **for password-protected certificates**, execute the following commands *as Administrator* and enter the password when prompted:
+1. Optionally, **for password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
 
    ```
    bin\elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
    bin\elasticsearch-keystore add xpack.security.http.ssl.truststore.secure_password
    ```
 
-1. Start the *'elasticsearch-service-x64'* and you can connect with a browser to *https://FQDN:9200*.
+1. Start the *elasticsearch-service-x64* service and verify that you can connect with a browser to <https://FQDN:9200>.
 
 1. Stop the DataMiner Agent.
 
-1. Add the full *https://* URL (including the port) in the <DBServer> element in the *DB.xml* file. For example:
+1. Add the full *https://* URL (including the port) in the \<DBServer> element in the *DB.xml* file. For example:
    `<DBServer>https://elastic.dataminer:9200</DBServer>`
 
 1. Save the changes and start the DataMiner Agent.
 
 > [!TIP]
-> To troubleshoot problems after enabling TLS encryption, consult the SLSearch.txt logfile.
+> To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
 ## Updating Elasticsearch
 
