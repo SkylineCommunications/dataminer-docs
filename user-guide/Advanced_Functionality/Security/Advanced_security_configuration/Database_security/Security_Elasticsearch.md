@@ -17,6 +17,7 @@ To enable authentication in Elasticsearch 6.8.X:
 1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
 
     `xpack.security.enabled: true`
+    
     `discovery.type: single-node`
     
 1. Start the *elasticsearch-service-x64* service.
