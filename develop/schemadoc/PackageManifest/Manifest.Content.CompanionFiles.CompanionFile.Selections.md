@@ -4,7 +4,7 @@ uid: Manifest.Content.CompanionFiles.CompanionFile.Selections
 
 # Selections element
 
-Allows to specify the items of the companion files to be included. By default, all the DLL files from the bin folder will be included.
+Allows you to specify the items of the companion files to be included. By default, all the DLL files from the bin folder will be included.
 
 ## Parent
 

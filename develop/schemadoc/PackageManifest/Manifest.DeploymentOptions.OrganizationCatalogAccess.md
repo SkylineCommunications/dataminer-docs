@@ -4,7 +4,7 @@ uid: Manifest.DeploymentOptions.OrganizationCatalogAccess
 
 # OrganizationCatalogAccess element
 
-This field can be used to define the organizations with access. If nothing is specified then the package is marked as public and accessible to everyone.
+This field can be used to define the organizations with access. If nothing is specified, the package is marked as public and accessible to everyone.
 
 ## Parent
 

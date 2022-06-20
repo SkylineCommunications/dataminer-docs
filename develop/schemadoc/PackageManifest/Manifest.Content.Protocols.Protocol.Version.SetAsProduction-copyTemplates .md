@@ -2,7 +2,7 @@
 uid: Manifest.Content.Protocols.Protocol.Version.SetAsProduction-copyTemplates 
 ---
 
-# copyTemplates  attribute
+# copyTemplates attribute
 
 Specifies whether the templates should also be copied.
 

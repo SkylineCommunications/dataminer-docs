@@ -4,7 +4,7 @@ uid: Manifest-TypeNonEmptyString
 
 # TypeNonEmptyString simple type
 
-Non empty string.
+Non-empty string.
 
 ## Content Type
 

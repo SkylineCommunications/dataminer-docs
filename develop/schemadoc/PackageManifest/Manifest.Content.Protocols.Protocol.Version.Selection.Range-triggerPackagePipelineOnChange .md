@@ -2,9 +2,9 @@
 uid: Manifest.Content.Protocols.Protocol.Version.Selection.Range-triggerPackagePipelineOnChange 
 ---
 
-# triggerPackagePipelineOnChange  attribute
+# triggerPackagePipelineOnChange attribute
 
-Specifies whether a change on this items should trigger the package pipeline chain.
+Specifies whether a change to this item should trigger the package pipeline chain.
 
 ## Content Type
 

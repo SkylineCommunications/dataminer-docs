@@ -4,7 +4,7 @@ uid: Manifest.Content.Visios.Visio.Version.Selection.Range-triggerPackagePipelin
 
 # triggerPackagePipelineOnChange attribute
 
-Specifies whether a change on this item should trigger the package pipeline chain.
+Specifies whether a change to this item should trigger the package pipeline chain.
 
 ## Content type
 

@@ -4,7 +4,7 @@ uid: Manifest.Content.Protocols.Protocol.Version.SetAsProduction
 
 # SetAsProduction element
 
-Specifies whether this version should be set as Production version when installing the package.
+Specifies whether this version should be set as Production version when the package is installed.
 
 ## Content type
 

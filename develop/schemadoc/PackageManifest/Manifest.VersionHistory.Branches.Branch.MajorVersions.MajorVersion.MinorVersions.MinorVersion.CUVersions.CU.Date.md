@@ -4,7 +4,7 @@ uid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVer
 
 # Date element
 
-Specifies the date on which this version of this package has been released. (Format: YYYY-MM-DD)
+Specifies the date on which this version of this package was released (format: YYYY-MM-DD).
 
 ## Content type
 

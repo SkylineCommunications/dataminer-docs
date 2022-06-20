@@ -4,7 +4,7 @@ uid: Manifest.Content.CustomSolutions.CustomSolution.Selections
 
 # Selections element
 
-Allows to specify the items of the custom solution to be included. By default, all the DLL files from the bin folder will be included.
+Allows you to specify the items of the custom solution to be included. By default, all the DLL files from the bin folder will be included.
 
 ## Parent
 

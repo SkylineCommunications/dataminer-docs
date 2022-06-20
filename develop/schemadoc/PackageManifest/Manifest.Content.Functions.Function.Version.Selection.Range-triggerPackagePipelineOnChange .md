@@ -4,7 +4,7 @@ uid: Manifest.Content.Functions.Function.Version.Selection.Range-triggerPackageP
 
 # triggerPackagePipelineOnChange attribute
 
-Specifies whether a change on this items should trigger the package pipeline chain.
+Specifies whether a change to this item should trigger the package pipeline chain.
 
 ## Content type
 
