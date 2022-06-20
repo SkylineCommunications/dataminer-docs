@@ -373,7 +373,7 @@ To have shapes display information about an object selected on the timeline, the
 - **SelectedTimeRange**: Available from DataMiner 10.2.1/10.3.0 onwards. The value of this variable can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by datetime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
 
   > [!NOTE]
-  > Prior to DataMiner 10.3.0/10.2.3, when a resource item is selected, the *SelectedTimeRange* session variable is cleared. From DataMiner 10.3.0/10.2.3 onwards, it is only cleared when the time range selection shown in the timeline area is changed.
+  > Prior to DataMiner 10.3.0/10.2.3, when a resource item is selected, the *SelectedTimeRange* session variable is cleared. From DataMiner 10.2.3 to 10.2.7, it is only cleared when the time range selection shown in the timeline area is changed. From DataMiner 10.3.0/10.2.8 onwards, the session variable is cleared when the selection is cleared.
 
 Alternatively, you can also make shapes display properties of the *SelectedReservation*, *SelectedSession*, *SelectedResource*, *SelectedOccurrence* or *SelectedPool*. For this purpose, the properties must be stored in a variable, which is then displayed by a shape.
 
