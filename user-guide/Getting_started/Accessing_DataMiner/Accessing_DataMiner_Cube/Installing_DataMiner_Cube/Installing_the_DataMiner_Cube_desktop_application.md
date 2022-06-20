@@ -6,9 +6,12 @@ uid: Installing_the_DataMiner_Cube_desktop_application
 
 There are several ways to install the DataMiner Cube desktop application, depending on your DataMiner version.
 
-## From DataMiner 10.0.0/10.0.4 onwards
+## [From DataMiner 10.0.0/10.0.4 onwards](#tab/tabid-1)
 
-1. Browse to your DMA using a different browser than Internet Explorer.
+1. Browse to the IP or hostname of your DMA or to `https://[Your DMA]/root`, depending on your configuration.
+
+   > [!TIP]
+   > See also: [Configuring the landing page of a DMA](xref:Configuring_the_landing_page)
 
 1. Enter your username and password to log in.
 
@@ -25,6 +28,7 @@ There are several ways to install the DataMiner Cube desktop application, depend
      1. Click *Install*.
 
      > [!NOTE]
+     >
      > - Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
      > - To install the app, you need Modify access to the folders `%AppData%\Skyline` and `%LocalAppData%\Skyline`, as well as write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`.
      > - To be able to run the app, you need Execute access for the files `%LocalAppData%\Skyline\DataMiner\DataMinerCube\DataMinerCube.exe` and `%LocalAppData%\Skyline\DataMiner\DataMinerCube\CefSharp\version\architecture\CefSharp.BrowserSubprocess.exe`.
@@ -40,20 +44,30 @@ There are several ways to install the DataMiner Cube desktop application, depend
      > - If you install DataMiner Cube with the MSI installer, you will also have to manually install the corresponding CefSharp version using the separate CefSharp MSI installation package, which is available on demand.
      > - Prior to DataMiner 10.0.9, the MSI installer is available via the DataMiner landing page, via *Install DataMiner Cube* > *Other install options* > *MSI installer*.
 
-## From DataMiner 10.0.2 onwards
+## [From DataMiner 10.0.2 onwards](#tab/tabid-2)
 
-If you browse to your DMA using a browser that does not support DataMiner Cube, depending on your configuration, a landing page will be displayed.
+1. Browse to the IP or hostname of your DMA or to `https://[Your DMA]/root`, depending on your configuration.
 
-On the landing page, click the user icon in the top-right corner and select the DataMiner Cube installation option you prefer under *Standalone applications*.
+   > [!TIP]
+   > See also: [Configuring the landing page of a DMA](xref:Configuring_the_landing_page)
 
-## Prior to DataMiner 10.0.0/10.0.2
+1. On the landing page, click the user icon in the top-right corner and select the DataMiner Cube installation option you prefer under *Standalone applications*.
 
-On the landing page, click *Install DataMiner Cube*.
+## [Prior to DataMiner 10.0.0/10.0.2](#tab/tabid-3)
 
-Alternatively, go to `http://[DMA name]/DataminerCubeStandalone/publish.htm` and click *Install*.
+1. Browse to the IP or hostname of your DMA or to `https://[Your DMA]/root`, depending on your configuration.
+
+   > [!TIP]
+   > See also: [Configuring the landing page of a DMA](xref:Configuring_the_landing_page)
+
+1. On the landing page, click *Install DataMiner Cube*.
+
+Alternatively, you can go to `http://[DMA name]/DataminerCubeStandalone/publish.htm` and click *Install*.
 
 > [!TIP]
 > See also: [Configuring whether the landing page is displayed](xref:Configuring_the_landing_page#configuring-whether-the-landing-page-is-displayed)
 
 > [!NOTE]
 > Once you have installed the application, it will automatically be updated whenever a new version is available.
+
+***

@@ -40,4 +40,8 @@ Before you can run the DataMiner Cube browser application in Microsoft Edge, a n
 
    1. Set *XAML browser applications* to *Enable*.
 
+> [!NOTE]
+> It is possible that your Edge policies are in fact managed by your company. In that case, you may not be able to configure this yourself, and you will need to contact your IT administrator for this.
 
+> [!TIP]
+> See also: [Internet Explorer Support](https://community.dataminer.services/documentation/internet-explorer-support/)
