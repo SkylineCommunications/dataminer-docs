@@ -79,7 +79,7 @@ From DataMiner 10.2.0 \[CU3]/10.2.6 onwards, Cube can automatically update to a 
 
 1. Select which client versions should be used:
 
-   - **Allow automatic updates**: This will allow automatic updates to higher versions of Cube, depending on the [configuration in the Cube start window](xref:Opening_DataMiner_Cube#selecting-your-cube-update-track).
+   - **Allow automatic updates**: This will allow automatic updates to higher versions of Cube, depending on the [configuration in the Cube start window](xref:Managing_the_start_window#selecting-your-cube-update-track).
 
      > [!NOTE]
      > When a new DMA is added to a cluster, that DMA will by default use this setting. If you use a different setting, keep in mind that you will still need to adjust this for this DMA.

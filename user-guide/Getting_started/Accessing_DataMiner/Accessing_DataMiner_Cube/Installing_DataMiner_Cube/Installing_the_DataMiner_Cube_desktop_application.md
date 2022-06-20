@@ -31,7 +31,7 @@ There are several ways to install the DataMiner Cube desktop application, depend
      >
      > - Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
      > - To install the app, you need Modify access to the folders `%AppData%\Skyline` and `%LocalAppData%\Skyline`, as well as write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`.
-     > - To be able to run the app, you need Execute access for the files `%LocalAppData%\Skyline\DataMiner\DataMinerCube\DataMinerCube.exe` and `%LocalAppData%\Skyline\DataMiner\DataMinerCube\CefSharp\version\architecture\CefSharp.BrowserSubprocess.exe`.
+     > - To be able to run the app, you need Execute access for the files *DataMinerCube.exe* in the folder `%LocalAppData%\Skyline\DataMiner\DataMinerCube\` and *CefSharp.BrowserSubprocess.exe* in the folder `%LocalAppData%\Skyline\DataMiner\DataMinerCube\CefSharp\version\architecture\`.
      > - To create a desktop shortcut, you need Modify access to the folder `%UserProfile%\Desktop`.
      > - To create a start menu shortcut, you need Modify access to the folder `%AppData%\Microsoft\Windows\Start Menu\Programs`.
      > - The *Start with Windows* feature requires write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`.

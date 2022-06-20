@@ -32,6 +32,15 @@
                 topicUID: DataMiner_Cube_deployment_methods
             - name: Opening DataMiner Cube
               topicUid: Opening_DataMiner_Cube
+              items:
+              - name: Opening the desktop application
+                topicUID: Opening_the_desktop_app
+              - name: Managing the start window of the desktop app
+                topicUID: Managing_the_start_window
+              - name: Opening the browser application
+                topicUID: Opening_the_browser_app
+              - name: Options for opening DataMiner Cube
+                topicUID: Options_for_opening_DataMiner_Cube
             - name: Logging on to DataMiner Cube
               topicUid: Logging_on_to_DataMiner_Cube
         - name: Accessing the Monitoring app

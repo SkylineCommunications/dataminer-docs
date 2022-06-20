@@ -27,11 +27,12 @@ Configure the following shape data fields on the shape that is to contain the Sp
 
   | Option     | Description |
   |------------|-------------|
-  | Preset=    | Should be followed by a preset name. Indicates that a particular preset should be loaded. It is also possible to specify an inline preset, using the same syntax as for the *preset=inline* URL parameter. See [preset=inline](xref:Opening_DataMiner_Cube#presetinline). However, note that combining an inline preset with one or more measurement points is only supported from DataMiner 10.1.0 [CU11]/10.2.2 onwards. |
+  | Preset=    | Should be followed by a preset name. Indicates that a particular preset should be loaded. It is also possible to specify an inline preset, using the same syntax as for the *preset=inline* URL parameter. See [preset=inline](xref:Options_for_opening_DataMiner_Cube#presetinline). However, note that combining an inline preset with one or more measurement points is only supported from DataMiner 10.1.0 [CU11]/10.2.2 onwards. |
   | Measpts=   | Should be followed by one or more measurement point IDs, separated by semicolons. |
-  | ViewOptions= | Should be configured in the same way as the *options=* URL parameter. See [options=](xref:Opening_DataMiner_Cube#options). |
+  | ViewOptions= | Should be configured in the same way as the *options=* URL parameter. See [options=](xref:Options_for_opening_DataMiner_Cube#options). |
 
 > [!NOTE]
+>
 > - These options all support dynamic placeholders. Dynamic changes to the preset or measurement points will be applied immediately. Dynamic changes to view options will only be applied when a preset is loaded.
 > - Only public presets can be used in a Visual Overview, not private presets. In addition, up to DataMiner 9.6.1, the preset must have either the “(public)” suffix or “GLOBAL:” prefix.
 

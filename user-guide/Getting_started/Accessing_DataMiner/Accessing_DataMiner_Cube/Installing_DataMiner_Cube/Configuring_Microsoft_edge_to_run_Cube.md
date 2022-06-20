@@ -6,7 +6,7 @@ uid: Configuring_Microsoft_edge_to_run_Cube
 
 Before you can run the DataMiner Cube browser application in Microsoft Edge, a number of settings must be configured.
 
-1. Activate IE compatibility mode:
+1. Activate IE compatibility mode for the DataMiner Cube page:
 
    1. In Microsoft Edge, click the ... button in the top-right corner and select *Settings*.
 

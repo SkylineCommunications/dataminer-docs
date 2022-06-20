@@ -77,7 +77,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 ### Miscellaneous
 
-- If you specify startup options in the DataMiner Cube URL, you can make Cube display a particular view or app on startup – and you can do even much more than that! See [Options for opening DataMiner Cube](xref:Opening_DataMiner_Cube#options-for-opening-dataminer-cube).
+- If you specify startup options in the DataMiner Cube URL, you can make Cube display a particular view or app on startup – and you can do even much more than that! See [Options for opening DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
 
 - Want to get alerts for a particular element, service or view? Right-click it in the Surveyor and select *Actions* > *Alert me*. See [Configuring notifications directly from the Alarm Console or Surveyor](xref:Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor).
 
