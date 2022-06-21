@@ -30,9 +30,9 @@ To fix all errors of one particular type or severity at the same time, do the fo
 - To fix all errors of a particular type, right-click an error, and select *Fix \> All errors of this type*.
 - To fix all errors of a particular severity, right-click that severity, and select *Fix \> All errors in this category*.
 
-When, for an error listed in the *DIS Validator* pane, there is more information available than what is being displayed, an information icon will appear next to the description. If you click such an information icon, the additional information (including possible errors) will be displayed in a pop-up window.
+When, for an error listed in the *DIS Validator* pane, there is more information available than what is being displayed, an information icon will appear next to the description. If you click such an information icon, the additional information will be displayed in a pop-up window.
 
-Note that when you try to fix an error with warnings, a popup window will appear to draw your attention to those warnings. Only when you click *OK* in that popup window will the error be fixed.
+Note that when you try to fix an error with warnings, a popup window may appear to draw your attention to those warnings. Only when you click *OK* in that popup window will the error be fixed.
 
 When you right-click an error in the list, a shortcut menu offers you the following options:
 

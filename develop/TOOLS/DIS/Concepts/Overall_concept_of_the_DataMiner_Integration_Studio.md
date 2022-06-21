@@ -18,7 +18,11 @@ After installation of the DataMiner Integration Studio extension, Microsoft Visu
 
 ### Language version of C# projects
 
-#### [Up to DIS v2.37](#tab/tabid-1)
+#### [As from DIS v2.38](#tab/tabid-1)
+
+By default, DIS will set the language version of the C# projects to 7.3.
+
+#### [Up to DIS v2.37](#tab/tabid-2)
 
 DIS will set the language version of the C# projects of 4.0, 6.0 or 7.3 depending on the DMA version specified in the *Protocol.Compliancies.MinimumRequired* tag of the protocol XML file:
 
@@ -27,10 +31,6 @@ DIS will set the language version of the C# projects of 4.0, 6.0 or 7.3 dependin
 
     - C# 6.0 (when using Visual Studio 2015)
     - C# 7.3 (when using Visual Studio 2017 or above)
-
-#### [As from DIS v2.38](#tab/tabid-2)
-
-By default, DIS will set the language version of the C# projects to 7.3.
 
 ***
 
