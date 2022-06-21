@@ -68,17 +68,17 @@ In the *DMA* submenu, you can find the following commands:
 
 ## Protocol \> Generate QAction helper code
 
-C# helper classes are automatically added or updated each time you switch from an XML editor tab to a C# editor tab (or vice versa). If, however, you want to force an ad-hoc update of all C# helper classes, you can select *Protocol \> Generate QAction Helper Code*.
+C# helper classes are automatically added or updated each time you switch from an XML editor tab to a C# editor tab (or vice versa). If, however, you want to force an ad hoc update of all C# helper classes, you can select *Protocol \> Generate QAction Helper Code*.
 
 ## Protocol \> Generate Class Library code
 
-If you want to force an ad-hoc regeneration of the Class Library QAction 63000 and the Class Library EXE blocks, you can click Generate Class Library Code.
+If you want to force an ad hoc regeneration of the Class Library QAction 63000 and the Class Library EXE blocks, you can click Generate Class Library Code.
 
 DIS contains a class library with reusable C# code, such as classes and methods that can be used for e.g. creating elements and services, processing DVEs, etc. Code from this library can be used in QActions and Automation scripts without having to copy/paste code from an external source into a protocol or a script.
 
 The advantage of this approach is that no additional DLL files need to be copied to the DataMiner installation folder when a protocol or script is put into use. All necessary code is included in the protocol or script itself. By including all code in the protocol or the script, we also prevent future code library updates from rendering a protocol or script inoperable.
 
-If, in the Class Library tab of the DIS Settings window, you selected the *Automatically generate Class Library code* option, DIS will automatically detect whether you are using any code from the Class Library in a QAction or Automation script, and copy all used classes, methods, etc. (along with all dependencies) from the class library to a generic QAction (with ID 63000) or Automation script EXE block. If you want to force an ad-hoc regeneration of the Class Library QAction 63000 or Class Library EXE blocks, you can select *Protocol \> Generate Class Library Code* in the main DIS menu.
+If, in the Class Library tab of the DIS Settings window, you selected the *Automatically generate Class Library code* option, DIS will automatically detect whether you are using any code from the Class Library in a QAction or Automation script, and copy all used classes, methods, etc. (along with all dependencies) from the class library to a generic QAction (with ID 63000) or Automation script EXE block. If you want to force an ad hoc regeneration of the Class Library QAction 63000 or Class Library EXE blocks, you can select *Protocol \> Generate Class Library Code* in the main DIS menu.
 
 See also: [Class Library](xref:DIS_settings#class-library)
 
