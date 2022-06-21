@@ -289,7 +289,7 @@ uid: glossary
 | OSS | Operations Support System. Software system that allows service providers to monitor, control, analyze and manage their network. |
 | OTA | Over-The-Air. Refers to wireless transmission, typically in the context of software updates distributed to mobile devices or TV and radio broadcasts transmitted wirelessly. |
 | OTT | Over-The-Top. Refers to media streaming services offered directly to viewers via the internet, rather than through a traditional cable or broadcast provider. |
-| OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad-hoc and periodic demands. |
+| OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad hoc and periodic demands. |
 | Outage | In the context of DataMiner Business Intelligence, the temporary unavailability of the service monitored by an SLA. See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
 | Outlier | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly spikes upwards or downwards and then returns to its previous, normal behavior. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
 | OWM | OpenWeatherMap. Online service that provides weather data, which can be integrated in DataMiner Maps from DataMiner 9.5.8 onwards. See [DMS Maps](xref:maps#dms-maps). |
