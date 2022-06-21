@@ -21,6 +21,8 @@
           "dataminer-overview/**/toc.yml",
           "user-guide/**.md",
           "user-guide/**/toc.yml",
+          "release-notes/**.md",
+          "release-notes/**/toc.yml",
           "develop/**.md",
           "develop/toc.yml",
 		  "develop/**/toc.yml",
@@ -36,6 +38,7 @@
           "images/**",
           "dataminer-overview/images/**",
           "user-guide/images/**",
+          "release-notes/images/**",
           "develop/images/**",
 		  "develop/schemadoc/Protocol/images/**",
 		  "develop/schemadoc/Automation/images/**"
