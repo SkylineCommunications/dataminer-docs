@@ -383,17 +383,17 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
   - Up to DataMiner 10.0.6, the default action is *Select*, which means that the left mouse button can be used to select a section of the graph to zoom in on. Other options are *Pan* or *None*.
 
-  - From DataMiner 10.0.7 onwards, the default action is *Pan*. Other options are *Select*, *Zoom* or *None*. The *Zoom* option does the same as the *Select* option from earlier DataMiner versions. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
+  - From DataMiner 10.0.7 onwards, the default action is *Pan*. Other options are *Select*, *Zoom* or *None*. The *Zoom* option does the same as the *Select* option from earlier DataMiner versions. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and Elasticsearch database.
 
 - **Right mouse button action on graph**: Select the action executed by dragging the right mouse button on a trend graph.
 
   - Up to DataMiner 10.0.6, the default action is *Pan*. Other options are *None* or *Select*, which allows you to use the left mouse button to select a section of the graph to zoom in on.
 
-  - From DataMiner 10.0.7 onwards, the default action is *Zoom*, which does the same as the *Select* option from earlier DataMiner versions. Other options are *Pan*, *Select* or *None*. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing.
+  - From DataMiner 10.0.7 onwards, the default action is *Zoom*, which does the same as the *Select* option from earlier DataMiner versions. Other options are *Pan*, *Select* or *None*. The *Select* option now allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and Elasticsearch database.
 
 - **Hotkey for mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Allows you to specify which key can be used in order to apply an action on a trend graph by pressing this key and dragging with the left mouse button at the same time. The default hotkey is *Ctrl*. Other options are *Alt* and *Shift*.
 
-- **Hotkey + left mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Select the action executed by pressing the hotkey configured in the setting above and dragging the left mouse button on a trend graph. The default option is Select, which allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and with DataMiner Indexing. Other options are *Zoom*, *Pan* or *None*.
+- **Hotkey + left mouse button action on graph**: Available from DataMiner 10.0.7 onwards. Select the action executed by pressing the hotkey configured in the setting above and dragging the left mouse button on a trend graph. The default option is Select, which allows you to select a part of the graph in order to assign tags to it. However, note that this is only possible on systems with a Cassandra database and Elasticsearch database. Other options are *Zoom*, *Pan* or *None*.
 
 - **Extend trend data from the database with real-time parameter changes**: Available from DataMiner 9.5.7 onwards. From that version of DataMiner onwards, by default, trend graphs are redrawn after each parameter change. When this setting is enabled, parameter changes will be displayed using a lighter color in order to clearly show the difference between this parameter data and “confirmed” trend data from the database. The moment a trend data update is received, the confirmed trend data will be drawn using the standard trend data color.
 
