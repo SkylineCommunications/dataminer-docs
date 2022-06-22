@@ -6,7 +6,8 @@ uid: DataMiner_Cube_RNs_index
 
 These release notes contain all new features, enhancements, and fixes for DataMiner Cube.
 
-For more information on the different release tracks, see [DataMiner Main Release vs. Feature Release](https://community.dataminer.services/dataminer-main-release-vs-feature-release/).
+> [!TIP]
+> For more information on the different release tracks, see [DataMiner Main Release vs. Feature Release](https://community.dataminer.services/dataminer-main-release-vs-feature-release/).
 
 ## DataMiner Feature Release track
 
