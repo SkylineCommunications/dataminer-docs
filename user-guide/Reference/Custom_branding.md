@@ -15,11 +15,11 @@ If you want Skyline to provide you with a custom brand theme, then please send u
 
 | Image and information | For more information, see... |
 | --------------------- | ---------------------------- |
-| Cube login logo | “Cube login logos” on page 5 |
-| Product logo | “Product logo” on page 7 |
-| Custom background image (optional) | “Custom background” on page 8 |
-| Corporate accent colors | “Accent colors” on page 9 |
-| Contact information | “Contact information” on page 11 |
+| Cube login logo | [Cube login logos](#cube-login-logos) |
+| Product logo | [Product logo](#product-logo) |
+| Custom background image (optional) | [Custom background](#custom-background) |
+| Corporate accent colors | [Accent colors](#accent-colors) |
+| Contact information | [Contact information](#contact-information) |
 
 ## Cube login logos
 
@@ -214,16 +214,16 @@ In a custom brand theme, the contact information in the General tab page of the 
 |------------------------------|-----------------------------------------------|
 | Company name                 | Skyline Communications N.V.                   |
 | Product name                 | DataMiner                                     |
-| Company website              | <www.skyline.be>                              |
-| Company email                | <info@skyline.be>                             |
+| Company website              | www.skyline.be                                |
+| Company email                | info@skyline.be                               |
 | TechSupport name             | DataMiner Technical Support                   |
 | TechSupport address (line1)  | Ambachtenstraat 33                            |
 | TechSupport address (line 2) | B-8870 Izegem                                 |
 | TechSupport address (line 3) | Belgium                                       |
-| TechSupport website          | <www.skyline.be/Contact/TechnicalSupport.htm> |
-| TechSupport email            | <techsupport@skyline.be>                      |
-| Extranet link                | <dcp.skyline.be>                              |
-| Online collaboration link    | <www.skyline.be/meeting.exe>                  |
+| TechSupport website          | www.skyline.be/Contact/TechnicalSupport.htm   |
+| TechSupport email            | techsupport@skyline.be                        |
+| Extranet link                | dcp.skyline.be                                |
+| Online collaboration link    | www.skyline.be/meeting.exe                    |
 
 > [!NOTE]
 > If a custom product name is specified, this will also replace the DataMiner tab name in the Logging app and the "(DataMiner)" root in the tree view pane of the Resources app.
