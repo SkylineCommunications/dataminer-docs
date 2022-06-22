@@ -429,8 +429,6 @@ If a **ComponentActions** shape data field has been added to the *Reservations* 
 
   - *global*: On an empty part of the timeline.
 
-  - *band*: On the name in the Y-axis of a horizontal band.
-
   - *reservation*: On a booking block.
 
 Example of a JSON string with three custom actions:
@@ -438,7 +436,6 @@ Example of a JSON string with three custom actions:
 ```txt
 [
     { "Name": "Action1", "Level": "global, "Type": "script","Execute":"script:CreateReservation||START=[StartTime];STOP=[StopTime]|||" },
-    { "Name": "Action2", "Level": "band", "Type": "script","Execute": "script:RemoveAll||BAND=[BandName]|||" },
     { "Name": "Action3", "Level": "block", "Type": "set","Execute": "set|34/5|1004:7|Off|" }
 ]
 ```
