@@ -2,9 +2,9 @@
 uid: Configuring_DataMiner_Indexing
 ---
 
-# Configuring DataMiner Indexing
+# Configuring DataMiner Indexing Options
 
-To configure the DataMiner Indexing settings, go to *System Center* > *Search & Indexing*.
+To configure the DataMiner Indexing settings in Cube, go to *System Center* > *Search & Indexing*.
 
 The following options are available:
 

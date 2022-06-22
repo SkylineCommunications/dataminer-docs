@@ -1,0 +1,26 @@
+---
+uid: Configuring_Elasticsearch_Database
+---
+# Configuring the Elasticsearch Database
+
+## Configuring a separate Elasticsearch instance on Linux
+
+To configure a separate Elasticsearch instance on Linux the Elasticsearch.yml, as well as several other files may need to be adapted before starting the Elasticsearch service. These settings can be found explained on [Configuring Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/settings.html).
+The most important of these can be found on [Important Elasticsearch configuration](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/important-settings.html)
+> [!IMPORTANT]
+> It is imperative that the JVM Heap Space is set to a value larger than the default 1 Gb on Production systems.
+To configure this, please see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html)
+
+## Configuring a new node to be added to the cluster
+
+Please see [DataMiner DOJO - Adding an Elasticsearch cluster node](https://community.dataminer.services/documentation/adding-an-elasticsearch-cluster-node/)
+
+## Configuring a new node to be removed from the cluster
+
+Please see [DataMiner DOJO - Removing an Elasticsearch cluster node](https://community.dataminer.services/documentation/removing-an-elasticsearch-cluster-node/)
+
+## Configuration of the master nodes
+
+Please see [DataMiner DOJO - Elasticsearch master nodes](https://community.dataminer.services/documentation/elasticsearch-cluster-master-nodes/)
+> [!IMPORTANT]
+> A correct master node configuration is extremely important since master nodes logically determine which nodes are part of the cluster. Therefore this is a must read before setting up any Elasticsearch cluster.
