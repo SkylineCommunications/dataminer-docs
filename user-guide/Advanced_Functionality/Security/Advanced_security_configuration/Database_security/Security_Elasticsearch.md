@@ -4,13 +4,11 @@ uid: Security_Elasticsearch
 
 # Securing the Elasticsearch database
 
-<!-- TODO: enable TLS encryption -->
-
 ## Authentication
 
 By default, Elasticsearch does **not** require authentication, which means anyone can access or alter the data. We therefore **highly recommend that you enable authentication** on your Elasticsearch cluster.
 
-To enable authentication:
+To enable authentication in Elasticsearch 6.8.X:
 
 1. Stop your DataMiner Agent.
 
@@ -19,8 +17,10 @@ To enable authentication:
 1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
 
     `xpack.security.enabled: true`
-
-    `xpack.security.transport.ssl.enabled: true`
+    
+    `discovery.type: single-node`
+    
+1. Start the *elasticsearch-service-x64* service.
 
 1. Execute the **elasticsearch-setup-passwords.bat** script (as Administrator) with the *interactive* argument.
 
@@ -32,18 +32,51 @@ To enable authentication:
 
    ```xml
    <DataBase active="true" search="true" type="Elasticsearch">
-      <DBServer>[ELASTIC IP]</DBServer>
+      <DBServer>[ELASTIC URL]</DBServer>
       <UID>[YOUR ELASTIC USER]</UID>
       <PWD>[YOUR STRONG PASSWORD]</PWD>
    </DataBase>
    ```
-
-1. Start the *elasticsearch-service-x64* service.
-
+   
 1. Start your DataMiner Agent.
 
 > [!NOTE]
 > To keep using Kibana, also set the credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in *C:\Program Files\Elasticsearch\Kibana\config*).
+
+## SSL/TLS Encryption
+
+By default all client-server communication with Elasticsearch is unencrypted.
+
+To configure SSL/TLS encryption in Elasticsearch:
+
+1. Request or generate a TLS certificate. Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
+
+1. Add the following lines to the *elasticsearch.yml* file:
+
+   ```
+   xpack.security.http.ssl.enabled: true
+   xpack.security.http.ssl.keystore.path: path/to/your/certificate
+   xpack.security.http.ssl.truststore.path: path/to/your/certificate
+   ```
+
+1. Optionally, **for password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
+
+   ```
+   bin\elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
+   bin\elasticsearch-keystore add xpack.security.http.ssl.truststore.secure_password
+   ```
+
+1. Start the *elasticsearch-service-x64* service and verify that you can connect with a browser to <https://FQDN:9200>.
+
+1. Stop the DataMiner Agent.
+
+1. Add the full *https://* URL (including the port) in the \<DBServer> element in the *DB.xml* file. For example:
+   `<DBServer>https://elastic.dataminer:9200</DBServer>`
+
+1. Save the changes and start the DataMiner Agent.
+
+> [!TIP]
+> To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
 ## Updating Elasticsearch
 

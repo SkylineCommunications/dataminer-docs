@@ -373,7 +373,7 @@ To have shapes display information about an object selected on the timeline, the
 - **SelectedTimeRange**: Available from DataMiner 10.2.1/10.3.0 onwards. The value of this variable can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by datetime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
 
   > [!NOTE]
-  > Prior to DataMiner 10.3.0/10.2.3, when a resource item is selected, the *SelectedTimeRange* session variable is cleared. From DataMiner 10.3.0/10.2.3 onwards, it is only cleared when the time range selection shown in the timeline area is changed.
+  > Prior to DataMiner 10.3.0/10.2.3, when a resource item is selected, the *SelectedTimeRange* session variable is cleared. From DataMiner 10.2.3 to 10.2.7, it is only cleared when the time range selection shown in the timeline area is changed. From DataMiner 10.3.0/10.2.8 onwards, the session variable is cleared when the selection is cleared.
 
 Alternatively, you can also make shapes display properties of the *SelectedReservation*, *SelectedSession*, *SelectedResource*, *SelectedOccurrence* or *SelectedPool*. For this purpose, the properties must be stored in a variable, which is then displayed by a shape.
 
@@ -425,21 +425,18 @@ If a **ComponentActions** shape data field has been added to the *Reservations* 
 
   - *\[StopTime\]*: The timestamp of the end of the selected range.
 
-- **Level**: Can be "global", "band", or "reservation". Determines where the action is available:
+- **Level**: Can be "global" or "reservation". Determines where the action is available:
 
   - *global*: On an empty part of the timeline.
 
-  - *band*: On the name in the Y-axis of a horizontal band.
-
   - *reservation*: On a booking block.
 
-Example of a JSON string with three custom actions:
+Example of a JSON string with custom actions:
 
 ```txt
 [
     { "Name": "Action1", "Level": "global, "Type": "script","Execute":"script:CreateReservation||START=[StartTime];STOP=[StopTime]|||" },
-    { "Name": "Action2", "Level": "band", "Type": "script","Execute": "script:RemoveAll||BAND=[BandName]|||" },
-    { "Name": "Action3", "Level": "block", "Type": "set","Execute": "set|34/5|1004:7|Off|" }
+    { "Name": "Action2", "Level": "block", "Type": "set","Execute": "set|34/5|1004:7|Off|" }
 ]
 ```
 

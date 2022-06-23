@@ -12,7 +12,7 @@ Specifies settings related to the timeout of a command/request.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[DefaultValue](xref:Protocol.PortSettings.TimeoutTime.DefaultValue)|[0, 1]|Specifies the default timeout value.|

@@ -1,8 +1,8 @@
 ---
-uid: TOOProtocolDevelopmentWithCICD
+uid: DevelopmentWithCICD
 ---
 
-# CI/CD Pipeline
+# CI/CD
 
 > [!IMPORTANT]
 > This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
@@ -19,8 +19,10 @@ uid: TOOProtocolDevelopmentWithCICD
 
 - [Visual overview development with CI/CD pipeline](xref:Visual_overview_development_with_CI_CD_pipeline#visual-overview-development-with-cicd-pipeline)
 
-- [Dashboard Development with CI/CD pipeline](xref:Dashboard_Development_with_CI_CD_pipeline#dashboard-development-with-cicd-pipeline)
+- [Dashboard development with CI/CD pipeline](xref:Dashboard_Development_with_CI_CD_pipeline#dashboard-development-with-cicd-pipeline)
 
-- [Install package development with CICD pipeline](xref:Install_package_development_with_CICD_pipeline)
+- [Custom solution development with CI/CD pipeline](xref:Custom_solution_development_with_CI_CD_Pipeline)
+
+- [Install package development with CI/CD pipeline](xref:Install_package_development_with_CICD_pipeline)
 
 - [FAQ](xref:FAQ)

@@ -9,7 +9,8 @@ The DataMiner Jobs web app, also known as DMS Job Manager, can be used to create
 This app is available from DataMiner 9.6.4 onwards.
 
 > [!NOTE]
-> - A Cassandra database and the DataMiner Indexing Engine are required in order to run this app. See [Databases](xref:databases).
+>
+> - A Cassandra database and Elasticsearch database are required in order to run this app. See [Databases](xref:databases).
 > - This app requires a separate Job Manager license.
 > - You can access this app using Google Chrome, Microsoft Edge, Mozilla Firefox or Safari.
 > - If you downgrade from DataMiner 10.0.4 to an earlier DataMiner version, job information may be lost.

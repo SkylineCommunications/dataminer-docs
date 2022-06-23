@@ -2951,6 +2951,43 @@
               topicUid: DMSScript.Script.Exe.Value-ref
       - name: Type
         topicUid: DMSScript.Type
+  - name: NuGet stages schema
+    topicUid: SchemaNuGetStagesConfig
+    items:
+      - name: NuGetStages
+        topicUid: NuGetStages
+        items:
+        - name: Configurations
+          topicUid: NuGetStages.Configurations
+          items:
+          - name: Configuration
+            topicUid: NuGetStages.Configurations.Configuration
+            items: 
+            - name: '@scope'
+              topicUid: NuGetStages.Configurations.Configuration-scope
+            - name: PackageCreation
+              topicUid: NuGetStages.Configurations.Configuration.PackageCreation
+              items:
+              - name: Enabled
+                topicUid: NuGetStages.Configurations.Configuration.PackageCreation.Enabled
+            - name: PackagePublishing
+              topicUid: NuGetStages.Configurations.Configuration.PackagePublishing
+              items:
+              - name: Destinations
+                topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations
+                items:
+                - name: Destination
+                  topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations.Destination
+                  items: 
+                  - name: Server
+                    topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations.Destination.Server
+              - name: Enabled
+                topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Enabled
+            - name: PackageSigning
+              topicUid: NuGetStages.Configurations.Configuration.PackageSigning
+              items:
+              - name: Enabled
+                topicUid: NuGetStages.Configurations.Configuration.PackageSigning.Enabled
 - name: Web Services
   items:
   - name: Web Services (v1)
@@ -4595,8 +4632,8 @@
               topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
             - name: Class Library packages
               topicUid: Class_Library_packages
-    - name: CI/CD Pipeline
-      topicUid: TOOProtocolDevelopmentWithCICD
+    - name: CI/CD
+      topicUid: DevelopmentWithCICD
       items:
         - name: High-level overview
           topicUid: High-level_overview
@@ -4642,6 +4679,11 @@
           items:
             - name: Pipeline stages for dashboards
               topicUid: Pipeline_stages_for_dashboards
+        - name: Custom solution development with CI/CD pipeline
+          topicUid: Custom_solution_development_with_CI_CD_Pipeline
+          items:
+            - name: Pipeline stages for custom solutions
+              topicUid: Pipeline_stages_for_custom_solutions
         - name: Install package development with CICD pipeline
           topicUid: Install_package_development_with_CICD_pipeline
           items:
@@ -4763,6 +4805,8 @@
           topicUid: Sandbox_mode
         - name: Updating .gitignore and Jenkins file
           topicUid: Updating_gitignore_and_Jenkins_file
+        - name: Repository types
+          topicUid: Repository_types
     - name: SLNetClientTest
       topicUid: TOOSLNetClientTest
       items:
