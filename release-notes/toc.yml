@@ -1,11 +1,11 @@
 - name: DataMiner Release Notes
   topicUid: RN_index
   items:
-  - name: DataMiner System release notes
-    topicUID: DataMiner_System_RNs_index
+  - name: General DataMiner release notes
+    topicUID: General_DataMiner_RNs_index
     items: 
     - name: DataMiner 10.2.8 release notes
-      topicUID: 10_2_8_System_RNs
+      topicUID: 10_2_8_General_RNs
   - name: DataMiner Cube release notes
     topicUID: DataMiner_Cube_RNs_index
     items: 

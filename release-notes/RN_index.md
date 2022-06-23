@@ -4,7 +4,7 @@ uid: RN_index
 
 # DataMiner Release Notes
 
-- [DataMiner System release notes](xref:DataMiner_System_RNs_index): These release notes contain all new features, enhancements, and fixes for the core DataMiner software as well as built-in apps such the Dashboards app, the Ticketing app, etc.
+- [General DataMiner release notes](xref:General_DataMiner_RNs_index): These release notes contain all new features, enhancements, and fixes for the core DataMiner software as well as built-in apps such the Dashboards app, the Ticketing app, etc.
 
 - [DataMiner Cube release notes](xref:DataMiner_Cube_RNs_index): These release notes contain all new features, enhancements, and fixes for DataMiner Cube.
 
