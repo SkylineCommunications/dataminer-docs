@@ -6,7 +6,9 @@ uid: Options_for_opening_DataMiner_Cube
 
 You can pass a number of options when starting DataMiner Cube, as detailed below.
 
-In the desktop app, from DataMiner 10.0.9 onwards, you can pass these options in the Cube start window by clicking ... in the top-right corner of the button representing the DMS you want to connect to, and specifying the URL arguments in the *Advanced* section.
+In the desktop app, from DataMiner 10.0.9 onwards, you can pass these options in the Cube start window by clicking ... in the top-right corner of the button representing the DMS you want to connect to, and specifying the URL arguments in the *Advanced* section. (See [Connecting to a DMS using URL arguments](xref:Managing_the_start_window#connecting-to-a-dms-using-url-arguments)).
+
+In the legacy browser app, you can pass these options by adding them to the URL.
 
 To combine different options, use a space as separator in the desktop app, or "&" in the browser app.
 
