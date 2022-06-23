@@ -153,7 +153,7 @@ uid: glossary
 | Eb/No | Energy per Bit (Eb) to Noise Density (No) ratio. Measure of signal-to-noise ratio for a digital communication system. |
 | Edge QAM | Headend or hub device that receives packets of digital video or data. It repacketizes the video or data into an MPEG transport stream and digitally modulates the digital transport stream onto a downstream RF carrier using quadrature amplitude modulation (QAM). |
 | EIGRP | Enhanced Interior Gateway Routing Protocol. Advanced routing protocol used to automate routing decisions and configuration in a network. |
-| ElasticSearch | Open-source search and analytics engine, used as the DataMiner Indexing database. See [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine). |
+| ElasticSearch | Open-source search and analytics engine, used as the DataMiner Indexing database. See [Elasticsearch database](xref:Elasticsearch_database). |
 | Element | A DataMiner object that usually represents a device monitored by the DataMiner System. See [Elements](xref:elements). |
 | Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework. See [Configuring virtual elements with the Element Connections module](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module). |
 | Element Display | Deprecated client application that was used in conjunction with System Display to view element-specific data. |
@@ -206,7 +206,7 @@ uid: glossary
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network. See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc. See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database, by default using Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager. See [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine). |
+| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager. See [Elasticsearch database](xref:Elasticsearch_database). |
 | Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt. See [SNMP managers](xref:SNMP#snmp-managers). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm. See [Information event](xref:Alarm_types#information-event). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself. See [Information templates](xref:Information_templates). |

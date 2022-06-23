@@ -503,9 +503,9 @@ To configure this:
 
 ## Indexing database settings
 
-From DataMiner 9.6.4 onwards, DataMiner Indexing Engine can be installed on DMAs with a Cassandra database. In that case, an additional database will be added to *DB.xml*.
+From DataMiner 9.6.4 onwards, Elasticsearch can be installed on DMAs with a Cassandra database as an additional indexing database. In that case, an additional database will be added to *DB.xml*.
 
-The *\<Database>* tag for an indexing database has the following attributes:
+The *\<Database>* tag for an Elasticsearch database has the following attributes:
 
 - **active**: If set to true, the database is active.
 
@@ -514,21 +514,22 @@ The *\<Database>* tag for an indexing database has the following attributes:
 - **type**: Currently only “Elasticsearch” is supported.
 
 > [!NOTE]
+>
 > - There can only be one active indexing database on a DMA.
 > - From DataMiner 10.2.0/10.1.1 onwards, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
 > - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
-### Defining a custom port for an Elasticsearch indexing database
+### Defining a custom port for an Elasticsearch database
 
-From DataMiner 10.0.7 onwards, you can define a custom port for an Elasticsearch Indexing database. By default, port 9200 is used.
+From DataMiner 10.0.7 onwards, you can define a custom port for an Elasticsearch database. By default, port 9200 is used.
 
 To define a different port:
 
 1. Stop the DMA.
 
-2. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-3. In the \<DBServer> element for the Indexing database, add a colon after the hostname or IP and specify the port.
+1. In the \<DBServer> element for the Indexing database, add a colon after the hostname or IP and specify the port.
 
     For example:
 
@@ -539,7 +540,7 @@ To define a different port:
     > [!NOTE]
     > The port specified in *DB.xml* must always be the same as the port defined in the Elasticsearch configuration. By default, this configuration is located in the folder *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
 
-4. Save the file and restart the DMA.
+1. Save the file and restart the DMA.
 
 ### Specifying a custom prefix for the Elasticsearch indexes
 
@@ -549,11 +550,11 @@ To do so:
 
 1. Stop the DMA.
 
-2. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-3. In the *DB* element for the indexing database, specify the custom prefix. Keep in mind that only regular alphanumeric characters are supported for the prefix, not symbols.
+1. In the *DB* element for the indexing database, specify the custom prefix. Keep in mind that only regular alphanumeric characters are supported for the prefix, not symbols.
 
-4. Save the file and restart the DMA.
+1. Save the file and restart the DMA.
 
 ### Specifying custom credentials for Elasticsearch
 
@@ -563,9 +564,9 @@ To do so:
 
 1. Stop the DMA.
 
-2. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-3. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag, specify the username and password, respectively.
+1. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag, specify the username and password, respectively.
 
     For example:
 
@@ -577,7 +578,7 @@ To do so:
     </DataBase>
     ```
 
-4. Save the file and restart the DMA.
+1. Save the file and restart the DMA.
 
 > [!NOTE]
 > For more information on how to configure TLS and security in Elasticsearch, see [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/).
@@ -590,8 +591,7 @@ If you have a CMDB (Configuration Management Database) that you want to manage b
 > The *\<Database>* tag containing the configuration data for the CMDB must not have a *local* attribute. However, it must have a *name* attribute of which the value (i.e. the name of the database configuration) must be identical to the value specified in the *\<DatabaseConfig>* tag of the Inventory & Asset Management configuration file.
 
 > [!TIP]
-> See also:
-> [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
+> See also: [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
 
 Example 1:
 

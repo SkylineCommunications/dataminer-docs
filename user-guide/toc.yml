@@ -1000,17 +1000,17 @@
               topicUid: How_DataMiner_offloads_data
         - name: Configuring an additional database
           topicUid: Configuring_an_additional_database
-        - name: DataMiner Indexing Engine
-          topicUid: DataMiner_Indexing_Engine
+        - name: Elasticsearch database
+          topicUid: Elasticsearch_database
           items:
-            - name: Installing DataMiner Indexing Engine
-              topicUid: Installing_DataMiner_Indexing_Engine
+            - name: Installing Elasticsearch on a DMA via DataMiner
+              topicUid: Installing_Elasticsearch_via_DataMiner
+            - name: Configuring Elasticsearch backups
+              topicUid: Configuring_Elasticsearch_backups
+            - name: Configuring indexing settings in System Center
+              topicUid: Configuring_DataMiner_Indexing
             - name: Configuring the Elasticsearch database
               topicUid: Configuring_Elasticsearch_Database
-            - name: Configuring Indexing backups
-              topicUid: Configuring_Indexing_backups
-            - name: Configuring DataMiner Indexing
-              topicUid: Configuring_DataMiner_Indexing
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
         - name: Specifying TTL overrides
