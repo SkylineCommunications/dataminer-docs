@@ -156,6 +156,9 @@ namespace Skyline.DataMiner.Net.Messages
 		///		<item>
 		///			<description>"USER:cookie": User executing the script.</description>
 		///		</item>
+		///		<item>
+		///			<description>"SKIP_STARTED_INFO_EVENT:bool": Disables the 'Script started' information event generation. This is supported from DataMiner 10.3.0/10.2.8 onwards.</description>
+		///		</item>
 		/// </list>
 		/// </remarks>
 		public SA Options;
