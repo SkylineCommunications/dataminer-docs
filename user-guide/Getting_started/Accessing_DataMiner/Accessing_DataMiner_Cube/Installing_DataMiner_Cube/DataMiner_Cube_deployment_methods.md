@@ -16,7 +16,7 @@ Below you can find an overview of the different methods that can be used to depl
 | Launcher [(1)](#fn_1)    | AnyCPU    | Yes [(3)](#fn_3)  | Yes                          |      | X [(5)](#fn_5) | X              |
 | MSI Launcher (bootstrap) | x64       | Yes [(3)](#fn_3)  | Yes                          |      |                | X [(6)](#fn_6) |
 | MSI Launcher (shared)    | x64       | No                | Yes                          |      |                | X [(7)](#fn_7) |
-| MSI CefSharp v81         | x86 + x64 | No                | Yes                          |      |                | X [(6)](#fn_6) |
+| MSI CefSharp             | x86 + x64 | No                | Yes                          |      |                | X [(6)](#fn_6) |
 
 <a id="fn_1"></a>(1) “Launcher” is an alternative name for the [DataMiner Cube start window](xref:Opening_DataMiner_Cube).<br>
 <a id="fn_2"></a>(2) Updates from DMA only.<br>
@@ -24,7 +24,7 @@ Below you can find an overview of the different methods that can be used to depl
 <a id="fn_4"></a>(4) XBAP will eventually be phased out (due to Internet Explorer [end of life](https://docs.microsoft.com/en-us/lifecycle/announcements/internet-explorer-11-end-of-support) and known issues).<br>
 <a id="fn_5"></a>(5) Introduced in 10.0.9.<br>
 <a id="fn_6"></a>(6) Introduced in 10.1.9.<br>
-<a id="fn_7"></a>(7) Expected to be introduced in 10.2.
+<a id="fn_7"></a>(7) Introduced in 10.2.0
 
 ## Launcher installation
 
@@ -107,8 +107,6 @@ Below you can find an overview of the different methods that can be used to depl
 
 - Installing the CefSharp web browser plugin avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
 
-- The CefSharp web browser plugin will always be installed in the following folder: `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CefSharp\`
-
 - Windows 8, 8.1 and 2012 R2 require Microsoft Visual C++ Runtime 2015 to be installed separately.
 
     For more information, see [the latest supported Visual C++ downloads](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0).
@@ -123,7 +121,7 @@ Below you can find an overview of the different methods that can be used to depl
 
 - All packages support using the INSTALLDIR parameter to customize the target folder.
 
-    Ddefault folder: `%ProgramFiles\Skyline Communications\DataMiner Cube`
+    Default folder: `%ProgramFiles%\Skyline Communications\DataMiner Cube`
 
     Examples:
 
