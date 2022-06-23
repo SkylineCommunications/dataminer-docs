@@ -1005,10 +1005,10 @@
           items:
             - name: Installing Elasticsearch on a DMA via DataMiner
               topicUid: Installing_Elasticsearch_via_DataMiner
-            - name: Configuring indexing settings in System Center
-              topicUid: Configuring_DataMiner_Indexing
             - name: Configuring Elasticsearch backups
               topicUid: Configuring_Elasticsearch_backups
+            - name: Configuring indexing settings in System Center
+              topicUid: Configuring_DataMiner_Indexing
             - name: Configuring the Elasticsearch database
               topicUid: Configuring_Elasticsearch_Database
             - name: Configuring multiple Elasticsearch clusters

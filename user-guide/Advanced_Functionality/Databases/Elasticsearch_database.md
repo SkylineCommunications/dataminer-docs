@@ -8,11 +8,13 @@ From DataMiner 9.6.4 onwards, on DataMiner Agents with a Cassandra database, it 
 
 Certain features introduced from that version of DataMiner onwards, such as the Jobs app, can only be used in DataMiner Systems with Elasticsearch database.
 
-- [Installing Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
+- [Installing Elasticsearch on a DMA via DataMiner](xref:Installing_Elasticsearch_via_DataMiner)
 
 - [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups)
 
 - [Configuring indexing settings in System Center](xref:Configuring_DataMiner_Indexing)
+
+- [Configuring the Elasticsearch database](xref:Configuring_Elasticsearch_Database)
 
 - [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
 
