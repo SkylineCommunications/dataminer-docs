@@ -47,7 +47,11 @@ The background color of the login logos should match the theme color.
 
 #### Dark background
 
+![Dark background](~/user-guide/images/Logon_Dark.png)
+
 #### Light background
+
+![Light background](~/user-guide/images/Logon_Light.png)
 
 ### Login screen will show the DataMiner logo by default
 
@@ -73,6 +77,8 @@ See also: “Accent colors” on page 9
 - jpg
 
 ### Default product logo
+
+![Default product logo](~/user-guide/images/ProductLogo_Default.png)
 
 ### 'Powered by' labels
 
@@ -127,9 +133,10 @@ See below for an overview of the colors used in both Skyline themes.
 
 The general accent color.
 
-- Mixed theme: HEX #0072C6, RGB 0-114-198
-- Black theme: HEX #0072C6, RGB 0-114-198
-	
+- Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(0,114,198);">HEX #0072C6, RGB 0-114-198</span>
+
+- Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(0,114,198);">HEX #0072C6, RGB 0-114-198</span>
+
 Examples:
 
 - Header
@@ -140,15 +147,17 @@ Examples:
 
 The background color of the Surveyor side bar, the Surveyor tabs, and the toggle buttons in the Alarm Console footer.
 
-- Mixed theme: HEX #004373, RGB 0-67-115
-- Black theme: HEX #004373, RGB 0-67-115
+- Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(0,67,115);">HEX #004373, RGB 0-67-115</span>
+
+- Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(0,67,115);">HEX #004373, RGB 0-67-115</span>
 
 ### accentLightColor
 
 The background color of search result lists, selection boxes, and navigation buttons.
 
-- Mixed theme: HEX #9DC3E6, RGB 157-195-230
-- Black theme: HEX #9DC3E6, RGB 157-195-230
+- Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(157,195,230);">HEX #9DC3E6, RGB 157-195-230</span>
+
+- Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(157,195,230);">HEX #9DC3E6, RGB 157-195-230</span>
 
 Examples:
 
@@ -160,8 +169,9 @@ Examples:
 
 The background color of toggle buttons.
 
-- Mixed theme: HEX #2A8AD4, RGB 42-138-212
-- Black theme: HEX #2A8AD4, RGB 42-138-212
+- Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(42,138,212);">HEX #2A8AD4, RGB 42-138-212</span>
+
+- Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(42,138,212);">HEX #2A8AD4, RGB 42-138-212</span>
  
 Examples:
 
@@ -173,8 +183,9 @@ Examples:
 
 The text color used when the background has the accent color.
 
-- Mixed theme: HEX #FFFFFF, RGB 255-255-255
-- Black theme: HEX #FFFFFF, RGB 255-255-255
+- Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:black;border:1px solid black;background-color:rgb(255,255,255);">HEX #FFFFFF, RGB 255-255-255</span>
+
+- Black theme: <span style="padding:2px;width:200px;text-align:center;color:black;border: 1px solid black;background-color:rgb(255,255,255);">HEX #FFFFFF, RGB 255-255-255</span>
 		
 Example:
 
@@ -184,8 +195,9 @@ Example:
 
 The text color used when the background has the theme’s background color (white/black).
 
-- Mixed theme: HEX #0072C6, RGB 0-114-198
-- Black theme: HEX #9DC3E6, RGB 157-195-230
+- Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(0,114,198);">HEX #0072C6, RGB 0-114-198</span>
+
+- Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(157,195,230);">HEX #9DC3E6, RGB 157-195-230</span>
 	
 Example:
 
@@ -195,8 +207,9 @@ Example:
 
 The text color used when the background color is inverted.
 
-- Mixed theme: HEX #B4D3EF, RGB 180-211-239
-- Black theme: HEX #B4D3EF, RGB 180-211-239
+- Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(180,211,239);">HEX #B4D3EF, RGB 180-211-239</span>
+
+- Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(180,211,239);">HEX #B4D3EF, RGB 180-211-239</span>
 		
 Example:
 
@@ -214,18 +227,20 @@ In a custom brand theme, the contact information in the General tab page of the 
 |------------------------------|-----------------------------------------------|
 | Company name                 | Skyline Communications N.V.                   |
 | Product name                 | DataMiner                                     |
-| Company website              | www.skyline.be                                |
-| Company email                | info@skyline.be                               |
+| Company website              | `www.skyline.be`                              |
+| Company email                | `info@skyline.be`                             |
 | TechSupport name             | DataMiner Technical Support                   |
 | TechSupport address (line1)  | Ambachtenstraat 33                            |
 | TechSupport address (line 2) | B-8870 Izegem                                 |
 | TechSupport address (line 3) | Belgium                                       |
-| TechSupport website          | www.skyline.be/Contact/TechnicalSupport.htm   |
-| TechSupport email            | techsupport@skyline.be                        |
-| Extranet link                | dcp.skyline.be                                |
-| Online collaboration link    | www.skyline.be/meeting.exe                    |
+| TechSupport website          | `www.skyline.be/Contact/TechnicalSupport.htm` |
+| TechSupport email            | `techsupport@skyline.be`                      |
+| Extranet link                | `dcp.skyline.be`                              |
+| Online collaboration link    | `www.skyline.be/meeting.exe`                  |
 
 > [!NOTE]
 > If a custom product name is specified, this will also replace the DataMiner tab name in the Logging app and the "(DataMiner)" root in the tree view pane of the Resources app.
 
 ### Default contact info
+
+![Default contact info](~/user-guide/images/ContactInfo_Default.png)
