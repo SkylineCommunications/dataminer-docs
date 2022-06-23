@@ -39,7 +39,7 @@ Set the *sourceType* attribute of a layer to “clouds” if you want that layer
 > [!NOTE]
 > For Google Maps, the Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
 >
-> As an alternative, you can combine openstreetmap and openweathermap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
+> As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
 
 ## Layers of sourceType “connectivity”
 
@@ -329,7 +329,7 @@ Set the *sourceType* attribute of a layer to “weather” if you want that laye
 > [!NOTE]
 > For Google Maps, the Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
 >
-> As an alternative, you can combine openstreetmap and openweathermap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
+> As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
 
 ## Layers of sourceType “weatherf”
 
@@ -338,5 +338,4 @@ Set the *sourceType* attribute of a layer to “weatherf” if you want that lay
 > [!NOTE]
 > For Google Maps, the Weather and Cloud layers are deprecated as of June 4, 2014. These are included in the Weather library, which is no longer available from June 4, 2015 onwards.
 >
-> As an alternative, you can combine openstreetmap and openweathermap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
->
+> As an alternative, you can combine OpenStreetMap and OpenWeatherMap instead. See [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers) for more details.
