@@ -410,6 +410,14 @@ If a **ComponentActions** shape data field has been added to the *Reservations* 
 
   - *set*: Perform a parameter set.
 
+  > [!NOTE]
+  > The following legacy type naming is also supported:
+  >
+  > - *ias*, *automation*, or *automationscript*, instead of *script*
+  > - *parameter* or *parameterset*, instead of *set*
+  >
+  > However, we recommend that you do not use this legacy type naming.
+
 - **Execute**: String. The action to be executed. The same syntax is used as for Visio shapes:
 
   - *Script:ScriptName\|Dummies\|Parameters\|Memories\|Tooltip\|Options*
@@ -431,12 +439,20 @@ If a **ComponentActions** shape data field has been added to the *Reservations* 
 
   - *reservation*: On a booking block.
 
+  > [!NOTE]
+  > The following legacy level naming is also supported:
+  >
+  > - *general*, instead of *global*
+  > - *block*, instead of *reservation*
+  >
+  > However, we recommend that you do not use this legacy level naming.
+
 Example of a JSON string with custom actions:
 
 ```txt
 [
     { "Name": "Action1", "Level": "global, "Type": "script","Execute":"script:CreateReservation||START=[StartTime];STOP=[StopTime]|||" },
-    { "Name": "Action2", "Level": "block", "Type": "set","Execute": "set|34/5|1004:7|Off|" }
+    { "Name": "Action2", "Level": "reservation", "Type": "set","Execute": "set|34/5|1004:7|Off|" }
 ]
 ```
 
