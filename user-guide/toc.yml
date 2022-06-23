@@ -1005,6 +1005,8 @@
           items:
             - name: Installing DataMiner Indexing Engine
               topicUid: Installing_DataMiner_Indexing_Engine
+            - name: Configuring the Elasticsearch database
+              topicUid: Configuring_Elasticsearch_Database
             - name: Configuring Indexing backups
               topicUid: Configuring_Indexing_backups
             - name: Configuring DataMiner Indexing
