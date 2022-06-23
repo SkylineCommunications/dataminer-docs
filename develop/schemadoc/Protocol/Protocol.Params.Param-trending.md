@@ -29,6 +29,7 @@ Default: true.
 <Param id="1" trending="true">
 ```
 
-## See Also
+## See also
+
 - [Trending](xref:MonitoringTrending)
 - [Protocol Trending Guidelines](xref:Trending1)
