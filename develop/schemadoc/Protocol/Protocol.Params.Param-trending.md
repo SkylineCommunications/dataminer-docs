@@ -28,3 +28,8 @@ Default: true.
 ```xml
 <Param id="1" trending="true">
 ```
+
+## See also
+
+- [Trending](xref:MonitoringTrending)
+- [Protocol Trending Guidelines](xref:Trending1)
