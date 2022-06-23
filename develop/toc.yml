@@ -3345,7 +3345,21 @@
                               topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.Reference-type
                           - name: TaskId
                             topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.TaskId
-
+    - name: SchemaTypes
+      topicUid: Manifest-TypeAlarmTemplateName
+      items:
+      - name: TypeAlarmTemplateName
+        topicUID: Manifest-TypeAlarmTemplateName
+      - name: TypeEmptyString
+        topicUID: Manifest-TypeEmptyString
+      - name: TypeInformationTemplateName
+        topicUID: Manifest-TypeInformationTemplateName
+      - name: TypeNonEmptyString
+        topicUID: Manifest-TypeNonEmptyString
+      - name: TypePackageVersion
+        topicUID: Manifest-TypePackageVersion
+      - name: TypeTrendTemplateName
+        topicUID: Manifest-TypeTrendTemplateName
 - name: Web Services
   items:
   - name: Web Services (v1)
