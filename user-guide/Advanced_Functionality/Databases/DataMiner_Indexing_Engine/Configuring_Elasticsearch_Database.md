@@ -1,7 +1,7 @@
 ---
 uid: Configuring_Elasticsearch_Database
 ---
-# Configuring the Elasticsearch Database
+# Configuring the Elasticsearch database
 
 ## Configuring a separate Elasticsearch instance on Linux
 
