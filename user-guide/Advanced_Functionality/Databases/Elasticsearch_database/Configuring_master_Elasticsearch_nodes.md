@@ -10,6 +10,9 @@ An Elasticsearch cluster can only have one master node. If, on the other hand, t
 
 It is of the utmost importance for a cluster to have a stable master node.
 
+> [!IMPORTANT]
+> A correct master node configuration is extremely important since master nodes logically determine which nodes are part of the cluster. This page is therefore a must-read before you set up any Elasticsearch clusters.
+
 ## Hardware requirements
 
 There are no specific requirements for master nodes. The master node should be a stable node, so making sure it meets the minimum requirements is an absolute must. A master node might use a bit more CPU power, but this should not have a huge impact.
@@ -27,15 +30,15 @@ In the *elasticsearch.yml* file, all nodes that are eligible to become master sh
 
 Let us assume that we have a situation like the one depicted below: 2 nodes, both eligible to become master, of which one is currently acting as master node.
 
-
+![Split brain 1](~/user-guide/images/ElasticSearch_Cluster_Master_Nodes_1.png)
 
 At some point, while both nodes are busy synchronizing, reading data and writing data, network connections are lost.
 
-
+![Split brain 2](~/user-guide/images/ElasticSearch_Cluster_Master_Nodes_2.png)
 
 As they can no longer detect each other, both nodes will assume the other one is offline and, as a result, they will both promote themselves to master node. In essence, there will now be 2 clusters with a single master node each.
 
-
+![Split brain 3](~/user-guide/images/ElasticSearch_Cluster_Master_Nodes_5.png)
 
 This is a so-called split-brain situation. Both single-node clusters will now each receive requests to read and write the same data.
 
@@ -55,11 +58,11 @@ Compared to a 2-node cluster, a 3-node cluster can guarantee full redundancy.
 
 Let us assume we have a 3-node cluster and that all three nodes are eligible to become master ("node.master:true") ...
 
-
+![Best practice 1](~/user-guide/images/ElasticSearch_Cluster_Master_Nodes_4.png)
 
 ... and that node 3 is either offline or no longer connected to the other nodes due to a network issue ...
 
-
+![Best practice 2](~/user-guide/images/ElasticSearch_Cluster_Master_Nodes_3.png)
 
 At this point, node 3 could decide to become a separate cluster.
 

@@ -22,15 +22,3 @@ The most important of these settings can be found on the page [Important Elastic
 
 > [!IMPORTANT]
 > A correct master node configuration is extremely important since master nodes logically determine which nodes are part of the cluster. This page is therefore a must-read before you set up any Elasticsearch clusters.
-
-## Configuring a new node to be added to the cluster
-
-See [DataMiner DOJO - Adding an Elasticsearch cluster node](https://community.dataminer.services/documentation/adding-an-elasticsearch-cluster-node/)
-
-## Configuring a new node to be removed from the cluster
-
-See [DataMiner DOJO - Removing an Elasticsearch cluster node](https://community.dataminer.services/documentation/removing-an-elasticsearch-cluster-node/)
-
-## Configuration of the master nodes
-
-See [DataMiner DOJO - Elasticsearch master nodes](https://community.dataminer.services/documentation/elasticsearch-cluster-master-nodes/)
