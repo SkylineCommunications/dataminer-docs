@@ -35,7 +35,7 @@ To connect your DMS to the cloud:
 1. On the System Center \> *Cloud* page, click the *Connect* button. A pop-up browser window will open.
 
    > [!NOTE]
-   > Internet Explorer is not supported for this. If your default browser is Internet Explorer, you may need to change this temporarily in order to continue with this procedure.
+   > Internet Explorer is not supported for this. If your default browser is Internet Explorer, we recommend that you change to a different browser in order to continue with this procedure.
 
 1. Specify the following information in the pop-up window:
 

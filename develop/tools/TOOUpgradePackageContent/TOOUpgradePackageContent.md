@@ -14,4 +14,3 @@ In this section:
 
 > [!NOTE]
 > The name of each DataMiner upgrade package contains a version and build number for easy identification. E.g. a package named “upgrade8.5.4.3-3321-20150402-release.dmupgrade” contains DataMiner version 8.5.4.3 with build ID 3321.
->
