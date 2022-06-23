@@ -10,6 +10,10 @@ By default, the email containing the report is sent in HTML format, using the te
 
 The report content will normally be placed inside the message body. However, you can also choose to attach reports to email messages as separate PDF or MHT files.
 
+> [!NOTE]
+>
+> - To attach a report to an email message as a separate pdf using DMS Scheduler, select both '_Plain text_' and '_Include report or dashboard_'.
+
 Reports can also be copied or uploaded as PDF or MHT files to a shared network folder or an FTP server. Separate options are available for this in the user interface of the Scheduler and Automation apps.
 
 > [!NOTE]
