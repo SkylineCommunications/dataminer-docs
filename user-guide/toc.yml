@@ -1020,12 +1020,12 @@
             - name: Configuring the Elasticsearch database
               topicUid: Configuring_Elasticsearch_Database
               items:
-              - name: Configuring a new node to be added to the cluster
-                topicUID: Configuring_Elasticsearch_node_add
-              - name: Configuring a new node to be removed from the cluster
-                topicUID: Configuring_Elasticsearch_node_remove
               - name: Configuring the master nodes
                 topicUID: Configuring_master_Elasticsearch_nodes
+              - name: Adding an Elasticsearch cluster node
+                topicUID: Configuring_Elasticsearch_node_add
+              - name: Removing an Elasticsearch cluster node
+                topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
         - name: Specifying TTL overrides

@@ -2,7 +2,7 @@
 uid: Configuring_Elasticsearch_node_add
 ---
 
-# Configuring a new node to be added to the cluster
+# Adding an Elasticsearch cluster node
 
 ## Prerequisites
 
@@ -22,10 +22,10 @@ uid: Configuring_Elasticsearch_node_add
     | cluster.name:NAME | This name should be identical to the cluster name specified on the other nodes. |
     | network.host:IP | Make sure the `network.host` is bound to an IP address that is accessible to the other nodes in the cluster (other than `127.0.0.1`). |
     | Network.publish_host:IP | Make sure the `network.publish_host` is bound to an IP address that is accessible to the other nodes in the cluster (other than `127.0.0.1`). If this setting is not explicitly defined, its value will be inherited from `network.host`. |
-    | discovery.zen.minimum_master_nodes:X | This value should be identical to the `discovery.zen.minimum_master_nodes` values specified on the other nodes.<br>For more information on this setting, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes). |
-    | node.master:false | In most cases, this setting will be set to false.<br>For more information on this setting, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes). |
-    | discovery.zen.ping.unicast.hosts:[“IP1”, “IP2”,…] | This setting should contain the IP addresses of the (master) nodes in the cluster. |
-	
+    | discovery.zen.minimum_master_nodes:X | This value should be identical to the `discovery.zen.minimum_master_nodes` values specified on the other nodes. For more information on this setting, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes). |
+    | node.master:false | In most cases, this setting will be set to false. For more information on this setting, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes). |
+    | discovery.zen.ping.unicast.hosts:[“IP1”, “IP2”, ...] | This setting should contain the IP addresses of the (master) nodes in the cluster. |
+
 1. Start the node to have it added to the cluster.
 
 > [!TIP]

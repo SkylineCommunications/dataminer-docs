@@ -2,7 +2,7 @@
 uid: Configuring_Elasticsearch_node_remove
 ---
 
-# Configuring a new node to be removed from the cluster
+# Removing an Elasticsearch cluster node
 
 ## Prerequisites
 
@@ -30,9 +30,9 @@ Execute the `_cluster/health` query to check whether the decommissioning procedu
 - Stop the Elasticsearch service.
 - Update the *elasticsearch.yml* file of the node that will be removed:
 
-    - Change the cluster name (optional).
-    - Remove any seed IP addresses from the `discovery.zen.ping.unicast.hosts` setting.
-    - Reset `discovery.zen.minimum_master_nodes` to 1
+  - Change the cluster name (optional).
+  - Remove any seed IP addresses from the `discovery.zen.ping.unicast.hosts` setting.
+  - Reset `discovery.zen.minimum_master_nodes` to 1
 
 - On the node that will be removed, make sure the data folder is empty. In the *elasticsearch.yml* file, you can find the data folder in the `path.data` setting.
 

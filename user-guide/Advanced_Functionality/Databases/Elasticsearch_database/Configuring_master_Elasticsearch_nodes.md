@@ -4,14 +4,14 @@ uid: Configuring_master_Elasticsearch_nodes
 
 # Configuring the master nodes
 
+> [!IMPORTANT]
+> A correct master node configuration is extremely important since master nodes logically determine which nodes are part of the cluster. This page is therefore a must-read before you set up any Elasticsearch clusters.
+
 A master node is responsible for lightweight cluster-wide actions such as creating or deleting indices. It also tracks which nodes are part of the cluster and decides which shards to allocate to which node. Basically, a master node decides where data gets stored.
 
 An Elasticsearch cluster can only have one master node. If, on the other hand, there is no master node, there is no Elasticsearch cluster and no read or write operations can be performed.
 
 It is of the utmost importance for a cluster to have a stable master node.
-
-> [!IMPORTANT]
-> A correct master node configuration is extremely important since master nodes logically determine which nodes are part of the cluster. This page is therefore a must-read before you set up any Elasticsearch clusters.
 
 ## Hardware requirements
 
@@ -26,7 +26,7 @@ In the *elasticsearch.yml* file, all nodes that are eligible to become master sh
 > [!NOTE]
 > By default, all nodes will have their `node.master` property set to true.
 
-## Preventing a 'split brain' situation
+## Preventing a split-brain situation
 
 Let us assume that we have a situation like the one depicted below: 2 nodes, both eligible to become master, of which one is currently acting as master node.
 
