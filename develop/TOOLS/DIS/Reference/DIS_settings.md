@@ -123,7 +123,7 @@ Clear the *Enable Class Library feature* option if you want to disable the Class
 
 If you select the *Automatically generate Class Library code* option, DIS will automatically regenerate the Class Library QAction 63000 and the Class Library EXE blocks whenever references to class library items have been added, changed or removed.
 
-If you want to force an ad-hoc regeneration of the Code Library QAction 63000 and the Code Library EXE blocks, you can click the *Protocol \> Generate Class Library Code* command in the DIS menu.
+If you want to force an ad hoc regeneration of the Code Library QAction 63000 and the Code Library EXE blocks, you can click the *Protocol \> Generate Class Library Code* command in the DIS menu.
 
 See also: [Protocol \> Generate Class Library code](xref:DIS_menu#protocol--generate-class-library-code)
 

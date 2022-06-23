@@ -26,14 +26,14 @@ To reset the cell phone modem:
     > [!NOTE]
     > This button is only available when the Mobile Gateway has been initialized.
 
-To send an ad-hoc text message:
+To send an ad hoc text message:
 
 - Click *Send text message...* at the top of the screen.
 
     > [!NOTE]
     > This button is only available when the Mobile Gateway has been initialized.
 
-To execute an ad-hoc command (e.g. for test purposes):
+To execute an ad hoc command (e.g. for test purposes):
 
 - In the *commands* tab, select a command in the list on the left, and click *Execute*.
 

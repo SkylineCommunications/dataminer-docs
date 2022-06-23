@@ -32,6 +32,8 @@ To fix all errors of one particular type or severity at the same time, do the fo
 
 When, for an error listed in the *DIS Validator* pane, there is more information available than what is being displayed, an information icon will appear next to the description. If you click such an information icon, the additional information will be displayed in a pop-up window.
 
+Note that when you try to fix an error with warnings, a popup window may appear to draw your attention to those warnings. Only when you click *OK* in that popup window will the error be fixed.
+
 When you right-click an error in the list, a shortcut menu offers you the following options:
 
 | Command | Function |
@@ -65,13 +67,18 @@ If you want to compare two protocols, do the following:
 
         > [!NOTE]
         > - If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
-        > - For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to https://api.skyline.be/*
+        > - For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to `https://api.skyline.be/*`.
 
     1. Click *OK*.
 
     After selecting the two protocols, the comparison will start automatically.
 
 1. If necessary, click *Compare* to redo the comparison or click *Export* to have the result of the comparison exported to a CSV file.
+
+When you compare two protocols, DIS will also automatically validate both these protocols. When comparison and validation have finished, you will see two tabs:
+
+- *Major Change* - The result of the protocol comparison.
+- *Validator* - The differences between the two protocol validations.
 
 When you right-click an error in the list, a shortcut menu offers you the following options:
 
