@@ -16,6 +16,8 @@ This section consists of the following topics:
 
 - [Elasticsearch database](xref:Elasticsearch_database)
 
+- [Cassandra database](xref:Cassandra_database)
+
 - [Specifying TTL overrides](xref:Specifying_TTL_overrides)
 
 - [Database queries](xref:Database_queries)
