@@ -461,9 +461,9 @@ Example of a JSON string with custom actions:
 
 ## Configuring command controls for a Resource Manager component
 
-If the *ComponentOptions* shape data with the value *UseCommandsForCustomActions* is defined on a Resource Manager component in Visio, the selection behavior of the bookings timeline is different from the default behavior: instead of showing a context menu that allows the user to select one of the available actions, the component will zoom in on the selected range.
+From DataMiner 9.5.6 onwards, it is possible to use a Resource Manager component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline. 
 
-However, from DataMiner 9.5.6 onwards, it is possible to use this component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline.
+If this configuration is used, the selection behavior of the booking timeline is different from the default behavior: if the user first selects a command shape and then selects a timeline range, the corresponding command is immediately executed. If no command shape is selected first, instead of showing the usual context menu allowing a user to select one of the available actions, the component will zoom in on the selected range.
 
 You can configure this as follows:
 
@@ -476,11 +476,11 @@ You can configure this as follows:
     | ComponentOptions | *UseCommandsForCustomActions* |
     | CommandPrefix    | Optional prefix added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. “*One\_*”). |
 
-2. Add the following shape data fields to the command control shape:
+1. Add the following shape data fields to the command control shape:
 
     | Shape data     | Value      |
     |----------------|------------|
-    | Command        | Name of the command to be executed when the shape is clicked (optionally preceded by the command prefix): *SetCustomActionMode*. |
+    | Command        | Name of the command to be executed (optionally preceded by the command prefix): *SetCustomActionMode*. |
     | CommandParameter | The name of the action, as configured in the *ComponentActions* field. If no action name is specified here, the default zoom action will be selected with this command shape. |
     | Scope          | The scope of the command: *Page* |
 
