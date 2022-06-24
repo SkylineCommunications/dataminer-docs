@@ -22,4 +22,4 @@ Certain features introduced from that version of DataMiner onwards, such as the 
 > For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
 
 > [!TIP]
-> See also: [Elasticsearch setup](https://community.dataminer.services/elasticsearch-setup/) on DataMiner Dojo
+> See also: [Expert Hub – Elasticsearch]([https://community.dataminer.services/elasticsearch-setup/](https://community.dataminer.services/expert-hub-elastic/)) on DataMiner Dojo
