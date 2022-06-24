@@ -461,7 +461,7 @@ Example of a JSON string with custom actions:
 
 ## Configuring command controls for a Resource Manager component
 
-If *ComponentActions* shape data are defined on a Resource Manager component in Visio, the selection behavior of the bookings timeline is different from the default behavior: instead of zooming in on the selected range, the component shows a context menu that allows the user to select one of the available actions.
+If the *ComponentOptions* shape data with the value *UseCommandsForCustomActions* is defined on a Resource Manager component in Visio, the selection behavior of the bookings timeline is different from the default behavior: instead of showing a context menu that allows the user to select one of the available actions, the component will zoom in on the selected range.
 
 However, from DataMiner 9.5.6 onwards, it is possible to use this component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline.
 
