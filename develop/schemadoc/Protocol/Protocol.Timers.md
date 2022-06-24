@@ -12,7 +12,7 @@ Contains all timers defined in the protocol.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[relativeTimers](xref:Protocol.Timers-relativeTimers)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||If this is set to *true*, then none of the timers defined under this tag are considered fixed (unless a timer has its fixedTimer attribute set to *true*).|
 

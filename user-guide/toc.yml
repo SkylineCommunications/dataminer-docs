@@ -24,14 +24,23 @@
                 topicUID: Uninstalling_the_DataMiner_Cube_desktop_application
               - name: Changing the default browser engine used in DataMiner Cube
                 topicUID: Changing_the_default_browser_engine_used_in_DataMiner_Cube
-              - name: Configuring Internet Explorer to run DataMiner Cube
-                topicUID: Configuring_Internet_Explorer_to_run_DataMiner_Cube
+              - name: Configuring Microsoft Edge to run DataMiner Cube
+                topicUID: Configuring_Microsoft_edge_to_run_Cube
               - name: Installing the Skyline certificates
                 topicUID: Installing_the_Skyline_certificates
               - name: DataMiner Cube deployment methods
                 topicUID: DataMiner_Cube_deployment_methods
             - name: Opening DataMiner Cube
               topicUid: Opening_DataMiner_Cube
+              items:
+              - name: Opening the desktop application
+                topicUID: Opening_the_desktop_app
+              - name: Managing the start window of the desktop app
+                topicUID: Managing_the_start_window
+              - name: Opening the browser application
+                topicUID: Opening_the_browser_app
+              - name: Options for opening DataMiner Cube
+                topicUID: Options_for_opening_DataMiner_Cube
             - name: Logging on to DataMiner Cube
               topicUid: Logging_on_to_DataMiner_Cube
         - name: Accessing the Monitoring app
@@ -794,35 +803,34 @@
         - name: Configuring a DataMiner Agent
           topicUid: Configuring_a_DataMiner_Agent
           items:
-            - name: General DMA configuration
-              topicUid: General_DMA_configuration
-              items:
-                - name: Changing the DataMiner ID of a DMA
-                  topicUid: Changing_the_DMA_ID
-                - name: Changing the name of a DMA
-                  topicUid: Changing_the_name_of_a_DMA
-                - name: Specifying your company data
-                  topicUid: Specifying_your_company_data
-                - name: Configuring the IP network ports
-                  topicUid: Configuring_the_IP_network_ports
-                - name: Configuring the polling request timeout
-                  topicUid: Configuring_the_polling_request_timeout
-                - name: Configuring outgoing email
-                  topicUid: Configuring_outgoing_email
-                - name: Forcing a DataMiner Agent to work without virtual IP addresses
-                  topicUid: Forcing_a_DMA_to_work_without_virtual_IPs
-                - name: Setting the indexing options for the server-side search
-                  topicUid: Setting_the_indexing_options_for_the_server-side_search
-                - name: Setting up HTTPS on a DMA
-                  topicUid: Setting_up_HTTPS_on_a_DMA
-                - name: Changing the IP of a DMA
-                  topicUid: Changing_the_IP_of_a_DMA
-                - name: Switching between DataMiner configurations on a DMA
-                  topicUid: Switching_between_DataMiner_configurations
-            - name: Configuration of DataMiner processes
-              topicUid: Configuration_of_DataMiner_processes
+            - name: Changing the DataMiner ID of a DMA
+              topicUid: Changing_the_DMA_ID
+            - name: Changing the name of a DMA
+              topicUid: Changing_the_name_of_a_DMA
+            - name: Specifying your company data
+              topicUid: Specifying_your_company_data
+            - name: Configuring the IP network ports
+              topicUid: Configuring_the_IP_network_ports
+            - name: Configuring the polling request timeout
+              topicUid: Configuring_the_polling_request_timeout
+            - name: Configuring outgoing email
+              topicUid: Configuring_outgoing_email
+            - name: Setting up HTTPS on a DMA
+              topicUid: Setting_up_HTTPS_on_a_DMA
+            - name: Configuring the landing page of a DMA
+              topicUID: Configuring_the_landing_page
             - name: DMA configuration related to client applications
               topicUid: DMA_configuration_related_to_client_applications
+            - name: Changing the IP of a DMA
+              topicUid: Changing_the_IP_of_a_DMA
+            - name: Forcing a DataMiner Agent to work without virtual IP addresses
+              topicUid: Forcing_a_DMA_to_work_without_virtual_IPs
+            - name: Setting the indexing options for the server-side search
+              topicUid: Setting_the_indexing_options_for_the_server-side_search
+            - name: Switching between DataMiner configurations on a DMA
+              topicUid: Switching_between_DataMiner_configurations
+            - name: Configuring DataMiner processes
+              topicUid: Configuration_of_DataMiner_processes
         - name: Backing up a DataMiner Agent
           topicUid: Backing_up_a_DataMiner_Agent
           items:
@@ -856,6 +864,8 @@
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
             - name: Rolling back a DataMiner upgrade
               topicUid: Rolling_back_a_DataMiner_upgrade
+            - name: Configuring the default upgrade options
+              topicUID: Configuring_the_default_upgrade_options
         - name: Uninstalling a DataMiner Agent
           topicUid: Uninstalling_a_DataMiner_Agent
         - name: DataMiner packages
@@ -944,8 +954,6 @@
               topicUid: Advanced_Failover_options
         - name: Preferred configuration using virtual IP addresses (best practice)
           topicUid: Preferred_configuration_using_virtual_IP_addresses__best_practice
-        - name: Linking an element to a fixed DMA - Force Agent
-          topicUid: Linking_an_element_to_a_fixed_DMA_Force_Agent
         - name: Synchronizing the DMA databases
           topicUid: Synchronizing_the_DMA_databases
         - name: Ending a Failover configuration
@@ -1000,15 +1008,24 @@
               topicUid: How_DataMiner_offloads_data
         - name: Configuring an additional database
           topicUid: Configuring_an_additional_database
-        - name: DataMiner Indexing Engine
-          topicUid: DataMiner_Indexing_Engine
+        - name: Elasticsearch database
+          topicUid: Elasticsearch_database
           items:
-            - name: Installing DataMiner Indexing Engine
-              topicUid: Installing_DataMiner_Indexing_Engine
-            - name: Configuring Indexing backups
-              topicUid: Configuring_Indexing_backups
-            - name: Configuring DataMiner Indexing
+            - name: Installing Elasticsearch on a DMA via DataMiner
+              topicUid: Installing_Elasticsearch_via_DataMiner
+            - name: Configuring Elasticsearch backups
+              topicUid: Configuring_Elasticsearch_backups
+            - name: Configuring indexing settings in System Center
               topicUid: Configuring_DataMiner_Indexing
+            - name: Configuring the Elasticsearch database
+              topicUid: Configuring_Elasticsearch_Database
+              items:
+              - name: Configuring the master nodes
+                topicUID: Configuring_master_Elasticsearch_nodes
+              - name: Adding an Elasticsearch cluster node
+                topicUID: Configuring_Elasticsearch_node_add
+              - name: Removing an Elasticsearch cluster node
+                topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
         - name: Specifying TTL overrides
@@ -2022,8 +2039,6 @@
               topicUid: Working_with_markers
             - name: Working with reference lines
               topicUid: Working_with_reference_lines
-            - name: Working with frequency masks
-              topicUid: Working_with_frequency_masks
             - name: Using Spectrum Analysis presets
               topicUid: Using_Spectrum_Analysis_presets
             - name: Working with trace recordings

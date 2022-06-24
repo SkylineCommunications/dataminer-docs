@@ -16,7 +16,7 @@ Specifies how the MIB file for the protocol will be created.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[includepages](xref:Protocol.SNMP-includepages)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)|Yes|If set to "true", the MIB of the protocol will contain several submaps: one for each page defined in the protocol.|
 

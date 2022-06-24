@@ -374,7 +374,7 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 
 - If only 1 reachable IP is found and the local system is NOT in a Failover setup, the config will be reverted to the “standalone” config. This is the same as the default config when first installing NATS. The algorithm exits after this. Otherwise, it will sort all the nodes by IP (sortedNodes).
 
-- If only 2 nodes are found, a special algorithm will be run designed for 2 nodes only. It will first reset both nodes to the standalone configuration. Then it will select the node with the lowest IP address and configure that one as “master” and the other as “guest”. The master node will be left as the default config, while the guest node will be configured to use NATS and NAS from the master node. This means that the guest node will still be running the NAS and NATS service, but the DataMiner Agent will never connect to it; it will always connect with the NATS of the master node. This is needed because a cluster of exactly 2 NATS nodes is impossible. This can be a vulnerability on systems that run a standalone Failover setup. If the master node goes down for any reason, the guest node will no longer be able to use NATS either.
+- If only 2 nodes are found, a special algorithm will be run designed for 2 nodes only. It will first reset both nodes to the standalone configuration. Then it will select the node with the alphabetically first IP address or hostname and configure that one as “master” and the other as “guest”. The master node will be left as the default config, while the guest node will be configured to use NATS and NAS from the master node. This means that the guest node will still be running the NAS and NATS service, but the DataMiner Agent will never connect to it; it will always connect with the NATS of the master node. This is needed because a cluster of exactly 2 NATS nodes is impossible. This can be a vulnerability on systems that run a standalone Failover setup. If the master node goes down for any reason, the guest node will no longer be able to use NATS either.
 
 - If 3 or more nodes are detected, the algorithm will cluster them all together.
 
@@ -384,7 +384,7 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 
   1. The filestore and raft logging are cleaned up (`..\NATS\nats-streaming-server\fileStore` and `..\NATS\nats-streaming-server\raftLog`). This is done to remove any references and cached data from the previous cluster configuration.
 
-  1. The lowest IP is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
+  1. The alphabetically first IP or hostname is selected to become the primary NAS; all the other nodes are configured as a secondary NAS and will reference the primary NAS.
 
   1. The cluster ID is set using the DMS cluster name, transformed to Base64 string. This transformation is done to prevent special symbols in the cluster ID.
 

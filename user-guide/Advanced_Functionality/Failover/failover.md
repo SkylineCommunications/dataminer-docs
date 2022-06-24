@@ -16,8 +16,6 @@ This section consists of the following topics:
 
 - [Preferred configuration using virtual IP addresses (best practice)](xref:Preferred_configuration_using_virtual_IP_addresses__best_practice)
 
-- [Linking an element to a fixed DMA: Force Agent](xref:Linking_an_element_to_a_fixed_DMA_Force_Agent)
-
 - [Synchronizing the DMA databases](xref:Synchronizing_the_DMA_databases)
 
 - [Ending a Failover configuration](xref:Ending_a_Failover_configuration)

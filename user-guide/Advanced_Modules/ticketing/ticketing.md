@@ -7,9 +7,10 @@ uid: ticketing
 The Ticketing app, also known as DMS Ticketing, is an application introduced in DataMiner 9.0.4. It allows you to easily create and manage tickets in DataMiner. The app is available both embedded within DataMiner Cube and as a standalone web app.
 
 > [!NOTE]
+>
 > - The Ticketing app requires a Cassandra database as well as a separate license. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
 > - The Ticketing app can also be made available via a gateway server. See [Dashboard Gateway installation](xref:Dashboard_Gateway_installation).
-> - From DataMiner 10.0.13 onwards, the Ticketing app requires DataMiner Indexing. See [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine).
+> - From DataMiner 10.0.13 onwards, the Ticketing app requires Elasticsearch. See [Elasticsearch database](xref:Elasticsearch_database).
 
 In this section:
 

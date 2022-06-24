@@ -18,9 +18,10 @@ In a report URL, you can combine the following parameters to directly generate a
 | report-view     | ViewID                                                                      |
 
 > [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise to use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise that you use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
 > [!NOTE]
+>
 > - A “report-element” variable has to be added for every element that has to be included in the report.
 > - From DataMiner 9.5.3 onwards, it is possible to use the element name (using URL encoding) instead of the DMAID/ElementID combination.
 > - The “report-view” and “report-protocol” variables should only be used for report templates which can have an unspecified amount of elements.

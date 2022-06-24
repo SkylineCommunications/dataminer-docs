@@ -64,6 +64,24 @@ namespace Skyline.DataMiner.Automation
 		public bool WaitWhenLocked { get; set; }
 
 		/// <summary>
+		/// Gets or sets a value indicating whether the script will return more detailed error information instead of throwing an exception. This is supported from DataMiner 10.3.0/10.2.7 onwards.
+		/// </summary>
+		/// <value><c>true</c> if the script will return more detailed error info instead of throwing an exception; otherwise, <c>false</c>.</value>
+		public bool ExtendedErrorInfo { get; set; }
+
+		/// <summary>
+		/// Gets a value indicating whether the script had an error and the <see cref="SubScriptOptions.ExtendedErrorInfo"/> was <c>true</c>. This is supported from DataMiner 10.3.0/10.2.7 onwards.
+		/// </summary>
+		/// <value><c>true</c> if the script had an error and the <see cref="SubScriptOptions.ExtendedErrorInfo"/> was <c>true</c>; otherwise, <c>false</c>.</value>
+		public bool HadError { get; }
+
+		/// <summary>
+		/// Gets or sets a value indicating whether the script will generate a 'Script started' information event. This is supported from DataMiner 10.3.0/10.2.8 onwards.
+		/// </summary>
+		/// <value><c>true</c> if the script will not generate a 'Script started' information event; otherwise, <c>false</c>.</value>
+		public bool SkipStartedInfoEvent { get; set; }
+
+		/// <summary>
 		/// Links a dummy from the main script to a dummy from a subscript.
 		/// </summary>
 		/// <param name="name">The name of the dummy element in the subscript.</param>
@@ -354,5 +372,29 @@ namespace Skyline.DataMiner.Automation
 		{
 			return null; // this._engine._scriptOutput;
 		}
+
+		/// <summary>
+		/// Returns the error messages of the script after execution when the <see cref="SubScriptOptions.ExtendedErrorInfo"/> option is set to <c>true</c>. This is supported from DataMiner 10.3.0/10.2.7 onwards.
+		/// </summary>
+		/// <returns>The error messages of the script.</returns>
+		/// <example>
+		/// <code>
+		/// var script = engine.PrepareSubScript("SRM_PFL_Ericsson_Decoder");
+		/// script.ExtendedErrorInfo = true;
+		///
+		/// script.SelectScriptParam("Info", "{}");
+		/// script.SelectScriptParam("ProfileInstance", "{}");
+		/// script.SelectDummy("dummy1", dmaId, elementId);
+		///
+		/// script.StartScript();
+		///
+		/// if (script.HadError)
+		/// {
+		///   string[] errors = script.GetErrorMessages();
+		///   // Handle errors...
+		/// }
+		/// </code>
+		/// </example>
+		public string[] GetErrorMessages() { }
 	}
 }

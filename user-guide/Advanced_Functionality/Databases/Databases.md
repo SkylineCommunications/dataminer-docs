@@ -14,7 +14,7 @@ This section consists of the following topics:
 
 - [Configuring an additional database](xref:Configuring_an_additional_database)
 
-- [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine)
+- [Elasticsearch database](xref:Elasticsearch_database)
 
 - [Specifying TTL overrides](xref:Specifying_TTL_overrides)
 

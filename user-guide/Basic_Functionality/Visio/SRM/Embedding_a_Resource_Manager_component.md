@@ -76,6 +76,7 @@ Use the *ALL* keyword if you want to clear the filter and display all bookings. 
 To turn separate shapes into navigation controls, use the session variable *Navigate* in the **SetVar** shape data field on those shapes.
 
 > [!NOTE]
+>
 > - After a particular action has been performed, the session variable *Navigate* will be cleared. That way, it can be set again to perform another action. You can, for example, keep clicking a “pan+day” button to slide to the right.
 > - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, it is possible to load a specific time slot immediately when a user navigates to the page. To do so, use the **InitVar** shape data on page level instead of the SetVar shape data mentioned above.
 
@@ -260,6 +261,7 @@ The value can be set in serialized form (e.g. “5248098399646517511;52483923539
 Available from DataMiner 9.6.3 onwards.
 
 > [!NOTE]
+>
 > - Prior to DataMiner 9.6.11, the scope of this session variable is always global. From DataMiner 9.6.11 onwards, the card, page and workspace scope are also supported.
 > - If both *Viewport* and *Navigate* are used, the *Navigate* variable will be processed after the *Viewport* variable.
 
@@ -267,92 +269,146 @@ Available from DataMiner 9.6.3 onwards.
 
 To allow users to specify what is displayed on the Y-axis, use the session variable *YaxisResources* in the **SetVar** shape data field.
 
-- You can specify a comma-separated list of pools and/or individual resources. Use names or GUIDs.  From DataMiner 9.6.7 onwards, you can also specify the DMA ID/Element ID for resources that are linked to an element. Use the *ALL* keyword if you want to clear the filter and display all known resources. However, note that this is not advisable on large systems with many resources and bookings, as it may have a negative impact on performance.
+#### Passing pools and/or resources to the YAxisResources session variable
 
-  Example values for the **SetVar** shape data field:
+You can specify a comma-separated list of pools and/or individual resources. Use names or GUIDs.
 
-  - *YaxisResources:Pool=Antennas,IRDs,Encoders*
+From DataMiner 9.6.7 onwards, you can also specify the DMA ID/Element ID for resources that are linked to an element. Use the *ALL* keyword if you want to clear the filter and display all known resources. However, note that this is not advisable on large systems with many resources and bookings, as it may have a negative impact on performance.
 
-    Creates a band for each resource in each of the specified pools. In this case the pools are specified by their names (comma-separated).
+Example values for the **SetVar** shape data field:
 
-  - *YaxisResources:Pool={863D1545-C7B7-4D3F-BFB8-BC8EF3B15859},{B7E038EC-96DE-4EF4-8485-AD2C1C8EACCD}*
+- *YaxisResources:Pool=Antennas,IRDs,Encoders*
+
+  Creates a band for each resource in each of the specified pools. In this case the pools are specified by their names (comma-separated).
+
+- *YaxisResources:Pool={863D1545-C7B7-4D3F-BFB8-BC8EF3B15859},{B7E038EC-96DE-4EF4-8485-AD2C1C8EACCD}*
   
-    Creates a band for each resource in each of the specified pools, similar to the previous example. In this case the pools are specified by their GUIDs (comma-separated).
-  - *YaxisResources:Resource=R1,R2,R3*
+  Creates a band for each resource in each of the specified pools, similar to the previous example. In this case the pools are specified by their GUIDs (comma-separated).
 
-    Creates a band for each specified resource. In this case, the resources are specified by their names, but you can also specify them by GUID or by DMA ID/element ID if they are linked to an element (from DataMiner 9.6.7 onwards). Either way, the resources should be separated by commas.
+- *YaxisResources:Resource=R1,R2,R3*
 
-  - *YaxisResources:ALL*
+  Creates a band for each specified resource. In this case, the resources are specified by their names, but you can also specify them by GUID or by DMA ID/element ID if they are linked to an element (from DataMiner 9.6.7 onwards). Either way, the resources should be separated by commas.
 
-    Creates a band for each resource in the system. This is not recommended when there are many resources. If only *YaxisResources* is specified without any additional configuration, this will have the same effect.
+- *YaxisResources:ALL*
 
-- To specify custom bands on the timeline, from DataMiner 9.5.3 onwards, you can use the following configuration for the *YaxisResources* session variable:
+  Creates a band for each resource in the system. This is not recommended when there are many resources. If only *YaxisResources* is specified without any additional configuration, this will have the same effect.
 
-  | Shape data field | Value                           |
-  |--------------------|---------------------------------|
-  | InitVar            | `[sep::^]YaxisResources^[{*...json...*}, {*...json...*}, ...]` |
+#### Passing elements, services, or views to the YAxisResources session variable
 
-  or
+From DataMiner 10.2.8/10.3.0 onwards, you can pass elements, services, or views to the YAxisResources session variable in order to show the corresponding resource bands.
 
-  | Shape data field | Value                           |
-  |--------------------|---------------------------------|
-  | SetVar             | `[sep::§]YaxisResources§[{*...json...*}, {*...json...*}, ...]` |
+##### Passing elements
 
-  > [!NOTE]
-  > Using `[sep::§]` is strongly recommended in order to avoid parsing problems. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+You can pass elements by name or by ID as a string of comma-separated values.
 
-  The JSON object for the custom bands can be configured with the following properties:
+In case an element is configured as an element reference in a resource, as a main DVE element in a function resource, or as the element corresponding with a virtual function resource, the corresponding resource will be shown.
 
-  - **Name**: String. The name displayed on the Y-axis.
+In the following example, three elements are passed: an element with the name "MyElement", the element to which the Visio drawing is linked, and the element with ID 123/456:
 
-  - **Type**: Specifies the type of band. Currently, only "custom" is supported.
+`YAxisResources:Element=MyElement,[this element],123/456`
 
-  - **Background**: Color. The background color for the band.
+> [!NOTE]
+> The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
 
-  - **Height**: GridLength. The height of the band, either relative (e.g. *3\**), absolute (e.g. *200*) or *auto*. When empty, a default absolute height of 64 pixels is used. Not applicable when *ItemHeight* is filled in.
+##### Passing services
 
-  - **MinimumHeight**: Integer. The absolute minimum height, in case Height is relative or *ItemHeight* is used.
+You can pass services by name or by ID as a string of comma-separated values.
 
-  - **ItemHeight**: Integer. The fixed height of blocks on this band. If this is specified, the Height property is ignored. If there are a specific number of concurrent blocks, the band height will be that number multiplied by the specified *ItemHeight*. If necessary, a vertical scrollbar will appear.
+The resources of the bookings linked to the services will be shown.
 
-  - **Filter**: String. A filter that determines which blocks are displayed in this band. This field supports single filters and combination filters using an "AND" or "OR" operator. Most booking fields are supported, including booking properties, which should be specified using the exposer *ReservationInstance.Properties*. However, it is not possible to filter on the service definition name or on datetime fields. Also, for fields of type integer, only exact matches are supported.
+In the following example, three services are passed: a service with the name "MyService", the service to which the Visio drawing is linked, and the service with ID 123/456:
 
-  Examples:
+`YAxisResources:Service=MyService,[this service],123/456`
 
-  ```txt
-  [
-      {
-          "type": "custom",
-          "name": "Gold",
-          "height": "2*",
-          "background": "#FFFF00",
-          "filter": "ReservationInstance.Properties.Class[String] == 'Gold'"
-      },
-      {
-          "type": "custom",
-          "name": "Silver",
-          "height": "3*",
-          "background": "#EEEEEE",
-          "filter": "ReservationInstance.Properties.Class[String] == 'Silver'"
-      }
-  ]
-  ```
+To also show resources for contributing bookings, in the **ComponentOptions** shape data field of the Resource Manager component, specify *Recursive=True*.
 
-  ```txt
-  [
-      {
-          "Type": "custom",
-          "Name": "All",
-          "Background": "##ADC9CA",
-          "Height": "*",
-          "ItemHeight":"45"
-          "filter": "(ReservationInstance.Properties.Area[String] contains 'AJA') OR (ReservationInstance.Properties.Area[String] contains 'AJE')"
-      },
-  ]
-  ```
+> [!NOTE]
+> The resource band will be updated in real time, based on the linked booking. This means that when you add or remove resources in a booking, you will immediately see the effect on the timeline.
 
-  > [!NOTE]
-  > You can use the “Minify/Compact” function at <https://jsonformatter.org/> to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
+##### Passing views
+
+You can pass views by name or by ID as a string of comma-separated values.
+
+When you pass a view, for any elements in that view that are configured as an element reference in a resource, as a main DVE element in a function resource, or as the element corresponding with a virtual function resource, the corresponding resources will be shown.
+
+In the following example, three views are passed: a view with the name "MyView", the view to which the Visio drawing is linked, and the view with ID 123:
+
+`YAxisResources:View=MyView,[this view],123`
+
+To also show resources for elements in child views, in the **ComponentOptions** shape data field of the Resource Manager component, specify *Recursive=True*.
+
+> [!NOTE]
+> The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
+
+#### Specifying custom bands on the timeline
+
+To specify custom bands on the timeline, from DataMiner 9.5.3 onwards, you can use the following configuration for the *YaxisResources* session variable:
+
+| Shape data field | Value                           |
+|--------------------|---------------------------------|
+| InitVar            | `[sep::^]YaxisResources^[{*...json...*}, {*...json...*}, ...]` |
+
+or
+
+| Shape data field | Value                           |
+|--------------------|---------------------------------|
+| SetVar             | `[sep::§]YaxisResources§[{*...json...*}, {*...json...*}, ...]` |
+
+> [!NOTE]
+> Using `[sep::§]` is strongly recommended in order to avoid parsing problems. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+
+The JSON object for the custom bands can be configured with the following properties:
+
+- **Name**: String. The name displayed on the Y-axis.
+
+- **Type**: Specifies the type of band. Currently, only "custom" is supported.
+
+- **Background**: Color. The background color for the band.
+
+- **Height**: GridLength. The height of the band, either relative (e.g. *3\**), absolute (e.g. *200*) or *auto*. When empty, a default absolute height of 64 pixels is used. Not applicable when *ItemHeight* is filled in.
+
+- **MinimumHeight**: Integer. The absolute minimum height, in case Height is relative or *ItemHeight* is used.
+
+- **ItemHeight**: Integer. The fixed height of blocks on this band. If this is specified, the Height property is ignored. If there are a specific number of concurrent blocks, the band height will be that number multiplied by the specified *ItemHeight*. If necessary, a vertical scrollbar will appear.
+
+- **Filter**: String. A filter that determines which blocks are displayed in this band. This field supports single filters and combination filters using an "AND" or "OR" operator. Most booking fields are supported, including booking properties, which should be specified using the exposer *ReservationInstance.Properties*. However, it is not possible to filter on the service definition name or on datetime fields. Also, for fields of type integer, only exact matches are supported.
+
+Examples:
+
+```txt
+[
+    {
+        "type": "custom",
+        "name": "Gold",
+        "height": "2*",
+        "background": "#FFFF00",
+        "filter": "ReservationInstance.Properties.Class[String] == 'Gold'"
+    },
+    {
+        "type": "custom",
+        "name": "Silver",
+        "height": "3*",
+        "background": "#EEEEEE",
+        "filter": "ReservationInstance.Properties.Class[String] == 'Silver'"
+    }
+]
+```
+
+```txt
+[
+    {
+        "Type": "custom",
+        "Name": "All",
+        "Background": "##ADC9CA",
+        "Height": "*",
+        "ItemHeight":"45"
+        "filter": "(ReservationInstance.Properties.Area[String] contains 'AJA') OR (ReservationInstance.Properties.Area[String] contains 'AJE')"
+    },
+]
+```
+
+> [!NOTE]
+> You can use the “Minify/Compact” function at <https://jsonformatter.org/> to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
 
 ## Making shapes display information about objects selected on the timeline
 
@@ -366,6 +422,9 @@ To have shapes display information about an object selected on the timeline, the
 
 - **SelectedResource**: From DataMiner 10.2.1/10.3.0 onwards, this variable is filled in when you select a resource band.
 
+  > [!NOTE]
+  > From DataMiner 10.2./10.3.0 onwards, users can select multiple bands by keeping the Ctrl key pressed when selecting different bands, or by keeping the Shift key pressed when selecting the first and last of several consecutive bands that need to be selected. In that case, the *SelectedResource* session variable will contain the GUIDs of all selected resources, separated by commas.
+
 - **SelectedSession**
 
 - **SelectedReservationDefinition**: Available from DataMiner 9.5.7 onwards. If the selected block is a booking instance linked to a particular booking definition, this variable will be filled in with the GUID of that definition.
@@ -373,7 +432,7 @@ To have shapes display information about an object selected on the timeline, the
 - **SelectedTimeRange**: Available from DataMiner 10.2.1/10.3.0 onwards. The value of this variable can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by datetime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
 
   > [!NOTE]
-  > Prior to DataMiner 10.3.0/10.2.3, when a resource item is selected, the *SelectedTimeRange* session variable is cleared. From DataMiner 10.3.0/10.2.3 onwards, it is only cleared when the time range selection shown in the timeline area is changed.
+  > Prior to DataMiner 10.3.0/10.2.3, when a resource item is selected, the *SelectedTimeRange* session variable is cleared. From DataMiner 10.2.3 to 10.2.7, it is only cleared when the time range selection shown in the timeline area is changed. From DataMiner 10.3.0/10.2.8 onwards, the session variable is cleared when the selection is cleared.
 
 Alternatively, you can also make shapes display properties of the *SelectedReservation*, *SelectedSession*, *SelectedResource*, *SelectedOccurrence* or *SelectedPool*. For this purpose, the properties must be stored in a variable, which is then displayed by a shape.
 
@@ -410,6 +469,14 @@ If a **ComponentActions** shape data field has been added to the *Reservations* 
 
   - *set*: Perform a parameter set.
 
+  > [!NOTE]
+  > The following legacy type naming is also supported:
+  >
+  > - *ias*, *automation*, or *automationscript*, instead of *script*
+  > - *parameter* or *parameterset*, instead of *set*
+  >
+  > However, we recommend that you do not use this legacy type naming.
+
 - **Execute**: String. The action to be executed. The same syntax is used as for Visio shapes:
 
   - *Script:ScriptName\|Dummies\|Parameters\|Memories\|Tooltip\|Options*
@@ -425,21 +492,26 @@ If a **ComponentActions** shape data field has been added to the *Reservations* 
 
   - *\[StopTime\]*: The timestamp of the end of the selected range.
 
-- **Level**: Can be "global", "band", or "reservation". Determines where the action is available:
+- **Level**: Can be "global" or "reservation". Determines where the action is available:
 
   - *global*: On an empty part of the timeline.
 
-  - *band*: On the name in the Y-axis of a horizontal band.
-
   - *reservation*: On a booking block.
 
-Example of a JSON string with three custom actions:
+  > [!NOTE]
+  > The following legacy level naming is also supported:
+  >
+  > - *general*, instead of *global*
+  > - *block*, instead of *reservation*
+  >
+  > However, we recommend that you do not use this legacy level naming.
+
+Example of a JSON string with custom actions:
 
 ```txt
 [
     { "Name": "Action1", "Level": "global, "Type": "script","Execute":"script:CreateReservation||START=[StartTime];STOP=[StopTime]|||" },
-    { "Name": "Action2", "Level": "band", "Type": "script","Execute": "script:RemoveAll||BAND=[BandName]|||" },
-    { "Name": "Action3", "Level": "block", "Type": "set","Execute": "set|34/5|1004:7|Off|" }
+    { "Name": "Action2", "Level": "reservation", "Type": "set","Execute": "set|34/5|1004:7|Off|" }
 ]
 ```
 
@@ -448,9 +520,9 @@ Example of a JSON string with three custom actions:
 
 ## Configuring command controls for a Resource Manager component
 
-If *ComponentActions* shape data are defined on a Resource Manager component in Visio, the selection behavior of the bookings timeline is different from the default behavior: instead of zooming in on the selected range, the component shows a context menu that allows the user to select one of the available actions.
+From DataMiner 9.5.6 onwards, it is possible to use a Resource Manager component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline.
 
-However, from DataMiner 9.5.6 onwards, it is possible to use this component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline.
+If this configuration is used, the selection behavior of the booking timeline is different from the default behavior: if the user first selects a command shape and then selects a timeline range, the corresponding command is immediately executed. If no command shape is selected first, instead of showing the usual context menu allowing a user to select one of the available actions, the component will zoom in on the selected range.
 
 You can configure this as follows:
 
@@ -463,11 +535,11 @@ You can configure this as follows:
     | ComponentOptions | *UseCommandsForCustomActions* |
     | CommandPrefix    | Optional prefix added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. “*One\_*”). |
 
-2. Add the following shape data fields to the command control shape:
+1. Add the following shape data fields to the command control shape:
 
     | Shape data     | Value      |
     |----------------|------------|
-    | Command        | Name of the command to be executed when the shape is clicked (optionally preceded by the command prefix): *SetCustomActionMode*. |
+    | Command        | Name of the command to be executed (optionally preceded by the command prefix): *SetCustomActionMode*. |
     | CommandParameter | The name of the action, as configured in the *ComponentActions* field. If no action name is specified here, the default zoom action will be selected with this command shape. |
     | Scope          | The scope of the command: *Page* |
 

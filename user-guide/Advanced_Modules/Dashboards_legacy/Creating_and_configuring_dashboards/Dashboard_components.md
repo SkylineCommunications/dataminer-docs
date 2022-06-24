@@ -4,23 +4,9 @@ uid: Dashboard_components
 
 # Dashboard components
 
-The available dashboard components are divided in seven groups, according to what they represent:
+The available dashboard components are divided in seven groups, according to what they represent.
 
-- [Aggregation](#aggregation)
-
-- [Alarms](#alarms)
-
-- [DataMiner Agent](#dataminer-agent)
-
-- [DataMiner element](#dataminer-element)
-
-- [DataMiner parameter](#dataminer-parameter)
-
-- [DataMiner service](#dataminer-service)
-
-- [Other](#other)
-
-## Aggregation
+## Aggregation components
 
 This group consists of the following components:
 
@@ -144,7 +130,7 @@ Other component-specific options:
 
 - *Show min, max, avg in legend*: If you have selected to display a legend, select this option to also display the minimum, maximum and average values in the legend.
 
-- *Show save icon*: Select this option to display a save icon above the graph that allows the user to save the graph as an image file. When using Internet Explorer, when the user clicks the button, a new window will be opened where the image can be saved manually. In Chrome or Firefox, the image will be downloaded immediately.
+- *Show save icon*: Select this option to display a save icon above the graph that allows the user to download the graph as an image file.
 
 - *Step plot*: Select this option to display a step graph.
 
@@ -178,37 +164,37 @@ These filters can be specified in two ways:
 
 - You can specify a column filter directly, for example “value=4010 == myvalue\*”, where 4010 is the column parameter ID of the table.
 
-    For aggregation, the following column value IDs can be used:
+  For aggregation, the following column value IDs can be used:
 
-    - *4010* = property value (when grouping by property)
+  - *4010* = property value (when grouping by property)
 
-    - *4009* = protocol value (when grouping by protocol)
+  - *4009* = protocol value (when grouping by protocol)
 
-    - *4005* = value
+  - *4005* = value
 
-    - *4004* = remote pk
+  - *4004* = remote pk
 
-    - *4003* = view ID
+  - *4003* = view ID
 
-    - *4002* = rule ID
+  - *4002* = rule ID
 
-    - *4001* = PK (= ruleID.viewID\[.protocol\]\[.property\].remote pk - with \[\] being optional depending on the rule configuration.)
+  - *4001* = PK (= ruleID.viewID\[.protocol\]\[.property\].remote pk - with \[\] being optional depending on the rule configuration.)
 
-## Alarms
+## Alarms components
 
 This group consists of the following components:
 
-- [Alarm count element](#alarm-count-element)
+- [Alarm count element](#alarm-count-element-alarms)
 
-- [Alarm count service](#alarm-count-service)
+- [Alarm count service](#alarm-count-service-alarms)
 
-- [Alarm list](#alarm-list)
+- [Alarm list](#alarm-list-alarms)
 
-- [Alarm state element](#alarm-state-element)
+- [Alarm state element](#alarm-state-element-alarms)
 
-- [Alarm state service](#alarm-state-service)
+- [Alarm state service](#alarm-state-service-alarms)
 
-### Alarm count element
+### Alarm count element (alarms)
 
 Pie chart showing the number of alarms for an element during the last 24 hours.
 
@@ -226,11 +212,11 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-### Alarm count service
+### Alarm count service (alarms)
 
 Pie chart showing the number of alarms for a service during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-### Alarm list
+### Alarm list (alarms)
 
 Overview of active alarms or alarms in a recent fixed or sliding window.
 
@@ -276,15 +262,15 @@ Component-specific options:
 
 - *Toggle buttons*: Add or remove different options to have these displayed as buttons above the component, which the user can click to change the mode of the alarm list.
 
-### Alarm state element
+### Alarm state element (alarms)
 
 Pie chart displaying the percentage of time an element has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-### Alarm state service
+### Alarm state service (alarms)
 
 Pie chart displaying the percentage of time a service has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-## DataMiner Agent
+## DataMiner Agent components
 
 ### DataMiner time
 
@@ -304,32 +290,32 @@ Component-specific options:
 
 - *Show page selector*: Select this option to display a selection box above the component that can be used to navigate to different pages of the Visual Overview.
 
-- *Automatically refresh*: Enter the refresh rate for the Visual Overview in this box. By default this is set to 60 seconds. To disable the automatic refresh, set the rate to 0.
+- *Automatically refresh*: Enter the refresh rate for the Visual Overview in this box. By default, this is set to 60 seconds. To disable the automatic refresh, set the rate to 0.
 
-## DataMiner element
+## DataMiner element components
 
 This group consists of the following components:
 
-- [Alarm count element](#alarm-count-element)
+- [Alarm count element](#alarm-count-element-element)
 
-- [Alarm state element](#alarm-state-element)
+- [Alarm state element](#alarm-state-element-element)
 
-- [Alarm state service](#alarm-state-service)
+- [Alarm state service](#alarm-state-service-element)
 
-- [All monitored parameters](#all-monitored-parameters)
+- [All monitored parameters](#all-monitored-parameters-element)
 
-- [Data Display page](#data-display-page)
+- [Data Display page](#data-display-page-element)
 
-- [Element state LED](#element-state-led)
+- [Element state LED](#element-state-led-element)
 
-- [Reporter severity legend](#reporter-severity-legend)
+- [Reporter severity legend](#reporter-severity-legend-element)
 
-- [Visual overview element](#visual-overview-element)
+- [Visual overview element](#visual-overview-element-element)
 
 > [!NOTE]
 > From DataMiner 9.5.1 onwards, not only elements can be used in the feeds for these components, but also enhanced services, i.e. services that use a service protocol.
 
-### Alarm count element
+### Alarm count element (element)
 
 Pie chart showing the number of alarms for an element during the last 24 hours.
 
@@ -347,15 +333,15 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-### Alarm state element
+### Alarm state element (element)
 
 Pie chart displaying the percentage of time an element has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-### Alarm state service
+### Alarm state service (element)
 
 Pie chart displaying the percentage of time a service has been in each alarm state during the last 24 hours. This component has the same component-specific options as the *Alarm count element* component described above.
 
-### All monitored parameters
+### All monitored parameters (element)
 
 Displays an alarm status indicator for each of the monitored parameters of an element.
 
@@ -363,7 +349,7 @@ Component-specific options:
 
 - *More performance / less graphical*: select this option to use objects that require less resources in order to optimize performance.
 
-### Data Display page
+### Data Display page (element)
 
 Includes a Data Display page for a particular element in a dashboard. Different layout options are available, and parameter controls can be enabled or disabled.
 
@@ -373,7 +359,7 @@ Component-specific options:
 
 - *Display 'Set parameter' controls*: Select this option to enable users to set the value of write parameters.
 
-### Element state LED
+### Element state LED (element)
 
 Displays a LED with the color of the element’s alarm severity.
 
@@ -385,11 +371,11 @@ Component-specific options:
 
 - *Limit to parent service*: If the dashboard is service-specific, select this option to limit the displayed element state to the part of the element integrated in the service, instead of showing the overall element state.
 
-### Reporter severity legend
+### Reporter severity legend (element)
 
 A legend for reporter graphs.
 
-### Visual overview element
+### Visual overview element (element)
 
 Displays the Visual Overview for a particular element, which depends on an element feed.
 
@@ -404,41 +390,41 @@ Component-specific options:
 > [!NOTE]
 > The Visual Overview settings of the Administrator account are applied. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
-## DataMiner parameter
+## DataMiner parameter components
 
 This group consists of the following components:
 
-- [All monitored parameters](#all-monitored-parameters)
+- [All monitored parameters](#all-monitored-parameters-parameter)
 
-- [Data Display page](#data-display-page)
+- [Data Display page](#data-display-page-parameter)
 
-- [Generic real-time parameter](#generic-real-time-parameter)
+- [Generic real-time parameter](#generic-real-time-parameter-parameter)
 
-- [Generic real-time parameter](#generic-real-time-parameter)
+- [Generic real-time parameter](#generic-real-time-parameter-parameter)
 
-- [Histogram](#histogram)
+- [Histogram](#histogram-parameter)
 
-- [Parameter state LED](#parameter-state-led)
+- [Parameter state LED](#parameter-state-led-parameter)
 
-- [Set parameter](#set-parameter)
+- [Set parameter](#set-parameter-parameter)
 
-- [Spectrum thumbnail](#spectrum-thumbnail)
+- [Spectrum thumbnail](#spectrum-thumbnail-parameter)
 
-- [Table column bar graph](#table-column-bar-graph)
+- [Table column bar graph](#table-column-bar-graph-parameter)
 
-- [Trend histogram parameter](#trend-histogram-parameter)
+- [Trend histogram parameter](#trend-histogram-parameter-parameter)
 
-- [Trend parameter](#trend-parameter)
+- [Trend parameter](#trend-parameter-parameter)
 
-- [Trend parameter with history](#trend-parameter-with-history)
+- [Trend parameter with history](#trend-parameter-with-history-parameter)
 
-- [Trend parameter with reference value](#trend-parameter-with-reference-value)
+- [Trend parameter with reference value](#trend-parameter-with-reference-value-parameter)
 
-- [Trend sparkline](#trend-sparkline)
+- [Trend sparkline](#trend-sparkline-parameter)
 
-- [Trend statistics](#trend-statistics)
+- [Trend statistics](#trend-statistics-parameter)
 
-### All monitored parameters
+### All monitored parameters (parameter)
 
 Displays an alarm status indicator for each of the monitored parameters of a given element.
 
@@ -446,7 +432,7 @@ Component-specific options:
 
 - *More performance / less graphical*: select this option to use objects that require less resources in order to optimize performance.
 
-### Data Display page
+### Data Display page (parameter)
 
 Includes a Data Display page for a particular element in a dashboard. Different layout options are available, and parameter controls can be enabled or disabled.
 
@@ -456,7 +442,7 @@ Component-specific options:
 
 - *Display 'Set parameter' controls*: Select this option to allow users to view and set parameter values.
 
-### Generic real-time parameter
+### Generic real-time parameter (parameter)
 
 Displays a parameter, optionally with the parameter name, the parameter value, or the parameter set control.
 
@@ -482,7 +468,7 @@ Component-specific options:
 
 - *Custom slider width*: Adjust this value to change the width of the slider.
 
-### Histogram
+### Histogram (parameter)
 
 A histogram visualizing parameter values. You can set a custom range and interval amount, as well as several options for the appearance of the histogram.
 
@@ -510,7 +496,7 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the histogram.
 
-### Parameter state LED
+### Parameter state LED (parameter)
 
 Displays a LED with the color of the parameter’s alarm severity.
 
@@ -528,7 +514,7 @@ Component-specific options:
 
 - *GUI style*: In the drop-down list, choose a style for the component, depending on whether you need to optimize performance or not.
 
-### Set parameter
+### Set parameter (parameter)
 
 Allows dashboard users to change the value of a parameter.
 
@@ -540,7 +526,7 @@ Component-specific options:
 
 - *Display element name*: Enable this option to display the element name.
 
-### Spectrum thumbnail
+### Spectrum thumbnail (parameter)
 
 Displays the most recent measurement for a spectrum monitor buffer.
 
@@ -548,7 +534,7 @@ Component-specific options:
 
 - *Buffer to display*: If available, you can select a buffer in the drop-down list for it to be displayed in the thumbnail.
 
-### Table column bar graph
+### Table column bar graph (parameter)
 
 Displays the data of selected table column parameters in either a vertical or horizontal bar graph. The table column parameters must be part of one single table in one single element.
 
@@ -587,7 +573,7 @@ Component-specific options:
 
 - *Orientation*: Select whether the bars should be displayed horizontally or vertically.
 
-### Trend histogram parameter
+### Trend histogram parameter (parameter)
 
 A histogram representing trend data for one or more parameters.
 
@@ -632,7 +618,7 @@ Other component-specific options:
 
 - *Show min, max, avg in legend*: If you have selected to display a legend, select this option to also display the minimum, maximum and average values in the legend.
 
-- *Show save icon*: Select this option to display a save icon above the histogram that allows the user to save the histogram as an image file. When using Internet Explorer, when the user clicks the button, a new window will be opened where the image can be saved manually. In Chrome or Firefox, the image will be downloaded immediately.
+- *Show save icon*: Select this option to display a save icon above the histogram that allows the user to download the histogram as an image file.
 
 - *Fill graphs*: Select this option to fill the area underneath the graph.
 
@@ -648,7 +634,7 @@ Other component-specific options:
 
 - *Background color*, *Axis line color*, and *Axis label color*: Click the ellipsis buttons to choose different colors for the components of the histogram.
 
-### Trend parameter
+### Trend parameter (parameter)
 
 A custom trend graph for one or more parameters.
 
@@ -687,7 +673,7 @@ Other component-specific options:
 
 - *Show min, max, avg in legend*: If you have selected to display a legend, select this option to also display the minimum, maximum and average values in the legend.
 
-- *Show save icon*: Select this option to display a save icon above the graph that allows the user to save the graph as an image file. When using Internet Explorer, when the user clicks the button, a new window will be opened where the image can be saved manually. In Chrome or Firefox, the image will be downloaded immediately.
+- *Show save icon*: Select this option to display a save icon above the graph that allows the user to download the graph as an image file.
 
 - *Error bars*: Select this option to display error bars for each point between the minimum and maximum value. (Only available if the default plotter is used.)
 
@@ -712,13 +698,13 @@ Other component-specific options:
 > [!NOTE]
 > If there are exception values in a trend graph, these are displayed below the trend graph, while in the graph itself gaps will be displayed.
 
-### Trend parameter with history
+### Trend parameter with history (parameter)
 
 A custom trend graph for one parameter, with additional history information.
 
 This component has the same options as the *Trend parameter* component above, with a few additional options as to the colors used in the graph. Different line colors are available, as well as fill colors when the value is higher or lower than the reference and fill colors for exceptions.
 
-### Trend parameter with reference value
+### Trend parameter with reference value (parameter)
 
 A custom trend graph for two parameters, where one of the two is used as a reference.
 
@@ -728,7 +714,7 @@ This component has the same options as the *Trend parameter with history* compon
 
 - *Step plot*: Select this option to display a step graph.
 
-### Trend sparkline
+### Trend sparkline (parameter)
 
 A simplified trend graph, which shows trend data for a parameter in a particular time range as a simple image.
 
@@ -742,37 +728,37 @@ Component-specific options:
 
 - *Graph color*: Click the ellipsis button to choose a different color for the graph.
 
-### Trend statistics
+### Trend statistics (parameter)
 
 Displays the min/max/avg value for a trended parameter over the specified time.
 
-## DataMiner service
+## DataMiner service components
 
 This group consists of the following components:
 
-- [Alarm count service](#alarm-count-service)
+- [Alarm count service](#alarm-count-service-service)
 
-- [All monitored service parameters](#all-monitored-service-parameters)
+- [All monitored service parameters](#all-monitored-service-parameters-service)
 
-- [Generic real-time service parameter](#generic-real-time-service-parameter)
+- [Generic real-time service parameter](#generic-real-time-service-parameter-service)
 
-- [Reporter severity legend](#reporter-severity-legend)
+- [Reporter severity legend](#reporter-severity-legend-service)
 
-- [Service parameter state LED](#service-parameter-state-led)
+- [Service parameter state LED](#service-parameter-state-led-service)
 
-- [Service parameter trend sparkline](#service-parameter-trend-sparkline)
+- [Service parameter trend sparkline](#service-parameter-trend-sparkline-service)
 
-- [Service parameter trend statistics](#service-parameter-trend-statistics)
+- [Service parameter trend statistics](#service-parameter-trend-statistics-service)
 
-- [Service state LED](#service-state-led)
+- [Service state LED](#service-state-led-service)
 
-- [Service trend parameter](#service-trend-parameter)
+- [Service trend parameter](#service-trend-parameter-service)
 
-- [Set service parameter](#set-service-parameter)
+- [Set service parameter](#set-service-parameter-service)
 
-- [Visual overview service](#visual-overview-service)
+- [Visual overview service](#visual-overview-service-service)
 
-### Alarm count service
+### Alarm count service (service)
 
 Pie graph showing the number of alarms for a service during the last 24 hours.
 
@@ -790,7 +776,7 @@ Component-specific options:
 
 - *Background color*: Click the ellipsis button to choose a different background color for the graph.
 
-### All monitored service parameters
+### All monitored service parameters (service)
 
 Displays an alarm status indicator for each of the monitored parameters of a service.
 
@@ -798,7 +784,7 @@ Component-specific options:
 
 - *More performance / less graphical*: select this option to use objects that require less resources in order to optimize performance.
 
-### Generic real-time service parameter
+### Generic real-time service parameter (service)
 
 Displays a parameter, optionally with the parameter name, the parameter value, or the parameter set control.
 
@@ -818,11 +804,11 @@ Component-specific options:
 
 - *Display 'Set parameter' control*: Select this option to allow users to view and set parameter values.
 
-### Reporter severity legend
+### Reporter severity legend (service)
 
 A legend for reporter graphs.
 
-### Service parameter state LED
+### Service parameter state LED (service)
 
 Displays a LED with the color of the alarm severity of a service parameter.
 
@@ -842,7 +828,7 @@ Component-specific options:
 
 - *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
 
-### Service parameter trend sparkline
+### Service parameter trend sparkline (service)
 
 A simplified trend graph, which shows trend data for a service parameter in a particular time range as a simple image.
 
@@ -854,13 +840,13 @@ Component-specific options:
 
 - *Trending type*: Select the trend range in the drop-down list.
 
-- *Graph height*: Enter the height of the graph in pixels. By default this is set to 40.
+- *Graph height*: Enter the height of the graph in pixels. By default, this is set to 40.
 
 - *Fill graph*: Select this option to fill the area below the graph.
 
 - *Graph color*: Click the ellipsis button to choose a different color for the graph.
 
-### Service parameter trend statistics
+### Service parameter trend statistics (service)
 
 Displays the min/max/avg value for a trended parameter over the specified time.
 
@@ -870,7 +856,7 @@ Component-specific options:
 
 - *Parameter index*: In case of a table parameter, enter the display key of the row in this box.
 
-### Service state LED
+### Service state LED (service)
 
 Displays a LED with the color of the service’s alarm severity.
 
@@ -882,7 +868,7 @@ Component-specific options:
 
 - *GUI style*: Select *More performance* to use objects that require less resources, or *More graphical* if performance is not an issue.
 
-### Service trend parameter
+### Service trend parameter (service)
 
 A trend graph for a service parameter.
 
@@ -900,7 +886,7 @@ Component-specific options:
 
 - *Graph aspect ratio*: Enter a different value in the box to change the width-to-height ratio of the graph.
 
-### Set service parameter
+### Set service parameter (service)
 
 Allows dashboard users to change the value of a service parameter.
 
@@ -916,7 +902,7 @@ Component-specific options:
 
 - *Display element name*: Select this option to display the element name in the component.
 
-### Visual overview service
+### Visual overview service (service)
 
 Displays the Visual Overview for a particular service, optionally with interactive functionality and page selector.
 
@@ -931,7 +917,7 @@ Component-specific options:
 > [!NOTE]
 > The Visual Overview settings of the Administrator account are applied. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
-## Other
+## Other components
 
 This group consists of the following components:
 
@@ -1028,7 +1014,8 @@ Displays a website in an inline frame.
 Optionally, a feed can be used with this component. This can for instance be of use to dynamically include the value of a parameter in the URL. To do so, select a parameter feed, and include *%parametervalue%* in the URL. This will then be replaced with the value of that parameter.
 
 > [!NOTE]
-> - If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Inline frame* component with that component. In that case, when a user clicks a row of that table, the *Inline frame* component will update the URL with the parameter value of the clicked row. For more information, see [Generic real-time parameter](#generic-real-time-parameter).
+>
+> - If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Inline frame* component with that component. In that case, when a user clicks a row of that table, the *Inline frame* component will update the URL with the parameter value of the clicked row. For more information, see [Generic real-time parameter](#generic-real-time-parameter-parameter).
 > - From DataMiner 9.5.5 onwards, webpages displayed in an *Inline frame* component automatically have an authentication ticket attached as a URL parameter, so that it is not necessary to log in again on web apps that run on the same DMA as the Dashboards app, including the DataMiner Monitoring & Control app, DataMiner Ticketing and DataMiner Maps.
 
 Component-specific options:
@@ -1036,7 +1023,7 @@ Component-specific options:
 - *URL*: In the box, fill in the URL of the website that should be displayed in the frame.
 
     > [!NOTE]
-    > From DataMiner 9.5.5 onwards, the URL can contain the placeholder *%elementname%*. <br>When the component is rendered, this placeholder will be resolved with the URL-encoded element name specified in the parameter feed, if any.
+    > From DataMiner 9.5.5 onwards, the URL can contain the placeholder *%elementname%*. When the component is rendered, this placeholder will be resolved with the URL-encoded element name specified in the parameter feed, if any.
 
 - *Custom height*: In the box, fill in the height of the component in pixels
 
@@ -1049,7 +1036,7 @@ Displays a video stream, based on an image URL. The configuration of the thumbna
 Optionally, a feed can be used with this component. This can for instance be of use to dynamically include the value of a parameter in the image URL. To do so, select a parameter feed, and include *%parametervalue%* in the URL. This will then be replaced with the value of that parameter.
 
 > [!NOTE]
-> If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Video* component with that component. In that case, when a user clicks a row of that table, the video component will update the URL with the parameter value of the clicked row, which makes it possible to show thumbnails of another video source. For more information, see [Generic real-time parameter](#generic-real-time-parameter).
+> If a table column parameter is included, and the dashboard also contains a *Generic real-time parameter* component that is configured with a table parameter, then it is possible to link the parameter index of the *Video* component with that component. In that case, when a user clicks a row of that table, the video component will update the URL with the parameter value of the clicked row, which makes it possible to show thumbnails of another video source. For more information, see [Generic real-time parameter](#generic-real-time-parameter-parameter).
 
 Component-specific options:
 

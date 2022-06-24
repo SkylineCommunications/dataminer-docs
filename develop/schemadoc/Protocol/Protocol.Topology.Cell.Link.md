@@ -12,7 +12,7 @@ Specifies how a cell in an EPM (formerly known as CPE) topology is linked to ano
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[dest](xref:Protocol.Topology.Cell.Link-dest)|unsignedInt|Yes|(EPM) In this attribute, specify the ID of the parameter column if you want to make a topology with foreign key relations inside a table.|
 |[source](xref:Protocol.Topology.Cell.Link-source)|unsignedInt|Yes|*TBD*|

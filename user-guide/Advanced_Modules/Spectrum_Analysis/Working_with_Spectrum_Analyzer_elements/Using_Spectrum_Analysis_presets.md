@@ -38,8 +38,6 @@ Spectrum Analysis presets can be used to reload settings, to reload a set of mar
 
 - Threshold information
 
-- Frequency mask information (in Element Display only)
-
 - Measurement cycles
 
 - The ID of the measurement point for which the trace is measured (from DataMiner 10.0.5 onwards)
