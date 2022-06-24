@@ -76,6 +76,7 @@ Use the *ALL* keyword if you want to clear the filter and display all bookings. 
 To turn separate shapes into navigation controls, use the session variable *Navigate* in the **SetVar** shape data field on those shapes.
 
 > [!NOTE]
+>
 > - After a particular action has been performed, the session variable *Navigate* will be cleared. That way, it can be set again to perform another action. You can, for example, keep clicking a “pan+day” button to slide to the right.
 > - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, it is possible to load a specific time slot immediately when a user navigates to the page. To do so, use the **InitVar** shape data on page level instead of the SetVar shape data mentioned above.
 
@@ -516,7 +517,7 @@ Example of a JSON string with custom actions:
 
 ## Configuring command controls for a Resource Manager component
 
-From DataMiner 9.5.6 onwards, it is possible to use a Resource Manager component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline. 
+From DataMiner 9.5.6 onwards, it is possible to use a Resource Manager component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline.
 
 If this configuration is used, the selection behavior of the booking timeline is different from the default behavior: if the user first selects a command shape and then selects a timeline range, the corresponding command is immediately executed. If no command shape is selected first, instead of showing the usual context menu allowing a user to select one of the available actions, the component will zoom in on the selected range.
 
