@@ -7,6 +7,7 @@ uid: XML_editor
 If you open a protocol XML file or an Automation script XML file in Microsoft Visual Studio, or if you create a new file from scratch, that file will appear in a customized file tab.
 
 > [!NOTE]
+>
 > - To create a new protocol XML file, go to File \> New \> File \> General \> DataMiner, select DataMiner Protocol Template, and click Open.
 > - To create a new Automation script XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Automation Script Template, and click Open.
 > - To create a new function XML file, select File \> New \> File \> General \> DataMiner, select DataMiner Function Template, click Open, specify the function file version, select the associated protocol XML file, and click OK.
@@ -46,6 +47,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 | Postpone \> All errors of this type... ||
 
 > [!NOTE]
+>
 > - In the DIS Validator pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key. Use this feature to e.g. copy, suppress or postpone a number of results in one go. However, note that suppressing or postponing a number of results will only work when all selected items have the same error code.
 > - Use the filter box in the top-right corner to filter the validation results.
 
@@ -66,6 +68,7 @@ If you want to compare two protocols, do the following:
         - Select *Previous release*, and select one of the previous versions of a protocol currently opened in the XML editor.
 
         > [!NOTE]
+        >
         > - If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
         > - For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to `https://api.skyline.be/*`.
 
@@ -90,6 +93,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 | Suppress... | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
 
 > [!NOTE]
+>
 > - In the DIS Comparer pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key. Use this feature to e.g. copy or suppress a number of results in one go. However, note that suppressing a number of results will only work when all selected items have the same error code.
 > - Use the filter box in the top-right corner to filter the comparison results.
 
@@ -110,8 +114,7 @@ If you opened a protocol XML file, and you click *Display Editor*, the file tab 
 This editor allows you to design the Data Display pages of a protocol using simple drag-and-drop operations.
 
 > [!TIP]
-> See also:
-> [Display editor](xref:Display_editor)
+> See also: [Display editor](xref:Display_editor)
 
 ### Table editor
 
@@ -120,8 +123,7 @@ If you opened a protocol XML file, and you click *Table Editor*, the file tab wi
 This editor allows you to design the parameter tables of a protocol using simple drag-and-drop operations.
 
 > [!TIP]
-> See also:
-> [Table editor](xref:Table_editor)
+> See also: [Table editor](xref:Table_editor)
 
 ### Publish
 
@@ -130,15 +132,15 @@ If you click *Publish*, the protocol XML file or the Automation script XML file 
 To publish a protocol or an Automation script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
 > [!TIP]
-> See also:
-> [DMA](xref:DIS_settings#dma)
+> See also: [DMA](xref:DIS_settings#dma)
 
 > [!NOTE]
+>
 > - You cannot click the *Publish* button when Visual Studio is running in debug mode.
 > - DIS will refuse to publish a protocol
->     - when the *Protocol.Type* tag contain an incorrect value,
->     - when the *Protocol.Version* tag is empty, or
->     - when the *Protocol.Name* tag is empty.
+>   - when the *Protocol.Type* tag contain an incorrect value,
+>   - when the *Protocol.Version* tag is empty, or
+>   - when the *Protocol.Name* tag is empty.
 
 ### Update
 
@@ -150,8 +152,7 @@ If you click the *Update* button, the *Update* dialog box will ask whether you w
 > You can also download the latest version of the *DataMinerIntegrationStudio.vsix* file from [DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/), and then update DataMiner Integration Studio by simply double-clicking the *DataMinerIntegrationStudio.vsix* file.
 
 > [!TIP]
-> See also:
-> [Updates](xref:DIS_settings#updates)
+> See also: [Updates](xref:DIS_settings#updates)
 
 ### Search
 
@@ -181,16 +182,14 @@ When you enter words in the search box, those words will immediately be highligh
 If you want to override the default case sensitivity setting in a particular file tab, you can switch between “Case sensitive” and “Ignore case” by clicking the *aA* button to the right of the search box.
 
 > [!TIP]
-> See also:
-> [Interface](xref:DIS_settings#interface)
+> See also: [Interface](xref:DIS_settings#interface)
 
 #### Wildcard interpretation
 
 If you want to override the default wildcard interpretation setting in a particular file tab, you can switch between “Treat as literal string” and “Interpret as wildcards” by clicking the *\*?* button to the right of the search box.
 
 > [!TIP]
-> See also:
-> [Interface](xref:DIS_settings#interface)
+> See also: [Interface](xref:DIS_settings#interface)
 
 ## Inside the file tab
 
@@ -240,6 +239,7 @@ If you want to automatically generate *\<Param>* tags (as well as all the necess
 1. Define the parameter polling, and click *Finish*.
 
 > [!NOTE]
+>
 > - When an XML/JSON node does not contain a value, a parameter of type “string” will be created, and a warning icon will appear next to the node in the XML/JSON source file.
 > - Obsolete or deprecated MIB nodes will not be imported when you generate parameters based on MIB data.
 
@@ -264,6 +264,7 @@ If you want to automatically generate parameters of type “write” for a numbe
         If you want to enable this attribute for all SNMP parameters in the list, select the “select all” checkbox in the column header. <br>Note that when the protocol does not contain any SNMP parameters, this “select all” checkbox will be disabled, as will all “SNMP Set and Get” checkboxes for the non-SNMP parameters in the list.
 
 > [!NOTE]
+>
 > - As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
 > - Only rows of which the checkbox is selected are taken into account when performing the above-mentioned validation.
 
@@ -283,7 +284,7 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 
 #### Using “$” characters inside a formula
 
-When you insert a variable or a formula into the text to be copied, that variable or formula is delimited by “$” characters. If you want to use a “$” character inside a formula, you have to put an escape character in front of it. Example: $(x\*10)+"\\$"$.
+When you insert a variable or a formula into the text to be copied, that variable or formula is delimited by “$” characters. If you want to use a “$” character inside a formula, you have to put an escape character in front of it. Example: `$(x*10)+"\$"$`.
 
 #### Defining the range of value “x”
 
@@ -396,6 +397,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Copy Script to Clipboard | Copy the entire contents of the “Exe” C# code block (i.e. the Automation script) to the Windows Clipboard. |
 
 > [!NOTE]
+>
 > - If, in an “Include in ...” list or an “Add Existing ...” list, you select an item that is already included, then that item will be removed.
 > - “Include in ...” and “Add Existing ...” lists do not close when you have selected an item. They will stay open to allow you to select multiple items.
 
@@ -423,6 +425,7 @@ To insert a snippet while working in the XML editor:
 
 > [!NOTE]
 > If you want to insert a particular snippet without having to go through the above-mentioned snippet folder and all its subfolders, use the following shortcut:
+>
 > - At the location where you want to insert the snippet, enter “\<“, type the name of the XML tag (or select it from the Intellisense list), and press TAB.
 
 ### Context-sensitive help in tooltips
@@ -450,8 +453,7 @@ In front of every table parameter, you will find an *Edit Table* button.
 If you click such a button, the table parameter will be opened in the Table Editor. This will allow you to edit the table in a graphical environment.
 
 > [!TIP]
-> See also:
-> [Table editor](xref:Table_editor)
+> See also: [Table editor](xref:Table_editor)
 
 ### Edit C# button
 
@@ -460,8 +462,7 @@ In front of every QAction or Exe code block containing C# code, you will find an
 If you click such a button, a temporary C# project will be created, containing the code of that QAction or Exe code block. Also, the code of the QAction of Exe code block will appear in a new file tab.
 
 > [!TIP]
-> See also:
-> [C editor](xref:C_editor)
+> See also: [C editor](xref:C_editor)
 
 ### Virtual comments
 

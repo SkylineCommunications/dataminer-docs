@@ -7,7 +7,7 @@ uid: TOOSLNetClientTest
 The SLNetClientTest tool is an advanced system administrator tool.
 
 > [!NOTE]
-> -  More information about the SLNetClientTest tool is also available in the DataMiner Help: <https://help.dataminer.services/dataminer/>.
+> For more information about the SLNetClientTest tool, see [SLNetClientTest tool](xref:SLNetClientTest_tool).
 
 > [!CAUTION]
 > Use this tool with caution, as it can have a big impact on the functionality of the DataMiner System. It is advised to only perform read operations, and to only use this tool on your own DataMiner Agent. Always ask a driver coach for support in case you need to use this tool and something is not clear.
