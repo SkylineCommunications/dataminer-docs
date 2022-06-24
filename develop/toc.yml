@@ -4923,6 +4923,13 @@
           topicUid: Actions_that_can_be_performed_during_an_upgrade_operation
     - name: Application packages
       topicUid: TOOApplicationPackages
+      items:
+      - name: Creating an application package
+        topicUID: Creating_an_app_package
+      - name: Installing an application package
+        topicUID: Installing_an_app_package
+      - name: Creating application package scripts
+        topicUID: Creating_app_package_scripts
     - name: DataMiner Development Packages
       topicUid: TOODataMinerDevPackages
 - name: DataMiner Device-Specific Integrations
