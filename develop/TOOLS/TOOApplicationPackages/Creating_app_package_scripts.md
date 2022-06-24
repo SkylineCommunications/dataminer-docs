@@ -130,7 +130,6 @@ public void Configure(Engine engine, AppConfigurationContext context)
 > [!NOTE]
 > An example is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
-
 ## Uninstall.xml
 
 As a first step, a method indicated as *Uninstall Automation entry point* needs to be created. The default Run method can never be executed during the uninstallation of an app package.
@@ -155,5 +154,6 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 ```
 
 > [!NOTE]
+>
 > - The namespace `Skyline.DataMiner.Net.AppPackages` needs to be included to provide access to `AppUninstallContext`.
 > - An example is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
