@@ -260,6 +260,7 @@ The value can be set in serialized form (e.g. “5248098399646517511;52483923539
 Available from DataMiner 9.6.3 onwards.
 
 > [!NOTE]
+>
 > - Prior to DataMiner 9.6.11, the scope of this session variable is always global. From DataMiner 9.6.11 onwards, the card, page and workspace scope are also supported.
 > - If both *Viewport* and *Navigate* are used, the *Navigate* variable will be processed after the *Viewport* variable.
 
@@ -267,92 +268,146 @@ Available from DataMiner 9.6.3 onwards.
 
 To allow users to specify what is displayed on the Y-axis, use the session variable *YaxisResources* in the **SetVar** shape data field.
 
-- You can specify a comma-separated list of pools and/or individual resources. Use names or GUIDs.  From DataMiner 9.6.7 onwards, you can also specify the DMA ID/Element ID for resources that are linked to an element. Use the *ALL* keyword if you want to clear the filter and display all known resources. However, note that this is not advisable on large systems with many resources and bookings, as it may have a negative impact on performance.
+#### Passing pools and/or resources to the YAxisResources session variable
 
-  Example values for the **SetVar** shape data field:
+You can specify a comma-separated list of pools and/or individual resources. Use names or GUIDs.
 
-  - *YaxisResources:Pool=Antennas,IRDs,Encoders*
+From DataMiner 9.6.7 onwards, you can also specify the DMA ID/Element ID for resources that are linked to an element. Use the *ALL* keyword if you want to clear the filter and display all known resources. However, note that this is not advisable on large systems with many resources and bookings, as it may have a negative impact on performance.
 
-    Creates a band for each resource in each of the specified pools. In this case the pools are specified by their names (comma-separated).
+Example values for the **SetVar** shape data field:
 
-  - *YaxisResources:Pool={863D1545-C7B7-4D3F-BFB8-BC8EF3B15859},{B7E038EC-96DE-4EF4-8485-AD2C1C8EACCD}*
+- *YaxisResources:Pool=Antennas,IRDs,Encoders*
+
+  Creates a band for each resource in each of the specified pools. In this case the pools are specified by their names (comma-separated).
+
+- *YaxisResources:Pool={863D1545-C7B7-4D3F-BFB8-BC8EF3B15859},{B7E038EC-96DE-4EF4-8485-AD2C1C8EACCD}*
   
-    Creates a band for each resource in each of the specified pools, similar to the previous example. In this case the pools are specified by their GUIDs (comma-separated).
-  - *YaxisResources:Resource=R1,R2,R3*
+  Creates a band for each resource in each of the specified pools, similar to the previous example. In this case the pools are specified by their GUIDs (comma-separated).
 
-    Creates a band for each specified resource. In this case, the resources are specified by their names, but you can also specify them by GUID or by DMA ID/element ID if they are linked to an element (from DataMiner 9.6.7 onwards). Either way, the resources should be separated by commas.
+- *YaxisResources:Resource=R1,R2,R3*
 
-  - *YaxisResources:ALL*
+  Creates a band for each specified resource. In this case, the resources are specified by their names, but you can also specify them by GUID or by DMA ID/element ID if they are linked to an element (from DataMiner 9.6.7 onwards). Either way, the resources should be separated by commas.
 
-    Creates a band for each resource in the system. This is not recommended when there are many resources. If only *YaxisResources* is specified without any additional configuration, this will have the same effect.
+- *YaxisResources:ALL*
 
-- To specify custom bands on the timeline, from DataMiner 9.5.3 onwards, you can use the following configuration for the *YaxisResources* session variable:
+  Creates a band for each resource in the system. This is not recommended when there are many resources. If only *YaxisResources* is specified without any additional configuration, this will have the same effect.
 
-  | Shape data field | Value                           |
-  |--------------------|---------------------------------|
-  | InitVar            | `[sep::^]YaxisResources^[{*...json...*}, {*...json...*}, ...]` |
+#### Passing elements, services, or views to the YAxisResources session variable
 
-  or
+From DataMiner 10.2.8/10.3.0 onwards, you can pass elements, services, or views to the YAxisResources session variable in order to show the corresponding resource bands.
 
-  | Shape data field | Value                           |
-  |--------------------|---------------------------------|
-  | SetVar             | `[sep::§]YaxisResources§[{*...json...*}, {*...json...*}, ...]` |
+##### Passing elements
 
-  > [!NOTE]
-  > Using `[sep::§]` is strongly recommended in order to avoid parsing problems. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+You can pass elements by name or by ID as a string of comma-separated values.
 
-  The JSON object for the custom bands can be configured with the following properties:
+In case an element is configured as an element reference in a resource, as a main DVE element in a function resource, or as the element corresponding with a virtual function resource, the corresponding resource will be shown.
 
-  - **Name**: String. The name displayed on the Y-axis.
+In the following example, three elements are passed: an element with the name "MyElement", the element to which the Visio drawing is linked, and the element with ID 123/456:
 
-  - **Type**: Specifies the type of band. Currently, only "custom" is supported.
+`YAxisResources:Element=MyElement,[this element],123/456`
 
-  - **Background**: Color. The background color for the band.
+> [!NOTE]
+> The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
 
-  - **Height**: GridLength. The height of the band, either relative (e.g. *3\**), absolute (e.g. *200*) or *auto*. When empty, a default absolute height of 64 pixels is used. Not applicable when *ItemHeight* is filled in.
+##### Passing services
 
-  - **MinimumHeight**: Integer. The absolute minimum height, in case Height is relative or *ItemHeight* is used.
+You can pass services by name or by ID as a string of comma-separated values.
 
-  - **ItemHeight**: Integer. The fixed height of blocks on this band. If this is specified, the Height property is ignored. If there are a specific number of concurrent blocks, the band height will be that number multiplied by the specified *ItemHeight*. If necessary, a vertical scrollbar will appear.
+The resources of the bookings linked to the services will be shown.
 
-  - **Filter**: String. A filter that determines which blocks are displayed in this band. This field supports single filters and combination filters using an "AND" or "OR" operator. Most booking fields are supported, including booking properties, which should be specified using the exposer *ReservationInstance.Properties*. However, it is not possible to filter on the service definition name or on datetime fields. Also, for fields of type integer, only exact matches are supported.
+In the following example, three services are passed: a service with the name "MyService", the service to which the Visio drawing is linked, and the service with ID 123/456:
 
-  Examples:
+`YAxisResources:Service=MyService,[this service],123/456`
 
-  ```txt
-  [
-      {
-          "type": "custom",
-          "name": "Gold",
-          "height": "2*",
-          "background": "#FFFF00",
-          "filter": "ReservationInstance.Properties.Class[String] == 'Gold'"
-      },
-      {
-          "type": "custom",
-          "name": "Silver",
-          "height": "3*",
-          "background": "#EEEEEE",
-          "filter": "ReservationInstance.Properties.Class[String] == 'Silver'"
-      }
-  ]
-  ```
+To also show resources for contributing bookings, in the **ComponentOptions** shape data field of the Resource Manager component, specify *Recursive=True*.
 
-  ```txt
-  [
-      {
-          "Type": "custom",
-          "Name": "All",
-          "Background": "##ADC9CA",
-          "Height": "*",
-          "ItemHeight":"45"
-          "filter": "(ReservationInstance.Properties.Area[String] contains 'AJA') OR (ReservationInstance.Properties.Area[String] contains 'AJE')"
-      },
-  ]
-  ```
+> [!NOTE]
+> The resource band will be updated in real time, based on the linked booking. This means that when you add or remove resources in a booking, you will immediately see the effect on the timeline.
 
-  > [!NOTE]
-  > You can use the “Minify/Compact” function at <https://jsonformatter.org/> to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
+##### Passing views
+
+You can pass views by name or by ID as a string of comma-separated values.
+
+When you pass a view, for any elements in that view that are configured as an element reference in a resource, as a main DVE element in a function resource, or as the element corresponding with a virtual function resource, the corresponding resources will be shown.
+
+In the following example, three views are passed: a view with the name "MyView", the view to which the Visio drawing is linked, and the view with ID 123:
+
+`YAxisResources:View=MyView,[this view],123`
+
+To also show resources for elements in child views, in the **ComponentOptions** shape data field of the Resource Manager component, specify *Recursive=True*.
+
+> [!NOTE]
+> The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
+
+#### Specifying custom bands on the timeline
+
+To specify custom bands on the timeline, from DataMiner 9.5.3 onwards, you can use the following configuration for the *YaxisResources* session variable:
+
+| Shape data field | Value                           |
+|--------------------|---------------------------------|
+| InitVar            | `[sep::^]YaxisResources^[{*...json...*}, {*...json...*}, ...]` |
+
+or
+
+| Shape data field | Value                           |
+|--------------------|---------------------------------|
+| SetVar             | `[sep::§]YaxisResources§[{*...json...*}, {*...json...*}, ...]` |
+
+> [!NOTE]
+> Using `[sep::§]` is strongly recommended in order to avoid parsing problems. See [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters).
+
+The JSON object for the custom bands can be configured with the following properties:
+
+- **Name**: String. The name displayed on the Y-axis.
+
+- **Type**: Specifies the type of band. Currently, only "custom" is supported.
+
+- **Background**: Color. The background color for the band.
+
+- **Height**: GridLength. The height of the band, either relative (e.g. *3\**), absolute (e.g. *200*) or *auto*. When empty, a default absolute height of 64 pixels is used. Not applicable when *ItemHeight* is filled in.
+
+- **MinimumHeight**: Integer. The absolute minimum height, in case Height is relative or *ItemHeight* is used.
+
+- **ItemHeight**: Integer. The fixed height of blocks on this band. If this is specified, the Height property is ignored. If there are a specific number of concurrent blocks, the band height will be that number multiplied by the specified *ItemHeight*. If necessary, a vertical scrollbar will appear.
+
+- **Filter**: String. A filter that determines which blocks are displayed in this band. This field supports single filters and combination filters using an "AND" or "OR" operator. Most booking fields are supported, including booking properties, which should be specified using the exposer *ReservationInstance.Properties*. However, it is not possible to filter on the service definition name or on datetime fields. Also, for fields of type integer, only exact matches are supported.
+
+Examples:
+
+```txt
+[
+    {
+        "type": "custom",
+        "name": "Gold",
+        "height": "2*",
+        "background": "#FFFF00",
+        "filter": "ReservationInstance.Properties.Class[String] == 'Gold'"
+    },
+    {
+        "type": "custom",
+        "name": "Silver",
+        "height": "3*",
+        "background": "#EEEEEE",
+        "filter": "ReservationInstance.Properties.Class[String] == 'Silver'"
+    }
+]
+```
+
+```txt
+[
+    {
+        "Type": "custom",
+        "Name": "All",
+        "Background": "##ADC9CA",
+        "Height": "*",
+        "ItemHeight":"45"
+        "filter": "(ReservationInstance.Properties.Area[String] contains 'AJA') OR (ReservationInstance.Properties.Area[String] contains 'AJE')"
+    },
+]
+```
+
+> [!NOTE]
+> You can use the “Minify/Compact” function at <https://jsonformatter.org/> to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
 
 ## Making shapes display information about objects selected on the timeline
 
