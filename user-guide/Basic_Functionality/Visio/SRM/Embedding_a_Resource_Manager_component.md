@@ -422,6 +422,9 @@ To have shapes display information about an object selected on the timeline, the
 
 - **SelectedResource**: From DataMiner 10.2.1/10.3.0 onwards, this variable is filled in when you select a resource band.
 
+  > [!NOTE]
+  > From DataMiner 10.2./10.3.0 onwards, users can select multiple bands by keeping the Ctrl key pressed when selecting different bands, or by keeping the Shift key pressed when selecting the first and last of several consecutive bands that need to be selected. In that case, the *SelectedResource* session variable will contain the GUIDs of all selected resources, separated by commas.
+
 - **SelectedSession**
 
 - **SelectedReservationDefinition**: Available from DataMiner 9.5.7 onwards. If the selected block is a booking instance linked to a particular booking definition, this variable will be filled in with the GUID of that definition.
