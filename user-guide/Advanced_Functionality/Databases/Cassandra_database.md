@@ -10,6 +10,8 @@ DataMiner relies on Cassandra to store certain data, more information on the arc
 
 - [Configuring Cassandra in System Center](xref:Configuring_DataMiner_Cassandra)
 
+- [Installing Cassandra Reaper](xref:Installing_Cassandra_Reaper)
+
 - [Scaling the Cassandra database up/down](xref:Scale_Cassandra_Database)
 
 - [Maintaining the Cassandra clusters](xref:Maintain_Cassandra_clusters)
