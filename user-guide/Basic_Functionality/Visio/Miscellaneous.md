@@ -40,7 +40,7 @@ DataMiner Visual Overview supports a host of different features, and there are m
 
 - [Embedding a Spectrum Analysis component](xref:Embedding_a_Spectrum_Analysis_component)
 
-- [Disabling the Loading message for a page or shape](xref:Disabling_the_Loading_message_for_a_page_or_shape)
+- [Disabling the indication that a page or shape is loading](xref:Disabling_the_Loading_message_for_a_page_or_shape)
 
 - [Configuring a shape to display or set the Surveyor search text](xref:Configuring_a_shape_to_display_or_set_the_Surveyor_search_text)
 

@@ -276,9 +276,9 @@ See [Displaying DCF connection property information](xref:Options_for_displaying
 
 Page- and shape-level option.
 
-Used in order to determine whether a “Loading” message is displayed.
+Used in order to determine whether DataMiner should indicate if a page or shape is loading.
 
-See [Disabling the Loading message for a page or shape](xref:Disabling_the_Loading_message_for_a_page_or_shape).
+See [Disabling the indication that a page or shape is loading](xref:Disabling_the_Loading_message_for_a_page_or_shape).
 
 ## EnableViewConnectivity
 
