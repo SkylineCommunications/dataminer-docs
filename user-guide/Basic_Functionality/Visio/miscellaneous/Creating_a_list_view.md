@@ -108,6 +108,19 @@ To filter on a property with one or more spaces in the property name, use double
 ReservationInstance.Properties."Expected Service State"[String] contains 'STaRt'
 ```
 
+#### Booking Status values
+You can use the following table to understand which values can be used for ReservationInstance.Status[Int32]:
+|Booking Status|Property value|
+|:------------:|:------------:|
+|Undefined     |0             |
+|Pending       |1             |
+|Confirmed     |2             |
+|Ongoing       |3             |
+|Ended         |4             |
+|Disconnected  |5             |
+|Interrupted   |6             |
+|Cancelled     |7             |
+
 ### Source: Elements or Services
 
 If you set the *Source* shape data field to “Elements” or “Services”, the *Filter* shape data field can contain a view filter to make the list view only show items from one specific view.
