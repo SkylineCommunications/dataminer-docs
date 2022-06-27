@@ -459,7 +459,9 @@ To have properties of Resource Manager objects stored in a variable:
 
 ## Specifying custom actions in a Resource Manager component
 
-If a **ComponentActions** shape data field has been added to the *Reservations* or *Bookings* shape, this shape data field can be configured to contain JSON objects with the following properties:
+If a **ComponentActions** shape data field has been added to the *Reservations* or *Bookings* shape, you can execute custom actions on the timeline via a context menu. From DataMiner 10.2.8/10.3.0 onwards, this context menu is shown when you right-click the timeline. Prior to DataMiner 10.2.8/10.3.0, this context menu is displayed as soon as you make a selection on the timeline.
+
+The **ComponentActions** shape data field should contain a JSON object with the following properties:
 
 - **Name**: String. The text displayed in the context menu item.
 
@@ -522,7 +524,7 @@ Example of a JSON string with custom actions:
 
 From DataMiner 9.5.6 onwards, it is possible to use a Resource Manager component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline.
 
-If this configuration is used, the selection behavior of the booking timeline is different from the default behavior: if the user first selects a command shape and then selects a timeline range, the corresponding command is immediately executed. If no command shape is selected first, instead of showing the usual context menu allowing a user to select one of the available actions, the component will zoom in on the selected range.
+If this configuration is used, the selection behavior of the booking timeline is different from the default behavior: if the user first selects a command shape and then selects a timeline range, the corresponding command is immediately executed. If no command shape is selected first, the component will zoom in on the selected range.
 
 You can configure this as follows:
 
