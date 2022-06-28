@@ -41,7 +41,8 @@
 		  "develop/schemadoc/Automation/images/**"
         ]
       }
-    ],
+    ]
+    },
   "pdf": {
     "content": [
       {
@@ -59,6 +60,9 @@
             "files": [ "user-guide/images/**" ]
           }
       ],
+      "wkhtmltopdf": {
+        "additionalArguments": "--enable-local-file-access"
+      },
       "dest": "_pdf",
       "outline": "NoOutline"
   },
