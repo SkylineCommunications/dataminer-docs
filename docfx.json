@@ -42,7 +42,27 @@
         ]
       }
     ],
-	"overwrite": "overwrite/*.md",
+  "pdf": {
+    "content": [
+      {
+        "files": [ "pdf/toc.yml" ]
+      },
+      {
+        "files": [
+          "user-guide/**.md",
+          "user-guide/**/toc.yml"
+        ]
+      }
+      ],
+      "resource": [
+          {
+            "files": [ "user-guide/images/**" ]
+          }
+      ],
+      "dest": "_pdf",
+      "outline": "NoOutline"
+  },
+  "overwrite": "overwrite/*.md",
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
