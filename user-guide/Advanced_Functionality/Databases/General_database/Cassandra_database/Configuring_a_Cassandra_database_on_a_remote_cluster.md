@@ -2,9 +2,12 @@
 uid: Configuring_a_Cassandra_database_on_a_remote_cluster
 ---
 
-# Configuring a Cassandra database on a remote cluster
+# Installing and configuring Cassandra on a Windows machine
 
-Different setups are possible where the Cassandra general database runs entirely on one or more external nodes (see [Supported data storage architectures](https://community.dataminer.services/supported-system-data-storage-architectures/)). However, these require an advanced procedure with manual adjustments of the Cassandra settings.
+Different setups are possible where the Cassandra general database runs entirely on one or more external Windows nodes (see [Supported data storage architectures](https://community.dataminer.services/supported-system-data-storage-architectures/)). However, these require an advanced procedure with manual adjustments of the Cassandra settings.
+
+> [!IMPORTANT]
+> Cassandra 4.0 no longer supports Windows. As such, we recommend installing Cassandra on Linux instead in order to be able to use the latest Cassandra version. See [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
 
 > [!NOTE]
 >
