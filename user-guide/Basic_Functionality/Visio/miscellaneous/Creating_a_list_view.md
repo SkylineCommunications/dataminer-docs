@@ -123,6 +123,23 @@ To filter on a property with one or more spaces in the property name, use double
 ReservationInstance.Properties."Expected Service State"[String] contains 'STaRt'
 ```
 
+From DataMiner 10.2.7/10.3.0 onwards, you can filter on type. For example:
+
+```txt
+ReservationInstance.ReservationInstanceType[Int32] == 1
+```
+
+> [!NOTE]
+> The following values are supported for ReservationInstance.ReservationInstanceType[Int32]:
+>
+> | Booking type             | Property value |
+> |--------------------------|----------------|
+> | Default                  | 0              |
+> | ProcessAutomation        | 1              |
+> | CustomProcessAutomation  | 2              |
+> | ResourceScheduling       | 3              |
+> | ResourceOrchestration    | 4              |
+
 ### Source: Elements or Services
 
 If you set the *Source* shape data field to “Elements” or “Services”, the *Filter* shape data field can contain a view filter to make the list view only show items from one specific view.
