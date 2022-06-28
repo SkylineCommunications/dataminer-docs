@@ -128,7 +128,7 @@ uid: glossary
 | Discovery identifier | Identifier used by DataMiner IDP in order to specify how a CI Type can be identified. Consists of a link to a discovery action, a match condition and a value, e.g. "*sysDescr contains JUNOS*". Multiple discovery identifiers can be combined in a CI Type with AND, OR and NOT statements. See [CI Types](xref:CI_Types) |
 | Discovery profile | Definition of the actions to take in order to discover a device as part of DataMiner IDP. Together with the CI Type, this determines which kind of device is being discovered. It contains the definition of the communication protocol and of the information that needs to be polled for comparison against the expected values of the CI Type. See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
 | Discrete parameter | Parameter with a limited set of predefined values. See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |
-| Disk Space Watcher | DataMiner functionality that monitors the predicted available space on the C: drive of a DataMiner Agent. See [General database](xref:General_database). |
+| Disk Space Watcher | DataMiner functionality that monitors the predicted available space on the C: drive of a DataMiner Agent. |
 | DLL | Dynamic Link Library. A library containing codes and functions that can be used by multiple applications at the same time. |
 | DMA | DataMiner Agent. A physical or virtual compute instance running the DataMiner Agent software on top of a Microsoft Windows operating system. Also called "DataMiner Node". |
 | DMB | Digital Multimedia Broadcasting. Technology similar to DVB-H that allows multimedia to be broadcast to mobile devices. |

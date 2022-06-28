@@ -171,7 +171,7 @@ To filter the alarm list to only show such unexpected alarms, click the followin
 
 Please note the following regarding the alarm focus feature:
 
-- This feature is only available if a Cassandra database is used. See [General database](xref:General_database).
+- This feature is only available if a Cassandra database is used. See [Cassandra database](xref:Cassandra_database).
 
 - The focus icon in the alarm bar is only displayed on tabs displaying active alarms.
 

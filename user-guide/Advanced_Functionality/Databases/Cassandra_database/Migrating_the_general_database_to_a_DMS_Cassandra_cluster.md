@@ -4,12 +4,12 @@ uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
 
 # Migrating the general database to a DMS Cassandra cluster
 
-From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as the general database for the entire DataMiner System. Previously it was already possible to use a separate Cassandra cluster for each DataMiner node. However, DataMiner 10.1.0/10.1.2 introduces the “Cassandra cluster” feature, which allows you to have all DataMiner nodes in a DataMiner System use one and the same Cassandra cluster as their general database.
+From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as the general database for the entire DataMiner System. Previously it was already possible to use a separate Cassandra cluster for each DataMiner node. However, DataMiner 10.1.0/10.1.2 introduces the "Cassandra cluster" feature, which allows you to have all DataMiner nodes in a DataMiner System use one and the same Cassandra cluster as their general database.
 
 ![Cassandra cluster](~/user-guide/images/Cassandra_cluster.jpg)
 
 > [!NOTE]
-> For more information on this architecture and on other possible data storage architectures, see [Supported data storage architectures](https://community.dataminer.services/supported-system-data-storage-architectures/).
+> For more information on this architecture and on other possible data storage architectures, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
 
 > [!TIP]
 > See also:

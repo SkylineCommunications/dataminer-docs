@@ -4,7 +4,7 @@ uid: Cassandra_database
 
 # Cassandra database
 
-By default, DataMiner uses Cassandra for its general database.
+By default, DataMiner uses Cassandra as its main general database.
 
 - [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra)
 
@@ -24,7 +24,7 @@ By default, DataMiner uses Cassandra for its general database.
 
 > [!NOTE]
 >
-> - For more information on the possible architecture of your DataMiner infrastructure, see [Supported data storage architectures](https://community.dataminer.services/supported-system-data-storage-architectures/).
+> - For more information on the possible architecture of your DataMiner infrastructure, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
 > - For information on the system requirements for Cassandra, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
 > - For information on how to configure a Cassandra database in DataMiner Cube, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 

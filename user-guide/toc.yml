@@ -963,61 +963,36 @@
     - name: Databases
       topicUid: databases
       items:
-        - name: General database
-          topicUid: General_database
+        - name: Supported system data storage architectures
+          topicUid: Supported_system_data_storage_architectures
+        - name: Database configuration in DataMiner Cube
+          topicUID: Configuring_the_database_settings_in_Cube
           items:
             - name: Configuring the database settings in Cube
               topicUid: Configuring_the_database_settings_in_Cube
-            - name: Cassandra database
-              topicUID: Cassandra_database
-              items:
-              - name: Migrating the general database to Cassandra
-                topicUid: Migrating_the_general_database_to_Cassandra
-              - name: Migrating the general database to a DMS Cassandra cluster
-                topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
-              - name: Installing Cassandra on a Linux machine
-                topicUID: Installing_Cassandra
-              - name: Scaling a Cassandra cluster database
-                topicUID: Scale_Cassandra_Database
-              - name: Maintaining a Cassandra cluster
-                topicUID: Maintain_Cassandra_Cluster
-              - name: Installing Cassandra Reaper
-                topicUID: Installing_Cassandra_Reaper
-              - name: Moving the Cassandra database to a different disk drive
-                topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
-              - name: Configuring how long alarm history slider data are kept in Cassandra
-                topicUid: Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra
-            - name: MySQL database
-              topicUID: Activating_one_file_per_table_for_an_existing_MySQL_database
-              items:
-              - name: Activating one file per table for an existing MySQL database
-                topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
-              - name: Deleting element data from a MySQL database
-                topicUid: Deleting_element_data_from_a_MySQL_database
-              - name: Moving MySQL data to another location
-                topicUid: Moving_MySQL_data_to_another_location
-            - name: Configuring a size limit for file offloads
-              topicUid: Configuring_a_size_limit_for_file_offloads
-        - name: Keeping a database table from being checked during an upgrade
-          topicUid: Keeping_a_database_table_from_being_checked_during_an_upgrade
+            - name: Specifying TTL overrides
+              topicUid: Specifying_TTL_overrides
+            - name: Configuring an additional database
+              topicUid: Configuring_an_additional_database
+        - name: Cassandra database
+          topicUID: Cassandra_database
           items:
-            - name: Adding a SkipTableUpdate instruction to the db.xml file
-              topicUid: Adding_a_SkipTableUpdate_instruction_to_the_db_xml_file
-            - name: Adding a DataMiner Customized comment
-              topicUid: Adding_a_DataMiner_Customized_comment
-        - name: Offload database
-          topicUid: Offload_database
-          items:
-            - name: Setting up an offload database
-              topicUid: Setting_up_an_offload_database
-            - name: Structure of the offload database
-              topicUid: Structure_of_the_offload_database
-            - name: Configuring data offloads
-              topicUid: Configuring_data_offloads
-            - name: How DataMiner offloads data
-              topicUid: How_DataMiner_offloads_data
-        - name: Configuring an additional database
-          topicUid: Configuring_an_additional_database
+          - name: Migrating the general database to Cassandra
+            topicUid: Migrating_the_general_database_to_Cassandra
+          - name: Migrating the general database to a DMS Cassandra cluster
+            topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+          - name: Installing Cassandra on a Linux machine
+            topicUID: Installing_Cassandra
+          - name: Scaling a Cassandra cluster database
+            topicUID: Scale_Cassandra_Database
+          - name: Maintaining a Cassandra cluster
+            topicUID: Maintain_Cassandra_Cluster
+          - name: Installing Cassandra Reaper
+            topicUID: Installing_Cassandra_Reaper
+          - name: Moving the Cassandra database to a different disk drive
+            topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+          - name: Configuring how long alarm history slider data are kept in Cassandra
+            topicUid: Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra
         - name: Elasticsearch database
           topicUid: Elasticsearch_database
           items:
@@ -1038,8 +1013,33 @@
                 topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
-        - name: Specifying TTL overrides
-          topicUid: Specifying_TTL_overrides
+        - name: MySQL database
+          topicUID: MySQL_database
+          items:
+          - name: Activating one file per table for an existing MySQL database
+            topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
+          - name: Deleting element data from a MySQL database
+            topicUid: Deleting_element_data_from_a_MySQL_database
+          - name: Moving MySQL data to another location
+            topicUid: Moving_MySQL_data_to_another_location
+          - name: Keeping a database table from being checked during an upgrade
+            topicUid: Keeping_a_database_table_from_being_checked_during_an_upgrade
+            items:
+            - name: Adding a SkipTableUpdate instruction to the db.xml file
+              topicUid: Adding_a_SkipTableUpdate_instruction_to_the_db_xml_file
+            - name: Adding a DataMiner Customized comment
+              topicUid: Adding_a_DataMiner_Customized_comment
+        - name: Offload database
+          topicUid: Offload_database
+          items:
+            - name: Setting up an offload database
+              topicUid: Setting_up_an_offload_database
+            - name: Structure of the offload database
+              topicUid: Structure_of_the_offload_database
+            - name: Configuring data offloads
+              topicUid: Configuring_data_offloads
+            - name: How DataMiner offloads data
+              topicUid: How_DataMiner_offloads_data
         - name: Database queries
           topicUid: Database_queries
           items:
