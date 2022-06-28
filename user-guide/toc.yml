@@ -1514,11 +1514,6 @@
       items:
         - name: Overview of the Dashboards app UI
           topicUid: Overview_of_the_Dashboards_app_UI
-          items:
-            - name: Dashboards app UI from DataMiner 10.0.0/10.0.2 onwards
-              topicUid: Dashboards_app_UI_from_DataMiner_10_0_0_10_0_2_onwards
-            - name: Dashboards app UI prior to DataMiner 10.0.0/10.0.2
-              topicUid: Dashboards_app_UI_prior_to_DataMiner_10_0_0_10_0_2
         - name: Managing dashboard folders
           topicUid: Managing_dashboard_folders
         - name: Creating and configuring dashboards
