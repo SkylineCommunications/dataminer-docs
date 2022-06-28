@@ -817,16 +817,6 @@ This placeholder can be used from DataMiner 9.5.1 onwards. It is replaced with a
 
 All MAC addresses of the client machine, separated by pipe characters (“\|”).
 
-### \[this reservationID\]
-
-From DataMiner 10.2.8/10.3.0 onwards, you can use this placeholder in shape data or shape text of shapes linked to a booking (e.g. dynamically generated shapes that represent bookings) to retrieve the GUID of the booking. The placeholder can also be nested, for example to retrieve booking properties or resources.
-
-For example:
-
-`[Resource:[reservation:[this reservationID],ResourceID|NodeID=18|],Name]`
-
-`[reservation:[this reservationID],Property=Monitoring]`
-
 ### \[thisusername\]
 
 The name of the current user.
@@ -864,6 +854,16 @@ It is possible to override the default behavior of this placeholder for child sh
 ### \[This EnhancedServiceID\]
 
 In a drawing linked to an enhanced service, you can refer to this service with this placeholder.
+
+### \[this reservationID\]
+
+From DataMiner 10.2.8/10.3.0 onwards, you can use this placeholder in shape data or shape text of shapes linked to a booking (e.g. dynamically generated shapes that represent bookings) to retrieve the GUID of the booking. The placeholder can also be nested, for example to retrieve booking properties or resources.
+
+For example:
+
+`[Resource:[reservation:[this reservationID],ResourceID|NodeID=18|],Name]`
+
+`[reservation:[this reservationID],Property=Monitoring]`
 
 ### \[this service\]
 
