@@ -10,8 +10,6 @@ By default, DataMiner uses Cassandra for its general database.
 
 - [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
 
-- [Configuring a Cassandra database on a remote cluster](xref:Configuring_a_Cassandra_database_on_a_remote_cluster)
-
 - [Installing Cassandra on a Linux machine](xref:Installing_Cassandra)
 
 - [Scaling a Cassandra cluster database](xref:Scale_Cassandra_Database)

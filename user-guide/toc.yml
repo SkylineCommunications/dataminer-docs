@@ -975,8 +975,6 @@
                 topicUid: Migrating_the_general_database_to_Cassandra
               - name: Migrating the general database to a DMS Cassandra cluster
                 topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
-              - name: Configuring a Cassandra database on a remote cluster
-                topicUid: Configuring_a_Cassandra_database_on_a_remote_cluster
               - name: Installing Cassandra on a Linux machine
                 topicUID: Installing_Cassandra
               - name: Scaling a Cassandra cluster database

@@ -10,6 +10,9 @@ The general database is the main database used by a DataMiner Agent to store its
 
 - For more information on the Cassandra database, including how to migrate from a legacy database to Cassandra, see [Cassandra database](xref:Cassandra_database).
 
+> [!NOTE]
+> It is not supported to have an external program do queries on the general database, regardless of the setup. Instead, the external program should retrieve the data from the offload database. See [Offload database](xref:Offload_database).
+
 > [!TIP]
 > See also:
 >
