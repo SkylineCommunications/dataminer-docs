@@ -18,7 +18,7 @@ This section consists of the following topics:
 
 - [Viewing user information](xref:Viewing_user_information)
 
-- [Editing a user’s details](xref:Editing_a_user’s_details#editing-a-users-details)
+- [Editing a user's details](xref:Editing_a_users_details)
 
 - [Changing group membership of a user](xref:Changing_group_membership_of_a_user)
 

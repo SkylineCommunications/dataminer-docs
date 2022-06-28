@@ -1083,8 +1083,8 @@
                   topicUid: Deleting_a_user
                 - name: Viewing user information
                   topicUid: Viewing_user_information
-                - name: Editing a user’s details
-                  topicUid: Editing_a_user’s_details
+                - name: Editing a user's details
+                  topicUid: Editing_a_users_details
                 - name: Changing group membership of a user
                   topicUid: Changing_group_membership_of_a_user
                 - name: Disconnecting a user in DataMiner Cube
