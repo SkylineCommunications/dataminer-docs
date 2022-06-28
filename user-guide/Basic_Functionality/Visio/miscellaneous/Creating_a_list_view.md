@@ -90,6 +90,21 @@ ReservationInstance.Name[string] contains 'Enc'
 ReservationInstance.Status[Int32] == 3
 ```
 
+> [!NOTE]
+> The following values can be used for ReservationInstance.Status[Int32]:
+>
+> |Booking Status|Property value|
+> |--------------|--------------|
+> |Undefined     |0             |
+> |Pending       |1             |
+> |Confirmed     |2             |
+> |Ongoing       |3             |
+> |Ended         |4             |
+> |Disconnected  |5             |
+> |Interrupted   |6             |
+> |Cancelled     |7             |
+
+
 ```txt
 (ReservationInstance.End[DateTime] >01/22/2019 11:17:32)
 ```
