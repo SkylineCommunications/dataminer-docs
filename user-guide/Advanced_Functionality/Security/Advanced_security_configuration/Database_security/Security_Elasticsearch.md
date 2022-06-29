@@ -45,18 +45,20 @@ To enable authentication in Elasticsearch 6.8.X:
 
 ## Updating passwords
 
-The **elasticsearch-setup-passwords.bat** script can only *create* the passwords. 
+The *elasticsearch-setup-passwords.bat* script can only *create* the passwords. 
 
-To update an existing password:
+To **update** an existing password:
 
-1. Send the following request to your elasticsearch, where **&lt;USERNAME&gt;** is the name of the user you want to update:
+1. Send the following request to your Elasticsearch database, where **&lt;USERNAME&gt;** is the name of the user you want to update:
+
    ```
    POST /_security/user/<USERNAME>/_password
    {
       "password" : "new-strong-password"
    }
    ```
-1. Update the password in the *db.xml* file on every DataMiner agent and restart the DataMiner System.
+
+1. Update the password in the *DB.xml* file on every DataMiner Agent and restart the DataMiner System.
 
 ## SSL/TLS Encryption
 
