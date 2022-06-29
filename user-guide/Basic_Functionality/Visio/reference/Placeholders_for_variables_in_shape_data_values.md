@@ -18,12 +18,14 @@ From DataMiner 10.0.13 onwards, **Info** keywords (wrapped in square brackets) c
 For an overview of the different keywords, see [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 > [!NOTE]
+>
 > - To prevent infinite loops, do not use alarm keywords in shape data items of type **Alarm**.
 > - These keywords cannot be used inside other placeholders.
 
 ## Other placeholders
 
 > [!NOTE]
+>
 > - Placeholders are case-insensitive. In other words, you can use “\[this service\]”, “\[This Service\]”, etc.
 > - In the “\[param: ...\]” placeholders mentioned below, ParameterID can be replaced by another “\[param: ...\]” placeholder. In other words, parameter references can be nested. Using other placeholders within placeholders is supported from DataMiner 9.5.8 onwards. However, when you do so, be careful not to create loops.
 > - Using placeholders directly in the text of a shape is supported from DataMiner 9.5.8 onwards.
@@ -39,14 +41,14 @@ It can also be used with:
 
     > [!TIP]
     > See also:
+    >
     > - [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component)
     > - [Creating a parameter chart](xref:Creating_a_parameter_chart)
 
 - Shapes linked to a parameter summary, where it can be entered instead of a parameter in the **ParametersSummary** shape data field.
 
     > [!TIP]
-    > See also:
-    > [Linking a shape to a calculation involving multiple parameters](xref:Linking_a_shape_to_a_calculation_involving_multiple_parameters).
+    > See also: [Linking a shape to a calculation involving multiple parameters](xref:Linking_a_shape_to_a_calculation_involving_multiple_parameters)
 
 The placeholder takes the following arguments:
 
@@ -69,6 +71,7 @@ The placeholder takes the following arguments:
   > In case a discrete parameter is used for the remote primary key, do not use the display value.
 
 > [!NOTE]
+>
 > - Not all the values need to be filled in. If the view ID or the remote primary key are not filled in, these will automatically be replaced by -1. In the most extreme case, it is possible to configure the placeholder with only the aggregation rule name, if it is a rule in the root folder.
 > - Grouping can be defined either by element property or by view property. Within the same aggregation rule, it is not possible to group by both properties.
 > - Using other placeholders within this placeholder is only supported from DataMiner 9.5.0 onwards.
@@ -305,6 +308,7 @@ During the event, the \[Event:...\] placeholder will be replaced by the value of
   - Example: *\[event:NodeDoubleClicked,ID\]*
 
 > [!NOTE]
+>
 > - If you specify multiple \[Event:...\] placeholders in a shape data field, only one action will be triggered when that event occurs.
 > - It is advised not to insert \[Event:...\] placeholders in other dynamic parts or placeholders.
 
@@ -374,6 +378,7 @@ Reference to a parameter belonging to a specific element.
 The element can be specified either by its name or by its ID (DmaID/ElementID). If specified in a Visio file to be linked to a protocol, ElementID can be replaced by a “\*” wildcard.
 
 > [!NOTE]
+>
 > - As parameters of which the value is an empty string are considered initialized, you can use a \[param:...\] placeholders to refer to a parameter containing an empty string.
 > - Inside a \[param:...\] placeholder, you can use \[var:...\] placeholders to refer to session variables. Example: \[param:\[var:Element\],101\]
 
@@ -400,6 +405,7 @@ The element can be specified either by its name or by its ID (DmaID/ElementID). 
 TableRow - which can refer to either the primary key or the display key - can be a simple ID or name, but it can also be a string containing wildcards (“\*” or “?”) and/or placeholders like \[param:...\] or \[property:...\].
 
 > [!NOTE]
+>
 > - As parameters of which the value is an empty string are considered initialized, you can use a \[param:...\] placeholders to refer to a parameter containing an empty string.
 > - Inside a \[param:...\] placeholder, you can use \[var:...\] placeholders to refer to session variables. Example: \[param:\[var:Element\],101,5\]
 > - If you use this placeholder in the **Parameter** shape data field when linking a shape to a parameter, and the cell the placeholder refers to contains a parameter ID, instead of the cell value, the value of the parameter corresponding to that ID is displayed.

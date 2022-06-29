@@ -5304,6 +5304,8 @@
         topicUID: Creating_app_package_scripts
     - name: DataMiner Development Packages
       topicUid: TOODataMinerDevPackages
+    - name: Change Element States Offline
+      topicUID: Change_Element_States_Offline
 - name: DataMiner Device-Specific Integrations
   topicUid: DSI
   items:

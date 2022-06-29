@@ -38,6 +38,8 @@ In this section, you can find information on the following useful tools for syst
 
 - [DataMiner Development Packages](xref:TOODataMinerDevPackages)
 
+- [Change Element States Offline](xref:Change_Element_States_Offline)
+
 You can also find information on the following tools on DataMiner Dojo:
 
 | Tool | Description and link |
@@ -46,7 +48,6 @@ You can also find information on the following tools on DataMiner Dojo:
 | Cassandra Cluster Validator | Used for monitoring and trending of parameters of the Cassandra nodes in a DataMiner cluster. See <https://community.dataminer.services/documentation/cassandra-cluster-validator/>. |
 | Connection Check | Allows you to verify the connection between a client or server and a DataMiner Agent. See <https://community.dataminer.services/documentation/connection-check/>. |
 | Cassandra Clone | Allows you to clone data from a table in a Cassandra database to another table. See <https://community.dataminer.services/documentation/cassandra-clone/>. |
-| Change Element States Offline | Allows you to change element states while a DMA is not running. See <https://community.dataminer.services/documentation/change-element-states-offline/>. |
 | Copy Element Data | Allows you to copy element data in order to simulate problems and build projects based on real data. See <https://community.dataminer.services/documentation/copy-element-data/>. |
 | DataMiner Comparison Tool | Allows you to compare the values of two string parameters. See <https://community.dataminer.services/documentation/dataminer-comparison-tool/>. |
 | DataStax DevCenter | Allows you to perform CQL queries or run scripts on a Cassandra database. See <https://community.dataminer.services/documentation/datastax-devcenter/>. |

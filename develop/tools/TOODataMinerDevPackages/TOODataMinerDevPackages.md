@@ -43,7 +43,7 @@ See [Installing DataMiner Integration Studio](https://aka.dataminer.services/Dis
 > DevPacks can have unstable behavior when installed with PackageReferences because of an open bug for NuGet (https://github.com/NuGet/Home/issues/3830).
 > To avoid problems, you must make sure all your NuGets are installed using packages.config. You can verify this by searching your solution *.csproj files for PackageReference. If you find zero hits, the NuGets are installed correctly.
 >
-> ![PackageReference search](~/develop/images/DevPack_PackageReferenceMistake.png)
+> ![PackageReference search](https://docs.dataminer.services/develop/images/DevPack_PackageReferenceMistake.png)
 >
 > If you do find hits, you will have to migrate the solution to packages.config:
 >

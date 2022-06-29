@@ -315,13 +315,13 @@ If you continue to have NATS issues, try the following steps:
 
 1. Open a command window as Administrator.
 
-1. Navigate to `C:\Skyline DataMiner\Files` and run SLEndpointTool_Console.exe.
+1. Navigate to `C:\Skyline DataMiner\Files` and run .\SLEndpointTool_Console.exe.
 
 1. Uninstall NAS
 
    ```cmd
    CMD
-   C:\Skyline DataMiner\Files>SLEndpointTool_Console.exe
+   C:\Skyline DataMiner\Files>.\SLEndpointTool_Console.exe
    Install or Uninstall? (I/U): U
    You have chosen to Uninstall
    Root installation directory? (Empty for default):
@@ -340,7 +340,7 @@ If you continue to have NATS issues, try the following steps:
 
    ```cmd
    CMD
-   C:\Skyline DataMiner\Files>SLEndpointTool_Console.exe
+   C:\Skyline DataMiner\Files>.\SLEndpointTool_Console.exe
    Install or Uninstall? (I/U): I
    You have chosen to Install
    Root installation directory? (Empty for default):
