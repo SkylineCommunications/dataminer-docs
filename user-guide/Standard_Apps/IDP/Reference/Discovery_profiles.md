@@ -20,6 +20,9 @@ Discovery profiles are defined in JSON format and define which information shoul
 
 To make sure discovery profiles can be loaded into DataMiner IDP, they must be stored in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*. See [Discovery](xref:Discovery).
 
+> [!NOTE]
+> Prior to IDP 1.2.0, if there are CI Types in the system, devices will only be found if a CI Type is linked to the corresponding discovery profile. From IDP 1.2.0 onwards, you can discover devices even if no existing CI Types are linked to the discovery profile.
+
 In general, every profile contains a list of discovery actions. Such an action consists of the following components:
 
 - **Name**: The name of the action in this discovery profile. The name has to be unique in the profile and can be referenced by the CI Types.

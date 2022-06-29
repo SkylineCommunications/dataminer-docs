@@ -55,16 +55,16 @@ To install and set up DataMiner IDP:
    >
    > - Do not specify a user account of which the password is subject to an expiration policy. We recommend creating a dedicated IDP account if no such account exists yet.
    > - If you run the setup wizard again after the initial setup, you can choose to specify different user credentials. However, by default the same user credentials will continue to be used, so you do not have to specify anything.
-   > - As the Provisioning API is no longer used from IDP 1.1.18 onwards, this step has become obsolete.
+   > - As the Provisioning API is no longer used from IDP 1.1.18 onwards, this step is obsolete. From IDP 1.2.0 onwards, it is no longer displayed in the wizard.
 
 1. On the *IDP Extra Configurations* page:
 
-   - Optionally customize the HTTP binding address, with the corresponding HTTP mode and port.
+   - Prior to IDP 1.1.18, optionally customize the HTTP binding address, with the corresponding HTTP mode and port. These settings are obsolete from IDP 1.1.18 onwards and are no longer available starting from IDP 1.2.0.
    - Optionally specify the path and credentials for the configuration archive.
    - Optionally specify the credentials for file transfers. Note that prior to IDP 1.1.20 (from IDP version 1.1.18 onwards), these are mentioned as the credentials for the working directories.
 
     > [!NOTE]
-    > Aside from the HTTP binding address, mode and port, you can also configure these settings in the IDP app after the initial setup, via *Admin* > *Configuration* > *Network Shares*.
+    > The path and credentials for the configuration archive and the credentials for file transfers can also be configured in the IDP app after the initial setup, via *Admin* > *Configuration* > *Network Shares*.
 
 1. Click *Next* until you reach the last page of the wizard.
 
