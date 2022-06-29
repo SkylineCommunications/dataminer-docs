@@ -97,7 +97,7 @@ if (response.Length == 1)
       - 1: No authentication, no encryption
       - 2: Authentication, no encryption
       - 3: Authentication, Encryption
-    - [2] (int): Authentication algorithm. Default: 1 (None) Possible values:
+    - [2] (int): Authentication algorithm. Default: 1 (None). Possible values:
       - 1: None
       - 2: HMAC-MD5
       - 3: HMAC-SHA
@@ -141,7 +141,7 @@ if (response.Length == 1)
 
   - Possible values for METHOD:
     - SINGLE: If ":single" is appended after the OID, this will be retrieved via a separate SNMP Get request.
-    - TABLE: (Deprecated) Indicates that the requested parameter represents a table. Use tablev2 instead.
+    - TABLE: (Deprecated.) Indicates that the requested parameter represents a table. Use tablev2 instead.
     - TABLEv2: Indicates that the requested parameter represents a table.
     - INSTANCE: Indicates that is an instance value.
     - GETNEXT: Performs a GetNext request.
@@ -150,10 +150,10 @@ if (response.Length == 1)
 
 ### SINGLE
 
-In the following example, three OIDs are requested. The multipleGet setting in the elementInfo object has been set to true, meaning that the OIDs should be requested using a GetRequest with multiple variable bindings. However, note that the last OID has the "SINGLE" suffix. This will result in that OID to be requested using a separate SNMP getRequest.
+In the following example, three OIDs are requested. The multipleGet setting in the elementInfo object has been set to true, meaning that the OIDs should be requested using a GetRequest with multiple variable bindings. However, note that the last OID has the "SINGLE" suffix. As a result, the OID will be requested using a separate SNMP getRequest.
 
 > [!NOTE]
-> It is advised to always put the parameters with the ":single" suffix at the end of the group so the other parameters get grouped into one request.
+> We recommend that you always put the parameters with the ":single" suffix at the end of the group so the other parameters get grouped into one request.
 
 The result object is an object array with size equal to the number of requested OIDs.
 
@@ -186,9 +186,9 @@ string sysLocationOidValue = Convert.ToString(result[2]);
 
 (Deprecated, use tablev2 instead.)
 
-To retrieve a table via the TABLE method, the entry in oidInfo should be a semicolon separated list of OIDs where the first entry specifies the OID of the table and the subsequent OIDs specifies the OIDs of the columns that should be retrieved (e.g.: `1.3.6.1.2.1.2.2.1;1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLE`).
+To retrieve a table via the TABLE method, the entry in oidInfo should be a semicolon-separated list of OIDs where the first entry specifies the OID of the table and the subsequent OIDs specify the OIDs of the columns that should be retrieved (e.g. `1.3.6.1.2.1.2.2.1;1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLE`).
 
-This will result in GetNextRequest PDUs to be sent out (to retrieve the instance values) followed by multiple GetRequest PDUs containing multiple variable bindings (to retrieve the column values). The result object is a table that has as first column the instance values and the remaining columns are the values of the columns specified in the request.
+This will result in GetNextRequest PDUs being sent out (to retrieve the instance values) followed by multiple GetRequest PDUs containing multiple variable bindings (to retrieve the column values). The result object is a table that has as its first column the instance values. The remaining columns are the values of the columns specified in the request.
 
 ```csharp
 int elementId = protocol.ElementID;
@@ -226,10 +226,10 @@ for(int i=0; i<table.Length; i++)
 
 ### TABLEV2
 
-To retrieve a table via the TABLEV2 method, the entry in oidInfo should be a semicolon separated list of OIDs of the columns that should be retrieved (e.g.: `1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLEV2`).
+To retrieve a table via the TABLEV2 method, the entry in oidInfo should be a semicolon-separated list of OIDs of the columns that should be retrieved (e.g. `1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLEV2`).
 
-This will result in GetBulkRequest PDUs to be sent out. The number of maxRepitions to use in the GetBulkRequest can be specified in the elementInfo object. The default value is 6.
-The result object is a table that has as first column the instance values and the remaining columns are the values of the columns specified in the request.
+This will result in GetBulkRequest PDUs being sent out. The number of maxRepitions to use in the GetBulkRequest can be specified in the elementInfo object. The default value is 6.
+The result object is a table that has as its first column the instance values. The remaining columns are the values of the columns specified in the request.
 
 ```csharp
 int elementId = protocol.ElementID;
@@ -304,7 +304,7 @@ string ifAdminStatusValue = Convert.ToString(result[1]);
 
 ### GETNEXT
 
-By adding the "GETNEXT" suffix, a GetNextRequest will be performed. The result will contain the value of the OID that is lexicographically next to that the specified OID in the request. In the example below the oidInfo object contains `1.3.6.1.2.1.1.4.0:GETNEXT`. The result object will contain the value of OID `1.3.6.1.2.1.1.5.0`.
+When the "GETNEXT" suffix is added, a GetNextRequest will be performed. The result will contain the value of the OID that is lexicographically next to the specified OID in the request. In the example below, the oidInfo object contains `1.3.6.1.2.1.1.4.0:GETNEXT`. The result object will contain the value of OID `1.3.6.1.2.1.1.5.0`.
 
 ```csharp
 int elementId = protocol.ElementID;
@@ -328,7 +328,7 @@ string sysNameOidValue = Convert.ToString(result[0]);
 ```
 
 > [!NOTE]
-> A returned value of 130 could indicate 'endOfMibView'. This value is returned if the specified OID does not lexicographically precede any variable accessible by this request (i.e. there is no lexicographic successor).
+> A returned value of 130 could indicate "endOfMibView". This value is returned if the specified OID does not lexicographically precede any variable accessible by this request (i.e. there is no lexicographic successor).
 
 ## Remarks
 
