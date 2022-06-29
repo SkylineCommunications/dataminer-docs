@@ -28,7 +28,7 @@ DataMiner includes fully standardized, out-of-the-box, open-architecture data co
 
 ## Architecture
 
-![Awards](~/dataminer-overview/images/DigitaL_Twin_overview.png)<br>
+![Digital twin overview](~/dataminer-overview/images/DigitaL_Twin_overview.png)<br>
 *Open this image in a new tab to view the full resolution.*
 
 The pronounced open architecture of DataMiner enables anybody, including developers, end users and any third-party system integrators and ICT contractors, to design powerful end-to-end solutions in a continuous fashion, enabling a DevOps style of operation and business. This includes connecting the DataMiner platform with new data sources and products on the fly, creating and deploying new data processing routines and logic, and designing and operating data consumption and control surfaces for end users.
