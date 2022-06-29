@@ -59,12 +59,12 @@ To install and set up DataMiner IDP:
 
 1. On the *IDP Extra Configurations* page:
 
-   - Prior to IDP 1.1.18, optionally customize the HTTP binding address, with the corresponding HTTP mode and port. These settings are obsolete from IDP 1.1.18 onwards and are no longer available starting from IDP 1.2.0.
+   - Optionally customize the HTTP binding address, with the corresponding HTTP mode and port.
    - Optionally specify the path and credentials for the configuration archive.
    - Optionally specify the credentials for file transfers. Note that prior to IDP 1.1.20 (from IDP version 1.1.18 onwards), these are mentioned as the credentials for the working directories.
 
     > [!NOTE]
-    > The path and credentials for the configuration archive and the credentials for file transfers can also be configured in the IDP app after the initial setup, via *Admin* > *Configuration* > *Network Shares*.
+    > Aside from the HTTP binding address, mode and port, you can also configure these settings in the IDP app after the initial setup, via *Admin* > *Configuration* > *Network Shares*.
 
 1. Click *Next* until you reach the last page of the wizard.
 
