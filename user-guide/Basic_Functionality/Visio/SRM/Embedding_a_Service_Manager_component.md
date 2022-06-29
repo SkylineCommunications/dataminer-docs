@@ -150,7 +150,7 @@ From DataMiner 9.5.6 onwards, you can turn a shape into a command control that c
 
 ## Configuring filters for a Service Manager component
 
-From DataMiner 10.2.6/10.3.0 onwards, when you configure a Service Manager component with the shape data field **ComponentOptions** set to 'interface=definitions', you can combine this with a Filter shape data field in order to filter the service definitions in the list.
+From DataMiner 10.2.6/10.3.0 onwards, when you configure a Service Manager component with the shape data field **ComponentOptions** set to *interface=definitions*, you can combine this with a **Filter** shape data field in order to filter the service definitions in the list.
 
 > [!TIP]
 > This is similar to the filtering of a *ListView* component. See [List view filters](xref:Creating_a_list_view#list-view-filters).
