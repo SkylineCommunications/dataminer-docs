@@ -4,7 +4,7 @@ uid: Specifying_TTL_overrides
 
 # Specifying TTL overrides
 
-From DataMiner 9.6.3 onwards, you can configure a custom "time to live" (TTL) for data in the database. From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, the user interface for this configuration has been redesigned.
+In System Center, you can configure a custom "time to live" (TTL) for data in the database. This determines how long the data is kept in the database.
 
 > [!NOTE]
 >
@@ -51,7 +51,7 @@ The following default values and limitations apply:
 | History slider     | 31 days     | 1 hour           | 5490 days   |
 | Spectrum traces    | 366 days    | 1 hour           | 5490 days   |
 
-## [Earlier versions](#tab/tabid-2)
+## [Earlier versions (starting from DataMiner 9.6.3)](#tab/tabid-2)
 
 Prior to DataMiner 9.6.0 \[CU1\]/9.6.6, the TTL is configured as follows:
 
@@ -100,5 +100,8 @@ Prior to DataMiner 9.6.0 \[CU1\]/9.6.6, the TTL is configured as follows:
       > If you clear the selection of the checkbox in front of a particular record type, no data for this record type will be included in the database.
 
 1. Click the *Save* button at the bottom of the card.
+
+> [!NOTE]
+> Prior to DataMiner 9.6.3, this is configured directly in [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml) instead of in Cube.
 
 ***

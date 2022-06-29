@@ -23,21 +23,21 @@ The **recommended** DataMiner setup involves **one Cassandra cluster and one Ela
 
 In a development environment with limited load, it is possible to host DataMiner, Cassandra and Elasticsearch on one Windows machine. However, note that this is not recommended for normal production environments.
 
-![Development setup: DataMiner, Cassandra and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
-*Development setup: DataMiner, Cassandra and Elasticsearch hosted on the same machine*
+![Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
+*Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine*
 
-Instead, we recommend running DataMiner, Cassandra and Elasticsearch on dedicated machines.
+Instead, we recommend running DataMiner, Cassandra, and Elasticsearch on dedicated machines.
 
 The Elasticsearch cluster should consist of at least 3 nodes, running on Windows or Linux machines. While it is possible to use one single Elasticsearch node, this means you will miss out on the replication features.
 
 For Cassandra, any number of nodes can be used, ideally running on Linux machines. To get an idea of how many nodes would be required for your system, use the [node calculator](https://community.dataminer.services/calculator/).
 
-![Recommended setup: DataMiner, Cassandra and Elasticsearch hosted on dedicated machines](~/user-guide/images/Recommended-Setup-1.png)<br>
-*Recommended setup: DataMiner, Cassandra and Elasticsearch hosted on dedicated machines*
+![Recommended setup: DataMiner, Cassandra, and Elasticsearch hosted on dedicated machines](~/user-guide/images/Recommended-Setup-1.png)<br>
+*Recommended setup: DataMiner, Cassandra, and Elasticsearch hosted on dedicated machines*
 
 ### Multiple DMA (non-Failover) setups
 
-In case you have more than one DataMiner Agent, you can scale on three levels: DataMiner, Cassandra and Elasticsearch.
+In case you have more than one DataMiner Agent, you can scale on three levels: DataMiner, Cassandra, and Elasticsearch.
 
 The Elasticsearch cluster should ideally consist of at least 3 nodes, running on Windows or Linux machines. While it is possible to use one single Elasticsearch node, this means you will miss out on the replication features. Running two nodes is not supported.
 
@@ -45,8 +45,8 @@ While we recommend running the DataMiner and Elasticsearch nodes on separate mac
 
 For Cassandra, any number of nodes can be used, ideally running on Linux machines. To get an idea of how many nodes would be required for your system, use the [node calculator](https://community.dataminer.services/calculator/).
 
-![Recommended setup: DataMiner, Cassandra and Elasticsearch hosted on dedicated machines, with a minimum of three Elasticsearch nodes](~/user-guide/images/Recommended-Setup-2.png)<br>
-*Recommended setup: DataMiner, Cassandra and Elasticsearch hosted on dedicated machines, with a minimum of three Elasticsearch nodes*
+![Recommended setup: DataMiner, Cassandra, and Elasticsearch hosted on dedicated machines, with a minimum of three Elasticsearch nodes](~/user-guide/images/Recommended-Setup-2.png)<br>
+*Recommended setup: DataMiner, Cassandra, and Elasticsearch hosted on dedicated machines, with a minimum of three Elasticsearch nodes*
 
 ![Setup with Elasticsearch and DataMiner sharing resources](~/user-guide/images/Elasticsearch-DataMiner-sharing-resources.png)<br>
 *Setup with Elasticsearch and DataMiner sharing resources*
@@ -104,14 +104,14 @@ This architecture is currently still supported, though it is **not recommended**
 > [!TIP]
 >
 > - For information on how to migrate a legacy setup with MySQL/MS SQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
-> - Elasticsearch can only be installed if DataMiner already uses Cassandra. For information, see [Installing Elasticsearch on a DMA via DataMiner](xref:Installing_Elasticsearch_via_DataMiner).
+> - Elasticsearch can only be installed if DataMiner already uses Cassandra. For more information, see [Installing Elasticsearch on a DMA via DataMiner](xref:Installing_Elasticsearch_via_DataMiner).
 
-In a development environment with limited load, it is possible to host DataMiner, Cassandra and Elasticsearch on one Windows machine. However, this is not recommended for normal production environments.
+In a development environment with limited load, it is possible to host DataMiner, Cassandra, and Elasticsearch on one Windows machine. However, this is not recommended for normal production environments.
 
-![Development setup: DataMiner, Cassandra and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
-*Development setup: DataMiner, Cassandra and Elasticsearch hosted on the same machine*
+![Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
+*Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine*
 
-Instead, we recommend running DataMiner, Cassandra and Elasticsearch on dedicated machines.
+Instead, we recommend running DataMiner, Cassandra, and Elasticsearch on dedicated machines.
 
 The Elasticsearch cluster should ideally consist of at least 3 nodes, running on Windows or Linux machines. While it is possible to use one single Elasticsearch node, this means you will miss out on the replication features.
 
@@ -119,8 +119,8 @@ For Cassandra, any number of nodes can be used, ideally running on Linux machine
 
 Several possible setups are illustrated below.
 
-![A DataMiner, Cassandra and Elasticsearch node, each running on dedicated machines](~/user-guide/images/DataMiner-Cassandra-and-Elasticsearch-node.png)<br>
-*A DataMiner, Cassandra and Elasticsearch node, each running on dedicated machines*
+![A DataMiner, Cassandra, and Elasticsearch node, each running on dedicated machines](~/user-guide/images/DataMiner-Cassandra-and-Elasticsearch-node.png)<br>
+*A DataMiner, Cassandra, and Elasticsearch node, each running on dedicated machines*
 
 ![A DMS consisting of four DMAs, each with their own Cassandra database, and an Elasticsearch cluster](~/user-guide/images/DMS-consisting-of-four-DMAs.png)<br>
 *A DMS consisting of four DMAs, each with their own Cassandra database, and an Elasticsearch cluster*
@@ -138,7 +138,7 @@ This architecture is currently still supported, though it is **not recommended**
 > [!TIP]
 > For information on how to migrate a legacy setup with MySQL/MS SQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
 
-By default, Cassandra is installed on the same machine as DataMiner. However, when your system has a high load, it is strongly recommended to move the Cassandra database towards an external (Windows or Linux) machine. This way, DataMiner and Cassandra don’t affect each other during heavy operations.
+By default, Cassandra is installed on the same machine as DataMiner. However, when your system has a high load, it is strongly recommended to move the Cassandra database towards an external (Windows or Linux) machine. This way, DataMiner and Cassandra do not affect each other during heavy operations.
 
 In case Cassandra struggles with the load generated by DataMiner, you can add additional Cassandra nodes. In that case, DataMiner will connect to one of the nodes, which will act as a coordinator that makes sure the data is stored in the appropriate nodes.
 

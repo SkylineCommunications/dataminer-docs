@@ -6,7 +6,7 @@ uid: databases
 
 This section consists of the following topics:
 
-- [Supported System Data Storage Architectures](xref:Supported_system_data_storage_architectures)
+- [Supported system data storage architectures](xref:Supported_system_data_storage_architectures)
 
 - [Database configuration in DataMiner Cube](xref:Configuring_the_database_settings_in_Cube)
 
