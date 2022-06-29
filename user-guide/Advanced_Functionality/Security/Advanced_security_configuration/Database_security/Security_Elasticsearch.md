@@ -43,6 +43,21 @@ To enable authentication in Elasticsearch 6.8.X:
 > [!NOTE]
 > To keep using Kibana, also set the credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in *C:\Program Files\Elasticsearch\Kibana\config*).
 
+## Updating passwords
+
+The **elasticsearch-setup-passwords.bat** script can only *create* the passwords. 
+
+To update an existing password:
+
+1. Send the following request to your elasticsearch, where **&lt;USERNAME&gt;** is the name of the user you want to update:
+   ```
+   POST /_security/user/<USERNAME>/_password
+   {
+      "password" : "new-strong-password"
+   }
+   ```
+1. Update the password in the *db.xml* file on every DataMiner agent and restart the DataMiner System.
+
 ## SSL/TLS Encryption
 
 By default all client-server communication with Elasticsearch is unencrypted.
