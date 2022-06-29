@@ -228,7 +228,7 @@ for(int i=0; i<table.Length; i++)
 
 To retrieve a table via the TABLEV2 method, the entry in oidInfo should be a semicolon-separated list of OIDs of the columns that should be retrieved (e.g. `1.3.6.1.2.1.2.2.1.2;1.3.6.1.2.1.2.2.1.3:TABLEV2`).
 
-This will result in GetBulkRequest PDUs being sent out. The number of maxRepitions to use in the GetBulkRequest can be specified in the elementInfo object. The default value is 6.
+This will result in GetBulkRequest PDUs being sent out. The number of maxRepetitions to use in the GetBulkRequest can be specified in the elementInfo object. The default value is 6.
 The result object is a table that has as its first column the instance values. The remaining columns are the values of the columns specified in the request.
 
 ```csharp
