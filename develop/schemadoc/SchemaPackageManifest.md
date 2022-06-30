@@ -4,7 +4,7 @@ uid: SchemaPackageManifest
 
 # Package manifest schema
 
-XML schema for defining the contents of an application package. For more information, refer to [Application packages](xref:TOOApplicationPackages) and [Pipeline stages for install packages.](xref:Pipeline_stages_for_install_packages).
+XML schema for defining the contents of an application package. For more information, refer to [Application packages](xref:TOOApplicationPackages) and [Pipeline stages for install packages](xref:Pipeline_stages_for_install_packages).
 
 ## Root element
 
