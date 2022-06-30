@@ -21,7 +21,7 @@ The Driver Passport Platform protocol uses:
 
 > [!NOTE]
 > -  For more information on how to create DMAPP and DMT packages, see [DataMiner Application Package Builder](xref:TOODataMinerPackageBuilder#dataminer-application-package-builder).
-> -  For more information on the QA device simulator, see [QA Device Simulator](xref:TOOQASNMPSimulator#qa-device-simulator).
+> -  For more information on the QA device simulator, see [QA Device Simulator](xref:TOOQASNMPSimulator).
 
 - [Platform location](xref:Platform_location)
 

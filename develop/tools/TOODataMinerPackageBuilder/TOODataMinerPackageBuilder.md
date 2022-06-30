@@ -11,7 +11,7 @@ The DataMiner Application Package Builder can be used to create DataMiner applic
 
 - **DataMiner application packages** are used to deploy applications and solutions on a DataMiner Platform. From DataMiner 10.0.11 onwards, a new format and features have been introduced for these packages.
 
-    For more information on the structure of a package from DataMiner 10.0.11 onwards, see [Application packages](xref:TOOApplicationPackages#application-packages).
+    For more information on the structure of a package from DataMiner 10.0.11 onwards, see [Application packages](xref:TOOApplicationPackages).
     For an overview of the internal structure of a legacy application package, see [Contents of an upgrade package](xref:Contents_of_an_upgrade_package).
 
 - **DataMiner test packages** are used to run scaling performance tests on the Skyline Driver Passport Platform.
