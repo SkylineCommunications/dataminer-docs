@@ -968,7 +968,7 @@
         - name: Database configuration in DataMiner Cube
           topicUID: Configuring_the_database_settings_in_Cube
           items:
-            - name: Configuring the database settings in Cube
+            - name: Configuring the general database settings in Cube
               topicUid: Configuring_the_database_settings_in_Cube
             - name: Specifying TTL overrides
               topicUid: Specifying_TTL_overrides
@@ -1022,13 +1022,6 @@
             topicUid: Deleting_element_data_from_a_MySQL_database
           - name: Moving MySQL data to another location
             topicUid: Moving_MySQL_data_to_another_location
-          - name: Keeping a database table from being checked during an upgrade
-            topicUid: Keeping_a_database_table_from_being_checked_during_an_upgrade
-            items:
-            - name: Adding a SkipTableUpdate instruction to the db.xml file
-              topicUid: Adding_a_SkipTableUpdate_instruction_to_the_db_xml_file
-            - name: Adding a DataMiner Customized comment
-              topicUid: Adding_a_DataMiner_Customized_comment
         - name: Offload database
           topicUid: Offload_database
           items:
@@ -2518,6 +2511,8 @@
           topicUid: Investigating_NATS_Issues
         - name: Sharing dashboard window does not disappear
           topicUID: Sharing_dashboard_window_does_not_disappear
+        - name: Cassandra does not start up after a server restart
+          topicUID: Cassandra_not_starting_up_after_server_restart
 - name: Reference
   topicUid: Part7Reference
   items:
@@ -2695,8 +2690,6 @@
           topicUid: General_configuration
         - name: IDs of views, elements, services, redundancy groups and parameters
           topicUid: IDs_of_views_elements_services_redundancy_groups_and_parameters
-        - name: Databases
-          topicUid: Databases1
         - name: DataMiner client applications
           topicUid: DataMiner_client_applications
     - name: Glossary

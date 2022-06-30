@@ -9,7 +9,9 @@ The general database is the main database used by a DataMiner Agent to store its
 In older DataMiner systems, this database was also known as the "local database", as the MySQL or MSSQL database was typically hosted locally on the same machine as DataMiner.
 
 > [!NOTE]
-> Settings related to the Elasticsearch database are configured separately. See [Elasticsearch database](xref:Elasticsearch_database).
+>
+> - Settings related to the Elasticsearch database are configured separately. See [Elasticsearch database](xref:Elasticsearch_database).
+> - If you want to have an external program do queries on a DataMiner database, you will need to use an offload database for this. For information on offload database settings, see [Offload database](xref:Offload_database).
 
 ## [Cassandra cluster database](#tab/tabid-1)
 

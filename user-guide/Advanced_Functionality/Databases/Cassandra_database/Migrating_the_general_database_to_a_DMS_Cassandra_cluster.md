@@ -4,9 +4,9 @@ uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
 
 # Migrating the general database to a DMS Cassandra cluster
 
-From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as the general database for the entire DataMiner System. Previously it was already possible to use a separate Cassandra cluster for each DataMiner node. However, DataMiner 10.1.0/10.1.2 introduces the "Cassandra cluster" feature, which allows you to have all DataMiner nodes in a DataMiner System use one and the same Cassandra cluster as their general database.
+From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as the general database for the entire DataMiner System, along with an Elasticsearch database. This "Cassandra cluster" setup is the recommended data storage setup for DataMiner, as it allows you to scale the database for the entire DMS at once, unlike setups with a Cassandra cluster per individual DataMiner Agent.
 
-![Cassandra cluster](~/user-guide/images/Cassandra_cluster.jpg)
+![Cassandra cluster](~/user-guide/images/Recommended-Setup-2.png)
 
 > [!NOTE]
 > For more information on this architecture and on other possible data storage architectures, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
@@ -33,7 +33,7 @@ The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on 
 
 ### Prerequisites
 
-- All DMAs must run DataMiner v10.2.0/10.2.2 or higher.
+- All DMAs must run DataMiner 10.2.0/10.2.2 or higher.
 
 - A Cassandra cluster must be available using version 3.11.8 or higher (4.0 is highly recommended). For information on how to install Cassandra, see [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
 
@@ -65,7 +65,7 @@ During the migration, each DMA will go through the following stages:
    > [!NOTE]
    > If one or more DMAs fail to be initialized, please contact your Skyline Technical Account Manager to resolve this issue, or refer to the [Troubleshooting](#troubleshooting) section below for the solution.
 
-1. In the pop-up window, enter the Cassandra and Elasticsearch settings, and click Confirm. The following settings are required:
+1. In the pop-up window, enter the Cassandra and Elasticsearch settings, and click *Confirm*. The following settings are required:
 
    - Cassandra settings:
 
@@ -93,14 +93,14 @@ During the migration, each DMA will go through the following stages:
 
 1. During the migration, you can monitor the progress in the main window of the tool. You can safely close the tool and open it again later. The migration process will continue even when you close *SLCCMigrator.exe*.
 
-1. When the migration has finished, check the main window of SLCCMigrator.exe and make sure there are no errors.
+1. When the migration has finished, check the main window of *SLCCMigrator.exe* and make sure there are no errors.
 
 1. When no errors are reported, click *Finalize migration* to restart all DMAs.
 
 > [!NOTE]
 >
 > - During the migration, you can cancel the migration of one particular data type for one particular DMA. This will not undo any changes made to the Cassandra and Elasticsearch clusters.
-> - If you want to cancel the entire migration process for all DMAs, click Abort migration. This will undo all changes made to the DMAs.
+> - If you want to cancel the entire migration process for all DMAs, click *Abort migration*. This will undo all changes made to the DMAs.
 > - When you migrate a DataMiner Failover setup, only the data of the active DMA will be migrated. Once the migration has finished, both DMAs will be restarted.
 
 ### Troubleshooting
@@ -116,7 +116,7 @@ If you encounter **issues when you start a migration** (e.g. “No connection wi
 - `C:/Skyline DataMiner/Logging/SLMessageBroker.txt`
 - `C:/Skyline DataMiner/Logging/SLMessageBroker.Crash.txt`
 
-If you encounter an **issue initializing all the Agents**, check whether the logging of the SLCCMigrator.exe tool contains a line mentioning "*No responders are available for the request.*". Alternatively, you can also identify this issue by going to `http://<ip>:8222/varz` and checking if the "cluster" tag mentions all the IPs in the cluster. To resolve this issue:
+If you encounter an **issue initializing all the Agents**, check whether the logging of the *SLCCMigrator.exe* tool contains a line mentioning "*No responders are available for the request.*". Alternatively, you can also identify this issue by going to `http://<ip>:8222/varz` and checking if the "cluster" tag mentions all the IPs in the cluster. To resolve this issue:
 
 1. Make sure all Agents are online.
 1. Open the [SLNetClientTest tool](xref:SLNetClientTest_tool), and connect to the Agent that is not initialized.
@@ -143,7 +143,7 @@ When the Cassandra cluster feature is used, you can customize the consistency le
     > [!NOTE]
     >
     > - The following possible consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOn. For more information, see [https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html).
-    > - The *consistencyLevel* attribute should only be changed in case the Cassandra cluster feature is used or a remote Cassandra server is used. If the standard configuration of one Cassandra cluster per DMA is used, changing this attribute can cause the DMA to fail to start up.
+    > - The *consistencyLevel* attribute should only be changed in case the Cassandra cluster feature is used or a remote Cassandra server is used. If one Cassandra cluster per DMA is used, changing this attribute can cause the DMA to fail to start up.
     > - Together with the replication factor, the consistency level determines the maximum number of nodes that can be down before data unavailability occurs. For example, if a replication factor of 3 and consistency level of 2 are used, Cassandra queries will require an answer from 2 out of 3 replicas to be considered successful. This means that if one node is down, queries will still succeed, but if another node is down, it is possible that queries will no longer succeed.
 
 1. Restart DataMiner.

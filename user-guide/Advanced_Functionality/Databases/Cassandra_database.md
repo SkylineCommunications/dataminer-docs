@@ -32,4 +32,5 @@ By default, DataMiner uses Cassandra as its main general database.
 > See also:
 >
 > - [Securing the Cassandra general database](xref:Security_Cassandra_general)
+> - [Cassandra – tips & tricks](https://community.dataminer.services/video/cassandra-tips-tricks/)
 > - [Apache Cassandra documentation](https://cassandra.apache.org/doc/latest/)
