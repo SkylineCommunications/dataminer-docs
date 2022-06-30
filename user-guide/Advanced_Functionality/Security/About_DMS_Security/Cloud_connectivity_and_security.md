@@ -25,6 +25,7 @@ At present, the following IP addresses are used to connect to the DataMiner Clou
 - 20.50.2.35
 - 20.50.217.191
 - 20.103.147.5
+- 20.31.240.20
 
 The DataMiner Cloud Platform sends emails from the following domain:
 
