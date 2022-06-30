@@ -2989,9 +2989,9 @@
               - name: Enabled
                 topicUid: NuGetStages.Configurations.Configuration.PackageSigning.Enabled
   - name: Package manifest schema
-    topicUid: Manifest
+    topicUid: SchemaPackageManifest
     items:
-    - name: PackageManifest
+    - name: Manifest
       topicUid: Manifest
       items: 
       - name: Content

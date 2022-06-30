@@ -14,7 +14,7 @@ To do so:
 
    | Shape data field | Value |
    |------------------|-------|
-   | Component        | *Profile Manager*<br> or <br> *Profiles* |
+   | Component        | *ProfileManager*<br> or <br> *Profiles* |
 
 1. To further refine the component, optionally add the following shape data fields to the component shape:
 
