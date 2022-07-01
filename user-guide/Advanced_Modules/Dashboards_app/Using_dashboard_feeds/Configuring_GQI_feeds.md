@@ -311,7 +311,7 @@ From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in th
 
 ### Get parameters for element where
 
-Retrieves the selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query. 
+Retrieves the selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query.
 
 From DataMiner 10.2.0/10.1.5 onwards, if a protocol and version have been specified, a *Use feed* checkbox is available that allows you to also retrieve parameters from an existing feed in the dashboard.
 
@@ -382,6 +382,7 @@ From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter valu
 From DataMiner 10.1.11 onwards, an additional option, *Return no rows when feed is empty*, is available. When you select this option, in case the feed is empty, an empty table will be returned instead of the entire table.
 
 > [!NOTE]
+>
 > - Index feeds are only supported from DataMiner 10.2.0/10.1.5 onwards.
 > - If the *regex* or *not regex* filter method is used, and *Use feed* is selected, from DataMiner 10.1.2/10.1.5 onwards, if the feed contains multiple values, these are combined with an "or" operator.
 
