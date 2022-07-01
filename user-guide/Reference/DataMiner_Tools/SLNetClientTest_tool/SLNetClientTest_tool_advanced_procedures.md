@@ -606,8 +606,10 @@ To disable automatic NATS configuration:
 
 1. In the drop-down box, select *NATSForceManualConfig*.
 
-1. Right-click the DMA for which you want to change the setting and select *Edit value*.
+1. Configure the option as follows for each DMA in the cluster:
 
-1. Specify *true* and click *OK*.
+   1. Right-click the DMA and select *Edit value*.
+
+   1. Specify *true* and click *OK*.
 
 1. Click *OK* to close the *SLNet Options* window.
