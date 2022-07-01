@@ -965,6 +965,11 @@
       items:
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
+          items:
+          - name: Migrating the general database to Cassandra
+            topicUid: Migrating_the_general_database_to_Cassandra
+          - name: Migrating the general database to a DMS Cassandra cluster
+            topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
         - name: Database configuration in DataMiner Cube
           topicUID: Configuring_the_database_settings_in_Cube
           items:
@@ -977,10 +982,6 @@
         - name: Cassandra database
           topicUID: Cassandra_database
           items:
-          - name: Migrating the general database to Cassandra
-            topicUid: Migrating_the_general_database_to_Cassandra
-          - name: Migrating the general database to a DMS Cassandra cluster
-            topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
           - name: Installing Cassandra on a Linux machine
             topicUID: Installing_Cassandra
           - name: Scaling a Cassandra cluster database
@@ -991,8 +992,6 @@
             topicUID: Installing_Cassandra_Reaper
           - name: Moving the Cassandra database to a different disk drive
             topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
-          - name: Configuring how long alarm history slider data are kept in Cassandra
-            topicUid: Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra
         - name: Elasticsearch database
           topicUid: Elasticsearch_database
           items:

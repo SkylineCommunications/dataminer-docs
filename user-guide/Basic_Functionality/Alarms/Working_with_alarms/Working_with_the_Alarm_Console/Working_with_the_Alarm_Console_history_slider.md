@@ -32,4 +32,4 @@ There are two ways to move the slider to a specific time in the past on the time
 
   - **ActiveAlarmStatsExpirationTime**: The amount of time that requested time ranges other than the most recent one will stay in memory (if unused). Default: 10 minutes.
 
-- How long alarm data remain available to be displayed in the history slider depends on the database configuration. For more information, see [Configuring how long alarm history slider data are kept in Cassandra](xref:Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra).
+- How long alarm data remain available to be displayed in the history slider depends on the database configuration. For more information, see [Specifying TTL overrides](xref:Specifying_TTL_overrides).

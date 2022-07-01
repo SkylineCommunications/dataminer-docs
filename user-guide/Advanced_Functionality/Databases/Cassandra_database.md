@@ -6,10 +6,6 @@ uid: Cassandra_database
 
 By default, DataMiner uses Cassandra as its main general database.
 
-- [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra)
-
-- [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
-
 - [Installing Cassandra on a Linux machine](xref:Installing_Cassandra)
 
 - [Scaling a Cassandra cluster database](xref:Scale_Cassandra_Database)
@@ -19,8 +15,6 @@ By default, DataMiner uses Cassandra as its main general database.
 - [Installing Cassandra Reaper](xref:Installing_Cassandra_Reaper)
 
 - [Moving the Cassandra database to a different disk drive](xref:Moving_the_Cassandra_database_to_a_different_disk_drive)
-
-- [Configuring how long alarm history slider data are kept in Cassandra](xref:Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra)
 
 > [!NOTE]
 >

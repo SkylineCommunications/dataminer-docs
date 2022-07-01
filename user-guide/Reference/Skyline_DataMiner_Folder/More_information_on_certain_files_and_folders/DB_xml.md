@@ -138,13 +138,34 @@ In the above example, the slowquery attribute is set to “5”, so all database
 
 In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider.
 
-- For more information on how to limit the amount of history slider data kept in this table, see [Configuring how long alarm history slider data are kept in Cassandra](xref:Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra).
-
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 
     > [!NOTE]
+    >
     > - In some cases, e.g. when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
     > - This can only be configured for a regular Cassandra database, not for a Cassandra cluster used by the entire DMS (type=CassandraCluster).
+
+- Prior to DataMiner 9.5.5, you can also configure how long alarm history slide data are kept using *DB.xml*: in the *HistorySlider.TimeToKeep* tag, specify a number of seconds between 0 and 2,147,483,647:
+
+  - If you specify 0, no history slider data will be saved.
+
+  - If you specify -1, history slider data will be saved for the period specified in the monthsToKeep attribute of the Maintenance tag. See [Configuring the maintenance settings](xref:DB_xml#configuring-the-maintenance-settings).
+
+  - If a period of longer than twenty years is specified, DataMiner will limit this to twenty years.
+
+  Example:
+
+  ```xml
+  <DataBase active="true" type="Cassandra" local="true">
+    ...
+    <HistorySlider>
+      <TimeToKeep>-1</TimeToKeep>
+    </HistorySlider>
+  </DataBase>
+  ```
+
+  > [!NOTE]
+  > From DataMiner 9.5.5 onwards, this should be configured in [DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml) instead. From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, it should be configured in System Center. for more information, see [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 ### Skipping commit log writing of a Cassandra database
 

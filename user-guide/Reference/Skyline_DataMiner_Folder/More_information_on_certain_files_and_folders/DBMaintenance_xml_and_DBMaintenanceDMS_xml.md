@@ -13,6 +13,7 @@ These settings can be configured directly in DataMiner Cube from DataMiner 9.6.3
 - *DBMaintenance.xml* is deprecated from DataMiner 9.6.6 onwards. Before this, it is used for Agent-specific TTL overrides, and it is only synchronized in a Failover system.
 
 > [!NOTE]
+>
 > - Element-specific TTL settings for trending purposes will always override TTL settings specified in *DBMaintenance.xml* or *DBMaintenanceDMS.xml*.
 > - If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in these files. The changes are only applied for new records.
 > - Up to DataMiner 9.5.8, *DBMaintenance.xml* and *DBMaintenanceDMS.xml* are located directly in the Skyline DataMiner folder, instead of in the Database subfolder.
@@ -30,6 +31,7 @@ In this section:
 
 > [!TIP]
 > See also:
+>
 > - [Specifying TTL overrides](xref:Specifying_TTL_overrides)
 > - [Setting the TTL for database records](xref:SLNetClientTest_tool_advanced_procedures#setting-the-ttl-for-database-records)
 
@@ -59,8 +61,10 @@ Each TTL tag has the following attributes:
 
 - **type**: The type of database record for which the TTL applies. e.g. *Alarm*, *RealTimeTrending*, *FiveMinTrending*, *OneHourTrending*, *OneDayTrending*, etc. This can also be set to a particular data type or to the name of a logger table.
 
-    > [!NOTE]
-    > From DataMiner 9.5.8 onwards, the TTL for spectrum records is also configured in these files, using a TTL tag with the attribute *type="SpectrumTrace"*.
+  > [!NOTE]
+  >
+  > - From DataMiner 9.5.5 onwards, you can use a TTL tag with the attribute *type="TimeTrace"* to configure how long “snapshots” in the timetrace table are kept, which are used to visualize historic alarm information in the DataMiner Cube history slider.
+  > - From DataMiner 9.5.8 onwards, the TTL for spectrum records is also configured in these files, using a TTL tag with the attribute *type="SpectrumTrace"*.
 
 - **default**: The default TLL period that will be used for all databases that do not have a specific override.
 
@@ -96,6 +100,7 @@ Examples:
 - To specify a period of 1 hour, you can use “1h”, “3600s” or “3600”.
 
 > [!NOTE]
+>
 > - Strings without unit will be interpreted as a number of seconds. For example, “3600” will be interpreted as 3600 seconds.
 > - For a logger table, the TTL value can be set to “-1” to indicate that the TTL value is specified in the protocol.
 > - From DataMiner 9.5.13 onwards, if the TTL value is set to “0” for a particular type of data, no data of that type will be stored in the database.
@@ -112,11 +117,11 @@ To do so:
 
 1. Add an additional *\<TimeToLive>* tag in *DBMaintenance.xml* and/or *DBMaintenanceDMS.xml*.
 
-2. Within the *\<TimeToLive>* tag, set the *protocol* attribute to the name of the protocol.
+1. Within the *\<TimeToLive>* tag, set the *protocol* attribute to the name of the protocol.
 
-    To only specify the override for a particular version of the protocol, add the protocol version after the protocol name, separated from the name by a slash, e.g. protocol="Microsoft Platform/2.1.0.66".
+   To only specify the override for a particular version of the protocol, add the protocol version after the protocol name, separated from the name by a slash, e.g. protocol="Microsoft Platform/2.1.0.66".
 
-3. Add the necessary TTL subtags using the same syntax as described above.
+1. Add the necessary TTL subtags using the same syntax as described above.
 
 Example of a *DBMaintenanceDMS.xml* file with protocol override:
 
