@@ -4,7 +4,7 @@ uid: Part6Troubleshooting
 
 # Troubleshooting
 
-- [Error messages](xref:ErrorMessages#error-messages)
+- [Error messages](xref:ErrorMessages)
 
 - [Logging](xref:logging)
 

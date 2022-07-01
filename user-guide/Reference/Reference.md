@@ -4,10 +4,10 @@ uid: Part7Reference
 
 # Reference
 
-- [Skyline DataMiner folder](xref:SkylineDataminerFolder#skyline-dataminer-folder)
-- [Tools](xref:DataminerTools#tools)
-- [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
-- [Obtaining a DataMiner license](xref:DataminerLicenses#obtaining-a-dataminer-license)
+- [Skyline DataMiner folder](xref:SkylineDataminerFolder)
+- [Tools](xref:DataminerTools)
+- [Naming of elements, services, views, etc.](xref:NamingConventions)
+- [Obtaining a DataMiner license](xref:DataminerLicenses)
 - [Custom branding](xref:Custom_branding)
 - [DataMiner metrics](xref:dataminer_metrics)
 - [Frequently asked questions](xref:faq)

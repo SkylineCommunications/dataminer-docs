@@ -10,18 +10,18 @@ uid: Part2BasicFunctionalities
 
 - [Parameters](xref:parameters)
 
-- [Redundancy groups](xref:RedundancyGroups#redundancy-groups)
+- [Redundancy groups](xref:RedundancyGroups)
 
-- [Services and service templates](xref:services#services-and-service-templates)
+- [Services and service templates](xref:services)
 
 - [Views](xref:views)
 
-- [Visio drawings](xref:visio#visio-drawings)
+- [Visio drawings](xref:visio)
 
 - [Trending](xref:trending)
 
-- [Protocols and Templates](xref:protocols#protocols-and-templates)
+- [Protocols and Templates](xref:protocols)
 
 - [Documents](xref:documents)
 
-- [Chat collaboration](xref:chat#chat-collaboration)
+- [Chat collaboration](xref:chat)

@@ -4,9 +4,9 @@ uid: Part3AdvancedFunctionalities
 
 # Advanced DataMiner functionality for administrators
 
-- [DataMiner Agents](xref:DataminerAgents#dataminer-agents)
+- [DataMiner Agents](xref:DataminerAgents)
 
-- [DataMiner Systems](xref:DataminerSystems#dataminer-systems)
+- [DataMiner Systems](xref:DataminerSystems)
 
 - [Failover](xref:failover)
 
@@ -16,10 +16,8 @@ uid: Part3AdvancedFunctionalities
 
 - [SNMP managers](xref:SNMP#snmp-managers)
 
-- [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework)
+- [DataMiner Connectivity Framework](xref:DCF)
 
-- [DataMiner Integration Studio](xref:DIS#dataminer-integration-studio)
+- [TCP-IP sockets](xref:TCPIPSockets)
 
-- [TCP-IP sockets](xref:TCPIPSockets#tcp-ip-sockets)
-
-- [Serial gateways](xref:SerialGateways#serial-gateways)
+- [Serial gateways](xref:SerialGateways)
