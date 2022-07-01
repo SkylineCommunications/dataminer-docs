@@ -2623,6 +2623,8 @@
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
           topicUID: SLSkipAsSourceTool
+        - name: Standalone BPA Executor
+          topicUID: Standalone_BPA_Executor
     - name: Naming of elements, services, views, etc.
       topicUid: NamingConventions
       items:
