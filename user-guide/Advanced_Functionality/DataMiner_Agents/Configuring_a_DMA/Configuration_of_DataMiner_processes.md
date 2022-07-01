@@ -325,7 +325,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of SLWatchdog se
 1. Restart the DataMiner Agent.
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
+> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
 
 ### Example of an SLWatchdog tag in MaintenanceSettings.xml
 
@@ -373,7 +373,7 @@ The following table contains all information about the different SLWatchdog sett
 ## Configuring SLNet settings in MaintenanceSettings.xml
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
+> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
 
 > [!NOTE]
 > Before you configure any of these settings, you will need to stop DataMiner. After you have saved your changes, restart DataMiner again.

@@ -8,50 +8,50 @@ This section provides further information on the following files and folders:
 
 - [Aggregation](xref:Aggregation)
 
-- [ClientSettings.json](xref:ClientSettings_json#clientsettingsjson)
+- [ClientSettings.json](xref:ClientSettings_json)
 
-- [ConnectionSettings.txt](xref:ConnectionSettings_txt#connectionsettingstxt)
+- [ConnectionSettings.txt](xref:ConnectionSettings_txt)
 
 - [Database](xref:Database)
 
-- [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
+- [DataMiner.xml](xref:DataMiner_xml)
 
-- [DB.xml](xref:DB_xml#dbxml)
+- [DB.xml](xref:DB_xml)
 
-- [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml)
+- [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml)
 
-- [DMS.xml](xref:DMS_xml#dmsxml)
+- [DMS.xml](xref:DMS_xml)
 
 - [Elements](xref:Elements1#elements)
 
-- [EPMConfig.xml](xref:EPMConfig_xml#epmconfigxml)
+- [EPMConfig.xml](xref:EPMConfig_xml)
 
-- [Hyperlinks.xml](xref:Hyperlinks_xml#hyperlinksxml)
+- [Hyperlinks.xml](xref:Hyperlinks_xml)
 
 - [Icons](xref:Icons)
 
-- [Information.xml](xref:Information_xml#informationxml)
+- [Information.xml](xref:Information_xml)
 
-- [LogSettings.xml](xref:LogSettings_xml#logsettingsxml)
+- [LogSettings.xml](xref:LogSettings_xml)
 
-- [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
+- [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
 
-- [Polling.xml](xref:Polling_xml#pollingxml)
+- [Polling.xml](xref:Polling_xml)
 
-- [PortLog.txt](xref:PortLog_txt#portlogtxt)
+- [PortLog.txt](xref:PortLog_txt)
 
-- [PropertyConfiguration.xml](xref:PropertyConfiguration_xml#propertyconfigurationxml)
+- [PropertyConfiguration.xml](xref:PropertyConfiguration_xml)
 
 - [Recycle bin](xref:Recycle_bin)
 
-- [SLCloud.xml](xref:SLCloud_xml#slcloudxml)
+- [SLCloud.xml](xref:SLCloud_xml)
 
-- [SLNet.exe.config](xref:SLNet_exe_config#slnetexeconfig)
+- [SLNet.exe.config](xref:SLNet_exe_config)
 
-- [SNMP Managers.xml](xref:SNMP_Managers_xml#snmp-managersxml)
+- [SNMP Managers.xml](xref:SNMP_Managers_xml)
 
 - [System Cache](xref:System_Cache)
 
-- [SyncRules.xml](xref:SyncRules_xml#syncrulesxml)
+- [SyncRules.xml](xref:SyncRules_xml)
 
-- [SLAnalytics.config](xref:SLAnalytics_config#slanalyticsconfig)
+- [SLAnalytics.config](xref:SLAnalytics_config)
