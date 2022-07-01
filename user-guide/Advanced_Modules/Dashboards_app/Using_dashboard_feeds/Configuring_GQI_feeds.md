@@ -33,19 +33,19 @@ When you create a query, you can use one or more of the data sources detailed be
 
 Available from DataMiner 10.2.0/10.1.9 onwards. Retrieves the alarms in the DataMiner System. Several columns, such as *Element Name*, *Parameter Description*, *Value* and *Time*, are included by default. Others can be added with a *Select* operation (see [Query operators](#query-operators)).
 
-### Get custom data
+### Get ad hoc data/custom data
 
-Available from DataMiner 10.3.0/10.2.4 onwards. Retrieves external data based on an Automation script that is compiled as a library. The data can for example be retrieved from a CSV file, a MySQL database, or an API endpoint.
+Available from DataMiner 10.3.0/10.2.4 onwards. Retrieves external data based on an Automation script that is compiled as a library. The data can for example be retrieved from a CSV file, a MySQL database, or an API endpoint. If no such Automation script has been configured, this option is not available.
 
 #### Configuring an external data source in a query
 
 This is the most basic procedure to use an external data source in a query:
 
-1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see [Interfaces](#interfaces-in-the-custom-data-script)).
+1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see [Interfaces](#interfaces-in-the-ad-hoc-data-script)).
 
 1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
-   For example (see [Example custom data script](#example-custom-data-script) for a full example):
+   For example (see [Example ad hoc data script](#example-ad-hoc-data-script) for a full example):
 
    ```csharp
    using Skyline.DataMiner.Analytics.GenericInterface;
@@ -64,18 +64,18 @@ This is the most basic procedure to use an external data source in a query:
 
 1. Validate and save the script. It is important that you do this after you have compiled the script as a library, as otherwise the compiler will detect errors.
 
-1. In the Dashboards app, configure a query and select the data source *Get custom data*.
+1. In the Dashboards app, configure a query and select the data source *Get ad hoc data* or *Get custom data*, depending on your DataMiner version.
 
-1. In the *Data source* drop-down box, select the name of your custom data source.
+1. In the *Data source* drop-down box, select the name of your ad hoc data source.
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 
 > [!NOTE]
-> From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of a custom data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, if you link to an existing query feed with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or query rows. Then you will need to select the property you want to use. In most cases, you can select the property in a drop-down list, except if *Type* is set to *Query rows* or *Script output*, in which case you will have to specify the value yourself. For query rows, when you start typing the value, DataMiner will propose any matching values it can find.
+> From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of an ad hoc data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, if you link to an existing query feed with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or query rows. Then you will need to select the property you want to use. In most cases, you can select the property in a drop-down list, except if *Type* is set to *Query rows* or *Script output*, in which case you will have to specify the value yourself. For query rows, when you start typing the value, DataMiner will propose any matching values it can find.
 
-#### Interfaces in the custom data script
+#### Interfaces in the ad hoc data script
 
-A custom data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
+An ad hoc data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
 
 ##### IGQIDataSource
 
@@ -96,11 +96,11 @@ This interface can be used to have the user specify an argument, for example the
 | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Event to indicate that the arguments have been processed.                         |
 
 > [!NOTE]
-> The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the custom data source implementation without validation.
+> The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the ad hoc data source implementation without validation.
 
 ##### IGQIOnInit
 
-This interface is called when the data source is initialized, for example when the data source is selected in the query builder or when a dashboard using a query with custom data is opened. It can for instance be used to connect to a database. This interface has one method:
+This interface is called when the data source is initialized, for example when the data source is selected in the query builder or when a dashboard using a query with ad hoc data is opened. It can for instance be used to connect to a database. This interface has one method:
 
 | Method | Input arguments | Output arguments | Description |
 |--------|-----------------|------------------|-------------|
@@ -122,7 +122,7 @@ This interface is called when the instance object is destroyed, which happens wh
 |--------|-----------------|------------------|-------------|
 | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
 
-#### Life cycle of queries with custom data
+#### Life cycle of queries with ad hoc data
 
 All methods discussed above are called at some point during the GQI life cycle, depending on whether a query is created or fetched, and depending on whether they have been implemented.
 
@@ -134,9 +134,9 @@ The following flowchart illustrates the GQI life cycle when a query is fetched:
 
 ![GQI query fetching life cycle](~/user-guide/images/GQIFetchQuery.png)
 
-#### Objects in the custom data script
+#### Objects in the ad hoc data script
 
-To build the custom data source, you can use the objects detailed below.
+To build the ad hoc data source, you can use the objects detailed below.
 
 ##### GQIColumn
 
@@ -198,7 +198,7 @@ In addition, the following derived types are supported from DataMiner 10.3.0/10.
 - `GQIStringDropdownArgument`
 - `GQIStringListArgument`
 
-#### Example custom data script
+#### Example ad hoc data script
 
 Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
 
