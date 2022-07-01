@@ -36,4 +36,13 @@ Example:
 
 If a Failover setup has been implemented in the DMS, a *Failover* subtag in the *DMS.xml* file contains the Failover configuration. To modify this configuration, go to the System Center in DataMiner Cube. See [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
 
-However, from DataMiner 9.6.1 onwards, an option is available that can only be configured directly in *DMS.xml*. This option makes the Agent that was previously online but now needs to go offline restart as quickly as possible, instead of waiting until all elements have been unloaded. To activate it, in the *\<Failover>* tag of the *DMS.xml* file, add the *bruteForceToOffline="true"* attribute, and then restart the DMA.
+However, prior to DataMiner 10.2.0 \[CU5]/10.2.8 and from DataMiner 9.6.1 onwards, an option is available that can only be configured directly in *DMS.xml*. This option makes the Agent that was previously online but now needs to go offline restart as quickly as possible, instead of waiting until all elements have been unloaded. To activate it:
+
+1. Stop the DMA.
+
+1. Add the *bruteForceToOffline="true"* attribute in the *\<Failover>* tag of the *DMS.xml* file, and save the file
+
+1. Restart the DMA.
+
+> [!NOTE]
+> From DataMiner 10.2.0 \[CU5]/10.2.8 onwards, this should be configured in Cube instead. See [Advanced Options](xref:Advanced_Failover_options#advanced-options)
