@@ -4,8 +4,6 @@ uid: Cassandra_database
 
 # Cassandra database
 
-By default, DataMiner uses Cassandra as its main general database.
-
 - [Installing Cassandra on a Linux machine](xref:Installing_Cassandra)
 
 - [Scaling a Cassandra cluster database](xref:Scale_Cassandra_Database)
