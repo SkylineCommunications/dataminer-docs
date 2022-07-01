@@ -32,7 +32,7 @@ The following DLL files do not have to be specified in the dllImport attribute a
 - [ProtocolName].[ProtocolVersion].QAction.Helper.dll
 - QActionHelperBaseClasses.dll
 - Skyline.DataMiner.Storage.Types.dll (from DataMiner 10.0.6 onwards (RN 25036))
-- SLLoggerUtil.dll (from DataMiner DataMiner 10.0.10 onwards (RN 26434))
+- SLLoggerUtil.dll (from DataMiner 10.0.10 onwards (RN 26434))
 
 > [!NOTE]
 >
