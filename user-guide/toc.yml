@@ -2625,6 +2625,10 @@
           topicUID: SLSkipAsSourceTool
         - name: Standalone BPA Executor
           topicUID: Standalone_BPA_Executor
+        - name: Standalone Cassandra Backup Tool
+          topicUID: Standalone_Cassandra_Backup_Tool
+        - name: Standalone Elastic Backup Tool
+          topicUID: Standalone_Elastic_Backup_Tool
     - name: Naming of elements, services, views, etc.
       topicUid: NamingConventions
       items:

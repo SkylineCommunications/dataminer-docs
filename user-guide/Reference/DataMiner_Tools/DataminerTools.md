@@ -15,6 +15,8 @@ This section provides information on the following tools:
 - [SLOffload tool](xref:SLOffload_tool)
 - [SLSkipAsSourceTool](xref:SLSkipAsSourceTool)
 - [Standalone BPA Executor](xref:Standalone_BPA_Executor)
+- [Standalone Cassandra Backup Tool](xref:Standalone_Cassandra_Backup_Tool)
+- [Standalone Elastic Backup Tool](xref:Standalone_Elastic_Backup_Tool)
 
 > [!NOTE]
 > For more information on other DataMiner tools or third-party tools, refer to <https://community.dataminer.services/documentation/category/resources/tools/>.
