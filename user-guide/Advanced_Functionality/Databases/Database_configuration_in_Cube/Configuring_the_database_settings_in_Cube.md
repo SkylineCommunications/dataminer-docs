@@ -2,13 +2,22 @@
 uid: Configuring_the_database_settings_in_Cube
 ---
 
-# Configuring the database settings in Cube
+# Configuring the general database settings in Cube
 
-To configure the general database, go to *Apps* > *System Center* > *Database*.
+The general database is the main database used by a DataMiner Agent to store its data. By default, this is a Cassandra database. In legacy setups, a MySQL or MS SQL database can be used.
+
+In older DataMiner systems, this database was also known as the "local database", as the MySQL or MSSQL database was typically hosted locally on the same machine as DataMiner.
+
+> [!NOTE]
+>
+> - Settings related to the Elasticsearch database are configured separately. See [Elasticsearch database](xref:Elasticsearch_database).
+> - If you want to have an external program do queries on a DataMiner database, you will need to use an offload database for this. For information on offload database settings, see [Offload database](xref:Offload_database).
 
 ## [Cassandra cluster database](#tab/tabid-1)
 
 For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the general database for the entire DMS, rather than one Cassandra cluster per DMA), configure the settings as follows:
+
+1. Go to *Apps* > *System Center* > *Database*.
 
 1. Specify the following database settings:
 
@@ -29,6 +38,8 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 ## [Cassandra database per DMA](#tab/tabid-2)
 
 In case a separate Cassandra cluster is used per DMA, configure the settings as follows:
+
+1. Go to *Apps* > *System Center* > *Database*.
 
 1. In the column on the left, select the Agent of which you want to configure the general database.
 
@@ -73,6 +84,8 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 ## [Legacy MySQL or SQL database](#tab/tabid-3)
 
 For a legacy MySQL or SQL database, configure the settings as follows:
+
+1. Go to *Apps* > *System Center* > *Database*.
 
 1. In the column on the left, select the Agent of which you want to configure the general database.
 

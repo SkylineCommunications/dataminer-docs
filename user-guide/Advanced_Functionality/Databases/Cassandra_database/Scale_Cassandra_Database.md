@@ -8,9 +8,9 @@ uid: Scale_Cassandra_Database
 
 To add nodes to a Cassandra cluster, install Cassandra as detailed in [Installing Cassandra](xref:Installing_Cassandra).
 
-Initially *nodetool status* will show the node as UJ (Up & Joining). Once the node is fully joined, it will be listed as UN (Up & Normal).
+Initially *nodetool status* will show the node as UJ (Up & Joining). Once a node is fully joined, it will be listed as UN (Up & Normal).
 
-When the node is added, other nodes will push some of the data to the new node, as all data will now be redivided across all nodes. All nodes will now be responsible for a smaller set of data. However, the partitions that no longer need to be hosted by the existing nodes after the new node has joined will still need to be removed. You can do so by running the *nodetool cleanup* command on every node that was already included in the cluster previously.
+When a node is added, other nodes will push some of the data to the new node, as all data will now be redivided across all nodes. All nodes will now be responsible for a smaller set of data. However, the partitions that no longer need to be hosted by the existing nodes after the new node has joined will still need to be removed. You can do so by running the *nodetool cleanup* command on every node that was already included in the cluster previously.
 
 ## Removing nodes
 

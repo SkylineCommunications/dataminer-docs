@@ -26,6 +26,7 @@ Before you make changes to this file, always **stop DataMiner**. Restart DataMin
 The configuration data for the general or “local” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “true”.
 
 > [!NOTE]
+>
 > - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
 > - If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
 > - If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
@@ -33,6 +34,8 @@ The configuration data for the general or “local” database has to be specifi
 The following configuration is possible for the general database:
 
 - [Configuring the maintenance settings](#configuring-the-maintenance-settings)
+
+- [Keeping a database table from being checked during an upgrade](#keeping-a-database-table-from-being-checked-during-an-upgrade)
 
 - [Configuring how long parameter data are kept in the database for DMS Reporter](#configuring-how-long-parameter-data-are-kept-in-the-database-for-dms-reporter)
 
@@ -63,8 +66,37 @@ These attributes are **only used prior to DataMiner 9.5.5 (or 9.5.6 for an SQL d
 The limiting options can be set to “true” or “false”. If both options are set to “true”, the records will be deleted from the table either after a certain amount of time, or as soon as the table contains a specific number of records, whichever comes first.
 
 > [!NOTE]
-> - It is advisable to configure these settings through the Cube client interface, rather than directly in the .xml file. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
+>
+> - We recommend configuring these settings through the Cube client interface rather than directly in the XML file. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 > - For a Cassandra (cluster) database, it is only possible to configure the limitByMonths attribute, not the limitByNumber attribute. Note also that this attribute works in a different way for Cassandra, compared to MySQL or MSSQL: if a record has been stored with a particular limitByMonths and MonthsToKeep setting, this setting permanently applies to that record in Cassandra.
+
+### Keeping a database table from being checked during an upgrade
+
+When you perform an upgrade of the DataMiner Agent software, by default, all database tables are automatically checked and if necessary optimized and/or repaired.
+
+To keep a particular database table from being checked, you can add a *\<SkipTableUpdate>* instruction to *DB.xml*.
+
+In the example below, two tables will be kept from being checked:
+
+```xml
+<DataBases>
+  <DataBase active="true" local="true" type="MySQL">
+    ...
+    <Maintenance monthsToKeep="12">
+      <SkipTableUpdates>
+        <SkipTableUpdate table="data_3012"/>
+        <SkipTableUpdate table="dataavg_3012"/>
+      </SkipTableUpdates>
+    </Maintenance>
+    ...
+  </DataBase>
+</DataBases>
+```
+
+> [!NOTE]
+> Instead of adding a *\<SkipTableUpdate>* instruction to the file *DB.xml*, you can also add a comment to a database table in order to keep that table from being checked during a DataMiner software upgrade. For example, to add a 'DataMiner Customized' comment to a MySQL table, run the following SQL command (in which you replace “xxx” by the actual table name): `ALTER TABLE xxx COMMENT = 'DataMiner Customized'`
+>
+> However, note that this causes that that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
 
 ### Configuring how long parameter data are kept in the database for DMS Reporter
 
@@ -106,13 +138,34 @@ In the above example, the slowquery attribute is set to “5”, so all database
 
 In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider.
 
-- For more information on how to limit the amount of history slider data kept in this table, see [Configuring how long alarm history slider data are kept in Cassandra](xref:Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra).
-
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 
     > [!NOTE]
+    >
     > - In some cases, e.g. when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
     > - This can only be configured for a regular Cassandra database, not for a Cassandra cluster used by the entire DMS (type=CassandraCluster).
+
+- Prior to DataMiner 9.5.5, you can also configure how long alarm history slide data are kept using *DB.xml*: in the *HistorySlider.TimeToKeep* tag, specify a number of seconds between 0 and 2,147,483,647:
+
+  - If you specify 0, no history slider data will be saved.
+
+  - If you specify -1, history slider data will be saved for the period specified in the monthsToKeep attribute of the Maintenance tag. See [Configuring the maintenance settings](xref:DB_xml#configuring-the-maintenance-settings).
+
+  - If a period of longer than twenty years is specified, DataMiner will limit this to twenty years.
+
+  Example:
+
+  ```xml
+  <DataBase active="true" type="Cassandra" local="true">
+    ...
+    <HistorySlider>
+      <TimeToKeep>-1</TimeToKeep>
+    </HistorySlider>
+  </DataBase>
+  ```
+
+  > [!NOTE]
+  > From DataMiner 9.5.5 onwards, this should be configured in [DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml) instead. From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, it should be configured in System Center. for more information, see [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 ### Skipping commit log writing of a Cassandra database
 

@@ -6,16 +6,23 @@ uid: databases
 
 This section consists of the following topics:
 
-- [General database](xref:General_database)
+- [Supported system data storage architectures](xref:Supported_system_data_storage_architectures)
 
-- [Keeping a database table from being checked during an upgrade](xref:Keeping_a_database_table_from_being_checked_during_an_upgrade)
+- [Database configuration in DataMiner Cube](xref:Configuring_the_database_settings_in_Cube)
 
-- [Offload database](xref:Offload_database)
-
-- [Configuring an additional database](xref:Configuring_an_additional_database)
+- [Cassandra database](xref:Cassandra_database)
 
 - [Elasticsearch database](xref:Elasticsearch_database)
 
-- [Specifying TTL overrides](xref:Specifying_TTL_overrides)
+- [MySQL database](xref:MySQL_database)
+
+- [Offload database](xref:Offload_database)
 
 - [Database queries](xref:Database_queries)
+
+> [!TIP]
+> See also:
+>
+> - [Securing the DataMiner databases](xref:Database_security)
+> - [DB.xml](xref:DB_xml)
+> - [DBConfiguration.xml](xref:DBConfiguration_xml)
