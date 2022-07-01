@@ -107,7 +107,7 @@ uid: glossary
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
 | DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See <https://dataminer.services/>. |
-| DataMiner Comparison Tool | Web application that allows you to compare the values of two string parameters. See <https://community.dataminer.services/documentation/dataminer-comparison-tool/>. |
+| DataMiner Comparison Tool | Web application that allows you to compare the values of two string parameters. See [DataMiner Comparison Tool](xref:DataMinerComparisonTool). |
 | DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF. See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
 | DataMiner Cube | The main client application used to connect to a DMA. Exists both as a desktop app and a browser app. |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry. See [DataMiner Community](xref:Community#dataminer-community). |

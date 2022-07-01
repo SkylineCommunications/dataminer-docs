@@ -10,7 +10,7 @@ To prepare the destination server, there are several possibilities:
 
 - Install a blank, fully functional DataMiner Agent, as described in the DataMiner Installation Guide.
 
-- Clear the configuration of an existing DMA using the [SLReset factory reset tool.](https://community.dataminer.services/documentation/factory-reset-tool/) This is highly recommended over manually clearing the configuration; however, it is only possible if the DMA is using DataMiner 10.0.12 or higher.
+- Clear the configuration of an existing DMA using the [Factory reset tool](xref:Factory_reset_tool). This is highly recommended over manually clearing the configuration; however, it is only possible if the DMA is using DataMiner 10.0.12 or higher.
 
 - Manually clear the configuration of an existing DMA:
 

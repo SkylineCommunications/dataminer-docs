@@ -23,7 +23,7 @@ To execute a BPA test using the *Standalone BPA Executor* tool:
 
 1. If you want to run the BPA test using different credentials than those you are currently using to log into Windows, go to the *Settings* tab, select *Custom credentials* and specify the username and password.
 
-1 . Some BPA tests can be configured to run corrective actions when they discover an issue. If you want corrective actions to be run, in the *Settings* tab, select *Execute corrective actions*.
+1. Some BPA tests can be configured to run corrective actions when they discover an issue. If you want corrective actions to be run, in the *Settings* tab, select *Execute corrective actions*.
 
 1. You can now execute a BPA test in two different ways:
 

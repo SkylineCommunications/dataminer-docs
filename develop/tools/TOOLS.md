@@ -40,7 +40,7 @@ In this section, you can find information on the following useful tools for syst
 
 - [Change Element States Offline](xref:Change_Element_States_Offline)
 
-You can also find information on the following tools on DataMiner Dojo:
+You can also find information on the following tools in the user guide section or on DataMiner Dojo:
 
 | Tool | Description and link |
 |--|--|
@@ -49,7 +49,7 @@ You can also find information on the following tools on DataMiner Dojo:
 | Connection Check | Allows you to verify the connection between a client or server and a DataMiner Agent. See <https://community.dataminer.services/documentation/connection-check/>. |
 | Cassandra Clone | Allows you to clone data from a table in a Cassandra database to another table. See <https://community.dataminer.services/documentation/cassandra-clone/>. |
 | Copy Element Data | Allows you to copy element data in order to simulate problems and build projects based on real data. See <https://community.dataminer.services/documentation/copy-element-data/>. |
-| DataMiner Comparison Tool | Allows you to compare the values of two string parameters. See <https://community.dataminer.services/documentation/dataminer-comparison-tool/>. |
+| DataMiner Comparison Tool | Allows you to compare the values of two string parameters. See [DataMiner Comparison Tool](xref:DataMinerComparisonTool). |
 | DataStax DevCenter | Allows you to perform CQL queries or run scripts on a Cassandra database. See <https://community.dataminer.services/documentation/datastax-devcenter/>. |
 | Dump Spectrum Preset Content | Allows you to visualize the content of the otherwise binary spectrum preset .dat files. See <https://community.dataminer.services/documentation/dump-spectrum-preset-content/>. |
 | Fiddler | Debugging tool that logs HTTP(S) traffic between a computer and the Internet. Fiddler. Can be very useful to develop protocols that implement HTTP connections. See <https://community.dataminer.services/documentation/fiddler/>. |
@@ -57,7 +57,7 @@ You can also find information on the following tools on DataMiner Dojo:
 | MySQL Workbench | Allows you to explore MySQL databases and perform administrative actions. See <https://community.dataminer.services/documentation/mysql-workbench/>. |
 | RawCap | Command line network sniffer for Windows that uses raw sockets. See <https://community.dataminer.services/documentation/rawcap/>. |
 | Sldbg | Contains helper methods that can be used while inspecting memory dumps for Skyline processes, using WinDbg or custom applications. See <https://community.dataminer.services/documentation/sldbg/>. |
-| SLSkipAsSourceTool | Can be used for troubleshooting when odd communication behavior is reported for a Failover DMA. See <https://community.dataminer.services/documentation/slskipassourcetool/>. |
+| SLSkipAsSourceTool | Can be used for troubleshooting when odd communication behavior is reported for a Failover DMA. See [SLSkipAsSourceTool](xref:SLSkipAsSourceTool). |
 | SoapUI | Open-source cross-platform functional testing solution that can be used for SOAP and REST. See <https://community.dataminer.services/documentation/soapui/>. |
 | Spectrum Simulation Driver | Allows you to create a simulated spectrum element, for example to test spectrum functionality. See <https://community.dataminer.services/documentation/spectrum-simulation-driver/>. |
 | Sync Check | Allows you to verify the synchronization of element and service files across a DataMiner System. See <https://community.dataminer.services/documentation/sync-check/>. |

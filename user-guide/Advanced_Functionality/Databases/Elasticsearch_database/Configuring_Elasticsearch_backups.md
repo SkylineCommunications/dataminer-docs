@@ -46,5 +46,5 @@ From DataMiner 9.6.11 onwards, you can modify the backup path in System Center, 
 > [!NOTE]
 >
 > - After you change the path in System Center, it is possible that the UI is temporarily disabled while the Indexing nodes are restarted to implement the change. As such, we recommend to only change the backup path if this is absolutely necessary.
-> - From DataMiner 10.0.0 \[CU15\]/10.1.0 \[CU3\]/DataMiner 10.1.6 onwards, the **Elasticsearch database is not included in a DataMiner restore**. To restore it, you should instead use the [Standalone Elastic Backup tool](https://community.dataminer.services/documentation/standalone-elastic-backup-tool/).
-> - Backups for remote Elasticsearch nodes are not managed by DataMiner. You will need to manage backups of such nodes yourself outside DataMiner. You can use the [Standalone Elastic Backup tool](https://community.dataminer.services/documentation/standalone-elastic-backup-tool/) for this.
+> - From DataMiner 10.0.0 \[CU15\]/10.1.0 \[CU3\]/DataMiner 10.1.6 onwards, the **Elasticsearch database is not included in a DataMiner restore**. To restore it, you should instead use the [Standalone Elastic Backup Tool](xref:Standalone_Elastic_Backup_Tool).
+> - Backups for remote Elasticsearch nodes are not managed by DataMiner. You will need to manage backups of such nodes yourself outside DataMiner. You can use the [Standalone Elastic Backup Tool](xref:Standalone_Elastic_Backup_Tool) for this.
