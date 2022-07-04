@@ -862,7 +862,7 @@
               topicUid: Upgrading_a_DataMiner_Agent_in_System_Center
             - name: Checking the upgrade history of a DataMiner Agent
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
-            - name: Rolling back a DataMiner upgrade
+            - name: Rolling back a DataMiner upgrade (deprecated)
               topicUid: Rolling_back_a_DataMiner_upgrade
             - name: Configuring the default upgrade options
               topicUID: Configuring_the_default_upgrade_options

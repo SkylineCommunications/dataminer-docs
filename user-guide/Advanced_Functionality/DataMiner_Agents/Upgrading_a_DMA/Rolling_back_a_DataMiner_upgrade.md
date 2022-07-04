@@ -2,7 +2,10 @@
 uid: Rolling_back_a_DataMiner_upgrade
 ---
 
-# Rolling back a DataMiner upgrade
+# Rolling back a DataMiner upgrade (deprecated)
+
+> [!IMPORTANT]
+> This functionality is deprecated. The information below is only relevant for DataMiner Systems using DataMiner 10.0.0/10.0.3 or older. For more recent DataMiner Systems, you can roll back an upgrade by restoring a VM snapshot taken shortly before the update or by installing the upgrade package of the previous DataMiner version.
 
 By default, prior to DataMiner 10.0.0/10.0.3, when you upgrade a DataMiner Agent, a rollback package is created. This package contains all files replaced during the upgrade. If, for any reason, the DataMiner Agent has to revert to some previous state, you can unpack a rollback package using the DataMiner Taskbar Utility or StandaloneUpgrade.exe.
 
@@ -14,7 +17,7 @@ However, rollback packages are no longer created in recent DataMiner versions. W
 ## Rolling back an upgrade using the DataMiner Taskbar Utility
 
 > [!NOTE]
-> This is no longer possible from DataMiner 10.0.0/10.0.3 onwards. To downgrade, install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
+> This is no longer possible from DataMiner 10.0.0/10.0.3 onwards. To downgrade, restore a VM snapshot taken shortly before the update, or install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
 
 1. In the Windows taskbar, right-click the DataMiner Taskbar Utility icon and click *Maintenance \> Rollback*.
 
@@ -36,7 +39,7 @@ However, rollback packages are no longer created in recent DataMiner versions. W
 ## Rolling back an upgrade using StandaloneUpgrade.exe
 
 > [!NOTE]
-> This is no longer supported from DataMiner 10.0.0/10.0.3 onwards. To downgrade, install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+> This is no longer supported from DataMiner 10.0.0/10.0.3 onwards. To downgrade, restore a VM snapshot taken shortly before the update, or install the upgrade package of the version you want to downgrade to. See [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 1. Stop the DataMiner Agent.
 
