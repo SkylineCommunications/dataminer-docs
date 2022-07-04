@@ -2,9 +2,9 @@
 uid: DataMinerComparisonTool
 ---
 
-# DataMiner Comparison Tool
+# DataMiner Comparison tool
 
-The DataMiner Comparison tool is available from DataMiner 9.5.5 onwards. It is a web application that allows you to compare the values of two string parameters on a character-by-character basis, and to immediately spot the differences (additions, modifications and deletions).
+The DataMiner Comparison tool is available from DataMiner 9.5.5 onwards. It is a web application that allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
 
 You can access the tool via the following URL:
 
@@ -12,7 +12,7 @@ You can access the tool via the following URL:
 http(s)://[DMA name]/Comparison
 ```
 
-## Working with the comparison tool
+## Working with the Comparison tool
 
 In the parameter selection panel at the top of the screen, select two parameters:
 
@@ -37,7 +37,8 @@ If you select the parameters manually, click the *Get value* buttons to retrieve
 By default, the two value boxes (left and right) will scroll in unison. If you do not want this, you can deactivate the "locked scrolling" feature using the *Toggle locked scrolling* icon at the bottom of the screen.
 
 > [!NOTE]
-> - If you modify a parameter value in the comparison tool, the changes you made will not be sent to the DataMiner Agent. They will be lost when you close the app.
+>
+> - If you modify a parameter value in the comparison tool, the changes you made will not be sent to the DataMiner Agent. They will be lost when you close the tool.
 > - To log out of the tool, click your username in the top right corner and select *Log out*.
 
 ## Options
@@ -65,10 +66,10 @@ In the *Options* panel on the left-hand side of the screen, which you can expand
     URL parameter: `patch` (default: false)
 
 > [!NOTE]
-> If, after selecting two parameters and the necessary options, you want to reuse this particular configuration, simply bookmark the URL.
+> If, after selecting two parameters and the necessary options, you want to reuse this particular configuration, bookmark the URL.
 
-## Embedding the comparison tool in Visual Overview
+## Embedding the Comparison tool in Visual Overview
 
-The DataMiner Comparison tool can be embedded within Visual Overview by means of a shape data item of type “Link”. For more information, see [Linking a shape to a webpage](xref:Linking_a_shape_to_a_webpage).
+The DataMiner Comparison tool can be embedded within Visual Overview by means of a shape data item of type **Link**. For more information, see [Linking a shape to a webpage](xref:Linking_a_shape_to_a_webpage).
 
 If you want the header and the parameter selection panel to be hidden in the embedded tool, add the `embed=true` argument to the URL.

@@ -2595,7 +2595,7 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring DMS Alerter
               topicUid: Configuring_DMS_Alerter
-        - name: DataMiner Comparison Tool
+        - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Taskbar Utility
           topicUid: DataMiner_Taskbar_Utility
@@ -2625,9 +2625,9 @@
           topicUID: SLSkipAsSourceTool
         - name: Standalone BPA Executor
           topicUID: Standalone_BPA_Executor
-        - name: Standalone Cassandra Backup Tool
+        - name: Standalone Cassandra Backup tool
           topicUID: Standalone_Cassandra_Backup_Tool
-        - name: Standalone Elastic Backup Tool
+        - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
     - name: Naming of elements, services, views, etc.
       topicUid: NamingConventions

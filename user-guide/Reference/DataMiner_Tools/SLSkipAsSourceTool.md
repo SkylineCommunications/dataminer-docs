@@ -22,6 +22,6 @@ If *SkipAsSource* is enabled for an IP address, the check box in front of this a
 
 If you made sure to run the tool as administrator, you can manually change the selection of the check boxes and click *Apply Changes* to execute the changes.
 
-For reference, this is the Failover setup corresponding with the example above:
+For reference, this is the Failover setup (in DataMiner 10.1.0) corresponding with the example above:
 
 ![Failover config](~/user-guide/images/SLSkipAsSource-Failover-Config.png)

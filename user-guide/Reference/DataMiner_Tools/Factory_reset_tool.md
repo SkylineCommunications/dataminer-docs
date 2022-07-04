@@ -33,7 +33,7 @@ It will always perform the following actions, regardless of whether the DMA is r
 - DeleteTaskbarAppSettings
 - FileCleanup
 
-    This action deletes any unnecessary files in the folder `C:\Skyline DataMiner\`. It uses a whitelist to determine which files to keep. When it is first executed, the default whitelist is added to `C:\Skyline DataMiner\Files\ResetConfig.txt`. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist wil be used again.
+  This action deletes any unnecessary files in the folder `C:\Skyline DataMiner\`. It uses a whitelist to determine which files to keep. When it is first executed, the default whitelist is added to `C:\Skyline DataMiner\Files\ResetConfig.txt`. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.
 
 - ResetDataMinerXml
 - ResetNotifyMail
@@ -45,7 +45,7 @@ It will always perform the following actions, regardless of whether the DMA is r
 - DeleteExecutableEvents
 - DBReset
 
-    This action runs the tool *SLDataGateway.Tools.Database.exe*, using input arguments harvested from DataMiner (*DB.xml*, credentials, etc.). For more information, see [SLDataGateway.Tools.Database.exe](#sldatagatewaytoolsdatabaseexe) below.
+  This action runs the tool *SLDataGateway.Tools.Database.exe*, using input arguments harvested from DataMiner (*DB.xml*, credentials, etc.). For more information, see [SLDataGateway.Tools.Database.exe](#sldatagatewaytoolsdatabaseexe) below.
 
 - Register
 - DcomConfig
@@ -65,23 +65,23 @@ This tool can be run with the following arguments:
 
 - `-t <type>` or `–database-type <type>`: Mandatory argument. Indicates the type of database:
 
-    - *SQL* (i.e. MySQL)
-    - *Cassandra*
-    - *Elastic* (i.e. ElasticSearch)
+  - *SQL* (i.e. MySQL)
+  - *Cassandra*
+  - *Elastic* (i.e. ElasticSearch)
 
 - `-i <ip>` or `–ip <ip>`: Mandatory argument. The IP address of the database host.
 
 - `-u <username>` or `–username <username>`: Username used for authentication. If no user credentials are specified, the following default credentials will be used:
 
-    - MySQL: *root* (empty password)
-    - Cassandra: *root/root*
-    - ElasticSearch: no security
+  - MySQL: *root* (empty password)
+  - Cassandra: *root/root*
+  - ElasticSearch: no security
 
 - `-p <password>` or `–password <password>`: Password used for authentication. If no user credentials are specified, the following default credentials will be used:
 
-    - MySQL: *root* (empty password)
-    - Cassandra: *root/root*
-    - ElasticSearch: no security
+  - MySQL: *root* (empty password)
+  - Cassandra: *root/root*
+  - ElasticSearch: no security
 
 - `-f` or `–forced`: Skip all prompts. If this argument is not used, the user will be asked for a final confirmation.
 
@@ -91,14 +91,14 @@ This tool can be run with the following arguments:
 
 - `-l <level>`: Log level:
 
-    - 0 = Off
-    - 1 = Trace (default)
-    - 2 = Debug
-    - 3 = Info
-    - 4 = Warning
-    - 5 = Error
-    - 6 = Fatal
+  - 0 = Off
+  - 1 = Trace (default)
+  - 2 = Debug
+  - 3 = Info
+  - 4 = Warning
+  - 5 = Error
+  - 6 = Fatal
 
 - `–timeout <ms>`: Timeout (milliseconds). If execution takes longer than the specified timeout, the program is killed.
 
-    Default: int.MaxValue (~2 billion)
+  Default: int.MaxValue (~2 billion)

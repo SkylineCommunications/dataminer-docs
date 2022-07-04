@@ -2,7 +2,7 @@
 uid: Standalone_Elastic_Backup_Tool
 ---
 
-# Standalone Elastic Backup Tool
+# Standalone Elastic Backup tool
 
 From DataMiner 10.0.13 onwards, this tool allows you to back up and restore Elasticsearch database clusters. By default, it is available on a DMA in the folder `C:\Skyline DataMiner\Tools`.
 
@@ -38,19 +38,19 @@ The following arguments should be used regardless of the specified action:
 
 - `--host` or `-h`: The host on which the command has to be run.
 
-    Default: 127.0.0.1
+  Default: 127.0.0.1
 
 - `--port` or `-p`: The port on which Elasticsearch will be contacted.
 
-    Default: 9200
+  Default: 9200
 
 - `--username` or `-u`: The username that has to be used to connect to Elasticsearch.
 
-    Only use this argument when credentials are required.
+  Only use this argument when credentials are required.
 
 - `-- pw`: The password that has to be used to connect to Elasticsearch.
 
-    Only use this argument when credentials are required.
+  Only use this argument when credentials are required.
 
 ### Arguments when initializing the repository
 
@@ -69,12 +69,12 @@ To take a backup/snapshot, use the following arguments:
 
 - `--repo` or `-r`: The repository in which to take the backup.
 
-    - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.
-    - If none is defined and none can be found, no backup will be taken.
+  - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.
+  - If none is defined and none can be found, no backup will be taken.
 
 - `--snapshotname` or `-n`: The (lowercase) name of the snapshot to be taken.
 
-    Default: `DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");`
+  Default: `DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");`
 
 ### Arguments when restoring a backup/snapshot
 
@@ -85,7 +85,8 @@ To restore a backup/snapshot, use the following arguments:
 - `--snapshotname` or `-n`: The name of the snapshot to be restored.
 
 > [!NOTE]
+>
 > - If all data was deleted from the database, first initialize the repository again before you restore a backup.
-> - It is advised to disable security when restoring a backup with security enabled. To do so, comment the security setting in the *.yaml* file.
+> - We recommend that you disable security when restoring a backup with security enabled. To do so, comment the security setting in the *.yaml* file.
 > - It is only possible to restore indices that do not exist yet. Therefore, in most cases, you will have to delete all data from all nodes before restoring a backup.
 > - Do not restore a backup while DataMiner is online.
