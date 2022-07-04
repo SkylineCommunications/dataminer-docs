@@ -62,7 +62,7 @@ By default, webpages displayed inside a shape do not display a refresh button. I
 
 To always pass an authentication ticket to the embedded webpage, regardless of the content of the URL, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to "SingleSignOn". (Available from DataMiner 9.5.6 onwards.)
 
-Even if this option is not specified, by default an authentication ticket is passed to embedded applications of type .xbap, embedded DataMiner Maps, the embedded Ticketing app, embedded dashboards (created in the new Dashboards app), and the embedded DataMiner Comparison tool.
+Even if this option is not specified, by default an authentication ticket is passed to embedded applications of type .xbap, embedded DataMiner Maps, the embedded Ticketing app, embedded dashboards (created in the new Dashboards app), and the embedded [DataMiner Comparison tool](xref:DataMinerComparisonTool).
 
 ### UseChrome
 
