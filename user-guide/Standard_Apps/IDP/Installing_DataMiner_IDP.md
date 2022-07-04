@@ -55,7 +55,7 @@ To install and set up DataMiner IDP:
    >
    > - Do not specify a user account of which the password is subject to an expiration policy. We recommend creating a dedicated IDP account if no such account exists yet.
    > - If you run the setup wizard again after the initial setup, you can choose to specify different user credentials. However, by default the same user credentials will continue to be used, so you do not have to specify anything.
-   > - As the Provisioning API is no longer used from IDP 1.1.18 onwards, this step has become obsolete.
+   > - As the Provisioning API is no longer used from IDP 1.1.18 onwards, this step is obsolete. From IDP 1.2.0 onwards, it is no longer displayed in the wizard.
 
 1. On the *IDP Extra Configurations* page:
 
