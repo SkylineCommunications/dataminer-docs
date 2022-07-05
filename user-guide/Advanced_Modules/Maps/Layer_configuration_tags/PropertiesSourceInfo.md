@@ -6,23 +6,15 @@ uid: PropertiesSourceInfo
 
 In the *\<PropertiesSourceInfo>* tag, specify the DataMiner properties from which to retrieve the necessary data in order to draw the layer’s objects, which can be either markers or lines.
 
-- In the type attribute, specify the type of DataMiner items from which to retrieve the parameter values: views, elements or services.
-
-- If the style attribute is set to “markers” (i.e. the default setting), the layer will display markers, each positioned at a location specified by one pair of latitude/longitude values.
-
-- If the style attribute is set to “lines”, the layer will display lines, each connecting two pairs of latitude/longitude values. Each line will be displayed as a geodesic, a segment of a “great circle” representing the shortest distance between two points on the surface of the Earth.
+In the *type* attribute, specify the type of DataMiner items from which to retrieve the parameter values: views, elements or services.
 
 ## PropertiesSourceInfo subTags
 
 Inside the *\<PropertiesSourceInfo>* tag, you can place the following tags.
 
-### LatitudePropertyName/LongitudePropertyName/LatitudePropertyName2/Longitude­PropertyName2
+### LatitudePropertyName/LongitudePropertyName
 
 The names of the properties containing the latitude and longitude values.
-
-- If the style attribute is set to “markers”, only one pair of latitude/longitude values has to be specified in the *\<LatitudePropertyName>* and*\<LongitudePropertyName>* tags. In that case, the *\<LatitudePropertyName2>* and *\<LongitudePropertyName2>* tags will not be used and can therefore be omitted.
-
-- If the style attribute is set to “lines”, two pairs of latitude/longitude values have to be specified: one pair in the *\<LatitudePropertyName>* and*\<LongitudePropertyName>* tags, and another pair in the *\<LatitudePropertyName2>* and *\<LongitudePropertyName2>* tags.
 
 ### ViewFilter
 
@@ -50,6 +42,7 @@ value=[PropertyName][Operator][Value]
 ```
 
 > [!NOTE]
+>
 > - There must be a space before and after the operator. Possible operators: == (equal to) and != (not equal to)
 > - In a property filter, you can use placeholders referring to variables declared in the *\<PropertiesSourceInfo>* tag. The \[DMA_USERNAME\] placeholder, however, is a general placeholder that does not need to be declared. At runtime, it will be replaced by the name of the current user.
 
