@@ -71,3 +71,17 @@ Alternatively, you can go to `http://[DMA name]/DataminerCubeStandalone/publish.
 > Once you have installed the application, it will automatically be updated whenever a new version is available.
 
 ***
+
+## How the DataMiner Cube desktop application is updated
+
+When you connect to a DataMiner server, the correct version of the DataMiner Cube desktop application will automatically be downloaded from that server.
+
+The DataMiner Cube desktop application will also check the servers you connect to for new software versions. Moreover, it will periodically check <https://dataminer.services> for a new version. This check is triggered by a task in Windows Task Scheduler, which is created when the DataMiner Cube desktop application is installed. The task is created in the folder "DataMiner Cube" and is named "Update DataMiner Cube_", followed by the user ID.
+
+This scheduled task can be edited to change the interval or time or to completely disable the background updates (by disabling the task). To reset the task to the default settings, simply delete the task and start the DataMiner Cube desktop application. The scheduled task will automatically be created again.
+
+You can also manually trigger an update by executing the above-mentioned scheduled task or by clicking the cogwheel button in the start window and selecting *Check for updates*.
+
+### Phased rollout
+
+Background updates (triggered by the Windows Task Scheduler) for the DataMiner Cube desktop application have a phased rollout. This means not all clients will be updated at the same time. Different clients will receive the update over a time period of a few days. However, you can force the application to update to the latest available version by clicking the cogwheel button in the start window and selecting *Check for updates*.
