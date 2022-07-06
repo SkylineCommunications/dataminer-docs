@@ -2641,6 +2641,8 @@
           topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
         - name: Offline demo license for DMA to be installed by user
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+    - name: Support services agreement
+      topicUID: Support_services_agreement
     - name: Custom branding
       topicUID: Custom_branding
     - name: DataMiner metrics
