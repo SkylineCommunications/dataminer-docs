@@ -39,7 +39,7 @@ To use the SLLogCollector tool:
 1. When the configuration is complete, click *Start*.
 
    > [!NOTE]
-   > If you just want to use the default settings and save the package to your desktop, there is no need to configure any of the options mentioned in the previous step. All you need to do is click the *Start* button.
+   > If you just want to use the default settings and save the package to your desktop, there is no need to configure any of the options mentioned in the previous step. All you need to do is click the *Start* button. In case of RTEs, memory dumps are included automatically.
    >
    > ![SLLogCollector](~/user-guide/images/SLLogCollector.png)
 
