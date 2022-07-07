@@ -102,3 +102,23 @@ var singleHistory = allHistory.First();
 var sectionChanges = singleHistory.Changes.OfType<DomSectionChange>();
 var statusChanges = singleHistory.Changes.OfType<DomInstanceStatusChange>();
 ```
+
+## Sending a transition request
+
+Transitioning to another status for a DOM instance must be done by sending a transition request. This request requires the ID of the DOM instance and the ID of the transition.
+
+For example:
+
+```csharp
+domHelper.DomInstances.DoStatusTransition(domInstance.ID, "initial_to_acceptance");
+```
+
+When something goes wrong while transitioning, a *DomStatusTransitionError* will be returned in the *TraceData* of the request. This error can contain the following reasons:
+
+| Reason | Description |
+| StatusTransitionNotFound | The given transition ID does not match any of the IDs defined on the associated DOM behavior definition. This error can also occur when there is no valid DOM behavior definition linked in the first place. *StatusTransitionId* contains the ID of the transition that could not be found. |
+| StatusTransitionIncompatibleWithCurrentStatus | The current status of the DOM instance does not match the "from" status defined by the transition. *StatusTransitionId* contains the ID of the transition that could not be completed. |
+| DomInstanceContainsUnknownFieldsForNextStatus | There is at least one field value defined in the DOM instance for which no link could be found in the DOM behavior definition for the next status. *AssociatedFields* contains the *SectionDefinitionID* and *FieldDescriptorID* combinations of the unknown fields. |
+| DomInstanceHasInvalidFieldsForNextStatus | The DOM instance contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same *SectionDefinition* and *FieldDescriptor*, only one entry will be included. *AssociatedFields* contains the *SectionDefinitionID* and *FieldDescriptorID* combinations of the invalid fields |
+| DomInstanceHasMissingRequiredFieldsForNextStatus | The DOM instance does not contain all fields that are required for the next status. *AssociatedFields* contains the *SectionDefinitionID* and *FieldDescriptorID* combinations of the missing fields |
+| CrudFailedExceptionOccurred | When the DOM instance was saved, a *CrudFailedException* occurred. *InnerTraceData* contains the *TraceData* contained in the exception. |
