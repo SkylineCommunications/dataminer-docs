@@ -855,6 +855,19 @@ It is possible to override the default behavior of this placeholder for child sh
 
 In a drawing linked to an enhanced service, you can refer to this service with this placeholder.
 
+### \[this reservationID\]
+
+From DataMiner 10.2.8/10.3.0 onwards, you can use this placeholder in shape data or shape text of shapes linked to a booking (e.g. dynamically generated shapes that represent bookings) to retrieve the GUID of the booking. The placeholder can also be nested, for example to retrieve booking properties or resources.
+
+For example:
+
+`[Resource:[reservation:[this reservationID],ResourceID|NodeID=18|],Name]`
+
+`[reservation:[this reservationID],Property=Monitoring]`
+
+> [!NOTE]
+> This placeholder is often used in combination with the shape data **Options** set to `AllowInheritance=False|ForcePropertyFromParent`. See [AllowInheritance=False](xref:Overview_of_page_and_shape_options#allowinheritancefalse) and [ForcePropertyFromParent](xref:Overview_of_page_and_shape_options#forcepropertyfromparent).
+
 ### \[this service\]
 
 Reference to the service to which the Visio drawing is linked.
