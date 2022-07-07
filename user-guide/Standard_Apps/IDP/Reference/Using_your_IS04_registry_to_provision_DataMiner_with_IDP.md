@@ -10,7 +10,7 @@ Below, you can find how you can configure DataMiner IDP to use an NMOS IS-04 reg
 
 - Make sure your DataMiner System has been upgraded to the correct minimum version required for the version of Process Automation that you intend to use, or preferably, simply upgrade to the [latest DataMiner feature release](https://community.dataminer.services/downloads/).
 
-- Install [DataMiner IDP with Process Automation](Installing_DataMiner_IDP).
+- Install [DataMiner IDP with Process Automation](xref:Installing_DataMiner_IDP).
 
 - Make sure a DataMiner element is available that uses the connector [AMWA NMOS IS-04 Registry](https://catalog.dataminer.services/result/driver/6923). During element creation, the *IP address/host* of the connection *HTTP Connection Main* must be set to the IP address of the IS-04 registry.
 
@@ -20,7 +20,7 @@ Below, you can find how you can configure DataMiner IDP to use an NMOS IS-04 reg
 
 Add the custom element property *IS-04 Node GUID*, as described in [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item). Make sure to specify the options as shown in figure 1 below.
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_1.png) |
 | Figure 1: Configuration of element property IS-04 Node GUID |
 
 When an element is provisioned for an IS-04 node that registered itself to the IS-04 registry, the custom update property script will fill in this element property with the node's [Node ID](https://specs.amwa.tv/is-04/releases/v1.3.1/docs/5.1._Data_Model_-_Identifier_Mapping.html#node-id).
@@ -50,7 +50,7 @@ The configured discovery details will be used to identify a CI type when a respo
 
 The *Conditions* field supports logical operators as explained in [Conditions Options](xref:CI_Types1).
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_2.png) |
 | Figure 2 Discovery details of a CI type using SNMPv2 discovery identifiers |
 
 > [!NOTE]
@@ -75,13 +75,13 @@ Either way, a pop-up window will open. In this window, you need to configure the
 
 - The **IS-04 Node GUID** property (possible from IDP 1.1.15 onwards). To add this property, click the *Properties* button. In the *Other Properties* section, you can then select to *Use an existing property* if the property already exists in the DMS, or otherwise select *Create new property*. Then specify the property and click *Add* (see figure 5).
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_3.png) |
 | Figure 3: Provisioning details of a CI type |
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_4.png) |
 | Figure 4: Element details of a CI type |
 
-| ![]() |
+| ![](~/user-guide/images/AddPropertyToCIType-1.png) |
 | Figure 5: Configuring the IS-04 Node GUID property |
 
 ### Creating new discovery profiles (optional)
@@ -121,17 +121,17 @@ For the IS-04 nodes to be provisioned, there have to be two active processes:
 
 It is advised to make sure both processes are always active. You can do so by setting the activation window type to *Permanent* (see figure 6) in the *Process Automation Wizard*.
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_5.png) |
 | Figure 6: First step of the Process Automation Wizard |
 
 ### IDP IS-04 Provision New Nodes
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_6-1024x131.png) |
 | Figure 7: Activities in the process IDP IS-04 Provision New Nodes |
 
 To create an active process:
 
-1. Launch the Process Automation Wizard, as explained in [Processes](Overview_of_the_IDP_app_UI#processes).
+1. Launch the Process Automation Wizard, as explained in [Processes](xref:Overview_of_the_IDP_app_UI#processes).
 
 1. In the first step of the wizard, fill in the name, activation window type and activation window time (see figure 6).
 
@@ -145,20 +145,20 @@ To create an active process:
 
 1. Finally, in the third step, select a profile and resource for the token, and click *Create* (see figure 9).
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_7.png) |
 | Figure 8: Details of the process configuration to provision new nodes |
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_8.png) |
 | Figure 9: Token profile and resource selection in the last step of the Process Automation Wizard |
 
 ### IDP IS-04 Update Existing Nodes
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_9.png) |
 | Figure 10: Activities in the process IDP IS-04 Update Existing Nodes |
 
 To create an active process:
 
-1. Launch the Process Automation Wizard, as explained in [Processes](Overview_of_the_IDP_app_UI#processes).
+1. Launch the Process Automation Wizard, as explained in [Processes](xref:Overview_of_the_IDP_app_UI#processes).
 
 1. In the first step of the wizard, fill in the name, activation window type and activation window time details (see figure 6).
 
@@ -168,5 +168,5 @@ To create an active process:
 
 1. Finally, in the third step, select a profile and resource for the token, and click *Create* (see figure 9).
 
-| ![]() |
+| ![](~/user-guide/images/IDP_IS-04_10.png) |
 | Figure 11: Details of the process configuration to update existing elements |
