@@ -2109,9 +2109,35 @@
           topicUid: Configuring_custom_apps
         - name: Deleting a custom application
           topicUid: Deleting_custom_apps
-- name: DataMiner Standard Apps & Solutions
-  topicUid: Part5StandardApps
-  items:
+    - name: DataMiner Object Models (DOM)
+      topicUID: DOM
+      items:
+        - name: DOM objects
+          topicUid: DOM_objects
+          items:
+            - name: SectionDefinition object
+              topicUID: DOM_SectionDefinition
+            - name: DomDefinition object
+              topicUID: DomDefinition
+            - name: DomInstance object
+              topicUID: DomInstance
+            - name: DomTemplate object
+              topicUID: DomTemplate
+            - name: DomBehaviorDefinition object
+              topicUID: DomBehaviorDefinition
+        - name: DOM managers
+          topicUid: DOM_managers
+          items:
+            - name: DOM events
+              topicUID: DOM_events
+            - name: DOM history
+              topicUID: DOM_history
+            - name: DOM status system
+              topicUID: DOM_status_system
+        - name: DomHelper class
+          topicUid: DomHelper_class
+        - name: DOM data storage
+          topicUid: DOM_data_storage
     - name: DataMiner EPM Solution
       topicUid: SolEPM
       items:

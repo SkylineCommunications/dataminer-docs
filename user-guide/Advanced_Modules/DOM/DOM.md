@@ -14,4 +14,7 @@ A DataMiner Object Model is a generic data storage system that makes it possible
 
 - [DomHelper class](xref:DomHelper_class)
 
-- [Data storage](xref:DOM_data_storage)
+- [DOM data storage](xref:DOM_data_storage)
+
+> [!NOTE]
+> DOM data can be displayed in dashboards and applications from DataMiner 10.1.7 onwards. However, this feature is currently still in soft launch, so you will need to activate the *DOMManager* [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/) to use it.

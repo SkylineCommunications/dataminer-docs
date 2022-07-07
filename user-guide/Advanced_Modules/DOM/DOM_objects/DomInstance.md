@@ -1,0 +1,5 @@
+---
+uid: DomInstance
+---
+
+# DomInstance object

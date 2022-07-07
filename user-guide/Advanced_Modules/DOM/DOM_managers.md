@@ -6,6 +6,8 @@ uid: DOM_managers
 
 A DOM manager manages create, read, update, and delete actions performed on DOM objects. Multiple DOM manager instances can be used at the same time in a DMS, for instance for invoicing, planned maintenance, etc.
 
+A DOM manager sends out various [events](xref:DOM_events) when actions are done on the DOM objects and tracks the [history](xref:DOM_history) of all changes done to the field values of a DOM instance. It also allows you to configure the [status system](xref:DOM_status_system) for a DOM definition.
+
 To create a DOM manager, you first need to create a *ModuleSettings* object. You can do so by using the moduleSettingsHelper in a script. For example:
 
 ```csharp

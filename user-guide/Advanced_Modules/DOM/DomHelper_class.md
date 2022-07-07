@@ -4,7 +4,9 @@ uid: DomHelper_class
 
 # DomHelper class
 
-The DomHelper class can be used in a script, protocol, or app to execute create, read, update, and delete actions on DOM objects.
+## CRUD actions
+
+The *DomHelper* class can be used in a script, protocol, or app to execute create, read, update, and delete (CRUD) actions on DOM objects.
 
 To do so, first call the constructor of the helper, provide a callback to SLNet, and specify a module ID for which module settings have been defined. For example:
 
@@ -80,3 +82,23 @@ if (!traceData.HasSucceeded())
 ```
 
 <!-- Add Xref to error data types and error reasons? -->
+
+## Retrieving history information
+
+You can also retrieve [HistoryChange](wref:DOM_history#historychange) objects using the *DomHelper* class. You can filter them using HistoryChangeExposers.
+
+> [!NOTE]
+> It is only possible to read *HistoryChange* items. Creating, updating or deleting is reserved for the internal API.
+
+Example:
+
+```csharp
+// Get all history for a specific DomInstance
+var filter = HistoryChangeExposers.SubjectID.Equal(domInstance.ID.ToFileFriendlyString());
+var allHistory = domHelper.DomInstanceHistory.Read(filter);
+
+// Cast the changes
+var singleHistory = allHistory.First();
+var sectionChanges = singleHistory.Changes.OfType<DomSectionChange>();
+var statusChanges = singleHistory.Changes.OfType<DomInstanceStatusChange>();
+```

@@ -1,0 +1,5 @@
+---
+uid: DomDefinition
+---
+
+# DomDefinition object

@@ -10,11 +10,11 @@ In addition to this, a **DOM template** can also be defined, which is a DOM inst
 
 In summary:
 
-- **Section definition**: Defines the data that should be present in a section of a DOM instance, using field descriptors.
-- **DOM definition**: Groups DOM instances together and defines which section definitions should be used by the instances.
-- **DOM instance**: Contains field values in its different sections, as defined in the section definitions, which in turn are defined by the DOM definition.
-- **DOM template**: Pre-filled DOM instance object that can be used as a template.
-- **DOM behavior definition**: Extension of a DOM definition that adds additional behavior configuration.
+- [SectionDefinition object](xref:DOM_SectionDefinition): Defines the data that should be present in a section of a DOM instance, using field descriptors.
+- [DomDefinition object](xref:DomDefinition): Groups DOM instances together and defines which section definitions should be used by the instances.
+- [DomInstance object](xref:DomInstance): Contains field values in its different sections, as defined in the section definitions, which in turn are defined by the DOM definition.
+- [DomTemplate object](xref:DomTemplate): Pre-filled DOM instance object that can be used as a template.
+- [DomBehaviorDefinition object](xref:DomBehaviorDefinition): Extension of a DOM definition that adds additional behavior configuration.
 
 For example, to create a system that stores time spent working on specific tasks registered by employees, you could create a section definition with the name "PunchInfoSectionDefinition", consisting of the following field descriptors:
 
