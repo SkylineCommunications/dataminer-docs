@@ -20,7 +20,8 @@ Below, you can find how you can configure DataMiner IDP to use an NMOS IS-04 reg
 
 Add the custom element property *IS-04 Node GUID*, as described in [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item). Make sure to specify the options as shown in figure 1 below.
 
-| ![](~/user-guide/images/IDP_IS-04_1.png) |
+| ![Configuration of element property IS-04 Node GUID](~/user-guide/images/IDP_IS-04_1.png) |
+|:--:|
 | Figure 1: Configuration of element property IS-04 Node GUID |
 
 When an element is provisioned for an IS-04 node that registered itself to the IS-04 registry, the custom update property script will fill in this element property with the node's [Node ID](https://specs.amwa.tv/is-04/releases/v1.3.1/docs/5.1._Data_Model_-_Identifier_Mapping.html#node-id).
