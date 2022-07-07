@@ -865,6 +865,9 @@ For example:
 
 `[reservation:[this reservationID],Property=Monitoring]`
 
+> [!NOTE]
+> This placeholder is often used in combination with the shape data **Options** set to `AllowInheritance=False|ForcePropertyFromParent`. See [AllowInheritance=False](xref:Overview_of_page_and_shape_options#allowinheritancefalse) and [ForcePropertyFromParent](xref:Overview_of_page_and_shape_options#forcepropertyfromparent).
+
 ### \[this service\]
 
 Reference to the service to which the Visio drawing is linked.

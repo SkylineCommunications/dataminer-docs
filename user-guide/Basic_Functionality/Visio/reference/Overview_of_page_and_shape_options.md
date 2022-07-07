@@ -78,6 +78,7 @@ Shape-level option.
 Available from DataMiner 10.0.11 onwards. By default, child shapes of an *Element* or *View* shape automatically inherit the shape data of the parent shape. In cases where you want to e.g. link a child shape to another service or element, you can use this option to disable this automatic inheritance.
 
 > [!NOTE]
+>
 > - This renders the option *NoCopyElementProperty* obsolete, since this option does the same thing for *Element* shapes only.
 > - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, this option can also be used for element shapes that are a child of another element shape, to ensure that these do not inherit the service context of the parent if they have no service context of their own. This inheritance does not occur prior to DataMiner 10.0.0 \[CU13\]/10.1.0 \[CU2\]/10.1.5.
 
@@ -382,7 +383,7 @@ See [Placeholders for variables in shape data values](xref:Placeholders_for_vari
 
 Shape-level option.
 
-Use this option if you want *\[this view\]*, *\[this service\]*, and *\[this element\], as well as \[this ViewID\],* *\[this ServiceID\]*, and *\[this ElementID\]* placeholders for child shapes to refer to the view, service or element specified in their parent shape, instead of the view, service or element linked to the entire Visio drawing.
+Use this option if you want *\[this view\]*, *\[this service\]*, *\[this element\]*, *\[this ViewID\]*, *\[this ServiceID\]*, *\[this ElementID\]*, and *\[this reservationID\]* placeholders for child shapes to refer to the view, service, element, or reservation specified in their parent shape, instead of the one linked to the entire Visio drawing.
 
 See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
