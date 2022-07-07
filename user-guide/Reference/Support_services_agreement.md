@@ -35,7 +35,7 @@ For the purpose of this Agreement, the following terms shall have the meanings i
 
 ## Support plans 
 
-Skyline offers two levels of Support Services: Continuity and Evolve. An overview and description of the two levels of Support Services offered by skyline can be found on [DataMiner Dojo](https://community.dataminer.services/support-services/). 
+Skyline offers two levels of Support Services: Continuity and Evolve. An overview and description of the two levels of Support Services offered by Skyline can be found on [DataMiner Dojo](https://community.dataminer.services/support-services/). 
 
 ## Supported products 
 
@@ -162,7 +162,7 @@ Depending on the Priority Level of a ticket, Skyline will address the ticket wit
 
 In the event of a Failure, the following procedure shall apply: (i) User shall inform Skyline in writing of the Failure within three (3) business days of the alleged Failure, (ii) Skyline shall investigate the alleged Failure and inform User in writing of its acceptance or non-acceptance of the alleged Failure, (iii) User shall provide reasonable assistance to Skyline in its efforts to correct any problems or processes inhibiting Skyline's ability to reach the timeframes and if the Failure by Skyline is proved, (iv) Skyline shall credit 0,25 % of the Support Services fee for the impacted licenses to User, subject to a maximum of 5% of the yearly Support Services fee. 
 
-The credit for Failures stated in this section 4 shall be User's sole and exclusive remedy with respect to any alleged or actual Failure. 
+The credit for Failures stated in this Failures section shall be User's sole and exclusive remedy with respect to any alleged or actual Failure. 
 
 ### Out of business hours support 
 
@@ -199,6 +199,6 @@ In each one-year period of Support Services purchased by User, Service Credits a
 
 Service Credits are subject to availability and thus not guaranteed. User is recommended to timely schedule services that are to be performed using Service Credits. Non-used portions of Service Credits are not transferable to subsequent years.  
 
-#### Lab licenses 
+#### Lab licenses
 
 Upon User's request, Skyline will provide lab licenses of the Software to User. Such lab licenses may not be used in a production environment. The lab license(s) will be granted in Skyline's sole discretion, which shall not be unreasonably withheld. 
