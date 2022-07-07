@@ -138,6 +138,8 @@ To do so:
 - **My browser displays a 'This site is not secure' warning when I connect to my DataMiner system**
 
     Most likely, the URL does not match the *Common Name (CN)* or *Subject Alternative Name (SAN)* field of the TLS certificate. For example, `https://localhost` or `https://10.10.10.10` does not match *dataminer.skyline.be*. To fix this, update the certificate so the *Subject Alternative Name (SAN)* matches the URL, or use a URL that matches the *Common Name (CN)* or *Subject Alternative Name (SAN)* field.
+    
+    If the URL matches the certificate, your machine likely doesn't trust the certificate or the certificate is self-signed. Ensure the certificate is added to the *Trusted Root Certification Authorities* of your certificate store. For more information, see [trusting a certificate in Windows](https://techcommunity.microsoft.com/t5/windows-server-essentials-and/installing-a-self-signed-certificate-as-a-trusted-root-ca-in/ba-p/396105).
 
 - **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, Ticketing, etc.)**
 
