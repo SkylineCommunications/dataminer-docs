@@ -74,6 +74,6 @@ Remarks on the Elasticsearch installation:
     ```
 
   > [!NOTE]
-  > For systems using the Cassandra Cluster feature, use the [Cassandra Cluster Migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/) tool instead.
+  > For systems using the Cassandra Cluster feature, use the [Cassandra Cluster Migrator](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) tool instead.
 
 - When you install Elasticsearch, TLS is not enabled by default. For information on how to enable this, see [SSL/TLS Encryption](xref:Security_Elasticsearch#ssltls-encryption).

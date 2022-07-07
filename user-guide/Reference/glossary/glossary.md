@@ -397,7 +397,7 @@ uid: glossary
 | SLA window | The time interval for which SLA compliance is calculated. See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
 | SLC | Skyline Communications. |
 | Sliding window | Time frame with a fixed size that moves along with the present time. Can for example be used in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console). |
-| SLLogCollector | Tool that allows you to easily collect log information and memory dumps from a DMA. See <https://community.dataminer.services/documentation/sllogcollector-tool/>. |
+| SLLogCollector | Tool that allows you to easily collect log information and memory dumps from a DMA. See [SLLogCollector](xref:SLLogCollector). |
 | SLNetClientTest tool | Advanced system administration tool with a range of different functionalities. See [SLNetClientTest tool](xref:SLNetClientTest_tool). |
 | SLOffload tool | Tool that can be used to manually trigger a database offload to an Oracle or a MySQL database. See [SLOffload tool](xref:SLOffload_tool). |
 | Smart serial connection | Serial connection where the device can send messages to the DMA without having received a command requesting a response. |
