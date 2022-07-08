@@ -16,7 +16,8 @@ Depending on the type of database, the procedure is slightly different.
 
      > [!NOTE]
      >
-     > - For DataMiner versions up to DataMiner 9.6.5, MySQL versions 4.1.1 to 5.7 are supported (using connector version 5.2.7). From DataMiner 9.6.5 onwards, versions up to 8.0 (8.0 not included) are supported (using connector version 6.9.12).
+     > - For DataMiner versions up to DataMiner 9.6.5, MySQL versions 4.1.1 to 5.7 are supported (using connector version 5.2.7). From DataMiner 9.6.5 onwards, versions up to 8.0 are supported (using connector version 6.9.12).
+     > - To use MySQL 8.0 an additional change is needed within the database. You need the set the local_infile variable to 1. In previous versions this was not a default version and now has changed. To do this in the database you can use the command: SET GLOBAL local_infile=1;
      > - For MySQL, do not activate strict mode (STRICT_TRANS_TABLES) during installation. If you do so, the database offloads will fail.
 
    - MSSQL Server
