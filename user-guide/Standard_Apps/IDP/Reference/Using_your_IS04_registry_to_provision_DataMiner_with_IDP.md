@@ -110,7 +110,7 @@ When the script has been implemented, you need to configure the necessary CI typ
 
 ### Configuring the Automation settings
 
-After the CI types have been configured with discovery and provisioning details as described above, go to the *Processes > Automation* page of the IDP app and enable the discovery and provisioning operation.
+After the CI types have been configured with discovery and provisioning details as described above, go to the *Admin > Activities* (or in *Processes > Activities* prior to IDP 1.1.20) page of the IDP app and verify if the discovery and provisioning operations are enabled.
 
 ## Starting the IS-04 processes
 
