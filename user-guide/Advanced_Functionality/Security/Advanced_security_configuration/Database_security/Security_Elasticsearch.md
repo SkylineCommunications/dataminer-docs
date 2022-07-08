@@ -60,7 +60,7 @@ To **update** an existing password:
 
 1. Update the password in the *DB.xml* file on every DataMiner Agent and restart the DataMiner System.
 
-## Client-Server TLS Encryption
+## Client-server TLS encryption
 
 By default all client-server communication with Elasticsearch is unencrypted.
 
@@ -95,7 +95,7 @@ To configure TLS encryption for client-server communication:
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
-## Inter-Node TLS Encryption
+## Inter-node TLS encryption
 
 By default inter-node communication in Elasticsearch is unencrypted.
 
@@ -103,7 +103,8 @@ To configure TLS encryption for inter-node communication:
 
 1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
 
-1. Add the following to the *elasticsearch.yml*  on each node:
+1. Add the following to the *elasticsearch.yml* on each node:
+
     ``` 
     xpack.security.transport.ssl.enabled: true
     xpack.security.transport.ssl.verification_mode: full 
@@ -112,6 +113,7 @@ To configure TLS encryption for inter-node communication:
     ```
     
 1. If you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
+
     ```
     bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password
     bin/elasticsearch-keystore add xpack.security.transport.ssl.truststore.secure_password
