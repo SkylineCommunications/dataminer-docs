@@ -60,13 +60,13 @@ To **update** an existing password:
 
 1. Update the password in the *DB.xml* file on every DataMiner Agent and restart the DataMiner System.
 
-## SSL/TLS Encryption
+## Client-Server TLS Encryption
 
 By default all client-server communication with Elasticsearch is unencrypted.
 
-To configure SSL/TLS encryption in Elasticsearch:
+To configure TLS encryption for client-server communication:
 
-1. Request or generate a TLS certificate. Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
+1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
 
 1. Add the following lines to the *elasticsearch.yml* file:
 
@@ -94,6 +94,33 @@ To configure SSL/TLS encryption in Elasticsearch:
 
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
+
+## Inter-Node TLS Encryption
+
+By default inter-node communication in Elasticsearch is unencrypted.
+
+To configure TLS encryption for inter-node communication:
+
+1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
+
+1. Add the following to the *elasticsearch.yml*  on each node:
+    ``` 
+    xpack.security.transport.ssl.enabled: true
+    xpack.security.transport.ssl.verification_mode: full 
+    xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
+    xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
+    ```
+    
+1. If you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
+    ```
+    bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password
+    bin/elasticsearch-keystore add xpack.security.transport.ssl.truststore.secure_password
+    ```
+   
+1. Restart the Elasticsearch cluster (all nodes).
+
+> [!NOTE]
+> DataMiner does **not** require a restart when enabling *inter-node* TLS encryption.
 
 ## Updating Elasticsearch
 
