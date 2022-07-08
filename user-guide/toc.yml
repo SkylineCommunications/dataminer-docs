@@ -2257,6 +2257,8 @@
               topicUid: Discovery_profiles
             - name: CI Types
               topicUid: CI_Types1
+            - name: Using your IS-04 registry to provision DataMiner with IDP
+              topicUID: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
     - name: DataMiner PTP app
       topicUid: SolPTP
       items:
