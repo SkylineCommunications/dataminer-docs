@@ -16,7 +16,7 @@ string
 
 ## Remarks
 
-Can be used to display a comment when users change the parameter on the user interface. This makes a popup window appear with the specified message and Yes/No buttons asking for confirmation.
+Can be used to display a comment when users change the parameter on the user interface. This makes a pop-up window appear with the specified message and Yes/No buttons asking for confirmation.
 
 Usually, this text will appear as a pop-up warning when a potentially dangerous setting has to be changed.
 
