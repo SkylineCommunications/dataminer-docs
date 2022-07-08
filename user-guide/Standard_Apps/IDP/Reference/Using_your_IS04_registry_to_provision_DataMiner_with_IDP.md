@@ -18,6 +18,10 @@ Below, you can find how you can configure DataMiner IDP to use an NMOS IS-04 reg
 
 ### Adding the element property IS-04 Node GUID
 
+> [!NOTE]
+> This is no longer necessary from IDP version 1.1.15 onwards.
+> From IDP version 1.1.15 onwards, the property can be added via the *CI Type Management* wizard instead. For more information, see [Editing the provisioning details of a CI type](#editing-the-provisioning-details-of-a-ci-type).
+
 Add the custom element property *IS-04 Node GUID*, as described in [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item). Make sure to specify the options as shown in figure 1 below.
 
 ![Configuration of element property IS-04 Node GUID](~/user-guide/images/IDP_IS-04_1.png)<br>
@@ -26,9 +30,6 @@ Add the custom element property *IS-04 Node GUID*, as described in [Adding a cus
 When an element is provisioned for an IS-04 node that registered itself to the IS-04 registry, the custom update property script will fill in this element property with the node's [Node ID](https://specs.amwa.tv/is-04/releases/v1.3.1/docs/5.1._Data_Model_-_Identifier_Mapping.html#node-id).
 
 It is important that the Node ID is stored on the provisioned elements, as this is how the connector *AMWA NMOS IS04 Registry* will identify if a node has already been provisioned. If this property is not configured or not filled in by the custom update property script, each node update will trigger the provisioning of a new element.
-
-> [!NOTE]
-> From IDP version 1.1.15 onwards, the property can be added via the *CI Type Management* wizard instead. For more information, see [Editing the provisioning details of a CI type](#editing-the-provisioning-details-of-a-ci-type).
 
 ### Configuring the CI types
 
