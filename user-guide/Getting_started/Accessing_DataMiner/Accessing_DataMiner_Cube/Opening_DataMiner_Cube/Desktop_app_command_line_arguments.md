@@ -2,7 +2,7 @@
 uid: Desktop_app_command_line_arguments
 ---
 
-# Desktop application command line arguments
+# Desktop application command-line arguments
 
 When you start the DataMiner Cube desktop application, the latest Cube binary files are downloaded to your client PC (`%localappdata%\Skyline\DataMiner\DataMinerCube\`) and executed.
 
