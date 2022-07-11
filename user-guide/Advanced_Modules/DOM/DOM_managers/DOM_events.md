@@ -20,7 +20,7 @@ These types of events contain lists with the created, updated, and deleted objec
 
 ### Filtering CRUD events
 
-When subscribing to event messages you can use the *ModuleEventSubscriptionFilter* to only receive the messages of a specific type and for a specific module ID.
+When subscribing to event messages you can use the `ModuleEventSubscriptionFilter` to only receive the messages of a specific type and for a specific module ID.
 
 ```csharp
 // In this example we take the Connection object from the script's Engine object
@@ -44,17 +44,17 @@ connection.AddSubscription(setId, subscriptionFilter);
 
 ## Status transition event
 
-In addition to the CRUD Events, there is also a *DomInstanceStatusChangedEventMessage* event. This event is sent when a status transition happens on a DOM instance (see [status system](xref:DOM_status_system).
+In addition to the CRUD Events, there is also a `DomInstanceStatusChangedEventMessage` event. This event is sent when a status transition happens on a DOM instance (see [status system](xref:DOM_status_system).
 
 This event contains a list of changes as well as the module ID of the DOM manager that generated the transition. A change contains the following items:
 
-- *DomInstanceID*: The ID of the DOM instance of which the status changed.
+- `DomInstanceID`: The ID of the DOM instance of which the status changed.
 
-- *FromStatus*: The status of the DOM instance before the transition.
+- `FromStatus`: The status of the DOM instance before the transition.
 
-- *ToStatus*: The status of the DOM instance after the transition.
+- `ToStatus`: The status of the DOM instance after the transition.
 
-- *Username*: The username of the user who executed the transition.
+- `Username`: The username of the user who executed the transition.
 
 > [!NOTE]
 >
@@ -63,11 +63,11 @@ This event contains a list of changes as well as the module ID of the DOM manage
 
 ### Filtering status transition events
 
-Apart from the module filter, which can also be used for the status events, you can also configure a filter on the event contents. To do so, use a *SubscriptionFilter* that contains a *FilterElement*. If you use this as a second filter, for example, you will only receive status events for a specific DOM instance and when the status changes to a specific type.
+Apart from the module filter, which can also be used for the status events, you can also configure a filter on the event contents. To do so, use a `SubscriptionFilter` that contains a `FilterElement`. If you use this as a second filter, for example, you will only receive status events for a specific DOM instance and when the status changes to a specific type.
 
 > [!NOTE]
 >
-> - Only one *ModuleEventSubscriptionFilter* is supported for each subscription set. If you want to subscribe to events of multiple DOM managers, you will have to create another subscription for each one.
+> - Only one `ModuleEventSubscriptionFilter` is supported for each subscription set. If you want to subscribe to events of multiple DOM managers, you will have to create another subscription for each one.
 > - The ***ModuleEventSubscriptionFilter* takes precedence over any other filter for a module event** (e.g. DOM CRUD or status events). When such a filter is defined and the module event does not match the specified module ID, it will never be returned for that subscription. If it is a match, it will be returned depending on the remaining filters. If there are no other filters, it is simply returned. This does not influence non-module events.
 
 ```csharp
