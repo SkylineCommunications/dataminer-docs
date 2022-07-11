@@ -49,8 +49,11 @@ In addition to the CRUD Events, there is also a *DomInstanceStatusChangedEventMe
 This event contains a list of changes as well as the module ID of the DOM manager that generated the transition. A change contains the following items:
 
 - *DomInstanceID*: The ID of the DOM instance of which the status changed.
+
 - *FromStatus*: The status of the DOM instance before the transition.
+
 - *ToStatus*: The status of the DOM instance after the transition.
+
 - *Username*: The username of the user who executed the transition.
 
 > [!NOTE]

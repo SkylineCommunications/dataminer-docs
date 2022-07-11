@@ -10,7 +10,7 @@ The *DomDefinition* object groups *DomInstance* objects together (as each instan
 
 The table below lists the properties of the *DomDefinition* object. It also indicates whether a property can be used for filtering using the *DomDefinitionExposers*.
 
-| Property | Type | Filterable | Explanation |
+| Property | Type | Filterable | Description |
 | ID | DomDefinitionId | Yes | The ID of the DOM definition. |
 | Name | string | Yes | The name of the DOM definition. |
 | SectionDefinitionLinks | List\<[SectionDefinitionLink](#sectiondefinitionlink)> | Yes | Contains the required/allowed section definitions. |
@@ -34,7 +34,9 @@ At present, the following setting can be overridden:
 ## Requirements
 
 - To **create or update** a *DomDefinition* object, it must contain a *SectionDefinitionLink* for each module section definition defined in the *ModuleSettings*.
+
 - When you **update** the *SectionDefinitionLinks* list of a *DomDefinition* object, it is not possible to remove a link when there are already DOM instances that have sections for this link. However, you can hide the link from the UI by flagging it as soft-deleted.
+
 - A *DomDefinition* object can only be deleted when no DOM instances are linked to it. You should therefore first delete those before you can delete the DOM definition.
 
 ## Errors
@@ -50,5 +52,6 @@ When something goes wrong during the CRUD actions, the *TraceData* can contain o
 
 Security checks are done on CRUD actions when permission flags are configured on the *DomManagerSecuritySettings* (in the [ModuleSettings](xref:DOM_ModuleSettings)):
 
-- To read DOM definitions, the user requires the permission flag defined by *DomManagerSecuritySettings.ViewPermission*.
-- To create, update or delete DOM definitions, the user requires the permission flag defined by *DomManagerSecuritySettings.ConfigurePermission*.
+- To read DOM definitions, the user needs the permission flag defined by *DomManagerSecuritySettings.ViewPermission*.
+
+- To create, update or delete DOM definitions, the user needs the permission flag defined by *DomManagerSecuritySettings.ConfigurePermission*.

@@ -12,7 +12,7 @@ A *DomInstance* object contains the sections linked to the section definitions. 
 
 The table below lists the properties of the *DomInstance* object. It also indicates whether a property can be used for filtering using the *DomInstanceExposers*.
 
-| Property | Type | Filterable | Explanation |
+| Property | Type | Filterable | Description |
 | ID | DomInstanceId | Yes | The ID of the DOM instance. |
 | DomDefinitionId | DomDefinitionId | Yes | The ID of the DOM definition that this instance is linked to. |
 | Sections | List\<Section> | SectionIDs, SectionDefinitionIDs and FieldValues | Contains the required or allowed section definitions. |
@@ -24,7 +24,9 @@ The table below lists the properties of the *DomInstance* object. It also indica
 To **create or update** a *DomInstance* object:
 
 - The DOM instance must have a link to an existing DOM definition.
+
 - The DOM instance must contain a valid section for each *SectionDefinitionLink* defined on the linked DOM definition (if that *SectionDefinitionLink* is not marked as optional or soft deleted).
+
 - The sections on the DOM instance must contain the correct number of field values that also have the correct type.
 
 ## Errors
@@ -52,9 +54,11 @@ The errors below are related to the status system. For each error, the *DomInsta
 
 Security checks are done on CRUD actions when permission flags are configured on the *DomManagerSecuritySettings* (in the [ModuleSettings](xref:DOM_ModuleSettings)).
 
-- To read DOM instances, the user requires the permission flag defined by *DomManagerSecuritySettings.ViewPermission*.
-- To create or update DOM instances, the user requires the permission flag defined by *DomManagerSecuritySettings.CreateAndUpdateDomInstancePermission*.
-- To delete DOM instances, the user requires the permission flag defined by *DomManagerSecuritySettings.DeleteDomInstancePermission*.
+- To read DOM instances, the user needs the permission flag defined by *DomManagerSecuritySettings.ViewPermission*.
+
+- To create or update DOM instances, the user needs the permission flag defined by *DomManagerSecuritySettings.CreateAndUpdateDomInstancePermission*.
+
+- To delete DOM instances, the user needs the permission flag defined by *DomManagerSecuritySettings.DeleteDomInstancePermission*.
 
 ## Notes
 
