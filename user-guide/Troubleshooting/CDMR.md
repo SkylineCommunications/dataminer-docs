@@ -89,6 +89,7 @@ The file `C:\Skyline DataMiner\MaintenanceSettings.xml` must be configured to se
     </EMail>
 </Watchdog>
 ```
+
 In the `CCDestination` field, you can optionally specify an address where a copy of the report should be sent.
 
 After changes have been made to the *MaintenanceSettings.xml* file, a **DataMiner restart** is required.
