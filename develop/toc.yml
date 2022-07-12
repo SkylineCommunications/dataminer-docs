@@ -523,6 +523,17 @@
         topicUID: Why_is_serial_data_not_visible_in_DataMiner
       - name: QAction exceptions
         topicUID: QAction_exceptions
+        items:
+        - name: System.NullReferenceException
+          topicUID: System_NullReferenceException
+        - name: System.IndexOutOfRangeException
+          topicUID: System_IndexOutOfRangeException
+        - name: System.FormatException
+          topicUID: System_FormatException
+        - name: System.Collections.Generic.KeyNotFoundException
+          topicUID: System_Collections_Generic_KeyNotFoundException
+        - name: Identifying the source of an exception
+          topicUID: Identifying_the_source_of_an_exception
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
