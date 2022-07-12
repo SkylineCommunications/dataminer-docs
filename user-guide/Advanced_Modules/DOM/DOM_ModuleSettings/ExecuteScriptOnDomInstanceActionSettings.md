@@ -6,7 +6,7 @@ uid: ExecuteScriptOnDomInstanceActionSettings
 
 This settings object contains the names of the scripts that should be executed whenever a `DomInstance` is created, updated, or deleted. If no name is filled in, no script will be executed.
 
-The scripts used must have a `OnDomInstanceCrud` entrypoint defined. This makes it possible to know for what action and `DomInstance` the script was triggered.
+The scripts used must have a `OnDomInstanceCrud` entry point defined. This makes it possible to know for what action and `DomInstance` the script was triggered.
 
 ```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnDomInstanceCrud)]

@@ -2134,6 +2134,10 @@
               topicUID: DOM_history
             - name: DOM status system
               topicUID: DOM_status_system
+        - name: DomHelper class
+          topicUid: DomHelper_class
+        - name: DOM actions
+          topicUID: DOM_actions
         - name: DOM module settings
           topicUid: DOM_ModuleSettings
           items:
@@ -2155,8 +2159,6 @@
               topicUID: DOM_ModuleBehaviorDefinition
             - name: TtlSettings
               topicUID: DOM_TtlSettings
-        - name: DomHelper class
-          topicUid: DomHelper_class
         - name: DOM data storage
           topicUid: DOM_data_storage
 - name: DataMiner Standard Apps & Solutions
