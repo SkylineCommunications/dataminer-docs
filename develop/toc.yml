@@ -521,6 +521,8 @@
         topicUID: Investigating_a_protocol_thread_RTE
       - name: Why is serial data not visible in DataMiner?
         topicUID: Why_is_serial_data_not_visible_in_DataMiner
+      - name: QAction exceptions
+        topicUID: QAction_exceptions
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
