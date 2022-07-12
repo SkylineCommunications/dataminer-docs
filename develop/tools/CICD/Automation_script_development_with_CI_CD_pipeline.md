@@ -9,3 +9,5 @@ uid: Automation_script_development_with_CI_CD_pipeline
 - [Pipeline stages for Automation scripts](xref:Pipeline_stages_for_Automation_scripts)
 
 - [Deploying Automation scripts from a GitHub repository](xref:Deploying_Automation_scripts_from_a_GitHub_repository)
+
+- [Deploying Automation scripts from a GitLab repository](xref:Deploying_Automation_scripts_from_a_GitLab_repository)
