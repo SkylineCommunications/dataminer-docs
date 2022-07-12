@@ -17,9 +17,9 @@ To enable authentication in Elasticsearch 6.8.X:
 1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
 
     `xpack.security.enabled: true`
-    
+
     `discovery.type: single-node`
-    
+
 1. Start the *elasticsearch-service-x64* service.
 
 1. Execute the **elasticsearch-setup-passwords.bat** script (as Administrator) with the *interactive* argument.
@@ -37,7 +37,7 @@ To enable authentication in Elasticsearch 6.8.X:
       <PWD>[YOUR STRONG PASSWORD]</PWD>
    </DataBase>
    ```
-   
+
 1. Start your DataMiner Agent.
 
 > [!NOTE]
@@ -105,20 +105,20 @@ To configure TLS encryption for inter-node communication:
 
 1. Add the following to the *elasticsearch.yml* on each node:
 
-    ``` 
-    xpack.security.transport.ssl.enabled: true
-    xpack.security.transport.ssl.verification_mode: full 
-    xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
-    xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
-    ```
-    
+   ```
+   xpack.security.transport.ssl.enabled: true
+   xpack.security.transport.ssl.verification_mode: full 
+   xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
+   xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
+   ```
+
 1. If you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
 
-    ```
-    bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password
-    bin/elasticsearch-keystore add xpack.security.transport.ssl.truststore.secure_password
-    ```
-   
+   ```
+   bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password
+   bin/elasticsearch-keystore add xpack.security.transport.ssl.truststore.secure_password
+   ```
+
 1. Restart the Elasticsearch cluster (all nodes).
 
 > [!NOTE]

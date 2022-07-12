@@ -125,7 +125,7 @@ To do so:
 > - [Securing the DataMiner web server](xref:Webserver_security)
 > - [Disabling legacy SSL/TLS protocols](xref:Disabling_legacy_protocols)
 > - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
-> - [TLS encryption in Elasticsearch](xref:Security_Elasticsearch#ssltls-encryption)
+> - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
 
 ## Common issues after configuring HTTPS
 
