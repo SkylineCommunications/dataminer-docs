@@ -2136,6 +2136,25 @@
               topicUID: DOM_status_system
         - name: DOM module settings
           topicUid: DOM_ModuleSettings
+          items:
+            - name: Module ID
+              topicUID: DOM_ModuleId
+            - name: ModuleSections
+              topicUID: DOM_ModuleSections
+            - name: FieldAliases
+              topicUID: DOM_FieldAliases
+            - name: ExecuteScriptOnDomInstanceActionSettings
+              topicUID: ExecuteScriptOnDomInstanceActionSettings
+            - name: DomManagerSecuritySettings
+              topicUID: DomManagerSecuritySettings
+            - name: DomManagerInformationEventSettings
+              topicUID: DomManagerInformationEventSettings
+            - name: DomInstanceNameDefinition
+              topicUID: DomInstanceNameDefinition
+            - name: ModuleBehaviorDefinition
+              topicUID: DOM_ModuleBehaviorDefinition
+            - name: TtlSettings
+              topicUID: DOM_TtlSettings
         - name: DomHelper class
           topicUid: DomHelper_class
         - name: DOM data storage

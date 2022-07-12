@@ -38,6 +38,7 @@ To set up a status system:
 You can configure the possible statuses by adding a `DomStatus` object to the *Statuses* list property on the `DomBehaviorDefinition` object. A `DomStatus` has the following properties:
 
 | Property | Type | Explanation |
+|--|--|--|
 | Id | string | The ID of this status. It must contain lowercase characters only (e.g. "initial_status"). |
 | DisplayName | string | The display name of this status (e.g. "Initial"). |
 
@@ -49,6 +50,7 @@ You can configure the possible statuses by adding a `DomStatus` object to the *S
 You can configure what transitions are allowed by adding a `DomStatusTransition` object to the *Transitions* list property on the DOM behavior definition. A `DomStatusTransition` has the following properties:
 
 | Property | Type | Explanation |
+|--|--|--|
 | Id | string | The ID of this transition. It must contain lowercase characters only (e.g. "initial_to_accepted_status"). |
 | FromStatusId | string | The ID that the DOM instance will transition from. |
 | ToStatusId | string | The ID that the DOM instance will transition to. |
@@ -64,12 +66,14 @@ You can configure what transitions are allowed by adding a `DomStatusTransition`
 For each status, you can configure the requirements of a specific field. This is done with `DomStatusSectionDefinitionLink` objects that each include `DomStatusFieldDescriptorLink` objects. A `DomStatusSectionDefinitionLink` has the following properties:
 
 | Property | Type | Explanation |
+|--|--|--|
 | Id | DomStatusSectionDefinitionLinkId | Contains the section definition ID and status ID. |
 | FieldDescriptorLinks | `List<DomStatusFieldDescriptorLink>` | Contains the links to field descriptors that are part of the section definition. |
 
 A `DomStatusFieldDescriptorLink` has the following properties:
 
 | Property | Type | Explanation |
+|--|--|--|
 | FieldDescriptorId | FieldDescriptorID | Contains the ID of the linked field descriptor. |
 | Visible | bool | Determines whether this field should be visible in the UI for this status. This is only used by the UI; there is no logic for this property server-side. |
 | RequiredForStatus | bool | Determines whether a value for this field must be present AND valid in this status. If a field is marked as required, at least one value for the field descriptor must be present in a DOM instance, and all values for this field descriptor are valid according to the validators of the field descriptor (if any are defined). |
@@ -82,7 +86,8 @@ A `DomStatusFieldDescriptorLink` has the following properties:
 
 A couple of examples:
 
-| Case | RequiredForStatus | ReadOnly | Description
+| Case | RequiredForStatus | ReadOnly | Description |
+|--|--|--|--|
 | No values allowed | N/A | N/A | If no values should be allowed for the status, do not add a `FieldDescriptorLink` to the list. |
 | Optional and editable values | false | false | If it should be possible to optionally add, update or delete a value for the status, set both *RequiredForStatus* and *ReadOnly* to *false*. |
 | Optional and non-editable values |false | true | If a value should be present, but it is not required, and it should not be possible to add, update or delete a value for the status, set *RequiredForStatus* to *false* and *ReadOnly* to *true*. |

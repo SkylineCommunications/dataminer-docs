@@ -46,11 +46,11 @@ var moduleSettings = new ModuleSettings(moduleId:"my_module")
 };
 ```
 
-Once a `ModuleSettings` object with a specific *moduleID* has been created, you can start to interact with the DOM manager.
+Once a `ModuleSettings` object with a specific [moduleID](xref:DOM_ModuleId) has been created, you can start to interact with the DOM manager.
 
 When you send a message to create a DOM instance (e.g. from a script or application), DataMiner will check whether a DOM manager instance with the specified module ID already exists or not. If it does not exist yet, DataMiner will check if it is allowed to create a new DOM manager by trying to retrieve the module settings for that ID. If valid module settings are found, the DOM manager instance will be created and initialized. It will handle the message and send a response.
 
 > [!NOTE]
 >
-> - If no  `ModuleSettings` object is found for a module ID, a DataMiner exception will be thrown.
+> - If no `ModuleSettings` object is found for a module ID, a DataMiner exception will be thrown.
 > - When multiple requests for the same manager are sent in a rapid succession, the system will wait until the first request has initialized the manager. Once that is done, all requests will be handled by that manager, and a response will be returned for each of them.

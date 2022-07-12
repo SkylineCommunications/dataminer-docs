@@ -13,6 +13,7 @@ A `DomInstance` object contains the `Sections` linked to the `SectionDefinitions
 The table below lists the properties of the `DomInstance` object. It also indicates whether a property can be used for filtering using the `DomInstanceExposers`.
 
 | Property | Type | Filterable | Description |
+|--|--|--|--|
 | ID | DomInstanceId | Yes | The ID of the `DomInstance`. |
 | DomDefinitionId | DomDefinitionId | Yes | The ID of the `DomDefinition` that this instance is linked to. |
 | Sections | List\<Section> | SectionIDs, SectionDefinitionIDs and FieldValues | Contains the required or allowed `SectionDefinitions`. |
@@ -34,6 +35,7 @@ To **create or update** a `DomInstance` object:
 When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `DomInstanceErrors`. Below is a list of all possible `ErrorReasons`:
 
 | Reason | Description |
+|--|--|
 | DomInstanceSectionInvalidFieldValueTypes | Attempted to create or update a `DomInstance` with a `FieldValue` that does not match the type of its `FieldDescriptor`. Available properties: *DomInstance*, *Section*, *FieldValue*, *FieldDescriptor* |
 | DomInstanceDoesNotContainAllRequiredFieldsForSectionDefinition | The given `DomInstance` had a `Section` that did not contain a `FieldValue` for every non-optional `FieldDescriptor` of its `SectionDefinition`. Available properties: *DomInstance*, *Section*, *FieldDescriptor* |
 | DomInstanceRequiresLinkToValidDomDefinition | The `DomInstance` has no valid and/or existing `DomDefinitionID` configured. Available properties: *DomInstance*. |
@@ -43,6 +45,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 The errors below are related to the status system. For each error, the *DomInstanceId*, *DomInstanceName*, and *StatusId* properties will be filled in alongside any others that are mentioned in the description.
 
 | Reason | Description |
+|--|--|
 | DomInstanceContainsInvalidStatus | The `DomInstance` contains a status ID that cannot be found on the linked `DomBehaviorDefinition`. *StatusId* contains the invalid status. |
 | DomInstanceHasMissingRequiredFieldsForCurrentStatus | The `DomInstance` does not contain all fields that are required for the status it is currently in (or transitioning to). *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the missing fields. |
 | DomInstanceHasInvalidFieldsForCurrentStatus | The `DomInstance` contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same `SectionDefinition` and `FieldDescriptor`, only one entry will be included. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the invalid fields. |

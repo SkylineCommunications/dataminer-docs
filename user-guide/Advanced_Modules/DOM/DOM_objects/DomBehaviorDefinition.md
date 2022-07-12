@@ -11,6 +11,7 @@ A `DomBehaviorDefinition` object is a standalone object that extends a normal DO
 The table below lists the properties of the `DomBehaviorDefinition` object. It also indicates whether a property can be used for filtering using the `DomBehaviorDefinitionExposers`.
 
 | Property | Type | Filterable | Description |
+|--|--|--|--|
 | ID | DomBehaviorDefinitionId | Yes | The unique ID of the object. |
 | Name | string | Yes | The name of this definition. |
 | ParentId | DomBehaviorDefinitionId | Yes | The ID of the parent `DomBehaviorDefinition` when inheritance is used. |
@@ -64,6 +65,7 @@ The `DomBehaviorDefinition` has  several properties related to the buttons and a
 When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `DomDefinitionErrors`. For each error, the *Id* and *Name* properties will be filled in alongside any other property mentioned in the description. Below is a list of all possible `ErrorReasons`:
 
 | Reason | Description |
+|--|--|
 | InvalidParentId | The `DomBehaviorDefinition.ParentId` property contains an unexpected ID. If a module `DomBehaviorDefinition` is defined, it must contain the ID of that definition. If that is not the case, it should be empty. |
 | InheritingDefinitionContainsInvalidData | This `DomBehaviorDefinition` is inheriting from another `DomBehaviorDefinition`, but it contains data that is not allowed. Only the `DomBehaviorDefinition.StatusSectionDefinitionLinks` can contain extra objects. |
 | StatusTransitionsReferenceNonExistingStatuses | There was at least one `DomStatusTransition` that references a status that does not exist. *StatusTransitionsIds* contains the ID(s) of the invalid transition(s). |

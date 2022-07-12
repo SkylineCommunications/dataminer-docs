@@ -40,6 +40,7 @@ A `FieldDescriptor` object defines what a field of a `DomInstance` should look l
 Below is an overview of all other important properties:
 
 | Property | Type | Description |
+|--|--|--|
 | ID | FieldDescriptorID | The ID of the `FieldDescriptor`. |
 | Name | string | The name of the `FieldDescriptor`. |
 | IsOptional | bool | Determines whether a `FieldValue` must be present for this descriptor or if it is optional. |
@@ -103,6 +104,7 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 The table below lists the properties of the `CustomSectionDefinition` object. (The base `SectionDefinition` object only exposes its ID.) The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
 
 | Property | Type | Filterable | Description |
+|--|--|--|--|
 | ID | SectionDefinitionID | Yes | The ID of the `SectionDefinition`. |
 | Name | string | Yes | The name of the `SectionDefinition`. |
 | ReservationLinkInfo | ReservationLinkInfo | No | When a `Section` contains links to an SRM `ReservationInstance` object using the `ReservationFieldDescriptor`, this object describes more details about those links. This is currently not supported by any DOM UI. |
@@ -137,6 +139,7 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `SectionDefinitionErrors`. Below is a list of all possible `ErrorReasons`. (This list does not contain the errors that are only used by the Jobs module.)
 
 | Reason | Description |
+|--|--|
 | FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor. Available properties: *NotSupportedType*, *SupportedTypes*. |
 | SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`. Available properties: `SectionDefinition`, *OriginalSectionDefinition*, *DomInstanceIds*. |
 | SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Available properties: `SectionDefinition`, . |

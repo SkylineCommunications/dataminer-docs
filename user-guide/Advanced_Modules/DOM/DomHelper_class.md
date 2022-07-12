@@ -116,6 +116,7 @@ domHelper.DomInstances.DoStatusTransition(domInstance.ID, "initial_to_acceptance
 When something goes wrong while transitioning, a *DomStatusTransitionError* will be returned in the *TraceData* of the request. This error can contain the following reasons:
 
 | Reason | Description |
+|--|--|
 | StatusTransitionNotFound | The given transition ID does not match any of the IDs defined on the associated DOM behavior definition. This error can also occur when there is no valid DOM behavior definition linked in the first place. *StatusTransitionId* contains the ID of the transition that could not be found. |
 | StatusTransitionIncompatibleWithCurrentStatus | The current status of the DOM instance does not match the "from" status defined by the transition. *StatusTransitionId* contains the ID of the transition that could not be completed. |
 | DomInstanceContainsUnknownFieldsForNextStatus | There is at least one field value defined in the DOM instance for which no link could be found in the DOM behavior definition for the next status. *AssociatedFields* contains the *SectionDefinitionID* and *FieldDescriptorID* combinations of the unknown fields. |

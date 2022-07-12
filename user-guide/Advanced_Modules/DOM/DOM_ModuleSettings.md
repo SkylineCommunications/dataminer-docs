@@ -26,7 +26,42 @@ helper.ModuleSettings.Create(settings);
 > - DataMiner is restarted.
 > - You send a *ManagerStoreReinitializeCustomManagerRequest* using the DOM page in the [SLNetClientTest tool](xref:SLNetClientTest_tool). To do so, first [connect to the DMA in the tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool), and then go to *Advanced* > *Apps* > *DataMiner Object Model* and click the *Reinitialize* button.
 
-Note the following:
+## Errors
+
+When something goes wrong while the `ModuleSettings` are saved, the `TraceData` will contain one or more `ModuleSettingsManagerErrorData` errors. They can have the following `ErrorReasons`:
+
+| Reason | Description |
+|--|--|
+| InvalidModuleId | The module ID does not meet the requirements. The error will contain the exact validation error. |
+| InvalidPermissions | The user does not have permission to do this action. |
+
+## Available settings
+
+The current settings structure (with regards to `DomManager`) is as follows:
+
+- ModuleSettings
+
+  - [Module ID](xref:DOM_ModuleId) (string)
+
+  - DomManagerSettings
+
+    - [ModuleSections](xref:DOM_ModuleSections) (List)
+
+    - [FieldAliases](xref:DOM_FieldAliases) (List)
+
+    - [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings)
+
+    - [DomManagerSecuritySettings](xref:DomManagerSecuritySettings)
+
+    - [DomManagerInformationEventSettings](xref:DomManagerInformationEventSettings)
+
+    - [DomInstanceNameDefinition](xref:DomInstanceNameDefinition)
+
+    - [ModuleBehaviorDefinition](xref:DOM_ModuleBehaviorDefinition)
+
+    - [TtlSettings](xref:DOM_TtlSettings)
+
+## Notes
 
 - The module settings are saved in a separate Elasticsearch index (dms-cmodulesettings-xxx).
 
@@ -37,64 +72,3 @@ Note the following:
 - To include the module settings in a [custom backup](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in Cube, select *Create a backup of the database* > *Include module specific configuration data*.
 
 - There are no license checks when module settings are added.
-
-## Errors
-
-When something goes wrong while the `ModuleSettings` are saved, the `TraceData` will contain one or more `ModuleSettingsManagerErrorData` errors. They can have the following `ErrorReasons`:
-
-| Reason | Description |
-| InvalidModuleId | The module ID does not meet the requirements. The error will contain the exact validation error. |
-| InvalidPermissions | The user does not have permission to do this action. |
-
-## Available settings
-
-The current settings structure (with regards to `DomManager`) is as follows:
-
-- ModuleSettings
-
-  - Module ID (string)
-
-  - DomManagerSettings
-
-    - ModuleSections (List)
-
-    - FieldAliases (List)
-
-    - ExecuteScriptOnDomInstanceActionSettings
-
-    - DomManagerSecuritySettings
-
-    - DomManagerInformationEventSettings
-
-    - DomInstanceNameDefinition
-
-    - ModuleBehaviorDefinition
-
-    - TtlSettings
-
-## Module ID property
-
-This is the ID (string) used to distinguish between multiple running DOM managers. Since this name is used in the index name of Elasticsearch, a few requirements are in place:
-
-- The ID must not be empty or null.
-
-- The ID must not be longer than 40 characters.
-
-- The ID must be lowercase.
-
-- The ID must not have one of the following characters:
-
-  - "\" (backslash)
-  - "/" (slash)
-  - "*" (asterisk)
-  - "?" (question mark)
-  - """ (quotation mark)
-  - "<" (less than)
-  - ">" (greater than)
-  - "|" (vertical bar or pipe)
-  - " " (space)
-  - "," (comma)
-  - "#" (hashtag)
-  - ":" (colon)
-  - "-" (hyphen)
-
