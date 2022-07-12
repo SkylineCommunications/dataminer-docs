@@ -12,6 +12,8 @@ A DataMiner Object Model is a generic data storage system that makes it possible
 
 - [DOM managers](xref:DOM_managers)
 
+- [DOM module settings](xref:DOM_ModuleSettings)
+
 - [DomHelper class](xref:DomHelper_class)
 
 - [DOM data storage](xref:DOM_data_storage)

@@ -2134,10 +2134,15 @@
               topicUID: DOM_history
             - name: DOM status system
               topicUID: DOM_status_system
+        - name: DOM module settings
+          topicUid: DOM_ModuleSettings
         - name: DomHelper class
           topicUid: DomHelper_class
         - name: DOM data storage
           topicUid: DOM_data_storage
+- name: DataMiner Standard Apps & Solutions
+  topicUid: Part5StandardApps
+  items:
     - name: DataMiner EPM Solution
       topicUid: SolEPM
       items:
