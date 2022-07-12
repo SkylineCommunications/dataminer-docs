@@ -21,5 +21,7 @@ To connect to the Ziine Demo System:
 
 1. Open the DataMiner Cube desktop application.
 
-1. Connect to the DataMiner System _the [Ziine Demo System](xref:ZiineDemoSystem)_ as described under [Opening the desktop application](xref:Opening_the_desktop_app).
-   1. Ziine hostname is https://ziine.skyline.be/
+1. Connect to the DataMiner System "the [Ziine Demo System](xref:ZiineDemoSystem)" as described under [Opening the desktop application](xref:Opening_the_desktop_app).
+
+   > [!NOTE]
+   > The Ziine hostname is `https://ziine.skyline.be/`.
