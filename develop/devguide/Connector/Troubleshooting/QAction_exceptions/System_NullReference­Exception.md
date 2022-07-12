@@ -1,8 +1,8 @@
 ---
-uid: System_NullReference­Exception
+uid: System_NullReferenceException
 ---
 
-# System.NullReference­Exception
+# System.NullReferenceException
 
 *"Object reference not set to an instance of an object"*
 

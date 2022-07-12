@@ -1,8 +1,8 @@
 ---
-uid: System_Format­Exception
+uid: System_FormatException
 ---
 
-# System.Format­Exception
+# System.FormatException
 
 When converting between types, it can be that the format of the input does not match what is expected.
 

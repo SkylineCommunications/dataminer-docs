@@ -1,8 +1,8 @@
 ---
-uid: System_IndexOutOf­RangeException
+uid: System_IndexOutOfRangeException
 ---
 
-# System.IndexOutOf­RangeException
+# System.IndexOutOfRangeException
 
 This exception is thrown when working with array objects and trying to get or set a member of the array that is not in the defined array size.
 
