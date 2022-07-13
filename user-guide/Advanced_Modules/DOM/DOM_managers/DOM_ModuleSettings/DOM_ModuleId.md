@@ -6,7 +6,9 @@ uid: DOM_ModuleId
 
 This is the ID (string) used to distinguish between multiple running DOM managers. For more information, see [DOM managers](xref:DOM_managers).
 
-Since this name is used in the index name of Elasticsearch, a few requirements are in place:
+The ID must meet the following requirements:
+
+- The ID must be unique in the DMS.
 
 - The ID must not be empty or null.
 

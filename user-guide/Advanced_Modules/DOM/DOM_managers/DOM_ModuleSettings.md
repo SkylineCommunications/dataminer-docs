@@ -13,18 +13,19 @@ To create the `ModuleSettings` object, use the `ModuleSettingsHelper`. For examp
 var helper = new ModuleSettingsHelper(engine.SendSLNetMessages);
 
 // Create the (empty) settings object
-var settings = new ModuleSettings("random_module_name");
+var settings = new ModuleSettings("my_module");
 
 // Save the settings
 helper.ModuleSettings.Create(settings);
 ```
 
 > [!NOTE]
-> When you update the module settings of a manager that is already running, this will only take effect when the manager is (re-)initialized. This happens when:
 >
-> - You send a `ManagerStoreReinitializeCustomManagerRequest` in a script. This will reinitialize the manager on all Agents in the cluster. If a manager is not present on one of the Agents, it will be ignored.
-> - DataMiner is restarted.
-> - You send a *ManagerStoreReinitializeCustomManagerRequest* using the DOM page in the [SLNetClientTest tool](xref:SLNetClientTest_tool). To do so, first [connect to the DMA in the tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool), and then go to *Advanced* > *Apps* > *DataMiner Object Model* and click the *Reinitialize* button.
+> - Only the Administrator account can create `ModuleSettings` objects.
+> - When you update the module settings of a manager that is already running, this will only take effect when the manager is (re-)initialized. This happens when:
+>   - You send a `ManagerStoreReinitializeCustomManagerRequest` in a script. This will reinitialize the manager on all Agents in the cluster. If a manager is not present on one of the Agents, it will be ignored.
+>   - DataMiner is restarted.
+>   - You send a *ManagerStoreReinitializeCustomManagerRequest* using the DOM page in the [SLNetClientTest tool](xref:SLNetClientTest_tool). To do so, first [connect to the DMA in the tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool), and then go to *Advanced* > *Apps* > *DataMiner Object Model* and click the *Reinitialize* button.
 
 ## Errors
 
