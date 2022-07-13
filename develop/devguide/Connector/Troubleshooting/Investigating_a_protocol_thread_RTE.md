@@ -17,7 +17,7 @@ Thread problem in SLProtocol.exe: [DriverName/DriverVersion] ElementName – Pro
 
 ### What does this alarm mean?
 
-This alarm indicates that the protocol thread that is used to execute polling or logical flows has stopped showing activity for a specific amount of time. By default, this time is 15 minutes.
+This alarm indicates that the protocol thread that is used to execute polling or logical flows has stopped showing activity for a specific duration. By default, this duration is 15 minutes.
 
 The protocol thread is used by the element in the error and has an impact on the SLProtocol process that is running it. This can lead to other elements failing to perform polling or logical flows. This is indicated with "(+ x Pending)" at the end of the error message.
 
