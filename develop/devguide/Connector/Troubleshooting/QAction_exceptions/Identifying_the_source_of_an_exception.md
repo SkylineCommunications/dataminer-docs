@@ -121,7 +121,7 @@ Getting a property is actually calling a `get_<PropertyName>` method in the back
 
 ### Summary
 
-- Like the SonarCube warning mentions, property getters should never cause exceptions. If exceptions are possible, consider catching them and gracefully returning an exception value, or making a method instead of a getter. A property getter is also considered something simple, meaning that the developer calling the property assumes that this can be called thousands of times in a loop without performance impact. If more complexity is behind it, a method is a better choice, as it flags to the developer that it might be better to call the result once, store it in a variable before the loop starts, and then use that variable inside the loop.
+- Like the SonarQube warning mentions, property getters should never cause exceptions. If exceptions are possible, consider catching them and gracefully returning an exception value, or making a method instead of a getter. A property getter is also considered something simple, meaning that the developer calling the property assumes that this can be called thousands of times in a loop without performance impact. If more complexity is behind it, a method is a better choice, as it flags to the developer that it might be better to call the result once, store it in a variable before the loop starts, and then use that variable inside the loop.
 
 - Write unit tests for your class. These could show issues when accessing properties or calling methods.
 
