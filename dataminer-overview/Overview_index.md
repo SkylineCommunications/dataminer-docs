@@ -13,5 +13,5 @@ We are working on adding more information to this section soon, so check back fo
 - [DataMiner Cloud Platform](xref:Overview_DCP)
 - [Agile partnership](xref:Overview_Agile_Partnership_intro)
 - [Training courses and certification](xref:Overview_Training_intro)
-- [Technical support and maintenance](xref:Overview_Support_intro)
+- [Support Services](xref:Overview_Support_DMS_M_and_S)
 - [Compliance statements](xref:Overview_Compliance_Statements_intro)
