@@ -16,4 +16,3 @@ In addition to the limited [warranty](xref:Overview_Support_warranty), you can e
 DataMiner Support Services are supplied at **no charge commencing the date of delivery and continuing for a period of 6 months**.
 
 After this initial period, Support Services **can be purchased on an annual basis**. Optionally, they can be extended with [out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support) for priority level 1 issues.
-
