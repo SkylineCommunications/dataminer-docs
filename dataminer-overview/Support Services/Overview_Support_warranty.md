@@ -2,7 +2,7 @@
 uid: Overview_Support_warranty
 ---
 
-# Warranty
+# Standard Limited Warranty
 
 Skyline Communications warrants that its software, when used as permitted under the EULA and in accordance with the agreed characteristics by Skyline Communications (including use on a hardware platform approved by Skyline Communications), will conform substantially to its Related Materials for a period of twelve (12) months from the delivery date.
 
