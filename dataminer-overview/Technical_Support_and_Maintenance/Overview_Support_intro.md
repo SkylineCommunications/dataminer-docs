@@ -11,4 +11,4 @@ This section elaborates on the different topics listed below:
 - [Warranty](xref:Overview_Support_warranty)
 - [Support services](xref:Overview_Support_DMS_M_and_S)
 - [Upgrade policy and timing](xref:Overview_Support_upgrade_policy)
-- [Technical support escalations and SLAs](xref:Overview_Support_Escalations_SLAs)
+- [Out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support)
