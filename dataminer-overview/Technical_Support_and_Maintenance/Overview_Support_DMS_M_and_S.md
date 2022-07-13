@@ -11,7 +11,7 @@ In addition to the limited warranty, you can enjoy the benefits of the **Support
 - Cloud-connected [essential package](https://community.dataminer.services/dataminer-cloud-platform-services/).
 
 > [!TIP]
-> For more information about our regular business hours, see [Out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support).
+> For more information about our regular business hours, see [Support services agreement](xref:Support_services_agreement).
 
 DataMiner Support Services are supplied at **no charge commencing the date of delivery and continuing for a period of 6 months**.
 
