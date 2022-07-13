@@ -319,7 +319,7 @@ uid: glossary
 | Pulse | DataMiner Cube homepage, displayed when no cards are open in the workspace. See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
 | QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
-| Query executer | DataMiner tool that allows users to connect to a database and query it using SQL statements. See [Querying a database](xref:Querying_a_database). |
+| Query executer | DataMiner tool that allows users to connect to an SQL database and query it using SQL statements. See [Querying an SQL database](xref:Querying_an_SQL_database). |
 | QuickMenu | Shortcut menu in DataMiner Cube that allows quick navigation between UI sections. Accessible via the keyboard shortcut Ctrl + Q. |
 | RADIUS | Remote Authentication Dial In User Service. Authentication, Authorization and Accounting (AAA) protocol that manages network access. |
 | RAID | Redundant Array of Independent Disks. |

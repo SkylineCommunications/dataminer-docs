@@ -1039,8 +1039,10 @@
         - name: Database queries
           topicUid: Database_queries
           items:
-            - name: Querying a database
-              topicUid: Querying_a_database
+            - name: Querying an SQL database
+              topicUid: Querying_an_SQL_database
+            - name: Querying an Elasticsearch database
+              topicUID: Querying_an_Elasticsearch_database
             - name: Examples of database queries
               topicUid: Examples_of_database_queries
     - name: Security
