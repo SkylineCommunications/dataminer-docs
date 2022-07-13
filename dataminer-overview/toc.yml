@@ -58,8 +58,8 @@
           topicUid: Overview_Support_DMS_M_and_S
         - name: Upgrade policy and timing
           topicUid: Overview_Support_upgrade_policy
-        - name: Technical support escalations and SLAs
-          topicUid: Overview_Support_Escalations_SLAs
+        - name: Out-of-business-hours support
+          topicUid: Overview_Out_Of_Business_Hours_Support
     - name: Compliance statements
       topicUid: Overview_Compliance_Statements_intro
       items:

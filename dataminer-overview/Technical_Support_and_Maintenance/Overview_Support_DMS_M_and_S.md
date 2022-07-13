@@ -11,11 +11,11 @@ In addition to the limited warranty, you can enjoy the benefits of the **Support
 - Cloud-connected [essential package](https://community.dataminer.services/dataminer-cloud-platform-services/).
 
 > [!TIP]
-> For more information about our regular business hours, see [Technical support escalations and SLAs](xref:Overview_Support_Escalations_SLAs).
+> For more information about our regular business hours, see [Support services agreement](xref:Support_services_agreement).
 
 DataMiner Support Services are supplied at **no charge commencing the date of delivery and continuing for a period of 6 months**.
 
-After this initial period, Support Services **can be purchased on an annual basis**. Optionally, they can be extended with support outside of business hours for priority level 1 issues.
+After this initial period, Support Services **can be purchased on an annual basis**. Optionally, they can be extended with [out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support) for priority level 1 issues.
 
 Updates and upgrades are available for:
 
