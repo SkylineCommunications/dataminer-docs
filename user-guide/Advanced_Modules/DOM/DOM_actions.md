@@ -18,7 +18,7 @@ You can define an action by adding an `IDomActionDefinition` to the `ActionDefin
 
 This action can be used to execute a specified script. This has the following properties:
 
-| Name | Type | Explanation |
+| Name | Type | Description |
 |--|--|--|
 | Id | string | The ID of the action. |
 | Condition | IDomCondition | The condition that should be met before the actions is allowed to be executed. |
@@ -58,7 +58,7 @@ namespace DOM_Action_Example
 
 The `ExecuteScriptDomActionContext` object has the following properties:
 
-| Name | Type | Explanation |
+| Name | Type | Description |
 |--|--|--|
 | ContextId | IDMAObjectRef | The ID of the object that the action was executed for. |
 | ActionId | string | The ID of the action that triggered this script. |
@@ -118,52 +118,71 @@ Flow:
 
 ## Executing an action
 
-An action can be executed by calling the 'ExecuteAction' method on the DomInstance CrudHelperComponent of the DomHelper. You need to pass along the ID of the DomInstance for which the action is executed and the ID of the action that has to be executed.
+You can execute an action by calling the `ExecuteAction` method on the `DomInstance` `CrudHelperComponent` of the `DomHelper`. You need to pass along the ID of the `DomInstance` for which the action is executed and the ID of the action that has to be executed.
 
-
+```csharp
 domHelper.DomInstances.ExecuteAction(domInstance.ID, "some_action_id");
-The execute call returns TraceData when the action failed or the condition was not met. This TraceData will contain a ManagerStoreError with reason 'ObjectDidNotExist' if a non-existing DomInstance is given. In other common error cases, a DomActionError will be returned. This error type has the following reasons:
+```
 
-Reason | Explanation
-Unknown | An unknown error occurred, this should never happen. Check logging to find more information.
-UnexpectedExceptionOccurred | An unexpected exception occurred when executing an action. ExceptionMessage contains the message of the exception.
-ScriptReturnedErrors | A script that was (being) executed returned errors. ErrorData contains a list of all the returned errors.
-ActionDefinitionNotFound | The action that was requested to be executed could not be found using the IDMAObjectRef context ID.
-ConditionNotMet | The condition that was set on the action was not met. InnerTraceData CAN contain extra TraceData on why the condition was not met.
-Additionally, the TraceData can include info as well using one or more DomActionInfo objects. This info object has a Type property that describes what info it contains.
+The execute call returns `TraceData` when the action failed or the condition was not met. This `TraceData` will contain a `ManagerStoreError` with reason *ObjectDidNotExist* if a non-existing `DomInstance` is given. In other common error cases, a `DomActionError` will be returned. This error type has the following reasons:
 
-Type | Explanation
-ScriptOutput | Contains the script output in the Data property.
-ScriptExecutionId | Contains the execution ID of the script that was executed for the action in the ExecutionId property.
-Conditions
-As previously mentioned, an ActionDefinition can only be executed when some pre-defined condition is met. It is currently possible to define the following conditions.
+| Reason | Description |
+| Unknown | An unknown error occurred. This should never happen. Check the logging to find more information. |
+| UnexpectedExceptionOccurred | An unexpected exception occurred when executing an action. *ExceptionMessage* contains the message of the exception. |
+| ScriptReturnedErrors | A script that was (being) executed returned errors. *ErrorData* contains a list of all the returned errors. |
+| ActionDefinitionNotFound | The action that was requested to be executed could not be found using the `IDMAObjectRef` context ID. |
+| ConditionNotMet | The condition that was set on the action was not met. *InnerTraceData* can contain extra `TraceData` on why the condition was not met. |
 
-StatusCondition
-Defines a condition that is fulfilled when a DomInstance has one of the defined statuses. The list of required statuses can be given via de constructor or added to the Statuses list property. This condition will not return extra TraceData when not met.
+Additionally, the `TraceData` can also include information using one or more `DomActionInfo` objects. This info object has a *Type* property that describes the info it contains.
 
+| Type | Description |
+| ScriptOutput | Contains the script output in the *Data* property. |
+| ScriptExecutionId | Contains the execution ID of the script that was executed for the action in the *ExecutionId* property. |
 
-var condition = new StatusCondition(new List<string> { "first_status" });
-ValidForStatusTransitionCondition
-Defines a condition that is met when a DomInstance is valid for a given status transition. The required transition ID must be assigned to the TransitionId property. When this condition is not met, extra TraceData will be returned (via the InnerTraceData property of the DomActionError). This TraceData should contain an error of type DomStatusTransitionError. See the status system page for more info about this error type.
+## Conditions
 
+An `ActionDefinition` can only be executed when a pre-defined condition is met. It is currently possible to define the following conditions:
 
-var condition = new ValidForStatusTransitionCondition("first_to_second_transition");
-Defining buttons
-The DomBehaviorDefinition also contains a list of IDomButtonDefinitions. These can be used to define that one or more buttons must be shown in the UI. It is currently only possible to define buttons to be shown for a DomInstance by using the DomInstanceButtonDefinition. These buttons can be linked to one or more actions that will be executed when they are clicked. A DomInstanceButtonDefinition also has a condition that determines whether the button is shown or not. The button should always be shown when there is no condition defined. The DomInstanceButtonDefinition has the following properties:
+- **StatusCondition**
+
+  Defines a condition that is fulfilled when a `DomInstance` has one of the defined statuses. The list of required statuses can be given via the constructor or added to the *Statuses* list property. This condition will not return extra `TraceData` when not met.
+
+  ```csharp
+  var condition = new StatusCondition(new List<string> { "first_status" });
+  ```
+
+- **ValidForStatusTransitionCondition**
+
+  Defines a condition that is met when a `DomInstance` is valid for a given status transition. The required transition ID must be assigned to the *TransitionId* property. When this condition is not met, extra `TraceData` will be returned (via the *InnerTraceData* property of the `DomActionError`). This `TraceData` should contain an error of type `DomStatusTransitionError`. See the status system page For more information about this error type, see [Sending a transition request](xref:DomHelper_class#sending-a-transition-request).
+
+  ```csharp
+  var condition = new ValidForStatusTransitionCondition("first_to_second_transition");
+  ```
+
+## Defining buttons
+
+The `DomBehaviorDefinition` also contains a list of `IDomButtonDefinitions`. These can be used to have one or more buttons shown in the UI. These buttons can be linked to one or more actions that will be executed when they are clicked.
+
+At present, you can only define buttons to be shown for a `DomInstance` by using the `DomInstanceButtonDefinition`.
+
+A `DomInstanceButtonDefinition` also has a **condition** that determines whether the button is shown or not. The button should always be shown when there is no condition defined.
+
+The `DomInstanceButtonDefinition` has the following properties:
 
 | Name | Type | Description |
 |--|--|--|
-| Id | string | ID of the button. Must be unique to this DomBehaviorDefinition and lower-case. |
-| Layout | DomButtonDefinitionLayout | Contains extra properties to define how the button will be displayed (see next table). |
+| Id | string | The ID of the button. This must be unique to this `DomBehaviorDefinition` and must be lower case. |
+| Layout | DomButtonDefinitionLayout | Contains extra properties to define how the button will be displayed (see properties table below). |
 | VisibilityCondition | IDomInstanceCondition | Condition that defines when the button will be shown. |
 | ActionDefinitionIds | List\<string> | Contains one or more IDs of actions that should be executed. |
-The DomButtonDefinitionLayout class has these properties:
 
-Name | Type | Description
-Text | string | Text that will be displayed on the button.
-Icon | string | Optional icon for this button.
-ToolTip | string | Optional tool tip that could contain more info about this button.
-Order | int | Can be used to manage the order of how multiple buttons should be displayed.
-Note
+The `DomButtonDefinitionLayout` class has the following properties:
 
-The IDomInstanceCondition on the buttons explain what type of condition applies to the visibility. Each sub-type contains some properties that contain extra info to determine whether the condition is met. (See conditions part above) A UI that displays these buttons needs to resolve these locally.
+| Name | Type | Description |
+| Text | string | Text that will be displayed on the button. |
+| Icon | string | Optional icon for this button. |
+| ToolTip | string | Optional tooltip that can contain more info about this button. |
+| Order | int | Can be used to manage the order in which multiple buttons should be displayed. |
+
+> [!NOTE]
+> The `IDomInstanceCondition` on the buttons explains which type of condition applies to the visibility. Each subtype has properties that contain extra information to determine whether the condition is met (see [Conditions](#conditions)) A UI that displays these buttons needs to resolve these locally.

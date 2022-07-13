@@ -17,7 +17,7 @@ When a DOM instance is created or updated, a new `HistoryChange` object will be 
 
 A change to a field value is stored in a `DomFieldValueChange` object, which has the following properties:
 
-| Property | Type | Explanation |
+| Property | Type | Description |
 |--|--|--|
 | FieldDescriptorId | FieldDescriptorID | The ID of the field descriptor. |
 | CrudType | CrudType | Determines whether this change is a create, update, or delete action. |
@@ -28,7 +28,7 @@ A change to a field value is stored in a `DomFieldValueChange` object, which has
 
 The `DomSectionChange` object bundles `DomFieldValueChange` objects together for a section. It has the following properties:
 
-| Property | Type | Explanation |
+| Property | Type | Description |
 |--|--|--|
 | SectionId | SectionID | The ID of the section. |
 | FieldValueChanges | `List<DomFieldValueChange>` | A list of the `DomFieldValueChange` objects. |
@@ -37,7 +37,7 @@ The `DomSectionChange` object bundles `DomFieldValueChange` objects together for
 
 Each time the status is changed, a `DomInstanceStatusChange` is saved, which has the following properties:
 
-| Property | Type | Explanation |
+| Property | Type | Description |
 |--|--|--|
 | StatusIdBefore | string | The ID of the status before the change. |
 | StatusIdAfter | string | The ID of the status after the change. |
@@ -48,7 +48,7 @@ All the `DomSectionChange` and `DomInstanceStatusChange` objects for a DOM insta
 
 This is stored in a separate Elasticsearch index for each module (named `chistory_dominstance_{moduleId}`). A `HistoryChange` also contains the extra information of where, when, and by whom a change was initiated.
 
-| Property | Type | Filterable | Explanation |
+| Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | Guid | Yes | Unique ID for this specific `HistoryChange`. |
 | SubjectId | IDMAObjectRef | Yes | The ID of the DOM instance. |

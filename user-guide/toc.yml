@@ -2161,6 +2161,13 @@
               topicUID: DOM_TtlSettings
         - name: DOM data storage
           topicUid: DOM_data_storage
+        - name: DOM Examples
+          topicUID: DOM_Invoice_app_example
+          items:
+            - name: Invoice app example
+              topicUID: DOM_Invoice_app_example
+            - name: Status system example
+              topicUID: DOM_status_system_example
 - name: DataMiner Standard Apps & Solutions
   topicUid: Part5StandardApps
   items:

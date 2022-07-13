@@ -14,6 +14,9 @@ Using the status system is an alternate way of defining which data must be prese
 
 ![Status system overview](~/user-guide/images/DOM_StatusSystem_Overview.jpg)
 
+> [!TIP]
+> See also: [DOM status system example](xref:DOM_status_system_example)
+
 > [!NOTE]
 > A DOM manager detects that the status system is used from the moment that a DOM definition is linked to a DOM behavior definition AND that DOM behavior definition contains at least one status.
 
@@ -37,7 +40,7 @@ To set up a status system:
 
 You can configure the possible statuses by adding a `DomStatus` object to the *Statuses* list property on the `DomBehaviorDefinition` object. A `DomStatus` has the following properties:
 
-| Property | Type | Explanation |
+| Property | Type | Description |
 |--|--|--|
 | Id | string | The ID of this status. It must contain lowercase characters only (e.g. "initial_status"). |
 | DisplayName | string | The display name of this status (e.g. "Initial"). |
@@ -49,7 +52,7 @@ You can configure the possible statuses by adding a `DomStatus` object to the *S
 
 You can configure what transitions are allowed by adding a `DomStatusTransition` object to the *Transitions* list property on the DOM behavior definition. A `DomStatusTransition` has the following properties:
 
-| Property | Type | Explanation |
+| Property | Type | Description |
 |--|--|--|
 | Id | string | The ID of this transition. It must contain lowercase characters only (e.g. "initial_to_accepted_status"). |
 | FromStatusId | string | The ID that the DOM instance will transition from. |
@@ -65,14 +68,14 @@ You can configure what transitions are allowed by adding a `DomStatusTransition`
 
 For each status, you can configure the requirements of a specific field. This is done with `DomStatusSectionDefinitionLink` objects that each include `DomStatusFieldDescriptorLink` objects. A `DomStatusSectionDefinitionLink` has the following properties:
 
-| Property | Type | Explanation |
+| Property | Type | Description |
 |--|--|--|
 | Id | DomStatusSectionDefinitionLinkId | Contains the section definition ID and status ID. |
 | FieldDescriptorLinks | `List<DomStatusFieldDescriptorLink>` | Contains the links to field descriptors that are part of the section definition. |
 
 A `DomStatusFieldDescriptorLink` has the following properties:
 
-| Property | Type | Explanation |
+| Property | Type | Description |
 |--|--|--|
 | FieldDescriptorId | FieldDescriptorID | Contains the ID of the linked field descriptor. |
 | Visible | bool | Determines whether this field should be visible in the UI for this status. This is only used by the UI; there is no logic for this property server-side. |
@@ -107,5 +110,3 @@ Transitioning to another status can only be done using a specific transition req
 It is possible to mark a specific DOM behavior definition as the main "Module" definition.
 
 This will force all other DOM behavior definitions to inherit from it, sot that they all have the same status system. The inheriting definitions can only add extra `DomStatusSectionDefinitionLink` objects. For more information about inheritance, see [DomBehaviorDefinition](xref:DomBehaviorDefinition).
-
-<!-- Link to example -->
