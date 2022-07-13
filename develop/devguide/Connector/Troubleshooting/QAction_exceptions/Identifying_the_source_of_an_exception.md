@@ -107,7 +107,7 @@ System.IndexOutOfRangeException: Index was outside the bounds of the array.
 
 This will be more useful, as you will have more information to go on and you will not keep looking at the `ProcessMethod`. However, it is not ideal yet, as there is no indication that the actual problem is in the `RetrieveCustomDomain` method.
 
-Also, note that adding the "throw ex" will generate two SonarCube warnings:
+Also, note that adding the "throw ex" will generate two SonarQube warnings:
 
 - S2372: Exceptions should not be thrown from property getters. Property getters should be simple operations that are always safe to call. If exceptions need to be thrown, it’s best to convert the property to a method.
 
