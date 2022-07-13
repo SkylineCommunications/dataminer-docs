@@ -9,6 +9,6 @@ This section provides a summary overview of the DMS Standard Limited Warranty an
 This section elaborates on the different topics listed below:
 
 - [Warranty](xref:Overview_Support_warranty)
-- [DMS Maintenance and Support](xref:Overview_Support_DMS_M_and_S)
+- [Support services](xref:Overview_Support_DMS_M_and_S)
 - [Upgrade policy and timing](xref:Overview_Support_upgrade_policy)
 - [Technical support escalations and SLAs](xref:Overview_Support_Escalations_SLAs)
