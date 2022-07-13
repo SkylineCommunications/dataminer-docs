@@ -60,9 +60,13 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
 
      - **dc**: The name of the data center where this node is located.
 
-     - **rack**: The name of the rack where this node is located.
+     - **rack**: The name of the rack where this node is located. These are logical racks and can be different from the physical racks.
 
      - **prefer_local**: Set this to *true*.
+      
+      > [!IMPORTANT]
+      > To ensure even distribution of the replicas among the nodes within a data center, the replication factor should be a multiple of the number of racks.
+      > General practice is to put all nodes of a data center in one rack.
 
 1. Start Cassandra and evaluate if the service is up and running.
 
