@@ -30,7 +30,7 @@ To connect to Kibana:
 
 ### Entering queries
 
-To enter queries, in the bar on the left, navigate to Dev Tools as indicated below:
+To enter queries, in the bar on the left, navigate to *Dev Tools* as indicated below:
 
 ![Kibana example](~/user-guide/images/kibana_example.png)
 
