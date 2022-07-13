@@ -54,7 +54,7 @@
       items:
         - name: Warranty
           topicUid: Overview_Support_warranty
-        - name: DMS Maintenance and Support
+        - name: Support services
           topicUid: Overview_Support_DMS_M_and_S
         - name: Upgrade policy and timing
           topicUid: Overview_Support_upgrade_policy
