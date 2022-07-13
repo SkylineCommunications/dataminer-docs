@@ -32,7 +32,7 @@ To connect to Kibana:
 
 To enter queries, in the bar on the left, navigate to Dev Tools as indicated below:
 
-![]()
+![Kibana example](~/user-guide/images/kibana_example.png)
 
 ### Retrieving information on indices (tables)
 
@@ -123,7 +123,7 @@ GET tablename/_search
 
 The screenshot below illustrates what the queries will look like in Kibana. Note that there is no need to comment out any single query. Instead, you can run separate queries on their own by clicking the little triangle to the right of the query. Additionally, no semicolon is required after a query.
 
-![]()
+![Kibana query examples](~/user-guide/images/kibana_query_examples.png)
 
 ## Example: checking an oversized dms-csrmserviceinfo index
 
@@ -139,6 +139,6 @@ GET dms-csrmserviceinfo/_search
 
 This will return the number of records like this:
 
-![]()
+![Kibana records](~/user-guide/images/kibana_example_records.png)
 
 In the image above, you can see that the index in the example has only 2571 records, which means it is not too large.
