@@ -10,12 +10,12 @@ Below, you can read how you can find the root cause when the following alarm is 
 Thread problem in SLProtocol.exe: [DriverName/DriverVersion] ElementName – Protocolthread
 ```
 
-### User skills required
+## User skills required
 
 - Basic knowledge of drivers.
 - Basic knowledge of how to use DataMiner Cube.
 
-### What does this alarm mean?
+## What does this alarm mean?
 
 This alarm indicates that the protocol thread that is used to execute polling or logical flows has stopped showing activity for a specific duration. By default, this duration is 15 minutes.
 

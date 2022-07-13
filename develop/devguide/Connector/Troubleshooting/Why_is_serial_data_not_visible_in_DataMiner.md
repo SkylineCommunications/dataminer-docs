@@ -6,12 +6,12 @@ uid: Why_is_serial_data_not_visible_in_DataMiner
 
 Below, you can find how you can determine the reason why info retrieved via serial communication is not shown in DataMiner.
 
-### User skills required
+## User skills required
 
 - Basic knowledge of drivers.
 - Basic knowledge of how to use DataMiner Cube.
 
-### Symptoms of this issue
+## Symptoms of this issue
 
 All or some parameter values of a DataMiner element using a protocol with serial communication show *Not Initialized* or are no longer updating.
 

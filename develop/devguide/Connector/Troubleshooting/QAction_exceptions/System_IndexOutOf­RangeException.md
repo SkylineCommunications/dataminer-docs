@@ -47,7 +47,7 @@ string wrongDataOffloadFolder_5002 = Convert.ToString(currentParam[2]);
 
 Accessing `currentParam[2]` will fail as only 2 parameters were requested. It could be that this parameter was requested in the past but got removed, and the fact that the processing of the parameter also had to be removed was overlooked.
 
-A second problem that could occur is that it is not sure if the object that is returned will be in the expected format. This could be a null object or it might not have the expected size.
+A second problem that could occur is that it is not certain if the object that is returned will be in the expected format. This could be a null object or it might not have the expected size.
 
 ### Best practice
 

@@ -10,7 +10,7 @@ While there is no need to instantiate the basic local variables, like int, bool,
 
 Three special cases:
 
-- String variables can be null, but do not have the "new" key word to be instantiated. Simply assign a value to them.
+- String variables can be null (as it is a reference type), but do not have the "new" key word to be instantiated. Simply assign a value to them.
 - Static methods and properties can be accessed without calling the constructor.
 - A nullable int, bool, double, etc. can be defined by adding a question mark, e.g. `double? bitrate;`
 
@@ -37,11 +37,11 @@ if(person != null
 && person.LocationInfo.Street.StartsWith("Test"))
 ```
 
-The downside of this is that when the depth of items to check is too large, SonarCube will complain that there are too many conditional operators used in the expression. It will also affect the complexity calculation of the code.
+The downside of this is that when the depth of items to check is too large, SonarQube will complain that there are too many conditional operators used in the expression. It will also affect the complexity calculation of the code.
 
 ### Solution 1.B
 
-Since C#6 and later, a null-conditional member access operator `?.` is available, also known as the Elvis operator. This will return null when one of the members is null. This can then be combined with the null-coalescing operator `??`.
+Since C# 6 and later, a null-conditional member access operator `?.` is available, also known as the Elvis operator. This will return null when one of the members is null. This can then be combined with the null-coalescing operator `??`.
 
 ```csharp
 if (person?.LocationInfo?.Street?.StartsWith("Test") ?? false)
@@ -74,7 +74,7 @@ if (!String.IsNullOrEmpty(folder) && folder.EndsWith("\\"))
 
 ### Solution 2.B
 
-Use the Elvis operator (requires C#6):
+Use the Elvis operator (requires C# 6):
 
 ```csharp
 if (folder?.EndsWith("\\") ?? false)
