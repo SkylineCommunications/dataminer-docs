@@ -135,6 +135,7 @@ uid: glossary
 | DMP | DataMiner Probe. Also known as external DataMiner Agent. A DataMiner Probe has limited capabilities compared to a full DataMiner Agent, and often runs on a small-form-factor computer in remote and unmanned locations with limited communication capacity. |
 | DMS | DataMiner System. One or more DMAs integrated into one cluster via an IP network. |
 | DMT | DataMiner Test package. |
+| DMZ | Perimeter network that protects an organization's internal network from untrusted traffic. This adds an additional layer of security. This is named after the "Demilitarized Zone" between two areas controlled by opposing forces. |
 | DNS | Domain Name System. Naming system for translating hostnames to IP addresses and vice versa. The term is also sometimes used to indicate a DNS server, which is a server that provides DNS services. |
 | DOCSIS | Data Over Cable Service Interface Specification. Telecommunications standard that allows the combination of high-bandwidth data transfer and existing coaxial cable networks. |
 | DPML | DataMiner Protocol Markup Language. |
@@ -148,6 +149,7 @@ uid: glossary
 | Dummy | Variable within an Automation script that represents a DataMiner element. See [Script variables](xref:Script_variables). |
 | DVB | Digital Video Broadcasting. Set of internationally accepted open standards for digital television. This includes DVB-C (Digital Video Broadcasting - Cable), DVB-H (Digital Video Broadcasting - Handheld), DVB-S (Digital Video Broadcasting - Satellite) and DVB-T (Digital Video Broadcasting - Terrestrial). |
 | DVE | Dynamic Virtual Element. An element from which child elements are dynamically generated. The term DVE is used both for the parent and the child elements. See [Dynamic virtual elements](xref:Dynamic_virtual_elements). |
+| DxM | DataMiner Extension Module. A DataMiner component that can be installed next to an existing DataMiner installation to enable additional functionality. A DxM can be installed and upgraded independently from the DataMiner version and without any downtime of the core DataMiner software. |
 | Dynamic alarm threshold | Alarm threshold that is not based on a fixed value, but defined in comparison with a baseline value. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
 | Dynamic table parameter | Parameter that visualizes and manages a large data table (e.g. an SNMP table). Every column in the table is also considered to be a parameter. See [Table parameters](xref:Table_parameters). |
 | Eb/No | Energy per Bit (Eb) to Noise Density (No) ratio. Measure of signal-to-noise ratio for a digital communication system. |
