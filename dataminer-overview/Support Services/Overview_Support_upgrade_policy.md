@@ -2,13 +2,20 @@
 uid: Overview_Support_upgrade_policy
 ---
 
-# Upgrade policy and timing
+# Software updates and upgrades
 
-## Supported versions
+Updates and upgrades are available for:
+
+- The common standard off-the-shelf DataMiner [software stack](#dataminer-stack-upgrade-policy-and-timing).
+- The [connectors purchased from Skyline](#connector-update-policy), which are deployed to interface with specific third-party products.
+
+## DataMiner stack upgrade policy and timing
+
+### Supported versions
 
 Skyline Communications supports up to 3 major versions at any time, being the current Main Release and the 2 previous Main Releases. For instance, if the current latest DataMiner version is 10.2.x, the versions 10.1.x and 10.0.x will still be supported via an active DataMiner Maintenance and Support Contract. See [DataMiner Supported Life Cycle Policy](https://community.dataminer.services/dataminer-supported-versions-lifecycle/).
 
-## Upgrade cycle
+### Upgrade cycle
 
 Skyline Communications maintains a monthly cycle of small updates and a yearly cycle of major updates.
 
@@ -24,3 +31,9 @@ DataMiner is based on a non-exclusive upgrade model, meaning that users can skip
 
 > [!TIP]
 > For more detailed information on the DataMiner release cycles, see [DataMiner Main Release vs. Feature Release](https://community.dataminer.services/dataminer-main-release-vs-feature-release/).
+
+## Connector update policy
+
+Changes and evolutions of firmware on products (e.g. new metrics or functionality are added) are covered by an active Support Services agreement. This does not include cases where the interface is entirely deprecated by the vendor (e.g. there is a complete overhaul of the API or a brand-new API is introduced); in such cases, a new connector purchase will be required.
+
+In short, the DataMiner Support Services cover evolutions of a purchased DataMiner connector but not its replacement.

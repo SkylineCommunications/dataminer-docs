@@ -54,7 +54,7 @@
       items:
         - name: Standard limited warranty
           topicUid: Overview_Support_warranty
-        - name: Upgrade policy and timing
+        - name: Software updates and upgrades
           topicUid: Overview_Support_upgrade_policy
         - name: Out-of-business-hours support
           topicUid: Overview_Out_Of_Business_Hours_Support
