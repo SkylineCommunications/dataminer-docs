@@ -2,10 +2,10 @@
 uid: FAQ_Concurrent_users
 ---
 
-# How many (concurrent) users can log in to the DataMiner System?
+# How many (concurrent) users can log in to a DataMiner System?
 
-DataMiner comes without limitations in terms of total number of users or the number of concurrent users, and there’s no license fee associated with individual users.
+DataMiner comes without limitations in terms of total number of users or number of concurrent users, and there is no license fee associated with individual users.
 
-In other words, because accessibility is an important asset of DataMiner, the solution includes unlimited web-based remote access to the system, ensuring that the platform can be accessed by the user from any location – either using the browser on his machine or seamlessly on his smartphone or tablet – at any time considered necessary, and regardless the number of concurrent users.
+In other words, because accessibility is an important asset of DataMiner, the solution includes unlimited web-based remote access to the system, ensuring that the platform can be accessed by users from any location – either using the browser on their client machine or seamlessly on their smartphone or tablet – at any time considered necessary, and regardless of the number of concurrent users.
 
-From technical point of view, Skyline guarantees that at least 100 concurrent users can log on the DataMiner System, independent of their profile (administrator, operator…), performing custom user behavior (opening elements, services, views, requesting (history) alarms, trending, …).
+From a technical point of view, Skyline guarantees that at least 100 concurrent users can log on to a DataMiner System, independently of their profile (administrator, operator, etc.), performing custom user behavior (opening elements, services, views, requesting (history) alarms, trending, etc.).

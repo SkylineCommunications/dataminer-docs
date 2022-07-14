@@ -6,14 +6,14 @@ uid: FAQ_Serial_GPIO_converters
 
 ## Devices in our portfolio
 
-RS-232 is the most common serial interface. It only allows for one transmitter and one receiver on each line (point to point only). RS-232 also supports the Full-Duplex transmission method (send and receive at the same time).
+**RS-232** is the most common serial interface. It only allows for one transmitter and one receiver on each line (point to point only). RS-232 also supports the Full-Duplex transmission method (send and receive at the same time).
 
-RS-422 (EIA RS-422-A Standard) is the serial connection used on Apple computers for instance. It provides a mechanism for transmitting data up to 10 Mbits/s. RS-422 sends each signal using two wires to increase the maximum baud rate and cable length. RS-422 is also specified for multi-drop (point to multipoint) applications where only one transmitter is connected, and transmits on a bus of up to 10 receivers.  RS-485 is a superset of RS-422 and expands on the capabilities. RS-485 was made to address the multi-drop limitation of RS-422, allowing up to 32 devices to communicate through the same data line. Any of the slave devices on an RS-485 bus can communicate with any other 32 slave devices without going through a master device. Since RS-422 is a subset of RS-485, all RS-422 devices may be controlled by RS-485.
+**RS-422** (EIA RS-422-A Standard) is the serial connection used on e.g. Apple computers. It provides a mechanism for transmitting data up to 10 Mbits/s. RS-422 sends each signal using two wires to increase the maximum baud rate and cable length. RS-422 is also specified for multi-drop (point to multipoint) applications where only one transmitter is connected, and transmits on a bus of up to 10 receivers. **RS-485** is a superset of RS-422 and expands on the capabilities. RS-485 was made to address the multi-drop limitation of RS-422, allowing up to 32 devices to communicate through the same data line. Any of the slave devices on an RS-485 bus can communicate with any other 32 slave devices without going through a master device. Since RS-422 is a subset of RS-485, all RS-422 devices may be controlled by RS-485.
 
-Both protocols have multi-drop capability, but RS-485 allows up to 32 devices and RS-422 has a limit of 10. For both communication protocols, you should provide your own termination. It must also be obvious that this is used in a master/slave architecture. No slave is to send data unless it is requested to do so by the master (a.k.a. polling).
+Both protocols have multi-drop capability, but **RS-485** allows up to 32 devices and **RS-422** has a limit of 10. For both communication protocols, you should provide your own termination. It must also be obvious that this is used in a master/slave architecture. No slave is to send data unless it is requested to do so by the master (a.k.a. polling).
 
 > [!NOTE]
-> SLC can deliver such devices too, but we recommend our users to purchase them locally. Please note that Skyline can not be held responsible for the model the user selects; it is up to the user to look into the specs of the elements that need such an add-on and select a proper device for it.
+> SLC can deliver such devices, but we recommend our users to purchase them locally. Please note that Skyline cannot be held responsible for the model the user selects. It is up to the user to look into the specs of the elements that need such an add-on and select a proper device for it.
 
 ## Product overview
 

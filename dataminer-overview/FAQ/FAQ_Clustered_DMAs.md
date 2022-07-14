@@ -2,22 +2,36 @@
 uid: FAQ_Clustered_DMAs
 ---
 
-# What are the benefits of using clustered DMAs as opposed to separate DataMiner Systems?
+# What are the benefits of using clustered DataMiner Agents as opposed to separate ones?
 
-Non-clustered systems are like having one system, or two or more separate systems. When you cluster several DataMiner Agents and form one DataMiner system, there are several benefits. Amongst others:
+Non-clustered systems are like having one system, or two or more separate systems. When you cluster several DataMiner Agents into one DataMiner System, there are several benefits.
 
-- Every piece of functionality can be listed at once. For example: one system allows you to have a dashboard with data combined from multiple systems.
-- Capacity can be combined and utilized efficiently across the clustered DataMiner system.
-- The DataMiner drivers of individual DMAs are combined and available across all DMAs of the cluster, allowing more efficient use of these drivers.
-- Offers end-to-end view of services to improve service monitoring.
-- End-to-end Correlation Engine and Automation Engine functionality, i.e. cross system Automation and Correlation.
-- Having one report with data from both areas.
-- Correlation rules based on alarms from both areas.
-- One-time set-up of your filters for your email notifications (e.g. when user wants to receive an email for each critical alarm).
-- Admin work (e.g. setting up for automated backups) only to be performed once.
+- Every piece of functionality can be visualized as one. One system can, for example, present you with a dashboard that combines data collected from multiple DataMiner Agents.
+
+- Capacity can be combined and utilized efficiently across the entire cluster.
+
+- The DataMiner connectors on the individual DataMiner Agents are combined and made available across all Agents in the cluster, allowing these connectors to be used more efficiently.
+
+- An end-to-end view on all services will improve service monitoring.
+
+- End-to-end Correlation Engine and Automation Engine functionality (i.e. cross-system Automation and Correlation).
+
+- Reports containing data from multiple Agents.
+
+- Correlation rules based on alarms from multiple Agents.
+
+- One-time setup of all your email notification filters.
+
+- Administrative tasks only need to be performed once (e.g. setting up automated backups).
+
 - Unified alarm templates and several admin level settings.
-- Cross system Advanced Analytics, e.g. cross system behavior analysis.
-- Unified SMS gateway integration/messaging integration.
-- Single cluster integration to ticketing platforms.
+
+- Cross-system Advanced Analytics (e.g. cross-system behavioral analysis).
+
+- Unified Mobile Gateway integration.
+
+- Integration of ticketing platforms.
+
 - Unified user and group permissions.
+
 - ...
