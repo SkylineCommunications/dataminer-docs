@@ -14,7 +14,7 @@
           topicUid: Overview_Standardized_Foundation
         - name: References and use cases
           topicUid: Overview_References_and_use_cases
-    - name: DataMiner platform – Empowering your digital transformation
+    - name: DataMiner platform - Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:
         - name: Agility - the cornerstone of any successful data-driven media operation
@@ -67,3 +67,5 @@
           topicUid: Overview_Compliance_Statements_RvsG_O
         - name: Tender compliancy (licenses / engineering days)
           topicUid: Overview_Compliance_Statements_Tender_Compliancy
+    - name: Frequently asked questions
+      topicUid: FAQs
