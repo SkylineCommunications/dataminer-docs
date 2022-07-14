@@ -30,9 +30,6 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
    - **Port number**: The destination port of the SNMP manager. By default, this is set to 162.
 
-    > [!NOTE]
-    > SNMP traps can only be sent to IPv6 destinations from DataMiner 9.0 onwards.
-
 1. For *SNMPv3* only, an extra section will become available at the bottom of the *general* tab. In this section, specify the username, and the authentication and encryption password if necessary. In the expandable *Advanced* section, specify the following further options:
 
    - **Security level and protocol**: Select one of the following three levels in the drop-down list:
@@ -55,6 +52,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
    > [!NOTE]
    > The following combinations of authentication and encryption algorithm are not supported:
+   >
    > - MD5/SHA128 and AES192
    > - MD5/SHA128/SHA224 and AES256
    >

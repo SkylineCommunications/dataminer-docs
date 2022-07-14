@@ -39,7 +39,7 @@ The central process of a DataMiner Agent.
 
 ### SLDataGateway
 
-From DataMiner version 9.0 onwards, this process calculates the average trending information.
+This process calculates the average trending information.
 
 If a Cassandra database is installed, this process also handles the following:
 
@@ -62,9 +62,7 @@ Keeps track of parameter values that have to be shown to the user and creates al
 On compatible systems, SLElement is run as a 64-bit process. However, it can still be run as a 32-bit process if it is registered as such with a batch file from the Tools directory.
 
 > [!NOTE]
->
-> - This process is only aware of parameters that are being monitored and parameters that have to be displayed on the user interface.
-> - In DataMiner versions prior to 9.0, this process also calculates parameter trending values. From DataMiner version 9.0 onwards, this function is taken over by the SLDataGateway process.
+> This process is only aware of parameters that are being monitored and parameters that have to be displayed on the user interface.
 
 ### SLLog
 
@@ -127,9 +125,7 @@ For information on the main processes, see [Main DMA software components](#main-
 
 ### SLAnalytics
 
-This process is introduced in DataMiner 9.0, and only starts on a DMA that uses a Cassandra database.
-
-The process supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection and alarm focus calculation.
+This process only starts on a DMA that uses a Cassandra database. It supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection, and alarm focus calculation.
 
 > [!NOTE]
 > Prior to DataMiner 9.5.5, it is possible to configure when prediction models are backed up, in the file *SLAnalytics.config*. However, from DataMiner 9.5.5 onwards, prediction models are no longer backed up, but instead retrieved from a cache and re-computed in case they are not available in the cache. For more information, see [SLAnalytics.config](xref:SLAnalytics_config#slanalyticsconfig).

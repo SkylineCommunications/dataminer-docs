@@ -4,9 +4,9 @@ uid: Migrating_the_general_database_to_Cassandra
 
 # Migrating the general database to Cassandra
 
-From DataMiner 9.0 onwards, you can migrate the general database (also known as "local" database) from MySQL or MS SQL to Cassandra. Though DataMiner can still be used with a MySQL or MS SQL database, switching to Cassandra is highly recommended as it leads to enhanced performance, and certain DataMiner features are only available if a Cassandra database is used.
+In legacy DataMiner Systems, a MySQL or MS SQL general database (also known as "local" database) is used. From DataMiner 9.0 onwards, a Cassandra database is recommended instead. In System Center, you can migrate the general database from MySQL or MS SQL to Cassandra using a wizard.
 
-Before you can migrate to Cassandra, DataMiner has to check if your system is ready for the migration. This is done via a wizard in System Center. The wizard checks both if the DMS is compatible and if the system requirements are met. If the system does not meet the necessary requirements, you can exit the wizard and then open it later to check again, before actually starting the migration.
+The wizard will first check if your system is ready for the migration. It checks both if the DMS is compatible and if the system requirements are met. If the system does not meet the necessary requirements, you can exit the wizard and then open it later to check again, before actually starting the migration.
 
 > [!NOTE]
 > Cassandra is free to use, so no additional license is required for the migration. Though a commercial version of the database software is also available, this is not necessary.

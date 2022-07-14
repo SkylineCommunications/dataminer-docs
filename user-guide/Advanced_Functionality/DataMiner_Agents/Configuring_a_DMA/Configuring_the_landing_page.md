@@ -9,8 +9,7 @@ In the file *Config.manual.asp*, located in the folder *C:\\Skyline DataMiner\\W
 > [!NOTE]
 >
 > - If the *Config.manual.asp* file does not exist on a DMA, it is automatically created during DataMiner startup.
-> - Some settings in the *Config.manual.asp* file are only available from DataMiner 9.0 onwards. If you upgrade to 9.0 from an older version of DataMiner, the file will not be updated automatically, so some settings may need to be added manually.
-> - The file is NOT automatically synchronized on other DMAs in the DMS.
+> - The file is NOT automatically synchronized with other DMAs in the DMS.
 
 ## Configuring whether the landing page is displayed
 

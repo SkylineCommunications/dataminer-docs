@@ -577,9 +577,9 @@ Example:
 
 ### Generating information events when a connection fails to authenticate
 
-From DataMiner 9.0.0 CU9 onwards, an option can be configured to have an information event generated whenever a connection fails to be authenticated.
+It is possible to have an information event generated whenever a connection fails to be authenticated. From DataMiner 10.1.8/10.2.0 onwards, this is enabled by default.
 
-To enable this option, add an *\<EnableFailedAuthenticationInfoEvents>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to “true”. From DataMiner 10.1.8/10.2.0 onwards, this option is set to “true” by default.
+To enable this option in older systems, add an *\<EnableFailedAuthenticationInfoEvents>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to “true”.
 
 Example:
 
