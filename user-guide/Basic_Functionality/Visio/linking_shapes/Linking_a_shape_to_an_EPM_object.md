@@ -41,6 +41,6 @@ For example:
 
 ## Showing the system type and/or system name in the shape text
 
-To make the shape text display the system name or system type, add an **Info** shape data field and set it to *System Type* or *System Name*. See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
+To make the shape text display the system name or system type, add an **Info** shape data field and set it to *System Type* or *System Name*. Then add an "*" character in the shape text. This character will be replaced by the requested information. See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
-Alternatively, you can use the placeholders [System Name] and [System Type] directly in the text.
+Alternatively, you can use the placeholders [System Name] and [System Type] in the text.
