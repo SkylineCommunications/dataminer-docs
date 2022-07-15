@@ -15,10 +15,8 @@ uid: FAQs
 - [What is the recommended method for southbound integration of an EMS/NMS?](xref:FAQ_Southbound_integration_EMS_NMS)
 - [What is the standard lead time for new connectors?](xref:FAQ_Standard_lead_time_new_connectors)
 - [What are the DataMiner system requirements?](xref:FAQ_DataMiner_system_requirements)
-
 - [What is the DataMiner roadmap?](xref:FAQ_DataMiner_roadmap)
-
 - [How does Skyline define the DMA element capacity?](xref:FAQ_DMA_element_capacity)
-- [How much bandwidth is to be foreseen for data acquisition on data sources?](xref:FAQ_Bandwidth_data_acquisition)
-- [What are the limitations when using Generic SNMP driver as opposed to a dedicated driver?](xref:FAQ_Limitations_generic_SNMP_connector)
+- [How much bandwidth must be provided for data acquisition on data sources?](xref:FAQ_Bandwidth_data_acquisition)
+- [What are the limitations when using Generic SNMP connector as opposed to a dedicated connector?](xref:FAQ_Limitations_generic_SNMP_connector)
 - [Which languages are available in the DataMiner Cube client?](xref:FAQ_DataMiner_Cube_languages)
