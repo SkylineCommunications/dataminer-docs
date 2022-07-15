@@ -49,3 +49,5 @@ You can link a shape to:
 - [an Asset Manager table](xref:Linking_a_shape_to_an_Asset_Manager_table)
 
 - [a dashboard component](xref:Linking_a_shape_to_a_dashboard_component)
+
+- [an EPM object](xref:Linking_a_shape_to_an_EPM_object)

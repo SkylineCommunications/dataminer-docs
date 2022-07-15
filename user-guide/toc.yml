@@ -417,6 +417,8 @@
               topicUid: Linking_a_shape_to_an_Asset_Manager_table
             - name: Linking a shape to a dashboard component
               topicUid: Linking_a_shape_to_a_dashboard_component
+            - name: Linking a shape to an EPM object
+              topicUID: Linking_a_shape_to_an_EPM_object
             - name: Adding options to shapes linked to elements or services
               topicUid: Adding_options_to_shapes_linked_to_elements_or_services
         - name: Making shapes display information

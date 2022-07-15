@@ -11,7 +11,7 @@ Below, you find an alphabetical overview of all shape data fields that can be sp
 | Aggregation | [Linking a shape to an aggregation rule](xref:Linking_a_shape_to_an_aggregation_rule) |
 | Alarm | [Linking a shape to an alarm](xref:Linking_a_shape_to_an_alarm) |
 | AlarmFilter | [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)<br> [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component) |
-| AlarmLevel | Available from DataMiner 10.0.5 onwards.<br> [Customizing the displayed view alarm level](xref:Linking_a_shape_to_a_view#customizing-the-displayed-view-alarm-level) |
+| AlarmLevel | Available from DataMiner 10.1.0/10.0.4 onwards.<br> [Customizing the displayed view alarm level](xref:Linking_a_shape_to_a_view#customizing-the-displayed-view-alarm-level)<br> [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
 | AlarmSummary | [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter) |
 | AlarmTab | Available from DataMiner 10.0.2 onwards.<br> [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter) |
 | Annotations | [Showing or hiding a shape based on the existence of annotations](xref:Showing_or_hiding_a_shape_based_on_the_existence_of_annotations) |
@@ -103,6 +103,8 @@ Below, you find an alphabetical overview of all shape data fields that can be sp
 | Source | [Creating a list view](xref:Creating_a_list_view) |
 | Stretch | [Stretching a shape across an entire card](xref:Stretching_a_shape_across_an_entire_card) |
 | SubscriptionFilter | [Retrieving and showing the value of a table parameter using a subscription filter](xref:Linking_a_shape_to_an_element_parameter#retrieving-and-showing-the-value-of-a-table-parameter-using-a-subscription-filter)<br> [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter)<br> [Restricting the use of line objects to specific connections](xref:Restricting_the_use_of_line_objects_to_specific_connections)<br> [Positioning shapes dynamically](xref:Positioning_shapes_dynamically1#positioning-shapes-dynamically)<br> [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows)<br> [Creating a tree control](xref:Adding_options_to_a_session_variable_control#creating-a-tree-control)<br> [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component) |
+| SystemName | Available from DataMiner 10.1.0/10.0.4 onwards.<br> [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
+| SystemType | Available from DataMiner 10.1.0/10.0.4 onwards.<br> [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
 | Table | [Linking a shape to an Asset Manager table](xref:Linking_a_shape_to_an_Asset_Manager_table) |
 | Tag | [Highlighting connections based on the source and target of the connection](xref:Options_for_highlighting_DCF_connections#highlighting-connections-based-on-the-source-and-target-of-the-connection) |
 | TextStyle | Available from DataMiner 10.3.0/10.2.3 onwards.<br>[Configuring a shape's text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) |
