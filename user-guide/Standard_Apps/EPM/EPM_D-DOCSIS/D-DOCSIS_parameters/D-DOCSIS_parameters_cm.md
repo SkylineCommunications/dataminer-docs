@@ -105,7 +105,8 @@ This page contains an overview of the CM parameters available in the D-DOCSIS br
 
 - **OFDM Status**: Calculated. The operational status of the OFDM function according to support and availability:
 
-  - *Active*: The CM supports OFDM ("Reg Version" greater or equal to 3.1) and at least 1 profile is assigned to it (based on OFDM Profile ID List).
+  - *Ok*: The CM supports OFDM ("Reg Version" greater or equal to 3.1), at least 1 profile is assigned to it (based on OFDM Profile ID List), and it has no impaired OFDM channels.
+  - *Partial*: The CM supports OFDM ("Reg Version" greater or equal to 3.1), at least 1 profile is assigned to it (based on OFDM Profile ID List), and it has one or more impaired OFDM channels.
   - *Inactive*: The CM supports OFDM, but there is no profile assigned to it.
   - *Not Supported*: The CM does not support OFDM ("Reg Version" less than 3.1).
 
