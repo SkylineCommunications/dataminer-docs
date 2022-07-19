@@ -2522,12 +2522,14 @@
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
+        - name: Cassandra does not start up after a server restart
+          topicUID: Cassandra_not_starting_up_after_server_restart
+        - name: Collecting DataMiner Cube memory dumps
+          topicUID: Collecting_DataMiner_Cube_memory_dumps
         - name: Investigating NATS issues
           topicUid: Investigating_NATS_Issues
         - name: Sharing dashboard window does not disappear
           topicUID: Sharing_dashboard_window_does_not_disappear
-        - name: Cassandra does not start up after a server restart
-          topicUID: Cassandra_not_starting_up_after_server_restart
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
 - name: Reference
