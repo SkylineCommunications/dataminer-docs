@@ -998,6 +998,8 @@
             topicUID: Installing_Cassandra_Reaper
           - name: Moving the Cassandra database to a different disk drive
             topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+          - name: Making Cassandra nodetool accessible remotely
+            topicUID: Making_Cassandra_nodetool_accessible_remotely
         - name: Elasticsearch database
           topicUid: Elasticsearch_database
           items:
