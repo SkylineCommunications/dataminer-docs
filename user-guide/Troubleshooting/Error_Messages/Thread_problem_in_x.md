@@ -198,7 +198,6 @@ Replicated services are not up to date.
 
 - A thread resets Watchdog at the end.
 - Connecting takes longer than 1 minute.
-- Services CS
 - A remote server may be down or there may be an issue with a firewall.
 
 ### Resolution
