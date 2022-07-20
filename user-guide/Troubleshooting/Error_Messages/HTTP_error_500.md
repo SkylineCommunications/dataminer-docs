@@ -4,7 +4,7 @@ uid: HTTP_error_500
 
 # HTTP error 500
 
-#### Symptom
+## Symptom
 
 When connecting to the DataMiner Dashboards legacy app, you get the following HTTP error:
 
@@ -18,7 +18,7 @@ In the *Detailed Error Information* section, you find the following *Config Erro
 The configuration section 'system.web.extensions' cannot be read because it is missing a section declaration.
 ```
 
-#### Cause
+## Cause
 
 The problem can have two causes:
 
@@ -26,7 +26,7 @@ The problem can have two causes:
 
 - there is a problem with IIS where the configuration of .NET 2.0 is read even for application pools using .NET 4.0.
 
-#### Resolution
+## Resolution
 
 To resolve the problem, do the following:
 

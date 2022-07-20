@@ -4,7 +4,7 @@ uid: Could_not_load_Visio_file
 
 # Could not load Visio file
 
-#### Symptom
+## Symptom
 
 When trying to open a Visio file in DataMiner Cube, you get one of the following errors:
 
@@ -16,11 +16,11 @@ Could not load Visio file: Visio cannot open the file because it's not a Visio f
 Could not load Visio file, please verify that your version of Visio supports VSDX files. VSDX files are supported in Visio 2010 SP2 with compatibility pack installed and in Visio 2013.
 ```
 
-#### Cause
+## Cause
 
 You are probably trying to open a VSDX file in a version of Microsoft Visio that does not support the VSDX file format.
 
-#### Resolution
+## Resolution
 
 If you use Microsoft Visio 2010:
 

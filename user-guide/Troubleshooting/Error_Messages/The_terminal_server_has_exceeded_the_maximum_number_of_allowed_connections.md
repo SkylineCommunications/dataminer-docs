@@ -14,7 +14,7 @@ When you set up a remote connection, by default a new terminal session is starte
 
 You can, however, always connect to the so-called console session.
 
-#### Connection to the console session
+## Connection to the console session
 
 Execute the following command in a command prompt window to set up a remote desktop connection to the console session of a remote machine.
 
@@ -24,7 +24,7 @@ If that console session is being used by another user, you will be offered the p
 mstsc /v:[IP address of remote machine] /admin
 ```
 
-#### Working with the list of open sessions in the Task Manager’s Users tab
+## Working with the list of open sessions in the Task Manager’s Users tab
 
 When connected to the console session of a remote machine, you can see a list of all open terminal sessions in the Users tab of the machine’s Task Manager.
 
@@ -33,7 +33,7 @@ In that tab, you can disconnect or log off open sessions. You can also send mess
 > [!WARNING]
 > Before you disconnect or log off sessions, check if no important applications are running in those sessions.
 
-#### Shadowing a Remote Desktop session
+## Shadowing a Remote Desktop session
 
 When you open a “normal” terminal session on a remote machine (i.e. no console session), you can shadow another session on that same machine, even the console session.
 
