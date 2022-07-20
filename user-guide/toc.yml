@@ -2528,6 +2528,8 @@
           topicUID: Collecting_DataMiner_Cube_memory_dumps
         - name: Investigating NATS issues
           topicUid: Investigating_NATS_Issues
+        - name: Keeping a DMA from running out of disk space
+          topicUID: Keeping_a_DMA_from_running_out_of_disk_space
         - name: Sharing dashboard window does not disappear
           topicUID: Sharing_dashboard_window_does_not_disappear
     - name: Customer DataMiner Reporting (CDMR)
