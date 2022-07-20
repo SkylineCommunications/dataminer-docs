@@ -2517,6 +2517,9 @@
               topicUid: Communication_logging
             - name: DataMiner logging
               topicUid: DataMiner_logging
+              items:
+                - name: Watchdog logging
+                  topicUID: Watchdog_logging
             - name: Elements logging
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
