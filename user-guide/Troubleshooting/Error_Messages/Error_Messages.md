@@ -12,15 +12,15 @@ This section provides more information on the following error messages:
 
 - [Could not load Visio file](xref:Could_not_load_Visio_file)
 
-- Creating Database tables for x failed. y (hr = z)
+- [Creating Database tables for x failed. y (hr = z)](xref:Creating_Database_tables_for_x_failed)
 
-- Creating element-object for x failed. y (hr = z)
+- [Creating element-object for x failed. y (hr = z)](xref:Creating_element_object_for_x_failed)
 
-- Creating element-objects for x failed. y (hr = z)
+- [Creating element-objects for x failed. y (hr = z)](xref:Creating_element_objects_for_x_failed)
 
-- Creating log-factory for x failed. y (hr = z)
+- [Creating log-factory for x failed. y (hr = z)](xref:Creating_log_factory_for_x_failed)
 
-- Creating log-file for x failed. y (hr = z)
+- [Creating log-file for x failed. y (hr = z)](xref:Creating_log_file_for_x_failed)
 
 - ElementID (x) Not unique y existing = z
 
