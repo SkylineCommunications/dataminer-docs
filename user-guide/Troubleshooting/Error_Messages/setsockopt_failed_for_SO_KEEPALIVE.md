@@ -4,7 +4,7 @@ uid: setsockopt_failed_for_SO_KEEPALIVE
 
 # setsockopt failed for SO_KEEPALIVE
 
-#### Symptom
+## Symptom
 
 In the SLErrors and SLPort log files, you come across the following error message:
 
@@ -12,11 +12,11 @@ In the SLErrors and SLPort log files, you come across the following error messag
 setsockopt failed for SO_KEEPALIVE
 ```
 
-#### Cause
+## Cause
 
 An error occurred while setting a KeepAlive option.
 
-#### More information
+## More information
 
 By default, the KeepAlive option of smart IP client sockets is set to the following values:
 
