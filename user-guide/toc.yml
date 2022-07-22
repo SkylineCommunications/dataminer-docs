@@ -937,6 +937,19 @@
               topicUid: Synchronizing_data_between_DataMiner_Agents
         - name: Running BPA tests
           topicUid: Running_BPA_tests
+          items:
+            - name: Cassandra DB Size
+              topicUID: BPA_Cassandra_DB_Size
+            - name: Check Antivirus DLLs
+              topicUID: BPA_Check_Antivirus_DLLs
+            - name: Minimum Requirements Check
+              topicUID: BPA_Minimum_Requirements_Check
+            - name: Report Active RTE
+              topicUID: BPA_Report_Active_RTE
+            - name: Verify Cloud DxM Version
+              topicUID: BPA_Verify_Cloud_DxM_Version
+            - name: View Recursion
+              topicUID: BPA_View_Recursion
     - name: Failover
       topicUid: failover
       items:
