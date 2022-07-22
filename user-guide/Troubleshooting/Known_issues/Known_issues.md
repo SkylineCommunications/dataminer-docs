@@ -6,6 +6,8 @@ uid: Known_issues
 
 - [Cassandra nodes not configured if current DMA IP is assigned as virtual IP](xref:KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP)
 
+- [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup)
+
 - [IE9: Cube application not downloading over HTTPS](xref:KI_IE9_Cube_application_not_downloading_over_HTTPS)
 
 - [Incorrect RTE counts in SLWatchdog2.txt and Alarm Console](xref:KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console)
@@ -24,12 +26,6 @@ uid: Known_issues
 
 - [SNMP SET returns a 'NO ACCESS' error](xref:KI_SNMP_SET_returns_a_NO_ACCESS_error)
 
-<!-- 
+- [Unavailable system database after DataMiner server reboot](xref:KI_Unavailable_system_database_after_DataMiner_server_reboot)
 
-- [](xref:)
-
-- [](xref:)
-
-- [](xref:)
-
- -->
+- [Upgrade error: api-ms-win-crt-stdio-l1-1-0.dll is missing](xref:KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing)
