@@ -2520,6 +2520,8 @@
               items:
                 - name: Watchdog logging
                   topicUID: Watchdog_logging
+                - name: Element in Protocol logging
+                  topicUID: Element_in_Protocol_logging
             - name: Elements logging
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
