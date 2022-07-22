@@ -2539,6 +2539,8 @@
           topicUID: Keeping_a_DMA_from_running_out_of_disk_space
         - name: Sharing dashboard window does not disappear
           topicUID: Sharing_dashboard_window_does_not_disappear
+    - name: Known issues
+      topicUID: Known_issues
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
 - name: Reference
