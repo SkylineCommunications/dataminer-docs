@@ -52,27 +52,30 @@ The previous requirements are met.
 
 1. To change the Cassandra password in DataMiner, in DataMiner Cube, go to *System Center > Database*, change the Cassandra database password, and click *Save*.
 
-1. Repeat these steps for each DMA with its own dedicated Cassandra cluster.
-
-For example, if 2 DMAs are in Failover, these actions only need to be done from one of the DMAs. If the changes are done from the primary DMA, they will automatically be implemented on the backup DMA. Similarly, if the Cassandra cluster feature is used for the DMS (i.e. one Cassandra cluster for the complete DMS), the steps only need to be done for one DMA.
+1. Repeat these steps for each DMA with its own dedicated Cassandra cluster. For example, if 2 DMAs are in Failover, these actions only need to be done from one of the DMAs. If the changes are done from the primary DMA, they will automatically be implemented on the backup DMA. Similarly, if the [Cassandra cluster feature](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) is used for the DMS (i.e. one Cassandra cluster for the complete DMS), the steps only need to be done for one DMA.
 
 ### Test the database connection
 
 #### Prerequisites
 
-Previous requirements are met
+The previous requirements are met.
 
 #### Steps
 
-In DataMiner Cube, go to System Center > Tools > query executer, make sure the correct database is selected at the top, and execute the following query:
-select * from system_schema.tables where keyspace_name='SLDMADB';
-Check if trending data is available in DataMiner Cube.
-Check the health of the Cassandra database in the Failover status window or in the Alarm Console.
-Check the log files SLDataminer.txt, SLError.txt, SLDatagateway.txt and SLDBConnection.txt for database errors.
+1. In DataMiner Cube, go to *System Center > Tools > query executer*, make sure the correct database is selected at the top, and execute the following query:
+
+    ```txt
+    select * from system_schema.tables where keyspace_name='SLDMADB';
+    ```
+
+1. Check if trending data is available in DataMiner Cube.
+1. Check the health of the Cassandra database in the [Failover status](xref:Viewing_the_current_Failover_DMA_status) window or in the Alarm Console.
+1. Check the log files *SLDataminer.txt*, *SLError.txt*, *SLDatagateway.txt* and *SLDBConnection.txt* for database errors.
 
 ## Time estimate
 
-Item	Activity	Duration
-1	Checking the requirements	Approx. 10 min.
-2	Creating a database user	Approx. 60 min.
-3	Testing the database connection	Approx. 60 min.
+| Item | Activity | Duration |
+|------|----------|----------|
+| 1    | Checking the requirements       | Approx. 10 min. |
+| 2    | Creating a database user        | Approx. 60 min. |
+| 3    | Testing the database connection | Approx. 60 min. |
