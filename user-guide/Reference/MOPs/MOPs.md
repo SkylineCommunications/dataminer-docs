@@ -18,5 +18,7 @@ uid: mops
 
 - [Migrating a Failover pair to new hardware](xref:MOP_Migrating_a_Failover_pair_to_new_hardware)
 
+- [Replacing a dead Cassandra node (Linux)](xref:MOP_Replacing_a_dead_Cassandra_node_Linux)
+
 
 
