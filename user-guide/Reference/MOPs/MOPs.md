@@ -20,5 +20,10 @@ uid: mops
 
 - [Replacing a dead Cassandra node (Linux)](xref:MOP_Replacing_a_dead_Cassandra_node_Linux)
 
+- [Restoring a MySQL table structure or table data](xref:MOP_Restoring_a_MySQL_table_structure_or_table_data)
+
+- [Restoring a single table in a MySQL database](xref:MOP_Restoring_a_single_table_in_a_MySQL_database)
+
+- [Taking a backup using a symbolic link to another drive](xref:MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive)
 
 
