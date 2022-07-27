@@ -55,32 +55,34 @@ For more information on the threadpool options, see [Timer options](xref:LogicTi
 
 When the timer is configured correctly, the statistics should be as low as possible, no threads should be in a waiting state (queued), and the average and max duration of a thread execution should be kept as low as possible.
 
-![]()
+![](~/develop/images/MultiThreadedHTTPStatistics1.png)
 
 When the threadpool is defined too low, this can cause threads to be queued (i.e. put in a waiting state).
 
-![]()
+![](~/develop/images/MultiThreadedHTTPStatistics2.png)
 
 In this example, a multi-threaded HTTP timer is used. If a complex device is polled, the responses can be quite big. This could cause huge spikes in memory and CPU usage every time the threads are launched to poll 20 rows, because all of them are currently launched simultaneously.
 
-![]()<br>
+![](~/develop/images/multi-threaded_timer_graph.png)<br>
 *Example of CPU spikes when threads are launched simultaneously*
 
-To overcome this, you can make use of the pollingrate attribute in the options tag. (See DataMiner Development Library)
+To overcome this, you can make use of the `pollingrate` attribute in the options tag. See the [introduction to multi-threaded timers](xref:AdvancedMultiThreadedTimersIntroduction).
 
-By defining the polling rate correctly, you can spread the launch of the threads equally over the timer’s time and thereby avoid memory and CPU spikes.
+By defining the polling rate correctly, you can spread the launch of the threads equally over the timer's time and thereby avoid memory and CPU spikes.
 
 ## Configuring the polling rate
 
-Like in the example above, let’s say there are 200 rows in a table and all of these rows should be polled within a 10-second timeframe. This means that every second, 20 rows should be polled. With the current configuration, all threads are launched simultaneously. To overcome this, configure the polling rate.
+Like in the example above, let's say there are 200 rows in a table and all of these rows should be polled within a 10-second timeframe. This means that every second, 20 rows should be polled. With the current configuration, all threads are launched simultaneously. To overcome this, configure the polling rate.
 
-To do so, configure the pollingrate attribute in to the format “pollingrate:a,b,c”, where:
+To do so, configure the `pollingrate` attribute in the format "pollingrate:a,b,c", where:
 
-“a” defines how often threads should be released (in milliseconds).
-“b” defines the number of threads that can be active simultaneously.
-“c” defines the number of threads that will be released every “a” milliseconds.
+- "a" defines how often threads should be released (in milliseconds).
+- "b" defines the number of threads that can be active simultaneously.
+- "c" defines the number of threads that will be released every "a" milliseconds.
+
 For example, take the following configuration:
 
+```xml
 <Timer id="1" options="ip:100,1;each:10000;pollingrate:200,4,4;threadpool:20,5,231,232,233,234,235,15000;dynamicthreadpool:230;qactionbefore:2">
     <Name>HTTP Timer</Name>
     <Time>1000</Time>
@@ -89,9 +91,11 @@ For example, take the following configuration:
         <Group>100</Group>
     </Content>
 </Timer>
-This configuration ensures that whenever the timer goes off, the 20 threads that were initially released at the start of the second are now spread over 200-millisecond intervals, meaning that every 200 milliseconds, “c” threads are released (in this case 4, as 1 second has five 200-millisecond intervals, and 5 * 4 = 20). This results in a better spread of load and less spikes in memory and CPU usage.
+```
 
-As defining the polling rate correctly can be a tricky, you can use the PollingRate Calculator Tool to make things easier. For more information on how to use this tool and to download the tool, see Multi-threaded timer polling rate calculator.
+This configuration ensures that whenever the timer goes off, the 20 threads that were initially released at the start of the second are now spread over 200-millisecond intervals, meaning that every 200 milliseconds, "c" threads are released (in this case 4, as 1 second has five 200-millisecond intervals, and 5 * 4 = 20). This results in a better spread of load and less spikes in memory and CPU usage.
+
+As defining the polling rate correctly can be tricky, you can use the *PollingRate Calculator Tool* to make things easier. For more information on how to download and use this tool, see [Multi-threaded timer polling rate calculator](https://community.dataminer.services/documentation/multi-threaded-timer-polling-rate-calculator/).
 
 ## Using multiple multi-threaded timers
 
@@ -107,19 +111,26 @@ Below you can find an example of an incorrect and correct configuration.
 
 Using an identical IP/port combination can cause excessive strain on a single SLPort process.
 
+![](~/develop/images/MultiThreadedIncorrect.png)
 
+![](~/develop/images/MultiThreadedIncorrect2.png)
 
 ### Example of a correct configuration
 
 Using a unique IP/port combination will ensure that the load is spread equally over all SLPort processes.
 
+![](~/develop/images/MultiThreadedCorrect.png)
 
+![](~/develop/images/MultiThreadedCorrect2.png)
 
 ### SLPortSplit logging
 
-If you want to check to which SLPort process a connection is assigned, you can check the SLPortSplit.txt log file. This file is available on every DMA in the folder C:\Skyline DataMiner\Logging. It displays an entry for every active connection in the following format:
+If you want to check to which SLPort process a connection is assigned, you can check the *SLPortSplit.txt* log file. This file is available on every DMA in the folder `C:\Skyline DataMiner\Logging`. It displays an entry for every active connection in the following format:
 
- “[IP]:[IPPort]        [SLPortID]”
+```txt
+[IP]:[IPPort] [SLPortID]
+```
 
 Example based on the configurations used above:
 
+![](~/develop/images/SLPortSplitExample.png)

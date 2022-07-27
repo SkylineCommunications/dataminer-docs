@@ -521,6 +521,8 @@
         topicUID: How_to_aggregate_alarm_severities
       - name: How to configure multi-threaded timers
         topicUID: How_to_configure_multi_threaded_timers
+      - name: How to create an HTTP connector (CoinMarketCap use case)
+        topicUID: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE
