@@ -2732,5 +2732,7 @@
           topicUid: IDs_of_views_elements_services_redundancy_groups_and_parameters
         - name: DataMiner client applications
           topicUid: DataMiner_client_applications
+    - name: Methods of Procedure
+      topicUID: mops
     - name: Glossary
       topicUid: glossary

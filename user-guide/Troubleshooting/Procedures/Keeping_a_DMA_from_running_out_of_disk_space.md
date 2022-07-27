@@ -50,7 +50,7 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
         In the `C:\Skyline DataMiner\Backup` folder, there may be many log files from past backups. Remove the log files that are old enough to be no longer relevant.
 
         > [!NOTE]
-        > As a more permanent solution, you can use a symbolic link for your backups. For more information, see [Taking a backup using a symbolic link to another drive](https://community.dataminer.services/documentation/take-a-backup-using-a-symbolic-link-to-another-drive/).
+        > As a more permanent solution, you can use a symbolic link for your backups. For more information, see [Taking a backup using a symbolic link to another drive](xref:MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive).
 
     - **Cleaning up Cassandra snapshots – 10 minutes**
 
