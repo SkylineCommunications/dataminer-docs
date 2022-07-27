@@ -219,22 +219,22 @@ To send an HTTP request, you can either execute the session via a timer or via a
 
 - **Session**: A session describing where to retrieve data.
 
-```xml
-<HTTP>
-    <Session id="1" name="Get Crypto Currency Listing">
-        <Connection id="1" name="Get Crypto Currency Listing">
-            <Request verb="GET" url="v1/cryptocurrency/listings/latest">
-                <Headers>
-                    <Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
-                </Headers>
-            </Request>
-            <Response statusCode="100">
-                <Content pid="200"></Content>
-            </Response>
-        </Connection>
-    </Session>
-</HTTP>
-```
+    ```xml
+    <HTTP>
+        <Session id="1" name="Get Crypto Currency Listing">
+            <Connection id="1" name="Get Crypto Currency Listing">
+                <Request verb="GET" url="v1/cryptocurrency/listings/latest">
+                    <Headers>
+                        <Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+                    </Headers>
+                </Request>
+                <Response statusCode="100">
+                    <Content pid="200"></Content>
+                </Response>
+            </Connection>
+        </Session>
+    </HTTP>
+    ```
 
 Notice the extra header added to the `Headers` element. A header is typically a key/value combination, so in this case we aim add a header to our HTTP request that has as key "X-CMC_PRO_API_KEY" and as value the content of the parameter with ID 3. The purpose of this parameter with ID 3 is to hold the CoinMarketCap API access key value. You need to make sure the CoinMarketCap API access key is properly set in this parameter before sending the request, otherwise you will not authenticate successfully.
 
