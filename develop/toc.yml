@@ -515,6 +515,12 @@
           topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
+    - name: How-tos
+      items:
+      - name: How to aggregate alarm severities
+        topicUID: How_to_aggregate_alarm_severities
+      - name: How to configure multi-threaded timers
+        topicUID: How_to_configure_multi_threaded_timers
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE
