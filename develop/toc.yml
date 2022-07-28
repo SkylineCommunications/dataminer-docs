@@ -529,6 +529,10 @@
         topicUID: How_to_handle_XML_and_JSON_data_in_QActions
       - name: How to implement the Subtable feature
         topicUID: How_to_implement_the_subtable_feature
+      - name: How to integrate RabbitMQ with DataMiner
+        topicUID: How_to_integrate_RabbitMQ_with_DataMiner
+      - name: How to integrate the HTTP Sessions Table in a connector
+        topicUID: How_to_integrate_the_HTTP_sessions_table_in_a_connector
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE

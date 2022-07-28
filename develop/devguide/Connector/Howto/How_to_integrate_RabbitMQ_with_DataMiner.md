@@ -43,17 +43,19 @@ You can monitor a RabbitMQ Node using its HTTP API. The API exposes extensive in
 
 Using the built-in HTTP communication of DataMiner, you can easily create a driver monitoring a simple RabbitMQ system. For instance, here is a screenshot of driver listing all the exchanges, queues, bindings, and consumers present in the node:
 
-![]()
+![RabbitMQ node](~/develop/images/rabbitmq2-1024x779.png)
 
-You can even use the new node edge graph component in the DataMiner Dashboard app to generate a nice visual overview of the system:
+You can even use the *node edge* graph component in the DataMiner Dashboards app to generate a nice visual overview of the system:
 
+![Node edge graph](~/develop/images/rabbitmq_node_edge.png)
 
 ## Setting up DataMiner as a consumer or a producer
 
-DataMiner can also exchange messages with RabbitMQ. The communication between RabbitMQ and consumers or producers is based on the AMPQ protocol. An official RabbitMQ C# library is available, which implements that protocol and takes care of all the low-level details. This library can be imported in a QAction to send or receive messages.
+DataMiner can also exchange messages with RabbitMQ. The communication between RabbitMQ and consumers or producers is based on the AMPQ protocol. An official [RabbitMQ C# library](https://www.rabbitmq.com/dotnet.html) is available, which implements that protocol and takes care of all the low-level details. This library can be imported in a QAction to send or receive messages.
 
 The following code snippet demonstrates how easy it is to send a message.
 
+```csharp
 using System;
 using System.Text;
 using RabbitMQ.Client;
@@ -83,12 +85,15 @@ public static class QAction
         }
     }
 }
-First, you need to connect to RabbitMQ by specifying the host name, username and password. Then you send the message to an exchange using the BasicPublish() method. In this example, we send the message “Test message” towards the exchange called “demo-exchange”.
+```
 
-Let’s assume this exchange is connected to a queue called “demo-queue”. To consume this message from DataMiner, we’ll use the push mechanism because it offers better performance.
+First, you need to connect to RabbitMQ by specifying the host name, username and password. Then you send the message to an exchange using the `BasicPublish()` method. In this example, we send the message "Test message" towards the exchange called *demo-exchange*.
+
+Let's assume this exchange is connected to a queue called *demo-queue*. To consume this message from DataMiner, we will use the push mechanism because it offers better performance.
 
 The following code snippet shows how to connect as a consumer.
 
+```csharp
 using System;
 using System.Text;
 using RabbitMQ.Client;
@@ -123,8 +128,10 @@ public class QAction
         // Process message
     }
 }
-In this snippet, first the connection towards RabbitMQ is created. Contrary to the previous example, we didn’t use a “using” statement. This is necessary because we want the connection to stay open even after the QAction has stopped running. It’s important to close the connection when the element stops, but to keep things simple the required code is not shown in the snippet.
+```
 
-Once the connection is established, you can create a consumer and connect it to the queue using the BasicConsume() method. As soon as a message arrives in a queue, the MessageReceived() method will be called. With that method, you can extract the content and the headers of the message and process this. For instance, here’s a screenshot of a connector that saves all the received messages in a table:
+In this snippet, first the connection towards RabbitMQ is created. Contrary to the previous example, we did not use a `using` statement. This is necessary because we want the connection to stay open even after the QAction has stopped running. It is important to close the connection when the element stops, but to keep things simple the required code is not shown in the snippet.
 
+Once the connection is established, you can create a consumer and connect it to the queue using the `BasicConsume()` method. As soon as a message arrives in a queue, the `MessageReceived()` method will be called. With that method, you can extract the content and the headers of the message and process this. For instance, here is a screenshot of a connector that saves all the received messages in a table:
 
+![RabbitMQ demo consumer](~/develop/images/rabbitmq_demo_consumer.png)
