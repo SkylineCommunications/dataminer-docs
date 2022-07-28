@@ -604,6 +604,10 @@
         topicUid: AutomationActionUi
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
+    - name: How-tos
+      items:
+      - name: How to make your Automation scripts debug ready
+        topicUID: How_to_make_your_automation_scripts_debug_ready
   - name: Class Library
     items:
     - name: Introduction
