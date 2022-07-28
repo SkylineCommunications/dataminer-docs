@@ -527,6 +527,8 @@
         topicUID: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
       - name: How to handle XML and JSON data in QActions
         topicUID: How_to_handle_XML_and_JSON_data_in_QActions
+      - name: How to implement the Subtable feature
+        topicUID: How_to_implement_the_subtable_feature
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE
