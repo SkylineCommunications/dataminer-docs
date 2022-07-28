@@ -12,9 +12,9 @@ In the example below, we will filter the interface table of a data source. The e
 
 The *Subtable* feature can be used in DataMiner to have a filtered version of a bigger SNMP table. When a regular SNMP table is polled by DataMiner, all rows of that table will be retrieved regardless of how large that table is. However, in some scenarios, those tables can have a lot of information, so that rows that need the operator's attention do not stand out sufficiently. In addition, if a table has a high number of columns and rows, the polling time may become too long. The *Subtable* feature can help you circumvent these issues.
 
-## Step 1 – What are the rows you want to retrieve?
+## Step 1 - What are the rows you want to retrieve?
 
-As a first step, you need to find out which rows need to be retrieved. If you know from the beginning that your rows will always be the same, and you also know their indexes, you can simply create a parameter to maintain all those indexes separated by a comma. In that case, you can move on to [step 2](#step-2-–-how-do-you-only-retrieve-those-specific-rows).
+As a first step, you need to find out which rows need to be retrieved. If you know from the beginning that your rows will always be the same, and you also know their indexes, you can simply create a parameter to maintain all those indexes separated by a comma. In that case, you can move on to [step 2](#step-2---how-do-you-only-retrieve-those-specific-rows).
 
 However, if you want to dynamically change the rows across multiple data sources, you will need to follow these steps:
 
@@ -126,7 +126,7 @@ The final behavior of this component should look like this:
 ![Managing filters](~/develop/images/ManagingFilters.gif)<br>
 *Managing filters*
 
-## Step 2 – How do you only retrieve those specific rows?
+## Step 2 - How do you only retrieve those specific rows?
 
 Before we dive any further into this, note that if you choose to have a fixed parameter or manually input parameter that does not follow the previous logic, you should only add indexes that exist in the table. This is because when this feature is used, DataMiner will try to poll the information from those indexes, meaning that your data may shift or become corrupted.
 

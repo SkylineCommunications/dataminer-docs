@@ -516,6 +516,7 @@
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
+      topicUID: Connectors_howto
       items:
       - name: How to aggregate alarm severities
         topicUID: How_to_aggregate_alarm_severities
@@ -533,6 +534,10 @@
         topicUID: How_to_integrate_RabbitMQ_with_DataMiner
       - name: How to integrate the HTTP Sessions Table in a connector
         topicUID: How_to_integrate_the_HTTP_sessions_table_in_a_connector
+      - name: How to retrieve protocol pending calls
+        topicUID: How_to_retrieve_protocol_pending_calls
+      - name: How to set up an SSH connection within a protocol
+        topicUID: How_to_set_up_an_SSH_connection_within_a_protocol
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE
@@ -605,6 +610,7 @@
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: How-tos
+      topicUID: Automation_howto
       items:
       - name: How to make your Automation scripts debug ready
         topicUID: How_to_make_your_automation_scripts_debug_ready
@@ -892,7 +898,7 @@
       - name: NT_SET_BITRATE_DELTA_INDEX_TRACKING
         topicUid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
       - name: NT_ADD_VIEWS
-        topîcUid: NT_ADD_VIEWS
+        topicUid: NT_ADD_VIEWS
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
