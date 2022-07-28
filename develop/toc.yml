@@ -538,6 +538,10 @@
         topicUID: How_to_retrieve_protocol_pending_calls
       - name: How to set up an SSH connection within a protocol
         topicUID: How_to_set_up_an_SSH_connection_within_a_protocol
+      - name: How to use history sets on a protocol parameter
+        topicUID: How_to_use_history_sets_on_a_protocol_parameter
+      - name: How to use multiple protocol threads to split communication and parsing
+        topicUID: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE

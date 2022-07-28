@@ -47,6 +47,9 @@ The first is **using the *options* attribute within the *Type* tag**.
         <Type>string</Type>
     </Measurement>
 </Param>
+```
+
+```xml
 <Param id="11" trending="false" save="true">
     <Name>sshPassword</Name>
     <Description>SSH Password</Description>
@@ -83,17 +86,16 @@ The second is **adding SSH tags within the port settings** in combination with g
         <Username pid="10"/>
         <Password pid ="11"/>
     </Credentials>
-        </SSH>
+</SSH>
 ```
-
-        
 
 ### Public key authentication
 
 This kind of authentication uses an identity file and is more secure than password authentication.
 
-To make it possible to read out the identity file, you need to define an “SSH Options” parameter with the SSH Options option in the Type tag. The content of this parameter needs to include the path to the file and the passphrase identity file path;passphrase.
+To make it possible to read out the identity file, you need to define an *SSH Options* parameter with the *SSH Options* option in the *Type* tag. The content of this parameter needs to include the path to the file and the passphrase `identity file path;passphrase`.
 
+```xml
 <Param id="1200" trending="false" save="true">
     <Name>SSH Options</Name>
     <Description>SSH Options</Description>
@@ -117,6 +119,7 @@ To make it possible to read out the identity file, you need to define an “SSH 
         <Type>string</Type>
     </Measurement>
 </Param>
+```
 
 ## Communication protocol conventions
 
@@ -124,13 +127,14 @@ SSH works through serial communication, so serial XML conventions need to be fol
 
 The following things must be kept in mind:
 
-The beginning of the response corresponds with the command that has been sent. This is followed by the actual response. Like in the example below, the system can send a fixed combination at the end of the response. Make sure this matches to ensure proper handling of the response.
-There is no need for headers and trailers for commands and responses. Only trailers are supported, so if the system needs a trailer for the command or response to communicate, this can be used.
+- The beginning of the response corresponds with the command that has been sent. This is followed by the actual response. Like in the example below, the system can send a fixed combination at the end of the response. Make sure this matches to ensure proper handling of the response.
+- There is no need for headers and trailers for commands and responses. Only trailers are supported, so if the system needs a trailer for the command or response to communicate, this can be used.
 
 ## Port settings
 
 When you want a protocol to communicate through SSH, and the SSH connection is not the main connection, you need to define the ports tags illustrated below. SSH uses IP port 22 by default. All other port types need to be disabled.
 
+```xml
 <PortSettings name="SNMP Connection">
     <BusAddress>
         <Disabled>true</Disabled>
@@ -142,6 +146,9 @@ When you want a protocol to communicate through SSH, and the SSH connection is n
         <Disabled>true</Disabled>
     </PortTypeIP>
 </PortSettings>
+```
+
+```xml
 <Ports>
     <PortSettings name="IP Connection">
         <BusAddress>
@@ -159,5 +166,4 @@ When you want a protocol to communicate through SSH, and the SSH connection is n
         </IPport>
     </PortSettings>
 </Ports>
-
-
+```

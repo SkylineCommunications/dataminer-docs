@@ -24,4 +24,9 @@ uid: Connectors_howto
 
 - [How to set up an SSH connection within a protocol](xref:How_to_set_up_an_SSH_connection_within_a_protocol)
 
+- [How to use history sets on a protocol parameter](xref:How_to_use_history_sets_on_a_protocol_parameter)
+
+- [How to use multiple protocol threads to split communication and parsing](xref:How_to_use_multiple_protocol_threads_to_split_communication_and_parsing)
+
+
 
