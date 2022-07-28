@@ -523,6 +523,8 @@
         topicUID: How_to_configure_multi_threaded_timers
       - name: How to create an HTTP connector (CoinMarketCap use case)
         topicUID: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
+      - name: How to define serial and smart-serial responses in one and the same protocol
+        topicUID: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE
