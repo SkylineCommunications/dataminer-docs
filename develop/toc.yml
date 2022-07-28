@@ -525,6 +525,8 @@
         topicUID: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
       - name: How to define serial and smart-serial responses in one and the same protocol
         topicUID: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
+      - name: How to handle XML and JSON data in QActions
+        topicUID: How_to_handle_XML_and_JSON_data_in_QActions
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE

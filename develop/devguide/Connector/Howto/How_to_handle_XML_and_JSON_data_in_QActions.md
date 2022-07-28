@@ -96,11 +96,11 @@ Once the C# classes have been generated, you can use the *NewtonSoft.Json.dll* l
 
 To convert the JSON text illustrated above, you will need this text in a string instance.
 
-In DataMiner connectors, you can achieve this by using a *GetParameter* call that collects parameter data holding a string in JSON format. Once this string is available, you will need to:
+In DataMiner connectors, you can achieve this by using a *GetParameter* call that collects parameter data holding a string in JSON format. Once this string is available, you will need to do the following:
 
-- Reference the *NewtonSoft.JSON.dll* in your QAction C# project.
-- Add `using NewtonSoft.JSON;`
-- Use the method `JSONConvert.DeserializeObject<T>(string source)`, where T is the *Rootobject* class and *string source* is the string that holds the text in JSON format.
+1. Reference the *NewtonSoft.JSON.dll* in your QAction C# project.
+1. Add `using NewtonSoft.JSON;`
+1. Use the method `JSONConvert.DeserializeObject<T>(string source)`, where T is the *Rootobject* class and *string source* is the string that holds the text in JSON format.
 
 The following code snippet represents an example of a QAction routine that deserializes parameter ID 3 (JSON data) and fills a table with all instances extracted from the deserialized JSON.
 
@@ -181,7 +181,7 @@ string serializedInstance = JsonConvert.SerializeObject(instance);
 
 Printing the serialized instance results in the following output:
 
-```csharp
+```json
 {
     "Name": "DataMiner Backup",
     "IPAddress": "10.10.10.2",
@@ -233,121 +233,122 @@ The resulting generated classes:
 
 ```csharp
 // NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
+/// <remarks/>
+[System.SerializableAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+[System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+public partial class ListInstances
+{
+    private ListInstancesInstance[] instanceField;
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-    public partial class ListInstances
+    [System.Xml.Serialization.XmlElementAttribute("Instance")]
+    public ListInstancesInstance[] Instance
     {
-        private ListInstancesInstance[] instanceField;
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Instance")]
-        public ListInstancesInstance[] Instance
+        get
         {
-            get
-            {
-                return this.instanceField;
-            }
-            set
-            {
-                this.instanceField = value;
-            }
+            return this.instanceField;
+        }
+        set
+        {
+            this.instanceField = value;
+        }
+    }
+}
+/// <remarks/>
+[System.SerializableAttribute()]
+[System.ComponentModel.DesignerCategoryAttribute("code")]
+[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+public partial class ListInstancesInstance
+{
+    private string nameField;
+    private string iPAddressField;
+    private ulong idField;
+    private bool createdFromTemplateField;
+    private string statusField;
+    /// <remarks/>
+    public string Name
+    {
+        get
+        {
+            return this.nameField;
+        }
+        set
+        {
+            this.nameField = value;
         }
     }
     /// <remarks/>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class ListInstancesInstance
+    public string IPAddress
     {
-¬
-        private string nameField;
-        private string iPAddressField;
-        private ulong idField;
-        private bool createdFromTemplateField;
-        private string statusField;
-        /// <remarks/>
-        public string Name
+        get
         {
-            get
-            {
-                return this.nameField;
-            }
-            set
-            {
-                this.nameField = value;
-            }
+            return this.iPAddressField;
         }
-        /// <remarks/>
-        public string IPAddress
+        set
         {
-            get
-            {
-                return this.iPAddressField;
-            }
-            set
-            {
-                this.iPAddressField = value;
-            }
-        }
-        /// <remarks/>
-        public ulong Id
-        {
-            get
-            {
-                return this.idField;
-            }
-            set
-            {
-                this.idField = value;
-            }
-        }
-        /// <remarks/>
-        public bool CreatedFromTemplate
-        {
-            get
-            {
-                return this.createdFromTemplateField;
-            }
-            set
-            {
-                this.createdFromTemplateField = value;
-            }
-        }
-        /// <remarks/>
-        public string Status
-        {
-            get
-            {
-                return this.statusField;
-            }
-            set
-            {
-                this.statusField = value;
-            }
+            this.iPAddressField = value;
         }
     }
+    /// <remarks/>
+    public ulong Id
+    {
+        get
+        {
+            return this.idField;
+        }
+        set
+        {
+            this.idField = value;
+        }
+    }
+    /// <remarks/>
+    public bool CreatedFromTemplate
+    {
+        get
+        {
+            return this.createdFromTemplateField;
+        }
+        set
+        {
+            this.createdFromTemplateField = value;
+        }
+    }
+    /// <remarks/>
+    public string Status
+    {
+        get
+        {
+            return this.statusField;
+        }
+        set
+        {
+            this.statusField = value;
+        }
+    }
+}
 ```
 
 The generated classes based on XML are slightly more complex than JSON-based ones because of the many features XML provides.
 
 ### Step 2: Deserializing XML text into C# classes
 
-Once the C# classes are generated, you can use the System.Xml.dll library to do the conversion from XML text to C# object instances.
+Once the C# classes are generated, you can use the *System.Xml.dll* library to do the conversion from XML text to C# object instances.
 
 To convert the XML text illustrated above, you will need this text in a string.
 
-In DataMiner connectors, you can achieve this by using a GetParameter call that holds the XML string as a value in a parameter. Once this string is available in the QAction, you will need to:
+In DataMiner connectors, you can achieve this by using a *GetParameter* call that holds the XML string as a value in a parameter. Once this string is available in the QAction, you will need to do the following:
 
-Reference the System.Xml.dll in your QAction C# project.
-Add using System.Xml.Serialization;
-Add using System.IO;
-Create a TextReader reference from the XML-format string.
-Create an XmlSerializer instance referencing the targeted root class.
-Call XmlSerializer.Deserialize and cast the object to the correct class.
+1. Reference the *System.Xml.dll* in your QAction C# project.
+1. Add `using System.Xml.Serialization;`
+1. Add `using System.IO;`
+1. Create a *TextReader* reference from the XML-format string.
+1. Create an *XmlSerializer* instance referencing the targeted root class.
+1. Call *XmlSerializer.Deserialize* and cast the object to the correct class.
+
 This procedure can be summarized with the following code snippet:
 
+```csharp
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -412,30 +413,34 @@ public static class QAction
         }
     }
 }
+```
 
 ## Serializing C# object data into XML format
 
 Another common use case is to build an XML string based on a given object. In the example below, we will build the C# object instance and serialize it into an XML string format.
 
-To achieve this, an instance of the intended object must be created, then the object must be serialized via the XmlSerializer.Serialize(XmlWriter xmlwriter, object o), where object “o” can be any kind of C# object.
+To achieve this, an instance of the intended object must be created, then the object must be serialized via the `XmlSerializer.Serialize(XmlWriter xmlwriter, object o)`, where object "o" can be any kind of C# object.
 
 ### Step 1: Creating an object instance
 
 The following code snippet creates a custom Instance object:
 
+```csharp
 Instance instance = new Instance()
 {
-Name = "DataMiner Main",
+    Name = "DataMiner Main",
     Id = 74947982479,
     IPAddress = "10.10.10.1",
     CreatedFromTemplate = true,
     Status = "ACTIVE"
 };
+```
 
 ### Step 2: Serializing the XML object
 
-The following code snippet serializes the previous Instance object into an XML string:
+The following code snippet serializes the previous *Instance* object into an XML string:
 
+```csharp
 public static string SerializeObjectIntoXml<T>(T objectToSerialize)
 {
     using (var stream = new StringWriter())
@@ -446,8 +451,11 @@ public static string SerializeObjectIntoXml<T>(T objectToSerialize)
         return stream.ToString();
     }
 }
+```
+
 Printing the returned value results in the following output:
 
+```xml
 <Instance>
     <Name>DataMiner Main</Name>
     <IPAddress>10.10.10.1</IPAddress>
@@ -455,15 +463,17 @@ Printing the returned value results in the following output:
     <CreatedFromTemplate>true</CreatedFromTemplate>
     <Status>ACTIVE</Status>
 </Instance>
+```
 
 ## Class generation pitfalls
 
 Automated class generation might not always provide the perfect C# classes. When a JSON or XML string is transformed into a C# class, these automated tools base themselves on only one sample of the possible JSON/XML structure. This might lead to imprecise data types being generated automatically from these tools.
 
-Below, two JSON samples for the same object are shown along with the respective C# classes generated by using the “Paste as JSON Class” feature in Visual Studio.
+Below, two JSON samples for the same object are shown along with the respective C# classes generated by using the *Paste as JSON Class* feature in Visual Studio.
 
 JSON structure:
 
+```json
 {
     "Id": 454352,
     "Name": "DataMiner Main",
@@ -471,8 +481,11 @@ JSON structure:
     "CreatedFromTemplate": false, 
     "Status": "ACTIVE" 
 }
+```
+
 Generated class:
 
+```csharp
 public class Rootobject
 {
     public int Id { get; set; }
@@ -481,8 +494,11 @@ public class Rootobject
     public bool CreatedFromTemplate { get; set; }
     public string Status { get; set; }
 }
+```
+
 JSON structure:
 
+```json
 {
     "Id": 454353,
     "Name": null,
@@ -490,8 +506,11 @@ JSON structure:
     "CreatedFromTemplate": null, 
     "Status": "ACTIVE" 
 }
+```
+
 Generated class:
 
+```csharp
 public class Rootobject
 {
     public int Id { get; set; }
@@ -500,44 +519,57 @@ public class Rootobject
     public object CreatedFromTemplate { get; set; }
     public string Status { get; set; }
 }
-Notice the “Name” and “CreatedFromTemplate” properties. In the first example, a class was generated with a property “Name” of type string and a property “CreatedFromTemplate” of type bool. In the second example, the tool detected null as value, so it simply assumed that these were object types.
+```
+
+Notice the *Name* and *CreatedFromTemplate* properties. In the first example, a class was generated with a property *Name* of type string and a property *CreatedFromTemplate* of type bool. In the second example, the tool detected null as value, so it simply assumed that these were object types.
 
 In these cases, we highly recommend that you double-check the documentation on these data structure objects to properly identify the accurate property types.
 
 ## Handling parameters with special characters
 
-Some API data structures might reply with special characters such as “-“ or “.”. In C#, these characters are special and can’t be used in a variable declaration, so extra configuration is required at variable declaration level.
+Some API data structures might reply with special characters such as `-` or `.`. In C#, these characters are special and cannot be used in a variable declaration, so extra configuration is required at variable declaration level.
 
-If an API replies to your request with a parameter named “Instance-Id”, you will need to decorate your C# variable with an attribute. Here are the recommended adaptations required for both cases while using the System.XML.dll and the Newtonsoft.Json.dll:
+If an API replies to your request with a parameter named *Instance-Id*, you will need to decorate your C# variable with an attribute. Here are the recommended adaptations required for both cases while using the *System.XML.dll* and the *Newtonsoft.Json.dll*:
 
-Deserializing with NewtonSoft.Json.dll	Deserializing with System.Xml.dll
-[JsonProperty("Instance-Id")]
-public string InstanceId { get; set;}	[System.Xml.Serialization.XmlElementAttribute("Instance-Id")]
-public string InstanceId { get; set; }  
-The attribute at the top is consumed by the respective serializer and parses a parameter named “Instance-Id” to the C# property named “InstanceId”.
+- Deserializing with NewtonSoft.Json.dll
 
-## Using Serialization Settings
+    ```csharp
+    [JsonProperty("Instance-Id")]
+    public string InstanceId { get; set;}
+    ```
+
+- Deserializing with System.Xml.dll
+
+    ```csharp
+    [System.Xml.Serialization.XmlElementAttribute("Instance-Id")]
+    public string InstanceId { get; set; }
+    ```
+ 
+The attribute at the top is consumed by the respective serializer and parses a parameter named *Instance-Id* to the C# property named *InstanceId*.
+
+## Using Serialization settings
 
 While handling data with a serializer, you sometimes need to optimize/tweak the serialized content, for instance to prevent printing null, setting a specific encoding or culture etc. XML and JSON libraries have their own implementation of serializer settings.
 
-For System.Xml, the System.Xml.XmlWriterSettings is used.
-For NewtonSoft.Json, the Newtonsoft.Json.JsonSerializerSettings is used.
-For more information on both serializer settings please refer to the following links:
+- In case of *System.Xml*, *System.Xml.XmlWriterSettings* is used.
+- In case of *NewtonSoft.Json*, *Newtonsoft.Json.JsonSerializerSettings* is used.
 
-XML: https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlwritersettings?view=net-5.0
-JSON: https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializerSettings.htm
+For more information on those serializer settings, see the following documentation:
+
+- XML: <https://docs.microsoft.com/en-us/dotnet/api/system.xml.xmlwritersettings?view=net-5.0>
+- JSON: <https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_JsonSerializerSettings.htm>
 
 ## Efficiency vs. readability
 
 In some scenarios, APIs might reply with large XML or JSON structures that could lead to poor code performance because of the amount of text to process.
 
-To improve code deserialization, you can use classes like XDocument for XML and JObject for JSON. These classes provide a non-object-oriented way of deserializing the respective data formats.
+To improve code deserialization, you can use classes like *XDocument* for XML and *JObject* for JSON. These classes provide a non-object-oriented way of deserializing the respective data formats.
 
 However, while these classes improve performance, they lack code readability. It is up to you to judge which classes are most suitable depending on the situation you are facing.
 
 ## Reference documentation
 
-For more information on the mentioned libraries, please check the following links:
+For more information on the mentioned libraries, see the following documentation:
 
-System.Xml.dll: https://docs.microsoft.com/en-us/dotnet/api/system.xml?view=netframework-4.6.2
-NewtonSoft.Json.dll: https://www.newtonsoft.com/json/help/html/Introduction.htm
+- System.Xml.dll: <https://docs.microsoft.com/en-us/dotnet/api/system.xml?view=netframework-4.6.2>
+- NewtonSoft.Json.dll: <https://www.newtonsoft.com/json/help/html/Introduction.htm>
