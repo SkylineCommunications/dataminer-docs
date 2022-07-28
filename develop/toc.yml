@@ -542,6 +542,10 @@
         topicUID: How_to_use_history_sets_on_a_protocol_parameter
       - name: How to use multiple protocol threads to split communication and parsing
         topicUID: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
+      - name: How to use 'on each' in a protocol trigger
+        topicUID: How_to_use_on_each_in_a_protocol_trigger
+      - name: How to use the element log in connector integrations
+        topicUID: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE

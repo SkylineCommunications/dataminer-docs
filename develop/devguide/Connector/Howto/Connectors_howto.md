@@ -28,5 +28,6 @@ uid: Connectors_howto
 
 - [How to use multiple protocol threads to split communication and parsing](xref:How_to_use_multiple_protocol_threads_to_split_communication_and_parsing)
 
+- [How to use 'on each' in a protocol trigger](xref:How_to_use_on_each_in_a_protocol_trigger)
 
-
+- [How to use the element log in connector integrations](xref:How_to_use_the_element_log_in_connector_integrations)
