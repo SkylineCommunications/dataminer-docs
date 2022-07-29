@@ -8878,25 +8878,19 @@ Due to a number of enhancements, overall performance of the Aggregation module h
 
 A number of enhancements will now allow the SLDataGateway process to handle Cassandra exceptions and file offload initialization errors more efficiently, which may prevent startup issues.
 
-#### Ticketing: FieldName of TicketFieldDescriptor can no longer contain certain characters \[ID_30962\]
+#### Ticketing: FieldName of TicketFieldDescriptor can no longer contain certain characters [ID_30962]
 
 From now on, the FieldName of a TicketFieldDescriptor has to meet the following requirements:
 
-- It cannot start with an underscore character (“\_”).
-
+- It cannot start with an underscore character ("\_").
 - It cannot contain any of the following characters:
 
     - . (period)
-
-    - # (number sign)
-
+    - \# (number sign)
     - \* (asterisk)
-
     - , (comma)
-
-    - “ (double quote)
-
-    - ‘ (single quote)
+    - " (double quote)
+    - ' (single quote)
 
 #### DataMiner Cube - System Center: Enhanced “Limited administrator” tooltip \[ID_31042\]
 

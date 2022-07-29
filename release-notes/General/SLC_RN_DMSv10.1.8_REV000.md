@@ -11,31 +11,31 @@ It is now possible to configure specific credentials for the Elasticsearch backu
 > [!WARNING]
 > Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Failover without virtual IP address \[ID_29189\] \[ID_29911\]
+#### Failover without virtual IP address [ID_29189] [ID_29911]
 
-In a Failover system, which consists of two redundant DataMiner Agents, the offline Agent will stand by, waiting to take over as soon as the online Agent goes offline. Up to now, a Failover system always made use of a so-called “virtual IP address”, an IP address that is shared by the two Agents and that the online Agent assigns to itself. However, in certain situations, it is very hard or even impossible to share a virtual IP address. In those situations, it is now possible to set up a Failover system using a shared hostname instead.
+In a Failover system, which consists of two redundant DataMiner Agents, the offline Agent will stand by, waiting to take over as soon as the online Agent goes offline. Up to now, a Failover system always made use of a so-called "virtual IP address", an IP address that is shared by the two Agents and that the online Agent assigns to itself. However, in certain situations, it is very hard or even impossible to share a virtual IP address. In those situations, it is now possible to set up a Failover system using a shared hostname instead.
 
 | Using a shared virtual IP address                      | Using a shared hostname                                                |
 |--------------------------------------------------------|------------------------------------------------------------------------|
 | DataMiner creates a virtual IP address on the NIC      | No modifications are needed on the NIC                                 |
-| No additional IIS rules need to be created             | A “URL Rewrite” IIS rule will be created automatically (Reverse Proxy) |
+| No additional IIS rules need to be created             | A "URL Rewrite" IIS rule will be created automatically (Reverse Proxy) |
 | 2 NICs can be configured <br>(Corporate & Acquisition) | Only one hostname (address)                                            |
 
 **Configuration**
 
-In DataMiner Cube, after opening the *Failover Config* window, you can now select either “Failover (Virtual IP)” or “Failover (hostname)”.
+In DataMiner Cube, after opening the *Failover Config* window, you can now select either "Failover (Virtual IP)" or "Failover (hostname)".
 
 Note that, in the DMS.xml file, two extra elements can now be specified:
 
-| Element      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| FailoverType | The type of Failover system: “VirtualIP” or “HostName”.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Hostname     | The shared hostname (only applicable when FailoverType is set to “HostName”.<br> Note:<br> -  The hostname you specify must be configured in the network. In other words, a corresponding DNS record must exist.<br> -  The hostname must resolve to both primary IP addresses of the Failover agents. Example output of an nslookup of the hostname:<br>*Name: ResetPlease.FailoverZone<br>Addresses: 10.11.5.52<br>           10.11.4.52* |
+| Element | Description |
+|---------|----------------------|
+| FailoverType | The type of Failover system: "VirtualIP" or "HostName". |
+| Hostname | The shared hostname (only applicable when FailoverType is set to "HostName".<br>Note:<br>- The hostname you specify must be configured in the network. In other words, a corresponding DNS record must exist.<br>- The hostname must resolve to both primary IP addresses of the Failover agents. Example output of an nslookup of the hostname:<br>*Name: ResetPlease.FailoverZone<br>Addresses: 10.11.5.52<br>10.11.4.52* |
 
 When you set up a Failover system using a shared hostname, in IIS, a URL Rewrite rule will be created in order to forward all HTTP traffic to the online agent.
 
 > [!NOTE]
-> In order for this URL Rewrite rule to be created and enabled/disable automatically, the IIS extension “Application Request Routing” needs to be installed manually on both Failover agents.
+> In order for this URL Rewrite rule to be created and enabled/disable automatically, the IIS extension "Application Request Routing" needs to be installed manually on both Failover agents.
 >
 > See: <https://www.iis.net/downloads/microsoft/application-request-routing>
 

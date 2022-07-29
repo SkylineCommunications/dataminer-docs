@@ -764,25 +764,19 @@ From now on, user-generated dashboards will by default be included in the follow
 
 - Configuration Backup without Database
 
-#### Ticketing: FieldName of TicketFieldDescriptor can no longer contain certain characters \[ID_30962\]
+#### Ticketing: FieldName of TicketFieldDescriptor can no longer contain certain characters [ID_30962]
 
 From now on, the FieldName of a TicketFieldDescriptor has to meet the following requirements:
 
-- It cannot start with an underscore character (“\_”).
-
+- It cannot start with an underscore character ("\_").
 - It cannot contain any of the following characters:
 
     - . (period)
-
-    - # (number sign)
-
+    - \# (number sign)
     - \* (asterisk)
-
     - , (comma)
-
-    - “ (double quote)
-
-    - ‘ (single quote)
+    - " (double quote)
+    - ' (single quote)
 
 #### DataMiner backup: Process Automation data now included in “Full Backup” \[ID_30999\]
 
