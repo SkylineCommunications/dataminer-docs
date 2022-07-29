@@ -4,7 +4,7 @@
 
 #### Map visualization for service groups \[ID_30804\]
 
-When navigating to service groups in the DOCSIS Service topology, users will now be able to access a *Maps* tab. The DataMiner Map displayed in this tab is by default set to show the Service Group layer, so that the cable modems in the relevant service group are displayed on the map.
+When navigating to service groups in the DOCSIS Service topology, users will now be able to access a *Maps* tab. The DataMiner Map displayed in this tab is by default set to show the Service Group layer, so that the cable modems in the relevant service group are displayed on the map.
 
 If there are several cable modems in the same location, these are clustered under one marker. Clicking this marker will show each individual cable modem. For each cable modem, a tooltip can display information such as the MAC address, the group delay status, and more. There are also links available that will display the topology focused on the cable modem.
 

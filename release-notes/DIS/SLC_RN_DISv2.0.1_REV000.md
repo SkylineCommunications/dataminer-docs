@@ -8,14 +8,12 @@
 
 From now on, when DIS connects to a DataMiner Agent, it will always use polling.
 
-Also, a number of changes have been made to the *DMA* tab page of the *DIS Settings* window:
+Also, a number of changes have been made to the *DMA* tab page of the *DIS Settings* window:
 
-- The *Host* box now only has to contain the IP address of the DataMiner Agent to which you want DIS to connect.
+- The *Host* box now only has to contain the IP address of the DataMiner Agent to which you want DIS to connect.
 
     - Both HTTP and HTTPS are supported.
-
     - Specifying the IP port is now optional. Default port: 8004
-
     - Specifying the suffix “/SLNetService” is now optional.
 
 - After having changed the host name, the user name and/or the password, you can now click the *Test connection* button to check the new login settings.
@@ -35,7 +33,7 @@ DIS now ships with a user guide in HTML5 format instead of in PDF format.
 
 #### Protocol tag shortcut menus \[ID_12253\]
 
-In the protocol editor, you can now click a small *Down* arrow in front of certain protocol tags to open a shortcut menu. See the table below for an overview of all available commands per protocol tag.
+In the protocol editor, you can now click a small *Down* arrow in front of certain protocol tags to open a shortcut menu. See the table below for an overview of all available commands per protocol tag.
 
 | Protocol tag | Command                            | Function                                                                             |
 |--------------|------------------------------------|--------------------------------------------------------------------------------------|
@@ -76,13 +74,13 @@ In case of a group, the listed items will depend on the type of the group, e.g. 
 
 #### RTDisplay tag: New onAppLevel attribute \[ID_12249\]
 
-The *Protocol.Params.Param.Display.RTDisplay* tag now has a new *onAppLevel* attribute.
+The *Protocol.Params.Param.Display.RTDisplay* tag now has a new *onAppLevel* attribute.
 
 Set this attribute to “true” if the parameter needs to be accessible on Application Level, i.e. outside the protocol. In a Visio drawing for instance.
 
 #### HTTP header types \[ID_12252\]
 
-The *EnumHttpHeaderField* enumeration now contains all HTTP headers listed on the following pages:
+The *EnumHttpHeaderField* enumeration now contains all HTTP headers listed on the following pages:
 
 - [http://www.iana.org/assignments/message-headers/message-headers.xhtml](http://www.iana.org/assignments/message-headers/message-headers.xmd)
 
@@ -117,11 +115,11 @@ See the following example.
 
 #### Interprete tag: New DefaultValue subtag \[ID_12256\]
 
-The *Protocol.Params.Param.Interprete* tag now has a new *DefaultValue* subtag.
+The *Protocol.Params.Param.Interprete* tag now has a new *DefaultValue* subtag.
 
 #### Command tag: New ascii attribute \[ID_12258\]
 
-The *Protocol.Commands.Command* tag now has a new *ascii* attribute.
+The *Protocol.Commands.Command* tag now has a new *ascii* attribute.
 
 This attribute allows you to specify that parameters should be sent as ASCII even if the protocol is in Unicode. You can specify that you want all parameters in the command to be sent as ASCII (e.g. ascii="true") or just some of the parameters, delimited with a semicolon (e.g. ascii="18;40").
 
@@ -129,11 +127,11 @@ The type of this new attribute is the new type *TypeTrueOrSemicolonSeparatedNumb
 
 #### Discreet.Display tag: state attribute now uses type EnumEnabledDisabled \[ID_12259\]
 
-The type of the *state* attribute of the *Protocol.Params.Param.Measurement.Discreets.Discreet.Display* tag is now *EnumEnabledDisabled*.
+The type of the *state* attribute of the *Protocol.Params.Param.Measurement.Discreets.Discreet.Display* tag is now *EnumEnabledDisabled*.
 
 #### Database tag \[ID_12260\]
 
-In the new *Params.Param.Database* tag, you can now group a number of database-related settings for a particular parameter.
+In the new *Params.Param.Database* tag, you can now group a number of database-related settings for a particular parameter.
 
 | Tag           | Description                                                                                                                                        |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------|

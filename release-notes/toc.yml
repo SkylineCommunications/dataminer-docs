@@ -1,4 +1,4 @@
-- name: DataMiner Release Notes
+- name: DataMiner release notes
   topicUid: RN_index
   items:
   - name: General DataMiner release notes
@@ -91,11 +91,11 @@
     items:
     - name: DataMiner Cube 10.2.9 release notes
       topicUID: 10_2_9_Cube_RNs
-  - name: ClassLibrary Release Notes
+  - name: ClassLibrary release notes
     items:
     - name: Class Library release notes
       href: Class_Library/SLC_RN_ClassLibrary_REV000.md
-  - name: DIS Release Notes
+  - name: DIS release notes
     items:
     - name: SLC_RN_DISv2.38_REV000
       href: DIS/SLC_RN_DISv2.38_REV000.md
@@ -173,7 +173,7 @@
       href: DIS/SLC_RN_DISv2.0.2_REV000.md
     - name: SLC_RN_DISv2.0.1_REV000
       href: DIS/SLC_RN_DISv2.0.1_REV000.md
-  - name: EPM Release Notes
+  - name: EPM release notes
     items:
     - name: SLC_RN_EPMv6.1.3_REV000 
       href: EPM/SLC_RN_EPMv6.1.3_REV000.md
@@ -193,7 +193,7 @@
       href: EPM/SLC_RN_EPMv6.0.0_REV000.md
     - name: SLC_RN_EPMv5.0.0_REV000 
       href: EPM/SLC_RN_EPMv5.0.0_REV000.md
-  - name: IDP Release Notes
+  - name: IDP release notes
     items:
     - name: SLC_RN_IDPv1.2.0_REV000 
       href: IDP/SLC_RN_IDPv1.2.0_REV000.md
@@ -245,13 +245,13 @@
       href: IDP/SLC_RN_IDPv1.0.1_REV000.md
     - name: SLC_RN_IDPv1.0.0_REV000 
       href: IDP/SLC_RN_IDPv1.0.0_REV000.md
-  - name: Meinberg Release Notes
+  - name: Meinberg release notes
     items:
     - name: SLC_RN_Meinbergv1.1.0_REV000
       href: Meinberg/SLC_RN_Meinbergv1.1.0_REV000.md
     - name: SLC_RN_Meinbergv1.0.1_REV000
       href: Meinberg/SLC_RN_Meinbergv1.0.1_REV000.md
-  - name: PA Release Notes
+  - name: PA release notes
     items:
     - name: SLC_RN_PAv1.2.2_REV002  
       href: PA/SLC_RN_PAv1.2.2_REV002.md
@@ -263,7 +263,7 @@
       href: PA/SLC_RN_PAv1.1.1_REV000.md
     - name: SLC_RN_PAv1.1.0_REV000  
       href: PA/SLC_RN_PAv1.1.0_REV000.md
-  - name: PTP Release Notes
+  - name: PTP release notes
     items:
     - name: SLC_RN_PTPv1.1.3_REV000 
       href: PTP/SLC_RN_PTPv1.1.3_REV000.md
@@ -273,7 +273,7 @@
       href: PTP/SLC_RN_PTPv1.1.1_REV000.md
     - name: SLC_RN_PTPv1.1.0_REV000 
       href: PTP/SLC_RN_PTPv1.1.0_REV000.md
-  - name: SRM Release Notes
+  - name: SRM release notes
     items:
     - name: SLC_RN_SRMv1.2.25_REV000
       href: SRM/SLC_RN_SRMv1.2.25_REV000.md
