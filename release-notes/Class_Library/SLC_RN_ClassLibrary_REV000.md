@@ -1,14 +1,12 @@
-# Class Library versions
+# Class Library release notes
+
+## Class Library versions
 
 | Range   | Supported as from DataMiner version... |
 |---------|----------------------------------------|
 | 1.0.x.x | 9.0.0                                  |
 | 1.1.x.x | 9.6.3                                  |
 | 1.2.x.x | 10.0.3                                 |
-
-
-
-# Released versions
 
 ## Range 1.0
 
@@ -31,7 +29,6 @@ When an SLNet message is sent to update the value of a writable element property
 Two new properties have been added to the IDma interface:
 
 - Name
-
 - HostName
 
 #### New classes to easily parse trap information \[ID_22302\]
@@ -78,9 +75,9 @@ In some cases, it would not be possible to update properties that had a value eq
 
 When an element was requested via IDms, in some cases, an exception could be thrown when the element had duplicate properties.
 
-From now on, when an element has duplicate properties, no exception will be thrown, but an entry will be added to the C:\\Skyline DataMiner\\Logging\\ClassLibrary.txt log file.
+From now on, when an element has duplicate properties, no exception will be thrown, but an entry will be added to the `C:\Skyline DataMiner\Logging\ClassLibrary.txt` log file.
 
-#### GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a pro­duction protocol \[ID_24357\]
+#### GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol \[ID_24357\]
 
 In some cases, it would not be possible to retrieve the alarm template or the trend template of a protocol via IDms when that protocol was a production protocol.
 
@@ -92,7 +89,7 @@ Also, the IDmsProtocol interface now has a new “ReferencedVersion” property.
 
 When an element was restart, in some rare cases, an error could occur when recreating the Class Library monitor.
 
-#### Enhanced handling of errors occurring while parsing element information returned by a GetEle­ments method \[ID_24934\]
+#### Enhanced handling of errors occurring while parsing element information returned by a GetElements method \[ID_24934\]
 
 From now on, the Class Library will no longer throw an exception when an error occurs while parsing element information returned by a GetElements method.
 
@@ -125,9 +122,7 @@ Also, in the DIS Macros tool window, a new CreateMatrix macro was added. This ma
 A collection of InterApp classes now provides a C# message/response architecture that will allow for easier communication
 
 - among elements,
-
 - between elements and Automation scripts, and
-
 - between elements and external applications.
 
 ### 1.1.0.2
@@ -153,19 +148,12 @@ The new Monitor Extension methods provide stable logic to handle eventing. They 
 Currently, the supported methods provide the ability to monitor changes in the full DMS and trigger a C# method to run for:
 
 - Standalone parameter value changes
-
 - Table cell value changes
-
 - Parameter alarm level changes
-
 - Table cell alarm level changes
-
 - Single element alarm changes
-
 - Single element name changes
-
 - All elements (DMS-level) alarm changes
-
 - All elements (DMS-level) name changes
 
 > [!NOTE]
@@ -187,13 +175,13 @@ In some cases, it would not be possible to update properties that had a value eq
 
 When an element was requested via IDms, in some cases, an exception could be thrown when the element had duplicate properties.
 
-From now on, when an element has duplicate properties, no exception will be thrown, but an entry will be added to the C:\\Skyline DataMiner\\Logging\\ClassLibrary.txt log file.
+From now on, when an element has duplicate properties, no exception will be thrown, but an entry will be added to the `C:\Skyline DataMiner\Logging\ClassLibrary.txt` log file.
 
 #### Table cell subscriptions will now be established using the primary key \[ID_24456\]
 
 Up to now, table cell subscriptions were established using the display key. From now on, they will be established using the primary key.
 
-#### GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a pro­duction protocol \[ID_24357\]
+#### GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol \[ID_24357\]
 
 In some cases, it would not be possible to retrieve the alarm template or the trend template of a protocol via IDms when that protocol was a production protocol.
 
@@ -205,7 +193,7 @@ Also, the IDmsProtocol interface now has a new “ReferencedVersion” property.
 
 When an element was restart, in some rare cases, an error could occur when recreating the Class Library monitor.
 
-#### Enhanced handling of errors occurring while parsing element information returned by a GetEle­ments method \[ID_24934\]
+#### Enhanced handling of errors occurring while parsing element information returned by a GetElements method \[ID_24934\]
 
 From now on, the Class Library will no longer throw an exception when an error occurs while parsing element information returned by a GetElements method.
 
@@ -219,7 +207,7 @@ From now on, the Class Library will no longer throw an exception when an error o
 
 #### Retrieving data from partial tables \[ID_24951\]
 
-​The Class Library is now able to retrieve data from partial tables.
+The Class Library is now able to retrieve data from partial tables.
 
 **GetData method**
 
@@ -233,7 +221,7 @@ The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e
 
 To this method, you can pass a column filter as an ICollection\<ITableFilter>, in which each ITableFilter item contains a ColumnPid, a ColumnValue and a CompareType property. If, for example, you only want to retrieve the rows in which column parameter 1003 is set to “test”, you can specify the following:
 
-```txt
+```csharp
 ITableFilterItem filter = new TableFilterItem
 {
     ColumnPid = 1013,
@@ -262,18 +250,15 @@ The InterApp calls allow to provide a dictionary that is a mapping between the M
 The Class Library now supports the retrieval of information from the following SNMP connections as well as the creation of elements with these types of connections:
 
 - SNMPv1 connections
-
 - SNMPv2 connections
-
 - SNMPv3 connections
-
 - Virtual connections
 
 ### 1.1.2.4
 
-#### Deserialization would fail when “System.” classes were used \[ID_25933\]
+#### Deserialization would fail when 'System.' classes were used \[ID_25933\]
 
-In some cases, collection interface deserialization could fail if some of the classes were “System.” classes located in System.dll.
+In some cases, collection interface deserialization could fail if some of the classes were 'System.' classes located in System.dll.
 
 Deserialization now supports classes located in both System.Core.dll and System.dll.
 
@@ -289,7 +274,7 @@ In some cases, an incorrectly formatted input string would cause the GetElement 
 
 ### 1.1.2.7
 
-#### Name of an element with a RealConnection could no longer be updated  \[ID_27783\]
+#### Name of an element with a RealConnection could no longer be updated \[ID_27783\]
 
 In some cases, the name of an element with a RealConnection (SNMP, HTTP, SERIAL, etc.) could no longer be updated.
 
@@ -301,7 +286,7 @@ Due to an error in the Matrix Helper class, in some cases, an output could not b
 
 #### Creating, updating and retrieving HTTP connections of elements \[ID_29070\]
 
-​IDms classes now support creating, updating and retrieving HTTP connections of elements.
+Dms classes now support creating, updating and retrieving HTTP connections of elements.
 
 #### Retrieving CI type information from connections \[ID_29071\]
 
@@ -327,7 +312,7 @@ The IElementConnectionCollection interface, which is implemented by the ElementC
 
 #### DmsService class can now be used to manage DataMiner services \[ID_29513\]
 
-​The class library now includes a DmsService class that can be used to manage DataMiner services.
+The class library now includes a DmsService class that can be used to manage DataMiner services.
 
 #### Monitors added to subscribe to service alarm level and service state \[ID_29515\]
 
@@ -341,7 +326,7 @@ When an element is updated, it will be restarted whenever its port settings have
 
 ### 1.1.2.11
 
-#### RemotePort would throw “null reference” exceptions when trying to retrieve a replicated ele­ment \[ID_30053\]
+#### RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element \[ID_30053\]
 
 RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element.
 
@@ -360,11 +345,8 @@ The SLSpectrum wrappers were missing a GetMonitor call with the correct return f
 The class library now supports the following authentication algorithms:
 
 - MD5
-
 - HMAC-MD5
-
 - SHA1
-
 - HMAC-SHA1
 
 ### 1.1.3.1
@@ -394,7 +376,7 @@ Up to now, the Class Library NuGet package would contain an incorrect DLL file.
 
 #### Simplified version of the MessageExecutor \[ID_33223\]
 
-​A simplified version of the MessageExecutor has been added (SimpleMessageExecutor\<T>), containing only a TryExecute method.
+A simplified version of the MessageExecutor has been added (SimpleMessageExecutor\<T>), containing only a TryExecute method.
 
 This MessageExecutor version can be used for small executors with a minimum of logic that do not need separate actions (DataGet, DataSet, Parse, etc.).
 
@@ -405,10 +387,9 @@ Up to now, when you wanted to return a message after receiving an InterAppCall, 
 From now on, you can use
 
 - the Reply method on the incoming message to update the GUID of the return message, followed by
-
 - the Send method with the ReturnAddress information from the incoming message.
 
-#### “Skyline.DataMiner.” prefix shortened to “SLC.Lib.” \[ID_33257\]
+#### 'Skyline.DataMiner.' prefix shortened to “SLC.Lib.” \[ID_33257\]
 
 The “Skyline.DataMiner.” prefix for Class Library exceeded to 260-character path length limit of Microsoft Windows. This prefix has now been shortened to “SLC.Lib.”.
 
@@ -421,7 +402,7 @@ The “Skyline.DataMiner.” prefix for Class Library exceeded to 260-character 
 
 Deserialization would fail when using InterAppCalls as NuGets without a common DLL holding all the messages, i.e. when using KnownTypes with multiple Collections (as in the following example).
 
-```txt
+```csharp
 KnownTypes = new List(){ typeof(List<MyClass>), typeof(List<MyClass2>)};
 ```
 
@@ -440,7 +421,7 @@ The cleanup is canceled when the source or destination element that triggered th
 
 In the example below, cleanup after source element stop is delayed by 6 seconds.
 
-```txt
+```csharp
 MonitorCleanupConfig monitorCleanupConfig = new MonitorCleanupConfig(0, 0, 6000);
 protocol.SetupMonitorsCleanupConfig(monitorCleanupConfig);
 ```
@@ -448,9 +429,7 @@ protocol.SetupMonitorsCleanupConfig(monitorCleanupConfig);
 By passing a MonitorCleanupConfig object to the protocol, you can define delays on:
 
 - Cleanup after destination element deletion.
-
 - Cleanup after source element deletion.
-
 - Cleanup after source element stop.
 
 #### Monitoring stopped elements \[ID_33722\]
@@ -463,7 +442,7 @@ The Class Library now contains new bit rate calculation classes.
 
 ### 1.1.4.4
 
-#### Class Library is now able to process elements of which the RemoteElement property of the Ele­mentInfoEventMessage is set to the maximum value \[ID_33751\]
+#### Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value \[ID_33751\]
 
 The Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value (i.e. “4294967295/4294967295”).
 
@@ -481,7 +460,7 @@ The RateHelper class lacked a DllImport statement. This has now been added.
 
 #### Retrieving data from partial tables \[ID_24951\]
 
-​The Class Library is now able to retrieve data from partial tables.
+The Class Library is now able to retrieve data from partial tables.
 
 **GetData method**
 
@@ -495,7 +474,7 @@ The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e
 
 To this method, you can pass a column filter as an ICollection\<ITableFilter>, in which each ITableFilter item contains a ColumnPid, a ColumnValue and a CompareType property. If, for example, you only want to retrieve the rows in which column parameter 1003 is set to “test”, you can specify the following:
 
-```txt
+```csharp
 ITableFilterItem filter = new TableFilterItem
 {
     ColumnPid = 1013,
@@ -524,11 +503,8 @@ The InterApp calls allow to provide a dictionary that is a mapping between the M
 The Class Library now supports the retrieval of information from the following SNMP connections as well as the creation of elements with these types of connections:
 
 - SNMPv1 connections
-
 - SNMPv2 connections
-
 - SNMPv3 connections
-
 - Virtual connections
 
 #### IEngine interface now supports the extension of the GetDms method \[ID_25632\]
@@ -537,9 +513,9 @@ The IEngine interface now supports the extension of the GetDms method.
 
 ### 1.2.0.2
 
-#### Deserialization would fail when “System.” classes were used \[ID_25933\]
+#### Deserialization would fail when 'System.' classes were used \[ID_25933\]
 
-In some cases, collection interface deserialization could fail if some of the classes were “System.” classes located in System.dll.
+In some cases, collection interface deserialization could fail if some of the classes were "System." classes located in System.dll.
 
 Deserialization now supports classes located in both System.Core.dll and System.dll.
 
@@ -555,7 +531,7 @@ In some cases, an incorrectly formatted input string would cause the GetElement 
 
 ### 1.2.0.4
 
-#### Name of an element with a RealConnection could no longer be updated  \[ID_27783\]
+#### Name of an element with a RealConnection could no longer be updated \[ID_27783\]
 
 In some cases, the name of an element with a RealConnection (SNMP, HTTP, SERIAL, etc.) could no longer be updated.
 
@@ -567,7 +543,7 @@ Due to an error in the Matrix Helper class, in some cases, an output could not b
 
 #### Creating, updating and retrieving HTTP connections of elements \[ID_29070\]
 
-​IDms classes now support creating, updating and retrieving HTTP connections of elements.
+IDms classes now support creating, updating and retrieving HTTP connections of elements.
 
 #### Retrieving CI type information from connections \[ID_29071\]
 
@@ -593,7 +569,7 @@ The IElementConnectionCollection interface, which is implemented by the ElementC
 
 #### DmsService class can now be used to manage DataMiner services \[ID_29513\]
 
-​The class library now includes a DmsService class that can be used to manage DataMiner services.
+The class library now includes a DmsService class that can be used to manage DataMiner services.
 
 #### Monitors added to subscribe to service alarm level and service state \[ID_29515\]
 
@@ -601,7 +577,7 @@ Monitors have been added to subscribe to service alarm level and service state.
 
 ### 1.2.0.7
 
-#### RemotePort would throw “null reference” exceptions when trying to retrieve a replicated ele­ment \[ID_30053\]
+#### RemotePort would throw 'null reference' exceptions when trying to retrieve a replicated element \[ID_30053\]
 
 RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element.
 
@@ -620,11 +596,8 @@ The SLSpectrum wrappers were missing a GetMonitor call with the correct return f
 The class library now supports the following authentication algorithms:
 
 - MD5
-
 - HMAC-MD5
-
 - SHA1
-
 - HMAC-SHA1
 
 ### 1.2.1.1
@@ -654,7 +627,7 @@ Up to now, the Class Library NuGet package would contain an incorrect DLL file.
 
 #### Simplified version of the MessageExecutor \[ID_33223\]
 
-​A simplified version of the MessageExecutor has been added (SimpleMessageExecutor\<T>), containing only a TryExecute method.
+A simplified version of the MessageExecutor has been added (SimpleMessageExecutor\<T>), containing only a TryExecute method.
 
 This MessageExecutor version can be used for small executors with a minimum of logic that do not need separate actions (DataGet, DataSet, Parse, etc.).
 
@@ -665,10 +638,9 @@ Up to now, when you wanted to return a message after receiving an InterAppCall, 
 From now on, you can use
 
 - the Reply method on the incoming message to update the GUID of the return message, followed by
-
 - the Send method with the ReturnAddress information from the incoming message.
 
-#### “Skyline.DataMiner.” prefix shortened to “SLC.Lib.” \[ID_33257\]
+#### 'Skyline.DataMiner.' prefix shortened to 'SLC.Lib.' \[ID_33257\]
 
 The “Skyline.DataMiner.” prefix for Class Library exceeded to 260-character path length limit of Microsoft Windows. This prefix has now been shortened to “SLC.Lib.”.
 
@@ -681,7 +653,7 @@ The “Skyline.DataMiner.” prefix for Class Library exceeded to 260-character 
 
 Deserialization would fail when using InterAppCalls as NuGets without a common DLL holding all the messages, i.e. when using KnownTypes with multiple Collections (as in the following example).
 
-```txt
+```csharp
 KnownTypes = new List(){ typeof(List<MyClass>), typeof(List<MyClass2>)};
 ```
 
@@ -700,7 +672,7 @@ The cleanup is canceled when the source or destination element that triggered th
 
 In the example below, cleanup after source element stop is delayed by 6 seconds.
 
-```txt
+```csharp
 MonitorCleanupConfig monitorCleanupConfig = new MonitorCleanupConfig(0, 0, 6000);
 protocol.SetupMonitorsCleanupConfig(monitorCleanupConfig);
 ```
@@ -708,9 +680,7 @@ protocol.SetupMonitorsCleanupConfig(monitorCleanupConfig);
 By passing a MonitorCleanupConfig object to the protocol, you can define delays on:
 
 - Cleanup after destination element deletion.
-
 - Cleanup after source element deletion.
-
 - Cleanup after source element stop.
 
 #### Monitoring stopped elements \[ID_33722\]
@@ -723,7 +693,7 @@ The Class Library now contains new bit rate calculation classes.
 
 ### 1.2.2.4
 
-#### Class Library is now able to process elements of which the RemoteElement property of the Ele­mentInfoEventMessage is set to the maximum value \[ID_33751\]
+#### Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value \[ID_33751\]
 
 The Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value (i.e. “4294967295/4294967295”).
 

@@ -93,7 +93,7 @@
       topicUID: 10_2_9_Cube_RNs
   - name: ClassLibrary Release Notes
     items:
-    - name: SLC_RN_ClassLibrary_REV000
+    - name: Class Library release notes
       href: Class_Library/SLC_RN_ClassLibrary_REV000.md
   - name: DIS Release Notes
     items:
