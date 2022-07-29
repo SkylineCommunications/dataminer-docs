@@ -1,4 +1,4 @@
-# Release 2.4.1
+# DIS 2.4.1 release notes
 
 ## New features
 
@@ -6,7 +6,7 @@
 
 #### Protocol editor: Generating parameters from XML and JSON files \[ID_13073\]
 
-Up to now, when you right-clicked in the protocol editor, the *Generate Parameters from MIB* command allowed you to import parameter data from a MIB file.
+Up to now, when you right-clicked in the protocol editor, the *Generate Parameters from MIB* command allowed you to import parameter data from a MIB file.
 
 Now, this command has been renamed to *Generate Parameters*, and allows you to import parameter data not only from a MIB file, but also from an XML file or a JSON file.
 
@@ -17,11 +17,8 @@ In the table editor, the *New Table* button now allows you to create an entirely
 To create a new table:
 
 1. Click the *New Table* button.
-
 2. Specify a parameter ID, a table name, and a table description, and click *OK*.
-
-3. In the *Parameters* list, select the parameters that you want to assign to the columns of the table, and drag them onto the *All Columns* or the *Displayed Columns Layout* section.
-
+3. In the *Parameters* list, select the parameters that you want to assign to the columns of the table, and drag them onto the *All Columns* or the *Displayed Columns Layout* section.
 4. Click *Apply Changes*.
 
 ### Validator
@@ -61,21 +58,21 @@ The ‘Main display tag integrity’ check now also checks the content of the de
 
 A new check has been added that will throw an error whenever an exported DVE protocol has an incorrect protocol name.
 
-| Result code | Class       | Description                                                                                                                |
-|-------------|-------------|----------------------------------------------------------------------------------------------------------------------------|
-| 4900        | Information | Protocol names OK                                                                                                          |
-| 4901        | Error       | Protocol name contains illegal characters.                                                                                 |
-| 4902        | Error       | Exported protocol name \[Protocol Name\] contains illegal characters.                                                      |
-| 4903        | Error       | Exported protocol name \[Protocol Name\] has an incorrect format. Expected format is “\[Parent Protocol Name\] - \[Name\]” |
+| Result code | Class | Description |
+|-------------|-------|-------------|
+| 4900 | Information | Protocol names OK |
+| 4901 | Error | Protocol name contains illegal characters. |
+| 4902 | Error | Exported protocol name \[Protocol Name\] contains illegal characters. |
+| 4903 | Error | Exported protocol name \[Protocol Name\] has an incorrect format. Expected format is “\[Parent Protocol Name\] - \[Name\]” |
 
 #### ‘Check Trend Alarm’ check: New return codes \[ID_13872\]
 
 The ‘Check Trend Alarm’ check can now thrown two additional errors:
 
-| Result code | Class | Description                                                                                                                             |
-|-------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| 2405        | Error | Write parameter is trended and monitored.                                                                                               |
-| 2406        | Error | Parameter {0} has trending=\\"true\\" and is monitored. However, it is not displayed on any page, which is inconsistent. Please verify. |
+| Result code | Class | Description |
+|-------------|-------|-------------|
+| 2405 | Error | Write parameter is trended and monitored. |
+| 2406 | Error | Parameter {0} has trending="true" and is monitored. However, it is not displayed on any page, which is inconsistent. Please verify. |
 
 #### ‘Check RTDisplay True’ check: New return code \[ID_15136\]
 
@@ -105,17 +102,16 @@ You can now use the following compliance subtags inside a *Protocol.Compliancies
 
 ```xml
 <Compliancies>
-  <CassandraReady>true</CassandraReady>
-  <CassandraRequired>true</CassandraRequired>
-  <MinimumRequiredVersion>9.0.3.7-5687</MinimumRequiredVersion>
+    <CassandraReady>true</CassandraReady>
+    <CassandraRequired>true</CassandraRequired>
+    <MinimumRequiredVersion>9.0.3.7-5687</MinimumRequiredVersion>
 </Compliancies>
 ```
 
 > [!NOTE]
-> The version number specified in the *MinimumRequiredVersion* tag has to have the following syntax:
+> The version number specified in the *MinimumRequiredVersion* tag has to have the following syntax:
 > - major.minor.month.week, or
 > - major.minor.month.week-xxxx (in which xxxx is the four-digit build number)
->
 > Examples: 9.0.3.7 or 9.0.3.7-5687
 
 #### XML Schema now allows multiple DVEProtocol tags \[ID_15137\]
@@ -132,14 +128,13 @@ New DIS installation packages will now be fully compatible with Microsoft Visual
 
 > [!NOTE]
 > In order to make the installation packages compatible with Visual Studio 2017, their manifest had to be upgraded from v1 to v3. This means, that all installation packages as from DIS v2.4.1 will require at least Visual Studio 2012.
->
 > If you want to install DIS on top of a Visual Studio version prior to 2012, then you will have to install DIS v2.0.3.
 
 #### Improved handling of DVE protocols \[ID_15136\]
 
 Due to a number of enhancements, handling of DVE protocols has improved.
 
-Using the syntax “\<DVEs>\<DVEProtocols>\<DVEProtocol>\</DVEs>” is now also supported.
+Using the syntax `<DVEs><DVEProtocols><DVEProtocol></DVEs>` is now also supported.
 
 ### Fixes
 

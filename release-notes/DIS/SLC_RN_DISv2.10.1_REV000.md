@@ -1,4 +1,4 @@
-# Release 2.10.1
+# DIS 2.10.1 release notes
 
 ## New features
 
@@ -82,11 +82,10 @@ The list of restricted parameter names has been updated.
 
 #### Validator: Enhanced behavior in case of non-existing trending attribute \[ID_17912\]
 
-From now on, when a \<Param> tag does not contain a *trending* attribute, the Validator will act as follows:
+From now on, when a \<Param> tag does not contain a *trending* attribute, the Validator will act as follows:
 
-- If the parameter is of type “read”, the Validator will consider the value of the *trending* attri­bute to be equal to the value of the *RTDisplay* tag.
-
-- If the parameter is of type “write”, the Validator will consider the value of the *trending* attri­bute to be false.
+- If the parameter is of type “read”, the Validator will consider the value of the *trending* attribute to be equal to the value of the *RTDisplay* tag.
+- If the parameter is of type “write”, the Validator will consider the value of the *trending* attribute to be false.
 
 #### Protocol schema: Updated attribute rules \[ID_17945\]
 
@@ -97,59 +96,32 @@ The following attribute now has to contain a non-empty string when present:
 The following attributes are now required attributes:
 
 - Protocol.AlarmLevelLinks.AlarmLevelLink@destination
-
 - Protocol.AlarmLevelLinks.AlarmLevelLink@id
-
 - Protocol.AlarmLevelLinks.AlarmLevelLink@remoteElement
-
 - Protocol.Chains.Chain@name
-
 - Protocol.Chains.Chain.Field@name
-
 - Protocol.Chains.Chain.Field@pid
-
 - Protocol.ExportRules.ExportRule@table
-
 - Protocol.ExportRules.ExportRule@tag
-
 - Protocol.ExportRules.ExportRule@value
-
 - Protocol.ParameterGroups.Group@type
-
 - Protocol.Http.Session.Connection.Response.Headers.Header@pid
-
 - Protocol.Params.Param.Display.ParametersView@type
-
 - Protocol.Params.Param.Display.ParametersView.Parameters.Parameter@id
-
 - Protocol.Params.Param.Icon@ref
-
 - Protocol.Params.Param.Interprete.Scale@low
-
 - Protocol.Params.Param.Interprete.Scale@lowdata
-
 - Protocol.Params.Param.Interprete.Scale@high
-
 - Protocol.Params.Param.Interprete.Scale@highdata
-
 - Protocol.QActions.QAction@name
-
 - Protocol.Relations.Relation@path
-
 - Protocol.Threads.Thread@connection
-
 - Protocol.Timers.Timer@id
-
 - Protocol.Topologies.Topology.Cell@name
-
 - Protocol.Topologies.Topology.Cell@table
-
 - Protocol.Topologies.Topology.Cell.Link@dest
-
 - Protocol.Topologies.Topology.Cell.Link@source
-
 - Protocol.TreeControls.TreeControl@parameterId
-
 - Protocol.TreeControls.TreeControl.Hierarchy.Table@id
 
 #### Protocol schema: A number of ids can no longer start with a zero \[ID_17946\]
@@ -157,23 +129,14 @@ The following attributes are now required attributes:
 The following ids can no longer start with a zero:
 
 - Protocol.Params.Param@id
-
 - Protocol.Actions.Action@id
-
 - Protocol.Commands.Command@id
-
 - Protocol.Groups.Group@id
-
 - Protocol.HTTP.Session@id
-
 - Protocol.Pairs.Pair@id
-
 - Protocol.QActions.QAction@id
-
 - Protocol.Responses.Response@id
-
 - Protocol.Timers.Timer@id
-
 - Protocol.Triggers.Trigger@id
 
 #### Protocol schema: SlowTime tag removed \[ID_17948\]
@@ -187,10 +150,9 @@ The following tag has been removed from the protocol schema:
 The following values have been removed from the protocol schema:
 
 - The “element” value has been removed from the EnumTriggerOn list (which lists the values that can be used in the Protocol.Triggers.Trigger.On tag).
-
 - The “after create” value has been removed from the EnumTriggerTime list (which lists the values that can be used in the Protocol.Triggers.Trigger.Time tag).
 
-#### Protocol schema: Protocol.IntegrationID tag now has to contain “DMS-DRV-XXXX” \[ID_17951\]
+#### Protocol schema: Protocol.IntegrationID tag now has to contain 'DMS-DRV-XXXX' \[ID_17951\]
 
 The Protocol.IntegrationID tag now has to contain “DMS-DRV-XXXX” (XXXX being a number).
 
@@ -208,4 +170,4 @@ After updating or reinstalling DIS, in some cases, it would no longer be possibl
 
 #### Validator: Incorrect warning could appear when a \<Param> tag contained a dependencyId attribute \[ID_17907\]
 
-When a \<Param> tag contained a *dependencyId* attribute, in some cases, an incorrect warning could appear. This problem has now been fixed.
+When a \<Param> tag contained a *dependencyId* attribute, in some cases, an incorrect warning could appear. This problem has now been fixed.

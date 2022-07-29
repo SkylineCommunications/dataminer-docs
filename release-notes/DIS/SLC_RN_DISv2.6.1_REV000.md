@@ -1,4 +1,4 @@
-# Release 2.6.1
+# DIS 2.6.1 release notes
 
 ## New features
 
@@ -6,7 +6,7 @@
 
 #### Table editor: ‘All Columns’ section now has a ‘Foreign Key’ column \[ID_16305\]
 
-In the table editor, the *All Columns* section now has a *Foreign Key* column. In this column, you can select another table to which you want a particular table column to be linked.
+In the table editor, the *All Columns* section now has a *Foreign Key* column. In this column, you can select another table to which you want a particular table column to be linked.
 
 The table you select will be specified in the “foreignKey=” option of the \<ColumnOption> tag in question.
 
@@ -25,9 +25,8 @@ Also, when you click a write parameter in the Protocol Tree window (i.e. a param
 
 When you open the table editor, DIS will check whether there are columns that are too narrow for their description to fit. If this is the case, then you can do the following:
 
-- Click the drop-down button next to the warning sign at the top of the *Tables* section, and select *Fix Column Widths* to automatically adjust the widths of all columns that are too nar­row.
-
-- In the *Displayed Columns Layout* section, click the red *Fix* button in the *Width* column of a particular table column to automatically adjust the width of that column.
+- Click the drop-down button next to the warning sign at the top of the *Tables* section, and select *Fix Column Widths* to automatically adjust the widths of all columns that are too narrow.
+- In the *Displayed Columns Layout* section, click the red *Fix* button in the *Width* column of a particular table column to automatically adjust the width of that column.
 
 > [!NOTE]
 > Hidden columns, i.e. columns of which the width was set to 0, are ignored.
@@ -56,4 +55,4 @@ In some rare cases, a QAction C# project linked to a protocol.xml file would no 
 
 #### Protocol editor: Problem when unselected a pair in a \<Command> tag \[ID_16508\]
 
-When you unselect a pair in the *Include in Pair* shortcut menu item of a command, the command will automatically be removed from the pair. In some cases, however, when a command was removed from a pair, part of the \<Content> tag of that pair was incorrectly removed as well. When you subsequently tried to add the command again, an exception could occur. This problem has now been fixed.
+When you unselect a pair in the *Include in Pair* shortcut menu item of a command, the command will automatically be removed from the pair. In some cases, however, when a command was removed from a pair, part of the \<Content> tag of that pair was incorrectly removed as well. When you subsequently tried to add the command again, an exception could occur. This problem has now been fixed.

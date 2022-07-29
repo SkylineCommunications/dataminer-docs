@@ -1,4 +1,4 @@
-# Release 2.5.1
+# DIS 2.5.1 release notes
 
 ## New features
 
@@ -16,13 +16,11 @@ When a QAction refers to another QAction in a DllImport attribute, then that ref
 
 If, in the table editor, you add a monitored parameter of Interprete type “double” and measurement type “number” or “analog”, you can now set three additional options in the *Displayed Columns Layout* section.
 
-- In the *Header* column, you can indicate the type of aggregated information you want to have displayed in the column header: None, Sum, Avg, Min or Max.
+- In the *Header* column, you can indicate the type of aggregated information you want to have displayed in the column header: None, Sum, Avg, Min or Max.
+- In the *Histogram* column, you can disable or enable the histogram of all rows in the column header.
+- In the *Heatmap* column, you can disable or enable the heatmap in all rows in the column header.
 
-- In the *Histogram* column, you can disable or enable the histogram of all rows in the column header.
-
-- In the *Heatmap* column, you can disable or enable the heatmap in all rows in the column header.
-
-Also, from now on, the *Extra Options* column in the *All Columns* section will only display options that do not have a dedicated UI component in the table editor. When unknown options are defined, a warning will now be generated. In the protocol.xml file, the options will be sorted as follows: save, foreignKey, indexColumn, header, histogram, heatmap, and then all other options.
+Also, from now on, the *Extra Options* column in the *All Columns* section will only display options that do not have a dedicated UI component in the table editor. When unknown options are defined, a warning will now be generated. In the protocol.xml file, the options will be sorted as follows: save, foreignKey, indexColumn, header, histogram, heatmap, and then all other options.
 
 ### Fixes
 
@@ -30,4 +28,4 @@ Also, from now on, the *Extra Options* column in the *All Columns* section wil
 
 When you added a new DLL import to a QAction that had already been opened in Visual Studio (i.e. a QAction for which a C# project had already been created), in some cases, the new DLL import was not applied correctly. Also, “\\\\?\\” was added in front of the DLL file path. As a result, the QAction could not be built and an error was added to the error list.
 
-This issue would only occur if the DLL file was located in the C:\\Skyline DataMiner\\ProtocolScripts folder or the C:\\Skyline DataMiner\\Files folder, not if the DLL file was a .NET framework assembly.
+This issue would only occur if the DLL file was located in the `C:\Skyline DataMiner\ProtocolScripts` folder or the `C:\Skyline DataMiner\Files` folder, not if the DLL file was a .NET framework assembly.

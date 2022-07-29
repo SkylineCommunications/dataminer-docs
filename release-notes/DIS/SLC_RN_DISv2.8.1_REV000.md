@@ -1,4 +1,4 @@
-# Release 2.8.1
+# DIS 2.8.1 release notes
 
 ## New features
 
@@ -6,9 +6,9 @@
 
 #### MIB browser: ‘Remove All’ button \[ID_17225\]
 
-Up to now, when you wanted to remove a number of MIB files from the MIB browser’s *Files* tab, you had to remove one file at a time by clicking the *Remove* button next to every file.
+Up to now, when you wanted to remove a number of MIB files from the MIB browser’s *Files* tab, you had to remove one file at a time by clicking the *Remove* button next to every file.
 
-From now on, when you want to remove multiple MIB files at once, you can select all of them and click *Remove* in the *Files* tab menu bar.
+From now on, when you want to remove multiple MIB files at once, you can select all of them and click *Remove* in the *Files* tab menu bar.
 
 > [!NOTE]
 > To select more than one file, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the SHIFT key.
@@ -18,12 +18,11 @@ From now on, when you want to remove multiple MIB files at once, you can select 
 The table editor will now enforce the use of a semicolon as default column option separator.
 
 - If the first character in a column option string is a separator other than a semicolon, that character will be replaced by a semicolon.
-
 - If a column option string does not start with a separator character, then a semicolon will be added in front of the option string.
 
 #### Protocol tree: Parameters of type “group”, “read bit” and “write bit” are now indicated in parameter list \[ID_17332\]
 
-Up to now, when you opened the *Params* node in the *Protocol Tree* window, table parameters and write parameters were indicated by “\[Table\]” and “\[W\]” respectively.
+Up to now, when you opened the *Params* node in the *Protocol Tree* window, table parameters and write parameters were indicated by “\[Table\]” and “\[W\]” respectively.
 
 Now, the following types of parameters will also have a special indication:
 
@@ -42,7 +41,6 @@ In a protocol editing window, ‘jump to linked item’ buttons (also known as p
 The Validator will now issue
 
 - a warning when DefaultValue is defined on a column parameter of type “read”, and
-
 - an error when DefaultValue is defined on a parameter that is not of type “read” (e.g. write, fixed, etc.).
 
 | Result code | Class       | Description                                                                                   |
@@ -70,7 +68,6 @@ The Validator will now issue an error when a button or page button was defined o
 In the protocol editor, the Edit table and Edit C# buttons have been improved.
 
 - Click the *Edit table* button in front of the \<Param> tag of a table parameter to immediately open that table in the table editor.
-
 - Click the *Edit C#* button in front of a \<QAction> tag to immediately open that QAction in a new file tab.
 
 #### C# code snippets now all comply with the coding guidelines \[ID_17335\]
@@ -89,7 +86,7 @@ In some cases, the display editor would reset the default page when that page di
 
 #### IDE - Table editor: Column options no longer converted to lowercase \[ID_17313\]
 
-In some cases, dynamic items defined in \<ColumnOption> tags would incorrectly be converted to lower case when you applied changes made in the table editor. An options attribute like “;save;SelectionSetVar:VariableName” would, for example, get converted to “;save;SelectionSetVar:variablename”. This problem has now been fixed.
+In some cases, dynamic items defined in \<ColumnOption> tags would incorrectly be converted to lower case when you applied changes made in the table editor. An options attribute like `;save;SelectionSetVar:VariableName` would, for example, get converted to `;save;SelectionSetVar:variablename`. This problem has now been fixed.
 
 #### Validator: Problem when a column parameter could not be found \[ID_17394\]
 

@@ -1,4 +1,4 @@
-# Release 2.9.1
+# DIS 2.9.1 release notes
 
 ## New features
 
@@ -10,15 +10,14 @@ DIS can now also be used to create and edit Automation script XML files.
 
 To create a new Automation script XML file, do the following:
 
-1. Open the *File* menu, and select *New \> File ...*
-
+1. Open the *File* menu, and select *New \> File ...*
 2. Select *DataMiner Automation Script Template*, and click *Open*.
 
 When editing an Automation script, the editor allows you to insert a number of basic snippets, edit the C# code blocks in the script, include DLL files, and add namespace references.
 
-At the top of the editor window, you can find a *Publish* button. Click that button if you want to publish the Automation script XML file you are currently editing to the DMA specified in the *DMA* tab of the *DIS Settings* dialog box.
+At the top of the editor window, you can find a *Publish* button. Click that button if you want to publish the Automation script XML file you are currently editing to the DMA specified in the *DMA* tab of the *DIS Settings* dialog box.
 
-If, in the *DIS* menu, you select *DMA \> Import Automation Script…*, the *Import Automation Script…* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA specified in the *DMA* tab of the *DIS Settings* window. In most cases, this will be your local DMA.
+If, in the *DIS* menu, you select *DMA \> Import Automation Script…*, the *Import Automation Script…* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA specified in the *DMA* tab of the *DIS Settings* window. In most cases, this will be your local DMA.
 
 #### DIS MIB Browser: SNMP trap information \[ID_17601\]
 
@@ -30,42 +29,36 @@ Also, the DIS MIB Browser tool window will now display units and value ranges wh
 
 The table editor now also supports the ColumnOption type ‘viewTableKey’.
 
-In the *All Columns* section, the selection boxes in the *Type* column now also contain the ‘View Table Key’ value.
+In the *All Columns* section, the selection boxes in the *Type* column now also contain the ‘View Table Key’ value.
 
 #### New snippets \[ID_17713\]\[ID_17854\]
 
 When editing a protocol XML file or an Automation script XML file, you can now insert the following new snippets:
 
-**Protocol snippets**
+##### Protocol snippets
 
 - Protocol Copyright
 
-**Automation script snippets**
+##### Automation script snippets
 
 - Automation Root
-
 - Automation Copyright
-
 - Dummy Protocol
-
 - Memory File
-
 - Script Exe
-
 - ScriptParameter
 
 ### Validator
 
 #### New ‘DIS Validator’ tool window \[ID_14566\]
 
-Up to now, when you clicked *Validate* in the header of a protocol editor tab, the results of the protocol validation were displayed in the Visual Studio error list. From now on, those results will be displayed in a dedicated *DIS Validator* tool window.
+Up to now, when you clicked *Validate* in the header of a protocol editor tab, the results of the protocol validation were displayed in the Visual Studio error list. From now on, those results will be displayed in a dedicated *DIS Validator* tool window.
 
-The new *DIS Validator* tool window lists the results of the latest protocol validation in a tree structure, grouped by severity and category.
+The new *DIS Validator* tool window lists the results of the latest protocol validation in a tree structure, grouped by severity and category.
 
 At the top of the tool window, you can find two buttons:
 
 - Click *Validate* to launch a new protocol validation.
-
 - Click *Export* to export the results of the latest validation to a CSV file.
 
 ### XML Schema
@@ -116,20 +109,15 @@ DIS is now able to validate Automation script XML files against an Automation sc
 The following DIS tool windows are now compatible with all built-in Visual Studio themes:
 
 - DIS Tree
-
 - DIS Mappings
-
 - DIS Inject
-
 - DIS MIB Browser
-
 - DIS Grid
-
 - DIS Validator
 
 #### XSD: ArrayOptions tag no longer has an autoAdd attribute \[ID_17733\]
 
-The *ArrayOptions* tag no longer has an *autoAdd* attribute.
+The *ArrayOptions* tag no longer has an *autoAdd* attribute.
 
 #### IDE: More consistent naming of the DIS tool windows \[ID_17483\]
 
@@ -160,7 +148,7 @@ Up to now, it was allowed to specify both \<Action> and \<Trigger> tags inside a
 
 The Protocol XML schema file has been reviewed.
 
-**Tag changes**
+##### Tag changes
 
 | Tag                                                          | Change                                                           |
 |--------------------------------------------------------------|------------------------------------------------------------------|
@@ -174,7 +162,7 @@ The Protocol XML schema file has been reviewed.
 | Protocol.PortSettings.LocalIPPort.DefaultValue               | Type changed from xs:string to TypePortNumber                    |
 | Protocol.Timers.Timer                                        | id attribute is now required                                     |
 
-**ENUM changes**
+##### ENUM changes
 
 | ENUM                 | Change                                            |
 |----------------------|---------------------------------------------------|
@@ -182,12 +170,10 @@ The Protocol XML schema file has been reviewed.
 | EnumHttpLoginMethod  | “https” removed                                   |
 | EnumParamCRCType     | “codan” added                                     |
 
-**Other changes**
+##### Other changes
 
 - Parameter IDs can no longer start with “0”.
-
 - A number of parameter ID ranges have been updated.
-
 - xs:documentation tags were added/updated where needed.
 
 ### Fixes
