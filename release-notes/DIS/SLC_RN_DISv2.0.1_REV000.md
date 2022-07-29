@@ -1,4 +1,4 @@
-# Release 2.0.1
+# DIS 2.0.1 release notes
 
 ## New features and enhancements
 
@@ -18,8 +18,8 @@ Also, a number of changes have been made to the *DMA* tab page of the *DIS Setti
 
 - After having changed the host name, the user name and/or the password, you can now click the *Test connection* button to check the new login settings.
 
-    > [!NOTE]
-    > When you change the host name, the user name and/or the password, the current connection will be closed.
+> [!NOTE]
+> When you change the host name, the user name and/or the password, the current connection will be closed.
 
 #### Protocols are now saved in UTF-8 with signature \[ID_12126\]
 
@@ -35,32 +35,32 @@ DIS now ships with a user guide in HTML5 format instead of in PDF format.
 
 In the protocol editor, you can now click a small *Down* arrow in front of certain protocol tags to open a shortcut menu. See the table below for an overview of all available commands per protocol tag.
 
-| Protocol tag | Command                            | Function                                                                             |
-|--------------|------------------------------------|--------------------------------------------------------------------------------------|
-| Param        | Edit Table                         | Open the parameter in the table editor.<br> (only for table parameters)              |
-|              | Generate Write For Read Param      | Create an identical parameter of type “Write”. (only for read parameters)            |
-|              | Include in Group                   | Include the parameter in one of the listed groups of type “poll”.                    |
-|              | Generate new Trigger               | Create a new “on change” trigger that will get activated when the parameter changes. |
-|              | Generate new QAction               | Creates a new blank QAction that will be run when the parameter changes.             |
-| Trigger      | Include in Group                   | Include the trigger in one of the listed groups of type “trigger” or “poll trigger”. |
-|              | Generate new Action                | Create a new action.<br> (only if the trigger is of type “action”)                   |
-| Action       | Include in Group                   | Include the action in one of the listed groups of type “action” or “poll action”.    |
-|              | Include in Trigger                 | Include the action in one of the listed triggers.                                    |
-| Session      | Include in Group                   | Include the session in one of the listed groups of type “poll”.                      |
-| Group        | Include in Timer                   | Include the group in one of the listed timers.                                       |
-|              | Generate new Trigger (after group) | Create a new “after group” trigger.                                                  |
-|              | Generate new Parameter             | Create a new parameter.<br> (only if the group is of type “poll”)                    |
-|              | Generate new Pair                  | Create a new pair.<br> (only if the group is of type “poll”)                         |
-|              | Generate new Session               | Create a new session.<br> (only if the group is of type “poll”)                      |
-|              | Generate new Action                | Create a new action.<br> (only if the group is of type “action” or “poll action”)    |
-| Timer        | Generate new Group                 | Create a new group.                                                                  |
-| Pair         | Include in Group                   | Include the pair in one of the listed groups of type “poll”.                         |
-|              | Generate new Command               | Create a new command.                                                                |
-|              | Generate new Response              | Create a new response.                                                               |
-| Command      | Include in Pair                    | Include the command in one of the listed pairs.                                      |
-|              | Generate new Parameter             | Create a new parameter.                                                              |
-| Response     | Include in Pair                    | Include the response in one of the listed pairs.                                     |
-|              | Generate new Parameter             | Create a new parameter.                                                              |
+| Protocol tag | Command | Function |
+|--------------|---------|----------|
+| Param | Edit Table | Open the parameter in the table editor.<br>(only for table parameters) |
+|       | Generate Write For Read Param | Create an identical parameter of type “Write”.<br>(only for read parameters) |
+|       | Include in Group | Include the parameter in one of the listed groups of type “poll”. |
+|       | Generate new Trigger | Create a new “on change” trigger that will get activated when the parameter changes. |
+|       | Generate new QAction | Creates a new blank QAction that will be run when the parameter changes. |
+| Trigger | Include in Group | Include the trigger in one of the listed groups of type “trigger” or “poll trigger”. |
+|         | Generate new Action | Create a new action.<br>(only if the trigger is of type “action”) |
+| Action | Include in Group | Include the action in one of the listed groups of type “action” or “poll action”. |
+|        | Include in Trigger | Include the action in one of the listed triggers. |
+| Session | Include in Group | Include the session in one of the listed groups of type “poll”. |
+| Group | Include in Timer | Include the group in one of the listed timers. |
+|       | Generate new Trigger (after group) | Create a new “after group” trigger. |
+|       | Generate new Parameter | Create a new parameter.<br>(only if the group is of type “poll”) |
+|       | Generate new Pair | Create a new pair.<br>(only if the group is of type “poll”) |
+|       | Generate new Session | Create a new session.<br> (only if the group is of type “poll”) |
+|       | Generate new Action | Create a new action.<br>(only if the group is of type “action” or “poll action”) |
+| Timer | Generate new Group | Create a new group. |
+| Pair | Include in Group | Include the pair in one of the listed groups of type “poll”. |
+|      | Generate new Command | Create a new command. |
+|      | Generate new Response | Create a new response. |
+| Command | Include in Pair | Include the command in one of the listed pairs. |
+|         | Generate new Parameter | Create a new parameter. |
+| Response | Include in Pair | Include the response in one of the listed pairs. |
+|          | Generate new Parameter | Create a new parameter. |
 
 **IntelliSense**
 
@@ -82,14 +82,12 @@ Set this attribute to “true” if the parameter needs to be accessible on Appl
 
 The *EnumHttpHeaderField* enumeration now contains all HTTP headers listed on the following pages:
 
-- [http://www.iana.org/assignments/message-headers/message-headers.xhtml](http://www.iana.org/assignments/message-headers/message-headers.xmd)
-
-[- ](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+- <http://www.iana.org/assignments/message-headers/message-headers.xhtml>
+- <https://en.wikipedia.org/wiki/List_of_HTTP_header_fields>
 
 This new enum is used by the following two attributes:
 
 - Http.Session.Request.Headers.Header@key
-
 - Http.Session.Response.Headers.Header@key
 
 #### New HTTP request verb: DELETE \[ID_12255\]
@@ -133,12 +131,12 @@ The type of the *state* attribute of the *Protocol.Params.Param.Measurement.Disc
 
 In the new *Params.Param.Database* tag, you can now group a number of database-related settings for a particular parameter.
 
-| Tag           | Description                                                                                                                                        |
-|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| CQLOptions    | Tag that groups a number of Cassandra database options.                                                                                            |
-| Clustering    | The semicolon-separated list of clustering columns, i.e. the columns that are part of the compound primary key definition.                         |
-| TableProperty | The WITH clause you want to use to set the necessary table properties.                                                                             |
-| Finalizer     | The query that has to be executed after the creation of the table.<br> This can be, for example, a query that will preload data or create indexes. |
+| Tag | Description |
+|-----|-------------|
+| CQLOptions | Tag that groups a number of Cassandra database options. |
+| Clustering | The semicolon-separated list of clustering columns, i.e. the columns that are part of the compound primary key definition. |
+| TableProperty | The WITH clause you want to use to set the necessary table properties. |
+| Finalizer | The query that has to be executed after the creation of the table.<br> This can be, for example, a query that will preload data or create indexes. |
 
 Example:
 
@@ -164,59 +162,55 @@ When writing a protocol.xml file, you can now replace a number of legacy tags an
 
 See the following tables for an overview of the new tags and attributes.
 
-|                                                            |                                                                                                                                                                                                                                                                |
-|------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Legacy tag/attribute                                       | New tag/attribute                                                                                                                                                                                                                                              |
-| Protocol.ExportRules                                       | Protocol.DVEs.ExportRules                                                                                                                                                                                                                                      |
-| Protocol.Icon                                              | Protocol.Options.Icon                                                                                                                                                                                                                                          |
-| Protocol.NoTimeout                                         | Protocol.Options.NoTimeouts.NoTimeout                                                                                                                                                                                                                          |
-| Protocol.SNMP                                              | Protocol.Options.GenerateMIB<br> -  auto<br> -  true<br> -  false |
-| Protocol.SNMP@includePages                                 | Protocol.Options.GenerateMIB<br>@includePages<br> -  true<br> -  false                                                           |
-| Protocol.Type                                              | Protocol.Connections.Connection.Type                                                                                                                                                                                                                           |
-| Protocol.Type@advanced                                     | Protocol.Connections                                                                                                                                                                                                                                           |
-| Protocol.Type@advancedConnections<br> (“names: …” section) | Protocol.Connections.Connection@Name                                                                                                                                                                                                                           |
-| Protocol.Type@communicationOptions                         | \[see separate section below\]                                                                                                                                                                                                                                 |
-| Protocol.Type@databaseOptions                              | \[see separate section below\]                                                                                                                                                                                                                                 |
-| Protocol.Type@options                                      | \[see separate section below\]                                                                                                                                                                                                                                 |
-| Protocol.Type@overrideTimeoutDVE                           | Protocol.Options.OverrideTimeoutDVE                                                                                                                                                                                                                            |
-| Protocol.Type@relativeTimers                               | Protocol.Timers@relativeTimers<br> -  true<br> -  false                                                                          |
+| Legacy tag/attribute | New tag/attribute |
+| -------------------- | ----------------- |
+| Protocol.ExportRules | Protocol.DVEs.ExportRules |
+| Protocol.Icon | Protocol.Options.Icon |
+| Protocol.NoTimeout | Protocol.Options.NoTimeouts.NoTimeout |
+| Protocol.SNMP | Protocol.Options.GenerateMIB<br>- auto<br>- true<br>- false |
+| Protocol.SNMP@includePages | Protocol.Options.GenerateMIB<br>@includePages<br>- true<br>- false |
+| Protocol.Type | Protocol.Connections.Connection.Type |
+| Protocol.Type@advanced | Protocol.Connections |
+| Protocol.Type@advancedConnections<br>(“names:” section) | Protocol.Connections.Connection@Name |
+| Protocol.Type@communicationOptions | \[see separate section below\] |
+| Protocol.Type@databaseOptions | \[see separate section below\] |
+| Protocol.Type@options | \[see separate section below\] |
+| Protocol.Type@overrideTimeoutDVE | Protocol.Options.OverrideTimeoutDVE |
+| Protocol.Type@relativeTimers | Protocol.Timers@relativeTimers<br>- true<br>- false |
 
-Protocol.Type@communicationOptions
+##### Protocol.Type@communicationOptions
 
-|                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Existing tag/attribute                 | New tag/attribute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| postPonePortInitialisation             | Protocol.Options.PostPonePortInitialisation<br> -  true<br> -  false (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| closeConnectionOnResponse              | Protocol.Connections.Connection.<br>CommunicationOptions.<br>CloseConnectionOnResponse<br> -  true<br> -  false (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| redundantPolling                       | Protocol.Connections.Connection.<br>RedundancyGroup<br> -  redundancy group ID (uint)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| chunkedHTML                            | Protocol.Connections.Connection.<br>CommunicationOptions.ChunkedHTML<br> -  true<br> -  false (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| asyncWMI                               | \[no longer used\]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| makeCommandByProtocol                  | Protocol.Connections.Connection.<br>CommunicationOptions.<br>MakeCommandByProtocol<br> -  true<br> -  false (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| maxReceiveBuffer:\<int value>          | Protocol.Connections.Connection.<br>CommunicationOptions.MaxReceiveBuffer<br> -  Number of bytes received before they are buffered in SLProtocol (uint)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| smartIpHeader                          | Protocol.Connections.Connection.<br>CommunicationOptions.SmartIpHeader<br> -  true<br> -  false (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| notifyConnectionPIDs:\<pid>\[,\<pid>\] | Protocol.Connections.Connection.<br>CommunicationOptions.<br>NotifyConnectionPID.Connections<br> -  Parameter ID (uint)<br> Protocol.Connections.Connection.<br>CommunicationOptions.<br>NotifyConnectionPID.Disconnections<br> -  Parameter ID (uint)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| customRedirect                         | Protocol.Connections.Connection.<br>CommunicationOptions.CustomRedirect<br> -  true<br> -  false (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| packetInfo:\<string>                   | Protocol.Connections.Connection.<br>CommunicationOptions.PacketInfo.<br>LengthIdentifierOffset<br> -  uint<br> Protocol.Connections.Connection.<br>CommunicationOptions.PacketInfo.<br>LengthIdentifierLength<br> -  uint<br> Protocol.Connections.Connection.<br>CommunicationOptions.PacketInfo.<br>IncludeLengthIdentifier<br> -  true<br> -  false (default)<br> Protocol.Connections.Connection.<br>CommunicationOptions.PacketInfo.<br>LittleEndian<br> -  true<br> -  false (default) |
-| maxConcurrentConnections:\<int>        | Protocol.Connections.Connection.<br>CommunicationOptions.<br>MaxConcurrentConnections<br> -  Number of clients that can connect to the port (uint)<br> Protocol.Connections.Connection@ID<br> -  0-based connection ID (uint)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| useAgentBinding                        | Protocol.Options.UseAgentBinding<br> -  true<br> -  false (default)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Existing tag/attribute | New tag/attribute |
+| ---------------------- | ----------------- |
+| postPonePortInitialisation | Protocol.Options.PostPonePortInitialisation<br>- true<br>- false (default) |
+| closeConnectionOnResponse | Protocol.Connections.Connection.<br>CommunicationOptions.<br>CloseConnectionOnResponse<br>- true<br>- false (default) |
+| redundantPolling | Protocol.Connections.Connection.<br>RedundancyGroup<br> -  redundancy group ID (uint) |
+| chunkedHTML | Protocol.Connections.Connection.<br>CommunicationOptions.ChunkedHTML<br>- true<br>- false (default) |
+| asyncWMI | \[no longer used\] |
+| makeCommandByProtocol | Protocol.Connections.Connection.<br>CommunicationOptions.<br>MakeCommandByProtocol<br>- true<br>- false (default) |
+| maxReceiveBuffer:\<int value> | Protocol.Connections.Connection.<br>CommunicationOptions.MaxReceiveBuffer<br>- Number of bytes received before they are buffered in SLProtocol (uint) |
+| smartIpHeader | Protocol.Connections.Connection.<br>CommunicationOptions.SmartIpHeader<br>- true<br>- false (default) |
+| notifyConnectionPIDs:\<pid>\[,\<pid>\] | Protocol.Connections.Connection.<br>CommunicationOptions.<br>NotifyConnectionPID.Connections<br>- Parameter ID (uint)<br>Protocol.Connections.Connection.<br>CommunicationOptions.<br>NotifyConnectionPID.Disconnections<br>- Parameter ID (uint) |
+| customRedirect | Protocol.Connections.Connection.<br>CommunicationOptions.CustomRedirect<br>- true<br>- false (default) |
+| packetInfo:\<string> | Protocol.Connections.Connection.<br>CommunicationOptions.PacketInfo.<br>LengthIdentifierOffset<br>- uint<br>Protocol.Connections.Connection.<br>CommunicationOptions.PacketInfo.<br>LengthIdentifierLength<br>- uint<br>Protocol.Connections.Connection.<br>CommunicationOptions.PacketInfo.<br>IncludeLengthIdentifier<br>- true<br>- false (default)<br>Protocol.Connections.Connection.<br>CommunicationOptions.PacketInfo.<br>LittleEndian<br>- true<br>- false (default) |
+| maxConcurrentConnections:\<int> | Protocol.Connections.Connection.<br>CommunicationOptions.<br>MaxConcurrentConnections<br>- Number of clients that can connect to the port (uint)<br>Protocol.Connections.Connection@ID<br>- 0-based connection ID (uint) |
+| useAgentBinding | Protocol.Options.UseAgentBinding<br>- true<br>- false (default) |
 
-Protocol.Type@databaseOptions
+##### Protocol.Type@databaseOptions
 
-|                        |                                                                                                                                                                                                                       |
-|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Existing tag/attribute | New tag/attribute                                                                                                                                                                                                     |
-| customDataIDs          | Protocol.Options.DataBaseOptions.CustomDataIDs<br> -  true<br> -  false (default)       |
-| partitionedTrending    | Protocol.Options.DataBaseOptions.PartitionedTrending<br> -  true<br> -  false (default) |
+| Existing tag/attribute | New tag/attribute |
+| ---------------------- | ----------------- |
+| customDataIDs | Protocol.Options.DataBaseOptions.CustomDataIDs<br>- true<br>- false (default) |
+| partitionedTrending | Protocol.Options.DataBaseOptions.PartitionedTrending<br>- true<br>- false (default) |
 
-Protocol.Type@options
+##### Protocol.Type@options
 
-|                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Existing tag/attribute | New tag/attribute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| forceDefaultAlarming   | Protocol.Options.ForceDefaultAlarming                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| exportProtocol         | Protocol.DVEs.DVEProtocols<br> Protocol.DVEs.DVEProtocols.DVEProtocol@name<br> -  Name of the DVE protocol (string)<br> Protocol.DVEs.DVEProtocols.DVEProtocol@tablePID<br> -  Parameter ID of table used to create the DVE elements (uint)<br> Protocol.DVEs.DVEProtocols.DVEProtocol.ElementPrefix<br> -  true<br> -  false (default) |
-| UNICODE                | Protocol.Options.Encoding<br> -  ascii (default)<br> -  unicode                                                                                                                                                                                                                                                                                                                                                                                                       |
-| DISABLEVIEWREFRESH     | Protocol.Options.DisableViewRefresh<br> -  true<br> -  False (default)                                                                                                                                                                                                                                                                                                                                                                                                |
+| Existing tag/attribute | New tag/attribute |
+| ---------------------- | ----------------- |
+| forceDefaultAlarming | Protocol.Options.ForceDefaultAlarming |
+| exportProtocol | Protocol.DVEs.DVEProtocols<br>Protocol.DVEs.DVEProtocols.DVEProtocol@name<br>- Name of the DVE protocol (string)<br>Protocol.DVEs.DVEProtocols.DVEProtocol@tablePID<br>- Parameter ID of table used to create the DVE elements (uint)<br>Protocol.DVEs.DVEProtocols.DVEProtocol.ElementPrefix<br>- true<br>- false (default) |
+| UNICODE | Protocol.Options.Encoding<br>- ascii (default)<br>- unicode |
+| DISABLEVIEWREFRESH | Protocol.Options.DisableViewRefresh<br>- true<br>- False (default) |
 
 ### Snippets
 
