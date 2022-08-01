@@ -36,4 +36,4 @@ uid: Part4AdvancedModules
 
 - [DMS Ticketing](xref:ticketing)
 
-- [DataMiner Application Framework](xref:Application_framework)
+- [DataMiner Low-Code Apps](xref:Application_framework)

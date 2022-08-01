@@ -2108,7 +2108,7 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
-    - name: DataMiner Application Framework
+    - name: DataMiner Low-Code Apps
       topicUID: Application_framework
       items:
         - name: Accessing custom applications
