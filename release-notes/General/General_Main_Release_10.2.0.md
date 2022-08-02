@@ -7451,6 +7451,17 @@ Up to now, a parameter table was only able to expose indices as part of a parame
 
 Also, the edit panel will now allow users to select a specific protocol version.
 
+#### Alarm Console: Time of history sets will now always be converted to the local time zone [ID_33849]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+From now on, the time of history sets will always be converted to the local time zone.
+
+#### Alarm Console - Proactive cap detection: Reduction of false positive matches [ID_33871]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When trend data is often getting close to the low or high value of a data range, this data range value will no longer be considered as a critical data boundary. This will reduce the number of false positive matches.
 
 #### GQI: Table columns of type 'decimal' can now also be used when filtering or aggregating data [ID_33927]
 
@@ -7486,6 +7497,16 @@ For more information, see [DataMiner Dojo](https://community.dataminer.services/
 
 When an error occurs in SLScripting, from now on, a new SLScripting instance will be started and all QActions will be reloaded.
 
+#### Alarm Console: A run-time error will now appear when the Resource Manager failed to initialize [ID_34024]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+From now on, the following run-time error will appear in the Alarm Console when the Resource Manager failed to initialized.
+
+```txt
+An unexpected exception has occurred while initializing Resource Manager. Please check the SLResourceManager logging for more information.
+```
+
 #### Parameter changes will now only be pushed from SLProtocol to SLElement when needed [ID_34047]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
@@ -7517,6 +7538,12 @@ Because of a number of enhancements, overall performance has increased when retr
 When, in the Dashboards app, you switched to edit mode, all columns of all GQI queries on the dashboard in question would be retrieved. From now, only when you open a specific query on the dashboard you are editing will the columns of that specific query be retrieved.
 
 ### Fixes
+
+#### SLAnalytics - Pattern matching: No 'suggestion event' type alarm would be triggered in case of DVE elements [ID_32671]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.5 -->
+
+From DataMiner 10.0.13 onwards, you can activate alarm monitoring of trend patterns, so that a "suggestion event" type alarm is triggered whenever a specific pattern is detected. In case of dynamic virtual elements, in some cases, no "suggestion event" type alarm would be triggered.
 
 #### SLLogCollector would become unresponsive when the name of the process or the path where the files had to be stored contained spaces [ID_33493]
 
@@ -7602,6 +7629,14 @@ When the element debug log level was equal to or higher than 1, an error could o
 
 When a Visual Overview component was loading, up to now, a large loading message was displayed on top of the component. From now on, when a Visual Overview component is loading, a loading bar will appear at the top of the component instead.
 
+#### Alarm Console would incorrectly keep loading while the tickets linked to the alarms were being loaded [ID_33847]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you open DataMiner Cube, it will load the alarms and try to link the existing tickets to them so it can show the ticket information in the Alarm Console.
+
+While this process was ongoing, in some rare cases, the Alarm Console would incorrectly keep on loading. 
+
 #### Dashboards app - Service definition component: Function nodes not displaying number of Process Automation tokens in queue or in progress [ID_33848]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
@@ -7617,6 +7652,26 @@ When you replicated an element with SNMPv3 connections, the SNMPv3 credentials o
 ```txt
 Load Element Failed: Error parsing SNMPv3 password for element: <element name>
 ```
+
+#### Alarm Console: Problem when loading [ID_33860]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In some cases, an exception could be thrown while the Alarm Console was loading.
+
+#### Alarm Console: Cube could become unresponsive when a large number of alarms were being added and removed in an alarm tab of type 'sliding window' [ID_33870]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When, in an alarm tab of type "sliding window", a large number of alarms were being added and removed, in some cases, DataMiner Cube could become unresponsive.
+
+#### System Center: Element counter on Agents > Status tab would not be set to 0 when removing all elements from a DMA [ID_33885]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you go to *System Center > Agents > Status*, the *Elements* column shows you how many elements are being hosted by each agent in the DMS.
+
+When, on a particular agent, you removed all elements, the number of elements of that agent would incorrectly not be set to 0. Instead, it would be set to the last-known number of elements on that agent before the element were removed.
 
 #### SLProtocol could leak memory when the NT_UPDATE_PORTS_XML command was sent [ID_33891]
 
@@ -7640,6 +7695,54 @@ When an alarm of one the following types was generated, in some cases, that alar
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 In some cases, SLSNMPManager could throw a StackOverflow exception while trying to resolve the next Request ID.
+
+#### Spectrum analysis: Recording icon would no longer be displayed while making a spectrum recording [ID_33904]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+While making a spectrum recording, in some cases, the recording icon would no longer be displayed.
+
+#### Visual Overview: Wait cursor would still be displayed after the scripts had already finished [ID_33911]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When, in Visual Overview, you clicked a shape that executed two Automation scripts, the cursor would incorrectly still be displayed as a wait cursor after the two scripts had already finished.
+
+#### Spectrum analysis: Issues when playing a spectrum recording [ID_33918]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When a spectrum recording was being played, the following issues could occur:
+
+- The *Forward* and *Backward* buttons would not work after starting and pausing the recording.
+- When you adapted the speed of the recording, the new speed would incorrectly only be applied to the next frame and not to the current frame. 
+- When the recording was being played, the slider could incorrectly not be used.
+
+#### Problems when exporting tables with an IncludedPids option or with a ClientSideRowFilter [ID_33934]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In some cases, tables that had the *IncludedPids* option defined would have their data exported to a CSV file incorrectly.
+
+Also, when a table to which a ClientSideRowFilter was applied was exported to a CSV file, up to now, that filter would not be taken into account.
+
+#### Spectrum analysis: Maximum, minimum and average trace would disappear after skipping backward when playing a spectrum recording [ID_33942]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you play a spectrum recording, you can pause the playback and use controls to skip forward or backward. In some cases, after skipping backward, the maximum, minimum and average trace would incorrectly disappear.
+
+#### Alarm Console: Column list not shown when hovering over the 'Add/Remove column' menu command [ID_33967]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you right-clicked a column header in an alarm tab and hovered over the *Add/Remove column* command, in some cases, the column list would incorrectly not be shown if, previously, you had right-clicked the header of the focus column or a header of an action column.
+
+#### Data Display : Update of parameter unit would not be reflected in the UI when the element card was open [ID_34007]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g. via an Automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
 
 #### An alarm property with a name identical to that of an element, service of view property would incorrectly get duplicated when the element with that alarm property was restarted [ID_34021]
 
@@ -7687,4 +7790,3 @@ When a stopped element was deleted, logger tables associated with that element w
 In some cases, an exception could be thrown when removing a query that was used as "start from" query by another query.
 
 From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query. 
-

@@ -10811,6 +10811,12 @@ In an HTTP session request, the order of the parameters will now always be ident
 
 When a version of a DVE protocol with function DVE protocols is deleted from the system while functions are active, from now on, the function DVE protocol versions associated with those active functions will also be removed from the system.
 
+#### Alarm Console: Time of history sets will now always be converted to the local time zone [ID_33849]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+From now on, the time of history sets will always be converted to the local time zone.
+
 #### SLLogCollector: Enhanced processing of SLProtocol memory dumps [ID_33932]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
@@ -10822,6 +10828,16 @@ Because of a number of enhancements, SLLogCollector is now better able to collec
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 When an error occurs in SLScripting, from now on, a new SLScripting instance will be started and all QActions will be reloaded.
+
+#### Alarm Console: A run-time error will now appear when the Resource Manager failed to initialize [ID_34024]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+From now on, the following run-time error will appear in the Alarm Console when the Resource Manager failed to initialized.
+
+```txt
+An unexpected exception has occurred while initializing Resource Manager. Please check the SLResourceManager logging for more information.
+```
 
 #### Parameter changes will now only be pushed from SLProtocol to SLElement when needed [ID_34047]
 
@@ -10837,11 +10853,23 @@ In order to prevent SLPort from running out of memory, from now on, the size of 
 
 ### Fixes
 
+#### SLAnalytics - Pattern matching: No 'suggestion event' type alarm would be triggered in case of DVE elements [ID_32671]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.5 -->
+
+From DataMiner 10.0.13 onwards, you can activate alarm monitoring of trend patterns, so that a "suggestion event" type alarm is triggered whenever a specific pattern is detected. In case of dynamic virtual elements, in some cases, no "suggestion event" type alarm would be triggered.
+
 #### SLLogCollector would become unresponsive when the name of the process or the path where the files had to be stored contained spaces [ID_33493]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 While collecting log information, SLLogCollector would become unresponsive when the name of the process or the path where the collected files had to be stored contained spaces.
+
+#### Trending: Creation, update and deletion of a trend pattern would not be communicated to the other DataMiner Agents in the DMS [ID_33624]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU5] - Feature Release Version 10.2.8 -->
+
+When you created, updated or deleted a tag, up to now, this would incorrectly not be communicated to the other DataMiner Agents in the DMS.
 
 #### Monitoring app: Trend graph of table column parameter not displayed when table row index contained forward slash [ID_33661]
 
@@ -10861,6 +10889,20 @@ SLProtocol would leak memory each time a parameter of a replicated element was u
 
 When the element debug log level was equal to or higher than 1, an error could occur in SLElement when resolving foreign keys took a long time. 
 
+#### Element card - REPORTS page: Masking and unmasking would not be shown correctly in the different graphs [ID_33832]
+
+<!-- Main Release Version 10.1.0 [CU18] - Feature Release Version TBD -->
+
+On the REPORTS page of an element card, masking and unmasking (i.e. state changes to "masked" and "unmasked") would not be shown correctly in the different graphs.
+
+#### Alarm Console would incorrectly keep loading while the tickets linked to the alarms were being loaded [ID_33847]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you open DataMiner Cube, it will load the alarms and try to link the existing tickets to them so it can show the ticket information in the Alarm Console.
+
+While this process was ongoing, in some rare cases, the Alarm Console would incorrectly keep on loading.
+
 #### SNMPv3 credentials would incorrectly be checked when replicating an element with SNMPv3 connections [ID_33859]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
@@ -10870,6 +10912,26 @@ When you replicated an element with SNMPv3 connections, the SNMPv3 credentials o
 ```txt
 Load Element Failed: Error parsing SNMPv3 password for element: <element name>
 ```
+
+#### Alarm Console: Problem when loading [ID_33860]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In some cases, an exception could be thrown while the Alarm Console was loading.
+
+#### Alarm Console: Cube could become unresponsive when a large number of alarms were being added and removed in an alarm tab of type 'sliding window' [ID_33870]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When, in an alarm tab of type "sliding window", a large number of alarms were being added and removed, in some cases, DataMiner Cube could become unresponsive.
+
+#### System Center: Element counter on Agents > Status tab would not be set to 0 when removing all elements from a DMA [ID_33885]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you go to *System Center > Agents > Status*, the *Elements* column shows you how many elements are being hosted by each agent in the DMS.
+
+When, on a particular agent, you removed all elements, the number of elements of that agent would incorrectly not be set to 0. Instead, it would be set to the last-known number of elements on that agent before the element were removed.
 
 #### SLProtocol could leak memory when the NT_UPDATE_PORTS_XML command was sent [ID_33891]
 
@@ -10893,6 +10955,18 @@ When an alarm of one the following types was generated, in some cases, that alar
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 In some cases, SLSNMPManager could throw a StackOverflow exception while trying to resolve the next Request ID.
+
+#### Alarm Console: Column list not shown when hovering over the 'Add/Remove column' menu command [ID_33967]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you right-clicked a column header in an alarm tab and hovered over the *Add/Remove column* command, in some cases, the column list would incorrectly not be shown if, previously, you had right-clicked the header of the focus column or a header of an action column.
+
+#### Data Display : Update of parameter unit would not be reflected in the UI when the element card was open [ID_34007]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When an element card was open on the DATA page, and a parameter on that page had its unit changed (e.g. via an Automation script), that change would incorrectly not be reflected in the UI. To see the new unit, you had to close the element card and re-open it.
 
 #### An alarm property with a name identical to that of an element, service of view property would incorrectly get duplicated when the element with that alarm property was restarted [ID_34021]
 
