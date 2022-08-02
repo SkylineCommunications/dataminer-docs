@@ -4,10 +4,10 @@ uid: Load_protocol_x_failed_with_y
 
 # Load protocol x failed with y. (hr = z)
 
-In an error message of this type
+In an error message of this type:
 
-- "x" is the protocol name,
-- "y" is a descriptive text with the reason of the failure, and
+- "x" is the protocol name.
+- "y" is a descriptive text with the reason of the failure.
 - "z" is a hexadecimal error code.
 
 ## Symptom

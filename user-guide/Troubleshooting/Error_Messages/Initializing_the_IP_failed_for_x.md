@@ -4,10 +4,10 @@ uid: Initializing_the_IP_failed_for_x
 
 # Initializing the IP failed for x. y (hr = z), please check the IP-settings
 
-In an error message of this type
+In an error message of this type:
 
-- "x" is the element name,
-- "y" is a descriptive text with the reason of the failure, and
+- "x" is the element name.
+- "y" is a descriptive text with the reason of the failure.
 - "z" is a hexadecimal error code.
 
 ## Symptom

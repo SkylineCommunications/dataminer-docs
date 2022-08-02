@@ -4,10 +4,10 @@ uid: Starting_the_derived_element_x_failed
 
 # Starting the DERIVED element x failed. y (hr = z)
 
-In an error message of this type
+In an error message of this type:
 
-- "x" is the element name,
-- "y" is a descriptive text with the reason of the failure, and
+- "x" is the element name.
+- "y" is a descriptive text with the reason of the failure.
 - "z" is a hexadecimal error code.
 
 ## Symptom
