@@ -13,13 +13,3 @@ These release notes contain all new features, enhancements, and fixes for the co
 > [!NOTE]
 > To get access to certain DataMiner features, such as suggestion events or the reports view in the Alarm Console, a Cassandra general database is required. This means that DataMiner Agents using a MySQL or Microsoft SQL Server general database need to migrate to Cassandra if you want to make use of these features.
 > For more information on the requirements for the migration and on how to migrate to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
-
-## DataMiner Feature Release track
-
-- [DataMiner 10.2.9 release notes](xref:10_2_9_General_RNs)
-- DataMiner 10.2.7 release notes: Coming soon!
-- Other release note documents will be added soon.
-
-## DataMiner Main Release track
-
-- Coming soon!
