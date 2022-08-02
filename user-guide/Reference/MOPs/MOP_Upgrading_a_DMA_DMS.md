@@ -40,11 +40,11 @@ The procedure below details how you can implement a DataMiner upgrade in an exis
 1. Check if any hotfixes need to be installed after the upgrade.
 1. Determine how much time will be required for the upgrade and make sure this time slot is available on the proposed date of the upgrade.
 
-    The following factors can influence the duration of the upgrade:
+   The following factors can influence the duration of the upgrade:
 
-    - A large version difference, e.g. an upgrade from 9.6 to 10.2 will take longer than an upgrade from 10.1 to 10.2.
-    - The startup time of the DataMiner Agents.
-    - Other dependencies, such as extra hotfixes that need to be deployed.
+   - A large version difference, e.g. an upgrade from 9.6 to 10.2 will take longer than an upgrade from 10.1 to 10.2.
+   - The startup time of the DataMiner Agents.
+   - Other dependencies, such as extra hotfixes that need to be deployed.
 
 1. Make sure a backup has been taken before the proposed time of the upgrade.
 
@@ -64,9 +64,9 @@ The procedure below details how you can implement a DataMiner upgrade in an exis
 1. Check the system health again.
 1. Upload the DataMiner upgrade package(s):
 
-    - If any hotfixes are required, upload these packages as well.
-    - To upgrade to a major DataMiner version that is several versions higher than the current version, upload a package for each major version change. For example, to upgrade from 9.6 to 10.2, you will first need to upgrade to 10.0, then to 10.1, and then to 10.2.
-    - For cumulative updates of a main release, if the update applies to the same main release, you can use the smaller cumulative update package. Otherwise, for example, to upgrade from 10.0 CU5 to 10.1 CU1, use the full upgrade package.
+   - If any hotfixes are required, upload these packages as well.
+   - To upgrade to a major DataMiner version that is several versions higher than the current version, upload a package for each major version change. For example, to upgrade from 9.6 to 10.2, you will first need to upgrade to 10.0, then to 10.1, and then to 10.2.
+   - For cumulative updates of a main release, if the update applies to the same main release, you can use the smaller cumulative update package. Otherwise, for example, to upgrade from 10.0 CU5 to 10.1 CU1, use the full upgrade package.
 
 ### Execute the DataMiner upgrade
 
@@ -82,10 +82,10 @@ The procedure below details how you can implement a DataMiner upgrade in an exis
 1. Open DataMiner Cube.
 1. Follow the upgrade procedure described in [Upgrading a DataMiner Agent in System Center](xref:Upgrading_a_DataMiner_Agent_in_System_Center), keeping the following things in mind:
 
-    - Make sure all Agents in the DataMiner System meet the minimum requirements before you upgrade (e.g. install a .NET Framework upgrade if necessary).
-    - If you are upgrading a DataMiner System that consists of **more than one Agent**, make sure the **All Agents in cluster** option is selected.
-    - If you are upgrading a DMA that is part of a **Failover** pair, check the *Advanced Failover* options and make sure the **Upgrade main and backup Agent simultaneously** option is selected. This is especially important if the upgrade is a major change, but it is also highly recommended otherwise.
-    - When you have selected the upgrade packages, **first click *Upload only*** and verify if the packages have been uploaded correctly. Only start the upgrade after you have successfully verified this.
+   - Make sure all Agents in the DataMiner System meet the minimum requirements before you upgrade (e.g. install a .NET Framework upgrade if necessary).
+   - If you are upgrading a DataMiner System that consists of **more than one Agent**, make sure the **All Agents in cluster** option is selected.
+   - If you are upgrading a DMA that is part of a **Failover** pair, check the *Advanced Failover* options and make sure the **Upgrade main and backup Agent simultaneously** option is selected. This is especially important if the upgrade is a major change, but it is also highly recommended otherwise.
+   - When you have selected the upgrade packages, **first click *Upload only*** and verify if the packages have been uploaded correctly. Only start the upgrade after you have successfully verified this.
 
 1. When the upgrade is ready, verify that each DMA in the DataMiner System is running and check the key functionalities identified during the [Establish the details for the upgrade](#establish-the-details-for-the-upgrade) step.
 

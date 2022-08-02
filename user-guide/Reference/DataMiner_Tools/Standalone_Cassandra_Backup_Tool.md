@@ -9,7 +9,7 @@ The *StandaloneCassandraBackup.exe* tool can be used by an administrator to take
 From DataMiner 10.1.8 onwards, this tool is available on each DMA server in the folder `C:\Skyline DataMiner\Tools`. As it only affects Cassandra files, it can be used on any DataMiner system regardless of version.
 
 > [!NOTE]
-> When running one of the below-mentioned commands against a Cassandra cluster or a remote single-node Cassandra, make sure the Cassandra nodetool is accessible remotely on all nodes. For more information, see [Making Cassandra nodetool accessible remotely](https://community.dataminer.services/documentation/making-cassandra-nodetool-accessible-remotely/).
+> When running one of the below-mentioned commands against a Cassandra cluster or a remote single-node Cassandra, make sure the Cassandra nodetool is accessible remotely on all nodes. For more information, see [Making Cassandra nodetool accessible remotely](xref:Making_Cassandra_nodetool_accessible_remotely).
 
 ## Commands
 

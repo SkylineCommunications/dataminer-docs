@@ -8,14 +8,13 @@ In case of a license (full or demo) for a DataMiner Agent that will be installed
 
 1. Prepare the server that will host the DataMiner Agent software.
 
-    > [!TIP]
-    > See also:
-    > [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/)
+   > [!TIP]
+   > See also: [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/)
 
-2. Provide Skyline with:
+1. Provide Skyline with:
 
-    - a remote connection to the server that allows file transfer.
+   - a remote connection to the server that allows file transfer.
 
-    - a set of logon credentials with Administrator rights.
+   - a set of logon credentials with Administrator rights.
 
-3. Skyline installs the DataMiner software and activates the license.
+1. Skyline installs the DataMiner software and activates the license.

@@ -126,7 +126,7 @@ To configure TLS encryption for inter-node communication:
 
 ## Updating Elasticsearch
 
-By default, DataMiner installs Elasticsearch 6.8.23. For more information about how you can upgrade your Elasticsearch version, refer to [Upgrading Elasticsearch](https://community.dataminer.services/documentation/upgrading-elasticsearch-from-one-minor-version-to-another/) on DataMiner Dojo.
+By default, DataMiner installs Elasticsearch 6.8.23. For more information about how you can upgrade your Elasticsearch version, refer to [Upgrading Elasticsearch from one minor version to another](xref:MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another).
 
 ## Updating Java
 

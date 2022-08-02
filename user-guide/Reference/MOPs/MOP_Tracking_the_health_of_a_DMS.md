@@ -17,56 +17,56 @@ Follow the steps below for each DMA in the DataMiner System.
 
 1. Create a new element representing the DMA, using the *Microsoft Platform* protocol.
 
-    For more information on how to create elements, see [Adding and deleting elements](xref:Adding_and_deleting_elements).
+   For more information on how to create elements, see [Adding and deleting elements](xref:Adding_and_deleting_elements).
 
 1. Make sure the *Poll Task Manager* parameter is enabled in the element and all parameters are polled.
 1. Make sure the *Auto Clear Task Manager* parameter is enabled.
 1. Assign an alarm template to the element to make sure alarm monitoring is enabled for the *Poll Task Manager* parameter.
 
-    For more information on alarm templates, see [Alarm templates](xref:Alarm_templates).
+   For more information on alarm templates, see [Alarm templates](xref:Alarm_templates).
 
 1. Assign a trend template to the element with average trending enabled for the parameters listed below. Create the trend template if it does not exist yet. Two standard templates are available for this, which can be downloaded [below](#standard-trend-templates).
 
-    For more information on trend templates, see [Trend templates](xref:Trend_templates).
+   For more information on trend templates, see [Trend templates](xref:Trend_templates).
 
-    Average trending must be enabled for the following parameters:
+   Average trending must be enabled for the following parameters:
 
-    - In the *Performance* section:
-    
-        - *Available Physical Memory*
-        - *Commit Charge Available*
-        - *Commit Charge Total*
-        - *Page File Usage*
-        - *Pages per Second*
-        - *Physical Memory Usage*
-        - *Total Handles*
-        - *Total Processor Load*
-        - *Total Threads*
+   - In the *Performance* section:
 
-    - In the *Task Manager* section:
+     - *Available Physical Memory*
+     - *Commit Charge Available*
+     - *Commit Charge Total*
+     - *Page File Usage*
+     - *Pages per Second*
+     - *Physical Memory Usage*
+     - *Total Handles*
+     - *Total Processor Load*
+     - *Total Threads*
 
-        - *CPU DataMinerCube* or *CPU PresentationHost* (depending on whether the Cube desktop app or browser app is used)
-        - *CPU SL\**
-        - *CPU Prunsrv*, *CPU mysql*, *CPU mssqlserver* or *CPU elasticsearch* (depending on which database or databases are used by the DMA)
-        - *CPU DataMiner*
-        - *CPU NATS*
-        - *Handles SL\**
-        - *Threads SL\**
-        - *VM Size DataMinerCube* or *VM Size PresentationHost* (depending on whether the Cube desktop app or browser app is used)
-        - *VM Size Prunsrv*, *VM Size mysql*, *VM Size mssqlserver* or *VM Size elasticsearch* (depending on which database or databases are used by the DMA)
-        - *VM Size SL\**
-        - *VM Size DataMiner*
-        - *VM Size NATS*
+   - In the *Task Manager* section:
 
-    - In the *Network Interface* section:
-    
-        - *Total Speed [Network Adapter Table]*
+     - *CPU DataMinerCube* or *CPU PresentationHost* (depending on whether the Cube desktop app or browser app is used)
+     - *CPU SL\**
+     - *CPU Prunsrv*, *CPU mysql*, *CPU mssqlserver* or *CPU elasticsearch* (depending on which database or databases are used by the DMA)
+     - *CPU DataMiner*
+     - *CPU NATS*
+     - *Handles SL\**
+     - *Threads SL\**
+     - *VM Size DataMinerCube* or *VM Size PresentationHost* (depending on whether the Cube desktop app or browser app is used)
+     - *VM Size Prunsrv*, *VM Size mysql*, *VM Size mssqlserver* or *VM Size elasticsearch* (depending on which database or databases are used by the DMA)
+     - *VM Size SL\**
+     - *VM Size DataMiner*
+     - *VM Size NATS*
 
-    - In the *Disk Info* section:
+   - In the *Network Interface* section:
 
-        - *Avg. Disc sec/Transfer*
-        - *Free Space*
-        - *Percentage Busy Time*
+     - *Total Speed [Network Adapter Table]*
+
+   - In the *Disk Info* section:
+
+     - *Avg. Disc sec/Transfer*
+     - *Free Space*
+     - *Percentage Busy Time*
 
 ## Time estimate
 

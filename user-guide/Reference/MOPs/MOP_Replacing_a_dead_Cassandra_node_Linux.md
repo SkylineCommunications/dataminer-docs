@@ -77,11 +77,11 @@ After you have updated the configuration, restart the Cassandra service:
 
 1. In the *Cassandra.yaml* configuration file, update the following fields:
 
-- Cluster_name: Must be set to the same value as other nodes in the cluster. Example: `cluster_name: 'DMS'`
-- Listen_addres: The server host IP. Example: `listen_address: 192.168.1.204`
-- RPC_Address: The server host IP. Example: `rpc_address: 192.168.1.204`
-- Seed list: Must be set to the same value as is configured on the other nodes in the cluster. Example: `seeds: "192.168.1.201,192.168.1.202"`
-- auto_bootstrap: If this setting exists and is set to false, set it to true: `auto_bootstrap: true`
+   - Cluster_name: Must be set to the same value as other nodes in the cluster. Example: `cluster_name: 'DMS'`
+   - Listen_addres: The server host IP. Example: `listen_address: 192.168.1.204`
+   - RPC_Address: The server host IP. Example: `rpc_address: 192.168.1.204`
+   - Seed list: Must be set to the same value as is configured on the other nodes in the cluster. Example: `seeds: "192.168.1.201,192.168.1.202"`
+   - auto_bootstrap: If this setting exists and is set to false, set it to true: `auto_bootstrap: true`
 
 ### Start the new node with the replace_address option
 
@@ -93,7 +93,7 @@ JVM_OPTS="$JVM_OPTS -Dcassandra.replace_address_first_boot={ip of dead node}"
 
 For example:
 
-![](~/user-guide/images/ReplaceDeadNode2.png)
+![Example of how to start the new node](~/user-guide/images/ReplaceDeadNode2.png)
 
 When this is done, start the Cassandra service, using the following command:
 
@@ -113,7 +113,7 @@ Confirm that the new node has replaced the dead node using the following command
 nodetool status
 ```
 
-![](~/user-guide/images/ReplaceDeadNode3.png)
+![Example of how to confirm that the new node has replaced the dead node](~/user-guide/images/ReplaceDeadNode3.png)
 
 After the node bootstraps, remove the *replace-address* parameter from the *Cassandra-env.sh* file.
 
@@ -127,7 +127,9 @@ In this case, use *nodetool* to run a repair. For more information, see <https:/
 
 In DataMiner Cube, go to *System Center > Database*. In the *DB server* box, replace the IP address of the dead node with the IP address of the new node.
 
-![](~/user-guide/images/ReplaceDeadNode4.png)
+For example, in DataMiner 10.2.0:
+
+![Example of System Center configuration](~/user-guide/images/ReplaceDeadNode4.png)
 
 ## Time estimate
 

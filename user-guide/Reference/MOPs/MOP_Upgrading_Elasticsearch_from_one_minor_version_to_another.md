@@ -48,12 +48,12 @@ After the necessary backup copies have been taken, as mentioned above, proceed a
 
 1. Stop the Elasticsearch service.
 
-    If the node is running on the same server as DataMiner, you may need to disable the service instead, as DataMiner will otherwise attempt to restart it.
+   If the node is running on the same server as DataMiner, you may need to disable the service instead, as DataMiner will otherwise attempt to restart it.
 
 1. Delete the contents of `C:\Program Files\Elasticsearch`, but make sure to **keep the config, kibana and java folders** if these are present.
 
-    > [!CAUTION]
-    > Make sure that the `path.data` folder does not get removed. This folder is defined in the *elasticsearch.yml* file.
+   > [!CAUTION]
+   > Make sure that the `path.data` folder does not get removed. This folder is defined in the *elasticsearch.yml* file.
 
 1. Place the new, unzipped binaries in the `C:\Program files\Elasticsearch` folder. You should now again have a `C:\Program files\Elasticsearch\bin` subfolder.
 1. Restore the copy of the config folder and its contents to `C:\Program Files\Elasticsearch\config`. You can overwrite all the new files with your old config folder and files.
