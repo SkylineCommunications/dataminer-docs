@@ -516,7 +516,6 @@
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
-      topicUID: Connectors_howto
       items:
       - name: How to aggregate alarm severities
         topicUID: How_to_aggregate_alarm_severities
@@ -618,7 +617,6 @@
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: How-tos
-      topicUID: Automation_howto
       items:
       - name: How to make your Automation scripts debug ready
         topicUID: How_to_make_your_automation_scripts_debug_ready

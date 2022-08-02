@@ -6,7 +6,7 @@ uid: How_to_integrate_the_HTTP_sessions_table_in_a_connector
 
 The HTTP Sessions table is a tool that has been integrated in multiple recent HTTP connectors. The main purpose of this table is to show the real-time HTTP communication between DataMiner and a data source. Each row contains the information of a request and the corresponding response.
 
-![](~/develop/images/HTTPsessions1-1024x444.png)
+![HTTP Sessions table in DataMiner Cube](~/develop/images/HTTPsessions1-1024x444.png)
 
 ## Benefits of the HTTP Sessions table
 
@@ -20,7 +20,7 @@ The functionality of the tool is similar to that of [Stream Viewer](xref:Connect
 
 - **Request duration**: The HTTP Sessions table calculates the timespan of each request, which makes it easier to determine timer periods during development. You can see how much time on average the groups in a timer need to execute their content, and adjust the timer period accordingly. However, note that the request time is logged just before the group is put on the stack, and the response time is logged just after the response is received. The timespan is therefore not completely accurate, and the real timespan will likely be smaller.
 
-![](~/develop/images/HTTPsessions3.png)
+![Stream Viewer example](~/develop/images/HTTPsessions3.png)
 
 ### Data loss information
 
@@ -28,7 +28,7 @@ Another benefit of the HTTP Sessions table is the **extra information it provide
 
 Imagine, for example, that a data source is unable to respond to certain requests but responds at least once within the timeout period. Every request initially succeeds after the element starts up, so all tables and parameters are filled in. However, at some point, something goes wrong with the data source, e.g. it is unable to handle a certain request, or it receives too many requests. Then it is possible that half of the requested data is lost while the element will still not be in timeout. Users will not notice the data loss, because all data seems to be filled in as expected. With the HTTP Sessions table, the data loss will become obvious.
 
-![](~/develop/images/HTTPsessions4.png)
+![HTTP Sessions table example](~/develop/images/HTTPsessions4.png)
 
 The table in the image above shows an example of data loss where the element does not go into timeout. For requests 46 to 61, you can see multiple responses with the status "Too Many Requests". This means the data source responded but did not send the expected data. 7 out of 16 requests have failed, which means 43.8% of the data is lost. Without the HTTP Sessions table, this data loss would go unnoticed.
 
@@ -92,7 +92,7 @@ The following configuration parameters should be made available:
 - **HTTP Sessions State**: Enables or disables the logging of the communication in the table.
 - **HTTP Sessions Max Count**: Determines the maximum number of entries in the table.
 
-![](~/develop/images/HTTPsessions2.png)
+![Configuration parameters for HTTP Sessions table](~/develop/images/HTTPsessions2.png)
 
 You can also add other configuration parameters to further customize the HTTP Session table.
 

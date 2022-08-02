@@ -26,14 +26,14 @@ Definition of the trigger:
 
 ```xml
 <Trigger id="13">
-	<Name>onBtnClickReconnect</Name>
-	<On id="13">parameter</On>
-	<Time>change</Time>
-	<Type>action</Type>
-	<Content>
-		<!--Run reconnect Flow-->
-		<Id>50</Id>
-	</Content>
+   <Name>onBtnClickReconnect</Name>
+   <On id="13">parameter</On>
+   <Time>change</Time>
+   <Type>action</Type>
+   <Content>
+      <!--Run reconnect Flow-->
+      <Id>50</Id>
+   </Content>
 </Trigger>
 ```
 
@@ -41,9 +41,9 @@ Definition of the action that will initiate the flow in the group with ID 50:
 
 ```xml
 <Action id="50">
-	<Name>runTelnetLogin</Name>
-	<On id="50">group</On>
-	<Type>execute</Type>
+   <Name>runTelnetLogin</Name>
+   <On id="50">group</On>
+   <Type>execute</Type>
 </Action>
 ```
 
@@ -69,34 +69,34 @@ Trigger ID 1000 will run for all the responses except the responses with ID 1 an
 
 ```xml
 <Trigger id="1000">
-	<Name>afterEachResponse</Name>
-	<On id="each">response</On>
-	<Time>after</Time>
-	<Type>action</Type>
-	<Content>
-		<!--Run Common flow-->
-		<Id>1000</Id>
-	</Content>
+   <Name>afterEachResponse</Name>
+   <On id="each">response</On>
+   <Time>after</Time>
+   <Type>action</Type>
+   <Content>
+      <!--Run Common flow-->
+      <Id>1000</Id>
+   </Content>
 </Trigger>
 <Trigger id="1001">
-	<Name>afterUnknownCommandResponse</Name>
-	<On id="1">response</On>
-	<Time>after</Time>
-	<Type>action</Type>
-	<Content>
-		<!--Run Exception flow-->
-		<Id>1001</Id>
-	</Content>
+   <Name>afterUnknownCommandResponse</Name>
+   <On id="1">response</On>
+   <Time>after</Time>
+   <Type>action</Type>
+   <Content>
+      <!--Run Exception flow-->
+      <Id>1001</Id>
+   </Content>
 </Trigger>
 <Trigger id="1002">
-	<Name>afterBadFormatResponse</Name>
-	<On id="2">response</On>
-	<Time>after</Time>
-	<Type>action</Type>
-	<Content>
-		<!--Run Exception flow-->
-		<Id>1001</Id>
-	</Content>
+   <Name>afterBadFormatResponse</Name>
+   <On id="2">response</On>
+   <Time>after</Time>
+   <Type>action</Type>
+   <Content>
+      <!--Run Exception flow-->
+      <Id>1001</Id>
+   </Content>
 </Trigger>
 ```
 
@@ -104,13 +104,13 @@ A trigger using different requirements does not count as the exception on the *o
 
 ```xml
 <Trigger id="2010">
-	<Name>beforeTemperatureResponse</Name>
-	<On id="10">response</On>
-	<Time>before</Time>
-	<Type>action</Type>
-	<Content>
-		<!--Do something-->
-		<Id>2010</Id>
-	</Content>
+   <Name>beforeTemperatureResponse</Name>
+   <On id="10">response</On>
+   <Time>before</Time>
+   <Type>action</Type>
+   <Content>
+      <!--Do something-->
+      <Id>2010</Id>
+   </Content>
 </Trigger>
 ```

@@ -15,8 +15,8 @@ You will need the following software for the procedures in this article:
 - The current [minimum supported version of DataMiner](https://community.dataminer.services/downloads/) or a later version.
 - Microsoft Visual Studio 2017 or later.
 
-> [!NOTE]
-> Make sure to have the **Windows Communication Foundation Individual Component** Installed. See [Modify Visual Studio workloads, components, and language packs](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019).
+  > [!NOTE]
+  > Make sure to have the **Windows Communication Foundation Individual Component** Installed. See [Modify Visual Studio workloads, components, and language packs](https://docs.microsoft.com/en-us/visualstudio/install/modify-visual-studio?view=vs-2019).
 
 ## Handling data formats
 
@@ -544,7 +544,7 @@ If an API replies to your request with a parameter named *Instance-Id*, you will
     [System.Xml.Serialization.XmlElementAttribute("Instance-Id")]
     public string InstanceId { get; set; }
     ```
- 
+
 The attribute at the top is consumed by the respective serializer and parses a parameter named *Instance-Id* to the C# property named *InstanceId*.
 
 ## Using Serialization settings

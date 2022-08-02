@@ -55,15 +55,15 @@ For more information on the threadpool options, see [Timer options](xref:LogicTi
 
 When the timer is configured correctly, the statistics should be as low as possible, no threads should be in a waiting state (queued), and the average and max duration of a thread execution should be kept as low as possible.
 
-![](~/develop/images/MultiThreadedHTTPStatistics1.png)
+![Example of threadpool statistics](~/develop/images/MultiThreadedHTTPStatistics1.png)
 
 When the threadpool is defined too low, this can cause threads to be queued (i.e. put in a waiting state).
 
-![](~/develop/images/MultiThreadedHTTPStatistics2.png)
+![Example of threadpool statistics with queued threads](~/develop/images/MultiThreadedHTTPStatistics2.png)
 
 In this example, a multi-threaded HTTP timer is used. If a complex device is polled, the responses can be quite big. This could cause huge spikes in memory and CPU usage every time the threads are launched to poll 20 rows, because all of them are currently launched simultaneously.
 
-![](~/develop/images/multi-threaded_timer_graph.png)<br>
+![Example of CPU spikes when threads are launched simultaneously](~/develop/images/multi-threaded_timer_graph.png)<br>
 *Example of CPU spikes when threads are launched simultaneously*
 
 To overcome this, you can make use of the `pollingrate` attribute in the options tag. See the [introduction to multi-threaded timers](xref:AdvancedMultiThreadedTimersIntroduction).
@@ -111,17 +111,17 @@ Below you can find an example of an incorrect and correct configuration.
 
 Using an identical IP/port combination can cause excessive strain on a single SLPort process.
 
-![](~/develop/images/MultiThreadedIncorrect.png)
+![Example of incorrect configuration in DataMiner](~/develop/images/MultiThreadedIncorrect.png)
 
-![](~/develop/images/MultiThreadedIncorrect2.png)
+![Result of incorrect configuration](~/develop/images/MultiThreadedIncorrect2.png)
 
 ### Example of a correct configuration
 
 Using a unique IP/port combination will ensure that the load is spread equally over all SLPort processes.
 
-![](~/develop/images/MultiThreadedCorrect.png)
+![Example of correct configuration in DataMiner](~/develop/images/MultiThreadedCorrect.png)
 
-![](~/develop/images/MultiThreadedCorrect2.png)
+![Result of correct configuration](~/develop/images/MultiThreadedCorrect2.png)
 
 ### SLPortSplit logging
 
@@ -133,4 +133,4 @@ If you want to check to which SLPort process a connection is assigned, you can c
 
 Example based on the configurations used above:
 
-![](~/develop/images/SLPortSplitExample.png)
+![Example of SLPortSplit logging](~/develop/images/SLPortSplitExample.png)

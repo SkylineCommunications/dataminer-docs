@@ -74,8 +74,8 @@ In HTTP connectors, HTTP sessions must be defined using `Session` tags. These ca
 - A **request** is defined by the HTTP verb and a URL. The URL may be defined text-based using the `url` attribute or, alternatively, through a parameter value using the `pid` attribute. Note that you only need to define the last part of the URL, as DataMiner automatically concatenates the beginning of the URL with the segment `http://<Element IP Address>/`, where `<Element IP Address>` represents the element IP address configuration.
 - Optionally, a request can contain:
 
-    - Parameters: Mostly used for query data.
-    - Headers: To further decorate the request with additional data.
+  - Parameters: Mostly used for query data.
+  - Headers: To further decorate the request with additional data.
 
 - The `Response` tag indicates where the received HTTP data, namely the HTTP status line and the response content, should be stored for further processing by QActions.
 
@@ -273,7 +273,7 @@ In the DataMiner Cube Surveyor, navigate to the view where you want to add the e
 
 If no default port settings were specified, make sure to set Type of port to TCP/IP, and specify the correct IP address and IP port.
 
-![](~/develop/images/HTTP_TypeOfPort.png)
+![Port configuration in DataMiner Cube](~/develop/images/HTTP_TypeOfPort.png)
 
 ### Step 7 – Observing requests
 
@@ -281,15 +281,15 @@ When developing an HTTP connector, make sure to use the Stream Viewer applicatio
 
 Stream Viewer is an application that is built into DataMiner Cube and that allows you to immediately check the result of an HTTP request/response pair. To access Stream Viewer, in the DataMiner Cube Surveyor, right-click an element and select *View > Stream Viewer*.
 
-![](~/develop/images/StreamViewer.png)
+![Stream Viewer in Cube menu](~/develop/images/StreamViewer.png)
 
 When you have defined an access key in our example element and clicked the *Send Request* button, a request should be sent, the *Status Code* parameter should be automatically populated with the respective HTTP status code, and the *Response Content* parameter should show the actual HTTP response content in JSON format.
 
-![](~/develop/images/HTTP_SendRequest.png)
+![Send Request button in Cube](~/develop/images/HTTP_SendRequest.png)
 
 If you open Stream Viewer for the example element, you will see a window like illustrated below, which will immediately start capturing all groups that are being sent and received from the element.
 
-![](~/develop/images/StreamViewer_Example.png)
+![Stream Viewer example](~/develop/images/StreamViewer_Example.png)
 
 The image above shows an example of a Stream Viewer capture for Group 1. On the left-hand side, all connections and groups are identified. This provides confirmation that a group was executed. In this case, since our group contains an HTTP session, it confirms that the HTTP request was sent. On the right-hand side, you can see the HTTP response with the status code and content. You can see that we've received an HTTP/1.1 200 OK with a reply bearing JSON content.
 

@@ -45,7 +45,7 @@ Using the built-in HTTP communication of DataMiner, you can easily create a driv
 
 ![RabbitMQ node](~/develop/images/rabbitmq2-1024x779.png)
 
-You can even use the *node edge* graph component in the DataMiner Dashboards app to generate a nice visual overview of the system:
+You can even use a [node edge graph](xref:DashboardNodeEdgeGraph) component in the DataMiner Dashboards app to generate a nice overview of the system:
 
 ![Node edge graph](~/develop/images/rabbitmq_node_edge.png)
 

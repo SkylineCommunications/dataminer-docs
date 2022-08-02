@@ -18,13 +18,13 @@ Basic knowledge of connectors.
 
 The use case described below concerns a data source requiring a fast response to acknowledge the received data. The acknowledgment is needed to keep the data source from sending retries. An acknowledgment must happen within 200 ms after the data was sent. Parsing all the received data packets can take up to 20 seconds.
 
-![](~/develop/images/HOWTO_WithMultipleProtocolThreads.svg)
+![Graphic overview with multiple protocol threads](~/develop/images/HOWTO_WithMultipleProtocolThreads.svg)
 
-![](~/develop/images/HOWTO_WithoutMultipleProtocolThreads.svg)
+![Graphic overview without multiple protocol threads](~/develop/images/HOWTO_WithoutMultipleProtocolThreads.svg)
 
 The image below illustrates how this is implemented in the connector. The main thread is shown on the left and the second thread is shown on the right.
 
-![](~/develop/images/HOWTO_MultiThreadedProtocolFlowChart.svg)
+![Implementation in the connector](~/develop/images/HOWTO_MultiThreadedProtocolFlowChart.svg)
 
 The element receives all the communication in parameter 1999. QAction 1999 is triggered when new data is received. The QAction reads the data, parses the header and makes the response. When the response is made, the correct parameters are set. After that, a checktrigger is executed to send the acknowledge. All the data packets in the response are added to the queue as a byte array.
 

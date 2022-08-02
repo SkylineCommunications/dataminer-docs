@@ -60,6 +60,7 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - In some cases, data received via a smart-serial connection is not delimited by a specific header and trailer. The data source can send all data as one package, without specific delimiters. In that case, we must define a response with a parameter of type "next param" to capture all data (and process it later on in e.g. a QAction).
 > - If a serial response does not have a connection ID specified, different issues can occur. When a DataMiner Agent receives smart-serial data, in some cases, it could find a match in the serial response (in case there is a serial response with header/trailer information in the smart serial data). Also, data received via the serial connection could be captured by a smart-serial response since a response with only one "next param" parameter can match any kind of incoming data. When that happens, users checking the stream viewer or the element log will notice that, although data is being received from the data source, the parameters are not updated.
 
