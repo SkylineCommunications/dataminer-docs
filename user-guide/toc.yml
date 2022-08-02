@@ -2730,6 +2730,37 @@
           topicUID: Standalone_Cassandra_Backup_Tool
         - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
+    - name: Methods of Procedure
+      topicUID: mops
+      items:
+        - name: Changing the default password for Cassandra
+          topicUID: MOP_Changing_the_default_password_for_Cassandra
+        - name: Changing the password for Elasticsearch
+          topicUID: MOP_Changing_the_password_for_Elasticsearch
+        - name: Checking the required open ports in a DMS
+          topicUID: MOP_Checking_the_required_open_ports_in_a_DMS
+        - name: DataMiner Agent sanity check
+          topicUID: MOP_DataMiner_Agent_sanity_check
+        - name: Downgrading a DMS
+          topicUID: MOP_Downgrading_a_DMS
+        - name: Implementing connection strings in a DataMiner System
+          topicUID: MOP_Implementing_connection_strings_in_a_DMS
+        - name: Migrating a Failover pair to new hardware
+          topicUID: MOP_Migrating_a_Failover_pair_to_new_hardware
+        - name: Replacing a dead Cassandra node (Linux)
+          topicUID: MOP_Replacing_a_dead_Cassandra_node_Linux
+        - name: Restoring a MySQL table structure or table data
+          topicUID: MOP_Restoring_a_MySQL_table_structure_or_table_data
+        - name: Restoring a single table in a MySQL database
+          topicUID: MOP_Restoring_a_single_table_in_a_MySQL_database
+        - name: Taking a backup using a symbolic link to another drive
+          topicUID: MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive
+        - name: Tracking the health of a DataMiner System
+          topicUID: MOP_Tracking_the_health_of_a_DMS
+        - name: Upgrading a DMA/DMS
+          topicUID: MOP_Upgrading_a_DMA_DMS
+        - name: Upgrading Elasticsearch from one minor version to another
+          topicUID: MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another
     - name: Naming of elements, services, views, etc.
       topicUid: NamingConventions
       items:
