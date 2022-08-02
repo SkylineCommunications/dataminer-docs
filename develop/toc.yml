@@ -515,6 +515,36 @@
           topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
+    - name: How-tos
+      items:
+      - name: How to aggregate alarm severities
+        topicUID: How_to_aggregate_alarm_severities
+      - name: How to configure multi-threaded timers
+        topicUID: How_to_configure_multi_threaded_timers
+      - name: How to create an HTTP connector (CoinMarketCap use case)
+        topicUID: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
+      - name: How to define serial and smart-serial responses in one and the same protocol
+        topicUID: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
+      - name: How to handle XML and JSON data in QActions
+        topicUID: How_to_handle_XML_and_JSON_data_in_QActions
+      - name: How to implement the Subtable feature
+        topicUID: How_to_implement_the_subtable_feature
+      - name: How to integrate RabbitMQ with DataMiner
+        topicUID: How_to_integrate_RabbitMQ_with_DataMiner
+      - name: How to integrate the HTTP Sessions Table in a connector
+        topicUID: How_to_integrate_the_HTTP_sessions_table_in_a_connector
+      - name: How to retrieve protocol pending calls
+        topicUID: How_to_retrieve_protocol_pending_calls
+      - name: How to set up an SSH connection within a protocol
+        topicUID: How_to_set_up_an_SSH_connection_within_a_protocol
+      - name: How to use history sets on a protocol parameter
+        topicUID: How_to_use_history_sets_on_a_protocol_parameter
+      - name: How to use multiple protocol threads to split communication and parsing
+        topicUID: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
+      - name: How to use 'on each' in a protocol trigger
+        topicUID: How_to_use_on_each_in_a_protocol_trigger
+      - name: How to use the element log in connector integrations
+        topicUID: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
       items:
       - name: Investigating a protocol thread RTE
@@ -586,6 +616,10 @@
         topicUid: AutomationActionUi
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
+    - name: How-tos
+      items:
+      - name: How to make your Automation scripts debug ready
+        topicUID: How_to_make_your_automation_scripts_debug_ready
   - name: Class Library
     items:
     - name: Introduction
@@ -870,7 +904,7 @@
       - name: NT_SET_BITRATE_DELTA_INDEX_TRACKING
         topicUid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
       - name: NT_ADD_VIEWS
-        topîcUid: NT_ADD_VIEWS
+        topicUid: NT_ADD_VIEWS
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
