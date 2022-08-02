@@ -1,4 +1,8 @@
-# Feature release 10.2.1
+---
+uid: General_Feature_Release_10.2.1
+---
+
+# General Feature Release 10.2.1
 
 ## New features
 
@@ -9,7 +13,6 @@
 From now on, Automatic Incident Tracking will be enabled by default
 
 - on newly installed systems, and
-
 - on systems that upgrade from a version on which Automatic Incident Tracking was not yet available (i.e. versions older than version 10.0.11).
 
 > [!NOTE]
@@ -48,7 +51,7 @@ From now on, you will also be able to enable or disable this setting on system l
 
 #### Automatic Incident Tracking: New setting “Maximum group events rate” \[ID_31203\]
 
-In *System Center*, a new setting has been added to the *Analytics config* section: “Maximum group events rate”. With this setting, you can limit the maximal number of alarm group events that will be generated and thus avoid any possible performance issues during alarm floods.
+In *System Center*, a new setting has been added to the *Analytics config* section: “Maximum group events rate”. With this setting, you can limit the maximal number of alarm group events that will be generated and thus avoid any possible performance issues during alarm floods.
 
 When more events are generated per second that the value specified in this setting, the generation of events will be slowed down, and as soon as the number of generated events drops below the threshold again, the generation of events will again proceed at the fastest speed possible.
 
@@ -60,15 +63,13 @@ Default value of the “Maximum group events rate” setting: 100
 
 In the Services app, a number of security enhancements have been made with regard to service definitions.
 
-- In the *Users/Groups* section of System Center, the *Add*, *Edit* and *Delete* permissions under *Modules \> Services \> Definitions* have now been replaced by one single *Edit actions *permission. If a user had at least one of those previous *Add*, *Edit* or *Delete* permissions, they will now automatically be granted the new permission.
-
-- In some cases, the *Diagram* and *Properties* permission under *Modules \> Services \> Definitions* would be applied incorrectly.
-
+- In the *Users/Groups* section of System Center, the *Add*, *Edit* and *Delete* permissions under *Modules \> Services \> Definitions* have now been replaced by one single *Edit actions *permission. If a user had at least one of those previous *Add*, *Edit* or *Delete* permissions, they will now automatically be granted the new permission.
+- In some cases, the *Diagram* and *Properties* permission under *Modules \> Services \> Definitions* would be applied incorrectly.
 - Users who do not have read permission on functions will now be able to correctly save function nodes when configuring service definitions.
 
 #### Alarm Console - Context menu: Links to elements, services and views in “Open” submenu now have an element, service or view icon in front of them \[ID_31499\]
 
-When you right-click an alarm in the Alarm Console, the *Open* submenu contains a link to the alarm card as well as links to all elements, services and views affected by the alarm. From now on, the links to the elements, services and views will each have an element, service or view icon in front of them.
+When you right-click an alarm in the Alarm Console, the *Open* submenu contains a link to the alarm card as well as links to all elements, services and views affected by the alarm. From now on, the links to the elements, services and views will each have an element, service or view icon in front of them.
 
 #### Filter will now be taken into account when exporting a table \[ID_31586\]
 
@@ -136,11 +137,8 @@ Note that, when you select a resource band, the SelectedPool variable will conta
 When you select a booking, the following variables are filled in:
 
 - SelectedReservation
-
 - SelectedReservationDefinition
-
 - ResourcesInSelectedReservation
-
 - TimerangeOfSelectedReservation
 
 However, up to now, when the current booking selection was cleared, those variables would incorrectly not get cleared.
@@ -181,18 +179,15 @@ When you open a GQI query, the GQI engine will now check the GQI version of that
 Using the following methods, it will now be possible to manage service templates via the web services API:
 
 - CreateServiceTemplate
-
 - DeleteServiceTemplate
-
 - GetServiceTemplate
-
 - UpdateServiceTemplate
 
 ### DMS web apps
 
 #### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only \[ID_31485\] \[ID_31506\]
 
-In the default job section, the *Name*, *Start Time* and *End Time* fields can now be set read-only.
+In the default job section, the *Name*, *Start Time* and *End Time* fields can now be set read-only.
 
 #### Ticketing app: System name will now be checked for illegal characters \[ID_31496\]
 
@@ -291,15 +286,10 @@ A number of enhancements have been made with regard to automatic SLA data clean-
 A number of minor enhancements have been made with regard to views and elements:
 
 - The *System Info* name (*System Center \> Agents*), which is used as root view name, can no longer be the name of an existing view.
-
 - Users will now receive a clearer error message when they try to create an element or a service with a name that starts or ends with a space.
-
 - When, in a view card, you right-click the header of the “Below this view” list, the context menu that appears is empty when the system has no properties defined. Now, when the context menu is empty, a message will be displayed, explaining users why it is empty.
-
 - Up to now, when multiple items were selected in the “Below this view” list of a view card, selecting one item would not clear the selection. From now on, it will do so.
-
 - When, in the “Below this view” list of a view card, you sort the list by alarm state, the list will be sorted by severity (default: descending).
-
 - When, in a view card, you right-click the header of the “Below this view” list, the overall responsiveness of the context menu has been enhanced.
 
 ### Fixes
@@ -447,7 +437,7 @@ When you changed the type of a custom section field that was being used a job fi
 
 #### DataMiner Cube - Settings: Changes made in “Alarm Console \> Card-specific” section would incorrectly not get applied \[ID_31566\]
 
-In the *Alarm Console \> Card-specific* section of the *Settings* app, you can configure which alarm tabs should be shown on element, service and view cards. Up to now, when you made changes to the settings on that page, those changes would incorrectly not get applied.
+In the *Alarm Console \> Card-specific* section of the *Settings* app, you can configure which alarm tabs should be shown on element, service and view cards. Up to now, when you made changes to the settings on that page, those changes would incorrectly not get applied.
 
 #### NATS: Incorrect “Timed out on heartbeats” entries would be added to the nats-server.log file \[ID_31572\]
 
@@ -455,7 +445,7 @@ In some cases, a large number of incorrect “Timed out on heartbeats” entries
 
 #### DataMiner Cube - Service templates: Generated services missing from the list \[ID_31576\]
 
-In some cases, the *Service Templates* app would incorrectly not list generated services of which the ID was identical to that of generated services found on other DataMiner Agents.
+In some cases, the *Service Templates* app would incorrectly not list generated services of which the ID was identical to that of generated services found on other DataMiner Agents.
 
 #### Problem with SLDataMiner when deleting an alarm template or a trend template \[ID_31583\]
 
@@ -499,7 +489,7 @@ When you opened a visual overview with only one visible page containing an embed
 
 #### DataMiner Cube - Sidebar: Some applications and modules would not be translated correctly when the UI language was changed \[ID_31633\]
 
-In the *Apps* pane of Cube’s sidebar, some applications and modules would not be translated correctly when you changed the UI language.
+In the *Apps* pane of Cube’s sidebar, some applications and modules would not be translated correctly when you changed the UI language.
 
 #### Memory leak in SLProtocol when a fill array or fill column method passed along empty or null values \[ID_31634\]
 
@@ -511,7 +501,7 @@ When an error of type “thread problem” occurs, the contents of the C:\\Skyli
 
 #### DataMiner Cube: Problem when refreshing a log file after scrolling down \[ID_31662\]
 
-When, in the *Logging* section of *System Center*, you opened a log file, scrolled down beyond the first 50 KB of data, and then refreshed the file, the vertical scroll position would incorrectly not be restored.
+When, in the *Logging* section of *System Center*, you opened a log file, scrolled down beyond the first 50 KB of data, and then refreshed the file, the vertical scroll position would incorrectly not be restored.
 
 #### DataMiner Cube - Settings: Turning an alarm tab of type “sliding window” into a normal alarm tab would cause this change to be reverted as soon as another change was made to it \[ID_31664\]
 
@@ -540,9 +530,7 @@ The factory reset tool C:\\Skyline DataMiner\\Files\\SLReset.exe can be used to 
 When run, it will now also remove the following files:
 
 - ClientApps.lic
-
 - request.lic (will be recreated after a DataMiner restart)
-
 - chartDir.lic
 
 #### DataMiner Cube - Visual Overview: Connectors without a matching DCF connection would incorrectly not be hidden \[ID_31727\]
@@ -573,7 +561,7 @@ When you opened a shared dashboard that contained a state timeline, in some case
 
 #### Jobs app: Hidden or required fields would incorrectly no longer be hidden or required when duplicating a domain or a section \[ID_31758\]
 
-When you duplicated a job domain using the *Duplicate \> Create copies of the sections* option or when you duplicated a job section using the *Create a copy* option, in some cases, hidden or required fields would incorrectly no longer be hidden or required in the newly created domain or section.
+When you duplicated a job domain using the *Duplicate \> Create copies of the sections* option or when you duplicated a job section using the *Create a copy* option, in some cases, hidden or required fields would incorrectly no longer be hidden or required in the newly created domain or section.
 
 #### Service & Resource Management: Problem with GetEligibleResources method \[ID_31818\]
 

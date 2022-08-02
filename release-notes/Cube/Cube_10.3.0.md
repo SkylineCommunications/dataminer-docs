@@ -1,8 +1,8 @@
 ---
-uid: Cube_10.3.0
+uid: Cube_Main_Release_10.3.0
 ---
 
-# DataMiner Cube 10.3.0
+# DataMiner Cube Main Release 10.3.0
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
@@ -47,10 +47,10 @@ Supported operators:
 
 - =
 - !=
-- >
-- >=
-- <
-- <=
+- \>
+- \>=
+- \<
+- \<=
 
 ## Changes
 

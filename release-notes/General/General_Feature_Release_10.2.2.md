@@ -1,4 +1,8 @@
-# Feature release 10.2.2
+---
+uid: General_Feature_Release_10.2.2
+---
+
+# General Feature Release 10.2.2
 
 ## New features
 
@@ -34,22 +38,22 @@ If you want certain aliases for topology cells, chains and search chains to only
 
 #### Trending: New “Fixed interval” option when exporting average trend data \[ID_31699\]
 
-When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
+When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
 
 > [!NOTE]
 > - The “fixed interval” option can only be used when exporting average trend data for double, number or analog parameters.
-> - When you select the *Fixed interval* option, the *Exclude gaps* option will automatically be selected and disabled to indicate that the latter option is included in the former.
-> - When you select the *Line graph* option, from now on, that option will no longer add intermediary data points. Those will now by default be added when you select the *Fixed interval* option.
+> - When you select the *Fixed interval* option, the *Exclude gaps* option will automatically be selected and disabled to indicate that the latter option is included in the former.
+> - When you select the *Line graph* option, from now on, that option will no longer add intermediary data points. Those will now by default be added when you select the *Fixed interval* option.
 
 #### System Center - Users/Groups: New user permission “Monitoring web app” \[ID_31706\] \[ID_31961\]
 
-In the *General* section of the user permissions list, a new “Monitoring web app” permission has now been added next to the existing “DataMiner web apps” permission. This permission can be used to control access to the Monitoring web app.
+In the *General* section of the user permissions list, a new “Monitoring web app” permission has now been added next to the existing “DataMiner web apps” permission. This permission can be used to control access to the Monitoring web app.
 
 This user permission is enabled by default.
 
 #### Alarm templates - Information events: Support for wildcard values \[ID_31872\] \[ID_32106\]
 
-In the alarm template editor, you can indicate that an information event should be generated when a certain parameter reaches a certain value. To do so, you select the *Info* option and enter a value in the text box or, in case of a discreet parameter, select a value in the selection box.
+In the alarm template editor, you can indicate that an information event should be generated when a certain parameter reaches a certain value. To do so, you select the *Info* option and enter a value in the text box or, in case of a discreet parameter, select a value in the selection box.
 
 From now on, for parameters of type string or double, it is also possible to enter values that contain a wildcard (\* or ?).
 
@@ -69,13 +73,11 @@ The DataMiner Cube desktop app now supports system-wide installation via MSI.
 The “Start sharing” button has been replaced by a “Share” button. Clicking that button will open a popup that allows you
 
 - to create a cloud share, or
-
 - to copy the URL of the dashboard.
 
 When you choose to copy the URL of a dashboard, you can select the following options:
 
 - Select “Embed” to use a URL that will link to the dashboard in embedded mode (i.e. not showing headers and sidebars).
-
 - Select “Use uncompressed URL parameters” to use a URL in which the data in the search parameters is not compressed. This will allow you to see and, if necessary, modify the plain JSON object.
 
 #### Dashboards app: Passing JSON data in a dashboard URL \[ID_31833\] \[ID_31885\]
@@ -83,7 +85,6 @@ When you choose to copy the URL of a dashboard, you can select the following opt
 There are now two ways of passing data in the URL of a dashboard:
 
 - As a dataset containing a number of items to be selected in all components (legacy method)
-
 - As a JSON object containing a number of items to be selected in specific components (new method)
 
 **Dataset (legacy method)**
@@ -106,7 +107,7 @@ url?data=<URL-encoded JSON object>
 
 This JSON object has to have the following structure:
 
-```txt
+```json
 {
     "version": 1,
     "feedAndSelect": <data>, (optional)
@@ -116,9 +117,9 @@ This JSON object has to have the following structure:
 }
 ```
 
-- **\<data>** is a JSON object with a number of property keys (identical to the legacy datatypes) and property values (as an array of datakey strings). See the following example.
+- **\<data>** is a JSON object with a number of property keys (identical to the legacy datatypes) and property values (as an array of datakey strings). See the following example.
 
-    ```txt
+    ```json
     {
         "parameters": ["1/2/3", "1/4/6"],
         "elements": ["1/2", "1/8", "212/123"]
@@ -126,22 +127,22 @@ This JSON object has to have the following structure:
     }
     ```
 
-- **\<component-data>** is an array of objects that allow you to specify data to be passed to one particular component. See the following example:
+- **\<component-data>** is an array of objects that allow you to specify data to be passed to one particular component. See the following example:
 
-    ```txt
+    ```json
     {
         cid: <component-id>,
         select: <data>
     }
     ```
 
-- When you provide data in the (optional) **feedAndSelect** item, that data will be interpreted as if it would be passed using the legacy method described above.
+- When you provide data in the (optional) **feedAndSelect** item, that data will be interpreted as if it would be passed using the legacy method described above.
 
-- When you provide data in the (optional) **feed** item, that data will only be used in the URL feed. It will not be used to select items in selection boxes on the dashboard.
+- When you provide data in the (optional) **feed** item, that data will only be used in the URL feed. It will not be used to select items in selection boxes on the dashboard.
 
-- When you provide data in the (optional) **select** item, that data will only be used to select items in selection boxes on the dashboard. It will not be used in the URL feed.
+- When you provide data in the (optional) **select** item, that data will only be used to select items in selection boxes on the dashboard. It will not be used in the URL feed.
 
-- In the **components** item, you can provide data to be selected in specific components referred to by their ID.
+- In the **components** item, you can provide data to be selected in specific components referred to by their ID.
 
     > [!NOTE]
     > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g. “State 1”).
@@ -156,23 +157,15 @@ This JSON object has to have the following structure:
 All DataMiner web apps have been upgraded to use Angular 12 instead of Angular 10, which means that the following DataMiner apps and functionality will no longer be available in Internet Explorer:
 
 - The DataMiner landing page
-
 - The Monitoring app
-
 - The Dashboards app
-
 - The Ticketing app
-
 - The Jobs app
-
 - The Application Framework module (currently still in soft launch)
-
 - Automation Script execution in embedded web browser (currently still in soft launch)
 
 > [!NOTE]
-> For now we continue to support the use of DataMiner Cube in Internet Explorer, although it is highly recommended to use the DataMiner Cube desktop app instead. For more information, see DataMiner Dojo:
->
-> <https://community.dataminer.services/documentation/internet-explorer-support/>
+> For now we continue to support the use of DataMiner Cube in Internet Explorer, although it is highly recommended to use the DataMiner Cube desktop app instead. For more information, see DataMiner Dojo: <https://community.dataminer.services/documentation/internet-explorer-support/>
 
 ### DMS tools
 
@@ -259,9 +252,7 @@ Example of a configuration file:
 In the example above, three collectors have been defined:
 
 - Collector1 is a collector of type “File”, and will order SLLogCollector to retrieve a set of files (e.g. log files).
-
 - Collector2 is a collector of type “Http”, and will order SLLogCollector to send an HTTP request to a server and to store the response.
-
 - Collector3 is a collector of type “Exe”, and will order SLLogCollector to run an executable file and to store the output.
 
 **Collectors of type “File”**
@@ -271,10 +262,10 @@ Collectors of type “File” can be configured using the following XML elements
 | Element/attribute                    | Type   | Mandatory | Description                                                                                                                                        |
 |--------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | File@name                            | String | Yes       | The name for the collector.                                                                                                                        |
-| File.Source                          |        | Yes       | The folder in which SLLogCollector will search for files and folders.                                                                              |
-| File.Destination                     |        | Yes       | The (relative) path to the destination folder in the archive.                                                                                      |
-| File.Patterns                        |        | Yes       | The element containing all search patterns.                                                                                                        |
-| File.Patterns.Pattern                |        | Yes       | A Microsoft .Net search pattern to filter file names or file paths.                                                                                |
+| File.Source                          |        | Yes       | The folder in which SLLogCollector will search for files and folders.                                                                              |
+| File.Destination                     |        | Yes       | The (relative) path to the destination folder in the archive.                                                                                      |
+| File.Patterns                        |        | Yes       | The element containing all search patterns.                                                                                                        |
+| File.Patterns.Pattern                |        | Yes       | A Microsoft .Net search pattern to filter file names or file paths.                                                                                |
 | File.Patterns.Pattern<br> @amount    | Int    | No        | The X most recent items to be copied.                                                                                                              |
 | File.Patterns.Pattern<br> @recursive | Bool   | No        | Whether to search recursively or not. Default: false                                                                                               |
 | File.Patterns.Pattern<br> @isFolder  | Bool   | No        | If true, then SLLogCollector will search for folders matching the pattern and will copy the entire content of the matching folders. Default: false |
@@ -286,13 +277,13 @@ Collectors of type “Http” can be configured using the following XML elements
 | Element/attribute                                           | Type   | Mandatory | Description                                                                                                                |
 |-------------------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------------------|
 | Http@name                                                   | String | Yes       | The name for the collector.                                                                                                |
-| Http.Source                                                 |        | Yes       | The IP address and port to which the requests have to be sent.<br> Format: http://ip:port                                  |
-| Http.Destination                                            |        | Yes       | The (relative) path to the destination folder in the archive.                                                              |
-| Http.Endpoints                                              |        | Yes       | The element containing all endpoints.                                                                                      |
-| Http.Endpoints.Endpoint                                     |        | Yes       | The element grouping all information on a particular endpoint.                                                             |
+| Http.Source                                                 |        | Yes       | The IP address and port to which the requests have to be sent.<br> Format: http://ip:port                                  |
+| Http.Destination                                            |        | Yes       | The (relative) path to the destination folder in the archive.                                                              |
+| Http.Endpoints                                              |        | Yes       | The element containing all endpoints.                                                                                      |
+| Http.Endpoints.Endpoint                                     |        | Yes       | The element grouping all information on a particular endpoint.                                                             |
 | Http.Endpoints.Endpoint<br> @name                           | String | Yes       | The name of the endpoint.                                                                                                  |
-| Http.Endpoints.Endpoint<br> .Requests                       |        | Yes       | The element containing all requests to be sent to the endpoint.                                                            |
-| Http.Endpoints.Endpoint<br> .Requests.Request               |        | Yes       | The request to be sent.                                                                                                    |
+| Http.Endpoints.Endpoint<br> .Requests                       |        | Yes       | The element containing all requests to be sent to the endpoint.                                                            |
+| Http.Endpoints.Endpoint<br> .Requests.Request               |        | Yes       | The request to be sent.                                                                                                    |
 | Http.Endpoints.Endpoint<br> .Requests.Request<br> .fileName | String | No        | The name of the file in which the response has to be saved.<br> Default: \<Endpoint.name> \<Endpoint.Requests.Request>.txt |
 
 **Collectors of type “Exe”**
@@ -302,11 +293,11 @@ Collectors of type “Exe” can be configured using the following XML elements 
 | Element/attribute                  | Type   | Mandatory | Description                                                                                         |
 |------------------------------------|--------|-----------|-----------------------------------------------------------------------------------------------------|
 | Exe@name                           | String | Yes       | The name for the collector.                                                                         |
-| Exe.Source                         |        | Yes       | The folder in which the executable is located.                                                      |
-| Exe.Executable                     |        | Yes       | The name of the executable.                                                                         |
-| Exe.Destination                    |        | Yes       | The (relative) path to the destination folder in the archive.                                       |
-| Exe.Commands                       |        | Yes       | The element containing all commands to be run.                                                      |
-| Exe.Commands<br> .Command          |        | Yes       | The command to be run.                                                                              |
+| Exe.Source                         |        | Yes       | The folder in which the executable is located.                                                      |
+| Exe.Executable                     |        | Yes       | The name of the executable.                                                                         |
+| Exe.Destination                    |        | Yes       | The (relative) path to the destination folder in the archive.                                       |
+| Exe.Commands                       |        | Yes       | The element containing all commands to be run.                                                      |
+| Exe.Commands<br> .Command          |        | Yes       | The command to be run.                                                                              |
 | Exe.Commands<br> .Command@fileName | String | No        | The name of the file in which the result has to be saved.<br> Default: \<executable> \<command>.txt |
 
 #### Chromium web browser control: Enhancements with regard to the translations of the find and zoom commands \[ID_31755\]
@@ -315,14 +306,11 @@ A number of enhancements have been made with regard to the translations of the f
 
 #### DataMiner Cube - System Center: Enhanced Failover configuration window \[ID_31787\]
 
-In the *Agents* section of *System Center*, a number of enhancements have been made to the Failover configuration window.
+In the *Agents* section of *System Center*, a number of enhancements have been made to the Failover configuration window.
 
-- The *OK* and *Cancel* buttons have been replaced by *Apply* and *Close* buttons.
-
+- The *OK* and *Cancel* buttons have been replaced by *Apply* and *Close* buttons.
 - The *Apply* button will only be enabled when changes have been made to the configuration.
-
 - In the configuration window, you will only be allowed to perform one action: switch or apply.
-
 - After you have performed an action, the window will not close automatically. Instead, it will show a message.
 
 #### DataMiner Cube desktop app: Enhanced host detection \[ID_31829\]
@@ -334,9 +322,7 @@ In the DataMiner Cube desktop app, a number of enhancements have been made with 
 To download the CefSharp library, DataMiner Cube will now look in the following locations, in the order specified below:
 
 - The location defined in a registry key created by the Cube MSI installation (*HKLM\\SOFTWARE\\Skyline Communications\\DataMiner Cube\\InstallDir*), by default *C:\\Program Files\\Skyline Communications\\DataMiner Cube*
-
 - *%LocalAppData%\\Skyline\\DataMiner*
-
 - *%ProgramData%\\Skyline\\DataMiner*
 
 #### Dashboards app - Parameter feed: Enhanced performance when fetching parameter indices \[ID_31841\]
@@ -369,10 +355,9 @@ From now on, more detailed logging will be added to SLErrors.txt when groups are
 
 #### DataMiner Cube - System Center: New LDAP settings \[ID_31924\]
 
-In *System Center*, the *LDAP* tab of the *System settings* section allows you to configure a number of LDAP settings. A number of changes have now been made to the *General* tab.
+In *System Center*, the *LDAP* tab of the *System settings* section allows you to configure a number of LDAP settings. A number of changes have now been made to the *General* tab.
 
-- The *Use custom configuration* option has been replaced by the *Referral configured* option.
-
+- The *Use custom configuration* option has been replaced by the *Referral configured* option.
 - A new *SSL/TLS* option has been added. Enable this option if you want DataMiner to use SSL/TLS when connecting to the LDAP server.
 
 #### SLDataMiner: Enhanced locking when editing elements \[ID_31948\]
@@ -393,7 +378,7 @@ Due to a number of enhancements, overall performance has increased when loading 
 
 #### DataMiner Taskbar Utility: Improved entering of credentials before testing the SLNet connec­tion \[ID_32079\]
 
-When you right-click the Taskbar Utility icon and select *Options*, in the *SLNet* tab, you can enter your credentials and click *Test & Save Connection* to test the connection to SLNet.
+When you right-click the Taskbar Utility icon and select *Options*, in the *SLNet* tab, you can enter your credentials and click *Test & Save Connection* to test the connection to SLNet.
 
 Up to now, in some cases, you could experience some lag while entering your credentials. From now on, entering your credentials will go much smoother.
 
@@ -406,7 +391,6 @@ When configuring a Spectrum Analysis component, it is now possible to combine an
 The following BPA tests have been updated:
 
 - Cassandra DB Size
-
 - Check Antivirus DLLs
 
 #### Replication: Name of the local element will now be logged in SLReplication.txt when a replica­tion connection is set up \[ID_32109\]
@@ -484,13 +468,9 @@ When a service was turned into an enhanced service, or when an enhanced service 
 In DataMiner Cube, a number of small fixes have been made:
 
 - In a tree control, the tab borders would not be visible in the Skyline Black theme.
-
 - Undocking the Alarm Console could affect the layout of the main Cube window.
-
 - When you pressed ENTER in an editable table cell, a trend graph would incorrectly open instead of the table cell editor.
-
 - When an element was restarted, in some cases, a table would incorrectly stay grayed out.
-
 - A parameter containing a disabled exception value would stay disabled after it had received a normal value.
 
 #### SLElement: Problem with invalid parameter IDs in the Generic DVE Linker Table \[ID_31805\]
@@ -519,7 +499,7 @@ In some cases, SLAnalytics configuration settings would be constantly synchroniz
 
 When the Ticket exposer was used with a filter like the one below, in some cases, incorrect results would be returned:
 
-```txt
+```csharp
 var query = TicketingExposers.Ticket.Contains(@"7999").ToQuery();
 ```
 
@@ -587,7 +567,7 @@ From now on, any error that occurs while deleting Cassandra compaction and repai
 
 Since DataMiner version 10.0.10, a Dashboard Gateway would no longer be able to access the dashboard configuration files of user accounts other than the one used to set up the Dashboard Gateway connection.
 
-From now on, a Dashboard Gateway will be able to access the dashboard configuration files of all users when the user account that is used to set up the Dashboard Gateway connection has been granted the *Modules \> System configuration \> Tools \> Admin tools* permission.
+From now on, a Dashboard Gateway will be able to access the dashboard configuration files of all users when the user account that is used to set up the Dashboard Gateway connection has been granted the *Modules \> System configuration \> Tools \> Admin tools* permission.
 
 #### DataMiner Cube - Visual Overview: DCF connections incorrectly not shown when opening a sec­ond visual overview for the same element \[ID_31931\]
 
@@ -708,7 +688,6 @@ INVALID CONFIG: Failover is active, but no cluster is defined
 From now on, SLLogCollector will also by default collect the following files:
 
 - The most recent backup\_\*.log.txt file in C:\\Skyline Dataminer\\Backup
-
 - All \*.xml configuration files in C:\\Skyline Dataminer\\Database
 
 #### SLReset would incorrectly delete the Webpages\\root and Webpages\\monitoring folders \[ID_32139\]
@@ -716,7 +695,6 @@ From now on, SLLogCollector will also by default collect the following files:
 Up to now, SLReset would incorrectly delete the following folders:
 
 - C:\\Skyline DataMiner\\Webpages\\root
-
 - C:\\Skyline DataMiner\\Webpages\\monitoring
 
 From now on, SLReset will no longer delete these folders.

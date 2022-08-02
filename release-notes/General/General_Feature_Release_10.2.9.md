@@ -8,7 +8,7 @@ uid: General_Feature_Release_10.2.9
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!NOTE]
-> For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.9](xref:Cube_10.2.9).
+> For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.9](xref:Cube_Feature_Release_10.2.9).
 
 ## Highlights
 

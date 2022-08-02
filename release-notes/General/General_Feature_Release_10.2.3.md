@@ -1,4 +1,8 @@
-# Feature release 10.2.3
+---
+uid: General_Feature_Release_10.2.3
+---
+
+# General Feature Release 10.2.3
 
 ## New features
 
@@ -9,20 +13,16 @@
 From now on, the following types of FieldDescriptor can be configured to allow multiple values:
 
 - DomInstanceFieldDescriptor
-
 - ElementFieldDescriptor
-
 - ResourceFieldDescriptor
-
 - ReservationFieldDescriptor
-
 - ServiceDefinitionFieldDescriptor
 
 To make a FieldDescriptor allow multiple values, set its FieldType to “List\<type>”.
 
 - When the FieldType of a FieldDescriptor is set to “List\<type>”, the FieldValue will be the following:
 
-    ```txt
+    ```csharp
     Value = new ListValueWrapper<type>(new List<type>...)
     ```
 
@@ -48,7 +48,6 @@ It is now possible to define a logger table of type DirectConnection with a prim
 In the \<Param> element of the logger table, do the following:
 
 - Set ArrayOptions@index to “1”.
-
 - In Database, Set IndexingOptions@enabled to “true” and Connection.Type to “Directconnection”.
 
 See the following example:
@@ -72,7 +71,6 @@ See the following example:
 - Connection type: DirectConnection
 
     - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
-
     - Index defined: The data will be pushed via the direct connection and the ID will be assigned by the column template that is being sent via the direct connection by means of an “InitializeWriteAction”.
 
     > [!NOTE]
@@ -81,13 +79,11 @@ See the following example:
 - Connection type: SLProtocol
 
     - No index defined: Currently not supported.
-
     - Index defined: Default logger table configuration.
 
 - No connection type defined
 
     - No index defined: Fallback to connection type “DirectConnection” with no index defined.
-
     - Index defined: Fallback to connection type “SLProtocol” with index defined.
 
 ### DMS Cube
@@ -188,9 +184,7 @@ The \<Display> tag of the discreet can contain the same references as the \<Valu
 If you want to specify the page to be selected by default, add a suffix to the identifier in the \<Value> tag containing the root page name and the page name, separated by a colon. See the following examples:
 
 - EPM=Cable/SF Cable1:Topology:Total
-
 - VIEW=436:BelowThisObject:STB
-
 - VIEW=436:BelowThisView:Elements
 
 > [!NOTE]
@@ -245,9 +239,7 @@ Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” wil
 When configuring a line chart component, you can now indicate how trend data points should be added to the graph by setting the *Trend points* option to one of the following values:
 
 - Average (changes only) (default value)
-
 - Average (fixed interval)
-
 - Real-time
 
 This setting will also be taken into account when you export a trend graph to a CSV file.
@@ -265,14 +257,13 @@ In the ParameterSettings property of a profile instance, you can now use the “
 A few examples:
 
 - If a parameter of profile definition A is hidden, and you want profile instance A to inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to true.
-
 - If a parameter of profile definition A is hidden, and you want profile instance B to not inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to false and “IsHidden” to true.
 
 #### Replacing system functions by uploading an XML file \[ID_32264\]
 
 It is now possible to replace the system protocol functions by uploading an XML file using the ProtocolFunctionHelper. See the following example.
 
-```txt
+```csharp
 var pfHelper = new ProtocolFunctionHelper(engine.SendSLNetMessages);
 var xmlContent = File.ReadAllText("...");
 pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
@@ -428,9 +419,7 @@ When a list of ReservationInstances were retrieved sorted by a property of type 
 In the Dashboards app, a number of issues with regard to GQI have been resolved.
 
 - Column manipulation by regular expression would not work when all columns contained numeric values.
-
 - Column manipulation by concatenation would concatenate the raw values instead of the display values.
-
 - When data was being aggregated, “group by” operations would use the raw value instead of the display value.
 
 #### Dashboards app: Problem when double-clicking the “Start editing” button \[ID_32159\]
