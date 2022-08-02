@@ -21,13 +21,13 @@ All versions of the DataMiner Cube desktop application (DataMinerCube.exe).
 
 - For binaries signed before 2021-07-01, this is with a certificate from COMODO that will attempt to access the following URLs:
 
-    - <http://ocsp.comodoca.com/>
-    - <http://crl.comodoca.com/>
+  - <http://ocsp.comodoca.com/>
+  - <http://crl.comodoca.com/>
 
 - For binaries signed after 2021-07-01, this is with a certificate from Sectigo that will attempt to access the following URLs as well:
 
-    - <http://ocsp.sectigo.com/>
-    - <http://crl.sectigo.com/>
+  - <http://ocsp.sectigo.com/>
+  - <http://crl.sectigo.com/>
 
 Terminology:
 
@@ -52,39 +52,39 @@ Background articles:
 
 - Instruct .NET Framework to not check the CRL for this application (see [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element)). Place a file named *DataMinerCube.exe.config* alongside *DataMinerCube.exe* with the following content:
 
-    ```xml
-    <configuration>
-      <runtime>
-        <generatePublisherEvidence enabled="false"/>
-      </runtime>
-    </configuration>
-    ```
+  ```xml
+  <configuration>
+    <runtime>
+      <generatePublisherEvidence enabled="false"/>
+    </runtime>
+  </configuration>
+  ```
 
-    > [!NOTE]
-    > This workaround will be applied automatically when Cube is deployed via the launcher MSI.
+  > [!NOTE]
+  > This workaround will be applied automatically when Cube is deployed via the launcher MSI.
 
 - Instruct Windows to not check the CRL for any application, by disabling the setting *Internet Options > Advanced > Security > Check for publisher's certificate revocation*.
 
-    ![Advanced settings](~/user-guide/images/CRL-Freeze-IE-Advanced-Settings.png)
+  ![Advanced settings](~/user-guide/images/CRL-Freeze-IE-Advanced-Settings.png)
 
-    This setting can also be disabled via its registry key:
+  This setting can also be disabled via its registry key:
 
-    `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing`
+  `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing`
 
-    Set value *State* to `146944` (decimal) or `0x00023e00` (hex).
+  Set value *State* to `146944` (decimal) or `0x00023e00` (hex).
 
-    > [!NOTE]
-    > There is no built-in group policy available in Windows for this setting.
+  > [!NOTE]
+  > There is no built-in group policy available in Windows for this setting.
 
 ### Mitigation – allow Windows to attempt to check the CRL, but ensure this attempt fails quickly instead of waiting for a timeout
 
 - On the local machine: Redirect the affected hostnames in the `C:\Windows\system32\drivers\etc\hosts` file.
 
-    ```txt
-    127.0.0.1   ocsp.comodoca.com
-    127.0.0.1   crl.comodoca.com
-    127.0.0.1   ocsp.sectigo.com
-    127.0.0.1   crl.sectigo.com
-    ```
+  ```txt
+  127.0.0.1   ocsp.comodoca.com
+  127.0.0.1   crl.comodoca.com
+  127.0.0.1   ocsp.sectigo.com
+  127.0.0.1   crl.sectigo.com
+  ```
 
 - On the network firewall: Do not silently drop packets to these hostnames on TCP port 80. Instead, reject the connection so the client is immediately informed that no connection can be made and does not wait for a timeout.

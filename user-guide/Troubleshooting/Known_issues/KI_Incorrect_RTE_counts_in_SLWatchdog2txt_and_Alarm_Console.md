@@ -6,9 +6,9 @@ uid: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
 
 ## Affected versions
 
-- 9.6.0 [CU19] – 9.6.0 [CU21] 
-- 10.0.0 [CU7] – 10.0.0 [CU9]
-- 10.0.12 – 10.0.13 [CU1]
+- 9.6.0 \[CU19] – 9.6.0 \[CU21]
+- 10.0.0 \[CU7] – 10.0.0 \[CU9]
+- 10.0.12 – 10.0.13 \[CU1]
 
 ## Cause
 

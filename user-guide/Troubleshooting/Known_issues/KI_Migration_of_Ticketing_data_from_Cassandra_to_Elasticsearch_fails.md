@@ -22,7 +22,7 @@ After an upgrade to DataMiner versions 10.1.0/10.0.13 or higher, Ticketing data 
 
 All invalid fields will be listed in the *SLMigrationManager.txt* log file.
 
-Prior to DataMiner 10.1.10, no notification is displayed when this occurs. From DataMiner 10.1.0 [CU7] and 10.1.10 onwards, a message will inform the user of the failure and how to resolve the problem.
+Prior to DataMiner 10.1.10, no notification is displayed when this occurs. From DataMiner 10.1.0 \[CU7] and 10.1.10 onwards, a message will inform the user of the failure and how to resolve the problem.
 
 ## Workaround
 
@@ -36,15 +36,15 @@ To do so, do the following on each DMA in the cluster:
 
 1. Open the file `C:\Skyline DataMiner\Ticketing\ElasticTicketingMigration_OneTimeMigrationStatus.json`.
 
-2. Change the contents of the file so that the number for the status property is 3.
+1. Change the contents of the file so that the number for the status property is 3.
 
-    ```json
-    {
-      "$type": "Skyline.DataMiner.Net.OneTimeMigration.OneTimeMigrationStatus, SLNetTypes",
-      "Status": 3,
-      "Migration": 3
-    }
-    ```
+   ```json
+   {
+     "$type": "Skyline.DataMiner.Net.OneTimeMigration.OneTimeMigrationStatus, SLNetTypes",
+     "Status": 3,
+     "Migration": 3
+   }
+   ```
 
 ### If the Cassandra Ticketing data must be migrated
 

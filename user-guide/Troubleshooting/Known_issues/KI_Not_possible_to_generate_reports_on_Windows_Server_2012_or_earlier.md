@@ -6,7 +6,7 @@ uid: KI_Not_possible_to_generate_reports_on_Windows_Server_2012_or_earlier
 
 ## Description of the issue
 
-On Windows Server 2012 or earlier versions of Windows, it can occur that it is not possible to generate reports when you use HTTPS.
+On Windows Server 2012 or earlier versions of Windows, it can occur that it is not possible to generate legacy reports when you use HTTPS.
 
 ![Failing to create report](~/user-guide/images/Failing-to-create-report-1024x392.png)
 

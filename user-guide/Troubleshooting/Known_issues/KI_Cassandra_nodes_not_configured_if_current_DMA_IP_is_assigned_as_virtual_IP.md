@@ -22,4 +22,4 @@ In the *Failover configuration* window, by default the current IP of the primary
 
 ## Workaround
 
-Keep the current DMA IP as the physical IP, and assign a new virtual IP. 
+Keep the current DMA IP as the physical IP, and assign a new virtual IP.
