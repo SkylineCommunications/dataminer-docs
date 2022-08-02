@@ -2479,23 +2479,59 @@
       topicUid: ErrorMessages
       items:
         - name: An error occurred in the application you were using
-          topicUid: An_error_occurred_in_the_application_you_were_using
+          topicUID: An_error_occurred_in_the_application_you_were_using
         - name: Could not load type Maps.DataMinerMap
-          topicUid: Could_not_load_type_Maps_DataMinerMap
+          topicUID: Could_not_load_type_Maps_DataMinerMap
         - name: Could not load Visio file
-          topicUid: Could_not_load_Visio_file
+          topicUID: Could_not_load_Visio_file
+        - name: Creating Database tables for x failed. y (hr = z)
+          topicUID: Creating_Database_tables_for_x_failed
+        - name: Creating element-object for x failed. y (hr = z)
+          topicUID: Creating_element_object_for_x_failed
+        - name: Creating element-objects for x failed. y (hr = z)
+          topicUID: Creating_element_objects_for_x_failed
+        - name: Creating log-factory for x failed. y (hr = z)
+          topicUID: Creating_log_factory_for_x_failed
+        - name: Creating log-file for x failed. y (hr = z)
+          topicUID: Creating_log_file_for_x_failed
+        - name: ElementID (x) Not unique y existing = z
+          topicUID: ElementID_x_not_unique_y_existing_z
         - name: HTTP error 500
-          topicUid: HTTP_error_500
-        - name: setsockopt failed for SO_KEEPALIVE
-          topicUid: setsockopt_failed_for_SO_KEEPALIVE
-        - name: The terminal server has exceeded the maximum number of allowed connections
-          topicUid: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
-        - name: Trust not granted
-          topicUid: Trust_not_granted
-        - name: Unknown Error
-          topicUid: Unknown_Error
+          topicUID: HTTP_error_500
+        - name: InitializeIElement for Element x failed. y (hr = z)
+          topicUID: InitializeIElement_for_Element_x_failed
+        - name: Initializing the communication u for x port failed. y (hr = z)
+          topicUID: Initializing_the_communication_u_for_x_port_failed
+        - name: Initializing the IP failed for x. y (hr = z), please check the IP-settings
+          topicUID: Initializing_the_IP_failed_for_x
+        - name: Initializing the protocol for x failed. y (hr = z)
+          topicUID: Initializing_the_protocol_for_x_failed
+        - name: Initialize xml for x failed. y (hr = z)
+          topicUID: Initialize_xml_for_x_failed
+        - name: Load protocol x failed with y. (hr = z)
+          topicUID: Load_protocol_x_failed_with_y
+        - name: Non authorized client applications are running
+          topicUID: Non_authorized_client_applications_are_running
+        - name: Parsing the settings for x failed. y (hr = z)
+          topicUID: Parsing_the_settings_for_x_failed
         - name: Retrieving the data failed as the request timed out
-          topicUid: Retrieving_the_data_failed_as_the_request_timed_out
+          topicUID: Retrieving_the_data_failed_as_the_request_timed_out
+        - name: setsockopt failed for SO_KEEPALIVE
+          topicUID: setsockopt_failed_for_SO_KEEPALIVE
+        - name: Starting the DERIVED element x failed. y (hr = z)
+          topicUID: Starting_the_derived_element_x_failed
+        - name: Starting the element x failed with y. (hr = z)
+          topicUID: Starting_the_element_x_failed_with_y
+        - name: Starting the protocol for x failed. y (hr = z)
+          topicUID: Starting_the_protocol_for_x_failed
+        - name: The terminal server has exceeded the maximum number of allowed connections
+          topicUID: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
+        - name: Thread problem in x. y
+          topicUID: Thread_problem_in_x
+        - name: Trust not granted
+          topicUID: Trust_not_granted
+        - name: Unknown Error
+          topicUID: Unknown_Error
     - name: Logging
       topicUid: logging
       items:
