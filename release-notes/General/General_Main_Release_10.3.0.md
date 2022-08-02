@@ -16,7 +16,7 @@ uid: General_Main_Release_10.3.0
 
 #### New read-only service properties \[ID_29978\] \[ID_33196\] \[ID_33363\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 When a service is created or updated, the following read-only properties will now be filled in automatically:
 
@@ -34,26 +34,22 @@ When a service is created or updated, the following read-only properties will no
 
 #### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range \[ID_31402\] \[ID_32016\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
 When using a GetSpectrumTrendTraceDataMessage to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
 
 #### DataMiner Object Model: FieldDescriptors can now be configured to allow multiple values \[ID_31905\] \[ID_32904\]
 
-RN 31905: Main Release Version 10.3.0 - Feature Release Version 10.2.3<br>RN 32904: Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- RN 31905: Main Release Version 10.3.0 - Feature Release Version 10.2.3
+RN 32904: Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 From now on, the following types of FieldDescriptor can be configured to allow multiple values:
 
 - DomInstanceFieldDescriptor
-
 - DomInstanceValueFieldDescriptor
-
 - ElementFieldDescriptor
-
 - ResourceFieldDescriptor
-
 - ReservationFieldDescriptor
-
 - ServiceDefinitionFieldDescriptor
 
 To make a FieldDescriptor allow multiple values, set its FieldType to “List\<type>”.
@@ -71,7 +67,7 @@ To make a FieldDescriptor allow multiple values, set its FieldType to “List\<t
 
 #### EPM: Aliases for topology cells, chains and search chains can now be specified on element level \[ID_32028\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
 In an EPM environment, since DataMiner feature release version 10.1.7, it has been possible to override the names of topology cells, chains and search chains specified in a protocol with aliases specified in a system-level EPMConfig.xml file stored in the C:\\Skyline DataMiner\\ folder. Now, it is also possible to add EPMConfig.xml files on element level.
 
@@ -82,7 +78,7 @@ If you want certain aliases for topology cells, chains and search chains to only
 
 #### DataMiner Object Model: DomInstanceValueFieldDescriptor \[ID_32326\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 A new field descriptor is now available: DomInstanceValueFieldDescriptor
 
@@ -92,7 +88,7 @@ The configuration of this new descriptor is identical to that of the DomInstance
 
 #### New messages that support uploading larger files \[ID_32398\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 The SLNet process can now use the following new messages to upload files to the DataMiner System.
 
@@ -123,7 +119,7 @@ Continues an already initiated upload and returns an empty ContinueUploadRespons
 
 #### DataMiner Object Model: New event message for DomInstance status transitions \[ID_32418\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 With the introduction of the DomInstanceStatusChangedEventMessage, it is now possible to subscribe to DomInstance status transitions. This message contains the DomInstanceId, the FromState, the ToState and the Username (i.e. the name of the user who changed the status).
 
@@ -131,7 +127,7 @@ IModuleEvents are now filtered by IModuleEventSubscriptionFilter first, before a
 
 #### Service templates: Referencing table parameter cells by means of the primary key \[ID_32549\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 When configuring a service template, you can use placeholders to reference a parameter value. When referencing a column, up to now, it was only possible to identify a cell by means of the display key. From now on, it is also possible to identify a cell by means of the primary key. See the following example:
 
@@ -141,7 +137,7 @@ When configuring a service template, you can use placeholders to reference a par
 
 #### New property added to PaToken class: Dictionary\<string,DomInstanceId> UserDomInstances \[ID_32599\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 The PaToken class has a new property: Dictionary\<string,DomInstanceId> UserDomInstances.
 
@@ -149,7 +145,7 @@ This is intended to be used in the Process Automation framework.
 
 #### Process Automation: New ProcessAutomationResourcePool object \[ID_32657\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 A new Process Automation object class has been created (which inherits the regular ResourcePool class): ProcessAutomationResourcePool
 
@@ -157,7 +153,7 @@ This new object has a property that will be used to store the queue element asso
 
 #### DataMiner Object Model: Defining a TLL for DomTemplates, DomInstances and DomInstance history \[ID_32662\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 It is now possible to define a time to live property for the following types of DomManager objects:
 
@@ -171,16 +167,16 @@ Times are defined as TimeSpan objects. By default, these will be set to TimeSpan
 
 Example:
 
-```txt
+```csharp
 var moduleSettings = new ModuleSettings("example")
 {
     DomManagerSettings = new DomManagerSettings()
     {
         TtlSettings = new TtlSettings()
         {
-            DomTemplateTtl = TimeSpan.Zero,                 // No TTL
+            DomTemplateTtl = TimeSpan.Zero,                 // No TTL
             DomInstanceHistoryTtl = TimeSpan.FromDays(365), // 1 Year
-            DomInstanceTtl = TimeSpan.FromDays(730)         // 2 Years
+            DomInstanceTtl = TimeSpan.FromDays(730)         // 2 Years
         }
     }
 };
@@ -191,13 +187,13 @@ var moduleSettings = new ModuleSettings("example")
 
 #### Service & Resource Management: Service templates now also accept ServiceID and ReservationID as input data \[ID_32668\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 In Service & Resource Management environments, a service template used to generate a service associated with a booking will now also accept a ServiceID and a ReservationID as input data.
 
 #### Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID_32742\] \[ID_32917\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 As some element protocols have QActions that require a large amount of memory to execute, they can cause SLScripting to run out of memory when they run together with other elements. From now on, elements that require a large amount of memory can be run in their own SLProtocol and SLScripting instance.
 
@@ -233,13 +229,13 @@ See also [Making all elements using a particular protocol.xml run in separate SL
 
 #### SetAlarmStateMessage can no longer be used to change the alarm state of an incident \[ID_33273\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 From now on, it will no longer be possible to change the alarm state of an incident by means of a SetAlarmStateMessage. If you attempt to do so, an exception will be thrown.
 
 #### DataMiner Object Model: Defining a script execution action that will execute an interactive Automation script \[ID_33513\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 It is now possible to define a script execution action that will execute an interactive Automation script.
 
@@ -252,7 +248,6 @@ Process:
 2. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
     - Its TraceData contains a DomActionInfo object in which type is set to DomActionInfo.Type.ScriptExecutionId.
-
     - The info object has an ExecutionId property that contains the execution ID of the script that was triggered by the DOM action.
 
 3. The client sends a ScriptControlMessage of type Launch using the script ID that was returned and will then receive ScriptProgressEventMessages.
@@ -262,7 +257,7 @@ Process:
 
 #### DataMiner upgrade: When VerifyClusterPorts prerequisite fails the user will now receive more information on why it failed \[ID_33979\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8 \[CU0\]
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU0] -->
 
 When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you will now receive more information on why it failed. For example, the DMS.xml file could contain faulty IP addresses or NATS may have silently failed.
 
@@ -270,16 +265,14 @@ When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you
 
 #### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support \[ID_32664\] \[ID_32786\]
 
-RN 32664: Main Release Version 10.3.0 - Feature Release Version 10.2.4<br>RN 32786: Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- RN 32664: Main Release Version 10.3.0 - Feature Release Version 10.2.4
+RN 32786: Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 SLSSH now supports the following additional HMAC, cyphers and key exchange algorithms:
 
 - HMAC-SHA2-512
-
 - AES256CRT
-
 - ECDHSHA2NISTP384
-
 - ECDHSHA2NISTP521
 
 DataMiner now supports the following encryption methods (in order of preference):
@@ -287,40 +280,29 @@ DataMiner now supports the following encryption methods (in order of preference)
 **HMACs**
 
 - HMAC-SHA2-512
-
 - HMAC-SHA2-256
-
 - HMAC-SHA1
-
 - HMAC-MD5
 
 **Key exchange algorithms**
 
 - ecdh-sha2-nistp521
-
 - ecdh-sha2-nistp384
-
 - ecdh-sha2-nistp256
-
 - diffie-hellman-group14-sha1
-
 - diffie-hellman-group1-sha1
-
 - diffie-hellman-group-exchange-sha1
 
 **Ciphers**
 
 - Aes-256-CTR
-
 - Aes-128-CTR
-
 - Aes-128-CBC
-
 - 3des-CBC
 
 #### SAML authentication: Azure Active Directory B2C now also supported as identity provider \[ID_32714\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 For external authentication using SAML, DataMiner now also supports Azure Active Directory B2C as an identity provider.
 
@@ -331,47 +313,43 @@ Also, when creating a DataMiner user, using an email address as user name is now
 
 #### SLSSH: Enhanced host key verification algorithm support \[ID_33132\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 When acting as an SSH client, DataMiner now supports the following host key verification algorithms (in order of preference):
 
 - ecdsa-sha2-nistp521 (new)
-
 - ecdsa-sha2-nistp384 (new)
-
 - ecdsa-sha2-nistp256 (new)
-
 - ssh-rsa
-
 - ssh-dss
 
 #### Azure Active Directory: Secret expiry notices/errors \[ID_33916\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When Azure Active Directory is used as an identity provider, DataMiner Cube will now show
 
 - a notice when the secret will expire in less than a week, and
-
 - an error when the secret has expired.
 
 Also, more detailed entries will now be added to the logs when setup errors have been detected (missing permissions, missing configurations, expired secrets, etc.).
 
 > [!IMPORTANT]
-> Note that, for this enhancement to work, the following changes have to be made to the Azure configuration and the DataMiner.xml file.<br> -  In Azure, add the API permission Application.Read.All.<br> -  Copy the Azure app object ID (Azure AD \> App registrations \> \[your application\] \> Object ID) and, in DataMiner.xml, add it to the objectId attribute of the AzureAD element.
+> Note that, for this enhancement to work, the following changes have to be made to the Azure configuration and the DataMiner.xml file.
+> - In Azure, add the API permission Application.Read.All.
+> - Copy the Azure app object ID (Azure AD \> App registrations \> \[your application\] \> Object ID) and, in DataMiner.xml, add it to the objectId attribute of the AzureAD element.
 
 ### DMS Protocols
 
 #### Elasticsearch: Defining a logger table of type DirectConnection with a primary key \[ID_32375\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 It is now possible to define a logger table of type DirectConnection with a primary key.
 
 In the \<Param> element of the logger table, do the following:
 
 - Set ArrayOptions@index to “1”.
-
 - In Database, Set IndexingOptions@enabled to “true” and Connection.Type to “Directconnection”.
 
 See the following example:
@@ -395,7 +373,6 @@ See the following example:
 - Connection type: DirectConnection
 
     - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
-
     - Index defined: The data will be pushed via the direct connection and the ID will be assigned by the column template that is being sent via the direct connection by means of an “InitializeWriteAction”.
 
     > [!NOTE]
@@ -404,31 +381,28 @@ See the following example:
 - Connection type: SLProtocol
 
     - No index defined: Currently not supported.
-
     - Index defined: Default logger table configuration.
 
 - No connection type defined
 
     - No index defined: Fallback to connection type “DirectConnection” with no index defined.
-
     - Index defined: Fallback to connection type “SLProtocol” with index defined.
 
 #### NT_UPDATE_DESCRIPTION_XML (127) now supports overriding parameter units \[ID_32891\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 Using NT_UPDATE_DESCRIPTION_XML (127), it is now possible to override parameter units.
 
 #### New \<ProcessAutomation> element to pass parameter values to the Service Definition component of the Dashboards app \[ID_32910\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 The new \<ProcessAutomation> element allows you to pass parameter values to the Service Definition component of the Dashboards app.
 
 See the example below. For every value you want to pass, you have to add a \<ProcessAutomationOption> element with the following attributes:
 
 - name (i.e. the name assigned to the value)
-
 - pid (i.e. the ID of the parameter containing the value to be passed)
 
 Example:
@@ -448,7 +422,7 @@ Example:
 
 #### Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 In a protocol.xml file, you can now define that all elements using that protocol.xml file should run in a separate SLScripting and SLProtocol instance.
 
@@ -474,9 +448,7 @@ From now on, in DataMiner.xml, you can set the scriptingProcesses option to an i
 For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3, then...
 
 - SLScripting 1 will host SLProtocol #1 and #4
-
 - SLScripting 2 will host SLProtocol #2 and #5
-
 - SLScripting 3 will host SLProtocol #3
 
 > [!NOTE]
@@ -487,7 +459,7 @@ For example, if protocolProcesses is set to 5 (i.e. the default value), and scri
 
 #### Visual Overview: Shape data fields of type “ParametersSummary” can now also handle subscription filters specified in the index part of a parameter section \[ID_31609\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 The value of a ParametersSummary shape data field has to consist of a number of delimited sections:
 
@@ -514,18 +486,18 @@ This subscription filter can be any filter that can be passed to a parameter cha
 
 #### Trending: New “Fixed interval” option when exporting average trend data \[ID_31699\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
-When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
+When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
 
 > [!NOTE]
 > - The “fixed interval” option can only be used when exporting average trend data for double, number or analog parameters.
-> - When you select the *Fixed interval* option, the *Exclude gaps* option will automatically be selected and disabled to indicate that the latter option is included in the former.
-> - When you select the *Line graph* option, from now on, that option will no longer add intermediary data points. Those will now by default be added when you select the *Fixed interval* option.
+> - When you select the *Fixed interval* option, the *Exclude gaps* option will automatically be selected and disabled to indicate that the latter option is included in the former.
+> - When you select the *Line graph* option, from now on, that option will no longer add intermediary data points. Those will now by default be added when you select the *Fixed interval* option.
 
 #### Trending: New “Custom” button allows to specify a custom X-axis range \[ID_31705\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 At the top of a trend graph, a new “Custom” button has been added next to the existing “Last 24 hours”, “Last week” and “Last month” buttons.
 
@@ -533,13 +505,14 @@ When you click this new button, you will be able to specify a custom X-axis rang
 
 #### DataMiner Cube: Start window will now detect a HTTP(S) redirection and will ask the user to confirm that redirection \[ID_31726\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 When, in the start window of the DataMiner Cube desktop app, you try to connect to a DataMiner Agent with a redirection on HTTP(S) level, you will now be asked to confirm the redirection.
 
 #### Visual Overview - Embedded Resource Manager component: New and updated session variables \[ID_31770\] \[ID_32394\]
 
-RN 31770: Main Release Version 10.3.0 - Feature Release Version 10.2.1<br>RN 32394: Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- RN 31770: Main Release Version 10.3.0 - Feature Release Version 10.2.1
+RN 32394: Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 The following changes have been made with regard to session variables that can be used in embedded Resource Manager components.
 
@@ -562,40 +535,36 @@ Note that, when you select a resource band, the SelectedPool variable will conta
 When you select a booking, the following variables are filled in:
 
 - SelectedReservation
-
 - SelectedReservationDefinition
-
 - ResourcesInSelectedReservation
-
 - TimerangeOfSelectedReservation
 
 However, up to now, when the current booking selection was cleared, those variables would incorrectly not get cleared.
 
 #### Visual Overview: Specifying a remote debugging port for Chromium and Edge browser engines \[ID_31792\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 Embedded Chromium and Edge browser engines allow external tooling to inspect and manipulate their web browser.
 
 When starting DataMiner Cube, from now on, you can pass a remote debugging port for both Chromium and Edge engines by specifying the following command line options:
 
 - ChromeRemoteDebuggingPort=7001
-
 - EdgeRemoteDebuggingPort=7002
 
 Note that the port number must be between 1024 and 65535.
 
 #### Alarm templates - Information events: Support for wildcard values \[ID_31872\] \[ID_32106\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
-In the alarm template editor, you can indicate that an information event should be generated when a certain parameter reaches a certain value. To do so, you select the *Info* option and enter a value in the text box or, in case of a discreet parameter, select a value in the selection box.
+In the alarm template editor, you can indicate that an information event should be generated when a certain parameter reaches a certain value. To do so, you select the *Info* option and enter a value in the text box or, in case of a discreet parameter, select a value in the selection box.
 
 From now on, for parameters of type string or double, it is also possible to enter values that contain a wildcard (\* or ?).
 
 #### Visual Overview: Resource placeholder can now be used to check whether a resource is in use \[ID_32203\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 The \[Resource:...\] placeholder can be used to retrieve a property of a resource. From now on, it can also be used to check whether a resource is being used by any bookings. To do so, use the following syntax.
 
@@ -610,7 +579,8 @@ See also: [New “IN USE” info tag to be used in element shapes linked to reso
 
 #### Visual Overview: Linking a shape to an alarm filter with a System Name or System Type filter context \[ID_32252\] \[ID_32548\]
 
-RN 32252: Main Release Version 10.3.0 - Feature Release Version 10.2.3<br>RN 32548: Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- RN 32252: Main Release Version 10.3.0 - Feature Release Version 10.2.3
+RN 32548: Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 When you link a shape to an alarm filter, you can specify a filter context. Up to now, it was possible to filter on element, service or view. Now, it is also possible to filter on EPM system name or system type using the following syntax:
 
@@ -628,7 +598,7 @@ If you specify a filter context like the one above, the shape will be linked to 
 
 #### Visual Overview: Use of dynamic units now depends on value of DynamicUnits soft-launch option \[ID_32256\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 Up to now, when configuring a parameter shape, it was possible to enable to use of dynamic units (i.e. units that can be converted to other units according to rules configured in the protocol) by adding “DynamicUnits=true” in an Options data field. From now on, when you do not specify this option in a parameter shape, whether or not that shape will use dynamic unit will depend on the value of the DynamicUnits soft-launch option.
 
@@ -639,7 +609,9 @@ Up to now, when configuring a parameter shape, it was possible to enable to use 
 
 #### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells \[ID_32368\] \[ID_33295\] \[ID_33857\]
 
-RN 32368: Main Release Version 10.3.0 - Feature Release Version 10.2.3<br>RN 33295: Main Release Version 10.3.0 - Feature Release Version 10.2.6<br>RN 33857: Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- RN 32368: Main Release Version 10.3.0 - Feature Release Version 10.2.3
+RN 33295: Main Release Version 10.3.0 - Feature Release Version 10.2.6
+RN 33857: Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 This feature offers a new way of adding links to EPM objects in a Data Display table.
 
@@ -668,9 +640,7 @@ The \<Display> tag of the discreet can contain the same references as the \<Valu
 If you want to specify the page to be selected by default, add a suffix to the identifier in the \<Value> tag containing the root page name and the page name, separated by a colon. See the following examples:
 
 - EPM=Cable/SF Cable1:Topology:Total
-
 - VIEW=436:BelowThisObject:STB
-
 - VIEW=436:BelowThisView:Elements
 
 If the SystemName contains colons (e.g. a MAC address), then replace the default separator (i.e. colon) by another one (e.g. a pipe character) by placing a \[sep:XY\] prefix in front of the SystemName. See the following example:
@@ -690,7 +660,6 @@ In the following example, a second \[sep:XY\] is used to replace the “/” ins
 In short,
 
 - the first \[sep:XY\] will replace the separator between the arguments, and
-
 - the second \[sep:XY\] will replace the separator inside the SystemType and/or SystemName.
 
 If you want to replace the separator inside the name, you must specify both the first \[sep:XY\] and the second \[sep:XY\], even if there are no arguments.
@@ -704,7 +673,7 @@ If you want to replace the separator inside the name, you must specify both the 
 
 #### New “IN USE” info tag to be used in element shapes linked to resources \[ID_32393\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 Shapes that are linked to an element can automatically be linked to corresponding resources by adding “UseResource=True” in a shape data field of type Options.
 
@@ -716,7 +685,7 @@ See also: [Visual Overview: Resource placeholder can now be used to check whethe
 
 #### Visual Overview: Text wrapping and trimming \[ID_32440\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 In shapes linked to an object, it is now possible to change the text wrapping and trimming.
 
@@ -746,20 +715,19 @@ Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” wil
 
 #### Visual Overview: Shapes that cannot be clicked and had their text trimmed will show a tooltip with the full shape text \[ID_32463\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 Shapes that cannot be clicked and had their text trimmed by means of a “TextTrimming” option in a shape data field of type TextStyle will now automatically show a tooltip with the full, untrimmed shape text.
 
 #### New setting to enable the cache of the Chromium browser engine \[ID_32534\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
-In the *Computer \> Advanced* section of the *Settings* app, you can now use the *Enable browser cache* setting to enable the cache of the Chromium browser engine.
+In the *Computer \> Advanced* section of the *Settings* app, you can now use the *Enable browser cache* setting to enable the cache of the Chromium browser engine.
 
 Enabling this cache has the following advantages:
 
 - Certain web applications will load faster.
-
 - SAML authentication can provide a better single sign-on experience.
 
 > [!CAUTION]
@@ -767,7 +735,7 @@ Enabling this cache has the following advantages:
 
 #### Visual Overview - Edit in Visio: New options “Add theming” and “Add pretty hover” \[ID_32660\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the top-right corner of the panel. This will open a menu with the following options.
 
@@ -780,14 +748,12 @@ When, in DataMiner Cube, you right-click a visual overview and select “Edit in
 
 #### Services app: Service definition type \[ID_32667\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 When configuring a service definition, you now have to specify its type:
 
 - SRM (default type)
-
 - Skyline Process Automation
-
 - Custom Process Automation
 
 In Visual Overview, this type can be visualized by means of a \[ServiceDefinition:...\] placeholder. See the following example, in which xxx should be replaced by a service definition GUID.
@@ -797,23 +763,23 @@ In Visual Overview, this type can be visualized by means of a \[ServiceDefinitio
 ```
 
 > [!NOTE]
-> It is not allowed to duplicate service definitions of type “Skyline Process Automation”. Therefore, the *Duplicate* option will not be available when you right-click a service definition of that type.
+> It is not allowed to duplicate service definitions of type “Skyline Process Automation”. Therefore, the *Duplicate* option will not be available when you right-click a service definition of that type.
 
 #### Trending: Refresh rate of trend graphs can now be configured \[ID_32715\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
-Up to now, open trend graphs were automatically refreshed every 2 minutes. From now on, you can specify a custom refresh rate (5 seconds to 5 minutes) in the *Update interval* setting, located in the *User \> Trending* section of the *Settings* app.
+Up to now, open trend graphs were automatically refreshed every 2 minutes. From now on, you can specify a custom refresh rate (5 seconds to 5 minutes) in the *Update interval* setting, located in the *User \> Trending* section of the *Settings* app.
 
 Default: 2 minutes
 
 > [!NOTE]
 > - Changing this refresh rate can have a minor effect on overall performance, especially when opening trend graphs with more than 10 parameters.
-> - If you change the *Update interval* setting, then open trend graphs need to be closed and re-opened if you want them to use the new interval.
+> - If you change the *Update interval* setting, then open trend graphs need to be closed and re-opened if you want them to use the new interval.
 
 #### Visual Overview: Configuring a shape to set a duration in a session variable \[ID_32716\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 You can now configure a shape to set a duration of type TimeSpan in a session variable.
 
@@ -842,7 +808,7 @@ Next to “Control=Duration”, you can specify the following options (separated
 
 Use a page-level InitVar field to set the initial value of the duration in the session variable.
 
-If you set the initial value to “Infinity”, the value in the session variable will be replaced by TimeSpan.MaxValue. If the *ShowInfinity* option is set to true, a selected infinity checkbox will be displayed next to the duration selector.
+If you set the initial value to “Infinity”, the value in the session variable will be replaced by TimeSpan.MaxValue. If the *ShowInfinity* option is set to true, a selected infinity checkbox will be displayed next to the duration selector.
 
 > [!NOTE]
 > Using an InitVar or SetVar field, it is possible to set a duration that is outside of the specified minimum/maximum range.
@@ -863,14 +829,14 @@ When specifying the minimum duration, the maximum duration and the InitVar value
 
 #### Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\] \[ID_33036\] \[ID_33130\] \[ID_33212\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5<br>RN 33036/33130/33212: Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5
+RN 33036/33130/33212: Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 When, in the Alarm Console, you enable the “Automatic incident tracking” option, from now on, you will be able to manually add/remove alarms to/from alarm groups and to rename alarm groups.
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window will appear, asking you
 
     - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-
     - to add the alarm to an existing alarm group.
 
 - When you right-click an alarm that is already part of an alarm group, you will be able to click the “Remove from incident” option. If you do so, the alarm will be removed from the alarm group of which it was a part.
@@ -887,7 +853,9 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 
 #### Trending - Behavioral anomaly detection: New type of change point “flatline” \[ID_32839\] \[ID_32856\] \[ID_32950\] \[ID_32993\] \[ID_33559\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5<br>RN 32993: Main Release Version 10.3.0 - Feature Release Version 10.2.6<br>RN 33559: Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5
+RN 32993: Main Release Version 10.3.0 - Feature Release Version 10.2.6
+RN 33559: Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 The DataMiner Analytics software can detect a number of changes in the behavior of a trend, also known as “change points”. From now on, it will also be able to detect change points of type “flatline”. A flatline is detected when a fluctuating value suddenly remains constant.
 
@@ -904,7 +872,7 @@ A new flatline trend icon will be used to indicate when a parameter has flatline
 
 #### Visual Overview: Passing Interactive Automation script output to session variables \[ID_32874\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 Similar to regular Automation scripts, interactive Automation scripts are now also able to pass their output to session variables in Visual Overview.
 
@@ -913,34 +881,30 @@ Similar to regular Automation scripts, interactive Automation scripts are now al
 
 #### Visual Overview - Resource Manager component: Enhancements with regard to selecting bookings in the timeline \[ID_32938\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 A number of enhancements have been made with regard to selecting bookings in the timeline area of an embedded Resource Manager component.
 
 - When you select a booking, the corresponding resource band and all occurrences of that booking will be selected.
-
 - When you unselect a booking, the corresponding resource band and all occurrences of that booking will also be unselected.
-
 - The reservation variable and the resource variable will always contain the booking and the resource selected in the timeline.
-
 - When you remove a resource band, the corresponding resource variable will be cleared.
 
 #### DataMiner Cube - Alarm Console: Users can now manually create incidents even when “Automatic incident tracking” is disabled in System Center \[ID_32990\] \[ID_33354\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 From now on, users will be able to manually create incidents even when “Automatic incident tracking” is disabled in System Center.
 
 #### Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID_33000\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 From now on, in the Alarm Console, you will be able to manually create incident alarms (i.e. alarm groups) even when the “Automatic incident tracking” option is disabled.
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
 
     - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-
     - to add the alarm to an existing alarm group.
 
 These manually created groups will always be visible in active alarm tabs, even when the “Automatic incident tracking” option is disabled.
@@ -951,7 +915,7 @@ See also [Alarm Console - Automatic incident tracking: Manually add/remove alarm
 
 #### Visual Overview: Resource usage now updated in real time \[ID_33001\] \[ID_33156\] \[ID_33497\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 From now on, resource usage will be updated in real time. This means that “\[Resource:\<GUID>,InUse\]” placeholders and Info data fields of type “IN USE” will now be updated without having to close and re-open cards.
 
@@ -959,35 +923,30 @@ Also, from now on, “\[Resource:\<GUID>,InUse\]” placeholders and Info data f
 
 #### Alarm Console: Additional actions to be performed on incidents \[ID_33056\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 From now on, when you right-click an incident (alarm group), you will be able to perform the following additional actions:
 
 - Take ownership
-
 - Release ownership
-
 - Force release ownership
-
 - Add a comment
 
 If you right-click a manually created incident, you will also be able to select *Clear alarm... *When you clear a manually created incident, the alarm group will be cleared and all the base alarms will again be added to the Alarm Console.
 
 #### Alarm templates - Anomaly detection: Configuring alarms for flatline changes \[ID_33123\] \[ID_33139\] \[ID_33171\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters. From now on, you can also enable this for flatline changes.
 
 1. Click the cogwheel button in the top-right corner of the alarm template editor.
-
 2. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
-
-3. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
+3. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
 
 #### Alarm Console: Second-generation hyperlinks of type “openview”, “openservice”, “openelement” and “openparameter” now support “\[PROPERTY:\]” keywords \[ID_33166\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 Up to now, it was only possible to use “\[PROPERTY:\]” keywords in second-generation hyperlinks of type “url”, “execute” and “script”. From now on, these keywords can also be used in second-generation hyperlinks of type “openview”, “openservice”, “openelement” and “openparameter”.
 
@@ -1003,44 +962,33 @@ For example, a hyperlink of type “openelement” could contain the following c
 
 #### Visual Overview: ServiceManager component functionality expanded to support Process Automation UI \[ID_33187\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6<br>See also: Enhancements – Fix was moved to 10.2.0 CU3 by RN 33188
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6
+See also: Enhancements – Fix was moved to 10.2.0 CU3 by RN 33188 -->
 
-To make it possible to show an overview of Process Automation service definitions in Visual Overview and filter these, the functionality of the *ServiceManager* component has been expanded.
+To make it possible to show an overview of Process Automation service definitions in Visual Overview and filter these, the functionality of the *ServiceManager* component has been expanded.
 
 ##### interface=definitions component option
 
-When you embed the Services module in Visio using the shape data field *Component* with the value *ServiceManager*, in the *ComponentOptions* shape data field, you can now use the option *interface=definitions* to only show the *Definitions* > *Recent* tab of the Services module. All existing options and variables have been made compatible with this option.
+When you embed the Services module in Visio using the shape data field *Component* with the value *ServiceManager*, in the *ComponentOptions* shape data field, you can now use the option *interface=definitions* to only show the *Definitions* > *Recent* tab of the Services module. All existing options and variables have been made compatible with this option.
 
 ##### Filter shape data
 
-If you use the *interface=definitions* component option described above, you can now also combine a *Filter* shape data field with the *ServiceManager* component. This allows you to filter the service definitions in the list, in the same way as in a *ListView* component. The following properties are supported for the filter:
+If you use the *interface=definitions* component option described above, you can now also combine a *Filter* shape data field with the *ServiceManager* component. This allows you to filter the service definitions in the list, in the same way as in a *ListView* component. The following properties are supported for the filter:
 
 - Name (String)
-
 - Description (String)
-
 - IsTemplate (Boolean)
-
 - ID (GUID)
-
 - CreatedBy (String)
-
 - CreatedAt (DateTime)
-
 - LastModifiedBy (String)
-
 - LastModified (DateTime)
-
 - NodeFunctionIDs (List\<Guid>)
-
 - Properties (IDictionary\<string, dynamic>)
-
 - ServiceDefinitionType (Int): This is an enum with the following possible values:
 
     - 0 = Default (representing the type "SRM" in Cube)
-
     - 1 = ProcessAutomation (representing the type "Skyline Process Automation" in Cube)
-
     - 2 = CustomProcessAutomation (representing the type "Custom Process Automation" in Cube)
 
 Examples:
@@ -1059,38 +1007,34 @@ Examples:
 
 ##### New HideAddButton and HideDeleteButton component options
 
-The following options can now also be specified in the *ComponentOptions* shape data field for a *ServiceManager* component:
+The following options can now also be specified in the *ComponentOptions* shape data field for a *ServiceManager* component:
 
 - **HideAddButton=**: If this option is set to "true", no options to add a service definition will be displayed.
-
 - **HideDeleteButton=**: If this option is set to "true", no options to delete a service definition will be displayed.
 
 #### Alarm Console: Assigning a ticket to an incident (alarm group) \[ID_33199\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 In the Alarm Console, it is now possible to assign tickets to incidents (alarm groups).
 
 - To assign a ticket to an incident, right-click the incident (alarm group) and select *Ticket \> New*.
-
 - To view a ticket assigned to an incident, right-click the incident (alarm group), select *Ticket*, and then select the ticket you want to view.
 
 #### DataMiner Cube: Start window enhancements \[ID_33219\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 A number of enhancements have been made to the start window of the DataMiner Cube desktop app:
 
 - Settings menu (cogwheel icon in bottom-right corner)
 
     - New *About* box with version information.
-
     - All menu items now have icons in front of them.
 
 - When you right-click an agent,
 
-    - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
-
+    - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
     - all context menu items now have icons in front of them.
 
 - When agents/clusters are arranged in named groups, the context menu of the DataMiner Cube system tray icon will now contain submenus per named group.
@@ -1099,24 +1043,24 @@ A number of enhancements have been made to the start window of the DataMiner Cub
 
 #### Anomaly alarms will now be triggered for all behavioral changes of monitored anomaly type \[ID_33281\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 When you enable alarm monitoring for a specific type of anomaly in an alarm template, it is now assumed that you wish to be alerted to all behavioral changes of that type. Previously, an alarm was only triggered in case the behavioral change was sufficiently significant with respect to other behavioral changes in the recent history of the parameter. Now behavioral changes of a specific type on a trended parameter will always be considered to be behavioral anomalies if anomaly monitoring is enabled on this type and parameter, even if the behavioral change point is not significantly different from other behavioral changes in the recent history of the trended parameter.
 
 #### Desktop app - Start window: New “HTTP or HTTPS” setting \[ID_33289\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 Up to now, when a DataMiner Agent had been added to the start window of the DataMiner Cube desktop app at a time when only HTTP was available, Cube would no longer switch to HTTPS when that protocol became available and HTTP got blocked.
 
-When you add a DataMiner Agent to the start window, in the Advanced settings, you can now set the *Transport* setting to either “HTTPS only” or “HTTP or HTTPS”. If you choose the latter option, Cube will use HTTP by default. When HTTP is not available, it will try to use HTTPS instead. From that point onwards, the transport setting will automatically be switched to “HTTPS only”, so HTTPS will be used for all following sessions.
+When you add a DataMiner Agent to the start window, in the Advanced settings, you can now set the *Transport* setting to either “HTTPS only” or “HTTP or HTTPS”. If you choose the latter option, Cube will use HTTP by default. When HTTP is not available, it will try to use HTTPS instead. From that point onwards, the transport setting will automatically be switched to “HTTPS only”, so HTTPS will be used for all following sessions.
 
 > [!NOTE]
 > If a DataMiner Agent is configured to use only HTTPS, Cube will not fall back to HTTP, even when you have chosen the “HTTP or HTTPS” option.
 
 #### Data Display: Context menu of URL parameters now contains copy commands \[ID_33321\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 In Data Display, the context menu of a URL parameter will now contain the following copy commands:
 
@@ -1127,19 +1071,17 @@ In Data Display, the context menu of a URL parameter will now contain the follow
 
 #### Visual Overview: Adding a “Refresh” and/or a “Sort” button to a table control \[ID_33346\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
-When using a shape of type *ParameterControls* to visualize a table in a Visio drawing, you can now add a *Refresh* button and/or a *Sort* button to that shape.
+When using a shape of type *ParameterControls* to visualize a table in a Visio drawing, you can now add a *Refresh* button and/or a *Sort* button to that shape.
 
-Example of how to add both a *Refresh* button and a *Sort* button:
+Example of how to add both a *Refresh* button and a *Sort* button:
 
 1. Create three shapes and group them:
 
     - the first shape will contain the table,
-
     - the second shape will contain the *Refresh* button, and
-
-    - the third shape will contain the *Sort* button.
+   - the third shape will contain the *Sort* button.
 
 2. Add the following shape data field to the shape that has to contain the table:
 
@@ -1167,17 +1109,17 @@ Example of how to add both a *Refresh* button and a *Sort* button:
     | ParameterControl   | ID of the table parameter  |
 
 > [!NOTE]
-> The *Refresh* button and the *Sort* button will only be displayed when necessary.
+> The *Refresh* button and the *Sort* button will only be displayed when necessary.
 
 #### Alarm Console: A comment will now be added to an manually created incident when created or updated \[ID_33387\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When users manually create an incident, change the display value of a manually created incident or add or remove base alarms to or from a manually created incident, from now on, a comment will be added to the incident (Created, Base alarm added, Base alarm removed, Value changed by \<user name> @ \<time>).
 
 #### Visual Overview - Resource Manager component: Passing elements, services or views using the YAxisResources variable \[ID_33402\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 From now on, you can pass elements, services, or views to the YAxisResources session variable in order to show the corresponding resource bands.
 
@@ -1229,30 +1171,29 @@ The corresponding resource bands are not updated automatically in case there is 
 
 #### Failover: Current Failover DMA status will now automatically be refreshed every minute \[ID_33426\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
-In the *Failover Config* window as well as the *Status* dialog box, the current Failover DMA status will now automatically be refreshed every minute.
+In the *Failover Config* window as well as the *Status* dialog box, the current Failover DMA status will now automatically be refreshed every minute.
 
 #### Alarm Console: Updating incidents using the side panel \[ID_33436\]\[ID_33450\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 In the Alarm Console, it is now possible to edit incidents (i.e. alarm groups) using the side panel.
 
-When you open the side panel and select an incident, a *Drag-and-drop editing* button will appear. Clicking that button will freeze both the side panel and the alarm tab and will allow you to
+When you open the side panel and select an incident, a *Drag-and-drop editing* button will appear. Clicking that button will freeze both the side panel and the alarm tab and will allow you to
 
 - add alarms to the incident by dragging them from the Alarm Console onto the side panel, and
-
 - remove alarms from the incident by clicking the “X” next to the base alarm.
 
-When you are finished editing the incident, click *Apply* to apply your changes and unfreeze the side panel.
+When you are finished editing the incident, click *Apply* to apply your changes and unfreeze the side panel.
 
 > [!NOTE]
-> Instead of opening the side panel and clicking the *Drag-and-drop editing* button, you can also right-click an incident and select *Edit incident*. This will open the side panel (if it is not open yet) and enable the “drag and drop” mode.
+> Instead of opening the side panel and clicking the *Drag-and-drop editing* button, you can also right-click an incident and select *Edit incident*. This will open the side panel (if it is not open yet) and enable the “drag and drop” mode.
 
 #### Visual Overview - Service Manager component: Filtering on FunctionDefinitionType \[ID_33466\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When you embed a Service Manager component in Visual Overview, it is now possible to apply a filter that will make the function tree only list functions with specific FunctionDefinitionType fields.
 
@@ -1273,7 +1214,7 @@ To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 
 #### Visual Overview - Resource Manager component: Selecting multiple resource bands in the timeline \[ID_33536\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 In the timeline of an embedded Resource Manager component, it is now possible to select multiple resource bands.
 
@@ -1283,31 +1224,29 @@ When you select more than one resource band, the SelectedResource session variab
 
 #### Visual Overview - Resource Manager component: Enhanced way of selecting a time range \[ID_33580\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 In the timeline, the context menu will no longer open automatically after selecting a time range by means of drag-and-drop. Instead, it will now only open when you right-click.
 
 This change in behavior will now allow you to trigger a script by clicking an action button instead of selecting an option in the context menu of the timeline. In other words, you will now be able to proceed as follows:
 
 1. Select a resource band.
-
 2. Select a time range.
-
 3. Click an action button.
 
 The SelectedTimeRange variable will now be cleared when the time selection is cleared (i.e. when it is no longer visible/available). Up to now, this variable would only be cleared when the selection was changed.
 
 #### System Center - Agents: BPA Details window now has a Copy button that copies the list of errors to the Windows clipboard \[ID_33638\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
-When, in the *BPA* tab of the *Agents* section, you see a BPA test that returned errors during its last run, you can click “...” to open a *Details* window listing those errors.
+When, in the *BPA* tab of the *Agents* section, you see a BPA test that returned errors during its last run, you can click “...” to open a *Details* window listing those errors.
 
-At the bottom of this *Details* window, you can now find a *Copy* button that allows you to copy the list of errors to the Windows clipboard.
+At the bottom of this *Details* window, you can now find a *Copy* button that allows you to copy the list of errors to the Windows clipboard.
 
 #### Visual Overview: \[this reservationID\] placeholder \[ID_33669\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 In shape data or shape text of shapes linked to a booking (e.g. dynamically generated shapes that represent bookings), you can now use a \[this reservationID\] placeholder to retrieve the GUID of the booking.
 
@@ -1319,56 +1258,44 @@ See the following examples:
 
 #### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data \[ID_33771\] \[ID_33803\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 Up to now, alarms that did not contain any focus information were not allowed to be the base alarm of an incident. From now on, alarms that do not contain any focus data can be manually added to an incident, provided they are not one of the following types of alarms:
 
 - correlation alarms
-
 - clearable alarms
-
 - information events
-
 - suggestion events
-
 - other incidents
 
 #### Trending: Prediction type selection has now moved to the context menu \[ID_33861\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or “Auto”. This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or “Auto” from the context menu.
 
 #### Tab layout: Closing a card tab by clicking it with the middle mouse button \[ID_33883\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When the card layout is set to “tab layout”, you can now close a card tab by clicking it with the middle mouse button.
 
 #### Password box with strength indicator and peek button \[ID_33937\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 Password boxes in Cube will now indicate the password strength (common, very weak, weak, good, strong, very strong) based on a scoring algorithm and a dictionary of default and well-known passwords. They will also have a peek button that allows you to temporarily reveal the password you have entered.
 
 These new password boxes can be found in the following locations:
 
 - Cube login screen (peek only)
-
 - Data Display: parameters of type password (e.g. the password box of a Microsoft Platform element)
-
 - Edit port settings of an SNMPv3 element
-
-- System Center \> Agents \> Add
-
+- System Center \> Agents \> Add
 - System Center \> Database
-
-- System Center \> Users/groups \> Add new user... (peek only)
-
-- System Center \> System Settings \> Credentials Library
-
-- System Center \> System Settings \> LDAP
-
+- System Center \> Users/groups \> Add new user... (peek only)
+- System Center \> System Settings \> Credentials Library
+- System Center \> System Settings \> LDAP
 - Interactive Automation scripts (UIBlock of type PasswordBox)
 
 > [!NOTE]
@@ -1377,7 +1304,7 @@ These new password boxes can be found in the following locations:
 
 #### New “Light” theme & new links in the Apps list \[ID_33944\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 A new theme has been added to DataMiner Cube: “Light”.
 
@@ -1385,7 +1312,7 @@ Also, the Apps list now contains links to the Catalog, the Cloud Admin app and c
 
 #### Browser callbacks can now open EPM objects via SystemName or SystemType \[ID_33963\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When an embedded web page is displayed in Cube, it is possible to make a callback from the web page into Cube and, for example, open an element, service, view or CPE card.
 
@@ -1397,7 +1324,7 @@ NavigateCPEByName(string systemType, string systemName);
 
 Example in HTML:
 
-```xml
+```html
 <a href='javascript:window.external.NavigateCPEByName("Region","California");'>Open Region California</a>
 ```
 
@@ -1405,21 +1332,19 @@ Example in HTML:
 
 #### Engine object: TriggeredByName property added \[ID_33122\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 A TriggeredByName property has been added to the Engine object. This property of type string will contain the full name of the user who started the Automation script (e.g. “John Doe”).
 
 When an Automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
 
 - “Scheduled task \<name task>”
-
 - “Correlation-rule \<name rule>”
-
 - “Redundancy”
 
 #### New subscript option “ExtendedErrorInfo” \[ID_33306\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 The SubScriptOptions class now has an ExtendedErrorInfo property (default: false).
 
@@ -1427,7 +1352,7 @@ If an error occurs in a subscript with extended error info, the HadError propert
 
 Example:
 
-```txt
+```csharp
 var script = engine.PrepareSubScript("MySubScript");
 script.ExtendedErrorInfo = true;
 script.SelectScriptParam("Info", "{}");
@@ -1449,11 +1374,11 @@ if (script.HadError)
 
 #### Added the option to skip the 'script started' information event \[ID_33666\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 When sending an ExecuteScriptMessage, you can now specify that no “Script started” information event should be generated when the script is executed. To do so, add the SKIP_STARTED_INFO_EVENT:TRUE option to the string array as shown in the following example.
 
-```txt
+```csharp
 ExecuteScriptMessage esm = new ExecuteScriptMessage("Script")
 {
     Options = new SA(new[]
@@ -1469,7 +1394,7 @@ engine.ExecuteScript(esm);
 
 Also, the SubScriptOptions class has been extended with a SkipInitialInfoEvent property that can be used to pass the above-mentioned option to subscripts. See the following example.
 
-```txt
+```csharp
 var options = engine.PrepareSubScript("SubScript");
 options.Synchronous = true;
 options.PerformChecks = false;
@@ -1489,29 +1414,26 @@ options.StartScript();
 
 #### Web Services API v1: New methods to manage service templates \[ID_31612\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 Using the following methods, it will now be possible to manage service templates via the web services API:
 
 - CreateServiceTemplate
-
 - DeleteServiceTemplate
-
 - GetServiceTemplate
-
 - UpdateServiceTemplate
 
 ### DMS web apps
 
 #### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only \[ID_31485\] \[ID_31506\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
-In the default job section, the *Name*, *Start Time* and *End Time* fields can now be set read-only.
+In the default job section, the *Name*, *Start Time* and *End Time* fields can now be set read-only.
 
 #### Ticketing app: System name will now be checked for illegal characters \[ID_31496\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 From now on, the system name of a ticket will no longer be allowed to start with an underscore character or contain one of the following characters: . # \* , " '
 
@@ -1519,7 +1441,7 @@ When the system name contains one of these illegal characters, an error message 
 
 #### Jobs app: Fields will automatically be set to “not required” when hidden \[ID_31513\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 From now on, when you hide a job field, you will receive a message that it will automatically be set to “not required”.
 
@@ -1528,7 +1450,7 @@ From now on, when you hide a job field, you will receive a message that it will 
 
 #### Dashboards app - GQI: Element, service and view data sources now also return an “In timeout” column \[ID_31671\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 The element, service and view data sources now return an additional “In timeout” column.
 
@@ -1540,7 +1462,7 @@ The element, service and view data sources now return an additional “In timeou
 
 #### Dashboards app - Node edge graph: Option to visualize the direction of the edges \[ID_32519\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 When configuring a node edge graph, it is now possible to have the graph visualize the direction of the edges.
 
@@ -1553,15 +1475,16 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 
 #### Dashboards app: Default index filter for parameter feed component \[ID_32595\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 It is now possible to add a default index filter to a parameter feed component. This way, it's not necessary to apply your filter to the component again whenever the dashboard is refreshed.
 
-This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters *section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
+This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters *section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
 
 #### Dashboards app: GQI now supports external data \[ID_32656\] \[ID_32659\] \[ID_32930\] \[ID_33795\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4<br>RN 33795: Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4
+RN 33795: Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner Automation script that is compiled as a library. The GQI will make use of this library to load the external data.
 
@@ -1569,13 +1492,13 @@ It is now possible to configure the Generic Query Interface to retrieve external
 
 This is the most basic procedure to use an external data source in a query:
 
-1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see below for more detailed info).
+1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see below for more detailed info).
 
-2. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
+2. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
-    For example (see [Example script](#example-script) for a full example):
+    For example (see [Example script](#example-script) for a full example):
 
-    ```txt
+    ```csharp
     using Skyline.DataMiner.Analytics.GenericInterface;
 
     [GQIMetaData(Name = "People")]
@@ -1588,25 +1511,25 @@ This is the most basic procedure to use an external data source in a query:
     > [!NOTE]
     > This is the name that will be shown to the user when they select the data in the Dashboards app. If you do not configure this name, the name of the class is displayed instead, which may not be very user-friendly.
 
-3. [Compile the script as a library](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation/Using_CSharp/Compiling_a_CSharp_code_block_as_a_library.html#compiling-the-library). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different data sources for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
+3. [Compile the script as a library](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation/Using_CSharp/Compiling_a_CSharp_code_block_as_a_library.html#compiling-the-library). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different data sources for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
 
-4. Validate and save the script. It is important that you do this *after* you have compiled the script as a library, as otherwise the compiler will detect errors.
+4. Validate and save the script. It is important that you do this *after* you have compiled the script as a library, as otherwise the compiler will detect errors.
 
 5. In the Dashboards app, configure a query and select the data source *Get ad hoc data*.
 
 6. In the *Data source* drop-down box, select the name of your ad hoc data source.
 
-Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
+Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 
 ##### Interfaces
 
 An ad hoc data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
 
-- **IGQIDataSource**: This is the only **required** interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
+- **IGQIDataSource**: This is the only **required** interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
 
     | Method    | Input arguments       | Output arguments | Description                       |
     |-------------|-----------------------|------------------|-----------------------------------|
-    | GetColumns  |                       | GQIColumn\[\]    | The GQI will request the columns. |
+    | GetColumns  |                       | GQIColumn\[\]    | The GQI will request the columns. |
     | GetNextPage | GetNextPage­InputArgs | GQIPage          | The GQI will request data.        |
 
 - **IGQIInputArguments**: This interface can be used to have the user specify an argument, for example the CSV file from which data should be parsed, or a filter that should be applied. This interface has the following methods:
@@ -1645,31 +1568,27 @@ The following flowchart illustrates the GQI life cycle when a query is created:
 
 ![](~/release-notes/images/GQI_-_Create_query.png)
 
-
-
 The following flowchart illustrates the GQI life cycle when a query is fetched:
 
 ![](~/release-notes/images/GQI_-_Fetch_query.png)
-
-
 
 ##### Objects
 
 To build the ad hoc data source, you can use the objects detailed below.
 
-- **GQIColumn**: This is an abstract class with the derived types *GQIStringColumn*, *GQIBooleanColumn*, *GQIIntColumn*, *GQIDateTimeColumn* and *GQIDoubleColumn* and with the following properties::
+- **GQIColumn**: This is an abstract class with the derived types *GQIStringColumn*, *GQIBooleanColumn*, *GQIIntColumn*, *GQIDateTimeColumn* and *GQIDoubleColumn* and with the following properties::
 
     | Property | Type           | Required | Description                                                                                                                                                                                                                                                                                                                                  |
     |------------|----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Name       | String         | Yes      | The column name.                                                                                                                                                                                                                                                                                                                             |
-    | Type       | GQIColumn­Type | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
+    | Type       | GQIColumn­Type | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
 
 - **GQIPage**, with the following properties:
 
     | Property  | Type       | Required | Description                                                                                                                                              |
     |-------------|------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Rows        | GQIRow\[\] | Yes      | The rows of the page.                                                                                                                                    |
-    | HasNextPage | Boolean    | No       | *True* if additional pages can be retrieved, *False* if the current page is the last page. |
+    | HasNextPage | Boolean    | No       | *True* if additional pages can be retrieved, *False* if the current page is the last page. |
 
 - **GQIRow**, with the following properties:
 
@@ -1687,7 +1606,7 @@ To build the ad hoc data source, you can use the objects detailed below.
     > [!NOTE]
     > The type of value of a cell must match the type of the corresponding column.
 
-- **GQIArgument**: This is an abstract class, with the derived types *GQIStringArgument* and *GQIDoubleArgument*, and with the following properties:
+- **GQIArgument**: This is an abstract class, with the derived types *GQIStringArgument* and *GQIDoubleArgument*, and with the following properties:
 
     | Property | Type    | Required | Description                                 |
     |------------|---------|----------|---------------------------------------------|
@@ -1696,13 +1615,13 @@ To build the ad hoc data source, you can use the objects detailed below.
 
 ##### Example script
 
-Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
+Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
 
-First the *IGQIDataSource* interface is implemented, then *GetColumns* is used to define the custom columns for the data source. In this case, there are 5 columns. The *GetNextPage* method then returns the actual data to the GQI. In this case these are 3 rows, defined as an array of cells. For each cell, a display value can also be defined. In this case, this is done for the cells within the *Height* column to indicate the unit of measure. The *HasNextPage* property is set to *False* to indicate that no additional pages need to be fetched.
+First the *IGQIDataSource* interface is implemented, then *GetColumns* is used to define the custom columns for the data source. In this case, there are 5 columns. The *GetNextPage* method then returns the actual data to the GQI. In this case these are 3 rows, defined as an array of cells. For each cell, a display value can also be defined. In this case, this is done for the cells within the *Height* column to indicate the unit of measure. The *HasNextPage* property is set to *False* to indicate that no additional pages need to be fetched.
 
-The optional *IGQIInputArguments* interface is also implemented in the example, in this case to allow the user to add an input argument indicating the minimum age for the records that will be retrieved. The argument is indicated as required, so the user will have to specify it to be able to configure the query. The argument value is retrieved with *OnArgumentsProcessedInputArgs* and used to filter the returned data.
+The optional *IGQIInputArguments* interface is also implemented in the example, in this case to allow the user to add an input argument indicating the minimum age for the records that will be retrieved. The argument is indicated as required, so the user will have to specify it to be able to configure the query. The argument value is retrieved with *OnArgumentsProcessedInputArgs* and used to filter the returned data.
 
-```txt
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -1711,89 +1630,89 @@ using Skyline.DataMiner.Analytics.GenericInterface;
 [GQIMetaData(Name = "People")]
 public class MyDataSource : IGQIDataSource, IGQIInputArguments
 {
-    private GQIDoubleArgument _argument = new GQIDoubleArgument("Age") { IsRequired = true };
-    private double _minimumAge;
+    private GQIDoubleArgument _argument = new GQIDoubleArgument("Age") { IsRequired = true };
+    private double _minimumAge;
 
-    public GQIColumn[] GetColumns()
-    {
-        return new GQIColumn[]
-        {
-            new GQIStringColumn("Name"),
-            new GQIIntColumn("Age"),
-            new GQIDoubleColumn("Height (m)"),
-            new GQIDateTimeColumn("Birthday"),
-            new GQIBooleanColumn("Likes apples")
-        };
-    }
+    public GQIColumn[] GetColumns()
+    {
+        return new GQIColumn[]
+        {
+            new GQIStringColumn("Name"),
+            new GQIIntColumn("Age"),
+            new GQIDoubleColumn("Height (m)"),
+            new GQIDateTimeColumn("Birthday"),
+            new GQIBooleanColumn("Likes apples")
+        };
+    }
 
-    public GQIArgument[] GetInputArguments()
-    {
-        return new GQIArgument[] { _argument };
-    }
+    public GQIArgument[] GetInputArguments()
+    {
+        return new GQIArgument[] { _argument };
+    }
 
-    public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
-    {
-        _minimumAge = args.GetArgumentValue(_argument);
-        return new OnArgumentsProcessedOutputArgs();
-    }
+    public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
+    {
+        _minimumAge = args.GetArgumentValue(_argument);
+        return new OnArgumentsProcessedOutputArgs();
+    }
 
-    public GQIPage GetNextPage(GetNextPageInputArgs args)
-    {
-        var rows = new List<GQIRow>() {
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Alice" },
-                        new GQICell() { Value = 32 },
-                        new GQICell() { Value = 1.74, DisplayValue = "1.74 m" },
-                        new GQICell() { Value = new DateTime(1990, 5, 12) },
-                        new GQICell() { Value = true }
-                    }),
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Bob" },
-                        new GQICell() { Value = 22 },
-                        new GQICell() { Value = 1.85, DisplayValue = "1.85 m" },
-                        new GQICell() { Value = new DateTime(2000, 1, 22) },
-                        new GQICell() { Value = true }
-                    }),
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Carol" },
-                        new GQICell() { Value = 27 },
-                        new GQICell() { Value = 1.67, DisplayValue = "1.67 m" },
-                        new GQICell() { Value = new DateTime(1995, 10, 3) },
-                        new GQICell() { Value = false }
-                    })
-            };
+    public GQIPage GetNextPage(GetNextPageInputArgs args)
+    {
+        var rows = new List<GQIRow>() {
+            new GQIRow(
+                new GQICell[]
+                    {
+                        new GQICell() { Value = "Alice" },
+                        new GQICell() { Value = 32 },
+                        new GQICell() { Value = 1.74, DisplayValue = "1.74 m" },
+                        new GQICell() { Value = new DateTime(1990, 5, 12) },
+                        new GQICell() { Value = true }
+                    }),
+            new GQIRow(
+                new GQICell[]
+                    {
+                        new GQICell() { Value = "Bob" },
+                        new GQICell() { Value = 22 },
+                        new GQICell() { Value = 1.85, DisplayValue = "1.85 m" },
+                        new GQICell() { Value = new DateTime(2000, 1, 22) },
+                        new GQICell() { Value = true }
+                    }),
+            new GQIRow(
+                new GQICell[]
+                    {
+                        new GQICell() { Value = "Carol" },
+                        new GQICell() { Value = 27 },
+                        new GQICell() { Value = 1.67, DisplayValue = "1.67 m" },
+                        new GQICell() { Value = new DateTime(1995, 10, 3) },
+                        new GQICell() { Value = false }
+                    })
+            };
 
-        var filteredRows = rows.Where(row => (int)row.Cells[1].Value > _minimumAge).ToArray();
+        var filteredRows = rows.Where(row => (int)row.Cells[1].Value > _minimumAge).ToArray();
 
-        return new GQIPage(filteredRows)
-        {
-            HasNextPage = false
-        };
-    }
+        return new GQIPage(filteredRows)
+        {
+            HasNextPage = false
+        };
+    }
 }
 ```
 
 #### Dashboards app - GQI: Linking feeds to arguments of external data sources \[ID_32658\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 When you build a GQI query that uses an external data source, it is now possible to link feeds to arguments of that external source.
 
 #### Dashboards app: User groups can now be selected in dashboard security \[ID_32681\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 When you configure who can view or edit a specific dashboard, it is now possible to select entire user groups instead of only individual users. Groups are indicated with a different icon to make the difference clear. In the selection box, they are listed together with individual users. Natural sorting is applied, with individual users being sorted by full name and groups being sorted by group name.
 
 #### Dashboards - Data panel: Enhanced element selection \[ID_32769\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 A number of enhancements have been made to the *Elements* section of the Data panel.
 
@@ -1802,46 +1721,43 @@ Up to now, when you switched to edit mode, the first 10,000 elements would be lo
 Also, there is now an element search box as well as a number of element filter options:
 
 - a view filter to only show elements in a particular view (and its subviews),
-
 - a protocol filter to only show elements running a particular protocol,
-
 - an *EPM managers* checkbox to only show EPM Manager elements, and
-
 - a *Spectrum analyzers* checkbox to only show Spectrum elements.
 
 #### Dashboards app: New sidebar icons to list private and shared dashboards \[ID_32854\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
-In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, there are now two new icons:
+In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, there are now two new icons:
 
 - *Private dashboards*, and
-
 - *Shared dashboards*.
 
 The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to the cloud and there are shared dashboards.
 
 #### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added \[ID_32960\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 When a Process Automation definition is added to the Service definition component, the component will now automatically draw the necessary arrows to indicate the connections between the different blocks/nodes in the diagram.
 
 #### Dashboards app: Using the script output of an interactive Automation script as a feed \[ID_32977\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 When building a GQI query, you can now also use the script output of an interactive Automation script as a feed.
 
 #### Dashboards app - Service definition component: Function shapes will now reflect the function type \[ID_32995\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 When a Process Automation definition is added to the Service definition component, the added function shapes will now reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent).
 
 #### DataMiner Application Framework \[ID_33002\] \[ID_33040\] \[ID_33208\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5<br>RN 33208: Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5
+RN 33208: Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 The DataMiner Application Framework allows you to create custom low-code applications that interact with data from a DataMiner System or an external source.
 
@@ -1863,7 +1779,6 @@ Panels are used to group data on a page. They can be displayed on the left side 
 In an application, you can configure actions that will be executed each time one of the following events occur:
 
 - A new page is loaded.
-
 - A (header bar) button is clicked.
 
 At present, the following actions can be configured:
@@ -1895,19 +1810,14 @@ Per application, there can be up to 15 versions: 14 draft versions and one publi
 The application framework has two levels of security:
 
 - on DataMiner level, user permissions control access to the application framework in general, and
-
 - on application level, user permissions control access to specific applications.
 
 Access to the application framework is controlled by the following user permissions that can be configured per user or user group:
 
 - View applications
-
 - Add new applications
-
 - Edit applications
-
 - Delete applications
-
 - Publish applications
 
 > [!NOTE]
@@ -1917,7 +1827,7 @@ Access to a specific application can be configured in the application itself. Pe
 
 #### Dashboards app - Service definition component: Function nodes will now display the number of Process Automation tokens in queue or in progress \[ID_33025\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 When a Process Automation definition is added to the Service definition component, all function nodes will now display the number of tokens currently in queue or in progress.
 
@@ -1925,23 +1835,23 @@ The token counters will be updated every 10 seconds.
 
 #### Web apps - Data table component: Search box \[ID_33385\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When you hover over a data table component (e.g. a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
 #### Web apps: Dashboards, app pages and app panels now all have a “Fit to view” setting \[ID_33401\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 In the Dashboards app and the Application Framework, dashboards, app pages and app panels now all have a “Fit to view” setting that, when enabled, will make sure the items in question are automatically adapted to fit the screen.
 
 #### Web apps - Data table component: Sorting, grouping and filtering options \[ID_33403\] \[ID_33433\] \[ID_33454\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When you right-click a column header of a data table component (e.g. a GQI table), you will now be presented with a number of sorting, grouping and filtering options.
 
-- To sort by the column in question, select a sort order (e.g. A \> Z, Z \> A, etc.).
+- To sort by the column in question, select a sort order (e.g. A \> Z, Z \> A, etc.).
 
 - To group by the column in question, select *Group*.
 
@@ -1960,7 +1870,7 @@ When you right-click a column header of a data table component (e.g. a GQI table
 
 #### Web apps - Data table component: Copy cell/row/column/table \[ID_33440\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When you right-click a non-empty cell in a data table component (e.g. a GQI table), you can now choose to copy the cell value, the entire row, the entire column or the entire table.
 
@@ -1973,29 +1883,28 @@ If you choose to copy the entire row or the entire table, the data will be copie
 
 #### Dashboards app: Service Definition component now supports both types of process automation service definitions \[ID_33615\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 The Service Definition component now supports both types of process automation service definitions:
 
 - Skyline Process Automation
-
 - Custom Process Automation
 
 #### Dashboards app / Custom apps - Service Definition component: Text displayed on a particular node of a process automation service definition will now be the value of that node’s Label property \[ID_33754\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 Up to now, when a Service Definition component displayed a service definition of type “Skyline Process Automation” or “Custom Process Automation”, the name of the associated function definition would be displayed on the nodes. From now on, the text displayed on a particular node will be the value of that node’s Label property. Only when no Label property could be found will the name of the associated function definition be displayed instead.
 
 #### DataMiner web apps updated to Angular 13 \[ID_33869\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 The DataMiner mobile apps that use Angular (e.g. low code apps, Dashboards, Monitoring, Ticketing, Jobs and Automation) now use Angular 13 instead of Angular 12.
 
 #### Dashboards app - GQI: “Line & area chart” component is now able to visualize GQI query results as a single line \[ID_33879\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 The “Line & area chart” component is now able to visualize GQI query results as a single line.
 
@@ -2004,9 +1913,7 @@ The “Line & area chart” component is now able to visualize GQI query results
 2. In the component settings tab:
 
     - Select the query.
-
     - Select the X axis column.
-
     - Select the Y axis column.
 
 3. In the component layout, adapt the style of the chart.
@@ -2016,7 +1923,7 @@ The “Line & area chart” component is now able to visualize GQI query results
 
 #### GQI: When all data is requested, the page size will now be calculated based on the amount of columns that are retrieved \[ID_33935\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 Up to now, when all GQI data was requested, the page size would always be set to 50. From now on, the page size will be set to a number between 50 and 1000, based on the amount of columns that are retrieved (max. 3000 cells).
 
@@ -2024,18 +1931,14 @@ Up to now, when all GQI data was requested, the page size would always be set to
 
 #### Retrieving bookings in a paged way and sorted by property \[ID_31982\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 It is now possible to retrieve bookings in a paged way and sorted by one of the following properties:
 
 - CreatedAt
-
 - CreatedBy
-
 - Description
-
 - LastModifiedAt
-
 - LastModifiedBy
 
 > [!NOTE]
@@ -2046,19 +1949,18 @@ It is now possible to retrieve bookings in a paged way and sorted by one of the 
 
 #### ProfileInstances: New parameter property “InheritIsHidden” \[ID_32131\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 In the ParameterSettings property of a profile instance, you can now use the “InheritIsHidden” property to indicate whether a profile instance should inherit the “IsHidden” property of a profile parameter. This property is false by default.
 
 A few examples:
 
 - If a parameter of profile definition A is hidden, and you want profile instance A to inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to true.
-
 - If a parameter of profile definition A is hidden, and you want profile instance B to not inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to false and “IsHidden” to true.
 
 #### Replacing system functions by uploading an XML file \[ID_32264\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 It is now possible to replace the system protocol functions by uploading an XML file using the ProtocolFunctionHelper. See the following example.
 
@@ -2074,7 +1976,7 @@ pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
 
 #### ResourceUsageInfoManager \[ID_32512\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 SLNet now includes a ResourceUsageInfoManager, which will keep track of the Resources being used by ReservationInstances. Each time a change is detected as to Resource usage, this manager will send out a ResourceUsageStatusEventMessage containing the DMA ID and a list of UpdatedResourceUsageStatuses.
 
@@ -2086,14 +1988,12 @@ ResourceUsageStatus objects can be retrieved by means of a GetResourceUsageStatu
 
 #### ReservationInstances now have a ReservationInstanceType \[ID_32624\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 When configuring a ReservationInstance, you now have to specify a ReservationInstanceType:
 
 - Default
-
 - Process Automation
-
 - Custom Process Automation
 
 > [!NOTE]
@@ -2102,74 +2002,60 @@ When configuring a ReservationInstance, you now have to specify a ReservationIns
 
 #### Modified AbsoluteQuarantinePriority behavior and several new SRM features \[ID_32654\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 Several changes to the SRM framework have been introduced:
 
 - Modified *AbsoluteQuarantinePriority* behavior.
-
 - New *ConcurrencyUsageType* property for ResourceUsageDefinition
-
 - Possibility to book complete resource capacity
-
 - Possibility to include elements in bookings
 
 ##### Modified AbsoluteQuarantinePriority behavior
 
-The behavior of the *AbsoluteQuarantinePriority* property has been modified. Up to now, if this property was set to true for a booking instance, all overlapping booking instances using the same resources were forced into quarantine. Now this property will only determine the priority of the booking when a quarantine is needed.
+The behavior of the *AbsoluteQuarantinePriority* property has been modified. Up to now, if this property was set to true for a booking instance, all overlapping booking instances using the same resources were forced into quarantine. Now this property will only determine the priority of the booking when a quarantine is needed.
 
 To implement a quarantine, overbooked capacity is now removed from bookings according to the following order of priority:
 
 1. Bookings that are already in the quarantined state.
-
 2. Bookings for which *AbsoluteQuarantinePriority* is not specified or false.
-
 3. Bookings that are in a "Pending" state.
-
 4. Bookings with the latest start time.
-
 5. Booking of which the name comes last alphabetically.
-
 6. Bookings of which the GUID comes last alphabetically.
 
 The image below illustrates a situation where the quarantine behavior has changed. Previously, booking A would have been quarantined, as it uses resource 1. Now this will no longer happen as the capacity is actually not overbooked.
 
 ![](~/release-notes/images/32654_1.png)
 
-
-
-The following image also illustrates the modified behavior. If booking B does not have *AbsoluteQuarantinePriority* set to true, its capacity will be moved, as it has a later start time. If *AbsoluteQuarantinePriority* is set to true, the overbooking will be resolved by moving the capacity from booking A.
+The following image also illustrates the modified behavior. If booking B does not have *AbsoluteQuarantinePriority* set to true, its capacity will be moved, as it has a later start time. If *AbsoluteQuarantinePriority* is set to true, the overbooking will be resolved by moving the capacity from booking A.
 
 ![](~/release-notes/images/32654_2.png)
-
-
 
 ##### New ConcurrencyUsageType property for ResourceUsageDefinition
 
 A ResourceUsageDefinition now has the property *ConcurrencyUsageType*, which can have the following values:
 
 - *ConcurrencyUsageType.Default*: The default value. The ResourceUsageDefinition takes one concurrency of the resource.
-
 - *ConcurrencyUsageType.All*: The ResourceUsageDefinition takes all the concurrency of the resource.
-
 - *ConcurrencyUsageType.None*: The ResourceUsageDefinition does not take any concurrency of the resource.
 
-Resource usage can only overlap with a ResourceUsageDefinition with *ConcurrencyUsageType.All* if it is set to *ConcurrencyUsageType.None*. This limitation is also in place for a single booking: if a booking has a resource with complete concurrency and another resource with 1 concurrency, the booking will be quarantined because it requests more concurrency than is available. If a complete concurrency usage is quarantined to resolve a concurrency conflict (as determined by the priority defined on booking level), it will be moved in its entirety – there is no option to only move part of the concurrency to quarantine.
+Resource usage can only overlap with a ResourceUsageDefinition with *ConcurrencyUsageType.All* if it is set to *ConcurrencyUsageType.None*. This limitation is also in place for a single booking: if a booking has a resource with complete concurrency and another resource with 1 concurrency, the booking will be quarantined because it requests more concurrency than is available. If a complete concurrency usage is quarantined to resolve a concurrency conflict (as determined by the priority defined on booking level), it will be moved in its entirety – there is no option to only move part of the concurrency to quarantine.
 
-The actual concurrency of a ResourceUsageDefinition with *ConcurrencyUsageType.All* is determined at runtime, as the *MaxConcurrency* value of the resource at the moment when it is needed, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
+The actual concurrency of a ResourceUsageDefinition with *ConcurrencyUsageType.All* is determined at runtime, as the *MaxConcurrency* value of the resource at the moment when it is needed, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
 
 Code example:
 
-```txt
+```csharp
 var booking = new ReservationInstance(new TimeRangeUtc(DateTime.UtcNow, DateTime.UtcNow.AddHours(10)))
 {
-    Name = "Booking 123",
-    ID = Guid.NewGuid()
+    Name = "Booking 123",
+    ID = Guid.NewGuid()
 };
 
 var resourceUsage = new ResourceUsageDefinition(resourceId)
 {
-    ConcurrencyUsageType = ConcurrencyUsageType.All
+    ConcurrencyUsageType = ConcurrencyUsageType.All
 };
 
 booking.ResourcesInReservationInstance.Add(resourceUsage);
@@ -2177,24 +2063,24 @@ booking.ResourcesInReservationInstance.Add(resourceUsage);
 
 ##### Booking complete resource capacity
 
-It is now possible to book all the capacities of a resource for their complete value, by setting the *UsesCompleteCapacity* property for the ResourceUsageDefinition to true. If the resource has more than one capacity defined, this will reserve all capacities. By default, this property is set to false.
+It is now possible to book all the capacities of a resource for their complete value, by setting the *UsesCompleteCapacity* property for the ResourceUsageDefinition to true. If the resource has more than one capacity defined, this will reserve all capacities. By default, this property is set to false.
 
 No other usage can overlap in case complete capacity is used. This limitation is also in place for a single booking: if a booking has a resource with complete capacity and another resource with 100 capacity, the booking will be quarantined because it requests more capacity than is available. If a complete capacity usage is quarantined to resolve a conflict (as determined by the priority defined on booking level), it will be moved in its entirety.
 
-The actual capacity in case *UsesCompleteCapacity* is true is determined at runtime, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
+The actual capacity in case *UsesCompleteCapacity* is true is determined at runtime, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
 
 Code example:
 
-```txt
+```csharp
 var booking = new ReservationInstance(new TimeRangeUtc(DateTime.UtcNow, DateTime.UtcNow.AddHours(10)))
 {
-    Name = "Booking 123",
-    ID = Guid.NewGuid()
+    Name = "Booking 123",
+    ID = Guid.NewGuid()
 };
 
 var resourceUsage = new ResourceUsageDefinition(_resource.ID)
 {
-    UsesCompleteCapacity = true
+    UsesCompleteCapacity = true
 };
 
 booking.ResourcesInReservationInstance.Add(resourceUsage);
@@ -2202,30 +2088,30 @@ booking.ResourcesInReservationInstance.Add(resourceUsage);
 
 ##### Including elements in bookings
 
-It is now possible to define an ElementUsageDefinition to include an element in a booking. When the element is included, ResourceUsageDefinitions will automatically be added for all the resources linked to the element. These resources will have the new *IsAutoGenerated* property set to true.
+It is now possible to define an ElementUsageDefinition to include an element in a booking. When the element is included, ResourceUsageDefinitions will automatically be added for all the resources linked to the element. These resources will have the new *IsAutoGenerated* property set to true.
 
 ElementUsageDefinition has three properties:
 
-- *ElementUsageImpact*: Determines if the element can be used in overlapping bookings. If set to *None*, overlapping bookings can use the same element. If set to *Full* (the default value), no overlapping bookings can use the same element, even if they have impact *None*. If the *AddOrUpdateReservationInstances* call fails because there are overlapping bookings using the same element with *Full* impact, no changes will be saved and an error of type *ElementUsageOverflow* will be returned.
+- *ElementUsageImpact*: Determines if the element can be used in overlapping bookings. If set to *None*, overlapping bookings can use the same element. If set to *Full* (the default value), no overlapping bookings can use the same element, even if they have impact *None*. If the *AddOrUpdateReservationInstances* call fails because there are overlapping bookings using the same element with *Full* impact, no changes will be saved and an error of type *ElementUsageOverflow* will be returned.
 
-- *IncludeCapacityBehavior*: Can be set to *All* or *None*. If this is set to *All*, the generated ResourceUsageDefinitions will have the *UsesCompleteCapacity* property set to true.
+- *IncludeCapacityBehavior*: Can be set to *All* or *None*. If this is set to *All*, the generated ResourceUsageDefinitions will have the *UsesCompleteCapacity* property set to true.
 
-- IncludeConcurrencyBehavior: Can be set to *All* or *None*. If this is set to *All*, the generated ResourceUsageDefinitions will have the *ConcurrencyUsageType* property set to *ConcurrencyUsageType.All*.
+- IncludeConcurrencyBehavior: Can be set to *All* or *None*. If this is set to *All*, the generated ResourceUsageDefinitions will have the *ConcurrencyUsageType* property set to *ConcurrencyUsageType.All*.
 
 Code example:
 
-```txt
+```csharp
 var booking = new ReservationInstance(new TimeRangeUtc(DateTime.UtcNow, DateTime.UtcNow.AddHours(10)))
 {
-    Name = "Booking 123",
-    ID = Guid.NewGuid()
+    Name = "Booking 123",
+    ID = Guid.NewGuid()
 };
 
 var elementUsage = new ElementUsageDefinition(new ElementID(123,456))
 {
-    ElementUsageImpact = ElementUsageImpact.Full,
-    IncludeCapacityBehavior = IncludeCapacityBehavior.All,
-    IncludeConcurrencyBehavior = IncludeConcurrencyBehavior.All
+    ElementUsageImpact = ElementUsageImpact.Full,
+    IncludeCapacityBehavior = IncludeCapacityBehavior.All,
+    IncludeConcurrencyBehavior = IncludeConcurrencyBehavior.All
 };
 
 booking.ObjectUsages.Add(elementUsage);
@@ -2233,19 +2119,17 @@ booking.ObjectUsages.Add(elementUsage);
 
 The following resources are added when an element is included in a booking:
 
-- Resources that reference the element with the *DmaID* and *ElementID* properties.
+- Resources that reference the element with the *DmaID* and *ElementID* properties.
+- Function resources that have the referenced element as their parent element (based on *MainDveDmaId* and *MainDveElementId* properties).
+- Virtual function resources linked to the element (based on *PhysicalDeviceDmaId* and *PhysicalDeviceElementId* properties).
 
-- Function resources that have the referenced element as their parent element (based on *MainDveDmaId* and *MainDveElementId* properties).
-
-- Virtual function resources linked to the element (based on *PhysicalDeviceDmaId* and *PhysicalDeviceElementId* properties).
-
-Whenever the booking is updated or a relevant resource is created or updated, the element usage is automatically updated. Any changes you do to auto-generated usage will be overwritten by the core software. When the auto-generated usage is updated, the TraceData of the *AddOrUpdateResource* call will contain ResourceManagerInfoData of type ResourceUsagesGeneratedForReservationInstances.
+Whenever the booking is updated or a relevant resource is created or updated, the element usage is automatically updated. Any changes you do to auto-generated usage will be overwritten by the core software. When the auto-generated usage is updated, the TraceData of the *AddOrUpdateResource* call will contain ResourceManagerInfoData of type ResourceUsagesGeneratedForReservationInstances.
 
 The deletion of resources in auto-generated bookings is blocked in the same way as deletion of resources that were not added automatically is blocked.
 
-This new feature has an *ElementUsages* exposer, which can be used to filter bookings that include a certain element. For example:
+This new feature has an *ElementUsages* exposer, which can be used to filter bookings that include a certain element. For example:
 
-```txt
+```csharp
 var elementToSearchFor = new ElementID(123, 789);
 var filter = ReservationInstanceExposers.ElementUsages.Contains(elementToSearchFor.ToString());
 var bookings = rmHelper.GetReservationInstances(filter);
@@ -2253,35 +2137,28 @@ var bookings = rmHelper.GetReservationInstances(filter);
 
 #### ResourceManagerEventMessage: New LostInterestReservationInstances property \[ID_32801\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 When, for example, a table is populated with ReservationInstances using ResourceManagerEventMessages with a SubscriptionFilter, you can now use the LostInterestReservationInstances property to retrieve the IDs of the ReservationInstances that no longer match the current filter after an update.
 
 > [!NOTE]
 > This list will only contain ReservationInstances to which the user has access.
->
 > To retrieve the IDs of the ReservationInstances to which the user no longer has access, you can call the GetHiddenReservationInstances method.
 
 #### Functions.xml file: Assigning a function type to a function \[ID_32851\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 It is now possible to assign a function type to each function defined in a functions.xml file.
 
 A function can be assigned one of the following types:
 
 - UserTask
-
 - ScriptTask
-
 - ResourceTask
-
 - Gateway
-
 - NoneStartEvent
-
 - TimeStartEvent
-
 - EndEvent
 
 Default function type: NULL
@@ -2303,23 +2180,22 @@ Example:
 
 #### Subscribing to ResourceUsageStatusEvents for specific resources \[ID_32979\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 From now on, it is possible to only receive ResourceUsageEventMessages for a specific resource. Using ResourceUsageStatusEventExposers, you can now filter by ResourceId.
 
 #### ReservationInstanceType and ServiceDefinitionType: New values “ResourceScheduling” and “ResourceOrchestration” \[ID_33390\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 ReservationInstanceType and ServiceDefinitionType can now be set to the following additional values:
 
 - ResourceScheduling
-
 - ResourceOrchestration
 
 #### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID \[ID_33836\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 Up to now, it was possible to delete Resource and ResourcePool objects in a filtered way by passing an “incomplete” object to the associated remove method of the ResourceManagerHelper. Moreover, passing an empty list or NULL would remove all resources on the system. This will no longer be possible.
 
@@ -2329,15 +2205,15 @@ When DataMiner detects a remove request that contains an object with an empty ID
 
 - In case of a request to remove a Resource object:
 
-```txt
-Detected a resource delete request that contained at least one object without an ID. Deleting resources with resource object filters is not supported anymore.
-```
+    ```txt
+    Detected a resource delete request that contained at least one object without an ID. Deleting resources with resource object filters is not supported anymore.
+    ```
 
 - In case of a request to remove a ResourcePool object:
 
-```txt
-Detected a resource pool delete request that contained at least one object without an ID. Deleting resource pools with object filters is not supported anymore.
-```
+    ```txt
+    Detected a resource pool delete request that contained at least one object without an ID. Deleting resource pools with object filters is not supported anymore.
+    ```
 
 > [!NOTE]
 > From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
@@ -2346,7 +2222,7 @@ Detected a resource pool delete request that contained at least one object witho
 
 #### Additional logging after sending a “send SMS” request to an SMSEagle device \[ID_32785\] \[ID_32911\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 When an HTTP request of type “send SMS” is sent to an SMSEagle device, the following information will now be logged in the SLGSMGateway log file:
 
@@ -2354,23 +2230,23 @@ When an HTTP request of type “send SMS” is sent to an SMSEagle device, the f
 
     Example:
 
-```txt
-Response of sending SMS 'This is a test' to '+324799789789' - Status: HTTP/1.1 200 OK (200) - Response data: OK; ID=25464
-```
+    ```txt
+    Response of sending SMS 'This is a test' to '+324799789789' - Status: HTTP/1.1 200 OK (200) - Response data: OK; ID=25464
+    ```
 
 - The response itself as well as the error string retrieved from the HTTP engine used by SLGSMGateway (level “info”) when the response does not start with “OK;”.
 
     Example:
 
-```txt
-Sending the SMS 'This is a test' to '+324799789789' may have failed. Received response: '' (HTTP/1.1 200 OK/200). Error info: 'Error : 12029. [ERROR_WINHTTP_CANNOT_CONNECT]'
-```
+    ```txt
+    Sending the SMS 'This is a test' to '+324799789789' may have failed. Received response: '' (HTTP/1.1 200 OK/200). Error info: 'Error : 12029. [ERROR_WINHTTP_CANNOT_CONNECT]'
+    ```
 
 ### DMS tools
 
 #### Standalone Elasticsearch Cluster Installer: New RepoPath setting \[ID_33055\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 The optional RepoPath configuration setting (which corresponds with the Path.Repo Elasticsearch setting) allows you to define a snapshot path. For a cluster, this should be a shared file location. If this setting is not filled in, it will be commented out in the Elasticsearch configuration.
 
@@ -2400,7 +2276,7 @@ When you run the installer with the “generate” option (run-stand-alone -g), 
 
 #### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on https://docs.dataminer.services/ \[ID_33680\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 In the UI of the QA Device Simulator, the help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/>.
 
@@ -2417,7 +2293,7 @@ A number of security enhancements have been made.
 
 #### Function.xml files can now contain functions without entry points and maxInstance set to 1 \[ID_31480\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 In a functions.xml file, it is now possible to define functions without entry points and maxInstance set to 1. When all criteria are met, then a function of this type will affect all tables and column parameters defined for that particular function.
 
@@ -2426,25 +2302,25 @@ In a functions.xml file, it is now possible to define functions without entry po
 
 #### Filtering alarms on alarm focus: Enhanced performance \[ID_31484\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
 Due to a number of enhancements, especially with regard to caching, overall performance has increased when filtering alarms on alarm focus.
 
 #### Enhanced performance when reading data from a MySQL or SQLServer database \[ID_31532\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 Due to a number of enhancements, on systems with a MySQL or SQLServer database, overall performance has increased when reading data from the database, especially when reading trend data during the migration to another type of database.
 
 #### Enhanced performance when reading trend data from a MySQL or SQLServer database page by page \[ID_31535\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 Due to a number of enhancements, on systems with a MySQL or SQLServer database, overall performance has increased when reading trend data from the database page by page.
 
 #### Trending: Pattern matching enhancements \[ID_31668\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
 From DataMiner 10.0.7 onwards, on systems using a Cassandra and an Elasticsearch database, DataMiner Analytics can automatically recognize recurring patterns in trend data.
 
@@ -2452,31 +2328,30 @@ A number of enhancements have now been made to this pattern matching mechanism. 
 
 #### Alarm templates: Enhanced performance when adding alarm templates with smart baselines \[ID_31670\]
 
-Main Release Version 10.3.0 - Feature Release Version (REVERTED) 10.2.3 \[CU0\]
+<!-- Main Release Version 10.3.0 - Feature Release Version (REVERTED) 10.2.3 [CU0] -->
 
 Due to a number of enhancements, overall performance has increased when adding alarm templates with smart baselines.
 
 #### DataMiner Cube desktop app: Enhanced host detection \[ID_31829\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
 In the DataMiner Cube desktop app, a number of enhancements have been made with regard to host detection.
 
 #### Cassandra will no longer store ArrowWindowRecords and PatternMatchOccurrenceRecords \[ID_31944\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 Cassandra databases will no longer store the following data:
 
 - ArrowWindowRecords
-
 - PatternMatchOccurrenceRecords
 
 The latter will now be stored in Elasticsearch instead.
 
 #### Behavioral anomaly detection: Change point flood notice will now be cleared sooner \[ID_32013\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 From now on, the notice created when the rate of newly detected behavioral changes reaches an upper limit will be cleared sooner. It will now be cleared when the rate has dropped under the limit again and there is no new flood situation in the following 15 minutes. Up to now, the notice would not be cleared for at least 2 hours, even when the actual flood situation had only lasted for a few seconds.
 
@@ -2488,25 +2363,26 @@ Detection of behavioral anomalies temporarily disabled on DMA ...: maximum allow
 
 #### Start window of DataMiner Cube desktop app now has a look and feel that is identical to that of the other Cube apps \[ID_32161\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 The start window of the DataMiner Cube desktop app has now been adapted so that its overall look and feel is identical to that of the other Cube apps.
 
 #### SLAnalytics - Alarm focus: Enhanced performance \[ID_32270\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns an estimated likelihood or “alarm focus score” to each alarm, after analyzing the short-term history and current behavior of incoming alarms in real time. Due to a number of enhancements, overall performance of this alarm focus feature has increased.
 
 #### Analytics: Prefetching mechanism for trend icons \[ID_32300\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4<br>Reverted in 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4
+Reverted in 10.2.4 -->
 
 During the first few minutes that DataMiner Analytics is running, it is still calculating which trend icons should be displayed. Previously, during this initial period, the trend icons to be displayed were retrieved from the Cassandra database. However, because of changes to the database, this is no longer possible. For this reason, a prefetching mechanism has now been implemented, so that when a trend icon is requested, it is calculated based on prefetched trend data. As there are safeguards in place to ensure that not too many database requests are done at the same time, this does mean that not all trend icons may be displayed immediately.
 
 #### SLAnalytics: A notice event will no longer be generated when entering change point flood mode \[ID_32402\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 Up to now, a notice event would be generated whenever SLAnalytics had entered change point flood mode. From now on, this event will no longer be generated.
 
@@ -2515,13 +2391,13 @@ Up to now, a notice event would be generated whenever SLAnalytics had entered ch
 
 #### SLAnalytics: Enhanced accuracy of proactive cap detection \[ID_32591\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 Because of a number of enhancements, proactive cap detection accuracy has been increased.
 
 #### SLMessageBroker: Default connection timeout is now 10 minutes \[ID_32884\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 The Connect() and Publish() methods of SLMessageBroker now have a default connection timeout of 10 minutes.
 
@@ -2529,7 +2405,7 @@ Also, the interval at which another reconnect is attempted has been increased fr
 
 #### Enhancements with regard to Automation scripts \[ID_33129\] \[ID_33226\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 A number of enhancements have been made with regard to Automation scripts.
 
@@ -2547,25 +2423,26 @@ A number of enhancements have been made with regard to Automation scripts.
 
 #### Service & Resource Management: Enhanced logging \[ID_33183\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 Up to now, when the SRM log files were set to “No logging”, no information would be logged if e.g. a Reservation event had failed. All ResourceManager, ResourceManagerAutomation and FunctionManager logging has now been re-evaluated, and the log settings have been optimized. All critical issues occurring in those modules will now be logged.
 
 #### Profile instance list for PA service definition node now also contains child instances \[ID_33187\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6<br>See also: DMS Cube - Fix was moved to 10.2.0 CU3 by RN 33188
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6
+See also: DMS Cube - Fix was moved to 10.2.0 CU3 by RN 33188 -->
 
 When you configure a service definition node in the Services app, a list of profile instances is shown for the selected profile definition. For service definitions of type "Skyline Process Automation" and "Custom Process Automation", this list will now also contain instances for child definitions of the configured profile definition.
 
 #### Anomaly detection: Enhanced performance when generating suggestion events and alarms \[ID_33283\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 Because of a number of enhancements, overall performance has increased when generating anomaly detection suggestion events and alarms.
 
 #### DataMiner upgrade will not be performed if NATS is not installed and running \[ID_33304\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When you launch a DataMiner upgrade, from now on, the upgrade process will not be allowed to start if NATS is not installed and running.
 
@@ -2574,13 +2451,13 @@ When you launch a DataMiner upgrade, from now on, the upgrade process will not b
 
 #### SLDMS will now use less memory when storing service information \[ID_33318\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 Because of a number of enhancements, the SLDMS process will now use less memory when storing service information.
 
 #### QADeviceSimulator: Enhanced CPU usage when running SNMPv3 simulations \[ID_33376\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 Because of a number of enhancements, overall CPU usage of the QADeviceSimulator has improved when running SNMPv3 simulations.
 
@@ -2589,13 +2466,13 @@ Because of a number of enhancements, overall CPU usage of the QADeviceSimulator 
 
 #### Desktop app - Start window: Performance enhancements \[ID_33384\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 Because of a number of enhancements, overall performance has increased when opening the start window of the DataMiner Cube desktop app from the system tray icon.
 
 #### Service & Resource Management: Function resources will no longer be deleted when their parent DVE element cannot be reached \[ID_33415\] \[ID_33668\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 From now on, the deletion of a function resource will be blocked when the deletion of its parent DVE element fails.
 
@@ -2608,31 +2485,31 @@ The ResourceManagerHelper now contains a new method to delete resources:
 
 #### DataMiner Cube - Alarm Console: Pencil icon now identical to that used in Data Display tables \[ID_33442\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 The pencil icon used in the Alarm Console is now identical to that used in Data Display tables.
 
 #### SLAnalytics: Enhanced performance when retrieving parameter information \[ID_33458\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 Because of a number of enhancements, overall performance has increased when retrieving parameter information.
 
 #### Web apps: Enhancements with regard to the rendering of GQI tables \[ID_33463\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 A number of enhancements have been made with regard to the rendering of GQI tables.
 
 #### Alarm templates: All behavioral change points will now be considered anomalous \[ID_33476\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. Up to now, when you enabled this, an alarm was generated whenever the SLAnalytics engine considered a behavioral change point anomalous. From now on, all behavior change points will be considered anomalous and will hence trigger an alarm.
 
 #### QADeviceSimulator: Enhanced performance when loading a MySQL database at the start of a MySQL database simulation \[ID_33555\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 Because of a number of enhancements, overall performance of the QADeviceSimulator has improved when loading a MySQL database at the start of a MySQL database simulation.
 
@@ -2643,7 +2520,7 @@ Also, the overall memory footprint of MySQL database simulations has been reduce
 
 #### Service & Resource Management: A booking will now be set to “interrupted” when whatever event related to that booking could not be executed \[ID_33576\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 Up to now, when DataMiner was unavailable when a booking was supposed to start or stop, its state was set to “interrupted” when DataMiner started up again.
 
@@ -2651,16 +2528,14 @@ This functionality has now been extended. A booking will now also be set to “i
 
 #### Frequency of smart baseline calculations is now configurable \[ID_33584\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 It is now possible to change the frequency of smart baseline calculations. On systems that aggregate large amounts of data from parameters with smart baselines, it is recommended to increase this frequency, which is 5 minutes by default.
 
 To change this setting, do the following:
 
 1. Open the SLNetClientTest tool.
-
-2. Go to *Advanced \> Options \> SLNet Options*.
-
+2. Go to *Advanced \> Options \> SLNet Options*.
 3. Select the *SmartBaselineThreadTime* option and change its value.
 
 Minimum value: 1 minute - Default value: 5 minutes
@@ -2670,27 +2545,24 @@ Minimum value: 1 minute - Default value: 5 minutes
 
 #### DataMiner Cube - Alarm Console: “Add to incident” menu option no longer available when right-clicking alarms that cannot be added to an incident \[ID_33591\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 From now on, the “Add to incident” menu option will no longer be available when you right-click an alarm that cannot be added to an incident:
 
 - Active alarms with severity “normal” (i.e. clearable alarms that have not been cleared yet)
-
 - Alarms with a source other “DataMiner System” (e.g. correlation alarms)
-
 - Alarms associated with DataMiner itself
-
 - Notices, errors, information events and suggestion events
 
 #### DataMiner Cube - Profiles app: Selected list items not visible on the UI would incorrectly not be validated after being edited \[ID_33753\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When, in the Profiles app, you edited a profile definition, a profile instance, a profile parameter or a service definition, the change would incorrectly not be validated if the item in question was not visible in the list.
 
 #### QA Device Simulator: Enhanced performance \[ID_33761\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 Because of a number of enhancements, overall performance of the QA Device Simulator tool has improved.
 
@@ -2706,13 +2578,13 @@ For example, from now on, an ArgumentNullException will be thrown when a NULL ar
 
 #### SLAnalytics: Problem with trend prediction \[ID_31352\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 In some rare cases, an error could occur in SLAnalytics when calculating trend predictions.
 
 #### Proactive cap detection: Problem with frequency of trend prediction calculations \[ID_31447\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
 The “proactive cap detection” feature predicts future issues based on trend data in the Cassandra database, using advanced techniques that consider repeating patterns, information on the rate at which a parameter value increases or decreases, etc.
 
@@ -2720,69 +2592,67 @@ Up to now, in some cases, the frequency with which trend predictions were calcul
 
 #### Alarm templates: Incorrect calculation of smart baselines \[ID_31601\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 In some cases, smart baselines would be calculated incorrectly, especially when the “Skip the last X hours in the configured trend window” and “Handle weekend days separately” options were enabled.
 
 #### Factory reset tool SLReset.exe did not remove a number of .lic files \[ID_31722\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 The factory reset tool C:\\Skyline DataMiner\\Files\\SLReset.exe can be used to fully reset a DataMiner Agent to its state immediately after installation.
 
 When run, it will now also remove the following files:
 
 - ClientApps.lic
-
 - request.lic (will be recreated after a DataMiner restart)
-
 - chartDir.lic
 
 #### Dashboards app: Dashboard names would incorrectly be allowed to contain backslash characters \[ID_31735\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.1
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
 Up to now, it would incorrectly be allowed to enter a name containing backslash characters when creating or renaming a dashboard. From now on, this will no longer be allowed.
 
 #### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables \[ID_31767\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
 Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data from an alias that grouped two logger tables.
 
 #### Service & Resource Management: Retrieving ReservationInstances sorted by a property of type string would return an incorrectly sorted result set \[ID_32003\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 When a list of ReservationInstances were retrieved sorted by a property of type string, that list would be returned in an incorrect sort order.
 
 #### Mobile apps: Clients would not immediately receive updates when items were added \[ID_32042\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.2
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
 When new items were added in one client, in some cases, those items would not immediately appear in other clients. For example, when a user created a ticket for a particular domain, other users viewing the list of tickets for that same domain would not immediately have their ticket list updated.
 
 #### DataMiner Cube - Visual Overview: Problem when navigating inside EPM cards \[ID_32288\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 When working inside an EPM card, in some cases, it would no longer be possible to navigate to a data page or a subpage.
 
 #### Cassandra: Problem when a NULL value was encountered in a logger table during a database migration \[ID_32358\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 When migrating a database to a Cassandra cluster, in some cases, an error could be thrown when a NULL value was encountered in a logger table.
 
 #### DataMiner Cube - Visual Overview: Card buttons in an EPM card would no longer work when the Topology sidebar was selected \[ID_32372\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 When an EPM card was opened from a visual overview, and the Topology tab was selected in the sidebar, a number of buttons inside that EPM card would no longer work.
 
 #### DataMiner Cube: Properties not shown in the Surveyor \[ID_32429\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.3
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 In some cases, properties with the “Display this property in the Surveyor” option enabled would incorrectly not be displayed in the Surveyor.
 
@@ -2792,35 +2662,34 @@ When users enable the option for an existing property, a tooltip will now inform
 
 #### Jobs app: No “loading” indication when job sections were being loaded \[ID_32616\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 When configuring jobs, no “loading” indication would appear when job sections were being loaded.
 
 #### Web services API: Problem with GetServiceTemplate \[ID_32625\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 The GetServiceTemplate method would throw an exception when requesting a service template with Text inputs that had neither of the following options:
 
 - Require a valid element name
-
 - Allow 'N/A' to indicate empty value
 
 #### SLAnalytics: Inaccurate short-term trend predictions \[ID_32731\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
 If the DataMiner Agent uses a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future. Up to now, in some cases, short-term trend predictions could be inaccurate due to a longer seasonality being detected on a higher level.
 
 #### Alarms and information events not migrated during migration to Cassandra Cluster \[ID_32755\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 When a DataMiner cluster with multiple DMAs was migrated to a Cassandra Cluster database, it could occur that the migration of alarms and information events failed because the DMAs tried to truncate the same table at the same time. Truncation will now take place in the initialization phase to prevent this problem, and if it fails, this will be logged but will not stop the migration. This will also prevent a rare problem where data could be missing after DMAs were migrated one by one.
 
 #### SLAnalytics: Unneeded error was thrown when an upgrade action tried to remove the pattern match occurrences table from a non-existing Elasticsearch database \[ID_32772\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.4
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 On systems without an Elasticsearch database, the following messages were thrown when an upgrade action tried to remove the pattern match occurrences table from the non-existing Elasticsearch database:
 
@@ -2833,39 +2702,37 @@ From now on, when no Elasticsearch database can be found, only the above-mention
 
 #### Elasticsearch: TTL settings would not be applied correctly \[ID_32913\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 In some cases, TTL settings defined in an Elasticsearch database would not be applied correctly. As a result, certain data (e.g. profile instance data) would not get properly cleaned up.
 
 #### Web Services API: Problem when opening the soap.asmx page \[ID_32939\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.5
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
-In some cases, an exception could be thrown when you tried to open the following page:
-
-*http://DmaNameOrIpAddress/API/v1/soap.asmx*
+In some cases, an exception could be thrown when you tried to open the following page: `http://DmaNameOrIpAddress/API/v1/soap.asmx`
 
 #### Dashboards app: Selection in parameter feed would incorrectly be cleared whenever the linked EPM feed was updated \[ID_33153\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 When an EPM feed was linked to a parameter feed, in some cases, the current selection in the parameter feed would incorrectly be cleared whenever the EPM feed was updated.
 
 #### SLPort would incorrectly split WebSocket messages larger than 65kB \[ID_33182\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 Up to now, when SLPort received a WebSocket message larger than the WebSocket buffer (i.e. 65 kB), it would incorrectly split that message in multiple chunks before passing it to the protocol.
 
 #### Alarm templates: Problem with anomaly detection alarms \[ID_33216\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
 
 #### DataMiner Cube - Alarm templates: Anomaly detection alarms would incorrectly disappear after a DataMiner restart \[ID_33278\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters.
 
@@ -2873,7 +2740,7 @@ Up to now, these anomaly detection alarms would incorrectly disappear from the A
 
 #### DataMiner Cube desktop app: Problem when creating a new group in the start window \[ID_33300\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 In some rare cases, an error could occur when you created a new group in the start window of the DataMiner Cube desktop app.
 
@@ -2881,7 +2748,7 @@ Also, the name of a group could get lost when you deleted the first agent/cluste
 
 #### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml \[ID_33322\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6 \[CU0\]
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 [CU0]  --> 
 
 Up to now, the CSLCloudBridge library would incorrectly not take into account the connection timeout specified in the SLCloud.xml file. In some cases, this could lead to run-time errors in the MessageBrokerReconnectThread.
 
@@ -2897,77 +2764,70 @@ The connection timeout specified in SLCloud.xml is the maximum time it can take 
 
 #### ResourceManager module would fail to initialize on systems with a MySQL database \[ID_33327\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.6
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
 On systems with a MySQL database, the ResourceManager module would fail to initialize.
 
 #### SLCloud.xml files would incorrectly refer to the local agent using the IP address instead of the hostname when the agents were configured to use HTTPS \[ID_33342\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When, in a DataMiner System, agents were configured to use HTTPS, the SLCloud.xml files of each of those agent would incorrectly refer to the local agent using the IP address instead of the hostname.
 
 #### Web apps: Only part of the value would be selected when moving the mouse pointer over a selection box that had the focus \[ID_33379\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When you moved the mouse pointer over a selection box that had the focus, in some cases, only part of the value would be selected.
 
 #### SLAnalytics: Problem when predicting the trend of a history set parameter \[ID_33389\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 Up to now, negative status values in the trend data due to element restarts could cause the trend prediction engine to incorrectly interpret the trend data of a history set parameter.
 
 #### Dashboards app - GQI: Values of profile parameters without decimals defined would incorrectly be replaced by the maximum integer value \[ID_33418\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When a profile parameter of type “number” had no decimals defined, its value would incorrectly be displayed as the maximum value that can be assigned to a parameter of type integer. From now on, when a profile parameter has no decimals defined, its value will be displayed as is, without decimals.
 
 #### Ticketing app: Problem with ticket domains incorrectly marked as masked \[ID_33449\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 If, in the Ticketing app, you tried to edit a ticket of a domain linked to an element, in some cases, that domain would incorrectly be marked as “masked”.
 
 #### Issues with NATS request/response actions \[ID_33487\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 A number of issues with NATS request/response actions have been solved.
 
 #### DataMiner Cube - Visual Overview: Session variables of Resource Manager component would incorrectly be set to NULL when cleared \[ID_33527\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When the following session variables of an embedded Resource Manager component were cleared, up to now, they would incorrectly be set to NULL. From now on, they will be set to an empty value instead.
 
 - ResourcesInSelectedReservation
-
 - SelectedOccurrence
-
 - SelectedPool
-
 - SelectedReservation
-
 - SelectedReservationDefinition
-
 - SelectedResource
-
 - SelectedSession
-
 - TimerangeOfSelectedReservation
 
 #### Problem with SLDataGateway when updating parameters \[ID_33535\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 In some cases, an error could occur in SLDataGateway when updating parameters.
 
 #### Ticketing app: Problem when trying to add a value to the State field of a ticket domain \[ID_33537\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 When you tried to add a new value to the State field of a ticket domain, the following error would be thrown when the change was saved:
 
@@ -2977,55 +2837,55 @@ Error trapped: Unable to cast object of type 'Skyline.DataMiner.Web.Common.v1.DM
 
 #### DataMiner Cube - Resources app: Empty Occupancy tab \[ID_33540\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
-The first time you clicked the *Occupancy* tab after opening the *Resources* app, in some rare cases, that tab would incorrectly be empty.
+The first time you clicked the *Occupancy* tab after opening the *Resources* app, in some rare cases, that tab would incorrectly be empty.
 
 #### Dashboards app: Dashboard would incorrectly scroll up when you selected a field in an EPM feed \[ID_33650\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 When, on a dashboard, an EPM feed was surrounded by other components, in some cases, the dashboard would incorrectly scroll up when you selected a field in the EPM feed.
 
 #### Run-time errors due to MessageBrokerReconnectThread problems in SLCloudBridge \[ID_33716\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8 \[CU0\]
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU0] -->
 
 In some cases, run-time errors could occur due to MessageBrokerReconnectThread problems in the SLCloudBridge process.
 
 #### SLDataGateway: Communication via NATS could get stopped when a large number of parameter changes were being processed \[ID_33731\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.7 \[CU0\]
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 [CU0] -->
 
 When a large number of parameter changes were being processed, up to now, communication entering or leaving SLDataGateway via NATS could get stopped.
 
 #### DataMiner Cube - Profiles app: No validation errors were displayed when no discrete values had been added yet for a profile parameter of type discrete \[ID_33756\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When an error occurred while configuring a profile parameter of type “discrete”, up to now, that error would not be displayed on the UI when no discrete values had been added yet.
 
 #### DataMiner Cube - Resources app: Warning messages were incorrectly shown in the footer when resource manager configuration requests returned error trace data \[ID_33780\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-When you open the *Resources* app, a warning will be shown in the footer when error trace data was found when fetching resource manager data from the server. Up to now, such a warning would incorrectly also be shown when resource manager configuration requests returned error trace data.
+When you open the *Resources* app, a warning will be shown in the footer when error trace data was found when fetching resource manager data from the server. Up to now, such a warning would incorrectly also be shown when resource manager configuration requests returned error trace data.
 
 #### Problem with SLAnalytics when an element or a parameter was deleted \[ID_33788\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When an element or a parameter was deleted, in some rare cases, an error could occur in the SLAnalytics process.
 
 #### DataMiner Cube - Resources app: Updating a session variable in a Resource Manager component would incorrectly cause that same session variable to be updated in the Occupancy tab of the Resources app \[ID_33800\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When a session variable (e.g. YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
 
 #### SLAnalytics: Error messages could get added to the log file due to a problem with the automatic incident tracking algorithm \[ID_33820\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 Due to a problem with the automatic incident tracking algorithm, error messages similar to the following one could incorrectly get added to the SLAnalytics log file:
 
@@ -3035,31 +2895,31 @@ Due to a problem with the automatic incident tracking algorithm, error messages 
 
 #### Problem with SLDataGateway while a DataMiner Agent was being shut down \[ID_33839\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8 \[CU0\]
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU0] -->
 
 When a DataMiner Agent was being shut down, in some cases, an error could occur in the SLDataGateway process.
 
 #### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed \[ID_33875\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.8 \[CU0\]
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU0] -->
 
 During a DataMiner upgrade, the VerifyNatsRunning prerequisite could fail due to the SLCloudBridge.dll file having been renamed to SLMessageBroker.dll in DataMiner versions 10.2.0/10.1.5.
 
 #### Azure Active Directory: Domain users who were only a member of a domain group could be deleted during an LDAP synchronization \[ID_33916\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When using Azure Active Directory as an identity provider, up to now, during an LDAP synchronization, all domain users who were only a member of a domain group would incorrectly be deleted when the Azure AD client secret had expired.
 
 #### DataMiner Object Model: FieldValues would not get concatenated correctly \[ID_33989\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When a name concatenation for a DomInstance had been defined in either the ModuleSettings or the DomDefinition, in some cases, the FieldValues would not get concatenated correctly.
 
 #### Elasticsearch: Closed alarms were incorrectly not migrated to the dms-alarms index when the associated element had been migrated from another DMS \[ID_34020\]
 
-Main Release Version 10.3.0 - Feature Release Version 10.2.9
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
 
