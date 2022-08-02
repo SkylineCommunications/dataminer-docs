@@ -56,7 +56,7 @@ To make a FieldDescriptor allow multiple values, set its FieldType to “List\<t
 
 - When the FieldType of a FieldDescriptor is set to “List\<type>”, the FieldValue will be the following:
 
-    ```txt
+    ```csharp
     Value = new ListValueWrapper<type>(new List<type>...)
     ```
 
@@ -1964,7 +1964,7 @@ A few examples:
 
 It is now possible to replace the system protocol functions by uploading an XML file using the ProtocolFunctionHelper. See the following example.
 
-```txt
+```csharp
 var pfHelper = new ProtocolFunctionHelper(engine.SendSLNetMessages);
 var xmlContent = File.ReadAllText("...");
 pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
@@ -2274,7 +2274,7 @@ When you run the installer with the “generate” option (run-stand-alone -g), 
 </ElasticConfiguration>
 ```
 
-#### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on https://docs.dataminer.services/ \[ID_33680\]
+#### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/> [ID_33680]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
@@ -2893,13 +2893,13 @@ Due to a problem with the automatic incident tracking algorithm, error messages 
 2022/06/08 23:54:36.684|SLAnalytics|Counter.h(61): containers::Counter<ServiceInfo>::decrease)|ERR|0|Decreasing counter for key that is not in the map
 ```
 
-#### Problem with SLDataGateway while a DataMiner Agent was being shut down \[ID_33839\]
+#### Problem with SLDataGateway while a DataMiner Agent was being shut down [ID_33839]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU0] -->
 
 When a DataMiner Agent was being shut down, in some cases, an error could occur in the SLDataGateway process.
 
-#### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed \[ID_33875\]
+#### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed [ID_33875]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU0] -->
 

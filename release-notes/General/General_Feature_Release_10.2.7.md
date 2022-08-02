@@ -1,4 +1,8 @@
-# Feature release 10.2.7
+---
+uid: General_Feature_Release_10.2.7
+---
+
+# General Feature Release 10.2.7
 
 ## New features
 
@@ -32,9 +36,7 @@ From now on, in DataMiner.xml, you can set the scriptingProcesses option to an i
 For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3, then...
 
 - SLScripting 1 will host SLProtocol #1 and #4
-
 - SLScripting 2 will host SLProtocol #2 and #5
-
 - SLScripting 3 will host SLProtocol #3
 
 > [!NOTE]
@@ -74,27 +76,20 @@ A number of enhancements have been made to the Failover Config window. See below
 - When the second agent is added,
 
     - the IP address or hostname of that second agent is checked to determine whether it refers to a valid DataMiner Agent, and
-
     - the DataMiner IDs of both agents are checked. In a Failover setup, both must be identical.
 
 - Advanced options:
 
     - Synchronization NICs are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
-
     - Heartbeats are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
-
     - When a new heartbeat is added, the first NIC will automatically be selected.
 
 **Failover with virtual IP address**
 
 - Subnet masks for IP inputs will be suggested based on the current subnet of the DMA.
-
 - The local IP address will no longer be suggested as virtual IP address.
-
 - All known information regarding the valid corporate IP addresses will be filled in automatically (hostname, acquisition IP address and subnet masks)
-
 - It is now mandatory to fill in all three corporate IP addresses.
-
 - It is no longer possible to switch from Failover with virtual IP address to Failover with hostnames when Failover with virtual IP address is active.
 
 - In the advanced options, the (virtual) IP address information will be automatically filled in for new setups.
@@ -104,7 +99,6 @@ A number of enhancements have been made to the Failover Config window. See below
 - When setting up a new Failover with hostnames, in the hostname setup, the hostname will now be displayed instead of the IP address. If Failover with hostnames has already been set up, the hostname setup will display the currently used hostnames.
 
 - It is now mandatory to fill in all three hostnames.
-
 - It is no longer possible to switch from Failover with hostnames to Failover with virtual IP address when Failover with hostnames is active.
 
 #### DataMiner Cube - System Center: Additional log files \[ID_33355\]
@@ -112,21 +106,13 @@ A number of enhancements have been made to the Failover Config window. See below
 When, in *System Center*, you go to *Logging \> DataMiner*, you can now inspect the following additional log files:
 
 - SLHistoryManager.txt
-
 - SLIncrementManager.txt
-
 - SLManagerStore.txt
-
 - SLMasterSyncerManager.txt
-
 - SLMigrationManager.txt
-
 - SLModuleSettingsManager.txt
-
 - SLProcessAutomationManager.txt
-
 - SLSRMSettableServiceStateManager.txt
-
 - SLVisualManager.txt
 
 #### Alarm Console: A comment will now be added to an manually created incident when created or updated \[ID_33387\]
@@ -140,7 +126,6 @@ In the Alarm Console, it is now possible to edit incidents (i.e. alarm groups) u
 When you open the side panel and select an incident, a *Drag-and-drop editing* button will appear. Clicking that button will freeze both the side panel and the alarm tab and will allow you to
 
 - add alarms to the incident by dragging them from the Alarm Console onto the side panel, and
-
 - remove alarms from the incident by clicking the “X” next to the base alarm.
 
 When you are finished editing the incident, click *Apply* to apply your changes and unfreeze the side panel.
@@ -181,7 +166,7 @@ If an error occurs in a subscript with extended error info, the HadError propert
 
 Example:
 
-```txt
+```csharp
 var script = engine.PrepareSubScript("MySubScript");
 script.ExtendedErrorInfo = true;
 script.SelectScriptParam("Info", "{}");
@@ -197,7 +182,6 @@ if (script.HadError)
 
 > [!NOTE]
 > Up to now, when an element was not running, the following error message would be thrown:
->
 > *Element {elementName} is not active, not available or does not exist*<br> From now, when an element is not running, the following error message (in which elementState will have one of the following values: paused, stopped, in timeout or not active) will be thrown instead:
 > *Element {elementName} is {elementState}*
 
@@ -208,7 +192,6 @@ if (script.HadError)
 In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, there are now two new icons:
 
 - *Private dashboards*, and
-
 - *Shared dashboards*.
 
 The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to the cloud and there are shared dashboards.
@@ -230,9 +213,7 @@ In the Dashboards app and the Application Framework, dashboards, app pages and a
 When you right-click a column header of a data table component (e.g. a GQI table), you will now be presented with a number of sorting, grouping and filtering options.
 
 - To sort by the column in question, select a sort order (e.g. A \> Z, Z \> A, etc.).
-
 - To group by the column in question, select *Group*.
-
 - To filter the data in the table, construct a single or composite condition depending on the column type:
 
 | Column type      | Filter option                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -264,7 +245,6 @@ If you choose to copy the entire row or the entire table, the data will be copie
 ReservationInstanceType and ServiceDefinitionType can now be set to the following additional values:
 
 - ResourceScheduling
-
 - ResourceOrchestration
 
 ### DMS tools
@@ -349,7 +329,6 @@ From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types
 SLLogCollector will now also collect the following VerifyClusterPorts files:
 
 - C:\\Skyline DataMiner\\Upgrades\\Helper\\VerifyClusterPorts\\VerifyClusterPorts.crash.txt
-
 - C:\\Skyline DataMiner\\Upgrades\\Helper\\VerifyClusterPorts\\VerifyClusterPorts.LastRun.xml
 
 #### DataMiner Cube: Enhanced performance when using the search box in the Cube header \[ID_33510\]
@@ -361,9 +340,7 @@ Because of a number of enhancements, overall performance has increased when usin
 SLLogCollector will now also collect the log files of the following cloud processes:
 
 - ArtifactDeployer
-
 - CloudFeed
-
 - Orchestrator
 
 #### QADeviceSimulator: Enhanced performance when loading a MySQL database at the start of a MySQL database simulation \[ID_33555\]
@@ -382,9 +359,7 @@ It is now possible to change the frequency of smart baseline calculations. On sy
 To change this setting, do the following:
 
 1. Open the SLNetClientTest tool.
-
 2. Go to *Advanced \> Options \> SLNet Options*.
-
 3. Select the *SmartBaselineThreadTime* option and change its value.
 
 Minimum value: 1 minute - Default value: 5 minutes
@@ -518,7 +493,6 @@ A number of alarm-related issues have been fixed:
 - When advanced naming was configured to create a display key that contained parameters from linked tables, in some cases, the service impact of the alarms would be incorrect.
 
 - When a new row was added to a table, in some cases, the conditional monitoring based on service impact alarming would be incorrect.
-
 - In some cases, alarms retrieved from the database would contain outdated fields in the alarm tree.
 
 #### Dashboards app - GQI: Values of profile parameters without decimals defined would incorrectly be replaced by the maximum integer value \[ID_33418\]
@@ -534,9 +508,7 @@ When an Automation script was launch from the Dashboards app or from a custom we
 Up to now, the following preprocessor directives would incorrectly be inserted into the Automation script code, causing syntax errors to appear on the incorrect lines.
 
 - #define DBInfo
-
 - #define DCFv1
-
 - #define ALARM_SQUASHING
 
 #### Log entry containing an incorrect number of timers would be added to the element log file when an element was stopped \[ID_33438\]
@@ -626,7 +598,6 @@ When an element using SNMP polling was stopped, a problem could occur in the SLS
 When using a DataMiner Cube desktop application that had been installed by means of an MSI package, in some cases, the following errors could be thrown:
 
 - *The required version is not available.*
-
 - *Value cannot be null.*
 
 #### SLDataGateway: Communication via NATS could get stopped when a large number of parameter changes were being processed \[ID_33731\]

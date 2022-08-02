@@ -1,4 +1,8 @@
-# Feature release 10.2.8
+---
+uid: General_Feature_Release_10.2.8
+---
+
+# General Feature Release 10.2.8
 
 ## New features
 
@@ -17,7 +21,6 @@ Process:
 2. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
     - Its TraceData contains a DomActionInfo object in which type is set to DomActionInfo.Type.ScriptExecutionId.
-
     - The info object has an ExecutionId property that contains the execution ID of the script that was triggered by the DOM action.
 
 3. The client sends a ScriptControlMessage of type Launch using the script ID that was returned and will then receive ScriptProgressEventMessages.
@@ -91,7 +94,7 @@ The corresponding resource bands are not updated automatically in case there is 
 
 #### Failover: Current Failover DMA status will now automatically be refreshed every minute \[ID_33426\]
 
-In the *Failover Config* window as well as the *Status* dialog box, the current Failover DMA status will now automatically be refreshed every minute.
+In the *Failover Config* window as well as the *Status* dialog box, the current Failover DMA status will now automatically be refreshed every minute.
 
 #### Visual Overview - Resource Manager component: Selecting multiple resource bands in the timeline \[ID_33536\]
 
@@ -114,9 +117,7 @@ In the timeline, the context menu will no longer open automatically after select
 This change in behavior will now allow you to trigger a script by clicking an action button instead of selecting an option in the context menu of the timeline. In other words, you will now be able to proceed as follows:
 
 1. Select a resource band.
-
 2. Select a time range.
-
 3. Click an action button.
 
 The SelectedTimeRange variable will now be cleared when the time selection is cleared (i.e. when it is no longer visible/available). Up to now, this variable would only be cleared when the selection was changed.
@@ -133,9 +134,10 @@ In shape data or shape text of shapes linked to a booking (e.g. dynamically gene
 
 See the following examples:
 
-*\[Resource:\[reservation:\[this reservationID\],ResourceID\|NodeID=18\|\],Name\]*
-
-*\[reservation:\[this reservationID\],Property=Monitoring\]*
+```txt
+[Resource:[reservation:[this reservationID],ResourceID|NodeID=18|],Name]*
+[reservation:[this reservationID],Property=Monitoring]*
+```
 
 ### DMS Automation
 
@@ -143,7 +145,7 @@ See the following examples:
 
 When sending an ExecuteScriptMessage, you can now specify that no “Script started” information event should be generated when the script is executed. To do so, add the SKIP_STARTED_INFO_EVENT:TRUE option to the string array as shown in the following example.
 
-```txt
+```csharp
 ExecuteScriptMessage esm = new ExecuteScriptMessage("Script")
 {
     Options = new SA(new[]
@@ -159,7 +161,7 @@ engine.ExecuteScript(esm);
 
 Also, the SubScriptOptions class has been extended with a SkipInitialInfoEvent property that can be used to pass the above-mentioned option to subscripts. See the following example.
 
-```txt
+```csharp
 var options = engine.PrepareSubScript("SubScript");
 options.Synchronous = true;
 options.PerformChecks = false;
@@ -174,7 +176,6 @@ options.StartScript();
 The Service Definition component now supports both types of process automation service definitions:
 
 - Skyline Process Automation
-
 - Custom Process Automation
 
 #### GQI: Data source “Get custom data” renamed to “Get ad hoc data” \[ID_33795\]
@@ -191,7 +192,7 @@ The action editor window can now be closed by clicking the *OK* button.
 
 ### DMS tools
 
-#### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on https://docs.dataminer.services/ \[ID_33680\]
+#### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/> [ID_33680]
 
 In the UI of the QA Device Simulator, the help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/>.
 
@@ -243,7 +244,6 @@ A number of enhancements have been made to the NATS configuration:
     Disabling the timer can be done in one of the following ways:
 
     - Set the SLNet option “NATSForceManualConfig” to true in the SLNetClientTest tool (default = false).
-
     - Set the SLNet.NATSForceManualConfig tag to true in MaintenanceSettings.xml.
 
 > [!NOTE]
@@ -265,11 +265,8 @@ This functionality has now been extended. A booking will now also be set to “i
 From now on, the “Add to incident” menu option will no longer be available when you right-click an alarm that cannot be added to an incident:
 
 - Active alarms with severity “normal” (i.e. clearable alarms that have not been cleared yet)
-
 - Alarms with a source other “DataMiner System” (e.g. correlation alarms)
-
 - Alarms associated with DataMiner itself
-
 - Notices, errors, information events and suggestion events
 
 #### DataMiner Upgrade: Additional action to delete legacy custom data templates \[ID_33628\]
@@ -294,8 +291,7 @@ Because of a number of enhancements, overall performance has improved when runni
 
 In DataMiner Cube, the following enhancements have been made to the *Failover Configuration* window:
 
-- In the *Advanced \> Virtual IP Addresses* tab, the columns are now wide enough to display the full IP address/mask.
-
+- In the *Advanced \> Virtual IP Addresses* tab, the columns are now wide enough to display the full IP address/mask.
 - The *Advanced \> Heartbeats* tab now indicates which heartbeats are inverted.
 
 #### Clearer error message will now appear when a DataMiner Agent cannot be reached \[ID_33752\]
@@ -317,38 +313,30 @@ In some cases, an error could occur in SLPort when the last serial element using
 In some cases, the following issues could occur when migrating data from SQL to Cassandra:
 
 - Online migration would be executed, but would not get marked as completed in Cube.
-
 - Offline migration would fail to launch.
 
- Also, Cube will no longer throw “System.InvalidOperationException: Collection was modified” errors.
+Also, Cube will no longer throw “System.InvalidOperationException: Collection was modified” errors.
 
 #### DataMiner Cube - Visual Overview: Session variables of Resource Manager component would incorrectly be set to NULL when cleared \[ID_33527\]
 
 When the following session variables of an embedded Resource Manager component were cleared, up to now, they would incorrectly be set to NULL. From now on, they will be set to an empty value instead.
 
 - ResourcesInSelectedReservation
-
 - SelectedOccurrence
-
 - SelectedPool
-
 - SelectedReservation
-
 - SelectedReservationDefinition
-
 - SelectedResource
-
 - SelectedSession
-
 - TimerangeOfSelectedReservation
 
-#### DataMiner Cube: Properties of exported elements would not be added to the CSV file in the cor­rect order \[ID_33528\]
+#### DataMiner Cube: Properties of exported elements would not be added to the CSV file in the correct order \[ID_33528\]
 
 When you had exported elements to a CSV file, the element properties would not be added to the CSV file in the correct order.
 
 #### DataMiner Cube - Resources app: Empty Occupancy tab \[ID_33540\]
 
-The first time you clicked the *Occupancy* tab after opening the *Resources* app, in some rare cases, that tab would incorrectly be empty.
+The first time you clicked the *Occupancy* tab after opening the *Resources* app, in some rare cases, that tab would incorrectly be empty.
 
 #### DataMiner Cube - Data Display: Problems with button and date/time picker sizing \[ID_33601\]
 
@@ -442,7 +430,7 @@ In some cases, an error could occur in SLWatchdog when generating the database r
 
 #### DataMiner Cube - Elements: Problem when selecting the Replicate checkbox before selecting a DMA \[ID_33773\]
 
-When, while creating a new element on a DataMiner Agent in a DMS, you selected the *Replicate* checkbox without first selecting a DataMiner Agent, the *Replicate Element* settings would not be shown and the *Device Details* would remain unavailable.
+When, while creating a new element on a DataMiner Agent in a DMS, you selected the *Replicate* checkbox without first selecting a DataMiner Agent, the *Replicate Element* settings would not be shown and the *Device Details* would remain unavailable.
 
 From now on, the Replicate checkbox will be unavailable as long as no DataMiner has been selected.
 
@@ -455,13 +443,11 @@ When SLElement was processing a history set, an error could occur when the times
 The following problems with the Failover option *AlwaysBruteForceOffline* have now been fixed:
 
 - When configured via an UpdateFailoverConfigMessage in an Automation script, the option would not be applied in the DMS.xml file.
-
 - When configured by manually updating the DMS.xml file, the option would be overwritten.
-
 - When applied, the option would cause the DMA to restart without also restarting SLNet.
 
 > [!NOTE]
-> In DataMiner Cube, the *AlwaysBruteForceOffline* option can now be configured by enabling or disabling the *Auto restart agent when going offline* option in the *Advanced options* tab of the *Advanced Failover Configuration* window.
+> In DataMiner Cube, the *AlwaysBruteForceOffline* option can now be configured by enabling or disabling the *Auto restart agent when going offline* option in the *Advanced options* tab of the *Advanced Failover Configuration* window.
 
 #### SLDataGateway: Problem when no NATS connection could be established at DataMiner startup \[ID_33779\]
 

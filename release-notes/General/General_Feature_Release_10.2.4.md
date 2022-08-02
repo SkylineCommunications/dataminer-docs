@@ -1,4 +1,8 @@
-# Feature release 10.2.4
+---
+uid: General_Feature_Release_10.2.4
+---
+
+# General Feature Release 10.2.4
 
 ## New features
 
@@ -38,7 +42,6 @@ Continues an already initiated upload and returns an empty ContinueUploadRespons
 Up to now, when an SNMP Manager was configured to resend all active alarms every configured time interval, it would ignore any ongoing alarm storm. From now on, when there is an alarm storm, depending on whether the *Enable alarm storm protection by grouping alarms with the same parameter description* option is enabled, the following will happen:
 
 - If the grouping option is enabled, only the alarms that are not associated with an element parameter in alarm storm will be resent.
-
 - If the grouping option is not enabled, no alarms will be resent during the alarm storm.
 
 > [!NOTE]
@@ -76,9 +79,7 @@ In Service & Resource Management environments, a service template used to genera
 SLSSH now supports the following additional cyphers and key exchange algorithms:
 
 - AES256CRT
-
 - ECDHSHA2NISTP384
-
 - ECDHSHA2NISTP521
 
 DataMiner now supports the following encryption methods (in order of preference):
@@ -86,33 +87,23 @@ DataMiner now supports the following encryption methods (in order of preference)
 **HMACs**
 
 - HMAC-SHA2-256
-
 - HMAC-SHA1
-
 - HMAC-MD5
 
 **Key exchange algorithms**
 
 - ecdh-sha2-nistp521
-
 - ecdh-sha2-nistp384
-
 - ecdh-sha2-nistp256
-
 - diffie-hellman-group14-sha1
-
 - diffie-hellman-group1-sha1
-
 - diffie-hellman-group-exchange-sha1
 
 **Ciphers**
 
 - Aes-256-CTR
-
 - Aes-128-CTR
-
 - Aes-128-CBC
-
 - 3des-CBC
 
 ### DMS Protocols
@@ -137,7 +128,6 @@ Embedded Chromium and Edge browser engines allow external tooling to inspect and
 When starting DataMiner Cube, from now on, you can pass a remote debugging port for both Chromium and Edge engines by specifying the following command line options:
 
 - ChromeRemoteDebuggingPort=7001
-
 - EdgeRemoteDebuggingPort=7002
 
 Note that the port number must be between 1024 and 65535.
@@ -147,7 +137,6 @@ Note that the port number must be between 1024 and 65535.
 When opening their user card, from now on, users will only be able to edit group membership if they have the following permissions:
 
 - Administrator permission, or
-
 - Limited administrator permission as well as “Edit all groups” or “Edit own groups” permission
 
 > [!NOTE]
@@ -159,12 +148,11 @@ Shapes that cannot be clicked and had their text trimmed by means of a “TextTr
 
 #### New setting to enable the cache of the Chromium browser engine \[ID_32534\]
 
-In the *Computer \> Advanced* section of the *Settings* app, you can now use the *Enable browser cache* setting to enable the cache of the Chromium browser engine.
+In the *Computer \> Advanced* section of the *Settings* app, you can now use the *Enable browser cache* setting to enable the cache of the Chromium browser engine.
 
 Enabling this cache has the following advantages:
 
 - Certain web applications will load faster.
-
 - SAML authentication can provide a better single sign-on experience.
 
 > [!CAUTION]
@@ -182,7 +170,6 @@ If you specify a filter context like the one above, the shape will be linked to 
 
 > [!NOTE]
 > It is also possible to specify a filter context in which both system name and system type are combined. To do so, use the following syntax:
->
 > *FilterContext=SystemName=X;SystemType=Y*<br> If you specify a filter context like the one above, the shape will be linked to the alarms of which the “System Name” is set to “X” and “System Type” is set to “Y”.
 
 #### DataMiner Cube - Data Display: Row filter will now be shown when opening the alarm template, trend template or information template for a particular parameter table row \[ID_32555\]
@@ -191,7 +178,7 @@ When, in Data Display, you drill down to a specific row of a parameter table, yo
 
 #### DataMiner Cube - Alarm Console: Clearer summary alarm values in case of an alarm storm \[ID_32608\]
 
-When the Alarm Console setting *Enable alarm storm protection by grouping alarms with the same parameter description* is enabled, during an alarm storm, alarms associated with the same parameter will be grouped under a summary alarm.
+When the Alarm Console setting *Enable alarm storm protection by grouping alarms with the same parameter description* is enabled, during an alarm storm, alarms associated with the same parameter will be grouped under a summary alarm.
 
 Up to now, the value of such a summary alarm would state “Parameter (X alarms)” with X being the number of alarm trees rather than the actual number of alarms.
 
@@ -202,9 +189,7 @@ From now on, the value of a summary alarm will instead state “Parameter (X ala
 When configuring a service definition, you now have to specify its type:
 
 - SRM (default type)
-
 - Skyline Process Automation
-
 - Custom Process Automation
 
 In Visual Overview, this type can be visualized by means of a \[ServiceDefinition:...\] placeholder. See the following example, in which xxx should be replaced by a service definition GUID.
@@ -214,17 +199,17 @@ In Visual Overview, this type can be visualized by means of a \[ServiceDefinitio
 ```
 
 > [!NOTE]
-> It is not allowed to duplicate service definitions of type “Skyline Process Automation”. Therefore, the *Duplicate* option will not be available when you right-click a service definition of that type.
+> It is not allowed to duplicate service definitions of type “Skyline Process Automation”. Therefore, the *Duplicate* option will not be available when you right-click a service definition of that type.
 
 #### Trending: Refresh rate of trend graphs can now be configured \[ID_32715\]
 
-Up to now, open trend graphs were automatically refreshed every 2 minutes. From now on, you can specify a custom refresh rate (5 seconds to 5 minutes) in the *Update interval* setting, located in the *User \> Trending* section of the *Settings* app.
+Up to now, open trend graphs were automatically refreshed every 2 minutes. From now on, you can specify a custom refresh rate (5 seconds to 5 minutes) in the *Update interval* setting, located in the *User \> Trending* section of the *Settings* app.
 
 Default: 2 minutes
 
 > [!NOTE]
 > - Changing this refresh rate can have a minor effect on overall performance, especially when opening trend graphs with more than 10 parameters.
-> - If you change the *Update interval* setting, then open trend graphs need to be closed and re-opened if you want them to use the new interval.
+> - If you change the *Update interval* setting, then open trend graphs need to be closed and re-opened if you want them to use the new interval.
 
 #### Visual Overview: Configuring a shape to set a duration in a session variable \[ID_32716\]
 
@@ -233,7 +218,6 @@ You can now configure a shape to set a duration of type TimeSpan in a session va
 To do so, add the following shape data fields to the shape:
 
 - a shape data field of type SetVar, of which the value is set to the name of the session variable, and
-
 - a shape data field of type SetVarOptions, of which the value is set to “Control=Duration”, followed by the necessary options. For a list of possible options, see below.
 
 | Shape data field | Value                                       |
@@ -255,7 +239,7 @@ Next to “Control=Duration”, you can specify the following options (separated
 
 Use a page-level InitVar field to set the initial value of the duration in the session variable.
 
-If you set the initial value to “Infinity”, the value in the session variable will be replaced by TimeSpan.MaxValue. If the *ShowInfinity* option is set to true, a selected infinity checkbox will be displayed next to the duration selector.
+If you set the initial value to “Infinity”, the value in the session variable will be replaced by TimeSpan.MaxValue. If the *ShowInfinity* option is set to true, a selected infinity checkbox will be displayed next to the duration selector.
 
 > [!NOTE]
 > Using an InitVar or SetVar field, it is possible to set a duration that is outside of the specified minimum/maximum range.
@@ -289,13 +273,13 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 
 #### Dashboards app - Parameter feed: “Selected only” toggle button has been removed \[ID_32541\]
 
-Up to now, a parameter feed had a *Selected only* toggle button that allowed you to show or hide items that were not selected. Now, this toggle button has been removed.
+Up to now, a parameter feed had a *Selected only* toggle button that allowed you to show or hide items that were not selected. Now, this toggle button has been removed.
 
 Also, when a dashboard is loaded with an initial selection (either configured or in the URL), the selected items will now always appear at the top of the list.
 
 #### Dashboards app - GQI: GQI filter can now be linked to query rows \[ID_32552\]
 
-In a filter node of a dashboard query, you can now choose to filter by query rows from a feed. To do so, select the *Use feeds* option, select the feed, select the type *Query rows*, and then select the appropriate column of the table containing the rows. Note that only the columns compatible with the type of column you are filtering will be available for selection.
+In a filter node of a dashboard query, you can now choose to filter by query rows from a feed. To do so, select the *Use feeds* option, select the feed, select the type *Query rows*, and then select the appropriate column of the table containing the rows. Note that only the columns compatible with the type of column you are filtering will be available for selection.
 
 #### Dashboards app: Specifying data input for an EPM feed in a URL using “epm-selections” instead of “cpes” \[ID_32594\]
 
@@ -304,16 +288,13 @@ Up to now, in a dashboard URL, it was possible to specify data input for an EPM 
 The new “epm-selections” data key consist of the following elements:
 
 - DataMiner ID
-
 - Element ID
-
 - Field parameter ID
-
 - Primary key
 
 The following example shows a JSON object that contains an “epm-selections” data key, which can be passed to a dashboard using a URL parameter of type “data”:
 
-```txt
+```json
 {
     "version": 1,
     "feed": {
@@ -324,18 +305,17 @@ The following example shows a JSON object that contains an “epm-selections” 
 
 > [!NOTE]
 > In order to maintain backward compatibility, data provided via a “cpes” object will automatically be converted when necessary.
->
 > Only when any of the fields in the “cpes” object contain forward slashes will you need to use the new “epm-selections” object instead.
 
 #### Dashboards app: Default index filter for parameter feed component \[ID_32595\]
 
 It is now possible to add a default index filter to a parameter feed component. This way, it's not necessary to apply your filter to the component again whenever the dashboard is refreshed.
 
-This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters *section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
+This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters *section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
 
-#### Dashboards app: “Write” filter removed from Data \> All available data \> Parameters \[ID_32643\]
+#### Dashboards app: “Write” filter removed from Data \> All available data \> Parameters \[ID_32643\]
 
-When, after selecting a component in edit mode, you open the *Data* tab and go to the *All available data \> Parameters* section, you can select an element and then filter the list of parameters of that element by clicking a number of preset filters. The preset filter “Write”, which was used to filter out the parameters of type “write”, has now been removed.
+When, after selecting a component in edit mode, you open the *Data* tab and go to the *All available data \> Parameters* section, you can select an element and then filter the list of parameters of that element by clicking a number of preset filters. The preset filter “Write”, which was used to filter out the parameters of type “write”, has now been removed.
 
 #### Dashboards app: GQI now supports external data \[ID_32656\]\[ID_32659\]\[ID_32930\]
 
@@ -345,13 +325,13 @@ It is now possible to configure the Generic Query Interface to retrieve external
 
 This is the most basic procedure to use an external data source in a query:
 
-1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see below for more detailed info).
+1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see below for more detailed info).
 
-2. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
+2. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
-    For example (see [Example script](#example-script) for a full example):
+    For example (see [Example script](#example-script) for a full example):
 
-    ```txt
+    ```csharp
     using Skyline.DataMiner.Analytics.GenericInterface;
 
     [GQIMetaData(Name = "People")]
@@ -364,25 +344,25 @@ This is the most basic procedure to use an external data source in a query:
     > [!NOTE]
     > This is the name that will be shown to the user when they select the data in the Dashboards app. If you do not configure this name, the name of the class is displayed instead, which may not be very user-friendly.
 
-3. [Compile the script as a library](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation/Using_CSharp/Compiling_a_CSharp_code_block_as_a_library.html#compiling-the-library). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different data sources for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
+3. [Compile the script as a library](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation/Using_CSharp/Compiling_a_CSharp_code_block_as_a_library.html#compiling-the-library). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different data sources for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
 
-4. Validate and save the script. It is important that you do this *after* you have compiled the script as a library, as otherwise the compiler will detect errors.
+4. Validate and save the script. It is important that you do this *after* you have compiled the script as a library, as otherwise the compiler will detect errors.
 
 5. In the Dashboards app, configure a query and select the data source *Get custom data*.
 
 6. In the *Data source* drop-down box, select the name of your custom data source.
 
-Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
+Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 
 ##### Interfaces
 
 A custom data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
 
-- **IGQIDataSource**: This is the only **required** interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
+- **IGQIDataSource**: This is the only **required** interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
 
     | Method    | Input arguments       | Output arguments | Description                       |
     |-------------|-----------------------|------------------|-----------------------------------|
-    | GetColumns  |                       | GQIColumn\[\]    | The GQI will request the columns. |
+    | GetColumns  |                       | GQIColumn\[\]    | The GQI will request the columns. |
     | GetNextPage | GetNextPage­InputArgs | GQIPage          | The GQI will request data.        |
 
 - **IGQIInputArguments**: This interface can be used to have the user specify an argument, for example the CSV file from which data should be parsed, or a filter that should be applied. This interface has the following methods:
@@ -421,31 +401,27 @@ The following flowchart illustrates the GQI life cycle when a query is created:
 
 ![](~/release-notes/images/GQI_-_Create_query.png)
 
-
-
 The following flowchart illustrates the GQI life cycle when a query is fetched:
 
 ![](~/release-notes/images/GQI_-_Fetch_query.png)
-
-
 
 ##### Objects
 
 To build the custom data source, you can use the objects detailed below.
 
-- **GQIColumn**: This is an abstract class with the derived types *GQIStringColumn*, *GQIBooleanColumn*, *GQIIntColumn*, *GQIDateTimeColumn* and *GQIDoubleColumn* and with the following properties::
+- **GQIColumn**: This is an abstract class with the derived types *GQIStringColumn*, *GQIBooleanColumn*, *GQIIntColumn*, *GQIDateTimeColumn* and *GQIDoubleColumn* and with the following properties::
 
     | Property | Type           | Required | Description                                                                                                                                                                                                                                                                                                                                  |
     |------------|----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Name       | String         | Yes      | The column name.                                                                                                                                                                                                                                                                                                                             |
-    | Type       | GQIColumn­Type | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
+    | Type       | GQIColumn­Type | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
 
 - **GQIPage**, with the following properties:
 
     | Property  | Type       | Required | Description                                                                                                                                              |
     |-------------|------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Rows        | GQIRow\[\] | Yes      | The rows of the page.                                                                                                                                    |
-    | HasNextPage | Boolean    | No       | *True* if additional pages can be retrieved, *False* if the current page is the last page. |
+    | HasNextPage | Boolean    | No       | *True* if additional pages can be retrieved, *False* if the current page is the last page. |
 
 - **GQIRow**, with the following properties:
 
@@ -463,7 +439,7 @@ To build the custom data source, you can use the objects detailed below.
     > [!NOTE]
     > The type of value of a cell must match the type of the corresponding column.
 
-- **GQIArgument**: This is an abstract class, with the derived types *GQIStringArgument* and *GQIDoubleArgument*, and with the following properties:
+- **GQIArgument**: This is an abstract class, with the derived types *GQIStringArgument* and *GQIDoubleArgument*, and with the following properties:
 
     | Property | Type    | Required | Description                                 |
     |------------|---------|----------|---------------------------------------------|
@@ -472,13 +448,13 @@ To build the custom data source, you can use the objects detailed below.
 
 ##### Example script
 
-Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
+Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
 
-First the *IGQIDataSource* interface is implemented, then *GetColumns* is used to define the custom columns for the data source. In this case, there are 5 columns. The *GetNextPage* method then returns the actual data to the GQI. In this case these are 3 rows, defined as an array of cells. For each cell, a display value can also be defined. In this case, this is done for the cells within the *Height* column to indicate the unit of measure. The *HasNextPage* property is set to *False* to indicate that no additional pages need to be fetched.
+First the *IGQIDataSource* interface is implemented, then *GetColumns* is used to define the custom columns for the data source. In this case, there are 5 columns. The *GetNextPage* method then returns the actual data to the GQI. In this case these are 3 rows, defined as an array of cells. For each cell, a display value can also be defined. In this case, this is done for the cells within the *Height* column to indicate the unit of measure. The *HasNextPage* property is set to *False* to indicate that no additional pages need to be fetched.
 
-The optional *IGQIInputArguments* interface is also implemented in the example, in this case to allow the user to add an input argument indicating the minimum age for the records that will be retrieved. The argument is indicated as required, so the user will have to specify it to be able to configure the query. The argument value is retrieved with *OnArgumentsProcessedInputArgs* and used to filter the returned data.
+The optional *IGQIInputArguments* interface is also implemented in the example, in this case to allow the user to add an input argument indicating the minimum age for the records that will be retrieved. The argument is indicated as required, so the user will have to specify it to be able to configure the query. The argument value is retrieved with *OnArgumentsProcessedInputArgs* and used to filter the returned data.
 
-```txt
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -487,71 +463,71 @@ using Skyline.DataMiner.Analytics.GenericInterface;
 [GQIMetaData(Name = "People")]
 public class MyDataSource : IGQIDataSource, IGQIInputArguments
 {
-    private GQIDoubleArgument _argument = new GQIDoubleArgument("Age") { IsRequired = true };
-    private double _minimumAge;
+   private GQIDoubleArgument _argument = new GQIDoubleArgument("Age") { IsRequired = true };
+   private double _minimumAge;
 
-    public GQIColumn[] GetColumns()
-    {
-        return new GQIColumn[]
-        {
-            new GQIStringColumn("Name"),
-            new GQIIntColumn("Age"),
-            new GQIDoubleColumn("Height (m)"),
-            new GQIDateTimeColumn("Birthday"),
-            new GQIBooleanColumn("Likes apples")
-        };
-    }
+    public GQIColumn[] GetColumns()
+    {
+        return new GQIColumn[]
+        {
+            new GQIStringColumn("Name"),
+            new GQIIntColumn("Age"),
+            new GQIDoubleColumn("Height (m)"),
+            new GQIDateTimeColumn("Birthday"),
+            new GQIBooleanColumn("Likes apples")
+        };
+    }
 
-    public GQIArgument[] GetInputArguments()
-    {
-        return new GQIArgument[] { _argument };
-    }
+    public GQIArgument[] GetInputArguments()
+    {
+        return new GQIArgument[] { _argument };
+    }
 
-    public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
-    {
-        _minimumAge = args.GetArgumentValue(_argument);
-        return new OnArgumentsProcessedOutputArgs();
-    }
+    public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
+    {
+        _minimumAge = args.GetArgumentValue(_argument);
+        return new OnArgumentsProcessedOutputArgs();
+    }
 
-    public GQIPage GetNextPage(GetNextPageInputArgs args)
-    {
-        var rows = new List<GQIRow>() {
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Alice" },
-                        new GQICell() { Value = 32 },
-                        new GQICell() { Value = 1.74, DisplayValue = "1.74 m" },
-                        new GQICell() { Value = new DateTime(1990, 5, 12) },
-                        new GQICell() { Value = true }
-                    }),
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Bob" },
-                        new GQICell() { Value = 22 },
-                        new GQICell() { Value = 1.85, DisplayValue = "1.85 m" },
-                        new GQICell() { Value = new DateTime(2000, 1, 22) },
-                        new GQICell() { Value = true }
-                    }),
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Carol" },
-                        new GQICell() { Value = 27 },
-                        new GQICell() { Value = 1.67, DisplayValue = "1.67 m" },
-                        new GQICell() { Value = new DateTime(1995, 10, 3) },
-                        new GQICell() { Value = false }
-                    })
-            };
+    public GQIPage GetNextPage(GetNextPageInputArgs args)
+    {
+        var rows = new List<GQIRow>() {
+            new GQIRow(
+                new GQICell[]
+                    {
+                        new GQICell() { Value = "Alice" },
+                        new GQICell() { Value = 32 },
+                        new GQICell() { Value = 1.74, DisplayValue = "1.74 m" },
+                        new GQICell() { Value = new DateTime(1990, 5, 12) },
+                        new GQICell() { Value = true }
+                    }),
+            new GQIRow(
+                new GQICell[]
+                    {
+                        new GQICell() { Value = "Bob" },
+                        new GQICell() { Value = 22 },
+                        new GQICell() { Value = 1.85, DisplayValue = "1.85 m" },
+                        new GQICell() { Value = new DateTime(2000, 1, 22) },
+                        new GQICell() { Value = true }
+                    }),
+            new GQIRow(
+                new GQICell[]
+                    {
+                        new GQICell() { Value = "Carol" },
+                        new GQICell() { Value = 27 },
+                        new GQICell() { Value = 1.67, DisplayValue = "1.67 m" },
+                        new GQICell() { Value = new DateTime(1995, 10, 3) },
+                        new GQICell() { Value = false }
+                    })
+            };
 
-        var filteredRows = rows.Where(row => (int)row.Cells[1].Value > _minimumAge).ToArray();
+        var filteredRows = rows.Where(row => (int)row.Cells[1].Value > _minimumAge).ToArray();
 
-        return new GQIPage(filteredRows)
-        {
-            HasNextPage = false
-        };
-    }
+        return new GQIPage(filteredRows)
+        {
+            HasNextPage = false
+        };
+    }
 }
 ```
 
@@ -563,7 +539,7 @@ When you configure who can view or edit a specific dashboard, it is now possible
 
 #### Jobs app: Delete button will only be visible to users who have been granted permission to delete jobs \[ID_32507\]
 
-From now on, the *Delete* button will only be visible to users who have been granted permission to delete jobs.
+From now on, the *Delete* button will only be visible to users who have been granted permission to delete jobs.
 
 ### DMS Service & Resource Management
 
@@ -576,7 +552,7 @@ The following exception messages have been enhanced:
 This message now includes the ID, the name and the time range of both the parent and the child.
 
 ```txt
-The TimeRange of the child is not within the boundaries of the parent ReservationInstance (Child: '{Child Name}' ({Child ID}) has range '{Child Range}' & Parent: '{Parent Name}' ({Parent ID}) has range '{Parent Range}')
+The TimeRange of the child is not within the boundaries of the parent ReservationInstance (Child: '{Child Name}' ({Child ID}) has range '{Child Range}' & Parent: '{Parent Name}' ({Parent ID}) has range '{Parent Range}')
 ```
 
 **Exception thrown when the time range of a child ReservationDefinition is invalid**
@@ -584,7 +560,7 @@ The TimeRange of the child is not within the boundaries of the parent Reservatio
 This message now includes the ID, the name and the time range of both the parent and the child. For the child, the offset has now also been added.
 
 ```txt
-The timing of the child is not within the boundaries of the parent ReservationDefinition (Child: '{Child Name}' ({Child ID}) has timing with duration '{Child Timing Duration}' and offset '{Child offset}' & Parent: '{Parent Name}' ({Parent ID}) has timing with duration '{Parent Timing Duration}')
+The timing of the child is not within the boundaries of the parent ReservationDefinition (Child: '{Child Name}' ({Child ID}) has timing with duration '{Child Timing Duration}' and offset '{Child offset}' & Parent: '{Parent Name}' ({Parent ID}) has timing with duration '{Parent Timing Duration}')
 ```
 
 #### ReservationInstances now have a ReservationInstanceType \[ID_32624\]
@@ -592,9 +568,7 @@ The timing of the child is not within the boundaries of the parent ReservationDe
 When configuring a ReservationInstance, you now have to specify a ReservationInstanceType:
 
 - Default
-
 - Process Automation
-
 - Custom Process Automation
 
 > [!NOTE]
@@ -606,69 +580,55 @@ When configuring a ReservationInstance, you now have to specify a ReservationIns
 Several changes to the SRM framework have been introduced:
 
 - Modified *AbsoluteQuarantinePriority* behavior.
-
 - New *ConcurrencyUsageType* property for ResourceUsageDefinition
-
 - Possibility to book complete resource capacity
-
 - Possibility to include elements in bookings
 
 ##### Modified AbsoluteQuarantinePriority behavior
 
-The behavior of the *AbsoluteQuarantinePriority* property has been modified. Up to now, if this property was set to true for a booking instance, all overlapping booking instances using the same resources were forced into quarantine. Now this property will only determine the priority of the booking when a quarantine is needed.
+The behavior of the *AbsoluteQuarantinePriority* property has been modified. Up to now, if this property was set to true for a booking instance, all overlapping booking instances using the same resources were forced into quarantine. Now this property will only determine the priority of the booking when a quarantine is needed.
 
 To implement a quarantine, overbooked capacity is now removed from bookings according to the following order of priority:
 
 1. Bookings that are already in the quarantined state.
-
 2. Bookings for which *AbsoluteQuarantinePriority* is not specified or false.
-
 3. Bookings that are in a "Pending" state.
-
 4. Bookings with the latest start time.
-
 5. Booking of which the name comes last alphabetically.
-
 6. Bookings of which the GUID comes last alphabetically.
 
 The image below illustrates a situation where the quarantine behavior has changed. Previously, booking A would have been quarantined, as it uses resource 1. Now this will no longer happen as the capacity is actually not overbooked.
 
 ![](~/release-notes/images/32654_1.png)
 
-
-
-The following image also illustrates the modified behavior. If booking B does not have *AbsoluteQuarantinePriority* set to true, its capacity will be moved, as it has a later start time. If *AbsoluteQuarantinePriority* is set to true, the overbooking will be resolved by moving the capacity from booking A.
+The following image also illustrates the modified behavior. If booking B does not have *AbsoluteQuarantinePriority* set to true, its capacity will be moved, as it has a later start time. If *AbsoluteQuarantinePriority* is set to true, the overbooking will be resolved by moving the capacity from booking A.
 
 ![](~/release-notes/images/32654_2.png)
-
-
 
 ##### New ConcurrencyUsageType property for ResourceUsageDefinition
 
 A ResourceUsageDefinition now has the property *ConcurrencyUsageType*, which can have the following values:
 
 - *ConcurrencyUsageType.Default*: The default value. The ResourceUsageDefinition takes one concurrency of the resource.
-
 - *ConcurrencyUsageType.All*: The ResourceUsageDefinition takes all the concurrency of the resource.
-
 - *ConcurrencyUsageType.None*: The ResourceUsageDefinition does not take any concurrency of the resource.
 
-Resource usage can only overlap with a ResourceUsageDefinition with *ConcurrencyUsageType.All* if it is set to *ConcurrencyUsageType.None*. This limitation is also in place for a single booking: if a booking has a resource with complete concurrency and another resource with 1 concurrency, the booking will be quarantined because it requests more concurrency than is available. If a complete concurrency usage is quarantined to resolve a concurrency conflict (as determined by the priority defined on booking level), it will be moved in its entirety – there is no option to only move part of the concurrency to quarantine.
+Resource usage can only overlap with a ResourceUsageDefinition with *ConcurrencyUsageType.All* if it is set to *ConcurrencyUsageType.None*. This limitation is also in place for a single booking: if a booking has a resource with complete concurrency and another resource with 1 concurrency, the booking will be quarantined because it requests more concurrency than is available. If a complete concurrency usage is quarantined to resolve a concurrency conflict (as determined by the priority defined on booking level), it will be moved in its entirety – there is no option to only move part of the concurrency to quarantine.
 
-The actual concurrency of a ResourceUsageDefinition with *ConcurrencyUsageType.All* is determined at runtime, as the *MaxConcurrency* value of the resource at the moment when it is needed, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
+The actual concurrency of a ResourceUsageDefinition with *ConcurrencyUsageType.All* is determined at runtime, as the *MaxConcurrency* value of the resource at the moment when it is needed, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
 
 Code example:
 
-```txt
+```csharp
 var booking = new ReservationInstance(new TimeRangeUtc(DateTime.UtcNow, DateTime.UtcNow.AddHours(10)))
 {
-    Name = "Booking 123",
-    ID = Guid.NewGuid()
+    Name = "Booking 123",
+    ID = Guid.NewGuid()
 };
 
 var resourceUsage = new ResourceUsageDefinition(resourceId)
 {
-    ConcurrencyUsageType = ConcurrencyUsageType.All
+    ConcurrencyUsageType = ConcurrencyUsageType.All
 };
 
 booking.ResourcesInReservationInstance.Add(resourceUsage);
@@ -676,24 +636,24 @@ booking.ResourcesInReservationInstance.Add(resourceUsage);
 
 ##### Booking complete resource capacity
 
-It is now possible to book all the capacities of a resource for their complete value, by setting the *UsesCompleteCapacity* property for the ResourceUsageDefinition to true. If the resource has more than one capacity defined, this will reserve all capacities. By default, this property is set to false.
+It is now possible to book all the capacities of a resource for their complete value, by setting the *UsesCompleteCapacity* property for the ResourceUsageDefinition to true. If the resource has more than one capacity defined, this will reserve all capacities. By default, this property is set to false.
 
 No other usage can overlap in case complete capacity is used. This limitation is also in place for a single booking: if a booking has a resource with complete capacity and another resource with 100 capacity, the booking will be quarantined because it requests more capacity than is available. If a complete capacity usage is quarantined to resolve a conflict (as determined by the priority defined on booking level), it will be moved in its entirety.
 
-The actual capacity in case *UsesCompleteCapacity* is true is determined at runtime, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
+The actual capacity in case *UsesCompleteCapacity* is true is determined at runtime, e.g. when *GetEligibleResources* is called or when quarantine checks are done to add or update a booking instance or resource.
 
 Code example:
 
-```txt
+```csharp
 var booking = new ReservationInstance(new TimeRangeUtc(DateTime.UtcNow, DateTime.UtcNow.AddHours(10)))
 {
-    Name = "Booking 123",
-    ID = Guid.NewGuid()
+    Name = "Booking 123",
+    ID = Guid.NewGuid()
 };
 
 var resourceUsage = new ResourceUsageDefinition(_resource.ID)
 {
-    UsesCompleteCapacity = true
+    UsesCompleteCapacity = true
 };
 
 booking.ResourcesInReservationInstance.Add(resourceUsage);
@@ -701,30 +661,28 @@ booking.ResourcesInReservationInstance.Add(resourceUsage);
 
 ##### Including elements in bookings
 
-It is now possible to define an ElementUsageDefinition to include an element in a booking. When the element is included, ResourceUsageDefinitions will automatically be added for all the resources linked to the element. These resources will have the new *IsAutoGenerated* property set to true.
+It is now possible to define an ElementUsageDefinition to include an element in a booking. When the element is included, ResourceUsageDefinitions will automatically be added for all the resources linked to the element. These resources will have the new *IsAutoGenerated* property set to true.
 
 ElementUsageDefinition has three properties:
 
-- *ElementUsageImpact*: Determines if the element can be used in overlapping bookings. If set to *None*, overlapping bookings can use the same element. If set to *Full* (the default value), no overlapping bookings can use the same element, even if they have impact *None*. If the *AddOrUpdateReservationInstances* call fails because there are overlapping bookings using the same element with *Full* impact, no changes will be saved and an error of type *ElementUsageOverflow* will be returned.
-
-- *IncludeCapacityBehavior*: Can be set to *All* or *None*. If this is set to *All*, the generated ResourceUsageDefinitions will have the *UsesCompleteCapacity* property set to true.
-
-- IncludeConcurrencyBehavior: Can be set to *All* or *None*. If this is set to *All*, the generated ResourceUsageDefinitions will have the *ConcurrencyUsageType* property set to *ConcurrencyUsageType.All*.
+- *ElementUsageImpact*: Determines if the element can be used in overlapping bookings. If set to *None*, overlapping bookings can use the same element. If set to *Full* (the default value), no overlapping bookings can use the same element, even if they have impact *None*. If the *AddOrUpdateReservationInstances* call fails because there are overlapping bookings using the same element with *Full* impact, no changes will be saved and an error of type *ElementUsageOverflow* will be returned.
+- *IncludeCapacityBehavior*: Can be set to *All* or *None*. If this is set to *All*, the generated ResourceUsageDefinitions will have the *UsesCompleteCapacity* property set to true.
+- IncludeConcurrencyBehavior: Can be set to *All* or *None*. If this is set to *All*, the generated ResourceUsageDefinitions will have the *ConcurrencyUsageType* property set to *ConcurrencyUsageType.All*.
 
 Code example:
 
-```txt
+```csharp
 var booking = new ReservationInstance(new TimeRangeUtc(DateTime.UtcNow, DateTime.UtcNow.AddHours(10)))
 {
-    Name = "Booking 123",
-    ID = Guid.NewGuid()
+    Name = "Booking 123",
+    ID = Guid.NewGuid()
 };
 
 var elementUsage = new ElementUsageDefinition(new ElementID(123,456))
 {
-    ElementUsageImpact = ElementUsageImpact.Full,
-    IncludeCapacityBehavior = IncludeCapacityBehavior.All,
-    IncludeConcurrencyBehavior = IncludeConcurrencyBehavior.All
+    ElementUsageImpact = ElementUsageImpact.Full,
+    IncludeCapacityBehavior = IncludeCapacityBehavior.All,
+    IncludeConcurrencyBehavior = IncludeConcurrencyBehavior.All
 };
 
 booking.ObjectUsages.Add(elementUsage);
@@ -732,19 +690,17 @@ booking.ObjectUsages.Add(elementUsage);
 
 The following resources are added when an element is included in a booking:
 
-- Resources that reference the element with the *DmaID* and *ElementID* properties.
+- Resources that reference the element with the *DmaID* and *ElementID* properties.
+- Function resources that have the referenced element as their parent element (based on *MainDveDmaId* and *MainDveElementId* properties).
+- Virtual function resources linked to the element (based on *PhysicalDeviceDmaId* and *PhysicalDeviceElementId* properties).
 
-- Function resources that have the referenced element as their parent element (based on *MainDveDmaId* and *MainDveElementId* properties).
-
-- Virtual function resources linked to the element (based on *PhysicalDeviceDmaId* and *PhysicalDeviceElementId* properties).
-
-Whenever the booking is updated or a relevant resource is created or updated, the element usage is automatically updated. Any changes you do to auto-generated usage will be overwritten by the core software. When the auto-generated usage is updated, the TraceData of the *AddOrUpdateResource* call will contain ResourceManagerInfoData of type ResourceUsagesGeneratedForReservationInstances.
+Whenever the booking is updated or a relevant resource is created or updated, the element usage is automatically updated. Any changes you do to auto-generated usage will be overwritten by the core software. When the auto-generated usage is updated, the TraceData of the *AddOrUpdateResource* call will contain ResourceManagerInfoData of type ResourceUsagesGeneratedForReservationInstances.
 
 The deletion of resources in auto-generated bookings is blocked in the same way as deletion of resources that were not added automatically is blocked.
 
-This new feature has an *ElementUsages* exposer, which can be used to filter bookings that include a certain element. For example:
+This new feature has an *ElementUsages* exposer, which can be used to filter bookings that include a certain element. For example:
 
-```txt
+```csharp
 var elementToSearchFor = new ElementID(123, 789);
 var filter = ReservationInstanceExposers.ElementUsages.Contains(elementToSearchFor.ToString());
 var bookings = rmHelper.GetReservationInstances(filter);
@@ -767,7 +723,6 @@ DataMiner is now able to connect to Cassandra databases that require TLS 1.2.
 Cassandra databases will no longer store the following data:
 
 - ArrowWindowRecords
-
 - PatternMatchOccurrenceRecords
 
 The latter will now be stored in Elasticsearch instead.
@@ -786,7 +741,7 @@ Full backups and configuration backups will now by default also include the EPMC
 
 #### DataMiner Cube - Correlation: Using hidden elements when creating correlation rules \[ID_32510\]
 
-When creating a correlation rule in the Correlation app, it is now possible to use a hidden element in both the *Alarm Filter* section and the *Rule Condition* section.
+When creating a correlation rule in the Correlation app, it is now possible to use a hidden element in both the *Alarm Filter* section and the *Rule Condition* section.
 
 #### Enhanced performance when stopping SNMP elements \[ID_32523\]
 
@@ -804,7 +759,7 @@ This file will by default be refreshed every 5 minutes.
 
 #### DataMiner Cube - Spectrum analysis: Additional logging to help pinpoint monitor failures \[ID_32605\]
 
-When, on a spectrum element card, you select *View buffer* in the *monitors* tab of the ribbon, the selection boxes should contain all available monitor buffers.
+When, on a spectrum element card, you select *View buffer* in the *monitors* tab of the ribbon, the selection boxes should contain all available monitor buffers.
 
 In DataMiner Cube, additional logging is now available to help pinpoint monitor execution failures by providing information about the monitor buffers that will be shown based on the backend buffer response.
 
@@ -963,7 +918,6 @@ When an administrator enables the “User must change password at next login” 
 The GetServiceTemplate method would throw an exception when requesting a service template with Text inputs that had neither of the following options:
 
 - Require a valid element name
-
 - Allow 'N/A' to indicate empty value
 
 #### SLNet would leak memory whenever a Cube session was closed or disconnected \[ID_32649\]
@@ -976,7 +930,7 @@ A number of miscellaneous, small fixes have been made.
 
 #### Dashboards app - Parameter feed: Problem selecting the element again after clicking “Clear all” \[ID_32661\]
 
-When, in a parameter feed with a single element, you clicked the *Clear all* option to unselect all selected parameter, in some cases, it would no longer be possible to select the element again.
+When, in a parameter feed with a single element, you clicked the *Clear all* option to unselect all selected parameter, in some cases, it would no longer be possible to select the element again.
 
 #### Migration to Cassandra cluster: Alarms and information events would not get migrated \[ID_32666\]
 
@@ -992,10 +946,9 @@ When the Cassandra Cluster Migrator tool was used to transform a Failover system
 
 #### SLNetClientTest: Problems with “Agent Connections” window \[ID_32679\]
 
-When, in the SLNetClientTest tool, you opened the *Agent Connections* window (by selecting *Diagnostics \> Connections \> View DMA Connections*),
+When, in the SLNetClientTest tool, you opened the *Agent Connections* window (by selecting *Diagnostics \> Connections \> View DMA Connections*),
 
 - Agents could incorrectly display a “Disconnected” state while actually being connected.
-
 - The “Calls From” column could incorrectly display “(not available)”.
 
 #### DataMiner Cube - Profiles app: Problem when modifying a profile instance \[ID_32688\]

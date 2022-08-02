@@ -1,4 +1,8 @@
-# Feature release 10.2.6
+---
+uid: General_Feature_Release_10.2.6
+---
+
+# General Feature Release 10.2.6
 
 ## New features
 
@@ -34,16 +38,16 @@ Times are defined as TimeSpan objects. By default, these will be set to TimeSpan
 
 Example:
 
-```txt
+```csharp
 var moduleSettings = new ModuleSettings("example")
 {
     DomManagerSettings = new DomManagerSettings()
     {
         TtlSettings = new TtlSettings()
         {
-            DomTemplateTtl = TimeSpan.Zero,                 // No TTL
+            DomTemplateTtl = TimeSpan.Zero,                 // No TTL
             DomInstanceHistoryTtl = TimeSpan.FromDays(365), // 1 Year
-            DomInstanceTtl = TimeSpan.FromDays(730)         // 2 Years
+            DomInstanceTtl = TimeSpan.FromDays(730)         // 2 Years
         }
     }
 };
@@ -81,13 +85,9 @@ Also, when creating a DataMiner user, using an email address as user name is now
 When acting as an SSH client, DataMiner now supports the following host key verification algorithms (in order of preference):
 
 - ecdsa-sha2-nistp521 (new)
-
 - ecdsa-sha2-nistp384 (new)
-
 - ecdsa-sha2-nistp256 (new)
-
 - ssh-rsa
-
 - ssh-dss
 
 ### DMS Cube
@@ -112,11 +112,8 @@ Similar to regular Automation scripts, interactive Automation scripts are now al
 A number of enhancements have been made with regard to selecting bookings in the timeline area of an embedded Resource Manager component.
 
 - When you select a booking, the corresponding resource band and all occurrences of that booking will be selected.
-
 - When you unselect a booking, the corresponding resource band and all occurrences of that booking will also be unselected.
-
 - The reservation variable and the resource variable will always contain the booking and the resource selected in the timeline.
-
 - When you remove a resource band, the corresponding resource variable will be cleared.
 
 #### Trending - Behavioral anomaly detection: Flatline change points can now also be detected for history set parameters that are set nearly in real time \[ID_32993\]
@@ -130,7 +127,6 @@ From now on, in the Alarm Console, you will be able to manually create incident 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
 
     - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-
     - to add the alarm to an existing alarm group.
 
 These manually created groups will always be visible in active alarm tabs, even when the “Automatic incident tracking” option is disabled.
@@ -154,11 +150,8 @@ In the Alarm Console, you can now move alarms from one incident (alarm group) to
 From now on, when you right-click an incident (alarm group), you will be able to perform the following additional actions:
 
 - Take ownership
-
 - Release ownership
-
 - Force release ownership
-
 - Add a comment
 
 If you right-click a manually created incident, you will also be able to select *Clear alarm... *When you clear a manually created incident, the alarm group will be cleared and all the base alarms will again be added to the Alarm Console.
@@ -168,10 +161,8 @@ If you right-click a manually created incident, you will also be able to select 
 From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters. From now on, you can also enable this for flatline changes.
 
 1. Click the cogwheel button in the top-right corner of the alarm template editor.
-
 2. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
-
-3. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
+3. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
 
 #### Alarm Console - Automatic incident tracking: Manually created incidents (alarm groups) will have their alarm focus score set to 0 \[ID_33130\]
 
@@ -179,42 +170,30 @@ Manually created incidents (alarm groups) will have their alarm focus score set 
 
 #### Visual Overview: ServiceManager component functionality expanded to support Process Automation UI \[ID_33187\]
 
-To make it possible to show an overview of Process Automation service definitions in Visual Overview and filter these, the functionality of the *ServiceManager* component has been expanded.
+To make it possible to show an overview of Process Automation service definitions in Visual Overview and filter these, the functionality of the *ServiceManager* component has been expanded.
 
 ##### interface=definitions component option
 
-When you embed the Services module in Visio using the shape data field *Component* with the value *ServiceManager*, in the *ComponentOptions* shape data field, you can now use the option *interface=definitions* to only show the *Definitions* > *Recent* tab of the Services module. All existing options and variables have been made compatible with this option.
+When you embed the Services module in Visio using the shape data field *Component* with the value *ServiceManager*, in the *ComponentOptions* shape data field, you can now use the option *interface=definitions* to only show the *Definitions* > *Recent* tab of the Services module. All existing options and variables have been made compatible with this option.
 
 ##### Filter shape data
 
-If you use the *interface=definitions* component option described above, you can now also combine a *Filter* shape data field with the *ServiceManager* component. This allows you to filter the service definitions in the list, in the same way as in a *ListView* component. The following properties are supported for the filter:
+If you use the *interface=definitions* component option described above, you can now also combine a *Filter* shape data field with the *ServiceManager* component. This allows you to filter the service definitions in the list, in the same way as in a *ListView* component. The following properties are supported for the filter:
 
 - Name (String)
-
 - Description (String)
-
 - IsTemplate (Boolean)
-
 - ID (GUID)
-
 - CreatedBy (String)
-
 - CreatedAt (DateTime)
-
 - LastModifiedBy (String)
-
 - LastModified (DateTime)
-
 - NodeFunctionIDs (List\<Guid>)
-
 - Properties (IDictionary\<string, dynamic>)
-
 - ServiceDefinitionType (Int): This is an enum with the following possible values:
 
     - 0 = Default (representing the type "SRM" in Cube)
-
     - 1 = ProcessAutomation (representing the type "Skyline Process Automation" in Cube)
-
     - 2 = CustomProcessAutomation (representing the type "Custom Process Automation" in Cube)
 
 Examples:
@@ -233,10 +212,9 @@ Examples:
 
 ##### New HideAddButton and HideDeleteButton component options
 
-The following options can now also be specified in the *ComponentOptions* shape data field for a *ServiceManager* component:
+The following options can now also be specified in the *ComponentOptions* shape data field for a *ServiceManager* component:
 
 - **HideAddButton=**: If this option is set to "true", no options to add a service definition will be displayed.
-
 - **HideDeleteButton=**: If this option is set to "true", no options to delete a service definition will be displayed.
 
 #### Alarm Console: Assigning a ticket to an incident (alarm group) \[ID_33199\]
@@ -244,7 +222,6 @@ The following options can now also be specified in the *ComponentOptions* shape
 In the Alarm Console, it is now possible to assign tickets to incidents (alarm groups).
 
 - To assign a ticket to an incident, right-click the incident (alarm group) and select *Ticket \> New*.
-
 - To view a ticket assigned to an incident, right-click the incident (alarm group), select *Ticket*, and then select the ticket you want to view.
 
 #### Alarm Console - Automatic incident tracking: Menu commands to manipulate alarm groups will no longer be available when DataMiner Agent does not support manually creating, updating and renaming incidents \[ID_33212\]
@@ -258,13 +235,11 @@ A number of enhancements have been made to the start window of the DataMiner Cub
 - Settings menu (cogwheel icon in bottom-right corner)
 
     - New *About* box with version information.
-
     - All menu items now have icons in front of them.
 
 - When you right-click an agent,
 
-    - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
-
+    - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
     - all context menu items now have icons in front of them.
 
 - When agents/clusters are arranged in named groups, the context menu of the DataMiner Cube system tray icon will now contain submenus per named group.
@@ -281,7 +256,7 @@ Up to now, this type of alarm would only be generated if a behavioral change of 
 
 Up to now, when a DataMiner Agent had been added to the start window of the DataMiner Cube desktop app at a time when only HTTP was available, Cube would no longer switch to HTTPS when that protocol became available and HTTP got blocked.
 
-When you add a DataMiner Agent to the start window, in the Advanced settings, you can now set the *Transport* setting to either “HTTPS only” or “HTTP or HTTPS”. If you choose the latter option, Cube will use HTTP by default. When HTTP is not available, it will try to use HTTPS instead. From that point onwards, the transport setting will automatically be switched to “HTTPS only”, so HTTPS will be used for all following sessions.
+When you add a DataMiner Agent to the start window, in the Advanced settings, you can now set the *Transport* setting to either “HTTPS only” or “HTTP or HTTPS”. If you choose the latter option, Cube will use HTTP by default. When HTTP is not available, it will try to use HTTPS instead. From that point onwards, the transport setting will automatically be switched to “HTTPS only”, so HTTPS will be used for all following sessions.
 
 > [!NOTE]
 > If a DataMiner Agent is configured to use only HTTPS, Cube will not fall back to HTTP, even when you have chosen the “HTTP or HTTPS” option.
@@ -323,16 +298,14 @@ In Data Display, the context menu of a URL parameter will now contain the follow
 
 #### Visual Overview: Adding a “Refresh” and/or a “Sort” button to a table control \[ID_33346\]
 
-When using a shape of type *ParameterControls* to visualize a table in a Visio drawing, you can now add a *Refresh* button and/or a *Sort* button to that shape.
+When using a shape of type *ParameterControls* to visualize a table in a Visio drawing, you can now add a *Refresh* button and/or a *Sort* button to that shape.
 
-Example of how to add both a *Refresh* button and a *Sort* button:
+Example of how to add both a *Refresh* button and a *Sort* button:
 
 1. Create three shapes and group them:
 
     - the first shape will contain the table,
-
     - the second shape will contain the *Refresh* button, and
-
     - the third shape will contain the *Sort* button.
 
 2. Add the following shape data field to the shape that has to contain the table:
@@ -361,7 +334,7 @@ Example of how to add both a *Refresh* button and a *Sort* button:
     | ParameterControl   | ID of the table parameter  |
 
 > [!NOTE]
-> The *Refresh* button and the *Sort* button will only be displayed when necessary.
+> The *Refresh* button and the *Sort* button will only be displayed when necessary.
 
 #### DataMiner Cube: Independent client updates \[ID_33360\]
 
@@ -382,12 +355,10 @@ If you want to use a specific Cube version to connect to a particular agent or c
 
 **Server configuration**
 
-When connected to a particular DataMiner System, users with *Manage client versions* permission can go to *System Center \> System settings \> Manage client versions*, and select one of the following Cube update modes:
+When connected to a particular DataMiner System, users with *Manage client versions* permission can go to *System Center \> System settings \> Manage client versions*, and select one of the following Cube update modes:
 
 - Allow automatic updates
-
 - Force the matching release version (i.e. force users to always use the Cube version that was shipped with the DMA upgrade package)
-
 - Force a specific version (i.e. force users to always use a particular Cube version)
 
 By default, the setting chosen here will apply to all agents in the DMS, including Failover setups. However, it is possible (but not recommended) to configure the Cube update mode per agent.
@@ -401,9 +372,7 @@ A TriggeredByName property has been added to the Engine object. This property of
 When an Automation script is triggered by the scheduler, a correlation rule or a redundancy group, the TriggeredByName property will contain one of the following strings:
 
 - “Scheduled task \<name task>”
-
 - “Correlation-rule \<name rule>”
-
 - “Redundancy”
 
 ### DMS web apps
@@ -412,7 +381,7 @@ When an Automation script is triggered by the scheduler, a correlation rule or a
 
 In a protocol.xml file, for every write parameter, you can specify a message to be displayed when users change that parameter on the UI.
 
-Up to now, this *Param.Message* tag was only taken into account by DataMiner Cube. From now on, the Monitoring app will also take it into account.
+Up to now, this *Param.Message* tag was only taken into account by DataMiner Cube. From now on, the Monitoring app will also take it into account.
 
 #### DataMiner Application Framework now requires the “Low-code Apps” license \[ID_33208\]
 
@@ -471,7 +440,6 @@ A number of security enhancements have been made.
 In the DataMiner Taskbar Utility, the following options have been removed:
 
 - Launching System Display by double-clicking while pressing the SHIFT key.
-
 - Opening the locally installed DataMiner Cube in Microsoft Internet Explorer by double-clicking.
 
 > [!NOTE]
@@ -493,15 +461,10 @@ Also, in the legacy Reporter app, the default colors have now been aligned with 
 A number of enhancements have been made with regard to Automation scripts.
 
 - When a script is launched, from now on, only the parameters/dummies with missing values will be shown. Automatically filled in values will no longer be shown.
-
 - When script input is filled in with feed data, users will no longer be asked to change that input manually.
-
 - Script input (parameters/dummies) linked to a feed is now filled in at the moment a script action is triggered. Subsequent changes in the feed will have no effect.
-
 - In the application framework, the option to mark specific script parameters and dummies as required has been removed.
-
 - When, in the Dashboards app, users mark a script parameter as required, they no longer need to fill in a value.
-
 - From now on, a page load event will only trigger after the application page has been fully initialized. This will ensure that, when launching script actions with input linked to feeds, those feeds have been initialized.
 
 #### Visual Overview: Enhanced performance when creating element shapes \[ID_33140\]
@@ -534,16 +497,14 @@ Because of a number of enhancements, overall performance has increased when gene
 
 #### DataMiner Cube - System Center: “Automatic incident tracking” feature will now be enabled by default \[ID_33286\]
 
-In *System Center \> System settings \> Analytics config*, the *Automatic incident tracking* feature will now be enabled by default.
+In *System Center \> System settings \> Analytics config*, the *Automatic incident tracking* feature will now be enabled by default.
 
-- If you upgrade from a DataMiner version older than 10.0.11, a new *Automatic incident tracking* section will be added to the *Analytics config* tab, and its *Enabled* setting will by default be set to “True”.
-
-- If you upgrade from DataMiner version 10.0.11 until 10.1.11, the *Automatic incident tracking* section will now by default have its *Enabled* setting set to “True”. Up to now, it would by default be set to “False”.
-
-- If you upgrade from DataMiner version 10.1.12 or newer, the *Automatic incident tracking* section, of which the *Enabled* setting was by default already set to “True”, will now even be set to “True” when it had been manually set to “False” earlier.
+- If you upgrade from a DataMiner version older than 10.0.11, a new *Automatic incident tracking* section will be added to the *Analytics config* tab, and its *Enabled* setting will by default be set to “True”.
+- If you upgrade from DataMiner version 10.0.11 until 10.1.11, the *Automatic incident tracking* section will now by default have its *Enabled* setting set to “True”. Up to now, it would by default be set to “False”.
+- If you upgrade from DataMiner version 10.1.12 or newer, the *Automatic incident tracking* section, of which the *Enabled* setting was by default already set to “True”, will now even be set to “True” when it had been manually set to “False” earlier.
 
 > [!NOTE]
-> After the upgrade, all settings related to *Automatic incident tracking* will be reset to their default values. Any manual change made to any of these settings prior to the upgrade will be lost.
+> After the upgrade, all settings related to *Automatic incident tracking* will be reset to their default values. Any manual change made to any of these settings prior to the upgrade will be lost.
 
 ### Fixes
 
@@ -635,9 +596,8 @@ Up to now, when SLPort received a WebSocket message larger than the WebSocket bu
 
 The following issues could occur in Visual Overview:
 
-- When a service definition was selected, it could occur that the *SelectedServiceDefinition* session variable was not updated.
-
-- When the *Commands* shape data field was used, it could occur that setting commands on page or card level was not possible.
+- When a service definition was selected, it could occur that the *SelectedServiceDefinition* session variable was not updated.
+- When the *Commands* shape data field was used, it could occur that setting commands on page or card level was not possible.
 
 #### DataMiner Cube - Visual Overview: Spectrum shape would incorrectly show a grid instead of text \[ID_33192\]
 
@@ -788,8 +748,8 @@ When a GQI query did not return any rows, the data table component would incorre
 
 #### DataMiner Cube - Alarm Console: Menu command “Copy \> cell ‘\<value>’” would incorrectly be missing \[ID_33378\]
 
-When, in the Alarm Console, you right-click an alarm, you can copy the value in the cell you right-clicked by selecting *Copy \> cell “\<value>”*. In some cases, this *Copy \> cell “\<value>”* command would incorrectly be missing.
+When, in the Alarm Console, you right-click an alarm, you can copy the value in the cell you right-clicked by selecting *Copy \> cell “\<value>”*. In some cases, this *Copy \> cell “\<value>”* command would incorrectly be missing.
 
-#### Automatic Incident Tracking: Clearable base alarms of an incident were cleared when the inci­dent was cleared \[ID_33481\]
+#### Automatic Incident Tracking: Clearable base alarms of an incident were cleared when the incident was cleared \[ID_33481\]
 
 When an incident (i.e. alarm group) was cleared, in some cases, its clearable base alarms would incorrectly be cleared as well when the AutoClear option was disabled.

@@ -1,4 +1,8 @@
-# Feature release 10.2.5
+---
+uid: General_Feature_Release_10.2.5
+---
+
+# General Feature Release 10.2.5
 
 ## New features
 
@@ -57,11 +61,8 @@ From now on, FieldDescriptors of type DomInstanceValueFieldDescriptor can be con
 DataMiner now supports the following HMAC algorithms when setting up a connection with an SSH server (in order of preference):
 
 - HMAC-SHA2-512 (new)
-
 - HMAC-SHA2-256
-
 - HMAC-SHA1
-
 - HMAC-MD5
 
 ### DMS Protocols
@@ -77,7 +78,6 @@ The new \<ProcessAutomation> element allows you to pass parameter values to the 
 See the example below. For every value you want to pass, you have to add a \<ProcessAutomationOption> element with the following attributes:
 
 - name (i.e. the name assigned to the value)
-
 - pid (i.e. the ID of the parameter containing the value to be passed)
 
 Example:
@@ -115,7 +115,6 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window will appear, asking you
 
     - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-
     - to add the alarm to an existing alarm group.
 
 - When you right-click an alarm that is already part of an alarm group, you will be able to click the “Remove from incident” option. If you do so, the alarm will be removed from the alarm group of which it was a part.
@@ -148,19 +147,16 @@ Up to now, when you switched to edit mode, the first 10,000 elements would be lo
 Also, there is now an element search box as well as a number of element filter options:
 
 - a view filter to only show elements in a particular view (and its subviews),
-
 - a protocol filter to only show elements running a particular protocol,
-
 - an *EPM managers* checkbox to only show EPM Manager elements, and
-
 - a *Spectrum analyzers* checkbox to only show Spectrum elements.
 
-#### Dashboards app: Live sharing no longer requires users to have permission to edit the dash­boards they are sharing \[ID_32812\]
+#### Dashboards app: Live sharing no longer requires users to have permission to edit the dashboards they are sharing \[ID_32812\]
 
 Up to now, when users wanted to share a dashboard, they also needed to have permission to edit the dashboard in question. From now on, users who want to share a dashboard will no longer need permission to edit that dashboard.
 
 > [!NOTE]
-> When you do not have *General \> Live sharing \> UI available* permission, you will not see anything related to live sharing. So, make sure to always use this permission in conjunction with the Share permission.
+> When you do not have *General \> Live sharing \> UI available* permission, you will not see anything related to live sharing. So, make sure to always use this permission in conjunction with the Share permission.
 
 #### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added \[ID_32960\]
 
@@ -201,7 +197,6 @@ Panels are used to group data on a page. They can be displayed on the left side 
 In an application, you can configure actions that will be executed each time one of the following events occur:
 
 - A new page is loaded.
-
 - A (header bar) button is clicked.
 
 At present, the following actions can be configured:
@@ -233,19 +228,14 @@ Per application, there can be up to 15 versions: 14 draft versions and one publi
 The application framework has two levels of security:
 
 - on DataMiner level, user permissions control access to the application framework in general, and
-
 - on application level, user permissions control access to specific applications.
 
 Access to the application framework is controlled by the following user permissions that can be configured per user or user group:
 
 - View applications
-
 - Add new applications
-
 - Edit applications
-
 - Delete applications
-
 - Publish applications
 
 > [!NOTE]
@@ -260,13 +250,9 @@ Access to a specific application can be configured in the application itself. Pe
 It is now possible to retrieve bookings in a paged way and sorted by one of the following properties:
 
 - CreatedAt
-
 - CreatedBy
-
 - Description
-
 - LastModifiedAt
-
 - LastModifiedBy
 
 > [!NOTE]
@@ -291,7 +277,6 @@ When, for example, a table is populated with ReservationInstances using Resource
 
 > [!NOTE]
 > This list will only contain ReservationInstances to which the user has access.
->
 > To retrieve the IDs of the ReservationInstances to which the user no longer has access, you can call the GetHiddenReservationInstances method.
 
 #### Functions.xml file: Assigning a function type to a function \[ID_32851\]
@@ -301,17 +286,11 @@ It is now possible to assign a function type to each function defined in a funct
 A function can be assigned one of the following types:
 
 - UserTask
-
 - ScriptTask
-
 - ResourceTask
-
 - Gateway
-
 - NoneStartEvent
-
 - TimeStartEvent
-
 - EndEvent
 
 Default function type: NULL
@@ -342,7 +321,7 @@ When an HTTP request of type “send SMS” is sent to an SMSEagle device, the f
     Example:
 
     ```txt
-    Response of sending SMS 'This is a test' to '+324799789789' - Status: HTTP/1.1 200 OK (200) - Response data: OK; ID=25464
+    Response of sending SMS 'This is a test' to '+324799789789' - Status: HTTP/1.1 200 OK (200) - Response data: OK; ID=25464
     ```
 
 - The response itself as well as the error string retrieved from the HTTP engine used by SLGSMGateway (level “info”) when the response does not start with “OK;”.
@@ -350,7 +329,7 @@ When an HTTP request of type “send SMS” is sent to an SMSEagle device, the f
     Example:
 
     ```txt
-    Sending the SMS 'This is a test' to '+324799789789' may have failed. Received response: '' (HTTP/1.1 200 OK/200). Error info: 'Error : 12029. [ERROR_WINHTTP_CANNOT_CONNECT]'
+    Sending the SMS 'This is a test' to '+324799789789' may have failed. Received response: '' (HTTP/1.1 200 OK/200). Error info: 'Error : 12029. [ERROR_WINHTTP_CANNOT_CONNECT]'
     ```
 
 ## Changes
@@ -386,7 +365,6 @@ When it is migrating data, basically, the Cassandra Cluster Migrator tool reads 
 From now on, when you create, update or import a GQI query, a unique query name will be mandatory. Up to now, query names were optional.
 
 - When you create a new query, the system will suggest “New query” as default name. If that name already exists, then a counter will be added (e.g. “New query (1)”, “New query (2)”, etc.
-
 - When you import a query that has no name, the system will suggest “Imported query” as default name. If that name already exists, then a counter will be added (e.g. “Imported query (1)”, “Imported query (2)”, etc.
 
 #### DataMiner upgrade packages: Obsolete upgrade/downgrade actions removed \[ID_32861\]
@@ -414,9 +392,7 @@ From now on, upgrade packages will perform a prerequisite check that verifies wh
 Ports currently checked:
 
 - 4222: NATS
-
 - 6222: NATS (only checked when you are not upgrading a standalone agent, a standalone Failover pair or a two-node agent cluster)
-
 - 9090: NAS
 
 If this check fails, you will need to execute the VerifyClusterPorts.dmupgrade package ([download](https://community.dataminer.services/documentation/verifyclusterports-dmupgrade/)). VerifyClusterPorts.dmupgrade will run the same tests as the DataMiner upgrade package, but it will make sure that temporary listening ports are open for the required ports and a temporary local firewall rule is configured. This way, if a firewall or other configuration issue is causing the problem, this will become clear. If no failing ports are reported when you run this package, the regular upgrade package will use this stored result to continue with the upgrade.
@@ -432,7 +408,6 @@ A number of enhancements have been made with regard to the setup of serial conne
 A number of issues have been fixed with regard to alarm templates.
 
 - When you updated an alarm template that contained a table parameter with at least two filters, only the last of those filters was calculated.
-
 - When, in an alarm template, you disabled the smart baselines for a table parameter with a filter and then re-enable it, the smart baselines for that table parameter would no longer be calculated.
 
 Also, a number of enhancements have been made with regard to the calculation of smart baselines.
@@ -470,11 +445,8 @@ When you opened the Resources app, in some cases, no resources or resource pools
 Up to now, the GUIDs of the following types of DOM reference fields would be displayed incorrectly:
 
 - Reservations (i.e. bookings)
-
 - Service definitions
-
 - DOM instances
-
 - Resources
 
 #### Dashboards app: Problem when sorting a table component populated by means of a GQI query \[ID_32814\]
@@ -507,22 +479,22 @@ Since DataMiner 10.2.0 \[CU0\] and DataMiner 10.2.2, the following exception cou
 
 ```txt
 2022-03-09 12:34:38.962|5|Config.Init|Error reading MaintenanceSettings.xml: System.Exception: Re-entrant Facade.Initialize detected. Do not access Facade.Instance directly or indirectly from the Facade constructor. ---> System.Exception: at System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
-   at System.Environment.get_StackTrace()
-   at Skyline.DataMiner.Net.Facade.get_Instance()
-   at Skyline.DataMiner.Net.Config.Init()
-   at Skyline.DataMiner.Net.Config.get_Instance()
-   at Skyline.DataMiner.Net.Facade..ctor()
-   at Skyline.DataMiner.Net.Facade.get_Instance()
-   at Skyline.DataMiner.Net.SLNetService.<OnStartInner>b__10_0()
-   at System.Threading.Tasks.Task.Execute()
-   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
-   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
-   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
-   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
-   at System.Threading.ThreadPoolWorkQueue.Dispatch()
-   --- End of inner exception stack trace ---
-   at Skyline.DataMiner.Net.Facade.get_Instance()
-   at Skyline.DataMiner.Net.Config.Init()
+   at System.Environment.get_StackTrace()
+   at Skyline.DataMiner.Net.Facade.get_Instance()
+   at Skyline.DataMiner.Net.Config.Init()
+   at Skyline.DataMiner.Net.Config.get_Instance()
+   at Skyline.DataMiner.Net.Facade..ctor()
+   at Skyline.DataMiner.Net.Facade.get_Instance()
+   at Skyline.DataMiner.Net.SLNetService.<OnStartInner>b__10_0()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   --- End of inner exception stack trace ---
+   at Skyline.DataMiner.Net.Facade.get_Instance()
+   at Skyline.DataMiner.Net.Config.Init()
 ```
 
 #### NAS: Incorrect default settings in nas.config file \[ID_32840\]
@@ -558,9 +530,7 @@ When an alarm was added to an alarm group while that group was expanded, the foc
 
 #### Web Services API: Problem when opening the soap.asmx page \[ID_32939\]
 
-In some cases, an exception could be thrown when you tried to open the following page:
-
-*http://DmaNameOrIpAddress/API/v1/soap.asmx*
+In some cases, an exception could be thrown when you tried to open the following page: `http://DmaNameOrIpAddress/API/v1/soap.asmx`
 
 #### Online SLA window would not get properly closed \[ID_32946\]
 
@@ -586,7 +556,7 @@ In some cases, it would incorrectly no longer be possible to move DVE elements t
 
 In some cases, a NATS issue could cause a DataMiner Agent to not start up correctly.
 
-#### Dashboards app - GQI: Problem while creating or updating a query when users did not have per­mission to view objects retrieved by a data source \[ID_33029\]
+#### Dashboards app - GQI: Problem while creating or updating a query when users did not have permission to view objects retrieved by a data source \[ID_33029\]
 
 When users were creating or modifying a GQI query, in some cases, an exception could be thrown when those users did not have permission to view objects retrieved by a data source.
 

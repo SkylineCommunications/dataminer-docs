@@ -11,16 +11,16 @@
       items:
       - name: General Feature Release 10.2.9
         topicUID: General_Feature_Release_10.2.9
-      - name: SLC_RN_DMSv10.2.8_REV000
-        href: General/SLC_RN_DMSv10.2.8_REV000.md
-      - name: SLC_RN_DMSv10.2.7_REV000
-        href: General/SLC_RN_DMSv10.2.7_REV000.md
-      - name: SLC_RN_DMSv10.2.6_REV000
-        href: General/SLC_RN_DMSv10.2.6_REV000.md
-      - name: SLC_RN_DMSv10.2.5_REV001
-        href: General/SLC_RN_DMSv10.2.5_REV001.md
-      - name: SLC_RN_DMSv10.2.4_REV000
-        href: General/SLC_RN_DMSv10.2.4_REV000.md
+      - name: General Feature Release 10.2.8
+        topicUID: General_Feature_Release_10.2.8
+      - name: General Feature Release 10.2.7
+        topicUID: General_Feature_Release_10.2.7
+      - name: General Feature Release 10.2.6
+        topicUID: General_Feature_Release_10.2.6
+      - name: General Feature Release 10.2.5
+        topicUID: General_Feature_Release_10.2.5
+      - name: General Feature Release 10.2.4
+        topicUID: General_Feature_Release_10.2.4
       - name: SLC_RN_DMSv10.2.3_REV000
         href: General/SLC_RN_DMSv10.2.3_REV000.md
       - name: SLC_RN_DMSv10.2.2_REV000
