@@ -5,12 +5,12 @@
     items:
     - name: v10.3
       items:
-      - name: SLC_RN_DMSv10.3.0_REV000
-        href: General/SLC_RN_DMSv10.3.0_REV000.md
+      - name: General Main Release 10.3.0
+        topicUid: General_Main_Release_10.3.0
     - name: v10.2
       items:
-      - name: DataMiner 10.2.9 release notes
-        topicUID: 10_2_9_General_RNs
+      - name: General Feature Release 10.2.9
+        topicUID: General_Feature_Release_10.2.9
       - name: SLC_RN_DMSv10.2.8_REV000
         href: General/SLC_RN_DMSv10.2.8_REV000.md
       - name: SLC_RN_DMSv10.2.7_REV000
@@ -27,8 +27,8 @@
         href: General/SLC_RN_DMSv10.2.2_REV000.md
       - name: SLC_RN_DMSv10.2.1_REV001
         href: General/SLC_RN_DMSv10.2.1_REV001.md
-      - name: SLC_RN_DMSv10.2.0_REV005
-        href: General/SLC_RN_DMSv10.2.0_REV005.md
+      - name: General Main Release 10.2.0
+        topicUid: General_Main_Release_10.2.0
     - name: v10.1
       items:
       - name: SLC_RN_DMSv10.1.12_REV002
@@ -55,8 +55,8 @@
         href: General/SLC_RN_DMSv10.1.2_REV000.md
       - name: SLC_RN_DMSv10.1.1_REV001
         href: General/SLC_RN_DMSv10.1.1_REV001.md
-      - name: SLC_RN_DMSv10.1.0_REV017
-        href: General/SLC_RN_DMSv10.1.0_REV017.md
+      - name: General Main Release 10.1.0
+        topicUid: General_Main_Release_10.1.0
     - name: v10.0
       items:
       - name: SLC_RN_DMSv10.0.13_REV001
@@ -88,8 +88,10 @@
   - name: DataMiner Cube release notes
     topicUID: DataMiner_Cube_RNs_index
     items:
-    - name: DataMiner Cube 10.2.9 release notes
-      topicUID: 10_2_9_Cube_RNs
+    - name: DataMiner Cube 10.3.0
+      topicUID: Cube_10.3.0
+    - name: DataMiner Cube 10.2.9
+      topicUID: Cube_10.2.9
   - name: Other release notes
     items:
     - name: ClassLibrary release notes

@@ -100,7 +100,7 @@ Once DataMiner Indexing has been installed, it is possible to change the backup 
 
 Once DataMiner Indexing Engine has been installed, the *Search & Indexing* section in System Center contains an additional *Enable indexing on alarms* option. This option must be enabled in order to use the new Alarm Console features mentioned below.
 
-There is also a button available that can be used to migrate booking data to the Indexing database. For more information, see [DataMiner Cube: New Migrate booking data to Indexing Engine wizard [ID_21935] [ID_23674] [ID_24410] [ID_24424]](#dataminer-cube-new-migrate-booking-data-to-indexing-engine-wizard-id21935-id23674-id24410-id24424).
+There is also a button available that can be used to migrate booking data to the Indexing database. For more information, see DataMiner Cube: New Migrate booking data to Indexing Engine wizard [ID_21935] [ID_23674] [ID_24410] [ID_24424].
 
 ##### Enhanced search in alarm tab pages
 

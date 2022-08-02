@@ -1,4 +1,14 @@
-# Main release 10.3.0
+---
+uid: General_Main_Release_10.3.0
+---
+
+# General Main Release 10.3.0
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!NOTE]
+> For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_10.3.0).
 
 ## New features
 
@@ -2684,6 +2694,14 @@ Main Release Version 10.3.0 - Feature Release Version 10.2.9
 
 Because of a number of enhancements, overall performance of the QA Device Simulator tool has improved.
 
+#### Service & Resource Management: Enhancements made to ResourceManagerHelper [ID_33993]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+A number of enhancements have been made to the ResourceManagerHelper class.
+
+For example, from now on, an ArgumentNullException will be thrown when a NULL argument is provided. Also, when a collection with one or more NULL objects is provided, those objects will be ignored.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction \[ID_31352\]
@@ -2969,12 +2987,6 @@ Main Release Version 10.3.0 - Feature Release Version 10.2.8
 
 When, on a dashboard, an EPM feed was surrounded by other components, in some cases, the dashboard would incorrectly scroll up when you selected a field in the EPM feed.
 
-#### Dashboards app: No longer possible to select a built-in theme as default theme \[ID_33665\]
-
-Main Release Version 10.3.0 - Feature Release Version 10.2.8
-
-In the Dashboards app, it would no longer be possible to select a built-in dashboard theme as default theme.
-
 #### Run-time errors due to MessageBrokerReconnectThread problems in SLCloudBridge \[ID_33716\]
 
 Main Release Version 10.3.0 - Feature Release Version 10.2.8 \[CU0\]
@@ -3050,3 +3062,15 @@ When a name concatenation for a DomInstance had been defined in either the Modul
 Main Release Version 10.3.0 - Feature Release Version 10.2.9
 
 When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
+
+#### Jobs app: Corrected start time would be saved incorrectly [ID_34043]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When, after receiving a message that it was not possible to save a job because of an invalid start time, you had corrected the start time and tried to save the job again, that start time would get saved incorrectly.
+
+#### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action would fail [ID_34091]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+During a DataMiner upgrade, in some cases, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail.

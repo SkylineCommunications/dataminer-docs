@@ -15,4 +15,4 @@ Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing
 - [DataMiner Overview](xref:OverviewIndex)
 - [User Guide](xref:Part1GettingStarted)
 - [Developer Documentation](xref:DevelopIndex)
-- [DataMiner Release Notes](xref:RN_index)
+- [DataMiner Release Notes](xref:DataMiner_General_RNs_index)
