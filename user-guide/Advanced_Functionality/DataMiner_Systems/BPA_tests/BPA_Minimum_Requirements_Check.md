@@ -9,8 +9,8 @@ This BPA test checks if the following minimum hardware requirements are met or e
 - CPU cores (physical): 4
 - Disk size:
 
-    - Main installation (C:\\): 300 GB
-    - Cassandra installation (D:\\ or other): 600 GB
+  - Main installation (C:\\): 300 GB
+  - Cassandra installation (D:\\ or other): 600 GB
 
 - Disk usage: Less than 50% on Cassandra drive.
 - System memory: 32 GB

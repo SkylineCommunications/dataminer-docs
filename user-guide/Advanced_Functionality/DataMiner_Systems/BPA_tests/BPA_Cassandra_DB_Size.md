@@ -39,13 +39,13 @@ Each rule violation will be described in detail in the *Detailed Result* and *Co
 
 - Free disk space < Total size of table
 
-    - Detailed result: Not enough disk space free on disk [Driveletter].
-    - Corrective action: Have at least [MinRequiredSpace] MB free on disk [DriveLetter].
+  - Detailed result: Not enough disk space free on disk [Driveletter].
+  - Corrective action: Have at least [MinRequiredSpace] MB free on disk [DriveLetter].
 
 - KeySpace not found
 
-    - Detailed result: Could not find the [KeySpaceName] keyspace.
-    - Corrective action: Make sure *DB.xml* is configured correctly and DataMiner was able to create the keyspace.
+  - Detailed result: Could not find the [KeySpaceName] keyspace.
+  - Corrective action: Make sure *DB.xml* is configured correctly and DataMiner was able to create the keyspace.
 
 ### Warning
 
@@ -58,13 +58,13 @@ Each rule violation will be described in detail in the *Detailed Result* and *Co
 
 - Largest SSTable file for a table > 1/3 of the total installed RAM
 
-    - Detailed result: System might not have enough RAM to process [Tablename].
-    - Corrective action: Have at least [MinRamRequired] GB of RAM installed or reduce the amount of data in [Tablename].
+  - Detailed result: System might not have enough RAM to process [Tablename].
+  - Corrective action: Have at least [MinRamRequired] GB of RAM installed or reduce the amount of data in [Tablename].
 
 - Duplicate folders detected
 
-    - Detailed result: Duplicate folders detected for [Tablename]
-    - Corrective action: Remove unused folders
+  - Detailed result: Duplicate folders detected for [Tablename]
+  - Corrective action: Remove unused folders
 
 ### Not Executed
 
@@ -84,21 +84,21 @@ When no Cassandra database is installed on the system or the installed Cassandra
 
 - Compaction DiskSpace Check
 
-    - Amount of free disk space > total size used by a table on that disk.
+  - Amount of free disk space > total size used by a table on that disk.
 
 - Keyspace exists
 
-    - Checks if the defined keyspace exists in the folder structure.
+  - Checks if the defined keyspace exists in the folder structure.
 
 ### Warning rules
 
 - SSTable size check
 
-    - Largest SSTable for a table < 1/3 of the total installed RAM.
+  - Largest SSTable for a table < 1/3 of the total installed RAM.
 
 - Duplicate folder check
 
-    - Checks if the folder structure does not contain multiple folders for the same name.
+  - Checks if the folder structure does not contain multiple folders for the same name.
 
 ## Limitations
 
