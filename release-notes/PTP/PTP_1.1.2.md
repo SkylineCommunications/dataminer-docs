@@ -1,12 +1,16 @@
-# Version 1.1.2
+---
+uid: PTP_1.1.2
+---
+
+# PTP 1.1.2
 
 ## New features
 
 #### Specifying a domain name for a PTP app instance \[ID_29882\]\[ID_29975\]\[ID_30034\]
 
-It is now possible to specify a domain name for the PTP app. You can do so in the PTP setup wizard, or on the *Admin* page of the app. In case multiple PTP domains need to be monitored in the same DMS, a different domain can be specified for different instances of the PTP app.
+It is now possible to specify a domain name for the PTP app. You can do so in the PTP setup wizard, or on the *Admin* page of the app. In case multiple PTP domains need to be monitored in the same DMS, a different domain can be specified for different instances of the PTP app.
 
-On the right side of the *Admin* page, the *All Domains* table lists all configured PTP domains. You can add more domains here using the *Add* button.
+On the right side of the *Admin* page, the *All Domains* table lists all configured PTP domains. You can add more domains here using the *Add* button.
 
 When a domain is specified for an instance of the PTP app, the corresponding element is renamed to *DataMiner PTP - {domain name}*. In addition, a service is created containing all PTP devices, with the name *PTP Domain - {domain name}*.
 
@@ -14,16 +18,12 @@ In each instance of the PTP app, only the alarms that are relevant for the speci
 
 #### Improved information on synchronization with preferred grandmaster \[ID_29990\]
 
-When you click the table icon on the *Summary* tab of the PTP app, now all nodes are displayed instead of only the nodes that are not reporting to a preferred grandmaster. In the *Status* column, information is displayed about the synchronization status of the node. This field can have the following values:
+When you click the table icon on the *Summary* tab of the PTP app, now all nodes are displayed instead of only the nodes that are not reporting to a preferred grandmaster. In the *Status* column, information is displayed about the synchronization status of the node. This field can have the following values:
 
-- *Synced With Active Preferred Grandmaster*: The node is synchronized with the active grand­master.
-
-- *Synced With Preferred Grandmaster*: The node is synchronized with the preferred grand­master, but this grandmaster is not active at the moment.
-
+- *Synced With Active Preferred Grandmaster*: The node is synchronized with the active grandmaster.
+- *Synced With Preferred Grandmaster*: The node is synchronized with the preferred grandmaster, but this grandmaster is not active at the moment.
 - *Synced With Non-Preferred Grandmaster*: The node is synchronized with a grandmaster that is not configured as a preferred grandmaster.
-
 - *Synced With Other Device*: The node is synchronized with another node, which is not a grandmaster. This situation is typically to be avoided.
-
 - *Unknown*: The node is synchronized with a node that is not known by the PTP application.
 
 By means of an alarm template, you can configure monitoring of this column. Any alarms that are triggered are included in the count on the *Summary* tab of the app.
@@ -42,11 +42,11 @@ When generating the information templates, the PTP setup wizard configured the c
 
 #### Support added for Ross Iggy AES16.16 connector \[ID_30304\]
 
-The Ross Iggy AES16.16 connector is now supported as a "slave clock" PTP type. For this purpose, the mapping for the following parameters has been added: *Clock ID*, *Priority 1*, *Priority 2*, *PTP Domain*, *Slave Only*, *Lock Status*, *OffSet*, *Mean Path Delay*, *GM Clock ID*, *GM Clock Class*, *GM Clock Accuracy*, *GM Priority 1* and *GM Priority 2*.
+The Ross Iggy AES16.16 connector is now supported as a "slave clock" PTP type. For this purpose, the mapping for the following parameters has been added: *Clock ID*, *Priority 1*, *Priority 2*, *PTP Domain*, *Slave Only*, *Lock Status*, *OffSet*, *Mean Path Delay*, *GM Clock ID*, *GM Clock Class*, *GM Clock Accuracy*, *GM Priority 1* and *GM Priority 2*.
 
 #### Support added for directOut Montone.42 connector \[ID_30391\]
 
-The directOut Montone.42 connector is now supported as a "slave clock" PTP type. For this purpose, the mapping for the following parameters has been added: *PTP Domain*, *Slave Only*, *Lock Status*, *Offset* and *GM Clock ID*.
+The directOut Montone.42 connector is now supported as a "slave clock" PTP type. For this purpose, the mapping for the following parameters has been added: *PTP Domain*, *Slave Only*, *Lock Status*, *Offset* and *GM Clock ID*.
 
 #### No longer possible to assign role to PTP app elements \[ID_30459\]
 
@@ -64,11 +64,9 @@ Previously, when the domain of a PTP app instance was configured, the correspond
 
 To improve support for long element names, several changes have been implemented.
 
-- The role selection wizard now supports two lines for element names. In addition, column siz­ing has been improved throughout the script.
-
-- On the *Summary* tab of the PTP app, the size of several sections has been adjusted. For the element name in the *Grandmaster* section, two lines are now supported. If the name is still too big to be fully displayed, an ellipsis will be added.
-
-- On the *Nodes* tab of the PTP app, two lines are now supported for the element names in several places, and an ellipsis will be added in case a name is still too big to be fully dis­played.
+- The role selection wizard now supports two lines for element names. In addition, column sizing has been improved throughout the script.
+- On the *Summary* tab of the PTP app, the size of several sections has been adjusted. For the element name in the *Grandmaster* section, two lines are now supported. If the name is still too big to be fully displayed, an ellipsis will be added.
+- On the *Nodes* tab of the PTP app, two lines are now supported for the element names in several places, and an ellipsis will be added in case a name is still too big to be fully displayed.
 
 ### Fixes
 
@@ -86,12 +84,12 @@ When you applied the same name to a domain or ran the setup wizard for an existi
 
 #### Not possible to finish setup wizard \[ID_30737\]
 
-When you ran the setup wizard from the *Admin* page of the PTP app, it could occur that no scroll bar was displayed in the last step of the wizard so that it was not possible to click the *Finish* button. This made it impossible to set up roles starting from the normal setup.
+When you ran the setup wizard from the *Admin* page of the PTP app, it could occur that no scroll bar was displayed in the last step of the wizard so that it was not possible to click the *Finish* button. This made it impossible to set up roles starting from the normal setup.
 
 #### Empty domain name not shown correctly in setup wizard \[ID_30746\]
 
-When the setup wizard was run from the *Admin* page of a PTP app instance that did not have a domain name set, the wizard incorrectly displayed the domain name as *N/A*.
+When the setup wizard was run from the *Admin* page of a PTP app instance that did not have a domain name set, the wizard incorrectly displayed the domain name as *N/A*.
 
 #### Incorrect information for second analyzer on Nodes \> Analyzers tab \[ID_30759\]
 
-When you compared two analyzers in the PTP app on the *Nodes* > *Analyzers* tab, it could occur that for the second analyzer information of the first analyzer was shown.
+When you compared two analyzers in the PTP app on the *Nodes* > *Analyzers* tab, it could occur that for the second analyzer information of the first analyzer was shown.

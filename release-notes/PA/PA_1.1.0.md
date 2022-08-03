@@ -1,4 +1,8 @@
-# Version 1.1.0
+---
+uid: PA_1.1.0
+---
+
+# PA 1.1.0
 
 ## New features
 
@@ -13,31 +17,23 @@ When an output token is generated, an activity will now associate one or more ga
 The evaluation type can be:
 
 - *First Matching*: The first matching rule should be identified and one single token should be generated.
-
 - *All Matching*: A token should be generated for each matching rule.
 
 A routing rule defines:
 
 - A sequence ID (integer)
-
 - A "DoTagTokens" boolean (see below)
-
 - A list of "OutgoingInterfaceIds", which refer to local interface IDs
-
 - A list of conditions:
 
     - An "IncomingGatewayKeyName" (optional in case of "Any" operation)
-
     - A Value (optional in case of "Any" operation)
-
     - An Operation: Only "Equal" and "Any" are currently supported. "Any" means that the gate­way key and value are ignored, and only the incoming interface ID is matched)
-
-    - A list of IDs of incoming interfaces. Alternatively, -1 can be specified to indicate all incom­ing interfaces.
+    - A list of IDs of incoming interfaces. Alternatively, -1 can be specified to indicate all incoming interfaces.
 
 Token objects will have the following additional fields to support this:
 
 - *Initial Token Guid*: Used to identify all tokens related to an initial token.
-
 - *Custom Identifier*: Used to identify tokens related to one another.
 
 The token object will also have a list of parent token GUIDs, as multiple incoming tokens can result in one single outgoing token.
@@ -48,7 +44,7 @@ Below you can find a number of examples of routing rules:
 
 - AND-Split rule:
 
-    ```txt
+    ```json
     {
         "Evaluation": "First Matching",
         "Rules": [{
@@ -70,7 +66,7 @@ Below you can find a number of examples of routing rules:
 
 - AND-Merge or OR-Merge rule:
 
-    ```txt
+    ```json
     {
         "Evaluation": "First Matching",
         "Rules": [{
@@ -97,7 +93,7 @@ Below you can find a number of examples of routing rules:
 
 - XOR-Split rule:
 
-    ```txt
+    ```json
     {
      "Evaluation": "First Matching",
         "Rules": [{
@@ -131,7 +127,7 @@ Below you can find a number of examples of routing rules:
 
 - XOR-Merge rule:
 
-    ```txt
+    ```json
     {
         "Evaluation": "First Matching",
         "Rules": [{
@@ -153,7 +149,7 @@ Below you can find a number of examples of routing rules:
 
 - OR-Split rule:
 
-    ```txt
+    ```json
     {
         "Evaluation": "All Matching",
         "Rules": [{
@@ -189,7 +185,7 @@ Below you can find a number of examples of routing rules:
 
 Two new methods are available that can be used for the callback to the *TokenHandler* script in Profile-Load scripts. These are available in the *ProcessAutomationManager* class in the *Skyline.DataMiner.DataMinerSolutions.ProcessAutomation namespace*.
 
-```txt
+```csharp
 public static void ExecuteTokenHandler(Engine engine, ScriptInfo scriptInfo, MessageType messageType);
 ```
 
@@ -198,12 +194,10 @@ Executes the token handler script defined in the *ScriptInfo* parameter with th
 Parameters:
 
 - *Engine*: Link with the SLScripting process.
-
 - *ScriptInfo*: The data needed to perform the callback operation.
+- *MessageType*: The type of message exchanged between the queue element, token handler and profile load scripts.
 
-- *MessageType*: The type of message exchanged between the queue element, token han­dler and profile load scripts.
-
-```txt
+```csharp
 public static void ExecuteTokenHandler(Engine engine, ScriptInfo scriptInfo, MessageType messageType, ProcessProfileInstances processProfileInstances, Dictionary<string, string> activityMetadata, Dictionary<string, string> gatewayKeys);
 ```
 
@@ -212,15 +206,10 @@ Executes the token handler script defined in the *ScriptInfo* parameter with new
 Parameters:
 
 - *Engine*: Link with the SLScripting process.
-
 - *ScriptInfo*: The data needed to perform the callback operation.
-
-- *MessageType*: The type of message exchanged between the queue element, token han­dler and profile load scripts.
-
+- *MessageType*: The type of message exchanged between the queue element, token handler and profile load scripts.
 - *ProcessProfileInstances*: The list of process profile instances passed to the token handler.
-
 - *ActivityMetadata*: The activity metadata passed to the token handler.
-
 - *GatewayKeys*: The gateway keys passed to the token handler.
 
 #### Queue elements now only created depending on ProcessAutomation property of resource pool \[ID_28225\]
