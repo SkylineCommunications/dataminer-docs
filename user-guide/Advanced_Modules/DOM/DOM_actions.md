@@ -24,12 +24,12 @@ This action can be used to execute a specified script. This has the following pr
 | Condition | IDomCondition | The condition that should be met before the actions is allowed to be executed. |
 | Script | string | The name of the script that can be executed. |
 | Async | bool | Determines whether the script will be run synchronously or asynchronously. When this is set to true, no errors or info data from the script will be returned. |
-| ScriptOptions | List\<string> | Option strings that are passed to the SLAutomation process during execution. <!-- Add link? --> |
+| ScriptOptions | List\<string> | Option strings that are passed to the SLAutomation process during execution. |
 | Interactive | bool | Determines whether the script should be executed as an interactive script. See [Interactive script](#interactive-script). |
 
 > [!NOTE]
 >
-> - The *ScriptOptions* property can contain the option strings you would put in the *Options* property of an `ExecuteScriptMessage` <!-- Needs link or more info -->. This can be used to for example pass along a parameter (e.g. "PARAMETER:1:SomeValue"). Note that you should not add the "DEFER" option as this will be added automatically depending on the value of the *Async* property.
+> - The *ScriptOptions* property can contain the option strings you would put in the *Options* property of an [ExecuteScriptMessage](xref:Skyline.DataMiner.Net.Messages.ExecuteScriptMessage). This can be used to for example pass along a parameter (e.g. "PARAMETER:1:SomeValue"). Note that you should not add the "DEFER" option as this will be added automatically depending on the value of the *Async* property.
 > - If no condition is defined (null), the action can always be executed.
 
 The scripts that will be executed using this action require a custom entry point of type "OnDomAction". This entry point method should have the `IEngine` object as it first argument, and an `ExecuteScriptDomActionContext` object as its second object. A script with this entry point can look like this:
@@ -101,7 +101,7 @@ if (info != null && info.InfoType == DomActionInfo.Type.ScriptOutput)
 
 ### Interactive script
 
-It is possible to execute an Interactive Automation Script (IAS) using the DOM actions. When a client triggers a DOM action, it can then interact with the script.
+It is possible to execute an interactive Automation script (IAS) using the DOM actions. When a client triggers a DOM action, it can then interact with the script.
 
 Flow:
 
@@ -153,7 +153,7 @@ An `ActionDefinition` can only be executed when a pre-defined condition is met. 
 
 - **ValidForStatusTransitionCondition**
 
-  Defines a condition that is met when a `DomInstance` is valid for a given status transition. The required transition ID must be assigned to the *TransitionId* property. When this condition is not met, extra `TraceData` will be returned (via the *InnerTraceData* property of the `DomActionError`). This `TraceData` should contain an error of type `DomStatusTransitionError`. See the status system page For more information about this error type, see [Sending a transition request](xref:DomHelper_class#sending-a-transition-request).
+  Defines a condition that is met when a `DomInstance` is valid for a given status transition. The required transition ID must be assigned to the *TransitionId* property. When this condition is not met, extra `TraceData` will be returned (via the *InnerTraceData* property of the `DomActionError`). This `TraceData` should contain an error of type `DomStatusTransitionError`. See the status system page For more information about this error type, see [Creating and transitioning DOM instances](xref:DOM_status_system#creating-and-transitioning-dom-instances).
 
   ```csharp
   var condition = new ValidForStatusTransitionCondition("first_to_second_transition");

@@ -2127,36 +2127,35 @@
               topicUID: DomBehaviorDefinition
         - name: DOM managers
           topicUid: DOM_managers
-          items:
-            - name: DOM events
-              topicUID: DOM_events
-            - name: DOM history
-              topicUID: DOM_history
-            - name: DOM status system
-              topicUID: DOM_status_system
-            - name: DOM module settings
-              topicUid: DOM_ModuleSettings
-              items:
-                - name: Module ID
-                  topicUID: DOM_ModuleId
-                - name: ModuleSections
-                  topicUID: DOM_ModuleSections
-                - name: FieldAliases
-                  topicUID: DOM_FieldAliases
-                - name: ExecuteScriptOnDomInstanceActionSettings
-                  topicUID: ExecuteScriptOnDomInstanceActionSettings
-                - name: DomManagerSecuritySettings
-                  topicUID: DomManagerSecuritySettings
-                - name: DomManagerInformationEventSettings
-                  topicUID: DomManagerInformationEventSettings
-                - name: DomInstanceNameDefinition
-                  topicUID: DomInstanceNameDefinition
-                - name: ModuleBehaviorDefinition
-                  topicUID: DOM_ModuleBehaviorDefinition
-                - name: TtlSettings
-                  topicUID: DOM_TtlSettings
         - name: DomHelper class
           topicUid: DomHelper_class
+        - name: DOM events
+          topicUID: DOM_events
+        - name: DOM history
+          topicUID: DOM_history
+        - name: DOM status system
+          topicUID: DOM_status_system
+        - name: DOM module settings
+          topicUid: DOM_ModuleSettings
+          items:
+            - name: Module ID
+              topicUID: DOM_ModuleId
+            - name: ModuleSections
+              topicUID: DOM_ModuleSections
+            - name: FieldAliases
+              topicUID: DOM_FieldAliases
+            - name: ExecuteScriptOnDomInstanceActionSettings
+              topicUID: ExecuteScriptOnDomInstanceActionSettings
+            - name: DomManagerSecuritySettings
+              topicUID: DomManagerSecuritySettings
+            - name: DomManagerInformationEventSettings
+              topicUID: DomManagerInformationEventSettings
+            - name: DomInstanceNameDefinition
+              topicUID: DomInstanceNameDefinition
+            - name: ModuleBehaviorDefinition
+              topicUID: DOM_ModuleBehaviorDefinition
+            - name: TtlSettings
+              topicUID: DOM_TtlSettings
         - name: DOM actions
           topicUID: DOM_actions
         - name: DOM data storage

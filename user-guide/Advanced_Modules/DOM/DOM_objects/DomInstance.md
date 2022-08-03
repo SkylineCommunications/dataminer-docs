@@ -22,7 +22,7 @@ The table below lists the properties of the `DomInstance` object. It also indica
 
 ## Requirements
 
-To **create or update** a `DomInstance` object:
+To **create or update** a `DomInstance`:
 
 - The `DomInstance` must have a link to an existing `DomDefinition`.
 
@@ -57,11 +57,11 @@ The errors below are related to the status system. For each error, the *DomInsta
 
 Security checks are done on CRUD actions when permission flags are configured on the `DomManagerSecuritySettings` (in the [ModuleSettings](xref:DOM_ModuleSettings)).
 
-- To **read** `DomInstances`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
+- To **read** a `DomInstance`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
 
-- To **create or update** `DomInstances`, the user needs the permission flag defined by `DomManagerSecuritySettings.CreateAndUpdateDomInstancePermission`.
+- To **create or update** a `DomInstance`, the user needs the permission flag defined by `DomManagerSecuritySettings.CreateAndUpdateDomInstancePermission`.
 
-- To **delete** `DomInstances`, the user needs the permission flag defined by `DomManagerSecuritySettings.DeleteDomInstancePermission`.
+- To **delete** a `DomInstance`, the user needs the permission flag defined by `DomManagerSecuritySettings.DeleteDomInstancePermission`.
 
 ## Notes
 

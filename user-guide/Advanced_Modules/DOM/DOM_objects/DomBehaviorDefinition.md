@@ -26,7 +26,7 @@ The table below lists the properties of the `DomBehaviorDefinition` object. It a
 
 One `DomBehaviorDefinition` can inherit from another. However, there are important limitations in place:
 
-- You can only inherit from the `ModuleDomBehaviorDefinition` (the ID is defined in the *ModuleBehaviorDefinition* property of the `ModuleSettings`).
+- It can only inherit from the `ModuleDomBehaviorDefinition` (the ID is defined in the *ModuleBehaviorDefinition* property of the `ModuleSettings`).
 
 - The inheriting definition can only contain an ID, parent ID, and extra `DomStatusSectionDefinitionLinks` for `SectionDefinitions` that are not already defined on the module definition. Adding extra statuses or transitions is not allowed.
 
@@ -40,7 +40,7 @@ The `DomBehaviorDefinition` has several properties that contain the configuratio
 
 ## Buttons and Actions
 
-The `DomBehaviorDefinition` has  several properties related to the buttons and actions concept. For more information, see [Actions](xref:DOM_actions).
+The `DomBehaviorDefinition` has several properties related to the buttons and actions concept. For more information, see [Actions](xref:DOM_actions).
 
 ## Requirements
 
@@ -87,9 +87,9 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 
 Security checks are done on CRUD actions when permission flags are configured on the `DomManagerSecuritySettings` (in the [ModuleSettings](xref:DOM_ModuleSettings)):
 
-- To **read** `DomBehaviorDefinitions`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
+- To **read** a `DomBehaviorDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
 
-- To **create, update or delete** `DomBehaviorDefinitions`, the user needs the permission flag defined by `DomManagerSecuritySettings.ConfigurePermission`.
+- To **create, update, or delete** a `DomBehaviorDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ConfigurePermission`.
 
 > [!NOTE]
 > To create, update, or delete the `ModuleDomBehaviorDefinition`, you need the *ModuleSettingsConfiguration* permission flag.

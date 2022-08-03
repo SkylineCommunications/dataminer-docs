@@ -16,5 +16,5 @@ All DOM data are stored in the Elasticsearch database. Data for each object is s
 
 > [!NOTE]
 >
-> - Logging for each DOM Manager is done in a separate log file with the name "SLDomManager_{moduleId}", e.g. "SLDomManager_my_module.txt".
+> - Logging for each DOM manager is done in a separate log file with the name "SLDomManager_{moduleId}", e.g. "SLDomManager_my_module.txt".
 > - A backup of all DOM manager data can be taken using the backup option *Create a backup of the database* > *Include all DomManager data in backup*. This is by default enabled in the backup preset *Full Backup*. See [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups).

@@ -28,7 +28,7 @@ sectionDefinition = domHelper.SectionDefinitions.Create(sectionDefinition) as Cu
 
 ## FieldDescriptor
 
-A `FieldDescriptor` object defines what a field of a `DomInstance` should look like. To define the type of the field, you need to set the **FieldType** property. The following types are supported:
+A `FieldDescriptor` object defines what a field of a `DomInstance` should look like. To define the type of the field, you need to set the *FieldType* property. The following types are supported:
 
 - string
 - double
@@ -114,9 +114,9 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 
 ## Requirements & limitations
 
-- To **create or update** a `SectionDefinition` object, it must define `FieldDescriptors` with types that are actually supported by the relevant `FieldDescriptor`.
+- To **create or update** a `SectionDefinition`, it must define `FieldDescriptors` with types that are actually supported by the relevant `FieldDescriptor`.
 
-- When you **update** a `SectionDefinition` object:
+- When you **update** a `SectionDefinition`:
 
   - You cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
 
@@ -132,7 +132,7 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 
   - There is a special case for `GenericEnumFieldDescriptors`: you can only update and delete `GenericEnumEntries` that are not in use by `DomInstances`.
 
-- You can only **delete** a `SectionDefinition` object if it is not linked by a `DomDefinition` and it is not used by `DomInstances`.
+- You can only **delete** a `SectionDefinition` if it is not linked by a `DomDefinition` and it is not used by `DomInstances`.
 
 ## Errors
 
@@ -141,17 +141,17 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | Reason | Description |
 |--|--|
 | FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor. Available properties: *NotSupportedType*, *SupportedTypes*. |
-| SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`. Available properties: `SectionDefinition`, *OriginalSectionDefinition*, *DomInstanceIds*. |
-| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Available properties: `SectionDefinition`, . |
+| SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`. Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
+| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Available properties: *SectionDefinition*, *DomDefinitionIds*. |
 | GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`. Available properties: *GenericEnumEntry*, *DomInstanceIds*. |
 
 ## Security
 
 Security checks are done on CRUD actions when permission flags are configured on the `DomManagerSecuritySettings` (in the [ModuleSettings](xref:DOM_ModuleSettings)):
 
-- To **read** `SectionDefinitions`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
+- To **read** a `SectionDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
 
-- To **created, update or delete** `SectionDefinitions`, the user needs the permission flag defined by `DomManagerSecuritySettings.ConfigurePermission`.
+- To **created, update, or delete** a `SectionDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ConfigurePermission`.
 
 > [!NOTE]
 > When the ID of the `SectionDefinition` is in the `ModuleSections` list of the `ModuleSettings`, it can only be created, updated, or deleted by users who have the permission to alter module settings ("Module Settings Configuration" permission flag).

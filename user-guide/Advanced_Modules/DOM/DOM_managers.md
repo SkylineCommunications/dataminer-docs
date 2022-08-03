@@ -8,7 +8,11 @@ A DOM manager (or `DomManager` in the code) manages create, read, update, and de
 
 A DOM manager sends out various [events](xref:DOM_events) when actions are done on the DOM objects and tracks the [history](xref:DOM_history) of all changes done to the field values of a DOM instance. It also allows you to configure the [status system](xref:DOM_status_system) for a DOM definition.
 
+## Module ID
+
 To create a DOM manager, you first need to create a [ModuleSettings](xref:DOM_ModuleSettings) object, which includes a **unique module ID** that is used to identify the DOM manager instance in the DMS. In the module settings, you can also configure the behavior of the DOM manager. You can for example define the permissions that will be needed for the various script actions, or you can enable information events.
+
+## Creation and startup logic
 
 A DOM manager gets initialized in SLNet as soon as the first call arrives for it. For this reason, the first call may take longer than others. The following logic flow applies:
 

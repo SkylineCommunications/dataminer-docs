@@ -34,4 +34,4 @@ For example, to create a system that stores time spent working on specific tasks
 
 - Field descriptor 4: *Name* = "Stop time" and *Type* = "DateTime"
 
-A DOM definition will then need to be created that contains a link to this section definition, so that employees can then register time by creating a new DOM instance linked to the section definition. The DOM instance will contain a field value for each of the field descriptors.
+A DOM definition will then need to be created that contains a link to this section definition, so that employees can then register time by creating a new DOM instance linked to that DOM definition. The DOM instance will have a section linked to the section definition that contains a field value for each of the field descriptors.

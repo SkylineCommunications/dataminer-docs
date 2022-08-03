@@ -4,57 +4,28 @@ uid: DomHelper_class
 
 # DomHelper class
 
-## CRUD actions
+## CRUD methods
 
-The *DomHelper* class can be used in a script, protocol, or app to execute create, read, update, and delete (CRUD) actions on DOM objects.
+The `DomHelper` class can be used in a script, protocol, or app to execute create, read, update, and delete (CRUD) actions on DOM objects.
 
 To do so, first call the constructor of the helper, provide a callback to SLNet, and specify a module ID for which module settings have been defined. For example:
 
 ```csharp
 // Create the DomHelper
-var domHelper = new DomHelper(engine.SendSLNetMessages, moduleId:"my_module");
+var helper = new DomHelper(engine.SendSLNetMessages, "a_module_id");
 ```
 
-You can then call the *Create*, *Read*, *Update* or *Delete* methods on the CRUD helper components of the helper.
+You can then call the *Create*, *Read*, *Update*, or *Delete* methods on the CRUD helper components of the helper.
 
-For example, to create an empty DOM template:
+For example:
 
 ```csharp
-// Create the DomHelper
-var domHelper = new DomHelper(engine.SendSLNetMessages, moduleId:"my_module");
-
-// Create a basic empty DOM template
-var domTemplate = new DomTemplate()
-{
-    Name = "Empty Template",
-    TemplateData = new DomInstance()
-};
-
-// Save the DOM template to the DOM manager
-domHelper.DomTemplates.Create(domTemplate);
+// Create a DomDefinition
+var domDefinition = new DomDefinition("DomDefinitionName");
+helper.DomDefinitions.Create(domDefinition);
 ```
 
-Updating and deleting an object can be done in a similar way. For example:
-
-```csharp
-// Update a DOM template
-domHelper.DomTemplates.Update(domTemplate);
-
-// Delete a DOM template
-domHelper.DomTemplates.Delete(domTemplate);
-```
-
-To read an object, create a filter with an exposer class and then pass this to the read method of the helper. For example:
-
-```csharp
-// Create a filter to retrieve the empty template we just saved
-var filter = DomTemplateExposers.Name.Equal("Empty Template");
-
-// Request the object from the server
-var emptyTemplate = domHelper.DomTemplates.Read(filter).FirstOrDefault();
-```
-
-By default, an exception will be thrown if a call fails. However, you can disable this and check if something went wrong yourself by requesting the *TraceData* object of the last call. This object contains all errors and warnings. For example:
+By default, an exception will be thrown if a call fails. However, you can disable this and check if something went wrong yourself by requesting the `TraceData` object of the last call. This object contains all errors and warnings. For example:
 
 ```csharp
 // Disable the exceptions
@@ -81,45 +52,61 @@ if (!traceData.HasSucceeded())
 }
 ```
 
-<!-- Add Xref to error data types and error reasons? -->
+## Special methods
 
-## Retrieving history information
+In addition to the CRUD methods, the following special methods are also supported on a `DomInstance` CRUD helper component:
 
-You can also retrieve [HistoryChange](wref:DOM_history#historychange) objects using the *DomHelper* class. You can filter them using HistoryChangeExposers.
+- DoStatusTransition: Used to transition a `DomInstance` from one status to another. See [DOM status system](xref:DOM_status_system).
+
+- ExecuteAction: Used to execute an action in the context of a `DomInstance` that was defined on a `DomBehaviorDefinition`. See [DOM actions](xref:DOM_actions).
+
+## Stitching
+
+The stitching functionality makes it easier to work with a `DomInstance`. With this, There will be no need to use the helper each time and retrieve the linked objects using an ID filter. When a `DomInstance` is stitched, it is possible to:
+
+- Retrieve the full `DomDefinition` object that the `DomInstance` is linked to, by calling `GetDomDefinition()` on the instance.
+- Retrieve the full `SectionDefinition` object that a `Section` is linked to, by calling `GetSectionDefinition()` on the `Section`
+- Retrieve the full `FieldDescriptor` object that a `FieldValue` is linked to, by calling `GetFieldDescriptor()` on the `FieldValue`.
 
 > [!NOTE]
-> It is only possible to read *HistoryChange* items. Creating, updating or deleting is reserved for the internal API.
+> When an item is not stitched, and one of the above mentioned get methods is called (e.g. GetDomDefinition), an exception will be thrown.
 
-Example:
+There are two ways to stitch DOM instances:
 
-```csharp
-// Get all history for a specific DomInstance
-var filter = HistoryChangeExposers.SubjectID.Equal(domInstance.ID.ToFileFriendlyString());
-var allHistory = domHelper.DomInstanceHistory.Read(filter);
+- `DomHelper.StitchDomInstances(List<DomInstance> domInstances)`: This will stitch the given list of DomInstances by retrieving all objects from server using the SLNet callback on the helper.
 
-// Cast the changes
-var singleHistory = allHistory.First();
-var sectionChanges = singleHistory.Changes.OfType<DomSectionChange>();
-var statusChanges = singleHistory.Changes.OfType<DomInstanceStatusChange>();
-```
+- `DomHelper.StitchDomInstances(List<DomInstance> domInstances, List<SectionDefinition> existingSectionDefinitions, List<DomDefinition> existingDomDefinitions)`: This will stitch the given list of DomInstances by trying to retrieve the other objects from the given lists. This is a more efficient option when you would already have all necessary objects.
 
-## Sending a transition request
+> [!NOTE]
+> If stitching is used and an object cannot be found, a null value will be assigned to the related property. The `DomInstance` will still be marked as stitched. This way, when that property is retrieved, you can know it is no longer available.
+>
+> For example: If the second of the two methods above is used, but the provided `existingDomDefinitions` list is empty, the stitching logic will not be able to find the `DomDefinition` object linked to the instance. When you try to retrieve the `DomDefinition` using the `DomInstance.GetDomDefinition()` method, "null" will be returned.
 
-Transitioning to another status for a DOM instance must be done by sending a transition request. This request requires the ID of the DOM instance and the ID of the transition.
+## Attachments
 
-For example:
+It is also possible to save attachments with the `DomHelper`. These are linked to a `DomInstanceId`. You can use the `Attachments` helper on the `DomInstance` CRUD component.
 
 ```csharp
-domHelper.DomInstances.DoStatusTransition(domInstance.ID, "initial_to_acceptance");
+var domHelper new DomHelper(engine.SendSLNetMessages, PermissionTestModuleId);
+var fileBytes = File.ReadAllBytes("C:\MyDocuments\ImportantDocument.txt");
+
+// Adding an attachment
+domHelper.DomInstances.Attachments.Add(domInstanceId, "ImportantDocument.txt", fileBytes);
+
+// Get the names of all attachments
+List<string> fileNames = domHelper.DomInstances.Attachments.GetFileNames(domInstanceId);
+
+// Get the content of an attachment
+byte[] file = domHelper.DomInstances.Attachments.Get(domInstanceId, "ImportantDocument.txt");
+
+// Delete an attachment
+domHelper.DomInstances.Attachments.Delete(domInstanceId, "ImportantDocument.txt");
 ```
 
-When something goes wrong while transitioning, a *DomStatusTransitionError* will be returned in the *TraceData* of the request. This error can contain the following reasons:
-
-| Reason | Description |
-|--|--|
-| StatusTransitionNotFound | The given transition ID does not match any of the IDs defined on the associated DOM behavior definition. This error can also occur when there is no valid DOM behavior definition linked in the first place. *StatusTransitionId* contains the ID of the transition that could not be found. |
-| StatusTransitionIncompatibleWithCurrentStatus | The current status of the DOM instance does not match the "from" status defined by the transition. *StatusTransitionId* contains the ID of the transition that could not be completed. |
-| DomInstanceContainsUnknownFieldsForNextStatus | There is at least one field value defined in the DOM instance for which no link could be found in the DOM behavior definition for the next status. *AssociatedFields* contains the *SectionDefinitionID* and *FieldDescriptorID* combinations of the unknown fields. |
-| DomInstanceHasInvalidFieldsForNextStatus | The DOM instance contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same *SectionDefinition* and *FieldDescriptor*, only one entry will be included. *AssociatedFields* contains the *SectionDefinitionID* and *FieldDescriptorID* combinations of the invalid fields |
-| DomInstanceHasMissingRequiredFieldsForNextStatus | The DOM instance does not contain all fields that are required for the next status. *AssociatedFields* contains the *SectionDefinitionID* and *FieldDescriptorID* combinations of the missing fields |
-| CrudFailedExceptionOccurred | When the DOM instance was saved, a *CrudFailedException* occurred. *InnerTraceData* contains the *TraceData* contained in the exception. |
+> [!NOTE]
+>
+> - The size limit of the attachments is determined by the [Documents.MaxSize](xref:MaintenanceSettings_xml#documentsmaxsize) setting in *MaintenanceSettings.xml*. The default value for this is 20 MB. Trying to upload a larger file using the helper will result in a `DataMinerException`.
+> - Deleting a `DomInstance` will delete all attachments from the file system. The attachments cannot be recovered.
+> To view or download `DomInstance` attachments, read permission is required, and to add or edit them, edit permission is required.
+> To include `DomInstance` attachments in a [custom backup](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in Cube, select *All documents located on this DMA*.
+> The attachments are synced in the DMS.

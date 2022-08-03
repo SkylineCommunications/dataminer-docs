@@ -202,6 +202,7 @@ uid: glossary
 | Hysteresis | DataMiner functionality that allows you to delay the moment when an alarm is cleared or when the severity of an alarm increases. See [Alarm hysteresis](xref:Alarm_hysteresis). |
 | IaaS | Infrastructure as a Service. Cloud-based service that provides a basic computing infrastructure. |
 | IAM | Inventory & Asset Management. DataMiner module that establishes a link between a DMS and a CMDB. See [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management). |
+| IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction. See [Building interactive Automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
 | IDE | Integrated Development Environment. Software application that provides comprehensive facilities for software development. |
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network. See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
