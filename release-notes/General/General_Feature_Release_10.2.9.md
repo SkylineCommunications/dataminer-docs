@@ -56,7 +56,7 @@ Up to now, when a Service Definition component displayed a service definition of
 
 #### Web apps now also support parameter comments configured in Param.Message elements [ID_33784]
 
-<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 When configuring a parameter in a protocol, you can add a `<Message>` element containing a comment to be displayed in a confirmation box when users change that parameter on the user interface. Up to now, this `<Message>` element was only supported by DataMiner Cube. It is now also supported by web applications like Monitoring and Dashboards.
 
