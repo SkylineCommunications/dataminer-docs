@@ -176,6 +176,25 @@
         topicUid: DIS_2.0.1
     - name: EPM release notes
       items:
+      - name: D-DOCSIS
+        items:
+        - name: EPM 6.0.1 D-DOCSIS 
+          topicUid: EPM_6.0.1_D-DOCSIS
+        - name: EPM 6.0.0 D-DOCSIS 
+          topicUid: EPM_6.0.0_D-DOCSIS
+        - name: EPM 5.0.0 D-DOCSIS 
+          topicUid: EPM_5.0.0_D-DOCSIS
+      - name: I-DOCSIS
+        items:
+        - name: EPM 6.0.1 I-DOCSIS 
+          topicUid: EPM_6.0.1_I-DOCSIS
+        - name: EPM 6.0.0 I-DOCSIS 
+          topicUid: EPM_6.0.0_I-DOCSIS
+        - name: EPM 5.0.0 I-DOCSIS 
+          topicUid: EPM_5.0.0_I-DOCSIS
+
+
+
       - name: SLC_RN_EPMv6.1.3_REV000 
         href: EPM/SLC_RN_EPMv6.1.3_REV000.md
       - name: SLC_RN_EPMv6.1.2_REV000 
@@ -188,12 +207,9 @@
         href: EPM/SLC_RN_EPMv6.0.3_REV000.md
       - name: SLC_RN_EPMv6.0.2_REV000 
         href: EPM/SLC_RN_EPMv6.0.2_REV000.md
-      - name: SLC_RN_EPMv6.0.1_REV000 
-        href: EPM/SLC_RN_EPMv6.0.1_REV000.md
-      - name: SLC_RN_EPMv6.0.0_REV000 
-        href: EPM/SLC_RN_EPMv6.0.0_REV000.md
-      - name: SLC_RN_EPMv5.0.0_REV000 
-        href: EPM/SLC_RN_EPMv5.0.0_REV000.md
+
+
+
     - name: IDP release notes
       items:
       - name: SLC_RN_IDPv1.2.0_REV000 
