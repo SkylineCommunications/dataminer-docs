@@ -298,18 +298,18 @@
         topicUid: PTP_1.1.0
     - name: SRM release notes
       items:
-      - name: SLC_RN_SRMv1.2.25_REV000
-        href: SRM/SLC_RN_SRMv1.2.25_REV000.md
-      - name: SLC_RN_SRMv1.2.24_REV000
-        href: SRM/SLC_RN_SRMv1.2.24_REV000.md
-      - name: SLC_RN_SRMv1.2.23_REV000
-        href: SRM/SLC_RN_SRMv1.2.23_REV000.md
-      - name: SLC_RN_SRMv1.2.22_REV000
-        href: SRM/SLC_RN_SRMv1.2.22_REV000.md
-      - name: SLC_RN_SRMv1.2.21_REV000
-        href: SRM/SLC_RN_SRMv1.2.21_REV000.md
-      - name: SLC_RN_SRMv1.2.20_REV000
-        href: SRM/SLC_RN_SRMv1.2.20_REV000.md
+      - name: SRM 1.2.25
+        topicUid: SRM_1.2.25
+      - name: SRM 1.2.24
+        topicUid: SRM_1.2.24
+      - name: SRM 1.2.23
+        topicUid: SRM_1.2.23
+      - name: SRM 1.2.22
+        topicUid: SRM_1.2.22
+      - name: SRM 1.2.21
+        topicUid: SRM_1.2.21
+      - name: SRM 1.2.20
+        topicUid: SRM_1.2.20
       - name: SLC_RN_SRMv1.2.19_REV000
         href: SRM/SLC_RN_SRMv1.2.19_REV000.md
       - name: SLC_RN_SRMv1.2.18_REV000

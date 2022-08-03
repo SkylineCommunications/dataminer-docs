@@ -1,34 +1,36 @@
-# Version 1.2.20
+---
+uid: SRM_1.2.20
+---
+
+# SRM 1.2.20
 
 ## New features
 
 #### New SRM_AddResourceFromPoolToBooking script \[ID_31474\]
 
-A new *SRM_AddResourceFromPoolToBooking* script is now available, which can be used to add a resource from a pool into a booking. The Input Data requires the following JSON input:
+A new *SRM_AddResourceFromPoolToBooking* script is now available, which can be used to add a resource from a pool into a booking. The Input Data requires the following JSON input:
 
-```txt
+```json
 {
-      "ReservationId": "X",
-       "PoolId": "Y",
-       "PoolName": "Z"
+      "ReservationId": "X",
+       "PoolId": "Y",
+       "PoolName": "Z"
 }
 ```
 
 Where:
 
 - X = The GUID of the booking where the resource will be added.
-
 - Y = The ID of the Resource Pool to be selected. This has priority over "PoolName", so if this is filled in, PoolName will not be read.
-
 - Z = The name of the Resource Pool to be selected.
 
 #### New Contributing Booking Type parameter \[ID_31488\]
 
-A new parameter, *Contributing Booking Type*, is now available on the *General* data pages of the Skyline Booking Manager connector. This parameter will determine whether standard or "lite" contributing resources are used by default. The default setting can still be overridden on service definition–level with the *ContributingConfig.LiteContributingResource* setting if necessary.
+A new parameter, *Contributing Booking Type*, is now available on the *General* data pages of the Skyline Booking Manager connector. This parameter will determine whether standard or "lite" contributing resources are used by default. The default setting can still be overridden on service definition–level with the *ContributingConfig.LiteContributingResource* setting if necessary.
 
 #### Support for applying state profile to resource used in booking \[ID_31531\]
 
-The *SRM_ApplyProfileToResource* script now allows you to apply a state profile to a resource that is used in a booking. The script will allow you to apply a profile selected during booking creation and/or apply a specific state profile instance.
+The *SRM_ApplyProfileToResource* script now allows you to apply a state profile to a resource that is used in a booking. The script will allow you to apply a profile selected during booking creation and/or apply a specific state profile instance.
 
 #### New script to quickly book resources from the timeline \[ID_31577\]
 
@@ -38,15 +40,15 @@ A new script, *SRM_BookResourcesQuickly*, is now available, which allows you to 
 
 It is now possible to import and export the settings of a Booking Manager element.
 
-- To **export** the settings, on the *General* data page of the element, click *Export*. An export file will be created in folder *C:\\Skyline DataMiner\\Documents\\Skyline Booking Manager\\Configurations*.
+- To **export** the settings, on the *General* data page of the element, click *Export*. An export file will be created in folder *C:\\Skyline DataMiner\\Documents\\Skyline Booking Manager\\Configurations*.
 
-- To **import** the settings, on the *General* data page of the element, click *Import*, and then select the file to import in the pop-up window. As the import feature is intended to be used to **pass settings from one DMS to another**, it does not import the parameter *DMA IDs to Store Reservations*.
+- To **import** the settings, on the *General* data page of the element, click *Import*, and then select the file to import in the pop-up window. As the import feature is intended to be used to **pass settings from one DMS to another**, it does not import the parameter *DMA IDs to Store Reservations*.
 
-- To **restore** settings, i.e. **import export files from the same DMS**, on the *General* data page of the element, click *Restore*, and then select the file to import in the pop-up window. In this case, the parameter *DMA IDs to Store Reservations* will be included in the import.
+- To **restore** settings, i.e. **import export files from the same DMS**, on the *General* data page of the element, click *Restore*, and then select the file to import in the pop-up window. In this case, the parameter *DMA IDs to Store Reservations* will be included in the import.
 
 #### New ExcludeNodeExceptFirstAndLast option for transport path \[ID_31615\]
 
-If the *ExcludeNode* option was used in the TransportLink of a transport path in order to exclude interfaces from another transport function based on their node, the option could filter out required nodes when the edge interfaces were the same. To avoid this, the filtering option *ExcludeNodeExceptFirstAndLast* is now available. This will avoid excluding the first and last node of the linked path.
+If the *ExcludeNode* option was used in the TransportLink of a transport path in order to exclude interfaces from another transport function based on their node, the option could filter out required nodes when the edge interfaces were the same. To avoid this, the filtering option *ExcludeNodeExceptFirstAndLast* is now available. This will avoid excluding the first and last node of the linked path.
 
 ## Changes
 
@@ -58,20 +60,17 @@ The Booking Wizard will now no longer allow booking creation if the used functio
 
 This is a breaking change, as previously it was possible to create a booking even if there were no profile instances in the system. This change is necessary to be able to standardize all flows related to booking creation.
 
-If you wish to work around this new limitation in existing setups, set the property *IsProfileInstanceOptional* to *True* on the service definition nodes for which there is no profile instance.
+If you wish to work around this new limitation in existing setups, set the property *IsProfileInstanceOptional* to *True* on the service definition nodes for which there is no profile instance.
 
 #### LSO support for lite contributing resources \[ID_31551\]
 
 LSO scripts now support lite contributing resources.
 
-Note that the following properties in the *SrmParameterConfiguration* class will be null for lite contributing resources:
+Note that the following properties in the *SrmParameterConfiguration* class will be null for lite contributing resources:
 
 - MainElement
-
 - ProtocolParameterId
-
 - ResourceKey
-
 - PrimaryKey
 
 #### Debug log files in HTML format \[ID_31580\]
@@ -80,9 +79,9 @@ To make it easier for users to find any errors that could have happened during b
 
 #### Support for changes to assigned resources to make booking leave quarantine \[ID_31626\]
 
-The *ServiceReservationInstance.AssignResources* method has been extended so that it can now be used to change a resource or profile to make a booking leave the quarantine state.
+The *ServiceReservationInstance.AssignResources* method has been extended so that it can now be used to change a resource or profile to make a booking leave the quarantine state.
 
-Similarly, the *ServiceReservationInstance.UnassignResources* method has been extended so that it can be used to remove a resource that is not linked to a service definition node so that a booking can leave the quarantine state.
+Similarly, the *ServiceReservationInstance.UnassignResources* method has been extended so that it can be used to remove a resource that is not linked to a service definition node so that a booking can leave the quarantine state.
 
 #### Booking Friendly Reference now calculated in SLAutomation \[ID_31628\]
 
@@ -90,7 +89,7 @@ Previously, the Friendly Reference of a booking was calculated in the Booking Ma
 
 #### Improved behavior of Show Information Events setting \[ID_31680\]
 
-When the *Show Information Events* setting is enabled in the Booking Manager app, all log messages are displayed as information events. These information events will now be generated in a background thread, so that enabling this option can no longer affect the performance of the app. In addition, the setting will now be automatically disabled after 8 hours.
+When the *Show Information Events* setting is enabled in the Booking Manager app, all log messages are displayed as information events. These information events will now be generated in a background thread, so that enabling this option can no longer affect the performance of the app. In addition, the setting will now be automatically disabled after 8 hours.
 
 ### Fixes
 
@@ -104,7 +103,7 @@ When multiple Profile Load scripts were exported for different functions, it cou
 
 #### Not possible to import Profile Load script containing system function and function \[ID_31501\]
 
-A problem in the *SRM_ImportFunctions* script could make it impossible to import Profile Load scripts if these contained a system function and function to be imported.
+A problem in the *SRM_ImportFunctions* script could make it impossible to import Profile Load scripts if these contained a system function and function to be imported.
 
 #### Silent editing of booking failed when resources were assigned based on profile parameter \[ID_31539\]
 
@@ -112,11 +111,11 @@ When resources were assigned to a booking based on a profile parameter, and a re
 
 #### SrmResourceConfiguration.ApplyContributingState method always applied initial profile instance \[ID_31546\]
 
-A problem with the *SrmResourceConfiguration.ApplyContributingState* method caused the initial profile instance of the LSO to always be applied, even if a different state profile instance should have been applied instead.
+A problem with the *SrmResourceConfiguration.ApplyContributingState* method caused the initial profile instance of the LSO to always be applied, even if a different state profile instance should have been applied instead.
 
 #### Problem if several parameters existed with the same name \[ID_31621\]
 
-Up to now, if for some reason there was more than one *Resource Type*, *ResourceInputInterfaces* or *ResourceOutputInterfaces* parameter in the system, SRM would continuously create more parameters with the same name. Now it will instead throw an InvalidOperationException with a message such as "*There are multiple parameters with name Resource Type in your system. Please remove them manually to continue.*"
+Up to now, if for some reason there was more than one *Resource Type*, *ResourceInputInterfaces* or *ResourceOutputInterfaces* parameter in the system, SRM would continuously create more parameters with the same name. Now it will instead throw an InvalidOperationException with a message such as "*There are multiple parameters with name Resource Type in your system. Please remove them manually to continue.*"
 
 #### Not possible to create booking with time-dependent capability and automatic resource selection \[ID_31624\]
 

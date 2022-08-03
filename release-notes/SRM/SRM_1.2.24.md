@@ -1,7 +1,11 @@
-# Version 1.2.24
+---
+uid: SRM_1.2.24
+---
+
+# SRM 1.2.24
 
 > [!NOTE]
-> This version requires that **DataMiner 10.2.5.0-11681 or higher** is installed. It is not compatible with the DataMiner Main Release track.
+> This version requires that **DataMiner 10.2.5.0-11681 or higher** is installed. It is not compatible with the DataMiner Main Release track.
 
 ## New features
 
@@ -11,7 +15,7 @@ Parameter values in Profile Load scripts will now be converted to the device val
 
 For example, this extract shows how to retrieve the converted value:
 
-```txt
+```csharp
 var parametersConfiguration = helper.GetNodeSrmParametersConfiguration(configurationInfo, nodeProfileConfiguration).ToArray();
 var parameter = parametersConfiguration.SingleOrDefault(x => string.Equals(x.ProfileParameterName, "Convertible"));
 
@@ -25,14 +29,14 @@ var mediationSnippetId = parameter.MediationSnippetId;
 
 #### SRM_ResourceManagement script now supports multiple resources as input \[ID_32886\]
 
-The *SRM_ResourceManagement* script now supports multiple resources as input. For this purpose, a new field *ExtraResourceIds* has been added to the *Input Data* parameter. This field consists of a list of comma-separated resource IDs, representing the resources that should be added.
+The *SRM_ResourceManagement* script now supports multiple resources as input. For this purpose, a new field *ExtraResourceIds* has been added to the *Input Data* parameter. This field consists of a list of comma-separated resource IDs, representing the resources that should be added.
 
 For example:
 
-```txt
+```json
 {
-    "BookingManagerElement": "1.1 - Bookings - SDMN Satellite Downlink",
-    "ExtraResourceIds": "d54bc60d-b97a-4c70-9a8a-c4a28239ab7a, e98f8682-3fe6-4f03-9c73-d4e6ac7985b9, 9eafbb63-af95-4692-92d1-d3a8ba7126b4"
+    "BookingManagerElement": "1.1 - Bookings - SDMN Satellite Downlink",
+    "ExtraResourceIds": "d54bc60d-b97a-4c70-9a8a-c4a28239ab7a, e98f8682-3fe6-4f03-9c73-d4e6ac7985b9, 9eafbb63-af95-4692-92d1-d3a8ba7126b4"
 }
 ```
 
@@ -46,7 +50,7 @@ Up to now, it was not possible to finish a booking immediately during post-roll.
 
 #### Improved performance of SRM_AddDcfInterfacesAsResources script \[ID_32024\]
 
-Performance of the *SRM_AddDcfInterfacesAsResources* script, which is used to add resources per DCF interface, has been improved. The script will now cache some calls and perform the adding or updating of resources and profiles in bulk.
+Performance of the *SRM_AddDcfInterfacesAsResources* script, which is used to add resources per DCF interface, has been improved. The script will now cache some calls and perform the adding or updating of resources and profiles in bulk.
 
 #### Locked contributing bookings scheduled to finish when main booking is canceled \[ID_32419\]
 
@@ -54,7 +58,7 @@ Locked contributing bookings that are only used by a single main booking will no
 
 #### "Auto Select Resource" property now taken into account when booking is duplicated \[ID_32771\]
 
-Up to now, when no resource was selected for a booking, and this booking was duplicated using the Booking Wizard, a resource was automatically selected. This has now been changed to be in line with regular booking creation behavior. The property *Auto Select Resource* will determine whether a resource is automatically selected.
+Up to now, when no resource was selected for a booking, and this booking was duplicated using the Booking Wizard, a resource was automatically selected. This has now been changed to be in line with regular booking creation behavior. The property *Auto Select Resource* will determine whether a resource is automatically selected.
 
 #### Improved logging when booking is quarantined \[ID_32784\]
 
@@ -62,41 +66,41 @@ When a booking is quarantined, the debug log file will now contain more informat
 
 #### Final page SRM_BookResourceQuickly script improved \[ID_32815\]
 
-The final page of the *SRM_BookResourceQuickly* script has been enhanced so that it is more clear to the user when the booking has been created successfully.
+The final page of the *SRM_BookResourceQuickly* script has been enhanced so that it is more clear to the user when the booking has been created successfully.
 
 #### NetworkPathSelectionHelper class updated \[ID_32834\]
 
-The *NetworkPathSelectionHelper* class has been adjusted to make sure it no longer relies on *ISrmManagersContext*. For this reason, the class now has the following new constructors:
+The *NetworkPathSelectionHelper* class has been adjusted to make sure it no longer relies on *ISrmManagersContext*. For this reason, the class now has the following new constructors:
 
-```txt
+```csharp
 public NetworkPathSelectionHelper(
-         Element sourceNode,
-         Element destinationNode,
-         List<ResourceCapabilityUsage> capabilities,
-         List<MultiResourceCapacityUsage> capacities,
-         PathConfig pathConfig,
-         FilteringOptions filteringOptions,
-         TimeRange timeRange,
-         IReadOnlyList<Path> selectedPaths)
+         Element sourceNode,
+         Element destinationNode,
+         List<ResourceCapabilityUsage> capabilities,
+         List<MultiResourceCapacityUsage> capacities,
+         PathConfig pathConfig,
+         FilteringOptions filteringOptions,
+         TimeRange timeRange,
+         IReadOnlyList<Path> selectedPaths)
 ```
 
-```txt
+```csharp
 public NetworkPathSelectionHelper(
-         Element sourceNode,
-         Element destinationNode,
-         List<ResourceCapabilityUsage> capabilities,
-         List<MultiResourceCapacityUsage> capacities,
-         PathConfig pathConfig,
-         FilteringOptions filteringOptions,
-         TimeRange timeRange,
-         IReadOnlyList<Path> selectedPaths,
-         SrmCache srmCache,
-         ILogger logger)
+         Element sourceNode,
+         Element destinationNode,
+         List<ResourceCapabilityUsage> capabilities,
+         List<MultiResourceCapacityUsage> capacities,
+         PathConfig pathConfig,
+         FilteringOptions filteringOptions,
+         TimeRange timeRange,
+         IReadOnlyList<Path> selectedPaths,
+         SrmCache srmCache,
+         ILogger logger)
 ```
 
 #### Improved support for long script duration \[ID_32934\]
 
-To better support LSO scripts that take a very long time, the ​*SrmManagers* class will now store the user connection instead of the *Engine* object, so that it can still interact with DataMiner to update a booking when a script times out.
+To better support LSO scripts that take a very long time, the *SrmManagers* class will now store the user connection instead of the *Engine* object, so that it can still interact with DataMiner to update a booking when a script times out.
 
 #### LSO and PLS debug logging added \[ID_33080\]
 
@@ -122,7 +126,7 @@ When a combined profile was applied to a resource, if no state profile instance 
 
 #### Problem creating paths with ExcludeEdgeResource=true \[ID_32804\]
 
-When the flag *ExcludeEdgeResource* was set to true, a problem could occur that prevented paths from being created.
+When the flag *ExcludeEdgeResource* was set to true, a problem could occur that prevented paths from being created.
 
 #### Required capacities and capabilities not taken into account when profile instance was assigned by value \[ID_32844\]
 
