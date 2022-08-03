@@ -1,4 +1,8 @@
-# Version 1.1.0
+---
+uid: Meinberg_1.1.0
+---
+
+# Meinberg 1.1.0
 
 ## New features
 
@@ -38,15 +42,15 @@ Meinberg LANTIME IMS-HPS parameters that use the nanoseconds unit have now been 
 
 #### Compatibility with DataMiner Cube’s black theme \[ID_33157\]
 
-​The Meinberg Network Management System is now compatible with DataMiner Cube's black theme.
+The Meinberg Network Management System is now compatible with DataMiner Cube's black theme.
 
 #### Meinberg LANTIME Modular: CPU Load parameter improvements \[ID_33158\]
 
-In the Meinberg LANTIME Modular connector, the *CPU Load* parameter now has a range and unit.
+In the Meinberg LANTIME Modular connector, the *CPU Load* parameter now has a range and unit.
 
 #### Meinberg LANTIME Non-Modular: CPU Load parameter improvements \[ID_33159\]
 
-In the Meinberg LANTIME Non-Modular connector, the *CPU Load* parameter now has a range and unit.
+In the Meinberg LANTIME Non-Modular connector, the *CPU Load* parameter now has a range and unit.
 
 ### Fixes
 
@@ -54,9 +58,9 @@ In the Meinberg LANTIME Non-Modular connector, the *CPU Load* parameter now has
 
 In the Meinberg LANTIME Modular visual overview, incorrect card type shapes were displayed.
 
-#### Meinberg Element Manager app: Details not shown via link on Equipment \> Software \> Over­view page \[ID_33147\]
+#### Meinberg Element Manager app: Details not shown via link on Equipment \> Software \> Overview page \[ID_33147\]
 
-When you selected an entry on the *Equipment* > *Software* > *Overview* page of the Meinberg Element Manager app and clicked *Show details*, the main page of the app was displayed instead of the detailed information.
+When you selected an entry on the *Equipment* > *Software* > *Overview* page of the Meinberg Element Manager app and clicked *Show details*, the main page of the app was displayed instead of the detailed information.
 
 #### Meinberg LANTIME IMS-HPS: Port state displayed incorrectly \[ID_33152\]
 
@@ -64,4 +68,4 @@ Instead of the correct display value, the Meinberg LANTIME IMS-HPS element showe
 
 #### Meinberg Element Manager app: Invalid OS version displayed in inventory summary \[ID_33155\]
 
-In the inventory summary, if the *Device State* was not *Synchronized*, the Model OS would be displayed as *N/A*.
+In the inventory summary, if the *Device State* was not *Synchronized*, the Model OS would be displayed as *N/A*.

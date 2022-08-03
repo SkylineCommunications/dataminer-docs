@@ -1,4 +1,8 @@
-# Version 1.0.1
+---
+uid: IDP_1.0.1
+---
+
+# IDP 1.0.1
 
 ## New features
 
@@ -8,11 +12,11 @@ If the provisioning of an element failed for some reason, it is now possible to 
 
 #### Skyline IDP Discovery: AutoCreate option in provisioning templates \[ID_21355\]
 
-A provisioning template can now contain the *AutoCreate* option. This option determines whether an element is created automatically if a device is discovered with the template. However, note that if the parameter *Auto Create Elements* of the IDP Discovery element is set to *Disabled*, automatic element creation will not occur, regardless of the *AutoCreate* configuration in the template files.
+A provisioning template can now contain the *AutoCreate* option. This option determines whether an element is created automatically if a device is discovered with the template. However, note that if the parameter *Auto Create Elements* of the IDP Discovery element is set to *Disabled*, automatic element creation will not occur, regardless of the *AutoCreate* configuration in the template files.
 
-#### Skyline DataMiner Infrastructure Discovery and Provisioning: Total number of discovered ele­ments \[ID_21372\]
+#### Skyline DataMiner Infrastructure Discovery and Provisioning: Total number of discovered elements \[ID_21372\]
 
-On the overview page of the IDP app, the *Discovered Elements* KPI now displays the total number of rows in the *Discovered Elements* table.
+On the overview page of the IDP app, the *Discovered Elements* KPI now displays the total number of rows in the *Discovered Elements* table.
 
 #### Skyline IDP Discovery: Possibility to specify view name in discovery template \[ID_21402\]
 
@@ -20,7 +24,7 @@ In a provisioning template, you can now configure where a discovered element sho
 
 For example:
 
-```txt
+```json
 "View" : [22, 31],
 "ViewName" : ["View Name 1", "View Name 2"]
 ```
@@ -35,11 +39,11 @@ The Skyline IDP Discovery protocol now supports the discovery of devices using a
 
 #### IDP setup wizard: Improved view structure creation \[ID_21624\]
 
-Up to now, the setup wizard created all views directly under the root view. Now the views *Applications*, *Devices* and *Infrastructure* will be created under the view *DataMiner infrastructure Discovery and Provisioning*.
+Up to now, the setup wizard created all views directly under the root view. Now the views *Applications*, *Devices* and *Infrastructure* will be created under the view *DataMiner infrastructure Discovery and Provisioning*.
 
 #### Skyline Infrastructure Discovery and Provisioning: Enhanced Infrastructure tab \[ID_21638\]
 
-Several minor improvements were implemented to the *Infrastructure* tab of the IDP app. Among others, a refresh button has been added for the *Devices* table.
+Several minor improvements were implemented to the *Infrastructure* tab of the IDP app. Among others, a refresh button has been added for the *Devices* table.
 
 #### IDP setup wizard: Activity Scheduler screen only displayed when relevant \[ID_21641\]
 
@@ -61,12 +65,12 @@ In the IDP setup wizard, it could occur that the displayed element names did not
 
 #### IDP setup wizard: “Parent Building View ID” and “Obsolete Device View ID” not set to correct view IDs \[ID_21620\]
 
-Previously, it could occur that the *Parent Building View ID* and *Obsolete Device View ID* parameters of the Rack Layout Manager element were not set to the correct view ID during the initial setup of the IDP Solution.
+Previously, it could occur that the *Parent Building View ID* and *Obsolete Device View ID* parameters of the Rack Layout Manager element were not set to the correct view ID during the initial setup of the IDP Solution.
 
 #### Skyline Infrastructure Discovery and Provisioning: “Rack Usage per Location” dashboard not displayed correctly \[ID_21628\]
 
-On the *Infrastructure* tab of the IDP app, up to now the *Rack Usage per Location* dashboard referred to a fixed element, so that it was not always displayed correctly. Now the setup wizard will make sure the dashboard is correctly linked to the current Rack Layout Manager element.
+On the *Infrastructure* tab of the IDP app, up to now the *Rack Usage per Location* dashboard referred to a fixed element, so that it was not always displayed correctly. Now the setup wizard will make sure the dashboard is correctly linked to the current Rack Layout Manager element.
 
 #### Generic Rack Layout Manager: Fixes to default behavior when (un)assigning a device to a rack \[ID_21694\]
 
-The default behavior when a device is assigned or unassigned to a rack has been improved. Several fixes have been implemented, so that when an element is assigned, it now becomes visible in the designated rack and in the *Visibility* column of the *DataMiner Devices* table of the Rack Layout Manager. In addition, when an element is unassigned, it is removed from the rack view, but remains part of the obsolete view if no other view is assigned.
+The default behavior when a device is assigned or unassigned to a rack has been improved. Several fixes have been implemented, so that when an element is assigned, it now becomes visible in the designated rack and in the *Visibility* column of the *DataMiner Devices* table of the Rack Layout Manager. In addition, when an element is unassigned, it is removed from the rack view, but remains part of the obsolete view if no other view is assigned.

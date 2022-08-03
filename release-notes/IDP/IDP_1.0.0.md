@@ -1,3 +1,9 @@
+---
+uid: IDP_1.0.0
+---
+
+# IDP 1.0.0
+
 # Version 1.0.0
 
 ## New features
@@ -36,15 +42,15 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
 
 It is now possible to configure which DMA can host devices in a particular IP range. The provisioning API can then create new devices on specific DMAs based on their IP.
 
-This can be configured on the page *Admin* > *Provisioning* of the IDP app (available via the following icon: ![](~/release-notes/images/IDP_Provisioning.png) ).
+This can be configured on the page *Admin* > *Provisioning* of the IDP app (available via the following icon: ![](~/release-notes/images/IDP_Provisioning.png)).
 
 On this page, the IP ranges are displayed in the table *Configured IP Ranges*. This table displays the start IP, the end IP and the DMA name for each configured IP range. If one of the IP ranges is selected in the table, more detailed information is displayed above the table, including the DMA ID for the IP range. Next to the table header, a “+” button is available, which can be used to add an IP range. If an IP range is selected, a “-” button becomes available next to this, which can be used to remove the selected IP range.
 
-Finally, the *Fallback Agent* control on this page allows you to configure the default hosting Agent.
+Finally, the *Fallback Agent* control on this page allows you to configure the default hosting Agent.
 
 #### Solution components management \[ID_20450\]
 
-On the *Components* data display page of the *Skyline Infrastructure Discovery And Provisioning* element, you can now find the *Solution Components* table. This table lists the different components of the IDP Solution, and the elements in the DMS that are used for these components.
+On the *Components* data display page of the *Skyline Infrastructure Discovery And Provisioning* element, you can now find the *Solution Components* table. This table lists the different components of the IDP Solution, and the elements in the DMS that are used for these components.
 
 If multiple elements are available that could serve as a particular component, you can select to use a different element. If an element is automatically assigned, for example because the element that was previously assigned has been removed, the Solution will select the element of which the name is most similar to the previous element. If no element with a similar name is found, the first matching element in active state will be assigned.
 
@@ -53,22 +59,19 @@ Because this means that elements can now be dynamically assigned as components i
 The following components are supported:
 
 - Discovery: Skyline IDP Discovery protocol
-
 - Provisioning: Skyline Generic Provisioning protocol
-
 - Inventory: Skyline DataMiner Infrastructure DB protocol
-
 - RLM: Generic Rack Layout Manager protocol
 
 #### Discovered elements overview \[ID_20605\]\[ID_20766\]
 
-When devices are discovered by the IDP Solution, they are listed in the *Discovered Elements* table, on the *Discovered* tab of the IDP app. The index of this table is a combination of the IP address and profile type. The *First Discovery Time* column displays the time when a device was initially discovered. If the same device is discovered again, the *Last Discovered Time* is updated for this device.
+When devices are discovered by the IDP Solution, they are listed in the *Discovered Elements* table, on the *Discovered* tab of the IDP app. The index of this table is a combination of the IP address and profile type. The *First Discovery Time* column displays the time when a device was initially discovered. If the same device is discovered again, the *Last Discovered Time* is updated for this device.
 
-In the *Proposed Element Name* column of the table, an element name will be proposed for each discovered device, which can be modified by the user. In case the user specifies a name that contains forbidden characters or a name that is not unique, a pop-up message will notify the user that this is not allowed. In case there already is a managed element for a device in the table, changing the element name will no longer be allowed.
+In the *Proposed Element Name* column of the table, an element name will be proposed for each discovered device, which can be modified by the user. In case the user specifies a name that contains forbidden characters or a name that is not unique, a pop-up message will notify the user that this is not allowed. In case there already is a managed element for a device in the table, changing the element name will no longer be allowed.
 
 #### Adding, editing or removing elements in a rack \[ID_20824\]
 
-On the *Infrastructure* tab of the IDP app, the *Devices to show* table contains a list of devices discovered in the system. This table can be used to assign devices to racks. Above the table, a toggle button allows you to display either assigned devices or unassigned devices in the table.
+On the *Infrastructure* tab of the IDP app, the *Devices to show* table contains a list of devices discovered in the system. This table can be used to assign devices to racks. Above the table, a toggle button allows you to display either assigned devices or unassigned devices in the table.
 
 If you select an unassigned device, a "+" button will become available above the table. Clicking this button starts a wizard that allows you to assign the device to a particular rack. The wizard will first allow you to customize the rack size. Then you can select where the rack is located. Depending on the configured levels, you may be able to select a location, building, floor, room, aisle and rack. If only one level is available, it is filled in automatically. Finally, you can select the slot where the device is placed. The wizard only allows you to select one of the unoccupied slots.
 
@@ -83,89 +86,61 @@ A new interactive Automation script, *IDP_SetupWizard*, is now available, which 
 The script will take you through the following steps to configure the system:
 
 1. View creation and configuration
-
 2. Element creation
-
 3. Creation of an API user
-
 4. Elements and dashboards configuration
 
 For the last step, two subscripts are used:
 
 - The subscript *IDP_SetupWizard_DashboardConfiguration* will link compatible IDP dash­boards to the DMA ID and element ID of the generated elements.
-
-- The subscript *IDP_SetupWizard_ElementConfiguration* will apply pre-configured parameter settings to the generated elements.
+- The subscript *IDP_SetupWizard_ElementConfiguration* will apply pre-configured parameter settings to the generated elements.
 
 #### IDP Activity Scheduler \[ID_21184\]
 
 In the IDP Solution setup wizard, you can now select whether you wish to use the Activity Scheduler feature.
 
-If this feature is enabled, the *Admin* tab of the IDP app displays a ![](~/release-notes/images/IDP_Scheduler.png) icon in the top-right corner, which opens the Scheduler subtab. This tab displays a timeline with all scheduled activities and a *New...* button, which allows you to schedule a new discovery activity.
+If this feature is enabled, the *Admin* tab of the IDP app displays a ![](~/release-notes/images/IDP_Scheduler.png) icon in the top-right corner, which opens the Scheduler subtab. This tab displays a timeline with all scheduled activities and a *New...* button, which allows you to schedule a new discovery activity.
 
-The Activity Scheduler can also be enabled or disabled after the initial setup phase via the *Activity Scheduler* parameter on the *Settings* data display page of the *Skyline Infrastructure Discovery And Provisioning* element.
+The Activity Scheduler can also be enabled or disabled after the initial setup phase via the *Activity Scheduler* parameter on the *Settings* data display page of the *Skyline Infrastructure Discovery And Provisioning* element.
 
 #### Presets for device discovery \[ID_21208\]\[ID_21209\]\[ID_21112\]
 
 The IDP application can now use a preset, which determines which provisioning templates are used for particular IP ranges. A preset consists of a name, one or more IP ranges and one or more provisioning templates.
 
-In the IDP app, on the *Admin* > *Discovery* tab (available via the following icon: ![](~/release-notes/images/IDP_Discovery.png) ), the selected preset is displayed and a different preset can be selected.
+In the IDP app, on the *Admin* > *Discovery* tab (available via the following icon: ![](~/release-notes/images/IDP_Discovery.png) ), the selected preset is displayed and a different preset can be selected.
 
-On the *Discovered* tab of the IDP app, it is possible to start either a custom discovery or a discovery using the selected preset. Starting a custom discovery will launch the script *IDP_ManagePresets*, where you can create and edit presets and then run a discovery. Starting a discovery with a selected preset will launch the script *IDP_DiscoverByPreset*, which will run a discovery using the selected preset displayed on the *Admin* > *Discovery* tab. Note that this script does not necessarily need to be started in the app, but could also for example be run by a scheduled task.
+On the *Discovered* tab of the IDP app, it is possible to start either a custom discovery or a discovery using the selected preset. Starting a custom discovery will launch the script *IDP_ManagePresets*, where you can create and edit presets and then run a discovery. Starting a discovery with a selected preset will launch the script *IDP_DiscoverByPreset*, which will run a discovery using the selected preset displayed on the *Admin* > *Discovery* tab. Note that this script does not necessarily need to be started in the app, but could also for example be run by a scheduled task.
 
 #### New Skyline IDP Discovery driver \[ID_21222\]
 
-A new driver *Skyline IDP Discovery* is available, which supports the discovery and provisioning of devices using SNMP, HTTP and HTTPS.
+A new driver *Skyline IDP Discovery* is available, which supports the discovery and provisioning of devices using SNMP, HTTP and HTTPS.
 
 #### RLM properties automatically generated \[ID_21365\]
 
-When the *Generic Rack Layout Manager* starts up, the properties used for this part of the IDP Solution are now automatically generated if they do not yet exist. These are the properties used by the Rack Layout Manager:
+When the *Generic Rack Layout Manager* starts up, the properties used for this part of the IDP Solution are now automatically generated if they do not yet exist. These are the properties used by the Rack Layout Manager:
 
 - Location Name
-
 - Location Building
-
 - Location Floor
-
 - Location Room
-
 - Location Aisle
-
 - Location Rack
-
 - Location Rack Position
-
 - Location Rack Units
-
 - Location Device Visibility
-
 - Location Slot
-
 - Asset Model
-
 - Location City
-
 - Location Region
-
 - Location Country
-
 - Location Geo Location Known
-
 - Location Geo Latitude
-
 - Location Geo Longitude
-
 - Location Geo Elevation
-
 - Location Rack Side
-
 - Energy Expected Consumption
-
 - Energy Peak Consumption
-
 - Deployment Type
-
 - Deployment Status
-
 - Deployment Installation Date
-
 - Deployment End Of Warranty Date

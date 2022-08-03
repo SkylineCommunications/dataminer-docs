@@ -247,37 +247,37 @@
       - name: IDP 1.1.8 
         topicUid: IDP_1.1.8
       - name: IDP 1.1.7 
-        topicUid: IDP 1.1.7
+        topicUid: IDP_1.1.7
       - name: IDP 1.1.6 
         topicUid: IDP_1.1.6
-      - name: SLC_RN_IDPv1.1.5_REV001 
-        href: IDP/SLC_RN_IDPv1.1.5_REV001.md
-      - name: SLC_RN_IDPv1.1.4_REV000 
-        href: IDP/SLC_RN_IDPv1.1.4_REV000.md
-      - name: SLC_RN_IDPv1.1.3_REV000 
-        href: IDP/SLC_RN_IDPv1.1.3_REV000.md
-      - name: SLC_RN_IDPv1.1.2_REV000 
-        href: IDP/SLC_RN_IDPv1.1.2_REV000.md
-      - name: SLC_RN_IDPv1.1.0_REV000 
-        href: IDP/SLC_RN_IDPv1.1.0_REV000.md
-      - name: SLC_RN_IDPv1.0.3_REV000 
-        href: IDP/SLC_RN_IDPv1.0.3_REV000.md
-      - name: SLC_RN_IDPv1.0.2_REV000 
-        href: IDP/SLC_RN_IDPv1.0.2_REV000.md
-      - name: SLC_RN_IDPv1.0.1_REV000 
-        href: IDP/SLC_RN_IDPv1.0.1_REV000.md
-      - name: SLC_RN_IDPv1.0.0_REV000 
-        href: IDP/SLC_RN_IDPv1.0.0_REV000.md
+      - name: IDP 1.1.5 
+        topicUid: IDP_1.1.5
+      - name: IDP 1.1.4 
+        topicUid: IDP_1.1.4
+      - name: IDP 1.1.3 
+        topicUid: IDP_1.1.3
+      - name: IDP 1.1.2
+        topicUid: IDP_1.1.2
+      - name: IDP 1.1.0
+        topicUid: IDP_1.1.0
+      - name: IDP 1.0.3
+        topicUid: IDP_1.0.3
+      - name: IDP 1.0.2 
+        topicUid: IDP_1.0.2
+      - name: IDP 1.0.1 
+        topicUid: IDP_1.0.1
+      - name: IDP 1.0.0 
+        topicUid: IDP_1.0.0
     - name: Meinberg release notes
       items:
-      - name: SLC_RN_Meinbergv1.1.0_REV000
-        href: Meinberg/SLC_RN_Meinbergv1.1.0_REV000.md
-      - name: SLC_RN_Meinbergv1.0.1_REV000
-        href: Meinberg/SLC_RN_Meinbergv1.0.1_REV000.md
+      - name: Meinberg 1.1.0
+        topicUid: Meinberg_1.1.0
+      - name: Meinberg 1.0.1
+        topicUid: Meinberg_1.0.1
     - name: PA release notes
       items:
-      - name: SLC_RN_PAv1.2.2_REV002  
-        href: PA/SLC_RN_PAv1.2.2_REV002.md
+      - name: PA 1.2.2
+        topicUid: PA_1.2.2
       - name: SLC_RN_PAv1.2.1_REV000  
         href: PA/SLC_RN_PAv1.2.1_REV000.md
       - name: SLC_RN_PAv1.1.2_REV000  
