@@ -1,4 +1,8 @@
-# Release 2.23
+---
+uid: DIS_2.23
+---
+
+# DIS 2.23
 
 ## New features
 
@@ -6,16 +10,16 @@
 
 #### File editors: New menu command ‘Copy File Content to Clipboard’ \[ID_23663\]
 
-When you right-click in the XML editor or the C# editor, you can now use the new *Copy File Con­tent to Clipboard* command to copy the entire content of the file you are editing to the Win­dows clipboard, without needing to select all text first.
+When you right-click in the XML editor or the C# editor, you can now use the new *Copy File Content to Clipboard* command to copy the entire content of the file you are editing to the Windows clipboard, without needing to select all text first.
 
 Also, from now on, DIS menu items that are not available will no longer appear grayed out. They will now be hidden instead.
 
 > [!NOTE]
-> The *Copy File Content to Clipboard* command is not available when you are editing a Protocol.xml file. To copy the content of a protocol file, use the *Copy Protocol to Clipboard* command instead.
+> The *Copy File Content to Clipboard* command is not available when you are editing a Protocol.xml file. To copy the content of a protocol file, use the *Copy Protocol to Clipboard* command instead.
 
 #### DIS Macros: New example macro ‘Basic UI’ \[ID_23667\]
 
-In the *DIS Macros* tool window, a new ‘Basic UI’ example macro can now be found in the *DIS Macros \> Examples* folder.
+In the *DIS Macros* tool window, a new ‘Basic UI’ example macro can now be found in the *DIS Macros \> Examples* folder.
 
 This macro shows you how to create a basic user interface using WPF code.
 
@@ -23,10 +27,9 @@ This macro shows you how to create a basic user interface using WPF code.
 
 Up to now, DIS only supported C# version 4. From now on, it also supports C# version 6 and above.
 
-When you open a Protocol.xml file of which the DMA version specified in the *Protocol.<br>Compliancies.MinimumRequired* tag is equal to or higher than “9.6.11”, DIS will now set the lan­guage version of the C# projects to one of the following versions:
+When you open a Protocol.xml file of which the DMA version specified in the *Protocol.<br>Compliancies.MinimumRequired* tag is equal to or higher than “9.6.11”, DIS will now set the language version of the C# projects to one of the following versions:
 
 - C# 6.0 (when using Visual Studio 2015)
-
 - C# 7.3 (when using Visual Studio 2017 or above)
 
 > [!NOTE]
@@ -34,13 +37,13 @@ When you open a Protocol.xml file of which the DMA version specified in the *Pro
 
 #### ‘Check for updates...’ command in DIS menu \[ID_23883\]
 
-The *Check for updates...* command has now been moved from the *Settings* window to the DIS menu.
+The *Check for updates...* command has now been moved from the *Settings* window to the DIS menu.
 
-Also, in the *Info* tab page of the *Settings* window, you can now click *Release notes...* to open the release notes document of the DIS version you are using.
+Also, in the *Info* tab page of the *Settings* window, you can now click *Release notes...* to open the release notes document of the DIS version you are using.
 
 #### DIS Settings - Class Library: New ‘Enable Class Library feature’ option \[ID_23791\]
 
-In the *Class Library* tab page of the *DIS Settings* window, it is now possible to either enable or disable the Class Library feature.
+In the *Class Library* tab page of the *DIS Settings* window, it is now possible to either enable or disable the Class Library feature.
 
 #### Table Editor: Table columns can now be deleted by pressing the DELETE key \[ID_23957\]
 
@@ -49,7 +52,6 @@ When configuring a table in the table editor, it is now possible to delete colum
 To delete one or more columns from a table, do the following:
 
 1. In the *All Columns* section, select the column(s) you want to delete.
-
 2. In the confirmation box, click *Yes*.
 
 ### Validator
@@ -154,12 +156,11 @@ The following checks and error messages have been added or updated.
 The Protocol XML schema now supports the following elements:
 
 - Protocol.Params.Param.Dashboard
-
 - Protocol.Params.Param.Measurement.Discreets.Discreet.Tooltip
 
 #### Protocol Schema: ArrayOptions.ColumnOption now preferred above ArrayOptions.<br>ColumnOptions.ColumnOption \[ID_23741\]
 
-When defining a table in a *Protocol.xml* file, there are two ways to specify *\<ColumnOption>* ele­ments:
+When defining a table in a *Protocol.xml* file, there are two ways to specify *\<ColumnOption>* elements:
 
 - Directly under the *\<ArrayOptions>* element. Example:
 
@@ -183,7 +184,7 @@ When defining a table in a *Protocol.xml* file, there are two ways to specify *
     </ArrayOptions>
     ```
 
-In Visual Studio, up to now, when you used the AutoComplete feature after entering part of an *\<ArrayOptions>* element, it would automatically produce a structure with a *\<ColumnOptions>* group element. From now on, it will produce a structure without a *\<ColumnOptions>* group ele­ment.
+In Visual Studio, up to now, when you used the AutoComplete feature after entering part of an *\<ArrayOptions>* element, it would automatically produce a structure with a *\<ColumnOptions>* group element. From now on, it will produce a structure without a *\<ColumnOptions>* group element.
 
 ## Changes
 

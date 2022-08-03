@@ -1,4 +1,8 @@
-# Release 2.17
+---
+uid: DIS_2.17
+---
+
+# DIS 2.17
 
 ## New features
 
@@ -36,10 +40,10 @@ The following checks and error messages have been added or updated.
 | 5.7.4  | CheckAfterStartupFlow        | After startup Action must have an On tag with value 'group'. Action ID '{actionId}'.                                                                  |
 | 5.7.5  | CheckAfterStartupFlow        | After startup Action must have a Type tag with value 'execute next' or 'execute'. Action ID '{actionId}'.                                             |
 | 5.7.6  | CheckAfterStartupFlow        | After startup Group must have a Type tag with value 'poll', 'poll trigger' or 'poll action'. Group ID '{groupId}'.                                    |
-| 7.1.1  | CheckTimeTag                 | Missing tag 'Time' in Timer '{parentId}'.                                                                                                             |
-| 7.1.2  | CheckTimeTag                 | Empty tag 'Time' in Timer '{parentId}'.                                                                                                               |
+| 7.1.1  | CheckTimeTag                 | Missing tag 'Time' in Timer '{parentId}'.                                                                                                             |
+| 7.1.2  | CheckTimeTag                 | Empty tag 'Time' in Timer '{parentId}'.                                                                                                               |
 | 7.1.3  | CheckTimeTag                 | Untrimmed tag 'Time' in Timer '{parentId}'.                                                                                                           |
-| 7.1.4  | CheckTimeTag                 | Invalid value '{tagValue}' in tag 'Time'. Possible values 'loop, 1-2073600000'.                                                                       |
+| 7.1.4  | CheckTimeTag                 | Invalid value '{tagValue}' in tag 'Time'. Possible values 'loop, 1-2073600000'.                                                                       |
 | 7.1.5  | CheckTimeTag                 | Timer Tag value '{timeValue}' is higher than the max allowed value of 24 days. Timer id '{timerId}'.                                                  |
 
 > [!NOTE]
@@ -53,11 +57,7 @@ The syntax rules for the following elements and/or attributes have been updated:
 
 | Element/attribute            | Syntax rule                                                                           |
 |------------------------------|---------------------------------------------------------------------------------------|
-| Protocol.Actions.Action@id   | Allowed ID ranges:<br> \[1-64,299\]<br> \[70,000-99,999\]<br> \[1,000,000-9,999,999\] |
-| Protocol.Groups.Group@id     |                                                                                       |
-| Protocol.QActions.QAction@id |                                                                                       |
-| Protocol.Timers.Timer@id     |                                                                                       |
-| Protocol.Triggers.Trigger@id |                                                                                       |
+| Protocol.Actions.Action@id<br>Protocol.Groups.Group@id<br>Protocol.QActions.QAction@id<br>Protocol.Timers.Timer@id<br>Protocol.Triggers.Trigger@id | Allowed ID ranges:<br> \[1-64,299\]<br> \[70,000-99,999\]<br> \[1,000,000-9,999,999\] |
 
 #### Protocol Schema: New elements and attributes \[ID_21568\]
 
@@ -65,8 +65,8 @@ The Protocol XML schema now supports the following elements and/or element attri
 
 | Element                                                         | Attribute |
 |-----------------------------------------------------------------|-----------|
-| Protocol.Params.Param.SNMP.InvalidResponseHandling              |           |
-| Protocol.Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop |           |
+| Protocol.Params.Param.SNMP.InvalidResponseHandling              |           |
+| Protocol.Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop |           |
 
 ## Changes
 
@@ -77,9 +77,7 @@ The Protocol XML schema now supports the following elements and/or element attri
 Up to now, it was recommended to customize the tab settings in Visual Studio. From now on, DIS will automatically apply the following tab settings when it detects that you have opened a protocol or an Automation script:
 
 - Tab size: 4
-
 - Indent size: 4
-
 - Keep tabs
 
 ### Fixes

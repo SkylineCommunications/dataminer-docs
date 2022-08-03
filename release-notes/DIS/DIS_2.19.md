@@ -1,4 +1,8 @@
-# Release 2.19
+---
+uid: DIS_2.19
+---
+
+# DIS 2.19
 
 ## New features
 
@@ -6,9 +10,9 @@
 
 #### DIS MIB Browser - Compare: Copy to Clipboard \[ID_22247\]
 
-The *Compare* tab of the *DIS MIB Browser* window, which shows the differences between the OID data in the MIB tree and the parameter data in the protocol XML file, now contains a *Copy to Clipboard* button. Clicking that button will copy the results of the latest comparison to the Windows Clipboard.
+The *Compare* tab of the *DIS MIB Browser* window, which shows the differences between the OID data in the MIB tree and the parameter data in the protocol XML file, now contains a *Copy to Clipboard* button. Clicking that button will copy the results of the latest comparison to the Windows Clipboard.
 
-Also, both the *OIDs missing in protocol* and *OIDs missing in MIB* panes can now be resized.
+Also, both the *OIDs missing in protocol* and *OIDs missing in MIB* panes can now be resized.
 
 ### Validator
 
@@ -57,7 +61,6 @@ When Write parameters were generated for Read parameters, up to now, Interprete.
 The table editor is now able to make the distinction between the view option for a DVE table and the view option for a view table. It now supports both options, and will generate one of the following warnings if a view option is not used correctly:
 
 - “View option is only valid in case of a DVE table.”
-
 - “View option is only valid in case of a view table.”
 
 Also, the table editor now supports the new “viewImpact” option.
@@ -66,7 +69,7 @@ Also, the table editor now supports the new “viewImpact” option.
 
 The main DIS menu has been restructured.
 
-Also, the *Toggle Outlining at Level \[X\]* commands, which were grouped under the *Outlining* submenu, have been removed from the DIS menu and added to the right-click menu of the XML editor.
+Also, the *Toggle Outlining at Level \[X\]* commands, which were grouped under the *Outlining* submenu, have been removed from the DIS menu and added to the right-click menu of the XML editor.
 
 ### Fixes
 
@@ -96,5 +99,4 @@ In some cases, the Validator would incorrectly return the following error when c
 The following macros did not work in Visual Studio 2015 and have now been adapted:
 
 - Increment Param PIDs
-
 - List Filtered Params PIDs

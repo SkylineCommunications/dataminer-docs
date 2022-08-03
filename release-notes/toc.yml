@@ -126,22 +126,22 @@
         topicUid: DIS_2.26
       - name: DIS 2.25
         topicUid: DIS_2.25
-      - name: SLC_RN_DISv2.24_REV001
-        href: DIS/SLC_RN_DISv2.24_REV001.md
-      - name: SLC_RN_DISv2.23_REV000
-        href: DIS/SLC_RN_DISv2.23_REV000.md
-      - name: SLC_RN_DISv2.22_REV000
-        href: DIS/SLC_RN_DISv2.22_REV000.md
-      - name: SLC_RN_DISv2.21_REV000
-        href: DIS/SLC_RN_DISv2.21_REV000.md
-      - name: SLC_RN_DISv2.20_REV000
-        href: DIS/SLC_RN_DISv2.20_REV000.md
-      - name: SLC_RN_DISv2.19_REV000
-        href: DIS/SLC_RN_DISv2.19_REV000.md
-      - name: SLC_RN_DISv2.18_REV000
-        href: DIS/SLC_RN_DISv2.18_REV000.md
-      - name: SLC_RN_DISv2.17_REV000
-        href: DIS/SLC_RN_DISv2.17_REV000.md
+      - name: DIS 2.24
+        topicUid: DIS_2.24
+      - name: DIS 2.23
+        topicUid: DIS_2.23
+      - name: DIS 2.22
+        topicUid: DIS_2.22
+      - name: DIS 2.21
+        topicUid: DIS_2.21
+      - name: DIS 2.20
+        topicUid: DIS_2.20
+      - name: DIS 2.19
+        topicUid: DIS_2.19
+      - name: DIS 2.18
+        topicUid: DIS_v2.18
+      - name: DIS 2.17
+        topicUid: DIS_2.17
       - name: SLC_RN_DISv2.16_REV000
         href: DIS/SLC_RN_DISv2.16_REV000.md
       - name: SLC_RN_DISv2.15_REV000
