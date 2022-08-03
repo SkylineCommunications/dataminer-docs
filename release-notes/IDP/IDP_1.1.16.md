@@ -1,4 +1,8 @@
-# Version 1.1.16
+---
+uid: IDP_1.1.16
+---
+
+# IDP 1.1.16
 
 ## New features
 
@@ -22,25 +26,20 @@ In case a placeholder cannot be polled (e.g. an HTTP placeholder on an SNMP-only
 
 #### Activity management toggle buttons \[ID_30838\]
 
-On the *Admin* > *CI Types* tab of the IDP app, an *Activity Management* page has been added. The toggle buttons on this page allow you to determine the default behavior of the process activation settings. If a toggle button is set to *Manual*, users will need to manually enable automation for the relevant activity when completeness is 100%. If a toggle button is set to *Automatic*, automation will be enabled automatically as soon as completeness is 100% for the activity.
+On the *Admin* > *CI Types* tab of the IDP app, an *Activity Management* page has been added. The toggle buttons on this page allow you to determine the default behavior of the process activation settings. If a toggle button is set to *Manual*, users will need to manually enable automation for the relevant activity when completeness is 100%. If a toggle button is set to *Automatic*, automation will be enabled automatically as soon as completeness is 100% for the activity.
 
-In all other sections of the *Admin* > *CI Types* tab (except the *Overview* section), toggle buttons have also been added to allow you to enable or disable each activity:
+In all other sections of the *Admin* > *CI Types* tab (except the *Overview* section), toggle buttons have also been added to allow you to enable or disable each activity:
 
--  In the *Discovery* section, these are available in the *Discovery* column.
+-  In the *Discovery* section, these are available in the *Discovery* column.
+-  In the *Provisioning* section, these are available in the *Create* column.
+-  In the *Connectivity* section, these are available in the *Connectivity Discovery* column.
+-  In the *Configuration Management* section, these are available in the *Backup *and* Configuration Update* columns.
+-  In the *Software Management* section, these are available in the *Update *and* Compliance Check* columns.
+-  In the *Facilities* section, these are available in the *Rack Assignment* column.
 
--  In the *Provisioning* section, these are available in the *Create* column.
+#### Processes \> Automation tab renamed to Processes \> Activities \[ID_30839\]
 
--  In the *Connectivity* section, these are available in the *Connectivity Discovery* column.
-
--  In the *Configuration Management* section, these are available in the *Backup *and* Configuration Update* columns.
-
--  In the *Software Management* section, these are available in the *Update *and* Compliance Check* columns.
-
--  In the *Facilities* section, these are available in the *Rack Assignment* column.
-
-#### Processes \> Automation tab renamed to Processes \> Activities \[ID_30839\]
-
-To be more in line with the nomenclature used in the rest of the IDP app, the *Processes* > *Automation* tab has been renamed to *Processes* > *Activities*.
+To be more in line with the nomenclature used in the rest of the IDP app, the *Processes* > *Automation* tab has been renamed to *Processes* > *Activities*.
 
 #### Process Automation activities using discovery responses \[ID_30908\]\[ID_30942\]
 
@@ -48,19 +47,19 @@ Discovery responses can now be used in Process Automation activities to provisio
 
 IDP will save the discovery responses for each device. If a CI Type contains a reference to a discovery response for which no value is saved, the Process Automation activity will fail, and a new discovery will need to be run.
 
-You will be able to reapply or reassign CI Types even if a CI Type contains placeholders linking to discovery responses. When you do so, you can click the *Show Details* button in the wizard to get an overview of what all selected replacements look like and what the end result will be.
+You will be able to reapply or reassign CI Types even if a CI Type contains placeholders linking to discovery responses. When you do so, you can click the *Show Details* button in the wizard to get an overview of what all selected replacements look like and what the end result will be.
 
 #### Possibility to choose rack side when assigning element to rack \[ID_30932\]
 
-When you assign an element to a rack (via *Admin* > *Facilities* > *Rack Assignment*), you can now choose whether to assign it to the front or rear of the rack.
+When you assign an element to a rack (via *Admin* > *Facilities* > *Rack Assignment*), you can now choose whether to assign it to the front or rear of the rack.
 
 #### IDP API user configuration changes \[ID_30959\]
 
-The IDP setup wizard has been modified so that the password from the currently configured API user is not loaded. In addition, the elements *DataMiner IDP*, *DataMiner IDP Rack Layout* *Manager*, *DataMiner IDP Discovery* and *DataMiner IDP Configuration* no longer allow the local configuration of the API credentials. Instead this configuration must be done through the setup wizard.
+The IDP setup wizard has been modified so that the password from the currently configured API user is not loaded. In addition, the elements *DataMiner IDP*, *DataMiner IDP Rack Layout* *Manager*, *DataMiner IDP Discovery* and *DataMiner IDP Configuration* no longer allow the local configuration of the API credentials. Instead this configuration must be done through the setup wizard.
 
 In the setup wizard, you now need to select if you want to edit the password of the currently configured API user. By default, the credentials remain the same, the password box is grayed out, and no user changes are sent to IDP. If you select to use a different user, you do need to configure a password to be able to move forward in the wizard.
 
-On the *Extra Configurations* page of the wizard, the same behavior will apply when you open the *Configuration Manager* section. If credentials are already configured for the Configuration element, the credentials boxes are grayed out, but you can select to specify different credentials instead.
+On the *Extra Configurations* page of the wizard, the same behavior will apply when you open the *Configuration Manager* section. If credentials are already configured for the Configuration element, the credentials boxes are grayed out, but you can select to specify different credentials instead.
 
 ## Changes
 
@@ -72,7 +71,7 @@ The rack view has been improved to support elements with long names. Previously,
 
 #### IDP Correlation rules moved to dedicated folder \[ID_30978\]
 
-The Correlation rules *IDP_Element_Edit* and *IDP_Element_Delete* have been moved from the root folder of the Correlation module to a dedicated *DataMiner Solutions/IDP* subfolder.
+The Correlation rules *IDP_Element_Edit* and *IDP_Element_Delete* have been moved from the root folder of the Correlation module to a dedicated *DataMiner Solutions/IDP* subfolder.
 
 #### Improved efficiency of Correlation rule detecting element name changes \[ID_30980\]
 
@@ -82,7 +81,7 @@ To detect whether an element name is changed by a user, DataMiner IDP uses a Cor
 
 #### Configuration backup with a file path resulted in exception \[ID_30745\]
 
-When a custom backup script was used that provided IDP with a file path, the *Update Progress* column reported an exception even though the file was actually successfully transferred to the configuration archive:
+When a custom backup script was used that provided IDP with a file path, the *Update Progress* column reported an exception even though the file was actually successfully transferred to the configuration archive:
 
 ```txt
 Configuration Backup has failed due to: The CancellationTokenSource has been disposed.
@@ -106,4 +105,4 @@ The specified path, file name, or both are too long. The fully qualified file na
 
 #### SNMPv3 devices not added to rack assignment section \[ID_30945\]
 
-In some cases, it could occur that SNMPv3 devices were not added to the *Admin* > *Facilities* > *Rack Assignment* section, so that it was not possible to assign them to a rack position.
+In some cases, it could occur that SNMPv3 devices were not added to the *Admin* > *Facilities* > *Rack Assignment* section, so that it was not possible to assign them to a rack position.

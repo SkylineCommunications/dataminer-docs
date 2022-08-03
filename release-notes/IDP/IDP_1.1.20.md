@@ -1,4 +1,8 @@
-# Version 1.1.20
+---
+uid: IDP_1.1.20
+---
+
+# IDP 1.1.20
 
 ## New features
 
@@ -10,21 +14,20 @@ If a discovery template with invalid credentials is imported, IDP will display a
 
 #### Adding/editing discovery profiles directly in IDP UI \[ID_32778\]
 
-On the *Admin* > *Discovery* > *Discovery Profiles* page, you can now add and edit discovery profiles. Previously, the only way you could manage discovery profiles was by importing them as JSON files.
+On the *Admin* > *Discovery* > *Discovery Profiles* page, you can now add and edit discovery profiles. Previously, the only way you could manage discovery profiles was by importing them as JSON files.
 
 Two new buttons are available above the list of discovery profiles that allow you to add a new discovery profile and edit a selected discovery profile. These will open a wizard in which you can configure the discovery profile. You can add and delete actions, as well as configure specific options for the relevant protocol type. This includes the possibility to use credentials from the Credentials Library for SNMPv1, SNMPv2 and SNMPv3 protocol types.
 
 #### New Admin \> Activities tab \[ID_32889\]
 
-The activities configuration has now been moved to one consolidated location in the IDP app. i.e. the *Admin* > *Activities* tab, which has two pages:
+The activities configuration has now been moved to one consolidated location in the IDP app. i.e. the *Admin* > *Activities* tab, which has two pages:
 
-- The *Overview* page, containing the configuration that was previously available under *Processes* > *Activities*.
-
-- Theb*Default Behavior* page, containing the configuration that was available under *Admin* > *CI Types* > *Activity Management*.
+- The *Overview* page, containing the configuration that was previously available under *Processes* > *Activities*.
+- The *Default Behavior* page, containing the configuration that was available under *Admin* > *CI Types* > *Activity Management*.
 
 #### File Transfer credentials clarified in IDP UI \[ID_32980\]
 
-On the *Configuration* > *Admin* tab, the *Network Shares* page previously contained a set of credentials for the working directories. While these credentials were in fact used for all file transfers (including e.g. for a configuration backup), a user could easily get the impression that they were exclusively used for the configuration update operation. For this reason, the credentials are now displayed in a new *File Transfer Credentials* section on the same page. Similarly, in the Configuration Manager section of the setup wizard, they are now mentioned as “File Transfer Credentials”.
+On the *Configuration* > *Admin* tab, the *Network Shares* page previously contained a set of credentials for the working directories. While these credentials were in fact used for all file transfers (including e.g. for a configuration backup), a user could easily get the impression that they were exclusively used for the configuration update operation. For this reason, the credentials are now displayed in a new *File Transfer Credentials* section on the same page. Similarly, in the Configuration Manager section of the setup wizard, they are now mentioned as “File Transfer Credentials”.
 
 ## Changes
 
@@ -32,7 +35,7 @@ On the *Configuration* > *Admin* tab, the *Network Shares* page previously co
 
 #### Obsolete Activity Scheduler feature removed \[ID_32619\]
 
-The Activity Scheduler feature, which has been replaced with Process Automation, is now considered fully deprecated and has been removed from the IDP UI. It will also no longer be mentioned in the setup wizard. If you do not have Process Automation installed and you go to the *Processes* tab, a message will be displayed to indicate that Process Automation is required for this.
+The Activity Scheduler feature, which has been replaced with Process Automation, is now considered fully deprecated and has been removed from the IDP UI. It will also no longer be mentioned in the setup wizard. If you do not have Process Automation installed and you go to the *Processes* tab, a message will be displayed to indicate that Process Automation is required for this.
 
 #### Minimum required DataMiner version changed to 10.1.0.0 - 11229 CU10 \[ID_32820\]
 
@@ -42,7 +45,7 @@ The minimum required DataMiner version for DataMiner IDP is now DataMiner 10.1.0
 
 #### Exception during IDP installation \[ID_32644\]
 
-When IDP was initially installed, it could occur that the *Solution Components* table of the IDP app was not fully filled in yet, which caused the following exception to be included in the information event logging:
+When IDP was initially installed, it could occur that the *Solution Components* table of the IDP app was not fully filled in yet, which caused the following exception to be included in the information event logging:
 
 ```txt
 GetInfoFromConfigurationElement: Could not parse dmaeid. (Script 'IDP_SetupWizardFrontEnd')
@@ -60,12 +63,12 @@ If a Process Automation activity for IDP had "Element" as input, and the Element
 
 #### \[DNSName\] keyword not resolved in proposed element name \[ID_32802\]
 
-When the *\[DNSName\]* keyword was used in the element name of a CI Type, it could occur that this was not resolved in the *Proposed Element Name* column of the *Discovered Elements* table (on the *Inventory* > *Discovered* tab).
+When the *\[DNSName\]* keyword was used in the element name of a CI Type, it could occur that this was not resolved in the *Proposed Element Name* column of the *Discovered Elements* table (on the *Inventory* > *Discovered* tab).
 
 #### SET buttons not working on Admin \> Facilities tab \[ID_32820\]
 
-On the *Admin* > *Facilities* tab of the IDP app, it could occur that the *SET* buttons no longer worked.
+On the *Admin* > *Facilities* tab of the IDP app, it could occur that the *SET* buttons no longer worked.
 
 #### Configuration Types and Working Directories tables empty after new installation \[ID_32881\]
 
-After a new installation of DataMiner IDP, no credentials are configured in the Skyline Configuration Manager. This could cause exceptions that made it impossible to fill in the *Configuration Types* and *Working Directories* tables. If these exceptions now occur, they will be logged, but this will no longer affect the functionality of the tables.
+After a new installation of DataMiner IDP, no credentials are configured in the Skyline Configuration Manager. This could cause exceptions that made it impossible to fill in the *Configuration Types* and *Working Directories* tables. If these exceptions now occur, they will be logged, but this will no longer affect the functionality of the tables.

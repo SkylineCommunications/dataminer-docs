@@ -178,6 +178,18 @@
       items:
       - name: D-DOCSIS
         items:
+        - name: EPM 6.1.3 D-DOCSIS 
+          topicUid: EPM_6.1.3_D-DOCSIS
+        - name: EPM 6.1.2 D-DOCSIS 
+          topicUid: EPM_6.1.2_D-DOCSIS
+        - name: EPM 6.1.1 D-DOCSIS 
+          topicUid: EPM_6.1.1_D-DOCSIS
+        - name: EPM 6.1.0 D-DOCSIS 
+          topicUid: EPM_6.1.0_D-DOCSIS
+        - name: EPM 6.0.3 D-DOCSIS 
+          topicUid: EPM_6.0.3_D-DOCSIS
+        - name: EPM 6.0.2 D-DOCSIS 
+          topicUid: EPM_6.0.2_D-DOCSIS
         - name: EPM 6.0.1 D-DOCSIS 
           topicUid: EPM_6.0.1_D-DOCSIS
         - name: EPM 6.0.0 D-DOCSIS 
@@ -186,52 +198,46 @@
           topicUid: EPM_5.0.0_D-DOCSIS
       - name: I-DOCSIS
         items:
+        - name: EPM 6.1.3 I-DOCSIS 
+          topicUid: EPM_6.1.3_I-DOCSIS
+        - name: EPM 6.1.2 I-DOCSIS 
+          topicUid: EPM_6.1.2_I-DOCSIS
+        - name: EPM 6.1.1 I-DOCSIS 
+          topicUid: EPM_6.1.1_I-DOCSIS
+        - name: EPM 6.1.0 I-DOCSIS 
+          topicUid: EPM_6.1.0_I-DOCSIS
+        - name: EPM 6.0.3 I-DOCSIS 
+          topicUid: EPM_6.0.3_I-DOCSIS
+        - name: EPM 6.0.2 I-DOCSIS 
+          topicUid: EPM_6.0.2_I-DOCSIS
         - name: EPM 6.0.1 I-DOCSIS 
           topicUid: EPM_6.0.1_I-DOCSIS
         - name: EPM 6.0.0 I-DOCSIS 
           topicUid: EPM_6.0.0_I-DOCSIS
         - name: EPM 5.0.0 I-DOCSIS 
           topicUid: EPM_5.0.0_I-DOCSIS
-
-
-
-      - name: SLC_RN_EPMv6.1.3_REV000 
-        href: EPM/SLC_RN_EPMv6.1.3_REV000.md
-      - name: SLC_RN_EPMv6.1.2_REV000 
-        href: EPM/SLC_RN_EPMv6.1.2_REV000.md
-      - name: SLC_RN_EPMv6.1.1_REV000 
-        href: EPM/SLC_RN_EPMv6.1.1_REV000.md
-      - name: SLC_RN_EPMv6.1.0_REV000 
-        href: EPM/SLC_RN_EPMv6.1.0_REV000.md
-      - name: SLC_RN_EPMv6.0.3_REV000 
-        href: EPM/SLC_RN_EPMv6.0.3_REV000.md
-      - name: SLC_RN_EPMv6.0.2_REV000 
-        href: EPM/SLC_RN_EPMv6.0.2_REV000.md
-
-
-
     - name: IDP release notes
       items:
-      - name: SLC_RN_IDPv1.2.0_REV000 
-        href: IDP/SLC_RN_IDPv1.2.0_REV000.md
-      - name: SLC_RN_IDPv1.1.20_REV000
-        href: IDP/SLC_RN_IDPv1.1.20_REV000.md
-      - name: SLC_RN_IDPv1.1.19_REV001
-        href: IDP/SLC_RN_IDPv1.1.19_REV001.md
-      - name: SLC_RN_IDPv1.1.18_REV000
-        href: IDP/SLC_RN_IDPv1.1.18_REV000.md
-      - name: SLC_RN_IDPv1.1.17_REV000
-        href: IDP/SLC_RN_IDPv1.1.17_REV000.md
-      - name: SLC_RN_IDPv1.1.16_REV000
-        href: IDP/SLC_RN_IDPv1.1.16_REV000.md
-      - name: SLC_RN_IDPv1.1.15_REV000
-        href: IDP/SLC_RN_IDPv1.1.15_REV000.md
-      - name: SLC_RN_IDPv1.1.14_REV001
-        href: IDP/SLC_RN_IDPv1.1.14_REV001.md
-      - name: SLC_RN_IDPv1.1.13_REV001
-        href: IDP/SLC_RN_IDPv1.1.13_REV001.md
-      - name: SLC_RN_IDPv1.1.12_REV001
-        href: IDP/SLC_RN_IDPv1.1.12_REV001.md
+      - name: IDP 1.2.0 
+        topicUid: IDP_1.2.0
+      - name: IDP 1.1.20
+        topicUid: IDP_1.1.20
+      - name: IDP 1.1.19
+        topicUid: IDP_1.1.19
+      - name: IDP 1.1.18
+        topicUid: IDP_1.1.18
+      - name: IDP 1.1.17
+        topicUid: IDP_1.1.17
+      - name: IDP 1.1.16
+        topicUid: IDP_1.1.16
+      - name: IDP 1.1.15
+        topicUid: IDP_1.1.15
+      - name: IDP 1.1.14
+        topicUid: IDP_1.1.14
+      - name: IDP 1.1.13
+        topicUid: IDP_1.1.13
+      - name: IDP 1.1.12
+        topicUid: IDP_1.1.12
       - name: SLC_RN_IDPv1.1.11_REV000
         href: IDP/SLC_RN_IDPv1.1.11_REV000.md
       - name: SLC_RN_IDPv1.1.10_REV002

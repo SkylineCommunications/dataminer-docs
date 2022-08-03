@@ -1,36 +1,8 @@
-# I-DOCSIS branch 6.0.3
+---
+uid: EPM_6.0.3_D-DOCSIS
+---
 
-## New features
-
-\-
-
-## Changes
-
-### Enhancements
-
-#### DOCSIS and GPON configuration files separated \[ID_32087\]
-
-The configuration files of the DOCSIS and GPON technologies have been separated so that the EPM front end can now ingest them independently.
-
-### Fixes
-
-#### DS Power status aggregated based on incorrect column \[ID_32086\]
-
-The DS Power status was aggregated based on the wrong column. It was based on the US Tx Power column (which used to be the DS Power column) instead of the new DS RX Power column in the CM Overview table.
-
-#### Incorrect Reflection Distance calculation \[ID_32088\]
-
-In some cases, the Reflection Distance calculation in the CM overview table could be incorrect.
-
-#### Incorrect KPI calculation at service group level \[ID_32089\]
-
-At service group level, it could occur that the % CM Group Delay OOS, % CM Reflection OOS, % CM Group Delay and Reflection OOS KPIs were not calculated correctly.
-
-#### Run-time errors caused by Arris E6000 CCAP Platform elements \[ID_32090\]
-
-In some cases, elements using the Arris E6000 CCAP Platform connector could cause run-time errors.
-
-# D-DOCSIS branch 6.0.3
+# EPM 6.0.3 D-DOCSIS
 
 ## New features
 
@@ -39,11 +11,8 @@ In some cases, elements using the Arris E6000 CCAP Platform connector could caus
 On the CM page, the following filters have been added to allow further filtering of the MAC state:
 
 - *All Online*: Shows all cable modems with *Online* in their MAC state.
-
 - *Init*: Shows all cable modems with *Init* in their MAC state.
-
 - *Reject*: Shows all cable modems with *Reject* in their MAC state.
-
 - *Expired*: Shows all cable modems with *Expire* in their MAC state.
 
 #### Core Leaf, Spine, and Node Leaf topology levels integrated in DAA Overview topology \[ID_32040\]
@@ -52,7 +21,7 @@ The Core Leaf, Spine, and Node Leaf topology levels have been added to the DAA O
 
 #### DCF interfaces table now contains ae1 and ae2 interfaces \[ID_32048\]
 
-The *ae1* and *ae2* interfaces have been added to the DCF interfaces table.
+The *ae1* and *ae2* interfaces have been added to the DCF interfaces table.
 
 ## Changes
 
@@ -76,7 +45,7 @@ When you click a dashboard link for a specific entity, the information for that 
 
 #### Improved visualization of interface alarms \[ID_32037\]
 
-The EPM Visual Overview has been updated to show the overall alarm status for interfaces of the Core Leaf, Spine, and Node Leaf entities. The alarm template has also been updated to trigger an alarm on *Operational Status* when *Admin Status* is *Up* while *Operational Status* is *Down*, as this means that the interface is down when it should not be.
+The EPM Visual Overview has been updated to show the overall alarm status for interfaces of the Core Leaf, Spine, and Node Leaf entities. The alarm template has also been updated to trigger an alarm on *Operational Status* when *Admin Status* is *Up* while *Operational Status* is *Down*, as this means that the interface is down when it should not be.
 
 #### Improved RPD Association pages for Core Leaf and Node Leaf entities \[ID_32038\]
 
@@ -98,7 +67,7 @@ When not all CI Types were found, up to now the workflow manager stopped process
 
 #### “-1” displayed instead of “N/A” on RPD details page \[ID_31963\]
 
-On the RPD details page, it could occur that parameters displayed *-1* instead of the *N/A* exception value.
+On the RPD details page, it could occur that parameters displayed *-1* instead of the *N/A* exception value.
 
 #### Predecessor fields not resolved when selecting node segment \[ID_31964\]
 

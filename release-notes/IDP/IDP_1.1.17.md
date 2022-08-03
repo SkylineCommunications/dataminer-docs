@@ -1,18 +1,21 @@
-# Version 1.1.17
+---
+uid: IDP_1.1.17
+---
+
+# IDP 1.1.17
 
 ## New features
 
 #### Reapplying/reassigning a CI Type now allows update of element properties \[ID_31128\]
 
-In the wizard to reapply or reassign a CI Type, a new *Properties* option is now available, so that you can now update the element properties with a reapply/reassign action. The *Show Details *button allows you to check the end result for each property.
+In the wizard to reapply or reassign a CI Type, a new *Properties* option is now available, so that you can now update the element properties with a reapply/reassign action. The *Show Details *button allows you to check the end result for each property.
 
 #### Discovered Connections table improvements \[ID_31597\]
 
-In the IDP app, the following improvements have been implemented to the *Discovered Connections* table (on the *Connectivity* tab):
+In the IDP app, the following improvements have been implemented to the *Discovered Connections* table (on the *Connectivity* tab):
 
 - Source and destination element names have been added.
-
-- A pending connection is now displayed with the following information: the *Source Element Name*, *Source Port ID*, *Source DCF ID*, *Destination Element Name*, *Destination Port ID* and *Destination DCF ID*.
+- A pending connection is now displayed with the following information: the *Source Element Name*, *Source Port ID*, *Source DCF ID*, *Destination Element Name*, *Destination Port ID* and *Destination DCF ID*.
 
 ## Changes
 
@@ -28,7 +31,7 @@ When \[IDP_DR\_\*\] keywords are used in CI Types, these no longer need to have 
 
 #### Delete button now longer shown in wizard when creating new CI Type or duplicating a CI Type \[ID_31259\]
 
-The CI Type configuration wizard will now only show a *Delete* button when you edit a CI Type. Previously, this was also shown when you created a new CI Type or duplicated a CI Type.
+The CI Type configuration wizard will now only show a *Delete* button when you edit a CI Type. Previously, this was also shown when you created a new CI Type or duplicated a CI Type.
 
 #### Leading/trailing spaces removed from name new CI Type \[ID_31321\]
 
@@ -40,18 +43,13 @@ During an HTTP discovery, GZIP responses will now be automatically unzipped so t
 
 #### Improved status information in case of provisioning issues \[ID_31405\]
 
-When something goes wrong during provisioning, more detailed information will now be available in the IDP app, under *Inventory* > *Discovery* > *Discovered Elements*, in the *Provisioning Status* column. The following status messages can be displayed
+When something goes wrong during provisioning, more detailed information will now be available in the IDP app, under *Inventory* > *Discovery* > *Discovered Elements*, in the *Provisioning Status* column. The following status messages can be displayed
 
 - When a CI Type is provisioned of which the name is null or whitespace: "The name of the specified CI Type is null or whitespace."
-
 - When an element is provisioned while the CMDB element is not available, is stopped or does not exist: "The CMDB element is not available."
-
 - When an element is provisioned, but not all keywords can be resolved: "Not all discovery responses are available, please run discovery again."
-
 - When an element is provisioned, but the CI Type is not configured to allow provisioning: "The specified CI type is not configured for provisioning."
-
-- When an element is provisioned, but the JSON cannot be deserialized to a *CreateElement* object (for example because an incorrect keyword is provided): "Could not deserialize JSON to CreateElement object.";
-
+- When an element is provisioned, but the JSON cannot be deserialized to a *CreateElement* object (for example because an incorrect keyword is provided): "Could not deserialize JSON to CreateElement object.";
 - When an element is provisioned and a generic error occurs other than the issues mentioned above: "Unexpected exception creating element state based on CI Type: {CI Type name}"
 
 #### DCF connections now made on both elements in case unilateral connection exists \[ID_31556\]
@@ -60,7 +58,7 @@ To prevent situations where a DCF connection only exists on one element, IDP wil
 
 ### Fixes
 
-#### Problem with Process Automation after process information was generated with invalid ele­ment ID \[ID_31102\]
+#### Problem with Process Automation after process information was generated with invalid element ID \[ID_31102\]
 
 In some cases, service definitions could generate process information with an invalid element ID (-1/-1), which could in turn cause an issue with the subsequent processes, stopping the normal Process Automation flow.
 
@@ -84,10 +82,9 @@ Up to now, the provisioning activity expected element creation to be completed i
 
 #### Activities disabled after saving/editing CI Type \[ID_31533\]
 
-In some cases, when a CI Type was saved or edited, it could occur that activities on the *Process* > *Activities* tab were set to *Disabled* even when this should not have been the case:
+In some cases, when a CI Type was saved or edited, it could occur that activities on the *Process* > *Activities* tab were set to *Disabled* even when this should not have been the case:
 
-- When a CI Type was saved that had *Software Update* or *Software Compliancy* enabled on the *Process* > *Activities* tab, the toggle buttons for these activities were set to *Disabled* for all CI Types, even if no changes had been done for those CI Types.
+- When a CI Type was saved that had *Software Update* or *Software Compliancy* enabled on the *Process* > *Activities* tab, the toggle buttons for these activities were set to *Disabled* for all CI Types, even if no changes had been done for those CI Types.
+- When a CI Type's provisioning information was edited, the activities *Rack Assignment* and *Connectivity Discovery* in the *Process* > *Activities* tab were alway set to *Disabled* for all CI Types.
 
-- When a CI Type's provisioning information was edited, the activities *Rack Assignment* and *Connectivity Discovery* in the *Process* > *Activities* tab were alway set to *Disabled* for all CI Types.
-
-Now activities will only be set to *Disabled* if the relevant completeness percentage is no longer 100%.
+Now activities will only be set to *Disabled* if the relevant completeness percentage is no longer 100%.
