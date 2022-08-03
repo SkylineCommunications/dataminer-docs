@@ -238,18 +238,18 @@
         topicUid: IDP_1.1.13
       - name: IDP 1.1.12
         topicUid: IDP_1.1.12
-      - name: SLC_RN_IDPv1.1.11_REV000
-        href: IDP/SLC_RN_IDPv1.1.11_REV000.md
-      - name: SLC_RN_IDPv1.1.10_REV002
-        href: IDP/SLC_RN_IDPv1.1.10_REV002.md
-      - name: SLC_RN_IDPv1.1.9_REV000 
-        href: IDP/SLC_RN_IDPv1.1.9_REV000.md
-      - name: SLC_RN_IDPv1.1.8_REV000 
-        href: IDP/SLC_RN_IDPv1.1.8_REV000.md
-      - name: SLC_RN_IDPv1.1.7_REV000 
-        href: IDP/SLC_RN_IDPv1.1.7_REV000.md
-      - name: SLC_RN_IDPv1.1.6_REV001 
-        href: IDP/SLC_RN_IDPv1.1.6_REV001.md
+      - name: IDP 1.1.11
+        topicUid: IDP_1.1.11
+      - name: IDP 1.1.10
+        topicUid: IDP_1.1.10
+      - name: IDP 1.1.9 
+        topicUid: IDP_1.1.9
+      - name: IDP 1.1.8 
+        topicUid: IDP_1.1.8
+      - name: IDP 1.1.7 
+        topicUid: IDP 1.1.7
+      - name: IDP 1.1.6 
+        topicUid: IDP_1.1.6
       - name: SLC_RN_IDPv1.1.5_REV001 
         href: IDP/SLC_RN_IDPv1.1.5_REV001.md
       - name: SLC_RN_IDPv1.1.4_REV000 
