@@ -112,7 +112,7 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 > [!NOTE]
 > Adding and removing `FieldDescriptors` must be done using the `AddOrReplaceFieldDescriptor()` and `RemoveFieldDescriptor()` methods. You can also filter on the `FieldDescriptors` using the `FieldDescriptorIDs` or `FieldDescriptorNames` exposers (found on `SectionDefinitionExposers`).
 
-## Requirements & limitations
+## Requirements
 
 - To **create or update** a `SectionDefinition`, it must define `FieldDescriptors` with types that are actually supported by the relevant `FieldDescriptor`.
 

@@ -8,6 +8,11 @@ A DOM manager (or `DomManager` in the code) manages create, read, update, and de
 
 A DOM manager sends out various [events](xref:DOM_events) when actions are done on the DOM objects and tracks the [history](xref:DOM_history) of all changes done to the field values of a DOM instance. It also allows you to configure the [status system](xref:DOM_status_system) for a DOM definition.
 
+> [!NOTE]
+>
+> - Logging for each DOM manager is done in a separate log file with the name "SLDomManager_{moduleId}", e.g. "SLDomManager_my_module.txt".
+> - A backup of all DOM manager data can be taken using the backup option *Create a backup of the database* > *Include all DomManager data in backup*. This is by default enabled in the backup preset *Full Backup*. See [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups).
+
 ## Module ID
 
 To create a DOM manager, you first need to create a [ModuleSettings](xref:DOM_ModuleSettings) object, which includes a **unique module ID** that is used to identify the DOM manager instance in the DMS. In the module settings, you can also configure the behavior of the DOM manager. You can for example define the permissions that will be needed for the various script actions, or you can enable information events.

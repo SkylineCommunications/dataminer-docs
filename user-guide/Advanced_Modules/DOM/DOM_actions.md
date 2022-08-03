@@ -4,7 +4,7 @@ uid: DOM_actions
 
 # DOM actions
 
-It is possible to define actions on a `DomBehaviorDefinition` that can be triggered via the `DomHelper`. These actions can only be executed when a condition is met.
+It is possible to define actions on a [DomBehaviorDefinition](xref:DomBehaviorDefinition) that can be triggered via the `DomHelper`. These actions can only be executed when a condition is met.
 
 You can also define buttons to be shown in the UI that will execute one or more of these actions when clicked. A button definition also has a condition to determine when the button is shown. This way you can hide buttons when they are not applicable.
 
@@ -127,6 +127,7 @@ domHelper.DomInstances.ExecuteAction(domInstance.ID, "some_action_id");
 The execute call returns `TraceData` when the action failed or the condition was not met. This `TraceData` will contain a `ManagerStoreError` with reason *ObjectDidNotExist* if a non-existing `DomInstance` is given. In other common error cases, a `DomActionError` will be returned. This error type has the following reasons:
 
 | Reason | Description |
+|--|--|
 | Unknown | An unknown error occurred. This should never happen. Check the logging to find more information. |
 | UnexpectedExceptionOccurred | An unexpected exception occurred when executing an action. *ExceptionMessage* contains the message of the exception. |
 | ScriptReturnedErrors | A script that was (being) executed returned errors. *ErrorData* contains a list of all the returned errors. |
@@ -136,6 +137,7 @@ The execute call returns `TraceData` when the action failed or the condition was
 Additionally, the `TraceData` can also include information using one or more `DomActionInfo` objects. This info object has a *Type* property that describes the info it contains.
 
 | Type | Description |
+|--|--|
 | ScriptOutput | Contains the script output in the *Data* property. |
 | ScriptExecutionId | Contains the execution ID of the script that was executed for the action in the *ExecutionId* property. |
 
@@ -179,6 +181,7 @@ The `DomInstanceButtonDefinition` has the following properties:
 The `DomButtonDefinitionLayout` class has the following properties:
 
 | Name | Type | Description |
+|--|--|--|
 | Text | string | Text that will be displayed on the button. |
 | Icon | string | Optional icon for this button. |
 | ToolTip | string | Optional tooltip that can contain more info about this button. |

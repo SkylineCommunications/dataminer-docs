@@ -10,15 +10,15 @@ In addition to this, a **DOM template** (or `DomTemplate`) can also be defined, 
 
 In summary:
 
-- [SectionDefinition object](xref:DOM_SectionDefinition): Defines the data that should be present in a section of a DOM instance, using field descriptors.
+- [SectionDefinition](xref:DOM_SectionDefinition): Defines the data that should be present in a section of a DOM instance, using field descriptors.
 
-- [DomDefinition object](xref:DomDefinition): Groups DOM instances together and defines which section definitions should be used by the instances.
+- [DomDefinition](xref:DomDefinition): Groups DOM instances together and defines which section definitions should be used by the instances.
 
-- [DomInstance object](xref:DomInstance): Contains field values in its different sections, as defined in the section definitions, which in turn are defined by the DOM definition.
+- [DomInstance](xref:DomInstance): Contains field values in its different sections, as defined in the section definitions, which in turn are defined by the DOM definition.
 
-- [DomTemplate object](xref:DomTemplate): DOM instance with filled-in values that can be used as a template.
+- [DomTemplate](xref:DomTemplate): DOM instance with filled-in values that can be used as a template.
 
-- [DomBehaviorDefinition object](xref:DomBehaviorDefinition): Extension of a DOM definition that adds additional behavior configuration.
+- [DomBehaviorDefinition](xref:DomBehaviorDefinition): Extension of a DOM definition that adds additional behavior configuration.
 
 The following diagram illustrates the relation between these objects:
 

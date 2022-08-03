@@ -92,4 +92,4 @@ Security checks are done on CRUD actions when permission flags are configured on
 - To **create, update, or delete** a `DomBehaviorDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ConfigurePermission`.
 
 > [!NOTE]
-> To create, update, or delete the `ModuleDomBehaviorDefinition`, you need the *ModuleSettingsConfiguration* permission flag.
+> To create, update, or delete the `ModuleDomBehaviorDefinition`, you need the [Module Settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings) permission.

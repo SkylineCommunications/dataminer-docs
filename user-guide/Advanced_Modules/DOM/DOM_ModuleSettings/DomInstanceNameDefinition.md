@@ -4,7 +4,7 @@ uid: DomInstanceNameDefinition
 
 # DomInstanceNameDefinition
 
-With this setting, you can define how the *Name* property of a `DomInstance` should be filled in automatically every time the instance is saved to DataMiner (with a create or update action).
+With this setting, you can define how the *Name* property of a [DomInstance](xref:DomInstance) should be filled in automatically every time the instance is saved to DataMiner (with a create or update action).
 
 ## Defining a concatenation
 

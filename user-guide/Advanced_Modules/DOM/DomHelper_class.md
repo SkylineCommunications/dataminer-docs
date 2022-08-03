@@ -11,7 +11,6 @@ The `DomHelper` class can be used in a script, protocol, or app to execute creat
 To do so, first call the constructor of the helper, provide a callback to SLNet, and specify a module ID for which module settings have been defined. For example:
 
 ```csharp
-// Create the DomHelper
 var helper = new DomHelper(engine.SendSLNetMessages, "a_module_id");
 ```
 
@@ -62,23 +61,23 @@ In addition to the CRUD methods, the following special methods are also supporte
 
 ## Stitching
 
-The stitching functionality makes it easier to work with a `DomInstance`. With this, There will be no need to use the helper each time and retrieve the linked objects using an ID filter. When a `DomInstance` is stitched, it is possible to:
+The stitching functionality makes it easier to work with a `DomInstance`. With this, there is no need to use the helper each time and retrieve the linked objects using an ID filter. When a `DomInstance` is stitched, it is possible to:
 
 - Retrieve the full `DomDefinition` object that the `DomInstance` is linked to, by calling `GetDomDefinition()` on the instance.
 - Retrieve the full `SectionDefinition` object that a `Section` is linked to, by calling `GetSectionDefinition()` on the `Section`
 - Retrieve the full `FieldDescriptor` object that a `FieldValue` is linked to, by calling `GetFieldDescriptor()` on the `FieldValue`.
 
 > [!NOTE]
-> When an item is not stitched, and one of the above mentioned get methods is called (e.g. GetDomDefinition), an exception will be thrown.
+> When an item is not stitched, and one of the above-mentioned get methods is called (e.g. GetDomDefinition), an exception will be thrown.
 
 There are two ways to stitch DOM instances:
 
-- `DomHelper.StitchDomInstances(List<DomInstance> domInstances)`: This will stitch the given list of DomInstances by retrieving all objects from server using the SLNet callback on the helper.
+- `DomHelper.StitchDomInstances(List<DomInstance> domInstances)`: This will stitch the given list of `DomInstances` by retrieving all objects from the server using the SLNet callback on the helper.
 
-- `DomHelper.StitchDomInstances(List<DomInstance> domInstances, List<SectionDefinition> existingSectionDefinitions, List<DomDefinition> existingDomDefinitions)`: This will stitch the given list of DomInstances by trying to retrieve the other objects from the given lists. This is a more efficient option when you would already have all necessary objects.
+- `DomHelper.StitchDomInstances(List<DomInstance> domInstances, List<SectionDefinition> existingSectionDefinitions, List<DomDefinition> existingDomDefinitions)`: This will stitch the given list of `DomInstances` by trying to retrieve the other objects from the given lists. This is a more efficient option when you already have all necessary objects.
 
 > [!NOTE]
-> If stitching is used and an object cannot be found, a null value will be assigned to the related property. The `DomInstance` will still be marked as stitched. This way, when that property is retrieved, you can know it is no longer available.
+> If stitching is used and an object cannot be found, a null value will be assigned to the related property. The `DomInstance` will still be marked as stitched. This way, when that property is retrieved, you can know it is not available.
 >
 > For example: If the second of the two methods above is used, but the provided `existingDomDefinitions` list is empty, the stitching logic will not be able to find the `DomDefinition` object linked to the instance. When you try to retrieve the `DomDefinition` using the `DomInstance.GetDomDefinition()` method, "null" will be returned.
 
@@ -107,6 +106,6 @@ domHelper.DomInstances.Attachments.Delete(domInstanceId, "ImportantDocument.txt"
 >
 > - The size limit of the attachments is determined by the [Documents.MaxSize](xref:MaintenanceSettings_xml#documentsmaxsize) setting in *MaintenanceSettings.xml*. The default value for this is 20 MB. Trying to upload a larger file using the helper will result in a `DataMinerException`.
 > - Deleting a `DomInstance` will delete all attachments from the file system. The attachments cannot be recovered.
-> To view or download `DomInstance` attachments, read permission is required, and to add or edit them, edit permission is required.
-> To include `DomInstance` attachments in a [custom backup](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in Cube, select *All documents located on this DMA*.
-> The attachments are synced in the DMS.
+> - To view or download `DomInstance` attachments, read permission is required, and to add or edit them, edit permission is required.
+> - To include `DomInstance` attachments in a [custom backup](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in Cube, select *All documents located on this DMA*.
+> - The attachments are synced in the DMS.

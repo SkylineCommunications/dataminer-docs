@@ -30,7 +30,7 @@ These requirements first need to be translated into different DOM objects:
 
 - There will be two `SectionDefinitions`:
 
-  - *GeneralInfoSectionDefinition*: Contains the *Customer*, *Total Price*, *Invoice Date* and *Status* fields.
+  - *GeneralInfoSectionDefinition*: Contains the *Customer*, *Total Price*, *Invoice Date*, and *Status* fields.
 
   - *ProductsSectionDefinition*: Contains the fields that represent one ordered product. This way there can be multiple `Sections` for this one, which will correspond with multiple ordered products.
 
@@ -45,7 +45,7 @@ The overview below shows the data that needs to be stored on the left and the DO
 Start by creating the `ModuleSettings`. These will determine how the app will behave. They also tell DataMiner that it can accept messages for that module. In this case, no special actions are needed, only the default settings with module ID "invoice_app".
 
 > [!NOTE]
-> Only users with the *Module Settings Configuration* permission flag can create, update, or delete `ModuleSettings`.
+> Only users with the [Module Settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings) permission can create, update, or delete `ModuleSettings`.
 
 ```csharp
 // Create the ModuleSettingsHelper
@@ -143,7 +143,7 @@ Since this is your first call with the `DomHelper`, it will trigger the initiali
 > [!NOTE]
 > At this point, the DOM manager is only running and initialized on the connected DMA. The other DMAs in the DMS do not have it running. It will only be initialized on another DMA when a request is handled for this module ID by that DMA. All this is done transparently and on the fly. It does not matter where your messages are handled as everything is kept in sync by the Elasticsearch database.
 
-As a next step, you need to create the second `SectionDefinition`, which will contain the `FieldDescriptors` for an ordered product.
+Next, you need to create the second `SectionDefinition`, which will contain the `FieldDescriptors` for an ordered product.
 
 ```csharp
 // FieldDescriptor for the 'Product ID' field (long)

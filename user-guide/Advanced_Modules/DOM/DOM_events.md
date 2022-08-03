@@ -12,11 +12,11 @@ These types of events contain lists with the created, updated, and deleted objec
 
 | Event name | Description |
 |--|--|
-| DomInstancesChangedEventMessage | Generated when a `DOMInstance` is created, updated, or deleted. |
-| DomTemplatesChangedEventMessage | Generated when a `DOMTemplate` is created, updated, or deleted. |
-| DomDefinitionsChangedEventMessage | Generated when a `DOMDefinition` is created, updated, or deleted. |
-| DomSectionDefinitionsChangedEventMessage | Generated when a `SectionDefinition` is created, updated, or deleted. |
-| DomBehaviorDefinitionsChangedEventMessage | Generated when a `DOMBehaviorDefinition` is created, updated, or deleted. |
+| DomInstancesChangedEventMessage | Generated when a [DomInstance](xref:DomInstance) is created, updated, or deleted. |
+| DomTemplatesChangedEventMessage | Generated when a [DomTemplate](xref:DomTemplate) is created, updated, or deleted. |
+| DomDefinitionsChangedEventMessage | Generated when a [DomDefinition](xref:DomDefinition) is created, updated, or deleted. |
+| DomSectionDefinitionsChangedEventMessage | Generated when a [SectionDefinition](xref:DOM_SectionDefinition) is created, updated, or deleted. |
+| DomBehaviorDefinitionsChangedEventMessage | Generated when a [DomBehaviorDefinition](xref:DomBehaviorDefinition) is created, updated, or deleted. |
 
 ### Filtering CRUD events
 
@@ -44,15 +44,15 @@ connection.AddSubscription(setId, subscriptionFilter);
 
 ## Status transition event
 
-In addition to the CRUD Events, there is also a `DomInstanceStatusChangedEventMessage` event. This event is sent when a status transition happens on a `DOMInstance` (see [status system](xref:DOM_status_system).
+In addition to the CRUD Events, there is also a `DomInstanceStatusChangedEventMessage` event. This event is sent when a status transition happens on a `DomInstance` (see [status system](xref:DOM_status_system).
 
 This event contains a list of changes as well as the `ModuleId` of the `DomManager` that generated the transition. A change contains the following items:
 
-- `DomInstanceID`: The ID of the `DOMInstance` of which the status changed.
+- `DomInstanceID`: The ID of the `DomInstance` of which the status changed.
 
-- `FromStatus`: The status of the `DOMInstance` before the transition.
+- `FromStatus`: The status of the `DomInstance` before the transition.
 
-- `ToStatus`: The status of the `DOMInstance` after the transition.
+- `ToStatus`: The status of the `DomInstance` after the transition.
 
 - `Username`: The username of the user who executed the transition.
 
@@ -63,7 +63,7 @@ This event contains a list of changes as well as the `ModuleId` of the `DomManag
 
 ### Filtering status transition events
 
-Apart from the [module filter](#filtering-crud-events), which can also be used for the status events, you can also configure a filter on the event contents. To do so, use a `SubscriptionFilter` that contains a `FilterElement`. If you use this as a second filter, for example, you will only receive status events for a specific `DOMInstance` and when the status changes to a specific type.
+Apart from the [module filter](#filtering-crud-events), which can also be used for the status events, you can also configure a filter on the event contents. To do so, use a `SubscriptionFilter` that contains a `FilterElement`. If you use this as a second filter, for example, you will only receive status events for a specific `DomInstance` and when the status changes to a specific type.
 
 > [!NOTE]
 >

@@ -4,18 +4,15 @@ uid: DOM_status_system
 
 # DOM status system
 
-In a DOM manager, you can configure the status system for a `DomDefinition`. Each `DomInstance` linked to that `DomDefinition` will then need to adhere to the rules defined for that status system.
+In a DOM manager, you can configure the status system for a [DomDefinition](xref:DomDefinition). Each [DomInstance](xref:DomInstance) linked to that `DomDefinition` will then need to adhere to the rules defined for that status system.
 
-This configuration is done using a [DomBehaviorDefinition](xref:DomBehaviorDefinition) object that the `DomDefinition` is linked to. This object contains properties to store the statuses, initial status, transitions, and links to the `SectionDefinitions`.
+This configuration is done using a [DomBehaviorDefinition](xref:DomBehaviorDefinition) object that the `DomDefinition` is linked to. This object contains properties to store the statuses, initial status, transitions, and links to the [SectionDefinitions](xref:DOM_SectionDefinition).
 
 ![DomBehaviorDefinition](~/user-guide/images/DOM_DomBehaviorDefinition_Status_Properties_Overview.jpg)
 
 Using the status system is an alternate way of defining which data must be present in a `DomInstance`. That means that the `SectionDefinitionLinks` on the `DomDefinition` are not used in that case.
 
 ![Status system overview](~/user-guide/images/DOM_StatusSystem_Overview.jpg)
-
-> [!TIP]
-> See also: [DOM status system example](xref:DOM_status_system_example)
 
 > [!NOTE]
 > A DOM manager detects that the status system is used from the moment that a `DomDefinition` is linked to a `DomBehaviorDefinition` AND that `DomBehaviorDefinition` contains at least one status.
@@ -35,6 +32,9 @@ To set up a status system:
 1. Link a `DomDefinition` to the `DomBehaviorDefinition`.
 
 1. Create DOM instances using the appropriate statuses and fields.
+
+> [!TIP]
+> See also: [DOM status system example](xref:DOM_status_system_example)
 
 ## Configuring statuses
 

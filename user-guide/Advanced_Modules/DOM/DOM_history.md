@@ -4,9 +4,9 @@ uid: DOM_history
 
 # DOM history
 
-The DOM manager tracks the history of all changes done to the field values of a `DOMInstance`.
+The DOM manager tracks the history of all changes done to the `FieldValues` of a [DomInstance](xref:DomInstance).
 
-When a `DOMInstance` is created or updated, a new `HistoryChange` object will be stored containing the created, updated, or deleted values. When a `DOMInstance` is deleted, all history data is automatically deleted.
+When a `DomInstance` is created or updated, a new `HistoryChange` object will be stored containing the created, updated, or deleted values. When a `DomInstance` is deleted, all history data is automatically deleted.
 
 > [!NOTE]
 > If for some reason the history storage is not working correctly, the CRUD operations for DOM instances will still continue to work, but the history will no longer be tracked. If this happens, an error will be logged for every failed history save. The notice will only be generated every hour to prevent an excessive number of notices.
@@ -51,7 +51,7 @@ This is stored in a separate Elasticsearch index for each module (named `chistor
 | Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | Guid | Yes | Unique ID for this specific `HistoryChange`. |
-| SubjectId | IDMAObjectRef | Yes | The ID of the `DOMInstance`. |
+| SubjectId | IDMAObjectRef | Yes | The ID of the `DomInstance`. |
 | Time | DateTime | Yes | The time when the change was initiated. |
 | FullUsername | string | Yes | The user who initiated this change. |
 | DmaId | int | Yes | The ID of the DMA on which the change was initiated. |
@@ -60,7 +60,7 @@ This is stored in a separate Elasticsearch index for each module (named `chistor
 You can retrieve `HistoryChange` objects using the `DomHelper` class. You can filter them using `HistoryChangeExposers`.
 
 > [!NOTE]
-> It is only possible to read *HistoryChange* items. Creating, updating, or deleting is reserved for the internal API.
+> It is only possible to read `HistoryChange` items. Creating, updating, or deleting is reserved for the internal API.
 
 Example:
 
