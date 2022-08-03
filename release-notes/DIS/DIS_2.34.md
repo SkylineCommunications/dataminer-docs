@@ -1,23 +1,25 @@
-# Release 2.34
+---
+uid: DIS_2.34
+---
+
+# DIS 2.34
 
 ## New features
 
 ### IDE
 
-#### DIS Comparer tool window now allows you to download a previous release of a selected proto­col and compare both \[ID_30088\]
+#### DIS Comparer tool window now allows you to download a previous release of a selected protocol and compare both \[ID_30088\]
 
-Up to now, when you wanted to compare a protocol to one of its previous versions, you first had to download that previous version, save it in a random folder and then select both in the *DIS Comparer* tool window. From now on, after having selected a protocol on one side of the *DIS Comparer *window, on the other side of the window you can now immediately select one of its previous versions to compare it to.
+Up to now, when you wanted to compare a protocol to one of its previous versions, you first had to download that previous version, save it in a random folder and then select both in the *DIS Comparer* tool window. From now on, after having selected a protocol on one side of the *DIS Comparer *window, on the other side of the window you can now immediately select one of its previous versions to compare it to.
 
 To select a previous version of a protocol you already opened in the DIS Comparer tool window, do the following:
 
 1. Click *Select protocol...*
-
 2. In the *Select Protocol...* window, select *Previous release*, and select one of the releases from the list.
-
 3. Click *OK*.
 
 > [!NOTE]
-> For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to https://api.skyline.be/\*
+> For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to `https://api.skyline.be/`.
 
 #### Enhancements that make using the class library in a serialization/deserialization context more convenient \[ID_30205\]
 
@@ -38,11 +40,8 @@ To select more than one item, click one, and then click another while holding do
 Use this to do the following:
 
 - Copy a number of results in one go.
-
 - Suppress a number of results in one go.
-
 - Postpone a number of results in one go.
-
 - ...
 
 > [!NOTE]
@@ -57,15 +56,15 @@ The following checks and error messages have been added.
 | Check ID | Error message name                                                | Error message                                                                                                                                                              |
 |----------|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.25.1   | MinVersionTooLow                                                  | Minimum required version '{currentMinDmVersion}' too low.                                                                                                                  |
-| 1.25.2   | MinVersionTooLow_Sub                                              | Expected value '{expectedMinDmVersion}'. '{requiredDmVersion}' : '{usedFeature}'                                                                                           |
-| 1.25.3   | MinVersionFeatureUsedInItem<br>WithId_Sub                         | Feature used in '{itemKind}' with '{identifierType}' '{itemId}'.                                                                                                           |
+| 1.25.2   | MinVersionTooLow_Sub                                              | Expected value '{expectedMinDmVersion}'. '{requiredDmVersion}' : '{usedFeature}'                                                                                           |
+| 1.25.3   | MinVersionFeatureUsedInItem<br>WithId_Sub                         | Feature used in '{itemKind}' with '{identifierType}' '{itemId}'.                                                                                                           |
 | 1.25.4   | MinVersionFeatureUsedInItem<br>\_Sub                              | Feature used in '{itemKind}'.                                                                                                                                              |
 | 1.25.5   | UntrimmedTag                                                      | Untrimmed tag 'MinimumRequiredVersion'. Current value '{tagValue}'.                                                                                                        |
-| 2.38.4   | MissingRelation                                                   | Missing Relation between table '{fkToTablePid}' and table '{fkFromTablePid}' due to foreignKey on column '{fkColumnPid}'.                                                  |
+| 2.38.4   | MissingRelation                                                   | Missing Relation between table '{fkToTablePid}' and table '{fkFromTablePid}' due to foreignKey on column '{fkColumnPid}'.                                                  |
 | 2.49.1   | MissingTag                                                        | Missing tag 'Param/Message' in Param '{pid}'.                                                                                                                              |
 | 2.50.1   | MisconfiguredConfirmOptions                                       | Misconfigured 'confirm' option(s) in 'Discreet@options' for ContextMenu. Param ID '{pid}'.                                                                                 |
 | 3.11.6   | ColumnManagedByDataMiner                                          | Unsupported set on column '{columnPid}' with '{optionLocation}' containing '{optionName}'.                                                                                 |
-| 3.11.7   | ColumnManagedByProtocol<br>Item                                   | Unsupported set on column '{columnPid}' managed by {managedByItemKind} '{managedByItemId}' with '{optionLocation}' containing '{optionName}'.                              |
+| 3.11.7   | ColumnManagedByProtocol<br>Item                                   | Unsupported set on column '{columnPid}' managed by {managedByItemKind} '{managedByItemId}' with '{optionLocation}' containing '{optionName}'.                              |
 | 3.12.2   | UnexpectedAccessModifier<br>ForEntryPointMethod                   | Entry point method '{entryPointClass}.{entryPointMethod}' has unexpected access modifier '{currentAccessModifier}'. QAction ID {qactionId}.                                |
 | 3.12.3   | UnexpectedAccessModifier<br>ForEntryPointClass                    | Entry point class '{entryPointClass}' has unexpected access modifier '{currentAccessModifier}'. QAction ID {qactionId}.                                                    |
 | 3.12.4   | UnexpectedArg0Type<br>ForEntryPointMethod                         | Entry point method '{entryPointClass}.{entryPointMethod}' has a first argument with unexpected type '{arg0Type}'. QAction ID {qactionId}.                                  |
@@ -92,7 +91,7 @@ The following checks and error messages have been added.
 | 3.33.1   | UnexpectedImplementation                                          | Method 'SLProtocol.GetParameters' with arguments '{arguments}' is not implemented as expected. QAction ID '{qactionId}'.                                                   |
 | 3.33.2   | NonExistingParam                                                  | Method 'SLProtocol.GetParameters' references a non-existing 'Param' with ID '{paramId}'. QAction ID '{qactionId}'.                                                         |
 | 3.33.3   | HardCodedPid                                                      | Unrecommended use of magic number '{hardCodedPid}', use 'Parameter' class instead. QAction ID '{qactionId}'.                                                               |
-| 3.33.4   | UnsupportedArgumentType<br>ForIds                                 | Invocation of method 'SLProtocol.GetParameters' has an invalid type '{argumentType}' for the argument 'ids'. QAction ID '{qactionId}'.                                     |
+| 3.33.4   | UnsupportedArgumentType<br>ForIds                                 | Invocation of method 'SLProtocol.GetParameters' has an invalid type '{argumentType}' for the argument 'ids'. QAction ID '{qactionId}'.                                     |
 | 3.34.1   | UnexpectedImplementation                                          | Method 'NotifyProtocol(220/\*NT_FILL_ARRAY_WITH_COLUMN\*/, ...)' with arguments '{arguments}' is not implemented as expected. QAction ID '{qactionId}'.                    |
 | 3.34.2   | NonExistingTable                                                  | Method 'NotifyProtocol(220/\*NT_FILL_ARRAY_WITH_COLUMN\*/, ...)' references a non-existing 'table' with PID '{tablePid}'. QAction ID '{qactionId}'.                        |
 | 3.34.3   | NonExistingColumn                                                 | Method 'NotifyProtocol(220/\*NT_FILL_ARRAY_WITH_COLUMN\*/, ...)' references a non-existing 'column' with PID '{columnPid}'. QAction ID '{qactionId}'.                      |
@@ -100,9 +99,9 @@ The following checks and error messages have been added.
 | 3.34.5   | HardCodedTablePid                                                 | Unrecommended use of magic number '{hardCodedTablePid}', use 'Parameter' class instead. QAction ID '{qactionId}'.                                                          |
 | 3.34.6   | HardCodedColumnPid                                                | Unrecommended use of magic number '{hardCodedColumnPid}', use 'Parameter' class instead. QAction ID '{qactionId}'.                                                         |
 | 3.34.7   | ColumnManagedByDataMiner                                          | Unsupported set on column '{columnPid}' with '{optionLocation}' containing '{optionName}'.                                                                                 |
-| 3.34.8   | ColumnManagedByProtocol<br>Item                                   | Unsupported set on column '{columnPid}' managed by {managedByItemKind} '{managedByItemId}' with '{optionLocation}' containing '{optionName}'.                              |
+| 3.34.8   | ColumnManagedByProtocol<br>Item                                   | Unsupported set on column '{columnPid}' managed by {managedByItemKind} '{managedByItemId}' with '{optionLocation}' containing '{optionName}'.                              |
 | 13.2.5   | MissingForeignKeyForRelation                                      | Missing foreignKey(s) detected for relation '{relationNameOrPath}'.                                                                                                        |
-| 13.2.6   | MissingForeignKeyInTable_Sub                                      | Missing foreignKey between table '{table1Pid}' and table '{table2Pid}'.                                                                                                    |
+| 13.2.6   | MissingForeignKeyInTable_Sub                                      | Missing foreignKey between table '{table1Pid}' and table '{table2Pid}'.                                                                                                    |
 
 #### DataMiner feature check \[ID_29542\]
 
@@ -111,68 +110,41 @@ The Validator will now also check whether the DataMiner version specified in the
 Currently, the following features will be checked:
 
 - Chains.Chain.Field@options=”SkipInDiagram”
-
 - Chains.Chain@defaultSelectionField and Chains.Chain@groupingName
-
 - Display.Pages.Page.Visibility@overridePID
-
 - “ElementManagerType” parameter
-
 - Engine property UserCookie
-
 - HTTP.Session@loginMethod=”certificate”
-
 - InternalLicenses.InternalLicense
-
 - Notify type NT_DELETE_FOLDER (182): “recycle” parameter
-
 - Notify type NT_FILL_ARRAY (193), NT_FILL_ARRAY_NO_DELETE (194) and NT_FILL_ARRAY_WITH_COLUMN (220): datetime parameter
-
 - Notify type NT_UPDATE_PORTS_XML (128): ChangeType 10
-
 - Notify types NT_GET_TABLE_ID_BY_COLUMN_ID (393) and NT_GET_PK_ID_BY_TABLE_ID (394)
-
 - NotifyProtocol methods FillArray, FillArrayNoDelete and FillArrayWithColumn: “timeInfo” parameter
-
 - Params.Param.Dashboard
-
 - Params.Param.Database.Partition set to ”infinite”
-
 - Params.Param.Display.DynamicUnits
-
 - Params.Param.Interprete.Defaultvalue
-
 - Params.Param.Measurement.Discreets.Discreet.Tooltip
-
 - Params.Param.Measurement.Discreets@matrixLayout
-
 - Params.Param.Measurement.Type@options=”date” and Params.Param.Measurement.Type@options =”datetime”
-
 - Params.Param.Mediation.LinkTo.ValueMapping
-
 - Params.Param.Replication
-
 - Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop
-
 - Params.Param@saveInterval
-
 - Portsettings.FlushPerDatagram
-
 - ProfileHelper class
-
 - QActionTable methods FillArray, FillArrayNoDelete and SetColumn: “timeInfo” parameter
-
 - SLProtocol method SLProtocol.ExecuteScript
-
 - Topologies.Topology.Cell.Exposer
 
 ### XML Schema
 
 #### Protocol Schema: Protocol.Params.Param.Alarm@lowhigh attribute removed \[ID_30664\]
 
-​The Protocol.Params.Param.Alarm@lowhigh attribute has been removed from the Protocol XML Schema.
+The Protocol.Params.Param.Alarm@lowhigh attribute has been removed from the Protocol XML Schema.
 
-#### Protocol Schema: Protocol.Chains.Chain.Field.Display element is no longer a mandatory ele­ment \[ID_30665\]
+#### Protocol Schema: Protocol.Chains.Chain.Field.Display element is no longer a mandatory element \[ID_30665\]
 
 From now on, the Protocol.Chains.Chain.Field.Display element is no longer is mandatory child element of the Protocol.Chains.Chain.Field element.
 
@@ -187,11 +159,8 @@ The Protocol.Actions.Action.Type@regex attribute has been added to the Protocol 
 The class library now supports the following authentication algorithms:
 
 - MD5
-
 - HMAC-MD5
-
 - SHA1
-
 - HMAC-SHA1
 
 ## Changes
@@ -209,9 +178,7 @@ A number of enhancements have been made with regard to the parsing of method arg
 In some cases, the title casing checks 2.13.8, 2.14.8, 2.22.7 and 2.40.7 could return false positives when checking the following image formats:
 
 - 1080i/30
-
 - 1080p/30
-
 - 1080psf/30
 
 #### Validator: False positives when checking Treecontrol.HiddenColumns elements \[ID_30850\]
@@ -235,5 +202,4 @@ When the DIS Comparer finds a page button caption that does not end with an elli
 Typically, the DIS Comparer will consider parameter description updates as major changes. However, in the following exceptional cases, updating the parameter description is allowed. Up to now, the DIS Comparer would incorrectly also consider these updates as major changes:
 
 - Adding a description to a parameter that either had no description or an empty description.
-
 - Removing the description of a parameter that does not require one and that will never be retrieved or updated by an Automation script.

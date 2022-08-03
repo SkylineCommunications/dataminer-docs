@@ -1,4 +1,8 @@
-# Release 2.33
+---
+uid: DIS_2.33
+---
+
+# DIS 2.33
 
 ## New features
 
@@ -6,14 +10,12 @@
 
 #### New “DIS Comparer” tool window \[ID_29124\]
 
-The *Major Change Check* window has been replaced by a new *DIS Comparer* tool window. Also, the *Validate and compare* option has been removed.
+The *Major Change Check* window has been replaced by a new *DIS Comparer* tool window. Also, the *Validate and compare* option has been removed.
 
-When you click *Compare* at the top of an XML editor tab containing a protocol.xml file, the DIS Comparer tool window will now allow you to compare a base protocol (on the left) with another protocol (on the right).
+When you click *Compare* at the top of an XML editor tab containing a protocol.xml file, the DIS Comparer tool window will now allow you to compare a base protocol (on the left) with another protocol (on the right).
 
-1. Select two protocols by either clicking *Select* and selecting one of the protocols currently opened in the XML editor or clicking *File* and opening a protocol.xml file located in a file folder. If you do the latter when working inside a solution, the protocol.xml file you select will not be added to the solution.
-
+1. Select two protocols by either clicking *Select* and selecting one of the protocols currently opened in the XML editor or clicking *File* and opening a protocol.xml file located in a file folder. If you do the latter when working inside a solution, the protocol.xml file you select will not be added to the solution.
 2. Click *Compare* to have the two protocols compared.
-
 3. If necessary, click *Export* to have the result of the comparison exported to a CSV file.
 
 When you right-click an error in the list, a shortcut menu offers you the following options:
@@ -23,7 +25,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 | Navigate        | Go to the line in the protocol that triggered the error.                                                                                                                |
 | Copy            | Copy the error to the Windows Clipboard.                                                                                                                                |
 | Show Details... | Show all details of the error in a separate window.                                                                                                                     |
-| Suppress...     | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
+| Suppress...     | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
 
 #### Class Library errors will now be shown in a banner instead of a popup window \[ID_29609\]
 
@@ -35,22 +37,16 @@ When editing a protocol in the XML editor, it is now possible to change the ID o
 
 To do so, proceed as follows:
 
-1. Click the small *Down* arrow in front of the \<QAction> tag, and select *Change ID...* from the shortcut menu.
-
-2. In the *Change QAction ID* window, enter the new QAction ID and click *OK*.
+1. Click the small *Down* arrow in front of the \<QAction> tag, and select *Change ID...* from the shortcut menu.
+2. In the *Change QAction ID* window, enter the new QAction ID and click *OK*.
 
 When you change the ID of a QAction, the following items will be updated:
 
 - The id attribute of the \<QAction> tag
-
 - The name of the C# project (“QAction_ID”)
-
 - The name of the main C# file (“QAction_ID.cs”)
-
 - The name of the default namespace (“QAction_ID”)
-
 - The AssemblyInfo.cs file
-
 - The name of the project folder on disk
 
 ### Validator
@@ -60,23 +56,16 @@ When you change the ID of a QAction, the following items will be updated:
 The following checks have been extended:
 
 - Param.CheckDescriptionTag
-
 - Param.Display.Positions.Position.CheckPageTag
-
 - Param.Interprete.Exceptions.Exception.CheckDisplayTag
-
 - Param.Measurement.Discreets.Discreet.CheckDisplayTag
 
 From now on, these can all return the following error messages:
 
 - DuplicateValue
-
 - EmptyTag
-
 - MissingTag
-
 - UntrimmedTag
-
 - WrongCasing
 
 #### New checks and error messages \[ID_29597\]
@@ -85,7 +74,7 @@ The following checks and error messages have been added.
 
 | Check ID | Error message name         | Error message                                                            |
 |----------|----------------------------|--------------------------------------------------------------------------|
-| 3.32.1   | ChangedClassLibraryVersion | Changed Class Library branch from '{previousVersion}' to '{newVersion}'. |
+| 3.32.1   | ChangedClassLibraryVersion | Changed Class Library branch from '{previousVersion}' to '{newVersion}'. |
 
 ### XML Schema
 
@@ -94,13 +83,9 @@ The following checks and error messages have been added.
 The following elements and element attributes have been added to the Protocol XML Schema:
 
 - Protocol.Chains.Chain@defaultSelectionField
-
 - Protocol.Chains.Chain@groupingName
-
 - Protocol.ParameterGroups.Group@isInternal
-
 - Protocol.PortSettings.FlushPerDatagram
-
 - Protocol.Ports.PortSettings.FlushPerDatagram
 
 #### UOM Schema: New units added \[ID_29159\]
@@ -108,7 +93,6 @@ The following elements and element attributes have been added to the Protocol XM
 The following units have been added to the UOM Schema:
 
 - Alarms (Alarms)
-
 - Wh (Watt hour)
 
 #### Protocol Schema: New syntax to conditionally show/hide chains and chain fields \[ID_29827\]
@@ -168,7 +152,7 @@ The IElementConnectionCollection interface, which is implemented by the ElementC
 
 #### DmsService class can now be used to manage DataMiner services \[ID_29513\]
 
-​The class library now includes a DmsService class that can be used to manage DataMiner services.
+The class library now includes a DmsService class that can be used to manage DataMiner services.
 
 #### Monitors added to subscribe to service alarm level and service state \[ID_29515\]
 
@@ -198,16 +182,15 @@ When an element port was updated, up to now, the IsSslTlsEnabled property of all
 
 #### IDE - XML editor: Problems with the QAction option “dllName” \[ID_29587\]
 
-When you had specified the *dllName* option in the *Protocol.QActions.QAction@options* attribute, up to now, the following issues could occur:
+When you had specified the *dllName* option in the *Protocol.QActions.QAction@options* attribute, up to now, the following issues could occur:
 
 - When a solution-based protocol was compiled, QActions would incorrectly be referred to using the default DLL name “QAction.ID.dll”, even when a custom DLL name had been specified.
-
 - When, in a non-solution-based protocol, a custom DLL name was specified in a \<QAction> tag, the Validator would incorrectly thrown a “Could not find DLL: \[ProtocolName\].\[protocolVersion\].Test.dll” error.
 
 #### Class Library: RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element \[ID_30053\]
 
 RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element.
 
-#### Class Library: SLSpectrum wrappers were missing a GetMonitor call with the correct return for­mat \[ID_30056\]
+#### Class Library: SLSpectrum wrappers were missing a GetMonitor call with the correct return format \[ID_30056\]
 
 The SLSpectrum wrappers were missing a GetMonitor call with the correct return format.

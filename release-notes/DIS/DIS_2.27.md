@@ -1,3 +1,9 @@
+---
+uid: DIS_2.27
+---
+
+# DIS 2.27
+
 # Release 2.27
 
 ## New features
@@ -6,15 +12,15 @@
 
 #### Version editor \[ID_25967\]
 
-When editing a protocol XML file, you can now click *Version editor* in the file tab header to turn the XML editor into a dedicated protocol version editor. This editor will allow you to manage the information in the Protocol.Version and Protocol.VersionHistory elements in a more user-friendly way.
+When editing a protocol XML file, you can now click *Version editor* in the file tab header to turn the XML editor into a dedicated protocol version editor. This editor will allow you to manage the information in the Protocol.Version and Protocol.VersionHistory elements in a more user-friendly way.
 
 The editor contains the following main tabs:
 
-| Tab             | Description                                                                                                                                                                                                                                                                                                                |
-|-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Current version | In this tab, you can specify the general properties of the current (minor) version (ID, author, date, etc.) as well as a list of all features, changes and fixes in this version.                                                                                                                                          |
-| Current range   | In this tab, you can find an overview of all versions in the current range.<br> Clicking a version number will allow you to edit the information stored for that particular version.                                                                                                                                       |
-| All versions    | In this tab, you can find an overview of all versions of the current protocol.<br> In the tree structure on the left, you can add and delete branches representing system versions, major versions and minor versions, and in the edit pane on the right, you can edit the properties of the version selected on the left. |
+| Tab | Description |
+|-----|-------------|
+| Current version | In this tab, you can specify the general properties of the current (minor) version (ID, author, date, etc.) as well as a list of all features, changes and fixes in this version. |
+| Current range | In this tab, you can find an overview of all versions in the current range.<br> Clicking a version number will allow you to edit the information stored for that particular version. |
+| All versions | In this tab, you can find an overview of all versions of the current protocol.<br> In the tree structure on the left, you can add and delete branches representing system versions, major versions and minor versions, and in the edit pane on the right, you can edit the properties of the version selected on the left. |
 
 #### New “Delete QAction” command in shortcut menu of QAction elements \[ID_26007\]
 
@@ -51,7 +57,6 @@ The Protocol XML schema has been updated.
 **Attributes made mandatory**
 
 - Protocol.PortSettings@name
-
 - Protocol.Ports.PortSettings@name
 
 **Restricted ID range**
@@ -63,19 +68,12 @@ The Protocol XML schema has been updated.
 The following units have been added to the UOM Schema:
 
 - Files/s (Files per second)
-
 - dBuW (Decibel microwatt)
-
 - L/h (Liter per hour)
-
 - L/min (Liter per minute)
-
 - Logins (Logins)
-
 - Logins/h (Logins per hour)
-
 - Logins/min (Logins per minute)
-
 - Logins/s (Logins per second)
 
 ## Changes

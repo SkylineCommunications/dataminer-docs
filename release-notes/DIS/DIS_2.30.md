@@ -1,4 +1,8 @@
-# Release 2.30
+---
+uid: DIS_2.30
+---
+
+# DIS 2.30
 
 ## New features
 
@@ -24,7 +28,7 @@ The following checks and error messages have been added.
 
 | Check ID | Error message name                  | Error message                                                                                                                                              |
 |----------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.23.6   | InvalidCombination<br>OfSyntax1And2 | Connections can not be defined simultaneously via 'Protocol/Type' and 'Protocol/Connections'.                                                              |
+| 1.23.6   | InvalidCombination<br>OfSyntax1And2 | Connections can not be defined simultaneously via 'Protocol/Type' and 'Protocol/Connections'.                                                              |
 | 1.23.7   | UnrecommendedSyntax2                | Unrecommended use of the 'Protocol/Connections' syntax.                                                                                                    |
 | 3.10.1   | NonExistingParam                    | The SLProtocol.FillArrayNoDelete method references a non-existing table.                                                                                   |
 | 3.10.2   | ParamMissingHistorySet              | The SLProtocol.FillArrayNoDelete overload with DateTime argument requires the historySet attribute to be set to true.                                      |
@@ -41,12 +45,12 @@ The following checks and error messages have been added.
 | 3.22.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyDataMiner(Queued)(14/\*NT_TRENDING_ASSIGN_TEMPLATE\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}. |
 | 3.23.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyDataMiner(Queued)(127/\*NT_UPDATE_DESCRIPTION_XML\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.  |
 | 3.24.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyDataMiner(Queued)(76/\*NT_ASSIGN_SIMULATION\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.        |
-| 3.25.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyDataMiner(69/\*NT_GET_VALUE\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.                        |
+| 3.25.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyDataMiner(69/\*NT_GET_VALUE\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.                        |
 | 3.26.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyDataMiner(48/\*NT_GET_ALARM_INFO\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.                   |
 | 3.27.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyDataMiner(144/\*NT_GET_ELEMENT_NAME\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.                |
 | 3.28.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyDataMiner(Queued)(232/\*NT_SERVICE_SET_VDX\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.         |
 | 3.29.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyProtocol(292/\*NT_SNMP_SET\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.                         |
-| 3.30.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyProtocol(295/\*NT_SNMP_GET\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.                         |
+| 3.30.1   | DeltIncompatible                    | Invocation of method 'SLProtocol.NotifyProtocol(295/\*NT_SNMP_GET\*/, ...)' is not compatible with 'DELT'. QAction ID {qactionId}.                         |
 | 3.6.1    | NonExistingParam                    | The SLProtocol.GetParameter method references a non-existing parameter.                                                                                    |
 | 3.6.2    | HardCodedPid                        | Unrecommended use of magic number in SLProtocol.GetParameter.                                                                                              |
 | 3.7.1    | NonExistingParam                    | The SLProtocol.SetParameter method references a non-existing parameter.                                                                                    |
@@ -66,11 +70,8 @@ The following checks and error messages have been added.
 The Protocol XML schema has been updated.
 
 - The visibleInUI attribute has been removed from Protocol.PortSettings (i.e. the port settings of the main connection). This attribute is now only available in Protocol.Ports.PortSettings (i.e. the port settings of the additional connections).
-
 - The backup attribute has been removed from Protocol.Params.Param.
-
 - PortSettings.FlowControl.DefaultValue, PortSettings.FlowControl.Range.From and PortSettings.FlowControl.Range.To can now all be set to “no”.
-
 - Protocol.Params.Param.Interprete.Exceptions.Exception.Display is now of type non-empty string.
 
 #### UOM Schema: New units added \[ID_27568\]
@@ -78,11 +79,8 @@ The Protocol XML schema has been updated.
 The following units have been added to the UOM Schema:
 
 - mV/deg C/Cell (millivolt per degree Celsius per Cell)
-
 - Flashes/s (flashes per second)
-
 - Streams (streams)
-
 - Channels (channels)
 
 ## Changes
@@ -101,42 +99,42 @@ A number of enhancements have been made to the Major Change Check functionality.
 
 - The following error will no longer be raised for parameters that are not available in SLElement.
 
-    | Check ID | Error message name | Error message                                                                                          |
-    |------------|--------------------|--------------------------------------------------------------------------------------------------------|
-    | 2.14.1     | UpdatedValue       | Description tag on Param '{paramId}' was changed from '{previousDescription}' into '{newDescription}'. |
+    | Check ID | Error message name | Error message |
+    |----------|--------------------|---------------|
+    | 2.14.1 | UpdatedValue | Description tag on Param '{paramId}' was changed from '{previousDescription}' into '{newDescription}'. |
 
 - Connection checks are now all implemented in a common check. Up to now, the main connection and the additional connections were checked separately.
 
-    | Check ID | Error message name                                   | Error message                                                                                                     |
-    |------------|------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-    | 1.8.4      | *Replaced by 1.23.9*  |                                                                                                                   |
-    | 1.11.2     | *Replaced by 1.23.9*  |                                                                                                                   |
-    | 1.23.9     | ConnectionTypeChanged                                | {connectionType} Connection '{connectionId}' with name '{connectionName}' was changed into '{newConnectionType}'. |
-    | 1.11.1     | *Replaced by 1.23.8*  |                                                                                                                   |
-    | 1.23.8     | ConnectionsOrderChanged                              | Order of connections changed from '{oldOrder}' to '{newOrder}'.                                                   |
-    | 1.11.3     | *Replaced by 1.23.10* |                                                                                                                   |
-    | 1.23.10    | ConnectionAdded                                      | {connectionType} Connection '{connectionId}' with name '{connectionName}' was added.                              |
+    | Check ID | Error message name | Error message |
+    |----------|--------------------|---------------|
+    | 1.8.4 | *Replaced by 1.23.9* |         |
+    | 1.11.2 | *Replaced by 1.23.9* |        |
+    | 1.23.9 | ConnectionTypeChanged | {connectionType} Connection '{connectionId}' with name '{connectionName}' was changed into '{newConnectionType}'. |
+    | 1.11.1 | *Replaced by 1.23.8* |        |
+    | 1.23.8 | ConnectionsOrderChanged | Order of connections changed from '{oldOrder}' to '{newOrder}'. |
+    | 1.11.3 | *Replaced by 1.23.10* |           |
+    | 1.23.10 | ConnectionAdded | {connectionType} Connection '{connectionId}' with name '{connectionName}' was added. |
 
 - The following check has been made case-insensitive.
 
-    | Check ID | Error message name | Error message                                          |
-    |------------|--------------------|--------------------------------------------------------|
-    | 2.22.1     | RemovedFromPage    | Param '{paramPid}' was removed from page '{pageName}'. |
+    | Check ID | Error message name | Error message |
+    |----------|--------------------|---------------|
+    | 2.22.1 | RemovedFromPage | Param '{paramPid}' was removed from page '{pageName}'. |
 
 - Display key checks on the naming option and NamingFormat are now combined.
 
-    | Check ID | Error message name                                  | Error message                                                                                                      |
-    |------------|-----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-    | 2.17.1     | *Replaced by 2.39.4* |                                                                                                                    |
-    | 2.18.1     | *Replaced by 2.39.4* |                                                                                                                    |
-    | 2.39.4     | FormatChanged                                       | Table display key was changed from {oldSyntax} '{oldFormat}' to {newSyntax} '{newFormat}'. Table PID '{tablePid}'. |
-    | 2.17.4     | *Replaced by 2.39.5* |                                                                                                                    |
-    | 2.18.2     | *Replaced by 2.39.5* |                                                                                                                    |
-    | 2.39.5     | FormatRemoved                                       | Table display key previously defined via '{oldSyntax}' was removed. Table PID '{tablePid}'.                        |
+    | Check ID | Error message name | Error message |
+    |----------|--------------------|---------------|
+    | 2.17.1 | *Replaced by 2.39.4* |       |
+    | 2.18.1 | *Replaced by 2.39.4* |     |
+    | 2.39.4 | FormatChanged | Table display key was changed from {oldSyntax} '{oldFormat}' to {newSyntax} '{newFormat}'. Table PID '{tablePid}'. |
+    | 2.17.4 | *Replaced by 2.39.5* |           |
+    | 2.18.2 | *Replaced by 2.39.5* |         |
+    | 2.39.5 | FormatRemoved  | Table display key previously defined via '{oldSyntax}' was removed. Table PID '{tablePid}'. |
 
 ### Fixes
 
-#### Class Library: Name of an element with a RealConnection could no longer be updated  \[ID_27783\]
+#### Class Library: Name of an element with a RealConnection could no longer be updated  \[ID_27783\]
 
 In some cases, the name of an element with a RealConnection (SNMP, HTTP, SERIAL, etc.) could no longer be updated.
 

@@ -1,4 +1,8 @@
-# Release 2.36
+---
+uid: DIS_2.36
+---
+
+# DIS 2.36
 
 ## New features
 
@@ -6,16 +10,14 @@
 
 #### New tool window: DIS protocol diagram \[ID_31913\]
 
-The new *DIS Protocol diagram* tool window shows a graphical representation of a protocol. It allows you to see how a protocol is built, navigate through its logic and investigate flow issues.
+The new *DIS Protocol diagram* tool window shows a graphical representation of a protocol. It allows you to see how a protocol is built, navigate through its logic and investigate flow issues.
 
 When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action or a timer. You can then set the required depth, i.e. the number of levels you want to have displayed starting from the item you selected, and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree or TopBottomTree).
 
 In the diagram itself, each item (parameter, QAction, session, response, group, trigger, action, timer) is represented by a box with a particular icon and color, showing the ID and name of the item.
 
 - Click the ID of an item to navigate to that item in the protocol.xml file.
-
 - Hover over an item to see a tooltip with its full name and full description.
-
 - Double-click a box representing an item to make that item the new starting point of the diagram. This will cause the entire diagram to be redrawn.
 
 In the top-left corner of the diagram, you also have a number of zoom options: a slider to adjust to zoom factor, a “1:1” button (to switch to zoom factor 1) and a “Fill” button to automatically adjust the zoom factor to the current size of the diagram window.
@@ -24,19 +26,19 @@ In the top-left corner of the diagram, you also have a number of zoom options: a
 
 When developing Automation scripts as part of a Visual Studio solution, up to now, it was possible to save a compiled script to a file using the *File \> Save Compiled Script As...* command.
 
-From now on, you can use the *File \> Save All Compiled Scripts As...* command to save all compiled scripts in a solution to a zip file in one go.
+From now on, you can use the *File \> Save All Compiled Scripts As...* command to save all compiled scripts in a solution to a zip file in one go.
 
 #### DIS Comparer: Suppressing errors \[ID_32223\]
 
-In the *DIS Comparer* tool window, it is now also possible to suppress errors after having compared two protocol.xml files. To do so, select one or more errors, right-click, and select *Suppress*.
+In the *DIS Comparer* tool window, it is now also possible to suppress errors after having compared two protocol.xml files. To do so, select one or more errors, right-click, and select *Suppress*.
 
 #### Import Protocol and Import Automation Script windows now have a filter box \[ID_32396\]
 
-Both the *Import Protocol* and *Import Automation Script* windows now have a filter box in the top-right corner. This will allow you to filter the list of protocols or Automation scripts.
+Both the *Import Protocol* and *Import Automation Script* windows now have a filter box in the top-right corner. This will allow you to filter the list of protocols or Automation scripts.
 
 #### DIS Validator and DIS Comparer windows now have a filter box \[ID_32407\]
 
-Both the *DIS Validator* and *DIS Comparer* tool windows now have a filter box in the top-right corner. This will allow you to filter the validation or comparison results.
+Both the *DIS Validator* and *DIS Comparer* tool windows now have a filter box in the top-right corner. This will allow you to filter the validation or comparison results.
 
 ### Validator
 
@@ -63,28 +65,28 @@ The following checks and error messages have been added.
 | 2.8.4    | RTDisplayExpected                      | RTDisplay(true) expected on trended parameters. Param ID '{paramId}'.                                                                                      |
 | 2.24.2   | MissingTag                             | Missing tag 'Alarm/Monitored' in Param '{pid}'.                                                                                                            |
 | 2.24.3   | EmptyTag                               | Empty tag 'Alarm/Monitored' in Param '{pid}'.                                                                                                              |
-| 2.24.4   | InvalidTag                             | Invalid value '{tagValue}' in tag 'Alarm/Monitored'. Possible values 'true, false'. Param ID '{pid}'.                                                      |
+| 2.24.4   | InvalidTag                             | Invalid value '{tagValue}' in tag 'Alarm/Monitored'. Possible values 'true, false'. Param ID '{pid}'.                                                      |
 | 2.24.5   | UntrimmedTag                           | Untrimmed tag 'Alarm/Monitored' in Param '{pid}'. Current value '{untrimmedValue}'.                                                                        |
 | 2.24.6   | RTDisplayExpected                      | RTDisplay(true) expected on alarmed (monitored) parameters. Param ID '{paramId}'.                                                                          |
 | 2.31.10  | ReferencedParamRTDisplay<br>Expected   | RTDisplay(true) expected on Param '{columnPid}' displayed as table column. Table PID '{tablePid}'.                                                         |
 | 2.34.4   | EmptyAttribute                         | Empty attribute 'Alarm@option' in Param '{pid}'.                                                                                                           |
 | 2.34.5   | UntrimmedAttribute                     | Untrimmed attribute 'Alarm@option' in Param '{pid}'. Current value '{untrimmedValue}'.                                                                     |
-| 2.34.6   | NonExistingId                          | Attribute 'Alarm@option' references a non-existing 'Param' with ID '{referencedPid}'. Param ID '{pid}'.                                                    |
+| 2.34.6   | NonExistingId                          | Attribute 'Alarm@option' references a non-existing 'Param' with ID '{referencedPid}'. Param ID '{pid}'.                                                    |
 | 2.34.7   | ReferencedParamRTDisplay<br>Expected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by a 'Alarm@option' attribute. Param ID '{referencingPid}'.                                 |
-| 2.38.5   | ColumnOptionExpecting<br>RTDisplay     | RTDisplay(true) expected on column Param '{columnPid}' due to '{option}' in 'ColumnOption@options' attribute. Table PID '{tablePid}'.                      |
+| 2.38.5   | ColumnOptionExpecting<br>RTDisplay     | RTDisplay(true) expected on column Param '{columnPid}' due to '{option}' in 'ColumnOption@options' attribute. Table PID '{tablePid}'.                      |
 | 2.38.6   | ForeignKeyExpectingRTDisplay<br>OnPK   | RTDisplay(true) expected on PK column Param '{pkColumnPid}' due to '{foreignKeyOption}' in 'ColumnOption@options' attribute. Table PID '{tablePid}'.       |
-| 2.43.1   | MissingTag                             | Missing tag 'Position/Row' in Param '{pid}'.                                                                                                               |
-| 2.43.2   | EmptyTag                               | Empty tag 'Position/Row' in Param '{pid}'.                                                                                                                 |
-| 2.43.3   | InvalidTag                             | Invalid value '{tagValue}' in tag 'Position/Row'. Param ID '{pid}'.                                                                                        |
+| 2.43.1   | MissingTag                             | Missing tag 'Position/Row' in Param '{pid}'.                                                                                                               |
+| 2.43.2   | EmptyTag                               | Empty tag 'Position/Row' in Param '{pid}'.                                                                                                                 |
+| 2.43.3   | InvalidTag                             | Invalid value '{tagValue}' in tag 'Position/Row'. Param ID '{pid}'.                                                                                        |
 | 2.43.4   | UntrimmedTag                           | Untrimmed tag 'Position/Row' in Param '{pid}'. Current value '{untrimmedValue}'.                                                                           |
 | 2.54.1   | EmptyAttribute                         | Empty attribute 'Discreets@dependencyId' in Param '{pid}'.                                                                                                 |
-| 2.54.2   | UntrimmedAttribute                     | Untrimmed attribute 'Discreets@dependencyId' in Param '{pid}'. Current value '{untrimmedValue}'.                                                           |
+| 2.54.2   | UntrimmedAttribute                     | Untrimmed attribute 'Discreets@dependencyId' in Param '{pid}'. Current value '{untrimmedValue}'.                                                           |
 | 2.54.3   | InvalidValue                           | Invalid value '{attributeValue}' in attribute 'Discreets@dependencyId'. Param ID '{pid}'.                                                                  |
 | 2.54.4   | NonExistingId                          | Attribute 'Discreets@dependencyId' references a non-existing 'Param' with ID '{referencedPid}'. Param ID '{pid}'.                                          |
 | 2.54.5   | ReferencedParamWrongType               | Invalid Param Type '{referencedParamType}' on Param referenced by a 'Discreets@dependencyId' attribute. Param ID '{referencedPid}'.                        |
 | 2.54.6   | ReferencedParamRTDisplay<br>Expected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by a 'Discreets@dependencyId' attribute. Param ID '{referencingPid}'.                       |
-| 2.55.1   | EmptyAttribute                         | Empty attribute 'SNMP/TrapOID@mapAlarm' in Param '{pid}'.                                                                                                  |
-| 2.55.2   | UntrimmedAttribute                     | Untrimmed attribute 'SNMP/TrapOID@mapAlarm' in Param '{pid}'. Current value '{untrimmedValue}'.                                                            |
+| 2.55.1   | EmptyAttribute                         | Empty attribute 'SNMP/TrapOID@mapAlarm' in Param '{pid}'.                                                                                                  |
+| 2.55.2   | UntrimmedAttribute                     | Untrimmed attribute 'SNMP/TrapOID@mapAlarm' in Param '{pid}'. Current value '{untrimmedValue}'.                                                            |
 | 2.55.3   | RTDisplayExpected                      | RTDisplay(true) expected on Param '{pid}' generating alarms based on traps.                                                                                |
 | 2.56.1   | EmptyAttribute                         | Empty attribute 'Params@loadSequence'.                                                                                                                     |
 | 2.56.2   | UntrimmedAttribute                     | Untrimmed attribute 'Params@loadSequence'. Current value '{untrimmedValue}'.                                                                               |
@@ -109,7 +111,7 @@ The following checks and error messages have been added.
 | 18.5.7   | ReferencedColumnExpecting<br>RTDisplay | RTDisplay(true) expected on Param '{columnPid}' referred as condition column in 'Hierarchy/Table@condition' attribute. TreeControl PID '{treeControlPid}'. |
 | 18.6.6   | ReferencedTableExpecting<br>RTDisplay  | RTDisplay(true) expected on TreeControl/ExtraDetails table. Table PID '{tablePid}'.                                                                        |
 | 18.7.6   | ReferencedColumnExpecting<br>RTDisplay | RTDisplay(true) expected on column referenced by TreeControl 'LinkedDetails@discreetColumnId' attribute. Column PID '{columnPid}'.                         |
-| 18.8.6   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on 'TreeControl/ExtraTabs/Tab@parameters' Param. Param ID '{paramId}'.                                                            |
+| 18.8.6   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on 'TreeControl/ExtraTabs/Tab\@parameters' Param. Param ID '{paramId}'.                                                            |
 
 ### XML Schema
 
@@ -124,23 +126,21 @@ Default value: true
 The following units have been added to the UOM Schema:
 
 - SCMD (Standard Cubic Meter per Day)
-
 - SCMH (Standard Cubic Meter per Hour)
-
 - SCMM (Standard Cubic Meter per Minute)
 
 #### Protocol Schema: Types of elements and attributes set or changed \[ID_32144\]
 
 The types of the following elements and/or attributes have been set or changed.
 
-| Element/attribute                                                                | Change                                                      |
-|----------------------------------------------------------------------------------|-------------------------------------------------------------|
-| Protocol.Chains.Chain.Display.Visibility@default                                 | Type set to EnumTrueFalse                                   |
-| Protocol.Chains.Chain.Field.Display.Selection.<br>Visibility@default             | Type set to EnumTrueFalse                                   |
-| Protocol.Chains.SearchChain.Display.Visibility<br>@default                       | Type set to EnumTrueFalse                                   |
-| Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.<br>Display.Visibility@default | Type set to EnumTrueFalse                                   |
-| Protocol.Params.Param.CRC.Content.Param                                          | Type changed from TypeParamId<br>to unsignedInt             |
-| Protocol.TreeControls.TreeControl.Hierarchy@path                                 | Type changed from xs:string<br>to TypeCommaSeparatedNumbers |
+| Element/attribute | Change |
+|-------------------|--------|
+| Protocol.Chains.Chain.Display.Visibility@default | Type set to EnumTrueFalse |
+| Protocol.Chains.Chain.Field.Display.Selection.Visibility@default | Type set to EnumTrueFalse |
+| Protocol.Chains.SearchChain.Display.Visibility@default | Type set to EnumTrueFalse |
+| Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Display.Visibility@default | Type set to EnumTrueFalse |
+| Protocol.Params.Param.CRC.Content.Param | Type changed from TypeParamId to unsignedInt |
+| Protocol.TreeControls.TreeControl.Hierarchy@path | Type changed from xs:string to TypeCommaSeparatedNumbers |
 
 ## Changes
 
@@ -151,19 +151,14 @@ The types of the following elements and/or attributes have been set or changed.
 A number of enhancements have been made to the protocol version editor.
 
 - All four parts of a version number (branch, system, major and minor) are now editable anywhere in the tree. When you update a version number, all child items will be updated accordingly and recursively.
-
 - Enhanced field validation:
 
     - All fields will now allow any kind of value and will get a red border in case of an error.
-
     - The *Author* field will now get a red border when empty or set to the default value.
-
-    - The *Based On* field will now get a red border when the version has an unexpected format, when the selected version is illogical, or when no version has been selected in situations where this is necessary (e.g. the first version of a new range).
+    - The *Based On* field will now get a red border when the version has an unexpected format, when the selected version is illogical, or when no version has been selected in situations where this is necessary (e.g. the first version of a new range).
 
 - All validation remarks will now cause a warning icon to appear in the tree. These warning icons will automatically bubble up to the higher tree levels. That way, errors will be visible even when tree items are collapsed.
-
-- When you create a new version, the *Based On* field will now automatically be populated when possible.
-
+- When you create a new version, the *Based On* field will now automatically be populated when possible.
 - Tabbing from one field to another has been improved.
 
 #### Function editor: Enhancements \[ID_32389\]
@@ -182,24 +177,20 @@ In cases where the same DLL was referenced both via the solution explorer and vi
 
 #### Protocols: Enhanced “Add New Column” command \[ID_32465\]
 
-When editing a protocol.xml file, in front of every \<Param> element that defines a table parameter, you can click the small *Down* arrow and select the *Add New Column* command to add a column to that table parameter. That command has now been enhanced.
+When editing a protocol.xml file, in front of every \<Param> element that defines a table parameter, you can click the small *Down* arrow and select the *Add New Column* command to add a column to that table parameter. That command has now been enhanced.
 
 From now on, when you add a new column to a table parameter, the following will happen:
 
 - The new column will automatically be assigned a default parameter ID.
-
 - The name of the new column will get a prefix containing the name of the table parameter.
-
 - The description of the new column will get a suffix containing the description of the table in parenthesis.
-
 - When the last column of the table is a displayKey column, then the new column will be inserted before that displayKey column.
-
 - When the last column of the table has a write column next to it, then the new column will be added to the right of the write column. It will not be added in between a read and a write column.
 
 ### Fixes
 
 #### Validator: Condition members without an operator would be considered invalid \[ID_32138\]
 
-In some cases, the *DIS Validator* could report a false positive when a member of a condition did not contain an operator. Conditions like “id:100 == id:12” would be considered invalid.
+In some cases, the *DIS Validator* could report a false positive when a member of a condition did not contain an operator. Conditions like “id:100 == id:12” would be considered invalid.
 
 From now on, condition members that do not contain an operator will no longer be considered invalid.

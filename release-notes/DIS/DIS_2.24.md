@@ -1,4 +1,8 @@
-# Release 2.24
+---
+uid: DIS_2.24
+---
+
+# DIS 2.24
 
 ## New features
 
@@ -11,7 +15,6 @@ From now on, it is also possible to use code from Class Library packages in Auto
 When DIS detects that code from a loaded Class Library package is used in EXE blocks of an Automation script, it will
 
 - add a new EXE block to that script containing only the code necessary to be able to use the wanted functionally, and
-
 - add references in the EXE blocks using that Class Library code to the newly added EXE block containing the Class Library code.
 
 > [!NOTE]
@@ -24,22 +27,15 @@ In the C# editor, you can now use the following additional snippets:
 **DIS \> Automation Script**
 
 - CreateInformationEvent
-
 - EditSpectrumPreset
-
 - EmailReports
-
 - EmailReportsWithReservationGUID
-
 - EmailWithCustomContent
-
 - GetScriptDummy
-
 - MaskElementsInView
-
 - RunAutomationScript
 
-**DIS \> Protocol \> Class Library**
+**DIS \> Protocol \> Class Library**
 
 - Get DMS With Monitor
 
@@ -65,40 +61,40 @@ The following checks and error messages have been added, updated or removed.
 | 2.13.4  | CheckDisplayTag                                                   | Empty tag 'Discreet/Display' in Param '{paramId}'.                                                                                                                                                                           |
 | 2.13.5  | CheckDisplayTag                                                   | Untrimmed tag 'Discreet/Display' in Param '{paramId}'. Current value '{untrimmedValue}'.                                                                                                                                     |
 | 2.37.1  | Error message “InvalidValue” renamed to “TogglebuttonRecommended” |                                                                                                                                                                                                                              |
-| 2.37.9  | CheckTypeTag                                                      | Invalid value '{paramType}' in 'Param/Type' for '{measurementType}'. Param ID '{paramId}'.                                                                                                                                   |
+| 2.37.9  | CheckTypeTag                                                      | Invalid value '{paramType}' in 'Param/Type' for '{measurementType}'. Param ID '{paramId}'.                                                                                                                                   |
 | 2.37.10 | CheckTypeTag                                                      | Empty tag 'Measurement/Type' in Param '{paramId}'.                                                                                                                                                                           |
 | 2.37.11 | CheckTypeTag                                                      | Invalid value '{measurementType}' in tag 'Measurement/Type'. Param ID '{paramId}'.                                                                                                                                           |
 | 2.37.12 | CheckTypeTag                                                      | Untrimmed tag 'Measurement/Type' in Param '{paramId}'. Current value '{untrimmedValue}'.                                                                                                                                     |
-| 2.51.1  | CheckDiscreetsTag                                                 | Missing 'Measurement/Discreets' tag for '{paramDisplayType}' Param with ID '{pid}'.                                                                                                                                          |
-| 2.52.1  | CheckDiscreetTag                                                  | Missing 'Discreet' tag(s) in 'Measurement/Discreets' tag. Param ID '{pid}'.                                                                                                                                                  |
+| 2.51.1  | CheckDiscreetsTag                                                 | Missing 'Measurement/Discreets' tag for '{paramDisplayType}' Param with ID '{pid}'.                                                                                                                                          |
+| 2.52.1  | CheckDiscreetTag                                                  | Missing 'Discreet' tag(s) in 'Measurement/Discreets' tag. Param ID '{pid}'.                                                                                                                                                  |
 | 3.2.1   | CheckTriggersAttribute                                            | Missing attribute 'triggers' in QAction '{qactionId}'.                                                                                                                                                                       |
 | 3.2.2   | CheckTriggersAttribute                                            | Empty attribute 'triggers' in QAction '{qactionId}'.                                                                                                                                                                         |
 | 3.2.3   | CheckTriggersAttribute                                            | Invalid value '{triggersValue}' in attribute 'triggers'. QAction ID '{qactionId}'.                                                                                                                                           |
-| 3.2.4   | CheckTriggersAttribute                                            | Attribute 'triggers' references a non-existing 'Param' with ID '{pid}'. QAction ID '{qactionId}'.                                                                                                                            |
-| 3.2.5   | CheckTriggersAttribute                                            | Attribute 'triggers' references a non-existing 'Group' with ID '{triggerId}'. QAction ID '{qactionId}'.                                                                                                                      |
+| 3.2.4   | CheckTriggersAttribute                                            | Attribute 'triggers' references a non-existing 'Param' with ID '{pid}'. QAction ID '{qactionId}'.                                                                                                                            |
+| 3.2.5   | CheckTriggersAttribute                                            | Attribute 'triggers' references a non-existing 'Group' with ID '{triggerId}'. QAction ID '{qactionId}'.                                                                                                                      |
 | 3.2.6   | CheckTriggersAttribute                                            | Duplicate ID '{duplicateId}' in 'QAction@triggers'. QAction ID '{qactionId}'.                                                                                                                                                |
-| 4.2.1   | CheckParamTag                                                     | Tag 'Content/Param' references a non-existing 'Param' with ID '{pid}'. Group ID '{groupId}'.                                                                                                                                 |
-| 4.2.2   | CheckParamTag                                                     | Empty tag 'Param' in Group '{groupId}'.                                                                                                                                                                                      |
-| 4.2.3   | CheckParamTag                                                     | Invalid value '{value}' in tag 'Content/Param'. Group ID '{groupId}'.                                                                                                                                                        |
-| 4.3.1   | CheckActionTag                                                    | Tag 'Content/Action' references a non-existing 'Action' with ID '{actionId}'. Group ID '{groupId}'.                                                                                                                          |
+| 4.2.1   | CheckParamTag                                                     | Tag 'Content/Param' references a non-existing 'Param' with ID '{pid}'. Group ID '{groupId}'.                                                                                                                                 |
+| 4.2.2   | CheckParamTag                                                     | Empty tag 'Param' in Group '{groupId}'.                                                                                                                                                                                      |
+| 4.2.3   | CheckParamTag                                                     | Invalid value '{value}' in tag 'Content/Param'. Group ID '{groupId}'.                                                                                                                                                        |
+| 4.3.1   | CheckActionTag                                                    | Tag 'Content/Action' references a non-existing 'Action' with ID '{actionId}'. Group ID '{groupId}'.                                                                                                                          |
 | 4.3.2   | CheckActionTag                                                    | Empty tag 'Content/Action' in Group '{groupId}'.                                                                                                                                                                             |
-| 4.3.3   | CheckActionTag                                                    | Invalid value '{value}' in tag 'Content/Action'. Group ID '{groupId}'.                                                                                                                                                       |
-| 4.4.1   | CheckPairTag                                                      | Tag 'Content/Pair' references a non-existing 'Pair' with ID '{pairId}'. Group ID '{groupId}'.                                                                                                                                |
+| 4.3.3   | CheckActionTag                                                    | Invalid value '{value}' in tag 'Content/Action'. Group ID '{groupId}'.                                                                                                                                                       |
+| 4.4.1   | CheckPairTag                                                      | Tag 'Content/Pair' references a non-existing 'Pair' with ID '{pairId}'. Group ID '{groupId}'.                                                                                                                                |
 | 4.4.2   | CheckPairTag                                                      | Empty tag 'Content/Pair' in Group '{groupId}'.                                                                                                                                                                               |
-| 4.4.3   | CheckPairTag                                                      | Invalid value '{value}' in tag 'Content/Pair'. Group ID '{groupId}'.                                                                                                                                                         |
-| 4.5.1   | CheckSessionTag                                                   | Tag 'Content/Session' references a non-existing 'HTTP Session' with ID '{sessionId}'. Group ID '{groupId}'.                                                                                                                  |
+| 4.4.3   | CheckPairTag                                                      | Invalid value '{value}' in tag 'Content/Pair'. Group ID '{groupId}'.                                                                                                                                                         |
+| 4.5.1   | CheckSessionTag                                                   | Tag 'Content/Session' references a non-existing 'HTTP Session' with ID '{sessionId}'. Group ID '{groupId}'.                                                                                                                  |
 | 4.5.2   | CheckSessionTag                                                   | Empty tag 'Content/Session' in Group '{groupId}'.                                                                                                                                                                            |
-| 4.5.3   | CheckSessionTag                                                   | Invalid value '{value}' in tag 'Content/Session'. Group ID '{groupId}'.                                                                                                                                                      |
-| 4.6.1   | CheckTriggerTag                                                   | Tag 'Content/Trigger' references a non-existing 'Trigger' with ID '{triggerId}'. Group ID '{groupId}'.                                                                                                                       |
+| 4.5.3   | CheckSessionTag                                                   | Invalid value '{value}' in tag 'Content/Session'. Group ID '{groupId}'.                                                                                                                                                      |
+| 4.6.1   | CheckTriggerTag                                                   | Tag 'Content/Trigger' references a non-existing 'Trigger' with ID '{triggerId}'. Group ID '{groupId}'.                                                                                                                       |
 | 4.6.2   | CheckTriggerTag                                                   | Empty tag 'Content/Trigger' in Group '{groupId}'.                                                                                                                                                                            |
-| 4.6.3   | CheckTriggerTag                                                   | Invalid value '{value}' in tag 'Content/Trigger'. Group ID '{groupId}'.                                                                                                                                                      |
+| 4.6.3   | CheckTriggerTag                                                   | Invalid value '{value}' in tag 'Content/Trigger'. Group ID '{groupId}'.                                                                                                                                                      |
 | 4.7.1   | CheckConnectionPidAttribute                                       | Empty attribute 'connectionPid' in Group '{groupId}'.                                                                                                                                                                        |
 | 4.7.2   | CheckConnectionPidAttribute                                       | Invalid value '{connectionPid}' in attribute 'connectionPid'. Group ID '{groupId}'.                                                                                                                                          |
-| 4.7.3   | CheckConnectionPidAttribute                                       | Attribute 'connectionPid' references a non-existing 'Param' with ID '{pid}'. Group ID '{groupId}'.                                                                                                                           |
+| 4.7.3   | CheckConnectionPidAttribute                                       | Attribute 'connectionPid' references a non-existing 'Param' with ID '{pid}'. Group ID '{groupId}'.                                                                                                                           |
 | 7.3.2   | CheckOptionsAttribute                                             | {timerOption}' option refers to a non-existing {referItemType} '{referItemId}'.                                                                                                                                              |
 | 7.3.3   | CheckOptionsAttribute                                             | {optionName}' option has an invalid value '{optionValue}'.                                                                                                                                                                   |
 | 7.3.5   | CheckOptionsAttribute                                             | Invalid value for Timer@options attribute. Timer ID '{timerId}'. Current Value '{attributeValue}'.                                                                                                                           |
-| 7.3.6   | CheckOptionsAttribute                                             | Option '{optionName}' requires the 'ip' option in Timer@options. Timer ID '{timerId}'.                                                                                                                                       |
+| 7.3.6   | CheckOptionsAttribute                                             | Option '{optionName}' requires the 'ip' option in Timer@options. Timer ID '{timerId}'.                                                                                                                                       |
 | 7.3.7   | CheckOptionsAttribute                                             | Invalid value for 'ignoreIf' option. Expected format: 'ignoreIf:\<columnIdx>,\<value>'. Current value '{ignoreIfValue}'.                                                                                                     |
 | 7.3.8   | CheckOptionsAttribute                                             | Invalid value for 'each' option. Expected format: 'each:\<period>'. Current value '{optionValue}'.                                                                                                                           |
 | 7.3.9   | CheckOptionsAttribute                                             | Invalid value for 'dynamicThreadPool' option. Expected format: 'dynamicThreadPool:\<threadPoolSizeMonitorPid>'. Current value '{optionValue}'.                                                                               |
@@ -109,7 +105,7 @@ The following checks and error messages have been added, updated or removed.
 | 7.3.14  | CheckOptionsAttribute                                             | Invalid value for 'qactionBefore' option. Expected format: 'qactionBefore:\<qactionId>'. Current value '{optionValue}'.                                                                                                      |
 | 7.3.15  | CheckOptionsAttribute                                             | Invalid value for 'qactionAfter' option. Expected format: 'qactionAfter:\<qactionId>'. Current value '{optionValue}'.                                                                                                        |
 | 7.3.16  | CheckOptionsAttribute                                             | Invalid value for 'threadPool' option. Expected format: 'threadPool:\<size>,\<calculationInterval>,\<usagePid>,\<waitingPid>,\<maxDurationPid>,\<avgDurationPid>,\<counterPid>,\<queueSize>'. Current value '{optionValue}'. |
-| 7.3.17  | CheckOptionsAttribute                                             | Option '{optionName}' requires the 'each' option in Timer@options. Timer ID '{timerId}'.                                                                                                                                     |
+| 7.3.17  | CheckOptionsAttribute                                             | Option '{optionName}' requires the 'each' option in Timer@options. Timer ID '{timerId}'.                                                                                                                                     |
 | 7.3.18  | CheckOptionsAttribute                                             | Option '{optionName}' requires the 'threadPool' option in Timer@options. Timer ID '{timerId}'.                                                                                                                               |
 | 7.3.19  | CheckOptionsAttribute                                             | dynamicThreadPool' option refers to a non-existing parameter: '{paramId}'.                                                                                                                                                   |
 | 7.3.20  | CheckOptionsAttribute                                             | Required value '{placeholderName}' is not defined.                                                                                                                                                                           |
@@ -122,22 +118,22 @@ The following checks and error messages have been added, updated or removed.
 | 7.3.27  | CheckOptionsAttribute                                             | The use of the timeoutPid option in the ping option is obsolete.                                                                                                                                                             |
 | 7.3.28  | CheckOptionsAttribute                                             | The use of the qaction option is obsolete.                                                                                                                                                                                   |
 | 7.3.29  | CheckOptionsAttribute                                             | {timerOption}' option refers to a non-existing column idx '{columnIdx}' in table '{tablePid}'.                                                                                                                               |
-| 7.3.30  | CheckOptionsAttribute                                             | {timerOption}' option refers to a non-existing column 1-based position '{columnPosition}' in table '{tablePid}'.                                                                                                             |
-| 8.4.1   | CheckPasswordAttribute                                            | Attribute 'password' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                       |
-| 8.5.1   | CheckUsernameAttribute                                            | Attribute 'userName' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                       |
-| 8.6.1   | CheckProxyServerAttribute                                         | Attribute 'proxyServer' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                    |
-| 8.7.1   | CheckProxyUserAttribute                                           | Attribute 'proxyUser' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                      |
-| 8.8.1   | CheckProxyPasswordAttribute                                       | Attribute 'proxyPassword' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                  |
-| 8.9.1   | CheckPidAttribute                                                 | Attribute 'Request@pid' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                                                    |
+| 7.3.30  | CheckOptionsAttribute                                             | {timerOption}' option refers to a non-existing column 1-based position '{columnPosition}' in table '{tablePid}'.                                                                                                             |
+| 8.4.1   | CheckPasswordAttribute                                            | Attribute 'password' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                       |
+| 8.5.1   | CheckUsernameAttribute                                            | Attribute 'userName' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                       |
+| 8.6.1   | CheckProxyServerAttribute                                         | Attribute 'proxyServer' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                    |
+| 8.7.1   | CheckProxyUserAttribute                                           | Attribute 'proxyUser' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                      |
+| 8.8.1   | CheckProxyPasswordAttribute                                       | Attribute 'proxyPassword' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'.                                                                                                                  |
+| 8.9.1   | CheckPidAttribute                                                 | Attribute 'Request@pid' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                                                    |
 | 8.9.2   | CheckPidAttribute                                                 | Empty attribute 'Request@pid' in HTTP Session '{sessionId}'. Connection ID '{connectionId}'.                                                                                                                                 |
 | 8.9.3   | CheckPidAttribute                                                 | Invalid value '{pidValue}' in attribute 'Request@pid'. HTTP Session ID '{httpSessionId}'. Connection ID '{connectionId}'.                                                                                                    |
-| 8.10.1  | CheckPidAttribute                                                 | Attribute 'Request/Data@pid' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                                               |
+| 8.10.1  | CheckPidAttribute                                                 | Attribute 'Request/Data@pid' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                                               |
 | 8.10.2  | CheckPidAttribute                                                 | Empty attribute 'Request/Data@pid' in HTTP Session '{sessionId}'. Connection ID '{connectionId}'.                                                                                                                            |
 | 8.10.3  | CheckPidAttribute                                                 | Invalid value '{pidValue}' in attribute 'Request/Data@pid'. HTTP Session ID '{httpSessionId}'. Connection ID '{connectionId}'.                                                                                               |
 | 8.11.1  | CheckPidAttribute                                                 | Attribute 'Request/Headers/Header@pid' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                                     |
-| 8.11.2  | CheckPidAttribute                                                 | Empty attribute 'Request/Headers/Header@pid' in HTTP Session '{sessionId}'. Connection ID '{connectionId}'.                                                                                                                  |
+| 8.11.2  | CheckPidAttribute                                                 | Empty attribute 'Request/Headers/Header@pid' in HTTP Session '{sessionId}'. Connection ID '{connectionId}'.                                                                                                                  |
 | 8.11.3  | CheckPidAttribute                                                 | Invalid value '{pidValue}' in attribute 'Request/Headers/Header@pid'. HTTP Session ID '{httpSessionId}'. Connection ID '{connectionId}'.                                                                                     |
-| 8.12.1  | CheckPidAttribute                                                 | Attribute 'Request/Parameters/Parameter@pid' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                               |
+| 8.12.1  | CheckPidAttribute                                                 | Attribute 'Request/Parameters/Parameter@pid' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                               |
 | 8.12.2  | CheckPidAttribute                                                 | Empty attribute 'Request/Parameters/Parameter@pid' in HTTP Session '{sessionId}'. Connection ID '{connectionId}'.                                                                                                            |
 | 8.12.3  | CheckPidAttribute                                                 | Invalid value '{pidValue}' in attribute 'Parameter@pid'. HTTP Session ID '{httpSessionId}'. Connection ID '{connectionId}'.                                                                                                  |
 | 8.13.1  | CheckStatusCodeAttribute                                          | Attribute 'Response@statusCode' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                                            |
@@ -147,31 +143,31 @@ The following checks and error messages have been added, updated or removed.
 | 8.14.2  | CheckPidAttribute                                                 | Empty attribute 'Response/Content@pid' in HTTP Session '{sessionId}'. Connection ID '{connectionId}'.                                                                                                                        |
 | 8.14.3  | CheckPidAttribute                                                 | Invalid value '{pidValue}' in attribute 'Response/Content@pid'. HTTP Session ID '{httpSessionId}'. Connection ID '{connectionId}'.                                                                                           |
 | 8.15.1  | CheckPidAttribute                                                 | Attribute 'Response/Headers/Header@pid' references a non-existing 'Param' with ID '{pid}'. HTTP Session ID '{sessionId}'. Connection ID '{connectionId}'.                                                                    |
-| 8.15.2  | CheckPidAttribute                                                 | Empty attribute 'Response/Headers/Header@pid' in HTTP Session '{sessionId}'. Connection ID '{connectionId}'.                                                                                                                 |
+| 8.15.2  | CheckPidAttribute                                                 | Empty attribute 'Response/Headers/Header@pid' in HTTP Session '{sessionId}'. Connection ID '{connectionId}'.                                                                                                                 |
 | 8.15.3  | CheckPidAttribute                                                 | Invalid value '{pidValue}' in attribute 'Response/Headers/Header@pid'. HTTP Session ID '{httpSessionId}'. Connection ID '{connectionId}'.                                                                                    |
 | 9.2.1   | CheckContentTag                                                   | Missing clear response routine for pair '{pairId}'.                                                                                                                                                                          |
 | 9.2.2   | CheckContentTag                                                   | Missing clear response '{responseIdToClear}' routine after response '{responseIdOnWhichToTrigger}'.                                                                                                                          |
-| 10.3.1  | CheckParamTag                                                     | Tag 'Content/Param' references a non-existing 'Param' with ID '{referencedPid}'. Command ID '{commandId}'.                                                                                                                   |
+| 10.3.1  | CheckParamTag                                                     | Tag 'Content/Param' references a non-existing 'Param' with ID '{referencedPid}'. Command ID '{commandId}'.                                                                                                                   |
 | 10.3.2  | CheckParamTag                                                     | Empty tag 'Param' in Command '{commandId}'.                                                                                                                                                                                  |
-| 10.3.3  | CheckParamTag                                                     | Invalid value '{value}' in tag 'Content/Param'. Command ID '{commandId}'.                                                                                                                                                    |
+| 10.3.3  | CheckParamTag                                                     | Invalid value '{value}' in tag 'Content/Param'. Command ID '{commandId}'.                                                                                                                                                    |
 | 10.4.1  | CheckAsciiAttribute                                               | Empty attribute 'ascii' in Command '{commandId}'.                                                                                                                                                                            |
 | 10.4.2  | CheckAsciiAttribute                                               | Invalid value '{asciiValue}' in attribute 'ascii'. Command ID '{commandId}'.                                                                                                                                                 |
-| 10.4.3  | CheckAsciiAttribute                                               | Attribute 'ascii' references a non-existing 'Param' with ID '{pid}'. Command ID '{commandId}'.                                                                                                                               |
-| 11.3.1  | CheckParamTag                                                     | Tag 'Content/Param' references a non-existing 'Param' with ID '{referencedPid}'. Response ID '{responseId}'.                                                                                                                 |
+| 10.4.3  | CheckAsciiAttribute                                               | Attribute 'ascii' references a non-existing 'Param' with ID '{pid}'. Command ID '{commandId}'.                                                                                                                               |
+| 11.3.1  | CheckParamTag                                                     | Tag 'Content/Param' references a non-existing 'Param' with ID '{referencedPid}'. Response ID '{responseId}'.                                                                                                                 |
 | 11.3.2  | CheckParamTag                                                     | Empty tag 'Param' in Response '{responseId}'.                                                                                                                                                                                |
-| 11.3.3  | CheckParamTag                                                     | Invalid value '{value}' in tag 'Content/Param'. Response ID '{responseId}'.                                                                                                                                                  |
+| 11.3.3  | CheckParamTag                                                     | Invalid value '{value}' in tag 'Content/Param'. Response ID '{responseId}'.                                                                                                                                                  |
 | 12.1.1. | Error message “DuplicatedValue” removed.                          |                                                                                                                                                                                                                              |
 | 12.1.2  | CheckNameAttribute                                                | Missing attribute 'Ports/PortSettings@name' in Connection '{connectionId}'.                                                                                                                                                  |
 | 12.1.3  | CheckNameAttribute                                                | Empty attribute 'Ports/PortSettings@name' in Connection '{connectionId}'.                                                                                                                                                    |
 | 12.1.4  | CheckNameAttribute                                                | Untrimmed attribute 'Ports/PortSettings@name' in Connection '{connectionId}'. Current value '{attributeValue}'.                                                                                                              |
-| 13.2.1  | CheckPathAttribute                                                | Attribute 'Relation@path' references a non-existing 'Table' with PID '{pid}'.                                                                                                                                                |
+| 13.2.1  | CheckPathAttribute                                                | Attribute 'Relation@path' references a non-existing 'Table' with PID '{pid}'.                                                                                                                                                |
 | 13.2.2  | CheckPathAttribute                                                | Missing attribute 'Relation@path'.                                                                                                                                                                                           |
 | 13.2.3  | CheckPathAttribute                                                | Invalid value '{pathValue}' in attribute 'Relation@path'.                                                                                                                                                                    |
 | 13.2.4  | CheckPathAttribute                                                | Empty attribute 'Relation@path'.                                                                                                                                                                                             |
-| 16.1.1  | CheckDynamicIdAttribute                                           | Attribute 'dynamicId' references a non-existing 'Table' with PID '{tablePid}'. ParameterGroup ID '{parameterGroupId}'.                                                                                                       |
+| 16.1.1  | CheckDynamicIdAttribute                                           | Attribute 'dynamicId' references a non-existing 'Table' with PID '{tablePid}'. ParameterGroup ID '{parameterGroupId}'.                                                                                                       |
 | 16.1.2  | CheckDynamicIdAttribute                                           | Invalid value '{attributeValue}' in attribute 'dynamicId'. ParameterGroup ID '{parameterGroupId}'.                                                                                                                           |
 | 16.1.3  | CheckDynamicIdAttribute                                           | Empty attribute 'dynamicId' in ParameterGroup '{groupId}'.                                                                                                                                                                   |
-| 17.1.1  | CheckTableAttribute                                               | Attribute 'ExportRule@table' references a non-existing 'Table' with PID '{pid}'.                                                                                                                                             |
+| 17.1.1  | CheckTableAttribute                                               | Attribute 'ExportRule@table' references a non-existing 'Table' with PID '{pid}'.                                                                                                                                             |
 | 17.1.2  | CheckTableAttribute                                               | Missing attribute 'ExportRule@table'.                                                                                                                                                                                        |
 | 17.1.3  | CheckTableAttribute                                               | Invalid value '{tableValue}' in attribute 'ExportRule@table'.                                                                                                                                                                |
 | 17.1.4  | CheckTableAttribute                                               | Empty attribute 'ExportRule@table'.                                                                                                                                                                                          |
@@ -182,33 +178,19 @@ The following checks and error messages have been added, updated or removed.
 The following legacy Validator return codes have been removed:
 
 - 1502
-
 - 1503
-
 - 1504
-
 - 2503
-
 - 2505
-
 - 2517
-
 - 2518
-
 - 2519
-
 - 2520
-
 - 2521
-
 - 2522
-
 - 2965
-
 - 5200
-
 - 5201
-
 - 5202
 
 ### XML Schema
@@ -218,7 +200,6 @@ The following legacy Validator return codes have been removed:
 The following units have been added to the UOM Schema:
 
 - kvar (kilovolt ampere reactive)
-
 - NanoCPUs (nano CPUs)
 
 #### Automation Schema: Additional values for DMSScript.Exe.Param@type attribute \[ID_23952\]
@@ -236,32 +217,24 @@ The *DMSScript.Script.Exe.Param@type* attribute can now be set to the following 
 In the Automation Schema, the documentation tag of the *DMSScript.Exe.Param@options* attri­bute now contains a list of all hexadecimal bit flags that can be represented by the decimal value specified in that attribute:
 
 - 0x000: None
-
 - 0x008: Debug mode
-
 - 0x010: AllowUndef
-
 - 0x020: RequireInteractive
-
 - 0x040: SupportsBackForward
-
 - 0x080: SkipElementChecks
-
 - 0x100: SavedFromCube
-
 - 0x200: SkipInfoEventsSet
-
 - 0x400: HasFindInteractiveClient
 
 #### Protocol Schema: Key reference constraint added to overridePID attribute of Protocol.Display.Pages.Page.Visibility element \[ID_23959\]
 
-In the Protocol Schema, a key reference constraint has been added to the *overridePID* attribute of the *Protocol.Display.Pages.Page.Visibility* element.
+In the Protocol Schema, a key reference constraint has been added to the *overridePID* attribute of the *Protocol.Display.Pages.Page.Visibility* element.
 
-The Schema will now verify whether the value specified in that *overridePID* attribute refers to a parameter ID defined in the protocol.
+The Schema will now verify whether the value specified in that *overridePID* attribute refers to a parameter ID defined in the protocol.
 
 #### Protocol Schema: Protocol.Topologies.Topology.Cell.Exposer@enabled is now a mandatory attribute \[ID_24377\]
 
-In the Protocol Schema, the *enabled* attribute of the *Protocol.Topologies.Topology.Cell.Exposer* element is now a mandatory attribute.
+In the Protocol Schema, the *enabled* attribute of the *Protocol.Topologies.Topology.Cell.Exposer* element is now a mandatory attribute.
 
 ### Class Library
 
@@ -272,19 +245,12 @@ The new Monitor Extension methods provide stable logic to handle eventing. They 
 Currently, the supported methods provide the ability to monitor changes in the full DMS and trigger a C# method to run for:
 
 - Standalone parameter value changes
-
 - Table cell value changes
-
 - Parameter alarm level changes
-
 - Table cell alarm level changes
-
 - Single element alarm changes
-
 - Single element name changes
-
 - All elements (DMS-level) alarm changes
-
 - All elements (DMS-level) name changes
 
 > [!NOTE]
@@ -292,7 +258,7 @@ Currently, the supported methods provide the ability to monitor changes in the f
 
 #### New Rates namespace \[ID_24283\]
 
-A new *Rates* namespace has been added. This namespace contains classes and methods that can be used to calculate all kind of rates, including bit rates for SNMP interface tables.
+A new *Rates* namespace has been added. This namespace contains classes and methods that can be used to calculate all kind of rates, including bit rates for SNMP interface tables.
 
 ## Changes
 
@@ -302,10 +268,8 @@ A new *Rates* namespace has been added. This namespace contains classes and met
 
 A number of enhancements have been made to the function editor:
 
-- When you create a new function file by selecting *File \> New \> File \> General \> DataMiner \> DataMiner Function Template*, you now have to first specify the function file version (e.g. 1.0.0.1) and select the associated protocol XML file.
-
+- When you create a new function file by selecting *File \> New \> File \> General \> DataMiner \> DataMiner Function Template*, you now have to first specify the function file version (e.g. 1.0.0.1) and select the associated protocol XML file.
 - When you add a function to a function file, or you edit an existing function, you can now select a profile and an entry point, and configure the interfaces.
-
 - When you add a table to a page, you can now select which columns to include.
 
 > [!NOTE]

@@ -1,4 +1,8 @@
-# Class Library release notes
+---
+uid: ClassLibrary_RNs
+---
+
+# Class Library
 
 ## Class Library versions
 

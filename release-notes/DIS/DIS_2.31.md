@@ -1,4 +1,8 @@
-# Release 2.31
+---
+uid: DIS_2.31
+---
+
+# DIS 2.31
 
 ## New features
 
@@ -10,33 +14,22 @@ From now on, you can also use the DIS Inject tool window to debug Automation scr
 
 To debug an Automation script, do the following:
 
-1. In the *DIS* menu, go to *DMA \> Connect*, and select the DataMiner Agent to which you want DIS to connect.
-
-2. Import the Automation script. In the *DIS* menu, select *DMA \> Import Automation script*, select an Automation script, and click *Import*.
-
-3. In the XML editor, go to the Exe block that you want to debug, and click the *Edit C#* button in front of it to open the Exe block in a C# editor.
-
+1. In the *DIS* menu, go to *DMA \> Connect*, and select the DataMiner Agent to which you want DIS to connect.
+2. Import the Automation script. In the *DIS* menu, select *DMA \> Import Automation script*, select an Automation script, and click *Import*.
+3. In the XML editor, go to the Exe block that you want to debug, and click the *Edit C#* button in front of it to open the Exe block in a C# editor.
 4. In the C# editor, set the necessary breakpoints.
-
-5. In the *DIS* menu, select *Tool Windows \> DIS Inject* to open the DIS Inject window.
-
+5. In the *DIS* menu, select *Tool Windows \> DIS Inject* to open the DIS Inject window.
 6. Select the *Automation script* tab.
-
 7. Open the large selection box at the top of the window, and select the Automation script that you want to debug.
-
 8. In the *Exe blocks* list:
 
     - Go to the row of which the Exe ID matches that of the Exe block you have opened.
-
     - If necessary, in the *Project* column, select another temporary Exe block project.
 
 9. In the *Script parameters* list, assign a value to each of the script parameters in the list.
-
 10. In the *Script dummies* list, link a DataMiner element to each of the script dummies in the list.
-
-11. Click the *Attach* button to build all temporary Exe block projects and attach the Microsoft Visual Studio Debugger to the DataMiner SLAutomation process.
-
-12. In the *DIS Inject* window, click *Execute* to manually trigger the Automation script.
+11. Click the *Attach* button to build all temporary Exe block projects and attach the Microsoft Visual Studio Debugger to the DataMiner SLAutomation process.
+12. In the *DIS Inject* window, click *Execute* to manually trigger the Automation script.
 
 > [!NOTE]
 > - Automation script debugging only works in conjunction with DataMiner Agents running at least DataMiner Main Release Version 10.1.0 or Feature Release Version 10.0.6.
@@ -47,24 +40,20 @@ To debug an Automation script, do the following:
 Similar to protocols, it is now also possible to develop Automation scripts as Visual Studio solutions. However, an Automation script solution can contain multiple scripts, while a protocol solution can only contain one single protocol.
 
 - C# projects that contain the code for the Exe blocks of an Automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
-
 - DLL imports need to be configured on the C# project itself by adding references to the external components. These can be external DLL files (located in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or other scripts in the same solution.
 
 **Creating an Automation Script solution**
 
 To create a new Automation script solution containing one dummy Automation script, do the following:
 
-1. Select *File \> New \> DataMiner Automation Script Solution...*
-
+1. Select *File \> New \> DataMiner Automation Script Solution...*
 2. Enter the name of the solution.
-
 3. Select the target folder.
 
     > [!NOTE]
     > The default protocol solution folder and the default Automation script folder can both be specified in *DIS Settings \> Solutions*.
 
-4. Select *Create initial Automation script* if you want to solution to contain a basic script with one Exe block.
-
+4. Select *Create initial Automation script* if you want to solution to contain a basic script with one Exe block.
 5. Click *OK*.
 
 > [!NOTE]
@@ -75,11 +64,8 @@ To create a new Automation script solution containing one dummy Automation scrip
 To create a new script in an Automation script solution, do the following:
 
 1. Open the Automation script solution.
-
-2. Select *File \> New \> New DataMiner Automation Script...* or right-click a solution folder in the Solution Explorer and select *Add \> New DataMiner Automation Script...*
-
+2. Select *File \> New \> New DataMiner Automation Script...* or right-click a solution folder in the Solution Explorer and select *Add \> New DataMiner Automation Script...*
 3. Enter the name of the new script.
-
 4. Click *OK*.
 
 **Adding an existing script to a solution**
@@ -87,26 +73,20 @@ To create a new script in an Automation script solution, do the following:
 To add an existing Automation script to an Automation script solution, do the following:
 
 1. Right-click a solution folder in the Solution Explorer.
-
 2. Select *Add \> Existing DataMiner Automation Script*.
-
 3. Select a least one Automation script file.
-
 4. Click *Open*.
 
 > [!NOTE]
-> When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transfered to the newly created C# project.
+> When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
 **Saving a compiled script**
 
 To save a compiled version of an Automation script to a file (with all C# code in its Exe block), do the following:
 
 1. Open the XML file containing the Automation script that you want to compile.
-
 2. Select *File \> Save Compiled Automation Script...*
-
 3. Enter a file name and a folder.
-
 4. Click *Save*.
 
 **Uploading a script to a DataMiner Agent**
@@ -114,11 +94,10 @@ To save a compiled version of an Automation script to a file (with all C# code i
 To upload an Automation script to a DataMiner Agent, do the following:
 
 1. Open the XML file containing the Automation script.
-
-2. Click *Publish* to compile the script and publish it to the DataMiner Agent that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
+2. Click *Publish* to compile the script and publish it to the DataMiner Agent that was set as default DMA in the *DMA* tab of the *DIS Settings* dialog box.
 
 > [!NOTE]
-> If you want to publish the script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
+> If you want to publish the script to another, non-default DMA, click the drop-down button at the right of the *Publish* button, and click the DMA to which you want the file to be published.
 
 ### Validator
 
@@ -130,9 +109,9 @@ The following checks and error messages have been added.
 |----------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | 2.5.1    | MissingDefaultThreshold          | Missing default thresholds on monitored parameter. Param ID '{pid}'.                                                                 |
 | 2.25.2   | UpdatedIdxValue_Parent           | Some columns have their SLProtocol position changed. Table PID '{tablePid}'.                                                         |
-| 4.2.5    | ObsoleteSuffixTable              | Suffix 'table' in 'Group/Content/Param' element is considered obsolete. Group ID '{groupId}'.                                        |
+| 4.2.5    | ObsoleteSuffixTable              | Suffix 'table' in 'Group/Content/Param' element is considered obsolete. Group ID '{groupId}'.                                        |
 | 4.2.6    | SuffixRequiresMultiThreadedTimer | Suffix '{suffix}' in'Group/Content/Param' element requires the group to be called from a multi-threaded timer. Group ID '{groupId}'. |
-| 16.5.3   | IncompatibleParamReferences      | Incompatible links to parameters via 'Group@dynamicId' attribute and 'Group/Params' element. ParameterGroup ID '{parameterGroupId}'. |
+| 16.5.3   | IncompatibleParamReferences      | Incompatible links to parameters via 'Group@dynamicId' attribute and 'Group/Params' element. ParameterGroup ID '{parameterGroupId}'. |
 | 16.8.1   | MissingDynamicIdAttribute        | Filtering via 'Group@dynamicIndex' attribute requires a 'Group@dynamicId' attribute. ParameterGroup ID '{parameterGroupId}'.         |
 | 18.10.9  | IrrelevantColumn                 | Irrelevant column with PID '{columnPid}' in 'TreeControl/HiddenColumns'. TreeControl ID '{treeControlId}'.                           |
 | 18.11.11 | IrrelevantColumn                 | Irrelevant column with PID '{columnPid}' in 'TreeControl/OverrideDisplayColumns'. TreeControl ID '{treeControlId}'.                  |
@@ -146,9 +125,7 @@ The following checks and error messages have been added.
 The Protocol XML schema has been updated.
 
 - The Protocol.Display.Pages.Page.Visibility@default attribute is now a required attribute.
-
 - The Protocol.Triggers.Trigger.Time element now allows any content of type “string”.
-
 - The Protocol.ElementType element has been updated from a string to a union of a string and an enum listing all the known element types.
 
 #### UOM Schema: New unit added \[ID_28402\]
@@ -170,11 +147,8 @@ From now on, the endless loop check will also indicate whether actions of type �
 The following checks and error messages have been enhanced:
 
 - Error message 1.23.1 (MismatchingNames) now reads “Connection {connectionId} has mismatching names: {names}.”
-
 - Check 5.7 (CheckAfterStartupFlow) will now also allow the action types “execute one now” and “execute one top” next to “execute” and “execute next”.
-
 - Check 7.3 (CheckOptionsAttribute) has been refactored.
-
 - Error message 8.3.1 renamed from “InvalidHeaderKey” to “UnknownHeaderKey”,
 
 #### IDE - “DIS Validator” window: After having an error fixed, the next error in the list will get selected instead of the first error in the list \[ID_28418\]
@@ -188,9 +162,9 @@ From now on, when the validator throws a series of the following errors, they wi
 | Check ID | Error message name | Error message                                                                             |
 |----------|--------------------|-------------------------------------------------------------------------------------------|
 | 2.2.7    | UnrecommendedChars | Unrecommended chars '{invalidCharacters}' in tag '{tagName}'. Current value '{tagValue}'. |
-| 2.4.1    | MissingTag         | Missing tag 'Subtext' in Param '{pid}'.                                                   |
-| 2.9.7    | MissingTag         | Missing 'Units' tag for '{paramDisplayType}' Param with ID '{paramPid}'.                  |
-| 2.11.1   | MissingTag         | Missing 'Range' tag for '{paramDisplayType}' Param with ID '{paramPid}'.                  |
+| 2.4.1    | MissingTag         | Missing tag 'Subtext' in Param '{pid}'.                                                   |
+| 2.9.7    | MissingTag         | Missing 'Units' tag for '{paramDisplayType}' Param with ID '{paramPid}'.                  |
+| 2.11.1   | MissingTag         | Missing 'Range' tag for '{paramDisplayType}' Param with ID '{paramPid}'.                  |
 
 ### Fixes
 

@@ -1,4 +1,8 @@
-# Release 2.37
+---
+uid: DIS_2.37
+---
+
+# DIS 2.37
 
 ## New features
 
@@ -12,15 +16,15 @@ When, in the Function editor, you wanted to link a profile definition to a funct
 
 DIS now partially supports the use of NuGet packages in protocols and Automation scripts.
 
-- Apart from saving the protocol.xml file, the *File \> Save Compiled Protocol As…* command will now also extract the necessary DLL files from the configured/used NuGet packages and place them in a DLLs folder.
+- Apart from saving the protocol.xml file, the *File \> Save Compiled Protocol As…* command will now also extract the necessary DLL files from the configured/used NuGet packages and place them in a DLLs folder.
 
-- Apart from saving the automation.xml file, the *File \> Save (All) Compiled Script As…* command will now also extract the necessary DLL files from the configured/used NuGet packages and place them in a DLLs folder.
+- Apart from saving the automation.xml file, the *File \> Save (All) Compiled Script As…* command will now also extract the necessary DLL files from the configured/used NuGet packages and place them in a DLLs folder.
 
 Currently, the “Publish” command will only publish the XML file, not the NuGet DLL files.
 
 #### DIS Comparer tool window: Comparison will now start automatically after selecting both proto­cols \[ID_33045\]
 
-Up to now, in the *DIS Comparer* tool window, you had to click the *Compare* button after selecting the two protocols you wanted to compare. From now on, the comparison will start automatically after you selected the two protocols to be compared.
+Up to now, in the *DIS Comparer* tool window, you had to click the *Compare* button after selecting the two protocols you wanted to compare. From now on, the comparison will start automatically after you selected the two protocols to be compared.
 
 ### Validator
 
@@ -39,7 +43,6 @@ The following checks and error messages have been added.
 The type “TypeDataMinerVersion”, which is used by the following elements, now also allows 5-digit build numbers (e.g. 10.1.0.0 - 10600).
 
 - Compliancies.MinimumRequiredDataMinerVersion
-
 - Compliancies.MaximumSupportedVersion
 
 #### Protocol Schema: New element \[ID_32739\]
@@ -57,13 +60,9 @@ The following element has been added to the protocol schema:
 In the UI, the following custom-made information bars have now been replaced by standard Visual Studio information bars:
 
 - Class Library package contains errors
-
 - DIS update available
-
 - Incorrect BOM or XML header
-
 - Incorrect project references
-
 - Incorrect target framework
 
 #### IDE: StyleCop plugin for Visual Studio replaced by StyleCop.Analyzers NuGet package \[ID_32508\]
@@ -84,4 +83,4 @@ When, in the Function editor, you removed a table from a page, the column parame
 
 #### Text of connection errors in DMA connection window would incorrectly be cut off
 
-When, in an *Edit DMA connection* window, an error occurred when you clicked the *Test connection* button, in some cases, the text of the error message would incorrectly be cut off. From now, long error messages will automatically wrap to the next line.
+When, in an *Edit DMA connection* window, an error occurred when you clicked the *Test connection* button, in some cases, the text of the error message would incorrectly be cut off. From now, long error messages will automatically wrap to the next line.

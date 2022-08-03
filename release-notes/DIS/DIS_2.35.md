@@ -1,4 +1,8 @@
-# Release 2.35
+---
+uid: DIS_2.35
+---
+
+# DIS 2.35
 
 ## New features
 
@@ -35,18 +39,18 @@ The following checks and error messages have been added.
 | 1.26.3   | MultiplePingPairsForConnection     | Multiple ping pairs for connection with name '{connectionName}' and type '{connectionType}'. Connection ID '{connectionId}'.<br> (replaces legacy checks 2702/2703) |
 | 1.26.4   | MultiplePingPairsForConnection_Sub | Multiple ping pairs for connection '{connectionId}'. Pair '{pairId}'.<br> (replaces legacy checks 2702/2703)                                                        |
 | 3.35.1   | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. QAction ID '{qactionId}'.                                                                       |
-| 3.35.2   | NonExistingId                      | Tag 'QAction/Condition' references a non-existing 'Param' with PID '{paramId}'. QAction ID '{qactionId}'.                                                           |
+| 3.35.2   | NonExistingId                      | Tag 'QAction/Condition' references a non-existing 'Param' with PID '{paramId}'. QAction ID '{qactionId}'.                                                           |
 | 4.9.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Group ID '{groupId}'.                                                                           |
-| 4.9.2    | NonExistingId                      | Tag 'Group/Condition' references a non-existing 'Param' with PID '{paramId}'. Group ID '{groupId}'.                                                                 |
+| 4.9.2    | NonExistingId                      | Tag 'Group/Condition' references a non-existing 'Param' with PID '{paramId}'. Group ID '{groupId}'.                                                                 |
 | 5.5.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Trigger ID '{triggerId}'.                                                                       |
-| 5.5.2    | NonExistingId                      | Tag 'Trigger/Condition' references a non-existing 'Param' with PID '{paramId}'. Trigger ID '{triggerId}'.                                                           |
+| 5.5.2    | NonExistingId                      | Tag 'Trigger/Condition' references a non-existing 'Param' with PID '{paramId}'. Trigger ID '{triggerId}'.                                                           |
 | 6.4.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Action ID '{actionId}'.                                                                         |
-| 6.4.2    | NonExistingId                      | Tag 'Action/Condition' references a non-existing 'Param' with PID '{paramId}'. Action ID '{actionId}'.                                                              |
+| 6.4.2    | NonExistingId                      | Tag 'Action/Condition' references a non-existing 'Param' with PID '{paramId}'. Action ID '{actionId}'.                                                              |
 | 7.4.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Timer ID '{timerId}'.                                                                           |
-| 7.4.2    | NonExistingId                      | Tag 'Timer/Condition' references a non-existing 'Param' with PID '{paramId}'. Timer ID '{timerId}'.                                                                 |
+| 7.4.2    | NonExistingId                      | Tag 'Timer/Condition' references a non-existing 'Param' with PID '{paramId}'. Timer ID '{timerId}'.                                                                 |
 | 7.4.3    | UnrecommendedCondition             | Unrecommended condition on Timer. Timer ID '{timerId}'.                                                                                                             |
 | 9.7.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Pair ID '{pairId}'.                                                                             |
-| 9.7.2    | NonExistingId                      | Tag 'Pair/Condition' references a non-existing 'Param' with PID '{paramId}'. Pair ID '{pairId}'.                                                                    |
+| 9.7.2    | NonExistingId                      | Tag 'Pair/Condition' references a non-existing 'Param' with PID '{paramId}'. Pair ID '{pairId}'.                                                                    |
 
 ### XML Schema
 
@@ -56,9 +60,9 @@ The Protocol.ParameterGroups.Group element now has a calculateAlarmState attribu
 
 Possible values: true or false
 
-#### Installation Package Manifest Schema: setAsDefault attribute replaced by SetAsDefault ele­ment \[ID_31603\]
+#### Installation Package Manifest Schema: setAsDefault attribute replaced by SetAsDefault element \[ID_31603\]
 
-​The Manifest.Content.Visios.Visio.Version@setAsDefault attribute has now been replaced by the SetAsDefault element.
+The Manifest.Content.Visios.Visio.Version@setAsDefault attribute has now been replaced by the SetAsDefault element.
 
 Also, in the VersionHistory, it is now allowed to set the ID of the CU part to 0.
 
