@@ -1,4 +1,8 @@
-# Release 2.14
+---
+uid: DIS_2.14
+---
+
+# DIS 2.14
 
 ## New features
 
@@ -6,7 +10,7 @@
 
 #### DIS MIB Browser: Error messages will now be shown when not all MIB files could be loaded \[ID_19905\]
 
-From now on, the following error messages will be shown in the *DIS MIB Browser* window when not all MIB files could be loaded:
+From now on, the following error messages will be shown in the *DIS MIB Browser* window when not all MIB files could be loaded:
 
 - If there are pending modules:
 
@@ -20,38 +24,34 @@ From now on, the following error messages will be shown in the *DIS MIB Browser*
     Some MIB files could not be compiled. Please check the Errors section.
     ```
 
-Also, items in the *Pending Modules* section will now be displayed in orange and items in the *Missing Modules* section will be displayed in red.
+Also, items in the *Pending Modules* section will now be displayed in orange and items in the *Missing Modules* section will be displayed in red.
 
 #### XML editor: Update button indicating that a new DIS version is available will now have an orange background \[ID_20077\]
 
-If DataMiner Integration Studio is set to check for updates, an *Update…* button will appear if a newer version of the DataMinerIntegrationStudio.vsix file is available on the DataMiner Collaboration Platform. From now on, this *Update...* button will have an orange background.
+If DataMiner Integration Studio is set to check for updates, an *Update…* button will appear if a newer version of the DataMinerIntegrationStudio.vsix file is available on the DataMiner Collaboration Platform. From now on, this *Update...* button will have an orange background.
 
 #### XML editor: ‘Copy Script to Clipboard’ command \[ID_20150\]
 
-When you are editing an Automation script file, you can click the small Down arrow in front of the Script.Exe element to open a shortcut menu. In that menu, you will now find a *Copy Script to Clipboard* command, which will allow you to easily copy an entire Automation script to another file.
+When you are editing an Automation script file, you can click the small Down arrow in front of the Script.Exe element to open a shortcut menu. In that menu, you will now find a *Copy Script to Clipboard* command, which will allow you to easily copy an entire Automation script to another file.
 
 #### XML editor: No longer possible to publish a protocol with an incorrect Type tag, an empty Version tag or an empty Name tag \[ID_20182\]
 
-When, in the XML editor, you click *Publish* in order to publish the protocol you are editing, DIS will now refuse to publish the protocol and show a message box
+When, in the XML editor, you click *Publish* in order to publish the protocol you are editing, DIS will now refuse to publish the protocol and show a message box
 
 - when the Protocol.Type tag contain an incorrect value,
-
 - when the Protocol.Version tag is empty, or
-
 - when the Protocol.Name tag is empty.
 
 #### New tool window: DIS Macros \[ID_20348\]
 
-The new *DIS Macros* tool window allows developers to create C# scripts that can be used to make changes to a protocol file (e.g. update OIDs based on conditions, update table definitions, increment/decrement parameters, etc.).
+The new *DIS Macros* tool window allows developers to create C# scripts that can be used to make changes to a protocol file (e.g. update OIDs based on conditions, update table definitions, increment/decrement parameters, etc.).
 
 To open the tool window, open the DIS menu, and click *Tool Windows \> DIS Macros*.
 
 - In the tool window, you can set up a folder structure into which you can then store the mac­ros you create. It is also possible to export a macro folder to a zip file and to import a zip file containing macros as a child folder of an existing folder.
-
-- At the top of the tool window, you find two buttons: *Run* and *Open*.
+- At the top of the tool window, you find two buttons: *Run* and *Open*.
 
     - Click *Run* to run the selected macro.
-
     - Click *Open* to edit the selected macro.
 
     > [!NOTE]
@@ -64,17 +64,12 @@ In essence, a DIS macro consists of a Script class containing a Run() method tha
 The following input data is available in the “engine.Input” object:
 
 - File name
-
 - File content
-
 - Cursor position
-
 - Selected text blocks (start, length and contents)
-
 - If the macro is run on a Protocol.xml file:
 
     - Parsed XML object structure
-
     - Parsed protocol model
 
 The following methods are available in the “engine” object:
@@ -96,7 +91,7 @@ The following methods are available in the “engine” object:
 
 From now on, the Protocol.CheckNameTag check will also return an error if the name of a protocol starts with “Production”.
 
-If an error of this type appears in the *DIS Validation* window, you will be able to fix it right away. If you right-click the error and select *Fix \> This error*, the “Production” prefix will be removed.
+If an error of this type appears in the *DIS Validation* window, you will be able to fix it right away. If you right-click the error and select *Fix \> This error*, the “Production” prefix will be removed.
 
 | ID    | Check                 | Error message |
 |-------|-----------------------|---------------|
@@ -110,7 +105,7 @@ The Protocol XML schema now supports the following elements and/or element attri
 
 | Element                     | Attribute       |
 |-----------------------------|-----------------|
-| Protocol.Chains.SearchChain |                 |
+| Protocol.Chains.SearchChain |                 |
 | Protocol.Params.Param       | pollingInterval |
 
 #### Protocol Schema: Updated element and attribute rules \[ID_20114\]\[ID_20117\]\[ID_20118\]\[ID_20120\]\[ID_20121\]\[ID_20133\]\[ID_20403\]
@@ -152,7 +147,6 @@ The following elements and/or element attributes have been removed from the Prot
 The following units have been added to the UOM Schema:
 
 - mV/dB
-
 - V/dBm
 
 ## Changes
@@ -172,7 +166,6 @@ A number of enhancements have been made to the Automation script publication pro
 The following enhancements have been made to the ‘Automation Root’ snippet and the ‘DataMiner Automation Script Template’ file:
 
 - An empty Script.Exe element of type “csharp” will now be added by default.
-
 - The copyright and revision history text blocks are no longer located at the top of the XML file. They are now located inside the Script.Value element.
 
     > [!NOTE]
@@ -191,12 +184,11 @@ The following enhancements have been made to the ‘Automation Root’ snippet a
 Exception handling (try-catch) has now been added to
 
 - the “QAction” snippet, and
-
 - the “After Startup” QAction of the “Protocol Root” snippet.
 
 #### Validator: Text in Description column now wraps to the next line \[ID_20306\]
 
-When the *Description* column of an error message in the *DIS Validator *window contains a large amount of text, from now on, that text will automatically wrap to the next line.
+When the *Description* column of an error message in the *DIS Validator *window contains a large amount of text, from now on, that text will automatically wrap to the next line.
 
 #### XML editor: Enhanced behavior when opening a QAction for editing \[ID_20336\]
 
@@ -216,9 +208,9 @@ When importing a MIB file, in some cases, MIB nodes would be incorrectly interpr
 
 When the display editor was opened, in some cases, page names with special characters (e.g. “&”) would be decoded incorrectly.
 
-#### Problem when creating a new protocol or Automation script file via File \> New \> File... \[ID_20297\]
+#### Problem when creating a new protocol or Automation script file via File \> New \> File... \[ID_20297\]
 
-When you created a new protocol or Automation script file via *File \> New \> File...*, in some cases, the new file would incorrectly be saved without the “.xml” extension.
+When you created a new protocol or Automation script file via *File \> New \> File...*, in some cases, the new file would incorrectly be saved without the “.xml” extension.
 
 #### IDE - DIS Tree View: Problem when removing redundant CDATA closing tags from a QAction \[ID_20358\]
 

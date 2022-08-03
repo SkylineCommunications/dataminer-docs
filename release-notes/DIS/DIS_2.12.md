@@ -1,4 +1,8 @@
-# Release 2.12
+---
+uid: DIS_2.12
+---
+
+# DIS 2.12
 
 ## New features
 
@@ -12,29 +16,26 @@ When you use code from this built-in library in a particular QAction, DIS will a
 
 The advantage of this approach is that no additional DLL files need to be copied to the DataMiner installation folder when the protocol is put into use. All necessary code is included in the protocol itself. By including all code in the protocol, we also prevent future code library updates from rendering a protocol inoperable.
 
-In the *DIS Settings* window, a new *Code Library* tab has been added. In that tab, you can specify custom directories containing additional .cs code files to be added to the QAction code library.
+In the *DIS Settings* window, a new *Code Library* tab has been added. In that tab, you can specify custom directories containing additional .cs code files to be added to the QAction code library.
 
 #### Generate Parameters Wizard: New input type “WSDL” \[ID_17747\]
 
 The *Generate Parameters Wizard* window now also allows you to generate \<Param> tag (as well as all the necessary \<Timer>, \<Group>, \<Trigger> and \<Action> tags) based on parameter data in a WSDL file.
 
 > [!NOTE]
-> Up to now, you had to position the mouse cursor anywhere between two existing \<Param> tags before selecting the *Generate Parameters...* menu option. Now, this is no longer necessary. The parameters will automatically be added in the correct location.
+> Up to now, you had to position the mouse cursor anywhere between two existing \<Param> tags before selecting the *Generate Parameters...* menu option. Now, this is no longer necessary. The parameters will automatically be added in the correct location.
 >
-> A *Generate Parameters...* command has now also been added to the DIS menu.
+> A *Generate Parameters...* command has now also been added to the DIS menu.
 
 #### Enhanced grid view \[ID_18351\]
 
-The *DIS Grid* window has been enhanced. This tool window allows you to manage and configure all parameters in the protocol using a spreadsheet-like view.
+The *DIS Grid* window has been enhanced. This tool window allows you to manage and configure all parameters in the protocol using a spreadsheet-like view.
 
 Important changes:
 
 - A *Sequence* tag has been added.
-
-- When a range tag is generated, a *Low* and a *High* tag is automatically included<br>(default values: 0).
-
-- When a position tag is generated, a *Row* and *Column* tag is automatically included (default values: 0).
-
+- When a range tag is generated, a *Low* and a *High* tag is automatically included<br>(default values: 0).
+- When a position tag is generated, a *Row* and *Column* tag is automatically included (default values: 0).
 - The right-click menu now also contains a *Duplicate* command.
 
 #### QActions can now be built and maintained on a computer without a local DataMiner Agent \[ID_18457\]
@@ -44,15 +45,10 @@ The DataMiner DLL files that are necessary to build and maintain QActions are no
 The following DLL files are included:
 
 - Interop.SLDms.dll
-
 - QActionHelper.dll
-
 - QActionHelperBaseClasses.dll
-
 - SLManagedAutomation.dll
-
 - SLManagedScripting.dll
-
 - SLNetTypes.dll
 
 #### DIS installation file: Additional prerequisites \[ID_18823\]
@@ -60,7 +56,6 @@ The following DLL files are included:
 To ensure that the user's Visual Studio installation has all the assemblies required to run the DIS extension, two prerequisites have been added to the extension manifest:
 
 - Visual Studio core editor
-
 - .NET Framework 4 - 4.6 development tools
 
 These two modules will now automatically be installed when you install DIS.
@@ -73,10 +68,10 @@ From now on, the Validator will check whether table parameters specified in the 
 
 Two new error codes have been added:
 
-| Result code | Class | Description                                                                                                                             |
-|-------------|-------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| 2973        | Error | Table ({0}), that is being used as inputParameter on QAction {1}, has no valid Interprete tag defined.                                  |
-| 2974        | Error | Table ({0}), that is being used as inputParameter on QAction {1}, has an incorrect Interprete tag defined. (Should be 'other'-'double') |
+| Result code | Class | Description |
+|-------------|-------|-------------|
+| 2973 | Error | Table ({0}), that is being used as inputParameter on QAction {1}, has no valid Interprete tag defined. |
+| 2974 | Error | Table ({0}), that is being used as inputParameter on QAction {1}, has an incorrect Interprete tag defined. (Should be 'other'-'double') |
 
 ### XML Schema
 
@@ -85,27 +80,25 @@ Two new error codes have been added:
 The following units have been added to the UOM schema:
 
 - pHz: picohertz
-
 - nHz: nanohertz
-
 - L: liter
 
 #### New tags and attributes \[ID_18513\]\[ID_18949\]\[ID_18950\]\[ID_18951\]\[ID_18952\]\[ID_18954\]
 
 The Protocol XML schema now supports the following tags and/or tag attributes:
 
-| Tag                                                               | Attribute     |
-|-------------------------------------------------------------------|---------------|
-| Protocol.Chains.Chain.Field.DiagramPids                           | \-            |
-| Protocol.Chains.Chain.Field.DiagramSorting                        | \-            |
-| Protocol.Chains.Chain.Field.DiagramTitleFormat                    | \-            |
-| Protocol.Groups.Group                                             | ping          |
-| Protocol.HTTP.Session                                             | ignoreTimeout |
-| Protocol.HTTP.Session                                             | timeout       |
-| Protocol.HTTP.Session.Connection                                  | timeout       |
-| Protocol.Params.Param                                             | saveInterval  |
-| Protocol.Params.Param.ArrayOptions.<br>ColumnOptions.ColumnOption | pollingRate   |
-| Protocol.Params.Param.Interprete.Rounding                         | \-            |
+| Tag                                                           | Attribute     |
+|---------------------------------------------------------------|---------------|
+| Protocol.Chains.Chain.Field.DiagramPids                       | \-            |
+| Protocol.Chains.Chain.Field.DiagramSorting                    | \-            |
+| Protocol.Chains.Chain.Field.DiagramTitleFormat                | \-            |
+| Protocol.Groups.Group                                         | ping          |
+| Protocol.HTTP.Session                                         | ignoreTimeout |
+| Protocol.HTTP.Session                                         | timeout       |
+| Protocol.HTTP.Session.Connection                              | timeout       |
+| Protocol.Params.Param                                         | saveInterval  |
+| Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption | pollingRate   |
+| Protocol.Params.Param.Interprete.Rounding                     | \-            |
 
 #### EnumTriggerOn: New value “session” \[ID_18954\]
 
@@ -117,7 +110,7 @@ The value “session” has been added to the list of allowed values for the Tri
 
 #### XML editor: Publish button is now disabled in debug mode \[ID_18872\]
 
-From now on, it will no longer be possible to click the *Publish* button at the top of the XML editor when Visual Studio is running in debug mode.
+From now on, it will no longer be possible to click the *Publish* button at the top of the XML editor when Visual Studio is running in debug mode.
 
 #### Schema: Additional content model restrictions \[ID_18514\]
 
@@ -159,4 +152,4 @@ When, in the display editor, you dragged a parameter from one page to another, i
 
 #### DIS settings: Problem when pressing ENTER after updating the Host box in the DMA tab \[ID_18881\]
 
-When, in the *DMA* tab of the *DIS Settings* window, you changed the URL in the *Host* box and pressed ENTER, the change would not be applied. This problem has now been fixed.
+When, in the *DMA* tab of the *DIS Settings* window, you changed the URL in the *Host* box and pressed ENTER, the change would not be applied. This problem has now been fixed.

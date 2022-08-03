@@ -1,4 +1,8 @@
-# DIS 2.4.1 release notes
+---
+uid: DIS_2.4
+---
+
+# DIS 2.4
 
 ## New features
 
@@ -112,6 +116,7 @@ You can now use the following compliance subtags inside a *Protocol.Compliancies
 > The version number specified in the *MinimumRequiredVersion* tag has to have the following syntax:
 > - major.minor.month.week, or
 > - major.minor.month.week-xxxx (in which xxxx is the four-digit build number)
+>
 > Examples: 9.0.3.7 or 9.0.3.7-5687
 
 #### XML Schema now allows multiple DVEProtocol tags \[ID_15137\]

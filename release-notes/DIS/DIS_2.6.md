@@ -1,4 +1,8 @@
-# DIS 2.6.1 release notes
+---
+uid: DIS_2.6
+---
+
+# DIS 2.6
 
 ## New features
 

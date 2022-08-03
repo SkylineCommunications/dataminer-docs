@@ -1,4 +1,8 @@
-# DIS 2.0.2 release notes
+---
+uid: DIS_2.0.2
+---
+
+# DIS 2.0.2
 
 ## New features
 
@@ -46,14 +50,6 @@ Result codes:
 |-------------|-------------|-----------------------------------------------------------------------------------------------|
 | 4800        | Information | Table column exports OK.                                                                      |
 | 4801        | Error       | Export settings of table column \[Parameter ID\] differ from those of table \[Parameter ID\]. |
-
-### XML Schema
-
-\-
-
-### Snippets
-
-\-
 
 ## Changes
 

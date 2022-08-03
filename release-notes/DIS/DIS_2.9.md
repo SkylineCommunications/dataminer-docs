@@ -1,4 +1,8 @@
-# DIS 2.9.1 release notes
+---
+uid: DIS_2.9
+---
+
+# DIS 2.9
 
 ## New features
 

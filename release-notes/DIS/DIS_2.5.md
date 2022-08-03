@@ -1,4 +1,8 @@
-# DIS 2.5.1 release notes
+---
+uid: DIS_2.5
+---
+
+# DIS 2.5
 
 ## New features
 

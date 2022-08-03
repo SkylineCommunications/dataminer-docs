@@ -1,4 +1,8 @@
-# DIS 2.10.1 release notes
+---
+uid: DIS_2.10
+---
+
+# DIS 2.10
 
 ## New features
 

@@ -1,4 +1,8 @@
-# DIS 2.8.1 release notes
+---
+uid: DIS_2.8
+---
+
+# DIS 2.8
 
 ## New features
 

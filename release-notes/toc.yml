@@ -139,41 +139,41 @@
       - name: DIS 2.19
         topicUid: DIS_2.19
       - name: DIS 2.18
-        topicUid: DIS_v2.18
+        topicUid: DIS_2.18
       - name: DIS 2.17
         topicUid: DIS_2.17
-      - name: SLC_RN_DISv2.16_REV000
-        href: DIS/SLC_RN_DISv2.16_REV000.md
-      - name: SLC_RN_DISv2.15_REV000
-        href: DIS/SLC_RN_DISv2.15_REV000.md
-      - name: SLC_RN_DISv2.14_REV000
-        href: DIS/SLC_RN_DISv2.14_REV000.md
-      - name: SLC_RN_DISv2.13_REV000
-        href: DIS/SLC_RN_DISv2.13_REV000.md
-      - name: SLC_RN_DISv2.12_REV000
-        href: DIS/SLC_RN_DISv2.12_REV000.md
-      - name: SLC_RN_DISv2.11_REV000
-        href: DIS/SLC_RN_DISv2.11_REV000.md
-      - name: DIS 2.10.1 release notes
-        href: DIS/SLC_RN_DISv2.10.1_REV000.md
-      - name: DIS 2.9.1 release notes
-        href: DIS/SLC_RN_DISv2.9.1_REV000.md
-      - name: DIS 2.8.1 release notes
-        href: DIS/SLC_RN_DISv2.8.1_REV000.md
-      - name: DIS 2.7.1 release notes
-        href: DIS/SLC_RN_DISv2.7.1_REV000.md
-      - name: DIS 2.6.1 release notes
-        href: DIS/SLC_RN_DISv2.6.1_REV000.md
-      - name: DIS 2.5.1 release notes
-        href: DIS/SLC_RN_DISv2.5.1_REV000.md
-      - name: DIS 2.4.1 release notes
-        href: DIS/SLC_RN_DISv2.4.1_REV000.md
-      - name: DIS 2.0.3 release notes
-        href: DIS/SLC_RN_DISv2.0.3_REV000.md
-      - name: DIS 2.0.2 release notes
-        href: DIS/SLC_RN_DISv2.0.2_REV000.md
-      - name: DIS 2.0.1 release notes
-        href: DIS/SLC_RN_DISv2.0.1_REV000.md
+      - name: DIS 2.16
+        topicUid: DIS_2.16
+      - name: DIS 2.15
+        topicUid: DIS_2.15
+      - name: DIS 2.14
+        topicUid: DIS_2.14
+      - name: DIS 2.13
+        topicUid: DIS_2.13
+      - name: DIS 2.12
+        topicUid: DIS_2.12
+      - name: DIS 2.11
+        topicUid: DIS_2.11
+      - name: DIS 2.10
+        topicUid: DIS_2.10
+      - name: DIS 2.9
+        topicUid: DIS_2.9
+      - name: DIS 2.8
+        topicUid: DIS_2.8
+      - name: DIS 2.7
+        topicUid: DIS_2.7
+      - name: DIS 2.6
+        topicUid: DIS_2.6
+      - name: DIS 2.5
+        topicUid: DIS_2.5
+      - name: DIS 2.4
+        topicUid: DIS_2.4
+      - name: DIS 2.0.3
+        topicUid: DIS_2.0.3
+      - name: DIS 2.0.2
+        topicUid: DIS_2.0.2
+      - name: DIS 2.0.1
+        topicUid: DIS_2.0.1
     - name: EPM release notes
       items:
       - name: SLC_RN_EPMv6.1.3_REV000 

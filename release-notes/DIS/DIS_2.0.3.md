@@ -1,4 +1,8 @@
-# DIS 2.0.3 release notes
+---
+uid: DIS_2.0.3
+---
+
+# DIS 2.0.3
 
 ## Features
 

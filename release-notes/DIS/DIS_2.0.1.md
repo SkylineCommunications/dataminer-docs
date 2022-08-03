@@ -1,4 +1,8 @@
-# DIS 2.0.1 release notes
+---
+uid: DIS_2.0.1
+---
+
+# DIS 2.0.1
 
 ## New features and enhancements
 
@@ -211,10 +215,6 @@ See the following tables for an overview of the new tags and attributes.
 | exportProtocol | Protocol.DVEs.DVEProtocols<br>Protocol.DVEs.DVEProtocols.DVEProtocol@name<br>- Name of the DVE protocol (string)<br>Protocol.DVEs.DVEProtocols.DVEProtocol@tablePID<br>- Parameter ID of table used to create the DVE elements (uint)<br>Protocol.DVEs.DVEProtocols.DVEProtocol.ElementPrefix<br>- true<br>- false (default) |
 | UNICODE | Protocol.Options.Encoding<br>- ascii (default)<br>- unicode |
 | DISABLEVIEWREFRESH | Protocol.Options.DisableViewRefresh<br>- true<br>- False (default) |
-
-### Snippets
-
-\-
 
 ## Bug fixes
 

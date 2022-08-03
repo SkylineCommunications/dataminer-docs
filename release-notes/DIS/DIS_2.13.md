@@ -1,4 +1,8 @@
-# Release 2.13
+---
+uid: DIS_2.13
+---
+
+# DIS 2.13
 
 ## New features
 
@@ -19,12 +23,11 @@ When editing a protocol XML file or QAction code block, you can now insert the f
 **QAction snippets**
 
 - Code Library \> Get DMS
-
 - Retry
 
     Example:
 
-    ```txt
+    ```csharp
     bool IsLoadedInSLElement = MyClass.Retry(() => protocol.IsElementLoadedInSLElement(dmaId, elementId), new TimeSpan(0, 0, 2));
     ```
 
@@ -35,31 +38,28 @@ It is now possible to compare two protocols and have the major changes displayed
 To compare two protocols, do the following:
 
 1. Open both protocols in Visual Studio.
-
 2. At the top of the XML editor tab containing one of the protocols, open the *Validator* drop-down menu, and click *Compare*.
-
-3. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
+3. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
 
 > [!NOTE]
 > - Both protocol selection boxes will contain all protocols that are currently open in the XML editor.
-> - By default, the protocol in the currently selected XML editor tab will be selected in the *New protocol* box, and the protocol that best resembles it will be selected in the *Previous protocol* box.
+> - By default, the protocol in the currently selected XML editor tab will be selected in the *New protocol* box, and the protocol that best resembles it will be selected in the *Previous protocol* box.
 
 At present, the following checks will be performed when you compare two protocols:
 
 - Have parameter IDs been changed?
-
 - Have parameters been removed?
 
 #### Enhanced “Generate Write Parameters” window \[ID_19588\]
 
-The *Generate Write Parameters* window, which allows you to automatically generate parameters of type “write” for existing parameters of type “read”, now has two additional columns:
+The *Generate Write Parameters* window, which allows you to automatically generate parameters of type “write” for existing parameters of type “read”, now has two additional columns:
 
 | Column           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Setter           | Allows you to enable the ‘setter’ attribute for a particular write parameter.<br> If you want to enable this attribute for all non-SNMP parameters in the list, then you can select the ‘select all’ check box in the column header.<br> Note that, when the protocol does not contain any non-SNMP parameters, this ‘select all’ check box will be disabled. As will all ‘setter’ check boxes for the SNMP parameters in the list.              |
 | SNMP Set and Get | Allows you to enable the ‘snmpSetAndGet’ attribute for a particular write parameter.<br> If you want to enable this attribute for all SNMP parameters in the list, then you can select the ‘select all’ check box in the column header.<br> Note that, when the protocol does not contain any SNMP parameters, this ‘select all’ check box will be disabled. As will all ‘SNMP Set and Get’ check boxes for the non-SNMP parameters in the list. |
 
-Also, when in the *Write ID* column a suggested parameter ID is not available, you can now click a “search for next available Write ID” button in the form of an arrow to replace the non-available ID by an available one.
+Also, when in the *Write ID* column a suggested parameter ID is not available, you can now click a “search for next available Write ID” button in the form of an arrow to replace the non-available ID by an available one.
 
 #### Analysis rules for QAction projects \[ID_19726\]
 
@@ -71,12 +71,11 @@ DIS will now define a default set of analysis rules for QAction projects. These 
 
 #### Display editor: Enhanced visualization of Data Display pages \[ID_19753\]
 
-The *Pages* section of the display editor now visualizes data pages and popup windows in a tree view, similar to the way in which they are displayed in DataMiner Cube. Popup windows are shown as child items of the data pages in which they are defined.
+The *Pages* section of the display editor now visualizes data pages and popup windows in a tree view, similar to the way in which they are displayed in DataMiner Cube. Popup windows are shown as child items of the data pages in which they are defined.
 
 Additional changes:
 
 - When you select a web interface page, the URL defined on that page can now be edited in the *Layout* section.
-
 - Warning icons will now appear next to pages that are empty and popup windows in which other popup windows are defined.
 
 #### C# editor: Additional hyperlink in file tab header to return to QAction or Exe code block in protocol or Automation script \[ID_19776\]
@@ -89,13 +88,12 @@ Now, an additional link will allow you to return to the associated protocol XML 
 
 At the top of the DIS Tree window, there is now a breadcrumb control that allows you to quickly navigate to a particular location inside a protocol.xml file.
 
-This control always shows the path towards the node that is currently selected in the tree view (i.e. “Protocol \> Params \> Param”).
+This control always shows the path towards the node that is currently selected in the tree view (i.e. “Protocol \> Params \> Param”).
 
 - If you click a breadcrumb (e.g. “Params”), the corresponding (parent) node will be selected in the tree view (e.g. “Params”).
+- If you click an arrow next to a breadcrumb, a drop-down list will open, allowing you to immediately navigate to one of the child nodes.
 
-- If you click an arrow next to a breadcrumb, a drop-down list will open, allowing you to imme­diately navigate to one of the child nodes.
-
-Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. CTRL+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
+Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. CTRL+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
 
 ### Validator
 
@@ -103,11 +101,9 @@ Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. CTRL+1) has been enhanced
 
 The Validator is now able to automatically fix a number of common errors: replace all invalid characters in a parameter name with an underscore, trimming tag contents, etc.
 
-In the *DIS Validator* pane, all errors that can be fixed will be marked by the following ‘wrench and screwdriver’ icon:
+In the *DIS Validator* pane, all errors that can be fixed will be marked by the following ‘wrench and screwdriver’ icon:
 
 ![](~/release-notes/images/wrench_screwdriver.jpg)
-
-
 
 To fix an error marked by a ‘wrench and screwdriver’ icon, do the following:
 
@@ -118,7 +114,6 @@ To fix an error marked by a ‘wrench and screwdriver’ icon, do the following:
 If, instead of fixing just one error, you want to fix all errors of one particular type or severity, do the following:
 
 - To fix all errors of a particular type, right-click an error, and select *Fix \> All errors of this type.*
-
 - To fix all errors of a particular severity, right-click that severity, and select *Fix \> All errors in this category.*
 
 #### Next-generation Validator \[ID_19714\]\[ID_19715\]\[ID_19976\]
@@ -130,17 +125,13 @@ The new, next-generation Validator is extremely modular in design and allows for
 Also, the error messages shown in the UI have been redesigned. These now include the following additional information:
 
 - Category (Protocol, Parameter, QAction, Group, Trigger, Action, Timer,...)
-
 - Certainty (Certain, Uncertain)
-
 - Fix impact (Breaking, Non-breaking)
-
 - Severity (Critical, Major, Minor, Warning)
-
 - Source (Validator, Major Change Checker)
 
-    > [!NOTE]
-    > When you hover over the columns containing this additional information, tool tips will appear, describing what is meant with e.g. “Breaking” or “Minor”.
+> [!NOTE]
+> When you hover over the columns containing this additional information, tool tips will appear, describing what is meant with e.g. “Breaking” or “Minor”.
 
 **List of possible error messages**
 
@@ -201,52 +192,32 @@ Also, the error messages shown in the UI have been redesigned. These now include
 The following units have been added to the UOM Schema:
 
 - bits/sym
-
 - clk
-
 - deg/s
-
 - Descriptors
-
 - Fields
-
 - fph
-
 - fpm
-
 - ft
-
 - ft^3/min
-
 - gpm
-
 - in
-
 - inAq
-
 - inHg
-
 - kVAh
-
 - kWh
-
 - L/s
-
 - ops (operations per second)
-
 - Steps
-
 - TWH
-
 - var
-
 - W/m^2
 
 #### UOM Schema: Updated units \[ID_19175\]
 
 Following a review of the UOM Schema, the following units have been updated for reasons of consistency.
 
-If you want to update these units in an existing protocol, open the protocol, click *Validate* at the top of the XML editor, and have these replaced automatically. See also [Automatic error fixing \[ID_19712\]](#automatic-error-fixing-id_19712).
+If you want to update these units in an existing protocol, open the protocol, click *Validate* at the top of the XML editor, and have these replaced automatically. See also [Automatic error fixing \[ID_19712\]](#automatic-error-fixing-id_19712).
 
 | Original unit   | Updated unit     |
 |-----------------|------------------|
@@ -417,39 +388,22 @@ If you want to update these units in an existing protocol, open the protocol, cl
 The following units have been added to the UOM Schema:
 
 - Zb, ZB, Zib, ZiB, Yb, YB, Yib, YiB, Zbps, ZBps, ZiBps, Ybps, YBps, YiBps, ym, zm, Mm, Gm, Tm, Pm, Em, Zm, Ym
-
 - zm/h, ym/h, Ym/h, Zm/h, Em/h, Pm/h, Tm/h, Gm/h, Mm/h, ft/h, in/h, ym/s, Ym/s, zm/s, Zm/s, in/s, ft/s, Mm/s, Tm/s, Pm/s, Em/s
-
-- peV, feV, aeV, zeV, yeV, neV, ueV, yJ, eV, ycal, meV, zJ, ceV, zcal, deV,  aJ, acal, keV, fJ, fcal, MeV, pJ, pcal, GeV, nJ, ncal, TeV, uJ, ucal, PeV, mJ, MJ
-
-- mcal, Mcal, cJ, ccal, dJ, EeV, EJ, Ecal, dcal, cal, kcal, ZeV, ZJ, Zcal, YeV, YJ, Ycal, Gcal, TJ,  Tcal, PJ, Pcal
-
+- peV, feV, aeV, zeV, yeV, neV, ueV, yJ, eV, ycal, meV, zJ, ceV, zcal, deV,  aJ, acal, keV, fJ, fcal, MeV, pJ, pcal, GeV, nJ, ncal, TeV, uJ, ucal, PeV, mJ, MJ
+- mcal, Mcal, cJ, ccal, dJ, EeV, EJ, Ecal, dcal, cal, kcal, ZeV, ZJ, Zcal, YeV, YJ, Ycal, Gcal, TJ,  Tcal, PJ, Pcal
 - ZBd, YBd
-
 - yHz, zHz, aHz, fHz, uHz, mHz, cHz, dHz, PHz, EHz, ZHz, YHz
-
 - yW, zW, aW, fW, pW, cW, dW, PW, EW, ZW, YW
-
 - yA, zA, aA, fA, pA, TA, PA, EA, ZA, YA
-
 - yV, zV, aV, fV, pV, cV, dV, TV, PV, EV, ZV, YV
-
 - ys, zs, as, fs, ps, cs, ds, ks, Ms, Gs, Ts, Ps, Es, Zs, Ys
-
 - yF, zF, cF, dF, kF, MF, GF, TF, PF, EF, ZF, YF
-
 - yC, zC, cC, dC, kC, MC, GC, TC, PC, EC, ZC, YC
-
 - yH, zH, aH, fH, pH, cH, dH, kH, MH, GH, TH, PH, EH, ZH, YH
-
 - yPa, zPa, aPa, fPa, pPa, nPa, uPa, TPa, PPa, EPa, ZPa, YPa
-
 - TOhm, POhm, EOhm, ZOhm, YOhm
-
 - Bq
-
 - cmAq, cmHg, mmHg
-
 - Gy, ha, ft^2, ft^3, deg R, kat, m^2, m^3, Np, R, rad, sr, yd, yd/h, yd/s, gal
 
 #### Protocol Schema: Elements added \[ID_19865\]\[ID_19866\]\[ID_19867\]\[ID_19868\]
@@ -457,7 +411,6 @@ The following units have been added to the UOM Schema:
 The following elements have been added to the protocol Schema:
 
 - Protocol.PortSettings.SSH
-
 - Protocol.VersionHistory
 
 #### Protocol schema: Updated attribute rules \[ID_19869\]
@@ -487,11 +440,8 @@ A number of snippets have been enhanced:
 - Protocol root
 
     - General page is now the default page
-
     - Recommended timers have been added
-
     - A precompiled QAction has been added
-
     - An “After Startup” procedure has been added
 
 > [!NOTE]
@@ -506,9 +456,7 @@ A number of snippets have been enhanced:
 - All snippets that check if an element is fully started up and loaded in DataMiner processes have been optimized:
 
     - IsElementActiveInSLDms
-
     - IsElementLoadedInSLElement
-
     - IsElementLoadedInSLNet
 
 #### SLNetTypes.dll updated to version 9.5.13 \[ID_19948\]
@@ -519,4 +467,4 @@ The SLNetTypes.dll file has been updated to version 9.5.13. This will prevent co
 
 #### IDE: Problem with ‘Check for updates’ \[ID_19564\]
 
-When you clicked *Check for updates...* in the *DCP* tab of the *DIS Settings* window, in some cases, the incorrect update package would be downloaded (insider build instead of main build, or vice versa).
+When you clicked *Check for updates...* in the *DCP* tab of the *DIS Settings* window, in some cases, the incorrect update package would be downloaded (insider build instead of main build, or vice versa).

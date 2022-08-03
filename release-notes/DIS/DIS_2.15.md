@@ -1,4 +1,8 @@
-# Release 2.15
+---
+uid: DIS_2.15
+---
+
+# DIS 2.15
 
 ## New features
 
@@ -12,50 +16,37 @@ From now on, instead of pressing this key combination, you can also click the fo
 
 ![](~/release-notes/images/SyncArrow_16x.jpg)
 
-
-
 #### DIS Tree: Pin XML nodes \[ID_20690\]
 
 It is now possible to pin XML nodes to a special pin section at the top of the DIS Tree tool window.
 
 - To pin a node, right-click the node in the DIS Tree, and select *Pin* from the shortcut menu.
-
 - To unpin a pinned node, right-click the node either in the DIS Tree or the pin section, and select *Unpin* from the shortcut menu.
-
-- To unpin all pinned nodes, right-click a random node in the pin section, and select *Unpin All* from the shortcut menu.
+- To unpin all pinned nodes, right-click a random node in the pin section, and select *Unpin All* from the shortcut menu.
 
 When you hover over a pinned node in the pin section, a tooltip will appear, showing you more information about the node in question.
 
 #### XML editor: Shortcut menu option “Add QAction Reference” renamed to “‘DLL Imports” \[ID_20702\]
 
-Up to now, when you clicked the small Down arrow in front of a \<QAction> element, you could select the *Add QAction Reference* menu option to insert references to pre-compiled QActions into the *dllImport* attribute of the \<QAction> element. That *Add QAction Reference* menu option has now been renamed to *DLL Imports*.
+Up to now, when you clicked the small Down arrow in front of a \<QAction> element, you could select the *Add QAction Reference* menu option to insert references to pre-compiled QActions into the *dllImport* attribute of the \<QAction> element. That *Add QAction Reference* menu option has now been renamed to *DLL Imports*.
 
 When you select the *DLL Imports* menu option, a submenu will now list
 
 - all QActions of which the *options* attribute contains the “precompile” option, as well as
-
 - all commonly used system DLL files:
 
     - Newtonsoft.Json.dll
-
     - SLDatabase.dll
-
     - SLProtocolScripts.dll
-
     - System.Data.dll
-
     - System.Runtime.Serialization.dll
-
     - System.Web.dll
-
     - System.Web.Extensions.dll
-
     - System.Xml.dll
-
     - System.Xml.Linq.dll
 
 > [!NOTE]
-> In the submenu, all DLL files already inserted into the *dllimport* attribute of the \<QAction> element will be indicated by a check mark.
+> In the submenu, all DLL files already inserted into the *dllimport* attribute of the \<QAction> element will be indicated by a check mark.
 
 #### XML editor: Enhanced protocol comparison \[ID_20971\]
 
@@ -126,7 +117,7 @@ The following checks and error messages have been added or updated.
 | 5.3.1  | Trigger.CheckTimeTag      | MultipleAfterStartup           |
 | 5.5.1  | Trigger.CheckConditionTag | ConditionOnTriggerAfterStartup |
 
-The *Param.CheckWidthAttribute* check replaces the legacy Validator return codes 4501 and 4502.
+The *Param.CheckWidthAttribute* check replaces the legacy Validator return codes 4501 and 4502.
 
 ### XML Schema
 
@@ -134,10 +125,10 @@ The *Param.CheckWidthAttribute* check replaces the legacy Validator return code
 
 The syntax rules for the following elements and/or attributes have been updated:
 
-| Element/attribute               | Syntax rule                                                                                                                                                                                      |
-|---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PingInterval.DefaultValue       | \-  Range: 1000 - 300,000<br> -  Value must be a multiple of 1000. |
-| PortSettings.TimeoutTime        | Range: 10 - 120,000                                                                                                                                                                              |
+| Element/attribute | Syntax rule |
+|-------------------|-------------|
+| PingInterval.DefaultValue | \-  Range: 1000 - 300,000<br> -  Value must be a multiple of 1000. |
+| PortSettings.TimeoutTime | Range: 10 - 120,000 |
 | PortSettings.TimeoutTimeElement | \-  Range: 1000 - 120,000<br> -  Value must be a multiple of 1000. |
 
 #### Protocol Schema: New elements and attributes \[ID_20802\]
@@ -198,7 +189,7 @@ Next to certain XML elements or attributes, you will find a “jump to linked it
 
 When you hover over a paper clip icon, the linked items are grouped by category (e.g. *Incoming*, *Outgoing*,...). A new category has now been added: *Conditions*. This new category will group all parameters referred to in the \<Condition> element contained within the element with the paper clip icon.
 
-If, for example, an \<Action> element contains the following \<Condition> element, the *Conditions* section of the linked item list will contain a reference to the parameter used in that condition (in this case the parameter with ID 10).
+If, for example, an \<Action> element contains the following \<Condition> element, the *Conditions* section of the linked item list will contain a reference to the parameter used in that condition (in this case the parameter with ID 10).
 
 ```xml
 <Condition><![CDATA[id:10 == 1]]></Condition>
@@ -209,11 +200,8 @@ If, for example, an \<Action> element contains the following \<Condition> elemen
 The following elements and/or attributes now also have virtual comments:
 
 - Protocol.Pairs.Pair.Content.ResponseOnBadCommand
-
 - Protocol.ParameterGroups.Group
-
 - Protocol.ParameterGroups.Group.Params.Param
-
 - Protocol.Params.Param.Dependencies.Id
 
 **More information in DIS Tree tool window**
@@ -221,9 +209,7 @@ The following elements and/or attributes now also have virtual comments:
 From now on, the DIS Tree will show more information on the following elements:
 
 - Protocol.Ownership
-
 - Protocol.SeverityBubbleUp
-
 - Protocol.VersionHistory
 
 #### Automation script schema: Enhanced ID constraints \[ID_20799\]
@@ -237,7 +223,6 @@ Also, the type of the Exe@id attribute has been changed to “xs:positiveInteger
 The ‘Title Begin’ snippet now contains two placeholders:
 
 - TitleName
-
 - TitleDescription
 
 See the following example:
@@ -266,7 +251,7 @@ This will prevent table names from being included twice in column parameter name
 
 #### IDE - Grid view: Horizontal scrollbar was missing when grid was empty \[ID_20629\]
 
-When no rows were shown in the *DIS Grid View* tool window, in some cases, the horizontal scrollbar would be missing. As a result, users were unable to adapt filters defined on columns that were not visible.
+When no rows were shown in the *DIS Grid View* tool window, in some cases, the horizontal scrollbar would be missing. As a result, users were unable to adapt filters defined on columns that were not visible.
 
 #### IDE - XML editor: IntelliSense listed session names incorrectly \[ID_20779\]
 
@@ -274,4 +259,4 @@ When adding a new \<Session> element inside a group’s \<Content> element, Inte
 
 #### IDE - Display editor: Units selection box did not correctly list the units defined in the UOM Schema \[ID_20928\]
 
-When you configured a parameter in the Display editor, in some cases, the *Units* selection box would not correctly list the units defined in the UOM Schema.
+When you configured a parameter in the Display editor, in some cases, the *Units* selection box would not correctly list the units defined in the UOM Schema.

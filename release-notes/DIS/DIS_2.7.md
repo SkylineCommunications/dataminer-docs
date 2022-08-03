@@ -1,4 +1,8 @@
-# DIS 2.7.1 release notes
+---
+uid: DIS_2.7
+---
+
+# DIS 2.7
 
 ## New features
 
