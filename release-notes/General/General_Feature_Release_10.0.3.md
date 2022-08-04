@@ -1,4 +1,8 @@
-# Feature release 10.0.3
+---
+uid: General_Feature_Release_10.0.3
+---
+
+# General Feature Release 10.0.3
 
 ## New features
 
@@ -6,7 +10,7 @@
 
 #### New SLNet setting “ClusterTransitionStateTimeout” in MaintenanceSettings.xml \[ID_22136\]
 
-In the *MaintenanceSettings.xml* file, you can now specify a cluster transition state timeout (in seconds).
+In the *MaintenanceSettings.xml* file, you can now specify a cluster transition state timeout (in seconds).
 
 If you do so, DataMiner Agents leaving the DataMiner System (i.e. cluster) will leave the transition state after the above-mentioned timeout delay, starting from the last received notification from any of the DataMiner processes. This will prevent DataMiner Agents from getting stuck in the transition state.
 
@@ -38,9 +42,7 @@ recursivefullfilter=(1002 > 0)
 From now on, when serial clients receive a response with a variable length (specified in a parameter of type “next param”), they will be able to parse it correctly when the trailer is not at the very end, but only if the following conditions apply:
 
 - The response has to contain a trailer that is set before the data parameter. It does not have to contain a header.
-
 - A length parameter should be located before the data parameter. It should be of length type “next param” and raw type “numeric text”.
-
 - The length parameter has to be located either between two fixed parameters (e.g. “header before” and “trailer after”) or at the beginning of the response.
 
 Up to now, when a response like the one in the example below was received, the data at the end would only be read after the command had timed out.
@@ -54,27 +56,26 @@ Up to now, when a response like the one in the example below was received, the d
 The NotifyDataMiner function “NT_DELETE_FOLDER” is now able to bypass the DataMiner recycle bin.
 
 - If the function is called with its second argument set to true, the item specified in the first argument will be moved to the DataMiner recycle bin (default behavior if no second argument is passed).
-
 - If the function is called with its second argument set to false, the item specified in the first argument will not be moved to the DataMiner recycle bin. Instead, it will physically be deleted.
 
 Example:
 
-```txt
+```csharp
 string folderName = "Configurations";
 bool bRecycle = true;
 protocol.NotifyDataMiner(182 /*NT_DELETE_FOLDER*/, folderName, bRecycle);
 ```
 
 > [!NOTE]
-> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the *C:\\Skyline DataMiner\\Documents\\* folder. So, in the example above, the function will try to delete the *C:\\Skyline DataMiner\\Documents\\Configurations* folder. If you want it to delete the *C:\\Skyline DataMiner\\Configurations* folder, then you have to specify the full path.
+> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the *C:\\Skyline DataMiner\\Documents\\* folder. So, in the example above, the function will try to delete the *C:\\Skyline DataMiner\\Documents\\Configurations* folder. If you want it to delete the *C:\\Skyline DataMiner\\Configurations* folder, then you have to specify the full path.
 
 ### DMS Cube
 
 #### Visual Overview: Adding a search box to a SetVar selection box control \[ID_24448\]
 
-Using a *SetVar* data field, you can turn a shape or a page into a selection box control that allows users to update a session variable. From now on, it is possible to add a search box to such a selection box.
+Using a *SetVar* data field, you can turn a shape or a page into a selection box control that allows users to update a session variable. From now on, it is possible to add a search box to such a selection box.
 
-To do so, specify “Control=FilterComboBox” in a *SetVarOptions* data field. See the following example:
+To do so, specify “Control=FilterComboBox” in a *SetVarOptions* data field. See the following example:
 
 | Shape data field | Value                                             |
 |------------------|---------------------------------------------------|
@@ -91,8 +92,7 @@ Elements that request data from a device via a serial port of type TCP/IP now su
 If you want such an element to use SSL/TLS encryption, then do the following:
 
 1. Right-click the element, and select *Edit*.
-
-2. In the *Edit* tab, go to the *Serial connection* section containing the settings of the port in question, and select the *SSL/TLS* check box.
+2. In the *Edit* tab, go to the *Serial connection* section containing the settings of the port in question, and select the *SSL/TLS* check box.
 
 > [!NOTE]
 > DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1).
@@ -103,7 +103,7 @@ If you want such an element to use SSL/TLS encryption, then do the following:
 
 Up to now, when you clicked a connection line between shapes, the path connected to that line was highlighted by default.
 
-This default behavior can now be changed by adding a *SelectionHighlighting* option to the shape that represents the connection and setting it to “False”. See the following example.
+This default behavior can now be changed by adding a *SelectionHighlighting* option to the shape that represents the connection and setting it to “False”. See the following example.
 
 | Shape data field | Value                       |
 |------------------|-----------------------------|
@@ -112,13 +112,13 @@ This default behavior can now be changed by adding a *SelectionHighlighting* op
 
 #### DBMaintenance.xml/DBMaintenanceDMS.xml: New TTL type “cjobsection” \[ID_24549\]\[ID_24575\]
 
-In the *DBMaintenance.xml* and *DBMaintenanceDMS.xml* files, you can configure the “time to live” (TTL) settings of different types of database records. From now on, you can also specify TTL settings for job objects stored in an Elastic database.
+In the *DBMaintenance.xml* and *DBMaintenanceDMS.xml* files, you can configure the “time to live” (TTL) settings of different types of database records. From now on, you can also specify TTL settings for job objects stored in an Elastic database.
 
 See the following example:
 
 ```xml
 <MaintenanceConfigs>
-  <MaintenanceConfig type="DMS"                   xmlns="http://www.skyline.be/config/dbmaintenance">
+  <MaintenanceConfig type="DMS" xmlns="http://www.skyline.be/config/dbmaintenance">
     <TimeToLive>
       <TTL type="cjobsection">
         <Indexing>6M</Indexing>
@@ -131,7 +131,7 @@ See the following example:
 
 #### Visual Overview: New FilterContext option for shape linked to alarm filter \[ID_24577\]
 
-When a shape is linked to an alarm filter, you can now add an additional element, service or view filter to the *AlarmSummary* shape data, using a pipe symbol ("\|") as separator. The syntax of this filter is "*FilterContext=*" followed by the name or ID of the element, service or view.
+When a shape is linked to an alarm filter, you can now add an additional element, service or view filter to the *AlarmSummary* shape data, using a pipe symbol ("\|") as separator. The syntax of this filter is "*FilterContext=*" followed by the name or ID of the element, service or view.
 
 If you have configured the shape to open an alarm tab in the Alarm Console when it is clicked, this filter will also be taken into account for the alarm tab. For example:
 
@@ -144,9 +144,9 @@ If you have configured the shape to open an alarm tab in the Alarm Console when 
 
 **New Set option “SetTrigger=Event”**
 
-Up to now, in a page-level shape data field of type *Execute*, you could specify the “SetTrigger=ValueChanged” option in a *Set* command to have parameters or session variables updated on an open Visual Overview page when a specific value changes.
+Up to now, in a page-level shape data field of type *Execute*, you could specify the “SetTrigger=ValueChanged” option in a *Set* command to have parameters or session variables updated on an open Visual Overview page when a specific value changes.
 
-From now on, it is also possible to have a *Set* command update parameters or session variables on an open Visual Overview page when an event occurs on that page. To do so, you have to specify the “SetTrigger=Event” option.
+From now on, it is also possible to have a *Set* command update parameters or session variables on an open Visual Overview page when an event occurs on that page. To do so, you have to specify the “SetTrigger=Event” option.
 
 In the following example, every time the event is triggered from the router control, the set command will be executed with the label of the clicked matrix. Clicking the same input or output multiple times will each time cause the set command to be executed. Note that, if you would specify “SetTrigger=ValueChanged” instead of “SetTrigger=Event”, clicking the same input or output multiple times would cause the set command to be executed only once.
 
@@ -155,7 +155,7 @@ In the following example, every time the event is triggered from the router cont
 | Execute          | Set\|1/1\|350\|\[Event:IOClicked,Label\]\|SetTrigger=Event |
 
 > [!NOTE]
-> All *Set* commands with a “SetTrigger=Event” option will be triggered when an event occurs, even those that do not contain an \[Event:\] placeholder.
+> All *Set* commands with a “SetTrigger=Event” option will be triggered when an event occurs, even those that do not contain an \[Event:\] placeholder.
 
 **Additional IOClicked event arguments**
 
@@ -170,7 +170,7 @@ The following additional arguments can now be specified when configuring the rou
 
 It is now possible to configure the minimum height of the chart area of a trend component. Previously, this was always set to 200 pixels. To make sure this height is reached, the legend of the trend component will become smaller when necessary, or it may even be hidden.
 
-To configure the minimum height of a trend component, add the option *MinChartHeight* to the *ParametersOptions* shape data.
+To configure the minimum height of a trend component, add the option *MinChartHeight* to the *ParametersOptions* shape data.
 
 For example, with the configuration below, the minimum height of the chart area will be 400 pixels.
 
@@ -192,9 +192,9 @@ A new setting, *Auto-expand parameters*, is now available for the parameter feed
 
 #### Dashboards app: New Bookings data set & Node edge graph component improvements \[ID_24480\]
 
-A new *Bookings* data set is now available in the Dashboards app, which can be filtered on a specific time range. This can be used to add booking data to a *Drop-down*, *List* or *Tree* feed component. If the entire booking data set is added, a time range feed should also be added as a filter. Booking data can also be added as a filter to a *Node edge graph* component. To specify a booking data feed in a URL, specify *bookings=bookingsID*.
+A new *Bookings* data set is now available in the Dashboards app, which can be filtered on a specific time range. This can be used to add booking data to a *Drop-down*, *List* or *Tree* feed component. If the entire booking data set is added, a time range feed should also be added as a filter. Booking data can also be added as a filter to a *Node edge graph* component. To specify a booking data feed in a URL, specify *bookings=bookingsID*.
 
-Because it is now possible to use a booking data filter, the *Reservation instance ID* setting is no longer available for the *Node edge graph* component. If a service filter is used for this component, it must be linked with a time range feed. Finally, the *Service definition* setting for the *Node edge graph* component has been changed from a text box to a drop-down list.
+Because it is now possible to use a booking data filter, the *Reservation instance ID* setting is no longer available for the *Node edge graph* component. If a service filter is used for this component, it must be linked with a time range feed. Finally, the *Service definition* setting for the *Node edge graph* component has been changed from a text box to a drop-down list.
 
 ### DMS CPE Management
 
@@ -208,8 +208,8 @@ This method returns all masked object trees that match the specified filter. If 
 
 In the following example, a filter is passed to check whether the view with ID 2 is masked.
 
-```txt
-var managedFilter = new ManagedFilter<DMAObjectRefTree,IDMAObjectRef>                    (DMAObjectRefTreeExposers.Data,Comparer.Equals,                    new ViewID(2),null);
+```csharp
+var managedFilter = new ManagedFilter<DMAObjectRefTree,IDMAObjectRef> (DMAObjectRefTreeExposers.Data,Comparer.Equals, new ViewID(2),null);
 ```
 
 **GetMaskedDMAObjectRefTrees(managedFilter);**
@@ -289,7 +289,7 @@ In the Services list of the Services app or a service list Visio component, the 
 
 #### DataMiner Cube - Alarm Console: Enhanced visibility of focus icons in Skyline Black theme \[ID_24476\]
 
-In the *Active alarms* tab page, for each alarm that can be considered “unexpected”, an icon is displayed in the *Focus* column. Those focus icons now have an enhanced visibility, especially in the Skyline Black theme.
+In the *Active alarms* tab page, for each alarm that can be considered “unexpected”, an icon is displayed in the *Focus* column. Those focus icons now have an enhanced visibility, especially in the Skyline Black theme.
 
 #### No more synchronization error notices after deleting services \[ID_24479\]
 
@@ -301,7 +301,7 @@ The button visualization and button panel visualization are no longer available 
 
 #### DataMiner Cube - Trending: Intermediary points added when exporting a trend graph as line graph \[ID_24580\]
 
-If, when exporting trend data to CSV, you select the *Line graph instead of block graph* option, from now on, intermediary points will be added if no data is available at certain timestamps (which can happen when a value remained constant).
+If, when exporting trend data to CSV, you select the *Line graph instead of block graph* option, from now on, intermediary points will be added if no data is available at certain timestamps (which can happen when a value remained constant).
 
 Depending on the step size of the data points, a point will be added at fixed intervals. Previously, points would only be added when a value changed.
 
@@ -321,12 +321,11 @@ In the Activity panel, a number of small layout enhancements have been made, esp
 
 In the Resource Manager app, it is now possible to instantiate functions without an entry point table.
 
-- The function DVE needs to be activated manually in the *Generic DVE table* section of the main element’s *General parameters* page.
+- The function DVE needs to be activated manually in the *Generic DVE table* section of the main element’s *General parameters* page.
 
 - The names of the resource and the function DVE will need to be changed in the *Edit resource* window.
 
     - Default resource name: The name of the function.
-
     - Default function DVE name: The name of the function with an automatically incremented suffix.
 
 #### DataMiner Cube - Visual Overview: Signal path update enhancements \[ID_24599\]
@@ -340,7 +339,7 @@ During a DataMiner upgrade, a rollback package will no longer be created.
 To downgrade to a specific DataMiner version, from now on, it will suffice to install the full installation package of that earlier DataMiner version.
 
 > [!NOTE]
-> In the DataMiner Taskbar Utility, the *Rollback* option has also been removed from the *Maintenance* menu.
+> In the DataMiner Taskbar Utility, the *Rollback* option has also been removed from the *Maintenance* menu.
 
 #### DataMiner installer - MySQL: “sql_mode” setting set to “” by default \[ID_24653\]
 
@@ -348,11 +347,11 @@ When you install a DataMiner Agent with a MySQL database, the DataMiner installe
 
 #### Changing parameter names for a DVE child element is no longer possible \[ID_24669\]
 
-It is no longer possible to change parameter names for a DVE child element. The *Parameter names* command will therefore no longer be available in the card header menu after opening a DVE child element.
+It is no longer possible to change parameter names for a DVE child element. The *Parameter names* command will therefore no longer be available in the card header menu after opening a DVE child element.
 
 #### DataMiner Cube: Enhanced “Back” buttons in card headers and browser controls \[ID_24693\]
 
-In card headers and browser controls, the *Back* button will now always be visible, either enabled or disabled.
+In card headers and browser controls, the *Back* button will now always be visible, either enabled or disabled.
 
 Also, the layout of WFM card headers has been optimized.
 
@@ -419,9 +418,7 @@ From now on, when an element, service or view is deleted, Visual Overview will d
 The view state returned by the following methods would incorrectly not take into account the user security.
 
 - GetAlarmStateForView
-
 - GetView
-
 - GetViewsForParent
 
 > [!NOTE]
@@ -429,7 +426,7 @@ The view state returned by the following methods would incorrectly not take into
 
 #### DataMiner Cube - Automation/Scheduler: Problem when adding multiple recipients with an identical “full name” in the To field of an Email action \[ID_24373\]
 
-In some cases, an error could occur when you added multiple recipients with an identical “full name” in the *To* field of an *Email* action.
+In some cases, an error could occur when you added multiple recipients with an identical “full name” in the *To* field of an *Email* action.
 
 #### DataMiner Cube - Protocols & Templates: Problem when opening an alarm template \[ID_24453\]
 
@@ -440,9 +437,9 @@ In some cases, an exception could be thrown when, in a DataMiner Cube running on
 
 #### DataMiner Cube - Alarm Console: Masked alarms tab page incorrectly had a Focus column \[ID_24455\]
 
-Since DataMiner version 10.0.1, the *Active alarms* tab page has a *Focus* column, in which an icon is displayed for each alarm that can be considered “unexpected”.
+Since DataMiner version 10.0.1, the *Active alarms* tab page has a *Focus* column, in which an icon is displayed for each alarm that can be considered “unexpected”.
 
-Up to now, this *Focus* column would also incorrectly be present on the *Masked alarms* tab page.
+Up to now, this *Focus* column would also incorrectly be present on the *Masked alarms* tab page.
 
 #### Service & Resource Management - Bookings app: Amount of bookings displayed on the bookings timeline did not match the amount of bookings listed in the bookings list \[ID_24460\]
 
@@ -464,7 +461,7 @@ In some cases, a problem could occur when SLProtocol retrieved data from a logge
 
 #### DataMiner Cube - Automation: IF action’s “Wait for positive result for at most” values not read­able in entry box \[ID_24497\]
 
-When configuring an IF action in an Automation script, it is possible to select the *Wait for positive result for at most* option and enter a time span, in order to make the script wait during the specified period before evaluating the If condition. Due to a font color issue, the values in that entry box would not be readable.
+When configuring an IF action in an Automation script, it is possible to select the *Wait for positive result for at most* option and enter a time span, in order to make the script wait during the specified period before evaluating the If condition. Due to a font color issue, the values in that entry box would not be readable.
 
 #### Memory leak in SLXML due to a parsing issue in SLDataMiner \[ID_24503\]
 
@@ -482,7 +479,7 @@ In some rare cases, an error in SLDataMiner would cause other problems to occur 
 
 #### Service & Resource Management: Editing a service in the services list would incorrectly clear the IDOfSelection session variable \[ID_24519\]
 
-When you select a service in the services list, the ID of that service is stored in the *IDOfSelection* session variable. In some cases, that session variable would incorrectly be cleared when you edited the selected service.
+When you select a service in the services list, the ID of that service is stored in the *IDOfSelection* session variable. In some cases, that session variable would incorrectly be cleared when you edited the selected service.
 
 #### DataMiner Cube: Weather service applet would incorrectly appear on the home page \[ID_24542\]
 
@@ -490,7 +487,7 @@ Prior to DataMiner version 9.6.5, the DataMiner Cube home page would show a weat
 
 #### DataMiner Cube - Visual Overview: Problem when sorting generated shapes that represent alarms \[ID_24550\]
 
-When you used a group-level shape data field of type *ChildrenSort* to sort automatically generated shapes representing alarms, in some cases, those shapes would not be sorted correctly when sorted by an alarm property.
+When you used a group-level shape data field of type *ChildrenSort* to sort automatically generated shapes representing alarms, in some cases, those shapes would not be sorted correctly when sorted by an alarm property.
 
 #### Virtual function impact change would incorrectly not trigger an update of the virtual function’s element state \[ID_24559\]
 
@@ -498,7 +495,7 @@ In some cases, a virtual function impact change would incorrectly not trigger an
 
 #### DataMiner Cube: Clicking “Open Cube Mobile” would not always direct you to the landing page \[ID_24560\]
 
-When, in DataMiner Cube, you clicked *Open Cube Mobile*, in some cases, you were incorrectly directed to the Monitoring & Control app. From now on, clicking *Open Cube Mobile* will always direct you to the landing page.
+When, in DataMiner Cube, you clicked *Open Cube Mobile*, in some cases, you were incorrectly directed to the Monitoring & Control app. From now on, clicking *Open Cube Mobile* will always direct you to the landing page.
 
 #### All data retrieved from an SNMP table would incorrectly be dropped when some OIDs could not be found \[ID_24561\]
 
@@ -532,7 +529,7 @@ When you created a new element, service, view or redundancy group, in some cases
 
 #### DataMiner Cube - Visual Overview: Not possible to click DCF connection lines when a place­holder was used in the Connection shape \[ID_24618\]
 
-In some rare cases, it would not be possible to click DCF connection lines when a placeholder was specified in the *Connection* shape. Also, connection lines would no longer become transparent when hovering the mouse pointer over them.
+In some rare cases, it would not be possible to click DCF connection lines when a placeholder was specified in the *Connection* shape. Also, connection lines would no longer become transparent when hovering the mouse pointer over them.
 
 #### Module names in SLErrors.txt in upper case \[ID_24626\]
 
@@ -552,11 +549,11 @@ In the list of services in the Bookings and Services apps, it could occur that t
 
 #### Service & Resource Management: Incorrect result when comparing service definitions \[ID_24662\]
 
-If an Automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the *Equals* method returned false incorrectly.
+If an Automation script compared two service definitions with at least one interface configuration or edge in the diagram, it could occur that the *Equals* method returned false incorrectly.
 
 #### DataMiner Cube - Views: Split view icons would incorrectly display the alarm color of first-level child items as Undefined \[ID_24665\]
 
-When, in the *Settings* window, *View alarm level* was set to “Split”, in some cases, the part of the view icon that has to display the alarm color of the first-level child items would incorrectly display the alarm color associated with the *Undefined* status.
+When, in the *Settings* window, *View alarm level* was set to “Split”, in some cases, the part of the view icon that has to display the alarm color of the first-level child items would incorrectly display the alarm color associated with the *Undefined* status.
 
 #### DataMiner Cube - EPM/CPE: Problem with chain field option “statusTabs” \[ID_24668\]
 
@@ -568,7 +565,7 @@ When you used the TAB key to navigate from one control to another, navigation wo
 
 #### DataMiner Cube - Visual Overview: Cards opened from within a Visio page would not open undocked or in new card \[ID_24675\]
 
-When you opened a card by right-clicking a Visio shape linked to e.g. an element or a view and choosing either *Open ... undocked* or *Open ... in a new card*, in some cases, the card would not open undocked or in a new card.
+When you opened a card by right-clicking a Visio shape linked to e.g. an element or a view and choosing either *Open ... undocked* or *Open ... in a new card*, in some cases, the card would not open undocked or in a new card.
 
 #### DataMiner Cube - Data Display: DPI settings not always taken into account when rendering selection boxes and tool tips \[ID_24685\]
 

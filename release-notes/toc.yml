@@ -67,23 +67,22 @@
         topicUid: General_Feature_Release_10.0.11
       - name: General Feature Release 10.0.10
         topicUid: General_Feature_Release_10.0.10
-
-      - name: SLC_RN_DMSv10.0.9_REV001
-        href: General/SLC_RN_DMSv10.0.9_REV001.md
-      - name: SLC_RN_DMSv10.0.8_REV000
-        href: General/SLC_RN_DMSv10.0.8_REV000.md
-      - name: SLC_RN_DMSv10.0.7_REV001
-        href: General/SLC_RN_DMSv10.0.7_REV001.md
-      - name: SLC_RN_DMSv10.0.6_REV000
-        href: General/SLC_RN_DMSv10.0.6_REV000.md
-      - name: SLC_RN_DMSv10.0.5_REV000
-        href: General/SLC_RN_DMSv10.0.5_REV000.md
-      - name: SLC_RN_DMSv10.0.4_REV003
-        href: General/SLC_RN_DMSv10.0.4_REV003.md
-      - name: SLC_RN_DMSv10.0.3_REV002
-        href: General/SLC_RN_DMSv10.0.3_REV002.md
-      - name: SLC_RN_DMSv10.0.2_REV002
-        href: General/SLC_RN_DMSv10.0.2_REV002.md
+      - name: General Feature Release 10.0.9
+        topicUid: General_Feature_Release_10.0.9
+      - name: General Feature Release 10.0.8
+        topicUid: General_Feature_Release_10.0.8
+      - name: General Feature Release 10.0.7
+        topicUid: General_Feature_Release_10.0.7
+      - name: General Feature Release 10.0.6
+        topicUid: General_Feature_Release_10.0.6
+      - name: General Feature Release 10.0.5
+        topicUid: General_Feature_Release_10.0.5
+      - name: General Feature Release 10.0.4
+        topicUid: General_Feature_Release_10.0.4
+      - name: General Feature Release 10.0.3
+        topicUid: General_Feature_Release_10.0.3
+      - name: General Feature Release 10.0.2
+        topicUid: General_Feature_Release_10.0.2
       - name: General Main Release 10.0.0
         topicUid: General_Main_Release_10.0.0
   - name: DataMiner Cube release notes

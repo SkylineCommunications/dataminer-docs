@@ -1,4 +1,8 @@
-# Feature release 10.0.8
+---
+uid: General_Feature_Release_10.0.8
+---
+
+# General Feature Release 10.0.8
 
 ## New features
 
@@ -30,7 +34,6 @@ A typical matrix layout shows the inputs on the left and the outputs at the top.
 In a protocol.xml file, it is now possible to configure the following matrix layouts:
 
 - InputLeftOutputTop (default)
-
 - InputTopOutputLeft
 
 See the following example:
@@ -42,19 +45,19 @@ See the following example:
 
 Per matrix, the layout can then be overridden using the NotifyDataMiner call NT_UPDATE_PORTS. See the examples below:
 
-```txt
+```csharp
 NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DMA_ID]","InputLeftOutputTop");
 ```
 
-```txt
+```csharp
 NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DMA_ID]","InputTopOutputLeft");
 ```
 
-```txt
+```csharp
 NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DMA_ID]",MatrixLayoutOptions.INPUT_LEFT_OUTPUT_TOP);
 ```
 
-```txt
+```csharp
 NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DMA_ID]",MatrixLayoutOptions.INPUT_TOP_OUTPUT_LEFT);
 ```
 
@@ -129,9 +132,9 @@ In a protocol, it is now possible to specify which compression algorithm(s) shou
 
 ### DMS Cube
 
-#### Analytics tables in Elasticsearch database can now be included or excluded in custom Data­Miner backup \[ID_25572\]
+#### Analytics tables in Elasticsearch database can now be included or excluded in custom DataMiner backup \[ID_25572\]
 
-When you configure a custom backup in Cube, you can now select whether the Analytics tables in the Elasticsearch database, which are used for pattern matching, should be included. To do so, in System Center, go to the *content* tab of the *Backup* page, select the *Use custom backup* option, select *Create a backup of the database*, and either select or clear the selection of the check box *Include analytics tables in backup*. By default, this option is selected.
+When you configure a custom backup in Cube, you can now select whether the Analytics tables in the Elasticsearch database, which are used for pattern matching, should be included. To do so, in System Center, go to the *content* tab of the *Backup* page, select the *Use custom backup* option, select *Create a backup of the database*, and either select or clear the selection of the check box *Include analytics tables in backup*. By default, this option is selected.
 
 #### View cards: New columns added to view card list view \[ID_25715\]
 
@@ -162,25 +165,19 @@ Within a particular dashboard theme, you can now define specific themes per comp
 In a component theme, you can currently configure the following properties:
 
 - Component title text styles
-
 - Component background and font color
-
 - Component margin and padding
-
 - Component border styles
-
 - Component shadows
 
 You can change a component’s theme in the following ways:
 
 - Select one of the existing component themes defined in the current dashboard theme.
-
 - Customize the component’s current theme.
 
 You can create new component themes in the following ways:
 
 - Define a new component theme when creating or editing a dashboard theme.
-
 - Save a component’s theme after having customized it.
 
 > [!NOTE]
@@ -300,9 +297,7 @@ UI components in interactive Automation scripts launched from a mobile app can n
 From now on, the following profile data can be stored either in XML format on the DataMiner Agents (default) or in Indexing Engine:
 
 - ProfileDefinitions
-
 - ProfileInstances
-
 - ProfileParameters
 
 #### New notice will now appear when a DMA that is not using Indexing Engine has an IDP license but no ServiceManager license \[ID_25762\]
@@ -349,7 +344,6 @@ The DataMiner Installer now targets Microsoft .NET Framework 4.6.2.
 From now on, when you launch the SLLogCollector tool, the following options will be selected by default:
 
 - Include memory dump (when run-time errors have been found on the system)
-
 - Save to SLLogCollector folder on desktop
 
 #### Logs will now include Cassandra yaml file parsing errors \[ID_25809\]
@@ -388,7 +382,7 @@ In some rare cases, alarms could get stuck in the Alarm Console. This has now be
 
 The EULA page has been updated.
 
-This page can be accessed by clicking *Skyline software license terms* in the *About* window of Cube and the HTML5 applications, or by going to http://\<IP address of DMA>/EULA.htm on the DataMiner Agent.
+This page can be accessed by clicking *Skyline software license terms* in the *About* window of Cube and the HTML5 applications, or by going to `http://<IP address of DMA>/EULA.htm` on the DataMiner Agent.
 
 #### DataMiner Cube - Protocols & Templates: Link to Cube logging added to error window that appears when a server-side error occurred while uploading a functions file \[ID_25953\]
 
@@ -422,7 +416,7 @@ From now on, viewing and creating recurring patterns in trend data (i.e. “tags
 
 #### DataMiner.xml: XML namespace now set during DataMiner installation \[ID_26011\]
 
-In the DataMiner.xml file, from now on, the XML namespace will by default be set to   “xmlns=http://www.skyline.be/config/dataminer” during a DataMiner installation.
+In the DataMiner.xml file, from now on, the XML namespace will by default be set to   “xmlns=http://www.skyline.be/config/dataminer” during a DataMiner installation.
 
 ### Fixes
 
@@ -438,7 +432,7 @@ Together with this fix, the following changes have also been made:
 
 - Automatic recovery of SLNet connections has now been rendered obsolete and is no longer supported.
 
-- The event cache log options (SLNetClientTest \> Advanced \> Options \> SLNet Options \> EventCacheLogOptions) now support “filter=xxxxx” keywords to limit the output to specific types. “xxxxx” can be “element”, “dma”, “alarm” or any of the types listed in SLNetClientTest \> Diagnostics \> Caches & Subscriptions \> GeneralCacheStats \> Cache for xxxxxxxxx.
+- The event cache log options (SLNetClientTest \> Advanced \> Options \> SLNet Options \> EventCacheLogOptions) now support “filter=xxxxx” keywords to limit the output to specific types. “xxxxx” can be “element”, “dma”, “alarm” or any of the types listed in SLNetClientTest \> Diagnostics \> Caches & Subscriptions \> GeneralCacheStats \> Cache for xxxxxxxxx.
 
 #### Miscellaneous small fixes \[ID_25645\]
 
@@ -562,7 +556,7 @@ If the name of the enhanced view was not identical to the system name, the EPM c
 
 #### DataMiner Cube - Visual Overview: Filtered alarm tab would not open when you clicked an alarm summary shape \[ID_25901\]
 
-When you click a shape with an alarm filter in an *AlarmSummary* data item and the name of an alarm tab in an *AlarmTab* data item, Cube will open the specified alarm tab (if it has a filter applied) and apply the alarm filter specified in the *AlarmSummary* data item.
+When you click a shape with an alarm filter in an *AlarmSummary* data item and the name of an alarm tab in an *AlarmTab* data item, Cube will open the specified alarm tab (if it has a filter applied) and apply the alarm filter specified in the *AlarmSummary* data item.
 
 In some cases, when the tab page did not exist yet and the Alarm Console was collapsed, the tab page was created but the Alarm Console would incorrectly not be opened.
 
@@ -617,7 +611,6 @@ When, on a Visio page, you selected an item in a tree view to which you had adde
 When a DynamicTableQuery is passed to SLelement, it is possible to add a column filter in one of the following formats:
 
 - Value= \<COLUMNPID> == \<Value>
-
 - Fullfilter= \<COLUMNPID>==\<Value>
 
 Up to now, when such a column filter contained the table parameter ID instead of the column parameter ID, in some cases, either a NULL response would incorrectly be returned or an error would occur in SLElement.

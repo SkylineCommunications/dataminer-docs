@@ -1,4 +1,8 @@
-# Feature release 10.0.6
+---
+uid: General_Feature_Release_10.0.6
+---
+
+# General Feature Release 10.0.6
 
 ## New features
 
@@ -8,7 +12,7 @@
 
 From now on, LDAP queries will, by default, time out after 5 minutes.
 
-This setting can be configured in the *DataMiner.xml* file. Enter a value in seconds. If the LDAP.QueryTimeout tag is not present, a default value of 300 seconds (i.e. 5 minutes) will be taken. See the example below.
+This setting can be configured in the *DataMiner.xml* file. Enter a value in seconds. If the LDAP.QueryTimeout tag is not present, a default value of 300 seconds (i.e. 5 minutes) will be taken. See the example below.
 
 ```xml
 <DataMiner>
@@ -43,7 +47,7 @@ Client machines running DataMiner Cube now require Microsoft .NET Framework 4.6.
 
 #### Profiles app: Support for capability parameters of type “text” \[ID_25345\]
 
-The *Profiles* app now also allows you to create and edit profile parameters of category “Capability” and type “Text”.
+The *Profiles* app now also allows you to create and edit profile parameters of category “Capability” and type “Text”.
 
 #### Creating an element simulation file \[ID_25353\]
 
@@ -57,7 +61,7 @@ The simulation file will be stored on the DataMiner Agent, in the protocol folde
 
 #### Resources app: Time-dependent capabilities \[ID_25409\]
 
-When, in the *Resources* app, you assign a capability parameter to a resource, instead of specifying a fixed value for that parameter, you can now indicate that its value will be time-dependent, i.e. that the capability of the resource can change over time.
+When, in the *Resources* app, you assign a capability parameter to a resource, instead of specifying a fixed value for that parameter, you can now indicate that its value will be time-dependent, i.e. that the capability of the resource can change over time.
 
 #### Visual Overview: SetVar controls “ListBox” and “FilterComboBox” now use virtualization \[ID_25436\]
 
@@ -95,7 +99,7 @@ It is now possible to inject DLL files into an Automation script.
 
 2. Send the object to the server using an *InjectAutomationDllRequestMessage*.
 
-The server will send back an *InjectAutomationDllResponseMessage*. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
+The server will send back an *InjectAutomationDllResponseMessage*. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
 
 | Value           | Description                                                                                                                                       |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -109,15 +113,15 @@ To determine whether the injection was successful, you can check TraceData.HasSu
 
 **To request an overview of the injected DLLs**
 
-Send a *GetAutomationDllOverviewRequestMessage* to the server. This message does not have any properties.
+Send a *GetAutomationDllOverviewRequestMessage* to the server. This message does not have any properties.
 
-The server will send back a *GetAutomationDllOverviewResponseMessage* containing a list of *AutomationDllInjectionItem* objects.
+The server will send back a *GetAutomationDllOverviewResponseMessage* containing a list of *AutomationDllInjectionItem* objects.
 
 **To eject a DLL**
 
-If you eject a previously injected DLL from an Automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
+If you eject a previously injected DLL from an Automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
 
-The server will send back a EjectAutomationDllResponseMessage. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
+The server will send back a EjectAutomationDllResponseMessage. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
 
 | Value          | Description                                                                                                                                                                                                                                     |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -214,7 +218,7 @@ Due to a number of enhancements, DataMiner processes will now get notified in a 
 
 #### DataMiner Cube - Visual Overview: “Textblock” control now inherits text alignment of shape \[ID_24929\]
 
-When you turned a shape into a text block control by adding a shape data item of type *Options* set to “Control=Textblock”, up to now, the text alignment of that control would by default be set to Left Center. From now on, “Textblock” controls will inherit the text alignment configuration of the shape.
+When you turned a shape into a text block control by adding a shape data item of type *Options* set to “Control=Textblock”, up to now, the text alignment of that control would by default be set to Left Center. From now on, “Textblock” controls will inherit the text alignment configuration of the shape.
 
 #### Service & Resource Management: Enhanced performance when retrieving available resources \[ID_25061\]
 
@@ -288,7 +292,7 @@ Due to a number of enhancements, overall performance has increased when writing 
 
 When checking whether a boolean ReservationInstance property is set to true or false, you can now specify the type as “Bool” as well as “Boolean”. See the following example:
 
-```txt
+```csharp
 "ReservationInstance.Properties.\"Contributing Service\"[Bool]==false"
 ```
 
@@ -308,13 +312,13 @@ On the login screen, the user name box can now display user names with a length 
 
 #### Dashboards app: Pivot table supports mediation protocols \[ID_25491\]
 
-The *Pivot table* dashboard component now supports mediation protocols.
+The *Pivot table* dashboard component now supports mediation protocols.
 
 ### Fixes
 
 #### DataMiner Cube - System Center: Agent name would not get updated after a Failover switch \[ID_24468\]
 
-In the *Agents* section of *System Center*, after a Failover switch, in some cases, the agent name would not get updated to the name of the online agent.
+In the *Agents* section of *System Center*, after a Failover switch, in some cases, the agent name would not get updated to the name of the online agent.
 
 #### DataMiner Cube - Scheduler: No “next runtime”, “last runtime” or “last runtime result” informa­tion displayed when a DMA in the DMS was unreachable \[ID_24894\]
 
@@ -358,7 +362,7 @@ In some cases, it could occur that the *ActiveDirectory.txt* log file was not ge
 
 #### Problem with SLNet when performing a diagnostic request in the SLNetClientTest tool while view states were being recalculated \[ID_25219\]
 
-In some cases, an error could occur in SLNet when you performed a diagnostic request (*Diagnostics \> Connections \> OpenConnections*) in the SLNetClientTest tool while view states were being recalculated.
+In some cases, an error could occur in SLNet when you performed a diagnostic request (*Diagnostics \> Connections \> OpenConnections*) in the SLNetClientTest tool while view states were being recalculated.
 
 #### Memory leak in SLNet when multiple documents were being added or deleted in rapid succes­sion \[ID_25234\]
 
@@ -384,7 +388,7 @@ Exception during startup of SLNet: System.IO.IOException: The process cannot acc
 
 #### DataMiner Maps: Clusters would not get refreshed when panning on a map that only contained layers of which the LimitToBounds attribute was set to False \[ID_25265\]
 
-When panning on a map that only contained layers of which the *limitToBounds* attribute was set to False, in some cases, the clusters would not get refreshed.
+When panning on a map that only contained layers of which the *limitToBounds* attribute was set to False, in some cases, the clusters would not get refreshed.
 
 #### Dashboards app - Service Definition component: Elements disappeared from service definition nodes when web sockets were disabled \[ID_25275\]
 
@@ -402,7 +406,7 @@ After a DataMiner restart, in some cases, Automation scripts that used a library
 
 In some cases, it would no longer be possible to open a saved workspace in an undocked window.
 
-#### DataMiner Cube - Data Display: When a multiple parameter update was canceled, the parame­ter values would stay marked as modified \[ID_25313\]
+#### DataMiner Cube - Data Display: When a multiple parameter update was canceled, the parameter values would stay marked as modified \[ID_25313\]
 
 When you updated multiple parameter values in one go and then canceled the update, in some cases, the parameter values in question would stay marked as modified.
 
@@ -414,7 +418,7 @@ When, on the Logging page in System Center, you apply a filter, the background t
 
 #### DataMiner Cube - Correlation: New analyzer would incorrectly be created when opening the Correlation app via a workspace \[ID_25320\]
 
-When you opened the *Correlation* app by opening a workspace, in some cases, the *Analyzers* tab would be selected and a new analyzer would incorrectly be created.
+When you opened the *Correlation* app by opening a workspace, in some cases, the *Analyzers* tab would be selected and a new analyzer would incorrectly be created.
 
 #### Service & Resource Management: When a resource was updated, usages of other resources would incorrectly also be quarantined \[ID_25322\]
 
@@ -458,7 +462,7 @@ When a GetActiveAlarmsFromView SOAP call was performed, all alarms of all elemen
 
 #### Element connections: Problem with “Include element state” option \[ID_25418\]
 
-In the *Element Connections* app, in some cases, the states of the source element would incorrectly be passed to the destination element(s) when the *Include element state* option was not selected.
+In the *Element Connections* app, in some cases, the states of the source element would incorrectly be passed to the destination element(s) when the *Include element state* option was not selected.
 
 #### Format exception in SLNet.txt log file \[ID_25427\]
 
@@ -466,7 +470,7 @@ In some cases, a FormatException would be added to the SLNet.txt log file.
 
 #### DataMiner Cube - Services app: Problem when dragging and dropping in a service definition diagram \[ID_25434\]
 
-In the *Services* app, in some rare cases, an exception could be thrown when performing drag and drop operations in a service definition diagram.
+In the *Services* app, in some rare cases, an exception could be thrown when performing drag and drop operations in a service definition diagram.
 
 #### Service & Resource Management: No longer possible to save a service definition with an empty diagram \[ID_25439\]
 
@@ -482,7 +486,7 @@ In some rare cases, an *OwnershipUpdateThread* error could occur in SLDataMiner.
 
 #### DataMiner Cube - Visual Overview: Problem with FollowPathColor option \[ID_25460\]
 
-In some rare cases, the *FollowPathColor* option would not get applied, especially when the connection lines ran between interfaces with an undefined alarm level state while the parent element had a different state.
+In some rare cases, the *FollowPathColor* option would not get applied, especially when the connection lines ran between interfaces with an undefined alarm level state while the parent element had a different state.
 
 #### DataMiner Cube: Inconsistent user initials \[ID_25464\]
 
@@ -508,7 +512,7 @@ When a script was launched from the service definition component, in some cases,
 
 #### Problem when MaintenanceSettings.xml contained Trending tag without TimeSpan tag \[ID_25478\]
 
-If the *MaintenanceSettings.xml* file contained a *Trending* tag that did not contain a *TimeSpan* tag, a problem could occur with the file.
+If the *MaintenanceSettings.xml* file contained a *Trending* tag that did not contain a *TimeSpan* tag, a problem could occur with the file.
 
 #### Monitoring app: Problem when viewing a trend histogram for a column parameter with a pri­mary key containing lowercase characters \[ID_25481\]
 
@@ -520,7 +524,7 @@ When, in the parameter feed component, you had loaded 100 indices, the bottom ar
 
 #### DataMiner Cube - Element Connections: Problems with table parameters \[ID_25496\]
 
-In the *Element Connections* app, in some cases, issues could occur with regard to table column parameters. Some rows would not disappear after being deleted and some rows would be missing data.
+In the *Element Connections* app, in some cases, issues could occur with regard to table column parameters. Some rows would not disappear after being deleted and some rows would be missing data.
 
 #### DataMiner Cube - Data Display: Zero-width column was not saved at the correct position when saving the column layout of a table \[ID_25534\]
 

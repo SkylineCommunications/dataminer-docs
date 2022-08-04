@@ -1,4 +1,8 @@
-# Feature release 10.0.9
+---
+uid: General_Feature_Release_10.0.9
+---
+
+# General Feature Release 10.0.9
 
 **Internet Explorer Support**
 
@@ -83,7 +87,7 @@ In both the Install.xml and Config.xml scripts, an entry point has to be defined
 
 - In the Install.xml script, define the following entry point:
 
-    ```txt
+    ```csharp
     public class Script
     {
         [AutomationEntryPoint(AutomationEntryPointType.Types.InstallAppPackage)]
@@ -98,7 +102,7 @@ In both the Install.xml and Config.xml scripts, an entry point has to be defined
 
 - In the Config.xml script, define the following entry point:
 
-    ```txt
+    ```csharp
     public class Script
     {
         [AutomationEntryPoint(AutomationEntryPointType.Types.ConfigureApp)]
@@ -113,11 +117,11 @@ In both the Install.xml and Config.xml scripts, an entry point has to be defined
 
 **Installing an application package**
 
-Application packages can be uploaded, viewed, installed and configured using the DataMiner SLNetClientTest tool. All commands related to application packages can be found under Advanced \> Apps \> AppPackages.
+Application packages can be uploaded, viewed, installed and configured using the DataMiner SLNetClientTest tool. All commands related to application packages can be found under Advanced \> Apps \> AppPackages.
 
 > [!NOTE]
 > To be allowed to install application packages, you must be granted the following user permission:
-> - Modules \> System configuration \> Agents \> Install App packages
+> - Modules \> System configuration \> Agents \> Install App packages
 
 Although the above-mentioned method is to be preferred, it is also possible to embed an application package into a .dmupgrade package. To install an application package this way, do the following:
 
@@ -142,17 +146,11 @@ Although the above-mentioned method is to be preferred, it is also possible to e
 An AppPackageHelper class has been made available, containing a series of methods to manage application packages. The current methods include:
 
 - UploadAppPackage
-
 - GetUploadedAppPackages
-
 - RemoveUploadedAppPackage
-
 - InstallApp
-
 - GetInstalledApps
-
 - ConfigureInstalledApp
-
 - GetCurrentAppConfiguration
 
 #### LoggerUtil: RepositoryLoggerProvider & LogEntry API \[ID_26289\]\[ID_26291\]
@@ -160,31 +158,20 @@ An AppPackageHelper class has been made available, containing a series of method
 The LoggerUtil tool now provides
 
 - a RepositoryLoggerProvider that allows client applications to write log entries to an ElasticSearch database, and
-
 - a LogEntry API that allows client applications to retrieve those entries.
 
 A LogEntry object contains the following fields:
 
 - Timestamp
-
 - Message
-
 - LogLevel
-
 - Category (e.g. SRM.Reservations)
-
 - Name (e.g. a specific booking ID)
-
 - FullName (Category.Name)
-
 - DmaId (ID of the DataMiner Agent to which the user was connected)
-
 - ProcessId
-
 - ProcessName
-
 - ThreadId
-
 - UserName
 
 ### DMS Security
@@ -194,18 +181,17 @@ A LogEntry object contains the following fields:
 In the Users/Groups section of Cube’s System Center, the following user permissions have been added:
 
 - Service profiles (UI available, Edit definitions, Edit instances)
-
 - BPA tests (Create/Update, Delete, Read, Execute, Get test results)
 
 ### DMS Cube
 
 #### Visual Overview: Number groups in numeric parameter values displayed on element shapes will now be separated by a thin space / New DynamicUnits option \[ID_18321\]\[ID_26318\]\[ID_26330\]
 
-In Visual Overview, three-digit number groups in numeric parameter values displayed on shapes with an *Element* and/or *Parameter* data field and a “\*” in the shape text will now by default be separated by a thin space. This will make large numbers more legible.
+In Visual Overview, three-digit number groups in numeric parameter values displayed on shapes with an *Element* and/or *Parameter* data field and a “\*” in the shape text will now by default be separated by a thin space. This will make large numbers more legible.
 
-Also, a new *DynamicUnits* option will now allow you to enable the use of dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g. to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
+Also, a new *DynamicUnits* option will now allow you to enable the use of dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g. to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
 
-To enable this feature, add an *Options* data field and set its value to “DynamicUnits=true”. By default, this option is disabled (i.e. false). See the following example:
+To enable this feature, add an *Options* data field and set its value to “DynamicUnits=true”. By default, this option is disabled (i.e. false). See the following example:
 
 | Shape data field | Value             |
 |------------------|-------------------|
@@ -216,27 +202,19 @@ To enable this feature, add an *Options* data field and set its value to “Dyn
 If you enable the *DynamicUnits* option, the following units will be converted out of the box:
 
 - bytes (B)
-
 - bits (b)
-
 - bits per second (bps)
-
 - bytes per second (Bps)
-
 - Kibibytes (kiB)
-
 - no unit (\<empty>)
 
-If you want other units to be converted when you enable the *DynamicUnits* option, you can define this in the element protocol. See the example below.
+If you want other units to be converted when you enable the *DynamicUnits* option, you can define this in the element protocol. See the example below.
 
 Suppose you want to apply the following unit conversion rule:
 
 - Display value in mm if value \< 1 cm.
-
 - Display value in cm if value \> 1 cm.
-
 - Display value in m if value \> 1 m.
-
 - Display value in km if value \> 1 km.
 
 Then, in the protocol, add the following configuration:
@@ -263,57 +241,45 @@ When you configure a node in a service definition, a toggle button now allows yo
 
 It is now possible to automatically generate booking shapes. To implement this feature, do the following:
 
-1. Create a shape representing the booking items, add a *ChildType* data field to that shape, and set its value to “Booking”.
+1. Create a shape representing the booking items, add a *ChildType* data field to that shape, and set its value to “Booking”.
 
-2. Create a shape group containing the shape you made in step 1, add a *Children* data field to the shape group, and set its value to “Booking”.
+2. Create a shape group containing the shape you made in step 1, add a *Children* data field to the shape group, and set its value to “Booking”.
 
 By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e. from 1 day in the past to 2 days in the future).
 
-- If you want to set a specific time range, then add a *ChildrenSource* data field to the shape group and set its value to a specific time range (e.g. “StartTime=\<dateTime>; EndTime=\<dateTime>”).
+- If you want to set a specific time range, then add a *ChildrenSource* data field to the shape group and set its value to a specific time range (e.g. “StartTime=\<dateTime>; EndTime=\<dateTime>”).
 
     > [!NOTE]
-    > If you retrieve a specific set of bookings by using a *ChildrenSource* data field set to a specific time range, the retrieved bookings will be added to the ones already present in the cache. If, by specifying a time range, you only want to filter the bookings currently in the cache, then use a *ChildrenFilter* data field instead.
+    > If you retrieve a specific set of bookings by using a *ChildrenSource* data field set to a specific time range, the retrieved bookings will be added to the ones already present in the cache. If, by specifying a time range, you only want to filter the bookings currently in the cache, then use a *ChildrenFilter* data field instead.
 
-- If you want to filter the bookings, then add a *ChildrenFilter* data field to the shape group and set its value to a booking filter, using the same filter format that is used when specifying a ListView filter.
+- If you want to filter the bookings, then add a *ChildrenFilter* data field to the shape group and set its value to a booking filter, using the same filter format that is used when specifying a ListView filter.
 
-- If you want to sort the bookings, then add a *ChildrenSort* data field to the shape group and set its value to “Name” (i.e. the default setting), “Property\|Start time” or “Property\|End time”, optionally followed by “,asc” (i.e. the default order) or “,desc”.
+- If you want to sort the bookings, then add a *ChildrenSort* data field to the shape group and set its value to “Name” (i.e. the default setting), “Property\|Start time” or “Property\|End time”, optionally followed by “,asc” (i.e. the default order) or “,desc”.
 
     > [!NOTE]
-    > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders.
+    > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders.
 
 #### Visual Overview: New icons added to DataMiner stencils \[ID_26168\]
 
 The following additional icons are now available in the DataMiner stencils:
 
 - Element (A) DMX
-
 - Element DMX
-
 - Function (A) DMX
-
 - Function DMX
-
 - General Input
-
 - General Output
-
 - Redundancy Group (A) DMX
-
 - Redundancy Group DMX
-
 - Service (A) DMX
-
 - Service DMX
-
 - SLA (A) DMX
-
 - SLA DMX
-
 - View DMX
 
 #### Visual Overview: New parameter control option “ClientSidePollingInterval” \[ID_26223\]
 
-When you have turned a shape into a table control that displays a direct view table, you can now use the *ClientSidePollingInterval* option to specify that this table should be refreshed at regular intervals.
+When you have turned a shape into a table control that displays a direct view table, you can now use the *ClientSidePollingInterval* option to specify that this table should be refreshed at regular intervals.
 
 | Shape data field        | Value                                                                                                                                       |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -352,7 +318,7 @@ This new tool offers a number of advantages. It allows you to deploy multiple Cu
 
 3. Select *Desktop installation* and run the downloaded file.
 
-4. In the installation window, open the *Options* section and adjust the options depending on whether you want a shortcut to be added to the desktop and/or start menu and on whether you want DataMiner Cube to start with Windows.
+4. In the installation window, open the *Options* section and adjust the options depending on whether you want a shortcut to be added to the desktop and/or start menu and on whether you want DataMiner Cube to start with Windows.
 
 5. Click *Install*.
 
@@ -365,13 +331,13 @@ When configuring an SNMP manager, you can now add the polling IP address as a cu
 
 #### Profiles app: Display value configuration possible for capability profile parameters of type dis­crete \[ID_26379\]
 
-Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* drop-down box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
+Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* drop-down box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
 
 Capability profile parameters of type discrete that were configured before this change will have no discrete type selected. For these parameters, the display value will remain equal to the raw value, unless they are reconfigured.
 
 #### System Center: New “Analytics config” system settings section \[ID_25124\]\[ID_26388\]
 
-In *System Center*, the *System settings* section now contains a new *Analytics config* page, which allows you to configure a number of SLAnalytics settings.
+In *System Center*, the *System settings* section now contains a new *Analytics config* page, which allows you to configure a number of SLAnalytics settings.
 
 #### Export: Selecting multiple items to be exported / New option to export data as displayed in view card \[ID_26450\]
 
@@ -387,7 +353,7 @@ When you hover the mouse pointer over a line chart component in the new Dashboar
 
 #### Dashboards app - Parameter feed: New option to automatically select a specified number of indices \[ID_26080\]
 
-In the *Settings* tab of the parameter feed component, next to the *Auto-select all indices* option, there is now a new *Auto-select number of indices* option.
+In the *Settings* tab of the parameter feed component, next to the *Auto-select all indices* option, there is now a new *Auto-select number of indices* option.
 
 This new option will allow you to specify the number of indices that should be selected by default.
 
@@ -395,7 +361,7 @@ If the number of indices specified is greater than the number of indices that ar
 
 #### Dashboards app - Line chart component: New “Hide parameters without trend data in the leg­end” option \[ID_26133\]
 
-The line chart component has a new setting: Layout \> Styling and information \> Hide parameters without trend data in the legend.
+The line chart component has a new setting: Layout \> Styling and information \> Hide parameters without trend data in the legend.
 
 When you enable this setting, the legend of the line chart component will no longer show items for which no trend data is available.
 
@@ -424,9 +390,7 @@ The parameter page component can now be configured to use the following data fee
 A number of enhancements have been made to the pivot table component, including the following:
 
 - Elements are now ordered by element name.
-
 - When using mediation protocol parameters, the data will now be shown per mediation parameter.
-
 - Server-side exceptions will now be handled more gracefully.
 
 #### Dashboards app: Enhanced border configuration \[ID_26346\]
@@ -435,26 +399,20 @@ When configuring a dashboard theme or a component layout, up to now, it was only
 
 #### Dashboards app: New style layout options for State components displaying parameters \[ID_26454\]
 
-In the Dashboards app, the layout options for the State component have been adjusted. If the component displays a parameter, the options that were previously available in the *Style* section are replaced with the following options:
+In the Dashboards app, the layout options for the State component have been adjusted. If the component displays a parameter, the options that were previously available in the *Style* section are replaced with the following options:
 
 - *Design*: Allows you to choose one of the following options:
 
     - *Small:* The component displays a single line containing a label and value.
-
     - *Large*: The component displays multiple lines with one value and up to three labels.
-
-    - *Auto size*: Similar to the *Large* option, but automatically adjusts the content to fill the entire component.
+    - *Auto size*: Similar to the *Large* option, but automatically adjusts the content to fill the entire component.
 
 - *Alarm state coloring*: Allows you to select one of the following options to determine how alarm coloring is displayed:
 
     - *LED*: The alarm color is displayed by a circular LED to the left of the first label.
-
     - *Line*: The alarm color is displayed by a bar along the left side of the component.
-
     - *Text*: The text color of the value matches the alarm color.
-
     - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
-
     - *None*: No alarm color is displayed.
 
 If the component displays a different DataMiner object, such as an element or service, the same options as before are available.
@@ -465,7 +423,7 @@ If the component displays a different DataMiner object, such as an element or se
 
 When a call is performed via the CPECollectorHelper API, a timeout is calculated based on the amount of requested items using the following formula:
 
-*Total Timeout = ((requested number of items / EPMBulkCount) + 1) \* EPMASyncTimeout*
+`Total Timeout = ((requested number of items / EPMBulkCount) + 1) * EPMASyncTimeout`
 
 In the SLNetClientTest tool, it is now possible to configure the following parameters:
 
@@ -610,7 +568,7 @@ In the Jobs app, it is now possible to have different job domains, each with the
 
 - If, in the top-left corner of the jobs list, you select a job domain from the list, the jobs list will be filtered and will list only the jobs associated with the selected job domain.
 
-- In configuration mode, you can select the job domain in the top-left corner of the screen, and then configure the job sections within the selected domain. The *New*, *Edit* and *Delete* buttons on the right of the job domain selection box allow you to add a new domain, edit the name of the selected domain or delete the selected domain.
+- In configuration mode, you can select the job domain in the top-left corner of the screen, and then configure the job sections within the selected domain. The *New*, *Edit* and *Delete* buttons on the right of the job domain selection box allow you to add a new domain, edit the name of the selected domain or delete the selected domain.
 
     > [!NOTE]
     > When you upgrade from a DataMiner system without job domains, all existing job section definitions will be stored in a job domain named “DefaultJobDomain”.
@@ -619,7 +577,7 @@ In the Jobs app, it is now possible to have different job domains, each with the
 
 #### Jobs app: Managing job attachments no longer requires explicit Delete permission \[ID_25961\]
 
-From now on, managing job attachments only requires the *Jobs \> UI available* and *Jobs \> Add/Edit* user permissions. The *Jobs \> Delete* user permission is no longer required.
+From now on, managing job attachments only requires the *Jobs \> UI available* and *Jobs \> Add/Edit* user permissions. The *Jobs \> Delete* user permission is no longer required.
 
 #### Jobs app: Enhanced job section configuration \[ID_25977\]
 
@@ -671,7 +629,7 @@ In the Monitoring app and the Dashboards app, three-digit number groups in numer
 
 In the SLNetClientTest tool, you can now generate SMIv2 MIB files for SNMP managers of type SNMPv2 and SNMPv3.
 
-To do so, go to *Advanced \> Tests \> Generate MIB for SNMP Manager*, select an SNMP manager and click *Generate*.
+To do so, go to *Advanced \> Tests \> Generate MIB for SNMP Manager*, select an SNMP manager and click *Generate*.
 
 > [!WARNING]
 > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).
@@ -748,7 +706,7 @@ From now on, trending of column parameters with measurement type set to “strin
 
 #### Dashboards: Column parameters with advanced naming supported for trend statistics visual­ization \[ID_26240\]
 
-The *Trend statistics* visualization in the new Dashboards app now supports column parameters from tables that use advanced naming.
+The *Trend statistics* visualization in the new Dashboards app now supports column parameters from tables that use advanced naming.
 
 #### DataMiner Cube - Alarm Console: Reduced memory usage \[ID_26285\]
 
@@ -794,7 +752,7 @@ When you restarted a DataMiner Agent with an ongoing ReservationInstance and the
 
 #### Web Services API v1: GetElementConfiguration method returned incorrect SNMP version \[ID_25964\]
 
-In some cases, the *GetElementConfiguration* web method returned the *SNMPVersion* in a *DMAElementSNMPPortInfo* instance as 0 when it should have been 1 or 2.
+In some cases, the *GetElementConfiguration* web method returned the *SNMPVersion* in a *DMAElementSNMPPortInfo* instance as 0 when it should have been 1 or 2.
 
 #### Duplicate table change notifications would be sent from SLElement to SLDataGateway when using history sets in combination with table updates \[ID_25987\]
 
@@ -823,7 +781,6 @@ In the Alarm Console, in some cases, the alarm duration indicator would not be s
 The problem would occur in the following situations:
 
 - When you expanded a correlation alarm, the alarm duration indicator of the source alarms would disappear.
-
 - When, for a particular alarm, an update was received while its history was expanded, the alarm duration indicator of the alarms in the history list would disappear.
 
 #### Automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID_26046\]

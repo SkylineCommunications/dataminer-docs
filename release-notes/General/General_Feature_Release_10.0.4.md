@@ -1,4 +1,8 @@
-# Feature release 10.0.4
+---
+uid: General_Feature_Release_10.0.4
+---
+
+# General Feature Release 10.0.4
 
 ## New features
 
@@ -6,7 +10,7 @@
 
 #### DBMaintenanceDMS.xml: TTL settings can now be specified for all custom data types defined in an Elastic database \[ID_24846\]
 
-In the *DBMaintenanceDMS.xml* file, you can now configure “time to live” (TTL) settings for all custom data types defined in an Elastic database.
+In the *DBMaintenanceDMS.xml* file, you can now configure “time to live” (TTL) settings for all custom data types defined in an Elastic database.
 
 In the following example, a TTL setting was specified for job objects stored in an Elastic database:
 
@@ -27,47 +31,44 @@ In the following example, a TTL setting was specified for job objects stored in 
 
 #### Logging: Setting log levels per DataMiner log file \[ID_23244\]\[ID_24771\]
 
-In the *Logging* section of *System Center*, it is now possible to set log levels per DataMiner log file, overriding the ones specified on system level.
+In the *Logging* section of *System Center*, it is now possible to set log levels per DataMiner log file, overriding the ones specified on system level.
 
 **Overriding the system-wide log levels for a specific log file**
 
 1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the log file in the left-hand pane.
 
-2. At the top of the right-hand pane, open the *Log settings* section, select the *Override log levels* option, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
+2. At the top of the right-hand pane, open the *Log settings* section, select the *Override log levels* option, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
 
 > [!NOTE]
 > - If you want to set the same non-default log levels for multiple log files, then note that you can select more than one file in step 1. To select more than one file, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the SHIFT key.
 > - In the left-hand pane, the current log levels for each of the DataMiner log files are displayed next to the name of the file.
 >     - If a file inherits the system-wide log levels, the log levels displayed next to the file will appear in gray.
 >     - If a file has specific log levels defined (i.e. if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
-> - If you clear the *Override log levels* option for a particular log file, that file will again inherit the system-wide log levels.
+> - If you clear the *Override log levels* option for a particular log file, that file will again inherit the system-wide log levels.
 
 **Setting the system-wide log levels**
 
 1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the first entry in the left-hand pane, marked “\<Default>”.
 
-2. At the top of the right-hand pane, open the *Log settings* section, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
+2. At the top of the right-hand pane, open the *Log settings* section, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
 
 #### Service & Resource Management - ListView: Alarm count column can now indicate the number of alarms as a colored icon \[ID_24598\]
 
-In the ListView component, which is used in the Bookings and Services apps as well as in Visual Overview, the *Alarm count* column can now be configured to indicate the number of alarms as an icon taking the color of the most severe alarm.
+In the ListView component, which is used in the Bookings and Services apps as well as in Visual Overview, the *Alarm count* column can now be configured to indicate the number of alarms as an icon taking the color of the most severe alarm.
 
 #### New setting to display a Forward button in card header bar menus \[ID_24844\]
 
 In the new Cube X layout, by default, cards no longer have a Forward button in their header bar menu.
 
-If you want card header bar menus to contain a Forward button, then open the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file, and set the *commonServer.card.DisplayForwardButton* option to true.
+If you want card header bar menus to contain a Forward button, then open the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file, and set the *commonServer.card.DisplayForwardButton* option to true.
 
 #### Visual Overview: New icons added to DataMiner stencils \[ID_25024\]
 
 The following additional icons are now available in the DataMiner stencils:
 
 - PTP -BC
-
 - PTP-TC
-
 - PTP-Slave
-
 - PTP-GrandMaster
 
 ### DMS Reports & Dashboards
@@ -108,7 +109,7 @@ Up to now, when users wanted to configure a service reservation, they each time 
 > [!NOTE]
 > - You can define a single service profile for a series of almost identical service definitions.
 > - Service profile logging is stored in SLProfileManager.txt.
-> - To make sure service profile data is included in DataMiner backup packages, select *Profile Manager objects and configuration* when configuring backups in System Center.
+> - To make sure service profile data is included in DataMiner backup packages, select *Profile Manager objects and configuration* when configuring backups in System Center.
 
 #### OnStartActionsFailureEvent will now be executed when the start actions of a ReservationIn­stance fail \[ID_24790\]
 
@@ -116,7 +117,7 @@ From now on, an OnStartActionsFailureEvent will be executed when the start actio
 
 If you want to use this event to trigger an Automation script, then make sure to add a custom entry point method to that script. See the example below.
 
-```txt
+```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmStartActionsFailure)]
 public void OnSrmStartActionsFailure(Engine engine, List<StartActionsFailureErrorData> errorData)
 {
@@ -135,7 +136,7 @@ A StartActionsFailureErrorData instance contains an ErrorReason, which explains 
 
 The following example shows how to assign an Automation script to the OnStartActionsFailureEvent.
 
-```txt
+```csharp
 reservationInstance.OnStartActionsFailureEvent = new ReservationEvent("OnStartActionsFailureEvent", $"Script:StartActionsFailedScript");
 ```
 
@@ -187,29 +188,17 @@ A number of enhancements have been made to the alarm sorting mechanisms in the S
 Current alarm levels (in order of increasing priority):
 
 - Undefined
-
 - Initial
-
 - Suggestion
-
 - Information
-
 - Normal
-
 - Masked
-
 - Notice
-
 - Warning
-
 - Minor
-
 - Major
-
 - Critical
-
 - Timeout
-
 - Error
 
 #### A notice will now be generated when the parameter update stack of SLElement exceeds 5000 items \[ID_24259\]\[ID_24980\]
@@ -228,7 +217,7 @@ From now on, the DataMiner installer will no longer install Web Services Enhance
 
 #### Logging related to smart baselines will now be added to a dedicated log file \[ID_24627\]
 
-Up to now, all logging related to smart baselines was added to the *SLNet.txt* log file. From now on, this logging will be added to the *SLSmartBaselineManager.txt* file instead.
+Up to now, all logging related to smart baselines was added to the *SLNet.txt* log file. From now on, this logging will be added to the *SLSmartBaselineManager.txt* file instead.
 
 #### Cassandra database: Cluster name in cassandra.yaml file now always set to “DMS” \[ID_24645\]
 
@@ -253,8 +242,7 @@ A number of enhancements have been made to the way in which DataMiner Analytics 
 
 A number of enhancements have been made to the ListView component, which is used in the Bookings and Services apps as well as in Visual Overview:
 
-- The *Add/Remove Column \> More…* shortcut menu option was moved up one level and renamed to *Manage column configuration…*
-
+- The *Add/Remove Column \> More…* shortcut menu option was moved up one level and renamed to *Manage column configuration…*
 - The title of the column configuration window, which was named *Choose details*, has now been renamed to *Column configuration*.
 
 #### HTML5 apps: Enhanced installation \[ID_24745\]
@@ -276,7 +264,6 @@ The “Advanced Editing” pane now provides better support for DataMiner stenci
 From now on, this pane will
 
 - no longer display shape data that is marked “hidden”, and
-
 - no longer show underlying formulas in shape data, but the actual value.
 
 Also, a few general enhancements have been made with regard to scrolling and keyboard focus.
@@ -311,13 +298,13 @@ Because client computers running a Microsoft Windows version prior to Windows 10
 
 Previously, the amount of simultaneous calls that native SLElement and SLDMS modules could make to the local SLNet process was limited to 1 and 5 respectively. This limit has now been removed. Both now use the same limit as other processes, i.e. 10 simultaneous calls.
 
-If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the *C:\\Skyline DataMiner\\Files\\SLNetCOM.dll.config* file:
+If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the *C:\\Skyline DataMiner\\Files\\SLNetCOM.dll.config* file:
 
 ```xml
 <add key="UseLegacyThrottle" value="true" />
 ```
 
-When you set this *UseLegacyThrottle* option to true, the Application/DataMiner event viewer log will show entries for SLElement.exe and SLDMS.exe indicating “Applied throttle: 1” (SLElement) or “Applied throttle: 5” (SLDMS).
+When you set this *UseLegacyThrottle* option to true, the Application/DataMiner event viewer log will show entries for SLElement.exe and SLDMS.exe indicating “Applied throttle: 1” (SLElement) or “Applied throttle: 5” (SLDMS).
 
 #### HTML5 apps: Enhancement date/time selector \[ID_24912\]
 
@@ -369,7 +356,7 @@ In some cases, alarm level linking would not be initialized or updated correctly
 
 #### Failover: “AlwaysBruteForceOffline” option would not work correctly when releasing virtual IP addresses took more than 10 seconds \[ID_24535\]
 
-When a Failover setup with the *AlwaysBruteForceOffline* option enabled had to go offline, in some cases, the agent would not be restarted when releasing the virtual IP addresses took more than 10 seconds. The agent would incorrectly remain in an undefined state. Also, when the agent eventually went online at a later stage, problems could occur. On systems with a MySQL database, for example, incorrect element alarms would start to appear.
+When a Failover setup with the *AlwaysBruteForceOffline* option enabled had to go offline, in some cases, the agent would not be restarted when releasing the virtual IP addresses took more than 10 seconds. The agent would incorrectly remain in an undefined state. Also, when the agent eventually went online at a later stage, problems could occur. On systems with a MySQL database, for example, incorrect element alarms would start to appear.
 
 #### Problem with file synchronization cache \[ID_24620\]
 
@@ -401,7 +388,7 @@ Also, when an element with bubble-up alarms in a recursive table was restarted, 
 
 #### DataMiner Cube - Trending: Problem when exporting trend data to CSV while trend logging was disabled \[ID_24699\]
 
-When you exported a trend graph to a CSV file after selecting the *Everything* option, in some cases, none or only part of the trend data would get exported when trend logging was disabled. Also, afterwards, data could be missing from the trend graph when selecting e.g. “Previous month”.
+When you exported a trend graph to a CSV file after selecting the *Everything* option, in some cases, none or only part of the trend data would get exported when trend logging was disabled. Also, afterwards, data could be missing from the trend graph when selecting e.g. “Previous month”.
 
 #### DataMiner Cube - Bookings app: Problem when zooming to last/next month in the bookings timeline \[ID_24704\]
 
@@ -409,7 +396,7 @@ When, in the bookings timeline, you zoomed to last/next month, in some cases, th
 
 #### DataMiner Cube - Services app: Problem with service definition diagram updates \[ID_24707\]
 
-In the *Services* app, in some cases, the diagram of a service definition would not be updated properly when the service definition was embedded on a Visio page and the *AutoLoadExternalChanges* option was set to true.
+In the *Services* app, in some cases, the diagram of a service definition would not be updated properly when the service definition was embedded on a Visio page and the *AutoLoadExternalChanges* option was set to true.
 
 #### Problem with SLDMS when synchronizing services to other agents \[ID_24725\]
 
@@ -452,7 +439,7 @@ In DataMiner Cube, in some cases, the redesigned Cube X alarm icons would incorr
 When opening the Ticketing app, in some cases, the following error could be thrown:
 
 ```txt
-“Error trapped: An entry with the same key already exists.”
+Error trapped: An entry with the same key already exists.
 ```
 
 #### Problem when taking agents out of a Failover setup with a Cassandra database \[ID_24787\]
@@ -505,7 +492,7 @@ In some cases, a ListView component embedded on a Visio page would not correctly
 
 #### DataMiner Cube - Trending: Problem when exporting real-time trend data to CSV using the “Line graph” option \[ID_24861\]
 
-When you exported real-time trend data to CSV with the *Line graph instead of block graph* option selected, in some cases, no intermediary points would be added if no data was available at certain timestamps.
+When you exported real-time trend data to CSV with the *Line graph instead of block graph* option selected, in some cases, no intermediary points would be added if no data was available at certain timestamps.
 
 Also, points that fell outside of the selected time range would not get exported.
 
@@ -543,7 +530,7 @@ When a GetParameter method was called in an Automation script on the virtual ele
 
 #### Db.xml: “oldstyle” argument of \<Offload> tags would be removed when database settings were updated via Cube \[ID_24895\]
 
-When a user had manually specified an *oldstyle* argument in an *\<Offload>* tag of the *Db.xml* file, that argument would be removed the first time the central database settings were updated via DataMiner Cube. From now on, Cube will no longer remove manually added *oldstyle* arguments.
+When a user had manually specified an *oldstyle* argument in an *\<Offload>* tag of the *Db.xml* file, that argument would be removed the first time the central database settings were updated via DataMiner Cube. From now on, Cube will no longer remove manually added *oldstyle* arguments.
 
 #### “Unknown Parameter: Rollback” notice when installing Cassandra or Indexing Engine \[ID_24913\]
 
@@ -557,7 +544,7 @@ In some cases, the SLNet process would leak memory when logging was enabled or d
 
 #### DataMiner Cube: “Spectrum settings:” label incorrectly displayed on “Advanced element set­tings” pane of element without Spectrum Analyzer settings \[ID_24956\]
 
-When editing an element without any Spectrum Analyzer settings, in some cases, when you opened the *Advanced element settings* pane, a “Spectrum settings:” label would incorrectly be displayed at the bottom of the pane.
+When editing an element without any Spectrum Analyzer settings, in some cases, when you opened the *Advanced element settings* pane, a “Spectrum settings:” label would incorrectly be displayed at the bottom of the pane.
 
 #### Deleting a monitored table row could cause an incorrect alarm to be generated \[ID_24957\]
 

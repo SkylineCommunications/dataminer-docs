@@ -1,4 +1,8 @@
-# Feature release 10.0.7
+---
+uid: General_Feature_Release_10.0.7
+---
+
+# General Feature Release 10.0.7
 
 ## New features
 
@@ -22,11 +26,8 @@ Any matching patterns in the current trend graph will immediately be highlighted
 To edit a tag:
 
 1. Click the tag button above the (highlighted) pattern you want to edit.
-
 2. To edit the tag name, click the pencil icon and change the name.
-
 3. To redefine the pattern, adjust its boundaries.
-
 4. To save any modifications, click the check mark.
 
 > [!NOTE]
@@ -35,9 +36,7 @@ To edit a tag:
 To delete a tag:
 
 1. Click the tag button above the (highlighted) pattern you want to delete.
-
 2. Click the delete icon.
-
 3. In the confirmation box, click *Yes*.
 
 > [!NOTE]
@@ -49,26 +48,21 @@ To delete a tag:
 Currently, automatic pattern matching has the following limitations:
 
 - Patterns must have a size between 8 and 50,000 data points and should not have more than 5 percent missing values.
-
-- Pattern matching can only be performed on trended parameters containing numeric val­ues.
-
+- Pattern matching can only be performed on trended parameters containing numeric values.
 - If pattern matching is performed on a trend graph showing more than 100,000 data points, an aggregated level of detail will be used to improve performance at the cost of accuracy. If, at the most aggregated level, the number of data points exceeds 100,000 data points, no pattern matching will be performed.
 
 **Changes as to trend graph mouse button actions**
 
-In the *User \> Trending* section of the *Settings* window, the *Left mouse button action on graph* and *Right mouse button action on graph* settings can now be set to one of four values:
+In the *User \> Trending* section of the *Settings* window, the *Left mouse button action on graph* and *Right mouse button action on graph* settings can now be set to one of four values:
 
 - Select (new option, allowing you to select part of a trend graph)
-
 - Zoom (former “Select” option, default right mouse button action)
-
 - Pan (default left mouse button action)
-
 - None
 
 In case of the (new) “Select” option, a quick menu will appear, allowing you to either zoom to the part of the trend graph you selected or to create a tag (see above). On both sides of the selection, thumb draggers will also appear to allow you to resize the area you selected.
 
-Also, apart from the *Left mouse button action on graph* and *Right mouse button action on graph* settings, two new settings have been added:
+Also, apart from the *Left mouse button action on graph* and *Right mouse button action on graph* settings, two new settings have been added:
 
 | Setting                                    | Description                                                                                                                                |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,9 +75,9 @@ In an alarm template, it is now possible to configure monitoring conditions that
 
 A drop-down box now allows you to choose between “Value” (default) and “Not initialized”. Note that, when you choose “Value” and enter a parameter value, that value will not be cleared when you later select “Not initialized”.
 
-#### Alarm Console: Special Indexing Engine search tab is now available without enabling the “Sys­tem configuration \> Indexing Engine \> UI Available” user permission \[ID_25429\]
+#### Alarm Console: Special Indexing Engine search tab is now available without enabling the “Sys­tem configuration \> Indexing Engine \> UI Available” user permission \[ID_25429\]
 
-On systems on which the alarms were migrated to an Indexing Engine, up to now the special Indexing Engine search tab would only be available in the Alarm Console of users who had been granted the “System configuration \> Indexing Engine \> UI Available” user permission. From now on, that search tab will be available to all users, regardless of whether they were granted the above-mentioned user permission.
+On systems on which the alarms were migrated to an Indexing Engine, up to now the special Indexing Engine search tab would only be available in the Alarm Console of users who had been granted the “System configuration \> Indexing Engine \> UI Available” user permission. From now on, that search tab will be available to all users, regardless of whether they were granted the above-mentioned user permission.
 
 ### DMS Reports & Dashboards
 
@@ -92,15 +86,10 @@ On systems on which the alarms were migrated to an Indexing Engine, up to now th
 From now on, the image component supports the following image formats:
 
 - apng
-
 - gif
-
 - jpeg
-
 - png
-
 - svg
-
 - webp
 
 > [!NOTE]
@@ -110,14 +99,14 @@ From now on, the image component supports the following image formats:
 
 In the Dashboards app, it is now possible to link a component to data in the URL without using any feeds on the dashboard.
 
-To do so, after selecting the component, open the *Data* tab, go to *Feeds \> URL*, and drag the necessary data onto the component.
+To do so, after selecting the component, open the *Data* tab, go to *Feeds \> URL*, and drag the necessary data onto the component.
 
 > [!NOTE]
 > When the dashboard has a feed that contains the same data as the URL, the feed will overwrite the data found in the URL.
 
 #### Dashboards app - Service definition component: Options to show/hide nodes \[ID_25763\]
 
-On the *Layout* tab of the service definition component, two new options now allow you to specify which nodes you want the component to show or hide:
+On the *Layout* tab of the service definition component, two new options now allow you to specify which nodes you want the component to show or hide:
 
 - **Visible nodes**
 
@@ -175,7 +164,7 @@ From now on, when the Mobile Gateway location is set to “\<none>”, SLDataMin
 The SLAnalytics logging will no longer contain lines mentioning the following notice:
 
 ```txt
-“Unexpected number of responses returned while sending getInfoMessage...”
+Unexpected number of responses returned while sending getInfoMessage...
 ```
 
 #### DataMiner Analytics - Alarm focus: timeOfArrival field added to AlarmFocusEvents \[ID_25343\]
@@ -183,9 +172,7 @@ The SLAnalytics logging will no longer contain lines mentioning the following no
 AlarmFocusEvents now have a timeOfArrival field. In most cases, this field will be set to the time at which the corresponding AlarmEventMessage was received. However, in the following AlarmFocusEvents, it will be set to the current time:
 
 - Hourly AlarmFocusEvents that update the focus value of active alarms.
-
 - AlarmFocusEvents for old alarms that are resent after restarting an element.
-
 - AlarmFocusEvents that are sent for active alarms on startup.
 
 #### Indexing Engine: Configuring a custom IP port in Db.xml \[ID_25407\]
@@ -208,12 +195,11 @@ When the \[Reservation\] placeholder was used in a service context, up to now, C
 
 #### DataMiner Cube - Service & Resource Management: A notice will now appear when an Indexing Engine is required or when licenses are missing \[ID_25537\]
 
-When you try to open the *Resources* app or the *Service Definitions* tab of the *Services* app, from now on, a notice will appear, saying that those apps can only be used on systems running an Indexing Engine.
+When you try to open the *Resources* app or the *Service Definitions* tab of the *Services* app, from now on, a notice will appear, saying that those apps can only be used on systems running an Indexing Engine.
 
 Also, when you open a Visio page containing a ListView component, a notice will now appear in the following cases:
 
 - If the ListView is configured to list elements, a notice will appear when you do not have access to the listed elements.
-
 - If the ListView is configured to list bookings, a notice will appear when the DataMiner System has nor the required software licenses (ResourceManager, ServiceManager, SRM Concurrency) nor an Indexing Engine installed.
 
 #### DataMiner Cube - Visual Overview: ListView component will only show “clear filter” button when FilterMode option is set to true \[ID_25560\]
@@ -285,7 +271,7 @@ In some cases, DataMiner Cube could leak memory due to an incorrect internal cle
 
 #### DataMiner Cube - Alarm Console: Severity duration of cleared alarms was not set to “N/A” \[ID_25370\]
 
-When you added the *Severity Duration* column to the Alarm Console, up to now, the duration for a cleared alarm was incorrectly shown as the difference between the time of the alarm and the current time. From now on, the duration of a cleared alarm will always be shown as “N/A”.
+When you added the *Severity Duration* column to the Alarm Console, up to now, the duration for a cleared alarm was incorrectly shown as the difference between the time of the alarm and the current time. From now on, the duration of a cleared alarm will always be shown as “N/A”.
 
 #### Service & Resource Management: Problem when updating the end time of a parent and child ReservationInstance while both were in progress \[ID_25405\]
 

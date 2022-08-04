@@ -1,4 +1,8 @@
-# Feature release 10.0.2
+---
+uid: General_Feature_Release_10.0.2
+---
+
+# General Feature Release 10.0.2
 
 ## New features
 
@@ -44,7 +48,7 @@ DataMiner Indexing Engine can only be installed on DataMiner Agents with the fol
 To install the Indexing Engine, go to DataMiner Cube’s System Center, select *Search & Indexing*, click the button *Install Indexing Engine...*, and then follow the wizard.
 
 > [!NOTE]
-> The *Search & Indexing* page in System Center is only available for users with the user permission *Modules* > *System configuration* > *Indexing engine* > *Configure*.
+> The *Search & Indexing* page in System Center is only available for users with the user permission *Modules* > *System configuration* > *Indexing engine* > *Configure*.
 
 Like the wizard for the Cassandra migration, the wizard will first check whether the system requirements are met. If necessary, you can close the wizard again in order to continue later after the necessary changes have been made. In case changes are implemented while the wizard is open, a button is available that allows you to refresh the validation data.
 
@@ -66,7 +70,7 @@ Please note the following regarding the indexing database:
 
 ##### **DB.xml Indexing configuration**
 
-When the DataMiner Indexing Engine installation is complete, the *Db.xml* file will contain an additional \<DataBase> section with the connection information of the indexing database. The “search” attribute will be set to true.
+When the DataMiner Indexing Engine installation is complete, the *Db.xml* file will contain an additional \<DataBase> section with the connection information of the indexing database. The “search” attribute will be set to true.
 
 ```xml
 <DataBases xmlns="http://www.skyline.be/config/db">
@@ -77,11 +81,11 @@ When the DataMiner Indexing Engine installation is complete, the *Db.xml* file 
 
 > [!NOTE]
 > - Changes to the settings of an indexing database in DataMiner Cube will take effect immediately and do not require a DataMiner restart. A DataMiner restart is only required when a named database is deleted.
-> - When the Indexing Engine has been installed, the file *Indexing.xml* file is also added to the Skyline DataMiner folder, containing the configuration of the engine itself.
+> - When the Indexing Engine has been installed, the file *Indexing.xml* file is also added to the Skyline DataMiner folder, containing the configuration of the engine itself.
 
 ##### **DBMaintenance.xml and DBMaintenanceDMS.xml Indexing configuration**
 
-In *DBMaintenance.xml* and *DBMaintenanceDMS.xml*, each \<TTL> tag can have an \<Indexing> subtag, allowing you to specify an override for the default TTL setting for a table that is part of the indexing database. It is possible to specify "infinite" as the indexing TTL, in which case these data will be kept indefinitely.
+In *DBMaintenance.xml* and *DBMaintenanceDMS.xml*, each \<TTL> tag can have an \<Indexing> subtag, allowing you to specify an override for the default TTL setting for a table that is part of the indexing database. It is possible to specify "infinite" as the indexing TTL, in which case these data will be kept indefinitely.
 
 ##### Configuring DataMiner Indexing backups
 
@@ -89,7 +93,7 @@ Backups of the Indexing database are not included in a DataMiner restore package
 
 A number of restrictions apply for the backup path. For more information on these restrictions, refer to the DataMiner Help.
 
-Once DataMiner Indexing has been installed, it is possible to change the backup path using the *Backup path* parameter on the *Backup* page in System Center.
+Once DataMiner Indexing has been installed, it is possible to change the backup path using the *Backup path* parameter on the *Backup* page in System Center.
 
 > [!NOTE]
 > - After you have changed the path in System Center, it is possible that the UI is temporarily disabled while the Indexing nodes are restarted to implement the change. As such, we recommend to only change the backup path if this is absolutely necessary.
@@ -98,7 +102,7 @@ Once DataMiner Indexing has been installed, it is possible to change the backup 
 
 ##### **Indexing features configuration in System Center**
 
-Once DataMiner Indexing Engine has been installed, the *Search & Indexing* section in System Center contains an additional *Enable indexing on alarms* option. This option must be enabled in order to use the new Alarm Console features mentioned below.
+Once DataMiner Indexing Engine has been installed, the *Search & Indexing* section in System Center contains an additional *Enable indexing on alarms* option. This option must be enabled in order to use the new Alarm Console features mentioned below.
 
 There is also a button available that can be used to migrate booking data to the Indexing database. For more information, see DataMiner Cube: New Migrate booking data to Indexing Engine wizard [ID_21935] [ID_23674] [ID_24410] [ID_24424].
 
@@ -106,67 +110,54 @@ There is also a button available that can be used to migrate booking data to the
 
 When you open a new alarm tab page in the Alarm Console while connected to a DataMiner Agent that has indexing enabled on alarms, a search box at the top of that alarm tab page will now allow you to search for particular alarms or information events.
 
-You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select “Search for \<text> in new tab”. This will open a new tab with the text in question filled in in the search box.
+You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select “Search for \<text> in new tab”. This will open a new tab with the text in question filled in in the search box.
 
 Next to the search box, you can select a timespan (default: last 24 hours). When you start typing in the search box, the most relevant suggestions that are returned by the server will be displayed below. If a suggestion is too large to be displayed completely, you will be able to view it completely by hovering the mouse over it. However, if it consists of multiple lines, only the first line will be displayed.
 
-After you press Enter or select a suggestion, the alarms matching your search phrase will be retrieved in batches of 50. If there are more than 50 alarms that match your search phrase, a *More results* button will be displayed at the bottom of the list. If you click that *More results* button, any alarms that were added or changed will blink briefly.
+After you press Enter or select a suggestion, the alarms matching your search phrase will be retrieved in batches of 50. If there are more than 50 alarms that match your search phrase, a *More results* button will be displayed at the bottom of the list. If you click that *More results* button, any alarms that were added or changed will blink briefly.
 
 Once the first 50 alarms have been retrieved, a graphical representation of the alarm distribution will also be displayed.
 
-By default, different instances of the same alarm will be combined in a single alarm tree in the search results. If you want them to be displayed separately, disable the *History tracking* check box.
+By default, different instances of the same alarm will be combined in a single alarm tree in the search results. If you want them to be displayed separately, disable the *History tracking* check box.
 
 In the search box, you can use the following special keywords, followed by a colon (“:”) and a search phrase:
 
 - Severity
-
 - Description
-
 - Parameter_description
-
 - Owner
-
 - Value
-
 - Time of arrival
-
 - Status
-
 - Elementname
-
 - Viewnames
-
 - Parentviews
-
 - Protocolname
-
 - ElementProperty\_\<propertyName>
-
 - Viewproperty\_\<PropertyName>
-
 - ServiceProperty\_\<PropertyName>
 
 For example, if you want to search for alarms associated with elements of which the name resembles “probe”, you can enter “Elementname:probe”.
 
 ##### New user permission
 
-In the Users / Groups module, in the category *Modules* > *System configuration* > *Indexing engine*, the following user permission is now available:
+In the Users / Groups module, in the category *Modules* > *System configuration* > *Indexing engine*, the following user permission is now available:
 
 - *Configure*: Determines whether the user can make any changes to the Indexing Engine configuration.
 
 ##### **Indexing log information**
 
-Log information about the Indexing Engine can be found in a new “Search” log file in the *Logging* section of *System Center*.
+Log information about the Indexing Engine can be found in a new “Search” log file in the *Logging* section of *System Center*.
 
 In addition, the system will continuously monitor the connection with the Indexing database. If for some reason a node of the Indexing database goes down, an alarm will be displayed in the Alarm Console.
 
 ##### **GetIndexCountRequest method**
 
-A new *GetIndexCountRequest* method has been added in DataMiner, which can be used to retrieve the number of documents in the indexing database.
+A new *GetIndexCountRequest* method has been added in DataMiner, which can be used to retrieve the number of documents in the indexing database.
 
 This method can for instance be used as follows for a logger table:
 
-```txt
+```csharp
 GetIndexCountRequest<LoggerTableData> message = new GetIndexCountRequest<LoggerTableData>(new LoggerTableDataIndex(503,52,1000));
 ```
 
@@ -188,7 +179,7 @@ When sending an NT_SNMP_GET request from within a QAction, it is now possible to
 
 See the following example:
 
-```txt
+```csharp
 elementInfo[13] = maxRepetitions;
 object[] result = (object[])protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, tableOids);
 ```
@@ -205,7 +196,6 @@ In base protocols and device protocols linked to base protocols, you can now spe
 A \<ValueMapping> tag has two attributes:
 
 - a *remoteValue* attribute that refers to the value in the other protocol, and
-
 - a *value* attribute that refers to the value in the current protocol.
 
 Here is an example of a value mapping defined in a base protocol:
@@ -231,7 +221,7 @@ Here is example of a value mapping defined in a device protocol:
 
 > [!NOTE]
 > - Value mappings can be defined for both single-value and column parameters of type string or double. If you define them for parameters with Interprete type “high nibble”, they will be ignored.
-> - In case of read/write parameters, value mappings have to be defined on both. Note, however, that they should not be identical. If a value mapping match is found when reading or writing a parameter, then the *ops* attribute of the *LinkTo* tag will be ignored. However, if no relevant mappings could be found for the value in question, the *ops* attribute will be taken into account. This can prove useful in case of exception values.
+> - In case of read/write parameters, value mappings have to be defined on both. Note, however, that they should not be identical. If a value mapping match is found when reading or writing a parameter, then the *ops* attribute of the *LinkTo* tag will be ignored. However, if no relevant mappings could be found for the value in question, the *ops* attribute will be taken into account. This can prove useful in case of exception values.
 
 ### DMS Cube
 
@@ -247,11 +237,8 @@ The purpose of this new feature is to detect anomalous changes in the behavior o
 **Current limitations**
 
 - Only possible for trended parameters with numeric values.
-
 - Not possible for partial table parameters.
-
 - Anomaly detection is limited to 100,000 parameters per DataMiner Agent.
-
 - Processing of change points (see below) is limited to 1,000 points per second. If the buffer receives more than 100,000 change points in rapid succession, some of those may be disregarded.
 
 **Change points**
@@ -290,27 +277,26 @@ When you open an element card, each trended parameter on that card gets one of t
 
 | Icon                                                                                                                                                                                                  | Description               |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| ![](~/release-notes/images/StandardTrendGraphIcon.png)                                                                                                          | Standard trend graph icon |
-| ![](~/release-notes/images/ArrowRight60.png)                                                                                                                              | Upward arrow              |
-| ![](~/release-notes/images/ArrowRight120.png)                                                                                                                            | Downward arrow            |
-| ![](~/release-notes/images/ArrowRight.png)                                                                                                                                  | Flat arrow                |
-| ![](~/release-notes/images/LevelShiftIncrease.png) ![](~/release-notes/images/LevelShiftIncreaseRed.png)                       | Upward level shift        |
-| ![](~/release-notes/images/LevelShiftDecrease.png) ![](~/release-notes/images/LevelShiftDecreaseRed.png)                       | Downward level shift      |
-| ![](~/release-notes/images/ArrowTrendChangeUp.png) ![](~/release-notes/images/ArrowTrendChangeUpRed.png)                      | Upward trend change       |
-| ![](~/release-notes/images/ArrowTrendChangeDown.png) ![](~/release-notes/images/ArrowTrendChangeDownRed.png)             | Downward trend change     |
-| ![](~/release-notes/images/ArrowVarianceChangeUp.png) ![](~/release-notes/images/ArrowVarianceChangeUpRed.png)         | Variance increase         |
-| ![](~/release-notes/images/ArrowVarianceChangeDown.png) ![](~/release-notes/images/ArrowVarianceChangeDownRed.png) | Variance decrease         |
-| ![](~/release-notes/images/ArrowOutlierUp.png) ![](~/release-notes/images/ArrowOutlierUpRed.png)                                     | Upward outlier            |
-| ![](~/release-notes/images/ArrowOutlierDown.png) ![](~/release-notes/images/ArrowOutlierDownRed.png)                             | Downward outlier          |
+| ![](~/release-notes/images/StandardTrendGraphIcon.png)                                                                                                          | Standard trend graph icon |
+| ![](~/release-notes/images/ArrowRight60.png)                                                                                                                              | Upward arrow              |
+| ![](~/release-notes/images/ArrowRight120.png)                                                                                                                            | Downward arrow            |
+| ![](~/release-notes/images/ArrowRight.png)                                                                                                                                  | Flat arrow                |
+| ![](~/release-notes/images/LevelShiftIncrease.png) ![](~/release-notes/images/LevelShiftIncreaseRed.png)                       | Upward level shift        |
+| ![](~/release-notes/images/LevelShiftDecrease.png) ![](~/release-notes/images/LevelShiftDecreaseRed.png)                       | Downward level shift      |
+| ![](~/release-notes/images/ArrowTrendChangeUp.png) ![](~/release-notes/images/ArrowTrendChangeUpRed.png)                      | Upward trend change       |
+| ![](~/release-notes/images/ArrowTrendChangeDown.png) ![](~/release-notes/images/ArrowTrendChangeDownRed.png)             | Downward trend change     |
+| ![](~/release-notes/images/ArrowVarianceChangeUp.png) ![](~/release-notes/images/ArrowVarianceChangeUpRed.png)         | Variance increase         |
+| ![](~/release-notes/images/ArrowVarianceChangeDown.png) ![](~/release-notes/images/ArrowVarianceChangeDownRed.png) | Variance decrease         |
+| ![](~/release-notes/images/ArrowOutlierUp.png) ![](~/release-notes/images/ArrowOutlierUpRed.png)                                     | Upward outlier            |
+| ![](~/release-notes/images/ArrowOutlierDown.png) ![](~/release-notes/images/ArrowOutlierDownRed.png)                             | Downward outlier          |
 
 DataMiner will do the following to select a trend state icon for a particular parameter:
 
-1. From the trend data of the parameter, DataMiner will fetch all change points that occurred during the last X seconds. X being the number of seconds specified in the *arrowWindowLength* parameter, found in *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. Default value: 3600 seconds.
+1. From the trend data of the parameter, DataMiner will fetch all change points that occurred during the last X seconds. X being the number of seconds specified in the *arrowWindowLength* parameter, found in *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. Default value: 3600 seconds.
 
 2. If some of the change points are anomalous, then the following trend state icon is selected:
 
     - Type = Type of most recent anomalous change point
-
     - Color = Red
 
     Example: A red, upwards level shift.
@@ -321,10 +307,9 @@ DataMiner will do the following to select a trend state icon for a particular pa
 3. If none of the change points are anomalous, then the following trend state icon is selected:
 
     - Type = Type of the most recent change point of which the severity is equal to or greater than 0.5. If there are no change points of which the severity is equal to or greater than 0.5, then see step 4.
-
     - Color = Black
 
-4. In all other cases, one of the following trend state icons is selected, based on the behavior of the parameter value in the last *arrowWindowLength* seconds: a flat arrow, an upward arrow, a downward arrow, or the standard trend graph icon.
+4. In all other cases, one of the following trend state icons is selected, based on the behavior of the parameter value in the last *arrowWindowLength* seconds: a flat arrow, an upward arrow, a downward arrow, or the standard trend graph icon.
 
 **Suggestion events**
 
@@ -370,7 +355,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
 
 - In the header bar, the date and time and the four squares indicating the four "sides" of Cube are no longer displayed by default. A drop-down arrow in the header bar provides quick access to settings that allow you to display these again if you prefer this. These settings are also available on the *Cube* tab of the Cube settings card.
 
-- In the middle of the header bar, there is now a search box. This search box features improved search possibilities compared to the search box that was previously included in the side panel. As soon as you click the search box, a list of suggestions is shown below. Initially, this list shows recent items, but it is updated with search results as soon as you type anything in the box. You can click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in the side panel. This list will stay visible until another tab is selected.
+- In the middle of the header bar, there is now a search box. This search box features improved search possibilities compared to the search box that was previously included in the side panel. As soon as you click the search box, a list of suggestions is shown below. Initially, this list shows recent items, but it is updated with search results as soon as you type anything in the box. You can click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in the side panel. This list will stay visible until another tab is selected.
 
     > [!NOTE]
     > Hidden elements are no longer included in the search results.
@@ -383,19 +368,19 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
 
 ##### Redesigned side panel
 
-- The side panel on the left or right side of the Cube UI is now by default displayed as a blue bar containing the *Surveyor*, *Activity*, *Apps* and *Workspace* icons. Clicking these icons opens the corresponding panel.
+- The side panel on the left or right side of the Cube UI is now by default displayed as a blue bar containing the *Surveyor*, *Activity*, *Apps* and *Workspace* icons. Clicking these icons opens the corresponding panel.
 
-- The *Activity* panel replaces the former *Recent* tab of the side panel, but functions in the same way as this tab, allowing you to pin items to the top of the list of recent activity.
+- The *Activity* panel replaces the former *Recent* tab of the side panel, but functions in the same way as this tab, allowing you to pin items to the top of the list of recent activity.
 
 - The icons in the Surveyor and apps panel have been updated. These are now the most commonly used icons:
 
-    | Icon                                                               | Description      |
-    |----------------------------------------------------------------------|------------------|
-    | ![](~/release-notes/images/CubeXElement.png)     | Element          |
-    | ![](~/release-notes/images/CubeXService.png)     | Service          |
-    | ![](~/release-notes/images/CubeXRedunGroup.png)  | Redundancy group |
-    | ![](~/release-notes/images/CubeXSLA.png)         | SLA              |
-    | ![](~/release-notes/images/CubeXView.png)        | View             |
+    | Icon                                             | Description      |
+    |--------------------------------------------------|------------------|
+    | ![](~/release-notes/images/CubeXElement.png)     | Element          |
+    | ![](~/release-notes/images/CubeXService.png)     | Service          |
+    | ![](~/release-notes/images/CubeXRedunGroup.png)  | Redundancy group |
+    | ![](~/release-notes/images/CubeXSLA.png)         | SLA              |
+    | ![](~/release-notes/images/CubeXView.png)        | View             |
 
     If an alarm is present on an element, service, redundancy group or SLA, this is indicated by a colored circle in the bottom-right corner of the icon. For a view, the entire icon is colored according to the alarm severity.     However, note that these new icons do not support latch level, aggregation level and split view level indications. As such, a new user setting is available, *Use modern icons*, which can be cleared to use the previous icons again.
 
@@ -403,7 +388,7 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
 
 - The logon screen now features a minimalistic design, showing only the DataMiner logo, the IP of the DMA, the login info and a configuration button. With a button at the bottom of the window, you can switch between the current Windows user and a different user profile. The configuration button provides access to options, the "about" information and logging.
 
-- A number of buttons are now available, based on the status of the logon and the DMA. While you are logging onto a DMA, you can click *Back* to return to the logon screen. If a DMA is upgrading or migrating when you log on, you can click the *Monitor* button to monitor the progress. If a DMA is stopped, you can click *Start*, and if a DMA is offline, you can click *Set online*.
+- A number of buttons are now available, based on the status of the logon and the DMA. While you are logging onto a DMA, you can click *Back* to return to the logon screen. If a DMA is upgrading or migrating when you log on, you can click the *Monitor* button to monitor the progress. If a DMA is stopped, you can click *Start*, and if a DMA is offline, you can click *Set online*.
 
 #### DataMiner Analytics: Alarm focus \[23911\]\[ID_24083\]\[ID_24102\]\[ID_24128\]
 
@@ -428,9 +413,9 @@ The focus score that is assigned to an alarm is a combination of likelihood, fre
 
 **New column in Alarm Console: Focus**
 
-In the *Active alarms* tab page, for each alarm that can be considered “unexpected”, an icon will be displayed in the new *Focus* column, which is located between the *Icon* column and the *Element name* column.
+In the *Active alarms* tab page, for each alarm that can be considered “unexpected”, an icon will be displayed in the new *Focus* column, which is located between the *Icon* column and the *Element name* column.
 
-Also, in the blue footer of the *Active alarms* tab page, you will notice a new focus icon. If you click this icon, the current tab page will only display the alarms with a focus icon in the *Focus* column.
+Also, in the blue footer of the *Active alarms* tab page, you will notice a new focus icon. If you click this icon, the current tab page will only display the alarms with a focus icon in the *Focus* column.
 
 > [!NOTE]
 > If an alarm template changes, all alarms of the parameters that were assigned that alarm template will have their focus score reset and will get the focus icon. All historical focus data for those alarms will be lost.
@@ -449,7 +434,7 @@ When calculating alarm focus values for the first time, or when recalculating th
 
 #### New system-wide ClientSettings.json setting to configure whether Data Display pages should be unloaded from memory when you navigate away from them \[ID_23913\]
 
-In the *ClientSettings.json* file, the new system-wide *commonServer.ui.datadisplay.PageUnloadOnNavigatingAway* setting allows you to configure whether Data Display pages should be unloaded from memory when you navigate away from them.
+In the *ClientSettings.json* file, the new system-wide *commonServer.ui.datadisplay.PageUnloadOnNavigatingAway* setting allows you to configure whether Data Display pages should be unloaded from memory when you navigate away from them.
 
 Default value: False
 
@@ -457,7 +442,7 @@ Default value: False
 
 By adding a data field of type ‘ServiceInstance’ to a shape, it is possible to have the connectivity chain of a service instance drawn automatically in Visual Overview.
 
-When configuring such a shape, from now on, you can use the *CollapseEmptyRowsAnd<br>Columns* option to automatically collapse all empty rows and columns in the connectivity chain.
+When configuring such a shape, from now on, you can use the *CollapseEmptyRowsAnd<br>Columns* option to automatically collapse all empty rows and columns in the connectivity chain.
 
 Example:
 
@@ -468,12 +453,12 @@ Example:
 
 #### Settings: ‘Table export column separator’ setting replaced by ‘CSV separator’ setting \[ID_23986\]
 
-The *Table export column separator* setting (on the *User \> Data Display* page of the *Settings* window) has now been replaced by the *CSV separator* setting (on the *User \> Regional* page of the *Settings* window).
+The *Table export column separator* setting (on the *User \> Data Display* page of the *Settings* window) has now been replaced by the *CSV separator* setting (on the *User \> Regional* page of the *Settings* window).
 
 The separator you select in this new setting will be used in all CSV files exported from Cube.
 
 > [!NOTE]
-> - This *CSV separator* setting is a Cube-only setting. When a CSV file export is initiated directly by a DataMiner Agent, this setting will be disregarded.
+> - This *CSV separator* setting is a Cube-only setting. When a CSV file export is initiated directly by a DataMiner Agent, this setting will be disregarded.
 > - Before you import a CSV file that was exported using a previous version of Cube, make sure to check the separator used in that file.
 > - When you copy data to the Windows clipboard, that data will always be delimited by TAB characters, regardless of the delimiter specified in the CSV separator setting.
 
@@ -494,7 +479,7 @@ ClickOnce StandAlone and MSI versions will run as 64-bit processes on 64-bit sys
 
 #### New sidebar docking position setting \[ID_24178\]
 
-In the restyled Cube X, the docking position of the sidebar can now be controlled by means of the *User \> Surveyor \> Sidebar docking position* setting.
+In the restyled Cube X, the docking position of the sidebar can now be controlled by means of the *User \> Surveyor \> Sidebar docking position* setting.
 
 Default: left
 
@@ -503,16 +488,14 @@ Default: left
 In *System Center*,
 
 - the state of every agent in the DataMiner System is now displayed on the *Agents* page, and
-
-- the total number of agents in the DataMiner System is now displayed on the *Agents* page, the *Database* page, and the *Select Agents to back up* window (which appears when you click *Execute backup* on the *Backup* page).
+- the total number of agents in the DataMiner System is now displayed on the *Agents* page, the *Database* page, and the *Select Agents to back up* window (which appears when you click *Execute backup* on the *Backup* page).
 
 #### Visual Overview - Trend component: Filtering the legend’s element list and collapsing or expanding the legend by default \[ID_24349\]
 
 When a shape is showing a trend component, it is now possible to
 
 - filter the list of elements in the legend based on the value of a property of the Visio shape (see the *Filter* data item in the example below), and
-
-- collapse or expand the legend by default (see the *ParametersOptions* data item in the example below).
+- collapse or expand the legend by default (see the *ParametersOptions* data item in the example below).
 
 Example:
 
@@ -544,11 +527,11 @@ Example:
 
 #### Visual Overview: Filtering an alarm tab by clicking an AlarmSummary shape \[ID_24380\]
 
-By linking a shape to an alarm filter using an *AlarmSummary* data item, you can show statistical information about the alarms that match the filter. From now on, it is also possible to have the alarms displayed in an alarm tab, filtered according to the filter specified in the shape.
+By linking a shape to an alarm filter using an *AlarmSummary* data item, you can show statistical information about the alarms that match the filter. From now on, it is also possible to have the alarms displayed in an alarm tab, filtered according to the filter specified in the shape.
 
 To do so, add a data item of type *AlarmTab*, and set its value to “Name=”, followed by the name of an alarm tab. See the example below.
 
-When you click the shape, Cube will open the specified alarm tab (if it has a filter applied) and apply the alarm filter specified in the *AlarmSummary* data item. If the alarm tab specified in the *AlarmTab* data item has no alarm filter applied or if no alarm tab exists with that name, one will first be created.
+When you click the shape, Cube will open the specified alarm tab (if it has a filter applied) and apply the alarm filter specified in the *AlarmSummary* data item. If the alarm tab specified in the *AlarmTab* data item has no alarm filter applied or if no alarm tab exists with that name, one will first be created.
 
 | Shape data field | Value                                                                |
 |------------------|----------------------------------------------------------------------|
@@ -559,8 +542,7 @@ When you click the shape, Cube will open the specified alarm tab (if it has a fi
 
 Up to now, there were two ways to have a shape linked to an alarm show information about that alarm:
 
-- Add an *Info* data item and set its value to a particular alarm keyword, and type a “\*” character in the shape text. The “\*” character will then be replaced by the value of the keyword you specified in the *Info* data item.
-
+- Add an *Info* data item and set its value to a particular alarm keyword, and type a “\*” character in the shape text. The “\*” character will then be replaced by the value of the keyword you specified in the *Info* data item.
 - Enter one or more alarm keywords (wrapped in square brackets) in the shape text. Those will then be replaced by their corresponding value.
 
 From now on, it is also possible to specify alarm keywords in shape data items other than *Info*.
@@ -578,9 +560,9 @@ Example:
 
 #### Visual Overview: Displaying a Visio page when the shape is not linked to an element, a view or a service \[ID_24507\]
 
-Up to now, it was only possible to display a page of a Visio file associated with an object linked to a shape. To have a page named “Details” of a Visio file associated with an element named “MyElement” displayed in a separate window, for example, you had to add two data items to a shape: one of type *Element* set to “MyElement”, and one of type *VdxPage* set to “Details\|Window”.
+Up to now, it was only possible to display a page of a Visio file associated with an object linked to a shape. To have a page named “Details” of a Visio file associated with an element named “MyElement” displayed in a separate window, for example, you had to add two data items to a shape: one of type *Element* set to “MyElement”, and one of type *VdxPage* set to “Details\|Window”.
 
-From now on, it is also possible to display a page from the current Visio file by only adding a single data item of type *VdxPage* to a shape, without any reference to an element, view or service. This will allow you to also display Visio pages when a shape is linked to e.g. an alarm. See the following example:
+From now on, it is also possible to display a page from the current Visio file by only adding a single data item of type *VdxPage* to a shape, without any reference to an element, view or service. This will allow you to also display Visio pages when a shape is linked to e.g. an alarm. See the following example:
 
 | Shape data field | Value           |
 |------------------|-----------------|
@@ -595,7 +577,7 @@ From now on, it is also possible to display a page from the current Visio file b
 
 The time range feed can now be configured to show a list of quick-pick buttons that will allow users to enter a preset time range by clicking a single button.
 
-To configure the list of quick-pick buttons to be shown when users click a time range feed, go to edit mode, select the time range feed, open the *Layout* tab, select *Use quick picks*, and select the buttons to be shown.
+To configure the list of quick-pick buttons to be shown when users click a time range feed, go to edit mode, select the time range feed, open the *Layout* tab, select *Use quick picks*, and select the buttons to be shown.
 
 #### Dashboards app: Enhanced theme configuration \[ID_23258\]
 
@@ -603,7 +585,7 @@ In the dashboard settings page, which is now named “*Dashboards settings*”, 
 
 Also, there are now two system themes: “Light” and “Dark”. These are fixed themes that cannot be edited or deleted.
 
-Per dashboard, a theme can be selected in the *Layout* tab, which has now also been restyled. From now on, this tab will only allow you to change the layout of a dashboard after selecting the *Override* option.
+Per dashboard, a theme can be selected in the *Layout* tab, which has now also been restyled. From now on, this tab will only allow you to change the layout of a dashboard after selecting the *Override* option.
 
 > [!NOTE]
 > When you save a customized dashboard layout as a new theme, you will be asked to confirm this save operation as this will undo all changes you made to the layout of the dashboard you are editing.
@@ -612,7 +594,7 @@ Per dashboard, a theme can be selected in the *Layout* tab, which has now also 
 
 When you right-click the name of a dashboard in the navigation pane, there is now a new option that allows you to move that dashboard to another folder.
 
-Also, that right-click menu has been optimized. The *Duplicate* option has been renamed to *Copy*, and the list of menu options has been restructured.
+Also, that right-click menu has been optimized. The *Duplicate* option has been renamed to *Copy*, and the list of menu options has been restructured.
 
 #### Dashboards app: Line chart component can now visualize resource capacity \[ID_23901\]
 
@@ -632,15 +614,17 @@ The header, sidebar and login screen of the Dashboards app have now been adapted
 
 #### Dashboards app: New “Clear all” action + settings to pin actions \[ID_24356\]
 
-In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g. the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
+In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g. the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
 
-If a dashboard contains at least one feed, a new *Clear all* action is now available in the dashboard header, which can be used to clear the selection of the feeds in the dashboard.
+If a dashboard contains at least one feed, a new *Clear all* action is now available in the dashboard header, which can be used to clear the selection of the feeds in the dashboard.
 
-It is possible to view this new action even when the dashboard is embedded, if "subheader=true" is added to the URL. However, not that this is only the case for the *Clear all* action.<br>For example: *http://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
+It is possible to view this new action even when the dashboard is embedded, if "subheader=true" is added to the URL. However, not that this is only the case for the *Clear all* action.
+
+For example: `http://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true`
 
 #### Dashboards app: New "Node edge graph" visualization \[ID_24433\]
 
-A new *Node edge graph* visualization is now available in the *Other* category in the Dashboards app. This visualization can be used to display a service definition as a node edge graph. It can display the graph based on a service data filter, based on a service definition ID, or based on a reservation instance ID. If several of these inputs are specified, the input that was specified last will be used.
+A new *Node edge graph* visualization is now available in the *Other* category in the Dashboards app. This visualization can be used to display a service definition as a node edge graph. It can display the graph based on a service data filter, based on a service definition ID, or based on a reservation instance ID. If several of these inputs are specified, the input that was specified last will be used.
 
 Several options are available to fine-tune the layout of the component. You can select whether node IDs and/or interfaces should be displayed, whether zooming is enabled, and which edge style is used.
 
@@ -689,7 +673,7 @@ Also, a new InheritScriptOutput script option will now allow you to control whet
 
 Example:
 
-```txt
+```csharp
 var scriptOptions = engine.PrepareSubScript("MyScript");
 scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
@@ -701,7 +685,7 @@ In an interactive Automation script, it is now possible to upload files from a c
 
 To allow users to do so, you need to add a file selector control to the script in the following manner:
 
-```txt
+```csharp
 UIBlockDefinition uiBlock = new UIBlockDefinition();
 uiBlock.Type = UIBlockType.FileSelector;
 uiBlock.DestVar = "varUserUploadedFile";
@@ -709,12 +693,12 @@ uiBlock.DestVar = "varUserUploadedFile";
 
 When the UI is then shown using *Engine#ShowUI(...)*, *UIResults* will contain the path to the file:
 
-```txt
+```csharp
 UIResults results = engine.ShowUI(uiBuilder);
 string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 ```
 
-When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g. Close, Next, etc.). Once the upload has started, a *Cancel* option will appear, allowing you to abort the upload operation.
+When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g. Close, Next, etc.). Once the upload has started, a *Cancel* option will appear, allowing you to abort the upload operation.
 
 All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
 
@@ -723,14 +707,12 @@ All files uploaded by users will by default be placed in the *C:\\Skyline DataMi
 In an Automation script, you can now use the engine.UnsetFlag method to clear the following run-time flags:
 
 - RunTimeFlags.AllowUndef
-
 - RunTimeFlags.NoInformationEvents
-
 - RunTimeFlags.NoKeyCaching
 
 This will allow you to, for instance, perform silent parameter sets. See the following example:
 
-```txt
+```csharp
 public void SetParameterSilent(int pid, object value) {
     // Set the NoInformationEvents flag to disable information events
     _engine.SetFlag(RunTimeFlags.NoInformationEvents);
@@ -748,18 +730,13 @@ public void SetParameterSilent(int pid, object value) {
 The GetTableForParameterV2 method now supports filtering based on the following table column KPI options:
 
 - KPIHideWrite
-
 - HideKPI
-
 - HideKPIWhenNotInitialized
-
 - KPIShowDisplayKey
-
 - KPIShowPrimaryKey
-
 - DisableHistogram
 
-To enable KPI option filtering when calling the *GetTableForParameterV2* method, specify the “as-kpi” filter in the *Filters* input field.
+To enable KPI option filtering when calling the *GetTableForParameterV2* method, specify the “as-kpi” filter in the *Filters* input field.
 
 ### DMS Mobile apps
 
@@ -783,17 +760,14 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 
 - Redesigned element, service, view and alarm cards, which can be accessed directly using the following URLs:
 
-    - http://\<DMAIP>/monitoring/element/\<DMAID>/\<EID>/data/\<PAGENAME>
-
-    - http://\<DMAIP>/monitoring/element/\<DMAID>/\<EID>/visual/\<PAGENAME>
-
-    - http://\<DMAIP>/monitoring/element/\<DMAID>/\<EID>/chain/\<CHAINNAME>
-
-    - http://\<DMAIP>/monitoring/view/\<VIEWID>/\<PAGENAME>
-
-    - http://\<DMAIP>/monitoring/view/\<VIEWID>/visual/\<PAGENAME>
-
-    - http://\<DMAIP>/monitoring/alarm/\<DMAID>/\<ALARMID>
+    ```txt
+    http://<DMAIP>/monitoring/element/<DMAID>/<EID>/data/<PAGENAME>
+    http://<DMAIP>/monitoring/element/<DMAID>/<EID>/visual/<PAGENAME>
+    http://<DMAIP>/monitoring/element/<DMAID>/\<EID>/chain/\<CHAINNAME>
+    http://<DMAIP>/monitoring/view/<VIEWID>/<PAGENAME>
+    http://<DMAIP>/monitoring/view/<VIEWID>/visual/<PAGENAME>
+    http://<DMAIP>/monitoring/alarm/<DMAID>/<ALARMID>
+    ```
 
 > [!NOTE]
 > To open this new Monitoring & Control app from the address bar of your internet browser, enter the IP address of the DataMiner Agent, followed by “/monitoring”.
@@ -802,7 +776,7 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 
 #### Legacy Monitoring & Control app: New settings to specify the default page for element, service and view cards \[ID_24017\]
 
-In the *Settings* window of the legacy Monitoring & Control app, it is now possible to specify the default pages for element, service and view cards.
+In the *Settings* window of the legacy Monitoring & Control app, it is now possible to specify the default pages for element, service and view cards.
 
 #### Jobs app: UI adapted to new DataMiner X style \[ID_24157\]
 
@@ -820,31 +794,31 @@ Clicking the user menu in the upper-right corner will allow you to open the Tool
 
 #### DataMiner Cube: New Migrate booking data to Indexing Engine wizard [ID_21935] [ID_23674] [ID_24410] [ID_24424]
 
-In DataMiner Cube, a new wizard has been added to the *Search & Indexing* section of *System Center*. This wizard allows you to migrate booking data from the Cassandra database to the Indexing database.
+In DataMiner Cube, a new wizard has been added to the *Search & Indexing* section of *System Center*. This wizard allows you to migrate booking data from the Cassandra database to the Indexing database.
 
-As some booking property names can contain characters that are considered invalid by the Indexing engine, the wizard will ask you to rename certain booking properties before starting the migration. To ensure the correct functionality of the Service & Resource Management module, some properties will be renamed automatically. For example, the *Visual.Background* and *Visual.Foreground* properties will automatically be renamed as *VisualBackground* and *VisualForeground*.
+As some booking property names can contain characters that are considered invalid by the Indexing engine, the wizard will ask you to rename certain booking properties before starting the migration. To ensure the correct functionality of the Service & Resource Management module, some properties will be renamed automatically. For example, the *Visual.Background* and *Visual.Foreground* properties will automatically be renamed as *VisualBackground* and *VisualForeground*.
 
-When you have successfully migrated all booking data, the button to start the wizard will disappear from the UI. Also, when the migration has finished, a *Retrieve report* button will allow you to generate a report showing a summary of that migration.
+When you have successfully migrated all booking data, the button to start the wizard will disappear from the UI. Also, when the migration has finished, a *Retrieve report* button will allow you to generate a report showing a summary of that migration.
 
 > [!NOTE]
 > - After migrating the booking data to the Indexing database, make sure to check your Automation scripts and Visio files and adjust the booking property names where necessary.
-> - When configuring backup settings in the *Backup* section of *System Center*, a new *Include SRM in backup* option is now available under the *Create a backup of the database* option. Select this option if you want the booking data in the Indexing database to be included in the backup package.
+> - When configuring backup settings in the *Backup* section of *System Center*, a new *Include SRM in backup* option is now available under the *Create a backup of the database* option. Select this option if you want the booking data in the Indexing database to be included in the backup package.
 > - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 > - A number of methods in the ServiceManagerHelper and ResourceManagerHelper classes have been adapted to allow them to manage booking data stored in an Indexing database.
 
 #### Improvements ResourceManagerHelper class for deletion of resources \[ID_24002\]<br>\[ID_24563\]
 
-If there is an error deleting resources using the *ResourceManagerHelper* class, additional feedback is now returned:
+If there is an error deleting resources using the *ResourceManagerHelper* class, additional feedback is now returned:
 
-- If one or more resources are deleted using the *ResourceManagerHelper* class, and at least one of the resources fails to be deleted, a single error, *ResourceDeleteFailed*, is returned, which now contains a *UsingIDs* property with all the IDs of the resources that failed. Any possible other resources are still successfully deleted.
+- If one or more resources are deleted using the *ResourceManagerHelper* class, and at least one of the resources fails to be deleted, a single error, *ResourceDeleteFailed*, is returned, which now contains a *UsingIDs* property with all the IDs of the resources that failed. Any possible other resources are still successfully deleted.
 
-- If a resource is deleted that is in use or in maintenance mode, the error *ResourceDeleteInUseOrMaintenanceMode* is returned. If the resource is included in scheduled, ongoing or quarantined bookings, the IDs of these bookings are now returned in the *FutureOrOngoingReservationIds* property.
+- If a resource is deleted that is in use or in maintenance mode, the error *ResourceDeleteInUseOrMaintenanceMode* is returned. If the resource is included in scheduled, ongoing or quarantined bookings, the IDs of these bookings are now returned in the *FutureOrOngoingReservationIds* property.
 
-If a resource that is used in past bookings is deleted, the deletion now fails by default, returning the error *ResourceDeleteInUseOrMaintenanceMode* with the boolean property *HasPastBookings* set to true.
+If a resource that is used in past bookings is deleted, the deletion now fails by default, returning the error *ResourceDeleteInUseOrMaintenanceMode* with the boolean property *HasPastBookings* set to true.
 
-In addition, the following new method is now available in the *ResourceManagerHelper* class: <br>*Resource\[\] RemoveResources(Resource\[\] resources, bool ignorePastReservations);*
+In addition, the following new method is now available in the *ResourceManagerHelper* class: <br>*Resource\[\] RemoveResources(Resource\[\] resources, bool ignorePastReservations);*
 
-If *ignorePastReservations* is false, this method works in the same way as existing calls to remove resources. If it is set to true, past bookings will be ignored during the deletion checks. This can be used to delete resources that are only used in past bookings; however, note that these bookings may then contain invalid references to resources.
+If *ignorePastReservations* is false, this method works in the same way as existing calls to remove resources. If it is set to true, past bookings will be ignored during the deletion checks. This can be used to delete resources that are only used in past bookings; however, note that these bookings may then contain invalid references to resources.
 
 #### DataMiner will now generated an error when it detects a ServiceManager license but no Elastic­Search instance \[ID_24329\]
 
@@ -862,16 +836,13 @@ When a new trend group is being added in DataMiner Cube, a "\[new\]" label will 
 
 #### Services app - Services tab: Enhanced list view column configuration \[ID_23785\]
 
-When you right-click a column in the *Services* tab and click *Add/remove column*, you can also select *More* to open the *Choose details* window. In that window, the way in which to set a column’s type (which, by default, is set to “Text”) has now been enhanced.
+When you right-click a column in the *Services* tab and click *Add/remove column*, you can also select *More* to open the *Choose details* window. In that window, the way in which to set a column’s type (which, by default, is set to “Text”) has now been enhanced.
 
 To set the type of a column, open the *Column type* selection box, and
 
 - select “Alarm icon” to display the IDs in the column as alarm icons,
-
 - select “Custom icon” to have the column contents replaced by icons,
-
 - select “Color” to have the cells of that column visualized as colored blocks, or
-
 - select “Date” to have the column contents displayed as date values.
 
 #### Dashboards app: Trend statistics component now uses caching \[ID_23853\]
@@ -884,24 +855,16 @@ A number of enhancements have been made with regard to the management of profile
 
 #### Failover: Additional folders synchronized at initial setup \[ID_23875\]
 
-From now on, at initial Failover setup, the following folders under *C:\\Skyline DataMiner\\* will also be synchronized among the two DataMiner Agents:
+From now on, at initial Failover setup, the following folders under *C:\\Skyline DataMiner\\* will also be synchronized among the two DataMiner Agents:
 
 - Aggregation
-
 - Configurations\\JSON
-
 - Dashboards
-
 - ProfileManager
-
 - ProtocolFunctionManager
-
 - ProtocolFunctionManager\\SrmProtocolGenerationInfo
-
 - ServiceManager
-
 - VisualData\\Data
-
 - VisualData\\Objects
 
 #### Dashboards app: Tooltips for component quick menu \[ID_23879\]
@@ -920,9 +883,9 @@ The maxJSONLength setting, for instance, has now been made configurable. Up to n
 
 To set maxJSONLength to a specific value, do the following:
 
-1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
+1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
 
-2. Make sure that the *configuration.appSettings* section contains an element similar to the following one:
+2. Make sure that the *configuration.appSettings* section contains an element similar to the following one:
 
     ```xml
     <add key="maxJsonLength" value="?10485760?" />
@@ -955,7 +918,7 @@ When highlighting of DCF connections was configured in a Visio drawing but no sp
 
 #### Services app: Service definition diagram enhancements \[ID_23985\]
 
-In the *Services* app, a number of enhancements have been made to the diagrams that graphically visualize service definitions.
+In the *Services* app, a number of enhancements have been made to the diagrams that graphically visualize service definitions.
 
 Also, when you embed the Services app in Visual Overview by using a Service Manager component, it is now possible to have that component display node IDs. To do so, add the following option to the *ComponentOptions* shape data field:
 
@@ -975,13 +938,13 @@ The IIS URL Rewrite module will now automatically be installed during a DataMine
 
 The following enhancements have been implemented in the Service & Resource Management module:
 
-- The *FunctionDefinition* object now contains a list of *ExportRules*, which contain the export rules defined in the function XML file.
+- The *FunctionDefinition* object now contains a list of *ExportRules*, which contain the export rules defined in the function XML file.
 
 - It is now possible to upload function XML files that have the "broadcast" option defined on an interface.
 
-- When *ProtocolFunctionVersion.ToXml* is called and no *ParameterGroupLink* is defined, the *ParameterGroupLink* property will now no longer be present on an interface in the resulting XML.
+- When *ProtocolFunctionVersion.ToXml* is called and no *ParameterGroupLink* is defined, the *ParameterGroupLink* property will now no longer be present on an interface in the resulting XML.
 
-- When *ProtocolFunctionVersion.ToXml* is called, the resulting XML will now wrap the contents of the "Graphical" tag in a CData tag.
+- When *ProtocolFunctionVersion.ToXml* is called, the resulting XML will now wrap the contents of the "Graphical" tag in a CData tag.
 
 #### Dashboards app - Group component: Option to have the legend be expanded or collapsed by default \[ID_24046\]
 
@@ -1030,7 +993,7 @@ Due to a number of enhancements, overall performance has increased when drawing 
 
 #### SLNetClientTest tool: Failover Agents included when viewing across cluster \[ID_24170\]
 
-In the SLNetClientTest tool, for some messages (e.g. *Diagnostics* > *SLNet* > *StackSizes*) it is possible to right-click the message and select *View across cluster* to send it to the entire DMS. This feature has now been improved to include Failover Agents as well.
+In the SLNetClientTest tool, for some messages (e.g. *Diagnostics* > *SLNet* > *StackSizes*) it is possible to right-click the message and select *View across cluster* to send it to the entire DMS. This feature has now been improved to include Failover Agents as well.
 
 #### DataMiner Cube - Automation/Correlation: Width of action dialog boxes will now automatically be adapted to the size of the screen \[ID_24190\]
 
@@ -1090,7 +1053,7 @@ The buffer size of Stream Viewer’s text box has increased from 32 kB to 1 MB.
 
 In the Monitoring, Dashboards and Jobs apps, it is now possible to use the *ShowInformationMessage* method in a script to display a message in the app.
 
-Note that a small change has also been implemented in the Dashboards app. The *New dashboard* button will no longer be displayed in the header bar. Creating a new dashboard remains possible via the context menu of the side panel and via the Dashboards homepage.
+Note that a small change has also been implemented in the Dashboards app. The *New dashboard* button will no longer be displayed in the header bar. Creating a new dashboard remains possible via the context menu of the side panel and via the Dashboards homepage.
 
 #### HTML5 apps: Enhanced icons \[ID_24341\]
 
@@ -1155,24 +1118,18 @@ When installing a new DataMiner Agent with a MySQL database, the following MySQL
 
 #### Web Services API v1: Unused method and arguments removed \[ID_24530\]
 
-The method *GetClusterAsync*, which could not yet be used, has been removed from the Web Services API v1. In addition, a number of fields that also could not yet be used have been removed. The following fields have been removed from the *DMAAutomationScriptSettings* object:
+The method *GetClusterAsync*, which could not yet be used, has been removed from the Web Services API v1. In addition, a number of fields that also could not yet be used have been removed. The following fields have been removed from the *DMAAutomationScriptSettings* object:
 
 - DebugMode
-
 - AllowUndef
-
 - SupportsBackAndForward
-
 - SkipElementChecks
-
 - SavedFromCube
-
 - SkipSetInfoEvents
 
 The following fields have been removed from the *DMAScatterAxisInfo* object:
 
 - ParameterID
-
 - TableIndex
 
 #### Service & Resource Management: Enhanced performance when updating active function defini­tions \[ID_24554\]
@@ -1191,7 +1148,7 @@ From now on, the annotation web pages will contain the following explicit UTF-8 
 
 #### DataMiner Cube: Problem with Element migration window \[ID_23237\]
 
-When connected to a DataMiner System with multiple DataMiner Agents, you opened *System Center \> Agents \> Status*, clicked *Migrate*, selected a destination agent and a number of elements, and then clicked either *Migrate* to start migrating the selected elements to the selected agent or *Cancel* to exit the *Element migration* window, in some cases, an exception could be thrown.
+When connected to a DataMiner System with multiple DataMiner Agents, you opened *System Center \> Agents \> Status*, clicked *Migrate*, selected a destination agent and a number of elements, and then clicked either *Migrate* to start migrating the selected elements to the selected agent or *Cancel* to exit the *Element migration* window, in some cases, an exception could be thrown.
 
 #### DataMiner Cube - Alarm template groups: Table column parameters listed in incorrect order \[ID_23675\]
 
@@ -1223,7 +1180,7 @@ When WebSocket communication was disabled for a dashboard, it could occur that t
 
 #### DataMiner Cube - Visual Overview: \[Sum:X,Y,Z\] placeholder did not parse decimal values \[ID_23810\]
 
-In some cases, it could occur that the *\[Sum:X,Y,Z\]* placeholder in Visio did not parse decimal values.
+In some cases, it could occur that the *\[Sum:X,Y,Z\]* placeholder in Visio did not parse decimal values.
 
 #### Dashboards app - Trend charts: Boundary lines would only be drawn on the first axis \[ID_23837\]
 
@@ -1231,7 +1188,7 @@ When you added boundary lines to a trend chart, in some cases, the lines would o
 
 #### DataMiner Cube - Alarm Console: Problem when sorting alarms after grouping them \[ID_23845\]
 
-When, in the hamburger menu of the Alarm Console, the *Automatically group according to arrangement* option is disabled, you can group the alarms by right-clicking a column header and selecting *Group by this field*. You can then sort the alarms in the different groups by clicking a column header. In some cases, however, after grouping alarms by a particular column, it was no longer possible to sort alarms by that same column.
+When, in the hamburger menu of the Alarm Console, the *Automatically group according to arrangement* option is disabled, you can group the alarms by right-clicking a column header and selecting *Group by this field*. You can then sort the alarms in the different groups by clicking a column header. In some cases, however, after grouping alarms by a particular column, it was no longer possible to sort alarms by that same column.
 
 #### Problem with SLElement \[ID_23846\]
 
@@ -1247,7 +1204,7 @@ If a service definition was duplicated, it could occur that the interface config
 
 #### Service & Resource Management: Problem when sorting a ListView by a custom property col­umn \[ID_23876\]
 
-When you sorted a bookings list or a services list by a custom property column, in some cases, the sort order would not be remembered. The next time you opened the *Bookings* app or the *Services* app, the list would be sorted as before.
+When you sorted a bookings list or a services list by a custom property column, in some cases, the sort order would not be remembered. The next time you opened the *Bookings* app or the *Services* app, the list would be sorted as before.
 
 #### Dashboards app: Selected items in the feeds of a dashboard would be unselected after renam­ing that dashboard \[ID_23877\]
 
@@ -1303,7 +1260,7 @@ In some cases, icons defined in system functions would not be displayed in DataM
 
 #### DataMiner Cube - Service templates: Incorrect combination values in “Conditions” section of “Edit child element” window \[ID_23979\]
 
-When configuring conditions in the *Conditions* section of an *Edit child element* window, in some cases, the *Combination* selection boxes would contain incorrect values. Also, no value would be selected by default.
+When configuring conditions in the *Conditions* section of an *Edit child element* window, in some cases, the *Combination* selection boxes would contain incorrect values. Also, no value would be selected by default.
 
 #### Table cells could no longer be set to “invalid” & problem with SLElement when a user subscribed to a view table \[ID_23997\]
 
@@ -1423,19 +1380,19 @@ When a service definition was updated, in some cases, the old version of that se
 
 #### DataMiner Cube - System Center: A backup including the Indexing database could incorrectly be started without specifying a backup path \[ID_24217\]
 
-In the *Backup* section of *System Center*, users would incorrectly be able to start a backup that included the Indexing database even when no *Indexing Engine backup path* had been specified. As a result, the backup operation would fail immediately.
+In the *Backup* section of *System Center*, users would incorrectly be able to start a backup that included the Indexing database even when no *Indexing Engine backup path* had been specified. As a result, the backup operation would fail immediately.
 
-From now on, the *Execute backup* button will be disabled when no *Indexing Engine backup path* is specified.
+From now on, the *Execute backup* button will be disabled when no *Indexing Engine backup path* is specified.
 
 #### DataMiner Cube - System Center: Agent list would incorrectly be expanded after having chosen not to upgrade a number of specific agents \[ID_24223\]
 
-When, in the *Agents* section of *System Center*, you click *Upgrade*, you can choose whether to upgrade either all agents in the cluster or a number of specific agents. If you choose the latter, and click “Yes” in the confirmation box, the list of available agents will be expanded, allowing you to select the agents to be upgraded.
+When, in the *Agents* section of *System Center*, you click *Upgrade*, you can choose whether to upgrade either all agents in the cluster or a number of specific agents. If you choose the latter, and click “Yes” in the confirmation box, the list of available agents will be expanded, allowing you to select the agents to be upgraded.
 
 However, up to now, the list of available agents would also incorrectly be expanded when you clicked “No” in the confirmation box. This will no longer occur.
 
 #### Service & Resource Management: Resources in service of child booking not updated after book­ing resources were updated \[ID_24224\]
 
-When an SRM script updated the resources for a child booking but it only passed the main booking to the *AddOrUpdateReservationInstances* call, it could occur that the resources in the service of the child booking were not updated.
+When an SRM script updated the resources for a child booking but it only passed the main booking to the *AddOrUpdateReservationInstances* call, it could occur that the resources in the service of the child booking were not updated.
 
 #### DataMiner Cube: Version conflict error after logging in with an incorrect Administrator pass­word \[ID_24229\]
 
@@ -1465,7 +1422,7 @@ When an element was migrated, it could occur that an element data file could not
 
 During a switch-over, in some cases, users would no longer receive a “\<DMA> is switching to \<DMA>” message.
 
-Also, the term “System Display” has been replaced by “Client Interface” in *Failover status* windows.
+Also, the term “System Display” has been replaced by “Client Interface” in *Failover status* windows.
 
 #### DataMiner Cube - Alarm Console: Alarm filters using session variables would no longer be updated correctly \[ID_24255\]
 
@@ -1665,7 +1622,7 @@ If a DMA was not licensed for Ticketing, it could occur that the DataMiner landi
 
 #### DataMiner Cube - Visual Overview: Column configuration of ListView component not updated \[ID_24422\]
 
-In some rare cases, it could occur that the column configuration of a *ListView* component was not saved or retrieved correctly.
+In some rare cases, it could occur that the column configuration of a *ListView* component was not saved or retrieved correctly.
 
 #### DataMiner Cube: Editing an SNMPv3 element created prior to DataMiner 9.6.12 would cause the authentication type to be reset to the default type \[ID_24423\]
 
@@ -1685,7 +1642,7 @@ In some rare cases, ReservationInstances that should have had their status set t
 
 #### Cassandra: Problem during upgrade would cause duplicate entries being added to the activealarms table \[ID_24436\]
 
-In some cases, an error could occur when executing the *CassandraActiveAlarmsRootOnlyUpgrade* upgrade action. As a result of this error, duplicate entries would be added to the activealarms table.
+In some cases, an error could occur when executing the *CassandraActiveAlarmsRootOnlyUpgrade* upgrade action. As a result of this error, duplicate entries would be added to the activealarms table.
 
 #### Problem with SLNet when the connections among the different DataMiner Agents were being initiated \[ID_24437\]
 
@@ -1695,10 +1652,8 @@ In some rare cases, an error could occur in SLNet when the DataMiner Agents in t
 
 On the DataMiner landing page, in some cases, the following links would be broken:
 
-- Link to the https://www.skyline.be website (under “Skyline Communications”)
-
+- Link to the <https://www.skyline.be> website (under “Skyline Communications”)
 - Link to /licenses.asp
-
 - Link to /systemdisplay.htm
 
 #### DataMiner Cube: Problem when searching paged tables \[ID_24440\]
@@ -1739,7 +1694,7 @@ When a sliding window tab in the Alarm Console included cleared alarms, it could
 
 When working with the Dashboards app in Chrome, in some cases, a mouse click could unintentionally cause a dashboard component to be moved to another location.
 
-#### Dashboards app: Parameters in the URL would not correctly be loaded in the multiple parame­ter feed \[ID_24536\]
+#### Dashboards app: Parameters in the URL would not correctly be loaded in the multiple parameter feed \[ID_24536\]
 
 When you opened a dashboard with a multiple parameter feed using a URL that contained the parameters to be loaded in that feed, in some cases, the parameters in the URL would not correctly be loaded into the multiple parameter feed.
 

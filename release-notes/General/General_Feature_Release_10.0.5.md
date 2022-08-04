@@ -1,4 +1,8 @@
-# Feature release 10.0.5
+---
+uid: General_Feature_Release_10.0.5
+---
+
+# General Feature Release 10.0.5
 
 ## New features
 
@@ -6,7 +10,7 @@
 
 #### Support for icons in SVG format \[ID_24841\]
 
-In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
+In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
 
 Also, the default function icon has been updated.
 
@@ -56,7 +60,6 @@ If, for a particular session, loginMethod is set to “certificate”, DataMiner
 From now on, clearer warning messages will appear when you try to delete
 
 - a resource linked to a booking, or
-
 - an element linked to one or more resources.
 
 #### Alarm Console now fully compliant with the new Cube X style \[ID_24859\]
@@ -91,25 +94,24 @@ You can define the following:
 
 **New rule attributes: keyType and keyValue**
 
-This new feature relies on two new rule attributes: *keyType* and *keyValue*.
+This new feature relies on two new rule attributes: *keyType* and *keyValue*.
 
 - The *keyType* attribute can have two values: “PK” (primary key) or “DK” (display key).
-
 - The *keyValue* attribute has to contain the value that will be used in the condition.
 
 In the example below, parameter 203 is a column of table 200, and the cell in column 203 that matches the corresponding key will be used in the condition.
 
 ```xml
 <Condition id="5" name="Condition3">
-  <Rule pid="203" comparer="eq" value="4" next="or" keyType="DK"      keyValue="DisplayKey3"/>
-  <Rule pid="203" comparer="eq" value="3" keyType="PK"      keyValue="2"/>
+  <Rule pid="203" comparer="eq" value="4" next="or" keyType="DK"      keyValue="DisplayKey3"/>
+  <Rule pid="203" comparer="eq" value="3" keyType="PK"      keyValue="2"/>
 </Condition>
 ```
 
 > [!NOTE]
-> Inside a rule, both the *keyType* and *keyValue* have to be filled in for this feature to work.
+> Inside a rule, both the *keyType* and *keyValue* have to be filled in for this feature to work.
 >
-> The *keyValue* attribute will always refer to the key (primary key or display key) of the table containing the column parameter used in the condition, not the key in the column parameter being monitored.
+> The *keyValue* attribute will always refer to the key (primary key or display key) of the table containing the column parameter used in the condition, not the key in the column parameter being monitored.
 
 #### Alarm Console: Severity duration column in history alarm tabs \[ID_24942\]
 
@@ -131,7 +133,7 @@ To a shape linked to a view, you can now add a shape data field of type “Alarm
 
 #### Visual Overview: Using subscription filters when subscribing to tree control tables \[ID_24995\]
 
-From now on, multiple subscription filters can be configured in the *SubscriptionFilter* shape data field of a tree control. Each of the pipe-separated filters will be applied to the corresponding table specified in the *SetVar* shape data field.
+From now on, multiple subscription filters can be configured in the *SubscriptionFilter* shape data field of a tree control. Each of the pipe-separated filters will be applied to the corresponding table specified in the *SetVar* shape data field.
 
 In the following example, the first subscription filter (“value=101 == 1”) will be used when subscribing to the first table (with ID 100) and the second subscription filter (“value=201 == A”) will be used when subscribing to the second table (with ID 200).
 
@@ -160,11 +162,11 @@ When you export element data to a CSV file, from now on, the export file will in
 
 When specifying view filters using the view name instead of the view ID, an alternative syntax can now be used: *ViewName=\<name>*
 
-Also, you can now use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID ,and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
+Also, you can now use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID ,and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
 
 **Element/service filters**
 
-From now on, if you set the *Source* shape data field to “Elements” or “Services”, additional possibilities are available to add an element or service filter in the *Filter* shape data field:
+From now on, if you set the *Source* shape data field to “Elements” or “Services”, additional possibilities are available to add an element or service filter in the *Filter* shape data field:
 
 - The following operators are supported: “*==*” (equals), “*!=*” (does not equal), “*contains*”, “*notContains*”, “*startswith*”, “*notStartswith*”, “*endsWith*", “*notEndsWith*", "*\<*" (smaller than, only usable with numbers) and "*\>*" (greater than, only usable with numbers). The value that is being compared with should always be included in single quotes.
 
@@ -229,25 +231,25 @@ From now on, if you set the *Source* shape data field to “Elements” or “S
         ```
 
 > [!NOTE]
-> The filters are not case-sensitive. For example, a service with the name "MyName" will be found when the filter *Service.Name == 'myname'* is used
+> The filters are not case-sensitive. For example, a service with the name "MyName" will be found when the filter *Service.Name == 'myname'* is used
 
 ### DMS Reports & Dashboards
 
 #### Dashboards app: Service definition visualization and data feed \[ID_25056\]\[ID_25151\]\[ID_25169\] \[ID_25178\]
 
-The *Node edge graph* visualization is no longer available in the Dashboards app. Instead, a *Service definition* visualization is now available, which is very similar to the node edge graph visualization, but specifically adjusted to display service definitions only.
+The *Node edge graph* visualization is no longer available in the Dashboards app. Instead, a *Service definition* visualization is now available, which is very similar to the node edge graph visualization, but specifically adjusted to display service definitions only.
 
-A new service definition data feed is now also available. The *Service definition* component can be configured with a booking data feed or with this new service definition data feed. In the dashboard URL, the service definition data feed can be specified using the argument “service definitions”, by specifying the service definition ID(s), for example: <br>*service definitions=serviceDefinitionID1%2FserviceDefinitionID2*
+A new service definition data feed is now also available. The *Service definition* component can be configured with a booking data feed or with this new service definition data feed. In the dashboard URL, the service definition data feed can be specified using the argument “service definitions”, by specifying the service definition ID(s), for example: <br>*service definitions=serviceDefinitionID1%2FserviceDefinitionID2*
 
-In case a feed component is used to provide a booking feed to the *Service definition* component, it is possible to use a service definition filter feed on this feed component, so that a booking is only included in the feed if it is based on one the service definitions in the filter.
+In case a feed component is used to provide a booking feed to the *Service definition* component, it is possible to use a service definition filter feed on this feed component, so that a booking is only included in the feed if it is based on one the service definitions in the filter.
 
-When the *Service definition* component displays nodes that are linked to particular resources, alarm and element info will now be displayed for these nodes in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
+When the *Service definition* component displays nodes that are linked to particular resources, alarm and element info will now be displayed for these nodes in the graph. The alarm state will be displayed with a colored border at the top of the node, and in the node icon in case the default icon is shown. In addition, a link icon in the node will open the corresponding element card in the Monitoring app when clicked.
 
-In the settings for the *Service definition* component, one or more actions can be defined. For each action, an Automation script and an icon need to be defined, and you need to specify to which node or nodes the action must be added. The icon will then be displayed on the specified node or nodes. When the icon is clicked, the script is launched. The booking ID or service definition ID used in the component and the node ID of the node for which the icon was clicked will be passed to the script as parameter ID 1 and parameter ID 2, respectively. The order of the specified actions can be modified in the *Settings* pane. In case there are too many actions on a node to display them all, clicking the action bar at the bottom of the node will expand the bar to display all the actions.
+In the settings for the *Service definition* component, one or more actions can be defined. For each action, an Automation script and an icon need to be defined, and you need to specify to which node or nodes the action must be added. The icon will then be displayed on the specified node or nodes. When the icon is clicked, the script is launched. The booking ID or service definition ID used in the component and the node ID of the node for which the icon was clicked will be passed to the script as parameter ID 1 and parameter ID 2, respectively. The order of the specified actions can be modified in the *Settings* pane. In case there are too many actions on a node to display them all, clicking the action bar at the bottom of the node will expand the bar to display all the actions.
 
 #### Dashboards app: CPE feed component now uses element data feed \[ID_25216\]
 
-To configure the data input of the *CPE feed* component in the Dashboards app, you now have to use a regular element data feed instead of specifying the element in the component settings. This change makes it possible to provide the data input of the *CPE feed* component dynamically using another feed component.
+To configure the data input of the *CPE feed* component in the Dashboards app, you now have to use a regular element data feed instead of specifying the element in the component settings. This change makes it possible to provide the data input of the *CPE feed* component dynamically using another feed component.
 
 #### Legacy Reporter app: Alarm list component now also returns alarms of enhanced service ele­ments \[ID_25232\]
 
@@ -260,7 +262,6 @@ In the legacy Reporter app, the alarm list component will now also return alarms
 Two new SLProtocol methods now allow QActions to execute Automation scripts:
 
 - ExecuteScript(string scriptName)
-
 - ExecuteScript(ExecuteScriptMessage message)
 
 Also, the Engine object has a new UserCookie property.
@@ -275,7 +276,7 @@ If you execute a script using this method, it will be executed with all script e
 
 Example:
 
-```txt
+```csharp
 public static void Run(SLProtocol protocol)
 {
     protocol.ExecuteScript("MyScriptName");
@@ -292,7 +293,7 @@ Using this method to execute an Automation script is particularly useful when th
 
 Code Example:
 
-```txt
+```csharp
 ExecuteScriptMessage esm = new ExecuteScriptMessage("RT_AUTOMATION_ExecuteAutomationByProtocol_AutomationScriptCode")
 {
     Options = new SA(new[]
@@ -319,7 +320,7 @@ When you execute an Automation script using the “DEFER:FALSE” option, be awa
 
 **New property on Engine object: UserCookie**
 
-```txt
+```csharp
 string Engine.UserCookie;
 ```
 
@@ -329,7 +330,7 @@ In a C# block of an Automation script, you can now link ReservationInstances to 
 
 See the following example:
 
-```txt
+```csharp
 // Create a ReservationInstanceID object
 var reservationInstanceId = new ReservationInstanceID(reservationInstance.ID);
 // Create a TicketLink using the static 'Create' method
@@ -340,7 +341,7 @@ ticket.AddTicketLink("KeyForThisLink", ticketLink);
 
 Note that you can use lists of TicketLink objects to retrieve a filtered list of tickets. See the following example:
 
-```txt
+```csharp
 // TicketLink filters are lists of TicketLink objects
 var ticketLinkFilter = new[] {ticketLink};
 // Use a list of TicketList objects to retrieve tickets by means of the 'GetTickets' method
@@ -368,14 +369,14 @@ This functionality will allow you to offer clear feedback on user input.
 
 **Which input controls support which properties?**
 
-|              | IsRequired | Placeholder | ValidationText |
+|              | IsRequired | Placeholder | ValidationText |
 |--------------|------------|-------------|----------------|
 | TextBox      | X          | X           | X              |
 | PasswordBox  | X          | X           | X              |
 | DropDown     | X          | X           | X              |
 | Numeric      | X          | X           | X              |
-| Calendar     | X          |             | X              |
-| FileSelector |            |             | X              |
+| Calendar     | X          |             | X              |
+| FileSelector |            |             | X              |
 
 #### UnSetFlag method now also added to IEngine interface \[ID_25188\]
 
@@ -387,26 +388,19 @@ This method has now also been added to the IEngine interface.
 
 #### Jobs app: New methods to manage job attachments \[ID_24791\]
 
-The *JobManagerHelper* has been expanded with new methods that can be used to manage attachments to jobs:
+The *JobManagerHelper* has been expanded with new methods that can be used to manage attachments to jobs:
 
 - *AddJobAttachment(JobID **jobID**, string **fileName**,byte\[\] **fileBytes**)*: Adds an attachment to the specified job.
-
 - *GetJobAttachmentFileNames(JobID **jobID**)*: Retrieves the names of the attachments of the specified job.
-
 - *DeleteJobAttachment(JobID **jobID**, string **attachmentName**)*: Deletes the attachment with the specified name from the specified job.
-
 - *GetJobAttachment(JobID **jobID**, string **attachmentName**)*: Retrieves the content of the specified attachment of the specified job as an array of bytes.
 
 Please note the following regarding job attachments:
 
-- The size limit of job attachments depends on the *Documents.MaxSize* setting in the file* MaintenanceSettings.xml*. By default, this is 20 MB.
-
+- The size limit of job attachments depends on the *Documents.MaxSize* setting in the file* MaintenanceSettings.xml*. By default, this is 20 MB.
 - Deleting a job will remove all attachments of this job from the system. These cannot be recovered afterwards.
-
-- Managing job attachments requires the *Jobs* > *UI available* and *Jobs* > *Add/Edit user permissions*.
-
+- Managing job attachments requires the *Jobs* > *UI available* and *Jobs* > *Add/Edit user permissions*.
 - Job attachments are backed up with the backup option *All documented located on this DMA*.
-
 - Job attachments are synced in a cluster.
 
 > [!WARNING]
@@ -420,7 +414,7 @@ The following tabs were added to the spectrum page of Spectrum Analyzer elements
 |-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Information | Shows basic information regarding measurement points, markers, thresholds and parameters.                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Traces      | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace.                                                                                                                                                                                                                                                                                                                                                                                 |
-| Presets     | Lists the available presets.<br> By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag.<br> When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
+| Presets     | Lists the available presets.<br> By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag.<br> When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
 
 #### Monitoring app: Card header, sidebar and menu available on mobile devices \[ID_25156\]
 
@@ -495,7 +489,6 @@ Both requests require the profile parameter ID, the element ID and the parameter
 Service & Resource Management now supports
 
 - capabilities of type string, and
-
 - time-dependent capabilities.
 
 **Capabilities of type string**
@@ -528,7 +521,6 @@ When a time-dynamic capability is booked by a ReservationInstance that requires 
 In the context of time-dynamic capabilities, two new methods have been added to the ResourceManagerHelper:
 
 - GetEligibleResourcesWithUsageInfo
-
 - GetEligibleResourcesForServiceNodeWithUsageInfo
 
 These methods correspond with GetEligibleResources and GetEligibleResourcesForService-Node, but the return value of the new methods contains information about the currently booked usage of each eligible Resource, along with all eligible Resources.
@@ -608,9 +600,9 @@ A number of minor enhancements have been made to the *Advanced Editing* pane:
 
 - The message shown when adding a duplicate shape data or when configuring an invalid shape data name will now mention shape data instead of page data.
 
-- Closing the *Advanced Editing* pane will now update the *Advanced Editing* button in the ribbon.
+- Closing the *Advanced Editing* pane will now update the *Advanced Editing* button in the ribbon.
 
-- The current selection will now be taken into account when starting the *Advanced Editing* extension.
+- The current selection will now be taken into account when starting the *Advanced Editing* extension.
 
 #### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in “Send Email” actions of Correlation rules \[ID_24816\]
 
@@ -618,7 +610,7 @@ A number of minor enhancements have been made with regard to the use of placehol
 
 #### DataMiner Cube - Visual Overview: Enhanced performance of the Advanced Editing pane \[ID_24825\]
 
-Due to a number of enhancements, overall performance of the *Advanced Editing* pane has increased, especially when editing pages that contain a large amount of shapes.
+Due to a number of enhancements, overall performance of the *Advanced Editing* pane has increased, especially when editing pages that contain a large amount of shapes.
 
 #### Monitoring app: Enhanced performance when retrieving alarm information \[ID_24831\]
 
@@ -638,16 +630,16 @@ A number of enhancements have been made to the mechanism used to delete data fro
 
 #### Automation: SetPropertyValue method will now only return after having checked that the prop­erty was set correctly \[ID_25025\]\[ID_25195\]
 
-From now on, the *SetPropertyValue* method will only return after having checked that the property was set correctly.
+From now on, the *SetPropertyValue* method will only return after having checked that the property was set correctly.
 
-Up to now, when the value of an element property was updated using the *SetPropertyValue* method on an *Element* object and immediately retrieved using the *GetPropertyValue* method, in some cases, the value returned by that last method would incorrectly be the previous value.
+Up to now, when the value of an element property was updated using the *SetPropertyValue* method on an *Element* object and immediately retrieved using the *GetPropertyValue* method, in some cases, the value returned by that last method would incorrectly be the previous value.
 
 > [!NOTE]
-> The *SetPropertyValue* method will only perform the above-mentioned check when the “check sets” option is enabled.
+> The *SetPropertyValue* method will only perform the above-mentioned check when the “check sets” option is enabled.
 > - Before launching a script in Cube, select the “After executing a SET command, check if the read parameter or property has been set to the new value” check box in the script execution window.
 > - When launching a script using *ExecuteScriptMessage*, make sure to activate the CHECKSETS option (“CHECKSETS:TRUE”).
 >
-> With this option enabled, the *SetPropertyValue* method will take slightly longer to execute. When a large number of properties need to be updated which do not need to be retrieved immediately, you can disable this option in order to increase performance.
+> With this option enabled, the *SetPropertyValue* method will take slightly longer to execute. When a large number of properties need to be updated which do not need to be retrieved immediately, you can disable this option in order to increase performance.
 
 #### Mobile apps: Confirmation message when leaving page with interactive script or job configura­tion \[ID_25078\]
 
@@ -655,7 +647,7 @@ When a user leaves a DataMiner mobile app page while in an interactive Automatio
 
 #### DataMiner Cube - Visual Overview: ListView component will not show a set of default columns when no columns are configured in its shape data \[ID_25098\]
 
-When you add a *ListView* component to a Visio page, from now on, that component will display a set of default columns when its shape data does not contain a column configuration.
+When you add a *ListView* component to a Visio page, from now on, that component will display a set of default columns when its shape data does not contain a column configuration.
 
 #### Reports & Dashboards: PDF library updated \[ID_25117\]
 
@@ -681,19 +673,15 @@ However, note that this logging will only be enabled for a particular element if
 
 #### DataMiner Cube - Visual Overview: ListView component enhancements \[ID_25224\]
 
-In a *ListView* component in Visual Overview that has been configured to display elements, the following columns are now available:
+In a *ListView* component in Visual Overview that has been configured to display elements, the following columns are now available:
 
 - Protocol
-
 - Protocol Version
-
 - Polling IP
-
 - Element properties \> Created by
-
 - Element properties \> Created at (i.e. creation date)
 
-In addition, it is now also possible to configure a filter on the *ListView* shape using the term "Element.PollingIP", for example *Element.PollingIP == '127.0.0.1'*.
+In addition, it is now also possible to configure a filter on the *ListView* shape using the term "Element.PollingIP", for example *Element.PollingIP == '127.0.0.1'*.
 
 #### DataMiner Cube - Trending: Behavioral anomaly detection will no longer generate nor clear sug­gestion events when its flood mode is activated \[ID_25244\]
 
@@ -761,7 +749,6 @@ When debugging a QAction, in some cases, when DIS injected a DLL, it would no lo
 When a matrix crosspoint was updated via a QAction using one of the following calls, in some cases, the update would not be applied when connected to a DataMiner Agent other than the one hosting the element:
 
 - SendToDisplay(pid, x, y);
-
 - SendToDisplay(pid, int\[\], int\[\]);
 
 #### DataMiner Cube - Visual Overview: Line property configuration not taken into account when determining highlight style priorities \[ID_24955\]
@@ -774,7 +761,7 @@ When you updated a service definition diagram, in some cases, the diagram of ano
 
 #### DataMiner Cube - Alarm Console: Cube could become unresponsive when the mechanism was triggered to automatically remove information events \[ID_24965\]
 
-When, in the Alarm Console, the list of information events in the *Information events* tab exceeds 1100 items, the oldest 100 events are automatically removed.
+When, in the Alarm Console, the list of information events in the *Information events* tab exceeds 1100 items, the oldest 100 events are automatically removed.
 
 When that automatic removal mechanism was triggered, in some rare cases, DataMiner Cube could become unresponsive.
 
