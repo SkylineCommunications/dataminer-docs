@@ -15,6 +15,9 @@ To configure the component:
 
 1. Apply one or more parameter data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
+   > [!NOTE]
+   > If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
+
 1. Optionally, apply a filter feed:
 
    - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
@@ -103,6 +106,23 @@ To configure the component:
      > From DataMiner 10.2.0/10.1.1 onwards, the percentile calculation takes into account how long the parameter had a specific value. This means that if a particular value is present for a longer time than other values, it will get more weight in the calculation. For discrete parameters or graphs showing multiple parameters, no percentile is calculated.
 
    - *Additional lines* > *Show boundary lines*: Allows you to display one or more boundary lines. You can configure where a line should be displayed by adding a Y-axis value in the *Boundary value* box. The color of a boundary line can be customized in the *Boundary line color* box. The *Add boundary line* option below this allows you to add additional boundary lines. To remove a boundary line, click the x to the right of the line name.
+
+## Configuration with query data feed
+
+Query results are supported as a data feed for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data feed:
+
+1. Create a query data feed. See [Configuring query data feeds](xref:Configuring_GQI_feeds).
+
+1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
+
+   - *Query*: The query data feed you want to use.
+   - *X axis*: The column that should be used for the X-axis data.
+   - *Y axis*: The column that should be used for the Y-axis data.
+
+   > [!NOTE]
+   > If you want to show a trend chart, make sure the query results are sorted on the X-axis column.
+
+1. Fine-tune the component layout and settings like for a regular line and area chart. See [Configuration](#configuration).
 
 ## Export to CSV
 
