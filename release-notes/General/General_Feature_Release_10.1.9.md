@@ -1,4 +1,8 @@
-# Feature release 10.1.9
+---
+uid: General_Feature_Release_10.1.9
+---
+
+# General Feature Release 10.1.9
 
 ## New features
 
@@ -6,21 +10,21 @@
 
 #### Improved SLLog stack cleaning behavior \[ID_29989\]
 
-The way the SLLog process cleans the log file stack has been improved. SLLog now has a thread that iterates over the different log file buffers and that logs a number of lines from the buffers to the log files. The maximum number of lines depends on the *LinesPerIteration* setting in *LogSettings.xml* (default: 100).
+The way the SLLog process cleans the log file stack has been improved. SLLog now has a thread that iterates over the different log file buffers and that logs a number of lines from the buffers to the log files. The maximum number of lines depends on the *LinesPerIteration* setting in *LogSettings.xml* (default: 100).
 
-In addition, SLLog now monitors its own memory usage, and whenever the memory usage exceeds a specific threshold, it will clean up the largest stack that has not yet been written to a file. This threshold is determined by the *SLLogMaxMemorysetting* in *LogSettings.xml* (default: 500 MB). For this setting, you can only specify integer numbers, which correspond with a number of megabytes.
+In addition, SLLog now monitors its own memory usage, and whenever the memory usage exceeds a specific threshold, it will clean up the largest stack that has not yet been written to a file. This threshold is determined by the *SLLogMaxMemorysetting* in *LogSettings.xml* (default: 500 MB). For this setting, you can only specify integer numbers, which correspond with a number of megabytes.
 
 *LogSettings.xml* can for instance be configured as follows:
 
 ```xml
 <Log xmlns="http://www.skyline.be/config/log">
-   <File name="">
-      <Levels info="0" error="0" debug="0" />
-   </File>
-   <General>
-      <LinesPerIteration>50</LinesPerIteration>
-      <SLLogMaxMemory>100</SLLogMaxMemory>
-   </General>
+   <File name="">
+      <Levels info="0" error="0" debug="0" />
+   </File>
+   <General>
+      <LinesPerIteration>50</LinesPerIteration>
+      <SLLogMaxMemory>100</SLLogMaxMemory>
+   </General>
 </Log>
 ```
 
@@ -34,11 +38,17 @@ Currently, there are two types of concatenation items:
 
 - **StaticValueConcatenationItem**
 
-    Used to define a fixed string to be inserted into the DomInstance name.     The string value should be assigned to the ‘Value’ property.
+    Used to define a fixed string to be inserted into the DomInstance name.
+
+    The string value should be assigned to the ‘Value’ property.
 
 - **FieldValueConcatenationItem**
 
-    Used to define a FieldValue (defined on a DomInstance) to be inserted into the DomInstance name.     The FieldDescriptorID of the FieldValue should be assigned to the FieldDescriptorId property. When no FieldValue can be found with the given FieldDescriptorId, an empty string will be inserted instead.     A FieldValue can contain a variety of non-string data types. See below for more information on how these types will be converted to strings:
+    Used to define a FieldValue (defined on a DomInstance) to be inserted into the DomInstance name.
+
+    The FieldDescriptorID of the FieldValue should be assigned to the FieldDescriptorId property. When no FieldValue can be found with the given FieldDescriptorId, an empty string will be inserted instead.
+
+    A FieldValue can contain a variety of non-string data types. See below for more information on how these types will be converted to strings:
 
     | FieldValue type | Example of how this type will be converted to a string |
     |-------------------|--------------------------------------------------------|
@@ -55,18 +65,15 @@ Currently, there are two types of concatenation items:
 In the following example, we want to create DomInstances for switches in a network and created FieldDescriptors for the following data:
 
 - Switch brand
-
 - Switch model
-
 - Management IP
-
 - Year of installation
 
 The names of the DomInstances, which will each represent a switch, have to contain all this information (example: “Cisco C9500-24Y4C - 10.11.5.87 (2021)”).
 
 To achieve this, we could define the following in the ModuleSettings object, assuming that the FieldDescriptorIDs have already been defined elsewhere in the script/code:
 
-```txt
+```csharp
 var settings = new ModuleSettings()
 {
     ModuleId = "moduleid",
@@ -115,17 +122,15 @@ To connect your DMS to the cloud:
 
 1. Verify that each DMA that will be connected to the cloud is able to reach the following endpoints:
 
-    - *https://connect.dataminer.services/*
+    - `https://connect.dataminer.services/`
+    - `wss://tunnel.dataminer.services/`
 
-    - *wss://tunnel.dataminer.services/*
+2. Download the appropriate DataMiner Cloud Pack installer from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
 
-2. Download the appropriate DataMiner Cloud Pack installer from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
+3. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following user permissions.
 
-3. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following user permissions.
-
-    - *System configuration* > *Cloud gateway* > *Connect to DCP*
-
-    - *System configuration* > *Cloud gateway* > *Disconnect from DCP*
+    - *System configuration* > *Cloud gateway* > *Connect to DCP*
+    - *System configuration* > *Cloud gateway* > *Disconnect from DCP*
 
 4. Click the *Register* button. A pop-up browser window will open.
 
@@ -134,22 +139,20 @@ To connect your DMS to the cloud:
 
 5. Specify the following information in the pop-up window:
 
-    - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
-
+    - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system, or by clicking *Create new* and specifying your name and DNS.
     - DMS name: Specify the name you want to use for your DMS.
-
     - DMS URL: Specify a URL-friendly version of the DMS name.
 
 6. Select the checkbox to agree to the terms of service and click *Connect*.
 
-7. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Registered*. This can take up to half a minute.
+7. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Registered*. This can take up to half a minute.
 
 If your DMS was already connected to the cloud using the earlier soft-launch version of this feature, install the DataMiner Cloud Pack installer on at least one DMA that was already hosting the cloud gateway, as described in step 2 above.
 
 > [!NOTE]
 > Make sure that all users that should be able to share data with the cloud have the following user permissions:
-> - *System configuration* > *Cloud sharing* > *Share item*
-> - *System configuration* > *Cloud sharing* > *Account linking*
+> - *System configuration* > *Cloud sharing* > *Share item*
+> - *System configuration* > *Cloud sharing* > *Account linking*
 
 ### DMS Security
 
@@ -173,11 +176,11 @@ View tables containing a column with view options like “view=:x:y:z” or “v
 
 #### Spectrum recording playback: Play modes “Play once” and “Loop” replaced by “Keep repeating the recording” checkbox \[ID_30218\]
 
-Up to now, while a spectrum trace recording was playing, you could select the play modes *Play once* or *Loop*. Those play modes have now been replaced by the *Keep repeating the recording* checkbox.
+Up to now, while a spectrum trace recording was playing, you could select the play modes *Play once* or *Loop*. Those play modes have now been replaced by the *Keep repeating the recording* checkbox.
 
 #### DataMiner Cube start window: Cleanup Cube Installation window \[ID_30351\]
 
-When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup... *option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
+When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup... *option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
 
 #### Alarm templates: Baseline editor now allows you to configure baselines and smart baselines specified in protocols \[ID_30388\] \[ID_30461\]
 
@@ -185,7 +188,7 @@ Up to now, when a parameter had a (smart) baseline value specified in the protoc
 
 > [!NOTE]
 > - The alarm template baseline editor will not allow you to change the monitoring type (Normal, Relative, Absolute or Rate).
-> - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. Although you should specify a read parameter (e.g. \<Alarm type="absolute:READ_PARAM_ID,108">), make sure that read parameter has an associated write parameter. Otherwise, it will not be possible to update the baseline value stored in that parameter. Also, the parameter in which the baseline value is stored must be free of any restrictions (e.g. step size, number of decimals, high/low range, etc.)
+> - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. Although you should specify a read parameter (e.g. `<Alarm type="absolute:READ_PARAM_ID,108">`), make sure that read parameter has an associated write parameter. Otherwise, it will not be possible to update the baseline value stored in that parameter. Also, the parameter in which the baseline value is stored must be free of any restrictions (e.g. step size, number of decimals, high/low range, etc.)
 
 #### Data Display: Extended support for launching elements, services, redundancy groups and views by clicking buttons in Data Display table cells \[ID_30413\]
 
@@ -216,12 +219,11 @@ The \<Display> tag of the discreet can contain the same references as the \<Valu
 If you want to specify the page to be selected by default, add a suffix to the identifier in the \<Value> tag containing the root page name and the page name, separated by a colon. See the following examples:
 
 - element=MyElementName:Data:Performance
-
 - 212/13:Visual:MyVisioPage
 
 #### New /Bootstrap command line argument for DataMiner Cube launcher \[ID_30573\]
 
-A new */Bootstrap* command line argument is now supported for the DataMiner Cube launcher. This argument combines the */Install* and */Silent* arguments (see [Desktop application command-line arguments](https://docs.dataminer.services/user-guide/Getting_started/Accessing_DataMiner/Accessing_DataMiner_Cube/Opening_DataMiner_Cube/Desktop_app_command_line_arguments.html)), and also copies a number of files, such as *DataMinerCube.exe.config* en *CubeLauncherConfig.json*.
+A new */Bootstrap* command line argument is now supported for the DataMiner Cube launcher. This argument combines the */Install* and */Silent* arguments (see [Desktop application command-line arguments](xref:Desktop_app_command_line_arguments)), and also copies a number of files, such as *DataMinerCube.exe.config* en *CubeLauncherConfig.json*.
 
 ### DMS Reports & Dashboards
 
@@ -232,78 +234,47 @@ In the Generic Query Interface, a new “Get alarms” data source is now availa
 The following columns will be returned by default:
 
 - Element name
-
 - Parameter description
-
 - Value
-
 - Time
-
 - Root time
-
 - Severity
-
 - Service impact
-
 - RCA level
-
 - Alarm type
-
 - Owner
 
 The following columns can be added using a column selector node:
 
 - Alarm description
-
 - Alarm ID
-
 - Category
-
 - Component info
-
 - Corrective action
-
 - Comments
-
 - Creation time
-
 - Element ID
-
 - Element type
-
 - Hosting agent ID
-
 - Interface impact
-
 - Key point
-
 - Offline impact
-
 - Parameter ID
-
 - Root creation time
-
 - Root alarm ID
-
 - Status
-
 - Source
-
 - Table index display key
-
 - Table index primary key
-
 - User status
-
 - Virtual function impact
-
 - View impact
 
 - A column for every custom alarm property
 
 #### Dashboards app - State component: “Show units” option \[ID_30322\]
 
-In the *Settings* tab of a *State* component, it is now possible to select or clear the *Show units* option to show or hide the unit of the parameter.
+In the *Settings* tab of a *State* component, it is now possible to select or clear the *Show units* option to show or hide the unit of the parameter.
 
 #### Dashboards app - GQI: Queries verified and repaired when opened for editing \[ID_30507\]
 
@@ -351,11 +322,8 @@ In the configuration section, you will find a ReplicationInfo subsection that al
 The following new methods now allow you to create, update, delete and assign alarm templates:
 
 - CreateAlarmTemplate
-
 - UpdateAlarmTemplate
-
 - DeleteAlarmTemplate
-
 - AssignAlarmTemplate
 
 ### DMS web apps
@@ -381,25 +349,22 @@ From now on, it will no longer be possible to add a resource with invalid capaci
 - When you try to add a resource with “NULL” instead of a Capacity or with a Capacity of which the value is set to “NULL”, an error with reason ResourceCapacityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
 
     - ResourceId: The ID of the resource.
-
     - ResourceCapacity: The capacity object that did not reference a correct capacity profile.
 
-- When you try to add a resource with “NULL” instead of a Capability or with a Capability of which the value is set to “NULL” and IsTimeDynamic set to FALSE, an error with reason ResourceCapabalityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
+- When you try to add a resource with “NULL” instead of a Capability or with a Capability of which the value is set to “NULL” and IsTimeDynamic set to FALSE, an error with reason ResourceCapabilityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
 
     - ResourceId: The ID of the resource.
-
     - ResourceCapability: The capability object that did not reference a correct capability profile.
 
 #### Automation - Service & Resource Management: New ServiceResourceUsageDefinition.Role property \[ID_30214\]
 
-A *ServiceResourceUsageDefinition* object now has an extra *Role* property, with the following possible values: *Mapped* (default value), *Unmapped* and *Inheritance*. This property is intended to be used by the Booking Manager app, where it will determine whether a resource is mapped to a node of a service definition.
+A *ServiceResourceUsageDefinition* object now has an extra *Role* property, with the following possible values: *Mapped* (default value), *Unmapped* and *Inheritance*. This property is intended to be used by the Booking Manager app, where it will determine whether a resource is mapped to a node of a service definition.
 
 #### ReservationInstance behavior enhancements \[ID_30295\]
 
 ReservationInstance behavior has been changed in the following ways:
 
 - ReservationInstances that have a start time before the time the ResourceManager was initialized will no longer automatically have their status set to “Interrupted”. Only instances that were unable to start because the ResourceManager was not yet initialized will have their status set to “Interrupted”.
-
 - All ReservationEvents that have not yet run will be scheduled if the ReservationInstance does not have its status set to “Interrupted”. In other words, all missed events will be run immediately when you add a ReservationInstance with a start time.
 
 #### ResourceManagerEventMessage will now be sent when a ReservationInstance property was updated \[ID_30352\]
@@ -448,11 +413,11 @@ Due to a number of enhancements, overall performance has increased when adding a
 
 Due to a number of enhancements, overall performance has increased when including/excluding elements in/from services based on parameter values, especially when the same parameter is used in a large number of element inclusion conditions.
 
-#### http://\[dma\]/root/tools/ page now allows you to install SECTIGO certificate \[ID_30297\]
+#### http://[dma]/root/tools/ page now allows you to install SECTIGO certificate \[ID_30297\]
 
 DataMiner Cube files are now signed with a SECTIGO certificate.
 
-You can install that certificate by clicking a hyperlink in the *DataMiner tools* section of the http://\[dma\]/root/tools/ page.
+You can install that certificate by clicking a hyperlink in the *DataMiner tools* section of the `http://[dma]/root/tools/` page.
 
 #### SLElement: Enhanced performance when starting up elements \[ID_30315\] \[ID_30316\]
 
@@ -478,9 +443,9 @@ When the SLWatchdog process is started, it checks the VersionHistory.txt file to
 
 Up to now, when SLNet updated the DataMiner version in VersionHistory.txt while SLWatchdog was running, the latter would not be aware of that change until it was restarted. From now on, SLNet will notify SLWatchdog when it has updated VersionHistory.txt.
 
-#### DataMiner Cube: Links to deprecated DCP platform replaced by links to the new https://data­miner.services platform \[ID_30430\]
+#### DataMiner Cube: Links to deprecated DCP platform replaced by links to the new https://dataminer.services platform \[ID_30430\]
 
-Throughout the Cube UI, all links to the deprecated DataMiner Collaboration Platform have been replaced by links to the new https://dataminer.services platform.
+Throughout the Cube UI, all links to the deprecated DataMiner Collaboration Platform have been replaced by links to the new <https://dataminer.services> platform.
 
 #### DataMiner Cube - Data Display: Memory consumption of tables showing service impact has been reduced \[ID_30433\]
 
@@ -517,7 +482,6 @@ Also, when an alarm template schedule was started, in some cases, either the act
 - When an alarm template with a schedule was edited while, according to its schedule, it was inactive, the following would happen:
 
     - The template would temporarily be activated, causing alarms to be created which would immediately be cleared.
-
     - When no active window was scheduled that day, the first window of the upcoming days would be used for that day.
 
 - When an alarm template with a schedule was assigned to an element while, according to its schedule, it was inactive, it would be activated until the first window had passed.
@@ -595,7 +559,6 @@ The time displayed in the DataMiner web apps (e.g. Jobs, Dashboards, etc.) is ba
 Up to now, the following problems could occur with regard to this setting:
 
 - When DefaultTimeZone was set to a time zone without offset (e.g. UTC), in some cases, an error message could appear.
-
 - In the Dashboards app and the Monitoring app, the configured time zone would not always be applied correctly.
 
 #### Cassandra cluster: Problems with cluster health monitoring & data offloads \[ID_30310\]
@@ -615,13 +578,10 @@ A BPA test can only be executed if it has been digitally signed by Skyline, and 
 The version compatibility test has now been adapted:
 
 - When no minimum and/or maximum DataMiner version is specified, the BPA test will run regardless of the version.
-
 - When a minimum and/or maximum DataMiner version is specified, the BPA test will run when the DataMiner Agent has
 
     - a Main Release version greater than the minimum Main Release version and smaller than or equal to the maximum Main Release version, or
-
     - a Feature Release version greater than the minimum Feature Release version and smaller than or equal to the maximum Feature Release version, or
-
     - a Release version of which the Main Release on which it is based is greater than the minimum Feature Release version and smaller or equal to the maximum Feature Release version.
 
 #### SLNet would fail to initialize when external authentication via SAML was configured incorrectly \[ID_30318\]
@@ -672,7 +632,7 @@ In a Failover environment using a Cassandra Cluster, in some cases, the followin
 Failover DB forwarding is failing since YYYY-MM-DD HH:MM:SS
 ```
 
-#### DataMiner Cube - Visual Overview: Service definition passed in a session variable to an embed­ded Service Manager component would not be selected in that component \[ID_30396\]
+#### DataMiner Cube - Visual Overview: Service definition passed in a session variable to an embedded Service Manager component would not be selected in that component \[ID_30396\]
 
 When a service definition was passed in a session variable to an embedded Service Manager component, in some cases, that service definition would not be selected and, as a result, its diagram would not be loaded.
 
@@ -756,14 +716,14 @@ When the shape text of an “Info” shape contained more than just an asterisk 
 
 #### DataMiner Cube - System Center: Clicking “Failover...” would incorrectly show the Failover configuration of the DMA to which you were connected \[ID_30535\]
 
-When, in the *Agents* section of *System Center*, you selected a DataMiner Agent and clicked *Failover... *to check its Failover configuration, the *Failover Config* window would incorrectly always show the Failover configuration of the DataMiner Agent to which you were connected.
+When, in the *Agents* section of *System Center*, you selected a DataMiner Agent and clicked *Failover... *to check its Failover configuration, the *Failover Config* window would incorrectly always show the Failover configuration of the DataMiner Agent to which you were connected.
 
 #### DataMiner Cube - Tab layout: Clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question \[ID_30541\]
 
 When in tab layout, clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question.
 
 > [!NOTE]
-> When, on a visual overview, you click a button to navigate to another card and then click the *Back* button, in some cases, clicking the button to navigate to another card a second time may no longer open that other card.
+> When, on a visual overview, you click a button to navigate to another card and then click the *Back* button, in some cases, clicking the button to navigate to another card a second time may no longer open that other card.
 
 #### Legacy Reporter app - Bookings component: Not possible to select properties \[ID_30547\]
 

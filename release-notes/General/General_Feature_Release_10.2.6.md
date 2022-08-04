@@ -73,7 +73,7 @@ From now on, it will no longer be possible to change the alarm state of an incid
 
 #### SAML authentication: Azure Active Directory B2C now also supported as identity provider \[ID_32714\]
 
-<!-- Main Release Version 10.1.0 [CU18] - Feature Release Version 10.2.6 -->
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.6 -->
 
 For external authentication using SAML, DataMiner now also supports Azure Active Directory B2C as an identity provider.
 

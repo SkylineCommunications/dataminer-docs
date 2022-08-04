@@ -6998,6 +6998,17 @@ In the following example, the second connection would incorrectly be ignored.
 
 A number of security enhancements have been made.
 
+#### SAML authentication: Azure Active Directory B2C now also supported as identity provider ID_32714]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.6 -->
+
+For external authentication using SAML, DataMiner now also supports Azure Active Directory B2C as an identity provider.
+
+Also, when creating a DataMiner user, using an email address as user name is now mandatory.
+
+> [!NOTE]
+> If, in DataMiner.xml, the default user name of an identity provider is not a valid email address, you can optionally add a \<PreferredLoginClaim> element that refers to a claim that contains a valid email address.
+
 #### Cassandra Cluster Migrator: Enhanced resilience of the migration process [ID_33467] [ID_33621] [ID_33727]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->

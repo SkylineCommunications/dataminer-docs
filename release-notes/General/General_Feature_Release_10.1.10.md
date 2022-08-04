@@ -76,7 +76,7 @@ To use this new polling scheme, add the “multipleGet” to the SNMP options of
     ```xml
     <SNMP>
       <Enabled>true</Enabled>
-      <OID type="complete"     options="instance;multipleGet">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
+      <OID type="complete" options="instance;multipleGet">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
     </SNMP>
     ```
 
@@ -85,7 +85,7 @@ To use this new polling scheme, add the “multipleGet” to the SNMP options of
     ```xml
     <SNMP>
       <Enabled>true</Enabled>
-      <OID type="complete"     options="instance;multipleGet:5">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
+      <OID type="complete" options="instance;multipleGet:5">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
     </SNMP>
     ```
 
@@ -394,7 +394,7 @@ When unsupported characters are found in TicketFieldDescriptors at the start of 
 - an entry listing the invalid TicketFieldDescriptors will be added to the SLMigrationManager.txt log file, and
 - the migration will be aborted.
 
-See also: <https://community.dataminer.services/documentation/migration-of-ticketing-data-from-cassandra-to-elasticsearch-fails/>
+See also: [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails)
 
 #### Web apps: Notification when reconnect happens in background \[ID_30628\]
 

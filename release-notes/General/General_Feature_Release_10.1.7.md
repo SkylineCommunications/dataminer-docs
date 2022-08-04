@@ -1,4 +1,8 @@
-# Feature release 10.1.7
+---
+uid: General_Feature_Release_10.1.7
+---
+
+# General Feature Release 10.1.7
 
 ## New features
 
@@ -60,44 +64,35 @@ Also, the SpectrumManagerHelper now allows to play, pause, slow-forward and fast
 While a spectrum trace recording is playing, new controls are now available at the bottom of the display section:
 
 - A slider control, which allows you to navigate to a specific point in the recording.
-
 - Controls to go forward and backward in the recording, trace by trace.
-
 - A pause/play toggle control.
-
 - A fast forward button. The current playback speed is displayed next to this button. You can click the fast forward button again to increase the playback speed further.
 
 While a recording is playing, these controls (with exception of the slider control) will fade away to show as much of the recording as possible. Moving the mouse pointer near the controls will display them again. The name, the start time and the end time of the recording are also displayed at the bottom of the display section, and fade away in the same way as the controls.
 
-Because of these new controls, the *Manual* playback mode is now obsolete. You can therefore now only select the play modes *Play once* or *Loop*.
+Because of these new controls, the *Manual* playback mode is now obsolete. You can therefore now only select the play modes *Play once* or *Loop*.
 
 The following *SpectrumManagerHelper* methods have been implemented to support this:
 
 - *SetSpectrumRecordingFrame (int frame)*: Sets the frame of the currently playing recording to the next available trace in the recording, starting from the given frame number.
-
 - *SetSpectrumRecordingTime (TimeSpan time)*: Sets the currently playing recording to a specific point in time. The specified time span indicates the amount of time after the start of the recording where the playback should go.
 
 ### DMS Security
 
 #### New functions user permissions \[ID_29659\] \[ID_30114\] \[ID_30122\]
 
-Under *Modules* > *Functions*, you can now find the following user permissions:
+Under *Modules* > *Functions*, you can now find the following user permissions:
 
 - Read
-
 - Add
-
 - Edit
-
 - Delete
-
 - Configure
-
 - Generate protocol
 
 These permissions apply to the upload and delete function options in the Protocols and Templates app, as well as to the Functions app, which is currently only available in soft launch. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
 
-When upgrading to DataMiner version 10.1.7, these six permissions will automatically be granted to all user groups that have been granted the *Modules \> Resources \> Configure functions* permission.
+When upgrading to DataMiner version 10.1.7, these six permissions will automatically be granted to all user groups that have been granted the *Modules \> Resources \> Configure functions* permission.
 
 ### DMS Cube
 
@@ -119,7 +114,7 @@ Also, table names can now be overridden in the information template. If names of
 
 #### Generating a report based on a dashboard: New “Include CSV” option \[ID_29933\]
 
-In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard from the new Dashboards app. When you click the *Configure* button, you will now notice a new “Include CSV” option. If you select this option, the email will not only include the report but also a zip file containing a CSV file for every Pivot table, GQI table and Line & area chart component in the dashboard.
+In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard from the new Dashboards app. When you click the *Configure* button, you will now notice a new “Include CSV” option. If you select this option, the email will not only include the report but also a zip file containing a CSV file for every Pivot table, GQI table and Line & area chart component in the dashboard.
 
 ### DMS Reports & Dashboards
 
@@ -131,9 +126,9 @@ In other words, components using a State component as a feed will now be able to
 
 #### Dashboards app: New Progress bar component \[ID_29773\]
 
-A new *Progress bar* component is now available among the state components in the Dashboards app. It can be used to display the value of an analog parameter as a progress bar.
+A new *Progress bar* component is now available among the state components in the Dashboards app. It can be used to display the value of an analog parameter as a progress bar.
 
-In the *Layout* tab for this component you can select to hide or display various labels, such as the parameter name and value. You can also select whether the minimum and/or maximum value of the parameter should be displayed. Similar to other state components, you can also select a small or large design and, in case the component is used to display multiple parameters, you can select whether the parameters should be displayed in rows or columns.
+In the *Layout* tab for this component you can select to hide or display various labels, such as the parameter name and value. You can also select whether the minimum and/or maximum value of the parameter should be displayed. Similar to other state components, you can also select a small or large design and, in case the component is used to display multiple parameters, you can select whether the parameters should be displayed in rows or columns.
 
 In the *Settings* tab, you can specify a custom minimum and/or maximum value.
 
@@ -169,7 +164,7 @@ Before executing a query, the system will send a GenIfOpenSessionRequest message
 
 #### Dashboards app - GQI: Linking columns with values of type double or datetime to feeds in query filters \[ID_29902\]
 
-In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to e.g. filter a bookings list by linking the *End* column to a time range feed.
+In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to e.g. filter a bookings list by linking the *End* column to a time range feed.
 
 ### DMS Mobile apps
 
@@ -215,7 +210,7 @@ Alternatively, instead of compiling those files yourself, you can also add copie
 
 When you have the compiled .cs file, you can subscribe to the messages as shown in the following C# code example.
 
-```txt
+```csharp
 private void Run(Engine engine)
 {
     // Create the message broker
@@ -264,7 +259,7 @@ To enable this feature, set the CalculateAllCapacities flag of the EligibleResou
 
 Example:
 
-```txt
+```csharp
 public class Script
 {
     public void Run(Engine engine)
@@ -308,9 +303,7 @@ Due to a number of enhancements, overflow detection has improved when generating
 A number of enhancements have been made to the trend legend:
 
 - The trace and current values will now have tool tips. Hovering over one of those tool tips will reveal the full value, and when there is insufficient space the value will be ellipsed.
-
 - Trace values will no longer have trailing zeros cut off when that precision is available, which will improve readability.
-
 - The current values will have a thousand separator where necessary.
 
 #### SLWatchdog: Notification enhancements \[ID_29697\]
@@ -319,7 +312,7 @@ A number of enhancements have been made with regard to notifications generated b
 
 #### “Number of backups to keep” setting will now also apply to the number of Elasticsearch backups \[ID_29702\]
 
-In the *Backup* section of *System Center*, you can indicate the number of backups that have to be kept on disk. This setting will now also apply to the number of Elasticsearch backups.
+In the *Backup* section of *System Center*, you can indicate the number of backups that have to be kept on disk. This setting will now also apply to the number of Elasticsearch backups.
 
 > [!NOTE]
 > Whether DataMiner will be able to delete older Elasticsearch backups stored on a network path will depend on the permissions granted to the account used to access that path.
@@ -340,10 +333,9 @@ When, in Visual Overview or the Surveyor, alarm statistics were displayed while 
 
 Up to now, when port 80 (HTTP) was unavailable between DataMiner Agents, connections between the DataMiner Agent modules on the different servers would only work after the ConnectTimeout setting had been increased. From now on, when auto-detecting the target port (via port 80 or 443) fails, the connection attempt will continue on default port 8004.
 
-Also, a number of additional options were added to the connection string configuration (SLNetClientTest \> Advanced \> Edit Connection Strings):
+Also, a number of additional options were added to the connection string configuration (SLNetClientTest \> Advanced \> Edit Connection Strings):
 
 - The “To” field can now contain wildcards (\* or ?). If there is no exact match, the settings of the record in question will then apply to all matching destinations. If more than one wildcard entry matches a destination, the behavior is undefined.
-
 - The connection string can now be set to “auto://nodetect” in order to skip the auto-detection of the target SLNet port and automatically default to 8004. When port 80 is blocked between agents, the 15-second autodetection timeout will then be skipped.
 
 #### Ongoing spectrum recording will now automatically be saved when the session is closed \[ID_29843\]
@@ -365,27 +357,19 @@ Also, when in the registry of a Windows 10 version 1607 or above the LongPathsEn
 Additional information will now be logged in the SLClient.txt log file for the following SRM modules:
 
 - Functions (currently only available in soft launch)
-
 - Profiles
-
 - Services
-
 - Resources
-
 - Bookings
 
 The following information will be logged
 
 - The time when a module has been launched by a user.
-
 - The time that is needed to load a module after it is launched, including the initialization, the fetching of data from the server, and the creation of module data.
-
 - The duration of each server call, including the message, the interval, and the filter used in the request, if any. The following server calls are taken into account for this:
 
     - Resource helper: Retrieving a resource, resource pool, booking definition, or booking instance.
-
     - Service helper: Retrieving a service definition, service state, or information.
-
     - Function helper: Retrieving a virtual function, or protocol metadata.
 
 #### SLManagedAutomation: Locking mechanism will now prevent exceptions from being thrown when reading or writing items in the dummies collection \[ID_29930\]
@@ -411,9 +395,7 @@ Also, a small memory leak was fixed in elements contained within services.
 The following new BPA tests have been added to the default test set:
 
 - Minimum Requirements Check
-
 - Report Active RTE
-
 - View Recursion
 
 #### Enhanced performance when updating user information \[ID_30102\]
@@ -422,7 +404,7 @@ Due to a number of enhancements, overall performance has increased when updating
 
 ### Fixes
 
-#### Service & Resource Management: Problem when trying to retrieve a resource with status “Main­tenance” or “Unavailable” \[ID_29511\]
+#### Service & Resource Management: Problem when trying to retrieve a resource with status “Maintenance” or “Unavailable” \[ID_29511\]
 
 Due to a serialization issue involving the AvailableTo and AvailableFrom properties of the GetResourceMessage, in some cases, it would not be possible to retrieve a resource with status “Maintenance” or “Unavailable”.
 
@@ -520,7 +502,7 @@ In some cases, an IDP location update for a particular element would not be take
 
 #### DataMiner Cube - Trending: “Exclude gaps” option would not work when exporting average trend data \[ID_29870\]
 
-When you exported average trend data to a CSV file with the *Exclude gaps* option enabled, the gaps would incorrectly not be excluded.
+When you exported average trend data to a CSV file with the *Exclude gaps* option enabled, the gaps would incorrectly not be excluded.
 
 #### Masking monitored column parameters that were not in an alarm state would not cause them to get marked as being masked \[ID_29871\]
 
@@ -554,7 +536,7 @@ When rows were grouped after performing an aggregation, raw values would incorre
 
 #### SLNetClientTest tool: GetAlarmDetailsFromDbMessage missing from message list \[ID_29905\]
 
-In the *Build Message* tab of the SLNetClientTest tool, it would no longer be possible to select the GetAlarmDetailsFromDbMessage in the *Message Type* box.
+In the *Build Message* tab of the SLNetClientTest tool, it would no longer be possible to select the GetAlarmDetailsFromDbMessage in the *Message Type* box.
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
@@ -565,7 +547,7 @@ When a filter was applied to a query that used a “Get parameters for element w
 
 #### Dashboards app - PDF reports: Toggling the “Include feeds” option would disable the “Create” button \[ID_29920\]
 
-When, in the PDF preview window, you toggled the *Include feeds* option multiple times in a row, in some cases, the *Create* button would get disabled.
+When, in the PDF preview window, you toggled the *Include feeds* option multiple times in a row, in some cases, the *Create* button would get disabled.
 
 #### Dashboards app - GQI: Edit pane could become unresponsive when importing a query from one dashboard into another \[ID_29922\]
 
@@ -577,7 +559,7 @@ In some cases, large memory spikes would occur in the SLAnalytics process when r
 
 #### DataMiner Cube - Alarm Console: Problem with automatic removal of information events \[ID_29928\]
 
-Due to a problem with the mechanism that automatically removes information events from the *Information events* tab page, in some cases, DataMiner Cube could become unresponsive when too many information events were being received.
+Due to a problem with the mechanism that automatically removes information events from the *Information events* tab page, in some cases, DataMiner Cube could become unresponsive when too many information events were being received.
 
 #### Failover: Problem with SLNet during DataMiner startup \[ID_29950\]
 
@@ -609,7 +591,7 @@ From now on, when an entire table was exported to a DVE element, the column para
 
 #### MySQL and SQL Server databases: ExtraStatusId field was incorrectly added to the info table \[ID_30096\]
 
-On MySQL and Microsoft SQL Server databases, since DataMiner version 10.1.6 the info table would incorrectly contain an *ExtraStatusId* field. As a result, on systems with a MySQL database (on which the STRICT option was set to true) or a Microsoft SQL Server database, it was no longer possible to store information events.
+On MySQL and Microsoft SQL Server databases, since DataMiner version 10.1.6 the info table would incorrectly contain an *ExtraStatusId* field. As a result, on systems with a MySQL database (on which the STRICT option was set to true) or a Microsoft SQL Server database, it was no longer possible to store information events.
 
 #### DataMiner Cube - Alarm Console: Problem when using the history slider \[ID_30097\]
 

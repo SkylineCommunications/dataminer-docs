@@ -1,4 +1,8 @@
-# Feature release 10.1.6
+---
+uid: General_Feature_Release_10.1.6
+---
+
+# General Feature Release 10.1.6
 
 ## New features
 
@@ -18,31 +22,31 @@ Up to now, loading new element simulations always required a DataMiner restart. 
 
 Construction:
 
-```txt
+```csharp
 SimulationHelper(Func<DMSMessage[], DMSMessage[]> messageHandler)
 ```
 
 - Loading all simulation files stored in the C:\\Skyline DataMiner\\Simulations folder of a specified DMA
 
-    ```txt
+    ```csharp
     void LoadSimulations(int dataMinerId)
     ```
 
 - Enabling an element simulation
 
-    ```txt
+    ```csharp
     void EnableSimulation(int hostingDataMinerId, int dataMinerId, int elementId)
     ```
 
 - Disabling an element simulation
 
-    ```txt
+    ```csharp
     void DisableSimulation(int hostingDataMinerId, int dataMinerId, int elementId)
     ```
 
 Example on how to use this in an Automation script:
 
-```txt
+```csharp
 var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);
 simulationHelper.LoadSimulations();
 ```
@@ -63,7 +67,6 @@ A protection has been added to avoid reduced performance of the system when an a
 In an element protocol, it is now possible to make a distinction between
 
 - internal DCF interfaces (i.e. virtual interfaces used within the protocol), and
-
 - external DCF interfaces (i.e. physical interfaces that will appear in interface lists in the UI).
 
 By default, all DCF interfaces are considered external. Interfaces that should be considered internal, have to be explicitly marked as internal. See the following example.
@@ -72,7 +75,7 @@ By default, all DCF interfaces are considered external. Interfaces that should b
 <Protocol xmlns="http://www.skyline.be/protocol">
   ...
   <ParameterGroups>
-    <Group id="1" name="500_in" type="in" dynamicId="500" dynamicIndex="*"       isInternal="true"/>
+    <Group id="1" name="500_in" type="in" dynamicId="500" dynamicIndex="*" isInternal="true"/>
     <Group id="2" name="1000_out" type="out" dynamicId="1000" dynamicIndex="*"/>
     <Group id="3" name="1500_inout" type="inout" dynamicId="1500" dynamicIndex="*"/>
     <Group id="4" name="2000_inout" type="inout" dynamicId="2000" dynamicIndex="*"/>
@@ -88,7 +91,6 @@ The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from wit
 It is advised to enable this feature at startup using the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING with either a single parameter ID or multiple parameter IDs. This information will not be saved and will only be kept as long as the element is running. See the following examples. The first call will enable the tracking for parameters 100 and 200. The second call will disable the tracking for parameter 100.
 
 - *protocol.NotifyProtocol(/\*NT_SET_BITRATE_DELTA_INDEX_TRACKING\*/ 448, new int\[\] {100, 200}, true);*
-
 - *protocol.NotifyProtocol(/\*NT_SET_BITRATE_DELTA_INDEX_TRACKING\*/ 448, 100, false);*
 
 Once tracking has been enabled, the information can be retrieved by using the notify protocol command NT_GET_BITRATE_DELTA with a string as second argument. In the following example, the command will return the delta value for the specified key (“1”) of the specified parameter (100). If you set the second argument to an empty string (“”), then the command will return all currently tracked keys for the parameter in question.
@@ -109,7 +111,7 @@ The preprocessor directive “#define ALARM_SQUASHING” will now automatically 
 
 In QActions, all code related to alarm squashing should be enclosed as follows:
 
-```txt
+```csharp
 #if ALARM_SQUASHING
     // Code specific for alarm squashing (DataMiner 10.1.0 and later)
 #else
@@ -140,7 +142,7 @@ If you want to prevent this from happening, from now on, you can add the AllowIn
 
 #### Visual Overview: New option to keep real-time charts from showing exception values in labels \[ID_29504\]
 
-In the *ParametersOptions* shape data field for a parameter chart showing real-time values, you can now use the *VisualizeExceptions=false* option to keep the display value for exception values from being shown in a label.
+In the *ParametersOptions* shape data field for a parameter chart showing real-time values, you can now use the *VisualizeExceptions=false* option to keep the display value for exception values from being shown in a label.
 
 | Shape data field  | Value                                                                     |
 |-------------------|---------------------------------------------------------------------------|
@@ -159,18 +161,16 @@ When a ProfileInstance is updated without quarantine being forced (i.e. with for
 - If instances need to be quarantined, the update will not proceed and the following errors will be returned:
 
     - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
-
     - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
 When a ProfileInstance is updated with quarantine being forced (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
-
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
 
 #### Profiles app: Profile parameters can now have settings configured \[ID_29580\]
 
-It is now possible to configure a profile parameter to be hidden in scripts using the profile, with a new *Hide from scripts* check box for profile definitions and profile instances in the Profiles app.
+It is now possible to configure a profile parameter to be hidden in scripts using the profile, with a new *Hide from scripts* check box for profile definitions and profile instances in the Profiles app.
 
 #### EPM: Hiding chains and chain fields based on parameter values \[ID_29640\]\[ID_29656\]
 
@@ -262,9 +262,7 @@ In the Generic Query Interface, a new “DCF connections” data source is now a
 A number of enhancements have been made to the Gauge and Ring components:
 
 - As to the Ring component, labels are now displayed underneath the ring.
-
 - The Gauge and Ring components can now display the configured range (minimum and maximum value). Also, it is now possible to configure a custom range in each of those components.
-
 - The Gauge and Ring components are now more in line with the State component. When configuring these components, it is now possible to select one of three designs (small, large and autosize) and to specify the alignment (left, center and right).
 
 #### Dashboards app - GQI: Regular expressions in column filters will now be converted to standard table filters \[ID_29458\]
@@ -286,7 +284,6 @@ Root
 - child 1
 
     - child 3
-
     - child 4
 
 - child 2
@@ -296,7 +293,6 @@ Root
 From now on...
 
 - the counter of the views data source will show “(1)”, i.e. the root, and
-
 - the counter of the root view data source will show “(2)”, i.e. child view 1 and 2.
 
 > [!NOTE]
@@ -308,12 +304,12 @@ Metadata will now be added to columns created by an aggregation or manipulation 
 
 #### Dashboards app - Line chart component: New “Fill graph” and “Stack trend lines” options \[ID_29527\]
 
-When configuring a line chart component, you will now find two new options in the *Styling and Information* section of the *Layout* tab.
+When configuring a line chart component, you will now find two new options in the *Styling and Information* section of the *Layout* tab.
 
 | Option            | Description                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Fill graph        | When you select this option, the space underneath the line will be filled with the line color.                                                                                                                                                                                                                                                                                                                                     |
-| Stack trend lines | When you select this option, all lines in a graph will be stacked on top of each other.<br> Note: This option is not compatible with the *Show min/max shading*, *Show minimum* and *Show maximum* options. When you select the *Stack trend lines* option, those options will be disabled and hidden. |
+| Stack trend lines | When you select this option, all lines in a graph will be stacked on top of each other.<br> Note: This option is not compatible with the *Show min/max shading*, *Show minimum* and *Show maximum* options. When you select the *Stack trend lines* option, those options will be disabled and hidden. |
 
 Also, the following chart components have been renamed:
 
@@ -337,7 +333,7 @@ The preprocessor directive “#define ALARM_SQUASHING” will now automatically 
 
 In C# blocks, all code related to alarm squashing should be enclosed as follows:
 
-```txt
+```csharp
 #if ALARM_SQUASHING
     // Code specific for alarm squashing (DataMiner 10.1.0 and later)
 #else
@@ -371,7 +367,7 @@ The TicketFieldResolver now includes a TicketFieldResolverSettings object, which
 
 In an ExecuteScriptOnTicketActionSettings object, you can specify the names of the scripts that should be executed each time a ticket is created, updated or deleted. See the following example.
 
-```txt
+```csharp
 var settings = new TicketFieldResolverSettings()
 {
     ScriptSettings = new ExecuteScriptOnTicketActionSettings()
@@ -390,7 +386,7 @@ var fieldResolver = new TicketFieldResolver(Guid.NewGuid())
 
 The scripts must have an OnTicketCrud entry point defined. See the following example. This way, you can indicate the action, ticket and TicketFieldResolver for which the script was triggered.
 
-```txt
+```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnTicketCrud)]
 public void OnTicketCrud(Engine engine, TicketID ticketId, CrudType crudType)
 {
@@ -416,7 +412,7 @@ Using the ProfileHelper, it is now possible to export and import ServiceProfileI
 
 The ExportServiceProfiles method allows you to export ServiceProfileDefinitions and ServiceProfileInstances. See the following example.
 
-```txt
+```csharp
 var profileHelper = new ProfileHelper(engine.SendSLNetMessages);
 var definitionsToExport = new List<Guid>(){ ... };
 var instancesToExport = new List<Guid>(){ ... };
@@ -426,15 +422,12 @@ var exportResult = profileHelper.ImportExport.ExportServiceProfiles(definitionsT
 As shown in the example above, two lists have to be provided:
 
 - A list containing the IDs of the ServiceProfileDefinitions to be exported
-
 - A list containing the IDs of the ServiceProfileInstances to be exported
 
 Based on the information in those lists, the following data will be exported:
 
 - All existing ServiceProfileDefinitions of which the ID is found in the first list.
-
 - All existing ServiceProfileInstances of which the ID is found in the second list.
-
 - All ServiceProfileInstances that are linked to the ServiceProfileDefinitions found in the first list.
 
 > [!NOTE]
@@ -458,7 +451,7 @@ The ExportServiceProfiles method returns a ServiceProfilesExportResult object th
 
 The ImportServiceProfiles method allows you to import ServiceProfileDefinitions and ServiceProfileInstances. See the following example.
 
-```txt
+```csharp
 var profileHelper = new ProfileHelper(engine.SendSLNetMessages);
 byte[] zippedData = ...;
 var importResult = profileHelper.ImportExport.ImportServiceProfiles(zippedData);
@@ -469,15 +462,12 @@ During an import operation, the objects are first unzipped from the byte array a
 Checks performed before saving a ServiceProfileDefinition:
 
 - When a ServiceProfileDefinition already exists with the same name but a different ID, the ServiceProfileDefinition will not be imported and an error with reason ServiceProfileDefinitionNameInUse will be returned.
-
 - When not all ProfileParameters referenced in the NodeDefinitionConfiguration exist, the ServiceProfileDefinition will not be imported and an error with reason ServiceProfileDefinitionRefersToNonExistingParameters will be returned.
 
 Checks performed before saving a ServiceProfileInstance:
 
 - When a ServiceProfileInstance already exist with the same name but a different ID, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstanceNameInUse will be returned.
-
 - When not all ParameterOverrides on the NodeInstanceConfigurations and InterfaceConfigurations refer to existing ProfileParameters, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstnaceRefersToNonExistingParameters will be returned.
-
 - When not all NodeInstanceConfigurations and InterfaceConfigurations refer to existing ProfileInstances, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstanceRefersToNonExistingProfileInstances will be returned.
 
 The ImportServiceProfiles method returns a ServiceProfilesImportResult object that contains the following data:
@@ -518,7 +508,7 @@ When an object cannot be saved to the database during an import operation, a Ser
 
 From now on, the Standalone Elasticsearch Cluster Installer tool will no longer automatically configure TLS and security.
 
-For instructions on how to install this manually, see [Client-server TLS encryption](https://docs.dataminer.services/user-guide/Advanced_Functionality/Security/Advanced_security_configuration/Database_security/Security_Elasticsearch.html#client-server-tls-encryption).
+For instructions on how to install this manually, see [Client-server TLS encryption](xref:Security_Elasticsearch#client-server-tls-encryption).
 
 #### Standalone Elastic Backup tool will now have to be used to restore a backup of an Elasticsearch database \[ID_29677\]
 
@@ -526,7 +516,7 @@ When you take a backup of a DataMiner Agent, you can opt to also take a backup o
 
 From now on, even when a DataMiner backup includes an Elasticsearch backup, the latter will not be automatically restored when the DataMiner backup is restored. Restoring an Elasticsearch backup will now have to be done using the Standalone Elastic Backup tool.
 
-For more information on the Standalone Elastic Backup tool, see [Standalone Elastic Backup Tool](https://community.dataminer.services/documentation/standalone-elastic-backup-tool/) on DataMiner Dojo.
+For more information on the Standalone Elastic Backup tool, see [Standalone Elastic Backup Tool](xref:Standalone_Elastic_Backup_Tool).
 
 ## Changes
 
@@ -545,13 +535,11 @@ In the Services app, the validation of service profile definition names and serv
 When, in Visual Overview, you create a shape that should display the Resource Manager timeline by adding a shape data field of type Component set to “Reservations” or “Bookings”, the Navigate and Viewport session variables allow you to control navigation and zooming within the timeline.
 
 - The Navigate variable can be used to automatically navigate to a specified time range.
-
 - The Viewport variable can be used to zoom to a specified time range and to visualize the time range to which you zoomed manually.
 
 From now on, both variables can be processed immediately upon opening a visual overview with a Resource Manager timeline.
 
 - Setting the Navigate variable using a page-level InitVar will make the timeline navigate immediately to the chosen time slot and clear the Navigate variable.
-
 - The Viewport variable will always be read upon opening the Resource Manager timeline. In other words, if a session variable already exists in the scope in question (e.g. when the time line was opened while using the global variable scope), the timeline will automatically zoom to the last-known view port.
 
 > [!NOTE]
@@ -600,11 +588,8 @@ A number of enhancements have been made to the method that decides which subscri
 A number of enhancements have been made to the Ticketing app, especially with regard to masked domains.
 
 - When a masked domain is deleted, all tickets associated with that domain will now also be deleted.
-
 - On the Configuration page, masked domains will now be marked with a special icon.
-
 - When a masked domain is opened via a URL, a warning will now be displayed, indicating that the domain is masked. Also, no edit buttons will appear.
-
 - When you open the create ticket window or edit ticket window via a URL to create or edit a ticket from a masked domain, a warning will now be displayed, and all fields of that ticket will be disabled.
 
 #### DataMiner Cube: Enhancements with regard to dragging, sizing and positioning of undocked windows and cards \[ID_29508\]
@@ -614,17 +599,13 @@ DataMiner Cube automatically scales each window based on the monitor it is displ
 Sizing:
 
 - When a window is undocked via a drag operation, it will take the same size as the docked window.
-
 - When a window is undocking via SHIFT-Click or via the Undock context menu action, it will take a size based on the type of window. If no specific size is provided (e.g. in case of an element card), the default size will be used (i.e. 80% of the screen size).
-
 - Window size range: From 600x400 (minimum) to 80% of the screen (maximum)
 
 Positioning:
 
 - When a window is undocked, it will be centered on the Cube’s main window.
-
 - Undocked windows will respect the screen boundaries and be confined to one screen.
-
 - When a window is undocked via a drag operation, it will correctly follow the mouse cursor and initiate a window drag that can immediately snap to screen borders.
 
 #### Increased SLNet startup performance due to DNS lookup enhancements \[ID_29522\]
@@ -677,7 +658,7 @@ Due to a number of enhancements made to the Element Connections app, the mechani
 
 #### Dashboards app - State component: Enhanced auto-size behavior \[ID_29654\]
 
-When, in the *Layout* tab of the State component, you select “Auto size” in the *Advanced \> Style *section, an attempt will now always be made to fill up the entire component area with the information to be displayed.
+When, in the *Layout* tab of the State component, you select “Auto size” in the *Advanced \> Style *section, an attempt will now always be made to fill up the entire component area with the information to be displayed.
 
 Also, a number of other enhancements have been made with regard to auto-sizing.
 
@@ -765,7 +746,7 @@ Due to a problem when retrieving data from DVE elements, in some cases, trend pr
 
 #### DataMiner Cube - EPM: Children of the siblings of the selected object would incorrectly also be displayed \[ID_29465\]
 
-Up to now, when the *ShowSiblings* option was combined with the *ShowChildren* option, the children of the siblings of the selected object would incorrectly also be displayed. From now on, only the children of the selected object will be displayed.
+Up to now, when the *ShowSiblings* option was combined with the *ShowChildren* option, the children of the siblings of the selected object would incorrectly also be displayed. From now on, only the children of the selected object will be displayed.
 
 #### Dashboards app - GQI: Problem when rebuilding a query \[ID_29468\]
 
@@ -886,9 +867,7 @@ When a GQI query contains a filter to be applied to e.g. a parameter table, then
 In some cases, the following problems could occur with regard to Chromium web browser controls:
 
 - When opened in a window on a high-DPI monitor, they would be scaled twice and the image would not match the mouse cursor.
-
 - When displayed in a window that was moved from one monitor to another, they would not adapt to the new DPI scale.
-
 - When displayed on a high-DPI monitor, they were rendered at 100% DPI and then upscaled, resulting in an imperfect image.
 
 #### SLNetComNotificationThread: Delay between notifications \[ID_29599\]
@@ -976,7 +955,7 @@ Due to a number of enhancements, overall performance of the different Service & 
 
 #### DataMiner Cube - Data Display: Problem when copying data from a table \[ID_29934\]
 
-When, in DataMiner Cube, you tried to copy data from a table using either *Copy table* or *Copy selected rows*, the following exception could be thrown:
+When, in DataMiner Cube, you tried to copy data from a table using either *Copy table* or *Copy selected rows*, the following exception could be thrown:
 
 ```txt
 Export failed: Nullable object must have a value
@@ -1008,7 +987,7 @@ When, in the Services app, you clicked a node of the service definition, in some
 
 #### MySQL and SQL Server databases: ExtraStatusId field was incorrectly added to the info table \[ID_30096\]
 
-On MySQL and Microsoft SQL Server databases, since DataMiner version 10.1.6 the info table would incorrectly contain an *ExtraStatusId* field. As a result, on systems with a MySQL database (on which the STRICT option was set to true) or a Microsoft SQL Server database, it was no longer possible to store information events.
+On MySQL and Microsoft SQL Server databases, since DataMiner version 10.1.6 the info table would incorrectly contain an *ExtraStatusId* field. As a result, on systems with a MySQL database (on which the STRICT option was set to true) or a Microsoft SQL Server database, it was no longer possible to store information events.
 
 #### Resources and Services modules also loaded functions that were not active \[ID_30107\]
 

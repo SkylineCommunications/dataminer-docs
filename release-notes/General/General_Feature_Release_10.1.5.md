@@ -1,3 +1,9 @@
+---
+uid: General_Feature_Release_10.1.5
+---
+
+# General Feature Release 10.1.5
+
 # Feature release 10.1.5
 
 ## New features
@@ -33,7 +39,6 @@ When using an SMSEagle device to send text messages, it is now possible to confi
 To do so, proceed as follows:
 
 1. In the C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml file, add unicode=”true” to the \<SMSEagle> element, and save the file.
-
 2. Restart the SLGSMGateway process.
 
 Default setting: unicode=”false”
@@ -49,7 +54,7 @@ In the DataMiner.xml file, an \<AzureAD> element should be present. See the foll
 ```xml
 <DataMiner>
   ...
-  <AzureAD tenantId=""         clientId=""         clientSecret=""         username=""         password=""/>
+  <AzureAD tenantId="" clientId="" clientSecret="" username="" password=""/>
   ...
 </DataMiner>
 ```
@@ -60,9 +65,9 @@ In the DataMiner.xml file, an \<AzureAD> element should be present. See the foll
 
 #### DataMiner Cube - System Center: New user permission \[ID_29097\]\[ID_29291\]
 
-In the *Users/Groups* section of System Center, you can now configure the following new user permission:
+In the *Users/Groups* section of System Center, you can now configure the following new user permission:
 
-- System Configuration \> DataMiner Object Manager (DOM) \> Module Settings
+- System Configuration \> DataMiner Object Manager (DOM) \> Module Settings
 
 > [!NOTE]
 > This user permission is included in the *Administrators (read-only access to Security)* preset and higher.
@@ -84,19 +89,12 @@ The UI of the Resources app has had a complete overhaul. Look and feel are now i
 From now on, the following important user actions will be logged in the SLClient.txt log file:
 
 - Connect
-
 - Disconnect
-
 - Cube loaded
-
 - Card opened
-
 - Card closed
-
 - Visio file loaded
-
 - Alarm tab created in Alarm Console
-
 - Trend graph opened
 
 #### DataMiner Cube: Warning message will now appear when you duplicate an SNMPv3 element from another DMA \[ID_29192\]
@@ -108,64 +106,40 @@ When you duplicate an SNMPv3 element from a DMA other than the one to which you 
 
 #### Services app: Duplicating service profile definitions and service profile instances \[ID_29262\]
 
-In the *Profiles* tab of the *Services* app, it is now possible to duplicate service profile definitions or service profile instances.
+In the *Profiles* tab of the *Services* app, it is now possible to duplicate service profile definitions or service profile instances.
 
 #### DataMiner Cube: Filter box in Documents app & Documents card pages \[ID_29298\]
 
-In the *Documents* app and the *Documents* card pages, a filter box now allows you to filter the list of documents.
+In the *Documents* app and the *Documents* card pages, a filter box now allows you to filter the list of documents.
 
 #### Visual Overview: New icons added to Icons stencils \[ID_29315\]
 
 The following icons has been added to the Icons stencil:
 
 - Airplane
-
 - Android
-
 - Apple TV
-
 - Boat
-
 - Browser.2
-
 - Bus
-
 - Car
-
 - Chromecast
-
 - Delete Connections
-
 - Delete Element
-
 - Discover Connections
-
 - Download Configuration Back-Up
-
 - House
-
 - IOS
-
 - Laptop
-
 - Person
-
 - Profile Manager
-
 - Provision Connections
-
 - Reapply CI Type
-
 - Reassign CI Type
-
 - Remove Filter
-
 - Restore Default Configuration
-
 - Train
-
 - Unmanage Element
-
 - Voice
 
 ### DMS Reports & Dashboards
@@ -177,15 +151,10 @@ A new alarm table component is now available in the Dashboards app. It can be us
 Multiple component settings are available:
 
 - Selection of type of alarm list.
-
 - Filter configuration, including index filters using wildcards, and saved alarm filters.
-
 - Default sorting column, default sorting order and number of alarms to load.
-
 - Displayed columns and their order.
-
 - Grouping by a specific column.
-
 - “Expand on hover” layout option.
 
 You can also add different data filters to the component, such as element or view data filters, or parameter feed or time range feed filters. If a parameter index data filter is used, a setting allows you to determine whether the index should match the filter or contain the filter.
@@ -201,7 +170,7 @@ In the service definition component, nodes will now have a fixed initial size an
 
 After selecting a \[Get parameters for elements where\] “Protocol” filter, it is now possible to link this filter to a protocol feed.
 
-To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The parameters from that feed will then be added to the query.
+To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The parameters from that feed will then be added to the query.
 
 #### Dashboards app - GQI: Linking a filter to an index feed \[ID_29338\]
 
@@ -213,19 +182,19 @@ To do so, select the *Use feed* option, and select one of the available index fe
 
 After selecting a \[Get parameter table by ID\] “DataMiner ID” “Element ID” filter, it is now possible to link this filter to a parameter feed.
 
-To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The first table parameter from that feed will then be added to the query.
+To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The first table parameter from that feed will then be added to the query.
 
 #### Dashboards app - GQI: Linking a \[Get elements/services/views/view relations\] \> \[Select\] filter to a parameter feed \[ID_29360\]
 
 After selecting a \[Get elements/services/views/view relations\] \> \[Select\] filter, it is now possible to link this filter to a parameter feed.
 
-To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The parameters from that feed will then be added to the query.
+To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The parameters from that feed will then be added to the query.
 
 #### Dashboards app - GQI: Linking a time range filter to a time range feed \[ID_29367\]
 
 Whenever you have to specify a time range when building a query, it is now possible to link this time range filter to a time range feed.
 
-To do so, select the *From feed* option, and select one of the available time range feeds from the list.
+To do so, select the *From feed* option, and select one of the available time range feeds from the list.
 
 #### Dashboards app - GQI: Query filters configured to filter using a regular expression will now combine multiple feed values using “OR” operators \[ID_29396\]
 
@@ -237,7 +206,7 @@ The new node-edge graph component allows you to visualize any type of objects (i
 
 The data necessary to create a node-edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
 
-For more detailed information, see [DataMiner Help](https://help.dataminer.services/dataminer/DataMinerUserGuide/part_4/newR_D/Other.htm?rhsyns=%20#dataminer-help).
+For more detailed information, see [Node edge graph](xref:DashboardNodeEdgeGraph).
 
 ### DMS Automation
 
@@ -254,12 +223,10 @@ You can now use the GetExpanded method of the UIResults class to retrieve the ke
 Users can now be allowed to filter on the following field types:
 
 - Text
-
 - Email
-
 - Url
 
-If you want to allow filtering on one of those fields, then select its *Allow filtering on this field* option.
+If you want to allow filtering on one of those fields, then select its *Allow filtering on this field* option.
 
 > [!NOTE]
 > Text-based filters will behave like case-sensitive “contains” filters.
@@ -284,21 +251,20 @@ When the GenerateRequiredCapas method is called on a ProfileInstance, the respon
 From now on, the automatic server retrieval can be bypassed by
 
 1. creating a retrieval method that tries to return the parameters that are already cached in the script or application before retrieving them from the server (see the example below), and
-
 2. passing that method to the GenerateRequiredCapas(Func\<ProfileParameterEntry, Parameter> parameterResolver) call.
 
 **Example of a method that tries to return the parameters that are already cached in the script or application before retrieving them from the server**
 
 In the following example, we first check whether a certain parameter can be found in the local “\_profileParameterCache”. If not, we then retrieve it using the built-in AutoSync collection by means of a get operation on Parameter property.
 
-```txt
+```csharp
 private Parameter GetParameterForParameterEntry(ProfileParameterEntry entry)
 {
     if (_profileParameterCache.TryGetValue(entry.ParameterID, out var parameter))
     {
         return parameter;
     }
-    // Not found in cache, retrieve using internal AutoSync collection   (by just doing a get on Parameter)
+    // Not found in cache, retrieve using internal AutoSync collection   (by just doing a get on Parameter)
     parameter = entry.Parameter;
     if (parameter == null)
     {
@@ -315,15 +281,13 @@ private Parameter GetParameterForParameterEntry(ProfileParameterEntry entry)
 The following actions will now be logged in the SLResourceManagerAutomation.txt file instead of the SLResourceManager.txt file:
 
 - Actions related to the registering and unregistering of ReservationInstances
-
 - Actions related to the starting of ReservationInstances
-
 - Actions related to the execution of ReservationInstance events
 
 All these log entries will have log level 5.
 
 > [!NOTE]
-> In DataMiner Cube, you can access this new log file by going to *System Center \> Logging \> DataMiner \> Resource Manager Automation*.
+> In DataMiner Cube, you can access this new log file by going to *System Center \> Logging \> DataMiner \> Resource Manager Automation*.
 
 #### New caching mechanism when retrieving ReservationInstances from Elasticsearch \[ID_29289\]
 
@@ -382,21 +346,23 @@ Overview of the different settings:
 
 **ClientTest tool**
 
-The SLNetClientTest tool now allows you to retrieve the IDs of the currently cached ReservationInstances. To do so, go to *Advanced \> Apps \> SRMSurveyor \> Inspect ReservationInstance Cache*.
+The SLNetClientTest tool now allows you to retrieve the IDs of the currently cached ReservationInstances. To do so, go to *Advanced \> Apps \> SRMSurveyor \> Inspect ReservationInstance Cache*.
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 **Logging**
 
-If loglevel 6 is enabled, the caches will log any added, updated or removed items in the  SLResourceManagerStorage.txt file.
+If loglevel 6 is enabled, the caches will log any added, updated or removed items in the  SLResourceManagerStorage.txt file.
 
 #### Enhanced performance by implementing ISerializable on the ReservationInstance class using protocol buffer serialization \[ID_29306\]
 
 Overall performance has increased by implementing ISerializable on the ReservationInstance class using protocol buffer serialization.
 
 > [!WARNING]
-> Breaking changes:<br> -  The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.<br> -  When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.
+> Breaking changes:
+> - The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.
+> - When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.
 
 ## Changes
 
@@ -422,7 +388,7 @@ Due to a number of enhancements, overall performance has increased when loading 
 
 #### SLLogCollector tool can now be accessed via the DataMiner Taskbar Utility \[ID_29154\]
 
-You can now open the SLLogCollector tool by selecting *Launch \> Tools \> SLLog Collector* in the DataMiner TaskBar Utility.
+You can now open the SLLogCollector tool by selecting *Launch \> Tools \> SLLog Collector* in the DataMiner TaskBar Utility.
 
 #### NATS connection timeout can now be configured \[ID_29172\]
 
@@ -462,7 +428,7 @@ A number of enhancements have been made to prevent “Messages have gone lost, m
 
 #### DataMiner Cube: Enhancement made to “Skyline Black” theme \[ID_29370\]
 
-A number of enhancements have been made to the “Skyline Black” theme, especially with regard to readability in the *Database* section of *System Center*.
+A number of enhancements have been made to the “Skyline Black” theme, especially with regard to readability in the *Database* section of *System Center*.
 
 #### “Saving report...” entry will no longer be added to SLWatchdog.txt when a Watchdog report has successfully been saved \[ID_29379\]
 
@@ -486,7 +452,7 @@ When you moved a dashboard from one folder to another, and then selected the des
 
 #### DataMiner Cube: 'Migrate booking data to Indexing Engine' button would still be displayed after the booking data had already been migrated \[ID_28813\]
 
-In DataMiner Cube, clicking the *Migrate booking data to Indexing Engine* button starts a wizard that allows you to migrate booking data from the Cassandra database to the Indexing database. In some cases, this button would incorrectly still be displayed after the booking data had already been migrated.
+In DataMiner Cube, clicking the *Migrate booking data to Indexing Engine* button starts a wizard that allows you to migrate booking data from the Cassandra database to the Indexing database. In some cases, this button would incorrectly still be displayed after the booking data had already been migrated.
 
 #### DataMiner Cube - Visual Overview: Element shapes would incorrectly not inherit the service con­text of their parent element shape \[ID_28867\]
 
@@ -510,7 +476,7 @@ When you discarded a newly created Automation script, in some cases, it would in
 
 #### No trigger keys listed when debugging a QAction due to a compatibility issue between Data­Miner and DataMiner Integration Studio \[ID_29049\]
 
-Due to a compatibility issue between DataMiner and DataMiner Integration Studio, in some cases, when debugging a QAction, the *Trigger key* box in the *DIS Inject *window would incorrectly not list any trigger keys.
+Due to a compatibility issue between DataMiner and DataMiner Integration Studio, in some cases, when debugging a QAction, the *Trigger key* box in the *DIS Inject *window would incorrectly not list any trigger keys.
 
 #### NATS service would no longer start up after being reset when a DataMiner Agent was removed from the DMS \[ID_29075\]
 
@@ -544,7 +510,7 @@ When, in an interactive Automation script, a calendar control was used to select
 
 In some cases, an error could occur in the SLAnalytics process when calculating a trend prediction for a parameter with missing trend data.
 
-#### UDP smart-serial server would receive an empty package each time a new client started send­ing data to it \[ID_29166\]
+#### UDP smart-serial server would receive an empty package each time a new client started sending data to it \[ID_29166\]
 
 When multiple clients were sending data to a smart-serial UDP server, that server would incorrectly receive an empty package each time a new client started sending data.
 
@@ -594,7 +560,7 @@ Also, when a dashboard URL containing a selection was refreshed, in some cases, 
 
 #### Dashboards app - GQI: Colors set for exception values of numeric parameters would not get applied \[ID_29244\]
 
-In the *Layout* tab of the Table component, the *Column filters *option allows you to highlight cells based on a condition. In some cases, colors set for exception values of numeric parameters with a range would not get applied.
+In the *Layout* tab of the Table component, the *Column filters *option allows you to highlight cells based on a condition. In some cases, colors set for exception values of numeric parameters with a range would not get applied.
 
 Also, the *Column filters *option now allows you to highlight “Not initialized” values.
 
@@ -616,7 +582,7 @@ When a Failover setup is configured on two DataMiner Agents with a MySQL databas
 
 #### DataMiner Cube - System Center: Incorrect counter values on Agents \> BPA page \[ID_29271\]
 
-In *System Center*, on the *Agents \> BPA* page, in some cases, the displayed counters would show incorrect values.
+In *System Center*, on the *Agents \> BPA* page, in some cases, the displayed counters would show incorrect values.
 
 #### Problem with SLAnalytics \[ID_29275\]
 
@@ -648,7 +614,7 @@ Up to now, in some cases, an exception would be thrown when an Element.xml or Se
 
 In some cases, changes made to job sections and job fields would not immediately be visible in the UI.
 
-Also, when a field with the *Allow filtering on this field* option enabled had its type changed, in some cases, the *Allow filtering on this field* option would incorrectly stay enabled.
+Also, when a field with the *Allow filtering on this field* option enabled had its type changed, in some cases, the *Allow filtering on this field* option would incorrectly stay enabled.
 
 #### Problem with SLDataMiner when an element was stopped \[ID_29327\]
 
@@ -695,7 +661,6 @@ When you copied a section definition from one job domain to another, in some cas
 When, in the Jobs app, you tried to hide the only domain that was visible, up to now, the warning message that appeared, would contain a small typographical error.
 
 - Former message: “Atleast one job domain should be visible.”
-
 - New message: “At least one job domain should be visible.”
 
 #### Jobs app: Booking sections did not have their initial values filled in \[ID_29392\]
@@ -706,7 +671,7 @@ In some cases, booking sections did not have their initial values filled in.
 
 When you selected a number of jobs in the list, clicked *Delete*, and then clicked *Cancel*, in some cases, the jobs you had selected would no longer be selected.
 
-#### Service & Resource Management:  VirtualFunctionResource could not be bound with the same index as another VirtualFunctionResource \[ID_29403\]
+#### Service & Resource Management:  VirtualFunctionResource could not be bound with the same index as another VirtualFunctionResource \[ID_29403\]
 
 In some cases, it would not be possible to bind a VirtualFunctionResource when another VirtualFunctionResource was already bound to a different entrypoint table with the same index.
 

@@ -1,4 +1,8 @@
-# Feature release 10.1.8
+---
+uid: General_Feature_Release_10.1.8
+---
+
+# General Feature Release 10.1.8
 
 ## New features
 
@@ -6,7 +10,7 @@
 
 #### Configuration of credentials for Elasticsearch backup location \[ID_29024\]
 
-It is now possible to configure specific credentials for the Elasticsearch backup location. To do so, send a *SetElasticBackupPath* message with the credentials using the SLNetClientTest tool. This will create a Windows scheduled task "elasticbackupwithcredentials", which is triggered on startup, and which makes it possible to access the backup path location.
+It is now possible to configure specific credentials for the Elasticsearch backup location. To do so, send a *SetElasticBackupPath* message with the credentials using the SLNetClientTest tool. This will create a Windows scheduled task "elasticbackupwithcredentials", which is triggered on startup, and which makes it possible to access the backup path location.
 
 > [!WARNING]
 > Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
@@ -46,7 +50,6 @@ To improve support for previous enhancements, the NATS version used by DataMiner
 In addition, two new options are available to refine the NATS settings in *MaintenanceSettings.xml* (in the \<SLNet> element):
 
 - *NATSLogFileCleanupMs*: Determines the time (in milliseconds) between NATS log file cleanup attempts. This timing will only be applied after the next cleanup attempt after the configuration change. For example, if the next cleanup attempt is in 15 minutes and you change this value, the next cleanup will still be in 15 minutes, but all subsequent cleanups will happen after 1-minute intervals. The default value of this setting is 900000 (15 minutes).
-
 - *NATSLogFileAmountToKeep*: The number of log files to keep (default =10). This value only applies to the log files that do not have the .log extension.
 
 For example:
@@ -72,7 +75,7 @@ It is now possible to a regular expression in the filtering options of an aggreg
 
 **Syntax 1: Equation with a regular expression defined in a regex attribute**
 
-When using this syntax, add “equation:regex,” to the *options* attribute and specify the regular expression in a separate *regex* attribute.
+When using this syntax, add “equation:regex,” to the *options* attribute and specify the regular expression in a separate *regex* attribute.
 
 Example:
 
@@ -80,13 +83,13 @@ Example:
 <Action id="1">
   <Name>Regex aggregate with static equation</Name>
   <On id="304">parameter</On>
-  <Type options="groupby:2;type:count;equation:regex,;return:3002"      regex="^[a-zA-Z]{2}$">aggregate</Type>
+  <Type options="groupby:2;type:count;equation:regex,;return:3002" regex="^[a-zA-Z]{2}$">aggregate</Type>
 </Action>
 ```
 
 **Syntax 2: Equation with a regular expression defined in a parameter**
 
-When using this syntax, to the *options* attribute add “equation:regex,”, followed by the ID of the parameter containing the regular expression.
+When using this syntax, to the *options* attribute add “equation:regex,”, followed by the ID of the parameter containing the regular expression.
 
 Example:
 
@@ -105,7 +108,7 @@ When using this syntax, to the *options* attribute add “equationvalue:”, fol
 | Argument | Description                                                                                                |
 |----------|------------------------------------------------------------------------------------------------------------|
 | a        | Type of equation: “regex”                                                                                  |
-| b        | Empty when regular expression is specified in a separate *regex* attribute. |
+| b        | Empty when regular expression is specified in a separate *regex* attribute. |
 | c        | The ID of the column parameter to which the equation has to be applied.                                    |
 | d        | The row index. If this argument is not specified, the matching will be done on a row by row basis.         |
 
@@ -115,7 +118,7 @@ Example:
 <Action id="3">
   <Name>Regex aggregate with static equation value</Name>
   <On id="306">parameter</On>
-  <Type options="groupby:2;type:avg;equationvalue:regex,,304,;return:3202"      regex="^[a-zA-Z]{2}$">aggregate</Type>
+  <Type options="groupby:2;type:avg;equationvalue:regex,,304,;return:3202" regex="^[a-zA-Z]{2}$">aggregate</Type>
 </Action>
 ```
 
@@ -153,7 +156,7 @@ The Profiles app now contains a failsafe mechanism to prevent possible situation
 
 When shapes in Visual Overview are linked to an element, parameter or service, it is now possible to show the alarm state for this linked object at a specific point in the past. To do so, you can use the new shape data *HistoryMode*, which can be added to a specific shape, or to the entire page.
 
-The value of the shape data field should consist of a state indication and a timestamp, separated by a pipe character ("\|"). The *State* can be *On* or *Off*. *On* means history mode is active, *Off* means real-time alarm information should be shown instead. Both the state value and the timestamp value can be configured using placeholders.
+The value of the shape data field should consist of a state indication and a timestamp, separated by a pipe character ("\|"). The *State* can be *On* or *Off*. *On* means history mode is active, *Off* means real-time alarm information should be shown instead. Both the state value and the timestamp value can be configured using placeholders.
 
 For example:
 
@@ -164,7 +167,7 @@ For example:
 > [!NOTE]
 > This feature is currently not yet supported for shapes linked to views.
 
-An additional change introduced by this release note is that you can now define the culture that should be used for a shape that has been turned into a datetime control (using the *SetVarOptions* shape data set to *Control=DateTime*). To do so, add *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value.
+An additional change introduced by this release note is that you can now define the culture that should be used for a shape that has been turned into a datetime control (using the *SetVarOptions* shape data set to *Control=DateTime*). To do so, add *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value.
 
 For example:
 
@@ -180,7 +183,7 @@ The trended trace record from right before the specified time will be displayed.
 
 To configure this:
 
-1. Configure the shape in the same way as for a regular spectrum thumbnail, but as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder *C:\\Skyline DataMiner*.
+1. Configure the shape in the same way as for a regular spectrum thumbnail, but as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder *C:\\Skyline DataMiner*.
 
 2. Add the *HistoryMode* shape data field to the shape, and configure its value as follows:
 
@@ -205,18 +208,17 @@ For example:
 
 #### Visual Overview: New Collapse shape data field \[ID_30149\]
 
-In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](https://help.dataminer.services/dataminer/) in the DataMiner Help. While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
+In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions). While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
 
-This makes it a convenient alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them. This will allow better performance, though it will lead to slightly increased memory usage.
+This makes it a convenient alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them. This will allow better performance, though it will lead to slightly increased memory usage.
 
-Using the *Collapse* action can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using *Hide*.This can allow you to use the "Auto" width or height more effectively.
+Using the *Collapse* action can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using *Hide*.This can allow you to use the "Auto" width or height more effectively.
 
 #### Visual Overview: New icons added to Icons stencils \[ID_30198\]
 
 The following icons have been added to the Icons stencil:
 
 - TV streaming
-
 - Microservices
 
 ### DMS Reports & Dashboards
@@ -243,7 +245,7 @@ Multiple filters can be applied on the same value. In that case, the filters wil
 
 A new ProcessAutomationHelper has been added to manipulate PaToken and PaProcess objects. See the following example.
 
-```txt
+```csharp
 public class Script
 {
     public void Run(Engine engine)
@@ -272,7 +274,7 @@ In an interactive Automation script that is used in the DataMiner web apps, you 
 
 For example:
 
-```txt
+```csharp
 UIBlockDefinition uibDef = new UIBlockDefinition();
 uibDef.Type = UIBlockType.FileSelector;
 uibDef.DestVar = destvar;
@@ -307,13 +309,10 @@ From now on, an error with ErrorReason “ReservationsMustBeReconfigured” will
 From now on, the GetEligibleResources and AddOrUpdateReservationInstances calls will determine the availability of a contributing resource during a certain time range based on the following criteria:
 
 - If the contributing booking linked to the resource has Status set to “Canceled”, “Disconnected”, “Interrupted” or “Undefined”, then the resource will be considered unavailable.
-
 - If the contributing booking linked to the resource has Status set to a value other than “Canceled”, “Disconnected”, “Interrupted” or “Undefined”:
 
     - If the contributing booking linked to the resource has LockLifeCycle set to “Locked”, then the contributing resource will be considered available if the time range of the contributing booking is entire inside the time range.
-
     - If the contributing booking linked to the resource has LockLifeCycle set to “Unlocked”, then the contributing resource will be considered available if the timing of the contributing booking intersects with the passed time.
-
     - If the contributing booking linked to the resource has LockLifeCycle set to “Undefined”, then the contributing resource will be considered not available.
 
 Based on those criteria, the GetEligibleResource call will not return any resources that are unavailable.
@@ -327,13 +326,11 @@ If the contributing booking has Status set to “Interrupted”, then the bookin
 When an error occurs during a parameter check while generating a protocol for a virtual function, the error message will now contain more detailed information.
 
 - When a parameter is not of category “Monitoring” or “Configuration”, a CrudFailedException containing a VirtualFunctionDefinitionError with reason InvalidProfileParameterCategory will be thrown.
-
 - When a parameter is of type “discrete” but has no discrete values assigned to it, a CrudFailedException containing a VirtualFunctionDefinitionError with reason InvalidProfileParameterDiscrete will be thrown.
 
 The VirtualFunctionDefinitionError will have the following properties filled in:
 
 - VirtualFunctionDefinitionID: The ID of the VirtualFunctionDefinition.
-
 - ParameterID: The ID of the parameter that cannot be resolved.
 
 ### DMS tools
@@ -344,7 +341,7 @@ The StandaloneCassandraBackup.exe tool can be used by an administrator to take a
 
 From DataMiner 10.1.8 onwards, this tool will be available on each DMA server in the folder C:\\Skyline DataMiner\\Tools. As it only affects Cassandra files, it can be used on any DataMiner system regardless of version.
 
-For more information on this tool, see [Standalone Cassandra Backup Tool](https://community.dataminer.services/documentation/standalone-cassandra-backup-tool/) on DataMiner Dojo.
+For more information on this tool, see [Standalone Cassandra Backup Tool](xref:Standalone_Cassandra_Backup_Tool).
 
 ## Changes
 
@@ -391,7 +388,7 @@ When a smart-serial client connection receives incoming data, it will forward th
 From now on, if you enable a specific connection in PortLog.txt (see DataMiner Help) and set SLPort debug logging to level 4 or higher, log entries like the one below will be added to SLPort.txt. These entries contain the IP address and port of the server, the size of the incoming data and the data itself.
 
 ```txt
-2021/05/14 15:30:57.452|SLPort.exe 8.5.1519.6|39680|39544|CSmartIP::ProcessIncomming|DBG|4|Incoming data from 127.0.0.2:4598 (total length: 5 bytes) -    000000  576F72642E                                   Word.
+2021/05/14 15:30:57.452|SLPort.exe 8.5.1519.6|39680|39544|CSmartIP::ProcessIncomming|DBG|4|Incoming data from 127.0.0.2:4598 (total length: 5 bytes) -    000000  576F72642E                                   Word.
 ```
 
 #### SLUpgrade can now run BPA tests before starting the upgrade process \[ID_29903\]
@@ -403,7 +400,6 @@ The BPA tests run before the start of an upgrade process will generally be tests
 BPA tests added to the Prerequisites folder of a DataMiner upgrade package must comply to the following rules:
 
 - They must have their CanRunOnOfflineAgents flag enabled. This will make sure that, in a Failover setup, the offline agent will also be checked.
-
 - They must have their RequireSLNet flag disabled.
 
 #### Enhanced performance when exporting function protocols \[ID_29929\]
@@ -447,7 +443,7 @@ Due to a number of enhancements, overall performance has increased when creating
 Up to now, at DataMiner startup, the following entry would by default be added to the SLDataMiner.txt and SLErrors.txt log files when no C:\\Skyline DataMiner\\Simulations folder could be found:
 
 ```txt
-CDataMiner::LoadSimulations|ERR|0|Failed to query directory 'C:\Skyline DataMiner\Simulations' with filter 'Simulation_*.xml' (The system cannot find the path specified.).
+CDataMiner::LoadSimulations|ERR|0|Failed to query directory 'C:\Skyline DataMiner\Simulations' with filter 'Simulation_*.xml' (The system cannot find the path specified.).
 ```
 
 From now on, such entries will no longer by default be added to the above-mentioned log files at DataMiner startup.
@@ -473,7 +469,6 @@ The BPA test “Report Active RTE” will now run once every 8 minutes instead o
 The following default BPA tests were updated:
 
 - Minimum Requirement Checker: Name changed to “Minimum Requirements Check”
-
 - View Recursion: Description updated
 
 ### Fixes
@@ -545,7 +540,6 @@ When, in DataMiner Cube, you saved the settings of the offload database, the set
 When a client disconnected while the DMA was starting up, in some rare cases, part of the initialization of the SLNet process could get skipped, which would lead to issues later on. Up to now, the error would only be added to the logs. From now on, in cases like this, the following will happen:
 
 - When a client cannot be re-registered during the SLNet initialization, an entry will be added to the logs, but the initialization will no longer fail.
-
 - Any exception thrown during the SLNet initialization will now also show up in the Alarm Console as “Unexpected Exception \[Initialize DMA\]: xxxxxx”
 
 #### Interactive Automation scripts: Only the value added in the last text box would be saved \[ID_29995\]
@@ -586,7 +580,7 @@ In some cases, ReservationInstance property updates would incorrectly overwrite 
 
 #### DataMiner Cube - System Center: No longer possible to change a user’s group membership \[ID_30075\]
 
-When, in a user card, you opened the *Group membership* tab, both the *Available groups* list and the *Included in groups* list would be empty. Hence, in a user card, it would not possible to make a user a member of a particular group. If you wanted to make a user a member of a particular group, you had to select the group in question, open the *Users* tab and add the user to the *Included users* list.
+When, in a user card, you opened the *Group membership* tab, both the *Available groups* list and the *Included in groups* list would be empty. Hence, in a user card, it would not possible to make a user a member of a particular group. If you wanted to make a user a member of a particular group, you had to select the group in question, open the *Users* tab and add the user to the *Included users* list.
 
 #### Dashboards app: Selection not set in parameter feed \[ID_30092\]
 
@@ -632,7 +626,7 @@ Also, from now on, when an SNMP-related failure occurs, the log entry will inclu
 
 #### DataMiner Cube - Backup: Users without “Backup \> Configure” permission would incorrectly be allowed to update the “Indexing Engine location” backup path \[ID_30131\]
 
-In the *Backup* section of *System Center*, users without *Modules \> System configuration \> Backup \> Configure* permission would incorrectly be allowed to update the *Indexing Engine location* backup path.
+In the *Backup* section of *System Center*, users without *Modules \> System configuration \> Backup \> Configure* permission would incorrectly be allowed to update the *Indexing Engine location* backup path.
 
 #### DataMiner Cube - Scheduler: Users with permission to add tasks but not to edit them would not be able to save a newly created task \[ID_30132\]
 
@@ -650,7 +644,7 @@ When building a GQI query, in some cases, the “Start from” option would not 
 
 #### DataMiner Cube - Users/Groups: Duplicate activity log entries \[ID_30162\]
 
-When, in the *Users/groups* section of *System Center*, you opened a user card and selected the *Activity* tab, in some cases, the list would contain duplicate activity log entries.
+When, in the *Users/groups* section of *System Center*, you opened a user card and selected the *Activity* tab, in some cases, the list would contain duplicate activity log entries.
 
 #### DataMiner Cube - Visual Overview: Button to navigate to another card would no longer work after clicking the Back button \[ID_30167\]
 
