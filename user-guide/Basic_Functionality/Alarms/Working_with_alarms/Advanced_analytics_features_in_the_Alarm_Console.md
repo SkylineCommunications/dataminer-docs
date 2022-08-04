@@ -214,7 +214,7 @@ From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm
 - To **add an alarm** to an existing alarm group, right-click an alarm that is not part of an alarm group yet, and select *Add to incident*. In the pop-up window, select to add the alarm to an existing incident.
 
   > [!NOTE]
-  > The following types of alarms cannot be added to an alarm group: alarms with severity normal, alarms with a source other than DataMinerSystem (e.g. correlated alarms), alarms related to DataMiner itself, notices, errors, information events, and suggestion events. 
+  > The following types of alarms cannot be added to an alarm group: correlated alarms, information events, suggestion events, other alarm groups, and clearable alarms. Prior to DataMiner 10.2.9/10.3.0 it is also not possible to add alarms without focus information, such as notices and errors.
 
 - To **remove an alarm** from an alarm group, right-click an alarm that is part of an incident and select *Remove from incident*.
 
