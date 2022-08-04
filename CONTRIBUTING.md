@@ -297,7 +297,12 @@ On every page of the documentation on docs.dataminer.services, an *Improve this 
 
 1. Click *Create pull request*.
 
+   ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
+
    The documentation team will review the request and merge it if it is approved. If changes are needed before it can be merged, you will receive feedback.
+
+   > [!NOTE]
+   > Do not forget to create a pull request! Otherwise, your changes may be lost.
 
 ## Reviewing a contribution from someone else
 

@@ -67,16 +67,16 @@ This information is added in the *\<RCA>* tag. For example:
 </RCA>
 ```
 
-### Attributes of the \<DCF> tag
+Attributes of the \<DCF> tag:
 
-| Attribute    | Description                                                                                                                                                                                                                                                                                                                                      |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| entryPoint   | The DmaId/ElementId of the element that serves as entry point to calculate the DCF chain.                                                                                                                                                                                                                                                        |
-| isRootLevel  | \-  True: The entry point is the root RCA level, and the chain will be resolved from input to output.<br> -  False: The entry point is the maximum RCA level, and the chain will be resolved from output to input. |
-| interfaceID  | The interface from which to start.                                                                                                                                                                                                                                                                                                               |
-| addExternals | \-  True: External connections will be added<br> -  False: No external connections will be added.<br> Default: False                                                                                               |
+| Attribute | Description |
+|--|--|
+| entryPoint | The DmaId/ElementId of the element that serves as entry point to calculate the DCF chain. |
+| isRootLevel | \-  True: The entry point is the root RCA level, and the chain will be resolved from input to output.<br> -  False: The entry point is the maximum RCA level, and the chain will be resolved from output to input. |
+| interfaceID | The interface from which to start. |
+| addExternals | \-  True: External connections will be added<br> -  False: No external connections will be added.<br> Default: False |
 
-### Example of a Service.xml file:
+Example of a Service.xml file:
 
 ```xml
 <Service version="2" dmaid="131" id="5" name="Parent Service" description="myService" vdxfile="" ignoreTimeouts="false" isTemplate="false" generatedFromTemplate=""  type="" timestamp="636168981380371823" keepCopiesOnReApply="false">
@@ -108,22 +108,22 @@ This information is added in the *\<RCA>* tag. For example:
 > [!NOTE]
 > If interfaces or elements are not found during service creation, an error will be thrown and service creation will stop.
 
-### Attributes of the \<DCF> tag
+Attributes of the \<DCF> tag:
 
-| Attribute          | Description                                                                                                                                                                                                                                                                                                                                      |
-|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| entryPoint         | Not used for service templates.                                                                                                                                                                                                                                                                                                                  |
-| isRootLevel        | \-  True: The entry point is the root RCA level, and the chain will be resolved from input to output.<br> -  False: The entry point is the maximum RCA level, and the chain will be resolved from output to input. |
-| interfaceID        | Not used for service templates                                                                                                                                                                                                                                                                                                                   |
-| addExternals       | \-  True: External connections will be added<br> -  False: No external connections will be added.<br> Default: False                                                                                               |
-| templateEntryPoint | The element that serves as the entry point to calculate the DCF chain, defined either using the element name or the ID (in the format DMA ID/element ID).                                                                                                                                                                                        |
-| templateInterface  | The interface from which to start calculating the DCF chain.                                                                                                                                                                                                                                                                                     |
-| templateOptions    | Reserved for future use.                                                                                                                                                                                                                                                                                                                         |
+| Attribute | Description |
+|--|--|
+| entryPoint | Not used for service templates. |
+| isRootLevel | \-  True: The entry point is the root RCA level, and the chain will be resolved from input to output.<br> -  False: The entry point is the maximum RCA level, and the chain will be resolved from output to input. |
+| interfaceID | Not used for service templates |
+| addExternals | \-  True: External connections will be added<br> -  False: No external connections will be added.<br> Default: False |
+| templateEntryPoint | The element that serves as the entry point to calculate the DCF chain, defined either using the element name or the ID (in the format DMA ID/element ID). |
+| templateInterface | The interface from which to start calculating the DCF chain. |
+| templateOptions | Reserved for future use. |
 
 > [!NOTE]
 > Though it is not possible to use wildcards for the *templateEntryPoint* or *templateInterface*, it is possible to use placeholders from the service template.
 
-### Example of a Service.xml file:
+Example of a Service.xml file:
 
 ```xml
 <Service version="2" dmaid="131" id="18" name="MyDCFTemplate" description="" vdxfile="" ignoreTimeouts="false" isTemplate="true" generatedFromTemplate="" type="" timestamp="636253477373961897" keepCopiesOnReApply="false">

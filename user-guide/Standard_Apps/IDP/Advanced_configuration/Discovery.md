@@ -12,20 +12,22 @@ This page lists the available discovery profiles.
 
 - Select a profile in the table to view detailed information below.
 
-- To create a new discovery profile, click the *New* button above the table. This button is available from IDP 1.1.20 onwards.
+- To **create a new discovery profile**, click the *New* button above the table. This button is available from IDP 1.1.20 onwards.
 
   This will open a wizard where you can add actions and configure options for the relevant protocol type. For SNMP discovery profiles, you can select the *Use Credentials Library* option to use credentials stored in the credentials library (see [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication)).
 
-- To edit an existing discovery profile, select the discovery profile in the table and click the *Edit* button above the table. This button is available from IDP 1.1.20 onwards. 
+- To **edit an existing discovery profile**, select the discovery profile in the table and click the *Edit* button above the table. This button is available from IDP 1.1.20 onwards.
 
   This will open a wizard where you can add and delete actions, as well as configure options for the relevant protocol type. For SNMP discovery profiles, you can select the *Use Credentials Library* option to use credentials stored in the credentials library (see [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication)).
 
-- To load a discovery profile configured in JSON, click the *Import* button above the table listing the discovery profiles. A section will then become available below the table where you can import a single discovery profile or all available discovery profiles. The profiles must be placed in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*.
+- To **load a discovery profile** configured in JSON, click the *Import* button above the table listing the discovery profiles. A section will then become available below the table where you can import a single discovery profile or all available discovery profiles. From IDP 1.2.0 onwards, you can also select a different file path to import from. In earlier IDP versions, the profiles must be placed in the DataMiner Documents folder *Skyline IDP Discovery* > *Discovery*.
 
   > [!NOTE]
   > To be able to load a discovery profile, you must ensure that it uses the correct format. See [Discovery profiles](xref:Discovery_profiles).
 
-- If a discovery profile is not referenced in any CI Type, it can be removed. To do so, select the discovery profile in the table and click the *Delete* button above the table.
+- To **export a discovery profile** (in JSON format), select the profile in the table and click the *Export* button above the table. Alternatively, you can also export all profiles with the *Export all* button. These buttons are available from IDP 1.2.0 onwards. This can for instance be useful to move discovery profiles to a different DMA, or to use an exported profile as the starting point to create a new discovery profile. The files will be exported to the same directory as is configured for the import (by default `C:\Skyline DataMiner  \Documents\Skyline IDP Discovery\Discovery`).
+
+- If a discovery profile is not referenced in any CI Type, it can be removed. To **remove a discovery profile**, select the discovery profile in the table and click the *Delete* button above the table.
 
 ## Scan Ranges
 
@@ -42,7 +44,9 @@ This page lists the available scan ranges.
 - If IDP is used with Process Automation, every hour the scan ranges are automatically synchronized with the profile instances used by Process Automation. If you want to trigger this synchronization immediately, use the *Sync* button on this page.
 
 > [!NOTE]
+>
 > - Both IPv4 and IPV6 ranges are supported. Both types of ranges can be combined in the same request.
+> - IP addresses from within the \[0.0.0.0, 0.255.255.255] range are not allowed in a scan range.
 > - If a discovery is done based on the *Ping* discovery profile, devices can be discovered based on ping discovery only. The *Ping First* option will not be available in this case. As the CI Type for devices discovered using a ping discovery is unknown, these will only be displayed in the IDP app if the setting *Identify Unknown Devices* is enabled.
 
 ## Settings

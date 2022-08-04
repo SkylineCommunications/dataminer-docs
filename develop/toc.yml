@@ -515,6 +515,55 @@
           topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
+    - name: How-tos
+      items:
+      - name: How to aggregate alarm severities
+        topicUID: How_to_aggregate_alarm_severities
+      - name: How to configure multi-threaded timers
+        topicUID: How_to_configure_multi_threaded_timers
+      - name: How to create an HTTP connector (CoinMarketCap use case)
+        topicUID: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
+      - name: How to define serial and smart-serial responses in one and the same protocol
+        topicUID: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
+      - name: How to handle XML and JSON data in QActions
+        topicUID: How_to_handle_XML_and_JSON_data_in_QActions
+      - name: How to implement the Subtable feature
+        topicUID: How_to_implement_the_subtable_feature
+      - name: How to integrate RabbitMQ with DataMiner
+        topicUID: How_to_integrate_RabbitMQ_with_DataMiner
+      - name: How to integrate the HTTP Sessions Table in a connector
+        topicUID: How_to_integrate_the_HTTP_sessions_table_in_a_connector
+      - name: How to retrieve protocol pending calls
+        topicUID: How_to_retrieve_protocol_pending_calls
+      - name: How to set up an SSH connection within a protocol
+        topicUID: How_to_set_up_an_SSH_connection_within_a_protocol
+      - name: How to use history sets on a protocol parameter
+        topicUID: How_to_use_history_sets_on_a_protocol_parameter
+      - name: How to use multiple protocol threads to split communication and parsing
+        topicUID: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
+      - name: How to use 'on each' in a protocol trigger
+        topicUID: How_to_use_on_each_in_a_protocol_trigger
+      - name: How to use the element log in connector integrations
+        topicUID: How_to_use_the_element_log_in_connector_integrations
+    - name: Troubleshooting
+      items:
+      - name: Investigating a protocol thread RTE
+        topicUID: Investigating_a_protocol_thread_RTE
+      - name: Why is serial data not visible in DataMiner?
+        topicUID: Why_is_serial_data_not_visible_in_DataMiner
+      - name: QAction exceptions
+        topicUID: QAction_exceptions
+        items:
+        - name: System.NullReferenceException
+          topicUID: System_NullReferenceException
+        - name: System.IndexOutOfRangeException
+          topicUID: System_IndexOutOfRangeException
+        - name: System.FormatException
+          topicUID: System_FormatException
+        - name: System.Collections.Generic.KeyNotFoundException
+          topicUID: System_Collections_Generic_KeyNotFoundException
+        - name: Identifying the source of an exception
+          topicUID: Identifying_the_source_of_an_exception
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
@@ -567,6 +616,10 @@
         topicUid: AutomationActionUi
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
+    - name: How-tos
+      items:
+      - name: How to make your Automation scripts debug ready
+        topicUID: How_to_make_your_automation_scripts_debug_ready
   - name: Class Library
     items:
     - name: Introduction
@@ -851,7 +904,7 @@
       - name: NT_SET_BITRATE_DELTA_INDEX_TRACKING
         topicUid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
       - name: NT_ADD_VIEWS
-        topîcUid: NT_ADD_VIEWS
+        topicUid: NT_ADD_VIEWS
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
@@ -2988,6 +3041,378 @@
               items:
               - name: Enabled
                 topicUid: NuGetStages.Configurations.Configuration.PackageSigning.Enabled
+  - name: Package manifest schema
+    topicUid: SchemaPackageManifest
+    items:
+    - name: Manifest
+      topicUid: Manifest
+      items: 
+      - name: Content
+        topicUid: Manifest.Content
+        items: 
+        - name: AutomationScripts
+          topicUid: Manifest.Content.AutomationScripts
+          items: 
+          - name: AutomationScript
+            topicUid: Manifest.Content.AutomationScripts.AutomationScript
+            items: 
+            - name: RepoPath
+              topicUid: Manifest.Content.AutomationScripts.AutomationScript.RepoPath
+            - name: Selection
+              topicUid: Manifest.Content.AutomationScripts.AutomationScript.Selection
+              items: 
+              - name: Name
+                topicUid: Manifest.Content.AutomationScripts.AutomationScript.Selection.Name
+            - name: Version
+              topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range-rangeSelection
+                  - name: '@triggerPackagePipelineOnChange '
+                    topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range-triggerPackagePipelineOnChange 
+                - name: Specific
+                  topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Specific
+        - name: CompanionFiles
+          topicUid: Manifest.Content.CompanionFiles
+          items: 
+          - name: CompanionFile
+            topicUid: Manifest.Content.CompanionFiles.CompanionFile
+            items: 
+            - name: RepoPath
+              topicUid: Manifest.Content.CompanionFiles.CompanionFile.RepoPath
+            - name: Selections
+              topicUid: Manifest.Content.CompanionFiles.CompanionFile.Selections
+              items: 
+              - name: File
+                topicUid: Manifest.Content.CompanionFiles.CompanionFile.Selections.File
+              - name: Folder
+                topicUid: Manifest.Content.CompanionFiles.CompanionFile.Selections.Folder
+              - name: WildcardFilter
+                topicUid: Manifest.Content.CompanionFiles.CompanionFile.Selections.WildcardFilter
+            - name: Version
+              topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range-rangeSelection
+                  - name: '@triggerPackagePipelineOnChange '
+                    topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range-triggerPackagePipelineOnChange 
+                - name: Specific
+                  topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Specific
+        - name: CustomSolutions
+          topicUid: Manifest.Content.CustomSolutions
+          items: 
+          - name: CustomSolution
+            topicUid: Manifest.Content.CustomSolutions.CustomSolution
+            items: 
+            - name: RepoPath
+              topicUid: Manifest.Content.CustomSolutions.CustomSolution.RepoPath
+            - name: Selections
+              topicUid: Manifest.Content.CustomSolutions.CustomSolution.Selections
+              items: 
+              - name: File
+                topicUid: Manifest.Content.CustomSolutions.CustomSolution.Selections.File
+              - name: Folder
+                topicUid: Manifest.Content.CustomSolutions.CustomSolution.Selections.Folder
+              - name: WildcardFilter
+                topicUid: Manifest.Content.CustomSolutions.CustomSolution.Selections.WildcardFilter
+            - name: Version
+              topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range-rangeSelection
+                  - name: '@triggerPackagePipelineOnChange '
+                    topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range-triggerPackagePipelineOnChange 
+                - name: Specific
+                  topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Specific
+        - name: Dashboards
+          topicUid: Manifest.Content.Dashboards
+          items: 
+          - name: Dashboard
+            topicUid: Manifest.Content.Dashboards.Dashboard
+            items: 
+            - name: DestinationPath
+              topicUid: Manifest.Content.Dashboards.Dashboard.DestinationPath
+            - name: RepoPath
+              topicUid: Manifest.Content.Dashboards.Dashboard.RepoPath
+            - name: Version
+              topicUid: Manifest.Content.Dashboards.Dashboard.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-rangeSelection
+                  - name: '@triggerPackagePipelineOnChange '
+                    topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-triggerPackagePipelineOnChange 
+                - name: Specific
+                  topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Specific
+        - name: Files
+          topicUid: Manifest.Content.Files
+          items: 
+          - name: File
+            topicUid: Manifest.Content.Files.File
+            items: 
+            - name: DestinationPath
+              topicUid: Manifest.Content.Files.File.DestinationPath
+            - name: Source
+              topicUid: Manifest.Content.Files.File.Source
+            - name: SourcePath
+              topicUid: Manifest.Content.Files.File.SourcePath
+        - name: Folders
+          topicUid: Manifest.Content.Folders
+          items: 
+          - name: Folder
+            topicUid: Manifest.Content.Folders.Folder
+            items: 
+            - name: DestinationPath
+              topicUid: Manifest.Content.Folders.Folder.DestinationPath
+            - name: Source
+              topicUid: Manifest.Content.Folders.Folder.Source
+            - name: SourcePath
+              topicUid: Manifest.Content.Folders.Folder.SourcePath
+        - name: Functions
+          topicUid: Manifest.Content.Functions
+          items: 
+          - name: Function
+            topicUid: Manifest.Content.Functions.Function
+            items: 
+            - name: RepoPath
+              topicUid: Manifest.Content.Functions.Function.RepoPath
+            - name: Version
+              topicUid: Manifest.Content.Functions.Function.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.Functions.Function.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.Functions.Function.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.Functions.Function.Version.Selection.Range-rangeSelection
+                  - name: '@triggerPackagePipelineOnChange '
+                    topicUid: Manifest.Content.Functions.Function.Version.Selection.Range-triggerPackagePipelineOnChange 
+                - name: Specific
+                  topicUid: Manifest.Content.Functions.Function.Version.Selection.Specific
+        - name: Protocols
+          topicUid: Manifest.Content.Protocols
+          items: 
+          - name: Protocol
+            topicUid: Manifest.Content.Protocols.Protocol
+            items: 
+            - name: RepoPath
+              topicUid: Manifest.Content.Protocols.Protocol.RepoPath
+            - name: SignDevelopmentVersion
+              topicUid: Manifest.Content.Protocols.Protocol.SignDevelopmentVersion
+            - name: Templates
+              topicUid: Manifest.Content.Protocols.Protocol.Templates
+              items: 
+              - name: AlarmTemplates
+                topicUid: Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates
+                items: 
+                - name: Template
+                  topicUid: Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates.Template
+                  items: 
+                  - name: '@replaceExisting'
+                    topicUid: Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates.Template-replaceExisting
+              - name: InformationTemplates
+                topicUid: Manifest.Content.Protocols.Protocol.Templates.InformationTemplates
+                items: 
+                - name: Template
+                  topicUid: Manifest.Content.Protocols.Protocol.Templates.InformationTemplates.Template
+                  items: 
+                  - name: '@replaceExisting'
+                    topicUid: Manifest.Content.Protocols.Protocol.Templates.InformationTemplates.Template-replaceExisting
+              - name: TrendTemplates
+                topicUid: Manifest.Content.Protocols.Protocol.Templates.TrendTemplates
+                items: 
+                - name: Template
+                  topicUid: Manifest.Content.Protocols.Protocol.Templates.TrendTemplates.Template
+                  items: 
+                  - name: '@replaceExisting'
+                    topicUid: Manifest.Content.Protocols.Protocol.Templates.TrendTemplates.Template-replaceExisting
+            - name: Version
+              topicUid: Manifest.Content.Protocols.Protocol.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.Protocols.Protocol.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range-rangeSelection
+                  - name: '@triggerPackagePipelineOnChange '
+                    topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range-triggerPackagePipelineOnChange 
+                - name: Specific
+                  topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Specific
+              - name: SetAsProduction
+                topicUid: Manifest.Content.Protocols.Protocol.Version.SetAsProduction
+                items: 
+                - name: '@copyTemplates '
+                  topicUid: Manifest.Content.Protocols.Protocol.Version.SetAsProduction-copyTemplates 
+        - name: Visios
+          topicUid: Manifest.Content.Visios
+          items: 
+          - name: Visio
+            topicUid: Manifest.Content.Visios.Visio
+            items: 
+            - name: RepoPath
+              topicUid: Manifest.Content.Visios.Visio.RepoPath
+            - name: Version
+              topicUid: Manifest.Content.Visios.Visio.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.Visios.Visio.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-rangeSelection
+                  - name: '@triggerPackagePipelineOnChange '
+                    topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-triggerPackagePipelineOnChange 
+                - name: Specific
+                  topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
+              - name: SetAsDefault
+                topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
+      - name: DeleteFiles
+        topicUid: Manifest.DeleteFiles
+        items: 
+        - name: Delete
+          topicUid: Manifest.DeleteFiles.Delete
+      - name: DeploymentOptions
+        topicUid: Manifest.DeploymentOptions
+        items: 
+        - name: OrganizationCatalogAccess
+          topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess
+          items: 
+          - name: Organization
+            topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess.Organization
+      - name: Name
+        topicUid: Manifest.Name
+      - name: Version
+        topicUid: Manifest.Version
+      - name: VersionHistory
+        topicUid: Manifest.VersionHistory
+        items: 
+        - name: Branches
+          topicUid: Manifest.VersionHistory.Branches
+          items: 
+          - name: Branch
+            topicUid: Manifest.VersionHistory.Branches.Branch
+            items: 
+            - name: '@id'
+              topicUid: Manifest.VersionHistory.Branches.Branch-id
+            - name: Comment
+              topicUid: Manifest.VersionHistory.Branches.Branch.Comment
+            - name: Features
+              topicUid: Manifest.VersionHistory.Branches.Branch.Features
+              items: 
+              - name: Feature
+                topicUid: Manifest.VersionHistory.Branches.Branch.Features.Feature
+            - name: MajorVersions
+              topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions
+              items: 
+              - name: MajorVersion
+                topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion
+                items: 
+                - name: '@id'
+                  topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion-id
+                - name: Changes
+                  topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes
+                  items: 
+                  - name: Change
+                    topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes.Change
+                    items: 
+                    - name: ActionsToTake
+                      topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes.Change.ActionsToTake
+                      items: 
+                      - name: ActionToTake
+                        topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes.Change.ActionsToTake.ActionToTake
+                    - name: Impact
+                      topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes.Change.Impact
+                - name: MinorVersions
+                  topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions
+                  items: 
+                  - name: MinorVersion
+                    topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion
+                    items: 
+                    - name: '@id'
+                      topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion-id
+                    - name: CUVersions
+                      topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions
+                      items: 
+                      - name: CU
+                        topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU
+                        items: 
+                        - name: '@basedOn'
+                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU-basedOn
+                        - name: '@id'
+                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU-id
+                        - name: Changes
+                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Changes
+                          items: 
+                          - name: Change
+                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Changes.Change
+                          - name: Fix
+                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Changes.Fix
+                          - name: NewFeature
+                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Changes.NewFeature
+                        - name: Date
+                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Date
+                        - name: Provider
+                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Provider
+                          items: 
+                          - name: Author
+                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Provider.Author
+                          - name: Company
+                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Provider.Company
+                        - name: References
+                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References
+                          items: 
+                          - name: Reference
+                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.Reference
+                            items: 
+                            - name: '@type'
+                              topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.Reference-type
+                          - name: TaskId
+                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.TaskId
+    - name: SchemaTypes
+      topicUid: Manifest-TypeAlarmTemplateName
+      items:
+      - name: TypeAlarmTemplateName
+        topicUID: Manifest-TypeAlarmTemplateName
+      - name: TypeEmptyString
+        topicUID: Manifest-TypeEmptyString
+      - name: TypeInformationTemplateName
+        topicUID: Manifest-TypeInformationTemplateName
+      - name: TypeNonEmptyString
+        topicUID: Manifest-TypeNonEmptyString
+      - name: TypePackageVersion
+        topicUID: Manifest-TypePackageVersion
+      - name: TypeTrendTemplateName
+        topicUID: Manifest-TypeTrendTemplateName
 - name: Web Services
   items:
   - name: Web Services (v1)
@@ -4669,6 +5094,8 @@
               topicUid: Pipeline_stages_for_Automation_scripts
             - name: Deploying Automation scripts from a GitHub repository
               topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
+            - name: Deploying Automation scripts from a GitLab repository
+              topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
         - name: Visual overview development with CI/CD pipeline
           topicUid: Visual_overview_development_with_CI_CD_pipeline
           items:
@@ -4923,8 +5350,17 @@
           topicUid: Actions_that_can_be_performed_during_an_upgrade_operation
     - name: Application packages
       topicUid: TOOApplicationPackages
+      items:
+      - name: Creating an application package
+        topicUID: Creating_an_app_package
+      - name: Installing an application package
+        topicUID: Installing_an_app_package
+      - name: Creating application package scripts
+        topicUID: Creating_app_package_scripts
     - name: DataMiner Development Packages
       topicUid: TOODataMinerDevPackages
+    - name: Change Element States Offline
+      topicUID: Change_Element_States_Offline
 - name: DataMiner Device-Specific Integrations
   topicUid: DSI
   items:

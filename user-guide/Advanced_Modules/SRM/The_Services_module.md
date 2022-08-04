@@ -31,7 +31,7 @@ From DataMiner **9.6.4** up to DataMiner 10.0.7, the module consists of two tabs
 ***
 
 > [!NOTE]
-> From DataMiner 10.0.0 onwards, if DataMiner Indexing is not installed, only the *services* or *overview* tab of this module is available.
+> From DataMiner 10.0.0 onwards, if [Elasticsearch](xref:Elasticsearch_database) is not installed, only the *services* or *overview* tab of this module is available.
 
 > [!TIP]
 > See also: [Embedding a Service Manager component](xref:Embedding_a_Service_Manager_component)

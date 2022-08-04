@@ -177,22 +177,11 @@ The following example shows how Global Telecom Company (“GTC”) has configure
   > [!NOTE]
   > This timeout applies to every individual LDAP query. As a result, a request to refresh all groups (which consists of multiple requests) could have a total timeout that is much larger than the configured value.
 
-## Automatic refresh of group membership and user information
+## Automatic updates of group membership and user information
 
-When using Active Directory, group and user data are refreshed automatically. However, for versions of DataMiner prior to DataMiner 7.5, if you are using an LDAP-compatible directory other than Active Directory and you want to have group and user data refreshed automatically, you should create a scheduled task that executes a JavaScript file containing the following code:
+Prior to DataMiner DataMiner 10.1.9/10.2.0, when Active Directory is used, DataMiner automatically receives updates to group and user data whenever changes occur in the domain. You can disable this by setting the *notifications* attribute of the LDAP tag to false (*\<LDAP notifications="false" />*) in the *DataMiner.xml* file.
 
-```txt
-var localDMS = new ActiveXObject("SLDMS.DMS");
-var localReturn;
-localDMS.Notify(92 /*DMS_REFRESH_LDAP*/, 0, "", "", localReturn);
-```
-
-> [!NOTE]
-> - The frequency with which the scheduled task should be executed depends on the number of users and groups in your domain. You could e.g. set the task to be executed once a day.
-> - From DataMiner 7.5 onwards, an automatic hourly refresh has been implemented, so it is no longer necessary to create this scheduled task.
-> - From DataMiner 9.5.0/9.0.3 onwards, when Active Directory is used, by default DataMiner automatically receives updates whenever changes occur in the domain. You can disable this by setting the *notifications* attribute of the LDAP tag to false (*\<LDAP notifications="false" />*) in the *DataMiner.xml* file.
-> - From DataMiner 10.1.9/10.2.0 onwards, LDAP notification behavior is disabled by default, and instead the LDAP system is polled on an hourly basis. Set the *notifications* attribute of the LDAP tag to true to enable this behavior again.
->
+From DataMiner 10.1.9/10.2.0 onwards, LDAP notification behavior is disabled by default. Instead, the LDAP system is polled on an hourly basis. Set the *notifications* attribute of the LDAP tag to "true" to enable this behavior again.
 
 ## Active Directory Forest with multiple domains
 

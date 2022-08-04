@@ -12,6 +12,7 @@ To connect your DMS to the cloud:
 
      > [!Note]
      >
+     > - From Cloud Pack version 2.7.0 onwards, [connecting using a DMZ](xref:Connect_to_cloud_with_DMZ) and [connecting via proxy server](xref:Connect_to_cloud_via_proxy) are supported.
      > - We recommend that you upgrade to version 10.2 to optimally benefit from all the new features and capabilities. You can find the installer on [DataMiner Dojo](https://community.dataminer.services/downloads/).
      > - While this is not recommended, it is possible to [connect to the cloud with DataMiner versions between 10.1.1 and 10.1.12](xref:Connecting_with_older_DataMiner_versions).
 
@@ -35,7 +36,7 @@ To connect your DMS to the cloud:
 1. On the System Center \> *Cloud* page, click the *Connect* button. A pop-up browser window will open.
 
    > [!NOTE]
-   > Internet Explorer is not supported for this. If your default browser is Internet Explorer, you may need to change this temporarily in order to continue with this procedure.
+   > Internet Explorer is not supported for this. If your default browser is Internet Explorer, we recommend that you change to a different browser in order to continue with this procedure.
 
 1. Specify the following information in the pop-up window:
 

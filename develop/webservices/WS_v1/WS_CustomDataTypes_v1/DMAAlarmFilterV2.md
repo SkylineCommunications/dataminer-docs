@@ -8,7 +8,7 @@ uid: DMAAlarmFilterV2
 |--|--|--|
 | History | Boolean | Set to True to retrieve history alarms. By default set to False, so only active alarms are retrieved. |
 | SlidingWindow | Boolean | Set to True to retrieve alarms in a sliding window. |
-| FilterItem | Array | See [DMAAlarmFilterItem](xref:DMAAlarmFilterItem). |
+| FilterItem |  [DMAAlarmFilterItem](xref:DMAAlarmFilterItem) | See [DMAAlarmFilterItem](xref:DMAAlarmFilterItem). |
 | StartTime | Long integer | Only alarms newer than this UTC timestamp are retrieved. |
 | EndTime | Long integer | Only alarms older than this UTC timestamp are retrieved. |
 | Masked | Boolean | Set to true to retrieve masked alarms. (Default: false.) |

@@ -32,11 +32,6 @@ To create a simulated element:
 
 ## Creating a simulation file
 
-> [!NOTE]
-> This feature is available in DataMiner Cube from DataMiner 10.0.6 onwards. Prior to this DataMiner version, it is only included in the legacy System Display application, which is no longer available from DataMiner 9.6.0 onwards.
-
-## [From DataMiner 10.0.6 onwards](#tab/tabid-1)
-
 From DataMiner 10.0.6 onwards, simulation files can be created in DataMiner Cube.
 
 To do so:
@@ -54,31 +49,3 @@ To do so:
 1. Copy the file named Simulation_ELEMENTNAME.xml to the following directory: *C:\\Skyline DataMiner\\simulations\\*
 
 1. Restart the DMA.
-
-## [Earlier DataMiner versions](#tab/tabid-2)
-
-Prior to DataMiner 10.0.6, simulation files can only be created using the System Display client application.
-
-To do so:
-
-1. Open System Display. See [How can I open the legacy System Display and Element Display applications?](xref:DataMiner_client_applications#how-can-i-open-the-legacy-system-display-and-element-display-applications)
-
-1. Go to *Admin \> Elements*, and double-click the element for which you want to create a simulation file.
-
-   This will open the element in Element Display.
-
-1. Right-click anywhere on the Element Display page, and select *Scripts \> Create Simulation* from the shortcut menu.
-
-   A message box will appear to indicate that the simulation file has been created.
-
-1. Click *OK* in the message box.
-
-1. On the DMA, go to the following directory: *C:\\Skyline DataMiner\\Protocols\\NAME\\VERSION\\*
-
-1. Copy the file named Simulation_ELEMENTNAME.xml to the following directory:
-
-    *C:\\Skyline DataMiner\\simulations\\*
-
-1. Restart the DMA.
-
-***

@@ -107,7 +107,7 @@ uid: glossary
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
 | DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See <https://dataminer.services/>. |
-| DataMiner Comparison Tool | Web application that allows you to compare the values of two string parameters. See <https://community.dataminer.services/documentation/dataminer-comparison-tool/>. |
+| DataMiner Comparison tool | Web application that allows you to compare the values of two string parameters. See [DataMiner Comparison tool](xref:DataMinerComparisonTool). |
 | DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF. See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
 | DataMiner Cube | The main client application used to connect to a DMA. Exists both as a desktop app and a browser app. |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry. See [DataMiner Community](xref:Community#dataminer-community). |
@@ -128,13 +128,14 @@ uid: glossary
 | Discovery identifier | Identifier used by DataMiner IDP in order to specify how a CI Type can be identified. Consists of a link to a discovery action, a match condition and a value, e.g. "*sysDescr contains JUNOS*". Multiple discovery identifiers can be combined in a CI Type with AND, OR and NOT statements. See [CI Types](xref:CI_Types) |
 | Discovery profile | Definition of the actions to take in order to discover a device as part of DataMiner IDP. Together with the CI Type, this determines which kind of device is being discovered. It contains the definition of the communication protocol and of the information that needs to be polled for comparison against the expected values of the CI Type. See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
 | Discrete parameter | Parameter with a limited set of predefined values. See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |
-| Disk Space Watcher | DataMiner functionality that monitors the predicted available space on the C: drive of a DataMiner Agent. See [General database](xref:General_database). |
+| Disk Space Watcher | DataMiner functionality that monitors the predicted available space on the C: drive of a DataMiner Agent. |
 | DLL | Dynamic Link Library. A library containing codes and functions that can be used by multiple applications at the same time. |
 | DMA | DataMiner Agent. A physical or virtual compute instance running the DataMiner Agent software on top of a Microsoft Windows operating system. Also called "DataMiner Node". |
 | DMB | Digital Multimedia Broadcasting. Technology similar to DVB-H that allows multimedia to be broadcast to mobile devices. |
 | DMP | DataMiner Probe. Also known as external DataMiner Agent. A DataMiner Probe has limited capabilities compared to a full DataMiner Agent, and often runs on a small-form-factor computer in remote and unmanned locations with limited communication capacity. |
 | DMS | DataMiner System. One or more DMAs integrated into one cluster via an IP network. |
 | DMT | DataMiner Test package. |
+| DMZ | Perimeter network that protects an organization's internal network from untrusted traffic. This adds an additional layer of security. This is named after the "Demilitarized Zone" between two areas controlled by opposing forces. |
 | DNS | Domain Name System. Naming system for translating hostnames to IP addresses and vice versa. The term is also sometimes used to indicate a DNS server, which is a server that provides DNS services. |
 | DOCSIS | Data Over Cable Service Interface Specification. Telecommunications standard that allows the combination of high-bandwidth data transfer and existing coaxial cable networks. |
 | DPML | DataMiner Protocol Markup Language. |
@@ -148,12 +149,13 @@ uid: glossary
 | Dummy | Variable within an Automation script that represents a DataMiner element. See [Script variables](xref:Script_variables). |
 | DVB | Digital Video Broadcasting. Set of internationally accepted open standards for digital television. This includes DVB-C (Digital Video Broadcasting - Cable), DVB-H (Digital Video Broadcasting - Handheld), DVB-S (Digital Video Broadcasting - Satellite) and DVB-T (Digital Video Broadcasting - Terrestrial). |
 | DVE | Dynamic Virtual Element. An element from which child elements are dynamically generated. The term DVE is used both for the parent and the child elements. See [Dynamic virtual elements](xref:Dynamic_virtual_elements). |
+| DxM | DataMiner Extension Module. A DataMiner component that can be installed next to an existing DataMiner installation to enable additional functionality. A DxM can be installed and upgraded independently from the DataMiner version and without any downtime of the core DataMiner software. |
 | Dynamic alarm threshold | Alarm threshold that is not based on a fixed value, but defined in comparison with a baseline value. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
 | Dynamic table parameter | Parameter that visualizes and manages a large data table (e.g. an SNMP table). Every column in the table is also considered to be a parameter. See [Table parameters](xref:Table_parameters). |
 | Eb/No | Energy per Bit (Eb) to Noise Density (No) ratio. Measure of signal-to-noise ratio for a digital communication system. |
 | Edge QAM | Headend or hub device that receives packets of digital video or data. It repacketizes the video or data into an MPEG transport stream and digitally modulates the digital transport stream onto a downstream RF carrier using quadrature amplitude modulation (QAM). |
 | EIGRP | Enhanced Interior Gateway Routing Protocol. Advanced routing protocol used to automate routing decisions and configuration in a network. |
-| ElasticSearch | Open-source search and analytics engine, used as the DataMiner Indexing database. See [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine). |
+| ElasticSearch | Open-source search and analytics engine, used as the DataMiner Indexing database. See [Elasticsearch database](xref:Elasticsearch_database). |
 | Element | A DataMiner object that usually represents a device monitored by the DataMiner System. See [Elements](xref:elements). |
 | Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework. See [Configuring virtual elements with the Element Connections module](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module). |
 | Element Display | Deprecated client application that was used in conjunction with System Display to view element-specific data. |
@@ -206,7 +208,7 @@ uid: glossary
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network. See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc. See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database, by default using Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager. See [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine). |
+| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager. See [Elasticsearch database](xref:Elasticsearch_database). |
 | Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt. See [SNMP managers](xref:SNMP#snmp-managers). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm. See [Information event](xref:Alarm_types#information-event). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself. See [Information templates](xref:Information_templates). |
@@ -289,7 +291,7 @@ uid: glossary
 | OSS | Operations Support System. Software system that allows service providers to monitor, control, analyze and manage their network. |
 | OTA | Over-The-Air. Refers to wireless transmission, typically in the context of software updates distributed to mobile devices or TV and radio broadcasts transmitted wirelessly. |
 | OTT | Over-The-Top. Refers to media streaming services offered directly to viewers via the internet, rather than through a traditional cable or broadcast provider. |
-| OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad-hoc and periodic demands. |
+| OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad hoc and periodic demands. |
 | Outage | In the context of DataMiner Business Intelligence, the temporary unavailability of the service monitored by an SLA. See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
 | Outlier | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly spikes upwards or downwards and then returns to its previous, normal behavior. See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
 | OWM | OpenWeatherMap. Online service that provides weather data, which can be integrated in DataMiner Maps from DataMiner 9.5.8 onwards. See [DMS Maps](xref:maps#dms-maps). |
@@ -319,7 +321,7 @@ uid: glossary
 | Pulse | DataMiner Cube homepage, displayed when no cards are open in the workspace. See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
 | QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
-| Query executer | DataMiner tool that allows users to connect to a database and query it using SQL statements. See [Querying a database](xref:Querying_a_database). |
+| Query executer | DataMiner tool that allows users to connect to an SQL database and query it using SQL statements. See [Querying an SQL database](xref:Querying_an_SQL_database). |
 | QuickMenu | Shortcut menu in DataMiner Cube that allows quick navigation between UI sections. Accessible via the keyboard shortcut Ctrl + Q. |
 | RADIUS | Remote Authentication Dial In User Service. Authentication, Authorization and Accounting (AAA) protocol that manages network access. |
 | RAID | Redundant Array of Independent Disks. |
@@ -397,7 +399,7 @@ uid: glossary
 | SLA window | The time interval for which SLA compliance is calculated. See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
 | SLC | Skyline Communications. |
 | Sliding window | Time frame with a fixed size that moves along with the present time. Can for example be used in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console). |
-| SLLogCollector | Tool that allows you to easily collect log information and memory dumps from a DMA. See <https://community.dataminer.services/documentation/sllogcollector-tool/>. |
+| SLLogCollector | Tool that allows you to easily collect log information and memory dumps from a DMA. See [SLLogCollector](xref:SLLogCollector). |
 | SLNetClientTest tool | Advanced system administration tool with a range of different functionalities. See [SLNetClientTest tool](xref:SLNetClientTest_tool). |
 | SLOffload tool | Tool that can be used to manually trigger a database offload to an Oracle or a MySQL database. See [SLOffload tool](xref:SLOffload_tool). |
 | Smart serial connection | Serial connection where the device can send messages to the DMA without having received a command requesting a response. |

@@ -140,7 +140,7 @@ To delete a command action from the list of actions to be executed:
 
 2. On the right, hover over the action, and click the small *X*.
 
-To execute an ad-hoc command (e.g. for test purposes):
+To execute an ad hoc command (e.g. for test purposes):
 
 - Select a command in the list on the left, and click the *Execute* button in the lower right corner.
 

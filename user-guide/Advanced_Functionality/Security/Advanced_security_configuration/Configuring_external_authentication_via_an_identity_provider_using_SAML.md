@@ -80,6 +80,7 @@ To create a DataMiner metadata file, proceed as follows:
 
 > [!NOTE]
 > The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
+> SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilites. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
 
 ## Identity providers
 
@@ -142,7 +143,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
 1. Gather the following information:
 
-   - **Client ID** and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
+   - **Client ID**, **Object ID**, and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
 
      Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
 
@@ -164,6 +165,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
       ```xml
       <AzureAD
        tenantId="[GUID]"
+       objectId="[GUID]"
        clientId="[GUID]"
        clientSecret="[the DataMiner application secret value]"
        username="[username]"
@@ -179,15 +181,17 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
    For delegated querying:
 
+   - Microsoft Graph \> Application.Read.All – Delegated – Read applications
    - Microsoft Graph \> GroupMember.Read.All – Delegated – Read groups memberships
    - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
    - Microsoft Graph \> User.Read.All – Delegated – Read all users’ full profiles
 
    For application querying (supported from DataMiner 10.1.11/10.2.0 onwards):
 
-   - Microsoft Graph \> GroupMember.Read.All – Application
-   - Microsoft Graph \> User.Read.All – Application
-   - Microsoft Graph \> User.Read – Delegated
+   - Microsoft Graph \> Application.Read.All – Application – Read applications
+   - Microsoft Graph \> GroupMember.Read.All – Application – Read groups memberships
+   - Microsoft Graph \> User.Read.All – Application - Read all users’ full profiles
+   - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
 
 1. Add the Azure AD users to DataMiner:
 

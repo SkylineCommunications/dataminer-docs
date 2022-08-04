@@ -25,13 +25,12 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
     Starts SLCleanCabFiles.exe, which is located in C:\\Skyline DataMiner\\Tools\\.
 
-- **Launch \> Tools \> SLLogCollector**
+- **Launch \> Tools \> Log Collector**
 
     Starts the SLLogCollector tool. (Available in the shortcut menu from DataMiner 9.6.0 CU23/10.0.0 CU13/10.1.0 CU2/10.1.5 onwards.)
 
     > [!TIP]
-    > See also:
-    > <https://community.dataminer.services/documentation/sllogcollector-tool/>
+    > See also: [SLLogCollector](xref:SLLogCollector)
 
 - **Upgrade**
 

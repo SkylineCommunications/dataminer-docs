@@ -36,7 +36,7 @@ The event is a combination of:
 
 ## Correlation in DataMiner Cube vs. System Display
 
-Two different engines are available for DMS Correlation: the System Display engine, now deprecated, and the DataMiner Cube Correlation engine. Rules that were created in the System Display engine are still available in DataMiner Cube, though they are indicated as deprecated. The Cube Correlation Engine offers several functions that were not available in System Display, such as:
+Two different engines are available for DMS Correlation: the deprecated System Display engine and the DataMiner Cube Correlation engine. Rules that were created in the System Display engine are still available in DataMiner Cube, though they are indicated as deprecated. The Cube Correlation Engine offers several functions that were not available in System Display, such as:
 
 - Alarm filtering by means of regular expressions
 

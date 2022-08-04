@@ -4,7 +4,7 @@ uid: Protocol.Display-pageOrder
 
 # pageOrder attribute
 
-Defines the order of the pages in DataMiner Cube or in the Element Display drop-down box.
+Defines the order of the pages.
 
 ## Content Type
 
@@ -18,7 +18,7 @@ string
 
 By default, the pages will be ordered alphabetically.
 
-It’s also possible to add separators and web interface links as described below.
+It is also possible to add separators and web interface links as described below.
 
 ### Including separators
 

@@ -16,7 +16,7 @@ Please note the following:
 
 - From DataMiner 10.2.0/10.1.11 onwards, **HLS** (HTTPS Live Streaming) is supported. See [Configuring a thumbnail for HTTP Live Streaming](#configuring-a-thumbnail-for-http-live-streaming).
 
-- To display video thumbnails with the **VLC** plugin in the DataMiner Cube browser app, make sure the 32-bit version of VLC is installed, not the 64-bit version, as the latter may not run correctly in Internet Explorer. If you are using the DataMiner Cube desktop app (version 10.0.0 or higher), use the 64-bit version of VLC instead.
+- To display video thumbnails with the **VLC** plugin in the DataMiner Cube browser app, make sure the 32-bit version of VLC is installed, not the 64-bit version, as the latter may not run correctly. If you are using the DataMiner Cube desktop app (version 10.0.0 or higher), use the 64-bit version of VLC instead.
 
 - From DataMiner 9.0 onwards, it is possible to display video feeds from **Selenio MCP1 and MCP3** platforms. However, the Selenio modules need to have at least firmware version 6.1.
 

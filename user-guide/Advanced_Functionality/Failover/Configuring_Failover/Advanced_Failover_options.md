@@ -4,10 +4,10 @@ uid: Advanced_Failover_options
 
 # Advanced Failover options
 
-When you click *Advanced* in the *Failover* dialog box, you can specify a number of advanced options in four separate tabs.
+When you click *Advanced* in the *Failover* dialog box, a window opens with several tabs where you can configure advanced options.
 
 > [!NOTE]
-> Some Failover options can also be configured directly in *MaintenanceSettings.xml*. For more information, refer to the Watchdog settings in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).
+> Some Failover options can also be configured directly in *MaintenanceSettings.xml*. For more information, refer to the Watchdog settings in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
 
 ## Type
 
@@ -17,14 +17,15 @@ Go to this tab to specify whether Failover should occur manually or automaticall
 
 - If you choose *Manual*, switching can be done with the *Switch* button at the bottom of the *Failover* dialog box.
 
-    > [!NOTE]
-    > Manual switching is not possible when the backup DMA is not running. In that case the *Switch* button will be unavailable.
+  > [!NOTE]
+  > Manual switching is not possible when the backup DMA is not running. In that case the *Switch* button will be unavailable.
 
 ## Synchronization
 
 Go to this tab to configure the network interface for data synchronization from the online DMA to the backup DMA.
 
 > [!NOTE]
+>
 > - If there is a third network interface that connects both DMAs using a cross cable, it is advisable to select that one in order to prevent synchronization failures.
 > - Note that synchronization of a Cassandra or Elasticsearch database is taken care of by the database itself, outside of DataMiner.
 
@@ -40,8 +41,8 @@ There are two types of heartbeats:
 
 - **Inverted heartbeats**: An Agent goes or remains offline when all inverted heartbeats are failing. This prevents both Agents from going online simultaneously when for instance a network switch between them is down.
 
-    > [!CAUTION]
-    > It is important that the inverted heartbeats are configured as well, to avoid issues with both DMAs going online the moment they can no longer contact each other. This can especially be a problem with less recent DataMiner systems.
+  > [!CAUTION]
+  > It is important that the inverted heartbeats are configured as well, to avoid issues with both DMAs going online the moment they can no longer contact each other. This can especially be a problem with less recent DataMiner systems.
 
 Each heartbeat causes a periodical connection check:
 
@@ -56,3 +57,9 @@ For every heartbeat you configure, you can specify a maximum number of allowed f
 On this tab, you can configure virtual IP addresses for the different network interfaces. These addresses will be moved between agents when switching.
 
 This tab is not available if a shared hostname is used instead of virtual IP addresses.
+
+## Advanced Options
+
+This tab is available from DataMiner 10.2.0 \[CU5]/10.2.8 onwards. It contains the following option:
+
+- **Auto restart Agent when going offline**: If you select this option, when one of the DMAs in the Failover pair goes offline, it will restart as soon as possible instead of waiting until all elements have been unloaded. This will speed up Failover switching. In earlier DataMiner versions, this could be configured in [DMS.xml](xref:DMS_xml#failover-subtag).

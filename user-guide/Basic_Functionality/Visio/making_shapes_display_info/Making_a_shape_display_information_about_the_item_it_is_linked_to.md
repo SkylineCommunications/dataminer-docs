@@ -136,6 +136,8 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
 
 - **Bookings**: See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
 
+- **EPM objects**: See [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object).
+
 ## Placeholder for Info value in shape text
 
 The info specified in the **Info** field will only appear on the shape if you add shape text that contains a "\*" character. This character will then be replaced by the requested information.

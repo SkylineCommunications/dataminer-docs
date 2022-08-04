@@ -73,7 +73,7 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
 ## Component actions configuration
 
-If you add a node edge graph to a custom app using the DataMiner Application Framework, you can also configure actions for the component. This feature is not available in the Dashboards app.
+If you add a node edge graph to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app.
 
 To configure actions:
 
