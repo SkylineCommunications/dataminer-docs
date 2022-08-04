@@ -191,6 +191,9 @@ The following layout options are available:
 | Tab layout | The different open cards are shown in a row of tabs at the top of the screen. Click a tab to switch to that card. |
 | Reset card layout | Resets any manual changes to the card layout, so that the cards again have the size determined by the selected card layout. This option is only available from the Cube header bar. |
 
+> [!TIP]
+> If you use the tab layout, from DataMiner 10.2.9/10.3.0 onwards, you can quickly close a tab by clicking it with the middle mouse button.
+
 ## Dragging cards
 
 It is possible to drag a card, by left-clicking and dragging the top edge of the card to its destination.
