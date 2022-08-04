@@ -10,12 +10,15 @@ Currently, the supported methods provide the ability to monitor changes in the f
 
 - Standalone parameter value changes.
 - Table cell value changes.
+- Table value changes (full table).
 - Parameter alarm level changes.
-- Table cell alarm level change.
+- Table cell alarm level changes.
 - Single element alarm changes.
 - Single element name changes.
 - All elements (DMS-level) alarm changes.
 - All elements (DMS-level) name changes.
+- Service alarm level changes.
+- Service state changes.
 
 More information is available in the following sections:
 

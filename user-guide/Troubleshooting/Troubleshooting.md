@@ -9,3 +9,5 @@ uid: Part6Troubleshooting
 - [Logging](xref:logging)
 
 - [Troubleshooting procedures](xref:Troubleshooting_procedures)
+
+- [Customer DataMiner Reporting (CDMR)](xref:CDMR)

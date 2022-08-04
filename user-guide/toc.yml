@@ -41,6 +41,8 @@
                 topicUID: Opening_the_browser_app
               - name: Options for opening DataMiner Cube
                 topicUID: Options_for_opening_DataMiner_Cube
+              - name: Desktop application command-line arguments
+                topicUID: Desktop_app_command_line_arguments
             - name: Logging on to DataMiner Cube
               topicUid: Logging_on_to_DataMiner_Cube
         - name: Accessing the Monitoring app
@@ -415,6 +417,8 @@
               topicUid: Linking_a_shape_to_an_Asset_Manager_table
             - name: Linking a shape to a dashboard component
               topicUid: Linking_a_shape_to_a_dashboard_component
+            - name: Linking a shape to an EPM object
+              topicUID: Linking_a_shape_to_an_EPM_object
             - name: Adding options to shapes linked to elements or services
               topicUid: Adding_options_to_shapes_linked_to_elements_or_services
         - name: Making shapes display information
@@ -796,6 +800,8 @@
               topicUID: Unattended_DM_installation
             - name: Checking the DataMiner installation
               topicUID: Checking_the_DM_installation
+            - name: Regarding virtual servers
+              topicUID: Regarding_virtual_servers
             - name: Regarding antivirus software
               topicUID: Regarding_antivirus_software
             - name: Frequently asked questions
@@ -931,6 +937,19 @@
               topicUid: Synchronizing_data_between_DataMiner_Agents
         - name: Running BPA tests
           topicUid: Running_BPA_tests
+          items:
+            - name: Cassandra DB Size
+              topicUID: BPA_Cassandra_DB_Size
+            - name: Check Antivirus DLLs
+              topicUID: BPA_Check_Antivirus_DLLs
+            - name: Minimum Requirements Check
+              topicUID: BPA_Minimum_Requirements_Check
+            - name: Report Active RTE
+              topicUID: BPA_Report_Active_RTE
+            - name: Verify Cloud DxM Version
+              topicUID: BPA_Verify_Cloud_DxM_Version
+            - name: View Recursion
+              topicUID: BPA_View_Recursion
     - name: Failover
       topicUid: failover
       items:
@@ -992,6 +1011,8 @@
             topicUID: Installing_Cassandra_Reaper
           - name: Moving the Cassandra database to a different disk drive
             topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+          - name: Making Cassandra nodetool accessible remotely
+            topicUID: Making_Cassandra_nodetool_accessible_remotely
         - name: Elasticsearch database
           topicUid: Elasticsearch_database
           items:
@@ -1035,8 +1056,10 @@
         - name: Database queries
           topicUid: Database_queries
           items:
-            - name: Querying a database
-              topicUid: Querying_a_database
+            - name: Querying an SQL database
+              topicUid: Querying_an_SQL_database
+            - name: Querying an Elasticsearch database
+              topicUID: Querying_an_Elasticsearch_database
             - name: Examples of database queries
               topicUid: Examples_of_database_queries
     - name: Security
@@ -1842,6 +1865,8 @@
               topicUid: Overview_of_the_Mobile_Gateway_configuration_settings
             - name: Configuring Mobile Gateway in DataMiner Cube
               topicUid: Configuring_Mobile_Gateway_in_DataMiner_Cube
+            - name: Approved modems for use with DMS Mobile Gateway
+              topicUID: Approved_modems_Mobile_Gateway
         - name: Working with Mobile Gateway in DataMiner Cube
           topicUid: Working_with_Mobile_Gateway_in_DataMiner_Cube
         - name: Using Mobile Gateway in a Failover setup
@@ -2096,7 +2121,7 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
-    - name: DataMiner Application Framework
+    - name: DataMiner Low-Code Apps
       topicUID: Application_framework
       items:
         - name: Accessing custom applications
@@ -2315,6 +2340,8 @@
               topicUid: Discovery_profiles
             - name: CI Types
               topicUid: CI_Types1
+            - name: Using your IS-04 registry to provision DataMiner with IDP
+              topicUID: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
     - name: DataMiner PTP app
       topicUid: SolPTP
       items:
@@ -2367,6 +2394,10 @@
         - name: Connecting your DataMiner System to the cloud
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
           items:
+            - name: Connecting to the cloud via proxy server
+              topicUID: Connect_to_cloud_via_proxy
+            - name: Connecting to the cloud with a DMZ setup
+              topicUID: Connect_to_cloud_with_DMZ
             - name: Connecting with older DataMiner versions
               topicUid: Connecting_with_older_DataMiner_versions
         - name: Linking your DataMiner account to your DCP account
@@ -2519,23 +2550,59 @@
       topicUid: ErrorMessages
       items:
         - name: An error occurred in the application you were using
-          topicUid: An_error_occurred_in_the_application_you_were_using
+          topicUID: An_error_occurred_in_the_application_you_were_using
         - name: Could not load type Maps.DataMinerMap
-          topicUid: Could_not_load_type_Maps_DataMinerMap
+          topicUID: Could_not_load_type_Maps_DataMinerMap
         - name: Could not load Visio file
-          topicUid: Could_not_load_Visio_file
+          topicUID: Could_not_load_Visio_file
+        - name: Creating Database tables for x failed. y (hr = z)
+          topicUID: Creating_Database_tables_for_x_failed
+        - name: Creating element-object for x failed. y (hr = z)
+          topicUID: Creating_element_object_for_x_failed
+        - name: Creating element-objects for x failed. y (hr = z)
+          topicUID: Creating_element_objects_for_x_failed
+        - name: Creating log-factory for x failed. y (hr = z)
+          topicUID: Creating_log_factory_for_x_failed
+        - name: Creating log-file for x failed. y (hr = z)
+          topicUID: Creating_log_file_for_x_failed
+        - name: ElementID (x) Not unique y existing = z
+          topicUID: ElementID_x_not_unique_y_existing_z
         - name: HTTP error 500
-          topicUid: HTTP_error_500
-        - name: setsockopt failed for SO_KEEPALIVE
-          topicUid: setsockopt_failed_for_SO_KEEPALIVE
-        - name: The terminal server has exceeded the maximum number of allowed connections
-          topicUid: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
-        - name: Trust not granted
-          topicUid: Trust_not_granted
-        - name: Unknown Error
-          topicUid: Unknown_Error
+          topicUID: HTTP_error_500
+        - name: InitializeIElement for Element x failed. y (hr = z)
+          topicUID: InitializeIElement_for_Element_x_failed
+        - name: Initializing the communication u for x port failed. y (hr = z)
+          topicUID: Initializing_the_communication_u_for_x_port_failed
+        - name: Initializing the IP failed for x. y (hr = z), please check the IP-settings
+          topicUID: Initializing_the_IP_failed_for_x
+        - name: Initializing the protocol for x failed. y (hr = z)
+          topicUID: Initializing_the_protocol_for_x_failed
+        - name: Initialize xml for x failed. y (hr = z)
+          topicUID: Initialize_xml_for_x_failed
+        - name: Load protocol x failed with y. (hr = z)
+          topicUID: Load_protocol_x_failed_with_y
+        - name: Non authorized client applications are running
+          topicUID: Non_authorized_client_applications_are_running
+        - name: Parsing the settings for x failed. y (hr = z)
+          topicUID: Parsing_the_settings_for_x_failed
         - name: Retrieving the data failed as the request timed out
-          topicUid: Retrieving_the_data_failed_as_the_request_timed_out
+          topicUID: Retrieving_the_data_failed_as_the_request_timed_out
+        - name: setsockopt failed for SO_KEEPALIVE
+          topicUID: setsockopt_failed_for_SO_KEEPALIVE
+        - name: Starting the DERIVED element x failed. y (hr = z)
+          topicUID: Starting_the_derived_element_x_failed
+        - name: Starting the element x failed with y. (hr = z)
+          topicUID: Starting_the_element_x_failed_with_y
+        - name: Starting the protocol for x failed. y (hr = z)
+          topicUID: Starting_the_protocol_for_x_failed
+        - name: The terminal server has exceeded the maximum number of allowed connections
+          topicUID: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
+        - name: Thread problem in x. y
+          topicUID: Thread_problem_in_x
+        - name: Trust not granted
+          topicUID: Trust_not_granted
+        - name: Unknown Error
+          topicUID: Unknown_Error
     - name: Logging
       topicUid: logging
       items:
@@ -2557,6 +2624,11 @@
               topicUid: Communication_logging
             - name: DataMiner logging
               topicUid: DataMiner_logging
+              items:
+                - name: Watchdog logging
+                  topicUID: Watchdog_logging
+                - name: Element in Protocol logging
+                  topicUID: Element_in_Protocol_logging
             - name: Elements logging
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
@@ -2564,12 +2636,47 @@
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
-        - name: Investigating NATS issues
-          topicUid: Investigating_NATS_Issues
-        - name: Sharing dashboard window does not disappear
-          topicUID: Sharing_dashboard_window_does_not_disappear
         - name: Cassandra does not start up after a server restart
           topicUID: Cassandra_not_starting_up_after_server_restart
+        - name: Collecting DataMiner Cube memory dumps
+          topicUID: Collecting_DataMiner_Cube_memory_dumps
+        - name: Investigating NATS issues
+          topicUid: Investigating_NATS_Issues
+        - name: Keeping a DMA from running out of disk space
+          topicUID: Keeping_a_DMA_from_running_out_of_disk_space
+        - name: Sharing dashboard window does not disappear
+          topicUID: Sharing_dashboard_window_does_not_disappear
+    - name: Known issues
+      topicUID: Known_issues
+      items:
+        - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
+          topicUID: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
+        - name: DataMiner Cube freeze on startup
+          topicUID: KI_DataMiner_Cube_freeze_on_startup
+        - name: Incorrect RTE counts in SLWatchdog2.txt and Alarm Console
+          topicUID: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
+        - name: Migration of Ticketing data from Cassandra to Elasticsearch fails
+          topicUID: KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails
+        - name: NATS error message after 10.1 installation
+          topicUID: KI_NATS_error_message_after_10_1_installation
+        - name: Not possible to generate reports on Windows Server 2012 or earlier
+          topicUID: KI_Not_possible_to_generate_reports_on_Windows_Server_2012_or_earlier
+        - name: Setting a protocol to production takes a long time
+          topicUID: KI_Setting_a_protocol_to_production_takes_a_long_time
+        - name: Shapes in DataMiner stencils not found in Visio search
+          topicUID: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
+        - name: SLDataMiner addressChangeThread RTE after DMA startup
+          topicUID: KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup
+        - name: Smart-serial communication no longer working
+          topicUID: KI_Smart-serial_communication_no_longer_working
+        - name: SNMP SET returns a 'NO ACCESS' error
+          topicUID: KI_SNMP_SET_returns_a_NO_ACCESS_error
+        - name: Unavailable system database after DataMiner server reboot
+          topicUID: KI_Unavailable_system_database_after_DataMiner_server_reboot
+        - name: Upgrade error - api-ms-win-crt-stdio-l1-1-0.dll is missing
+          topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
+    - name: Customer DataMiner Reporting (CDMR)
+      topicUID: CDMR
 - name: Reference
   topicUid: Part7Reference
   items:
@@ -2681,6 +2788,37 @@
           topicUID: Standalone_Cassandra_Backup_Tool
         - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
+    - name: Methods of Procedure
+      topicUID: mops
+      items:
+        - name: Changing the default password for Cassandra
+          topicUID: MOP_Changing_the_default_password_for_Cassandra
+        - name: Changing the password for Elasticsearch
+          topicUID: MOP_Changing_the_password_for_Elasticsearch
+        - name: Checking the required open ports in a DMS
+          topicUID: MOP_Checking_the_required_open_ports_in_a_DMS
+        - name: DataMiner Agent sanity check
+          topicUID: MOP_DataMiner_Agent_sanity_check
+        - name: Downgrading a DMS
+          topicUID: MOP_Downgrading_a_DMS
+        - name: Implementing connection strings in a DataMiner System
+          topicUID: MOP_Implementing_connection_strings_in_a_DMS
+        - name: Migrating a Failover pair to new hardware
+          topicUID: MOP_Migrating_a_Failover_pair_to_new_hardware
+        - name: Replacing a dead Cassandra node (Linux)
+          topicUID: MOP_Replacing_a_dead_Cassandra_node_Linux
+        - name: Restoring a MySQL table structure or table data
+          topicUID: MOP_Restoring_a_MySQL_table_structure_or_table_data
+        - name: Restoring a single table in a MySQL database
+          topicUID: MOP_Restoring_a_single_table_in_a_MySQL_database
+        - name: Taking a backup using a symbolic link to another drive
+          topicUID: MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive
+        - name: Tracking the health of a DataMiner System
+          topicUID: MOP_Tracking_the_health_of_a_DMS
+        - name: Upgrading a DMA/DMS
+          topicUID: MOP_Upgrading_a_DMA_DMS
+        - name: Upgrading Elasticsearch from one minor version to another
+          topicUID: MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another
     - name: Naming of elements, services, views, etc.
       topicUid: NamingConventions
       items:

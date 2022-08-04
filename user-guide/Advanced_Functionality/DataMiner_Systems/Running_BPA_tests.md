@@ -23,7 +23,7 @@ From DataMiner 10.1.4 onwards, the *Schedule* column allows you to configure at 
 Once a test has run, the *Message* column will display information on the test results for specific items. Via the ... button in this column, you can open a window with more detailed information. From DataMiner 10.2.8/10.3.0 onwards, this window also contains a button that allows you to copy the information to the clipboard.
 
 > [!NOTE]
+>
 > - Standard BPA tests are included in updates from DataMiner 10.2.0/10.1.2 onwards and added in the folder *C:\\Skyline DataMiner\\BPA*.
-> - To use the *Agents* > *BPA* page in System Center, you need the user permissions under *Modules* > *System Configuration* > *Tools* > *Best Practices Analyze*r.
+> - To use the *Agents* > *BPA* page in System Center, you need the user permissions under *Modules* > *System Configuration* > *Tools* > *Best Practices Analyzer*.
 > - A BPA test can only be executed if it has been digitally signed by Skyline, and if your DataMiner version is within the limitations of the minimum and/or maximum DataMiner version configured in the test (if any).
-> - For detailed information about specific BPA tests, see <https://community.dataminer.services/documentation/category/resources/tools/dataminer-tools/bpa-tests/>.

@@ -21,5 +21,8 @@ To link your accounts:
 
 1. Click *Link accounts*.
 
+> [!IMPORTANT]
+> It is not possible to link two different DCP accounts to the same DataMiner user.
+
 > [!NOTE]
 > You can also link your account directly via the DataMiner Teams bot. See [DataMiner Teams bot](xref:DataMiner_Teams_bot)

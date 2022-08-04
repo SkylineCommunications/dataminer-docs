@@ -66,10 +66,10 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
      - In the *Shadow* section, you can select the size of the shadow displayed behind the components.
 
-1. Prior to DataMiner 10.2.8/10.3.0, to set the new dashboard theme as the default theme, click the *Set as default* toggle button.
+1. Prior to DataMiner 10.2.8/10.2.0 [CU6], to set the new dashboard theme as the default theme, click the *Set as default* toggle button.
 
    > [!NOTE]
-   > From DataMiner 10.2.8/10.3.0 onwards, you can set a theme as the default by hovering the mouse pointer over the theme in the settings window and selecting *Set as default*.
+   > From DataMiner 10.2.8/10.2.0 [CU6] onwards, you can set a theme as the default by hovering the mouse pointer over the theme in the settings window and selecting *Set as default*.
 
 1. When the theme is fully configured, click *Save*.
 

@@ -1,10 +1,10 @@
 ---
-uid: Querying_a_database
+uid: Querying_an_SQL_database
 ---
 
-# Querying a database
+# Querying an SQL database
 
-To query a database, do the following:
+To query an SQL database, do the following:
 
 1. Go to *System Center \>* *Tools* \> *query executer*.
 

@@ -9,9 +9,7 @@ The *Standalone BPA Executor* can be used to run BPA (i.e. Best Practices Analys
 This tool is available on every DMA using DataMiner 10.0.10 or higher, in the folder `C:\Skyline DataMiner\Tools\StandaloneBpaExecutor`. However, it can execute BPA tests on any DMA, even a DMA using an older DataMiner version.
 
 > [!NOTE]
->
-> - For information on how to run these tests within DataMiner Cube instead of using this standalone tool, see [Running BPA tests](xref:Running_BPA_tests).
-> - For an overview of the available BPA tests, see [BPA tests](https://community.dataminer.services/documentation/category/resources/tools/dataminer-tools/bpa-tests/).
+> For information on the available BPA tests and on how to run these tests within DataMiner Cube instead of using this standalone tool, see [Running BPA tests](xref:Running_BPA_tests).
 
 ## Running BPA tests
 

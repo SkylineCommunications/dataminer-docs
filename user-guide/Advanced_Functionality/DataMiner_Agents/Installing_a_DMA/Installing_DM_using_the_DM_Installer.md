@@ -75,7 +75,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
    - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally *MySQL Workbench*.
 
      > [!NOTE]
-     > MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations.
+     > As MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations. MySQL is no longer included in the 10.2.0 DataMiner installer.
      > If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
 
    - If you wish to install Cassandra but use a different drive than the default C drive, keep Cassandra selected and click *select data drive*. Then select the drive and click *OK*.

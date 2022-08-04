@@ -125,7 +125,7 @@ To do so:
 > - [Securing the DataMiner web server](xref:Webserver_security)
 > - [Disabling legacy SSL/TLS protocols](xref:Disabling_legacy_protocols)
 > - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
-> - [TLS encryption in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/)
+> - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
 
 ## Common issues after configuring HTTPS
 
@@ -135,9 +135,11 @@ To do so:
 
     This can also happen when you are still connecting over *HTTP* while the server only accepts *HTTPS* connections. Make sure your URL starts with `https://`.
 
-- **My browser displays a 'This site is not secure' warning when I connect to my DataMiner system**
+- **My browser displays a "This site is not secure" warning when I connect to my DataMiner System**
 
     Most likely, the URL does not match the *Common Name (CN)* or *Subject Alternative Name (SAN)* field of the TLS certificate. For example, `https://localhost` or `https://10.10.10.10` does not match *dataminer.skyline.be*. To fix this, update the certificate so the *Subject Alternative Name (SAN)* matches the URL, or use a URL that matches the *Common Name (CN)* or *Subject Alternative Name (SAN)* field.
+    
+    If the URL matches the certificate, your machine likely does not trust the certificate or the certificate is self-signed. Ensure the certificate is added to the *Trusted Root Certification Authorities* of your certificate store. For more information, see [trusting a certificate in Windows](https://techcommunity.microsoft.com/t5/windows-server-essentials-and/installing-a-self-signed-certificate-as-a-trusted-root-ca-in/ba-p/396105).
 
 - **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, Ticketing, etc.)**
 

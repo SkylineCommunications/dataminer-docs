@@ -634,7 +634,7 @@ To do so:
 1. Save the file and restart the DMA.
 
 > [!NOTE]
-> For more information on how to configure TLS and security in Elasticsearch, see [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/).
+> For more information on how to configure TLS and security in Elasticsearch, see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
 
 ## CMDB settings
 

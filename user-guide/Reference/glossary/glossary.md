@@ -135,6 +135,7 @@ uid: glossary
 | DMP | DataMiner Probe. Also known as external DataMiner Agent. A DataMiner Probe has limited capabilities compared to a full DataMiner Agent, and often runs on a small-form-factor computer in remote and unmanned locations with limited communication capacity. |
 | DMS | DataMiner System. One or more DMAs integrated into one cluster via an IP network. |
 | DMT | DataMiner Test package. |
+| DMZ | Perimeter network that protects an organization's internal network from untrusted traffic. This adds an additional layer of security. This is named after the "Demilitarized Zone" between two areas controlled by opposing forces. |
 | DNS | Domain Name System. Naming system for translating hostnames to IP addresses and vice versa. The term is also sometimes used to indicate a DNS server, which is a server that provides DNS services. |
 | DOCSIS | Data Over Cable Service Interface Specification. Telecommunications standard that allows the combination of high-bandwidth data transfer and existing coaxial cable networks. |
 | DPML | DataMiner Protocol Markup Language. |
@@ -148,6 +149,7 @@ uid: glossary
 | Dummy | Variable within an Automation script that represents a DataMiner element. See [Script variables](xref:Script_variables). |
 | DVB | Digital Video Broadcasting. Set of internationally accepted open standards for digital television. This includes DVB-C (Digital Video Broadcasting - Cable), DVB-H (Digital Video Broadcasting - Handheld), DVB-S (Digital Video Broadcasting - Satellite) and DVB-T (Digital Video Broadcasting - Terrestrial). |
 | DVE | Dynamic Virtual Element. An element from which child elements are dynamically generated. The term DVE is used both for the parent and the child elements. See [Dynamic virtual elements](xref:Dynamic_virtual_elements). |
+| DxM | DataMiner Extension Module. A DataMiner component that can be installed next to an existing DataMiner installation to enable additional functionality. A DxM can be installed and upgraded independently from the DataMiner version and without any downtime of the core DataMiner software. |
 | Dynamic alarm threshold | Alarm threshold that is not based on a fixed value, but defined in comparison with a baseline value. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
 | Dynamic table parameter | Parameter that visualizes and manages a large data table (e.g. an SNMP table). Every column in the table is also considered to be a parameter. See [Table parameters](xref:Table_parameters). |
 | Eb/No | Energy per Bit (Eb) to Noise Density (No) ratio. Measure of signal-to-noise ratio for a digital communication system. |
@@ -320,7 +322,7 @@ uid: glossary
 | Pulse | DataMiner Cube homepage, displayed when no cards are open in the workspace. See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
 | QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
-| Query executer | DataMiner tool that allows users to connect to a database and query it using SQL statements. See [Querying a database](xref:Querying_a_database). |
+| Query executer | DataMiner tool that allows users to connect to an SQL database and query it using SQL statements. See [Querying an SQL database](xref:Querying_an_SQL_database). |
 | QuickMenu | Shortcut menu in DataMiner Cube that allows quick navigation between UI sections. Accessible via the keyboard shortcut Ctrl + Q. |
 | RADIUS | Remote Authentication Dial In User Service. Authentication, Authorization and Accounting (AAA) protocol that manages network access. |
 | RAID | Redundant Array of Independent Disks. |
@@ -398,7 +400,7 @@ uid: glossary
 | SLA window | The time interval for which SLA compliance is calculated. See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
 | SLC | Skyline Communications. |
 | Sliding window | Time frame with a fixed size that moves along with the present time. Can for example be used in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console). |
-| SLLogCollector | Tool that allows you to easily collect log information and memory dumps from a DMA. See <https://community.dataminer.services/documentation/sllogcollector-tool/>. |
+| SLLogCollector | Tool that allows you to easily collect log information and memory dumps from a DMA. See [SLLogCollector](xref:SLLogCollector). |
 | SLNetClientTest tool | Advanced system administration tool with a range of different functionalities. See [SLNetClientTest tool](xref:SLNetClientTest_tool). |
 | SLOffload tool | Tool that can be used to manually trigger a database offload to an Oracle or a MySQL database. See [SLOffload tool](xref:SLOffload_tool). |
 | Smart serial connection | Serial connection where the device can send messages to the DMA without having received a command requesting a response. |
