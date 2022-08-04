@@ -102,6 +102,14 @@
         topicUid: ClassLibrary_Range_1.1
       - name: Class Library Range 1.0
         topicUid: ClassLibrary_Range_1.0
+    - name: Cloud Platform release notes
+      items:
+      - name: DataMiner Cloud Platform change log
+      - name: DataMiner Cloud Pack 2.5
+      - name: DataMiner Cloud Pack 2.4
+      - name: DataMiner Cloud Pack 2.3
+      - name: DataMiner Cloud Pack 2.2
+      - name: DataMiner Cloud Pack 2.0
     - name: DIS release notes
       items:
       - name: DIS 2.38
