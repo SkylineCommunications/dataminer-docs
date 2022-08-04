@@ -1,4 +1,8 @@
-# Feature release 10.1.2
+---
+uid: General_Feature_Release_10.1.2
+---
+
+# General Feature Release 10.1.2
 
 ## New features
 
@@ -12,16 +16,16 @@ A Cassandra cluster is now supported as the general database for a DataMiner Sys
 
 To switch to using one Cassandra cluster for your DMS, follow the procedure below:
 
-1. Make sure the Cassandra cluster software is installed on each DMA. A [standalone installer](https://community.dataminer.services/documentation/standalone-cassandra-cluster-installer/) is available for this on DataMiner Dojo.
+1. Make sure the Cassandra cluster software is installed on each DMA. A [standalone installer](https://community.dataminer.services/documentation/standalone-cassandra-cluster-installer/) is available for this on DataMiner Dojo.
 
-2. [Install DataMiner Indexing](https://help.dataminer.services/dataminer/) on each DMA in the cluster if you have not done so already.
+2. [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) on each DMA in the cluster if you have not done so already.
 
-3. Migrate the database data to the Cassandra cluster. A [Cassandra to Cassandra Cluster Migrator](https://community.dataminer.services/documentation/cassandra-to-cassandra-cluster-migrator/) tool is available for this on DataMiner Dojo.
+3. Migrate the database data to the Cassandra cluster. See [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
     > [!NOTE]
-    > We recommend that DataMiner is stopped before the migration is started. While it is possible to run the migration while DataMiner is run­ning, any data that is stored in the source database during the migra­tion may not be migrated to the target database.
+    > We recommend that DataMiner is stopped before the migration is started. While it is possible to run the migration while DataMiner is running, any data that is stored in the source database during the migration may not be migrated to the target database.
 
-4. In DataMiner Cube, go to System Center \> Database and select *CassandraCluster* in the Database box. Then specify the name, DB server and credentials to connect to the Cassan­dra cluster.
+4. In DataMiner Cube, go to System Center \> Database and select *CassandraCluster* in the Database box. Then specify the name, DB server and credentials to connect to the Cassandra cluster.
 
 ##### DB.xml changes
 
@@ -60,11 +64,8 @@ If, for example, you want to build a system that will store the time that employ
     SectionDefinition (Name = “PunchInfoSectionDefinition”)
 
     - FieldDescriptor 1: Name = “Task ID” & Type = “Guid”
-
     - FieldDescriptor 2: Name = “Username” & Type = “String”
-
     - FieldDescriptor 3: Name = “Start time” & Type = “DateTime”
-
     - FieldDescriptor 4: Name = “Stop time” & Type = “DateTime”
 
 2. Create a DomDefinition (Name = PunchInfoDomDefinition) that contains a link to the PunchInfoSectionDefinition.
@@ -72,7 +73,6 @@ If, for example, you want to build a system that will store the time that employ
 Employees will now be able to log their time spent by creating a new DomInstance
 
 - that is linked to the PunchInfoDomDefinition, and
-
 - that has one Section linked to the PunchInfoSectionDefinition, which contains a FieldValue for each FieldDescriptor.
 
 **DomManager**
@@ -87,7 +87,7 @@ Create, read, update and delete calls on a DomManager can be initiated using a D
 
 #### DataMiner Cube - System Center: New Planned Maintenance app permissions \[ID_28164\] \[ID_28541\]
 
-In the *Users/Groups* section of *System Center*, it is now possible to configure the following new user permissions.
+In the *Users/Groups* section of *System Center*, it is now possible to configure the following new user permissions.
 
 | User permission | Description                                                   |
 |-----------------|---------------------------------------------------------------|
@@ -98,10 +98,9 @@ In the *Users/Groups* section of *System Center*, it is now possible to configu
 
 #### DataMiner Cube - System Center: Renamed user permissions \[ID_28439\]
 
-In the *Users/Groups* section of *System Center*, the following has been changed:
+In the *Users/Groups* section of *System Center*, the following has been changed:
 
-- The *Allow access to Mobile UI* permission has been renamed to *DataMiner Cube mobile access*, and has been moved from the *Modules \> System configuration \> Mobile Gateway* section to the *General* section.
-
+- The *Allow access to Mobile UI* permission has been renamed to *DataMiner Cube mobile access*, and has been moved from the *Modules \> System configuration \> Mobile Gateway* section to the *General* section.
 - All “local database” references have been renamed to “general database”.
 
 ### DMS Protocols
@@ -110,7 +109,7 @@ In the *Users/Groups* section of *System Center*, the following has been change
 
 The following (direct) view column option has been enhanced.
 
-```txt
+```xml
 view=linkedPid:elementkeycolumnpid:remotedatatablepid:remotedatacolumnidx
 ```
 
@@ -131,97 +130,51 @@ This option can be configured in three different ways. See the table below. In t
 The following additional icons are now available in the DataMiner stencils:
 
 - General input
-
 - General output
-
 - OT
-
 - OR
-
 - Multiplexer
-
 - Demultiplexer
-
 - Modulator
-
 - Demodulator
-
 - North-south deployment
-
 - Augmented
-
 - East-west LSO
-
 - Virtual machine
-
 - MPLS
-
 - Bespoke
-
 - DNS
-
 - Platform services
-
 - OS
-
 - AWS Direct Connect
-
 - Kubernetes
-
 - Elastic
-
 - Paas
-
 - Iaas
-
 - Saas
-
 - Infrastructure
-
 - Applications.2
-
 - Single source of truth
-
 - Consistency
-
 - Dynamics
-
 - File management
-
 - Synchronized
-
 - Easy access
-
 - End-to-End View
-
 - User-definable
-
 - Intuitive UI
-
 - Full support
-
 - Single sign-on
-
 - Advanced access control
-
 - Simplify Processes
-
 - Sophisticated services
-
 - Level up your service quality
-
 - Graphical user interface
-
 - Access information
-
 - Plug ’n play creation
-
 - Inspect
-
 - OTT
-
 - Encoder
-
 - Close Caption Encoder
 
 **Renamed icons**
@@ -248,9 +201,7 @@ All icon names are now in capital case.
 
 It is now possible to have page variables and card variables saved across sessions.
 
-To do so, place the following prefix before the variable name:
-
-*\_\_saved\_*
+To do so, place the following prefix before the variable name: *\_\_saved\_*
 
 The variable is then saved in a separate .dat file located in the following folder on the client machine: C:\\Users\\{Username}\\AppData\\Roaming\\Skyline\\DataMiner. When a variable is saved, if a user reopens a card with that variable, the variable will be set to the last saved value.
 
@@ -268,13 +219,13 @@ If you add this type of filter to a template shape, only objects of which the na
 
 #### Service & Resource Management - Services app: Visualization and configuration of the node interfaces of service profile definitions and service profile instances \[ID_28508\]
 
-In the *Profiles* tab of the *Services* app, it is now also possible to visualize and fully configure the node interfaces of service profile definitions and service profile instances.
+In the *Profiles* tab of the *Services* app, it is now also possible to visualize and fully configure the node interfaces of service profile definitions and service profile instances.
 
 Also, it is now possible to select a profile instance for every node interface of a service profile instance node.
 
 #### System Center - Agents: BPA test management \[ID_28516\]
 
-In the *Agents* section of *System Center*, the new *BPA* tab now allows you to view and run the Best Practices Analyzer (BPA) tests available on your DataMiner System.
+In the *Agents* section of *System Center*, the new *BPA* tab now allows you to view and run the Best Practices Analyzer (BPA) tests available on your DataMiner System.
 
 This growing list of tests will allow you to check hardware and software requirements in order to guarantee an optimal and smooth DataMiner operation.
 
@@ -297,7 +248,7 @@ There are now four chart layouts to choose from:
 
 **Stacked bars**
 
-If you select the *Stack bars* option, the bars in the graph will be displayed one on top of the other instead of one next to the other.
+If you select the *Stack bars* option, the bars in the graph will be displayed one on top of the other instead of one next to the other.
 
 > [!NOTE]
 > This option will be especially useful in combination with the “Relative per category” chart layout.
@@ -345,7 +296,7 @@ It is now possible to have an Automation script triggered when a profile instanc
 
 The script to reconfigure the bookings can be set on the ProfileManagerConfiguration. See the example below.
 
-```txt
+```csharp
 var profileHelper = new ProfileHelper(engine.SendSLNetMessages);
 var config = profileHelper.Config.Get();
 config.UpdateBookingConfigByReferenceScript = "scriptname";
@@ -362,7 +313,7 @@ The script will be triggered using a new OnSrmBookingsUpdatedByReference entrypo
 
     This list does not have to include the IDs of the ReservationInstances that, although they did not reference the ProfileInstance, had usages quarantined because the update caused an overbooking.
 
-    ```txt
+    ```csharp
     public class Script
     {
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmBookingsUpdatedByReference)]
@@ -385,13 +336,11 @@ When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantin
 - If instances need to be quarantined, the update will not proceed and the following errors will be returned:
 
     - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
-
     - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
 When calling UpdateAndApply and forcing quarantine (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
-
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
 
 **New RequiredProfileInstanceReconfiguration property**
@@ -400,7 +349,7 @@ A new RequiredProfileInstanceReconfiguration property has been added to the Serv
 
 See the following example on how to filter on this property:
 
-```txt
+```csharp
 var rmHelper = new ResourceManagerHelper();
 rmHelper.RequestResponseEvent += (sender, args) => args.responseMessage = engine.SendSLNetSingleResponseMessage(args.requestMessage);
 var filter = ServiceReservationInstanceExposers.RequiredProfileReconfiguration.Equal(true);
@@ -418,9 +367,7 @@ var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
 - When the UpdateBookingConfigByReferenceScript is not configured (i.e. when the setting is empty or null in the profile manager configuration):
 
     - No attempt will be made to trigger a script.
-
     - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
-
     - No additional error or warning will be returned in the calls.
 
 ### DMS tools
@@ -491,12 +438,12 @@ From now on, it will no longer be possible to start a job data migration when no
 
 A number of enhancements have been made to FileInfoManager.
 
-Also, under *Advanced \> Apps \> FileInfo*, the DataMiner SLNetClientTest tool now offers a read-only UI to debug FileInfoManager.
+Also, under *Advanced \> Apps \> FileInfo*, the DataMiner SLNetClientTest tool now offers a read-only UI to debug FileInfoManager.
 
 > [!WARNING]
 > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).
 
-#### SLReset will now reset the backup agent to its factory settings when it is taken out of a  Failover configuration \[ID_28456\]
+#### SLReset will now reset the backup agent to its factory settings when it is taken out of a  Failover configuration \[ID_28456\]
 
 When the two DMAs in a Failover configuration were taken out of that configuration, up to now, the backup agent had to be cleaned manually. From now on, SLReset will automatically reset the backup agent to its factory settings.
 
@@ -548,7 +495,7 @@ When more than one connection were defined, in some cases, the secondary connect
 
 #### Problem when trying to activate data offload to a database \[ID_28276\]
 
-When, in the *Database* section of *System Center*, you clicked the *Offload* tab, selected the *Activate this database* option, and then clicked *Save*, in some cases, this change would not be saved.
+When, in the *Database* section of *System Center*, you clicked the *Offload* tab, selected the *Activate this database* option, and then clicked *Save*, in some cases, this change would not be saved.
 
 #### Dashboards app: Trend statistics components would not show any content when part of a PDF report \[ID_28286\]
 
@@ -618,7 +565,7 @@ In the Dashboards app, in some cases, errors could occur when building a query.
 
 #### Router Control app: Problem with user permissions \[ID_28422\]
 
-In some cases, users who had only been granted the *Modules \> Router Control \> UI Available* permission would incorrectly not be able to access the Router Control app.
+In some cases, users who had only been granted the *Modules \> Router Control \> UI Available* permission would incorrectly not be able to access the Router Control app.
 
 #### Dashboards app: Error when deleting components \[ID_28426\]
 
@@ -682,7 +629,7 @@ When, in DataMiner Cube’s Query Executor, you launched a query that retrieved 
 
 #### Dashboards app: Problem when trying to select a folder after manually removing it from the Location box of the Create dashboard window \[ID_28533\]
 
-When, in the *Create dashboard* window, you selected a folder and then removed it manually from the *Location* box, in some cases, it would no longer be possible to select the same folder in the folder tree.
+When, in the *Create dashboard* window, you selected a folder and then removed it manually from the *Location* box, in some cases, it would no longer be possible to select the same folder in the folder tree.
 
 #### Dashboards app: Error messages would incorrectly be displayed multiple times \[ID_28544\]
 
@@ -690,7 +637,7 @@ When an error had been thrown in the Dashboards app, in some cases, multiple ins
 
 #### DataMiner Cube - System Center: No offload files generated when offloading to a file instead of to a database \[ID_28568\]
 
-When, in the *Database* section of *System Center*, you opted to offload database data to a file instead of a database, in some cases, no offload files would be generated.
+When, in the *Database* section of *System Center*, you opted to offload database data to a file instead of a database, in some cases, no offload files would be generated.
 
 #### Dashboards app: Problem when sharing a dashboard located in a folder \[ID_28610\]
 

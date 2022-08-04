@@ -1,4 +1,8 @@
-# Feature release 10.1.1
+---
+uid: General_Feature_Release_10.1.1
+---
+
+# General Feature Release 10.1.1
 
 ## New features
 
@@ -13,7 +17,7 @@ The NATS and NAS services will automatically be installed on each NATS-enabled D
 > [!NOTE]
 > - When NATS is enabled on a DataMiner Agent, firewall rules will automatically be added for ports 4222, 6222, 8222 and 9090.
 > - Automatic detection and triggering of NATS cluster self healing can be activated or deactivated by setting the \<NATSDisasterCheck> option to true of false in the MaintenanceSettings.xml file.
-> - Only users who have been granted the *Admin tools* permission (Modules \> System configuration \> Tools) are allowed to reset the NATS service.
+> - Only users who have been granted the *Admin tools* permission (Modules \> System configuration \> Tools) are allowed to reset the NATS service.
 
 #### Amazon Elasticsearch Service now supported \[ID_28104\]
 
@@ -64,45 +68,25 @@ The following extension methods have now been moved from the QActionHelperBaseCl
 **static class NotifyProtocol**
 
 - AddRow(this SLProtocol protocol, int tableId, string row)
-
 - AddRow(this SLProtocol protocol, int tableId, object\[\] row)
-
 - AddRow(this SLProtocol protocol, int tableId, object\[\] row, bool\[\] keyMask)
-
 - AddRowReturnKey(this SLProtocol protocol, int tableId)
-
 - AddRowReturnKey(this SLProtocol protocol, int tableId, object\[\] row)
-
 - DeleteRow(this SLProtocol protocol, int tableId, string rowKey)
-
 - DeleteRow(this SLProtocol protocol, int tableId, int row)
-
 - DeleteRow(this SLProtocol protocol, int tableId, string\[\] rows)
-
 - Exists(this SLProtocol protocol, int tableId, string key)
-
 - GetKeyPosition(this SLProtocol protocol, int tableId, string key)
-
 - RowCount(this SLProtocol protocol, int tableId)
-
 - GetKeys(SLProtocol^ protocol, int tableId, KeyType type = KeyType.Index)
-
 - ClearAllKeys(this SLProtocol protocol, int tableId)
-
 - GetKeysForIndex(this SLProtocol protocol, int columnPid, string value)
-
 - FillArray(this SLProtocol protocol, int tableId, object\[\] columns, DateTime? timeInfo = null)
-
 - FillArray(this SLProtocol protocol, int tableId, List\<object\[\]\> columns, DateTime? timeInfo = null)
-
 - FillArrayNoDelete(this SLProtocol protocol, int tableId, object\[\] columns, DateTime? timeInfo = null)
-
 - FillArrayNoDelete(this SLProtocol protocol, int tableId, List\<object\[\]\> columns, DateTime? timeInfo = null)
-
 - FillArray(this SLProtocol protocol, int tableId, List\<object\[\]\> rows, SaveOption option, DateTime? timeInfo = null)
-
 - FillArrayWithColumn(this SLProtocol protocol, int tableId, int columnPid, object\[\] keys, object\[\] values, DateTime? timeInfo = null)
-
 - SetParameterBinary(this SLProtocol protocol, int pid, byte\[\] data)
 
 **static class ProtocolExtenders**
@@ -117,13 +101,13 @@ The following extension methods have now been moved from the QActionHelperBaseCl
 
 #### Trending: “Ignore gaps” option in export window renamed to “Exclude gaps” \[ID_28067\]
 
-Up to now, when you exported a trend graph to CSV, it was possible to select the *Ignore gaps* option to make the export skip any gaps in the trend data. This option has now been renamed to *Exclude gaps*.
+Up to now, when you exported a trend graph to CSV, it was possible to select the *Ignore gaps* option to make the export skip any gaps in the trend data. This option has now been renamed to *Exclude gaps*.
 
 #### Visual overview: Page-level execution of Automation scripts & new NodeDoubleClicked event \[ID_28185\]
 
 On a Visio page, it is now possible to have Automation scripts executed automatically using a page-level data item of type *Execute*.
 
-See the example below. You can use the keywords *Trigger* or *SetTrigger*, which can be set to either “ValueChanged” or “Event”.
+See the example below. You can use the keywords *Trigger* or *SetTrigger*, which can be set to either “ValueChanged” or “Event”.
 
 Example:
 
@@ -138,13 +122,9 @@ In the syntax to be used in Automation script shapes as well as page-level Autom
 List of reserved prefixes:
 
 - “Parameters:”
-
 - “Dummies:”
-
 - “MemoryFiles:”
-
 - “Options:”
-
 - “Tooltip:”
 
 Example of syntax that can now be used in a shape data item of type *Execute*:
@@ -159,7 +139,7 @@ Script:<myScript>|Tooltip:<myTooltip>|Parameters:paramA=<myParam>|Options:NoConf
 
 **New NodeDoubleClicked event**
 
-In an \[Event:\] placeholder, you can now add a new event named *NodeDoubleClicked*, followed by the argument *ID* or *Label*.
+In an \[Event:\] placeholder, you can now add a new event named *NodeDoubleClicked*, followed by the argument *ID* or *Label*.
 
 This event will trigger when you double-click a service definition node in an embedded Service Manager component. The event placeholder will then be replaced by the value of the specified argument.
 
@@ -185,7 +165,7 @@ Using a data field of type “Info” set to the value “PARAMETER KEY”, a sh
 
 #### System Center - Database: Option to offload database data to a file \[ID_28226\]
 
-In the *Database* section of *System Center*, you can now also opt to offload database data to a file instead of a database.
+In the *Database* section of *System Center*, you can now also opt to offload database data to a file instead of a database.
 
 #### Visual Overview: Group-level shape data fields of type “ChildrenSort” now support placeholders \[ID_28289\]
 
@@ -209,12 +189,11 @@ From now on, queries will no longer be saved in a dashboard, but in a separate f
 
 #### Dashboards app - GQI: Existing queries can now be reused \[ID_28102\]
 
-When building a query, instead of having to start a new query from scratch, it is now possible to select an existing query in the *Start from* box, and then start building a query based on the one you selected.
+When building a query, instead of having to start a new query from scratch, it is now possible to select an existing query in the *Start from* box, and then start building a query based on the one you selected.
 
 Current limitations:
 
 - Changing a query will not trigger a revalidation of the queries that are using the updated query. A component will only re-fetch a query when the dashboard is refreshed or when the final query is changed.
-
 - If queries are running in a loop, a circular dependency error will be displayed.
 
 #### Dashboards app - GQI: Datasources now have a default column set \[ID_28103\]
@@ -239,22 +218,22 @@ Currently, the trigger feed can only be linked to components that can visualize 
 
 **Settings**
 
-When, in the *Settings* tab, you enable the *Trigger timer* setting, a countdown bar will be displayed, and triggering will occur automatically when the counter reaches 0. The *Time* setting allows you to specify a counter interval (default: 60 seconds).
+When, in the *Settings* tab, you enable the *Trigger timer* setting, a countdown bar will be displayed, and triggering will occur automatically when the counter reaches 0. The *Time* setting allows you to specify a counter interval (default: 60 seconds).
 
 **Layout**
 
 In the *Layout* tab, you find three additional sections:
 
-- In the *Trigger label* section, you can specify a label and select an icon that will both be displayed on the trigger button.
+- In the *Trigger label* section, you can specify a label and select an icon that will both be displayed on the trigger button.
 
-- In the *Time label* section, select the *Show when the last trigger happened* option if you want the time of the last triggering displayed. When this option is selected, in the *Time description format* box, you can enter the message to be displayed. It can contain the following placeholders:
+- In the *Time label* section, select the *Show when the last trigger happened* option if you want the time of the last triggering displayed. When this option is selected, in the *Time description format* box, you can enter the message to be displayed. It can contain the following placeholders:
 
     | Placeholder | Description                                                                                                        |
     |---------------|--------------------------------------------------------------------------------------------------------------------|
     | {duration}    | An estimated indication of the time past since the last triggering.<br> Example: “2 minutes ago”                   |
     | {time}        | The exact textual representation of the time when the last triggering occurred.<br> Example: “Nov 20, 2020, 12:33” |
 
-- In the *Layout* section, you can specify how you want the trigger label and time label to be aligned: left, center or right.
+- In the *Layout* section, you can specify how you want the trigger label and time label to be aligned: left, center or right.
 
 #### Dashboards app: Right-hand edit pane is now resizable \[ID_28137\]
 
@@ -262,19 +241,18 @@ It is now possible to change the width of the right-hand edit pane.
 
 #### Dashboards app - Line chart component: New option to highlight parameters on graph and legend \[ID_28144\]
 
-When configuring a line chart component, in the *Styling and Information* section of the *Layout* tab, you can now find the *Highlight lines on hover* option. This option enables users to highlight lines on a trend graph.
+When configuring a line chart component, in the *Styling and Information* section of the *Layout* tab, you can now find the *Highlight lines on hover* option. This option enables users to highlight lines on a trend graph.
 
-When you select the *Highlight lines on hover* option, which is cleared by default, you can also specify the thickness of the highlighted lines (default: 3 px).
+When you select the *Highlight lines on hover* option, which is cleared by default, you can also specify the thickness of the highlighted lines (default: 3 px).
 
 There are two ways to highlight a trend line:
 
 - Hovering over the trend graph.
-
 - Expanding the legend and hovering over a parameter name.
 
 #### Dashboards: Deleting components by pressing the DELETE key \[ID_28171\]
 
-In the Dashboards app, up to now, it was possible to delete components in edit mode by selecting them and clicking the *Delete* button at the top of the page. Now, instead of clicking the Delete button, it is also possible to press the DELETE key on your keyboard.
+In the Dashboards app, up to now, it was possible to delete components in edit mode by selecting them and clicking the *Delete* button at the top of the page. Now, instead of clicking the Delete button, it is also possible to press the DELETE key on your keyboard.
 
 > [!NOTE]
 > After selecting the component to be deleted, make sure the focus is on the dashboard before you press the DELETE key. If the focus in on e.g. the header bar or the subheader bar, pressing the DELETE key will not work.
@@ -313,7 +291,7 @@ The usages of a ReservationInstance with absolute quarantine priority do not nee
 
 In the example below, resources will be quarantined from 10h to 12h UTC tomorrow.
 
-```txt
+```csharp
 var tomorrow = DateTime.UtcNow.AddDays(1).Date;
 var timeRange = new TimeRangeUtc(tomorrow.AddHours(10), tomorrow.AddHours(12));
 var instance = new ReservationInstance(timeRange) {
@@ -326,7 +304,7 @@ instance.ResourcesInReservationInstance.Add(new ResourceUsageDefinition(resource
 When adding a ReservationInstance with absolute quarantine priority, an error with reason “ReservationUpdateCausedReservationsToGoToQuarantine” will be returned if this causes any bookings to be quarantined. In that case, the update must be executed using the “forceQuarantine” flag.
 
 > [!NOTE]
-> - It is possible to add multiple overlapping bookings with AbsoluteQuarantinePriority. If they book the same resource and if results in an overbooking of the resource, one of the instances will be quarantined. If there is no overbooking of the resources between the two bookings with AbsoluteQuarantinePriorit, both bookings will be scheduled.
+> - It is possible to add multiple overlapping bookings with AbsoluteQuarantinePriority. If they book the same resource and if results in an overbooking of the resource, one of the instances will be quarantined. If there is no overbooking of the resources between the two bookings with AbsoluteQuarantinePriority, both bookings will be scheduled.
 > - When a booking with AbsoluteQuarantinePriority is removed, the other bookings using the resources will not automatically be taken out of quarantine.
 > - Resources that are in quarantine because they overlap with a booking that reserves them with AbsoluteQuarantinePriority will have a QuarantineTrigger with reason “AbsoluteQuarantinePriorityReservationInstance”.
 
@@ -349,7 +327,6 @@ From now on, when a ServiceReservationInstance is started, a check will be perfo
 The StartActionsFailureErrorData object will also contains the following:
 
 - ReservationInstanceId: The ID of the ServiceReservationInstance that could not be started.
-
 - ServiceId: The ID of the service that has the same name.
 
 ## Changes
@@ -428,17 +405,11 @@ From now on, trend percentile calculations will also take into account the perio
 When a table row is updated, the cells are handled according to the column's perceived priority unless overwritten. The processing order of columns has now been extended so that columns that are part of a threshold option (*Protocol.Params.Param.Alarm@Options*) within the same table definition get processed before columns that are part of a property definition and any other columns. This results in the following column processing order:
 
 1. Primary key (index)
-
 2. Display column
-
 3. Foreign key columns
-
 4. Columns part of the naming or namingformat definition
-
 5. Columns part of a conditional monitoring definition
-
 6. Columns part of a threshold definition (NEW)
-
 7. Columns part of a property definition
 
 Any other columns are processed in the order defined in the table parameter
@@ -455,7 +426,7 @@ A number of enhancements have been made to the mechanism used to generate PDF re
 
 #### DataMiner Cube - Protocols & Templates: More information will now be returned to the user when a protocol upload fails \[ID_28183\]
 
-When you are uploading a protocol in the *Protocols & Templates* app, a message box will appear when the upload operation has failed. This message box will now contain more detailed information about why the operation failed.
+When you are uploading a protocol in the *Protocols & Templates* app, a message box will appear when the upload operation has failed. This message box will now contain more detailed information about why the operation failed.
 
 #### DataMiner Cube - Alarm Console: Reasons mentioned in Value column of group alarms generated by Automatic incident tracking now appear in the UI language \[ID_28189\]
 
@@ -519,7 +490,7 @@ When multiple network interfaces shared the same MAC address, in some cases, Dat
 
 #### DataMiner Cube - Trending: Rounding issue when exporting a trend graph to CSV \[ID_27980\]
 
-When you exported a trend graph to CSV with the *Line graph instead of block graph* option selected, in some cases, the timestamps would be off by a second due to a rounding error.
+When you exported a trend graph to CSV with the *Line graph instead of block graph* option selected, in some cases, the timestamps would be off by a second due to a rounding error.
 
 #### Problem when retrieving protocol-level TTL settings from the database \[ID_28023\]
 
@@ -561,7 +532,7 @@ When retrieving composite instances using the SNMP polling option “partialSNMP
 
 #### DataMiner Cube - Profiles app: “Based on” selection box would be empty \[ID_28089\]
 
-When, in the *Definitions* tab of the Profiles app, you selected a profile definition and then clicked *Add* to select another profile definition in the *Based on* selection box, in some cases, that selection box would be empty.
+When, in the *Definitions* tab of the Profiles app, you selected a profile definition and then clicked *Add* to select another profile definition in the *Based on* selection box, in some cases, that selection box would be empty.
 
 #### Dashboards app - Line chart component: CSV with exported real-time trend data would incorrectly have three value columns instead of one \[ID_28090\]
 
@@ -615,7 +586,7 @@ When the DeleteJobsDomain method was used to delete the last job domain, in some
 
 #### DataMiner Cube - Element connections app: Problem with “Include element state” check box \[ID_28188\]
 
-In the *Element connections* app, in some cases, the value of the *Include element state* check box would be saved incorrectly.
+In the *Element connections* app, in some cases, the value of the *Include element state* check box would be saved incorrectly.
 
 #### DataMiner Cube - System Center/Backup: “Use one network path for all Agents” setting would be saved correctly but displayed incorrectly \[ID_28192\]
 
@@ -673,11 +644,11 @@ In some cases, an exception could be thrown when aggregating values retrieved fr
 
 When joining a query, in some rare cases, an error could occur in the left query when the right query was incomplete. From now on, incomplete queries will be marked orange when the end of the query is invalid or red when the middle of the query is invalid.
 
-Also, you will no longer have to click *Add* to join. As soon as the left and the right columns are filled in, both will automatically be joined.
+Also, you will no longer have to click *Add* to join. As soon as the left and the right columns are filled in, both will automatically be joined.
 
 #### DataMiner Cube: EPM card would not open when no topology cell was linked to the filter \[ID_28272\]
 
-When an EPM field was defined on a table without a chain topology cell, in some cases, it would not be possible to launch an EPM card of an item in this field from the *Topology* tab in the sidebar.
+When an EPM field was defined on a table without a chain topology cell, in some cases, it would not be possible to launch an EPM card of an item in this field from the *Topology* tab in the sidebar.
 
 #### SLAnalytics: Problem when trying to process a parameter update for a non-existing parameter \[ID_28282\]
 
@@ -692,10 +663,9 @@ In the Ticketing app, in some cases, headers would not be cleared when you switc
 Due to a serialization error, in some cases, the following Web Services API v0 methods would no longer work:
 
 - GetActiveAlarmsFromView
-
 - GetActiveAlarmsFromElement
 
-#### DataMiner Cube: No popup messages would a   ppear when users logged in again after logging out \[ID_28306\]
+#### DataMiner Cube: No popup messages would appear when users logged in again after logging out \[ID_28306\]
 
 When users logged in again after having logged out, in some cases, popup messages would no longer appear.
 
@@ -713,7 +683,7 @@ When custom bindings were linked to custom element, view, alarm or service prope
 
 #### Profiles app: Problem when using converters \[ID_28404\]
 
-When, In the *Profiles* app, converters (i.e. mediation snippets) had been configured, in some cases, a notice alarm would be generated.
+When, In the *Profiles* app, converters (i.e. mediation snippets) had been configured, in some cases, a notice alarm would be generated.
 
 #### Assembly incorrectly configured in SLNet.exe.config file \[ID_28408\]
 

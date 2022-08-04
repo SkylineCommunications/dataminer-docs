@@ -1,4 +1,8 @@
-# Feature release 10.1.3
+---
+uid: General_Feature_Release_10.1.3
+---
+
+# General Feature Release 10.1.3
 
 ## New features
 
@@ -9,7 +13,6 @@
 When a Failover agent claims or releases a virtual IP address, the following PowerShell scripts will now be triggered (if they exist):
 
 - C:\\Skyline DataMiner\\Tools\\VIPAcquired.ps1
-
 - C:\\Skyline DataMiner\\Tools\\VIPReleased.ps1
 
 > [!NOTE]
@@ -40,7 +43,7 @@ It is now possible to fine-tune message throttling, i.e. a mechanism that avoids
 
 - *MessageThrottlingThreshold*: Time interval in ms. The default and minimum value is 250. If two updates for the same parameter are received within this interval, message throttling is activated. The first of the parameter updates is sent immediately, but messages for the same parameter that come after this are throttled until no more parameter updates have been received for this same time interval. Once the throttling has stopped, the last update is also sent after at most this time interval.
 
-- *MessageThrottlingPeriodicUpdate*: Time interval in ms. The default value is 1000, and the value must always be at least twice the *MessageThrottlingThreshold* value. If there is a steady flow of updates for the same parameter, and message throttling is activated, a periodic update is sent after this interval.
+- *MessageThrottlingPeriodicUpdate*: Time interval in ms. The default value is 1000, and the value must always be at least twice the *MessageThrottlingThreshold* value. If there is a steady flow of updates for the same parameter, and message throttling is activated, a periodic update is sent after this interval.
 
 Example:
 
@@ -113,11 +116,11 @@ The DomSectionChange objects will be stored in a HistoryChange object, which con
 
 The changes can be retrieved and filtered using the DomHelper. See the following examples:
 
-```txt
+```csharp
 var filter = HistoryChangeExposers.SubjectID.Equal(domInstance.ID.ToFileFriendlyString());
 ```
 
-```txt
+```csharp
 var history = domHelper.DomInstanceHistory.Read(filter);
 ```
 
@@ -131,7 +134,7 @@ var history = domHelper.DomInstanceHistory.Read(filter);
 
 It is now possible to add attachments to DomInstance objects. See the examples below.
 
-```txt
+```csharp
 var domHelper new DomHelper(engine.SendSLNetMessages, PermissionTestModuleId);
 var fileBytes = File.ReadAllBytes("path");
 // Adding an attachment
@@ -158,7 +161,7 @@ From now on, when you install an Elasticsearch database, security will be disabl
 
 #### DataMiner Cube - System Center: Account linking user permission added \[ID_28643\]
 
-In preparation for the cloud connected Agents feature (currently still in soft launch), the user permission *Account linking* has been added in the Users /Groups section of System Center, under *Modules* > *System configuration* > *Cloud sharing*. This user permission determines whether users can link a DataMiner account to a cloud account, which is necessary to be able to share items in the cloud or stop sharing items in the cloud
+In preparation for the cloud connected Agents feature (currently still in soft launch), the user permission *Account linking* has been added in the Users /Groups section of System Center, under *Modules* > *System configuration* > *Cloud sharing*. This user permission determines whether users can link a DataMiner account to a cloud account, which is necessary to be able to share items in the cloud or stop sharing items in the cloud.
 
 ### DMS Cube
 
@@ -169,7 +172,6 @@ Using the cube:// protocol, it is now possible to launch a DataMiner Cube on a s
 Examples:
 
 - cube://mydma?element=MyElement
-
 - cube://10.11.12.13?view=12
 
 #### DataMiner Cube start window: Grouping, rearranging and filtering tiles \[ID_28346\]
@@ -177,15 +179,12 @@ Examples:
 In the DataMiner Cube start window, tiles representing DataMiner Systems or DataMiner Agents can now be grouped, rearranged and filtered.
 
 - To create a new group, drag a tile out of its current group.
-
 - To name or rename a group, click above the group and enter the (new) name.
-
 - To move a tile to another position (or another group), drag it to its new position.
-
 - To filter the tiles, hover over the looking glass and enter a search string in the search box. Alternatively, you can also start typing a search string without going to the search box.
 
-> [!NOTE]
-> When a search does not yield any results, you can click the plus icon or press ENTER to add the host name or IP address you were looking for.
+    > [!NOTE]
+    > When a search does not yield any results, you can click the plus icon or press ENTER to add the host name or IP address you were looking for.
 
 > [!NOTE]
 > - The start window now has keyboard support. Use the arrow keys to move from one tile to the next, and press ENTER to launch.
@@ -193,7 +192,7 @@ In the DataMiner Cube start window, tiles representing DataMiner Systems or Data
 
 #### Visual Overview: TableRowFilter option of ParameterControlOptions data item now supports FullFilter syntax \[ID_28531\]
 
-When defining a table control in Visual Overview, it is now possible to use FullFilter syntax when configuring the *TableRowFilter* option in the *ParameterControlOptions* data item.
+When defining a table control in Visual Overview, it is now possible to use FullFilter syntax when configuring the *TableRowFilter* option in the *ParameterControlOptions* data item.
 
 Example:
 
@@ -208,9 +207,7 @@ Example:
 In the service diagram, it is now possible to change the end points of connections between service definition node interfaces using drag and drop.
 
 1. Select an existing connection. Its “from” and “to” interfaces will be highlighted.
-
 2. Click the endpoint you want to change and drag it onto another endpoint while keeping the mouse button pressed.
-
 3. Release the mouse button. The connection will now have changed. Its source point will be the same as before, but its endpoint will have changed.
 
 #### DataMiner Cube start window: Opening a Cube instance without closing the start window \[ID_28608\]
@@ -233,7 +230,6 @@ When automatic incident tracking is activated, active alarms that are related to
 Translations have now been added for two new reasons:
 
 - View group
-
 - Custom property group (which will be formatted as “\<propertyName> group: \<value>”)
 
 #### EPM: Chain grouping & automatic selection of single filter values \[ID_28751\]\[ID_28834\]\[ID_28846\]
@@ -262,9 +258,9 @@ See the following example. The chain named “MyChain” will be part of the gro
 
 #### Settings window: “Surveyor” section renamed to “Sidebar” & New “Launch EPM card on filter selection” setting added \[ID_28788\]
 
-In the user settings tab of the *Settings* window, the *Surveyor* section has been renamed to *Sidebar*.
+In the user settings tab of the *Settings* window, the *Surveyor* section has been renamed to *Sidebar*.
 
-Also, in that section, the existing Surveyor settings have now been grouped under the title “Surveyor”, and a new *Launch EPM card on filter selection* setting has been added under the title “Topology”. When you enable this new setting, an EPM card will automatically be launched after selecting an item in a topology tab filter.
+Also, in that section, the existing Surveyor settings have now been grouped under the title “Surveyor”, and a new *Launch EPM card on filter selection* setting has been added under the title “Topology”. When you enable this new setting, an EPM card will automatically be launched after selecting an item in a topology tab filter.
 
 ### DMS Reports & Dashboards
 
@@ -277,18 +273,14 @@ Currently, two types of filters can be configured: VALUE and FULLFILTER. Built-i
 Examples:
 
 - value=PK == 1
-
 - value=DK==Izegem
-
 - value=518==5;value=522>=10
-
 - fullfilter=(value=PK ==1 or value=PK ==2)
-
 - fullfilter=((value=PK \> 36) and (value=518 in_range 1/5 )) or (VALUE=DK == Brus\*)
 
 > [!NOTE]
 > - Currently, only line chart components support the use of parameter table filters.
-> - Parameter table filters can only be configured when you have started the Dashboards app with the *showAdvancedSettings* URL parameter set to true.
+> - Parameter table filters can only be configured when you have started the Dashboards app with the *showAdvancedSettings* URL parameter set to true.
 > - When you update a filter, you have to re-add it to the component.
 
 #### Dashboards app - GQI: Exception values will now be processed as discrete values \[ID_28570\]
@@ -296,19 +288,14 @@ Examples:
 In GQI operators, up to now, exception values were processed as regular values. From now on, they will be processed as discrete values. As a result, the TopX operator and the following aggregation methods will no longer take them into account:
 
 - Average
-
 - Max
-
 - Min
-
 - Percentile
-
 - Standard deviation
-
 - Sum
 
 > [!NOTE]
-> - The *Count* and *Distinct count* aggregation methods will take exception values into account.
+> - The *Count* and *Distinct count* aggregation methods will take exception values into account.
 > - Exception values will not be taken into account when calculating the minimum and maximum value for columns using GenIfColumnFetch-Requests.
 
 #### Dashboards app - Bar chart component: Negative values & Dynamic axis labels \[ID_28617\]
@@ -321,7 +308,7 @@ Also, the number of axis labels displayed will now depend on the size of the cha
 
 The layout pane of a State component now has an additional setting that allows you to align its contents (left/center/right).
 
-Also, in the components pane on the left, the *States* section has now been renamed to *States and values*.
+Also, in the components pane on the left, the *States* section has now been renamed to *States and values*.
 
 #### Dashboards app - Table component: GQI query result can now be export to a CSV file \[ID_28637\]
 
@@ -329,7 +316,7 @@ When a table component displays the result of a GQI query, it is now possible to
 
 To do so, click the ellipsis icon in the upper-right corner and select *Export to CSV*.
 
-By default, the CSV file will be named “Query XXX” (XXX being the name of the query). If necessary, the name of the query can be changed in the *Queries* section in the table component’s data panel.
+By default, the CSV file will be named “Query XXX” (XXX being the name of the query). If necessary, the name of the query can be changed in the *Queries* section in the table component’s data panel.
 
 The first line of the CSV file will contain the names of the columns. The subsequent lines will contain the data, each line being a row of the query result. This data will contain the display values, not the raw values. This means that parameter values will contain units and that discrete values will be replaced by their corresponding display value.
 
@@ -364,7 +351,7 @@ If necessary, you can apply a filter by specifying a time range. If you do not s
 
 #### Dashboards app - GQI: Support for dynamic units \[ID_28761\]\[ID_28831\]
 
-A GQI query based on the *Get parameter table by ID* or *Get parameters for elements* where data sources will now, by default, inherit the dashboard’s *Use dynamic units* setting.
+A GQI query based on the *Get parameter table by ID* or *Get parameters for elements* where data sources will now, by default, inherit the dashboard’s *Use dynamic units* setting.
 
 If necessary, you can override this automatic inheritance by selecting the component’s *Override dynamic units* setting.
 
@@ -375,7 +362,7 @@ If necessary, you can override this automatic inheritance by selecting the compo
 
 When building a GQI query, it is now possible to use a feed as a column filter.
 
-Instead of providing a fixed value to filter a specific column, you can now select the *From feed* option and configure a filter by specifying the following items:
+Instead of providing a fixed value to filter a specific column, you can now select the *From feed* option and configure a filter by specifying the following items:
 
 | Filter item | Description                                                                                                                    |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------|
@@ -383,7 +370,7 @@ Instead of providing a fixed value to filter a specific column, you can now sele
 | Type        | The type of data that needs to be selected.<br> If the feed only provides one type of data, it will automatically be selected. |
 | Property    | The property by which the column will be filtered (depending on the type of data).                                             |
 
-Example: If the column in question has to be filtered using the element name found in the URL of the dashboard, then you can set *Feed* to “URL”, *Type* to “Elements” and *Property* to “Name”.
+Example: If the column in question has to be filtered using the element name found in the URL of the dashboard, then you can set *Feed* to “URL”, *Type* to “Elements” and *Property* to “Name”.
 
 ### DMS Automation
 
@@ -398,19 +385,12 @@ A number of enhancements have been made to the file selector used in interactive
 Up to now, each time you updated a FunctionResource, the DVE element would also be updated. From now on, the DVE element will only be updated when one of the following properties of the FunctionResource is updated:
 
 - DmaID
-
 - ElementID
-
 - MainDVEDmaID
-
 - MainDVEElementID
-
 - FunctionName
-
 - FunctionGUID
-
 - PK
-
 - LinkerTableEntries
 
 #### MinReservationStart and MaxReservationCeiling checks have been removed \[ID_28575\]
@@ -422,13 +402,9 @@ This means that the start and stop times of ReservationInstances and Reservation
 Also, the following ResourceManagerErrorData reasons have now all been marked as obsolete:
 
 - BulkAddingFirstOrLastToOLateOrTooEarly
-
 - EndsAfterMaximumReservationCeiling
-
 - StartsBeforeMinimumReservationStart
-
 - ReservationDefinitionMinimumReservationStart
-
 - ReservationDefinitionMaximumReservationCeiling
 
 ### DMS tools
@@ -438,9 +414,7 @@ Also, the following ResourceManagerErrorData reasons have now all been marked as
 In the SLNetClientTest program, it is now possible to view and edit the following SLNet configuration options with regard to NATS, which are stored in the MaintenanceSettings.xml file:
 
 - NATSDisasterCheck
-
 - NATSResetWindow
-
 - NATSRestartTimeout
 
 > [!WARNING]
@@ -500,7 +474,7 @@ Up to now, BPA tests were executed from within the SLNet process. They will now 
 
 In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard from the new Dashboards app.
 
-Due to a number of enhancements, the way in which tables that display GQI query results are rendered in PDF reports has now been optimized. When the *Stack components* option is enabled, tables showing results from different queries will even be rendered in such a way that all result sets are displayed one after the other.
+Due to a number of enhancements, the way in which tables that display GQI query results are rendered in PDF reports has now been optimized. When the *Stack components* option is enabled, tables showing results from different queries will even be rendered in such a way that all result sets are displayed one after the other.
 
 #### Failover: Heartbeat checks will now be logged in the debug logging \[ID_28627\]
 
@@ -517,7 +491,6 @@ It is now possible to enable TLS on Cassandra database connections.
 To enable TLS for a particular Cassandra database, do the following:
 
 1. Enable TLS in the settings of the Cassandra database.
-
 2. Enable TLS in the settings of that database in Db.xml. See the following example:
 
     ```xml
@@ -546,7 +519,6 @@ Up to now, when a BPA test was uploaded, no check would be performed to determin
 From now on, when a BPA test is uploaded, a check will be performed:
 
 - If a BPA test is found with the same name under the same DLL, the test will be updated, but the GUID and the schedule will be left unchanged.
-
 - If a BPA test is found with the same name under a different DLL, an error will be thrown.
 
 #### SLAnalytics - Alarm Focus: Enhanced performance \[ID_28689\]
@@ -627,7 +599,7 @@ Central DataBase Offload threads aren't closed in a timely fashion. Potential is
 
 #### Jobs app: Clicking Time \> Now in the date picker would set the time in an incorrect time zone \[ID_28274\]
 
-When you clicked *Time \> Now* in the date picker while creating a new job, in some cases, the time would incorrectly be set in the time zone of the server instead of that of the client.
+When you clicked *Time \> Now* in the date picker while creating a new job, in some cases, the time would incorrectly be set in the time zone of the server instead of that of the client.
 
 Also, a number of other issues regarding time zone settings were fixed.
 
@@ -637,7 +609,7 @@ In some cases, it would no longer be possible to filter out columns that were us
 
 #### DataMiner Cube - Automation: Not possible to save a script after modifying an if/then block \[ID_28532\]
 
-When, in an Automation scripts, you had changed the actions in an if/then block, in some cases, the *Save script* button would incorrectly not get activated. As a result, you were not able to save the modified script.
+When, in an Automation scripts, you had changed the actions in an if/then block, in some cases, the *Save script* button would incorrectly not get activated. As a result, you were not able to save the modified script.
 
 #### DataMiner Cube - Scheduler app: Problem when editing a script event in the timeline \[ID_28542\]
 
@@ -763,9 +735,9 @@ When, in a service profile instance, you overrode the capacity of a parameter, t
 
 When, in DataMiner Cube, you opened an alarm card, in some cases, an exception could be thrown when the alarm duration was being calculated.
 
-#### DataMiner Cube - Services app: Discard button would not be enabled after including or exclud­ing a service profile definition parameter \[ID_28741\]
+#### DataMiner Cube - Services app: Discard button would not be enabled after including or excluding a service profile definition parameter \[ID_28741\]
 
-When, in the *Services* app, you included or excluded a service profile definition parameter in the *By node* tab, in some cases, the Discard button would incorrectly not be enabled.
+When, in the *Services* app, you included or excluded a service profile definition parameter in the *By node* tab, in some cases, the Discard button would incorrectly not be enabled.
 
 #### DM Cube Scheduler: Problem when updating scheduler events \[ID_28748\]
 
@@ -833,7 +805,7 @@ At DataMiner startup, the IP address entries in the C:\\Skyline DataMiner\\Files
 
 #### Dashboards app - Line chart component: Problem with the “Minimum visible gap size” setting \[ID_28810\]
 
-When, while configuring a line chart component, you opened the selection box containing the values of the *Minimum visible gap size* setting, in some cases, that selection box would not be displayed correctly.
+When, while configuring a line chart component, you opened the selection box containing the values of the *Minimum visible gap size* setting, in some cases, that selection box would not be displayed correctly.
 
 #### Trending - MySQL: parameterName column in Offload database contained incorrect data \[ID_28824\]
 

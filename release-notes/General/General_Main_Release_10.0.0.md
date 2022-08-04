@@ -1,4 +1,8 @@
-# Main release 10.0.0
+---
+uid: General_Main_Release_10.0.0
+---
+
+# General Main Release 10.0.0
 
 > [!IMPORTANT]
 > From DataMiner 10.0.0/10.0.2 onwards, DataMiner Service & Resource Management also requires DataMiner Indexing.
@@ -13,7 +17,7 @@ On DataMiner Agents running Cassandra, it is possible to install a dedicated ind
 
 ##### **Indexing system requirements**
 
-DataMiner Indexing Engine can only be installed on DataMiner Agents with the following char­acteristics:
+DataMiner Indexing Engine can only be installed on DataMiner Agents with the following characteristics:
 
 - Operating system: Windows Server 2008 R2 or higher (64-bit).
 
@@ -67,7 +71,7 @@ Please note the following regarding the indexing database:
 
 - Alarms in the indexing database are kept in two separate tables, one for active alarms and one for closed alarms.
 
-##### **DB.xml Indexing configuration**
+##### DB.xml Indexing configuration
 
 When the DataMiner Indexing Engine installation is complete, the *Db.xml* file will contain an additional \<DataBase> section with the connection information of the indexing database. The “search” attribute will be set to true.
 
@@ -82,7 +86,7 @@ When the DataMiner Indexing Engine installation is complete, the *Db.xml* file 
 > - Changes to the settings of an indexing database in DataMiner Cube will take effect immediately and do not require a DataMiner restart. A DataMiner restart is only required when a named database is deleted.
 > - When the Indexing Engine has been installed, the file *Indexing.xml* file is also added to the Skyline DataMiner folder, containing the configuration of the engine itself.
 
-##### **DBMaintenance.xml and DBMaintenanceDMS.xml Indexing configuration**
+##### DBMaintenance.xml and DBMaintenanceDMS.xml Indexing configuration
 
 In *DBMaintenance.xml* and *DBMaintenanceDMS.xml*, each \<TTL> tag can have an \<Indexing> subtag, allowing you to specify an override for the default TTL setting for a table that is part of the indexing database. It is possible to specify "infinite" as the indexing TTL, in which case these data will be kept indefinitely.
 
@@ -122,31 +126,18 @@ By default, different instances of the same alarm will be combined in a single a
 In the search box, you can use the following special keywords, followed by a colon (“:”) and a search phrase:
 
 - Severity
-
 - Description
-
 - Parameter_description
-
 - Owner
-
 - Value
-
 - Time of arrival
-
 - Status
-
 - Elementname
-
 - Viewnames
-
 - Parentviews
-
 - Protocolname
-
 - ElementProperty\_\<propertyName>
-
 - Viewproperty\_\<PropertyName>
-
 - ServiceProperty\_\<PropertyName>
 
 For example, if you want to search for alarms associated with elements of which the name resembles “probe”, you can enter “Elementname:probe”.
@@ -169,7 +160,7 @@ A new *GetIndexCountRequest* method has been added in DataMiner, which can be u
 
 This method can for instance be used as follows for a logger table:
 
-```txt
+```csharp
 GetIndexCountRequest<LoggerTableData> message = new GetIndexCountRequest<LoggerTableData>(new LoggerTableDataIndex(503,52,1000));
 ```
 
@@ -207,9 +198,9 @@ Log information for the app is stored in the SLJobManager log file.
 > [!NOTE]
 > The Job Manager app requires DataMiner Indexing. For more information on the Indexing installation, see [Installing the Indexing Engine](#installing-the-indexing-engine).
 
-##### **Job Manager UI overview**
+##### Job Manager UI overview
 
-The Job Manager app can be accessed via the link *https://\[MyDataMiner\]/Jobs* or *http://\[MyDataMiner\]/Jobs*, depending on your setup.
+The Job Manager app can be accessed via the link `https://[MyDataMiner]/Jobs` or `http://[MyDataMiner]/Jobs`, depending on your setup.
 
 > [!NOTE]
 > We strongly advise to use HTTPS when using DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet.
@@ -225,29 +216,23 @@ The main page of the app consists of a header bar, a side panel and an overview 
     > [!NOTE]
     > When you open the Jobs app on a mobile device, the timeline view will not be available.
 
-##### **Job Manager timeline**
+##### Job Manager timeline
 
 There are several ways to manipulate the timeline in the Job Manager app:
 
 - Click and drag with the right mouse button to pan the timeline.
-
 - Click and drag with the left mouse button to zoom in on the timeline.
-
 - Press Ctrl and scroll in order to zoom in or out on the timeline.
-
 - In case the timeline displays many jobs, use the scroll wheel to scroll through the timeline vertically.
-
 - Right-click on the timeline to mark a particular time with a red line.
-
 - Double-click with the left mouse button to jump to the present time on the timeline.
 
 In the lower right corner of the timeline, an arrow icon is displayed. Click this icon to display a preview pane, which also allows you to manipulate the timeline. The white area in this pane corresponds with the currently displayed timeline.
 
 - Click and drag with the left mouse button in the preview pane in order to move the white area to a different time.
-
 - The white area displays a lock icon. Click this icon to toggle between locked and unlocked mode. In locked mode, dragging causes the white area to remain in place while the timeline itself is moved. In unlocked mode, it is the white area that is moved across the timeline.
 
-##### **Creating, editing, exporting and deleting jobs**
+##### Creating, editing, exporting and deleting jobs
 
 Most actions involving jobs can be done with buttons in the header bar of the app:
 
@@ -260,7 +245,6 @@ Most actions involving jobs can be done with buttons in the header bar of the ap
     When editing a job, you can save that job as a job template.
 
     - To create a job template, click the downward arrow in the top-right corner, and click *Save template*.
-
     - To apply a job template (i.e. to fill the fields of the job you are editing with the field values stored in the template), click the downward arrow in the top-right corner, select a tem­plate from the list, and click *Apply template*.
 
     > [!NOTE]
@@ -272,9 +256,9 @@ Most actions involving jobs can be done with buttons in the header bar of the ap
 
 ##### Job Manager configuration
 
-The sections that users can fill in when they create a job can be configured via the *Configura­tion* button in the header bar of the app.
+The sections that users can fill in when they create a job can be configured via the *Configuration* button in the header bar of the app.
 
-You can add sections by clicking one of the nodes in the configuration pane. The location where you add the sections determines where they are displayed to the user during job cre­ation.
+You can add sections by clicking one of the nodes in the configuration pane. The location where you add the sections determines where they are displayed to the user during job creation.
 
 You can modify an existing job section by clicking the section header. When you have done so, you can also delete the job section using the red recycle bin icon below the section icon.
 
@@ -297,11 +281,8 @@ Within each section of type *Fields*, arrow icons allow you to change the positi
 The following new user permissions are available for this app:
 
 - Modules \> Jobs \> UI available
-
 - Modules \> Jobs \> Add/Edit
-
 - Modules \> Jobs \> Delete
-
 - Modules \> Jobs \> Configure Domains
 
 ##### **New methods added to Web Services API v1**
@@ -309,49 +290,27 @@ The following new user permissions are available for this app:
 A number of new methods have been added to the Web Services API v1 to support the new app. This includes the following methods:
 
 - AddOrUpdateJobsSectionDefinitionField
-
 - CreateJob
-
 - CreateJobTemplate
-
 - CreateJobsSectionDefinition
-
 - DeleteJob
-
 - DeleteJobTemplate
-
 - DeleteJobsSectionDefinition
-
 - DeleteSectionDefinitionField
-
 - GetBookingsForJobSection
-
 - GetJob
-
 - GetJobFieldOptions
-
 - GetJobSuggestions
-
 - GetJobTemplate
-
 - GetJobTemplates
-
 - GetJobs
-
 - GetJobsSectionDefinition
-
 - GetJobsSectionDefinitions
-
 - RemoveJobs
-
 - SaveJobsSectionDomainConfig
-
 - UnhideJobSectionDefinitionField
-
 - UpdateJob
-
 - UpdateJobTemplate
-
 - UpdateJobsSectionDefinition
 
 #### SLSNMPManager: A notification will now be generated when a received SNMPv3 trap cannot be processed \[ID_20340\]
@@ -427,7 +386,6 @@ Example:
 In DataMiner, up to now, two different concepts were referred to as a “service definition”:
 
 - the protocol of an enhanced service element, and
-
 - the diagram and configuration of a service signal flow (in Service & Resource Management).
 
 In order to avoid confusion, from now on, the first of the above-mentioned concepts will be referred to as a “service protocol”.
@@ -438,7 +396,7 @@ In the *DB.xml* file, it is now possible to specify how many times you want the
 
 Example:
 
-```txt
+```xml
 ...
 <DataBase active="true" local="true" type="Cassandra">
     <ConnectionRetries>60</ConnectionRetries>
@@ -469,7 +427,7 @@ It is now possible to communicate with an SMSEagle device via HTTPS.
 
 2. Inside the \<HttpGsm> tag, add the following tags:
 
-    | Tag              | Value  |
+    | Tag                | Value  |
     |--------------------|--------|
     | \<UseHttps>        | “true” |
     | \<RequireValidSsl> | “true” |
@@ -495,7 +453,7 @@ Example of a Config.xml file:
 
 When, in the Config.xml file, you set \<RequireValidSsl> to “true”, you have to make the Data­Miner Agent trust the default server certificate of the SMSEagle device. To do so, perform the following steps on the server that hosts the DataMiner Agent:
 
-1. In your internet browser, go to https://\<IP address of the SMSEagle device>.
+1. In your internet browser, go to `https://<IP address of the SMSEagle device>`.
 
     If an error appears, telling you that the site is not secure, ignore it.
 
@@ -514,7 +472,6 @@ When, in the Config.xml file, you set \<RequireValidSsl> to “true”, you have
 8. Select the following options:
 
     - *Computer Account*
-
     - *Local Computer*
 
 9. Click *OK* to close the *Add or Remove Snap-ins* window.
@@ -603,7 +560,7 @@ From now on, DataMiner user accounts are deleted at startup if no corresponding 
 
 #### DataMiner Cube: External user authentication via SAML \[21027\]\[ID_22838\]\[23112\]
 
-DataMiner Cube now supports external user authentication via Security Assertion Markup Lan­guage (SAML).
+DataMiner Cube now supports external user authentication via Security Assertion Markup Language (SAML).
 
 A Cube user trying to log in to a DataMiner Agent using external authentication via SAML will be redirected to a webpage on a third-party server. That server will authenticate the user and return a SAML response to DataMiner Cube, which will forward it to the DataMiner Agent. Depending on the authentication result in that response, the Agent will then either grant or deny the user access.
 
@@ -613,7 +570,7 @@ A Cube user trying to log in to a DataMiner Agent using external authentication 
 
 #### HTML5 apps: External user authentication via SAML \[23905\]
 
-The DataMiner HTML5 apps (e.g. Dashboards, Jobs, etc.) now all support external user authenti­cation via Security Assertion Markup Language (SAML).
+The DataMiner HTML5 apps (e.g. Dashboards, Jobs, etc.) now all support external user authentication via Security Assertion Markup Language (SAML).
 
 ### DMS Protocols
 
@@ -676,7 +633,7 @@ See the \<Replication> tag in the following example:
 
 #### Base protocols can now be linked directly to a protocol \[ID_19591\]
 
-From now on, it is possible to create a base protocol that is not linked to a specific element type but directly to a protocol. This means that you will now be able to link protocols with dif­ferent element types to the same base protocol.
+From now on, it is possible to create a base protocol that is not linked to a specific element type but directly to a protocol. This means that you will now be able to link protocols with different element types to the same base protocol.
 
 In a Protocol.xml file, when a base protocol contains \<Mediation>\<LinkTo> tags with a *protocol* attribute, the element type in the *basefor* attribute of the \<Protocol> tag will now be disre­garded.
 
@@ -688,11 +645,11 @@ By specifying the new “viewImpact” option in a particular table column defin
 <ColumnOptions options=";viewImpact" />
 ```
 
-*\*Multiple view ID have to be separated by semicolons.*
+*Multiple view ID have to be separated by semicolons.*
 
 #### New ColumnOptions option: QueryTablePID \[ID_19897\]
 
-By specifying the new “QueryTablePID” option in a particular table column definition, you can configure a column containing parameter IDs of tables from which to retrieve additional infor­mation. This option will mostly be used in CPE environments.
+By specifying the new “QueryTablePID” option in a particular table column definition, you can configure a column containing parameter IDs of tables from which to retrieve additional information. This option will mostly be used in CPE environments.
 
 Default cell value in a column of this type: -1
 
@@ -704,11 +661,11 @@ Default cell value in a column of this type: -1
 
 From now on, HTTP requests executed from DataMiner protocols via SLPort will automatically include the following header:
 
-```txt
+```html
 Accept-Encoding: gzip, deflate
 ```
 
-This way, DataMiner will inform the web server that it supports gzip and deflate decompres­sion. If the web server also supports this, it will return the requested data gzip or deflate com­pressed. SLPort will then automatically decompress the data and pass it uncompressed to SLProtocol.
+This way, DataMiner will inform the web server that it supports gzip and deflate decompression. If the web server also supports this, it will return the requested data gzip or deflate com­pressed. SLPort will then automatically decompress the data and pass it uncompressed to SLProtocol.
 
 Due to this enhancement, overall transfer speed and bandwidth utilization will increase.
 
@@ -719,7 +676,7 @@ Due to this enhancement, overall transfer speed and bandwidth utilization will i
 
 The *FillArray* and *FillArrayWithColumn* functions now support history sets.
 
-Both functions now accept a datetime that will be applied to all values passed in the parame­ter set.
+Both functions now accept a datetime that will be applied to all values passed in the parameter set.
 
 > [!NOTE]
 > Contrary to setrow, it is not possible to specify multiple datetime values for different parts of the parameter set.
@@ -728,21 +685,21 @@ The QActionBaseClasses functions have been expanded with an optional parameter. 
 
 NotifyProtocol calls:
 
-```txt
+```csharp
 protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/ , new object[3] { <TablePid>, <bOverrideBehaviour_bool>, <DateTime> } , values});
 protocol.NotifyProtocol(220/*NT_FILL_ARRAY_WITH_COLUMN*/ , new object[] { <TablePid>, <ColumnPid>, new object[2] { <bOverrideBehaviour_bool>,<DateTime>} }, Values);
 ```
 
 Protocol functions:
 
-```txt
+```csharp
 protocol.FillArray(<TablePid>, Values, <DateTime>);
 protocol.FillArrayWithColumn(<TablePid>, <ColumnPid>, <keys>, <values>, <DateTime>);
 ```
 
 QActionTable functions:
 
-```txt
+```csharp
 table.FillArray(rows, <DateTime>);
 table.SetColumn(<ColumnPid>, keys, values, <DateTime>);
 ```
@@ -796,7 +753,7 @@ When using a *FillArray* call (*NT_FILL_ARRAY*, *NT_FILL_ARRAY_NO_DELETE* or *N
 
 For example:
 
-```txt
+```csharp
 object[] column1 = new object[] { "Key 10", "Key 20", "Key 30" };
 object[] column3 = new object[] { "2.2", "1.1", "3.3" };
 object[] column2WithTimeStamps = new object[] { new object[] { "Z", DateTime.Now - TimeSpan.FromDays(1) }, new object[] { "Y", DateTime.Now - TimeSpan.FromDays(2) }, "X" }; // Note, providing a timestamp is optional. If none is provided, DateTime.Now will be used.
@@ -810,7 +767,7 @@ When sending an NT_SNMP_GET request from within a QAction, it is now possible to
 
 See the following example:
 
-```txt
+```csharp
 elementInfo[13] = maxRepetitions;
 object[] result = (object[])protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, tableOids);
 ```
@@ -827,7 +784,6 @@ In base protocols and device protocols linked to base protocols, you can now spe
 A \<ValueMapping> tag has two attributes:
 
 - a *remoteValue* attribute that refers to the value in the other protocol, and
-
 - a *value* attribute that refers to the value in the current protocol.
 
 Here is an example of a value mapping defined in a base protocol:
@@ -869,11 +825,8 @@ The purpose of this new feature is to detect anomalous changes in the behavior o
 **Current limitations**
 
 - Only possible for trended parameters with numeric values.
-
 - Not possible for partial table parameters.
-
 - Anomaly detection is limited to 100,000 parameters per DataMiner Agent.
-
 - Processing of change points (see below) is limited to 1,000 points per second. If the buffer receives more than 100,000 change points in rapid succession, some of those may be disre­garded.
 
 **Change points**
@@ -886,13 +839,13 @@ Any change in behavior is called a change point. At present, there are five type
 | Level shift      | A value which shifts upwards or downwards (similar to an outlier) and then stays at that new level.<br> Example: A value fluctuating around 0 which starts fluctuating around 10.                                                                                                                                                                                                                                                                                                                                  |
 | Variance change  | A value of which the variance either increases or decreases.<br> Example: A series like 0.5, 0.6,-0.5,-0.2, 1,… 5,8,9,-5,-6,-2.1,… indicates a variance increase. At some point, a value that is fluctuating around 0 between 1 and -1, starts fluctuating around 0 between 10 and -10.                                                                                                                                                                                                                            |
 | Trend change     | A value which suddenly starts increasing or decreasing at a rate different from the normal behavior.<br> Examples:<br> -  A value fluctuating around 10 (i.e. a trend slope of 0) which suddenly starts increasing 1 unit per second (i.e. a trend slope of 1).<br> -  A value fluctuating around a line with slope 1 which suddenly starts fluctuating around a line with slope -1. |
-| Unlabeled change | If a change point cannot be classified as one of the above-mentioned change points, it is considered an unlabeled change.                                                                                                                                                                                                                                                                                                                                                                                          |
+| Unlabeled change | If a change point cannot be classified as one of the above-mentioned change points, it is considered an unlabeled change.                                                                                                                                                                                                                                                                                                                                                   |
 
 **Behavioral anomalies**
 
 Some change points are more significant or unexpected than others. The stranger the current change point is compared to past change points, the higher its significance will be.
 
-Of every new change point, its significance is calculated based on its characteristics (change point type, direction, absolute or relative change size, etc.), taking into account the parameter's change point history of the last month. The change points that are considered the most signifi­cant, i.e. the most “surprising”, are labeled “anomalous”.
+Of every new change point, its significance is calculated based on its characteristics (change point type, direction, absolute or relative change size, etc.), taking into account the parameter's change point history of the last month. The change points that are considered the most significant, i.e. the most “surprising”, are labeled “anomalous”.
 
 Level shifts which are higher or which have a different direction than previous recent jumps, or which jump to a previously unseen level, will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction appeared during the last weeks.
 
@@ -900,7 +853,7 @@ Currently, no change points of type “outlier” or “unlabeled” will be lab
 
 **Change points visible in trend graphs**
 
-On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indi­cates the importance of the change, and the color of the bar indicates the severity.
+On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indicates the importance of the change, and the color of the bar indicates the severity.
 
 When you hover the mouse pointer over a change point bar, a semi-transparent ribbon will appear over the entire height of the trend graph, showing more information about the change point.
 
@@ -932,7 +885,6 @@ DataMiner will do the following to select a trend state icon for a particular pa
 2. If some of the change points are anomalous, then the following trend state icon is selected:
 
     - Type = Type of most recent anomalous change point
-
     - Color = Red
 
     Example: A red, upwards level shift.
@@ -943,7 +895,6 @@ DataMiner will do the following to select a trend state icon for a particular pa
 3. If none of the change points are anomalous, then the following trend state icon is selected:
 
     - Type = Type of the most recent change point of which the severity is equal to or greater than 0.5. If there are no change points of which the severity is equal to or greater than 0.5, then see step 4.
-
     - Color = Black
 
 4. In all other cases, one of the following trend state icons is selected, based on the behavior of the parameter value in the last *arrowWindowLength* seconds: a flat arrow, an upward arrow, a downward arrow, or the standard trend graph icon.
@@ -968,25 +919,17 @@ When configuring SNMPv3 trap forwarding in System Center, it is now possible to 
 Authentication algorithms:
 
 - MD5
-
 - SHA128
-
 - SHA224
-
 - SHA256
-
 - SHA384
-
 - SHA512
 
 Encryption algorithms:
 
 - AES128
-
 - AES192
-
 - AES256
-
 - DES
 
 > [!NOTE]
@@ -998,7 +941,6 @@ Encryption algorithms:
 The import/export UI in Cube has been improved as follows:
 
 - When you select to do an import, you will now first have to select whether you want to import a .dmimport package or a CSV file.
-
 - Similarly, for an export, you will first need to select either an export to a .dmimport package or to a CSV file, to the clipboard or to a printer. This will improve performance of export operations where a .dmimport package is not involved.
 
 #### Visual Overview: Option to embed Chromium browser \[ID_18501\]
@@ -1083,17 +1025,14 @@ In the following examples, we open an element in Data Display mode and go direct
 All pages shown in a card’s side panel can be selected. If you want to select a page that is grouped neither under VISUAL nor under DATA, then omit the “visual” (“v”) or “data” (“d”) argu­ment (without omitting any “:” separators). See the following examples:
 
 - *http://myDma/DataMinerCube/DataMinerCube.xbap?element=48/70::help*
-
 - *http://myDma/DataMinerCube/DataMinerCube.xbap?element=48/70::alarms*
-
 - *http://myDma/DataMinerCube/DataMinerCube.xbap?service=48/105::alarms*
-
 - *http://myDma/DataMinerCube/DataMinerCube.xbap?view=SLC::aggregation*
 
 > [!NOTE]
 > Names of pages and subpages do not need to be capitalized. All character casing will be ignored.
 
-#### Visual Overview: Embedded Resource Manager timeline component has three new session vari­ables \[ID_19996\]\[ID_23047\]
+#### Visual Overview: Embedded Resource Manager timeline component has three new session variables \[ID_19996\]\[ID_23047\]
 
 When you embed a Resource Manager timeline component in a Visio drawing, you can now use the following additional session variables:
 
@@ -1103,11 +1042,15 @@ When you embed a Resource Manager timeline component in a Visio drawing, you can
 
 - **TimerangeOfSelectedReservation**
 
-    When you select a booking block, this session variable will contain the start-stop time range of the booking, inflated by 10%.     Note that values in this session variable will be serialized.<br>Example: “5248098399646517511;5248392353962787511”
+    When you select a booking block, this session variable will contain the start-stop time range of the booking, inflated by 10%.
+
+    Note that values in this session variable will be serialized.<br>Example: “5248098399646517511;5248392353962787511”
 
 - **Viewport**
 
-    When you pan or zoom in the timeline, this session variable will contain the time range that is visible on the screen.     When this session variable is set by an external source, the timeline component will be updated to show the new time range. The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
+    When you pan or zoom in the timeline, this session variable will contain the time range that is visible on the screen.
+
+    When this session variable is set by an external source, the timeline component will be updated to show the new time range. The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
 
 > [!NOTE]
 > - Using the above-mentioned session variables, you can link two timeline components in a master-detail relation.
@@ -1285,7 +1228,7 @@ These are the new log entry categories:
 
 **Messages of category Warning, Error and Exception now indicated in Cube header**
 
-Up to now, messages of category Warning, Error and Exception were displayed in a pop-up window. Now, instead an icon will be displayed in the Cube header if an error message is logged. Clicking the icon will open the Logging section of System Center. Icons can also be dis­played for warning and exception messages, but this does not occur by default. To view these icons in the header, add the following argument to the Cube URL: <br>*?enablefeature=loggingnotifications*
+Up to now, messages of category Warning, Error and Exception were displayed in a pop-up window. Now, instead an icon will be displayed in the Cube header if an error message is logged. Clicking the icon will open the Logging section of System Center. Icons can also be dis­played for warning and exception messages, but this does not occur by default. To view these icons in the header, add the following argument to the Cube URL: *?enablefeature=loggingnotifications*
 
 **Automatic freeze detection**
 
@@ -1310,7 +1253,7 @@ If, for example, a shape has the following shape data, it will be shown only whe
 
 #### Visual Overview: New 'ListView' component [ID_20649] [ID_21203] [ID_21752] [ID_21686] [ID_21886] [ID_21929] [ID_21931] [ID_22795]
 
-Up to now, when you wanted to turn a shape into a list box control, you had to add two shape data items to that shape: one of type "SetVar" and one of type "SetVarOptions". In the first, you had to specify a list of fixes values or refer to a table parameter containing a number of values, and in the second, you had to specify "Control=ListBox", followed by a number of options if nec­essary.
+Up to now, when you wanted to turn a shape into a list box control, you had to add two shape data items to that shape: one of type "SetVar" and one of type "SetVarOptions". In the first, you had to specify a list of fixes values or refer to a table parameter containing a number of values, and in the second, you had to specify "Control=ListBox", followed by a number of options if necessary.
 
 In a Visio file linked to either an element or a view, you can now add a list box control by adding a shape with the following shape data items:
 
@@ -1411,7 +1354,6 @@ This will allow ticket fields to automatically inherit alarm field contents when
 **Linking an alarm field to a ticket field**
 
 1. In the Ticketing app, click the cogwheel icon in the header, open a ticket domain, and add a new ticket field (or edit an existing ticket field).
-
 2. In the *Edit field* window, open the *Alarm field* box, select the alarm field that you want to link to the ticket field, and click OK.
 
 When you now right-click an alarm in the Alarm Console and select *Ticket \> New ticket*, you will notice that the ticket field that you linked to an alarm field will have inherited the contents of that alarm field.
@@ -1517,13 +1459,9 @@ When you upload a document and link it to an element:
 **Uploading a document and linking it to a specific element**
 
 1. Open the element card, and go to the *Documents* page.
-
 2. Select the folder with the same name as the element, right-click in the document list, and select *Add document*.
-
 3. Under the *Documents* option, click *Browse*, and browse to the document you want to add.
-
 4. Under *Location*, select *Local*, and select the element to which you want to link the document.
-
 5. Click *OK*.
 
 > [!NOTE]
@@ -1555,9 +1493,7 @@ When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage 
 
 - Each message will show the time at which it was received and the time until which it will be shown (if such a time was specified in the BroadCastPopupRequestMessage).
 
-- In the Message argument (i.e. the contents of a message), you can include some of the placeholders that can be included in Visio shape data values. As this kind of broadcast mes­sages do not have any context, placeholders like e.g. \[this element\] or \[cardvar:abc\] will not work. For a list of Visio placeholders, see the following topic in DataMiner Help:
-
-    https://dcp.skyline.be/Help/index.html#t=DataMinerUserGuide%2Fvisio%2FPlaceholders\_­for_variables_in_shape_data_values.htm
+- In the Message argument (i.e. the contents of a message), you can include some of the placeholders that can be included in Visio shape data values. As this kind of broadcast mes­sages do not have any context, placeholders like e.g. \[this element\] or \[cardvar:abc\] will not work. For a list of Visio placeholders, see [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
 #### Visual Overview: Dynamic placeholder “\[Param:\]” can now retrieve all values of a column parameter \[ID_21781\]
 
@@ -1583,7 +1519,7 @@ A new setting is available in the file ClientSettings.json, *Surveyor.CPE.Launch
 
 For example:
 
-```txt
+```json
 {
    "Name":"Surveyor.CPE.LaunchCPECardOnSelect",
    "Value": false,
@@ -1721,7 +1657,6 @@ It is now possible to have a shape display the current DataMiner time in either 
 To do so, add the following dynamic placeholders to either the shape text or a shape data item:
 
 - \[UTCTime\]
-
 - \[LocalTime\]
 
 By default, those times will be displayed in the regional date/time format. If you want a time to be displayed in another format, then specify the format inside the placeholder. See the follow­ing example:
@@ -1771,7 +1706,6 @@ In the following example, a tooltip was defined that displays data found in othe
 In the global user settings in DataMiner Cube (*C:\\Skyline DataMiner\\Users\\ClientSettings.json*), it is possible to configure that certain table parameters have to be cached. This cache can now also be used for:
 
 - a shape that is linked to a table column value, and
-
 - a \[param:\] placeholder that retrieves a table column value.
 
 > [!NOTE]
@@ -1855,8 +1789,8 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
 
 - The icons in the Surveyor and apps panel have been updated. These are now the most com­monly used icons:
 
-    | Icon                                                               | Item description |
-    |----------------------------------------------------------------------|------------------|
+    | Icon                                             | Item description |
+    |--------------------------------------------------|------------------|
     | ![](~/release-notes/images/CubeXElement.png)     | Element          |
     | ![](~/release-notes/images/CubeXService.png)     | Service          |
     | ![](~/release-notes/images/CubeXRedunGroup.png)  | Redundancy group |
@@ -1878,7 +1812,6 @@ When, while editing an element in DataMiner Cube, you configure a smart-serial s
 Up to now, when multiple elements were using the same smart-serial server port, each of those elements would
 
 - receive all messages from all elements using that port, and
-
 - forward all messages to all elements using that port.
 
 From now on, for each of their smart-serial server ports of type TCP, elements can have a list of IP addresses configured from which they will accept incoming messages and to which they will forward messages.
@@ -1886,13 +1819,11 @@ From now on, for each of their smart-serial server ports of type TCP, elements c
 - When, for a particular smart-serial server port, an element has a list of allowed IP addresses configured, it will from now on
 
     - accept messages only from those IP addresses, and
-
     - forward messages only to those IP addresses.
 
 - When, for a particular smart-serial server port, an element does not have a list of allowed IP addresses configured, it will from now on
 
     - accept messages from all IP addresses that have not been added to an “allowed IP addresses” list linked to that port, and
-
     - forward messages only to IP addresses that have not been added to an “allowed IP addresses” list linked to that port.
 
 > [!NOTE]
@@ -1942,7 +1873,7 @@ At present, only one Router Control event can be specified:
 
 - Possible arguments:
 
-    | Name             | Description                                                                           |
+    | Name               | Description                                                                           |
     |--------------------|---------------------------------------------------------------------------------------|
     | Label              | The label of the input or output that was clicked.                                    |
     | Index              | The index of the input or output that was clicked.                                    |
@@ -2061,11 +1992,8 @@ In *System Center*,
 The following additional icons are now available in the DataMiner stencils:
 
 - PTP -BC
-
 - PTP-TC
-
 - PTP-Slave
-
 - PTP-GrandMaster
 
 ### DMS Reports & Dashboards
@@ -2074,7 +2002,7 @@ The following additional icons are now available in the DataMiner stencils:
 
 Reporter now has a method that allows sending an email from inside a custom report:
 
-```txt
+```csharp
 template.sendEmail(string toAddress, string toFriendly, string fromAddress, string fromFriendly, string subject, string message, bool isHtml);
 ```
 
@@ -2088,7 +2016,7 @@ In the Reporter app, the term “Reservation” has been replaced by “Booking�
 
 A completely redesigned Dashboards app is now available. This new app features HTML5 responsive design, with the ability to run across desktops, tablets and mobile platforms. It allows you to create and use interactive dashboards more easily and intuitively.
 
-You can access the app via the link https://\[MyDataMiner\]/dashboard or http://\[MyData­Miner\]/dashboard, depending on your setup. We recommend to use Google Chrome to access the app. Mozilla Firefox and Microsoft Edge are also supported.
+You can access the app via the link `https://[MyDataMiner]/dashboard` or `http://[MyData­Miner]/dashboard`, depending on your setup. We recommend to use Google Chrome to access the app. Mozilla Firefox and Microsoft Edge are also supported.
 
 The new app consists of the following main areas:
 
@@ -2147,7 +2075,6 @@ In edit mode, you can adapt the dashboard in the following ways:
 There are several ways to add a new component. First you need to indicate where the compo­nent should be located. You can do so in the following ways:
 
 - By dragging a visualization from the visualizations pane on the left onto the dashboard.
-
 - By dragging a data feed from the data pane on the right onto the dashboard.
 
 The component then needs to be further configured. As soon as you click on the component or hover the mouse pointer under the component, a quick menu will provide access to quick con­figuration actions, allowing you to select a visualization or data feed on the fly. This quick menu also allows you to move the component, duplicate the component or delete it.
@@ -2255,11 +2182,11 @@ Within one object, use a slash (“/”) as the separator between its components
 
 For example:
 
-- *http://myDma/Dashboard/#/myDashboard?elements=1/1%1D1/2&views=1&<br>parameters=1/1/1%1D1/1/2/myIndex*
+- `http://myDma/Dashboard/#/myDashboard?elements=1/1%1D1/2&views=1&parameters=1/1/1%1D1/1/2/myIndex`
 
     This URL opens a dashboard in which the elements 1/1 and 1/2, view 1 and parameters 1/1/1 and 1/1/2/myIndex are selected by default.
 
-- *http://myDma/Dashboard/#/myDashboard?<br>time%20spans=1549753200000/1549835265007*
+- `http://myDma/Dashboard/#/myDashboard?time%20spans=1549753200000/1549835265007`
 
     This URL opens a dashboard with a time range filter from 1549753200000 to 1549835265007.
 
@@ -2272,33 +2199,19 @@ For example:
 A number of new methods have been added to the Web Services API v1 to support the new app. This includes the following methods:
 
 - GetActiveAlarmCountForElement
-
 - GetActiveAlarmCountForService
-
 - GetActiveAlarmCountForView
-
 - GetAlarmCountForElement
-
 - GetAlarmCountForService
-
 - GetAlarmStatesForElement
-
 - GetAlarmStatesForParameter
-
 - GetAlarmStatesForService
-
 - GetMonitoredParametersForElement
-
 - GetMonitoredParametersForService
-
 - GetParametersForProtocolFiltered
-
 - GetTrendDataCustomTimespanForParameter
-
 - GetTrendStatisticsForParameter
-
 - GetTrendStatisticsForService
-
 - IsFeatureAvailable
 
 **Configurable maxJSONLength setting**
@@ -2326,7 +2239,7 @@ In Reporter, status queries and parameter pages of elements are now able to acce
 
 Example of how to access parameter data of paused elements in a custom report:
 
-```txt
+```csharp
 var iOptions = O_SQ_INC_ELEMENTS_PAUSED;
 template.insertStatusQueryBlock(null, null, iOptions);
 ```
@@ -2353,14 +2266,14 @@ It is now possible to add radio button lists to an interactive Automation script
 
 First, create the list:
 
-```txt
+```csharp
 UIBlockDefinition blockRadioButtonList = new UIBlockDefinition();
 blockRadioButtonList.Type = UIBlockType.RadioButtonList;
 ```
 
 Then, add buttons to the list:
 
-```txt
+```csharp
 foreach (string sOption in dropDownOptions)
 {
     uibDef.AddRadioButtonListOption(sOption);
@@ -2374,14 +2287,14 @@ foreach (string sOption in dropDownOptions)
 
 It is now possible to add password boxes to an interactive Automation script dialog box.
 
-```txt
+```csharp
 UIBlockDefinition blockPasswordBox = new UIBlockDefinition();
 blockPasswordBox.Type = UIBlockType.PasswordBox;
 ```
 
 Optionally, you can set the HasPeekIcon property to display an icon that, when clicked, will allows you to display the value inside the password box.
 
-```txt
+```csharp
 blockPasswordBox.HasPeekIcon = allowPeek;
 ```
 
@@ -2391,7 +2304,7 @@ When defining a dialog box of an interactive Automation script, you can now spec
 
 Example:
 
-```txt
+```csharp
 UIBuilder uibDialogBox = new UIBuilder();
 uibDialogBox.Title = “My dialog box title”;
 ```
@@ -2405,19 +2318,14 @@ The AlarmTemplateHelper will allow Automation scripts to manipulate alarm templa
 The AlarmTemplateHelper contains four types of methods:
 
 - Get (retrieves a row)
-
 - Delete (deletes a row)
-
 - Merge (copies a row to another template)
-
 - Update (updates a row)
 
 Each of the above-mentioned types of methods has three possible calls:
 
 - Retrieve/delete/merge/update a single row on the client (e.g. GetAlarmTemplateRow)
-
 - Retrieve/delete/merge/update multiple rows on the client (e.g. GetAlarmTemplateRows)
-
 - Retrieve/delete/merge/update multiple rows on the DataMiner Agent (e.g. GetAlarmTem­plateRowsFromServer)
 
 **Defining the alarm template and the alarm template rows to be manipulated**
@@ -2425,12 +2333,11 @@ Each of the above-mentioned types of methods has three possible calls:
 Before you send a call, you have to define the alarm template of which you want to retrieve, delete, merge or update rows, and the row(s) to be retrieved, deleted, merged or updated.
 
 - To define the alarm template, you have to create an AlarmTemplateID object with the pro­tocol name, the protocol version and the alarm template name.
-
 - To define the row(s), you have to create one or more AlarmTemplateRowID objects with the parameter ID, the condition name (empty in case of no condition) and the filter (empty in case of no filter).
 
 See the following example:
 
-```txt
+```csharp
 AlarmTemplateHelper helper =new AlarmTemplateHelper(Engine.SLNetRaw.HandleMessages);
 var id = new AlarmTemplateID("AlarmTemplate", "Protocol", "1.0.0.0");
 var rowId = new AlarmTemplateRowID(1, "condition", "filter");
@@ -2471,7 +2378,7 @@ In an Automation script, it is now possible to pass information from a subscript
 
 In the parent script, prepare the subscript using the ScriptOptions object, and start it by run­ning StartScript(). Once the subscript is running, you can then use GetScriptResult() to retrieve information from the subscript and store it in e.g. a dictionary\<string, string>. See the following example.
 
-```txt
+```csharp
 Dictionary<string, string> result = scriptOptions.GetScriptResult();
 ```
 
@@ -2479,7 +2386,7 @@ Dictionary<string, string> result = scriptOptions.GetScriptResult();
 
 In a subscript, use the following line to add a key/value pair to the dictionary before it is passed to the parent script.
 
-```txt
+```csharp
 engine.AddScriptOutput("key", "value");
 ```
 
@@ -2487,7 +2394,7 @@ engine.AddScriptOutput("key", "value");
 
 By default, on the booking timeline, booking blocks display the name of the booking. Now, it is also possible to override this default name with custom text using the *Visual.BlockContent* property. See the following example.
 
-```txt
+```csharp
 ...
 public void Run(Engine engine)
 {
@@ -2513,13 +2420,13 @@ In Automation scripts and QActions, it is now possible to find an interactive cl
 
 General syntax of the FindInteractiveClient method:
 
-```txt
+```csharp
 _engine.FindInteractiveClient(string Message, int timeoutTime, string allowedGroups, AutomationScriptAttachOptions options)
 ```
 
 Example of how to find a client by user cookie:
 
-```txt
+```csharp
 bool ok =_engine.FindInteractiveClient("Some text", 100, "userCookie:" + connection.ConnectionID, AutomationScriptAttachOptions.None);
 ```
 
@@ -2536,7 +2443,7 @@ To do so, set the *IncludeServiceElements* option to true and add it to the Elem
 
 Both the *Element.SetParameter* and *Element.SetParameterByPrimaryKey* methods now allow you to add an optional boolean indicating whether an information event should be generated when the parameter is set.
 
-```txt
+```csharp
 void SetParameter(int pid, object value, bool? generateInformation)
 void SetParameter(string name, object value, bool? generateInformation)
 void SetParameter(int pid, string index, object value, bool? generateInformation)
@@ -2584,7 +2491,7 @@ In an interactive Automation script, it is now possible to upload files from a c
 
 To allow users to do so, you need to add a file selector control to the script in the following manner:
 
-```txt
+```csharp
 UIBlockDefinition uiBlock = new UIBlockDefinition();
 uiBlock.Type = UIBlockType.FileSelector;
 uiBlock.DestVar = "varUserUploadedFile";
@@ -2592,7 +2499,7 @@ uiBlock.DestVar = "varUserUploadedFile";
 
 When the UI is then shown using *Engine#ShowUI(...)*, *UIResults* will contain the path to the file:
 
-```txt
+```csharp
 UIResults results = engine.ShowUI(uiBuilder);
 string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 ```
@@ -2606,14 +2513,12 @@ All files uploaded by users will by default be placed in the *C:\\Skyline DataMi
 In an Automation script, you can now use the engine.UnSetFlag method to clear the following run-time flags:
 
 - RunTimeFlags.AllowUndef
-
 - RunTimeFlags.NoInformationEvents
-
 - RunTimeFlags.NoKeyCaching
 
 This will allow you to, for instance, perform silent parameter sets. See the following example:
 
-```txt
+```csharp
 public void SetParameterSilent(int pid, object value) {
     // Set the NoInformationEvents flag to disable information events
     _engine.SetFlag(RunTimeFlags.NoInformationEvents);
@@ -2639,9 +2544,7 @@ At DataMiner startup, a new event will now signal when the Correlation engine is
 Event properties:
 
 - Element Name: DMANAME
-
 - Parameter Description: Correlation engine (DataMiner Element Control Protocol)
-
 - Value: Started
 
 ### DMS Maps
@@ -2655,7 +2558,6 @@ Currently, only markers for elements and service elements are supported, but, in
 In the \<ObjectsSourceInfo> tag of an “objects” layer, you can configure a collection of sources:
 
 - \<Element> for individual elements
-
 - \<ServiceChildren> for service child objects (currently only elements and services elements)
 
 **Attributes for \<Element>**
@@ -2684,10 +2586,8 @@ In the \<ObjectsSourceInfo> tag of an “objects” layer, you can configure a c
 Any of the above-mentioned subtags can contain raw text, a name of a property or a parame­ter ID (with optional table index). See the following examples:
 
 - \<Latitude>12.34\</Latitude>
-
 - \<Longitude>\<Property>MyLongitudeProperty\</Property>\</Longitude>
-
-- \<Title>\<Parameter>\<ID>123\</ID>\<Index>MyTableIndex\</Index>\</Parameter><br>\</Title>
+- \<Title>\<Parameter>\<ID>123\</ID>\<Index>MyTableIndex\</Index>\</Parameter>\</Title>
 
 #### Visualizing DCF connections as lines between markers \[ID_21923\]
 
@@ -2724,7 +2624,7 @@ Examples:
 ```
 
 ```xml
-<Detail name="MyVariable" type="service/parameter" service="MyService" pid="12345"        idx="MyDisplayKey" />
+<Detail name="MyVariable" type="service/parameter" service="MyService" pid="12345" idx="MyDisplayKey" />
 ```
 
 ### DMS CPE Management
@@ -2764,7 +2664,6 @@ When, in DataMiner Cube, you now want to mark an item as a dummy item in that ta
 In a CPE environment, right-click menus now allow you to copy certain values:
 
 - When you right-click a diagram node, you can copy the title of the node as well as the values displayed on the node.
-
 - When you right-click a value in a KPI list, you can copy that specific value.
 
 #### CPE Manager: Masking nodes in CPE diagrams \[ID_20653\]\[ID_24010\]
@@ -2873,7 +2772,6 @@ The following new alarm level properties have been added to the view state:
 It is now possible to add a “view impact” column to a CPE table (by specifying the “ViewImpact” option in its column definition). In each of the table rows, the “view impact” column can then contain the IDs of the views that are impacted by that particular row.
 
 - The highest alarm among all rows that impact a particular view will be copied to the Direct­ViewImpactsLevel property of the ViewStateEventMessage class.
-
 - The bubble-up level will be copied to the DirectViewImpactsBubbleupLevel property of the ViewStateEventMessage class.
 
 #### DataMiner Cube: A chain can now have several list tabs displaying the same data but with a dif­ferent filter \[ID_21704\]
@@ -2915,7 +2813,6 @@ If a topology cell is configured as in the example below, and the specified tabl
 Two new general parameters have been added:
 
 - \[Alarm System Type\]
-
 - \[Alarm System Name\]
 
 When no topology cell is defined for a monitored parameter, then the values of the alarm properties “System Type” and “System Name” will be set to the values found in the above-men­tioned general parameters.
@@ -2950,34 +2847,31 @@ From now on, the response of the *GetAggregationQueryResultAsync* method will a
 The Job Manager app now allows you to use job templates. Those templates can be managed using either the app’s HTML5 user interface or the following API methods:
 
 - JobHelper.JobTemplates.Create(JobTemplate)
-
 - JobHelper.JobTemplates.Update(JobTemplate)
-
 - JobHelper.JobTemplates.Delete(JobTemplate)
-
 - JobHelper.JobTemplates.Read(FilterElement\<JobTemplate>)
 
 Errors that can be returned in TraceData:
 
 - ManagerStoreError.Reason.Unknown
 
-*A general exception occurred. Something went very wrong. Check logging and \<see cref="Message"/>.*
+    *A general exception occurred. Something went very wrong. Check logging and \<see cref="Message"/>.*
 
 - ManagerStoreError.Reason.ModuleNotInitialized
 
-*The module to which the request was sent was not yet fully initialized.*
+    *The module to which the request was sent was not yet fully initialized.*
 
 - ManagerStoreError.Reason.ObjectAlreadyExisted
 
-*During a create request the given object already existed.*
+    *During a create request the given object already existed.*
 
 - ManagerStoreError.Reason.ObjectDidNotExist
 
-*During an update request, the object did not already exist (and thus can't be updated).*
+    *During an update request, the object did not already exist (and thus can't be updated).*
 
 - ManagerStoreError.Reason.NoPermission
 
-*The current user does not have permission to complete the action.*
+    *The current user does not have permission to complete the action.*
 
 #### Job Manager API: Enhancements \[ID_21683\]
 
@@ -2994,7 +2888,6 @@ The ReservationLinkInfo property of a SectionDefinition can now contain addition
 The client will use
 
 - the BookingElementID property to determine the “virtual platform” to which the booking belongs, and
-
 - the CreateBookingScript to convert the jobs to bookings.
 
 **Update restrictions**
@@ -3024,11 +2917,8 @@ To do so, call the TicketingGatewayHelper method RemoveMaskedTicketFieldResolver
 An error will be returned in the following cases:
 
 - If the TicketFieldResolver does not exist.
-
 - If the TicketFieldResolver is not masked.
-
 - If the user has not been granted the “Ticketing Gateway/Configure” permission.
-
 - If something went wrong while deleting the TicketFieldResolver or any of the linked tickets.
 
 #### WebSockets input buffer can now expand automatically \[ID_22931\]
@@ -3046,15 +2936,10 @@ When a message is received that does not fit the buffer (which, by default, has 
 The GetTableForParameterV2 method now supports filtering based on the following table col­umn KPI options:
 
 - KPIHideWrite
-
 - HideKPI
-
 - HideKPIWhenNotInitialized
-
 - KPIShowDisplayKey
-
 - KPIShowPrimaryKey
-
 - DisableHistogram
 
 To enable KPI option filtering when calling the *GetTableForParameterV2* method, specify the “as-kpi” filter in the *Filters* input field.
@@ -3093,17 +2978,12 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 
 - Redesigned element, service, view and alarm cards, which can be accessed directly using the following URLs:
 
-    - http://\<DMAIP>/monitoring/element/\<DMAID>/\<EID>/data/\<PAGENAME>
-
-    - http://\<DMAIP>/monitoring/element/\<DMAID>/\<EID>/visual/\<PAGENAME>
-
-    - http://\<DMAIP>/monitoring/element/\<DMAID>/\<EID>/chain/\<CHAINNAME>
-
-    - http://\<DMAIP>/monitoring/view/\<VIEWID>/\<PAGENAME>
-
-    - http://\<DMAIP>/monitoring/view/\<VIEWID>/visual/\<PAGENAME>
-
-    - http://\<DMAIP>/monitoring/alarm/\<DMAID>/\<ALARMID>
+    - `http://<DMAIP>/monitoring/element/<DMAID>/<EID>/data/<PAGENAME>`
+    - `http://<DMAIP>/monitoring/element/<DMAID>/<EID>/visual/<PAGENAME>`
+    - `http://<DMAIP>/monitoring/element/<DMAID>/<EID>/chain/<CHAINNAME>`
+    - `http://<DMAIP>/monitoring/view/<VIEWID>/<PAGENAME>`
+    - `http://<DMAIP>/monitoring/view/<VIEWID>/visual/<PAGENAME>`
+    - `http://<DMAIP>/monitoring/alarm/<DMAID>/<ALARMID>`
 
 > [!NOTE]
 > To open this new Monitoring & Control app from the address bar of your internet browser, enter the IP address of the DataMiner Agent, followed by “/monitoring”.
@@ -3205,9 +3085,7 @@ When you open the new *Services* tab, it lists all services in a dynamic, filte
 3. Right-click in the list header, and do the following:
 
     - add or remove columns,
-
     - change the text alignment inside columns, and
-
     - rename columns.
 
     > [!NOTE]
@@ -3228,11 +3106,8 @@ When you right-click the list header, and select *Add/remove column \> More*, th
 - Set the column type of a column (which, by default, is set to “Text”):
 
     - Set the column type of a column containing IDs to “Alarm icon” to display the IDs as alarm icons.
-
     - Set the column type of a column to “Custom icon” to have its contents replaced by icons.
-
     - Set the column type of a column to “Color” to have the cells in that column visualized as colored blocks.
-
     - Set the column type of a column to “Date” to have its contents displayed as date values.
 
 - In the *Filter by type* section, indicate which type of columns you want to choose from (ser­vices, properties and/or service profiles). It is also possible to add additional service profile columns.
@@ -3242,7 +3117,6 @@ When you right-click the list header, and select *Add/remove column \> More*, th
 In the *Apps* tab of the DataMiner Cube navigation pane, you can now find the following new applications:
 
 - Resources
-
 - Bookings
 
 > [!NOTE]
@@ -3269,7 +3143,6 @@ In profile parameters and resources, you can now define so-called capabilities. 
 - Every resource usage definition in a booking instance or service booking instance can now contain a list of resource capability usages, each containing
 
     - a link to the profile parameter that defines the capability, and
-
     - a required capability value (a single required discreet value or a single required value in the range)
 
 - When you schedule a booking, the ResourceCapabilityUsage data of the booking will be checked against the capabilities of the resource. If the resource does not have the requested capabilities, you will receive an error.
@@ -3277,7 +3150,6 @@ In profile parameters and resources, you can now define so-called capabilities. 
 - When a Resource has a ResourceCapability using a particular ProfileParameter, and that Resource is used in a scheduled ReservationInstance, from now on, it will not be allowed to delete the ProfileParameter in question. Updating a ProfileParameter of category “Capabil­ity” is always allowed, except:
 
     - deleting capabilities that are in use, and
-
     - deleting the capability category if it is being used by resources linked to scheduled book­ings.
 
     The same rule applies to ProfileParameters of category “Capacity”. Updating such a param­eter is always allowed, except:
@@ -3311,7 +3183,6 @@ In profile parameters and resources, you can now define capacities. This will al
 - Every resource usage definition in a booking instance or service booking instance can now contain a list of resource capacity usages, each containing
 
     - a link to the profile parameter that defines the capacity, and
-
     - a required capacity value (a single required discreet value or a single required value in the range)
 
 - When you schedule a booking, the ResourceCapabilityUsage data of the booking will be checked against the capabilities of the resource. If the resource does not have the requested capabilities, you will receive an error.
@@ -3322,7 +3193,6 @@ In profile parameters and resources, you can now define capacities. This will al
 - When a Resource has a ResourceCapability using a particular ProfileParameter, and that Resource is used in a scheduled ReservationInstance, from now on, it will not be allowed to delete the ProfileParameter in question. Updating a ProfileParameter of category “Capabil­ity” is always allowed, except:
 
     - deleting capabilities that are in use, and
-
     - deleting the capability category if it is being used by resources linked to scheduled book­ings.
 
     The same rule applies to ProfileParameters of category “Capacity”. Updating such a param­eter is always allowed, except:
@@ -3410,9 +3280,7 @@ The following resource updates can cause a resource to be quarantined:
 Order in which ReservationInstances are quarantined:
 
 1. First try to quarantine ResourceUsageDefinitions of ReservationInstances that are already being quarantined.
-
 2. Then try to quarantine the ReservationInstances that are the last to start.
-
 3. Finally, if necessary, try to quarantine a random selection of ReservationInstances.
 
 Limitations:
@@ -3420,7 +3288,6 @@ Limitations:
 - ReservationInstances derived from a ReservationDefinition are never quarantined. When updating a resource used by a ReservationInstance derived from a ReservationDefinition, in the tracedata a ResourceManagerErrorData object is returned with the following proper­ties:
 
     - SubjectId: ResourceId
-
     - conflictinformation: all ResourceUsageDefinitions used by ReservationInstances derived from a ReservationDefinition
 
 - When a Cassandra database is being used, ReservationInstances scheduled after the cach­ing period defined in the configuration file are not checked if they are saved on a DMA other than the one on which the Resource was updated.
@@ -3439,9 +3306,7 @@ In the Profiles app, the parameter definition now indicates that the optional de
 On systems using only legacy Reservation objects, the following checks are performed when editing a resource:
 
 - Is the new maxconcurrency of the resource high enough to support the current bookings?
-
 - Are the new capacities of the resource high enough to support the current bookings?
-
 - If the ResourceMode was changed to Maintenance, is the resource not being used by any booking?
 
 If any of these checks fail, an error will be returned in the tracedata.
@@ -3470,21 +3335,15 @@ A new Reason has also been added to the QuarantineTrigger class with value “Re
 The following ReservationInstance updates can cause a ResourceUsageDefinition to be quar­antined:
 
 - Updating a required capacity so more usage is needed.
-
 - Updating a required capability so more usage is needed.
-
 - Using more concurrency of a resource.
-
 - Moving a ReservationInstance to a new time range.
-
 - Adding a new ReservationInstance
 
 If a ReservationInstance in a tree is quarantined, the entire tree will be quarantined, and the QuarantineTrigger will have the reason TreeMovedToQuarantine. Note that, although the Res­ervationInstance itself was quarantined, it might be that none of its ResourceUsageDefinitions were:
 
 - The IsQuarantined property of the ReservationInstance will be set to “true”.
-
 - The ReservationInstance will have its status set to “Pending”.
-
 - The ReservationInstance will have a QuarantinedResourceUsageDefinition added to its QuarantinedResources list. This QuarantinedResourceUsageDefinition will contain a trigger with the reason TreeMovedToQuarantine, but the QuarantinedResourceUsage will be set to “null”.
 
 **Profiles can now be updated by reference**
@@ -3498,7 +3357,6 @@ When this new call is used to update a ReservationInstance that already has a re
 If the ProfileManager encounters quarantine conflicts when executing an update, it will return
 
 - a ProfileManagerWarningData object in the stacktrace in case of forced quarantining, or
-
 - a ProfileManagerErrorData object in case of no forced quarantining.
 
 Those objects contain a ResourceManagerWarningData and a ResourceManagerErrorData object respectively, containing the objects that were returned by the ResourceManager.
@@ -3506,9 +3364,7 @@ Those objects contain a ResourceManagerWarningData and a ResourceManagerErrorDat
 **Limitations**
 
 - The above-mentioned quarantining checks will only be performed when updating Reserva­tionInstances. Legacy Reservation objects do not support quarantining.
-
 - If any ReservationInstances derived from ReservationDefinitions are affected, the update will be blocked and an error of type ResourceUsedByReservationDefinition will be returned.
-
 - If any ReservationInstances using legacy capacity would need to be quarantined to resolve concurrency/capacity overflows, the quarantining will be skipped and the ResourceMan­ager will fall back on the old mechanism of returning errors. If this happens, a warning will be returned with the reason “LegacyCapacitiesUsed”, along with any conflicts found by the ResourceManager in the error data.
 
 #### Service Manager: New definition grouping toggle button \[ID_21632\]
@@ -3567,9 +3423,7 @@ Using the dynamic placeholder \[Reservation:...\], you can now retrieve a proper
 In this placeholder, you need to specify
 
 - the GUID of the booking or the name or ID of the service linked to it (or a \[this service\] place­holder referring to a service),
-
 - the property to be retrieved, and
-
 - the arguments necessary to be able to retrieve the property.
 
 Syntax: \[reservation:\<GUID or service>,\<property>\|\<argA>\|\<argB>\]
@@ -3596,7 +3450,6 @@ Those decimal values will be used in resource usage calculations when calling Ge
 If the long capacity value of one of the above-mentioned objects is updated, then its decimal capacity value will also be updated (and vice versa).
 
 - If a decimal value is too large to fit in a field of type “long”, 0 will be returned when the corre­sponding long value is retrieved.
-
 - When a long capacity value is retrieved, and the corresponding decimal value is set to a non-integer value, then the decimal capacity value will be returned, rounded down to the nearest integer. If, for example, the decimal capacity value is set to 125.8, the long capacity will be 125.
 
 > [!NOTE]
@@ -3625,7 +3478,7 @@ In addition, the *SrmProtocolGenerationInfo* object has been expanded with the c
 
 A new method, *GetEligibleResourcesForServiceNode*, is now available in the *ResourceMan­agerHelper* class. It can be used to replace a resource for a specific node of a service booking that has already been scheduled. The method requires a ReservationID, a nodeID and a set of capacities and capabilities. It retrieves all eligible resources for the specified node that can provide the specified capacities and capabilities within the time range of the specified book­ing.
 
-```txt
+```csharp
 public Resource[] GetEligibleResourcesForServiceNode(
     ReservationInstanceID ServiceReservationInstance,
     int NodeID,
@@ -3637,7 +3490,7 @@ public Resource[] GetEligibleResourcesForServiceNode(
 
 When a booking enters into quarantined state because of a change in the system, the script titled *SRM_QuarantineHandling* will now be run. The entry point for this script should be config­ured as follows:
 
-```txt
+```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmQuarantineTrigger)]
 public void OnSrmQuarantineTrigger(Engine engine, List<ReservationInstance> reservations)
 {
@@ -3697,7 +3550,6 @@ Whenever a profile parameter with a type set to a value other than “Undefined�
 When a spectrum script fails, a pop-up window will now clearly show
 
 - the name of the script, and
-
 - the error message returned by the script.
 
 #### “Follow device settings” option \[ID_22615\]\[ID_23009\]
@@ -3774,13 +3626,11 @@ From now on, the HTML5 app fully supports spectrum components and spectrum thumb
 From now on, in DataMiner Cube, table column parameters will be referred to by either their long display name or their short display name:
 
 - Long display name (default name, consisting of both the table name and the column name)
-
 - Short display name (shorthand name used e.g. inside tables and in table side panels)
 
 The long display name of a table column parameter can be formatted in two ways:
 
 - \[TableName\]:\[ColumnName\] (default format, e.g. “MyTable: MyTableColumn01”)
-
 - \[ColumnName\] (\[TableName\]) (e.g. “MyTableColumn01 (MyTable)”)
 
 #### Names of existing properties can no longer be changed \[ID_18930\]
@@ -3863,9 +3713,7 @@ Up to now, if you specified a table parameter in a shape data item of type *Para
 Examples:
 
 - To refer to all rows that start with “SL”, you can specify “101/201:500:SL\*\|”.
-
 - To refer to a column, specify the column parameter, e.g. “101/201:501”.
-
 - To refer to an entire table, specify the table parameter, e.g. “101/201:500”.
 
 #### Database: Improved handling of large batches for Cassandra database \[ID_19586\]
@@ -3877,17 +3725,11 @@ The way batches are written to the Cassandra database has been improved, so that
 The following DataMiner Cube files are now signed with a COMODO certificate:
 
 - C:\\Skyline DataMiner\\webpages\\DataMinerCubeInstall\\setup.exe
-
 - C:\\Skyline DataMiner\\webpages\\DataMinerCube\\DataMinerCube.xbap
-
 - C:\\Skyline DataMiner\\webpages\\DataMinerCubeStandalone\\DataMinerCube.application
-
 - C:\\Skyline DataMiner\\webpages\\DataMinerCube\\DataMinerCube.exe
-
 - C:\\Skyline DataMiner\\webpages\\DataMinerCubeStandalone\\DataMinerCube.exe
-
 - C:\\Program Files (x86)\\Skyline Communications\\DataMiner Cube x.x.x.x\\DataMinerCube.exe
-
 - C:\\Skyline DataMiner\\webpages\\Tools\\Installs\\DataMiner Cube.msi
 
 Note that a security warning will now always appear when you download a new DataMiner Cube version. To prevent this warning from appearing, you can import the certificate into your Windows Certificate Store as follows:
@@ -4069,11 +3911,8 @@ If WebSockets are enabled, from now on, Visio pages displayed in mobile apps wil
 The following table creation scripts (found in C:\\Skyline DataMiner\\Tools) will now also create a SnapshotData table:
 
 - CentralTabledef.txt
-
 - CentralTabledefOracle.sql
-
 - CentralTabledefOracleUninstall.sql
-
 - CentralTableDefSQLServer.sql
 
 #### DataMiner Maps: View impact data now taken into account when calculating alarm states of CPE markers \[ID_21384\]
@@ -4101,13 +3940,9 @@ The SNMP++ library now allows user names to have multiple different credentials.
 Up to now, a user was considered unique based on the user name only. From now on, a user will be considered unique based on the following set of properties:
 
 - user name
-
 - authentication protocol
-
 - authentication password
-
 - privacy protocol
-
 - privacy password
 
 > [!NOTE]
@@ -4174,7 +4009,6 @@ When, in the Router Control app, you undid the latest connect or disconnect acti
 From now on, users trying to undo a connect or disconnect action involving locked inputs or outputs will be asked whether they want to first unlock the locked inputs or outputs.
 
 - If they click Yes, then the locked inputs and outputs will be unlocked, and the action will be undone.
-
 - If they click No, locked inputs and outputs will stay locked, and the action will be undone only for the currently unlocked inputs and outputs.
 
 #### Link to Jobs app in app menu Ticketing app \[ID_22012\]
@@ -4345,7 +4179,7 @@ If this call is used to perform a bulk set, an additional option can now be spec
 
 For example:
 
-```txt
+```csharp
 elementInfo[labelCount] = new uint[5] { changeType, elementId, uiMatrixPid, dataminerId, Convert.ToUInt32((int)UpdateType.UpdateFileAtOnceNoDiscreetInfoTrigger) };
 ```
 
@@ -4400,17 +4234,11 @@ Due to a number of enhancements, overall performance has improved when running i
 When, in the Alarm Console, you perform one of the below-mentioned alarm actions, the alarm update request sent to the DataMiner Agent will now contain the root alarm ID instead of the alarm ID.
 
 - Add comment
-
 - Clear alarm
-
 - Force release ownership
-
 - Mask
-
 - Release ownership
-
 - Take ownership
-
 - Unmask
 
 #### Alerter: “Take ownership” action will now use the root alarm ID instead of the alarm ID \[ID_23379\]
@@ -4573,21 +4401,13 @@ Due to a number of enhancements, the processing of event messages related to Res
 When an element is updated using an AddElementMessage, from now on, that element will only be restarted if one or more of the following properties were changed:
 
 - Bus address
-
 - Element state
-
 - IP
-
 - Poll settings
-
 - Port info
-
 - Protocol name
-
 - Protocol version
-
 - Replication info
-
 - SNMP info
 
 #### DataMiner Cube: Enhanced breadcrumbs on service cards \[ID_24408\]
@@ -4607,21 +4427,15 @@ When a \[param:\] placeholder is used in Visio, the way parameters are retrieved
 The method *GetClusterAsync*, which could not yet be used, has been removed from the Web Services API v1. In addition, a number of fields that also could not yet be used have been removed. The following fields have been removed from the *DMAAutomationScriptSettings* object:
 
 - DebugMode
-
 - AllowUndef
-
 - SupportsBackAndForward
-
 - SkipElementChecks
-
 - SavedFromCube
-
 - SkipSetInfoEvents
 
 The following fields have been removed from the *DMAScatterAxisInfo* object:
 
 - ParameterID
-
 - TableIndex
 
 #### Service & Resource Management: Enhanced performance when updating active function defini­tions \[ID_24554\]
@@ -5141,11 +4955,8 @@ When a parameter was displayed on a dialog box, in some cases, its parameter des
 A number of issues have been resolved that could occur with the breadcrumbs at the top of cards in DataMiner Cube:
 
 - When an object was renamed, it could occur that the name in the breadcrumbs was not updated.
-
 - When an object had been deleted, it could occur that it was still displayed in the bread­crumbs' drop-down menu.
-
 - For services that only contained excluded devices, it could occur that breadcrumbs were not displayed correctly.
-
 - Breadcrumbs will no longer be displayed in upper case only.
 
 In addition, on a view card, it could occur that the list of elements was not updated if an ele­ment was removed from the view while the card was open.
@@ -5531,9 +5342,7 @@ In some cases, the header of a CPE card did not show the correct alarm color. In
 The view state returned by the following methods would incorrectly not take into account the user security.
 
 - GetAlarmStateForView
-
 - GetView
-
 - GetViewsForParent
 
 > [!NOTE]
@@ -5843,7 +5652,6 @@ This will enable spectrum monitors to determine the correct set of frequencies i
 A number of enhancements have been made to the ListView component, which is used in the Bookings and Services apps as well as in Visual Overview:
 
 - The *Add/Remove Column \> More…* shortcut menu option was moved up one level and renamed to *Manage column configuration…*
-
 - The title of the column configuration window, which was named *Choose details*, has now been renamed to *Column configuration*.
 
 #### DataMiner Cube - Visual Overview: Advanced editing pane improvements \[ID_24772\]<br>\[ID_24794\]
@@ -5853,7 +5661,6 @@ The *Advanced Editing* pane now provides better support for DataMiner stencils.
 From now on, this pane will
 
 - no longer display shape data that is marked “hidden”, and
-
 - no longer show underlying formulas in shape data, but the actual value.
 
 Also, a few general enhancements have been made with regard to scrolling and keyboard focus.
@@ -5867,11 +5674,8 @@ When it was not possible to delete a ticket field resolver, additional informati
 A number of minor enhancements have been made to the *Advanced Editing* pane:
 
 - The Add shape data list will no longer show a duplicate *ChildrenFilter* entry.
-
 - The message shown when adding a duplicate shape data or when configuring an invalid shape data name will now mention shape data instead of page data.
-
 - Closing the *Advanced Editing* pane will now update the *Advanced Editing* button in the ribbon.
-
 - The current selection will now be taken into account when starting the *Advanced Editing* extension.
 
 #### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in “Send Email” actions of Correlation rules \[ID_24816\]
@@ -6044,7 +5848,7 @@ Due to a number of enhancements, overall performance has increased when writing 
 
 When checking whether a boolean ReservationInstance property is set to true or false, you can now specify the type as “Bool” as well as “Boolean”. See the following example:
 
-```txt
+```csharp
 "ReservationInstance.Properties.\"Contributing Service\"[Bool]==false"
 ```
 
@@ -6056,7 +5860,7 @@ When checking whether a boolean ReservationInstance property is set to true or f
 
 It is now possible to check whether a boolean ReservationInstance property is set to true or false. See the following example:
 
-```txt
+```csharp
 "ReservationInstance.Properties.\"Contributing Service\"[Bool]==false"
 ```
 
@@ -6281,7 +6085,6 @@ When debugging a QAction, in some cases, when DIS injected a DLL, it would no lo
 When a matrix crosspoint was updated via a QAction using one of the following calls, in some cases, the update would not be applied when connected to a DataMiner Agent other than the one hosting the element:
 
 - SendToDisplay(pid, x, y);
-
 - SendToDisplay(pid, int\[\], int\[\]);
 
 #### DataMiner Cube - Visual Overview: Line property configuration not taken into account when determining highlight style priorities \[ID_24955\]
@@ -6917,7 +6720,7 @@ In SLDMS, a number of object handling enhancements have been made to prevent mem
 
 The EULA page has been updated.
 
-This page can be accessed by clicking *Skyline software license terms* in the *About* window of Cube and the HTML5 applications, or by going to http://\<IP address of DMA>/EULA.htm on the DataMiner Agent.
+This page can be accessed by clicking *Skyline software license terms* in the *About* window of Cube and the HTML5 applications, or by going to `http://<IP address of DMA>/EULA.htm` on the DataMiner Agent.
 
 #### DataMiner Cube - Protocols & Templates: Link to Cube logging added to error window that appears when a server-side error occurred while uploading a functions file \[ID_25953\]
 
@@ -7224,7 +7027,6 @@ In the Alarm Console, in some cases, the alarm duration indicator would not be s
 The problem would occur in the following situations:
 
 - When you expanded a correlation alarm, the alarm duration indicator of the source alarms would disappear.
-
 - When, for a particular alarm, an update was received while its history was expanded, the alarm duration indicator of the alarms in the history list would disappear.
 
 #### Automation scripts: Problem when a parameter specified in an email action contained a double quote character \[ID_26046\]
@@ -7729,9 +7531,7 @@ In the Monitoring app, when users had been granted the “View notes” permissi
 When DataMiner was not running, in some cases, the following scheduled tasks would incorrectly remain in a “Running” state:
 
 - Skyline DataMiner Backup (DataMinerBackup.js)
-
 - Skyline DataMiner Database Optimization (OptimizeDB.js)
-
 - Skyline DataMiner LDAP Resync (ReloadLDAP.js)
 
 As a result, the next scheduled execution of those tasks would not take place and a number of files would remain locked.
@@ -8115,13 +7915,11 @@ When creating a BPA test capable of taking corrective actions, developers have t
 2. Create an implementation of the Verify() method that will return
 
     - True when no issues were detected, and
-
     - False when issues were detected.
 
 3. Create an implementation of the CorrectiveAction() method that will return
 
     - True when the corrective action was performed successfully, and
-
     - False when issues prevented the action from being performed.
 
 A BPA test that was set to take corrected actions will run the Verify() method, which will run the CorrectiveAction() method in case of failure, and will then run the Verify() method again.
@@ -8208,11 +8006,8 @@ When you saved the results of a BPA test to a JSON file, you can now load that f
 From now on, the C:\\Skyline DataMiner\\BPA folder will also be included when you take one of the following predefined backups:
 
 - Full backup
-
 - Full backup without database
-
 - Configuration backup
-
 - Configuration backup without database
 
 ####  BPA test results now contain an “Outcome” property \[ID_27476\]
@@ -8220,9 +8015,7 @@ From now on, the C:\\Skyline DataMiner\\BPA folder will also be included when yo
 The IBpaTestResult interface now contains an additional property named “Outcome”. This property can have the following values:
 
 - BpaOutcome.NoIssues
-
 - BpaOutcome.IssuesDetected
-
 - BpaOutcome.Warning
 
 #### Enhanced performance when saving alarm templates with conditional monitoring \[ID_27493\]
@@ -8493,9 +8286,7 @@ From now on, you will only be allowed to delete resources when all agents in the
 When you try to delete a resource, an error will now be returned in the following circumstances:
 
 - When at least one agent is disconnected from the agent that hosts the resource you are trying to delete.
-
 - When at least one agent is not in a running state.
-
 - When there is at least one agent on which the ResourceManager module is not initialized.
 
 #### BPA test framework: Abstraction layer added to allow backward compatibility of BPA tests \[ID_27988\]
@@ -8712,17 +8503,11 @@ BPA tests can now be set to automatically run at specific intervals.
 When a table row is updated, the cells are handled according to the column's perceived priority unless overwritten. The processing order of columns has now been extended so that columns that are part of a threshold option (*Protocol.Params.Param.Alarm@Options*) within the same table definition get processed before columns that are part of a property definition and any other columns. This results in the following column processing order:
 
 1. Primary key (index)
-
 2. Display column
-
 3. Foreign key columns
-
 4. Columns part of the naming or namingformat definition
-
 5. Columns part of a conditional monitoring definition
-
 6. Columns part of a threshold definition (NEW)
-
 7. Columns part of a property definition
 
 Any other columns are processed in the order defined in the table parameter
@@ -8994,7 +8779,6 @@ Up to now, when a BPA test was uploaded, no check would be performed to determin
 From now on, when a BPA test is uploaded, a check will be performed:
 
 - If a BPA test is found with the same name under the same DLL, the test will be updated, but the GUID and the schedule will be left unchanged.
-
 - If a BPA test is found with the same name under a different DLL, an error will be thrown.
 
 #### Enhanced performance when a large number of Cube clients are connected to the same DMA \[ID_28695\]
@@ -9189,8 +8973,8 @@ Cassandra health status transitions and failed queries will now also be logged i
 
 At the bottom of the sidebar, you can now click a help button that will open a menu containing links to the following pages on DataMiner Dojo:
 
-| Menu command    | Page on DataMiner Dojo                                                                        |
-|-----------------|-----------------------------------------------------------------------------------------------|
+| Menu command    | Page on DataMiner Dojo                                      |
+|-----------------|-------------------------------------------------------------|
 | Blog            | <https://community.dataminer.services/blog/>                |
 | Questions       | <https://community.dataminer.services/questions/>           |
 | Learning        | <https://community.dataminer.services/learning/>            |
@@ -9526,13 +9310,11 @@ Client machines running DataMiner Cube now require Microsoft .NET Framework 4.6.
 When, in Visual Overview, you create a shape that should display the Resource Manager timeline by adding a shape data field of type Component set to “Reservations” or “Bookings”, the Navigate and Viewport session variables allow you to control navigation and zooming within the timeline.
 
 - The Navigate variable can be used to automatically navigate to a specified time range.
-
 - The Viewport variable can be used to zoom to a specified time range and to visualize the time range to which you zoomed manually.
 
 From now on, both variables can be processed immediately upon opening a visual overview with a Resource Manager timeline.
 
 - Setting the Navigate variable using a page-level InitVar will make the timeline navigate immediately to the chosen time slot and clear the Navigate variable.
-
 - The Viewport variable will always be read upon opening the Resource Manager timeline. In other words, if a session variable already exists in the scope in question (e.g. when the time line was opened while using the global variable scope), the timeline will automatically zoom to the last-known view port.
 
 > [!NOTE]
@@ -9681,9 +9463,7 @@ When the first attempt to load a functions.xml file would fail, in some cases, n
 In some cases, the following problems could occur with regard to Chromium web browser controls:
 
 - When opened in a window on a high-DPI monitor, they would be scaled twice and the image would not match the mouse cursor.
-
 - When displayed in a window that was moved from one monitor to another, they would not adapt to the new DPI scale.
-
 - When displayed on a high-DPI monitor, they were rendered at 100% DPI and then upscaled, resulting in an imperfect image.
 
 ####  SLNetComNotificationThread: Delay between notifications \[ID_29599\]
@@ -9799,9 +9579,7 @@ Also, a small memory leak was fixed in elements contained within services.
 The following new BPA tests have been added to the default test set:
 
 - Minimum Requirements Check
-
 - Report Active RTE
-
 - View Recursion
 
 ### Fixes
@@ -9923,7 +9701,6 @@ The BPA tests run before the start of an upgrade process will generally be tests
 BPA tests added to the Prerequisites folder of a DataMiner upgrade package must comply to the following rules:
 
 - They must have their CanRunOnOfflineAgents flag enabled. This will make sure that, in a Failover setup, the offline agent will also be checked.
-
 - They must have their RequireSLNet flag disabled.
 
 #### Enhanced performance when exporting function protocols \[ID_29929\]
@@ -9965,7 +9742,6 @@ The BPA test “Report Active RTE” will now run once every 8 minutes instead o
 The following default BPA tests were updated:
 
 - Minimum Requirement Checker: Name changed to “Minimum Requirements Check”
-
 - View Recursion: Description updated
 
 ### Fixes
@@ -10111,13 +9887,11 @@ From now on, it will no longer be possible to add a resource with invalid capaci
 - When you try to add a resource with “NULL” instead of a Capacity or with a Capacity of which the value is set to “NULL”, an error with reason ResourceCapacityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
 
     - ResourceId: The ID of the resource.
-
     - ResourceCapacity: The capacity object that did not reference a correct capacity profile.
 
 - When you try to add a resource with “NULL” instead of a Capability or with a Capability of which the value is set to “NULL” and IsTimeDynamic set to FALSE, an error with reason ResourceCapabalityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
 
     - ResourceId: The ID of the resource.
-
     - ResourceCapability: The capability object that did not reference a correct capability profile.
 
 #### Enhanced performance when creating function resources \[ID_30248\]
@@ -10136,11 +9910,11 @@ Due to a number of enhancements with regard to the caching of key links, overall
 
 Due to a number of enhancements, overall performance has increased when including/excluding elements in/from services based on parameter values, especially when the same parameter is used in a large number of element inclusion conditions.
 
-#### http://\[dma\]/root/tools/ page now allows you to install SECTIGO certificate \[ID_30297\]
+#### http://[dma]/root/tools/ page now allows you to install SECTIGO certificate \[ID_30297\]
 
 DataMiner Cube files are now signed with a SECTIGO certificate.
 
-You can install that certificate by clicking a hyperlink in the *DataMiner tools* section of the http://\[dma\]/root/tools/ page.
+You can install that certificate by clicking a hyperlink in the *DataMiner tools* section of the `http://[dma]/root/tools/` page.
 
 #### SLElement: Enhanced performance when starting up elements \[ID_30315\] \[ID_30316\]
 
@@ -10162,7 +9936,7 @@ Up to now, when SLNet updated the DataMiner version in VersionHistory.txt while 
 
 #### DataMiner Cube: Links to deprecated DCP platform replaced by links to the new https://data­miner.services platform \[ID_30430\]
 
-Throughout the Cube UI, all links to the deprecated DataMiner Collaboration Platform have been replaced by links to the new https://dataminer.services platform.
+Throughout the Cube UI, all links to the deprecated DataMiner Collaboration Platform have been replaced by links to the new <https://dataminer.services> platform.
 
 #### DataMiner Cube - Data Display: Memory consumption of tables showing service impact has been reduced \[ID_30433\]
 
@@ -10201,7 +9975,6 @@ Also, when an alarm template schedule was started, in some cases, either the act
 - When an alarm template with a schedule was edited while, according to its schedule, it was inactive, the following would happen:
 
     - The template would temporarily be activated, causing alarms to be created which would immediately be cleared.
-
     - When no active window was scheduled that day, the first window of the upcoming days would be used for that day.
 
 - When an alarm template with a schedule was assigned to an element while, according to its schedule, it was inactive, it would be activated until the first window had passed.
@@ -10275,9 +10048,7 @@ The version compatibility test has now been adapted:
 - When a minimum and/or maximum DataMiner version is specified, the BPA test will run when the DataMiner Agent has
 
     - a Main Release version greater than the minimum Main Release version and smaller than or equal to the maximum Main Release version, or
-
     - a Feature Release version greater than the minimum Feature Release version and smaller than or equal to the maximum Feature Release version, or
-
     - a Release version of which the Main Release on which it is based is greater than the minimum Feature Release version and smaller or equal to the maximum Feature Release version.
 
 #### SLNet would fail to initialize when external authentication via SAML was configured incorrectly \[ID_30318\]
@@ -10492,25 +10263,15 @@ Also, a number of issues have been fixed with regard to displaying statuses of v
 When, in the Alarm Console, you add a new history or sliding window tab page, you can add a filter by clicking *Apply filter*. After configuring that filter, you can click *Count alarms* to see how many alarms will be retrieved when that filter is applied. However, up to now, when the filter contained one of the following items, it would not be possible to count the number of alarms that matched the filter:
 
 - ElementType
-
 - InterfaceImpact
-
 - ParameterDescription
-
 - Protocol
-
 - ServiceImpact
-
 - ViewID
-
 - ViewImpact
-
 - ViewName
-
 - VirtualFunctionID
-
 - VirtualFunctionImpact
-
 - VirtualFunctionName
 
 From now on, when the alarm filter contains one of the above-mentioned items, the *Count alarms* button will not be available.

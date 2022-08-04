@@ -1,4 +1,8 @@
-# Feature release 10.1.4
+---
+uid: General_Feature_Release_10.1.4
+---
+
+# General Feature Release 10.1.4
 
 ## New features
 
@@ -9,18 +13,14 @@
 From now on, each time a service or a service template is deleted, a service history record will be written to the database. Each record will contain the following information:
 
 - A unique record ID
-
 - The ID of the service (template) that was deleted
-
 - The name of the service (template) that was deleted
-
 - The time at which the service (template) was deleted
-
 - The time at which the service (template) was created.
 
 The service history records can be retrieved using the existing HistoryHelper:
 
-```txt
+```csharp
 var historyHelper = new HistoryHelper(engine.SendSLNetMessages);
 var recordsPastDay = ServiceDeletionHistoryExposers.ServiceDeletedAt.GreaterThan(DateTime.UtcNow.AddDays(-1));
 var historyRecords = historyHelper.ServiceDeletionHistory.Read(recordsPastDay);
@@ -28,26 +28,21 @@ var historyRecords = historyHelper.ServiceDeletionHistory.Read(recordsPastDay);
 
 > [!NOTE]
 > - Service history records are stored in ElasticSearch. This means, that an ElasticSearch database has to be available for this feature to work.
-> - If you want the service history records to be included in a DataMiner backup, select the *Include service history data in backup* option. In case of a full backup, this option will be selected by default.
+> - If you want the service history records to be included in a DataMiner backup, select the *Include service history data in backup* option. In case of a full backup, this option will be selected by default.
 
 #### SLAnalytics - Automatic incident tracking: Grouping on generic alarm, element, service and view properties \[ID_28820\]
 
 Automatic incident tracking attempts to group alarms that belong to the same incident. To do so, by default, it takes into account the following alarm properties:
 
 - The parameter associated with the alarm
-
 - The service associated with the alarm
-
 - The element associated with the alarm, the IDP location of this element, and the view(s) in which this element is located
-
 - The polling IP address of the element associated with the alarm (only in case of a timeout alarm)
 
 From now on, automatic incident tracking can also take into account any alarm, element, service or view property.
 
 - The properties that have to be taken into account must be configured in the analytics configuration file. See “Configuration” below.
-
 - The alarm properties that have to be taken into account need to have the *Update alarms on value changed* option activated in DataMiner Cube.
-
 - The element, service and view properties that have to be taken into account need to have the *Make this property available for alarm filtering* option activated in DataMiner Cube.
 
 Alarms are grouped as soon as they have the same value for one of the configured alarm, service or view properties, the same focus value and approximately the same timestamp. However, in case of grouping on element property, a threshold needs to be set and alarms will only be grouped when a certain amount of elements with the given property value are in alarm. In other words, alarms on elements with the same property value will be grouped when the proportion of elements in alarm among all elements with that property value is greater than the configured threshold.
@@ -111,7 +106,6 @@ To add a service property, add the following \<item> tag inside the \<value> tag
 The LogHelper API now has a FlushToDatabaseAfterUpsert option.
 
 - If you set this option to true (i.e. the default setting), then the LogHelper will wait for the database to respond after writing log entries to the database.
-
 - If you set this option to false, then the LogHelper will not wait for the database to respond after writing log entries to the database.
 
 > [!NOTE]
@@ -130,18 +124,18 @@ In DataMiner Cube, the mask status (“Masked” or “Not masked”) will now b
 
 To handle situations where inform messages are sent out again while they have already been acknowledged by DataMiner, DataMiner will now by default keep the latest 20 inform messages per SNMP entity in a cache, so that it can check whether an incoming inform message has already been processed, and discard it if this is the case.
 
-In the *DataMiner.xml* file, you can customize how many inform messages are stored in the cache. To do so, set the *informCacheSize* attribute of the *SNMP* tag to the number of inform messages that should be stored. For example:
+In the *DataMiner.xml* file, you can customize how many inform messages are stored in the cache. To do so, set the *informCacheSize* attribute of the *SNMP* tag to the number of inform messages that should be stored. For example:
 
 ```xml
 <DataMiner>
-   ...
-   <SNMP informCacheSize="25" />
-   ...
+   ...
+   <SNMP informCacheSize="25" />
+   ...
 </DataMiner>
 ```
 
 > [!NOTE]
-> - If you set *informCacheSize* to 0, the cache will be disabled.
+> - If you set *informCacheSize* to 0, the cache will be disabled.
 > - Only inform messages are stored in this cache, not traps.
 > - When an inform message is discarded, this is logged in *SLSNMPManager.txt* on information level 3.
 
@@ -149,30 +143,25 @@ In the *DataMiner.xml* file, you can customize how many inform messages are sto
 
 #### DataMiner Cube - System Center: User permissions for “Live Sharing” and “Cloud Connected Agents” features have been reorganized \[ID_29004\]
 
-In the *Users/Groups* section of *System Center*, the user permissions for the Live Sharing and Cloud Connected Agents features, which are currently still in soft launch, have been reorganized.
+In the *Users/Groups* section of *System Center*, the user permissions for the Live Sharing and Cloud Connected Agents features, which are currently still in soft launch, have been reorganized.
 
 Under *General \> Live sharing*, you can now find the following user permissions:
 
 - UI Available
-
 - Share
-
 - Edit
-
 - Unshare
 
 Under *System configuration \> Cloud gateway*, you can now find the following user permissions:
 
 - Connect to cloud
-
 - Disconnect from cloud
-
 - Configure gateway service
 
 > [!NOTE]
-> - The user permissions listed under *Live sharing* are included in the *Power users* preset and higher.
-> - The user permissions under *Cloud gateway* are included in the *Administrators (read-only access to Security)* preset and higher.
-> - The *Account linking* permission, which was added in DataMiner feature release version 10.1.3, has been removed.
+> - The user permissions listed under *Live sharing* are included in the *Power users* preset and higher.
+> - The user permissions under *Cloud gateway* are included in the *Administrators (read-only access to Security)* preset and higher.
+> - The *Account linking* permission, which was added in DataMiner feature release version 10.1.3, has been removed.
 
 ### DMS Protocols
 
@@ -184,7 +173,7 @@ When this option is set to true, any datagram received on the connection will be
 
 Example:
 
-```txt
+```xml
 ...
 <PortSettings>
     <FlushPerDatagram>true</FlushPerDatagram>
@@ -202,27 +191,27 @@ The KPI stencil and the Button stencil have been restyled.
 
 - Apart from being restyled, the following shapes have also been renamed:
 
-| Old name             | New name           |
-|----------------------|--------------------|
-| kpi-noIcon-v         | kpi-noIconV        |
-| kpi-noIcon-h         | kpi-noIconH        |
-| param-normal         | list-normal        |
-| param-normal-compact | list-compact       |
-| param-combi-compact  | list-combi-compact |
-| param-multi          | list-multi         |
-| param-combi          | list-combi-compact |
+    | Old name             | New name           |
+    |----------------------|--------------------|
+    | kpi-noIcon-v         | kpi-noIconV        |
+    | kpi-noIcon-h         | kpi-noIconH        |
+    | param-normal         | list-normal        |
+    | param-normal-compact | list-compact       |
+    | param-combi-compact  | list-combi-compact |
+    | param-multi          | list-multi         |
+    | param-combi          | list-combi-compact |
 
 - A KPI and its associated icon can now be displayed in two different ways:
 
-| Shape     | Description                                                    |
-|-----------|----------------------------------------------------------------|
-| kpi-icon  | Focus on the parameter alarm state, with an icon on top of it. |
-| kpi-icon2 | Fixed background (dark blue), with an icon on top of it.       |
-
-> [!NOTE]
-> Make sure to replace the icon by one that suits the requirements.
->
-> All available icons can be found in the Icons stencil.
+    | Shape     | Description                                                    |
+    |-----------|----------------------------------------------------------------|
+    | kpi-icon  | Focus on the parameter alarm state, with an icon on top of it. |
+    | kpi-icon2 | Fixed background (dark blue), with an icon on top of it.       |
+    
+    > [!NOTE]
+    > Make sure to replace the icon by one that suits the requirements.
+    >
+    > All available icons can be found in the Icons stencil.
 
 - The master shapes of which the name starts with “kpi-” can now show the element icon with the alarm state (\_showElement) and an icon that can be clicked to navigate to the alarm overview of the linked element (\_showAlarm).
 
@@ -234,12 +223,11 @@ The KPI stencil and the Button stencil have been restyled.
 
 - All other buttons have had their rounding style adapted in order to match that of the buttons found on the Data pages of element cards.
 
-> [!NOTE]
-> It is advised to add an ellipsis (...) to the text on a button if user interaction is required after clicking the button in question.
+    > [!NOTE]
+    > It is advised to add an ellipsis (...) to the text on a button if user interaction is required after clicking the button in question.
 
 > [!NOTE]
-> The toggle buttons now use the theme accent color. This means that you will need an additional Options shape data field on page level with, for example, the following value:
-> *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|<br>#FFFFFF=ThemeBackground*
+> The toggle buttons now use the theme accent color. This means that you will need an additional Options shape data field on page level with, for example, the following value: *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|<br>#FFFFFF=ThemeBackground*
 
 #### Visual Overview: New icon added to Icons stencils \[ID_28696\]
 
@@ -279,23 +267,23 @@ In order to support a wider range of identity providers (e.g. Azure AD), DataMin
 
 Up to now, when you created a history tab with a service filter, it was only possible to select one of the active enhanced services. Now, it is also possible to select one of the enhanced services that has been deleted in the selected time frame (e.g. “last hour”).
 
-When, in the filter section, you selected “Service” and you want to be able to select an enhanced service that has been deleted in the selected time frame, then click the *Load deleted services* option, and select the deleted service from the list. That way, you will be able to create a history tab that lists the alarms associated with an enhanced service that has been deleted in the selected time frame.
+When, in the filter section, you selected “Service” and you want to be able to select an enhanced service that has been deleted in the selected time frame, then click the *Load deleted services* option, and select the deleted service from the list. That way, you will be able to create a history tab that lists the alarms associated with an enhanced service that has been deleted in the selected time frame.
 
 #### Sidebar: New help button to open DataMiner Dojo menu \[ID_28990\]
 
 At the bottom of the sidebar, you can now click a help button that will open a menu containing links to the following pages on DataMiner Dojo:
 
-| Menu command    | Page on DataMiner Dojo                                                                        |
-|-----------------|-----------------------------------------------------------------------------------------------|
-| Blog            | <https://community.dataminer.services/blog/>                |
-| Questions       | <https://community.dataminer.services/questions/>           |
-| Learning        | <https://community.dataminer.services/learning/>            |
-| Resources       | <https://community.dataminer.services/documentation/>       |
-| Suggest feature | <https://community.dataminer.services/feature-suggestions>  |
+| Menu command    | Page on DataMiner Dojo                                      |
+|-----------------|-------------------------------------------------------------|
+| Blog            | <https://community.dataminer.services/blog/>                |
+| Questions       | <https://community.dataminer.services/questions/>           |
+| Learning        | <https://community.dataminer.services/learning/>            |
+| Resources       | <https://community.dataminer.services/documentation/>       |
+| Suggest feature | <https://community.dataminer.services/feature-suggestions>  |
 
 #### Schedule configuration of BPA tests \[ID_29000\]
 
-On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the drop-down box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
+On the *Agents* > *BPA* page in System Center, you can now schedule when a BPA test should run. In the drop-down box in the *Schedule* column, you can select to run a test at different intervals, e.g. daily or every 12 hours.
 
 #### New Surveyor setting: Collapse DVE elements beneath their main element \[ID_29021\]
 
@@ -304,23 +292,18 @@ The new Surveyor setting “Collapse DVE elements beneath their main element” 
 By default, this setting is disabled, and DVE child elements are displayed in the same way as other elements.
 
 - If you set this to “All DVEs”, DVE child elements will be displayed on the level below the parent elements in the tree structure, so that you can collapse and expand the list of child elements.
-
 - If you set this to “Only function DVEs”, this will only happen for function DVEs.
 
 ### DMS Reports & Dashboards
 
 #### Dashboards app: New Views data source for generic query interface \[ID_28707\]\[ID_28877\]
 
-The generic query interface now features a new *Views* data source, which can be used to retrieve all the views in the DataMiner System. For each view, the View ID and Name columns are retrieved by default. The following columns can also be retrieved by means of an additional column filter:
+The generic query interface now features a new *Views* data source, which can be used to retrieve all the views in the DataMiner System. For each view, the View ID and Name columns are retrieved by default. The following columns can also be retrieved by means of an additional column filter:
 
 - Parent view ID
-
 - Last modified
-
 - Last modified by
-
 - Enhanced element ID
-
 - Custom view property columns
 
 #### Dashboards app - GQI: New “View relations” data source \[ID_28797\]\[ID_28877\]
@@ -335,7 +318,7 @@ Each row in this data source has the following columns:
 | Child ID | The ID of the DataMiner object in the view.                                 |
 | Depth    | The level of the DataMiner object in the view tree in relation to the root. |
 
-When you set the *Recursive* option to true, the table will not only contain all direct relationships (i.e. between a parent item and a child item), but also all indirect relationships (e.g. between a grandparent item and a grandchild item).
+When you set the *Recursive* option to true, the table will not only contain all direct relationships (i.e. between a parent item and a child item), but also all indirect relationships (e.g. between a grandparent item and a grandchild item).
 
 #### Dashboards app: Existing GQI queries stored in Queries.json will now automatically be copied to the correct dashboard files during a DataMiner upgrade \[ID_28816\]
 
@@ -351,16 +334,13 @@ All records in the views, services and elements data sources will now contain me
 
 It is now possible to import queries from another dashboard into the current dashboards.
 
-1. In the *Queries* section of the *Data* pane, click the *Import* button.
+1. In the *Queries* section of the *Data* pane, click the *Import* button.
 
 2. In the *Import Query* window,
 
     - select the dashboard containing the query,
-
     - select the query,
-
     - if necessary, change the name of the query, and
-
     - click *Import*.
 
 > [!NOTE]
@@ -380,7 +360,7 @@ A ParameterSettings property has been added to the ProfileDefinition and Profile
 
 ProfileDefinition example:
 
-```txt
+```csharp
 var profileDefinition = new ProfileDefinition()
 {
     ID = Guid.NewGuid(),
@@ -395,7 +375,7 @@ var profileDefinition = new ProfileDefinition()
 
 ProfileInstance example:
 
-```txt
+```csharp
 var profileInstance = new ProfileInstance
 {
     ID = Guid.NewGuid(),
@@ -426,7 +406,7 @@ The default value of ServiceDefinitionType is “Default”.
 
 Example:
 
-```txt
+```csharp
 // Creating a ServiceDefinition with the "ProcessAutomation" type
 var serviceDefinition = new ServiceDefinition()
 {
@@ -461,7 +441,7 @@ The ServiceResourceUsageDefinition object now has an IsContributing flag, which 
 
 Example:
 
-```txt
+```csharp
 // Setting the flag
 var reservationInstance = new ServiceReservationInstance(new TimeRangeUtc(DateTime.UtcNow.AddHours(1), TimeSpan.FromHours(1)));
 reservationInstance.ResourcesInReservationInstance.Add(new ServiceResourceUsageDefinition(resource.ID)
@@ -476,7 +456,7 @@ When requesting EligibleResources, it is now possible for the EligibleResourceCo
 
 Example:
 
-```txt
+```csharp
 var context = new EligibleResourceContext()
 {
     TimeRange = _reservationTimeRange,
@@ -517,19 +497,14 @@ Performance has improved when deleting element data in a Cassandra or SQL databa
 From now on, a Cassandra database backup will be restored in the following way onto a DataMiner Agent with an existing Cassandra database:
 
 1. Reset Cassandra to its factory default settings.
-
 2. Delete the existing Cassandra data folder.
-
 3. Restore the backup.
 
 To restore a Cassandra database backup on a DataMiner Failover system with a Cassandra database, you will now have to proceed as follows:
 
 1. End the DataMiner failover configuration as well as the Cassandra failover configuration.
-
 2. Clear/reset the backup agent.
-
 3. Restore the Cassandra database backup onto one of the two agents.
-
 4. Set up the DataMiner Failover system again.
 
 #### DataMiner Cube: Enhanced performance when opening cards \[ID_28743\]
@@ -731,7 +706,6 @@ When saving a job or a DomInstance containing a section that referred to a non-e
 From now on, an error will be stored in tracedata instead:
 
 - an error of type JobError with reason SectionUsedInJobLinksToNonExistingSectionDefinition, or
-
 - an error of type DomInstanceError with reason SectionUsedInDomInstanceLinksToNonExistingSectionDefinition.
 
 #### Problem when a cell in a table included in a virtual function was invalidated while the state of the service that included the virtual function was being changed \[ID_28911\]
@@ -754,10 +728,10 @@ The following table lists the timeline actions users will now be allowed to perf
 
 | User permission                 | Action a user is allowed to perform              |
 |---------------------------------|--------------------------------------------------|
-| Modules \> Scheduler \> Add     | Drop events on the timeline.                     |
-| Modules \> Scheduler \> Delete  | Delete events on the timeline.                   |
-| Modules \> Scheduler \> Edit    | Edit or move events on the timeline.             |
-| Modules \> Scheduler \> Execute | Manually start or stop an event on the timeline. |
+| Modules \> Scheduler \> Add     | Drop events on the timeline.                     |
+| Modules \> Scheduler \> Delete  | Delete events on the timeline.                   |
+| Modules \> Scheduler \> Edit    | Edit or move events on the timeline.             |
+| Modules \> Scheduler \> Execute | Manually start or stop an event on the timeline. |
 
 #### DataMiner Cube: Profiles app would incorrectly try to load service profiles on a non-SRM system \[ID_28947\]
 
@@ -803,7 +777,7 @@ In some cases, it was not possible to delete GQI queries.
 
 #### DataMiner landing page: Clicking the waffle icon did not open the sidebar \[ID_29050\]
 
-When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e. https://\<DmaAddress>/root/), in some cases, the sidebar listing the available apps would not open.
+When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e. `https://<DmaAddress>/root/`), in some cases, the sidebar listing the available apps would not open.
 
 #### Updating an element via a CSV export/import would not work properly when that element had an empty port type value \[ID_29052\]
 
@@ -833,11 +807,11 @@ In some cases, the SLXml process could leak memory when registered objects were 
 
 A typo has been corrected in the description for the proactive cap detection settings in System Center.
 
-#### DataMiner Cube - Alarm Console: Incorrect alarm count when loading a history tab with an ele­ment filter while some alarms in the time range were still active \[ID_29106\]
+#### DataMiner Cube - Alarm Console: Incorrect alarm count when loading a history tab with an element filter while some alarms in the time range were still active \[ID_29106\]
 
 When you loaded a history tab with an element filter while some of the alarms in the selected time range were still active, in some cases, the tab header would show an incorrect alarm count.
 
-#### Failover: LDAP notification setting would incorrectly be ignored when synchronizing Data­Miner.xml \[ID_29117\]
+#### Failover: LDAP notification setting would incorrectly be ignored when synchronizing DataMiner.xml \[ID_29117\]
 
 In a Failover setup, in some cases, the notification attribute of the LDAP element would incorrectly be ignored when synchronizing the DataMiner.xml file between the two Failover agents.
 
