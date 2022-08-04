@@ -1,4 +1,8 @@
-# Feature release 10.0.11
+---
+uid: General_Feature_Release_10.0.11
+---
+
+# General Feature Release 10.0.11
 
 ## New features
 
@@ -17,16 +21,14 @@ This feature is currently only available for trended parameters with numeric val
 in addition, proactive cap detection is currently only supported for parameters for which there are explicitly specified value bounds. It will predict when a parameter will cross one of these bounds:
 
 - A high and/or low data range value specified in the protocol, or,
-
 - A (by default) critical alarm limit of type normal (i.e. not rate or baseline) specified in the alarm template, or,
-
 - A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the \[0,100\] interval.
 
 However, note that in case there is both a data range in the protocol and an alarm threshold in an alarm template, the alarm template will get precedence.
 
 **Configuration in DataMiner Cube**
 
-In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config*. There you can also configure the lowest alarm threshold severity that will be taken into account for proactive cap detection. If this is for example set to *Major*, proactive cap detection will alert the operator whenever a parameter is predicted to go out of range or is predicted to trigger a major or critical alarm.
+In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config*. There you can also configure the lowest alarm threshold severity that will be taken into account for proactive cap detection. If this is for example set to *Major*, proactive cap detection will alert the operator whenever a parameter is predicted to go out of range or is predicted to trigger a major or critical alarm.
 
 **Suggestion events**
 
@@ -67,15 +69,15 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL or 
 
 ```xml
 <DataBase active="True" local = "false">
-    <FileCache enabled="true">
-        <MaxSizeKB>10000</MaxSizeKB>
-    </FileCache>
+    <FileCache enabled="true">
+        <MaxSizeKB>10000</MaxSizeKB>
+    </FileCache>
 </DataBase>
 ```
 
-If the *enabled* attribute of this tag is set to *true*, files will still be offloaded to the system cache folder but not forwarded to the central database.
+If the *enabled* attribute of this tag is set to *true*, files will still be offloaded to the system cache folder but not forwarded to the central database.
 
-The *MaxSizeKb* subtag determines the maximum size of the offloaded files (by default 10 GB). If this limit is reached, the oldest files will be removed until the total size is again less than the defined limit.
+The *MaxSizeKb* subtag determines the maximum size of the offloaded files (by default 10 GB). If this limit is reached, the oldest files will be removed until the total size is again less than the defined limit.
 
 Note that this feature cannot be configured in DataMiner Cube yet, but this is planned to be added soon.
 
@@ -105,34 +107,34 @@ See the examples below.
 
 **GET**
 
-```txt
+```csharp
 // NotifyDataMiner NT_SNMP_RAW_GET
 object[] oTableElementInfo = new object[10];
 ...
 oTableElementInfo[9] = "665d680e-4097-455c-9ffc-0e4a06fa63c1";
-result = (object[])protocol.NotifyDataMiner(424 /*NT_SNMP_RAW_GET*/,         oTableElementInfo, oRequestInfo);
+result = (object[])protocol.NotifyDataMiner(424 /*NT_SNMP_RAW_GET*/, oTableElementInfo, oRequestInfo);
 
 // NotifyProtocol NT_SNMP_GET
 object[] oTableElementInfo = new object[15];
 ...
 oTableElementInfo[14] = "665d680e-4097-455c-9ffc-0e4a06fa63c1";
-result = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/,         oTableElementInfo, oRequestInfo);
+result = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/, oTableElementInfo, oRequestInfo);
 ```
 
 **SET**
 
-```txt
+```csharp
 // NotifyDataMiner NT_SNMP_RAW_SET
 object[] oTableElementInfo = new object[8];
 ...
 oTableElementInfo[7] = "665d680e-4097-455c-9ffc-0e4a06fa63c1";
-result = (object[])protocol.NotifyDataMiner(425 /*NT_SNMP_RAW_SET*/,         oTableElementInfo, oRequestInfo);
+result = (object[])protocol.NotifyDataMiner(425 /*NT_SNMP_RAW_SET*/, oTableElementInfo, oRequestInfo);
 
 // NotifyProtocol NT_SNMP_SET
 object[] oTableElementInfo = new object[12];
 ...
 oTableElementInfo[11] = "665d680e-4097-455c-9ffc-0e4a06fa63c1";
-result = (object[])protocol.NotifyProtocol(292 /*NT_SNMP_SET*/,         oTableElementInfo, oRequestInfo);
+result = (object[])protocol.NotifyProtocol(292 /*NT_SNMP_SET*/, oTableElementInfo, oRequestInfo);
 ```
 
 ### DMS Cube
@@ -146,17 +148,11 @@ To activate this feature, in the Alarm Console hamburger menu, select *Automatic
 Several factors are taken into account for the grouping:
 
 - The polling IP (for timeout alarms only)
-
 - Service information
-
 - The IDP location (only in case the IDP Solution is deployed)
-
 - Element information
-
 - Parameter information
-
 - Time
-
 - Alarm focus information
 
 If no suitable match is found, alarms will not be grouped. Timeout and non-timeout alarms, for example, are considered incompatible and will never be grouped with each other. Also, since only alarms with a focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages. In addition, if the alarm focus feature is disabled on one or more DMAs in the DataMiner System, only partial results will be available.
@@ -181,7 +177,7 @@ In the Alarm Console, alarm groups are displayed as a special kind of alarm entr
 
 - The root time of the group is the root time of the most recent alarm in the group at the time when the group was created.
 
-- If alarms are added to a group or removed from a group, the alarm type will be updated from *New alarm* to *Base alarms changed*.
+- If alarms are added to a group or removed from a group, the alarm type will be updated from *New alarm* to *Base alarms changed*.
 
 - You can expand the group to view all alarms within it.
 
@@ -208,7 +204,6 @@ Up to now, when you assigned a Visio file to an element, it was assigned on prot
 In the header bar menu of an element card, you will now have two “set as active Visio file” commands:
 
 - Set as active *‘protocol name’* protocol Visio file
-
 - Set as active *‘element name’* element Visio file
 
 If you pick the protocol Visio file option, the following options are available:
@@ -224,25 +219,25 @@ If you pick the element Visio file option, the following options are available:
 | Option     | Function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | New blank  | Opens a new, blank drawing in Microsoft Visio, which will automatically be assigned to the current element.                                                                                                                                                                                                                                                                                                                                                                                |
-| New upload | Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element.                                                                                                                                                                                                                                                                                                                        |
-| Existing   | Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:<br> -  Click a drawing in the list, set the default page, and click *OK*.<br> -  Click *Other File...* to upload additional drawings to the DMS |
+| New upload | Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element.                                                                                                                                                                                                                                                                                                                        |
+| Existing   | Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:<br> -  Click a drawing in the list, set the default page, and click *OK*.<br> -  Click *Other File...* to upload additional drawings to the DMS |
 
 #### Alarm Console: “Show in banner” option can now also be set in the Settings window \[ID_26993\]
 
-The *Show in banner* option, which up to now could only be set in the hamburger menu of the Alarm Console, can now also be set in *Alarm Console* section of the *Settings* window, both as a user setting and a group setting.
+The *Show in banner* option, which up to now could only be set in the hamburger menu of the Alarm Console, can now also be set in *Alarm Console* section of the *Settings* window, both as a user setting and a group setting.
 
 > [!NOTE]
 > This option can only be set for one alarm tab page. When you activate the option for a particular tab page, it will automatically be deactivated for all other tab pages.
 
 #### Visual Overview: New AllowInheritance option to keep child shape from automatically inheriting parent shape data \[ID_27084\]
 
-It is now possible to configure a child shape of a *View* or *Element* shape to not automatically inherit the *View* or *Element* shape data of the parent shape. To do so, add the option *AllowInheritance=False*. Note that this renders the existing option *NoCopyElementProperty* obsolete, since this did the same thing for *Element* shapes only.
+It is now possible to configure a child shape of a *View* or *Element* shape to not automatically inherit the *View* or *Element* shape data of the parent shape. To do so, add the option *AllowInheritance=False*. Note that this renders the existing option *NoCopyElementProperty* obsolete, since this did the same thing for *Element* shapes only.
 
 #### DataMiner Cube launcher update release tracks \[ID_27086\]\[ID_27121\]
 
 To allow a phased rollout of new versions of the DataMiner Cube launcher, multiple release tracks have now been introduced: a release track with the latest version, and 3 phased release tracks.
 
-To update to the release track with the latest version, you can use the *Check for updates* option, which is now available via the cogwheel button in the DataMiner Cube launcher.
+To update to the release track with the latest version, you can use the *Check for updates* option, which is now available via the cogwheel button in the DataMiner Cube launcher.
 
 Updates to the phased release tracks happen automatically through periodic updates. The update track used for these updates is randomly selected and saved in the configuration of the launcher.
 
@@ -281,23 +276,21 @@ Spectrum parameters dynamically added by spectrum monitors will now automaticall
 
 #### Dashboards app: New Image size option for Image component \[ID_27040\]
 
-In the Dashboards app, a new *Image size* option is now available for *Image* components. This option allows you to determine how the image is scaled, with the following three possibilities:
+In the Dashboards app, a new *Image size* option is now available for *Image* components. This option allows you to determine how the image is scaled, with the following three possibilities:
 
 - *Fit*: Scales the image to the maximum possible size without stretching or cropping.
-
 - *Fill*: Scales the image to the maximum possible size without stretching.
-
 - *Stretch*: Scales the image to the maximum possible size without preserving the aspect ratio.
 
 #### Dashboards app: State component now supports dynamic units \[ID_27066\]
 
 The State component in the Dashboards app now supports dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol.
 
-For this purpose, 2 new methods have been added to the web services API v1: *GetParameterWithDynamicUnits* and *GetParameterForServiceWithDynamicUnits*, which are similar to the *GetParameter* and *GetParameterForService* methods, respectively.
+For this purpose, 2 new methods have been added to the web services API v1: *GetParameterWithDynamicUnits* and *GetParameterForServiceWithDynamicUnits*, which are similar to the *GetParameter* and *GetParameterForService* methods, respectively.
 
 #### Dashboards app: Spectrum buffer feeds \[ID_27092\]\[ID_27154\]
 
-It is now possible to use spectrum buffers as input for a Spectrum Analyzer visualization. These are available in the new *Spectrum Buffers* section in the *Data* pane. To select a spectrum buffer, first specify the name of a spectrum element in the box at the top if this section. The buffers are then listed in the format *MonitorName: TraceName \[MeasptName\] \[PresetName\]*.
+It is now possible to use spectrum buffers as input for a Spectrum Analyzer visualization. These are available in the new *Spectrum Buffers* section in the *Data* pane. To select a spectrum buffer, first specify the name of a spectrum element in the box at the top if this section. The buffers are then listed in the format *MonitorName: TraceName \[MeasptName\] \[PresetName\]*.
 
 You can link a Spectrum Analyzer visualization to spectrum buffer input directly, or use feed components (e.g. drop-down or list), by adding an individual spectrum buffer to a feed component or by adding the spectrum buffers as a collection and then adding a spectrum element as a filter.
 
@@ -311,7 +304,7 @@ If a spectrum analyzer component in the Dashboards app uses a spectrum buffer fe
 
 To be able to link a threshold line to a spectrum monitor parameter, the spectrum script used by the monitor must contain variables referring to the thresholds. Each threshold line has a threshold ID, which is an index ranging from 1 to the total number of thresholds in the preset. To refer to the first threshold, the script variable should be *$threshold1*, for the second threshold, it should be *$threshold2*, etc. This format is case-sensitive. When you configure the spectrum monitor in DataMiner Cube, you can then select these variables to create a parameter with alarm monitoring.
 
-Note that it does not matter in which preset the threshold is defined. For example, each threshold in a preset with index 3 will be linked to the state of script variable *$threshold3* in a monitor.
+Note that it does not matter in which preset the threshold is defined. For example, each threshold in a preset with index 3 will be linked to the state of script variable *$threshold3* in a monitor.
 
 > [!NOTE]
 > - Similar to DataMiner Cube, threshold lines will appear in front of the spectrum trace.
@@ -323,13 +316,13 @@ Note that it does not matter in which preset the threshold is defined. For examp
 
 #### Web Services API v1: DMASpectrumBuffer object now contains VariableID property instead of Name property \[ID_27092\]
 
-In the web services API, the web method *GetSpectrumBuffersByMonitorId* will now return *DMASpectrumBuffer* results containing a *VariableID* property instead of a *Name* property.
+In the web services API, the web method *GetSpectrumBuffersByMonitorId* will now return *DMASpectrumBuffer* results containing a *VariableID* property instead of a *Name* property.
 
 ### DMS Mobile apps
 
 #### Jobs app: History pane \[ID_27113\]
 
-When you are viewing a job, you can now open a *History* pane on the right. That pane will list all changes made to that particular job. At the bottom of the pane, you will also find the time at which the job was created and the time at which it was last edited.
+When you are viewing a job, you can now open a *History* pane on the right. That pane will list all changes made to that particular job. At the bottom of the pane, you will also find the time at which the job was created and the time at which it was last edited.
 
 Also, the following web method has been made available to retrieve the change history of a particular job:
 
@@ -342,13 +335,9 @@ In both the Monitoring app and the Dashboards apps, a number of performance impr
 Also, the following spectrum preset display settings will now be applied:
 
 - Background color
-
 - Grid line color
-
 - Text color (axis labels and timestamp label)
-
 - Show/hide axis labels
-
 - Show/hide grid
 
 ### DMS Service & Resource Management
@@ -377,7 +366,6 @@ Up to now, when a VirtualFunctionResource object was updated, in some cases, the
 From now on, the following resource updates will be taken into account:
 
 - When the name of the resource is updated, the name of the element will also be updated.
-
 - When the virtual function definition of the resource is updated, the protocol of the element will also be updated.
 
     > [!NOTE]
@@ -402,7 +390,7 @@ From now on, when DataMiner forwards data using an AlarmSocket or a PollSocket, 
 
 #### DataMiner Cube - System Center: Enhanced “Analytics config” system settings section \[ID_27087\]
 
-In the *Analytics config* section in System Center, drop-down boxes that allow the selection of a DMA now allow you to select the option *None* when appropriate. In addition, other drop-down boxes in this section have been improved to no longer show irrelevant values.
+In the *Analytics config* section in System Center, drop-down boxes that allow the selection of a DMA now allow you to select the option *None* when appropriate. In addition, other drop-down boxes in this section have been improved to no longer show irrelevant values.
 
 #### DataMiner Installer: Improved error handling when unable to connect to Cassandra \[ID_27096\]
 
@@ -446,7 +434,7 @@ When DataMiner is upgraded and one of the steps of the upgrade is a PowerShell s
 
 Performance has improved when a subscription is added on element level, specifically if the subscription contains elements with different protocols. This will for instance ensure that when multiple cards are opened to Visual Overview pages, parameters will be displayed more quickly.
 
-In addition, it is now possible to change the number of records that can be contained in the protocol cache. You can do so using the SLNetClientTest tool by going to *Options* > *SLNet Options*, selecting *protocolCacheMru* in the drop-down box, changing the value where necessary and clicking *OK*. However, do not change this value without checking with Skyline for advice first, as an incorrect setting can cause serious issues.
+In addition, it is now possible to change the number of records that can be contained in the protocol cache. You can do so using the SLNetClientTest tool by going to *Options* > *SLNet Options*, selecting *protocolCacheMru* in the drop-down box, changing the value where necessary and clicking *OK*. However, do not change this value without checking with Skyline for advice first, as an incorrect setting can cause serious issues.
 
 > [!WARNING]
 > The DataMiner SLNetClientTest tool is an advanced system administration tool that should be used with extreme care (*C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe*).
@@ -466,14 +454,12 @@ In addition, row height will no longer be adjusted dynamically, the default heig
 A number of improvements were implemented to the upgrade mechanism of the DataMiner Cube launcher:
 
 - When the DataMiner Cube launcher detects that an update is ready, in any open instances of the launcher an info bar will now notify the user that the launcher needs to be restarted, and ask for confirmation.
-
 - When the download of a new launcher version is incomplete because of a restart or shutdown of the launcher, the download will now be cleaned up automatically to prevent issues.
-
-- If the *Check for updates* option is used in the launcher, the resulting message will now be displayed in an info bar instead of a message box.
+- If the *Check for updates* option is used in the launcher, the resulting message will now be displayed in an info bar instead of a message box.
 
 #### DataMiner Cube - System Center: Only changed fields will be sent to the DMA when changing information in Agents \>System \[ID_27224\]
 
-When, in *System Center*, you click *Save* after changing some of the fields on the *System* tab of the *Agents* section, from now on, only the fields that were changed will be sent to the DataMiner Agent.
+When, in *System Center*, you click *Save* after changing some of the fields on the *System* tab of the *Agents* section, from now on, only the fields that were changed will be sent to the DataMiner Agent.
 
 #### Client applications will now always connect to a DataMiner Agent via .NET Remoting \[ID_27237\]
 
@@ -484,9 +470,7 @@ Up to now, client applications could use either .NET Remoting or Web Services to
 The BpaExecuteContext object, which BPA tests receive as input, has been extended with methods to send messages to SLNet, allowing the tests to fetch data without manually having to set up a connection:
 
 - DMSMessage\[\] SendSLNetMessage(DMSMessage message)
-
 - DMSMessage\[\] SendSLNetMessages(DMSMessage\[\] message)
-
 - DMSMessage SendSLNetSingleResponseMessage(DMSMessage message)
 
 #### Cube launcher tool: Downgrade support \[ID_27380\]
@@ -502,22 +486,15 @@ Up to now the permissions to add, edit, delete and execute Automation scripts we
 Now the system will enforce the permissions as follows:
 
 - To view or retrieve an Automation script, you need the "Automation - UI available" or "Automation - Execute" permission.
-
 - To create an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
-
 - To update an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
-
 - To delete an Automation script, you need the "Automation - Delete" permission.
-
 - To execute an Automation script, you need the "Automation - Execute" permission.
-
 - To perform a DLL injection in an Automation script, you need the "Automation - Add" or the "Automation - Edit" permission.
-
 - To change a memory file, you need the "Automation - Add" or the "Automation - Edit" permission.
-
 - To retrieve a memory file, you need "Automation - UI available" or "Automation - Execute" permission.
 
-In addition, within DataMiner Cube, up to now there could be a problem when you made changes to the memory files in the Automation app. This has now been resolved. To bring the memory files tab in line with the rest of the Automation app, the *Cancel* button in this tab has also been replaced by a *Discard* button.
+In addition, within DataMiner Cube, up to now there could be a problem when you made changes to the memory files in the Automation app. This has now been resolved. To bring the memory files tab in line with the rest of the Automation app, the *Cancel* button in this tab has also been replaced by a *Discard* button.
 
 #### “Authentication took too long” error added to SLNet logging when trying to log on to DataMiner using an incorrect user name and password \[ID_26586\]
 
@@ -545,9 +522,9 @@ When a filtered alarm tab page contained a correlated alarm, in some cases, the 
 
 #### Jobs app: No error message when deleting all templates in the Load from template window & job fields could incorrectly be marked both “Required” and “Read only” \[ID_26868\]
 
-When, in the *Load from template* window, you deleted all templates, up to now, no error message would be displayed, saying that there are no templates to be applied.
+When, in the *Load from template* window, you deleted all templates, up to now, no error message would be displayed, saying that there are no templates to be applied.
 
-Also, when you configured a job field, up to now, it was possible to mark a field both *Required* and *Read only*. From now on, this will no longer be possible.
+Also, when you configured a job field, up to now, it was possible to mark a field both *Required* and *Read only*. From now on, this will no longer be possible.
 
 #### Service & Resource Management: Incorrect exception was logged when opening Profiles or Resources app \[ID_26901\]
 
@@ -600,7 +577,7 @@ When text like “\[param:...\]\|Alarm” was specified in a shape data item of 
 
 #### Bookings app: Hidden “Booking state” column could no longer be set visible again \[ID_27058\]
 
-When, in the *Bookings* app, the *Booking state* column was set hidden, in some cases, it would no longer be possible to set it visible again.
+When, in the *Bookings* app, the *Booking state* column was set hidden, in some cases, it would no longer be possible to set it visible again.
 
 #### Unexpected behavior if condition for inclusion in service or redundancy switching contained no primary key or display key \[ID_27067\]
 
@@ -652,7 +629,7 @@ When you dragged a table column parameter onto a trend statistics component and 
 
 #### Dashboards app: “Delete component” button would not immediately get updated when you selected multiple components \[ID_27148\]
 
-When you selected multiple components, the *Delete component* button at the top of the screen would incorrectly only get updated to *Delete X components* when you hovered over it.
+When you selected multiple components, the *Delete component* button at the top of the screen would incorrectly only get updated to *Delete X components* when you hovered over it.
 
 #### DataMiner Cube: No longer possible to click below or above a scrollbar thumb \[ID_27149\]
 
@@ -664,7 +641,7 @@ The SLHelper process keeps a set of actions in memory to be able to track what a
 
 #### DataMiner Cube: No context menu would appear when right-clicking a suggestion in the header search box after right-clicking the “Advanced search” button \[ID_27166\]
 
-When, in the Cube header bar, you first right-clicked the *Advanced search for...* option at the bottom of the suggestions list, and then right-clicked any of the listed suggestions, no context menu would appear.
+When, in the Cube header bar, you first right-clicked the *Advanced search for...* option at the bottom of the suggestions list, and then right-clicked any of the listed suggestions, no context menu would appear.
 
 #### DataMiner Cube - Visual Overview: Masked alarm color not shown for cells displayed in Children shape \[ID_27172\]
 
@@ -676,7 +653,7 @@ In list view components, for example in the Bookings app, in the Services app or
 
 #### DataMiner Cube - Scheduler app: Problem with drag-and-drop in timeline tab \[ID_27174\]
 
-In the *Timeline \> Events* tab, in some cases, it would no longer be possible to drag a profile onto the timeline.
+In the *Timeline \> Events* tab, in some cases, it would no longer be possible to drag a profile onto the timeline.
 
 #### Web Services API: Too many bookings retrieved when multiple subscription sets were used \[ID_27176\]
 
@@ -752,7 +729,7 @@ Also, an exception could be thrown when DataMiner tried to use an empty uninstal
 
 #### Dashboards app: Duplicate “Delete component” button \[ID_27295\]
 
-When a dasboard contained a Group component, it could occur that two *Delete component* buttons were displayed when the dashboard was in edit mode.
+When a dashboard contained a Group component, it could occur that two *Delete component* buttons were displayed when the dashboard was in edit mode.
 
 #### Problem when renaming a parent DVE element \[ID_27312\]
 

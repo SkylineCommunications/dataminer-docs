@@ -1,4 +1,8 @@
-# Feature release 10.0.10
+---
+uid: General_Feature_Release_10.0.10
+---
+
+# General Feature Release 10.0.10
 
 ## New features
 
@@ -9,9 +13,7 @@
 The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in Automation scripts and in QActions to manage log entries stored in Indexing Engine:
 
 - ILogHelper#Log can be used to add new log entries to the database.
-
 - ILogHelper#LogEntries can be used to retrieve log entries from the database.
-
 - LogEntries.Exposers can be used to create filters used when retrieving entries.
 
 **Using statement**
@@ -20,7 +22,7 @@ LogHelper should always be created within a using statement. See the following e
 
 Automation script example:
 
-```txt
+```csharp
 using(var logHelper = LogHelper.Create(engine.GetUserConnection()))
 {
     // ...
@@ -29,7 +31,7 @@ using(var logHelper = LogHelper.Create(engine.GetUserConnection()))
 
 QAction example:
 
-```txt
+```csharp
 using(var logHelper = LogHelper.Create(protocol.GetUserConnection()))
 {
     // ...
@@ -91,28 +93,22 @@ By default, the DLL files in the package will be copied to the C:\\Skyline DataM
 
 #### Anomaly detection configuration in alarm templates \[ID_24578\]
 
-It is now possible to enable specific anomaly detection options for parameters in an alarm template. To do so, select the *Advanced configuration of anomaly detection* option via the cogwheel button in the alarm template editor. Three additional columns will then be displayed in the alarm template, where you can enable or disable trend monitor, variance monitor and level shift anomaly detection for each monitored parameter.
+It is now possible to enable specific anomaly detection options for parameters in an alarm template. To do so, select the *Advanced configuration of anomaly detection* option via the cogwheel button in the alarm template editor. Three additional columns will then be displayed in the alarm template, where you can enable or disable trend monitor, variance monitor and level shift anomaly detection for each monitored parameter.
 
 #### Services app: New and updated booking state icons \[ID_26270\]
 
-In the *Overview* tab of the *Services* app, the booking state of a service is indicated by an icon in the *Booking state* column.
+In the *Overview* tab of the *Services* app, the booking state of a service is indicated by an icon in the *Booking state* column.
 
 - A new icon has been added to indicate service permanent bookings that start somewhere in the future:
 
-![](~/release-notes/images/BookingOngoingPermanentFuture.png)
-
-
+    ![](~/release-notes/images/BookingOngoingPermanentFuture.png)
 
 - The icons used to indicate the state of one or more bookings linked to a service will now be displayed in the following order:
 
     - Permanent ongoing
-
     - Ongoing
-
     - Permanent in future
-
     - Future
-
     - Past/None
 
 #### Service & Resource Management - Profiles app: Value of a capability of type “text” can now be changed regardless of the “User time-dependent" option \[ID_26538\]
@@ -123,7 +119,7 @@ Up to now, when you configured a profile instance, the value of a capability of 
 
 When an SNMP manager is configured to forward SNMPv2 or SNMPv3 traps with custom bindings, then you can now generate a MIB file containing those custom bindings.
 
-To do so, go to the *Notification* tab of the SNMP manager in question, open the pane listing the custom bindings and click the *Generate MIB file...* button.
+To do so, go to the *Notification* tab of the SNMP manager in question, open the pane listing the custom bindings and click the *Generate MIB file...* button.
 
 > [!NOTE]
 > The *Generate MIB file...* button will only be enabled when
@@ -137,7 +133,7 @@ From now on, Cube will use Chromium as the default browser engine. When that eng
 
 Although it will remain possible to configure that a different browser should be used for specific protocols, it will no longer be possible to configure that a different browser should be used for apps like Dashboards or Ticketing. Those apps will now always use the default browser engine.
 
-When, on a Visio page, you configured a shape to display a web page, that web page will now also by default be rendered using the Chromium browser engine. However, if you want to explicitly specify the browser engine to be used, then add a shape data field of type *Options* to the shape and set its value to either “UseChrome” or “UseIE”.
+When, on a Visio page, you configured a shape to display a web page, that web page will now also by default be rendered using the Chromium browser engine. However, if you want to explicitly specify the browser engine to be used, then add a shape data field of type *Options* to the shape and set its value to either “UseChrome” or “UseIE”.
 
 > [!NOTE]
 > Cube also use the default browser engine when displaying annotations.
@@ -146,7 +142,7 @@ When, on a Visio page, you configured a shape to display a web page, that web pa
 
 Up to now, a parameter control displaying a parameter value retrieved from a table would by default also show the name of that table. From now on, this will no longer be the case.
 
-If you want a parameter control to also show the name of the table, then specify the “ShowTableName=true” option in the *ParameterControlOptions* data field of the parameter control shape.
+If you want a parameter control to also show the name of the table, then specify the “ShowTableName=true” option in the *ParameterControlOptions* data field of the parameter control shape.
 
 | Shape data field        | Value              |
 |-------------------------|--------------------|
@@ -154,9 +150,9 @@ If you want a parameter control to also show the name of the table, then specify
 
 #### Visual Overview: Factoring in decimals when using the DynamicUnits option \[ID_26697\]
 
-The *DynamicUnits* option allows you to enable the use of dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g. to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
+The *DynamicUnits* option allows you to enable the use of dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g. to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
 
-From now on, when using the *DynamicUnits* option, it is also possible to factor in decimals defined in the dynamic units of a protocol parameter. With a configuration like the following, a value of 0.15 m will be shown as 15.0 cm (i.e. with 1 decimal).
+From now on, when using the *DynamicUnits* option, it is also possible to factor in decimals defined in the dynamic units of a protocol parameter. With a configuration like the following, a value of 0.15 m will be shown as 15.0 cm (i.e. with 1 decimal).
 
 ```xml
 <Display>
@@ -198,26 +194,20 @@ In DataMiner v.10.0.9, the layout options for a State component displaying a par
 - *Design*: Allows you to choose one of the following options:
 
     - *Small:* The component displays a single line containing a label and value.
-
     - *Large*: The component displays multiple lines with one value and up to three labels.
-
-    - *Auto size*: Similar to the *Large* option, but automatically adjusts the content to fill the entire component.
+    - *Auto size*: Similar to the *Large* option, but automatically adjusts the content to fill the entire component.
 
 - *Alarm state coloring*: Allows you to select one of the following options to determine how alarm coloring is displayed:
 
     - *LED*: The alarm color is displayed by a circular LED to the left of the first label.
-
     - *Line*: The alarm color is displayed by a bar along the left side of the component.
-
     - *Text*: The text color of the value matches the alarm color.
-
     - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
-
     - *None*: No alarm color is displayed.
 
 #### Dashboard app: New setting to configure number of dashboard columns \[ID_26530\]
 
-It is now possible to configure in how many columns components can be displayed in a dashboard. You can do so via the new *Number of columns* option in the settings of a dashboard. The maximum number of columns is 50. If you change the number of columns to a lower number and the columns currently contain components, a warning will be displayed, saying that components may be relocated.
+It is now possible to configure in how many columns components can be displayed in a dashboard. You can do so via the new *Number of columns* option in the settings of a dashboard. The maximum number of columns is 50. If you change the number of columns to a lower number and the columns currently contain components, a warning will be displayed, saying that components may be relocated.
 
 In addition, when a dashboard is being edited, a new button is now available in the dashboard header bar that allows you to show or hide the grid lines in the dashboard while you are in edit mode.
 
@@ -231,7 +221,7 @@ Also, in the DATA pane, you can select a spectrum preset and, for example, have 
 
 **Trigger action to open a new dashboard**
 
-For Spectrum Analyzer components, a *Triggers* tab is available in the pane on the right. This tab allows you to configure that another dashboard should be opened when the spectrum graph is clicked. To do so, make sure *Enable trigger* is activated, and select the trigger action *Open dashboard*. Then select the dashboard that should be opened and specify whether it should be opened in a pop-up window, in the current tab (replacing the dashboard that was clicked) or in a new tab.
+For Spectrum Analyzer components, a *Triggers* tab is available in the pane on the right. This tab allows you to configure that another dashboard should be opened when the spectrum graph is clicked. To do so, make sure *Enable trigger* is activated, and select the trigger action *Open dashboard*. Then select the dashboard that should be opened and specify whether it should be opened in a pop-up window, in the current tab (replacing the dashboard that was clicked) or in a new tab.
 
 When the specified dashboard is opened, the Spectrum Analyzer component will pass its data (a spectrum element and optionally a spectrum preset) to that dashboard. The opened dashboard can then use that data as if it was specified in the URL.
 
@@ -262,18 +252,17 @@ To configure the component:
 2. Add a filter if necessary:
 
     - If the component uses a protocol parameter data feed, add an element filter feed.
-
     - If the component uses a table or column parameter data feed, add an index filter feed.
 
 3. Optionally, add a Time range component to the dashboard and configure the state timeline component to use it as a filter feed.
 
 #### State/Gauge/Ring components now able to show multiple items for several types of feeds \[ID_26780\]
 
-In the Dashboards app, it is now possible to show multiple states with the same *State*, *Ring* or *Gauge* component, even if elements, services, views or redundancy groups are used as the data feed. Previously, this was only supported for parameter feeds.
+In the Dashboards app, it is now possible to show multiple states with the same *State*, *Ring* or *Gauge* component, even if elements, services, views or redundancy groups are used as the data feed. Previously, this was only supported for parameter feeds.
 
-For the *State* component, the *Layout flow* options in the *Layout* panel allow you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
+For the *State* component, the *Layout flow* options in the *Layout* panel allow you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
 
-For the *Ring* and *Gauge* component, if parameter feeds are used, additional options in the layout panel allow you to configure whether the differeynt parameters are displayed next to each other or below each other, and how many rows and columns of parameters can be displayed at the same time. These options are not available for other types of feeds; for those only one item is displayed at the same time and you need to scroll to see the next item.
+For the *Ring* and *Gauge* component, if parameter feeds are used, additional options in the layout panel allow you to configure whether the different parameters are displayed next to each other or below each other, and how many rows and columns of parameters can be displayed at the same time. These options are not available for other types of feeds; for those only one item is displayed at the same time and you need to scroll to see the next item.
 
 #### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID_26836\]
 
@@ -302,12 +291,11 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 - When a script dependency is uploaded using an UploadScriptDependencyMessage
 
     - all scripts that directly reference the file will be recompiled when executed, and
-
     - all libraries that reference the file (and all libraries that use those libraries) will be recompiled immediately.
 
 - When you reference a DLL file stored in C:\\Skyline DataMiner\\Scripts\\DllImport while a DLL file with the same name is present in C:\\Skyline DataMiner\\Files, the former will take precedence.
 
-- Users need the *Modules \> Automation \> Edit* permission to be able to upload Automation script dependencies.
+- Users need the *Modules \> Automation \> Edit* permission to be able to upload Automation script dependencies.
 
 > [!NOTE]
 > - If an uploaded DLL dependency would break existing scripts and/or libraries, no errors will be returned.
@@ -317,24 +305,24 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 
 App packages can now be uninstalled using the new AppPackageHelper method UninstallApp.
 
-```txt
+```csharp
 /// <summary>
 /// Uninstalls the app with ID <paramref name="appId"/>
 ///
 /// <param name="appId">The ID of the app to be uninstalled.</param>
 /// <param name="force">
-///    If true:
-///    - The app will be forcefully uninstalled, even if the uninstall script         fails.
-///    - If the uninstall script exits with an exception or could not be run,         no exceptions will be thrown.
+///    If true:
+///    - The app will be forcefully uninstalled, even if the uninstall script         fails.
+///    - If the uninstall script exits with an exception or could not be run,         no exceptions will be thrown.
 /// </param>
 /// <exception cref="AppUninstallationFailedException">
-///    This exception will be thrown in the following cases:
-///    - When the specified app is not installed.
-///    - When the uninstall script could not be run due to syntax errors.
-///    - When the uninstall script exited with an exception.
+///    This exception will be thrown in the following cases:
+///    - When the specified app is not installed.
+///    - When the uninstall script could not be run due to syntax errors.
+///    - When the uninstall script exited with an exception.
 /// </exception>
 /// <exception cref="DataMinerException">
-///    This exception will be thrown in all other cases when something goes wrong.
+///    This exception will be thrown in all other cases when something goes wrong.
 /// </exception>
 /// </summary>
 ///
@@ -343,11 +331,11 @@ public void UninstallApp(AppID appId, bool force)
 
 **Uninstall script**
 
-Inside every app package, an uninstall script named *uninstall.xml* should be available in the Scripts folder.
+Inside every app package, an uninstall script named *uninstall.xml* should be available in the Scripts folder.
 
 An uninstall script has to be triggered using the UninstallApp entrypoint (see below for an example). As soon as the uninstall script has finished, the installation folder of the app in question will be removed on all agents in the DMS.
 
-```txt
+```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.UninstallApp)]
 public void Uninstall(Engine engine, AppUninstallContext context)
 {
@@ -365,7 +353,7 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 
 - If the uninstall script contains syntax errors it will still be installed.
 
-- When you install an app with the *AllowMultipleInstalledVersions* option set to false, the uninstall script of that app (if present) will automatically be triggered. Also, the uninstall will be executed forcefully, meaning that the app will be removed even when the script fails.
+- When you install an app with the *AllowMultipleInstalledVersions* option set to false, the uninstall script of that app (if present) will automatically be triggered. Also, the uninstall will be executed forcefully, meaning that the app will be removed even when the script fails.
 
 - When an app is being uninstalled, its AppInstallState will be set to BUSY_UNINSTALLING, and if anything goes wrong during the uninstall (and the uninstall was not executed forcefully), its AppInstallState will be set to CORRUPTED.
 
@@ -374,7 +362,7 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 - If an uninstall script requires any external DLL files, those can be placed in the C:\\Skyline DataMiner\\Scripts\\UninstallDependencies folder. During an uninstall operation, the dependencies will then automatically be referenced in the uninstall script.
 
 > [!NOTE]
-> The DataMiner SLNetClientTest tool now also supports uninstalling app packages. See *Advanced \> Apps \> App Packages*.
+> The DataMiner SLNetClientTest tool now also supports uninstalling app packages. See *Advanced \> Apps \> App Packages*.
 
 #### Automation: Tree view control for interactive Automation scripts \[ID_26840\]\[ID_27041\]
 
@@ -393,7 +381,6 @@ Each TreeViewItem has the following properties:
 - *ItemType*: Determines the type of item in the tree view. The following values are possible:
 
     - *Empty*: Only the DisplayValue will be displayed for this item.
-
     - *CheckBox*: A check box will be shown next to the DisplayValue.
 
 - *ChildItems*: List of TreeViewItems that are child items of this item.
@@ -403,60 +390,58 @@ Optionally, you can enable the WantsOnChange option for the tree view control, i
 To retrieve the results:
 
 - The UIResult, which can be returned using *engine.ShowUI()*, contains the KeyValue of the selected items.
-
 - The GetString(UIBlockDefinition *destvar*) method to retrieve a semicolon-separated string of the KeyValues.
-
 - The GetChecked(UIBlockDefinition *destvar*, KeyValue *value*) method can be used to check if a specific KeyValue was selected.
 
 Example:
 
-```txt
+```csharp
 {
-   UIBuilder uib = new UIBuilder();
-   uib.Title = "Treeview - default";
-   uib.RequireResponse = true;
-   uib.RowDefs = "*,*";
-   uib.ColumnDefs = "*";
+   UIBuilder uib = new UIBuilder();
+   uib.Title = "Treeview - default";
+   uib.RequireResponse = true;
+   uib.RowDefs = "*,*";
+   uib.ColumnDefs = "*";
 
-   UIBlockDefinition tree = new UIBlockDefinition();
-   tree.Type = UIBlockType.TreeView;
-   tree.Row = 0;
-   tree.Column = 0;
-   tree.DestVar = "treevar";
-   tree.TreeViewItems = new List<TreeViewItem>
-   {
-      new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
-      {
-         new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
-         {
-            new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("John", "1/1/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("Kevin", "1/1/3", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("David", "1/1/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("Joe", "1/1/5", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-         }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-         new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
-         {
-            new TreeViewItem("Jane", "1/2/1"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("Sarah", "1/2/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("Emily", "1/2/3"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("Anne", "1/2/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("Florence", "1/2/5"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-         }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-      }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-      new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-   };
-   uib.AppendBlock(tree);
+   UIBlockDefinition tree = new UIBlockDefinition();
+   tree.Type = UIBlockType.TreeView;
+   tree.Row = 0;
+   tree.Column = 0;
+   tree.DestVar = "treevar";
+   tree.TreeViewItems = new List<TreeViewItem>
+   {
+      new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
+      {
+         new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
+         {
+            new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+            new TreeViewItem("John", "1/1/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+            new TreeViewItem("Kevin", "1/1/3", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+            new TreeViewItem("David", "1/1/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+            new TreeViewItem("Joe", "1/1/5", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+         }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+         new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
+         {
+            new TreeViewItem("Jane", "1/2/1"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+            new TreeViewItem("Sarah", "1/2/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+            new TreeViewItem("Emily", "1/2/3"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+            new TreeViewItem("Anne", "1/2/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+            new TreeViewItem("Florence", "1/2/5"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+         }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+      }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+      new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+   };
+   uib.AppendBlock(tree);
 
-   UIBlockDefinition next = new UIBlockDefinition();
-   next.Type = UIBlockType.Button;
-   next.Row = 1;
-   next.Column = 0;
-   next.Text = "Next";
-   next.DestVar = "Next";
-   uib.AppendBlock(next);
+   UIBlockDefinition next = new UIBlockDefinition();
+   next.Type = UIBlockType.Button;
+   next.Row = 1;
+   next.Column = 0;
+   next.Text = "Next";
+   next.DestVar = "Next";
+   uib.AppendBlock(next);
 
-   _treeResults = _engine.ShowUI(uib);
+   _treeResults = _engine.ShowUI(uib);
 } while (!_treeResults.WasButtonPressed("Next"));
 
 ShowResult();
@@ -474,16 +459,16 @@ Up to now, in configuration mode, when you edited a job domain, it was only poss
 
 #### Jobs app: Duplicating domains \[ID_26844\]
 
-In configuration mode, next to the *New*, *Edit* and *Delete* buttons on the right of the job domain selection box, there is now also a *Duplicate* button. Clicking that button will allow you to select one of the following options:
+In configuration mode, next to the *New*, *Edit* and *Delete* buttons on the right of the job domain selection box, there is now also a *Duplicate* button. Clicking that button will allow you to select one of the following options:
 
 | Option                           | Function                                                                                                                                                                                                                                                                                                                                                                                       |
 |----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Share sections<br>across domains | Creates a new domain that shares its sections with the original domain.<br> Note: Changes made to the sections of the new domain will also be applied to the sections of the original domain (except changes made to the *Color*, *Icon* and *Allow multiple instances* properties of a section). |
+| Share sections<br>across domains | Creates a new domain that shares its sections with the original domain.<br> Note: Changes made to the sections of the new domain will also be applied to the sections of the original domain (except changes made to the *Color*, *Icon* and *Allow multiple instances* properties of a section). |
 | Create copies of<br>the sections | Creates a new domain by duplicating the entire original domain, including its sections.<br> Note: Changes made to the sections of the new domain will not be applied to the sections of the original domain.                                                                                                                                                                                   |
 
 When the duplication operation has finished, you will automatically be redirected to the newly created domain.
 
-As a result of the above-mentioned changes, adding a new section to a domain has also been changed. The *Add section definition* window now has a *New* tab and an *Existing* tab.
+As a result of the above-mentioned changes, adding a new section to a domain has also been changed. The *Add section definition* window now has a *New* tab and an *Existing* tab.
 
 | Tab      | Function                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -496,17 +481,15 @@ As a result of the above-mentioned changes, adding a new section to a domain has
 
     This method will duplicate a job domain, either by reference or by hard copy, and return the ID of the new job domain if the duplication operation was successful.
 
-    - If the *byRef* parameter is set to false, the method will create an entire new job domain that is in no way linked to the original job domain.
-
-    - If the *byRef* parameter is set to true, the method will create a new job domain that shares its sections with the original job domain.
+    - If the *byRef* parameter is set to false, the method will create an entire new job domain that is in no way linked to the original job domain.
+    - If the *byRef* parameter is set to true, the method will create a new job domain that shares its sections with the original job domain.
 
 - **DuplicateJobsSectionDefinition(string connection, string domainID, string sourceDomainID, DMASectionDefinition sectionDefinition, bool byRef)**
 
     This method will duplicate a job section definition, either by reference or by hard copy.
 
-    - If the *byRef* parameter is set to false, the method will add an entire new job section definition to the job domain specified by *domainID*. This job section definition will no way be linked to the original job section definition in the domain specified by *sourceDomainID*.
-
-    - If the *byRef* parameter is set to true, the method will link the existing job section definition specified by *sectionDefinition* to the job domain specified by *domainID*. This same job section definition will then be shared between the two job domains.
+    - If the *byRef* parameter is set to false, the method will add an entire new job section definition to the job domain specified by *domainID*. This job section definition will no way be linked to the original job section definition in the domain specified by *sourceDomainID*.
+    - If the *byRef* parameter is set to true, the method will link the existing job section definition specified by *sectionDefinition* to the job domain specified by *domainID*. This same job section definition will then be shared between the two job domains.
 
 - **GetAffectedJobDomains(string connection, string sectionDefinitionID)**
 
@@ -544,25 +527,19 @@ To configure mediated virtual functions, do the following:
     Next to that, you can also define how the virtual protocol should look like:
 
     - Define the pages you want to see in the protocol.
-
     - Define which profile parameters from the profile definitions of the node/interfaces should be on each page.
-
     - Define which tables from the profile definitions of the node/interfaces should be on each page.
 
     When you save the virtual function definition, a virtual function protocol is generated (with type “virtual-function”) and the metadata associated with that protocol is stored in an automatically created “virtual function protocol meta” object. That object will contain the following information:
 
     - The IDs of the read/write parameters that were generated for the different profile parameters and nodes/interfaces.
-
     - The tables that were generated.
-
     - Profile parameter information (type, ...)
 
     This protocol metadata will be used:
 
     - to resolve IDs of generated parameters when binding a resource
-
     - to be able to re-use parameter IDs when a new version of the protocol is generated
-
     - to validate the new versions of the generated protocol
 
 5. Create a virtual function resource with a specific virtual function definition.
@@ -572,7 +549,6 @@ To configure mediated virtual functions, do the following:
 6. Bind the virtual element to an element by updating the virtual resource:
 
     - Specify the element ID.
-
     - Specify the entry point table index (if an entry point table was defined).
 
     All the parameters and tables of the virtual function element, which were set to “not-initialized/empty”, will now be set to the replicated/mediated values of the bound element.
@@ -673,7 +649,7 @@ The StandAloneBpaExecutor tool, which can be used to execute BPA (Best Practice 
 
 #### DMS Alerter: New “Set the alarm as read in Cube after the alarm has been acknowledged” setting \[ID_26579\]
 
-When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in DMS Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
+When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in DMS Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
 
 > [!NOTE]
 > This feature will only work if one and the same user is running both DMS Alerter and DataMiner Cube on the same client machine.
@@ -734,19 +710,19 @@ Up to now, when DataMiner sent a text message containing an ampersand character 
 
 #### DataMiner Cube: Enhanced Back/Forward navigation \[ID_26457\]
 
-Up to now, clicking the *Back* and *Forward* buttons would only make you jump from one card to another. From now on, also the navigation history within a card will be taken into account.
+Up to now, clicking the *Back* and *Forward* buttons would only make you jump from one card to another. From now on, also the navigation history within a card will be taken into account.
 
-For example, when you drill down from a card page to a parameter, clicking *Back* will bring you back to that card page, and when you open the trend page of a table cell from within a Visio page, clicking *Back* will bring you back to that Visio page.
+For example, when you drill down from a card page to a parameter, clicking *Back* will bring you back to that card page, and when you open the trend page of a table cell from within a Visio page, clicking *Back* will bring you back to that Visio page.
 
-Also, when you hover over a *Back* or *Forward* button, a tool tip will now show the name of the card and the page that will be opened.
+Also, when you hover over a *Back* or *Forward* button, a tool tip will now show the name of the card and the page that will be opened.
 
 #### Cube Launcher: Enhancements \[ID_26482\]\[ID_26577\]\[ID_26584\]\[ID_26746\]
 
 A number of enhancements have been made to the Cube Launcher:
 
-- In the *New DataMiner System* window, you can now press ENTER instead of clicking the *Connect* button.
+- In the *New DataMiner System* window, you can now press ENTER instead of clicking the *Connect* button.
 
-- When you click the cogwheel button at the bottom, you can now click *View logging* to open the folder containing the log files of the Cube Launcher:
+- When you click the cogwheel button at the bottom, you can now click *View logging* to open the folder containing the log files of the Cube Launcher:
 
     *C:\\Users\\\<username>\\AppData\\Local\\Skyline\\DataMiner\\DataMinerCube\\Logs*
 
@@ -766,7 +742,7 @@ When updating system files during a DataMiner upgrade, the SLReplace process wil
 
 #### DataMiner Cube - Failover: When you chose to disable the Failover configuration, it is now also possible to select “Cancel” \[ID_26509\]
 
-In the Failover configuration window, up to now, when you chose to disable the Failover configuration, you were only able to select *Yes* or *No*. From now on, it is also possible to select *Cancel*.
+In the Failover configuration window, up to now, when you chose to disable the Failover configuration, you were only able to select *Yes* or *No*. From now on, it is also possible to select *Cancel*.
 
 #### DataMiner Cube - Service & Resource Management: Users will now clearly be notified when trying to configure or manage service profiles when no Indexing Engine is installed \[ID_26534\]
 
@@ -830,7 +806,7 @@ Due to a number of enhancements, overall performance has increased when notifyin
 
 #### DataMiner Cube - System Center: “Include SLNet” check box removed from restart confirmation window \[ID_26685\]
 
-When, in the *Agents* section of *System Center*, you clicked *(Re)start* to restart a DataMiner Agent, up to now, it was possible to select the *Include SLNet* check box in the confirmation window.
+When, in the *Agents* section of *System Center*, you clicked *(Re)start* to restart a DataMiner Agent, up to now, it was possible to select the *Include SLNet* check box in the confirmation window.
 
 This check box has now been removed.
 
@@ -874,7 +850,7 @@ In some cases, the log file of the SLManagedScripting process would incorrectly 
 
 #### DataMiner Cube: Property values in Custom tab of Properties window will now be prevented from updating automatically when a user is manually editing property values \[ID_26825\]
 
-The values of the custom properties listed in the *Custom* tab of a *Properties* window are constantly being updated in real time. As this would sometimes cause problems when a user was manually updating one of those properties, from now on, real-time updates of custom properties listed in the *Custom* tab of the *Properties* window will be suspended as long as a user is manually editing property values in that same tab.
+The values of the custom properties listed in the *Custom* tab of a *Properties* window are constantly being updated in real time. As this would sometimes cause problems when a user was manually updating one of those properties, from now on, real-time updates of custom properties listed in the *Custom* tab of the *Properties* window will be suspended as long as a user is manually editing property values in that same tab.
 
 #### DataMiner Cube - Alarm Console: Enhanced performance when closing alarm tabs \[ID_26826\]
 
@@ -886,7 +862,7 @@ A number of enhancements have been made to the way in which histogram intervals 
 
 #### DataMiner Cube - System Center: Enhanced saving of backup settings \[ID_26858\]
 
-A number of enhancements have been made to the way in which the backup settings are saved in the *Backup* section of *System Center*.
+A number of enhancements have been made to the way in which the backup settings are saved in the *Backup* section of *System Center*.
 
 #### Alarm template information events no longer generated upon element/DMA restart \[ID_26862\]
 
@@ -930,7 +906,7 @@ An improved algorithm is now used to draw the graph of the RCA chain of a servic
 
 #### Service & Resource Management: Wildcard supported for protocol version in ProtocolLinks of VirtualFunctionDefinition \[ID_26966\]
 
-In the list of *ProtocolLinks* of a *VirtualFunctionDefinition*, an asterisk ('"\*") can now be used as a wildcard character in a protocol version. However, the wildcard can only be specified at the end of the version.
+In the list of *ProtocolLinks* of a *VirtualFunctionDefinition*, an asterisk ('"\*") can now be used as a wildcard character in a protocol version. However, the wildcard can only be specified at the end of the version.
 
 #### DataMiner mobile apps updated to Angular 9 \[ID_26975\]
 
@@ -984,7 +960,7 @@ When you restored a DataMiner backup package (.dmbackup) containing a database f
 
 #### Problem when using the IsMatrixCrosspointConnected method in an Automation script \[ID_26276\]
 
-When, in an Automation script, the *IsMatrixCrosspointConnected* method was used before a matrix point had been connected, in some cases, an exception could be thrown.
+When, in an Automation script, the *IsMatrixCrosspointConnected* method was used before a matrix point had been connected, in some cases, an exception could be thrown.
 
 #### DataMiner Cube - Visual Overview: Shapes with a ParameterControl shape data field would incorrectly not take into account the NoAutoScale option \[ID_26283\]
 
@@ -1086,7 +1062,7 @@ In some cases, the SLNet process would experience handle leaks.
 
 #### DataMiner Cube: Problem when trying to refresh a table by clicking the Refresh button \[ID_26521\]
 
-In some cases, it would no longer be possible to manually refresh a table by clicking the *Refresh* button at the top of the table.
+In some cases, it would no longer be possible to manually refresh a table by clicking the *Refresh* button at the top of the table.
 
 #### Dashboards app - CPE feed: A field filtered by a field value lower in the chain would not contain the correct value \[ID_26529\]
 
@@ -1122,7 +1098,7 @@ In some cases, no exception would be thrown when part of an SLDataGateway filter
 
 #### DataMiner Cube: Alarms would incorrectly be updated with a “View Impact Changed” event when the Name field in System Info was emptied \[ID_26575\]
 
-When, in DataMiner Cube, you went to *System Center \> Agents \> System \> System info*, and emptied the *Name* field, the alarms would incorrectly be updated with a “View Impact Changed” event.
+When, in DataMiner Cube, you went to *System Center \> Agents \> System \> System info*, and emptied the *Name* field, the alarms would incorrectly be updated with a “View Impact Changed” event.
 
 #### Dashboards app: Line chart components could show incorrect trend data due to a caching problem \[ID_26576\]
 
@@ -1142,11 +1118,11 @@ When you renamed a DVE element, in some cases, it would incorrectly have its for
 
 #### DataMiner Cube - SNMP forwarding: Problems with Notifications tab \[ID_26590\]
 
-When, in the *SNMP forwarding* section of *System Center*, you configured an SNMP manager, in some cases, the following problems could occur:
+When, in the *SNMP forwarding* section of *System Center*, you configured an SNMP manager, in some cases, the following problems could occur:
 
-- When, in the *General* tab, you selected “SNMPv1” and saved the configuration as is, in some cases, the notification OID would not be saved correctly. By default, it should be set to “User device-specific OID”.
+- When, in the *General* tab, you selected “SNMPv1” and saved the configuration as is, in some cases, the notification OID would not be saved correctly. By default, it should be set to “User device-specific OID”.
 
-- In case of SNMPv2 or SNMPv3, when the *Notification OID* field was not set to “Use custom bindings” and the *Custom bindings* pane was expanded, the *Delete* button would incorrectly always be enabled. That button should only be enabled when the *Notification OID* field is set to “Use custom bindings” and a custom binding is selected in the list.
+- In case of SNMPv2 or SNMPv3, when the *Notification OID* field was not set to “Use custom bindings” and the *Custom bindings* pane was expanded, the *Delete* button would incorrectly always be enabled. That button should only be enabled when the *Notification OID* field is set to “Use custom bindings” and a custom binding is selected in the list.
 
 #### DataMiner Cube - Multiple set: List of table indices would not be populated when there was no associated read parameter \[ID_26593\]
 
@@ -1249,7 +1225,7 @@ Also, it would no longer be possible to select the text of the option labels and
 
 #### DataMiner Cube - Scheduler: No longer possible to modify the actions defined in a task after going to the General or Schedule tab \[ID_26714\]
 
-When, in the *Scheduler* app, you created a new task and defined a number of actions in the *Actions* tab, in some cases, it would no longer be possible to modify those actions when you returned to the *Actions* tab after going to the *General* or *Schedule* tab.
+When, in the *Scheduler* app, you created a new task and defined a number of actions in the *Actions* tab, in some cases, it would no longer be possible to modify those actions when you returned to the *Actions* tab after going to the *General* or *Schedule* tab.
 
 #### Jobs app: Fields of type static text could incorrectly be saved without assigning them a value \[ID_26721\]
 
@@ -1257,7 +1233,7 @@ When configuring job sections, up to now, it would incorrectly be possible to ad
 
 #### Ticketing app: Number of selected tickets would incorrectly be displayed next to the Delete button when only one ticket was selected \[ID_26723\]
 
-When more than one ticket is selected in the list, the number of selected tickets is displayed next to the *Delete* button at the top of the screen. However, up to now, the number of selected tickets would incorrectly also be displayed when only one ticket was selected.
+When more than one ticket is selected in the list, the number of selected tickets is displayed next to the *Delete* button at the top of the screen. However, up to now, the number of selected tickets would incorrectly also be displayed when only one ticket was selected.
 
 #### DataMiner Cube - Data Display: Scrolling to the far right of a table would cause the column headers to no longer be aligned with the table content \[ID_26736\]
 
@@ -1307,7 +1283,7 @@ In some cases, it would not be possible to open the Profiles app when no profile
 
 #### DataMiner Cube - Profiles app: Problem when retrieving the discreet values of a profile parameter \[ID_26782\]
 
-When you opened the *Profiles* app, in some cases, an error could occur when retrieving the discreet values of a profile parameter.
+When you opened the *Profiles* app, in some cases, an error could occur when retrieving the discreet values of a profile parameter.
 
 #### Monitoring app: Notes on DVE elements \[ID_26787\]
 
@@ -1318,9 +1294,7 @@ In the Monitoring app, when users had been granted the “View notes” permissi
 When DataMiner was not running, in some cases, the following scheduled tasks would incorrectly remain in a “Running” state:
 
 - Skyline DataMiner Backup (DataMinerBackup.js)
-
 - Skyline DataMiner Database Optimization (OptimizeDB.js)
-
 - Skyline DataMiner LDAP Resync (ReloadLDAP.js)
 
 As a result, the next scheduled execution of those tasks would not take place and a number of files would remain locked.
@@ -1379,7 +1353,7 @@ In the Dashboards app, it could occur that the configuration of a Group componen
 
 #### Axis name displayed incorrectly after “Split to new Y-axis” option was used \[ID_26831\]
 
-If a trend graph displayed multiple parameters and the *Split to new Y-axis* option was used for the first parameter that had been added to the graph, it could occur that in the *Y-axis settings* box both axes were displayed with the name of the first parameter.
+If a trend graph displayed multiple parameters and the *Split to new Y-axis* option was used for the first parameter that had been added to the graph, it could occur that in the *Y-axis settings* box both axes were displayed with the name of the first parameter.
 
 #### Exception value of numeric parameter displayed incorrectly \[ID_26837\]\[ID_26889\]
 
@@ -1463,7 +1437,7 @@ If DataMiner Cube was displayed on different monitors with different DPI setting
 
 #### Incorrect information about Cube in Programs and Features window \[ID_26944\]
 
-In the Windows *Programs and Features* window, it could occur that the version number and size of the originally installed DataMiner Cube desktop app were displayed, instead of the actual version number and size.
+In the Windows *Programs and Features* window, it could occur that the version number and size of the originally installed DataMiner Cube desktop app were displayed, instead of the actual version number and size.
 
 #### Precompiled QActions loaded in memory multiple times \[ID_26952\]
 
@@ -1471,7 +1445,7 @@ In some cases, it could occur that precompiled QActions were loaded in memory mu
 
 #### CPE masking soft-launch feature visible even though soft-launch option was not activated \[ID_26960\]
 
-In some cases, it could occur that the option to mask an EPM object in a diagram was available, even though the *CPEIntegration* soft-launch option was not activated. Attempting to mask the object would result in an error, since this feature is only available in soft launch.
+In some cases, it could occur that the option to mask an EPM object in a diagram was available, even though the *CPEIntegration* soft-launch option was not activated. Attempting to mask the object would result in an error, since this feature is only available in soft launch.
 
 #### DataMiner Cube - Visual Overview: Input 1 missing from right-click menu of matrix control \[ID_26963\]
 

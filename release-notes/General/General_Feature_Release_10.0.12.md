@@ -1,4 +1,8 @@
-# Feature release 10.0.12
+---
+uid: General_Feature_Release_10.0.12
+---
+
+# General Feature Release 10.0.12
 
 ## New features
 
@@ -10,13 +14,13 @@ In a QAction, it is now possible to add a message body to raw HTTP requests sent
 
 Old syntax:
 
-```txt
+```csharp
 object[] httpRequestInfo = new object[3] { "http", new string[6] { sVerb, sURL, sUser, sPass, httpHeaders, "200" }, new string[1] { httpCommand } };
 ```
 
 New syntax:
 
-```txt
+```csharp
 object[] httpRequestInfo = new object[3] { "http", new string[6] { sVerb, sURL, sUser, sPass, httpHeaders, "200" }, new object[1] { new string[2] { httpCommand, dataToSend } } };
 ```
 
@@ -36,7 +40,7 @@ From now on, DirectView updates are supported in the following scenarios:
 
     Example:
 
-    ```txt
+    ```xml
     Protocol: view=200;directView=905 table config;view=201 column config or view=211:305
     ```
 
@@ -44,7 +48,7 @@ From now on, DirectView updates are supported in the following scenarios:
 
     Example:
 
-    ```txt
+    ```xml
     directView=6298 Pointing to a standalone parameter rather than a column parameter
     ```
 
@@ -57,7 +61,7 @@ From now on, DirectView updates are supported in the following scenarios:
 
     Example:
 
-    ```txt
+    ```xml
     filterChange=DirectViewColumnID A-RemoteDataColumnID A, DirectViewColumnID B-RemoteDataColumnID B, ...
     ```
 
@@ -65,7 +69,7 @@ From now on, DirectView updates are supported in the following scenarios:
 
     Example:
 
-    ```txt
+    ```xml
     directView=6505 => FILTER: value=6501 == REMOTE-DATA-1
     ```
 
@@ -79,28 +83,28 @@ When you open an alarm card that shows an alarm tree containing consolidated eve
 
 > [!NOTE]
 > - The maximum alarm limit is calculated after alarm event consolidation.
-> - Alarm consolidation is disabled by default. To enable it, add an *AlarmSettings.MustSquashAlarms* element to the *MaintenanceSettings.xml* file, and set its value to True.
+> - Alarm consolidation is disabled by default. To enable it, add an *AlarmSettings.MustSquashAlarms* element to the *MaintenanceSettings.xml* file, and set its value to True.
 
 #### Profiles app: Converters \[ID_27264\]
 
-In the *Profiles* app, it is now possible to configure a converter (i.e. a mediation snippet) for a parameter linked to a profile parameter.
+In the *Profiles* app, it is now possible to configure a converter (i.e. a mediation snippet) for a parameter linked to a profile parameter.
 
 To configure a converter, do the following:
 
-1. Open the *Profiles* app and go to the *Parameters* tab.
+1. Open the *Profiles* app and go to the *Parameters* tab.
 
 2. Open a parameter (or create a new one).
 
 3. In the *Linked with* table at the bottom, add, edit or duplicate an entry.
 
-4. In the *Edit link with protocol* box, activate the *Converter* setting, enter the converter code in the code window, and click *OK*.
+4. In the *Edit link with protocol* box, activate the *Converter* setting, enter the converter code in the code window, and click *OK*.
 
-    In the *Linked with* table, the *Converter* column will now show either the class name of the converter or, if no class name could be found, the first line of the converter code.
+    In the *Linked with* table, the *Converter* column will now show either the class name of the converter or, if no class name could be found, the first line of the converter code.
 
 5. Click *Save* to apply the changes you made.
 
 > [!NOTE]
-> When you edit a linked parameter with a converter, the *Converter* setting will automatically be activated.
+> When you edit a linked parameter with a converter, the *Converter* setting will automatically be activated.
 
 #### Elements hosted by a disconnected DMA will now be indicated as being disconnected \[ID_27313\] \[ID_27613\]
 
@@ -135,7 +139,7 @@ DataMiner Cube is now able to detect table columns containing MAC addresses and 
 
 #### Trending: Ignore gaps option in export window \[ID_27506\]
 
-When you export a trend graph to CSV, a new *Ignore gaps* option is now available. If you select this option, the export will skip any gaps in the trend data.
+When you export a trend graph to CSV, a new *Ignore gaps* option is now available. If you select this option, the export will skip any gaps in the trend data.
 
 #### Trending: Percentile line \[ID_27533\]
 
@@ -145,13 +149,13 @@ If the range of the graph is adapted, the percentile is not automatically update
 
 When you click the percentile line, a refresh option is displayed that allows you to refresh the percentile to the currently displayed data. Clicking the line also displays the option to adjust the percentile, so that you can e.g. display the 90th percentile instead.
 
-Finally, in the *Trending* tab of the Cube user settings, a new *Show percentile* setting is now available, which can be used to have the percentile line displayed by default whenever a trend graph is opened. If this option is selected, you can also select which percentile should be calculated by default.
+Finally, in the *Trending* tab of the Cube user settings, a new *Show percentile* setting is now available, which can be used to have the percentile line displayed by default whenever a trend graph is opened. If this option is selected, you can also select which percentile should be calculated by default.
 
 #### Alarm Console: FilterElement property of an alarm hyperlink can now include a filter that checks the existence of a dictionary key \[ID_27675\]
 
 A new exposer will now allow filters to check whether a certain key exists in a dictionary.
 
-```txt
+```csharp
 // Filter to check if a key exists
 var keyFilter = AlarmEventMessageExposers.PropertiesDict.KeyExists("KeyName").Equal(true);
 // Filter to check if a key does not exist
@@ -162,13 +166,13 @@ In Alarm Console hyperlinks, these filters can be used in the FilterElement prop
 
 ```xml
 <HyperLink id="1"
-           version="2"
-           name="Issue_ID blank"
-           type="script"
-           alarmColumn="true"
-           menu="root/JIRA"
-           combineParameters="true"
-           filterElement=             "(AlarmEventMessage.PropertiesDict.KeyExists:Issue_ID[Bool] == False) OR             (AlarmEventMessage.PropertiesDict.Issue_ID[String]=='')">
+           version="2"
+           name="Issue_ID blank"
+           type="script"
+           alarmColumn="true"
+           menu="root/JIRA"
+           combineParameters="true"
+           filterElement=             "(AlarmEventMessage.PropertiesDict.KeyExists:Issue_ID[Bool] == False) OR             (AlarmEventMessage.PropertiesDict.Issue_ID[String]=='')">
   Script:dummy script||||Tooltips|NoConfirmation,CloseWhenFinished
 </HyperLink>
 ```
@@ -181,17 +185,17 @@ In Alarm Console hyperlinks, these filters can be used in the FilterElement prop
 
 In DataMiner Cube, the name of the DataMiner System can now be displayed in the header bar.
 
-- Open the header bar’s quick menu, and activate or deactivate the *Show cluster name* setting.
+- Open the header bar’s quick menu, and activate or deactivate the *Show cluster name* setting.
 
     or
 
-- Open the *Settings* window, go to *Computer \> Cube*, and select or clear the *Display cluster name in header* setting.
+- Open the *Settings* window, go to *Computer \> Cube*, and select or clear the *Display cluster name in header* setting.
 
 ### DMS Reports & Dashboards
 
 #### Dashboards app: New “Enable pinning as quick pick” option + support for timespans as input for time range feed \[ID_27357\]
 
-In the Dashboards app, if the layout option *Use quick picks* is selected for a time range component, you can now enable the additional option *Enable pinning as quick pick*. When you do so, a pin icon is displayed next to the time summary in the component. Clicking the icon will add the current time selection as a custom quick pick button. If the current time selection matches the custom quick pick button, clicking the pin icon again will remove the button. You can also remove the button using the garbage can icon on the button itself.
+In the Dashboards app, if the layout option *Use quick picks* is selected for a time range component, you can now enable the additional option *Enable pinning as quick pick*. When you do so, a pin icon is displayed next to the time summary in the component. Clicking the icon will add the current time selection as a custom quick pick button. If the current time selection matches the custom quick pick button, clicking the pin icon again will remove the button. You can also remove the button using the garbage can icon on the button itself.
 
 The custom quick pick button is saved on component level, which means it will remain displayed when the dashboard is refreshed, until it is manually removed.
 
@@ -209,51 +213,38 @@ When you use a table column parameter as input for a State component in the Dash
 
 #### Ordering of data entries used in a dashboard component \[ID_27486\]
 
-For dashboard components that can display multiple data entries and for which it makes sense to modify the order in which these entries are displayed (e.g. State components, Parameter table components, etc.), in the *Data* pane, a new *Data used in component* section is available. This section lists the different data entries used by the selected component, with arrow icons on the right that can be used to change the order in which the entries are displayed.
+For dashboard components that can display multiple data entries and for which it makes sense to modify the order in which these entries are displayed (e.g. State components, Parameter table components, etc.), in the *Data* pane, a new *Data used in component* section is available. This section lists the different data entries used by the selected component, with arrow icons on the right that can be used to change the order in which the entries are displayed.
 
 #### Dashboards app: Support for quick filters of tables in visual overview components \[ID_27517\]
 
 Quick filters are now supported for tables within a visual overview component of a dashboard. The following (case-insensitive) syntax is supported for the filters:
 
 - {column name}{operator}{value}
-
 - {column name}{operator}regex{operator}{regex value}
-
 - {column name}{operator}severity{operator}{alarmstate}
-
 - regex{operator}{regex value}
-
 - severity{operator}{alarmstate}
 
 The following operators are supported in this syntax:
 
 - : (contains)
-
 - !:
-
 - =
-
 - !=
-
 - ==
-
 - !==
-
 - \<=
-
 - \>=
-
 - \>
-
 - \<
 
 #### Dashboard theme configuration improvements \[ID_27553\]
 
 The following improvements have been implemented to dashboard themes:
 
-- It is now possible to customize the colors for the lines displayed in a trend graph. You can do so on dashboard level, by customizing the theme, or on component level, by customizing the component theme. In either case, the colors can be configured under *Color* > *Color palette*.
+- It is now possible to customize the colors for the lines displayed in a trend graph. You can do so on dashboard level, by customizing the theme, or on component level, by customizing the component theme. In either case, the colors can be configured under *Color* > *Color palette*.
 
-- While previously, customizing the dashboard theme within a dashboard only provided limited options compared to the theme configuration in the settings of the Dashboards app, now a *New theme* button is available in the dashboard *Layout* pane, which will open a pop-up window where you can fully configure a new theme.
+- While previously, customizing the dashboard theme within a dashboard only provided limited options compared to the theme configuration in the settings of the Dashboards app, now a *New theme* button is available in the dashboard *Layout* pane, which will open a pop-up window where you can fully configure a new theme.
 
 #### Dashboard Gateway \[ID_27558\]
 
@@ -278,9 +269,7 @@ Requirements:
 - A DataMiner user account with
 
     - access to all views, elements and alarms,
-
     - permission to access the Alarm Console and Data Display, and
-
     - permission to create, edit and delete dashboards.
 
 - The Dashboard Gateway web server(s) should be able to communicate with a DMA using both a .NET Remoting connection and an HTTP(S) connection (using port 80 or 443, depending on the HTTP(S) configuration of the DataMiner Agent)
@@ -310,14 +299,13 @@ Configuration:
 Known limitations:
 
 - The URL folder structure of the web applications should remain the same as on a DataMiner Agent. The applications have to be accessed using the following URL:
-
-    - https://gateway.somecompany.com/dashboard
-
-    - https://gateway.somecompany.com/monitoring
-
-    - https://gateway.somecompany.com/ticketing
-
-    - https://gateway.somecompany.com/jobs
+ 
+    ```txt
+    https://gateway.somecompany.com/dashboard
+    https://gateway.somecompany.com/monitoring
+    https://gateway.somecompany.com/ticketing
+    https://gateway.somecompany.com/jobs
+    ```
 
 - The DataMiner user account used by the Dashboard Gateway web server should not have multi-factor authentication enabled.
 
@@ -345,7 +333,7 @@ From now on, long selection box content in EPM filters will automatically wrap t
 
 #### Web Services API v1: New GetServicesForFilter method \[ID_27412\]
 
-In the web services API v1, the new method *GetServicesForFilter* is now available. It can be used to retrieve a list of services matching a property filter.
+In the web services API v1, the new method *GetServicesForFilter* is now available. It can be used to retrieve a list of services matching a property filter.
 
 ### DMS Mobile apps
 
@@ -363,7 +351,7 @@ The loading screen of all mobile apps (Monitoring, Dashboards, Jobs, etc.) will 
 
 The ResourceManagerHelper now contains a new method that allows you to simultaneously execute multiple eligible resource queries.
 
-```txt
+```csharp
 /// <summary>
 /// Returns the eligible resources for all given contexts. A result can be matched
 /// with its context by matching the <see cref="EligibleResourceResult.ForContextId"/>
@@ -396,7 +384,7 @@ Also, a number of minor changes were done to make sure that the EligibleResource
 
 - An EligibleResourceContext now has a ContextId, which will automatically be filled in by any constructor.
 
-- When the GetEligibleResources method returns a ReservationInstanceNotFound error or a ServiceNodeResourceUsageNotFound error, the error data will now have an additional  EligibleResourceContextId property. This will allow you to pinpoint any context will faulty data.
+- When the GetEligibleResources method returns a ReservationInstanceNotFound error or a ServiceNodeResourceUsageNotFound error, the error data will now have an additional  EligibleResourceContextId property. This will allow you to pinpoint any context will faulty data.
 
 ### DMS tools
 
@@ -423,19 +411,12 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
 **Offline actions (i.e. actions that are always run whether or not the DMA being reset is running)**
 
 - StopTaskbarUtility
-
 - StopDataMiner
-
 - UndoIISConfig
-
 - UndoFirewallConfig
-
 - Unregister
-
 - UninstallEndpoints
-
 - DeleteTaskbarAppSettings
-
 - FileCleanup
 
     > [!NOTE]
@@ -448,21 +429,13 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
     > If you delete ResetConfig.txt, SLReset will again use the default whitelist.
 
 - ResetDataMinerXml
-
 - ResetNotifyMail
-
 - ResetDoNotRemoveFiles
-
 - ResetSLNetExeConfig
-
 - ResetProtocolsIconXml
-
 - ResetReportTemplatesXml
-
 - ResetWebpagesWebConfigs
-
 - DeleteExecutableEvents
-
 - DBReset
 
     > [!NOTE]
@@ -471,17 +444,11 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
     > For more information on SLDataGateway.Tools.Database.exe, see below.
 
 - Register
-
 - DcomConfig
-
 - ConfigureServices
-
 - FirewallConfig
-
 - IISConfig
-
 - StartSLTaskbarUtility
-
 - StartDataMiner
 
 **SLDataGateway.Tools.Database.exe**
@@ -493,13 +460,13 @@ This tool, when run with the factory-reset argument, resets the currently active
 | factory-reset |                         | X         | Argument specifying that a factory reset must be done.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | -t            | --database-type \<type> | X         | Type of database:<br> -  SQL (i.e. MySQL)<br> -  Cassandra<br> -  Elastic (i.e. ElasticSearch)                                                                                                                                                                                                                                                                                                         |
 | -i            | --ip \<ip>              | X         | IP address of the database host                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -u            | --username \<username>  |           | User account (user name and password)<br> If no account is specified, the following default credentials will be used:<br> -  MySQL: root (empty password)<br> -  Cassandra: root/root<br> -  ElasticSearch: no security                                                                                                                                                                                |
-| -p            | --password \<password>  |           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -f            | --forced                |           | Skip all prompts.<br> If this argument is not used, the user will be asked for a final confirmation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| -d            | --Database \<keyspace>  |           | Database/keyspace to be cleaned.<br> If this argument is not used, everything will be cleaned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -k            | --keepcustomcredentials |           | Preserve the specified Cassandra credentials (user and password) throughout the factory reset process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -l            |                         |           | Log level:<br> -  0 = Off<br> -  1 = Trace (default)<br> -  2 = Debug<br> -  3 = Info<br> -  4 = Warning<br> -  5 = Error<br> -  6 = Fatal |
-| --timeout     |                         |           | Timeout (milliseconds)<br> If execution takes longer than the specified timeout, the program is killed.<br> Default: int.MaxValue (\~2 billion)                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -u            | --username \<username>  |           | User account (user name and password)<br> If no account is specified, the following default credentials will be used:<br> -  MySQL: root (empty password)<br> -  Cassandra: root/root<br> -  ElasticSearch: no security                                                                                                                                                                                |
+| -p            | --password \<password>  |           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -f            | --forced                |           | Skip all prompts.<br> If this argument is not used, the user will be asked for a final confirmation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| -d            | --Database \<keyspace>  |           | Database/keyspace to be cleaned.<br> If this argument is not used, everything will be cleaned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| -k            | --keepcustomcredentials |           | Preserve the specified Cassandra credentials (user and password) throughout the factory reset process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -l            |                         |           | Log level:<br> -  0 = Off<br> -  1 = Trace (default)<br> -  2 = Debug<br> -  3 = Info<br> -  4 = Warning<br> -  5 = Error<br> -  6 = Fatal |
+| --timeout     |                         |           | Timeout (milliseconds)<br> If execution takes longer than the specified timeout, the program is killed.<br> Default: int.MaxValue (\~2 billion)                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 > [!NOTE]
 > - When you perform a factory reset, no backup of the DataMiner Agent will be taken.
@@ -544,9 +511,9 @@ Numerous improvements have been implemented to the Change Element States Offline
 
 - A CSV and XML export option for element states is now available in the *File* menu.
 
-- A new *Elements by Protocol* tab has been added, with a tree view showing elements by protocol and protocol version. Check boxes allow the quick selection of all elements in a node of the tree view.
+- A new *Elements by Protocol* tab has been added, with a tree view showing elements by protocol and protocol version. Check boxes allow the quick selection of all elements in a node of the tree view.
 
-- A search box has been added to make it easier to find elements in the *Elements by Name* and *Elements by Protocol* tabs. The wildcards "\*" (for any number of characters) and "?" (for exactly one character) can be used in this box. The element state can be included in the search
+- A search box has been added to make it easier to find elements in the *Elements by Name* and *Elements by Protocol* tabs. The wildcards "\*" (for any number of characters) and "?" (for exactly one character) can be used in this box. The element state can be included in the search
 
 - The Ctrl+A key combination is now supported to select all elements.
 
@@ -569,13 +536,11 @@ When creating a BPA test capable of taking corrective actions, developers have t
 2. Create an implementation of the Verify() method that will return
 
     - True when no issues were detected, and
-
     - False when issues were detected.
 
 3. Create an implementation of the CorrectiveAction() method that will return
 
     - True when the corrective action was performed successfully, and
-
     - False when issues prevented the action from being performed.
 
 A BPA test that was set to take corrected actions will run the Verify() method, which will run the CorrectiveAction() method in case of failure, and will then run the Verify() method again.
@@ -599,7 +564,7 @@ Before running a BPA test, the scope of the test should now always be specified 
 
 #### Service & Resource Management - Profile parameters: Default value of “IsOptional” field has changed from “Undefined” to “Yes” \[ID_27286\]
 
-Up to now, the *IsOptional* field of a profile parameter was by default set to “Undefined”. From now on, this field will by default be set to “Yes”.
+Up to now, the *IsOptional* field of a profile parameter was by default set to “Undefined”. From now on, this field will by default be set to “Yes”.
 
 #### Only the most recent synchronization file will now be kept in the “C:\\Skyline DataMiner\\system cache\\sync” folder \[ID_27323\]
 
@@ -621,12 +586,12 @@ From now on, the StandAloneBpaExecutor executable has to be run with administrat
 
 #### DataMiner Cube - Visual Overview: EPM card Visual pages now only displayed when page-level properties “Chain” and “Field” both match \[ID_27392\]
 
-In an EPM environment, you can assign Visual Overview pages to chains and fields by setting the page-level *Chain* and *Field* properties.
+In an EPM environment, you can assign Visual Overview pages to chains and fields by setting the page-level *Chain* and *Field* properties.
 
-Up to now, all Visual pages of an EPM card with a matching *Field* property were displayed, regardless of their *Chain* property. From now on, a Visual page will only be displayed if its *Chain* property is set to either a valid chain or “\*”.
+Up to now, all Visual pages of an EPM card with a matching *Field* property were displayed, regardless of their *Chain* property. From now on, a Visual page will only be displayed if its *Chain* property is set to either a valid chain or “\*”.
 
 > [!NOTE]
-> Setting the *Chain* property of a Visio page to “\*” will display that page on all chains of the CPE Manager.
+> Setting the *Chain* property of a Visio page to “\*” will display that page on all chains of the CPE Manager.
 
 #### More detailed information in exception message when a BPA test fails to load due to dependen­cies not being able to load \[ID_27403\]
 
@@ -638,7 +603,7 @@ Due to a number of enhancements, overall performance has increased when applying
 
 #### StandAloneBpaExecutor can now be used to view previously saved BPA test results \[ID_27451\]
 
-When you saved the results of a BPA test to a JSON file, you can now load that file back into the StandAloneBpaExecutor to review the test result. To do so, go to the *Load results* tab, select the file, and click *Load*.
+When you saved the results of a BPA test to a JSON file, you can now load that file back into the StandAloneBpaExecutor to review the test result. To do so, go to the *Load results* tab, select the file, and click *Load*.
 
 #### Jobs app: Miscellaneous enhancements \[ID_27454\]
 
@@ -649,11 +614,8 @@ A number of enhancements have been made to the user interface of the Jobs app: i
 From now on, the C:\\Skyline DataMiner\\BPA folder will also be included when you take one of the following predefined backups:
 
 - Full backup
-
 - Full backup without database
-
 - Configuration backup
-
 - Configuration backup without database
 
 #### Services app now includes virtual function definitions configured in DataMiner \[ID_27462\]
@@ -665,9 +627,7 @@ Previously, the Services module only listed virtual functions that had been uplo
 The IBpaTestResult interface now contains an additional property named “Outcome”. This property can have the following values:
 
 - BpaOutcome.NoIssues
-
 - BpaOutcome.IssuesDetected
-
 - BpaOutcome.Warning
 
 #### SLWatchdog will now automatically restart the NAS and NATS services \[ID_27478\]
@@ -696,7 +656,7 @@ The Monitoring app and Dashboards app now support the use of embedded trend grap
 
 #### Support for running BPA tests across a cluster \[ID_27577\]
 
-When interfacing with a DataMiner Agent and its installed BPA tests using the *BpaManagerHelper* object, you can now request the execution of one or more BPA tests across the cluster.
+When interfacing with a DataMiner Agent and its installed BPA tests using the *BpaManagerHelper* object, you can now request the execution of one or more BPA tests across the cluster.
 
 #### Cube launcher tool: Popup windows can be closed by pressing ESC & main window title changed to “DataMiner Cube” \[ID_27582\]
 
@@ -712,10 +672,10 @@ The client application licensing feature has now been removed. This means that i
 
 When you add a custom property to an element, you can select a number of options.
 
-From now on, it will only be possible to select *Update alarms on value changed* after selecting *Make this property available for alarm filtering*.
+From now on, it will only be possible to select *Update alarms on value changed* after selecting *Make this property available for alarm filtering*.
 
 > [!NOTE]
-> When an element property, service property or view property is created, the *Update alarm on value* changed option will by default be cleared. However, when an alarm property is created, this option will by default be selected.
+> When an element property, service property or view property is created, the *Update alarm on value* changed option will by default be cleared. However, when an alarm property is created, this option will by default be selected.
 
 #### DataMiner Cube - Data Display: Enhanced scrollbar behavior in tables \[ID_27653\]
 
@@ -745,17 +705,17 @@ When, in DMS Alerter, you opened the settings window, in some cases, the window 
 
 #### Problem with the precision of decimal values \[ID_27136\]
 
-Up to now, when SLElement received a value from SLProtocol, in some cases, the raw value would get rounded to the number of decimals specified in the protocol’s *Display.Decimal* element. In cases where the *Display.Decimal* element defined less decimals than the *Interprete.Decimals* element, the level of precision would drop and would lead to rounding errors.
+Up to now, when SLElement received a value from SLProtocol, in some cases, the raw value would get rounded to the number of decimals specified in the protocol’s *Display.Decimal* element. In cases where the *Display.Decimal* element defined less decimals than the *Interprete.Decimals* element, the level of precision would drop and would lead to rounding errors.
 
-From now on, values will always be saved to the database with the precision specified in the *Interprete.Decimals* element. Also, that same precision will be taken by raw values sent to client applications.
+From now on, values will always be saved to the database with the precision specified in the *Interprete.Decimals* element. Also, that same precision will be taken by raw values sent to client applications.
 
 #### DataMiner Cube: Missing focus icon for correlated alarm \[ID_27168\]
 
-If you expanded a correlated alarm in the Alarm Console in order to see the base alarms and then toggled the *Correlation tracking* option, it could occur that the focus icon was missing for the correlated alarm.
+If you expanded a correlated alarm in the Alarm Console in order to see the base alarms and then toggled the *Correlation tracking* option, it could occur that the focus icon was missing for the correlated alarm.
 
 #### DataMiner Cube - Profiles app: Problem when duplicating a profile parameter \[ID_27194\]
 
-When, in the *Profiles* app, you duplicated a profile parameter of type “discrete” and discreteType “number”, in some cases, the discreteType and the raw discrete values would not be copied correctly.
+When, in the *Profiles* app, you duplicated a profile parameter of type “discrete” and discreteType “number”, in some cases, the discreteType and the raw discrete values would not be copied correctly.
 
 #### DataMiner restart not triggered after process generated crashdump \[ID_27321\]
 
@@ -780,12 +740,11 @@ DCF interfaces that are linked to a table entry can retrieve data from that tabl
 The following minor issues could occur with a time range feed component in a dashboard:
 
 - In some cases, the clock icon was not displayed next to the time summary.
-
 - It could occur that the configuration pane of the time range feed was not correctly aligned with the time summary.
 
 #### DataMiner Cube - Profiles app: “Modified” label would not disappear after saving \[ID_27373\]
 
-When, in the *Profiles* app, you saved a profile definition, a profile instance or a profile parameter, in some cases, the “Modified” tag would incorrectly not disappear.
+When, in the *Profiles* app, you saved a profile definition, a profile instance or a profile parameter, in some cases, the “Modified” tag would incorrectly not disappear.
 
 #### BPA tests would fail when being run with administrative privileges \[ID_27382\]
 
@@ -819,7 +778,7 @@ In some cases, protocol-level TTL settings would incorrectly not be taken into a
 
 #### DataMiner Cube: Duplicated excluded column parameter entry in alarm template could not be edited \[ID_27423\]
 
-If a column parameter entry that was set to *Excluded* was duplicated in an alarm template, it could occur that it was not possible to edit the duplicated entry.
+If a column parameter entry that was set to *Excluded* was duplicated in an alarm template, it could occur that it was not possible to edit the duplicated entry.
 
 #### Problem when a QAction launched an Automation script immediately after the element had been started \[ID_27431\]
 
@@ -846,7 +805,6 @@ System.InvalidOperationException: The specified type was not recognized: name='D
 A number of problems with regard to enhanced services have been fixed:
 
 - When an enhanced service was renamed, in some cases, all open alarms associated with that service would incorrectly disappear.
-
 - After an enhanced service had been reloaded, in some cases, element state changes would no longer be forwarded to that enhanced service.
 
 #### Service & Resource Management: A daylight saving time change would incorrectly cause book­ing durations to get changed \[ID_27468\]
@@ -885,7 +843,7 @@ In some cases, the GetJobsDomains method would throw an error when the VisualStr
 
 #### Dashboards app - Image component: Image selection box would incorrectly also contain non-image files \[ID_27510\]
 
-When, in the Dashboards app, you added an image component and opened the image selection box on its *Settings* tab, in some cases, the selection box would list all files found in the C:\\Skyline DataMiner\\Dashboard\\\_IMAGES\\ folder, including files that were not images. From now on, the image selection box will only list image files.
+When, in the Dashboards app, you added an image component and opened the image selection box on its *Settings* tab, in some cases, the selection box would list all files found in the C:\\Skyline DataMiner\\Dashboard\\\_IMAGES\\ folder, including files that were not images. From now on, the image selection box will only list image files.
 
 #### Dashboards app: Table in visual overview component not filtered correctly \[ID_27517\]
 
@@ -901,7 +859,7 @@ In mobile apps (e.g. Jobs), in some cases, date picker controls would show an in
 
 #### Dashboards app: Problem with line chart component displaying resource capacity information \[ID_27526\]
 
-When a line chart component in a dashboard was configured to display resource capacity information, and no data was displayed for the current timespan, a problem could occur if you selected the *Use percentage based units* option in the *Settings* pane.
+When a line chart component in a dashboard was configured to display resource capacity information, and no data was displayed for the current timespan, a problem could occur if you selected the *Use percentage based units* option in the *Settings* pane.
 
 #### DataMiner Cube - Alarm templates: Problem when editing alarm levels of a matrix parameter from the Alarm Console \[ID_27535\]
 
@@ -917,9 +875,9 @@ In some cases, alarm shapes created as part of a Children shape would not get cl
 
 #### DataMiner Cube: About window would incorrectly show launcher tool version instead of Cube client version when Cube was opened using the launcher tool \[ID_27552\]
 
-When you opened DataMiner Cube using the launcher tool, in some cases, the *About* window would no longer display Cube’s client version. It would show the launcher tool version instead.
+When you opened DataMiner Cube using the launcher tool, in some cases, the *About* window would no longer display Cube’s client version. It would show the launcher tool version instead.
 
-From now on, the *About* window will show both the Cube client version and the launcher tool version.
+From now on, the *About* window will show both the Cube client version and the launcher tool version.
 
 #### Cube launcher tool: Entering text in the Arguments text box could resize the UI \[ID_27559\]
 
@@ -959,14 +917,13 @@ In some cases, when parameters were positioned automatically, the columns would 
 
 #### Dashboards app: Problem with Auto-select all indices option for Parameter feed component \[ID_27623\]
 
-In the Dashboards app, if the *Auto-select number of indices* option was selected for a Parameter feed component, it could occur that the *Auto-select all indices* option did not work.
+In the Dashboards app, if the *Auto-select number of indices* option was selected for a Parameter feed component, it could occur that the *Auto-select all indices* option did not work.
 
 #### Minor issues in BPA framework \[ID_27625\]
 
 The following minor issues could occur in the BPA framework:
 
 - In some cases, it could occur that BPA tests were not updated correctly if BpaManager.BPAs.Update was used. The BPA info was not stored.
-
 - BpaManager did not always include trace data on exceptions, causing BpaManagerHelper not to throw ManagerStoreExceptions.
 
 #### DataMiner Cube - Alarm Console: Problem with alarm hyperlinks when the first character of the parameter name is “#” \[ID_27641\]
@@ -975,7 +932,7 @@ When you right-clicked an alarm associated with a parameter of which the name st
 
 #### DataMiner Cube: Clicking a pinned or recently opened custom element app would incorrectly cause another app to open \[ID_27642\]
 
-When the *Activities* tab of the navigation pane listed multiple custom element apps of the same type (either pinned or not), in some cases, clicking one of those apps would incorrectly cause another app to open.
+When the *Activities* tab of the navigation pane listed multiple custom element apps of the same type (either pinned or not), in some cases, clicking one of those apps would incorrectly cause another app to open.
 
 #### FileInfoManager: Problem when handling production protocols \[ID_27645\]
 

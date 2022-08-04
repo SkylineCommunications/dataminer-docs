@@ -1,4 +1,8 @@
-# Feature release 10.0.13
+---
+uid: General_Feature_Release_10.0.13
+---
+
+# General Feature Release 10.0.13
 
 ## New features
 
@@ -26,30 +30,25 @@ Values set to be displayed using scientific notation will now use a dot instead 
 
 #### DataMiner Cube - Alarm Console - Automatic incident tracking: Timeout and non-timeout alarms will now be grouped \[ID_27299\]\[ID_27877\]
 
-Up to now, when *Automatic incident tracking* was activated, timeout and non-timeout alarms would not be grouped. From now on, those alarms will be grouped with each other.
+Up to now, when *Automatic incident tracking* was activated, timeout and non-timeout alarms would not be grouped. From now on, those alarms will be grouped with each other.
 
-#### DataMiner Cube will now display more detailed information when you try to connect to a Data­Miner Agent that is starting up \[ID_27308\]\[ID_27770\]
+#### DataMiner Cube will now display more detailed information when you try to connect to a DataMiner Agent that is starting up \[ID_27308\]\[ID_27770\]
 
 When you try to connect to a DataMiner Agent that is starting up or that is being restarted, DataMiner Cube will now display more detailed information regarding the startup process.
 
 Examples of messages that will be displayed:
 
 - Offloaded files are currently being restored to Cassandra
-
 - Starting element X
 
 #### Correlation/Automation/Scheduler: Email report configuration \[ID_27521\]\[ID_27812\]\[ID_27878\] \[ID_28032\] \[ID_28038\]\[ID_28081\]
 
-In an *Email* action of a Correlation rule, an Automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an Automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
+In an *Email* action of a Correlation rule, an Automation script or a scheduled task, as well as in the *Upload report to FTP* and *Upload report to shared folder* actions in an Automation script, if you add a report based on a dashboard, you can now click a *Configure* button to open an embedded browser window where you can configure the necessary data feed selections as well as the following options:
 
 - *Add DMS info*: Determines whether company details are displayed in the report.
-
 - *Add DMS logo*: Determines whether the company logo is displayed in the report.
-
 - *Include feeds*: Determines whether feed components are included in the report. By default, this option is not enabled.
-
 - *Stack components*: Select this option if you want all components to be displayed below one another. This can be especially useful for dashboards containing large components (e.g. pivot tables) in order to make sure all data is displayed.
-
 - *Dashboard width*: Allows you to select a custom width for the report.
 
 #### Visual Overview: Conditional shape manipulation actions no longer require the shape to be linked to an element, service or view \[ID_27569\]
@@ -57,13 +56,9 @@ In an *Email* action of a Correlation rule, an Automation script or a scheduled
 Up to now, the following conditional shape manipulation actions could only be configured on shapes linked to an element, service or view. From now on, these actions will no longer require the shape to be linked to an element, service or view.
 
 - Show
-
 - Hide
-
 - FlipX
-
 - FlipY
-
 - Enabled
 
 > [!NOTE]
@@ -146,20 +141,19 @@ PathToCubeExe.exe /Modify /Silent /ModifyOptions:ClearProtocolCache,ClearVisioCa
 | /Uninstall        | Open the uninstall window.         |
 | /Uninstall/Silent | Silently uninstall DataMiner Cube. |
 
-#### Protocols & Templates: Information template editor now also allows you to configure parame­ters of type Button and ToggleButton \[ID_27823\]
+#### Protocols & Templates: Information template editor now also allows you to configure parameters of type Button and ToggleButton \[ID_27823\]
 
 As to button parameters, up to now, the information template editor only allowed you to configure parameters of type PageButton. From now, it will also be possible to configure parameters of type Button and ToggleButton.
 
 #### DataMiner Cube: Buttons to join and leave cluster renamed \[ID_27863\]
 
-On the *Agents* > *Manage* page in System Center, the *Add cluster* and *Delete cluster* buttons have been renamed to *Join cluster* and *Leave cluster*, respectively.
+On the *Agents* > *Manage* page in System Center, the *Add cluster* and *Delete cluster* buttons have been renamed to *Join cluster* and *Leave cluster*, respectively.
 
 #### New EPM card settings \[ID_27874\]
 
 In the DataMiner Cube user settings, you can now configure the following EPM card settings:
 
 - Default EPM card page
-
 - How to show EPM card Visual pages
 
 #### Visual Overview: Info keywords can now be used as dynamic placeholders in other shape data fields \[ID_27880\]
@@ -180,7 +174,7 @@ When an Automation script executed in Visual Overview finishes successfully, it 
 
 In the following example, a session variable named “MyOutput” will be created and will receive the value “MyValue”.
 
-```txt
+```csharp
 engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValue");
 ```
 
@@ -196,7 +190,7 @@ From now on, you can use the page-level shape data field OnClosing to configure 
 
 In a shape data field of type OnClosing, specify a script (example: Script:MyScript), and make sure the script contains an instruction like the following one:
 
-```txt
+```csharp
 engine.AddScriptOutput(UIVariables.VisualOverview.ClosingWindow_Result, ClosingMode.Continue.ToString());
 ```
 
@@ -232,7 +226,7 @@ When adding or editing a tag, you can now select the following additional option
 | Generate alarm when detected | Select this option if you want suggestion events to be generated when a match is detected in the trend data. |
 
 > [!NOTE]
-> When you save a tag after selecting the *Generate alarm when detected* option, a message box may appear, saying that suggestion events cannot be generated for that tag. This is due to the range of the tag being too large. The tag itself will be saved and detected.
+> When you save a tag after selecting the *Generate alarm when detected* option, a message box may appear, saying that suggestion events cannot be generated for that tag. This is due to the range of the tag being too large. The tag itself will be saved and detected.
 
 #### Trending: Trend percentile will now be calculated using either average or real-time trend data \[ID_27965\]
 
@@ -255,12 +249,11 @@ Command-line arguments: /Alias=Xyz /Host=hostname
 
 #### System Center: Enhanced Database section \[ID_27976\]
 
-The *Database* section of *System Center* now has three main tab pages.
+The *Database* section of *System Center* now has three main tab pages.
 
 - In the *General* tab page, you can select “Database per agent” or “Database per cluster”.
 
     - When you select “Database per agent”, you can configure the local databases per agent.
-
     - When you select “Database per cluster”, you can configure a Cassandra cluster acting as a shared local database.
 
 - In the *Offload* tab page, you can configure the data offloads to a central database.
@@ -273,7 +266,7 @@ Up to now, pattern matching happened on the fly when a trend graph was opened. N
 
 When you create a pattern in DataMiner Cube, you can now select the following new options:
 
-- When you select the *Generate an alarm when detected* option, DataMiner will track the pattern in real time and trigger a suggestion event each time it detects the pattern.
+- When you select the *Generate an alarm when detected* option, DataMiner will track the pattern in real time and trigger a suggestion event each time it detects the pattern.
 
     When you do not select this option, DataMiner will behave as before and use static pattern matching instead.
 
@@ -290,31 +283,31 @@ When you create a pattern in DataMiner Cube, you can now select the following ne
 
     - As soon as DataMiner uses more than 1.5 GB of internal memory for real-time pattern matching, the following notice will appear in the Alarm Console:
 
-        *Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.*
+        `Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.`
 
         This notice will appear at most every 2 weeks or after a DataMiner restart.
         In order to reduce memory usage, users can either remove patterns that are being tracked in real time or restrict the number of parameters for which patterns are being tracked in real time (e.g. by specifying a display key in case of table parameters).
 
     - As soon as DataMiner uses more than 2 GB of internal memory for real-time pattern matching, the following notice will appear in the Alarm Console:
 
-        *Pattern matching memory critical, patterns with suggestion events enabled may not match properly.*
+        `Pattern matching memory critical, patterns with suggestion events enabled may not match properly.`
 
         This notice will appear at most every 2 weeks or after a DataMiner restart.
         Also, when users create a pattern, DataMiner will now always revert to static pattern matching, even if they selected the *Generate an alarm when detected* option.
 
     - DataMiner checks all changes made to parameters for which patterns are being tracked in real time. If there are more than 6000 parameter changes per second, the following notice will appear in the Alarm Console:
 
-        *High load on pattern matching functionality: reduced pattern match accuracy.*
+        `High load on pattern matching functionality: reduced pattern match accuracy.`
 
 **Suggestion events**
 
-In case of real-time pattern matching, pattern occurrences are communicated to the user by means of suggestion events in the Alarm Console, i.e. alarms with severity “Information” and source “Suggestion Engine”. These events can be displayed in a separate *Suggestion events* alarm tab.
+In case of real-time pattern matching, pattern occurrences are communicated to the user by means of suggestion events in the Alarm Console, i.e. alarms with severity “Information” and source “Suggestion Engine”. These events can be displayed in a separate *Suggestion events* alarm tab.
 
 ### DMS Reports & Dashboards
 
 #### Dashboards app: Generic Query Interface \[ID_24048\]\[ID_24548\]\[ID_25898\]\[ID_25921\]\[ID_26050\] \[ID_26153\]\[ID_26448\]\[ID_26477\]\[ID_26793\]\[ID_27616\]\[ID_27678\]\[ID_27949\]\[ID_27987\]\[ID_28010\] \[ID_28071\]
 
-The Generic Query Interface allows you to efficiently tap into the wealth of data available in your DataMiner System. In this release, the interface is available via the *Queries* data input for Bar chart and State visualizations, as well as in the new Table and Pie Chart visualizations, which were especially created for this feature. In future releases, additional functionality using the Generic Query Interface will become available. Note that this feature is only available if DataMiner uses a Cassandra database. For some queries, an Elasticsearch database is also required.
+The Generic Query Interface allows you to efficiently tap into the wealth of data available in your DataMiner System. In this release, the interface is available via the *Queries* data input for Bar chart and State visualizations, as well as in the new Table and Pie Chart visualizations, which were especially created for this feature. In future releases, additional functionality using the Generic Query Interface will become available. Note that this feature is only available if DataMiner uses a Cassandra database. For some queries, an Elasticsearch database is also required.
 
 ##### Using the Queries data input
 
@@ -329,38 +322,34 @@ You can construct a query to use as data input for a component by following thes
 4. In the drop-down box below this, select the data source you want to use. At present, the following options are available:
 
     - *Get elements*: The elements in the DataMiner System.
-
     - *Get parameter table by alias*: The parameter table using the specified alias in the Elasticsearch database.
-
     - *Get parameter table by ID*: The selected parameter table from the element with the specified DataMiner ID and element ID.
-
     - *Get parameters for element where*: The selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query.
-
     - *Get services*: The services in the DataMiner System.
 
 5. Select an operator. This step is optional; if you do not select an operator, the entire data set will be used. The following operators are available:
 
     - *Aggregate*: Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g. Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.
 
-        You can then further filter the result by applying another operator. An additional *Group by* operator is available for this, which will display the result of the aggregation operation for each different item in the column selected in the *Group by column* box.
+        You can then further filter the result by applying another operator. An additional *Group by* operator is available for this, which will display the result of the aggregation operation for each different item in the column selected in the *Group by column* box.
 
     - *Column manipulations*: Creates a new column based on existing columns. When you select this option, you also need to select a manipulation method.
 
-        If you choose the *Concatenate* method, you will need to select several columns and then specify the format that should be used to concatenate the content of those columns, using placeholders in the format {0}, {1}, etc. to refer to those columns.
+        If you choose the *Concatenate* method, you will need to select several columns and then specify the format that should be used to concatenate the content of those columns, using placeholders in the format {0}, {1}, etc. to refer to those columns.
 
-        If you choose the *Regexmatch* method, you will need to select a column and specify a regular expression, so that the new column will only contain the items from the selected column that match the regular expression.
+        If you choose the *Regexmatch* method, you will need to select a column and specify a regular expression, so that the new column will only contain the items from the selected column that match the regular expression.
 
         For both manipulation methods, you will also need to specify the name for the new column. When the column manipulation operation is fully configured, you can further fine-tune the result by applying another operator.
 
     - *Filter*: Filters the data set. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
 
-    - *Join*: Joins two tables together. When you select this option, in the *Type* drop-down box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
+    - *Join*: Joins two tables together. When you select this option, in the *Type* drop-down box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
-        The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
+        The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
 
     - *Select*: Displays the selected columns only. When you have selected the columns to display, you can apply another operator to refine the query.
 
-    - *Top X*: Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* check box.
+    - *Top X*: Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* check box.
 
 6. Drag the configured query to the component in order to use it.
 
@@ -374,16 +363,13 @@ You can construct a query to use as data input for a component by following thes
 This new visualization was especially designed to be able to display the results of queries in a table format. It only supports query data input. It displays the different data sources as follows:
 
 - Elements are represented with a row for each element, with each column detailing different information for that element.
-
 - Services are displayed in the same way as elements.
-
 - Table parameters are displayed as they are, as determined by the applied operators.
-
 - If parameters are retrieved by protocol or profile definition, each row will represent a matching element, and for each parameter a column will show the corresponding values.
 
 You can resize the columns of the table by dragging the column edges. Clicking on a column header will sort the table by that column. To toggle between ascending and descending order, click the column header again. To sort by multiple columns, keep the Ctrl key pressed while clicking the column headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
 
-In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. To do so, select the parameter you want to use for highlighting, indicate a range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one parameter, each with a color of its own.
+In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. To do so, select the parameter you want to use for highlighting, indicate a range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one parameter, each with a color of its own.
 
 ##### Pie Chart visualization
 
@@ -391,7 +377,7 @@ This new visualization was designed to display the results of queries in a chart
 
 The following layout options are available for this visualization:
 
-- *Chart shape*: Can be set to *Pie* or *Donut*.
+- *Chart shape*: Can be set to *Pie* or *Donut*.
 
 - *Legend*: The legend can be hidden. If it is set to be displayed, you can select whether it should be displayed on the left, on the right, at the top or at the bottom of the visualization.
 
@@ -407,20 +393,16 @@ In addition, the following settings are available for this visualization:
 
 A number of changes have been implement to the bar chart visualization, in order to optimize this visualization to display queries.
 
-If the visualization displays a query, in the *Settings* tab, the following options are available instead of the usual options for a bar chart:
+If the visualization displays a query, in the *Settings* tab, the following options are available instead of the usual options for a bar chart:
 
 - *Label*: Allows you to select which data should be used as a label.
-
 - *Bars*: Allows you to select which data should determine the size of bars.
 
 In addition, the following layout options can now be configured for this visualization:
 
-- *Chart layout*: Can be set to *Relative* or *Absolute*. *Relative* means that the dimension of each bar is shown as a relative percentage. *Absolute* means that the dimension of each bar is shown as an absolute numeric value.
-
+- *Chart layout*: Can be set to *Relative* or *Absolute*. *Relative* means that the dimension of each bar is shown as a relative percentage. *Absolute* means that the dimension of each bar is shown as an absolute numeric value.
 - *Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
-
 - *Legend*: The legend can be hidden. If it is set to be displayed, you can select whether it should be displayed on the left, on the right, at the top or at the bottom of the visualization.
-
 - *Tooltips*: Tooltips can be hidden. If they are set to be displayed, you can select whether these should include the label, dimension and/or value.
 
 #### Dashboards app: Selecting an empty folder will now cause a “Create dashboard” button and a “Import dashboard” button to appear \[ID_27579\]\[ID_27844\]
@@ -450,9 +432,7 @@ The value range you specify will apply to all trend lines displayed on the graph
 When configuring a line chart component that does not show real-time trend data, you can now make the trend graph show a minimum, a maximum and/or an average trend line by switching on the following options:
 
 - Show average (default setting: switched on)
-
 - Show minimum (default setting: switched off)
-
 - Show maximum (default setting: switched off)
 
 #### Dashboards app - Parameter feed: “Auto-select all” option \[ID_27816\]\[ID_28033\]
@@ -460,18 +440,16 @@ When configuring a line chart component that does not show real-time trend data,
 When configuring the Parameter feed, up to now, it was possible to either have a specific number of indices selected automatically or have all indices selected automatically.
 
 - Auto-select number of indices
-
 - Auto-select all indices
 
 Now, the above-mentioned options have been replaced by the “Auto-select all” option. When this option is selected, all items will be selected according to the "Select all behavior" settings below it:
 
 - If you select the “Select all items” option, "Select all" will select all items. For a partial table, only the items from the first page will be selected.
-
 - If you select the “Select specific number of items” option, a box is displayed below it. In this box, you should specify how many items "Select all" should select. For a partial table, these items will be selected across different pages.
 
 #### Dashboards app - Line chart component: New “Chart limit behavior” setting \[ID_27841\]
 
-When configuring a line chart component, you can now use the *Chart limit behavior* setting to indicate what needs to happen when the number of parameters in the chart exceeds the defined chart limit:
+When configuring a line chart component, you can now use the *Chart limit behavior* setting to indicate what needs to happen when the number of parameters in the chart exceeds the defined chart limit:
 
 | Option                       | Behavior                                                                                                                                                                             |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -488,13 +466,13 @@ When configuring a pivot table component, you can now find the following setting
 | Sort ascending | Determines the order in which the pivot table is sorted.<br> If you clear this check box, it is sorted in descending order.           |
 
 > [!NOTE]
-> Using these sort settings in conjunction with the *Limit* setting in the *Configure indices* section, you can produce a top X or bottom X list.
+> Using these sort settings in conjunction with the *Limit* setting in the *Configure indices* section, you can produce a top X or bottom X list.
 
 ### DMS Automation
 
 #### Interactive Automation scripts: Tree view items now have an IsCollapsed property \[ID_27756\]
 
-When, in an interactive Automation script, you define a tree view control (i.e. a UIBlockDefinition of type TreeView), you can now use the TreeViewItem property *IsCollapsed* to indicate whether an item should be collapsed or expanded.
+When, in an interactive Automation script, you define a tree view control (i.e. a UIBlockDefinition of type TreeView), you can now use the TreeViewItem property *IsCollapsed* to indicate whether an item should be collapsed or expanded.
 
 > [!NOTE]
 > This property will not be updated when you collapse or expand tree view items in the UI.
@@ -515,106 +493,106 @@ When you install DataMiner 10.0.13 and you already use an Elasticsearch database
 
 When you interact with the Ticketing Manager in scripts, keep the following changes in mind:
 
-- A ticket now has a *UID* property of type GUID, which is always unique and which replaces the *TicketID* object. This object was used with the Cassandra database and consisted of a DataMiner ID and ticket ID. However, in Elasticsearch, the DataMiner ID is no longer needed. While tickets will still have a unique ticket ID, new implementations should make use of the *UID* instead.
+- A ticket now has a *UID* property of type GUID, which is always unique and which replaces the *TicketID* object. This object was used with the Cassandra database and consisted of a DataMiner ID and ticket ID. However, in Elasticsearch, the DataMiner ID is no longer needed. While tickets will still have a unique ticket ID, new implementations should make use of the *UID* instead.
 
-- A new *TicketingHelper* is available that should be used to read, create, update and delete tickets, ticket field resolvers and ticket history in scripts. The existing *TicketingGatewayHelper* remains backwards compatible, but should not be used for new implementations or to update existing code. Below you can find an example of how to use this helper:
+- A new *TicketingHelper* is available that should be used to read, create, update and delete tickets, ticket field resolvers and ticket history in scripts. The existing *TicketingGatewayHelper* remains backwards compatible, but should not be used for new implementations or to update existing code. Below you can find an example of how to use this helper:
 
-    ```txt
+    ```csharp
     public void Run(Engine engine)
     {
-        // Create the helper
-        var helper = new TicketingHelper(engine.SendSLNetMessages);
+        // Create the helper
+        var helper = new TicketingHelper(engine.SendSLNetMessages);
 
-        // helper.[OBJECT TYPE].[ACTION]
-        // helper.Tickets.Update();
-        // helper.TicketFieldResolvers.Delete();
-        // helper.TicketHistories.Read();
+        // helper.[OBJECT TYPE].[ACTION]
+        // helper.Tickets.Update();
+        // helper.TicketFieldResolvers.Delete();
+        // helper.TicketHistories.Read();
 
-        // Create a TicketFieldResolver
-        var ticketFieldResolver = TicketFieldResolver.Factory.CreateDefaultResolver();
-        var createdResolver = helper.TicketFieldResolvers.Create(ticketFieldResolver);
+        // Create a TicketFieldResolver
+        var ticketFieldResolver = TicketFieldResolver.Factory.CreateDefaultResolver();
+        var createdResolver = helper.TicketFieldResolvers.Create(ticketFieldResolver);
 
-        // Create a Ticket
-        var newTicket = new Ticket()
-        {
-            CustomFieldResolverID =  createdResolver.ID
-        };
-        var createdTicket = helper.Tickets.Create(newTicket);
+        // Create a Ticket
+        var newTicket = new Ticket()
+        {
+            CustomFieldResolverID =  createdResolver.ID
+        };
+        var createdTicket = helper.Tickets.Create(newTicket);
 
-        // Read the TicketHistory
-        var historyFilter = TicketHistoryExposers.UniqueID.Equal(createdTicket.UID);
-        var history = helper.TicketHistories.Read(historyFilter);
+        // Read the TicketHistory
+        var historyFilter = TicketHistoryExposers.UniqueID.Equal(createdTicket.UID);
+        var history = helper.TicketHistories.Read(historyFilter);
 
-        // Read all Tickets linked to a TicketFieldResolver
-        var ticketFilter = TicketingExposers.ResolverID.Equal(createdTicket.CustomFieldResolverID);
-        var tickets = helper.Tickets.Read(ticketFilter);
+        // Read all Tickets linked to a TicketFieldResolver
+        var ticketFilter = TicketingExposers.ResolverID.Equal(createdTicket.CustomFieldResolverID);
+        var tickets = helper.Tickets.Read(ticketFilter);
 
-        // Delete Tickets
-        foreach (var ticket in tickets)
-        {
-            helper.Tickets.Delete(ticket);
-        }
+        // Delete Tickets
+        foreach (var ticket in tickets)
+        {
+            helper.Tickets.Delete(ticket);
+        }
 
-        // Check if the last Ticket request failed
-        var traceData = helper.Tickets.GetTraceDataLastCall();
-        if (!traceData.HasSucceeded())
-        {
-            engine.GenerateInformation($"Previous action failed! {traceData}");
-        }
+        // Check if the last Ticket request failed
+        var traceData = helper.Tickets.GetTraceDataLastCall();
+        if (!traceData.HasSucceeded())
+        {
+            engine.GenerateInformation($"Previous action failed! {traceData}");
+        }
     }
     ```
 
-- To check if a request was successful, you can now retrieve the *TraceData* using the *GetTraceDataLastCall()* method on the *CrudComponentHelper* type used for the request. This returns the TraceData object, which can contain TicketingManagerError objects, each containing a reason for the error and extra data on what caused it. These are the possible errors:
+- To check if a request was successful, you can now retrieve the *TraceData* using the *GetTraceDataLastCall()* method on the *CrudComponentHelper* type used for the request. This returns the TraceData object, which can contain TicketingManagerError objects, each containing a reason for the error and extra data on what caused it. These are the possible errors:
 
     - * TicketFieldResolverInUseByTickets*: The ticket field resolver still has tickets linked to it. (The property *RelatedTickets* contains the IDs of the tickets.)
 
     - *NotInitialized*: The Ticketing Manager is not initialized.
 
-    - *LegacyError*: A legacy error has occurred. (The property *LegacyErrorMessage* contains the error message.)
+    - *LegacyError*: A legacy error has occurred. (The property *LegacyErrorMessage* contains the error message.)
 
-    - * TicketLinkedToNonExistingTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that does not exist. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.)
+    - * TicketLinkedToNonExistingTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that does not exist. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.)
 
-    -  *TicketFieldResolverIsUnknownOrNotMasked*: The ticket field resolver is unknown or not masked.
+    -  *TicketFieldResolverIsUnknownOrNotMasked*: The ticket field resolver is unknown or not masked.
 
-    - *UnexpectedException*: An unexpected exception occurred. (The property *Exception* contains the exception.)
+    - *UnexpectedException*: An unexpected exception occurred. (The property *Exception* contains the exception.)
 
-    - * TicketLinkedToMaskedTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that is masked. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.
+    - * TicketLinkedToMaskedTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that is masked. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.
 
-    Calling *ToString()* on the *TraceData* object will return a formatted string that shows all errors and associated data.
+    Calling *ToString()* on the *TraceData* object will return a formatted string that shows all errors and associated data.
 
 - When paging is started using *TicketingGatewayHelper.NewPagingRequest()*, the out parameter will no longer return the total number of tickets.
 
 - When an invalid page size or page number is used in a request, an empty list will now be returned, while previously the ticketing helper returned all tickets matching the filter.
 
-- Subscribing to *TicketingGatewayEventMessage* will no longer return an initial bulk. Instead tickets and ticket field resolvers should be retrieved via paging with the new *TicketingHelper*.
+- Subscribing to *TicketingGatewayEventMessage* will no longer return an initial bulk. Instead tickets and ticket field resolvers should be retrieved via paging with the new *TicketingHelper*.
 
-- Previously, when the Cassandra database was used, all open tickets were stored in the cache as well as the database. It was therefore possible to use the *CacheOnly* boolean in requests to retrieve only open tickets. This cache is no longer used, so using the *CacheOnly* boolean will no longer work when you use *NewPagedTicketsWithFilterMessage*. To resolve this, concatenate the filter with an open tickets filter, which you can retrieve using the new method *GetTicketStateFilter(TicketState ticketState)*. An exception was made for the *GetTickets* method of the existing *TicketingGatewayHelper*, which will still only return the open tickets.
+- Previously, when the Cassandra database was used, all open tickets were stored in the cache as well as the database. It was therefore possible to use the *CacheOnly* boolean in requests to retrieve only open tickets. This cache is no longer used, so using the *CacheOnly* boolean will no longer work when you use *NewPagedTicketsWithFilterMessage*. To resolve this, concatenate the filter with an open tickets filter, which you can retrieve using the new method *GetTicketStateFilter(TicketState ticketState)*. An exception was made for the *GetTickets* method of the existing *TicketingGatewayHelper*, which will still only return the open tickets.
 
 - "Null" values of ticket fields will no longer be saved or returned.
 
 - The open state of a ticket can no longer be linked to the state of an alarm.
 
-- If *GenericEnumEntry\<int>* is used in *VisualData* on a* TicketFieldResolver*, this will now always be returned as a long integer instead of an integer.
+- If *GenericEnumEntry\<int>* is used in *VisualData* on a* TicketFieldResolver*, this will now always be returned as a long integer instead of an integer.
 
 - If the ticket field resolver defines a state *TicketFieldDescriptor*, tickets must now always contain a field indicating their state. When tickets are initially migrated to Elasticsearch, a state will automatically be defined for any tickets where this was not yet the case.
 
 The following changes have been implemented in the web services API v1:
 
-- The *DMATicket*,* DMATicketSelection* and *DMATicketUpdate* objects have a new *UID* property which contains the new GUID identifier of a ticket.
+- The *DMATicket*,* DMATicketSelection* and *DMATicketUpdate* objects have a new *UID* property which contains the new GUID identifier of a ticket.
 
-- The *PageSessionID* and *TotalTicketsCount* properties of the *DMATicketsPage* object are now obsolete.
+- The *PageSessionID* and *TotalTicketsCount* properties of the *DMATicketsPage* object are now obsolete.
 
-- The *DMATicketsPage* object now has a new *HasNextPage* property, which indicates if there is another page after the currently requested page.
+- The *DMATicketsPage* object now has a new *HasNextPage* property, which indicates if there is another page after the currently requested page.
 
-- The new methods *GetTicketV2*, *RemoveTicketV2*, *GetActiveTicketsV2* and *GetHistoryTicketsV2* are now available, to be used instead of *GetTicket*, *RemoveTicket*, *GetActiveTickets* and *GetHistoryTickets*.
+- The new methods *GetTicketV2*, *RemoveTicketV2*, *GetActiveTicketsV2* and *GetHistoryTicketsV2* are now available, to be used instead of *GetTicket*, *RemoveTicket*, *GetActiveTickets* and *GetHistoryTickets*.
 
 Finally, the following changes have also been implemented:
 
-- To include tickets in a custom backup, the backup option *Create a backup of the database* > *Include Ticketing in backup* must be selected.
+- To include tickets in a custom backup, the backup option *Create a backup of the database* > *Include Ticketing in backup* must be selected.
 
-- When you embed the Ticketing app in another page, you can now add *embed=true* to its URL in order to hide the side bar and header bar of the app.
+- When you embed the Ticketing app in another page, you can now add *embed=true* to its URL in order to hide the side bar and header bar of the app.
 
-- You can now add a filter in the Ticketing URL to only show tickets affecting a specific element, service, view or redundancy groups. To do so, add a filter in the following format: *affecting=**\[type\]**/**\[DataMiner ID\]**/**\[object ID\]*, where \[type\] can be *element*, *service*, *view* or *redundancy group*. For example: *affecting=element/299/31*
+- You can now add a filter in the Ticketing URL to only show tickets affecting a specific element, service, view or redundancy groups. To do so, add a filter in the following format: *affecting=**\[type\]**/**\[DataMiner ID\]**/**\[object ID\]*, where \[type\] can be *element*, *service*, *view* or *redundancy group*. For example: *affecting=element/299/31*
 
 - When you view or edit a ticket in the app, the URL has now changed; while previously, it contained the DMA ID and ticket ID, it now contains the ticket UID. If you use an old URL, the Ticketing app will automatically try to adjust this to the new URL.
 
@@ -693,7 +671,7 @@ Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to 
 
 > [!NOTE]
 > - Snapshots are incremental. Do not delete any of them.
-> - See also: [https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-register-repository.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-register-repository.html)
+> - See also: <https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-register-repository.html>
 
 **Arguments to add when you want to take a backup/snapshot**
 
@@ -743,7 +721,7 @@ If a BPA test contains corrective actions, this property will be set to true.
 
 Due to a number of enhancements, overall performance has increased when processing alarm template actions.
 
-#### DataMiner Cube - Resources app: A popup message will now be displayed when trying to config­ure resources on a system with an SRM license but no Indexing Engine \[ID_27737\]
+#### DataMiner Cube - Resources app: A popup message will now be displayed when trying to configure resources on a system with an SRM license but no Indexing Engine \[ID_27737\]
 
 When, on a system with an SRM license but no Indexing Engine, you try to configure resources, from now on, DataMiner Cube will show a message, saying that this is not possible.
 
@@ -771,7 +749,7 @@ From now on, when multiple trend graphs show similar data, they will all have a 
 
 #### DataMiner Cube: Virtual functions now in separate section in Protocols & Templates app + made unavailable for regular element creation \[ID_27832\]
 
-Virtual functions are now displayed in a separate *Virtual Functions* section in the Protocols & Templates app. In addition, when you create an element, virtual functions are not listed among the protocols you can choose for the element.
+Virtual functions are now displayed in a separate *Virtual Functions* section in the Protocols & Templates app. In addition, when you create an element, virtual functions are not listed among the protocols you can choose for the element.
 
 #### DataMiner Cube: Enhanced performance when connecting to a DMA with a large amount of alarms \[ID_27837\]
 
@@ -803,7 +781,7 @@ From now on, the SLPort process will automatically resize the socket buffer befo
 
 #### DataMiner Cube - Settings: No longer possible to set Connection type to “Web services” \[ID_27904\]
 
-Since Web Services Enhancements (WSE) for Microsoft .NET has been deprecated, the only way for DataMiner Cube to connect to a DataMiner Agent is by using .NET Remoting. As a result, in the *Settings* window, it is no longer possible to set the *Computer \> Connection \> Connection type* setting to “Web services”.
+Since Web Services Enhancements (WSE) for Microsoft .NET has been deprecated, the only way for DataMiner Cube to connect to a DataMiner Agent is by using .NET Remoting. As a result, in the *Settings* window, it is no longer possible to set the *Computer \> Connection \> Connection type* setting to “Web services”.
 
 #### Service & Resource Management: Deleting resources only allowed when all DMAs in the DMS are reachable \[ID_27921\]
 
@@ -812,14 +790,12 @@ From now on, you will only be allowed to delete resources when all agents in the
 When you try to delete a resource, an error will now be returned in the following circumstances:
 
 - When at least one agent is disconnected from the agent that hosts the resource you are trying to delete.
-
 - When at least one agent is not in a running state.
-
 - When there is at least one agent on which the ResourceManager module is not initialized.
 
 #### DataMiner Jobs: new ResourceFieldDescriptor field \[ID_27922\]
 
-A new *ResourceFieldDescriptor* field is now available for DataMiner jobs. This field requires a GUID value, which should be the GUID of a resource. It also has a *ResourcePoolIds* property which can be used to filter resources based on resource pools. This feature is intended to support the upcoming PLM app.
+A new *ResourceFieldDescriptor* field is now available for DataMiner jobs. This field requires a GUID value, which should be the GUID of a resource. It also has a *ResourcePoolIds* property which can be used to filter resources based on resource pools. This feature is intended to support the upcoming PLM app.
 
 #### Performance enhancement: An element card page containing a direct view table will only show the alarm severity of that table when the page is opened \[ID_27928\]
 
@@ -827,7 +803,7 @@ When you open an element card, pages containing direct view tables will no longe
 
 #### DataMiner Jobs: New DefaultValue property of FieldDescriptor class \[ID_27934\]
 
-The *FieldDescriptor* class for DataMiner jobs now has a new *DefaultValue* property, so that it is now possible to add a default field value to each FieldDescriptor. This feature is intended to support the upcoming PLM app.
+The *FieldDescriptor* class for DataMiner jobs now has a new *DefaultValue* property, so that it is now possible to add a default field value to each FieldDescriptor. This feature is intended to support the upcoming PLM app.
 
 #### DataMiner Cube: Enhanced performance when opening the Reports page of a view card \[ID_27937\]
 
@@ -841,15 +817,15 @@ As a result, an error will no longer be returned when saving a ServiceReservatio
 
 #### Service & Resource Management: New VirtualFunctionID property added to NodeDefinition class \[ID_27953\]
 
-A new *VirtualFunctionID* property is now available for *NodeDefinition* objects for service profiles.
+A new *VirtualFunctionID* property is now available for *NodeDefinition* objects for service profiles.
 
-When a service profile definition is created, DataMiner will check if the virtual function ID exists. If it does not exist, a new error reason *InvalidVirtualFunctionDefinitions* will be added in the trace data. The property *InvalidVirtualFunctionIDs* of the trace data will be filled in with the non-existing virtual function IDs. The property *ServiceProfileDefinition* of the trace data will allow you to identify which service profile definition has an error.
+When a service profile definition is created, DataMiner will check if the virtual function ID exists. If it does not exist, a new error reason *InvalidVirtualFunctionDefinitions* will be added in the trace data. The property *InvalidVirtualFunctionIDs* of the trace data will be filled in with the non-existing virtual function IDs. The property *ServiceProfileDefinition* of the trace data will allow you to identify which service profile definition has an error.
 
 Note that this property can currently not yet be configured in DataMiner Cube.
 
 #### Ticketing app: Enhanced “Edit ticket field” window \[ID_27962\]
 
-Due to a number of enhancements to the *Edit ticket field* window, especially the section that allows you to define the possible values, configuring a ticket state field has been made more intuitive.
+Due to a number of enhancements to the *Edit ticket field* window, especially the section that allows you to define the possible values, configuring a ticket state field has been made more intuitive.
 
 #### DataMiner Cube - System Center: Refresh button in Logging section \[ID_27986\]
 
@@ -878,7 +854,6 @@ In the tool tip of the “Select all items” and “Select specific number of i
 The following new icons have been added to the file Icons.xml, located in the folder C:\\Skyline DataMiner\\Protocols.
 
 - Trash
-
 - New item
 
 ### Fixes
@@ -936,7 +911,7 @@ In some cases, DataMiner Cube could have difficulty connecting to a DMS with a l
 
 #### DataMiner Cube - Trending: Problem when exporting a trend graph to a CSV file \[ID_27708\]
 
-When you select the *Line graph instead of block graph* option when exporting a trend graph to a CSV file, the timestamps of the average data points are put halfway between two points.
+When you select the *Line graph instead of block graph* option when exporting a trend graph to a CSV file, the timestamps of the average data points are put halfway between two points.
 
 In some cases, when you exported a trend graph multiple times in a row using that line graph option, the timestamps would incorrectly keep shifting in the direction of the future.
 
@@ -953,7 +928,7 @@ When you imported a CSV file that was created with a previous DataMiner version,
 On a system using automatic incident tracking on which DataMiner Infrastructure Discovery Provisioning (IDP) was deployed, in some cases, when the IDP location of an element with active alarms was removed, that location would not be removed correctly. This would cause certain alarms to be grouped by an empty location.
 
 > [!NOTE]
-> From now on, IDP location grouping requires that the *Make this property available for alarm filtering* option is activated for the following element properties: IDP, Location Name, Location Building, Location Floor, Location Room, Location Aisle and Location Rack.
+> From now on, IDP location grouping requires that the *Make this property available for alarm filtering* option is activated for the following element properties: IDP, Location Name, Location Building, Location Floor, Location Room, Location Aisle and Location Rack.
 
 #### Service & Resource Management: Problem when rebinding a VirtualFunctionResource \[ID_27735\]
 
@@ -973,7 +948,7 @@ When an alarm template using scheduling was added to an alarm template group, in
 
 #### DataMiner - Router Control app: Newly selected input would be highlighted but not selected when the selected output was updated \[ID_27752\]
 
-When, in the Router Control app, you had enabled the *Output first workflow* option, in some cases, when the selected output was updated by an external change, the newly selected input would be highlighted but incorrectly not selected.
+When, in the Router Control app, you had enabled the *Output first workflow* option, in some cases, when the selected output was updated by an external change, the newly selected input would be highlighted but incorrectly not selected.
 
 Also, it will now be indicated more clearly that a highlighted IO button is selected.
 
@@ -983,7 +958,7 @@ When you updated an ongoing ReservationInstance, in some cases, all ongoing and 
 
 #### DataMiner Cube: "Show all alarm updates" option not working with alarm for migrated element \[ID_27761\]
 
-If several alarm updates for an element that had been migrated from one DMA to another were combined in a consolidated alarm event, it could occur that the *Show all alarm updates* option on the corresponding alarm card did not work.
+If several alarm updates for an element that had been migrated from one DMA to another were combined in a consolidated alarm event, it could occur that the *Show all alarm updates* option on the corresponding alarm card did not work.
 
 #### Problem when updating a DVE table while data exported via a virtual function was being retrieved \[ID_27768\]
 
