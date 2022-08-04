@@ -300,17 +300,6 @@ DataMiner now supports the following encryption methods (in order of preference)
 - Aes-128-CBC
 - 3des-CBC
 
-#### SAML authentication: Azure Active Directory B2C now also supported as identity provider \[ID_32714\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
-
-For external authentication using SAML, DataMiner now also supports Azure Active Directory B2C as an identity provider.
-
-Also, when creating a DataMiner user, using an email address as user name is now mandatory.
-
-> [!NOTE]
-> If, in DataMiner.xml, the default user name of an identity provider is not a valid email address, you can optionally add a \<PreferredLoginClaim> element that refers to a claim that contains a valid email address.
-
 #### SLSSH: Enhanced host key verification algorithm support \[ID_33132\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->

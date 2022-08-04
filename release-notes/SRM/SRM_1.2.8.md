@@ -1,26 +1,30 @@
-# Version 1.2.8
+---
+uid: SRM_1.2.8
+---
+
+# SRM 1.2.8
 
 ## New features
 
 #### Back button available in wizard to create booking based on service profiles \[ID_27883\]
 
-On the second screen of the wizard to create a new booking based on service profiles, a *Back* button is now available.
+On the second screen of the wizard to create a new booking based on service profiles, a *Back* button is now available.
 
 #### Possibility to customize main booking info screen in booking wizard \[ID_27946\]
 
-It is now possible to customize the title of main booking info screen in the booking wizard. To do so, run the *SRM_DefineBookingMainInfo* script by providing a *defaultValue* dictionary that contains the *Title* as key, for example:
+It is now possible to customize the title of main booking info screen in the booking wizard. To do so, run the *SRM_DefineBookingMainInfo* script by providing a *defaultValue* dictionary that contains the *Title* as key, for example:
 
-```txt
+```csharp
 mainBookingInfoInputData.DefaultValues.Add(Skyline.DataMiner.Library.Solutions.SRM.Model.DefineBookingMainInfo.MainBookingInfoEditableFields.Title, "Custom Title");
 ```
 
 #### Possibility to hide Start Date With Pre-Roll and Stop Date With Post-Roll fields in booking wizard \[ID_27973\]
 
-The *SRM_DefineBookingMainInfo* script can now be customized to hide the *Start Date With Pre-Roll* and *Stop Date With Post-Roll* fields. To do so, add the enum of the relevant field on the HashSet FieldsToHide of the InputData object.
+The *SRM_DefineBookingMainInfo* script can now be customized to hide the *Start Date With Pre-Roll* and *Stop Date With Post-Roll* fields. To do so, add the enum of the relevant field on the HashSet FieldsToHide of the InputData object.
 
 For example:
 
-```txt
+```csharp
 var mainBookingInfoInputData = new MainBookingInfoInputData();
 mainBookingInfoInputData.FieldsToHide.Add(Skyline.DataMiner.Library.Solutions.SRM.Model.DefineBookingMainInfo.MainBookingInfoEditableFields.EndDateWithPostRoll);
 mainBookingInfoInputData.FieldsToHide.Add(Skyline.DataMiner.Library.Solutions.SRM.Model.DefineBookingMainInfo.MainBookingInfoEditableFields.StartDateWithPreRoll);
@@ -32,9 +36,7 @@ inputData.MainBookingInfo = this.bookingManager.FetchMainBookingInfo(engine, mai
 Locked contributing bookings can now be finished in specific cases:
 
 - If an ongoing locked contributing booking is not used by any booking, it can be finished like a regular booking.
-
 - If the end time of a locked contributing booking is later than the end time of one or more main bookings using it, finishing the contributing booking will reduce its end time to that of the last main booking using it.
-
 - If an event scheduling delay has been configured that is greater than the time between the current time and the last end time of the main bookings making use of the contributing booking that is being finished, the end time of the contributing booking will be set to the current time plus the event scheduling delay.
 
 #### Finishing a booking in pre-roll state \[ID_28046\]
@@ -47,18 +49,18 @@ Dijkstra path nodes can now be configured to be optional. Previously, these were
 
 #### Booking Wizard: Convert to Contributing check box automatically selected for contributing bookings \[ID_28069\]
 
-The Booking Wizard has been adjusted so that the *Convert to Contributing* check box can be automatically selected for a contributing booking. This is determined based on the *ConvertToContributing* JSON property, which is included in the *Contributing Config* service definition JSON property. If this property is present and set to "true", the check box is automatically selected.
+The Booking Wizard has been adjusted so that the *Convert to Contributing* check box can be automatically selected for a contributing booking. This is determined based on the *ConvertToContributing* JSON property, which is included in the *Contributing Config* service definition JSON property. If this property is present and set to "true", the check box is automatically selected.
 
 #### SRM_DefineBookingMainInfo script: Support for custom text labels \[ID_28117\]
 
-It is now possible to customize the text labels displayed in the UI of the *SRM_DefineBookingMainInfo* script. For this purpose, a new *OverrideFieldLabels* dictionary (Dictionary\<MainBookingInfoEditableFields, string>) was introduced in the class *Skyline.DataMiner.Library.Solutions.SRM.Model.DefineBookingMainInfo.InputDate*.
+It is now possible to customize the text labels displayed in the UI of the *SRM_DefineBookingMainInfo* script. For this purpose, a new *OverrideFieldLabels* dictionary (Dictionary\<MainBookingInfoEditableFields, string>) was introduced in the class *Skyline.DataMiner.Library.Solutions.SRM.Model.DefineBookingMainInfo.InputDate*.
 
 If a value is not specified in this dictionary, the default value will be used.
 
 Code example:
 
-```txt
-mainBookingInfoInputData.OverrideFieldLabels.Add( MainBookingInfoEditableFields.BouquetViewName, "A Diferent Bouquet View Name" );
+```csharp
+mainBookingInfoInputData.OverrideFieldLabels.Add( MainBookingInfoEditableFields.BouquetViewName, "A Different Bouquet View Name" );
 ```
 
 ## Changes
@@ -89,7 +91,7 @@ When during booking creation, a user specified a bouquet view name that was not 
 
 #### Not possible to create booking if nodes were hidden \[ID_27896\]
 
-If the *HideIfResourceAvailable* property of a service definition node was set to *Yes*, it could occur that it was no possible to create a booking using that service definition. The same issue could occur if the *Options* node property was set to *Hide*.
+If the *HideIfResourceAvailable* property of a service definition node was set to *Yes*, it could occur that it was no possible to create a booking using that service definition. The same issue could occur if the *Options* node property was set to *Hide*.
 
 #### Not all created objects removed when booking creation was aborted \[ID_27902\]
 
