@@ -1,22 +1,26 @@
-# Version 1.2.10
+---
+uid: SRM_1.2.10
+---
+
+# SRM 1.2.10
 
 ## New features
 
 #### New LockLifeCycle property now used for bookings instead of custom Lock Life Cycle property \[ID_28659\]
 
-While previously a custom *Lock Life Cycle* property was used for bookings, now the *LockLifeCycle* property of the *ServiceReservationInstance* object will be used (introduced in DataMiner 10.0.11). This property is taken into account for licensing: contributing bookings of type locked are now considered to be part of a main booking and do not consume a license credit.
+While previously a custom *Lock Life Cycle* property was used for bookings, now the *LockLifeCycle* property of the *ServiceReservationInstance* object will be used (introduced in DataMiner 10.0.11). This property is taken into account for licensing: contributing bookings of type locked are now considered to be part of a main booking and do not consume a license credit.
 
 #### SRM_ImportFunction script can now run without user interaction \[ID_28706\]
 
-The *SRM_ImportFunction* script can now run without user interaction. For this purpose, it now has an *Input Data* parameter, which takes a JSON object. To run the script without user interaction, the key *IsSilent* has to be set to true:
+The *SRM_ImportFunction* script can now run without user interaction. For this purpose, it now has an *Input Data* parameter, which takes a JSON object. To run the script without user interaction, the key *IsSilent* has to be set to true:
 
-```txt
-{"IsSilent":true}
+```json
+{ "IsSilent":true }
 ```
 
 To keep using the old behavior of the script, an empty object can be used:
 
-```txt
+```json
 {}
 ```
 
@@ -26,13 +30,13 @@ Note that if the script is run without user interaction, an error will occur if 
 
 A new method allowing custom service state transitions has been added to the *BookingManager* class:
 
-```txt
+```csharp
 public void ApplyServiceState(Engine engine, ServiceReservationInstance reservation, string state);
 ```
 
 As input, the method requires the engine reference, the booking where the state should be applied and the state to apply.
 
-The target state is not defined in the Booking Manager, only in the service definition actions. While LSO (Life cycle Service Orchestration) is running, the *Service State* property of the booking will have the value "Configuring *\[state to apply\]*...". When LSO has finished, the booking returns to its initial state. If LSO fails, the *Service State* will be set to "Failed". Note that it is possible to apply identical states consecutively.
+The target state is not defined in the Booking Manager, only in the service definition actions. While LSO (Life cycle Service Orchestration) is running, the *Service State* property of the booking will have the value "Configuring *\[state to apply\]*...". When LSO has finished, the booking returns to its initial state. If LSO fails, the *Service State* will be set to "Failed". Note that it is possible to apply identical states consecutively.
 
 #### Updated behavior for adjusting end time of locked contributing bookings \[ID_28772\]
 
@@ -40,35 +44,32 @@ When multiple bookings use the same locked contributing booking, and the end tim
 
 - If there is no initial time difference between the end times of all involved bookings, extending one of the main bookings will extend the contributing booking correspondingly.
 
-![](~/release-notes/images/NoDelta.svg)
+    ![](~/release-notes/images/NoDelta.svg)
 
 - If the initial time difference between the contributing and main bookings is the same for all main bookings, this time delta will be maintained when one of the main bookings is extended.
 
-![](~/release-notes/images/EqualDelta.svg)
+    ![](~/release-notes/images/EqualDelta.svg)
 
 - If the initial time difference between the contributing and main bookings is different for each main booking, the smallest time difference will be maintained. This means that if the contributing booking for example ends 20 minutes after booking A but 10 minutes after booking B, and booking A is extended with 30 minutes, the contributing booking will be adjusted to end 10 minutes after booking A.
 
-![](~/release-notes/images/DifferentDelta.svg)
+    ![](~/release-notes/images/DifferentDelta.svg)
 
 #### Custom booking action buttons \[ID_28784\]
 
-Five custom buttons can now be configured to be displayed when a booking is selected on the *Bookings* tab. You can configure these on the *Config* > *Custom Actions* tab.
+Five custom buttons can now be configured to be displayed when a booking is selected on the *Bookings* tab. You can configure these on the *Config* > *Custom Actions* tab.
 
 For each button, you can configure the following settings:
 
-- *Type*: Select *Script* to make the button launch a custom Automation script. Select *Disabled* to hide the button.
-
+- *Type*: Select *Script* to make the button launch a custom Automation script. Select *Disabled* to hide the button.
 - *Icon View*: The view page where an icon is available.
-
 - *Icon Page*: The Visio page of the selected view containing the icon.
-
 - *Argument*: The script tag to trigger an Automation script. Use the same syntax as is used to link a shape to an Automation script in Visual Overview, but leave out the "Script:" prefix. For example:
 
-```txt
+```json
 CustomActionScript||Input Data={"bookingsManager":"[this element]","reservationId":"[cardvar:varBookingId]","action":"CustomAction1"}||Custom Tooltip|NoConfirmation,CloseWhenFinished
 ```
 
-    To pass the name of the Booking Manager, you can use the placeholder *\[this element\]*. To pass the ID of the selected booking, you can use the placeholder *\[cardvar:varBookingId\]*.
+To pass the name of the Booking Manager, you can use the placeholder *\[this element\]*. To pass the ID of the selected booking, you can use the placeholder *\[cardvar:varBookingId\]*.
 
 #### Adjusted behavior when booking is finished by user \[ID_28815\]
 
@@ -87,13 +88,9 @@ Parameter inheritance from another parameter, from a resource name or from a res
 When a contributing function resource is created, the capability and capacity parameters defined in its function definition are automatically added. The values assigned to these parameters are now determined as follows:
 
 - For a capacity, if a maximum range is defined on the profile parameter, this will be applied. Otherwise no value will be assigned.
-
 - For a discrete capability, all discrete options defined in the profile parameter are applied.
-
 - For a numeric capability, the minimum and maximum range (if any) defined in the profile parameter are applied.
-
 - For a text capability, no value will be assigned.
-
 - Undefined capabilities are not supported.
 
     > [!NOTE]

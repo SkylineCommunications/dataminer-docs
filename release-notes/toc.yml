@@ -310,26 +310,26 @@
         topicUid: SRM_1.2.21
       - name: SRM 1.2.20
         topicUid: SRM_1.2.20
-      - name: SLC_RN_SRMv1.2.19_REV000
-        href: SRM/SLC_RN_SRMv1.2.19_REV000.md
-      - name: SLC_RN_SRMv1.2.18_REV000
-        href: SRM/SLC_RN_SRMv1.2.18_REV000.md
-      - name: SLC_RN_SRMv1.2.17_REV000
-        href: SRM/SLC_RN_SRMv1.2.17_REV000.md
-      - name: SLC_RN_SRMv1.2.16_REV000
-        href: SRM/SLC_RN_SRMv1.2.16_REV000.md
-      - name: SLC_RN_SRMv1.2.15_REV001
-        href: SRM/SLC_RN_SRMv1.2.15_REV001.md
-      - name: SLC_RN_SRMv1.2.14_REV001
-        href: SRM/SLC_RN_SRMv1.2.14_REV001.md
-      - name: SLC_RN_SRMv1.2.13_REV000
-        href: SRM/SLC_RN_SRMv1.2.13_REV000.md
-      - name: SLC_RN_SRMv1.2.12_REV000
-        href: SRM/SLC_RN_SRMv1.2.12_REV000.md
-      - name: SLC_RN_SRMv1.2.11_REV001
-        href: SRM/SLC_RN_SRMv1.2.11_REV001.md
-      - name: SLC_RN_SRMv1.2.10_REV000
-        href: SRM/SLC_RN_SRMv1.2.10_REV000.md
+      - name: SRM 1.2.19
+        topicUid: SRM_1.2.19
+      - name: SRM 1.2.18
+        topicUid: SRM_1.2.18
+      - name: SRM 1.2.17
+        topicUid: SRM_1.2.17
+      - name: SRM 1.2.16
+        topicUid: SRM_1.2.16
+      - name: SRM 1.2.15
+        topicUid: SRM_1.2.15
+      - name: SRM 1.2.14
+        topicUid: SRM_1.2.14
+      - name: SRM 1.2.13
+        topicUid: SRM_1.2.13
+      - name: SRM 1.2.12
+        topicUid: SRM_1.2.12
+      - name: SRM 1.2.11
+        topicUid: SRM_1.2.11
+      - name: SRM 1.2.10
+        topicUid: SRM_1.2.10
       - name: SLC_RN_SRMv1.2.9_REV000 
         href: SRM/SLC_RN_SRMv1.2.9_REV000.md
       - name: SLC_RN_SRMv1.2.8_REV000 

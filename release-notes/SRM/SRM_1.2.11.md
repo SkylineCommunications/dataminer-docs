@@ -1,4 +1,8 @@
-# Version 1.2.11
+---
+uid: SRM_1.2.11
+---
+
+# SRM 1.2.11
 
 ## New features
 
@@ -12,7 +16,7 @@ When a booking is converted to a contributing booking, a custom script can be ex
 
 #### New service definition node property to set read-only resource selection for node \[ID_28965\]
 
-In a service definition, you can now configure that the resource selection for a specific node should not be editable in the Booking Wizard. To do so, define the property *ReadOnlyResourceSelectionControl* on the node and set it to *true*.
+In a service definition, you can now configure that the resource selection for a specific node should not be editable in the Booking Wizard. To do so, define the property *ReadOnlyResourceSelectionControl* on the node and set it to *true*.
 
 #### Support for multiple placeholders in one line in timeline booking blocks \[ID_28995\]
 
@@ -20,7 +24,7 @@ It is now possible to add more than one placeholder in one line of the configura
 
 #### New Dashboard tab in the Booking Manager app \[ID_29015\]
 
-The Booking Manager app now has a new *Dashboard* tab. This tab provides an overview of all the services created with the Booking Manager.
+The Booking Manager app now has a new *Dashboard* tab. This tab provides an overview of all the services created with the Booking Manager.
 
 The tab contains different subtabs representing the different views that contain services. There is also an "All" subtab, which shows all services across the different views.
 
@@ -29,26 +33,25 @@ At the top of the Dashboard tab, you can select whether the services should be d
 In the top-right corner of the tab, a filter box is also available. If text is entered in this box, only the services of which the name matches this text will be displayed. Finally, two toggle buttons are also available in the top-left corner:
 
 - *Severity Sorting*: Determines whether services are sorted by name or by severity.
-
 - *Penalty Box*: Determines whether all services are displayed or only those in alarm.
 
 #### Custom script to transfer data between functions during service profile booking creation \[ID_29069\]
 
 During creation a booking based on a service profile, a custom script can now be launched that allows the transfer of data between functions. It is also possible to change a parameter of a contributing booking or of a main booking.
 
-In the service profile instance or service profile definition, the property *Service Profile Data Transfer Configuration* allows you to define which script should be used for this. The value of this property must be a configuration JSON object with a *Script* key, for example: *{"Script":"SRM_ServiceProfileDataTransferExample"}*
+In the service profile instance or service profile definition, the property *Service Profile Data Transfer Configuration* allows you to define which script should be used for this. The value of this property must be a configuration JSON object with a *Script* key, for example: *{"Script":"SRM_ServiceProfileDataTransferExample"}*
 
-If the property is defined both on instance and on definition level, the instance level takes pre­cedence. If several service profiles have a configuration defined, the scripts will be executed top-down.
+If the property is defined both on instance and on definition level, the instance level takes precedence. If several service profiles have a configuration defined, the scripts will be executed top-down.
 
-You can find examples of how to implement a data transfer script in the automation scripts *SRM_ServiceProfileDataTransferExample* and *SRM_ServiceProfileDataTransferExample­Shared*.
+You can find examples of how to implement a data transfer script in the automation scripts *SRM_ServiceProfileDataTransferExample* and *SRM_ServiceProfileDataTransferExampleShared*.
 
 #### Quarantining a contributing booking now affects the main booking \[ID_29095\]
 
 When a contributing booking is quarantined, this will now also affect the main booking.
 
-The predefined capability parameter *SRM_ExposedResourceState* will now automatically be added to the contributing resource, with the value *OK*. When the corresponding booking goes into quarantine, this parameter will be set to *Quarantine*. When the booking leaves quarantine, the state will be reverted to *OK*.
+The predefined capability parameter *SRM_ExposedResourceState* will now automatically be added to the contributing resource, with the value *OK*. When the corresponding booking goes into quarantine, this parameter will be set to *Quarantine*. When the booking leaves quarantine, the state will be reverted to *OK*.
 
-When resources are assigned, if *SRM_ExposedResourceState* is set to *Quarantine*, the resource will be filtered out. When a resource with that capability gets assigned to a booking, the capability will be added as a requirement with state *OK*.
+When resources are assigned, if *SRM_ExposedResourceState* is set to *Quarantine*, the resource will be filtered out. When a resource with that capability gets assigned to a booking, the capability will be added as a requirement with state *OK*.
 
 ## Changes
 
@@ -60,7 +63,7 @@ Custom Create Booking Action scripts will now be executed before a newly created
 
 #### Bookings that failed to start now set to Failed \[ID_28912\]
 
-Previously, when a booking failed to start, a custom script would be called, but the booking would still be in Confirmed state. Now its *Booking Life Cycle* will be set to "Failed" and its *Status* will be set to "Pending".
+Previously, when a booking failed to start, a custom script would be called, but the booking would still be in Confirmed state. Now its *Booking Life Cycle* will be set to "Failed" and its *Status* will be set to "Pending".
 
 > [!NOTE]
 > If you make use of such a custom script, you will need to update it in accordance with the changes in the script *SRM_BookingStartFailureTemplate*, version 1.0.1.1.

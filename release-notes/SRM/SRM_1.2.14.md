@@ -1,4 +1,8 @@
-# Version 1.2.14
+---
+uid: SRM_1.2.14
+---
+
+# SRM 1.2.14
 
 ## New features
 
@@ -12,8 +16,13 @@ In addition to an enhanced service protocol, you can now assign an alarm and/or 
 
 JSON example of the property value:
 
-```txt
-{"ProtocolName" : "Name of the protocol", "ProtocolVersion": "Version to use", "AlarmTemplate": "Name of the alarm template", "TrendTemplate": "Name of the tend template"}
+```json
+{
+    "ProtocolName" : "Name of the protocol",
+    "ProtocolVersion": "Version to use",
+    "AlarmTemplate": "Name of the alarm template",
+    "TrendTemplate": "Name of the tend template"
+}
 ```
 
 #### Extra isSilent parameter for Booking Manager methods \[ID_29937\]
@@ -22,91 +31,91 @@ To make it possible to hide specific steps in the wizard to create a new booking
 
 If this parameter is set to false, the step is shown in the Booking Wizard; if it is set to true, the method is executed silently:
 
-```txt
+```csharp
 public ReservationInstance CreateNewBooking(Engine engine, BookingManagerInfo bookingManagerInfo, Booking bookingData, IEnumerable<Function> functions, IEnumerable<Event> events, IEnumerable<Property> properties, IEnumerable<Group> groups, bool isSilent = true)
+
 public ReservationInstance CreateNewBooking(Engine engine, Booking bookingData, IEnumerable<Function> functions = null, IEnumerable<Event> events = null, IEnumerable<Property> properties = null, IEnumerable<Group> groups = null, bool isSilent = true)
+
 public ReservationInstance CreateNewBookingWithResourceFilters(Engine engine, Booking bookingData, IEnumerable<Function> functions = null, IEnumerable<Event> events = null, IEnumerable<Property> properties = null, Dictionary<string, List<ResourceCapabilityUsage>> resourceFilters = null, bool isSilent = true)
+
 public bool TryCreateNewBooking(Engine engine, BookingManagerInfo bookingManagerInfo, Booking bookingData, IEnumerable<Function> functions, IEnumerable<Event> events, IEnumerable<Property> properties, IEnumerable<Group> groups, out ReservationInstance reservationInstance, bool isSilent = true)
+
 public bool TryCreateNewBooking(Engine engine, Booking bookingData, IEnumerable<Function> functions, IEnumerable<Event> events, IEnumerable<Property> properties, IEnumerable<Group> groups, out ReservationInstance reservationInstance, bool isSilent = true)
 ```
 
 #### Skyline Booking Monitoring protocol integration \[ID_29955\]
 
-The *Skyline Booking Monitoring* protocol, which allows additional monitoring of bookings, can now be integrated with the Booking Manager app. For this purpose, the following two parameters can be configured on the *Config* > *General* tab of the app:
+The *Skyline Booking Monitoring* protocol, which allows additional monitoring of bookings, can now be integrated with the Booking Manager app. For this purpose, the following two parameters can be configured on the *Config* > *General* tab of the app:
 
 - *Bookings Monitoring Element*: The name of the element using the *Skyline Booking Monitoring* protocol.
-
 - *Bookings Monitoring Mode*: Can be set to the following modes:
 
     - *None*: The monitoring element is not used.
-
     - *Non-Nominal*: The monitoring element only features failed, quarantined and interrupted bookings.
-
     - *Nominal*: The monitoring element features all bookings that have started.
 
 #### New network path configuration options \[ID_29963\]
 
-Two new configuration options have been added to the *TransportLink* field of a network path configuration.
+Two new configuration options have been added to the *TransportLink* field of a network path configuration.
 
 ##### ExcludedNode
 
 To begin with, it is now possible to exclude interfaces from a network path based on the node where they reside. This can be useful to further improve reliability in case of failover.
 
-To configure this, in the path configuration, set the *Option* property of the *TransportLink* field to *ExcludeNode*. If the *Strictly* property of the *TransportLink* field is set to *true*, only paths that do not share the same nodes will then be returned. If it is set to *false*, paths that do not share the same nodes will be preferred, and nodes that do not share the same interfaces will be preferred for fallback.
+To configure this, in the path configuration, set the *Option* property of the *TransportLink* field to *ExcludeNode*. If the *Strictly* property of the *TransportLink* field is set to *true*, only paths that do not share the same nodes will then be returned. If it is set to *false*, paths that do not share the same nodes will be preferred, and nodes that do not share the same interfaces will be preferred for fallback.
 
 ##### Weighted
 
-In addition, it is now possible to apply a weighted order to the paths with the new *Weighted* property in the *TransportLink* field. If this property is set to *true*, it is only taken into account if *Strictly* is also *true*. The behavior then depends on the value of the *Options* property:
+In addition, it is now possible to apply a weighted order to the paths with the new *Weighted* property in the *TransportLink* field. If this property is set to *true*, it is only taken into account if *Strictly* is also *true*. The behavior then depends on the value of the *Options* property:
 
 - *ExcludeNode*: Paths will be ordered in ascending order based on the number of nodes they share with the linked path, and after that based on the number of interfaces they share.
 
 - *Exclude*: Paths will be ordered in ascending order based on the number of interfaces they share with the linked path.
-
 - *Include*: Paths will be ordered in descending order based on the number of interfaces they share with the linked path.
 
     > [!NOTE]
-    > The *NrOfSuggestions* field of the network path configuration limits the number of paths before filtering is applied. If more paths are available, the preferred path may not be included.
+    > The *NrOfSuggestions* field of the network path configuration limits the number of paths before filtering is applied. If more paths are available, the preferred path may not be included.
 
 ##### Example
 
-```txt
+```json
 "TransportLink": {
-    "Function": "Main Transport",
-    "Option": "ExcludeNode",
-    "Strictly": false,
-    "Weighted": true,
+    "Function": "Main Transport",
+    "Option": "ExcludeNode",
+    "Strictly": false,
+    "Weighted": true,
 }
 ```
 
 #### New TransportBuilder API \[ID_29984\]
 
-A new *TransportBuilder* API is available that allows you to select and assign a path to a contributing transport function. For an existing booking, it will select a transport function and get the paths available for the selection, so that a path can be assigned to the function.
+A new *TransportBuilder* API is available that allows you to select and assign a path to a contributing transport function. For an existing booking, it will select a transport function and get the paths available for the selection, so that a path can be assigned to the function.
 
 Example:
 
-```txt
+```csharp
 var logger = SrmLogHandler.Create(engine, bookingManager, mainReservation);
 
 // Initialize the helper
 var transportBuilder = Skyline.DataMiner.Library.Solutions.SRM.Routing.TransportBuilder
-    .Create(engine, bookingManager, logger, mainReservation);
+    .Create(engine, bookingManager, logger, mainReservation);
 
 // Select the transport function that needs assigning
 var transportFunction =
-    transportBuilder.TransportFunctions
-        .Single(f => string.Equals(f.Label, "Transport"));
+    transportBuilder.TransportFunctions
+        .Single(f => string.Equals(f.Label, "Transport"));
 
 // Select a path
 var path = transportFunction
-    .GetPaths()
-    .FirstOrDefault();
+    .GetPaths()
+    .FirstOrDefault();
 
 if (path != null)
 {
-    // Assign the path to the function
-    path.Assign(out var contributingResource);
+    // Assign the path to the function
+    path.Assign(out var contributingResource);
 
-    logger.LogMessage($"Path '{path}' was assigned to '{transportFunction.Label}' (Resource ID: {contributingResource.ID})", LogFileType.Debug);
+    logger.LogMessage($"Path '{path}' was assigned to '{transportFunction.Label}' (Resource ID: {contributingResource.ID})", LogFileType.Debug);
 }
 ```
 
@@ -116,7 +125,7 @@ if (path != null)
 
 #### Support for pool inheritance on unconnected interfaces \[ID_29779\]
 
-Previously, it was not possible to use the pool inheritance feature on unconnected interfaces if the selected pool item was not booked. Now this will be supported if the property *NoConnectivityCheck* of these interfaces is set to *True*.
+Previously, it was not possible to use the pool inheritance feature on unconnected interfaces if the selected pool item was not booked. Now this will be supported if the property *NoConnectivityCheck* of these interfaces is set to *True*.
 
 #### Possible to finish unlocked contributing booking that is in use \[ID_29809\]
 
@@ -143,16 +152,15 @@ Editing bookings without user interaction has been made more efficient, which wi
 The following improvements have been implemented to the way a service definition is built when a custom Dijkstra contributing booking is added:
 
 - The *IsProfileInstanceOptional* of each node is now set to true.
-
 - The interface IDs are now retrieved from the function definition. The ID of the first input or output interface is defined and connected.
 
-In addition, a migration script *SRM_MigrateTransportServiceDefinitions* is now available that allows you to update your current custom transport service definitions and their bookings, so that these also contain these improvements.
+In addition, a migration script *SRM_MigrateTransportServiceDefinitions* is now available that allows you to update your current custom transport service definitions and their bookings, so that these also contain these improvements.
 
 ### Fixes
 
 #### Icon View Name for custom booking actions could not be set to root view \[ID_29749\]
 
-When you set the *Icon View Name* in the custom booking action table to the root view of the DMS, this view was incorrectly considered invalid.
+When you set the *Icon View Name* in the custom booking action table to the root view of the DMS, this view was incorrectly considered invalid.
 
 #### Capacities not defined in profile instance included when retrieving available resources \[ID_29764\]
 
@@ -182,7 +190,7 @@ It could occur that the following exception was displayed in the logging for a c
 Could not add the enhanced protocol's visio: (Code: 0x80040239)
 ```
 
-To prevent this issue, the contributing protocol creation logic in the script *SRM_CustomDijkstraContributingReservation* has been aligned with that of other scripts. This means that this script will now only set the Visio drawing when a new protocol is created.
+To prevent this issue, the contributing protocol creation logic in the script *SRM_CustomDijkstraContributingReservation* has been aligned with that of other scripts. This means that this script will now only set the Visio drawing when a new protocol is created.
 
 ## Addendum CU1
 
@@ -190,7 +198,7 @@ To prevent this issue, the contributing protocol creation logic in the script *S
 
 #### Skyline Booking Monitoring updates now in the background \[ID_30171\]
 
-Updates for the *Skyline Booking Monitoring* connector are now sent in the background so that they do not affect other SRM operations.
+Updates for the *Skyline Booking Monitoring* connector are now sent in the background so that they do not affect other SRM operations.
 
 ### Fixes
 

@@ -1,4 +1,8 @@
-# Version 1.2.17
+---
+uid: SRM_1.2.17
+---
+
+# SRM 1.2.17
 
 ## New features
 
@@ -7,39 +11,36 @@
 The Bookings table of the Skyline Booking Monitoring element now contains two additional columns:
 
 - Service ID
-
 - Skyline Booking Manager Element ID
 
 In addition, alarms that are generated on the Bookings table of the Skyline Booking Monitoring element will now have the following 3 properties:
 
 - Booking ID
-
 - Service ID
-
 - Skyline Booking Manager Element ID
 
 #### New option to enable/disable “Configure Resources” by default \[ID_30529\]
 
-A new option, *Default Resource Configuration*, is now available on the *General* data page of the Booking Manager element. This option allows you to specify whether the *Configure Resources* option should be selected by default or not in the Booking Wizard. Note that this option, which determines whether a read-only booking is created or not, is only available if *Optional Resources Configuration* is enabled in the Booking Manager configuration.
+A new option, *Default Resource Configuration*, is now available on the *General* data page of the Booking Manager element. This option allows you to specify whether the *Configure Resources* option should be selected by default or not in the Booking Wizard. Note that this option, which determines whether a read-only booking is created or not, is only available if *Optional Resources Configuration* is enabled in the Booking Manager configuration.
 
 #### Support for reuse of permanent contributing resources \[ID_30598\]
 
-If the *Reuse Contributing Resource* property is set to *true* for a specific node, you can now reuse permanent contributing resources.
+If the *Reuse Contributing Resource* property is set to *true* for a specific node, you can now reuse permanent contributing resources.
 
 #### New GetUnmappedFunction method \[ID_30630\]
 
-A new *GetUnmappedFunction* method is available, which makes it possible to access the unmapped nodes and the selected resources in the script responsible for transferring data between functions when creating a booking based on service profiles.
+A new *GetUnmappedFunction* method is available, which makes it possible to access the unmapped nodes and the selected resources in the script responsible for transferring data between functions when creating a booking based on service profiles.
 
 The method returns a helper that allows you to access those nodes.
 
-```txt
+```csharp
 public UnmappedFunctionHelper GetUnmappedFunction(string nodeLabel, StringComparison stringComparison);
 public UnmappedFunctionHelper GetUnmappedFunction(string nodeLabel);
 public UnmappedFunctionHelper GetUnmappedFunction(int nodeId);
 ```
 
 > [!NOTE]
-> The existing *GetFunction* method will only return mapped functions from now on.
+> The existing *GetFunction* method will only return mapped functions from now on.
 
 ## Changes
 
@@ -47,7 +48,7 @@ public UnmappedFunctionHelper GetUnmappedFunction(int nodeId);
 
 #### SRMEvent attribute marked as obsolete in Profile Load scripts \[ID_30520\]
 
-In Profile Load scripts, the *SRMEvent* attribute is now marked as obsolete. The *ProfileParameterApplyType* attribute is used instead.
+In Profile Load scripts, the *SRMEvent* attribute is now marked as obsolete. The *ProfileParameterApplyType* attribute is used instead.
 
 #### Any resource type supported for target resource of source/destination of network path \[ID_30524\]
 
@@ -57,15 +58,14 @@ The target resources of the source and destination functions of a network path c
 
 Several improvements have been implemented in the Booking Manager app.
 
-- On the *Dashboard* tab, the following changes have been implemented to improve perfor­mance:
+- On the *Dashboard* tab, the following changes have been implemented to improve performance:
 
     - Subshapes have been removed from the service shapes.
-
-    - When the services are filtered by name, the services that are not displayed are collapsed instead of hidden (using the *Collapse* conditional shape manipulation action, available since DataMiner 10.1.8).
+    - When the services are filtered by name, the services that are not displayed are collapsed instead of hidden (using the *Collapse* conditional shape manipulation action, available since DataMiner 10.1.8).
 
 - Compatibility of the *Dashboard* tab with the Skyline Black theme has improved.
 
-- On the *Bookings* tab, the style of the buttons has been reviewed, a service icon has been added to the shape representing the service alarm state, and the positioning of quarantine warnings has been improved.
+- On the *Bookings* tab, the style of the buttons has been reviewed, a service icon has been added to the shape representing the service alarm state, and the positioning of quarantine warnings has been improved.
 
 #### SRM_About.txt moved to Webpages\\SRM directory \[ID_30653\]
 
@@ -83,7 +83,7 @@ When a booking was created silently based on a service profile, this failed in c
 
 #### Not possible to rename transport booking \[ID_30635\]
 
-When the name of a transport booking was changed, it could occur that this failed if the service definition generated for the booking did not have the *Contributing Configuration* property. An exception was thrown like the following:
+When the name of a transport booking was changed, it could occur that this failed if the service definition generated for the booking did not have the *Contributing Configuration* property. An exception was thrown like the following:
 
 ```txt
 Reservation Action failed due to: Skyline.DataMiner.Library.Exceptions.PropertyNotFoundException: Could not find property named "contributing config" or "contributing configuration" in the service definition Transport_53566400-f422-48ff-8a2e-b54b0ee44584
