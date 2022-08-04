@@ -159,6 +159,9 @@ In case of a DataMiner Failover pair, the Cassandra nodes on each of the DMAs ar
 ![Failover pair with external Cassandra database of three nodes](~/user-guide/images/Failover-pair-with-external-Cassandra-database-of-three-nodes.png)<br>
 *Failover pair with external Cassandra database of three nodes*
 
+> [!NOTE]
+> If a "Database per Agent" setup is configured, one Cassandra cluster is used per Failover pair. Consequently, if a DMS consists of a single Failover pair, it will use a single Cassandra cluster, even if it is not a "Database per cluster" setup. The main difference with a "Database per cluster" setup (also known as a "Cassandra Cluster setup") in this case is that no Elasticsearch database is required, while this is always required for a "Database per cluster" setup.
+
 ## Legacy setup with MySQL or MS SQL database
 
 In legacy DataMiner Systems using DataMiner 9.0 or older, the data storage setup involved a MySQL or MS SQL database. While this legacy setup is still supported with current DataMiner versions, many DataMiner features will not be available if you use this. In addition, support for this legacy setup is expected to end with DataMiner 10.3 (see [Third-Party Software Support Life Cycle](https://community.dataminer.services/3rd-party-software-support-life-cycle/)).
