@@ -23,6 +23,8 @@ When you right-click anywhere in the trend graph window, a shortcut menu appears
 
   - Range, in which case you manually have to set a minimum and maximum, and indicate whether exception values should be included.
 
+- **Trend prediction**: Available from DataMiner 10.2.9/10.3.0 onwards. Allows you to select the trend prediction type. See [Working with trend predictions](xref:Working_with_trend_predictions).
+
 - **Print**: Allows you to print the trend graph that is currently displayed.
 
 - **Save image**: Allows you to save the trend graph into an image file (.png or .jpg)
