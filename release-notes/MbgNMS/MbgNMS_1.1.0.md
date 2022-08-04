@@ -1,8 +1,8 @@
 ---
-uid: Meinberg_1.1.0
+uid: MbgNMS_1.1.0
 ---
 
-# Meinberg 1.1.0
+# MbgNMS 1.1.0
 
 ## New features
 

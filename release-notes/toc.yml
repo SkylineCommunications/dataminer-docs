@@ -274,12 +274,12 @@
         topicUid: IDP_1.0.1
       - name: IDP 1.0.0 
         topicUid: IDP_1.0.0
-    - name: Meinberg release notes
+    - name: MbgNMS release notes
       items:
-      - name: Meinberg 1.1.0
-        topicUid: Meinberg_1.1.0
-      - name: Meinberg 1.0.1
-        topicUid: Meinberg_1.0.1
+      - name: MbgNMS 1.1.0
+        topicUid: MbgNMS_1.1.0
+      - name: MbgNMS 1.0.1
+        topicUid: MbgNMS_1.0.1
     - name: PA release notes
       items:
       - name: PA 1.2.2
