@@ -95,7 +95,13 @@
   - name: Other release notes
     items:
     - name: Class Library release notes
-      topicUid: ClassLibrary_RNs
+      items:
+      - name: Class Library Range 1.2
+        topicUid: ClassLibrary_Range_1.2
+      - name: Class Library Range 1.1
+        topicUid: ClassLibrary_Range_1.1
+      - name: Class Library Range 1.0
+        topicUid: ClassLibrary_Range_1.0
     - name: DIS release notes
       items:
       - name: DIS 2.38
