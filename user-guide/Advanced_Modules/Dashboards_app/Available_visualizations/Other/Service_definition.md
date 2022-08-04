@@ -57,4 +57,9 @@ To configure the component:
    - *Edge style*: Determines whether curly or straight edges are used in the graph.
 
 > [!NOTE]
-> From DataMiner 10.2.5/10.3.0 onwards, service definitions of type "Skyline Process Automation" are displayed differently from other service definitions. Arrows will automatically be drawn to represent the detected connections between the nodes. In addition, different function shapes will reflect the different function types, if these have been configured in the Process Automation framework, and function nodes will display the number of tokens currently in queue or in progress. From DataMiner 10.2.8/10.3.0 onwards, service definition of type "Custom Process Automation" are also displayed this way.
+> From DataMiner 10.2.5/10.3.0 onwards, service definitions of type "Skyline Process Automation" are displayed differently from other service definitions. From DataMiner 10.2.8/10.3.0 onwards, service definition of type "Custom Process Automation" are also displayed this way.
+>
+> - Arrows will automatically be drawn to represent the detected connections between the nodes.
+> - Different function shapes will reflect the different function types, if these have been configured in the Process Automation framework.
+> - Function nodes will display the number of tokens currently in queue or in progress.
+> - From DataMiner 10.2.9/10.3.0 onwards, instead of the function definition names, nodes will display the value of their *Label* property if this is present.
