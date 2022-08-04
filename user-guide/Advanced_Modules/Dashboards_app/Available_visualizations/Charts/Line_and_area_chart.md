@@ -120,7 +120,7 @@ Query results are supported as a data feed for this component from DataMiner 10.
    - *Y axis*: The column that should be used for the Y-axis data.
 
    > [!NOTE]
-   > If you want to show a trend chart, make sure the query results are sorted on the X-axis column.
+   > Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
 
 1. Fine-tune the component layout and settings like for a regular line and area chart. See [Configuration](#configuration).
 
