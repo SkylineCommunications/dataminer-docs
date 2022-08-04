@@ -18,9 +18,12 @@ These types of events contain lists with the created, updated, and deleted objec
 | DomSectionDefinitionsChangedEventMessage | Generated when a [SectionDefinition](xref:DOM_SectionDefinition) is created, updated, or deleted. |
 | DomBehaviorDefinitionsChangedEventMessage | Generated when a [DomBehaviorDefinition](xref:DomBehaviorDefinition) is created, updated, or deleted. |
 
+> [!NOTE]
+> These event messages are available from DataMiner 10.1.3/10.2.0 onwards.
+
 ### Filtering CRUD events
 
-When subscribing to event messages you can use the `ModuleEventSubscriptionFilter` to only receive the messages of a specific type and for a specific module ID.
+From DataMiner 10.1.3/10.2.0 onwards, when subscribing to event messages you can use the `ModuleEventSubscriptionFilter` to only receive the messages of a specific type and for a specific module ID.
 
 ```csharp
 // In this example we take the Connection object from the script's Engine object
@@ -44,7 +47,7 @@ connection.AddSubscription(setId, subscriptionFilter);
 
 ## Status transition event
 
-In addition to the CRUD Events, there is also a `DomInstanceStatusChangedEventMessage` event. This event is sent when a status transition happens on a `DomInstance` (see [status system](xref:DOM_status_system).
+From DataMiner 10.2.5/10.3.0 onwards, in addition to the CRUD events, there is also a `DomInstanceStatusChangedEventMessage` event. This event is sent when a status transition happens on a `DomInstance` (see [status system](xref:DOM_status_system).
 
 This event contains a list of changes as well as the `ModuleId` of the `DomManager` that generated the transition. A change contains the following items:
 

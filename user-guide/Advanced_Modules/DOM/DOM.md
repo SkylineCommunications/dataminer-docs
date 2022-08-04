@@ -4,7 +4,7 @@ uid: DOM
 
 # DataMiner Object Models (DOM)
 
-DataMiner Object Models can be used for the modeling of any type of administrative or business-related objects within your system. These can for example be planned maintenance records, product catalog data, contractual and customer records, etc. Modeling these using DOM allows you to connect your business workflows to your technical and operational workflows.
+From DataMiner 10.1.2/10.2.0 onwards, DataMiner Object Models can be used for the modeling of any type of administrative or business-related objects within your system. These can for example be planned maintenance records, product catalog data, contractual and customer records, etc. Modeling these using DOM allows you to connect your business workflows to your technical and operational workflows.
 
 A DataMiner Object Model is a generic data storage system that makes it possible to quickly create new applications or solutions. It consists of a collection of [generic objects](xref:DOM_objects) and a [generic DOM manager](xref:DOM_managers). Create, read, update, and delete (CRUD) actions can be executed on these objects in a script or application using the [DomHelper](xref:DomHelper_class). Data is [stored in the Elasticsearch database](xref:DOM_data_storage).
 

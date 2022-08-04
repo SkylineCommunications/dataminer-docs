@@ -4,7 +4,7 @@ uid: DomManagerInformationEventSettings
 
 # DomManagerInformationEventSettings
 
-This settings object currently only contains a boolean to enable information events.
+This settings object currently only contains a boolean to enable information events (supported from DataMiner 10.1.3/10.2.0 onwards).
 
 When this is enabled, an information event (on parameter 64646 with name "DOM Manager info") is generated for every create, update, and delete action for a [DomInstance](xref:DomInstance), [DomDefinition](xref:DomDefinition), [DomTemplate](xref:DomTemplate), or [SectionDefinition](xref:DOM_SectionDefinition). By default, this is disabled.
 

@@ -6,6 +6,9 @@ uid: DomBehaviorDefinition
 
 A `DomBehaviorDefinition` object is a standalone object that extends a normal DOM definition and contains the configuration for special behavior. This includes all configuration for the status system.
 
+> [!NOTE]
+> This object is supported from DataMiner 10.1.11/10.2.0 onwards.
+
 ## Properties
 
 The table below lists the properties of the `DomBehaviorDefinition` object. It also indicates whether a property can be used for filtering using the `DomBehaviorDefinitionExposers`.

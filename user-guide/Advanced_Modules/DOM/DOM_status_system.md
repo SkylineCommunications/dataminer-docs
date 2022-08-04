@@ -15,7 +15,9 @@ Using the status system is an alternate way of defining which data must be prese
 ![Status system overview](~/user-guide/images/DOM_StatusSystem_Overview.jpg)
 
 > [!NOTE]
-> A DOM manager detects that the status system is used from the moment that a `DomDefinition` is linked to a `DomBehaviorDefinition` AND that `DomBehaviorDefinition` contains at least one status.
+>
+> - This feature is supported from DataMiner 10.1.11/10.2.0 onwards.
+> - A DOM manager detects that the status system is used from the moment that a `DomDefinition` is linked to a `DomBehaviorDefinition` AND that `DomBehaviorDefinition` contains at least one status.
 
 To set up a status system:
 

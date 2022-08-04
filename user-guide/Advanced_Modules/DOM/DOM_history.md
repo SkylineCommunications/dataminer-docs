@@ -4,7 +4,7 @@ uid: DOM_history
 
 # DOM history
 
-The DOM manager tracks the history of all changes done to the `FieldValues` of a [DomInstance](xref:DomInstance).
+From DataMiner 10.1.3/10.2.0 onwards, The DOM manager tracks the history of all changes done to the `FieldValues` of a [DomInstance](xref:DomInstance).
 
 When a `DomInstance` is created or updated, a new `HistoryChange` object will be stored containing the created, updated, or deleted values. When a `DomInstance` is deleted, all history data is automatically deleted.
 
@@ -44,9 +44,9 @@ Each time the status is changed, a `DomInstanceStatusChange` is saved, which has
 
 ## HistoryChange
 
-All the `DomSectionChange` and `DomInstanceStatusChange` objects for a DOM instance are saved to the database in a `HistoryChange` object.
+All the `DomSectionChange` and `DomInstanceStatusChange` objects for a DOM instance are saved to the database in a `HistoryChange` object (see [DOM data storage](xref:DOM_data_storage)).
 
-This is stored in a separate Elasticsearch index for each module (named `chistory_dominstance_{moduleId}`). A `HistoryChange` also contains the extra information of where, when, and by whom a change was initiated.
+A `HistoryChange` also contains the extra information of where, when, and by whom a change was initiated.
 
 | Property | Type | Filterable | Description |
 |--|--|--|--|

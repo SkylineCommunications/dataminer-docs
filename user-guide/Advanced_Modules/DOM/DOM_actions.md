@@ -4,7 +4,7 @@ uid: DOM_actions
 
 # DOM actions
 
-It is possible to define actions on a [DomBehaviorDefinition](xref:DomBehaviorDefinition) that can be triggered via the `DomHelper`. These actions can only be executed when a condition is met.
+From DataMiner 10.1.11/10.2.0 onwards, it is possible to define actions on a [DomBehaviorDefinition](xref:DomBehaviorDefinition) that can be triggered via the `DomHelper`. These actions can only be executed when a condition is met.
 
 You can also define buttons to be shown in the UI that will execute one or more of these actions when clicked. A button definition also has a condition to determine when the button is shown. This way you can hide buttons when they are not applicable.
 
@@ -101,7 +101,7 @@ if (info != null && info.InfoType == DomActionInfo.Type.ScriptOutput)
 
 ### Interactive script
 
-It is possible to execute an interactive Automation script (IAS) using the DOM actions. When a client triggers a DOM action, it can then interact with the script.
+From DataMiner 10.2.8/10.3.0 onwards, it is possible to execute an interactive Automation script (IAS) using the DOM actions. When a client triggers a DOM action, it can then interact with the script.
 
 Flow:
 

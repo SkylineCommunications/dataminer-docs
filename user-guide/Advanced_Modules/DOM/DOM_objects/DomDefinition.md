@@ -36,7 +36,7 @@ At present, the following setting can be overridden:
 
 - To **create or update** a `DomDefinition`, it must contain a `SectionDefinitionLink` for each [ModuleSection](xref:DOM_ModuleSections) defined in the `ModuleSettings`.
 
-- When you **update** the `SectionDefinitionLinks` list of a `DomDefinition`, it is not possible to remove a link when there are already `DomInstances` that have sections for this link. However, you can hide the link from the UI by flagging it as soft-deleted.
+- When you **update** the `SectionDefinitionLinks` list of a `DomDefinition`, it is not possible to remove a link when there are already `DomInstances` that have sections for this link. However, you can hide the link from the UI by flagging it as soft deleted.
 
 - A `DomDefinition` can only be deleted when no `DomInstances` are linked to it. You should therefore first delete those before you can delete the `DomDefinition`.
 

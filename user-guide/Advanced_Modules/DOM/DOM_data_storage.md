@@ -8,8 +8,9 @@ All DOM data are stored in the Elasticsearch database. Data for each object is s
 
 | Object name | Index name |
 |--|--|
-| SectionDefinition | cdomsectiondefinition_{moduleId} |
-| DomTemplate | cdomtemplate_{moduleId} |
-| DomDefinition | cdomdefinition_{moduleId} |
-| DomInstance | cdominstance_{moduleId} |
-| DomBehaviorDefinition | cdombehaviordefinition_{moduleId} |
+| [SectionDefinition](xref:DOM_SectionDefinition) | cdomsectiondefinition_{moduleId} |
+| [DomTemplate](xref:DomTemplate) | cdomtemplate_{moduleId} |
+| [DomDefinition](xref:DomDefinition) | cdomdefinition_{moduleId} |
+| [DomInstance](xref:DomInstance) | cdominstance_{moduleId} |
+| [DomBehaviorDefinition](xref:DomBehaviorDefinition) | cdombehaviordefinition_{moduleId} |
+| [HistoryChange](xref:DOM_history#historychange) | chistory_dominstance_{moduleId} |

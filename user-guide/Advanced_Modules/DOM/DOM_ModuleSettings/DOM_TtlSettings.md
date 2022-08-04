@@ -4,7 +4,7 @@ uid: DOM_TtlSettings
 
 # TtlSettings
 
-These settings can be used to optionally define a separate time to live (TTL) for specific types of objects of a DOM manager. The time is defined as a `TimeSpan` object. By default, this will be `TimeSpan.Zero`, which represents no TTL. When this is for example set to 1 year for a type of object, those objects will be removed within 30 minutes when they have last been modified longer than a year ago.
+From DataMiner 10.2.6/10.3.0 onwards, these settings can be used to optionally define a separate time to live (TTL) for specific types of objects of a DOM manager. The time is defined as a `TimeSpan` object. By default, this will be `TimeSpan.Zero`, which represents no TTL. When this is for example set to 1 year for a type of object, those objects will be removed within 30 minutes when they have last been modified longer than a year ago.
 
 TTL can currently be configured for the following objects:
 

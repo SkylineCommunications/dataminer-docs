@@ -62,21 +62,22 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 - **StaticTextFieldDescriptor**: Defines a field that should always have the same static value, defined by the *StaticText* property.
 
-- **DomInstanceFieldDescriptor**: Can be used to define that a field should contain the ID of a `DomInstance`. This `DomInstance` can exist in a different DOM manager. This is why the descriptor has a *ModuleId* property that defines where the instances can be found. There is also a *DomDefinitionIds* list property that can be used to define whether DOM instances should be linked to the defined definitions. Both properties are intended for UIs, and their validity and existence is not checked server-side. The `FieldValues` are of type "Guid".
+- **DomInstanceFieldDescriptor**: Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. This `DomInstance` can exist in a different DOM manager. This is why the descriptor has a *ModuleId* property that defines where the instances can be found. There is also a *DomDefinitionIds* list property that can be used to define whether DOM instances should be linked to the defined definitions. Both properties are intended for UIs, and their validity and existence is not checked server-side. The `FieldValues` are of type "Guid".
 
-- **ElementFieldDescriptor**: Can be used to define that a field should contain the ID of an element. The ID must be saved as a string according to the common `[DMA ID]/[ELEMENT ID]` format (e.g. "868/65874"). There is a *ViewIds* list property that can be used to define whether the elements should be in any of these views. The `FieldValues` are of type "string".
+- **ElementFieldDescriptor**: Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of an element. The ID must be saved as a string according to the common `[DMA ID]/[ELEMENT ID]` format (e.g. "868/65874"). There is a *ViewIds* list property that can be used to define whether the elements should be in any of these views. The `FieldValues` are of type "string".
 
-- **DomInstanceValueFieldDescriptor**: Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`. The configuration is the same as the other descriptor, but it adds the *FieldDescriptorId* property that references a specific `FieldValue`.
+- **DomInstanceValueFieldDescriptor**: Available from DataMiner 10.2.3/10.3.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`. The configuration is the same as the other descriptor, but it adds the *FieldDescriptorId* property that references a specific `FieldValue`.
 
 > [!NOTE]
-> The following `FieldDescriptors` can have **multiple values**:
+> From DataMiner 10.2.3/10.3.0 onwards, the following `FieldDescriptors` can have **multiple values**:
 >
 > - DomInstanceFieldDescriptor
 > - ElementFieldDescriptor
 > - ResourceFieldDescriptor
 > - ReservationFieldDescriptor
 > - ServiceDefinitionFieldDescriptor
-> - DomInstanceValueFieldDescriptor
+>
+> From DataMiner 10.2.5/10.3.0 onwards, this also applies for the *DomInstanceValueFieldDescriptor*.
 >
 > These `FieldDescriptors` therefore also support a list of the type that was already supported before.
 >

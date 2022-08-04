@@ -12,14 +12,14 @@ The example sets up a rudimentary tracking system with the following statuses:
 
 - **Investigation**: The issue that is being investigated by a technician.
 
-- **Fixing** : The issue is being fixed by a technician.
+- **Fixing**: The issue is being fixed by a technician.
 
-- **Fixed** : The issue is fixed.
+- **Fixed**: The issue is fixed.
 
 Each status has its own requirements as to which fields must be present and which fields can be changed.
 
 > [!NOTE]
-> Information on how to set up the ModuleSettings and DomHelper are not included here. For an example of this, see [Invoice app example](xref:DOM_Invoice_app_example).
+> Information on how to set up the *ModuleSettings* and *DomHelper* are not included here. For an example of this, see [Invoice app example](xref:DOM_Invoice_app_example).
 
 ## Creating section definitions
 
